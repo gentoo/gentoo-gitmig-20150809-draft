@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.17.ebuild,v 1.2 2012/07/02 15:18:50 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.17.ebuild,v 1.3 2012/07/11 09:55:18 angelos Exp $
 
 EAPI=4
 inherit eutils flag-o-matic linux-info multilib systemd user
@@ -14,14 +14,19 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~sh ~x86 ~x86-fbsd ~x64-macos"
 IUSE="aac +alsa ao audiofile bzip2 cdio +curl debug +fifo +ffmpeg flac
 fluidsynth +id3tag inotify ipv6 jack lame lastfmradio mms libsamplerate +mad
-mikmod modplug mpg123 musepack +network ogg openal oss pipe pulseaudio sid
-sndfile soundcloud soup sqlite tcpd twolame unicode vorbis wavpack wildmidi
+mikmod modplug mpg123 musepack +network ogg openal oss pipe pulseaudio recorder
+sid sndfile soundcloud soup sqlite tcpd twolame unicode vorbis wavpack wildmidi
 zeroconf zip"
 
-REQUIRED_USE="|| ( alsa ao fifo jack network openal oss pipe pulseaudio )
-	|| ( aac audiofile ffmpeg flac fluidsynth mad mikmod modplug mpg123 musepack
-			ogg flac sid vorbis wavpack wildmidi )
-	network? ( || ( audiofile flac lame twolame vorbis ) )
+OUTPUT_PLUGINS="alsa ao fifo jack network openal oss pipe pulseaudio recorder"
+INPUT_PLUGINS="aac audiofile ffmpeg flac fluidsynth mad mikmod modplug mpg123
+	musepack ogg flac sid vorbis wavpack wildmidi"
+ENCODER_PLUGINS="audiofile flac lame twolame vorbis"
+
+REQUIRED_USE="|| ( ${OUTPUT_PLUGINS} )
+	|| ( ${INPUT_PLUGINS} )
+	network? ( || ( ${ENCODER_PLUGINS} ) )
+	recorder? ( || ( ${ENCODER_PLUGINS} ) )
 	lastfmradio? ( curl )"
 
 RDEPEND="!<sys-cluster/mpich2-1.4_rc2
@@ -87,9 +92,8 @@ src_prepare() {
 
 src_configure() {
 	local mpdconf="--disable-despotify --disable-documentation --disable-ffado
-		--disable-gme --disable-mvp --disable-roar --enable-largefile
-		--enable-recorder-output --enable-tcp --enable-un
-		--docdir=${EPREFIX}/usr/share/doc/${PF}"
+		--disable-gme --disable-mvp --disable-noar --enable-largefile
+		--enable-tcp --enable-un --docdir=${EPREFIX}/usr/share/doc/${PF}"
 
 	if use network; then
 		mpdconf+=" --enable-shout $(use_enable vorbis vorbis-encoder)
@@ -135,6 +139,7 @@ src_configure() {
 		$(use_enable oss) \
 		$(use_enable pipe pipe-output) \
 		$(use_enable pulseaudio pulse) \
+		$(use_enable recorder recorder-output) \
 		$(use_enable sid sidplay) \
 		$(use_enable sndfile sndfile) \
 		$(use_enable soundcloud) \
