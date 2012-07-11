@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/maradns-2.0.06.ebuild,v 1.2 2012/06/14 02:13:48 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/maradns-2.0.06.ebuild,v 1.3 2012/07/11 11:00:14 flameeyes Exp $
 
 EAPI="4"
 inherit eutils toolchain-funcs flag-o-matic user
@@ -26,19 +26,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-askmara-tcp.patch
 	epatch "${FILESDIR}"/${P}-duende-man.patch
 
-	# In order for Deadwood to build correctly, it needs to know where
-	# clock_getttime is at, and on Linux/glibc, this is in librt.
-	# Hopefully, other systems won't have issues.
-	use elibc_glibc && myflags="-lrt"
-
-	# Honor system CFLAGS.
-	# Need to append -lrt to build Deadwood properly.
-	sed -i \
-		-e "s:FLAGS=-O2:\$(M):g" \
-		-e "s:-O2:\$(CFLAGS) \$(LDFLAGS) ${myflags}:" \
-		-e "s:\$(CC):$(tc-getCC):g" \
-		-e "s:make:\$(MAKE):g" \
-		build/Makefile.linux || die
+	# And one from Gentoo
+	epatch "${FILESDIR}"/${P}-build.patch
 }
 
 src_configure() {
@@ -47,21 +36,10 @@ src_configure() {
 	# Use duende-ng.c.
 	cp  "${S}/tools/duende-ng.c" "${S}/tools/duende.c"
 
+	tc-export CC
+
 	use ipv6 && myconf="${myconf} --ipv6"
 	./configure ${myconf} || die "Failed to configure ${PN}."
-}
-
-src_compile() {
-	make ${MAKEOPTS} || die "Filed to compile ${PN}."
-
-	# On linux/glibc, we forced -lrt into the build flags to make sure
-	# that clock_getttime() was found in the correct library.  But to
-	# catch this error on other platforms, we'll see if DwSys.o is
-	# present, which indicates a successful build or not.
-	[[ ! -f "${S}/deadwood-${DEADWOOD_VER}/src/DwSys.o" ]]	\
-		&& die "Deadwood failed to build, possibly due to a "	\
-		       "missing reference to clock_gettime.  Please "	\
-		       "report this in a bug!"
 }
 
 src_install() {
