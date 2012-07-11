@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/capistrano
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano/ChangeLog,v 1.78 2012/05/20 11:28:07 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano/ChangeLog,v 1.79 2012/07/11 14:59:42 nativemad Exp $
+
+  11 Jul 2012; Andreas Schuerch <nativemad@gentoo.org> capistrano-2.9.0.ebuild:
+  x86 stable, see bug 395657
 
   20 May 2012; Mark Loeser <halcy0n@gentoo.org> capistrano-2.9.0.ebuild:
   Stable for ppc/ppc64; bug #395657

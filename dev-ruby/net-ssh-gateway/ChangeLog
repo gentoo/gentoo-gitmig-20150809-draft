@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/net-ssh-gateway
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh-gateway/ChangeLog,v 1.27 2012/05/20 11:27:10 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh-gateway/ChangeLog,v 1.28 2012/07/11 14:57:37 nativemad Exp $
+
+  11 Jul 2012; Andreas Schuerch <nativemad@gentoo.org>
+  net-ssh-gateway-1.1.0.ebuild:
+  x86 stable, see bug 395657
 
   20 May 2012; Mark Loeser <halcy0n@gentoo.org> net-ssh-gateway-1.1.0.ebuild:
   Stable for ppc; bug #395657
