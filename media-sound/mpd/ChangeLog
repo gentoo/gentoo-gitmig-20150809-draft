@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.287 2012/07/11 09:55:18 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.288 2012/07/11 20:07:18 angelos Exp $
+
+  11 Jul 2012; Christoph Mende <angelos@gentoo.org> metadata.xml,
+  mpd-0.17.ebuild:
+  Add systemd USE flag, fix typo (noar -> roar)
 
   11 Jul 2012; Christoph Mende <angelos@gentoo.org> metadata.xml,
   mpd-0.17.ebuild:

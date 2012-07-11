@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.17.ebuild,v 1.3 2012/07/11 09:55:18 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.17.ebuild,v 1.4 2012/07/11 20:07:18 angelos Exp $
 
 EAPI=4
 inherit eutils flag-o-matic linux-info multilib systemd user
@@ -15,8 +15,8 @@ KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~sh ~x86 ~x86-fbsd ~x64-macos"
 IUSE="aac +alsa ao audiofile bzip2 cdio +curl debug +fifo +ffmpeg flac
 fluidsynth +id3tag inotify ipv6 jack lame lastfmradio mms libsamplerate +mad
 mikmod modplug mpg123 musepack +network ogg openal oss pipe pulseaudio recorder
-sid sndfile soundcloud soup sqlite tcpd twolame unicode vorbis wavpack wildmidi
-zeroconf zip"
+sid sndfile soundcloud soup sqlite systemd tcpd twolame unicode vorbis wavpack
+wildmidi zeroconf zip"
 
 OUTPUT_PLUGINS="alsa ao fifo jack network openal oss pipe pulseaudio recorder"
 INPUT_PLUGINS="aac audiofile ffmpeg flac fluidsynth mad mikmod modplug mpg123
@@ -42,18 +42,18 @@ RDEPEND="!<sys-cluster/mpich2-1.4_rc2
 	ffmpeg? ( virtual/ffmpeg )
 	flac? ( media-libs/flac[ogg?] )
 	fluidsynth? ( media-sound/fluidsynth )
-	network? ( >=media-libs/libshout-2
-		!lame? ( !vorbis? ( media-libs/libvorbis ) ) )
 	id3tag? ( media-libs/libid3tag )
 	jack? ( media-sound/jack-audio-connection-kit )
 	lame? ( network? ( media-sound/lame ) )
-	mms? ( media-libs/libmms )
 	libsamplerate? ( media-libs/libsamplerate )
 	mad? ( media-libs/libmad )
 	mikmod? ( media-libs/libmikmod:0 )
+	mms? ( media-libs/libmms )
 	modplug? ( media-libs/libmodplug )
 	mpg123? ( >=media-sound/mpg123-1.12.2 )
 	musepack? ( media-sound/musepack-tools )
+	network? ( >=media-libs/libshout-2
+		!lame? ( !vorbis? ( media-libs/libvorbis ) ) )
 	ogg? ( media-libs/libogg )
 	openal? ( media-libs/openal )
 	pulseaudio? ( media-sound/pulseaudio )
@@ -62,6 +62,7 @@ RDEPEND="!<sys-cluster/mpich2-1.4_rc2
 	soundcloud? ( >=dev-libs/yajl-2 )
 	soup? ( net-libs/libsoup:2.4 )
 	sqlite? ( dev-db/sqlite:3 )
+	systemd? ( sys-apps/systemd )
 	tcpd? ( sys-apps/tcp-wrappers )
 	twolame? ( media-sound/twolame )
 	vorbis? ( media-libs/libvorbis )
@@ -92,7 +93,7 @@ src_prepare() {
 
 src_configure() {
 	local mpdconf="--disable-despotify --disable-documentation --disable-ffado
-		--disable-gme --disable-mvp --disable-noar --enable-largefile
+		--disable-gme --disable-mvp --disable-roar --enable-largefile
 		--enable-tcp --enable-un --docdir=${EPREFIX}/usr/share/doc/${PF}"
 
 	if use network; then
@@ -145,6 +146,7 @@ src_configure() {
 		$(use_enable soundcloud) \
 		$(use_enable soup) \
 		$(use_enable sqlite) \
+		$(use_enable systemd systemd-daemon) \
 		$(use_enable tcpd libwrap) \
 		$(use_enable vorbis) \
 		$(use_enable wavpack) \
