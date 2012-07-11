@@ -1,6 +1,12 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.666 2012/07/11 00:04:26 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.667 2012/07/11 03:00:55 floppym Exp $
+
+*chromium-22.0.1201.0 (11 Jul 2012)
+
+  11 Jul 2012; Mike Gilbert <floppym@gentoo.org> +chromium-22.0.1201.0.ebuild,
+  chromium-9999-r1.ebuild:
+  Version bump for dev channel release. Resolve bug 424023 by Mathieu Zhang.
 
   11 Jul 2012; Mike Gilbert <floppym@gentoo.org>
   files/chromium-alignment-r0.patch:
