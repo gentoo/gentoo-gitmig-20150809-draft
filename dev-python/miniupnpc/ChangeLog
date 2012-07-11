@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/miniupnpc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/miniupnpc/ChangeLog,v 1.3 2012/05/24 01:11:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/miniupnpc/ChangeLog,v 1.4 2012/07/11 08:11:08 mgorny Exp $
+
+*miniupnpc-1.7 (11 Jul 2012)
+
+  11 Jul 2012; Michał Górny <mgorny@gentoo.org> +miniupnpc-1.7.ebuild:
+  Version bump. Use python-distutils-ng.
 
 *miniupnpc-1.6.20120509 (24 May 2012)
 
@@ -19,4 +24,3 @@
   +metadata.xml:
   Split the Python module in net-libs/miniupnpc into separate
   dev-python/miniupnpc; link the Python module against shared libminiupnpc.
-
