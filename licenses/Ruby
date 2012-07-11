@@ -1,3 +1,11 @@
+---
+NOTE:
+This is the old version of the Ruby license which was used up until the release
+of the 1.9.3 version of the MRI Ruby interpreter. The URL below now points to
+the new version of the license, called 'Ruby-BSD' in Gentoo.
+                                           -- Gentoo Ruby Team
+---
+
 http://www.ruby-lang.org/en/LICENSE.txt
 
 Ruby is copyrighted free software by Yukihiro Matsumoto <matz@netlab.co.jp>.
