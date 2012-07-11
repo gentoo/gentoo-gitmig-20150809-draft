@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/prawn-layout
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn-layout/ChangeLog,v 1.14 2012/07/11 05:41:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn-layout/ChangeLog,v 1.15 2012/07/11 14:46:56 nativemad Exp $
+
+  11 Jul 2012; Andreas Schuerch <nativemad@gentoo.org>
+  prawn-layout-0.8.4-r2.ebuild:
+  x86 keyworded, see bug 417513
 
   11 Jul 2012; Hans de Graaff <graaff@gentoo.org> prawn-layout-0.8.4-r2.ebuild:
   Remove code to use old test-unit now that test-spec is fixed. Fixes problems
