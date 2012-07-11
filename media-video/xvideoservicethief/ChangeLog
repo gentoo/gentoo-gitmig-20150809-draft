@@ -1,6 +1,13 @@
 # ChangeLog for media-video/xvideoservicethief
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xvideoservicethief/ChangeLog,v 1.27 2011/08/26 14:26:51 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/xvideoservicethief/ChangeLog,v 1.28 2012/07/11 19:51:16 hwoarang Exp $
+
+*xvideoservicethief-2.4.1-r2 (11 Jul 2012)
+
+  11 Jul 2012; Markos Chandras <hwoarang@gentoo.org>
+  +xvideoservicethief-2.4.1-r2.ebuild,
+  files/xvideoservicethief-2.4.1-youtube-api.patch:
+  Revbump to fix problems with recent youtube changes
 
   26 Aug 2011; Markos Chandras <hwoarang@gentoo.org>
   -xvideoservicethief-2.4.1.ebuild:
@@ -131,4 +138,3 @@
   14 Mar 2009; Ben de Groot <yngwin@gentoo.org> +files/gcc-4.3.patch,
   +metadata.xml, +xvideoservicethief-1.8.2.ebuild:
   Initial import from qting-edge overlay. See also bug 210894.
-
