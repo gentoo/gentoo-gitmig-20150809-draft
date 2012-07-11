@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iodine/iodine-0.6.0_rc1-r1.ebuild,v 1.1 2012/06/07 19:53:54 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iodine/iodine-0.6.0_rc1-r1.ebuild,v 1.2 2012/07/11 18:03:38 vostorga Exp $
 
 inherit linux-info eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://code.kryo.se/${PN}/${MY_P}.tar.gz"
 
 CONFIG_CHECK="~TUN"
 
-LICENSE="ISC"
+LICENSE="ISC GPL-2" #GPL-2 for init script bug #426060
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
