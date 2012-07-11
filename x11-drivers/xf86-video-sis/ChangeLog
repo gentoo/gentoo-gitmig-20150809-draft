@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-sis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-sis/ChangeLog,v 1.58 2012/07/05 16:00:27 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-sis/ChangeLog,v 1.59 2012/07/11 08:57:00 chithanh Exp $
+
+  11 Jul 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xf86-video-sis-0.10.4-r1.ebuild, xf86-video-sis-0.10.6.ebuild:
+  Depend on xf86dgaproto, bug #425774.
 
 *xf86-video-sis-0.10.6 (05 Jul 2012)
 
