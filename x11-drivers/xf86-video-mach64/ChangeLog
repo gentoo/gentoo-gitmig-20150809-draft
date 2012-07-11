@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-video-mach64
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-mach64/ChangeLog,v 1.30 2012/07/05 15:58:26 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-mach64/ChangeLog,v 1.31 2012/07/11 19:41:46 ranger Exp $
+
+  11 Jul 2012; Brent Baude <ranger@gentoo.org> xf86-video-mach64-6.9.1.ebuild:
+  Marking xf86-video-mach64-6.9.1 ppc64 stable for bug 419473
 
 *xf86-video-mach64-6.9.2 (05 Jul 2012)
 
