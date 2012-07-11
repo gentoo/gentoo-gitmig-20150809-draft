@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/psipred/psipred-3.2.1.ebuild,v 1.3 2012/07/11 02:33:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/psipred/psipred-3.2.1.ebuild,v 1.4 2012/07/11 06:21:27 jlec Exp $
 
 EAPI=4
 
@@ -10,9 +10,7 @@ MY_P="${PN}$(delete_all_version_separators)"
 
 DESCRIPTION="Protein Secondary Structure Prediction"
 HOMEPAGE="http://bioinf.cs.ucl.ac.uk/psipred/"
-SRC_URI="
-	http://bioinf.cs.ucl.ac.uk/downloads/${PN}/${MY_P}.tar.gz
-	test? ( http://bioinfadmin.cs.ucl.ac.uk/downloads/psipred/old/data/tdbdata.tar.gz )"
+SRC_URI="http://bioinf.cs.ucl.ac.uk/downloads/${PN}/${MY_P}.tar.gz"
 
 LICENSE="psipred"
 SLOT="0"
@@ -45,6 +43,7 @@ src_install() {
 	insinto /usr/share/${PN}
 	doins -r data
 	dodoc README
+	newdoc BLAST+/README README-blast
 }
 
 pkg_postinst() {

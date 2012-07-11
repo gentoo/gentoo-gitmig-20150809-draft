@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/psipred
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/psipred/ChangeLog,v 1.7 2012/07/11 02:33:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/psipred/ChangeLog,v 1.8 2012/07/11 06:21:27 jlec Exp $
+
+  11 Jul 2012; Justin Lecher <jlec@gentoo.org> psipred-3.2.1.ebuild:
+  Cleaned SRC_URI
 
   11 Jul 2012; Michael Sterrett <mr_bones_@gentoo.org> psipred-3.2.1.ebuild,
   psipred-3.3.ebuild:
