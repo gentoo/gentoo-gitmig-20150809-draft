@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-9999.ebuild,v 1.19 2012/04/01 04:46:15 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-9999.ebuild,v 1.20 2012/07/11 04:13:37 floppym Exp $
 
 EAPI=4
 
@@ -27,10 +27,10 @@ HOMEPAGE="http://flexget.com/"
 
 LICENSE="MIT"
 SLOT="0"
-IUSE="deluge test transmission"
+IUSE="test"
 
-RDEPEND="
-	>=dev-python/feedparser-5.1
+DEPEND="
+	>=dev-python/feedparser-5.1.2
 	>=dev-python/sqlalchemy-0.7
 	dev-python/pyyaml
 	dev-python/beautifulsoup:python-2
@@ -44,16 +44,11 @@ RDEPEND="
 	dev-python/python-dateutil
 	>=dev-python/requests-0.10.0
 	!=dev-python/requests-0.10.1
-"
-DEPEND="
+	|| ( dev-lang/python:2.7 dev-python/argparse )
 	dev-python/setuptools
-	test? ( ${RDEPEND} dev-python/nose )
 "
-RDEPEND+="
-	dev-python/setuptools
-	deluge? ( net-p2p/deluge )
-	transmission? ( dev-python/transmissionrpc )
-"
+RDEPEND="${DEPEND}"
+DEPEND+=" test? ( dev-python/nose )"
 
 if [[ ${PV} == 9999 ]]; then
 	DEPEND+=" dev-python/paver"
