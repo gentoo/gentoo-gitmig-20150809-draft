@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.2.101-r1.ebuild,v 1.1 2012/03/24 11:26:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.2.101-r1.ebuild,v 1.2 2012/07/11 23:06:39 blueness Exp $
 
 EAPI=4
 PYTHON_DEPEND="admin? 2"
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.cherokee-project.com/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~mips ~x86"
 IUSE="admin coverpage ffmpeg debug geoip ipv6 kernel_linux ldap mysql nls pam php rrdtool ssl static static-libs"
 
 COMMON_DEPEND="dev-libs/libpcre

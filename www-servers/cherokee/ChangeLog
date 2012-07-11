@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/cherokee
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.92 2012/03/24 11:49:09 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.93 2012/07/11 23:06:39 blueness Exp $
+
+  11 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
+  cherokee-1.2.101-r1.ebuild:
+  Keyword ~mips
 
   24 Mar 2012; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
   Adopt package
