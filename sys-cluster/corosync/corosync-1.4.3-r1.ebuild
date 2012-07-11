@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/corosync/corosync-1.4.3.ebuild,v 1.1 2012/05/16 09:39:24 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/corosync/corosync-1.4.3-r1.ebuild,v 1.1 2012/07/11 08:30:55 ultrabug Exp $
 
 EAPI=4
 
@@ -50,6 +50,7 @@ src_configure() {
 src_install() {
 	default
 	newinitd "${FILESDIR}"/${PN}.initd ${PN}
+	rm "${D}"/etc/init.d/corosync-notifyd || die
 
 	insinto /etc/logrotate.d
 	newins "${FILESDIR}"/${PN}.logrotate ${PN}
