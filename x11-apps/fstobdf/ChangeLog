@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/fstobdf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/fstobdf/ChangeLog,v 1.41 2012/06/27 18:00:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/fstobdf/ChangeLog,v 1.42 2012/07/11 19:19:24 ranger Exp $
+
+  11 Jul 2012; Brent Baude <ranger@gentoo.org> fstobdf-1.0.5.ebuild:
+  Marking fstobdf-1.0.5 ppc64 stable for bug 419473
 
   27 Jun 2012; Markus Meier <maekke@gentoo.org> fstobdf-1.0.5.ebuild:
   arm stable, bug #419473
