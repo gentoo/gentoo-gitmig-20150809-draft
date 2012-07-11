@@ -1,30 +1,30 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-8.17.ebuild,v 1.2 2012/05/24 02:33:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-8.17.ebuild,v 1.3 2012/07/11 14:33:02 ryao Exp $
 
 EAPI="3"
 
 inherit eutils flag-o-matic toolchain-funcs
 
-PATCH_VER="1"
+PATCH_VER="1.1"
 DESCRIPTION="Standard GNU file utilities (chmod, cp, dd, dir, ls...), text utilities (sort, tr, head, wc..), and shell utilities (whoami, who,...)"
 HOMEPAGE="http://www.gnu.org/software/coreutils/"
 SRC_URI="mirror://gnu-alpha/coreutils/${P}.tar.xz
 	mirror://gnu/${PN}/${P}.tar.xz
 	mirror://gentoo/${P}.tar.xz
 	mirror://gentoo/${P}-patches-${PATCH_VER}.tar.xz
-	http://dev.gentoo.org/~vapier/dist/${P}-patches-${PATCH_VER}.tar.xz"
+	http://dev.gentoo.org/~ryao/dist/${P}-patches-${PATCH_VER}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="acl caps gmp nls selinux static unicode vanilla xattr"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd"
+IUSE="acl caps gmp nls selinux static unicode userland_BSD vanilla xattr"
 
 RDEPEND="caps? ( sys-libs/libcap )
 	gmp? ( dev-libs/gmp )
 	selinux? ( sys-libs/libselinux )
 	acl? ( sys-apps/acl )
-	xattr? ( sys-apps/attr )
+	xattr? ( !userland_BSD? ( sys-apps/attr ) )
 	nls? ( >=sys-devel/gettext-0.15 )
 	!app-misc/realpath
 	!<sys-apps/util-linux-2.13
@@ -62,6 +62,7 @@ src_prepare() {
 }
 
 src_configure() {
+	local myconf=''
 	if tc-is-cross-compiler && [[ ${CHOST} == *linux* ]] ; then
 		export fu_cv_sys_stat_statfs2_bsize=yes #311569
 		export gl_cv_func_realpath_works=yes #416629
@@ -70,6 +71,7 @@ src_configure() {
 	export gl_cv_func_mknod_works=yes #409919
 	use static && append-ldflags -static && sed -i '/elf_sys=yes/s:yes:no:' configure #321821
 	use selinux || export ac_cv_{header_selinux_{context,flash,selinux}_h,search_setfilecon}=no #301782
+	use userland_BSD && myconf="${myconf} -program-prefix=g --program-transform-name=s/stat/nustat/"
 	# kill/uptime - procps
 	# groups/su   - shadow
 	# hostname    - net-tools
@@ -84,7 +86,8 @@ src_configure() {
 		$(use_enable nls) \
 		$(use_enable acl) \
 		$(use_enable xattr) \
-		$(use_with gmp)
+		$(use_with gmp) \
+		${myconf}
 }
 
 src_test() {
