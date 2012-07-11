@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/c-client
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.89 2012/07/11 18:58:14 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.90 2012/07/11 19:04:50 eras Exp $
+
+  11 Jul 2012; Eray Aslan <eras@gentoo.org> -c-client-2007f.ebuild:
+  Remove old
 
 *c-client-2007f-r2 (11 Jul 2012)
 
