@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.267 2012/07/11 05:49:19 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.268 2012/07/11 10:15:28 blueness Exp $
+
+  11 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
+  gentoolkit-0.3.0.6-r3.ebuild:
+  Stable ppc, bug #425734
 
   11 Jul 2012; Jeff Horelick <jdhore@gentoo.org> gentoolkit-0.3.0.6-r3.ebuild:
   marked x86 per bug 425734
