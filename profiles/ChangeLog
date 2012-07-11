@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6769 2012/07/11 12:24:42 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6770 2012/07/11 14:20:15 pesa Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Jul 2012; Davide Pesavento <pesa@gentoo.org> package.mask:
+  Remove obsolete package.mask entries.
 
   11 Jul 2012; Tony Vroon <chainsaw@gentoo.org> package.mask:
   Mask =net-misc/asterisk-10.6.0 for null pointer dereferencing.

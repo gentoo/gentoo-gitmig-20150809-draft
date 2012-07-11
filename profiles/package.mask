@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13951 2012/07/11 13:58:56 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13952 2012/07/11 14:20:15 pesa Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -303,12 +303,6 @@ app-shells/pdksh
 >=sci-biology/ncbi-tools-20080302
 >=sci-libs/arpack-96
 >=sci-chemistry/dssp-070831
-
-# Davide Pesavento <pesa@gentoo.org> (12 Jun 2012)
-# Both have been merged into >=dev-python/shiboken-1.1.1.
-# Removal in 30 days.
-dev-python/apiextractor
-dev-python/generatorrunner
 
 # Alexis Ballier <aballier@gentoo.org> (10 Jun 2012)
 # Beta release, mask until rev. deps are fixed
