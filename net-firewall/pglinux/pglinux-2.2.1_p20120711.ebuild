@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/pglinux/pglinux-2.2.1.ebuild,v 1.1 2012/06/26 22:54:52 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/pglinux/pglinux-2.2.1_p20120711.ebuild,v 1.1 2012/07/11 14:13:31 hasufell Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ MY_P="pgl-${PV}"
 
 DESCRIPTION="Privacy oriented firewall application"
 HOMEPAGE="https://sourceforge.net/projects/peerguardian/"
-SRC_URI="mirror://sourceforge/peerguardian/${MY_P}.tar.gz"
+SRC_URI="http://dev.gentoo.org/~hasufell/distfiles/${MY_P}.tar.xz"
 
 LICENSE="GPL-3"
 KEYWORDS="~amd64 ~x86"
@@ -68,6 +68,7 @@ src_configure() {
 		$(use_enable dbus) \
 		--disable-lowmem \
 		--with-iconsdir=/usr/share/icons/hicolor/128x128/apps \
+		--with-gentoo-init \
 		$(use_with qt4)
 }
 
