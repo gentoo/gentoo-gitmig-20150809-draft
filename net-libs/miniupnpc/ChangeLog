@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/miniupnpc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/miniupnpc/ChangeLog,v 1.27 2012/07/03 16:20:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/miniupnpc/ChangeLog,v 1.28 2012/07/11 08:04:01 mgorny Exp $
+
+  11 Jul 2012; Michał Górny <mgorny@gentoo.org> miniupnpc-1.7.ebuild:
+  Fix shortcomings introduced by non-maintainer commits.
 
   03 Jul 2012; Brent Baude <ranger@gentoo.org> miniupnpc-1.6.20120509.ebuild:
   Marking miniupnpc-1.6.20120509 ppc for bug 421535
@@ -116,4 +119,3 @@
   +files/0004-Move-minixml-validation-test-to-check-target.patch,
   +files/miniupnpc-Respect-LDFLAGS.patch, +metadata.xml:
   Initial import, bug #241120, thank Michał Górny and Nikoli for this job.
-
