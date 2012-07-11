@@ -1,6 +1,14 @@
 # ChangeLog for net-nds/adtool
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/adtool/ChangeLog,v 1.15 2012/02/09 10:48:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/adtool/ChangeLog,v 1.16 2012/07/11 13:08:58 jlec Exp $
+
+*adtool-1.3.3 (11 Jul 2012)
+
+  11 Jul 2012; Justin Lecher <jlec@gentoo.org>
+  -files/adtool-1.3-10-asneeded.patch, adtool-1.3.2.ebuild,
+  +files/adtool-1.3.2-asneeded.patch, +adtool-1.3.3.ebuild,
+  +files/adtool-1.3.3-bfr-overflow.patch, metadata.xml:
+  Version Bump, buffer overflow fix
 
   09 Feb 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #85926
