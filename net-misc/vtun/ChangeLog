@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vtun
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/ChangeLog,v 1.47 2012/06/12 12:13:18 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/ChangeLog,v 1.48 2012/07/11 15:19:23 ago Exp $
+
+  11 Jul 2012; Agostino Sarubbo <ago@gentoo.org> vtun-3.0.2-r2.ebuild:
+  Stable for amd64, wrt bug #425814
 
 *vtun-3.0.2-r2 (12 Jun 2012)
 
