@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lndir/lndir-1.0.3.ebuild,v 1.3 2012/06/24 19:39:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lndir/lndir-1.0.3.ebuild,v 1.4 2012/07/11 20:08:09 ranger Exp $
 
 EAPI=3
 
@@ -8,7 +8,7 @@ XORG_STATIC=no
 inherit xorg-2
 
 DESCRIPTION="create a shadow directory of symbolic links to another directory tree"
-KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 ~ppc ppc64 ~sparc x86"
 IUSE=""
 
 RDEPEND=""
