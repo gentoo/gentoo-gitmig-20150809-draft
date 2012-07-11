@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/shishi/shishi-1.0.1.ebuild,v 1.3 2012/04/24 09:40:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/shishi/shishi-1.0.1.ebuild,v 1.4 2012/07/11 09:11:47 eras Exp $
 
 EAPI=4
 inherit multilib autotools eutils
@@ -26,6 +26,8 @@ RDEPEND="${DEPEND}"
 src_prepare() {
 	# fix finding libresolv.so
 	epatch "${FILESDIR}/${PN}_resolv.patch"
+	# fix building with automake-1.12 bug #424095
+	epatch "${FILESDIR}/${PN}_automake-1.12.patch"
 
 	# don't create a new database
 	sed -i -e '/install-data-hook/s/^/#/' Makefile.am || die
