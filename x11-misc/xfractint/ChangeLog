@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xfractint
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/ChangeLog,v 1.57 2012/05/14 15:27:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/ChangeLog,v 1.58 2012/07/11 15:17:04 ago Exp $
+
+  11 Jul 2012; Agostino Sarubbo <ago@gentoo.org> xfractint-20.04_p12.ebuild:
+  Stable for amd64, wrt bug #425830
 
 *xfractint-20.04_p12 (14 May 2012)
 
