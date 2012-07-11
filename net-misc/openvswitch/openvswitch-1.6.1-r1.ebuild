@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/openvswitch-1.6.1.ebuild,v 1.1 2012/06/27 08:49:35 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/openvswitch-1.6.1-r1.ebuild,v 1.1 2012/07/11 07:53:55 dev-zero Exp $
 
 EAPI=4
 
@@ -20,6 +20,7 @@ IUSE="debug monitor +pyside +ssl"
 RDEPEND="ssl? ( dev-libs/openssl )
 	monitor? ( dev-python/twisted
 		dev-python/twisted-conch
+		dev-python/twisted-web
 		pyside? ( dev-python/pyside )
 		!pyside? ( dev-python/PyQt4 )
 		net-zope/zope-interface )
@@ -60,6 +61,11 @@ src_compile() {
 src_install() {
 	default
 
+	if use monitor ; then
+		insinto $(python_get_sitedir)
+		doins -r "${D}"/usr/share/openvswitch/python/*
+		rm -r "${D}/usr/share/openvswitch/python"
+	fi
 	# not working without the brcompat_mod kernel module which did not get
 	# included in the kernel and we can't build it anymore
 	rm "${D}/usr/sbin/ovs-brcompatd" "${D}/usr/share/man/man8/ovs-brcompatd.8"
@@ -81,24 +87,26 @@ src_install() {
 }
 
 pkg_postinst() {
-	use monitor && python_mod_optimize /usr/share/openvswitch/ovsdbmonitor
-	python_mod_optimize /usr/share/openvswitch/python
+	use monitor && python_mod_optimize /usr/share/openvswitch/ovsdbmonitor ovs ovstest
 
 	elog "Use the following command to create an initial database for ovsdb-server:"
 	elog "   emerge --config =${CATEGORY}/${PF}"
 	elog "(will create a database in /etc/openvswitch/conf.db)"
+	elog "or to convert the database to the current schema after upgrading."
 }
 
 pkg_postrm() {
-	use monitor && python_mod_cleanup /usr/share/openvswitch/ovsdbmonitor
-	python_mod_cleanup /usr/share/openvswitch/python
+	use monitor && python_mod_cleanup /usr/share/openvswitch/ovsdbmonitor ovs ovstest
 }
 
 pkg_config() {
 	local db="${PREFIX}/etc/openvswitch/conf.db"
 	if [ -e "${db}" ] ; then
-		eerror "Database already exists in ${db}, please remove it first."
-		die "${db} already exists"
+		einfo "Database '${db}' already exists, doing schema migration..."
+		einfo "(if the migration fails, make sure that ovsdb-server is not running)"
+		"${PREFIX}/usr/bin/ovsdb-tool" convert "${db}" "${PREFIX}/usr/share/openvswitch/vswitch.ovsschema" || die "converting database failed"
+	else
+		einfo "Creating new database '${db}'..."
+		"${PREFIX}/usr/bin/ovsdb-tool" create "${db}" "${PREFIX}/usr/share/openvswitch/vswitch.ovsschema" || die "creating database failed"
 	fi
-	"${PREFIX}/usr/bin/ovsdb-tool" create "${db}" /usr/share/openvswitch/vswitch.ovsschema
 }
