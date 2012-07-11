@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/wesnoth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.209 2012/06/29 12:51:11 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.210 2012/07/11 17:31:41 mr_bones_ Exp $
+
+  11 Jul 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/wesnoth-1.10-xdg-path-fix.patch, -wesnoth-1.10.ebuild:
+  old
 
   29 Jun 2012; Brent Baude <ranger@gentoo.org> wesnoth-1.10.3.ebuild:
   Marking wesnoth-1.10.3 ppc for bug 422109
