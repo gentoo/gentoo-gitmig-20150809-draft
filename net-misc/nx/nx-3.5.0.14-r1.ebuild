@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.5.0.14.ebuild,v 1.1 2012/07/11 11:49:04 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.5.0.14-r1.ebuild,v 1.1 2012/07/11 14:38:29 voyageur Exp $
 
 EAPI=4
 inherit autotools eutils multilib
@@ -17,13 +17,6 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="elibc_glibc"
 
 RDEPEND="elibc_glibc? ( || ( net-libs/libtirpc <sys-libs/glibc-2.14 ) )
-	x11-libs/libXau
-	x11-libs/libXcomposite
-	x11-libs/libXdamage
-	x11-libs/libXdmcp
-	x11-libs/libXpm
-	x11-libs/libXrandr
-	x11-libs/libXtst
 	>=media-libs/libpng-1.2.8
 	>=sys-libs/zlib-1.2.3
 	virtual/jpeg"
@@ -91,7 +84,7 @@ src_install() {
 	dobin "${S}"/nx-X11/programs/nxauth/nxauth
 	dobin "${S}"/nxproxy/nxproxy
 
-	for lib in X11 Xcomposite Xdamage Xdmcp Xext Xfixes Xinerama Xpm Xrandr Xrender Xtst;
+	for lib in X11 Xau Xcomposite Xdamage Xdmcp Xext Xfixes Xinerama Xpm Xrandr Xrender Xtst;
 	do
 		dolib.so "${S}"/nx-X11/lib/${lib}/libNX_${lib}.so*
 	done
