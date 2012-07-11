@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/mailx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/ChangeLog,v 1.73 2012/07/03 20:00:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/ChangeLog,v 1.74 2012/07/11 10:26:38 eras Exp $
+
+*mailx-8.1.2.20050715-r6 (11 Jul 2012)
+
+  11 Jul 2012; Eray Aslan <eras@gentoo.org> +mailx-8.1.2.20050715-r6.ebuild:
+  Fix help file location - bug #424437
 
   03 Jul 2012; Jeroen Roovers <jer@gentoo.org> mailx-8.1.2.20050715-r5.ebuild:
   Stable for HPPA (bug #419011).
