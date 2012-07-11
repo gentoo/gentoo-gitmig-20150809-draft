@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/denemo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/ChangeLog,v 1.37 2012/05/15 22:10:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/ChangeLog,v 1.38 2012/07/11 23:44:25 radhermit Exp $
+
+*denemo-0.9.4 (11 Jul 2012)
+
+  11 Jul 2012; Tim Harder <radhermit@gentoo.org> +denemo-0.9.4.ebuild,
+  metadata.xml:
+  Version bump. Build for gtk3 and add alsa and portmidi use flags.
 
   15 May 2012; Samuli Suominen <ssuominen@gentoo.org> denemo-0.9.2.ebuild,
   +files/denemo-0.9.2-glib-2.31.patch:
