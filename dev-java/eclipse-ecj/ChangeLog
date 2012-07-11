@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/eclipse-ecj
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/ChangeLog,v 1.82 2012/07/10 14:55:24 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/ChangeLog,v 1.83 2012/07/11 21:03:27 caster Exp $
+
+*eclipse-ecj-4.2 (11 Jul 2012)
+
+  11 Jul 2012; Vlastimil Babka <caster@gentoo.org> +eclipse-ecj-4.2.ebuild:
+  Version bump, bug #425612.
 
 *eclipse-ecj-3.7.2-r1 (10 Jul 2012)
 *eclipse-ecj-3.6-r1 (10 Jul 2012)
