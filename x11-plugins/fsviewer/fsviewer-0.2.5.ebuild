@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/fsviewer/fsviewer-0.2.5.ebuild,v 1.12 2012/06/14 15:43:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/fsviewer/fsviewer-0.2.5.ebuild,v 1.13 2012/07/11 22:06:05 voyageur Exp $
 
 EAPI=1
 
@@ -40,7 +40,8 @@ DEPEND="
 	x11-libs/libXt
 	x11-proto/xextproto
 	x11-proto/xproto
-	x11-wm/windowmaker"
+	<x11-wm/windowmaker-0.95.0"
+RDEPEND=${DEPEND}
 
 S=${WORKDIR}/${MY_PN}.app-${PV}
 
