@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ffcall
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ffcall/ChangeLog,v 1.39 2010/08/24 11:33:39 voyageur Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ffcall/ChangeLog,v 1.40 2012/07/11 13:36:58 voyageur Exp $
+
+  11 Jul 2012; Bernard Cafarelli <voyageur@gentoo.org> metadata.xml:
+  Add common-lisp as backup herd, hoping for a new maintainer sometime
 
 *ffcall-1.10-r3 (24 Aug 2010)
 
