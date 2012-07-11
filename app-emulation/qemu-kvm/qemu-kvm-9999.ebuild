@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.44 2012/07/10 10:46:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.45 2012/07/11 02:01:15 cardoe Exp $
 
 EAPI="4"
 
@@ -25,9 +25,9 @@ HOMEPAGE="http://www.linux-kvm.org"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="+aio alsa bluetooth brltty +curl debug doc fdt kernel_linux \
+IUSE="+aio alsa bluetooth brltty +caps +curl debug doc fdt kernel_linux \
 kernel_FreeBSD ncurses opengl pulseaudio python rbd sasl sdl \
-smartcard spice static tci tls usbredir vde +vhost-net xattr xen xfs"
+smartcard spice static tci tls usbredir vde +vhost-net virtfs xattr xen xfs"
 
 COMMON_TARGETS="i386 x86_64 alpha arm cris m68k microblaze microblazeel mips mipsel ppc ppc64 sh4 sh4eb sparc sparc64 s390x"
 IUSE_SOFTMMU_TARGETS="${COMMON_TARGETS} mips64 mips64el ppcemb xtensa xtensaeb"
@@ -51,8 +51,10 @@ done
 
 REQUIRED_USE="static? ( !alsa !pulseaudio )
 	amd64? ( qemu_softmmu_targets_x86_64 )
-	x86? ( qemu_softmmu_targets_x86_64 )"
+	x86? ( qemu_softmmu_targets_x86_64 )
+	virtfs? ( xattr )"
 
+# Yep, you need both libcap and libcap-ng since virtfs only uses libcap.
 RDEPEND="
 	!app-emulation/kqemu
 	!app-emulation/qemu
@@ -69,6 +71,7 @@ RDEPEND="
 	alsa? ( >=media-libs/alsa-lib-1.0.13 )
 	bluetooth? ( net-wireless/bluez )
 	brltty? ( app-accessibility/brltty )
+	caps? ( sys-libs/libcap-ng )
 	curl? ( >=net-misc/curl-7.15.4 )
 	fdt? ( >=sys-apps/dtc-1.2.0 )
 	kernel_linux? ( >=sys-apps/util-linux-2.16.0 )
@@ -90,6 +93,7 @@ RDEPEND="
 	tls? ( net-libs/gnutls )
 	usbredir? ( sys-apps/usbredir )
 	vde? ( net-misc/vde )
+	virtfs? ( sys-libs/libcap )
 	xattr? ( sys-apps/attr )
 	xen? ( app-emulation/xen-tools )
 	xfs? ( sys-fs/xfsprogs )"
@@ -217,7 +221,14 @@ src_configure() {
 	conf_opts="${conf_opts} --extra-ldflags=-Wl,-z,execheap"
 
 	# Add support for static builds
-	use static && conf_opts="${conf_opts} --static"
+	use static && conf_opts="${conf_opts} --static --disable-pie"
+
+	# We always want to attempt to build with PIE support as it results
+	# in a more secure binary. But it doesn't work with static or if
+	# the current GCC doesn't have PIE support.
+	if ! use static && gcc-specs-pie; then
+		conf_opts="${conf_opts} --enable-pie"
+	fi
 
 	# audio options
 	audio_opts="oss"
@@ -237,14 +248,13 @@ src_configure() {
 		--disable-strip \
 		--disable-werror \
 		--enable-guest-agent \
-		--enable-pie \
 		--enable-vnc-jpeg \
 		--enable-vnc-png \
-		--enable-vnc-thread \
 		--python=python2 \
 		$(use_enable aio linux-aio) \
 		$(use_enable bluetooth bluez) \
 		$(use_enable brltty brlapi) \
+		$(use_enable caps cap-ng) \
 		$(use_enable curl) \
 		$(use_enable debug debug-info) \
 		$(use_enable debug debug-mon) \
@@ -268,9 +278,10 @@ src_configure() {
 		$(use_enable usbredir usb-redir) \
 		$(use_enable vde) \
 		$(use_enable vhost-net) \
+		$(use_enable virtfs) \
 		$(use_enable xattr attr) \
-		$(use_enable xattr virtfs) \
 		$(use_enable xen) \
+		$(use_enable xen xen-pci-passthrough) \
 		$(use_enable xfs xfsctl) \
 		--audio-drv-list="${audio_opts}" \
 		--target-list="${softmmu_targets} ${user_targets}" \
@@ -292,12 +303,12 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${ED}" install || die "make install failed"
+	emake DESTDIR="${ED}" install
 
 	if [[ -n ${softmmu_targets} ]]; then
 		if use kernel_linux; then
 			insinto /lib/udev/rules.d/
-			doins "${FILESDIR}"/65-kvm.rules || die
+			doins "${FILESDIR}"/65-kvm.rules
 		fi
 
 		if use qemu_softmmu_targets_x86_64 ; then
@@ -311,16 +322,14 @@ src_install() {
 		fi
 	fi
 
-	dodoc Changelog MAINTAINERS TODO pci-ids.txt || die
-	newdoc pc-bios/README README.pc-bios || die
+	dodoc Changelog MAINTAINERS TODO pci-ids.txt
+	newdoc pc-bios/README README.pc-bios
 
 	if use doc; then
 		dohtml qemu-doc.html qemu-tech.html || die
 	fi
 
-	if use python; then
-		dobin scripts/kvm/kvm_stat || die
-	fi
+	use python & dobin scripts/kvm/kvm_stat
 
 	# FIXME: Need to come up with a solution for non-x86 based systems
 	if use x86 || use amd64; then
@@ -343,7 +352,6 @@ src_install() {
 }
 
 pkg_postinst() {
-
 	if [[ -n ${softmmu_targets} ]]; then
 		elog "If you don't have kvm compiled into the kernel, make sure you have"
 		elog "the kernel module loaded before running kvm. The easiest way to"

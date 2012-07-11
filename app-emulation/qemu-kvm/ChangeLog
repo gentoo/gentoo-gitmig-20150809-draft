@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.134 2012/07/11 01:58:02 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.135 2012/07/11 02:01:15 cardoe Exp $
+
+  10 Jul 2012; Doug Goldstein <cardoe@gentoo.org> qemu-kvm-9999.ebuild:
+  Update to latest version. Fix --enable-vnc-thread as its documented in the
+  ebuild source. bug #425654
 
   10 Jul 2012; Doug Goldstein <cardoe@gentoo.org> qemu-kvm-1.1.0.ebuild:
   Attempt to better handle the case when we can't have PIE enabled, which is
