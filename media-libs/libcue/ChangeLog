@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libcue
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcue/ChangeLog,v 1.22 2012/03/18 18:41:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcue/ChangeLog,v 1.23 2012/07/11 23:06:49 radhermit Exp $
+
+  11 Jul 2012; Tim Harder <radhermit@gentoo.org> -libcue-1.3.0.ebuild:
+  Remove old.
 
   18 Mar 2012; Raúl Porcel <armin76@gentoo.org> libcue-1.4.0.ebuild:
   sh/sparc stable wrt #397069
