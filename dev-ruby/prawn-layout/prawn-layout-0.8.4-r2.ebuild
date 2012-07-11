@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn-layout/prawn-layout-0.8.4-r2.ebuild,v 1.4 2012/07/08 16:06:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn-layout/prawn-layout-0.8.4-r2.ebuild,v 1.5 2012/07/11 05:41:25 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19 ree18 jruby"
@@ -21,12 +21,6 @@ IUSE="examples"
 ruby_add_bdepend test "dev-ruby/test-spec dev-ruby/mocha"
 
 ruby_add_rdepend "=dev-ruby/prawn-core-$(get_version_component_range 1-2)*"
-
-USE_RUBY=ruby19 ruby_add_bdepend "test? ( dev-ruby/test-unit:0 )"
-
-all_ruby_prepare() {
-	sed -i -e '6irequire "prawn/core"; ruby_19 { gem "test-unit", "=1.2.3" }' spec/spec_helper.rb || die
-}
 
 all_ruby_install() {
 	all_fakegem_install
