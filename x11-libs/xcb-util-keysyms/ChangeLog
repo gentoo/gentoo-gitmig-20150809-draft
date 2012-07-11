@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xcb-util-keysyms
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util-keysyms/ChangeLog,v 1.14 2012/06/29 17:43:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util-keysyms/ChangeLog,v 1.15 2012/07/11 20:05:14 ranger Exp $
+
+  11 Jul 2012; Brent Baude <ranger@gentoo.org> xcb-util-keysyms-0.3.9.ebuild:
+  Marking xcb-util-keysyms-0.3.9 ppc64 stable for bug 419473
 
   29 Jun 2012; Markus Meier <maekke@gentoo.org> xcb-util-keysyms-0.3.9.ebuild:
   arm stable, bug #419473
