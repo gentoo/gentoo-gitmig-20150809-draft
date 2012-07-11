@@ -1,6 +1,14 @@
 # ChangeLog for sci-chemistry/coot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/ChangeLog,v 1.52 2012/03/07 19:33:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/ChangeLog,v 1.53 2012/07/11 20:38:49 jlec Exp $
+
+*coot-0.7_pre4266 (11 Jul 2012)
+
+  11 Jul 2012; Justin Lecher <jlec@gentoo.org> +coot-0.7_pre4266.ebuild,
+  +files/coot-0.7_pre4266-clipper-config.patch,
+  +files/coot-0.7_pre4266-goocanvas.patch,
+  +files/coot-0.7_pre4266-mmdb-config.patch, +files/coot-0.7_pre4266-ssm.patch:
+  Version Bump, fixes compilation with gcc-4.7, #425836
 
   07 Mar 2012; Justin Lecher <jlec@gentoo.org> coot-0.6.2.ebuild,
   coot-0.6.2-r1.ebuild, coot-0.7_pre4040.ebuild:
