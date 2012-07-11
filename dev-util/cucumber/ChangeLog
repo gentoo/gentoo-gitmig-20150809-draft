@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cucumber
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.50 2012/07/08 16:38:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.51 2012/07/11 16:27:54 nativemad Exp $
+
+  11 Jul 2012; Andreas Schuerch <nativemad@gentoo.org> cucumber-1.1.4.ebuild:
+  x86 keyword set, see bug 417573
 
   08 Jul 2012; Jeroen Roovers <jer@gentoo.org> cucumber-1.1.4.ebuild:
   Marked ~hppa (bug #417573).
