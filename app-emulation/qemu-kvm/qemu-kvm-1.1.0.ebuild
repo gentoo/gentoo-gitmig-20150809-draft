@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.1.0.ebuild,v 1.11 2012/07/10 23:46:39 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.1.0.ebuild,v 1.12 2012/07/11 01:58:02 cardoe Exp $
 
 EAPI="4"
 
@@ -221,7 +221,14 @@ src_configure() {
 	conf_opts="${conf_opts} --extra-ldflags=-Wl,-z,execheap"
 
 	# Add support for static builds
-	use static && conf_opts="${conf_opts} --static"
+	use static && conf_opts="${conf_opts} --static --disable-pie"
+
+	# We always want to attempt to build with PIE support as it results
+	# in a more secure binary. But it doesn't work with static or if
+	# the current GCC doesn't have PIE support.
+	if ! use static && gcc-specs-pie; then
+		conf_opts="${conf_opts} --enable-pie"
+	fi
 
 	# audio options
 	audio_opts="oss"
@@ -241,7 +248,6 @@ src_configure() {
 		--disable-strip \
 		--disable-werror \
 		--enable-guest-agent \
-		--enable-pie \
 		--enable-vnc-jpeg \
 		--enable-vnc-png \
 		--enable-vnc-thread \
