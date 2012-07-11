@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/cfitsio-3.300-r1.ebuild,v 1.2 2012/07/10 21:18:46 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/cfitsio-3.300-r1.ebuild,v 1.3 2012/07/11 15:34:33 bicatali Exp $
 
 EAPI=4
 inherit autotools-utils
@@ -38,7 +38,7 @@ src_configure() {
 
 src_install () {
 	autotools-utils_src_install
-	dodoc changes.txt README* cfitsio.doc Changes.rst
+	dodoc changes.txt README* cfitsio.doc Changes*
 	use fortran && dodoc fitsio.doc
 	use doc && dodoc quick.pdf cfitsio.pdf fpackguide.pdf
 	use doc && use fortran && dodoc fitsio.pdf
