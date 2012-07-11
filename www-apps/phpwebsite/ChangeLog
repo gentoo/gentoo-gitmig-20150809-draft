@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/phpwebsite
-# Copyright 2000-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/ChangeLog,v 1.62 2012/06/26 10:44:45 mabi Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/ChangeLog,v 1.63 2012/07/11 00:20:36 jdhore Exp $
+
+  11 Jul 2012; Jeff Horelick <jdhore@gentoo.org> phpwebsite-1.7.2.ebuild:
+  marked x86 per bug 260274
 
 *phpwebsite-1.7.2 (26 Jun 2012)
 
