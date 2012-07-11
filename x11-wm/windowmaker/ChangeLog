@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/windowmaker
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.134 2012/06/07 22:42:15 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.135 2012/07/11 13:10:11 voyageur Exp $
+
+*windowmaker-0.95.3-r1 (11 Jul 2012)
+
+  11 Jul 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  +windowmaker-0.95.3-r1.ebuild,
+  +files/windowmaker-0.95.3-fix_underlinking.patch:
+  Fix underlinking on libWMaker, bug #425788
 
 *windowmaker-0.95.3 (07 Jun 2012)
 
