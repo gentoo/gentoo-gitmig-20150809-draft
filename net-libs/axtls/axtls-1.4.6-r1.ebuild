@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/axtls/axtls-1.4.6-r1.ebuild,v 1.4 2012/06/21 15:03:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/axtls/axtls-1.4.6-r1.ebuild,v 1.5 2012/07/11 23:59:40 blueness Exp $
 
 EAPI="4"
 
@@ -39,7 +39,7 @@ HOMEPAGE="http://axtls.sourceforge.net/"
 SRC_URI="mirror://sourceforge/axtls/${MY_PN}-${PV}.tar.gz"
 S="${WORKDIR}/${MY_PN}"
 
-LICENSE="BSD"
+LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="amd64 hppa ~x86"
 IUSE="httpd cgi-lua cgi-php static static-libs doc"

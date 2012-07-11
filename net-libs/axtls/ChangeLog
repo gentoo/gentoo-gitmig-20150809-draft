@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/axtls
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/axtls/ChangeLog,v 1.8 2012/07/01 13:47:46 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/axtls/ChangeLog,v 1.9 2012/07/11 23:59:40 blueness Exp $
+
+  11 Jul 2012; Anthony G. Basile <blueness@gentoo.org> axtls-1.4.6-r1.ebuild,
+  axtls-1.4.8.ebuild:
+  Add GPL-2 for init scripts, bug #426040
 
 *axtls-1.4.8 (01 Jul 2012)
 
