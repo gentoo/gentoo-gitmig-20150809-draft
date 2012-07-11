@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/psipred
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/psipred/ChangeLog,v 1.6 2012/07/10 20:30:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/psipred/ChangeLog,v 1.7 2012/07/11 02:33:24 mr_bones_ Exp $
+
+  11 Jul 2012; Michael Sterrett <mr_bones_@gentoo.org> psipred-3.2.1.ebuild,
+  psipred-3.3.ebuild:
+  add missing test to IUSE
 
 *psipred-3.3 (10 Jul 2012)
 

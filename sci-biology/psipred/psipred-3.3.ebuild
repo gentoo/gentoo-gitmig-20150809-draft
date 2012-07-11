@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/psipred/psipred-3.3.ebuild,v 1.1 2012/07/10 20:30:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/psipred/psipred-3.3.ebuild,v 1.2 2012/07/11 02:33:24 mr_bones_ Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ SRC_URI="
 LICENSE="psipred"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE=""
+IUSE="test"
 
 RDEPEND="
 	sci-biology/ncbi-tools
