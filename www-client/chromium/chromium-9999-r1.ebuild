@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.122 2012/07/11 03:00:55 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.123 2012/07/11 03:30:56 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -112,6 +112,7 @@ src_unpack() {
 
 	# Disabled so that we do not download nacl toolchain.
 	#gclient_runhooks
+
 	# Remove any lingering nacl toolchain files.
 	rm -rf src/native_client/toolchain/linux_x86_newlib
 
@@ -122,7 +123,8 @@ src_unpack() {
 	rsync -rlpgo --exclude=".svn/" src/ "${S}" || die
 
 	# Display correct svn revision in about box, and log new version.
-	echo "${ESVN_WC_REVISION}" > "${S}"/build/LASTCHANGE.in || die
+	echo "LASTCHANGE=${ESVN_WC_REVISION}" > "${S}"/build/util/LASTCHANGE || die
+
 	. src/chrome/VERSION
 	elog "Installing/updating to version ${MAJOR}.${MINOR}.${BUILD}.${PATCH} (Developer Build ${ESVN_WC_REVISION})"
 }

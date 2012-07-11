@@ -1,6 +1,9 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.667 2012/07/11 03:00:55 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.668 2012/07/11 03:30:56 floppym Exp $
+
+  11 Jul 2012; Mike Gilbert <floppym@gentoo.org> chromium-9999-r1.ebuild:
+  Populate LASTCHANGE directly. Bug 422923 by Joe Kappus.
 
 *chromium-22.0.1201.0 (11 Jul 2012)
 
