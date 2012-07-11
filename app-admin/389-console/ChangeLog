@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/389-console
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/389-console/ChangeLog,v 1.4 2012/01/26 18:58:41 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/389-console/ChangeLog,v 1.5 2012/07/11 18:20:53 lxnay Exp $
+
+  11 Jul 2012; Fabio Erculiani <lxnay@gentoo.org> 389-console-1.1.6.ebuild,
+  389-console-1.1.7.ebuild:
+  drop app-admin/389-admin-console dependency, not strictly needed, see bug
+  #368457
 
   26 Jan 2012; Fabio Erculiani <lxnay@gentoo.org> 389-console-1.1.6.ebuild,
   389-console-1.1.7.ebuild, -files/fedora.png:
