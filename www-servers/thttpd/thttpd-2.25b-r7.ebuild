@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/thttpd-2.25b-r7.ebuild,v 1.7 2009/08/09 13:39:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/thttpd-2.25b-r7.ebuild,v 1.8 2012/07/11 23:36:11 blueness Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ DESCRIPTION="Small and fast multiplexing webserver."
 HOMEPAGE="http://www.acme.com/software/thttpd/"
 SRC_URI="http://www.acme.com/software/thttpd/${P}.tar.gz"
 
-LICENSE="BSD"
+LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~hppa ~mips ppc sparc x86 ~x86-fbsd"
 IUSE="static"
