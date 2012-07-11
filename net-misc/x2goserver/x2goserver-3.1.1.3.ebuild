@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/x2goserver-3.1.1.3.ebuild,v 1.1 2012/07/10 13:56:11 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/x2goserver-3.1.1.3.ebuild,v 1.2 2012/07/11 08:33:22 voyageur Exp $
 
 EAPI=4
 inherit eutils multilib user
@@ -41,6 +41,7 @@ src_install() {
 
 	fowners root:x2goprint /usr/bin/x2goprint
 	fperms 2755 /usr/bin/x2goprint
+	dosym /usr/share/applications /etc/x2go/applications
 
 	newinitd "${FILESDIR}"/${PN}.init x2gocleansessions
 }
