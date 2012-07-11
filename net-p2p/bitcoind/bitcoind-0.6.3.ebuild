@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.6.3.ebuild,v 1.1 2012/06/26 03:02:42 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.6.3.ebuild,v 1.2 2012/07/11 23:46:37 blueness Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ SRC_URI="https://nodeload.github.com/bitcoin/bitcoin/tarball/v${PV/_/} -> bitcoi
 	logrotate? ( https://github.com/bitcoin/bitcoin/commit/9af080c351c40a4f56d37174253d33a9f4ffdb69.diff -> 0.6.3-reopen_log_file.patch )
 "
 
-LICENSE="MIT ISC"
+LICENSE="MIT ISC GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
 IUSE="+eligius examples logrotate upnp"
