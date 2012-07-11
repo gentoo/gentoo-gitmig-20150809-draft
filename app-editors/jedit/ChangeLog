@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/jedit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.98 2012/05/06 12:03:53 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.99 2012/07/11 21:59:59 caster Exp $
+
+*jedit-4.5.2 (11 Jul 2012)
+
+  11 Jul 2012; Vlastimil Babka <caster@gentoo.org> +jedit-4.5.2.ebuild:
+  Version bump.
 
 *jedit-4.4.2-r1 (06 May 2012)
 
