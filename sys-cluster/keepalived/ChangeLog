@@ -1,6 +1,15 @@
 # ChangeLog for sys-cluster/keepalived
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.92 2012/06/06 14:05:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.93 2012/07/11 09:37:59 ultrabug Exp $
+
+*keepalived-1.2.2-r4 (11 Jul 2012)
+
+  11 Jul 2012; Ultrabug <ultrabug@gentoo.org> +keepalived-1.2.2-r4.ebuild,
+  +files/keepalived-1.2.2-fix-ipv4-addr-compare.patch,
+  +files/keepalived-1.2.2-libipvs-fix-backup-daemon.patch,
+  +files/keepalived-1.2.2-libipvs-fix-ipv6.patch:
+  Fix #403133 by Alexander Holler, thanks to Greg for testing. Fix #425082
+  thanks to Ruslan Lutsenko. Add ipv6 USE flag.
 
   06 Jun 2012; Brent Baude <ranger@gentoo.org> keepalived-1.2.2-r3.ebuild:
   Marking keepalived-1.2.2-r3 ppc64 for bug 371469
