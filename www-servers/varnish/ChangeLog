@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/varnish
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.50 2012/07/11 23:10:42 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.51 2012/07/11 23:27:45 blueness Exp $
+
+  11 Jul 2012; Anthony G. Basile <blueness@gentoo.org> varnish-2.0.4-r1.ebuild,
+  varnish-3.0.2-r1.ebuild:
+  Add GPL-2 for init scripts, bug #426184
 
   11 Jul 2012; Anthony G. Basile <blueness@gentoo.org> varnish-3.0.2-r1.ebuild:
   Keyword ~mips

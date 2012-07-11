@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/varnish-2.0.4-r1.ebuild,v 1.6 2012/05/21 19:31:30 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/varnish-2.0.4-r1.ebuild,v 1.7 2012/07/11 23:27:45 blueness Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ DESCRIPTION="Varnish is a state-of-the-art, high-performance HTTP accelerator."
 HOMEPAGE="http://varnish.projects.linpro.no/"
 SRC_URI="mirror://sourceforge/varnish/${P}.tar.gz"
 
-LICENSE="BSD-2"
+LICENSE="BSD-2 GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
