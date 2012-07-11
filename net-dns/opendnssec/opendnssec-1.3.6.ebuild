@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/opendnssec-1.3.6.ebuild,v 1.2 2012/06/14 02:15:19 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/opendnssec-1.3.6.ebuild,v 1.3 2012/07/11 23:44:53 mschiff Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ DESCRIPTION="An open-source turn-key solution for DNSSEC"
 HOMEPAGE="http://www.opendnssec.org/"
 SRC_URI="http://www.${PN}.org/files/source/${MY_P}.tar.gz"
 
-LICENSE="BSD"
+LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="auditor +curl debug doc eppclient mysql +signer +sqlite test ${PKCS11_IUSE}"
