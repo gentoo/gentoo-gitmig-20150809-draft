@@ -1,23 +1,15 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.5.0-r2.ebuild,v 1.1 2011/11/04 15:52:52 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.5.0.14.ebuild,v 1.1 2012/07/11 11:49:04 voyageur Exp $
 
 EAPI=4
 inherit autotools eutils multilib
 
 DESCRIPTION="NX compression technology core libraries"
-HOMEPAGE="http://www.nomachine.com/developers.php"
+HOMEPAGE="http://www.nomachine.com/developers.php
+	http://www.x2go.org/doku.php/wiki:libs:nx-libs"
 
-URI_BASE="http://web04.nomachine.com/download/${PV}/sources"
-SRC_NX_X11="nx-X11-$PV-2.tar.gz"
-SRC_NXAGENT="nxagent-$PV-7.tar.gz"
-SRC_NXAUTH="nxauth-$PV-1.tar.gz"
-SRC_NXCOMP="nxcomp-$PV-2.tar.gz"
-SRC_NXCOMPEXT="nxcompext-$PV-1.tar.gz"
-SRC_NXCOMPSHAD="nxcompshad-$PV-2.tar.gz"
-SRC_NXPROXY="nxproxy-$PV-1.tar.gz"
-
-SRC_URI="$URI_BASE/$SRC_NX_X11 $URI_BASE/$SRC_NXAGENT $URI_BASE/$SRC_NXPROXY $URI_BASE/$SRC_NXAUTH $URI_BASE/$SRC_NXCOMPEXT $URI_BASE/$SRC_NXCOMPSHAD $URI_BASE/$SRC_NXCOMP"
+SRC_URI="http://code.x2go.org/releases/source/nx-libs/nx-libs-${PV}-full.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -41,18 +33,14 @@ DEPEND="${RDEPEND}
 		x11-misc/imake
 		x11-proto/inputproto"
 
-S=${WORKDIR}/${PN}-X11
+S=${WORKDIR}/nx-libs_${PV}
 
 src_prepare() {
 	# For nxcl/qtnx
-	cd "${WORKDIR}"/nxproxy
+	cd "${S}"/nxproxy
 	epatch "${FILESDIR}"/${PN}-3.2.0-nxproxy_read_from_stdin.patch
 
-	# libpn-1.5 support
-	cd "${WORKDIR}"/nxcomp
-	epatch "${FILESDIR}"/${P}-libpng15.patch
-
-	cd "${WORKDIR}"
+	cd "${S}"
 	# Fix sandbox violation
 	epatch "${FILESDIR}"/1.5.0/nx-x11-1.5.0-tmp-exec.patch
 	# -fPIC
@@ -61,13 +49,13 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.3.0-cflags.patch
 	# Run autoreconf in all neeed folders
 	for i in nxcomp nxcompext nxcompshad nxproxy; do
-		cd "${WORKDIR}"/${i}
+		cd "${S}"/${i}
 		eautoreconf ${i}
-		cd "${WORKDIR}"
+		cd "${S}"
 	done
 
 	# From xorg-x11-6.9.0-r3.ebuild
-	cd "${S}"
+	cd "${S}/nx-X11"
 	HOSTCONF="config/cf/host.def"
 	echo "#define CcCmd $(tc-getCC)" >> ${HOSTCONF}
 	echo "#define OptimizedCDebugFlags ${CFLAGS} GccAliasingArgs" >> ${HOSTCONF}
@@ -75,28 +63,18 @@ src_prepare() {
 	# Respect LDFLAGS
 	echo "#define ExtraLoadFlags ${LDFLAGS}" >> ${HOSTCONF}
 	echo "#define SharedLibraryLoadFlags -shared ${LDFLAGS}" >> ${HOSTCONF}
-	echo "#define BuildXInputLib YES" >> ${HOSTCONF}
 }
 
 src_configure() {
-	for i in nxcomp nxcompshad nxproxy nxcompext ; do
-		cd "${WORKDIR}"/${i}
-		econf
-	done
+	cd "${S}"/nxproxy
+	econf
 }
 
 src_compile() {
-	for i in nxcomp nxcompshad nxproxy; do
-		cd "${WORKDIR}"/${i}
-		emake
-	done
+	cd "${S}/nx-X11"
+	FAST=1 emake World WORLDOPTS="" MAKE="make"
 
-	cd "${S}"
-	# Again, from xorg-x11-6.9.0-r3.ebuild
-	unset MAKE_OPTS
-	FAST=1 emake -j1 World WORLDOPTS="" MAKE="make"
-
-	cd "${WORKDIR}"/nxcompext
+	cd "${S}"/nxproxy
 	emake
 }
 
@@ -109,15 +87,17 @@ src_install() {
 	done
 
 	into ${NX_ROOT}
-	dobin "${S}"/programs/Xserver/nxagent
-	dobin "${S}"/programs/nxauth/nxauth
-	dobin "${WORKDIR}"/nxproxy/nxproxy
+	dobin "${S}"/nx-X11/programs/Xserver/nxagent
+	dobin "${S}"/nx-X11/programs/nxauth/nxauth
+	dobin "${S}"/nxproxy/nxproxy
 
-	dolib.so "${S}"/lib/X11/libX11.so*
-	dolib.so "${S}"/lib/Xext/libXext.so*
-	dolib.so "${S}"/lib/Xi/libXi.so*
-	dolib.so "${S}"/lib/Xrender/libXrender.so*
-	dolib.so "${WORKDIR}"/nxcomp/libXcomp.so*
-	dolib.so "${WORKDIR}"/nxcompext/libXcompext.so*
-	dolib.so "${WORKDIR}"/nxcompshad/libXcompshad.so*
+	for lib in X11 Xcomposite Xdamage Xdmcp Xext Xfixes Xinerama Xpm Xrandr Xrender Xtst;
+	do
+		dolib.so "${S}"/nx-X11/lib/${lib}/libNX_${lib}.so*
+	done
+	dolib.so "${S}"/nx-X11/lib/freetype2/libNX_freetype.so*
+
+	dolib.so "${S}"/nxcomp/libXcomp.so*
+	dolib.so "${S}"/nxcompext/libXcompext.so*
+	dolib.so "${S}"/nxcompshad/libXcompshad.so*
 }

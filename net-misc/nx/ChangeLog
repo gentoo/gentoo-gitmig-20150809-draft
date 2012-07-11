@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/nx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/ChangeLog,v 1.66 2012/06/07 22:59:15 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/ChangeLog,v 1.67 2012/07/11 11:49:04 voyageur Exp $
+
+*nx-3.5.0.14 (11 Jul 2012)
+
+  11 Jul 2012; Bernard Cafarelli <voyageur@gentoo.org> -nx-3.5.0-r2.ebuild,
+  +nx-3.5.0.14.ebuild:
+  Use x2go sources to build nx, this should fix some problems like incorrect
+  keyboard locale or undefined symbols with libX11-1.5.0, as in bug #423855
+  (thanks everyone and especially Xenon Kay in this bug for hunting down the
+  problem and pointing to x2go sources)
 
 *nx-3.5.0-r3 (07 Jun 2012)
 
