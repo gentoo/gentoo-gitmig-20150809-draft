@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/lambdamoo
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lambdamoo/ChangeLog,v 1.9 2010/09/20 02:17:54 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lambdamoo/ChangeLog,v 1.10 2012/07/12 15:53:55 axs Exp $
+
+  12 Jul 2012; Ian Stakenvicius <axs@gentoo.org> lambdamoo-1.8.1-r1.ebuild,
+  lambdamoo-1.8.1-r2.ebuild:
+  added GPL-2 to LICENSE per bug 426066
 
 *lambdamoo-1.8.1-r2 (20 Sep 2010)
 
