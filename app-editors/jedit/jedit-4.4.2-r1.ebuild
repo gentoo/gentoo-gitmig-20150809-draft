@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.4.2-r1.ebuild,v 1.1 2012/05/06 11:55:30 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.4.2-r1.ebuild,v 1.2 2012/07/12 05:47:54 jdhore Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.jedit.org"
 SRC_URI="mirror://sourceforge/${PN}/${PN}${PV}source.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~ppc64 x86 ~x86-fbsd"
 SLOT="0"
 IUSE=""
 
