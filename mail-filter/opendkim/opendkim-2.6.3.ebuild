@@ -1,9 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-2.5.2.ebuild,v 1.2 2012/06/04 23:58:02 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-2.6.3.ebuild,v 1.1 2012/07/12 17:14:04 eras Exp $
 
 EAPI=4
-
 inherit eutils db-use autotools user
 
 # for betas
@@ -53,7 +52,7 @@ src_prepare() {
 	       -e 's:mailnull:milter:g' \
 	       -e 's:^#[[:space:]]*PidFile.*:PidFile /var/run/opendkim/opendkim.pid:' \
 		   opendkim/opendkim.conf.sample opendkim/opendkim.conf.simple.in \
-		   contrib/stats/opendkim-reportstats || die
+		   stats/opendkim-reportstats || die
 
 	sed -i -e 's:dist_doc_DATA:dist_html_DATA:' libopendkim/docs/Makefile.am \
 		|| die
@@ -87,7 +86,6 @@ src_configure() {
 		$(use_with lua) \
 		$(use_enable lua rbl) \
 		$(use_with ldap openldap) \
-		$(use_enable ldap ldap_caching) \
 		$(use_enable poll) \
 		$(use_enable static-libs static) \
 		${myconf} \
@@ -102,7 +100,6 @@ src_configure() {
 		--enable-redirect \
 		--enable-resign \
 		--enable-replace_rules \
-		--enable-selector_header \
 		--enable-default_sender \
 		--enable-sender_macro \
 		--enable-vbr \
@@ -116,7 +113,7 @@ src_install() {
 	# file collision
 	rm -f "${D}"/usr/share/man/man3/ar.3
 
-	dosbin contrib/stats/opendkim-reportstats
+	dosbin stats/opendkim-reportstats
 	newinitd "${FILESDIR}/opendkim.init.r2" opendkim
 	dodir /etc/opendkim /var/lib/opendkim
 	fowners milter:milter /var/lib/opendkim
