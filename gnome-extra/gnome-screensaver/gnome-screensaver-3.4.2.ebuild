@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-3.4.2.ebuild,v 1.1 2012/07/04 23:21:55 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-3.4.2.ebuild,v 1.2 2012/07/12 02:01:54 cardoe Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -69,6 +69,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch_user
 	# Regenerate marshaling code for <glib-2.31 compat
 	rm -v src/gs-marshal.{c,h} || die
 	gnome2_src_prepare

@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-screensaver
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/ChangeLog,v 1.155 2012/07/04 23:21:55 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/ChangeLog,v 1.156 2012/07/12 02:01:54 cardoe Exp $
+
+  11 Jul 2012; Doug Goldstein <cardoe@gentoo.org>
+  gnome-screensaver-3.4.1.ebuild, gnome-screensaver-3.4.2.ebuild:
+  Add epatch_user as provided by tetromino on bug #425070.
 
 *gnome-screensaver-3.4.2 (04 Jul 2012)
 
