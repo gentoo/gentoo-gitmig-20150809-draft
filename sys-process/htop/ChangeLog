@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/htop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.118 2012/05/18 02:32:29 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.119 2012/07/12 18:14:57 idl0r Exp $
+
+  12 Jul 2012; Christian Ruppert <idl0r@gentoo.org> htop-1.0.1.ebuild:
+  Inherit autotools eclass for the auto* dependencies
 
   18 May 2012;  <richard@gentoo.org> htop-1.0.1.ebuild:
   keyword ~amd64-fbsd
