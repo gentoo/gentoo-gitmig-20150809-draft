@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xlogo/xlogo-1.0.4.ebuild,v 1.6 2012/07/11 19:30:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xlogo/xlogo-1.0.4.ebuild,v 1.7 2012/07/12 17:21:04 ranger Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit xorg-2
 
 DESCRIPTION="X Window System logo"
 
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ~ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-interix"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-interix"
 IUSE=""
 
 RDEPEND="x11-libs/libXrender
