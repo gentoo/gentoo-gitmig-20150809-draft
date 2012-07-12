@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/imake
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.55 2012/07/11 20:07:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.56 2012/07/12 18:04:14 ranger Exp $
+
+  12 Jul 2012; Brent Baude <ranger@gentoo.org> imake-1.0.5.ebuild:
+  Marking imake-1.0.5 ppc stable for bug 419473
 
   11 Jul 2012; Brent Baude <ranger@gentoo.org> imake-1.0.5.ebuild:
   Marking imake-1.0.5 ppc64 stable for bug 419473
