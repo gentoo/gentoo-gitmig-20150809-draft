@@ -1,6 +1,11 @@
 # ChangeLog for www-client/qupzilla
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/ChangeLog,v 1.6 2012/06/12 15:45:00 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/ChangeLog,v 1.7 2012/07/12 14:20:32 pesa Exp $
+
+*qupzilla-1.3.0 (12 Jul 2012)
+
+  12 Jul 2012; Davide Pesavento <pesa@gentoo.org> +qupzilla-1.3.0.ebuild:
+  Version bump, added dbus USE flag.
 
   12 Jun 2012; Michael Palimaka <kensington@gentoo.org> qupzilla-1.2.0.ebuild:
   Update SRC_URI, wrt bug #420843 by Corentin Chary <iksaif@gentoo.org>.
@@ -26,4 +31,3 @@
   +qupzilla-1.1.8.ebuild:
   Initial commit, moved from qt overlay. Ebuild by Ben de Groot
   <yngwin@gmail.com>.
-
