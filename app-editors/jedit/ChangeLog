@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/jedit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.100 2012/07/12 05:47:54 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.101 2012/07/12 11:25:16 ago Exp $
+
+  12 Jul 2012; Agostino Sarubbo <ago@gentoo.org> jedit-4.4.2-r1.ebuild:
+  Stable for amd64, wrt bug #426218
 
   12 Jul 2012; Jeff Horelick <jdhore@gentoo.org> jedit-4.4.2-r1.ebuild:
   marked x86 per bug 426218
