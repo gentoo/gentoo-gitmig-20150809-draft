@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/scrnsaverproto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/scrnsaverproto/ChangeLog,v 1.52 2012/07/11 20:13:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/scrnsaverproto/ChangeLog,v 1.53 2012/07/12 18:10:46 ranger Exp $
+
+  12 Jul 2012; Brent Baude <ranger@gentoo.org> scrnsaverproto-1.2.2.ebuild:
+  Marking scrnsaverproto-1.2.2 ppc stable for bug 419473
 
   11 Jul 2012; Brent Baude <ranger@gentoo.org> scrnsaverproto-1.2.2.ebuild:
   Marking scrnsaverproto-1.2.2 ppc64 stable for bug 419473
