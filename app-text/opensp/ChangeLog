@@ -1,6 +1,9 @@
 # ChangeLog for app-text/opensp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.62 2012/06/27 01:30:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.63 2012/07/12 14:58:55 hattya Exp $
+
+  12 Jul 2012; Akinori Hattori <hattya@gentoo.org> opensp-1.5.2-r3.ebuild:
+  ia64 stable wrt bug #410273
 
   27 Jun 2012; Jeroen Roovers <jer@gentoo.org> opensp-1.5.2-r3.ebuild:
   Stable for HPPA (bug #410273).
