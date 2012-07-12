@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.8.0-r3.ebuild,v 1.6 2012/07/12 02:33:57 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.8.0-r3.ebuild,v 1.7 2012/07/12 18:27:12 blueness Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ppc64 ~x86"
+KEYWORDS="~amd64 ~mips ppc ppc64 ~x86"
 IUSE="hybrid idea ipv6 kerberos ldap nat pam rc5 readline selinux stats"
 
 RDEPEND="
