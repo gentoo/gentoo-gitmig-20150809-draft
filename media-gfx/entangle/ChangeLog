@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/entangle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/entangle/ChangeLog,v 1.1 2012/07/08 18:58:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/entangle/ChangeLog,v 1.2 2012/07/12 15:27:06 flameeyes Exp $
+
+  12 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> entangle-0.4.0.ebuild:
+  Fix dependency over Gtk+ to require at least version 3.3.18 (which introduced
+  smooth scrolling). Thanks to Gian for reporting in bug #426208.
 
 *entangle-0.4.0 (08 Jul 2012)
 
