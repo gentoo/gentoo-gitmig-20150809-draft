@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/spread
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spread/ChangeLog,v 1.9 2012/03/12 12:35:44 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spread/ChangeLog,v 1.10 2012/07/12 15:31:56 axs Exp $
+
+  12 Jul 2012; Ian Stakenvicius <axs@gentoo.org> spread-4.0.0.ebuild,
+  spread-4.1.0.ebuild:
+  added GPL-2 to LICENSE per bug 426096
 
   12 Mar 2012; Joshua Kinard <kumba@gentoo.org> spread-4.0.0.ebuild,
   spread-4.1.0.ebuild:

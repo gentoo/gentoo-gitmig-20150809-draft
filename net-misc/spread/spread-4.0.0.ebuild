@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spread/spread-4.0.0.ebuild,v 1.6 2012/03/12 12:35:44 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spread/spread-4.0.0.ebuild,v 1.7 2012/07/12 15:31:56 axs Exp $
 
 EAPI="4"
 inherit eutils
@@ -11,7 +11,7 @@ DESCRIPTION="Distributed network messaging system"
 HOMEPAGE="http://www.spread.org"
 SRC_URI="mirror://gentoo/${MY_PN}-${PV}.tar.gz"
 
-LICENSE="Spread-1.0"
+LICENSE="Spread-1.0 GPL-2"
 SLOT="0"
 KEYWORDS="x86 amd64"
 IUSE=""
