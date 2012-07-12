@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/nted/nted-1.10.18.ebuild,v 1.6 2012/05/21 06:33:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/nted/nted-1.10.18.ebuild,v 1.7 2012/07/12 19:08:53 hwoarang Exp $
 
 EAPI=4
+
+inherit eutils
 
 DESCRIPTION="WYSIWYG score editor for GTK+"
 HOMEPAGE="http://vsr.informatik.tu-chemnitz.de/staff/jan/nted/nted.xhtml"
@@ -27,6 +29,11 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 DOCS="ABOUT_THE_EXAMPLES.TXT AUTHORS FAQ README"
+
+src_prepare() {
+	# bug #424291
+	epatch "${FILESDIR}"/${P}-gcc47.patch
+}
 
 src_configure() {
 	# Trick ./configure to believe we have gnome-extra/yelp installed.
