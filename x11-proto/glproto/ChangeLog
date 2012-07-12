@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/glproto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/ChangeLog,v 1.102 2012/07/12 13:37:40 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/ChangeLog,v 1.103 2012/07/12 18:08:25 ranger Exp $
+
+  12 Jul 2012; Brent Baude <ranger@gentoo.org> glproto-1.4.15.ebuild:
+  Marking glproto-1.4.15 ppc stable for bug 419473
 
 *glproto-1.4.16 (12 Jul 2012)
 
