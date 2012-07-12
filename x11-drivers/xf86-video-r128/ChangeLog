@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-video-r128
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-r128/ChangeLog,v 1.27 2012/07/11 19:44:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-r128/ChangeLog,v 1.28 2012/07/12 17:36:20 ranger Exp $
+
+  12 Jul 2012; Brent Baude <ranger@gentoo.org> xf86-video-r128-6.8.2-r1.ebuild:
+  Marking xf86-video-r128-6.8.2-r1 ppc stable for bug 419473
 
   11 Jul 2012; Brent Baude <ranger@gentoo.org> xf86-video-r128-6.8.2-r1.ebuild:
   Marking xf86-video-r128-6.8.2-r1 ppc64 stable for bug 419473
