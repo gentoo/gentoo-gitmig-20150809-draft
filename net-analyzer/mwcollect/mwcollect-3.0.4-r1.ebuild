@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mwcollect/mwcollect-3.0.4-r1.ebuild,v 1.2 2012/06/12 02:30:40 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mwcollect/mwcollect-3.0.4-r1.ebuild,v 1.3 2012/07/12 15:32:33 axs Exp $
 
 inherit eutils multilib
 
 DESCRIPTION="mwcollect collects worms and other autonomous spreading malware"
 HOMEPAGE="http://www.mwcollect.org/"
 SRC_URI="http://download.mwcollect.org/${P}.tar.bz2"
-LICENSE="BSD"
+LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="~ppc ~x86"
 IUSE="debug"
