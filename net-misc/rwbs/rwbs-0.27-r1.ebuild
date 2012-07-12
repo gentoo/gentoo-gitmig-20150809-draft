@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rwbs/rwbs-0.27-r1.ebuild,v 1.1 2012/06/25 17:32:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rwbs/rwbs-0.27-r1.ebuild,v 1.2 2012/07/12 15:30:20 axs Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://rogerwilco.gamespy.com/"
 SRC_URI="http://games.gci.net/pub/VoiceOverIP/RogerWilco/rwbs_Linux_0_27.tar.gz"
 
 SLOT="0"
-LICENSE="Resounding"
+LICENSE="Resounding GPL-2"
 KEYWORDS="x86"
 IUSE=""
 

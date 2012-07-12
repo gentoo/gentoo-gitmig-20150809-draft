@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rwbs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rwbs/ChangeLog,v 1.9 2012/06/25 17:32:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rwbs/ChangeLog,v 1.10 2012/07/12 15:30:20 axs Exp $
+
+  12 Jul 2012; Ian Stakenvicius <axs@gentoo.org> rwbs-0.27-r1.ebuild:
+  added GPL-2 to LICENSE per bug 426094
 
 *rwbs-0.27-r1 (25 Jun 2012)
 
