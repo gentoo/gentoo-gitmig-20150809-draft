@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXvMC
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXvMC/ChangeLog,v 1.65 2012/07/11 19:57:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXvMC/ChangeLog,v 1.66 2012/07/12 17:54:11 ranger Exp $
+
+  12 Jul 2012; Brent Baude <ranger@gentoo.org> libXvMC-1.0.7.ebuild:
+  Marking libXvMC-1.0.7 ppc stable for bug 419473
 
   11 Jul 2012; Brent Baude <ranger@gentoo.org> libXvMC-1.0.7.ebuild:
   Marking libXvMC-1.0.7 ppc64 stable for bug 419473
