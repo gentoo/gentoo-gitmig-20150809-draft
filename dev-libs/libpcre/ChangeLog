@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.206 2012/07/11 20:17:24 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.207 2012/07/12 11:05:15 grobian Exp $
+
+  12 Jul 2012; Fabian Groffen <grobian@gentoo.org>
+  +files/libpcre-8.31-madvise.patch, libpcre-8.31.ebuild:
+  Fix compilation on platforms lacking posix_madvise, using a partial patch
+  grabbed from upstream.
 
 *libpcre-8.31 (11 Jul 2012)
 
