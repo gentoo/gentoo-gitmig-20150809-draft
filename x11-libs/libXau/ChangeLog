@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXau
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXau/ChangeLog,v 1.90 2012/07/11 19:48:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXau/ChangeLog,v 1.91 2012/07/12 17:44:00 ranger Exp $
+
+  12 Jul 2012; Brent Baude <ranger@gentoo.org> libXau-1.0.7.ebuild:
+  Marking libXau-1.0.7 ppc stable for bug 419473
 
   11 Jul 2012; Brent Baude <ranger@gentoo.org> libXau-1.0.7.ebuild:
   Marking libXau-1.0.7 ppc64 stable for bug 419473
