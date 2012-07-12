@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.192 2012/07/12 06:47:49 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.193 2012/07/12 11:26:35 ago Exp $
+
+  12 Jul 2012; Agostino Sarubbo <ago@gentoo.org> libsdl-1.2.15-r2.ebuild:
+  Stable for amd64, wrt bug #425900
 
   12 Jul 2012; Jeff Horelick <jdhore@gentoo.org> libsdl-1.2.15-r2.ebuild:
   marked x86 per bug 425900
