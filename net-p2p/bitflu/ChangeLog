@@ -1,5 +1,9 @@
 
 
+  12 Jul 2012; Anthony G. Basile <blueness@gentoo.org> bitflu-1.37.ebuild,
+  bitflu-1.41.ebuild, bitflu-1.42.ebuild, bitflu-1.43.ebuild:
+  Add GPL-2 for init scripts, bug #426112
+
   20 Jun 2012; Jeff Horelick <jdhore@gentoo.org> bitflu-1.43.ebuild:
   marked x86 per bug 422151
 
