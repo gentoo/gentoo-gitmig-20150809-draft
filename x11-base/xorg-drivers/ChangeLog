@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.77 2012/07/11 19:35:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.78 2012/07/12 17:26:18 ranger Exp $
+
+  12 Jul 2012; Brent Baude <ranger@gentoo.org> xorg-drivers-1.12.ebuild:
+  Marking xorg-drivers-1.12 ppc stable for bug 419473
 
   11 Jul 2012; Brent Baude <ranger@gentoo.org> xorg-drivers-1.12.ebuild:
   Marking xorg-drivers-1.12 ppc64 stable for bug 419473
