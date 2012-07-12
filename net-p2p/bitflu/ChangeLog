@@ -1,5 +1,9 @@
 
 
+  12 Jul 2012; Anthony G. Basile <blueness@gentoo.org> -bitflu-1.37.ebuild,
+  -bitflu-1.41.ebuild, -bitflu-1.42.ebuild, -files/bitflu-add-pidfile.patch:
+  Punt older versions
+
 *bitflu-1.50 (12 Jul 2012)
 
   12 Jul 2012; Anthony G. Basile <blueness@gentoo.org> +bitflu-1.50.ebuild:
