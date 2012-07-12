@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/atheme-services-7.0.1.ebuild,v 1.2 2012/05/03 06:27:14 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/atheme-services-7.0.4.ebuild,v 1.1 2012/07/12 21:36:20 jdhore Exp $
 
 EAPI=4
 
-inherit eutils flag-o-matic perl-module
+inherit eutils flag-o-matic perl-module user
 
 DESCRIPTION="A portable and secure set of open-source and modular IRC services"
 HOMEPAGE="http://atheme.net/"
