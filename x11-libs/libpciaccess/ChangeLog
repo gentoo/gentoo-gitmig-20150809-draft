@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libpciaccess
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.81 2012/07/11 20:01:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.82 2012/07/12 17:57:45 ranger Exp $
+
+  12 Jul 2012; Brent Baude <ranger@gentoo.org> libpciaccess-0.13.1.ebuild:
+  Marking libpciaccess-0.13.1 ppc stable for bug 419473
 
   11 Jul 2012; Brent Baude <ranger@gentoo.org> libpciaccess-0.13.1.ebuild:
   Marking libpciaccess-0.13.1 ppc64 stable for bug 419473
