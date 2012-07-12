@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/netkit-timed
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-timed/ChangeLog,v 1.27 2012/06/29 12:54:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-timed/ChangeLog,v 1.28 2012/07/12 15:56:15 axs Exp $
+
+  12 Jul 2012; Ian Stakenvicius <axs@gentoo.org> netkit-timed-0.17-r7.ebuild,
+  netkit-timed-0.17-r8.ebuild, netkit-timed-0.17-r9.ebuild:
+  added GPL-2 to LICENSE per bug 426074
 
   29 Jun 2012; Brent Baude <ranger@gentoo.org> netkit-timed-0.17-r9.ebuild:
   Marking netkit-timed-0.17-r9 ppc for bug 393757

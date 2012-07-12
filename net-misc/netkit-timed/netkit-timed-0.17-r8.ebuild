@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-timed/netkit-timed-0.17-r8.ebuild,v 1.6 2010/10/28 10:13:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-timed/netkit-timed-0.17-r8.ebuild,v 1.7 2012/07/12 15:56:15 axs Exp $
 
 inherit eutils flag-o-matic
 
@@ -9,7 +9,7 @@ DESCRIPTION="Netkit - timed"
 SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${P}.tar.gz"
 HOMEPAGE="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/"
 KEYWORDS="~amd64 ~mips ~ppc ppc64 sparc x86"
-LICENSE="BSD"
+LICENSE="BSD GPL-2"
 SLOT="0"
 
 DEPEND=""
