@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/gradm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.186 2012/07/09 11:45:44 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.187 2012/07/12 08:27:17 blueness Exp $
+
+  12 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
+  gradm-2.2.2.201202161905-r1.ebuild, gradm-2.9.0.201202232055-r1.ebuild,
+  gradm-2.9.1.201206091838-r1.ebuild:
+  Stable amd64, x84: moving udev rules to /lib/udev/rules.d
 
 *gradm-2.9.1.201206091838-r1 (09 Jul 2012)
 *gradm-2.9.0.201202232055-r1 (09 Jul 2012)
