@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/qt-creator
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/ChangeLog,v 1.122 2012/07/11 20:01:43 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/ChangeLog,v 1.123 2012/07/12 11:09:56 pesa Exp $
+
+  12 Jul 2012; Davide Pesavento <pesa@gentoo.org>
+  -files/qt-creator-2.1.0_rc1-qml-plugin.patch, -qt-creator-2.1.0.ebuild,
+  -qt-creator-2.4.1.ebuild, metadata.xml:
+  Cleanup
 
   11 Jul 2012; Michael Weber <xmw@gentoo.org> qt-creator-2.5.0.ebuild:
   ppc stable (bug 408711)
