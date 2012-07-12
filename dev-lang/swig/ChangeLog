@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/swig
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.169 2012/07/12 19:20:57 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.170 2012/07/12 19:22:04 radhermit Exp $
+
+  12 Jul 2012; Tim Harder <radhermit@gentoo.org> -swig-2.0.7.ebuild:
+  Remove old.
 
 *swig-2.0.7-r1 (12 Jul 2012)
 
