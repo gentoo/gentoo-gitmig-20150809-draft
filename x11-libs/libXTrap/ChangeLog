@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXTrap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXTrap/ChangeLog,v 1.32 2012/07/11 19:47:26 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXTrap/ChangeLog,v 1.33 2012/07/12 17:43:25 ranger Exp $
+
+  12 Jul 2012; Brent Baude <ranger@gentoo.org> libXTrap-1.0.0-r1.ebuild:
+  Marking libXTrap-1.0.0-r1 ppc stable for bug 419473
 
   11 Jul 2012; Brent Baude <ranger@gentoo.org> libXTrap-1.0.0-r1.ebuild:
   Marking libXTrap-1.0.0-r1 ppc64 stable for bug 419473
