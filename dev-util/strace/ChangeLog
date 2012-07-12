@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/strace
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.183 2012/06/11 09:16:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.184 2012/07/12 15:07:49 hattya Exp $
+
+  12 Jul 2012; Akinori Hattori <hattya@gentoo.org> strace-4.7.ebuild:
+  ia64 stable wrt bug #419803
 
   11 Jun 2012; Agostino Sarubbo <ago@gentoo.org> strace-4.7.ebuild:
   Stable for amd64, wrt bug #419803
