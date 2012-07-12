@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdesdk-misc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/ChangeLog,v 1.188 2012/06/21 21:54:59 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/ChangeLog,v 1.189 2012/07/12 13:07:26 kensington Exp $
+
+  12 Jul 2012; Michael Palimaka <kensington@gentoo.org>
+  kdesdk-misc-4.8.4.ebuild:
+  Fix antlr use dep, thanks to tampakrap.
 
 *kdesdk-misc-4.8.4 (21 Jun 2012)
 
@@ -795,4 +799,3 @@
   +kdesdk-misc-3.4.0_beta1.ebuild:
   Adding the split ebuilds to portage. For KDE 3.4, we've created separate
   ebuilds for all the KDE apps.
-
