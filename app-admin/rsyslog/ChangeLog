@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/rsyslog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.77 2012/07/09 18:40:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.78 2012/07/12 15:45:40 jer Exp $
+
+  12 Jul 2012; Jeroen Roovers <jer@gentoo.org> rsyslog-6.2.2.ebuild:
+  Marked ~hppa (bug #425526).
 
   09 Jul 2012; Jeroen Roovers <jer@gentoo.org> rsyslog-5.8.11.ebuild:
   Stable for HPPA (bug #424767).
