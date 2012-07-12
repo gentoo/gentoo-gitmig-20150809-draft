@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/usermin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.152 2012/07/12 00:34:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.153 2012/07/12 15:14:55 axs Exp $
+
+  12 Jul 2012; Ian Stakenvicius <axs@gentoo.org> usermin-1.430.ebuild:
+  added GPL-2 to LICENSE per bug 425880
 
   12 Jul 2012; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Add default maintainer tag.
