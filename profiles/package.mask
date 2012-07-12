@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13955 2012/07/12 02:38:27 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13956 2012/07/12 13:36:26 chithanh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -351,6 +351,7 @@ dev-perl/Devel-Profiler
 # Full support for gles2 pending drivers providing it
 =app-admin/eselect-opengl-1.2.6*
 =x11-proto/glproto-1.4.15-r1
+=x11-proto/glproto-1.4.16
 =media-libs/mesa-8.0.3-r1
 
 # Markos Chandras <hwoarang@gentoo.org> (04 Jun 2012)
