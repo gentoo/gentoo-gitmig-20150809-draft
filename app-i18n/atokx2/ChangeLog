@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/atokx2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx2/ChangeLog,v 1.13 2012/01/26 21:46:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx2/ChangeLog,v 1.14 2012/07/12 09:19:06 naota Exp $
+
+  12 Jul 2012; Naohiro Aota <naota@gentoo.org> atokx2-17.0-r2.ebuild,
+  atokx2-17.0.ebuild:
+  Add GPL-2 LICENSE for init script. #425904
 
   26 Jan 2012; Ulrich Müller <ulm@gentoo.org> atokx2-17.0.ebuild,
   atokx2-17.0-r2.ebuild:
@@ -59,4 +63,3 @@
   +files/atokx2.initd, +files/iiim.confd, +files/iiim.initd,
   +atokx2-17.0.ebuild:
   Initial import.
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx2/atokx2-17.0-r2.ebuild,v 1.9 2012/01/26 21:46:39 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx2/atokx2-17.0-r2.ebuild,v 1.10 2012/07/12 09:19:06 naota Exp $
 
 EAPI="1"
 
@@ -12,7 +12,7 @@ IIIMF_V="trunk_r2059-js1"
 UPDATE_P="atokforlinux_update_17_0_2_1"
 SRC_URI="http://www3.justsystem.co.jp/download/atok/up/lin/${UPDATE_P}.tar.gz"
 
-LICENSE="ATOK MIT"
+LICENSE="ATOK MIT GPL-2"
 
 SLOT="0"
 KEYWORDS="-* ~x86"
