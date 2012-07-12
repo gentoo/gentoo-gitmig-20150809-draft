@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libxkbui
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbui/ChangeLog,v 1.39 2012/07/11 20:02:55 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbui/ChangeLog,v 1.40 2012/07/12 17:59:29 ranger Exp $
+
+  12 Jul 2012; Brent Baude <ranger@gentoo.org> libxkbui-1.0.2-r1.ebuild:
+  Marking libxkbui-1.0.2-r1 ppc stable for bug 419473
 
   11 Jul 2012; Brent Baude <ranger@gentoo.org> libxkbui-1.0.2-r1.ebuild:
   Marking libxkbui-1.0.2-r1 ppc64 stable for bug 419473
