@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/ode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.60 2012/07/12 07:52:28 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.61 2012/07/12 11:23:17 ago Exp $
+
+  12 Jul 2012; Agostino Sarubbo <ago@gentoo.org> ode-0.12.ebuild:
+  Stable for amd64, wrt bug #425858
 
   12 Jul 2012; Jeff Horelick <jdhore@gentoo.org> ode-0.12.ebuild:
   marked x86 per bug 425858
