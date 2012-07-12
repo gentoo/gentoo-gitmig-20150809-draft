@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6772 2012/07/12 13:36:26 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6773 2012/07/12 15:26:37 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Jul 2012; Ben de Groot <yngwin@gentoo.org> arch/powerpc/package.use.mask:
+  Mask media-sound/picard[acoustid] on ppc until chromaprint is keyworded
 
   12 Jul 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   package.mask:

@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.180 2012/07/09 11:32:27 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.181 2012/07/12 15:26:37 yngwin Exp $
+
+  12 Jul 2012; Ben de Groot <yngwin@gentoo.org> package.use.mask:
+  Mask media-sound/picard[acoustid] on ppc until chromaprint is keyworded
 
   09 Jul 2012; Johannes Huber <johu@gentoo.org> package.use.mask:
   Mask =x11-libs/qt-demo-4.8*[openvg] to make repoman happy.
