@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6773 2012/07/12 15:26:37 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6774 2012/07/12 18:46:57 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Jul 2012; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Unmask dibbler-0.8.2
 
   12 Jul 2012; Ben de Groot <yngwin@gentoo.org> arch/powerpc/package.use.mask:
   Mask media-sound/picard[acoustid] on ppc until chromaprint is keyworded
