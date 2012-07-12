@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/liblognorm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblognorm/ChangeLog,v 1.14 2012/06/08 11:41:51 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblognorm/ChangeLog,v 1.15 2012/07/12 15:45:10 jer Exp $
+
+  12 Jul 2012; Jeroen Roovers <jer@gentoo.org> liblognorm-0.3.4.ebuild:
+  Marked ~hppa (bug #425526).
 
   08 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> liblognorm-0.3.4.ebuild:
   x86 stable wrt bug #418759
