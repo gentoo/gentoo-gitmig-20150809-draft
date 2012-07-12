@@ -1,8 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc32/package.use.mask,v 1.29 2012/06/04 06:01:24 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc32/package.use.mask,v 1.30 2012/07/12 14:46:11 ranger Exp $
 
 # This file requires >=portage-2.1.1
+
+
+# ranger <ranger@gentoo.org> (17 apr 2012)
+# Remasking llvm in mesa
 
 # ranger <ranger@gentoo.org> (17 apr 2012)
 # masking libvirt for cfengine (bug #412253)
@@ -16,7 +20,7 @@ net-misc/cfengine libvirt
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (28 Nov 2010)
 # sys-devel/llvm is keyworded on ppc
-media-libs/mesa -llvm
+#media-libs/mesa -llvm
 
 # Maciej Mrozowski <reavertm@gentoo.org> (26 Jun 2010)
 # Needs media-libs/simage keyworded, bug 325623
