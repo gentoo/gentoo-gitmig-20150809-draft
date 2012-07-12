@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xwd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xwd/ChangeLog,v 1.52 2012/07/11 19:34:48 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xwd/ChangeLog,v 1.53 2012/07/12 17:25:06 ranger Exp $
+
+  12 Jul 2012; Brent Baude <ranger@gentoo.org> xwd-1.0.5.ebuild:
+  Marking xwd-1.0.5 ppc stable for bug 419473
 
   11 Jul 2012; Brent Baude <ranger@gentoo.org> xwd-1.0.5.ebuild:
   Marking xwd-1.0.5 ppc64 stable for bug 419473
