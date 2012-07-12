@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/mythweb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.90 2012/07/10 04:38:34 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.91 2012/07/12 02:59:19 cardoe Exp $
+
+*mythweb-0.25.1 (11 Jul 2012)
+
+  11 Jul 2012; Doug Goldstein <cardoe@gentoo.org>
+  -files/postinstall-en-0.20.txt, -files/postinstall-en-0.21.txt,
+  -files/mythweb-0.22_p22763-ao-click.patch, +mythweb-0.25.1.ebuild:
+  Version bump
 
   09 Jul 2012; Doug Goldstein <cardoe@gentoo.org>
   mythweb-0.24_p20110310.ebuild:
