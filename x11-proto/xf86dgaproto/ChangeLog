@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/xf86dgaproto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86dgaproto/ChangeLog,v 1.57 2012/07/11 20:16:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86dgaproto/ChangeLog,v 1.58 2012/07/12 18:13:10 ranger Exp $
+
+  12 Jul 2012; Brent Baude <ranger@gentoo.org> xf86dgaproto-2.1-r1.ebuild:
+  Marking xf86dgaproto-2.1-r1 ppc stable for bug 419473
 
   11 Jul 2012; Brent Baude <ranger@gentoo.org> xf86dgaproto-2.1-r1.ebuild:
   Marking xf86dgaproto-2.1-r1 ppc64 stable for bug 419473
