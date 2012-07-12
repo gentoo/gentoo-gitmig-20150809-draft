@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/oracle-jre-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/ChangeLog,v 1.15 2012/07/09 07:15:58 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/ChangeLog,v 1.16 2012/07/12 20:25:02 caster Exp $
+
+*oracle-jre-bin-1.7.0.5-r1 (12 Jul 2012)
+
+  12 Jul 2012; Vlastimil Babka <caster@gentoo.org>
+  +oracle-jre-bin-1.7.0.5-r1.ebuild:
+  Revbump because upstream changed contents of the distfiles (not saying what
+  exactly). You will have to redownload them, sorry.
 
   09 Jul 2012; Jeff Horelick <jdhore@gentoo.org> oracle-jre-bin-1.7.0.5.ebuild:
   marked x86 per bug 421073
