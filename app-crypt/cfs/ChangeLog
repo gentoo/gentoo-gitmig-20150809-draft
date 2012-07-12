@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/cfs
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cfs/ChangeLog,v 1.13 2011/12/31 19:54:19 idl0r Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cfs/ChangeLog,v 1.14 2012/07/12 15:27:29 axs Exp $
+
+  12 Jul 2012; Ian Stakenvicius <axs@gentoo.org> cfs-1.4.1.17-r2.ebuild,
+  cfs-1.4.1.17-r3.ebuild:
+  added GPL-2 to LICENSE per bug 425888
 
 *cfs-1.4.1.17-r3 (31 Dec 2011)
 *cfs-1.4.1.17-r2 (31 Dec 2011)
