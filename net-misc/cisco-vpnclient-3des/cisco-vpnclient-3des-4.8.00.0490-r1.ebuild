@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.8.00.0490-r1.ebuild,v 1.4 2011/06/06 06:19:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.8.00.0490-r1.ebuild,v 1.5 2012/07/12 15:33:59 axs Exp $
 
 inherit eutils linux-mod
 
@@ -9,7 +9,7 @@ DESCRIPTION="Cisco VPN Client (3DES)"
 HOMEPAGE="http://cco.cisco.com/en/US/products/sw/secursw/ps2308/index.html"
 SRC_URI="vpnclient-linux-x86_64-${MY_PV}.tar.gz"
 
-LICENSE="cisco-vpn-client"
+LICENSE="cisco-vpn-client GPL-2"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
 IUSE=""

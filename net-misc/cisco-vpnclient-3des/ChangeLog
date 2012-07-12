@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/cisco-vpnclient-3des
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/ChangeLog,v 1.68 2012/02/12 11:09:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/ChangeLog,v 1.69 2012/07/12 15:33:59 axs Exp $
+
+  12 Jul 2012; Ian Stakenvicius <axs@gentoo.org>
+  cisco-vpnclient-3des-4.8.00.0490-r1.ebuild,
+  cisco-vpnclient-3des-4.8.02.0030.ebuild:
+  added GPL-2 to LICENSE per bug 426052
 
 *cisco-vpnclient-3des-4.8.02.0030 (12 Feb 2012)
 
