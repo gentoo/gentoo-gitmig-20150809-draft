@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tlswrap/tlswrap-1.02.ebuild,v 1.3 2010/01/15 20:35:11 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tlswrap/tlswrap-1.02.ebuild,v 1.4 2012/07/12 08:42:03 voyageur Exp $
 
 inherit eutils
 
@@ -8,7 +8,8 @@ DESCRIPTION="TLSWRAP is a TLS/SSL FTP wrapper/proxy which allows to use TLS with
 HOMEPAGE="http://tlswrap.sunsite.dk"
 SRC_URI="http://tlswrap.sunsite.dk/${P}.tar.gz"
 
-LICENSE="BSD"
+# GPL-2 for Gentoo init script
+LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
