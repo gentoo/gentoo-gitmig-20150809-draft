@@ -1,0 +1,17 @@
+ qtsingleapplication/qtlocalpeer.cpp |    3 +++
+ 1 files changed, 3 insertions(+), 0 deletions(-)
+
+diff --git a/qtsingleapplication/qtlocalpeer.cpp b/qtsingleapplication/qtlocalpeer.cpp
+index 57ed567..4997626 100644
+--- a/qtsingleapplication/qtlocalpeer.cpp
++++ b/qtsingleapplication/qtlocalpeer.cpp
+@@ -49,6 +49,9 @@
+ #include <QtCore/QCoreApplication>
+ #include <QtCore/QTime>
+ 
++#include <unistd.h>
++#include <sys/types.h>
++
+ #if defined(Q_OS_WIN)
+ #include <QtCore/QLibrary>
+ #include <QtCore/qt_windows.h>

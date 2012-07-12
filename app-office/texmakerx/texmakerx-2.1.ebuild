@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmakerx/texmakerx-2.1.ebuild,v 1.3 2012/05/03 20:00:41 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmakerx/texmakerx-2.1.ebuild,v 1.4 2012/07/12 05:37:56 jlec Exp $
 
 EAPI=4
 
@@ -35,7 +35,10 @@ DEPEND="${COMMON_DEPEND}
 
 S="${WORKDIR}"/${P/-/}
 
-PATCHES=( "${FILESDIR}/${P}-hunspell.patch" )
+PATCHES=(
+	"${FILESDIR}/${P}-hunspell.patch"
+	"${FILESDIR}/${P}-gcc-4.7.patch"
+	)
 
 src_prepare() {
 	find hunspell -delete
