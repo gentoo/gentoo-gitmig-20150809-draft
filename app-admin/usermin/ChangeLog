@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/usermin
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.151 2010/01/08 17:51:43 a3li Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.152 2012/07/12 00:34:50 jer Exp $
+
+  12 Jul 2012; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Add default maintainer tag.
 
   08 Jan 2010; Alex Legler <a3li@gentoo.org> -usermin-1.330.ebuild,
   -usermin-1.400.ebuild, -usermin-1.420.ebuild:
