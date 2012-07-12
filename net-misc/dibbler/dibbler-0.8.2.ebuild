@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dibbler/dibbler-0.8.2.ebuild,v 1.1 2012/05/15 20:41:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dibbler/dibbler-0.8.2.ebuild,v 1.2 2012/07/12 18:54:58 hwoarang Exp $
 
 EAPI="4"
+
+inherit eutils
 
 DESCRIPTION="Portable DHCPv6 implementation (server, client and relay)"
 HOMEPAGE="http://klub.com.pl/dhcpv6/"
@@ -20,6 +22,11 @@ DEPEND="doc? (
 RDEPEND=""
 
 DIBBLER_DOCDIR=${S}/doc
+
+src_prepare() {
+	# bug #426342
+	epatch "${FILESDIR}"/${P}-gcc47.patch
+}
 
 src_compile() {
 	emake

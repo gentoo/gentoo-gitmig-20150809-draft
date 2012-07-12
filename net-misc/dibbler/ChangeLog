@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dibbler
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dibbler/ChangeLog,v 1.15 2012/05/15 20:41:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dibbler/ChangeLog,v 1.16 2012/07/12 18:54:58 hwoarang Exp $
+
+  12 Jul 2012; Markos Chandras <hwoarang@gentoo.org>
+  +files/dibbler-0.8.2-gcc47.patch, dibbler-0.8.2.ebuild:
+  Add gcc-4.7 patch. Bug #426342
 
 *dibbler-0.8.2 (15 May 2012)
 
@@ -63,4 +67,3 @@
   +files/dibbler-relay, +files/dibbler-server, +metadata.xml,
   +dibbler-0.4.1.ebuild:
   Initial import. Ebuild made by Tomasz Mrugalski <thomson@klub.com.pl>.
-
