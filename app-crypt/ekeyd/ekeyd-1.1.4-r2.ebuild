@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ekeyd-1.1.4-r2.ebuild,v 1.2 2012/05/31 03:11:33 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ekeyd-1.1.4-r2.ebuild,v 1.3 2012/07/12 15:31:17 axs Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ DESCRIPTION="Entropy Key userspace daemon"
 HOMEPAGE="http://www.entropykey.co.uk/"
 SRC_URI="http://www.entropykey.co.uk/res/download/${P}.tar.gz"
 
-LICENSE="as-is" # yes, truly
+LICENSE="as-is GPL-2" # yes, truly, but GPL-2 added for init script
 
 SLOT="0"
 
