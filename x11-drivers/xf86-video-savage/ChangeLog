@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-savage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-savage/ChangeLog,v 1.75 2012/07/05 15:59:58 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-savage/ChangeLog,v 1.76 2012/07/12 17:38:06 ranger Exp $
+
+  12 Jul 2012; Brent Baude <ranger@gentoo.org>
+  xf86-video-savage-2.3.4-r1.ebuild:
+  Marking xf86-video-savage-2.3.4-r1 ppc stable for bug 419473
 
 *xf86-video-savage-2.3.5 (05 Jul 2012)
 
