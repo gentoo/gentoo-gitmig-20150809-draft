@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/nxnode-3.5.0.4.ebuild,v 1.5 2012/06/07 22:51:16 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/nxnode-3.5.0.4.ebuild,v 1.6 2012/07/12 08:49:36 voyageur Exp $
 
 EAPI="2"
 
@@ -13,7 +13,8 @@ HOMEPAGE="http://www.nomachine.com/"
 SRC_URI="amd64? ( http://64.34.161.181/download/${MAJOR_PV}/Linux/nxnode-${FULL_PV}.x86_64.tar.gz )
 	x86? ( http://64.34.161.181/download/${MAJOR_PV}/Linux/nxnode-${FULL_PV}.i386.tar.gz )"
 
-LICENSE="nomachine"
+# GPL-2 for Gentoo init script
+LICENSE="nomachine GPL-2"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
 IUSE="rdesktop vnc"

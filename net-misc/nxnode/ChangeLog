@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nxnode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/ChangeLog,v 1.69 2012/06/07 22:51:16 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/ChangeLog,v 1.70 2012/07/12 08:49:36 voyageur Exp $
+
+  12 Jul 2012; Bernard Cafarelli <voyageur@gentoo.org> nxnode-3.5.0.4.ebuild,
+  nxnode-3.5.0.7.ebuild, nxnode-3.5.0.9.ebuild:
+  Add GPL-2 to LICENSE for init script, bug #426078
 
 *nxnode-3.5.0.9 (07 Jun 2012)
 
