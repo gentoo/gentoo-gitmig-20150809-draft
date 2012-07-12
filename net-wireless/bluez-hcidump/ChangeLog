@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez-hcidump
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hcidump/ChangeLog,v 1.72 2012/07/08 13:20:12 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hcidump/ChangeLog,v 1.73 2012/07/12 15:55:03 jer Exp $
+
+  12 Jul 2012; Jeroen Roovers <jer@gentoo.org> bluez-hcidump-2.4.ebuild:
+  Stable for HPPA (bug #422161).
 
   08 Jul 2012; Johannes Huber <johu@gentoo.org> bluez-hcidump-2.4.ebuild:
   Stable for x86, wrt bug #422161
