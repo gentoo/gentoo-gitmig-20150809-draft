@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/xfractint-20.04_p12.ebuild,v 1.2 2012/07/11 15:17:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/xfractint-20.04_p12.ebuild,v 1.3 2012/07/12 07:52:15 jdhore Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.fractint.org/ftp/current/linux/${MY_P}.tar.gz"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE=""
 
 RDEPEND="x11-libs/libX11"
