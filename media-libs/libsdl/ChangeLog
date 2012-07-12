@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.191 2012/06/07 21:55:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.192 2012/07/12 06:47:49 jdhore Exp $
+
+  12 Jul 2012; Jeff Horelick <jdhore@gentoo.org> libsdl-1.2.15-r2.ebuild:
+  marked x86 per bug 425900
 
   07 Jun 2012; Michael Sterrett <mr_bones_@gentoo.org> libsdl-1.2.15-r2.ebuild:
   use prune_libtool_files instead of rolling our own
