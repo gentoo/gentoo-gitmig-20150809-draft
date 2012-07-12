@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ffmpeg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.43 2012/07/02 17:05:25 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.44 2012/07/12 10:39:42 grobian Exp $
+
+  12 Jul 2012; Fabian Groffen <grobian@gentoo.org> ffmpeg-0.10.3.ebuild:
+  Marked ~x86-solaris
 
   02 Jul 2012; Rick Farina <zerochaos@gentoo.org> ffmpeg-0.10.3.ebuild:
   added speex and gsm use flags per bug #424327
