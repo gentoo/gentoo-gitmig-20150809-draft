@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lab-Measurement/Lab-Measurement-2.94.ebuild,v 1.4 2012/05/01 22:51:35 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lab-Measurement/Lab-Measurement-3.00.ebuild,v 1.1 2012/07/12 16:59:05 dilfridge Exp $
 
 if [[ "${PV}" != "9999" ]]; then
 	MODULE_AUTHOR="AKHUETTEL"
@@ -36,7 +36,9 @@ RDEPEND="
 	dev-perl/encoding-warnings
 	perl-core/Switch
 	sci-visualization/gnuplot
+	virtual/perl-Data-Dumper
 	virtual/perl-Encode
+	virtual/perl-Switch
 	virtual/perl-Time-HiRes
 	!dev-perl/Lab-Instrument
 	!dev-perl/Lab-Tools
