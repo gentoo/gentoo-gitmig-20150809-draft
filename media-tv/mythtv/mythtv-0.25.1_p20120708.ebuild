@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.1_p20120708.ebuild,v 1.7 2012/07/10 05:30:34 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.1_p20120708.ebuild,v 1.8 2012/07/12 02:27:06 cardoe Exp $
 
 EAPI=4
 
@@ -229,10 +229,6 @@ src_configure() {
 	./configure ${myconf} || die "configure died"
 }
 
-src_compile() {
-	emake || die "emake failed"
-}
-
 src_install() {
 	emake INSTALL_ROOT="${D}" install || die "install failed"
 	dodoc AUTHORS UPGRADING README
@@ -250,8 +246,8 @@ src_install() {
 	keepdir /var/log/mythtv
 	chown -R mythtv "${ED}"/var/log/mythtv
 
-	insinto /etc/logrotate.d
-	newins "${FILESDIR}"/mythtv.logrotate.d-r1 mythtv
+	#insinto /etc/logrotate.d
+	#newins "${FILESDIR}"/mythtv.logrotate.d-r2 mythtv
 
 	insinto /usr/share/mythtv/contrib
 	doins -r contrib/*
@@ -271,14 +267,17 @@ src_install() {
 	fi
 
 	# Make Python files executable and ensure they are executed by Python 2
-	for file in `find "${ED}" -type f -name \*.py`; do
-		fperms 0755 "${file}"
-		python_convert_shebangs 2 "${file}"
+	find "${ED}/usr/share/mythtv" -type f -name '*.py' | while read file; do
+		if [[ ! "${file##*/}" = "__init__.py" ]]; then
+			chmod a+x "${file}"
+			python_convert_shebangs -q 2 "${file}"
+		fi
 	done
 
 	# Make shell & perl scripts executable
-	for file in `find "${ED}" -type f -name \*.sh -o -type f -name \*.pl`; do
-		fperms 0755 "${file}"
+	find "${ED}" -type f -name '*.sh' -o -type f -name '*.pl' | \
+		while read file; do
+		chmod a+x "${file}"
 	done
 }
 

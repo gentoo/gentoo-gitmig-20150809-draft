@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.361 2012/07/10 05:30:34 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.362 2012/07/12 02:27:06 cardoe Exp $
+
+  11 Jul 2012; Doug Goldstein <cardoe@gentoo.org>
+  mythtv-0.25.1_p20120708.ebuild:
+  Fix up .py, .sh, and .pl file installation. Based on work by Myk Taylor
+  <myk002@yahoo.com>
 
   09 Jul 2012; Doug Goldstein <cardoe@gentoo.org>
   mythtv-0.25.1_p20120708.ebuild:
