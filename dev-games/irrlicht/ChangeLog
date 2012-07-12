@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/irrlicht
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/ChangeLog,v 1.52 2012/05/27 22:11:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/ChangeLog,v 1.53 2012/07/12 07:17:54 jdhore Exp $
+
+  12 Jul 2012; Jeff Horelick <jdhore@gentoo.org> irrlicht-1.7.3.ebuild:
+  marked x86 per bug 425860
 
 *irrlicht-1.7.3 (27 May 2012)
 
