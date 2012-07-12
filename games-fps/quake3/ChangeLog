@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/quake3
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/ChangeLog,v 1.58 2011/05/14 22:38:11 mattst88 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/ChangeLog,v 1.59 2012/07/12 11:29:09 ago Exp $
+
+  12 Jul 2012; Agostino Sarubbo <ago@gentoo.org> quake3-1.36.ebuild:
+  Stable for amd64, wrt bug #406039
 
   14 May 2011; Matt Turner <mattst88@gentoo.org> quake3-9999.ebuild:
   Make sure to call subversion_wc_info. Thanks to Andrey Vihrov, bug 222005.

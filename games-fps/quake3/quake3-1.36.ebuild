@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.36.ebuild,v 1.5 2011/05/16 15:09:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.36.ebuild,v 1.6 2012/07/12 11:29:09 ago Exp $
 
 # quake3-9999          -> latest svn
 # quake3-9999.REV      -> use svn REV
@@ -22,7 +22,7 @@ ESVN_REPO_URI="svn://svn.icculus.org/quake3/trunk"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~x86 ~x86-fbsd"
 # "smp" is omitted, because currently it does not work.
 IUSE="dedicated opengl teamarena +openal curl vorbis voice mumble"
 
