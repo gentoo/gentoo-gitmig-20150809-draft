@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.361 2012/07/11 20:17:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.362 2012/07/12 18:14:56 ranger Exp $
+
+  12 Jul 2012; Brent Baude <ranger@gentoo.org> xterm-279.ebuild:
+  Marking xterm-279 ppc stable for bug 419473
 
   11 Jul 2012; Brent Baude <ranger@gentoo.org> xterm-279.ebuild:
   Marking xterm-279 ppc64 stable for bug 419473
