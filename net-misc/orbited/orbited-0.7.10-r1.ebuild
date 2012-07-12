@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/orbited/orbited-0.7.10-r1.ebuild,v 1.3 2011/04/07 19:44:13 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/orbited/orbited-0.7.10-r1.ebuild,v 1.4 2012/07/12 15:57:18 axs Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -11,7 +11,7 @@ DESCRIPTION="Real-time communication for the browser."
 HOMEPAGE="http://orbited.org"
 SRC_URI="mirror://pypi/o/${PN}/${P}.tar.gz"
 
-LICENSE="MIT"
+LICENSE="MIT GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""

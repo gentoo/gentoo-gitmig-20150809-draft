@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/orbited
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/orbited/ChangeLog,v 1.9 2011/04/07 19:44:13 arfrever Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/orbited/ChangeLog,v 1.10 2012/07/12 15:57:18 axs Exp $
+
+  12 Jul 2012; Ian Stakenvicius <axs@gentoo.org> orbited-0.7.10-r1.ebuild:
+  added GPL-2 to LICENSE per bug 426088
 
   07 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   orbited-0.7.10-r1.ebuild:
