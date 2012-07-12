@@ -1,0 +1,9 @@
+# ChangeLog for media-libs/qt-gstreamer
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qt-gstreamer/ChangeLog,v 1.1 2012/07/12 21:35:43 johu Exp $
+
+*qt-gstreamer-0.10.2 (12 Jul 2012)
+
+  12 Jul 2012; Johannes Huber <johu@gentoo.org> +metadata.xml,
+  +qt-gstreamer-0.10.2.ebuild:
+  New package, initial commit. Import from kde overlay.
