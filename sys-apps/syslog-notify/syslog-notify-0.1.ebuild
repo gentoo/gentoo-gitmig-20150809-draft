@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/syslog-notify/syslog-notify-0.1.ebuild,v 1.5 2012/04/23 17:28:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/syslog-notify/syslog-notify-0.1.ebuild,v 1.6 2012/07/12 19:12:10 hwoarang Exp $
 
 EAPI=2
 inherit eutils
@@ -16,7 +16,7 @@ IUSE=""
 
 DEPEND="x11-libs/libnotify"
 RDEPEND="${DEPEND}
-	app-admin/syslog-ng"
+	|| ( app-admin/syslog-ng app-admin/rsyslog )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-libnotify-0.7.patch

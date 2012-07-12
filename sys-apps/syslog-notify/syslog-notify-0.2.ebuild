@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/syslog-notify/syslog-notify-0.2.ebuild,v 1.1 2012/02/22 18:54:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/syslog-notify/syslog-notify-0.2.ebuild,v 1.2 2012/07/12 19:12:10 hwoarang Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND=">=x11-libs/libnotify-0.7"
 RDEPEND="${DEPEND}
-	app-admin/syslog-ng"
+	|| ( app-admin/syslog-ng app-admin/rsyslog )"
 
 DOCS="AUTHORS CHANGELOG HACKING README"
 

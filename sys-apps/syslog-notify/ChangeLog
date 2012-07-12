@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/syslog-notify
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/syslog-notify/ChangeLog,v 1.6 2012/04/23 17:28:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/syslog-notify/ChangeLog,v 1.7 2012/07/12 19:12:10 hwoarang Exp $
+
+  12 Jul 2012; Markos Chandras <hwoarang@gentoo.org> syslog-notify-0.1.ebuild,
+  syslog-notify-0.2.ebuild:
+  Add app-admin/rsyslog as syslog dependency. Bug #421301
 
   23 Apr 2012; Michał Górny <mgorny@gentoo.org> syslog-notify-0.1.ebuild:
   Use mirror:// in SRC_URI.
@@ -29,4 +33,3 @@
   +syslog-notify-0.1.ebuild, +metadata.xml:
   Initial commit of syslog-notify application. Fixes bug #304159. Thanks to
   dfrkp <bugzilla@mhhs.de> for the initial ebuild
-
