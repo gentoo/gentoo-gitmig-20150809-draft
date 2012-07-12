@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/atheme-services-6.0.11.ebuild,v 1.1 2012/05/15 08:31:15 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/atheme-services-6.0.11.ebuild,v 1.2 2012/07/12 11:28:13 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://atheme.net/downloads/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x86-fbsd ~amd64-linux"
+KEYWORDS="amd64 ~x86 ~x86-fbsd ~amd64-linux"
 IUSE="cracklib largenet ldap nls +pcre perl profile ssl"
 
 RDEPEND="dev-libs/libmowgli:0
