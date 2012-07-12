@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/preview/preview-0.9.ebuild,v 1.3 2011/12/02 22:16:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/preview/preview-0.9.ebuild,v 1.4 2012/07/12 12:03:29 voyageur Exp $
 
 EAPI=3
 inherit gnustep-2
@@ -16,6 +16,7 @@ KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 src_prepare() {
+	sed -e 's/sel_eq(/sel_isEqual(/' -i Document.m || die "sed failed"
 	# Fix compilation, patch from debian
 	epatch "${FILESDIR}"/${PN}-0.8.5-compilation-errors.patch
 }
