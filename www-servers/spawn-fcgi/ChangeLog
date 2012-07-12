@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/spawn-fcgi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/ChangeLog,v 1.37 2012/07/09 11:45:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/ChangeLog,v 1.38 2012/07/12 15:33:17 axs Exp $
+
+  12 Jul 2012; Ian Stakenvicius <axs@gentoo.org> spawn-fcgi-1.6.3.ebuild,
+  spawn-fcgi-1.6.3-r1.ebuild:
+  added GPL-2 to LICENSE per bug 426180
 
   09 Jul 2012; Jeroen Roovers <jer@gentoo.org> spawn-fcgi-1.6.3-r1.ebuild:
   Stable for HPPA (bug #414083).

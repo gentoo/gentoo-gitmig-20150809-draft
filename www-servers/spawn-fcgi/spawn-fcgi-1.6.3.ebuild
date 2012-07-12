@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/spawn-fcgi-1.6.3.ebuild,v 1.7 2010/05/21 18:56:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/spawn-fcgi-1.6.3.ebuild,v 1.8 2012/07/12 15:33:17 axs Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ DESCRIPTION="A FCGI spawner for lighttpd and cherokee and other webservers"
 HOMEPAGE="http://redmine.lighttpd.net/projects/spawn-fcgi"
 SRC_URI="http://www.lighttpd.net/download/${P}.tar.bz2"
 
-LICENSE="BSD"
+LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86"
 IUSE="ipv6"
