@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jamvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jamvm/ChangeLog,v 1.48 2012/05/14 19:17:32 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jamvm/ChangeLog,v 1.49 2012/07/12 07:28:22 jdhore Exp $
+
+  12 Jul 2012; Jeff Horelick <jdhore@gentoo.org> jamvm-1.5.4-r2.ebuild:
+  marked x86 per bug 425624
 
 *jamvm-1.5.4-r2 (14 May 2012)
 
