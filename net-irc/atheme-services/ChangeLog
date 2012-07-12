@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/atheme-services
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.48 2012/07/12 17:41:17 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.49 2012/07/12 19:27:09 jdhore Exp $
+
+  12 Jul 2012; Jeff Horelick <jdhore@gentoo.org> -atheme-services-6.0.10.ebuild:
+  Remove old.
 
   12 Jul 2012; Johannes Huber <johu@gentoo.org> atheme-services-6.0.11.ebuild:
   Stable for x86, wrt bug #426198
@@ -249,4 +252,3 @@
   +files/makefile-DESTDIR-support.patch, +metadata.xml:
   Rename net-irc/atheme to net-irc/atheme-services to follow upstream's
   package name change.
-
