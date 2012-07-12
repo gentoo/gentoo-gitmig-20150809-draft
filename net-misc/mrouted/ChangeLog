@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/mrouted
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mrouted/ChangeLog,v 1.15 2011/04/25 09:18:14 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mrouted/ChangeLog,v 1.16 2012/07/12 15:54:33 axs Exp $
+
+  12 Jul 2012; Ian Stakenvicius <axs@gentoo.org> mrouted-3.9.5.ebuild:
+  added GPL-2 to LICENSE per bug 426068
 
   25 Apr 2011; Markos Chandras <hwoarang@gentoo.org> mrouted-3.9.5.ebuild:
   Stable on amd64 wrt bug #358789
