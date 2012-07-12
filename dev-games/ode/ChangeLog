@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/ode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.59 2012/06/07 19:16:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.60 2012/07/12 07:52:28 jdhore Exp $
+
+  12 Jul 2012; Jeff Horelick <jdhore@gentoo.org> ode-0.12.ebuild:
+  marked x86 per bug 425858
 
 *ode-0.12 (07 Jun 2012)
 
