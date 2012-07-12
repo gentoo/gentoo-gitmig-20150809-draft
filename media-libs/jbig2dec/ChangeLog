@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jbig2dec
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jbig2dec/ChangeLog,v 1.29 2012/07/08 16:21:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jbig2dec/ChangeLog,v 1.30 2012/07/12 10:42:17 grobian Exp $
+
+  12 Jul 2012; Fabian Groffen <grobian@gentoo.org> jbig2dec-0.11-r1.ebuild:
+  Marked ~x86-solaris
 
   08 Jul 2012; Raúl Porcel <armin76@gentoo.org> jbig2dec-0.11-r1.ebuild:
   alpha/ia64/sparc stable wrt #414463
@@ -95,4 +98,3 @@
   10 Jun 2010; Samuli Suominen <ssuominen@gentoo.org> +jbig2dec-0.11.ebuild:
   Initial commit wrt #321997 by Michael Weber. Required for unbundling
   jbig2dec from ghostscript-gpl.
-
