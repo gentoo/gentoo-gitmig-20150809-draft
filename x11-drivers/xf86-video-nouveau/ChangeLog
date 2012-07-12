@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-nouveau
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nouveau/ChangeLog,v 1.50 2012/07/11 19:43:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nouveau/ChangeLog,v 1.51 2012/07/12 17:35:45 ranger Exp $
+
+  12 Jul 2012; Brent Baude <ranger@gentoo.org>
+  xf86-video-nouveau-0.0.16_pre20120322.ebuild:
+  Marking xf86-video-nouveau-0.0.16_pre20120322 ppc stable for bug 419473
 
   11 Jul 2012; Brent Baude <ranger@gentoo.org>
   xf86-video-nouveau-0.0.16_pre20120322.ebuild:
