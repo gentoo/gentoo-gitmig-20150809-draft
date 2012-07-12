@@ -6,8 +6,6 @@
 		<flag name='cdr'>Allows MythMusic to burn CD-Rs</flag>
 		<flag name='exif'>Allows MythGallery to read EXIF data from photos</flag>
 		<flag name='fftw'>Adds visual effects to MythMusic when playing back music</flag>
-		<flag name='opengl'>Adds OpenGL visualizations to MythMusic and transition support to MythGallery</flag>
-		<flag name='projectm'>Adds additional visualizations from Project M to MythMusic</flag>
 		<flag name='raw'>Allows MythGallery to view photos saved in RAW format</flag>
 
 		<flag name='mytharchive'>Allows you to archive recorded content to CD or DVD</flag>
