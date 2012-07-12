@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.1_p20120708.ebuild,v 1.8 2012/07/12 02:27:06 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.1_p20120708.ebuild,v 1.9 2012/07/12 02:34:03 cardoe Exp $
 
 EAPI=4
 
@@ -246,8 +246,8 @@ src_install() {
 	keepdir /var/log/mythtv
 	chown -R mythtv "${ED}"/var/log/mythtv
 
-	#insinto /etc/logrotate.d
-	#newins "${FILESDIR}"/mythtv.logrotate.d-r2 mythtv
+	insinto /etc/logrotate.d
+	newins "${FILESDIR}"/mythtv.logrotate.d-r2 mythtv
 
 	insinto /usr/share/mythtv/contrib
 	doins -r contrib/*
