@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.1_p20120708.ebuild,v 1.9 2012/07/12 02:34:03 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.1_p20120708.ebuild,v 1.10 2012/07/12 03:03:14 cardoe Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ inherit flag-o-matic multilib eutils python user
 
 DESCRIPTION="Homebrew PVR project"
 HOMEPAGE="http://www.mythtv.org"
-SRC_URI="ftp://ftp.osuosl.org/pub/mythtv/mythtv-0.25.1.tar.bz2
+SRC_URI="ftp://ftp.osuosl.org/pub/mythtv/${MY_P}.tar.bz2
 	${BACKPORTS:+http://dev.gentoo.org/~cardoe/distfiles/${MY_P}-${BACKPORTS}.tar.xz}"
 SLOT="0"
 LICENSE="GPL-2"
