@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/qupzilla-1.3.0.ebuild,v 1.1 2012/07/12 14:20:32 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/qupzilla-1.3.0.ebuild,v 1.2 2012/07/12 14:50:02 yngwin Exp $
 
 EAPI=4
 
@@ -30,6 +30,10 @@ RDEPEND="${DEPEND}"
 S=${WORKDIR}/${MY_P}
 
 DOCS="AUTHORS CHANGELOG FAQ TODO"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-desktop.patch
+}
 
 src_configure() {
 	export QUPZILLA_PREFIX=${EPREFIX}/usr/
