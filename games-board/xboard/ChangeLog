@@ -1,6 +1,9 @@
 # ChangeLog for games-board/xboard
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.51 2012/07/12 06:08:09 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.52 2012/07/12 11:31:05 ago Exp $
+
+  12 Jul 2012; Agostino Sarubbo <ago@gentoo.org> xboard-4.6.2.ebuild:
+  Stable for amd64, wrt bug #425924
 
   12 Jul 2012; Jeff Horelick <jdhore@gentoo.org> xboard-4.6.2.ebuild:
   marked x86 per bug 425924
