@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/k9copy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.71 2012/04/23 15:45:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.72 2012/07/12 12:10:38 kensington Exp $
+
+  12 Jul 2012; Michael Palimaka <kensington@gentoo.org> metadata.xml:
+  Cleanup metadata.
 
   23 Apr 2012; Agostino Sarubbo <ago@gentoo.org> k9copy-2.3.8.ebuild:
   Stable for amd64, wrt bug #412803
@@ -334,4 +337,3 @@
 
   13 Dec 2005; Luis Medinas <metalgod@gentoo.org> +k9copy-1.0.1b.ebuild:
   New package. Thanks to all people involved in bug #92854.
-
