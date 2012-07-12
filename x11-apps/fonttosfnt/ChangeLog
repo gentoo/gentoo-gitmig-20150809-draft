@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/fonttosfnt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/fonttosfnt/ChangeLog,v 1.34 2012/07/11 19:18:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/fonttosfnt/ChangeLog,v 1.35 2012/07/12 17:07:21 ranger Exp $
+
+  12 Jul 2012; Brent Baude <ranger@gentoo.org> fonttosfnt-1.0.4-r1.ebuild:
+  Marking fonttosfnt-1.0.4-r1 ppc stable for bug 419473
 
   11 Jul 2012; Brent Baude <ranger@gentoo.org> fonttosfnt-1.0.4-r1.ebuild:
   Marking fonttosfnt-1.0.4-r1 ppc64 stable for bug 419473
