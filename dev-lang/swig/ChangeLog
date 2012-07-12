@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/swig
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.168 2012/07/11 20:55:06 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.169 2012/07/12 19:20:57 radhermit Exp $
+
+*swig-2.0.7-r1 (12 Jul 2012)
+
+  12 Jul 2012; Tim Harder <radhermit@gentoo.org> +swig-2.0.7-r1.ebuild,
+  +files/swig-2.0.7-illegal-destructors-warning.patch:
+  Revision bump. Apply upstream fix for segfault when warning of illegal
+  destructors (bug #417823 by Cyprien Nicolas).
 
 *swig-2.0.7 (11 Jul 2012)
 
