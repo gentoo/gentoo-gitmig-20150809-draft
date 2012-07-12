@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/picard
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/ChangeLog,v 1.37 2011/11/04 17:09:06 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/ChangeLog,v 1.38 2012/07/12 15:29:33 yngwin Exp $
+
+*picard-1.0 (12 Jul 2012)
+
+  12 Jul 2012; Ben de Groot <yngwin@gentoo.org> +picard-1.0.ebuild,
+  metadata.xml:
+  Version bump, thanks to Benedikt Waldvogel in bug #419425 and Laurent
+  Bachelier in bug #401193 for suggested ebuild improvements. Also fixes bug
+  #323007.
 
   04 Nov 2011; Tim Harder <radhermit@gentoo.org> -picard-0.12.1-r1.ebuild,
   -picard-0.13.ebuild, -files/picard-0.13-ffmpeg.patch, -picard-0.14.ebuild:
@@ -171,4 +179,3 @@
   +files/picard-0.9.0_alpha14-disable-locales.patch, +metadata.xml,
   +picard-0.9.0_alpha14.ebuild:
   Initial ebuild wrt bug #80312. Thanks to Marti Raudsepp.
-
