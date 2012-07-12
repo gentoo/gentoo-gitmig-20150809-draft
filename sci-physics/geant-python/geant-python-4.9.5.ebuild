@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant-python/geant-python-4.9.5.ebuild,v 1.2 2012/05/21 04:49:12 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant-python/geant-python-4.9.5.ebuild,v 1.3 2012/07/12 02:13:34 heroxbd Exp $
 
 EAPI=4
 
@@ -29,24 +29,6 @@ src_prepare() {
 
 	# fix the visManager wrapper
 	epatch "${FILESDIR}"/${PN}-4.9.5-vis-fix.patch
-
-	# let Geant4 module installed into python sitedir instead of default
-	sed -i "/G4PY_LIBDIR  :=/cG4PY_LIBDIR  := $\(DESTDIR\)$(python_get_sitedir)/Geant4" \
-		config/install.gmk || die "sed failed on config/install.gmk"
-	for mfile in source/python{3,}/GNUmakefile
-	do
-		sed -i "/install_dir :=/cinstall_dir := $\(DESTDIR\)$(python_get_sitedir)/Geant4" \
-			"${mfile}" || die "sed failed on ${mfile}"
-	done
-
-	# let g4py module installed into python sitedir instead of default
-	sed -i "/install_dir :=/cinstall_dir := $\(DESTDIR\)$(python_get_sitedir)/g4py" \
-		config/site-install.gmk || die "sed failed on config/site-install.gmk"
-	for mfile in {processes/emcalculator,utils/MCScore}/{python3/,}GNUmakefile python/GNUmakefile
-	do
-		sed -i "/install_dir :=/cinstall_dir := $\(DESTDIR\)$(python_get_sitedir)/g4py" \
-			"site-modules/${mfile}" || die "sed failed on site-modules/${mfile}"
-	done
 }
 
 src_configure() {
@@ -64,6 +46,7 @@ src_configure() {
 
 	./configure ${ARG} \
 		--prefix="${EPREFIX}/usr" \
+		--libdir="${ED}/$(python_get_sitedir)" \
 		--with-g4-incdir="${EPREFIX}/usr/include/Geant4" \
 		--with-g4-libdir="${EPREFIX}/usr/lib" \
 		--with-clhep-incdir="${EPREFIX}/usr/include" \
