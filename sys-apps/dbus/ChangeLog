@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.343 2012/06/27 21:14:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.344 2012/07/12 13:49:26 hattya Exp $
+
+  12 Jul 2012; Akinori Hattori <hattya@gentoo.org> dbus-1.4.20.ebuild:
+  ia64 stable wrt bug #412535
 
 *dbus-1.6.2 (27 Jun 2012)
 
