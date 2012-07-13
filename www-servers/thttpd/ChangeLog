@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/thttpd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/ChangeLog,v 1.44 2012/07/13 13:54:39 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/ChangeLog,v 1.45 2012/07/13 14:08:26 blueness Exp $
+
+*thttpd-2.26.4 (13 Jul 2012)
+
+  13 Jul 2012; Anthony G. Basile <blueness@gentoo.org> +thttpd-2.26.4.ebuild,
+  +files/thttpd.confd.1, +files/thttpd.init.1:
+  Version bump, multi-instance enhancement, bug #424826
 
   13 Jul 2012; Anthony G. Basile <blueness@gentoo.org> thttpd-2.26.2.ebuild:
   Keyword ~arm ~ppc ~ppc64
