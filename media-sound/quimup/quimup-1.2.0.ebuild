@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quimup/quimup-1.2.0.ebuild,v 1.6 2011/05/08 11:23:00 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quimup/quimup-1.2.0.ebuild,v 1.7 2012/07/13 11:17:37 angelos Exp $
 
 EAPI=3
 inherit eutils qt4-r2
@@ -24,6 +24,7 @@ S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	sed -i -e "/FLAGS/d" ${PN}.pro || die
+	epatch "${FILESDIR}"/${P}-gcc47.patch
 }
 
 src_install() {
