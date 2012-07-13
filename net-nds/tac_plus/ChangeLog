@@ -1,6 +1,11 @@
 # ChangeLog for net-nds/tac_plus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/tac_plus/ChangeLog,v 1.13 2012/05/21 19:19:28 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/tac_plus/ChangeLog,v 1.14 2012/07/13 15:00:38 axs Exp $
+
+  13 Jul 2012; Ian Stakenvicius <axs@gentoo.org> tac_plus-4.0.4.14.ebuild,
+  tac_plus-4.0.4.15.ebuild, tac_plus-4.0.4.19-r2.ebuild,
+  tac_plus-4.0.4.19-r3.ebuild:
+  added GPL-2 to LICENSE per bug 426106 , for now
 
   21 May 2012; Kacper Kowalik <xarthisius@gentoo.org>
   tac_plus-4.0.4.19-r2.ebuild:
