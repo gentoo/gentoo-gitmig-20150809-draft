@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ldns-1.6.13.ebuild,v 1.1 2012/06/19 23:21:15 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ldns-1.6.13.ebuild,v 1.2 2012/07/13 13:30:26 darkside Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2:2.5"
@@ -14,7 +14,7 @@ SRC_URI="http://www.nlnetlabs.nl/downloads/${PN}/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~ppc-macos ~x64-macos"
-IUSE="doc gost ecdsa python ssl static-libs vim-syntax"
+IUSE="doc gost +ecdsa python +ssl static-libs vim-syntax"
 
 RESTRICT="test" # 1.6.9 has no test directory
 
@@ -24,6 +24,9 @@ RDEPEND="ssl? ( >=dev-libs/openssl-0.9.7 )
 DEPEND="${RDEPEND}
 	python? ( dev-lang/swig )
 	doc? ( app-doc/doxygen )"
+
+# configure will die if ecdsa is enabled and ssl is not
+REQUIRED_USE="ecdsa? ( ssl )"
 
 pkg_setup() {
 	python_set_active_version 2
