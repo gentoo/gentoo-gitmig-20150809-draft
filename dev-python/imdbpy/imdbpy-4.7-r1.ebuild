@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imdbpy/imdbpy-4.7-r1.ebuild,v 1.3 2012/02/22 08:09:26 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imdbpy/imdbpy-4.7-r1.ebuild,v 1.4 2012/07/13 17:41:06 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -26,24 +26,9 @@ RDEPEND=""
 
 S="${WORKDIR}/${MY_PN}-${PV}"
 
+DISTUTILS_GLOBAL_OPTIONS=("*-jython --without-cutils")
 DOCS="docs/AUTHOR.txt docs/FAQS.txt docs/imdbpy47.dtd docs/imdbpy.cfg docs/README*"
 PYTHON_MODNAME="imdb"
-
-set_global_options() {
-	if [[ "$(python_get_implementation)" == "Jython" ]]; then
-		DISTUTILS_GLOBAL_OPTIONS=("--without-cutils")
-	else
-		DISTUTILS_GLOBAL_OPTIONS=()
-	fi
-}
-
-distutils_src_compile_pre_hook() {
-	set_global_options
-}
-
-distutils_src_install_pre_hook() {
-	set_global_options
-}
 
 src_prepare() {
 	distutils_src_prepare
