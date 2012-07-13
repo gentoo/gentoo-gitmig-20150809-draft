@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/bsnmp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bsnmp/ChangeLog,v 1.5 2012/07/04 11:10:19 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bsnmp/ChangeLog,v 1.6 2012/07/13 07:22:29 naota Exp $
+
+  13 Jul 2012; Naohiro Aota <naota@gentoo.org> bsnmp-1.12-r1.ebuild:
+  Add GPL-2 LICENSE for init script. #425980
 
 *bsnmp-1.12-r1 (04 Jul 2012)
 
