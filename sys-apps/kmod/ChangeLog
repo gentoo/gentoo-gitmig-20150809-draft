@@ -1,5 +1,11 @@
-# ChangeLog for sys-apps/kmod# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.40 2012/06/19 23:52:51 williamh Exp $
+# ChangeLog for sys-apps/kmod
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.41 2012/07/13 09:58:06 ssuominen Exp $
+
+*kmod-9-r1 (13 Jul 2012)
+
+  13 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> +kmod-9-r1.ebuild,
+  kmod-9999.ebuild:
+  Move kmod symlinks, like lsmod and modprobe, from / to /usr wrt #416223
 
 *kmod-9 (19 Jun 2012)
 
