@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/south/south-0.7.5.ebuild,v 1.1 2012/05/28 19:30:56 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/south/south-0.7.5.ebuild,v 1.2 2012/07/13 12:28:26 dev-zero Exp $
 
 EAPI="4"
 
@@ -64,7 +64,7 @@ src_test() {
 			-e "s/\(NAME': '\)/\1test.db/" \
 			southtest/settings.py || die "sed failed"
 		echo "SKIP_SOUTH_TESTS=False" >> southtest/settings.py
-		PYTHONPATH="${S}/build-${PYTHON_ABI}/lib" "$(PYTHON)" manage.py test south || die "tests failed"
+		PYTHONPATH="${S}/build-${PYTHON_ABI}/lib:${S}/south/tests" "$(PYTHON)" manage.py test south || die "tests failed"
 	}
 	python_execute_function testing
 }
