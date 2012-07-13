@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13957 2012/07/12 18:46:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13958 2012/07/13 05:45:08 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -40,8 +40,8 @@
 =gnome-extra/gnome-screensaver-3.4.2
 
 # Tony Vroon <chainsaw@gentoo.org> (11 Jul 2012)
-# This segfaults repeatedly in actual use for me, and I can not in good 
-# conscience allow this to surprise others. Unmask only to help trace 
+# This segfaults repeatedly in actual use for me, and I can not in good
+# conscience allow this to surprise others. Unmask only to help trace
 # where the fault is, not to run on live systems.
 =net-misc/asterisk-10.6.0
 
@@ -62,7 +62,7 @@ net-ftp/netkit-tftp
 # Masked for testing only beta (bug 424866)
 =sci-electronics/eagle-6.2.1_beta
 
-# Naohiro Aota <naota@gentoo.org> (07 Jul 2012) 
+# Naohiro Aota <naota@gentoo.org> (07 Jul 2012)
 # Masked for removal in 30 days. Dead upstream and
 # can be replaced with dev-db/textsearch-ja. #425038
 dev-db/pgmecab
@@ -428,11 +428,6 @@ x11-wm/parti
 # bug #416683
 >=games-board/aisleriot-3.3.1
 
-# Maciej Mrozowski <reavertm@gentoo.org> (18 May 2012)
-# Masked for testing, luatex compilation fails due to API change.
-=app-text/poppler-0.20.0
-=app-text/poppler-0.20.1
-
 # Ultrabug <ultrabug@gentoo.org> (16 May 2012)
 # Masked for testing
 >=sys-cluster/corosync-2.0.0
@@ -449,12 +444,6 @@ x11-wm/parti
 =dev-lang/mono-2.11.1
 =dev-lang/mono-tools-2.11
 =virtual/monodoc-2.11
-
-
-# Sebastian Pipping <sping@gentoo.org> (09 May 2012)
-# 0.6 introduced severe bug (0.5.2 unaffected)
-# https://github.com/hhatto/autopep8/issues/12
->=dev-python/autopep8-0.6
 
 # Johannes Huber <johu@gentoo.org> (03 May 2012)
 # Unstable dev channel release. Fixes build with gcc47
