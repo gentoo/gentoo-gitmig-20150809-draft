@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.28.2.ebuild,v 1.16 2012/07/07 17:17:15 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.28.2.ebuild,v 1.17 2012/07/13 08:28:11 ulm Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -136,6 +136,9 @@ src_prepare() {
 
 	# fix underlinking
 	epatch "${FILESDIR}"/${P}-underlinking.patch
+
+	# Fix build failure with automake 1.11.2. #425208
+	epatch "${FILESDIR}"/${P}-automake.patch
 
 	# If calling eautoreconf, this ebuild uses libtool-2
 	eautoreconf
