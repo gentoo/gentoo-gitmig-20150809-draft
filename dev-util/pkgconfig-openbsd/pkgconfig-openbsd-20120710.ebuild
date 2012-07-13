@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig-openbsd/pkgconfig-openbsd-20120710.ebuild,v 1.1 2012/07/10 16:40:04 ssuominen Exp $
-
-# cvs -d anoncvs@anoncvs.openbsd.org:/cvs get src/usr.bin/pkg-config
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig-openbsd/pkgconfig-openbsd-20120710.ebuild,v 1.2 2012/07/13 09:32:54 ssuominen Exp $
 
 EAPI=4
 
-PKG_M4_VERSION=0.26
+# cvs -d anoncvs@anoncvs.openbsd.org:/cvs get src/usr.bin/pkg-config
+
+PKG_M4_VERSION=0.27
 
 DESCRIPTION="A perl based version of pkg-config from OpenBSD"
 HOMEPAGE="http://www.openbsd.org/cgi-bin/cvsweb/src/usr.bin/pkg-config/"

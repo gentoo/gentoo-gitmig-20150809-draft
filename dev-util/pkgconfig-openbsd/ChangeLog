@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/pkgconfig-openbsd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig-openbsd/ChangeLog,v 1.8 2012/07/10 16:41:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig-openbsd/ChangeLog,v 1.9 2012/07/13 09:32:54 ssuominen Exp $
+
+  13 Jul 2012; Samuli Suominen <ssuominen@gentoo.org>
+  pkgconfig-openbsd-20120710.ebuild:
+  Update pkg.m4 from pkg-config-0.26 to pkg-config-0.27 for PKG_INSTALLDIR
+  (--with-pkgconfigdir) support.
 
   10 Jul 2012; Samuli Suominen <ssuominen@gentoo.org>
   -pkgconfig-openbsd-20120504.ebuild:
