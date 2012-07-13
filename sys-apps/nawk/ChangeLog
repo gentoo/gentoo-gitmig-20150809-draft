@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/nawk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/nawk/ChangeLog,v 1.4 2012/07/13 02:44:33 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/nawk/ChangeLog,v 1.5 2012/07/13 02:51:27 ottxor Exp $
+
+  13 Jul 2012; Christoph Junghans <ottxor@gentoo.org> nawk-20110810-r1.ebuild:
+  fixed typos
 
 *nawk-20110810-r1 (13 Jul 2012)
 
@@ -19,4 +22,3 @@
   04 Jun 2012; Christoph Junghans <ottxor@gentoo.org> +nawk-20110810.ebuild,
   +metadata.xml:
   initial commit
-

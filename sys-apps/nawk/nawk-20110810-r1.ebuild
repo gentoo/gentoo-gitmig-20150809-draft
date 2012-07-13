@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/nawk/nawk-20110810-r1.ebuild,v 1.1 2012/07/13 02:44:33 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/nawk/nawk-20110810-r1.ebuild,v 1.2 2012/07/13 02:51:27 ottxor Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-macos"
 IUSE=""
 
-RDEPEND="app-admin/eselect"
+RDEPEND="app-admin/eselect-awk"
 DEPEND="${RDEPEND}
 	virtual/yacc"
 
@@ -36,9 +36,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	eselect pinentry update ifunset
+	eselect awk update ifunset
 }
 
 pkg_postrm() {
-	eselect pinentry update ifunset
+	eselect awk update ifunset
 }
