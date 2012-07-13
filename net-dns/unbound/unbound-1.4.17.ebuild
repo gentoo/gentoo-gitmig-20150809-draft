@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/unbound-1.4.14.ebuild,v 1.3 2012/06/14 02:23:04 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/unbound-1.4.17.ebuild,v 1.1 2012/07/13 13:30:58 darkside Exp $
 
-EAPI="3"
+EAPI="4"
 PYTHON_DEPEND="python? 2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* 2.7-pypy-* *-jython"
@@ -16,12 +16,13 @@ SRC_URI="http://unbound.net/downloads/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~x64-macos"
-IUSE="debug gost python static-libs test threads"
+IUSE="debug gost python selinux static-libs test threads"
 
 RDEPEND="dev-libs/expat
 	dev-libs/libevent
 	>=dev-libs/openssl-0.9.8
-	>=net-libs/ldns-1.6.5[ssl,gost?]"
+	>=net-libs/ldns-1.6.13[ecdsa,ssl,gost?]
+	selinux? ( sec-policy/selinux-bind )"
 
 DEPEND="${RDEPEND}
 	python? ( dev-lang/swig )
@@ -51,7 +52,7 @@ src_prepare() {
 }
 
 src_configure() {
-	append-ldflags -Wl,-z,noexecstack || die
+	append-ldflags -Wl,-z,noexecstack
 	econf \
 		--with-pidfile="${EPREFIX}"/var/run/unbound.pid \
 		--with-ldns="${EPREFIX}"/usr \
@@ -63,7 +64,8 @@ src_configure() {
 		$(use_with threads pthreads) \
 		$(use_with python pyunbound) \
 		$(use_with python pythonmodule) \
-		--disable-rpath || die
+		--enable-ecdsa \
+		--disable-rpath
 
 		# http://unbound.nlnetlabs.nl/pipermail/unbound-users/2011-April/001801.html
 		# $(use_enable debug lock-checks) \
@@ -83,21 +85,19 @@ src_install() {
 		find "${ED}" -name "*.la" -type f -delete || die
 	fi
 
-	newinitd "${FILESDIR}/unbound.initd" unbound || die "newinitd failed"
-	newconfd "${FILESDIR}/unbound.confd" unbound || die "newconfd failed"
+	newinitd "${FILESDIR}/unbound.initd" unbound
+	newconfd "${FILESDIR}/unbound.confd" unbound
 
-	dodoc doc/{README,CREDITS,TODO,Changelog,FEATURES} || die "dodoc failed"
+	dodoc doc/{README,CREDITS,TODO,Changelog,FEATURES}
 
 	# bug #315519
-	#exeinto /usr/libexec/munin/plugins
-	#doexe contrib/unbound_munin_ || die "doexe failed"
-	dodoc contrib/unbound_munin_ || die "dodoc failed"
+	dodoc contrib/unbound_munin_
 
 	docinto selinux
-	dodoc contrib/selinux/* || die "dodoc failed"
+	dodoc contrib/selinux/*
 
 	exeinto /usr/share/${PN}
-	doexe contrib/update-anchor.sh || die "doexe failed"
+	doexe contrib/update-anchor.sh
 }
 
 pkg_postinst() {

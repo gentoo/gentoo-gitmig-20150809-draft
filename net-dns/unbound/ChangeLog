@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/unbound
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.41 2012/06/14 02:23:04 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.42 2012/07/13 13:30:58 darkside Exp $
+
+*unbound-1.4.17 (13 Jul 2012)
+
+  13 Jul 2012; Jeremy Olexa <darkside@gentoo.org> -unbound-1.4.13_p2.ebuild,
+  -unbound-1.4.14.ebuild, -unbound-1.4.15.ebuild, +unbound-1.4.17.ebuild:
+  Version bump with ECDSA support, bug 418369 by Guillaume Castagnino
 
   14 Jun 2012; Zac Medico <zmedico@gentoo.org> unbound-1.4.13_p2.ebuild,
   unbound-1.4.14.ebuild, unbound-1.4.15.ebuild, unbound-1.4.16.ebuild:
