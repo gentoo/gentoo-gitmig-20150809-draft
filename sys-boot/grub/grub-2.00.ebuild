@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00.ebuild,v 1.12 2012/07/07 22:55:48 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00.ebuild,v 1.13 2012/07/13 18:05:19 floppym Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ else
 	DO_AUTORECONF="true"
 fi
 
-inherit eutils flag-o-matic pax-utils toolchain-funcs ${DO_AUTORECONF:+autotools} ${LIVE_ECLASS}
+inherit eutils flag-o-matic multiprocessing pax-utils toolchain-funcs ${DO_AUTORECONF:+autotools} ${LIVE_ECLASS}
 unset LIVE_ECLASS
 
 DESCRIPTION="GNU GRUB boot loader"
@@ -253,9 +253,11 @@ src_configure() {
 	# Sandbox bug 404013.
 	use libzfs && addpredict /etc/dfs:/dev/zfs
 
+	multijob_init
 	for i in ${GRUB_ENABLED_PLATFORMS}; do
-		grub_run_phase ${FUNCNAME} ${i}
+		multijob_child_init grub_run_phase ${FUNCNAME} ${i}
 	done
+	multijob_finish || die
 }
 
 src_compile() {

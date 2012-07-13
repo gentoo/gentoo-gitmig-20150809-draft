@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.227 2012/07/07 22:55:48 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.228 2012/07/13 18:05:19 floppym Exp $
+
+  13 Jul 2012; Mike Gilbert <floppym@gentoo.org> grub-2.00.ebuild,
+  grub-9999.ebuild:
+  Add mulitprocessing.eclass magic to src_configure.
 
   07 Jul 2012; Mike Gilbert <floppym@gentoo.org>
   +files/grub-2.00-parallel-make.patch, -files/grub-2.00-manpage-race.patch,
