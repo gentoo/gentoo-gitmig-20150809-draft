@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/frown
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/frown/ChangeLog,v 1.14 2007/12/13 18:01:45 dcoutts Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/frown/ChangeLog,v 1.15 2012/07/13 20:42:04 qnikst Exp $
+
+  14 Jul 2012; Alexander Vershilov <qnikst@gentoo.org> frown-0.6.1-r1.ebuild,
+  +files/frown-0.6.1-ghc74.patch:
+  fixing build failure with ghc-7.4 #426478
 
   13 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> frown-0.6.1-r1.ebuild:
   Fix quoting in ebuild.
