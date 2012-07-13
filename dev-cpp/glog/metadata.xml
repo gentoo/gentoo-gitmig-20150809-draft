@@ -4,8 +4,10 @@
 	<maintainer>
 		<email>vapier@gentoo.org</email>
 	</maintainer>
+	<herd>cpp</herd>
 	<use>
-		<flag name="gflags">Use gflags module for flag parsing</flag>
+		<flag name="gflags">Use <pkg>dev-cpp/gflags</pkg> for flag parsing</flag>
+		<flag name="unwind">Use <pkg>sys-libs/libunwind</pkg> for stack unwinding instead of glibc/gcc (may be more reliable on x86_64)</flag>
 	</use>
 	<upstream>
 		<remote-id type="google-code">google-glog</remote-id>
