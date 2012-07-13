@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/emul-linux-x86-java
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.111 2012/06/15 09:57:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.112 2012/07/13 15:57:29 sera Exp $
+
+*emul-linux-x86-java-1.6.0.33-r1 (13 Jul 2012)
+
+  13 Jul 2012; Ralph Sennhauser <sera@gentoo.org>
+  -emul-linux-x86-java-1.6.0.29.ebuild,
+  +emul-linux-x86-java-1.6.0.33-r1.ebuild:
+  Revbump because upstream changed contents of the distfiles (not saying what
+  exactly). You will have to redownload them, sorry.
+  Remove old.
 
   15 Jun 2012; Agostino Sarubbo <ago@gentoo.org>
   emul-linux-x86-java-1.6.0.33.ebuild:
