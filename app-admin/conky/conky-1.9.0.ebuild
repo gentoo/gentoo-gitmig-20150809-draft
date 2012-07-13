@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.9.0.ebuild,v 1.1 2012/05/05 15:20:09 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.9.0.ebuild,v 1.2 2012/07/13 16:54:53 billie Exp $
 
 EAPI=4
 
@@ -59,7 +59,8 @@ DEPEND="
 	"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-1.8.1-utf8-scroll.patch"
+	epatch "${FILESDIR}/${PN}-1.8.1-utf8-scroll.patch" \
+		"${FILESDIR}/${P}-ncurses.patch"
 }
 
 src_configure() {
