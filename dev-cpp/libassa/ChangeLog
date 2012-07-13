@@ -1,6 +1,15 @@
 # ChangeLog for dev-cpp/libassa
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libassa/ChangeLog,v 1.17 2012/05/27 07:29:17 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libassa/ChangeLog,v 1.18 2012/07/13 11:08:03 angelos Exp $
+
+*libassa-3.5.1-r1 (13 Jul 2012)
+
+  13 Jul 2012; Christoph Mende <angelos@gentoo.org>
+  +files/libassa-3.5.1-gcc47.patch, +libassa-3.5.1-r1.ebuild,
+  -files/libassa-3.5.0-dont-run-ldconfig.patch,
+  -files/libassa-3.5.0-gcc44.patch, -files/libassa-3.5.0-ldflags.patch,
+  -files/libassa-3.5.0-link-dynamically.patch, -libassa-3.5.0.ebuild:
+  Fix header for gcc 4.7 (bug #425110)
 
   27 May 2012; Christoph Mende <angelos@gentoo.org> libassa-3.5.1.ebuild:
   Stable on amd64 (bug #417691)
@@ -64,4 +73,3 @@
 
   11 Sep 2007; Christoph Mende <angelos@gentoo.org> +libassa-3.4.2.ebuild:
   Initial import
-
