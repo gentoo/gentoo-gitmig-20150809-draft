@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/saku/saku-3.10.1.ebuild,v 1.1 2011/11/01 13:19:45 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/saku/saku-3.10.1.ebuild,v 1.2 2012/07/13 09:42:47 naota Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ DESCRIPTION="a clone of P2P anonymous BBS shinGETsu"
 HOMEPAGE="http://shingetsu.info/"
 SRC_URI="mirror://sourceforge/shingetsu/${P}.tar.gz"
 
-LICENSE="BSD-2"
+LICENSE="BSD-2 GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
