@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.8.1-r1.ebuild,v 1.10 2012/07/08 17:51:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.8.1-r1.ebuild,v 1.11 2012/07/13 11:12:20 yngwin Exp $
 
 EAPI=4
 
@@ -235,4 +235,11 @@ pkg_postinst() {
 	elog "Run"
 	elog "  eselect qtgraphicssystem"
 	elog "for more information."
+	if use gtkstyle ; then
+		# see bug 388551
+		elog "For Qt's GTK style to work, you need to either export"
+		elog "the following variable into your environment:"
+		elog '  GTK2_RC_FILES="$HOME/.gtkrc-2.0"'
+		elog "or alternatively install gnome-base/libgnomeui"
+	fi
 }
