@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/fatsort
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fatsort/ChangeLog,v 1.22 2012/07/08 12:56:49 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fatsort/ChangeLog,v 1.23 2012/07/13 17:00:51 billie Exp $
+
+  13 Jul 2012; Daniel Pielmeier <billie@gentoo.org> -fatsort-0.9.15.247.ebuild:
+  Remove old.
 
   08 Jul 2012; Johannes Huber <johu@gentoo.org> fatsort-0.9.17.269.ebuild:
   Stable for x86, wrt bug #425234
