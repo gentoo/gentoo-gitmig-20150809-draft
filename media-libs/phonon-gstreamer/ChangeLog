@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/phonon-gstreamer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-gstreamer/ChangeLog,v 1.19 2012/05/17 16:53:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-gstreamer/ChangeLog,v 1.20 2012/07/13 16:57:35 johu Exp $
+
+*phonon-gstreamer-4.6.1 (13 Jul 2012)
+
+  13 Jul 2012; Johannes Huber <johu@gentoo.org> +phonon-gstreamer-4.6.1.ebuild:
+  Version bump.
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org>
   phonon-gstreamer-4.6.0.ebuild, phonon-gstreamer-9999.ebuild:
@@ -101,4 +106,3 @@
   +phonon-gstreamer-4.4.4.ebuild, +phonon-gstreamer-9999.ebuild,
   +metadata.xml:
   Add new package (phonon split), live ebuild from kde overlay
-
