@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/kid3
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/ChangeLog,v 1.68 2012/07/10 20:05:43 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/ChangeLog,v 1.69 2012/07/13 08:49:14 ssuominen Exp $
+
+  13 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> kid3-2.1.ebuild,
+  metadata.xml:
+  Rename USE flag "chroma" to "acoustid" in order to synchronize with
+  media-sound/picard.
 
   10 Jul 2012; Johannes Huber <johu@gentoo.org>
   -files/kid3-2.0.1-mp4v2-1.9.1_p479.patch, -kid3-2.0.1.ebuild:

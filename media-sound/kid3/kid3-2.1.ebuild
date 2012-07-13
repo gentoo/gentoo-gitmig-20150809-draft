@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/kid3-2.1.ebuild,v 1.4 2012/07/10 20:03:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/kid3-2.1.ebuild,v 1.5 2012/07/13 08:49:14 ssuominen Exp $
 
 EAPI=4
 KDE_LINGUAS="cs de es et fi fr it nl pl ru sr sr@ijekavian sr@ijekavianlatin sr@Latn tr zh_TW"
@@ -15,10 +15,10 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="4"
 KEYWORDS="amd64 x86"
-IUSE="chroma flac mp3 mp4 +taglib vorbis"
+IUSE="acoustid flac mp3 mp4 +taglib vorbis"
 
 RDEPEND="
-	chroma? (
+	acoustid? (
 		media-libs/chromaprint
 		virtual/ffmpeg
 	)
@@ -39,7 +39,7 @@ REQUIRED_USE="flac? ( vorbis )"
 
 src_configure() {
 	local mycmakeargs=(
-		$(cmake-utils_use_with chroma CHROMAPRINT)
+		$(cmake-utils_use_with acoustid CHROMAPRINT)
 		$(cmake-utils_use_with flac)
 		$(cmake-utils_use_with mp3 ID3LIB)
 		$(cmake-utils_use_with mp4 MP4V2)
