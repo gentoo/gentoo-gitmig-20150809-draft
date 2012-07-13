@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ldns-1.6.13-r1.ebuild,v 1.1 2012/07/13 13:56:14 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ldns-1.6.13-r1.ebuild,v 1.2 2012/07/13 14:14:48 darkside Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2:2.5"
@@ -29,8 +29,8 @@ DEPEND="${RDEPEND}
 REQUIRED_USE="ecdsa? ( ssl )"
 
 pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
+	use python && python_set_active_version 2
+	use python && python_pkg_setup
 }
 
 src_prepare() {
