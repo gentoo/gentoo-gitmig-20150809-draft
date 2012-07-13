@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usb_modeswitch/usb_modeswitch-1.2.3_p20120531-r1.ebuild,v 1.1 2012/07/13 10:20:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usb_modeswitch/usb_modeswitch-1.2.3_p20120531-r1.ebuild,v 1.2 2012/07/13 10:23:35 ssuominen Exp $
 
 EAPI=4
 inherit linux-info toolchain-funcs
@@ -16,7 +16,7 @@ SRC_URI="http://www.draisberghof.de/${PN}/${MY_P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="virtual/libusb:0"
