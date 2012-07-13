@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/hsqldb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/ChangeLog,v 1.67 2012/06/04 06:32:37 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/ChangeLog,v 1.68 2012/07/13 14:19:56 sera Exp $
+
+  13 Jul 2012; Ralph Sennhauser <sera@gentoo.org> hsqldb-1.8.1.2-r1.ebuild,
+  hsqldb-1.8.1.3.ebuild:
+  Add GPL-2 to licenses to cover the Gentoo initscript. #425920
 
   04 Jun 2012; Zac Medico <zmedico@gentoo.org> hsqldb-1.8.1.2-r1.ebuild,
   hsqldb-1.8.1.3.ebuild:

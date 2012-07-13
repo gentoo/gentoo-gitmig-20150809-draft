@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/hsqldb-1.8.1.2-r1.ebuild,v 1.8 2012/06/04 06:32:37 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/hsqldb-1.8.1.2-r1.ebuild,v 1.9 2012/07/13 14:19:56 sera Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc source test"
@@ -13,7 +13,7 @@ DESCRIPTION="The leading SQL relational database engine written in Java."
 HOMEPAGE="http://hsqldb.org"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.zip"
 
-LICENSE="BSD"
+LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd ~x64-solaris"
 IUSE=""
