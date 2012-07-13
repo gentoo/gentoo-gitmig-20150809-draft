@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/autopep8/autopep8-0.7.2.ebuild,v 1.1 2012/07/13 05:37:39 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/autopep8/autopep8-0.7.2.ebuild,v 1.2 2012/07/13 14:22:53 floppym Exp $
 
 EAPI=4
 
@@ -33,6 +33,7 @@ src_test() {
 }
 
 pkg_postinst() {
+	distutils_pkg_postinst
 	ewarn "Since this version of autopep depends on >=dev-python/pep8-1.3"
 	ewarn "it is affected by https://github.com/jcrocholl/pep8/issues/45"
 	ewarn "(indentation checks inside triple-quotes)."
