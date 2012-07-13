@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13960 2012/07/13 13:59:16 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13961 2012/07/13 18:09:57 sera Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ralph Sennhauser <sera@gentoo.org> (13 Jul 2012)
+# Mask for removal in 30 days. Fails to build with java 7 #421917.
+# QA issues #298701. Ceased to be useful long ago. #235124. Thanks
+# to Michael Weber <xmw@gentoo.org> #235124 for maintaining a
+# binary package in his overlay. (layman -a xmw)
+=app-misc/jbidwatcher-1*
 
 # Eray Aslan <eras@gentoo.org> (13 Jul 2012)
 # Mask experimental patch for linking with gold
