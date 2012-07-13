@@ -1,6 +1,12 @@
 # ChangeLog for net-im/ktp-contact-applet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-contact-applet/ChangeLog,v 1.3 2012/04/05 11:02:22 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-contact-applet/ChangeLog,v 1.4 2012/07/13 14:30:32 johu Exp $
+
+*ktp-contact-applet-0.4.0 (13 Jul 2012)
+
+  13 Jul 2012; Johannes Huber <johu@gentoo.org>
+  +ktp-contact-applet-0.4.0.ebuild:
+  Version bump KDE Telepathy 0.4.0.
 
 *ktp-contact-applet-0.3.1 (05 Apr 2012)
 
