@@ -89,7 +89,6 @@
     <remote-id type="cpan-module">Perl::Critic::Policy::Miscellanea::ProhibitTies</remote-id>
     <remote-id type="cpan-module">Perl::Critic::Policy::Miscellanea::ProhibitUnrestrictedNoCritic</remote-id>
     <remote-id type="cpan-module">Perl::Critic::Policy::Miscellanea::ProhibitUselessNoCritic</remote-id>
-    <remote-id type="cpan-module">Perl::Critic::Policy::Miscellanea::RequireRcsKeywords</remote-id>
     <remote-id type="cpan-module">Perl::Critic::Policy::Modules::ProhibitAutomaticExportation</remote-id>
     <remote-id type="cpan-module">Perl::Critic::Policy::Modules::ProhibitConditionalUseStatements</remote-id>
     <remote-id type="cpan-module">Perl::Critic::Policy::Modules::ProhibitEvilModules</remote-id>
