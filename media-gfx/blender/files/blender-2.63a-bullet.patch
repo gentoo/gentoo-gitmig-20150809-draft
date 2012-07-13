@@ -1,0 +1,178 @@
+diff -Npur blender-2.63a.eigen/build_files/scons/tools/Blender.py blender-2.63a/build_files/scons/tools/Blender.py
+--- blender-2.63a.eigen/build_files/scons/tools/Blender.py	2012-05-10 16:53:28.000000000 +0200
++++ blender-2.63a/build_files/scons/tools/Blender.py	2012-06-03 18:43:16.699242778 +0200
+@@ -268,6 +268,8 @@ def setup_syslibs(lenv):
+         syslibs += Split(lenv['BF_SDL_LIB'])
+     if not lenv['WITH_BF_STATICOPENGL']:
+         syslibs += Split(lenv['BF_OPENGL_LIB'])
++    if lenv['WITH_BF_BULLET']:
++	syslibs += Split(lenv['BF_BULLET_LIB'])
+     if lenv['OURPLATFORM'] in ('win32-vc', 'win32-mingw','linuxcross', 'win64-vc', 'win64-mingw'):
+         syslibs += Split(lenv['BF_PTHREADS_LIB'])
+     if lenv['WITH_BF_COLLADA']:
+diff -Npur blender-2.63a.eigen/doc/doxygen/Doxyfile blender-2.63a/doc/doxygen/Doxyfile
+--- blender-2.63a.eigen/doc/doxygen/Doxyfile	2012-05-10 16:53:36.000000000 +0200
++++ blender-2.63a/doc/doxygen/Doxyfile	2012-06-03 18:43:16.700242905 +0200
+@@ -617,8 +617,7 @@ INPUT                  = doxygen.main \
+                          doxygen.intern \
+                          doxygen.extern \
+                          ../../source \
+-                         ../../intern \
+-                         ../../extern/bullet2
++                         ../../intern
+ 
+ # This tag can be used to specify the character encoding of the source files 
+ # that doxygen parses. Internally doxygen uses the UTF-8 encoding, which is 
+diff -Npur blender-2.63a.eigen/extern/CMakeLists.txt blender-2.63a/extern/CMakeLists.txt
+--- blender-2.63a.eigen/extern/CMakeLists.txt	2012-05-10 16:54:50.000000000 +0200
++++ blender-2.63a/extern/CMakeLists.txt	2012-06-03 18:43:16.701243032 +0200
+@@ -28,10 +28,6 @@ remove_strict_flags()
+ 
+ add_subdirectory(colamd)
+ 
+-if(WITH_BULLET)
+-	add_subdirectory(bullet2)
+-endif()
+-
+ if(WITH_MOD_CLOTH_ELTOPO)
+ 	add_subdirectory(eltopo)
+ endif()
+diff -Npur blender-2.63a.eigen/intern/smoke/CMakeLists.txt blender-2.63a/intern/smoke/CMakeLists.txt
+--- blender-2.63a.eigen/intern/smoke/CMakeLists.txt	2012-05-10 16:46:35.000000000 +0200
++++ blender-2.63a/intern/smoke/CMakeLists.txt	2012-06-03 18:43:16.702243159 +0200
+@@ -26,10 +26,10 @@
+ set(INC
+ 	intern
+ 	../memutil
+-	../../extern/bullet2/src
+ )
+ 
+ set(INC_SYS
++	/usr/include/bullet
+ 	${PNG_INCLUDE_DIR}
+ 	${ZLIB_INCLUDE_DIRS}
+ )
+diff -Npur blender-2.63a.eigen/intern/smoke/SConscript blender-2.63a/intern/smoke/SConscript
+--- blender-2.63a.eigen/intern/smoke/SConscript	2012-05-10 16:46:35.000000000 +0200
++++ blender-2.63a/intern/smoke/SConscript	2012-06-03 18:43:16.702243159 +0200
+@@ -13,7 +13,7 @@ if env['WITH_BF_OPENMP']:
+     defs += ' PARALLEL=1'
+ 
+ incs += ' ' + env['BF_PNG_INC'] + ' ' + env['BF_ZLIB_INC'] 
+-incs += ' intern ../../extern/bullet2/src ../memutil ../guardealloc '
++incs += ' intern /usr/include/bullet ../memutil ../guardealloc '
+ 
+ if env['WITH_BF_FFTW3']:
+     defs += ' WITH_FFTW3'
+diff -Npur blender-2.63a.eigen/source/blender/blenkernel/CMakeLists.txt blender-2.63a/source/blender/blenkernel/CMakeLists.txt
+--- blender-2.63a.eigen/source/blender/blenkernel/CMakeLists.txt	2012-05-10 16:50:24.000000000 +0200
++++ blender-2.63a/source/blender/blenkernel/CMakeLists.txt	2012-06-03 18:43:16.703243286 +0200
+@@ -241,8 +241,8 @@ if(WITH_AUDASPACE)
+ endif()
+ 
+ if(WITH_BULLET)
+-	list(APPEND INC
+-		../../../extern/bullet2/src
++    list(APPEND INC_SYS
++		/usr/include/bullet
+ 	)
+ 	add_definitions(-DUSE_BULLET)
+ endif()
+diff -Npur blender-2.63a.eigen/source/blender/blenkernel/SConscript blender-2.63a/source/blender/blenkernel/SConscript
+--- blender-2.63a.eigen/source/blender/blenkernel/SConscript	2012-05-10 16:50:24.000000000 +0200
++++ blender-2.63a/source/blender/blenkernel/SConscript	2012-06-03 18:43:16.704243413 +0200
+@@ -9,7 +9,7 @@ incs += ' ../blenlib ../blenfont ../make
+ incs += ' ../render/extern/include #/intern/decimation/extern ../makesrna'
+ incs += ' ../imbuf ../ikplugin ../avi #/intern/elbeem/extern ../nodes ../modifiers'
+ incs += ' #/intern/iksolver/extern ../blenloader'
+-incs += ' #/extern/bullet2/src'
++incs += ' /usr/include/bullet'
+ incs += ' #/intern/opennl/extern #/intern/bsp/extern'
+ incs += ' ../gpu #/extern/glew/include'
+ incs += ' ../bmesh'
+diff -Npur blender-2.63a.eigen/source/gameengine/BlenderRoutines/CMakeLists.txt blender-2.63a/source/gameengine/BlenderRoutines/CMakeLists.txt
+--- blender-2.63a.eigen/source/gameengine/BlenderRoutines/CMakeLists.txt	2012-05-10 16:48:35.000000000 +0200
++++ blender-2.63a/source/gameengine/BlenderRoutines/CMakeLists.txt	2012-06-03 18:43:16.704243413 +0200
+@@ -23,7 +23,6 @@ set(INC
+ 	../../blender/makesdna
+ 	../../blender/makesrna
+ 	../../blender/windowmanager
+-	../../../extern/bullet2/src
+ 	../../../intern/container
+ 	../../../intern/guardedalloc
+ 	../../../intern/moto/include
+@@ -33,6 +32,7 @@ set(INC
+ 
+ set(INC_SYS
+ 	${PTHREADS_INCLUDE_DIRS}
++	/usr/include/bullet
+ )
+ 
+ set(SRC
+diff -Npur blender-2.63a.eigen/source/gameengine/Converter/CMakeLists.txt blender-2.63a/source/gameengine/Converter/CMakeLists.txt
+--- blender-2.63a.eigen/source/gameengine/Converter/CMakeLists.txt	2012-06-03 18:42:31.632515028 +0200
++++ blender-2.63a/source/gameengine/Converter/CMakeLists.txt	2012-06-03 18:43:16.705243540 +0200
+@@ -49,7 +49,6 @@ set(INC
+ 	../../blender/makesdna
+ 	../../blender/makesrna
+ 	../../blender/windowmanager
+-	../../../extern/bullet2/src
+ 	../../../intern/container
+ 	../../../intern/guardedalloc
+ 	../../../intern/moto/include
+@@ -60,6 +59,7 @@ set(INC
+ set(INC_SYS
+ 	${PTHREADS_INCLUDE_DIRS}
+ 	/usr/include/eigen3
++	/usr/include/bullet
+ 
+ )
+ 
+diff -Npur blender-2.63a.eigen/source/gameengine/Ketsji/CMakeLists.txt blender-2.63a/source/gameengine/Ketsji/CMakeLists.txt
+--- blender-2.63a.eigen/source/gameengine/Ketsji/CMakeLists.txt	2012-05-10 16:48:58.000000000 +0200
++++ blender-2.63a/source/gameengine/Ketsji/CMakeLists.txt	2012-06-03 18:43:16.706243667 +0200
+@@ -242,9 +242,11 @@ endif()
+ 
+ if(WITH_BULLET)
+ 	list(APPEND INC
+-		../../../extern/bullet2/src
+ 		../Physics/Bullet
+ 	)
++	list(APPEND INC_SYS
++		/usr/include/bullet
++	)
+ 	add_definitions(-DUSE_BULLET)
+ endif()
+ 
+diff -Npur blender-2.63a.eigen/source/gameengine/Physics/Bullet/CcdPhysicsEnvironment.cpp blender-2.63a/source/gameengine/Physics/Bullet/CcdPhysicsEnvironment.cpp
+--- blender-2.63a.eigen/source/gameengine/Physics/Bullet/CcdPhysicsEnvironment.cpp	2012-05-10 16:48:32.000000000 +0200
++++ blender-2.63a/source/gameengine/Physics/Bullet/CcdPhysicsEnvironment.cpp	2012-06-03 18:43:16.708243921 +0200
+@@ -2804,7 +2804,8 @@ float		CcdPhysicsEnvironment::getApplied
+ 
+ void	CcdPhysicsEnvironment::exportFile(const char* filename)
+ {
+-	btDefaultSerializer*	serializer = new btDefaultSerializer();
++	// Workaround bullet-2.77 api change.
++	btDefaultSerializer*	serializer = new btDefaultSerializer(0);
+ 	
+ 		
+ 	for (int i=0;i<m_dynamicsWorld->getNumCollisionObjects();i++)
+diff -Npur blender-2.63a.eigen/source/gameengine/Physics/Bullet/CMakeLists.txt blender-2.63a/source/gameengine/Physics/Bullet/CMakeLists.txt
+--- blender-2.63a.eigen/source/gameengine/Physics/Bullet/CMakeLists.txt	2012-05-10 16:48:32.000000000 +0200
++++ blender-2.63a/source/gameengine/Physics/Bullet/CMakeLists.txt	2012-06-03 18:43:16.709244048 +0200
+@@ -37,7 +37,6 @@ set(INC
+ 	../../../blender/blenkernel
+ 	../../../blender/blenlib
+ 	../../../blender/makesdna
+-	../../../../extern/bullet2/src
+ 	../../../../intern/container
+ 	../../../../intern/guardedalloc
+ 	../../../../intern/moto/include
+@@ -45,6 +44,7 @@ set(INC
+ )
+ 
+ set(INC_SYS
++	/usr/include/bullet
+ 	${GLEW_INCLUDE_PATH}
+ 	${PYTHON_INCLUDE_DIRS}
+ )

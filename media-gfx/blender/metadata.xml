@@ -31,6 +31,9 @@
 		<flag name='collada'>
 			Add support for Collada interchange format through <pkg>media-libs/opencollada</pkg>.
 		</flag>
+		<flag name='cycles'>
+			Build cycles renderer.
+		</flag>
 		<flag name='verse'>
 			Adds verse clustering features to Blender.
 		</flag>

@@ -1,0 +1,49 @@
+diff -Npur blender-2.63.orig/CMakeLists.txt blender-2.63/CMakeLists.txt
+--- blender-2.63.orig/CMakeLists.txt	2012-05-07 23:02:18.166565118 +0200
++++ blender-2.63/CMakeLists.txt	2012-05-07 23:02:45.907564652 +0200
+@@ -160,7 +160,7 @@ unset(PLATFORM_DEFAULT)
+ if(UNIX AND NOT APPLE)
+ 	option(WITH_X11_XINPUT "Enable X11 Xinput (tablet support and unicode input)"	ON)
+ 	option(WITH_X11_XF86VMODE "Enable X11 video mode switching"	ON)
+-	option(WITH_BUILTIN_GLEW "Use GLEW OpenGL wrapper library bundled with blender" ON)
++	option(WITH_BUILTIN_GLEW "Use GLEW OpenGL wrapper library bundled with blender" OFF)
+ 	option(WITH_XDG_USER_DIRS    "Build with XDG Base Directory Specification (only config and documents for now)" OFF)
+ 	mark_as_advanced(WITH_XDG_USER_DIRS)
+ 
+diff -Npur blender-2.63.orig/extern/CMakeLists.txt blender-2.63/extern/CMakeLists.txt
+--- blender-2.63.orig/extern/CMakeLists.txt	2012-05-07 23:02:18.134565119 +0200
++++ blender-2.63/extern/CMakeLists.txt	2012-05-07 23:02:58.458564406 +0200
+@@ -40,10 +40,6 @@ if(WITH_BINRELOC)
+ 	add_subdirectory(binreloc)
+ endif()
+ 
+-if(WITH_BUILTIN_GLEW)
+-	add_subdirectory(glew)
+-endif()
+-
+ if(WITH_GAMEENGINE)
+ 	add_subdirectory(recastnavigation)
+ endif()
+diff -Npur blender-2.63.orig/extern/SConscript blender-2.63/extern/SConscript
+--- blender-2.63.orig/extern/SConscript	2012-05-07 23:02:18.132565119 +0200
++++ blender-2.63/extern/SConscript	2012-05-07 23:03:14.094564130 +0200
+@@ -2,7 +2,6 @@
+ 
+ Import('env')
+ 
+-SConscript(['glew/SConscript'])
+ SConscript(['colamd/SConscript'])
+ 
+ if env['WITH_BF_GAMEENGINE']:
+diff -Npur blender-2.63.orig/source/blender/editors/include/BIF_gl.h blender-2.63/source/blender/editors/include/BIF_gl.h
+--- blender-2.63.orig/source/blender/editors/include/BIF_gl.h	2012-05-07 23:02:18.433565114 +0200
++++ blender-2.63/source/blender/editors/include/BIF_gl.h	2012-05-07 23:03:35.555563750 +0200
+@@ -33,7 +33,7 @@
+ #ifndef __BIF_GL_H__
+ #define __BIF_GL_H__
+ 
+-#include "GL/glew.h"
++#include <GL/glew.h>
+ 
+ 	/*
+ 	 * these should be phased out. cpack should be replaced in
