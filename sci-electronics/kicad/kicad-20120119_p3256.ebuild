@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-20120119_p3256.ebuild,v 1.4 2012/05/22 00:03:40 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-20120119_p3256.ebuild,v 1.5 2012/07/13 19:19:13 calchan Exp $
 
 # rafaelmartins: Please try to keep the live ebuild synchronized with
 # the latest snapshot ebuild. e.g.:
@@ -114,6 +114,11 @@ src_prepare() {
 	else
 		sed -i -e '/add_subdirectory(demos)/d' CMakeLists.txt || die "sed failed"
 	fi
+
+	# build fix from upstream:
+	# https://lists.launchpad.net/kicad-developers/msg07907.html
+	sed -e '/#include "detail\/transform_detail.hpp"/a \
+#include "detail/polygon_sort_adaptor.hpp"' -i include/boost/polygon/polygon.hpp || die "sed failed"
 }
 
 src_configure() {
