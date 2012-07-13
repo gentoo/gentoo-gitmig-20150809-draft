@@ -1,5 +1,12 @@
 # ChangeLog for sys-apps/kmod
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.41 2012/07/13 09:58:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.42 2012/07/13 16:27:28 williamh Exp $
+
+*kmod-9-r2 (13 Jul 2012)
+
+  13 Jul 2012; William Hubbs <williamh@gentoo.org> +kmod-9-r2.ebuild,
+  -kmod-9-r1.ebuild, kmod-9999.ebuild:
+  remove broken version. The kernel calls /sbin/modprobe directly, so that
+  symbolic link cannot be removed at this time.
 
 *kmod-9-r1 (13 Jul 2012)
 
@@ -175,4 +182,3 @@
   25 Dec 2011; Michał Górny <mgorny@gentoo.org> +kmod-2.ebuild,
   +metadata.xml:
   Introduce kmod module tools wrt bug #395863 and as a dep of udev.
-
