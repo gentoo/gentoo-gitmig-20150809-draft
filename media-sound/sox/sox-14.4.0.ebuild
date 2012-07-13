@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-14.4.0.ebuild,v 1.2 2012/05/05 08:54:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-14.4.0.ebuild,v 1.3 2012/07/13 10:58:10 aballier Exp $
 
 EAPI=4
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic autotools
 
 DESCRIPTION="The swiss army knife of sound processing programs"
 HOMEPAGE="http://sox.sourceforge.net"
@@ -21,7 +21,7 @@ RDEPEND=">=sys-devel/libtool-2.2.6b
 	amr? ( media-libs/opencore-amr )
 	ao? ( media-libs/libao )
 	encode? ( >=media-sound/lame-3.98.4 )
-	ffmpeg? ( virtual/ffmpeg )
+	ffmpeg? ( >=virtual/ffmpeg-0.9 )
 	flac? ( media-libs/flac )
 	id3tag? ( media-libs/libid3tag )
 	ladspa? ( media-libs/ladspa-sdk )
@@ -42,7 +42,9 @@ src_prepare() {
 
 	epatch \
 		"${FILESDIR}"/${PN}-14.3.2-uclibc.patch \
-		"${FILESDIR}"/${P}-ffmpeg.patch
+		"${FILESDIR}"/${P}-ffmpeg.patch \
+		"${FILESDIR}"/${P}-avcodec54.patch
+	eautoreconf
 }
 
 src_configure() {

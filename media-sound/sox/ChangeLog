@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/sox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.141 2012/05/05 08:54:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.142 2012/07/13 10:58:10 aballier Exp $
+
+  13 Jul 2012; Alexis Ballier <aballier@gentoo.org> sox-14.4.0.ebuild,
+  +files/sox-14.4.0-avcodec54.patch:
+  Fix build with ffmpeg-0.11 / git master, bug #407621
 
   05 May 2012; Michał Górny <mgorny@gentoo.org> sox-14.3.2-r1.ebuild,
   sox-14.4.0.ebuild:
