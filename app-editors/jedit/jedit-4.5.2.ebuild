@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.5.2.ebuild,v 1.1 2012/07/11 21:59:59 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.5.2.ebuild,v 1.2 2012/07/13 12:10:13 caster Exp $
 
 EAPI=4
 
@@ -19,17 +19,17 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="
-	>=virtual/jre-1.5"
+	>=virtual/jre-1.6"
 # Fails to build docs with jdk7 #411371
 DEPEND="
-	>=virtual/jdk-1.5
+	>=virtual/jdk-1.6
 	doc? (
 		virtual/jdk:1.6
 		=app-text/docbook-xml-dtd-4.3*
 		>=app-text/docbook-xsl-stylesheets-1.65.1
 		dev-libs/libxslt
 	)
-	dev-java/bsh"
+	dev-java/bsh[bsf]"
 
 S="${WORKDIR}/jEdit"
 

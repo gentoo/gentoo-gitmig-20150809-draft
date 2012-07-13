@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/jedit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.101 2012/07/12 11:25:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.102 2012/07/13 12:10:13 caster Exp $
+
+  13 Jul 2012; Vlastimil Babka <caster@gentoo.org> jedit-4.5.2.ebuild:
+  Require bsh[bsf] for building. Fixes bug #426280 by Helmut Jarausch. Also
+  raise jdk deps to 1.6 per sera's testing.
 
   12 Jul 2012; Agostino Sarubbo <ago@gentoo.org> jedit-4.4.2-r1.ebuild:
   Stable for amd64, wrt bug #426218
