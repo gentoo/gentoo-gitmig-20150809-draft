@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6778 2012/07/13 18:09:57 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6779 2012/07/13 22:20:46 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Jul 2012; Alexis Ballier <aballier@gentoo.org> package.mask:
+  unmask newer findlib as latest version works with ~arch ocaml and does not
+  require ocaml-4
 
   13 Jul 2012; Ralph Sennhauser <sera@gentoo.org> package.mask:
   Mask app-misc/jbidwatcher for removal in 30 days. #235124, #298701, #421917.
