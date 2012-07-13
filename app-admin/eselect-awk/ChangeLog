@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-awk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-awk/ChangeLog,v 1.7 2012/07/10 13:59:24 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-awk/ChangeLog,v 1.8 2012/07/13 02:47:38 ottxor Exp $
+
+  13 Jul 2012; Christoph Junghans <ottxor@gentoo.org> eselect-awk-0.2.ebuild:
+  added ~amd64-linux
 
   10 Jul 2012; Akinori Hattori <hattya@gentoo.org> eselect-awk-0.2.ebuild:
   keyword ~ia64 wrt bug #419559
