@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13958 2012/07/13 05:45:08 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13959 2012/07/13 05:49:10 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -719,10 +719,6 @@ dev-tex/pdftex
 # Incompatible API changes with no SONAME bump (bug #379343).
 >=net-libs/libecap-0.2.0
 
-# Robert Piasek <dagger@gentoo.org> (09 Aug 2011)
-# Masking for testing
-=net-fs/samba-3.6.0
-
 # Jesus Rivero <neurogeek@gentoo.org> (29 Jul 2011)
 # This package had wrong versioning. Masked to enforce upgrade on the
 # upcoming 0.0.13
@@ -929,10 +925,7 @@ app-crypt/hmaccalc
 =app-emulation/emul-linux-x86-baselibs-20110722-r99
 
 # Patrick Lauer <patrick@gentoo.org> (07 Apr 2010)
-# Migrating back to unsplit samba ebuilds. Keeping samba-4 masked until release.
-net-fs/samba-libs
-net-fs/samba-server
-net-fs/samba-client
+# Keeping samba-4 masked until release.
 >net-fs/samba-4
 
 # Alistair Bush <ali_bush@gentoo.org> (22 Mar 2010)
