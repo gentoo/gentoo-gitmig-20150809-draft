@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/ldns
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ChangeLog,v 1.29 2012/07/13 13:30:26 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ChangeLog,v 1.30 2012/07/13 13:56:14 darkside Exp $
+
+*ldns-1.6.13-r1 (13 Jul 2012)
+
+  13 Jul 2012; Jeremy Olexa <darkside@gentoo.org> -ldns-1.6.13.ebuild,
+  +ldns-1.6.13-r1.ebuild:
+  Revbump to byte-compile the installed python, bug 426448 by Samuli Suominen
 
   13 Jul 2012; Jeremy Olexa <darkside@gentoo.org> ldns-1.6.13.ebuild:
   Enable USE=ecdsa by default for better net-dns/unbound experience
