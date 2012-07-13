@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warmux/warmux-11.04.1.ebuild,v 1.5 2012/05/04 04:51:08 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warmux/warmux-11.04.1.ebuild,v 1.6 2012/07/13 16:05:04 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -30,13 +30,14 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
-S="${WORKDIR}"/${PN}-11.04
+S=${WORKDIR}/${PN}-11.04
 
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-gentoo.patch \
 		"${FILESDIR}"/${P}-zlib.patch \
-		"${FILESDIR}"/${P}-action.patch
+		"${FILESDIR}"/${P}-action.patch \
+		"${FILESDIR}"/${P}-gcc47.patch
 	eautoreconf
 }
 
@@ -52,7 +53,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog README TODO
 	rm -f "${D}${GAMES_DATADIR}/${PN}/font/DejaVuSans.ttf"
 	doicon data/icon/warmux.svg || die

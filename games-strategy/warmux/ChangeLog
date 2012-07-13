@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/warmux
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warmux/ChangeLog,v 1.11 2012/05/04 04:51:08 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warmux/ChangeLog,v 1.12 2012/07/13 16:05:04 mr_bones_ Exp $
+
+  13 Jul 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/warmux-11.04.1-gcc47.patch, warmux-11.04.1.ebuild:
+  add gcc47 patch from Peter Alfredsen (bug #424669)
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> warmux-11.01.ebuild,
   warmux-11.04.1.ebuild:
