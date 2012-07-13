@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-99999999.ebuild,v 1.8 2012/02/20 15:59:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-99999999.ebuild,v 1.9 2012/07/13 15:29:34 calchan Exp $
 
 # rafaelmartins: Please try to keep the live ebuild synchronized with
 # the latest snapshot ebuild. e.g.:
@@ -27,7 +27,7 @@ fi
 
 IUSE="dev-doc debug doc examples minimal python"
 
-CDEPEND="x11-libs/wxGTK:2.8[X,opengl]"
+CDEPEND="x11-libs/wxGTK:2.8[X,opengl,gnome]"
 DEPEND="${CDEPEND}
 	>=dev-util/cmake-2.6.0
 	>=dev-libs/boost-1.40[python?]

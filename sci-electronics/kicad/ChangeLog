@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/kicad
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/ChangeLog,v 1.60 2012/06/22 00:12:25 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/ChangeLog,v 1.61 2012/07/13 15:29:34 calchan Exp $
+
+  13 Jul 2012; Denis Dupeyron <calchan@gentoo.org> kicad-99999999.ebuild:
+  Depend on x11-libs/wxGTK[gnome].
 
   22 Jun 2012; Rafael G. Martins <rafaelmartins@gentoo.org> metadata.xml:
   Dropped to maintainer-needed
