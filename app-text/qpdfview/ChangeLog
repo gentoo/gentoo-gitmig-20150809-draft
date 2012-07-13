@@ -1,6 +1,11 @@
 # ChangeLog for app-text/qpdfview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/ChangeLog,v 1.8 2012/07/12 13:54:27 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/ChangeLog,v 1.9 2012/07/13 06:50:39 yngwin Exp $
+
+*qpdfview-0.3.1_p427 (13 Jul 2012)
+
+  13 Jul 2012; Ben de Groot <yngwin@gentoo.org> +qpdfview-0.3.1_p427.ebuild:
+  Add development snapshot which includes a fix for bug #426396
 
 *qpdfview-0.3.1-r1 (12 Jul 2012)
 
