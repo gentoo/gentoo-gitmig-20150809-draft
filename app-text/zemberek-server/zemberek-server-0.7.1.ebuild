@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zemberek-server/zemberek-server-0.7.1.ebuild,v 1.8 2011/03/25 19:29:05 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zemberek-server/zemberek-server-0.7.1.ebuild,v 1.9 2012/07/13 14:10:14 sera Exp $
 
 EAPI=2
 inherit eutils java-pkg-2 java-ant-2
@@ -9,7 +9,7 @@ DESCRIPTION="A Turkish spell checker server based on Zemberek NLP library"
 HOMEPAGE="http://code.google.com/p/zemberek/"
 SRC_URI="http://zemberek.googlecode.com/files/${PN}-nolibs-${PV}.tar.gz"
 
-LICENSE="MPL-1.1"
+LICENSE="MPL-1.1 GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 x86"
 S="${WORKDIR}"

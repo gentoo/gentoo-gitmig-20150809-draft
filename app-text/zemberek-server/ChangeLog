@@ -1,6 +1,9 @@
 # ChangeLog for app-text/zemberek-server
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zemberek-server/ChangeLog,v 1.8 2011/03/25 19:29:05 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/zemberek-server/ChangeLog,v 1.9 2012/07/13 14:10:14 sera Exp $
+
+  13 Jul 2012; Ralph Sennhauser <sera@gentoo.org> zemberek-server-0.7.1.ebuild:
+  Add GPL-2 to licenses to cover the Gentoo initscript. #425916
 
   25 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
   zemberek-server-0.7.1.ebuild:
