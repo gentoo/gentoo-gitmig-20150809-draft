@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/virtuoso-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/ChangeLog,v 1.38 2012/05/23 09:02:01 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/ChangeLog,v 1.39 2012/07/13 22:25:39 creffett Exp $
+
+*virtuoso-server-6.1.5 (13 Jul 2012)
+
+  13 Jul 2012; Chris Reffett <creffett@gentoo.org>
+  +virtuoso-server-6.1.5.ebuild:
+  Version bump to 6.1.5
 
   23 May 2012; Johannes Huber <johu@gentoo.org>
   -files/virtuoso-server-6.1.3-unbundle-minizip.patch,
@@ -172,4 +178,3 @@
   +files/6.1.0/6.1.0-common.patch, +virtuoso-server-6.1.0.ebuild,
   +metadata.xml:
   Initial import. bug #254295
-
