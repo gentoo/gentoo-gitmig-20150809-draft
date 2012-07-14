@@ -1,6 +1,12 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.325 2012/06/19 22:00:59 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.326 2012/07/14 16:11:44 reavertm Exp $
+
+*poppler-0.20.2 (14 Jul 2012)
+
+  14 Jul 2012; Maciej Mrozowski <reavertm@gentoo.org> +poppler-0.20.2.ebuild,
+  -poppler-0.16.7.ebuild, -poppler-0.20.1.ebuild, metadata.xml:
+  Version bump, remove old
 
   19 Jun 2012; Maciej Mrozowski <reavertm@gentoo.org>
   files/poppler-0.20.1-lcms-automagic.patch, poppler-0.20.1.ebuild:
@@ -1352,4 +1358,3 @@
 
   14 Mar 2005; Heinrich Wendel <lanius@gentoo.org> +poppler-0.1.2.ebuild:
   initial commit
-
