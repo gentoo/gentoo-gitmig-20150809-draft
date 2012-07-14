@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-progressbar/ruby-progressbar-0.0.10.ebuild,v 1.3 2012/06/12 11:46:42 iksaif Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-progressbar/ruby-progressbar-0.0.10.ebuild,v 1.4 2012/07/14 08:00:14 graaff Exp $
 
 EAPI=3
 
-USE_RUBY="ruby18 ruby19 ree18 jruby rbx"
+USE_RUBY="ruby18 ruby19 ree18 jruby"
 
 RUBY_FAKEGEM_TASK_TEST="none"
 RUBY_FAKEGEM_TASK_DOC=""

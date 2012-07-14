@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-progressbar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-progressbar/ChangeLog,v 1.37 2012/06/12 11:46:42 iksaif Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-progressbar/ChangeLog,v 1.38 2012/07/14 08:00:14 graaff Exp $
+
+  14 Jul 2012; Hans de Graaff <graaff@gentoo.org>
+  ruby-progressbar-0.0.10.ebuild:
+  Drop rbx to create a stable candidate.
 
   12 Jun 2012; Corentin Chary <iksaif@gentoo.org>
   ruby-progressbar-0.0.10.ebuild, ruby-progressbar-0.0.9-r1.ebuild,
