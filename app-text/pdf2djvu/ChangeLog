@@ -1,6 +1,11 @@
 # ChangeLog for app-text/pdf2djvu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2djvu/ChangeLog,v 1.11 2012/05/04 03:33:15 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2djvu/ChangeLog,v 1.12 2012/07/14 22:51:26 hanno Exp $
+
+*pdf2djvu-0.7.13 (14 Jul 2012)
+
+  14 Jul 2012; Hanno Boeck <hanno@gentoo.org> +pdf2djvu-0.7.13.ebuild:
+  Version bump.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> pdf2djvu-0.7.12.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
