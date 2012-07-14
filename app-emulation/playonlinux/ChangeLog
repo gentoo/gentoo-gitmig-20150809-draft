@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/playonlinux
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/playonlinux/ChangeLog,v 1.18 2012/06/16 19:12:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/playonlinux/ChangeLog,v 1.19 2012/07/14 18:22:55 hwoarang Exp $
+
+*playonlinux-4.1.1-r1 (14 Jul 2012)
+
+  14 Jul 2012; Markos Chandras <hwoarang@gentoo.org>
+  +files/playonlinux-4.1.1-not-exclude-ipv6.patch, +playonlinux-4.1.1-r1.ebuild,
+  metadata.xml:
+  Add Ipv6 support thanks to Michael Mol <mikemol@gmail.com>. Bug #425330
 
 *playonlinux-4.1.1 (16 Jun 2012)
 
@@ -93,4 +100,3 @@
   16 May 2009; Mounir Lamouri <volkmar@gentoo.org> +metadata.xml,
   +playonlinux-3.5.ebuild:
   Initial commit. See bug 213287
-
