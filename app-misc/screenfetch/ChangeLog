@@ -1,0 +1,9 @@
+# ChangeLog for app-misc/screenfetch
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screenfetch/ChangeLog,v 1.1 2012/07/14 21:56:46 hwoarang Exp $
+
+*screenfetch-2.4.5 (14 Jul 2012)
+
+  14 Jul 2012; Markos Chandras <hwoarang@gentoo.org> +metadata.xml,
+  +screenfetch-2.4.5.ebuild:
+  Initial commit. Bug #406465
