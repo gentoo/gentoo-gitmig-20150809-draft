@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/root-docs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/root-docs/ChangeLog,v 1.22 2012/07/09 11:46:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/root-docs/ChangeLog,v 1.23 2012/07/14 18:45:53 jdhore Exp $
+
+  14 Jul 2012; Jeff Horelick <jdhore@gentoo.org> root-docs-5.32.03.ebuild:
+  marked x86 per bug 424745
 
   09 Jul 2012; Agostino Sarubbo <ago@gentoo.org> root-docs-5.32.03.ebuild:
   Stable for amd64, wrt bug #424745
