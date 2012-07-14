@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/lastfmplayer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/ChangeLog,v 1.68 2012/06/26 18:24:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/ChangeLog,v 1.69 2012/07/14 17:10:48 hwoarang Exp $
+
+*lastfmplayer-1.5.4.27091-r3 (14 Jul 2012)
+
+  14 Jul 2012; Markos Chandras <hwoarang@gentoo.org>
+  +lastfmplayer-1.5.4.27091-r3.ebuild, -lastfmplayer-1.5.4.27091-r2.ebuild:
+  Fix desktop icon TryExec option. Thanks to Michael Palimaka
+  <kensington@gentoo.org>
 
   26 Jun 2012; Markos Chandras <hwoarang@gentoo.org>
   +files/lastfmplayer-1.5.4.27091-gcc47.patch,

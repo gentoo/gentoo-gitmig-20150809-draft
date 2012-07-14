@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.5.4.27091-r2.ebuild,v 1.3 2012/06/26 18:24:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.5.4.27091-r3.ebuild,v 1.1 2012/07/14 17:10:48 hwoarang Exp $
 
 EAPI=2
 inherit eutils multilib toolchain-funcs qt4-r2
@@ -122,7 +122,7 @@ src_install() {
 	doicon "${WORKDIR}"/debian/package-files/share/icons/hicolor/48x48/apps/lastfm.png
 	# Allow arguments when launching application. Bug #395277
 	make_desktop_entry lastfm "Last.fm Player" lastfm
-	sed -i -e "/Exec/s:lastfm:& %U:" \
+	sed -i -e "/^Exec/s:lastfm:& %U:" \
 		"${D}"/usr/share/applications/lastfm-${PN}.desktop || die
 }
 
