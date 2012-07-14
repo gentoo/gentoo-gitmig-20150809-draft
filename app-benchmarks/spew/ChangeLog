@@ -1,5 +1,8 @@
 
 
+  14 Jul 2012; Anthony G. Basile <blueness@gentoo.org> spew-1.0.8.ebuild:
+  Keyword ~arm ~mips
+
   18 Sep 2011; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
   Added no-herd to metadata.xml
 
