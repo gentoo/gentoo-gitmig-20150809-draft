@@ -1,6 +1,10 @@
 # ChangeLog for virtual/opencl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/opencl/ChangeLog,v 1.7 2012/05/21 12:22:14 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/opencl/ChangeLog,v 1.8 2012/07/14 19:43:11 ulm Exp $
+
+  14 Jul 2012; Ulrich Müller <ulm@gentoo.org> opencl-0.ebuild,
+  opencl-0-r2.ebuild:
+  QA: Define mandatory ebuild variables, bug 425848.
 
   21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> opencl-0-r2.ebuild:
   x86 stable wrt bug #408979

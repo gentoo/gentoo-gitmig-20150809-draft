@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Socket
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Socket/ChangeLog,v 1.1 2012/06/16 20:13:01 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Socket/ChangeLog,v 1.2 2012/07/14 19:43:54 ulm Exp $
+
+  14 Jul 2012; Ulrich Müller <ulm@gentoo.org> perl-Socket-2.1.0-r1.ebuild,
+  perl-Socket-2.2.0.ebuild:
+  QA: Define mandatory ebuild variables, bug 425848.
 
 *perl-Socket-2.2.0 (10 Jun 2012)
 *perl-Socket-2.1.0-r1 (10 Jun 2012)

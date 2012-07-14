@@ -1,11 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/opencl/opencl-0-r2.ebuild,v 1.3 2012/05/21 12:22:14 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/opencl/opencl-0-r2.ebuild,v 1.4 2012/07/14 19:43:11 ulm Exp $
 
 EAPI="4"
 
 DESCRIPTION="Virtual for OpenCL implementations"
+HOMEPAGE=""
+SRC_URI=""
 
+LICENSE=""
 SLOT="0"
 KEYWORDS="amd64 x86"
 CARDS=( fglrx nvidia )

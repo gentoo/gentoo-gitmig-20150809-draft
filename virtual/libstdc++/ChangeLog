@@ -1,6 +1,9 @@
 # ChangeLog for virtual/libstdc++
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libstdc++/ChangeLog,v 1.17 2011/11/05 16:58:32 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/libstdc++/ChangeLog,v 1.18 2012/07/14 19:42:26 ulm Exp $
+
+  14 Jul 2012; Ulrich Müller <ulm@gentoo.org> libstdc++-3.3.ebuild:
+  QA: Define mandatory ebuild variables, bug 425848.
 
   05 Nov 2011; Mike Frysinger <vapier@gentoo.org> libstdc++-3.3.ebuild:
   Add arm love #389563 by Norman Shulman.
