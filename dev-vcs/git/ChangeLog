@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.144 2012/07/10 19:08:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.145 2012/07/14 11:23:01 maekke Exp $
+
+  14 Jul 2012; Markus Meier <maekke@gentoo.org> git-1.7.8.6.ebuild:
+  arm stable, bug #418381
 
   10 Jul 2012; Brent Baude <ranger@gentoo.org> git-1.7.8.6.ebuild:
   Marking git-1.7.8.6 ppc64 for bug 418381
