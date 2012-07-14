@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/meandmyshadow
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/meandmyshadow/ChangeLog,v 1.4 2012/05/21 09:52:57 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/meandmyshadow/ChangeLog,v 1.5 2012/07/14 16:42:27 hasufell Exp $
+
+  14 Jul 2012; Julian Ospald <hasufell@gentoo.org> meandmyshadow-0.3.ebuild:
+  update icon cache wrt bug #426580
 
   21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   meandmyshadow-0.3.ebuild:

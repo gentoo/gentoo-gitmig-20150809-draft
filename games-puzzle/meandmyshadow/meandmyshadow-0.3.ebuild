@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/meandmyshadow/meandmyshadow-0.3.ebuild,v 1.4 2012/05/21 09:52:57 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/meandmyshadow/meandmyshadow-0.3.ebuild,v 1.5 2012/07/14 16:42:27 hasufell Exp $
 
 EAPI=3
-inherit eutils cmake-utils games
+inherit eutils cmake-utils gnome2-utils games
 
 DESCRIPTION="A puzzle/plateform game with a player and its shadow"
 HOMEPAGE="http://meandmyshadow.sourceforge.net/"
@@ -52,6 +52,19 @@ src_compile() {
 
 src_install() {
 	DOCS="Controls.txt" cmake-utils_src_install
-	doicon icons/64x64/meandmyshadow.png
 	prepgamesdirs
+}
+
+pkg_preinst() {
+	games_pkg_preinst
+	gnome2_icon_savelist
+}
+
+pkg_postinst() {
+	games_pkg_postinst
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	gnome2_icon_cache_update
 }
