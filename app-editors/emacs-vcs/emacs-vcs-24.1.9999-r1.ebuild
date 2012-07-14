@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.1.9999-r1.ebuild,v 1.7 2012/06/29 07:59:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.1.9999-r1.ebuild,v 1.8 2012/07/14 14:36:09 ulm Exp $
 
 EAPI=4
 
@@ -94,7 +94,7 @@ SITEFILE="20${PN}-${SLOT}-gentoo.el"
 src_prepare() {
 	if [[ ${PV##*.} = 9999 ]]; then
 		FULL_VERSION=$(sed -n 's/^AC_INIT(emacs,[ \t]*\([^ \t,)]*\).*/\1/p' \
-			configure.in)
+			configure.ac)
 		[[ ${FULL_VERSION} ]] || die "Cannot determine current Emacs version"
 		einfo "Emacs branch: ${EBZR_BRANCH}"
 		einfo "Revision: ${EBZR_REVISION:-${EBZR_REVNO}}"
@@ -108,15 +108,15 @@ src_prepare() {
 	if ! use alsa; then
 		# ALSA is detected even if not requested by its USE flag.
 		# Suppress it by supplying pkg-config with a wrong library name.
-		sed -i -e "/ALSA_MODULES=/s/alsa/DiSaBlEaLsA/" configure.in \
-			|| die "unable to sed configure.in"
+		sed -i -e "/ALSA_MODULES=/s/alsa/DiSaBlEaLsA/" configure.ac \
+			|| die "unable to sed configure.ac"
 	fi
 	if ! use gzip-el; then
 		# Emacs' build system automatically detects the gzip binary and
 		# compresses el files. We don't want that so confuse it with a
 		# wrong binary name
-		sed -i -e "s/ gzip/ PrEvEnTcOmPrEsSiOn/" configure.in \
-			|| die "unable to sed configure.in"
+		sed -i -e "/AC_PATH_PROG/s/gzip/PrEvEnTcOmPrEsSiOn/" configure.ac \
+			|| die "unable to sed configure.ac"
 	fi
 
 	AT_M4DIR=m4 eautoreconf
