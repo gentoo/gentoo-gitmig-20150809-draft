@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/garcon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/garcon/ChangeLog,v 1.51 2012/05/22 05:29:47 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/garcon/ChangeLog,v 1.52 2012/07/14 12:14:26 maekke Exp $
+
+  14 Jul 2012; Markus Meier <maekke@gentoo.org> garcon-0.2.0.ebuild:
+  arm stable, bug #416233
 
   22 May 2012; Jeff Horelick <jdhore@gentoo.org> garcon-0.2.0.ebuild:
   marked x86 per bug 416233
