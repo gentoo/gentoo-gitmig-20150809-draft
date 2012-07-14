@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.105 2012/07/09 11:45:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.106 2012/07/14 18:46:46 jdhore Exp $
+
+  14 Jul 2012; Jeff Horelick <jdhore@gentoo.org> root-5.32.03-r2.ebuild:
+  marked x86 per bug 424745
 
   09 Jul 2012; Agostino Sarubbo <ago@gentoo.org> root-5.32.03-r2.ebuild:
   Stable for amd64, wrt bug #424745
