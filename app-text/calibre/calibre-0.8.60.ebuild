@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.8.58.ebuild,v 1.1 2012/06/29 20:17:28 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.8.60.ebuild,v 1.1 2012/07/14 02:31:36 zmedico Exp $
 
 EAPI=4
 PYTHON_DEPEND=2:2.7
@@ -63,12 +63,13 @@ src_prepare() {
 
 	# Avoid sandbox violation in /usr/share/gnome/apps when linux.py
 	# calls xdg-* (bug #258938).
-	sed -e "s:'xdg-desktop-menu', 'install':\\0, '--mode', 'user':" \
-		-e "s:check_call(\\['xdg-desktop-menu', 'forceupdate'\\]):#\\0:" \
+	sed -e "s|'xdg-desktop-menu', 'install'|\\0, '--mode', 'user'|" \
+		-e "s|check_call(\\['xdg-desktop-menu', 'forceupdate'\\])|#\\0|" \
 		-e "s|\\(CurrentDir(tdir)\\), \\\\\$|\\1:|" \
 		-e "s|PreserveMIMEDefaults():||" \
-		-e "s:xdg-icon-resource install:\\0 --mode user:" \
-		-e "s:xdg-mime install:\\0 --mode user:" \
+		-e "s|xdg-icon-resource install|\\0 --mode user|" \
+		-e "s|cc(\\['xdg-desktop-menu', 'forceupdate'\\])|#\\0|" \
+		-e "s|xdg-mime install|\\0 --mode user|" \
 		-i src/calibre/linux.py || die "sed failed to patch linux.py"
 
 	# Disable unnecessary privilege dropping for bug #287067.
