@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/torbrowser/torbrowser-13.0.ebuild,v 1.1 2012/06/30 20:43:10 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/torbrowser/torbrowser-13.0-r1.ebuild,v 1.1 2012/07/14 17:01:10 hasufell Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -8,10 +8,6 @@ WANT_AUTOCONF="2.1"
 MOZ_ESR=""
 
 MY_PN="firefox"
-# latest version of the torbrowser-bundle we use the profile-folder from
-# https://www.torproject.org/dist/torbrowser/linux/
-TB_V="2.2.37-1"
-
 MOZ_P="${MY_PN}-${PV}"
 
 if [[ ${MOZ_ESR} == 1 ]]; then
@@ -27,27 +23,23 @@ MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/${MY_PN}/releases/"
 
 inherit check-reqs flag-o-matic toolchain-funcs eutils gnome2-utils mozconfig-3 multilib pax-utils autotools python virtualx
 
-DESCRIPTION="Torbrowser without vidalia or tor, includes profile and extensions"
+DESCRIPTION="Torbrowser without vidalia or tor"
 HOMEPAGE="https://www.torproject.org/projects/torbrowser.html.en"
 
 # may work on other arches, but untested
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
 # BSD license applies to torproject-related code like the patches
-# GPL-2 and MIT applies to the extensions
 # icons are under CCPL-Attribution-3.0
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )
 	BSD
-	GPL-2
-	MIT
 	CCPL-Attribution-3.0"
-IUSE="bindist +crashreporter +ipc pgo selinux system-sqlite +webm"
+IUSE="bindist +crashreporter +ipc pgo selinux system-sqlite +torprofile +webm"
 
 SRC_URI="${SRC_URI}
 	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCH}.tar.xz
 	${MOZ_FTP_URI}/${PV}/source/${MOZ_P}.source.tar.bz2
-	amd64? ( https://www.torproject.org/dist/${PN}/linux/tor-browser-gnu-linux-x86_64-${TB_V}-dev-en-US.tar.gz )
-	x86? ( https://www.torproject.org/dist/${PN}/linux/tor-browser-gnu-linux-i686-${TB_V}-dev-en-US.tar.gz )"
+	http://gitweb.torproject.org/${PN}.git/blob_plain/HEAD:/build-scripts/branding/default256.png -> torbrowser.png"
 
 ASM_DEPEND=">=dev-lang/yasm-1.1"
 
@@ -74,6 +66,7 @@ DEPEND="${RDEPEND}
 	webm? ( x86? ( ${ASM_DEPEND} )
 		amd64? ( ${ASM_DEPEND} )
 		virtual/opengl )"
+PDEPEND="torprofile? ( www-misc/torbrowser-profile )"
 
 if [[ ${MOZ_ESR} == 1 ]]; then
 	S="${WORKDIR}/mozilla-esr${PV%%.*}"
@@ -277,16 +270,11 @@ src_install() {
 	# Plugins dir
 	keepdir /usr/$(get_libdir)/${PN}/${MY_PN}/plugins
 
-	# Install pre-configured Torbrowser-profile
-	insinto /usr/share/${PN}
-	doins -r "${WORKDIR}"/tor-browser_en-US/Data/profile || die
-
 	# create wrapper to start torbrowser
 	make_wrapper ${PN} "/usr/$(get_libdir)/${PN}/${MY_PN}/${MY_PN} -no-remote -profile ~/.${PN}/profile"
 
-	newicon -s 128 "${WORKDIR}"/tor-browser_en-US/App/Firefox/icons/mozicon128.png ${PN}.png
+	doicon -s 256 "${DISTDIR}"/${PN}.png
 	make_desktop_entry ${PN} "Torbrowser" ${PN} "Network;WebBrowser"
-	dodoc "${WORKDIR}"/tor-browser_en-US/Docs/changelog
 }
 
 pkg_preinst() {
@@ -298,11 +286,14 @@ pkg_postinst() {
 	ewarn "the exact same patches (excluding Vidalia-patch). Use this only if you know"
 	ewarn "what you are doing!"
 	einfo ""
-	elog "Copy the folder contents from /usr/share/${PN}/profile into ~/.${PN}/profile and run '${PN}'."
-	einfo
-	elog "This profile folder includes pre-configuration recommended by upstream,"
-	elog "as well as the extensions Torbutton, NoScript and HTTPS-Everywhere."
-	elog "If you want to start from scratch just create the directories '~/.${PN}/profile'."
+	if use torprofile ; then
+		elog "Copy the folder contents from /usr/share/${PN}/profile (installed by"
+		elog "www-misc/torbrowser-profile) into ~/.${PN}/profile and run '${PN}'."
+		einfo
+		elog "This profile folder includes pre-configuration recommended by upstream,"
+		elog "as well as the extensions Torbutton, NoScript and HTTPS-Everywhere."
+		elog "If you want to start from scratch just create the directories '~/.${PN}/profile'."
+	fi
 	einfo
 	elog "The update check when you first start ${PN} does not recognize this version."
 	einfo
