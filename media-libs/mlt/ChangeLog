@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mlt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.90 2012/05/16 08:21:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.91 2012/07/14 13:52:07 yngwin Exp $
+
+*mlt-0.8.0 (14 Jul 2012)
+
+  14 Jul 2012; Ben de Groot <yngwin@gentoo.org> +mlt-0.8.0.ebuild:
+  Version bump, bug #420647
 
   16 May 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/mlt-0.5.4-asneeded.patch, -files/mlt-0.7.6-ffmpeg.patch,
@@ -389,4 +394,3 @@
   10 Dec 2005; Luca Barbato <lu_zero@gentoo.org> +metadata.xml,
   +mlt-20051209.ebuild:
   First commit
-
