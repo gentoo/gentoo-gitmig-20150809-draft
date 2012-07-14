@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/libzip-0.10.1-r1.ebuild,v 1.1 2012/05/09 15:57:47 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/libzip-0.10.1-r1.ebuild,v 1.2 2012/07/14 14:48:20 creffett Exp $
 
 EAPI=4
 
@@ -48,4 +48,10 @@ src_prepare() {
 src_install() {
 	autotools-utils_src_install
 	remove_libtool_files all
+}
+
+src_test() {
+	#Having VERBOSE as an env variable causes the fread test to fail (bug 421651)
+	unset VERBOSE
+	autotools-utils_src_test
 }

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libzip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/ChangeLog,v 1.47 2012/05/09 16:52:12 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/ChangeLog,v 1.48 2012/07/14 14:48:20 creffett Exp $
+
+  14 Jul 2012; Chris Reffett <creffett@gentoo.org> libzip-0.10.1-r1.ebuild:
+  Fix bug 421651 by adding unset VERBOSE to src_test in 0.10.1-r1
 
 *libzip-0.10.1-r1 (09 May 2012)
 
@@ -176,4 +179,3 @@
   +libzip-0.8.ebuild:
   Added ebuild for libzip-0.8. Many thanks to Ryan Kelly and Benjamin K.
   Stuhl. - See bug #120244
-
