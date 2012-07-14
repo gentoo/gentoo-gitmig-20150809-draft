@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/cucumber-1.1.4.ebuild,v 1.6 2012/07/11 16:27:54 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/cucumber-1.1.4.ebuild,v 1.7 2012/07/14 07:30:59 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19 ree18"
@@ -47,6 +47,10 @@ all_ruby_prepare() {
 
 	# Make sure spork is run in the right interpreter
 	sed -i -e 's/#{Spork::BINARY}/-S #{Spork::BINARY}/' features/support/env.rb || die
+
+	# Skip failing tests due to hash ordering
+	sed -i -e '/when a specified profile does not exist/,/end/ s:^:#:' spec/cucumber/cli/configuration_spec.rb || die
+	sed -i -e '/should allow Array of Hash/,/end/ s:^:#:' spec/cucumber/ast/table_spec.rb || die
 }
 
 each_ruby_test() {
