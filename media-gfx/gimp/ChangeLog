@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.378 2012/07/12 00:31:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.379 2012/07/14 18:59:27 armin76 Exp $
+
+  14 Jul 2012; Raúl Porcel <armin76@gentoo.org> gimp-2.6.12-r2.ebuild:
+  alpha/ia64/sparc stable wrt #418425
 
   12 Jul 2012; Jeroen Roovers <jer@gentoo.org> gimp-2.6.12-r2.ebuild:
   Stable for HPPA (bug #418425).
