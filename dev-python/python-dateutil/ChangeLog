@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-dateutil
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/ChangeLog,v 1.38 2012/04/04 02:54:29 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/ChangeLog,v 1.39 2012/07/14 13:38:52 ago Exp $
+
+  14 Jul 2012; Agostino Sarubbo <ago@gentoo.org> python-dateutil-2.1.ebuild:
+  Stable for amd64, wrt bug #426466
 
   04 Apr 2012; Mike Gilbert <floppym@gentoo.org>
   +files/python-dateutil-2.1-open-utf-8.patch, python-dateutil-2.1.ebuild:
