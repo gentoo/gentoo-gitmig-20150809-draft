@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/lsb-release
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsb-release/ChangeLog,v 1.16 2012/04/14 19:35:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsb-release/ChangeLog,v 1.17 2012/07/14 13:13:44 blueness Exp $
+
+  14 Jul 2012; Anthony G. Basile <blueness@gentoo.org> lsb-release-1.4.ebuild:
+  Keyword ~mips
 
   14 Apr 2012; Mike Frysinger <vapier@gentoo.org> lsb-release-1.4.ebuild:
   Add more keywords.
