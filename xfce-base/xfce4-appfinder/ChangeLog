@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfce4-appfinder
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-appfinder/ChangeLog,v 1.12 2012/05/22 05:00:52 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-appfinder/ChangeLog,v 1.13 2012/07/14 12:32:31 maekke Exp $
+
+  14 Jul 2012; Markus Meier <maekke@gentoo.org> xfce4-appfinder-4.10.0.ebuild:
+  arm stable, bug #416233
 
   22 May 2012; Jeff Horelick <jdhore@gentoo.org> xfce4-appfinder-4.10.0.ebuild:
   marked x86 per bug 416233

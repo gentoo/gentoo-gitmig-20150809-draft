@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/thunar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.147 2012/05/22 05:28:36 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.148 2012/07/14 12:29:40 maekke Exp $
+
+  14 Jul 2012; Markus Meier <maekke@gentoo.org> thunar-1.4.0.ebuild:
+  arm stable, bug #416233
 
   22 May 2012; Jeff Horelick <jdhore@gentoo.org> thunar-1.4.0.ebuild:
   marked x86 per bug 416233
