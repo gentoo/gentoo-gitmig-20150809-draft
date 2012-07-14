@@ -1,6 +1,10 @@
 # ChangeLog for www-client/httrack
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/ChangeLog,v 1.40 2012/07/10 19:58:41 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/ChangeLog,v 1.41 2012/07/14 20:34:37 sping Exp $
+
+  14 Jul 2012; Sebastian Pipping <sping@gentoo.org>
+  files/httrack-3.45.4-htmldir.patch:
+  Fix regression on /usr/share/httrack/html reported by ago (bug #425692)
 
   10 Jul 2012; Johannes Huber <johu@gentoo.org> httrack-3.45.4.ebuild:
   Stable for x86, wrt bug #425692
