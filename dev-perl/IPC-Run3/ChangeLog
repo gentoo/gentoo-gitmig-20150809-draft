@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IPC-Run3
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Run3/ChangeLog,v 1.59 2012/07/03 16:51:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Run3/ChangeLog,v 1.60 2012/07/14 04:18:51 hattya Exp $
+
+  14 Jul 2012; Akinori Hattori <hattya@gentoo.org> IPC-Run3-0.45.0.ebuild:
+  ia64 stable wrt bug #414745
 
   03 Jul 2012; Brent Baude <ranger@gentoo.org> IPC-Run3-0.45.0.ebuild:
   Marking IPC-Run3-0.45.0 ppc for bug 414745
