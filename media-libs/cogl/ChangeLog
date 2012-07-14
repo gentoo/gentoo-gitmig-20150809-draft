@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/cogl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/ChangeLog,v 1.11 2012/06/14 04:33:04 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/ChangeLog,v 1.12 2012/07/14 13:26:07 blueness Exp $
+
+  14 Jul 2012; Anthony G. Basile <blueness@gentoo.org> cogl-1.8.2.ebuild,
+  cogl-1.10.0.ebuild, cogl-1.10.2.ebuild:
+  Keyword ~mips
 
   14 Jun 2012; Luca Barbato <lu_zero@gentoo.org> cogl-1.10.2.ebuild,
   metadata.xml:

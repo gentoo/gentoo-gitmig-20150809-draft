@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gtk/clutter-gtk-1.0.4.ebuild,v 1.7 2012/05/05 08:02:35 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gtk/clutter-gtk-1.0.4.ebuild,v 1.8 2012/07/14 13:21:33 blueness Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -12,7 +12,7 @@ inherit gnome2 clutter gnome.org
 DESCRIPTION="Clutter-GTK - GTK+3 Integration library for Clutter"
 
 SLOT="1.0"
-KEYWORDS="~alpha amd64 ppc ppc64 x86"
+KEYWORDS="~alpha amd64 ~mips ppc ppc64 x86"
 IUSE="doc examples +introspection"
 
 # XXX: Needs gtk with X support (!directfb)
