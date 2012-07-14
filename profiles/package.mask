@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13964 2012/07/14 11:42:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13965 2012/07/14 20:03:02 cardoe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -880,10 +880,6 @@ net-analyzer/ncrack
 # Robin H. Johnson <robbat2@gentoo.org> (08 Oct 2010)
 # Masked for testing, and some testsuite failures.
 =sys-libs/db-5.1*
-
-# Doug Goldstein <cardoe@gentoo.org> (8 Sep 2010)
-# masked live version
-=x11-libs/cairo-9999*
 
 # Tiziano Müller <dev-zero@gentoo.org> (11 Aug 2010)
 # reasons for masking:
