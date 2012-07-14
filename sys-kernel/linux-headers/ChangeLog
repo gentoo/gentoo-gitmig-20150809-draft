@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.352 2012/07/10 19:14:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.353 2012/07/14 12:48:24 maekke Exp $
+
+  14 Jul 2012; Markus Meier <maekke@gentoo.org> linux-headers-3.4.ebuild:
+  arm stable, bug #423091
 
   10 Jul 2012; Brent Baude <ranger@gentoo.org> linux-headers-3.4.ebuild:
   Marking linux-headers-3.4 ppc64 for bug 423091
