@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/oracle-jre-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/ChangeLog,v 1.16 2012/07/12 20:25:02 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/ChangeLog,v 1.17 2012/07/14 21:07:10 jdhore Exp $
+
+  14 Jul 2012; Jeff Horelick <jdhore@gentoo.org>
+  oracle-jre-bin-1.7.0.5-r1.ebuild:
+  marked x86 per bug 421073
 
 *oracle-jre-bin-1.7.0.5-r1 (12 Jul 2012)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.327 2012/07/13 15:44:28 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.328 2012/07/14 21:07:52 jdhore Exp $
+
+  14 Jul 2012; Jeff Horelick <jdhore@gentoo.org> sun-jdk-1.6.0.33-r1.ebuild:
+  marked x86 per bug 421073
 
 *sun-jdk-1.6.0.33-r1 (13 Jul 2012)
 
