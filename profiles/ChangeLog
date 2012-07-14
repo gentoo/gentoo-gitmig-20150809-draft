@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6780 2012/07/14 09:45:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6781 2012/07/14 11:42:37 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Jul 2012; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Mask pcmanfm/libfm rc releases
 
   14 Jul 2012; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Mask app-laptop/omnibook for removal. Bug #426542, #339758
