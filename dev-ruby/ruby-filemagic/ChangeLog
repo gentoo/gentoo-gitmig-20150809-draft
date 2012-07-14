@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-filemagic
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-filemagic/ChangeLog,v 1.11 2011/01/16 08:54:37 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-filemagic/ChangeLog,v 1.12 2012/07/14 16:21:30 graaff Exp $
+
+  14 Jul 2012; Hans de Graaff <graaff@gentoo.org> ruby-filemagic-0.4.2.ebuild:
+  Restrict tests since test expectations no longer match what sys-apps/file
+  outputs.
 
   16 Jan 2011; Hans de Graaff <graaff@gentoo.org>
   -ruby-filemagic-0.1.1.ebuild, -ruby-filemagic-0.1.1-r1.ebuild,

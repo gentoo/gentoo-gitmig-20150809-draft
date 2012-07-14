@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-filemagic/ruby-filemagic-0.4.2.ebuild,v 1.1 2010/09/19 10:30:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-filemagic/ruby-filemagic-0.4.2.ebuild,v 1.2 2012/07/14 16:21:30 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -20,7 +20,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE=""
 
-ruby_add_bdepend "test? ( virtual/ruby-test-unit )"
+# Don't run tests since the descriptions in recent versions of
+# sys-apps/file are diverging too much from what the test cases expect.
+# https://bugs.gentoo.org/show_bug.cgi?id=366205
+RESTRICT="test"
 
 DEPEND="${DEPEND} sys-apps/file"
 RDEPEND="${RDEPEND} sys-apps/file"
