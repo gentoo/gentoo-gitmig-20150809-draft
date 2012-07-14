@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-http-persistent/net-http-persistent-2.7.ebuild,v 1.1 2012/07/14 17:29:51 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-http-persistent/net-http-persistent-2.7.ebuild,v 1.2 2012/07/14 17:35:58 graaff Exp $
 
 EAPI=4
 
@@ -23,3 +23,9 @@ IUSE="doc test"
 
 ruby_add_bdepend "doc? ( dev-ruby/hoe )
 	test? ( dev-ruby/hoe dev-ruby/minitest )"
+
+all_ruby_prepare() {
+	# Use a modern key size to avoid problems with OpenSSL 1.0.1.
+	# https://github.com/drbrain/net-http-persistent/issues/25
+	sed -i -e 's/RSA.new 512/RSA.new 1024/' test/test_net_http_persistent_ssl_reuse.rb || die
+}
