@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/torbrowser/torbrowser-13.0-r1.ebuild,v 1.1 2012/07/14 17:01:10 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/torbrowser/torbrowser-13.0-r1.ebuild,v 1.2 2012/07/14 19:02:53 hasufell Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -39,7 +39,7 @@ IUSE="bindist +crashreporter +ipc pgo selinux system-sqlite +torprofile +webm"
 SRC_URI="${SRC_URI}
 	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCH}.tar.xz
 	${MOZ_FTP_URI}/${PV}/source/${MOZ_P}.source.tar.bz2
-	http://gitweb.torproject.org/${PN}.git/blob_plain/HEAD:/build-scripts/branding/default256.png -> torbrowser.png"
+	http://gitweb.torproject.org/${PN}.git/blob_plain/HEAD:/build-scripts/branding/default256.png -> torbrowser256.png"
 
 ASM_DEPEND=">=dev-lang/yasm-1.1"
 
@@ -273,7 +273,7 @@ src_install() {
 	# create wrapper to start torbrowser
 	make_wrapper ${PN} "/usr/$(get_libdir)/${PN}/${MY_PN}/${MY_PN} -no-remote -profile ~/.${PN}/profile"
 
-	doicon -s 256 "${DISTDIR}"/${PN}.png
+	newicon -s 256 "${DISTDIR}"/${PN}256.png ${PN}.png
 	make_desktop_entry ${PN} "Torbrowser" ${PN} "Network;WebBrowser"
 }
 

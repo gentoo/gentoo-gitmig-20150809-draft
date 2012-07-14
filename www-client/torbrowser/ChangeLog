@@ -1,6 +1,9 @@
 # ChangeLog for www-client/torbrowser
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/torbrowser/ChangeLog,v 1.6 2012/07/14 17:01:10 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/torbrowser/ChangeLog,v 1.7 2012/07/14 19:02:53 hasufell Exp $
+
+  14 Jul 2012; Julian Ospald <hasufell@gentoo.org> torbrowser-13.0-r1.ebuild:
+  rename icon to avoid possible issues with mirrors
 
 *torbrowser-13.0-r1 (14 Jul 2012)
 
