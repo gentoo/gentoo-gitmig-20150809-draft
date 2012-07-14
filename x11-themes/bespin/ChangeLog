@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/bespin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/bespin/ChangeLog,v 1.2 2012/07/06 22:33:11 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/bespin/ChangeLog,v 1.3 2012/07/14 17:41:41 kensington Exp $
+
+  14 Jul 2012; Michael Palimaka <kensington@gentoo.org>
+  bespin-0_p20120703-r1.ebuild:
+  Add missing slot dependencies on Qt.
 
 *bespin-0_p20120703-r1 (06 Jul 2012)
 
