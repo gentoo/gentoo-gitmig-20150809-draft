@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/kcc
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kcc/ChangeLog,v 1.9 2007/02/21 22:05:33 peper Exp $
+# Copyright 2002-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kcc/ChangeLog,v 1.10 2012/07/14 06:11:14 hattya Exp $
+
+  14 Jul 2012; Akinori Hattori <hattya@gentoo.org> kcc-1.0.ebuild:
+  respect LDFLAGS wrt bug #334601
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

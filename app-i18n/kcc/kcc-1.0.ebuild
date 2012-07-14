@@ -1,8 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kcc/kcc-1.0.ebuild,v 1.14 2006/11/26 17:24:44 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kcc/kcc-1.0.ebuild,v 1.15 2012/07/14 06:11:14 hattya Exp $
 
-inherit toolchain-funcs eutils
+EAPI="4"
+
+inherit eutils toolchain-funcs
 
 DESCRIPTION="A Kanji code converter"
 HOMEPAGE="http://www2s.biglobe.ne.jp/~Nori/ruby/"
@@ -15,21 +17,17 @@ IUSE=""
 
 S="${WORKDIR}/${PN}"
 
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/${PN}-gcc3-gentoo.diff"
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS} ${LDFLAGS}"
 }
 
 src_install() {
-	dobin kcc || die
-
+	dobin kcc
 	dodoc README
-	insinto /usr/share/man/ja/man1
-	newins kcc.jman kcc.1 || die
+	cp -f kcc.jman kcc.1 || die
+	doman -i18n=ja kcc.1
 }
