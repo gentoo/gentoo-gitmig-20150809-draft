@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/xsim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/ChangeLog,v 1.21 2012/07/14 06:17:41 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/ChangeLog,v 1.22 2012/07/14 06:20:09 hattya Exp $
+
+  14 Jul 2012; Akinori Hattori <hattya@gentoo.org> metadata.xml:
+  format metadata.xml
 
   14 Jul 2012; Akinori Hattori <hattya@gentoo.org>
   -files/xsim-0.3.9.4-db3.patch:
