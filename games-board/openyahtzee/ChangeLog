@@ -1,6 +1,11 @@
 # ChangeLog for games-board/openyahtzee
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/openyahtzee/ChangeLog,v 1.14 2012/07/11 21:26:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/openyahtzee/ChangeLog,v 1.15 2012/07/14 19:29:04 hasufell Exp $
+
+  14 Jul 2012; Julian Ospald <hasufell@gentoo.org> openyahtzee-1.9.1.ebuild,
+  -files/openyahtzee-1.9.1-underlink.patch:
+  underlinkg patch not needed anymore (fixes bug 426530), source only compiles
+  on >=sys-devel/gcc-4.6 add check, dropped autotools eclass and eautoreconf
 
 *openyahtzee-1.9.1 (11 Jul 2012)
 
