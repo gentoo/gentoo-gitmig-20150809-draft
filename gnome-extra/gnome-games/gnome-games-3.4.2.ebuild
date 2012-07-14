@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-3.4.2.ebuild,v 1.2 2012/07/07 17:17:15 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-3.4.2.ebuild,v 1.3 2012/07/14 13:31:50 blueness Exp $
 
 EAPI="3"
 GNOME_TARBALL_SUFFIX="xz"
@@ -20,7 +20,7 @@ HOMEPAGE="http://live.gnome.org/GnomeGames/"
 LICENSE="GPL-2 GPL-3 FDL-1.1"
 SLOT="0"
 # TODO: file KEYWORDREQ bug once it's determined that seed is usable
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~mips ~x86"
 IUSE="artworkextra +aisleriot +clutter +glchess +introspection +sudoku test"
 
 COMMON_DEPEND="
