@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/xfwm4-themes
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xfwm4-themes/ChangeLog,v 1.25 2012/05/22 05:38:28 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xfwm4-themes/ChangeLog,v 1.26 2012/07/14 12:08:41 maekke Exp $
+
+  14 Jul 2012; Markus Meier <maekke@gentoo.org> xfwm4-themes-4.10.0.ebuild:
+  arm stable, bug #416233
 
   22 May 2012; Jeff Horelick <jdhore@gentoo.org> xfwm4-themes-4.10.0.ebuild:
   marked x86 per bug 416233
