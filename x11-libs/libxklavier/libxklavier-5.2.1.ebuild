@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/libxklavier-5.2.1.ebuild,v 1.9 2012/07/03 20:16:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/libxklavier-5.2.1.ebuild,v 1.10 2012/07/14 12:22:35 maekke Exp $
 
 EAPI=4
 inherit gnome.org libtool
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.freedesktop.org/wiki/Software/LibXklavier"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc64 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="doc +introspection"
 
 RDEPEND="app-text/iso-codes
