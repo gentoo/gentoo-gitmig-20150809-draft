@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmp4v2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/ChangeLog,v 1.75 2012/07/02 07:58:18 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/ChangeLog,v 1.76 2012/07/14 12:27:09 maekke Exp $
+
+  14 Jul 2012; Markus Meier <maekke@gentoo.org> libmp4v2-2.0.0.ebuild:
+  arm stable, bug #422517
 
   02 Jul 2012; Jeff Horelick <jdhore@gentoo.org> libmp4v2-1.9.1-r1.ebuild,
   libmp4v2-2.0.0.ebuild:
