@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/dom4j
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/ChangeLog,v 1.58 2012/07/14 13:40:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/ChangeLog,v 1.59 2012/07/14 18:04:47 johu Exp $
+
+  14 Jul 2012; Johannes Huber <johu@gentoo.org> dom4j-1.6.1-r4.ebuild:
+  Stable for x86, wrt bug #419767
 
   14 Jul 2012; Agostino Sarubbo <ago@gentoo.org> dom4j-1.6.1-r4.ebuild:
   Stable for amd64, wrt bug #419767
