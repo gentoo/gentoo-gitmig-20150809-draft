@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTTP-Message
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Message/ChangeLog,v 1.27 2012/07/03 16:48:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Message/ChangeLog,v 1.28 2012/07/14 04:15:25 hattya Exp $
+
+  14 Jul 2012; Akinori Hattori <hattya@gentoo.org> HTTP-Message-6.30.0.ebuild:
+  ia64 stable wrt bug #414741
 
   03 Jul 2012; Brent Baude <ranger@gentoo.org> HTTP-Message-6.30.0.ebuild:
   Marking HTTP-Message-6.30.0 ppc for bug 414741
