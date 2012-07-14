@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/net-http-persistent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-http-persistent/ChangeLog,v 1.3 2012/04/09 12:52:32 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-http-persistent/ChangeLog,v 1.4 2012/07/14 17:24:47 graaff Exp $
+
+  14 Jul 2012; Hans de Graaff <graaff@gentoo.org>
+  -net-http-persistent-2.3.2.ebuild, -net-http-persistent-2.3.3.ebuild:
+  Remove old versions.
 
 *net-http-persistent-2.6 (09 Apr 2012)
 
