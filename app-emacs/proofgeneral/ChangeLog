@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/proofgeneral
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/proofgeneral/ChangeLog,v 1.36 2012/03/08 11:31:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/proofgeneral/ChangeLog,v 1.37 2012/07/14 21:14:04 ulm Exp $
+
+  14 Jul 2012; Ulrich Müller <ulm@gentoo.org> proofgeneral-4.1.ebuild,
+  +files/proofgeneral-4.1-image-load-path.patch:
+  Don't rely on image-load-path always being defined, bug 426646.
 
   08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> proofgeneral-4.1.ebuild:
   x86 stable wrt bug #404605
