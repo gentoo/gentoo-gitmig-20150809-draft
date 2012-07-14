@@ -1,6 +1,9 @@
 # ChangeLog for virtual/jre
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jre/ChangeLog,v 1.37 2012/07/14 13:36:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jre/ChangeLog,v 1.38 2012/07/14 16:47:12 johu Exp $
+
+  14 Jul 2012; Johannes Huber <johu@gentoo.org> jre-1.5.0-r1.ebuild:
+  Stable for x86, wrt bug #425618
 
   14 Jul 2012; Agostino Sarubbo <ago@gentoo.org> jre-1.5.0-r1.ebuild:
   Stable for amd64, wrt bug #425618
