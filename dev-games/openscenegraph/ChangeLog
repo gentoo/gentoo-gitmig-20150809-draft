@@ -1,6 +1,12 @@
 # ChangeLog for dev-games/openscenegraph
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.50 2012/07/10 04:51:17 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.51 2012/07/14 16:22:56 reavertm Exp $
+
+  14 Jul 2012; Maciej Mrozowski <reavertm@gentoo.org>
+  -files/openscenegraph-2.8.3-cmake.patch,
+  -files/openscenegraph-2.8.3-curl.patch,
+  -files/openscenegraph-2.8.3-ffmpeg.patch, -openscenegraph-2.8.3.ebuild:
+  Remove old
 
   10 Jul 2012; Michael Weber <xmw@gentoo.org> openscenegraph-3.0.1.ebuild:
   ppc stable (bug 405665)
