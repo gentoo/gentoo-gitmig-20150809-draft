@@ -1,6 +1,10 @@
-# ChangeLog for net-fs/leechcraft-vrooby
+# ChangeLog for sys-fs/leechcraft-vrooby
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/leechcraft-vrooby/ChangeLog,v 1.1 2012/07/01 13:36:56 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/leechcraft-vrooby/ChangeLog,v 1.2 2012/07/15 15:41:08 kensington Exp $
+
+  15 Jul 2012; Michael Palimaka <kensington@gentoo.org>
+  leechcraft-vrooby-9999.ebuild:
+  Add missing slot dependencies on Qt.
 
 *leechcraft-vrooby-9999 (29 Jun 2012)
 
