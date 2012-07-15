@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13967 2012/07/15 17:41:26 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13968 2012/07/15 22:15:23 tetromino Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -58,14 +58,6 @@ app-laptop/omnibook
 # Eray Aslan <eras@gentoo.org> (13 Jul 2012)
 # Mask experimental patch for linking with gold
 =net-mail/dovecot-2.1.8-r1
-
-# Doug Goldstein <cardoe@gentoo.org> (11 Jul 2012)
-# Results in many people's machines not having a usable screen
-# once the screen locks requiring the X server to be killed
-# which is a clear data loss. I asked the GNOME team today
-# about this and they told me it was already masked but there's no
-# mask, so here it is. bug #425070
-=gnome-extra/gnome-screensaver-3.4.2
 
 # Tony Vroon <chainsaw@gentoo.org> (11 Jul 2012)
 # This segfaults repeatedly in actual use for me, and I can not in good
