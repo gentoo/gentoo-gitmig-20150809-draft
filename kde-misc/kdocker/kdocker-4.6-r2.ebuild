@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdocker/kdocker-4.6-r2.ebuild,v 1.1 2012/06/04 10:01:55 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdocker/kdocker-4.6-r2.ebuild,v 1.2 2012/07/15 16:27:34 kensington Exp $
 
 EAPI=4
 LANGS="it"
@@ -19,8 +19,8 @@ DEPEND="
 	x11-libs/libX11
 	x11-libs/libXmu
 	x11-libs/libXpm
-	x11-libs/qt-core
-	x11-libs/qt-gui
+	x11-libs/qt-core:4
+	x11-libs/qt-gui:4
 "
 RDEPEND="${DEPEND}"
 

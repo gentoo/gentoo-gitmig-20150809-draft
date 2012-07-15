@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kio-upnp-ms
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-upnp-ms/ChangeLog,v 1.9 2011/08/15 16:56:36 ottxor Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-upnp-ms/ChangeLog,v 1.10 2012/07/15 16:31:55 kensington Exp $
+
+  15 Jul 2012; Michael Palimaka <kensington@gentoo.org>
+  kio-upnp-ms-1.0.0_p20110602.ebuild:
+  Add missing slot dependencies on Qt.
 
   15 Aug 2011; Christoph Junghans <ottxor@gentoo.org>
   -kio-upnp-ms-0.8.0_p20110313.ebuild, -kio-upnp-ms-0.8.0_p20110503.ebuild,
@@ -48,4 +52,3 @@
   22 Feb 2011; Christoph Junghans <ottxor@gentoo.org>
   +kio-upnp-ms-0.8.0_p20110110.ebuild, +files/FindHUpnp.cmake, +metadata.xml:
   import from cj-overlay (dep for bug #351916)
-
