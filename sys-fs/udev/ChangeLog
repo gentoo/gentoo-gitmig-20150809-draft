@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.691 2012/07/05 17:11:15 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.692 2012/07/15 17:38:03 armin76 Exp $
+
+  15 Jul 2012; Raúl Porcel <armin76@gentoo.org> udev-171-r6.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #416653
 
   05 Jul 2012; William Hubbs <williamh@gentoo.org> udev-186.ebuild:
   add back dependencies that were unintentionally removed for bug #424874,
