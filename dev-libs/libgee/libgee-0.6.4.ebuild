@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgee/libgee-0.6.4.ebuild,v 1.7 2012/05/24 13:40:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgee/libgee-0.6.4.ebuild,v 1.8 2012/07/15 16:49:42 armin76 Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ HOMEPAGE="http://live.gnome.org/Libgee"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~ia64 ppc ppc64 ~sh ~sparc x86 ~x86-linux"
+KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sh sparc x86 ~x86-linux"
 IUSE="+introspection"
 
 RDEPEND=">=dev-libs/glib-2.12:2
