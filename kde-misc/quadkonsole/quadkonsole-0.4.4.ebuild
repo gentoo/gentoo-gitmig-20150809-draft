@@ -1,10 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/quadkonsole/quadkonsole-0.4.4.ebuild,v 1.1 2012/01/03 19:41:30 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/quadkonsole/quadkonsole-0.4.4.ebuild,v 1.2 2012/07/15 15:17:14 johu Exp $
 
 EAPI=4
 
 KDE_HANDBOOK=optional
+KDE_LINGUAS_DIR="i18n"
+KDE_LINGUAS="cs de sr sr@ijekavian sr@ijekavianlatin sr@latin"
 inherit kde4-base
 
 MY_P=${PN}4-${PV}
@@ -27,3 +29,14 @@ DEPEND="${RDEPEND}"
 DOCS=( AUTHORS ChangeLog )
 
 S=${WORKDIR}/${MY_P}
+
+src_prepare() {
+	local lang
+	for lang in ${KDE_LINGUAS} ; do
+		if ! use linguas_${lang} ; then
+			rm ${KDE_LINGUAS_DIR}/${PN}4_${lang}.po
+		fi
+	done
+
+	kde4-base_src_prepare
+}
