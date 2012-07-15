@@ -1,6 +1,9 @@
 # ChangeLog for app-office/dia
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.146 2012/07/07 15:49:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.147 2012/07/15 16:24:04 armin76 Exp $
+
+  15 Jul 2012; Raúl Porcel <armin76@gentoo.org> dia-0.97.2.ebuild:
+  alpha/ia64/sparc stable wrt #410611
 
   07 Jul 2012; Michał Górny <mgorny@gentoo.org>
   +files/dia-0.97.2-underlinking.patch, dia-0.97.2-r1.ebuild:
