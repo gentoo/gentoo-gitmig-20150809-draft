@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-3.4.2.ebuild,v 1.2 2012/07/12 02:01:54 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-3.4.2-r1.ebuild,v 1.1 2012/07/15 22:13:56 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="Replaces xscreensaver, integrating with the desktop."
 HOMEPAGE="http://live.gnome.org/GnomeScreensaver"
@@ -69,6 +69,11 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# Causes problems on multi-monitor setups; bug #425070,
+	# https://bugzilla.gnome.org/show_bug.cgi?id=679441
+	# Not fixed in 3.4.3!
+	epatch -R "${FILESDIR}/${PN}-3.4.2-gtkrc.patch"
+
 	epatch_user
 	# Regenerate marshaling code for <glib-2.31 compat
 	rm -v src/gs-marshal.{c,h} || die
