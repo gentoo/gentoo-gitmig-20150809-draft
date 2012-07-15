@@ -1,5 +1,5 @@
---- kcc.c.orig	1994-03-28 20:00:12.000000000 +0900
-+++ kcc.c	2004-01-07 18:36:29.589293728 +0900
+--- a/kcc.c
++++ b/kcc.c
 @@ -134,7 +134,11 @@
  extern unsigned short hiragana[];
  unsigned short *kanatbl = katakana;

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kcc/kcc-1.0.ebuild,v 1.17 2012/07/15 04:34:15 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kcc/kcc-1.0.ebuild,v 1.18 2012/07/15 04:44:00 hattya Exp $
 
 EAPI="4"
 
@@ -19,6 +19,7 @@ S="${WORKDIR}/${PN}"
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-gcc3-gentoo.diff"
+	epatch "${FILESDIR}/${PN}-exit.diff"
 	sed -i "s:\(-o kcc\):\$(LDFLAGS) \1:" Makefile
 }
 

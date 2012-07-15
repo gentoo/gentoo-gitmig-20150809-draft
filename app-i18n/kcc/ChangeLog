@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/kcc
 # Copyright 2002-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kcc/ChangeLog,v 1.12 2012/07/15 04:27:20 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kcc/ChangeLog,v 1.13 2012/07/15 04:44:00 hattya Exp $
+
+  15 Jul 2012; Akinori Hattori <hattya@gentoo.org> +files/kcc-exit.diff,
+  files/kcc-gcc3-gentoo.diff, kcc-1.0.ebuild:
+  fix implicit declaration of built-in function 'exit'
 
   15 Jul 2012; Akinori Hattori <hattya@gentoo.org> kcc-1.0.ebuild:
   use sed for LDFLAGS
