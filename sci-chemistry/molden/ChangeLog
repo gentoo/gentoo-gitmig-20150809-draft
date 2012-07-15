@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/molden
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/ChangeLog,v 1.43 2012/07/15 17:09:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/ChangeLog,v 1.44 2012/07/15 18:39:51 jlec Exp $
+
+  15 Jul 2012; Justin Lecher <jlec@gentoo.org> -molden-4.7.ebuild,
+  -files/molden-4.7-glibc-2.11.patch, -files/molden-4.7-ldflags.patch:
+  Drop old
 
   15 Jul 2012; Raúl Porcel <armin76@gentoo.org> molden-4.7.ebuild,
   molden-4.8-r2.ebuild, molden-5.0.ebuild:
