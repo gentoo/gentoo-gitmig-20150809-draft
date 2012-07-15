@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.197 2012/07/09 04:08:50 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.198 2012/07/15 11:36:35 ago Exp $
+
+  15 Jul 2012; Agostino Sarubbo <ago@gentoo.org> libvirt-0.9.11.4.ebuild:
+  Stable for amd64, wrt bug #424165
 
   08 Jul 2012; Doug Goldstein <cardoe@gentoo.org>
   files/libvirt-0.9.13-qemu-add-rbd-to-whitelist-of-migration-safe-formats.patc
