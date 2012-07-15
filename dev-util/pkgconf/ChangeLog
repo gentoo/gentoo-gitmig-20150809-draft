@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pkgconf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.24 2012/06/27 03:13:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.25 2012/07/15 17:12:57 armin76 Exp $
+
+  15 Jul 2012; Raúl Porcel <armin76@gentoo.org> pkgconf-0.8.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #420717
 
   27 Jun 2012; Jeroen Roovers <jer@gentoo.org> pkgconf-0.8.ebuild:
   Stable for HPPA (bug #420717).
