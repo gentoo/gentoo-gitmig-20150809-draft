@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/leechcraft-poshuku/leechcraft-poshuku-0.5.60.ebuild,v 1.1 2012/03/20 13:09:21 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/leechcraft-poshuku/leechcraft-poshuku-0.5.60.ebuild,v 1.2 2012/07/15 15:39:09 kensington Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ IUSE="debug +cleanweb +fatape +filescheme +fua +idn +keywords +onlinebookmarks
 		wyfv +sqlite postgres pogooglue"
 
 DEPEND="~net-misc/leechcraft-core-${PV}[postgres?,sqlite?]
-		x11-libs/qt-webkit
+		x11-libs/qt-webkit:4
 		onlinebookmarks? ( >=dev-libs/qjson-0.7.1-r1 )
 		idn? ( net-dns/libidn )"
 RDEPEND="${DEPEND}
