@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/vala
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.108 2012/07/10 18:52:59 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.109 2012/07/15 16:35:41 armin76 Exp $
+
+  15 Jul 2012; Raúl Porcel <armin76@gentoo.org> vala-0.16.0.ebuild:
+  alpha/ia64/sh/sparc stable wrt #410611
 
   10 Jul 2012; Brent Baude <ranger@gentoo.org> vala-0.16.1-r1.ebuild:
   Marking vala-0.16.1-r1 ppc64 for bug 424944
