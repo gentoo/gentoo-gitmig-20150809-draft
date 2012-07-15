@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-script
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-script/ChangeLog,v 1.128 2012/07/09 12:24:09 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-script/ChangeLog,v 1.129 2012/07/15 10:57:27 ago Exp $
+
+  15 Jul 2012; Agostino Sarubbo <ago@gentoo.org> qt-script-4.8.2.ebuild:
+  Stable for x86, wrt bug #424625
 
   09 Jul 2012; Johannes Huber <johu@gentoo.org> -files/qt-4.6-nolibx11.patch:
   Remove old.

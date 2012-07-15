@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-test
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-test/ChangeLog,v 1.118 2012/07/09 12:39:32 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-test/ChangeLog,v 1.119 2012/07/15 10:59:47 ago Exp $
+
+  15 Jul 2012; Agostino Sarubbo <ago@gentoo.org> qt-test-4.8.2.ebuild:
+  Stable for x86, wrt bug #424625
 
   09 Jul 2012; Johannes Huber <johu@gentoo.org> -files/qt-4.6-nolibx11.patch:
   Remove old.

@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-opengl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/ChangeLog,v 1.121 2012/07/09 11:37:52 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/ChangeLog,v 1.122 2012/07/15 10:54:38 ago Exp $
+
+  15 Jul 2012; Agostino Sarubbo <ago@gentoo.org> qt-opengl-4.8.2.ebuild:
+  Stable for x86, wrt bug #424625
 
   09 Jul 2012; Johannes Huber <johu@gentoo.org> -qt-opengl-4.6.3.ebuild:
   Drop Qt-4.6.3
