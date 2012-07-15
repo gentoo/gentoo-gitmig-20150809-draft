@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.992 2012/07/06 06:55:38 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.993 2012/07/15 17:20:24 armin76 Exp $
+
+  15 Jul 2012; Raúl Porcel <armin76@gentoo.org> gentoo-sources-3.0.35.ebuild,
+  gentoo-sources-3.2.21.ebuild, gentoo-sources-3.3.8.ebuild:
+  alpha/arm/ia64/sh/sparc stable wrt #422715 #422713 #412947
 
   06 Jul 2012; Jeff Horelick <jdhore@gentoo.org> gentoo-sources-3.0.35.ebuild:
   marked x86 per bug 412947
