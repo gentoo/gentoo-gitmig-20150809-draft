@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-qt/polkit-qt-0.103.0.ebuild,v 1.4 2012/04/18 18:40:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-qt/polkit-qt-0.103.0.ebuild,v 1.5 2012/07/15 15:28:18 kensington Exp $
 
 EAPI=4
 
@@ -20,8 +20,8 @@ IUSE="debug examples"
 COMMON_DEPEND="
 	dev-libs/glib:2
 	>=sys-auth/polkit-0.103
-	x11-libs/qt-core[glib]
-	x11-libs/qt-gui[dbus,glib]
+	x11-libs/qt-core:4[glib]
+	x11-libs/qt-gui:4[dbus,glib]
 "
 DEPEND="${COMMON_DEPEND}
 	dev-util/automoc
