@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/ultimatestunts/ultimatestunts-0.7.6.ebuild,v 1.2 2011/04/11 03:02:38 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/ultimatestunts/ultimatestunts-0.7.6.ebuild,v 1.3 2012/07/15 07:37:42 hasufell Exp $
 
 EAPI=2
 inherit autotools eutils versionator games
@@ -30,7 +30,8 @@ S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	ecvs_clean
-	epatch "${FILESDIR}"/${P}-paths.patch
+	epatch "${FILESDIR}"/${P}-paths.patch \
+		"${FILESDIR}"/${P}-gcc-4.7.patch
 	autopoint -f || die "autopoint failed"
 	AT_M4DIR=m4 eautoreconf
 }
