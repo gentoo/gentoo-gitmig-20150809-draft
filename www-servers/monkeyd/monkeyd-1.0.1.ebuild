@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/monkeyd-1.0.1.ebuild,v 1.1 2012/06/16 08:17:08 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/monkeyd-1.0.1.ebuild,v 1.2 2012/07/15 01:42:38 blueness Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ SRC_URI="http://monkey-project.com/releases/${PV:0:3}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ~ppc ~x86"
+KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~x86"
 IUSE="php"
 
 RDEPEND="php? ( virtual/httpd-php )"
