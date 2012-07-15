@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gdl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.73 2012/05/24 13:35:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.74 2012/07/15 16:38:30 armin76 Exp $
+
+  15 Jul 2012; Raúl Porcel <armin76@gentoo.org> gdl-3.2.0.ebuild:
+  alpha/ia64/sparc stable wrt #410611
 
   24 May 2012; Samuli Suominen <ssuominen@gentoo.org> gdl-3.2.0.ebuild:
   ppc stable wrt #410611
