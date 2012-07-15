@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/semantik
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/semantik/ChangeLog,v 1.3 2011/07/13 17:36:21 mschiff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/semantik/ChangeLog,v 1.4 2012/07/15 15:21:50 kensington Exp $
+
+  15 Jul 2012; Michael Palimaka <kensington@gentoo.org>
+  semantik-0.7.3_p20091013.ebuild:
+  Add missing slot dependencies on Qt.
 
   13 Jul 2011; Marc Schiffbauer <mschiff@gentoo.org>
   semantik-0.7.3_p20091013.ebuild,
@@ -18,4 +22,3 @@
   +files/semantik-0.7.3_p20091013-wscript_ldconfig.patch, +metadata.xml:
   New package, bug 185523. Thanks to Harry.TX, Julien Cynober, and all the
   other people who contributed.
-

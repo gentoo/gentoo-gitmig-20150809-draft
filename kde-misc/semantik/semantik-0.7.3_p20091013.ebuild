@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/semantik/semantik-0.7.3_p20091013.ebuild,v 1.3 2011/07/13 17:36:21 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/semantik/semantik-0.7.3_p20091013.ebuild,v 1.4 2012/07/15 15:21:50 kensington Exp $
 
 EAPI=4
 
@@ -20,9 +20,9 @@ DEPEND="
 	dev-lang/python
 "
 RDEPEND="
-	x11-libs/qt-core
-	x11-libs/qt-gui
-	x11-libs/qt-xmlpatterns
+	x11-libs/qt-core:4
+	x11-libs/qt-gui:4
+	x11-libs/qt-xmlpatterns:4
 	dev-lang/python[xml]
 "
 
