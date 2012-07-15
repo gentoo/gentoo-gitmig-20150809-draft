@@ -1,6 +1,12 @@
 # ChangeLog for net-news/leechcraft-aggregator
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/leechcraft-aggregator/ChangeLog,v 1.15 2012/07/07 10:36:13 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/leechcraft-aggregator/ChangeLog,v 1.16 2012/07/15 15:45:06 kensington Exp $
+
+  15 Jul 2012; Michael Palimaka <kensington@gentoo.org>
+  leechcraft-aggregator-0.4.99.ebuild, leechcraft-aggregator-0.5.0.ebuild,
+  leechcraft-aggregator-0.5.60.ebuild, leechcraft-aggregator-0.5.65.ebuild,
+  leechcraft-aggregator-0.5.70.ebuild, leechcraft-aggregator-9999.ebuild:
+  Add missing slot dependencies on Qt.
 
   07 Jul 2012; Johannes Huber <johu@gentoo.org>
   leechcraft-aggregator-0.5.70.ebuild:
@@ -86,4 +92,3 @@
   +leechcraft-aggregator-0.4.85.ebuild, +leechcraft-aggregator-9999.ebuild,
   +metadata.xml:
   Copy net-news/leechcraft-aggregator from rion-overlay, thanks to 0xd34df00d
-

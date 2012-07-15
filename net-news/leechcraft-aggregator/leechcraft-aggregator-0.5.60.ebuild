@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/leechcraft-aggregator/leechcraft-aggregator-0.5.60.ebuild,v 1.1 2012/03/20 12:58:28 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/leechcraft-aggregator/leechcraft-aggregator-0.5.60.ebuild,v 1.2 2012/07/15 15:45:06 kensington Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug mysql +sqlite postgres"
 
 DEPEND="~net-misc/leechcraft-core-${PV}[postgres?,sqlite?]
-	x11-libs/qt-webkit"
+	x11-libs/qt-webkit:4"
 RDEPEND="${DEPEND}
 		virtual/leechcraft-downloader-http"
 
