@@ -1,10 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.mask,v 1.31 2012/06/25 16:14:09 armin76 Exp $
-
-# Tobias Klausman <klausman@gentoo.org> (31 Oct 2011)
-# Breaks since accept4() is not implemented on alpha
->=sys-fs/udev-167
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.mask,v 1.32 2012/07/15 17:34:29 armin76 Exp $
 
 # Alexey Shvetsov <alexxy@gentoo.org> (21 May 2012)
 # Need deps pecl-apc and pecl-uploadprogress bug #416897
