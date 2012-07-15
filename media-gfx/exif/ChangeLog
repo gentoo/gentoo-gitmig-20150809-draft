@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/exif
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exif/ChangeLog,v 1.54 2012/07/14 20:05:52 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exif/ChangeLog,v 1.55 2012/07/15 17:08:44 armin76 Exp $
+
+  15 Jul 2012; Raúl Porcel <armin76@gentoo.org> exif-0.6.21.ebuild:
+  alpha/ia64/sparc stable wrt #423175
 
   14 Jul 2012; Jeff Horelick <jdhore@gentoo.org> exif-0.6.21.ebuild:
   marked x86 per bug 426366
