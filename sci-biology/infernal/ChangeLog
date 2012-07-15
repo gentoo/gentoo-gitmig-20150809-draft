@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/infernal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/infernal/ChangeLog,v 1.12 2012/07/15 10:26:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/infernal/ChangeLog,v 1.13 2012/07/15 10:27:42 jlec Exp $
+
+  15 Jul 2012; Justin Lecher <jlec@gentoo.org> -infernal-1.0.2.ebuild:
+  Cleaned old
 
   15 Jul 2012; Justin Lecher <jlec@gentoo.org>
   files/infernal-1.0.2-perl-5.16.patch:
