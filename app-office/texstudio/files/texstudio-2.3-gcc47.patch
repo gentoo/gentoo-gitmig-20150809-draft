@@ -1,6 +1,6 @@
  qcodeedit/lib/document/qdocumentcommand.cpp |    1 +
- qtsingleapplication/qtlocalpeer.cpp         |    6 +++---
- 2 files changed, 4 insertions(+), 3 deletions(-)
+ qtsingleapplication/qtlocalpeer.cpp         |    5 +++--
+ 2 files changed, 4 insertions(+), 2 deletions(-)
 
 diff --git a/qcodeedit/lib/document/qdocumentcommand.cpp b/qcodeedit/lib/document/qdocumentcommand.cpp
 index 308e4e4..35b7d9f 100644
@@ -15,7 +15,7 @@ index 308e4e4..35b7d9f 100644
  /*!
  	\brief ctor
 diff --git a/qtsingleapplication/qtlocalpeer.cpp b/qtsingleapplication/qtlocalpeer.cpp
-index 120a8e8..cab57cd 100644
+index 120a8e8..fa32ff2 100644
 --- a/qtsingleapplication/qtlocalpeer.cpp
 +++ b/qtsingleapplication/qtlocalpeer.cpp
 @@ -48,9 +48,9 @@
@@ -30,12 +30,11 @@ index 120a8e8..cab57cd 100644
  
  #if defined(Q_OS_WIN)
  #include <QtCore/QLibrary>
-@@ -103,7 +103,7 @@ QtLocalPeer::QtLocalPeer(QObject* parent, const QString &appId)
-         socketName += QLatin1Char('-') + QString::number(sessionId, 16);
-     }
- #else
--    socketName += QLatin1Char('-') + QString::number(::getuid(), 16);
-+    socketName += QLatin1Char('-') + QString::number(QtLP_Private::getuid(), 16);
+@@ -60,6 +60,7 @@ static PProcessIdToSessionId pProcessIdToSessionId = 0;
+ #endif
+ #if defined(Q_OS_UNIX)
+ #include <time.h>
++#include <unistd.h>
  #endif
  
-     server = new QLocalServer(this);
+ namespace QtLP_Private {

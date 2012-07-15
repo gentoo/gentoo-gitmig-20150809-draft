@@ -1,6 +1,15 @@
 # ChangeLog for app-office/texstudio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/ChangeLog,v 1.4 2012/06/20 19:09:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/ChangeLog,v 1.5 2012/07/15 09:31:51 jlec Exp $
+
+*texstudio-2.3-r1 (15 Jul 2012)
+
+  15 Jul 2012; Justin Lecher <jlec@gentoo.org> +texstudio-2.3-r1.ebuild,
+  files/texstudio-2.3-gcc47.patch, +files/texstudio-2.3-test.patch,
+  +files/texstudio-2.3-xdg-open.patch:
+  Fix compilation with gg-4.6 whichw as broken by gcc-4.7 patch, #422619;
+  imported a couple of patches form fedora including support of xdg-open and
+  desktop file installation
 
   20 Jun 2012; Justin Lecher <jlec@gentoo.org> texstudio-2.3.ebuild,
   +files/texstudio-2.3-gcc47.patch:
