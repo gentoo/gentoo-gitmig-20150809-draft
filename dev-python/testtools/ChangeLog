@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/testtools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/ChangeLog,v 1.48 2012/06/28 12:42:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/ChangeLog,v 1.49 2012/07/15 18:14:15 armin76 Exp $
+
+  15 Jul 2012; Raúl Porcel <armin76@gentoo.org> testtools-0.9.15.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #422071
 
   28 Jun 2012; Brent Baude <ranger@gentoo.org> testtools-0.9.15.ebuild:
   Marking testtools-0.9.15 ppc for bug 422071
