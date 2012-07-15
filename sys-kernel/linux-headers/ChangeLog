@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.353 2012/07/14 12:48:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.354 2012/07/15 17:32:15 armin76 Exp $
+
+  15 Jul 2012; Raúl Porcel <armin76@gentoo.org> linux-headers-3.4-r1.ebuild:
+  alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #423091
 
   14 Jul 2012; Markus Meier <maekke@gentoo.org> linux-headers-3.4.ebuild:
   arm stable, bug #423091
