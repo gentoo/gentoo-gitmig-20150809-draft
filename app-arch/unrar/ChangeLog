@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/unrar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.182 2012/06/28 12:34:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.183 2012/07/15 17:19:06 armin76 Exp $
+
+  15 Jul 2012; Raúl Porcel <armin76@gentoo.org> unrar-4.2.3.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #421221
 
   28 Jun 2012; Brent Baude <ranger@gentoo.org> unrar-4.2.3.ebuild:
   Marking unrar-4.2.3 ppc for bug 421221
