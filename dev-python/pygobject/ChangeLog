@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygobject
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.162 2012/05/24 13:43:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.163 2012/07/15 16:55:23 armin76 Exp $
+
+  15 Jul 2012; Raúl Porcel <armin76@gentoo.org> pygobject-3.0.4.ebuild:
+  alpha/ia64/sh/sparc stable wrt #410611
 
   24 May 2012; Samuli Suominen <ssuominen@gentoo.org> pygobject-3.0.4.ebuild:
   ppc stable wrt #410611
