@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kamerka/kamerka-0.6.ebuild,v 1.1 2011/06/19 14:01:46 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kamerka/kamerka-0.6.ebuild,v 1.2 2012/07/15 16:42:04 kensington Exp $
 
 EAPI=4
 inherit kde4-base
@@ -16,7 +16,7 @@ IUSE=""
 
 RDEPEND="
 	media-libs/libv4l
-	>=x11-libs/qt-core-4.7
+	>=x11-libs/qt-core-4.7:4
 	$(add_kdebase_dep phonon-kde)
 "
 DEPEND=${RDEPEND}
