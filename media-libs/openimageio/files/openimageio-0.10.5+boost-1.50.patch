@@ -1,0 +1,13 @@
+--- src/iv/imageviewer.cpp.old	2012-07-01 12:17:57.138829803 +0200
++++ src/iv/imageviewer.cpp	2012-07-01 12:21:31.543823577 +0200
+@@ -1352,8 +1352,8 @@
+ compName (IvImage *first, IvImage *second)
+ {
+ #if BOOST_FILESYSTEM_VERSION == 3
+-    std::string firstFile = boost::filesystem3::path(first->name()).leaf().string();
+-    std::string secondFile = boost::filesystem3::path(second->name()).leaf().string();
++    std::string firstFile = boost::filesystem::path(first->name()).leaf().string();
++    std::string secondFile = boost::filesystem::path(second->name()).leaf().string();
+ #else
+     std::string firstFile = boost::filesystem::path(first->name()).leaf();
+     std::string secondFile = boost::filesystem::path(second->name()).leaf();
