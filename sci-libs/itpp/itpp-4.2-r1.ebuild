@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.2-r1.ebuild,v 1.12 2012/07/06 07:45:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.2-r1.ebuild,v 1.13 2012/07/15 10:39:04 jlec Exp $
 
 EAPI=4
+
+AUTOTOOLS_AUTORECONF=yes
 
 inherit autotools-utils flag-o-matic
 
@@ -32,13 +34,12 @@ PATCHES=(
 
 src_prepare() {
 	# turn off performance critical debug code
-	use debug || append-flags -DNDEBUG
+	use debug || append-cppflags -DNDEBUG
 	sed \
 		-e 's:-pipe::g' \
 		-e 's:-Werror::g' \
 		-i configure* || die
 	autotools-utils_src_prepare
-	AT_NOELIBTOOLIZE=yes eautoreconf
 }
 
 src_configure() {
