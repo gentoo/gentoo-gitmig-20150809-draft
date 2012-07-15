@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/pommed
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/ChangeLog,v 1.61 2012/07/14 20:19:24 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/ChangeLog,v 1.62 2012/07/15 12:44:53 ago Exp $
+
+  15 Jul 2012; Agostino Sarubbo <ago@gentoo.org> pommed-1.39.ebuild:
+  Stable for amd64, wrt bug #425828
 
   14 Jul 2012; Jeff Horelick <jdhore@gentoo.org> pommed-1.39.ebuild:
   marked x86 per bug 425828
