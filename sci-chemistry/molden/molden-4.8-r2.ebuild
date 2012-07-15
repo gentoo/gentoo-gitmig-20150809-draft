@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/molden-4.8-r2.ebuild,v 1.3 2012/06/26 12:18:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/molden-4.8-r2.ebuild,v 1.4 2012/07/15 17:09:25 armin76 Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.cmbi.kun.nl/pub/molgraph/${PN}/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 x86"
+KEYWORDS="amd64 x86"
 IUSE="opengl"
 
 RDEPEND="
