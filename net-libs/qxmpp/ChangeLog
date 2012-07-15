@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/qxmpp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/qxmpp/ChangeLog,v 1.14 2012/07/05 19:43:41 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/qxmpp/ChangeLog,v 1.15 2012/07/15 16:52:03 kensington Exp $
+
+  15 Jul 2012; Michael Palimaka <kensington@gentoo.org> qxmpp-0.3.45.2.ebuild,
+  qxmpp-0.3.61-r2.ebuild, qxmpp-9999.ebuild:
+  Add missing slot dependencies on Qt.
 
   05 Jul 2012; Jeff Horelick <jdhore@gentoo.org> qxmpp-0.3.61-r2.ebuild:
   marked x86 per bug 424619

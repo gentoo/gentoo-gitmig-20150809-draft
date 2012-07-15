@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/qmf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/qmf/ChangeLog,v 1.3 2012/05/03 13:19:57 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/qmf/ChangeLog,v 1.4 2012/07/15 16:45:13 kensington Exp $
+
+  15 Jul 2012; Michael Palimaka <kensington@gentoo.org> qmf-2.0_p201143.ebuild:
+  Add missing slot dependencies on Qt.
 
   03 May 2012; Davide Pesavento <pesa@gentoo.org> qmf-2.0_p201143.ebuild,
   qmf-2.0_p201209.ebuild:
@@ -18,4 +21,3 @@
   +files/qmf-use-standard-install-paths.patch, +metadata.xml:
   Initial commit, dependency of qt-mobility. Ebuild written by me and imported
   from qting-edge overlay.
-
