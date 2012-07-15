@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gtkhtml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.256 2012/06/23 09:46:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.257 2012/07/15 17:45:54 armin76 Exp $
+
+  15 Jul 2012; Raúl Porcel <armin76@gentoo.org> gtkhtml-4.2.3.ebuild:
+  alpha/ia64/sh/sparc stable wrt #410611
 
 *gtkhtml-4.4.3 (23 Jun 2012)
 
