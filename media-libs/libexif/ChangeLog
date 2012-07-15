@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libexif
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.131 2012/07/14 20:04:44 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.132 2012/07/15 17:05:46 armin76 Exp $
+
+  15 Jul 2012; Raúl Porcel <armin76@gentoo.org> libexif-0.6.21.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #426366
 
   14 Jul 2012; Jeff Horelick <jdhore@gentoo.org> libexif-0.6.21.ebuild:
   marked x86 per bug 426366
