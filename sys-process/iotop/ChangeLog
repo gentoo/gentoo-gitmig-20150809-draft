@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/iotop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/iotop/ChangeLog,v 1.56 2012/02/16 13:37:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/iotop/ChangeLog,v 1.57 2012/07/15 17:21:30 blueness Exp $
+
+  15 Jul 2012; Anthony G. Basile <blueness@gentoo.org> iotop-0.4.4.ebuild:
+  Keyword ~mips
 
   16 Feb 2012; Justin Lecher <jlec@gentoo.org> iotop-0.4.3.ebuild,
   iotop-0.4.4.ebuild, metadata.xml:
