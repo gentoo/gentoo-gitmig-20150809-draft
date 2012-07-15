@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/leechcraft-azoth/leechcraft-azoth-0.4.99.ebuild,v 1.3 2012/04/07 17:14:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/leechcraft-azoth/leechcraft-azoth-0.4.99.ebuild,v 1.4 2012/07/15 16:05:12 kensington Exp $
 
 EAPI="4"
 
@@ -16,11 +16,11 @@ IUSE="debug +acetamide +adiumstyles +autoidler +autopaste +chathistory +crypt
 		+standardstyles +xoox +xtazy"
 
 DEPEND="~net-misc/leechcraft-core-${PV}
-		x11-libs/qt-webkit
-		x11-libs/qt-multimedia
+		x11-libs/qt-webkit:4
+		x11-libs/qt-multimedia:4
 		otroid? ( net-libs/libotr )
 		xoox? ( net-libs/qxmpp[extras] media-libs/speex )
-		xtazy? ( x11-libs/qt-dbus )
+		xtazy? ( x11-libs/qt-dbus:4 )
 		crypt? ( app-crypt/qca app-crypt/qca-gnupg )"
 RDEPEND="${DEPEND}
 	modnok? (
