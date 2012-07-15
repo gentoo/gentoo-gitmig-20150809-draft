@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/cherokee
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.93 2012/07/11 23:06:39 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.94 2012/07/15 17:59:08 blueness Exp $
+
+  15 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
+  cherokee-1.2.101-r1.ebuild:
+  Keyword ~arm ~ppc ~ppc64
 
   11 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
   cherokee-1.2.101-r1.ebuild:
