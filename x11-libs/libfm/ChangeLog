@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libfm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.68 2012/07/14 11:43:28 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.69 2012/07/15 17:29:26 hwoarang Exp $
+
+  15 Jul 2012; Markos Chandras <hwoarang@gentoo.org> libfm-9999.ebuild:
+  Remove udisks support per upstream bug:
+  https://sourceforge.net/tracker/?func=detail&aid=3531655&group_id=156956&atid
+  =801864#
 
 *libfm-1.0_rc1 (14 Jul 2012)
 

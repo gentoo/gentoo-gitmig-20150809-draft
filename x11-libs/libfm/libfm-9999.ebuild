@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-9999.ebuild,v 1.23 2012/06/14 18:33:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-9999.ebuild,v 1.24 2012/07/15 17:29:26 hwoarang Exp $
 
 EAPI=3
 
@@ -13,16 +13,14 @@ HOMEPAGE="http://pcmanfm.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="debug doc examples udev"
+IUSE="debug doc examples"
 KEYWORDS=""
 
 COMMON_DEPEND=">=dev-libs/glib-2.18:2
 	>=x11-libs/gtk+-2.16:2
-	udev? ( dev-libs/dbus-glib )
 	>=lxde-base/menu-cache-0.3.2"
 RDEPEND="${COMMON_DEPEND}
-	x11-misc/shared-mime-info
-	udev? ( sys-fs/udisks:0 )"
+	x11-misc/shared-mime-info"
 DEPEND="${COMMON_DEPEND}
 	>=dev-lang/vala-0.14.0
 	dev-util/gtk-doc-am
@@ -61,7 +59,6 @@ src_configure() {
 		--sysconfdir="${EPREFIX}/etc" \
 		--disable-dependency-tracking \
 		--disable-static \
-		$(use_enable udev udisks) \
 		$(use_enable examples demo) \
 		$(use_enable debug) \
 		# Documentation fails to build at the moment
