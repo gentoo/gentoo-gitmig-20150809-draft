@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-meta
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-meta/ChangeLog,v 1.72 2012/06/08 12:55:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-meta/ChangeLog,v 1.73 2012/07/15 18:07:46 armin76 Exp $
+
+  15 Jul 2012; Raúl Porcel <armin76@gentoo.org>
+  gst-plugins-meta-0.10-r7.ebuild:
+  alpha/ia64/sh/sparc stable wrt #410611
 
   08 Jun 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer from metadata as talked with him, bug #90641.
