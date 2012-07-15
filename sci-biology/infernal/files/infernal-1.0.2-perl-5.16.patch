@@ -50,7 +50,7 @@ index a4dc126..b61fa7a 100755
 +++ b/easel/devkit/esl-dependencies
 @@ -13,8 +13,8 @@
  # SRE, Mon Jun 11 11:15:31 2007
- # SVN $Id: infernal-1.0.2-perl-5.16.patch,v 1.1 2012/06/25 07:08:17 jlec Exp $
+ # SVN $Id: infernal-1.0.2-perl-5.16.patch,v 1.2 2012/07/15 10:26:02 jlec Exp $
  
 -require "getopts.pl"
 -&Getopts('1afr');
@@ -65,7 +65,7 @@ index 81d03de..6201d3d 100755
 +++ b/easel/devkit/sqc
 @@ -176,12 +176,11 @@
  # SRE, Tue Aug  6 11:16:39 2002
- # SVN $Id: infernal-1.0.2-perl-5.16.patch,v 1.1 2012/06/25 07:08:17 jlec Exp $
+ # SVN $Id: infernal-1.0.2-perl-5.16.patch,v 1.2 2012/07/15 10:26:02 jlec Exp $
  
 -require "getopts.pl";
 -require "importenv.pl";
@@ -88,13 +88,15 @@ index 81d03de..6201d3d 100755
      foreach $suffix ("aa".."zz") {
          $name = "$dir"."esltmp".$suffix.$$;
 diff --git a/easel/testsuite/coverage_report.pl b/easel/testsuite/coverage_report.pl
-index 9c77791..024ed34 100755
+old mode 100755
+new mode 100644
+index 9c77791..024ed34
 --- a/easel/testsuite/coverage_report.pl
 +++ b/easel/testsuite/coverage_report.pl
 @@ -16,9 +16,9 @@
  #
  # SRE, Thu Mar  1 19:22:57 2007 (Janelia)
- # SVN $Id: infernal-1.0.2-perl-5.16.patch,v 1.1 2012/06/25 07:08:17 jlec Exp $
+ # SVN $Id: infernal-1.0.2-perl-5.16.patch,v 1.2 2012/07/15 10:26:02 jlec Exp $
 -require  "getopts.pl";
 +use Getopt::Std;
  $have_sloccount = 1;
@@ -109,7 +111,7 @@ index d1b4a9a..db4378f 100755
 +++ b/easel/testsuite/driver_report.pl
 @@ -19,8 +19,8 @@
  # SRE, Fri Mar  2 10:01:44 2007 (Janelia)
- # SVN $Id: infernal-1.0.2-perl-5.16.patch,v 1.1 2012/06/25 07:08:17 jlec Exp $
+ # SVN $Id: infernal-1.0.2-perl-5.16.patch,v 1.2 2012/07/15 10:26:02 jlec Exp $
  
 -require  "getopts.pl";
 -&Getopts('c');
@@ -119,13 +121,15 @@ index d1b4a9a..db4378f 100755
  
  if ($ENV{'CC'}     ne "") { $CC     = $ENV{'CC'};     } else { $CC       = "gcc"; } 
 diff --git a/easel/testsuite/valgrind_report.pl b/easel/testsuite/valgrind_report.pl
-index 186a392..07026a0 100755
+old mode 100755
+new mode 100644
+index 186a392..07026a0
 --- a/easel/testsuite/valgrind_report.pl
 +++ b/easel/testsuite/valgrind_report.pl
 @@ -10,8 +10,8 @@
  #
  # SRE, Fri Mar  2 08:37:48 2007 [Janelia]
- # SVN $Id: infernal-1.0.2-perl-5.16.patch,v 1.1 2012/06/25 07:08:17 jlec Exp $
+ # SVN $Id: infernal-1.0.2-perl-5.16.patch,v 1.2 2012/07/15 10:26:02 jlec Exp $
 -require  "getopts.pl";
 -&Getopts('c');
 +use Getopt::Std;
