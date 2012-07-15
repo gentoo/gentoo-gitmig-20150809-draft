@@ -1,6 +1,9 @@
 # ChangeLog for app-office/planner
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.67 2012/05/24 13:32:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.68 2012/07/15 16:26:56 armin76 Exp $
+
+  15 Jul 2012; Raúl Porcel <armin76@gentoo.org> planner-0.14.6.ebuild:
+  alpha/sparc stable wrt #410611
 
   24 May 2012; Samuli Suominen <ssuominen@gentoo.org> planner-0.14.6.ebuild:
   ppc stable wrt #410611
