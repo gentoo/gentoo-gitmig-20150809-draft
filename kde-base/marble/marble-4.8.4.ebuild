@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.8.4.ebuild,v 1.2 2012/07/06 20:52:53 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.8.4.ebuild,v 1.3 2012/07/15 16:37:26 kensington Exp $
 
 EAPI=4
 
@@ -18,10 +18,10 @@ IUSE="debug designer-plugin gps +kde plasma python"
 # RESTRICT=test
 
 DEPEND="
-	x11-libs/qt-core
-	x11-libs/qt-gui[dbus]
-	x11-libs/qt-script
-	x11-libs/qt-webkit
+	x11-libs/qt-core:4
+	x11-libs/qt-gui:4[dbus]
+	x11-libs/qt-script:4
+	x11-libs/qt-webkit:4
 	gps? ( >=sci-geosciences/gpsd-2.95[qt4] )
 	python? (
 		>=dev-python/PyQt4-4.4.4-r1
