@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/miniplayer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/miniplayer/ChangeLog,v 1.5 2012/07/15 19:26:28 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/miniplayer/ChangeLog,v 1.6 2012/07/15 19:35:12 johu Exp $
+
+*miniplayer-2.5 (15 Jul 2012)
+
+  15 Jul 2012; Johannes Huber <johu@gentoo.org> +miniplayer-2.5.ebuild:
+  Version bump.
 
   15 Jul 2012; Johannes Huber <johu@gentoo.org> -miniplayer-2.3.ebuild,
   miniplayer-2.4.ebuild:
