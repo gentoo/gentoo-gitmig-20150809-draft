@@ -1,6 +1,10 @@
 # ChangeLog for net-im/telepathy-logger
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-logger/ChangeLog,v 1.38 2012/05/24 14:03:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-logger/ChangeLog,v 1.39 2012/07/15 18:09:22 armin76 Exp $
+
+  15 Jul 2012; Raúl Porcel <armin76@gentoo.org>
+  telepathy-logger-0.2.12-r1.ebuild:
+  alpha/ia64/sparc stable wrt #410611
 
   24 May 2012; Samuli Suominen <ssuominen@gentoo.org>
   telepathy-logger-0.2.12-r1.ebuild:
