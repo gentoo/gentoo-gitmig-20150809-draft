@@ -1,6 +1,10 @@
 # ChangeLog for media-video/bangarang
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bangarang/ChangeLog,v 1.8 2012/06/23 13:54:30 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bangarang/ChangeLog,v 1.9 2012/07/15 15:24:55 kensington Exp $
+
+  15 Jul 2012; Michael Palimaka <kensington@gentoo.org> bangarang-2.0.1.ebuild,
+  bangarang-2.1.ebuild:
+  Add missing slot dependencies on Qt.
 
   23 Jun 2012; Michael Palimaka <kensington@gentoo.org>
   +files/bangarang-2.1-gcc-4.7.patch, bangarang-2.1.ebuild:
