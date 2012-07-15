@@ -1,6 +1,19 @@
 # ChangeLog for mail-mta/ssmtp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.123 2012/06/04 21:13:39 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.124 2012/07/15 11:44:43 flameeyes Exp $
+
+  15 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  -files/CVE-2008-3962-r2.patch, -files/ssmtp-2.61-darwin7.patch,
+  -files/ssmtp-2.62-authpass.patch, -files/ssmtp-2.62-darwin-crypto.patch,
+  -files/ssmtp-2.62-from_format_fix.patch,
+  -files/ssmtp-2.62-maxsysuid-conf.patch, -files/ssmtp-2.62-maxsysuid.patch,
+  -files/ssmtp-2.62-solaris-basename-conflict.patch,
+  -files/ssmtp-2.62-strndup.patch, -files/ssmtp-2.64-uint32_t.patch,
+  -ssmtp-2.62-r8.ebuild, ssmtp-2.64-r2.ebuild:
+  Update 2.64 patchset to include the Solaris patch instead of having it in
+  $FILESDIR; simplify prefix handling by not doing any permission handling there
+  (it would otherwise create a security issue); rename configure.in for
+  compatibility with future autoconf.  Remove old version and its patches.
 
   04 Jun 2012; Zac Medico <zmedico@gentoo.org> ssmtp-2.62-r8.ebuild,
   ssmtp-2.64-r2.ebuild:

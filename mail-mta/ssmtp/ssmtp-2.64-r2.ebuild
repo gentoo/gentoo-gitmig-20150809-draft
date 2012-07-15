@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.64-r2.ebuild,v 1.12 2012/06/04 21:13:39 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.64-r2.ebuild,v 1.13 2012/07/15 11:44:43 flameeyes Exp $
 
 EAPI="4"
 
-PATCHSET=2
+PATCHSET=3
 
 WANT_AUTOMAKE=none
 
@@ -44,14 +44,18 @@ RDEPEND="${DEPEND}
 REQUIRED_USE="gnutls? ( ssl )"
 
 pkg_setup() {
-	enewgroup ssmtp
+	if ! use prefix; then
+		enewgroup ssmtp
+	fi
 }
 
 src_prepare() {
 	EPATCH_SUFFIX="patch" EPATCH_SOURCE="${WORKDIR}/patches" \
 		epatch
 
-	epatch "${FILESDIR}"/${P}-uint32_t.patch
+	# let's start by not using configure.in anymore as future autoconf
+	# versions will not support it.
+	mv configure.in configure.ac || die
 
 	eautoconf
 }
@@ -94,11 +98,12 @@ src_install() {
 	# Set restrictive perms on ssmtp.conf as per #187841, #239197
 	# Protect the ssmtp configfile from being readable by regular users as it
 	# may contain login/password data to auth against a the mailhub used.
-	use prefix || fowners root:ssmtp /etc/ssmtp/ssmtp.conf
-	fperms 640 /etc/ssmtp/ssmtp.conf
-
-	use prefix || fowners root:ssmtp /usr/sbin/ssmtp
-	fperms 2711 /usr/sbin/ssmtp
+	if ! use prefix; then
+		fowners root:ssmtp /etc/ssmtp/ssmtp.conf
+		fperms 640 /etc/ssmtp/ssmtp.conf
+		fowners root:ssmtp /usr/sbin/ssmtp
+		fperms 2711 /usr/sbin/ssmtp
+	fi
 
 	if use mta; then
 		dosym ../sbin/ssmtp /usr/lib/sendmail
