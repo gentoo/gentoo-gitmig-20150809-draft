@@ -1,6 +1,15 @@
 # ChangeLog for www-apps/mythweb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.91 2012/07/12 02:59:19 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.92 2012/07/15 23:37:01 cardoe Exp $
+
+*mythweb-0.25.1_p20120715 (15 Jul 2012)
+
+  15 Jul 2012; Doug Goldstein <cardoe@gentoo.org>
+  +mythweb-0.25.1_p20120715.ebuild, +files/mythweb.conf.nginx, +files/reconfig:
+  Version bump with patches from upstream. Attempted to cleanup the ebuild and
+  set defaults in the config files based on what webapp-config has set.
+  Additionally added initial support for nginx in additional to the officially
+  supported Apache and lighttpd.
 
 *mythweb-0.25.1 (11 Jul 2012)
 
