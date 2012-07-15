@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtksourceview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.227 2012/05/24 14:13:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.228 2012/07/15 18:59:11 armin76 Exp $
+
+  15 Jul 2012; Raúl Porcel <armin76@gentoo.org>
+  gtksourceview-2.10.5-r2.ebuild, gtksourceview-3.2.3.ebuild:
+  alpha/ia64/sh/sparc stable wrt #410611
 
   24 May 2012; Samuli Suominen <ssuominen@gentoo.org>
   gtksourceview-2.10.5-r2.ebuild, gtksourceview-3.2.3.ebuild:
