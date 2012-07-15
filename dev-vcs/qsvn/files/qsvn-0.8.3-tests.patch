@@ -1,22 +1,12 @@
-diff --git a/src/tests/simpletest.cpp b/src/tests/simpletest.cpp
-index c743682..5918cc4 100644
---- a/src/tests/simpletest.cpp
-+++ b/src/tests/simpletest.cpp
-@@ -14,5 +14,5 @@ void SimpleTest::testOne()
- 	QCOMPARE(str.toUpper(), QString("HELLO"));
- }
- 
--QTEST_MAIN(SimpleTest)
-+QTEST_APPLESS_MAIN(SimpleTest)
- #include "simpletest.moc"
-diff --git a/src/tests/simpletest2.cpp b/src/tests/simpletest2.cpp
-index 5ee13c1..98ac83e 100644
---- a/src/tests/simpletest2.cpp
-+++ b/src/tests/simpletest2.cpp
-@@ -14,5 +14,5 @@ void SimpleTest2::testOne()
- 	QCOMPARE(str.toUpper(), QString("HELLO"));
- }
- 
--QTEST_MAIN(SimpleTest2)
-+QTEST_APPLESS_MAIN(SimpleTest2)
- #include "simpletest2.moc"
+The included tests are simple, "hello world" style tests
+that do not actually test this package.
+--- CMakeLists.txt
++++ CMakeLists.txt
+@@ -187,7 +187,3 @@
+                             /dVcInstallDir=$ENV{VCINSTALLDIR}
+                        )
+ ENDIF (WIN32)
+-
+-# Unit-Tests
+-ENABLE_TESTING()
+-ADD_SUBDIRECTORY(tests)

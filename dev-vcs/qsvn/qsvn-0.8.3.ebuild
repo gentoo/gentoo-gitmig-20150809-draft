@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qsvn/qsvn-0.8.3.ebuild,v 1.4 2010/06/22 18:50:23 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qsvn/qsvn-0.8.3.ebuild,v 1.5 2012/07/15 14:49:00 kensington Exp $
 
-EAPI="2"
+EAPI=4
 
-inherit cmake-utils eutils
+inherit cmake-utils
 
 DESCRIPTION="GUI frontend to the Subversion revision system"
 HOMEPAGE="http://www.anrichter.net/projects/qsvn/"
@@ -15,23 +15,20 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="x11-libs/qt-gui:4[qt3support]
+DEPEND="dev-libs/apr
+	dev-libs/apr-util
+	dev-vcs/subversion
+	x11-libs/qt-core:4[qt3support]
+	x11-libs/qt-gui:4[qt3support]
 	x11-libs/qt-sql:4[sqlite]
 	dev-vcs/subversion"
-DEPEND="${RDEPEND}
-	x11-libs/qt-test"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${P}/src
 
-PATCHES=( "${FILESDIR}/${P}-tests.patch"
-		"${FILESDIR}/${P}-static-lib.patch" )
+PATCHES=(
+	"${FILESDIR}/${P}-static-lib.patch"
+	"${FILESDIR}/${P}-tests.patch"
+)
 
-#src_prepare() {
-#	epatch "${FILESDIR}/${P}-tests.patch"
-#	epatch "
-#}
-
-src_install() {
-	cmake-utils_src_install
-	dodoc ../{ChangeLog,README} || die
-}
+DOCS=( ../ChangeLog ../README )
