@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.141 2012/07/02 22:13:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.142 2012/07/15 23:10:06 vapier Exp $
+
+  15 Jul 2012; Mike Frysinger <vapier@gentoo.org>
+  +files/xbmc-11.0-nomythtv.patch, files/xbmc-9999-nomythtv.patch,
+  xbmc-11.0.ebuild:
+  Update mythtv patch to latest git #426376 by BT.
 
   02 Jul 2012; Mike Frysinger <vapier@gentoo.org>
   files/xbmc-9999-no-arm-flags.patch:
