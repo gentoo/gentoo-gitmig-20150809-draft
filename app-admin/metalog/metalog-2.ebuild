@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/metalog-2.ebuild,v 1.9 2012/05/06 16:27:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/metalog-2.ebuild,v 1.10 2012/07/15 22:21:32 vapier Exp $
 
 EAPI="3"
 
@@ -21,6 +21,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.9-metalog-conf.patch
+	epatch "${FILESDIR}"/${P}-no-gets.patch #426632
 }
 
 src_configure() {

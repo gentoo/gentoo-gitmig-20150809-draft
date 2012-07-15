@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/metalog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.102 2012/05/06 16:27:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.103 2012/07/15 22:21:32 vapier Exp $
+
+  15 Jul 2012; Mike Frysinger <vapier@gentoo.org>
+  +files/metalog-2-no-gets.patch, metalog-2.ebuild:
+  Fix building with glibc-2.16+ #426632 by Christian Hagau.
 
   06 May 2012; Raúl Porcel <armin76@gentoo.org> metalog-2.ebuild:
   ia64/s390/sh/sparc stable wrt #390033
