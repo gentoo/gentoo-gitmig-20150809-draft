@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/App-Nopaste
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/App-Nopaste/ChangeLog,v 1.32 2012/06/24 12:58:13 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/App-Nopaste/ChangeLog,v 1.33 2012/07/15 19:07:21 tove Exp $
+
+*App-Nopaste-0.340.0 (15 Jul 2012)
+
+  15 Jul 2012; Torsten Veller <tove@gentoo.org> +App-Nopaste-0.340.0.ebuild:
+  Version bump
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
