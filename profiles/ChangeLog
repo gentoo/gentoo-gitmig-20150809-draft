@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6786 2012/07/15 22:15:23 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6787 2012/07/15 22:53:55 johu Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Jul 2012; Johannes Huber <johu@gentoo.org> package.mask:
+  Mask broken >=net-libs/telepathy-qt-0.9.3.
 
   15 Jul 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.mask:
   gnome-screensaver-3.4.2 is now gone from portage.
