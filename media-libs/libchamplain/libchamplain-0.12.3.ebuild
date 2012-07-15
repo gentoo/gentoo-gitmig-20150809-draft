@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.12.1.ebuild,v 1.4 2012/07/09 14:08:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.12.3.ebuild,v 1.1 2012/07/15 23:10:07 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
-inherit autotools eutils gnome2
+inherit gnome2
 
 DESCRIPTION="Clutter based world map renderer"
 HOMEPAGE="http://blog.pierlux.com/projects/libchamplain/en/"
@@ -40,7 +40,6 @@ pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS README"
 	# Vala demos are only built, so just disable them
 	G2CONF="${G2CONF}
-		--disable-maintainer-mode
 		--disable-static
 		--disable-maemo
 		--disable-vala-demos
@@ -53,9 +52,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# bug #402013, https://bugzilla.gnome.org/show_bug.cgi?id=669378
-	epatch "${FILESDIR}/${P}-vala-cogl-pango-1.0.patch"
-
 	# Fix documentation slotability
 	sed -e "s/^DOC_MODULE.*/DOC_MODULE = ${PN}-${SLOT}/" \
 		-i docs/reference/Makefile.{am,in} || die "sed (1) failed"
@@ -64,6 +60,5 @@ src_prepare() {
 	mv "${S}"/docs/reference/${PN}{,-${SLOT}}-docs.sgml || die "mv (1) failed"
 	mv "${S}"/docs/reference-gtk/${PN}-gtk{,-${SLOT}}-docs.sgml || die "mv (2) failed"
 
-	eautoreconf
 	gnome2_src_prepare
 }

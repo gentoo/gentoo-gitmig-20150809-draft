@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/libchamplain
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/ChangeLog,v 1.28 2012/07/09 14:08:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/ChangeLog,v 1.29 2012/07/15 23:10:07 tetromino Exp $
+
+*libchamplain-0.12.3 (15 Jul 2012)
+
+  15 Jul 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -libchamplain-0.12.1.ebuild,
+  -files/libchamplain-0.12.1-vala-cogl-pango-1.0.patch,
+  libchamplain-0.12.2.ebuild, +libchamplain-0.12.3.ebuild:
+  Version bump. Add accidentally forgotten ~ppc keyword to >=0.12.2 (bug
+  #388367). Drop old.
 
   09 Jul 2012; Brent Baude <ranger@gentoo.org> libchamplain-0.12.1.ebuild:
   Marking libchamplain-0.12.1 ~ppc for bug 388367
