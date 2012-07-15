@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13965 2012/07/14 20:03:02 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13966 2012/07/15 15:10:25 kensington Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michael Palimaka <kensington@gentoo.org> (15 Jul 2012)
+# Bundles dev-python/pexpect (bug #315843)
+# Replaced by ssh-copy-id from net-misc/openssh.
+# Removal in 30 days.
+net-misc/ssh-installkeys
 
 # Markos Chandras <hwoarang@gentoo.org> (14 Jul 2012)
 # Mask rc releases
