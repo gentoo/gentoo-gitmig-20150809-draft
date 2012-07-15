@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/leechcraft-otlozhu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-otlozhu/ChangeLog,v 1.5 2012/07/07 10:28:29 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-otlozhu/ChangeLog,v 1.6 2012/07/15 15:47:49 kensington Exp $
+
+  15 Jul 2012; Michael Palimaka <kensington@gentoo.org>
+  leechcraft-otlozhu-0.5.65.ebuild, leechcraft-otlozhu-0.5.70.ebuild,
+  leechcraft-otlozhu-9999.ebuild:
+  Add missing slot dependencies on Qt.
 
   07 Jul 2012; Johannes Huber <johu@gentoo.org>
   leechcraft-otlozhu-0.5.70.ebuild:
@@ -27,4 +32,3 @@
   14 Apr 2012; Maxim Koltsov <maksbotan@gentoo.org>
   +leechcraft-otlozhu-9999.ebuild, +metadata.xml:
   Add net-misc/leechcraft-otlozhu, thanks to 0xd34df00d
-

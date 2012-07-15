@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-liznoo/leechcraft-liznoo-0.5.60.ebuild,v 1.1 2012/03/20 12:53:37 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-liznoo/leechcraft-liznoo-0.5.60.ebuild,v 1.2 2012/07/15 15:49:36 kensington Exp $
 
 EAPI="4"
 
@@ -15,6 +15,6 @@ IUSE="debug"
 DEPEND="=net-misc/leechcraft-core-${PV}
 	sys-power/upower
 	x11-libs/qwt:6
-	x11-libs/qt-dbus
+	x11-libs/qt-dbus:4
 	virtual/leechcraft-trayarea"
 RDEPEND="${DEPEND}"

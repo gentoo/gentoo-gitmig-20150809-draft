@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-kinotify/leechcraft-kinotify-9999.ebuild,v 1.2 2011/12/16 18:43:12 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-kinotify/leechcraft-kinotify-9999.ebuild,v 1.3 2012/07/15 15:56:00 kensington Exp $
 
 EAPI="4"
 
@@ -13,5 +13,5 @@ KEYWORDS=""
 IUSE="debug"
 
 DEPEND="~net-misc/leechcraft-core-${PV}
-		>=x11-libs/qt-webkit-4.6"
+		>=x11-libs/qt-webkit-4.6:4"
 RDEPEND="${DEPEND}"
