@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gtk-vnc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.91 2012/07/02 18:49:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.92 2012/07/15 18:14:28 armin76 Exp $
+
+  15 Jul 2012; Raúl Porcel <armin76@gentoo.org> gtk-vnc-0.5.0-r1.ebuild:
+  alpha/ia64/sparc stable wrt #410611
 
   02 Jul 2012; Pacho Ramos <pacho@gentoo.org> -gtk-vnc-0.4.3-r1.ebuild,
   -gtk-vnc-0.5.0.ebuild, gtk-vnc-0.5.0-r1.ebuild:
