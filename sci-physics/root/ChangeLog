@@ -1,6 +1,12 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.106 2012/07/14 18:46:46 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.107 2012/07/15 09:35:43 jlec Exp $
+
+  15 Jul 2012; Justin Lecher <jlec@gentoo.org>
+  -files/root-5.26.00-make-3.82.patch, -root-5.26.00e-r1.ebuild,
+  -files/root-5.26.00e-libpng15.patch,
+  -files/root-5.26.00g-explicit-functions.patch, metadata.xml:
+  Cleaned old
 
   14 Jul 2012; Jeff Horelick <jdhore@gentoo.org> root-5.32.03-r2.ebuild:
   marked x86 per bug 424745
