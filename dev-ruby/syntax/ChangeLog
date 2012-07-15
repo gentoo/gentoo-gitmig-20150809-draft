@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/syntax
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/syntax/ChangeLog,v 1.35 2011/12/31 17:48:28 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/syntax/ChangeLog,v 1.36 2012/07/15 12:47:44 ago Exp $
+
+  15 Jul 2012; Agostino Sarubbo <ago@gentoo.org> syntax-1.0.0-r3.ebuild:
+  Stable for amd64, wrt bug #426668
 
   31 Dec 2011; Fabian Groffen <grobian@gentoo.org> syntax-1.0.0-r3.ebuild:
   Add Prefix keywords, bug #396547
