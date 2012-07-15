@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/File-MMagic
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MMagic/ChangeLog,v 1.57 2012/06/24 12:58:31 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MMagic/ChangeLog,v 1.58 2012/07/15 19:00:47 tove Exp $
+
+*File-MMagic-1.290.0 (15 Jul 2012)
+
+  15 Jul 2012; Torsten Veller <tove@gentoo.org> +File-MMagic-1.290.0.ebuild:
+  Version bump
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
