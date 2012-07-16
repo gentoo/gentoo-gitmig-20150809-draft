@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/cyassl/cyassl-2.0.8-r1.ebuild,v 1.2 2012/07/15 18:37:04 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/cyassl/cyassl-2.0.8-r1.ebuild,v 1.3 2012/07/16 11:44:48 blueness Exp $
 
 EAPI="4"
 
@@ -24,7 +24,6 @@ IUSE="-dtls ipv6 +httpd +sniffer static-libs threads +zlib cyassl-hardening ${CA
 #sha512 is broken on x86
 #Testing freezes with dtls
 REQUIRED_USE="^^ ( small big huge )
-	x86? ( !sha512 )
 	test? ( !dtls )"
 
 DEPEND="app-arch/unzip
