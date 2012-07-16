@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/arx-libertatis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/arx-libertatis/ChangeLog,v 1.3 2012/07/12 20:00:29 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/arx-libertatis/ChangeLog,v 1.4 2012/07/16 10:35:45 kensington Exp $
+
+  16 Jul 2012; Michael Palimaka <kensington@gentoo.org>
+  arx-libertatis-1.0.2-r1.ebuild:
+  Add missing slot dependencies on Qt.
 
   12 Jul 2012; Julian Ospald <hasufell@gentoo.org> files/arx-data-copy:
   fix minor typo
@@ -18,4 +22,3 @@
   +arx-libertatis-1.0.2.ebuild, +files/arx-libertatis-1.0.2-gentoo.patch,
   +metadata.xml:
   initial import
-
