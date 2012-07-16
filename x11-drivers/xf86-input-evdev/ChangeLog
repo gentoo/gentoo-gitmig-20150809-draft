@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-evdev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.183 2012/07/12 17:27:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.184 2012/07/16 14:16:28 chithanh Exp $
+
+  16 Jul 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xf86-input-evdev-2.7.0.ebuild:
+  Depend on >=xorg-server-1.10, bug #426386.
 
   12 Jul 2012; Brent Baude <ranger@gentoo.org> xf86-input-evdev-2.7.0.ebuild:
   Marking xf86-input-evdev-2.7.0 ppc stable for bug 419473
@@ -871,4 +875,3 @@
   08 Aug 2005; Donnie Berkholz <dberkholz@gentoo.org>;
   +xf86-input-evdev-1.0.0.ebuild:
   Initial commit for modular X.
-
