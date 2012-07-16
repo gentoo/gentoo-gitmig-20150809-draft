@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2012 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/files/celery.initd,v 1.1 2012/05/30 06:45:54 iksaif Exp $
+# Distributed under the terms of the BSD license
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/files/celery.initd,v 1.2 2012/07/16 08:33:58 iksaif Exp $
 
 extra_started_commands="reload"
 
