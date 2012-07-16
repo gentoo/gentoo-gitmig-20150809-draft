@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/ndiswrapper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.123 2012/06/08 11:44:49 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.124 2012/07/16 12:08:39 angelos Exp $
+
+  16 Jul 2012; Christoph Mende <angelos@gentoo.org> -ndiswrapper-1.56.ebuild:
+  Remove old
 
   08 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> ndiswrapper-1.57.ebuild:
   x86 stable wrt bug #414919
@@ -675,4 +678,3 @@
   Initial commit. Roughly based on ebuild from #38017, with large cleanups by
   me. Includes pkg_config() function for helping generate the needed
   /etc/modules.d/ndiswrapper file.
-
