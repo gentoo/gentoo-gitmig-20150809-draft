@@ -1,6 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.131 2012/07/12 15:26:37 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.132 2012/07/16 05:01:05 blueness Exp $
+
+# Anthony G. Basile <blueness@gentoo.org> (16 Jul 2012)
+# Only work on amd64/x86
+net-libs/cyassl aes-ni cyassl-hardening 
 
 # Ben de Groot <yngwin@gentoo.org> (12 Jul 2012)
 # Requires media-libs/chromaprint which is unkeyworded

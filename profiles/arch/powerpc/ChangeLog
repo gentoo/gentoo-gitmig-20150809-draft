@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.181 2012/07/12 15:26:37 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.182 2012/07/16 05:01:05 blueness Exp $
+
+  16 Jul 2012; Anthony G. Basile <blueness@gentoo.org> package.use.mask:
+  Mask net-libs/cyassl[aes-ni,cyassl-hardening] on ppc/ppc64
 
   12 Jul 2012; Ben de Groot <yngwin@gentoo.org> package.use.mask:
   Mask media-sound/picard[acoustid] on ppc until chromaprint is keyworded
