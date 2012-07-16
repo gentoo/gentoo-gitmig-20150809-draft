@@ -1,6 +1,15 @@
 # ChangeLog for sys-devel/clang
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.73 2012/06/22 13:36:45 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.74 2012/07/16 09:33:59 mgorny Exp $
+
+*clang-3.1-r5 (16 Jul 2012)
+
+  16 Jul 2012; Michał Górny <mgorny@gentoo.org> +clang-3.1-r5.ebuild,
+  +files/cl-patches/0001-Add-r600-TargetInfo.patch,
+  +files/cl-patches/0002-r600-Add-some-target-builtins.patch, +files/cl-patches/
+  0003-r600-Add-read_global_size-and-read_local_size-builti.patch:
+  Add OpenCL Radeon patches wrt #425688, and enable cpp target by default wrt
+  #418441.
 
   22 Jun 2012; Bernard Cafarelli <voyageur@gentoo.org>
   files/clang-3.1-increase-parser-recursion-limit.patch:
@@ -363,4 +372,3 @@
   +clang-2.6_pre2.ebuild, +metadata.xml:
   Initial commit, based on ebuild by Ravi Pinjala <ravi@p-static.net> in bug
   #269651
-
