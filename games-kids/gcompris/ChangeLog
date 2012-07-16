@@ -1,6 +1,13 @@
 # ChangeLog for games-kids/gcompris
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.76 2012/05/26 03:02:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.77 2012/07/16 06:41:08 mr_bones_ Exp $
+
+*gcompris-12.01-r1 (16 Jul 2012)
+
+  16 Jul 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  +gcompris-12.01-r1.ebuild:
+  Drop the python use flag because it results in confusing lack of
+  functionality (bug #350795)
 
   26 May 2012; Michael Sterrett <mr_bones_@gentoo.org>
   -files/gcompris-9.6.1-build.patch, -gcompris-9.6.1.ebuild:
