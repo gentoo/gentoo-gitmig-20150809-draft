@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ldns-1.6.12-r1.ebuild,v 1.1 2012/05/31 05:43:56 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ldns-1.6.12-r1.ebuild,v 1.2 2012/07/16 01:13:05 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2:2.5"
@@ -25,8 +25,8 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
 pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
+	use python && python_set_active_version 2
+	use python && python_pkg_setup
 }
 
 src_prepare() {
