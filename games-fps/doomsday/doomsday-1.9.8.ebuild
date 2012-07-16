@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.9.8.ebuild,v 1.5 2012/07/06 09:53:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.9.8.ebuild,v 1.6 2012/07/16 10:32:00 kensington Exp $
 
 EAPI=4
 
@@ -23,8 +23,8 @@ DEPEND="
 	media-libs/libsdl[joystick,audio]
 	media-libs/sdl-mixer
 	media-libs/libpng
-	x11-libs/qt-opengl
-	x11-libs/qt-gui
+	x11-libs/qt-opengl:4
+	x11-libs/qt-gui:4
 	net-misc/curl
 	openal? ( media-libs/openal )"
 RDEPEND="${DEPEND}
