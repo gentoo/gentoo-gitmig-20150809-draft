@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-3.4.0.ebuild,v 1.2 2012/05/05 07:00:23 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-3.4.3.ebuild,v 1.1 2012/07/16 06:52:09 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
