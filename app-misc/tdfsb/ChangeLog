@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/tdfsb
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tdfsb/ChangeLog,v 1.25 2010/09/16 16:31:14 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tdfsb/ChangeLog,v 1.26 2012/07/16 12:28:19 angelos Exp $
+
+  16 Jul 2012; Christoph Mende <angelos@gentoo.org>
+  +files/tdfsb-0.0.10-debugging.patch, files/tdfsb-0.0.10-asneeded.patch,
+  tdfsb-0.0.10.ebuild:
+  Fix compilation with --as-needed (bug #424067), properly fail on build errors
+  and output build commands
 
   16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> tdfsb-0.0.10.ebuild:
   virtual/glut -> media-libs/glut
