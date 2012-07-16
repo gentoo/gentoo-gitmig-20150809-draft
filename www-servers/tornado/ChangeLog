@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/tornado
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/ChangeLog,v 1.22 2012/05/21 12:24:16 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/ChangeLog,v 1.23 2012/07/16 07:04:46 patrick Exp $
+
+*tornado-2.3 (16 Jul 2012)
+
+  16 Jul 2012; Patrick Lauer <patrick@gentoo.org> +tornado-2.3.ebuild:
+  Bump for #426456
 
   21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> tornado-2.2.1.ebuild:
   x86 stable wrt bug #415903
@@ -96,4 +101,3 @@
   21 Oct 2009; Dirkjan Ochtman <djc@gentoo.org> +tornado-0.2.ebuild,
   +metadata.xml:
   Initial import in the tree (0.2) for bug 284619.
-
