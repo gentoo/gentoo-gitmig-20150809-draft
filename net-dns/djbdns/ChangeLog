@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/djbdns
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.129 2012/06/14 02:04:37 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.130 2012/07/16 06:38:32 jdhore Exp $
+
+  16 Jul 2012; Jeff Horelick <jdhore@gentoo.org> djbdns-1.05-r26.ebuild:
+  marked x86 per bug 419193
 
   14 Jun 2012; Zac Medico <zmedico@gentoo.org> djbdns-1.05-r23.ebuild,
   djbdns-1.05-r24.ebuild, djbdns-1.05-r25.ebuild, djbdns-1.05-r26.ebuild:
