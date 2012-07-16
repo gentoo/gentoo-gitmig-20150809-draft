@@ -1,6 +1,42 @@
 # ChangeLog for media-gfx/blender
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.227 2012/07/13 23:56:11 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.228 2012/07/16 00:53:16 flameeyes Exp $
+
+*blender-2.63a-r1 (16 Jul 2012)
+
+  16 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> +blender-2.63a-r1.ebuild,
+  -blender-2.48a-r3.ebuild, -blender-2.49a.ebuild, -blender-2.57-r1.ebuild,
+  -blender-2.60a.ebuild, -blender-2.63a.ebuild,
+  -files/blender-2.46-cve-2008-1103-1.patch, -files/blender-2.46-ffmpeg.patch,
+  -files/blender-2.48-ffmpeg-20081014.patch, -files/blender-2.49a-bake.patch,
+  -files/blender-2.49b-CVE-2009-3850-v3.patch,
+  -files/blender-2.57-CVE-2009-3850-v1.patch,
+  -files/blender-2.57-CVE-2009-3850-v2.patch, -files/blender-2.57-bmake.patch,
+  -files/blender-2.57-desktop.patch, -files/blender-2.57-doxygen.patch,
+  -files/blender-2.57-eigen.patch, -files/blender-2.57-enable_site_module.patch,
+  -files/blender-2.57-glew.patch, -files/blender-2.57-insecure.desktop,
+  -files/blender-2.57-libav-0.7.patch, -files/blender-2.57-linux-3.patch,
+  -files/blender-2.60-bmake.patch, -files/blender-2.60-doxyfile.patch,
+  -files/blender-2.60-eigen.patch, -files/blender-2.60-glew.patch,
+  -files/blender-2.60-openjpeg.patch,
+  -files/blender-2.60a-CVE-2009-3850-v3.patch,
+  -files/blender-2.60a-collada.patch, -files/blender-2.60a-desktop.patch,
+  -files/blender-2.60a-enable_site_module.patch,
+  -files/blender-2.60a-insecure.desktop, -files/blender-2.60a-libav-0.7.patch,
+  -files/blender-2.60a-linux-3.patch,
+  -files/blender-2.61-opencollada-debug.patch,
+  -files/blender-2.63-CVE-2009-3850-v5.patch,
+  -files/blender-2.63-doxyfile.patch,
+  -files/blender-2.63-enable_site_module.patch, -files/blender-2.63-glew.patch,
+  -files/blender-2.63-opencollada-debug.patch,
+  -files/blender-2.63a-bullet.patch, -files/blender-2.63a-colamd.patch,
+  -files/blender-2.63a-desktop.patch, -files/blender-2.63a-eigen.patch,
+  -files/blender-2.63a-insecure.desktop, -files/blender-2.63a-libav-0.8.patch:
+  Cleanup: merge back into single SLOT; remove old versions; move patch files
+  for new version in tarball; avoid using -g0/-w; respect CC/CXX; use
+  pkg_pretend; make sure that there is enough space if building apidocs; fix bug
+  #426692; fix bug #426594; fix bug #426576; make bug #409673 obsolete; add
+  debug USE flag (instead of checking for -g); avoid messing with jobs.
 
 *blender-2.63a (13 Jul 2012)
 

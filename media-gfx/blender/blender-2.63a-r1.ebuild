@@ -1,38 +1,47 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.63a.ebuild,v 1.1 2012/07/13 23:56:11 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.63a-r1.ebuild,v 1.1 2012/07/16 00:53:16 flameeyes Exp $
 
 EAPI=4
 PYTHON_DEPEND="3:3.2"
+
+PATCHSET="1"
 
 if [[ ${PV} == *9999 ]] ; then
 SCM="subversion"
 ESVN_REPO_URI="https://svn.blender.org/svnroot/bf-blender/trunk/blender"
 fi
 
-inherit multilib scons-utils eutils python versionator flag-o-matic toolchain-funcs pax-utils ${SCM}
+inherit multilib scons-utils eutils python versionator flag-o-matic toolchain-funcs pax-utils check-reqs ${SCM}
 
-IUSE="cycles +game-engine player +elbeem +openexr ffmpeg jpeg2k openal openmp \
-	+dds doc fftw jack apidoc sndfile tweak-mode sdl sse \
-	redcode iconv contrib collada 3dmouse"
+IUSE="cycles +game-engine player +elbeem +openexr ffmpeg jpeg2k openal
+	openmp +dds doc fftw jack apidoc sndfile tweak-mode sdl sse redcode
+	iconv collada 3dmouse debug nls"
+REQUIRED_USE=""
 
 LANGS="en ar bg ca cs de el es es_ES fa fi fr hr id it ja ky ne pl pt ru sr sr@latin sv tr uk zh_CN zh_TW"
 for X in ${LANGS} ; do
-	IUSE="${IUSE} linguas_${X}"
+	IUSE+=" linguas_${X}"
+	REQUIRED_USE+=" linguas_${X}? ( nls )"
 done
 
 DESCRIPTION="3D Creation/Animation/Publishing System"
 HOMEPAGE="http://www.blender.org"
-if [[ ${PV} == *9999 ]] ; then
-	SRC_URI=""
-elif [[ ${PV%_p*} != ${PV} ]] ; then # Gentoo snapshot
-	SRC_URI="mirror://gentoo/${P}.tar.xz"
-else # Official release
-	SRC_URI="http://download.blender.org/source/${P}.tar.gz"
+
+case ${PV} in
+	*9999*)
+		SRC_URI="" ;;
+	*_p*)
+		SRC_URI="http://dev.gentoo.org/~lu_zero/${P}.tar.gz" ;;
+	*)
+		SRC_URI="http://download.blender.org/source/${P}.tar.gz" ;;
+esac
+
+if [[ -n ${PATCHSET} ]]; then
+	SRC_URI+=" http://dev.gentoo.org/~flameeyes/${PN}/${P}-patches-${PATCHSET}.tar.bz2"
 fi
 
-#SLOT="$(get_version_component_range 1-2)"
-SLOT="2.60"
+SLOT="0"
 LICENSE="|| ( GPL-2 BL )"
 KEYWORDS="~amd64 ~x86"
 
@@ -58,8 +67,7 @@ RDEPEND="virtual/jpeg
 	sdl? ( media-libs/libsdl[audio,joystick] )
 	openexr? ( media-libs/openexr )
 	ffmpeg? (
-		>=virtual/ffmpeg-0.6.90[x264,mp3,encode,theora]
-		jpeg2k? ( >=virtual/ffmpeg-0.6.90[x264,mp3,encode,theora,jpeg2k] )
+		>=virtual/ffmpeg-0.6.90[x264,mp3,encode,theora,jpeg2k?]
 	)
 	openal? ( >=media-libs/openal-1.6.372 )
 	fftw? ( sci-libs/fftw:3.0 )
@@ -71,17 +79,10 @@ RDEPEND="virtual/jpeg
 DEPEND="dev-util/scons
 	apidoc? (
 		dev-python/sphinx
-		app-doc/doxygen[-nodot]
-		game-engine? ( dev-python/epydoc )
+		app-doc/doxygen[-nodot(-),dot(+)]
 	)
+	nls? ( sys-devel/gettext )
 	${RDEPEND}"
-
-# configure internationalization only if LINGUAS have more
-# languages than 'en', otherwise must be disabled
-if [[ ${LINGUAS} != "en" && -n ${LINGUAS} ]]; then
-	DEPEND="${DEPEND}
-		sys-devel/gettext"
-fi
 
 blend_with() {
 	local UWORD="$2"
@@ -95,69 +96,43 @@ blend_with() {
 	fi
 }
 
-src_unpack() {
 if [[ ${PV} == *9999 ]] ; then
-	subversion_fetch
-	if use contrib; then
-		S="${S}"/release/scripts/addons_contrib subversion_fetch \
-		"https://svn.blender.org/svnroot/bf-extensions/contrib/py/scripts/addons/"
-	fi
-else
-	unpack ${A}
+	src_unpack() {
+		subversion_fetch
+	}
 fi
+
+pkg_pretend() {
+	if use openmp && ! tc-has-openmp; then
+		eerror "You are using gcc built without 'openmp' USE."
+		eerror "Switch CXX to an OpenMP capable compiler."
+		die "Need openmp"
+	fi
+
+	if use apidoc; then
+		CHECKREQS_DISK_BUILD="4G" check-reqs_pkg_pretend
+	fi
 }
 
 pkg_setup() {
-	enable_openmp=0
-	if use openmp; then
-		if tc-has-openmp; then
-			enable_openmp=1
-		else
-			ewarn "You are using gcc built without 'openmp' USE."
-			ewarn "Switch CXX to an OpenMP capable compiler."
-			die "Need openmp"
-		fi
-	fi
 	python_set_active_version 3
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-desktop.patch
-	epatch "${FILESDIR}"/${PN}-${SLOT}a-collada.patch
-	epatch "${FILESDIR}"/${P/a}-doxyfile.patch
+	EPATCH_SUFFIX="patch" EPATCH_SOURCE="${WORKDIR}/patches" \
+		epatch
 
-	# OpenJPEG
-	einfo "Removing bundled OpenJPEG ..."
-	rm -r extern/libopenjpeg
-	epatch "${FILESDIR}"/${PN}-${SLOT}-openjpeg.patch
-
-	# Glew
-	einfo "Removing bundled Glew ..."
-	rm -r extern/glew
-	epatch "${FILESDIR}"/${P/a}-glew.patch
-
-	# Eigen3
-	einfo "Removing bundled Eigen3 ..."
-	rm -r extern/Eigen3
-	epatch "${FILESDIR}"/${P}-eigen.patch
-
-	# Bullet2
-	einfo "Removing bundled Bullet2 ..."
-	rm -r extern/bullet2
-	epatch "${FILESDIR}"/${P}-bullet.patch
-
-	# Colamd
-	einfo "Removing bundled Colamd ..."
-	rm -r extern/colamd
-	epatch "${FILESDIR}"/${P}-colamd.patch
+	# remove some bundled deps
+	rm -r \
+		extern/libopenjpeg \
+		extern/glew \
+		extern/Eigen3 \
+		extern/bullet2 \
+		extern/colamd \
+		extern/binreloc
 
 	ewarn "$(echo "Remaining bundled dependencies:";
 			find extern -mindepth 1 -maxdepth 1 -type d | sed 's|^|- |')"
-
-	epatch "${FILESDIR}"/${P}-libav-0.8.patch
-	epatch "${FILESDIR}"/${P/a}-CVE-2009-3850-v5.patch
-	epatch "${FILESDIR}"/${P/a}-enable_site_module.patch
-	epatch "${FILESDIR}"/${P/a}-opencollada-debug.patch
 }
 
 src_configure() {
@@ -192,9 +167,8 @@ src_configure() {
 		EOF
 	fi
 
-	# configure internationalization only if LINGUAS have more
-	# languages than 'en', otherwise must be disabled
-	[[ -z ${LINGUAS} ]] || [[ ${LINGUAS} == "en" ]] && echo "WITH_BF_INTERNATIONAL=0" >> "${S}"/user-config.py
+	# configure internationalization optionally
+	use nls || echo "WITH_BF_INTERNATIONAL=0" >> "${S}"/user-config.py
 
 	# Ocean sim system needs fftw
 	use fftw || echo "WITH_BF_OCEANSIM=0" >> "${S}"/user-config.py
@@ -229,23 +203,15 @@ src_configure() {
 	echo "LINKFLAGS=[${FILTERED_LDFLAGS}]" | sed -e "s:,]: ]:" >> "${S}"/user-config.py
 	echo "PLATFORM_LINKFLAGS=[${FILTERED_LDFLAGS}]" | sed -e "s:,]: ]:" >> "${S}"/user-config.py
 
-	# reset REL_* variables (useless hardcoded flags)
+	# reset REL_*/*_WARN variables (useless hardcoded flags)
 	cat <<- EOF >> "${S}"/user-config.py
 		REL_CFLAGS=[]
 		REL_CXXFLAGS=[]
 		REL_CCFLAGS=[]
+		C_WARN=[]
+		CC_WARN=[]
+		CXX_WARN=[]
 	EOF
-
-	# reset warning flags (useless for NON blender developers)
-	cat <<- EOF >> "${S}"/user-config.py
-		C_WARN  =[ '-w', '-g0' ]
-		CC_WARN =[ '-w', '-g0' ]
-		CXX_WARN=[ '-w', '-g0' ]
-	EOF
-
-	# detecting -j value from MAKEOPTS
-	local NUMJOBS="$( echo "${MAKEOPTS}" | sed -ne 's,.*-j\([[:digit:]]\+\).*,\1,p' )"
-	[[ -z "${NUMJOBS}" ]] && NUMJOBS=1 # resetting to -j1 for empty MAKEOPTS
 
 	# generic settings which differ from the defaults from linux2-config.py
 	cat <<- EOF >> "${S}"/user-config.py
@@ -257,13 +223,14 @@ src_configure() {
 		BF_PYTHON_VERSION="3.2"
 		BF_PYTHON_ABI_FLAGS=""
 		BF_BUILDINFO=0
-		BF_QUIET=1
-		BF_NUMJOBS=${NUMJOBS}
+		BF_QUIET=0
 		BF_LINE_OVERWRITE=0
 		WITH_BF_FHS=1
 		WITH_BF_BINRELOC=0
 		WITH_BF_STATICOPENGL=0
-		WITH_BF_OPENMP=${enable_openmp}
+		WITH_BF_OPENMP=$(usex openmp 1 0)
+		CC="$(tc-getCC)"
+		CXX="$(tc-getCXX)"
 	EOF
 
 	# configure WITH_BF* Scons build options
@@ -293,7 +260,7 @@ src_configure() {
 	echo 'BF_OPENCOLLADA_LIBPATH="/usr/'$(get_libdir)'/opencollada/"' >> "${S}"/user-config.py
 
 	# enable debugging/testing support
-	is-flag "-g*" && echo "BF_DEBUG=1" >> "${S}"/user-config.py
+	use debug && echo "BF_DEBUG=1" >> "${S}"/user-config.py
 	#use test && echo "BF_UNIT_TEST=1" >> "${S}"/user-config.py
 
 	# enables Cycles render engine
@@ -313,115 +280,64 @@ src_configure() {
 }
 
 src_compile() {
-	escons || die \
-		'!!! Please add "${S}/scons.config" when filing bugs reports \
-		to bugs.gentoo.org'
+	escons
+
+	einfo "Generating Blender C/C++ API docs ..."
+	cd "${WORKDIR}"/${P}/doc/doxygen
+	doxygen -u Doxyfile
+	doxygen || die "doxygen failed to build API docs."
 }
 
 src_install() {
-	# creating binary wrapper
-	cat <<- EOF >> "${WORKDIR}/install/blender-${PV}"
-		#!/bin/sh
-
-		# stop this script if the local blender path is a symlink
-		if [ -L \${HOME}/.blender ]; then
-			echo "Detected a symbolic link for \${HOME}/.blender"
-			echo "Sorry, to avoid dangerous situations, the Blender binary can"
-			echo "not be started until you have removed the symbolic link:"
-			echo "  # rm -i \${HOME}/.blender"
-			exit 1
-		fi
-
-		export BLENDER_SYSTEM_SCRIPTS="/usr/share/blender/${PV/a}/scripts"
-		export BLENDER_SYSTEM_DATAFILES="/usr/share/blender/${PV/a}/datafiles"
-		export BLENDER_SYSTEM_PLUGINS="/usr/lib/blender/${PV/a}/plugins"
-			exec /usr/bin/blender-bin-${PV} \$*
-	EOF
-
 	# Pax mark blender for hardened support.
 	pax-mark m "${WORKDIR}/install/blender"
 
 	# install binaries
-	exeinto /usr/bin/
-	cp "${WORKDIR}/install/blender" "${WORKDIR}/install/blender-bin-${PV}"
-	doexe "${WORKDIR}/install/blender-bin-${PV}"
-	doexe "${WORKDIR}/install/blender-${PV}"
-	if use player; then
-		cp "${WORKDIR}/install/blenderplayer" \
-			"${WORKDIR}/install/blenderplayer-${PV}"
-		doexe "${WORKDIR}/install/blenderplayer-${PV}"
-	fi
+	dobin "${WORKDIR}/install/blender"
+	use player && newbin "${WORKDIR}/install/blenderplayer" blenderplayer
 
 	# install plugin headers
-	insinto /usr/include/${PN}/${PV/a}
+	insinto /usr/include/${PN}
 	doins "${WORKDIR}"/${P}/source/blender/blenpluginapi/*.h
-
-	# install contrib scripts addons
-	insinto /usr/share/${PN}/${PV/a}/scripts
-	use contrib && doins -r "${WORKDIR}"/${P}/release/scripts/addons_contrib
 
 	# install desktop file
 	insinto /usr/share/pixmaps
-	cp release/freedesktop/icons/scalable/apps/blender.svg \
-		release/freedesktop/icons/scalable/apps/blender-${PV}.svg
-	doins release/freedesktop/icons/scalable/apps/blender-${PV}.svg
+	doins release/freedesktop/icons/scalable/apps/blender.svg
 	insinto /usr/share/applications
-	cp release/freedesktop/blender.desktop \
-		release/freedesktop/blender-${PV}.desktop
-	doins release/freedesktop/blender-${PV}.desktop
-	newins "${FILESDIR}"/${P}-insecure.desktop ${P}-insecure.desktop
+	doins release/freedesktop/blender.desktop
 
 	# install docs
 	doman "${WORKDIR}"/${P}/doc/manpage/blender.1
 	use doc && dodoc -r "${WORKDIR}"/${P}/doc/guides/*
+
 	if use apidoc; then
-
-		einfo "Generating (BGE) Blender Game Engine API docs ..."
-		epydoc source/gameengine/PyDoc/*.py -v \
-			-o doc/BGE_API \
-			--quiet --quiet --quiet \
-			--simple-term \
-			--url "http://www.blender.org" \
-			--top API_intro \
-			--name "Blender GameEngine" \
-			 --no-private --no-sourcecode \
-			--inheritance=included \
-			--graph=all \
-			--dotpath /usr/bin/dot \
-			|| die "epydoc failed."
-		docinto "API/gameengine"
-		dohtml -r "${WORKDIR}"/${P}/doc/BGE_API/*
-
 		#einfo "Generating (BPY) Blender Python API docs ..."
-		"${D}"/usr/bin/blender-bin-${PV} --background --python doc/python_api/sphinx_doc_gen.py --noaudio || die "blender failed."
+		"${D}"/usr/bin/blender --background --python doc/python_api/sphinx_doc_gen.py --noaudio || die "blender failed."
+
 		pushd doc/python_api > /dev/null
 		sphinx-build sphinx-in BPY_API || die "sphinx failed."
 		popd > /dev/null
+
 		docinto "API/python"
 		dohtml -r doc/python_api/BPY_API/*
 
-		einfo "Generating Blender C/C++ API docs ..."
-		pushd "${WORKDIR}"/${P}/doc/doxygen > /dev/null
-			doxygen -u Doxyfile
-			doxygen || die "doxygen failed to build API docs."
-			docinto "API/blender"
-			dohtml -r html/*
-		popd > /dev/null
+		docinto "API/blender"
+		dohtml -r "${WORKDIR}"/${P}/doc/doxygen/html/*
 	fi
 
 	# final cleanup
 	rm -r "${WORKDIR}"/install/{Python-license.txt,icons,GPL-license.txt,copyright.txt}
-	if [[ -z ${LINGUAS} || ${LINGUAS} == "en" ]]; then
+	if ! use nls; then
 		rm -r "${WORKDIR}/install/${PV/a}/datafiles/locale"
 	else
 		for x in "${WORKDIR}"/install/${PV/a}/datafiles/locale/* ; do
 			mylang=${x##*/}
-			has ${mylang} ${LINGUAS} || rm -r ${x}
+			use linguas_${mylang} || rm -r ${x}
 		done
 	fi
 
 	# installing blender
-	insinto /usr/share/${PN}/${PV/a}
+	insinto /usr/share/${PN}
 	doins -r "${WORKDIR}"/install/${PV/a}/*
 
 	# FIX: making all python scripts readable only by group 'users',
@@ -432,7 +348,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	echo
+	elog
 	elog "Blender uses python integration. As such, may have some"
 	elog "inherit risks with running unknown python scripting."
 	elog
