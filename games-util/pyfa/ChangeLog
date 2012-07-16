@@ -1,6 +1,13 @@
 # ChangeLog for games-util/pyfa
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/ChangeLog,v 1.11 2012/05/24 09:43:00 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/ChangeLog,v 1.12 2012/07/16 10:04:47 tetromino Exp $
+
+*pyfa-1.1.8 (16 Jul 2012)
+
+  16 Jul 2012; Alexandre Rostovtsev <tetromino@gentoo.org> -pyfa-1.1.6.ebuild,
+  +pyfa-1.1.8.ebuild, +files/pyfa-1.1.8-html-export-path.patch:
+  Bump, adds Inferno 1.1 updates and html export for viewing fits in the
+  in-game browser. Drop old.
 
 *pyfa-1.1.7 (24 May 2012)
 
