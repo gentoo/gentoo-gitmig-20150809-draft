@@ -1,6 +1,12 @@
 # ChangeLog for app-laptop/nvidiabl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/nvidiabl/ChangeLog,v 1.10 2012/07/02 15:41:44 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/nvidiabl/ChangeLog,v 1.11 2012/07/16 12:00:18 angelos Exp $
+
+*nvidiabl-0.76 (16 Jul 2012)
+
+  16 Jul 2012; Christoph Mende <angelos@gentoo.org> +nvidiabl-0.76.ebuild,
+  -nvidiabl-0.73.ebuild:
+  Version bump
 
   02 Jul 2012; Christoph Mende <angelos@gentoo.org> nvidiabl-0.74.ebuild:
   Explain how to enable FB_BACKLIGHT
