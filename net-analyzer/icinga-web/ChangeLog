@@ -1,0 +1,16 @@
+# ChangeLog for net-analyzer/icinga-web
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga-web/ChangeLog,v 1.1 2012/07/16 15:27:26 prometheanfire Exp $
+
+*icinga-web-1.7.1 (16 Jul 2012)
+
+  16 Jul 2012; Matthew Thode <prometheanfire@gentoo.org>
+  +icinga-web-1.7.1.ebuild, +files/icinga-web-1.7.1-disable-compression.patch:
+  New ebuild for icinga-web. Ebuild written by Thomas Oettli, submitted by me.
+  bug #332369
+
+*icinga-web-1.6.1-r1 (27 Feb 2012)
+
+  27 Feb 2012; mthode <mthode@gentoo.org> +icinga-web-1.6.1-r1.ebuild:
+  initial add and test of icinga-web
+
