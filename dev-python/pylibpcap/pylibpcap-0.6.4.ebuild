@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylibpcap/pylibpcap-0.6.4.ebuild,v 1.1 2012/07/16 07:11:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylibpcap/pylibpcap-0.6.4.ebuild,v 1.2 2012/07/16 20:57:38 radhermit Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -19,8 +19,7 @@ KEYWORDS="~amd64 ~hppa ~ia64 ~x86"
 IUSE="examples"
 
 RDEPEND="net-libs/libpcap"
-DEPEND="${RDEPEND}
-	>=dev-lang/swig-1.3.34"
+DEPEND="${RDEPEND}"
 
 PYTHON_MODNAME="pcap.py"
 
@@ -29,6 +28,6 @@ src_install() {
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}
-		doins -r examples || die "Installation of examples failed"
+		doins -r examples
 	fi
 }
