@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.25.1_p20120715.ebuild,v 1.2 2012/07/16 16:51:14 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.25.1_p20120715.ebuild,v 1.3 2012/07/16 22:02:57 cardoe Exp $
 
 EAPI=4
 
-inherit webapp
+inherit eutils webapp
 
 BACKPORTS="4f6ac2a60b"
 # Release version
@@ -81,7 +81,7 @@ src_install() {
 	webapp_serverowned -R "${MY_HTDOCSDIR}"/data
 
 	# Message to display after install
-	#webapp_postinst_txt en "${FILESDIR}"/0.24-postinstall-en.txt
+	webapp_postinst_txt en "${FILESDIR}"/0.25-postinstall-en.txt
 
 	# Script to set the correct defaults on install
 	webapp_hook_script "${FILESDIR}"/reconfig

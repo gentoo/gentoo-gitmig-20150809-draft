@@ -1,13 +1,13 @@
 location /mythweb/ {
-    root /var/www/localhost/htdocs;
+    root VHOST_HTDOCS;
     auth_basic  "MythWeb";
     auth_basic_user_file /var/www/htpasswd;
-    index       /mythweb/mythweb.php;
+    index       VHOST_APPDIR/mythweb.php;
     try_files   $uri     @handler;
 }
 
 location ~ /mythweb/.+\.php {
-    root /var/www/localhost/htdocs;
+    root VHOST_HTDOCS;
     include         fastcgi_params;
     fastcgi_index   mythweb.php;
     fastcgi_split_path_info ^(.+\.php)(/?.+)$;
@@ -22,9 +22,9 @@ location ~ /mythweb/.+\.php {
 }
 
 location @handler {
-    root /var/www/localhost/htdocs;
-    rewrite /mythweb/(.+\.(php|pl))/.*  /mythweb/$1 last;
-    rewrite /mythweb/(pl(/.*)?)$        /mythweb/mythweb.pl/$1 last;
-    rewrite /mythweb/(.+)$              /mythweb/mythweb.php/$1 last;
-    rewrite /mythweb/(.*)$              /mythweb/mythweb.php last;
+    root VHOST_HTDOCS;
+    rewrite VHOST_APPDIR/(.+\.(php|pl))/.*  VHOST_APPDIR/$1 last;
+    rewrite VHOST_APPDIR/(pl(/.*)?)$        VHOST_APPDIR/mythweb.pl/$1 last;
+    rewrite VHOST_APPDIR/(.+)$              VHOST_APPDIR/mythweb.php/$1 last;
+    rewrite VHOST_APPDIR/(.*)$              VHOST_APPDIR/mythweb.php last;
 }

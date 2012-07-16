@@ -8,19 +8,23 @@ die() {
 }
 
 if [[ $1 = "install" ]]; then
+
     if [[ "${VHOST_SERVER}" = "apache" ]]; then
         sed -e "s|/var/www/html/data|${MY_INSTALLDIR}/data|g" \
-            -e "s|/var/www/html|${VHOST_ROOT}/${PN}|g" \
-            -i ${MY_SERVERCONFIGDIR}/mythweb.conf || \
+            -e "s|/var/www/html|${MY_INSTALLDIR}|g" \
+            ${MY_SERVERCONFIGDIR}/${VHOST_SERVER}-mythweb.conf > \
+            ${VHOST_CONFDIR}/mythweb.include || \
             die "apache sed failed"
     elif [[ "${VHOST_SERVER}" = "lighttpd" ]]; then
-        sed -e "s|/var/www/html/data|${MY_INSTALLDIR}/data|g" \
-            -e "s|/var/www/html|${VHOST_ROOT}/${PN}|g" \
-            -i ${MY_SERVERCONFIGDIR}/mythweb.conf || \
+        sed -e "s|/var/www/localhost/htdocs/mythweb|${MY_INSTALLDIR}|g" \
+            ${MY_SERVERCONFIGDIR}/${VHOST_SERVER}-mythweb.conf > \
+            ${VHOST_CONFDIR}/mythweb.include || \
             die "lighttpd sed failed"
     elif [[ "${VHOST_SERVER}" = "nginx" ]]; then
-        sed -e "s|/var/www/localhost/htdocs|${MY_INSTALLDIR}/htdocs|g" \
-            -i ${MY_SERVERCONFIGDIR}/mythweb.include || \
+        sed -e "s|VHOST_HTDOCS|${VHOST_HTDOCSDIR}|g" \
+            -e "s|VHOST_APPDIR|${VHOST_APPDIR}|g" \
+            ${MY_SERVERCONFIGDIR}/${VHOST_SERVER}-mythweb.include > \
+            ${VHOST_CONFDIR}/mythweb.include || \
             die "nginx sed failed"
     fi
 
