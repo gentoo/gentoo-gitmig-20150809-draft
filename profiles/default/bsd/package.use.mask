@@ -1,6 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/package.use.mask,v 1.30 2012/05/31 02:26:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/package.use.mask,v 1.31 2012/07/16 11:26:59 flameeyes Exp $
+
+# Diego Elio Pettenò <flameeyes@gentoo.org> (16 Jul 2012)
+# Allow using iconv in blender
+media-gfx/blender -iconv
 
 # Sebastian Pipping <sping@gentoo.org> (22 Feb 2011)
 # No dev-util/source-highlight or media-sound/lilypond here, yet (bug #356069, bug #344289)

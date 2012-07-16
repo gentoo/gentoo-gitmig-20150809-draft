@@ -1,9 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.369 2012/07/09 19:38:17 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.370 2012/07/16 11:26:59 flameeyes Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Diego Elio Pettenò <flameeyes@gentoo.org> (16 Jul 2012)
+# Stop glibc/uclibc from using iconv in blender
+media-gfx/blender iconv
 
 # Rick Farina <zerochaos@gentoo.org> (09 July 2012)
 # libbtbb currently only tested on amd64/x86/arm, hopefully this won't always be needed
