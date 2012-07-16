@@ -1,6 +1,10 @@
 # ChangeLog for games-action/atanks
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/ChangeLog,v 1.77 2012/05/30 05:40:01 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/ChangeLog,v 1.78 2012/07/16 19:07:06 mr_bones_ Exp $
+
+  16 Jul 2012; Michael Sterrett <mr_bones_@gentoo.org> -atanks-5.2.ebuild,
+  -files/atanks-5.2-build.patch:
+  old
 
   30 May 2012; Jeff Horelick <jdhore@gentoo.org> atanks-5.4.ebuild:
   marked x86 per bug 418003
