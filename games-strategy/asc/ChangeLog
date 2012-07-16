@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/asc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/ChangeLog,v 1.41 2012/06/22 07:45:30 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/ChangeLog,v 1.42 2012/07/16 15:44:10 mr_bones_ Exp $
+
+  16 Jul 2012; Michael Sterrett <mr_bones_@gentoo.org> -asc-2.4.0.0.ebuild:
+  old
 
   22 Jun 2012; Jeff Horelick <jdhore@gentoo.org> asc-2.5.0.0.ebuild:
   marked x86 per bug 422097
