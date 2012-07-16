@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/oidentd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/ChangeLog,v 1.52 2010/06/22 14:39:46 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/ChangeLog,v 1.53 2012/07/16 13:13:05 angelos Exp $
+
+*oidentd-2.0.8-r4 (16 Jul 2012)
+
+  16 Jul 2012; Christoph Mende <angelos@gentoo.org> +files/oidentd.service,
+  +files/oidentd.socket, +oidentd-2.0.8-r4.ebuild:
+  Install systemd unit files from ArchLinux by Bartłomiej Piotrowski (bug
+  #413605)
 
   22 Jun 2010; Jeroen Roovers <jer@gentoo.org> oidentd-2.0.8-r3.ebuild:
   Stable for HPPA (bug #320931).
