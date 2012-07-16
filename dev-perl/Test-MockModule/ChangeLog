@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/Test-MockModule
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-MockModule/ChangeLog,v 1.1 2012/07/16 15:33:11 flameeyes Exp $
+
+*Test-MockModule-0.05 (16 Jul 2012)
+
+  16 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +Test-MockModule-0.05.ebuild, +metadata.xml:
+  Initial import of Test-MockModule required by munin-2's tests.
