@@ -1,8 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.94 2012/07/09 19:38:17 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.95 2012/07/16 05:11:32 blueness Exp $
 
 # This file requires >=portage-2.1.1
+
+# Anthony G. Basile <blueness@gentoo.org> (12 Jul 2012)
+# sha512 support in cyassl is broken on x86
+net-libs/cyassl sha512
 
 # Rick Farina <zerochaos@gentoo.org> (09 July 2012)
 # limited testing of net-libs/libbtbb is all this mask is needed for                   
