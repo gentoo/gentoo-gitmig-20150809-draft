@@ -1,9 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.370 2012/07/16 11:26:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.371 2012/07/16 13:45:51 chithanh Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (16 Jul 2012)
+# Needs x11-libs/glamor stable first
+<x11-drivers/xf86-video-intel-2.20 glamor
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (16 Jul 2012)
 # Stop glibc/uclibc from using iconv in blender
@@ -53,10 +57,6 @@ media-libs/opencv ipp
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (02 May 2012)
 # Causes crashes and build failures, not needed by any package, bug #412177
 <x11-libs/cairo-1.12 qt4
-
-# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (01 May 2012)
-# Experimental. Needs x11-libs/glamor keyworded first, bug #414295
-=x11-drivers/xf86-video-intel-2* glamor
 
 # Johannes Huber <johu@gentoo.org> (19 Apr 2012)
 # Required dep >=net-libs/telepathy-farstream is masked by gnome herd. Feel

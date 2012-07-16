@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.412 2012/07/12 19:16:36 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.413 2012/07/16 13:45:51 chithanh Exp $
+
+  16 Jul 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.use.mask:
+  Update glamor mask to only apply to stable xf86-video-intel.
 
   12 Jul 2012; <swift@gentoo.org> package.mask:
   Adding selinux-phpfpm to the general selinux mask (upcoming new policy build)
