@@ -1,23 +1,18 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.63a-r1.ebuild,v 1.1 2012/07/16 00:53:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.63a-r1.ebuild,v 1.2 2012/07/16 09:28:56 flameeyes Exp $
 
 EAPI=4
 PYTHON_DEPEND="3:3.2"
 
-PATCHSET="1"
+PATCHSET="2"
 
-if [[ ${PV} == *9999 ]] ; then
-SCM="subversion"
-ESVN_REPO_URI="https://svn.blender.org/svnroot/bf-blender/trunk/blender"
-fi
-
-inherit multilib scons-utils eutils python versionator flag-o-matic toolchain-funcs pax-utils check-reqs ${SCM}
+inherit multilib scons-utils eutils python versionator flag-o-matic toolchain-funcs pax-utils check-reqs
 
 IUSE="cycles +game-engine player +elbeem +openexr ffmpeg jpeg2k openal
-	openmp +dds doc fftw jack apidoc sndfile tweak-mode sdl sse redcode
+	openmp +dds fftw jack doc sndfile tweak-mode sdl sse redcode
 	iconv collada 3dmouse debug nls"
-REQUIRED_USE=""
+REQUIRED_USE="player? ( game-engine )"
 
 LANGS="en ar bg ca cs de el es es_ES fa fi fr hr id it ja ky ne pl pt ru sr sr@latin sv tr uk zh_CN zh_TW"
 for X in ${LANGS} ; do
@@ -29,8 +24,6 @@ DESCRIPTION="3D Creation/Animation/Publishing System"
 HOMEPAGE="http://www.blender.org"
 
 case ${PV} in
-	*9999*)
-		SRC_URI="" ;;
 	*_p*)
 		SRC_URI="http://dev.gentoo.org/~lu_zero/${P}.tar.gz" ;;
 	*)
@@ -61,7 +54,7 @@ RDEPEND="virtual/jpeg
 	sys-libs/zlib
 	cycles? (
 		media-libs/openimageio
-		dev-libs/boost
+		>=dev-libs/boost-1.44
 	)
 	iconv? ( virtual/libiconv )
 	sdl? ( media-libs/libsdl[audio,joystick] )
@@ -77,30 +70,12 @@ RDEPEND="virtual/jpeg
 	3dmouse? ( dev-libs/libspnav )"
 
 DEPEND="dev-util/scons
-	apidoc? (
+	doc? (
 		dev-python/sphinx
 		app-doc/doxygen[-nodot(-),dot(+)]
 	)
 	nls? ( sys-devel/gettext )
 	${RDEPEND}"
-
-blend_with() {
-	local UWORD="$2"
-	[ -z "${UWORD}" ] && UWORD="$1"
-	if use $1; then
-		echo "WITH_BF_${UWORD}=1" | tr '[:lower:]' '[:upper:]' \
-			>> "${S}"/user-config.py
-	else
-		echo "WITH_BF_${UWORD}=0" | tr '[:lower:]' '[:upper:]' \
-			>> "${S}"/user-config.py
-	fi
-}
-
-if [[ ${PV} == *9999 ]] ; then
-	src_unpack() {
-		subversion_fetch
-	}
-fi
 
 pkg_pretend() {
 	if use openmp && ! tc-has-openmp; then
@@ -109,7 +84,7 @@ pkg_pretend() {
 		die "Need openmp"
 	fi
 
-	if use apidoc; then
+	if use doc; then
 		CHECKREQS_DISK_BUILD="4G" check-reqs_pkg_pretend
 	fi
 }
@@ -136,28 +111,77 @@ src_prepare() {
 }
 
 src_configure() {
-	# add system openjpeg into Scons build options.
-	cat <<- EOF >> "${S}"/user-config.py
-		BF_OPENJPEG="/usr"
-		BF_OPENJPEG_INC="/usr/include"
-		BF_OPENJPEG_LIB="openjpeg"
-	EOF
+	blend_with() {
+		echo "WITH_BF_${2:-$1}=$(usex $1 1 0)" | tr '[:lower:]' '[:upper:]' \
+			>> "${S}"/user-config.py
+	}
 
-	# add system sci-physic/bullet into Scons build options.
-	cat <<- EOF >> "${S}"/user-config.py
-		WITH_BF_BULLET=1
-		BF_BULLET="/usr/include"
-		BF_BULLET_INC="/usr/include/bullet /usr/include/bullet/BulletCollision /usr/include/bullet/BulletDynamics /usr/include/bullet/LinearMath /usr/include/bullet/BulletSoftBody"
-		BF_BULLET_LIB="BulletSoftBody BulletDynamics BulletCollision LinearMath"
-	EOF
+	# FIX: forcing '-funsigned-char' fixes an anti-aliasing issue with menu
+	# shadows, see bug #276338 for reference
+	append-flags -funsigned-char
+	append-lfs-flags
 
-	# add system sci-libs/colamd into Scons build options.
-	cat <<- EOF >> "${S}"/user-config.py
-		WITH_BF_COLAMD=1
-		BF_COLAMD="/usr"
-		BF_COLAMD_INC="/usr/include"
-		BF_COLAMD_LIB="colamd"
-	EOF
+	local mycflags=$(printf "'%s'," ${CPPFLAGS} ${CFLAGS} | sed -e 's:,$::')
+	local mycxxflags=$(printf "'%s'," ${CPPFLAGS} ${CXXFLAGS} | sed -e 's:,$::')
+	local myldflags=$(printf "'%s'," ${LDFLAGS} | sed -e 's:,$::')
+
+	cat << EOF >> "${S}"/user-config.py
+CC="$(tc-getCC)"
+CXX="$(tc-getCXX)"
+CFLAGS=[${mycflags}]
+CXXFLAGS=[${mycxxflags}]
+BGE_CXXFLAGS=[${mycxxflags}]
+LINKFLAGS=[${myldflags}]
+PLATFORM_LINKFLAGS=[${myldflags}]
+CCFLAGS=[]
+REL_CFLAGS=[]
+REL_CXXFLAGS=[]
+REL_CCFLAGS=[]
+C_WARN=[]
+CC_WARN=[]
+CXX_WARN=[]
+
+BF_OPENJPEG="/usr"
+BF_OPENJPEG_INC="/usr/include"
+BF_OPENJPEG_LIB="openjpeg"
+
+WITH_BF_BULLET=1
+BF_BULLET="/usr/include"
+BF_BULLET_INC="/usr/include/bullet /usr/include/bullet/BulletCollision /usr/include/bullet/BulletDynamics /usr/include/bullet/LinearMath /usr/include/bullet/BulletSoftBody"
+BF_BULLET_LIB="BulletSoftBody BulletDynamics BulletCollision LinearMath"
+
+WITH_BF_COLAMD=1
+BF_COLAMD="/usr"
+BF_COLAMD_INC="/usr/include"
+BF_COLAMD_LIB="colamd"
+
+BF_OPENCOLLADA_INC="/usr/include/opencollada/"
+BF_OPENCOLLADA_LIBPATH="/usr/$(get_libdir)/opencollada/"
+
+BF_OIIO="/usr"
+BF_OIIO_INC="/usr/include"
+BF_OIIO_LIB="OpenImageIO"
+
+BF_BOOST="/usr"
+BF_BOOST_INC="/usr/include/boost"
+
+BF_TWEAK_MODE=$(usex tweak-mode 1 0)
+BF_DEBUG=$(usex debug 1 0)
+
+BF_OPENGL_LIB='GL GLU X11 Xi GLEW'
+BF_INSTALLDIR="../install"
+WITH_PYTHON_SECURITY=1
+WITHOUT_BF_PYTHON_INSTALL=1
+BF_PYTHON="/usr"
+BF_PYTHON_VERSION="3.2"
+BF_PYTHON_ABI_FLAGS=""
+BF_BUILDINFO=0
+BF_QUIET=0
+BF_LINE_OVERWRITE=0
+WITH_BF_FHS=1
+WITH_BF_BINRELOC=0
+WITH_BF_STATICOPENGL=0
+EOF
 
 	#add iconv into Scons build options.
 	if use !elibc_glibc && use !elibc_uclibc && use iconv; then
@@ -167,125 +191,46 @@ src_configure() {
 		EOF
 	fi
 
-	# configure internationalization optionally
-	use nls || echo "WITH_BF_INTERNATIONAL=0" >> "${S}"/user-config.py
-
-	# Ocean sim system needs fftw
-	use fftw || echo "WITH_BF_OCEANSIM=0" >> "${S}"/user-config.py
-
-	# configure Tweak Mode
-	use tweak-mode && echo "BF_TWEAK_MODE=1" >> "${S}"/user-config.py
-
-	# FIX: Game Engine module needs to be active to build the Blender Player
-	if ! use game-engine && use player; then
-		elog "Forcing Game Engine [+game-engine] as required by Blender Player [+player]"
-		echo "WITH_BF_GAMEENGINE=1" >> "${S}"/user-config.py
-	else
-		blend_with game-engine gameengine
-	fi
-
-	# set CFLAGS used in /etc/make.conf correctly
-	echo "CFLAGS=[`for i in ${CFLAGS[@]}; do printf "%s \'$i"\',; done`] " \
-		| sed -e "s:,]: ]:" >> "${S}"/user-config.py
-
-	# set CXXFLAGS used in /etc/make.conf correctly
-	local FILTERED_CXXFLAGS="`for i in ${CXXFLAGS[@]}; do printf "%s \'$i"\',; done`"
-	echo "CXXFLAGS=[${FILTERED_CXXFLAGS}]" | sed -e "s:,]: ]:" >> "${S}"/user-config.py
-	echo "BGE_CXXFLAGS=[${FILTERED_CXXFLAGS}]" | sed -e "s:,]: ]:" >> "${S}"/user-config.py
-
-	# reset general options passed to the C/C++ compilers (useless hardcoded flags)
-	# FIX: forcing '-funsigned-char' fixes an anti-aliasing issue with menu
-	# shadows, see bug #276338 for reference
-	echo "CCFLAGS= ['-funsigned-char', '-D_LARGEFILE_SOURCE', '-D_FILE_OFFSET_BITS=64']" >> "${S}"/user-config.py
-
-	# set LDFLAGS used in /etc/make.conf correctly
-	local FILTERED_LDFLAGS="`for i in ${LDFLAGS[@]}; do printf "%s \'$i"\',; done`"
-	echo "LINKFLAGS=[${FILTERED_LDFLAGS}]" | sed -e "s:,]: ]:" >> "${S}"/user-config.py
-	echo "PLATFORM_LINKFLAGS=[${FILTERED_LDFLAGS}]" | sed -e "s:,]: ]:" >> "${S}"/user-config.py
-
-	# reset REL_*/*_WARN variables (useless hardcoded flags)
-	cat <<- EOF >> "${S}"/user-config.py
-		REL_CFLAGS=[]
-		REL_CXXFLAGS=[]
-		REL_CCFLAGS=[]
-		C_WARN=[]
-		CC_WARN=[]
-		CXX_WARN=[]
-	EOF
-
-	# generic settings which differ from the defaults from linux2-config.py
-	cat <<- EOF >> "${S}"/user-config.py
-		BF_OPENGL_LIB='GL GLU X11 Xi GLEW'
-		BF_INSTALLDIR="../install"
-		WITH_PYTHON_SECURITY=1
-		WITHOUT_BF_PYTHON_INSTALL=1
-		BF_PYTHON="/usr"
-		BF_PYTHON_VERSION="3.2"
-		BF_PYTHON_ABI_FLAGS=""
-		BF_BUILDINFO=0
-		BF_QUIET=0
-		BF_LINE_OVERWRITE=0
-		WITH_BF_FHS=1
-		WITH_BF_BINRELOC=0
-		WITH_BF_STATICOPENGL=0
-		WITH_BF_OPENMP=$(usex openmp 1 0)
-		CC="$(tc-getCC)"
-		CXX="$(tc-getCXX)"
-	EOF
-
 	# configure WITH_BF* Scons build options
 	for arg in \
-		'elbeem fluid' \
-		'sdl' \
-		'apidoc docs' \
-		'jack' \
-		'sndfile' \
-		'openexr' \
-		'dds' \
-		'fftw fftw3' \
-		'jpeg2k openjpeg' \
-		'openal'\
-		'ffmpeg' \
-		'ffmpeg ogg' \
-		'player' \
-		'sse rayoptimization' \
-		'redcode' \
+		'3dmouse' \
 		'collada' \
-		'3dmouse' ; do
+		'cycles boost' \
+		'cycles oiio' \
+		'cycles' \
+		'dds' \
+		'doc docs' \
+		'elbeem fluid' \
+		'ffmpeg ogg' \
+		'ffmpeg' \
+		'fftw fftw3' \
+		'fftw oceansim' \
+		'game-engine gameengine' \
+		'jack' \
+		'jpeg2k openjpeg' \
+		'nls international' \
+		'openal'\
+		'openexr' \
+		'openmp' \
+		'player' \
+		'redcode' \
+		'sdl' \
+		'sndfile' \
+		'sse rayoptimization' \
+		; do
 		blend_with ${arg}
 	done
-
-	# add system media-libs/opencollada into Scons build options.
-	echo 'BF_OPENCOLLADA_INC="/usr/include/opencollada/"' >> "${S}"/user-config.py
-	echo 'BF_OPENCOLLADA_LIBPATH="/usr/'$(get_libdir)'/opencollada/"' >> "${S}"/user-config.py
-
-	# enable debugging/testing support
-	use debug && echo "BF_DEBUG=1" >> "${S}"/user-config.py
-	#use test && echo "BF_UNIT_TEST=1" >> "${S}"/user-config.py
-
-	# enables Cycles render engine
-	if use cycles; then
-		cat <<- EOF >> "${S}"/user-config.py
-			WITH_BF_CYCLES=1
-			WITH_BF_OIIO=1
-			BF_OIIO="/usr"
-			BF_OIIO_INC="/usr/include"
-			BF_OIIO_LIB="OpenImageIO"
-			WITH_BF_BOOST=1
-			BF_BOOST="/usr"
-			BF_BOOST_INC="/usr/include/boost"
-		EOF
-	fi
-
 }
 
 src_compile() {
 	escons
 
-	einfo "Generating Blender C/C++ API docs ..."
-	cd "${WORKDIR}"/${P}/doc/doxygen
-	doxygen -u Doxyfile
-	doxygen || die "doxygen failed to build API docs."
+	if use doc; then
+		einfo "Generating Blender C/C++ API docs ..."
+		cd "${WORKDIR}"/${P}/doc/doxygen
+		doxygen -u Doxyfile
+		doxygen || die "doxygen failed to build API docs."
+	fi
 }
 
 src_install() {
@@ -308,9 +253,9 @@ src_install() {
 
 	# install docs
 	doman "${WORKDIR}"/${P}/doc/manpage/blender.1
-	use doc && dodoc -r "${WORKDIR}"/${P}/doc/guides/*
+	dodoc -r "${WORKDIR}"/${P}/doc/guides/*
 
-	if use apidoc; then
+	if use doc; then
 		#einfo "Generating (BPY) Blender Python API docs ..."
 		"${D}"/usr/bin/blender --background --python doc/python_api/sphinx_doc_gen.py --noaudio || die "blender failed."
 
