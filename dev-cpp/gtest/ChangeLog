@@ -1,5 +1,8 @@
 # ChangeLog for dev-cpp/gtest
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/ChangeLog,v 1.13 2012/07/15 18:19:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/ChangeLog,v 1.14 2012/07/16 12:17:56 blueness Exp $
+
+  16 Jul 2012; Anthony G. Basile <blueness@gentoo.org> gtest-1.6.0.ebuild:
+  Stable ppc ppc64, bug #420853
 
   15 Jul 2012; Raúl Porcel <armin76@gentoo.org> gtest-1.6.0.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #420853
