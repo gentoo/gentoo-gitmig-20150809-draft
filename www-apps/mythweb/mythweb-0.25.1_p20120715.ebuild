@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.25.1_p20120715.ebuild,v 1.1 2012/07/15 23:37:01 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.25.1_p20120715.ebuild,v 1.2 2012/07/16 16:51:14 cardoe Exp $
 
 EAPI=4
 
-inherit webapp depend.php
+inherit webapp
 
 BACKPORTS="4f6ac2a60b"
 # Release version
@@ -20,6 +20,7 @@ IUSE=""
 KEYWORDS="~amd64 ~ppc ~x86"
 
 RDEPEND="dev-lang/php:5.3[json,mysql,session,posix]
+	virtual/httpd-php:5.3
 	dev-perl/DBI
 	dev-perl/DBD-mysql
 	dev-perl/HTTP-Date
@@ -27,10 +28,9 @@ RDEPEND="dev-lang/php:5.3[json,mysql,session,posix]
 
 DEPEND="${RDEPEND}"
 
-S="${WORKDIR}/${MY_P}/${PN}"
-
 need_httpd_cgi
-need_php5_httpd
+
+S="${WORKDIR}/${MY_P}/${PN}"
 
 src_prepare() {
 	cd "${S}"/../

@@ -11,16 +11,16 @@ if [[ $1 = "install" ]]; then
     if [[ "${VHOST_SERVER}" = "apache" ]]; then
         sed -e "s|/var/www/html/data|${MY_INSTALLDIR}/data|g" \
             -e "s|/var/www/html|${VHOST_ROOT}/${PN}|g" \
-            -i ${MY_SERVERCONFIGIR}/mythweb.conf || \
+            -i ${MY_SERVERCONFIGDIR}/mythweb.conf || \
             die "apache sed failed"
     elif [[ "${VHOST_SERVER}" = "lighttpd" ]]; then
         sed -e "s|/var/www/html/data|${MY_INSTALLDIR}/data|g" \
             -e "s|/var/www/html|${VHOST_ROOT}/${PN}|g" \
-            -i ${MY_SERVERCONFIGIR}/mythweb.conf || \
+            -i ${MY_SERVERCONFIGDIR}/mythweb.conf || \
             die "lighttpd sed failed"
     elif [[ "${VHOST_SERVER}" = "nginx" ]]; then
         sed -e "s|/var/www/localhost/htdocs|${MY_INSTALLDIR}/htdocs|g" \
-            -i ${MY_SERVERCONFIGIR}/mythweb.include || \
+            -i ${MY_SERVERCONFIGDIR}/mythweb.include || \
             die "nginx sed failed"
     fi
 
