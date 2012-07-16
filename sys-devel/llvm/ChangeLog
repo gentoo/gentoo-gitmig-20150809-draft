@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.87 2012/07/06 07:19:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.88 2012/07/16 09:31:46 mgorny Exp $
+
+*llvm-3.1-r2 (16 Jul 2012)
+
+  16 Jul 2012; Michał Górny <mgorny@gentoo.org>
+  +files/cl-patches/0001-r600-Add-some-intrinsic-definitions.patch, +files/cl-pa
+  tches/0002-r600-Add-get_global_size-and-get_local_size-intrinsi.patch,
+  +llvm-3.1-r2.ebuild:
+  Add OpenCL Radeon patches wrt #425688.
 
   06 Jul 2012; Michał Górny <mgorny@gentoo.org> llvm-3.1-r1.ebuild:
   Enable cpp target while the ebuild's still hot. Bug #418441.
