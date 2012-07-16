@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/vhba-20110915.ebuild,v 1.7 2012/05/24 04:20:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/vhba-20110915.ebuild,v 1.8 2012/07/16 07:20:03 tetromino Exp $
 
 EAPI="4"
 
@@ -35,8 +35,10 @@ pkg_setup() {
 src_prepare() {
 	# Build failure with >=3.4-rc1 and CONFIG_ENABLE_WARN_DEPRECATED, #411459
 	epatch "${FILESDIR}/${P}-3.4-kmap_atomic.patch"
-	# Avoid "make jobserver unavailable" warning
-	sed -e 's:\t$(KMAKE):\t+$(KMAKE):g' -i Makefile || die "sed failed"
+	# Avoid "make jobserver unavailable" warning and -Werror problems
+	sed -e 's:\t$(KMAKE):\t+$(KMAKE):g' \
+		-e '/EXTRA_CFLAGS/s/-Werror$/-Wall/' \
+		-i Makefile || die "sed failed"
 }
 
 src_install() {

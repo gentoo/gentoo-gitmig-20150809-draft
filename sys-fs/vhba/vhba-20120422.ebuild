@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/vhba-20120422.ebuild,v 1.1 2012/07/05 00:11:07 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/vhba-20120422.ebuild,v 1.2 2012/07/16 07:20:03 tetromino Exp $
 
 EAPI="4"
 
@@ -33,8 +33,10 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# Avoid "make jobserver unavailable" warning
-	sed -e 's:\t$(KMAKE):\t+$(KMAKE):g' -i Makefile || die "sed failed"
+	# Avoid "make jobserver unavailable" warning and -Werror problems
+	sed -e 's:\t$(KMAKE):\t+$(KMAKE):g' \
+		-e '/EXTRA_CFLAGS/s/-Werror$/-Wall/' \
+		-i Makefile || die "sed failed"
 }
 
 src_install() {
