@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.63a-r1.ebuild,v 1.3 2012/07/16 11:40:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.63a-r2.ebuild,v 1.1 2012/07/16 12:05:02 flameeyes Exp $
 
 EAPI=4
 PYTHON_DEPEND="3:3.2"
@@ -215,6 +215,12 @@ EOF
 src_compile() {
 	escons
 
+	cat - > "${T}"/${PN}.env <<EOF
+BLENDER_SYSTEM_SCRIPTS="/usr/share/blender/scripts"
+BLENDER_SYSTEM_DATAFILES="/usr/share/blender/datafiles"
+BLENDER_SYSTEM_PLUGINS="/usr/$(get_libdir)/plugins"
+EOF
+
 	if use doc; then
 		einfo "Generating Blender C/C++ API docs ..."
 		cd "${WORKDIR}"/${P}/doc/doxygen
@@ -227,6 +233,8 @@ src_install() {
 	# Pax mark blender for hardened support.
 	pax-mark m "${WORKDIR}/install/blender"
 
+	newenvd "${T}"/${PN}.env 60${PN}
+
 	# install binaries
 	dobin "${WORKDIR}/install/blender"
 	use player && newbin "${WORKDIR}/install/blenderplayer" blenderplayer
@@ -236,8 +244,6 @@ src_install() {
 	doins "${WORKDIR}"/${P}/source/blender/blenpluginapi/*.h
 
 	# install desktop file
-	insinto /usr/share/pixmaps
-	doins release/freedesktop/icons/scalable/apps/blender.svg
 	insinto /usr/share/applications
 	doins release/freedesktop/blender.desktop
 
