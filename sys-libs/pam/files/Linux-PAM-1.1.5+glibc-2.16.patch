@@ -8,3 +8,13 @@
  #include <syslog.h>
  #include <pwd.h>
  #include <shadow.h>
+--- a/modules/pam_unix/pam_unix_passwd.c	2012-07-16 11:49:25.954638105 -0500
++++ b/modules/pam_unix/pam_unix_passwd.c	2012-07-16 11:50:04.408635441 -0500
+@@ -46,6 +46,7 @@
+ #include <unistd.h>
+ #include <errno.h>
+ #include <sys/types.h>
++#include <sys/resource.h>
+ #include <pwd.h>
+ #include <syslog.h>
+ #include <shadow.h>
