@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/tellico
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.111 2012/04/18 22:09:49 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.112 2012/07/16 11:57:26 johu Exp $
+
+*tellico-2.3.6 (16 Jul 2012)
+
+  16 Jul 2012; Johannes Huber <johu@gentoo.org> +tellico-2.3.6.ebuild:
+  Version bump.
 
   18 Apr 2012; Johannes Huber <johu@gentoo.org>
   -files/tellico-2.3.4-kdepimlibs.patch, -tellico-2.3.4.ebuild:
@@ -459,4 +464,3 @@
   30 Oct 2004; Carsten Lohrke <carlo@gentoo.org> +metadata.xml,
   +tellico-0.12.ebuild:
   tellico, previously known as app-misc/bookcase
-
