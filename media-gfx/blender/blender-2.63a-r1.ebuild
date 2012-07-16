@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.63a-r1.ebuild,v 1.2 2012/07/16 09:28:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.63a-r1.ebuild,v 1.3 2012/07/16 11:40:02 flameeyes Exp $
 
 EAPI=4
 PYTHON_DEPEND="3:3.2"
@@ -56,7 +56,7 @@ RDEPEND="virtual/jpeg
 		media-libs/openimageio
 		>=dev-libs/boost-1.44
 	)
-	iconv? ( virtual/libiconv )
+	iconv? ( dev-libs/libiconv )
 	sdl? ( media-libs/libsdl[audio,joystick] )
 	openexr? ( media-libs/openexr )
 	ffmpeg? (
@@ -111,11 +111,6 @@ src_prepare() {
 }
 
 src_configure() {
-	blend_with() {
-		echo "WITH_BF_${2:-$1}=$(usex $1 1 0)" | tr '[:lower:]' '[:upper:]' \
-			>> "${S}"/user-config.py
-	}
-
 	# FIX: forcing '-funsigned-char' fixes an anti-aliasing issue with menu
 	# shadows, see bug #276338 for reference
 	append-flags -funsigned-char
@@ -124,7 +119,6 @@ src_configure() {
 	local mycflags=$(printf "'%s'," ${CPPFLAGS} ${CFLAGS} | sed -e 's:,$::')
 	local mycxxflags=$(printf "'%s'," ${CPPFLAGS} ${CXXFLAGS} | sed -e 's:,$::')
 	local myldflags=$(printf "'%s'," ${LDFLAGS} | sed -e 's:,$::')
-
 	cat << EOF >> "${S}"/user-config.py
 CC="$(tc-getCC)"
 CXX="$(tc-getCXX)"
@@ -165,6 +159,8 @@ BF_OIIO_LIB="OpenImageIO"
 BF_BOOST="/usr"
 BF_BOOST_INC="/usr/include/boost"
 
+BF_ICONV="/usr"
+
 BF_TWEAK_MODE=$(usex tweak-mode 1 0)
 BF_DEBUG=$(usex debug 1 0)
 
@@ -183,43 +179,37 @@ WITH_BF_BINRELOC=0
 WITH_BF_STATICOPENGL=0
 EOF
 
-	#add iconv into Scons build options.
-	if use !elibc_glibc && use !elibc_uclibc && use iconv; then
-		cat <<- EOF >> "${S}"/user-config.py
-			WITH_BF_ICONV=1
-			BF_ICONV="/usr"
-		EOF
-	fi
+	blend_with() {
+		echo "WITH_BF_${2:-$1}=$(usex $1 1 0)" | tr '[:lower:]' '[:upper:]' \
+			>> "${S}"/user-config.py
+	}
 
 	# configure WITH_BF* Scons build options
-	for arg in \
-		'3dmouse' \
-		'collada' \
-		'cycles boost' \
-		'cycles oiio' \
-		'cycles' \
-		'dds' \
-		'doc docs' \
-		'elbeem fluid' \
-		'ffmpeg ogg' \
-		'ffmpeg' \
-		'fftw fftw3' \
-		'fftw oceansim' \
-		'game-engine gameengine' \
-		'jack' \
-		'jpeg2k openjpeg' \
-		'nls international' \
-		'openal'\
-		'openexr' \
-		'openmp' \
-		'player' \
-		'redcode' \
-		'sdl' \
-		'sndfile' \
-		'sse rayoptimization' \
-		; do
-		blend_with ${arg}
-	done
+	blend_with 3dmouse
+	blend_with collada
+	blend_with cycles boost
+	blend_with cycles oiio
+	blend_with cycles
+	blend_with dds
+	blend_with doc docs
+	blend_with elbeem fluid
+	blend_with ffmpeg ogg
+	blend_with ffmpeg
+	blend_with fftw fftw3
+	blend_with fftw oceansim
+	blend_with game-engine gameengine
+	blend_with iconv
+	blend_with jack
+	blend_with jpeg2k openjpeg
+	blend_with nls international
+	blend_with openal
+	blend_with openexr
+	blend_with openmp
+	blend_with player
+	blend_with redcode
+	blend_with sdl
+	blend_with sndfile
+	blend_with sse rayoptimization
 }
 
 src_compile() {
