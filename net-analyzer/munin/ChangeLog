@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.71 2012/07/07 07:21:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.72 2012/07/16 16:15:11 flameeyes Exp $
+
+*munin-2.0.2 (16 Jul 2012)
+
+  16 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/munin-2.0_rc-crontab, +files/munin-node_init.d_2.0.2,
+  +munin-2.0.2.ebuild:
+  Initial try to package munin-2. More work is to be expected before unmask.
 
 *munin-1.4.7-r1 (07 Jul 2012)
 
