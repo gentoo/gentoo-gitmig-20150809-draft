@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/miniplayer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/miniplayer/ChangeLog,v 1.7 2012/07/16 07:34:26 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/miniplayer/ChangeLog,v 1.8 2012/07/16 11:19:29 ago Exp $
+
+  16 Jul 2012; Agostino Sarubbo <ago@gentoo.org> miniplayer-2.4.ebuild:
+  Stable for amd64, wrt bug #426740
 
   16 Jul 2012; Jeff Horelick <jdhore@gentoo.org> miniplayer-2.4.ebuild:
   marked x86 per bug 426740
