@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gcr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/ChangeLog,v 1.1 2012/05/13 18:13:50 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/ChangeLog,v 1.2 2012/07/16 08:31:14 tetromino Exp $
+
+  16 Jul 2012; Alexandre Rostovtsev <tetromino@gentoo.org> gcr-3.4.1.ebuild:
+  Add missing gdbus-codegen dependency (bug #425390, thanks to cyrillic).
 
 *gcr-3.4.1 (13 May 2012)
 

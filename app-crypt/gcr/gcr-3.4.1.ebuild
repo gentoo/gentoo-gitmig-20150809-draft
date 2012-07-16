@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/gcr-3.4.1.ebuild,v 1.1 2012/05/13 18:13:50 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/gcr-3.4.1.ebuild,v 1.2 2012/07/16 08:31:14 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -29,8 +29,9 @@ RDEPEND="${COMMON_DEPEND}
 	!<gnome-base/gnome-keyring-3.3"
 # gcr was part of gnome-keyring until 3.3
 DEPEND="${COMMON_DEPEND}
-	sys-devel/gettext
+	dev-util/gdbus-codegen
 	>=dev-util/intltool-0.35
+	sys-devel/gettext
 	virtual/pkgconfig
 
 	dev-libs/gobject-introspection-common
