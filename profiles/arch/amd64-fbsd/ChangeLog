@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86-fbsd profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/ChangeLog,v 1.25 2012/05/29 14:09:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/ChangeLog,v 1.26 2012/07/16 04:15:42 tetromino Exp $
+
+  16 Jul 2012; Alexandre Rostovtsev <tetromino@gentoo.org> use.mask:
+  Mask python targets that are not keyworded on amd64-fbsd.
 
   29 May 2012; Alexis Ballier <aballier@gentoo.org> package.use.mask:
   mask media-libs/libprojectm[video_cards_nvidia] due to cg not being

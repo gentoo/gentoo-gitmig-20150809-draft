@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/use.mask,v 1.7 2012/05/16 15:24:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/use.mask,v 1.8 2012/07/16 04:15:42 tetromino Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -amd64-fbsd
@@ -29,3 +29,16 @@
 
 # Diablo Latte and Caffe (JRE and JDK) works here
 -java
+
+# Other
+
+# Alexandre Rostovtsev <tetromino@gmail.com> (16 Jul 2012)
+# Only python:2.7 and :3.2 are keyworded on this arch
+python_targets_python2_4
+python_targets_python2_5
+python_targets_python2_6
+python_targets_python3_1
+python_targets_pypy1_7
+python_targets_pypy1_8
+python_targets_jython2_5
+
