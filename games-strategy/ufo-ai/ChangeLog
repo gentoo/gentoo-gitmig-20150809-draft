@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/ufo-ai
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ChangeLog,v 1.39 2012/06/08 11:48:07 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ChangeLog,v 1.40 2012/07/16 19:05:07 mr_bones_ Exp $
+
+  16 Jul 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/ufo-ai-2.3.1-libpng15.patch, -ufo-ai-2.3.1-r1.ebuild:
+  old
 
   08 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> ufo-ai-2.4.ebuild:
   x86 stable wrt bug #418429
