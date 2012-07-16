@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-color-manager/gnome-color-manager-2.32.0.ebuild,v 1.9 2012/01/14 17:07:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-color-manager/gnome-color-manager-2.32.0.ebuild,v 1.10 2012/07/16 10:33:06 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -35,6 +35,7 @@ RDEPEND=">=dev-libs/glib-2.14:2
 "
 DEPEND="${RDEPEND}
 	app-text/gnome-doc-utils
+	app-text/scrollkeeper
 	>=dev-util/intltool-0.35
 	doc? ( >=dev-util/gtk-doc-1.9 )
 "
