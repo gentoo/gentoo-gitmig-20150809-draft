@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.11.2.ebuild,v 1.19 2012/07/06 15:41:20 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.11.2.ebuild,v 1.20 2012/07/16 10:25:26 kensington Exp $
 
 EAPI=4
 inherit autotools eutils fdo-mime multilib
@@ -43,12 +43,12 @@ RDEPEND="
 	)
 	networkmanager? ( net-misc/networkmanager )
 	qt4? (
-		>=x11-libs/qt-core-4.4.0
-		>=x11-libs/qt-opengl-4.4.0
-		>=x11-libs/qt-script-4.4.0
-		>=x11-libs/qt-webkit-4.4.0
-		>=x11-libs/qt-xmlpatterns-4.4.0
-		dbus? ( >=x11-libs/qt-dbus-4.4.0 )
+		>=x11-libs/qt-core-4.4.0:4
+		>=x11-libs/qt-opengl-4.4.0:4
+		>=x11-libs/qt-script-4.4.0:4
+		>=x11-libs/qt-webkit-4.4.0:4
+		>=x11-libs/qt-xmlpatterns-4.4.0:4
+		dbus? ( >=x11-libs/qt-dbus-4.4.0:4 )
 	)
 	soup? ( >=net-libs/libsoup-2.26:2.4 )
 	startup-notification? ( x11-libs/startup-notification )"
