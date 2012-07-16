@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r4.ebuild,v 1.3 2012/04/26 22:37:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r4.ebuild,v 1.4 2012/07/16 02:21:47 blueness Exp $
 
 EAPI=2
 
@@ -53,6 +53,7 @@ src_configure() {
 		--enable-http \
 		--enable-default-catalog=/etc/sgml/catalog \
 		--enable-default-search-path=/usr/share/sgml \
+		--enable-splibdir=/usr/$(get_libdir) \
 		--libdir=/usr/$(get_libdir) \
 		--datadir=/usr/share/sgml/${P} \
 		$(use_enable static-libs static)
