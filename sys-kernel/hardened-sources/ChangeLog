@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.633 2012/07/16 22:37:53 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.634 2012/07/16 22:39:44 blueness Exp $
+
+  16 Jul 2012; Anthony G. Basile <blueness@gentoo.org> ChangeLog:
+  Fix failed signiture on manifest
 
 *hardened-sources-3.4.4-r3 (16 Jul 2012)
 
