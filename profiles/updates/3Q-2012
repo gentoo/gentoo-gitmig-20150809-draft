@@ -1,3 +1,4 @@
 slotmove kde-misc/colibri 0 4
 slotmove kde-misc/eventlist 0 4
 slotmove media-gfx/blender 2.60 0
+slotmove kde-misc/plasma-mpd-nowplaying 0 4
