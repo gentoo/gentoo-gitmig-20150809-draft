@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/fancytasks/fancytasks-1.1.2.ebuild,v 1.1 2012/06/14 15:39:02 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/fancytasks/fancytasks-1.1.2.ebuild,v 1.2 2012/07/16 13:29:02 johu Exp $
 
 EAPI=4
 KDE_LINGUAS="de en_GB es et fr km nds pl pt ru sv tr uk"
@@ -26,3 +26,19 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 DOCS=( CHANGELOG README TODO )
+
+src_prepare() {
+	kde4-base_src_prepare
+
+	local lang
+	for lang in ${KDE_LINGUAS} ; do
+		if ! use linguas_${lang} ; then
+			local dir
+			for dir in ${KDE_LINGUAS_DIR[@]} ; do
+				if [ -f ${dir}/${lang}.mo ]; then
+					rm ${dir}/${lang}.mo
+				fi
+			done
+		fi
+	done
+}

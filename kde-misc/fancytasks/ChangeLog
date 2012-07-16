@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/fancytasks
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/fancytasks/ChangeLog,v 1.13 2012/06/14 15:39:02 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/fancytasks/ChangeLog,v 1.14 2012/07/16 13:29:02 johu Exp $
+
+  16 Jul 2012; Johannes Huber <johu@gentoo.org> -fancytasks-1.1.0.ebuild,
+  fancytasks-1.1.2.ebuild:
+  Respect LINGUAS, remove old.
 
 *fancytasks-1.1.2 (14 Jun 2012)
 
@@ -66,4 +70,3 @@
   28 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
   +fancytasks-0.9.8.ebuild:
   Initial commit wrt #285313, thanks to Art Win for reporting.
-
