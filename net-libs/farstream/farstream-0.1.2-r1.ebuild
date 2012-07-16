@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/farstream/farstream-0.1.2-r1.ebuild,v 1.1 2012/06/25 04:28:58 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/farstream/farstream-0.1.2-r1.ebuild,v 1.2 2012/07/16 08:19:25 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
 
-inherit python
+inherit eutils python
 
 DESCRIPTION="Farsight2 is an audio/video conferencing framework specifically designed for Instant Messengers."
 HOMEPAGE="http://farsight.freedesktop.org/"
@@ -45,6 +45,11 @@ DEPEND="${COMMONDEPEND}
 
 pkg_setup() {
 	python_set_active_version 2
+}
+
+src_prepare() {
+	# Fix building with gobject-introspection-1.33.x, bug #425096
+	epatch "${FILESDIR}/${P}-introspection-tag-order.patch"
 }
 
 src_configure() {
