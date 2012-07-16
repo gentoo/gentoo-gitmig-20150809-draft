@@ -1,6 +1,7 @@
 --- Makefile
 +++ Makefile
-@@ -6,8 +6,9 @@
+@@ -5,9 +5,10 @@
+ 
  PACKAGE = genromfs
  VERSION = 0.5.2
 -CC = gcc
@@ -13,3 +14,15 @@
  
  DISTDIR = $(PACKAGE)-$(VERSION)
  
+@@ -16,9 +17,9 @@
+  readme-kernel-patch genrommkdev romfs.txt \
+  checkdist
+ 
+-prefix = /usr
++prefix = $(DESTDIR)/usr
+ bindir = $(prefix)/bin
+-mandir = $(prefix)/man
++mandir = $(prefix)/share/man
+ 
+ genromfs: genromfs.o
+ 	$(CC) $(LDFLAGS) genromfs.o -o genromfs
