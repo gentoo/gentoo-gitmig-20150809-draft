@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libnetfilter_conntrack
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_conntrack/ChangeLog,v 1.43 2012/07/16 06:39:03 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_conntrack/ChangeLog,v 1.44 2012/07/16 07:35:10 jdhore Exp $
+
+  16 Jul 2012; Jeff Horelick <jdhore@gentoo.org>
+  libnetfilter_conntrack-1.0.0.ebuild:
+  marked x86 per bug 419265
 
 *libnetfilter_conntrack-1.0.1 (16 Jul 2012)
 
