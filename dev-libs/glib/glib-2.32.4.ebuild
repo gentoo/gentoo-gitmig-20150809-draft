@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.32.2.ebuild,v 1.3 2012/05/05 16:35:21 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.32.4.ebuild,v 1.1 2012/07/16 04:27:23 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="utils? 2"
@@ -23,7 +23,7 @@ RDEPEND="virtual/libiconv
 	sys-libs/zlib
 	|| (
 		>=dev-libs/elfutils-0.142
-		>=dev-libs/libelf-0.8.11 )
+		>=dev-libs/libelf-0.8.12 )
 	xattr? ( sys-apps/attr )
 	fam? ( virtual/fam )
 	utils? ( >=dev-util/gdbus-codegen-${PV} )"
@@ -113,8 +113,8 @@ src_prepare() {
 	# gdbus-codegen is a separate package
 	epatch "${FILESDIR}/${PN}-2.31.x-external-gdbus-codegen.patch"
 
-	# https://bugzilla.gnome.org/show_bug.cgi?id=673132
-	epatch "${FILESDIR}/${PN}-2.32.1-fix-libelf-check.patch"
+	# bashcomp goes in /usr/share/bash-completion
+	epatch "${FILESDIR}/${PN}-2.32.4-bashcomp.patch"
 
 	# disable pyc compiling
 	use test && python_clean_py-compile_files
@@ -133,7 +133,7 @@ src_configure() {
 	# Avoid circular depend with dev-util/pkgconfig and
 	# native builds (cross-compiles won't need pkg-config
 	# in the target ROOT to work here)
-	if ! tc-is-cross-compiler && ! has_version virtual/pkgconfig; then
+	if ! tc-is-cross-compiler && ! $(tc-getPKG_CONFIG) --version >& /dev/null; then
 		if has_version sys-apps/dbus; then
 			export DBUS1_CFLAGS="-I/usr/include/dbus-1.0 -I/usr/$(get_libdir)/dbus-1.0/include"
 			export DBUS1_LIBS="-ldbus-1"
@@ -181,12 +181,6 @@ src_install() {
 	rm -rf "${ED}/usr/share/gdb/" "${ED}/usr/share/glib-2.0/gdb/"
 
 	dodoc AUTHORS ChangeLog* NEWS* README
-
-	insinto /usr/share/bash-completion
-	for f in gdbus gsettings; do
-		newins "${ED}/etc/bash_completion.d/${f}-bash-completion.sh" ${f}
-	done
-	rm -rf "${ED}/etc"
 
 	# Completely useless with or without USE static-libs, people need to use
 	# pkg-config
