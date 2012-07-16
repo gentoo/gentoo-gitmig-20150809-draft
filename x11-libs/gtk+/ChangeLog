@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.600 2012/07/15 16:22:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.601 2012/07/16 06:38:57 tetromino Exp $
+
+*gtk+-3.4.4 (16 Jul 2012)
+*gtk+-2.24.11 (16 Jul 2012)
+
+  16 Jul 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gtk+-2.24.11.ebuild, +gtk+-3.4.4.ebuild:
+  Version bumps with various bugfixes; 2.24.11 adds cups-1.6 support to gtk2.
 
   15 Jul 2012; Raúl Porcel <armin76@gentoo.org> gtk+-2.24.10-r1.ebuild,
   gtk+-3.2.4-r1.ebuild:
