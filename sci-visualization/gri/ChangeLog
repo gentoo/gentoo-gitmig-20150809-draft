@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/gri
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gri/ChangeLog,v 1.9 2011/08/12 16:29:57 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gri/ChangeLog,v 1.10 2012/07/17 16:15:24 jlec Exp $
+
+  17 Jul 2012; Justin Lecher <jlec@gentoo.org> gri-2.12.23.ebuild,
+  +files/gri-2.12.23-perl-5.16.patch, metadata.xml:
+  Add fix for perl-5.16, #415485
 
   12 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org> gri-2.12.23.ebuild:
   Trick maintainer-more QA warn, add some die functions, run mv only if there

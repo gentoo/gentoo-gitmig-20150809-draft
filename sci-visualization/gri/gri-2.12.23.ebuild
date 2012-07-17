@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gri/gri-2.12.23.ebuild,v 1.4 2011/08/12 20:42:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gri/gri-2.12.23.ebuild,v 1.5 2012/07/17 16:15:24 jlec Exp $
 
 EAPI=4
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc emacs examples"
 
-DEPEND=">=sci-libs/netcdf-4
+DEPEND="
+	>=sci-libs/netcdf-4
 	virtual/latex-base
 	|| ( media-gfx/imagemagick[png] media-gfx/graphicsmagick[png] )
 	app-text/ghostscript-gpl
@@ -25,7 +26,9 @@ RDEPEND="${DEPEND}"
 SITEFILE="50gri-gentoo.el"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-2.12.18-postscript.patch
+	epatch \
+		"${FILESDIR}"/${PN}-2.12.18-postscript.patch \
+		"${FILESDIR}"/${P}-perl-5.16.patch
 	# Makefile.am contains a call to the missing script that triggers gentoo qa
 	sed -i -e 's|${SHELL} ../missing --run tex|tex|g' \
 		doc/Makefile.in || die
