@@ -1,6 +1,15 @@
 # ChangeLog for app-misc/lirc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.225 2012/01/09 07:19:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.226 2012/07/17 19:18:25 axs Exp $
+
+*lirc-0.9.0-r1 (17 Jul 2012)
+
+  17 Jul 2012; Ian Stakenvicius <axs@gentoo.org> +files/lircd-0.8.6-r1,
+  +lirc-0.9.0-r1.ebuild, +files/lircd.conf.3:
+  converted ebuild to EAPI4, made drivers build separately from tools to fix
+  bug 160134, fixed init script so that socket path exists (bug 414307), added
+  option so that init script can set 'lirc' as the kernel IR decoding protocol
+  on startup (bug 368489)
 
   09 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> lirc-0.8.5.ebuild,
   lirc-0.8.7_pre1.ebuild, lirc-0.8.7.ebuild, lirc-0.9.0.ebuild:
