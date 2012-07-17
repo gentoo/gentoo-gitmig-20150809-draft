@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.9.0-r1.ebuild,v 1.1 2012/07/17 19:18:25 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.9.0-r1.ebuild,v 1.2 2012/07/17 20:14:21 axs Exp $
 
 EAPI=4
 
@@ -290,6 +290,9 @@ src_prepare() {
 	# Apply patches needed for some special device-types
 	use lirc_devices_audio || epatch "${FILESDIR}"/lirc-0.8.4-portaudio_check.patch
 	use lirc_devices_remote_wonder_plus && epatch "${FILESDIR}"/lirc-0.8.3_pre1-remotewonderplus.patch
+
+	# Apply fixes for kernel-2.6.39 and above
+	epatch "${FILESDIR}"/${P}-kernel-2.6.39-fixes.patch
 
 	# Do not build drivers from the top-level Makefile
 	sed -i -e 's:\(SUBDIRS =\) drivers\(.*\):\1\2:' Makefile.am
