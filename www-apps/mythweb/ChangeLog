@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/mythweb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.95 2012/07/17 00:30:14 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.96 2012/07/17 01:14:33 cardoe Exp $
+
+  16 Jul 2012; Doug Goldstein <cardoe@gentoo.org>
+  -mythweb-0.24_p20110310.ebuild:
+  Remove older version
 
 *mythweb-0.25.2 (16 Jul 2012)
 
