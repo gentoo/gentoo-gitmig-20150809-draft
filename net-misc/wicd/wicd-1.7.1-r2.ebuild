@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.1-r2.ebuild,v 1.1 2012/02/27 21:04:11 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.1-r2.ebuild,v 1.2 2012/07/17 11:58:23 tomka Exp $
 
 EAPI=3
 
@@ -13,7 +13,7 @@ DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES="1"
 inherit eutils distutils systemd
 
 DESCRIPTION="A lightweight wired and wireless network manager for Linux"
-HOMEPAGE="http://wicd.sourceforge.net/"
+HOMEPAGE="https://launchpad.net/wicd"
 SRC_URI="http://launchpad.net/wicd/1.7/${PV}/+download/${P}.tar.gz
 	mac4lin? ( http://dev.gentoo.org/~anarchy/dist/wicd-mac4lin-icons.tar.xz )
 	ambiance? ( http://freetimesblog.altervista.org/blog/wp-content/uploads/downloads/2010/05/Icone-Wicd-Lucid.tar.gz )"

@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.123 2012/05/31 16:31:22 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.124 2012/07/17 11:58:23 tomka Exp $
+
+  17 Jul 2012; Thomas Kahle <tomka@gentoo.org> wicd-1.7.0-r1.ebuild,
+  wicd-1.7.0.ebuild, wicd-1.7.1-r1.ebuild, wicd-1.7.1-r2.ebuild,
+  wicd-1.7.1-r3.ebuild, wicd-1.7.1.ebuild, wicd-1.7.1_beta2-r4.ebuild,
+  wicd-1.7.1_pre20111210-r1.ebuild, wicd-1.7.1_pre20120127-r1.ebuild,
+  wicd-1.7.1_pre20120127.ebuild, wicd-1.7.2.1.ebuild, wicd-1.7.2.3.ebuild,
+  wicd-1.7.2.4-r1.ebuild, wicd-1.7.2.4.ebuild:
+  update homepage
 
   31 May 2012; Anthony G. Basile <blueness@gentoo.org> wicd-1.7.2.4-r1.ebuild:
   Keyword ~mips
@@ -591,4 +599,3 @@
   wicd-1.4.2 is the upstream "stable" version and a stable candidate for Gentoo.
   I still need to work on the init scripts, they aren't quite complete yet, in
   my opinion. I also am pondering the addition of USE flags for dhcp clients.
-
