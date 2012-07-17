@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6796 2012/07/17 14:51:53 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6797 2012/07/17 22:48:07 johu Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Jul 2012; Johannes Huber <johu@gentoo.org> package.mask:
+  Update mask of >=net-libs/telepathy-qt-0.9.3.
 
   17 Jul 2012; Luca Barbato <lu_zero@gentoo.org> package.mask:
   Remove eselect-opengl mask
