@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-xvmc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-xvmc/ChangeLog,v 1.20 2012/07/15 11:35:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-xvmc/ChangeLog,v 1.21 2012/07/17 05:58:16 jdhore Exp $
+
+  17 Jul 2012; Jeff Horelick <jdhore@gentoo.org> eselect-xvmc-0.3.ebuild:
+  marked x86 per bug 424017
 
   15 Jul 2012; Agostino Sarubbo <ago@gentoo.org> eselect-xvmc-0.3.ebuild:
   Stable for amd64, wrt bug #424017
