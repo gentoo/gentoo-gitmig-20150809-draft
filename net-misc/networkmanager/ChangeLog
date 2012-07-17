@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.138 2012/07/05 02:33:10 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.139 2012/07/17 05:43:11 tetromino Exp $
+
+*networkmanager-0.9.4.0-r5 (17 Jul 2012)
+
+  17 Jul 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +networkmanager-0.9.4.0-r5.ebuild,
+  +files/networkmanager-0.9.4.0-nl80211-encryption-caps.patch,
+  +files/networkmanager-0.9.4.0-wifi-kernel-api.patch:
+  Fix ipw2200 driver problems caused by wext vs. nl80211 API use (bug #426844,
+  thanks to Jonathan Müller).
 
 *networkmanager-0.9.4.0-r4 (05 Jul 2012)
 
