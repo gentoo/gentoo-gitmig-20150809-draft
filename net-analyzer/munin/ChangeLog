@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.74 2012/07/17 13:59:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.75 2012/07/17 15:27:05 flameeyes Exp $
+
+  17 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml,
+  munin-2.0.2.ebuild:
+  Fix handling of java to improve further; install the jmx plugins only with
+  USE=java; don't install the localstart file with USE=minimal; drop useless doc
+  USE flag; add REQUIRED_USE for cgi; update USE descriptions in metadata.xml
+  and add myself as maintainer for 2.x series only.
 
   17 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> munin-2.0.2.ebuild:
   Unbundle DejaVu fonts by depending on them and using a newer rrdtool as a

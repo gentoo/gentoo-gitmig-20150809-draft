@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.2.ebuild,v 1.3 2012/07/17 13:59:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.2.ebuild,v 1.4 2012/07/17 15:27:05 flameeyes Exp $
 
 EAPI=4
 
-PATCHSET=3
+PATCHSET=7
 
 inherit eutils user versionator java-pkg-opt-2
 
@@ -18,7 +18,8 @@ SRC_URI="mirror://sourceforge/munin/${MY_P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~mips ~ppc ~x86"
-IUSE="asterisk doc irc java memcached minimal mysql postgres ssl test cgi"
+IUSE="asterisk irc java memcached minimal mysql postgres ssl test +cgi"
+REQUIRED_USE="cgi? ( !minimal )"
 
 # Upstream's listing of required modules is NOT correct!
 # Some of the postgres plugins use DBD::Pg, while others call psql directly.
@@ -91,7 +92,7 @@ src_configure() {
 	cat - >> "${S}"/Makefile.config <<EOF
 PREFIX=\$(DESTDIR)/usr
 CONFDIR=\$(DESTDIR)/etc/munin
-DOCDIR=\$(DESTDIR)/usr/share/doc/${PF}
+DOCDIR=${T}/useless/doc
 MANDIR=\$(PREFIX)/share/man
 LIBDIR=\$(PREFIX)/libexec/munin
 HTMLDIR=\$(DESTDIR)/var/www/localhost/htdocs/munin
@@ -100,14 +101,8 @@ DBDIR=\$(DESTDIR)/var/lib/munin
 LOGDIR=\$(DESTDIR)/var/log/munin
 PERLSITELIB=$(perl -V:vendorlib | cut -d"'" -f2)
 JCVALID=$(usex java yes no)
-JAVALIBDIR=${T}/java
 EOF
 }
-
-src_compile() {
-	emake default $(use doc && echo build-doc)
-}
-
 src_install() {
 	local dirs
 	dirs="/var/log/munin/ /var/lib/munin/"
@@ -118,9 +113,12 @@ src_install() {
 	keepdir ${dirs}
 
 	local install_targets="install-common-prime install-node-prime install-plugins-prime"
+	use java && install_targets+=" install-plugins-java"
 	use minimal || install_targets=install
 
-	emake DESTDIR="${D}" ${install_targets}
+	# parallel install doesn't work and it's also pointless to have this
+	# run in parallel for now (because it uses internal loops).
+	emake -j1 DESTDIR="${D}" ${install_targets}
 	fowners munin:munin ${dirs}
 
 	# remove font files so that we don't have to keep them around
@@ -140,11 +138,9 @@ src_install() {
 	insinto /etc/logrotate.d/
 	newins "${FILESDIR}"/logrotate.d-munin munin
 
-	exeinto /etc/local.d/
-	newexe "${FILESDIR}"/localstart-munin 50munin.start
-
-	if use java; then
-		java-pkg_dojar "${T}"/java/*.jar
+	if ! use minimal; then
+		exeinto /etc/local.d/
+		newexe "${FILESDIR}"/localstart-munin 50munin.start
 	fi
 }
 
