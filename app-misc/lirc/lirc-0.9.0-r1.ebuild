@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.9.0-r1.ebuild,v 1.2 2012/07/17 20:14:21 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.9.0-r1.ebuild,v 1.3 2012/07/17 20:30:16 axs Exp $
 
 EAPI=4
 
@@ -293,6 +293,9 @@ src_prepare() {
 
 	# Apply fixes for kernel-2.6.39 and above
 	epatch "${FILESDIR}"/${P}-kernel-2.6.39-fixes.patch
+	# Slightly massaged upstream patch to fix kfifo issues >=2.6.38
+	# for bug 377033
+	epatch "${FILESDIR}"/${P}-atiusb_kfifo.patch
 
 	# Do not build drivers from the top-level Makefile
 	sed -i -e 's:\(SUBDIRS =\) drivers\(.*\):\1\2:' Makefile.am

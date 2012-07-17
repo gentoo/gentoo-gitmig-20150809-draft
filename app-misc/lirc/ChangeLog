@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/lirc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.227 2012/07/17 20:14:21 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.228 2012/07/17 20:30:16 axs Exp $
+
+  17 Jul 2012; Ian Stakenvicius <axs@gentoo.org> lirc-0.9.0-r1.ebuild,
+  +files/lirc-0.9.0-atiusb_kfifo.patch:
+  Applied upstream patch to fix bug 377033
 
   17 Jul 2012; Ian Stakenvicius <axs@gentoo.org> lirc-0.9.0-r1.ebuild,
   +files/lirc-0.9.0-kernel-2.6.39-fixes.patch:
