@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/opencv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.78 2012/07/16 22:13:14 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.79 2012/07/17 20:13:28 dilfridge Exp $
+
+  17 Jul 2012; Andreas K. Huettel <dilfridge@gentoo.org> opencv-2.4.2.ebuild:
+  Python is always needed now, useflag makes no sense. Bug 419577
 
 *opencv-2.4.2 (16 Jul 2012)
 

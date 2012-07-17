@@ -1,10 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.4.2.ebuild,v 1.1 2012/07/16 22:13:14 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.4.2.ebuild,v 1.2 2012/07/17 20:13:28 dilfridge Exp $
 
-EAPI=3
-
-PYTHON_DEPEND="python? 2:2.6"
+EAPI=4
+PYTHON_DEPEND="2:2.6"
 
 inherit base toolchain-funcs cmake-utils python
 
@@ -17,10 +16,11 @@ SRC_URI="mirror://sourceforge/${PN}library/${MY_P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux"
-IUSE="cuda doc eigen examples ffmpeg gstreamer gtk ieee1394 ipp jpeg jpeg2k openexr opengl pch png python qt4 tbb testprograms tiff v4l xine"
+IUSE="cuda doc eigen examples ffmpeg gstreamer gtk ieee1394 ipp jpeg jpeg2k openexr opengl pch png qt4 tbb testprograms tiff v4l xine"
 
 RDEPEND="
 	app-arch/bzip2
+	dev-python/numpy
 	sys-libs/zlib
 	cuda? ( >=dev-util/nvidia-cuda-toolkit-4.1 )
 	eigen? ( dev-cpp/eigen:2 )
@@ -39,7 +39,6 @@ RDEPEND="
 	ipp? ( sci-libs/ipp )
 	openexr? ( media-libs/openexr )
 	png? ( media-libs/libpng )
-	python? ( dev-python/numpy )
 	qt4? (
 		x11-libs/qt-gui:4
 		x11-libs/qt-test:4
@@ -67,10 +66,8 @@ PATCHES=(
 S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
-	if use python; then
-		python_set_active_version 2
-		python_pkg_setup
-	fi
+	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
@@ -150,7 +147,7 @@ src_configure() {
 		mycmakeargs+=( "-DWITH_CUFFT=OFF" )
 	fi
 
-	if use python && use examples; then
+	if use examples; then
 		mycmakeargs+=( "-DINSTALL_PYTHON_EXAMPLES=ON" )
 	else
 		mycmakeargs+=( "-DINSTALL_PYTHON_EXAMPLES=OFF" )
