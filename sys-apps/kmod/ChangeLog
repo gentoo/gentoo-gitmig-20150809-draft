@@ -1,5 +1,11 @@
 # ChangeLog for sys-apps/kmod
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.42 2012/07/13 16:27:28 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.43 2012/07/17 12:30:36 ssuominen Exp $
+
+*kmod-9-r3 (17 Jul 2012)
+
+  17 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> +kmod-9-r3.ebuild:
+  Another hardcoded path in the Linux source tree (depmod) wrt #426698 by Kyle
+  McFarland
 
 *kmod-9-r2 (13 Jul 2012)
 
