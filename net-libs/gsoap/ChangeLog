@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/gsoap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gsoap/ChangeLog,v 1.17 2012/03/24 10:27:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gsoap/ChangeLog,v 1.18 2012/07/17 07:23:06 patrick Exp $
+
+*gsoap-2.8.9 (17 Jul 2012)
+
+  17 Jul 2012; Patrick Lauer <patrick@gentoo.org> +gsoap-2.8.9.ebuild:
+  Bump
 
 *gsoap-2.8.8 (24 Mar 2012)
 
@@ -87,4 +92,3 @@
   +gsoap-2.7.9f.ebuild, +gsoap-2.7.12.ebuild:
   Initial Import from jokey overlay. Dep of newer virtualbox-ose. Ebuilds by
   Alessio Cassibba.
-
