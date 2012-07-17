@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/zsnes
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/ChangeLog,v 1.49 2012/06/04 20:04:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/ChangeLog,v 1.50 2012/07/17 21:43:36 prometheanfire Exp $
+
+*zsnes-1.51-r3 (17 Jul 2012)
+
+  17 Jul 2012; Matthew Thode <prometheanfire@gentoo.org> +zsnes-1.51-r3.ebuild:
+  new ebuild to add hardened support, bug 427032.
 
   04 Jun 2012; Michael Sterrett <mr_bones_@gentoo.org> zsnes-1.51-r2.ebuild,
   files/zsnes-1.51-CC-quotes.patch,
