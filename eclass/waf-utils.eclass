@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/waf-utils.eclass,v 1.11 2012/06/07 05:02:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/waf-utils.eclass,v 1.12 2012/07/17 04:43:50 vapier Exp $
 
 # @ECLASS: waf-utils.eclass
 # @MAINTAINER:
@@ -41,11 +41,15 @@ waf-utils_src_configure() {
 	: ${WAF_BINARY:="${S}/waf"}
 
 	tc-export AR CC CPP CXX RANLIB
-	echo "CCFLAGS=\"${CFLAGS}\" LINKFLAGS=\"${LDFLAGS}\" \"${WAF_BINARY}\" --prefix=${EPREFIX}/usr --libdir=${EPREFIX}/usr/$(get_libdir) $@ configure"
+
+	# Make sure this waf supports --libdir #412133
+	if "${WAF_BINARY}" --help | grep -q -e--libdir ; then
+		set -- "--libdir=${EPREFIX}/usr/$(get_libdir)" "$@"
+	fi
+	echo "CCFLAGS=\"${CFLAGS}\" LINKFLAGS=\"${LDFLAGS}\" \"${WAF_BINARY}\" --prefix=${EPREFIX}/usr $@ configure"
 
 	CCFLAGS="${CFLAGS}" LINKFLAGS="${LDFLAGS}" "${WAF_BINARY}" \
 		"--prefix=${EPREFIX}/usr" \
-		"--libdir=${EPREFIX}/usr/$(get_libdir)" \
 		"$@" \
 		configure || die "configure failed"
 }
