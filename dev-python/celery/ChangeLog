@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/celery
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/ChangeLog,v 1.2 2012/07/16 08:33:58 iksaif Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/ChangeLog,v 1.3 2012/07/17 15:10:59 iksaif Exp $
+
+*celery-2.5.5 (17 Jul 2012)
+*celery-3.0.1 (17 Jul 2012)
+
+  17 Jul 2012; Corentin Chary <iksaif@gentoo.org> +celery-2.5.5.ebuild,
+  +celery-3.0.1.ebuild, +files/celery-3.0.1-fix-setuptools-import.patch,
+  -celery-2.5.3.ebuild:
+  Bump to 2.5.5 and 3.0.1. Add examples and doc thanks to idella4. Closes
+  #425794 and #422661.
 
   16 Jul 2012; Corentin Chary <iksaif@gentoo.org> files/celery.initd:
   LICENSE variable does not reflect init script. Closes #425934.
