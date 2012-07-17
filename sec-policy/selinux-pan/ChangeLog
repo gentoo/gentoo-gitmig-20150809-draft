@@ -1,5 +1,10 @@
 
 
+*selinux-pan-2.20120215-r14 (17 Jul 2012)
+
+  17 Jul 2012; <swift@gentoo.org> +selinux-pan-2.20120215-r14.ebuild:
+  Bumping to rev 14
+
 *selinux-pan-2.20120215-r1 (27 Jun 2012)
 
   27 Jun 2012; <swift@gentoo.org> +selinux-pan-2.20120215-r1.ebuild:
