@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/wcslib-4.13.2.ebuild,v 1.1 2012/03/25 09:24:08 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/wcslib-4.14.ebuild,v 1.1 2012/07/17 19:59:47 bicatali Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.atnf.csiro.au/pub/software/${PN}/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="LGPL-3"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="fortran fits pgplot static-libs"
 
 RDEPEND="fortran? ( virtual/fortran )
