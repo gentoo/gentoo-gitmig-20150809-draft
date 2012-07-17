@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ois/ois-1.3.ebuild,v 1.3 2012/06/21 02:03:07 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ois/ois-1.3.ebuild,v 1.4 2012/07/17 06:59:31 tupone Exp $
 
 EAPI=4
 inherit autotools autotools-utils
@@ -21,6 +21,7 @@ DEPEND="x11-libs/libXaw
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc47.patch
 	eautoreconf
 }
 

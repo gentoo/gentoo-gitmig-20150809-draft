@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/ois
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ois/ChangeLog,v 1.9 2012/06/21 02:03:07 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ois/ChangeLog,v 1.10 2012/07/17 06:59:31 tupone Exp $
+
+  17 Jul 2012; Tupone Alfredo <tupone@gentoo.org> ois-1.3.ebuild,
+  +files/ois-1.3-gcc47.patch:
+  Build with gcc-4.7 Bug #426442 by flameeyes@gentoo.org
 
   21 Jun 2012; Jeff Horelick <jdhore@gentoo.org> ois-1.3.ebuild:
   marked x86 per bug 422153
