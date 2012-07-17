@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/ifenslave
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ifenslave/ChangeLog,v 1.24 2010/03/20 17:04:28 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ifenslave/ChangeLog,v 1.25 2012/07/17 18:58:46 idl0r Exp $
+
+*ifenslave-1.1.0-r6 (17 Jul 2012)
+
+  17 Jul 2012; Christian Ruppert <idl0r@gentoo.org> +ifenslave-1.1.0-r6.ebuild:
+  Version bump. Don't install "deprecated" modprobe.d/modules.conf files. Bump
+  debian additions. Some refactoring.
 
   20 Mar 2010; Raúl Porcel <armin76@gentoo.org> ifenslave-1.1.0-r5.ebuild:
   sparc stable wrt #247885
