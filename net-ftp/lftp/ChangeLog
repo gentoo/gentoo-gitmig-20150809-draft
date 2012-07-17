@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.370 2012/07/10 18:56:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.371 2012/07/17 17:43:16 blueness Exp $
+
+  17 Jul 2012; Anthony G. Basile <blueness@gentoo.org> lftp-4.3.7.ebuild:
+  Stable ppc, bug #424922
 
   10 Jul 2012; Brent Baude <ranger@gentoo.org> lftp-4.3.7.ebuild:
   Marking lftp-4.3.7 ppc64 for bug 424922
