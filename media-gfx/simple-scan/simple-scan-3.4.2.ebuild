@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/simple-scan/simple-scan-3.2.1.ebuild,v 1.6 2012/07/17 06:53:57 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/simple-scan/simple-scan-3.4.2.ebuild,v 1.1 2012/07/17 06:53:57 tetromino Exp $
 
 EAPI="4"
 
@@ -10,11 +10,11 @@ inherit gnome2
 
 DESCRIPTION="Simple document scanning utility"
 HOMEPAGE="https://launchpad.net/simple-scan"
-SRC_URI="http://launchpad.net/${PN}/trunk/${PV}/+download/${P}.tar.bz2"
+SRC_URI="http://launchpad.net/${PN}/3.4/${PV}/+download/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 COMMON_DEPEND="
@@ -31,7 +31,7 @@ RDEPEND="${COMMON_DEPEND}
 	x11-misc/xdg-utils
 	x11-themes/gnome-icon-theme"
 DEPEND="${COMMON_DEPEND}
-	app-text/gnome-doc-utils
+	app-text/yelp-tools
 	dev-lang/vala:0.14
 	>=dev-util/intltool-0.35.0
 	virtual/pkgconfig"
