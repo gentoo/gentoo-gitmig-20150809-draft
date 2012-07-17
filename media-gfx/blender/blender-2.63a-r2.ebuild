@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.63a-r2.ebuild,v 1.1 2012/07/16 12:05:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.63a-r2.ebuild,v 1.2 2012/07/17 10:53:02 flameeyes Exp $
 
 EAPI=4
 PYTHON_DEPEND="3:3.2"
@@ -223,9 +223,16 @@ EOF
 
 	if use doc; then
 		einfo "Generating Blender C/C++ API docs ..."
-		cd "${WORKDIR}"/${P}/doc/doxygen
+		cd "${S}"/doc/doxygen
 		doxygen -u Doxyfile
 		doxygen || die "doxygen failed to build API docs."
+
+		cd "${S}"
+		einfo "Generating (BPY) Blender Python API docs ..."
+		"${WORKDIR}"/install/blender --background --python doc/python_api/sphinx_doc_gen.py -noaudio || die "blender failed."
+
+		cd "${S}"/doc/python_api
+		sphinx-build sphinx-in BPY_API || die "sphinx failed."
 	fi
 }
 
@@ -252,18 +259,11 @@ src_install() {
 	dodoc -r "${WORKDIR}"/${P}/doc/guides/*
 
 	if use doc; then
-		#einfo "Generating (BPY) Blender Python API docs ..."
-		"${D}"/usr/bin/blender --background --python doc/python_api/sphinx_doc_gen.py --noaudio || die "blender failed."
-
-		pushd doc/python_api > /dev/null
-		sphinx-build sphinx-in BPY_API || die "sphinx failed."
-		popd > /dev/null
-
 		docinto "API/python"
-		dohtml -r doc/python_api/BPY_API/*
+		dohtml -r "${S}"/doc/python_api/BPY_API/*
 
 		docinto "API/blender"
-		dohtml -r "${WORKDIR}"/${P}/doc/doxygen/html/*
+		dohtml -r "${S}"/doc/doxygen/html/*
 	fi
 
 	# final cleanup

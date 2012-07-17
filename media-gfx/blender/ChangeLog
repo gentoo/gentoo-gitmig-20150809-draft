@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/blender
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.232 2012/07/17 06:33:23 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.233 2012/07/17 10:53:02 flameeyes Exp $
+
+  17 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> blender-2.63a-r2.ebuild:
+  Avoid sandbox violation by disabling audio correctly (fixes bug #426950,
+  thanks to Weihua Zhou for the report). Also move the remaining doc generation
+  to src_compile instead of install.
 
   17 Jul 2012; Sergei Trofimovich <slyfox@gentoo.org>
   +files/blender-2.49b-linux-3.patch, blender-2.49b-r2.ebuild:
