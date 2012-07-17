@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/claws-mail
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.205 2012/06/30 15:23:26 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.206 2012/07/17 19:51:57 fauli Exp $
+
+*claws-mail-3.8.1-r1 (17 Jul 2012)
+
+  17 Jul 2012; Christian Faulhammer <fauli@gentoo.org>
+  +claws-mail-3.8.1-r1.ebuild, +files/claws-mail-3.8.1_fix-signature.patch:
+  Fix segfault with signature checking as reported in bug 424882 by Alexander
+  Tsoy, patch from upstream.
 
 *claws-mail-3.8.1 (30 Jun 2012)
 
