@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwapcaplet/libwapcaplet-0.1.1.ebuild,v 1.1 2012/07/17 22:35:31 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwapcaplet/libwapcaplet-0.1.1.ebuild,v 1.2 2012/07/17 22:36:18 xmw Exp $
 
 EAPI=4
 
@@ -18,7 +18,6 @@ IUSE="static-libs"
 RDEPEND=""
 DEPEND="virtual/pkgconfig
 	test? ( dev-libs/check )"
-
 
 src_prepare() {
 	sed -e "/^INSTALL_ITEMS/s: /lib: /$(get_libdir):g" \
