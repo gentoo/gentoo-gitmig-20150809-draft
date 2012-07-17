@@ -19,10 +19,10 @@ if [ -e /etc/conf.d/mythfrontend ]; then
 fi
 
 if [ "x${MYTHWELCOME}" = "xtrue" ]; then
-    exec /usr/bin/mythwelcome ${MYTHFRONTEND_OPTS}
+    exec /usr/bin/mythwelcome ${MYTHFRONTEND_OPTS} "$@"
     RET=$?
 else
-    exec /usr/bin/mythfrontend.real ${MYTHFRONTEND_OPTS}
+    exec /usr/bin/mythfrontend.real ${MYTHFRONTEND_OPTS} "$@"
     RET=$?
 fi
 
