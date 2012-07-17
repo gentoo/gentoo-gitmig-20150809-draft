@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.2.ebuild,v 1.1 2012/07/16 16:15:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.2.ebuild,v 1.2 2012/07/17 11:21:10 flameeyes Exp $
 
 EAPI=4
+
+PATCHSET=2
 
 inherit eutils user versionator
 
@@ -10,7 +12,8 @@ MY_P=${P/_/-}
 
 DESCRIPTION="Munin Server Monitoring Tool"
 HOMEPAGE="http://munin-monitoring.org/"
-SRC_URI="mirror://sourceforge/munin/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/munin/${MY_P}.tar.gz
+	http://dev.gentoo.org/~flameeyes/${PN}/${P}-patches-${PATCHSET}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -24,7 +27,6 @@ DEPEND_COM="dev-lang/perl
 			sys-process/procps
 			asterisk? ( dev-perl/Net-Telnet )
 			irc? ( dev-perl/Net-IRC )
-			java? ( >=virtual/jdk-1.5 )
 			mysql? ( virtual/mysql
 					 dev-perl/Cache-Cache
 					 dev-perl/DBD-mysql )
@@ -54,6 +56,7 @@ DEPEND_COM="dev-lang/perl
 # Keep this seperate, as previous versions have had other deps here
 DEPEND="${DEPEND_COM}
 	virtual/perl-Module-Build
+	java? ( >=virtual/jdk-1.5 )
 	test? (
 		dev-perl/Test-LongString
 		dev-perl/Test-Differences
@@ -62,6 +65,7 @@ DEPEND="${DEPEND_COM}
 		dev-perl/IO-stringy
 	)"
 RDEPEND="${DEPEND_COM}
+		java? ( >=virtual/jre-1.5 )
 		!minimal? ( virtual/cron )"
 
 S="${WORKDIR}/${MY_P}"
@@ -72,20 +76,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.4.7-munin-version-identifier.patch
-
-	# Don't build java plugins if not requested via USE.
-	if ! use java; then
-		sed -i -e 's: build-plugins-java : :' \
-			-e 's: install-plugins-java : :' Makefile || die
-	fi
-
-	# Bug 304447, fix for gentoo PS location
-	sed -i -e 's,/usr/bin/ps,/bin/ps,g' \
-		"${S}"/plugins/node.d/ifx_concurrent_sessions_.in || die
-
-	# bug 367785, cleanup make output by disabling HP-UX cruft
-	sed -i "/plugins\/\*\.adv/d" Makefile || die
+	epatch "${WORKDIR}"/patches/*.patch
 }
 
 src_configure() {
@@ -103,6 +94,7 @@ CGIDIR=${cgidir}
 DBDIR=\$(DESTDIR)/var/lib/munin
 LOGDIR=\$(DESTDIR)/var/log/munin
 PERLSITELIB=$(perl -V:vendorlib | cut -d"'" -f2)
+JCVALID=$(usex java yes no)
 EOF
 }
 
@@ -130,14 +122,17 @@ src_install() {
 
 	# make sure we've got everything in the correct directory
 	insinto /var/lib/munin
-	newins "${FILESDIR}"/${PN}-2.0_rc-crontab crontab
+	newins "${FILESDIR}"/${PN}-1.3.3-crontab crontab
 	newinitd "${FILESDIR}"/munin-node_init.d_2.0.2 munin-node
 	newconfd "${FILESDIR}"/munin-node_conf.d_1.4.6-r2 munin-node
 	dodoc README ChangeLog INSTALL build/resources/apache*
 
 	# bug 254968
 	insinto /etc/logrotate.d/
-	newins "${FILESDIR}"/logrotate.d-munin munin || die
+	newins "${FILESDIR}"/logrotate.d-munin munin
+
+	exeinto /etc/local.d/
+	newexe "${FILESDIR}"/localstart-munin 50munin.start
 }
 
 pkg_config() {
