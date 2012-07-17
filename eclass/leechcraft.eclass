@@ -1,14 +1,14 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/leechcraft.eclass,v 1.4 2011/12/16 16:40:46 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/leechcraft.eclass,v 1.5 2012/07/17 04:29:05 vapier Exp $
 #
 # @ECLASS: leechcraft.eclass
 # @MAINTAINER:
 # leechcraft@gentoo.org
-# @BLURB: Common functions and setup utilities for the LeechCraft app
 # @AUTHOR:
 # 0xd34df00d@gmail.com
 # NightNord@niifaq.ru
+# @BLURB: Common functions and setup utilities for the LeechCraft app
 # @DESCRIPTION:
 # The leechcraft eclass contains a common set of functions and steps
 # needed to build LeechCraft core or its plugins.
