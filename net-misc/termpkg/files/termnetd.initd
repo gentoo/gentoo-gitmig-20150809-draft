@@ -1,13 +1,15 @@
 #!/sbin/runscript
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/termpkg/files/termnetd.initd,v 1.1 2008/09/23 19:34:00 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/termpkg/files/termnetd.initd,v 1.2 2012/07/17 19:50:15 sbriesen Exp $
 
 description="Terminal Server daemon (${RC_SVCNAME#*.})"
-description_reload="Reread configuration file and make the appropriate changes"
-extra_started_commands="reload"
 command="/usr/sbin/termnetd"
-name="termnetd"
+name="${RC_SVCNAME}"
+
+extra_started_commands="reload"
+description_reload="Reread configuration file and make the appropriate changes"
+start_stop_daemon_args="--quiet --exec ${command} --name ${name}"
 
 depend() {
 	use logger
@@ -33,18 +35,18 @@ config_check() {
 start() {
 	config_check || return ${?}
 	ebegin "Starting ${description}"
-	start-stop-daemon --start --quiet --exec "${command}" -- ${command_args}
+	start-stop-daemon --start ${start_stop_daemon_args} -- ${command_args}
 	eend ${?}
 }
 
 stop() {
 	ebegin "Stopping ${description}"
-	start-stop-daemon --stop --quiet --oknodo --exec "${command}" --name "${name}"
+	start-stop-daemon --stop ${start_stop_daemon_args}
 	eend ${?}
 }
 
 reload() {
 	ebegin "Reloading ${description}"
-	start-stop-daemon --stop --signal HUP --oknodo --exec "${command}" --name "${name}"
+	start-stop-daemon --signal HUP ${start_stop_daemon_args}
 	eend ${?}
 }

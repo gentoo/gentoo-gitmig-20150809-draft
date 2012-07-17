@@ -1,10 +1,13 @@
 #!/sbin/runscript
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/termpkg/files/ttyd.initd,v 1.1 2008/09/23 19:34:00 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/termpkg/files/ttyd.initd,v 1.2 2012/07/17 19:50:15 sbriesen Exp $
 
 description="Remote Modem Utility (${RC_SVCNAME#*.})"
 command="/usr/sbin/ttyd"
+name="${RC_SVCNAME}"
+
+start_stop_daemon_args="--quiet --exec ${command} --name ${name}"
 
 depend() {
 	use logger
@@ -74,7 +77,7 @@ start() {
 	config_check || return ${?}
 	device_check || return ${?}
 	ebegin "Starting ${description}"
-	start-stop-daemon --start --quiet --exec "${command}" -- ${command_args}
+	start-stop-daemon --start ${start_stop_daemon_args} -- ${command_args}
 	if eend ${?}; then
 		setup_perms
 		setup_links
@@ -84,11 +87,8 @@ start() {
 
 stop() {
 	config_check || return ${?}
-	# we can't use start-stop-daemon, because we don't have a pidfile
-	# *and* multiple processes can run at the same time. So we use
-	# pkill to identify *our* process via commandline args.
 	ebegin "Stopping ${description}"
-	/usr/bin/pkill -f "^${command} -d ${DEV_PTY} "
+	start-stop-daemon --stop ${start_stop_daemon_args}
 	eend ${?}
 	unset_links
 	unset_perms
