@@ -1,6 +1,13 @@
 # ChangeLog for dev-tcltk/bwidget
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/bwidget/ChangeLog,v 1.17 2012/06/07 20:39:34 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/bwidget/ChangeLog,v 1.18 2012/07/17 11:42:08 jlec Exp $
+
+*bwidget-1.9.0 (17 Jul 2012)
+
+  17 Jul 2012; Justin Lecher <jlec@gentoo.org> -bwidget-1.4.1.ebuild,
+  bwidget-1.7.0.ebuild, bwidget-1.8.0.ebuild, +bwidget-1.9.0.ebuild,
+  metadata.xml:
+  Version Bump, #426408; move to EAPI=4; drop old
 
   07 Jun 2012; Zac Medico <zmedico@gentoo.org> bwidget-1.7.0.ebuild,
   bwidget-1.8.0.ebuild:
