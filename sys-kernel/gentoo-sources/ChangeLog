@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.994 2012/07/16 06:06:36 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.995 2012/07/17 15:20:38 mpagano Exp $
+
+*gentoo-sources-3.4.5 (17 Jul 2012)
+
+  17 Jul 2012; Michael Pagano <mpagano@gentoo.org>
+  +gentoo-sources-3.4.5.ebuild:
+  Check VBIOS value for determining LVDS dual channel mode. Correct firmware
+  version for bnx2 on mips. Bug #424609. Linux patch 3.4.5. Removal of
+  redundant patch.
 
   16 Jul 2012; Jeff Horelick <jdhore@gentoo.org> gentoo-sources-3.3.8.ebuild:
   marked x86 per bug 422715
