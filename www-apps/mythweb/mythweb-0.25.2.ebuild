@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.25.1_p20120715.ebuild,v 1.3 2012/07/16 22:02:57 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.25.2.ebuild,v 1.1 2012/07/17 00:30:14 cardoe Exp $
 
 EAPI=4
 
 inherit eutils webapp
 
-BACKPORTS="4f6ac2a60b"
+#BACKPORTS="4f6ac2a60b"
 # Release version
 MY_PV="${PV%_p*}"
 MY_P="mythplugins-${MY_PV}"
