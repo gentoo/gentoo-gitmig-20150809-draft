@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/qpdfview-0.3.1-r1.ebuild,v 1.1 2012/07/12 13:54:27 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/qpdfview-0.3.2_beta1.ebuild,v 1.1 2012/07/17 05:50:27 yngwin Exp $
 
 EAPI=4
 inherit qt4-r2
@@ -26,11 +26,6 @@ DEPEND="${RDEPEND}
 DOCS="CONTRIBUTORS README TODO"
 
 S=${WORKDIR}/${P/_}
-
-src_prepare() {
-	# bug 426314, upstream accepted patch for next release
-	sed -ie 's/Exec=qpdfview/Exec=qpdfview --unique/' miscellaneous/qpdfview.desktop || die
-}
 
 src_configure() {
 	local config i
