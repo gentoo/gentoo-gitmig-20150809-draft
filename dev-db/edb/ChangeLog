@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/edb
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/ChangeLog,v 1.24 2010/10/19 05:49:58 leio Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/ChangeLog,v 1.25 2012/07/17 02:37:49 vapier Exp $
+
+  17 Jul 2012; Mike Frysinger <vapier@gentoo.org> edb-1.0.5.042.ebuild,
+  edb-1.0.5.ebuild:
+  Update HOMEPAGE to main enlightenment site #416181 by df.
 
   19 Oct 2010; Mart Raudsepp <leio@gentoo.org> edb-1.0.5.ebuild:
   Drop to ~mips

@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/edb-1.0.5.ebuild,v 1.9 2010/10/19 05:49:58 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/edb-1.0.5.ebuild,v 1.10 2012/07/17 02:37:49 vapier Exp $
 
 ECVS_MODULE="e17/libs/edb"
 inherit enlightenment flag-o-matic
 
 DESCRIPTION="Enlightenment Data Base"
-HOMEPAGE="http://www.enlightenment.org/Libraries/Edb/"
+HOMEPAGE="http://www.enlightenment.org/"
 
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86"
 IUSE="gtk ncurses"
