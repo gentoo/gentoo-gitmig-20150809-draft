@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/curator
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/curator/ChangeLog,v 1.8 2008/02/19 11:57:36 hollow Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/curator/ChangeLog,v 1.9 2012/07/17 19:14:27 fauli Exp $
+
+*curator-3.0_p20110120 (17 Jul 2012)
+
+  17 Jul 2012; Christian Faulhammer <fauli@gentoo.org> curator-2.1.ebuild,
+  +curator-3.0_p20110120.ebuild:
+  version bump from SCM snapshot and fixing bugs 316967 (Python handling) and
+  314385 (dependency on imagemagick)
 
   19 Feb 2008; Benedikt Böhm <hollow@gentoo.org> metadata.xml,
   curator-2.0.ebuild, curator-2.1.ebuild:
