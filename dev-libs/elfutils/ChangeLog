@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.161 2012/06/23 22:41:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.162 2012/07/17 14:52:50 vapier Exp $
+
+*elfutils-0.154-r1 (17 Jul 2012)
+
+  17 Jul 2012; Mike Frysinger <vapier@gentoo.org> +elfutils-0.154-r1.ebuild,
+  metadata.xml:
+  Add knobs for controlling install of utilities (so we can install just
+  libraries), static libs, and thread support.
 
 *elfutils-0.154 (23 Jun 2012)
 
