@@ -8,5 +8,6 @@
 	</maintainer>
 	<upstream>
 		<remote-id type="pypi">django-celery</remote-id>
+		<remote-id type="github">github/django-celery</remote-id>
 	</upstream>
 </pkgmetadata>
