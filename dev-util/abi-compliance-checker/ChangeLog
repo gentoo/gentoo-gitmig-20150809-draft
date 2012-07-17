@@ -1,0 +1,6 @@
+*abi-compliance-checker-1.98.2 (17 Jul 2012)
+
+  17 Jul 2012; Michał Górny <mgorny@gentoo.org>
+  +abi-compliance-checker-1.98.2.ebuild, +metadata.xml:
+  Introduce an ebuild for abi-compliance-checker; a tool to check two library
+  versions for ABI & API compliance.
