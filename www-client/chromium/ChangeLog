@@ -1,6 +1,9 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.672 2012/07/17 03:49:57 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.673 2012/07/17 16:21:44 jdhore Exp $
+
+  17 Jul 2012; Jeff Horelick <jdhore@gentoo.org> chromium-20.0.1132.57.ebuild:
+  marked x86 per bug 426204
 
 *chromium-22.0.1207.1 (17 Jul 2012)
 
