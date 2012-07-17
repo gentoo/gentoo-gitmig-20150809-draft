@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/xf86-video-openchrome
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-openchrome/ChangeLog,v 1.61 2012/06/24 11:16:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-openchrome/ChangeLog,v 1.62 2012/07/17 16:32:06 jer Exp $
+
+  17 Jul 2012; Jeroen Roovers <jer@gentoo.org>
+  xf86-video-openchrome-0.2.906.ebuild,
+  +files/xf86-video-openchrome-0.2.906-xorg-1.12.patch:
+  Fix a segmentation fault while running in xorg 1.12 (Debian bug #675407).
 
   24 Jun 2012; Agostino Sarubbo <ago@gentoo.org>
   xf86-video-openchrome-0.2.906.ebuild:

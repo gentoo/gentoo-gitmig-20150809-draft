@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-openchrome/xf86-video-openchrome-0.2.906.ebuild,v 1.3 2012/06/24 11:16:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-openchrome/xf86-video-openchrome-0.2.906.ebuild,v 1.4 2012/07/17 16:32:06 jer Exp $
 
 EAPI=4
 XORG_DRI="dri"
-inherit xorg-2
+inherit eutils xorg-2
 
 DESCRIPTION="X.Org driver for VIA/S3G cards"
 HOMEPAGE="http://www.openchrome.org"
@@ -25,6 +25,10 @@ DEPEND="
 "
 
 DOCS=( ChangeLog NEWS README )
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-xorg-1.12.patch
+}
 
 pkg_setup() {
 	xorg-2_pkg_setup
