@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libparserutils/libparserutils-0.1.1.ebuild,v 1.1 2012/07/17 16:54:25 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libparserutils/libparserutils-0.1.1.ebuild,v 1.2 2012/07/17 21:43:44 xmw Exp $
 
 EAPI=4
 
 inherit flag-o-matic multilib toolchain-funcs
 
 DESCRIPTION="library for building efficient parsers, written in C"
-HOMEPAGE="http://www.netsurf-browser.org/projects/"
+HOMEPAGE="http://www.netsurf-browser.org/projects/libparserutils/"
 SRC_URI="http://download.netsurf-browser.org/libs/releases/${P}-src.tar.gz"
 
 LICENSE="MIT"
