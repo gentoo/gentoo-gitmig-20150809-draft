@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.2-r1.ebuild,v 1.13 2012/07/15 10:39:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.2-r1.ebuild,v 1.14 2012/07/17 08:11:22 jlec Exp $
 
 EAPI=4
 
@@ -29,7 +29,6 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-4.0.7-fastica-fix-endless-loop.patch
 	"${FILESDIR}"/${P}-fastica-correct-dim.patch
 	"${FILESDIR}"/${P}-test-fftw.patch
-	"${FILESDIR}"/${P}-automake-1.12.patch
 	)
 
 src_prepare() {
