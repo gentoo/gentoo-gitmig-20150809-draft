@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/tmpwatch
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/ChangeLog,v 1.101 2011/09/13 18:20:13 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/ChangeLog,v 1.102 2012/07/17 19:29:46 fauli Exp $
+
+*tmpwatch-2.11 (17 Jul 2012)
+
+  17 Jul 2012; Christian Faulhammer <fauli@gentoo.org> +tmpwatch-2.11.ebuild:
+  version bump
 
   13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #225633
