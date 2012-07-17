@@ -1,19 +1,19 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/cogl-1.10.0.ebuild,v 1.3 2012/07/14 13:26:07 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/cogl-1.10.4.ebuild,v 1.1 2012/07/17 23:32:02 tetromino Exp $
 
 EAPI="4"
 CLUTTER_LA_PUNT="yes"
 
 # Inherit gnome2 after clutter to download sources from gnome.org
-inherit clutter gnome2 virtualx
+inherit clutter gnome2 multilib virtualx
 
 DESCRIPTION="A library for using 3D graphics hardware to draw pretty pictures"
 HOMEPAGE="http://www.clutter-project.org/"
 
 LICENSE="LGPL-2.1"
 SLOT="1.0"
-IUSE="doc examples +introspection +pango"
+IUSE="doc examples +introspection +opengl gles2 +pango"
 KEYWORDS="~alpha ~amd64 ~mips ~ppc ~ppc64 ~x86"
 
 # XXX: need uprof for optional profiling support
@@ -27,6 +27,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.28.0:2
 	x11-libs/libXext
 	>=x11-libs/libXfixes-3
 	virtual/opengl
+	gles2? ( media-libs/mesa[gles2] )
 
 	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )
 	pango? ( >=x11-libs/pango-1.20.0[introspection?] )"
@@ -38,7 +39,8 @@ DEPEND="${COMMON_DEPEND}
 	sys-devel/gettext
 	doc? ( app-text/docbook-xml-dtd:4.1.2
 		>=dev-util/gtk-doc-1.13 )
-	test? ( media-libs/mesa[classic] )"
+	test? (	app-admin/eselect-opengl
+		media-libs/mesa[classic] )"
 # Need classic mesa swrast for tests, llvmpipe causes a test failure
 
 pkg_setup() {
@@ -51,9 +53,11 @@ pkg_setup() {
 		--disable-maintainer-flags
 		--enable-cairo
 		--enable-gdk-pixbuf
-		--enable-gl
+		$(use_enable opengl glx)
+		$(use_enable opengl gl)
+		$(use_enable gles2)
+		$(use_enable gles2 xlib-egl-platform)
 		--enable-glib
-		--enable-glx
 		--enable-deprecated
 		$(use_enable introspection)
 		$(use_enable pango cogl-pango)"
@@ -62,7 +66,13 @@ pkg_setup() {
 src_test() {
 	# Use swrast for tests, llvmpipe is incomplete and "test_sub_texture" fails
 	# NOTE: recheck if this is needed after every mesa bump
-	LIBGL_DRIVERS_PATH=${EROOT}/usr/$(get_libdir)/mesa Xemake check
+	if [[ "$(eselect opengl show)" != "xorg-x11" ]]; then
+		ewarn "Skipping tests because a binary OpenGL library is enabled. To"
+		ewarn "run tests for ${PN}, you need to enable the Mesa library:"
+		ewarn "# eselect opengl set xorg-x11"
+		return
+	fi
+	LIBGL_DRIVERS_PATH="${EROOT}/usr/$(get_libdir)/mesa" Xemake check
 }
 
 src_install() {
