@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/plasma-mpd-nowplaying
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-mpd-nowplaying/ChangeLog,v 1.5 2012/07/16 20:29:26 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-mpd-nowplaying/ChangeLog,v 1.6 2012/07/17 05:46:27 jdhore Exp $
+
+  17 Jul 2012; Jeff Horelick <jdhore@gentoo.org>
+  plasma-mpd-nowplaying-0.2.ebuild:
+  marked x86 per bug 426904
 
   16 Jul 2012; Johannes Huber <johu@gentoo.org>
   plasma-mpd-nowplaying-0.2.ebuild:
