@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51-r3.ebuild,v 1.1 2012/07/17 21:43:36 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51-r3.ebuild,v 1.2 2012/07/17 21:48:57 mr_bones_ Exp $
 
 EAPI=2
-inherit eutils autotools flag-o-matic toolchain-funcs multilib games pax-utils
+inherit eutils autotools flag-o-matic toolchain-funcs multilib pax-utils games
 
 DESCRIPTION="SNES (Super Nintendo) emulator that uses x86 assembly"
 HOMEPAGE="http://www.zsnes.com/ http://ipherswipsite.com/zsnes/"
