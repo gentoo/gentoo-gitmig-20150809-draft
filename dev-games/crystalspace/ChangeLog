@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/crystalspace
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.55 2012/05/03 06:35:32 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.56 2012/07/17 12:33:39 tupone Exp $
+
+  17 Jul 2012; Tupone Alfredo <tupone@gentoo.org> crystalspace-1.4.0.ebuild,
+  +files/crystalspace-1.4.0-gcc47.patch:
+  Fix build with gcc-4.7 Bug #426870 by flameeyes@gentoo.org
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> crystalspace-1.4.0.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

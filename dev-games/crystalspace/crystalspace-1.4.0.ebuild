@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.4.0.ebuild,v 1.10 2012/05/03 06:35:32 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.4.0.ebuild,v 1.11 2012/07/17 12:33:39 tupone Exp $
 
 EAPI=2
 inherit eutils flag-o-matic multilib java-pkg-opt-2 autotools wxwidgets versionator
@@ -60,7 +60,8 @@ src_prepare() {
 		docs/Jamfile \
 		|| die "sed failed"
 	epatch "${FILESDIR}"/${P}-bullet.patch \
-		"${FILESDIR}"/${P}-png15.patch
+		"${FILESDIR}"/${P}-png15.patch \
+		"${FILESDIR}"/${P}-gcc47.patch
 	AT_M4DIR=mk/autoconf
 	eautoreconf
 }
