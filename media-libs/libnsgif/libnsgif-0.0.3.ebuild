@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libnsgif/libnsgif-0.0.3.ebuild,v 1.1 2012/07/17 23:20:37 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libnsgif/libnsgif-0.0.3.ebuild,v 1.2 2012/07/17 23:25:46 xmw Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ src_prepare() {
 		-e "s:-Werror::g" \
 		-i Makefile || die
 	sed -e "/^libdir/s:/lib:/$(get_libdir):g" \
-		-i libnsgif.pc.in || die
+		-i ${PN}.pc.in || die
 	echo "Q := " >> Makefile.config.override
 	echo "CC := $(tc-getCC)" >> Makefile.config.override
 	echo "AR := $(tc-getAR)" >> Makefile.config.override
