@@ -1,33 +1,32 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-9999.ebuild,v 1.10 2012/07/17 05:35:02 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.3.ebuild,v 1.1 2012/07/17 05:35:02 pva Exp $
 
 EAPI="4"
 
-inherit bash-completion-r1 autotools git-2
+inherit bash-completion-r1 eutils
 
 DESCRIPTION="OpenVZ ConTainers control utility"
 HOMEPAGE="http://openvz.org/"
-EGIT_REPO_URI="git://git.openvz.org/pub/${PN}
-	http://git.openvz.org/pub/${PN}"
+SRC_URI="http://download.openvz.org/utils/${PN}/${PV}/src/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
 	net-firewall/iptables
 	sys-apps/ed
 	sys-apps/iproute2
-	sys-fs/vzquota"
+	sys-fs/vzquota
+	sys-cluster/ploop"
 
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	# Set default OSTEMPLATE on gentoo
+	# Set default OSTEMPLATE on gentoo added
 	sed -e 's:=redhat-:=gentoo-:' -i etc/dists/default || die
-	eautoreconf
 	sed -e '/udevdir/{s|$(sysconfdir)|/lib|}' -i etc/udev/Makefile.in || die
 }
 
