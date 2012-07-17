@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/chromium.eclass,v 1.5 2012/05/30 06:15:24 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/chromium.eclass,v 1.6 2012/07/17 03:56:26 floppym Exp $
 
 # @ECLASS: chromium.eclass
 # @MAINTAINER:
@@ -122,7 +122,7 @@ chromium_remove_language_paks() {
 			continue
 		fi
 		if ! use linguas_${lang}; then
-			rm -v "$(_chromium_crlang ${lang}).pak" || die
+			rm "$(_chromium_crlang ${lang}).pak" || die
 		fi
 	done
 }
