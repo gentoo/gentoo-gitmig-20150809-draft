@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql-workbench
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.62 2012/07/15 09:31:35 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.63 2012/07/17 05:16:14 jdhore Exp $
+
+  17 Jul 2012; Jeff Horelick <jdhore@gentoo.org> mysql-workbench-5.2.40.ebuild:
+  marked x86 per bug 426678
 
   15 Jul 2012; Hans de Graaff <graaff@gentoo.org>
   -mysql-workbench-5.2.39.ebuild:
