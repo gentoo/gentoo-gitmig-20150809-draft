@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13973 2012/07/17 00:44:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13974 2012/07/17 03:45:49 floppym Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -87,6 +87,7 @@ app-laptop/omnibook
 # experimental features and accept a more unstable release.
 >=www-client/chromium-22
 >=www-client/google-chrome-22
+>=dev-lang/nacl-toolchain-newlib-0_p9093
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (08 Jul 2012)
 # Dead upstream (domain is gone as well), very bad code.

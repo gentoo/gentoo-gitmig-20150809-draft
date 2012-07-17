@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6794 2012/07/16 21:46:07 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6795 2012/07/17 03:45:49 floppym Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Jul 2012; Mike Gilbert <floppym@gentoo.org> package.mask:
+  Add nacl-toolchain-newlib-0_p9093 to chromium mask.
 
   16 Jul 2012; Johannes Huber <johu@gentoo.org> updates/3Q-2012:
   Move kde-misc/kbstateapplet from SLOT 0 to 4.
