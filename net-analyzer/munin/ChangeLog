@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.73 2012/07/17 11:21:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.74 2012/07/17 13:59:48 flameeyes Exp $
+
+  17 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> munin-2.0.2.ebuild:
+  Unbundle DejaVu fonts by depending on them and using a newer rrdtool as a
+  minimum; properly wire in installation of the Java library.
 
   17 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> +files/localstart-munin,
   -files/munin-2.0_rc-crontab, munin-2.0.2.ebuild:

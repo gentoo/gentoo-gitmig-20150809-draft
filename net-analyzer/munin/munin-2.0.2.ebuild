@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.2.ebuild,v 1.2 2012/07/17 11:21:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.2.ebuild,v 1.3 2012/07/17 13:59:48 flameeyes Exp $
 
 EAPI=4
 
-PATCHSET=2
+PATCHSET=3
 
-inherit eutils user versionator
+inherit eutils user versionator java-pkg-opt-2
 
 MY_P=${P/_/-}
 
@@ -50,7 +50,7 @@ DEPEND_COM="dev-lang/perl
 			virtual/perl-Text-Balanced
 			virtual/perl-Time-HiRes
 			!minimal? ( dev-perl/HTML-Template
-						net-analyzer/rrdtool[perl]
+						>=net-analyzer/rrdtool-1.3[perl]
 						dev-perl/Log-Log4perl )"
 
 # Keep this seperate, as previous versions have had other deps here
@@ -66,17 +66,22 @@ DEPEND="${DEPEND_COM}
 	)"
 RDEPEND="${DEPEND_COM}
 		java? ( >=virtual/jre-1.5 )
-		!minimal? ( virtual/cron )"
+		!minimal? (
+			virtual/cron
+			media-fonts/dejavu
+		)"
 
 S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	enewgroup munin
 	enewuser munin 177 -1 /var/lib/munin munin
+	java-pkg-opt-2_pkg_setup
 }
 
 src_prepare() {
 	epatch "${WORKDIR}"/patches/*.patch
+	java-pkg-opt-2_src_prepare
 }
 
 src_configure() {
@@ -95,6 +100,7 @@ DBDIR=\$(DESTDIR)/var/lib/munin
 LOGDIR=\$(DESTDIR)/var/log/munin
 PERLSITELIB=$(perl -V:vendorlib | cut -d"'" -f2)
 JCVALID=$(usex java yes no)
+JAVALIBDIR=${T}/java
 EOF
 }
 
@@ -117,6 +123,9 @@ src_install() {
 	emake DESTDIR="${D}" ${install_targets}
 	fowners munin:munin ${dirs}
 
+	# remove font files so that we don't have to keep them around
+	rm "${D}"/usr/libexec/${PN}/*.ttf || die
+
 	insinto /etc/munin/plugin-conf.d/
 	newins "${FILESDIR}"/${PN}-1.3.2-plugins.conf munin-node
 
@@ -133,6 +142,10 @@ src_install() {
 
 	exeinto /etc/local.d/
 	newexe "${FILESDIR}"/localstart-munin 50munin.start
+
+	if use java; then
+		java-pkg_dojar "${T}"/java/*.jar
+	fi
 }
 
 pkg_config() {
