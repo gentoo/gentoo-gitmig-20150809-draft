@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gle/gle-4.2.4b.ebuild,v 1.1 2012/03/09 08:24:20 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gle/gle-4.2.4b.ebuild,v 1.2 2012/07/17 14:37:31 jlec Exp $
 
 EAPI=4
 inherit eutils elisp-common qt4-r2 flag-o-matic autotools
@@ -33,7 +33,9 @@ RDEPEND="${DEPEND}
 S="${WORKDIR}"/${MY_P}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-parallel.patch
+	epatch \
+		"${FILESDIR}"/${P}-parallel.patch \
+		"${FILESDIR}"/${P}-gcc-4.7.patch
 	eaclocal
 	eautoconf
 }
