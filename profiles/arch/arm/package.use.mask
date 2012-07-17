@@ -1,6 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.80 2012/07/09 19:38:17 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.81 2012/07/17 11:01:54 blueness Exp $
+
+# Anthony G. Basile <blueness@gentoo.org> (17 Jul 2012)
+# Only work on amd64/x86
+net-libs/cyassl aes-ni
 
 # Rick Farina <zerochaos@gentoo.org> (09 July 2012)
 # limited testing of net-libs/libbtbb is all this mask is needed for                   
