@@ -8,5 +8,6 @@
 	</maintainer>
 	<upstream>
 		<remote-id type="pypi">kombu</remote-id>
+		<remote-id type="github">celery/kombu</remote-id>
 	</upstream>
 </pkgmetadata>
