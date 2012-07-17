@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gevent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gevent/ChangeLog,v 1.6 2012/05/21 08:07:56 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gevent/ChangeLog,v 1.7 2012/07/17 02:10:30 vapier Exp $
+
+  17 Jul 2012; Mike Frysinger <vapier@gentoo.org> gevent-0.13.7.ebuild,
+  gevent-1.0_beta2.ebuild:
+  Add arm love.
 
   21 May 2012; Kacper Kowalik <xarthisius@gentoo.org> gevent-0.13.7.ebuild,
   gevent-1.0_beta2.ebuild:
@@ -24,4 +28,3 @@
   +metadata.xml:
   Initial import, fixes #415589. Ebuild written by Ian Delaney
   <johneed@hotmail.com>
-

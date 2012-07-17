@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/greenlet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/greenlet/ChangeLog,v 1.8 2012/06/28 06:31:59 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/greenlet/ChangeLog,v 1.9 2012/07/17 02:09:45 vapier Exp $
+
+  17 Jul 2012; Mike Frysinger <vapier@gentoo.org> greenlet-0.4.0.ebuild:
+  Add arm love.
 
 *greenlet-0.4.0 (28 Jun 2012)
 
