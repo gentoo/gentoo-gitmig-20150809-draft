@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/simple-scan
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/simple-scan/ChangeLog,v 1.15 2012/05/05 07:00:21 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/simple-scan/ChangeLog,v 1.16 2012/07/17 06:37:00 tetromino Exp $
+
+  17 Jul 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -files/simple-scan-2.31.90.2-support-non-pkgconfig-zlib.patch,
+  simple-scan-2.32.0.2.ebuild, simple-scan-3.2.1.ebuild:
+  Drop useless support for ancient zlib to avoid autoreconf. As a side effect,
+  fixes bug #423705.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> simple-scan-2.32.0.2.ebuild,
   simple-scan-3.2.1.ebuild:

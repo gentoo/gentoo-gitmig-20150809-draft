@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/simple-scan/simple-scan-3.2.1.ebuild,v 1.4 2012/05/05 07:00:21 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/simple-scan/simple-scan-3.2.1.ebuild,v 1.5 2012/07/17 06:37:00 tetromino Exp $
 
 EAPI="4"
 
 GCONF_DEBUG="no"
 
-inherit autotools eutils gnome2
+inherit gnome2
 
 DESCRIPTION="Simple document scanning utility"
 HOMEPAGE="https://launchpad.net/simple-scan"
@@ -22,7 +22,7 @@ COMMON_DEPEND="
 	>=media-gfx/sane-backends-1.0.20
 	virtual/jpeg
 	|| ( >=sys-fs/udev-171[gudev] >=sys-fs/udev-145[extras] )
-	sys-libs/zlib
+	>=sys-libs/zlib-1.2.3.1
 	x11-libs/cairo
 	>=x11-libs/gtk+-3:3
 	x11-misc/colord[scanner]
@@ -40,14 +40,4 @@ DEPEND="${COMMON_DEPEND}
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS README"
 	G2CONF="${G2CONF} VALAC=$(type -p valac-0.14)"
-}
-
-src_prepare() {
-	# Expects a zlib with pkg-config support (>=1.2.5).
-	epatch "${FILESDIR}"/${PN}-2.31.90.2-support-non-pkgconfig-zlib.patch
-
-	intltoolize --force --copy --automake || die "intltoolize failed"
-	eautoreconf
-
-	gnome2_src_prepare
 }
