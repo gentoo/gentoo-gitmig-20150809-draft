@@ -7,8 +7,6 @@
 	<description>Do not CC me on bugs</description>
 </maintainer>
 <use>
-	<flag name="video_cards_nvidia">When combined with the xvmc USE flag,
-		enables NVIDIA specific XvMC extension usage.</flag>
 	<flag name="alsa">Allows MythTV to directly output sound to ALSA devices,
 		this is needed if you are using ALSA dmix or SPDIF. Note, you will have
 		to physically type your device into the MythTV configuration since it
@@ -59,8 +57,5 @@
 		playback</flag>
 	<flag name="xmltv">Pulls in the <pkg>media-tv/xmltv</pkg> TV listing
 		grabbers for users not using Schedules Direct.</flag>
-	<flag name="xvmc">Instructs MythTV to use XvMC for its video output. By
-		default, this will use the generic XvMC wrapper unless a specific video
-		card driver is enabled via their VIDEO_CARDS USE flags.</flag>
 </use>
 </pkgmetadata>

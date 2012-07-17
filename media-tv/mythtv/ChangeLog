@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.367 2012/07/17 01:15:59 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.368 2012/07/17 01:20:39 cardoe Exp $
+
+  16 Jul 2012; Doug Goldstein <cardoe@gentoo.org>
+  -files/mythbackend-0.18.2.conf, -files/mythtv-v4l2-fix.2.patch,
+  -files/mythbackend-0.18.2.rc, -files/ffmpeg-sync.patch,
+  -files/fixLdconfSandbox.0.25.1.patch, -files/fixLdconfSandbox.patch,
+  -files/mythtv.logrotate.d-r1, -files/runmythfe, -files/runmythfe-r1,
+  -files/xinitrc, metadata.xml:
+  Remove out unused files
 
   16 Jul 2012; Doug Goldstein <cardoe@gentoo.org>
   -mythtv-0.24.1_p20110524.ebuild:
