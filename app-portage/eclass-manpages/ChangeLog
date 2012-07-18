@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/eclass-manpages
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eclass-manpages/ChangeLog,v 1.29 2012/07/18 14:23:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eclass-manpages/ChangeLog,v 1.30 2012/07/18 14:24:06 vapier Exp $
+
+  18 Jul 2012; Mike Frysinger <vapier@gentoo.org> files/eclass-to-manpage.awk:
+  Error out when we hit an unknown keyword in an @ECLASS block.
 
   18 Jul 2012; Mike Frysinger <vapier@gentoo.org> files/eclass-to-manpage.sh:
   Add a -d (debugger) flag to quickly run dgawk.
