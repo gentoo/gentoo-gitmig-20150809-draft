@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/librosprite/librosprite-9999.ebuild,v 1.1 2012/07/18 09:22:36 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/librosprite/librosprite-9999.ebuild,v 1.2 2012/07/18 09:25:56 xmw Exp $
 
 EAPI=4
 
@@ -23,6 +23,7 @@ src_prepare() {
 		-e "/^CC =/s:=.*:= $(tc-getCC):" \
 		-e "/^LD =/s:=.*:= $(tc-getCC):" \
 		-e "/^AR =/s:=.*:= $(tc-getAR):" \
+		-e "/^install/,/^uninstall/s:/lib:/$(get_libdir):" \
 		-i Makefile || die
 	sed -e "/^libdir/s:/lib:/$(get_libdir):g" \
 		-i ${PN}.pc.in || die
