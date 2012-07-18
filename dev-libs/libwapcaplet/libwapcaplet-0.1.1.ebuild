@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwapcaplet/libwapcaplet-0.1.1.ebuild,v 1.3 2012/07/18 03:05:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwapcaplet/libwapcaplet-0.1.1.ebuild,v 1.4 2012/07/18 07:38:24 xmw Exp $
 
 EAPI=4
 
-inherit multilib
+inherit multilib toolchain-funcs
 
 DESCRIPTION="string internment library, written in C"
 HOMEPAGE="http://www.netsurf-browser.org/projects/libwapcaplet/"
@@ -13,7 +13,7 @@ SRC_URI="http://download.netsurf-browser.org/libs/releases/${P}-src.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm"
-IUSE="static-libs test"
+IUSE="static-libs"
 
 RDEPEND=""
 DEPEND="virtual/pkgconfig
@@ -33,6 +33,11 @@ src_prepare() {
 src_compile() {
 	emake COMPONENT_TYPE=lib-shared
 	use static-libs && emake COMPONENT_TYPE=lib-static
+}
+
+src_test() {
+	emake COMPONENT_TYPE=lib-shared test
+	use static-libs && emake COMPONENT_TYPE=lib-static test
 }
 
 src_install() {
