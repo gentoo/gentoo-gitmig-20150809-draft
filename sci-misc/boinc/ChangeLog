@@ -1,6 +1,12 @@
 # ChangeLog for sci-misc/boinc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.108 2012/06/26 13:13:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.109 2012/07/18 12:56:45 alexxy Exp $
+
+*boinc-7.0.29 (18 Jul 2012)
+
+  18 Jul 2012; Alexey Shvetsov <alexxy@gentoo.org> +boinc-7.0.29.ebuild,
+  +files/7.0.2-fix_subdirs.patch:
+  [sci-misc/boinc] Version bump per bug #411463
 
   26 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> boinc-6.12.42.ebuild:
   inherit user for enewgroup and enewuser
@@ -507,4 +513,3 @@
   to Robert Moss <robmoss@gentoo.org> and Tony Murray <tonymurray@fastmail.fm>
   for the ebuilds and maintenance performed by Tony, as well as all the other
   contributors who helped with this ebuild. This closes bug 54962.
-
