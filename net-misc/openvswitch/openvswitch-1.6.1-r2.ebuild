@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/openvswitch-1.6.1-r1.ebuild,v 1.2 2012/07/18 07:53:05 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/openvswitch-1.6.1-r2.ebuild,v 1.1 2012/07/18 08:41:29 dev-zero Exp $
 
 EAPI=4
 
@@ -79,8 +79,10 @@ src_install() {
 
 	newconfd "${FILESDIR}/ovsdb-server_conf" ovsdb-server
 	newconfd "${FILESDIR}/ovs-vswitchd_conf" ovs-vswitchd
+	newconfd "${FILESDIR}/ovs-controller_conf" ovs-controller
 	doinitd "${FILESDIR}/ovsdb-server"
 	doinitd "${FILESDIR}/ovs-vswitchd"
+	doinitd "${FILESDIR}/ovs-controller"
 
 	insinto /etc/logrotate.d
 	newins rhel/etc_logrotate.d_openvswitch openvswitch
