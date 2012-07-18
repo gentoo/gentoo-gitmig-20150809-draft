@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/netsurf/netsurf-2.9.ebuild,v 1.2 2012/07/18 16:04:26 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/netsurf/netsurf-2.9.ebuild,v 1.3 2012/07/18 17:05:36 mr_bones_ Exp $
 
 EAPI=4
 
@@ -26,12 +26,12 @@ RDEPEND="dev-libs/libcss
 	gif? ( media-libs/libnsgif )
 	gtk? ( dev-libs/glib:2
 		gnome-base/libglade:2.0
-		media-libs/lcms:0 
+		media-libs/lcms:0
 		x11-libs/gtk+:2 )
 	jpeg? ( virtual/jpeg )
 	mng? ( media-libs/libmng )
 	pdf-writer? ( media-libs/libharu )
-	png? ( media-libs/libpng ) 
+	png? ( media-libs/libpng )
 	svg? ( svgtiny? ( media-libs/libsvgtiny )
 		!svgtiny? ( gnome-base/librsvg:2 ) )
 	webp? ( media-libs/libwebp )"
@@ -130,7 +130,7 @@ src_install() {
 	fi
 	insinto /usr/share/pixmaps
 	doins gtk/res/netsurf.xpm
-	
+
 	dodoc -r Docs/{USING-*,ideas}
 	newdoc "${WORKDIR}"/netsurf-fb.modes-example fb.modes
 }
