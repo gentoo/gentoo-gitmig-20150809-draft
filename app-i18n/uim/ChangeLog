@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/uim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.249 2012/06/07 22:32:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.250 2012/07/18 12:56:31 naota Exp $
+
+  18 Jul 2012; Naohiro Aota <naota@gentoo.org> uim-1.8.0.ebuild:
+  Drop misplaced doc dir. #426976
 
   07 Jun 2012; Brent Baude <ranger@gentoo.org> uim-1.7.3.ebuild:
   Marking uim-1.7.3 ppc for bug 413483
@@ -1110,4 +1113,3 @@
 
   17 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> uim-2013.ebuild:
   Initial import
-

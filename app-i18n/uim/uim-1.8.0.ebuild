@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.8.0.ebuild,v 1.3 2012/05/03 19:24:27 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.8.0.ebuild,v 1.4 2012/07/18 12:56:31 naota Exp $
 
 EAPI="4"
 inherit autotools eutils multilib elisp-common flag-o-matic
@@ -219,6 +219,8 @@ src_install() {
 
 	# collision with dev-scheme/sigscheme, bug #330975
 	# find "${ED}" -name '*gcroots*' -delete || die
+
+	rmdir "${ED}"/usr/share/doc/sigscheme || die
 }
 
 pkg_postinst() {
