@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnsfb/libnsfb-0.0.2_pre20120718.ebuild,v 1.1 2012/07/18 08:25:38 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnsfb/libnsfb-0.0.2_pre20120629.ebuild,v 1.1 2012/07/18 08:45:18 xmw Exp $
 
 EAPI=4
 
