@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13979 2012/07/18 14:13:44 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13980 2012/07/18 18:21:21 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -212,11 +212,6 @@ dev-ruby/mmap
 # Upstream tagged it as deprecated time ago, it's no longer
 # useful, see bug #327029. Removal in a month
 dev-python/psyco
-
-# Pacho Ramos <pacho@gentoo.org> (16 Jun 2012)
-# Broken for a long time with stable libevent, upstream
-# doesn't care, see bug #333099. Removal in a month.
-net-analyzer/honeyd
 
 # Pacho Ramos <pacho@gentoo.org> (16 Jun 2012)
 # Not compatible with current avahi, see bug #339609.
