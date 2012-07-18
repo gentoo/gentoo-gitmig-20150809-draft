@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xapian
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/ChangeLog,v 1.79 2012/06/28 09:52:18 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/ChangeLog,v 1.80 2012/07/18 02:06:03 blueness Exp $
+
+  18 Jul 2012; Anthony G. Basile <blueness@gentoo.org> xapian-1.2.12.ebuild:
+  Keyword ~mips
 
 *xapian-1.2.12 (28 Jun 2012)
 
