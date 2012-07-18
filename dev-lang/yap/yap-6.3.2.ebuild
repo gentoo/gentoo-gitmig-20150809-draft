@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-6.3.2.ebuild,v 1.3 2012/07/01 12:46:00 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-6.3.2.ebuild,v 1.4 2012/07/18 13:58:58 keri Exp $
 
 EAPI=2
 
 inherit eutils flag-o-matic java-pkg-opt-2 multilib
 
-PATCHSET_VER="1"
+PATCHSET_VER="2"
 
 DESCRIPTION="YAP is a high-performance Prolog compiler."
 HOMEPAGE="http://www.dcc.fc.up.pt/~vsc/Yap/"
