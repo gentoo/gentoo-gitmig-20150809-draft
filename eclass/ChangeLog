@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.344 2012/07/18 19:13:23 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.345 2012/07/18 20:48:28 johu Exp $
+
+  18 Jul 2012; Johannes Huber <johu@gentoo.org> tetex-3.eclass, tetex.eclass:
+  Marking as DEAD for removal.
 
   18 Jul 2012; Ralph Sennhauser <sera@gentoo.org> java-virtuals-2.eclass:
   Convert to eclass-manpages.
