@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.343 2012/07/18 16:54:55 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.344 2012/07/18 19:13:23 sera Exp $
+
+  18 Jul 2012; Ralph Sennhauser <sera@gentoo.org> java-virtuals-2.eclass:
+  Convert to eclass-manpages.
 
   18 Jul 2012; Ralph Sennhauser <sera@gentoo.org> java-vm-2.eclass:
   Add ROOT support, patch by vapier. #416341

@@ -1,10 +1,16 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-virtuals-2.eclass,v 1.8 2012/01/13 09:59:10 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-virtuals-2.eclass,v 1.9 2012/07/18 19:13:23 sera Exp $
 
+# @ECLASS: java-virtuals-2.eclass
+# @MAINTAINER:
+# java@gentoo.org
+# @AUTHOR:
 # Original Author: Alistair John Bush <ali_bush@gentoo.org>
-# Purpose: 	To provide a default (and only) src_install function
-# 			for ebuilds in the java-virtuals category.
+# @BLURB: Java virtuals eclass
+# @DESCRIPTION:
+# To provide a default (and only) src_install function for ebuilds in the
+# java-virtuals category.
 
 inherit java-utils-2
 
@@ -15,16 +21,19 @@ S="${WORKDIR}"
 
 EXPORT_FUNCTIONS src_install
 
+# @FUNCTION: java-virtuals-2_src_install
+# @DESCRIPTION:
+# default src_install
+
 java-virtuals-2_src_install() {
 	java-virtuals-2_do_write
 }
 
-# ------------------------------------------------------------------------------
-# @internal-function java-pkg_do_virtuals_write
-#
+# @FUNCTION: java-pkg_do_virtuals_write
+# @INTERNAL
+# @DESCRIPTION:
 # Writes the virtual env file out to disk.
-#
-# ------------------------------------------------------------------------------
+
 java-virtuals-2_do_write() {
 	java-pkg_init_paths_
 
