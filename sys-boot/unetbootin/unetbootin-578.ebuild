@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/unetbootin-578.ebuild,v 1.1 2012/07/16 19:08:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/unetbootin-578.ebuild,v 1.2 2012/07/18 04:36:27 jer Exp $
 
 EAPI="4"
 
@@ -77,8 +77,10 @@ src_install() {
 	done
 
 	local lingua
-	for lingua in ${LINGUAS}; do
-		insinto /usr/share/${PN}
-		doins ${PN}_${lingua}.qm
+	for lingua in ${UNBI_LINGUAS}; do
+		if use linguas_${lingua}; then
+			insinto /usr/share/${PN}
+			doins ${PN}_${lingua}.qm
+		fi
 	done
 }

@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/unetbootin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/ChangeLog,v 1.83 2012/07/16 19:08:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/ChangeLog,v 1.84 2012/07/18 04:36:27 jer Exp $
+
+  18 Jul 2012; Jeroen Roovers <jer@gentoo.org> unetbootin-578.ebuild:
+  Do not use LINGUAS directly (bug #426918).
 
 *unetbootin-578 (16 Jul 2012)
 
