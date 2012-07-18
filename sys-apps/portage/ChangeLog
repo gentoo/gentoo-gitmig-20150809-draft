@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1061 2012/07/18 00:27:33 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1062 2012/07/18 22:53:49 zmedico Exp $
+
+*portage-2.1.11.9 (18 Jul 2012)
+
+  18 Jul 2012; Zac Medico <zmedico@gentoo.org> +portage-2.1.11.9.ebuild,
+  -portage-2.1.11.7.ebuild:
+  2.1.11.9 version bump. This fixes bug #402197 (allow wildcard atoms to match
+  *9999* ebuilds), bug #427068 (fix etc-update --automode -5 to not use mv -i),
+  and bug #427036 (emerge KeyError since portage-2.1.11 which is triggered by
+  --rebuild-if-new options). Bug #423075 tracks all bugs fixed since
+  portage-2.1.10.65.
 
 *portage-2.2.0_alpha119 (18 Jul 2012)
 
