@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.19.ebuild,v 1.1 2012/07/18 18:20:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.19.ebuild,v 1.2 2012/07/18 22:34:24 dilfridge Exp $
 
 EAPI=4
 
@@ -13,6 +13,7 @@ if [[ "${PV}" == "9999" ]] ; then
 	EBZR_REPO_URI="http://bzr.linuxfoundation.org/openprinting/cups-filters"
 	KEYWORDS=""
 else
+	inherit autotools
 	SRC_URI="http://www.openprinting.org/download/${PN}/${P}.tar.xz"
 	KEYWORDS=""
 fi
@@ -38,11 +39,11 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}"
 
+PATCHES=( "${FILESDIR}/${P}-poppler020.patch" )
+
 src_prepare() {
 	base_src_prepare
-	if [[ "${PV}"=="9999" ]] ; then
-		eautoreconf
-	fi
+	eautoreconf
 }
 
 src_configure() {

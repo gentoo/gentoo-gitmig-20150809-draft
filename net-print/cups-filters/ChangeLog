@@ -1,6 +1,11 @@
 # ChangeLog for net-print/cups-filters
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.15 2012/07/18 18:20:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.16 2012/07/18 22:34:24 dilfridge Exp $
+
+  18 Jul 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  cups-filters-1.0.19.ebuild, +files/cups-filters-1.0.19-poppler020.patch,
+  cups-filters-9999.ebuild:
+  Make this beast build against poppler-0.20
 
 *cups-filters-1.0.19 (18 Jul 2012)
 

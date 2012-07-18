@@ -1,0 +1,192 @@
+diff -ruN cups-filters-9999.orig/configure.ac cups-filters-9999/configure.ac
+--- cups-filters-9999.orig/configure.ac	2012-07-19 00:25:53.311589000 +0200
++++ cups-filters-9999/configure.ac	2012-07-19 00:25:02.000000000 +0200
+@@ -202,6 +202,7 @@
+ # ================
+ POPPLER_INCLUDEDIR=`pkg-config poppler --variable includedir`
+ AC_CHECK_HEADER([UGooString.h], [AC_DEFINE([HAVE_UGOOSTRING_H],,[Have UGooString.h])], [])
++AC_CHECK_HEADER([poppler/cpp/poppler-version.h], [AC_DEFINE([HAVE_CPP_POPPLER_VERSION_H],,[Define if you have Poppler's "cpp/poppler-version.h" header file.])], [])
+ # FIXME:
+ # Use proper c compile check not greps and then just link again poppler with all the features
+ # instead of this and all the libs.
+diff -ruN cups-filters-9999.orig/filter/PDFError.h cups-filters-9999/filter/PDFError.h
+--- cups-filters-9999.orig/filter/PDFError.h	2012-07-19 00:25:53.311589000 +0200
++++ cups-filters-9999/filter/PDFError.h	2012-07-19 00:23:58.000000000 +0200
+@@ -31,6 +31,9 @@
+ #include <config.h>
+ #include <stdarg.h>
+ #include <Error.h>
++#ifdef HAVE_CPP_POPPLER_VERSION_H
++#include "cpp/poppler-version.h"
++#endif
+ 
+ #if POPPLER_VERSION_MAJOR > 0 || POPPLER_VERSION_MINOR >= 19
+ #define pdfError(pos,...) error(errInternal,pos,__VA_ARGS__)
+diff -ruN cups-filters-9999.orig/filter/pdftoijs.cxx cups-filters-9999/filter/pdftoijs.cxx
+--- cups-filters-9999.orig/filter/pdftoijs.cxx	2012-07-19 00:25:53.311589000 +0200
++++ cups-filters-9999/filter/pdftoijs.cxx	2012-07-19 00:23:58.000000000 +0200
+@@ -30,6 +30,9 @@
+ #include <config.h>
+ #include <stdio.h>
+ #include <stdlib.h>
++#ifdef HAVE_CPP_POPPLER_VERSION_H
++#include "cpp/poppler-version.h"
++#endif
+ #include <goo/GooString.h>
+ #include <goo/gmem.h>
+ #include <Object.h>
+diff -ruN cups-filters-9999.orig/filter/pdftoopvp/OPVPError.h cups-filters-9999/filter/pdftoopvp/OPVPError.h
+--- cups-filters-9999.orig/filter/pdftoopvp/OPVPError.h	2012-07-19 00:25:53.311589000 +0200
++++ cups-filters-9999/filter/pdftoopvp/OPVPError.h	2012-07-19 00:23:58.000000000 +0200
+@@ -31,6 +31,9 @@
+ #include <config.h>
+ #include <stdarg.h>
+ #include <Error.h>
++#ifdef HAVE_CPP_POPPLER_VERSION_H
++#include "cpp/poppler-version.h"
++#endif
+ 
+ #if POPPLER_VERSION_MAJOR > 0 || POPPLER_VERSION_MINOR >= 19
+ #define opvpError(pos,...) error(errInternal,pos,__VA_ARGS__)
+diff -ruN cups-filters-9999.orig/filter/pdftoopvp/OPVPOutputDev.cxx cups-filters-9999/filter/pdftoopvp/OPVPOutputDev.cxx
+--- cups-filters-9999.orig/filter/pdftoopvp/OPVPOutputDev.cxx	2012-07-19 00:25:53.311589000 +0200
++++ cups-filters-9999/filter/pdftoopvp/OPVPOutputDev.cxx	2012-07-19 00:23:58.000000000 +0200
+@@ -8,6 +8,9 @@
+ //========================================================================
+ 
+ #include <config.h>
++#ifdef HAVE_CPP_POPPLER_VERSION_H
++#include "cpp/poppler-version.h"
++#endif
+ 
+ #ifdef USE_GCC_PRAGMAS
+ #pragma implementation
+diff -ruN cups-filters-9999.orig/filter/pdftoopvp/oprs/OPVPSplash.cxx cups-filters-9999/filter/pdftoopvp/oprs/OPVPSplash.cxx
+--- cups-filters-9999.orig/filter/pdftoopvp/oprs/OPVPSplash.cxx	2012-07-19 00:25:53.311589000 +0200
++++ cups-filters-9999/filter/pdftoopvp/oprs/OPVPSplash.cxx	2012-07-19 00:23:58.000000000 +0200
+@@ -5,6 +5,9 @@
+ //========================================================================
+ 
+ #include <config.h>
++#ifdef HAVE_CPP_POPPLER_VERSION_H
++#include "cpp/poppler-version.h"
++#endif
+ 
+ #ifdef USE_GCC_PRAGMAS
+ #pragma implementation
+diff -ruN cups-filters-9999.orig/filter/pdftoopvp/oprs/OPVPSplashState.cxx cups-filters-9999/filter/pdftoopvp/oprs/OPVPSplashState.cxx
+--- cups-filters-9999.orig/filter/pdftoopvp/oprs/OPVPSplashState.cxx	2012-07-19 00:25:53.311589000 +0200
++++ cups-filters-9999/filter/pdftoopvp/oprs/OPVPSplashState.cxx	2012-07-19 00:23:58.000000000 +0200
+@@ -11,6 +11,9 @@
+ #endif
+ 
+ #include <string.h>
++#ifdef HAVE_CPP_POPPLER_VERSION_H
++#include "cpp/poppler-version.h"
++#endif
+ #include "goo/gmem.h"
+ #include "splash/SplashPattern.h"
+ #include "splash/SplashScreen.h"
+diff -ruN cups-filters-9999.orig/filter/pdftoopvp/oprs/OPVPSplashState.h cups-filters-9999/filter/pdftoopvp/oprs/OPVPSplashState.h
+--- cups-filters-9999.orig/filter/pdftoopvp/oprs/OPVPSplashState.h	2012-07-19 00:25:53.311589000 +0200
++++ cups-filters-9999/filter/pdftoopvp/oprs/OPVPSplashState.h	2012-07-19 00:23:58.000000000 +0200
+@@ -11,6 +11,9 @@
+ #pragma interface
+ #endif
+ 
++#ifdef HAVE_CPP_POPPLER_VERSION_H
++#include "cpp/poppler-version.h"
++#endif
+ #include "splash/SplashTypes.h"
+ #include "splash/SplashState.h"
+ #include "splash/Splash.h"
+diff -ruN cups-filters-9999.orig/filter/pdftoopvp/oprs/OPVPSplashXPath.cxx cups-filters-9999/filter/pdftoopvp/oprs/OPVPSplashXPath.cxx
+--- cups-filters-9999.orig/filter/pdftoopvp/oprs/OPVPSplashXPath.cxx	2012-07-19 00:25:53.311589000 +0200
++++ cups-filters-9999/filter/pdftoopvp/oprs/OPVPSplashXPath.cxx	2012-07-19 00:23:58.000000000 +0200
+@@ -1,5 +1,8 @@
+ #include <config.h>
+ #include <stdio.h>
++#ifdef HAVE_CPP_POPPLER_VERSION_H
++#include "cpp/poppler-version.h"
++#endif
+ #include "splash/Splash.h"
+ #include "splash/SplashMath.h"
+ #include "OPVPSplashClip.h"
+diff -ruN cups-filters-9999.orig/filter/pdftoopvp/oprs/OPVPSplashXPath.h cups-filters-9999/filter/pdftoopvp/oprs/OPVPSplashXPath.h
+--- cups-filters-9999.orig/filter/pdftoopvp/oprs/OPVPSplashXPath.h	2012-07-19 00:25:53.311589000 +0200
++++ cups-filters-9999/filter/pdftoopvp/oprs/OPVPSplashXPath.h	2012-07-19 00:23:58.000000000 +0200
+@@ -2,6 +2,9 @@
+ #define OPVPSPLASHXPATH_H
+ 
+ #include <config.h>
++#ifdef HAVE_CPP_POPPLER_VERSION_H
++#include "cpp/poppler-version.h"
++#endif
+ #include "splash/SplashXPath.h"
+ #include "OPVPSplashPath.h"
+ #include "OPVPSplashState.h"
+diff -ruN cups-filters-9999.orig/filter/pdftoopvp/pdftoopvp.cxx cups-filters-9999/filter/pdftoopvp/pdftoopvp.cxx
+--- cups-filters-9999.orig/filter/pdftoopvp/pdftoopvp.cxx	2012-07-19 00:25:53.311589000 +0200
++++ cups-filters-9999/filter/pdftoopvp/pdftoopvp.cxx	2012-07-19 00:23:58.000000000 +0200
+@@ -13,6 +13,9 @@
+ #include <unistd.h>
+ #include <ctype.h>
+ #include <math.h>
++#ifdef HAVE_CPP_POPPLER_VERSION_H
++#include "cpp/poppler-version.h"
++#endif
+ #include "goo/GooString.h"
+ #define GSTRING_H // for old GooString.h
+ #include "goo/gmem.h"
+diff -ruN cups-filters-9999.orig/filter/pdftopdf/P2PError.h cups-filters-9999/filter/pdftopdf/P2PError.h
+--- cups-filters-9999.orig/filter/pdftopdf/P2PError.h	2012-07-19 00:25:53.311589000 +0200
++++ cups-filters-9999/filter/pdftopdf/P2PError.h	2012-07-19 00:23:58.000000000 +0200
+@@ -31,6 +31,9 @@
+ #include <config.h>
+ #include <stdarg.h>
+ #include <Error.h>
++#ifdef HAVE_CPP_POPPLER_VERSION_H
++#include "cpp/poppler-version.h"
++#endif
+ 
+ #if POPPLER_VERSION_MAJOR > 0 || POPPLER_VERSION_MINOR >= 19
+ #define p2pError(pos,...) error(errInternal,pos,__VA_ARGS__)
+diff -ruN cups-filters-9999.orig/filter/pdftopdf/P2PFont.cxx cups-filters-9999/filter/pdftopdf/P2PFont.cxx
+--- cups-filters-9999.orig/filter/pdftopdf/P2PFont.cxx	2012-07-19 00:25:53.311589000 +0200
++++ cups-filters-9999/filter/pdftopdf/P2PFont.cxx	2012-07-19 00:23:58.000000000 +0200
+@@ -32,6 +32,9 @@
+ #include <sys/types.h>
+ #include <unistd.h>
+ #include <fcntl.h>
++#ifdef HAVE_CPP_POPPLER_VERSION_H
++#include "cpp/poppler-version.h"
++#endif
+ #include "goo/gmem.h"
+ #include "P2PFont.h"
+ #include "GfxFont.h"
+diff -ruN cups-filters-9999.orig/filter/pdftopdf/pdftopdf.cxx cups-filters-9999/filter/pdftopdf/pdftopdf.cxx
+--- cups-filters-9999.orig/filter/pdftopdf/pdftopdf.cxx	2012-07-19 00:25:53.311589000 +0200
++++ cups-filters-9999/filter/pdftopdf/pdftopdf.cxx	2012-07-19 00:23:58.000000000 +0200
+@@ -29,6 +29,9 @@
+ #include <config.h>
+ #include <stdio.h>
+ #include <stdlib.h>
++#ifdef HAVE_CPP_POPPLER_VERSION_H
++#include "cpp/poppler-version.h"
++#endif
+ #include "goo/GooString.h"
+ #include "goo/gmem.h"
+ #include "Object.h"
+diff -ruN cups-filters-9999.orig/filter/pdftoraster.cxx cups-filters-9999/filter/pdftoraster.cxx
+--- cups-filters-9999.orig/filter/pdftoraster.cxx	2012-07-19 00:25:53.311589000 +0200
++++ cups-filters-9999/filter/pdftoraster.cxx	2012-07-19 00:23:58.000000000 +0200
+@@ -31,6 +31,9 @@
+ #include <config.h>
+ #include <stdio.h>
+ #include <stdlib.h>
++#ifdef HAVE_CPP_POPPLER_VERSION_H
++#include "cpp/poppler-version.h"
++#endif
+ #include "goo/GooString.h"
+ #include "goo/gmem.h"
+ #include "Object.h"

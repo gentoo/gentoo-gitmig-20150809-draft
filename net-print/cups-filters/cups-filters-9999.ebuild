@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-9999.ebuild,v 1.11 2012/07/18 18:20:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-9999.ebuild,v 1.12 2012/07/18 22:34:24 dilfridge Exp $
 
 EAPI=4
 
@@ -37,6 +37,8 @@ RDEPEND="
 	tiff? ( media-libs/tiff )
 "
 DEPEND="${RDEPEND}"
+
+PATCHES=( "${FILESDIR}/${PN}-1.0.19-poppler020.patch" )
 
 src_prepare() {
 	base_src_prepare
