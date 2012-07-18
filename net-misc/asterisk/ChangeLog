@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.405 2012/07/11 08:29:27 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.406 2012/07/18 04:12:24 rajiv Exp $
+
+  18 Jul 2012; Rajiv Aaron Manglani <rajiv@gentoo.org> asterisk-10.5.2.ebuild:
+  correct SRC_URI.
 
 *asterisk-10.6.0 (11 Jul 2012)
 *asterisk-1.8.14.0 (11 Jul 2012)
