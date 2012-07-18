@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.397 2012/07/17 22:16:15 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.398 2012/07/18 00:25:59 anarchy Exp $
+
+  18 Jul 2012; Jory A. Pratt <anarchy@gentoo.org> seamonkey-2.11.ebuild:
+  Remove libvpx hack, mozconfig-3 updated to support pkg-config
 
   17 Jul 2012; Lars Wendler <polynomial-c@gentoo.org> seamonkey-2.11.ebuild:
   Fixed build with webm USE flag being set. (bug #427016).
@@ -1569,4 +1572,3 @@
   +files/seamonkey-rebuild-databases.pl, +metadata.xml,
   +seamonkey-1.0.ebuild:
   initial import,much appreciation wrt bug #116231
-

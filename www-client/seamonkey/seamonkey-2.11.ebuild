@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.11.ebuild,v 1.2 2012/07/17 22:16:15 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.11.ebuild,v 1.3 2012/07/18 00:25:59 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -173,11 +173,6 @@ src_configure() {
 
 	mozconfig_init
 	mozconfig_config
-
-	# current mozconfig-3 eclass submits an argument to
-	# --with-system-libvpx which fails.
-	sed '/with-system-libvpx/d' -i "${S}"/.mozconfig || die
-	mozconfig_annotate '+webm' --with-system-libvpx
 
 	# It doesn't compile on alpha without this LDFLAGS
 	use alpha && append-ldflags "-Wl,--no-relax"
