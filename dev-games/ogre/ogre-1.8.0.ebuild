@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.8.0.ebuild,v 1.4 2012/06/16 15:40:45 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.8.0.ebuild,v 1.5 2012/07/18 09:23:08 jdhore Exp $
 
 EAPI=4
 inherit eutils cmake-utils
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}_src_v${MY_PV}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="+boost cg doc double-precision examples +freeimage gles2 ois +opengl poco profile tbb threads tools +zip"
 REQUIRED_USE="threads? ( || ( boost poco tbb ) )"
 RESTRICT="test" #139905
