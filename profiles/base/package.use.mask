@@ -1,9 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.371 2012/07/16 13:45:51 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.372 2012/07/18 13:36:41 xmw Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Michael Weber<xmw@gentoo.org>  (18 Jun 2012)
+# Not fit for production
+www-client/netsurf pdf-writer javascript gstreamer webp
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (16 Jul 2012)
 # Needs x11-libs/glamor stable first
