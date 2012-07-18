@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.82 2012/06/08 11:50:19 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.83 2012/07/18 20:49:55 dilfridge Exp $
+
+  18 Jul 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  libreoffice-bin-3.5.4.2-r1.ebuild:
+  Require >=qt-4.8 and >=kde-4.8, bug 426574
 
   08 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   -libreoffice-bin-3.5.2.2-r1.ebuild:
