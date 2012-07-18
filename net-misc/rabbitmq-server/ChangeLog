@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rabbitmq-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/ChangeLog,v 1.18 2012/05/18 15:00:03 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/ChangeLog,v 1.19 2012/07/18 16:38:18 hollow Exp $
+
+  18 Jul 2012; Benedikt Böhm <hollow@gentoo.org> metadata.xml:
+  change to maintainer-needed
 
 *rabbitmq-server-2.8.1-r1 (18 May 2012)
 
