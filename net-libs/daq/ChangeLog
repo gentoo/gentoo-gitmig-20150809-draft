@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/daq
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/daq/ChangeLog,v 1.17 2012/06/27 18:14:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/daq/ChangeLog,v 1.18 2012/07/18 19:42:28 jer Exp $
+
+*daq-0.6.2-r1 (18 Jul 2012)
+
+  18 Jul 2012; Jeroen Roovers <jer@gentoo.org> -daq-0.6.2.ebuild,
+  +daq-0.6.2-r1.ebuild:
+  Use get_libdir instead of hard-coded lib64 (bug #384691).
 
   27 Jun 2012; Markus Meier <maekke@gentoo.org> daq-0.6.2.ebuild:
   add ~arm, bug #407799
