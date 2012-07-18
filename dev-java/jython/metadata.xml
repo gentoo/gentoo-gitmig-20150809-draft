@@ -3,6 +3,7 @@
 <pkgmetadata>
   <herd>java</herd>
   <use>
+    <flag name="readline">Use GNU readline instead of jline</flag>
     <flag name="servletapi">Add optional support for servlet-api</flag>
   </use>
 </pkgmetadata>
