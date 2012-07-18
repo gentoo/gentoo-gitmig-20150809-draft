@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.4.10.ebuild,v 1.1 2012/06/24 03:34:36 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.4.10.ebuild,v 1.2 2012/07/18 06:59:18 grobian Exp $
 
 EAPI="4"
 
-inherit autotools eutils flag-o-matic libtool multilib
+inherit eutils flag-o-matic libtool multilib
 
 DESCRIPTION="A high-quality and portable font engine"
 HOMEPAGE="http://www.freetype.org/"
@@ -67,12 +67,7 @@ src_prepare() {
 		fi
 	fi
 
-	if use prefix; then
-		cd "${S}"/builds/unix
-		eautoreconf
-	else
-		elibtoolize
-	fi
+	elibtoolize
 	epunt_cxx
 }
 
