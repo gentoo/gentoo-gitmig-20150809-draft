@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/netsurf/netsurf-2.9.ebuild,v 1.1 2012/07/18 15:17:51 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/netsurf/netsurf-2.9.ebuild,v 1.2 2012/07/18 16:04:26 xmw Exp $
 
 EAPI=4
 
@@ -18,14 +18,11 @@ IUSE="bmp fbcon freetype gif gstreamer gtk javascript jpeg mng pdf-writer png ro
 
 RDEPEND="dev-libs/libcss
 	net-libs/hubbub
-	net-libs/libdom
 	net-misc/curl
 	bmp? ( media-libs/libnsbmp )
 	fbcon? ( dev-libs/libnsfb )
-	freetype? ( 
-		media-libs/freetype
-		media-fonts/dejavu
-	)
+	freetype? ( media-fonts/dejavu
+		media-libs/freetype )
 	gif? ( media-libs/libnsgif )
 	gtk? ( dev-libs/glib:2
 		gnome-base/libglade:2.0
@@ -44,14 +41,16 @@ DEPEND="${RDEPEND}
 
 REQUIRED_USE="|| ( fbcon gtk )"
 
-src_prepare() {
+src_unpack() {
+	default
 	einfo "remove bundled libs"
 	cd "${WORKDIR}" || die
 	mv ${P} ${P}_complete || die
 	mv ${P}_complete/${P} . || die
 	rm -r ${P}_complete || die
+}
 
-	cd "${S}"
+src_prepare() {
 	sed -e '/CFLAGS \(:\|+\)=/d' \
 		-i Makefile.defaults || die
 	sed -e '/^#define NSFB_TOOLBAR_DEFAULT_LAYOUT/s:blfsrut:blfsrutc:' \
