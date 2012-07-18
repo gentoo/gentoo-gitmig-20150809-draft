@@ -1,6 +1,13 @@
 # ChangeLog for net-print/cups-filters
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.14 2012/06/26 20:19:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.15 2012/07/18 18:20:42 scarabeus Exp $
+
+*cups-filters-1.0.19 (18 Jul 2012)
+
+  18 Jul 2012; Tomáš Chvátal <scarabeus@gentoo.org> +cups-filters-1.0.19.ebuild,
+  -cups-filters-1.0.17.ebuild, -cups-filters-1.0.18.ebuild,
+  cups-filters-9999.ebuild:
+  Version bump to the latest using my autotools system, yay.
 
   26 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   cups-filters-9999.ebuild:
@@ -69,4 +76,3 @@
   +files/cups-filters-1.0.11-makefiles.patch, +metadata.xml:
   Initial commit of cups-filters that provide cups-pdf backend that is already
   in use by debian and ubuntu folks.
-
