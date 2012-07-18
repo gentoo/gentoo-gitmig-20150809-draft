@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsvgtiny
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsvgtiny/ChangeLog,v 1.3 2012/07/18 15:32:21 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsvgtiny/ChangeLog,v 1.4 2012/07/18 15:38:34 xmw Exp $
+
+  18 Jul 2012; Michael Weber <xmw@gentoo.org>
+  -libsvgtiny-0.0.2_pre20120629.ebuild:
+  drop old
 
 *libsvgtiny-0.0.2 (18 Jul 2012)
 
