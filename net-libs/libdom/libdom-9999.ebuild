@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libdom/libdom-9999.ebuild,v 1.1 2012/07/18 06:10:39 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libdom/libdom-9999.ebuild,v 1.2 2012/07/18 14:21:28 mr_bones_ Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ RDEPEND="dev-libs/libparserutils
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	test? ( dev-perl/XML-XPath
-		dev-perl/libxml-perl 
+		dev-perl/libxml-perl
 		perl-core/Switch )"
 
 src_unpack() {
