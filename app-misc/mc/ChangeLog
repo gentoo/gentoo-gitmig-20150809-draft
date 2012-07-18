@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.258 2012/06/22 12:07:45 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.259 2012/07/18 21:58:12 slyfox Exp $
+
+*mc-4.8.4 (18 Jul 2012)
+
+  18 Jul 2012; Sergei Trofimovich <slyfox@gentoo.org> +mc-4.8.4.ebuild:
+  Version bump.
 
   22 Jun 2012; Sergei Trofimovich <slyfox@gentoo.org> mc-9999.ebuild,
   metadata.xml:
@@ -1094,5 +1099,3 @@
 
   - NLS fixes submitted by seemant@rocketmail.com (Seemant Kulleen)
   - gpm dependency fix from homas.raschbacher@Netway.at (LordVan(Thomas Raschbacher))
-
-
