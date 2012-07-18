@@ -1,0 +1,10 @@
+# ChangeLog for www-client/netsurf
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/netsurf/ChangeLog,v 1.1 2012/07/18 15:17:51 xmw Exp $
+
+*netsurf-2.9 (18 Jul 2012)
+
+  18 Jul 2012; Michael Weber <xmw@gentoo.org>
+  +files/netsurf-2.9-buildsystem.patch, +files/netsurf-2.9-includes.patch,
+  +metadata.xml, +netsurf-2.9.ebuild:
+  Initial import
