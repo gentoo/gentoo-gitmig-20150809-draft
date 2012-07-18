@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.414 2012/07/18 13:36:41 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.415 2012/07/18 14:13:45 sera Exp $
+
+  18 Jul 2012; Ralph Sennhauser <sera@gentoo.org> package.use.mask:
+  use mask eclipse for dev lang/icc as it requires masked eclipse-sdk
 
   18 Jul 2012; Michael Weber <xmw@gentoo.org> package.use.mask:
   www-client/netsurf: mask problematic use flags for now

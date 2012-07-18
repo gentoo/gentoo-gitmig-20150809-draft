@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13978 2012/07/18 07:40:52 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13979 2012/07/18 14:13:44 sera Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ralph Sennhauser <sera@gentoo.org> (18 Jul 2012)
+# Unmaintained, multiple vulnarabilities. #351626
+# A more recent source build maintained by the community is available in the
+# seden overlay. A more recent binary is available in the java-overlay.
+<=dev-util/eclipse-sdk-3.5.1-r1
 
 # Bernard Cafarelli <voyageur@gentoo.org> (16 Jul 2012)
 # No upstream development since 2008
