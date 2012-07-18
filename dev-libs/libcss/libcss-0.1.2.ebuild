@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcss/libcss-0.1.2.ebuild,v 1.3 2012/07/18 14:25:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcss/libcss-0.1.2.ebuild,v 1.4 2012/07/18 17:56:22 xmw Exp $
 
 EAPI=4
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm"
 IUSE="static-libs test"
 
-DEPEND=""
+RDEPEND="dev-libs/libparserutils
+	dev-libs/libwapcaplet"
 RDEPEND="test? ( dev-lang/perl )"
 
 src_prepare() {
