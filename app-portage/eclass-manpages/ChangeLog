@@ -1,6 +1,14 @@
 # ChangeLog for app-portage/eclass-manpages
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eclass-manpages/ChangeLog,v 1.30 2012/07/18 14:24:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eclass-manpages/ChangeLog,v 1.31 2012/07/18 14:27:54 vapier Exp $
+
+*eclass-manpages-20120718 (18 Jul 2012)
+
+  18 Jul 2012; Mike Frysinger <vapier@gentoo.org>
+  +eclass-manpages-20120718.ebuild, -eclass-manpages-20100821.ebuild,
+  -eclass-manpages-20111014.ebuild, files/eclass-to-manpage.awk:
+  Add support for @ROFF (idea from Ulrich Müller), and escape any leading .
+  chars in comments to avoid mangling of the content #420153 by Michał Górny.
 
   18 Jul 2012; Mike Frysinger <vapier@gentoo.org> files/eclass-to-manpage.awk:
   Error out when we hit an unknown keyword in an @ECLASS block.
