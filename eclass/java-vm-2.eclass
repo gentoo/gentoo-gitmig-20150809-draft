@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.44 2012/06/12 09:17:33 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.45 2012/07/18 16:54:55 sera Exp $
 
 # @ECLASS: java-vm-2.eclass
 # @MAINTAINER:
@@ -73,12 +73,12 @@ java-vm-2_pkg_postinst() {
 	# Note that we cannot rely on java-config here, as it will silently recognize
 	# e.g. icedtea6-bin as valid system VM if icedtea6 is set but invalid (e.g. due
 	# to the migration to icedtea-6)
-	if [[ ! -L "${JAVA_VM_SYSTEM}" ]]; then
+	if [[ ! -L "${ROOT}${JAVA_VM_SYSTEM}" ]]; then
 		java_set_default_vm_
 	else
-		local current_vm_path="$(readlink "${JAVA_VM_SYSTEM}")"
-		local current_vm="$(basename "${current_vm_path}")"
-		if [[ ! -L "${JAVA_VM_DIR}/${current_vm}" ]]; then
+		local current_vm_path=$(readlink "${ROOT}${JAVA_VM_SYSTEM}")
+		local current_vm=$(basename "${ROOT}${current_vm_path}")
+		if [[ ! -L "${ROOT}${JAVA_VM_DIR}/${current_vm}" ]]; then
 			java_set_default_vm_
 		fi
 	fi
@@ -106,7 +106,7 @@ java-vm_check-nsplugin() {
 
 	# Install a default nsplugin if we don't already have one
 	if in_iuse nsplugin && use nsplugin; then
-		if [[ ! -f "${EPREFIX}"/usr/${libdir}/nsbrowser/plugins/javaplugin.so ]]; then
+		if [[ ! -f "${ROOT}${EPREFIX}"/usr/${libdir}/nsbrowser/plugins/javaplugin.so ]]; then
 			einfo "No system nsplugin currently set."
 			java-vm_set-nsplugin
 		else
