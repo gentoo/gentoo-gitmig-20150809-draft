@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libparserutils/libparserutils-0.1.1.ebuild,v 1.3 2012/07/18 03:05:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libparserutils/libparserutils-0.1.1.ebuild,v 1.4 2012/07/18 07:16:31 xmw Exp $
 
 EAPI=4
 
@@ -24,9 +24,9 @@ src_prepare() {
 		-i Makefile || die
 	sed -e "/^libdir/s:/lib:/$(get_libdir):g" \
 		-i ${PN}.pc.in || die
-	echo "Q := " >> Makefile.config.override || die
-	echo "CC := $(tc-getCC)" >> Makefile.config.override || die
-	echo "AR := $(tc-getAR)" >> Makefile.config.override || die
+	echo "Q := " >> Makefile.config.override
+	echo "CC := $(tc-getCC)" >> Makefile.config.override
+	echo "AR := $(tc-getAR)" >> Makefile.config.override
 }
 
 src_configure() {
@@ -39,18 +39,17 @@ src_configure() {
 
 src_compile() {
 	emake COMPONENT_TYPE=lib-shared
-	if use static-libs ; then
-		emake COMPONENT_TYPE=lib-static
-	fi
-	if use doc ; then
-		emake doc
-	fi
+	use static-libs && emake COMPONENT_TYPE=lib-static
+}
+
+src_test() {
+	emake COMPONENT_TYPE=lib-shared test
+	use static-libs && emake COMPONENT_TYPE=lib-static test
 }
 
 src_install() {
-	emake DESTDIR="${D}" PREFIX=/usr install
-	if use static-libs ; then
-		emake COMPONENT_TYPE=lib-static DESTDIR="${D}" PREFIX=/usr install || die
-	fi
+	emake DESTDIR="${D}" PREFIX=/usr COMPONENT_TYPE=lib-shared install
+	use static-libs && \
+		emake DESTDIR="${D}" PREFIX=/usr COMPONENT_TYPE=lib-static install
 	dodoc README docs/Todo
 }
