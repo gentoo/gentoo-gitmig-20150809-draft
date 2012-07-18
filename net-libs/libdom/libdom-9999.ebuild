@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libdom/libdom-9999.ebuild,v 1.2 2012/07/18 14:21:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libdom/libdom-9999.ebuild,v 1.3 2012/07/18 14:23:34 mr_bones_ Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ EGIT_REPO_URI="git://git.netsurf-browser.org/libdom.git"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS=""
-IUSE="static-libs"
+IUSE="static-libs test"
 
 RDEPEND="dev-libs/libparserutils
 	dev-libs/libwapcaplet

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/hubbub/hubbub-0.1.2.ebuild,v 1.2 2012/07/18 07:20:42 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/hubbub/hubbub-0.1.2.ebuild,v 1.3 2012/07/18 14:24:39 mr_bones_ Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="http://download.netsurf-browser.org/libs/releases/${P}-src.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm"
-IUSE="doc static-libs"
+IUSE="doc static-libs test"
 
 RDEPEND="dev-libs/libparserutils"
 DEPEND="${RDEPEND}

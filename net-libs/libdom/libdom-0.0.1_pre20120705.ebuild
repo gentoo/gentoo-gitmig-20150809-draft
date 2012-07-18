@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libdom/libdom-0.0.1_pre20120705.ebuild,v 1.2 2012/07/18 14:21:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libdom/libdom-0.0.1_pre20120705.ebuild,v 1.3 2012/07/18 14:23:34 mr_bones_ Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/netsurf-buildsystem-0_p20120717.tar.gz
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm"
-IUSE="static-libs"
+IUSE="static-libs test"
 
 RDEPEND="dev-libs/libparserutils
 	dev-libs/libwapcaplet
