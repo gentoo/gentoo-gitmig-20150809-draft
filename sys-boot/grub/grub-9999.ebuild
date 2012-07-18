@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.78 2012/07/13 18:05:19 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.79 2012/07/18 16:34:36 floppym Exp $
 
 EAPI=4
 
@@ -30,7 +30,7 @@ HOMEPAGE="http://www.gnu.org/software/grub/"
 
 LICENSE="GPL-3"
 SLOT="2"
-IUSE="custom-cflags debug device-mapper efiemu mount nls static sdl truetype libzfs"
+IUSE="custom-cflags debug device-mapper doc efiemu mount nls static sdl truetype libzfs"
 
 GRUB_PLATFORMS=(
 	# everywhere:
@@ -176,6 +176,7 @@ grub_src_configure() {
 
 	ECONF_SOURCE="${S}" \
 	econf \
+		--htmldir="${EPREFIX}/usr/share/doc/${PF}/html" \
 		--disable-werror \
 		--program-prefix= \
 		--program-transform-name="s,grub,grub2," \
@@ -202,8 +203,16 @@ grub_src_compile() {
 	pax-mark -mpes "${grub_binaries[@]}"
 }
 
+grub_build_docs() {
+	emake -C docs html
+}
+
 grub_src_install() {
 	default_src_install
+}
+
+grub_install_docs() {
+	emake -C docs DESTDIR="${D}" install-html
 }
 
 src_prepare() {
@@ -284,6 +293,9 @@ src_compile() {
 	for i in ${GRUB_ENABLED_PLATFORMS}; do
 		grub_run_phase ${FUNCNAME} ${i}
 	done
+
+	# Just build docs once
+	use doc && grub_run_phase build_docs ${i}
 }
 
 src_install() {
@@ -292,6 +304,8 @@ src_install() {
 	for i in ${GRUB_ENABLED_PLATFORMS}; do
 		grub_run_phase ${FUNCNAME} ${i}
 	done
+
+	use doc && grub_run_phase install_docs ${i}
 
 	mv "${ED}"usr/share/info/grub{,2}.info || die
 
