@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/hyphen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hyphen/ChangeLog,v 1.21 2012/07/18 13:55:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hyphen/ChangeLog,v 1.22 2012/07/18 18:17:32 scarabeus Exp $
+
+*hyphen-2.8.5 (18 Jul 2012)
+
+  18 Jul 2012; Tomáš Chvátal <scarabeus@gentoo.org> +hyphen-2.8.5.ebuild:
+  Version bump to latest.
 
   18 Jul 2012; Tomáš Chvátal <scarabeus@gentoo.org> -hyphen-2.8.3.ebuild,
   hyphen-2.8.4.ebuild:
