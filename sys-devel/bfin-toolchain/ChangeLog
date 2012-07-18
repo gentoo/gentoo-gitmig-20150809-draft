@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/bfin-toolchain
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bfin-toolchain/ChangeLog,v 1.12 2009/12/30 04:49:52 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bfin-toolchain/ChangeLog,v 1.13 2012/07/18 11:48:04 vapier Exp $
+
+*bfin-toolchain-2011.1_rc4 (18 Jul 2012)
+
+  18 Jul 2012; Mike Frysinger <vapier@gentoo.org>
+  +bfin-toolchain-2011.1_rc4.ebuild, -bfin-toolchain-2007.1.1_rc3.ebuild,
+  -bfin-toolchain-2008.1.5_rc14.ebuild, -bfin-toolchain-2008.1_rc8.ebuild,
+  -bfin-toolchain-2009.1.1_rc2.ebuild, -bfin-toolchain-2009.1_rc10.ebuild:
+  Version bump.  Switch over to QA_PREBUILT #426702 by Diego Elio Pettenò.
 
 *bfin-toolchain-2009.1.1_rc2 (30 Dec 2009)
 
