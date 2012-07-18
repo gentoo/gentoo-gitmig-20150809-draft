@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libevent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.224 2012/06/17 17:59:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.225 2012/07/18 18:32:41 jer Exp $
+
+  18 Jul 2012; Jeroen Roovers <jer@gentoo.org> -libevent-1.4.13.ebuild,
+  -libevent-1.4.14b.ebuild, -libevent-1.4.14b-r1.ebuild,
+  -libevent-2.0.16.ebuild, -files/libevent-2.0.16-sysctl.patch,
+  -libevent-2.0.17.ebuild:
+  Old.
 
   17 Jun 2012; Raúl Porcel <armin76@gentoo.org> libevent-2.0.18.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #415581
