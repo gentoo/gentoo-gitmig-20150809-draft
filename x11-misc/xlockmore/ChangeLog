@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xlockmore
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.114 2012/05/21 10:00:44 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.115 2012/07/18 17:16:36 jer Exp $
+
+*xlockmore-5.40 (18 Jul 2012)
+
+  18 Jul 2012; Jeroen Roovers <jer@gentoo.org> +xlockmore-5.40.ebuild:
+  Version bump.
 
   21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> xlockmore-5.38.ebuild:
   x86 stable wrt bug #414489
