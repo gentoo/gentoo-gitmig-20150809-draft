@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/texstudio-2.3.ebuild,v 1.3 2012/06/20 19:09:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/texstudio-2.3.ebuild,v 1.4 2012/07/18 18:24:20 jlec Exp $
 
 EAPI=4
 
@@ -38,7 +38,6 @@ S="${WORKDIR}"/${P/-/}
 
 PATCHES=(
 	"${FILESDIR}/${P}-hunspell.patch"
-	"${FILESDIR}/${P}-gcc47.patch"
 	)
 
 src_prepare() {

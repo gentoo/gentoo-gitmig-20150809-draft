@@ -1,6 +1,9 @@
 # ChangeLog for app-office/texstudio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/ChangeLog,v 1.5 2012/07/15 09:31:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/ChangeLog,v 1.6 2012/07/18 18:24:20 jlec Exp $
+
+  18 Jul 2012; Justin Lecher <jlec@gentoo.org> texstudio-2.3.ebuild:
+  Drop patch for gcc-4.7 from all but last revision
 
 *texstudio-2.3-r1 (15 Jul 2012)
 
