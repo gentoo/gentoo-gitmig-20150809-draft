@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/hubbub/hubbub-0.1.2.ebuild,v 1.1 2012/07/17 22:22:59 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/hubbub/hubbub-0.1.2.ebuild,v 1.2 2012/07/18 07:20:42 xmw Exp $
 
 EAPI=4
 
-inherit multilib
+inherit multilib toolchain-funcs
 
 DESCRIPTION="HTML5 compliant parsing library, written in C"
 HOMEPAGE="http://www.netsurf-browser.org/projects/hubbub/"
@@ -49,9 +49,9 @@ src_test() {
 }
 
 src_install() {
-	emake COMPONENT_TYPE=lib-shared DESTDIR="${D}" PREFIX=/usr install
+	emake DESTDIR="${D}" PREFIX=/usr COMPONENT_TYPE=lib-shared install
     use static-libs && \
-		emake COMPONENT_TYPE=lib-static DESTDIR="${D}" PREFIX=/usr install
+		emake DESTDIR="${D}" PREFIX=/usr COMPONENT_TYPE=lib-static install
 
 	dodoc README docs/{Architecture,Macros,Todo,Treebuilder,Updated}
 	use doc && dohtml build/docs/html/*
