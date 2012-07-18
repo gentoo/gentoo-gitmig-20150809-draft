@@ -1,6 +1,13 @@
 # ChangeLog for app-text/fbless
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/fbless/ChangeLog,v 1.1 2012/07/13 07:48:38 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/fbless/ChangeLog,v 1.2 2012/07/18 06:11:42 yngwin Exp $
+
+*fbless-9999 (18 Jul 2012)
+*fbless-0.2.2 (18 Jul 2012)
+
+  18 Jul 2012; Ben de Groot <yngwin@gentoo.org> +fbless-0.2.2.ebuild,
+  +fbless-9999.ebuild, -fbless-0.2.1.ebuild:
+  Version bump for new, active, fork. Add live ebuild. Bug #427006.
 
 *fbless-0.2.1 (13 Jul 2012)
 
