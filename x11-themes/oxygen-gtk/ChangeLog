@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/oxygen-gtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/oxygen-gtk/ChangeLog,v 1.39 2012/07/18 14:31:48 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/oxygen-gtk/ChangeLog,v 1.40 2012/07/18 15:00:46 johu Exp $
+
+*oxygen-gtk-1.1.0 (18 Jul 2012)
+
+  18 Jul 2012; Johannes Huber <johu@gentoo.org> +oxygen-gtk-1.1.0.ebuild:
+  Version bump in SLOT 3.
 
 *oxygen-gtk-1.3.0 (18 Jul 2012)
 
