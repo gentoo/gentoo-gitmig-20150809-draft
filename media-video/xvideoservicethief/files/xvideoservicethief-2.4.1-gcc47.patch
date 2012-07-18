@@ -1,0 +1,12 @@
+https://bugs.gentoo.org/show_bug.cgi?id=427066
+--- src/qtsingleapplication/src/qtlocalpeer.cpp.bak	2009-10-11 20:43:46.000000000 -0700
++++ src/qtsingleapplication/src/qtlocalpeer.cpp	2012-07-18 01:43:28.210656553 -0700
+@@ -100,7 +100,7 @@ QtLocalPeer::QtLocalPeer(QObject* parent
+         socketName += QLatin1Char('-') + QString::number(sessionId, 16);
+     }
+ #else
+-    socketName += QLatin1Char('-') + QString::number(::getuid(), 16);
++    socketName += QLatin1Char('-') + QString::number(QtLP_Private::getuid(), 16);
+ #endif
+ 
+     server = new QLocalServer(this);
