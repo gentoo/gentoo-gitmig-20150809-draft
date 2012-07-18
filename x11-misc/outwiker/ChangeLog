@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/outwiker
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/outwiker/ChangeLog,v 1.1 2012/07/18 06:46:43 yngwin Exp $
+
+*outwiker-1.6.0 (18 Jul 2012)
+
+  18 Jul 2012; Ben de Groot <yngwin@gentoo.org> +metadata.xml,
+  +outwiker-1.6.0.ebuild:
+  Initial commit. Ebuild by Samoilenko Yuri and Sergey Popov in bug #423537. The
+  latter will be maintainer by proxy.
