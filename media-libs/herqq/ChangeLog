@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/herqq
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/herqq/ChangeLog,v 1.9 2011/12/07 22:08:19 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/herqq/ChangeLog,v 1.10 2012/07/18 01:45:46 ottxor Exp $
+
+  18 Jul 2012; Christoph Junghans <ottxor@gentoo.org> herqq-1.0.0-r1.ebuild,
+  metadata.xml:
+  remove me as maintainer
 
   07 Dec 2011; Markos Chandras <hwoarang@gentoo.org> herqq-1.0.0-r1.ebuild:
   Stable on amd64 wrt bug #388279
@@ -39,4 +43,3 @@
   21 Feb 2011; Christoph Junghans <ottxor@gentoo.org> +herqq-0.8.0.ebuild,
   +metadata.xml:
   Import from cj-overlay (dep for bug #351916)
-
