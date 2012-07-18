@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/openvswitch-1.6.1-r1.ebuild,v 1.1 2012/07/11 07:53:55 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/openvswitch-1.6.1-r1.ebuild,v 1.2 2012/07/18 07:53:05 dev-zero Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ DESCRIPTION="Production quality, multilayer virtual switch."
 HOMEPAGE="http://openvswitch.org"
 SRC_URI="http://openvswitch.org/releases/${P}.tar.gz"
 
-LICENSE="Apache-2.0"
+LICENSE="Apache-2.0 GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="debug monitor +pyside +ssl"

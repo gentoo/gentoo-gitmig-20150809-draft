@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openvswitch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/ChangeLog,v 1.2 2012/07/11 07:53:55 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/ChangeLog,v 1.3 2012/07/18 07:53:05 dev-zero Exp $
+
+  18 Jul 2012; Tiziano Müller <dev-zero@gentoo.org> openvswitch-1.6.1-r1.ebuild:
+  Add GPL-2 to LICENSE for init.d files (bug #426086).
 
 *openvswitch-1.6.1-r1 (11 Jul 2012)
 
