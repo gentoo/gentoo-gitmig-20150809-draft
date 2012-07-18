@@ -1,0 +1,10 @@
+# ChangeLog for net-libs/libdom
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libdom/ChangeLog,v 1.1 2012/07/18 06:10:39 xmw Exp $
+
+*libdom-0.0.1_pre20120705 (18 Jul 2012)
+*libdom-9999 (18 Jul 2012)
+
+  18 Jul 2012; Michael Weber <xmw@gentoo.org> +libdom-0.0.1_pre20120705.ebuild,
+  +libdom-9999.ebuild, +metadata.xml:
+  Initial import
