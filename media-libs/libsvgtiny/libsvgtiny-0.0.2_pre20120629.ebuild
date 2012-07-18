@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsvgtiny/libsvgtiny-0.0.2_pre20120629.ebuild,v 1.1 2012/07/18 08:39:31 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsvgtiny/libsvgtiny-0.0.2_pre20120629.ebuild,v 1.2 2012/07/18 11:04:24 xmw Exp $
 
 EAPI=4
 
 inherit multilib toolchain-funcs
 
 DESCRIPTION="framebuffer abstraction library, written in C"
-HOMEPAGE="http://www.netsurf-browser.org/projects/libnsfb/"
+HOMEPAGE="http://www.netsurf-browser.org/projects/libsvgtiny/"
 SRC_URI="mirror://gentoo/netsurf-buildsystem-0_p20120717.tar.gz
 	mirror://gentoo/${P}.tar.gz"
 
