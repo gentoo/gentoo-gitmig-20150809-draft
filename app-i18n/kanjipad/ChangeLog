@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/kanjipad
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kanjipad/ChangeLog,v 1.14 2012/05/03 19:24:29 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kanjipad/ChangeLog,v 1.15 2012/07/18 11:27:58 naota Exp $
+
+  18 Jul 2012; Naohiro Aota <naota@gentoo.org>
+  +files/kanjipad-2.0.0-cflags.patch, kanjipad-2.0.0.ebuild:
+  Respect CFLAGS. #426789; Set CC properly.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> kanjipad-2.0.0.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -38,4 +42,3 @@
   10 Jul 2002; Stuart Bouyer <stubear@gentoo.org> kanjipad-1.2.3.ebuild:
 
   Initial import of kanjipad ebuild.
-
