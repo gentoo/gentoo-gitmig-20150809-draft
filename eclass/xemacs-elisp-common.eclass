@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xemacs-elisp-common.eclass,v 1.6 2012/05/19 16:26:10 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xemacs-elisp-common.eclass,v 1.7 2012/07/18 14:28:55 vapier Exp $
 #
 # Copyright 2007-2011 Hans de Graaff <graaff@gentoo.org>
 #
@@ -31,7 +31,7 @@
 # to your DEPEND/RDEPEND line and use the functions provided here to bring
 # the files to the correct locations.
 #
-# .SS
+# @ROFF .SS
 # src_compile() usage:
 #
 # An elisp file is compiled by the xemacs-elisp-compile() function
@@ -52,7 +52,7 @@
 # magic ";;;###autoload" comments. See the XEmacs Lisp Reference Manual
 # (node "Autoload") for a detailed explanation.
 #
-# .SS
+# @ROFF .SS
 # src_install() usage:
 #
 # The resulting compiled files (.elc) should be put in a subdirectory
