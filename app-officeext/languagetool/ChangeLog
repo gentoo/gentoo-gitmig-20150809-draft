@@ -1,6 +1,11 @@
-# ChangeLog for app-office/languagetool
+# ChangeLog for app-officeext/languagetool
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-officeext/languagetool/ChangeLog,v 1.4 2012/06/14 10:48:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-officeext/languagetool/ChangeLog,v 1.5 2012/07/18 18:18:01 scarabeus Exp $
+
+*languagetool-1.8 (18 Jul 2012)
+
+  18 Jul 2012; Tomáš Chvátal <scarabeus@gentoo.org> +languagetool-1.8.ebuild:
+  Version bump to latest.
 
   14 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> languagetool-1.7.ebuild:
   Most of the annoying lags were fixed in 3.5.4 so remove the warn.
@@ -21,4 +26,3 @@
   +metadata.xml:
   Initial commit for this lo extension. Fixes bug#41106065. Ebuild taken from
   java overlay. Thanks to Samuel Bauer for the report.
-
