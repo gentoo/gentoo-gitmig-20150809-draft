@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.2.2-r1.ebuild,v 1.2 2012/05/04 06:22:12 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.2.2-r1.ebuild,v 1.3 2012/07/18 00:58:48 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -21,7 +21,7 @@ IUSE="call debug eds +map +geoloc gnome-online-accounts +networkmanager sendto s
 # eventually at which point the dep can be dropped
 # libgee extensively used in libempathy
 # gdk-pixbuf and pango extensively used in libempathy-gtk
-RDEPEND=">=dev-libs/glib-2.28:2
+COMMON_DEPEND=">=dev-libs/glib-2.28:2
 	x11-libs/gdk-pixbuf:2
 	>=x11-libs/gtk+-3.0.2:3
 	x11-libs/pango
@@ -70,7 +70,10 @@ RDEPEND=">=dev-libs/glib-2.28:2
 		media-plugins/gst-plugins-v4l2:0.10
 		>=media-video/cheese-2.91.91.1 )
 "
-DEPEND="${RDEPEND}
+# empathy-3.2 is incompatible with >=telepathy-rakia/sofiasip-0.7, bug #403861
+RDEPEND="${COMMON_DEPEND}
+	!>=net-voip/telepathy-rakia-0.7"
+DEPEND="${COMMON_DEPEND}
 	app-text/scrollkeeper
 	>=app-text/gnome-doc-utils-0.17.3
 	>=dev-util/intltool-0.35.0

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.4.2.ebuild,v 1.2 2012/05/15 23:30:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.4.2.ebuild,v 1.3 2012/07/18 00:58:47 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -69,10 +69,12 @@ COMMON_DEPEND=">=dev-libs/glib-2.30:2
 "
 # FIXME: gst-plugins-bad is required for the valve plugin. This should move to good
 # eventually at which point the dep can be dropped
+# empathy-3.4 is incompatible with telepathy-rakia-0.6, bug #403861
 RDEPEND="${COMMON_DEPEND}
 	media-libs/gst-plugins-base:0.10
 	media-libs/gst-plugins-bad
 	net-im/telepathy-connection-managers
+	!<net-voip/telepathy-rakia-0.7
 	x11-themes/gnome-icon-theme-symbolic
 	gnome? ( gnome-extra/gnome-contacts )
 	!legacy-call? ( !<net-voip/telepathy-gabble-0.16 )
