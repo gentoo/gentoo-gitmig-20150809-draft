@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwapcaplet/libwapcaplet-0.1.1.ebuild,v 1.4 2012/07/18 07:38:24 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwapcaplet/libwapcaplet-0.1.1.ebuild,v 1.5 2012/07/18 14:25:01 mr_bones_ Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="http://download.netsurf-browser.org/libs/releases/${P}-src.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm"
-IUSE="static-libs"
+IUSE="static-libs test"
 
 RDEPEND=""
 DEPEND="virtual/pkgconfig
