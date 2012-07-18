@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.71 2012/07/15 22:45:12 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.72 2012/07/18 14:59:29 blueness Exp $
 
 # @ECLASS: webapp.eclass
 # @MAINTAINER:
@@ -413,7 +413,7 @@ webapp_pkg_setup() {
 		ewarn "This ebuild may be overwriting important files."
 		ewarn
 		echo
-		if has "${EAPI:-0}" 0 1 2 3; then
+		if has "${EAPI:-0}" 0 1 2; then
 			ebeep 10
 		fi
 	elif [[ "$(echo ${my_output} | awk '{ print $1 }')" != "${PN}" ]]; then
