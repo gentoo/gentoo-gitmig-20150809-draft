@@ -1,6 +1,6 @@
 # ChangeLog for net-voip/telepathy-rakia
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-rakia/ChangeLog,v 1.1 2012/07/18 00:30:21 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-rakia/ChangeLog,v 1.2 2012/07/18 00:37:13 tetromino Exp $
 
 *telepathy-rakia-0.7.4 (18 Jul 2012)
 *telepathy-rakia-0.6.8 (18 Jul 2012)
@@ -11,6 +11,6 @@
   +telepathy-rakia-0.7.4.ebuild,
   +files/telepathy-rakia-0.7.4-gio-linking.patch, +metadata.xml:
   Rename net-voip/telepathy-sofiasip to net-voip/telepathy-rakia, and add 0.7.4
-  for gnome-3.4 (bug #403861, thanks to Olivier Crete for clarifying the
+  for empathy-3.4 (bug #403861, thanks to Olivier Crete for clarifying the
   issue).
 
