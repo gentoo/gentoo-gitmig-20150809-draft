@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/anyjson/anyjson-0.3.3.ebuild,v 1.2 2012/07/17 14:54:34 iksaif Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/anyjson/anyjson-0.3.3.ebuild,v 1.3 2012/07/18 04:30:33 iksaif Exp $
 
 EAPI="4"
 
-PYTHON_DEPEND="2 3:3.1"
+PYTHON_DEPEND="*"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
