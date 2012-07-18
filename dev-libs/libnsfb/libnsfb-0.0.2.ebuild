@@ -1,15 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnsfb/libnsfb-0.0.2_pre20120629.ebuild,v 1.1 2012/07/18 08:45:18 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnsfb/libnsfb-0.0.2.ebuild,v 1.1 2012/07/18 16:00:36 xmw Exp $
 
 EAPI=4
 
-inherit multilib toolchain-funcs
+inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="framebuffer abstraction library, written in C"
 HOMEPAGE="http://www.netsurf-browser.org/projects/libnsfb/"
-SRC_URI="mirror://gentoo/netsurf-buildsystem-0_p20120717.tar.gz
-	mirror://gentoo/${P}.tar.gz"
+SRC_URI="http://download.netsurf-browser.org/netsurf/releases/source-full/netsurf-2.9-full-src.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
@@ -30,15 +29,15 @@ RESTRICT="test"
 
 src_unpack() {
 	default
-	mv build "${S}" || die
+	mv netsurf-2.9/${P} . || die
+	rm -r netsurf-2.9 || die
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-xcb-fix.patch
+	epatch "${FILESDIR}"/${P}-unused.patch
+
 	sed -e "/^INSTALL_ITEMS/s: /lib: /$(get_libdir):g" \
-		-e "s:-Werror::g" \
-		-e "1iNSSHARED=${S}/build" \
-		-e "1iNSBUILD=${S}/build/makefiles" \
-		-e "s/\$(eval \$(call pkg_config_get_variable,NSFB_XCBPROTO_VERSION,xcb,xcbproto_version))/NSFB_XCBPROTO_VERSION := $(pkg-config --variable=xcbproto_version xcb)/" \
 		-i Makefile || die
 	sed -e "/^libdir/s:/lib:/$(get_libdir):g" \
 		-i ${PN}.pc.in || die
