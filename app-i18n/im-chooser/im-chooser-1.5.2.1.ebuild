@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-chooser/im-chooser-1.5.2.1.ebuild,v 1.2 2012/06/10 03:32:14 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-chooser/im-chooser-1.5.2.1.ebuild,v 1.3 2012/07/18 06:58:05 naota Exp $
 
 EAPI=3
 inherit gnome2 eutils
@@ -38,5 +38,5 @@ DOCS="AUTHORS ChangeLog NEWS README"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.5.1-imchooserui.patch
-	gnome2-src_prepare
+	gnome2_src_prepare
 }
