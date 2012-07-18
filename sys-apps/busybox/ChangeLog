@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.319 2012/07/08 17:27:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.320 2012/07/18 11:29:35 vapier Exp $
+
+  18 Jul 2012; Mike Frysinger <vapier@gentoo.org> busybox-1.20.1.ebuild,
+  busybox-1.20.2.ebuild:
+  Fix building with USE=-ipv6 #424928 by Dustin Polke.
 
   08 Jul 2012; Raúl Porcel <armin76@gentoo.org> busybox-1.20.1.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #419689

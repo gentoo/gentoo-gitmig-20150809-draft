@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.20.1.ebuild,v 1.8 2012/07/08 17:27:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.20.1.ebuild,v 1.9 2012/07/18 11:29:35 vapier Exp $
 
 EAPI="4"
 inherit eutils flag-o-matic savedconfig toolchain-funcs multilib
@@ -87,6 +87,7 @@ src_prepare() {
 
 	# patches go here!
 	epatch "${FILESDIR}"/${PN}-1.19.0-bb.patch
+	epatch "${FILESDIR}"/${PN}-1.20.0-udhcpc6-ipv6.patch
 	#epatch "${FILESDIR}"/${P}-*.patch
 	cp "${FILESDIR}"/ginit.c init/ || die
 
