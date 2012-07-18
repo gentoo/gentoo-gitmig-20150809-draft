@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-1.5-r2.ebuild,v 1.7 2012/05/03 19:24:28 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-1.5-r2.ebuild,v 1.8 2012/07/18 06:34:22 naota Exp $
 
 EAPI="3"
 inherit autotools gnome2 eutils multilib
@@ -36,6 +36,7 @@ RDEPEND=">=dev-libs/glib-2.4:2
 	anthy? ( app-i18n/anthy )"
 DEPEND="${RDEPEND}
 	dev-lang/perl
+	dev-util/intltool
 	dev-perl/URI
 	virtual/pkgconfig"
 
@@ -52,7 +53,8 @@ update_gtk_immodules() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-gentoo.patch"
+	epatch "${FILESDIR}/${P}-gentoo.patch" \
+		"${FILESDIR}"/${P}-pofiles.patch
 	eautoreconf
 }
 
