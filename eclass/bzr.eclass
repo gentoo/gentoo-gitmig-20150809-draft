@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/bzr.eclass,v 1.17 2011/09/22 08:13:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/bzr.eclass,v 1.18 2012/07/18 15:12:54 ulm Exp $
 #
 # @ECLASS: bzr.eclass
 # @MAINTAINER:
@@ -28,9 +28,6 @@ case "${EAPI:-0}" in
 	0|1) EXPORT_FUNCTIONS src_unpack ;;
 	*)   EXPORT_FUNCTIONS src_unpack src_prepare ;;
 esac
-
-HOMEPAGE="http://bazaar-vcs.org/"
-DESCRIPTION="Based on the ${EBZR} eclass"
 
 DEPEND=">=dev-vcs/bzr-2.0.1"
 case "${EAPI:-0}" in
