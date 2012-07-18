@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.55 2012/07/04 07:39:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.56 2012/07/18 12:48:10 blueness Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -mips
@@ -264,13 +264,18 @@ voodoo3
 smartcard
 emacs
 
-# see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
-# Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
-# all of these are binary-only, and not presently available on this
-# architecture.
-php
+#
+# Anthony G. Basile <blueness@gentoo.org> (18 Jul 2012)
+# php is an old mask which works now
+# pike is no longer a use flag
+#
+## see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
+## Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
+## all of these are binary-only, and not presently available on this
+## architecture.
+#php
+#pike
 djbfft
-pike
 timidity
 
 # Mask all non-mips arch keywords

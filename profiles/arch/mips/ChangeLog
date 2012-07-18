@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.99 2012/07/16 22:46:30 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.100 2012/07/18 12:48:10 blueness Exp $
+
+  18 Jul 2012; Anthony G. Basile <blueness@gentoo.org> use.mask:
+  Un-use mask php
 
   16 Jul 2012; Anthony G. Basile <blueness@gentoo.org> package.use.mask:
   Mask net-libs/cyassl[aes-ni] on mips
