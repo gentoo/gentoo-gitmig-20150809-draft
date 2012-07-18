@@ -1,6 +1,16 @@
 # ChangeLog for dev-util/eclipse-sdk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.162 2012/05/21 20:05:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.163 2012/07/18 14:24:28 sera Exp $
+
+  18 Jul 2012; Ralph Sennhauser <sera@gentoo.org> -files/eclipse-3.2,
+  -files/3.4/eclipse_build-libs.diff, -files/eclipse-3.2-r1,
+  -files/3.4/ant-osgi-manifest.mf,
+  -files/3.4/fedora/eclipse-pde.build-add-package-build.patch,
+  -files/3.4/eclipse-3.4, -eclipse-sdk-3.4-r2.ebuild,
+  -files/3.4/eclipse_String.compareTo.diff,
+  -files/3.4/eclipse_buildfix-pde.diff, -files/3.4/eclipserc,
+  -files/3.4/fedora/eclipse-libupdatebuild2.patch:
+  Remove 3.4. #362217
 
   21 May 2012; Samuli Suominen <ssuominen@gentoo.org>
   eclipse-sdk-3.4-r2.ebuild, eclipse-sdk-3.5.1-r1.ebuild:
