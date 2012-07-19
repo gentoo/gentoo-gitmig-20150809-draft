@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinxcontrib-issuetracker/sphinxcontrib-issuetracker-0.10.1.ebuild,v 1.1 2012/07/17 19:43:29 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinxcontrib-issuetracker/sphinxcontrib-issuetracker-0.10.1.ebuild,v 1.2 2012/07/19 14:51:03 kensington Exp $
 
 EAPI="4"
 SUPPORT_PYTHON_ABIS="1"
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 		dev-python/pyquery
 	)"
 
-PYTHON_MODNAME="${PN/-//}.py"
+PYTHON_MODNAME="${PN/-//}"
 
 src_prepare() {
 	distutils_src_prepare
@@ -40,12 +40,4 @@ src_prepare() {
 	# Tests from tests/test_stylesheet.py require dev-python/PyQt4[X,webkit]
 	# and virtualx.eclass.
 	rm tests/test_stylesheet.py || die
-}
-
-pkg_postinst() {
-	python_mod_optimize sphinxcontrib/issuetracker/resolvers.py
-}
-
-pkg_postrm() {
-	python_mod_cleanup sphinxcontrib/issuetracker/resolvers.py
 }
