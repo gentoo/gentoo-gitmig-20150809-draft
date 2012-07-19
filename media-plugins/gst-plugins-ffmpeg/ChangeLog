@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-ffmpeg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.139 2012/06/27 16:19:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.140 2012/07/19 20:07:35 maekke Exp $
+
+  19 Jul 2012; Markus Meier <maekke@gentoo.org>
+  gst-plugins-ffmpeg-0.10.13-r2.ebuild:
+  arm stable, bug #422537
 
   27 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   gst-plugins-ffmpeg-0.10.13-r1.ebuild:
