@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/trayer-srg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/trayer-srg/ChangeLog,v 1.8 2012/06/14 00:18:04 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/trayer-srg/ChangeLog,v 1.9 2012/07/19 07:26:58 jdhore Exp $
+
+  19 Jul 2012; Jeff Horelick <jdhore@gentoo.org> trayer-srg-1.1.5.ebuild:
+  marked x86 per bug 427172
 
   14 Jun 2012; Michael Weber <xmw@gentoo.org> trayer-srg-1.1.5.ebuild:
   Fix manifest
