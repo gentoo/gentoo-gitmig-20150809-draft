@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-9999.ebuild,v 1.24 2012/06/24 11:46:39 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-9999.ebuild,v 1.25 2012/07/19 16:18:40 kensington Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -80,7 +80,7 @@ RDEPEND="
 	$(add_kdebase_dep knewstuff)
 	media-libs/libpng
 	sys-libs/zlib
-	>=x11-libs/qt-gui-4.8.1-r1
+	>=x11-libs/qt-gui-4.8.1-r1:4
 	attica? ( dev-libs/libattica )
 	crypt? ( app-crypt/qca:2 )
 	eigen? ( dev-cpp/eigen:2 )
