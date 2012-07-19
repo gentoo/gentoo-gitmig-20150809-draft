@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.9.0-r1.ebuild,v 1.3 2012/07/17 20:30:16 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.9.0-r2.ebuild,v 1.1 2012/07/19 19:52:18 axs Exp $
 
 EAPI=4
 
@@ -350,9 +350,9 @@ src_install() {
 	emake DESTDIR="${D}" install
 	emake -C drivers DESTDIR="${D}" install
 
-	newinitd "${FILESDIR}"/lircd-0.8.6-r1 lircd
+	newinitd "${FILESDIR}"/lircd-0.8.6-r2 lircd
 	newinitd "${FILESDIR}"/lircmd lircmd
-	newconfd "${FILESDIR}"/lircd.conf.3 lircd
+	newconfd "${FILESDIR}"/lircd.conf.4 lircd
 
 	insinto /etc/modprobe.d/
 	newins "${FILESDIR}"/modprobed.lirc lirc.conf

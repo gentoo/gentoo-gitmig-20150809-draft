@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/lirc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.228 2012/07/17 20:30:16 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.229 2012/07/19 19:52:18 axs Exp $
+
+*lirc-0.9.0-r2 (19 Jul 2012)
+
+  19 Jul 2012; Ian Stakenvicius <axs@gentoo.org> -files/lircd-0.8.6-r1,
+  +files/lircd-0.8.6-r2, -lirc-0.9.0-r1.ebuild, +lirc-0.9.0-r2.ebuild,
+  +files/lircd.conf.4, -files/lircd.conf.3:
+  allowed conf.d/lircd to override socket and symlink for multiplexing, bug
+  287731
 
   17 Jul 2012; Ian Stakenvicius <axs@gentoo.org> lirc-0.9.0-r1.ebuild,
   +files/lirc-0.9.0-atiusb_kfifo.patch:

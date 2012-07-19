@@ -13,3 +13,10 @@
 # for the following entries in /sys/class/rc/
 # (space-separated list if there is more than one)
 LIRCD_SET_SYSCLASSRCS="rc0"
+
+# If running mulitple instances of lircd, the following
+# can be used to override the default socket path and
+# socket symlink
+#LIRCD_SOCKET="/var/run/lirc/lircd"
+#LIRCD_SYMLINKFILE="/dev/lircd"
+
