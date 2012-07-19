@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/axtls/axtls-1.4.8.ebuild,v 1.3 2012/07/15 22:47:22 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/axtls/axtls-1.4.8.ebuild,v 1.4 2012/07/19 20:18:56 blueness Exp $
 
 EAPI="4"
 
@@ -41,7 +41,7 @@ S="${WORKDIR}/${MY_PN}"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~mips ppc ppc64 ~x86"
 
 IUSE="httpd cgi-lua cgi-php static static-libs doc"
 
