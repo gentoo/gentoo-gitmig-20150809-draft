@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6805 2012/07/19 08:17:41 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6806 2012/07/19 18:49:39 tetromino Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Jul 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.mask:
+  Mask obsolete <app-emulation/wine-1.4 for removal in 30 days (bug #427236).
 
   19 Jul 2012; Tiziano Müller <dev-zero@gentoo.org> package.mask:
   Remove obsolete mask for nginx-0.8
