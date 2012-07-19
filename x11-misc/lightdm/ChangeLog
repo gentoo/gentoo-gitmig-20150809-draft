@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/lightdm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/ChangeLog,v 1.46 2012/06/27 21:16:52 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/ChangeLog,v 1.47 2012/07/19 21:55:20 hwoarang Exp $
+
+*lightdm-1.3.2 (19 Jul 2012)
+
+  19 Jul 2012; Markos Chandras <hwoarang@gentoo.org> +lightdm-1.3.2.ebuild:
+  Version bump. Remove users.conf file per bug #424471
 
   27 Jun 2012; Steev Klimaszewski <steev@gentoo.org> lightdm-1.2.2-r3.ebuild:
   Keyword lightdm 1.2.2-r3 ~arm, tested on an EfikaMX Smarttop (armv7)
@@ -211,4 +216,3 @@
   +files/lightdm-0.9.7-gtk.patch, +metadata.xml:
   Re-introduce lightdm package. Bug #365311. Thanks to Christoph Junghans
   <ottxor@gentoo.org>
-
