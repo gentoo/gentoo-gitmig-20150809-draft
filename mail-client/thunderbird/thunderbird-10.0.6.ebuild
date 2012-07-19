@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-13.0.ebuild,v 1.6 2012/07/04 19:14:42 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-10.0.6.ebuild,v 1.1 2012/07/19 22:33:25 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
-MOZ_ESR=""
+MOZ_ESR="1"
 
 # This list can be updated using scripts/get_langs.sh from the mozilla overlay
 MOZ_LANGS=(ar ast be bg bn-BD br ca cs da de el en en-GB en-US es-AR es-ES et eu fi
@@ -20,7 +20,7 @@ fi
 MOZ_P="${PN}-${MOZ_PV}"
 
 # Enigmail version
-EMVER="1.4.1"
+EMVER="1.3.5"
 # Upstream ftp release URI that's used by mozlinguas.eclass
 # We don't use the http mirror because it deletes old tarballs.
 MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/${PN}/releases/"
@@ -32,11 +32,11 @@ HOMEPAGE="http://www.mozilla.com/en-US/thunderbird/"
 
 KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 SLOT="0"
-LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
-IUSE="bindist gconf +crashreporter +crypt +ipc +jit +lightning +minimal mozdom +webm"
+LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
+IUSE="bindist gconf +crypt +ipc +lightning +minimal mozdom +webm selinux"
 
-PATCH="thunderbird-13.0-patches-0.1"
-PATCHFF="firefox-13.0-patches-0.2"
+PATCH="thunderbird-10.0-patches-0.1"
+PATCHFF="firefox-10.0-patches-0.9"
 
 SRC_URI="${SRC_URI}
 	${MOZ_FTP_URI}${MOZ_PV}/source/${MOZ_P}.source.tar.bz2
@@ -47,10 +47,9 @@ SRC_URI="${SRC_URI}
 ASM_DEPEND=">=dev-lang/yasm-1.1"
 
 RDEPEND=">=sys-devel/binutils-2.16.1
-	>=dev-libs/nss-3.13.5
-	>=dev-libs/nspr-4.9.1
+	>=dev-libs/nss-3.13.1
+	>=dev-libs/nspr-4.8.8
 	>=dev-libs/glib-2.26
-	crashreporter? ( net-misc/curl )
 	gconf? ( >=gnome-base/gconf-1.2.1:2 )
 	>=media-libs/libpng-1.5.9[apng]
 	>=x11-libs/cairo-1.10
@@ -60,7 +59,8 @@ RDEPEND=">=sys-devel/binutils-2.16.1
 		media-libs/alsa-lib )
 	virtual/libffi
 	!x11-plugins/enigmail
-	system-sqlite? ( >=dev-db/sqlite-3.7.10[fts3,secure-delete,threadsafe,unlock-notify,debug=] )
+	system-sqlite? ( >=dev-db/sqlite-3.7.7.1[fts3,secure-delete,unlock-notify,debug=] )
+	selinux? ( sec-policy/selinux-thunderbird )
 	crypt?  ( || (
 		( >=app-crypt/gnupg-2.0
 			|| (
@@ -74,12 +74,9 @@ RDEPEND=">=sys-devel/binutils-2.16.1
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	webm? ( x86? ( ${ASM_DEPEND} )
-		amd64? ( ${ASM_DEPEND} )
-		virtual/opengl )"
+		amd64? ( ${ASM_DEPEND} ) )"
 
-if [[ ${PV} =~ beta ]]; then
-	S="${WORKDIR}/comm-beta"
-elif [[ ${MOZ_ESR} == 1 ]]; then
+if [[ ${MOZ_ESR} == 1 ]]; then
 	S="${WORKDIR}/comm-esr${PV%%.*}"
 else
 	S="${WORKDIR}/comm-release"
@@ -118,6 +115,7 @@ src_prepare() {
 
 	# Apply our patchset from firefox to thunderbird as well
 	pushd "${S}"/mozilla &>/dev/null || die
+	EPATCH_EXCLUDE="6012_fix_shlibsign.patch 6013_fix_abort_declaration.patch" \
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}/firefox"
@@ -146,7 +144,6 @@ src_prepare() {
 	epatch_user
 
 	eautoreconf
-	# Ensure we run eautoreconf in mozilla to regenerate configure
 	cd "${S}"/mozilla
 	eautoconf
 }
@@ -179,9 +176,6 @@ src_configure() {
 	# Use enable features
 	mozconfig_use_enable lightning calendar
 	mozconfig_use_enable gconf
-	# Both methodjit and tracejit conflict with PaX
-	mozconfig_use_enable jit methodjit
-	mozconfig_use_enable jit tracejit
 
 	# Bug #72667
 	if use mozdom; then
@@ -237,11 +231,8 @@ src_install() {
 	cp "${FILESDIR}"/thunderbird-gentoo-default-prefs-1.js-1 \
 		"${S}/${obj_dir}/mozilla/dist/bin/defaults/pref/all-gentoo.js" || die
 
-	# Without methodjit and tracejit there's no conflict with PaX
-	if use jit; then
-		# Pax mark xpcshell for hardened support, only used for startupcache creation.
-		pax-mark m "${S}"/${obj_dir}/mozilla/dist/bin/xpcshell
-	fi
+	# Pax mark xpcshell for hardened support, only used for startupcache creation.
+	pax-mark m "${S}"/${obj_dir}/mozilla/dist/bin/xpcshell
 
 	emake DESTDIR="${D}" install || die "emake install failed"
 
@@ -256,7 +247,7 @@ src_install() {
 		newmenu "${FILESDIR}"/icon/${PN}-unbranded.desktop \
 			${PN}.desktop
 
-		sed -i -e "s:Mozilla\ Thunderbird:EarlyBird:g" \
+		sed -i -e "s:Mozilla\ Thunderbird:Lanikai:g" \
 			"${ED}"/usr/share/applications/${PN}.desktop
 	fi
 
@@ -293,15 +284,8 @@ src_install() {
 			-i "${ED}"/usr/share/applications/${PN}.desktop
 	fi
 
-	if use jit ; then
-		pax-mark m "${ED}"/${MOZILLA_FIVE_HOME}/thunderbird-bin
-	fi
+	pax-mark m "${ED}"/${MOZILLA_FIVE_HOME}/thunderbird-bin
 
-	# Plugin-container needs to be pax-marked for hardened to ensure plugins such as flash
-	# continue to work as expected.
-	pax-mark m "${ED}"${MOZILLA_FIVE_HOME}/plugin-container
-
-	# Plugins dir
 	share_plugins_dir
 
 	if use minimal; then

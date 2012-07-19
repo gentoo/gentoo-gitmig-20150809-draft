@@ -1,6 +1,14 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.156 2012/07/06 07:37:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.157 2012/07/19 22:33:25 anarchy Exp $
+
+*thunderbird-14.0 (19 Jul 2012)
+*thunderbird-10.0.6 (19 Jul 2012)
+
+  19 Jul 2012; Jory A. Pratt <anarchy@gentoo.org> +thunderbird-10.0.6.ebuild,
+  +thunderbird-14.0.ebuild, -thunderbird-10.0.4.ebuild,
+  -thunderbird-13.0.ebuild, thunderbird-10.0.5.ebuild:
+  Security bump  bug #427224
 
   06 Jul 2012; Samuli Suominen <ssuominen@gentoo.org>
   -files/1001-xulrunner_fix_jemalloc_vs_aslr.patch, -files/libnotify-0.7.patch,
@@ -2177,4 +2185,3 @@
   Update to 0.7.3 for security meta-bug 59419. This is the first of the mozilla
   ebuilds to use mozilla.eclass. Remove unused amd64 patch which exceeds
   repoman's filesize limit.
-
