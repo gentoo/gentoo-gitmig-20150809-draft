@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/leechcraft-azoth/leechcraft-azoth-0.5.0.ebuild,v 1.3 2012/07/15 16:05:12 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/leechcraft-azoth/leechcraft-azoth-0.5.75.ebuild,v 1.1 2012/07/19 19:57:36 maksbotan Exp $
 
 EAPI="4"
 
@@ -10,20 +10,28 @@ DESCRIPTION="Azoth, the modular IM client for LeechCraft."
 
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug +acetamide +adiumstyles +autoidler +autopaste +chathistory +crypt
-		+depester +embedmedia +herbicide +hili +isterique +juick +lastseen
-		+metacontacts +modnok +nativeemoticons +otroid +p100q +rosenthal
-		+standardstyles +xoox +xtazy"
+IUSE="debug astrality +acetamide +adiumstyles +autoidler +autopaste +chathistory +crypt
+		+depester +embedmedia +herbicide +hili +isterique +juick +keeso +lastseen
+		+metacontacts media +modnok +nativeemoticons +otroid +p100q +rosenthal
+		+standardstyles +xoox +xtazy +zheet"
 
 DEPEND="~net-misc/leechcraft-core-${PV}
 		x11-libs/qt-webkit:4
 		x11-libs/qt-multimedia:4
 		autoidler? ( x11-libs/libXScrnSaver )
+		astrality? ( net-libs/telepathy-qt )
 		otroid? ( net-libs/libotr )
-		xoox? ( net-libs/qxmpp[extras] media-libs/speex )
+		media? ( x11-libs/qt-multimedia:4 )
+		rosenthal? ( app-text/hunspell )
+		xoox? ( =net-libs/qxmpp-0.3.61*[extras] media-libs/speex )
 		xtazy? ( x11-libs/qt-dbus:4 )
-		crypt? ( app-crypt/qca app-crypt/qca-gnupg )"
+		crypt? ( app-crypt/qca app-crypt/qca-gnupg )
+		zheet? ( net-libs/libmsn )"
 RDEPEND="${DEPEND}
+	astrality? (
+		net-im/telepathy-mission-control
+		net-voip/telepathy-haze
+	)
 	modnok? (
 		|| (
 			media-gfx/imagemagick
@@ -37,6 +45,7 @@ src_configure() {
 		$(cmake-utils_use_enable crypt CRYPT)
 		$(cmake-utils_use_enable acetamide AZOTH_ACETAMIDE)
 		$(cmake-utils_use_enable adiumstyles AZOTH_ADIUMSTYLES)
+		$(cmake-utils_use_enable astrality AZOTH_ASTRALITY)
 		$(cmake-utils_use_enable autoidler AZOTH_AUTOIDLER)
 		$(cmake-utils_use_enable autopaste AZOTH_AUTOPASTE)
 		$(cmake-utils_use_enable chathistory AZOTH_CHATHISTORY)
@@ -46,8 +55,10 @@ src_configure() {
 		$(cmake-utils_use_enable hili AZOTH_HILI)
 		$(cmake-utils_use_enable isterique AZOTH_ISTERIQUE)
 		$(cmake-utils_use_enable juick AZOTH_JUICK)
+		$(cmake-utils_use_enable keeso AZOTH_KEESO)
 		$(cmake-utils_use_enable lastseen AZOTH_LASTSEEN)
 		$(cmake-utils_use_enable metacontacts AZOTH_LASTSEEN)
+		$(cmake-utils_use_enable media MEDIACALLS)
 		$(cmake-utils_use_enable modnok AZOTH_MODNOK)
 		$(cmake-utils_use_enable nativeemoticons AZOTH_NATIVEEMOTICONS)
 		$(cmake-utils_use_enable otroid AZOTH_OTROID)
@@ -55,7 +66,8 @@ src_configure() {
 		$(cmake-utils_use_enable rosenthal AZOTH_ROSENTHAL)
 		$(cmake-utils_use_enable standardstyles AZOTH_STANDARDSTYLES)
 		$(cmake-utils_use_enable xoox AZOTH_XOOX)
-		$(cmake-utils_use_enable xtazy AZOTH_XTAZY)"
+		$(cmake-utils_use_enable xtazy AZOTH_XTAZY)
+		$(cmake-utils_use_enable zheet AZOTH_ZHEET)"
 
 	cmake-utils_src_configure
 }
