@@ -1,6 +1,9 @@
 # ChangeLog for media-video/griffith
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/ChangeLog,v 1.58 2012/03/22 21:56:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/ChangeLog,v 1.59 2012/07/19 18:49:09 jdhore Exp $
+
+  19 Jul 2012; Jeff Horelick <jdhore@gentoo.org> griffith-0.13.ebuild:
+  marked x86 per bug 427240
 
 *griffith-0.13 (22 Mar 2012)
 

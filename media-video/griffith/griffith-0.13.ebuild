@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-0.13.ebuild,v 1.1 2012/03/22 21:56:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-0.13.ebuild,v 1.2 2012/07/19 18:49:09 jdhore Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ SRC_URI="http://launchpad.net/${PN}/trunk/${PV}/+download/${P}.tar.gz
 	mirror://berlios/griffith/${PN}-extra-artwork-${ARTWORK_PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 x86 ~x86-fbsd"
 IUSE="doc"
 
 RDEPEND="dev-python/imaging
