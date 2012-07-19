@@ -1,6 +1,13 @@
 # ChangeLog for app-laptop/prey
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/prey/ChangeLog,v 1.4 2012/06/01 00:22:28 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/prey/ChangeLog,v 1.5 2012/07/19 21:42:45 hwoarang Exp $
+
+*prey-0.5.4 (19 Jul 2012)
+
+  19 Jul 2012; Markos Chandras <hwoarang@gentoo.org>
+  +files/prey-0.5.4-cron-functions.patch, +files/prey-0.5.4-gtk-ui.patch,
+  +prey-0.5.4.ebuild:
+  Version bump
 
   01 Jun 2012; Zac Medico <zmedico@gentoo.org> prey-0.5.3.ebuild:
   inherit user for enewgroup
@@ -18,4 +25,3 @@
   +files/prey.cron, +files/prey-cron-functions.patch, +metadata.xml:
   Initial commit. Thanks to Travis Hansen <travisghansen@yahoo.com> and Thomas
   Kear <thomas.kear@gmail.com> for the ebuilds. Bug #305813
-
