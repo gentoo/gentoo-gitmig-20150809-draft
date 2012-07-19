@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.5.4.2-r1.ebuild,v 1.6 2012/07/18 20:49:55 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.5.4.2-r1.ebuild,v 1.7 2012/07/19 16:25:10 kensington Exp $
 
 EAPI=4
 
@@ -58,7 +58,7 @@ BIN_COMMON_DEPEND="
 	=dev-cpp/libcmis-0.1*
 	=dev-libs/icu-49*
 	>=sys-libs/glibc-2.14.1-r3
-	kde? ( >=kde-base/kdelibs-4.8.0 >=x11-libs/qt-core-4.8.0 )
+	kde? ( >=kde-base/kdelibs-4.8.0:4 >=x11-libs/qt-core-4.8.0:4 )
 "
 
 NSS_DEPEND="

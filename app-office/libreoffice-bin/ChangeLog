@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.83 2012/07/18 20:49:55 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.84 2012/07/19 16:25:10 kensington Exp $
+
+  19 Jul 2012; Michael Palimaka <kensington@gentoo.org>
+  libreoffice-bin-3.5.4.2-r1.ebuild:
+  Add missing slot dependencies on KDE and Qt.
 
   18 Jul 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   libreoffice-bin-3.5.4.2-r1.ebuild:
@@ -378,4 +382,3 @@
   23 Jan 2011; Andreas Proschofsky <suka@gentoo.org> +files/50-libreoffice-bin,
   +libreoffice-bin-3.3.0_rc4.ebuild, +files/wrapper.in, +metadata.xml:
   Initial commit for libreoffice-bin, final release should be coming soon
-
