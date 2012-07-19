@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r4.ebuild,v 1.4 2012/07/16 02:21:47 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r4.ebuild,v 1.5 2012/07/19 23:42:37 floppym Exp $
 
 EAPI=2
 
@@ -63,7 +63,7 @@ src_compile() {
 	# Bug 412725.
 	unset INCLUDE
 
-	emake -j1 || die "make failed"
+	emake -j1 SHELL=/bin/bash || die "make failed"
 }
 
 src_install() {
@@ -71,6 +71,7 @@ src_install() {
 
 	make DESTDIR="${D}" \
 		libdir=/usr/$(get_libdir) \
+		SHELL=/bin/bash \
 		install install-man || die "make install failed"
 
 	dosym openjade  /usr/bin/jade
