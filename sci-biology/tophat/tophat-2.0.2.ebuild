@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/tophat/tophat-2.0.0.ebuild,v 1.3 2012/07/19 12:03:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/tophat/tophat-2.0.2.ebuild,v 1.1 2012/07/19 12:03:38 jlec Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ DEPEND="
 RDEPEND="${DEPEND}
 	sci-biology/bowtie"
 
-PATCHES=( "${FILESDIR}"/${PN}-2.0.2-flags.patch )
+PATCHES=( "${FILESDIR}"/${P}-flags.patch )
 
 src_configure() {
 	local myeconfargs=( $(use_enable debug) )
