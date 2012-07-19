@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.4.3-r1.ebuild,v 1.6 2012/07/08 13:53:38 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.4.3-r1.ebuild,v 1.7 2012/07/19 15:56:45 kensington Exp $
 
 EAPI=4
 
@@ -37,7 +37,7 @@ COMMONDEPEND="
 	>=media-libs/taglib-extras-1.0.1
 	sys-libs/zlib
 	>=virtual/mysql-5.1[embedded?]
-	x11-libs/qt-script
+	x11-libs/qt-script:4
 	>=x11-libs/qtscriptgenerator-0.1.0
 	cdda? (
 		$(add_kdebase_dep libkcddb)
@@ -52,7 +52,7 @@ COMMONDEPEND="
 		dev-libs/openssl
 		net-libs/loudmouth
 		net-misc/curl
-		x11-libs/qt-core[glib]
+		x11-libs/qt-core:4[glib]
 	)
 	mtp? ( >=media-libs/libmtp-1.0.0 )
 	opengl? ( virtual/opengl )
