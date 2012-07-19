@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qrosscore/qrosscore-0.2.0.ebuild,v 1.2 2012/04/23 19:29:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qrosscore/qrosscore-0.2.0.ebuild,v 1.3 2012/07/19 15:43:32 kensington Exp $
 
 EAPI=3
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
-DEPEND="x11-libs/qt-core
-		x11-libs/qt-gui
-		x11-libs/qt-script"
+DEPEND="x11-libs/qt-core:4
+		x11-libs/qt-gui:4
+		x11-libs/qt-script:4"
 RDEPEND="${DEPEND}"
