@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.502 2012/07/05 15:07:05 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.503 2012/07/19 19:53:46 maekke Exp $
+
+  19 Jul 2012; Markus Meier <maekke@gentoo.org> emacs-23.4-r3.ebuild:
+  arm stable, bug #423507
 
   05 Jul 2012; Ulrich Müller <ulm@gentoo.org> emacs-24.1.ebuild:
   Fix compile failure with glibc-2.16 (updated gets in gnulib). Bug 424755.
