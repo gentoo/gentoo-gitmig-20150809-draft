@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozlinguas.eclass,v 1.3 2012/02/07 15:19:22 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozlinguas.eclass,v 1.4 2012/07/19 12:09:05 scarabeus Exp $
 
 # @ECLASS: mozlinguas.eclass
 # @MAINTAINER:
@@ -24,11 +24,11 @@ case "${EAPI:-0}" in
 esac
 
 # @ECLASS-VARIABLE: MOZ_LANGS
-# @DEFAULT-UNSET
 # @DESCRIPTION:
 # Array containing the list of language pack xpis available for
 # this release. The list can be updated with scripts/get_langs.sh from the
 # mozilla overlay.
+# @DEFAULT-UNSET
 : ${MOZ_LANGS:=()}
 
 # @ECLASS-VARIABLE: MOZ_PV
