@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.5.3_p514.ebuild,v 1.2 2012/04/01 05:41:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.5.3_p514.ebuild,v 1.3 2012/07/19 20:38:16 maekke Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ SRC_URI="http://dev.gentoo.org/~jlec/distfiles/${PF}.tar.xz"
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 arm ~ppc ~ppc64 ~sparc ~x86"
 IUSE="resolvconf +gnutls bindist"
 
 DEPEND="
