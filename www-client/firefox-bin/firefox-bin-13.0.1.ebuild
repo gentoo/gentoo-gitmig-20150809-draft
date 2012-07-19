@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-13.0.1.ebuild,v 1.3 2012/07/04 19:57:45 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-13.0.1.ebuild,v 1.4 2012/07/19 19:07:18 jdhore Exp $
 
 EAPI="4"
 
@@ -121,12 +121,13 @@ pkg_postinst() {
 		einfo "gnome-base/orbit and net-misc/curl emerged."
 		einfo
 	fi
-	if has_version 'net-misc/curl[nss]'; then
-		einfo
-		einfo "Crashreporter won't be able to send reports"
-		einfo "if you have curl emerged with the nss USE-flag"
-		einfo
-	fi
+	# Drop requirement of curl not built with nss as it's not necessary anymore
+	#if has_version 'net-misc/curl[nss]'; then
+	#	einfo
+	#	einfo "Crashreporter won't be able to send reports"
+	#	einfo "if you have curl emerged with the nss USE-flag"
+	#	einfo
+	#fi
 
 	# Update mimedb for the new .desktop file
 	fdo-mime_desktop_database_update
