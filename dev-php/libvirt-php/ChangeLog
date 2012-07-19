@@ -1,6 +1,9 @@
-# ChangeLog for dev-php5/libvirt-php
+# ChangeLog for dev-php/libvirt-php
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/libvirt-php/ChangeLog,v 1.2 2012/01/15 17:14:31 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/libvirt-php/ChangeLog,v 1.3 2012/07/19 06:25:20 dev-zero Exp $
+
+  19 Jul 2012; Tiziano Müller <dev-zero@gentoo.org> libvirt-php-9999.ebuild:
+  Update live ebuild for proper multi-slot building.
 
   15 Jan 2012; Ole Markus With <olemarkus@gentoo.org> libvirt-php-0.4.1.ebuild,
   libvirt-php-9999.ebuild:
@@ -29,4 +32,3 @@
   +libvirt-php-9999.ebuild, +metadata.xml:
   Initial commit (ebuild written by me). Added php as herd as discussed with
   Ole Markus.
-

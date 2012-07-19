@@ -1,10 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/libvirt-php/libvirt-php-9999.ebuild,v 1.2 2012/01/15 17:14:31 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/libvirt-php/libvirt-php-9999.ebuild,v 1.3 2012/07/19 06:25:20 dev-zero Exp $
 
-EAPI=3
+EAPI=4
 
 PHP_EXT_NAME="libvirt-php"
+PHP_EXT_SKIP_PHPIZE="yes"
+USE_PHP="php5-3 php5-4"
 
 inherit php-ext-source-r2 git-2
 
@@ -22,10 +24,14 @@ RDEPEND="app-emulation/libvirt
 DEPEND="${DEPEND}
 	doc? ( app-text/xhtml1 dev-libs/libxslt )"
 
+RESTRICT="test"
+
+EGIT_BOOTSTRAP="autogen.sh"
+
 src_unpack() {
 	git-2_src_unpack
 	# create the default modules directory to be able
-	# to use the php-ext-source-r2 eclass to install
+	# to use the php-ext-source-r2 eclass to configure/build
 	ln -s src "${S}/modules"
 
 	for slot in $(php_get_slots); do
@@ -34,6 +40,12 @@ src_unpack() {
 }
 
 src_install() {
-	php-ext-source-r2_src_install
+	for slot in $(php_get_slots); do
+		php_init_slot_env ${slot}
+		insinto "${EXT_DIR}"
+		newins "src/${PHP_EXT_NAME}.so" "${PHP_EXT_NAME}.so"
+	done
+	php-ext-source-r2_createinifiles
+	dodoc AUTHORS ChangeLog NEWS README
 	use doc && dohtml docs/* docs/graphics/*
 }
