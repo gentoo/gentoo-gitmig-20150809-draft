@@ -1,6 +1,11 @@
 # ChangeLog for media-video/devede
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/devede/ChangeLog,v 1.41 2012/06/08 11:58:07 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/devede/ChangeLog,v 1.42 2012/07/19 06:32:21 patrick Exp $
+
+*devede-3.22.0 (19 Jul 2012)
+
+  19 Jul 2012; Patrick Lauer <patrick@gentoo.org> +devede-3.22.0.ebuild:
+  Bump
 
   08 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> devede-3.21.0.ebuild:
   x86 stable wrt bug #419139
@@ -182,4 +187,3 @@
 
   17 Jun 2007; Samuli Suominen <drac@gentoo.org> +devede-2.13.ebuild:
   Initial commit for bug 139986.
-
