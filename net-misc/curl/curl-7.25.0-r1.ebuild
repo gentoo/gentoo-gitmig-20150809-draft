@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.25.0-r1.ebuild,v 1.13 2012/06/28 12:48:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.25.0-r1.ebuild,v 1.14 2012/07/19 20:19:49 blueness Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="ares idn ipv6 kerberos ldap ssh ssl static-libs test threads"
-IUSE="${IUSE} curl_ssl_axtls curl_ssl_cyassl curl_ssl_gnutls curl_ssl_nss +curl_ssl_openssl curl_ssl_polarssl"
+IUSE="${IUSE} curl_ssl_axtls curl_ssl_gnutls curl_ssl_nss +curl_ssl_openssl curl_ssl_polarssl"
 
 #lead to lots of false negatives, bug #285669
 RESTRICT="test"
@@ -62,7 +62,6 @@ REQUIRED_USE="threads? ( !ares )
 	ssl? (
 		^^ (
 			curl_ssl_axtls
-			curl_ssl_cyassl
 			curl_ssl_gnutls
 			curl_ssl_openssl
 			curl_ssl_nss
@@ -99,12 +98,6 @@ src_configure() {
 			einfo "NOTE: axtls is meant for embedded systems and"
 			einfo "may not be the best choice as an ssl provider"
 			myconf+=( --with-axtls )
-		fi
-		if use curl_ssl_cyassl; then
-			einfo "SSL provided by cyassl"
-			einfo "NOTE: cyassl is meant for embedded systems and"
-			einfo "may not be the best choice as an ssl provider"
-			myconf+=( --with-cyassl )
 		fi
 		if use curl_ssl_gnutls; then
 			einfo "SSL provided by gnutls"
