@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tree
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tree/ChangeLog,v 1.100 2012/07/10 18:57:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tree/ChangeLog,v 1.101 2012/07/19 20:15:53 maekke Exp $
+
+  19 Jul 2012; Markus Meier <maekke@gentoo.org> tree-1.6.0-r1.ebuild:
+  arm stable, bug #424469
 
   10 Jul 2012; Brent Baude <ranger@gentoo.org> tree-1.6.0-r1.ebuild:
   Marking tree-1.6.0-r1 ppc64 for bug 424469
