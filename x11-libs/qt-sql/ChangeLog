@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-sql
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/ChangeLog,v 1.147 2012/07/15 10:58:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/ChangeLog,v 1.148 2012/07/19 21:16:14 maekke Exp $
+
+  19 Jul 2012; Markus Meier <maekke@gentoo.org> qt-sql-4.8.2.ebuild:
+  arm stable, bug #424625
 
   15 Jul 2012; Agostino Sarubbo <ago@gentoo.org> qt-sql-4.8.2.ebuild:
   Stable for x86, wrt bug #424625
