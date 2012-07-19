@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/leechcraft-downloader-http/leechcraft-downloader-http-0.5.65.ebuild,v 1.1 2012/04/22 13:19:55 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/leechcraft-downloader-http/leechcraft-downloader-http-0.5.75.ebuild,v 1.1 2012/07/19 20:15:09 maksbotan Exp $
 
 EAPI="4"
 
