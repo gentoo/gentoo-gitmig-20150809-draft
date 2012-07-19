@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/leechcraft-lcftp/leechcraft-lcftp-0.4.99.ebuild,v 1.4 2012/04/19 14:47:11 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/leechcraft-lcftp/leechcraft-lcftp-0.5.75.ebuild,v 1.1 2012/07/19 19:57:04 maksbotan Exp $
 
 EAPI="4"
 

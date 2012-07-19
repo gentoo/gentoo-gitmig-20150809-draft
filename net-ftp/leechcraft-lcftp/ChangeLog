@@ -1,6 +1,14 @@
 # ChangeLog for net-ftp/leechcraft-lcftp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/leechcraft-lcftp/ChangeLog,v 1.13 2012/05/31 20:49:56 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/leechcraft-lcftp/ChangeLog,v 1.14 2012/07/19 19:57:04 maksbotan Exp $
+
+*leechcraft-lcftp-0.5.75 (19 Jul 2012)
+
+  19 Jul 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-lcftp-0.5.75.ebuild, -leechcraft-lcftp-0.4.99.ebuild,
+  -leechcraft-lcftp-0.5.0.ebuild, -leechcraft-lcftp-0.5.60.ebuild,
+  -leechcraft-lcftp-0.5.65.ebuild:
+  Removed old versions, bumped to 0.5.75
 
 *leechcraft-lcftp-0.5.70 (31 May 2012)
 
@@ -77,4 +85,3 @@
   +leechcraft-lcftp-0.4.85.ebuild, +leechcraft-lcftp-9999.ebuild,
   +metadata.xml:
   Copy net-ftp/leechctaft-lcftp from rion-overlay, thanks to 0xd34df00d
-
