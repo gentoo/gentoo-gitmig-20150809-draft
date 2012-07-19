@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/xf86-video-intel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.91 2012/07/04 22:13:45 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.92 2012/07/19 06:46:16 remi Exp $
+
+*xf86-video-intel-2.20.0 (19 Jul 2012)
+
+  19 Jul 2012; Rémi Cardona <remi@gentoo.org> +xf86-video-intel-2.20.0.ebuild:
+  Bump to 2.20.0, sync with x11 overlay, see bug #426854.
 
   04 Jul 2012; Rémi Cardona <remi@gentoo.org>
   xf86-video-intel-2.10.0-r1.ebuild, xf86-video-intel-2.11.0.ebuild,
