@@ -1,0 +1,18 @@
+--- libvirt-0.9.13/daemon/Makefile.am.orig	2012-07-14 02:08:15.159996143 +0200
++++ libvirt-0.9.13/daemon/Makefile.am	2012-07-14 02:10:11.869995632 +0200
+@@ -99,6 +99,7 @@
+ 	$(XDR_CFLAGS) $(POLKIT_CFLAGS) $(DBUS_CFLAGS) \
+ 	$(WARN_CFLAGS) \
+ 	$(COVERAGE_CFLAGS) \
++	$(LIBNL_CFLAGS) \
+ 	-DQEMUD_PID_FILE="\"$(QEMUD_PID_FILE)\"" \
+ 	-DREMOTE_PID_FILE="\"$(REMOTE_PID_FILE)\""
+ 
+@@ -111,6 +112,7 @@
+ 	$(GNUTLS_LIBS)					\
+ 	$(SASL_LIBS)					\
+ 	$(DBUS_LIBS)					\
++	$(LIBNL_LIBS)					\
+ 	$(POLKIT_LIBS)
+ 
+ if WITH_DTRACE_PROBES
