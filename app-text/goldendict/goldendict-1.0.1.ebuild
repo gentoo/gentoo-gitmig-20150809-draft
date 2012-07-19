@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/goldendict/goldendict-1.0.1.ebuild,v 1.6 2012/05/04 03:33:14 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/goldendict/goldendict-1.0.1.ebuild,v 1.7 2012/07/19 17:36:12 kensington Exp $
 
 EAPI=3
 LANGSLONG="ar_SA bg_BG cs_CZ de_DE el_GR it_IT lt_LT ru_RU uk_UA vi_VN zh_CN"
@@ -36,6 +36,8 @@ DEPEND="${RDEPEND}
 "
 
 S=${WORKDIR}
+
+PATCHES=( "${FILESDIR}/${P}-gcc-4.7.patch" )
 
 src_prepare() {
 	qt4-r2_src_prepare
