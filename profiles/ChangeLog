@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6807 2012/07/19 19:59:41 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6808 2012/07/19 20:50:28 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
+  default/linux/alpha/10.0/use.mask, default/linux/ia64/10.0/use.mask,
+  default/linux/sparc/10.0/use.mask:
+  Use mask curl_ssl_cyassl on alpha/ia64/sparc, bug #419037
 
   19 Jul 2012; Ian Stakenvicius <axs@gentoo.org> package.mask:
   added old lirc ebuilds to p.mask, do not want to remove ebuilds outright as
