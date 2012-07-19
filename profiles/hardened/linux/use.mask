@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/use.mask,v 1.15 2012/03/17 23:17:35 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/use.mask,v 1.16 2012/07/19 13:27:08 anarchy Exp $
 
 -hardened
 
@@ -14,7 +14,3 @@ pch
 
 # prelink is masked for hardened
 prelink
-
-# Will continue to break mozilla products on hardend
-methodjit
-pgo
