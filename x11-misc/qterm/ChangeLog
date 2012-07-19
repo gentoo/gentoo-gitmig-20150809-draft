@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/qterm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/ChangeLog,v 1.44 2012/03/25 14:40:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/ChangeLog,v 1.45 2012/07/19 15:35:06 kensington Exp $
+
+  19 Jul 2012; Michael Palimaka <kensington@gentoo.org> qterm-0.5.12.ebuild:
+  Add missing slot dependencies on Qt.
 
   25 Mar 2012; Brent Baude <ranger@gentoo.org> qterm-0.5.12.ebuild:
   Marking qterm-0.5.12 ppc for bug 400531
@@ -189,4 +192,3 @@
   Initial import. Thanks to <b88901143@ms88.ntu.edu.tw>, Lu Ran
   <hephooey@hotmail.com>, Li Zhengang <022021199@fudan.edu.cn> and
   Ming Zhao <zhaoming@tsinghua.org.cn>. Closing bug #47487
-
