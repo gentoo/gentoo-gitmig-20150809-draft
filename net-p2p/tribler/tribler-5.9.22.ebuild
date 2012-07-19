@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/tribler/tribler-5.9.19.ebuild,v 1.1 2012/07/03 21:19:02 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/tribler/tribler-5.9.22.ebuild,v 1.1 2012/07/19 12:22:17 blueness Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -12,7 +12,10 @@ MY_PV="${PN}_${PV}-1ubuntu1_all"
 
 DESCRIPTION="Bittorrent client that does not require a website to discover content"
 HOMEPAGE="http://www.tribler.org/"
-SRC_URI="http://dl.tribler.org/${MY_PV}.deb"
+SRC_URI="
+	http://dl.tribler.org/${MY_PV}.deb
+	x86?   ( http://dl.tribler.org/tribler-swift_5.9.22-27598_i386.deb )
+	amd64? ( http://dl.tribler.org/tribler-swift_5.9.22-27598_amd64.deb )"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -20,21 +23,20 @@ KEYWORDS="~amd64 ~x86"
 IUSE="vlc"
 
 RDEPEND="
-	>=dev-python/apsw-3.6
-	>=dev-python/m2crypto-0.16
+	dev-python/apsw
+	dev-python/m2crypto
 	dev-python/netifaces
-	>=dev-libs/openssl-0.9.8
-	>=dev-python/wxpython-2.8
-	vlc? ( >=media-video/vlc-1.1.0 )"
-
-# Skipping for now:
-# xulrunner-sdk >= 1.9.1.5 < 1.9.2 (optional, to run SwarmTransport)
-# 7-Zip >= 4.6.5 (optional, to build SwarmTransport)
+	dev-libs/openssl
+	dev-python/wxpython
+	vlc? (
+			media-video/vlc
+			media-video/ffmpeg
+		)"
 
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
-S=${WORKDIR}
+S="${WORKDIR}"
 
 pkg_setup() {
 	python_set_active_version 2
@@ -42,8 +44,10 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${A}
-	unpack ./data.tar.gz
+	for i in ${A}; do
+		unpack ${i}
+		unpack ./data.tar.gz
+	done
 }
 
 src_prepare() {
