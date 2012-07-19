@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/adolc/adolc-2.3.0.ebuild,v 1.1 2012/07/09 18:45:48 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/adolc/adolc-2.3.0-r1.ebuild,v 1.1 2012/07/19 20:18:26 bicatali Exp $
 
 EAPI=4
 
@@ -24,10 +24,12 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MYPN}-${PV}"
 
+PATCHES=( "${FILESDIR}"/${P}-{libdir,no-colpack}.patch )
+
 src_configure() {
 	 local myeconfargs+=(
 		 $(use_enable sparse)
-		 $(use sparse && echo "--with-colpack="${EPREFIX}"/usr")
+		 $(use sparse colpack "${EPREFIX}"/usr)
 	 )
 	 autotools-utils_src_configure
 }
