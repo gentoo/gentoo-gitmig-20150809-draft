@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/rng-tools
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.30 2010/11/08 12:18:52 nelchael Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.31 2012/07/19 10:44:13 blueness Exp $
+
+*rng-tools-3-r1 (19 Jul 2012)
+
+  19 Jul 2012; Anthony G. Basile <blueness@gentoo.org> +rng-tools-3-r1.ebuild,
+  +files/test-for-argp.patch:
+  Patch configure.ac to search for arpg in glibc or libargp, bug #292191
 
 *rng-tools-3 (08 Nov 2010)
 
