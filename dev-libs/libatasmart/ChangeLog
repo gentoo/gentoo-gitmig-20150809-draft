@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libatasmart
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatasmart/ChangeLog,v 1.37 2012/07/10 18:49:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatasmart/ChangeLog,v 1.38 2012/07/19 20:10:17 maekke Exp $
+
+  19 Jul 2012; Markus Meier <maekke@gentoo.org> libatasmart-0.19.ebuild:
+  arm stable, bug #423541
 
   10 Jul 2012; Brent Baude <ranger@gentoo.org> libatasmart-0.19.ebuild:
   Marking libatasmart-0.19 ppc64 for bug 423541
