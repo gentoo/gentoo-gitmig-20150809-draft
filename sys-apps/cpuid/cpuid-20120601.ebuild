@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpuid/cpuid-20110305.ebuild,v 1.3 2011/07/31 16:12:40 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpuid/cpuid-20120601.ebuild,v 1.1 2012/07/19 21:45:46 hwoarang Exp $
 
 EAPI="4"
 
@@ -17,8 +17,8 @@ LICENSE="GPL-2"
 IUSE=""
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-Makefile.patch
-	epatch "${FILESDIR}"/${P}-fPIC.patch #376245
+	epatch "${FILESDIR}"/${PN}-20110305-Makefile.patch
+	epatch "${FILESDIR}"/${PN}-20110305-fPIC.patch #376245
 }
 
 src_compile() {
