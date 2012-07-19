@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/leechcraft-popishu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/leechcraft-popishu/ChangeLog,v 1.16 2012/07/07 10:23:02 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/leechcraft-popishu/ChangeLog,v 1.17 2012/07/19 19:53:46 maksbotan Exp $
+
+*leechcraft-popishu-0.5.75 (19 Jul 2012)
+
+  19 Jul 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-popishu-0.5.75.ebuild, -leechcraft-popishu-0.4.99.ebuild,
+  -leechcraft-popishu-0.5.0.ebuild, -leechcraft-popishu-0.5.60.ebuild,
+  -leechcraft-popishu-0.5.65.ebuild:
+  Removed old versions, bumped to 0.5.75
 
   07 Jul 2012; Johannes Huber <johu@gentoo.org>
   leechcraft-popishu-0.5.70.ebuild:
@@ -82,4 +90,3 @@
   +leechcraft-popishu-0.4.85.ebuild, +leechcraft-popishu-9999.ebuild,
   +metadata.xml:
   Copy app-editors/leechcraft-popishu from rion-overlay, thanks to 0xd34df00d
-
