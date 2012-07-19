@@ -1,11 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/networkx/networkx-1.5.ebuild,v 1.2 2011/10/31 21:27:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/networkx/networkx-1.7.ebuild,v 1.1 2012/07/19 16:02:05 bicatali Exp $
 
-EAPI="3"
+EAPI=4
+
 PYTHON_DEPEND="*:2.6"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.4 2.5"
+RESTRICT_PYTHON_ABIS="2.4 2.5 2.7-pypy-*"
+DISTUTILS_SRC_TEST=nosetests
 
 inherit distutils
 
@@ -15,7 +17,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~ppc-macos ~x86-linux ~x86-macos"
 IUSE="doc examples"
 
 DEPEND="dev-python/setuptools
@@ -44,7 +46,7 @@ src_compile() {
 
 src_install() {
 	distutils_src_install
-	rm -f "${ED}"usr/share/doc/${PF}/{INSTALL,LICENSE}.txt
+	rm -f "${ED}"usr/share/doc/${PF}/{INSTALL,LICENSE}.txt || die
 	use examples || rm -r "${ED}"usr/share/doc/${PF}/examples
 	use doc && dohtml -r doc/build/html/*
 }
