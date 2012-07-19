@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mlt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.91 2012/07/14 13:52:07 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.92 2012/07/19 07:15:56 yngwin Exp $
+
+  19 Jul 2012; Ben de Groot <yngwin@gentoo.org> mlt-0.8.0.ebuild:
+  Add use dependency on libsdl[X,opengl], bug #426964
 
 *mlt-0.8.0 (14 Jul 2012)
 
