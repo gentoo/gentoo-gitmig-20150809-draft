@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/fcitx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/ChangeLog,v 1.49 2012/06/07 06:28:17 qiaomuf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/ChangeLog,v 1.50 2012/07/19 07:43:11 yngwin Exp $
+
+*fcitx-4.2.5 (19 Jul 2012)
+
+  19 Jul 2012; Ben de Groot <yngwin@gentoo.org> +fcitx-4.2.5.ebuild:
+  Version bump. Upgrade to EAPI=4.
 
 *fcitx-4.2.4 (07 Jun 2012)
 
@@ -234,4 +239,3 @@
 
   25 May 2003; Alastair Tse <liquidx@gentoo.org> fcitx-1.8.5.ebuild:
   New ebuild for Chinese Input for X
-
