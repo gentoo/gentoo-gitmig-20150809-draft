@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.276 2012/07/15 18:04:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.277 2012/07/19 12:28:33 ford_prefect Exp $
+
+*pulseaudio-2.1 (19 Jul 2012)
+
+  19 Jul 2012; Arun Raghavan <ford_prefect@gentoo.org> +pulseaudio-2.1.ebuild,
+  metadata.xml:
+  Bump to 2.1. Also add a systemd USE flag (bug #423595. thanks to Maksim
+  'max_posedon' Melnikau <maxposedon@gmail.com> for the patch).
 
   15 Jul 2012; Raúl Porcel <armin76@gentoo.org> pulseaudio-1.1-r1.ebuild:
   alpha/ia64/sh/sparc stable wrt #403309
