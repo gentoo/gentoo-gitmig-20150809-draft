@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/phantomjs/phantomjs-1.3.0.ebuild,v 1.2 2011/12/01 20:51:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/phantomjs/phantomjs-1.3.0.ebuild,v 1.3 2012/07/19 16:29:08 kensington Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="examples python"
 
-RDEPEND="x11-libs/qt-webkit
+RDEPEND="x11-libs/qt-webkit:4
 	python? ( dev-python/PyQt4 )"
 DEPEND="${RDEPEND}"
 
