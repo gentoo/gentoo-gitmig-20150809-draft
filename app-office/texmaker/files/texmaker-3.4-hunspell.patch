@@ -1,30 +1,13 @@
- configdialog.cpp   |    4 ++--
  latexeditor.h      |    2 +-
  latexeditorview.h  |    2 +-
  latexhighlighter.h |    2 +-
  spellerdialog.h    |    2 +-
  texmaker.h         |    2 +-
- texmaker.pro       |   42 ++++++------------------------------------
- 7 files changed, 13 insertions(+), 43 deletions(-)
+ texmaker.pro       |   40 ++++------------------------------------
+ 6 files changed, 9 insertions(+), 41 deletions(-)
 
-diff --git a/configdialog.cpp b/configdialog.cpp
-index 3b91fd0..338b166 100644
---- a/configdialog.cpp
-+++ b/configdialog.cpp
-@@ -210,9 +210,9 @@ void ConfigDialog::browseAspell()
- QDir spelldir(QCoreApplication::applicationDirPath());
- #else
- #ifdef DEBIAN_SPELLDIR
--QDir spelldir(PREFIX"/share/myspell/dicts");
-+QDir spelldir("@GENTOO_PORTAGE_EPREFIX@/usr/share/myspell");
- #else
--QDir spelldir(PREFIX"/share/texmaker");
-+QDir spelldir("@GENTOO_PORTAGE_EPREFIX@/usr/share/texmaker");
- #endif
- #endif
- 
 diff --git a/latexeditor.h b/latexeditor.h
-index e053390..0e82f08 100644
+index c12bbe3..94b9a3c 100644
 --- a/latexeditor.h
 +++ b/latexeditor.h
 @@ -33,7 +33,7 @@
@@ -37,7 +20,7 @@ index e053390..0e82f08 100644
  typedef  int UserBookmarkList[3];
  
 diff --git a/latexeditorview.h b/latexeditorview.h
-index fb8d7d4..716b466 100644
+index 5951656..796eb28 100644
 --- a/latexeditorview.h
 +++ b/latexeditorview.h
 @@ -22,7 +22,7 @@
@@ -76,7 +59,7 @@ index 83248ae..cd16dad 100644
  #include <QTextCursor>
  
 diff --git a/texmaker.h b/texmaker.h
-index 584be7f..b0069a4 100644
+index 045ffc8..bf2705a 100644
 --- a/texmaker.h
 +++ b/texmaker.h
 @@ -48,7 +48,7 @@
@@ -89,7 +72,7 @@ index 584be7f..b0069a4 100644
  #include "pdfviewerwidget.h"
  #include "pdfviewer.h"
 diff --git a/texmaker.pro b/texmaker.pro
-index 17d0a24..28ad193 100644
+index 4e11282..9625bd5 100644
 --- a/texmaker.pro
 +++ b/texmaker.pro
 @@ -4,7 +4,8 @@ TARGET	 = texmaker
@@ -98,8 +81,8 @@ index 17d0a24..28ad193 100644
        webkit
 -CONFIG	+= qt warn_off release
 +CONFIG	+= qt warn_off release link_pkgconfig
-+PKGCONFIG = hunspell
- TEXMAKERVERSION=3.3.3
++PKGCONFIG = hunspell poppler-qt4
+ TEXMAKERVERSION=3.4
  DEFINES += TEXMAKERVERSION=\\\"$${TEXMAKERVERSION}\\\"
  DEFINES += HAVE_SPLASH
 @@ -67,25 +68,6 @@ HEADERS	+= texmaker.h \
@@ -147,15 +130,13 @@ index 17d0a24..28ad193 100644
  	singleapp/qtlocalpeer.cpp \
  	singleapp/qtlockedfile.cpp \
  	singleapp/qtsingleapplication.cpp \
-@@ -276,13 +246,13 @@ isEmpty( ICONDIR ) {
+@@ -278,13 +248,11 @@ isEmpty( ICONDIR ) {
      ICONDIR=/usr/share/pixmaps
  }
  
 -INCLUDEPATH  += /usr/include/poppler/qt4
 -LIBS         += -L/usr/lib -lpoppler-qt4
 -LIBS         += -L/usr/lib -lz
-+INCLUDEPATH  += @GENTOO_PORTAGE_EPREFIX@/usr/include/poppler/qt4
-+LIBS         += -lpoppler-qt4
 +LIBS         += -lz
  DEFINES += PREFIX=\\\"$${PREFIX}\\\"
  target.path = $${PREFIX}/bin

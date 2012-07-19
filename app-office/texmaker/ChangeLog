@@ -1,6 +1,16 @@
 # ChangeLog for app-office/texmaker
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.101 2012/05/26 11:58:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.102 2012/07/19 09:40:02 jlec Exp $
+
+*texmaker-3.4 (19 Jul 2012)
+
+  19 Jul 2012; Justin Lecher <jlec@gentoo.org> -texmaker-3.3.1.ebuild,
+  -files/texmaker-3.3.1-hunspell.patch, -texmaker-3.3.2.ebuild,
+  -files/texmaker-3.3.2-hunspell.patch, -files/texmaker-3.3.2-qt48.patch,
+  -texmaker-3.3.3.ebuild, -files/texmaker-3.3.3-hunspell.patch,
+  +texmaker-3.4.ebuild, +files/texmaker-3.4-hunspell.patch:
+  Version Bump, #427134; use pkg-config for poppler-qt4 instead of manual hack;
+  define PREFIX instead of using prefix.eclass to fix offset; drop old
 
 *texmaker-3.3.4 (26 May 2012)
 

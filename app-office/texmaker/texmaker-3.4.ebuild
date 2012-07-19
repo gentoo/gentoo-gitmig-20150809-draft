@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-3.3.2.ebuild,v 1.3 2012/05/03 20:00:38 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-3.4.ebuild,v 1.1 2012/07/19 09:40:02 jlec Exp $
 
-EAPI="3"
+EAPI=4
 
-inherit base prefix qt4-r2 versionator
+inherit base qt4-r2 versionator
 
 # The upstream version numbering is bad, so we have to remove a dot in the
 # minor version number
@@ -35,10 +35,10 @@ COMMON_DEPEND="
 	sys-libs/zlib
 	x11-libs/libX11
 	x11-libs/libXext
-	>=x11-libs/qt-gui-4.6.1:4
-	>=x11-libs/qt-core-4.6.1:4
-	>=x11-libs/qt-webkit-4.6.1:4
-	>=app-text/hunspell-1.2.4"
+	x11-libs/qt-gui:4
+	x11-libs/qt-core:4
+	x11-libs/qt-webkit:4
+	app-text/hunspell"
 RDEPEND="${COMMON_DEPEND}
 	virtual/latex-base
 	app-text/psutils
@@ -48,23 +48,25 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig"
 
 PATCHES=(
-	"${FILESDIR}/${P}-hunspell.patch"
-	"${FILESDIR}/${P}-qt48.patch"
+	"${FILESDIR}"/${P}-hunspell.patch
+	"${FILESDIR}"/${PN}-3.3.3-qt48.patch
 	)
-
-src_prepare() {
-	qt4-r2_src_prepare
-	eprefixify ${PN}.pro configdialog.cpp
+src_configure() {
+	eqmake4 \
+		${PN}.pro \
+		PREFIX="${EPREFIX}/usr" \
+		DESKTOPDIR="${EPREFIX}/usr/share/applications" \
+		ICONDIR="${EPREFIX}/usr/share/pixmaps"
 }
 
 src_install() {
-	emake INSTALL_ROOT="${ED}" install || die "make install failed"
+	emake INSTALL_ROOT="${ED}" install
 
 	insinto /usr/share/pixmaps/texmaker
-	doins utilities/texmaker*.png || die "doins failed."
-	doins utilities/texmaker.svg || die "doins failed."
+	doins utilities/texmaker*.png
+	doins utilities/texmaker.svg
 
-	dodoc utilities/AUTHORS utilities/CHANGELOG.txt || die "dodoc failed"
+	dodoc utilities/AUTHORS utilities/CHANGELOG.txt
 }
 
 pkg_postinst() {
