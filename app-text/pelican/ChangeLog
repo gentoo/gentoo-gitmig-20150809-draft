@@ -1,0 +1,10 @@
+# ChangeLog for app-text/pelican
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pelican/ChangeLog,v 1.1 2012/07/19 08:26:38 djc Exp $
+
+*pelican-2.8.1 (19 Jul 2012)
+
+  19 Jul 2012; Dirkjan Ochtman <djc@gentoo.org> +pelican-2.8.1.ebuild,
+  +metadata.xml:
+  Initial version of pelican (bug 379671).
+
