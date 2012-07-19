@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/leechcraft-tabsessmanager
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-tabsessmanager/ChangeLog,v 1.6 2012/07/07 10:30:50 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-tabsessmanager/ChangeLog,v 1.7 2012/07/19 20:10:21 maksbotan Exp $
+
+*leechcraft-tabsessmanager-0.5.75 (19 Jul 2012)
+
+  19 Jul 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-tabsessmanager-0.5.75.ebuild,
+  -leechcraft-tabsessmanager-0.5.60.ebuild,
+  -leechcraft-tabsessmanager-0.5.65.ebuild:
+  Removed old versions, bumped to 0.5.75
 
   07 Jul 2012; Johannes Huber <johu@gentoo.org>
   leechcraft-tabsessmanager-0.5.70.ebuild:
@@ -33,4 +41,3 @@
   15 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org>
   +leechcraft-tabsessmanager-9999.ebuild, +metadata.xml:
   Add net-misc/leechcraft-tabsessmanager, thanks to 0xd34df00d
-

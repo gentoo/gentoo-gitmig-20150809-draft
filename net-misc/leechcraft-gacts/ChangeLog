@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/leechcraft-gacts
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-gacts/ChangeLog,v 1.6 2012/07/07 10:30:15 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-gacts/ChangeLog,v 1.7 2012/07/19 20:01:50 maksbotan Exp $
+
+*leechcraft-gacts-0.5.75 (19 Jul 2012)
+
+  19 Jul 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-gacts-0.5.75.ebuild, -leechcraft-gacts-0.5.60.ebuild,
+  -leechcraft-gacts-0.5.65.ebuild:
+  Removed old versions, bumped to 0.5.75
 
   07 Jul 2012; Johannes Huber <johu@gentoo.org> leechcraft-gacts-0.5.70.ebuild:
   Stable for x86, wrt bug #424613
@@ -32,4 +39,3 @@
   10 Feb 2012; Maxim Koltsov <maksbotan@gentoo.org>
   +leechcraft-gacts-9999.ebuild, +metadata.xml:
   Add leechcraft-gacts plugin, by 0xd34df00d
-

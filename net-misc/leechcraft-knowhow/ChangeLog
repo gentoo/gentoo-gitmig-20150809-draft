@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/leechcraft-knowhow
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-knowhow/ChangeLog,v 1.13 2012/07/07 10:39:34 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-knowhow/ChangeLog,v 1.14 2012/07/19 20:03:57 maksbotan Exp $
+
+*leechcraft-knowhow-0.5.75 (19 Jul 2012)
+
+  19 Jul 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-knowhow-0.5.75.ebuild, -leechcraft-knowhow-0.4.99.ebuild,
+  -leechcraft-knowhow-0.5.0.ebuild, -leechcraft-knowhow-0.5.60.ebuild,
+  -leechcraft-knowhow-0.5.65.ebuild:
+  Removed old versions, bumped to 0.5.75
 
   07 Jul 2012; Johannes Huber <johu@gentoo.org>
   leechcraft-knowhow-0.5.70.ebuild:
@@ -73,4 +81,3 @@
   23 Oct 2011; Maxim Koltsov <maksbotan@gentoo.org>
   +leechcraft-knowhow-9999.ebuild, +metadata.xml:
   Add leechcraft-knowhow, thanks to 0xd34df00d
-

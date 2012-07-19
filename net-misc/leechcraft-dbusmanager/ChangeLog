@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/leechcraft-dbusmanager
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-dbusmanager/ChangeLog,v 1.15 2012/07/15 15:58:08 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-dbusmanager/ChangeLog,v 1.16 2012/07/19 20:00:44 maksbotan Exp $
+
+*leechcraft-dbusmanager-0.5.75 (19 Jul 2012)
+
+  19 Jul 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-dbusmanager-0.5.75.ebuild, -leechcraft-dbusmanager-0.4.99.ebuild,
+  -leechcraft-dbusmanager-0.5.0.ebuild, -leechcraft-dbusmanager-0.5.60.ebuild,
+  -leechcraft-dbusmanager-0.5.65.ebuild:
+  Removed old versions, bumped to 0.5.75
 
   15 Jul 2012; Michael Palimaka <kensington@gentoo.org>
   leechcraft-dbusmanager-0.4.99.ebuild, leechcraft-dbusmanager-0.5.0.ebuild,

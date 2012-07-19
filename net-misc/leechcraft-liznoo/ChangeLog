@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/leechcraft-liznoo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-liznoo/ChangeLog,v 1.7 2012/07/15 15:49:36 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-liznoo/ChangeLog,v 1.8 2012/07/19 20:05:01 maksbotan Exp $
+
+*leechcraft-liznoo-0.5.75 (19 Jul 2012)
+
+  19 Jul 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-liznoo-0.5.75.ebuild, -leechcraft-liznoo-0.5.60.ebuild,
+  -leechcraft-liznoo-0.5.65.ebuild:
+  Removed old versions, bumped to 0.5.75
 
   15 Jul 2012; Michael Palimaka <kensington@gentoo.org>
   leechcraft-liznoo-0.5.60.ebuild, leechcraft-liznoo-0.5.65.ebuild,
