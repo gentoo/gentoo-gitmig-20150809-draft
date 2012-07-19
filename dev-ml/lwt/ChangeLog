@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/lwt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lwt/ChangeLog,v 1.18 2012/07/09 20:55:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lwt/ChangeLog,v 1.19 2012/07/19 23:23:54 aballier Exp $
+
+*lwt-2.4.0 (19 Jul 2012)
+
+  19 Jul 2012; Alexis Ballier <aballier@gentoo.org> +lwt-2.4.0.ebuild:
+  version bump, by Jacques-Pascal Deplaix, bug #427214
 
   09 Jul 2012; Ulrich Müller <ulm@gentoo.org> lwt-2.3.2.ebuild:
   Update LICENSE, bug 425140.
