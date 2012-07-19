@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/fcitx-configtool
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-configtool/ChangeLog,v 1.12 2012/06/07 06:34:03 qiaomuf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-configtool/ChangeLog,v 1.13 2012/07/19 09:07:21 yngwin Exp $
+
+*fcitx-configtool-0.4.4-r1 (19 Jul 2012)
+
+  19 Jul 2012; Ben de Groot <yngwin@gentoo.org>
+  +fcitx-configtool-0.4.4-r1.ebuild:
+  Revbump to make it work with fcitx-4.2.5. Upgrade to EAPI=4. Add REQUIRED_USE.
 
 *fcitx-configtool-0.4.4 (07 Jun 2012)
 
@@ -55,4 +61,3 @@
   28 Nov 2010; <qiaomuf@gentoo.org> +fcitx-configtool-0.1.4.ebuild,
   +metadata.xml:
   Initial commit.
-
