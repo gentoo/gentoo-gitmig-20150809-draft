@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/urbanterror-4.1.1.ebuild,v 1.6 2012/07/09 11:42:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/urbanterror-4.1.1.ebuild,v 1.7 2012/07/19 07:20:24 jdhore Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ SRC_URI="http://dev.gentoo.org/~hasufell/distfiles/ioquake3-${IOQ3_SVN}.tar.bz2
 
 LICENSE="GPL-2 Q3AEULA"
 SLOT="0"
-KEYWORDS="-* amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 IUSE="+curl dedicated openal server speex vorbis"
 
 RDEPEND="
