@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/leechcraft-eiskaltdcpp/leechcraft-eiskaltdcpp-0.5.0.ebuild,v 1.3 2012/07/15 15:43:09 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/leechcraft-eiskaltdcpp/leechcraft-eiskaltdcpp-0.5.75.ebuild,v 1.1 2012/07/19 20:12:48 maksbotan Exp $
 
 EAPI="4"
 
