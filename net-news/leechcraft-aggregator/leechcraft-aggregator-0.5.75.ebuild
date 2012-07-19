@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/leechcraft-aggregator/leechcraft-aggregator-0.5.60.ebuild,v 1.2 2012/07/15 15:45:06 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/leechcraft-aggregator/leechcraft-aggregator-0.5.75.ebuild,v 1.1 2012/07/19 20:11:31 maksbotan Exp $
 
 EAPI="4"
 
