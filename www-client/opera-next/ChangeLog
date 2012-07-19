@@ -1,6 +1,12 @@
 # ChangeLog for www-client/opera-next
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.110 2012/07/06 14:47:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.111 2012/07/19 09:47:24 jer Exp $
+
+*opera-next-12.50.1513 (19 Jul 2012)
+
+  19 Jul 2012; Jeroen Roovers <jer@gentoo.org> +opera-next-12.50.1513.ebuild:
+  http://my.opera.com/desktopteam/blog/2012/07/19/12-50-marlin-html5-dnd-hwa-im
+  provements
 
 *opera-next-12.50.1497 (06 Jul 2012)
 
