@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libao
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.111 2012/07/10 19:10:04 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.112 2012/07/19 19:41:10 maekke Exp $
+
+  19 Jul 2012; Markus Meier <maekke@gentoo.org> libao-1.1.0-r1.ebuild:
+  arm stable, bug #423243
 
   10 Jul 2012; Brent Baude <ranger@gentoo.org> libao-1.1.0-r1.ebuild:
   Marking libao-1.1.0-r1 ppc64 for bug 423243
