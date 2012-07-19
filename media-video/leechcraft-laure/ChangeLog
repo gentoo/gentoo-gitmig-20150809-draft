@@ -1,6 +1,13 @@
 # ChangeLog for media-video/leechcraft-laure
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/leechcraft-laure/ChangeLog,v 1.6 2012/07/07 10:34:22 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/leechcraft-laure/ChangeLog,v 1.7 2012/07/19 19:56:02 maksbotan Exp $
+
+*leechcraft-laure-0.5.75 (19 Jul 2012)
+
+  19 Jul 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-laure-0.5.75.ebuild, -leechcraft-laure-0.5.60.ebuild,
+  -leechcraft-laure-0.5.65.ebuild:
+  Removed old versions, bumped to 0.5.75
 
   07 Jul 2012; Johannes Huber <johu@gentoo.org> leechcraft-laure-0.5.70.ebuild:
   Stable for x86, wrt bug #424613
@@ -32,4 +39,3 @@
   06 Mar 2012; Maxim Koltsov <maksbotan@gentoo.org>
   +leechcraft-laure-9999.ebuild, +metadata.xml:
   Add media-video/leecraft-laure-9999, thanks to 0xd34df00d
-
