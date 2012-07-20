@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/dbus-python
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.100 2012/07/15 18:11:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.101 2012/07/20 15:08:02 jer Exp $
+
+  20 Jul 2012; Jeroen Roovers <jer@gentoo.org> dbus-python-1.1.1.ebuild:
+  Stable for HPPA (bug #416725).
 
   15 Jul 2012; Raúl Porcel <armin76@gentoo.org> dbus-python-1.0.0.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #403843
