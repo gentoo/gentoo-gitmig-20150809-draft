@@ -1,6 +1,13 @@
 # ChangeLog for www-plugins/google-talkplugin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/ChangeLog,v 1.29 2012/06/28 04:27:31 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/ChangeLog,v 1.30 2012/07/20 20:45:56 ottxor Exp $
+
+*google-talkplugin-3.2.4.0 (20 Jul 2012)
+
+  20 Jul 2012; Christoph Junghans <ottxor@gentoo.org>
+  +google-talkplugin-3.2.4.0.ebuild, -google-talkplugin-2.9.10.0.ebuild,
+  google-talkplugin-3.1.4.0.ebuild, google-talkplugin-9999.ebuild:
+  version bump
 
 *google-talkplugin-3.1.4.0 (28 Jun 2012)
 
@@ -151,4 +158,3 @@
   15 Feb 2011; Christoph Junghans <ottxor@gentoo.org>
   +google-talkplugin-1.8.0.0.ebuild, +metadata.xml:
   Initial commit from cj-overlay (bug #333579)
-

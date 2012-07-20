@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-2.9.10.0.ebuild,v 1.2 2012/06/28 04:27:31 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-3.2.4.0.ebuild,v 1.1 2012/07/20 20:45:56 ottxor Exp $
 
 EAPI=4
 
@@ -22,13 +22,13 @@ fi
 DESCRIPTION="Video chat browser plug-in for Google Talk"
 
 HOMEPAGE="http://www.google.com/chat/video"
-IUSE="libnotify +system-libCg"
+IUSE="libnotify +system-libCg video_cards_fglrx video_cards_radeon"
 SLOT="0"
 
 KEYWORDS="-* ~amd64 ~x86"
 #GoogleTalkPlugin binary contains openssl
 LICENSE="google-talkplugin openssl"
-RESTRICT="fetch strip"
+RESTRICT="strip mirror"
 
 RDEPEND="|| ( media-sound/pulseaudio media-libs/alsa-lib )
 	dev-libs/glib:2
@@ -59,6 +59,7 @@ QA_EXECSTACK="${INSTALL_BASE}/GoogleTalkPlugin"
 QA_TEXTRELS="${INSTALL_BASE}/libnpg*.so"
 
 QA_DT_HASH="${INSTALL_BASE}/libnpg.*so
+	${INSTALL_BASE}/lib/libCg.*so
 	${INSTALL_BASE}/GoogleTalkPlugin"
 
 S="${WORKDIR}"
@@ -73,12 +74,9 @@ done
 
 # nofetch means upstream bumped and thus needs version bump
 pkg_nofetch() {
-	elog "This version is no longer available from Google and the license prevents mirroring."
-	elog "This ebuild is intended for users who already downloaded it previously and have problems"
-	elog "with ${PV}+. If you can get the distfile from e.g. another computer of yours, or search"
-	use amd64 && MY_PKG="${MY_PKG/i386/amd64}"
-	elog "it with google: http://www.google.com/search?q=intitle:%22index+of%22+${MY_PKG}"
-	elog "and copy the file ${MY_PKG} to ${DISTDIR}."
+	einfo "This version is no longer available from Google."
+	einfo "Note that Gentoo cannot mirror the distfiles due to license reasons, so we have to follow the bump."
+	einfo "Please file a version bump bug on http://bugs.gentoo.org (search	existing bugs for ${PN} first!)."
 }
 
 src_unpack() {
@@ -113,13 +111,19 @@ src_install() {
 	done
 
 	#install bundled libCg
-	if ! use system-libCg; then
+	if use video_cards_radeon || use video_cards_fglrx; then
+		#hack from #402401
 		exeinto "/${INSTALL_BASE}"/lib
-		doexe "${INSTALL_BASE}"/lib/*.so
-	fi
-
-	if has_version x11-drivers/ati-drivers || has_version x11-drivers/xf86-video-ati; then
-		ewarn "There seem to be problems with ati cards and nvidia-cg-toolkit"
-		ewarn "please report your experience, good or bad, on bug #402401"
+		doexe "${INSTALL_BASE}"/lib/libCg*.so
+		if use system-libCg; then
+			ewarn "There seems to be a problem with ati cards and USE='-system-libCG,"
+			ewarn "so we install the bundled version of libCG anyway. (bug #402401)"
+		fi
+		echo "O3D_OVERRIDE_RENDER_MODE=2D" > "${ED}/opt/google/talkplugin/envvars"
+		ewarn "We have set O3D_OVERRIDE_RENDER_MODE=2D in ${EROOT}opt/google/talkplugin/envvars"
+		ewarn "please report your experience, good or bad, with this workaround on bug #402401"
+	elif ! use system-libCg; then
+		exeinto "/${INSTALL_BASE}"/lib
+		doexe "${INSTALL_BASE}"/lib/libCg*.so
 	fi
 }

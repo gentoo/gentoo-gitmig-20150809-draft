@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-9999.ebuild,v 1.5 2012/06/28 04:27:31 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-9999.ebuild,v 1.6 2012/07/20 20:45:56 ottxor Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ fi
 DESCRIPTION="Video chat browser plug-in for Google Talk"
 
 HOMEPAGE="http://www.google.com/chat/video"
-IUSE="libnotify +system-libCg"
+IUSE="libnotify +system-libCg video_cards_fglrx video_cards_radeon"
 SLOT="0"
 
 KEYWORDS="-* ~amd64 ~x86"
@@ -59,6 +59,7 @@ QA_EXECSTACK="${INSTALL_BASE}/GoogleTalkPlugin"
 QA_TEXTRELS="${INSTALL_BASE}/libnpg*.so"
 
 QA_DT_HASH="${INSTALL_BASE}/libnpg.*so
+	${INSTALL_BASE}/lib/libCg.*so
 	${INSTALL_BASE}/GoogleTalkPlugin"
 
 S="${WORKDIR}"
@@ -110,13 +111,19 @@ src_install() {
 	done
 
 	#install bundled libCg
-	if ! use system-libCg; then
+	if use video_cards_radeon || use video_cards_fglrx; then
+		#hack from #402401
 		exeinto "/${INSTALL_BASE}"/lib
-		doexe "${INSTALL_BASE}"/lib/*.so
-	fi
-
-	if has_version x11-drivers/ati-drivers || has_version x11-drivers/xf86-video-ati; then
-		ewarn "There seem to be problems with ati cards and nvidia-cg-toolkit"
-		ewarn "please report your experience, good or bad, on bug #402401"
+		doexe "${INSTALL_BASE}"/lib/libCg*.so
+		if use system-libCg; then
+			ewarn "There seems to be a problem with ati cards and USE='-system-libCG,"
+			ewarn "so we install the bundled version of libCG anyway. (bug #402401)"
+		fi
+		echo "O3D_OVERRIDE_RENDER_MODE=2D" > "${ED}/opt/google/talkplugin/envvars"
+		ewarn "We have set O3D_OVERRIDE_RENDER_MODE=2D in ${EROOT}opt/google/talkplugin/envvars"
+		ewarn "please report your experience, good or bad, with this workaround on bug #402401"
+	elif ! use system-libCg; then
+		exeinto "/${INSTALL_BASE}"/lib
+		doexe "${INSTALL_BASE}"/lib/libCg*.so
 	fi
 }
