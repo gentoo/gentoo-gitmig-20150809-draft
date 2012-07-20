@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20110511.ebuild,v 1.6 2012/03/18 15:27:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20110511.ebuild,v 1.7 2012/07/20 17:31:19 vapier Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit eutils flag-o-matic
 
@@ -23,7 +23,7 @@ SLOT="0"
 KEYWORDS="amd64 -arm ppc ppc64 x86"
 IUSE=""
 
-DEPEND=">=dev-libs/elfutils-0.100
+DEPEND=">=dev-libs/elfutils-0.100[static-libs(+)]
 	!dev-libs/libelf
 	>=sys-libs/glibc-2.8"
 RDEPEND="${DEPEND}
@@ -46,10 +46,10 @@ src_prepare() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "Install Failed"
+	default
 
 	insinto /etc
-	doins doc/prelink.conf || die
+	doins doc/prelink.conf
 
 	exeinto /etc/cron.daily
 	newexe "${FILESDIR}"/prelink.cron prelink
@@ -60,8 +60,6 @@ src_install() {
 	touch "${D}/var/lib/misc/prelink.quick"
 	touch "${D}/var/lib/misc/prelink.force"
 	touch "${D}/var/log/prelink.log"
-
-	dodoc TODO ChangeLog
 }
 
 pkg_postinst() {

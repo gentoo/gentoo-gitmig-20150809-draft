@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/prelink
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.86 2012/03/18 15:27:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.87 2012/07/20 17:31:19 vapier Exp $
+
+  20 Jul 2012; Mike Frysinger <vapier@gentoo.org> prelink-20110511.ebuild,
+  prelink-20111012.ebuild:
+  Require elfutils[static-libs] #427222 by toogle.
 
   18 Mar 2012; Raúl Porcel <armin76@gentoo.org> prelink-20100106.ebuild,
   prelink-20110511.ebuild, prelink-20111012.ebuild:
