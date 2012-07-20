@@ -1,14 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.3.2.ebuild,v 1.1 2012/05/24 07:18:19 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.3.2.ebuild,v 1.2 2012/07/20 20:30:20 bicatali Exp $
 
 EAPI=4
 
+#AUTOTOOLS_AUTORECONF=1
 inherit autotools-utils eutils flag-o-matic fortran-2 toolchain-funcs
 
 DESCRIPTION="Fast C library for the Discrete Fourier Transform"
 HOMEPAGE="http://www.fftw.org/"
-SRC_URI="http://www.fftw.org/${P/_/-}.tar.gz"
+SRC_URI="http://www.fftw.org/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="3.0"
@@ -20,23 +21,23 @@ DEPEND="
 	mpi? ( virtual/mpi )"
 RDEPEND="${DEPEND}"
 
-S=${WORKDIR}/${P/_/-}
-
-AUTOTOOLS_AUTORECONF=1
-
-DOCS=( AUTHORS ChangeLog NEWS README TODO COPYRIGHT CONVENTIONS doc/fftw3.pdf )
-
-HTML_DOCS=( doc/html/ )
-
 pkg_setup() {
 	if use openmp; then
-		tc-has-openmp || die "Please ensure your compiler has openmp support"
-		FORTRAN_NEED_OPENMP="1"
-		[[ $(tc-getCC)$ == icc* ]] && append-ldflags $(no-as-needed)
+		if [[ $(tc-getCC) == *gcc ]] && ! tc-has-openmp; then
+			ewarn "OpenMP is not available in your current selected gcc"
+			die "need openmp capable gcc"
+		fi
+		FORTRAN_NEED_OPENMP=1
 	fi
 	use fortran && fortran-2_pkg_setup
 	FFTW_DIRS="single double longdouble"
-	use quad && FFTW_DIRS+= "quad"
+	if use quad; then
+		if [[ $(tc-getCC) == *gcc ]] && ! version_is_at_least 4.6 $(gcc-version); then
+			ewarn "quad precision only available for gcc >= 4.6"
+			die "need quad precision capable gcc"
+		fi
+		FFTW_DIRS+= "quad"
+	fi
 }
 
 src_prepare() {
@@ -45,7 +46,8 @@ src_prepare() {
 		-e 's/Texinfo documentation system/Libraries/' \
 		doc/fftw3.info || die "failed to fix info file"
 
-	rm -f m4/lt* m4/libtool.m4
+	# why?
+	#rm m4/lt* m4/libtool.m4
 }
 
 src_configure() {
@@ -112,26 +114,30 @@ src_test () {
 	for x in ${FFTW_DIRS}; do
 		cd "${S}-${x}/tests"
 		einfo "Testing ${x} precision"
-		emake -j1 check
+		emake smallcheck
 	done
 }
 
 src_install () {
 	local u x
-
+	DOCS=( AUTHORS ChangeLog NEWS README TODO COPYRIGHT CONVENTIONS )
+	HTML_DOCS=( doc/html/ )
 	for x in ${FFTW_DIRS}; do
 		AUTOTOOLS_BUILD_DIR="${S}-${x}" \
 			autotools-utils_src_install
 	done
 
 	if use doc; then
-		insinto /usr/share/doc/"${PF}"/faq
-		doins -r "${S}"/doc/FAQ/fftw-faq.html/*
+		dodoc doc/*.pdf
+		insinto /usr/share/doc/${PF}/faq
+		doins -r doc/FAQ/fftw-faq.html/*
+	else
+		rm -r "${ED}"/usr/share/doc/${PF}/html
 	fi
 
 	for x in "${ED}"/usr/lib*/pkgconfig/*.pc; do
 		for u in $(usev mpi) $(usev threads) $(usex openmp omp ""); do
-		    sed "s|-lfftw3[flq]\?|&_$u &|" "$x" > "${x%.pc}_$u.pc" || die
+			sed -e "s|-lfftw3[flq]\?|&_$u &|" "$x" > "${x%.pc}_$u.pc" || die
 		done
 	done
 }

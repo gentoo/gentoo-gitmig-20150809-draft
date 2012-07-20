@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/fftw
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.125 2012/05/24 07:18:19 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.126 2012/07/20 20:30:20 bicatali Exp $
+
+  20 Jul 2012; Sébastien Fabbro <bicatali@gentoo.org> -fftw-2.1.5-r5.ebuild,
+  -fftw-3.2.2-r1.ebuild, -fftw-3.3-r1.ebuild, -fftw-3.3-r2.ebuild,
+  -fftw-3.3.1.ebuild, fftw-3.3.2.ebuild:
+  Checks on gcc for openmp and quad precision, remove doc when not asked, reduce
+  unit tests to smallcheck, quotes cleaning, remove obsolete versions
 
 *fftw-3.3.2 (24 May 2012)
 
