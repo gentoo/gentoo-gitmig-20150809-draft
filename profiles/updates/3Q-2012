@@ -5,3 +5,4 @@ slotmove kde-misc/plasma-mpd-nowplaying 0 4
 slotmove kde-misc/kbstateapplet 0 4
 move net-voip/telepathy-sofiasip net-voip/telepathy-rakia
 slotmove kde-misc/kio-ftps 0 4
+slotmove kde-misc/kcollectd 0 4
