@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/minidlna
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/ChangeLog,v 1.19 2012/07/16 16:34:03 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/ChangeLog,v 1.20 2012/07/20 08:08:33 xmw Exp $
+
+*minidlna-1.0.25-r1 (20 Jul 2012)
+
+  20 Jul 2012; Michael Weber <xmw@gentoo.org> +minidlna-1.0.25-r1.ebuild,
+  +files/minidlna-1.0.25.confd, +files/minidlna-1.0.25.initd:
+  Revbump adding minidlna user/group, adding /var/lib/minidlna and
+  /var/log/minidlna.log (bug 426726, thanks snowy.mail@gmx.net and BT), adding
+  NEWS (bug 427014, thanks Tanktalus@gmail.com)
 
 *minidlna-1.0.25 (16 Jul 2012)
 
