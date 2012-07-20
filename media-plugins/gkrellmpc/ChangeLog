@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gkrellmpc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gkrellmpc/ChangeLog,v 1.15 2012/07/20 12:13:19 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gkrellmpc/ChangeLog,v 1.16 2012/07/20 12:32:01 angelos Exp $
+
+  20 Jul 2012; Christoph Mende <angelos@gentoo.org>
+  +files/gkrellmpc-0.1_beta10-mt.patch, gkrellmpc-0.1_beta10.ebuild:
+  Add missing patch
 
 *gkrellmpc-0.1_beta10 (20 Jul 2012)
 
