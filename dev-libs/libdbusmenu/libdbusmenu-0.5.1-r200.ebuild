@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/libdbusmenu-0.5.1-r200.ebuild,v 1.4 2012/05/04 13:07:58 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/libdbusmenu-0.5.1-r200.ebuild,v 1.5 2012/07/20 10:45:29 angelos Exp $
 
 EAPI=4
 
@@ -36,8 +36,9 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
-	# Drop DEPRECATED flags, bug #391103
+	# Drop DEPRECATED flags, bug #391103 and -Werror (bug #414323)
 	sed -i \
+		-e 's:-Werror::g' \
 		-e 's:-D[A-Z_]*DISABLE_DEPRECATED:$(NULL):g' \
 		{libdbusmenu-{glib,gtk},tests}/Makefile.{am,in} configure{,.ac} || die
 }

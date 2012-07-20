@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libdbusmenu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/ChangeLog,v 1.16 2012/05/04 13:07:58 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/ChangeLog,v 1.17 2012/07/20 10:45:29 angelos Exp $
+
+  20 Jul 2012; Christoph Mende <angelos@gentoo.org>
+  libdbusmenu-0.5.1-r200.ebuild, libdbusmenu-0.5.1-r300.ebuild:
+  Remove -Werror (bug #414323)
 
   04 May 2012; Johannes Huber <johu@gentoo.org> libdbusmenu-0.5.1-r200.ebuild,
   libdbusmenu-0.5.1-r300.ebuild:
@@ -104,4 +108,3 @@
   +files/libdbusmenu-0.2.8-2-optional-tests.patch,
   +files/libdbusmenu-0.2.8-no-gobject-introspection.patch, +metadata.xml:
   Initial commit, moved from kde overlay, thanks to Dennis Schridde
-
