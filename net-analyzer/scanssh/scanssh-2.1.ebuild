@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanssh/scanssh-2.1.ebuild,v 1.11 2011/11/28 08:00:44 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanssh/scanssh-2.1.ebuild,v 1.12 2012/07/20 01:32:11 blueness Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://monkey.org/~provos/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 hppa ppc sparc x86"
+KEYWORDS="amd64 hppa ppc ~ppc64 sparc x86"
 IUSE=""
 
 DEPEND="net-libs/libpcap

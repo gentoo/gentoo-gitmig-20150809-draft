@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/scanssh
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanssh/ChangeLog,v 1.23 2011/11/28 08:00:44 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanssh/ChangeLog,v 1.24 2012/07/20 01:32:11 blueness Exp $
+
+  20 Jul 2012; Anthony G. Basile <blueness@gentoo.org> scanssh-2.1.ebuild:
+  Keyword ~ppc64
 
   28 Nov 2011; Tim Harder <radhermit@gentoo.org> scanssh-2.1.ebuild:
   Add explicit RDEPEND.
