@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.601 2012/07/16 06:38:57 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.602 2012/07/20 23:58:11 tetromino Exp $
+
+*gtk+-2.24.11-r1 (20 Jul 2012)
+
+  20 Jul 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gtk+-2.24.11-r1.ebuild, +files/gtk+-2.24.11-stuck-grab.patch:
+  Fix stuck keyboard grab in pidgin and gajim (bug #427148, thanks to Christian
+  Trefzer, Rafał Mużyło, shinydoofy).
 
 *gtk+-3.4.4 (16 Jul 2012)
 *gtk+-2.24.11 (16 Jul 2012)
