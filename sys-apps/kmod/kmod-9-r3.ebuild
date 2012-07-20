@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9-r3.ebuild,v 1.1 2012/07/17 12:30:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9-r3.ebuild,v 1.2 2012/07/20 16:36:42 ssuominen Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ IUSE="debug doc lzma static-libs +tools zlib"
 RDEPEND="!sys-apps/module-init-tools
 	!sys-apps/modutils
 	lzma? ( app-arch/xz-utils )
-	zlib? ( sys-libs/zlib )"
+	zlib? ( >=sys-libs/zlib-1.2.6 )" #427130
 DEPEND="${RDEPEND}
 	doc? ( dev-util/gtk-doc )
 	lzma? ( virtual/pkgconfig )
@@ -53,12 +53,6 @@ src_prepare()
 
 src_configure()
 {
-	# http://bugs.gentoo.org/410865
-	if has_version '<sys-libs/zlib-1.2.6'; then
-		export zlib_CFLAGS="-I/usr/include"
-		export zlib_LIBS="-lz"
-	fi
-
 	econf \
 		$(use_enable static-libs static) \
 		$(use_enable tools) \

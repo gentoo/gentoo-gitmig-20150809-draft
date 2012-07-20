@@ -1,5 +1,10 @@
 # ChangeLog for sys-apps/kmod
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.45 2012/07/17 15:48:42 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.46 2012/07/20 16:36:42 ssuominen Exp $
+
+  20 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> kmod-9-r3.ebuild,
+  kmod-9999.ebuild:
+  Force recent enough sys-libs/zlib for zlib.pc pkg-config file to be present
+  wrt #427130 by Nick Bowler
 
   17 Jul 2012; William Hubbs <williamh@gentoo.org> -kmod-9-r2.ebuild:
   remove broken version
