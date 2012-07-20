@@ -1,6 +1,15 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.129 2012/07/05 23:35:08 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.130 2012/07/20 15:47:53 tetromino Exp $
+
+*tracker-0.14.2-r1 (20 Jul 2012)
+*tracker-0.12.10-r1 (20 Jul 2012)
+
+  20 Jul 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +tracker-0.12.10-r1.ebuild, +tracker-0.14.2-r1.ebuild,
+  +files/tracker-0.14.2-icu-no-LC_ALL.patch:
+  Fix the "Error initializing libicu support: 'U_ILLEGAL_ARGUMENT_ERROR'" error
+  (bug #426276; thanks to Juergen Rose and Bernd Feige).
 
 *tracker-0.14.2 (05 Jul 2012)
 
