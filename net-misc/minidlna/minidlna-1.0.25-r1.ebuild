@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/minidlna-1.0.25-r1.ebuild,v 1.2 2012/07/20 08:11:19 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/minidlna-1.0.25-r1.ebuild,v 1.3 2012/07/20 08:17:24 xmw Exp $
 
 EAPI=4
 
@@ -27,11 +27,11 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 pkg_setup() {
-	locale my_is_new=yes
-	[ -d "${EPREFIX}"/var/lib/${PN} ] && my_is_new=""
+	local my_is_new="yes"
+	[ -d "${EPREFIX}"/var/lib/${PN} ] && my_is_new="no"
 	enewgroup ${PN}
 	enewuser ${PN} -1 -1 /var/lib/${PN} ${PN}
-	if [ -n "${my_is_new}" ] ; then
+	if [ "${my_is_new}" == "yes" ] ; then
 		chown ${PN}:${PN} /var/lib/${PN} || die
 		chmod 0750 /var/lib/${PN} || die
 	fi
