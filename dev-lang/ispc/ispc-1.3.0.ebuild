@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ispc/ispc-1.3.0.ebuild,v 1.1 2012/07/07 00:48:30 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ispc/ispc-1.3.0.ebuild,v 1.2 2012/07/20 19:58:21 ottxor Exp $
 
 EAPI=4
 
-inherit toolchain-funcs
+inherit base toolchain-funcs
 
 DESCRIPTION="Intel SPMD Program Compiler"
 HOMEPAGE="http://ispc.github.com/"
@@ -34,7 +34,7 @@ DEPEND="
 	sys-devel/flex
 	"
 
-DOCS=( README.rst )
+PATCHES=( "${FILESDIR}/${P}-gcc-4.7.patch" )
 
 src_compile() {
 	emake LDFLAGS="${LDFLAGS}" OPT="${CXXFLAGS}" CXX="$(tc-getCXX)" CPP="$(tc-getCPP)"
@@ -42,6 +42,7 @@ src_compile() {
 
 src_install() {
 	dobin ispc
+	dodoc README.rst
 
 	if use examples; then
 		insinto "/usr/share/doc/${PF}/examples"
