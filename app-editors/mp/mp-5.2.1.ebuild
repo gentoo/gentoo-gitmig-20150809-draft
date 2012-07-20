@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-5.2.1.ebuild,v 1.7 2012/07/08 15:03:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-5.2.1.ebuild,v 1.8 2012/07/20 08:24:58 jlec Exp $
 
-EAPI="3"
+EAPI=4
 
 inherit eutils toolchain-funcs
 
@@ -65,16 +65,5 @@ src_configure() {
 src_install() {
 	dodir /usr/bin
 	sh config.sh --prefix="${EPREFIX}/usr"
-	emake -j1 DESTDIR="${D}" install || die "Install Failed"
-#	use gtk && dosym mp-5 /usr/bin/gmp
-}
-
-pkg_postinst() {
-	if use gtk ; then
-		einfo
-		einfo "mp-5 is symlinked to gmp! Use"
-		einfo "$ DISPLAY=\"\" mp-5"
-		einfo "to use text mode!"
-		einfo
-	fi
+	emake DESTDIR="${D}" install
 }

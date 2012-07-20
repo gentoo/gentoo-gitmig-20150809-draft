@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/mp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.90 2012/07/08 15:09:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.91 2012/07/20 08:24:58 jlec Exp $
+
+  20 Jul 2012; Justin Lecher <jlec@gentoo.org> mp-5.2.1.ebuild,
+  mp-5.2.2.ebuild, +files/mp-5.2.2-gtk+.patch:
+  Add fix for deprecation in gtk+, #426192; fix handling of empty linuguas_**
+  request; remove deprecated code; move to EAPI=4
 
   08 Jul 2012; Jeroen Roovers <jer@gentoo.org> -mp-3.3.18b.ebuild:
   Old.

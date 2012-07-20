@@ -1,8 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-5.2.2.ebuild,v 1.2 2012/05/03 18:33:02 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-5.2.2.ebuild,v 1.3 2012/07/20 08:24:58 jlec Exp $
 
 EAPI=4
+
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Minimum Profit: A text editor for programmers"
@@ -44,13 +45,20 @@ DEPEND="
 "
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-5.2.1-prll.patch
+	epatch \
+		"${FILESDIR}"/${P}-gtk+.patch \
+		"${FILESDIR}"/${PN}-5.2.1-prll.patch
 	local mp_lingua
 	for mp_lingua in ${MP_LINGUAS}; do
 		if ! use linguas_${mp_lingua}; then
 			rm po/${mp_lingua/linguas_/}.[mp]o || die
 		fi
 	done
+	[[ $(ls po 2> /dev/null) ]] || \
+		sed \
+			-e '/^all/s:$(BUILDMO)::g' \
+			-e '/^install/s:$(INSTALLMO)::g' \
+			-i makefile.in || die
 }
 
 src_configure() {
@@ -86,16 +94,5 @@ src_configure() {
 src_install() {
 	dodir /usr/bin
 	sh config.sh --prefix="${EPREFIX}/usr"
-	emake -j1 DESTDIR="${D}" install
-#	use gtk && dosym mp-5 /usr/bin/gmp
-}
-
-pkg_postinst() {
-	if use gtk ; then
-		einfo
-		einfo "mp-5 is symlinked to gmp! Use"
-		einfo "$ DISPLAY=\"\" mp-5"
-		einfo "to use text mode!"
-		einfo
-	fi
+	emake DESTDIR="${D}" install
 }
