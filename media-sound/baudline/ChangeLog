@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/baudline
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/baudline/ChangeLog,v 1.3 2012/05/07 15:52:21 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/baudline/ChangeLog,v 1.4 2012/07/20 06:36:46 xmw Exp $
+
+*baudline-1.08-r1 (20 Jul 2012)
+
+  20 Jul 2012; Michael Weber <xmw@gentoo.org> +baudline-1.08-r1.ebuild:
+  Revbump to add missing font (thanks Eric F. GARIOUD, bug 426654)
 
   07 May 2012; Michael Weber <xmw@gentoo.org> baudline-1.08.ebuild:
   add ~x86 keyword
