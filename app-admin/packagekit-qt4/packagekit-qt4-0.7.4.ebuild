@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-qt4/packagekit-qt4-0.7.4.ebuild,v 1.1 2012/05/19 11:56:18 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-qt4/packagekit-qt4-0.7.4.ebuild,v 1.2 2012/07/20 13:40:30 lxnay Exp $
 
 EAPI="3"
 
@@ -29,6 +29,8 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_configure() {
+	# http://pkgs.fedoraproject.org/gitweb/?p=PackageKit.git;a=commit;h=0b378668288db34890b82c7be007fc76c7fcd956
+	sed -i -e '/polkit-backend-1/d' configure || die #423431
 	econf \
 		--enable-introspection=no \
 		--localstatedir=/var \
