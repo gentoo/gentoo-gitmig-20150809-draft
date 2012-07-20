@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/tortoisehg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/ChangeLog,v 1.18 2012/05/07 18:09:13 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/ChangeLog,v 1.19 2012/07/20 16:31:52 floppym Exp $
+
+*tortoisehg-2.4.2 (20 Jul 2012)
+
+  20 Jul 2012; Mike Gilbert <floppym@gentoo.org> +tortoisehg-2.4.2.ebuild,
+  -tortoisehg-2.3.1.ebuild, -tortoisehg-2.4.ebuild, tortoisehg-9999.ebuild:
+  Version bump. Drop nautilus use flag for bug 427174.
 
   07 May 2012; Mike Gilbert <floppym@gentoo.org> tortoisehg-2.4.ebuild,
   tortoisehg-9999.ebuild:
@@ -91,4 +97,3 @@
   +metadata.xml:
   New package, resolves bug 277383 by manny15. Thanks also to Arne
   Babenhauserheide, Denilson Sá, and Alphat-PC.
-

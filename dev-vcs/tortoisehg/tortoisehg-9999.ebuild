@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/tortoisehg-9999.ebuild,v 1.8 2012/05/07 18:09:13 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/tortoisehg-9999.ebuild,v 1.9 2012/07/20 16:31:52 floppym Exp $
 
 EAPI=4
 
@@ -27,14 +27,13 @@ HOMEPAGE="http://tortoisehg.bitbucket.org"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="doc nautilus"
+IUSE="doc"
 
 RDEPEND="${HG_DEPEND}
 	dev-python/iniparse
 	dev-python/pygments
 	dev-python/PyQt4
-	dev-python/qscintilla-python
-	nautilus? ( dev-python/nautilus-python )"
+	dev-python/qscintilla-python"
 DEPEND="${RDEPEND}
 	doc? ( >=dev-python/sphinx-1.0.3 )"
 
@@ -80,8 +79,4 @@ src_install() {
 	insinto /usr/share/icons/hicolor/scalable/apps
 	newins icons/scalable/apps/thg-logo.svg tortoisehg_logo.svg
 	domenu contrib/${PN}.desktop
-
-	if ! use nautilus; then
-		rm -r "${ED}usr/$(get_libdir)/nautilus" || die
-	fi
 }
