@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/baudline
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/baudline/ChangeLog,v 1.4 2012/07/20 06:36:46 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/baudline/ChangeLog,v 1.5 2012/07/20 06:39:01 xmw Exp $
+
+  20 Jul 2012; Michael Weber <xmw@gentoo.org> -baudline-1.08.ebuild,
+  baudline-1.08-r1.ebuild:
+  Transfer stable keywords (old stable was broken), drop old.
 
 *baudline-1.08-r1 (20 Jul 2012)
 
