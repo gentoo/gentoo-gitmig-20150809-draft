@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libmicrohttpd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/ChangeLog,v 1.15 2012/06/25 01:00:16 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/ChangeLog,v 1.16 2012/07/20 20:00:25 blueness Exp $
+
+*libmicrohttpd-0.9.21 (20 Jul 2012)
+
+  20 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
+  +libmicrohttpd-0.9.21.ebuild:
+  Version bump, bug #334067 no longer valid
 
   25 Jun 2012; Anthony G. Basile <blueness@gentoo.org>
   libmicrohttpd-0.9.19.ebuild, libmicrohttpd-0.9.20.ebuild:
