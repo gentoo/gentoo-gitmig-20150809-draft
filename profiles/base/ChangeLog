@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.416 2012/07/18 15:01:19 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.417 2012/07/20 20:12:53 olemarkus Exp $
+
+  20 Jul 2012; Ole Markus With <olemarkus@gentoo.org> package.use.mask:
+  PHP Kolab patch broken with newer versions of c-client
 
   18 Jul 2012; Michael Weber <xmw@gentoo.org> package.use.mask:
   www-client/netsurf: webp got functional
