@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/tortoisehg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/ChangeLog,v 1.19 2012/07/20 16:31:52 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/ChangeLog,v 1.20 2012/07/20 16:33:42 floppym Exp $
+
+  20 Jul 2012; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  Drop nautilus use flag from metadata.
 
 *tortoisehg-2.4.2 (20 Jul 2012)
 
