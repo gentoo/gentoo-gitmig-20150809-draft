@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/packagekit-base-0.6.22.ebuild,v 1.1 2012/05/19 11:21:34 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/packagekit-base-0.6.22.ebuild,v 1.2 2012/07/20 17:30:53 lxnay Exp $
 
 EAPI="3"
 
@@ -38,7 +38,7 @@ CDEPEND="connman? ( net-misc/connman )
 	>=sys-apps/dbus-1.3.0"
 DEPEND="${CDEPEND}
 	doc? ( dev-util/gtk-doc )
-	nsplugin? ( >=net-misc/npapi-sdk-0.27 )
+	nsplugin? ( <net-misc/npapi-sdk-0.27.1 )
 	dev-libs/libxslt
 	>=dev-util/intltool-0.35.0
 	virtual/pkgconfig
@@ -65,6 +65,8 @@ RESTRICT="test" # tests are failing atm
 # doc is in the tarball and always installed
 # mono doesn't install anything (RDEPEND dev-dotnet/gtk-sharp-gapi:2
 #	(R)DEPEND dev-dotnet/glib-sharp:2 dev-lang/mono), upstream bug 23247
+# >=npapi-sdk-0.27.1 has slightly changed API, once it is unmasked in tree
+# drop the npapi-api-change patch below and relax the dependency constraints
 
 # UPSTREAM:
 # documentation/website with --enable-doc-install
@@ -72,6 +74,7 @@ RESTRICT="test" # tests are failing atm
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.6.22-npapi-sdk.patch #383141
+	epatch "${FILESDIR}"/${PN}-0.7.x-npapi-api-change.patch #416711
 }
 
 src_configure() {
@@ -120,6 +123,7 @@ src_configure() {
 		--disable-gtk-module \
 		$(use_enable introspection) \
 		$(use_enable networkmanager) \
+		$(use_enable connman) \
 		$(use_enable nsplugin browser-plugin) \
 		$(use_enable pm-utils) \
 		--disable-qt \
