@@ -1,10 +1,24 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6810 2012/07/19 22:28:19 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6811 2012/07/20 14:16:01 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
+  +hardened/linux/uclibc/arm/armv4/make.defaults,
+  +hardened/linux/uclibc/arm/armv4/parent,
+  +hardened/linux/uclibc/arm/armv4t/make.defaults,
+  +hardened/linux/uclibc/arm/armv4t/parent,
+  +hardened/linux/uclibc/arm/armv5te/make.defaults,
+  +hardened/linux/uclibc/arm/armv5te/parent,
+  +hardened/linux/uclibc/arm/armv6j/make.defaults,
+  +hardened/linux/uclibc/arm/armv6j/parent,
+  +hardened/linux/uclibc/arm/armv7a/make.defaults,
+  +hardened/linux/uclibc/arm/armv7a/parent,
+  +hardened/linux/uclibc/arm/make.defaults, +hardened/linux/uclibc/arm/parent:
+  Add new hardened/linux/uclibc/arm profiles
 
   19 Jul 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.mask:
   Fix my email address.
