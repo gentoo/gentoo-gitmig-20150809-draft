@@ -4,3 +4,4 @@ slotmove media-gfx/blender 2.60 0
 slotmove kde-misc/plasma-mpd-nowplaying 0 4
 slotmove kde-misc/kbstateapplet 0 4
 move net-voip/telepathy-sofiasip net-voip/telepathy-rakia
+slotmove kde-misc/kio-ftps 0 4
