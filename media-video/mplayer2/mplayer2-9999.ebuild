@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.39 2012/06/17 05:38:52 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.40 2012/07/20 15:42:00 lu_zero Exp $
 
 EAPI=4
 
@@ -154,6 +154,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	dev-lang/python
 	sys-devel/gettext
+	=dev-lang/python-3*
 	X? (
 		x11-proto/videoproto
 		x11-proto/xf86vidmodeproto
@@ -449,7 +450,6 @@ src_configure() {
 
 	./configure \
 		--cc="$(tc-getCC)" \
-		--host-cc="$(tc-getBUILD_CC)" \
 		--pkg-config="$(tc-getPKG_CONFIG)" \
 		--prefix="${EPREFIX}"/usr \
 		--bindir="${EPREFIX}"/usr/bin \

@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.59 2012/06/29 12:37:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.60 2012/07/20 15:42:00 lu_zero Exp $
+
+  20 Jul 2012; Luca Barbato <lu_zero@gentoo.org> mplayer2-9999.ebuild:
+  Update to upstream changes
 
   29 Jun 2012; Brent Baude <ranger@gentoo.org> mplayer2-2.0_p20120309.ebuild:
   Marking mplayer2-2.0_p20120309 ppc for bug 416359
