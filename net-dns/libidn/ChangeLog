@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/libidn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.171 2012/07/19 20:13:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.172 2012/07/20 13:36:33 blueness Exp $
+
+  20 Jul 2012; Anthony G. Basile <blueness@gentoo.org> libidn-1.25.ebuild:
+  Stable ppc64, bug #424125
 
   19 Jul 2012; Markus Meier <maekke@gentoo.org> libidn-1.25.ebuild:
   arm stable, bug #424125
