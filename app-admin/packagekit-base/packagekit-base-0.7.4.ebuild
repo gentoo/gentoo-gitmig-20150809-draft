@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/packagekit-base-0.7.4.ebuild,v 1.4 2012/06/27 18:54:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/packagekit-base-0.7.4.ebuild,v 1.5 2012/07/20 13:15:38 lxnay Exp $
 
 EAPI="3"
 
@@ -123,6 +123,7 @@ src_configure() {
 		$(use_enable introspection) \
 		$(use_enable networkmanager) \
 		$(use_enable nsplugin browser-plugin) \
+		$(use_enable connman) \
 		$(use_enable pm-utils) \
 		--disable-qt \
 		$(use_enable static-libs static) \
