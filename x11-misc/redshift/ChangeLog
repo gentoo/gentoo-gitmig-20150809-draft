@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/redshift
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/ChangeLog,v 1.13 2012/01/28 14:50:43 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/ChangeLog,v 1.14 2012/07/20 22:28:52 sping Exp $
+
+*redshift-1.7-r1 (20 Jul 2012)
+
+  20 Jul 2012; Sebastian Pipping <sping@gentoo.org> +redshift-1.7-r1.ebuild,
+  +files/redshift-1.7-make-conditionals.patch:
+  No longer install .svg files for USE=-gtk (bug #427156)
+  The patch has been written with upstream in mind.
 
   28 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> redshift-1.7.ebuild:
   x86 stable wrt bug #398905
