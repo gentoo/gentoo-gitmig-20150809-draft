@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.346 2012/07/20 15:06:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.347 2012/07/20 23:07:03 ssuominen Exp $
+
+*dbus-1.6.4 (20 Jul 2012)
+
+  20 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> +dbus-1.6.4.ebuild:
+  Version bump wrt #427402 by "teidakankan"
 
   20 Jul 2012; Jeroen Roovers <jer@gentoo.org> dbus-1.6.2.ebuild:
   Stable for HPPA (bug #416725).
