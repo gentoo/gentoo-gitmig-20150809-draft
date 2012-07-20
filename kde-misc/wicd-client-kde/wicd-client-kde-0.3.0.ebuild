@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/wicd-client-kde/wicd-client-kde-0.3.0.ebuild,v 1.3 2012/04/22 14:51:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/wicd-client-kde/wicd-client-kde-0.3.0.ebuild,v 1.4 2012/07/20 21:35:52 johu Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://kde-apps.org/content/show.php/Wicd+Client+KDE?content=132366"
 [[ ${PV} == *9999 ]] || \
 	SRC_URI="http://kde-apps.org/CONTENT/content-files/132366-${MY_P}.tar.gz"
 LICENSE="GPL-3"
-SLOT="0"
+SLOT="4"
 KEYWORDS="amd64 x86"
 IUSE=""
 
