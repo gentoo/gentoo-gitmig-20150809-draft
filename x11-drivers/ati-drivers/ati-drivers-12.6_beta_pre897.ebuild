@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-12.6.ebuild,v 1.2 2012/07/21 21:45:01 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-12.6_beta_pre897.ebuild,v 1.1 2012/07/21 21:45:01 chithanh Exp $
 
 EAPI=4
 
 inherit eutils multilib linux-info linux-mod toolchain-funcs versionator
 
-DESCRIPTION="Ati precompiled drivers for Radeon Evergreen (HD5000 Series) and newer chipsets"
+DESCRIPTION="Ati precompiled drivers for radeon r600 (HD Series) and newer chipsets"
 HOMEPAGE="http://www.amd.com"
 MY_V=( $(get_version_components) )
 if [[ ${MY_V[2]} != beta ]]; then
@@ -15,16 +15,14 @@ if [[ ${MY_V[2]} != beta ]]; then
 	FOLDER_PREFIX="common/"
 else
 	#SRC_URI="https://launchpad.net/ubuntu/natty/+source/fglrx-installer/2:${PV}-0ubuntu1/+files/fglrx-installer_${PV}.orig.tar.gz"
-	SRC_URI="http://www2.ati.com/drivers/hotfix/catalyst_12.6_hotfixes/amd-driver-installer-8.98-x86.x86_64.zip"
+	SRC_URI="http://www2.ati.com/drivers/legacy/amd-driver-installer-12.6-legacy-x86.x86_64.zip"
 	FOLDER_PREFIX="common/"
 fi
 IUSE="debug +modules multilib qt4 static-libs"
 
 LICENSE="AMD GPL-2 QPL-1.0 as-is"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 SLOT="1"
-
-RESTRICT="bindist"
 
 RDEPEND="
 	<=x11-base/xorg-server-1.12.49[-minimal]
@@ -224,14 +222,6 @@ _check_kernel_config() {
 		failed=1
 	fi
 
-	if linux_chkconfig_present X86_X32; then
-		eerror "You've enabled x32 in the kernel."
-		eerror "Unfortunately, this option is not supported yet and prevents the fglrx"
-		eerror "kernel module from loading."
-		error+=" X86_32 enabled;"
-		failed=1
-	fi
-
 	[[ ${failed} -ne 0 ]] && die "${error}"
 }
 
@@ -275,8 +265,8 @@ pkg_setup() {
 
 	elog
 	elog "Please note that this driver supports only graphic cards based on"
-	elog "Evergreen chipset and newer."
-	elog "This represent the AMD Radeon HD 5400+ series at this moment."
+	elog "r600 chipset and newer."
+	elog "This represent the AMD Radeon HD series at this moment."
 	elog
 	elog "If your card is older then use ${CATEGORY}/xf86-video-ati"
 	elog "For migration informations please reffer to:"
@@ -287,11 +277,12 @@ pkg_setup() {
 src_unpack() {
 	if [[ ${MY_V[2]} == beta ]]; then
 		unpack ${A}
-		RUN="${S}/${A/%.zip/.run}"
+		RUN=${A/%.zip/.run}
 	else
-		RUN="${DISTDIR}/${A}"
+		RUN=${A}
 	fi
-	sh ${RUN} --extract "${S}" # 2>&1 > /dev/null || die
+	sh "${S}"/${RUN} --extract "${S}"  2>&1 > /dev/null || die \
+	'unpack failed'
 }
 
 src_prepare() {
@@ -332,9 +323,6 @@ src_prepare() {
 
 	#fixes bug #420751
 	epatch "${FILESDIR}"/ati-drivers-do_mmap.patch
-
-	# see http://ati.cchtml.com/show_bug.cgi?id=495
-	epatch "${FILESDIR}"/ati-drivers-old_rsp.patch
 
 	cd "${MODULE_DIR}"
 

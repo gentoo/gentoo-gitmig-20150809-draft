@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.290 2012/06/30 09:17:19 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.291 2012/07/21 21:45:01 chithanh Exp $
+
+*ati-drivers-12.6_beta_pre897 (21 Jul 2012)
+
+  21 Jul 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +ati-drivers-12.6_beta_pre897.ebuild, +files/ati-drivers-do_mmap.patch,
+  ati-drivers-12.6.ebuild:
+  Import driver for legacy hardware from x11 overlay, ebuild by Enrico
+  Tagliavini. Update 12.6 ebuild patches per bug #420689 and bug #420751.
 
 *ati-drivers-12.6 (30 Jun 2012)
 
@@ -2078,4 +2086,3 @@
   Initial ebuild for the ati precompiled drivers.
   The idea of using cpio is from the icc ebuilds, the rest is from the nvidia-*
   ebuilds.
-
