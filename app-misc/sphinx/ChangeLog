@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/sphinx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.46 2012/07/09 05:35:57 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.47 2012/07/21 08:00:54 graaff Exp $
+
+*sphinx-2.0.4-r1 (21 Jul 2012)
+
+  21 Jul 2012; Hans de Graaff <graaff@gentoo.org> +sphinx-2.0.4-r1.ebuild,
+  +files/sphinx-2.0.4_gcc-4.7.patch:
+  Revision bump to fix building with gcc 4.7. Thanks to Brennan Shacklett in
+  bug 425522 for finding and cleaning up the debian patch for it.
 
   09 Jul 2012; Hans de Graaff <graaff@gentoo.org> -sphinx-0.9.9-r2.ebuild,
   -sphinx-1.10_beta-r1.ebuild, -sphinx-2.0.3.ebuild:
