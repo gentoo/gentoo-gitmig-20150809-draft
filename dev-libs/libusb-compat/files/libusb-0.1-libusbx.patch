@@ -1,6 +1,6 @@
 http://bugs.gentoo.org/423135
 http://sourceforge.net/apps/trac/libusbx/ticket/31
-http://libusbx.git.sourceforge.net/git/gitweb.cgi?p=libusbx/libusbx;a=commit;h=7ec94a45ed8155e7a1d4d5d75575099b09c78834
+http://github.com/libusbx/libusbx/commit/7ec94a45ed8155e7a1d4d5d75575099b09c78834
 
 --- libusb/core.c
 +++ libusb/core.c
