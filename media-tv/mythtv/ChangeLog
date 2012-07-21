@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.368 2012/07/17 01:20:39 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.369 2012/07/21 02:58:15 cardoe Exp $
+
+  20 Jul 2012; Doug Goldstein <cardoe@gentoo.org>
+  mythtv-0.25.2_p20120716.ebuild:
+  Remove quotes which upstream's config script can't handle. bug #426942
 
   16 Jul 2012; Doug Goldstein <cardoe@gentoo.org>
   -files/mythbackend-0.18.2.conf, -files/mythtv-v4l2-fix.2.patch,

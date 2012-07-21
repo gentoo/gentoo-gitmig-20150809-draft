@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.2_p20120716.ebuild,v 1.1 2012/07/17 00:17:38 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.2_p20120716.ebuild,v 1.2 2012/07/21 02:58:15 cardoe Exp $
 
 EAPI=4
 
@@ -214,7 +214,7 @@ src_configure() {
 	strip-flags
 
 	# Pass our LDFLAGS along so we don't get QA warnings
-	myconf="${myconf} --extra-ldflags=\"${LDFLAGS}\""
+	myconf="${myconf} --extra-ldflags=${LDFLAGS}"
 
 	has distcc ${FEATURES} || myconf="${myconf} --disable-distcc"
 	has ccache ${FEATURES} || myconf="${myconf} --disable-ccache"
