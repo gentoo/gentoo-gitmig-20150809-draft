@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/bzr-fastimport
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-fastimport/ChangeLog,v 1.4 2012/03/16 23:57:21 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-fastimport/ChangeLog,v 1.5 2012/07/21 22:04:14 jdhore Exp $
+
+  21 Jul 2012; Jeff Horelick <jdhore@gentoo.org> bzr-fastimport-0.13.0.ebuild:
+  marked x86 per bug 427522
 
 *bzr-fastimport-0.13.0 (16 Mar 2012)
 
