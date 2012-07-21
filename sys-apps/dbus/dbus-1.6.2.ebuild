@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.6.2.ebuild,v 1.2 2012/07/20 15:06:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.6.2.ebuild,v 1.3 2012/07/21 16:13:51 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils linux-info flag-o-matic python systemd virtualx user
@@ -11,7 +11,7 @@ SRC_URI="http://dbus.freedesktop.org/releases/dbus/${P}.tar.gz"
 
 LICENSE="|| ( AFL-2.1 GPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="debug doc selinux static-libs systemd test X"
 
 RDEPEND=">=dev-libs/expat-2
@@ -19,7 +19,6 @@ RDEPEND=">=dev-libs/expat-2
 		sec-policy/selinux-dbus
 		sys-libs/libselinux
 		)
-	systemd? ( >=sys-apps/systemd-32 )
 	X? (
 		x11-libs/libX11
 		x11-libs/libXt
@@ -71,14 +70,18 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf
-
 	# so we can get backtraces from apps
 	append-flags -rdynamic
 
+	# temp. hack for stable wrt #416725#c5
+	local myconf=( --disable-systemd )
+	if use systemd && has_version sys-apps/systemd; then
+		myconf=( --enable-systemd )
+	fi
+
 	# libaudit is *only* used in DBus wrt SELinux support, so disable it, if
 	# not on an SELinux profile.
-	myconf=(
+	myconf+=(
 		--localstatedir=/var
 		--docdir=/usr/share/doc/${PF}
 		--htmldir=/usr/share/doc/${PF}/html
@@ -90,7 +93,6 @@ src_configure() {
 		$(use_enable selinux libaudit)
 		$(use_enable kernel_linux inotify)
 		$(use_enable kernel_FreeBSD kqueue)
-		$(use_enable systemd)
 		--disable-embedded-tests
 		--disable-modular-tests
 		$(use_enable debug stats)

@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.347 2012/07/20 23:07:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.348 2012/07/21 16:13:51 ssuominen Exp $
+
+  21 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> dbus-1.6.2.ebuild:
+  amd64/ppc/ppc64 stable wrt #416725
+
+  21 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> dbus-1.6.2.ebuild:
+  Use has_version instead of dependency for sys-apps/systemd regarding
+  stabilization. This is only for 1.6.2 and will be left as-is for 1.6.4.
 
 *dbus-1.6.4 (20 Jul 2012)
 
