@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13991 2012/07/21 07:17:57 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13992 2012/07/21 07:48:11 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -472,17 +472,6 @@ dev-ruby/gherkin:2.10
 # Broken, masking by maintainer's request
 net-ftp/leechcraft-lcftp
 net-p2p/leechcraft-eiskaltdcpp
-
-# Hans de Graaff <graaff@gentoo.org> (17 Apr 2012)
-# ruby-gnome2 modules obsoleted by upstream. These are
-# no longer maintained and mostly depend on gnome
-# components that have been obsoleted themselves.
-# no specific bug for these, nothing in the tree depends
-# on them.
-dev-ruby/ruby-gnomevfs
-dev-ruby/ruby-gtkglext
-dev-ruby/ruby-gtkhtml2
-dev-ruby/ruby-panel-applet2
 
 # Patrick Lauer <patrick@gentoo.org> (13 Apr 2012)
 # Needs lots of fixes, plus modules fail, so mask until it's
