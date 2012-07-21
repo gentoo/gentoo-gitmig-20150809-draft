@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.136 2012/07/16 21:07:49 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.137 2012/07/21 19:30:10 cardoe Exp $
+
+*qemu-kvm-1.1.1-r1 (21 Jul 2012)
+
+  21 Jul 2012; Doug Goldstein <cardoe@gentoo.org> -qemu-kvm-1.1.1.ebuild,
+  +qemu-kvm-1.1.1-r1.ebuild:
+  Fix issue where compilation would fail for certain softmmu targets. bug
+  #425418
 
 *qemu-kvm-1.1.1 (16 Jul 2012)
 
