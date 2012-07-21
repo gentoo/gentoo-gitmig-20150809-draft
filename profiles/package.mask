@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13992 2012/07/21 07:48:11 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13993 2012/07/21 10:30:29 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Markos Chandras <hwoarang@gentoo.org> (21 Jul 2012)
+# Package sources have been removed fro website (#424349)
+# Does not respect CFLAGS/CXXFLAGS/LDFLAGS (#337361)
+# Removal in 30 days
+net-misc/snitch
 
 # Hans de Graaff <graaff@gentoo.org> (21 Jul 2012)
 # Slot masked for security bug 427370. Nothing in the tree
