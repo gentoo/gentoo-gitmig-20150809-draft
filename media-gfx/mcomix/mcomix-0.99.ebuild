@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mcomix/mcomix-0.97.1.ebuild,v 1.4 2012/03/04 05:03:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mcomix/mcomix-0.99.ebuild,v 1.1 2012/07/21 05:24:19 dirtyepic Exp $
 
 EAPI="3"
 
