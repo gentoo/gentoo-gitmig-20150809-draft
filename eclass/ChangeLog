@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.346 2012/07/19 12:09:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.347 2012/07/21 11:57:30 sera Exp $
+
+  21 Jul 2012; Ralph Sennhauser <sera@gentoo.org> java-pkg-2.eclass:
+  Convert documentation to eclass-manpages.
 
   19 Jul 2012; Tomáš Chvátal <scarabeus@gentoo.org> mozlinguas.eclass:
   Fix eclassdoc.
