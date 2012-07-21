@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.2_p20120716.ebuild,v 1.5 2012/07/21 20:41:11 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.2_p20120716.ebuild,v 1.6 2012/07/21 20:46:52 cardoe Exp $
 
 EAPI=4
 
@@ -223,6 +223,7 @@ src_configure() {
 	for i in $(get-flag march) $(get-flag mcpu) $(get-flag mtune) ; do
 		[ "${i}" = "native" ] && i="host"
 		myconf="${myconf} --cpu=${i}"
+		break
 	done
 
 	if tc-is-cross-compiler ; then
