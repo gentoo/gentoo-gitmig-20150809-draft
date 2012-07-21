@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.2_p20120716.ebuild,v 1.2 2012/07/21 02:58:15 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.2_p20120716.ebuild,v 1.3 2012/07/21 18:21:01 cardoe Exp $
 
 EAPI=4
 
@@ -150,12 +150,11 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf="--prefix=/usr"
-	myconf="${myconf} --mandir=/usr/share/man"
+	local myconf="--prefix=${EPREFIX}/usr"
+	myconf="${myconf} --mandir=${EPREFIX}/usr/share/man"
 	myconf="${myconf} --libdir-name=$(get_libdir)"
 
 	myconf="${myconf} --enable-pic"
-	myconf="${myconf} --enable-symbol-visibility"
 
 	use alsa       || myconf="${myconf} --disable-audio-alsa"
 	use altivec    || myconf="${myconf} --disable-altivec"
@@ -172,6 +171,7 @@ src_configure() {
 	myconf="${myconf} --enable-x11"
 	myconf="${myconf} --enable-nonfree"
 	use cec || myconf="${myconf} --disable-libcec"
+	use roap || myconf="${myconf} --disable-libdns-sd"
 
 	if use hls; then
 		myconf="${myconf} --enable-libmp3lame"
@@ -210,11 +210,16 @@ src_configure() {
 	# Clean up DSO load times
 	myconf="${myconf} --enable-symbol-visibility"
 
-	# CFLAG cleaning so it compiles
-	strip-flags
+	# CPU settings
+	for i in $(get-flag march) $(get-flag mcpu) $(get-flag mtune) ; do
+		[ "${i}" = "native" ] && i="host"
+		myconf="${myconf} --cpu=${i}"
+	done
 
-	# Pass our LDFLAGS along so we don't get QA warnings
-	myconf="${myconf} --extra-ldflags=${LDFLAGS}"
+	if tc-is-cross-compiler ; then
+		myconf="${myconf} --enable-cross-compile --arch=$(tc-arch-kernel)"
+		myconf="${myconf} --cross-prefix=${CHOST}-"
+	fi
 
 	has distcc ${FEATURES} || myconf="${myconf} --disable-distcc"
 	has ccache ${FEATURES} || myconf="${myconf} --disable-ccache"
@@ -222,7 +227,14 @@ src_configure() {
 	chmod +x ./external/FFmpeg/version.sh
 
 	einfo "Running ./configure ${myconf}"
-	./configure ${myconf} || die "configure died"
+	./configure \
+		--cc="$(tc-getCC)" \
+		--cxx="$(tc-getCXX)" \
+		--ar="$(tc-getAR)" \
+		--extra-cflags="${CFLAGS}" \
+		--extra-cxxflags="${CXXFLAGS}" \
+		--extra-ldflags="${LDFLAGS}" \
+		${myconf} || die "configure died"
 }
 
 src_install() {
