@@ -1,10 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/redshift-1.7-r1.ebuild,v 1.1 2012/07/20 22:28:52 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/redshift-1.7-r1.ebuild,v 1.2 2012/07/21 19:13:55 hasufell Exp $
 
-EAPI=3
+EAPI=4
 
 PYTHON_DEPEND="gtk? 2:2.6"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="2.[45] 3.*"
 
 inherit autotools eutils gnome2-utils python
 
@@ -29,49 +31,53 @@ RDEPEND="${COMMON_DEPEND}
 DEPEND="${COMMON_DEPEND}
 	nls? ( sys-devel/gettext )"
 
-pkg_setup() {
-	use gtk && python_set_active_version 2
-}
-
 src_prepare() {
-	if use gtk; then
-		>py-compile
-		python_convert_shebangs 2 src/gtk-redshift/gtk-redshift
-	fi
-
-	epatch "${FILESDIR}"/${P}-make-conditionals.patch
+	>py-compile
+	epatch "${FILESDIR}"/${P}-python-abi.patch \
+		"${FILESDIR}"/${P}-make-conditionals.patch
 	eautoreconf
 }
 
 src_configure() {
-	local myconf
-	use gtk || myconf="--disable-gui"
-
 	econf \
-		--disable-dependency-tracking \
+		--disable-silent-rules \
 		$(use_enable nls) \
 		--enable-randr \
 		--enable-vidmode \
+		--disable-wingdi \
 		$(use_enable gnome gnome-clock) \
 		$(use_enable geoclue) \
-		${myconf}
+		$(use_enable gtk gui) \
+		--disable-ubuntu
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS NEWS README
+	default
+
+	# handle multiple python abi support
+	per_abi_install() {
+		cp "${D}"/usr/bin/gtk-redshift "${D}"/usr/bin/gtk-redshift-${PYTHON_ABI} || die
+		python_convert_shebangs ${PYTHON_ABI} "${D}"/usr/bin/gtk-redshift-${PYTHON_ABI}
+
+		insinto "$(python_get_sitedir)"/gtk_redshift
+		doins src/gtk-redshift/{__init__,defs,statusicon,utils}.py
+	}
+
+	if use gtk ; then
+		python_execute_function per_abi_install
+		rm "${D}"/usr/bin/gtk-redshift || die
+		python_generate_wrapper_scripts "${D}"/usr/bin/gtk-redshift
+	fi
 }
 
 pkg_preinst() {
-	gnome2_icon_savelist
+	use gtk && gnome2_icon_savelist
 }
 
 pkg_postinst() {
-	gnome2_icon_cache_update
-	use gtk && python_mod_optimize gtk_${PN}
+	use gtk && { gnome2_icon_cache_update; python_mod_optimize gtk_${PN}; }
 }
 
 pkg_postrm() {
-	gnome2_icon_cache_update
-	use gtk && python_mod_cleanup gtk_${PN}
+	use gtk && { gnome2_icon_cache_update; python_mod_cleanup gtk_${PN}; }
 }
