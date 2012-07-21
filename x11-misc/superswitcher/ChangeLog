@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/superswitcher
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/superswitcher/ChangeLog,v 1.9 2012/05/05 04:53:46 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/superswitcher/ChangeLog,v 1.10 2012/07/21 14:19:50 pacho Exp $
+
+  21 Jul 2012; Pacho Ramos <pacho@gentoo.org>
+  +files/superswitcher-0.6-glib-single-include.patch, superswitcher-0.6.ebuild:
+  Let it compile against glib-2.32
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> superswitcher-0.6.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -42,4 +46,3 @@
   07 Jul 2007; Sven Wegener <swegener@gentoo.org> +metadata.xml,
   +superswitcher-0.5.ebuild:
   Initial commit, ebuild written by me.
-

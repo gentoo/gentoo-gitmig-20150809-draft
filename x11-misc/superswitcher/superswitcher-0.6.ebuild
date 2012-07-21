@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/superswitcher/superswitcher-0.6.ebuild,v 1.7 2012/05/05 04:53:46 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/superswitcher/superswitcher-0.6.ebuild,v 1.8 2012/07/21 14:19:50 pacho Exp $
 
-EAPI=2
+EAPI=4
 inherit autotools eutils
 
 DESCRIPTION="A more feature-full replacement of the Alt-Tab window switching behavior."
@@ -30,11 +30,12 @@ src_prepare() {
 	sed -i \
 		-e '/-DG.*_DISABLE_DEPRECATED/d' \
 		src/Makefile.am || die #338906
+
 	epatch "${FILESDIR}"/${P}-wnck-workspace.patch
+	epatch "${FILESDIR}"/${PN}-0.6-glib-single-include.patch
 	eautoreconf
 }
 
 src_install() {
-	emake -j1 DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog README
+	MAKEOPTS+="-j1" default
 }
