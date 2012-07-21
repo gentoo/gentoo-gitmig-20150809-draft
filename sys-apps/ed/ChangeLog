@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ed
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.89 2012/04/26 13:34:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.90 2012/07/21 08:51:38 jdhore Exp $
+
+  21 Jul 2012; Jeff Horelick <jdhore@gentoo.org> ed-1.6.ebuild:
+  marked x86 per bug 427116
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> ed-1.6.ebuild:
   keyword ~amd64-fbsd
