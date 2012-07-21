@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6821 2012/07/21 11:07:26 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6822 2012/07/21 11:25:37 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Jul 2012; Pacho Ramos <pacho@gentoo.org> package.mask:
+  Mask 2.5.x gphoto versions as they break API and apps needs to be ported.
 
   21 Jul 2012; Johannes Huber <johu@gentoo.org> updates/3Q-2012:
   Move kde-misc/kanyremote from SLOT 0 to 4.
