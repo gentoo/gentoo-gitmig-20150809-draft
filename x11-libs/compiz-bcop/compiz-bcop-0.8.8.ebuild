@@ -1,6 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/compiz-bcop/compiz-bcop-0.8.8.ebuild,v 1.1 2012/07/06 10:26:10 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/compiz-bcop/compiz-bcop-0.8.8.ebuild,v 1.2 2012/07/21 10:34:54 ssuominen Exp $
+
+EAPI=4
 
 DESCRIPTION="Compiz Option code Generator"
 HOMEPAGE="http://www.compiz.org/"
@@ -13,8 +15,6 @@ IUSE=""
 
 RDEPEND="dev-libs/libxslt"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.19"
+	virtual/pkgconfig"
 
-src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-}
+DOCS="AUTHORS"
