@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.63a-r2.ebuild,v 1.2 2012/07/17 10:53:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.63a-r2.ebuild,v 1.3 2012/07/21 14:40:55 flameeyes Exp $
 
 EAPI=4
 PYTHON_DEPEND="3:3.2"
@@ -298,4 +298,7 @@ pkg_postinst() {
 	elog "home directory. This can be done by starting blender, then"
 	elog "dragging the main menu down do display all paths."
 	elog
+	ewarn "If you're updating from blender before 2.63a, please make"
+	ewarn "sure to log out and then back in before launching it, so"
+	ewarn "that the new environment variables are picked up."
 }

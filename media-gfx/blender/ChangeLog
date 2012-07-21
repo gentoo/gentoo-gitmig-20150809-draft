@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/blender
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.233 2012/07/17 10:53:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.234 2012/07/21 14:40:55 flameeyes Exp $
+
+  21 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> blender-2.63a-r2.ebuild:
+  Add a warning about the need for logging out and back in.
 
   17 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> blender-2.63a-r2.ebuild:
   Avoid sandbox violation by disabling audio correctly (fixes bug #426950,
