@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.9.13.ebuild,v 1.2 2012/05/04 18:35:56 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.9.13.ebuild,v 1.3 2012/07/21 19:04:31 jdhore Exp $
 
 inherit eutils
 
 DESCRIPTION="A tool for exporting C libraries into Scheme"
 HOMEPAGE="http://www.nongnu.org/g-wrap/"
 SRC_URI="http://download.savannah.gnu.org/releases/g-wrap/${P}.tar.gz"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc x86"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
