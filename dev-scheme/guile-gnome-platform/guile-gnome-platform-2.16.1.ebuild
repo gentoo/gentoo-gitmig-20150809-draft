@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-gnome-platform/guile-gnome-platform-2.16.1.ebuild,v 1.11 2012/05/03 02:46:49 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-gnome-platform/guile-gnome-platform-2.16.1.ebuild,v 1.12 2012/07/21 13:33:28 pacho Exp $
 
 EAPI="3"
 
@@ -39,6 +39,7 @@ RESTRICT=test
 src_prepare() {
 	epatch "${FILESDIR}/${PV}-conflicting-types.patch"
 	epatch "${FILESDIR}/${PV}-gcc45.patch"
+	epatch "${FILESDIR}/${PV}-glib-single-include.patch"
 	eautoreconf
 }
 

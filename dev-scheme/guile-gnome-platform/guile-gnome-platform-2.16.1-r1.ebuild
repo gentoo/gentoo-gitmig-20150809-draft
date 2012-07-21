@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-gnome-platform/guile-gnome-platform-2.16.1-r1.ebuild,v 1.2 2012/05/03 02:46:49 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-gnome-platform/guile-gnome-platform-2.16.1-r1.ebuild,v 1.3 2012/07/21 13:33:28 pacho Exp $
 
 EAPI=4
 
@@ -46,6 +46,7 @@ src_prepare() {
 		"${FILESDIR}/${PV}-conflicting-types.patch"
 		"${FILESDIR}/${PV}-gcc45.patch"
 		"${FILESDIR}/${PV}-gdk-color.patch"
+		"${FILESDIR}/${PV}-glib-single-include.patch"
 		)
 	autotools-utils_src_prepare
 }

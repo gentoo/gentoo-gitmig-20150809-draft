@@ -1,6 +1,11 @@
 # ChangeLog for dev-scheme/guile-gnome-platform
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-gnome-platform/ChangeLog,v 1.17 2012/05/03 02:46:49 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-gnome-platform/ChangeLog,v 1.18 2012/07/21 13:33:28 pacho Exp $
+
+  21 Jul 2012; Pacho Ramos <pacho@gentoo.org>
+  +files/2.16.1-glib-single-include.patch,
+  guile-gnome-platform-2.16.1-r1.ebuild, guile-gnome-platform-2.16.1.ebuild:
+  Let it compile against glib-2.32
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org>
   guile-gnome-platform-2.16.1.ebuild, guile-gnome-platform-2.16.1-r1.ebuild:
@@ -82,4 +87,3 @@
   +guile-gnome-platform-2.15.92.ebuild:
   Add Guile Scheme code that wraps the GNOME developer platform. The cairo fix
   is from upstream bzr, but the atk fix hasn't yet made its way upstream.
-
