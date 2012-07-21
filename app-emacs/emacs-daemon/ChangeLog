@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/emacs-daemon
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.48 2011/08/24 20:39:51 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.49 2012/07/21 09:40:10 ulm Exp $
+
+*emacs-daemon-0.19 (21 Jul 2012)
+
+  21 Jul 2012; Ulrich Müller <ulm@gentoo.org> +emacs-daemon-0.19.ebuild:
+  Version bump, dropping compatibility with baselayout-1.
 
   24 Aug 2011; Ulrich Mueller <ulm@gentoo.org> emacs-daemon-0.18.ebuild:
   Warn about problems in GTK+, bug 292471.
