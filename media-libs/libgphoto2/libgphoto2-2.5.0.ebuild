@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.11-r1.ebuild,v 1.9 2012/06/09 00:00:57 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.5.0.ebuild,v 1.1 2012/07/21 11:27:08 pacho Exp $
 
 # TODO
 # 1. Track upstream bug --disable-docs does not work.
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/gphoto/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="doc examples exif gd jpeg nls kernel_linux zeroconf"
 
 # By default, drivers for all supported cameras will be compiled.
@@ -40,7 +40,7 @@ IUSE_CAMERAS="
 	panasonic_coolshot panasonic_l859 panasonic_dc1000 panasonic_dc1580 pccam300 pccam600 polaroid_pdc320 polaroid_pdc640 polaroid_pdc700 ptp2
 	ricoh ricoh_g3
 	samsung sierra sipix_blink sipix_blink2 sipix_web2 smal sonix sony_dscf1 sony_dscf55 soundvision spca50x sq905 st2205 stv0674 stv0680 sx330z
-	template toshiba_pdrm11 topfield
+	template toshiba_pdrm11 topfield tp6801
 "
 
 for camera in ${IUSE_CAMERAS}; do
@@ -51,9 +51,7 @@ done
 RDEPEND="virtual/libusb:0
 	cameras_ax203? ( media-libs/gd )
 	cameras_st2205? ( media-libs/gd )
-	zeroconf? ( || (
-		net-dns/avahi[mdnsresponder-compat]
-		net-misc/mDNSResponder ) )
+	zeroconf? ( net-dns/avahi[mdnsresponder-compat] )
 	exif? ( >=media-libs/libexif-0.5.9 )
 	gd? ( media-libs/gd[jpeg=] )
 	jpeg? ( virtual/jpeg )
@@ -95,18 +93,9 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.4.7-respect-bonjour.patch"
 
 	# Do not build test if not running make check, bug #226241
-	epatch "${FILESDIR}/${PN}-2.4.7-no-test-build.patch"
-
-	# Increase max entries from 1024 to 8192 to fix bug #291049
-	epatch "${FILESDIR}/${PN}-2.4.8-increase_max_entries.patch"
-
-	# Fix automagic deps, bug #374371
-	epatch "${FILESDIR}/${PN}-2.4.11-fix-automagic.patch"
+#	epatch "${FILESDIR}/${PN}-2.4.7-no-test-build.patch"
 
 	eautoreconf
-
-	# Fix bug #216206, libusb detection
-	sed -i "s:usb_busses:usb_find_busses:g" libgphoto2_port/configure || die "libusb sed failed"
 }
 
 src_configure() {
@@ -163,6 +152,9 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install
+
+	# Empty dependency_libs in .la files, bug #386665
+	find "${ED}" -name '*.la' -exec sed -i -e "/^dependency_libs/s:=.*:='':" {} +
 
 	# Clean up unwanted files
 	rm "${D}/usr/share/doc/${PF}/"{ABOUT-NLS,COPYING} || die "rm failed"
