@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.8.2-r2.ebuild,v 1.3 2012/06/01 01:59:55 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.8.4-r1.ebuild,v 1.1 2012/07/21 15:59:49 slyfox Exp $
 
 EAPI=4
 
@@ -14,15 +14,19 @@ SRC_URI="http://www.midnight-commander.org/downloads/${MY_P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x86-solaris"
-IUSE="+edit gpm mclib nls samba +slang test X +xdg"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x86-solaris"
+IUSE="+edit gpm mclib nls samba sftp +slang spell test X +xdg"
+
+REQUIRED_USE="spell? ( edit )"
 
 RDEPEND=">=dev-libs/glib-2.8:2
 	gpm? ( sys-libs/gpm )
 	kernel_linux? ( sys-fs/e2fsprogs )
 	samba? ( net-fs/samba )
+	sftp? ( net-libs/libssh2 )
 	slang? ( >=sys-libs/slang-2 )
 	!slang? ( sys-libs/ncurses )
+	spell? ( app-text/aspell )
 	X? ( x11-libs/libX11
 		x11-libs/libICE
 		x11-libs/libXau
@@ -35,17 +39,22 @@ DEPEND="${RDEPEND}
 	test? ( dev-libs/check )
 	"
 
-S=${WORKDIR}/${MY_P}
+LANGS="az be bg ca cs da de el eo es et eu fi
+fr gl hu ia id it ja ka ko lt lv mn nb nl pl pt_BR
+pt ro ru sk sl sr sv sv_SE ta tr uk vi wa zh_CN zh_TW"
+#LANGS+=" de_CH fi_FI it_IT" # suspicious overlap
+
+for X in ${LANGS} ; do
+	IUSE="${IUSE} linguas_${X}"
+done
 
 src_prepare() {
-	cp "${FILESDIR}"/${P}-missing-do_panel_cd_stub_env.c \
-		tests/src/filemanager/do_panel_cd_stub_env.c || die
+	strip-linguas ${LANGS}
 
-	# bug 409107
-	epatch "${FILESDIR}"/"${P}"-mcedit-without-file-param-fix.patch
-	# bug 409365
-	epatch "${FILESDIR}"/"${P}"-fix-existing.patch
+	epatch "${FILESDIR}"/${P}-Ticket-2851-fixes-of-ext.d-scripts.patch
 }
+
+S=${WORKDIR}/${MY_P}
 
 src_configure() {
 	local myscreen=ncurses
@@ -63,6 +72,8 @@ src_configure() {
 		--enable-charset \
 		$(use_with X x) \
 		$(use_enable samba vfs-smb) \
+		$(use_enable sftp vfs-sftp) \
+		$(use_enable spell aspell) \
 		$(use_with gpm gpm-mouse) \
 		--with-screen=${myscreen} \
 		$(use_with edit) \

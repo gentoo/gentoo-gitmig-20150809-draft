@@ -1,6 +1,20 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.260 2012/07/21 11:25:20 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.261 2012/07/21 15:59:49 slyfox Exp $
+
+*mc-4.8.4-r1 (21 Jul 2012)
+
+  21 Jul 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/mc-4.8.4-Ticket-2851-fixes-of-ext.d-scripts.patch, +mc-4.8.4-r1.ebuild,
+  -files/mc-4.8.0-fix-ftp-spaces.patch, -files/mc-4.8.0-fix-nls.patch,
+  -files/mc-4.8.2-fix-existing.patch,
+  -files/mc-4.8.2-mcedit-without-file-param-fix.patch,
+  -files/mc-4.8.2-missing-do_panel_cd_stub_env.c, -mc-4.7.0.10.ebuild,
+  -mc-4.7.0.3.ebuild, -mc-4.7.5.2.ebuild, -mc-4.7.5.6-r1.ebuild,
+  -mc-4.8.1-r2.ebuild, -mc-4.8.2-r2.ebuild, -mc-4.8.4.ebuild:
+  Added USE=spell to use aspell checker from live ebuild. Fix to view
+  /var/log/*.1.gz files (https://www.midnight-commander.org/ticket/2852).
+  Cleanup old unstable versions.
 
   21 Jul 2012; Sergei Trofimovich <slyfox@gentoo.org> mc-9999.ebuild:
   Add USE=spell (uses app-text/aspell as a spell checker).
