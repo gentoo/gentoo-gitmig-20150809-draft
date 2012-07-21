@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.35-r1.ebuild,v 1.1 2012/07/20 17:36:54 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.35-r1.ebuild,v 1.2 2012/07/21 01:48:02 mr_bones_ Exp $
 
 EAPI=4
 
@@ -89,7 +89,7 @@ src_install() {
 	java-pkg_dojar output/build/lib/*.jar
 
 	# so we don't have to call java-config with --with-dependencies, which might
-	# bring in more jars then actually desired. 
+	# bring in more jars then actually desired.
 	java-pkg_addcp "$(java-pkg_getjars eclipse-ecj-${ECJ_SLOT},tomcat-servlet-api-${SAPI_SLOT})"
 
 	dodoc RELEASE-NOTES RUNNING.txt
