@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<maintainer>
-  <email>matsuu@gentoo.org</email>
-  <name>MATSUU Takuto</name>
-</maintainer>
-<longdescription>GtkMathView-Bonobo is a Bonobo wrapper for GtkMathView which allows GtkMathView to be embedded inside Bonobo applications.</longdescription>
-</pkgmetadata>
