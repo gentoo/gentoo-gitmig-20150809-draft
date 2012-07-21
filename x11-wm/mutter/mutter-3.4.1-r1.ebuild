@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/mutter-3.4.1-r1.ebuild,v 1.3 2012/05/22 06:38:59 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/mutter-3.4.1-r1.ebuild,v 1.4 2012/07/21 17:55:53 tetromino Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -9,6 +9,8 @@ inherit eutils gnome2
 
 DESCRIPTION="GNOME 3 compositing window manager based on Clutter"
 HOMEPAGE="http://git.gnome.org/browse/mutter/"
+SRC_URI="${SRC_URI}
+	http://dev.gentoo.org/~tetromino/distfiles/${PN}/${PN}-3.4.1-gtk-doc-syntax.patch.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -18,7 +20,7 @@ KEYWORDS="~amd64 ~x86"
 COMMON_DEPEND=">=x11-libs/pango-1.2[X,introspection?]
 	>=x11-libs/cairo-1.10[X]
 	x11-libs/gdk-pixbuf:2[introspection?]
-	>=x11-libs/gtk+-3.3.7:3[introspection?]
+	>=x11-libs/gtk+-3.3.7:3[X,introspection?]
 	>=dev-libs/glib-2.25.11:2
 	>=media-libs/clutter-1.9.10:1.0[introspection?]
 	>=media-libs/cogl-1.9.6:1.0[introspection?]
@@ -46,9 +48,9 @@ DEPEND="${COMMON_DEPEND}
 	>=app-text/gnome-doc-utils-0.8
 	>=dev-util/intltool-0.35
 	sys-devel/gettext
-	virtual/pkgconfig
 	test? ( app-text/docbook-xml-dtd:4.5 )
 	xinerama? ( x11-proto/xineramaproto )
+	virtual/pkgconfig
 	x11-proto/xextproto
 	x11-proto/xproto"
 RDEPEND="${COMMON_DEPEND}
@@ -75,6 +77,9 @@ src_prepare() {
 
 	# In next release
 	epatch "${FILESDIR}/${P}-meta_window_move_frame-crash.patch"
+
+	# gobject-introspection-1.33 compat; in 3.5.x
+	epatch "${WORKDIR}/${PN}-3.4.1-gtk-doc-syntax.patch"
 
 	gnome2_src_prepare
 }

@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/mutter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/ChangeLog,v 1.11 2012/05/22 06:38:59 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/ChangeLog,v 1.12 2012/07/21 17:55:53 tetromino Exp $
+
+  21 Jul 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  mutter-3.4.1-r1.ebuild:
+  Fix build failure with gobject-introspection-1.33.x; thanks to Johann
+  Degenhardt for the report.
 
   22 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org> mutter-3.2.2.ebuild,
   mutter-3.2.2-r1.ebuild, mutter-3.4.1-r1.ebuild:
