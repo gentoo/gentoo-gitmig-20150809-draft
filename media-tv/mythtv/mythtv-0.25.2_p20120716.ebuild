@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.2_p20120716.ebuild,v 1.4 2012/07/21 19:46:05 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.2_p20120716.ebuild,v 1.5 2012/07/21 20:41:11 cardoe Exp $
 
 EAPI=4
 
@@ -23,11 +23,16 @@ KEYWORDS="~amd64 ~x86"
 
 IUSE_INPUT_DEVICES="input_devices_joystick"
 IUSE="alsa altivec libass autostart bluray cec crystalhd debug dvb dvd \
-fftw +hls ieee1394 jack lcd lirc perl pulseaudio python raop vaapi \
-vdpau xmltv xvid ${IUSE_INPUT_DEVICES}"
+egl fftw +hls ieee1394 jack lcd lirc perl pulseaudio python raop +theora \
+vaapi vdpau +vorbis +xml xmltv +xvid ${IUSE_INPUT_DEVICES}"
 
-SDEPEND="
+REQUIRED_USE="
+	bluray? ( xml )
+	theora? ( vorbis )"
+
+COMMON="
 	>=media-libs/freetype-2.0
+	sys-libs/zlib
 	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXinerama
@@ -37,17 +42,16 @@ SDEPEND="
 	>=x11-libs/qt-core-4.7.2:4
 	>=x11-libs/qt-dbus-4.7.2
 	>=x11-libs/qt-gui-4.7.2:4
+	>=x11-libs/qt-script-4.7.2:4
 	>=x11-libs/qt-sql-4.7.2:4[mysql]
-	>=x11-libs/qt-opengl-4.7.2:4
+	>=x11-libs/qt-opengl-4.7.2:4[egl?]
 	>=x11-libs/qt-webkit-4.7.2:4
 	x11-misc/wmctrl
 	virtual/mysql
 	virtual/opengl
-	virtual/glu
 	alsa? ( >=media-libs/alsa-lib-1.0.24 )
 	bluray? (
 		dev-libs/libcdio
-		>=dev-libs/libxml2-2.6.0
 		media-libs/libbluray
 	)
 	cec? ( dev-libs/libcec )
@@ -56,6 +60,7 @@ SDEPEND="
 		virtual/linuxtv-dvb-headers
 	)
 	dvd? ( dev-libs/libcdio )
+	egl? ( media-libs/mesa[egl] )
 	fftw? ( sci-libs/fftw:3.0 )
 	hls? (
 		media-libs/faac
@@ -90,14 +95,17 @@ SDEPEND="
 		dev-libs/openssl
 		net-dns/avahi[mdnsresponder-compat]
 	)
+	theora? ( media-libs/libtheora )
 	vaapi? ( x11-libs/libva )
 	vdpau? ( x11-libs/libvdpau )
+	vorbis? ( >=media-libs/libvorbis-1.0 )
+	xml? ( >=dev-libs/libxml2-2.6.0 )
 	xvid? ( >=media-libs/xvid-1.1.0 )
 	!media-tv/mythtv-bindings
 	!x11-themes/mythtv-themes
 	"
 
-RDEPEND="${SDEPEND}
+RDEPEND="${COMMON}
 	media-fonts/corefonts
 	media-fonts/dejavu
 	media-fonts/liberation-fonts
@@ -111,7 +119,7 @@ RDEPEND="${SDEPEND}
 	xmltv? ( >=media-tv/xmltv-0.5.43 )
 	"
 
-DEPEND="${SDEPEND}
+DEPEND="${COMMON}
 	dev-lang/yasm
 	x11-proto/xineramaproto
 	x11-proto/xf86vidmodeproto
@@ -127,13 +135,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-# upstream wants the revision number in their version.cpp
-# since the subversion.eclass strips out the .svn directory
-# svnversion in MythTV's build doesn't work
-#	sed -e "s#\${SOURCE_VERSION}#${MYTHTV_VERSION}#g" \
-#		-e "s#\${BRANCH}#${MYTHTV_BRANCH}#g" \
-#		-i "${S}"/version.sh
-
 	[[ -n ${BACKPORTS} ]] && \
 		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" \
 			epatch
@@ -150,17 +151,20 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf="--prefix=${EPREFIX}/usr"
-	myconf="${myconf} --mandir=${EPREFIX}/usr/share/man"
+	local myconf=
+
+	# Setup paths
+	myconf="${myconf} --prefix=${EPREFIX}/usr"
+	myconf="${myconf} --libdir=${EPREFIX}/usr/$(get_libdir)"
 	myconf="${myconf} --libdir-name=$(get_libdir)"
+	myconf="${myconf} --mandir=${EPREFIX}/usr/share/man"
 
-	myconf="${myconf} --enable-pic"
-
-	use alsa       || myconf="${myconf} --disable-audio-alsa"
-	use altivec    || myconf="${myconf} --disable-altivec"
-	use jack       || myconf="${myconf} --disable-audio-jack"
+	# Audio
+	myconf="${myconf} $(use_enable alsa audio-alsa)"
+	myconf="${myconf} $(use_enable jack audio-jack)"
 	use pulseaudio || myconf="${myconf} --disable-audio-pulseoutput"
 
+	use altivec    || myconf="${myconf} --disable-altivec"
 	myconf="${myconf} $(use_enable dvb)"
 	myconf="${myconf} $(use_enable ieee1394 firewire)"
 	myconf="${myconf} $(use_enable lirc)"
@@ -171,7 +175,9 @@ src_configure() {
 	myconf="${myconf} --enable-x11"
 	myconf="${myconf} --enable-nonfree"
 	use cec || myconf="${myconf} --disable-libcec"
-	use roap || myconf="${myconf} --disable-libdns-sd"
+	use raop || myconf="${myconf} --disable-libdns-sd"
+	myconf="${myconf} $(use_enable theora libtheora)"
+	myconf="${myconf} $(use_enable vorbis libvorbis)"
 
 	if use hls; then
 		myconf="${myconf} --enable-libmp3lame"
@@ -197,18 +203,21 @@ src_configure() {
 	if use debug; then
 		myconf="${myconf} --compile-type=debug"
 	else
-		myconf="${myconf} --compile-type=profile"
-		myconf="${myconf} --enable-proc-opt"
+		myconf="${myconf} --compile-type=release"
+		myconf="${myconf} --enable-debug"
 	fi
 
+	# Video
 	use vdpau && myconf="${myconf} --enable-vdpau"
 	use vaapi && myconf="${myconf} --enable-vaapi"
 	use crystalhd && myconf="${myconf} --enable-crystalhd"
 
+	# Input
 	use input_devices_joystick || myconf="${myconf} --disable-joystick-menu"
 
-	# Clean up DSO load times
+	# Clean up DSO load times and other compiler bits
 	myconf="${myconf} --enable-symbol-visibility"
+	myconf="${myconf} --enable-pic"
 
 	# CPU settings
 	for i in $(get-flag march) $(get-flag mcpu) $(get-flag mtune) ; do
@@ -221,6 +230,7 @@ src_configure() {
 		myconf="${myconf} --cross-prefix=${CHOST}-"
 	fi
 
+	# Build boosters
 	has distcc ${FEATURES} || myconf="${myconf} --disable-distcc"
 	has ccache ${FEATURES} || myconf="${myconf} --disable-ccache"
 
