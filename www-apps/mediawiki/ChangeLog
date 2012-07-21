@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/mediawiki
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.192 2012/06/17 07:39:33 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.193 2012/07/21 09:33:24 jdhore Exp $
+
+  21 Jul 2012; Jeff Horelick <jdhore@gentoo.org> mediawiki-1.19.1.ebuild:
+  marked x86 per bug 426500
 
 *mediawiki-1.18.4 (17 Jun 2012)
 
