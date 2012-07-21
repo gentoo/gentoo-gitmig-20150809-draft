@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/gtksourceviewmm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtksourceviewmm/ChangeLog,v 1.27 2012/05/24 13:35:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtksourceviewmm/ChangeLog,v 1.28 2012/07/21 14:39:30 pacho Exp $
+
+  21 Jul 2012; Pacho Ramos <pacho@gentoo.org>
+  +files/gtksourceviewmm-3.2.0-glib-single-include.patch,
+  -gtksourceviewmm-3.0.0.ebuild, gtksourceviewmm-3.2.0.ebuild:
+  Let it compile against glib-2.32, drop old.
 
   24 May 2012; Samuli Suominen <ssuominen@gentoo.org>
   gtksourceviewmm-3.2.0.ebuild:
@@ -115,4 +120,3 @@
   +gtksourceviewmm-2.2.0.ebuild:
   New package gtksourceviewmm which is just a rename of libgtksourceviewmm,
   API and installed files are the same
-

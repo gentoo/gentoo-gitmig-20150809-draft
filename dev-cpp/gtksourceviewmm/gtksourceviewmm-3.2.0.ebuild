@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtksourceviewmm/gtksourceviewmm-3.2.0.ebuild,v 1.5 2012/05/24 13:35:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtksourceviewmm/gtksourceviewmm-3.2.0.ebuild,v 1.6 2012/07/21 14:39:30 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="C++ bindings for gtksourceview"
 HOMEPAGE="http://projects.gnome.org/gtksourceviewmm/"
@@ -30,4 +30,9 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog* NEWS README"
 	G2CONF="${G2CONF} $(use_enable doc documentation)"
+}
+
+src_prepare() {
+	epatch "${FILESDIR}/${PN}-3.2.0-glib-single-include.patch"
+	gnome2_src_prepare
 }
