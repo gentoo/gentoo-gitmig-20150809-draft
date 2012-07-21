@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ngstar/ngstar-2.1.8-r2.ebuild,v 1.8 2011/06/19 21:53:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ngstar/ngstar-2.1.8-r2.ebuild,v 1.9 2012/07/21 20:33:46 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -21,6 +21,7 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-gentoo-path.patch \
 		"${FILESDIR}"/${P}-gcc43.patch \
+		"${FILESDIR}"/${P}-gcc47.patch \
 		"${FILESDIR}"/${P}-ldflags.patch
 	sed -i \
 		-e "s:@GENTOO_DATA@:${GAMES_DATADIR}:" \
