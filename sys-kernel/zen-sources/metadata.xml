@@ -10,11 +10,7 @@
 	<name>Alex Alexander</name>
 </maintainer>
 <use>
-	<flag name="bfq">Make the BFQ IO Scheduler available by applying upstream patches</flag>
 	<flag name="minimal">Clone git tree with --depth 1 to reduce amount of data to download. Use with caution</flag>
-	<flag name="tuxonice">Apply TuxOnIce kernel patches advanced hibernation
-	support</flag>
-	<flag name='deblob'>Remove binary blobs from kernel sources to provide libre license compliance.</flag>
 </use>
 </pkgmetadata>
 

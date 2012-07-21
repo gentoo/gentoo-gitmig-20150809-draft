@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/zen-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/ChangeLog,v 1.54 2012/04/16 17:23:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/ChangeLog,v 1.55 2012/07/21 14:10:26 pacho Exp $
+
+  21 Jul 2012; Pacho Ramos <pacho@gentoo.org> -zen-sources-2.6.30_p11.ebuild,
+  -zen-sources-2.6.31_p12.ebuild, -zen-sources-2.6.32_p7-r1.ebuild,
+  -zen-sources-2.6.33_p3.ebuild, -zen-sources-2.6.34_p1-r2.ebuild,
+  -zen-sources-2.6.35_p2.ebuild, -zen-sources-2.6.36_p1.ebuild,
+  -zen-sources-2.6.36_p2.ebuild, -zen-sources-2.6.37_p20110325.ebuild,
+  -zen-sources-2.6.38_p20110510.ebuild, metadata.xml:
+  Drop masked versions
 
   16 Apr 2012; Markos Chandras <hwoarang@gentoo.org>
   -zen-sources-2.6.38_p20110404.ebuild, -zen-sources-2.6.38_p20110501.ebuild:
@@ -367,4 +375,3 @@
   Initial commit of zen-sources. Fixes bug #288512. Thanks to Brandon
   Berhent
   <cheater1034@gmail.com> for the initial ebuilds
-
