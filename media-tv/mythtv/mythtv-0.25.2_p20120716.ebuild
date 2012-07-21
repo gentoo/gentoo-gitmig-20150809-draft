@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.2_p20120716.ebuild,v 1.3 2012/07/21 18:21:01 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.2_p20120716.ebuild,v 1.4 2012/07/21 19:46:05 cardoe Exp $
 
 EAPI=4
 
@@ -144,7 +144,7 @@ src_prepare() {
 
 	# Fix up the version info since we are using the fixes/${PV} branch
 	echo "SOURCE_VERSION=\"${MYTHTV_VERSION}\"" > "${S}"/VERSION
-	echo "BRANCH=\"${MYTHTV_BRANCH}\"" > "${S}"/VERSION
+	echo "BRANCH=\"${MYTHTV_BRANCH}\"" >> "${S}"/VERSION
 
 	epatch_user
 }
