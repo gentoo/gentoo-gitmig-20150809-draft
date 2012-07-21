@@ -1,14 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.16.1.1.ebuild,v 1.4 2012/05/03 01:58:53 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.16.8.ebuild,v 1.1 2012/07/21 13:18:20 jer Exp $
 
-EAPI=3
+EAPI=4
 
 inherit eutils multilib autotools toolchain-funcs
 
 DESCRIPTION="Package maintenance system for Debian"
 HOMEPAGE="http://packages.qa.debian.org/dpkg"
-SRC_URI="mirror://debian/pool/main/d/${PN}/${P/-/_}.tar.bz2"
+SRC_URI="mirror://debian/pool/main/d/${PN}/${P/-/_}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -30,18 +30,20 @@ RDEPEND=">=dev-lang/perl-5.6.0
 	zlib? ( >=sys-libs/zlib-1.1.4 )
 	bzip2? ( app-arch/bzip2 )"
 DEPEND="${RDEPEND}
+	app-arch/xz-utils
+	nls? ( app-text/po4a )
 	sys-devel/flex
 	virtual/pkgconfig
-	nls? ( app-text/po4a )
 	test? (
 		dev-perl/DateTime-Format-DateParse
 		dev-perl/IO-String
 		dev-perl/Test-Pod
 	)"
+REQUIRED_USE="dselect? ( nls )"
 
 src_prepare() {
-	# don't mess with linker optimisation, respect user's flags (don't break!)
-	sed -i -e '/DPKG_LINKER_OPTIMISATIONS/d' configure.ac || die
+	# do not expect Debian's gzip --rsyncable extension
+	epatch "${FILESDIR}"/${PN}-1.16.4.2-gzip-rsyncable.patch
 
 	# Force the use of the running bash for get-version (this file is never
 	# installed, so no need to worry about hardcoding a temporary bash)
@@ -53,29 +55,26 @@ src_prepare() {
 		-e '/850_Dpkg_Compression.t/d' \
 		|| die "sed failed"
 
-	epatch "${FILESDIR}"/${PN}-1.16.1-bootstrap.patch
+	# test fails (bug #414095)
+	sed -i utils/Makefile.am \
+		-e '/^test_cases/d;/100_update_alternatives/d' || die
+
 	eautoreconf
 }
 
 src_configure() {
 	tc-export CC
-	local myconf
-	if use nls; then
-		myconf="--enable-nls $(use_with dselect)"
-	else
-		if use dselect; then
-			elog "Building dselect requires USE=nls - disabling USE=dselect..."
-		fi
-		myconf="--disable-nls --without-dselect"
-	fi
 	econf \
 		${myconf} \
-		$(use_with bzip2 bz2) \
+		$(use_enable dselect) \
 		$(use_enable unicode) \
+		$(use_with bzip2 bz2) \
 		$(use_with zlib) \
 		--disable-compiler-warnings \
+		--disable-compiler-optimisations \
+		--disable-linker-optimisations \
 		--without-selinux \
-		--without-start-stop-daemon
+		--disable-start-stop-daemon
 }
 
 src_install() {
