@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/gwget
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget/ChangeLog,v 1.26 2012/05/05 03:20:43 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget/ChangeLog,v 1.27 2012/07/21 16:18:17 pacho Exp $
+
+  21 Jul 2012; Pacho Ramos <pacho@gentoo.org>
+  +files/gwget-1.0.4-glib-single-include.patch, gwget-1.0.4.ebuild:
+  Let it compile against glib-2.32
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> gwget-1.0.4.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -160,4 +164,3 @@
   13 Aug 2003; Mike Gardiner <obz@gentoo.org> gwget2-0.5.ebuild:
   New package. Thanks to Jose Romildo Malaquias (romildo@iber.com.br). See bug
   #18255
-

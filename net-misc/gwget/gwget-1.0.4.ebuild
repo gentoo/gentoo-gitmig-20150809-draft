@@ -1,9 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget/gwget-1.0.4.ebuild,v 1.7 2012/05/05 03:20:43 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget/gwget-1.0.4.ebuild,v 1.8 2012/07/21 16:18:17 pacho Exp $
 
-EAPI="2"
+EAPI="4"
 GCONF_DEBUG="no"
+GNOME2_LA_PUNT="yes"
+GNOME_TARBALL_SUFFIX="bz2"
 
 inherit eutils gnome2
 
@@ -30,9 +32,8 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35.0
 	>=sys-devel/gettext-0.10.4"
 
-DOCS="AUTHORS ChangeLog NEWS README THANKS TODO"
-
 pkg_setup() {
+	DOCS="AUTHORS ChangeLog NEWS README THANKS TODO"
 	G2CONF="${G2CONF}
 		$(use_enable epiphany epiphany-extension)
 		$(use_enable libnotify)
@@ -42,6 +43,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-libnotify-0.7.patch
+	epatch "${FILESDIR}"/${P}-glib-single-include.patch
 	gnome2_src_prepare
 }
 
@@ -50,7 +52,4 @@ src_install() {
 
 	# remove /var/lib, which is created without any reason
 	rm -rf "${D}"/var || die "rm failed"
-
-	# remove useless la files
-	find "${D}" -name '*.la' -delete
 }
