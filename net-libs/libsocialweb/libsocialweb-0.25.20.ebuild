@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsocialweb/libsocialweb-0.25.20.ebuild,v 1.5 2012/06/05 08:19:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsocialweb/libsocialweb-0.25.20.ebuild,v 1.6 2012/07/21 12:12:05 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -73,6 +73,10 @@ pkg_setup() {
 src_prepare() {
 	# Sent upstream, gnome bug 677445
 	epatch "${FILESDIR}"/${P}-gold.patch
+
+	# Fix namespacing of introspection annotations, bug #426984
+	epatch "${FILESDIR}"/${PN}-0.25.20-introspection-annotations.patch
+
 	gnome2_src_prepare
 
 	python_convert_shebangs 2 "${S}/tools/glib-ginterface-gen.py"
