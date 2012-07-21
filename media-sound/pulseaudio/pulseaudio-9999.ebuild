@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-9999.ebuild,v 1.26 2012/06/13 11:54:50 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-9999.ebuild,v 1.27 2012/07/21 03:52:09 ford_prefect Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ EGIT_REPO_URI="git://anongit.freedesktop.org/pulseaudio/pulseaudio.git"
 LICENSE="!gdbm? ( LGPL-2.1 ) gdbm? ( GPL-2 )"
 SLOT="0"
 KEYWORDS=""
-IUSE="+alsa avahi +caps equalizer jack lirc oss tcpd +X dbus libsamplerate gtk gnome bluetooth +asyncns +glib test doc +udev ipv6 system-wide realtime +orc ssl +gdbm +webrtc-aec xen"
+IUSE="+alsa avahi +caps equalizer jack lirc oss tcpd +X dbus libsamplerate gnome bluetooth +asyncns +glib gtk test doc +udev ipv6 system-wide realtime +orc ssl +gdbm +webrtc-aec xen systemd"
 
 RDEPEND=">=media-libs/libsndfile-1.0.20
 	X? (
@@ -57,6 +57,7 @@ RDEPEND=">=media-libs/libsndfile-1.0.20
 	gdbm? ( sys-libs/gdbm )
 	webrtc-aec? ( media-libs/webrtc-audio-processing )
 	xen? ( app-emulation/xen )
+	systemd? ( >=sys-apps/systemd-39 )
 	dev-libs/json-c
 	>=sys-devel/libtool-2.2.4" # it's a valid RDEPEND, libltdl.so is used
 
@@ -130,6 +131,7 @@ src_configure() {
 		$(use_enable X x11) \
 		$(use_enable test default-build-tests) \
 		$(use_enable udev) \
+		$(use_enable systemd) \
 		$(use_enable ipv6) \
 		$(use_enable ssl openssl) \
 		$(use_enable webrtc-aec) \
