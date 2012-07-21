@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomoradio/gnomoradio-0.15.1.ebuild,v 1.13 2012/05/05 09:02:19 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomoradio/gnomoradio-0.15.1.ebuild,v 1.14 2012/07/21 14:43:47 pacho Exp $
 
-EAPI=2
+EAPI=4
 inherit autotools eutils
 
 DESCRIPTION="Finds, fetches, shares, and plays freely licensed music."
@@ -27,7 +27,8 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc42.patch \
 		"${FILESDIR}"/${P}-gcc43.patch \
-		"${FILESDIR}"/${P}-lm.patch
+		"${FILESDIR}"/${P}-lm.patch \
+		"${FILESDIR}"/${P}-glib-single-include.patch
 	eautoreconf
 }
 
@@ -35,9 +36,4 @@ src_configure() {
 	econf \
 		--disable-dependency-tracking \
 		$(use_enable vorbis)
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog NEWS README TODO
 }
