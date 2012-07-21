@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.10.9.ebuild,v 1.1 2012/05/04 12:33:18 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.10.9-r1.ebuild,v 1.1 2012/07/21 11:02:32 pacho Exp $
 
 EAPI="4"
 
@@ -52,7 +52,8 @@ pkg_setup() {
 			ewarn "See http://bugs.gentoo.org/261869 for more info."
 		fi
 	fi
-	PATCHES=( "${FILESDIR}/${PN}-2.10.2-threads-access.patch" )
+	PATCHES=( "${FILESDIR}/${PN}-2.10.2-threads-access.patch"
+		"${FILESDIR}/${P}-CVE-2012-3382.patch" )
 }
 
 src_prepare() {
@@ -160,42 +161,42 @@ pkg_preinst() {
 	fi
 }
 
-pkg_postinst() {
-	elog "PLEASE TAKE NOTE!"
-	elog ""
-	elog "Some of the namespaces supported by Mono require extra packages to be installed."
-	elog "Below is a list of namespaces and the corresponding package you must install:"
-	elog ""
-	elog ">=x11-libs/cairo-1.6.4"
-	elog "	Mono.Cairo"
-	elog "Also read:"
-	elog "http://www.mono-project.com/Mono.Cairo"
-	elog ""
-	elog ">=dev-db/firebird-2.0.4.13130.1"
-	elog "	FirebirdSql.Data.Firebird"
-	elog "Also read:"
-	elog "http://www.mono-project.com/Firebird_Interbase"
-	elog ""
-	elog "dev-db/sqlite:3"
-	elog "	Mono.Data.Sqlite"
-	elog "Also read:"
-	elog "http://www.mono-project.com/SQLite"
-	elog ""
-	elog ">=dev-db/oracle-instantclient-basic-10.2"
-	elog "	System.Data.OracleClient"
-	elog "Also read:"
-	elog "http://www.mono-project.com/Oracle"
-	elog ""
-	elog "Mono also has support for packages that are not included in portage:"
-	elog ""
-	elog "No ebuild available:"
-	elog "	IBM.Data.DB2"
-	elog "Also read: http://www.mono-project.com/IBM_DB2"
-	elog ""
-	elog "No ebuild needed:"
-	elog "	Mono.Data.SybaseClient"
-	elog "Also read: http://www.mono-project.com/Sybase"
-}
+#pkg_postinst() {
+#	elog "PLEASE TAKE NOTE!"
+#	elog ""
+#	elog "Some of the namespaces supported by Mono require extra packages to be installed."
+#	elog "Below is a list of namespaces and the corresponding package you must install:"
+#	elog ""
+#	elog ">=x11-libs/cairo-1.6.4"
+#	elog "	Mono.Cairo"
+#	elog "Also read:"
+#	elog "http://www.mono-project.com/Mono.Cairo"
+#	elog ""
+#	elog ">=dev-db/firebird-2.0.4.13130.1"
+#	elog "	FirebirdSql.Data.Firebird"
+#	elog "Also read:"
+#	elog "http://www.mono-project.com/Firebird_Interbase"
+#	elog ""
+#	elog "dev-db/sqlite:3"
+#	elog "	Mono.Data.Sqlite"
+#	elog "Also read:"
+#	elog "http://www.mono-project.com/SQLite"
+#	elog ""
+#	elog ">=dev-db/oracle-instantclient-basic-10.2"
+#	elog "	System.Data.OracleClient"
+#	elog "Also read:"
+#	elog "http://www.mono-project.com/Oracle"
+#	elog ""
+#	elog "Mono also has support for packages that are not included in portage:"
+#	elog ""
+#	elog "No ebuild available:"
+#	elog "	IBM.Data.DB2"
+#	elog "Also read: http://www.mono-project.com/IBM_DB2"
+#	elog ""
+#	elog "No ebuild needed:"
+#	elog "	Mono.Data.SybaseClient"
+#	elog "Also read: http://www.mono-project.com/Sybase"
+#}
 
 # NOTICE: THE COPYRIGHT FILES IN THE TARBALL ARE UNCLEAR!
 # WHENEVER YOU THINK SOMETHING IS GPL-2+, IT'S ONLY GPL-2

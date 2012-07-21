@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/mono
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.240 2012/05/22 12:18:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.241 2012/07/21 11:02:32 pacho Exp $
+
+*mono-2.10.9-r1 (21 Jul 2012)
+
+  21 Jul 2012; Pacho Ramos <pacho@gentoo.org>
+  +files/mono-2.10.9-CVE-2012-3382.patch, +mono-2.10.9-r1.ebuild,
+  -mono-2.10.9.ebuild:
+  Fix CVE-2012-3382 (#426688), drop old.
 
   22 May 2012; Agostino Sarubbo <ago@gentoo.org> mono-2.10.8.ebuild:
   Stable for amd64, wrt bug #407701
