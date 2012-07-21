@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openimageio/openimageio-1.0.7.ebuild,v 1.1 2012/07/15 21:00:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openimageio/openimageio-1.0.7-r1.ebuild,v 1.1 2012/07/21 14:22:43 flameeyes Exp $
 
 EAPI=4
 
@@ -65,7 +65,7 @@ src_prepare() {
 
 	# fix man page building
 	# https://github.com/OpenImageIO/oiio/issues/404
-	use qt || sed -i -e '/cli_tools/s:iv ::' doc/CMakeLists.txt
+	use qt4 || sed -i -e '/cli_tools/s:iv ::' doc/CMakeLists.txt
 }
 
 src_configure() {
@@ -74,7 +74,7 @@ src_configure() {
 		-DBUILDSTATIC=OFF
 		-DLINKSTATIC=OFF
 		$(cmake-utils_use_use opengl)
-		$(cmake-utils_use_use qt)
+		$(cmake-utils_use_use qt4 QT)
 		$(cmake-utils_use_use tbb)
 		$(cmake-utils_use_use python)
 		$(use python && echo -DPYLIB_INSTALL_DIR=$(python_get_sitedir))
