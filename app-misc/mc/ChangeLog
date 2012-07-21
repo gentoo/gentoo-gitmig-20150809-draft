@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.259 2012/07/18 21:58:12 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.260 2012/07/21 11:25:20 slyfox Exp $
+
+  21 Jul 2012; Sergei Trofimovich <slyfox@gentoo.org> mc-9999.ebuild:
+  Add USE=spell (uses app-text/aspell as a spell checker).
 
 *mc-4.8.4 (18 Jul 2012)
 
