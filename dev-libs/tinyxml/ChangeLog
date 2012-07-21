@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/tinyxml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tinyxml/ChangeLog,v 1.23 2012/06/01 08:06:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tinyxml/ChangeLog,v 1.24 2012/07/21 02:20:03 blueness Exp $
+
+  21 Jul 2012; Anthony G. Basile <blueness@gentoo.org> tinyxml-2.6.2-r2.ebuild:
+  Keyword ~ppc64
 
   01 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> -files/Makefile-2,
   -tinyxml-2.6.2-r1.ebuild, -tinyxml-2.6.2.ebuild, tinyxml-2.6.2-r2.ebuild:
