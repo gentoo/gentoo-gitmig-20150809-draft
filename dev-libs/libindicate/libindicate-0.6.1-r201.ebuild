@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/libindicate-0.6.1-r201.ebuild,v 1.4 2012/05/04 13:12:52 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/libindicate-0.6.1-r201.ebuild,v 1.5 2012/07/21 18:40:45 ssuominen Exp $
 
 EAPI=4
 
@@ -51,10 +51,11 @@ src_prepare() {
 	# for slotted dev-lang/vala
 	sed -i -e "s:vapigen:vapigen-${PV_vala_version}:" configure.ac || die
 
+	sed -i -e '/^#include.*glib.*gmessages/d' ${PN}/indicator.c || die #427480
+
 	eautoreconf
 
-	rm -f py-compile
-	ln -s $(type -P true) py-compile
+	>py-compile
 }
 
 src_configure() {
