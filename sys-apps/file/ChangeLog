@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/file
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.219 2012/04/26 14:49:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.220 2012/07/21 09:13:08 jdhore Exp $
+
+  21 Jul 2012; Jeff Horelick <jdhore@gentoo.org> file-5.11.ebuild:
+  marked x86 per bug 427368
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> file-5.11.ebuild:
   keyword ~amd64-fbsd
