@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.112 2012/06/14 03:38:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.113 2012/07/21 16:11:01 vapier Exp $
 
 # @ECLASS: toolchain-funcs.eclass
 # @MAINTAINER:
@@ -612,6 +612,13 @@ gen_usr_ldscript() {
 
 	tc-is-static-only && return
 
+	# Eventually we'd like to get rid of this func completely #417451
+	case ${CTARGET:-${CHOST}} in
+	*-darwin*) ;;
+	*linux*) use prefix && return 0 ;;
+	*) return 0 ;;
+	esac
+
 	# Just make sure it exists
 	dodir /usr/${libdir}
 
@@ -678,66 +685,7 @@ gen_usr_ldscript() {
 			ln -snf "../../${libdir}/${tlib}" "${lib}"
 			popd > /dev/null
 			;;
-		*-aix*|*-irix*|*64*-hpux*|*-interix*|*-winnt*)
-			if ${auto} ; then
-				mv "${ED}"/usr/${libdir}/${lib}* "${ED}"/${libdir}/ || die
-				# no way to retrieve soname on these platforms (?)
-				tlib=$(readlink "${ED}"/${libdir}/${lib})
-				tlib=${tlib##*/}
-				if [[ -z ${tlib} ]] ; then
-					# ok, apparently was not a symlink, don't remove it and
-					# just link to it
-					tlib=${lib}
-				else
-					rm -f "${ED}"/${libdir}/${lib}
-				fi
-			else
-				tlib=${lib}
-			fi
-
-			# we don't have GNU binutils on these platforms, so we symlink
-			# instead, which seems to work fine.  Keep it relative, otherwise
-			# we break some QA checks in Portage
-			# on interix, the linker scripts would work fine in _most_
-			# situations. if a library links to such a linker script the
-			# absolute path to the correct library is inserted into the binary,
-			# which is wrong, since anybody linking _without_ libtool will miss
-			# some dependencies, since the stupid linker cannot find libraries
-			# hardcoded with absolute paths (as opposed to the loader, which
-			# seems to be able to do this).
-			# this has been seen while building shared-mime-info which needs
-			# libxml2, but links without libtool (and does not add libz to the
-			# command line by itself).
-			pushd "${ED}/usr/${libdir}" > /dev/null
-			ln -snf "../../${libdir}/${tlib}" "${lib}"
-			popd > /dev/null
-			;;
-		hppa*-hpux*) # PA-RISC 32bit (SOM) only, others (ELF) match *64*-hpux* above.
-			if ${auto} ; then
-				tlib=$(chatr "${ED}"/usr/${libdir}/${lib} | sed -n '/internal name:/{n;s/^ *//;p;q}')
-				[[ -z ${tlib} ]] && tlib=${lib}
-				tlib=${tlib##*/} # 'internal name' can have a path component
-				mv "${ED}"/usr/${libdir}/${lib}* "${ED}"/${libdir}/ || die
-				# some SONAMEs are funky: they encode a version before the .so
-				if [[ ${tlib} != ${lib}* ]] ; then
-					mv "${ED}"/usr/${libdir}/${tlib}* "${ED}"/${libdir}/ || die
-				fi
-				[[ ${tlib} != ${lib} ]] &&
-				rm -f "${ED}"/${libdir}/${lib}
-			else
-				tlib=$(chatr "${ED}"/${libdir}/${lib} | sed -n '/internal name:/{n;s/^ *//;p;q}')
-				[[ -z ${tlib} ]] && tlib=${lib}
-				tlib=${tlib##*/} # 'internal name' can have a path component
-			fi
-			pushd "${ED}"/usr/${libdir} >/dev/null
-			ln -snf "../../${libdir}/${tlib}" "${lib}"
-			# need the internal name in usr/lib too, to be available at runtime
-			# when linked with /path/to/lib.sl (hardcode_direct_absolute=yes)
-			[[ ${tlib} != ${lib} ]] &&
-			ln -snf "../../${libdir}/${tlib}" "${tlib}"
-			popd >/dev/null
-			;;
-		*)
+		*linux*)
 			if ${auto} ; then
 				tlib=$(scanelf -qF'%S#F' "${ED}"/usr/${libdir}/${lib})
 				[[ -z ${tlib} ]] && die "unable to read SONAME from ${lib}"
