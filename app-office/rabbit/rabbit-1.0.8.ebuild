@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/rabbit/rabbit-1.0.8.ebuild,v 1.1 2012/07/20 18:55:01 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/rabbit/rabbit-1.0.8.ebuild,v 1.2 2012/07/21 07:31:22 graaff Exp $
 
 EAPI=4
 USE_RUBY="ruby18"
@@ -25,6 +25,7 @@ RDEPEND="${RDEPEND} ${CDEPEND}
 	enscript? ( app-text/enscript )
 	tgif? ( media-gfx/tgif )"
 
+ruby_add_bdepend "emacs? ( dev-ruby/rdtool[emacs] )"
 ruby_add_rdepend "
 	>=dev-ruby/coderay-1.0.0
 	>=dev-ruby/ruby-gdkpixbuf2-0.15.0
