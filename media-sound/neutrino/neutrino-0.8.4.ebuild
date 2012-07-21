@@ -1,7 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/neutrino/neutrino-0.8.4.ebuild,v 1.2 2012/05/05 08:44:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/neutrino/neutrino-0.8.4.ebuild,v 1.3 2012/07/21 14:30:22 pacho Exp $
 
+EAPI=4
 inherit gnome2
 
 DESCRIPTION="A GNOME application to manage Creative music players using the PDE protocol"
@@ -27,3 +28,8 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog README TODO"
 MAKEOPTS="${MAKEOPTS} -j1"
+
+src_prepare() {
+	epatch "${FILESDIR}/${PN}-0.8.4-glib-single-include.patch"
+	gnome2_src_prepare
+}
