@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/semantik/semantik-0.7.3_p20091013.ebuild,v 1.4 2012/07/15 15:21:50 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/semantik/semantik-0.7.3_p20091013.ebuild,v 1.5 2012/07/21 13:34:02 johu Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://freehackers.org/~tnagy/semantik.html"
 SRC_URI="http://semantik.googlecode.com/files/semantik-snapshot.tar.bz2 -> ${P}.tar.bz2"
 
 LICENSE="GPL-3"
-SLOT="0"
+SLOT="4"
 KEYWORDS="~amd64"
 IUSE=""
 
