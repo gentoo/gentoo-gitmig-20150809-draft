@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/linux-atm
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/ChangeLog,v 1.40 2009/02/28 09:08:25 mrness Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/ChangeLog,v 1.41 2012/07/21 14:02:53 pacho Exp $
+
+  21 Jul 2012; Pacho Ramos <pacho@gentoo.org> -linux-atm-2.4.1-r2.ebuild:
+  drop old.
 
   28 Feb 2009; Alin Năstac <mrness@gentoo.org>
   +files/linux-atm-2.5.0-bison24.patch, linux-atm-2.5.0.ebuild:
@@ -147,4 +150,3 @@
 
   03 Sep 2003; Martin Holzer <mholzer@gentoo.org> linux-atm-2.4.1.ebuild:
   Initial ebuild by myself.
-
