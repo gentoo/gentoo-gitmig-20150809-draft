@@ -7,3 +7,4 @@ move net-voip/telepathy-sofiasip net-voip/telepathy-rakia
 slotmove kde-misc/kio-ftps 0 4
 slotmove kde-misc/kcollectd 0 4
 slotmove kde-misc/wicd-client-kde 0 4
+slotmove kde-misc/kanyremote 0 4
