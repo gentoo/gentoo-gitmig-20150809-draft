@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.253 2012/07/19 20:45:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.254 2012/07/21 17:18:43 jer Exp $
+
+  21 Jul 2012; Jeroen Roovers <jer@gentoo.org> boost-1.49.0-r1.ebuild:
+  Stable for HPPA (bug #425354).
 
   19 Jul 2012; Markus Meier <maekke@gentoo.org> boost-1.49.0-r1.ebuild:
   arm stable, bug #425354
