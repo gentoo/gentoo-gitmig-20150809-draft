@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-goocanvas
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-goocanvas/ChangeLog,v 1.13 2012/04/17 18:40:14 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-goocanvas/ChangeLog,v 1.14 2012/07/21 07:39:09 graaff Exp $
+
+  21 Jul 2012; Hans de Graaff <graaff@gentoo.org> -ruby-goocanvas-1.1.0.ebuild:
+  Remove old version.
 
   17 Apr 2012; Jeff Horelick <jdhore@gentoo.org> ruby-goocanvas-1.0.3.ebuild:
   marked x86 per bug 412097

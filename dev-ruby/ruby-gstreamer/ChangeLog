@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-gstreamer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gstreamer/ChangeLog,v 1.48 2012/05/04 18:47:54 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gstreamer/ChangeLog,v 1.49 2012/07/21 07:39:51 graaff Exp $
+
+  21 Jul 2012; Hans de Graaff <graaff@gentoo.org> -ruby-gstreamer-1.1.0.ebuild:
+  Remove old version.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> ruby-gstreamer-0.19.4.ebuild,
   ruby-gstreamer-1.0.3.ebuild, ruby-gstreamer-1.1.0.ebuild,

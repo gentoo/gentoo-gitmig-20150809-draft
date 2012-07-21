@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-vte
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-vte/ChangeLog,v 1.30 2012/05/04 18:47:54 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-vte/ChangeLog,v 1.31 2012/07/21 07:43:44 graaff Exp $
+
+  21 Jul 2012; Hans de Graaff <graaff@gentoo.org> -ruby-vte-1.1.0.ebuild:
+  Remove old version.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> ruby-vte-0.19.4.ebuild,
   ruby-vte-1.0.3.ebuild, ruby-vte-1.1.0.ebuild, ruby-vte-1.1.3.ebuild:

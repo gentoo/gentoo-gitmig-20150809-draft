@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-gtk2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtk2/ChangeLog,v 1.93 2012/07/01 18:31:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtk2/ChangeLog,v 1.94 2012/07/21 07:40:38 graaff Exp $
+
+  21 Jul 2012; Hans de Graaff <graaff@gentoo.org> -ruby-gtk2-1.1.0.ebuild:
+  Remove old version.
 
   01 Jul 2012; Raúl Porcel <armin76@gentoo.org> ruby-gtk2-0.19.4.ebuild:
   Drop alpha keywords

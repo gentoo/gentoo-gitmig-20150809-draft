@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-pango
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-pango/ChangeLog,v 1.68 2012/07/01 18:31:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-pango/ChangeLog,v 1.69 2012/07/21 07:41:58 graaff Exp $
+
+  21 Jul 2012; Hans de Graaff <graaff@gentoo.org> -ruby-pango-1.1.0.ebuild:
+  Remove old version.
 
   01 Jul 2012; Raúl Porcel <armin76@gentoo.org> ruby-pango-0.19.4.ebuild:
   Drop alpha keywords
