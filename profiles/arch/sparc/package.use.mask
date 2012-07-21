@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.111 2012/07/11 14:10:26 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.112 2012/07/21 11:48:52 pacho Exp $
 
 # Raúl Porcel <armin76@gentoo.org> (08 Jul 2012)
 # x11-libs/qt-webkit doesn't seem to work
@@ -11,6 +11,7 @@ x11-libs/qt-declarative webkit
 # Pacho Ramos <pacho@gentoo.org> (30 Jun 2012)
 # Missing keywords for connman
 net-libs/gupnp connman
+net-im/telepathy-mission-control connman
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (24 Jun 2012)
 # Requires libpcre with jit
