@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/icedtea-web-1.2.ebuild,v 1.4 2012/05/21 06:07:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/icedtea-web-1.2.ebuild,v 1.5 2012/07/21 11:47:47 sera Exp $
 # Build written by Andrew John Hughes (ahughes@redhat.com)
 
 EAPI="4"
@@ -107,8 +107,6 @@ pkg_postinst() {
 
 	if use nsplugin; then
 		elog "The icedtea browser plugin (NPPlugin) can be enabled using eselect java-nsplugin"
-		elog "Note that the plugin works only in browsers based on xulrunner-1.9.1 or later"
-		elog "such as Firefox 3.5+, Chromium and perhaps some others too."
 	fi
 }
 

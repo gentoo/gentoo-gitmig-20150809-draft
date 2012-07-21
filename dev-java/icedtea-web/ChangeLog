@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/icedtea-web
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/ChangeLog,v 1.23 2012/05/21 06:07:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/ChangeLog,v 1.24 2012/07/21 11:47:47 sera Exp $
+
+  21 Jul 2012; Ralph Sennhauser <sera@gentoo.org> -icedtea-web-1.1.4.ebuild,
+  -icedtea-web-1.1.4-r7.ebuild, -icedtea-web-1.1.4-r8.ebuild,
+  icedtea-web-1.2.ebuild, icedtea-web-1.2-r7.ebuild:
+  Drop elog message about old browsers not working. #427458
+  Remove old.
 
   21 May 2012; Samuli Suominen <ssuominen@gentoo.org> icedtea-web-1.1.4.ebuild,
   icedtea-web-1.1.4-r7.ebuild, icedtea-web-1.1.4-r8.ebuild,
