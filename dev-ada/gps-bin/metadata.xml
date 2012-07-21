@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<herd>ada</herd>
-<longdescription>GPS, the GNAT Programming System, is the cutting-edge Ada IDE that streamlines the interaction between developers and their software. GPS integrates the GNAT tool set within a single development environment that makes visual sense of code. With its intuitive interface, GPS is easy to use, simplifying source navigation and highlighting the fundamental ideas in the program. By displaying core application structures, such as call graphs, program entity graphs, and project dependencies, GPS facilitates the development of complex systems. GPS helps construct reliable code while providing the same interface and behavior across a variety of platforms. Designed by programmers for programmers, GPS is a new kind of IDE that offers the experience of designing software in a uniquely comfortable environment.</longdescription>
-</pkgmetadata>
