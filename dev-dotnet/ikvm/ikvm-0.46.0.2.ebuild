@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ikvm-0.46.0.2.ebuild,v 1.5 2012/05/22 12:16:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ikvm-0.46.0.2.ebuild,v 1.6 2012/07/21 16:16:24 pacho Exp $
 
 EAPI="4"
 
@@ -21,7 +21,7 @@ RDEPEND=">=dev-lang/mono-2
 DEPEND="${RDEPEND}
 	!dev-dotnet/ikvm-bin
 	>=dev-dotnet/nant-0.85
-	>=virtual/jdk-1.6:1.6
+	virtual/jdk:1.6
 	app-arch/unzip
 	virtual/pkgconfig
 	app-arch/sharutils"
@@ -44,6 +44,7 @@ src_prepare() {
 		native/native.build || die
 
 	mkdir -p "${T}"/home/test
+	java-pkg-2_src_prepare
 }
 
 src_configure() {

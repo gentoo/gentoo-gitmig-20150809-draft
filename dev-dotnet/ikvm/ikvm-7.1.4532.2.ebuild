@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ikvm-7.1.4532.2.ebuild,v 1.1 2012/07/21 10:12:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ikvm-7.1.4532.2.ebuild,v 1.2 2012/07/21 16:16:24 pacho Exp $
 
 EAPI="4"
 
@@ -42,6 +42,8 @@ src_prepare() {
 		native/native.build || die
 
 	mkdir -p "${T}"/home/test
+
+	java-pkg-2_src_prepare
 }
 
 src_configure() {
