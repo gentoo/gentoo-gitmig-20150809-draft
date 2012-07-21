@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/gxmame
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gxmame/ChangeLog,v 1.22 2012/05/04 04:38:38 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gxmame/ChangeLog,v 1.23 2012/07/21 16:53:49 pacho Exp $
+
+  21 Jul 2012; Pacho Ramos <pacho@gentoo.org>
+  +files/gxmame-0.35_beta2-glib-single-include.patch, gxmame-0.35_beta2.ebuild:
+  Let it compile against glib-2.32
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> gxmame-0.35_beta2.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -105,4 +109,3 @@
 
   13 Jan 2003; Ryan Phillips <rphillips@gentoo.org> gxmame-0.31.ebuild:
   Official version
-
