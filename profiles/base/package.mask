@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.mask,v 1.40 2012/07/12 19:16:36 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.mask,v 1.41 2012/07/21 20:20:11 swift Exp $
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (8 Feb 2011)
 #  on behalf of QA team <qa@gentoo.org
@@ -144,6 +144,7 @@ sec-policy/selinux-ncftool
 sec-policy/selinux-nessus
 sec-policy/selinux-networkmanager
 sec-policy/selinux-nginx
+sec-policy/selinux-nslcd
 sec-policy/selinux-ntop
 sec-policy/selinux-ntp
 sec-policy/selinux-nut
