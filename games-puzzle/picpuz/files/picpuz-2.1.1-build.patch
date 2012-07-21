@@ -8,8 +8,8 @@ diff -ru picpuz-2.1.1.orig/Makefile picpuz-2.1.1/Makefile
 -# replace CFLAGS and LFLAGS -O3 with -g for GDB debugging
 -CFLAGS = -O3 -Wall -c `pkg-config --cflags gtk+-2.0`
 -LFLAGS = -O3 -Wall -rdynamic `pkg-config --libs gtk+-2.0`
-+CXXFLAGS += -O3 -Wall -c `pkg-config --cflags gtk+-2.0`
-+LIBS = `pkg-config --libs gtk+-2.0` -lpthread
++CXXFLAGS += `pkg-config --cflags gtk+-2.0`
++LIBS = `pkg-config --libs gtk+-2.0`
  
  # use $PREFIX if defined, else assume /usr/local
  ifeq "$(PREFIX)" ""
@@ -18,16 +18,16 @@ diff -ru picpuz-2.1.1.orig/Makefile picpuz-2.1.1/Makefile
  
  $(PROGRAM): $(PROGRAM).o zfuncs.o
 -	@ g++ $(LFLAGS) -o $(PROGRAM) $(PROGRAM).o zfuncs.o
-+	@ $(CXX) $(LDFLAGS) -o $(PROGRAM) $(PROGRAM).o zfuncs.o $(LIBS)
++	$(CXX) $(LDFLAGS) -o $(PROGRAM) $(PROGRAM).o zfuncs.o $(LIBS)
  
  $(PROGRAM).o: $(SOURCE)
 -	@ g++ $(CFLAGS) -o $(PROGRAM).o $(SOURCE)		\
-+	@ $(CXX) $(CXXFLAGS) -o $(PROGRAM).o $(SOURCE)		\
++	$(CXX) $(CXXFLAGS) -c -o $(PROGRAM).o $(SOURCE)		\
  	  -D "DATADIR=\"$(DATADIR)\"" -D "DOCDIR=\"$(DOCDIR)\""
  
  zfuncs.o: zfuncs.cpp
 -	@ g++ $(CFLAGS) zfuncs.cpp	\
-+	@ $(CXX) $(CXXFLAGS) zfuncs.cpp	\
++	$(CXX) $(CXXFLAGS) -c zfuncs.cpp	\
  	  -D "DATADIR=\"$(DATADIR)\"" -D "DOCDIR=\"$(DOCDIR)\"" -D "BINDIR=\"$(BINDIR)\""
  
  install: $(PROGRAM)

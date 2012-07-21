@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/picpuz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/picpuz/ChangeLog,v 1.12 2012/05/04 04:45:27 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/picpuz/ChangeLog,v 1.13 2012/07/21 18:22:32 hasufell Exp $
+
+  21 Jul 2012; Julian Ospald <hasufell@gentoo.org> ChangeLog:
+  fix bug 427520
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> picpuz-2.1.1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
