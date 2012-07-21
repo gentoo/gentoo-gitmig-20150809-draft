@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-1.0_rc1.ebuild,v 1.1 2012/07/14 11:43:28 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-1.0_rc1.ebuild,v 1.2 2012/07/21 11:07:26 hwoarang Exp $
 
 EAPI=4
 
@@ -15,15 +15,14 @@ SRC_URI="http://dev.gentoo.org/~hwoarang/distfiles/${MY_P}.tar.gz"
 KEYWORDS="~alpha ~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="debug examples udev"
+IUSE="debug examples"
 
 COMMON_DEPEND=">=dev-libs/glib-2.18:2
 	>=x11-libs/gtk+-2.16:2
-	udev? ( dev-libs/dbus-glib )
 	>=lxde-base/menu-cache-0.3.2"
 RDEPEND="${COMMON_DEPEND}
 	x11-misc/shared-mime-info
-	udev? ( sys-fs/udisks:0 )"
+	|| ( gnome-base/gvfs[udev,udisks] gnome-base/gvfs[udev,gdu] )"
 DEPEND="${COMMON_DEPEND}
 	dev-util/gtk-doc-am
 	>=dev-util/intltool-0.40

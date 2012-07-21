@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libfm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.69 2012/07/15 17:29:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.70 2012/07/21 11:07:26 hwoarang Exp $
+
+  21 Jul 2012; Markos Chandras <hwoarang@gentoo.org> libfm-1.0_rc1.ebuild,
+  libfm-9999.ebuild:
+  Use proper gnome-base/gvfs dependency as a replacement for sys-fs/udisks
 
   15 Jul 2012; Markos Chandras <hwoarang@gentoo.org> libfm-9999.ebuild:
   Remove udisks support per upstream bug:
