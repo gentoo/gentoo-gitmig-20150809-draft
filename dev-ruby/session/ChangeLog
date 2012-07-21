@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/session
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/session/ChangeLog,v 1.18 2012/05/01 18:24:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/session/ChangeLog,v 1.19 2012/07/21 06:27:39 graaff Exp $
+
+  21 Jul 2012; Hans de Graaff <graaff@gentoo.org> -session-2.4.0.ebuild:
+  Remove old version.
 
   01 May 2012; Raúl Porcel <armin76@gentoo.org> session-2.4.0.ebuild,
   session-3.1.0-r1.ebuild:
