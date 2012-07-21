@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.2.ebuild,v 1.5 2012/07/20 18:10:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.2-r1.ebuild,v 1.1 2012/07/21 15:14:27 flameeyes Exp $
 
 EAPI=4
 
-PATCHSET=7
+PATCHSET=9
 
 inherit eutils user versionator java-pkg-opt-2
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/munin/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ~ppc ~x86"
+KEYWORDS="~amd64 ~mips ~x86"
 IUSE="asterisk irc java memcached minimal mysql postgres ssl test +cgi"
 REQUIRED_USE="cgi? ( !minimal )"
 
@@ -35,16 +35,16 @@ DEPEND_COM="dev-lang/perl
 			postgres? ( dev-perl/DBD-Pg dev-db/postgresql-base )
 			memcached? ( dev-perl/Cache-Memcached )
 			cgi? ( dev-perl/FCGI )
+			dev-perl/DBI
 			dev-perl/DateManip
 			dev-perl/File-Copy-Recursive
 			dev-perl/IO-Socket-INET6
+			dev-perl/Log-Log4perl
 			dev-perl/Net-CIDR
 			dev-perl/Net-Netmask
 			dev-perl/Net-SNMP
 			dev-perl/libwww-perl
 			dev-perl/net-server
-			dev-perl/DBI
-			dev-perl/Log-Log4perl
 			virtual/perl-Digest-MD5
 			virtual/perl-Getopt-Long
 			virtual/perl-MIME-Base64
@@ -103,6 +103,13 @@ PERLSITELIB=$(perl -V:vendorlib | cut -d"'" -f2)
 JCVALID=$(usex java yes no)
 EOF
 }
+
+# parallel make and install need to be fixed before, and I haven't
+# gotten around to do so yet.
+src_compile() {
+	emake -j1
+}
+
 src_install() {
 	local dirs
 	dirs="/var/log/munin/ /var/lib/munin/"
@@ -125,8 +132,6 @@ src_install() {
 	newins "${FILESDIR}"/${PN}-1.3.2-plugins.conf munin-node
 
 	# make sure we've got everything in the correct directory
-	insinto /var/lib/munin
-	newins "${FILESDIR}"/${PN}-1.3.3-crontab crontab
 	newinitd "${FILESDIR}"/munin-node_init.d_2.0.2 munin-node
 	newconfd "${FILESDIR}"/munin-node_conf.d_1.4.6-r2 munin-node
 	dodoc README ChangeLog INSTALL build/resources/apache*
@@ -141,17 +146,66 @@ src_install() {
 
 		# remove font files so that we don't have to keep them around
 		rm "${D}"/usr/libexec/${PN}/*.ttf || die
+
+		dodir /usr/share/${PN}
+		cat - >> "${D}"/usr/share/${PN}/crontab <<EOF
+# Force the shell to bash
+SHELL=/bin/bash
+# Mail reports to root@, not munin@
+MAILTO=root
+
+# This runs the munin task every 5 minutes.
+*/5	* * * *		[ -x /usr/bin/munin-cron ] && /usr/bin/munin-cron
+
+# Alternatively, this route works differently
+# Update once a minute (for busy sites)
+#*/1 * * * *		[ -x /usr/libexec/munin/munin-update ] && /usr/libexec/munin/munin-update
+## Check for limit excess every 2 minutes
+#*/2 * * * *		[ -x /usr/libexec/munin/munin-limits ] && /usr/libexec/munin/munin-limits
+## Update graphs every 5 minutes
+#*/5 * * * *		[ -x /usr/libexec/munin/munin-graph  ] && nice /usr/libexec/munin/munin-graph --cron
+## Update HTML pages every 15 minutes
+#*/15 * * * *		[ -x /usr/libexec/munin/munin-html   ] && nice /usr/libexec/munin/munin-html
+EOF
+
+		cat - >> "${D}"/usr/share/${PN}/fcrontab <<EOF
+# Mail reports to root@, not munin@, only execute one at a time
+!mailto(root),serial(true)
+
+# This runs the munin task every 5 minutes.
+@ 5	[ -x /usr/bin/munin-cron ] && /usr/bin/munin-cron
+
+# Alternatively, this route works differently
+# Update once a minute (for busy sites)
+#@ 1	[ -x /usr/libexec/munin/munin-update ] && /usr/libexec/munin/munin-update
+## Check for limit excess every 2 minutes
+#@ 2	[ -x /usr/libexec/munin/munin-limits ] && /usr/libexec/munin/munin-limits
+## Update graphs every 5 minutes
+#@ 5	[ -x /usr/libexec/munin/munin-graph  ] && nice /usr/libexec/munin/munin-graph --cron
+## Update HTML pages every 15 minutes
+#@ 15	[ -x /usr/libexec/munin/munin-html   ] && nice /usr/libexec/munin/munin-html
+EOF
 	fi
 }
 
 pkg_config() {
+	if use minimal; then
+		einfo "Nothing to do."
+		return 0
+	fi
+
 	einfo "Press enter to install the default crontab for the munin master"
 	einfo "installation from /var/lib/munin/crontab"
 	einfo "If you have a large site, you may wish to customize it."
 	read
-	# dcron is very fussy about syntax
-	# the following is the only form that works in BOTH dcron and vixie-cron
-	crontab - -u munin </var/lib/munin/crontab
+
+	if has_version sys-process/fcron; then
+		fcrontab - -u munin < /usr/share/${PN}/fcrontab
+	else
+		# dcron is very fussy about syntax
+		# the following is the only form that works in BOTH dcron and vixie-cron
+		crontab - -u munin < /usr/share/${PN}/crontab
+	fi
 }
 
 pkg_postinst() {

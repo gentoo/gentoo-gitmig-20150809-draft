@@ -1,6 +1,17 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.76 2012/07/20 18:10:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.77 2012/07/21 15:14:27 flameeyes Exp $
+
+*munin-2.0.2-r1 (21 Jul 2012)
+
+  21 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> +munin-2.0.2-r1.ebuild,
+  -munin-2.0.2.ebuild:
+  Support fcron as well as vixie-cron and dcron (with a separate crontab);
+  crontabs are created in the ebuild instead of using files to avoid wasting
+  space on sync; use -j1 for make as well as install until parallel build is
+  cleaned consistently; add a patch to not display cgroup_root in the df plugin
+  output; backport a fix for the non-cgi munin-graph building; stop pkg_config
+  if minimal USE flag is enabled. Drop ppc keyword for missing dependencies.
 
   20 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> munin-2.0.2.ebuild:
   Log-Log4perl is used by the node, so depend on it even with USE=-minimal; only
