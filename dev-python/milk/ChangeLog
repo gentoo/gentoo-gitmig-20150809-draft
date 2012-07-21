@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/milk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/milk/ChangeLog,v 1.2 2012/06/07 06:11:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/milk/ChangeLog,v 1.3 2012/07/21 07:19:46 jlec Exp $
+
+  21 Jul 2012; Justin Lecher <jlec@gentoo.org> milk-0.4.2.ebuild, metadata.xml:
+  Repack the tarball and include missing file in tests from upstreams VCS,
+  #427416
 
   07 Jun 2012; Michael Sterrett <mr_bones_@gentoo.org> milk-0.4.2.ebuild:
   add missing test to IUSE
