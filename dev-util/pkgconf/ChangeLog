@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/pkgconf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.26 2012/07/21 03:56:04 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.27 2012/07/21 06:35:44 jdhore Exp $
+
+  21 Jul 2012; Jeff Horelick <jdhore@gentoo.org>
+  +files/pkgconf-0.8.1-newm4.patch, pkgconf-0.8.1.ebuild:
+  Add a patch to fix bug 426410 .
 
 *pkgconf-0.8.1 (21 Jul 2012)
 
