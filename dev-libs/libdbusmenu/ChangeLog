@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libdbusmenu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/ChangeLog,v 1.17 2012/07/20 10:45:29 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/ChangeLog,v 1.18 2012/07/21 17:42:16 ssuominen Exp $
+
+*libdbusmenu-0.6.2 (21 Jul 2012)
+
+  21 Jul 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +libdbusmenu-0.6.2.ebuild:
+  Version bump wrt #427512 by Pacho Ramos
 
   20 Jul 2012; Christoph Mende <angelos@gentoo.org>
   libdbusmenu-0.5.1-r200.ebuild, libdbusmenu-0.5.1-r300.ebuild:
