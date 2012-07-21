@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/tribler/tribler-5.9.22.ebuild,v 1.1 2012/07/19 12:22:17 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/tribler/tribler-5.9.22.ebuild,v 1.2 2012/07/21 01:37:49 blueness Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -37,6 +37,8 @@ DEPEND="${RDEPEND}
 	app-arch/unzip"
 
 S="${WORKDIR}"
+
+QA_PREBUILT="/usr/share/tribler/swift"
 
 pkg_setup() {
 	python_set_active_version 2
