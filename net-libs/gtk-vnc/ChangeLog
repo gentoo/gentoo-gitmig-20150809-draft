@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/gtk-vnc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.92 2012/07/15 18:14:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.93 2012/07/21 12:01:39 pacho Exp $
+
+*gtk-vnc-0.5.1 (21 Jul 2012)
+
+  21 Jul 2012; Pacho Ramos <pacho@gentoo.org> +gtk-vnc-0.5.1.ebuild,
+  -gtk-vnc-0.4.4.ebuild:
+  Version bump, drop old. Allow parallel installation again as upstream think it
+  should be fixed and looks to work ok for me.
 
   15 Jul 2012; Raúl Porcel <armin76@gentoo.org> gtk-vnc-0.5.0-r1.ebuild:
   alpha/ia64/sparc stable wrt #410611
