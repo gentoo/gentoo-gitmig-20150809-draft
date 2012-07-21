@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-0.8.0_rc1-r5.ebuild,v 1.1 2012/06/07 12:59:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-0.8.0_rc2.ebuild,v 1.1 2012/07/21 05:07:14 flameeyes Exp $
 
 EAPI="4"
 
@@ -39,6 +39,7 @@ RDEPEND="${RDEPEND}
 		sys-apps/util-linux
 		app-misc/pax-utils
 		>=sys-apps/openrc-0.9.9.1
+		virtual/awk
 	)"
 
 CONFIG_CHECK="~CGROUPS ~CGROUP_DEVICE
@@ -88,7 +89,7 @@ DOCS=(AUTHORS CONTRIBUTING MAINTAINERS TODO README doc/FAQ.txt)
 
 src_prepare() {
 	if [[ -n ${BACKPORTS} ]]; then
-		epatch "${S}"/patches/*
+		epatch "${WORKDIR}"/patches/*
 		eautoreconf
 	fi
 }

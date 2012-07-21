@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/lxc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.40 2012/06/07 12:59:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.41 2012/07/21 05:07:14 flameeyes Exp $
+
+*lxc-0.8.0_rc2 (21 Jul 2012)
+
+  21 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> +lxc-0.8.0_rc2.ebuild,
+  -lxc-0.8.0_rc1-r5.ebuild, files/lxc.initd.2:
+  Version bump; also fixes bug #427078 and #427086, thanks to Alexander Zubkov
+  for the report.
 
 *lxc-0.8.0_rc1-r5 (07 Jun 2012)
 
@@ -235,4 +242,3 @@
   Initial import of lxc; based upon dev-zero's ebuild, modified by me. It
   diverges a bit from upstream, in the path used, to stay more
   Gentoo-styled. Init scripts will likely be added separately.
-
