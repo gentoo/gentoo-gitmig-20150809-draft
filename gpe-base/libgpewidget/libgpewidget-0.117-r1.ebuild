@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gpe-base/libgpewidget/libgpewidget-0.117-r1.ebuild,v 1.9 2012/05/23 13:11:44 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/libgpewidget/libgpewidget-0.117-r1.ebuild,v 1.10 2012/07/21 16:30:05 pacho Exp $
 
-EAPI=2
+EAPI=4
 GPE_TARBALL_SUFFIX="bz2"
 
 inherit gpe autotools eutils
@@ -37,6 +37,8 @@ GPECONF="$(use_enable cairo)"
 src_prepare() {
 	# Fix LINGUAS bug #406419
 	epatch "${FILESDIR}/${P}-linguas.patch"
+
+	epatch "${FILESDIR}/${P}-glib-single-include.patch"
 
 	# Fix underlinking, bug #367421
 	sed -i -e 's/^infoprint_LDADD =/infoprint_LDADD = -lX11/' Makefile.am \
