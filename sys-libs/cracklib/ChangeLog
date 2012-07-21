@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/cracklib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.164 2012/05/18 20:19:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.165 2012/07/21 08:51:44 jdhore Exp $
+
+  21 Jul 2012; Jeff Horelick <jdhore@gentoo.org> cracklib-2.8.19.ebuild:
+  marked x86 per bug 427132
 
   18 May 2012; Mike Frysinger <vapier@gentoo.org> cracklib-2.8.19.ebuild:
   Make zlib optional.
