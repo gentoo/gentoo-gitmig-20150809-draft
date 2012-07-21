@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/tomcat-native
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-native/ChangeLog,v 1.37 2012/06/14 16:13:38 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-native/ChangeLog,v 1.38 2012/07/21 09:15:29 jdhore Exp $
+
+  21 Jul 2012; Jeff Horelick <jdhore@gentoo.org> tomcat-native-1.1.24.ebuild:
+  marked x86 per bug 427332
 
 *tomcat-native-1.1.24 (14 Jun 2012)
 
