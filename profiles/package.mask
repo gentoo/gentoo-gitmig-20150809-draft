@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13994 2012/07/21 11:25:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13995 2012/07/21 14:13:34 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -218,131 +218,6 @@ www-apps/phpgroupware
 # Mask new spidermonkey until rdeps can accept it
 ~dev-lang/spidermonkey-1.8.7
 
-# Pacho Ramos <pacho@gentoo.org> (16 Jun 2012)
-# No needed since kernel-3.2, bug#411405#c6
-# Removal in a month.
-sys-kernel/cluster-sources
-
-# Pacho Ramos <pacho@gentoo.org> (16 Jun 2012)
-# Bundles unsecure libexpat, all packages still needing it
-# are dead, orphan and have replacements. See bug #251433.
-# Removal in 30 days.
-net-libs/libtlen
-net-im/gnugadu
-net-im/tleenx2
-
-# Pacho Ramos <pacho@gentoo.org> (16 Jun 2012)
-# Bundles python-2.3 and other libs affected by security
-# issues, bug #251875. Removal in 30 days.
-dev-ada/gps-bin
-
-# Pacho Ramos <pacho@gentoo.org> (16 Jun 2012)
-# Upstream dead and very broken, bug #276238. Removal
-# in a month.
-dev-ruby/mmap
-
-# Pacho Ramos <pacho@gentoo.org> (16 Jun 2012)
-# Upstream tagged it as deprecated time ago, it's no longer
-# useful, see bug #327029. Removal in a month
-dev-python/psyco
-
-# Pacho Ramos <pacho@gentoo.org> (16 Jun 2012)
-# Not compatible with current avahi, see bug #339609.
-# Removal in a month.
-x11-misc/service-discovery-applet
-
-# Pacho Ramos <pacho@gentoo.org> (16 Jun 2012)
-# Bundles unsecure tcl/tk versions, bug #343529.
-# Removal in a month.
-dev-util/sourcenav
-
-# Pacho Ramos <pacho@gentoo.org> (16 Jun 2012)
-# Old, nothing needs it in the tree. We are unable to bump
-# to new version and nobody is willing to maintain it. See
-# bug #399697. Removal in a month.
-dev-dotnet/nlog
-
-# Pacho Ramos <pacho@gentoo.org> (16 Jun 2012)
-# Doesn't respect CXXFLAGS, nothing requires it, dead since
-# 2003, see bug #401631. Removal in a month.
-app-doc/doc++
-
-# Pacho Ramos <pacho@gentoo.org> (16 Jun 2012)
-# Bundles old tcl/tk libs (bug #251617) and is the only
-# consumer of pdksh (bug #408705). Removal in a month.
-sci-biology/staden-bin
-
-# Pacho Ramos <pacho@gentoo.org> (16 Jun 2012)
-# Packages still relying on old gdome2 (#415725).
-# Removal in a month.
-dev-perl/XML-GDOME
-x11-libs/gtkmathview-bonobo
-
-# Pacho Ramos <pacho@gentoo.org> (16 Jun 2012)
-# Only for kernel 2.6.37 or older, bug #417333. Removal in
-# a month.
-media-video/camserv
-
-# Pacho Ramos <pacho@gentoo.org> (16 Jun 2012)
-# The replacement is to use aspell for statical dictionary
-# or hunspell for the myspell hyphen based one, bug #418375
-# Removal in a month.
-app-text/ispell
-app-dicts/ispell-bg
-app-dicts/ispell-cs
-app-dicts/ispell-da
-app-dicts/ispell-de-alt
-app-dicts/ispell-de
-app-dicts/ispell-es
-app-dicts/ispell-et
-app-dicts/ispell-fi
-app-dicts/ispell-fr
-app-dicts/ispell-ga
-app-dicts/ispell-hu
-app-dicts/ispell-it
-app-dicts/ispell-lt
-app-dicts/ispell-nl
-app-dicts/ispell-no
-app-dicts/ispell-pl
-app-dicts/ispell-pt-br
-app-dicts/ispell-pt
-app-dicts/ispell-ru
-app-dicts/ispell-sl
-app-dicts/ispell-sv
-
-# Pacho Ramos <pacho@gentoo.org> (16 Jun 2012)
-# Still using old linux-atm, replaced by linux-atm
-# >=2.5 versions, bug #420309. Removal in a month.
-<net-dialup/linux-atm-2.5
-net-misc/br2684ctl
-
-# Pacho Ramos <pacho@gentoo.org> (16 Jun 2012)
-# Not needed with pulseaudio >=1, bug #420441. Removal
-# in a month
-media-sound/padevchooser
-
-# Pacho Ramos <pacho@gentoo.org> (16 Jun 2012)
-# Completely broken and still requiring old tcldom, see
-# bug #302805. Removal in a month.
-app-admin/moodss
-
-# Pacho Ramos <pacho@gentoo.org> (16 Jun 2012)
-# Replaced by newer dev-tcltk/tclxml, bug #421341.
-# Removal in a month.
-dev-tcltk/tcldom
-
-# Pacho Ramos <pacho@gentoo.org> (16 Jun 2012)
-# Remove old dotnet packages no longer required by anything
-# (#421359). Removal in a month.
-dev-dotnet/evolution-sharp
-dev-dotnet/gnome-print-sharp
-
-# Pacho Ramos <pacho@gentoo.org> (16 Jun 2012)
-# It doesn't escape special characters, buggy and dead
-# for ages, see bug #250269, use mksh or ksh instead.
-# Removal in a month.
-app-shells/pdksh
-
 # Kacper Kowalik <xarthisius@gentoo.org> (14 Jun 2012)
 # Mask latest version for testing. Make sure you read
 # http://vbellur.wordpress.com/2012/05/31/upgrading-to-glusterfs-3-3/
@@ -380,11 +255,6 @@ app-shells/pdksh
 # Temporarily mask nginx >=1.3 see #411937
 >=www-servers/nginx-1.3
 
-# Markos Chandras <hwoarang@gentoo.org> (04 Jun 2012)
-# Dead upstream. Security problems. Bug #249112
-# Removal in 30 days
-net-misc/ptrtd
-
 # Andreas K. Hüttel <dilfridge@gentoo.org> (01 Jun 2012)
 # Mask unreleased, alpha, and beta
 ~app-office/calligra-2.4.90
@@ -393,12 +263,6 @@ net-misc/ptrtd
 ~app-office/calligra-l10n-2.4.91
 ~app-office/calligra-2.4.92
 ~app-office/calligra-l10n-2.4.92
-
-# Samuli Suominen <ssuominen@gentoo.org> (01 Jun 2012)
-# Fails to run with font issues wrt bug 418259
-# Last release was back in 2003
-# Removal in 30 days
-x11-terms/cxterm
 
 # Markos Chandras <hwoarang@getnoo.org> (27 May 2012)
 # Mask alpha release
@@ -410,25 +274,12 @@ x11-terms/cxterm
 # https://bugs.gentoo.org/show_bug.cgi?id=417677
 >=media-video/ffmpeg-0.11
 
-# Markos Chandras <hwoarang@gentoo.org> (26 May 2012)
-# Abandoned patchsets. Upstream stopped regular releases.
-# Live ebuild will remain in portage for now.
-# Removal in 30 days.
-# For regular releases please migrate to
-# sys-kernel/pf-sources
-=sys-kernel/zen-sources-2.6*
-
 # Aaron W. Swenson <titanofold@gentoo.org> (23 May 2012)
 # PostgreSQL 9.2 is not yet ready for production and may damage your
 # data. Use at your own risk.
 >=dev-db/postgresql-docs-9.2.0_beta1
 >=dev-db/postgresql-base-9.2.0_beta1
 >=dev-db/postgresql-server-9.2.0_beta1
-
-# Michael Weber <xmw@gentoo.org> (22 May 2012)
-# Masked for removal in 30 days.
-# Replaced by x11-wm/xpra.
-x11-wm/parti
 
 # Benda Xu <heroxbd@gentoo.org> (20 May 2012)
 # geant-4.9.5_p01 has a major class declaration change that renders
