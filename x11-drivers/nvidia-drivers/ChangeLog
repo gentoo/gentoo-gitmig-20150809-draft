@@ -1,6 +1,19 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.363 2012/07/22 17:10:06 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.364 2012/07/22 21:08:43 cardoe Exp $
+
+*nvidia-drivers-304.22 (22 Jul 2012)
+
+  22 Jul 2012; Doug Goldstein <cardoe@gentoo.org>
+  +files/50nvidia-prelink-blacklist, +nvidia-drivers-304.22.ebuild,
+  +files/nvidia-smi.init:
+  Refactor the ebuild for easier maintenance.
+  Improve kernel feature detection (bug #412707, #286445, #329597).
+  Add init script for SMI to control the fan when X is not running (bug
+  #388725,
+  init script from Stuart Finlayson <stu@santa-li.com>).
+  Block the drivers from being prelinked (bug #420285. prelink script by Norman
+  Back <gentoo@thebacks.co.uk>).
 
   22 Jul 2012; Doug Goldstein <cardoe@gentoo.org>
   nvidia-drivers-96.43.20.ebuild, nvidia-drivers-173.14.34.ebuild,
