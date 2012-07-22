@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.force,v 1.21 2012/01/23 01:53:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.force,v 1.22 2012/07/22 13:14:05 graaff Exp $
 
 # Samuli Suominen <ssuominen@gentoo.org> (23 Jan 2012)
 # Forcing enabled while waiting for eselect-notify-send wrt #379941
@@ -44,7 +44,12 @@ dev-ruby/jruby-openssl ruby_targets_jruby
 ~virtual/ruby-rdoc-1 ruby_targets_ruby19
 ~virtual/ruby-rdoc-2 ruby_targets_jruby
 ~virtual/ruby-rdoc-3 ruby_targets_ree18
+~virtual/ruby-threads-0 ruby_targets_ruby18
+~virtual/ruby-threads-1 ruby_targets_ruby19
+~virtual/ruby-threads-2 ruby_targets_jruby
+~virtual/ruby-threads-3 ruby_targets_ree18
 ~virtual/rubygems-1 ruby_targets_ruby18
 ~virtual/rubygems-2 ruby_targets_jruby
 ~virtual/rubygems-3 ruby_targets_ree18
 ~virtual/rubygems-4 ruby_targets_ruby19
+~virtual/rubygems-5 ruby_targets_rbx
