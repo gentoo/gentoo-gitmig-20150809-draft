@@ -1,6 +1,24 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.107 2012/07/15 09:35:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.108 2012/07/22 20:33:47 bicatali Exp $
+
+  22 Jul 2012; Sébastien Fabbro <bicatali@gentoo.org> -root-5.34.00.ebuild,
+  +root-5.34.01.ebuild, +files/root-5.34.01-glibc216.patch:
+  Imported from science overlay. Added a patch from fedora for glib-2.16.
+  Changed all rm -f to rm to make sure they die
+
+*root-5.34.01 (22 Jul 2012)
+
+  22 Jul 2012; Andrew Savchenko <bircoph@gmail.com> -root-5.34.00.ebuild,
+  +root-5.34.01.ebuild, metadata.xml:
+  Version bump. Clarens and PEAC are gone, despite this is a minor
+  release.
+
+  21 Jul 2012; Andrew Savchenko <bircoph@gmail.com>
+  -files/root-5.32.00-explicit-functions.patch, +root-5.34.00.ebuild,
+  root-9999.ebuild:
+  Fix bug 426432: xft now is a strict dependency for X.
+  Remove unused.
 
   15 Jul 2012; Justin Lecher <jlec@gentoo.org>
   -files/root-5.26.00-make-3.82.patch, -root-5.26.00e-r1.ebuild,

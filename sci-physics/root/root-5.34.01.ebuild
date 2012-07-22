@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.34.00.ebuild,v 1.3 2012/07/03 18:58:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.34.01.ebuild,v 1.1 2012/07/22 20:33:47 bicatali Exp $
 
 EAPI=4
 
@@ -22,11 +22,12 @@ ROOFIT_DOC_PV=2.91-33
 TMVA_DOC_PV=4.03
 PATCH_PV=5.28.00b
 PATCH_PV2=5.32.00
+PATCH_PV3=5.34.01
 
 DESCRIPTION="C++ data analysis framework and interpreter from CERN"
 HOMEPAGE="http://root.cern.ch/"
 SRC_URI="${SRC_URI}
-	doc? ( ftp://root.cern.ch/${PN}/doc/ROOTUsersGuide.pdf
+	doc? ( ftp://root.cern.ch/${PN}/doc/ROOTUsersGuide.pdf -> ROOTUsersGuide-${PV}.pdf
 		math? (
 			ftp://root.cern.ch/${PN}/doc/RooFit_Users_Manual_${ROOFIT_DOC_PV}.pdf
 			http://tmva.sourceforge.net/docu/TMVAUsersGuide.pdf -> TMVAUsersGuide-v${TMVA_DOC_PV}.pdf )
@@ -37,9 +38,9 @@ SRC_URI="${SRC_URI}
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-IUSE="+X afs avahi -c++0x clarens doc emacs examples fits fftw graphviz htmldoc
+IUSE="+X afs avahi -c++0x doc emacs examples fits fftw graphviz htmldoc
 	kerberos ldap +math mpi mysql odbc +opengl openmp oracle postgres prefix
-	pythia6 pythia8 python qt4 +reflex ruby ssl xft xinetd xml xrootd"
+	pythia6 pythia8 python qt4 +reflex ruby ssl xinetd xml xrootd"
 
 CDEPEND="
 	app-arch/xz-utils
@@ -71,11 +72,10 @@ CDEPEND="
 			x11-libs/qt-svg:4
 			x11-libs/qt-webkit:4
 			x11-libs/qt-xmlpatterns:4 )
-		xft? ( x11-libs/libXft )
+		x11-libs/libXft
 		)
 	afs? ( net-fs/openafs )
 	avahi? ( net-dns/avahi )
-	clarens? ( dev-libs/xmlrpc-c[curl] )
 	emacs? ( virtual/emacs )
 	fits? ( sci-libs/cfitsio )
 	fftw? ( sci-libs/fftw:3.0 )
@@ -108,7 +108,7 @@ RDEPEND="
 PDEPEND="htmldoc? ( ~app-doc/root-docs-${PV} )"
 
 REQUIRED_USE="
-	!X? ( !opengl !qt4 !xft )
+	!X? ( !opengl !qt4 )
 	mpi? ( math !openmp )
 	openmp? ( math !mpi )"
 
@@ -157,18 +157,19 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-${PATCH_PV2}-afs.patch \
 		"${FILESDIR}"/${PN}-${PATCH_PV2}-cfitsio.patch \
 		"${FILESDIR}"/${PN}-${PATCH_PV2}-chklib64.patch \
-		"${FILESDIR}"/${PN}-${PATCH_PV2}-dotfont.patch
+		"${FILESDIR}"/${PN}-${PATCH_PV2}-dotfont.patch \
+		"${FILESDIR}"/${PN}-${PATCH_PV3}-glibc216.patch
 
 	# make sure we use system libs and headers
 	rm montecarlo/eg/inc/cfortran.h README/cfortran.doc || die
-	rm -rf graf2d/asimage/src/libAfterImage || die
-	rm -rf graf3d/ftgl/{inc,src} || die
-	rm -rf graf2d/freetype/src || die
-	rm -rf graf3d/glew/{inc,src} || die
-	rm -rf core/pcre/src || die
-	rm -rf math/unuran/src/unuran-*.tar.gz || die
+	rm -r graf2d/asimage/src/libAfterImage || die
+	rm -r graf3d/ftgl/{inc,src} || die
+	rm -r graf2d/freetype/src || die
+	rm -r graf3d/glew/{inc,src} || die
+	rm -r core/pcre/src || die
+	rm -r math/unuran/src/unuran-*.tar.gz || die
 	LANG=C LC_ALL=C find core/zip -type f -name "[a-z]*" -print0 | xargs -0 rm -f || die
-	rm -rf core/lzma/src/*.tar.gz || die
+	rm -r core/lzma/src/*.tar.gz || die
 	rm graf3d/gl/{inc,src}/gl2ps.* || die
 	sed -i -e 's/^GLLIBS *:= .* $(OPENGLLIB)/& -lgl2ps/' graf3d/gl/Module.mk || die
 
@@ -241,10 +242,9 @@ src_configure() {
 		--fail-on-missing \
 		$(use_enable X x11) \
 		$(use_enable X asimage) \
+		$(use_enable X xft) \
 		$(use_enable afs) \
 		$(use_enable avahi bonjour) \
-		$(use_enable clarens) \
-		$(use_enable clarens peac) \
 		$(use_enable fits fitsio) \
 		$(use_enable fftw fftw3) \
 		$(use_enable graphviz gviz) \
@@ -271,7 +271,6 @@ src_configure() {
 		$(use_enable reflex) \
 		$(use_enable ruby) \
 		$(use_enable ssl) \
-		$(use_enable xft) \
 		$(use_enable xml) \
 		$(use_enable xrootd) \
 		${EXTRA_ECONF} \
@@ -289,7 +288,7 @@ doc_install() {
 	cd "${S}"
 	if use doc; then
 		einfo "Installing user's guides"
-		dodoc "${DISTDIR}"/ROOTUsersGuide.pdf
+		dodoc "${DISTDIR}"/ROOTUsersGuide-${PV}.pdf
 		use math && dodoc \
 			"${DISTDIR}"/RooFit_Users_Manual_${ROOFIT_DOC_PV}.pdf \
 			"${DISTDIR}"/TMVAUsersGuide-v${TMVA_DOC_PV}.pdf
@@ -300,7 +299,7 @@ doc_install() {
 		insinto /usr/share/doc/${PF}/examples/tutorials/tmva
 		doins -r tmva/test
 	else
-		rm -rf "${ED}"/usr/share/doc/${PF}/examples || die
+		rm -r "${ED}"/usr/share/doc/${PF}/examples || die
 	fi
 }
 
@@ -347,7 +346,7 @@ src_install() {
 
 	# The build system installs Emacs support unconditionally and in the wrong
 	# directory. Remove it and call elisp-install in case of USE=emacs.
-	rm -rf "${ED}"/usr/share/emacs
+	rm -r "${ED}"/usr/share/emacs
 	if use emacs; then
 		elisp-install ${PN} build/misc/*.{el,elc} || die "elisp-install failed"
 	fi
@@ -360,11 +359,11 @@ src_install() {
 	rm "${ED}"usr/share/doc/${PF}/{INSTALL,LICENSE,COPYING.CINT} || die
 	rm "${ED}"usr/share/root/fonts/LICENSE || die
 	pushd "${ED}"usr/$(get_libdir)/root/cint/cint/lib > /dev/null
-	rm -f posix/mktypes dll_stl/setup \
+	rm posix/mktypes dll_stl/setup \
 		G__* dll_stl/G__* dll_stl/rootcint_* posix/exten.o || die
-	rm -f "${ED}"usr/$(get_libdir)/root/cint/cint/include/makehpib || die
-	rm -f "${ED}"/etc/root/proof/*.sample || die
-	rm -rf "${ED}"/etc/root/daemons || die
+	rm "${ED}"usr/$(get_libdir)/root/cint/cint/include/makehpib || die
+	rm "${ED}"/etc/root/proof/*.sample || die
+	rm -r "${ED}"/etc/root/daemons || die
 	popd > /dev/null
 	# these should be in PATH
 	mv "${ED}"etc/root/proof/utils/pq2/pq2* \
