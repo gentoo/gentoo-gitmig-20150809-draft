@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/racc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.75 2012/06/25 07:17:18 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.76 2012/07/22 14:11:08 nixnut Exp $
+
+  22 Jul 2012; <nixnut@gentoo.org> racc-1.4.6-r1.ebuild:
+  ppc stable #411507
 
   25 Jun 2012; Andreas Schuerch <nativemad@gentoo.org> racc-1.4.6-r1.ebuild:
   x86 stable, see bug 411507
