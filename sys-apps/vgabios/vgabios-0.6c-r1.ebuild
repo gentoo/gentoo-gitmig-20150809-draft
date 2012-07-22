@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vgabios/vgabios-0.6c-r1.ebuild,v 1.4 2012/04/13 19:43:17 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vgabios/vgabios-0.6c-r1.ebuild,v 1.5 2012/07/22 04:13:36 cardoe Exp $
 
 EAPI=4
 
@@ -27,10 +27,6 @@ RDEPEND="!app-emulation/qemu
 src_prepare() {
 	EPATCH_FORCE=yes EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" \
 		epatch
-}
-
-pkg_configure() {
-	:
 }
 
 src_compile() {
