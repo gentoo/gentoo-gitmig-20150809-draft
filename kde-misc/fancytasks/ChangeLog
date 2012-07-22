@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/fancytasks
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/fancytasks/ChangeLog,v 1.15 2012/07/16 16:59:55 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/fancytasks/ChangeLog,v 1.16 2012/07/22 21:45:41 hwoarang Exp $
+
+  22 Jul 2012; Markos Chandras <hwoarang@gentoo.org> fancytasks-1.1.2.ebuild:
+  Stable on amd64 wrt bug #426840
 
   16 Jul 2012; Jeff Horelick <jdhore@gentoo.org> fancytasks-1.1.2.ebuild:
   marked x86 per bug 426840
