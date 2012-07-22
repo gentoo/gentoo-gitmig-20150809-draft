@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bcat/bcat-0.6.2.ebuild,v 1.5 2012/07/11 16:21:56 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bcat/bcat-0.6.2.ebuild,v 1.6 2012/07/22 13:40:28 graaff Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19 ree18"
@@ -17,6 +17,9 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~x86 ~x86-fbsd"
 IUSE=""
+
+# Collides on /usr/bin/bcat, bug 418301
+RDEPEND="${RDEPEND} !!app-accessibility/speech-tools"
 
 ruby_add_bdepend "doc? ( app-text/ronn )"
 ruby_add_bdepend "test? ( virtual/ruby-test-unit )"
