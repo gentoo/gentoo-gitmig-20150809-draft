@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.675 2012/07/19 04:02:52 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.676 2012/07/22 16:52:26 floppym Exp $
+
+  22 Jul 2012; Mike Gilbert <floppym@gentoo.org> chromium-20.0.1132.57.ebuild,
+  chromium-21.0.1180.41.ebuild, chromium-21.0.1180.49.ebuild,
+  chromium-22.0.1201.0.ebuild, chromium-22.0.1207.1.ebuild:
+  Depend on <sys-devel/bison-2.6 to work around bug 427438.
 
 *chromium-21.0.1180.49 (19 Jul 2012)
 
