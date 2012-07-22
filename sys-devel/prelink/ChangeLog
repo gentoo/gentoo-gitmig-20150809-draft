@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/prelink
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.87 2012/07/20 17:31:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.88 2012/07/22 20:37:32 vapier Exp $
+
+  22 Jul 2012; Mike Frysinger <vapier@gentoo.org> prelink-20111012.ebuild:
+  Link against pthreads when elfutils is built with USE=threads #427538 by
+  argonovsky.
 
   20 Jul 2012; Mike Frysinger <vapier@gentoo.org> prelink-20110511.ebuild,
   prelink-20111012.ebuild:

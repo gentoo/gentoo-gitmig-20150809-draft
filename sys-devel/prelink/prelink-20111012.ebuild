@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20111012.ebuild,v 1.3 2012/07/20 17:31:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20111012.ebuild,v 1.4 2012/07/22 20:37:32 vapier Exp $
 
 EAPI="4"
 
@@ -44,6 +44,7 @@ src_prepare() {
 		-e '/CXXLINK=/s:\(CXXLINK="$(CXX)\):\1 -Wl,--add-needed :' \
 		testsuite/Makefile.in
 
+	has_version 'dev-libs/elfutils[threads]' && append-ldflags -pthread
 	# older GCCs don't support this flag
 	sed -i -e 's:-Wno-pointer-sign::' src/Makefile.in #325269
 	append-cflags -Wno-pointer-sign
