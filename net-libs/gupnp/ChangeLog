@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gupnp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/ChangeLog,v 1.44 2012/07/03 20:13:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/ChangeLog,v 1.45 2012/07/22 18:32:10 eva Exp $
+
+  22 Jul 2012; Gilles Dartiguelongue <eva@gentoo.org gupnp-0.18.3.ebuild:
+  Add missing raised glib dependency for connman USE.
 
   03 Jul 2012; Jeroen Roovers <jer@gentoo.org> gupnp-0.18.3.ebuild:
   Marked ~hppa (bug #424225).
