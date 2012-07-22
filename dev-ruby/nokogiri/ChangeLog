@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/nokogiri
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.75 2012/07/04 06:58:43 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.76 2012/07/22 15:33:02 nixnut Exp $
+
+  22 Jul 2012; <nixnut@gentoo.org> nokogiri-1.5.2.ebuild:
+  ppc stable #423071
 
   04 Jul 2012; Andreas Schuerch <nativemad@gentoo.org> nokogiri-1.5.2.ebuild:
   x86 stable, see bug 423071
