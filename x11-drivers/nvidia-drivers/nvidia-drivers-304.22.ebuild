@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-304.22.ebuild,v 1.1 2012/07/22 21:08:43 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-304.22.ebuild,v 1.2 2012/07/22 21:14:10 cardoe Exp $
 
 EAPI="2"
 
@@ -186,6 +186,7 @@ pkg_pretend() {
 
 	# Kernel features/options to check for
 	CONFIG_CHECK="~ZONE_DMA ~MTRR ~SYSVIPC ~!LOCKDEP"
+	use x86 && CONFIG_CHECK+=" ~HIGHMEM"
 
 	# Now do the above checks
 	use kernel_linux && check_extra_config
@@ -306,7 +307,7 @@ donvidia() {
 	# Install the library with the correct SOVER
 	${action} ${MY_LIB}.${MY_SOVER} || \
 		die "failed to install ${libname}"
-	
+
 	# If SOVER wasn't 1, then we need to create a .1 symlink
 	if [[ "${MY_SOVER}" != "1" ]]; then
 		dosym ${libname}.${MY_SOVER} \
