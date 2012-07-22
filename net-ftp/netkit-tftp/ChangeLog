@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/netkit-tftp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-tftp/ChangeLog,v 1.25 2012/07/08 17:42:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-tftp/ChangeLog,v 1.26 2012/07/22 20:26:46 vapier Exp $
+
+  22 Jul 2012; Mike Frysinger <vapier@gentoo.org>
+  -files/netkit-tftp-0.17-overflow.patch, netkit-tftp-0.17-r8.ebuild:
+  Fix fortify errors for real #425184 by Robin Kauffman.
 
 *netkit-tftp-0.17-r8 (08 Jul 2012)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-tftp/netkit-tftp-0.17-r8.ebuild,v 1.1 2012/07/08 17:42:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-tftp/netkit-tftp-0.17-r8.ebuild,v 1.2 2012/07/22 20:26:46 vapier Exp $
 
 EAPI=4
 
@@ -37,7 +37,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-tftp-fix-put-zero-size.diff
 	epatch "${FILESDIR}"/${P}-tftpd-put-fixes.patch
 	epatch "${FILESDIR}"/${P}-socket-reopen-on-errors.patch
-	epatch "${FILESDIR}"/${P}-overflow.patch
+	rm include/arpa/tftp.h || die #425184
 }
 
 src_configure() {
