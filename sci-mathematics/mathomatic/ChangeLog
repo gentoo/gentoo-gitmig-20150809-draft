@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/mathomatic
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/ChangeLog,v 1.68 2012/07/10 18:56:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/ChangeLog,v 1.69 2012/07/22 15:32:05 bicatali Exp $
+
+*mathomatic-16.0.1 (22 Jul 2012)
+
+  22 Jul 2012; Sébastien Fabbro <bicatali@gentoo.org> +mathomatic-16.0.1.ebuild:
+  Version bump, keyword amd64-linux, x86-linux
 
   10 Jul 2012; Justin Lecher <jlec@gentoo.org> -mathomatic-12.8.8.ebuild,
   -mathomatic-12.9.1.ebuild, -mathomatic-15.8.2.ebuild, metadata.xml:
