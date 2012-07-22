@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ansi2html
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ansi2html/ChangeLog,v 1.1 2012/07/22 07:37:10 iksaif Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ansi2html/ChangeLog,v 1.2 2012/07/22 07:38:45 iksaif Exp $
+
+  22 Jul 2012; Corentin Chary <iksaif@gentoo.org> ansi2html-0.9.1.ebuild:
+  Remove useless workaround (there is a patch)
 
 *ansi2html-0.9.1 (22 Jul 2012)
 

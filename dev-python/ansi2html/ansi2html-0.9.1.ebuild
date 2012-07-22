@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ansi2html/ansi2html-0.9.1.ebuild,v 1.1 2012/07/22 07:37:10 iksaif Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ansi2html/ansi2html-0.9.1.ebuild,v 1.2 2012/07/22 07:38:45 iksaif Exp $
 
 EAPI="4"
 
@@ -33,12 +33,4 @@ src_prepare() {
 		epatch "${FILESDIR}/${PN}-0.9.1-fix-0-control-code.patch"
 		epatch "${FILESDIR}/${PN}-0.9.1-fix-sys-argv-in-tests.patch"
 	fi
-}
-
-src_test() {
-	# Workaround for https://github.com/ralphbean/ansi2html/issues/17
-	testing() {
-		nosetests
-	}
-	python_execute_function testing
 }
