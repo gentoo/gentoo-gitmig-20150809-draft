@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/mocha-0.10.5.ebuild,v 1.5 2012/06/13 17:39:49 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/mocha-0.10.5.ebuild,v 1.6 2012/07/22 07:37:12 graaff Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ree18 ruby19 jruby"
@@ -30,6 +30,9 @@ ruby_add_rdepend "dev-ruby/metaclass" #metaclass ~> 0.0.1
 
 all_ruby_prepare() {
 	sed -i -e '/[Bb]undler/ s:^:#:' -e '1iload "lib/mocha/version.rb"' Rakefile || die
+
+	# Use syntax that works with all versions of coderay
+	sed -i -e 's/html.div/html(:wrap => :div)/' Rakefile || die
 }
 
 all_ruby_compile() {
