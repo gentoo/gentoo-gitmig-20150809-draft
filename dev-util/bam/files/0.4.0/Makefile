@@ -1,4 +1,4 @@
-LIBS		+= -lm -lpthread -llua
+LIBS		+= -lm -lpthread -llua -ldl
 TARGETS	= txt2c internal_base bam
 BAM_OBJ	= $(patsubst %.c,%.o,$(wildcard src/*.c))
 TXT2C_LUA	= $(wildcard src/*.lua)

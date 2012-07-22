@@ -1,9 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bam/bam-0.4.0.ebuild,v 1.4 2012/05/21 12:23:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bam/bam-0.4.0.ebuild,v 1.5 2012/07/22 17:32:58 pacho Exp $
 
-EAPI=3
-
+EAPI=4
 PYTHON_DEPEND="2"
 
 inherit eutils python toolchain-funcs
@@ -35,17 +34,15 @@ src_prepare() {
 }
 
 src_compile() {
-	emake ${PN} || die
-
+	emake ${PN}
 	if use doc; then
 		$(PYTHON) scripts/gendocs.py || die "doc generation failed"
 	fi
 }
 
 src_install() {
-	dobin ${PN} || die
-
+	dobin ${PN}
 	if use doc; then
-		dohtml docs/${PN}{.html,_logo.png} || die "dohtml failed"
+		dohtml docs/${PN}{.html,_logo.png}
 	fi
 }
