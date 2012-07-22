@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.674 2012/07/21 20:43:01 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.675 2012/07/22 12:54:50 chithanh Exp $
+
+  22 Jul 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xorg-server-1.11.4-r1.ebuild, xorg-server-1.12.2.ebuild,
+  xorg-server-1.12.3.ebuild, xorg-server-1.12.99.902.ebuild:
+  Diplay a warning if udev was built without keymap support.
 
 *xorg-server-1.12.99.902 (21 Jul 2012)
 
