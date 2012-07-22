@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.47 2012/07/22 03:57:25 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.48 2012/07/22 04:35:00 cardoe Exp $
 
 EAPI="4"
 
@@ -62,11 +62,10 @@ RDEPEND="
 	>=dev-libs/glib-2.0
 	media-libs/libpng
 	sys-apps/pciutils
+	>=sys-apps/seabios-1.7.0
+	sys-apps/sgabios
+	sys-apps/vgabios
 	virtual/jpeg
-	amd64? ( >=sys-apps/seabios-1.7.0
-		sys-apps/vgabios )
-	x86? ( >=sys-apps/seabios-1.7.0
-		sys-apps/vgabios )
 	aio? ( dev-libs/libaio )
 	alsa? ( >=media-libs/alsa-lib-1.0.13 )
 	bluetooth? ( net-wireless/bluez )
@@ -346,6 +345,10 @@ src_install() {
 	dosym ../vgabios/vgabios-qxl.bin /usr/share/qemu/vgabios-qxl.bin
 	dosym ../vgabios/vgabios-stdvga.bin /usr/share/qemu/vgabios-stdvga.bin
 	dosym ../vgabios/vgabios-vmware.bin /usr/share/qemu/vgabios-vmware.bin
+
+	# Remove sgabios since we're using the sgabios packaged one
+	rm "${ED}/usr/share/qemu/sgabios.bin"
+	dosym ../sgabios/sgabios.bin /usr/share/qemu/sgabios.bin
 }
 
 pkg_postinst() {
