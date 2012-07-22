@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/net-ssh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh/ChangeLog,v 1.102 2012/06/26 07:45:36 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh/ChangeLog,v 1.103 2012/07/22 15:15:05 nixnut Exp $
+
+  22 Jul 2012; <nixnut@gentoo.org> net-ssh-2.2.2.ebuild:
+  ppc stable #421345
 
   26 Jun 2012; Jeff Horelick <jdhore@gentoo.org> net-ssh-2.2.2.ebuild:
   marked x86 per bug 421345
