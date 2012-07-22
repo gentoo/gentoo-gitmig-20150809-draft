@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/gupnp-dlna
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gupnp-dlna/ChangeLog,v 1.12 2012/05/05 08:02:43 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gupnp-dlna/ChangeLog,v 1.13 2012/07/22 18:52:59 eva Exp $
+
+*gupnp-dlna-0.6.6 (22 Jul 2012)
+
+  22 Jul 2012; Gilles Dartiguelongue <eva@gentoo.org +gupnp-dlna-0.6.6.ebuild:
+  Version bump. Fixes, MKV and AVC_MP4_*_EAC3 profiles.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> gupnp-dlna-0.6.2.ebuild,
   gupnp-dlna-0.6.4.ebuild:
