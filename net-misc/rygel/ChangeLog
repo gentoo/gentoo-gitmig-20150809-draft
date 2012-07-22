@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/rygel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/ChangeLog,v 1.22 2012/05/05 03:20:44 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/ChangeLog,v 1.23 2012/07/22 21:26:46 eva Exp $
+
+*rygel-0.14.2 (22 Jul 2012)
+
+  22 Jul 2012; Gilles Dartiguelongue <eva@gentoo.org +rygel-0.14.2.ebuild:
+  Version bump. Use unistring for collation with media-export plugin.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> rygel-0.12.7.ebuild,
   rygel-0.14.0.ebuild:
