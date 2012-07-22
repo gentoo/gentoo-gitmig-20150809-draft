@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/imapfilter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/imapfilter/ChangeLog,v 1.45 2012/04/23 20:24:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/imapfilter/ChangeLog,v 1.46 2012/07/22 20:37:23 radhermit Exp $
+
+*imapfilter-2.5.3 (22 Jul 2012)
+
+  22 Jul 2012; Tim Harder <radhermit@gentoo.org> +imapfilter-2.5.3.ebuild:
+  Version bump.
 
   23 Apr 2012; Michał Górny <mgorny@gentoo.org> imapfilter-2.4.2.ebuild,
   imapfilter-2.5.2.ebuild:
