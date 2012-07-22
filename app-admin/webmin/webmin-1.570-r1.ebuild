@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.570-r1.ebuild,v 1.1 2011/12/31 18:33:39 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.570-r1.ebuild,v 1.2 2012/07/22 09:03:02 hwoarang Exp $
 
 EAPI="3"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.webmin.com/"
 SRC_URI="minimal? ( mirror://sourceforge/webadmin/${P}-minimal.tar.gz )
 	!minimal? ( mirror://sourceforge/webadmin/${P}.tar.gz )"
 
-LICENSE="BSD"
+LICENSE="|| ( BSD GPL-2 )"
 SLOT="0"
 
 KEYWORDS="~amd64 ~x86"

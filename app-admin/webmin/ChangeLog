@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/webmin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.195 2012/07/09 18:12:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.196 2012/07/22 09:03:02 hwoarang Exp $
+
+  22 Jul 2012; Markos Chandras <hwoarang@gentoo.org> webmin-1.560-r1.ebuild,
+  webmin-1.570-r1.ebuild, webmin-1.580.ebuild, webmin-1.590.ebuild:
+  Add GPL-2 to LICENSE for init scripts. Bug #425882
 
 *webmin-1.590 (09 Jul 2012)
 
