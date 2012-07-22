@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bcat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bcat/ChangeLog,v 1.6 2012/07/11 16:21:56 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bcat/ChangeLog,v 1.7 2012/07/22 13:36:07 graaff Exp $
+
+  22 Jul 2012; Hans de Graaff <graaff@gentoo.org> -bcat-0.6.1.ebuild:
+  Remove old version.
 
   11 Jul 2012; Andreas Schuerch <nativemad@gentoo.org> bcat-0.6.2.ebuild:
   x86 keyworded, see bug 417537
