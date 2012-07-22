@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga-web/icinga-web-1.7.1.ebuild,v 1.1 2012/07/16 15:27:26 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga-web/icinga-web-1.7.1-r1.ebuild,v 1.1 2012/07/22 00:32:19 idl0r Exp $
 
 EAPI="2"
 
@@ -82,7 +82,9 @@ src_install() {
 	if use apache2 ; then
 		dodir ${APACHE_MODULES_CONFDIR}
 		emake DESTDIR="${D}" install-apache-config || die "make failed"
-		mv "${D}/${APACHE_MODULES_CONFDIR}/icinga-web.conf"	"${D}/${APACHE_MODULES_CONFDIR}/99_icinga-web.conf"
+		echo '<IfDefine ICINGA_WEB>' > "${D}/${APACHE_MODULES_CONFDIR}/99_icinga-web.conf"
+		cat "${D}/${APACHE_MODULES_CONFDIR}/icinga-web.conf" >> "${D}/${APACHE_MODULES_CONFDIR}/99_icinga-web.conf"
+		echo '</IfDefine>' >> "${D}/${APACHE_MODULES_CONFDIR}/99_icinga-web.conf"
 	fi
 
 	insinto /usr/share/icinga/icinga-web/contrib
