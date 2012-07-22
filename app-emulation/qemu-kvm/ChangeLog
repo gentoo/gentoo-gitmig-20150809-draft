@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.138 2012/07/21 23:02:39 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.139 2012/07/22 03:10:36 cardoe Exp $
+
+  21 Jul 2012; Doug Goldstein <cardoe@gentoo.org> qemu-kvm-1.1.0.ebuild,
+  qemu-kvm-1.1.1-r1.ebuild, qemu-kvm-9999.ebuild:
+  Fix seabios dependency.
 
   21 Jul 2012; Doug Goldstein <cardoe@gentoo.org> -qemu-kvm-1.0-r3.ebuild:
   Remove older version
