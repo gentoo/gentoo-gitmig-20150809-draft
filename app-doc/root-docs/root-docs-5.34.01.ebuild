@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/root-docs/root-docs-5.34.00.ebuild,v 1.2 2012/06/27 17:31:12 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/root-docs/root-docs-5.34.01.ebuild,v 1.1 2012/07/22 20:34:45 bicatali Exp $
 
 EAPI=4
 
 ROOT_PN="root"
-PATCH_PV="5.34"
+PATCH_PV="5.34.01"
 
 if [[ ${PV} == "9999" ]] ; then
 	_SVN_DEP="dev-vcs/subversion"
