@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/svgalib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.96 2012/06/30 11:14:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.97 2012/07/22 08:57:14 jdhore Exp $
+
+  22 Jul 2012; Jeff Horelick <jdhore@gentoo.org> svgalib-1.9.25-r4.ebuild:
+  marked x86 per bug 427542
 
   30 Jun 2012; Pacho Ramos <pacho@gentoo.org>
   +files/svgalib-1.9.25-kernel3.4.patch, svgalib-1.9.25-r4.ebuild:
