@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hardinfo/hardinfo-0.5.2_pre20120527.ebuild,v 1.3 2012/05/29 23:09:26 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hardinfo/hardinfo-0.5.2_pre20120527.ebuild,v 1.4 2012/07/22 06:50:26 jdhore Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://dev.gentoo.org/~hasufell/distfiles/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 RDEPEND="dev-libs/glib:2
