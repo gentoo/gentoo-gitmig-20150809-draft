@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.154-r1.ebuild,v 1.1 2012/07/17 14:52:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.154-r1.ebuild,v 1.2 2012/07/22 20:31:47 vapier Exp $
 
 EAPI="4"
 
@@ -44,7 +44,7 @@ src_configure() {
 	econf \
 		--disable-werror \
 		$(use_enable nls) \
-		$(use_enable threads thread_safety) \
+		$(use_enable threads thread-safety) \
 		--program-prefix="eu-" \
 		$(use_with zlib) \
 		$(use_with bzip2 bzlib) \
