@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-304.22.ebuild,v 1.4 2012/07/22 21:47:42 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-304.22.ebuild,v 1.5 2012/07/22 22:32:26 cardoe Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit eutils unpacker multilib portability versionator \
 	linux-mod flag-o-matic nvidia-driver linux-info
@@ -22,19 +22,20 @@ SRC_URI="x86? ( http://us.download.nvidia.com/XFree86/Linux-x86/${PV}/${X86_NV_P
 LICENSE="NVIDIA"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86 ~amd64-fbsd ~x86-fbsd"
-IUSE="acpi multilib kernel_FreeBSD kernel_linux +tools"
+IUSE="acpi multilib kernel_FreeBSD kernel_linux +tools +X"
 RESTRICT="strip"
 EMULTILIB_PKG="true"
 
-COMMON="<x11-base/xorg-server-1.12.99
+COMMON="app-admin/eselect-opencl
 	kernel_linux? ( >=sys-libs/glibc-2.6.1 )
 	multilib? ( app-emulation/emul-linux-x86-xlibs )
-	>=app-admin/eselect-opengl-1.0.9
-	app-admin/eselect-opencl"
+	X? (
+		<x11-base/xorg-server-1.12.99
+		>=app-admin/eselect-opengl-1.0.9
+	)"
 DEPEND="${COMMON}
 	kernel_linux? ( virtual/linux-sources )"
 RDEPEND="${COMMON}
-	x11-libs/libXvMC
 	acpi? ( sys-power/acpid )
 	tools? (
 		dev-libs/atk
@@ -44,8 +45,11 @@ RDEPEND="${COMMON}
 		x11-libs/libX11
 		x11-libs/libXext
 		x11-libs/pango
-	)"
-PDEPEND=">=x11-libs/libvdpau-0.3-r1"
+	)
+	X? ( x11-libs/libXvMC )"
+PDEPEND="X? ( >=x11-libs/libvdpau-0.3-r1 )"
+
+REQUIRED_USE="tools? ( X )"
 
 QA_TEXTRELS_x86="
 	usr/lib/OpenCL/vendors/nvidia/libOpenCL.so.1.0.0
@@ -363,21 +367,23 @@ src_install() {
 		donvidia ${NV_OBJ}/libnvcuvid.so ${NV_SOVER}
 	fi
 
-	# Xorg DDX driver
-	insinto /usr/$(get_libdir)/xorg/modules/drivers
-	doins ${NV_X11}/nvidia_drv.so || die "failed to install nvidia_drv.so"
+	if use X; then
+		# Xorg DDX driver
+		insinto /usr/$(get_libdir)/xorg/modules/drivers
+		doins ${NV_X11}/nvidia_drv.so || die "failed to install nvidia_drv.so"
 
-	# Xorg GLX driver
-	donvidia ${NV_X11}/libglx.so ${NV_SOVER} \
-		/usr/$(get_libdir)/opengl/nvidia/extensions
+		# Xorg GLX driver
+		donvidia ${NV_X11}/libglx.so ${NV_SOVER} \
+			/usr/$(get_libdir)/opengl/nvidia/extensions
 
-	# XvMC driver
-	dolib.a ${NV_X11}/libXvMCNVIDIA.a || \
-		die "failed to install libXvMCNVIDIA.so"
-	donvidia ${NV_X11}/libXvMCNVIDIA.so ${NV_SOVER}
-	dosym libXvMCNVIDIA.so.${NV_SOVER} \
-		/usr/$(get_libdir)/libXvMCNVIDIA_dynamic.so.1 || \
-		die "failed to create libXvMCNVIDIA_dynamic.so symlink"
+		# XvMC driver
+		dolib.a ${NV_X11}/libXvMCNVIDIA.a || \
+			die "failed to install libXvMCNVIDIA.so"
+		donvidia ${NV_X11}/libXvMCNVIDIA.so ${NV_SOVER}
+		dosym libXvMCNVIDIA.so.${NV_SOVER} \
+			/usr/$(get_libdir)/libXvMCNVIDIA_dynamic.so.1 || \
+			die "failed to create libXvMCNVIDIA_dynamic.so symlink"
+	fi
 
 	# OpenCL ICD for NVIDIA
 	if use kernel_linux; then
@@ -389,23 +395,26 @@ src_install() {
 	dohtml ${NV_DOC}/html/*
 	if use kernel_FreeBSD; then
 		dodoc "${NV_DOC}/README"
-		doman "${NV_MAN}/nvidia-xconfig.1"
-		doman "${NV_MAN}/nvidia-settings.1"
+		use X && doman "${NV_MAN}/nvidia-xconfig.1"
+		use tools && doman "${NV_MAN}/nvidia-settings.1"
 		dohtml "${NV_DOC}/html/*"
 	else
 		# Docs
 		newdoc "${NV_DOC}/README.txt" README
 		dodoc "${NV_DOC}/NVIDIA_Changelog"
 		doman "${NV_MAN}/nvidia-smi.1.gz"
-		doman "${NV_MAN}/nvidia-xconfig.1.gz"
-		doman "${NV_MAN}/nvidia-settings.1.gz"
+		use X && doman "${NV_MAN}/nvidia-xconfig.1.gz"
+		use tools && doman "${NV_MAN}/nvidia-settings.1.gz"
 		doman "${NV_MAN}/nvidia-cuda-proxy-control.1.gz"
 		dohtml "${NV_DOC}/html/*"
 	fi
 
 	# Helper Apps
 	exeinto /opt/bin/
-	doexe ${NV_OBJ}/nvidia-xconfig || die
+
+	if use X; then
+		doexe ${NV_OBJ}/nvidia-xconfig || die
+	fi
 
 	if use kernel_linux ; then
 		doexe ${NV_OBJ}/nvidia-debugdump || die
@@ -458,17 +467,19 @@ src_install-libs() {
 		libdir=${NV_OBJ}/32
 	fi
 
-	# The GLX libraries
-	donvidia ${libdir}/libGL.so ${NV_SOVER} ${GL_ROOT}
-	donvidia ${libdir}/libnvidia-glcore.so ${NV_SOVER}
-	if use kernel_FreeBSD; then
-		donvidia ${libdir}/libnvidia-tls.so ${NV_SOVER} ${GL_ROOT}
-	else
-		donvidia ${libdir}/tls/libnvidia-tls.so ${NV_SOVER} ${GL_ROOT}
-	fi
+	if use X; then
+		# The GLX libraries
+		donvidia ${libdir}/libGL.so ${NV_SOVER} ${GL_ROOT}
+		donvidia ${libdir}/libnvidia-glcore.so ${NV_SOVER}
+		if use kernel_FreeBSD; then
+			donvidia ${libdir}/libnvidia-tls.so ${NV_SOVER} ${GL_ROOT}
+		else
+			donvidia ${libdir}/tls/libnvidia-tls.so ${NV_SOVER} ${GL_ROOT}
+		fi
 
-	# VDPAU
-	donvidia ${libdir}/libvdpau_nvidia.so ${NV_SOVER}
+		# VDPAU
+		donvidia ${libdir}/libvdpau_nvidia.so ${NV_SOVER}
+	fi
 
 	# NVIDIA monitoring library
 	if use kernel_linux ; then
@@ -501,7 +512,7 @@ pkg_postinst() {
 	use kernel_linux && linux-mod_pkg_postinst
 
 	# Switch to the nvidia implementation
-	"${ROOT}"/usr/bin/eselect opengl set --use-old nvidia
+	use X && "${ROOT}"/usr/bin/eselect opengl set --use-old nvidia
 	"${ROOT}"/usr/bin/eselect opencl set --use-old nvidia
 
 	elog "You must be in the video group to use the NVIDIA device"
@@ -519,19 +530,29 @@ pkg_postinst() {
 	elog "NVIDIA has requested that any bug reports submitted have the"
 	elog "output of /opt/bin/nvidia-bug-report.sh included."
 	elog
+	if ! use X; then
+		elog "You have elected to not install the X.org driver. Along with"
+		elog "this the OpenGL libraries, XvMC, and VDPAU libraries were not"
+		elog "installed. Additionally, once the driver is loaded your card"
+		elog "and fan will run at max speed which may not be desirable."
+		elog "Use the 'nvidia-smi' init script to have your card and fan"
+		elog "speed scale appropriately."
+		elog
+	fi
 	if ! use tools; then
 		elog "USE=tools controls whether the nvidia-settings application"
 		elog "is installed. If you would like to use it, enable that"
 		elog "flag and re-emerge this ebuild. Optionally you can install"
 		elog "media-video/nvidia-settings"
+		elog
 	fi
 }
 
 pkg_prerm() {
-	"${ROOT}"/usr/bin/eselect opengl set --use-old xorg-x11
+	use X && "${ROOT}"/usr/bin/eselect opengl set --use-old xorg-x11
 }
 
 pkg_postrm() {
 	use kernel_linux && linux-mod_pkg_postrm
-	"${ROOT}"/usr/bin/eselect opengl set --use-old xorg-x11
+	use X && "${ROOT}"/usr/bin/eselect opengl set --use-old xorg-x11
 }

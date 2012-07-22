@@ -20,5 +20,7 @@
 <longdescription>NVIDIA X11 driver and GLX libraries</longdescription>
 <use>
 	<flag name='tools'>Installs additional tools such as nvidia-settings</flag>
+	<flag name='X'>Controls whether the X.org driver, OpenGL libraries,
+		XvMC libraries, and VDPAU libraries are installed</flag>
 </use>
 </pkgmetadata>

@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.367 2012/07/22 21:47:42 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.368 2012/07/22 22:32:26 cardoe Exp $
+
+  22 Jul 2012; Doug Goldstein <cardoe@gentoo.org> nvidia-drivers-304.22.ebuild,
+  metadata.xml:
+  Make the installation of the X.org driver, OpenGL libraries, XvMC libraries,
+  and VDPAU libraries optional by the X USE flag. bug #413461. Based on work by
+  Amir Aupov <fads93@gmail.com>
 
   22 Jul 2012; Doug Goldstein <cardoe@gentoo.org> nvidia-drivers-304.22.ebuild,
   +files/nvidia-drivers-settings.desktop, files/nvidia-autostart.desktop:
