@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/lightdm-kde
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm-kde/ChangeLog,v 1.1 2012/06/02 12:45:03 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm-kde/ChangeLog,v 1.2 2012/07/22 11:27:16 johu Exp $
+
+*lightdm-kde-0.2.1 (22 Jul 2012)
+
+  22 Jul 2012; Johannes Huber <johu@gentoo.org> +lightdm-kde-0.2.1.ebuild:
+  Version bump.
 
 *lightdm-kde-0.1.1 (02 Jun 2012)
 
@@ -8,4 +13,3 @@
   +metadata.xml:
   Initial commit from kde overlay. First version by dagger. Additions by yngwin
   and me.
-
