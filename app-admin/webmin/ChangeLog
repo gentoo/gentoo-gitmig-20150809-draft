@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/webmin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.196 2012/07/22 09:03:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.197 2012/07/22 19:47:28 hwoarang Exp $
+
+  22 Jul 2012; Markos Chandras <hwoarang@gentoo.org> webmin-1.560-r1.ebuild,
+  webmin-1.570-r1.ebuild, webmin-1.580.ebuild, webmin-1.590.ebuild:
+  Fix LICENSE once again. BSD and GPL-2 should both be set unconditionally
 
   22 Jul 2012; Markos Chandras <hwoarang@gentoo.org> webmin-1.560-r1.ebuild,
   webmin-1.570-r1.ebuild, webmin-1.580.ebuild, webmin-1.590.ebuild:
