@@ -1,5 +1,9 @@
 # ChangeLog for sys-apps/kmod
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.46 2012/07/20 16:36:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.47 2012/07/22 17:24:06 armin76 Exp $
+
+  22 Jul 2012; Raúl Porcel <armin76@gentoo.org> kmod-9.ebuild,
+  kmod-9-r3.ebuild:
+  Add ~alpha/~sh/~sparc wrt #397769
 
   20 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> kmod-9-r3.ebuild,
   kmod-9999.ebuild:
