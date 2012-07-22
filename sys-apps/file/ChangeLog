@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/file
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.220 2012/07/21 09:13:08 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.221 2012/07/22 10:46:34 rich0 Exp $
+
+  22 Jul 2012; Richard Freeman <rich0@gentoo.org> file-5.11.ebuild:
+  amd64 stable - 427368
 
   21 Jul 2012; Jeff Horelick <jdhore@gentoo.org> file-5.11.ebuild:
   marked x86 per bug 427368
