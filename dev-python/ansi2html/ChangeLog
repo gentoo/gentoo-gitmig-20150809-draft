@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/ansi2html
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ansi2html/ChangeLog,v 1.1 2012/07/22 07:37:10 iksaif Exp $
+
+*ansi2html-0.9.1 (22 Jul 2012)
+
+  22 Jul 2012; Corentin Chary <iksaif@gentoo.org> +ansi2html-0.9.1.ebuild,
+  +files/ansi2html-0.9.1-fix-0-control-code.patch,
+  +files/ansi2html-0.9.1-fix-sys-argv-in-tests.patch, +metadata.xml:
+  New ebuild for ansi2html.
