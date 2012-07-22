@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/coderay
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/ChangeLog,v 1.54 2012/07/22 06:51:49 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/ChangeLog,v 1.55 2012/07/22 07:39:05 jdhore Exp $
+
+  22 Jul 2012; Jeff Horelick <jdhore@gentoo.org> coderay-1.0.6.ebuild:
+  marked x86 per bug 427594
 
   22 Jul 2012; Hans de Graaff <graaff@gentoo.org> -coderay-0.9.6.ebuild,
   -coderay-1.0.4.ebuild, -coderay-1.0.5.ebuild:
