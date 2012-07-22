@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga-web/icinga-web-1.7.1-r1.ebuild,v 1.1 2012/07/22 00:32:19 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga-web/icinga-web-1.7.1-r1.ebuild,v 1.2 2012/07/22 00:33:57 idl0r Exp $
 
 EAPI="2"
 
-inherit depend.apache eutils
+inherit depend.apache eutils user multilib
 
 DESCRIPTION="Icinga Web - new Web Interface"
 HOMEPAGE="http://www.icinga.org/"
