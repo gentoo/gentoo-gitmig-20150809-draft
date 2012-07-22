@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.1.1-r1.ebuild,v 1.2 2012/07/22 03:10:36 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.1.1-r1.ebuild,v 1.3 2012/07/22 03:57:25 cardoe Exp $
 
 EAPI="4"
 
@@ -62,11 +62,9 @@ RDEPEND="
 	>=dev-libs/glib-2.0
 	media-libs/libpng
 	sys-apps/pciutils
+	>=sys-apps/seabios-1.7.0
+	sys-apps/vgabios
 	virtual/jpeg
-	amd64? ( >=sys-apps/seabios-1.7.0
-		sys-apps/vgabios )
-	x86? ( >=sys-apps/seabios-1.7.0
-		sys-apps/vgabios )
 	aio? ( dev-libs/libaio )
 	alsa? ( >=media-libs/alsa-lib-1.0.13 )
 	bluetooth? ( net-wireless/bluez )
@@ -331,24 +329,21 @@ src_install() {
 
 	use python & dobin scripts/kvm/kvm_stat
 
-	# FIXME: Need to come up with a solution for non-x86 based systems
-	if use x86 || use amd64; then
-		# Remove SeaBIOS since we're using the SeaBIOS packaged one
-		rm "${ED}/usr/share/qemu/bios.bin"
-		dosym ../seabios/bios.bin /usr/share/qemu/bios.bin
+	# Remove SeaBIOS since we're using the SeaBIOS packaged one
+	rm "${ED}/usr/share/qemu/bios.bin"
+	dosym ../seabios/bios.bin /usr/share/qemu/bios.bin
 
-		# Remove vgabios since we're using the vgabios packaged one
-		rm "${ED}/usr/share/qemu/vgabios.bin"
-		rm "${ED}/usr/share/qemu/vgabios-cirrus.bin"
-		rm "${ED}/usr/share/qemu/vgabios-qxl.bin"
-		rm "${ED}/usr/share/qemu/vgabios-stdvga.bin"
-		rm "${ED}/usr/share/qemu/vgabios-vmware.bin"
-		dosym ../vgabios/vgabios.bin /usr/share/qemu/vgabios.bin
-		dosym ../vgabios/vgabios-cirrus.bin /usr/share/qemu/vgabios-cirrus.bin
-		dosym ../vgabios/vgabios-qxl.bin /usr/share/qemu/vgabios-qxl.bin
-		dosym ../vgabios/vgabios-stdvga.bin /usr/share/qemu/vgabios-stdvga.bin
-		dosym ../vgabios/vgabios-vmware.bin /usr/share/qemu/vgabios-vmware.bin
-	fi
+	# Remove vgabios since we're using the vgabios packaged one
+	rm "${ED}/usr/share/qemu/vgabios.bin"
+	rm "${ED}/usr/share/qemu/vgabios-cirrus.bin"
+	rm "${ED}/usr/share/qemu/vgabios-qxl.bin"
+	rm "${ED}/usr/share/qemu/vgabios-stdvga.bin"
+	rm "${ED}/usr/share/qemu/vgabios-vmware.bin"
+	dosym ../vgabios/vgabios.bin /usr/share/qemu/vgabios.bin
+	dosym ../vgabios/vgabios-cirrus.bin /usr/share/qemu/vgabios-cirrus.bin
+	dosym ../vgabios/vgabios-qxl.bin /usr/share/qemu/vgabios-qxl.bin
+	dosym ../vgabios/vgabios-stdvga.bin /usr/share/qemu/vgabios-stdvga.bin
+	dosym ../vgabios/vgabios-vmware.bin /usr/share/qemu/vgabios-vmware.bin
 }
 
 pkg_postinst() {

@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.139 2012/07/22 03:10:36 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.140 2012/07/22 03:57:25 cardoe Exp $
+
+  21 Jul 2012; Doug Goldstein <cardoe@gentoo.org> qemu-kvm-1.1.1-r1.ebuild,
+  qemu-kvm-9999.ebuild:
+  Use the Gentoo provided seabios and vgabios instead of the shipped versions.
 
   21 Jul 2012; Doug Goldstein <cardoe@gentoo.org> qemu-kvm-1.1.0.ebuild,
   qemu-kvm-1.1.1-r1.ebuild, qemu-kvm-9999.ebuild:
