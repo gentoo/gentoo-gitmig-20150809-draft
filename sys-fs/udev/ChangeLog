@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.692 2012/07/15 17:38:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.693 2012/07/22 17:34:47 armin76 Exp $
+
+  22 Jul 2012; Raúl Porcel <armin76@gentoo.org> udev-182-r2.ebuild,
+  udev-182-r3.ebuild, udev-186.ebuild:
+  Add ~alpha/~sh/~sparc wrt #397769
 
   15 Jul 2012; Raúl Porcel <armin76@gentoo.org> udev-171-r6.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #416653

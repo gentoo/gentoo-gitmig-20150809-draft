@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-186.ebuild,v 1.2 2012/07/05 17:11:15 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-186.ebuild,v 1.3 2012/07/22 17:34:47 armin76 Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ if [[ ${PV} = 9999* ]]; then
 	inherit git-2
 else
 	SRC_URI="http://www.freedesktop.org/software/systemd/systemd-${PV}.tar.xz"
-	KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~x86"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
 fi
 
 DESCRIPTION="Linux dynamic and persistent device naming support (aka userspace devfs)"
