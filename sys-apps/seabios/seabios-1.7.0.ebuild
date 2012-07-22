@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/seabios/seabios-1.7.0.ebuild,v 1.1 2012/06/28 15:09:36 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/seabios/seabios-1.7.0.ebuild,v 1.2 2012/07/22 03:31:45 cardoe Exp $
 
 EAPI=4
 
@@ -16,8 +16,9 @@ if [[ ${PV} = *9999* || ! -z "${EGIT_COMMIT}" ]]; then
 	KEYWORDS=""
 	SRC_URI=""
 else
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 	SRC_URI="http://www.linuxtogo.org/~kevin/SeaBIOS/${P}.tar.gz
+	http://dev.gentoo.org/~cardoe/distfiles/${P}-bins.tar.xz
 	${BACKPORTS:+http://dev.gentoo.org/~cardoe/distfiles/${P}-bp-${BACKPORTS}.tar.bz2}"
 fi
 
@@ -52,12 +53,16 @@ src_configure() {
 }
 
 src_compile() {
-	emake out/bios.bin
-#	emake out/vgabios.bin
+	if use amd64 || use x86 ; then
+		emake out/bios.bin
+	fi
 }
 
 src_install() {
 	insinto /usr/share/seabios
-	doins out/bios.bin
-#	doins out/vgabios.bin
+	if use amd64 || use x86 ; then
+		doins out/bios.bin
+	else
+		doins bins/bios.bin
+	fi
 }
