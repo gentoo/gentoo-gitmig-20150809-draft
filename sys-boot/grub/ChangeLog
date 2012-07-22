@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.229 2012/07/18 16:34:36 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.230 2012/07/22 16:43:04 floppym Exp $
+
+  22 Jul 2012; Mike Gilbert <floppym@gentoo.org>
+  +files/grub-2.00-gettext_printf.patch, grub-2.00.ebuild, grub-9999.ebuild:
+  Fix problem with single quotes in translated messages in grub-mkconfig. Bug
+  426364 by Alex Domingo.
 
   18 Jul 2012; Mike Gilbert <floppym@gentoo.org> grub-2.00.ebuild,
   grub-9999.ebuild:

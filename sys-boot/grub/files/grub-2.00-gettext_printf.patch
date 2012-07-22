@@ -1,0 +1,14 @@
+https://bugs.gentoo.org/show_bug.cgi?id=426364
+https://savannah.gnu.org/bugs/index.php?36839
+--- util/grub-mkconfig_lib.in
++++ util/grub-mkconfig_lib.in
+@@ -273,7 +273,7 @@
+ gettext_printf () {
+   gettext_printf_format="$1"
+   shift
+-  printf "$(gettext "$gettext_printf_format")" "$@"
++  printf "$(gettext_quoted "$gettext_printf_format")" "$@"
+ }
+ 
+ uses_abstraction () {
+

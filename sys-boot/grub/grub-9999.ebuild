@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.79 2012/07/18 16:34:36 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.80 2012/07/22 16:43:04 floppym Exp $
 
 EAPI=4
 
@@ -219,6 +219,7 @@ src_prepare() {
 	if [[ ${PV} != 9999 ]]; then
 		epatch "${FILESDIR}/${P}-parallel-make.patch" #424231
 		epatch "${FILESDIR}/${P}-no-gets.patch" #424703
+		epatch "${FILESDIR}/${P}-gettext_printf.patch" #426364
 	fi
 
 	# fix texinfo file name, bug 416035
