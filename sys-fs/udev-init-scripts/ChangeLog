@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev-init-scripts
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/ChangeLog,v 1.15 2012/07/04 21:04:38 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/ChangeLog,v 1.16 2012/07/22 19:01:21 armin76 Exp $
+
+  22 Jul 2012; Raúl Porcel <armin76@gentoo.org> udev-init-scripts-10.ebuild,
+  udev-init-scripts-12.ebuild:
+  Add ~alpha/~sh/~sparc wrt #397769
 
 *udev-init-scripts-12 (04 Jul 2012)
 
