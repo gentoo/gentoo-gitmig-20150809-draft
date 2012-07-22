@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/vboxgtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vboxgtk/ChangeLog,v 1.5 2012/06/16 07:39:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vboxgtk/ChangeLog,v 1.6 2012/07/22 17:25:18 pacho Exp $
+
+*vboxgtk-0.8.0 (22 Jul 2012)
+
+  22 Jul 2012; Pacho Ramos <pacho@gentoo.org> +vboxgtk-0.8.0.ebuild,
+  -vboxgtk-0.5.0-r1.ebuild:
+  Version bump, remove old (#398443 by b1254633).
 
   16 Jun 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer as he is not able to maintain this anymore.
@@ -25,4 +31,3 @@
   30 May 2009; Mounir Lamouri <volkmar@gentoo.org> +metadata.xml,
   +vboxgtk-0.4.1.ebuild:
   Initial commit, see bug 254718
-
