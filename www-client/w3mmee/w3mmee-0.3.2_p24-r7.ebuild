@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3mmee/w3mmee-0.3.2_p24-r7.ebuild,v 1.4 2012/07/19 01:24:20 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3mmee/w3mmee-0.3.2_p24-r7.ebuild,v 1.5 2012/07/23 04:14:31 naota Exp $
 
-inherit alternatives eutils
+inherit alternatives eutils toolchain-funcs
 
 IUSE="gpm imlib nls ssl xface"
 
@@ -82,7 +82,7 @@ src_compile() {
 	accept_lang=en
 	EOF
 
-	env ${myuse} ./configure -nonstop \
+	env CC=$(tc-getCC) ${myuse} ./configure -nonstop \
 		-prefix=/usr \
 		-suffix=mee \
 		-auxbindir=/usr/$(get_libdir)/w3mmee \
