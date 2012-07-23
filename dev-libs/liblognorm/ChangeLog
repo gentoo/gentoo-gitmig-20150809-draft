@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/liblognorm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblognorm/ChangeLog,v 1.15 2012/07/12 15:45:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblognorm/ChangeLog,v 1.16 2012/07/23 20:53:18 maekke Exp $
+
+  23 Jul 2012; Markus Meier <maekke@gentoo.org> liblognorm-0.3.4.ebuild:
+  add ~arm, bug #425526
 
   12 Jul 2012; Jeroen Roovers <jer@gentoo.org> liblognorm-0.3.4.ebuild:
   Marked ~hppa (bug #425526).

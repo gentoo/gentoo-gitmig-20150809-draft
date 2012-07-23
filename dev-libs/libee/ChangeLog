@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libee
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libee/ChangeLog,v 1.13 2012/07/12 15:44:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libee/ChangeLog,v 1.14 2012/07/23 20:49:50 maekke Exp $
+
+  23 Jul 2012; Markus Meier <maekke@gentoo.org> libee-0.4.1.ebuild:
+  add ~arm, bug #425526
 
   12 Jul 2012; Jeroen Roovers <jer@gentoo.org> libee-0.4.1.ebuild:
   Marked ~hppa (bug #425526).
