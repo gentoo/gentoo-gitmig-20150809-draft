@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/etckeeper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/ChangeLog,v 1.4 2012/06/16 23:21:39 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/ChangeLog,v 1.5 2012/07/23 06:05:00 jdhore Exp $
+
+  23 Jul 2012; Jeff Horelick <jdhore@gentoo.org> etckeeper-0.63.ebuild:
+  marked x86 per bug 427656
 
   16 Jun 2012; Julian Ospald <hasufell@gentoo.org> etckeeper-0.63.ebuild:
   fix doc destination
