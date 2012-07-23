@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.1_p20120715.ebuild,v 1.2 2012/07/23 16:31:26 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.1_p20120715.ebuild,v 1.3 2012/07/23 19:19:03 floppym Exp $
 
 EAPI=4
 
@@ -126,6 +126,8 @@ MYTHTV_GROUPS="video,audio,tty,uucp"
 pkg_setup() {
 	python_set_active_version 2
 	python_pkg_setup
+	enewuser mythtv -1 /bin/bash /home/mythtv ${MYTHTV_GROUPS}
+	usermod -a -G ${MYTHTV_GROUPS} mythtv
 }
 
 src_prepare() {
@@ -281,9 +283,6 @@ src_install() {
 
 pkg_preinst() {
 	export CONFIG_PROTECT="${CONFIG_PROTECT} ${EROOT}/home/mythtv/"
-
-	enewuser mythtv -1 /bin/bash /home/mythtv ${MYTHTV_GROUPS}
-	usermod -a -G ${MYTHTV_GROUPS} mythtv
 }
 
 pkg_postinst() {
