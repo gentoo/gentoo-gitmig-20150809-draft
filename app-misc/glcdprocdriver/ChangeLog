@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/glcdprocdriver
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/glcdprocdriver/ChangeLog,v 1.13 2012/05/06 15:59:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/glcdprocdriver/ChangeLog,v 1.14 2012/07/23 22:42:12 jdhore Exp $
+
+  23 Jul 2012; Jeff Horelick <jdhore@gentoo.org> glcdprocdriver-0.0.5.ebuild:
+  marked x86 per bug 425376
 
   06 May 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   lcd herd is empty
