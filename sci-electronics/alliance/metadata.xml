@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>sci-electronics</herd>
-  <longdescription>
+	<herd>sci-electronics</herd>
+	<longdescription>
   Alliance is a complete set of free CAD tools and portable libraries for VLSI
   design. It includes a VHDL compiler and simulator, logic synthesis tools, and
   automatic place and route tools. A complete set of portable CMOS libraries is
