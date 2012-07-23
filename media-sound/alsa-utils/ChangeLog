@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.323 2012/04/08 19:43:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.324 2012/07/23 15:04:38 swift Exp $
+
+  23 Jul 2012; <swift@gentoo.org> alsa-utils-1.0.23-r1.ebuild,
+  alsa-utils-1.0.24.2-r1.ebuild, alsa-utils-1.0.25.ebuild,
+  alsa-utils-1.0.25-r1.ebuild, alsa-utils-1.0.25-r2.ebuild:
+  Adding optional dependency on SELinux policy module
 
 *alsa-utils-1.0.25-r2 (08 Apr 2012)
 

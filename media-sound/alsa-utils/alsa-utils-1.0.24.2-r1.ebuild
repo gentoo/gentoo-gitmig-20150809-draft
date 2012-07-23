@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.24.2-r1.ebuild,v 1.8 2012/01/18 17:11:34 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.24.2-r1.ebuild,v 1.9 2012/07/23 15:04:38 swift Exp $
 
 EAPI=3
 inherit base systemd
@@ -16,16 +16,18 @@ SRC_URI="mirror://alsaproject/utils/${MY_P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0.9"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86"
-IUSE="doc nls minimal"
+IUSE="doc nls minimal selinux"
 
 DEPEND=">=sys-libs/ncurses-5.1
 	dev-util/dialog
 	>=media-libs/alsa-lib-1.0.24.1
-	doc? ( app-text/xmlto )"
+	doc? ( app-text/xmlto )
+	selinux? ( sec-policy/selinux-alsa )"
 RDEPEND=">=sys-libs/ncurses-5.1
 	dev-util/dialog
 	>=media-libs/alsa-lib-1.0.24.1
-	!minimal? ( sys-apps/pciutils )"
+	!minimal? ( sys-apps/pciutils )
+	selinux? ( sec-policy/selinux-alsa )"
 
 S="${WORKDIR}/${MY_P}"
 PATCHES=( "${FILESDIR}/alsa-utils-1.0.23-modprobe.d.patch" )
