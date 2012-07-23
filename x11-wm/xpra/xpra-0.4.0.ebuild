@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.2.0-r1.ebuild,v 1.2 2012/05/24 15:09:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.4.0.ebuild,v 1.1 2012/07/23 09:11:48 xmw Exp $
 
 EAPI=3
 
@@ -15,7 +15,7 @@ SRC_URI="http://xpra.org/src/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="ffmpeg jpeg libnotify parti png server ssh x264"
 
 COMMON_DEPEND="dev-python/pygtk:2
@@ -51,4 +51,9 @@ src_prepare() {
 	fi
 
 	$(PYTHON -2) make_constants_pxi.py wimpiggy/lowlevel/constants.txt wimpiggy/lowlevel/constants.pxi || die
+}
+
+src_install() {
+	distutils_src_install
+	rm -vf "${ED}"usr/share/{parti,wimpiggy,xpra}/{README*,COPYING} || die
 }
