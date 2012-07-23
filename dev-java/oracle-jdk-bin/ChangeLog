@@ -1,6 +1,16 @@
 # ChangeLog for dev-java/oracle-jdk-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.19 2012/07/14 21:05:47 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.20 2012/07/23 15:52:48 sera Exp $
+
+*oracle-jdk-bin-1.7.0.5-r2 (23 Jul 2012)
+
+  23 Jul 2012; Ralph Sennhauser <sera@gentoo.org>
+  +oracle-jdk-bin-1.7.0.5-r2.ebuild, metadata.xml:
+  Oracle also changed the distfiles of the demos. #427534.
+  Add fontconfig support.
+  Use paxctl for pax marking as the fallback won't create the headers. Thanks
+  to blueness. #427642
+  Add BSD license for examples.
 
   14 Jul 2012; Jeff Horelick <jdhore@gentoo.org>
   oracle-jdk-bin-1.7.0.5-r1.ebuild:

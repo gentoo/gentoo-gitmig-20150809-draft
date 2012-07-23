@@ -6,5 +6,6 @@
   <use>
     <flag name="derby">Enable Installation of Bundled Derby (Java DB)</flag>
     <flag name="jce">Enable Java Cryptographic Extension Unlimited Strength Policy files</flag>
+    <flag name="pax_kernel">Use paxctl to mark the JVM binaries.</flag>
   </use>
 </pkgmetadata>
