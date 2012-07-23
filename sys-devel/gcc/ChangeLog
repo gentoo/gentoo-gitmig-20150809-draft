@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.889 2012/07/23 16:00:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.890 2012/07/23 16:13:51 vapier Exp $
+
+  23 Jul 2012; Mike Frysinger <vapier@gentoo.org> gcc-4.6.3.ebuild,
+  gcc-4.7.1.ebuild:
+  Drop -Werror while building go #423153 by Tiziano Müller.
 
   23 Jul 2012; Mike Frysinger <vapier@gentoo.org> gcc-3.3.6-r1.ebuild:
   Fix building with newer glibc and siginfo changes #427220 by Martin Jansa.
