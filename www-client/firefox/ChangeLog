@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.167 2012/07/18 04:35:12 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.168 2012/07/23 18:10:41 anarchy Exp $
+
+  23 Jul 2012; Jory A. Pratt <anarchy@gentoo.org> firefox-10.0.6.ebuild:
+  --echangelog=y
 
   18 Jul 2012; Jory A. Pratt <anarchy@gentoo.org> firefox-10.0.4.ebuild:
   Remark alpha stable in 10.0.4
