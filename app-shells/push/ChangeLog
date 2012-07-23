@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/push
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/push/ChangeLog,v 1.5 2012/07/19 19:24:54 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/push/ChangeLog,v 1.6 2012/07/23 20:45:37 maekke Exp $
+
+  23 Jul 2012; Markus Meier <maekke@gentoo.org> push-1.5.ebuild:
+  arm stable, bug #427100
 
   19 Jul 2012; Anthony G. Basile <blueness@gentoo.org> push-1.5.ebuild:
   Stable ppc/ppc64, bug #427100
