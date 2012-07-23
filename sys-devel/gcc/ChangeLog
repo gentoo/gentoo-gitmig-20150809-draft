@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.886 2012/07/15 06:44:51 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.887 2012/07/23 15:09:13 vapier Exp $
+
+  23 Jul 2012; Mike Frysinger <vapier@gentoo.org> gcc-4.6.3.ebuild:
+  Fix building with glibc-2.16 #424970 by Chris Smith.
 
 *gcc-4.5.4 (15 Jul 2012)
 
