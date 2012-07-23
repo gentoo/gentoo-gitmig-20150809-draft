@@ -1,5 +1,9 @@
 # ChangeLog for sys-apps/kmod
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.47 2012/07/22 17:24:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.48 2012/07/23 14:20:12 williamh Exp $
+
+  23 Jul 2012; William Hubbs <williamh@gentoo.org> -kmod-7.ebuild,
+  -kmod-8.ebuild, -kmod-9.ebuild:
+  remove old versions
 
   22 Jul 2012; Raúl Porcel <armin76@gentoo.org> kmod-9.ebuild,
   kmod-9-r3.ebuild:
