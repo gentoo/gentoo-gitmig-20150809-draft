@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r13.ebuild,v 1.1 2012/07/23 04:34:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r13.ebuild,v 1.2 2012/07/23 08:06:44 dirtyepic Exp $
 
 # XXX: we need to review menu.lst vs grub.conf handling.  We've been converting
 #      all systems to grub.conf (and symlinking menu.lst to grub.conf), but
@@ -109,7 +109,6 @@ src_configure() {
 			eerror "is specifically intended for building the tarballs for the"
 			eerror "grub-static package via USE='static -ncurses'."
 			eerror "All bets are now off."
-			ebeep 10
 		fi
 	fi
 
@@ -197,9 +196,8 @@ setup_boot_dir() {
 	# change menu.lst to grub.conf
 	if [[ ! -e ${dir}/grub.conf ]] && [[ -e ${dir}/menu.lst ]] ; then
 		mv -f "${dir}"/menu.lst "${dir}"/grub.conf
-		ewarn
 		ewarn "*** IMPORTANT NOTE: menu.lst has been renamed to grub.conf"
-		ewarn
+		echo
 	fi
 
 	if [[ ! -e ${dir}/menu.lst ]]; then
@@ -214,10 +212,13 @@ setup_boot_dir() {
 		ewarn "stage1 and stage2 will still be the old version, but"
 		ewarn "later stages will be the new version, which could"
 		ewarn "cause problems such as an unbootable system."
+		ewarn
 		ewarn "This means you must use either grub-install or perform"
-		ewarn "root/setup manually! For more help, see the handbook:"
+		ewarn "root/setup manually."
+		ewarn
+		ewarn "For more help, see the handbook:"
 		ewarn "http://www.gentoo.org/doc/en/handbook/handbook-${ARCH}.xml?part=1&chap=10#grub-install-auto"
-		ebeep
+		echo
 	fi
 
 	einfo "Copying files from /lib/grub and /usr/share/grub to ${dir}"
@@ -262,18 +263,21 @@ pkg_postinst() {
 		elog "WARNING: you have DONT_MOUNT_BOOT in effect, so you must apply"
 		elog "the following instructions for your /boot!"
 		elog "Neglecting to do so may cause your system to fail to boot!"
-		elog
+		echo
 	else
 		setup_boot_dir "${ROOT}"/boot
 		# Trailing output because if this is run from pkg_postinst, it gets mixed into
 		# the other output.
-		einfo ""
+		echo
 	fi
 	elog "To interactively install grub files to another device such as a USB"
 	elog "stick, just run the following and specify the directory as prompted:"
+	elog
 	elog "   emerge --config =${PF}"
+	elog
 	elog "Alternately, you can export GRUB_ALT_INSTALLDIR=/path/to/use to tell"
 	elog "grub where to install in a non-interactive way."
+	echo
 
 	# needs to be after we call setup_boot_dir
 	mount-boot_pkg_postinst
