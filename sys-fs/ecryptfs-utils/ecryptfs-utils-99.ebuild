@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ecryptfs-utils-99.ebuild,v 1.1 2012/07/16 06:23:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ecryptfs-utils-99.ebuild,v 1.2 2012/07/23 09:44:28 radhermit Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2:2.5"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.4 3.* *-jython 2.7-pypy-*"
 
-inherit flag-o-matic pam python linux-info autotools
+inherit flag-o-matic pam python linux-info autotools eutils
 
 DESCRIPTION="eCryptfs userspace utilities"
 HOMEPAGE="https://launchpad.net/ecryptfs"
@@ -48,6 +48,9 @@ src_prepare() {
 
 	# Python bindings are built/installed manually.
 	sed -e "/SUBDIRS =/s/ libecryptfs-swig//" -i src/Makefile.am || die "sed failed"
+
+	# respect CPPFLAGS when python support is enabled (bug #424601)
+	epatch "${FILESDIR}"/${P}-python-m4.patch
 
 	eautoreconf
 }
