@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.97 2012/07/06 14:04:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.98 2012/07/23 12:42:07 aballier Exp $
 
 EAPI="4"
 
@@ -32,7 +32,7 @@ IUSE="
 	aac aacplus alsa amr avresample bindist bluray +bzip2 cdio celt
 	cpudetection debug doc +encode faac fontconfig frei0r gnutls gsm
 	+hardcoded-tables iec61883 ieee1394 jack jpeg2k libass libv4l modplug mp3
-	network openal openssl oss pic pulseaudio rtmp schroedinger sdl speex
+	network openal openssl opus oss pic pulseaudio rtmp schroedinger sdl speex
 	static-libs	test theora threads truetype v4l vaapi vdpau vorbis vpx X x264
 	xvid +zlib
 	"
@@ -80,6 +80,7 @@ RDEPEND="
 	libv4l? ( media-libs/libv4l )
 	modplug? ( media-libs/libmodplug )
 	openal? ( >=media-libs/openal-1.1 )
+	opus? ( media-libs/opus )
 	pulseaudio? ( media-sound/pulseaudio )
 	rtmp? ( >=media-video/rtmpdump-2.2f )
 	sdl? ( >=media-libs/libsdl-1.2.13-r1[audio,video] )
@@ -188,7 +189,7 @@ src_configure() {
 
 	# Decoders
 	use amr && { myconf="${myconf} --enable-libopencore-amrwb --enable-libopencore-amrnb" ; version3=" --enable-version3" ; }
-	for i in bluray celt gsm modplug rtmp schroedinger speex vorbis vpx; do
+	for i in bluray celt gsm modplug opus rtmp schroedinger speex vorbis vpx; do
 		use ${i} && myconf="${myconf} --enable-lib${i}"
 	done
 	use jpeg2k && myconf="${myconf} --enable-libopenjpeg"
