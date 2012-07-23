@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/redshift-1.7-r1.ebuild,v 1.2 2012/07/21 19:13:55 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/redshift-1.7-r1.ebuild,v 1.3 2012/07/23 15:08:59 hasufell Exp $
 
 EAPI=4
 
@@ -33,8 +33,7 @@ DEPEND="${COMMON_DEPEND}
 
 src_prepare() {
 	>py-compile
-	epatch "${FILESDIR}"/${P}-python-abi.patch \
-		"${FILESDIR}"/${P}-make-conditionals.patch
+	epatch "${FILESDIR}"/${P}-make-conditionals.patch
 	eautoreconf
 }
 
@@ -53,20 +52,18 @@ src_configure() {
 
 src_install() {
 	default
+	rm -R "${D}"/usr/$(get_libdir)/python* || die
 
 	# handle multiple python abi support
 	per_abi_install() {
 		cp "${D}"/usr/bin/gtk-redshift "${D}"/usr/bin/gtk-redshift-${PYTHON_ABI} || die
-		python_convert_shebangs ${PYTHON_ABI} "${D}"/usr/bin/gtk-redshift-${PYTHON_ABI}
-
-		insinto "$(python_get_sitedir)"/gtk_redshift
-		doins src/gtk-redshift/{__init__,defs,statusicon,utils}.py
+	 	python_convert_shebangs ${PYTHON_ABI} "${D}"/usr/bin/gtk-redshift-${PYTHON_ABI}
+		emake DESTDIR="${D}" pythondir="$(python_get_sitedir)" -C src/gtk-redshift install || die
 	}
 
 	if use gtk ; then
 		python_execute_function per_abi_install
-		rm "${D}"/usr/bin/gtk-redshift || die
-		python_generate_wrapper_scripts "${D}"/usr/bin/gtk-redshift
+		python_generate_wrapper_scripts -f "${D}"/usr/bin/gtk-redshift
 	fi
 }
 
