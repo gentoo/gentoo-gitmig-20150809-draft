@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/vboxgtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vboxgtk/ChangeLog,v 1.6 2012/07/22 17:25:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vboxgtk/ChangeLog,v 1.7 2012/07/23 15:46:28 hasufell Exp $
+
+  23 Jul 2012; Julian Ospald <hasufell@gentoo.org> vboxgtk-0.8.0.ebuild,
+  metadata.xml:
+  adopt package, fix RESTRICT_PYTHON_ABIS, remove shebang-conversion, don't
+  overwrite distutils_src_prepare
 
 *vboxgtk-0.8.0 (22 Jul 2012)
 
