@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2011.03.2-r3.ebuild,v 1.5 2012/07/03 16:37:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2011.03.2-r3.ebuild,v 1.6 2012/07/23 17:13:22 zerochaos Exp $
 
 EAPI=4
 
@@ -61,6 +61,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/kismet-console-scrolling-backport.patch
 	epatch "${FILESDIR}"/header_alignment_r3326.patch
 	epatch "${FILESDIR}"/use-hostname-by-default.patch
+	epatch "${FILESDIR}"/${P}-cflags-backport.patch
 }
 
 src_configure() {
