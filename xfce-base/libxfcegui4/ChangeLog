@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/libxfcegui4
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/ChangeLog,v 1.180 2012/07/14 12:17:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/ChangeLog,v 1.181 2012/07/23 22:34:05 blueness Exp $
+
+  23 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
+  libxfcegui4-4.10.0.ebuild:
+  Keyword ~mips
 
   14 Jul 2012; Markus Meier <maekke@gentoo.org> libxfcegui4-4.10.0.ebuild:
   arm stable, bug #416233
