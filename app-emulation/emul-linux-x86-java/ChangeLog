@@ -1,6 +1,16 @@
 # ChangeLog for app-emulation/emul-linux-x86-java
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.112 2012/07/13 15:57:29 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.113 2012/07/23 19:00:49 sera Exp $
+
+*emul-linux-x86-java-1.6.0.33-r2 (23 Jul 2012)
+
+  23 Jul 2012; Ralph Sennhauser <sera@gentoo.org>
+  -emul-linux-x86-java-1.6.0.31.ebuild,
+  +emul-linux-x86-java-1.6.0.33-r2.ebuild, metadata.xml:
+  Use paxctl for pax marking as the fallback won't create the headers. Thanks
+  to blueness. #427642
+  Prune unused font configuration files.
+  Remove vulnarable.
 
 *emul-linux-x86-java-1.6.0.33-r1 (13 Jul 2012)
 
