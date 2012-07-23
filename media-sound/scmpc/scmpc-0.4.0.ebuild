@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/scmpc/scmpc-0.4.0.ebuild,v 1.1 2012/07/23 00:45:11 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/scmpc/scmpc-0.4.0.ebuild,v 1.2 2012/07/23 01:18:10 angelos Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ RDEPEND="dev-libs/glib:2
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-DOCS=( AUTHORS ChangeLog NEWS README scmpc.conf.example )
+DOCS=( AUTHORS ChangeLog NEWS README.md scmpc.conf.example )
 
 src_install() {
 	default
