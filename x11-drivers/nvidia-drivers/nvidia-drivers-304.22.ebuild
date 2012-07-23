@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-304.22.ebuild,v 1.5 2012/07/22 22:32:26 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-304.22.ebuild,v 1.6 2012/07/23 00:26:10 mr_bones_ Exp $
 
 EAPI="4"
 
@@ -438,7 +438,6 @@ src_install() {
 		insinto /etc/xdg/autostart
 		doins "${FILESDIR}"/nvidia-autostart.desktop
 	fi
-
 
 	doenvd "${FILESDIR}"/50nvidia-prelink-blacklist
 
