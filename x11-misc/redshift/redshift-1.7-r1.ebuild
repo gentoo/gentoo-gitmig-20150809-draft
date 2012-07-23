@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/redshift-1.7-r1.ebuild,v 1.3 2012/07/23 15:08:59 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/redshift-1.7-r1.ebuild,v 1.4 2012/07/23 15:11:21 hasufell Exp $
 
 EAPI=4
 
@@ -58,7 +58,7 @@ src_install() {
 	per_abi_install() {
 		cp "${D}"/usr/bin/gtk-redshift "${D}"/usr/bin/gtk-redshift-${PYTHON_ABI} || die
 	 	python_convert_shebangs ${PYTHON_ABI} "${D}"/usr/bin/gtk-redshift-${PYTHON_ABI}
-		emake DESTDIR="${D}" pythondir="$(python_get_sitedir)" -C src/gtk-redshift install || die
+		emake DESTDIR="${D}" pythondir="$(python_get_sitedir)" -C src/gtk-redshift install
 	}
 
 	if use gtk ; then

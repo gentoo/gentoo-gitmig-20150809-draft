@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/redshift
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/ChangeLog,v 1.16 2012/07/23 15:08:59 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/ChangeLog,v 1.17 2012/07/23 15:11:21 hasufell Exp $
+
+  23 Jul 2012; Julian Ospald <hasufell@gentoo.org> redshift-1.7-r1.ebuild:
+  remove obsolete die
 
   23 Jul 2012; Julian Ospald <hasufell@gentoo.org> redshift-1.7-r1.ebuild,
   -files/redshift-1.7-python-abi.patch:
