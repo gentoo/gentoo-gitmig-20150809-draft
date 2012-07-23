@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.18.ebuild,v 1.1 2012/07/16 11:27:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.18.ebuild,v 1.2 2012/07/23 15:29:25 swift Exp $
 
 EAPI=4
 inherit autotools eutils flag-o-matic multilib pam
@@ -12,7 +12,7 @@ SRC_URI="http://www.jwz.org/xscreensaver/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x64-solaris ~x86-solaris"
-IUSE="gdm jpeg new-login opengl pam +perl suid xinerama"
+IUSE="gdm jpeg new-login opengl pam +perl selinux suid xinerama"
 
 COMMON_DEPEND="dev-libs/libxml2
 	>=gnome-base/libglade-2
@@ -35,6 +35,7 @@ COMMON_DEPEND="dev-libs/libxml2
 		)
 	opengl? ( virtual/opengl )
 	pam? ( virtual/pam )
+	selinux? ( sec-policy/selinux-xscreensaver )
 	xinerama? ( x11-libs/libXinerama )"
 # For USE="perl" see output of `qlist xscreensaver | grep bin | xargs grep '::'`
 RDEPEND="${COMMON_DEPEND}
