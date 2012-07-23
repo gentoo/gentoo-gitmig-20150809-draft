@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/csound/csound-5.17.11.ebuild,v 1.1 2012/05/29 12:02:17 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/csound/csound-5.17.11.ebuild,v 1.2 2012/07/23 21:18:24 radhermit Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -82,6 +82,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-5.17.6-fltk.patch
 	epatch "${FILESDIR}"/${PN}-5.17.6-porttime-in-portmidi.patch
 	epatch "${FILESDIR}"/${P}-cmake.patch
+	epatch "${FILESDIR}"/${PN}-5.17.11-bison-2.6.patch
+	epatch "${FILESDIR}"/${PN}-5.17.11-no-fltk-gl.patch
 
 	sed -i -e "s:^\(csoundExecutable =\).*:\1 \"${WORKDIR}/${P}_build/csound\":" \
 		tests/test.py || die
