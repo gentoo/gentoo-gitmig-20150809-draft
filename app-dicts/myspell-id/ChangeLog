@@ -1,6 +1,12 @@
 # ChangeLog for app-dicts/myspell-id
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-id/ChangeLog,v 1.18 2012/05/17 18:19:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-id/ChangeLog,v 1.19 2012/07/23 13:58:45 scarabeus Exp $
+
+*myspell-id-1.0 (23 Jul 2012)
+
+  23 Jul 2012; Tomáš Chvátal <scarabeus@gentoo.org> +myspell-id-1.0.ebuild,
+  -myspell-id-20060316.ebuild:
+  Version bump to latest upstream version. Remove newer/older.
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org> myspell-id-20060316.ebuild:
   keyword ~amd64-fbsd
