@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/m17n-lib/m17n-lib-1.6.3-r1.ebuild,v 1.2 2012/07/02 22:32:42 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/m17n-lib/m17n-lib-1.6.3-r1.ebuild,v 1.3 2012/07/23 21:09:54 maekke Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.m17n.org/m17n-lib-download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~sparc ~x86"
 IUSE="anthy athena anthy bidi fontconfig gd spell libotf libxml2 X xft"
 
 RDEPEND="
