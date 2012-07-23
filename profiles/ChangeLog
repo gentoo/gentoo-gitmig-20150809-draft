@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6830 2012/07/23 05:55:25 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6831 2012/07/23 11:33:28 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
+  default/linux/package.use.mask:
+  p.use.mask system-libs for spideroak-bin, bug #426798
 
   23 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
   -default/linux/arm/10.0/use.mask:
