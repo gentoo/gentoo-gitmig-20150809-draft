@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/g-pypi/g-pypi-0.3.ebuild,v 1.1 2012/06/28 19:48:16 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/g-pypi/g-pypi-0.3.ebuild,v 1.2 2012/07/23 20:25:28 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -23,7 +23,6 @@ DEPEND="
 	dev-python/setuptools
 	doc? (
 		dev-python/sphinx
-		dev-python/sphinxcontrib-googleanalytics
 	)
 	test? (
 		dev-python/mock
@@ -40,6 +39,7 @@ RDEPEND="
 	dev-python/setuptools
 	dev-python/jinja
 	dev-python/pygments
+	dev-python/sphinxcontrib-googleanalytics
 	dev-python/unittest2
 	dev-python/yolk
 "
