@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.6.0.32.ebuild,v 1.2 2012/05/08 18:38:54 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.6.0.33-r2.ebuild,v 1.1 2012/07/23 18:10:16 sera Exp $
 
 EAPI="4"
 
 inherit java-vm-2 eutils prefix versionator
 
 # This URIs need to be updated when bumping!
-JDK_URI="http://www.oracle.com/technetwork/java/javase/downloads/jdk-6u32-downloads-1594644.html"
+JDK_URI="http://www.oracle.com/technetwork/java/javase/downloads/jdk6-downloads-1637591.html"
 
 MY_PV="$(get_version_component_range 2)u$(get_version_component_range 4)"
 S_PV="$(replace_version_separator 3 '_')"
@@ -35,6 +35,8 @@ SRC_URI="
 		examples? ( ${X86_DEMOS} ) )
 	amd64? ( ${AMD64_AT}
 		examples? ( ${AMD64_DEMOS} ) )
+	ia64? ( ${IA64_AT}
+		examples? ( ${IA64_DEMOS} ) )
 	x86-solaris? ( ${SOL_X86_AT}
 		examples? ( ${SOL_X86_DEMOS} ) )
 	x64-solaris? ( ${SOL_X86_AT} ${SOL_AMD64_AT}
@@ -43,15 +45,12 @@ SRC_URI="
 		examples? ( ${SOL_SPARC_DEMOS} ) )
 	sparc64-solaris? ( ${SOL_SPARC_AT} ${SOL_SPARCv9_AT}
 		examples? ( ${SOL_SPARC_DEMOS} ${SOL_SPARCv9_DEMOS} ) )"
-	# last available in 6u31
-	#ia64? ( ${IA64_AT}
-	#	examples? ( ${IA64_DEMOS} ) )
 
 LICENSE="Oracle-BCLA-JavaSE"
 SLOT="1.6"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 
-IUSE="X alsa derby doc examples jce kernel_SunOS nsplugin +source"
+IUSE="X alsa derby doc examples jce kernel_SunOS nsplugin pax_kernel +source"
 
 RESTRICT="fetch strip"
 
@@ -68,6 +67,10 @@ RDEPEND="
 	jce? ( dev-java/sun-jce-bin:1.6 )
 	kernel_SunOS? ( app-arch/unzip )
 	!prefix? ( sys-libs/glibc )"
+# scanelf won't create a PaX header, so depend on paxctl to avoid fallback
+# marking. #427642
+DEPEND="
+	pax_kernel? ( sys-apps/paxctl )"
 
 S="${WORKDIR}/jdk${S_PV}"
 
@@ -174,6 +177,9 @@ src_compile() {
 }
 
 src_install() {
+	local dest="/opt/${P}"
+	local ddest="${ED}${dest}"
+
 	# We should not need the ancient plugin for Firefox 2 anymore, plus it has
 	# writable executable segments
 	if use x86; then
@@ -189,41 +195,41 @@ src_install() {
 			{,jre/}lib/${arch}/libjavaplugin_jni.so
 	fi
 
-	dodir /opt/${P}
-	cp -pPR bin include jre lib man "${ED}"/opt/${P} || die
+	dodir "${dest}"
+	cp -pPR bin include jre lib man "${ddest}" || die
 
 	if use derby; then
-		cp -pPR db "${ED}"/opt/${P} || die
+		cp -pPR db "${ddest}" || die
 	fi
 
 	if use examples; then
-		cp -pPR demo sample "${ED}"/opt/${P} || die
+		cp -pPR demo sample "${ddest}" || die
 	fi
 
 	# Remove empty dirs we might have copied
-	rmdir -v $(find "${D}" -type d -empty) || die
+	find "${D}" -type d -empty -exec rmdir -v {} + || die
 
 	dodoc COPYRIGHT
 	dohtml README.html
 
 	if use jce; then
-		dodir /opt/${P}/jre/lib/security/strong-jce
-		mv "${ED}"/opt/${P}/jre/lib/security/US_export_policy.jar \
-			"${ED}"/opt/${P}/jre/lib/security/strong-jce || die
-		mv "${ED}"/opt/${P}/jre/lib/security/local_policy.jar \
-			"${ED}"/opt/${P}/jre/lib/security/strong-jce || die
+		dodir "${dest}"/jre/lib/security/strong-jce
+		mv "${ddest}"/jre/lib/security/US_export_policy.jar \
+			"${ddest}"/jre/lib/security/strong-jce || die
+		mv "${ddest}"/jre/lib/security/local_policy.jar \
+			"${ddest}"/jre/lib/security/strong-jce || die
 		dosym /opt/sun-jce-bin-1.6.0/jre/lib/security/unlimited-jce/US_export_policy.jar \
-			/opt/${P}/jre/lib/security/US_export_policy.jar
+			"${dest}"/jre/lib/security/US_export_policy.jar
 		dosym /opt/sun-jce-bin-1.6.0/jre/lib/security/unlimited-jce/local_policy.jar \
-			/opt/${P}/jre/lib/security/local_policy.jar
+			"${dest}"/jre/lib/security/local_policy.jar
 	fi
 
 	if use nsplugin; then
-		install_mozilla_plugin /opt/${P}/jre/lib/${arch}/libnpjp2.so
+		install_mozilla_plugin "${dest}"/jre/lib/${arch}/libnpjp2.so
 	fi
 
 	if use source; then
-		cp src.zip "${ED}"/opt/${P} || die
+		cp src.zip "${ddest}" || die
 	fi
 
 	# Install desktop file for the Java Control Panel.
@@ -238,14 +244,16 @@ src_install() {
 		"${T}"/jcontrol-${PN}-${SLOT}.desktop || die
 	domenu "${T}"/jcontrol-${PN}-${SLOT}.desktop
 
-	# bug #56444
+	# http://docs.oracle.com/javase/6/docs/technotes/guides/intl/fontconfig.html
+	rm "${ddest}"/jre/lib/fontconfig.* || die
 	cp "${FILESDIR}"/fontconfig.Gentoo.properties-r1 "${T}"/fontconfig.properties || die
 	eprefixify "${T}"/fontconfig.properties
-	insinto /opt/${P}/jre/lib/
+	insinto "${dest}"/jre/lib/
 	doins "${T}"/fontconfig.properties
 
 	set_java_env "${FILESDIR}/${VMHANDLE}.env-r1"
 	java-vm_revdep-mask
+	java-vm_sandbox-predict /dev/random
 }
 
 QA_TEXTRELS_x86="

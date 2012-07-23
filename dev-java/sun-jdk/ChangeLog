@@ -1,6 +1,16 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.328 2012/07/14 21:07:52 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.329 2012/07/23 18:10:16 sera Exp $
+
+*sun-jdk-1.6.0.33-r2 (23 Jul 2012)
+
+  23 Jul 2012; Ralph Sennhauser <sera@gentoo.org> -sun-jdk-1.6.0.31.ebuild,
+  -sun-jdk-1.6.0.32.ebuild, +sun-jdk-1.6.0.33-r2.ebuild, metadata.xml:
+  Use paxctl for pax marking as the fallback won't create the headers. Thanks
+  to blueness. #427642
+  Create sandbox control file.
+  Prune unused font configuration files.
+  Remove old and vulnarable.
 
   14 Jul 2012; Jeff Horelick <jdhore@gentoo.org> sun-jdk-1.6.0.33-r1.ebuild:
   marked x86 per bug 421073
