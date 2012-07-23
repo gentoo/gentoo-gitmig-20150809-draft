@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.139 2012/07/06 18:41:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.140 2012/07/23 15:40:24 swift Exp $
+
+  23 Jul 2012; <swift@gentoo.org> bluez-4.98-r2.ebuild, bluez-4.99.ebuild,
+  bluez-4.101-r1.ebuild:
+  Adding optional dependency on SELinux module
 
 *bluez-4.101-r1 (06 Jul 2012)
 

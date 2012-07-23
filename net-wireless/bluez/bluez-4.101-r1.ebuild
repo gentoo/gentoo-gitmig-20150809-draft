@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.101-r1.ebuild,v 1.1 2012/07/06 18:41:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.101-r1.ebuild,v 1.2 2012/07/23 15:40:24 swift Exp $
 
 EAPI="4"
 PYTHON_DEPEND="test-programs? 2"
@@ -20,7 +20,7 @@ SRC_URI="mirror://kernel/linux/bluetooth/${P}.tar.xz
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
-IUSE="alsa +consolekit cups debug gstreamer pcmcia test-programs usb readline"
+IUSE="alsa +consolekit cups debug gstreamer selinux pcmcia test-programs usb readline"
 
 CDEPEND="
 	>=dev-libs/glib-2.28:2
@@ -35,6 +35,7 @@ CDEPEND="
 		>=media-libs/gstreamer-0.10:0.10
 		>=media-libs/gst-plugins-base-0.10:0.10
 	)
+	selinux? ( sec-policy/selinux-bluetooth )
 	usb? ( virtual/libusb:0 )
 	readline? ( sys-libs/readline )
 "
