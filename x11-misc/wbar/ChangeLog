@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/wbar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/ChangeLog,v 1.19 2012/05/14 17:50:56 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/ChangeLog,v 1.20 2012/07/23 06:16:34 jdhore Exp $
+
+  23 Jul 2012; Jeff Horelick <jdhore@gentoo.org> wbar-2.3.0.ebuild:
+  marked x86 per bug 427658
 
   14 May 2012; Julian Ospald <hasufell@gentoo.org> wbar-2.3.0.ebuild:
   force virtual/init

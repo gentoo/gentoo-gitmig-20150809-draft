@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/wbarconf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbarconf/ChangeLog,v 1.4 2012/06/17 14:32:36 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbarconf/ChangeLog,v 1.5 2012/07/23 06:17:13 jdhore Exp $
+
+  23 Jul 2012; Jeff Horelick <jdhore@gentoo.org> wbarconf-0.7.2.2-r1.ebuild:
+  marked x86 per bug 427658
 
 *wbarconf-0.7.2.2-r1 (17 Jun 2012)
 
