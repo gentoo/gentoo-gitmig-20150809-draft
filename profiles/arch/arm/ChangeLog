@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.161 2012/07/17 11:01:53 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.162 2012/07/23 20:46:35 maekke Exp $
+
+  23 Jul 2012; Markus Meier <maekke@gentoo.org> use.mask:
+  use.mask anthy, bug #424329
 
   17 Jul 2012; Anthony G. Basile <blueness@gentoo.org> package.use.mask:
   Mask net-libs/cyassl[aes-ni] on arm

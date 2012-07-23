@@ -141,6 +141,7 @@ zvbi
 aacplus
 devil
 gts
+anthy
 
 # Unmask ARM-only video-cards
 -video_cards_exynos
