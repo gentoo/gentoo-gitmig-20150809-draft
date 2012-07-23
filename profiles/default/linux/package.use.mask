@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/package.use.mask,v 1.32 2012/07/23 11:33:29 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/package.use.mask,v 1.33 2012/07/23 11:37:15 blueness Exp $
 
 sys-devel/gcc hardened
 sys-libs/glibc hardened
 
 # Anthony G. Basile <blueness@gentoo.org> (23 Jul 2012)
-# USE=system-libs is potentially unreliability and insecurity
+# USE=system-libs is potentially unreliable and insecure
 # Bug #426798
 app-backup/spideroak-bin system-libs
 
