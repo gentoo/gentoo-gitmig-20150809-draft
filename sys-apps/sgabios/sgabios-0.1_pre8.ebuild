@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sgabios/sgabios-0.1_pre8.ebuild,v 1.1 2012/07/22 04:32:04 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sgabios/sgabios-0.1_pre8.ebuild,v 1.2 2012/07/23 16:14:43 cardoe Exp $
 
 EAPI=4
+
+inherit eutils
 
 DESCRIPTION="serial graphics adapter bios option rom for x86"
 HOMEPAGE="http://code.google.com/p/sgabios/"
@@ -17,6 +19,10 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-makefile.patch
+}
 
 src_compile() {
 	if use amd64 || use x86 ; then
