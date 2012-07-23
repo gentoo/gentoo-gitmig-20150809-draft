@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.348 2012/07/23 10:57:15 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.349 2012/07/23 12:44:06 yngwin Exp $
+
+  23 Jul 2012; Ben de Groot <yngwin@gentoo.org> +l10n.eclass:
+  Initial commit of l10n.eclass
 
   23 Jul 2012; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   mysql.eclass, mysql-v2.eclass:
