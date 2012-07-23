@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.20.2.ebuild,v 1.1 2012/07/14 16:11:44 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.20.2.ebuild,v 1.2 2012/07/23 21:36:52 dilfridge Exp $
 
 EAPI="4"
 
@@ -25,7 +25,7 @@ COMMON_DEPEND="
 	cairo? (
 		dev-libs/glib:2
 		>=x11-libs/cairo-1.10.0
-		introspection? ( >=dev-libs/gobject-introspection-0.9.12 )
+		introspection? ( >=dev-libs/gobject-introspection-1.32.1 )
 	)
 	curl? ( net-misc/curl )
 	jpeg? ( virtual/jpeg )
