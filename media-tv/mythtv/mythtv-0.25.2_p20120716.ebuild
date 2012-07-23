@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.2_p20120716.ebuild,v 1.7 2012/07/21 21:47:20 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.2_p20120716.ebuild,v 1.8 2012/07/23 16:31:26 floppym Exp $
 
 EAPI=4
 
@@ -287,13 +287,15 @@ src_install() {
 		newins "${FILESDIR}"/xinitrc-r1 .xinitrc
 	fi
 
-	# Make Python files executable and ensure they are executed by Python 2
+	# Make Python files executable
 	find "${ED}/usr/share/mythtv" -type f -name '*.py' | while read file; do
 		if [[ ! "${file##*/}" = "__init__.py" ]]; then
 			chmod a+x "${file}"
-			python_convert_shebangs -q 2 "${file}"
 		fi
 	done
+
+	# Ensure that Python scripts are executed by Python 2
+	python_convert_shebangs -q -r 2 "${ED}/usr/share/mythtv"
 
 	# Make shell & perl scripts executable
 	find "${ED}" -type f -name '*.sh' -o -type f -name '*.pl' | \
