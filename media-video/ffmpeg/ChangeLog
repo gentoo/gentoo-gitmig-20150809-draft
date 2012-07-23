@@ -1,6 +1,11 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.568 2012/07/09 05:19:58 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.569 2012/07/23 12:33:48 aballier Exp $
+
+*ffmpeg-0.10.4 (23 Jul 2012)
+
+  23 Jul 2012; Alexis Ballier <aballier@gentoo.org> +ffmpeg-0.10.4.ebuild:
+  version bump for the 0.10 branch
 
   09 Jul 2012; Michael Weber <xmw@gentoo.org> ffmpeg-0.10.3.ebuild:
   ppc stable (bug 420305)
