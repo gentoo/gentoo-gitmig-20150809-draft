@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-flac
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-flac/ChangeLog,v 1.171 2012/05/17 14:40:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-flac/ChangeLog,v 1.172 2012/07/23 22:36:07 blueness Exp $
+
+  23 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
+  gst-plugins-flac-0.10.30.ebuild:
+  Rekeyword ~mips, working fine on lemote yeeloong
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org>
   gst-plugins-flac-0.10.30.ebuild:
