@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-v2.eclass,v 1.16 2012/05/06 10:42:36 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-v2.eclass,v 1.17 2012/07/23 10:57:15 jmbsvicetto Exp $
 
 # @ECLASS: mysql-v2.eclass
 # @MAINTAINER:
@@ -223,7 +223,7 @@ DEPEND="${DEPEND}
 	virtual/yacc
 "
 
-DEPEND="${DEPEND} static? ( || ( sys-libs/ncurses[static-libs] <=sys-libs/ncurses-5.7-r3 ) )"
+DEPEND="${DEPEND} static? ( sys-libs/ncurses[static-libs] )"
 
 # compile-time-only
 DEPEND="${DEPEND} >=dev-util/cmake-2.4.3"

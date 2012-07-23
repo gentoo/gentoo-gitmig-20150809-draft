@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.171 2012/06/02 19:16:31 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.172 2012/07/23 10:57:15 jmbsvicetto Exp $
 
 # @ECLASS: mysql.eclass
 # @MAINTAINER:
@@ -29,7 +29,7 @@ S="${WORKDIR}/mysql"
 if [[ "${MY_EXTRAS_VER}" == "live" ]]; then
 	EGIT_PROJECT=mysql-extras
 	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/mysql-extras.git"
-	inherit git
+	inherit git-2
 fi
 
 case "${EAPI:-0}" in
@@ -151,7 +151,7 @@ DEPEND="${DEPEND}
 		virtual/yacc"
 
 if [ "${EAPI:-0}" = "2" ]; then
-	DEPEND="${DEPEND} static? ( || ( sys-libs/ncurses[static-libs] <=sys-libs/ncurses-5.7-r3 ) )"
+	DEPEND="${DEPEND} static? ( sys-libs/ncurses[static-libs] )"
 fi
 
 # compile-time-only
