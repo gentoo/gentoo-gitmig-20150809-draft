@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.45 2012/07/18 16:54:55 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.46 2012/07/23 19:06:20 sera Exp $
 
 # @ECLASS: java-vm-2.eclass
 # @MAINTAINER:
@@ -277,10 +277,12 @@ java-vm_set-pax-markings() {
 	local executables=( "${1}"/bin/* )
 	[[ -d "${1}"/jre ]] && executables+=( "${1}"/jre/bin/* )
 
-	# Usally disabeling MPROTECT is sufficent
-	local pax_markings="m"
+	# Ensure a PaX header is created.
+	local pax_markings="C"
+	# Usally disabeling MPROTECT is sufficent.
+	local pax_markings+="m"
 	# On x86 for heap sizes over 700MB disable SEGMEXEC and PAGEEXEC as well.
-	use x86 && pax_markings="msp"
+	use x86 && pax_markings+="sp"
 
 	pax-mark ${pax_markings} $(list-paxables "${executables[@]}")
 }

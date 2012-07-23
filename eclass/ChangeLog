@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.351 2012/07/23 14:11:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.352 2012/07/23 19:06:20 sera Exp $
+
+  23 Jul 2012; Ralph Sennhauser <sera@gentoo.org> java-vm-2.eclass:
+  Add C to flags pass to pax-mark to ensure a header is created. Thanks to
+  blueness. #427642
 
   23 Jul 2012; Tomáš Chvátal <scarabeus@gentoo.org> myspell-r2.eclass:
   More licenses removal
