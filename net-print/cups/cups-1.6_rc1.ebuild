@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.6_rc1.ebuild,v 1.2 2012/06/30 22:26:03 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.6_rc1.ebuild,v 1.3 2012/07/23 15:09:45 swift Exp $
 
 EAPI=4
 
@@ -26,7 +26,7 @@ HOMEPAGE="http://www.cups.org/"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="acl avahi dbus debug +filters gnutls java kerberos pam
-	python +ssl static-libs systemd +threads usb X xinetd zeroconf"
+	python selinux +ssl static-libs systemd +threads usb X xinetd zeroconf"
 
 LANGS="ja"
 for X in ${LANGS} ; do
@@ -46,6 +46,7 @@ RDEPEND="
 	java? ( >=virtual/jre-1.6 )
 	kerberos? ( virtual/krb5 )
 	pam? ( virtual/pam )
+	selinux? ( sec-policy/selinux-cups )
 	ssl? (
 		gnutls? (
 			dev-libs/libgcrypt
