@@ -1,31 +1,33 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0.32.ebuild,v 1.2 2012/05/07 11:58:18 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0.33-r2.ebuild,v 1.1 2012/07/23 18:41:43 sera Exp $
 
 EAPI="4"
 
 inherit java-vm-2 eutils prefix versionator
 
 # This URIs need to be updated when bumping!
-JRE_URI="http://www.oracle.com/technetwork/java/javase/downloads/jre-6u32-downloads-1594646.html"
+JRE_URI="http://www.oracle.com/technetwork/java/javase/downloads/jre6-downloads-1637595.html"
 
 MY_PV="$(get_version_component_range 2)u$(get_version_component_range 4)"
 S_PV="$(replace_version_separator 3 '_')"
 
 X86_AT="jre-${MY_PV}-linux-i586.bin"
 AMD64_AT="jre-${MY_PV}-linux-x64.bin"
+IA64_AT="jre-${MY_PV}-linux-ia64.bin"
 
 DESCRIPTION="Oracle's Java SE Runtime Environment"
 HOMEPAGE="http://www.oracle.com/technetwork/java/javase/"
 SRC_URI="
 	amd64? ( ${AMD64_AT} )
+	ia64? ( ${IA64_AT} )
 	x86? ( ${X86_AT} )"
 
 LICENSE="Oracle-BCLA-JavaSE"
 SLOT="1.6"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="X alsa jce nsplugin"
+IUSE="X alsa jce nsplugin pax_kernel"
 
 RESTRICT="fetch strip"
 
@@ -40,6 +42,10 @@ RDEPEND="
 	alsa? ( media-libs/alsa-lib )
 	jce? ( dev-java/sun-jce-bin:1.6 )
 	!prefix? ( sys-libs/glibc )"
+# scanelf won't create a PaX header, so depend on paxctl to avoid fallback
+# marking. #427642
+DEPEND="
+	pax_kernel? ( sys-apps/paxctl )"
 
 S="${WORKDIR}/jre${S_PV}"
 
@@ -48,10 +54,13 @@ pkg_nofetch() {
 		AT=${X86_AT}
 	elif use amd64; then
 		AT=${AMD64_AT}
+	elif use ia64; then
+		AT=${IA64_AT}
 	fi
 
-	einfo "Due to Oracle no longer providing the distro-friendly DLJ bundles, the package has become fetch restricted again."
-	einfo "Alternatives are switching to dev-java/icedtea-bin or the source-based dev-java/icedtea:6"
+	einfo "Due to Oracle no longer providing the distro-friendly DLJ bundles, the package"
+	einfo "has become fetch restricted again. Alternatives are switching to"
+	einfo "dev-java/icedtea-bin:6 or the source-based dev-java/icedtea:6"
 	einfo ""
 	einfo "Please download ${AT} from:"
 	einfo "${JRE_URI}"
@@ -77,6 +86,9 @@ src_compile() {
 }
 
 src_install() {
+	local dest="/opt/${P}"
+	local ddest="${ED}${dest}"
+
 	# We should not need the ancient plugin for Firefox 2 anymore, plus it has
 	# writable executable segments
 	if use x86; then
@@ -92,28 +104,28 @@ src_install() {
 			lib/${arch}/libjavaplugin_jni.so
 	fi
 
-	dodir /opt/${P}
-	cp -pPR bin lib man "${ED}"/opt/${P} || die
+	dodir "${dest}"
+	cp -pPR bin lib man "${ddest}" || die
 
 	# Remove empty dirs we might have copied
-	rmdir -v $(find "${D}" -type d -empty) || die
+	find "${D}" -type d -empty -exec rmdir {} + || die
 
 	dodoc COPYRIGHT README
 
 	if use jce; then
-		dodir /opt/${P}/lib/security/strong-jce
-		mv "${ED}"/opt/${P}/lib/security/US_export_policy.jar \
-			"${ED}"/opt/${P}/lib/security/strong-jce || die
-		mv "${ED}"/opt/${P}/lib/security/local_policy.jar \
-			"${ED}"/opt/${P}/lib/security/strong-jce || die
+		dodir "${dest}"/lib/security/strong-jce
+		mv "${ddest}"/lib/security/US_export_policy.jar \
+			"${ddest}"/lib/security/strong-jce || die
+		mv "${ddest}"/lib/security/local_policy.jar \
+			"${ddest}"/lib/security/strong-jce || die
 		dosym /opt/sun-jce-bin-1.6.0/jre/lib/security/unlimited-jce/US_export_policy.jar \
-			/opt/${P}/lib/security/US_export_policy.jar
+			"${dest}"/lib/security/US_export_policy.jar
 		dosym /opt/sun-jce-bin-1.6.0/jre/lib/security/unlimited-jce/local_policy.jar \
-			/opt/${P}/lib/security/local_policy.jar
+			"${dest}"/lib/security/local_policy.jar
 	fi
 
 	if use nsplugin; then
-		install_mozilla_plugin /opt/${P}/lib/${arch}/libnpjp2.so
+		install_mozilla_plugin "${dest}"/lib/${arch}/libnpjp2.so
 	fi
 
 	# Install desktop file for the Java Control Panel.
@@ -122,16 +134,17 @@ src_install() {
 	newicon lib/desktop/icons/hicolor/48x48/apps/sun-jcontrol.png \
 		sun-jcontrol-${PN}-${SLOT}.png || die
 	sed -e "s#Name=.*#Name=Java Control Panel for Oracle JDK ${SLOT} (${PN})#" \
-		-e "s#Exec=.*#Exec=/opt/${P}/bin/jcontrol#" \
+		-e "s#Exec=.*#Exec=${dest}/bin/jcontrol#" \
 		-e "s#Icon=.*#Icon=sun-jcontrol-${PN}-${SLOT}.png#" \
 		lib/desktop/applications/sun_java.desktop > \
 		"${T}"/jcontrol-${PN}-${SLOT}.desktop || die
 	domenu "${T}"/jcontrol-${PN}-${SLOT}.desktop
 
-	# bug #56444
+	# http://docs.oracle.com/javase/6/docs/technotes/guides/intl/fontconfig.html
+	rm "${ddest}"/lib/fontconfig.* || die
 	cp "${FILESDIR}"/fontconfig.Gentoo.properties-r1 "${T}"/fontconfig.properties || die
 	eprefixify "${T}"/fontconfig.properties
-	insinto /opt/${P}/lib/
+	insinto "${dest}"/lib/
 	doins "${T}"/fontconfig.properties
 
 	set_java_env "${FILESDIR}/${VMHANDLE}.env-r1"
