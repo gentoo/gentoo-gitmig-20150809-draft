@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.8.8.ebuild,v 1.3 2012/06/18 18:45:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.8.8.ebuild,v 1.4 2012/07/23 05:07:23 naota Exp $
 
 EAPI=4
 inherit autotools eutils gnome2-utils
@@ -153,6 +153,8 @@ pkg_postinst() {
 
 	ewarn "If you update to x11-wm/metacity-2.24 after you install ${P},"
 	ewarn "gtk-window-decorator will crash until you reinstall ${PN} again."
+	elog
+	elog "To work with nvidia-drivers, you must enable the AddARGBGLXVisuals option."
 }
 
 pkg_prerm() {
