@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.6-r1.ebuild,v 1.2 2011/11/05 16:57:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.6-r1.ebuild,v 1.3 2012/07/23 16:01:24 vapier Exp $
 
 inherit eutils flag-o-matic libtool multilib
 
@@ -104,7 +104,7 @@ do_filter_flags() {
 	strip-flags
 }
 
-PATCH_VER="1.7"
+PATCH_VER="1.8"
 
 DESCRIPTION="Compatibility package for running binaries linked against a pre gcc 3.4 libstdc++"
 HOMEPAGE="http://gcc.gnu.org/libstdc++/"
@@ -126,7 +126,7 @@ src_unpack() {
 	./contrib/gcc_update --touch
 	mkdir -p "${WORKDIR}"/build
 
-	if use multilib ; then
+	if use multilib && [[ ${SYMLINK_LIB} == "yes" ]] ; then
 		# ugh, this shit has to match the way we've hacked gcc else
 		# the build falls apart #259215
 		sed -i \
@@ -139,7 +139,7 @@ src_unpack() {
 src_compile() {
 	cd "${WORKDIR}"/build
 	do_filter_flags
-	ECONF_SOURCE=${S}
+	ECONF_SOURCE=${S} \
 	econf \
 		--enable-shared \
 		--with-system-zlib \
@@ -151,8 +151,7 @@ src_compile() {
 		--enable-__cxa_atexit \
 		$(use_enable multilib) \
 		$(use_enable nls) \
-		$(use_with !nls included-gettext) \
-		|| die
+		$(use_with !nls included-gettext)
 
 	touch "${S}"/gcc/c-gperf.h
 

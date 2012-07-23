@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libstdc++-v3
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.64 2011/11/05 16:57:59 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.65 2012/07/23 16:01:24 vapier Exp $
+
+  23 Jul 2012; Mike Frysinger <vapier@gentoo.org> libstdc++-v3-3.3.6-r1.ebuild:
+  Fix building with newer glibc and siginfo changes #427220 by Martin Jansa.
 
   05 Nov 2011; Mike Frysinger <vapier@gentoo.org> libstdc++-v3-3.3.6.ebuild,
   libstdc++-v3-3.3.6-r1.ebuild:
@@ -248,4 +251,3 @@
   23 May 2004; Travis Tilley <lv@gentoo.org> +Changelog,
   +files/libstdc++_amd64_multilib_hack.patch, +libstdc++-v3-3.3.3.ebuild:
   initial commit
-
