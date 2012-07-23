@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcss/libcss-0.1.2.ebuild,v 1.4 2012/07/18 17:56:22 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcss/libcss-0.1.2.ebuild,v 1.5 2012/07/23 06:25:29 xmw Exp $
 
 EAPI=4
 
@@ -17,7 +17,8 @@ IUSE="static-libs test"
 
 RDEPEND="dev-libs/libparserutils
 	dev-libs/libwapcaplet"
-RDEPEND="test? ( dev-lang/perl )"
+DEPEND="${RDEPEND}
+	test? ( dev-lang/perl )"
 
 src_prepare() {
 	sed -e "/^INSTALL_ITEMS/s: /lib: /$(get_libdir):g" \
