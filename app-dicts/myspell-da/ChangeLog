@@ -1,6 +1,12 @@
 # ChangeLog for app-dicts/myspell-da
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-da/ChangeLog,v 1.23 2012/05/17 18:10:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-da/ChangeLog,v 1.24 2012/07/23 11:34:29 scarabeus Exp $
+
+*myspell-da-2.1 (23 Jul 2012)
+
+  23 Jul 2012; Tomáš Chvátal <scarabeus@gentoo.org> +myspell-da-2.1.ebuild,
+  -myspell-da-20060316.ebuild, -myspell-da-20100311.ebuild:
+  Version bump to latest release. Punt pseudonewer old versions.
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org> myspell-da-20060316.ebuild,
   myspell-da-20100311.ebuild:
