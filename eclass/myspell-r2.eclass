@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/myspell-r2.eclass,v 1.6 2012/06/30 08:30:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/myspell-r2.eclass,v 1.7 2012/07/23 14:11:26 scarabeus Exp $
 
 # @ECLASS: aspell-dict.eclass
 # @MAINTAINER:
@@ -96,7 +96,9 @@ myspell-r2_src_install() {
 	# Remove licenses as they suffix them with .txt too
 	rm -rf COPYING*
 	rm -rf LICENSE*
+	rm -rf LICENCE*
 	rm -rf license*
+	rm -rf licence*
 	# Readme and so on
 	for x in *.txt README*; do
 		if [[ -f ${x} ]]; then
