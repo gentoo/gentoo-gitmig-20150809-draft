@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/rsyslog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.78 2012/07/12 15:45:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.79 2012/07/23 20:57:31 maekke Exp $
+
+  23 Jul 2012; Markus Meier <maekke@gentoo.org> rsyslog-6.2.2.ebuild:
+  add ~arm, bug #425526
 
   12 Jul 2012; Jeroen Roovers <jer@gentoo.org> rsyslog-6.2.2.ebuild:
   Marked ~hppa (bug #425526).
