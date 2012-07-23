@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-10.0.6.ebuild,v 1.1 2012/07/19 22:33:25 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-10.0.6.ebuild,v 1.2 2012/07/23 18:13:32 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -172,6 +172,7 @@ src_configure() {
 	mozconfig_annotate '' --with-system-png
 	mozconfig_annotate '' --enable-system-ffi
 	mozconfig_annotate '' --target="${CTARGET:-${CHOST}}"
+	mozconfig_annotate 'regression' --disable-tracejit
 
 	# Use enable features
 	mozconfig_use_enable lightning calendar

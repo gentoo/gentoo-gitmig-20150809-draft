@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.157 2012/07/19 22:33:25 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.158 2012/07/23 18:13:32 anarchy Exp $
+
+  23 Jul 2012; Jory A. Pratt <anarchy@gentoo.org> thunderbird-10.0.6.ebuild:
+  Disable tracejit on esr release, bug #427074
 
 *thunderbird-14.0 (19 Jul 2012)
 *thunderbird-10.0.6 (19 Jul 2012)
