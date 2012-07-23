@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/metaclass
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/metaclass/ChangeLog,v 1.10 2012/07/22 14:37:02 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/metaclass/ChangeLog,v 1.11 2012/07/23 06:26:58 jdhore Exp $
+
+  23 Jul 2012; Jeff Horelick <jdhore@gentoo.org> metaclass-0.0.1.ebuild:
+  marked x86 per bug 427606
 
   22 Jul 2012; <nixnut@gentoo.org> metaclass-0.0.1.ebuild:
   ppc stable #427606

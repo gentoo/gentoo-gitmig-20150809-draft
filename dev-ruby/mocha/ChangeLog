@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mocha
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/ChangeLog,v 1.63 2012/07/22 07:37:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/ChangeLog,v 1.64 2012/07/23 06:27:31 jdhore Exp $
+
+  23 Jul 2012; Jeff Horelick <jdhore@gentoo.org> mocha-0.10.5.ebuild:
+  marked x86 per bug 427606
 
   22 Jul 2012; Hans de Graaff <graaff@gentoo.org> mocha-0.10.5.ebuild:
   Fix examples generation to work with all coderay versions.
