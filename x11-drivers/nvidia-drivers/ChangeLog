@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.368 2012/07/22 22:32:26 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.369 2012/07/23 16:35:28 cardoe Exp $
+
+  23 Jul 2012; Doug Goldstein <cardoe@gentoo.org> nvidia-drivers-304.22.ebuild,
+  files/nvidia-drivers-settings.desktop:
+  Fix issue with icon/menu entry and dohtml. bug #427720
 
   22 Jul 2012; Doug Goldstein <cardoe@gentoo.org> nvidia-drivers-304.22.ebuild,
   metadata.xml:

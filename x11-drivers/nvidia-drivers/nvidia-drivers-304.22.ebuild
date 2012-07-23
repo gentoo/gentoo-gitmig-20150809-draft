@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-304.22.ebuild,v 1.6 2012/07/23 00:26:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-304.22.ebuild,v 1.7 2012/07/23 16:35:28 cardoe Exp $
 
-EAPI="4"
+EAPI=4
 
 inherit eutils unpacker multilib portability versionator \
 	linux-mod flag-o-matic nvidia-driver linux-info
@@ -397,7 +397,6 @@ src_install() {
 		dodoc "${NV_DOC}/README"
 		use X && doman "${NV_MAN}/nvidia-xconfig.1"
 		use tools && doman "${NV_MAN}/nvidia-settings.1"
-		dohtml "${NV_DOC}/html/*"
 	else
 		# Docs
 		newdoc "${NV_DOC}/README.txt" README
@@ -406,7 +405,6 @@ src_install() {
 		use X && doman "${NV_MAN}/nvidia-xconfig.1.gz"
 		use tools && doman "${NV_MAN}/nvidia-settings.1.gz"
 		doman "${NV_MAN}/nvidia-cuda-proxy-control.1.gz"
-		dohtml "${NV_DOC}/html/*"
 	fi
 
 	# Helper Apps
@@ -433,8 +431,8 @@ src_install() {
 
 	# Desktop entries for nvidia-settings
 	if use tools ; then
-		newicon ${NV_OBJ}/nvidia-settings.png nvidia-driver-settings.png
-		domenu "${FILESDIR}"/nvidia-driver-settings.desktop
+		newicon ${NV_OBJ}/nvidia-settings.png nvidia-drivers-settings.png
+		domenu "${FILESDIR}"/nvidia-drivers-settings.desktop
 		insinto /etc/xdg/autostart
 		doins "${FILESDIR}"/nvidia-autostart.desktop
 	fi
