@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.77 2012/07/21 15:14:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.78 2012/07/23 17:46:28 flameeyes Exp $
+
+*munin-2.0.2-r2 (23 Jul 2012)
+
+  23 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> +munin-2.0.2-r2.ebuild,
+  -munin-2.0.2-r1.ebuild:
+  Fix cron generation of html pages to use the correct path to generated PNGs
+  (and not CGI). Enable cgi strategy if USE=cgi. Simplify crontabs (the way
+  upstream simplified its munin-cron script).
 
 *munin-2.0.2-r1 (21 Jul 2012)
 

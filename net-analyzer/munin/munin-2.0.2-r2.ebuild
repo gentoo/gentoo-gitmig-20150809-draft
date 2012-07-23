@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.2-r1.ebuild,v 1.1 2012/07/21 15:14:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.2-r2.ebuild,v 1.1 2012/07/23 17:46:28 flameeyes Exp $
 
 EAPI=4
 
-PATCHSET=9
+PATCHSET=11
 
 inherit eutils user versionator java-pkg-opt-2
 
@@ -147,6 +147,10 @@ src_install() {
 		# remove font files so that we don't have to keep them around
 		rm "${D}"/usr/libexec/${PN}/*.ttf || die
 
+		if use cgi; then
+			sed -i -e '/#graph_strategy cgi/s:^#::' "${D}"/etc/munin/munin.conf || die
+		fi
+
 		dodir /usr/share/${PN}
 		cat - >> "${D}"/usr/share/${PN}/crontab <<EOF
 # Force the shell to bash
@@ -155,17 +159,17 @@ SHELL=/bin/bash
 MAILTO=root
 
 # This runs the munin task every 5 minutes.
-*/5	* * * *		[ -x /usr/bin/munin-cron ] && /usr/bin/munin-cron
+*/5	* * * *		/usr/bin/munin-cron
 
 # Alternatively, this route works differently
 # Update once a minute (for busy sites)
-#*/1 * * * *		[ -x /usr/libexec/munin/munin-update ] && /usr/libexec/munin/munin-update
+#*/1 * * * *		/usr/libexec/munin/munin-update
 ## Check for limit excess every 2 minutes
-#*/2 * * * *		[ -x /usr/libexec/munin/munin-limits ] && /usr/libexec/munin/munin-limits
+#*/2 * * * *		/usr/libexec/munin/munin-limits
 ## Update graphs every 5 minutes
-#*/5 * * * *		[ -x /usr/libexec/munin/munin-graph  ] && nice /usr/libexec/munin/munin-graph --cron
+#*/5 * * * *		nice /usr/libexec/munin/munin-graph
 ## Update HTML pages every 15 minutes
-#*/15 * * * *		[ -x /usr/libexec/munin/munin-html   ] && nice /usr/libexec/munin/munin-html
+#*/15 * * * *		nice /usr/libexec/munin/munin-html
 EOF
 
 		cat - >> "${D}"/usr/share/${PN}/fcrontab <<EOF
@@ -173,17 +177,17 @@ EOF
 !mailto(root),serial(true)
 
 # This runs the munin task every 5 minutes.
-@ 5	[ -x /usr/bin/munin-cron ] && /usr/bin/munin-cron
+@ 5		/usr/bin/munin-cron
 
 # Alternatively, this route works differently
 # Update once a minute (for busy sites)
-#@ 1	[ -x /usr/libexec/munin/munin-update ] && /usr/libexec/munin/munin-update
+#@ 1	/usr/libexec/munin/munin-update
 ## Check for limit excess every 2 minutes
-#@ 2	[ -x /usr/libexec/munin/munin-limits ] && /usr/libexec/munin/munin-limits
+#@ 2	/usr/libexec/munin/munin-limits
 ## Update graphs every 5 minutes
-#@ 5	[ -x /usr/libexec/munin/munin-graph  ] && nice /usr/libexec/munin/munin-graph --cron
+#@ 5	nice /usr/libexec/munin/munin-graph
 ## Update HTML pages every 15 minutes
-#@ 15	[ -x /usr/libexec/munin/munin-html   ] && nice /usr/libexec/munin/munin-html
+#@ 15	nice /usr/libexec/munin/munin-html
 EOF
 	fi
 }
