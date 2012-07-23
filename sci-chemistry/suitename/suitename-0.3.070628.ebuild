@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/suitename/suitename-0.3.070628.ebuild,v 1.2 2011/06/26 09:10:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/suitename/suitename-0.3.070628.ebuild,v 1.3 2012/07/23 09:01:43 jlec Exp $
 
 EAPI=4
 
@@ -23,8 +23,8 @@ src_prepare() {
 	tc-export CC
 	cp Makefile.linux Makefile || die
 	sed \
-		-e "s:-o:${LDFLAGS} -o:g" \
 		-e 's:cc:${CC}:g' \
+		-e "s:-o:${LDFLAGS} -o:g" \
 		-i Makefile || die
 }
 
