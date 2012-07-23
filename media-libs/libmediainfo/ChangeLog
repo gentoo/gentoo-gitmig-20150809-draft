@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmediainfo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/ChangeLog,v 1.52 2012/06/18 22:30:04 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/ChangeLog,v 1.53 2012/07/23 07:34:20 jdhore Exp $
+
+  23 Jul 2012; Jeff Horelick <jdhore@gentoo.org> libmediainfo-0.7.58.ebuild:
+  marked x86 per bug 427592
 
   18 Jun 2012; Tim Harder <radhermit@gentoo.org>
   -files/libmediainfo-0.7.48-system-tinyxml.patch, -libmediainfo-0.7.51.ebuild:
