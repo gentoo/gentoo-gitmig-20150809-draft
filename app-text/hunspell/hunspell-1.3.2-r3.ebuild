@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/hunspell-1.3.2-r3.ebuild,v 1.12 2012/06/16 07:22:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/hunspell-1.3.2-r3.ebuild,v 1.13 2012/07/23 13:04:22 scarabeus Exp $
 
 EAPI=4
 inherit eutils multilib autotools flag-o-matic versionator
@@ -23,8 +23,8 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 # describe properly mi
-LANGS="af bg ca cs cy da de el en eo es et fo fr ga gl he hr hu ia id it ku lt
-lv mk ms nb nl nn pl pt ro ru sk sl sq sv sw tn uk zu"
+LANGS="af bg ca cs cy da de el en eo es et fo fr ga gl he hr hu ia id is it ku
+lt lv mk ms nb nl nn pl pt ro ru sk sl sq sv sw tn uk zu"
 
 DICT_DEP="app-dicts/myspell-en"
 for lang in ${LANGS}; do
