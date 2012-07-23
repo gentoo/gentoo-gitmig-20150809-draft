@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/myspell-is
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-is/ChangeLog,v 1.2 2012/07/23 13:02:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-is/ChangeLog,v 1.3 2012/07/23 13:15:04 scarabeus Exp $
+
+  23 Jul 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  myspell-is-2012.03.18.ebuild:
+  Whoops fix license.
 
   23 Jul 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   myspell-is-2012.03.18.ebuild:
