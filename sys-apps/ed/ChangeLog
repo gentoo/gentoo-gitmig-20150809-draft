@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ed
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.92 2012/07/23 20:56:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.93 2012/07/23 22:28:49 blueness Exp $
+
+  23 Jul 2012; Anthony G. Basile <blueness@gentoo.org> ed-1.6.ebuild:
+  Stable ppc64, bug #427116
 
   23 Jul 2012; Markus Meier <maekke@gentoo.org> ed-1.6.ebuild:
   arm stable, bug #427116
