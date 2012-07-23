@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glog/glog-0.3.2.ebuild,v 1.1 2012/07/13 11:57:20 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glog/glog-0.3.2.ebuild,v 1.2 2012/07/23 21:04:46 maekke Exp $
 
 EAPI="4"
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="http://google-glog.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE="gflags static-libs unwind test"
 
 RDEPEND="gflags? ( dev-cpp/gflags )
