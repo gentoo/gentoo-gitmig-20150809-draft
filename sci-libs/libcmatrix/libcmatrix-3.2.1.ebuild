@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libcmatrix/libcmatrix-3.2.1.ebuild,v 1.4 2011/04/21 06:38:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libcmatrix/libcmatrix-3.2.1.ebuild,v 1.5 2012/07/23 07:11:11 jlec Exp $
 
 EAPI="3"
 
@@ -31,6 +31,7 @@ src_prepare() {
 		"${FILESDIR}"/${PV}-minuit2.patch \
 		"${FILESDIR}"/${PV}-gcc4.4.patch \
 		"${FILESDIR}"/${PV}-gcc4.6.patch \
+		"${FILESDIR}"/${PV}-gcc4.7.patch \
 		"${FILESDIR}"/${PV}-atlas.patch
 	eautoreconf
 }
