@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/reptyr
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/reptyr/ChangeLog,v 1.3 2011/07/17 09:54:30 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/reptyr/ChangeLog,v 1.4 2012/07/23 16:11:34 steev Exp $
+
+  23 Jul 2012; Steev Klimaszewski <steev@gentoo.org> reptyr-0.3.ebuild:
+  Add ~arm keyword. Tested on a Genesi EfikaMX (armv7) and a CompuLab Trimslice
+  (also armv7)
 
   17 Jul 2011; Justin Lecher <jlec@gentoo.org> reptyr-0.3.ebuild:
   Make it prefix ready
