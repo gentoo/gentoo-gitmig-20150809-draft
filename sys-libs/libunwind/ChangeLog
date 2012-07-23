@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libunwind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libunwind/ChangeLog,v 1.20 2012/07/23 03:38:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libunwind/ChangeLog,v 1.21 2012/07/23 06:04:47 jdhore Exp $
+
+  23 Jul 2012; Jeff Horelick <jdhore@gentoo.org> libunwind-1.0.1-r1.ebuild:
+  marked x86 per bug 427136
 
   23 Jul 2012; Mike Frysinger <vapier@gentoo.org>
   +files/libunwind-1.0.1-ia64.patch, libunwind-1.0.1-r1.ebuild:
