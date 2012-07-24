@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/rekonq-1.0.ebuild,v 1.1 2012/07/21 15:23:33 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/rekonq-1.0.ebuild,v 1.2 2012/07/24 13:09:34 johu Exp $
 
 EAPI=4
 
@@ -22,11 +22,15 @@ HOMEPAGE="http://rekonq.kde.org/"
 LICENSE="GPL-3"
 SLOT="4"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug"
+IUSE="debug opera semantic-desktop"
 
 DEPEND="
-	dev-libs/qoauth
+	$(add_kdebase_dep kdelibs 'semantic-desktop=')
 	>=x11-libs/qt-dbus-${QT_MINIMAL}:4
+	opera? (
+		app-crypt/qca:2
+		dev-libs/qoauth
+	)
 "
 RDEPEND="${DEPEND}"
 
@@ -40,4 +44,14 @@ src_prepare() {
 	mv doc/en_US doc/en || die "doc move failed"
 	sed -i -e 's/en_US/en/' doc/CMakeLists.txt || die "sed failed"
 	kde4-base_src_prepare
+}
+
+src_configure() {
+	local mycmakeargs=(
+		$(cmake-utils_use_with opera QCA2)
+		$(cmake-utils_use_with opera QtOAuth)
+		$(cmake-utils_use_with semantic-desktop Nepomuk)
+	)
+
+	kde4-base_src_configure
 }
