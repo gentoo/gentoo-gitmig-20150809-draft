@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.21.2.ebuild,v 1.2 2012/06/02 18:55:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.21.2.ebuild,v 1.3 2012/07/24 15:39:46 vapier Exp $
 
 EAPI="3"
 
@@ -55,7 +55,7 @@ src_prepare() {
 		use loop-aes && epatch "${WORKDIR}"/util-linux-*.diff
 	fi
 	if use uclibc ; then
-		epatch "${FILESDIR}"/${P}-no-printf-alloc.patch #406303
+		epatch "${FILESDIR}"/${PN}-2.21.1-no-printf-alloc.patch #406303
 		eautoreconf
 	fi
 	elibtoolize

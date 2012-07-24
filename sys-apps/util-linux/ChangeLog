@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.392 2012/07/08 17:32:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.393 2012/07/24 15:39:46 vapier Exp $
+
+  24 Jul 2012; Mike Frysinger <vapier@gentoo.org> util-linux-2.21.2.ebuild:
+  Use older alloc patch for uclibc #427716 by James Le Cuirot.
 
   08 Jul 2012; Raúl Porcel <armin76@gentoo.org> util-linux-2.20.1-r2.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #420167
