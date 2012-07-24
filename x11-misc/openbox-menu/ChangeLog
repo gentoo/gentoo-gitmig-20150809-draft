@@ -1,0 +1,11 @@
+# ChangeLog for x11-misc/openbox-menu
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/openbox-menu/ChangeLog,v 1.1 2012/07/24 16:08:35 hasufell Exp $
+
+*openbox-menu-0.3.6.7 (24 Jul 2012)
+
+  24 Jul 2012; Julian Ospald <hasufell@gentoo.org>
+  +openbox-menu-0.3.6.7.ebuild, +files/openbox-menu-0.3.6.7-build.patch,
+  +metadata.xml:
+  initial commit wrt #427794
+
