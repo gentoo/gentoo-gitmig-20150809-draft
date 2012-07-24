@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/pkgconf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.29 2012/07/22 02:52:31 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.30 2012/07/24 06:29:21 jdhore Exp $
+
+  24 Jul 2012; Jeff Horelick <jdhore@gentoo.org> pkgconf-9999.ebuild:
+  Drop the src_compile() as pkgconf has a new buildsys that is verbose by
+  default.
 
 *pkgconf-0.8.2 (22 Jul 2012)
 

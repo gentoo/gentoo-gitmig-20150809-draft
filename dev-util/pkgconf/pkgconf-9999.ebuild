@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/pkgconf-9999.ebuild,v 1.8 2012/07/21 03:56:04 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/pkgconf-9999.ebuild,v 1.9 2012/07/24 06:29:21 jdhore Exp $
 
 EAPI="4"
 
@@ -35,10 +35,6 @@ src_prepare() {
 
 src_configure() {
 	econf $(use_enable strict)
-}
-
-src_compile() {
-	emake V=1
 }
 
 src_install() {
