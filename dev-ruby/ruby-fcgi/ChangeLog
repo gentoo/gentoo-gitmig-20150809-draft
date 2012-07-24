@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-fcgi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-fcgi/ChangeLog,v 1.48 2012/07/22 14:32:22 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-fcgi/ChangeLog,v 1.49 2012/07/24 17:54:28 jdhore Exp $
+
+  24 Jul 2012; Jeff Horelick <jdhore@gentoo.org> ruby-fcgi-0.8.8-r2.ebuild:
+  marked x86 per bug 420711
 
   22 Jul 2012; <nixnut@gentoo.org> ruby-fcgi-0.8.8-r2.ebuild:
   ppc stable #420711
