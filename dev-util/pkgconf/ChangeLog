@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pkgconf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.31 2012/07/24 08:53:59 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.32 2012/07/24 10:00:35 blueness Exp $
+
+  24 Jul 2012; Anthony G. Basile <blueness@gentoo.org> pkgconf-0.8.2.ebuild:
+  Stable ppc/ppc64, bug #427680
 
   24 Jul 2012; Johannes Huber <johu@gentoo.org> pkgconf-0.8.2.ebuild:
   Stable for x86, wrt bug #427680
