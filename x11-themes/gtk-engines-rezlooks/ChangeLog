@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/gtk-engines-rezlooks
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-rezlooks/ChangeLog,v 1.9 2012/05/05 04:10:07 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-rezlooks/ChangeLog,v 1.10 2012/07/24 17:20:56 pacho Exp $
+
+  24 Jul 2012; Pacho Ramos <pacho@gentoo.org>
+  +files/gtk-engines-rezlooks-0.6-glib-single-include.patch,
+  gtk-engines-rezlooks-0.6.ebuild:
+  Let it compile against glib-2.32, drop .la files.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org>
   gtk-engines-rezlooks-0.6.ebuild:
@@ -38,4 +43,3 @@
   11 Feb 2007; Saleem Abdulrasool <compnerd@gentoo.org> +metadata.xml,
   +gtk-engines-rezlooks-0.6.ebuild:
   Intial import of the rezlooks engine
-
