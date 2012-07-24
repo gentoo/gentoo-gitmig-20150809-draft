@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/man-db-2.6.1.ebuild,v 1.3 2012/05/24 03:07:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/man-db-2.6.1.ebuild,v 1.4 2012/07/24 15:59:12 vapier Exp $
 
 EAPI="4"
 
@@ -32,6 +32,10 @@ pkg_setup() {
 	enewuser man 13 -1 /usr/share/man man
 }
 
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-2.6.1-no-gets.patch #427252
+}
+
 src_configure() {
 	export ac_cv_lib_z_gzopen=$(usex zlib)
 	econf \
@@ -42,7 +46,7 @@ src_configure() {
 }
 
 src_install() {
-	emake install DESTDIR="${D}"
-	dodoc README ChangeLog NEWS docs/{HACKING,TODO}
-	use static-libs || find "${D}"/usr/lib* -name '*.la' -delete
+	default
+	dodoc docs/{HACKING,TODO}
+	use static-libs || find "${ED}"/usr/ -name '*.la' -delete
 }
