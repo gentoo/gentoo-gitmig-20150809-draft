@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.613 2012/07/23 21:21:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.614 2012/07/24 16:27:28 rich0 Exp $
+
+  24 Jul 2012; Richard Freeman <rich0@gentoo.org> php-5.3.15.ebuild:
+  amd64 stable - 427354
 
   23 Jul 2012; Markus Meier <maekke@gentoo.org> php-5.3.15.ebuild:
   arm stable, bug #427354
