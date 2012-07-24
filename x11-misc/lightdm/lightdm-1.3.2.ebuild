@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.3.2.ebuild,v 1.1 2012/07/19 21:55:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.3.2.ebuild,v 1.2 2012/07/24 21:02:53 hwoarang Exp $
 
 EAPI=4
 inherit autotools eutils pam
@@ -47,7 +47,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.2.0-fix-configure.patch
 	epatch_user
 
-    # Remove bogus Makefile statement. This needs to go upstream
+	# Remove bogus Makefile statement. This needs to go upstream
 	sed -i /"@YELP_HELP_RULES@"/d help/Makefile.am || die
 	if has_version dev-libs/gobject-introspection; then
 		eautoreconf
