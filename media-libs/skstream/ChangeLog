@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/skstream
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/skstream/ChangeLog,v 1.28 2011/09/26 14:24:41 tupone Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/skstream/ChangeLog,v 1.29 2012/07/24 17:14:01 jdhore Exp $
+
+  24 Jul 2012; Jeff Horelick <jdhore@gentoo.org> skstream-0.3.8.ebuild:
+  marked x86 per bug 427866
 
 *skstream-0.3.8 (26 Sep 2011)
 
