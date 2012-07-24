@@ -1,5 +1,11 @@
 
 
+*elfix-0.5.0 (24 Jul 2012)
+
+  24 Jul 2012; Anthony G. Basile <blueness@gentoo.org> -elfix-0.3.2.ebuild,
+  -elfix-0.4.2.ebuild, +elfix-0.5.0.ebuild:
+  Bump to 0.5 branch, remove older, ready for unmasking
+
   05 Feb 2012; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
   Fix the description of xtpax to match what the kernel now calls it
 
