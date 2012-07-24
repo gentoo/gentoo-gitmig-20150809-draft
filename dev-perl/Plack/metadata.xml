@@ -48,6 +48,7 @@
     <remote-id type="cpan-module">Plack::Middleware::HTTPExceptions</remote-id>
     <remote-id type="cpan-module">Plack::Middleware::Head</remote-id>
     <remote-id type="cpan-module">Plack::Middleware::IIS6ScriptNameFix</remote-id>
+    <remote-id type="cpan-module">Plack::Middleware::IIS7KeepAliveFix</remote-id>
     <remote-id type="cpan-module">Plack::Middleware::JSONP</remote-id>
     <remote-id type="cpan-module">Plack::Middleware::LighttpdScriptNameFix</remote-id>
     <remote-id type="cpan-module">Plack::Middleware::Lint</remote-id>
