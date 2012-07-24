@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.114 2012/06/20 16:14:50 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.115 2012/07/24 07:50:43 polynomial-c Exp $
+
+*virtualbox-4.1.18-r1 (24 Jul 2012)
+
+  24 Jul 2012; Lars Wendler <polynomial-c@gentoo.org>
+  +virtualbox-4.1.18-r1.ebuild, +files/virtualbox-4.1.18-ipv6_vnc.patch:
+  Fixed crash when opening a VNC connection via IPv6. Thanks to Mark
+  Zhitomirski for reporting this in bug #425698.
 
 *virtualbox-4.1.18 (20 Jun 2012)
 
