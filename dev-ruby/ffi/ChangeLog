@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ffi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.32 2012/07/08 16:33:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.33 2012/07/24 06:00:25 graaff Exp $
+
+*ffi-1.1.0 (24 Jul 2012)
+
+  24 Jul 2012; Hans de Graaff <graaff@gentoo.org> +ffi-1.1.0.ebuild:
+  Version bump.
 
   08 Jul 2012; Jeroen Roovers <jer@gentoo.org> ffi-1.0.11.ebuild:
   Marked ~hppa (bug #417573).
