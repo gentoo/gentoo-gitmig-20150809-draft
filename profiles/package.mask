@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14004 2012/07/24 17:55:24 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14005 2012/07/24 18:42:16 polynomial-c Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -34,10 +34,6 @@
 # Christian Ruppert <idl0r@gentoo.org> (24 Jul 2012)
 # Masked because of the nvidia-drivers-3* mask below
 =media-video/nvidia-settings-3*
-
-# Lars Wendler <polynomial-c@gentoo.org> (24 Jul 2012)
-# Broken VNC patch (bug #427870). Masked for now.
-=app-emulation/virtualbox-4.1.18-r1
 
 # Tiziano Müller <dev-zero@gentoo.org> (24 Jul 2012)
 # Now part of net-fs/cifs-utils & unmaintained by upstream
