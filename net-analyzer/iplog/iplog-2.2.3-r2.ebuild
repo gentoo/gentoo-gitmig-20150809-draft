@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iplog/iplog-2.2.3-r2.ebuild,v 1.13 2007/04/28 12:28:16 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iplog/iplog-2.2.3-r2.ebuild,v 1.14 2012/07/24 00:14:17 blueness Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/ojnk/${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 FDL-1.1 )"
 SLOT="0"
-KEYWORDS="alpha ppc sparc x86 ~amd64"
+KEYWORDS="alpha ~mips ppc sparc x86 ~amd64"
 IUSE=""
 
 DEPEND="net-libs/libpcap"

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/arping
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.56 2012/07/11 21:11:37 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.57 2012/07/24 00:18:34 blueness Exp $
+
+  24 Jul 2012; Anthony G. Basile <blueness@gentoo.org> arping-2.12.ebuild:
+  Keyword ~mips
 
 *arping-2.12 (11 Jul 2012)
 
