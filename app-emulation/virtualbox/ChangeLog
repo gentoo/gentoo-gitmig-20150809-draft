@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.115 2012/07/24 07:50:43 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.116 2012/07/24 18:40:39 polynomial-c Exp $
+
+  24 Jul 2012; Lars Wendler <polynomial-c@gentoo.org>
+  virtualbox-4.1.18-r1.ebuild:
+  Raised dependency of libvncserver to >=0.9.9. Thanks to Toralf Förster for
+  reporting this in bug #427870.
 
 *virtualbox-4.1.18-r1 (24 Jul 2012)
 
