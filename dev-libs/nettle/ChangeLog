@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/nettle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.61 2012/07/12 22:03:33 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.62 2012/07/24 15:08:38 flameeyes Exp $
+
+  24 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> -nettle-1.15.ebuild,
+  nettle-2.4.ebuild, nettle-2.5.ebuild:
+  Disable openssl dependency (which was also wrong, it wasn't RDEPEND), and
+  avoid using it altogether. Thanks to Maxim Kammerer in bug #427526.
 
 *nettle-2.5 (12 Jul 2012)
 
