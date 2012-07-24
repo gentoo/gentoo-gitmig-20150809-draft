@@ -1,6 +1,14 @@
-# ChangeLog for sys-auth/nss-ldapd
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-ldapd/ChangeLog,v 1.4 2009/04/02 18:50:35 cardoe Exp $
+# ChangeLog for sys-auth/nss-pam-ldapd
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-ldapd/ChangeLog,v 1.5 2012/07/24 06:34:33 prometheanfire Exp $
+
+*nss-pam-ldapd-0.8.10 (24 Jul 2012)
+*nss-pam-ldapd-0.6.7-r1 (24 Jul 2012)
+
+  24 Jul 2012; Matthew Thode <prometheanfire@gentoo.org>
+  +nss-pam-ldapd-0.6.7-r1.ebuild, +nss-pam-ldapd-0.8.10.ebuild,
+  +files/nslcd-init:
+  moving to nss-pam-ldapd, also fixes bugs #287727 #234555
 
 *nss-ldapd-0.6.7-r1 (02 Apr 2009)
 
