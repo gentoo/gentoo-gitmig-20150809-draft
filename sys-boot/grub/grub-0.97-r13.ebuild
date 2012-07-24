@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r13.ebuild,v 1.2 2012/07/23 08:06:44 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r13.ebuild,v 1.3 2012/07/24 15:49:35 vapier Exp $
 
 # XXX: we need to review menu.lst vs grub.conf handling.  We've been converting
 #      all systems to grub.conf (and symlinking menu.lst to grub.conf), but
@@ -18,7 +18,7 @@
 
 EAPI="4"
 
-inherit mount-boot eutils flag-o-matic toolchain-funcs autotools linux-info pax-utils multiprocessing
+inherit eutils mount-boot toolchain-funcs linux-info flag-o-matic autotools pax-utils multiprocessing
 
 PATCHVER="1.14" # Should match the revision ideally
 DESCRIPTION="GNU GRUB Legacy boot loader"
@@ -263,21 +263,18 @@ pkg_postinst() {
 		elog "WARNING: you have DONT_MOUNT_BOOT in effect, so you must apply"
 		elog "the following instructions for your /boot!"
 		elog "Neglecting to do so may cause your system to fail to boot!"
-		echo
+		elog
 	else
 		setup_boot_dir "${ROOT}"/boot
 		# Trailing output because if this is run from pkg_postinst, it gets mixed into
 		# the other output.
-		echo
+		einfo ""
 	fi
 	elog "To interactively install grub files to another device such as a USB"
 	elog "stick, just run the following and specify the directory as prompted:"
-	elog
 	elog "   emerge --config =${PF}"
-	elog
 	elog "Alternately, you can export GRUB_ALT_INSTALLDIR=/path/to/use to tell"
 	elog "grub where to install in a non-interactive way."
-	echo
 
 	# needs to be after we call setup_boot_dir
 	mount-boot_pkg_postinst

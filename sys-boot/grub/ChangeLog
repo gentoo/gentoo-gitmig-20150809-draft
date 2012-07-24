@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.233 2012/07/23 08:06:44 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.234 2012/07/24 15:49:35 vapier Exp $
+
+  24 Jul 2012; Mike Frysinger <vapier@gentoo.org> grub-0.97-r13.ebuild:
+  Touch up style/messages to match grub-static -- no functional changes.
 
   23 Jul 2012; Ryan Hill <dirtyepic@gentoo.org> grub-0.97-r13.ebuild:
   Remove ebeep due to EAPI 4. Improve output readability.
