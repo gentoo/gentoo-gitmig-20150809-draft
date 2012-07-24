@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mars/mars-1.1.3.ebuild,v 1.3 2010/02/28 10:36:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mars/mars-1.1.3.ebuild,v 1.4 2012/07/24 13:11:09 jlec Exp $
 
 EAPI="3"
 
@@ -19,6 +19,8 @@ RDEPEND="sci-biology/psipred"
 DEPEND=""
 
 S="${WORKDIR}"/${MY_P}
+
+QA_PREBUILT="/opt/mars/*"
 
 src_install() {
 	dobin bin/runmars* || die

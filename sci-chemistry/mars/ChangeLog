@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/mars
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mars/ChangeLog,v 1.4 2010/04/25 11:29:40 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mars/ChangeLog,v 1.5 2012/07/24 13:11:09 jlec Exp $
+
+  24 Jul 2012; Justin Lecher <jlec@gentoo.org> mars-1.1.3.ebuild, metadata.xml:
+  Use QA_PREBUILT for binary packages
 
   28 Feb 2010; Justin Lecher <jlec@gentoo.org> mars-1.1.3.ebuild:
   Changed RDEPEND sci-chemistry/psipred to sci-biology/psipred
