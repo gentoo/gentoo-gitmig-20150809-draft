@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.352 2012/07/23 19:06:20 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.353 2012/07/24 19:22:22 grobian Exp $
+
+  24 Jul 2012; Fabian Groffen <grobian@gentoo.org> autotools.eclass:
+  _elibtoolize: properly set LIBTOOLIZE in case glibtoolize exists in the
+  system
 
   23 Jul 2012; Ralph Sennhauser <sera@gentoo.org> java-vm-2.eclass:
   Add C to flags pass to pax-mark to ensure a header is created. Thanks to

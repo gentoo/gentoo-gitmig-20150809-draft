@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.147 2012/06/08 04:55:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.148 2012/07/24 19:22:22 grobian Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -292,8 +292,7 @@ eaclocal() {
 #
 # Note the '_' prefix .. to not collide with elibtoolize() from libtool.eclass.
 _elibtoolize() {
-	local LIBTOOLIZE=${LIBTOOLIZE:-libtoolize}
-	type -P glibtoolize > /dev/null && LIBTOOLIZE=glibtoolize
+	local LIBTOOLIZE=${LIBTOOLIZE:-$(type -P glibtoolize > /dev/null && echo glibtoolize || echo libtoolize)}
 
 	[[ -f GNUmakefile.am || -f Makefile.am ]] && set -- "$@" --automake
 	if [[ $1 == "--install" ]] ; then
