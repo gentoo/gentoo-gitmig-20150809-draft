@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/cracklib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.167 2012/07/23 21:10:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.168 2012/07/24 09:47:09 blueness Exp $
+
+  24 Jul 2012; Anthony G. Basile <blueness@gentoo.org> cracklib-2.8.19.ebuild:
+  Stable ppc64, bug #427132
 
   23 Jul 2012; Markus Meier <maekke@gentoo.org> cracklib-2.8.19.ebuild:
   arm stable, bug #427132
