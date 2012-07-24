@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/acetoneiso/acetoneiso-2.3.ebuild,v 1.1 2012/05/07 22:41:40 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/acetoneiso/acetoneiso-2.3.ebuild,v 1.2 2012/07/24 22:08:20 pesa Exp $
 
 EAPI=4
 MY_P=${PN}_${PV}
@@ -26,9 +26,7 @@ RDEPEND="${DEPEND}
 	sys-fs/fuseiso"
 
 S=${WORKDIR}/${MY_P}/${PN}
-
-DOCS="AUTHORS CHANGELOG FEATURES README"
-DOCSDIR="${WORKDIR}/${MY_P}"
+DOCS=(../AUTHORS ../CHANGELOG ../FEATURES ../README)
 
 src_prepare() {
 	sed -i -e 's:unrar-nonfree:unrar:g' sources/compress.h locale/*.ts || die
@@ -36,6 +34,7 @@ src_prepare() {
 }
 
 src_configure() {
-	append-flags -I/usr/include/KDE/Phonon
+	append-cxxflags -I/usr/include/KDE/Phonon
+
 	qt4-r2_src_configure
 }
