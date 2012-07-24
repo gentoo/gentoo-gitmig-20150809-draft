@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/shogun/shogun-1.1.0.ebuild,v 1.2 2012/06/25 19:41:18 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/shogun/shogun-1.1.0.ebuild,v 1.3 2012/07/24 13:50:21 jlec Exp $
 
 EAPI=4
 
-inherit multilib versionator toolchain-funcs java-pkg-opt-2
+inherit eutils multilib versionator toolchain-funcs java-pkg-opt-2
 
 MYPV=$(get_version_component_range 1-2)
 MYPD=${PN}-data-0.3
@@ -66,7 +66,7 @@ src_prepare() {
 	sed -i \
 		-e 's/dist-packages/site-packages/g' \
 		-e '/^COMP_OPTS=/d' \
-		-e "s/-llapack -lcblas/$(pkg-config --libs cblas lapack)/g" \
+		-e "s:-llapack -lcblas:$(pkg-config --libs cblas lapack):g" \
 		configure || die
 
 	# disable ldconfig which violates sandbox
@@ -123,7 +123,7 @@ src_configure() {
 		$(use_enable snappy) \
 		$(use_enable static-libs static) \
 		$(use_enable superlu) \
-		$(use_enable xml)
+		$(use_enable xml) || die
 }
 
 src_compile() {

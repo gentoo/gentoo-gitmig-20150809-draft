@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/shogun
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/shogun/ChangeLog,v 1.2 2012/06/25 19:41:18 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/shogun/ChangeLog,v 1.3 2012/07/24 13:50:21 jlec Exp $
+
+  24 Jul 2012; Justin Lecher <jlec@gentoo.org> shogun-1.1.0.ebuild,
+  metadata.xml:
+  Fix broken sed, #427884; add missing die
 
   25 Jun 2012; Sébastien Fabbro <bicatali@gentoo.org> shogun-1.1.0.ebuild:
   newins is not recursive, bug #421293, thanks Eric Garioud
