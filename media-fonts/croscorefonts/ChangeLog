@@ -1,0 +1,11 @@
+# ChangeLog for media-fonts/croscorefonts
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/croscorefonts/ChangeLog,v 1.1 2012/07/24 12:34:14 yngwin Exp $
+
+*croscorefonts-1.21.0 (24 Jul 2012)
+
+  24 Jul 2012; Ben de Groot <yngwin@gentoo.org> +croscorefonts-1.21.0.ebuild,
+  +files/62-croscore-arimo.conf, +files/62-croscore-cousine.conf,
+  +files/62-croscore-symbolneu.conf, +files/62-croscore-tinos.conf,
+  +metadata.xml:
+  Initial commit
