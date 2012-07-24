@@ -54,5 +54,17 @@
       web pages and graphs. This is only meaningful if the minimal USE
       flag is disabled.
     </flag>
+    <flag name='ipv6'>
+      Add support for IPv6 in munin-node. IPv6 support for the master
+      is always enabled, but the node requires a newer version of
+      <pkg>dev-perl/net-server</pkg>, capable of listening to IPv6
+      sockets.
+    </flag>
+    <flag name='syslog'>
+      Configure the node by default to log on syslog. This requires
+      the presence of <pkg>virtual/perl-Sys-Syslog</pkg>. As of
+      version 2.0.2, the master scripts only log to file, and not to
+      syslog.
+    </flag>
   </use>
 </pkgmetadata>

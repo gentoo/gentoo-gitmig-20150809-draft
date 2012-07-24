@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.2-r2.ebuild,v 1.1 2012/07/23 17:46:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.2-r2.ebuild,v 1.2 2012/07/24 15:00:05 flameeyes Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://sourceforge/munin/${MY_P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~mips ~x86"
-IUSE="asterisk irc java memcached minimal mysql postgres ssl test +cgi"
+IUSE="asterisk irc java memcached minimal mysql postgres ssl test +cgi ipv6 syslog"
 REQUIRED_USE="cgi? ( !minimal )"
 
 # Upstream's listing of required modules is NOT correct!
@@ -35,6 +35,7 @@ DEPEND_COM="dev-lang/perl
 			postgres? ( dev-perl/DBD-Pg dev-db/postgresql-base )
 			memcached? ( dev-perl/Cache-Memcached )
 			cgi? ( dev-perl/FCGI )
+			syslog? ( virtual/perl-Sys-Syslog )
 			dev-perl/DBI
 			dev-perl/DateManip
 			dev-perl/File-Copy-Recursive
@@ -44,7 +45,7 @@ DEPEND_COM="dev-lang/perl
 			dev-perl/Net-Netmask
 			dev-perl/Net-SNMP
 			dev-perl/libwww-perl
-			dev-perl/net-server
+			dev-perl/net-server[ipv6(-)?]
 			virtual/perl-Digest-MD5
 			virtual/perl-Getopt-Long
 			virtual/perl-MIME-Base64
@@ -111,13 +112,13 @@ src_compile() {
 }
 
 src_install() {
-	local dirs
-	dirs="/var/log/munin/ /var/lib/munin/"
-	dirs="${dirs} /var/lib/munin/plugin-state/"
-	dirs="${dirs} /etc/munin/plugin-conf.d/"
-	dirs="${dirs} /etc/munin/munin-conf.d/"
-	dirs="${dirs} /etc/munin/plugins/"
+	local dirs="
+		/var/log/munin/
+		/var/lib/munin/plugin-state/
+		/etc/munin/plugin-conf.d/
+		/etc/munin/plugins/"
 	keepdir ${dirs}
+	use minimal || dirs+=" /etc/munin/munin-conf.d/"
 
 	local install_targets="install-common-prime install-node-prime install-plugins-prime"
 	use java && install_targets+=" install-plugins-java"
@@ -139,6 +140,11 @@ src_install() {
 	# bug 254968
 	insinto /etc/logrotate.d/
 	newins "${FILESDIR}"/logrotate.d-munin munin
+
+	if use syslog; then
+		sed -i -e '/log_file/s| .*| Sys::Syslog|' \
+			"${D}"/etc/munin/munin-node.conf || die
+	fi
 
 	if ! use minimal; then
 		exeinto /etc/local.d/
