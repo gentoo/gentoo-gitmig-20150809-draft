@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.540 2012/07/23 17:03:34 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.541 2012/07/24 05:44:59 jdhore Exp $
+
+  24 Jul 2012; Jeff Horelick <jdhore@gentoo.org> ruby-1.9.3_p194-r1.ebuild:
+  marked x86 per bug 427774
 
   23 Jul 2012; Hans de Graaff <graaff@gentoo.org> -ruby-1.9.3_p0.ebuild,
   -ruby-1.9.3_p194.ebuild:
