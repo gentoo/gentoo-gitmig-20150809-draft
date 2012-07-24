@@ -1,6 +1,13 @@
 # ChangeLog for net-im/minbif
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/minbif/ChangeLog,v 1.9 2011/02/25 19:41:41 cedk Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/minbif/ChangeLog,v 1.10 2012/07/24 17:43:28 pacho Exp $
+
+*minbif-1.0.5 (24 Jul 2012)
+
+  24 Jul 2012; Pacho Ramos <pacho@gentoo.org> +files/minbif-1.0.5-gcc47.patch,
+  +files/minbif-1.0.5-glib-single-includes.patch, +minbif-1.0.5.ebuild:
+  Version bump, also fix gcc-4.7 and glib-2.32 compilation, and create
+  user/group properly (#343219 by fulax).
 
 *minbif-1.0.4 (25 Feb 2011)
 
@@ -39,4 +46,3 @@
   24 Nov 2009; Cédric Krier <cedk@gentoo.org> +minbif-1.0.ebuild,
   +files/minbif.initd, +metadata.xml:
   New ebuild
-
