@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-pam-ldapd/nss-pam-ldapd-0.8.10.ebuild,v 1.1 2012/07/24 07:16:14 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-pam-ldapd/nss-pam-ldapd-0.8.10-r1.ebuild,v 1.1 2012/07/24 21:32:13 prometheanfire Exp $
 
 EAPI=4
 
@@ -19,7 +19,8 @@ DEPEND="net-nds/openldap
 		sasl? ( dev-libs/cyrus-sasl )
 		kerberos? ( virtual/krb5 )
 		pam? ( virtual/pam )
-		!sys-auth/nss_ldap"
+		!sys-auth/nss_ldap
+		!sys-auth/pam_ldap"
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
