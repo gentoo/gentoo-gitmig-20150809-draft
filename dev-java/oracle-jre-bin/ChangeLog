@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/oracle-jre-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/ChangeLog,v 1.18 2012/07/23 17:28:56 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/ChangeLog,v 1.19 2012/07/24 15:20:40 jer Exp $
 
 *oracle-jre-bin-1.7.0.5-r2 (23 Jul 2012)
 
@@ -12,7 +12,7 @@
   Use paxctl for pax marking as the fallback won't create the headers. Thanks
   to blueness. #427642
   Use eclass to create sandbox control file.
-  Remove old and vulnarable.
+  Remove old and vulnerable.
 
   14 Jul 2012; Jeff Horelick <jdhore@gentoo.org>
   oracle-jre-bin-1.7.0.5-r1.ebuild:
