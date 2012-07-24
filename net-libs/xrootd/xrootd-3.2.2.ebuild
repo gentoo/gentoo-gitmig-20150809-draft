@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xrootd/xrootd-3.2.2.ebuild,v 1.1 2012/07/09 16:27:42 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xrootd/xrootd-3.2.2.ebuild,v 1.2 2012/07/24 18:13:49 bicatali Exp $
 
 EAPI=4
 
@@ -28,8 +28,10 @@ RDEPEND="!<sci-physics/root-5.32[xrootd]
 	readline? ( sys-libs/readline )
 	ssl? ( dev-libs/openssl )"
 DEPEND="${RDEPEND}
-	doc? ( app-doc/doxygen )
+	doc? ( app-doc/doxygen[dot] )
 	perl? ( dev-lang/swig )"
+
+PATCHES=( "${FILESDIR}"/${P}-glibc216.patch )
 
 pkg_setup() {
 	enewgroup xrootd
