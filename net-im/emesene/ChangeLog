@@ -1,6 +1,10 @@
 # ChangeLog for net-im/emesene
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/emesene/ChangeLog,v 1.29 2012/07/23 06:04:35 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/emesene/ChangeLog,v 1.30 2012/07/24 21:11:57 hwoarang Exp $
+
+  24 Jul 2012; Markos Chandras <hwoarang@gentoo.org> -emesene-2.12.3.ebuild,
+  emesene-2.12.5.ebuild:
+  Stable on amd64 wrt bug #427634. Remove old
 
   23 Jul 2012; Jeff Horelick <jdhore@gentoo.org> emesene-2.12.5.ebuild:
   marked x86 per bug 427634
@@ -121,4 +125,3 @@
 
   emesene-2.11.4: Bug #256747. Thanks to everyone who contributed various
   ebuilds
-
