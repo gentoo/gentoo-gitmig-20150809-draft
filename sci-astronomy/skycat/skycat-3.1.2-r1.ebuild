@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/skycat/skycat-3.1.2-r1.ebuild,v 1.1 2011/08/23 11:48:46 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/skycat/skycat-3.1.2-r1.ebuild,v 1.2 2012/07/24 19:58:55 bicatali Exp $
 
 EAPI=4
 inherit eutils autotools
@@ -12,7 +12,7 @@ SRC_URI="http://archive.eso.org/cms/tools-documentation/skycat-download/${P}.tar
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="threads"
 
 DEPEND="x11-libs/libXext
@@ -37,6 +37,10 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.0.2-systemlibs.patch
 	rm -fr astrotcl/{cfitsio,libwcs} \
 		|| die "Failed to remove included libs"
+	# prefix it
+	sed -i \
+		-e "s:/usr:${EPREFIX}/usr:g" \
+		*/configure.in */aclocal.m4 || die
 	eautoreconf
 }
 
