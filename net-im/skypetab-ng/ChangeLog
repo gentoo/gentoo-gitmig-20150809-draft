@@ -1,6 +1,14 @@
 # ChangeLog for net-im/skypetab-ng
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skypetab-ng/ChangeLog,v 1.6 2012/06/26 20:03:54 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skypetab-ng/ChangeLog,v 1.7 2012/07/24 08:18:57 slyfox Exp $
+
+*skypetab-ng-0.5.0-r1 (24 Jul 2012)
+
+  24 Jul 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/skypetab-ng-0.5.0-fix-multiwindows.patch, +skypetab-ng-0.5.0-r1.ebuild,
+  -skypetab-ng-0.4.11.ebuild:
+  Picked upstream patch to disable multiwindow mode. Thanks to Ulya Fokanova who
+  noticed the problem.
 
 *skypetab-ng-0.5.0 (26 Jun 2012)
 
@@ -41,4 +49,3 @@
   +skypetab-ng-0.4.9_pre20111124.ebuild, +skypetab-ng-9999.ebuild:
   Initial version. An LD_PRELOAD library to make your skype single-windowed
   application. Handly for tiled WM users.
-

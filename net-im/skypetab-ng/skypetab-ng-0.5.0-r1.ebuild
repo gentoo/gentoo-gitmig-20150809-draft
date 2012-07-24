@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skypetab-ng/skypetab-ng-0.4.11.ebuild,v 1.1 2012/06/09 14:28:03 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skypetab-ng/skypetab-ng-0.5.0-r1.ebuild,v 1.1 2012/07/24 08:18:57 slyfox Exp $
 
 EAPI=4
 
@@ -12,11 +12,11 @@ else
 	UNPACKER_ECLASS="vcs-snapshot"
 fi
 
-inherit qt4-r2 multilib ${UNPACKER_ECLASS}
+inherit eutils qt4-r2 multilib ${UNPACKER_ECLASS}
 
 if [[ -z ${LIVE_EBUILD} ]]; then
 	KEYWORDS="-* ~x86 ~amd64"
-	SRC_URI="http://github.com/kekekeks/${PN}/tarball/v${PV} -> ${P}.tar.gz"
+	SRC_URI="http://github.com/kekekeks/${PN}/tarball/v${PV}-fixed -> ${P}.tar.gz"
 fi
 
 DESCRIPTION="An LD_PRELOAD wrapper that adds tabs to Skype for Linux"
@@ -32,6 +32,10 @@ DEPEND="
 RDEPEND="${DEPEND}
 	net-im/skype[-qt-static]
 "
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-fix-multiwindows.patch
+}
 
 pkg_setup() {
 	use amd64 && multilib_toolchain_setup x86
