@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.299 2012/07/24 13:08:01 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.300 2012/07/24 13:55:46 yngwin Exp $
+
+  24 Jul 2012; Ben de Groot <yngwin@gentoo.org> -cairo-1.10.2-r2.ebuild,
+  -cairo-1.12.0.ebuild, -cairo-1.12.2.ebuild, cairo-1.10.2-r1.ebuild,
+  cairo-1.12.2-r1.ebuild:
+  Add epatch_user (bug #414987). Fix whitespace. Drop old ebuilds.
 
 *cairo-1.12.2-r1 (24 Jul 2012)
 
