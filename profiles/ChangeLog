@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6834 2012/07/24 13:43:38 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6835 2012/07/24 17:55:24 idl0r Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Jul 2012; Christian Ruppert <idl0r@gentoo.org> package.mask:
+  Mask media-video/nvidia-settings-3 because of the nvidia-drivers-3* mask
 
   24 Jul 2012; Anthony G. Basile <blueness@gentoo.org> package.mask:
   Remove masks on sys-apps/elfix and dev-python/pypax, ready for testing
