@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.0.11.ebuild,v 1.6 2012/07/24 08:10:22 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.0.11.ebuild,v 1.7 2012/07/24 21:10:29 hwoarang Exp $
 
 EAPI=4
 inherit autotools eutils pam virtualx
@@ -13,7 +13,7 @@ SRC_URI="http://launchpad.net/${PN}/1.0/${PV}/+download/${P}.tar.gz
 
 LICENSE="GPL-3 LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="branding +gtk +introspection qt4"
 
 RDEPEND="dev-libs/glib:2
