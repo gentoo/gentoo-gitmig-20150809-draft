@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-ldapd/nss-ldapd-0.6.7-r1.ebuild,v 1.3 2012/07/24 06:58:43 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-ldapd/nss-ldapd-0.6.7-r1.ebuild,v 1.4 2012/07/24 07:18:53 prometheanfire Exp $
 
 inherit multilib
 
 DESCRIPTION="NSS module for name lookups using LDAP"
 HOMEPAGE="http://ch.tudelft.nl/~arthur/nss-ldapd/"
-SRC_URI="http://ch.tudelft.nl/~arthur/nss-ldapd/nss-ldapd-${PV}.tar.gz"
+SRC_URI="http://ch.tudelft.nl/~arthur/nss-ldapd/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
