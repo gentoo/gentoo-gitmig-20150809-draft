@@ -1,9 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/fastjet/fastjet-3.0.3.ebuild,v 1.1 2012/06/27 18:49:32 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/fastjet/fastjet-3.0.3-r1.ebuild,v 1.1 2012/07/24 17:47:27 bicatali Exp $
 
 EAPI=4
 
+AUTOTOOLS_AUTORECONF=yes
 inherit autotools-utils fortran-2 flag-o-matic
 
 DESCRIPTION="Fast implementation of several recombination jet algorithms"
@@ -12,13 +13,15 @@ SRC_URI="${HOMEPAGE}/repo/${P}.tar.gz"
 
 LICENSE="GPL-2 QPL"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="cgal doc examples +plugins static-libs"
 
 RDEPEND="cgal? ( sci-mathematics/cgal )"
 DEPEND="${RDEPEND}
-	doc? ( app-doc/doxygen )
-	plugins? ( virtual/fortran )"
+	doc? ( app-doc/doxygen[dot] )
+	plugins? ( virtual/fortran sci-physics/siscone )"
+
+PATCHES=( "${FILESDIR}"/${P}-system-siscone.patch )
 
 pkg_setup() {
 	use plugins && fortran-2_pkg_setup
@@ -26,7 +29,7 @@ pkg_setup() {
 
 src_configure() {
 	use cgal && has_version sci-mathematics/cgal[gmp] && append-ldflags -lgmp
-	myeconfargs+=(
+	local myeconfargs=(
 		$(use_enable cgal)
 		$(use_enable plugins allplugins)
 		$(use_enable plugins allcxxplugins)
