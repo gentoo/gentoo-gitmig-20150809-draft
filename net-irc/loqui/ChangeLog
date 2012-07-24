@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/loqui
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/loqui/ChangeLog,v 1.41 2012/05/03 06:27:13 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/loqui/ChangeLog,v 1.42 2012/07/24 18:08:54 pacho Exp $
+
+*loqui-0.5.3 (24 Jul 2012)
+
+  24 Jul 2012; Pacho Ramos <pacho@gentoo.org> +loqui-0.5.3.ebuild:
+  Version bump, this also solves glib-2.32 compilation.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> loqui-0.4.4.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -183,4 +188,3 @@
   07 Sep 2003; Chuck Short <zul@gentoo.org> loqui-0.1.18.ebuild:
   Initial version, ebuild submitted by Ryosuke KUTSUNA 
   <ryosuke@cool.email.ne.jp>. Closes bug #27863.
-
