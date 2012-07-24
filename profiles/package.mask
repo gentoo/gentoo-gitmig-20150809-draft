@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14006 2012/07/24 21:06:41 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14007 2012/07/24 22:19:52 chithanh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,15 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (24 Jul 2012)
+# Newer mesa needs keywording of indent, bug #427952. Requires
+# profiles update for new video_cards_radeonsi flag, bug #427956.
+# Below packages must be unmasked simultaneously due to API break.
+>=media-libs/mesa-8.1_rc1_pre20120724
+>=x11-drivers/xf86-video-ati-6.14.5
+>=x11-drivers/xf86-video-nouveau-0.0.16_pre20120508
+>=x11-libs/libdrm-2.4.34
 
 # Christian Ruppert <idl0r@gentoo.org> (24 Jul 2012)
 # Masked because of the nvidia-drivers-3* mask below
@@ -326,13 +335,6 @@ x11-misc/transset-df
 # Ultrabug <ultrabug@gentoo.org> (16 May 2012)
 # Masked for testing
 >=sys-cluster/corosync-2.0.0
-
-# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (11 May 2012)
-# Nouveau API break, mask until situation becomes palatable for users
-# xf86-video-ati-6.14.5 needs new libdrm
->=x11-drivers/xf86-video-ati-6.14.5
->=x11-drivers/xf86-video-nouveau-0.0.16_pre20120508
->=x11-libs/libdrm-2.4.34
 
 # Alistair Bush <ali_bush@gentoo.org> (10 May 2012)
 # Mask alpha version of mono for testing
