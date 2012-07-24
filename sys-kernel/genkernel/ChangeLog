@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.325 2012/07/21 01:13:35 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.326 2012/07/24 06:49:50 robbat2 Exp $
+
+  24 Jul 2012; Robin H. Johnson <robbat2@gentoo.org> genkernel-9999.ebuild:
+  Live ebuild using wrong version of busybox.
 
 *genkernel-3.4.39 (21 Jul 2012)
 
