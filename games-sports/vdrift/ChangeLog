@@ -1,6 +1,9 @@
 # ChangeLog for games-sports/vdrift
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/vdrift/ChangeLog,v 1.19 2012/06/19 17:32:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/vdrift/ChangeLog,v 1.20 2012/07/24 16:52:50 mr_bones_ Exp $
+
+  24 Jul 2012; Michael Sterrett <mr_bones_@gentoo.org> vdrift-20111022.ebuild:
+  stable for x86
 
   19 Jun 2012; Michael Sterrett <mr_bones_@gentoo.org> vdrift-20111022.ebuild:
   enforce single-precision for sci-physics/bullet (bug #402759)
