@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.422 2012/07/23 20:50:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.423 2012/07/24 13:54:22 darkside Exp $
+
+*eix-0.26.1 (24 Jul 2012)
+
+  24 Jul 2012; Jeremy Olexa <darkside@gentoo.org> -eix-0.26.0.ebuild,
+  -files/eix-0.26.0-tools.patch, +eix-0.26.1.ebuild, metadata.xml:
+  Version bump from upstream for bug fixes (closes Gentoo bugs 425512, 426256,
+  427644)
 
   23 Jul 2012; Markus Meier <maekke@gentoo.org> eix-0.25.5.ebuild:
   arm stable, bug #427100

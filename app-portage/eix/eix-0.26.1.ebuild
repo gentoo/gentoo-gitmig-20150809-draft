@@ -1,10 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.26.0.ebuild,v 1.3 2012/07/10 14:30:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.26.1.ebuild,v 1.1 2012/07/24 13:54:22 darkside Exp $
 
 EAPI=4
 
-inherit eutils multilib bash-completion-r1
+PLOCALES="de ru"
+inherit bash-completion-r1 eutils multilib l10n
 
 DESCRIPTION="Search and query ebuilds, portage incl. local settings, ext. overlays, version changes, and more"
 HOMEPAGE="http://eix.berlios.de"
@@ -31,7 +32,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	use tools && epatch "${FILESDIR}"/${P}-tools.patch
+	epatch_user
 }
 
 src_configure() {
