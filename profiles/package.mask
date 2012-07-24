@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14000 2012/07/24 08:21:43 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14001 2012/07/24 08:22:38 dev-zero Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -36,6 +36,7 @@
 # Security bug #308067 and bugs #427702, #232608, #247809,
 # #258409, #265183, #337691, #342783, #279074
 # Removal in 30 days
+net-fs/mount-cifs
 
 # Doug Goldstein <cardoe@gentoo.org> (22 Jul 2012)
 # Beta driver & beta ebuild
