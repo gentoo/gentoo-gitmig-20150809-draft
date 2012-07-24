@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-MDB2_Driver_oci8
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MDB2_Driver_oci8/ChangeLog,v 1.21 2012/01/18 19:59:14 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MDB2_Driver_oci8/ChangeLog,v 1.22 2012/07/24 21:30:31 mabi Exp $
+
+  24 Jul 2012; Matti Bickel <mabi@gentoo.org>
+  -PEAR-MDB2_Driver_oci8-1.4.1.ebuild:
+  Remove old version. Dropping keywords b/c required dependency dev-
+  lang/php[oci8] is not reachable for those arches
 
   18 Jan 2012; Matti Bickel <mabi@gentoo.org>
   -PEAR-MDB2_Driver_oci8-1.5.0_alpha2.ebuild:
@@ -113,4 +118,3 @@
   19 Jul 2006; Luca Longinotti <chtekk@gentoo.org> +metadata.xml,
   +PEAR-MDB2_Driver_oci8-0.3.0.ebuild:
   New ebuild to fix PEAR-MDB2 (doesn't work without drivers).
-
