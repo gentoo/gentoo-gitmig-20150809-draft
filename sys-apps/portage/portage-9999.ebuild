@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.52 2012/07/07 05:38:27 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.53 2012/07/24 09:11:35 mgorny Exp $
 
 EAPI=3
 inherit git-2 eutils multilib python
@@ -128,6 +128,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch_user
+
 	einfo "Producing ChangeLog from Git history..."
 	pushd "${S}/.git" >/dev/null || die
 	git log ebcf8975b37a8aae9735eb491a9b4cb63549bd5d^.. \
