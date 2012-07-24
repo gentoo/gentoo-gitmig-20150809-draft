@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/visualboyadvance
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/ChangeLog,v 1.43 2012/06/29 12:49:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/ChangeLog,v 1.44 2012/07/24 07:56:41 tupone Exp $
+
+  24 Jul 2012; Tupone Alfredo <tupone@gentoo.org>
+  visualboyadvance-1.7.2-r3.ebuild, +files/visualboyadvance-1.7.2-gcc47.patch:
+  Fix build with gcc-4.7 Bug #427760 by flameeyes@gentoo.org
 
   29 Jun 2012; Brent Baude <ranger@gentoo.org>
   visualboyadvance-1.7.2-r3.ebuild:
