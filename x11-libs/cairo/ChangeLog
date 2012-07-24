@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.300 2012/07/24 13:55:46 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.301 2012/07/24 14:01:45 yngwin Exp $
+
+*cairo-1.10.2-r2 (24 Jul 2012)
+
+  24 Jul 2012; Ben de Groot <yngwin@gentoo.org> +cairo-1.10.2-r2.ebuild,
+  -cairo-1.10.2-r1.ebuild:
+  Oops! Restore 1.10.2-r2 and remove 1.10.2-r1...
 
   24 Jul 2012; Ben de Groot <yngwin@gentoo.org> -cairo-1.10.2-r2.ebuild,
   -cairo-1.12.0.ebuild, -cairo-1.12.2.ebuild, cairo-1.10.2-r1.ebuild,
