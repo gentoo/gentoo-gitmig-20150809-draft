@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libnova/libnova-0.15.0.ebuild,v 1.1 2012/07/17 19:02:34 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libnova/libnova-0.15.0.ebuild,v 1.2 2012/07/24 18:00:28 bicatali Exp $
 
 EAPI=4
 inherit eutils autotools
@@ -18,6 +18,7 @@ DEPEND="doc? ( app-doc/doxygen )"
 RDEPEND=""
 
 src_prepare() {
+	sed -i -e '/CFLAGS=-Wall/d' configure.in || die
 	eautoreconf
 }
 
