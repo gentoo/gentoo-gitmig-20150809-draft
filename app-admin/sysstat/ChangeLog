@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.229 2012/05/19 11:58:12 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.230 2012/07/24 16:05:46 blueness Exp $
+
+  24 Jul 2012; Anthony G. Basile <blueness@gentoo.org> sysstat-10.0.5.ebuild:
+  Stable ppc/ppc64
 
   19 May 2012; Anthony G. Basile <blueness@gentoo.org> sysstat-10.0.5.ebuild:
   Keyword mips
