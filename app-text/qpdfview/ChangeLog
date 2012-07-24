@@ -1,6 +1,11 @@
 # ChangeLog for app-text/qpdfview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/ChangeLog,v 1.11 2012/07/17 05:50:27 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/ChangeLog,v 1.12 2012/07/24 09:32:16 yngwin Exp $
+
+*qpdfview-0.3.2_beta2 (24 Jul 2012)
+
+  24 Jul 2012; Ben de Groot <yngwin@gentoo.org> +qpdfview-0.3.2_beta2.ebuild:
+  Version bump. Handle localizations properly.
 
 *qpdfview-0.3.2_beta1 (17 Jul 2012)
 
