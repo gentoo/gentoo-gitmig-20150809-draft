@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6832 2012/07/23 17:23:20 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6833 2012/07/24 08:21:43 dev-zero Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Jul 2012; Tiziano Müller <dev-zero@gentoo.org> package.mask:
+  p.mask net-fs/mount-cifs for bug #308067 (and others)
 
   23 Jul 2012; Jeremy Olexa <darkside@gentoo.org> desc/nginx_modules_http.desc:
   add limit_conn desc
