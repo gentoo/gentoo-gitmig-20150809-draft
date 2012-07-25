@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/dbus-python
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.104 2012/07/21 21:30:22 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.105 2012/07/25 21:13:28 maekke Exp $
+
+  25 Jul 2012; Markus Meier <maekke@gentoo.org> dbus-python-1.1.1.ebuild:
+  arm stable, bug #416725
 
   21 Jul 2012; Jeff Horelick <jdhore@gentoo.org> dbus-python-1.1.1.ebuild:
   marked x86 per bug 416725
