@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/krecipes
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krecipes/ChangeLog,v 1.43 2011/10/30 10:22:00 dilfridge Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krecipes/ChangeLog,v 1.44 2012/07/25 03:45:14 creffett Exp $
+
+  25 Jul 2012; Chris Reffett <creffett@gentoo.org>
+  +files/krecipes-2.0_beta2-remove-mx2test.patch, krecipes-2.0_beta2.ebuild:
+  Re-enable tests and add patch to remove failing test, bug 330065
 
   30 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   krecipes-2.0_beta2.ebuild:
@@ -197,4 +201,3 @@
   04 Jul 2004; Dominik Stadler <centic@gentoo.org> +metadata.xml,
   +krecipes-0.5_beta.ebuild:
   Add new application, fixes Bug 34246.
-
