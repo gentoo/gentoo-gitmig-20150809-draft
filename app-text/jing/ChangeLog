@@ -1,6 +1,13 @@
 # ChangeLog for app-text/jing
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jing/ChangeLog,v 1.24 2012/05/24 15:28:19 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jing/ChangeLog,v 1.25 2012/07/25 14:51:38 sera Exp $
+
+*jing-20091111-r1 (25 Jul 2012)
+
+  25 Jul 2012; Ralph Sennhauser <sera@gentoo.org> -jing-20091111.ebuild,
+  +jing-20091111-r1.ebuild:
+  Avoid bogous QA warning. #423103
+  Fix saxon slot for classpath.
 
 *jing-20091111 (24 May 2012)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jing/jing-20091111.ebuild,v 1.1 2012/05/24 15:28:19 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jing/jing-20091111-r1.ebuild,v 1.1 2012/07/25 14:51:38 sera Exp $
 
 EAPI=4
 
@@ -31,13 +31,15 @@ DEPEND="${COMMON_DEPEND}
 	>=virtual/jdk-1.5
 	app-arch/unzip"
 
-S="${WORKDIR}/${P}"
+# Avoid bogous QA warning, no usable build.xml. The one that exists belongs to
+# the examples.
+S="${WORKDIR}/${P}/src"
 
 src_unpack() {
 	default
 
-	mkdir -p "${S}"/src || die
-	pushd "${S}"/src >/dev/null || die
+	mkdir -p "${S}" || die
+	pushd "${S}" >/dev/null || die
 		unpack ./../src.zip
 	popd >/dev/null
 
@@ -45,28 +47,24 @@ src_unpack() {
 	# http://code.google.com/p/jing-trang/issues/detail?id=84
 	mkdir -p "${S}"/target/classes || die
 	pushd "${S}"/target/classes >/dev/null || die
-		unpack ./../../bin/${PN}.jar
+		unpack ./../../../bin/${PN}.jar
 		find -name '*.class' -exec rm {} + || die
 	popd >/dev/null
 }
 
 java_prepare() {
-	find -name '*.jar' -exec rm -v {} + || die
+	find "${WORKDIR}" -name '*.jar' -exec rm -v {} + || die
 
 	#remove bundled relaxng-datatype
-	rm -rv src/org || die
+	rm -rv org || die
 
 	# for use with saxon:6.5
-	rm -v src/com/thaiopensource/validate/schematron/OldSaxonSchemaReaderFactory.java || die
+	rm -v com/thaiopensource/validate/schematron/OldSaxonSchemaReaderFactory.java || die
 	sed -i -e '/OldSaxonSchemaReaderFactory/d' \
 		target/classes/META-INF/services/com.thaiopensource.validate.SchemaReaderFactory || die
-
-	# bogous QA warning, no usable build.xml. The one that exists belongs to the
-	# example.
 }
 
-JAVA_SRC_DIR="${S}/src/"
-JAVA_GENTOO_CLASSPATH="ant-core,iso-relax,relaxng-datatype,saxon,xalan,xerces-2,xml-commons-resolver"
+JAVA_GENTOO_CLASSPATH="ant-core,iso-relax,relaxng-datatype,saxon-9,xalan,xerces-2,xml-commons-resolver"
 
 #src_test() {
 #	# would need some test files could probably take this from the gcj version
@@ -80,6 +78,6 @@ src_install() {
 	java-pkg-simple_src_install
 	java-pkg_dolauncher ${PN} --main com.thaiopensource.relaxng.util.Driver
 
-	use doc && dohtml doc/*html
-	use examples && java-pkg_doexamples sample
+	use doc && dohtml ../doc/*html
+	use examples && java-pkg_doexamples ../sample
 }
