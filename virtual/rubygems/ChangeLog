@@ -1,6 +1,9 @@
 # ChangeLog for virtual/rubygems
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/ChangeLog,v 1.37 2012/07/22 14:19:17 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/ChangeLog,v 1.38 2012/07/25 20:19:12 blueness Exp $
+
+  25 Jul 2012; Anthony G. Basile <blueness@gentoo.org> rubygems-4.ebuild:
+  Stable ppc64, bug #411507
 
   22 Jul 2012; <nixnut@gentoo.org> rubygems-4.ebuild:
   ppc stable #411507

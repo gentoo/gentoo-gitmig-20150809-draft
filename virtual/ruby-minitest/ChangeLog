@@ -1,6 +1,10 @@
 # ChangeLog for virtual/ruby-minitest
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-minitest/ChangeLog,v 1.30 2012/07/22 14:20:13 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-minitest/ChangeLog,v 1.31 2012/07/25 20:20:41 blueness Exp $
+
+  25 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
+  ruby-minitest-0-r2.ebuild:
+  Stable ppc64, bug #411507
 
   22 Jul 2012; <nixnut@gentoo.org> ruby-minitest-0-r2.ebuild:
   ppc stable #411507

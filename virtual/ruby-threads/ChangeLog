@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ruby-threads
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-threads/ChangeLog,v 1.13 2012/07/22 14:24:05 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-threads/ChangeLog,v 1.14 2012/07/25 20:28:14 blueness Exp $
+
+  25 Jul 2012; Anthony G. Basile <blueness@gentoo.org> ruby-threads-1.ebuild:
+  Stable ppc64, bug #411507
 
   22 Jul 2012; <nixnut@gentoo.org> ruby-threads-1.ebuild:
   ppc stable #411507
