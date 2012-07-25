@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.410 2012/07/25 13:34:37 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.411 2012/07/25 18:50:23 chithanh Exp $
+
+  25 Jul 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/eselect-mesa.conf.8.1,
+  +files/mesa-8.1-dont-require-llvm-for-r300.patch:
+  Add missing files, bug #428027
 
   25 Jul 2012; Ben de Groot <yngwin@gentoo.org> mesa-8.1_rc1_pre20120724.ebuild:
   Hide dev-util/indent behind !amd-fbsd wrt bug #427952
