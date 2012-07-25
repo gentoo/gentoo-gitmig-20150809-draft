@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.360 2012/07/25 15:41:37 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.361 2012/07/25 15:50:19 zerochaos Exp $
+
+  25 Jul 2012; Rick Farina <zerochaos@gentoo.org> -wireshark-1.8.1.ebuild:
+  sorry, no sleep, reverting 1.8.1 bump until it's done right
 
 *wireshark-1.8.1 (25 Jul 2012)
 
