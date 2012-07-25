@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.12.99.902.ebuild,v 1.2 2012/07/22 12:54:50 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.12.99.902.ebuild,v 1.3 2012/07/25 23:43:26 chithanh Exp $
 
 EAPI=4
 
@@ -64,10 +64,10 @@ DEPEND="${RDEPEND}
 	>=x11-proto/damageproto-1.1
 	>=x11-proto/fixesproto-5.0
 	>=x11-proto/fontsproto-2.0.2
-	>=x11-proto/glproto-1.4.14
+	>=x11-proto/glproto-1.4.16
 	>=x11-proto/inputproto-2.1.99.3
 	>=x11-proto/kbproto-1.0.3
-	>=x11-proto/randrproto-1.2.99.3
+	>=x11-proto/randrproto-1.4.0
 	>=x11-proto/recordproto-1.13.99.1
 	>=x11-proto/renderproto-0.11
 	>=x11-proto/resourceproto-1.0.2
@@ -93,7 +93,7 @@ DEPEND="${RDEPEND}
 	)
 	!minimal? (
 		>=x11-proto/xf86driproto-2.1.0
-		>=x11-proto/dri2proto-2.6
+		>=x11-proto/dri2proto-2.8
 		>=x11-libs/libdrm-2.4.20
 	)"
 
