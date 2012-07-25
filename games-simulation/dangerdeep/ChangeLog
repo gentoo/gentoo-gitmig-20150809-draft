@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/dangerdeep
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/dangerdeep/ChangeLog,v 1.13 2010/11/19 22:27:15 mr_bones_ Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/dangerdeep/ChangeLog,v 1.14 2012/07/25 12:44:07 tupone Exp $
+
+  25 Jul 2012; Alfredo Tupone <tupone@gentoo.org> dangerdeep-0.3.0.ebuild,
+  +files/dangerdeep-0.3.0-gcc47.patch:
+  Build with gcc-4.7 Bug #424729 by flameeyes@gentoo.org
 
   19 Nov 2010; Michael Sterrett <mr_bones_@gentoo.org>
   dangerdeep-0.3.0.ebuild:
