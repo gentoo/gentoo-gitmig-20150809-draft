@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/netbeans-php
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-php/ChangeLog,v 1.14 2012/05/30 06:08:23 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-php/ChangeLog,v 1.15 2012/07/25 16:09:38 fordfrog Exp $
+
+*netbeans-php-7.2 (25 Jul 2012)
+
+  25 Jul 2012; Miroslav Šulc <fordfrog@gentoo.org> +netbeans-php-7.2.ebuild:
+  netbeans 7.2 release
 
   30 May 2012; Johannes Huber <johu@gentoo.org> netbeans-php-7.1.2.ebuild:
   Stable for x86, wrt bug #417799
