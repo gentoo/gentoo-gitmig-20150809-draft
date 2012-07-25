@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/dropbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/ChangeLog,v 1.23 2012/07/08 20:44:32 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/ChangeLog,v 1.24 2012/07/25 02:39:58 naota Exp $
+
+*dropbox-1.4.3-r1 (25 Jul 2012)
+*dropbox-1.4.7-r1 (25 Jul 2012)
+
+  25 Jul 2012; Naohiro Aota <naota@gentoo.org> +dropbox-1.4.3-r1.ebuild,
+  +dropbox-1.4.7-r1.ebuild, -dropbox-1.4.3.ebuild, -dropbox-1.4.7.ebuild,
+  files/dropbox.initd:
+  Update init script to use correct pid file. #427800
 
   08 Jul 2012; Naohiro Aota <naota@gentoo.org> dropbox-1.2.51-r2.ebuild,
   dropbox-1.4.3.ebuild, dropbox-1.4.7.ebuild:

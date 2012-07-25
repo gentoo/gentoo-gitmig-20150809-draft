@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/files/dropbox.initd,v 1.1 2012/05/16 12:46:14 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/files/dropbox.initd,v 1.2 2012/07/25 02:39:58 naota Exp $
 
 PID_DIR=/var/run/dropbox
 
@@ -58,7 +58,7 @@ stop() {
 
 status() {
     for dbuser in ${DROPBOX_USERS}; do
-	if [ -e /var/run/dropbox-$dbuser.pid ] ; then
+	if [ -e ${PID_DIR}/${dbuser}.pid ] ; then
             echo "dropboxd for USER $dbuser: running."
 	else
             echo "dropboxd for USER $dbuser: not running."
