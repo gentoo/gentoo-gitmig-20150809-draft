@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/siscone/siscone-2.0.5.ebuild,v 1.1 2012/07/24 16:55:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/siscone/siscone-2.0.5.ebuild,v 1.2 2012/07/25 06:57:29 mr_bones_ Exp $
 
 EAPI=4
 
@@ -30,4 +30,3 @@ src_install() {
 		doins examples/events/*.dat
 	fi
 }
-
