@@ -1,6 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/tex4ht-20090611_p1038-r1.ebuild,v 1.9 2012/05/12 03:29:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/tex4ht-20090611_p1038-r1.ebuild,v 1.10 2012/07/25 14:18:20 ottxor Exp $
+
+EAPI=4
 
 inherit latex-package toolchain-funcs java-pkg-opt-2
 
@@ -15,7 +17,7 @@ HOMEPAGE="http://www.cse.ohio-state.edu/~gurari/TeX4ht/
 SRC_URI="http://www.cse.ohio-state.edu/~gurari/TeX4ht/fix/${MY_P}.tar.gz"
 
 LICENSE="LPPL-1.2"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 SLOT="0"
 
 DEPEND=">=sys-apps/sed-4
@@ -29,15 +31,13 @@ IUSE="java"
 
 S="${WORKDIR}/${MY_P}"
 
-src_unpack() {
-	unpack ${A}
+src_prepare() {
 	cd "${S}/texmf/tex4ht/base/unix"
-	sed -i -e \
-	's#~/tex4ht.dir#/usr/share#' tex4ht.env || die
-	sed -i -e \
-	's#tpath/tex/texmf/fonts/tfm/!#t/usr/share/texmf/fonts/tfm/!\nt/usr/local/share/texmf/fonts/tfm/!\nt/var/cache/fonts/tfm/!#' tex4ht.env || die
-	sed -i -e \
-	's#%%~/texmf-dist#/usr/share/texmf#g' tex4ht.env || die
+	sed -i \
+		-e "s#~/tex4ht.dir#${EPREFIX}/usr/share#" \
+		-e "s#tpath/tex/texmf/fonts/tfm/!#t${EPREFIX}/usr/share/texmf/fonts/tfm/!\nt${EPREFIX}/usr/local/share/texmf/fonts/tfm/!\nt${EPREFIX}/var/cache/fonts/tfm/!#" \
+		-e "s#%%~/texmf-dist#${EPREFIX}/usr/share/texmf#g" tex4ht.env \
+		|| die "sed of tex4ht.env failed"
 
 	einfo "Removing precompiled java stuff"
 	find "${S}" '(' -name '*.class' -o -name '*.jar' ')' -print -delete
@@ -48,7 +48,7 @@ src_compile() {
 	einfo "Compiling postprocessor sources..."
 	for f in tex4ht t4ht htcmd ; do
 		$(tc-getCC) ${CPPFLAGS} ${CFLAGS} ${LDFLAGS} -o $f $f.c \
-			-DENVFILE='"/usr/share/texmf/tex4ht/base/tex4ht.env"' \
+			-DENVFILE="\"${EPREFIX}/usr/share/texmf/tex4ht/base/tex4ht.env\"" \
 			-DHAVE_DIRENT_H -DKPATHSEA -lkpathsea \
 			|| die "Compiling $f failed"
 	done

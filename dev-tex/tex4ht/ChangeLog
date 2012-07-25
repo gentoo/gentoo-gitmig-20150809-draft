@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/tex4ht
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/ChangeLog,v 1.77 2012/05/12 03:29:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/ChangeLog,v 1.78 2012/07/25 14:18:20 ottxor Exp $
+
+  25 Jul 2012; Christoph Junghans <ottxor@gentoo.org>
+  tex4ht-20090611_p1038-r1.ebuild:
+  added prefix support (bug #427978)
 
   12 May 2012; Alexis Ballier <aballier@gentoo.org>
   tex4ht-20090611_p1038-r1.ebuild:
@@ -341,4 +345,3 @@
   Initial import. Thanks to Maarten Wisse <Maarten.Wisse@urz.uni-heidelberg.de>
   and Richard Seymour <nutate@yahoo.com> for providing an ebuild. This closes
   bug #33259.
-
