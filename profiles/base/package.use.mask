@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.375 2012/07/20 20:12:53 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.376 2012/07/25 13:43:21 yngwin Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -52,7 +52,7 @@ app-office/calligra postgres
 
 # Michael Weber<xmw@gentoo.org>  (02 Jun 2012)
 # Not fit for production (bug 404403, comment #5)
-dev-db/firebird client 
+dev-db/firebird client
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (25 Mai 2012)
 # Requires icc which does not emerge (distfile unavailable)

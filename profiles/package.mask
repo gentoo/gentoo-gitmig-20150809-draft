@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14007 2012/07/24 22:19:52 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14008 2012/07/25 13:43:20 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,15 +30,6 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
-
-# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (24 Jul 2012)
-# Newer mesa needs keywording of indent, bug #427952. Requires
-# profiles update for new video_cards_radeonsi flag, bug #427956.
-# Below packages must be unmasked simultaneously due to API break.
->=media-libs/mesa-8.1_rc1_pre20120724
->=x11-drivers/xf86-video-ati-6.14.5
->=x11-drivers/xf86-video-nouveau-0.0.16_pre20120508
->=x11-libs/libdrm-2.4.34
 
 # Christian Ruppert <idl0r@gentoo.org> (24 Jul 2012)
 # Masked because of the nvidia-drivers-3* mask below
@@ -459,10 +450,6 @@ net-p2p/leechcraft-eiskaltdcpp
 =media-libs/clutter-gst-1.6*
 # Needs gst-plugins-flac-0.10.31 + commit 265a5bfa to write seekable flac files
 =media-sound/sound-juicer-3.4*
-
-# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (24 Mar 2012)
-# Causes font corruption, bug #409593.
-=x11-libs/cairo-1.12*
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (22 Mar 2012)
 # Even its author admits that it's an ugly hack. Crashes e.g.
