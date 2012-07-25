@@ -1,25 +1,21 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-9999.ebuild,v 1.21 2012/07/25 08:44:33 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.10.2-r3.ebuild,v 1.1 2012/07/25 08:44:33 yngwin Exp $
 
-EAPI=4
+EAPI=3
 
-inherit eutils flag-o-matic autotools
+EGIT_REPO_URI="git://anongit.freedesktop.org/git/cairo"
+[[ ${PV} == *9999 ]] && GIT_ECLASS="git"
 
-if [[ ${PV} == *9999* ]]; then
-	inherit git-2
-	EGIT_REPO_URI="git://anongit.freedesktop.org/git/cairo"
-	SRC_URI=""
-	KEYWORDS=""
-else
-	SRC_URI="http://cairographics.org/releases/${P}.tar.xz"
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-fi
+inherit eutils flag-o-matic autotools ${GIT_ECLASS}
 
 DESCRIPTION="A vector graphics library with cross-device output support"
 HOMEPAGE="http://cairographics.org/"
+[[ ${PV} == *9999 ]] || SRC_URI="http://cairographics.org/releases/${P}.tar.gz"
+
 LICENSE="|| ( LGPL-2.1 MPL-1.1 )"
 SLOT="0"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="X aqua debug directfb doc drm gallium +glib opengl openvg qt4 static-libs +svg xcb"
 
 # Test causes a circular depend on gtk+... since gtk+ needs cairo but test needs gtk+ so we need to block it
@@ -31,16 +27,13 @@ RDEPEND="media-libs/fontconfig
 	sys-libs/zlib
 	>=x11-libs/pixman-0.18.4
 	directfb? ( dev-libs/DirectFB )
-	glib? ( >=dev-libs/glib-2.28.6:2 )
-	opengl? ( virtual/opengl )
-	openvg? ( media-libs/mesa[openvg] )
+	glib? ( dev-libs/glib:2 )
+	opengl? ( || ( media-libs/mesa[egl] media-libs/opengl-apple ) )
+	openvg? ( media-libs/mesa[gallium] )
 	qt4? ( >=x11-libs/qt-gui-4.8:4 )
-	svg? ( dev-libs/libxml2 )
 	X? (
 		>=x11-libs/libXrender-0.6
-		x11-libs/libXext
 		x11-libs/libX11
-		x11-libs/libXft
 		drm? (
 			>=sys-fs/udev-136
 			gallium? ( media-libs/mesa[gallium] )
@@ -65,16 +58,13 @@ DEPEND="${RDEPEND}
 		)
 	)"
 
-# drm module requires X
-# for gallium we need to enable drm
-REQUIRED_USE="
-	drm? ( X )
-	gallium? ( drm )
-"
-
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.8.8-interix.patch
-	epatch "${FILESDIR}"/${PN}-1.10.2-qt-surface.patch
+	epatch "${FILESDIR}"/${PN}-1.10.0-buggy_gradients.patch
+	epatch "${FILESDIR}"/${P}-interix.patch
+	epatch "${FILESDIR}"/${P}-qt-surface.patch
+	epatch "${FILESDIR}"/${P}-export-symbols.patch
+	epatch "${FILESDIR}"/${P}-ubuntu.patch
 	epatch "${FILESDIR}"/${PN}-respect-fontconfig.patch
 	epatch_user
 
@@ -97,13 +87,42 @@ src_configure() {
 	use sh && myopts+=" --disable-atomic"
 
 	[[ ${CHOST} == *-interix* ]] && append-flags -D_REENTRANT
-	# http://bugs.freedesktop.org/show_bug.cgi?id=15463
-	[[ ${CHOST} == *-solaris* ]] && append-flags -D_POSIX_PTHREAD_SEMANTICS
+
+	# tracing fails to compile, because Solaris' libelf doesn't do large files
+	[[ ${CHOST} == *-solaris* ]] && myopts+=" --disable-trace"
+
+	# 128-bits long arithemetic functions are missing
+	[[ ${CHOST} == powerpc*-*-darwin* ]] && filter-flags -mcpu=*
 
 	#gets rid of fbmmx.c inlining warnings
 	append-flags -finline-limit=1200
 
-	use X && myopts+=" --enable-tee=yes"
+	if use X; then
+		myopts+="
+			--enable-tee=yes
+			$(use_enable drm)
+		"
+
+		if use drm; then
+			myopts+="
+				$(use_enable gallium)
+				$(use_enable xcb xcb-drm)
+			"
+		else
+			use gallium && ewarn "Gallium use requires drm use enabled. So disabling for now."
+			myopts+="
+				--disable-gallium
+				--disable-xcb-drm
+			"
+		fi
+	else
+		use drm && ewarn "drm use requires X use enabled. So disabling for now."
+		myopts+="
+			--disable-drm
+			--disable-gallium
+			--disable-xcb-drm
+		"
+	fi
 
 	use elibc_FreeBSD && myopts+=" --disable-symbol-lookup"
 
@@ -127,8 +146,6 @@ src_configure() {
 		$(use_enable svg) \
 		$(use_enable xcb) \
 		$(use_enable xcb xcb-shm) \
-		$(use_enable drm) \
-		$(use_enable gallium) \
 		--enable-ft \
 		--enable-pdf \
 		--enable-png \
@@ -139,7 +156,7 @@ src_configure() {
 
 src_install() {
 	# parallel make install fails
-	emake -j1 DESTDIR="${D}" install
+	emake -j1 DESTDIR="${D}" install || die
 	find "${ED}" -name '*.la' -exec rm -f {} +
-	dodoc AUTHORS ChangeLog NEWS README
+	dodoc AUTHORS ChangeLog NEWS README || die
 }
