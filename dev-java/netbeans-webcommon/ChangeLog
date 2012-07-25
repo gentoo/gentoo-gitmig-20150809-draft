@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/netbeans-webcommon
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-webcommon/ChangeLog,v 1.1 2012/07/25 16:11:03 fordfrog Exp $
+
+*netbeans-webcommon-7.2 (25 Jul 2012)
+
+  25 Jul 2012; Miroslav Šulc <fordfrog@gentoo.org>
+  +netbeans-webcommon-7.2.ebuild:
+  netbeans 7.2 release
+
