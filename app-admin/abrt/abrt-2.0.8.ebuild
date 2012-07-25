@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/abrt/abrt-2.0.8.ebuild,v 1.7 2012/05/31 02:21:27 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/abrt/abrt-2.0.8.ebuild,v 1.8 2012/07/25 12:41:37 jlec Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -64,6 +64,17 @@ src_prepare() {
 	# fails with certain python versions
 	sed -e '/pyhook.at/ d' \
 		-i tests/Makefile.* tests/testsuite.at || die "sed 2 failed"
+
+	# automake-1.12, #427926
+	sed \
+		-e "/AC_PROG_LIBTOOL/s:^:AM_PROG_AR\n:g" \
+		-e "/AC_PROG_CC/s:$:\nAM_PROG_CC_C_O\n:g" \
+		-e 's:-Werror::g' \
+		-i configure.ac || die
+
+	sed \
+		-e 's:AM_PROG_MKDIR_P:AC_PROG_MKDIR_P:g' \
+		-i m4/* aclocal.m4 || die
 
 	eautoreconf
 
