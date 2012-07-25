@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.148 2012/07/25 12:34:11 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.149 2012/07/25 15:34:34 blueness Exp $
+
+*valgrind-3.6.1-r4 (25 Jul 2012)
+
+  25 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
+  +valgrind-3.6.1-r4.ebuild, +files/valgrind-3.6.1-glibc-2.15.patch:
+  Allow valgrind 3.6.1-to build against glibc-2.15 so Andrew doesn't yell at
+  me, bug #390323 comment #31
 
   25 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
   -valgrind-3.4.1-r1.ebuild, -valgrind-3.5.0-r1.ebuild, -valgrind-3.6.0.ebuild,
