@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.113 2012/07/21 16:11:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.114 2012/07/25 18:27:56 vapier Exp $
 
 # @ECLASS: toolchain-funcs.eclass
 # @MAINTAINER:
@@ -615,7 +615,8 @@ gen_usr_ldscript() {
 	# Eventually we'd like to get rid of this func completely #417451
 	case ${CTARGET:-${CHOST}} in
 	*-darwin*) ;;
-	*linux*) use prefix && return 0 ;;
+	*linux*|*-freebsd*)
+		use prefix && return 0 ;;
 	*) return 0 ;;
 	esac
 
@@ -685,7 +686,7 @@ gen_usr_ldscript() {
 			ln -snf "../../${libdir}/${tlib}" "${lib}"
 			popd > /dev/null
 			;;
-		*linux*)
+		*)
 			if ${auto} ; then
 				tlib=$(scanelf -qF'%S#F' "${ED}"/usr/${libdir}/${lib})
 				[[ -z ${tlib} ]] && die "unable to read SONAME from ${lib}"
