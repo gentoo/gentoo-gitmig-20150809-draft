@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/maruku
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/maruku/ChangeLog,v 1.17 2012/07/25 06:11:32 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/maruku/ChangeLog,v 1.18 2012/07/25 06:25:49 graaff Exp $
+
+  25 Jul 2012; Hans de Graaff <graaff@gentoo.org> maruku-0.6.0-r2.ebuild:
+  Fix USE=doc with ruby19 as main interpreter, bug 427856. Add tests but
+  restrict them due to failures for now.
 
   25 Jul 2012; Hans de Graaff <graaff@gentoo.org> -maruku-0.6.0-r1.ebuild:
   Cleanup.
