@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.168 2012/07/25 16:11:57 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.169 2012/07/25 17:23:44 fordfrog Exp $
+
+  25 Jul 2012; Miroslav Šulc <fordfrog@gentoo.org>
+  -files/6.8/nbbuild_build.xml.patch,
+  -files/6.8/nbbuild_templates_projectized.xml.patch, -netbeans-6.8-r1.ebuild:
+  netbeans 6.8 has been moved to java-overlay because it is pretty old now
 
 *netbeans-7.2 (25 Jul 2012)
 
