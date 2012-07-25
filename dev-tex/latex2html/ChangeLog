@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/latex2html
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/ChangeLog,v 1.53 2011/02/25 13:56:46 dilfridge Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/ChangeLog,v 1.54 2012/07/25 14:14:24 ottxor Exp $
+
+  25 Jul 2012; Christoph Junghans <ottxor@gentoo.org> latex2html-2008-r1.ebuild:
+  added prefix support (bug #427976)
 
 *latex2html-2008-r1 (25 Feb 2011)
 
