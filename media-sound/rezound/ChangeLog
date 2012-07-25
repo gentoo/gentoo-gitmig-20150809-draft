@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/rezound
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/ChangeLog,v 1.62 2012/06/08 13:25:19 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/ChangeLog,v 1.63 2012/07/25 10:58:41 aballier Exp $
+
+  25 Jul 2012; Alexis Ballier <aballier@gentoo.org>
+  rezound-0.12.3_beta-r2.ebuild, -files/rezound-0.12.3_beta-gcc44.patch,
+  -files/rezound-0.12.3_beta-gentoo_bug_334797.patch,
+  -files/rezound-0.12.3_beta-m4.patch:
+  Move patches in FILESDIR to the patch tarball, fix audiofile detection (bug
+  #415981), fix build with gcc 4.7 (bug #425280), fix some autoreconf warnings.
 
   21 May 2012; Lars Wendler <polynomial-c@gentoo.org>
   rezound-0.12.3_beta-r2.ebuild,

@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.12.3_beta-r2.ebuild,v 1.7 2012/06/08 13:25:19 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.12.3_beta-r2.ebuild,v 1.8 2012/07/25 10:58:41 aballier Exp $
 
 EAPI=4
 MY_P=${P/_/}
-PATCHLEVEL=5
+PATCHLEVEL=6
 
 inherit autotools eutils flag-o-matic
 
@@ -39,9 +39,6 @@ S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
-	epatch "${FILESDIR}"/${P}-gcc44.patch \
-		"${FILESDIR}"/${P}-m4.patch \
-		"${FILESDIR}"/${P}-gentoo_bug_334797.patch
 	AT_M4DIR="config/m4" eautoreconf
 }
 
