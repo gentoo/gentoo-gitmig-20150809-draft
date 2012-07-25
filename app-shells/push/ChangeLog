@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/push
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/push/ChangeLog,v 1.6 2012/07/23 20:45:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/push/ChangeLog,v 1.7 2012/07/25 01:49:38 jer Exp $
+
+  25 Jul 2012; Jeroen Roovers <jer@gentoo.org> push-1.5.ebuild:
+  Stable for HPPA (bug #427100).
 
   23 Jul 2012; Markus Meier <maekke@gentoo.org> push-1.5.ebuild:
   arm stable, bug #427100
