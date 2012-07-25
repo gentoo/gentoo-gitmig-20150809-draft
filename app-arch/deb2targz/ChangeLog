@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/deb2targz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/deb2targz/ChangeLog,v 1.21 2012/03/02 20:39:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/deb2targz/ChangeLog,v 1.22 2012/07/25 15:42:31 darkside Exp $
+
+  25 Jul 2012; Jeremy Olexa <darkside@gentoo.org> deb2targz-1-r2.ebuild:
+  add keywords tested in prefix overlay
 
   02 Mar 2012; Brent Baude <ranger@gentoo.org> deb2targz-1-r2.ebuild:
   Marking deb2targz-1-r2 ppc64 for bug 399909
