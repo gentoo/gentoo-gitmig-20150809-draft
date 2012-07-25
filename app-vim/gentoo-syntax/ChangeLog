@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/gentoo-syntax
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.138 2012/05/28 21:44:44 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.139 2012/07/25 04:57:31 yngwin Exp $
+
+  25 Jul 2012; Ben de Groot <yngwin@gentoo.org> metadata.xml:
+  Take over maintainership from spatz.
 
   28 May 2012; Tim Harder <radhermit@gentoo.org>
   -gentoo-syntax-20101212.ebuild:
@@ -633,5 +636,3 @@
   +gentoo-syntax-20040826.ebuild:
   New package. Provides extended syntax highlighting and filetype settings for
   ebuilds, eclasses and GLEPs.
-
-
