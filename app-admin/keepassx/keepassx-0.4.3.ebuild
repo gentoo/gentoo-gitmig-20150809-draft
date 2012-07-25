@@ -1,13 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/keepassx-0.4.3.ebuild,v 1.6 2012/04/20 23:05:21 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/keepassx-0.4.3.ebuild,v 1.7 2012/07/25 05:36:29 yngwin Exp $
 
-EAPI="4"
-
+EAPI=4
 inherit qt4-r2
 
 DESCRIPTION="Qt password manager compatible with its Win32 and Pocket PC versions"
-HOMEPAGE="http://keepassx.sourceforge.net/"
+HOMEPAGE="http://www.keepassx.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"

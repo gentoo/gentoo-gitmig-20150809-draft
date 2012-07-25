@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/keepassx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/ChangeLog,v 1.57 2012/04/20 23:05:21 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/ChangeLog,v 1.58 2012/07/25 05:36:29 yngwin Exp $
+
+  25 Jul 2012; Ben de Groot <yngwin@gentoo.org> keepassx-0.4.3.ebuild,
+  metadata.xml:
+  Drop spatz as maintainer. Update homepage (bug #413333).
 
   20 Apr 2012; Timo Gurr <tgurr@gentoo.org> keepassx-0.4.3.ebuild,
   +files/keepassx-0.4.3-gcc47.patch:
@@ -253,4 +257,3 @@
   Luca Rosellini <luca.rosellini@libero.it>, Michael Mauch
   <michael.mauch@gmx.de>, Arthur Koziel <arthur.koziel@dkh-multigaming.de> and
   Torsten Krah <tkrah@fachschaft.imn.htwk-leipzig.de> in bug #119907
-
