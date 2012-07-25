@@ -1,5 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.55 2012/05/29 00:57:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.56 2012/07/25 01:06:59 chithanh Exp $
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
 # Jeroen Roovers <jer@gentoo.org> (23 May 2012)
@@ -225,6 +225,7 @@ video_cards_r100
 video_cards_r200
 video_cards_r300
 video_cards_r600
+video_cards_radeonsi
 video_cards_i915
 video_cards_i965
 # vmware wasn't added with mesa-8.0, but it should still be masked
