@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.149 2012/07/25 15:34:34 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.150 2012/07/25 16:33:18 blueness Exp $
+
+  25 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
+  -valgrind-3.7.0-r1.ebuild, -valgrind-3.7.0-r2.ebuild:
+  Remove older unstable versions
 
 *valgrind-3.6.1-r4 (25 Jul 2012)
 
