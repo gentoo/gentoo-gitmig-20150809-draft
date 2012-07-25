@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-medialibs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/ChangeLog,v 1.58 2012/05/20 13:09:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/ChangeLog,v 1.59 2012/07/25 14:30:06 pacho Exp $
+
+  25 Jul 2012; Pacho Ramos <pacho@gentoo.org>
+  emul-linux-x86-medialibs-20120520.ebuild:
+  amd64 stable, bug #427444
 
 *emul-linux-x86-medialibs-20120520 (20 May 2012)
 
