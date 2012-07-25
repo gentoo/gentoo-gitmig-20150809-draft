@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wgetpaste
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/ChangeLog,v 1.125 2012/06/29 16:17:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/ChangeLog,v 1.126 2012/07/25 04:54:48 ryao Exp $
+
+  25 Jul 2012; Richard Yao <ryao@gentoo.org> wgetpaste-2.20-r1.ebuild:
+  Keyword ~amd64-fbsd and ~x64-freebsd
 
   29 Jun 2012; Agostino Sarubbo <ago@gentoo.org> wgetpaste-2.20-r1.ebuild:
   stable for all arches, wrt to bug #424031
