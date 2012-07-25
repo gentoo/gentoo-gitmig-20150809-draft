@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/xf86-video-ati
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.175 2012/07/12 17:31:31 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.176 2012/07/25 23:57:32 chithanh Exp $
+
+*xf86-video-ati-6.14.6-r1 (25 Jul 2012)
+
+  25 Jul 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xf86-video-ati-6.14.6-r1.ebuild, xf86-video-ati-6.14.6.ebuild:
+  disable XAA to allow building against >=xorg-server-1.12.99.902, bug #428094
 
   12 Jul 2012; Brent Baude <ranger@gentoo.org> xf86-video-ati-6.14.4-r1.ebuild:
   Marking xf86-video-ati-6.14.4-r1 ppc stable for bug 419473
