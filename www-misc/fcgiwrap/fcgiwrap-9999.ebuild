@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/fcgiwrap/fcgiwrap-9999.ebuild,v 1.3 2011/10/01 07:54:00 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/fcgiwrap/fcgiwrap-9999.ebuild,v 1.4 2012/07/25 15:10:21 darkside Exp $
 
 EAPI="4"
 
@@ -19,9 +19,9 @@ if [[ ${PV} == *9999* ]]; then
 
 	KEYWORDS=""
 else
-	MY_REV="58ec209"
+	#MY_REV="58ec209"
 	#SRC_URI="http://download.github.com/gnosek-${P}-4-g${MY_REV}.tar.gz"
-	SRC_URI="mirror://gentoo/gnosek-${P}-4-g${MY_REV}.tar.gz -> ${P}.tar.gz"
+	SRC_URI="mirror://gentoo/${P}.tar.gz"
 	S="${WORKDIR}/gnosek-${PN}-${MY_REV}"
 
 	KEYWORDS="~amd64 ~x86"
