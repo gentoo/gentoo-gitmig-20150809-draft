@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/phonon-gstreamer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-gstreamer/ChangeLog,v 1.20 2012/07/13 16:57:35 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-gstreamer/ChangeLog,v 1.21 2012/07/25 21:15:59 maekke Exp $
+
+  25 Jul 2012; Markus Meier <maekke@gentoo.org> phonon-gstreamer-4.5.0.ebuild,
+  phonon-gstreamer-4.5.1.ebuild, phonon-gstreamer-4.6.0.ebuild,
+  phonon-gstreamer-4.6.1.ebuild:
+  add ~arm, bug #401313
 
 *phonon-gstreamer-4.6.1 (13 Jul 2012)
 

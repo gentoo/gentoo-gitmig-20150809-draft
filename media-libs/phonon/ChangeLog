@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/phonon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/ChangeLog,v 1.35 2012/05/17 16:53:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/ChangeLog,v 1.36 2012/07/25 21:18:57 maekke Exp $
+
+  25 Jul 2012; Markus Meier <maekke@gentoo.org> phonon-4.5.1-r1.ebuild,
+  phonon-4.6.0-r1.ebuild:
+  add ~arm, bug #401313
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org> phonon-4.6.0-r1.ebuild,
   phonon-9999.ebuild:

@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/phonon-4.6.0-r1.ebuild,v 1.5 2012/05/17 16:53:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/phonon-4.6.0-r1.ebuild,v 1.6 2012/07/25 21:18:57 maekke Exp $
 
 EAPI=4
 
 if [[ ${PV} != *9999* ]]; then
 	SRC_URI="mirror://kde/stable/phonon/${PV}/src/${P}.tar.xz"
-	KEYWORDS="~amd64 ~hppa ~x86 ~amd64-fbsd ~amd64-linux ~x86-linux"
+	KEYWORDS="~amd64 ~arm ~hppa ~x86 ~amd64-fbsd ~amd64-linux ~x86-linux"
 else
 	SCM_ECLASS="git-2"
 	EGIT_REPO_URI="git://anongit.kde.org/${PN}"
