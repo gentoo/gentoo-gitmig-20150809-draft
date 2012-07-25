@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-10.0.5.ebuild,v 1.4 2012/07/24 17:14:03 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-10.0.5.ebuild,v 1.5 2012/07/25 01:51:10 jer Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="${HOMEPAGE}${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~mips ppc ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 hppa ~mips ppc ppc64 ~sparc x86"
 IUSE="cron debug +doc isag nls lm_sensors"
 
 SYSSTAT_LINGUAS="

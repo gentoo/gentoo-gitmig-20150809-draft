@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.231 2012/07/24 17:14:03 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.232 2012/07/25 01:51:10 jer Exp $
+
+  25 Jul 2012; Jeroen Roovers <jer@gentoo.org> sysstat-10.0.5.ebuild:
+  Stable for HPPA (bug #427894).
 
   24 Jul 2012; Jeff Horelick <jdhore@gentoo.org> sysstat-10.0.5.ebuild:
   marked x86 per bug 427894
