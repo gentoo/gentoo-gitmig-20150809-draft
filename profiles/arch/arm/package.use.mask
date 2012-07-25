@@ -1,6 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.81 2012/07/17 11:01:54 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.82 2012/07/25 21:15:17 maekke Exp $
+
+# Markus Meier <maekke@gentoo.org> (25 Jul 2012)
+# no stable media-video/vlc yet, bug #401313
+media-libs/phonon vlc
 
 # Anthony G. Basile <blueness@gentoo.org> (17 Jul 2012)
 # Only work on amd64/x86

@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.163 2012/07/24 21:58:38 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.164 2012/07/25 21:15:17 maekke Exp $
+
+  25 Jul 2012; Markus Meier <maekke@gentoo.org> package.use.mask:
+  package.use.mask vlc for media-libs/phonon, bug #401313
 
   24 Jul 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> use.mask:
   Mask video_cards_radeonsi flag
