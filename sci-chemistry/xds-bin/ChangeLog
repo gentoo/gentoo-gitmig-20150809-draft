@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/xds-bin
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xds-bin/ChangeLog,v 1.9 2011/12/31 09:00:22 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xds-bin/ChangeLog,v 1.10 2012/07/25 12:47:09 jlec Exp $
+
+  25 Jul 2012; Justin Lecher <jlec@gentoo.org> xds-bin-20111230.ebuild,
+  metadata.xml:
+  Use QA_PREBUILT for binary packages
 
 *xds-bin-20111230 (31 Dec 2011)
 
