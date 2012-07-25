@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.64 2012/07/25 16:48:06 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.65 2012/07/25 17:34:47 aidecoe Exp $
+
+*dracut-019-r2 (25 Jul 2012)
+
+  25 Jul 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-019-r2.ebuild,
+  +files/dracut-019-no-pkg-config-warnings.patch:
+  Make virtual/pkgconfig optional.  Fixes bug #420585 in better way than
+  previous commit.
 
 *dracut-019-r1 (25 Jul 2012)
 *dracut-018-r2 (25 Jul 2012)
