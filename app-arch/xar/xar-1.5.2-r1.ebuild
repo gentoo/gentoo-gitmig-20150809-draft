@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xar/xar-1.5.2-r1.ebuild,v 1.1 2010/04/06 22:33:03 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xar/xar-1.5.2-r1.ebuild,v 1.2 2012/07/25 04:20:38 yngwin Exp $
 
-EAPI=2
+EAPI=4
 
-inherit autotools eutils
+inherit autotools base eutils
 
-DESCRIPTION="an easily extensible archive format"
+DESCRIPTION="An easily extensible archive format"
 HOMEPAGE="http://code.google.com/p/xar"
 SRC_URI="http://xar.googlecode.com/files/${P}.tar.gz"
 
@@ -20,18 +20,17 @@ DEPEND="dev-libs/openssl
 	sys-libs/zlib
 	acl? ( sys-apps/acl )
 	bzip2? ( app-arch/bzip2 )"
+RDEPEND="${DEPEND}"
+
+DOCS=( TODO )
+PATCHES=( "${FILESDIR}/${P}-automagic_acl_and_bzip2.patch"
+	"${FILESDIR}/${P}-respect_ldflags.patch" )
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-automagic_acl_and_bzip2.patch \
-		"${FILESDIR}"/${P}-respect_ldflags.patch
+	base_src_prepare
 	eautoconf
 }
 
 src_configure() {
 	econf $(use_enable acl) $(use_enable bzip2)
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
-	dodoc TODO
 }

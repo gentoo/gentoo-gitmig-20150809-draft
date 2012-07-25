@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/xar
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xar/ChangeLog,v 1.19 2010/04/06 22:33:03 spatz Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xar/ChangeLog,v 1.20 2012/07/25 04:20:38 yngwin Exp $
+
+  25 Jul 2012; Ben de Groot <yngwin@gentoo.org> metadata.xml,
+  xar-1.5.2-r1.ebuild:
+  Take over maintainership since spatz is being retired. Bump eapi to 4.
+  Implement base.eclass functionality, which gives us epatch_user for free.
 
 *xar-1.5.2-r1 (06 Apr 2010)
 
@@ -79,4 +84,3 @@
 
   23 Apr 2005; Kito <kito@gentoo.org> +metadata.xml, +xar-20050423.ebuild:
   initial import, ~amd64 ~ppc ~ppc64 ~ppc-macos ~sparc ~x86 keywords.
-
