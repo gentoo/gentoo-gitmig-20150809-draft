@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/pydf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pydf/ChangeLog,v 1.37 2012/07/25 04:29:34 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pydf/ChangeLog,v 1.38 2012/07/25 06:03:39 jdhore Exp $
+
+  25 Jul 2012; Jeff Horelick <jdhore@gentoo.org> pydf-10.ebuild:
+  marked x86 per bug 418495
 
   25 Jul 2012; Ben de Groot <yngwin@gentoo.org> metadata.xml:
   Take over maintainership since spatz is being retired.
