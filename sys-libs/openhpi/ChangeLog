@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/openhpi
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/openhpi/ChangeLog,v 1.7 2009/09/23 21:17:57 patrick Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/openhpi/ChangeLog,v 1.8 2012/07/25 19:14:04 pacho Exp $
+
+*openhpi-3.0.0 (25 Jul 2012)
+
+  25 Jul 2012; Pacho Ramos <pacho@gentoo.org> +openhpi-3.0.0.ebuild:
+  Version bump, with a shorter description (to make repoman happier), it builds
+  (#322215), glib-2.32 compatible (#423683 by flameeyes), fixed LICENSE (#426164
+  by Ian Stakenvicius).
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> openhpi-2.0.3.ebuild:
   Remove virtual/libc
@@ -31,4 +38,3 @@
   25 Mar 2005; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
   +openhpi-2.0.3.ebuild:
   Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
-
