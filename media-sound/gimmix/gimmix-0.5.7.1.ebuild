@@ -1,8 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gimmix/gimmix-0.5.7.1.ebuild,v 1.5 2012/05/05 08:20:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gimmix/gimmix-0.5.7.1.ebuild,v 1.6 2012/07/25 11:05:20 angelos Exp $
 
-EAPI=2
+EAPI=4
+inherit eutils
 
 DESCRIPTION="a graphical music player daemon (MPD) client using GTK+2"
 HOMEPAGE="http://gimmix.berlios.de/"
@@ -23,14 +24,15 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	dev-util/intltool"
 
+DOCS=( AUTHORS ChangeLog README TODO )
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-curl-headers.patch
+}
+
 src_configure() {
 	econf \
 		$(use_enable cover) \
 		$(use_enable lyrics) \
 		$(use_enable taglib tageditor)
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog README TODO
 }
