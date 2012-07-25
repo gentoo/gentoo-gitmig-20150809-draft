@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/cfengine
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.155 2012/07/25 20:25:30 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.156 2012/07/25 20:28:20 idl0r Exp $
+
+  25 Jul 2012; Christian Ruppert <idl0r@gentoo.org> cfengine-2.2.10-r4.ebuild:
+  Add missing sys-devel/flex DEPEND
 
   25 Jul 2012; Christian Ruppert <idl0r@gentoo.org> cfengine-2.2.10-r4.ebuild:
   Add missing virtual/yacc DEPEND

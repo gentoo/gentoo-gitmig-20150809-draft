@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.2.10-r4.ebuild,v 1.6 2012/07/25 20:25:30 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.2.10-r4.ebuild,v 1.7 2012/07/25 20:28:20 idl0r Exp $
 
 EAPI="2"
 
@@ -20,7 +20,8 @@ RDEPEND=">=sys-libs/db-4
 	>=dev-libs/openssl-0.9.7
 	app-portage/portage-utils"
 DEPEND="${RDEPEND}
-	virtual/yacc"
+	virtual/yacc
+	sys-devel/flex"
 PDEPEND="vim-syntax? ( app-vim/cfengine-syntax )"
 
 src_prepare() {
