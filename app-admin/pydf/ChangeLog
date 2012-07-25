@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/pydf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pydf/ChangeLog,v 1.38 2012/07/25 06:03:39 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pydf/ChangeLog,v 1.39 2012/07/25 10:43:31 blueness Exp $
+
+  25 Jul 2012; Anthony G. Basile <blueness@gentoo.org> pydf-10.ebuild:
+  Stable ppc/ppc64, bug #418495
 
   25 Jul 2012; Jeff Horelick <jdhore@gentoo.org> pydf-10.ebuild:
   marked x86 per bug 418495
