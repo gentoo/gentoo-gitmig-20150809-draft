@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/djbdns
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.131 2012/07/16 13:02:12 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.132 2012/07/25 01:53:14 jer Exp $
+
+  25 Jul 2012; Jeroen Roovers <jer@gentoo.org> djbdns-1.05-r26.ebuild:
+  Stable for HPPA (bug #419193).
 
   16 Jul 2012; Anthony G. Basile <blueness@gentoo.org> djbdns-1.05-r26.ebuild:
   Stable ppc ppc64, bug #419193
