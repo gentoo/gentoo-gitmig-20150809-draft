@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rake
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.124 2012/07/22 14:10:11 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.125 2012/07/25 20:29:54 blueness Exp $
+
+  25 Jul 2012; Anthony G. Basile <blueness@gentoo.org> rake-0.8.7-r6.ebuild:
+  Stable ppc64, bug #411507
 
   22 Jul 2012; <nixnut@gentoo.org> rake-0.8.7-r6.ebuild:
   ppc stable #411507

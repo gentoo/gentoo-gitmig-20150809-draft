@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/hoe
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.136 2012/07/22 14:15:55 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.137 2012/07/25 20:39:11 blueness Exp $
+
+  25 Jul 2012; Anthony G. Basile <blueness@gentoo.org> hoe-2.12.5.ebuild:
+  Stable ppc64, bug #411507
 
   22 Jul 2012; <nixnut@gentoo.org> hoe-2.12.5.ebuild:
   ppc stable #411507

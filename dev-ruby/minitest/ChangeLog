@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/minitest
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.76 2012/07/22 14:13:16 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.77 2012/07/25 20:40:34 blueness Exp $
+
+  25 Jul 2012; Anthony G. Basile <blueness@gentoo.org> minitest-2.12.1.ebuild:
+  Stable ppc64, bug #411507
 
   22 Jul 2012; <nixnut@gentoo.org> minitest-2.12.1.ebuild:
   ppc stable #411507
