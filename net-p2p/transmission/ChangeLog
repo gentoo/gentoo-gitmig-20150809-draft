@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.200 2012/07/10 19:19:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.201 2012/07/25 08:58:37 ssuominen Exp $
+
+*transmission-2.61 (25 Jul 2012)
+
+  25 Jul 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +transmission-2.61.ebuild, transmission-9999.ebuild:
+  Version bump.
 
 *transmission-2.60 (10 Jul 2012)
 
