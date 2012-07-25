@@ -1,0 +1,9 @@
+# ChangeLog for media-fonts/roboto
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/roboto/ChangeLog,v 1.1 2012/07/25 09:41:44 yngwin Exp $
+
+*roboto-20111129 (25 Jul 2012)
+
+  25 Jul 2012; Ben de Groot <yngwin@gentoo.org> +metadata.xml,
+  +roboto-20111129.ebuild:
+  Initial commit. Ebuild by user BT in bug #423727.
