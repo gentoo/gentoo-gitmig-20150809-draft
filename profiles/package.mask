@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14008 2012/07/25 13:43:20 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14009 2012/07/25 14:34:56 chithanh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -55,10 +55,6 @@ net-fs/mount-cifs
 # compiler. Bug #427206.
 =sys-devel/clang-3.1-r5
 =sys-devel/llvm-3.1-r2
-
-# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (21 Jul 2012)
-# Mask prerelease
-=x11-base/xorg-server-1.12.99.902
 
 # Pacho Ramos <pacho@gentoo.org> (21 Jul 2012)
 # Contains multiple API changes and needs apps to be ported
