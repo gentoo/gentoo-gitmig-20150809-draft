@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.409 2012/07/24 22:25:36 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.410 2012/07/25 13:34:37 yngwin Exp $
+
+  25 Jul 2012; Ben de Groot <yngwin@gentoo.org> mesa-8.1_rc1_pre20120724.ebuild:
+  Hide dev-util/indent behind !amd-fbsd wrt bug #427952
 
 *mesa-8.1_rc1_pre20120724 (24 Jul 2012)
 

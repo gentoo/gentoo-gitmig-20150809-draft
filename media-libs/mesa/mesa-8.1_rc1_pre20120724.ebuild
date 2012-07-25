@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-8.1_rc1_pre20120724.ebuild,v 1.1 2012/07/24 22:25:36 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-8.1_rc1_pre20120724.ebuild,v 1.2 2012/07/25 13:34:37 yngwin Exp $
 
 EAPI=4
 
@@ -86,7 +86,7 @@ EXTERNAL_DEPEND="
 # keep blocks in rdepend for binpkg
 # gtest file collision bug #411825
 RDEPEND="${EXTERNAL_DEPEND}
-	dev-util/indent
+	!amd64-fbsd? ( dev-util/indent )
 	!<x11-base/xorg-server-1.7
 	!<=x11-proto/xf86driproto-2.0.3
 	classic? ( app-admin/eselect-mesa )
