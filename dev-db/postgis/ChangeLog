@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/postgis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.67 2012/07/03 16:32:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.68 2012/07/25 12:41:46 titanofold Exp $
+
+*postgis-2.0.1 (25 Jul 2012)
+
+  25 Jul 2012; Aaron W. Swenson <titanofold@gentoo.org> +postgis-2.0.1.ebuild:
+  Version bump. Fixes bug 425822
 
   03 Jul 2012; Brent Baude <ranger@gentoo.org> postgis-2.0.0.ebuild:
   Marking postgis-2.0.0 ppc for bug 420125
