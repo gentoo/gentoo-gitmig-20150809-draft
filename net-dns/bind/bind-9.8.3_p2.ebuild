@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.9.1_p1.ebuild,v 1.4 2012/06/10 18:20:04 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.8.3_p2.ebuild,v 1.1 2012/07/25 17:51:53 idl0r Exp $
 
 # Re dlz/mysql and threads, needs to be verified..
 # MySQL uses thread local storage in its C api. Thus MySQL
@@ -24,7 +24,7 @@ SDB_LDAP_VER="1.1.0-fc14"
 # bind-9.8.0-P1-geoip-1.3.patch
 GEOIP_PV=1.3
 #GEOIP_PV_AGAINST="${MY_PV}"
-GEOIP_PV_AGAINST="9.9.1"
+GEOIP_PV_AGAINST="9.8.3-P1"
 GEOIP_P="bind-${GEOIP_PV_AGAINST}-geoip-${GEOIP_PV}"
 GEOIP_PATCH_A="${GEOIP_P}.patch"
 GEOIP_DOC_A="bind-geoip-1.3-readme.txt"
@@ -41,7 +41,7 @@ SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${MY_P}.tar.gz
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="berkdb caps dlz doc filter-aaaa geoip gost gssapi idn ipv6 ldap mysql odbc postgres rpz sdb-ldap
+IUSE="berkdb caps dlz doc geoip gost gssapi idn ipv6 ldap mysql odbc postgres rpz sdb-ldap
 selinux ssl static-libs threads urandom xml"
 # no PKCS11 currently as it requires OpenSSL to be patched, also see bug 409687
 
@@ -117,9 +117,10 @@ src_prepare() {
 
 	if use geoip; then
 		cp "${DISTDIR}"/${GEOIP_PATCH_A} "${S}" || die
-		sed -i -e 's:^ RELEASETYPE=: RELEASETYPE=-P:' \
-			-e 's:RELEASEVER=:RELEASEVER=1:' \
-			${GEOIP_PATCH_A} || die
+#	sed -i -e 's:^ RELEASETYPE=: RELEASETYPE=-P:' \
+#		-e 's:RELEASEVER=:RELEASEVER=1:' \
+#		${GEOIP_PATCH_A} || die
+		sed -i -e 's:RELEASEVER=1:RELEASEVER=2:' ${GEOIP_PATCH_A} || die
 		epatch ${GEOIP_PATCH_A}
 	fi
 
@@ -171,11 +172,7 @@ src_configure() {
 		$(use_enable rpz rpz-nsdname) \
 		$(use_enable caps linux-caps) \
 		$(use_with gost) \
-		$(use_enable filter-aaaa) \
-		--without-readline \
 		${myconf}
-
-	# $(use_enable static-libs static) \
 
 	# bug #151839
 	echo '#undef SO_BSDCOMPAT' >> config.h

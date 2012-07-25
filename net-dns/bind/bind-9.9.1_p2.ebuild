@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.8.1_p1.ebuild,v 1.17 2012/06/05 15:02:25 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.9.1_p2.ebuild,v 1.1 2012/07/25 17:51:53 idl0r Exp $
 
 # Re dlz/mysql and threads, needs to be verified..
 # MySQL uses thread local storage in its C api. Thus MySQL
@@ -24,7 +24,7 @@ SDB_LDAP_VER="1.1.0-fc14"
 # bind-9.8.0-P1-geoip-1.3.patch
 GEOIP_PV=1.3
 #GEOIP_PV_AGAINST="${MY_PV}"
-GEOIP_PV_AGAINST="9.8.0-P1"
+GEOIP_PV_AGAINST="9.9.1-P1"
 GEOIP_P="bind-${GEOIP_PV_AGAINST}-geoip-${GEOIP_PV}"
 GEOIP_PATCH_A="${GEOIP_P}.patch"
 GEOIP_DOC_A="bind-geoip-1.3-readme.txt"
@@ -40,9 +40,9 @@ SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${MY_P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
-IUSE="berkdb caps dlz doc geoip gost gssapi idn ipv6 ldap mysql odbc postgres rpz sdb-ldap
-selinux ssl threads urandom xml"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+IUSE="berkdb caps dlz doc filter-aaaa geoip gost gssapi idn ipv6 ldap mysql odbc postgres rpz sdb-ldap
+selinux ssl static-libs threads urandom xml"
 # no PKCS11 currently as it requires OpenSSL to be patched, also see bug 409687
 
 REQUIRED_USE="postgres? ( dlz )
@@ -91,9 +91,6 @@ src_prepare() {
 	done
 
 	if use dlz; then
-		# bug 382269
-		epatch "${FILESDIR}/${PN}-9.8.1-sdlz_helper.patch"
-
 		# bind fails to reconnect to MySQL5 databases, bug #180720, patch by Nicolas Brousse
 		# (http://www.shell-tips.com/2007/09/04/bind-950-patch-dlz-mysql-5-for-auto-reconnect/)
 		if use mysql && has_version ">=dev-db/mysql-5"; then
@@ -120,8 +117,15 @@ src_prepare() {
 
 	if use geoip; then
 		cp "${DISTDIR}"/${GEOIP_PATCH_A} "${S}" || die
+#		sed -i -e 's:^ RELEASETYPE=: RELEASETYPE=-P:' \
+#			-e 's:RELEASEVER=:RELEASEVER=1:' \
+#			${GEOIP_PATCH_A} || die
+		sed -i -e 's:RELEASEVER=1:RELEASEVER=2:' ${GEOIP_PATCH_A} || die
 		epatch ${GEOIP_PATCH_A}
 	fi
+
+	# Disable tests for now, bug 406399
+	sed -i '/^SUBDIRS/s:tests::' bin/Makefile.in lib/Makefile.in || die
 
 	# bug #220361
 	rm {aclocal,libtool}.m4
@@ -168,40 +172,38 @@ src_configure() {
 		$(use_enable rpz rpz-nsdname) \
 		$(use_enable caps linux-caps) \
 		$(use_with gost) \
+		$(use_enable filter-aaaa) \
+		--without-readline \
 		${myconf}
+
+	# $(use_enable static-libs static) \
 
 	# bug #151839
 	echo '#undef SO_BSDCOMPAT' >> config.h
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 
 	dodoc CHANGES FAQ README
 
 	if use idn; then
-		dodoc contrib/idn/README.idnkit || die
+		dodoc contrib/idn/README.idnkit
 	fi
 
 	if use doc; then
-		dodoc doc/arm/Bv9ARM.pdf || die
+		dodoc doc/arm/Bv9ARM.pdf
 
 		docinto misc
-		dodoc doc/misc/* || die
+		dodoc doc/misc/*
 
 		# might a 'html' useflag make sense?
 		docinto html
-		dohtml -r doc/arm/* || die
-
-		docinto	draft
-		dodoc doc/draft/* || die
-
-		docinto rfc
-		dodoc doc/rfc/* || die
+		dohtml -r doc/arm/*
 
 		docinto contrib
 		dodoc contrib/named-bootconf/named-bootconf.sh \
-			contrib/nanny/nanny.pl || die
+			contrib/nanny/nanny.pl
 
 		# some handy-dandy dynamic dns examples
 		cd "${D}"/usr/share/doc/${PF}
@@ -211,18 +213,18 @@ src_install() {
 	use geoip && dodoc "${DISTDIR}"/${GEOIP_DOC_A}
 
 	insinto /etc/bind
-	newins "${FILESDIR}"/named.conf-r5 named.conf || die
+	newins "${FILESDIR}"/named.conf-r5 named.conf
 
 	# ftp://ftp.rs.internic.net/domain/named.cache:
 	insinto /var/bind
-	doins "${FILESDIR}"/named.cache || die
+	doins "${FILESDIR}"/named.cache
 
 	insinto /var/bind/pri
-	newins "${FILESDIR}"/127.zone-r1 127.zone || die
-	newins "${FILESDIR}"/localhost.zone-r3 localhost.zone || die
+	newins "${FILESDIR}"/127.zone-r1 127.zone
+	newins "${FILESDIR}"/localhost.zone-r3 localhost.zone
 
-	newinitd "${FILESDIR}"/named.init-r11 named || die
-	newconfd "${FILESDIR}"/named.confd-r6 named || die
+	newinitd "${FILESDIR}"/named.init-r11 named
+	newconfd "${FILESDIR}"/named.confd-r6 named
 
 	if use gost; then
 		sed -i -e 's/^OPENSSL_LIBGOST=${OPENSSL_LIBGOST:-0}$/OPENSSL_LIBGOST=${OPENSSL_LIBGOST:-1}/' "${D}/etc/init.d/named" || die
@@ -230,7 +232,7 @@ src_install() {
 		sed -i -e 's/^OPENSSL_LIBGOST=${OPENSSL_LIBGOST:-1}$/OPENSSL_LIBGOST=${OPENSSL_LIBGOST:-0}/' "${D}/etc/init.d/named" || die
 	fi
 
-	newenvd "${FILESDIR}"/10bind.env 10bind || die
+	newenvd "${FILESDIR}"/10bind.env 10bind
 
 	# Let's get rid of those tools and their manpages since they're provided by bind-tools
 	rm -f "${D}"/usr/share/man/man1/{dig,host,nslookup}.1*
@@ -238,13 +240,18 @@ src_install() {
 	rm -f "${D}"/usr/bin/{dig,host,nslookup,dnssec-keygen,nsupdate}
 	rm -f "${D}"/usr/sbin/{dig,host,nslookup,dnssec-keygen,nsupdate}
 
-	dosym /var/bind/named.cache /var/bind/root.cache || die
-	dosym /var/bind/pri /etc/bind/pri || die
-	dosym /var/bind/sec /etc/bind/sec || die
-	dosym /var/bind/dyn /etc/bind/dyn || die
+	# bug 405251, library archives aren't properly handled by --enable/disable-static
+	if ! use static-libs; then
+		find "${D}" -type f -name '*.la' -delete || die
+	fi
+
+	dosym /var/bind/named.cache /var/bind/root.cache
+	dosym /var/bind/pri /etc/bind/pri
+	dosym /var/bind/sec /etc/bind/sec
+	dosym /var/bind/dyn /etc/bind/dyn
 	keepdir /var/bind/{pri,sec,dyn}
 
-	dodir /var/{run,log}/named || die
+	dodir /var/{run,log}/named
 
 	fowners root:named /{etc,var}/bind /var/{run,log}/named /var/bind/{sec,pri,dyn}
 	fowners root:named /var/bind/named.cache /var/bind/pri/{127,localhost}.zone /etc/bind/{bind.keys,named.conf}
