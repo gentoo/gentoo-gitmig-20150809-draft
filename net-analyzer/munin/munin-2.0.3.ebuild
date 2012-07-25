@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.3.ebuild,v 1.1 2012/07/25 03:01:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.3.ebuild,v 1.2 2012/07/25 03:32:29 flameeyes Exp $
 
 EAPI=4
 
 PATCHSET=1
 
-inherit eutils user versionator java-pkg-opt-2
+inherit eutils user java-pkg-opt-2
 
 MY_P=${P/_/-}
 
@@ -207,7 +207,7 @@ pkg_config() {
 	fi
 
 	einfo "Press enter to install the default crontab for the munin master"
-	einfo "installation from /var/lib/munin/crontab"
+	einfo "installation from /usr/share/${PN}/f?crontab"
 	einfo "If you have a large site, you may wish to customize it."
 	read
 
@@ -221,7 +221,8 @@ pkg_config() {
 }
 
 pkg_postinst() {
-	elog
+	elog "Please follow the munin documentation to set up the plugins you"
+	elog "need, afterwards start munin-node via /etc/init.d/munin-node."
 	if ! use minimal; then
 		elog "To have munin's cronjob automatically configured for you if this is"
 		elog "your munin master installation, please:"
