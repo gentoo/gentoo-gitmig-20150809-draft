@@ -1,5 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.56 2012/07/25 01:06:59 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.57 2012/07/25 02:44:58 jer Exp $
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
 # Jeroen Roovers <jer@gentoo.org> (23 May 2012)
@@ -193,6 +193,8 @@ video_cards_cyrix
 video_cards_glint
 video_cards_i128
 video_cards_i740
+video_cards_i915
+video_cards_i965
 video_cards_intel
 video_cards_mach64
 video_cards_mga
@@ -201,8 +203,13 @@ video_cards_newport
 video_cards_nouveau
 video_cards_nsc
 video_cards_nv
+video_cards_r100
 video_cards_r128
+video_cards_r200
+video_cards_r300
+video_cards_r600
 video_cards_radeon
+video_cards_radeonsi
 video_cards_rendition
 video_cards_s3
 video_cards_s3virge
@@ -217,19 +224,8 @@ video_cards_trident
 video_cards_tseng
 video_cards_v4l
 video_cards_vesa
-video_cards_voodoo
-
-# Matt Turner <mattst88@gentoo.org>
-# Mask more VIDEO_CARDs added with mesa-8.0
-video_cards_r100
-video_cards_r200
-video_cards_r300
-video_cards_r600
-video_cards_radeonsi
-video_cards_i915
-video_cards_i965
-# vmware wasn't added with mesa-8.0, but it should still be masked
 video_cards_vmware
+video_cards_voodoo
 
 # 27 Nov 2005 Guy Martin <gmsoft@gentoo.org>
 # gccxml doesn't build and boost depend on it with this use

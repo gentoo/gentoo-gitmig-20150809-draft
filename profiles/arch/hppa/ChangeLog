@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.164 2012/07/25 01:06:59 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.165 2012/07/25 02:44:58 jer Exp $
+
+  25 Jul 2012; Jeroen Roovers <jer@gentoo.org> use.mask:
+  Put all the video_cards in one place, sort them.
 
   25 Jul 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> use.mask:
   Mask video_cards_radeonsi, bug #427956.
