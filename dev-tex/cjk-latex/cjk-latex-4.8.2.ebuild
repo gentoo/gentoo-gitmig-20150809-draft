@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/cjk-latex/cjk-latex-4.8.2.ebuild,v 1.10 2012/05/09 16:48:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/cjk-latex/cjk-latex-4.8.2.ebuild,v 1.11 2012/07/25 14:07:54 ottxor Exp $
 
-EAPI=3
+EAPI=4
 
 inherit latex-package elisp-common toolchain-funcs multilib eutils autotools
 
@@ -17,7 +17,7 @@ SRC_URI="ftp://ftp.ffii.org/pub/cjk/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="doc emacs"
 
 DEPEND="virtual/latex-base
@@ -52,8 +52,8 @@ src_configure() {
 		cd -
 	done
 	cd hbf2gf
-	econf --with-kpathsea-lib=/usr/$(get_libdir) \
-		--with-kpathsea-include=/usr/include/kpathsea
+	econf --with-kpathsea-lib="${EPREFIX}"/usr/$(get_libdir) \
+		--with-kpathsea-include="${EPREFIX}"/usr/include/kpathsea
 }
 
 src_compile() {
@@ -141,7 +141,7 @@ src_install() {
 	doins -r texmf/* || die "installing texmf failed"
 
 	# Move fonts because hbf2gf expects them in MISCFONTS
-	mv "${D}/${TEXMF}/fonts/hbf" "${D}/${TEXMF}/fonts/misc" || die "mv font failed"
+	mv "${ED}/${TEXMF}/fonts/hbf" "${ED}/${TEXMF}/fonts/misc" || die "mv font failed"
 
 	insinto ${TEXMF}/hbf2gf
 	doins utils/hbf2gf/cfg/*
@@ -158,6 +158,4 @@ src_install() {
 	fi
 	docinto uwpatch
 	dodoc uwpatch/README
-
-	prepalldocs
 }
