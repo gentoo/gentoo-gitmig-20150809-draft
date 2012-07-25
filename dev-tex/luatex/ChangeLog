@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/luatex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/ChangeLog,v 1.100 2012/07/09 13:15:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/ChangeLog,v 1.101 2012/07/25 00:36:37 ottxor Exp $
+
+  25 Jul 2012; Christoph Junghans <ottxor@gentoo.org> luatex-0.70.1.ebuild:
+  added prefix support (bug #427834)
 
   09 Jul 2012; Alexis Ballier <aballier@gentoo.org> +files/poppler020.patch,
   luatex-0.70.1.ebuild:
@@ -361,4 +364,3 @@
   +luatex-0.29.0.ebuild:
   Initial import. Standalone version of luatex patched to use poppler. Not
   very useful without TeX Live 2008 but that is a start.
-
