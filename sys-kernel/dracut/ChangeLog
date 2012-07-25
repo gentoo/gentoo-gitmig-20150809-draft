@@ -1,6 +1,20 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.63 2012/06/09 13:16:12 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.64 2012/07/25 16:48:06 aidecoe Exp $
+
+*dracut-019-r1 (25 Jul 2012)
+*dracut-018-r2 (25 Jul 2012)
+*dracut-014-r3 (25 Jul 2012)
+
+  25 Jul 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-014-r3.ebuild,
+  +dracut-018-r2.ebuild, +dracut-019-r1.ebuild:
+  Dependencies revised.
+
+  Dracut requires >=udev-166 and >=util-linux-2.21 since 018, but >=udev-186
+  needs to be blocked for versions 018 and earlier. pkgconfig is required for
+  019.
+
+  Fixes bug #420585 and bug #424878.
 
 *dracut-019 (09 Jun 2012)
 
