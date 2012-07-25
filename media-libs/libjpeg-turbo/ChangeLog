@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libjpeg-turbo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/ChangeLog,v 1.53 2012/07/22 14:37:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/ChangeLog,v 1.54 2012/07/25 05:44:09 vapier Exp $
+
+  25 Jul 2012; Mike Frysinger <vapier@gentoo.org> libjpeg-turbo-1.2.1.ebuild:
+  Do not set SRC_URI for 9999 versions.
 
   22 Jul 2012; Raúl Porcel <armin76@gentoo.org> libjpeg-turbo-1.2.1.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #426938
