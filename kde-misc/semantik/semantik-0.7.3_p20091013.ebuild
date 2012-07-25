@@ -1,8 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/semantik/semantik-0.7.3_p20091013.ebuild,v 1.5 2012/07/21 13:34:02 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/semantik/semantik-0.7.3_p20091013.ebuild,v 1.6 2012/07/25 15:35:43 kensington Exp $
 
 EAPI=4
+CMAKE_REQUIRED="never"
 
 inherit kde4-base waf-utils
 
@@ -35,7 +36,7 @@ PATCHES=(
 )
 
 src_configure() {
-	CCFLAGS="${CFLAGS}" LINKFLAGS="${LDFLAGS}" "${WAF_BINARY}" \
-		"--prefix=${EPREFIX}/usr" --want-rpath=0 \
+	CCFLAGS="${CFLAGS}" CPPFLAGS="${CXXFLAGS}" LINKFLAGS="${LDFLAGS}" \
+		"${WAF_BINARY}" "--prefix=${EPREFIX}/usr" --want-rpath=0 \
 		configure || die "configure failed"
 }
