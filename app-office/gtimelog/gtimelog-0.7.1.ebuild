@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gtimelog/gtimelog-0.7.1.ebuild,v 1.1 2012/05/02 03:22:35 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gtimelog/gtimelog-0.7.1.ebuild,v 1.2 2012/07/25 18:39:54 zmedico Exp $
 
 EAPI="4"
 
@@ -30,7 +30,7 @@ RDEPEND="dev-libs/gobject-introspection
 	ayatana? ( dev-libs/libappindicator:3[introspection] )"
 DEPEND="test? (
 	${RDEPEND}
-	dev-libs/libappindicator:3[introspection] )"
+	ayatana? ( dev-libs/libappindicator:3[introspection] ) )"
 
 DISTUTILS_SRC_TEST="setup.py"
 
