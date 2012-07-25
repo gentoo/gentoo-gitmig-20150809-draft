@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tclap/tclap-1.2.0.ebuild,v 1.1 2010/06/08 19:41:41 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tclap/tclap-1.2.0.ebuild,v 1.2 2012/07/25 17:08:00 pacho Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils
 
 DESCRIPTION="Simple templatized C++ library for parsing command line arguments."
@@ -18,14 +18,9 @@ RDEPEND=""
 DEPEND="doc? ( app-doc/doxygen )"
 
 src_configure() {
-	local myconf="$(use_enable doc doxygen)"
-	econf ${myconf}
+	econf $(use_enable doc doxygen)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-
-	if use doc; then
-		dohtml -r docs/html/*
-	fi
+	emake DESTDIR="${D}" docdir="/usr/share/doc/${PF}/html" install
 }
