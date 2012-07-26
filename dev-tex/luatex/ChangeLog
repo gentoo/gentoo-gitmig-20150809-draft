@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/luatex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/ChangeLog,v 1.101 2012/07/25 00:36:37 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/ChangeLog,v 1.102 2012/07/26 10:56:03 aballier Exp $
+
+  26 Jul 2012; Alexis Ballier <aballier@gentoo.org> +files/kpathsea2012.patch,
+  luatex-0.70.1.ebuild:
+  Do not include empty headers. They have been removed from TeX Live 2012
+  kpathsea, fixes build with that version. Patch from upstream.
 
   25 Jul 2012; Christoph Junghans <ottxor@gentoo.org> luatex-0.70.1.ebuild:
   added prefix support (bug #427834)
