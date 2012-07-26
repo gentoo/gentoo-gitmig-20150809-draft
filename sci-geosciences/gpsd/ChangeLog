@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/gpsd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.87 2012/05/24 16:19:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.88 2012/07/26 15:06:26 kensington Exp $
+
+  26 Jul 2012; Michael Palimaka <kensington@gentoo.org> gpsd-2.95-r1.ebuild,
+  gpsd-2.96-r1.ebuild, gpsd-3.6.ebuild, gpsd-9999.ebuild:
+  Add missing slot dependencies on Qt.
 
   24 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> -gpsd-3.3-r1.ebuild,
   -gpsd-3.3.ebuild, -gpsd-3.4.ebuild, -gpsd-3.5.ebuild, gpsd-3.6.ebuild,
@@ -415,4 +419,3 @@
   28 May 2005; Steve Arnold <nerdboy@gentoo.org> +files/40-usb-serial.rules,
   +files/gpsd.conf, +files/gpsd.init, +metadata.xml, +gpsd-2.25.ebuild:
   adding current version of gpsd (most other gps daemons are dead now)
-
