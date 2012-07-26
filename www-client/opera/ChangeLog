@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.728 2012/07/24 13:51:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.729 2012/07/26 15:15:22 johu Exp $
+
+  26 Jul 2012; Johannes Huber <johu@gentoo.org> opera-12.00.1467-r1.ebuild,
+  opera-12.00.1467.ebuild, opera-12.01.1517.ebuild, opera-12.01.1520.ebuild:
+  Add missing slot dependencies on Qt.
 
 *opera-12.01.1520 (24 Jul 2012)
 

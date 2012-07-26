@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/opera-next-12.01.1491.ebuild,v 1.1 2012/06/29 04:40:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/opera-next-12.01.1491.ebuild,v 1.2 2012/07/26 15:12:31 johu Exp $
 
 EAPI="4"
 
@@ -52,8 +52,8 @@ GTKRDEPEND="
 "
 KDERDEPEND="
 	kde-base/kdelibs
-	x11-libs/qt-core
-	x11-libs/qt-gui
+	x11-libs/qt-core:4
+	x11-libs/qt-gui:4
 "
 GSTRDEPEND="
 	dev-libs/glib:2
