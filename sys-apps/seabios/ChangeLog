@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/seabios
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/seabios/ChangeLog,v 1.14 2012/07/22 03:31:45 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/seabios/ChangeLog,v 1.15 2012/07/26 21:51:14 ryao Exp $
+
+  26 Jul 2012; Richard Yao <ryao@gentoo.org> seabios-1.7.0.ebuild:
+  Keyword ~amd64-fbsd and ~x86-fbsd
 
   21 Jul 2012; Doug Goldstein <cardoe@gentoo.org> seabios-1.7.0.ebuild:
   Include pre-built versions for systems that don't support compiling this.
