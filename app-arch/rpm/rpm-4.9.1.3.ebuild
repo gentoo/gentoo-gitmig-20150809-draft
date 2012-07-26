@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.9.1.3.ebuild,v 1.8 2012/06/23 17:09:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.9.1.3.ebuild,v 1.9 2012/07/26 08:02:34 scarabeus Exp $
 
 EAPI=4
 
@@ -18,7 +18,8 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
 
 IUSE="nls python doc caps lua acl"
 
-RDEPEND=">=sys-libs/db-4.5
+RDEPEND="!app-arch/rpm5
+	>=sys-libs/db-4.5
 	>=sys-libs/zlib-1.2.3-r1
 	>=app-arch/bzip2-1.0.1
 	>=dev-libs/popt-1.7
