@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-progressbar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-progressbar/ChangeLog,v 1.42 2012/07/22 15:37:21 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-progressbar/ChangeLog,v 1.43 2012/07/26 11:23:23 blueness Exp $
+
+  26 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
+  ruby-progressbar-0.0.10.ebuild:
+  Stable ppc64, bug #426520
 
   22 Jul 2012; <nixnut@gentoo.org> ruby-progressbar-0.0.10.ebuild:
   ppc stable #426520
