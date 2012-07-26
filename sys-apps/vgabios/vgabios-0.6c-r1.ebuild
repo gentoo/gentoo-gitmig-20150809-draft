@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vgabios/vgabios-0.6c-r1.ebuild,v 1.6 2012/07/22 04:29:36 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vgabios/vgabios-0.6c-r1.ebuild,v 1.7 2012/07/26 23:46:34 ryao Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ SRC_URI="http://savannah.gnu.org/download/${PN}/${P}.tgz
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86 amd64-fbsd"
 IUSE="debug"
 
 DEPEND="amd64? ( sys-devel/dev86 )
