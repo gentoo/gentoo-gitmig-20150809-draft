@@ -4,7 +4,7 @@
  #!/usr/bin/env bash
  
 -TMP_P=(`LD_PRELOAD= ps -A -o pid -o ppid -o comm | awk '$1 != 2 && $2 != 2 {print $3}' | \
-+TMP_P=(`LD_PRELOAD= ps -A -o pid -o ppid -o comm | grep -v '\[' | awk '$1 != 2 && $2 != 2 {print $3}' | \
++TMP_P=(`LD_PRELOAD= ps -A -o pid -o ppid -o comm | grep -iE '^[a-z0-9A-Z \-]*$' | awk '$1 != 2 && $2 != 2 {print $3}' | \
          sed -n '2,30p'`)
  
  COUNTER=1
