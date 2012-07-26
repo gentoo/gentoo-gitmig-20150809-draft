@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/knot/knot-1.0.6.ebuild,v 1.1 2012/06/21 18:08:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/knot/knot-1.0.6-r1.ebuild,v 1.1 2012/07/26 14:00:35 scarabeus Exp $
 
 EAPI=4
 
@@ -29,7 +29,8 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-move-pidfile-to-var.patch \
-		"${FILESDIR}"/${PN}-braindead-lto.patch
+		"${FILESDIR}"/${PN}-braindead-lto.patch \
+		"${FILESDIR}"/${P}-userpriv.patch
 	sed -i \
 		-e 's:-Werror::g' \
 		configure.ac || die
