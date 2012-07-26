@@ -1,6 +1,9 @@
 # ChangeLog for net-im/ktp-approver
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-approver/ChangeLog,v 1.4 2012/07/13 15:03:48 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-approver/ChangeLog,v 1.5 2012/07/26 09:43:58 johu Exp $
+
+  26 Jul 2012; Johannes Huber <johu@gentoo.org> -ktp-approver-0.3.1.ebuild:
+  Remove KDE Telepathy 0.3.1.
 
   13 Jul 2012; Johannes Huber <johu@gentoo.org> -ktp-approver-0.3.0.ebuild:
   Remove KDE Telepathy 0.3.0.
