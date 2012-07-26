@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ffmpeg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.44 2012/07/12 10:39:42 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.45 2012/07/26 20:12:54 grobian Exp $
+
+  26 Jul 2012; Fabian Groffen <grobian@gentoo.org> ffmpeg-0.10.3.ebuild:
+  Marked ~x64-macos
 
   12 Jul 2012; Fabian Groffen <grobian@gentoo.org> ffmpeg-0.10.3.ebuild:
   Marked ~x86-solaris
