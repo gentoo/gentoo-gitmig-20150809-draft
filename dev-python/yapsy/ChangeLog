@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/yapsy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/yapsy/ChangeLog,v 1.2 2012/07/11 10:20:47 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/yapsy/ChangeLog,v 1.3 2012/07/26 09:54:05 maksbotan Exp $
+
+*yapsy-1.9.2 (26 Jul 2012)
+
+  26 Jul 2012; Maxim Koltsov <maksbotan@gentoo.org> +yapsy-1.9.2.ebuild,
+  -yapsy-1.9.ebuild:
+  Bump to 1.9.2, re-enable tests, bug #423107. Thanks to Pinkbyte
 
   11 Jul 2012; Michael Weber <xmw@gentoo.org> yapsy-1.9.ebuild:
   disabling test-suite for now (bug 423107 by flameeyes)
