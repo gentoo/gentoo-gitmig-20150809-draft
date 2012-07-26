@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-5.11.ebuild,v 1.7 2012/07/22 17:46:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-5.11.ebuild,v 1.8 2012/07/26 16:35:01 vapier Exp $
 
 EAPI="2"
 PYTHON_DEPEND="python? *"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="*-jython"
 
-inherit eutils distutils libtool flag-o-matic toolchain-funcs
+inherit eutils distutils libtool toolchain-funcs
 
 DESCRIPTION="identify a file's format by scanning binary data for patterns"
 HOMEPAGE="ftp://ftp.astron.com/pub/file/"
@@ -43,9 +43,6 @@ do_configure() {
 	popd >/dev/null
 }
 src_configure() {
-	# file uses things like strndup() and wcwidth()
-	append-flags -D_GNU_SOURCE
-
 	# when cross-compiling, we need to build up our own file
 	# because people often don't keep matching host/target
 	# file versions #362941
