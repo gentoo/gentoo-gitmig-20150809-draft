@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/burrow-owl/burrow-owl-1.5.1.ebuild,v 1.2 2012/05/04 07:02:35 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/burrow-owl/burrow-owl-1.5.1.ebuild,v 1.3 2012/07/26 08:52:54 jlec Exp $
 
 EAPI=4
 
-inherit autotools-utils
+inherit autotools-utils virtualx
 
 DESCRIPTION="Visualize multidimensional nuclear magnetic resonance (NMR) spectra"
 HOMEPAGE="http://burrow-owl.sourceforge.net/"
@@ -39,7 +39,9 @@ src_configure() {
 }
 
 src_test () {
-	autotools-utils_src_compile -C test-suite check
+#	autotools-utils_src_test -C test-suite check
+	cd "${AUTOTOOLS_BUILD_DIR}" || die
+	virtualmake -C test-suite check
 }
 
 src_install() {
