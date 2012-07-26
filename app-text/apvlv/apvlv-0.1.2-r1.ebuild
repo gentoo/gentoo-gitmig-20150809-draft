@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/apvlv/apvlv-0.1.2-r1.ebuild,v 1.3 2012/05/04 03:33:11 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/apvlv/apvlv-0.1.2-r1.ebuild,v 1.4 2012/07/26 05:41:52 jdhore Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://github/naihe2010/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="debug djvu"
 
 RDEPEND=">=x11-libs/gtk+-2.10.4:2
