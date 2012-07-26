@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-5.3.5.ebuild,v 1.1 2012/06/02 10:21:28 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-5.3.5.ebuild,v 1.2 2012/07/26 07:38:33 sochotnicky Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://rpm5.org/files/${PN}/${PN}-$(get_version_component_range 1-2)/${
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="acl augeas berkdb +bzip2 crypt debug expat gnutls keyutils lua lzma nls nss openssl pcre perl pkcs11 readline ruby selinux sqlite ssl tcl uuid webdav-neon xar xattr +zlib"
 
 RDEPEND="
@@ -142,8 +142,8 @@ src_configure() {
 		--enable-largefile \
 		--with-python \
 		--without-pythonembed \
-		--with-python-lib-dir="$(python_get_libdir)" \
-		--with-python-inc-dir="$(python_get_includedir)" \
+		--with-python-lib-dir="${EPREFIX}$(python_get_libdir)" \
+		--with-python-inc-dir="${EPREFIX}$(python_get_includedir)" \
 		$(use_enable nls) \
 		$(use_enable debug build-debug) \
 		$(use_with acl) \
@@ -189,19 +189,19 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	chown -R rpm:rpm "${ROOT}"/usr/$(get_libdir)/rpm
-	chown -R rpm:rpm "${ROOT}"/var/lib/rpm
-	chown rpm:rpm "${ROOT}"/usr/bin/rpm{,2cpio,build,constant}
-	if [[ ${ROOT} == "/" ]] ; then
-		if [[ -f ${ROOT}/var/lib/rpm/Packages ]] ; then
+	chown -R rpm:rpm "${EROOT}"/usr/$(get_libdir)/rpm
+	chown -R rpm:rpm "${EROOT}"/var/lib/rpm
+	chown rpm:rpm "${EROOT}"/usr/bin/rpm{,2cpio,build,constant}
+	if [[ ${EROOT} == "/" ]] ; then
+		if [[ -f ${EROOT}/var/lib/rpm/Packages ]] ; then
 			einfo "RPM database found... Rebuilding database (may take a while)..."
-			"${ROOT}"/usr/bin/rpm --rebuilddb --root="${ROOT}"
+			"${EROOT}"/usr/bin/rpm --rebuilddb --root="${ROOT}"
 		else
 			einfo "No RPM database found... Creating database..."
-			"${ROOT}"/usr/bin/rpm --initdb --root="${ROOT}"
+			"${EROOT}"/usr/bin/rpm --initdb --root="${ROOT}"
 		fi
 	fi
-	chown rpm:rpm "${ROOT}"/var/lib/rpm/*
+	chown rpm:rpm "${EROOT}"/var/lib/rpm/*
 
 	python_mod_optimize rpm
 }
