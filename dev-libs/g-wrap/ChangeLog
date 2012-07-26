@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/g-wrap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.81 2012/07/26 08:13:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.82 2012/07/26 17:07:13 jlec Exp $
+
+  26 Jul 2012; Justin Lecher <jlec@gentoo.org> g-wrap-1.9.11.ebuild,
+  g-wrap-1.9.13.ebuild, g-wrap-1.9.14.ebuild:
+  Backport EAPI bump, fowardport parallel build restriction
 
 *g-wrap-1.9.14 (26 Jul 2012)
 
