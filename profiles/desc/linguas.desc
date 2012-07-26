@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.61 2012/07/26 06:56:10 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.62 2012/07/26 07:15:45 yngwin Exp $
 
 # This file contains descriptions of LINGUAS USE_EXPAND flags.
 
@@ -11,6 +11,7 @@ ak - Akan locale
 am - Amharic locale
 ar - Arabic locale
 ar_SA - Arabic locale for Saudi-Arabia
+ar_SY - Arabic locale for Syria
 as - Assamese locale
 as_IN - Assamese locale for India
 ast - Asturian locale
@@ -164,6 +165,7 @@ son - Songhai locale
 si - Sinhala locale
 sk - Slovak locale
 sl - Slovenian locale
+sl_SI - Slovenian locale
 sq - Albanian locale
 sr - Serbian locale
 sr@ijekavian - Serbian-Ijekavian locale
