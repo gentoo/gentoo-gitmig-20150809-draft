@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-12.6.ebuild,v 1.2 2012/07/21 21:45:01 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-12.6.ebuild,v 1.3 2012/07/26 15:08:38 johu Exp $
 
 EAPI=4
 
@@ -47,8 +47,8 @@ RDEPEND="
 			x11-libs/libXcursor
 			x11-libs/libXfixes
 			x11-libs/libXxf86vm
-			x11-libs/qt-core
-			x11-libs/qt-gui
+			x11-libs/qt-core:4
+			x11-libs/qt-gui:4
 	)
 "
 

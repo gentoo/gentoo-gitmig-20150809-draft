@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.291 2012/07/21 21:45:01 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.292 2012/07/26 15:08:38 johu Exp $
+
+  26 Jul 2012; Johannes Huber <johu@gentoo.org> ati-drivers-12.2.ebuild,
+  ati-drivers-12.4.ebuild, ati-drivers-12.6.ebuild,
+  ati-drivers-12.6_beta_pre897.ebuild:
+  Add missing slot dependencies on Qt.
 
 *ati-drivers-12.6_beta_pre897 (21 Jul 2012)
 
