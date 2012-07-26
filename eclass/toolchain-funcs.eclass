@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.114 2012/07/25 18:27:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.115 2012/07/26 16:43:59 vapier Exp $
 
 # @ECLASS: toolchain-funcs.eclass
 # @MAINTAINER:
@@ -615,7 +615,7 @@ gen_usr_ldscript() {
 	# Eventually we'd like to get rid of this func completely #417451
 	case ${CTARGET:-${CHOST}} in
 	*-darwin*) ;;
-	*linux*|*-freebsd*)
+	*linux*|*-freebsd*|*-openbsd*|*-netbsd*)
 		use prefix && return 0 ;;
 	*) return 0 ;;
 	esac
