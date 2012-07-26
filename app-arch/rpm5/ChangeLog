@@ -1,0 +1,11 @@
+# ChangeLog for app-arch/rpm5
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm5/ChangeLog,v 1.1 2012/07/26 08:02:37 scarabeus Exp $
+
+*rpm5-5.3.5 (26 Jul 2012)
+*rpm5-5.1.6 (26 Jul 2012)
+
+  26 Jul 2012; Tomáš Chvátal <scarabeus@gentoo.org> +rpm5-5.1.6.ebuild,
+  +rpm5-5.3.5.ebuild, +files/remaining-5.3.5.txt, +metadata.xml:
+  Move rpm-5* to this package to indicate completely different upstream.
+
