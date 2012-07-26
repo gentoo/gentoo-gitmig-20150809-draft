@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.62 2012/07/26 16:30:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.63 2012/07/26 16:40:47 aballier Exp $
 
 # @ECLASS: texlive-module.eclass
 # @MAINTAINER:
@@ -243,12 +243,12 @@ texlive-module_src_compile() {
 	# later
 	for i in "${S}"/tlpkg/tlpobj/*;
 	do
-		grep '^execute ' "${i}" | sed -e 's/^execute //' | tr ' \t' '@@' |sort|uniq >> "${T}/jobs"
+		grep '^execute ' "${i}" | sed -e 's/^execute //' | tr ' \t' '##' |sort|uniq >> "${T}/jobs"
 	done
 
 	for i in $(<"${T}/jobs");
 	do
-		j="$(echo $i | tr '@' ' ')"
+		j="$(echo $i | tr '#' ' ')"
 		command=${j%% *}
 		parameter=${j#* }
 		case "${command}" in
