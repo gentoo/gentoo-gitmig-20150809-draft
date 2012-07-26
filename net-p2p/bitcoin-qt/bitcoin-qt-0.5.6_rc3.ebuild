@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/bitcoin-qt-0.5.6_rc3.ebuild,v 1.1 2012/06/26 02:47:27 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/bitcoin-qt-0.5.6_rc3.ebuild,v 1.2 2012/07/26 17:12:19 johu Exp $
 
 EAPI=4
 
@@ -30,9 +30,9 @@ RDEPEND="
 		net-libs/miniupnpc
 	)
 	sys-libs/db:$(db_ver_to_slot "${DB_VER}")[cxx]
-	x11-libs/qt-gui
+	x11-libs/qt-gui:4
 	dbus? (
-		x11-libs/qt-dbus
+		x11-libs/qt-dbus:4
 	)
 "
 DEPEND="${RDEPEND}

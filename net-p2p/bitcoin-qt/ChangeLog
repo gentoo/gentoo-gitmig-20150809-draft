@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/bitcoin-qt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/ChangeLog,v 1.34 2012/07/15 17:11:02 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/ChangeLog,v 1.35 2012/07/26 17:12:19 johu Exp $
+
+  26 Jul 2012; Johannes Huber <johu@gentoo.org> bitcoin-qt-0.5.6_rc2.ebuild,
+  bitcoin-qt-0.5.6_rc3.ebuild, bitcoin-qt-0.6.0.9.ebuild,
+  bitcoin-qt-0.6.3.ebuild:
+  Add missing slot dependencies on Qt.
 
 *bitcoin-qt-0.6.0.9 (15 Jul 2012)
 
@@ -215,4 +220,3 @@
   23 Dec 2011; Anthony G. Basile <blueness@gentoo.org>
   +bitcoin-qt-0.5.1.ebuild, +metadata.xml:
   Initial commit, proxy maintaining for Luke Dashjr, bug #328391
-
