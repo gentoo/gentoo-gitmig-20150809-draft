@@ -1,8 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/metapost/metapost-1.504.ebuild,v 1.1 2011/08/04 06:37:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/metapost/metapost-1.504.ebuild,v 1.2 2012/07/26 11:10:39 aballier Exp $
 
 EAPI=3
+
+inherit eutils
 
 MY_P=${PN}-beta-${PV}
 DESCRIPTION="System for producing graphics"
@@ -19,6 +21,10 @@ DEPEND="dev-libs/kpathsea
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}/source/texk/web2c
+
+src_prepare() {
+	epatch "${FILESDIR}/invocname.patch"
+}
 
 src_configure() {
 	econf \
