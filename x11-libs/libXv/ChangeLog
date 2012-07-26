@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXv/ChangeLog,v 1.76 2012/07/12 17:53:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXv/ChangeLog,v 1.77 2012/07/26 20:11:38 grobian Exp $
+
+  26 Jul 2012; Fabian Groffen <grobian@gentoo.org> libXv-1.0.7.ebuild:
+  Marked ~x64-macos
 
   12 Jul 2012; Brent Baude <ranger@gentoo.org> libXv-1.0.7.ebuild:
   Marking libXv-1.0.7 ppc stable for bug 419473
@@ -262,4 +265,3 @@
 
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; +libXv-0.99.0.ebuild:
   Initial commit for modular X.
-
