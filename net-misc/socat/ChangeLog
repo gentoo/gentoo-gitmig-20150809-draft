@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/socat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.104 2012/05/26 17:25:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.105 2012/07/26 03:26:39 ottxor Exp $
+
+  26 Jul 2012; Christoph Junghans <ottxor@gentoo.org> socat-1.7.2.1.ebuild:
+  added ~x86-macos
 
   26 May 2012; Jeroen Roovers <jer@gentoo.org> -socat-1.7.2.0.ebuild:
   Old.
