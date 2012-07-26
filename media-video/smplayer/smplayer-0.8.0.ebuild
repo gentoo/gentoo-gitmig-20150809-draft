@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.8.0.ebuild,v 1.6 2012/06/17 05:46:17 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.8.0.ebuild,v 1.7 2012/07/26 07:16:36 yngwin Exp $
 
 EAPI=4
-LANGS="bg ca cs da de en_US es et eu fi fr gl hr hu it ja ka ko ku lt mk nl pl
-pt_BR pt sk sr sv tr zh_CN zh_TW"
-LANGSLONG="ar_SY el_GR ro_RO ru_RU sl_SI uk_UA vi_VN"
+PLOCALES="ar_SY bg ca cs da de el_GR en_US es et eu fi fr gl hr hu it ja ka ko
+ku lt mk nl pl pt pt_BR ro_RO ru_RU sk sl_SI sr sv tr uk_UA vi_VN zh_CN zh_TW"
+PLOCALE_BACKUP="en_US"
 
-inherit eutils qt4-r2
+inherit eutils l10n qt4-r2
 
 MY_PV=${PV##*_p}
 if [[ "${MY_PV}" != "${PV}" ]]; then
@@ -51,6 +51,8 @@ src_prepare() {
 		sed -i 's:#\(DEFINES += NO_DEBUG_ON_CONSOLE\):\1:' \
 			"${S}"/src/smplayer.pro || die "sed failed"
 	fi
+
+	l10n_find_plocales_changes "${S}/src/translations" "${PN}_" '.ts'
 }
 
 src_configure() {
@@ -68,26 +70,8 @@ gen_translation() {
 src_compile() {
 	emake
 
-	# Generate translations
 	cd "${S}"/src/translations
-	local lang= nolangs= x=
-	for lang in ${LINGUAS}; do
-		if has ${lang} ${LANGS}; then
-			gen_translation ${lang}
-			continue
-		elif [[ " ${LANGSLONG} " == *" ${lang}_"* ]]; then
-			for x in ${LANGSLONG}; do
-				if [[ "${lang}" == "${x%_*}" ]]; then
-					gen_translation ${x}
-					continue 2
-				fi
-			done
-		fi
-		nolangs="${nolangs} ${lang}"
-	done
-	[[ -n ${nolangs} ]] && ewarn "Sorry, but ${PN} does not support the LINGUAS:" ${nolangs}
-	# install fails when no translation is present (bug 244370)
-	[[ -z $(ls *.qm 2>/dev/null) ]] && gen_translation en_US
+	l10n_for_each_locale_do gen_translation
 }
 
 src_install() {
