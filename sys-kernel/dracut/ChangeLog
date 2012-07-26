@@ -1,6 +1,90 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.66 2012/07/25 17:37:50 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.67 2012/07/26 17:52:12 aidecoe Exp $
+
+*dracut-022 (26 Jul 2012)
+
+  26 Jul 2012; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +files/022-0001-qemu-module-setup.sh-provide-alternati.patch,
+  +files/022-0002-Makefile-use-implicit-rules-for-instal.patch,
+  +files/022-0003-kernel-modules-module-setup.sh-just-op.patch,
+  +files/022-0004-90multipath-added-kpartx.rules-multipa.patch,
+  +files/022-0005-gentoo.conf-set-udevdir.patch,
+  +files/022-0006-Config-file-for-systemd-on-Gentoo.patch,
+  +files/022-0007-Remove-obsolete-gentoo-conf-file.patch,
+  +files/022-0008-95rootfs-block-fix-left-fsck-rel.-chec.patch,
+  +files/022-0009-98usrmount-use-rw-and-ro-options-inste.patch,
+  +files/022-0010-98usrmount-print-mount-options.patch,
+  +files/022-0011-dracut-lib-new-functions-listlist-and-.patch,
+  +files/022-0012-apply-ro-and-rw-options-from-cmdline-t.patch,
+  +files/022-0013-ro_mnt-option-at-build-time-to-force-r.patch,
+  +files/022-0014-parse-root-opts-first-check-for-ro-lat.patch,
+  +files/022-0015-gentoo.conf-enable-ro_mnt.patch, +dracut-022.ebuild,
+  metadata.xml:
+  Version bump to 022.  020 and 021 has been skipped.
+
+  This version is heavily patched to support /usr mounting the way OpenRC team
+  expects.  Patches also include few more customizations and fixes for Gentoo.
+  
+  Changes since 019
+  =================
+  
+  020
+  ~~~
+  - arm kernel modules added to kernel-modules
+  - make udevdir systemdutildir systemdsystemunitdir global vars
+    your distribution should ship those settings in
+    /etc/dracut.conf.d/01-distro.conf
+    see dracut.conf.d/fedora.conf.example
+  - kernel modules are now only handled with /sys/modules and modules.dep
+  - systemd fixups
+  - mdraid: wait for md devices to be clean, before shutdown
+  - ifup fixed for ipv6
+  - add PARTUUID as root=PARTUUID=<partition uuid> parameter
+  - fixed instmods() return code and set pipefail globally
+  - add 04watchdog dracut module
+  - dracut-shutdown.service: fixed ordering to be before shutdown.target
+  - make use of "ln -r" instead of shell functions, if new coreutils is
+    installed
+  - network: support vlan tagged bonding
+  - new dracut module qemu and qemu-net to install all kernel driver
+  - fs-lib/fs-lib.sh: removed test mounting of btrfs and xfs
+  - no more "mknod" in the initramfs!!
+  - replaced all "tr" calls with "sed"
+  - speedup with lazy kernel module dependency resolving
+  - lots of speedup optimizations
+  - dracut-install:
+    - new binary to significanlty speedup the installation process
+    - dracut-functions.sh makes use of it, if installed
+  
+  021
+  ~~~
+  - fixed systemd in the initramfs (requires systemd >= 187)
+  - dracut-install: massive speedup with /var on the same filesystem with COW
+    copy
+  - new options: "rd.usrmount.ro" and "rd.skipfsck"
+  - less mount/umount
+  - apply "ro" on the kernel command line also to /usr
+  - mount according to fstab, if neither "ro" or "rw" is specified
+  - skip fsck for xfs and btrfs. remount is enough
+  - give emergency_shell if /usr mount failed
+  - dracut now uses getopt:
+    * options can be position independent now!!
+    * we can now use --option=<arg>
+  - added option "--kver=<kernel-version>", and the image location can be
+    omitted
+    # dracut --kver 3.5.0-0.rc7.git1.2.fc18.x86_64
+  - dracut.sh: for --include copy also the symbolic links
+  - man pages: lsinitrd and mkinitrd added
+  - network: We do not support renaming in the kernel namespace anymore
+    (as udev does that not anymore). So, if a user wants to use ifname, he has
+    to rename to a custom namespace. "eth[0-9]+" is not allowed anymore. !!!!!
+  - resume: moved the resume process to the initqueue.
+    This should prevent accidently mounting the root file system.
+  
+  022
+  ~~~
+  - fixed host-only kernel module bug
 
   25 Jul 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-014-r2.ebuild,
   -dracut-018-r1.ebuild, -dracut-018.ebuild, -dracut-019-r1.ebuild,
