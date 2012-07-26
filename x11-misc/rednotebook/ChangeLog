@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/rednotebook
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rednotebook/ChangeLog,v 1.62 2012/06/20 14:42:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rednotebook/ChangeLog,v 1.63 2012/07/26 21:58:40 hwoarang Exp $
+
+*rednotebook-1.5.0 (26 Jul 2012)
+
+  26 Jul 2012; Markos Chandras <hwoarang@gentoo.org> +rednotebook-1.5.0.ebuild:
+  Version bump
 
   20 Jun 2012; Agostino Sarubbo <ago@gentoo.org> rednotebook-1.4.0.ebuild:
   Stable for amd64, wrt bug #422383
@@ -311,4 +316,3 @@
   Moved from sunrise. Thanks to Adam Zajac. Changed category to x11-misc.
   Thanks
   to Josh Saddler for improved ebuild. Fixes bug 253399
-
