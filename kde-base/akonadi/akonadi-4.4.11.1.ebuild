@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/akonadi-4.4.11.1.ebuild,v 1.5 2011/06/01 19:34:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/akonadi-4.4.11.1.ebuild,v 1.6 2012/07/26 23:00:00 johu Exp $
 
 EAPI=4
 
@@ -28,6 +28,8 @@ KMEXTRA="
 # @since 4.3 - blocks kdemaildir - no longer provided (it's in akonadi now)
 add_blocker kdemaildir
 add_blocker kdepim-kresources '<4.2.95'
+# bug #428182
+add_blocker akonadiconsole
 
 src_configure() {
 	mycmakeargs=(

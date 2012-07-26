@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/akonadi
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/ChangeLog,v 1.91 2011/06/02 22:05:13 dilfridge Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/ChangeLog,v 1.92 2012/07/26 23:00:00 johu Exp $
+
+  26 Jul 2012; Johannes Huber <johu@gentoo.org> akonadi-4.4.11.1.ebuild:
+  Block kde-base/akonadiconsole to prevent file collisions, bug #428182.
 
   02 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> -akonadi-4.4.9.ebuild,
   -akonadi-4.4.10.ebuild:
@@ -359,4 +362,3 @@
   02 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   +metadata.xml, +akonadi-4.1.2.ebuild:
   Add kde-4.1.2 into the tree from the kde-testing overlay.
-
