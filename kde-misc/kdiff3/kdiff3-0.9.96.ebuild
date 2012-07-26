@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/kdiff3-0.9.96.ebuild,v 1.6 2012/01/28 15:07:48 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/kdiff3-0.9.96.ebuild,v 1.7 2012/07/26 17:03:43 johu Exp $
 
 EAPI=4
 
@@ -26,8 +26,8 @@ SLOT="4"
 IUSE="debug kde"
 
 DEPEND="
-	>=x11-libs/qt-core-${QT_MINIMAL}
-	>=x11-libs/qt-gui-${QT_MINIMAL}
+	>=x11-libs/qt-core-${QT_MINIMAL}:4
+	>=x11-libs/qt-gui-${QT_MINIMAL}:4
 	kde? ( $(add_kdebase_dep kdelibs) )
 "
 RDEPEND="${DEPEND}

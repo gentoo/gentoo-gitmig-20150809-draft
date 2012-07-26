@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kdiff3
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/ChangeLog,v 1.56 2012/01/28 23:15:10 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/ChangeLog,v 1.57 2012/07/26 17:03:43 johu Exp $
+
+  26 Jul 2012; Johannes Huber <johu@gentoo.org> kdiff3-0.9.96.ebuild:
+  Add missing slot dependencies on Qt.
 
   28 Jan 2012; Johannes Huber <johu@gentoo.org> metadata.xml:
   Fix repoman warning.
