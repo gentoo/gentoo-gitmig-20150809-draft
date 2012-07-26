@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/xf86vidmodeproto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86vidmodeproto/ChangeLog,v 1.51 2012/05/09 01:07:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86vidmodeproto/ChangeLog,v 1.52 2012/07/26 20:02:38 grobian Exp $
+
+  26 Jul 2012; Fabian Groffen <grobian@gentoo.org>
+  xf86vidmodeproto-2.3.1.ebuild:
+  Marked ~x64-macos
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org>
   xf86vidmodeproto-2.3.1.ebuild:
@@ -202,4 +206,3 @@
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +xf86vidmodeproto-2.2.ebuild:
   Initial commit for modular X
-
