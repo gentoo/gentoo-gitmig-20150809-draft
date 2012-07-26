@@ -1,9 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.377 2012/07/26 14:18:44 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.378 2012/07/26 22:13:45 chithanh Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (26 Jul 2012)
+# Prevents install of gl.pc which breaks building of many packages
+=media-libs/mesa-8.1_rc1_pre20120724 osmesa
 
 # Ole Markus With <olemarkus@gentoo.org> (20 Jul 2012)
 # Kolab support broken with newer c-client. Masking use flag until either
