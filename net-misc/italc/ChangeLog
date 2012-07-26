@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/italc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/ChangeLog,v 1.28 2012/06/25 17:27:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/ChangeLog,v 1.29 2012/07/26 15:37:48 kensington Exp $
+
+  26 Jul 2012; Michael Palimaka <kensington@gentoo.org> italc-2.0.0.ebuild:
+  Add missing slot dependencies on Qt.
 
   25 Jun 2012; Justin Lecher <jlec@gentoo.org> italc-1.0.9.ebuild,
   italc-2.0.0.ebuild, +files/italc-2.0.0-gcc-4.7.patch:
@@ -119,4 +122,3 @@
   03 Apr 2007; Markus Ullmann <jokey@gentoo.org> +metadata.xml,
   +italc-1.0.1.ebuild:
   Initial import, rbu did good work :)
-

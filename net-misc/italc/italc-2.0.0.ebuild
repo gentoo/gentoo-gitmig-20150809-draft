@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/italc-2.0.0.ebuild,v 1.2 2012/06/25 17:27:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/italc-2.0.0.ebuild,v 1.3 2012/07/26 15:37:48 kensington Exp $
 
 EAPI=4
 
@@ -21,8 +21,8 @@ RDEPEND="
 	sys-apps/tcp-wrappers
 	sys-libs/zlib
 	virtual/jpeg
-	x11-libs/qt-core
-	x11-libs/qt-xmlpatterns
+	x11-libs/qt-core:4
+	x11-libs/qt-xmlpatterns:4
 	x11-libs/libICE
 	x11-libs/libSM
 	x11-libs/libX11
