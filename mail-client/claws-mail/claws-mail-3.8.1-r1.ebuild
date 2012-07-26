@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.8.1-r1.ebuild,v 1.1 2012/07/17 19:51:57 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.8.1-r1.ebuild,v 1.2 2012/07/26 08:10:38 fauli Exp $
 
 EAPI="4"
 
@@ -42,9 +42,9 @@ RDEPEND="${COMMONDEPEND}
 
 PLUGIN_NAMES="acpi-notifier address_keeper archive att-remover attachwarner clamd fancy fetchinfo geolocation gdata gtkhtml mailmbox newmail notification perl python rssyl spam_report tnef_parse vcalendar"
 
-src_prepare() {
-	epatch "${FILESDIR}"/claws-mail-${PV}_fix-signature.patch
-}
+PATCHES=(
+	"${FILESDIR}"/claws-mail-${PV}_fix-signature.patch
+)
 
 src_configure() {
 	local myeconfargs=(
