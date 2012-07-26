@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gip/gip-1.6.1.1.ebuild,v 1.13 2012/05/05 03:20:45 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gip/gip-1.6.1.1.ebuild,v 1.14 2012/07/26 13:48:44 jlec Exp $
 
 EAPI=3
 inherit eutils versionator
 
 MY_P="${PN}-$(replace_version_separator 3 '-')"
 DESCRIPTION="A nice GNOME GUI for making IP address based calculations"
-HOMEPAGE="http://www.debain.org/software/gip/"
+HOMEPAGE="http://code.google.com/p/gip/"
 SRC_URI="http://dl.debain.org/gip/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
