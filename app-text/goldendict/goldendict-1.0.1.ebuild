@@ -1,14 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/goldendict/goldendict-1.0.1.ebuild,v 1.7 2012/07/19 17:36:12 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/goldendict/goldendict-1.0.1.ebuild,v 1.8 2012/07/26 07:04:22 yngwin Exp $
 
-EAPI=3
-LANGSLONG="ar_SA bg_BG cs_CZ de_DE el_GR it_IT lt_LT ru_RU uk_UA vi_VN zh_CN"
+EAPI=4
+PLOCALES="ar_SA bg_BG cs_CZ de_DE el_GR it_IT lt_LT ru_RU uk_UA vi_VN zh_CN"
 
-inherit qt4-r2
+inherit l10n qt4-r2
 
 DESCRIPTION="Feature-rich dictionary lookup program"
-HOMEPAGE="http://goldendict.org"
+HOMEPAGE="http://goldendict.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.bz2"
 
 LICENSE="GPL-3"
@@ -42,17 +42,10 @@ PATCHES=( "${FILESDIR}/${P}-gcc-4.7.patch" )
 src_prepare() {
 	qt4-r2_src_prepare
 
-	# linguas
-	for x in ${LANGSLONG}; do
-		if use !linguas_${x%_*}; then
-			sed -e "s,locale/${x}.ts,," \
-				-i ${PN}.pro || die
-		fi
-	done
+	l10n_for_each_disabled_locale_do editpro
 
 	# do not install duplicates
-	sed -e '/[icon,desktop]s2/d' \
-		-i ${PN}.pro || die
+	sed -e '/[icon,desktop]s2/d' -i ${PN}.pro || die
 }
 
 src_configure() {
@@ -61,12 +54,14 @@ src_configure() {
 
 src_install() {
 	qt4-r2_src_install
+	l10n_for_each_locale_do insqm
+}
 
-	# install translations
+editpro() {
+	sed -e "s;locale/${1}.ts;;" -i ${PN}.pro || die
+}
+
+insqm() {
 	insinto /usr/share/apps/${PN}/locale
-	for x in ${LANGSLONG}; do
-		if use linguas_${x%_*}; then
-			doins locale/${x}.qm || die
-		fi
-	done
+	doins locale/${1}.qm
 }
