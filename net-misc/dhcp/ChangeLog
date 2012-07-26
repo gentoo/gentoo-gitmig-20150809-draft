@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.209 2012/05/16 15:57:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.210 2012/07/26 07:54:48 chainsaw Exp $
+
+*dhcp-4.2.4_p1 (26 Jul 2012)
+
+  26 Jul 2012; Tony Vroon <chainsaw@gentoo.org> +dhcp-4.2.4_p1.ebuild:
+  Security upgrade addressing an IPv6-only buffer overflow (CVE-2012-3570),
+  remotely triggerable infinite loop (CVE-2012-3571) and remotely triggerable
+  memory leaks (CVE-2012-3954).
 
   16 May 2012; Mike Frysinger <vapier@gentoo.org> files/dhcrelay.init3,
   files/dhcrelay6.conf:
