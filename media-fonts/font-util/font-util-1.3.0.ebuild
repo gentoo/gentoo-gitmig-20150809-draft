@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-util/font-util-1.3.0.ebuild,v 1.8 2012/07/12 17:04:55 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-util/font-util-1.3.0.ebuild,v 1.9 2012/07/26 00:04:38 chithanh Exp $
 
 EAPI=4
 inherit xorg-2
@@ -14,4 +14,4 @@ IUSE=""
 RDEPEND=""
 DEPEND="${RDEPEND}"
 
-CONFIGURE_OPTIONS="--with-mapdir=${EPREFIX}/usr/share/fonts/util --with-fontrootdir=${EPREFIX}/usr/share/fonts"
+XORG_CONFIGURE_OPTIONS="--with-mapdir=${EPREFIX}/usr/share/fonts/util --with-fontrootdir=${EPREFIX}/usr/share/fonts"
