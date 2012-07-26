@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.61 2012/03/22 12:03:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.62 2012/07/26 16:30:37 aballier Exp $
 
 # @ECLASS: texlive-module.eclass
 # @MAINTAINER:
@@ -256,6 +256,8 @@ texlive-module_src_compile() {
 				echo "Map ${parameter}" >> "${S}/${PN}.cfg";;
 			addMixedMap)
 				echo "MixedMap ${parameter}" >> "${S}/${PN}.cfg";;
+			addKanjiMap)
+				echo "KanjiMap ${parameter}" >> "${S}/${PN}.cfg";;
 			addDvipsMap)
 				echo "p	+${parameter}" >> "${S}/${PN}-config.ps";;
 			addDvipdfmMap)
