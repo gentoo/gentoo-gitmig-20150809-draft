@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test_declarative/test_declarative-0.0.5.ebuild,v 1.7 2012/07/26 17:47:57 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test_declarative/test_declarative-0.0.5-r1.ebuild,v 1.1 2012/07/26 17:47:57 graaff Exp $
 
 EAPI=4
 
-USE_RUBY="ruby18 ree18 jruby ruby19"
+USE_RUBY="ruby18 ree18 jruby ruby19 rbx"
 
 RUBY_FAKEGEM_TASK_TEST=""
 RUBY_FAKEGEM_TASK_DOC=""
