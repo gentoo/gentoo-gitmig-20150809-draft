@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.3.ebuild,v 1.3 2012/07/26 18:21:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.3.ebuild,v 1.4 2012/07/26 20:10:10 flameeyes Exp $
 
 EAPI=4
 
@@ -93,7 +93,14 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${WORKDIR}"/patches/*.patch
+
 	java-pkg-opt-2_src_prepare
+
+	# this is to work around git diff output
+	if [[ -d b ]]; then
+		cd b
+		find . -type f -exec mv {} ../{} \; || die
+	fi
 }
 
 src_configure() {

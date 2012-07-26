@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.83 2012/07/26 18:21:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.84 2012/07/26 20:10:10 flameeyes Exp $
+
+  26 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> munin-2.0.3.ebuild:
+  Fix git diff problem.
 
   26 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org>
   files/munin-1.3.2-plugins.conf, metadata.xml, munin-2.0.3.ebuild:
