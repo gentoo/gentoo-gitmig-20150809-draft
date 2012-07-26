@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/rpm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.152 2012/07/26 08:02:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.153 2012/07/26 12:24:56 johu Exp $
+
+  26 Jul 2012; Johannes Huber <johu@gentoo.org> rpm-4.10.0.ebuild:
+  Stable for x86, wrt bug #428148
 
   26 Jul 2012; Tomáš Chvátal <scarabeus@gentoo.org> -rpm-4.4.6-r7.ebuild,
   -files/rpm-4.4.6-autotools.patch, -files/rpm-4.4.6-buffer-overflow.patch,
