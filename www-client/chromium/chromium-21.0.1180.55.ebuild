@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-21.0.1180.41.ebuild,v 1.2 2012/07/22 16:52:26 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-21.0.1180.55.ebuild,v 1.1 2012/07/26 16:44:50 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -207,7 +207,7 @@ src_configure() {
 	# TODO: use_system_sqlite (http://crbug.com/22208).
 	# TODO: use_system_vpx
 	# TODO: use_system_webp (https://chromiumcodereview.appspot.com/10496016
-	#       needs to become part of webp release)
+	#	   needs to become part of webp release)
 	myconf+="
 		-Duse_system_bzip2=1
 		-Duse_system_flac=1
@@ -394,11 +394,16 @@ src_install() {
 	doexe out/Release/libffmpegsumo.so || die
 
 	# Install icons and desktop entry.
-	for SIZE in 16 22 24 32 48 64 128 256 ; do
-		insinto /usr/share/icons/hicolor/${SIZE}x${SIZE}/apps
-		newins chrome/app/theme/chromium/product_logo_${SIZE}.png \
-			chromium-browser${CHROMIUM_SUFFIX}.png || die
+	local branding size
+	for size in 16 22 24 32 48 64 128 256 ; do
+		case ${size} in
+			16|32) branding="chrome/app/theme/default_100_percent/chromium" ;;
+				*) branding="chrome/app/theme/chromium" ;;
+		esac
+		newicon -s ${size} "${branding}/product_logo_${size}.png" \
+			chromium-browser${CHROMIUM_SUFFIX}.png
 	done
+
 	local mime_types="text/html;text/xml;application/xhtml+xml;"
 	mime_types+="x-scheme-handler/http;x-scheme-handler/https;" # bug #360797
 	mime_types+="x-scheme-handler/ftp;" # bug #412185
