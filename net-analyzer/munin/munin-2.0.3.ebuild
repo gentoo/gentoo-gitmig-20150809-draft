@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.3.ebuild,v 1.2 2012/07/25 03:32:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.3.ebuild,v 1.3 2012/07/26 18:21:51 flameeyes Exp $
 
 EAPI=4
 
-PATCHSET=1
+PATCHSET=4
 
 inherit eutils user java-pkg-opt-2
 
@@ -18,12 +18,15 @@ SRC_URI="mirror://sourceforge/munin/${MY_P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~mips ~x86"
-IUSE="asterisk irc java memcached minimal mysql postgres ssl test +cgi ipv6 syslog"
+IUSE="asterisk irc java memcached minimal mysql postgres ssl test +cgi ipv6 syslog ipmi"
 REQUIRED_USE="cgi? ( !minimal )"
 
 # Upstream's listing of required modules is NOT correct!
 # Some of the postgres plugins use DBD::Pg, while others call psql directly.
 # Some of the mysql plugins use DBD::mysql, while others call mysqladmin directly.
+# There are three ipmi plugins: two original ones using ipmitool (and
+# python or gawk) and one using freeipmi that Flameeyes wrote (which works fine with
+# any awk provider). Once freeipmi_ is feature-par with ipmi_, we'll drop the former.
 DEPEND_COM="dev-lang/perl
 			sys-process/procps
 			asterisk? ( dev-perl/Net-Telnet )
@@ -36,10 +39,13 @@ DEPEND_COM="dev-lang/perl
 			memcached? ( dev-perl/Cache-Memcached )
 			cgi? ( dev-perl/FCGI )
 			syslog? ( virtual/perl-Sys-Syslog )
+			ipmi? (
+				sys-apps/ipmitool sys-apps/gawk
+				sys-libs/freeipmi virtual/awk
+			)
 			dev-perl/DBI
 			dev-perl/DateManip
 			dev-perl/File-Copy-Recursive
-			dev-perl/IO-Socket-INET6
 			dev-perl/Log-Log4perl
 			dev-perl/Net-CIDR
 			dev-perl/Net-Netmask
@@ -52,8 +58,11 @@ DEPEND_COM="dev-lang/perl
 			virtual/perl-Storable
 			virtual/perl-Text-Balanced
 			virtual/perl-Time-HiRes
-			!minimal? ( dev-perl/HTML-Template
-						>=net-analyzer/rrdtool-1.3[perl] )"
+			!minimal? (
+				dev-perl/HTML-Template
+				dev-perl/IO-Socket-INET6
+				>=net-analyzer/rrdtool-1.3[perl]
+			)"
 
 # Keep this seperate, as previous versions have had other deps here
 DEPEND="${DEPEND_COM}
@@ -65,6 +74,7 @@ DEPEND="${DEPEND_COM}
 		dev-perl/Test-MockModule
 		dev-perl/File-Slurp
 		dev-perl/IO-stringy
+		dev-perl/IO-Socket-INET6
 	)"
 RDEPEND="${DEPEND_COM}
 		java? ( >=virtual/jre-1.5 )
@@ -228,4 +238,7 @@ pkg_postinst() {
 		elog "your munin master installation, please:"
 		elog "emerge --config net-analyzer/munin"
 	fi
+	elog ""
+	elog "Further information about setting up Munin in Gentoo can be found"
+	elog "in the Gentoo Wiki: https://wiki.gentoo.org/wiki/Munin"
 }

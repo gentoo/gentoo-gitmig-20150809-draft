@@ -40,6 +40,11 @@
       Install the packages required for memcached
       monitoring. Disabling the flag does not remove any plugin files.
     </flag>
+    <flag name="ipmi">
+      Install <pkg>sys-apps/ipmitool</pkg> required for monitoring
+      IPMI sensors. Disabling the flag does not remove any plugin
+      file.
+    </flag>
     <flag name="java">
       Build the Java-based plugins to monitor JMX-compatible
       applications. Disabling the flag removes the jmx monitoring

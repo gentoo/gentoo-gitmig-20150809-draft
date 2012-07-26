@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.82 2012/07/25 03:32:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.83 2012/07/26 18:21:51 flameeyes Exp $
+
+  26 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/munin-1.3.2-plugins.conf, metadata.xml, munin-2.0.3.ebuild:
+  Add a note to check the Wiki for documentation; fix the ipmi_ plugin and add
+  the new freeipmi_ plugin I wrote; add an impi USE flag to bring in the
+  required dependencies. The configuration file is updated to use root for IPMI-
+  based plugins.
 
 *munin-1.4.7-r2 (25 Jul 2012)
 
