@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.62 2012/07/26 07:15:45 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.63 2012/07/26 07:26:30 yngwin Exp $
 
 # This file contains descriptions of LINGUAS USE_EXPAND flags.
 
@@ -94,6 +94,7 @@ is - Icelandic locale
 it - Italian locale
 it_IT - Italian locale
 ja - Japanese locale
+ja_JP - Japanese locale
 ka - Georgian locale
 kk - Kazakh locale
 km - Khmer locale
@@ -144,6 +145,7 @@ pa - Punjabi locale for India
 pa_IN - Punjabi locale for India
 pap - Paiamento local
 pl - Polish locale
+pl_PL - Polish locale
 ps - Pushto locale
 pt - Portuguese locale
 pt_BR - Portuguese locale for Brasil
