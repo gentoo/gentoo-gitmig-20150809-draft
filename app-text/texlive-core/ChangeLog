@@ -1,6 +1,10 @@
 # ChangeLog for app-text/texlive-core
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.179 2012/06/17 14:32:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.180 2012/07/26 11:34:50 aballier Exp $
+
+  26 Jul 2012; Alexis Ballier <aballier@gentoo.org>
+  texlive-core-2011-r7.ebuild:
+  Add patch from upstream to build with kpathsea from TeX Live 2012.
 
   17 Jun 2012; Raúl Porcel <armin76@gentoo.org> texlive-core-2011-r6.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #408993
