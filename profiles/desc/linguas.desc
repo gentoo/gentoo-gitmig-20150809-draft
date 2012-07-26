@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.63 2012/07/26 07:26:30 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.64 2012/07/26 09:00:09 yngwin Exp $
 
 # This file contains descriptions of LINGUAS USE_EXPAND flags.
 
@@ -66,6 +66,7 @@ eu_ES - Basque locale for Spain
 fa - Persian locale
 fa_IR - Persian locale for Iran
 fi - Finnish locale
+fi_FI - Finnish locale
 fil - Filipino locale
 fo -  Faroese locale
 fr - French locale
@@ -80,6 +81,7 @@ gl - Galician locale
 gu - Gujarati locale
 gu_IN - Gujarati locale for India
 he - Hebrew locale
+he_IL - Hebrew locale for Israel
 hi - Hindi locale
 hi_IN - Hindi locale
 hne - Chhattisgarhi locale
@@ -90,12 +92,15 @@ hy - Armenian locale
 hy_AM - Armenian locale
 ia - Interlingua locale
 id - Indonesian locale
+id_ID - Indonesian locale
 is - Icelandic locale
 it - Italian locale
 it_IT - Italian locale
 ja - Japanese locale
 ja_JP - Japanese locale
+jv - Javanese locale
 ka - Georgian locale
+ka_GE - Georgian locale
 kk - Kazakh locale
 km - Khmer locale
 kn - Kannada locale
