@@ -1,6 +1,10 @@
 # ChangeLog for net-im/indicator-messages
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/indicator-messages/ChangeLog,v 1.12 2012/07/26 16:52:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/indicator-messages/ChangeLog,v 1.13 2012/07/26 16:53:49 ssuominen Exp $
+
+  26 Jul 2012; Samuli Suominen <ssuominen@gentoo.org>
+  -indicator-messages-0.5.0-r300.ebuild:
+  old
 
 *indicator-messages-0.6.0 (26 Jul 2012)
 
