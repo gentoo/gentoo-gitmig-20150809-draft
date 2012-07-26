@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libzip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/ChangeLog,v 1.54 2012/07/25 02:44:29 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/ChangeLog,v 1.55 2012/07/26 01:23:53 creffett Exp $
+
+  26 Jul 2012; Chris Reffett <creffett@gentoo.org> metadata.xml:
+  Add myself to maintainers, rest of KDE team didn't have any objections
 
   25 Jul 2012; Chris Reffett <creffett@gentoo.org> -libzip-0.10.1.ebuild:
   Remove old
