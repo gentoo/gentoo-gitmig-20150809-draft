@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Linux-DesktopFiles
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Linux-DesktopFiles/ChangeLog,v 1.1 2012/07/26 15:59:46 hasufell Exp $
+
+*Linux-DesktopFiles-0.06 (26 Jul 2012)
+
+  26 Jul 2012; Julian Ospald <hasufell@gentoo.org>
+  +Linux-DesktopFiles-0.06.ebuild, +metadata.xml:
+  initial import
+
