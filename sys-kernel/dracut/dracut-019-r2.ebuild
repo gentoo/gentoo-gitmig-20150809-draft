@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-019-r2.ebuild,v 1.1 2012/07/25 17:34:47 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-019-r2.ebuild,v 1.2 2012/07/26 18:05:06 aidecoe Exp $
 
 EAPI=4
 
@@ -245,22 +245,5 @@ pkg_postinst() {
 		ewarn "  CONFIG_DEVTMPFS"
 		ewarn "  CONFIG_MODULES"
 		echo
-	fi
-
-	elog 'To generate the initramfs:'
-	elog '    # mount /boot (if necessary)'
-	elog '    # dracut "" <kernel-version>'
-	elog ''
-	elog 'For command line documentation see dracut.kernel(7).'
-	elog ''
-	elog 'Simple example to select root and resume partition:'
-	elog '    root=/dev/sda1 resume=/dev/sda2'
-	elog ''
-	elog 'To include only dracut modules and kernel drivers for this system,'
-	elog 'use the "-H" option.  Some modules need to be explicitly added with'
-	elog '"-a" option even if required tools are installed.'
-	elog ''
-	if ! has_version virtual/pkgconfig; then
-		ewarn 'virtual/pkgconfig is not installed, but it is recommended.'
 	fi
 }

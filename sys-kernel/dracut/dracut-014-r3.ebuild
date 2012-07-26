@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-014-r3.ebuild,v 1.1 2012/07/25 16:48:06 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-014-r3.ebuild,v 1.2 2012/07/26 18:05:06 aidecoe Exp $
 
 EAPI=4
 
@@ -196,28 +196,4 @@ src_install() {
 
 	# Remove extra modules which go to future dracut-extras
 	rm_module 00bootchart 05busybox 97masterkey 98ecryptfs 98integrity
-}
-
-pkg_postinst() {
-	elog 'To generate the initramfs:'
-	elog '    # mount /boot (if necessary)'
-	elog '    # dracut "" <kernel-version>'
-	elog ''
-	elog 'For command line documentation see dracut.kernel(7).'
-	elog ''
-	elog 'Simple example to select root and resume partition:'
-	elog '    root=/dev/sda1 resume=/dev/sda2'
-	elog ''
-	elog 'The default config (in /etc/dracut.conf) is very minimal and is highly'
-	elog 'recommended you adjust based on your needs. To include only dracut'
-	elog 'modules and kernel drivers for this system, use the "-H" option.'
-	elog 'Some modules need to be explicitly added with "-a" option even if'
-	elog 'required tools are installed.'
-	echo
-	elog 'Options (documented in dracut.kernel(7)) have new format since'
-	elog 'version 008. Old format is preserved, but will be removed in future.'
-	elog 'Please migrate to the new one.'
-	echo
-	elog 'Some dependencies were removed, because they are optional. dracut'
-	elog "will inform you with a warning when you're lacking something optional."
 }
