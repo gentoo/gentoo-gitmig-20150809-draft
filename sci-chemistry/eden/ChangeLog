@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/eden
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/eden/ChangeLog,v 1.17 2012/05/04 07:02:34 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/eden/ChangeLog,v 1.18 2012/07/26 14:20:18 jlec Exp $
+
+  26 Jul 2012; Justin Lecher <jlec@gentoo.org> files/5.3-makefile-fixes.patch,
+  eden-5.3-r1.ebuild, +files/eden-5.3-impl-dec.patch, metadata.xml:
+  Respect the CFLAGS everywhere, #428190; fix some implicit declarations; bump
+  EAPI to 4
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> eden-5.3-r1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

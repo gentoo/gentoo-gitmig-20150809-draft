@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/eden/eden-5.3-r1.ebuild,v 1.5 2012/05/04 07:02:34 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/eden/eden-5.3-r1.ebuild,v 1.6 2012/07/26 14:20:18 jlec Exp $
 
-EAPI="3"
+EAPI=4
 
 PYTHON_DEPEND="2"
 
@@ -32,10 +32,13 @@ EDENHOME="${EPREFIX}/usr/$(get_libdir)/eden"
 
 pkg_setup() {
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PV}-makefile-fixes.patch
+	epatch \
+		"${FILESDIR}"/${PV}-makefile-fixes.patch \
+		"${FILESDIR}"/${P}-impl-dec.patch
 
 	sed -i \
 		-e "s:^\(FFTW.*=\).*:\1 ${EPREFIX}/usr:g" \
@@ -54,22 +57,22 @@ src_prepare() {
 }
 
 src_compile() {
-	emake CC=$(tc-getCC) -C ${SRC} || die "emake failed"
+	emake CC=$(tc-getCC) -C ${SRC}
 }
 
 src_install() {
-	emake -C ${SRC} install || die "install failed"
+	emake -C ${SRC} install
 
 	exeinto ${EDENHOME}/python
-	doexe python/* || die
+	doexe python/*
 
 	insinto ${EDENHOME}/help
-	doins help/* || die
+	doins help/*
 
 	insinto ${EDENHOME}/tools
-	doins tools/* || die
+	doins tools/*
 
-	dodoc manual/UserManual.pdf || die
+	dodoc manual/UserManual.pdf
 
 	cat >> "${T}"/eden <<- EOF
 	#!/bin/bash
@@ -77,7 +80,7 @@ src_install() {
 	${EXE} \$*
 	EOF
 
-	dobin "${T}"/eden || die
+	dobin "${T}"/eden
 
 	cat >> "${T}"/ieden <<- EOF
 	#!/bin/bash
@@ -85,7 +88,7 @@ src_install() {
 	$(PYTHON) -O \${EDENHOME}/python/eden.py
 	EOF
 
-	dobin "${T}"/ieden || die
+	dobin "${T}"/ieden
 }
 
 pkg_postinst() {
