@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/diff-lcs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/diff-lcs/ChangeLog,v 1.35 2012/07/22 07:53:16 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/diff-lcs/ChangeLog,v 1.36 2012/07/26 12:06:03 blueness Exp $
+
+  26 Jul 2012; Anthony G. Basile <blueness@gentoo.org> diff-lcs-1.1.3.ebuild:
+  Stable ppc, bug #426668
 
   22 Jul 2012; Jeff Horelick <jdhore@gentoo.org> diff-lcs-1.1.3.ebuild:
   marked x86 per bug 426668
