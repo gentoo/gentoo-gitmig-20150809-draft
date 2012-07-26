@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-clockspeed
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-clockspeed/ChangeLog,v 1.37 2012/07/17 14:27:08 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-clockspeed/ChangeLog,v 1.38 2012/07/26 13:07:42 swift Exp $
+
+*selinux-clockspeed-2.20120215-r15 (26 Jul 2012)
+
+  26 Jul 2012; Sven Vermeulen +selinux-clockspeed-2.20120215-r15.ebuild:
+  Bump to rev15
 
 *selinux-clockspeed-2.20120215-r14 (16 Jul 2012)
 

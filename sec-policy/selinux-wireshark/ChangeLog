@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-wireshark
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-wireshark/ChangeLog,v 1.21 2012/07/17 14:27:13 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-wireshark/ChangeLog,v 1.22 2012/07/26 13:07:07 swift Exp $
+
+*selinux-wireshark-2.20120215-r15 (26 Jul 2012)
+
+  26 Jul 2012; Sven Vermeulen +selinux-wireshark-2.20120215-r15.ebuild:
+  Bump to rev15
 
 *selinux-wireshark-2.20120215-r14 (16 Jul 2012)
 

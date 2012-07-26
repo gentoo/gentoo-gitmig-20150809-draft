@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-kerberos
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-kerberos/ChangeLog,v 1.26 2012/07/17 14:27:03 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-kerberos/ChangeLog,v 1.27 2012/07/26 13:07:11 swift Exp $
+
+*selinux-kerberos-2.20120215-r15 (26 Jul 2012)
+
+  26 Jul 2012; Sven Vermeulen +selinux-kerberos-2.20120215-r15.ebuild:
+  Bump to rev15
 
 *selinux-kerberos-2.20120215-r14 (17 Jul 2012)
 

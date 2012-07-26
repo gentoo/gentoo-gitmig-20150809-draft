@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-howl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-howl/ChangeLog,v 1.8 2012/07/17 14:27:10 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-howl/ChangeLog,v 1.9 2012/07/26 13:07:37 swift Exp $
+
+*selinux-howl-2.20120215-r15 (26 Jul 2012)
+
+  26 Jul 2012; Sven Vermeulen +selinux-howl-2.20120215-r15.ebuild:
+  Bump to rev15
 
 *selinux-howl-2.20120215-r14 (16 Jul 2012)
 

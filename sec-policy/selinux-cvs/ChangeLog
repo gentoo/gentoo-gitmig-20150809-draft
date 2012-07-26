@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-cvs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-cvs/ChangeLog,v 1.10 2012/07/17 14:26:58 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-cvs/ChangeLog,v 1.11 2012/07/26 13:07:27 swift Exp $
+
+*selinux-cvs-2.20120215-r15 (26 Jul 2012)
+
+  26 Jul 2012; Sven Vermeulen +selinux-cvs-2.20120215-r15.ebuild:
+  Bump to rev15
 
 *selinux-cvs-2.20120215-r14 (16 Jul 2012)
 

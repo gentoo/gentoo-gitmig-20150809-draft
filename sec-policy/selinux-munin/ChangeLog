@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-munin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-munin/ChangeLog,v 1.21 2012/07/17 14:27:30 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-munin/ChangeLog,v 1.22 2012/07/26 13:07:41 swift Exp $
+
+*selinux-munin-2.20120215-r15 (26 Jul 2012)
+
+  26 Jul 2012; Sven Vermeulen +selinux-munin-2.20120215-r15.ebuild:
+  Bump to rev15
 
 *selinux-munin-2.20120215-r14 (17 Jul 2012)
 
