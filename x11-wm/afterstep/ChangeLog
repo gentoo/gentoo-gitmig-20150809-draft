@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/afterstep
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.101 2011/12/23 07:54:11 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.102 2012/07/26 18:04:06 blueness Exp $
+
+  26 Jul 2012; Anthony G. Basile <blueness@gentoo.org> afterstep-2.2.11.ebuild:
+  Keyword ~arm
 
   23 Dec 2011; Samuli Suominen <ssuominen@gentoo.org> afterstep-2.2.9.ebuild,
   afterstep-2.2.11.ebuild:
