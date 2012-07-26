@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-022.ebuild,v 1.1 2012/07/26 17:52:12 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-022.ebuild,v 1.2 2012/07/26 18:01:05 aidecoe Exp $
 
 EAPI=4
 
@@ -91,7 +91,12 @@ RDEPEND="
 	dracut_modules_ssh-client? ( dev-libs/openssl )
 	dracut_modules_syslog? ( || ( app-admin/syslog-ng app-admin/rsyslog ) )
 	"
-DEPEND=""
+DEPEND="
+	app-text/asciidoc
+	>=dev-libs/libxslt-1.1.26
+	app-text/docbook-xml-dtd:4.5
+	>=app-text/docbook-xsl-stylesheets-1.75.2
+	"
 
 #
 # Helper functions
@@ -154,7 +159,8 @@ src_prepare() {
 
 src_compile() {
 	if use optimization; then
-		emake prefix=/usr sysconfdir=/etc DESTDIR="${D}" install/dracut-install
+		emake prefix=/usr sysconfdir=/etc DESTDIR="${D}" doc \
+			install/dracut-install
 	fi
 }
 

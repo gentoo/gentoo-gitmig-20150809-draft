@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.67 2012/07/26 17:52:12 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.68 2012/07/26 18:01:05 aidecoe Exp $
+
+  26 Jul 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-022.ebuild:
+  Man pages in 022 are patched, therefore docs need to be rebuilt. It should be
+  done in src_compile, not in src_install as it was before.
 
 *dracut-022 (26 Jul 2012)
 
