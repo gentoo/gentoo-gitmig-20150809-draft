@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-9999.ebuild,v 1.39 2012/07/24 06:49:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-9999.ebuild,v 1.40 2012/07/26 20:39:22 sping Exp $
 
 # genkernel-9999        -> latest Git branch "master"
 # genkernel-VERSION     -> normal genkernel release
@@ -59,7 +59,7 @@ DEPEND="sys-fs/e2fsprogs
 RDEPEND="${DEPEND}
 		cryptsetup? ( sys-fs/cryptsetup )
 		app-arch/cpio
-		app-misc/pax-utils
+		>=app-misc/pax-utils-0.2.1
 		!<sys-apps/openrc-0.9.9"
 # pax-utils is used for lddtree
 

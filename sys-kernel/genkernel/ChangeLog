@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.326 2012/07/24 06:49:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.327 2012/07/26 20:39:22 sping Exp $
+
+  26 Jul 2012; Sebastian Pipping <sping@gentoo.org> genkernel-3.4.32.ebuild,
+  genkernel-3.4.33.1.ebuild, genkernel-3.4.34.ebuild, genkernel-3.4.35.ebuild,
+  genkernel-3.4.36.ebuild, genkernel-3.4.37.ebuild, genkernel-3.4.38.ebuild,
+  genkernel-3.4.39.ebuild, genkernel-9999.ebuild:
+  Fix pax-utils dependency for >=3.4.30 (bug #427686)
 
   24 Jul 2012; Robin H. Johnson <robbat2@gentoo.org> genkernel-9999.ebuild:
   Live ebuild using wrong version of busybox.
