@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap-ng/libcap-ng-0.6.6.ebuild,v 1.13 2012/05/19 12:46:28 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap-ng/libcap-ng-0.6.6.ebuild,v 1.14 2012/07/26 02:39:08 radhermit Exp $
 
 EAPI=4
 
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="*-jython *-pypy-*"
 
-inherit autotools eutils flag-o-matic python
+inherit autotools flag-o-matic python
 
 DESCRIPTION="POSIX 1003.1e capabilities"
 HOMEPAGE="http://people.redhat.com/sgrubb/libcap-ng/"

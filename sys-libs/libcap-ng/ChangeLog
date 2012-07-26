@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libcap-ng
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap-ng/ChangeLog,v 1.48 2012/07/25 21:34:00 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap-ng/ChangeLog,v 1.49 2012/07/26 02:39:08 radhermit Exp $
+
+  26 Jul 2012; Tim Harder <radhermit@gentoo.org> libcap-ng-0.6.6.ebuild,
+  libcap-ng-0.7.ebuild:
+  Remove unused eutils inherit.
 
 *libcap-ng-0.7 (25 Jul 2012)
 
