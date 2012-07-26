@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy-2.eclass,v 1.12 2012/05/26 14:25:02 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy-2.eclass,v 1.13 2012/07/26 12:53:01 swift Exp $
 
 # Eclass for installing SELinux policy, and optionally
 # reloading the reference-policy based modules.
@@ -241,22 +241,22 @@ selinux-policy-2_pkg_postinst() {
 			fi
 			if [ $? -ne 0 ];
 			then
-				eerror "Failed to reload SELinux policies."
-				eerror ""
-				eerror "If this is *not* the last SELinux module package being installed,"
-				eerror "then you can safely ignore this as the reloads will be retried"
-				eerror "with other, recent modules."
-				eerror ""
-				eerror "If it is the last SELinux module package being installed however,"
-				eerror "then it is advised to look at the error above and take appropriate"
-				eerror "action since the new SELinux policies are not loaded until the"
-				eerror "command finished succesfully."
-				eerror ""
-				eerror "To reload, run the following command from within /usr/share/selinux/${i}:"
-				eerror "  semodule -b base.pp -i \$(ls *.pp | grep -v base.pp)"
-				eerror "or"
-				eerror "  semodule -b base.pp -i \$(ls *.pp | grep -v base.pp | grep -v unconfined.pp)"
-				eerror "depending on if you need the unconfined domain loaded as well or not."
+				ewarn "Failed to reload SELinux policies."
+				ewarn ""
+				ewarn "If this is *not* the last SELinux module package being installed,"
+				ewarn "then you can safely ignore this as the reloads will be retried"
+				ewarn "with other, recent modules."
+				ewarn ""
+				ewarn "If it is the last SELinux module package being installed however,"
+				ewarn "then it is advised to look at the error above and take appropriate"
+				ewarn "action since the new SELinux policies are not loaded until the"
+				ewarn "command finished succesfully."
+				ewarn ""
+				ewarn "To reload, run the following command from within /usr/share/selinux/${i}:"
+				ewarn "  semodule -b base.pp -i \$(ls *.pp | grep -v base.pp)"
+				ewarn "or"
+				ewarn "  semodule -b base.pp -i \$(ls *.pp | grep -v base.pp | grep -v unconfined.pp)"
+				ewarn "depending on if you need the unconfined domain loaded as well or not."
 			else
 				einfo "SELinux modules reloaded succesfully."
 			fi

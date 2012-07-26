@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.354 2012/07/26 09:34:55 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.355 2012/07/26 12:53:01 swift Exp $
+
+  26 Jul 2012; <swift@gentoo.org> selinux-policy-2.eclass:
+  Use warnings for SELinux failures, not errors, since the failure is not fatal
+  for a system
 
   26 Jul 2012; Ben de Groot <yngwin@gentoo.org> l10n.eclass:
   Remove ambiguous wording
