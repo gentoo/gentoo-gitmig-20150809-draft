@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/gqview-2.1.5.ebuild,v 1.15 2012/05/28 23:56:35 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/gqview-2.1.5.ebuild,v 1.16 2012/07/26 18:41:29 blueness Exp $
 
 EAPI=2
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/gqview/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ~mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~arm ia64 ~mips ppc ppc64 sparc x86"
 IUSE="lcms"
 
 RDEPEND=">=x11-libs/gtk+-2.4:2
