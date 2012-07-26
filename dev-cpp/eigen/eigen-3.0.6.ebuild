@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/eigen-3.0.2.ebuild,v 1.2 2011/09/30 21:38:12 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/eigen-3.0.6.ebuild,v 1.1 2012/07/26 14:03:12 kensington Exp $
 
-EAPI="2"
+EAPI=4
 
 inherit cmake-utils
 
@@ -18,14 +18,19 @@ IUSE="debug doc"
 DEPEND="doc? ( app-doc/doxygen )"
 RDEPEND="!dev-cpp/eigen:0"
 
-PATCHES=(
-	"${FILESDIR}"/${PN}-3.0.0-gcc46.patch
-	"${FILESDIR}"/${PN}-3.0.2-latex.patch
-)
-
 src_unpack() {
-	unpack ${A}
-	mv ${PN}* ${P}
+	default
+	mv ${PN}* ${P} || die
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-3.0.0-gcc46.patch
+
+	sed -i CMakeLists.txt \
+		-e "/add_subdirectory(demos/d" \
+		-e "/add_subdirectory(blas/d" \
+		-e "/add_subdirectory(lapack/d" \
+		|| die "sed disable unused bundles failed"
 }
 
 src_configure() {
@@ -41,16 +46,7 @@ src_configure() {
 src_compile() {
 	cmake-utils_src_compile
 	if use doc; then
-		cd "${CMAKE_BUILD_DIR}"
-		emake doc || die "building documentation failed"
-	fi
-}
-
-src_install() {
-	cmake-utils_src_install
-	if use doc; then
-		cd "${CMAKE_BUILD_DIR}"/doc
-		dohtml -r html/* || die "dohtml failed"
+		cmake-utils_src_compile doc
 	fi
 }
 
@@ -58,8 +54,17 @@ src_test() {
 	mycmakeargs=(
 		-DEIGEN_BUILD_TESTS=ON
 		-DEIGEN_TEST_NO_FORTRAN=ON
+		-DEIGEN_TEST_NO_OPENGL=ON
 	)
 	cmake-utils_src_configure
-	cmake-utils_src_compile
+	cmake-utils_src_compile buildtests
 	cmake-utils_src_test
+}
+
+src_install() {
+	cmake-utils_src_install
+	if use doc; then
+		cd "${CMAKE_BUILD_DIR}"/doc
+		dohtml -r html/*
+	fi
 }
