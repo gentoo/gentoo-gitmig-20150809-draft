@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/gtkdiskfree
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gtkdiskfree/ChangeLog,v 1.37 2012/06/06 08:03:41 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gtkdiskfree/ChangeLog,v 1.38 2012/07/26 20:48:25 xmw Exp $
+
+  26 Jul 2012; Michael Weber <xmw@gentoo.org> gtkdiskfree-2.0.1.ebuild,
+  metadata.xml:
+  Fix CFLAGS, add USE gtk3 (bug 428186)
 
   06 Jun 2012; Jeff Horelick <jdhore@gentoo.org> gtkdiskfree-2.0.1.ebuild:
   marked x86 per bug 418491
