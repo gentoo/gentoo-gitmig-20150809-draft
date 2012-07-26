@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.60 2012/05/29 06:43:52 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.61 2012/07/26 06:56:10 yngwin Exp $
 
 # This file contains descriptions of LINGUAS USE_EXPAND flags.
 
@@ -10,6 +10,7 @@ af - Afrikaans locale
 ak - Akan locale
 am - Amharic locale
 ar - Arabic locale
+ar_SA - Arabic locale for Saudi-Arabia
 as - Assamese locale
 as_IN - Assamese locale for India
 ast - Asturian locale
@@ -17,6 +18,7 @@ az - Azeri locale
 be - Belarusian locale
 be_BY - Belarusian locale
 bg - Bulgarian locale
+bg_BG - Bulgarian locale
 bn - Bengali locale
 bn_BD - Bengalie locale for Bangladesh
 bn_IN - Bengali locale for India
@@ -35,11 +37,13 @@ csb - Kashubian locale
 cy - Welsh locale
 da - Danish locale
 de - German locale
+de_DE - German locale for Germany
 de_FR - German locale for France
 dgo - Dogri locale for India
 dz - Dzongkha locale
 ee - Ewe locale
 el - Greek locale
+el_GR - Greek locale
 en - English locale
 en_CA - English locale for Canada
 en_GB - English locale for Britain
@@ -87,6 +91,7 @@ ia - Interlingua locale
 id - Indonesian locale
 is - Icelandic locale
 it - Italian locale
+it_IT - Italian locale
 ja - Japanese locale
 ka - Georgian locale
 kk - Kazakh locale
@@ -104,6 +109,7 @@ lb - Luxembourgish locale
 lg - Ganda locale
 lo - Lao locale
 lt - Lithuanian locale
+lt_LT - Lithuanian locale
 lv - Latvian locale
 mai - Maithili locale
 me - Montenegrin (Crnogorski) locale
@@ -145,6 +151,7 @@ rm - Romansh locale
 ro - Romanian locale
 ro_RO - Romanian locale for Romania
 ru - Russian locale
+ru_RU - Russian locale for Russia
 rw - Kinyarwanda locale
 sa_IN - Sanskrit locale
 sat - Santali locale
@@ -187,6 +194,7 @@ ts - Tsonga locale
 tt - Tatar locale
 ug - Uighur locale
 uk - Ukrainian locale
+uk_UA - Ukrainian locale for Ukraine
 ur - Urdu locale
 ur_IN - Urdu locale for India
 ur_PK - Urdu language locale for Pakistan
@@ -194,6 +202,7 @@ uz - Uzbek locale
 uz@cyrillic - Uzbek (cyrillic) locale
 ve - Venda locale
 vi - Vietnamese locale
+vi_VN - Vietnamese locale
 wa - Walloon locale
 xh - Xhosa locale
 yi - Yiddish locale
