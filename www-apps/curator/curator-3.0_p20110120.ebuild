@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/curator/curator-3.0_p20110120.ebuild,v 1.1 2012/07/17 19:14:27 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/curator/curator-3.0_p20110120.ebuild,v 1.2 2012/07/26 08:18:36 fauli Exp $
 
 EAPI=4
 
@@ -25,8 +25,8 @@ RDEPEND="${DEPEND}
 S="${WORKDIR}/curator-3.0_pf078f1686a78"
 
 pkg_setup() {
-	python_pkg_setup
 	python_set_active_version 2
+	python_pkg_setup
 }
 src_compile() {
 	:

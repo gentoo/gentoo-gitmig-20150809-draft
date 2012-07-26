@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/curator
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/curator/ChangeLog,v 1.10 2012/07/17 19:16:57 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/curator/ChangeLog,v 1.11 2012/07/26 08:18:36 fauli Exp $
+
+  26 Jul 2012; Christian Faulhammer <fauli@gentoo.org>
+  curator-3.0_p20110120.ebuild:
+  Change order in pkg_setup() for active Python version according bug 316967 by
+  Arfrever
 
   17 Jul 2012; Christian Faulhammer <fauli@gentoo.org> metadata.xml:
   adding myself as maintainer
