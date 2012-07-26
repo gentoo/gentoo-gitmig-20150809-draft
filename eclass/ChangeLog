@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.355 2012/07/26 12:53:01 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.356 2012/07/26 16:14:47 grobian Exp $
+
+  26 Jul 2012; Fabian Groffen <grobian@gentoo.org>
+  +ELT-patches/sol2-ltmain/2.4.2, libtool.eclass:
+  elt-patches: add Solaris no de-deplication patch to fix built C++ objects
+  from aborting when an exception is thrown
 
   26 Jul 2012; <swift@gentoo.org> selinux-policy-2.eclass:
   Use warnings for SELinux failures, not errors, since the failure is not fatal
