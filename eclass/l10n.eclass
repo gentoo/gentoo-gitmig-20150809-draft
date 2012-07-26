@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/l10n.eclass,v 1.1 2012/07/23 12:44:06 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/l10n.eclass,v 1.2 2012/07/26 09:34:55 yngwin Exp $
 
 # @ECLASS: l10n.eclass
 # @MAINTAINER:
@@ -98,11 +98,9 @@ l10n_find_plocales_changes() {
 # @USAGE: [disabled]
 # @DESCRIPTION:
 # Determine which LINGUAS USE flags the user has enabled that are offered
-# by the package, as listed in PLOCALES, and return them. In case no
-# locales are selected, fall back on PLOCALE_BACKUP. When the disabled
-# argument is given, return the disabled useflags instead of the enabled
-# ones. This function is normally used internally in this eclass, not by
-# l10n.eclass consumers.
+# by the package, as listed in PLOCALES, and return them. In case no locales
+# are selected, fall back on PLOCALE_BACKUP. When the disabled argument is
+# given, return the disabled useflags instead of the enabled ones.
 l10n_get_locales() {
 	local disabled_locales enabled_locales loc locs
 	for loc in ${PLOCALES}; do
