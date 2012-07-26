@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14009 2012/07/25 14:34:56 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14010 2012/07/26 03:23:39 cardoe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -45,10 +45,6 @@ net-fs/mount-cifs
 # Doug Goldstein <cardoe@gentoo.org> (22 Jul 2012)
 # Beta driver & beta ebuild
 =x11-drivers/nvidia-drivers-304.22
-
-# Doug Goldstein <cardoe@gentoo.org> (22 Jul 2012)
-# Causes screen blanking issues
-=x11-drivers/nvidia-drivers-302.17
 
 # Michał Górny <mgorny@gentoo.org> (22 Jul 2012)
 # The OpenCL patches have been reported to cause segfaults in the clang
