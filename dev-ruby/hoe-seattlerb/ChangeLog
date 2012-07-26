@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/hoe-seattlerb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe-seattlerb/ChangeLog,v 1.40 2012/07/22 15:17:31 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe-seattlerb/ChangeLog,v 1.41 2012/07/26 11:13:25 blueness Exp $
+
+  26 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
+  hoe-seattlerb-1.2.8.ebuild:
+  Stable ppc64, bug #421525
 
   22 Jul 2012; <nixnut@gentoo.org> hoe-seattlerb-1.2.8.ebuild:
   ppc stable #421525
