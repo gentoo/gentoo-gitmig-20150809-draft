@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skypetab-ng/skypetab-ng-9999.ebuild,v 1.3 2012/06/09 14:28:03 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skypetab-ng/skypetab-ng-9999.ebuild,v 1.4 2012/07/26 17:01:38 johu Exp $
 
 EAPI=4
 
@@ -26,7 +26,7 @@ SLOT="0"
 IUSE=""
 
 DEPEND="
-	x11-libs/qt-gui
+	x11-libs/qt-gui:4
 	amd64? ( app-emulation/emul-linux-x86-qtlibs )
 "
 RDEPEND="${DEPEND}
