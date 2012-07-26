@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14011 2012/07/26 08:02:08 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14012 2012/07/26 15:01:21 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (26 Jul 2012)
+# We are in process of dropping most of GTK+-2.x Ubuntu
+# Ayatana libraries from tree and unfortunately glipper
+# has hardcoded dependency on libappindicator's Python
+# GTK+-2.x bindings
+# Removal in 30 days
+x11-misc/glipper
 
 # Christian Ruppert <idl0r@gentoo.org> (24 Jul 2012)
 # Masked because of the nvidia-drivers-3* mask below
