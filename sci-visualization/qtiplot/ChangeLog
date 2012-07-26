@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/qtiplot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.95 2012/05/19 08:48:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.96 2012/07/26 14:56:42 kensington Exp $
+
+  26 Jul 2012; Michael Palimaka <kensington@gentoo.org>
+  qtiplot-0.9.8.9-r1.ebuild:
+  Add missing slot dependencies on Qt.
 
   19 May 2012; Justin Lecher <jlec@gentoo.org> -qtiplot-0.9.8.2.ebuild,
   -qtiplot-0.9.8.9.ebuild, metadata.xml:
@@ -581,4 +585,3 @@
   +qtiplot-0.6.9.ebuild:
   Initial import, thanks to Martin Corley <Martin.Corley@ed.ac.uk> for the
   ebuild, closes bug 83293.
-

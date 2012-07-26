@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/gnuplot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.191 2012/06/30 21:02:53 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.192 2012/07/26 14:59:58 kensington Exp $
+
+  26 Jul 2012; Michael Palimaka <kensington@gentoo.org> gnuplot-4.6.0.ebuild:
+  Add missing slot dependencies on Qt.
 
   30 Jun 2012; Ulrich Müller <ulm@gentoo.org> -gnuplot-4.4.3-r1.ebuild:
   Remove old.

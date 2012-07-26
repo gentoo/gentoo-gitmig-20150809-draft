@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.8.9-r1.ebuild,v 1.6 2012/05/19 08:03:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.8.9-r1.ebuild,v 1.7 2012/07/26 14:56:42 kensington Exp $
 
 EAPI=3
 
@@ -30,8 +30,8 @@ done
 # >=x11-libs/qwt-5.3 they are using trunk checkouts
 CDEPEND="
 	media-libs/libemf
-	x11-libs/qt-assistant
-	x11-libs/qt-gui
+	x11-libs/qt-assistant:4
+	x11-libs/qt-gui:4
 	x11-libs/qt-opengl:4
 	x11-libs/qt-qt3support:4
 	|| ( >=x11-libs/qt-assistant-4.7.0:4[compat] <x11-libs/qt-assistant-4.7.0:4 )
