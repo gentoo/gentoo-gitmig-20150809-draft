@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rspec-core
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-core/ChangeLog,v 1.33 2012/07/26 12:10:45 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-core/ChangeLog,v 1.34 2012/07/26 12:52:45 blueness Exp $
+
+  26 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
+  rspec-core-2.6.4-r1.ebuild:
+  Stable ppc64, bug #426668
 
   26 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
   rspec-core-2.6.4-r1.ebuild:
