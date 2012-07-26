@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.35 2012/06/01 03:56:38 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.36 2012/07/26 16:07:43 kensington Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -20,9 +20,9 @@ IUSE="audiofile dcc_video +dcc_voice debug doc gsm +ipc ipv6 kde +nls oss +perl 
 
 RDEPEND="sys-libs/zlib
 	x11-libs/libX11
-	>=x11-libs/qt-core-4.6
-	>=x11-libs/qt-gui-4.6
-	>=x11-libs/qt-sql-4.6
+	>=x11-libs/qt-core-4.6:4
+	>=x11-libs/qt-gui-4.6:4
+	>=x11-libs/qt-sql-4.6:4
 	dcc_video? (
 		media-libs/libv4l
 		theora? ( media-libs/libogg media-libs/libtheora )
@@ -30,10 +30,10 @@ RDEPEND="sys-libs/zlib
 	kde? ( >=kde-base/kdelibs-4 )
 	oss? ( audiofile? ( media-libs/audiofile ) )
 	perl? ( dev-lang/perl )
-	phonon? ( || ( media-libs/phonon >=x11-libs/qt-phonon-4.6 ) )
-	qt-dbus? ( >=x11-libs/qt-dbus-4.6 )
+	phonon? ( || ( media-libs/phonon >=x11-libs/qt-phonon-4.6:4 ) )
+	qt-dbus? ( >=x11-libs/qt-dbus-4.6:4 )
 	ssl? ( dev-libs/openssl )
-	webkit? ( >=x11-libs/qt-webkit-4.6 )"
+	webkit? ( >=x11-libs/qt-webkit-4.6:4 )"
 DEPEND="${RDEPEND}
 	>=dev-util/cmake-2.6.4
 	virtual/pkgconfig

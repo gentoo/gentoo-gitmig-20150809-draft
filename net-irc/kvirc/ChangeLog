@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/kvirc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.148 2012/06/01 03:56:38 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.149 2012/07/26 16:07:44 kensington Exp $
+
+  26 Jul 2012; Michael Palimaka <kensington@gentoo.org>
+  kvirc-4.2_pre6066.ebuild, kvirc-9999.ebuild:
+  Add missing slot dependencies on Qt.
 
   01 Jun 2012; Zac Medico <zmedico@gentoo.org> kvirc-4.2_pre6066.ebuild,
   kvirc-9999.ebuild:
@@ -668,4 +672,3 @@
  
   13 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
   Added missing changelog entry.
-
