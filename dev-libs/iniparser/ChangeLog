@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/iniparser
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/iniparser/ChangeLog,v 1.23 2012/05/25 13:24:06 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/iniparser/ChangeLog,v 1.24 2012/07/26 19:58:39 jer Exp $
+
+  26 Jul 2012; Jeroen Roovers <jer@gentoo.org> iniparser-3.1.ebuild:
+  Stable for HPPA (bug #428152).
 
 *iniparser-3.1 (25 May 2012)
 
