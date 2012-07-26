@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/atop/atop-1.27_p3.ebuild,v 1.1 2012/07/23 11:57:45 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/atop/atop-1.27_p3.ebuild,v 1.2 2012/07/26 19:19:54 jer Exp $
 
 EAPI="3"
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.atoptool.nl/download/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~x86"
+KEYWORDS="~alpha ~amd64 hppa ~ppc ~x86"
 IUSE=""
 
 DEPEND="sys-process/acct"
