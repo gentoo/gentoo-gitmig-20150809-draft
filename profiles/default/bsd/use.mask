@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/use.mask,v 1.24 2012/05/31 02:52:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/use.mask,v 1.25 2012/07/26 21:47:40 ryao Exp $
 
 # Mart Raudsepp <leio@gentoo.org>
 # net-misc/networkmanager not keyworded
@@ -31,6 +31,7 @@ xfs
 udev
 systemd
 inotify
+aio
 
 # This usually refers just to linux-dvb
 dvb
