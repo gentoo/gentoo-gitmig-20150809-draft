@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.376 2012/07/25 13:43:21 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.377 2012/07/26 14:18:44 johu Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -118,8 +118,9 @@ dev-cpp/gtkmm wayland
 x11-libs/gtk+ wayland
 
 # Johannes Huber <johu@gentoo.org> (23 Mar 2012)
-# Broken dep, see bug #389833.
-kde-base/kdelibs upnp
+# Broken dep upnp, see bug #389833.
+# Experimental udisks2 patch, see bug #424157
+kde-base/kdelibs upnp udisks2
 
 # Tim Harder <radhermit@gentoo.org> (22 Mar 2012)
 # Masked since skype isn't stable

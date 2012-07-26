@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.419 2012/07/22 18:51:48 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.420 2012/07/26 14:18:44 johu Exp $
+
+  26 Jul 2012; Johannes Huber <johu@gentoo.org> package.use.mask:
+  Mask experimental udisks2 support for kde-base/kdelibs, bug #424157.
 
   22 Jul 2012; <swift@gentoo.org> package.mask:
   Adding mask for SELinux chromium policy module
