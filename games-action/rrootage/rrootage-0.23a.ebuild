@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/rrootage/rrootage-0.23a.ebuild,v 1.11 2011/06/18 17:03:15 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/rrootage/rrootage-0.23a.ebuild,v 1.12 2012/07/26 10:38:14 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -34,6 +34,7 @@ src_prepare() {
 		-e "/^LDFLAGS/s/=/+=/" \
 		-e "/^CPPFLAGS/s/MORE_CFLAGS/MORE_CXXFLAGS/" \
 		-e "/^CPPFLAGS/s/MORE_CFLAGS/MORE_CXXFLAGS/" \
+		-e "s/ -mwindows//" \
 		-e "s:-I./bulletml/:-I/usr/include/bulletml:" \
 		makefile.lin > Makefile || die "sed failed"
 
