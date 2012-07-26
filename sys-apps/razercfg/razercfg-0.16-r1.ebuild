@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/razercfg/razercfg-0.16-r1.ebuild,v 1.3 2012/07/12 21:48:57 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/razercfg/razercfg-0.16-r1.ebuild,v 1.4 2012/07/26 16:17:35 johu Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="qt4"
 
 RDEPEND="${DEPEND}
-	qt4? ( x11-libs/qt-core )
+	qt4? ( x11-libs/qt-core:4 )
 	dev-lang/python"
 
 DEPEND="${DEPEND}"
