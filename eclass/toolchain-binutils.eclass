@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.116 2012/07/27 17:02:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.117 2012/07/27 17:03:25 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 #
@@ -76,7 +76,7 @@ esac
 add_src_uri() {
 	[[ -z $2 ]] && return
 	local a=$1
-	if [[ ${BTYPE} == "hjlu" ]] && version_is_at_least 2.22.52.0.2 ; then
+	if version_is_at_least 2.22.52.0.2 ; then
 		a+=".xz"
 	else
 		a+=".bz2"
