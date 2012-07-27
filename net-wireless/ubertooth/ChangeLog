@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/ubertooth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ChangeLog,v 1.2 2012/07/27 18:16:53 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ChangeLog,v 1.3 2012/07/27 21:07:46 zerochaos Exp $
+
+  27 Jul 2012; Rick Farina <zerochaos@gentoo.org> ubertooth-9999.ebuild:
+  cleanup use flags a little in prep for re-adding arm keyword
 
   27 Jul 2012; Michael Palimaka <kensington@gentoo.org>
   ubertooth-0.0_p534.ebuild, ubertooth-9999.ebuild:
