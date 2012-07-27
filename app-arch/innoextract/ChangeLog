@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/innoextract
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/innoextract/ChangeLog,v 1.3 2012/07/03 18:22:55 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/innoextract/ChangeLog,v 1.4 2012/07/27 05:51:30 jdhore Exp $
+
+  27 Jul 2012; Jeff Horelick <jdhore@gentoo.org> innoextract-1.3.ebuild:
+  marked x86 per bug 428224
 
 *innoextract-1.3 (03 Jul 2012)
 
