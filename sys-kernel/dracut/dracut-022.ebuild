@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-022.ebuild,v 1.4 2012/07/27 14:42:58 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-022.ebuild,v 1.5 2012/07/27 16:49:14 aidecoe Exp $
 
 EAPI=4
 
-inherit eutils linux-info
+inherit eutils linux-info toolchain-funcs
 
 add_req_use_for() {
 	local dep="$1"; shift
@@ -161,6 +161,8 @@ src_prepare() {
 
 src_compile() {
 	if use optimization; then
+		ewarn "Enabling experimental optimization!"
+		tc-export CC
 		emake prefix=/usr sysconfdir=/etc DESTDIR="${D}" doc \
 			install/dracut-install
 	fi
