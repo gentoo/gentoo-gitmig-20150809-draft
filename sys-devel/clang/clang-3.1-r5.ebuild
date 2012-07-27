@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.1-r5.ebuild,v 1.1 2012/07/16 09:33:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.1-r5.ebuild,v 1.2 2012/07/27 18:22:45 mgorny Exp $
 
 EAPI=4
 
@@ -118,6 +118,8 @@ src_configure() {
 		CONF_FLAGS="${CONF_FLAGS} --enable-pic"
 	fi
 
+	# clang prefers clang over gcc, so we may need to force that
+	tc-export CC CXX
 	econf ${CONF_FLAGS}
 }
 

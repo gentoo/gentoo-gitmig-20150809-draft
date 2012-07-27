@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.1-r1.ebuild,v 1.2 2012/07/06 07:19:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.1-r1.ebuild,v 1.3 2012/07/27 18:20:47 mgorny Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -138,6 +138,9 @@ src_configure() {
 		append-cppflags "$(pkg-config --cflags libffi)"
 	fi
 	CONF_FLAGS="${CONF_FLAGS} $(use_enable libffi)"
+
+	# llvm prefers clang over gcc, so we may need to force that
+	tc-export CC CXX
 	econf ${CONF_FLAGS}
 }
 
