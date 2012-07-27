@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/torque
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.142 2012/06/22 21:58:33 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.143 2012/07/27 03:41:50 jsbronder Exp $
+
+  27 Jul 2012; Justin Bronder <jsbronder@gentoo.org> files/pbs_mom-init.d,
+  files/pbs_mom-init.d-munge, files/pbs_sched-init.d, files/pbs_server-init.d,
+  files/pbs_server-init.d-munge, files/torque-env.d:
+  Change init script licenses to Torque-2.5+. Resolves #426160
 
 *torque-3.0.5 (22 Jun 2012)
 
