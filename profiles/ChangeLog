@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6848 2012/07/27 20:17:41 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6849 2012/07/27 20:23:42 chithanh Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Jul 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  base/package.use, default/bsd/fbsd/make.defaults,
+  default/linux/make.defaults:
+  Move xorg flag from make.defaults to package.use to avoid circular dependency
+  between mesa and xorg-server.
 
   27 Jul 2012; Matti Bickel <mabi@gentoo.org> package.mask:
   removed www-apps/phpwiki

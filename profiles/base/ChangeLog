@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.421 2012/07/26 22:13:45 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.422 2012/07/27 20:23:42 chithanh Exp $
+
+  27 Jul 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.use:
+  Add xorg to default flags for x11-base/xorg-server, sort newest first.
 
   26 Jul 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   package.use.mask:
