@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.277 2012/07/18 07:55:11 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.278 2012/07/27 04:49:45 jdhore Exp $
+
+*audacious-3.3 (27 Jul 2012)
+
+  27 Jul 2012; Jeff Horelick <jdhore@gentoo.org> +audacious-3.3.ebuild,
+  -audacious-3.3_beta2.ebuild:
+  Version bump on 3.3 branch and add keywords as it is finalized upstream.
 
 *audacious-3.3_beta2 (18 Jul 2012)
 
