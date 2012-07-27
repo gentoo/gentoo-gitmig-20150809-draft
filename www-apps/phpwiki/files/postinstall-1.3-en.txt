@@ -1,5 +1,0 @@
-The default configuration uses a dbm file in /tmp
-Be sure to read the install notes in /usr/share/doc/${PN}-${PVR}
-Note that db schemas are located in the same directory.
-
-You should customize ${MY_INSTALLDIR}/config/config.ini to suit your needs.
