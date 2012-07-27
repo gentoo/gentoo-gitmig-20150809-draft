@@ -1,6 +1,9 @@
 # ChangeLog for app-text/texlive-core
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.182 2012/07/27 01:26:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.183 2012/07/27 12:41:25 aballier Exp $
+
+  27 Jul 2012; Alexis Ballier <aballier@gentoo.org> texlive-core-2012.ebuild:
+  disable uptex and euptex without USE=cjk too, bug #428258
 
 *texlive-core-2012 (27 Jul 2012)
 

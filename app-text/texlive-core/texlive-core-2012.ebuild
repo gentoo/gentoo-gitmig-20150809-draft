@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2012.ebuild,v 1.1 2012/07/27 01:26:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2012.ebuild,v 1.2 2012/07/27 12:41:25 aballier Exp $
 
 EAPI=3
 
@@ -192,6 +192,8 @@ src_configure() {
 		$(use_enable xetex) \
 		$(use_enable cjk ptex) \
 		$(use_enable cjk eptex) \
+		$(use_enable cjk uptex) \
+		$(use_enable cjk euptex) \
 		$(use_enable cjk mendexk) \
 		$(use_enable cjk makejvf) \
 		$(use_with X x)
