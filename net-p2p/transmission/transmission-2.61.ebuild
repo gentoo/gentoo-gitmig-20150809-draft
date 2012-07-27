@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.61.ebuild,v 1.1 2012/07/25 08:58:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.61.ebuild,v 1.2 2012/07/27 16:41:17 ssuominen Exp $
 
 EAPI=4
 LANGS="en es eu kk lt pt_BR ru"
@@ -30,9 +30,9 @@ RDEPEND="
 	>=net-misc/curl-7.16.3[ssl]
 	sys-libs/zlib
 	gtk? (
-		>=dev-libs/dbus-glib-0.98
+		>=dev-libs/dbus-glib-0.100
 		>=dev-libs/glib-2.28
-		>=x11-libs/gtk+-3.2:3
+		>=x11-libs/gtk+-3.4:3
 		ayatana? ( >=dev-libs/libappindicator-0.4.90:3 )
 		)
 	qt4? (
