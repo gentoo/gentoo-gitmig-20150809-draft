@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.117 2012/07/27 17:03:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.118 2012/07/27 17:05:08 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 #
@@ -227,63 +227,64 @@ toolchain-binutils_src_compile() {
 	echo
 
 	cd "${MY_BUILDDIR}"
-	set --
+	local myconf=()
 
 	# enable gold if available (installed as ld.gold)
 	if use cxx ; then
 		if grep -q 'enable-gold=default' "${S}"/configure ; then
-			set -- "$@" --enable-gold
+			myconf+=( --enable-gold )
 		# old ways - remove when 2.21 is stable
 		elif grep -q 'enable-gold=both/ld' "${S}"/configure ; then
-			set -- "$@" --enable-gold=both/ld
+			myconf+=( --enable-gold=both/ld )
 		elif grep -q 'enable-gold=both/bfd' "${S}"/configure ; then
-			set -- "$@" --enable-gold=both/bfd
+			myconf+=( --enable-gold=both/bfd )
 		fi
 		if grep -q -e '--enable-plugins' "${S}"/ld/configure ; then
-			set -- "$@" --enable-plugins
+			myconf+=( --enable-plugins )
 		fi
 	fi
 
 	use nls \
-		&& set -- "$@" --without-included-gettext \
-		|| set -- "$@" --disable-nls
+		&& myconf+=( --without-included-gettext ) \
+		|| myconf+=( --disable-nls )
 
 	if in_iuse zlib ; then
 		# older versions did not have an explicit configure flag
 		export ac_cv_search_zlibVersion=$(usex zlib -lz no)
-		set -- "$@" $(use_with zlib)
+		myconf+=( $(use_with zlib) )
 	fi
 
-	use multitarget && set -- "$@" --enable-targets=all
-	[[ -n ${CBUILD} ]] && set -- "$@" --build=${CBUILD}
-	is_cross && set -- "$@" --with-sysroot=/usr/${CTARGET}
+	use multitarget && myconf+=( --enable-targets=all )
+	[[ -n ${CBUILD} ]] && myconf+=( --build=${CBUILD} )
+	is_cross && myconf+=( --with-sysroot=/usr/${CTARGET} )
 
 	# glibc-2.3.6 lacks support for this ... so rather than force glibc-2.5+
 	# on everyone in alpha (for now), we'll just enable it when possible
-	has_version ">=${CATEGORY}/glibc-2.5" && set -- "$@" --enable-secureplt
-	has_version ">=sys-libs/glibc-2.5" && set -- "$@" --enable-secureplt
+	has_version ">=${CATEGORY}/glibc-2.5" && myconf+=( --enable-secureplt )
+	has_version ">=sys-libs/glibc-2.5" && myconf+=( --enable-secureplt )
 
-	set -- "$@" \
-		--prefix=/usr \
-		--host=${CHOST} \
-		--target=${CTARGET} \
-		--datadir=${DATAPATH} \
-		--infodir=${DATAPATH}/info \
-		--mandir=${DATAPATH}/man \
-		--bindir=${BINPATH} \
-		--libdir=${LIBPATH} \
-		--libexecdir=${LIBPATH} \
-		--includedir=${INCPATH} \
-		--enable-64-bit-bfd \
-		--enable-obsolete \
-		--enable-shared \
-		--enable-threads \
-		--disable-werror \
-		--with-bugurl=http://bugs.gentoo.org/ \
-		$(use_enable static-libs static) \
+	myconf+=(
+		--prefix=/usr
+		--host=${CHOST}
+		--target=${CTARGET}
+		--datadir=${DATAPATH}
+		--infodir=${DATAPATH}/info
+		--mandir=${DATAPATH}/man
+		--bindir=${BINPATH}
+		--libdir=${LIBPATH}
+		--libexecdir=${LIBPATH}
+		--includedir=${INCPATH}
+		--enable-64-bit-bfd
+		--enable-obsolete
+		--enable-shared
+		--enable-threads
+		--disable-werror
+		--with-bugurl=http://bugs.gentoo.org/
+		$(use_enable static-libs static)
 		${EXTRA_ECONF}
-	echo ./configure "$@"
-	"${S}"/configure "$@" || die
+	)
+	echo ./configure "${myconf[@]}"
+	"${S}"/configure "${myconf[@]}" || die
 
 	emake all || die "emake failed"
 
@@ -307,13 +308,14 @@ toolchain-binutils_src_compile() {
 
 		if [[ ${x} != "UNSUPPORTED" ]] ; then
 			append-flags -I"${S}"/include
-			set -- "$@" \
-				--with-bfd-include-dir=${MY_BUILDDIR}/bfd \
-				--with-libbfd=${MY_BUILDDIR}/bfd/libbfd.a \
-				--with-libiberty=${MY_BUILDDIR}/libiberty/libiberty.a \
+			myconf+=(
+				--with-bfd-include-dir=${MY_BUILDDIR}/bfd
+				--with-libbfd=${MY_BUILDDIR}/bfd/libbfd.a
+				--with-libiberty=${MY_BUILDDIR}/libiberty/libiberty.a
 				--with-binutils-ldscript-dir=${LIBPATH}/ldscripts
-			echo ./configure "$@"
-			./configure "$@" || die
+			)
+			echo ./configure "${myconf[@]}"
+			./configure "${myconf[@]}" || die
 			emake || die "make elf2flt failed"
 		fi
 	fi
