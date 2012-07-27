@@ -1,5 +1,12 @@
 
 
+*elfix-0.5.1 (27 Jul 2012)
+
+  27 Jul 2012; Anthony G. Basile <blueness@gentoo.org> -elfix-0.5.0.ebuild,
+  +elfix-0.5.1.ebuild:
+  Switch from yasm to gcc for assembler to support all arches
+  Drop dev-lib/libelf because ELF_C_RDWR isn't enough to update phdr
+
   27 Jul 2012; Anthony G. Basile <blueness@gentoo.org> elfix-0.5.0.ebuild:
   Test requiring yasm only works on amd64/x86
 
