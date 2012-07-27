@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libappindicator/libappindicator-12.10.0.ebuild,v 1.1 2012/07/26 16:23:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libappindicator/libappindicator-12.10.0.ebuild,v 1.2 2012/07/27 16:34:15 ssuominen Exp $
 
 EAPI=4
 inherit eutils
@@ -32,6 +32,10 @@ src_prepare() {
 }
 
 src_configure() {
+	# http://bugs.gentoo.org/409133
+	export APPINDICATOR_PYTHON_CFLAGS=' '
+	export APPINDICATOR_PYTHON_LIBS=' '
+
 	use introspection && export VALAC="$(type -P valac-${AYATANA_VALA_VERSION})"
 
 	econf \

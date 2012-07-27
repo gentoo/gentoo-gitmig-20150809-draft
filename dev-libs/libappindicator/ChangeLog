@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libappindicator
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libappindicator/ChangeLog,v 1.10 2012/07/26 16:25:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libappindicator/ChangeLog,v 1.11 2012/07/27 16:34:15 ssuominen Exp $
+
+  27 Jul 2012; Samuli Suominen <ssuominen@gentoo.org>
+  libappindicator-12.10.0.ebuild:
+  Trick ./configure and pkg-config into believing APPINDICATOR_PYTHON_
+  dependencies are met wrt #409133 by Piotr Szymaniak
 
   26 Jul 2012; Samuli Suominen <ssuominen@gentoo.org>
   -libappindicator-0.4.1-r201.ebuild, -libappindicator-0.4.1-r300.ebuild,
