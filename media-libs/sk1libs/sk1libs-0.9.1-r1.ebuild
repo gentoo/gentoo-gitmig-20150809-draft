@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sk1libs/sk1libs-0.9.1-r1.ebuild,v 1.1 2012/07/26 09:26:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sk1libs/sk1libs-0.9.1-r1.ebuild,v 1.2 2012/07/27 06:29:27 jlec Exp $
 
 EAPI="3"
 
@@ -38,8 +38,11 @@ src_install() {
 	distutils_src_install
 
 	font-fixation() {
-		rm -rf "${ED}"/$(python_get_sitedir)/sk1libs/ft2engine/fallback_fonts
-		dosym /usr/share/fonts/ttf-bitstream-vera $(python_get_sitedir)/sk1libs/ft2engine/fallback_fonts
+		local ttf
+		for ttf in "${ED}"/$(python_get_sitedir)/sk1libs/ft2engine/fallback_fonts/*.ttf; do
+			rm -f "${ttf}" || die
+			dosym /usr/share/fonts/ttf-bitstream-vera/$(basename "${ttf}") $(python_get_sitedir)/sk1libs/ft2engine/fallback_fonts/$(basename "${ttf}")
+		done
 	}
 	python_execute_function font-fixation
 }

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sk1libs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sk1libs/ChangeLog,v 1.16 2012/07/26 09:26:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sk1libs/ChangeLog,v 1.17 2012/07/27 06:29:27 jlec Exp $
+
+  27 Jul 2012; Justin Lecher <jlec@gentoo.org> sk1libs-0.9.1-r1.ebuild:
+  Fix for directory blocking installation of symlink, #428166
 
 *sk1libs-0.9.1-r1 (26 Jul 2012)
 
