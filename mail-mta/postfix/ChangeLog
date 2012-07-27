@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.374 2012/07/26 23:13:47 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.375 2012/07/27 01:21:04 blueness Exp $
+
+  27 Jul 2012; Anthony G. Basile <blueness@gentoo.org> postfix-2.9.3.ebuild:
+  Stable arm, bug #426760
 
   26 Jul 2012; Anthony G. Basile <blueness@gentoo.org> postfix-2.9.3.ebuild:
   Stable ppc/ppc64, bug #426760
