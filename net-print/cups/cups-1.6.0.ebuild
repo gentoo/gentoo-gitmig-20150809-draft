@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.6_rc1.ebuild,v 1.3 2012/07/23 15:09:45 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.6.0.ebuild,v 1.1 2012/07/27 17:54:03 dilfridge Exp $
 
 EAPI=4
 
@@ -8,12 +8,12 @@ PYTHON_DEPEND="python? 2:2.5"
 
 inherit autotools base fdo-mime gnome2-utils flag-o-matic linux-info multilib pam python user versionator java-pkg-opt-2 systemd
 
-MY_P=${P/_/}
-MY_PV=${PV/_/}
+MY_P=${P/_beta/b}
+MY_PV=${PV/_beta/b}
 
 if [[ "${PV}" != "9999" ]]; then
 	SRC_URI="mirror://easysw/${PN}/${MY_PV}/${MY_P}-source.tar.bz2"
-	KEYWORDS=""
+	KEYWORDS="~amd64 ~x86"
 else
 	inherit subversion
 	ESVN_REPO_URI="http://svn.easysw.com/public/cups/trunk"
@@ -28,7 +28,7 @@ SLOT="0"
 IUSE="acl avahi dbus debug +filters gnutls java kerberos pam
 	python selinux +ssl static-libs systemd +threads usb X xinetd zeroconf"
 
-LANGS="ja"
+LANGS="ca es ja"
 for X in ${LANGS} ; do
 	IUSE="${IUSE} linguas_${X}"
 done
