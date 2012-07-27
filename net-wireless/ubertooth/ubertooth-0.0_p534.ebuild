@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ubertooth-0.0_p534.ebuild,v 1.2 2012/07/27 18:16:53 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ubertooth-0.0_p534.ebuild,v 1.3 2012/07/27 21:16:06 zerochaos Exp $
 
 EAPI="4"
 
@@ -28,8 +28,9 @@ if [[ ${PV} == "9999" ]] ; then
 	SRC_URI=""
 	inherit subversion
 	KEYWORDS=""
+	DEPEND="=net-libs/libbtbb-9999"
 	RDEPEND="${RDEPEND}
-		>=net-libs/libbtbb-9999
+		=net-libs/libbtbb-9999
 		ubertooth0-firmware? ( sys-devel/gcc-arm-embedded-bin )
 		ubertooth1-firmware? ( sys-devel/gcc-arm-embedded-bin )"
 else
@@ -38,6 +39,7 @@ else
 	SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
 	S="${WORKDIR}/${PN}-${MY_PV}/"
+	DEPEND=">=net-libs/libbtbb-0.8"
 	RDEPEND="${RDEPEND}
 		>=net-libs/libbtbb-0.8"
 fi

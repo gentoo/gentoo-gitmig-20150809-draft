@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ubertooth-9999.ebuild,v 1.3 2012/07/27 21:07:46 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ubertooth-9999.ebuild,v 1.4 2012/07/27 21:16:06 zerochaos Exp $
 
 EAPI="4"
 
@@ -28,8 +28,9 @@ if [[ ${PV} == "9999" ]] ; then
 	SRC_URI=""
 	inherit subversion
 	KEYWORDS=""
+	DEPEND="=net-libs/libbtbb-9999"
 	RDEPEND="${RDEPEND}
-		>=net-libs/libbtbb-9999"
+		=net-libs/libbtbb-9999"
 	DEPEND="ubertooth0-firmware? ( sys-devel/crossdev )
 		ubertooth1-firmware? ( sys-devel/crossdev )"
 else
@@ -39,6 +40,7 @@ else
 	#re-add arm keyword after making a lib-only target
 	KEYWORDS="~amd64 ~x86"
 	S="${WORKDIR}/${PN}-${MY_PV}/"
+	DEPEND=">=net-libs/libbtbb-0.8"
 	RDEPEND="${RDEPEND}
 		>=net-libs/libbtbb-0.8"
 fi
