@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Devel-GlobalDestruction
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-GlobalDestruction/ChangeLog,v 1.15 2012/06/24 12:58:14 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-GlobalDestruction/ChangeLog,v 1.16 2012/07/27 19:10:01 tove Exp $
+
+*Devel-GlobalDestruction-0.70.0 (27 Jul 2012)
+
+  27 Jul 2012; Torsten Veller <tove@gentoo.org>
+  +Devel-GlobalDestruction-0.70.0.ebuild:
+  Version bump
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
