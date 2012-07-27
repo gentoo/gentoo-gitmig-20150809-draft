@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.145 2012/07/14 11:23:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.146 2012/07/27 17:14:39 grobian Exp $
+
+  27 Jul 2012; Fabian Groffen <grobian@gentoo.org> git-1.7.8.6.ebuild,
+  git-1.7.9.7.ebuild:
+  Fix compilation on Solaris (libiconv), set perl path correctly for Prefix,
+  drop applied/commented out interix patches
 
   14 Jul 2012; Markus Meier <maekke@gentoo.org> git-1.7.8.6.ebuild:
   arm stable, bug #418381

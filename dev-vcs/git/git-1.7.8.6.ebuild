@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.8.6.ebuild,v 1.10 2012/07/14 11:23:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.8.6.ebuild,v 1.11 2012/07/27 17:14:39 grobian Exp $
 
 EAPI=4
 
@@ -164,6 +164,9 @@ exportmakeopts() {
 	if [[ ${CHOST} == ia64-*-hpux* ]]; then
 		myopts="${myopts} NO_NSEC=YesPlease"
 	fi
+	if [[ ${CHOST} == *-solaris* ]]; then
+		myopts="${myopts} NEEDS_LIBICONV=YesPlease"
+	fi
 	if [[ ${CHOST} == *-*-aix* ]]; then
 		myopts="${myopts} NO_FNMATCH_CASEFOLD=YesPlease"
 	fi
@@ -238,16 +241,6 @@ src_prepare() {
 	# Fix docbook2texi command
 	sed -i 's/DOCBOOK2X_TEXI=docbook2x-texi/DOCBOOK2X_TEXI=docbook2texi.pl/' \
 		Documentation/Makefile || die "sed failed"
-
-	# bug #318289
-	# Merged upstream
-	#epatch "${FILESDIR}"/git-1.7.3.2-interix.patch
-
-	# merged upstream
-	#epatch "${FILESDIR}"/git-1.7.5-interix.patch
-
-	# merged upstream
-	#epatch "${FILESDIR}"/git-1.7.6-interix.patch
 }
 
 git_emake() {
@@ -265,6 +258,7 @@ git_emake() {
 		htmldir="${EPREFIX}"/usr/share/doc/${PF}/html \
 		sysconfdir="${EPREFIX}"/etc \
 		PYTHON_PATH="${PYTHON_PATH}" \
+		PERL_PATH="${EPREFIX}/usr/bin/perl" \
 		PERL_MM_OPT="" \
 		GIT_TEST_OPTS="--no-color" \
 		"$@"

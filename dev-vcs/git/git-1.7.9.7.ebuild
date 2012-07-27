@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.9.7.ebuild,v 1.4 2012/06/14 05:01:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.9.7.ebuild,v 1.5 2012/07/27 17:14:39 grobian Exp $
 
 EAPI=4
 
@@ -174,6 +174,9 @@ exportmakeopts() {
 	if [[ ${CHOST} == ia64-*-hpux* ]]; then
 		myopts="${myopts} NO_NSEC=YesPlease"
 	fi
+	if [[ ${CHOST} == *-solaris* ]]; then
+		myopts="${myopts} NEEDS_LIBICONV=YesPlease"
+	fi
 	if [[ ${CHOST} == *-*-aix* ]]; then
 		myopts="${myopts} NO_FNMATCH_CASEFOLD=YesPlease"
 	fi
@@ -249,16 +252,6 @@ src_prepare() {
 	sed -i 's/DOCBOOK2X_TEXI=docbook2x-texi/DOCBOOK2X_TEXI=docbook2texi.pl/' \
 		Documentation/Makefile || die "sed failed"
 
-	# bug #318289
-	# Merged upstream
-	#epatch "${FILESDIR}"/git-1.7.3.2-interix.patch
-
-	# merged upstream
-	#epatch "${FILESDIR}"/git-1.7.5-interix.patch
-
-	# merged upstream
-	#epatch "${FILESDIR}"/git-1.7.6-interix.patch
-
 	# Newer versions of SVN hate a whitespace in the file URL.
 	# So we avoid that by replaced the space with an underscore.
 	#Initialized empty Git repository in /dev/shm/portage/dev-vcs/git-9999/work/git-9999/t/t d.t9155/git_project/.git/
@@ -295,6 +288,7 @@ git_emake() {
 		htmldir="${EPREFIX}"/usr/share/doc/${PF}/html \
 		sysconfdir="${EPREFIX}"/etc \
 		PYTHON_PATH="${PYTHON_PATH}" \
+		PERL_PATH="${EPREFIX}/usr/bin/perl" \
 		PERL_MM_OPT="" \
 		GIT_TEST_OPTS="--no-color" \
 		"$@"
