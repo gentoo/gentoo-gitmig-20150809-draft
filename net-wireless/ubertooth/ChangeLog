@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/ubertooth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ChangeLog,v 1.1 2012/07/27 07:01:25 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ChangeLog,v 1.2 2012/07/27 18:16:53 kensington Exp $
+
+  27 Jul 2012; Michael Palimaka <kensington@gentoo.org>
+  ubertooth-0.0_p534.ebuild, ubertooth-9999.ebuild:
+  Add missing slot dependencies on Qt.
 
 *ubertooth-9999 (27 Jul 2012)
 *ubertooth-0.0_p534 (27 Jul 2012)
