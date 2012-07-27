@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyside
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/ChangeLog,v 1.40 2012/07/27 18:10:32 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/ChangeLog,v 1.41 2012/07/27 21:32:49 steev Exp $
+
+  27 Jul 2012; Steev Klimaszewski <steev@gentoo.org> pyside-1.1.1.ebuild:
+  Add ~arm keyword. Tested on i.MX6 (armv7)
 
   27 Jul 2012; Michael Palimaka <kensington@gentoo.org> pyside-1.1.1.ebuild:
   Add missing dependency, thanks to steev.
