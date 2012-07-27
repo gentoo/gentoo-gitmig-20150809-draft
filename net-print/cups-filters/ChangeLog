@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups-filters
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.18 2012/07/27 18:03:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.19 2012/07/27 18:23:43 dilfridge Exp $
+
+  27 Jul 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  cups-filters-1.0.19.ebuild, +files/cups-filters-1.0.19-libdl.patch:
+  Replace libdl hack with a proper patch
 
   27 Jul 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   cups-filters-1.0.19.ebuild, cups-filters-9999.ebuild:
