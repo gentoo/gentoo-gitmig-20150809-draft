@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-pictures
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-pictures/ChangeLog,v 1.69 2012/07/27 02:52:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-pictures/ChangeLog,v 1.70 2012/07/27 12:27:18 aballier Exp $
+
+  27 Jul 2012; Alexis Ballier <aballier@gentoo.org>
+  texlive-pictures-2012.ebuild:
+  drop unneeded ruby dep as noted by Tomasz Golinski in bug #369745
 
 *texlive-pictures-2012 (27 Jul 2012)
 
