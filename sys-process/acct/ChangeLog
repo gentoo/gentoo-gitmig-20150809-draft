@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/acct
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/ChangeLog,v 1.57 2012/02/01 16:57:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/ChangeLog,v 1.58 2012/07/27 20:01:52 blueness Exp $
+
+  27 Jul 2012; Anthony G. Basile <blueness@gentoo.org> acct-6.5.5-r2.ebuild:
+  Keyword ~ppc64
 
   01 Feb 2012; Brent Baude <ranger@gentoo.org> acct-6.5.5-r2.ebuild:
   Marking acct-6.5.5-r2 ppc for bug 400513
