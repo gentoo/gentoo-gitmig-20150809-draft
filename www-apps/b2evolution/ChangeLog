@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/b2evolution
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/b2evolution/ChangeLog,v 1.29 2008/02/22 15:43:08 hollow Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/b2evolution/ChangeLog,v 1.30 2012/07/27 21:52:09 mabi Exp $
+
+*b2evolution-4.1.4 (27 Jul 2012)
+
+  27 Jul 2012; Matti Bickel <mabi@gentoo.org> +b2evolution-4.1.4.ebuild:
+  version bump (#417109, #282828); ebuild by jaervosz with update to EAPI4 by me
 
   22 Feb 2008; Benedikt Böhm <hollow@gentoo.org> b2evolution-1.10.2.ebuild,
   b2evolution-1.10.3.ebuild, b2evolution-2.4.0_rc2.ebuild:
@@ -135,4 +140,3 @@
   05 Feb 2005; Daniel Drake <dsd@gentoo.org> +metadata.xml,
   +files/postinstall-en.txt, +b2evolution-0.9.0.11.ebuild:
   Initial commit. Includes security fix from http://secunia.com/advisories/13718/
-
