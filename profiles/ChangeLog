@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6844 2012/07/27 03:39:51 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6845 2012/07/27 03:47:40 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
+  +hardened/linux/uclibc/ppc/make.defaults,
+  +hardened/linux/uclibc/ppc/package.use.mask,
+  +hardened/linux/uclibc/ppc/parent:
+  Add new hardened/linux/uclibc/ppc profiles
 
   27 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
   +hardened/linux/uclibc/mips/make.defaults,
