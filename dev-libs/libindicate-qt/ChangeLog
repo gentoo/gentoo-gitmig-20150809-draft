@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libindicate-qt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate-qt/ChangeLog,v 1.10 2012/05/04 13:14:11 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate-qt/ChangeLog,v 1.11 2012/07/27 16:19:24 ssuominen Exp $
+
+  27 Jul 2012; Samuli Suominen <ssuominen@gentoo.org>
+  libindicate-qt-0.2.5.91.ebuild:
+  Update to latest Ubuntu patchset for dev-libs/libindicate >= 12.10.0
+  compability wrt #428240 by Diego Elio Pettenò
 
   04 May 2012; Johannes Huber <johu@gentoo.org> libindicate-qt-0.2.5.91.ebuild:
   Migrate to virtual/pkgconfig.
