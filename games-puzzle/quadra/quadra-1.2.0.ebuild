@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadra/quadra-1.2.0.ebuild,v 1.3 2010/01/24 23:07:40 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadra/quadra-1.2.0.ebuild,v 1.4 2012/07/27 07:54:37 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -19,6 +19,7 @@ RDEPEND="x11-libs/libXpm
 	x11-libs/libXext
 	media-libs/libpng"
 DEPEND="${RDEPEND}
+	sys-devel/bc
 	x11-proto/xextproto"
 
 src_prepare() {
