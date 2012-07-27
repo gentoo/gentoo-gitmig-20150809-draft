@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14013 2012/07/27 01:49:49 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14014 2012/07/27 07:07:02 jlec Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -42,10 +42,6 @@ sys-apps/chpax
 # GTK+-2.x bindings
 # Removal in 30 days
 x11-misc/glipper
-
-# Christian Ruppert <idl0r@gentoo.org> (24 Jul 2012)
-# Masked because of the nvidia-drivers-3* mask below
-=media-video/nvidia-settings-3*
 
 # Tiziano Müller <dev-zero@gentoo.org> (24 Jul 2012)
 # Now part of net-fs/cifs-utils & unmaintained by upstream
