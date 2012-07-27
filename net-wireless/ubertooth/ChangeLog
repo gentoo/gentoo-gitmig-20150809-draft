@@ -1,0 +1,11 @@
+# ChangeLog for net-wireless/ubertooth
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ChangeLog,v 1.1 2012/07/27 07:01:25 zerochaos Exp $
+
+*ubertooth-9999 (27 Jul 2012)
+*ubertooth-0.0_p534 (27 Jul 2012)
+
+  27 Jul 2012; Rick Farina <zerochaos@gentoo.org> +files/40-ubertooth.rules,
+  +metadata.xml, +ubertooth-0.0_p534.ebuild, +ubertooth-9999.ebuild:
+  initial commit of ubertooth, a few comments left in the ebuild but mostly
+  functional for all
