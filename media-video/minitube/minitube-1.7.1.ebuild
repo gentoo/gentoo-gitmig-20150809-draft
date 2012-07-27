@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-1.7.1.ebuild,v 1.4 2012/07/26 09:01:10 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-1.7.1.ebuild,v 1.5 2012/07/27 04:36:57 yngwin Exp $
 
 EAPI=4
 PLOCALES="ar ca ca_ES da de_DE el en_US es es_AR es_ES fi fi_FI fr gl he_IL hr
@@ -40,7 +40,9 @@ src_prepare() {
 
 	# Remove unneeded translations
 	local trans=
-	trans=$(l10n_get_locales)
+	for x in $(l10n_get_locales); do
+		trans+="${x}.ts "
+	done
 	if [[ -n ${trans} ]]; then
 		sed -i -e "/^TRANSLATIONS/s/+=.*/+=${trans}/" locale/locale.pri || die
 	fi
