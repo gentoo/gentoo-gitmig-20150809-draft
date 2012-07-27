@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.8.1.ebuild,v 1.5 2012/07/26 18:06:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.8.1.ebuild,v 1.6 2012/07/27 21:23:33 zerochaos Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -100,10 +100,6 @@ pkg_setup() {
 	fi
 	# Add group for users allowed to sniff.
 	enewgroup wireshark
-}
-
-src_prepare() {
-	eautoreconf
 }
 
 src_configure() {
