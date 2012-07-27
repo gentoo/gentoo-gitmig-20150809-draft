@@ -63,7 +63,6 @@
     <remote-id type="cpan-module">Plack::Middleware::SimpleLogger</remote-id>
     <remote-id type="cpan-module">Plack::Middleware::StackTrace</remote-id>
     <remote-id type="cpan-module">Plack::Middleware::Static</remote-id>
-    <remote-id type="cpan-module">Plack::Middleware::Writer</remote-id>
     <remote-id type="cpan-module">Plack::Middleware::XFramework</remote-id>
     <remote-id type="cpan-module">Plack::Middleware::XSendfile</remote-id>
     <remote-id type="cpan-module">Plack::Recursive::ForwardRequest</remote-id>
@@ -71,14 +70,6 @@
     <remote-id type="cpan-module">Plack::Request::Upload</remote-id>
     <remote-id type="cpan-module">Plack::Response</remote-id>
     <remote-id type="cpan-module">Plack::Runner</remote-id>
-    <remote-id type="cpan-module">Plack::Server</remote-id>
-    <remote-id type="cpan-module">Plack::Server::Apache1</remote-id>
-    <remote-id type="cpan-module">Plack::Server::Apache2</remote-id>
-    <remote-id type="cpan-module">Plack::Server::CGI</remote-id>
-    <remote-id type="cpan-module">Plack::Server::FCGI</remote-id>
-    <remote-id type="cpan-module">Plack::Server::ServerSimple</remote-id>
-    <remote-id type="cpan-module">Plack::Server::Standalone</remote-id>
-    <remote-id type="cpan-module">Plack::Server::Standalone::Prefork</remote-id>
     <remote-id type="cpan-module">Plack::TempBuffer</remote-id>
     <remote-id type="cpan-module">Plack::TempBuffer::Auto</remote-id>
     <remote-id type="cpan-module">Plack::TempBuffer::File</remote-id>
