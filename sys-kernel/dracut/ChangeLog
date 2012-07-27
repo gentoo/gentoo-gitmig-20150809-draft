@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.72 2012/07/27 16:49:14 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.73 2012/07/27 20:06:32 aidecoe Exp $
+
+  27 Jul 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-014-r3.ebuild,
+  dracut-018-r2.ebuild, dracut-019-r2.ebuild, dracut-022.ebuild:
+  Install into correct libdir.
 
   27 Jul 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-022.ebuild:
   Export CC to emake and warn about optimization.

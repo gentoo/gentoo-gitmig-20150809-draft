@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-018-r2.ebuild,v 1.2 2012/07/26 18:05:06 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-018-r2.ebuild,v 1.3 2012/07/27 20:06:32 aidecoe Exp $
 
 EAPI=4
 
@@ -154,7 +154,8 @@ src_compile() {
 }
 
 src_install() {
-	emake prefix=/usr sysconfdir=/etc DESTDIR="${D}" install
+	emake prefix=/usr libdir="/usr/$(get_libdir)" sysconfdir=/etc \
+		DESTDIR="${D}" install
 
 	local gen2conf
 
@@ -179,7 +180,7 @@ src_install() {
 	# Modules
 	#
 	local module
-	modules_dir="${D}/usr/lib/dracut/modules.d"
+	modules_dir="${D}/usr/$(get_libdir)/dracut/modules.d"
 
 	echo "${PF}" > "${modules_dir}"/10rpmversion/dracut-version \
 		|| die 'dracut-version failed'

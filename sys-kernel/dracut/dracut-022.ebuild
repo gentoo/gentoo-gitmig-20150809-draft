@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-022.ebuild,v 1.5 2012/07/27 16:49:14 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-022.ebuild,v 1.6 2012/07/27 20:06:32 aidecoe Exp $
 
 EAPI=4
 
@@ -169,7 +169,8 @@ src_compile() {
 }
 
 src_install() {
-	emake prefix=/usr sysconfdir=/etc DESTDIR="${D}" install
+	emake prefix=/usr libdir="/usr/$(get_libdir)" sysconfdir=/etc \
+		DESTDIR="${D}" install
 
 	dodir /var/lib/dracut/overlay
 	dodoc HACKING TODO AUTHORS NEWS README*
@@ -186,7 +187,7 @@ src_install() {
 	# Modules
 	#
 	local module
-	modules_dir="${D}/usr/lib/dracut/modules.d"
+	modules_dir="${D}/usr/$(get_libdir)/dracut/modules.d"
 
 	# Remove modules not enabled by USE flags
 	for module in ${IUSE_DRACUT_MODULES} ; do
