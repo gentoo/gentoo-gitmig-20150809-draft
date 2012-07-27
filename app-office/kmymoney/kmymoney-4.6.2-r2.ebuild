@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/kmymoney-4.6.2-r2.ebuild,v 1.4 2012/07/15 00:43:26 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/kmymoney-4.6.2-r2.ebuild,v 1.5 2012/07/27 21:57:49 creffett Exp $
 
 EAPI=4
 
@@ -13,7 +13,8 @@ if [[ ${PV} != *9999* ]]; then
 	SRC_URI="mirror://sourceforge/kmymoney2/${P}.tar.bz2"
 fi
 
-VIRTUALX_REQUIRED=test
+VIRTUALX_REQUIRED="test"
+VIRTUALDBUS_TEST="true"
 
 inherit kde4-base
 
@@ -59,9 +60,6 @@ PATCHES=(
 	"${FILESDIR}/${P}-gcc-4.7.patch"
 	"${FILESDIR}/${P}-sqlite-crash.patch"
 )
-
-RESTRICT=test
-# bug 399467
 
 src_configure() {
 	mycmakeargs=(
