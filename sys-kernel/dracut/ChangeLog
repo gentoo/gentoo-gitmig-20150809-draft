@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.69 2012/07/26 18:05:06 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.70 2012/07/27 12:25:19 aidecoe Exp $
+
+  27 Jul 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-022.ebuild:
+  Removing the hashmap.o file which was accidentally added to the tarball by
+  upstream.
 
   26 Jul 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-014-r3.ebuild,
   dracut-018-r2.ebuild, dracut-019-r2.ebuild:
