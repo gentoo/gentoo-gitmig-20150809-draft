@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet-ubertooth/kismet-ubertooth-0.0_p534.ebuild,v 1.2 2012/07/06 21:12:10 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet-ubertooth/kismet-ubertooth-0.0_p534.ebuild,v 1.3 2012/07/27 07:14:04 zerochaos Exp $
 
 EAPI="4"
 
-inherit multilib
+inherit eutils multilib
 
 DESCRIPTION="Provides basic bluetooth support in kismet"
 HOMEPAGE="http://ubertooth.sourceforge.net/"
@@ -30,6 +30,10 @@ DEPEND=">=net-wireless/kismet-2011.03.2-r1 \
 		>=net-libs/libbtbb-0.8 \
 		>=dev-libs/libusb-1.0.0"
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-respect-cflags.patch
+}
 
 src_compile() {
 	if has_version =net-wireless/kismet-9999; then
