@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.19.ebuild,v 1.2 2012/07/18 22:34:24 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.19.ebuild,v 1.3 2012/07/27 18:03:45 dilfridge Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ if [[ "${PV}" == "9999" ]] ; then
 else
 	inherit autotools
 	SRC_URI="http://www.openprinting.org/download/${PN}/${P}.tar.xz"
-	KEYWORDS=""
+	KEYWORDS="~amd64 ~x86"
 fi
 DESCRIPTION="Cups PDF filters"
 HOMEPAGE="http://www.linuxfoundation.org/collaborate/workgroups/openprinting/pdfasstandardprintjobformat"
@@ -40,6 +40,9 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 
 PATCHES=( "${FILESDIR}/${P}-poppler020.patch" )
+
+# this is an evil temporary hack- dilfridge
+LDFLAGS+=" -ldl"
 
 src_prepare() {
 	base_src_prepare
