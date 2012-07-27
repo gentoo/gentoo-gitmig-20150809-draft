@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14012 2012/07/26 15:01:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14013 2012/07/27 01:49:49 blueness Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Anthony G. Basile <blueness@gentoo.org> (26 Jul 2012)
+# Removal in 30 days, bug #365825
+sys-apps/chpax
 
 # Samuli Suominen <ssuominen@gentoo.org> (26 Jul 2012)
 # We are in process of dropping most of GTK+-2.x Ubuntu
