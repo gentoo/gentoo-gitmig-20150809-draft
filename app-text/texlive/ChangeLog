@@ -1,6 +1,11 @@
 # ChangeLog for app-text/texlive
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/ChangeLog,v 1.105 2012/07/05 13:06:58 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/ChangeLog,v 1.106 2012/07/27 03:07:44 aballier Exp $
+
+*texlive-2012 (27 Jul 2012)
+
+  27 Jul 2012; Alexis Ballier <aballier@gentoo.org> +texlive-2012.ebuild:
+  Bump to TeX Live 2012.
 
   05 Jul 2012; Anthony G. Basile <blueness@gentoo.org> texlive-2011-r1.ebuild:
   Keyword ~mips
