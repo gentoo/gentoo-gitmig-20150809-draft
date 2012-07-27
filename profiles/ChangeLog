@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6845 2012/07/27 03:47:40 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6846 2012/07/27 12:10:22 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
+  hardened/linux/uclibc/mips/package.mask:
+  Mask >dev-libs/libpcre-8.30-r2 on hardened/linux/uclibc/mips, bug #427798
 
   27 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
   +hardened/linux/uclibc/ppc/make.defaults,
