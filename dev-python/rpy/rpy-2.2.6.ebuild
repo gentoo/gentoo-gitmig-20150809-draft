@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/rpy-2.2.6.ebuild,v 1.2 2012/06/01 13:00:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/rpy-2.2.6.ebuild,v 1.3 2012/07/27 04:31:54 heroxbd Exp $
 
 EAPI=4
 SUPPORT_PYTHON_ABIS="1"
@@ -18,7 +18,7 @@ SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1 MPL-1.1"
 SLOT="0"
-KEYWORDS="amd64 ~x86 ~x86-linux"
+KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND=">=dev-lang/R-2.8
