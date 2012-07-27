@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ocaml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.206 2012/07/27 00:27:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.207 2012/07/27 00:29:20 aballier Exp $
+
+  27 Jul 2012; Alexis Ballier <aballier@gentoo.org> -ocaml-4.00.0_beta2.ebuild,
+  -ocaml-4.00.0_rc1.ebuild:
+  remove old
 
 *ocaml-4.00.0 (27 Jul 2012)
 
