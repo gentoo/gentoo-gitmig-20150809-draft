@@ -1,6 +1,12 @@
 # ChangeLog for app-dicts/myspell-pl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-pl/ChangeLog,v 1.19 2012/07/27 09:41:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-pl/ChangeLog,v 1.20 2012/07/27 13:38:54 aidecoe Exp $
+
+*myspell-pl-20120726 (27 Jul 2012)
+
+  27 Jul 2012; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +myspell-pl-20120726.ebuild:
+  Bumping to 20120726, because 20120725 is no longer valid.
 
 *myspell-pl-20120725 (27 Jul 2012)
 
