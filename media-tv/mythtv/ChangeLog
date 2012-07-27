@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.376 2012/07/23 19:19:03 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.377 2012/07/27 15:11:16 kensington Exp $
+
+  27 Jul 2012; Michael Palimaka <kensington@gentoo.org>
+  mythtv-0.25.1_p20120708.ebuild, mythtv-0.25.1_p20120715.ebuild,
+  mythtv-0.25.2_p20120716.ebuild:
+  Add missing slot dependencies on Qt.
 
   23 Jul 2012; Mike Gilbert <floppym@gentoo.org> mythtv-0.25.1_p20120715.ebuild,
   mythtv-0.25.2_p20120716.ebuild:

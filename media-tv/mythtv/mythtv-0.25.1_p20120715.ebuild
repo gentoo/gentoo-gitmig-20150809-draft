@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.1_p20120715.ebuild,v 1.3 2012/07/23 19:19:03 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.1_p20120715.ebuild,v 1.4 2012/07/27 15:11:16 kensington Exp $
 
 EAPI=4
 
@@ -37,7 +37,7 @@ SDEPEND="
 	x11-libs/libXrandr
 	x11-libs/libXxf86vm
 	>=x11-libs/qt-core-4.7.2:4
-	>=x11-libs/qt-dbus-4.7.2
+	>=x11-libs/qt-dbus-4.7.2:4
 	>=x11-libs/qt-gui-4.7.2:4
 	>=x11-libs/qt-sql-4.7.2:4[mysql]
 	>=x11-libs/qt-opengl-4.7.2:4
