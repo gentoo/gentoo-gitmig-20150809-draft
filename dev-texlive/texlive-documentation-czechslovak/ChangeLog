@@ -1,6 +1,12 @@
 # ChangeLog for dev-texlive/texlive-documentation-czechslovak
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-czechslovak/ChangeLog,v 1.49 2012/05/29 18:00:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-czechslovak/ChangeLog,v 1.50 2012/07/27 01:33:14 aballier Exp $
+
+*texlive-documentation-czechslovak-2012 (27 Jul 2012)
+
+  27 Jul 2012; Alexis Ballier <aballier@gentoo.org>
+  +texlive-documentation-czechslovak-2012.ebuild:
+  Bump to TeX Live 2012.
 
   29 May 2012; Alexis Ballier <aballier@gentoo.org>
   -texlive-documentation-czechslovak-2010.ebuild:

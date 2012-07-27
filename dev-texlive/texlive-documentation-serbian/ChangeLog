@@ -1,6 +1,12 @@
 # ChangeLog for dev-texlive/texlive-documentation-serbian
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-serbian/ChangeLog,v 1.24 2012/05/29 18:08:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-serbian/ChangeLog,v 1.25 2012/07/27 01:42:57 aballier Exp $
+
+*texlive-documentation-serbian-2012 (27 Jul 2012)
+
+  27 Jul 2012; Alexis Ballier <aballier@gentoo.org>
+  +texlive-documentation-serbian-2012.ebuild:
+  Bump to TeX Live 2012.
 
   29 May 2012; Alexis Ballier <aballier@gentoo.org>
   -texlive-documentation-serbian-2010.ebuild:
