@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libyaml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libyaml/ChangeLog,v 1.27 2012/07/10 19:05:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libyaml/ChangeLog,v 1.28 2012/07/27 12:36:56 grobian Exp $
+
+  27 Jul 2012; Fabian Groffen <grobian@gentoo.org> libyaml-0.1.4.ebuild:
+  Marked ~{sparc,sparc64,x64}-solaris
 
   10 Jul 2012; Brent Baude <ranger@gentoo.org> libyaml-0.1.4.ebuild:
   Marking libyaml-0.1.4 ppc64 for bug 421611
@@ -91,4 +94,3 @@
   05 Oct 2007; Stefan Briesenick <sbriesen@gentoo.org> +metadata.xml,
   +libyaml-0.0.1.ebuild:
   initial commit.
-
