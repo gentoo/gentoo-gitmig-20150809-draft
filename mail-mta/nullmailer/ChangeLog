@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/nullmailer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/ChangeLog,v 1.49 2012/06/12 21:26:19 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/ChangeLog,v 1.50 2012/07/28 09:00:34 eras Exp $
+
+*nullmailer-1.11 (28 Jul 2012)
+
+  28 Jul 2012; Eray Aslan <eras@gentoo.org> +nullmailer-1.11.ebuild:
+  Version bump
 
 *nullmailer-1.10-r1 (12 Jun 2012)
 
