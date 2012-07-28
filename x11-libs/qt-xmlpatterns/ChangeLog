@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-xmlpatterns
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-xmlpatterns/ChangeLog,v 1.121 2012/07/19 21:27:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-xmlpatterns/ChangeLog,v 1.122 2012/07/28 06:31:09 pesa Exp $
+
+  28 Jul 2012; Davide Pesavento <pesa@gentoo.org> qt-xmlpatterns-4.8.2.ebuild:
+  Exceptions support is not really required in qt-core, as pointed out by Homer
+  in bug 428140.
 
   19 Jul 2012; Markus Meier <maekke@gentoo.org> qt-xmlpatterns-4.8.2.ebuild:
   arm stable, bug #424625

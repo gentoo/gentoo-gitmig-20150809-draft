@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-xmlpatterns/qt-xmlpatterns-4.8.2.ebuild,v 1.9 2012/07/19 21:27:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-xmlpatterns/qt-xmlpatterns-4.8.2.ebuild,v 1.10 2012/07/28 06:31:09 pesa Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ fi
 IUSE=""
 
 DEPEND="
-	~x11-libs/qt-core-${PV}[aqua=,c++0x=,debug=,exceptions,qpa=]
+	~x11-libs/qt-core-${PV}[aqua=,c++0x=,debug=,qpa=]
 "
 RDEPEND="${DEPEND}"
 
