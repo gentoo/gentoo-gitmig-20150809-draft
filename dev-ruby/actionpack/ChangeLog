@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/actionpack
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.212 2012/07/28 07:38:38 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.213 2012/07/28 08:18:31 graaff Exp $
+
+*actionpack-3.0.16 (28 Jul 2012)
+
+  28 Jul 2012; Hans de Graaff <graaff@gentoo.org> +actionpack-3.0.16.ebuild:
+  Version bump for Rails 3.0.16, bug 428254.
 
 *actionpack-3.1.7 (28 Jul 2012)
 
