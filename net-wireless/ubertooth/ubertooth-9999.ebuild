@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ubertooth-9999.ebuild,v 1.4 2012/07/27 21:16:06 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ubertooth-9999.ebuild,v 1.5 2012/07/28 09:35:53 zerochaos Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ IUSE="+dfu +specan ubertooth0-firmware +ubertooth1-firmware"
 REQUIRED_USE="ubertooth0-firmware? ( dfu )
 		ubertooth1-firmware? ( dfu )"
 DEPEND=""
-RDEPEND="specan? ( >=dev-libs/libusb-1.0.8 )
+RDEPEND="specan? ( virtual/libusb:1 )
 	dfu? ( >=dev-libs/libusb-1.0.8 )
 	specan? ( >=x11-libs/qt-gui-4.7.2:4
 		>=dev-python/pyside-1.0.2
