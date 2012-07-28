@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/remmina
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.36 2012/07/08 00:55:34 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.37 2012/07/28 19:46:53 floppym Exp $
+
+  28 Jul 2012; Mike Gilbert <floppym@gentoo.org> remmina-1.0.0_p20120309.ebuild:
+  Adjust freerdp dependency.
 
   08 Jul 2012; Mike Gilbert <floppym@gentoo.org>
   -remmina-1.0.0_p20120529.ebuild:
