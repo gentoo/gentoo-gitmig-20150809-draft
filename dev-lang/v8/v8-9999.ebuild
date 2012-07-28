@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.30 2012/07/10 03:02:23 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.31 2012/07/28 20:25:57 floppym Exp $
 
 EAPI="4"
 
@@ -56,7 +56,6 @@ src_compile() {
 	# http://code.google.com/p/v8/issues/detail?id=1781
 
 	emake V=1 \
-		GYPFLAGS="-Dmac_deployment_target=${MACOSX_DEPLOYMENT_TARGET}" \
 		library=shared \
 		werror=no \
 		soname_version=${soname_version} \
