@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9.2.0_beta2-r1.ebuild,v 1.1 2012/06/08 16:29:46 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9.2.0_beta2-r1.ebuild,v 1.2 2012/07/28 12:34:49 titanofold Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -26,7 +26,7 @@ SRC_URI="mirror://postgresql/source/v${MY_PV}/postgresql-${MY_FILE_PV}.tar.bz2
 #		 http://dev.gentoo.org/~titanofold/postgresql-patches-${PV}.tbz2
 #		 http://dev.gentoo.org/~titanofold/postgresql-initscript-2.1.tbz2"
 
-LICENSE="POSTGRESQL"
+LICENSE="POSTGRESQL GPL-2"
 DESCRIPTION="PostgreSQL server"
 HOMEPAGE="http://www.postgresql.org/"
 

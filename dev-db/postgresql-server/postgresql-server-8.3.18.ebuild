@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-8.3.18.ebuild,v 1.11 2012/06/04 06:49:58 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-8.3.18.ebuild,v 1.12 2012/07/28 12:34:49 titanofold Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.postgresql.org/"
 SRC_URI="mirror://postgresql/source/v${PV}/postgresql-${PV}.tar.bz2
 		 http://dev.gentoo.org/~titanofold/postgresql-patches-8.3-r2.tbz2
 		 http://dev.gentoo.org/~titanofold/postgresql-initscript-2.1.tbz2"
-LICENSE="POSTGRESQL"
+LICENSE="POSTGRESQL GPL-2"
 
 S="${WORKDIR}/postgresql-${PV}"
 

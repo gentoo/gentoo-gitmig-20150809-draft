@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9999.ebuild,v 1.2 2012/06/28 09:39:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9999.ebuild,v 1.3 2012/07/28 12:34:49 titanofold Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -31,7 +31,7 @@ SRC_URI="http://dev.gentoo.org/~titanofold/postgresql-initscript-2.3.tbz2
 #		 http://dev.gentoo.org/~titanofold/postgresql-patches-${PV}.tbz2
 #		 http://dev.gentoo.org/~titanofold/postgresql-initscript-2.1.tbz2"
 
-LICENSE="POSTGRESQL"
+LICENSE="POSTGRESQL GPL-2"
 DESCRIPTION="PostgreSQL server"
 HOMEPAGE="http://www.postgresql.org/"
 
@@ -67,8 +67,8 @@ DEPEND="${RDEPEND}
 [[ ! -d /run ]] && RUNDIR=/var
 
 src_unpack() {
-        base_src_unpack
-        git-2_src_unpack
+	base_src_unpack
+	git-2_src_unpack
 }
 
 pkg_setup() {
