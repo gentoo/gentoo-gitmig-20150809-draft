@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgagent/pgagent-3.2.1.ebuild,v 1.1 2012/04/28 18:34:11 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgagent/pgagent-3.2.1.ebuild,v 1.2 2012/07/28 12:21:42 titanofold Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ KEYWORDS="~x86 ~amd64"
 DESCRIPTION="${MY_PN} is a job scheduler for PostgreSQL"
 HOMEPAGE="http://www.pgadmin.org/download/pgagent.php"
 SRC_URI="mirror://postgresql/pgadmin3/release/${PN}/${MY_PN}-${PV}-Source.tar.gz"
-LICENSE="POSTGRESQL"
+LICENSE="POSTGRESQL GPL-2"
 SLOT="0"
 IUSE=""
 
