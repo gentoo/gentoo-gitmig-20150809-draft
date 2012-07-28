@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/spl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.22 2012/07/10 00:26:07 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.23 2012/07/28 21:46:16 ryao Exp $
+
+  28 Jul 2012; Richard Yao <ryao@gentoo.org> -spl-0.6.0_rc9-r1.ebuild,
+  spl-0.6.0_rc9-r2.ebuild, spl-9999.ebuild:
+  Remove CONFIG_PREEMPT_VOLUNTARY restriction
 
 *spl-0.6.0_rc9-r2 (10 Jul 2012)
 
