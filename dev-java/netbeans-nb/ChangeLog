@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/netbeans-nb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-nb/ChangeLog,v 1.15 2012/07/25 16:09:12 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-nb/ChangeLog,v 1.16 2012/07/28 10:38:23 fordfrog Exp $
+
+  28 Jul 2012; Miroslav Šulc <fordfrog@gentoo.org>
+  +files/7.2/keychain-support.patch:
+  added missing keychain patch for slot 7.2
 
 *netbeans-nb-7.2 (25 Jul 2012)
 
