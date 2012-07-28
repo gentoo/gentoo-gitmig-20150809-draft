@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/amazon-ec2
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amazon-ec2/ChangeLog,v 1.11 2011/08/07 00:14:46 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amazon-ec2/ChangeLog,v 1.12 2012/07/28 17:24:44 graaff Exp $
+
+  28 Jul 2012; Hans de Graaff <graaff@gentoo.org> -amazon-ec2-0.9.15.ebuild:
+  Cleanup.
 
   07 Aug 2011; Diego E. Pettenò <flameeyes@gentoo.org>
   amazon-ec2-0.9.17.ebuild, +files/amazon-ec2-0.9.17+ruby-1.9.2.patch:

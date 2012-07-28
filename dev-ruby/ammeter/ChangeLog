@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ammeter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ammeter/ChangeLog,v 1.6 2012/07/23 20:04:21 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ammeter/ChangeLog,v 1.7 2012/07/28 17:26:14 graaff Exp $
+
+  28 Jul 2012; Hans de Graaff <graaff@gentoo.org> -ammeter-0.2.2.ebuild,
+  -ammeter-0.2.3.ebuild:
+  Cleanup.
 
   23 Jul 2012; Andreas Schuerch <nativemad@gentoo.org> ammeter-0.2.5.ebuild:
   x86 keyworded, see bug 417587
