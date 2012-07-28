@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/subunit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/ChangeLog,v 1.18 2012/06/24 14:27:17 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/ChangeLog,v 1.19 2012/07/28 13:07:59 blueness Exp $
+
+  28 Jul 2012; Anthony G. Basile <blueness@gentoo.org> subunit-0.0.8.ebuild:
+  Keyword ~mips, bug #428356
 
   24 Jun 2012; Mike Gilbert <floppym@gentoo.org> subunit-0.0.8.ebuild:
   Improve comment explaining pypy restriction.
