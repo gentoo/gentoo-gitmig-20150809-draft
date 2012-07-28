@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/iniparser/iniparser-3.1.ebuild,v 1.3 2012/07/27 05:42:27 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/iniparser/iniparser-3.1.ebuild,v 1.4 2012/07/28 00:29:49 blueness Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://ndevilla.free.fr/iniparser/"
 SRC_URI="http://ndevilla.free.fr/iniparser/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-macos"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-macos"
 IUSE="doc examples static-libs"
 
 DEPEND="doc? ( app-doc/doxygen )
