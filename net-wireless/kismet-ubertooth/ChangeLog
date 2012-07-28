@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/kismet-ubertooth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet-ubertooth/ChangeLog,v 1.4 2012/07/27 07:14:04 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet-ubertooth/ChangeLog,v 1.5 2012/07/28 09:30:45 zerochaos Exp $
+
+  28 Jul 2012; Rick Farina <zerochaos@gentoo.org>
+  kismet-ubertooth-0.0_p534.ebuild, kismet-ubertooth-9999.ebuild:
+  adjust libusb dep to fix bug #428402
 
   27 Jul 2012; Rick Farina <zerochaos@gentoo.org>
   +files/kismet-ubertooth-0.0_p534-respect-cflags.patch,

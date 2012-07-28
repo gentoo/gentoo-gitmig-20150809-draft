@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet-ubertooth/kismet-ubertooth-9999.ebuild,v 1.4 2012/07/27 07:14:04 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet-ubertooth/kismet-ubertooth-9999.ebuild,v 1.5 2012/07/28 09:30:45 zerochaos Exp $
 
 EAPI="4"
 
@@ -29,7 +29,7 @@ IUSE=""
 DEPEND=">=net-wireless/kismet-2011.03.2-r1 \
 	=net-wireless/ubertooth-9999 \
 	=net-libs/libbtbb-9999 \
-	>=dev-libs/libusb-1.0.0"
+	virtual/libusb:1"
 RDEPEND="${DEPEND}"
 
 src_compile() {
