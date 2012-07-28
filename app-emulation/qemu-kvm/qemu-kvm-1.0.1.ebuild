@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.0.1.ebuild,v 1.6 2012/05/31 23:35:44 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.0.1.ebuild,v 1.7 2012/07/28 22:20:23 cardoe Exp $
 
 #BACKPORTS=1
 
@@ -63,10 +63,10 @@ RDEPEND="
 	sys-apps/pciutils
 	>=sys-apps/util-linux-2.16.0
 	virtual/jpeg
-	amd64? ( sys-apps/seabios
-		sys-apps/vgabios )
-	x86? ( sys-apps/seabios
-		sys-apps/vgabios )
+	amd64? ( sys-firmware/seabios
+		sys-firmware/vgabios )
+	x86? ( sys-firmware/seabios
+		sys-firmware/vgabios )
 	aio? ( dev-libs/libaio )
 	alsa? ( >=media-libs/alsa-lib-1.0.13 )
 	bluetooth? ( net-wireless/bluez )

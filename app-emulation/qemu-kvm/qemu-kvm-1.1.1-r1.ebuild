@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.1.1-r1.ebuild,v 1.3 2012/07/22 03:57:25 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.1.1-r1.ebuild,v 1.4 2012/07/28 22:20:23 cardoe Exp $
 
 EAPI="4"
 
@@ -62,8 +62,8 @@ RDEPEND="
 	>=dev-libs/glib-2.0
 	media-libs/libpng
 	sys-apps/pciutils
-	>=sys-apps/seabios-1.7.0
-	sys-apps/vgabios
+	>=sys-firmware/seabios-1.7.0
+	sys-firmware/vgabios
 	virtual/jpeg
 	aio? ( dev-libs/libaio )
 	alsa? ( >=media-libs/alsa-lib-1.0.13 )
