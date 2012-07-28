@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/zfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.39 2012/07/21 18:55:54 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.40 2012/07/28 21:47:04 ryao Exp $
+
+  28 Jul 2012; Richard Yao <ryao@gentoo.org> zfs-0.6.0_rc9-r6.ebuild,
+  zfs-9999.ebuild:
+  Remove CONFIG_PREEMPT_VOLUNTARY restriction
 
 *zfs-0.6.0_rc9-r6 (21 Jul 2012)
 

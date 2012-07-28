@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-0.6.0_rc9-r6.ebuild,v 1.1 2012/07/21 18:55:54 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-0.6.0_rc9-r6.ebuild,v 1.2 2012/07/28 21:47:04 ryao Exp $
 
 EAPI="4"
 
@@ -58,7 +58,6 @@ DEPEND+="
 pkg_setup() {
 	CONFIG_CHECK="!DEBUG_LOCK_ALLOC
 		!PREEMPT
-		!PREEMPT_VOLUNTARY
 		BLK_DEV_LOOP
 		EFI_PARTITION
 		MODULES
