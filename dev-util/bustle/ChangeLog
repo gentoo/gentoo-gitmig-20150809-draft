@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/bustle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bustle/ChangeLog,v 1.8 2012/03/10 16:04:21 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bustle/ChangeLog,v 1.9 2012/07/28 14:02:24 slyfox Exp $
+
+  28 Jul 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/bustle-0.2.3-ghc-7.4.patch, bustle-0.2.3.ebuild:
+  Fixed buld breakage against ghc-7.4 (bug #428226 by Chris Reffett)
 
   10 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org>
   +files/bustle-0.4.0-ghc-7.4.patch, bustle-0.4.0.ebuild:
@@ -40,4 +44,3 @@
   +bustle-0.2.3.ebuild, +metadata.xml:
   Initial version. Draw pretty sequence diagrams of D-Bus traffic. Ebuild
   provided by Dennis Schridde bug #353906.
-
