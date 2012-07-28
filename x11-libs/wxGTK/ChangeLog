@@ -1,6 +1,15 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.291 2012/05/31 13:25:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.292 2012/07/28 22:45:58 dirtyepic Exp $
+
+*wxGTK-2.9.4.1 (28 Jul 2012)
+
+  28 Jul 2012; Ryan Hill <dirtyepic@gentoo.org>
+  -files/wxGTK-2.8.11-libpng15.patch, -wxGTK-2.8.11.0.ebuild,
+  -wxGTK-2.8.12.0.ebuild, -wxGTK-2.9.1.1.ebuild,
+  -files/wxGTK-2.9.1.1-collision.patch, +wxGTK-2.9.4.1.ebuild,
+  +files/wxGTK-2.9.4.1-collision.patch:
+  Version bump, remove old.
 
   31 May 2012; Justin Lecher <jlec@gentoo.org> wxGTK-2.8.12.1.ebuild:
   Correct searchpath to be sane on prefix without influence on plain
