@@ -5,34 +5,4 @@
 		<email>floppym@gentoo.org</email>
 		<name>Mike Gilbert</name>
 	</maintainer>
-	<longdescription>FreeRDP is a fork of the rdesktop project that intends to rapidly start moving forward and implement features that rdesktop lacks the most.</longdescription>
-<use>
-	<flag name="debug-assert">Enable assert debugging</flag>
-	<flag name="debug-certificate">Enable certificate related debug messages</flag>
-	<flag name="debug-chanman">Enable channel manager debug messages</flag>
-	<flag name="debug-dvc">Enable dynamic virtual channel debug messages</flag>
-	<flag name="debug-gdi">Enable graphics debug messages</flag>
-	<flag name="debug-kbd">Enable keyboard related debug messages</flag>
-	<flag name="debug-license">Enable license debug messages</flag>
-	<flag name="debug-nego">Enable negotiation related debug messages</flag>
-	<flag name="debug-nla">Enable authentication related debug messages</flag>
-	<flag name="debug-proto">Enable protocol debugging output</flag>
-	<flag name="debug-rail">Enable RemoteApp debug messages</flag>
-	<flag name="debug-rfx">Enable RemoteFX debug messages</flag>
-	<flag name="debug-serial">Enable debugging of serial code</flag>
-	<flag name="debug-smartcard">Enable debugging of smard-card code</flag>
-	<flag name="debug-sound">Enable debugging of sound code</flag>
-	<flag name="debug-stream-assert">Enable stream assert debugging</flag>
-	<flag name="debug-transport">Enable transport debug messages</flag>
-	<flag name="debug-svc">Enable static virtual channel debug messages</flag>
-	<flag name="debug-x11">Enable X11 Client debug messages</flag>
-	<flag name="debug-xv">Enable XVideo debug messages</flag>
-	<flag name="debug-scard">Print smartcard debug messages</flag>
-	<flag name="debug-orders">Print drawing orders debug messages</flag>
-	<flag name="debug-redir">Print redirection debug messages</flag>
-	<flag name="gnutls">Use GnuTLS as crypto backend</flag>
-	<flag name="nss">Use NSS as crypto backend</flag>
-	<flag name="polarssl">Use PolarSSL as crypto backend</flag>
-	<flag name="ssl">Use OpenSSL as crypto backend</flag>
-</use>
 </pkgmetadata>

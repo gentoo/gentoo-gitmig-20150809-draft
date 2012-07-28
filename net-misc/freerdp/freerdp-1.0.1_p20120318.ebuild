@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-1.0.1_p20120318.ebuild,v 1.2 2012/04/23 20:31:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-1.0.1_p20120318.ebuild,v 1.3 2012/07/28 19:39:32 floppym Exp $
 
 EAPI="4"
 
@@ -26,9 +26,7 @@ LICENSE="Apache-2.0"
 SLOT="0"
 IUSE="alsa cups directfb doc ffmpeg pulseaudio smartcard sse2 test X xinerama xv"
 
-FREERDP_DEBUG="transport chanman svc dvc kbd nla nego certificate license gdi
-	rfx x11 rail xv scard orders redir"
-IUSE+=" $(printf 'debug-%s ' ${FREERDP_DEBUG})"
+RESTRICT="test"
 
 RDEPEND="
 	dev-libs/openssl
@@ -60,9 +58,6 @@ DEPEND="${RDEPEND}
 
 DOCS=( README )
 
-# Test suite segfaults
-RESTRICT="test"
-
 src_configure() {
 	local mycmakeargs=(
 		$(cmake-utils_use_with alsa ALSA)
@@ -81,10 +76,5 @@ src_configure() {
 		$(cmake-utils_use_with xinerama XINERAMA)
 		$(cmake-utils_use_with xv XV)
 	)
-	for i in ${FREERDP_DEBUG}; do
-		mycmakeargs+=(
-			$(cmake-utils_use_with debug-${i} DEBUG_$(LC_ALL=C echo ${i} | tr a-z A-Z))
-		)
-	done
 	cmake-utils_src_configure
 }
