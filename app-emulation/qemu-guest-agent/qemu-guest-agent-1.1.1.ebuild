@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-guest-agent/qemu-guest-agent-1.1.1.ebuild,v 1.1 2012/07/28 22:00:05 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-guest-agent/qemu-guest-agent-1.1.1.ebuild,v 1.2 2012/07/28 22:00:59 cardoe Exp $
 
 EAPI=4
 
@@ -51,7 +51,7 @@ src_install() {
 
 		insinto /etc/logrotate.d/
 		newins "${FILESDIR}/qemu-ga.logrotate" qemu-guest-agent
-	else 
+	else
 		# systemd stuff
 		insinto /lib/udev/rules.d/
 		newins "${FILESDIR}/qemu-ga-systemd.udev" 99-qemu-guest-agent.rules
