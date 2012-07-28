@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/slony1
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/ChangeLog,v 1.36 2012/04/19 18:49:06 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/ChangeLog,v 1.37 2012/07/28 12:24:08 titanofold Exp $
+
+  28 Jul 2012; Aaron W. Swenson <titanofold@gentoo.org> slony1-2.1.1.ebuild:
+  Add GPL-2 to $LICENSE. Fixes bug 425926.
 
   19 Apr 2012; Aaron W. Swenson <titanofold@gentoo.org> -slony1-2.1.0.ebuild:
   Cleaning out old version.

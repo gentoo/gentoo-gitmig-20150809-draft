@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/slony1-2.1.1.ebuild,v 1.4 2012/04/16 21:37:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/slony1-2.1.1.ebuild,v 1.5 2012/07/28 12:24:08 titanofold Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ MAJ_PV=$(get_version_component_range 1-2)
 SRC_URI="http://main.slony.info/downloads/${MAJ_PV}/source/${P}.tar.bz2
 		 http://main.slony.info/downloads/${MAJ_PV}/source/${P}-docs.tar.bz2"
 
-LICENSE="BSD"
+LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 
