@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/wxpython
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.168 2012/05/29 14:46:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.169 2012/07/28 22:42:59 dirtyepic Exp $
+
+  28 Jul 2012; Ryan Hill <dirtyepic@gentoo.org> -wxpython-2.8.11.0.ebuild,
+  -files/wxpython-2.8.11-drop-editra.patch, -wxpython-2.8.12.0.ebuild,
+  -wxpython-2.9.1.1.ebuild:
+  Remove old.
 
   29 May 2012; Alexis Ballier <aballier@gentoo.org> wxpython-2.8.12.1.ebuild:
   keyword ~amd64-fbsd
