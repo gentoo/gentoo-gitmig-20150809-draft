@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.402 2012/07/28 20:06:32 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.403 2012/07/28 20:12:56 idl0r Exp $
+
+  28 Jul 2012; Christian Ruppert <idl0r@gentoo.org> bind-9.9.1_p2-r1.ebuild:
+  Add a comment for the libxml2 patch
 
 *bind-9.9.1_p2-r1 (28 Jul 2012)
 
