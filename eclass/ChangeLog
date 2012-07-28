@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.356 2012/07/26 16:14:47 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.357 2012/07/28 15:52:23 hasufell Exp $
+
+  28 Jul 2012; Julian Ospald <hasufell@gentoo.org> games.eclass:
+  omg, we checked the dirs in ${S} instead of ${D} which accidentially
+  worked for some ebuilds (EAPI-4 related fix)
 
   26 Jul 2012; Fabian Groffen <grobian@gentoo.org>
   +ELT-patches/sol2-ltmain/2.4.2, libtool.eclass:
