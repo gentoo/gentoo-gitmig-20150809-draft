@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinelchi/vdr-skinelchi-0.2.7.ebuild,v 1.1 2012/06/12 19:00:21 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinelchi/vdr-skinelchi-0.2.7.ebuild,v 1.2 2012/07/28 13:51:48 hd_brummy Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ SRC_URI="http://firefly.vdr-developer.org/skinelchi/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="imagemagick"
 
 DEPEND=">=media-video/vdr-1.6
