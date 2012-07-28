@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.225 2012/05/31 03:38:35 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.226 2012/07/28 03:50:20 xarthisius Exp $
+
+*doxygen-1.8.1.2 (28 Jul 2012)
+
+  28 Jul 2012; Kacper Kowalik <xarthisius@gentoo.org> +doxygen-1.8.1.2.ebuild:
+  Version bump wrt #428332 by Michał Górny <mgorny@gentoo.org>
 
   31 May 2012; Zac Medico <zmedico@gentoo.org> doxygen-1.5.4.ebuild,
   doxygen-1.5.8-r1.ebuild, doxygen-1.6.3.ebuild, doxygen-1.7.2.ebuild,
