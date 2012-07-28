@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.84 2012/07/26 20:10:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.85 2012/07/28 00:44:43 flameeyes Exp $
+
+  28 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml,
+  munin-2.0.3.ebuild:
+  Remove the .htaccess file; remove plugins for apt and yum; make sure to
+  require at least freeipmi-1 for the freeipmi_ plugin; add an http USe flag to
+  drop libwww-perl harddep.
 
   26 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> munin-2.0.3.ebuild:
   Fix git diff problem.

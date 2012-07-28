@@ -45,6 +45,11 @@
       IPMI sensors. Disabling the flag does not remove any plugin
       file.
     </flag>
+    <flag name="http">
+      Install <pkg>dev-perl/libwww-perl</pkg> required for monitoring
+      HTTP-based services such as Apache and nginx. Disabling the flag
+      does not remove any plugin file.
+    </flag>
     <flag name="java">
       Build the Java-based plugins to monitor JMX-compatible
       applications. Disabling the flag removes the jmx monitoring

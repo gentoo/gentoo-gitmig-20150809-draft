@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.3.ebuild,v 1.4 2012/07/26 20:10:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.3.ebuild,v 1.5 2012/07/28 00:44:43 flameeyes Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://sourceforge/munin/${MY_P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~mips ~x86"
-IUSE="asterisk irc java memcached minimal mysql postgres ssl test +cgi ipv6 syslog ipmi"
+IUSE="asterisk irc java memcached minimal mysql postgres ssl test +cgi ipv6 syslog ipmi http"
 REQUIRED_USE="cgi? ( !minimal )"
 
 # Upstream's listing of required modules is NOT correct!
@@ -41,8 +41,9 @@ DEPEND_COM="dev-lang/perl
 			syslog? ( virtual/perl-Sys-Syslog )
 			ipmi? (
 				sys-apps/ipmitool sys-apps/gawk
-				sys-libs/freeipmi virtual/awk
+				>=sys-libs/freeipmi-1 virtual/awk
 			)
+			http? ( dev-perl/libwww-perl )
 			dev-perl/DBI
 			dev-perl/DateManip
 			dev-perl/File-Copy-Recursive
@@ -50,7 +51,6 @@ DEPEND_COM="dev-lang/perl
 			dev-perl/Net-CIDR
 			dev-perl/Net-Netmask
 			dev-perl/Net-SNMP
-			dev-perl/libwww-perl
 			dev-perl/net-server[ipv6(-)?]
 			virtual/perl-Digest-MD5
 			virtual/perl-Getopt-Long
@@ -135,6 +135,7 @@ src_install() {
 		/etc/munin/plugin-conf.d/
 		/etc/munin/plugins/"
 	keepdir ${dirs}
+	fowners munin:munin ${dirs}
 	use minimal || dirs+=" /etc/munin/munin-conf.d/"
 
 	local install_targets="install-common-prime install-node-prime install-plugins-prime"
@@ -144,7 +145,9 @@ src_install() {
 	# parallel install doesn't work and it's also pointless to have this
 	# run in parallel for now (because it uses internal loops).
 	emake -j1 DESTDIR="${D}" ${install_targets}
-	fowners munin:munin ${dirs}
+
+	# remove the plugins for non-Gentoo package managers
+	rm "${D}"/usr/libexec/munin/plugins/{apt{,_all},yum} || die
 
 	insinto /etc/munin/plugin-conf.d/
 	newins "${FILESDIR}"/${PN}-1.3.2-plugins.conf munin-node
@@ -214,6 +217,9 @@ EOF
 ## Update HTML pages every 15 minutes
 #@ 15	nice /usr/libexec/munin/munin-html
 EOF
+
+		# remove .htaccess file
+		find "${D}" -name .htaccess -delete || die
 	fi
 }
 
