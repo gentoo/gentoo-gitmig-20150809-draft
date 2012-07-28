@@ -1,0 +1,12 @@
+--- src/plugins/Transports/http/httpstreamreader.cpp.org	2012-07-28 06:32:07.721649381 +0200
++++ src/plugins/Transports/http/httpstreamreader.cpp	2012-07-28 06:32:22.261650751 +0200
+@@ -129,7 +129,8 @@
+     m_analyser = 0;
+     if(settings.value("use_enca", false).toBool())
+         m_analyser = enca_analyser_alloc(settings.value("enca_lang").toByteArray ().constData());
+-    enca_set_threshold(m_analyser, 1.38);
++    if(m_analyser)
++        enca_set_threshold(m_analyser, 1.38);
+ #endif
+     settings.endGroup();
+ }

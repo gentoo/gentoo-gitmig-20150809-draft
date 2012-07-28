@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/qmmp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/ChangeLog,v 1.87 2012/07/24 20:57:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/ChangeLog,v 1.88 2012/07/28 13:59:05 ago Exp $
+
+*qmmp-0.6.1-r1 (28 Jul 2012)
+
+  28 Jul 2012; Agostino Sarubbo <ago@gentoo.org> +files/qmmp-0.6.1-enca.patch,
+  +qmmp-0.6.1-r1.ebuild:
+  fixed crash in enca_set_threshold, thanks to Linubie and Franz Fellner, wrt to
+  bug #428364
 
 *qmmp-0.6.1 (24 Jul 2012)
 
