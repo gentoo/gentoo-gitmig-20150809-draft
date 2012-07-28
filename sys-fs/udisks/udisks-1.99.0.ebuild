@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.99.0.ebuild,v 1.1 2012/07/27 18:33:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.99.0.ebuild,v 1.2 2012/07/28 12:45:38 ssuominen Exp $
 
 EAPI=4
 inherit eutils bash-completion-r1 linux-info systemd
@@ -60,6 +60,7 @@ src_configure() {
 	econf \
 		--localstatedir="${EPREFIX}"/var \
 		--disable-static \
+		--disable-silent-rules \
 		$(use_enable debug) \
 		--disable-gtk-doc \
 		$(use_enable introspection) \
