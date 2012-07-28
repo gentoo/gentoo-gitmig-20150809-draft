@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.48 2012/07/22 04:35:00 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.49 2012/07/28 22:04:35 cardoe Exp $
 
 EAPI="4"
 
@@ -246,7 +246,7 @@ src_configure() {
 		--disable-libiscsi \
 		--disable-strip \
 		--disable-werror \
-		--enable-guest-agent \
+		--disable-guest-agent \
 		--enable-vnc-jpeg \
 		--enable-vnc-png \
 		--python=python2 \
