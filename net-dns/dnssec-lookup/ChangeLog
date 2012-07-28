@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/dnssec-lookup
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-lookup/ChangeLog,v 1.3 2012/07/09 10:56:53 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-lookup/ChangeLog,v 1.4 2012/07/28 23:09:25 xmw Exp $
+
+  28 Jul 2012; Michael Weber <xmw@gentoo.org> dnssec-lookup-1.13.ebuild:
+  Fix qt slot dependency, thanks kensington.
 
   09 Jul 2012; Michael Weber <xmw@gentoo.org> -dnssec-lookup-1.12.ebuild:
   Drop old
