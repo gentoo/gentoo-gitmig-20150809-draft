@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/bzr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.56 2012/07/02 11:54:26 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.57 2012/07/28 13:10:16 blueness Exp $
+
+  28 Jul 2012; Anthony G. Basile <blueness@gentoo.org> bzr-2.5.1.ebuild:
+  Keyword ~mips, bug #428356
 
   02 Jul 2012; Marien Zwart <marienz@gentoo.org>
   +files/bzr-2.5.1-sphinx-test-failures.patch, bzr-2.5.1.ebuild:
