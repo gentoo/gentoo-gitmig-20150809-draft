@@ -1,22 +1,26 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.95 2012/07/16 05:11:32 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.96 2012/07/29 16:10:35 yngwin Exp $
 
 # This file requires >=portage-2.1.1
+
+# Ben de Groot <yngwin@gentoo.org> (30 Jul 2012)
+# dependency keyworded here, masked in base
+media-libs/freetype -lcdfilter
 
 # Anthony G. Basile <blueness@gentoo.org> (12 Jul 2012)
 # sha512 support in cyassl is broken on x86
 net-libs/cyassl sha512
 
 # Rick Farina <zerochaos@gentoo.org> (09 July 2012)
-# limited testing of net-libs/libbtbb is all this mask is needed for                   
+# limited testing of net-libs/libbtbb is all this mask is needed for
 net-analyzer/wireshark -btbb
 
 # Rick Farina <zerochaos@gentoo.org> (05 July 2012)
 # masked in base, unmask x86/amd64 only
 app-crypt/johntheripper -cuda
 
-# Robert Piasek <dagger@gentoo.org> (26 Apr 2012)          
+# Robert Piasek <dagger@gentoo.org> (26 Apr 2012)
 # Packages with optional systemd support. Masked in base and unmasked on arches
 # where sys-apps/systemd is available.
 >sys-auth/polkit-0.104-r1 -systemd
