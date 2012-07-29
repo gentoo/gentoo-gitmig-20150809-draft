@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.2_p37.ebuild,v 1.1 2012/07/19 17:58:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.2_p37.ebuild,v 1.2 2012/07/29 04:54:44 vapier Exp $
 
 EAPI="1"
 
@@ -79,6 +79,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-4.2-execute-job-control.patch #383237
 	epatch "${FILESDIR}"/${PN}-4.2-parallel-build.patch
 	epatch "${FILESDIR}"/${PN}-4.2-no-readline.patch
+
+	epatch_user
 }
 
 src_compile() {
