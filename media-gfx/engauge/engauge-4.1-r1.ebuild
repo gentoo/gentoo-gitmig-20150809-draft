@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/engauge/engauge-4.1-r1.ebuild,v 1.3 2012/03/15 16:04:52 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/engauge/engauge-4.1-r1.ebuild,v 1.4 2012/07/29 16:48:00 kensington Exp $
 
 EAPI=3
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc examples"
 
-RDEPEND="x11-libs/qt-qt3support
+RDEPEND="x11-libs/qt-qt3support:4
 	sci-libs/fftw:3.0
 	x11-libs/libXft"
 DEPEND="${RDEPEND}
