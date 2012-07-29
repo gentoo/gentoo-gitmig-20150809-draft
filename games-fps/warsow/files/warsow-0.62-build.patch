@@ -83,15 +83,6 @@ b) correct CXX
  endif
  
  ifeq ($(ARCH),x86_64)
-@@ -203,7 +203,7 @@
- 
- # openal
- ifeq ($(BUILD_SND_OPENAL),YES)
--OPENAL_CONFIG?=pkg-config openal
-+OPENAL_CONFIG?=$(shell pkg-config openal)
- 
- CFLAGS_OPENAL=$(shell $(OPENAL_CONFIG) --cflags)
- LDFLAGS_OPENAL=-lvorbisfile
 @@ -252,12 +252,9 @@
  ######################################################################################################
  # Helper functions
