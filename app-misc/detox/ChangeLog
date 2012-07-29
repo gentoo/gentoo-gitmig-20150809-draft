@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/detox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/detox/ChangeLog,v 1.31 2012/06/28 12:51:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/detox/ChangeLog,v 1.32 2012/07/29 18:03:08 armin76 Exp $
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> detox-1.2.0.ebuild,
+  detox-1.2.0-r1.ebuild, detox-1.2.0-r2.ebuild:
+  Drop sparc keywords
 
   28 Jun 2012; Brent Baude <ranger@gentoo.org> detox-1.2.0-r2.ebuild:
   Marking detox-1.2.0-r2 ppc for bug 418601

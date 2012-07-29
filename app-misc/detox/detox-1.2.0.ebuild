@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/detox/detox-1.2.0.ebuild,v 1.6 2011/01/04 17:53:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/detox/detox-1.2.0.ebuild,v 1.7 2012/07/29 18:03:08 armin76 Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~mips ppc sparc x86"
+KEYWORDS="amd64 ~hppa ~mips ppc x86"
 IUSE=""
 
 S="${WORKDIR}"/${MY_P}
