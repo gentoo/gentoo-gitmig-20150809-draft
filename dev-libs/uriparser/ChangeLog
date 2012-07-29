@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/uriparser
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uriparser/ChangeLog,v 1.36 2012/07/03 16:52:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uriparser/ChangeLog,v 1.37 2012/07/29 18:42:43 armin76 Exp $
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> uriparser-0.7.5.ebuild,
+  uriparser-0.7.6.ebuild, uriparser-0.7.7.ebuild:
+  Drop sparc keywords
 
   03 Jul 2012; Brent Baude <ranger@gentoo.org> uriparser-0.7.7.ebuild:
   Marking uriparser-0.7.7 ppc for bug 418769
