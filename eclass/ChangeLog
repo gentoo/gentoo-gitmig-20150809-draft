@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.359 2012/07/29 04:26:10 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.360 2012/07/29 05:38:42 hattya Exp $
+
+  29 Jul 2012; Akinori Hattori <hattya@gentoo.org> subversion.eclass:
+  replace built_with_use by USE deps wrt bug #242100
 
   29 Jul 2012; Akinori Hattori <hattya@gentoo.org> subversion.eclass:
   remove obsolete workaround (ESVN_DISABLE_DEPENDENCIES)
