@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-1.0.ebuild,v 1.1 2012/07/29 20:46:08 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-1.0.ebuild,v 1.2 2012/07/29 21:02:31 hasufell Exp $
 
 EAPI=4
-inherit eutils check-reqs toolchain-funcs gnome2-utils games
+inherit eutils check-reqs gnome2-utils games
 
 MY_P=${PN}_${PV}
 DESCRIPTION="Multiplayer FPS based on the QFusion engine (evolved from Quake 2)"
