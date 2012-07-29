@@ -1,5 +1,11 @@
 
 
+*pypax-0.5.2 (29 Jul 2012)
+
+  29 Jul 2012; Anthony G. Basile <blueness@gentoo.org> -pypax-0.5.1.ebuild,
+  +pypax-0.5.2.ebuild:
+  Version bump, keep up with elfix parent
+
 *pypax-0.5.1 (27 Jul 2012)
 
   27 Jul 2012; Anthony G. Basile <blueness@gentoo.org> -pypax-0.5.0.ebuild,
