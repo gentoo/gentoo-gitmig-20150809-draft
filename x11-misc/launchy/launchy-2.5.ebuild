@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/launchy/launchy-2.5.ebuild,v 1.1 2011/04/15 22:02:15 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/launchy/launchy-2.5.ebuild,v 1.2 2012/07/29 18:38:14 angelos Exp $
 
 EAPI=4
 inherit fdo-mime gnome2-utils qt4-r2
@@ -18,10 +18,13 @@ RDEPEND="x11-libs/qt-gui:4"
 DEPEND="${RDEPEND}
 	dev-libs/boost"
 
+PATCHES=( "${FILESDIR}"/${P}-underlink.patch )
+
 src_prepare() {
 	sed -i -e "s:lib/launchy:$(get_libdir)/launchy:" src/src.pro \
 		platforms/unix/unix.pro \
 		plugins/*/*.pro || die "sed failed"
+	qt4-r2_src_prepare
 }
 
 pkg_preinst() {
