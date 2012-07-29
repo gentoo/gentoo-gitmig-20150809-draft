@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-6.7.1-r1.ebuild,v 1.5 2008/05/01 22:30:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-6.7.1-r1.ebuild,v 1.6 2012/07/29 16:27:39 armin76 Exp $
 
 inherit eutils flag-o-matic
 
@@ -19,7 +19,7 @@ LICENSE="GPL-2 LGPL-2"
 [[ ${CTARGET} != ${CHOST} ]] \
 	&& SLOT="${CTARGET}" \
 	|| SLOT="0"
-KEYWORDS="alpha amd64 ppc sparc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="nls"
 
 RDEPEND="sys-libs/ncurses
