@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyquery
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyquery/ChangeLog,v 1.20 2012/07/24 01:11:50 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyquery/ChangeLog,v 1.21 2012/07/29 18:02:17 armin76 Exp $
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> pyquery-1.2.1.ebuild:
+  Add ~alpha/~sparc wrt #416099
 
   24 Jul 2012; Anthony G. Basile <blueness@gentoo.org> pyquery-1.1.1.ebuild,
   pyquery-1.2.1.ebuild:
