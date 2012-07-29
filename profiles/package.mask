@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14016 2012/07/27 20:17:41 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14017 2012/07/29 16:17:56 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ben de Groot <yngwin@gentoo.org> (30 Jul 2012)
+# Mask until I have time to do freetype
+media-libs/fontconfig-infinality
+app-admin/eselect-infinality
+app-admin/eselect-lcdfilter
 
 # Anthony G. Basile <blueness@gentoo.org> (26 Jul 2012)
 # Removal in 30 days, bug #365825
