@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/openclonk/openclonk-5.2.2.ebuild,v 1.6 2012/07/10 13:42:06 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/openclonk/openclonk-5.2.2.ebuild,v 1.7 2012/07/29 12:00:46 hasufell Exp $
 
 EAPI=4
 
@@ -71,6 +71,9 @@ src_prepare() {
 	sed \
 		-e "/AM_SILENT_RULES/d" \
 		-i configure.ac || die
+
+	# wrt #428496
+	epatch "${FILESDIR}"/${P}-zlib-1.2.6.patch
 
 	eautoreconf
 }
