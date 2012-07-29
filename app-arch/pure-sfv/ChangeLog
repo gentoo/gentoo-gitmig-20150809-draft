@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/pure-sfv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pure-sfv/ChangeLog,v 1.17 2012/05/29 19:28:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pure-sfv/ChangeLog,v 1.18 2012/07/29 16:54:55 armin76 Exp $
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> pure-sfv-0.3.ebuild,
+  pure-sfv-0.3-r1.ebuild:
+  Drop sparc keywords
 
   29 May 2012; Brent Baude <ranger@gentoo.org> pure-sfv-0.3-r1.ebuild:
   Marking pure-sfv-0.3-r1 ppc for bug 393755
