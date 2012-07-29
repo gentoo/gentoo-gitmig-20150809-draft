@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/ace
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ChangeLog,v 1.66 2012/06/06 03:24:54 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ChangeLog,v 1.67 2012/07/29 16:15:56 armin76 Exp $
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> ace-5.5-r1.ebuild,
+  ace-5.7.2.ebuild:
+  Drop alpha/sparc keywords
 
   06 Jun 2012; Zac Medico <zmedico@gentoo.org> ace-5.5-r1.ebuild,
   ace-5.7.2.ebuild:
