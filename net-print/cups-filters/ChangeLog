@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups-filters
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.20 2012/07/28 15:36:43 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.21 2012/07/29 17:01:28 dilfridge Exp $
+
+  29 Jul 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  cups-filters-1.0.19.ebuild, cups-filters-9999.ebuild:
+  Add temporary workaround for bug 428386
 
   28 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
   cups-filters-1.0.19.ebuild, cups-filters-9999.ebuild:
