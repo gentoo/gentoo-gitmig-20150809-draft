@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/bfilter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/bfilter/ChangeLog,v 1.30 2012/05/03 04:35:53 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/bfilter/ChangeLog,v 1.31 2012/07/29 16:14:37 armin76 Exp $
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> bfilter-1.1.4-r1.ebuild:
+  Drop sparc keywords
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> bfilter-1.1.4-r1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
