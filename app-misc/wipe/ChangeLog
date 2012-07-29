@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/wipe
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/wipe/ChangeLog,v 1.30 2012/06/25 16:49:32 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/wipe/ChangeLog,v 1.31 2012/07/29 17:54:24 armin76 Exp $
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> wipe-2.2.20050509.ebuild,
+  wipe-2.2.20050509-r1.ebuild, wipe-2.3.1.ebuild:
+  Drop sparc keywords
 
   25 Jun 2012; Justin Bronder <jsbronder@gentoo.org> wipe-2.2.20050509.ebuild,
   wipe-2.2.20050509-r1.ebuild, wipe-2.3.1.ebuild:
