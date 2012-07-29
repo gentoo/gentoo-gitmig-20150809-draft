@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bin86/bin86-0.16.18.ebuild,v 1.1 2010/12/07 05:04:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bin86/bin86-0.16.18.ebuild,v 1.2 2012/07/29 15:44:56 vapier Exp $
+
+EAPI="4"
 
 inherit toolchain-funcs eutils
 
@@ -13,9 +15,7 @@ SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i \
 		-e '/^PREFIX/s:=.*:=$(DESTDIR)/usr:' \
 		-e '/^MANDIR/s:)/man/man1:)/share/man/man1:' \
@@ -24,15 +24,11 @@ src_unpack() {
 		-e "/^LDFLAGS/s:=.*:=${LDFLAGS}:" \
 		Makefile || die
 	epatch "${FILESDIR}"/${P}-headers.patch #347817
-	use amd64 && epatch "${FILESDIR}"/${PN}-0.16.17-amd64-build.patch
-}
-
-src_compile() {
-	emake CC="$(tc-getCC)" || die
+	epatch "${FILESDIR}"/${PN}-0.16.17-amd64-build.patch
+	tc-export CC
 }
 
 src_install() {
 	dodir /usr/bin /usr/share/man/man1
-	emake install DESTDIR="${D}" || die
-	dodoc README* ChangeLog
+	default
 }
