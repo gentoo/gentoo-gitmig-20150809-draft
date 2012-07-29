@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/ktorrent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.182 2012/07/11 09:26:22 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.183 2012/07/29 21:24:10 jdhore Exp $
+
+  29 Jul 2012; Jeff Horelick <jdhore@gentoo.org> ktorrent-4.2.1.ebuild:
+  marked x86 per bug 428338
 
   11 Jul 2012; Johannes Huber <johu@gentoo.org>
   -files/ktorrent-4.1.3-tasks.patch, -ktorrent-4.1.2.ebuild,
