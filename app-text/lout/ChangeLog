@@ -1,6 +1,10 @@
 # ChangeLog for app-text/lout
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lout/ChangeLog,v 1.32 2012/05/29 19:25:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lout/ChangeLog,v 1.33 2012/07/29 16:53:28 armin76 Exp $
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> lout-3.30.ebuild,
+  lout-3.38-r1.ebuild:
+  Drop sparc keywords
 
   29 May 2012; Brent Baude <ranger@gentoo.org> lout-3.38-r1.ebuild:
   Marking lout-3.38-r1 ppc for bug 391485
