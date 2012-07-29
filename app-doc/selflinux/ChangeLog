@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/selflinux
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/selflinux/ChangeLog,v 1.21 2012/05/29 19:30:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/selflinux/ChangeLog,v 1.22 2012/07/29 16:55:35 armin76 Exp $
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> selflinux-0.12.1.ebuild,
+  selflinux-0.13.0.ebuild:
+  Drop sparc keywords
 
   29 May 2012; Brent Baude <ranger@gentoo.org> selflinux-0.13.0.ebuild:
   Marking selflinux-0.13.0 ppc for bug 393839
