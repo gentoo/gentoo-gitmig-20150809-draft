@@ -1,6 +1,11 @@
 # ChangeLog for app-text/html-xml-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/html-xml-utils/ChangeLog,v 1.42 2012/06/08 11:59:58 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/html-xml-utils/ChangeLog,v 1.43 2012/07/29 17:17:53 armin76 Exp $
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> html-xml-utils-2.8-r2.ebuild,
+  html-xml-utils-5.3.ebuild, html-xml-utils-5.5.ebuild,
+  html-xml-utils-6.0.ebuild:
+  Drop alpha/sparc keywords
 
   08 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   html-xml-utils-6.0.ebuild:

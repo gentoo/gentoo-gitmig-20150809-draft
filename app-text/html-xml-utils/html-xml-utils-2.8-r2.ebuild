@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/html-xml-utils/html-xml-utils-2.8-r2.ebuild,v 1.8 2009/09/23 16:34:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/html-xml-utils/html-xml-utils-2.8-r2.ebuild,v 1.9 2012/07/29 17:17:53 armin76 Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.w3.org/Tools/HTML-XML-utils/"
 LICENSE="W3C"
 
 IUSE=""
-KEYWORDS="alpha ppc sparc x86"
+KEYWORDS="ppc x86"
 SLOT="0"
 
 RDEPEND="!sys-apps/count
