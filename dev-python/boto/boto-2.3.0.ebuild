@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/boto-2.3.0.ebuild,v 1.7 2012/06/13 21:03:33 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/boto-2.3.0.ebuild,v 1.8 2012/07/29 16:59:38 armin76 Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.5"
@@ -16,7 +16,7 @@ SRC_URI="mirror://github/boto/boto/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ppc ~sparc x86 ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="amd64 ppc sparc x86 ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="test"
 
 DEPEND="dev-python/setuptools
