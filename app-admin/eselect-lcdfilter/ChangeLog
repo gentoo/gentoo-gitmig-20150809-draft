@@ -1,0 +1,9 @@
+# ChangeLog for app-admin/eselect-lcdfilter
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-lcdfilter/ChangeLog,v 1.1 2012/07/29 15:46:07 yngwin Exp $
+
+*eselect-lcdfilter-1 (29 Jul 2012)
+
+  29 Jul 2012; Ben de Groot <yngwin@gentoo.org> +eselect-lcdfilter-1.ebuild,
+  +metadata.xml:
+  Initial commit, to go with fontconfig-infinality
