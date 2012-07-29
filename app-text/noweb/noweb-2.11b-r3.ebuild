@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/noweb-2.11b-r3.ebuild,v 1.6 2012/07/03 19:35:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/noweb-2.11b-r3.ebuild,v 1.7 2012/07/29 18:43:46 armin76 Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.eecs.harvard.edu/~nr/noweb/dist/${P}.tgz"
 
 LICENSE="noweb emacs? ( GPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 ~sparc x86 ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="emacs examples"
 
 DEPEND="virtual/tex-base

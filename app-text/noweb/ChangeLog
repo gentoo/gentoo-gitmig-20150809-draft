@@ -1,6 +1,9 @@
 # ChangeLog for app-text/noweb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/ChangeLog,v 1.62 2012/07/03 19:35:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/ChangeLog,v 1.63 2012/07/29 18:43:46 armin76 Exp $
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> noweb-2.11b-r3.ebuild:
+  alpha/ia64/sparc stable wrt #418653
 
   03 Jul 2012; Jeroen Roovers <jer@gentoo.org> noweb-2.11b-r3.ebuild:
   Stable for HPPA (bug #418653).
