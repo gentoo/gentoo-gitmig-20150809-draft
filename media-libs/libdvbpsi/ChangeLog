@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdvbpsi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/ChangeLog,v 1.61 2012/07/03 16:44:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/ChangeLog,v 1.62 2012/07/29 18:38:46 armin76 Exp $
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> libdvbpsi-0.2.2.ebuild:
+  alpha/sparc stable wrt #419083
 
   03 Jul 2012; Brent Baude <ranger@gentoo.org> libdvbpsi-0.2.2.ebuild:
   Marking libdvbpsi-0.2.2 ppc for bug 419083
