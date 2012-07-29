@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/pbzip2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/ChangeLog,v 1.105 2012/07/15 18:24:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/ChangeLog,v 1.106 2012/07/29 21:52:44 ottxor Exp $
+
+  29 Jul 2012; Christoph Junghans <ottxor@gentoo.org> pbzip2-1.1.6.ebuild:
+  added prefix keywords
 
   15 Jul 2012; Mike Frysinger <vapier@gentoo.org> pbzip2-1.1.6.ebuild:
   Depend on bzip2[static-libs] when USE=static.
