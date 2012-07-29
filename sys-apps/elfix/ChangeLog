@@ -1,5 +1,11 @@
 
 
+*elfix-0.5.2 (29 Jul 2012)
+
+  29 Jul 2012; Anthony G. Basile <blueness@gentoo.org> -elfix-0.5.1.ebuild,
+  +elfix-0.5.2.ebuild:
+  Generate native assembly code for fix-gnustack test
+
 *elfix-0.5.1 (27 Jul 2012)
 
   27 Jul 2012; Anthony G. Basile <blueness@gentoo.org> -elfix-0.5.0.ebuild,
