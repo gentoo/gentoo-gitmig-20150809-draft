@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/biosdevname
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/biosdevname/ChangeLog,v 1.12 2012/06/21 06:16:26 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/biosdevname/ChangeLog,v 1.13 2012/07/29 19:48:33 aidecoe Exp $
+
+*biosdevname-0.4.1 (29 Jul 2012)
+
+  29 Jul 2012; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +biosdevname-0.4.1.ebuild:
+  Version bump.
+
+  NEWS
+  ~~~~
+  - Use addslot() to track both embedded and physical index per slot
+  - Add fixes to ignore NPAR parsing on some cards
 
   21 Jun 2012; Jeff Horelick <jdhore@gentoo.org> biosdevname-0.4.0.ebuild:
   marked x86 per bug 422165
