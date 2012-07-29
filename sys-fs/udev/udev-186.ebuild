@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-186.ebuild,v 1.3 2012/07/22 17:34:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-186.ebuild,v 1.4 2012/07/29 22:14:33 williamh Exp $
 
 EAPI=4
 
@@ -129,14 +129,6 @@ src_prepare()
 	fi
 }
 
-config_workarounds()
-{
-	export ac_cv_search_cap_init= ac_cv_header_sys_capability_h=yes
-	export PKG_CONFIG_PATH="${T}:${PKG_CONFIG_PATH}"
-	printf 'Name: dbus\nDescription: Fake dbus\n' > "${T}"/dbus-1.pc
-	printf 'Version: 1.6.0\nLibs:\nCflags:' >> "${T}"/dbus-1.pc
-}
-
 src_configure()
 {
 	local switches
@@ -170,8 +162,9 @@ src_configure()
 		$(use_enable keymap)
 		$(use_enable selinux)
 		$(use_enable static-libs static)
+		ac_cv_search_cap_init= ac_cv_header_sys_capability_h=yes
+		DBUS_CFLAGS=' ' DBUS_LIBS=' '
 	)
-	config_workarounds
 	econf "${switches[@]}"
 }
 
