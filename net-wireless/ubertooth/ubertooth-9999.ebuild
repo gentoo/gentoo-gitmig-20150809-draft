@@ -1,12 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ubertooth-9999.ebuild,v 1.5 2012/07/28 09:35:53 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ubertooth-9999.ebuild,v 1.6 2012/07/29 01:25:23 zerochaos Exp $
 
 EAPI="4"
 
 #inherit flag-o-matic
 
-DESCRIPTION="An open source wireless development platform suitable for Bluetooth experimentation"
 HOMEPAGE="http://ubertooth.sourceforge.net/"
 
 LICENSE="GPL-2"
@@ -44,6 +43,7 @@ else
 	RDEPEND="${RDEPEND}
 		>=net-libs/libbtbb-0.8"
 fi
+DESCRIPTION="An open source wireless development platform suitable for Bluetooth experimentation"
 
 pkg_setup() {
 	ebegin "arm-none-eabi-gcc"
