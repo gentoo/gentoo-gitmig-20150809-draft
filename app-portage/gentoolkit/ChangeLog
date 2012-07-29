@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.273 2012/07/19 20:01:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.274 2012/07/29 00:06:33 jmorgan Exp $
+
+  29 Jul 2012; Jack Morgan <jmorgan@gentoo.org> gentoolkit-0.3.0.6-r3.ebuild:
+  sparc stable wrt BZ-425734
 
   19 Jul 2012; Markus Meier <maekke@gentoo.org> gentoolkit-0.3.0.6-r3.ebuild:
   arm stable, bug #425734
