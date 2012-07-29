@@ -1,6 +1,9 @@
 
 
   29 Jul 2012; Anthony G. Basile <blueness@gentoo.org> pypax-0.5.2.ebuild:
+  Keyword ~mips
+
+  29 Jul 2012; Anthony G. Basile <blueness@gentoo.org> pypax-0.5.2.ebuild:
   Keyword ~arm
 
   29 Jul 2012; Anthony G. Basile <blueness@gentoo.org> pypax-0.5.2.ebuild:
