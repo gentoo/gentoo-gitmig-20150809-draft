@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/dmake
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dmake/ChangeLog,v 1.30 2012/05/22 20:57:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dmake/ChangeLog,v 1.31 2012/07/29 17:35:44 armin76 Exp $
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> dmake-4.1-r1.ebuild,
+  dmake-4.12.ebuild, dmake-4.12.2.ebuild:
+  Drop sparc keywords
 
   22 May 2012; Brent Baude <ranger@gentoo.org> dmake-4.12.ebuild:
   Marking dmake-4.12 ppc for bug 404733
