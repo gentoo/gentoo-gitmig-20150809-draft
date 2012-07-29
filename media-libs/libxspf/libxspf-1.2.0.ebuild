@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libxspf/libxspf-1.2.0.ebuild,v 1.9 2012/05/06 22:49:59 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libxspf/libxspf-1.2.0.ebuild,v 1.10 2012/07/29 18:40:42 armin76 Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/libspiff/${P}.tar.bz2"
 
 LICENSE="BSD LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="doc test"
 
 RDEPEND=">=dev-libs/uriparser-0.7.5
