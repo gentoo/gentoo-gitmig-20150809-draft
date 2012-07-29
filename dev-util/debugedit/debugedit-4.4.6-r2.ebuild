@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debugedit/debugedit-4.4.6-r2.ebuild,v 1.1 2009/10/21 07:40:50 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debugedit/debugedit-4.4.6-r2.ebuild,v 1.2 2012/07/29 18:26:20 armin76 Exp $
 
 inherit toolchain-funcs eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://dev.gentoo.org/~tester/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
 IUSE=""
 
 DEPEND="dev-libs/popt

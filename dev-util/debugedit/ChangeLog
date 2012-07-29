@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/debugedit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debugedit/ChangeLog,v 1.30 2012/06/29 15:43:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debugedit/ChangeLog,v 1.31 2012/07/29 18:26:20 armin76 Exp $
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> debugedit-4.4.6-r1.ebuild,
+  debugedit-4.4.6-r2.ebuild, debugedit-5.1.9.ebuild, debugedit-5.3.5.ebuild,
+  debugedit-5.3.5-r1.ebuild:
+  Drop sparc keywords
 
   29 Jun 2012; Jeroen Roovers <jer@gentoo.org> debugedit-5.3.5-r1.ebuild:
   Stable for HPPA (bug #418947).

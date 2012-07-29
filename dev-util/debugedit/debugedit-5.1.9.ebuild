@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debugedit/debugedit-5.1.9.ebuild,v 1.2 2009/11/21 03:40:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debugedit/debugedit-5.1.9.ebuild,v 1.3 2012/07/29 18:26:20 armin76 Exp $
 
 # To recreate this tarball, just grab latest rpm5 release:
 #	http://rpm5.org/files/rpm/
@@ -16,7 +16,7 @@ SRC_URI="http://dev.gentoo.org/~swegener/distfiles/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
 IUSE=""
 
 DEPEND="dev-libs/popt
