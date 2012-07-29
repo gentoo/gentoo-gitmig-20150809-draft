@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.106 2012/06/29 15:35:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.107 2012/07/29 18:25:30 armin76 Exp $
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> gv-3.7.3-r1.ebuild:
+  alpha/sparc stable wrt #418471
 
   29 Jun 2012; Jeroen Roovers <jer@gentoo.org> gv-3.7.3-r1.ebuild:
   Stable for HPPA (bug #418471).
