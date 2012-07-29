@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/xmlindent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xmlindent/ChangeLog,v 1.6 2012/04/09 16:00:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xmlindent/ChangeLog,v 1.7 2012/07/29 16:01:34 armin76 Exp $
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> xmlindent-0.2.17-r1.ebuild:
+  Drop sparc keywords
 
   09 Apr 2012; Agostino Sarubbo <ago@gentoo.org> xmlindent-0.2.17-r1.ebuild:
   Stable for amd64, wrt bug #411165
