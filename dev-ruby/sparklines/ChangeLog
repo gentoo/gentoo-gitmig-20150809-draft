@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/sparklines
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sparklines/ChangeLog,v 1.11 2011/01/07 10:59:36 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sparklines/ChangeLog,v 1.12 2012/07/29 09:59:48 graaff Exp $
+
+*sparklines-0.5.2-r3 (29 Jul 2012)
+
+  29 Jul 2012; Hans de Graaff <graaff@gentoo.org> +sparklines-0.5.2-r3.ebuild:
+  Add ruby19.
 
   07 Jan 2011; Hans de Graaff <graaff@gentoo.org>
   sparklines-0.5.2-r2.ebuild:
