@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/cyrus-imap-dev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/ChangeLog,v 1.84 2012/06/08 12:06:29 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/ChangeLog,v 1.85 2012/07/29 17:19:19 armin76 Exp $
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> cyrus-imap-dev-2.4.12.ebuild,
+  cyrus-imap-dev-2.4.13.ebuild, cyrus-imap-dev-2.4.14.ebuild,
+  cyrus-imap-dev-2.4.16.ebuild:
+  Drop sparc keywords
 
   08 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   cyrus-imap-dev-2.4.16.ebuild:
