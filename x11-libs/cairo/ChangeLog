@@ -1,6 +1,6 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.303 2012/07/25 08:44:33 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.304 2012/07/29 12:28:46 yngwin Exp $
 
 *cairo-1.10.2-r3 (25 Jul 2012)
 *cairo-1.12.2-r2 (25 Jul 2012)
@@ -31,7 +31,7 @@
   +files/cairo-respect-fontconfig.patch, metadata.xml:
   Take over maintainership, since spatz is being retired. Add back qt-
   surface.patch to 1.12.2 (bug #418133). Add respect-fontconfig patch by Paul
-  Bradbury (https://bugs.freedesktop.org/show_bug.cgi?id=11838#c8).
+  Bredbury (https://bugs.freedesktop.org/show_bug.cgi?id=11838#c8).
 
   14 Jul 2012; Doug Goldstein <cardoe@gentoo.org> cairo-1.12.2.ebuild,
   cairo-9999.ebuild:
