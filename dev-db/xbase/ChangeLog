@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/xbase
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xbase/ChangeLog,v 1.27 2012/06/30 13:41:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xbase/ChangeLog,v 1.28 2012/07/29 18:19:41 armin76 Exp $
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> xbase-2.0.0.ebuild,
+  xbase-2.0.0-r1.ebuild, xbase-2.0.0-r2.ebuild, xbase-3.1.2.ebuild:
+  Drop alpha/ia64/sparc keywords
 
 *xbase-3.1.2 (30 Jun 2012)
 *xbase-2.0.0-r2 (30 Jun 2012)
