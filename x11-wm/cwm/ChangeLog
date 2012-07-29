@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/cwm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/ChangeLog,v 1.39 2012/06/25 19:36:33 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/ChangeLog,v 1.40 2012/07/29 17:56:40 armin76 Exp $
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> cwm-4.2_p20110913-r1.ebuild,
+  cwm-4.2_p20111229.ebuild, cwm-5.1.ebuild:
+  Drop sparc keywords
 
   25 Jun 2012; Jeff Horelick <jdhore@gentoo.org> cwm-5.1.ebuild:
   marked x86 per bug 422439
