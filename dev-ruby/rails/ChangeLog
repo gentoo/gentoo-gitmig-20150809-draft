@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rails
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.228 2012/07/28 08:20:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.229 2012/07/29 07:39:11 graaff Exp $
+
+  29 Jul 2012; Hans de Graaff <graaff@gentoo.org> -rails-3.0.15.ebuild,
+  -rails-3.1.6.ebuild, -rails-3.2.6.ebuild:
+  Remove vulnerable versions.
 
 *rails-3.0.16 (28 Jul 2012)
 
