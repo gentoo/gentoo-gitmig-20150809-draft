@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/arping-2.12.ebuild,v 1.2 2012/07/24 00:18:34 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/arping-2.12.ebuild,v 1.3 2012/07/29 17:23:16 armin76 Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.habets.pp.se/synscan/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x86-macos"
 IUSE=""
 
 DEPEND="net-libs/libpcap
