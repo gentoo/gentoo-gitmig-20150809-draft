@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundkonverter/soundkonverter-1.6.1.ebuild,v 1.1 2012/06/10 16:43:54 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundkonverter/soundkonverter-1.6.3.ebuild,v 1.1 2012/07/29 15:37:49 kensington Exp $
 
 EAPI=4
-KDE_LINGUAS="cs de es et fr hu pt ru"
+KDE_LINGUAS="cs de es et fr hu pt pt_BR ru"
 inherit kde4-base
 
 DESCRIPTION="Frontend to various audio converters"
@@ -17,7 +17,6 @@ IUSE="debug"
 
 DEPEND="
 	$(add_kdebase_dep libkcddb)
-	$(add_kdebase_dep libkcompactdisc)
 	media-libs/taglib
 	media-sound/cdparanoia
 "
