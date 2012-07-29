@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.82 2012/07/29 05:38:42 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.83 2012/07/29 05:54:17 hattya Exp $
 
 # @ECLASS: subversion.eclass
 # @MAINTAINER:
@@ -61,11 +61,12 @@ ESVN_OPTIONS="${ESVN_OPTIONS:-}"
 #
 # e.g. http://foo/trunk, svn://bar/trunk, svn://bar/branch/foo@1234
 #
-# supported protocols:
+# supported URI schemes:
 #   http://
 #   https://
 #   svn://
 #   svn+ssh://
+#   file://
 #
 # to peg to a specific revision, append @REV to the repo's uri
 ESVN_REPO_URI="${ESVN_REPO_URI:-}"
@@ -188,15 +189,17 @@ subversion_fetch() {
 
 	[[ -n "${ESVN_REVISION}" ]] && revision="${ESVN_REVISION}"
 
-	# check for the protocol
-	local protocol="${repo_uri%%:*}"
-	case "${protocol}" in
+	# check for the scheme
+	local scheme="${repo_uri%%:*}"
+	case "${scheme}" in
 		http|https)
 			;;
 		svn|svn+ssh)
 			;;
+		file)
+			;;
 		*)
-			die "${ESVN}: fetch from '${protocol}' is not yet implemented."
+			die "${ESVN}: fetch from '${scheme}' is not yet implemented."
 			;;
 	esac
 
