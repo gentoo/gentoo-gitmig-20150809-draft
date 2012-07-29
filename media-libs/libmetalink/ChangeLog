@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmetalink
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmetalink/ChangeLog,v 1.1 2011/08/07 17:35:40 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmetalink/ChangeLog,v 1.2 2012/07/29 12:56:15 blueness Exp $
+
+  29 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
+  libmetalink-0.0.3.ebuild:
+  Keyword ~ppc/~ppc64 for curl-7.27.0
 
 *libmetalink-0.0.3 (07 Aug 2011)
 
