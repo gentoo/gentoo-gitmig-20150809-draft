@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-1.8.5-r1.ebuild,v 1.7 2012/06/21 15:13:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-1.8.5-r1.ebuild,v 1.8 2012/07/29 17:56:15 armin76 Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://v6web.litech.org/radvd/dist/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 arm hppa ppc ~sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 arm hppa ppc sparc x86 ~x86-fbsd"
 IUSE="kernel_FreeBSD selinux"
 
 DEPEND="sys-devel/bison
