@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/lcdproc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.72 2012/05/10 09:33:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.73 2012/07/29 16:19:03 armin76 Exp $
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> lcdproc-0.5.2-r1.ebuild,
+  lcdproc-0.5.5.ebuild:
+  Drop sparc keywords
 
   10 May 2012; Pacho Ramos <pacho@gentoo.org> files/0.5.1-LCDd.initd,
   metadata.xml:
