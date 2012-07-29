@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mu/ChangeLog,v 1.9 2012/07/29 13:39:25 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mu/ChangeLog,v 1.10 2012/07/29 13:41:09 tomka Exp $
+
+  29 Jul 2012; Thomas Kahle <tomka@gentoo.org> metadata.xml:
+  metadata updated
 
 *mu-0.9.8.5 (29 Jul 2012)
 
