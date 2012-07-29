@@ -1,6 +1,9 @@
 
 
   29 Jul 2012; Anthony G. Basile <blueness@gentoo.org> elfix-0.5.2.ebuild:
+  Keyword ~ppc ~ppc64
+
+  29 Jul 2012; Anthony G. Basile <blueness@gentoo.org> elfix-0.5.2.ebuild:
   Force same PV for pypax as elfix
 
 *elfix-0.5.2 (29 Jul 2012)
