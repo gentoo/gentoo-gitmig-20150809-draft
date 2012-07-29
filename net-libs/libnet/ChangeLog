@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.94 2012/07/24 18:17:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.95 2012/07/29 17:13:48 armin76 Exp $
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> libnet-1.0.2a-r4.ebuild:
+  alpha/sparc stable wrt #418275
 
   24 Jul 2012; Jeroen Roovers <jer@gentoo.org> -libnet-1.1.5.ebuild,
   -files/libnet-1.1.5-darwin.patch:
