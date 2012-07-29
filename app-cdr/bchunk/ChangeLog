@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/bchunk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/bchunk/ChangeLog,v 1.25 2012/07/29 16:02:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/bchunk/ChangeLog,v 1.26 2012/07/29 17:51:22 jer Exp $
+
+  29 Jul 2012; Jeroen Roovers <jer@gentoo.org> -bchunk-1.2.0.ebuild:
+  Old.
 
   29 Jul 2012; Raúl Porcel <armin76@gentoo.org> bchunk-1.2.0-r1.ebuild:
   sparc stable wrt #394053
