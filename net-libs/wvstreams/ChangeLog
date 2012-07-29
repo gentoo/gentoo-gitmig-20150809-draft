@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/wvstreams
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.148 2012/07/03 19:34:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.149 2012/07/29 18:41:49 armin76 Exp $
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> wvstreams-4.6.1-r2.ebuild:
+  alpha/sparc stable wrt #421983
 
   03 Jul 2012; Jeroen Roovers <jer@gentoo.org> wvstreams-4.6.1-r2.ebuild:
   Stable for HPPA (bug #421983).
