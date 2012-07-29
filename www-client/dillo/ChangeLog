@@ -1,6 +1,9 @@
 # ChangeLog for www-client/dillo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.115 2012/05/28 23:44:15 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.116 2012/07/29 16:11:36 armin76 Exp $
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> dillo-3.0.2.ebuild:
+  alpha/sparc stable wrt #410023
 
   28 May 2012; Anthony G. Basile <blueness@gentoo.org> dillo-3.0.2.ebuild:
   Keyword ~mips
