@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-Statistics-Linux/Sys-Statistics-Linux-0.49.ebuild,v 1.3 2009/04/29 21:06:32 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-Statistics-Linux/Sys-Statistics-Linux-0.49.ebuild,v 1.4 2012/07/29 17:42:02 armin76 Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ inherit perl-module
 DESCRIPTION="Collect linux system statistics"
 
 SLOT="0"
-KEYWORDS="amd64 sparc x86"
+KEYWORDS="amd64 x86"
 IUSE="test"
 
 RDEPEND="dev-perl/YAML-Syck"
