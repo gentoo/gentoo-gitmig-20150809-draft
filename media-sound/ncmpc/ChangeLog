@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ncmpc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.73 2012/07/02 15:46:11 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.74 2012/07/29 16:51:24 armin76 Exp $
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> ncmpc-0.20.ebuild:
+  sparc stable wrt #417733
 
   02 Jul 2012; Christoph Mende <angelos@gentoo.org> ncmpc-0.20.ebuild:
   Depend on ncurses[unicode] with USE=nls (bug #424239)
