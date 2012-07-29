@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.80 2012/07/29 03:37:37 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.81 2012/07/29 04:26:10 hattya Exp $
 
 # @ECLASS: subversion.eclass
 # @MAINTAINER:
@@ -25,12 +25,8 @@ case "${EAPI:-0}" in
 		;;
 esac
 
-SUBVERSION_DEPEND="dev-vcs/subversion
+DEPEND="dev-vcs/subversion
 	net-misc/rsync"
-
-if [[ -z "${ESVN_DISABLE_DEPENDENCIES}" ]]; then
-	DEPEND="${SUBVERSION_DEPEND}"
-fi
 
 # @ECLASS-VARIABLE: ESVN_STORE_DIR
 # @DESCRIPTION:
@@ -138,12 +134,6 @@ ESVN_PATCHES="${ESVN_PATCHES:-}"
 #   export)
 #     don't export the working copy to S.
 ESVN_RESTRICT="${ESVN_RESTRICT:-}"
-
-# @ECLASS-VARIABLE: ESVN_DISABLE_DEPENDENCIES
-# @DESCRIPTION:
-# Set this variable to a non-empty value to disable the automatic inclusion of
-# Subversion in dependencies.
-ESVN_DISABLE_DEPENDENCIES="${ESVN_DISABLE_DEPENDENCIES:-}"
 
 # @ECLASS-VARIABLE: ESVN_OFFLINE
 # @DESCRIPTION:
