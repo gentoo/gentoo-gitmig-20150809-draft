@@ -1,5 +1,8 @@
 
 
+  29 Jul 2012; Anthony G. Basile <blueness@gentoo.org> pypax-0.5.2.ebuild:
+  Keyword ~ppc ~ppc64
+
 *pypax-0.5.2 (29 Jul 2012)
 
   29 Jul 2012; Anthony G. Basile <blueness@gentoo.org> -pypax-0.5.1.ebuild,
