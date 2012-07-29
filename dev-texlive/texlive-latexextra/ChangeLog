@@ -1,6 +1,9 @@
 # ChangeLog for dev-texlive/texlive-latexextra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latexextra/ChangeLog,v 1.67 2012/07/27 02:44:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latexextra/ChangeLog,v 1.68 2012/07/29 22:07:18 jer Exp $
+
+  29 Jul 2012; Jeroen Roovers <jer@gentoo.org> texlive-latexextra-2012.ebuild:
+  Marked ~hppa (bug #428248).
 
 *texlive-latexextra-2012 (27 Jul 2012)
 
