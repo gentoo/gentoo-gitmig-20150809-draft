@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmpdclient
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpdclient/ChangeLog,v 1.43 2012/04/04 07:29:51 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpdclient/ChangeLog,v 1.44 2012/07/29 16:02:32 armin76 Exp $
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> libmpdclient-2.7.ebuild:
+  sparc stable wrt #404791
 
   04 Apr 2012; Jeff Horelick <jdhore@gentoo.org> libmpdclient-2.7.ebuild:
   marked x86 per bug 404791
