@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyxdg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.87 2012/07/25 08:50:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.88 2012/07/29 16:56:42 ssuominen Exp $
+
+*pyxdg-0.22 (29 Jul 2012)
+
+  29 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> +pyxdg-0.22.ebuild:
+  Version bump.
 
 *pyxdg-0.21 (25 Jul 2012)
 
