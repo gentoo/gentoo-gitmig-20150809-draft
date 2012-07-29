@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.160 2012/07/28 17:01:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.161 2012/07/29 17:29:50 armin76 Exp $
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> thunderbird-10.0.5.ebuild,
+  thunderbird-10.0.6.ebuild, thunderbird-14.0.ebuild:
+  Drop alpha
 
   28 Jul 2012; Agostino Sarubbo <ago@gentoo.org> thunderbird-10.0.6.ebuild:
   Stable for amd64, wrt bug #427224
