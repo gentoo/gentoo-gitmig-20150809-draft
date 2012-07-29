@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/gxmessage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/ChangeLog,v 1.36 2012/05/22 20:58:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/ChangeLog,v 1.37 2012/07/29 16:43:57 armin76 Exp $
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> gxmessage-2.12.4.ebuild:
+  sparc stable wrt #391233
 
   22 May 2012; Brent Baude <ranger@gentoo.org> gxmessage-2.12.4.ebuild:
   Marking gxmessage-2.12.4 ppc for bug 391233
