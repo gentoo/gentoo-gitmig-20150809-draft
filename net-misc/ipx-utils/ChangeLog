@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ipx-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipx-utils/ChangeLog,v 1.20 2012/07/12 15:45:53 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipx-utils/ChangeLog,v 1.21 2012/07/29 17:19:50 armin76 Exp $
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> ipx-utils-1.1-r2.ebuild,
+  ipx-utils-1.1-r3.ebuild:
+  Drop s390/sparc keywords
 
   12 Jul 2012; Ian Stakenvicius <axs@gentoo.org> ipx-utils-1.1-r2.ebuild,
   ipx-utils-1.1-r3.ebuild:
