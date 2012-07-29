@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/fapg
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fapg/ChangeLog,v 1.29 2009/10/13 11:03:12 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fapg/ChangeLog,v 1.30 2012/07/29 18:40:19 armin76 Exp $
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> fapg-0.41.ebuild:
+  Drop sparc keywords
 
   13 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> fapg-0.41.ebuild:
   Revert back to ~ppc64 because this was stabled without it's dependencies.
