@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/silo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/ChangeLog,v 1.48 2012/05/24 05:12:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/ChangeLog,v 1.49 2012/07/29 16:26:30 armin76 Exp $
+
+*silo-1.4.14_p20120226 (29 Jul 2012)
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> +silo-1.4.14_p20120226.ebuild:
+  Verion bump, bug #412197, straight to stable
 
   24 May 2012; Mike Frysinger <vapier@gentoo.org> silo-1.4.14_p20100228.ebuild:
   Inherit eutils for epatch.
