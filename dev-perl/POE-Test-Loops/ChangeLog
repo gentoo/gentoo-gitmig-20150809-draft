@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/POE-Test-Loops
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE-Test-Loops/ChangeLog,v 1.30 2012/06/24 13:00:10 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE-Test-Loops/ChangeLog,v 1.31 2012/07/29 16:09:47 armin76 Exp $
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> POE-Test-Loops-1.035.ebuild,
+  POE-Test-Loops-1.312.0.ebuild, POE-Test-Loops-1.350.0.ebuild,
+  POE-Test-Loops-1.351.0.ebuild:
+  Drop sparc keywords
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
