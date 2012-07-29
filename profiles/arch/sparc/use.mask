@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.87 2012/06/14 07:58:34 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.88 2012/07/29 18:29:04 armin76 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -sparc
@@ -111,6 +111,7 @@ quvi
 aacplus
 systemd
 qt4
+soundcloud
 
 # No hardware to test
 ifp
