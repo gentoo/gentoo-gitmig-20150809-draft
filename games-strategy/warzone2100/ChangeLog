@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/warzone2100
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.73 2012/06/20 20:55:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.74 2012/07/29 21:18:01 hasufell Exp $
+
+  29 Jul 2012; Julian Ospald <hasufell@gentoo.org> warzone2100-2.3.9.ebuild,
+  +files/warzone2100-2.3.9-pkgconf.patch:
+  fix build with pkgconf wrt #428494
 
   20 Jun 2012; Michael Sterrett <mr_bones_@gentoo.org>
   warzone2100-2.3.9.ebuild:

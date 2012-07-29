@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/warzone2100-2.3.9.ebuild,v 1.6 2012/06/20 20:55:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/warzone2100-2.3.9.ebuild,v 1.7 2012/07/29 21:18:01 hasufell Exp $
 
 EAPI=2
-inherit autotools versionator games
+inherit autotools eutils versionator games
 
 MY_PV=$(get_version_component_range -2)
 VIDEOS_PV=2.2
@@ -45,6 +45,8 @@ src_prepare() {
 	sed -i \
 		-e 's/#top_builddir/top_builddir/' \
 		po/Makevars || die
+
+	epatch "${FILESDIR}"/${P}-pkgconf.patch
 
 	eautoreconf
 }
