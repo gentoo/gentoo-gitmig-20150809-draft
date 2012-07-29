@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/openra/openra-20120630.ebuild,v 1.2 2012/07/01 00:49:49 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/openra/openra-20120630.ebuild,v 1.3 2012/07/29 11:57:32 hasufell Exp $
 
 EAPI=4
 
@@ -73,12 +73,12 @@ pkg_postinst() {
 	games_pkg_postinst
 	gnome2_icon_cache_update
 
-	local myrenderer=$(usex cg Gl Cg)
-
-	elog "If you have problems starting the game consider switching"
-	elog "to Graphics.Renderer=${myrenderer} in openra*.desktop or manually"
-	elog "run:"
-	elog "${PN} Game.Mods=\$mod Graphics.Renderer=${myrenderer}"
+	if ! use cg ; then
+		elog "If you have problems starting the game consider switching"
+		elog "to Graphics.Renderer=Cg in openra*.desktop or manually"
+		elog "run:"
+		elog "${PN} Game.Mods=\$mod Graphics.Renderer=Cg"
+	fi
 }
 
 pkg_postrm() {
