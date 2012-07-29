@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xlockmore
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.116 2012/07/29 17:50:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.117 2012/07/29 21:55:40 jer Exp $
+
+  29 Jul 2012; Jeroen Roovers <jer@gentoo.org> -xlockmore-5.31.ebuild,
+  -xlockmore-5.37.ebuild:
+  Old.
 
   29 Jul 2012; Raúl Porcel <armin76@gentoo.org> xlockmore-5.38.ebuild:
   alpha/sparc stable wrt #414489
