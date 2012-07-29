@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.150 2012/07/28 15:52:23 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.151 2012/07/29 20:38:16 mr_bones_ Exp $
 
-# devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org -> games@gentoo.org
+# devlist: games@gentoo.org
 #
 # This is the games eclass for standardizing the install of games ...
 # you better have a *good* reason why you're *not* using games.eclass
@@ -128,7 +128,7 @@ gamesenv() {
 }
 
 games_pkg_setup() {
-	tc-export CC CXX
+	tc-export CC CXX LD AR RANLIB
 
 	enewgroup "${GAMES_GROUP}" 35
 	[[ ${GAMES_USER} != "root" ]] \
