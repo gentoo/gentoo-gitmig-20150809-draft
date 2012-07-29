@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmnd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/ChangeLog,v 1.52 2012/07/03 16:34:26 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/ChangeLog,v 1.53 2012/07/29 18:36:14 armin76 Exp $
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> wmnd-0.4.13.ebuild,
+  wmnd-0.4.16.ebuild:
+  Drop sparc keywords
 
   03 Jul 2012; Brent Baude <ranger@gentoo.org> wmnd-0.4.16.ebuild:
   Marking wmnd-0.4.16 ppc for bug 422403

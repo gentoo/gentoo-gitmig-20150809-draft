@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmtop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtop/ChangeLog,v 1.18 2012/07/03 16:35:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtop/ChangeLog,v 1.19 2012/07/29 18:36:49 armin76 Exp $
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> wmtop-0.9.0.ebuild,
+  wmtop-0.9.0-r1.ebuild:
+  Drop sparc keywords
 
   03 Jul 2012; Brent Baude <ranger@gentoo.org> wmtop-0.9.0-r1.ebuild:
   Marking wmtop-0.9.0-r1 ppc for bug 422405
