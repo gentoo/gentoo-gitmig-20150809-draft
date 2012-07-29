@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lzip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzip/ChangeLog,v 1.27 2012/06/07 18:49:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzip/ChangeLog,v 1.28 2012/07/29 17:08:20 armin76 Exp $
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> lzip-1.13.ebuild:
+  alpha/sparc stable wrt #418507
 
   07 Jun 2012; Brent Baude <ranger@gentoo.org> lzip-1.13.ebuild:
   Marking lzip-1.13 ppc for bug 418507
