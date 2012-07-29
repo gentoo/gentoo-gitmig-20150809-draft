@@ -1,6 +1,13 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.499 2012/07/28 15:34:31 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.500 2012/07/29 16:42:44 dilfridge Exp $
+
+  29 Jul 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  -files/cups-1.4.0-backend-https.patch, -files/cups-1.4.2-str3200.patch,
+  -files/cups-1.4.6-force-gnutls.patch,
+  -files/cups-1.4.6-serialize-gnutls.patch, -cups-1.4.8-r1.ebuild,
+  -files/cups-1.4.8-CVE-2011-3170.patch, -files/cups-1.4.8-largeimage.patch:
+  Drop cups-1.4 and support for sparc-fbsd
 
   28 Jul 2012; Anthony G. Basile <blueness@gentoo.org> cups-1.6.0.ebuild,
   cups-9999.ebuild:
