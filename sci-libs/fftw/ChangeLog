@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/fftw
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.127 2012/07/29 22:07:37 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.128 2012/07/29 23:38:25 ottxor Exp $
+
+*fftw-3.3.2 (29 Jul 2012)
+
+  29 Jul 2012; Christoph Junghans <ottxor@gentoo.org> +fftw-3.3.2.ebuild:
+  restore accidentally removed version
 
   29 Jul 2012; Sébastien Fabbro <bicatali@gentoo.org> -fftw-3.3.2.ebuild,
   fftw-2.1.5-r8.ebuild:
