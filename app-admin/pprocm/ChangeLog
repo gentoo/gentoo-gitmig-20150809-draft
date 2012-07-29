@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/pprocm
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pprocm/ChangeLog,v 1.9 2007/11/26 20:30:59 angelos Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pprocm/ChangeLog,v 1.10 2012/07/29 16:06:13 armin76 Exp $
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> pprocm-1.0-r1.ebuild:
+  Drop sparc keywords
 
   26 Nov 2007; Christoph Mende <angelos@gentoo.org> pprocm-1.0-r1.ebuild:
   Stable on amd64 wrt bug #200411

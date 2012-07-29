@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pprocm/pprocm-1.0-r1.ebuild,v 1.5 2008/06/16 14:18:40 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pprocm/pprocm-1.0-r1.ebuild,v 1.6 2012/07/29 16:06:13 armin76 Exp $
 
 MY_P="PProcM-"${PV}
 S=${WORKDIR}/${MY_P}
@@ -11,7 +11,7 @@ SRC_URI="http://www.fusedcreations.com/PProcM/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 sparc x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="dev-perl/POE
