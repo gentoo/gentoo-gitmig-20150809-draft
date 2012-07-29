@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r8.ebuild,v 1.11 2011/06/24 10:58:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r8.ebuild,v 1.12 2012/07/29 22:07:37 bicatali Exp $
 
-EAPI="3"
+EAPI=4
 
 inherit autotools eutils flag-o-matic fortran-2 toolchain-funcs
 
@@ -17,7 +17,7 @@ RDEPEND="${DEPEND}"
 
 SLOT="2.1"
 LICENSE="GPL-2"
-IUSE="doc float fortran mpi openmp threads"
+IUSE="doc float fortran mpi openmp threads static-libs"
 
 KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 s390 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 
@@ -68,6 +68,7 @@ src_prepare() {
 	cd "${WORKDIR}"
 	cp -R ${P} ${P}-double
 	mv ${P} ${P}-single
+	ln -s ${P}-single ${P}
 }
 
 src_configure() {
@@ -77,6 +78,7 @@ src_configure() {
 		--enable-vec-recurse
 		$(use_enable fortran)
 		$(use_enable mpi)
+		$(use_enable static-libs static)
 		$(use_enable x86 i386-hacks)"
 	if use openmp; then
 		myconf="${myconf}
@@ -106,8 +108,7 @@ src_compile() {
 	for dir in "${S}-single" "${S}-double"
 	do
 		einfo "Running compilation in ${dir}"
-		cd ${dir}
-		emake || die "emake failed in ${dir}"
+		emake -C ${dir}
 	done
 }
 
@@ -116,8 +117,7 @@ src_test() {
 	for dir in "${S}-single" "${S}-double"
 	do
 		einfo "Running tests in ${dir}"
-		cd ${dir}
-		emake -j1 check || die "test failed in ${dir}"
+		emake -C ${dir} -j1 check
 	done
 }
 
@@ -128,13 +128,12 @@ src_install () {
 	local dir
 	for dir in "${S}-single" "${S}-double"
 	do
-		cd ${dir}
-		emake DESTDIR="${D}" install || die "installation failed in ${dir}"
+		emake DESTDIR="${D}" -C ${dir} install
 	done
 
 	insinto /usr/include
-	doins fortran/fftw_f77.i || die "doins failed"
-	dodoc AUTHORS ChangeLog NEWS TODO README README.hacks || die "dodoc failed"
+	doins fortran/fftw_f77.i
+	dodoc AUTHORS ChangeLog NEWS TODO README README.hacks
 	use doc && dohtml doc/*
 
 	if use float; then
