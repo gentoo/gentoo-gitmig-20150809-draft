@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.256 2012/07/27 04:49:49 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.257 2012/07/29 17:10:00 armin76 Exp $
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org>
+  audacious-plugins-3.2.2-r1.ebuild:
+  alpha/sparc stable wrt #417143
 
 *audacious-plugins-3.3 (27 Jul 2012)
 
