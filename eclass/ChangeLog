@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.357 2012/07/28 15:52:23 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.358 2012/07/29 03:37:36 hattya Exp $
+
+  29 Jul 2012; Akinori Hattori <hattya@gentoo.org> subversion.eclass:
+  remove DESCRIPTION variable wrt bug #428304
 
   28 Jul 2012; Julian Ospald <hasufell@gentoo.org> games.eclass:
   omg, we checked the dirs in ${S} instead of ${D} which accidentially

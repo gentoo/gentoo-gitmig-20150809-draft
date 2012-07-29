@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.79 2012/06/10 11:31:12 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.80 2012/07/29 03:37:37 hattya Exp $
 
 # @ECLASS: subversion.eclass
 # @MAINTAINER:
@@ -24,8 +24,6 @@ case "${EAPI:-0}" in
 		EXPORT_FUNCTIONS src_unpack src_prepare pkg_preinst
 		;;
 esac
-
-DESCRIPTION="Based on the ${ECLASS} eclass"
 
 SUBVERSION_DEPEND="dev-vcs/subversion
 	net-misc/rsync"
