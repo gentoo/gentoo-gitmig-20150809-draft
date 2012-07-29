@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.60 2012/07/20 15:42:00 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.61 2012/07/29 18:07:35 armin76 Exp $
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> mplayer2-2.0_p20120309.ebuild:
+  alpha/arm/ia64/sparc stable wrt #416359
 
   20 Jul 2012; Luca Barbato <lu_zero@gentoo.org> mplayer2-9999.ebuild:
   Update to upstream changes
