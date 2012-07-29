@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gentoo-artwork
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/ChangeLog,v 1.30 2012/06/29 12:59:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/ChangeLog,v 1.31 2012/07/29 18:17:01 armin76 Exp $
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org>
+  gentoo-artwork-0.4.2-r1.ebuild:
+  alpha/sparc stable wrt #421329
 
   29 Jun 2012; Brent Baude <ranger@gentoo.org> gentoo-artwork-0.4.2-r1.ebuild:
   Marking gentoo-artwork-0.4.2-r1 ppc for bug 421329
