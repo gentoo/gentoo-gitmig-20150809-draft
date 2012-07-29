@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/arel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/arel/ChangeLog,v 1.29 2012/05/12 18:00:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/arel/ChangeLog,v 1.30 2012/07/29 07:20:14 graaff Exp $
+
+  29 Jul 2012; Hans de Graaff <graaff@gentoo.org> -arel-2.2.1-r1.ebuild,
+  -arel-3.0.0.ebuild, -arel-3.0.2.ebuild:
+  Cleanup.
 
   12 May 2012; Diego E. Pettenò <flameeyes@gentoo.org> arel-2.0.10-r1.ebuild:
   Add Ruby 1.9 to the supported list.
