@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ess-5.14.ebuild,v 1.4 2012/06/29 12:44:26 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ess-5.14.ebuild,v 1.5 2012/07/29 18:07:57 armin76 Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://ess.r-project.org/downloads/ess/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ppc ~sparc x86 ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE=""
 
 DEPEND="app-text/texi2html
