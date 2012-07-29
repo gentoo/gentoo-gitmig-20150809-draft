@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.202 2012/07/26 07:42:24 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.203 2012/07/29 03:18:52 blueness Exp $
+
+  29 Jul 2012; Anthony G. Basile <blueness@gentoo.org> icu-49.1.2.ebuild:
+  Stable ppc/ppc64, bug #428074
 
   26 Jul 2012; Jeff Horelick <jdhore@gentoo.org> icu-49.1.2.ebuild:
   marked x86 per bug 428074
