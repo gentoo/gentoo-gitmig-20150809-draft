@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/frobby/frobby-0.9.0.ebuild,v 1.5 2012/07/04 06:27:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/frobby/frobby-0.9.0.ebuild,v 1.6 2012/07/30 12:28:16 tomka Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ S="${WORKDIR}/frobby_v${PV}"
 
 src_prepare() {
 	epatch \
-		"${FILESDIR}/${PN}-cflags-no-strip.patch" \
+		"${FILESDIR}/${PN}-cflags-no-strip-soname.patch" \
 		"${FILESDIR}/${PN}-gcc-4.7.patch"
 	# CXXFLAGS are called CPPFLAGS
 	sed "s/CPPFLAGS/CXXFLAGS/" -i Makefile || die
@@ -33,12 +33,15 @@ src_compile() {
 	# Makefile uses the value of CXX which may be defined in /etc/env,
 	# breaking cross-compile.
 	CXX=$(tc-getCXX) emake
-	CXX=$(tc-getCXX) emake library
+	MODE=shared CXX=$(tc-getCXX) emake library
+	use static-libs && CXX=$(tc-getCXX) emake library
 	use doc && emake docPdf
 }
 
 src_install() {
 	dobin bin/frobby
+	dolib.so bin/libfrobby.so
+	dosym libfrobby.so "${EPREFIX}/usr/$(get_libdir)/libfrobby.so.0"
 	use static-libs && dolib.a bin/libfrobby.a
 
 	insinto /usr/include
