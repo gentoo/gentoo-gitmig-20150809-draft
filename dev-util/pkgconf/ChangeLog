@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pkgconf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.36 2012/07/30 00:09:48 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.37 2012/07/30 13:43:38 blueness Exp $
+
+  30 Jul 2012; Anthony G. Basile <blueness@gentoo.org> pkgconf-0.8.4.ebuild:
+  Stable ppc ppc64, bug #427680
 
   30 Jul 2012; Jeff Horelick <jdhore@gentoo.org> pkgconf-0.8.4.ebuild:
   marked x86 per bug 427680
