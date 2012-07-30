@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/iniparser
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/iniparser/ChangeLog,v 1.26 2012/07/28 00:29:49 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/iniparser/ChangeLog,v 1.27 2012/07/30 11:42:05 blueness Exp $
+
+  30 Jul 2012; Anthony G. Basile <blueness@gentoo.org> iniparser-3.1.ebuild:
+  Stable arm, bug #428152
 
   28 Jul 2012; Anthony G. Basile <blueness@gentoo.org> iniparser-3.1.ebuild:
   Stable ppc/ppc64, bug #428152
