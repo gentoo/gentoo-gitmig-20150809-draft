@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bcrypt-ruby/bcrypt-ruby-3.0.1.ebuild,v 1.10 2012/05/01 18:24:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bcrypt-ruby/bcrypt-ruby-3.0.1.ebuild,v 1.11 2012/07/30 18:33:11 graaff Exp $
 
 EAPI=2
 
 USE_RUBY="ruby18 ruby19 ree18"
 
-RUBY_FAKEGEM_TASK_TEST="spec"
+RUBY_FAKEGEM_RECIPE_TEST="rspec"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="CHANGELOG README.md"
@@ -21,10 +21,9 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~
 SLOT="0"
 IUSE=""
 
-ruby_add_bdepend "test? ( dev-ruby/rspec:2 )"
-
 all_ruby_prepare() {
 	rm Gemfile || die
+	sed -i -e '/git ls-files/d' bcrypt-ruby.gemspec || die
 }
 
 each_ruby_configure() {
