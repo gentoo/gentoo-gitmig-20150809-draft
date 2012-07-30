@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-lcdfilter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-lcdfilter/ChangeLog,v 1.1 2012/07/29 15:46:07 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-lcdfilter/ChangeLog,v 1.2 2012/07/30 07:13:22 yngwin Exp $
+
+  30 Jul 2012; Ben de Groot <yngwin@gentoo.org> eselect-lcdfilter-1.ebuild:
+  Improve description, add freetype[infinality] as PDEPEND
 
 *eselect-lcdfilter-1 (29 Jul 2012)
 
