@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.505 2012/07/29 04:59:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.506 2012/07/30 06:28:15 jdhore Exp $
+
+  30 Jul 2012; Jeff Horelick <jdhore@gentoo.org> emacs-24.1.ebuild:
+  marked x86 per bug 428212
 
   29 Jul 2012; Jeroen Roovers <jer@gentoo.org> emacs-24.1.ebuild:
   Stable for HPPA (bug #428212).
