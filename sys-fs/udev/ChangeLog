@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.697 2012/07/30 22:31:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.698 2012/07/30 22:36:59 ssuominen Exp $
+
+  30 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> udev-171-r6.ebuild,
+  metadata.xml:
+  Move inherit around in -171-r6.ebuild and remove unused USE="acl" from
+  metadata.xml to silence repoman.
 
   30 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> -files/net-104-r10.sh,
   -files/156/udev.confd, -files/udev-110-root-link-1.diff,

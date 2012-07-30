@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-171-r6.ebuild,v 1.7 2012/07/15 17:38:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-171-r6.ebuild,v 1.8 2012/07/30 22:36:59 ssuominen Exp $
 
 EAPI=4
 
@@ -15,10 +15,10 @@ if [[ ${PV} == "9999" ]]
 then
 	EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/hotplug/udev.git"
 	EGIT_BRANCH="master"
-	vcs="git-2 autotools"
+	inherit autotools git-2
 fi
 
-inherit ${vcs} eutils flag-o-matic multilib toolchain-funcs linux-info systemd libtool
+inherit eutils flag-o-matic multilib toolchain-funcs linux-info systemd libtool
 
 if [[ ${PV} != "9999" ]]
 then
