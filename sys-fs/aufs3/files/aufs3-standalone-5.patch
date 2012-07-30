@@ -1,10 +1,10 @@
-aufs3.x-rcN standalone patch
+aufs3.5 standalone patch
 
 diff --git a/fs/file_table.c b/fs/file_table.c
-index b3fc4d6..1bcb78d 100644
+index a305d9e..6a768be 100644
 --- a/fs/file_table.c
 +++ b/fs/file_table.c
-@@ -37,6 +37,7 @@ struct files_stat_struct files_stat = {
+@@ -35,6 +35,7 @@ struct files_stat_struct files_stat = {
  };
  
  DEFINE_LGLOCK(files_lglock);
@@ -12,7 +12,7 @@ index b3fc4d6..1bcb78d 100644
  
  /* SLAB cache for file structures */
  static struct kmem_cache *filp_cachep __read_mostly;
-@@ -509,6 +510,8 @@ void file_sb_list_del(struct file *file)
+@@ -441,6 +442,8 @@ void file_sb_list_del(struct file *file)
  	}
  }
  
@@ -22,7 +22,7 @@ index b3fc4d6..1bcb78d 100644
  
  /*
 diff --git a/fs/inode.c b/fs/inode.c
-index 1c14ec7..92b8a01 100644
+index 7f772fd..e789d2f 100644
 --- a/fs/inode.c
 +++ b/fs/inode.c
 @@ -56,6 +56,7 @@ static struct hlist_head *inode_hashtable __read_mostly;
@@ -41,8 +41,20 @@ index 1c14ec7..92b8a01 100644
  
  /**
   *	touch_atime	-	update the access time
+diff --git a/fs/namei.c b/fs/namei.c
+index 18c9782..f09edf3 100644
+--- a/fs/namei.c
++++ b/fs/namei.c
+@@ -1868,6 +1868,7 @@ struct dentry *lookup_hash(struct nameidata *nd)
+ {
+ 	return __lookup_hash(&nd->last, nd->path.dentry, nd);
+ }
++EXPORT_SYMBOL(lookup_hash);
+ 
+ /**
+  * lookup_one_len - filesystem helper to lookup single pathname component
 diff --git a/fs/namespace.c b/fs/namespace.c
-index c53d338..08b2f0a 100644
+index 1e4a5fe..06aa768 100644
 --- a/fs/namespace.c
 +++ b/fs/namespace.c
 @@ -50,6 +50,7 @@ EXPORT_SYMBOL_GPL(fs_kobj);
@@ -53,7 +65,7 @@ index c53d338..08b2f0a 100644
  
  static inline unsigned long hash(struct vfsmount *mnt, struct dentry *dentry)
  {
-@@ -1344,6 +1345,7 @@ int iterate_mounts(int (*f)(struct vfsmount *, void *), void *arg,
+@@ -1341,6 +1342,7 @@ int iterate_mounts(int (*f)(struct vfsmount *, void *), void *arg,
  	}
  	return 0;
  }
@@ -123,7 +135,7 @@ index f104d56..54f36db 100644
  static int fsnotify_mark_destroy(void *ignored)
  {
 diff --git a/fs/open.c b/fs/open.c
-index 1e914b3..8959129 100644
+index 1540632..2463289 100644
 --- a/fs/open.c
 +++ b/fs/open.c
 @@ -60,6 +60,7 @@ int do_truncate(struct dentry *dentry, loff_t length, unsigned int time_attrs,
