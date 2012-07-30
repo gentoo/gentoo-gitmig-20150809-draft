@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-1.14.ebuild,v 1.1 2012/07/30 20:10:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-1.14.ebuild,v 1.2 2012/07/30 20:12:02 ssuominen Exp $
 
 EAPI=3
 inherit cmake-utils
@@ -36,6 +36,6 @@ src_configure() {
 		$(cmake-utils_use portaudio)
 		$(cmake-utils_use pulseaudio)
 		)
-	
+
 	cmake-utils_src_configure
 }
