@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/suse-build-9999.ebuild,v 1.3 2012/03/07 13:36:56 miska Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/suse-build-9999.ebuild,v 1.4 2012/07/30 13:48:45 miska Exp $
 
 EAPI=4
 
@@ -48,5 +48,5 @@ src_install() {
 	find share/man/man1 -type f | while read i; do
 		mv "${i}" "${i/man1\//man1/suse-}"
 	done
-	find . -type f sed -i 's|/usr/lib/build|/usr/share/suse-build|' {} +
+	find . -type f -exec sed -i 's|/usr/lib/build|/usr/share/suse-build|' {} +
 }
