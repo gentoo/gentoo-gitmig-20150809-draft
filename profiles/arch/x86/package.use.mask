@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.96 2012/07/29 16:10:35 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.97 2012/07/30 05:33:58 yngwin Exp $
 
 # This file requires >=portage-2.1.1
 
 # Ben de Groot <yngwin@gentoo.org> (30 Jul 2012)
 # dependency keyworded here, masked in base
-media-libs/freetype -lcdfilter
+media-libs/freetype -infinality
 
 # Anthony G. Basile <blueness@gentoo.org> (12 Jul 2012)
 # sha512 support in cyassl is broken on x86

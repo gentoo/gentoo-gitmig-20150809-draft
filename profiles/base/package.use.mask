@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.380 2012/07/29 16:10:35 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.381 2012/07/30 05:33:58 yngwin Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 
 # Ben de Groot <yngwin@gentoo.org> (30 Jul 2012)
-# Dependency not yet keyworded
-media-libs/freetype lcdfilter
+# fontconfig-infinality dependency not yet keyworded on most arches
+media-libs/freetype infinality
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (26 Jul 2012)
 # Prevents install of gl.pc which breaks building of many packages, bug #428164

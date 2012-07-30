@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.137 2012/07/29 16:10:35 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.138 2012/07/30 05:33:58 yngwin Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -20,7 +20,7 @@
 
 # Ben de Groot <yngwin@gentoo.org> (30 Jul 2012)
 # dependency keyworded here, masked in base
-media-libs/freetype -lcdfilter
+media-libs/freetype -infinality
 
 # Rick Farina <zerochaos@gentoo.org> (09 July 2012)
 # limited testing of net-libs/libbtbb is all this mask is needed for
