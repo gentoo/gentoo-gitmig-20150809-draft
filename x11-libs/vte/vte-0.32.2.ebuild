@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.32.2.ebuild,v 1.1 2012/06/16 10:48:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.32.2.ebuild,v 1.2 2012/07/30 13:51:56 ottxor Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -13,7 +13,7 @@ HOMEPAGE="http://git.gnome.org/browse/vte"
 
 LICENSE="LGPL-2"
 SLOT="2.90"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x64-solaris ~x86-solaris ~alpha"
 IUSE="debug doc glade +introspection"
 
 PDEPEND="x11-libs/gnome-pty-helper"
@@ -43,6 +43,14 @@ pkg_setup() {
 		$(use_enable debug)
 		$(use_enable glade glade-catalogue)
 		$(use_enable introspection)"
+
+	if [[ ${CHOST} == *-interix* ]]; then
+		G2CONF="${G2CONF} --disable-Bsymbolic"
+
+		# interix stropts.h is empty...
+		export ac_cv_header_stropts_h=no
+	fi
+
 	DOCS="AUTHORS ChangeLog HACKING NEWS README"
 }
 
