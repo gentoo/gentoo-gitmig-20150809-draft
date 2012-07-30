@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/cfengine
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.157 2012/07/29 16:49:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.158 2012/07/30 14:14:10 blueness Exp $
+
+  30 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
+  cfengine-2.2.10-r4.ebuild, cfengine-3.2.4.ebuild:
+  Stable ppc, keyword ~ppc64, bug #416433
 
   29 Jul 2012; Raúl Porcel <armin76@gentoo.org> cfengine-2.2.10-r4.ebuild,
   cfengine-3.2.4.ebuild:
