@@ -1,6 +1,9 @@
 # ChangeLog for sec-policy/selinux-cups
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-cups/ChangeLog,v 1.22 2012/07/26 13:07:39 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-cups/ChangeLog,v 1.23 2012/07/30 16:25:37 swift Exp $
+
+  30 Jul 2012; <swift@gentoo.org> selinux-cups-2.20120215-r14.ebuild:
+  Stabilization of revision 14 of the SELinux policy modules
 
 *selinux-cups-2.20120215-r15 (26 Jul 2012)
 
