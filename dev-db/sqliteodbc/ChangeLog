@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/sqliteodbc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqliteodbc/ChangeLog,v 1.29 2012/06/04 07:04:26 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqliteodbc/ChangeLog,v 1.30 2012/07/30 07:51:50 patrick Exp $
+
+*sqliteodbc-0.96 (30 Jul 2012)
+
+  30 Jul 2012; Patrick Lauer <patrick@gentoo.org> +sqliteodbc-0.96.ebuild:
+  Bump
 
   04 Jun 2012; Zac Medico <zmedico@gentoo.org> sqliteodbc-0.87.ebuild,
   sqliteodbc-0.94.ebuild:
@@ -124,4 +129,3 @@
 
   22 Apr 2005; Anders Rune Jensen <arj@gentoo.org> +sqliteodbc-0.64.ebuild:
   New package. Fixes #56259.
-
