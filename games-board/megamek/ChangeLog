@@ -1,6 +1,11 @@
 # ChangeLog for games-board/megamek
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/megamek/ChangeLog,v 1.19 2010/02/27 16:17:20 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/megamek/ChangeLog,v 1.20 2012/07/30 21:50:21 calchan Exp $
+
+*megamek-0.34.10 (29 Jul 2012)
+
+  29 Jul 2012; Denis Dupeyron <calchan@gentoo.org> +megamek-0.34.10.ebuild:
+  Version bump.
 
   27 Feb 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   megamek-0.34.9.ebuild:
