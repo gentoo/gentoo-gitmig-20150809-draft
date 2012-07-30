@@ -1,6 +1,39 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.695 2012/07/30 17:24:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.696 2012/07/30 22:25:27 ssuominen Exp $
+
+  30 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> -files/net-104-r10.sh,
+  -files/156/udev.confd, -files/udev-110-root-link-1.diff,
+  -files/156/udev.initd, -files/udev-postmount-initd-111-r2,
+  -files/156/udev-postmount.initd, -files/udev-stop-111-r2.sh,
+  -files/156/udev-start.sh, -files/udev-start-113-r2.sh,
+  -files/156/40-gentoo.rules, -files/156/udev-stop.sh,
+  -files/udev-start-114-r1.sh, -files/161/40-gentoo.rules,
+  -files/udev-114-root-link-2.diff, -files/161/90-network.rules,
+  -files/modprobe-114.sh, -files/161/shell-compat-KV.sh,
+  -files/modprobe-115.sh, -files/161/shell-compat-addon.sh,
+  -files/net-118-r1.sh, -files/161/udev.confd, -files/shell-compat-118-r2.sh,
+  -files/161/udev.initd, -files/udev-start-118-r2.sh,
+  -files/161/udev-dev-tarball.initd, -files/udev-stop-118-r2.sh,
+  -files/161/udev-mount.initd, -files/shell-compat-118-r3.sh,
+  -files/156/90-network.rules, -files/161/udev-postmount.initd,
+  -files/udev-start-122-r1.sh, -files/161/udev-start.sh,
+  -files/udev-122-rules-update.diff, -files/161/udev-stop.sh,
+  -files/udev-124-cdrom-autoclose-bug.diff, -files/156/shell-compat-KV.sh,
+  -files/164/40-gentoo.rules, -files/udev-124-encoding-overflow.patch,
+  -files/156/shell-compat-addon.sh, -files/164/90-network.rules,
+  -files/udev-124-netlink-owner-check.patch, -files/156/udev-dev-tarball.initd,
+  -files/164/shell-compat-KV.sh,
+  -files/udev-167-revert-disable-all-extras.patch, -files/156/udev-mount.initd,
+  -files/164/shell-compat-addon.sh, -files/udev-175-zlib.patch,
+  -files/164/udev.confd, -files/164/udev-dev-tarball.initd,
+  -udev-124-r1.ebuild, -files/164/udev.initd, -files/164/udev-mount.initd,
+  -udev-124-r2.ebuild, -files/164/udev-postmount.initd, -udev-114.ebuild,
+  -udev-141.ebuild, -files/164/udev-start.sh, -udev-115-r1.ebuild,
+  -udev-182-r2.ebuild, -files/164/udev-stop.sh, -udev-119.ebuild,
+  -udev-182-r3.ebuild, -files/udev.conf.post_113, -files/udev.conf.post_114,
+  -files/udev.confd, -files/udev.initd, -files/write_root_link_rule:
+  old
 
   30 Jul 2012; Mike Frysinger <vapier@gentoo.org> udev-186.ebuild:
   Add m68k/s390 keywords #397769 by William Hubbs.
