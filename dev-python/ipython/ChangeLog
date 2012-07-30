@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/ipython
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.95 2012/06/28 11:31:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.96 2012/07/30 22:57:45 bicatali Exp $
+
+*ipython-0.13 (30 Jul 2012)
+
+  30 Jul 2012; Sébastien Fabbro <bicatali@gentoo.org> +ipython-0.13.ebuild,
+  metadata.xml:
+  Version bump
 
   28 Jun 2012; Justin Lecher <jlec@gentoo.org> ipython-0.12-r1.ebuild,
   ipython-0.12.1.ebuild, metadata.xml:
@@ -408,4 +414,3 @@
 
   13 Jun 2003; Alastair Tse <liquidx@gentoo.org> ipython-0.4.0.ebuild:
   New Package. Ebuild Submitted by John Landahl <john@landahl.org>.
-
