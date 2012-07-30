@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-webkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.165 2012/07/19 21:24:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.166 2012/07/30 05:20:09 pesa Exp $
+
+  30 Jul 2012; Davide Pesavento <pesa@gentoo.org>
+  +files/4.8.2-javascriptcore-x32.patch, qt-webkit-4.8.2.ebuild:
+  Add patch for x32 support in JavaScriptCore (bug 424049).
 
   19 Jul 2012; Markus Meier <maekke@gentoo.org> qt-webkit-4.8.2.ebuild:
   arm stable, bug #424625
