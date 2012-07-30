@@ -1,3 +1,5 @@
+http://bugs.gentoo.org/261604
+
 --- test/OfficialSuite.cpp
 +++ test/OfficialSuite.cpp
 @@ -21,6 +21,7 @@
