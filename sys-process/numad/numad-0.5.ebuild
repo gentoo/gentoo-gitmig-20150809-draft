@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/numad/numad-0.5.ebuild,v 1.2 2012/06/14 05:28:06 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/numad/numad-0.5.ebuild,v 1.3 2012/07/30 06:39:55 jdhore Exp $
 
 EAPI=4
 
@@ -9,10 +9,10 @@ inherit linux-info
 if [[ ${PV} = *9999* ]]; then
 	inherit git-2
 	EGIT_REPO_URI="git://git.fedorahosted.org/numad.git"
-	KEYWORDS="-arm -s390"
+	KEYWORDS="-arm -s390 x86"
 else
 	SRC_URI="http://git.fedorahosted.org/git/?p=numad.git;a=snapshot;h=334278ff3d774d105939743436d7378a189e8693;sf=tbz2 -> numad-0.5-334278f.tar.bz2"
-	KEYWORDS="~amd64 ~x86 -arm -s390"
+	KEYWORDS="~amd64 -arm -s390 x86"
 	S="${WORKDIR}/${PN}-334278f"
 fi
 
