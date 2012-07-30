@@ -1,0 +1,19 @@
+From: Julian Ospald <hasufell@gentoo.org>
+Date: Mon Jul 30 07:06:54 UTC 2012
+Subject: build system
+
+arguments to AR would be overwritten if we export AR
+
+--- mk/jam/unix.jam
++++ mk/jam/unix.jam
+@@ -45,4 +45,10 @@
+     $(LINK) -o $(<) $(>) $(EXTRAOBJECTS) $(NEEDLIBS) $(LIBS)
+ }
+ 
++# jam Archive action seems to include the arguments which will break our AR export
++actions Archive
++{
++  $(AR) ru $(<) $(>)
++}
++
+ 

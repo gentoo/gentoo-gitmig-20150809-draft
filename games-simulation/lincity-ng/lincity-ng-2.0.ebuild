@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity-ng/lincity-ng-2.0.ebuild,v 1.8 2012/06/15 15:49:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity-ng/lincity-ng-2.0.ebuild,v 1.9 2012/07/30 08:23:11 hasufell Exp $
 
 EAPI=2
 inherit eutils multiprocessing games
@@ -26,6 +26,10 @@ RDEPEND="virtual/opengl
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	dev-util/ftjam"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-build.patch
+}
 
 src_compile() {
 	jam -q -dx -j $(makeopts_jobs) || die "jam failed"
