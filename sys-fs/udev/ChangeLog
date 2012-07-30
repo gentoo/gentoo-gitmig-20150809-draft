@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.694 2012/07/29 22:14:33 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.695 2012/07/30 17:24:24 vapier Exp $
+
+  30 Jul 2012; Mike Frysinger <vapier@gentoo.org> udev-186.ebuild:
+  Add m68k/s390 keywords #397769 by William Hubbs.
 
   29 Jul 2012; William Hubbs <williamh@gentoo.org> udev-186.ebuild:
   Fix the build when a cross emerge is used, thanks to Nick Bowler for the
