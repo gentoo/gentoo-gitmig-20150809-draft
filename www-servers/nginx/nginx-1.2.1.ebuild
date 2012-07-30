@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.2.1.ebuild,v 1.4 2012/06/12 13:08:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.2.1.ebuild,v 1.5 2012/07/30 06:29:23 hollow Exp $
 
 EAPI="4"
 
@@ -111,6 +111,7 @@ done
 
 CDEPEND="
 	pcre? ( >=dev-libs/libpcre-4.2 )
+	pcre-jit? ( >=dev-libs/libpcre-8.20[jit] )
 	selinux? ( sec-policy/selinux-nginx )
 	ssl? ( dev-libs/openssl )
 	http-cache? ( userland_GNU? ( dev-libs/openssl ) )
