@@ -1,6 +1,9 @@
-# ChangeLog for sys-apps/seabios
+# ChangeLog for sys-firmware/seabios
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/ChangeLog,v 1.1 2012/07/28 22:16:03 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/ChangeLog,v 1.2 2012/07/30 05:45:56 jdhore Exp $
+
+  30 Jul 2012; Jeff Horelick <jdhore@gentoo.org> seabios-1.7.0.ebuild:
+  marked x86 per bug 427590
 
   26 Jul 2012; Richard Yao <ryao@gentoo.org> seabios-1.7.0.ebuild:
   Keyword ~amd64-fbsd and ~x86-fbsd
