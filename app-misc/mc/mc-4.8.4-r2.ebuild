@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.8.4-r1.ebuild,v 1.1 2012/07/21 15:59:49 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.8.4-r2.ebuild,v 1.1 2012/07/30 13:00:36 polynomial-c Exp $
 
 EAPI=4
 
@@ -51,7 +51,9 @@ done
 src_prepare() {
 	strip-linguas ${LANGS}
 
-	epatch "${FILESDIR}"/${P}-Ticket-2851-fixes-of-ext.d-scripts.patch
+	epatch "${FILESDIR}"/${P}-Ticket-2851-fixes-of-ext.d-scripts.patch \
+		"${FILESDIR}"/${P}-Ticket-2853-fileposition-in-mcedit.patch \
+		"${FILESDIR}"/${P}-Ticket-2858-htmlview-segfault.patch
 }
 
 S=${WORKDIR}/${MY_P}
