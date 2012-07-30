@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.344 2012/07/29 18:04:56 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.345 2012/07/30 05:35:32 yngwin Exp $
+
+  30 Jul 2012; Ben de Groot <yngwin@gentoo.org> freetype-2.4.10-r1.ebuild,
+  metadata.xml:
+  Change lcdfilter useflag to more precise infinality useflag (bug #428548)
 
 *freetype-2.4.10-r1 (29 Jul 2012)
 

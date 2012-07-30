@@ -9,8 +9,8 @@
 	<flag name="fontforge">Install internal headers required for TrueType
 	debugger in <pkg>media-gfx/fontforge</pkg> (built with
 	USE=truetype-debugger)</flag>
+	<flag name="infinality">Enable infinality options for improved LCD filtering</flag>
     <flag name="kpathsea">Enable TeX support (ttf2pk and ttf2pfb)</flag>
-	<flag name="lcdfilter">Enable infinality LCD filtering support</flag>
     <flag name="utils">Install utilities and examples from ft2demos</flag>
   </use>
 </pkgmetadata>
