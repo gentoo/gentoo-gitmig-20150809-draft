@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/scl011-bin/scl011-bin-2.06.ebuild,v 1.2 2012/05/03 18:16:38 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/scl011-bin/scl011-bin-2.06.ebuild,v 1.3 2012/07/30 05:02:06 flameeyes Exp $
 
 EAPI=4
 
@@ -23,6 +23,8 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}"
 
 RESTRICT="mirror bindist"
+
+QA_PREBUILT="*/libSCL011.so.2.06"
 
 src_install() {
 	local INSTALL_DIR=`$(tc-getPKG_CONFIG) libpcsclite --variable=usbdropdir`

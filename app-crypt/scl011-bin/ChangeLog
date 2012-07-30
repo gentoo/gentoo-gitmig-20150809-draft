@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/scl011-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/scl011-bin/ChangeLog,v 1.2 2012/05/03 18:16:38 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/scl011-bin/ChangeLog,v 1.3 2012/07/30 05:02:06 flameeyes Exp $
+
+  30 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> scl011-bin-2.06.ebuild:
+  Add QA_PREBUILT to avoid cflags warnings.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> scl011-bin-2.06.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -11,4 +14,3 @@
   +files/92_pcscd_scl011-bin.rules, +scl011-bin-2.06.ebuild, +metadata.xml:
   Import of SCM Micro scl011-bin driver, ebuild proxy-maintained by Christoph
   Brill in bug #358119.
-
