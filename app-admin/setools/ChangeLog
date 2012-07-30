@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/setools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/ChangeLog,v 1.77 2012/07/09 20:40:04 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/ChangeLog,v 1.78 2012/07/30 16:33:57 swift Exp $
+
+  30 Jul 2012; <swift@gentoo.org> setools-3.3.7-r3.ebuild:
+  Stabilization
 
   09 Jul 2012; <swift@gentoo.org> setools-3.3.7-r3.ebuild:
   Fixing bug #424581 - Work around mkdir_p changes in automake until 1.12 is
