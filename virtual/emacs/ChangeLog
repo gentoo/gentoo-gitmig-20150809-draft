@@ -1,6 +1,9 @@
 # ChangeLog for virtual/emacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/emacs/ChangeLog,v 1.48 2012/07/29 04:59:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/emacs/ChangeLog,v 1.49 2012/07/30 06:26:17 jdhore Exp $
+
+  30 Jul 2012; Jeff Horelick <jdhore@gentoo.org> emacs-24.ebuild:
+  marked x86 per bug 428212
 
   29 Jul 2012; Jeroen Roovers <jer@gentoo.org> emacs-24.ebuild:
   Stable for HPPA (bug #428212).
