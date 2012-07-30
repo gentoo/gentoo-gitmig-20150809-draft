@@ -1,6 +1,6 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.696 2012/07/30 22:25:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.697 2012/07/30 22:31:04 ssuominen Exp $
 
   30 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> -files/net-104-r10.sh,
   -files/156/udev.confd, -files/udev-110-root-link-1.diff,
@@ -32,7 +32,8 @@
   -udev-141.ebuild, -files/164/udev-start.sh, -udev-115-r1.ebuild,
   -udev-182-r2.ebuild, -files/164/udev-stop.sh, -udev-119.ebuild,
   -udev-182-r3.ebuild, -files/udev.conf.post_113, -files/udev.conf.post_114,
-  -files/udev.confd, -files/udev.initd, -files/write_root_link_rule:
+  -files/udev.confd, -files/udev.initd, -files/write_root_link_rule,
+  -udev-171-r5.ebuild:
   old
 
   30 Jul 2012; Mike Frysinger <vapier@gentoo.org> udev-186.ebuild:
