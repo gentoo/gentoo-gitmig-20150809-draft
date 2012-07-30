@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/uim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.251 2012/07/27 07:00:44 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.252 2012/07/30 03:40:49 blueness Exp $
+
+  30 Jul 2012; Anthony G. Basile <blueness@gentoo.org> uim-1.8.0.ebuild:
+  Stable ppc64, bug #428042
 
   27 Jul 2012; Jeff Horelick <jdhore@gentoo.org> uim-1.8.0.ebuild:
   marked x86 per bug 428042
