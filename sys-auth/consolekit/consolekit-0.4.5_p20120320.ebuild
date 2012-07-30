@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.4.5_p20120320.ebuild,v 1.12 2012/07/15 17:45:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.4.5_p20120320.ebuild,v 1.13 2012/07/30 22:53:49 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils linux-info pam systemd
@@ -22,20 +22,20 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux"
 IUSE="acl debug doc kernel_linux pam policykit selinux test"
 
-RDEPEND=">=dev-libs/dbus-glib-0.98
+COMMON_DEPEND=">=dev-libs/dbus-glib-0.98
 	>=dev-libs/glib-2.22
 	sys-libs/zlib
 	x11-libs/libX11
 	acl? (
 		sys-apps/acl
-		sys-apps/coreutils[acl]
 		>=sys-fs/udev-171-r6
-		!<sys-fs/udev-171-r6[acl]
 		)
 	pam? ( virtual/pam )
-	policykit? ( >=sys-auth/polkit-0.104-r1 )
+	policykit? ( >=sys-auth/polkit-0.104-r1 )"
+RDEPEND="${COMMON_DEPEND}
+	kernel_linux? ( sys-apps/coreutils[acl?] )
 	selinux? ( sec-policy/selinux-consolekit )"
-DEPEND="${RDEPEND}
+DEPEND="${COMMON_DEPEND}
 	dev-libs/libxslt
 	virtual/pkgconfig
 	doc? ( app-text/xmlto )
