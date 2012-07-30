@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.3.ebuild,v 1.5 2012/07/28 00:44:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.4.ebuild,v 1.1 2012/07/30 15:16:43 flameeyes Exp $
 
 EAPI=4
 
-PATCHSET=4
+PATCHSET=3
 
 inherit eutils user java-pkg-opt-2
 
@@ -24,9 +24,7 @@ REQUIRED_USE="cgi? ( !minimal )"
 # Upstream's listing of required modules is NOT correct!
 # Some of the postgres plugins use DBD::Pg, while others call psql directly.
 # Some of the mysql plugins use DBD::mysql, while others call mysqladmin directly.
-# There are three ipmi plugins: two original ones using ipmitool (and
-# python or gawk) and one using freeipmi that Flameeyes wrote (which works fine with
-# any awk provider). Once freeipmi_ is feature-par with ipmi_, we'll drop the former.
+# We replace the original ipmi plugisn with the freeipmi_ plugin which at least works.
 DEPEND_COM="dev-lang/perl
 			sys-process/procps
 			asterisk? ( dev-perl/Net-Telnet )
@@ -40,8 +38,8 @@ DEPEND_COM="dev-lang/perl
 			cgi? ( dev-perl/FCGI )
 			syslog? ( virtual/perl-Sys-Syslog )
 			ipmi? (
-				sys-apps/ipmitool sys-apps/gawk
-				>=sys-libs/freeipmi-1 virtual/awk
+				>=sys-libs/freeipmi-1.1.6-r1
+				virtual/awk
 			)
 			http? ( dev-perl/libwww-perl )
 			dev-perl/DBI
@@ -95,12 +93,6 @@ src_prepare() {
 	epatch "${WORKDIR}"/patches/*.patch
 
 	java-pkg-opt-2_src_prepare
-
-	# this is to work around git diff output
-	if [[ -d b ]]; then
-		cd b
-		find . -type f -exec mv {} ../{} \; || die
-	fi
 }
 
 src_configure() {
@@ -160,6 +152,8 @@ src_install() {
 	# bug 254968
 	insinto /etc/logrotate.d/
 	newins "${FILESDIR}"/logrotate.d-munin munin
+
+	dosym ipmi_ /usr/libexec/munin/plugins/ipmi_sensor_
 
 	if use syslog; then
 		sed -i -e '/log_file/s| .*| Sys::Syslog|' \

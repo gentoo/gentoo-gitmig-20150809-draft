@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.86 2012/07/29 03:53:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.87 2012/07/30 15:16:43 flameeyes Exp $
+
+*munin-2.0.4 (30 Jul 2012)
+
+  30 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> +munin-2.0.4.ebuild,
+  -munin-2.0.3-r1.ebuild, -munin-2.0.3.ebuild:
+  Version bump; this version includes most of the previously applied patches,
+  but gets rid of freeipmi_ as a separate plugin (now it takes the place of
+  ipmi_ itself).
 
 *munin-2.0.3-r1 (29 Jul 2012)
 
