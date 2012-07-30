@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lmms/lmms-0.4.12.ebuild,v 1.1 2011/08/07 11:55:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lmms/lmms-0.4.13-r1.ebuild,v 1.1 2012/07/30 12:24:25 polynomial-c Exp $
 
 EAPI="2"
 
@@ -53,6 +53,7 @@ src_configure() {
 		-DWANT_SWH=FALSE
 		-DWANT_CMT=FALSE
 		-DWANT_CALF=TRUE
+		-DCMAKE_INSTALL_LIBDIR=$(get_libdir)
 		$(cmake-utils_use_want alsa ALSA)
 		$(cmake-utils_use_want fftw FFTW3F)
 		$(cmake-utils_use_want jack JACK)
