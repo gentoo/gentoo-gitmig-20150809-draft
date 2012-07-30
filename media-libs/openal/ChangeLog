@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.150 2012/05/15 13:52:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.151 2012/07/30 19:37:20 ssuominen Exp $
+
+  30 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> -openal-1.11.753.ebuild,
+  -openal-1.12.854.ebuild:
+  old
 
   15 May 2012; Alexis Ballier <aballier@gentoo.org> openal-1.13.ebuild:
   keyword ~amd64-fbsd
