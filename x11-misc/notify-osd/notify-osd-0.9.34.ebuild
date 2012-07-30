@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notify-osd/notify-osd-0.9.34.ebuild,v 1.3 2012/05/05 04:53:41 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notify-osd/notify-osd-0.9.34.ebuild,v 1.4 2012/07/30 20:59:57 ssuominen Exp $
 
 EAPI=4
 inherit autotools gnome2-utils multilib savedconfig
@@ -36,7 +36,7 @@ DOCS=( AUTHORS ChangeLog NEWS README TODO )
 
 src_prepare() {
 	sed -i -e 's:noinst_PROG:check_PROG:' tests/Makefile.am || die
-	restore_config src/{bubble,defaults}.c
+	restore_config src/{bubble,defaults,osd}.c #428134
 	eautoreconf
 }
 
@@ -46,7 +46,7 @@ src_configure() {
 
 src_install() {
 	default
-	save_config src/{bubble,defaults}.c
+	save_config src/{bubble,defaults,osd}.c
 	rm -f "${ED}"/usr/share/${PN}/icons/*/*/*/README
 }
 
