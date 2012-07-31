@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.116 2012/07/31 10:49:36 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.117 2012/07/31 10:53:36 aidecoe Exp $
 
   31 Jul 2012; Amadeusz Żołnowski <aidecoe@gentoo.org>
   +hddtemp-0.3_beta15-r4.ebuild:
@@ -13,7 +13,7 @@
   -hddtemp-0.3_beta15-r4.ebuild, +hddtemp-0.3_beta15-r20.ebuild,
   +hddtemp-0.3_beta15-r21.ebuild, +files/hddtemp-0.3_beta15-dontwake.patch:
   Moved rev. with network-cron to r20 and applied fix for bug #424417 in r21.
-  Thanks to Martin Jürgens <martin.accounts@gmx.de> for finding the report and
+  Thanks to Martin Jürgens <martin.accounts@gmx.de> for the report and finding 
   the patch. The patch has been written by Eduard Bloch <blade@debian.org>, see
   <http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=479840>.
 
