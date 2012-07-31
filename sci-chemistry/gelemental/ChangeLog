@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/gelemental
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gelemental/ChangeLog,v 1.9 2012/07/01 13:08:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gelemental/ChangeLog,v 1.10 2012/07/31 06:47:17 jlec Exp $
+
+  31 Jul 2012; Justin Lecher <jlec@gentoo.org> gelemental-1.2.0.ebuild,
+  +files/gelemental-1.2.0-doxygen.patch:
+  Import patch from debian fixing an doxygen issue; build in source, bcause
+  doxygen is broken otherwise, #428684
 
   01 Jul 2012; Justin Lecher <jlec@gentoo.org> gelemental-1.2.0.ebuild,
   +files/gelemental-1.2.0-glib-2.32.patch:

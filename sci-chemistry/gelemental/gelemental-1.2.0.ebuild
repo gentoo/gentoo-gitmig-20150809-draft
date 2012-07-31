@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gelemental/gelemental-1.2.0.ebuild,v 1.7 2012/07/01 13:08:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gelemental/gelemental-1.2.0.ebuild,v 1.8 2012/07/31 06:47:17 jlec Exp $
 
 EAPI=4
 
@@ -26,7 +26,10 @@ DEPEND="${RDEPEND}
 
 PATCHES=(
 		"${FILESDIR}"/${P}-gcc4.3.patch
-		"${FILESDIR}"/${P}-glib-2.32.patch )
+		"${FILESDIR}"/${P}-glib-2.32.patch
+		"${FILESDIR}"/${P}-doxygen.patch )
+
+AUTOTOOLS_IN_SOURCE_BUILD=1
 
 src_configure() {
 	local myeconfargs=( $(use_enable doc api-docs) )
