@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/glamor/glamor-0.4.1.ebuild,v 1.3 2012/06/17 17:20:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/glamor/glamor-0.4.1.ebuild,v 1.4 2012/07/31 12:14:31 chithanh Exp $
 
 EAPI=4
 
@@ -15,12 +15,14 @@ KEYWORDS="~amd64 ~ia64 ~x86"
 IUSE="gles"
 
 RDEPEND=">=x11-base/xorg-server-1.10
+	<x11-base/xorg-server-1.12.99
 	media-libs/mesa[egl,gbm]
 	gles? (
 		|| ( media-libs/mesa[gles2] media-libs/mesa[gles] )
 	)
 	>=x11-libs/pixman-0.21.8"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+"
 
 pkg_setup() {
 	xorg-2_pkg_setup

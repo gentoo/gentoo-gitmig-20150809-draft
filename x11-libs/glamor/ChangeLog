@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/glamor
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/glamor/ChangeLog,v 1.3 2012/06/17 17:20:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/glamor/ChangeLog,v 1.4 2012/07/31 12:14:31 chithanh Exp $
+
+  31 Jul 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  glamor-0.4.1.ebuild:
+  Not compatible with xorg-server-1.13 yet
 
   17 Jun 2012; Raúl Porcel <armin76@gentoo.org> glamor-0.4.1.ebuild:
   Add ~ia64 wrt #414295
@@ -15,4 +19,3 @@
   +glamor-0.4.1.ebuild, +metadata.xml:
   Initial import from the x11 overlay, thanks to alexxy for pointing out
   installation path issues.
-
