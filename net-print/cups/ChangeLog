@@ -1,6 +1,15 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.501 2012/07/31 08:19:38 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.502 2012/07/31 17:35:04 floppym Exp $
+
+*cups-1.4.8-r1 (31 Jul 2012)
+
+  31 Jul 2012; Mike Gilbert <floppym@gentoo.org> +cups-1.4.8-r1.ebuild,
+  +files/cups-1.4.0-backend-https.patch, +files/cups-1.4.2-str3200.patch,
+  +files/cups-1.4.6-force-gnutls.patch,
+  +files/cups-1.4.6-serialize-gnutls.patch,
+  +files/cups-1.4.8-CVE-2011-3170.patch, +files/cups-1.4.8-largeimage.patch:
+  Restore old version to repair dependency graph.
 
 *cups-1.6.1 (31 Jul 2012)
 
