@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/vmpk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vmpk/ChangeLog,v 1.12 2012/05/05 08:54:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vmpk/ChangeLog,v 1.13 2012/07/31 16:17:30 kensington Exp $
+
+  31 Jul 2012; Michael Palimaka <kensington@gentoo.org> vmpk-0.3.1.ebuild,
+  vmpk-0.3.2.ebuild, vmpk-0.3.3.ebuild, vmpk-0.4.0.ebuild:
+  Bump EAPI to 4. Add missing slot dependencies on Qt.
 
   05 May 2012; Michał Górny <mgorny@gentoo.org> vmpk-0.3.1.ebuild,
   vmpk-0.3.2.ebuild, vmpk-0.3.3.ebuild, vmpk-0.4.0.ebuild:
@@ -56,4 +60,3 @@
   26 Jun 2009; Alexis Ballier <aballier@gentoo.org> +vmpk-0.2.5.ebuild,
   +metadata.xml:
   Initial import, ebuild by me
-
