@@ -1,0 +1,12 @@
+diff -ru i810switch-0.6.5/Makefile i810switch-0.6.5.new/Makefile
+--- i810switch-0.6.5/Makefile	2003-12-31 15:51:40.000000000 +0100
++++ i810switch-0.6.5.new/Makefile	2012-07-31 17:41:50.000000000 +0200
+@@ -6,7 +6,7 @@
+ all: i810switch
+ 
+ i810switch: $(OBJECTS)
+-	$(CC) $(CFLAGS) -o $@ $(OBJECTS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $(OBJECTS)
+ 
+ install: i810switch
+ 	install -d $(DESTDIR)/usr/bin
