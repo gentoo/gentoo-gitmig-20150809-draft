@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/django
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.80 2012/05/28 19:38:23 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.81 2012/07/31 12:01:53 xarthisius Exp $
+
+*django-1.4.1 (31 Jul 2012)
+*django-1.3.2 (31 Jul 2012)
+
+  31 Jul 2012; Kacper Kowalik <xarthisius@gentoo.org> +django-1.3.2.ebuild,
+  +django-1.4.1.ebuild:
+  Version bump wrt #428780 by Agostino Sarubbo <ago@gentoo.org>. Thanks to
+  Xelnor for the report on irc and testing
 
   28 May 2012; Kacper Kowalik <xarthisius@gentoo.org> django-1.1.4.ebuild,
   django-1.2.5.ebuild, django-1.3.1.ebuild, django-1.3.ebuild,
@@ -357,4 +365,3 @@
   28 Mar 2006; Lukasz Strzygowski <lucass@gentoo.org> +metadata.xml,
   +django-0.91.ebuild:
   Initial commit (bug #114821).
-
