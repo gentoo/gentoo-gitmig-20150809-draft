@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice-l10n
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.51 2012/07/27 11:25:04 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.52 2012/07/31 14:15:06 scarabeus Exp $
+
+  31 Jul 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  -libreoffice-l10n-3.5.4.ebuild, libreoffice-l10n-3.5.5.ebuild:
+  Stable on amd64 and ppc wrt bug#427098. Remove older.
 
   27 Jul 2012; Andreas Schuerch <nativemad@gentoo.org>
   libreoffice-l10n-3.5.5.ebuild:
