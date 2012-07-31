@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/compiz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.66 2012/07/23 05:07:23 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.67 2012/07/31 22:36:58 naota Exp $
+
+  31 Jul 2012; Naohiro Aota <naota@gentoo.org> compiz-0.8.6-r3.ebuild,
+  compiz-0.8.8.ebuild:
+  Remove warning about AddARGBGLXVisuals. #427608
 
   23 Jul 2012; Naohiro Aota <naota@gentoo.org> compiz-0.8.6-r3.ebuild,
   compiz-0.8.8.ebuild, metadata.xml:
