@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lrzip/lrzip-0.614.ebuild,v 1.1 2012/07/25 03:59:15 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lrzip/lrzip-0.614.ebuild,v 1.2 2012/07/31 06:35:21 yngwin Exp $
 
 EAPI=4
 
@@ -19,8 +19,6 @@ RDEPEND="dev-libs/lzo
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )
 	virtual/perl-PodParser"
-
-DOCS="" # let package handle docs
 
 src_configure() {
 	econf --docdir="/usr/share/doc/${P}"
