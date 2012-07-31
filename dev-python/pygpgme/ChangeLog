@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygpgme
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygpgme/ChangeLog,v 1.1 2012/07/31 13:19:36 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygpgme/ChangeLog,v 1.2 2012/07/31 13:37:34 aidecoe Exp $
+
+  31 Jul 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> metadata.xml:
+  Added python herd to metadata.xml.
 
 *pygpgme-0.3 (31 Jul 2012)
 
