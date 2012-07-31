@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-019-r2.ebuild,v 1.3 2012/07/27 20:06:32 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-019-r3.ebuild,v 1.1 2012/07/31 09:24:38 aidecoe Exp $
 
 EAPI=4
 
@@ -144,8 +144,9 @@ base_sys_maj_ver() {
 #
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-multipath-udev-rules.patch"
-	epatch "${FILESDIR}/${P}-no-pkg-config-warnings.patch"
+	epatch "${FILESDIR}/${PV}-0001-multipath-udev-rules.patch"
+	epatch "${FILESDIR}/${PV}-0002-no-pkg-config-warnings.patch"
+	epatch "${FILESDIR}/${PV}-0017-99shutdown-remove-no-wall-argument-for.patch"
 }
 
 src_compile() {

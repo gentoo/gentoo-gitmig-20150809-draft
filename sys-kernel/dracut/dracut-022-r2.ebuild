@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-022-r1.ebuild,v 1.1 2012/07/30 20:26:31 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-022-r2.ebuild,v 1.1 2012/07/31 09:24:38 aidecoe Exp $
 
 EAPI=4
 
@@ -156,6 +156,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PV}-0014-parse-root-opts-first-check-for-ro-lat.patch"
 	epatch "${FILESDIR}/${PV}-0015-gentoo.conf-enable-ro_mnt.patch"
 	epatch "${FILESDIR}/${PV}-0016-dracut.sh-test-if-we-can-lazy-resolve-.patch"
+	epatch "${FILESDIR}/${PV}-0017-99shutdown-remove-no-wall-argument-for.patch"
 	einfo "Removing ${S}/install/hashmap.o ..."
 	rm "${S}/install/hashmap.o" || die
 }

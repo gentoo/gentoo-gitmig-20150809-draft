@@ -1,6 +1,21 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.75 2012/07/30 21:25:38 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.76 2012/07/31 09:24:38 aidecoe Exp $
+
+*dracut-022-r2 (31 Jul 2012)
+*dracut-019-r3 (31 Jul 2012)
+
+  31 Jul 2012; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +files/019-0001-multipath-udev-rules.patch,
+  +files/019-0002-no-pkg-config-warnings.patch,
+  +files/019-0017-99shutdown-remove-no-wall-argument-for.patch,
+  +files/022-0017-99shutdown-remove-no-wall-argument-for.patch,
+  -dracut-019-r2.ebuild, +dracut-019-r3.ebuild,
+  -files/dracut-019-multipath-udev-rules.patch,
+  -files/dracut-019-no-pkg-config-warnings.patch, -dracut-022-r1.ebuild,
+  +dracut-022-r2.ebuild:
+  Fixed bug #388199 in 019 and 022. 018 is ignored because it is going to be
+  removed soon. I have changed patches naming scheme in 019 as I did in 022.
 
   30 Jul 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-022.ebuild:
   Remove old 022 revision.
