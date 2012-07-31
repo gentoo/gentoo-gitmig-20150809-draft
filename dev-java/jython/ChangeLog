@@ -1,6 +1,18 @@
 # ChangeLog for dev-java/jython
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.75 2012/07/18 10:30:29 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.76 2012/07/31 08:44:48 sera Exp $
+
+*jython-2.5.2-r1 (31 Jul 2012)
+
+  31 Jul 2012; Ralph Sennhauser <sera@gentoo.org> +jython-2.5.2-r1.ebuild,
+  +files/jython-2.5.2-sax-parser-fix.patch:
+  Backport upstream sax fix, needed for javatoolkit and possibly others.
+  JYTHON_SYSTEM_CACHEDIR is buggy, every ebuild not inheriting python.eclass
+  and calling python_pkg_setup would have to set it, also it's a per user
+  system cache dir and so with reduced previleges can't even be created -> drop
+  it.
+  Install sandbox control file as the jvm opens the classfiles rw.
+  Compile class files during src phases instead of creating orphans.
 
 *jython-2.5.2 (18 Jul 2012)
 
