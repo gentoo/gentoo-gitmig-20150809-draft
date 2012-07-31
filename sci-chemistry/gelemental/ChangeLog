@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/gelemental
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gelemental/ChangeLog,v 1.10 2012/07/31 06:47:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gelemental/ChangeLog,v 1.11 2012/07/31 06:54:41 jlec Exp $
+
+*gelemental-1.2.0-r1 (31 Jul 2012)
+
+  31 Jul 2012; Justin Lecher <jlec@gentoo.org> +gelemental-1.2.0-r1.ebuild:
+  Apply all debian patches
 
   31 Jul 2012; Justin Lecher <jlec@gentoo.org> gelemental-1.2.0.ebuild,
   +files/gelemental-1.2.0-doxygen.patch:
