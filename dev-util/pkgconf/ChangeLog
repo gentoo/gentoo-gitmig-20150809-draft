@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pkgconf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.41 2012/07/31 03:34:26 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.42 2012/07/31 06:59:00 jdhore Exp $
+
+  31 Jul 2012; Jeff Horelick <jdhore@gentoo.org> pkgconf-0.8.5.ebuild:
+  marked x86 per bug 427680
 
   31 Jul 2012; Anthony G. Basile <blueness@gentoo.org> pkgconf-0.8.5.ebuild:
   Stable arm, bug #427680
