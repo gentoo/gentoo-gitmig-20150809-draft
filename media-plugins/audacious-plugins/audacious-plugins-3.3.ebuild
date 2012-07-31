@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-3.3.ebuild,v 1.1 2012/07/27 04:49:49 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-3.3.ebuild,v 1.2 2012/07/31 02:28:30 jdhore Exp $
 
 EAPI=4
 
@@ -23,6 +23,7 @@ RDEPEND="app-arch/unzip
 	>=media-sound/audacious-3.3
 	>=net-libs/neon-0.26.4
 	x11-libs/gtk+:3
+	( || ( >=dev-libs/glib-2.32.2 dev-util/gdbus-codegen ) )
 	aac? ( >=media-libs/faad2-2.7 )
 	adplug? ( >=dev-cpp/libbinio-1.4 )
 	alsa? ( >=media-libs/alsa-lib-1.0.16 )
@@ -61,6 +62,17 @@ mp3_warning() {
 	if ! use mp3 ; then
 		ewarn "MP3 support is optional, you may want to enable the mp3 USE-flag"
 	fi
+}
+
+src_prepare() {
+	has_version "<dev-libs/glib-2.32" && \
+		cd ${S}/src/mpris2 && \
+		gdbus-codegen --interface-prefix org.mpris. \
+			--c-namespace Mpris --generate-c-code object-core mpris2.xml && \
+		gdbus-codegen --interface-prefix org.mpris. \
+			--c-namespace Mpris \
+			--generate-c-code object-player mpris2-player.xml && \
+		cd ${S}
 }
 
 src_configure() {
