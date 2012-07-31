@@ -1,6 +1,13 @@
 # ChangeLog for dev-texlive/texlive-bibtexextra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-bibtexextra/ChangeLog,v 1.52 2012/07/27 01:28:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-bibtexextra/ChangeLog,v 1.53 2012/07/31 14:13:26 aballier Exp $
+
+*texlive-bibtexextra-2012-r1 (31 Jul 2012)
+
+  31 Jul 2012; Alexis Ballier <aballier@gentoo.org>
+  +texlive-bibtexextra-2012-r1.ebuild:
+  Remove biblatex from texlive-bibtexextra, we will go with a standaone ebuild,
+  bug #428434
 
 *texlive-bibtexextra-2012 (27 Jul 2012)
 
