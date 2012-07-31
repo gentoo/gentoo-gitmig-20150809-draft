@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/arx-libertatis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/arx-libertatis/ChangeLog,v 1.5 2012/07/31 08:40:53 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/arx-libertatis/ChangeLog,v 1.6 2012/07/31 09:07:27 hasufell Exp $
+
+  31 Jul 2012; Julian Ospald <hasufell@gentoo.org>
+  arx-libertatis-1.0.2-r1.ebuild:
+  fix install destinations
 
   31 Jul 2012; Julian Ospald <hasufell@gentoo.org>
   arx-libertatis-1.0.2-r1.ebuild:

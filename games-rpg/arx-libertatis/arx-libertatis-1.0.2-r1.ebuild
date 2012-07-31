@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/arx-libertatis/arx-libertatis-1.0.2-r1.ebuild,v 1.3 2012/07/31 08:40:53 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/arx-libertatis/arx-libertatis-1.0.2-r1.ebuild,v 1.4 2012/07/31 09:07:27 hasufell Exp $
 
 EAPI=4
 
@@ -48,6 +48,7 @@ src_configure() {
 		$(cmake-utils_use unity-build UNITY_BUILD)
 		$(cmake-utils_use_build tools TOOLS)
 		$(cmake-utils_use_build crash-reporter CRASHREPORTER)
+		-DCMAKE_INSTALL_PREFIX="${GAMES_PREFIX}"
 		-DGAMESBINDIR="${GAMES_BINDIR}"
 		-DCMAKE_INSTALL_DATAROOTDIR="${GAMES_DATADIR_BASE}"
 		-DICONDIR=/usr/share/icons/hicolor/128x128/apps
