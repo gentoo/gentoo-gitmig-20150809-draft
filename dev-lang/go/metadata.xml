@@ -5,9 +5,6 @@
 		<email>williamh@gentoo.org</email>
 		<name>William Hubbs</name>
 	</maintainer>
- <use>
-  <flag name="pax_kernel">enable running under a kernel with PaX enabled</flag>
- </use>
 	<longdescription lang="en">
 		Go is a new systems programming language developped at google by
 		Rob Pike. It has garbage collection, coroutines, communication
