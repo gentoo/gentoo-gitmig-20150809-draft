@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/nvidia-cuda-sdk-2.02.0807.1535.ebuild,v 1.11 2012/02/05 06:27:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/nvidia-cuda-sdk-2.02.0807.1535.ebuild,v 1.12 2012/07/31 07:37:19 zerochaos Exp $
 
 inherit eutils unpacker toolchain-funcs
 
