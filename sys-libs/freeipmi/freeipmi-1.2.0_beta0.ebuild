@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/freeipmi-1.1.6-r1.ebuild,v 1.1 2012/07/29 02:46:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/freeipmi-1.2.0_beta0.ebuild,v 1.1 2012/07/31 01:41:36 flameeyes Exp $
 
 EAPI=4
 
@@ -8,8 +8,12 @@ inherit autotools eutils
 
 DESCRIPTION="Provides Remote-Console and System Management Software as per IPMI v1.5/2.0"
 HOMEPAGE="http://www.gnu.org/software/freeipmi/"
-SRC_URI="mirror://gnu/${PN}/${P}.tar.gz
-	http://ftp.gluster.com/pub/${PN}/${PV}/${P}.tar.gz"
+
+MY_P="${P/_/.}"
+S="${WORKDIR}"/${MY_P}
+[[ ${MY_P} == *.beta* ]] && ALPHA="-alpha"
+SRC_URI="mirror://gnu${ALPHA}/${PN}/${MY_P}.tar.gz"
+
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -22,8 +26,8 @@ RDEPEND="${RDEPEND}
 	sys-apps/openrc"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.1.1-strictaliasing.patch
-	epatch "${FILESDIR}"/${P}-thresholds.patch
+	epatch \
+		"${FILESDIR}"/${PN}-1.1.1-strictaliasing.patch
 
 	AT_M4DIR="config" eautoreconf
 }
@@ -35,7 +39,6 @@ src_configure() {
 		--enable-fast-install \
 		--disable-static \
 		--disable-init-scripts \
-		--enable-logrotate-config \
 		--localstatedir=/var
 }
 
@@ -65,10 +68,12 @@ src_install() {
 	keepdir \
 		/var/cache/ipmimonitoringsdrcache \
 		/var/lib/freeipmi \
-		/var/log/{freeipmi,ipmiconsole}
+		/var/log/ipmiconsole
 
-	newinitd "${FILESDIR}"/ipmidetectd.initd.3 ipmidetectd
+	# starting from version 1.2.0 the two daemons are similar enough
+	newinitd "${FILESDIR}"/bmc-watchdog.initd.4 ipmidetectd
+	newconfd "${FILESDIR}"/ipmidetectd.confd ipmidetectd
 
-	newinitd "${FILESDIR}"/bmc-watchdog.initd.3 bmc-watchdog
+	newinitd "${FILESDIR}"/bmc-watchdog.initd.4 bmc-watchdog
 	newconfd "${FILESDIR}"/bmc-watchdog.confd bmc-watchdog
 }
