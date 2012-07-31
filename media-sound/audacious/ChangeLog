@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.279 2012/07/29 17:12:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.280 2012/07/31 02:22:54 jdhore Exp $
+
+  31 Jul 2012; Jeff Horelick <jdhore@gentoo.org> audacious-3.3.ebuild:
+  Bump dev-libs/glib dependency to >=2.30 wrt bug 428632
 
   29 Jul 2012; Raúl Porcel <armin76@gentoo.org> audacious-3.2.2-r1.ebuild:
   alpha/sparc stable wrt #417143
