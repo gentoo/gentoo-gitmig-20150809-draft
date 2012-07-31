@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/tribler
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/tribler/ChangeLog,v 1.26 2012/07/21 01:37:49 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/tribler/ChangeLog,v 1.27 2012/07/31 23:08:03 blueness Exp $
+
+*tribler-5.9.24 (31 Jul 2012)
+
+  31 Jul 2012; Anthony G. Basile <blueness@gentoo.org> +tribler-5.9.24.ebuild:
+  Version bump
 
   21 Jul 2012; Anthony G. Basile <blueness@gentoo.org> tribler-5.9.22.ebuild:
   Suppress QA for prebuilt binary, bug #427418
