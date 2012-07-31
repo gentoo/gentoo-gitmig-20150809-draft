@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gpodder/gpodder-2.9.ebuild,v 1.3 2010/10/31 19:25:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gpodder/gpodder-3.2.0.ebuild,v 1.1 2012/07/31 13:51:33 yngwin Exp $
 
-EAPI=3
+EAPI=4
 
 PYTHON_DEPEND="2:2.6"
 PYTHON_USE_WITH="sqlite"
@@ -11,20 +11,21 @@ RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils gnome2-utils
 
-DESCRIPTION="gPodder is a Podcast receiver/catcher written in Python, using GTK."
+DESCRIPTION="A free cross-platform podcast aggregator"
 HOMEPAGE="http://gpodder.org/"
-SRC_URI="mirror://berlios/${PN}/${P}.tar.gz"
+SRC_URI="http://gpodder.org/src/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="+dbus bluetooth gstreamer ipod mtp test webkit"
 
+#TODO: add QML UI deps (USE=qt4) and make pygtk optional, see README
 RDEPEND="dev-python/eyeD3
 	dev-python/feedparser
 	dev-python/imaging
 	>=dev-python/mygpoclient-1.4
-	>=dev-python/pygtk-2.12
+	>=dev-python/pygtk-2.12:2
 	dbus? ( dev-python/dbus-python )
 	bluetooth? ( net-wireless/bluez )
 	gstreamer? ( dev-python/gst-python )
@@ -37,23 +38,12 @@ DEPEND="${RDEPEND}
 	test? ( dev-python/minimock
 		dev-python/coverage )"
 
-src_prepare() {
-	sed -i \
-		-e 's:make -C:$(MAKE) -C:' \
-		Makefile || die
-
-	distutils_src_prepare
-}
-
 src_compile() {
-	emake data/org.gpodder.service || die
-	emake messages || die
-
-	distutils_src_compile
+	emake DESTDIR="${D}" install || die
 }
 
 src_test() {
-	emake unittest || die
+	emake releasetest || die
 }
 
 pkg_preinst() {

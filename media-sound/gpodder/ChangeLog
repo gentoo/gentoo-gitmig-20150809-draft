@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/gpodder
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gpodder/ChangeLog,v 1.28 2011/05/05 16:50:46 angelos Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gpodder/ChangeLog,v 1.29 2012/07/31 13:51:33 yngwin Exp $
+
+*gpodder-3.2.0 (31 Jul 2012)
+*gpodder-2.20.1 (31 Jul 2012)
+
+  31 Jul 2012; Ben de Groot <yngwin@gentoo.org> +gpodder-2.20.1.ebuild,
+  +gpodder-3.2.0.ebuild, -gpodder-2.9.ebuild:
+  Add latest versions of gPodder2 and gPodder3, thanks to contributors in bug
+  #380007
 
 *gpodder-2.15 (05 May 2011)
 
@@ -132,4 +140,3 @@
   28 Jun 2006; Hanno Boeck <hanno@gentoo.org> +metadata.xml,
   +gpodder-0.7.ebuild:
   Initial commit.
-
