@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.172 2012/07/23 10:57:15 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.173 2012/07/31 16:57:29 robbat2 Exp $
 
 # @ECLASS: mysql.eclass
 # @MAINTAINER:
@@ -790,7 +790,7 @@ mysql_pkg_setup() {
 	# bug 350844
 	case "${EAPI:-0}" in
 		0 | 1)
-			if use static && !built_with_use sys-libs/ncurses static-libs; then
+			if use static && ! built_with_use sys-libs/ncurses static-libs; then
 				die "To build MySQL statically you need to enable static-libs for sys-libs/ncurses"
 			fi
 			;;
