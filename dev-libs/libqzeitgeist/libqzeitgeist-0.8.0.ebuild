@@ -1,12 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libqzeitgeist/libqzeitgeist-0.8.0.ebuild,v 1.1 2011/12/23 12:57:15 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libqzeitgeist/libqzeitgeist-0.8.0.ebuild,v 1.2 2012/07/31 10:46:15 kensington Exp $
 
 EAPI=4
 
 KDE_SCM="git"
+PYTHON_DEPEND="2"
 
-inherit kde4-base
+inherit python kde4-base
 
 DESCRIPTION="Qt interface to the Zeitgeist event tracking system"
 HOMEPAGE="https://projects.kde.org/projects/kdesupport/libqzeitgeist"
@@ -21,7 +22,19 @@ LICENSE="GPL-2"
 SLOT="4"
 IUSE="debug"
 
-DEPEND="
+RDEPEND="
 	dev-libs/libzeitgeist
+	x11-libs/qt-declarative:4
 "
-RDEPEND="${DEPEND}"
+DEPEND="
+	${RDEPEND}
+	gnome-extra/zeitgeist
+"
+
+pkg_setup() {
+	# gnome-extra/zeitgeist currently only
+	# supports python-2
+	python_set_active_version 2
+	python_pkg_setup
+	kde4-base_pkg_setup
+}
