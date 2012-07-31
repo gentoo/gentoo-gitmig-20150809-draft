@@ -1,6 +1,11 @@
 # ChangeLog for media-radio/svxlink
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/ChangeLog,v 1.20 2012/06/09 00:30:51 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/ChangeLog,v 1.21 2012/07/31 18:00:25 tomjbe Exp $
+
+  31 Jul 2012; Thomas Beierlein <tomjbe@gentoo.org> svxlink-11.11.1.ebuild,
+  +files/svxlink-11.11.1-gcc-47.patch:
+  Fix missing #includes for gcc-47 (bug 425690). Thanks Diego. Also add slot
+  deps to qt-*:4
 
   09 Jun 2012; Zac Medico <zmedico@gentoo.org> svxlink-11.11.1.ebuild:
   inherit user for enewgroup and enewuser
