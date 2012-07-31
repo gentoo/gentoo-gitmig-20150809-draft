@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.409 2012/07/31 10:27:55 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.410 2012/07/31 10:34:34 chainsaw Exp $
+
+*asterisk-1.8.15.0 (31 Jul 2012)
+
+  31 Jul 2012; Tony Vroon <chainsaw@gentoo.org> +asterisk-1.8.15.0.ebuild:
+  Bugfix release on the 1.8 branch. Fixes, among other things, a null pointer
+  dereference in ast_sockaddr_prase, a potential deadlock in
+  ast_set_hangupsource & routing issues around outboundproxy.
 
 *asterisk-10.7.0 (31 Jul 2012)
 
