@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.6.1-r1.ebuild,v 1.1 2012/07/28 13:59:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.6.2.ebuild,v 1.1 2012/07/31 11:47:56 hwoarang Exp $
 
 EAPI="2"
 
@@ -62,8 +62,6 @@ DEPEND="${RDEPEND}"
 DOCS="AUTHORS ChangeLog README"
 
 CMAKE_IN_SOURCE_BUILD="1"
-
-PATCHES=( "${FILESDIR}"/${P}-enca.patch )
 
 src_configure() {
 	mycmakeargs=(
