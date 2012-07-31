@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/biblatex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/biblatex/ChangeLog,v 1.4 2012/05/15 18:48:36 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/biblatex/ChangeLog,v 1.5 2012/07/31 14:06:19 aballier Exp $
+
+*biblatex-2.1 (31 Jul 2012)
+
+  31 Jul 2012; Alexis Ballier <aballier@gentoo.org> +biblatex-2.1.ebuild:
+  version bump
 
 *biblatex-1.7 (15 May 2012)
 
