@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-RegExp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RegExp/ChangeLog,v 1.32 2012/06/24 13:00:01 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RegExp/ChangeLog,v 1.33 2012/07/31 19:10:48 johu Exp $
+
+  31 Jul 2012; Johannes Huber <johu@gentoo.org> XML-RegExp-0.40.0.ebuild:
+  Stable for x86, wrt bug #418871
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
