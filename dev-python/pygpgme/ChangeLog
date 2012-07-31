@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/pygpgme
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygpgme/ChangeLog,v 1.1 2012/07/31 13:19:36 aidecoe Exp $
+
+*pygpgme-0.3 (31 Jul 2012)
+
+  31 Jul 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> +pygpgme-0.3.ebuild,
+  +metadata.xml:
+  Initial ebuild wrt bug #416485.
+
