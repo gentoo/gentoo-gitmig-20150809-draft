@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.6.0.ebuild,v 1.2 2012/07/28 15:34:31 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.6.1.ebuild,v 1.1 2012/07/31 08:19:38 dilfridge Exp $
 
 EAPI=4
 
