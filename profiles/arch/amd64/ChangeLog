@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.183 2012/07/04 07:26:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.184 2012/07/31 14:37:45 sera Exp $
+
+  31 Jul 2012; Ralph Sennhauser <sera@gentoo.org> use.mask:
+  Unmask python_targets_jython2_5 as it's available on amd64.
 
   04 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
   Remove obsolete entries for net-libs/xulrunner and www-client/icecat wrt

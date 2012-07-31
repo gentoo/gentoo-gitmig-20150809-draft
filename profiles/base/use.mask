@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.141 2012/06/08 13:08:52 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.142 2012/07/31 14:37:45 sera Exp $
 
 # not ready for primetime
 packagekit
@@ -278,3 +278,9 @@ kqueue
 # Still using obsolete V4L1 wrt bug 350211
 # If fixed, should be unmasked in amd64/x86/ppc32 use.mask
 dxr3
+
+# Ralph Sennhauser <sera@gentoo.org> (31 Jul 2012)
+# Unmask in arch specific profiles when jython implementaton is available.
+python_targets_jython2_5
+python_targets_jython2_7
+python_targets_jython3_1
