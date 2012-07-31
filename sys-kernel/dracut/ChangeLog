@@ -1,6 +1,6 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.76 2012/07/31 09:24:38 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.77 2012/07/31 09:30:46 aidecoe Exp $
 
 *dracut-022-r2 (31 Jul 2012)
 *dracut-019-r3 (31 Jul 2012)
@@ -16,6 +16,8 @@
   +dracut-022-r2.ebuild:
   Fixed bug #388199 in 019 and 022. 018 is ignored because it is going to be
   removed soon. I have changed patches naming scheme in 019 as I did in 022.
+
+  Thanks to Alexander E. Patrakov <patrakov@gmail.com> for solving the issue.
 
   30 Jul 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-022.ebuild:
   Remove old 022 revision.
