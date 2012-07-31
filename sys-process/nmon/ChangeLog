@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/nmon
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/nmon/ChangeLog,v 1.4 2011/12/13 18:39:00 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/nmon/ChangeLog,v 1.5 2012/07/31 14:22:27 kensington Exp $
+
+  31 Jul 2012; Michael Palimaka <kensington@gentoo.org> -nmon-14f.ebuild:
+  Remove old.
 
 *nmon-14g (13 Dec 2011)
 
@@ -23,4 +26,3 @@
   04 Aug 2010; Mike Frysinger <vapier@gentoo.org> +nmon-13g.ebuild,
   +metadata.xml:
   Initial ebuild #132948 by Aaron Tygart.
-
