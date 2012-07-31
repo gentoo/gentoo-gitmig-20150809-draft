@@ -1,6 +1,13 @@
 # ChangeLog for dev-texlive/texlive-context
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-context/ChangeLog,v 1.59 2012/07/27 01:29:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-context/ChangeLog,v 1.60 2012/07/31 13:35:42 aballier Exp $
+
+*texlive-context-2012-r1 (31 Jul 2012)
+
+  31 Jul 2012; Alexis Ballier <aballier@gentoo.org>
+  +texlive-context-2012-r1.ebuild, +files/luacnfspec.patch:
+  Fix default search path for texmfcnf.lua so that it is found out of the box,
+  bug #428556 by Martin Scholz
 
 *texlive-context-2012 (27 Jul 2012)
 
