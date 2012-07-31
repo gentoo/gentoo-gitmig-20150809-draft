@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/nagvis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagvis/ChangeLog,v 1.10 2012/07/01 22:09:16 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagvis/ChangeLog,v 1.11 2012/07/31 18:49:50 axs Exp $
+
+*nagvis-1.6.6 (31 Jul 2012)
+
+  31 Jul 2012; Ian Stakenvicius <axs@gentoo.org> +nagvis-1.6.6.ebuild,
+  +files/nagvis-1.6.6-base-path.patch,
+  +files/nagvis-1.6.6-global-definitions.patch:
+  version bump for bug 324641 , thanks to spacefreak for testing ; dropped ~ppc
+  keyword due to missing keyword on net-analyzer/mk-livestatus dep (bug 429088)
 
   01 Jul 2012; Matti Bickel <mabi@gentoo.org> -nagvis-1.4.4.ebuild:
   remove old version.
