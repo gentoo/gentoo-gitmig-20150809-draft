@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/cwm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/ChangeLog,v 1.41 2012/07/30 19:51:45 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/ChangeLog,v 1.42 2012/07/31 00:53:35 xmw Exp $
+
+  31 Jul 2012; Michael Weber <xmw@gentoo.org> -cwm-4.2_p20110913-r1.ebuild,
+  -cwm-4.2_p20111229.ebuild, -files/cwm-4.2_p20110913-Makefile.patch:
+  Drop old
 
   30 Jul 2012; Anthony G. Basile <blueness@gentoo.org> cwm-5.1.ebuild:
   Stable arm, bug #422439
@@ -174,4 +178,3 @@
   +metadata.xml:
   Initial commit for cwm. Fixes bug #227771, thanks to Ihar Hrachyshka for
   the report and initial ebuild
-
