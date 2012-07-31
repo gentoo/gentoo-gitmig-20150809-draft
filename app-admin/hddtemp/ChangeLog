@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.111 2012/03/23 12:26:28 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.112 2012/07/31 07:49:44 aidecoe Exp $
+
+  31 Jul 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> files/hddgentoo.db:
+  Added WD Blue drives. Fixes bug #427312.
 
   23 Mar 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> files/hddgentoo.db:
   Added all WD Caviar Black and Blue SATA drives to hddgentoo.db.
