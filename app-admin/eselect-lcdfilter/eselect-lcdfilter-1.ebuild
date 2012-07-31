@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-lcdfilter/eselect-lcdfilter-1.ebuild,v 1.2 2012/07/30 07:13:22 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-lcdfilter/eselect-lcdfilter-1.ebuild,v 1.3 2012/07/31 06:42:05 yngwin Exp $
 
 EAPI=4
 inherit vcs-snapshot
@@ -31,7 +31,7 @@ src_install() {
 pkg_postinst() {
 	elog "Use eselect lcdfilter to select an lcdfiltering font style."
 	elog "You can customize /usr/share/${PN}/env.d/custom"
-	elog "with your own settings. See /usr/share/doc/${PVR}/infinality-settings.sh"
+	elog "with your own settings. See /usr/share/doc/${PF}/infinality-settings.sh"
 	elog "for an explanation and examples of the variables."
 	elog "This module is supposed to be used in pair with eselect infinality."
 }
