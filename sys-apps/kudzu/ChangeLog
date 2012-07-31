@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kudzu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/ChangeLog,v 1.35 2012/02/25 03:32:19 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/ChangeLog,v 1.36 2012/07/31 14:52:41 kensington Exp $
+
+  31 Jul 2012; Michael Palimaka <kensington@gentoo.org> -kudzu-1.2.83.ebuild:
+  Remove old.
 
   25 Feb 2012; Patrick Lauer <patrick@gentoo.org> kudzu-1.2.83-r1.ebuild,
   kudzu-1.2.83.ebuild:
@@ -68,4 +71,3 @@
   +files/1.2.52-remove-sata-ata-storage-classes.patch,
   +files/sunlance.patch, +metadata.xml, +kudzu-1.2.52.ebuild:
   Red Hat Hardware detection tools
-
