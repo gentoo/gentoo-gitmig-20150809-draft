@@ -1,6 +1,11 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.345 2012/07/27 11:22:48 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.346 2012/07/31 14:18:06 scarabeus Exp $
+
+  31 Jul 2012; Tomáš Chvátal <scarabeus@gentoo.org> -files/sdext-presenter.diff,
+  -libreoffice-3.5.4.2-r1.ebuild, libreoffice-3.5.5.3.ebuild:
+  Stable on amd64 and ppc wrt bug#427098. Remove older. Remove weird stray file
+  in files/
 
   27 Jul 2012; Andreas Schuerch <nativemad@gentoo.org>
   libreoffice-3.5.5.3.ebuild:
