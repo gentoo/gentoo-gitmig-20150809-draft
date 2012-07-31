@@ -10,6 +10,6 @@
 <use>
 	<flag name='introspection'>Enable GObject introspection.</flag>
 	<flag name='utils'>Install command-line PDF converters and various utilities.</flag>
-	<flag name='xpdf-headers'></flag>
+	<flag name='xpdf-headers'>Install (upstream-)unsupported xpdf headers</flag>
 </use>
 </pkgmetadata>
