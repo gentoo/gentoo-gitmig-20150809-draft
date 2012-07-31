@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6857 2012/07/31 07:42:57 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6858 2012/07/31 09:26:10 hasufell Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  31 Jul 2012; Julian Ospald <hasufell@gentoo.org> package.mask:
+  masking =net-misc/curl-7.27.0 wrt bug #428696
 
   31 Jul 2012; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Mask virtuoso-6.1.5 because of general brokenness
