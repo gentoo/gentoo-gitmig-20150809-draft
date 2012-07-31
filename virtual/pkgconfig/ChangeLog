@@ -1,6 +1,9 @@
 # ChangeLog for virtual/pkgconfig
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/pkgconfig/ChangeLog,v 1.12 2012/06/12 17:49:03 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/pkgconfig/ChangeLog,v 1.13 2012/07/31 07:41:17 ssuominen Exp $
+
+  31 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> pkgconfig-0.ebuild:
+  Remove dev-util/pkg-config-lite wrt #425292
 
   12 Jun 2012; Jeff Horelick <jdhore@gentoo.org> pkgconfig-0.ebuild:
   Move dev-util/pkgconf to being the 2nd choice. The pkg-config USE flag for it
