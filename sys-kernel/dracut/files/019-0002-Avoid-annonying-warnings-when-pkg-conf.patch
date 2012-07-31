@@ -1,7 +1,8 @@
-From c84a602b412cbd3ac5a21a608046bf18b880f565 Mon Sep 17 00:00:00 2001
+From c3f0423502968bcee19f307cd2dfa6762a2e5ccf Mon Sep 17 00:00:00 2001
 From: Juan RP <xtraeme@gmail.com>
 Date: Wed, 6 Jun 2012 14:19:59 +0200
-Subject: [PATCH] Avoid annonying warnings when pkg-config is not installed.
+Subject: [PATCH 2/5] Avoid annonying warnings when pkg-config is not
+ installed.
 
 ---
  dracut-functions.sh                    |    2 +-

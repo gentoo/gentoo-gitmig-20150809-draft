@@ -1,8 +1,8 @@
-From dd3517f38302f6e55b3cba13ec764166163be541 Mon Sep 17 00:00:00 2001
+From 7b565af4f41615bad43f710514a4f8fb9d2d2721 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Amadeusz=20=C5=BBo=C5=82nowski?= <aidecoe@aidecoe.name>
 Date: Tue, 31 Jul 2012 10:49:58 +0200
-Subject: [PATCH 17/17] 99shutdown: remove --no-wall argument for reboot,
- halt, etc...
+Subject: [PATCH 3/5] 99shutdown: remove --no-wall argument for reboot, halt,
+ etc...
 
 In some distros (Gentoo, for example) these commands don't honor
 --no-wall argument.

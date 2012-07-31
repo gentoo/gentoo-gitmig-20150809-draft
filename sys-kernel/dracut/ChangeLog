@@ -1,6 +1,24 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.77 2012/07/31 09:30:46 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.78 2012/07/31 16:52:23 aidecoe Exp $
+
+*dracut-022-r3 (31 Jul 2012)
+*dracut-019-r4 (31 Jul 2012)
+
+  31 Jul 2012; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +files/019-0001-90multipath-added-kpartx.rules-multipa.patch,
+  -files/019-0001-multipath-udev-rules.patch,
+  +files/019-0002-Avoid-annonying-warnings-when-pkg-conf.patch,
+  -files/019-0002-no-pkg-config-warnings.patch,
+  +files/019-0003-99shutdown-remove-no-wall-argument-for.patch,
+  +files/019-0004-dracut.sh-do-not-copy-var-run-and-var-.patch,
+  +files/019-0005-dracut.sh-create-relative-symlinks-for.patch,
+  -files/019-0017-99shutdown-remove-no-wall-argument-for.patch,
+  +files/022-0018-dracut.sh-do-not-copy-var-run-and-var-.patch,
+  -dracut-019-r3.ebuild, +dracut-019-r4.ebuild,
+  +files/022-0019-dracut.sh-create-relative-symlinks-for.patch,
+  -dracut-022-r2.ebuild, +dracut-022-r3.ebuild:
+  Fixes bug #428142 in 019 and 022.
 
 *dracut-022-r2 (31 Jul 2012)
 *dracut-019-r3 (31 Jul 2012)
