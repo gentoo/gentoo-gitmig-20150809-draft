@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/autotest-rails/autotest-rails-4.1.2.ebuild,v 1.2 2012/05/01 18:24:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/autotest-rails/autotest-rails-4.1.2.ebuild,v 1.3 2012/07/31 03:03:55 blueness Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -16,7 +16,7 @@ DESCRIPTION="This is an autotest plugin to provide rails support."
 HOMEPAGE="http://rubyforge.org/projects/zentest/"
 LICENSE="MIT"
 
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-macos"
+KEYWORDS="~amd64 ppc ppc64 ~x86 ~x86-macos"
 SLOT="0"
 IUSE=""
 
