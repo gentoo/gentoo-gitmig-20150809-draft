@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/aoetools
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/aoetools/ChangeLog,v 1.38 2010/12/13 10:30:37 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/aoetools/ChangeLog,v 1.39 2012/07/31 09:03:23 ssuominen Exp $
+
+*aoetools-34 (31 Jul 2012)
+
+  31 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> +aoetools-34.ebuild:
+  Version bump.
 
 *aoetools-32 (13 Dec 2010)
 
