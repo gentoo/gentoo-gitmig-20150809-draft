@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.115 2012/07/31 10:40:08 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.116 2012/07/31 10:49:36 aidecoe Exp $
+
+  31 Jul 2012; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +hddtemp-0.3_beta15-r4.ebuild:
+  Fixed bug #424417 for rev. without network-cron.
 
 *hddtemp-0.3_beta15-r21 (31 Jul 2012)
 *hddtemp-0.3_beta15-r20 (31 Jul 2012)
