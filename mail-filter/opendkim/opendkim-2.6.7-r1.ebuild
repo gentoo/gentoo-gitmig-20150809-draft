@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-2.6.0.ebuild,v 1.1 2012/06/11 10:47:06 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-2.6.7-r1.ebuild,v 1.1 2012/07/31 14:59:15 eras Exp $
 
 EAPI=4
 inherit eutils db-use autotools user
@@ -67,6 +67,7 @@ src_configure() {
 		myconf="--with-db-incdir=${myconf#-I}"
 		myconf+=" --enable-popauth"
 		myconf+=" --enable-query_cache"
+		myconf+=" --enable-stats"
 	fi
 	if use asyncdns ; then
 		if use unbound; then
@@ -100,7 +101,6 @@ src_configure() {
 		--enable-redirect \
 		--enable-resign \
 		--enable-replace_rules \
-		--enable-selector_header \
 		--enable-default_sender \
 		--enable-sender_macro \
 		--enable-vbr \
@@ -133,7 +133,7 @@ src_install() {
 		fi
 	fi
 
-	use static-libs || prune_libtool_files
+	use static-libs || find "${D}" -name "*.la" -delete
 }
 
 pkg_postinst() {
