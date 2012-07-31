@@ -1,6 +1,12 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.327 2012/07/23 21:36:52 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.328 2012/07/31 08:51:13 dilfridge Exp $
+
+*poppler-0.20.2-r1 (31 Jul 2012)
+
+  31 Jul 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +poppler-0.20.2-r1.ebuild, +files/poppler-0.20.2-xyscale.patch:
+  Fix printing of some pdf files, bug 426674
 
   23 Jul 2012; Andreas K. Huettel <dilfridge@gentoo.org> poppler-0.20.2.ebuild:
   Needs newer gobject-introspection, bug 379527
