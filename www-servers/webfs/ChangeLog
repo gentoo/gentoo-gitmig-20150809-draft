@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/webfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/webfs/ChangeLog,v 1.28 2012/07/29 18:15:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/webfs/ChangeLog,v 1.29 2012/07/31 13:55:06 kensington Exp $
+
+  31 Jul 2012; Michael Palimaka <kensington@gentoo.org> -files/webfs.initd,
+  -webfs-1.21-r1.ebuild:
+  Remove old.
 
   29 Jul 2012; Raúl Porcel <armin76@gentoo.org> webfs-1.21-r1.ebuild,
   webfs-1.21-r2.ebuild:
