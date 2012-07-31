@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javatoolkit/javatoolkit-0.3.0-r7.ebuild,v 1.1 2012/07/31 14:46:27 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javatoolkit/javatoolkit-0.3.0-r8.ebuild,v 1.1 2012/07/31 20:43:10 sera Exp $
 
 EAPI="4"
 
@@ -30,9 +30,10 @@ python_prepare_all() {
 	epatch "${FILESDIR}/${P}-python2.6.patch"
 	epatch "${FILESDIR}/${P}-no-pyxml.patch"
 
+	# Portage wont like quotes around ${EPREFIX} #429092
 	# can't pass --install-scripts to setup.py in python-distutils-ng-src_install
 	cat > setup.cfg <<- EOF
 		[install]
-		install-scripts = "${EPREFIX}"/usr/$(get_libdir)/${PN}/bin
+		install-scripts = ${EPREFIX}/usr/$(get_libdir)/${PN}/bin
 	EOF
 }
