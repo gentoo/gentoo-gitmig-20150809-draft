@@ -1,6 +1,6 @@
 #!/sbin/runscript
-# Copyright 2008-2011 Dirkjan Ochtman
-# Distributed under the terms of the GNU General Public License v2
+# Copyright 1999-2012 Dirkjan Ochtman
+# Distributed under the terms of the Apache License, Version 2.0
 
 depend() {
 	need net
