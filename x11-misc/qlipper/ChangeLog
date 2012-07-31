@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/qlipper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qlipper/ChangeLog,v 1.1 2012/06/29 07:47:52 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qlipper/ChangeLog,v 1.2 2012/07/31 12:05:13 yngwin Exp $
+
+*qlipper-2.0.0-r1 (31 Jul 2012)
+
+  31 Jul 2012; Ben de Groot <yngwin@gentoo.org> +qlipper-2.0.0-r1.ebuild,
+  -qlipper-2.0.0.ebuild:
+  Install in right place. Handle localizations.
 
 *qlipper-2.0.0 (29 Jun 2012)
 
