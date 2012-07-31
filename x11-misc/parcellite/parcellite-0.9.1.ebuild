@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/parcellite/parcellite-0.9.1.ebuild,v 1.4 2012/05/05 04:53:44 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/parcellite/parcellite-0.9.1.ebuild,v 1.5 2012/07/31 22:41:49 hasufell Exp $
 
 EAPI=2
-inherit fdo-mime
+inherit fdo-mime flag-o-matic
 
 DESCRIPTION="A lightweight GTK+ based clipboard manager."
 HOMEPAGE="http://parcellite.sourceforge.net/"
@@ -22,6 +22,7 @@ DEPEND="${RDEPEND}
 		dev-util/intltool )"
 
 src_configure() {
+	append-libs -lX11
 	econf --disable-dependency-tracking $(use_enable nls)
 }
 

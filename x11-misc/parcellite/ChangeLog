@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/parcellite
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/parcellite/ChangeLog,v 1.18 2012/05/05 04:53:44 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/parcellite/ChangeLog,v 1.19 2012/07/31 22:41:49 hasufell Exp $
+
+  31 Jul 2012; Julian Ospald <hasufell@gentoo.org> parcellite-0.9.1.ebuild,
+  parcellite-1.0.1.ebuild:
+  fix underlinking wrt #379661
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> parcellite-0.9.1.ebuild,
   parcellite-1.0.1.ebuild:
