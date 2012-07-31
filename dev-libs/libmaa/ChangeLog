@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libmaa
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmaa/ChangeLog,v 1.30 2012/04/07 07:38:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmaa/ChangeLog,v 1.31 2012/07/31 14:59:08 scarabeus Exp $
+
+*libmaa-1.3.2 (31 Jul 2012)
+
+  31 Jul 2012; Tomáš Chvátal <scarabeus@gentoo.org> +libmaa-1.3.2.ebuild:
+  Version bump.
 
   07 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> libmaa-1.3.1.ebuild:
   Revert static-libs switch due to my statement in bug#401935.
@@ -104,4 +109,3 @@
   09 Dec 2008; Peter Volkov <pva@gentoo.org>
   +files/libmaa-1.1.0-LDFLAGS.patch, +metadata.xml, +libmaa-1.1.0.ebuild:
   Initial import. Previously this library was part of <=dictd-1.10.11.
-
