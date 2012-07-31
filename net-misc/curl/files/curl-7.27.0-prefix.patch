@@ -7,9 +7,9 @@ diff -Naur curl-7.27.0.orig//curl-config.in curl-7.27.0/curl-config.in
          fi
 -       	if test "X@includedir@" = "X/usr/include"; then
 +	if test "X@includedir@" = "X@GENTOO_PORTAGE_EPREFIX@/usr/include"; then
-           echo "$(CPPFLAG_CURL_STATICLIB)"
+           echo "${CPPFLAG_CURL_STATICLIB}"
          else
-           echo "$(CPPFLAG_CURL_STATICLIB)-I@includedir@"
+           echo "${CPPFLAG_CURL_STATICLIB}-I@includedir@"
 @@ -142,7 +142,7 @@
         	;;
  

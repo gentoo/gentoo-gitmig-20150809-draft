@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.27.0-r1.ebuild,v 1.1 2012/07/31 12:29:29 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.27.0-r2.ebuild,v 1.1 2012/07/31 21:14:35 blueness Exp $
 
 EAPI="4"
 
@@ -84,6 +84,7 @@ DOCS=( CHANGES README docs/FEATURES docs/INTERNALS \
 
 src_prepare() {
 	epatch \
+		"${FILESDIR}"/${PN}-7.27.0-curl-config.patch \
 		"${FILESDIR}"/${PN}-7.27.0-prefix.patch \
 		"${FILESDIR}"/${PN}-respect-cflags-3.patch \
 		"${FILESDIR}"/${PN}-fix-gnutls-nettle.patch
