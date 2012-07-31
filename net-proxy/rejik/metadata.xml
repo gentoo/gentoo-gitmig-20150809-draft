@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer>
+    <email>admin@pinkbyte.ru</email>
+    <name>Sergey Popov</name>
+  </maintainer>
+  <herd>proxy-maint</herd>
+  <use>
+    <flag name='banlists'>Install upstream provided simple banlists</flag>
+  </use>
+</pkgmetadata>
