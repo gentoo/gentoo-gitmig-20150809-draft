@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-10.5.2.ebuild,v 1.2 2012/07/18 04:12:24 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-10.7.0.ebuild,v 1.1 2012/07/31 10:27:55 chainsaw Exp $
 
 EAPI=4
 inherit autotools base eutils linux-info multilib
@@ -15,8 +15,17 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="ais alsa bluetooth calendar +caps curl dahdi debug doc freetds gtalk http iconv jabber jingle ldap lua mysql newt +samples odbc osplookup oss portaudio postgres radius snmp span speex srtp static syslog usb vorbis"
-REQUIRED_USE="gtalk? ( jabber )"
+IUSE_VOICEMAIL_STORAGE="
+	+voicemail_storage_file
+	voicemail_storage_odbc
+	voicemail_storage_imap
+"
+IUSE="${IUSE_VOICEMAIL_STORAGE} ais alsa bluetooth calendar +caps curl dahdi debug doc freetds gtalk http iconv jabber jingle ldap lua mysql newt +samples odbc osplookup oss portaudio postgres radius snmp span speex srtp static syslog vorbis"
+IUSE_EXPAND="VOICEMAIL_STORAGE"
+REQUIRED_USE="gtalk? ( jabber )
+	^^ ( ${IUSE_VOICEMAIL_STORAGE/+/} )
+	voicemail_storage_odbc? ( odbc )
+"
 
 EPATCH_SUFFIX="patch"
 PATCHES=( "${WORKDIR}/asterisk-patchset" )
@@ -56,12 +65,12 @@ RDEPEND="dev-db/sqlite:3
 	span? ( media-libs/spandsp )
 	speex? ( media-libs/speex )
 	srtp? ( net-libs/libsrtp )
-	usb? ( virtual/libusb:0
-		media-libs/alsa-lib )
 	vorbis? ( media-libs/libvorbis )"
 
 DEPEND="${RDEPEND}
-	!net-libs/openh323"
+	!net-libs/openh323
+	voicemail_storage_imap? ( virtual/imap-c-client )
+"
 
 RDEPEND="${RDEPEND}
 	syslog? ( virtual/logger )"
@@ -90,6 +99,8 @@ src_prepare() {
 }
 
 src_configure() {
+	local vmst
+
 	econf \
 		--libdir="/usr/$(get_libdir)" \
 		--localstatedir="/var" \
@@ -171,8 +182,14 @@ src_configure() {
 	use_select speex		{codec,func}_speex
 	use_select srtp			res_srtp
 	use_select syslog		cdr_syslog
-	use_select usb			chan_usbradio
 	use_select vorbis		format_ogg_vorbis
+
+	# Voicemail storage ...
+	for vmst in ${IUSE_VOICEMAIL_STORAGE/+/}; do
+		if use ${vmst}; then
+			menuselect/menuselect --enable $(echo ${vmst##*_} | tr '[:lower:]' '[:upper:]')_STORAGE menuselect.makeopts
+		fi
+	done
 }
 
 src_compile() {
