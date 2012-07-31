@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/cutycapt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/cutycapt/ChangeLog,v 1.4 2012/04/09 08:07:04 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/cutycapt/ChangeLog,v 1.5 2012/07/31 08:31:57 kensington Exp $
+
+  31 Jul 2012; Michael Palimaka <kensington@gentoo.org>
+  cutycapt-0_p20120409.ebuild:
+  Add missing slot dependencies on Qt.
 
 *cutycapt-0_p20120409 (09 Apr 2012)
 
@@ -27,4 +31,3 @@
   03 May 2011; <matt@gentoo.org> +cutycapt-0_p20110502.ebuild,
   +metadata.xml:
   new ebuild for cutycapt - written by me - fixes bug #333283
-
