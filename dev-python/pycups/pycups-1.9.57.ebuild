@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/pycups-1.9.57.ebuild,v 1.7 2011/09/12 22:26:15 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/pycups-1.9.57.ebuild,v 1.8 2012/07/31 08:09:49 dilfridge Exp $
 
 EAPI="3"
 
@@ -18,7 +18,7 @@ SLOT="0"
 IUSE="doc examples"
 
 RDEPEND="
-	net-print/cups
+	<net-print/cups-1.6.0
 "
 DEPEND="${RDEPEND}
 	doc? ( dev-python/epydoc )
