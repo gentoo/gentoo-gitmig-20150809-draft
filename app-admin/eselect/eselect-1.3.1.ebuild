@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-1.3.1.ebuild,v 1.10 2012/07/15 17:17:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-1.3.1.ebuild,v 1.11 2012/07/31 16:30:56 ulm Exp $
 
 EAPI=3
 
@@ -52,13 +52,17 @@ src_install() {
 
 	# needed by news module
 	keepdir /var/lib/gentoo/news
-	fowners root:portage /var/lib/gentoo/news || die
-	fperms g+w /var/lib/gentoo/news || die
+	if ! use prefix; then
+		fowners root:portage /var/lib/gentoo/news || die
+		fperms g+w /var/lib/gentoo/news || die
+	fi
 }
 
 pkg_postinst() {
 	# fowners in src_install doesn't work for the portage group:
 	# merging changes the group back to root
-	chgrp portage "${EROOT}/var/lib/gentoo/news" \
-		&& chmod g+w "${EROOT}/var/lib/gentoo/news"
+	if ! use prefix; then
+		chgrp portage "${EROOT}/var/lib/gentoo/news" \
+			&& chmod g+w "${EROOT}/var/lib/gentoo/news"
+	fi
 }
