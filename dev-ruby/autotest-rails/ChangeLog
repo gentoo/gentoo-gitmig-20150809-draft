@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/autotest-rails
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/autotest-rails/ChangeLog,v 1.18 2012/07/31 03:03:55 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/autotest-rails/ChangeLog,v 1.19 2012/07/31 07:02:12 jdhore Exp $
+
+  31 Jul 2012; Jeff Horelick <jdhore@gentoo.org> autotest-rails-4.1.2.ebuild:
+  marked x86 per bug 428692
 
   31 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
   autotest-rails-4.1.2.ebuild:
