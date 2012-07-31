@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/mantisbt
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.115 2011/12/14 22:53:05 mabi Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.116 2012/07/31 09:40:21 patrick Exp $
+
+*mantisbt-1.2.11 (31 Jul 2012)
+
+  31 Jul 2012; Patrick Lauer <patrick@gentoo.org> +mantisbt-1.2.11.ebuild:
+  Bump
 
   14 Dec 2011; Matti Bickel <mabi@gentoo.org> mantisbt-1.2.8.ebuild:
   Merging categories dev-php5 and dev-php (bug #324665)
@@ -530,4 +535,3 @@
   +files/postinstall-en.txt, +mantisbt-0.18.3.ebuild:
   Initial ebuild (by swegener, really). Thanks to blubber, Jacob Smullyan
   <smulloni@smullyan.org>, and swegener for their work. Closes #27161.
-
