@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.19.ebuild,v 1.7 2012/07/31 05:44:56 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.19-r1.ebuild,v 1.1 2012/07/31 09:07:27 dilfridge Exp $
 
 EAPI=4
 
@@ -57,7 +57,8 @@ src_configure() {
 		$(use_with jpeg) \
 		$(use_with png) \
 		$(use_with tiff) \
-		--without-php
+		--without-php \
+		--docdir=/usr/share/doc/${PF}
 }
 
 src_compile() {
