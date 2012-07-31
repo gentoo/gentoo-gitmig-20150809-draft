@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/copyfs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/copyfs/ChangeLog,v 1.6 2010/09/20 20:16:26 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/copyfs/ChangeLog,v 1.7 2012/07/31 14:25:18 kensington Exp $
+
+  31 Jul 2012; Michael Palimaka <kensington@gentoo.org> -copyfs-1.0.ebuild,
+  -files/copyfs-1.0-gentoo.patch:
+  Remove old.
 
 *copyfs-1.0.1 (20 Sep 2010)
 
@@ -27,4 +31,3 @@
   +files/copyfs-1.0-gentoo.patch, +files/copyfs-1.0-unlink.patch,
   +copyfs-1.0.ebuild:
   Initial import
-
