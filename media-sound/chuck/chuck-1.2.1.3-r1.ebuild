@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/chuck/chuck-1.2.1.3.ebuild,v 1.1 2012/03/17 09:21:23 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/chuck/chuck-1.2.1.3-r1.ebuild,v 1.1 2012/07/31 16:23:33 cedk Exp $
 
 EAPI=2
 inherit toolchain-funcs flag-o-matic eutils
@@ -33,6 +33,9 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.2.1.1-hid-smc.patch \
 		"${FILESDIR}"/${PN}-1.2.1.2-gcc44.patch
+	sed -i \
+		-e "s/\$(CXX) -o/\$(CXX) \$(LDFLAGS) -o/" \
+		src/makefile.{alsa,jack,oss} || die "sed failed"
 }
 
 compile_backend() {
