@@ -1,6 +1,20 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.353 2012/06/14 23:33:44 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.354 2012/07/31 16:19:51 grobian Exp $
+
+  31 Jul 2012; Fabian Groffen <grobian@gentoo.org> +darwin/macos/10.8/eapi,
+  +darwin/macos/10.8/make.defaults, +darwin/macos/10.8/package.provided,
+  +darwin/macos/10.8/package.use.mask, +darwin/macos/10.8/parent,
+  +darwin/macos/10.8/profile.bashrc, +darwin/macos/10.8/x64/make.defaults,
+  +darwin/macos/10.8/x64/package.mask,
+  +darwin/macos/10.8/x64/package.use.force,
+  +darwin/macos/10.8/x64/package.use.mask, +darwin/macos/10.8/x64/parent,
+  +darwin/macos/10.8/x64/use.mask, +darwin/macos/10.8/x86/make.defaults,
+  +darwin/macos/10.8/x86/package.mask,
+  +darwin/macos/10.8/x86/package.use.force,
+  +darwin/macos/10.8/x86/package.use.mask, +darwin/macos/10.8/x86/parent,
+  +darwin/macos/10.8/x86/use.mask:
+  Add Mac OS X Mountain Lion (10.8) profiles
 
   14 Jun 2012; Davide Pesavento <pesa@gentoo.org>
   darwin/macos/arch/ppc/package.use.mask:
