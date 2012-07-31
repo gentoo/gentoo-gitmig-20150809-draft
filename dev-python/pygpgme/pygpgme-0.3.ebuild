@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygpgme/pygpgme-0.3.ebuild,v 1.1 2012/07/31 13:19:36 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygpgme/pygpgme-0.3.ebuild,v 1.2 2012/07/31 14:06:17 aidecoe Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.7 3:3.2"
@@ -23,6 +23,10 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	sed -e 's/#include <gpgme\.h>/#include <gpgme\/gpgme\.h>/' \
-		-i "${S}/src/pygpgme.h"
+		-i "${S}/src/pygpgme.h" || die
+	sed -e 's/suite.addTest(tests.test_sign_verify.test_suite())/#\0/' \
+		-e 's/suite.addTest(tests.test_encrypt_decrypt.test_suite())/#\0/' \
+		-e 's/suite.addTest(tests.test_passphrase.test_suite())/#\0/' \
+		-i "${S}/tests/__init__.py" || die
 	distutils_src_prepare
 }
