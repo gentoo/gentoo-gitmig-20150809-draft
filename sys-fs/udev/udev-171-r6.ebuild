@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-171-r6.ebuild,v 1.8 2012/07/30 22:36:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-171-r6.ebuild,v 1.9 2012/07/31 04:43:38 ssuominen Exp $
 
 EAPI=4
 
@@ -25,7 +25,8 @@ then
 	KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-linux"
 	# please update testsys-tarball whenever udev-xxx/test/sys/ is changed
 	SRC_URI="mirror://kernel/linux/utils/kernel/hotplug/${P}.tar.bz2
-			 test? ( mirror://gentoo/${PN}-171-testsys.tar.bz2 )"
+			 test? ( mirror://gentoo/${PN}-171-testsys.tar.bz2 )
+			 http://dev.gentoo.org/~ssuominen/${PN}-gentoo-legacy-patchset-1.tar.bz2"
 	if [[ -n "${PATCHSET}" ]]
 	then
 		SRC_URI="${SRC_URI} mirror://gentoo/${PATCHSET}.tar.bz2"
@@ -260,8 +261,8 @@ src_install() {
 	cd "${S}"
 
 	insinto /etc/modprobe.d
-	newins "${FILESDIR}"/blacklist-146 blacklist.conf
-	newins "${FILESDIR}"/pnp-aliases pnp-aliases.conf
+	newins "${WORKDIR}"/blacklist-146 blacklist.conf
+	newins "${WORKDIR}"/pnp-aliases pnp-aliases.conf
 
 	# documentation
 	dodoc ChangeLog README TODO
@@ -278,7 +279,7 @@ src_install() {
 	doconfd conf.d/*
 	exeinto /lib/udev
 	doexe helpers/*
-doexe "${FILESDIR}"/shell-compat-KV.sh
+	doexe "${WORKDIR}"/shell-compat-KV.sh
 	doinitd init.d/*
 	insinto /etc/modprobe.d
 	doins modprobe.d/*

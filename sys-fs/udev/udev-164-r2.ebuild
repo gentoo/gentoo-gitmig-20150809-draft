@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-164-r2.ebuild,v 1.22 2012/05/16 03:21:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-164-r2.ebuild,v 1.23 2012/07/31 04:43:38 ssuominen Exp $
 
 EAPI="1"
 
@@ -18,7 +18,8 @@ else
 	# please update testsys-tarball whenever udev-xxx/test/sys/ is changed
 	SRC_URI="mirror://kernel/linux/utils/kernel/hotplug/${P}.tar.bz2
 			 test? ( mirror://gentoo/${PN}-151-testsys.tar.bz2 )
-			 mirror://gentoo/${scriptname}.tar.bz2"
+			 mirror://gentoo/${scriptname}.tar.bz2
+			 http://dev.gentoo.org/~ssuominen/${PN}-gentoo-legacy-patchset-1.tar.bz2"
 	[[ -n "${PATCHSET}" ]] && SRC_URI="${SRC_URI} mirror://gentoo/${PATCHSET}.tar.bz2"
 fi
 DESCRIPTION="Linux dynamic and persistent device naming support (aka userspace devfs)"
@@ -152,7 +153,7 @@ src_unpack() {
 	cd "${S}"
 
 	# Bug 413055
-	epatch "${FILESDIR}"/udev-164-remove-v4l1.patch
+	epatch "${WORKDIR}"/udev-164-remove-v4l1.patch
 
 	# backport some patches
 	if [[ -n "${PATCHSET}" ]]; then
@@ -255,8 +256,8 @@ src_install() {
 	cd "${S}"
 
 	insinto /etc/modprobe.d
-	newins "${FILESDIR}"/blacklist-146 blacklist.conf
-	newins "${FILESDIR}"/pnp-aliases pnp-aliases.conf
+	newins "${WORKDIR}"/blacklist-146 blacklist.conf
+	newins "${WORKDIR}"/pnp-aliases pnp-aliases.conf
 
 	# documentation
 	dodoc ChangeLog README TODO || die "failed installing docs"

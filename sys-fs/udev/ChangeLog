@@ -1,6 +1,29 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.699 2012/07/30 22:41:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.700 2012/07/31 04:43:38 ssuominen Exp $
+
+  31 Jul 2012; Samuli Suominen <ssuominen@gentoo.org>
+  -files/move_tmp_persistent_rules-112-r1.sh, -files/136/udev.confd,
+  -files/147/udev.confd, -files/write_root_link_rule-125,
+  -files/136/udev.initd, -files/147/udev.initd, -files/net-130-r1.sh,
+  -files/136/shell-compat-KV.sh, -files/136/udev-dev-tarball.initd,
+  -files/147/udev-mount.initd, -files/udev-141-remove-devfs-names.diff,
+  -files/136/udev-mount.initd, -files/147/udev-postmount.initd,
+  -files/blacklist-146, -files/136/udev-postmount.initd,
+  -files/147/udev-start.sh, -files/udev-150-fix-missing-firmware-timeout.diff,
+  -files/136/shell-compat-addon.sh, -files/136/udev-start.sh,
+  -files/147/udev-stop.sh, -files/udev-151-readd-hd-rules.diff,
+  -files/136/udev-stop.sh, -files/151-r4/shell-compat-KV.sh,
+  -files/udev-164-remove-v4l1.patch, -files/147/shell-compat-KV.sh,
+  -files/147/shell-compat-addon.sh, -files/147/udev-dev-tarball.initd,
+  -files/151-r4/shell-compat-addon.sh, -files/151-r4/udev.confd,
+  -files/151-r4/udev-dev-tarball.initd, udev-146-r1.ebuild,
+  -files/151-r4/udev-mount.initd, udev-151-r4.ebuild, -files/151-r4/udev.initd,
+  -files/151-r4/udev-postmount.initd, -files/151-r4/udev-start.sh,
+  udev-149.ebuild, udev-164-r2.ebuild, -files/151-r4/udev-stop.sh,
+  udev-141-r1.ebuild, udev-171-r6.ebuild, -files/pnp-aliases,
+  -files/shell-compat-KV.sh:
+  Tarball rest of the legacy files to mirrors.
 
   30 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> -files/blacklist-110,
   udev-141-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-149.ebuild,v 1.25 2012/05/16 03:21:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-149.ebuild,v 1.26 2012/07/31 04:43:38 ssuominen Exp $
 
 EAPI="1"
 
@@ -154,11 +154,11 @@ src_unpack() {
 
 	if ! use devfs-compat; then
 		# see Bug #269359
-		epatch "${FILESDIR}"/udev-141-remove-devfs-names.diff
+		epatch "${WORKDIR}"/udev-141-remove-devfs-names.diff
 	fi
 
 	# Bug 413055
-	epatch "${FILESDIR}"/udev-164-remove-v4l1.patch
+	epatch "${WORKDIR}"/udev-164-remove-v4l1.patch
 
 	# change rules back to group uucp instead of dialout for now
 	sed -e 's/GROUP="dialout"/GROUP="uucp"/' \
@@ -211,7 +211,7 @@ src_compile() {
 }
 
 src_install() {
-	local scriptdir="${FILESDIR}/147"
+	local scriptdir="${WORKDIR}/147"
 
 	into /
 	emake DESTDIR="${D}" install || die "make install failed"
@@ -231,10 +231,10 @@ src_install() {
 	fi
 
 	exeinto "${udev_libexec_dir}"
-	newexe "${FILESDIR}"/net-130-r1.sh net.sh	|| die "net.sh not installed properly"
-	newexe "${FILESDIR}"/move_tmp_persistent_rules-112-r1.sh move_tmp_persistent_rules.sh \
+	newexe "${WORKDIR}"/net-130-r1.sh net.sh	|| die "net.sh not installed properly"
+	newexe "${WORKDIR}"/move_tmp_persistent_rules-112-r1.sh move_tmp_persistent_rules.sh \
 		|| die "move_tmp_persistent_rules.sh not installed properly"
-	newexe "${FILESDIR}"/write_root_link_rule-125 write_root_link_rule \
+	newexe "${WORKDIR}"/write_root_link_rule-125 write_root_link_rule \
 		|| die "write_root_link_rule not installed properly"
 
 	doexe "${scriptdir}"/shell-compat-KV.sh \
@@ -295,8 +295,8 @@ src_install() {
 		|| die "config file not installed properly"
 
 	insinto /etc/modprobe.d
-	newins "${FILESDIR}"/blacklist-146 blacklist.conf
-	newins "${FILESDIR}"/pnp-aliases pnp-aliases.conf
+	newins "${WORKDIR}"/blacklist-146 blacklist.conf
+	newins "${WORKDIR}"/pnp-aliases pnp-aliases.conf
 
 	# convert /lib/udev to real used dir
 	sed_libexec_dir \

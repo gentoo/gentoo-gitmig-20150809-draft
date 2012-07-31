@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-151-r4.ebuild,v 1.23 2012/05/16 03:21:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-151-r4.ebuild,v 1.24 2012/07/31 04:43:38 ssuominen Exp $
 
 EAPI="1"
 
@@ -15,7 +15,8 @@ if [[ ${PV} == "9999" ]]; then
 else
 	# please update testsys-tarball whenever udev-xxx/test/sys/ is changed
 	SRC_URI="mirror://kernel/linux/utils/kernel/hotplug/${P}.tar.bz2
-			 test? ( mirror://gentoo/${PN}-151-testsys.tar.bz2 )"
+			 test? ( mirror://gentoo/${PN}-151-testsys.tar.bz2 )
+			 http://dev.gentoo.org/~ssuominen/${PN}-gentoo-legacy-patchset-1.tar.bz2"
 	[[ -n "${PATCHSET}" ]] && SRC_URI="${SRC_URI} mirror://gentoo/${PATCHSET}.tar.bz2"
 fi
 DESCRIPTION="Linux dynamic and persistent device naming support (aka userspace devfs)"
@@ -155,14 +156,14 @@ src_unpack() {
 	fi
 
 	# Bug 301667
-	epatch "${FILESDIR}"/udev-150-fix-missing-firmware-timeout.diff
+	epatch "${WORKDIR}"/udev-150-fix-missing-firmware-timeout.diff
 
 	# Bug 413055
-	epatch "${FILESDIR}"/udev-164-remove-v4l1.patch
+	epatch "${WORKDIR}"/udev-164-remove-v4l1.patch
 
 	if ! use devfs-compat; then
 		# see Bug #269359
-		epatch "${FILESDIR}"/udev-141-remove-devfs-names.diff
+		epatch "${WORKDIR}"/udev-141-remove-devfs-names.diff
 	fi
 
 	# change rules back to group uucp instead of dialout for now
@@ -185,7 +186,7 @@ src_unpack() {
 	fi
 
 	if use old-hd-rules; then
-		epatch "${FILESDIR}"/udev-151-readd-hd-rules.diff
+		epatch "${WORKDIR}"/udev-151-readd-hd-rules.diff
 	fi
 
 	sed_libexec_dir \
@@ -221,16 +222,16 @@ src_compile() {
 }
 
 src_install() {
-	local scriptdir="${FILESDIR}/151-r4"
+	local scriptdir="${WORKDIR}/151-r4"
 
 	into /
 	emake DESTDIR="${D}" install || die "make install failed"
 
 	exeinto "${udev_libexec_dir}"
-	newexe "${FILESDIR}"/net-130-r1.sh net.sh	|| die "net.sh not installed properly"
-	newexe "${FILESDIR}"/move_tmp_persistent_rules-112-r1.sh move_tmp_persistent_rules.sh \
+	newexe "${WORKDIR}"/net-130-r1.sh net.sh	|| die "net.sh not installed properly"
+	newexe "${WORKDIR}"/move_tmp_persistent_rules-112-r1.sh move_tmp_persistent_rules.sh \
 		|| die "move_tmp_persistent_rules.sh not installed properly"
-	newexe "${FILESDIR}"/write_root_link_rule-125 write_root_link_rule \
+	newexe "${WORKDIR}"/write_root_link_rule-125 write_root_link_rule \
 		|| die "write_root_link_rule not installed properly"
 
 	doexe "${scriptdir}"/shell-compat-KV.sh \
@@ -291,8 +292,8 @@ src_install() {
 		|| die "config file not installed properly"
 
 	insinto /etc/modprobe.d
-	newins "${FILESDIR}"/blacklist-146 blacklist.conf
-	newins "${FILESDIR}"/pnp-aliases pnp-aliases.conf
+	newins "${WORKDIR}"/blacklist-146 blacklist.conf
+	newins "${WORKDIR}"/pnp-aliases pnp-aliases.conf
 
 	# convert /lib/udev to real used dir
 	sed_libexec_dir \
