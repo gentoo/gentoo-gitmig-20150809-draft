@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/kile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.156 2012/06/18 22:22:32 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.157 2012/07/31 17:41:39 kensington Exp $
+
+  31 Jul 2012; Michael Palimaka <kensington@gentoo.org> metadata.xml:
+  Add upstream metadata.
 
 *kile-2.1.2-r1 (18 Jun 2012)
 
