@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tins/tins-0.3.14.ebuild,v 1.2 2012/07/30 00:20:08 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tins/tins-0.3.14.ebuild,v 1.3 2012/08/01 05:44:28 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19 ree18 jruby"
@@ -24,6 +24,10 @@ ruby_add_bdepend "test? ( >=dev-ruby/test-unit-2.3 ) "
 
 all_ruby_prepare() {
 	sed -i -e '/gem_hadar/ s:^:#:' tests/test_helper.rb || die
+
+	# Avoid test that fails with FEATURES=-userpriv, similar to newer
+	# tins. See bug 428704.
+	sed -i -e 's:RUBY_PLATFORM !~ /java/:false:' tests/find_test.rb || die
 }
 
 each_ruby_test() {
