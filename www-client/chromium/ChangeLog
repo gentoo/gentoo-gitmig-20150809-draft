@@ -1,6 +1,9 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.681 2012/08/01 01:24:35 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.682 2012/08/01 11:15:58 ago Exp $
+
+  01 Aug 2012; Agostino Sarubbo <ago@gentoo.org> chromium-21.0.1180.57.ebuild:
+  Stable for AMD64, wrt bug #429174
 
   01 Aug 2012; Mike Gilbert <floppym@gentoo.org> chromium-21.0.1180.57.ebuild:
   Apply bison fix here as well.
