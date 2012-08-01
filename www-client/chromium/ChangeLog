@@ -1,6 +1,9 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.680 2012/08/01 00:43:28 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.681 2012/08/01 01:24:35 floppym Exp $
+
+  01 Aug 2012; Mike Gilbert <floppym@gentoo.org> chromium-21.0.1180.57.ebuild:
+  Apply bison fix here as well.
 
   01 Aug 2012; Mike Gilbert <floppym@gentoo.org>
   +files/chromium-bison-2.6-r0.patch, chromium-22.0.1215.0.ebuild:
