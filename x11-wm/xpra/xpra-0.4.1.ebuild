@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.3.3.ebuild,v 1.1 2012/07/15 22:00:20 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.4.1.ebuild,v 1.1 2012/08/01 07:15:21 xmw Exp $
 
 EAPI=3
 
@@ -51,4 +51,9 @@ src_prepare() {
 	fi
 
 	$(PYTHON -2) make_constants_pxi.py wimpiggy/lowlevel/constants.txt wimpiggy/lowlevel/constants.pxi || die
+}
+
+src_install() {
+	distutils_src_install
+	rm -vf "${ED}"usr/share/{parti,wimpiggy,xpra}/{README*,COPYING} || die
 }
