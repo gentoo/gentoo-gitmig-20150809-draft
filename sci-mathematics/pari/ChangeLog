@@ -1,6 +1,14 @@
 # ChangeLog for sci-mathematics/pari
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.88 2012/06/28 04:57:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.89 2012/08/01 21:38:31 bicatali Exp $
+
+*pari-2.5.1-r1 (01 Aug 2012)
+
+  01 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/pari-2.5.1-1302.patch, +files/pari-2.5.1-1304.patch,
+  +files/pari-2.5.1-no-automagic.patch, +pari-2.5.1-r1.ebuild:
+  Fixed automagic dependencies against fltk and qt as noted by Burcin Erocal,
+  bug #428192, added some upstream patches from sage-on-gentoo
 
   28 Jun 2012; Sébastien Fabbro <bicatali@gentoo.org>
   +files/pari-2.5.1-gcc47.patch, pari-2.5.1.ebuild:
