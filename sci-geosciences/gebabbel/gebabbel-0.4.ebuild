@@ -1,10 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gebabbel/gebabbel-0.4.ebuild,v 1.1 2011/06/16 14:35:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gebabbel/gebabbel-0.4.ebuild,v 1.2 2012/08/01 15:57:59 jlec Exp $
 
 EAPI=4
 
 MY_P=${P/g/G}
+
 inherit eutils qt4-r2
 
 DESCRIPTION="QT-Frontend to load and convert gps tracks with gpsbabel"
@@ -33,16 +34,12 @@ S=${WORKDIR}/${MY_P}
 src_prepare() {
 	base_src_prepare
 	# do not mess with cflags
-	sed -i \
-		-e 's:-O0 -g3::g' \
-		*.pro || die
-}
-
-src_configure() {
-	eqmake4
+	sed \
+		-e "/QMAKE_CXXFLAGS/s:=.*$:= ${CXXFLAGS}:g" \
+		-i *.pro || die
 }
 
 src_install() {
 	dobin bin/${PN}
-	dodoc CHANGELOG
+	dodoc CHANGELOG CREDITS
 }
