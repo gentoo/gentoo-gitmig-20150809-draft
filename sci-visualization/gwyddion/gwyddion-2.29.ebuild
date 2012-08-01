@@ -1,10 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/gwyddion-2.27.ebuild,v 1.2 2012/05/04 08:07:00 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/gwyddion-2.29.ebuild,v 1.1 2012/08/01 22:30:25 bicatali Exp $
 
 EAPI=4
 
 PYTHON_DEPEND="python? 2"
+AUTOTOOLS_IN_SOURCE_BUILD=1
 
 inherit eutils fdo-mime gnome2-utils python autotools-utils
 
@@ -14,7 +15,7 @@ SRC_URI="http://gwyddion.net/download/${PV}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc fftw gnome kde nls opengl perl python ruby sourceview xml X"
 
 RDEPEND="media-libs/libpng
@@ -45,11 +46,8 @@ src_prepare() {
 }
 
 src_configure() {
-	myeconfargs+=(
-		--disable-desktop-file-update
+	local myeconfargs+=(
 		--disable-rpath
-		--enable-library-bloat
-		--enable-plugin-proxy
 		$(use_enable doc gtk-doc)
 		$(use_enable nls)
 		$(use_enable python pygwy)
@@ -59,7 +57,7 @@ src_configure() {
 		$(use_with fftw fftw3)
 		$(use_with opengl gl) \
 		$(use_with sourceview gtksourceview)
-		$(use_with xml spml)
+		$(use_with xml libxml2)
 		$(use_with X x)
 		$(use_with kde kde4-thumbnailer)
 	)
