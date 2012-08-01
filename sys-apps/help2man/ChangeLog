@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/help2man
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.90 2012/07/31 09:31:42 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.91 2012/08/01 01:23:28 blueness Exp $
+
+  01 Aug 2012; Anthony G. Basile <blueness@gentoo.org> help2man-1.40.11.ebuild:
+  Stable ppc ppc64, bug #428774
 
   31 Jul 2012; Johannes Huber <johu@gentoo.org> help2man-1.40.11.ebuild:
   Stable for x86, wrt bug #428774
