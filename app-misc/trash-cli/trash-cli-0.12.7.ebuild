@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/trash-cli/trash-cli-0.12.7.ebuild,v 1.1 2012/06/26 23:07:05 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/trash-cli/trash-cli-0.12.7.ebuild,v 1.2 2012/08/01 10:33:07 hasufell Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ inherit distutils vcs-snapshot
 
 DESCRIPTION="Python scripts to manipulate trash cans via the command line"
 HOMEPAGE="https://github.com/andreafrancia/trash-cli"
-SRC_URI="https://github.com/andreafrancia/${PN}/tarball/${PV} ->
+SRC_URI="http://github.com/andreafrancia/${PN}/tarball/${PV} ->
 	${P}.tar.gz"
 
 LICENSE="GPL-2"
