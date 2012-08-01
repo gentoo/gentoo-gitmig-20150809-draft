@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/aiccu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/ChangeLog,v 1.32 2012/08/01 06:39:07 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/ChangeLog,v 1.33 2012/08/01 09:37:34 xmw Exp $
+
+  01 Aug 2012; Michael Weber <xmw@gentoo.org> metadata.xml:
+  Add Maciej Grela as maintainer.
 
 *aiccu-2007.01.15-r2 (01 Aug 2012)
 
