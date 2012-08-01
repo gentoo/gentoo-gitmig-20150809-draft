@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.90 2012/07/02 10:38:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.91 2012/08/01 09:34:00 scarabeus Exp $
 
 EAPI=4
 
@@ -122,6 +122,7 @@ COMMON_DEPEND="
 	>=media-libs/libcdr-0.0.5
 	media-libs/libvisio
 	>=net-misc/curl-7.21.4
+	net-nds/openldap
 	sci-mathematics/lpsolve
 	>=sys-libs/db-4.8
 	virtual/jpeg
@@ -419,7 +420,6 @@ src_configure() {
 	# --disable-gnome-vfs: old gnome virtual fs support
 	# --disable-kdeab: kde3 adressbook
 	# --disable-kde: kde3 support
-	# --disable-ldap: ldap requires internal mozilla stuff, same like mozab
 	# --disable-mozilla: mozilla internal is for contact integration, never
 	#   worked on linux
 	# --disable-nsplugin: does not work at all, reall effort to fix this
@@ -457,7 +457,6 @@ src_configure() {
 		--disable-ext-report-builder \
 		--disable-kdeab \
 		--disable-kde \
-		--disable-ldap \
 		--disable-mozilla \
 		--disable-nsplugin \
 		--disable-online-update \
