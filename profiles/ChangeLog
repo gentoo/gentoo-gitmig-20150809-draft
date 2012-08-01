@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6861 2012/08/01 11:58:18 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6862 2012/08/01 16:54:25 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Aug 2012; Hans de Graaff <graaff@gentoo.org> package.mask:
+  Mask dev-ruby/spruz for removal.
 
   01 Aug 2012; Anthony G. Basile <blueness@gentoo.org> base/package.use.mask:
   mask USE=metalink on curl until media-libs/libmetalink-0.1.0 is committed,
