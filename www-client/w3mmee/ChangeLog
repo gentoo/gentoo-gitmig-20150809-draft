@@ -1,6 +1,10 @@
 # ChangeLog for www-client/w3mmee
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3mmee/ChangeLog,v 1.19 2012/07/23 04:14:31 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3mmee/ChangeLog,v 1.20 2012/08/01 10:47:05 chainsaw Exp $
+
+  01 Aug 2012; Tony Vroon <chainsaw@gentoo.org> w3mmee-0.3.2_p24-r7.ebuild:
+  Marked stable on AMD64 based on arch testing by Maurizio "k01" Camisaschi &
+  Elijah "Armageddon" El Lazkani in bug #427054.
 
   23 Jul 2012; Naohiro Aota <naota@gentoo.org> w3mmee-0.3.2_p24-r7.ebuild:
   Set CC properly.
