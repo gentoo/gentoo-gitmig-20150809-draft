@@ -1,21 +1,21 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/vacuum/vacuum-9999.ebuild,v 1.5 2012/08/01 07:49:23 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/vacuum/vacuum-1.2.0.ebuild,v 1.1 2012/08/01 07:49:23 maksbotan Exp $
 
 EAPI="4"
 LANGS="de pl ru uk"
 
-inherit cmake-utils subversion
+inherit cmake-utils
 
 DESCRIPTION="Qt4 Crossplatform Jabber client."
 HOMEPAGE="http://code.google.com/p/vacuum-im"
-ESVN_REPO_URI="http://vacuum-im.googlecode.com/svn/trunk"
+SRC_URI="http://vacuum-im.googlecode.com/files/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 PLUGINS=" adiummessagestyle annotations autostatus avatars birthdayreminder bitsofbinary bookmarks captchaforms chatstates clientinfo commands compress console dataforms datastreamsmanager emoticons filemessagearchive filestreamsmanager filetransfer gateways inbandstreams iqauth jabbersearch messagearchiver multiuserchat pepmanager privacylists privatestorage registration remotecontrol rosteritemexchange rostersearch servermessagearchive servicediscovery sessionnegotiation shortcutmanager socksstreams urlprocessor vcard xmppuriqueries"
-IUSE="${PLUGINS// / +} vcs-revision"
+IUSE="${PLUGINS// / +}"
 for x in ${LANGS}; do
 	IUSE+=" linguas_${x}"
 done
@@ -74,11 +74,6 @@ src_configure() {
 	for x in ${PLUGINS}; do
 		mycmakeargs+=( "$(cmake-utils_use ${x} PLUGIN_${x})" )
 	done
-
-	if use vcs-revision; then
-		subversion_wc_info # eclass is broken
-		mycmakeargs+=( -DVER_STRING="${ESVN_WC_REVISION}" )
-	fi
 
 	cmake-utils_src_configure
 }
