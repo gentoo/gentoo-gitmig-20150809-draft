@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/matplotlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.123 2012/05/04 15:12:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.124 2012/08/01 19:17:40 bicatali Exp $
+
+*matplotlib-1.1.1 (01 Aug 2012)
+
+  01 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/matplotlib-1.1.1-ft-refcount.patch, +matplotlib-1.1.1.ebuild:
+  Version bump. Keep bundling of pycxx because it is patched, and some fonts to
+  ease maintenance and portability
 
   04 May 2012; Patrick Lauer <patrick@gentoo.org> matplotlib-1.0.1-r1.ebuild,
   matplotlib-1.1.0.ebuild:
@@ -612,4 +619,3 @@
   05 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> :
   Initial import, ebuild by Fernando A. Serboncini <fserb@terra.com.br> in bug
   32895.
-
