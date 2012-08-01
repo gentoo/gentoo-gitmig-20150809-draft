@@ -10,8 +10,8 @@ die() {
 	exit 1
 }
 
-VERSION="3.5.4.2-r1"
-BINVERSION="3.5.4.2-r1"
+VERSION="3.5.5.3"
+BINVERSION="3.5.5.3"
 
 # first the default subset of useflags
 IUSES_BASE="bash-completion binfilter branding cups dbus graphite gstreamer gtk nsplugin python vba webdav xmlsec -aqua -jemalloc -mysql -nlpsolver -odk -opengl -pdfimport -postgres -svg"
