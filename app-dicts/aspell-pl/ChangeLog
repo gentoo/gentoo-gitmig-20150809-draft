@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-pl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-pl/ChangeLog,v 1.20 2012/05/17 20:05:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-pl/ChangeLog,v 1.21 2012/08/01 23:28:13 jer Exp $
+
+  01 Aug 2012; Jeroen Roovers <jer@gentoo.org> aspell-pl-6.0.20120418.0.ebuild:
+  Stable for HPPA (bug #418531).
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org>
   aspell-pl-6.0.20061121.0.ebuild, aspell-pl-6.0.20120418.0.ebuild:
