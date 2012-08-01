@@ -1,6 +1,29 @@
 # ChangeLog for mail-client/alot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/alot/ChangeLog,v 1.11 2012/05/19 09:09:11 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/alot/ChangeLog,v 1.12 2012/08/01 10:33:35 aidecoe Exp $
+
+*alot-0.3.2 (01 Aug 2012)
+
+  01 Aug 2012; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +files/0.3.2-subject-fix.patch, +alot-0.3.2.ebuild:
+  Version bump.
+
+  NEWS
+  ~~~~
+  * fix bad GPG signatures for mails with attachments 
+  * new theme-files + tags section syntax 
+  * re-introduce "highlighting" of thread lines in search mode 
+  * new global command "call" to directly call and bind python commands 
+  * add new buffers to direct neighbourhood of current one 
+  * fix sanitize --spawn for X11-less use 
+  * add new hook 'touch_external_cmdlist' 
+  * make statusline configurable 
+  * fix update result count after tag operations in search mode 
+  * add config options and hooks for reply/forward subject generation 
+  * add config options and hook for quoting messages in replies/forwards 
+  * allow True/False/None values for boolean command parameters 
+  * new config option "attachment_prefix" 
+  * various small fixes for libmagic, header encoding and decoding 
 
   19 May 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> alot-0.3.1.ebuild:
   Depend on 0.8.1-r1 version of the pyme, because at earlier the alot crashes.
