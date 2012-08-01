@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/tree-puzzle/tree-puzzle-5.2.ebuild,v 1.13 2012/05/24 10:28:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/tree-puzzle/tree-puzzle-5.2.ebuild,v 1.14 2012/08/01 15:41:29 jlec Exp $
 
 EAPI=4
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Maximum likelihood analysis for nucleotide, amino acid, and two-state data"
 HOMEPAGE="http://www.tree-puzzle.de"
@@ -18,6 +18,8 @@ IUSE="mpi"
 DEPEND="mpi? ( virtual/mpi )"
 RDEPEND="${DEPEND}"
 
+RESTRICT="test"
+
 pkg_setup () {
 	use mpi && [ $(tc-getCC) = icc ] && die "The parallelized version of tree-puzzle cannot be compiled using icc.
 	Either disable the \"mpi\" USE flag to compile only the non-parallelized
@@ -25,6 +27,12 @@ pkg_setup () {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${PN}-impl-dec.patch
+}
+
+src_configure() {
+	default
+
 	if ! use mpi; then
 			sed \
 				-e 's:bin_PROGRAMS = puzzle$(EXEEXT) ppuzzle:bin_PROGRAMS = puzzle :' \
