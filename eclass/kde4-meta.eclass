@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.64 2012/05/08 22:00:49 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.65 2012/08/01 19:38:52 johu Exp $
 #
 # @ECLASS: kde4-meta.eclass
 # @MAINTAINER:
@@ -69,7 +69,7 @@ debug-print "line ${LINENO} ${ECLASS}: DEPEND ${DEPEND} - after metapackage-spec
 debug-print "line ${LINENO} ${ECLASS}: RDEPEND ${RDEPEND} - after metapackage-specific dependencies"
 
 # Useful to build kde4-meta style stuff from extragear/playground (plasmoids etc)
-case ${BUILD_TYPE} in
+case ${KDE_BUILD_TYPE} in
 	live)
 		if [[ ${KDE_SCM} == svn ]]; then
 			case ${KMNAME} in
@@ -147,7 +147,7 @@ kde4-meta_pkg_setup() {
 kde4-meta_src_unpack() {
 	debug-print-function ${FUNCNAME} "$@"
 
-	if [[ ${BUILD_TYPE} = live ]]; then
+	if [[ ${KDE_BUILD_TYPE} = live ]]; then
 		case "${KDE_SCM}" in
 			svn)
 				migrate_store_dir
@@ -173,7 +173,7 @@ kde4-meta_src_unpack() {
 kde4-meta_src_extract() {
 	debug-print-function ${FUNCNAME} "$@"
 
-	if [[ ${BUILD_TYPE} = live ]]; then
+	if [[ ${KDE_BUILD_TYPE} = live ]]; then
 		# Export working copy to ${S}
 		einfo "Exporting parts of working copy to ${S}"
 		kde4-meta_create_extractlists
@@ -210,12 +210,12 @@ kde4-meta_src_extract() {
 	else
 		local abort tarball tarfile f extractlist postfix
 
-		if [[ ${PV} =~ 4.8.[12345] ]]; then
-			postfix="xz"
-			KMTARPARAMS+=" --xz"
-		else
+		if [[ ${PV} =~ 4.7.[12345] ]]; then
 			postfix="bz2"
 			KMTARPARAMS+=" --bzip2"
+		else
+			postfix="xz"
+			KMTARPARAMS+=" --xz"
 		fi
 
 		case ${KMNAME} in
@@ -312,6 +312,7 @@ kde4-meta_create_extractlists() {
 			;;
 		kdebase-runtime | kde-runtime)
 			KMEXTRACTONLY+="
+				CTestConfig.cmake
 				config-runtime.h.cmake"
 			;;
 		kdebase-workspace | kde-workspace)
@@ -380,16 +381,8 @@ kde4-meta_create_extractlists() {
 		&& ! [[ ${KMNAME} == kdeedu && ( ${PV} == 4.6.4 || ${PV} == 4.6.5 ) ]]; then
 		case ${KMNAME} in
 			kdebase-runtime|kde-runtime|kdebase-workspace|kde-workspace|kdeedu|kdegames|kdegraphics)
-				case ${PN} in
-					libkdegames|libkdeedu|libkworkspace)
-						KMEXTRA+="
-							cmake/modules/"
-						;;
-					*)
-						KMCOMPILEONLY+="
-							cmake/modules/"
-						;;
-				esac
+				KMEXTRACTONLY+="
+					cmake/modules/"
 			;;
 		esac
 	fi
@@ -492,6 +485,13 @@ kde4-meta_change_cmakelists() {
 	if [[ -f CMakeLists.txt ]]; then
 		sed -e '/add_subdirectory[[:space:]]*([[:space:]]*cmake[[:space:]]*)/s/^#DONOTCOMPILE //' \
 			-e '/ADD_SUBDIRECTORY[[:space:]]*([[:space:]]*cmake[[:space:]]*)/s/^#DONOTCOMPILE //' \
+			-i CMakeLists.txt || die "${LINENO}: cmake sed died"
+	fi
+
+	# Restore "add_subdirectory( ${ ..." (this is done in kdesdk)
+	if [[ -f CMakeLists.txt ]]; then
+		sed -e '/add_subdirectory[[:space:]]*([[:space:]]*\${/s/^#DONOTCOMPILE //' \
+			-e '/ADD_SUBDIRECTORY[[:space:]]*([[:space:]]*\${/s/^#DONOTCOMPILE //' \
 			-i CMakeLists.txt || die "${LINENO}: cmake sed died"
 	fi
 
