@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gri/gri-2.12.23.ebuild,v 1.5 2012/07/17 16:15:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gri/gri-2.12.23.ebuild,v 1.6 2012/08/01 23:39:06 bicatali Exp $
 
 EAPI=4
 
@@ -12,13 +12,13 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc emacs examples"
 
 DEPEND="
 	>=sci-libs/netcdf-4
 	virtual/latex-base
-	|| ( media-gfx/imagemagick[png] media-gfx/graphicsmagick[png] )
+	|| ( media-gfx/imagemagick[png] media-gfx/graphicsmagick[png,imagemagick] )
 	app-text/ghostscript-gpl
 	emacs? ( virtual/emacs )"
 RDEPEND="${DEPEND}"
@@ -35,6 +35,9 @@ src_prepare() {
 }
 
 src_compile() {
+	# gentoo bug #302621
+	use hdf5 && has_version sci-libs/hdf5[mpi] && \
+		export CXX=mpicxx CC=mpicc
 	VARTEXFONTS="${T}/fonts" emake
 	use emacs && elisp-compile src/*.el
 }
