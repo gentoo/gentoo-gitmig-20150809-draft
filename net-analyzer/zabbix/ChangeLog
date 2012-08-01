@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.103 2012/07/02 05:43:41 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.104 2012/08/01 14:14:12 mattm Exp $
+
+*zabbix-2.0.2 (01 Aug 2012)
+
+  01 Aug 2012; Matthew Marlowe <mattm@gentoo.org> +zabbix-2.0.2.ebuild,
+  -zabbix-2.0.1.ebuild:
+  Initial bump for 2.0.2, Fixes Security Bug - Removed prior 2.0.x releases.
+  Will fix other lingering 2.0.x issues with -r1 release soon.
 
 *zabbix-2.0.1 (02 Jul 2012)
 
@@ -618,4 +625,3 @@
   +files/1.4/zabbix_agentd.conf, +files/1.4/zabbix_server.conf,
   +metadata.xml, +zabbix-1.4.ebuild:
   initial import
-
