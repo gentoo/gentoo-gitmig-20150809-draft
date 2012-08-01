@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdebase-kioslaves
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.263 2012/06/21 21:54:30 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.264 2012/08/01 22:16:49 johu Exp $
+
+*kdebase-kioslaves-4.9.0 (01 Aug 2012)
+
+  01 Aug 2012; Johannes Huber <johu@gentoo.org>
+  +kdebase-kioslaves-4.9.0.ebuild:
+  Version bump KDE SC 4.9.0
 
 *kdebase-kioslaves-4.8.4 (21 Jun 2012)
 
