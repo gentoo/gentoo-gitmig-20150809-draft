@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ffi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.33 2012/07/24 06:00:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.34 2012/08/01 16:50:21 graaff Exp $
+
+*ffi-1.1.3 (01 Aug 2012)
+
+  01 Aug 2012; Hans de Graaff <graaff@gentoo.org> +ffi-1.1.3.ebuild:
+  Version bump. Fix build without UTF8 environment, bug 429304.
 
 *ffi-1.1.0 (24 Jul 2012)
 
