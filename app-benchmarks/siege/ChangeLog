@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/siege
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/ChangeLog,v 1.51 2012/03/16 07:58:39 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/ChangeLog,v 1.52 2012/08/01 23:31:09 jer Exp $
+
+  01 Aug 2012; Jeroen Roovers <jer@gentoo.org> siege-2.72.ebuild:
+  Stable for HPPA (bug #418517).
 
 *siege-2.72 (16 Mar 2012)
 
