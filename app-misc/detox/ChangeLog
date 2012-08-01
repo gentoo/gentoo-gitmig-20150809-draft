@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/detox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/detox/ChangeLog,v 1.32 2012/07/29 18:03:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/detox/ChangeLog,v 1.33 2012/08/01 17:54:58 jlec Exp $
+
+  01 Aug 2012; Justin Lecher <jlec@gentoo.org> -detox-1.2.0.ebuild,
+  -detox-1.2.0-r1.ebuild:
+  Drop old
 
   29 Jul 2012; Raúl Porcel <armin76@gentoo.org> detox-1.2.0.ebuild,
   detox-1.2.0-r1.ebuild, detox-1.2.0-r2.ebuild:
