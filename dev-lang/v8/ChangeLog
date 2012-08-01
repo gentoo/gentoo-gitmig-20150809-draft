@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/v8
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.215 2012/07/28 20:25:57 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.216 2012/08/01 11:15:20 ago Exp $
+
+  01 Aug 2012; Agostino Sarubbo <ago@gentoo.org> v8-3.11.10.17.ebuild:
+  Stable for AMD64, wrt bug #429174
 
   28 Jul 2012; Mike Gilbert <floppym@gentoo.org> v8-9999.ebuild:
   Drop incorrect usage of GYPFLAGS in live ebuild. Bug 428468 by dottomi.
