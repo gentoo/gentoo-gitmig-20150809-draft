@@ -1,6 +1,13 @@
 # ChangeLog for dev-tex/luatex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/ChangeLog,v 1.102 2012/07/26 10:56:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/ChangeLog,v 1.103 2012/08/01 13:00:16 aballier Exp $
+
+*luatex-0.70.1-r1 (01 Aug 2012)
+
+  01 Aug 2012; Alexis Ballier <aballier@gentoo.org> +luatex-0.70.1-r1.ebuild,
+  +files/remove-zlib-version-check.patch:
+  Remove zlib version check which breaks at every minor/micro bump in zlib, by
+  Ulrich Müller, bug #310487
 
   26 Jul 2012; Alexis Ballier <aballier@gentoo.org> +files/kpathsea2012.patch,
   luatex-0.70.1.ebuild:
