@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/xmlcopyeditor
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xmlcopyeditor/ChangeLog,v 1.19 2011/10/09 07:42:53 tove Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xmlcopyeditor/ChangeLog,v 1.20 2012/08/01 07:26:41 phajdan.jr Exp $
+
+  01 Aug 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  xmlcopyeditor-1.2.0.6.ebuild:
+  Require xerces-c with USE=icu. Reported by dabbott.
 
   09 Oct 2011; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove tove from metadata.xml
