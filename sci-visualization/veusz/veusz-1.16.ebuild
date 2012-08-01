@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/veusz-1.16.ebuild,v 1.1 2012/07/30 20:36:08 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/veusz-1.16.ebuild,v 1.2 2012/08/01 06:33:09 jlec Exp $
 
 EAPI=4
 
 # python cruft
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-#RESTRICT_PYTHON_ABIS="3.* *-jython"
+RESTRICT_PYTHON_ABIS="3.* *-jython *-pypy-*"
 PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
 
 inherit distutils eutils fdo-mime
