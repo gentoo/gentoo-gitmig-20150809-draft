@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycurl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.71 2012/06/14 17:33:31 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.72 2012/08/01 19:34:33 ulm Exp $
+
+  01 Aug 2012; Ulrich Müller <ulm@gentoo.org> pycurl-7.19.0-r1.ebuild:
+  Add ~amd64-fbsd keyword, with permission from ryao.
 
   14 Jun 2012; Marien Zwart <marienz@gentoo.org> pycurl-7.19.0-r1.ebuild:
   Clean up IUSE and tighten curl USE dependencies further, thanks to comments
