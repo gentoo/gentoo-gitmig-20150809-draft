@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langcjk/texlive-langcjk-2012.ebuild,v 1.3 2012/07/31 13:42:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langcjk/texlive-langcjk-2012.ebuild,v 1.4 2012/08/01 15:00:47 aballier Exp $
 
 EAPI="4"
 
@@ -18,7 +18,7 @@ IUSE=""
 DEPEND=">=dev-texlive/texlive-basic-2012
 >=app-text/texlive-core-2010[cjk]
 >=dev-texlive/texlive-latex-2011
-!!<dev-texlive/texlive-cjk-2012
+!!<dev-texlive/texlive-langcjk-2012
 "
 RDEPEND="${DEPEND} dev-lang/ruby
 "
