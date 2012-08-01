@@ -1,5 +1,8 @@
 
 
+  01 Aug 2012; Jeroen Roovers <jer@gentoo.org> elfix-0.5.2.ebuild:
+  Marked ~hppa (bug #428558).
+
   29 Jul 2012; Anthony G. Basile <blueness@gentoo.org> elfix-0.5.2.ebuild:
   Keyword ~mips
 
