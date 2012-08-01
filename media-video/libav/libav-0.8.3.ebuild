@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.8.3.ebuild,v 1.4 2012/07/19 20:00:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.8.3.ebuild,v 1.5 2012/08/01 07:09:09 phajdan.jr Exp $
 
 EAPI=4
 
@@ -27,7 +27,7 @@ SRC_URI+=" test? ( http://dev.gentoo.org/~lu_zero/libav/fate-0.8.2.tar.xz )"
 LICENSE="LGPL-2.1 gpl? ( GPL-3 )"
 SLOT="0"
 [[ ${PV} == *9999 ]] || \
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE="+3dnow +3dnowext aac alsa altivec amr bindist +bzip2 cdio cpudetection
 	  custom-cflags debug dirac doc +encode faac truetype frei0r +gpl gsm
 	  +hardcoded-tables ieee1394 jack jpeg2k +mmx +mmxext mp3 network openssl
