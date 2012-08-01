@@ -1,12 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.6.3.ebuild,v 1.6 2012/06/16 17:34:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.6.7.ebuild,v 1.1 2012/08/01 22:47:49 flameeyes Exp $
 
 EAPI=4
 
-WANT_AUTOMAKE=1.11
-
-inherit apache-module autotools
+inherit apache-module
 
 MY_PN=modsecurity-apache
 MY_PV=${PV/_rc/-rc}
@@ -18,7 +16,7 @@ SRC_URI="mirror://sourceforge/project/mod-security/${MY_PN}/${MY_PV}/${MY_P}.tar
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="geoip curl lua"
 
 DEPEND=">=dev-libs/libxml2-2.7.8
@@ -42,8 +40,6 @@ need_apache2
 
 src_prepare() {
 	cp "${FILESDIR}"/modsecurity.conf "${T}"/79_modsecurity.conf || die
-
-	eautoreconf
 }
 
 src_configure() {
