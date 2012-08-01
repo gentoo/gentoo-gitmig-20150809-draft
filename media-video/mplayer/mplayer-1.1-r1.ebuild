@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.1-r1.ebuild,v 1.3 2012/06/21 08:10:42 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.1-r1.ebuild,v 1.4 2012/08/01 10:43:48 grobian Exp $
 
 EAPI=4
 
@@ -183,8 +183,8 @@ REQUIRED_USE="bindist? ( !faac !win32codecs )
 	ggi? ( X )
 	xinerama? ( X )
 	dga? ( X )
-	opengl? ( X )
-	osdmenu? ( X )
+	opengl? ( || ( X aqua ) )
+	osdmenu? ( || ( X aqua ) )
 	vdpau? ( X )
 	vidix? ( X )
 	xscreensaver? ( X )

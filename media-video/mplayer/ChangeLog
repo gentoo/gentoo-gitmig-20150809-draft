@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.854 2012/06/21 08:10:42 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.855 2012/08/01 10:43:48 grobian Exp $
+
+  01 Aug 2012; Fabian Groffen <grobian@gentoo.org> mplayer-1.1-r1.ebuild:
+  aqua is also sufficient for opengl and osdmenu
 
   21 Jun 2012; Ben de Groot <yngwin@gentoo.org>
   mplayer-1.0_rc4_p20120405.ebuild, mplayer-1.1-r1.ebuild, mplayer-9999.ebuild:
