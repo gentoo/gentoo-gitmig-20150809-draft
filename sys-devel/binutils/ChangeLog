@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.453 2012/07/28 04:00:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.454 2012/08/01 23:35:44 jer Exp $
+
+  01 Aug 2012; Jeroen Roovers <jer@gentoo.org> binutils-2.22-r1.ebuild:
+  Stable for HPPA (bug #414865).
 
   28 Jul 2012; Mike Frysinger <vapier@gentoo.org> binutils-2.22.90.ebuild:
   Fix applying of lib32 patch #428366 by Alexandre.
