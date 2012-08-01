@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/lastfmplayer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/ChangeLog,v 1.69 2012/07/14 17:10:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/ChangeLog,v 1.70 2012/08/01 13:40:01 hwoarang Exp $
+
+  01 Aug 2012; Markos Chandras <hwoarang@gentoo.org>
+  -files/fix_plugin_path.patch:
+  remove old file
 
 *lastfmplayer-1.5.4.27091-r3 (14 Jul 2012)
 
