@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.1.1.ebuild,v 1.1 2012/08/01 19:17:40 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.1.1.ebuild,v 1.2 2012/08/01 19:50:57 mr_bones_ Exp $
 
 EAPI="3"
 
@@ -71,7 +71,6 @@ RDEPEND="${CDEPEND}
 		dev-texlive/texlive-fontsrecommended
 	)
 	qt4? ( || ( dev-python/PyQt4[X] dev-python/pyside[X] ) )"
-
 
 use_setup() {
 	local uword="${2:-${1}}"
