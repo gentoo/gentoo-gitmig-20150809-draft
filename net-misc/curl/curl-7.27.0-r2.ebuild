@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.27.0-r2.ebuild,v 1.1 2012/07/31 21:14:35 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.27.0-r2.ebuild,v 1.2 2012/08/01 12:01:03 blueness Exp $
 
 EAPI="4"
 
@@ -38,7 +38,7 @@ RDEPEND="ldap? ( net-nds/openldap )
 	idn? ( net-dns/libidn[static-libs?] )
 	ares? ( net-dns/c-ares )
 	kerberos? ( virtual/krb5 )
-	metalink? ( media-libs/libmetalink )
+	metalink? ( >=media-libs/libmetalink-0.1.0 )
 	rtmp? ( media-video/rtmpdump )
 	ssh? ( net-libs/libssh2[static-libs?] )
 	sys-libs/zlib"
