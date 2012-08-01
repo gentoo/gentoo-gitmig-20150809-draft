@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/aiccu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/ChangeLog,v 1.30 2012/07/31 14:17:13 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/ChangeLog,v 1.31 2012/08/01 04:56:13 xmw Exp $
+
+  01 Aug 2012; Michael Weber <xmw@gentoo.org> metadata.xml:
+  Add myself as maintainer.
 
   31 Jul 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> metadata.xml:
   Removed myself from <maintainer/>.
@@ -123,4 +126,3 @@
 
   27 Mar 2005; Guy Martin <gmsoft@gentoo.org> +aiccu-2005.01.31.ebuild:
   Initital commit of the aiccu ebuild (close #64409).
-
