@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sparc-fbsd profile directory
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/ChangeLog,v 1.24 2011/11/14 17:12:56 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/ChangeLog,v 1.25 2012/08/01 17:37:39 swift Exp $
+
+  01 Aug 2012; <swift@gentoo.org> package.use.force, package.use.mask:
+  Remove use flag masks for python
 
   14 Nov 2011; Mike Frysinger <vapier@gentoo.org> packages:
   Move sys-apps/net-tools to Linux profiles from base profile.
