@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/alot/alot-0.3.ebuild,v 1.4 2012/05/19 07:52:11 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/alot/alot-0.3.ebuild,v 1.5 2012/08/01 10:35:11 aidecoe Exp $
 
 EAPI=4
 
@@ -56,12 +56,4 @@ src_install() {
 	if use doc; then
 		dohtml -r docs/build/html/*
 	fi
-}
-
-pkg_postinst() {
-	ewarn "Versioning scheme has been corrected.  Previous 0.21 is 0.2.1 now."
-	echo
-	ewarn "If you're upgrading from version prior to 0.3, you need to remove"
-	ewarn "current config (\$HOME/.config/alot/config) before running alot,"
-	ewarn "because its format has been changed."
 }
