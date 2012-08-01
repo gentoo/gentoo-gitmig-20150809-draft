@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/aiccu-2007.01.15-r2.ebuild,v 1.1 2012/08/01 06:39:07 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/aiccu-2007.01.15-r2.ebuild,v 1.2 2012/08/01 13:32:14 xmw Exp $
 
 EAPI=4
 
-inherit toolchain-funcs eutils
+inherit eutils linux-info toolchain-funcs
 
 DESCRIPTION="AICCU Client to configure an IPv6 tunnel to SixXS"
 HOMEPAGE="http://www.sixxs.net/tools/aiccu"
@@ -21,10 +21,13 @@ DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/aiccu
 
+CONFIG_CHECK="~TUN"
+
 src_prepare() {
 	epatch "${FILESDIR}"/${PF}-init.gentoo.patch
 	epatch "${FILESDIR}"/${P}-Makefile.patch
 	epatch "${FILESDIR}"/${P}-setupscript.patch
+	epatch "${FILESDIR}"/${P}-uclibc.patch
 }
 
 src_compile() {
