@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/coccigrep
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/coccigrep/ChangeLog,v 1.8 2012/03/24 06:40:01 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/coccigrep/ChangeLog,v 1.9 2012/08/01 07:13:36 radhermit Exp $
+
+*coccigrep-1.9 (01 Aug 2012)
+
+  01 Aug 2012; Tim Harder <radhermit@gentoo.org> +coccigrep-1.9.ebuild:
+  Version bump.
 
   24 Mar 2012; Tim Harder <radhermit@gentoo.org> -coccigrep-1.6.ebuild:
   Remove old.
