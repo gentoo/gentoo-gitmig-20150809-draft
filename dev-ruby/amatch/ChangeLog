@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/amatch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amatch/ChangeLog,v 1.31 2012/07/30 00:21:03 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amatch/ChangeLog,v 1.32 2012/08/01 10:12:49 blueness Exp $
+
+  01 Aug 2012; Anthony G. Basile <blueness@gentoo.org> amatch-0.2.10.ebuild:
+  Stable ppc64, bug #428454
 
   30 Jul 2012; Jeff Horelick <jdhore@gentoo.org> amatch-0.2.10.ebuild:
   marked x86 per bug 428454
