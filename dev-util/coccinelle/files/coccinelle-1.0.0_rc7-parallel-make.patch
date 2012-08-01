@@ -1,8 +1,0 @@
---- coccinelle-1.0.0-rc7/docs/Makefile.orig
-+++ coccinelle-1.0.0-rc7/docs/Makefile
-@@ -13,4 +13,4 @@
- 	rm -f spatch.1
- 
- all clean distclean::
--	make -C $(SUBDIR) $@
-+	$(MAKE) -C $(SUBDIR) $@
