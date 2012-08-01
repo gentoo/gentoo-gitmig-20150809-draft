@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.354 2012/07/31 16:19:51 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.355 2012/08/01 08:15:49 grobian Exp $
+
+  01 Aug 2012; Fabian Groffen <grobian@gentoo.org> package.mask:
+  Mask grep-2.13 for misbehaviour, having lots of collateral damage, bug
+  #425668
 
   31 Jul 2012; Fabian Groffen <grobian@gentoo.org> +darwin/macos/10.8/eapi,
   +darwin/macos/10.8/make.defaults, +darwin/macos/10.8/package.provided,
