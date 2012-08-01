@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/soprano
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.93 2012/06/10 10:56:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.94 2012/08/01 19:52:35 johu Exp $
+
+*soprano-2.8.0 (01 Aug 2012)
+
+  01 Aug 2012; Johannes Huber <johu@gentoo.org> +soprano-2.8.0.ebuild:
+  Version bump.
 
   10 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> -soprano-2.7.4.ebuild,
   -soprano-2.7.5.ebuild, soprano-2.7.6.ebuild:
@@ -395,4 +400,3 @@
   13 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org> +metadata.xml,
   +soprano-2.0.0.ebuild:
   Initial import to the tree as per bug 205646.
-
