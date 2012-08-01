@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/aiccu-2007.01.15-r1.ebuild,v 1.6 2011/06/24 18:58:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/aiccu-2007.01.15-r1.ebuild,v 1.7 2012/08/01 06:39:07 xmw Exp $
 
 EAPI=3
 
@@ -14,8 +14,11 @@ LICENSE="SixXS"
 SLOT="0"
 KEYWORDS="amd64 arm hppa ppc sparc x86"
 IUSE=""
+
 DEPEND="net-libs/gnutls
 	sys-apps/iproute2"
+RDEPEND="${DEPEND}"
+
 S=${WORKDIR}/aiccu
 
 src_prepare() {

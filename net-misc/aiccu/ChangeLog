@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/aiccu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/ChangeLog,v 1.31 2012/08/01 04:56:13 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/ChangeLog,v 1.32 2012/08/01 06:39:07 xmw Exp $
+
+*aiccu-2007.01.15-r2 (01 Aug 2012)
+
+  01 Aug 2012; Michael Weber <xmw@gentoo.org> +aiccu-2007.01.15-r2.ebuild,
+  +files/aiccu-2007.01.15-r2-init.gentoo.patch,
+  +files/aiccu-2007.01.15-setupscript.patch, aiccu-2007.01.15-r1.ebuild:
+  Add after ntpd (bug 390611, thanks Ewoud Kohl van Wijngaarden), fix
+  setupscript functionality (bug 353803, thanks Mateusz Dziadko), assign RDEPEND
 
   01 Aug 2012; Michael Weber <xmw@gentoo.org> metadata.xml:
   Add myself as maintainer.
