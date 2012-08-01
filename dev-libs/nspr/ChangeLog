@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/nspr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.193 2012/07/29 17:34:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.194 2012/08/01 00:49:27 anarchy Exp $
+
+*nspr-4.9.2 (01 Aug 2012)
+
+  01 Aug 2012; Jory A. Pratt <anarchy@gentoo.org>
+  +files/nspr-4.9.1-x32_v0.2.patch, +nspr-4.9.2.ebuild,
+  -files/nspr-4.9.1-x32_v0.1.patch, -nspr-4.9.1-r2.ebuild:
+  Version bump, remove stale x32 build
 
   29 Jul 2012; Raúl Porcel <armin76@gentoo.org> nspr-4.9.1.ebuild:
   alpha/ia64/sparc stable wrt #427224
