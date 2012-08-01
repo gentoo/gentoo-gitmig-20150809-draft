@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ptexenc/ptexenc-1.3.0_p20120701.ebuild,v 1.1 2012/07/25 12:00:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ptexenc/ptexenc-1.3.0_p20120701.ebuild,v 1.2 2012/08/01 13:14:49 aballier Exp $
 
 EAPI=3
+
+inherit libtool
 
 DESCRIPTION="Library for Japanese pTeX providing a better way of handling character encodings"
 HOMEPAGE="http://tutimura.ath.cx/ptexlive/?ptexenc"
@@ -25,6 +27,9 @@ src_prepare() {
 
 	# https://bugs.gentoo.org/show_bug.cgi?id=377141
 	sed -i '/^LIBS/s:@LIBS@:@LIBS@ @KPATHSEA_LIBS@:' "${S}"/Makefile.in || die
+
+	cd "${WORKDIR}/texlive-${PV#*_p}-source"
+	S="${WORKDIR}/texlive-${PV#*_p}-source" elibtoolize #sane .so versionning on gfbsd
 }
 
 src_configure() {

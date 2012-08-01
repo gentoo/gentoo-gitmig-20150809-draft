@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/kpathsea/kpathsea-6.1.0_p20120701.ebuild,v 1.1 2012/07/26 11:34:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/kpathsea/kpathsea-6.1.0_p20120701.ebuild,v 1.2 2012/08/01 13:11:51 aballier Exp $
 
 EAPI=4
 
-inherit texlive-common eutils
+inherit texlive-common eutils libtool
 
 TEXMFD_VERSION="4"
 
@@ -37,6 +37,11 @@ for i in ${EXTRA_TL_DOC_MODULES} ; do
 	SRC_URI="${SRC_URI} mirror://gentoo/texlive-module-${i}-${TL_VERSION}.tar.xz"
 done
 SRC_URI="${SRC_URI} ) "
+
+src_prepare() {
+	cd "${WORKDIR}/texlive-${PV#*_p}-source"
+	S="${WORKDIR}/texlive-${PV#*_p}-source" elibtoolize #sane .so versionning on gfbsd
+}
 
 src_configure() {
 	# Too many regexps use A-Z a-z constructs, what causes problems with locales
