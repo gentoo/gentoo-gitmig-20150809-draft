@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.104 2012/08/01 14:14:12 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.105 2012/08/01 22:27:49 mattm Exp $
+
+*zabbix-2.0.2-r1 (01 Aug 2012)
+
+  01 Aug 2012; Matthew Marlowe <mattm@gentoo.org> +zabbix-2.0.2-r1.ebuild,
+  files/2.0/init.d/zabbix-agentd, files/2.0/init.d/zabbix-server:
+  Fixes for bug 426818 and bug 427740.  Modified init scripts to create
+  /var/run/zabbix if needed and added 'sysvipc' to php dependency use flags.
 
 *zabbix-2.0.2 (01 Aug 2012)
 

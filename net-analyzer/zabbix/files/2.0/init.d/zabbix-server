@@ -1,7 +1,10 @@
 #!/sbin/runscript
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/files/2.0/init.d/zabbix-server,v 1.1 2012/05/22 11:34:02 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/files/2.0/init.d/zabbix-server,v 1.2 2012/08/01 22:27:49 mattm Exp $
+
+pid_file="/var/run/zabbix/zabbix_server.pid"
+dir="/var/run/zabbix"
 
 depend() {
 	need net
@@ -9,13 +12,19 @@ depend() {
 }
 
 start() {
+	if [ ! -d "${dir}" ]; then
+	    einfo " Creating ${dir}"
+	    /bin/mkdir -p "${dir}"
+	    /bin/chown zabbix:zabbix "${dir}"
+	fi
 	ebegin "Starting Zabbix server"
-	start-stop-daemon --start --user zabbix --group zabbix --exec /usr/sbin/zabbix_server -- -c /etc/zabbix/zabbix_server.conf
+	start-stop-daemon --start --user zabbix --group zabbix --pidfile ${pid_file} \
+	        --exec /usr/sbin/zabbix_server -- -c /etc/zabbix/zabbix_server.conf
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping Zabbix server"
-	start-stop-daemon --stop --pidfile /var/run/zabbix/zabbix_server.pid
+	start-stop-daemon --stop --pidfile ${pid_file} 
 	eend $?
 }
