@@ -1,6 +1,14 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.329 2012/07/09 05:18:26 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.330 2012/08/01 16:38:00 eras Exp $
+
+*mit-krb5-1.10.2-r1 (01 Aug 2012)
+*mit-krb5-1.9.4-r1 (01 Aug 2012)
+
+  01 Aug 2012; Eray Aslan <eras@gentoo.org> +mit-krb5-1.9.4-r1.ebuild,
+  +mit-krb5-1.10.2-r1.ebuild, +files/CVE-2012-1014.patch,
+  +files/CVE-2012-1015.patch:
+  Security bump - bug #429324
 
   09 Jul 2012; Michael Weber <xmw@gentoo.org> mit-krb5-1.9.4.ebuild:
   ppc stable (bug 419765)
