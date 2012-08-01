@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/autoconf-archive
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-archive/ChangeLog,v 1.45 2012/08/01 07:11:47 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-archive/ChangeLog,v 1.46 2012/08/01 23:37:12 jer Exp $
+
+  01 Aug 2012; Jeroen Roovers <jer@gentoo.org>
+  autoconf-archive-2012.04.07.ebuild:
+  Stable for HPPA (bug #422201).
 
   01 Aug 2012; Jeff Horelick <jdhore@gentoo.org>
   autoconf-archive-2012.04.07.ebuild:
