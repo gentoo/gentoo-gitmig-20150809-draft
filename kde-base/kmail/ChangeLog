@@ -1,6 +1,16 @@
 # ChangeLog for kde-base/kmail
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.294 2012/08/01 22:17:35 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.295 2012/08/01 22:54:54 dilfridge Exp $
+
+*kmail-4.4.11.1-r1 (01 Aug 2012)
+
+  01 Aug 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kmail-4.4.11.1-r1.ebuild,
+  +files/4.4/0005-Fix-bug-276086-crash-on-exit.patch,
+  +files/4.4/0004-kmail-Make-spell-checking-work-again.patch,
+  +files/4.4/0002-kmail-Only-start-akonadi-asynchronously-on-KDE-4.6.2.patch,
+  +files/4.4/0004-libkdepim-Make-spell-checking-work-again.patch:
+  Add upstream bugfixes
 
 *kmail-4.9.0 (01 Aug 2012)
 
