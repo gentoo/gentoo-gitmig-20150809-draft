@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-1.14.3.ebuild,v 1.1 2012/06/30 06:01:02 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-1.14.3.ebuild,v 1.2 2012/08/01 10:54:18 grobian Exp $
 
 EAPI=4
 inherit toolchain-funcs libtool
@@ -48,6 +48,9 @@ src_configure() {
 		use sse && _cpu=x86-64
 	elif use x86 && gcc-specs-pie ; then
 		# Don't use any mmx, 3dnow, sse and 3dnowext #bug 164504
+		_cpu=generic_fpu
+	elif use x86-macos ; then
+		# ASM doesn't work quite as expected with the Darwin linker
 		_cpu=generic_fpu
 	else
 		use mmx && _cpu=mmx
