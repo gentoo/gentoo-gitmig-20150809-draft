@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-4.0.297.ebuild,v 1.8 2012/06/18 18:06:59 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-4.0.297.ebuild,v 1.9 2012/08/01 16:48:21 bicatali Exp $
 
 EAPI=4
 inherit eutils multilib versionator toolchain-funcs
@@ -45,6 +45,7 @@ src_prepare() {
 		-e "/CONLY/s/gcc/$(tc-getCC)/g" \
 		-e "s/gcc -/$(tc-getCC) -v/g" \
 		-e '/CPLUS_FLAGS +=/s/-march=pentium4//' \
+		-e 's/-m64//g' \
 		build/*.inc || die
 	# - Strip the $(shell ... >$(NUL) 2>$(NUL)) wrapping, leaving just the
 	#   actual command.

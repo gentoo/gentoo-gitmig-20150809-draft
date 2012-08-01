@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/tbb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.23 2012/06/18 18:06:59 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.24 2012/08/01 16:48:21 bicatali Exp $
+
+  01 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> tbb-4.0.297.ebuild:
+  Fixed for cross-compiling, bug #428406, thanks to Thomas
 
   18 Jun 2012; Julian Ospald <hasufell@gentoo.org> tbb-4.0.297.ebuild:
   stable for x86 wrt bug #412675
@@ -120,4 +123,3 @@
   +tbb-2.1.015.ebuild:
   Initial import. The ebuild differs much from the initial ebuild submitted
   by Matthew McCormick (bug #228641)
-
