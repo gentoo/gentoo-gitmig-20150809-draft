@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/sed
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.120 2012/07/24 14:18:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.121 2012/08/01 10:42:35 chainsaw Exp $
+
+  01 Aug 2012; Tony Vroon <chainsaw@gentoo.org> sed-4.2.1-r1.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani & Tomáš "Mepho" Pružina in bug #427118.
 
   24 Jul 2012; Jeroen Roovers <jer@gentoo.org> sed-4.2.1-r1.ebuild:
   Stable for HPPA (bug #427118).
