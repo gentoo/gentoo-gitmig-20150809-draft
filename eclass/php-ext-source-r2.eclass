@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.27 2012/06/22 20:05:24 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.28 2012/08/01 10:55:29 olemarkus Exp $
 
 # @ECLASS: php-ext-source-r2.eclass
 # @MAINTAINER:
@@ -167,7 +167,7 @@ php-ext-source-r2_src_compile() {
 	done
 }
 
-# @FUNCTION: php-ext-source-r1_src_install
+# @FUNCTION: php-ext-source-r2_src_install
 # @DESCRIPTION:
 # Takes care of standard install for PHP extensions (modules).
 
