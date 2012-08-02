@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/graphicsmagick
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/ChangeLog,v 1.98 2012/06/24 20:15:51 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/ChangeLog,v 1.99 2012/08/02 15:13:59 ssuominen Exp $
+
+*graphicsmagick-1.3.16-r1 (02 Aug 2012)
+
+  02 Aug 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +graphicsmagick-1.3.16-r1.ebuild,
+  +files/graphicsmagick-1.3.16-libpng14.patch:
+  Upstream patch for inconsistent typecasts with libpng14 and above wrt
+  security #428718
 
   24 Jun 2012; Tim Harder <radhermit@gentoo.org> graphicsmagick-1.3.16.ebuild:
   Drop perl-5.16 build fix since it was applied upstream.
