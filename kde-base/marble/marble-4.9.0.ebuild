@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.9.0.ebuild,v 1.2 2012/08/02 16:55:46 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.9.0.ebuild,v 1.3 2012/08/02 17:02:31 kensington Exp $
 
 EAPI=4
 
@@ -37,7 +37,7 @@ DEPEND="
 	test? ( x11-libs/qt-test:4 )
 "
 # the qt dependencies are needed because with USE=-kde nothing is pulled in
-# by default... bugs 414165 & 414165
+# by default... bugs 414165 & 429346
 
 REQUIRED_USE="
 	plasma? ( kde )
