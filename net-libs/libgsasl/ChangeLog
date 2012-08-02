@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libgsasl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/ChangeLog,v 1.74 2012/06/12 21:07:47 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/ChangeLog,v 1.75 2012/08/02 23:24:34 blueness Exp $
+
+  02 Aug 2012; Anthony G. Basile <blueness@gentoo.org> libgsasl-1.8.0.ebuild:
+  Stable ppc ppc64, bug #429170
 
   12 Jun 2012; Eray Aslan <eras@gentoo.org> libgsasl-1.8.0.ebuild:
   Don't use AM_PROG_AR in configure.ac as automake-1.11 does not recognize it
