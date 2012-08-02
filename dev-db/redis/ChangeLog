@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/redis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.45 2012/06/04 06:52:15 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.46 2012/08/02 18:25:31 robbat2 Exp $
+
+*redis-2.4.16 (02 Aug 2012)
+
+  02 Aug 2012; Robin H. Johnson <robbat2@gentoo.org> +redis-2.4.16.ebuild:
+  Bug #427170: version bump.
 
   04 Jun 2012; Zac Medico <zmedico@gentoo.org> redis-2.4.10.ebuild,
   redis-2.4.13.ebuild, redis-2.4.14.ebuild, redis-2.4.4-r1.ebuild:
@@ -191,4 +196,3 @@
   bugtracker by Geoff Kassel <gkassel@users.sourceforge.net> and W-Mark
   Kubacki <wmark.gentoo@hurrikane.de>. Proxy maintainers welcome.
   Upstream submission was linked from bug #308243.
-
