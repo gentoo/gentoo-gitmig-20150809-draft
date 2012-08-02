@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.100 2012/07/23 22:44:14 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.101 2012/08/02 13:07:26 aballier Exp $
 
 EAPI="4"
 
@@ -30,7 +30,7 @@ if [ "${PV#9999}" = "${PV}" ] ; then
 fi
 IUSE="
 	aac aacplus alsa amr avresample bindist bluray +bzip2 cdio celt
-	cpudetection debug doc +encode faac fontconfig frei0r gnutls gsm
+	cpudetection debug doc +encode faac flite fontconfig frei0r gnutls gsm
 	+hardcoded-tables iec61883 ieee1394 jack jpeg2k libass libcaca libv4l
 	modplug mp3	network openal openssl opus oss pic pulseaudio rtmp schroedinger
 	sdl speex static-libs test theora threads truetype v4l vaapi vdpau vorbis
@@ -68,6 +68,7 @@ RDEPEND="
 		x264? ( >=media-libs/x264-0.0.20111017 )
 		xvid? ( >=media-libs/xvid-1.1.0 )
 	)
+	flite? ( app-accessibility/flite )
 	fontconfig? ( media-libs/fontconfig )
 	frei0r? ( media-plugins/frei0r-plugins )
 	gnutls? ( >=net-libs/gnutls-2.12.16 )
@@ -185,6 +186,7 @@ src_configure() {
 		use ${i} && myconf="${myconf} --enable-${i}"
 	done
 	use truetype && myconf="${myconf} --enable-libfreetype"
+	use flite    && myconf="${myconf} --enable-libflite"
 
 	# Threads; we only support pthread for now but ffmpeg supports more
 	use threads && myconf="${myconf} --enable-pthreads"
