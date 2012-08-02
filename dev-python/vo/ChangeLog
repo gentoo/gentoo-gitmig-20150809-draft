@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/vo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/vo/ChangeLog,v 1.10 2012/06/06 22:48:41 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/vo/ChangeLog,v 1.11 2012/08/02 17:53:52 bicatali Exp $
+
+  02 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> -vo-0.7.2.ebuild,
+  vo-0.8.ebuild:
+  Keyword amd64-linux and x86-linux
 
 *vo-0.8 (06 Jun 2012)
 
@@ -75,4 +79,3 @@
   21 Jul 2009; Sébastien Fabbro <bicatali@gentoo.org> +vo-0.3.1.ebuild,
   +files/vo-0.3.1-docs.patch, +metadata.xml:
   Initial import
-

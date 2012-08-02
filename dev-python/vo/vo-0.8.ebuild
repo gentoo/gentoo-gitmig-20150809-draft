@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/vo/vo-0.8.ebuild,v 1.1 2012/06/06 22:48:41 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/vo/vo-0.8.ebuild,v 1.2 2012/08/02 17:53:52 bicatali Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="http://stsdas.stsci.edu/astrolib/${P}.tar.gz"
 
 IUSE="examples"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 LICENSE="BSD"
 
 RDEPEND="dev-libs/expat"

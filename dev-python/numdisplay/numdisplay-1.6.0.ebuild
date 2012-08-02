@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numdisplay/numdisplay-1.6.0.ebuild,v 1.1 2012/03/02 05:49:53 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numdisplay/numdisplay-1.6.0.ebuild,v 1.2 2012/08/02 17:51:41 bicatali Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -15,7 +15,7 @@ SRC_URI="http://stsdas.stsci.edu/download/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 DEPEND="dev-python/numpy"
