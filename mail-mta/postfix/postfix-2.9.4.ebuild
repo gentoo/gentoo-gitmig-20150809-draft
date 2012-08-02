@@ -1,13 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.10_pre20120715.ebuild,v 1.1 2012/07/17 12:00:50 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9.4.ebuild,v 1.1 2012/08/02 14:02:39 eras Exp $
 
 EAPI=4
+
 inherit eutils multilib ssl-cert toolchain-funcs flag-o-matic pam user versionator
 
-MY_PV="${PV/_pre/-}"
+MY_PV="${PV/_rc/-RC}"
 MY_SRC="${PN}-${MY_PV}"
-MY_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/experimental"
+MY_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/official"
 VDA_PV="2.9.1"
 VDA_P="${PN}-vda-v11-${VDA_PV}"
 RC_VER="2.7"
@@ -179,17 +180,20 @@ src_configure() {
 }
 
 src_install () {
+	local myconf
+	use doc && myconf="readme_directory=\"/usr/share/doc/${PF}/readme\" \
+		html_directory=\"/usr/share/doc/${PF}/html\""
+
 	/bin/sh postfix-install \
 		-non-interactive \
 		install_root="${D}" \
 		config_directory="/etc/postfix" \
 		manpage_directory="/usr/share/man" \
-		readme_directory="/usr/share/doc/${PF}/readme" \
-		html_directory="/usr/share/doc/${PF}/html" \
 		command_directory="/usr/sbin" \
 		mailq_path="/usr/bin/mailq" \
 		newaliases_path="/usr/bin/newaliases" \
 		sendmail_path="/usr/sbin/sendmail" \
+		${myconf} \
 		|| die "postfix-install failed"
 
 	# Fix spool removal on upgrade
@@ -236,10 +240,9 @@ src_install () {
 	use mysql || sed -i -e "s/mysql //" "${D}/etc/init.d/postfix"
 	use postgres || sed -i -e "s/postgresql //" "${D}/etc/init.d/postfix"
 
-	mv "${S}"/examples "${D}"/usr/share/doc/${PF}/
-	mv "${D}"/etc/postfix/{*.default,makedefs.out} "${D}"/usr/share/doc/${PF}/
-
 	dodoc *README COMPATIBILITY HISTORY PORTING RELEASE_NOTES*
+	mv "${D}"/etc/postfix/{*.default,makedefs.out} "${D}"/usr/share/doc/${PF}/
+	use doc && mv "${S}"/examples "${D}"/usr/share/doc/${PF}/
 
 	pamd_mimic_system smtp auth account
 

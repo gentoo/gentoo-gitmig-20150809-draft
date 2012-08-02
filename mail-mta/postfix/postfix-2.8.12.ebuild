@@ -1,15 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.7.10.ebuild,v 1.2 2012/06/04 21:09:58 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.8.12.ebuild,v 1.1 2012/08/02 14:02:39 eras Exp $
 
-EAPI=3
+EAPI=4
 
 inherit eutils multilib ssl-cert toolchain-funcs flag-o-matic pam user
 
 MY_PV="${PV/_rc/-RC}"
 MY_SRC="${PN}-${MY_PV}"
 MY_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/official"
-VDA_PV="2.7.8"
+VDA_PV="2.8.9"
 VDA_P="${PN}-vda-v10-${VDA_PV}"
 RC_VER="2.5"
 
@@ -21,19 +21,23 @@ SRC_URI="${MY_URI}/${MY_SRC}.tar.gz
 LICENSE="IBM"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="cdb doc dovecot-sasl examples hardened ipv6 ldap mbox mysql nis pam postgres sasl selinux ssl vda"
+IUSE="cdb doc dovecot-sasl hardened ipv6 ldap ldap-bind mbox mysql nis pam postgres sasl selinux sqlite ssl vda"
 
 DEPEND=">=sys-libs/db-3.2
 	>=dev-libs/libpcre-3.4
-	cdb? ( || ( >=dev-db/cdb-0.75-r1 >=dev-db/tinycdb-0.76 ) )
-	ldap? ( >=net-nds/openldap-1.2 )
+	dev-lang/perl
+	cdb? ( || ( >=dev-db/tinycdb-0.76 >=dev-db/cdb-0.75-r1 ) )
+	ldap? ( net-nds/openldap )
+	ldap-bind? ( net-nds/openldap[sasl] )
 	mysql? ( virtual/mysql )
 	pam? ( virtual/pam )
 	postgres? ( dev-db/postgresql-base )
 	sasl? (  >=dev-libs/cyrus-sasl-2 )
+	sqlite? ( dev-db/sqlite:3 )
 	ssl? ( >=dev-libs/openssl-0.9.6g )"
 
 RDEPEND="${DEPEND}
+	dovecot-sasl? ( net-mail/dovecot )
 	net-mail/mailbase
 	selinux? ( sec-policy/selinux-postfix )
 	!mail-mta/courier
@@ -49,6 +53,8 @@ RDEPEND="${DEPEND}
 	!<mail-mta/ssmtp-2.64-r2
 	!>=mail-mta/ssmtp-2.64-r2[mta]
 	!net-mail/fastforward"
+
+REQUIRED_USE="ldap-bind? ( ldap sasl )"
 
 S="${WORKDIR}/${MY_SRC}"
 
@@ -99,6 +105,11 @@ src_configure() {
 		mylibs="${mylibs} -lpq -L$(pg_config --libdir)"
 	fi
 
+	if use sqlite ; then
+		mycc="${mycc} -DHAS_SQLITE"
+		mylibs="${mylibs} -lsqlite3"
+	fi
+
 	if use ssl ; then
 		mycc="${mycc} -DUSE_TLS"
 		mylibs="${mylibs} -lssl -lcrypto"
@@ -108,6 +119,9 @@ src_configure() {
 		if use dovecot-sasl ; then
 			# Set dovecot as default.
 			mycc="${mycc} -DDEF_SASL_SERVER=\\\"dovecot\\\""
+		fi
+		if use ldap-bind ; then
+			mycc="${mycc} -DUSE_LDAP_SASL"
 		fi
 		mycc="${mycc} -DUSE_SASL_AUTH -DUSE_CYRUS_SASL -I/usr/include/sasl"
 		mylibs="${mylibs} -lsasl2"
@@ -140,6 +154,18 @@ src_configure() {
 	fi
 
 	mycc="${mycc} -DDEF_DAEMON_DIR=\\\"/usr/$(get_libdir)/postfix\\\""
+	mycc="${mycc} -DDEF_CONFIG_DIR=\\\"/etc/postfix\\\""
+	mycc="${mycc} -DDEF_COMMAND_DIR=\\\"/usr/sbin\\\""
+	mycc="${mycc} -DDEF_SENDMAIL_PATH=\\\"/usr/sbin/sendmail\\\""
+	mycc="${mycc} -DDEF_NEWALIS_PATH=\\\"/usr/bin/newaliases\\\""
+	mycc="${mycc} -DDEF_MAILQ_PATH=\\\"/usr/bin/mailq\\\""
+	mycc="${mycc} -DDEF_MANPAGE_DIR=\\\"/usr/share/man\\\""
+	mycc="${mycc} -DDEF_README_DIR=\\\"/usr/share/doc/${PF}/readme\\\""
+	mycc="${mycc} -DDEF_HTML_DIR=\\\"/usr/share/doc/${PF}/html\\\""
+	mycc="${mycc} -DDEF_QUEUE_DIR=\\\"/var/spool/postfix\\\""
+	mycc="${mycc} -DDEF_DATA_DIR=\\\"/var/lib/postfix\\\""
+	mycc="${mycc} -DDEF_MAIL_OWNER=\\\"postfix\\\""
+	mycc="${mycc} -DDEF_SGID_GROUP=\\\"postdrop\\\""
 
 	# Robin H. Johnson <robbat2@gentoo.org> 17/Nov/2006
 	# Fix because infra boxes hit 2Gb .db files that fail a 32-bit fstat signed check.
@@ -151,21 +177,22 @@ src_configure() {
 		[[ "$(gcc-version)" == "3.4" ]] && replace-flags -O? -Os
 	fi
 
-	emake DEBUG="" CC="$(tc-getCC)" OPT="${CFLAGS}" CCARGS="${mycc}" AUXLIBS="${mylibs}" \
-		makefiles || die "configure problem"
+	emake DEBUG="" CC="$(tc-getCC)" OPT="${CFLAGS}" CCARGS="${mycc}" AUXLIBS="${mylibs}" makefiles
 }
 
 src_install () {
-	local myconf
-	use doc && myconf="readme_directory=\"/usr/share/doc/${PF}/readme\" \
-		html_directory=\"/usr/share/doc/${PF}/html\""
-
 	/bin/sh postfix-install \
 		-non-interactive \
 		install_root="${D}" \
-		config_directory="/usr/share/doc/${PF}/defaults" \
+		config_directory="/etc/postfix" \
 		manpage_directory="/usr/share/man" \
-		${myconf} \
+		readme_directory="/usr/share/doc/${PF}/readme" \
+		html_directory="/usr/share/doc/${PF}/html" \
+		command_directory="/usr/sbin" \
+		daemon_directory="/usr/$(get_libdir)/postfix" \
+		mailq_path="/usr/bin/mailq" \
+		newaliases_path="/usr/bin/newaliases" \
+		sendmail_path="/usr/sbin/sendmail" \
 		|| die "postfix-install failed"
 
 	# Fix spool removal on upgrade
@@ -196,7 +223,6 @@ src_install () {
 	fperms 02711 /usr/sbin/post{drop,queue}
 
 	keepdir /etc/postfix
-	mv "${D}"/usr/share/doc/${PF}/defaults/*.cf "${D}"/etc/postfix
 	if use mbox ; then
 		mypostconf="mail_spool_directory=/var/spool/mail"
 	else
@@ -209,11 +235,15 @@ src_install () {
 	newins "${FILESDIR}"/smtp.pass saslpass
 	fperms 600 /etc/postfix/saslpass
 
-	newinitd "${FILESDIR}"/postfix.rc6.${RC_VER} postfix || die "newinitd failed"
+	newinitd "${FILESDIR}"/postfix.rc6.${RC_VER} postfix
+	# bug #359913
+	use mysql || sed -i -e "s/mysql //" "${D}/etc/init.d/postfix"
+	use postgres || sed -i -e "s/postgresql //" "${D}/etc/init.d/postfix"
 
-	use examples && mv "${S}"/examples "${D}"/usr/share/doc/${PF}/
+	dodoc *README COMPATIBILITY HISTORY PORTING RELEASE_NOTES*
 
-	dodoc *README COMPATIBILITY HISTORY INSTALL PORTING RELEASE_NOTES*
+	mv "${S}"/examples "${D}"/usr/share/doc/${PF}/
+	mv "${D}"/etc/postfix/{*.default,makedefs.out} "${D}"/usr/share/doc/${PF}/
 
 	pamd_mimic_system smtp auth account
 
@@ -223,13 +253,11 @@ src_install () {
 	fi
 
 	# Remove unnecessary files
-	rm -f "${D}"/usr/$(get_libdir)/postfix/*.cf
+	rm -f "${D}"/etc/postfix/{*LICENSE,access,aliases,canonical,generic}
+	rm -f "${D}"/etc/postfix/{header_checks,relocated,transport,virtual}
 }
 
 pkg_postinst() {
-	# Add postfix, postdrop user/group (bug #77565)
-	group_user_check || die "Failed to check/add needed user/group"
-
 	# Do not install server.{key,pem) SSL certificates if they already exist
 	if use ssl && [[ ! -f "${ROOT}"/etc/ssl/postfix/server.key \
 		&& ! -f "${ROOT}"/etc/ssl/postfix/server.pem ]] ; then
@@ -237,10 +265,6 @@ pkg_postinst() {
 		install_cert /etc/ssl/postfix/server
 		chown postfix:mail "${ROOT}"/etc/ssl/postfix/server.{key,pem}
 	fi
-
-	ebegin "Fixing queue directories and permissions"
-	"${ROOT}"/usr/$(get_libdir)/postfix/post-install upgrade-permissions \
-		daemon_directory="${ROOT}/usr/$(get_libdir)/postfix"
 
 	if [[ ! -e /etc/mail/aliases.db ]] ; then
 		ewarn
@@ -250,15 +274,6 @@ pkg_postinst() {
 		ewarn
 	fi
 
-	if [[ -e /etc/mailer.conf ]] ; then
-		einfo
-		einfo "mailwrapper support is discontinued."
-		einfo "You may want to 'emerge -C mailwrapper' now."
-		einfo
-	fi
-
-	elog
 	elog "See the RELEASE_NOTES file in /usr/share/doc/${PF}"
 	elog "for incompatibilities and other major changes between releases."
-	elog
 }
