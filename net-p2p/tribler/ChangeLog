@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/tribler
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/tribler/ChangeLog,v 1.27 2012/07/31 23:08:03 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/tribler/ChangeLog,v 1.28 2012/08/02 19:19:48 blueness Exp $
+
+*tribler-5.9.25 (02 Aug 2012)
+
+  02 Aug 2012; Anthony G. Basile <blueness@gentoo.org> +tribler-5.9.25.ebuild:
+  Version bump
 
 *tribler-5.9.24 (31 Jul 2012)
 
