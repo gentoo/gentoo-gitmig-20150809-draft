@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libcmis/libcmis-0.1.0.ebuild,v 1.8 2012/06/21 15:31:11 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libcmis/libcmis-0.1.0.ebuild,v 1.9 2012/08/02 18:22:52 scarabeus Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ IUSE="static-libs test"
 RDEPEND="
 	dev-libs/boost
 	dev-libs/libxml2
-	net-misc/curl
+	<net-misc/curl-7.27.0
 "
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
