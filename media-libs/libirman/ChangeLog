@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libirman
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libirman/ChangeLog,v 1.26 2012/06/30 16:05:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libirman/ChangeLog,v 1.27 2012/08/02 08:30:23 jdhore Exp $
+
+  02 Aug 2012; Jeff Horelick <jdhore@gentoo.org> libirman-0.4.5.ebuild:
+  marked x86 per bug 429122
 
   30 Jun 2012; Justin Lecher <jlec@gentoo.org> libirman-0.4.2-r1.ebuild,
   libirman-0.4.5.ebuild, metadata.xml:
