@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pv/ChangeLog,v 1.36 2012/08/02 14:56:23 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pv/ChangeLog,v 1.37 2012/08/02 15:11:14 blueness Exp $
+
+  02 Aug 2012; Anthony G. Basile <blueness@gentoo.org> pv-1.3.4.ebuild:
+  Stable ppc ppc64, bug #429480
 
   02 Aug 2012; Anthony G. Basile <blueness@gentoo.org> pv-1.3.4.ebuild:
   Stable arm, bug #429480
