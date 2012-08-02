@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.8.1.ebuild,v 1.8 2012/08/02 15:21:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.6.9-r1.ebuild,v 1.1 2012/08/02 15:21:15 jer Exp $
 
-EAPI="4"
+EAPI="3"
 PYTHON_DEPEND="python? 2"
 inherit eutils flag-o-matic python toolchain-funcs user
 
@@ -13,9 +13,9 @@ SRC_URI="http://www.wireshark.org/download/src/all-versions/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="adns ares doc doc-pdf gtk ipv6 lua gcrypt geoip kerberos
-profile +pcap portaudio python +caps selinux smi ssl zlib"
+profile +pcap portaudio python +caps selinux smi ssl threads zlib"
 
 RDEPEND=">=dev-libs/glib-2.14:2
 	zlib? ( sys-libs/zlib
@@ -47,7 +47,7 @@ DEPEND="${RDEPEND}
 	sys-devel/bison
 	sys-apps/sed
 	sys-devel/flex
-	!!<net-analyzer/wireshark-1.8.0"
+	!!<net-analyzer/wireshark-1.6.0_rc1"
 
 S=${WORKDIR}/${MY_P}
 
@@ -102,6 +102,10 @@ pkg_setup() {
 	enewgroup wireshark
 }
 
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-1.6.6-gtk-pcap.patch
+}
+
 src_configure() {
 	local myconf
 
@@ -149,6 +153,7 @@ src_configure() {
 		$(use_with ssl gnutls) \
 		$(use_with gcrypt) \
 		$(use_enable ipv6) \
+		$(use_enable threads) \
 		$(use_with lua) \
 		$(use_with kerberos krb5) \
 		$(use_with smi libsmi) \
@@ -167,17 +172,17 @@ src_configure() {
 }
 
 src_compile() {
-	default
-	use doc && emake -C docbook
+	emake || die
+	use doc && cd docbook && { emake || die; }
 }
 
 src_install() {
-	default
+	emake DESTDIR="${D}" install || die "emake install failed"
 	if use doc; then
 		dohtml -r docbook/{release-notes.html,ws{d,u}g_html{,_chunked}}
 		if use doc-pdf; then
 			insinto /usr/share/doc/${PF}/pdf/
-			doins docbook/{{developer,user}-guide,release-notes}-{a4,us}.pdf
+			doins docbook/{{developer,user}-guide,release-notes}-{a4,us}.pdf || die
 		fi
 	fi
 
@@ -186,7 +191,7 @@ src_install() {
 		doc/{randpkt.txt,README*}
 
 	insinto /usr/include/wiretap
-	doins wiretap/wtap.h
+	doins wiretap/wtap.h || die
 
 	if use gtk; then
 		for c in hi lo; do
@@ -195,14 +200,14 @@ src_install() {
 				newins image/${c}${d}-app-wireshark.png wireshark.png
 			done
 		done
-		domenu wireshark.desktop
+		domenu wireshark.desktop || die
 	fi
 	use pcap && chmod o-x "${ED}"/usr/bin/dumpcap #357237
 }
 
 pkg_postinst() {
 	if use caps && use pcap; then
-		fcaps 0:wireshark 550 cap_net_raw,cap_net_admin "${EROOT}"/usr/bin/dumpcap
+		fcaps 0:wireshark 550 cap_dac_read_search,cap_net_raw,cap_net_admin "${EROOT}"/usr/bin/dumpcap
 	fi
 	echo
 	ewarn "NOTE: To run wireshark as normal user you have to add yourself to"

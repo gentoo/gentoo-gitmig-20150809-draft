@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.8.1.ebuild,v 1.8 2012/08/02 15:21:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.8.1-r1.ebuild,v 1.1 2012/08/02 15:21:15 jer Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -13,7 +13,7 @@ SRC_URI="http://www.wireshark.org/download/src/all-versions/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="adns ares doc doc-pdf gtk ipv6 lua gcrypt geoip kerberos
 profile +pcap portaudio python +caps selinux smi ssl zlib"
 
@@ -202,7 +202,7 @@ src_install() {
 
 pkg_postinst() {
 	if use caps && use pcap; then
-		fcaps 0:wireshark 550 cap_net_raw,cap_net_admin "${EROOT}"/usr/bin/dumpcap
+		fcaps 0:wireshark 550 cap_dac_read_search,cap_net_raw,cap_net_admin "${EROOT}"/usr/bin/dumpcap
 	fi
 	echo
 	ewarn "NOTE: To run wireshark as normal user you have to add yourself to"
