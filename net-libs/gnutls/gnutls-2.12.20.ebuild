@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.12.20.ebuild,v 1.2 2012/06/17 08:54:09 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.12.20.ebuild,v 1.3 2012/08/02 20:08:08 radhermit Exp $
 
 EAPI=4
 
@@ -91,6 +91,7 @@ src_configure() {
 
 	econf \
 		--htmldir="${EPREFIX}"/usr/share/doc/${P}/html \
+		--disable-silent-rules \
 		$(use_enable cxx) \
 		$(use_enable doc gtk-doc) \
 		$(use_enable doc gtk-doc-pdf) \

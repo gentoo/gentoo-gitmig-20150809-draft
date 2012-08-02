@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.373 2012/07/04 14:55:26 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.374 2012/08/02 20:08:08 radhermit Exp $
+
+  02 Aug 2012; Tim Harder <radhermit@gentoo.org> gnutls-2.12.18.ebuild,
+  gnutls-2.12.19.ebuild, gnutls-2.12.20.ebuild, gnutls-3.0.20.ebuild,
+  gnutls-3.0.21.ebuild:
+  Enable verbose build (bug #429312).
 
 *gnutls-3.0.21 (04 Jul 2012)
 

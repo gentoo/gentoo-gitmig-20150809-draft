@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.0.21.ebuild,v 1.1 2012/07/04 14:55:26 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.0.21.ebuild,v 1.2 2012/08/02 20:08:08 radhermit Exp $
 
 EAPI=4
 
@@ -85,6 +85,7 @@ src_prepare() {
 src_configure() {
 	econf \
 		--htmldir="${EPREFIX}/usr/share/doc/${PF}/html" \
+		--disable-silent-rules \
 		--disable-valgrind-tests \
 		$(use_enable cxx) \
 		$(use_enable doc gtk-doc) \
