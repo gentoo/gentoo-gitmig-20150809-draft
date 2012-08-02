@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/augeas
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/augeas/ChangeLog,v 1.32 2012/07/04 15:04:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/augeas/ChangeLog,v 1.33 2012/08/02 12:26:40 blueness Exp $
+
+  02 Aug 2012; Anthony G. Basile <blueness@gentoo.org> augeas-0.10.0.ebuild:
+  Stable ppc, bug #418483
 
   04 Jul 2012; Jeroen Roovers <jer@gentoo.org> augeas-0.9.0.ebuild:
   Stable for HPPA (bug #391565).
