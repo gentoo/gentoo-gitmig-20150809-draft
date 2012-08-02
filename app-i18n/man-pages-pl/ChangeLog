@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/man-pages-pl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-pl/ChangeLog,v 1.26 2012/05/19 10:35:42 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-pl/ChangeLog,v 1.27 2012/08/02 21:15:05 hwoarang Exp $
+
+  02 Aug 2012; Markos Chandras <hwoarang@gentoo.org>
+  man-pages-pl-20070628-r2.ebuild:
+  Stable on amd64 wrt bug #418589
 
 *man-pages-pl-0.2 (19 May 2012)
 
@@ -120,4 +124,3 @@
   +man-pages-pl-20040401.ebuild:
   Initial commit, original ebuild submitted by Miroslaw Mieszczak
   <mieszcz[at]zabrze[dot]zigzag[dot]pl>. This closes bug #54405.
-
