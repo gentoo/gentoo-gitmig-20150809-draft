@@ -4,5 +4,6 @@
   <herd>games</herd>
   <use>
     <flag name="fluidsynth">compile with support for fluidsynth</flag>
+    <flag name="freetype">use media-libs/freetype for font rendering</flag>
   </use>
 </pkgmetadata>
