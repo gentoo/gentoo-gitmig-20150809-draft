@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/atpy/atpy-0.9.5.1.ebuild,v 1.3 2012/04/23 20:18:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/atpy/atpy-0.9.6.ebuild,v 1.1 2012/08/02 17:31:54 bicatali Exp $
 
 EAPI="2"
 
@@ -30,17 +30,10 @@ DEPEND=">=dev-python/numpy-1.3"
 
 IUSE="+fits hdf5 mysql postgres sqlite +votable"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 LICENSE="GPL-3"
 
 S="${WORKDIR}/${MYP}"
-
-src_prepare() {
-	distutils_src_prepare
-
-	# Disable failing MySQL tests.
-	sed -e "s/import MySQLdb/raise ImportError/" -i test/unittests.py || die "sed failed"
-}
 
 src_test() {
 	testing() {
