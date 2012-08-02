@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/dalli
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dalli/ChangeLog,v 1.1 2012/08/02 10:05:32 graaff Exp $
+
+*dalli-2.1.0 (02 Aug 2012)
+
+  02 Aug 2012; Hans de Graaff <graaff@gentoo.org> +dalli-2.1.0.ebuild,
+  +metadata.xml:
+  Initial import. Successor of dev-ruby/memcache-client.
+
