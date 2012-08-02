@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/gts
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/ChangeLog,v 1.27 2012/07/08 15:39:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/ChangeLog,v 1.28 2012/08/02 04:44:39 bicatali Exp $
+
+*gts-20120706 (02 Aug 2012)
+
+  02 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> +gts-20120706.ebuild:
+  Version bump
 
   08 Jul 2012; Jeroen Roovers <jer@gentoo.org> gts-20111025-r1.ebuild:
   Marked ~hppa (bug #419621).
@@ -123,4 +128,3 @@
   <tshead@k-3d.com>, Manuel Exposito <conga@atubillados.com>, Tim Cera
   <timcera@earthlink.net>, and Tommie <d00-tga@d.kth.se> for their
   ebuilds.
-
