@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/icedtea-web
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/ChangeLog,v 1.24 2012/07/21 11:47:47 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/ChangeLog,v 1.25 2012/08/02 18:03:48 sera Exp $
+
+*icedtea-web-1.2.1-r7 (02 Aug 2012)
+*icedtea-web-1.2.1 (02 Aug 2012)
+
+  02 Aug 2012; Ralph Sennhauser <sera@gentoo.org> +icedtea-web-1.2.1.ebuild,
+  +icedtea-web-1.2.1-r7.ebuild:
+  Security and bugfix release. #429522
 
   21 Jul 2012; Ralph Sennhauser <sera@gentoo.org> -icedtea-web-1.1.4.ebuild,
   -icedtea-web-1.1.4-r7.ebuild, -icedtea-web-1.1.4-r8.ebuild,
