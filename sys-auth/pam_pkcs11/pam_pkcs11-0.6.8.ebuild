@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_pkcs11/pam_pkcs11-0.6.6.ebuild,v 1.3 2012/05/04 18:57:21 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_pkcs11/pam_pkcs11-0.6.8.ebuild,v 1.1 2012/08/02 15:24:33 flameeyes Exp $
 
-EAPI="3"
+EAPI=4
 
 inherit multilib pam
 
@@ -20,11 +20,11 @@ RDEPEND="sys-libs/pam
 	ldap? ( net-nds/openldap )
 	nss? (
 		dev-libs/nss
-		curl? ( || ( net-misc/curl[-ssl] net-misc/curl[ssl,nss,-gnutls] ) )
+		curl? ( || ( net-misc/curl[-ssl] net-misc/curl[ssl,curl_ssl_nss] ) )
 	)
 	!nss? (
 		dev-libs/openssl
-		curl? ( || ( net-misc/curl[-ssl] net-misc/curl[ssl,-nss,-gnutls] ) )
+		curl? ( || ( net-misc/curl[-ssl] net-misc/curl[ssl,-curl_ssl_nss] ) )
 	)
 	pcsc-lite? ( sys-apps/pcsc-lite )"
 DEPEND="${RDEPEND}
@@ -47,23 +47,26 @@ src_configure() {
 		$(use_with pcsc-lite pcsclite) \
 		$(use_with ldap) \
 		$(use_with nss) \
-		--docdir=/usr/share/doc/${PF}
+		--docdir=/usr/share/doc/${PF} \
+		--htmldir=/usr/share/doc/${PF}/html \
+		--disable-silent-build
 }
 
 src_install() {
-	emake DESTDIR="${D}" pamdir="$(getpam_mod_dir)" install || die "emake install failed"
+	emake DESTDIR="${D}" pamdir="$(getpam_mod_dir)" install
 
 	# These are all dlopened plugins, so .la files are useless.
 	find "${D}" -name '*.la' -delete || die
 
-	dodoc AUTHORS ChangeLog ChangeLog.svn NEWS README TODO || die
+	dodoc AUTHORS ChangeLog ChangeLog.svn NEWS README TODO doc/README.*
+	dohtml doc/api/*
 
 	# Provide some basic configuration
 	keepdir /etc/pam_pkcs11{,/{cacerts,crl}}
 
 	insinto /etc/pam_pkcs11
-	newins etc/pam_pkcs11.conf.example pam_pkcs11.conf || die
-	newins etc/pkcs11_eventmgr.conf.example pkcs11_eventmgr.conf || die
+	newins etc/pam_pkcs11.conf.example pam_pkcs11.conf
+	newins etc/pkcs11_eventmgr.conf.example pkcs11_eventmgr.conf
 }
 
 pkg_config() {

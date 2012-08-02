@@ -1,6 +1,13 @@
 # ChangeLog for sys-auth/pam_pkcs11
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_pkcs11/ChangeLog,v 1.21 2012/05/04 18:57:21 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_pkcs11/ChangeLog,v 1.22 2012/08/02 15:24:33 flameeyes Exp $
+
+*pam_pkcs11-0.6.8 (02 Aug 2012)
+
+  02 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> +pam_pkcs11-0.6.8.ebuild,
+  -pam_pkcs11-0.6.6.ebuild:
+  Version bump (new EAPI, new curl dependencies, more documentation installed,
+  silent build introduced upstream and disabled in ebuild). Remove old.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> pam_pkcs11-0.6.6.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -138,4 +145,3 @@
   +pam_pkcs11-0.5.3.ebuild:
   Initial commit for bug 121078. Thanks to Pierre Cassimans <kammicazze at
   hotmail dot com>.
-
