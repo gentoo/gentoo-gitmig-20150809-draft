@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/elvis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/ChangeLog,v 1.44 2012/02/10 17:39:53 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/ChangeLog,v 1.45 2012/08/02 08:47:26 jdhore Exp $
+
+  02 Aug 2012; Jeff Horelick <jdhore@gentoo.org> elvis-2.2.0-r4.ebuild:
+  marked x86 per bug 418557
 
 *elvis-2.2.0-r4 (10 Feb 2012)
 
