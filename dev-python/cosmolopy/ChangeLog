@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/cosmolopy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cosmolopy/ChangeLog,v 1.5 2012/02/20 14:18:39 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cosmolopy/ChangeLog,v 1.6 2012/08/02 18:19:46 bicatali Exp $
+
+  02 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> -cosmolopy-0.1.102.ebuild,
+  -cosmolopy-0.1.103.ebuild, cosmolopy-0.1.104.ebuild:
+  Keyword amd64-linux and x86-linux
 
   20 Feb 2012; Patrick Lauer <patrick@gentoo.org> cosmolopy-0.1.102.ebuild,
   cosmolopy-0.1.103.ebuild, cosmolopy-0.1.104.ebuild:
@@ -45,4 +49,3 @@
   +cosmolopy-0.1.001.ebuild, +files/cosmolopy-0.1.001-qa.patch,
   +metadata.xml:
   Initial import
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/natgrid/natgrid-0.2.1.ebuild,v 1.2 2012/02/23 09:12:21 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/natgrid/natgrid-0.2.1.ebuild,v 1.3 2012/08/02 18:21:56 bicatali Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/matplotlib/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 DEPEND=">=dev-python/matplotlib-0.98"
