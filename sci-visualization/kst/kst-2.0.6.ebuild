@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/kst/kst-2.0.4.ebuild,v 1.1 2012/05/01 14:14:33 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/kst/kst-2.0.6.ebuild,v 1.1 2012/08/02 23:48:42 pesa Exp $
 
 EAPI=4
 
@@ -33,7 +33,7 @@ DEPEND="${RDEPEND}
 "
 
 DOCS=( AUTHORS ChangeLog )
-PATCHES=( "${FILESDIR}/${P}-cfitsio-includes.patch" )
+PATCHES=( "${FILESDIR}/${PN}-2.0.4-cfitsio-includes.patch" )
 
 src_prepare() {
 	base_src_prepare
