@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf-fortran/netcdf-fortran-4.2.ebuild,v 1.1 2012/04/18 19:15:19 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf-fortran/netcdf-fortran-4.2.ebuild,v 1.2 2012/08/02 21:16:24 bicatali Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.unidata.ucar.edu/pub/netcdf/${P}.tar.gz"
 
 LICENSE="UCAR-Unidata"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples static-libs"
 
 RDEPEND="sci-libs/netcdf
@@ -26,7 +26,7 @@ AUTOTOOLS_IN_SOURCE_BUILD=1
 
 src_prepare() {
 	# use system cfortran
-	rm -f fortran/cfortran.h || die
+	rm fortran/cfortran.h || die
 	autotools-utils_src_prepare
 }
 
