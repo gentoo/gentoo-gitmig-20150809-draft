@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/cvsps
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsps/ChangeLog,v 1.6 2012/08/01 23:24:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsps/ChangeLog,v 1.7 2012/08/02 21:18:33 hwoarang Exp $
+
+  02 Aug 2012; Markos Chandras <hwoarang@gentoo.org> cvsps-2.1-r1.ebuild:
+  Stable on amd64 wrt bug #418975
 
   01 Aug 2012; Jeroen Roovers <jer@gentoo.org> cvsps-2.1-r1.ebuild:
   Stable for HPPA (bug #418975).
@@ -107,4 +110,3 @@
   30 Jun 2003; Seemant Kulleen <seemant@gentoo.org> cvsps-2.0_rc1.ebuild:
   New package -- provides a way to generate BK style changesets for CVS. Thanks
   to Rach Holmes for showing me this
-
