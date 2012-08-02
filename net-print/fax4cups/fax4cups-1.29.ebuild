@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/fax4cups/fax4cups-1.29.ebuild,v 1.1 2012/01/22 20:55:29 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/fax4cups/fax4cups-1.29.ebuild,v 1.2 2012/08/02 08:21:51 sbriesen Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ IUSE="+hylafax mgetty-fax efax capisuite-fax"
 DEPEND="net-print/cups"
 RDEPEND="${DEPEND}
 	|| (
-	  hylafax? ( net-misc/hylafax )
+	  hylafax? ( net-misc/hylafaxplus )
 	  efax? ( net-misc/efax )
 	  mgetty-fax? ( net-dialup/mgetty )
 	  capisuite-fax? ( net-dialup/capisuite )
