@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ounit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ounit/ChangeLog,v 1.31 2012/06/12 12:44:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ounit/ChangeLog,v 1.32 2012/08/02 15:02:15 blueness Exp $
+
+  02 Aug 2012; Anthony G. Basile <blueness@gentoo.org> ounit-1.1.2.ebuild:
+  Stable ppc, bug #428974
 
   12 Jun 2012; Alexis Ballier <aballier@gentoo.org> -ounit-1.1.0.ebuild:
   remove old
