@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-7.1a.ebuild,v 1.2 2012/03/06 06:06:30 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-7.1a.ebuild,v 1.3 2012/08/02 18:25:00 radhermit Exp $
 
 EAPI="4"
 
@@ -105,17 +105,15 @@ pkg_postinst() {
 	elog "mappings removed on shutdown in order to prevent other file systems"
 	elog "from unmounting then run:"
 	elog "rc-update add truecrypt boot"
-	elog ""
+	elog
 
 	ewarn "If you're getting errors about DISPLAY while using the terminal"
 	ewarn "it's a known upstream bug. To use TrueCrypt from the terminal"
 	ewarn "all that's necessary is to run: unset DISPLAY"
 	ewarn "This will make the display unaccessable from that terminal "
 	ewarn "but at least you will be able to access your volumes."
-	ewarn ""
+	ewarn
 
-	ewarn "TrueCrypt has very restrictive license."
-	ewarn "Please read the ${LICENSE} license in ${PORTDIR}/licenses"
-	ewarn "directory before using TrueCrypt. Please be explicitly aware of"
-	ewarn "the limitations on redistribution of binaries or modified source."
+	ewarn "TrueCrypt has a very restrictive license. Please be explicitly aware"
+	ewarn "of the limitations on redistribution of binaries or modified source."
 }
