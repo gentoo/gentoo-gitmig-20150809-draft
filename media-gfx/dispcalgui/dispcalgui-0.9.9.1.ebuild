@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dispcalgui/dispcalgui-0.9.9.1.ebuild,v 1.2 2012/07/30 05:45:32 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dispcalgui/dispcalgui-0.9.9.1.ebuild,v 1.3 2012/08/02 21:20:07 hwoarang Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -18,7 +18,7 @@ SRC_URI="http://dev.gentoo.org/~hwoarang/distfiles/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=">=media-gfx/argyllcms-1.1.0
