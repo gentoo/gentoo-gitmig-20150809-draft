@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pywcs/pywcs-1.11.ebuild,v 1.3 2012/05/04 15:12:15 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pywcs/pywcs-1.11.ebuild,v 1.4 2012/08/02 17:41:02 bicatali Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ SRC_URI="http://stsdas.stsci.edu/astrolib/${MYP}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 CDEPEND=">=sci-astronomy/wcslib-${WCS_V}"

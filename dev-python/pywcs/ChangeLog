@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pywcs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pywcs/ChangeLog,v 1.5 2012/05/04 15:12:15 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pywcs/ChangeLog,v 1.6 2012/08/02 17:41:02 bicatali Exp $
+
+  02 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/pywcs-1.9-wcslib.patch, -pywcs-1.9.ebuild, pywcs-1.11.ebuild:
+  Keyword amd64-linux and x86-linux
 
   04 May 2012; Patrick Lauer <patrick@gentoo.org> pywcs-1.11.ebuild,
   pywcs-1.9.ebuild:
@@ -60,4 +64,3 @@
   26 Jun 2009; Sébastien Fabbro <bicatali@gentoo.org> +pywcs-1.4.2.ebuild,
   +metadata.xml:
   Initial import
-
