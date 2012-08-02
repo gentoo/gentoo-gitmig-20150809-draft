@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.2.2.ebuild,v 1.3 2012/08/02 13:21:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.2.2.ebuild,v 1.4 2012/08/02 13:22:31 ssuominen Exp $
 
 EAPI=4
 
@@ -118,7 +118,7 @@ REQUIRED_USE="vidix? ( || ( X fbcon ) )
 
 src_prepare() {
 	sed -i -e '/define VDR_ABS_FIFO_DIR/s|".*"|"/var/vdr/xine"|' src/vdr/input_vdr.c || die
-	epatch ${FILESDIR}/${P}-libav.patch
+	epatch "${FILESDIR}"/${P}-libav.patch
 	if [[ ${PV} == *9999* ]]; then
 		epatch_user
 		eautoreconf
