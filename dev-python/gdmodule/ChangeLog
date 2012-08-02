@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gdmodule
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdmodule/ChangeLog,v 1.7 2012/02/22 05:14:55 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdmodule/ChangeLog,v 1.8 2012/08/02 18:04:39 bicatali Exp $
+
+  02 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> -gdmodule-0.56.ebuild,
+  gdmodule-0.56-r2.ebuild:
+  Keyword amd64-linux
 
   22 Feb 2012; Patrick Lauer <patrick@gentoo.org> gdmodule-0.56-r2.ebuild,
   gdmodule-0.56.ebuild:
@@ -36,4 +40,3 @@
   26 Jun 2010; Justin Lecher <jlec@gentoo.org> +gdmodule-0.56.ebuild,
   +metadata.xml:
   New addition from bug 100123
-
