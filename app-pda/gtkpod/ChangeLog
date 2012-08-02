@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/gtkpod
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.110 2012/06/20 08:18:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.111 2012/08/02 13:41:53 ssuominen Exp $
+
+  02 Aug 2012; Samuli Suominen <ssuominen@gentoo.org> gtkpod-2.1.2.ebuild:
+  Use Python 2.x in scripts/sync-palm-jppy.py for now.
 
   20 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> -gtkpod-2.0.2.ebuild,
   -gtkpod-2.1.2_beta2.ebuild:
