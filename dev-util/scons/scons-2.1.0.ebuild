@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/scons-2.1.0.ebuild,v 1.11 2012/03/18 15:30:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/scons-2.1.0.ebuild,v 1.12 2012/08/02 06:56:04 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
 PYTHON_USE_WITH="threads"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* 2.7-pypy-*"
+RESTRICT_PYTHON_ABIS="3.* 2.7-pypy-* 2.5-jython"
 PYTHON_MODNAME="SCons"
 
 inherit distutils eutils
