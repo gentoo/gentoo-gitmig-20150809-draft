@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/spyder
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/spyder/ChangeLog,v 1.27 2012/04/17 14:53:25 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/spyder/ChangeLog,v 1.28 2012/08/02 17:50:03 bicatali Exp $
+
+*spyder-2.1.11 (02 Aug 2012)
+
+  02 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/spyder-2.1.11-disable_sphinx_dependency.patch, +spyder-2.1.11.ebuild,
+  -files/spyder-2.0.10-disable_sphinx_dependency.patch, -spyder-2.0.12.ebuild,
+  -spyder-2.1.7.ebuild:
+  Version bump. Keyword amd64-linux and x86-linux. Updated patch
 
 *spyder-2.1.9 (17 Apr 2012)
 
@@ -146,4 +154,3 @@
   20 Oct 2009; Andrey Grozin <grozin@gentoo.org> +spyder-1.0.0.ebuild,
   +metadata.xml:
   Initial import
-

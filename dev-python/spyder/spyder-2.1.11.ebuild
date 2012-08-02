@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/spyder/spyder-2.1.7.ebuild,v 1.1 2012/03/09 09:12:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/spyder/spyder-2.1.11.ebuild,v 1.1 2012/08/02 17:50:03 bicatali Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -15,7 +15,7 @@ SRC_URI="http://spyderlib.googlecode.com/files/${P}.zip"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc ipython matplotlib numpy pep8 +pyflakes pylint +rope scipy sphinx"
 
 RDEPEND=">=dev-python/PyQt4-4.4[webkit]
@@ -29,18 +29,18 @@ RDEPEND=">=dev-python/PyQt4-4.4[webkit]
 	scipy? ( sci-libs/scipy )
 	sphinx? ( dev-python/sphinx )"
 DEPEND="${RDEPEND}
+	app-arch/unzip
 	doc? ( dev-python/sphinx )"
 
 PYTHON_MODNAME="spyderlib spyderplugins"
 
 src_prepare() {
 	distutils_src_prepare
-	epatch "${FILESDIR}/${PN}-2.1.2-disable_sphinx_dependency.patch"
+	epatch "${FILESDIR}"/${PN}-2.1.11-disable_sphinx_dependency.patch
 }
 
 src_compile() {
 	distutils_src_compile
-
 	if use doc; then
 		einfo "Generation of documentation"
 		PYTHONPATH="build-$(PYTHON -f --ABI)" \
@@ -50,12 +50,12 @@ src_compile() {
 
 src_install() {
 	distutils_src_install
-	doicon spyderlib/images/spyder.svg || die
+	doicon spyderlib/images/spyder.svg
 	make_desktop_entry spyder Spyder spyder "Development;IDE"
 	if use doc; then
 		pushd doc_output > /dev/null
 		insinto /usr/share/doc/${PF}/html
-		doins -r [a-z]* _images _static || die "Installation of documentation failed"
+		doins -r [a-z]* _images _static
 		popd > /dev/null
 	fi
 }
