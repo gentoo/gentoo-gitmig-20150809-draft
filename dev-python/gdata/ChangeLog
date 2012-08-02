@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gdata
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.104 2012/05/26 03:44:44 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.105 2012/08/02 22:35:14 neurogeek Exp $
+
+  02 Aug 2012; Jesus Rivero <neurogeek@gentoo.org> gdata-2.0.14.ebuild,
+  gdata-2.0.16.ebuild, gdata-2.0.17.ebuild:
+  Bumped to EAPI 4 and added ssl(+) and xml(+) to PYTHON_USE_WITH
 
 *gdata-2.0.17 (26 May 2012)
 

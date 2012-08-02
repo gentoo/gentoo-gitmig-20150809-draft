@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/gdata-2.0.17.ebuild,v 1.1 2012/05/26 03:44:44 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/gdata-2.0.17.ebuild,v 1.2 2012/08/02 22:35:14 neurogeek Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
-PYTHON_USE_WITH="ssl xml"
+PYTHON_USE_WITH="ssl(+) xml(+)"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
