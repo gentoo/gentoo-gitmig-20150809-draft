@@ -1,3 +1,26 @@
+# HG changeset patch
+# User Stephan Bosch <stephan@rename-it.nl>
+# Date 1343690295 -7200
+# Node ID c52a0c5613119fdae86b29a797d5d442c1e8d959
+# Parent  e3ea0270985aa297e45e575001a22321b0b87524
+Fix linkage with ld.gold.
+Patch by Eray Aslan.
+
+diff -r e3ea0270985a -r c52a0c561311 src/lib-sieve/Makefile.am
+--- a/src/lib-sieve/Makefile.am	Mon Jul 30 10:14:42 2012 +0200
++++ b/src/lib-sieve/Makefile.am	Tue Jul 31 01:18:15 2012 +0200
+@@ -70,8 +70,8 @@
+ 	$(extdir)/vnd.dovecot/duplicate/libsieve_ext_duplicate.la \
+ 	$(unfinished_plugins)
+ 
+-libdovecot_sieve_la_DEPENDENCIES = $(plugins)
+-libdovecot_sieve_la_LIBADD = $(plugins)
++libdovecot_sieve_la_DEPENDENCIES = $(plugins) $(LIBDOVECOT_LDA_DEPS)
++libdovecot_sieve_la_LIBADD = $(plugins) $(LIBDOVECOT_LDA)
+ 
+ libdovecot_sieve_la_SOURCES = \
+ 	rfc2822.c \
+
 
 # HG changeset patch
 # User Stephan Bosch <stephan@rename-it.nl>

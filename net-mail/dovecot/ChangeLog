@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.370 2012/07/13 14:02:22 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.371 2012/08/02 14:24:45 eras Exp $
+
+*dovecot-2.1.9 (02 Aug 2012)
+
+  02 Aug 2012; Eray Aslan <eras@gentoo.org> -dovecot-2.1.8-r1.ebuild,
+  -files/dovecot-2.1.8_managesieve_gold.patch, +dovecot-2.1.9.ebuild,
+  +files/dovecot-2.1.9_managesieve_gold.patch:
+  Version bump. Fix linking sieve with gold - bug #425792. Remove masked ebuild
 
 *dovecot-2.1.8-r1 (13 Jul 2012)
 

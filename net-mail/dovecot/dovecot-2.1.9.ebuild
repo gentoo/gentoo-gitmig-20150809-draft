@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.1.8-r1.ebuild,v 1.1 2012/07/13 14:02:22 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.1.9.ebuild,v 1.1 2012/08/02 14:24:45 eras Exp $
 
 EAPI=4
-inherit eutils versionator ssl-cert systemd
+inherit eutils versionator ssl-cert systemd autotools
 
 MY_P="${P/_/.}"
 major_minor="$( get_version_component_range 1-2 )"
@@ -63,6 +63,7 @@ pkg_setup() {
 src_prepare() {
 	cd "${WORKDIR}"/dovecot-2.1-pigeonhole* || die
 	epatch "${FILESDIR}/${P}_managesieve_gold.patch"
+	eautoreconf
 }
 
 src_configure() {
