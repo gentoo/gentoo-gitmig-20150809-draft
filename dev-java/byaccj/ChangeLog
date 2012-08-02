@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/byaccj
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/byaccj/ChangeLog,v 1.6 2011/12/04 16:49:51 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/byaccj/ChangeLog,v 1.7 2012/08/02 20:46:49 sera Exp $
+
+*byaccj-1.15-r1 (02 Aug 2012)
+
+  02 Aug 2012; Ralph Sennhauser <sera@gentoo.org> +byaccj-1.15-r1.ebuild,
+  files/Makefile:
+  Respect flags, thanks to Michael Palimaka (kensington) for the patch. #366459
 
   04 Dec 2011; Markos Chandras <hwoarang@gentoo.org> byaccj-1.15.ebuild:
   add missing die. stable on amd64. bug #370403

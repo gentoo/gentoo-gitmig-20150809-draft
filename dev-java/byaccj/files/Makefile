@@ -75,7 +75,7 @@ SRCS   = closure.c \
 	$(CC) -c $(CFLAGS) $(INC) $< -o $@
 
 yacc: $(OBJ)
-	$(CC) -o yacc $(OBJ)
+	$(CC) $(LDFLAGS) -o yacc $(OBJ)
 	@echo "done"
 
 clean:
