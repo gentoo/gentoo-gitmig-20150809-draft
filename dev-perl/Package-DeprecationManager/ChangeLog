@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Package-DeprecationManager
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-DeprecationManager/ChangeLog,v 1.25 2012/06/24 13:00:18 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-DeprecationManager/ChangeLog,v 1.26 2012/08/02 01:21:29 jer Exp $
+
+  02 Aug 2012; Jeroen Roovers <jer@gentoo.org>
+  Package-DeprecationManager-0.130.0.ebuild:
+  Stable for HPPA (bug #418803).
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

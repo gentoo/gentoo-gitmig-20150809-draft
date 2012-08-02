@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Requires
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Requires/ChangeLog,v 1.20 2012/06/24 12:59:31 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Requires/ChangeLog,v 1.21 2012/08/02 01:11:04 jer Exp $
+
+  02 Aug 2012; Jeroen Roovers <jer@gentoo.org> Test-Requires-0.60.0.ebuild:
+  Stable for HPPA (bug #418803).
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
