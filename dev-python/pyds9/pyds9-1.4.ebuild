@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds9/pyds9-1.4.ebuild,v 1.1 2012/06/06 20:20:36 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds9/pyds9-1.4.ebuild,v 1.2 2012/08/02 17:35:29 bicatali Exp $
 
 EAPI=3
 
@@ -16,7 +16,7 @@ SRC_URI="http://hea-www.harvard.edu/saord/download/ds9/python/${P}.tar.gz"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 LICENSE="BSD"
 
 DEPEND="x11-libs/xpa"
