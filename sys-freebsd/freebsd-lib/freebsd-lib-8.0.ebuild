@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-8.0.ebuild,v 1.12 2012/05/25 04:13:19 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-8.0.ebuild,v 1.13 2012/08/02 15:25:21 ryao Exp $
 
 EAPI=2
 
@@ -29,6 +29,7 @@ if [ "${CATEGORY#*cross-}" = "${CATEGORY}" ]; then
 		hesiod? ( net-dns/hesiod )
 		kerberos? ( virtual/krb5 )
 		usb? ( !dev-libs/libusb !dev-libs/libusbx )
+		userland_GNU? ( sys-apps/mtree )
 		!sys-freebsd/freebsd-headers"
 	DEPEND="${RDEPEND}
 		>=sys-devel/flex-2.5.31-r2

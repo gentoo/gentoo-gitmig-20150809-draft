@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-7.2-r1.ebuild,v 1.5 2012/05/21 23:20:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-7.2-r1.ebuild,v 1.6 2012/08/02 15:25:21 ryao Exp $
 
 EAPI=2
 
@@ -27,6 +27,7 @@ if [ "${CATEGORY#*cross-}" = "${CATEGORY}" ]; then
 	RDEPEND="ssl? ( dev-libs/openssl )
 		hesiod? ( net-dns/hesiod )
 		kerberos? ( virtual/krb5 )
+		userland_GNU? ( sys-apps/mtree )
 		!sys-freebsd/freebsd-headers
 		dev-libs/libelf"
 	DEPEND="${RDEPEND}

@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.156 2012/06/11 13:57:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.157 2012/08/02 15:25:21 ryao Exp $
+
+  02 Aug 2012; Richard Yao <ryao@gentoo.org> freebsd-lib-7.2-r1.ebuild,
+  freebsd-lib-8.0.ebuild, freebsd-lib-8.2-r1.ebuild, freebsd-lib-9.0-r3.ebuild:
+  Add sys-apps/mtree dependency for crossdev on userland_GNU
 
   11 Jun 2012; Alexis Ballier <aballier@gentoo.org> freebsd-lib-9.0-r3.ebuild:
   force a bootstrap with major updates
