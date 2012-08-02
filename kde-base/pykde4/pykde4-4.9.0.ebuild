@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.9.0.ebuild,v 1.1 2012/08/01 22:17:17 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.9.0.ebuild,v 1.2 2012/08/02 13:34:05 kensington Exp $
 
 EAPI=4
 
@@ -65,7 +65,7 @@ src_prepare() {
 
 	if ${have_python2}; then
 		mkdir -p "${WORKDIR}/wrapper" || die "failed to copy wrapper"
-		cp "${FILESDIR}/kpythonpluginfactorywrapper.c" "${WORKDIR}/wrapper" || die "failed to copy wrapper"
+		cp "${FILESDIR}/kpythonpluginfactorywrapper.c-r1" "${WORKDIR}/wrapper/kpythonpluginfactorywrapper.c" || die "failed to copy wrapper"
 	fi
 }
 
