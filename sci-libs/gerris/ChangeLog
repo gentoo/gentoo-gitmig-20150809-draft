@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/gerris
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gerris/ChangeLog,v 1.15 2012/05/04 08:22:51 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gerris/ChangeLog,v 1.16 2012/08/02 21:30:17 bicatali Exp $
+
+*gerris-20120731 (02 Aug 2012)
+
+  02 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> +gerris-20120731.ebuild:
+  Version bump. Keyword amd64-linux x86-linux
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> gerris-20100519.ebuild,
   gerris-20111123.ebuild:
@@ -77,4 +82,3 @@
   +gerris-0.8.0.ebuild:
   Initial import (fixes bug #102323). Many thanks to Tim Cera
   <timcera@earthlink.net> for his ebuild.
-
