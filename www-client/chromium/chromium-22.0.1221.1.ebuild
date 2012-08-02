@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-22.0.1207.1.ebuild,v 1.2 2012/07/22 16:52:26 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-22.0.1221.1.ebuild,v 1.1 2012/08/02 22:52:35 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -60,7 +60,6 @@ DEPEND="${RDEPEND}
 	dev-python/simplejson
 	>=dev-util/gperf-3.0.3
 	>=sys-devel/bison-2.4.3
-	<sys-devel/bison-2.6
 	sys-devel/flex
 	>=sys-devel/make-3.81-r2
 	virtual/pkgconfig
@@ -113,6 +112,9 @@ src_prepare() {
 	# Fix build without NaCl glibc toolchain.
 	epatch "${FILESDIR}/${PN}-ppapi-r0.patch"
 
+	# Bug 427438.
+	epatch "${FILESDIR}/${PN}-bison-2.6-r0.patch"
+
 	epatch_user
 
 	# Remove most bundled libraries. Some are still needed.
@@ -126,6 +128,7 @@ src_prepare() {
 		\! -path 'third_party/gpsd/*' \
 		\! -path 'third_party/harfbuzz/*' \
 		\! -path 'third_party/hunspell/*' \
+		\! -path 'third_party/hyphen/*' \
 		\! -path 'third_party/iccjpeg/*' \
 		\! -path 'third_party/jsoncpp/*' \
 		\! -path 'third_party/khronos/*' \
