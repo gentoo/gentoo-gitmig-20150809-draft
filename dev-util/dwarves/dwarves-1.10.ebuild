@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dwarves/dwarves-1.8.ebuild,v 1.4 2011/03/20 21:58:45 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dwarves/dwarves-1.10.ebuild,v 1.1 2012/08/02 15:11:53 flameeyes Exp $
 
 EAPI=4
 
@@ -25,9 +25,7 @@ else
 	SRC_URI="mirror://gentoo/${P}.tar.bz2"
 fi
 
-PATCHES=( "${FILESDIR}"/${P}-glibc-212.patch )
-
-DOCS=( README README.ctracer )
+DOCS=( README README.ctracer NEWS )
 
 src_configure() {
 	local mycmakeargs=( "-D__LIB=$(get_libdir)" )
