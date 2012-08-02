@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-yadis/python-yadis-1.1.0-r1.ebuild,v 1.1 2011/12/21 11:23:47 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-yadis/python-yadis-1.1.0-r1.ebuild,v 1.2 2012/08/02 22:09:39 neurogeek Exp $
 
-EAPI="3"
+EAPI="4"
 PYTHON_DEPEND="2"
-PYTHON_USE_WITH="xml"
+PYTHON_USE_WITH="xml(+)"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
