@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/tslib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/tslib/ChangeLog,v 1.18 2012/08/01 09:47:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/tslib/ChangeLog,v 1.19 2012/08/02 07:23:42 jdhore Exp $
+
+  02 Aug 2012; Jeff Horelick <jdhore@gentoo.org> tslib-1.0-r2.ebuild:
+  marked x86 per bug 422365
 
   01 Aug 2012; Jeroen Roovers <jer@gentoo.org> tslib-1.0-r2.ebuild:
   Stable for HPPA (bug #422365).
