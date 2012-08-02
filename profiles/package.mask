@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14025 2012/08/02 02:27:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14026 2012/08/02 14:29:18 eras Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -168,10 +168,6 @@ app-laptop/omnibook
 # to Michael Weber <xmw@gentoo.org> #235124 for maintaining a
 # binary package in his overlay. (layman -a xmw)
 =app-misc/jbidwatcher-1*
-
-# Eray Aslan <eras@gentoo.org> (13 Jul 2012)
-# Mask experimental patch for linking with gold
-=net-mail/dovecot-2.1.8-r1
 
 # Mike Gilbert <floppym@gentoo.org> (09 Jul 2012)
 # Dev channel releases are only for people who are developers or want more
