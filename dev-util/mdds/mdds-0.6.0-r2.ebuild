@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mdds/mdds-0.6.0-r1.ebuild,v 1.1 2012/08/01 09:16:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mdds/mdds-0.6.0-r2.ebuild,v 1.1 2012/08/02 09:05:34 scarabeus Exp $
 
 EAPI=4
 
@@ -23,7 +23,8 @@ S=${WORKDIR}/${P/-/_}
 PATCHES=(
 	"${FILESDIR}/${PV}-fix-boost-1.50-linking.patch"
 	"${FILESDIR}/${PV}-fix-missing-includes.patch"
-
+	"${FILESDIR}/${PV}-multi-vector-build.patch"
+	"${FILESDIR}/${PV}-right-overload-of-vector.patch"
 )
 
 src_configure() {
