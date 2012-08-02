@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/OLE-StorageLite
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/OLE-StorageLite/ChangeLog,v 1.25 2012/07/29 21:57:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/OLE-StorageLite/ChangeLog,v 1.26 2012/08/02 20:27:51 maekke Exp $
+
+  02 Aug 2012; Markus Meier <maekke@gentoo.org> OLE-StorageLite-0.190.0.ebuild:
+  add ~arm, bug #428248
 
   29 Jul 2012; Jeroen Roovers <jer@gentoo.org> OLE-StorageLite-0.190.0.ebuild:
   Marked ~hppa (bug #428248).

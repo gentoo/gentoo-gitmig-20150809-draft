@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Digest-Perl-MD5
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-Perl-MD5/ChangeLog,v 1.6 2012/07/29 22:02:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-Perl-MD5/ChangeLog,v 1.7 2012/08/02 20:32:21 maekke Exp $
+
+  02 Aug 2012; Markus Meier <maekke@gentoo.org> Digest-Perl-MD5-1.800.0.ebuild:
+  add ~arm, bug #428248
 
   29 Jul 2012; Jeroen Roovers <jer@gentoo.org> Digest-Perl-MD5-1.800.0.ebuild:
   Marked ~hppa (bug #428248).
