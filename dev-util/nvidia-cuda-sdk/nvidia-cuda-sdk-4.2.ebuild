@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/nvidia-cuda-sdk-4.2.ebuild,v 1.1 2012/07/31 07:37:19 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/nvidia-cuda-sdk-4.2.ebuild,v 1.2 2012/08/02 05:10:47 zerochaos Exp $
 
-EAPI=2
+EAPI=4
 
 inherit unpacker toolchain-funcs
 
@@ -53,19 +53,19 @@ src_compile() {
 
 	cd "${S}/sdk"
 
-	use cuda && emake -C C cuda-install=/opt/cuda ${myopts} || die
-	use opencl && emake -C OpenCL || die
+	use cuda && emake -C C cuda-install=/opt/cuda ${myopts}
+	use opencl && emake -C OpenCL
 }
 
 src_install() {
 	cd "${S}/sdk"
 
 	if ! use doc; then
-		rm -rf *.txt doc */doc */Samples.htm */releaseNotesData
+		rm -rf *.txt doc */doc */Samples.htm */releaseNotesData || die
 	fi
 
 	if ! use examples; then
-		rm -rf bin */bin */tools
+		rm -rf bin */bin */tools || die
 	fi
 
 	for f in $(find .); do
