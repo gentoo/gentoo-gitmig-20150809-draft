@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/supervisor/supervisor-3.0_alpha12.ebuild,v 1.1 2012/04/23 05:25:58 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/supervisor/supervisor-3.0_alpha12.ebuild,v 1.2 2012/08/02 21:29:54 neurogeek Exp $
 
-EAPI="3"
+EAPI="4"
 PYTHON_DEPEND="2:2.5"
-PYTHON_USE_WITH="xml"
+PYTHON_USE_WITH="xml(+)"
 SUPPORT_PYTHON_ABIS="1"
 # xml.etree.ElementTree module required.
 RESTRICT_PYTHON_ABIS="2.4 3.*"
