@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/tea
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/ChangeLog,v 1.57 2012/06/01 15:44:29 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/ChangeLog,v 1.58 2012/08/02 23:04:55 pesa Exp $
+
+*tea-33.2.0 (02 Aug 2012)
+
+  02 Aug 2012; Davide Pesavento <pesa@gentoo.org> +tea-33.2.0.ebuild,
+  -tea-33.0.0.ebuild:
+  Version bump.
 
 *tea-33.1.0 (01 Jun 2012)
 
@@ -253,4 +259,3 @@
   10 Dec 2006; Peter Weller <welp@gentoo.org> +metadata.xml,
   +tea-14.3.1.ebuild:
   Added tea-14.3.1 to the tree wrt bug #153602
-
