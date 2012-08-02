@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/polygon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/polygon/ChangeLog,v 1.6 2012/06/21 01:26:52 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/polygon/ChangeLog,v 1.7 2012/08/02 06:43:25 patrick Exp $
+
+  02 Aug 2012; Patrick Lauer <patrick@gentoo.org> polygon-2.0.4.ebuild:
+  Restricting jython
 
   21 Jun 2012; Jeff Horelick <jdhore@gentoo.org> polygon-3.0.4.ebuild:
   marked x86 per bug 422067
@@ -24,4 +27,3 @@
   04 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org> +polygon-2.0.4.ebuild,
   +polygon-3.0.4.ebuild, +metadata.xml:
   Initial import
-
