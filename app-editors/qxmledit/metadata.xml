@@ -6,8 +6,13 @@
 		<email>hwoarang@gentoo.org</email>
 		<name>Markos Chandras</name>
 	</maintainer>
-	<longdescription lang="en">QXmlEdit is a simple XML editor written in Qt4, it is not a complete and
-		full featured editor.</longdescription>
+	<longdescription lang="en">
+		QXmlEdit is a simple XML editor written in Qt4. Its main
+		features are unusual data visualization modes, it has some
+		nice XML manipulation and presentation features and it is
+		multi-platform. This is one of the few graphical Open Source
+		XSD viewer.
+	</longdescription>
 	<upstream>
 		<remote-id type="google-code">qxmledit</remote-id>
 	</upstream>
