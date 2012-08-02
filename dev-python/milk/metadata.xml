@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>sci</herd>
-	<longdescription lang="en">
+<herd>sci</herd>
+<longdescription lang="en">
   Milk is a machine learning toolkit in Python.
   Its focus is on supervised classification with several classifiers
   available: SVMs (based on libsvm), k-NN, random forests, decision
