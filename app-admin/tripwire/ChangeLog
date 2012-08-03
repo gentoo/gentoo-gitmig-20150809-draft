@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/tripwire
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.44 2012/08/01 07:02:10 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.45 2012/08/03 13:25:02 ago Exp $
+
+  03 Aug 2012; Agostino Sarubbo <ago@gentoo.org> tripwire-2.4.2.2-r1.ebuild:
+  Stable for amd64, wrt bug #428840
 
   01 Aug 2012; Jeff Horelick <jdhore@gentoo.org> tripwire-2.4.2.2-r1.ebuild:
   marked x86 per bug 428840
