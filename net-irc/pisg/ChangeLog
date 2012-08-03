@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/pisg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/ChangeLog,v 1.60 2012/03/27 18:11:50 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/ChangeLog,v 1.61 2012/08/03 08:23:39 hwoarang Exp $
+
+  03 Aug 2012; Markos Chandras <hwoarang@gentoo.org> pisg-0.73.ebuild:
+  Stable on amd64 wrt bug #419249
 
 *pisg-0.73 (27 Mar 2012)
 
@@ -251,4 +254,3 @@
   files/0.50-network-option-fix.patch:
   Initial version, ebuild submitted by Sven Wegener 
   < sven.wegener -at- stealer.net >. Closes #37848.
-
