@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.702 2012/08/01 18:56:23 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.703 2012/08/03 00:57:06 williamh Exp $
+
+*udev-187-r1 (03 Aug 2012)
+
+  03 Aug 2012; William Hubbs <williamh@gentoo.org> +udev-187-r1.ebuild,
+  udev-9999.ebuild:
+  Fix the firmware path to search in /usr/lib then /lib. Also sync the
+  live ebuild.
 
   01 Aug 2012; William Hubbs <williamh@gentoo.org> udev-187.ebuild,
   udev-9999.ebuild:
