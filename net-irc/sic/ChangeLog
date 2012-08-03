@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/sic
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/sic/ChangeLog,v 1.7 2012/02/16 07:09:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/sic/ChangeLog,v 1.8 2012/08/03 11:28:15 hwoarang Exp $
+
+  03 Aug 2012; Markos Chandras <hwoarang@gentoo.org> sic-1.1.ebuild:
+  Stable on amd64 wrt bug #419253
 
 *sic-1.1 (16 Feb 2012)
 
@@ -30,4 +33,3 @@
   20 Apr 2007; Raúl Porcel <armin76@gentoo.org> +metadata.xml,
   +sic-0.9.ebuild:
   Initial import, ebuild by Cédric Krier <cedk at gentoo dot org>, bug 141332
-
