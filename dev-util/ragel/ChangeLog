@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ragel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ChangeLog,v 1.55 2012/08/03 13:56:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ChangeLog,v 1.56 2012/08/03 20:28:15 blueness Exp $
+
+  03 Aug 2012; Anthony G. Basile <blueness@gentoo.org> ragel-6.7-r1.ebuild:
+  Stable ppc ppc64, bug #429066
 
   03 Aug 2012; Agostino Sarubbo <ago@gentoo.org> ragel-6.7-r1.ebuild:
   Stable for amd64, wrt bug #429066
