@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/redis-2.4.16.ebuild,v 1.1 2012/08/02 18:25:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/redis-2.4.16.ebuild,v 1.2 2012/08/03 16:47:01 robbat2 Exp $
 
 EAPI="4"
 
@@ -18,7 +18,7 @@ SLOT="0"
 RDEPEND=""
 DEPEND=">=sys-devel/autoconf-2.63
 	tcmalloc? ( dev-util/google-perftools )
-	jemalloc? ( <dev-libs/jemalloc-3.0 )
+	jemalloc? ( >=dev-libs/jemalloc-3.0 )
 	test? ( dev-lang/tcl )
 	${RDEPEND}"
 REQUIRED_USE="tcmalloc? ( !jemalloc )
@@ -48,7 +48,7 @@ src_prepare() {
 	epatch "${FILESDIR}/redis-2.4.3-shared.patch"
 	epatch "${FILESDIR}/redis-2.4.4-tcmalloc.patch"
 	if use jemalloc ; then
-		sed -i -e "s/je_/j/" src/zmalloc.c
+		sed -i -e "s/je_/j/" src/zmalloc.c src/zmalloc.h
 	fi
 	# now we will rewrite present Makefiles
 	local makefiles=""
