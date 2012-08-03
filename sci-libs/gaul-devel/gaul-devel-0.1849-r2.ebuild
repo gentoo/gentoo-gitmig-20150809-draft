@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gaul-devel/gaul-devel-0.1849-r2.ebuild,v 1.2 2011/06/26 14:47:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gaul-devel/gaul-devel-0.1849-r2.ebuild,v 1.3 2012/08/03 18:03:35 bicatali Exp $
 
 EAPI=4
 
@@ -12,8 +12,8 @@ SRC_URI="mirror://sourceforge/gaul/${P}-0.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
-IUSE="debug slang"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+IUSE="debug slang static-libs"
 
 DEPEND="
 	sys-apps/sed
@@ -37,7 +37,7 @@ src_configure() {
 	else
 		myconf="${myconf} --enable-g=no"
 	fi
-	econf ${myconf}
+	econf $(use_enable static-libs static) ${myconf}
 }
 
 src_install() {
