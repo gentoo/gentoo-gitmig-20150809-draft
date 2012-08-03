@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/getdata
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/getdata/ChangeLog,v 1.9 2012/07/17 14:01:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/getdata/ChangeLog,v 1.10 2012/08/03 18:51:55 bicatali Exp $
+
+  03 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> getdata-0.8.0.ebuild,
+  metadata.xml:
+  Fixed perl diretory install, keyword amd64-linux x86-linux
 
 *getdata-0.8.0 (17 Jul 2012)
 
@@ -41,4 +45,3 @@
   +metadata.xml:
   Initial commit for getdata. Ebuild by Matěj Laitl <strohel@gmail.com>
   (bug #335017).
-

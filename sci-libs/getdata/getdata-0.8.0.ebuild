@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/getdata/getdata-0.8.0.ebuild,v 1.1 2012/07/17 14:01:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/getdata/getdata-0.8.0.ebuild,v 1.2 2012/08/03 18:51:55 bicatali Exp $
 
 EAPI=3
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://sourceforge/project/${PN}/${PN}/${PV}/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="bzip2 fortran lzma python perl static-libs"
 
 DEPEND="
@@ -29,15 +29,18 @@ RDEPEND="${DEPEND}"
 
 pkg_setup() {
 	use fortran && fortran-2_pkg_setup
+	use python && python_pkg_setup
 }
 
 src_prepare() {
 	# Python bindings are built/tested/installed manually.
-	sed -e "/PY_SUBDIR/s/python//" -i bindings/Makefile.am
+	sed -e "/PY_SUBDIR/s/python//" -i bindings/Makefile.am || die
 	eautoreconf
 }
 
 src_configure() {
+	local myconf
+	use perl && myconf="--with-perl-dir=vendor"
 	econf \
 		--disable-idl \
 		--without-libslim \
@@ -50,7 +53,8 @@ src_configure() {
 		$(use_enable perl) \
 		$(use_enable static-libs static) \
 		$(use_with bzip2 libbz2) \
-		$(use_with lzma liblzma)
+		$(use_with lzma liblzma) \
+		${myconf}
 }
 
 src_compile() {
@@ -64,8 +68,8 @@ src_compile() {
 				PYTHON_VERSION="$(python_get_version)" \
 				NUMPY_CPPFLAGS="-I${EPREFIX}$(python_get_sitedir)/numpy/core/include" \
 				PYTHON_CPPFLAGS="-I${EPREFIX}$(python_get_includedir)" \
-				pyexecdir="$(python_get_sitedir)" \
-				pythondir="$(python_get_sitedir)"
+				pyexecdir="${EPREFIX}$(python_get_sitedir)" \
+				pythondir="${EPREFIX}$(python_get_sitedir)"
 		}
 		python_execute_function -s --source-dir bindings/python building
 	fi
@@ -81,8 +85,8 @@ src_install() {
 				NUMPY_CPPFLAGS="-I${EPREFIX}$(python_get_sitedir)/numpy/core/include" \
 				PYTHON_CPPFLAGS="-I${EPREFIX}$(python_get_includedir)" \
 				PYTHON_VERSION="$(python_get_version)" \
-				pyexecdir="$(python_get_sitedir)" \
-				pythondir="$(python_get_sitedir)" \
+				pyexecdir="${EPREFIX}$(python_get_sitedir)" \
+				pythondir="${EPREFIX}$(python_get_sitedir)" \
 				install
 				if use static-libs; then
 					find "${ED}/$(python_get_sitedir)" -type f -name "*.a" -delete || die
