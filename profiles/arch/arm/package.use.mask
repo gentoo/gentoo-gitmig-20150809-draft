@@ -1,6 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.82 2012/07/25 21:15:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.83 2012/08/03 21:31:21 steev Exp $
+
+# Steev Klimaszewski <steev@gentoo.org> (03 Aug 2012)
+# No java on ARM
+net-analyzer/wireshark doc-pdf
 
 # Markus Meier <maekke@gentoo.org> (25 Jul 2012)
 # no stable media-video/vlc yet, bug #401313

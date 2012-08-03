@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6866 2012/08/03 11:58:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6867 2012/08/03 21:31:21 steev Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Aug 2012; Steev Klimaszewski <steev@gentoo.org> arch/arm/package.use.mask
+  Mask USE=doc-pdf on net-analyzer/wireshark for ARM
 
   03 Aug 2012; Jeroen Roovers <jer@gentoo.org> package.mask:
   Unmask >net-analyzer/net-snmp-5.5 (bug #380299).
