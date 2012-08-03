@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/olsrd/olsrd-0.6.3.ebuild,v 1.1 2012/06/28 01:53:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/olsrd/olsrd-0.6.3.ebuild,v 1.2 2012/08/03 18:12:06 ago Exp $
 
 EAPI=4
 inherit eutils multilib toolchain-funcs versionator
@@ -12,7 +12,7 @@ SRC_URI="http://www.olsr.org/releases/$(get_version_component_range 1-2)/${PN}-$
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="gtk"
 DEPEND="
 	gtk? (

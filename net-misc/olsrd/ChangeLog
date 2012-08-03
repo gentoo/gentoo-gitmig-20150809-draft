@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/olsrd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/olsrd/ChangeLog,v 1.29 2012/06/28 01:53:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/olsrd/ChangeLog,v 1.30 2012/08/03 18:12:06 ago Exp $
+
+  03 Aug 2012; Agostino Sarubbo <ago@gentoo.org> olsrd-0.6.3.ebuild:
+  Stable for amd64, wrt bug #429184
 
 *olsrd-0.6.3 (28 Jun 2012)
 
