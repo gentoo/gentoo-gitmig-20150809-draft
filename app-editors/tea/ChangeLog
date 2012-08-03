@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/tea
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/ChangeLog,v 1.58 2012/08/02 23:04:55 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/ChangeLog,v 1.59 2012/08/03 15:05:12 kensington Exp $
+
+  03 Aug 2012; Michael Palimaka <kensington@gentoo.org> metadata.xml:
+  Add upstream metadata.
 
 *tea-33.2.0 (02 Aug 2012)
 
