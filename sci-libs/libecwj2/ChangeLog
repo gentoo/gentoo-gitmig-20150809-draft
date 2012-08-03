@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libecwj2
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libecwj2/ChangeLog,v 1.9 2010/07/17 13:46:52 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libecwj2/ChangeLog,v 1.10 2012/08/03 19:42:46 bicatali Exp $
+
+  03 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> libecwj2-3.3-r1.ebuild:
+  Added static-libs, keyword amd64-linux x86-linux
 
   17 Jul 2010; Kacper Kowalik <xarthisius@gentoo.org>
   libecwj2-3.3-r1.ebuild:
@@ -42,4 +45,3 @@
   <luca.casagrande@gmail.com>, Alexandre 
   Sanches <alexandre.sanches@netcourrier.com>, Emiliano Vavassori 
   <syntaxerrormmm@gmail.com> for their work on bug #122186.
-

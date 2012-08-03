@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libecwj2/libecwj2-3.3-r1.ebuild,v 1.5 2010/07/17 13:46:52 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libecwj2/libecwj2-3.3-r1.ebuild,v 1.6 2012/08/03 19:42:46 bicatali Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils autotools
 
 DESCRIPTION="Library for both the ECW and the ISO JPEG 2000 image file formats"
@@ -11,8 +11,8 @@ HOMEPAGE="http://www.ermapper.com/ProductView.aspx?t=28"
 
 LICENSE="ECWPL"
 SLOT="0"
-KEYWORDS="amd64 x86"
-IUSE="doc examples"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
+IUSE="doc examples static-libs"
 
 RDEPEND="=media-libs/lcms-1*"
 DEPEND="${RDEPEND}
@@ -27,15 +27,16 @@ src_prepare() {
 	eautoreconf
 }
 
+src_configure() {
+	econf $(use_enable static-libs static)
+}
+
 src_install() {
 	dodir /usr/include
-	emake DESTDIR="${D}" install || die "emake install failed"
-
-	insinto /usr/share/doc/${PF}/
-	if use doc; then
-		dodoc SDK.pdf || die
-	fi
+	default
+	use doc && dodoc SDK.pdf
 	if use examples; then
-		doins -r examples || die
+		insinto /usr/share/doc/${PF}
+		doins -r examples
 	fi
 }
