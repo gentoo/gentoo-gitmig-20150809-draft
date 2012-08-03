@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/kaudiocreator
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kaudiocreator/ChangeLog,v 1.10 2012/06/15 11:35:59 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kaudiocreator/ChangeLog,v 1.11 2012/08/03 22:20:59 johu Exp $
+
+*kaudiocreator-1.3-r1 (03 Aug 2012)
+
+  03 Aug 2012; Johannes Huber <johu@gentoo.org> +kaudiocreator-1.3-r1.ebuild:
+  Revision bump allows build with KDE 4.9.
 
   15 Jun 2012; Johannes Huber <johu@gentoo.org> kaudiocreator-1.3.ebuild:
   Stable for x86, wrt bug #420455
@@ -44,4 +49,3 @@
   03 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
   +kaudiocreator-1.2.81.ebuild:
   Initial commit.
-
