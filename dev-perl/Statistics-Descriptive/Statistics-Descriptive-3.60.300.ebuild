@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Statistics-Descriptive/Statistics-Descriptive-3.60.300.ebuild,v 1.2 2012/05/28 15:50:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Statistics-Descriptive/Statistics-Descriptive-3.60.300.ebuild,v 1.3 2012/08/03 10:55:53 ago Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Module of basic descriptive statistical functions"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="test"
 
 RDEPEND=""
