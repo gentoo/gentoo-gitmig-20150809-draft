@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/align
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/align/ChangeLog,v 1.54 2011/01/07 23:26:49 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/align/ChangeLog,v 1.55 2012/08/03 09:15:56 radhermit Exp $
+
+*align-42 (03 Aug 2012)
+
+  03 Aug 2012; Tim Harder <radhermit@gentoo.org> +align-42.ebuild:
+  Version bump.
 
   07 Jan 2011; Tim Harder <radhermit@gentoo.org> -align-32.ebuild,
   -align-33.ebuild, -align-35.ebuild, -align-39.ebuild:
