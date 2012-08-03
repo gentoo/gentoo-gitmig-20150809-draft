@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/powermanga-0.90.ebuild,v 1.10 2011/06/06 21:06:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/powermanga-0.90.ebuild,v 1.11 2012/08/03 04:25:58 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils autotools games
@@ -32,7 +32,9 @@ src_prepare() {
 		#endif
 		EOF
 	done
-	epatch "${FILESDIR}"/${P}-underlink.patch
+	epatch \
+		"${FILESDIR}"/${P}-underlink.patch \
+		"${FILESDIR}"/${P}-segfault.patch
 	eautoreconf
 }
 
