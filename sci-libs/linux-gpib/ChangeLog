@@ -1,6 +1,16 @@
 # ChangeLog for sci-libs/linux-gpib
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/ChangeLog,v 1.4 2011/11/30 01:18:46 dilfridge Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/ChangeLog,v 1.5 2012/08/03 07:31:12 xmw Exp $
+
+*linux-gpib-3.2.16-r2 (03 Aug 2012)
+
+  03 Aug 2012; Michael Weber <xmw@gentoo.org>
+  +files/linux-gpib-3.2.16-kernel-3.4-asm-includes.patch,
+  +linux-gpib-3.2.16-r2.ebuild:
+  Fix python support, restrict USE pcmcia (broken on kernels newer 2.6.38), fix
+  firmware installation (bug 379393, thanks Nicolas Boichat) and remove unwanted
+  precompiled binary generate_firmware, fix asm/system.h inclusion on kernel
+  3.4.0.
 
   30 Nov 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -linux-gpib-3.2.16.ebuild, linux-gpib-3.2.16-r1.ebuild:
@@ -29,4 +39,3 @@
   their work. Initially pmasked since the ebuild still needs a lot of QA
   cleanup (especially concerning the language bindings) and requires exotic
   hardware for testing.
-
