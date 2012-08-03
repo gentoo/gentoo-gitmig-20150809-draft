@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libgsasl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/ChangeLog,v 1.75 2012/08/02 23:24:34 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/ChangeLog,v 1.76 2012/08/03 12:27:15 blueness Exp $
+
+  03 Aug 2012; Anthony G. Basile <blueness@gentoo.org> libgsasl-1.8.0.ebuild:
+  Stable arm, bug #429170
 
   02 Aug 2012; Anthony G. Basile <blueness@gentoo.org> libgsasl-1.8.0.ebuild:
   Stable ppc ppc64, bug #429170
