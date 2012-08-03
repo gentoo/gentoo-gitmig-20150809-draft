@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pxp/pxp-1.2.3.ebuild,v 1.2 2012/08/03 18:12:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pxp/pxp-1.2.3.ebuild,v 1.3 2012/08/03 22:30:43 aballier Exp $
 
 EAPI="2"
 
@@ -46,5 +46,5 @@ src_install() {
 	fi
 
 	cd doc
-	dodoc ABOUT-FINDLIB DEV README SPEC design.txt
+	dodoc ABOUT-FINDLIB README SPEC design.txt
 }

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/pxp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pxp/ChangeLog,v 1.28 2012/08/03 18:12:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pxp/ChangeLog,v 1.29 2012/08/03 22:30:43 aballier Exp $
+
+  03 Aug 2012; Alexis Ballier <aballier@gentoo.org> pxp-1.2.3.ebuild:
+  dont try to dodoc inexistant file, reported by ago
 
   03 Aug 2012; Agostino Sarubbo <ago@gentoo.org> pxp-1.2.3.ebuild:
   Stable for amd64, wrt bug #428976
