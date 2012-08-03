@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/haskell-updater/haskell-updater-1.2.0.5-r1.ebuild,v 1.1 2012/04/09 18:32:24 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/haskell-updater/haskell-updater-1.2.0.5-r1.ebuild,v 1.2 2012/08/03 11:52:51 hwoarang Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris" # Add keywords as those archs have a binpkg
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris" # Add keywords as those archs have a binpkg
 IUSE=""
 
 DEPEND=">=dev-lang/ghc-6.12.1"
