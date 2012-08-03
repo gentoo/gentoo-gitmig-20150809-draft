@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/gtk2-spell
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-spell/ChangeLog,v 1.27 2012/06/24 12:59:35 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-spell/ChangeLog,v 1.28 2012/08/03 11:00:14 ago Exp $
+
+  03 Aug 2012; Agostino Sarubbo <ago@gentoo.org> gtk2-spell-1.40.0.ebuild:
+  Stable for amd64, wrt bug #418879
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
