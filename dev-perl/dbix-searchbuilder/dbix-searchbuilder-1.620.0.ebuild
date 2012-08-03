@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/dbix-searchbuilder/dbix-searchbuilder-1.620.0.ebuild,v 1.1 2012/03/30 17:37:44 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/dbix-searchbuilder/dbix-searchbuilder-1.620.0.ebuild,v 1.2 2012/08/03 10:59:21 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ inherit perl-module
 DESCRIPTION="Encapsulate SQL queries and rows in simple perl objects"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~ppc ~x86"
 IUSE="test"
 
 RDEPEND="
