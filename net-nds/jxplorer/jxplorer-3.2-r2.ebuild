@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/jxplorer/jxplorer-3.2-r2.ebuild,v 1.2 2012/04/25 06:42:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/jxplorer/jxplorer-3.2-r2.ebuild,v 1.3 2012/08/03 11:31:17 hwoarang Exp $
 
 EAPI="4"
 JAVA_PKG_IUSE="doc source"
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/JXv${PV}src.tar.bz2
 LICENSE="CAOSL"
 IUSE=""
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 RDEPEND=">=virtual/jre-1.4
 	>=dev-java/javahelp-2.0.02_p46
 	>=dev-java/log4j-1.2.8
