@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.369 2012/08/02 15:21:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.370 2012/08/03 21:33:05 steev Exp $
+
+  03 Aug 2012; Steev Klimaszewski <steev@gentoo.org> wireshark-1.8.1-r1.ebuild:
+  Keyword 1.8.1-r1 ~arm. Tested on Efika MX (i.MX51 armv7) and Sabre SD (i.MX6
+  armv7)
 
 *wireshark-1.8.1-r1 (02 Aug 2012)
 *wireshark-1.6.9-r1 (02 Aug 2012)
