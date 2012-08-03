@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/minbif/minbif-1.0.5.ebuild,v 1.1 2012/07/24 17:43:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/minbif/minbif-1.0.5.ebuild,v 1.2 2012/08/03 16:04:25 hwoarang Exp $
 
 EAPI=4
 inherit cmake-utils eutils
@@ -11,7 +11,7 @@ SRC_URI="https://symlink.me/attachments/download/148/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="amd64 ~arm ~x86"
 IUSE="gnutls +imlib +libcaca pam video xinetd"
 REQUIRED_USE="video? ( libcaca )"
 
