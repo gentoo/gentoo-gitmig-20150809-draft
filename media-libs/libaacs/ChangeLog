@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libaacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacs/ChangeLog,v 1.9 2012/08/01 08:18:52 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacs/ChangeLog,v 1.10 2012/08/03 16:38:03 ago Exp $
+
+  03 Aug 2012; Agostino Sarubbo <ago@gentoo.org> libaacs-0.4.0.ebuild:
+  Stable for amd64, wrt bug #422105
 
   01 Aug 2012; Jeff Horelick <jdhore@gentoo.org> libaacs-0.4.0.ebuild:
   marked x86 per bug 422105
