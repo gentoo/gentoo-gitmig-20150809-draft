@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafaxplus/hylafaxplus-5.5.1-r1.ebuild,v 1.1 2012/04/05 19:18:22 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafaxplus/hylafaxplus-5.5.1-r1.ebuild,v 1.2 2012/08/03 15:37:14 hwoarang Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/hylafax/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="hylafaxplus"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="amd64 ~x86"
 
 IUSE="jbig pam mgetty html ldap"
 
