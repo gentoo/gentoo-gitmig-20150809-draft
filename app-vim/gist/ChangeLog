@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/gist
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gist/ChangeLog,v 1.6 2011/11/07 21:09:25 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gist/ChangeLog,v 1.7 2012/08/03 10:27:40 radhermit Exp $
+
+*gist-6.8 (03 Aug 2012)
+
+  03 Aug 2012; Tim Harder <radhermit@gentoo.org> +gist-6.8.ebuild:
+  Version bump (bug #417411).
 
   07 Nov 2011; Tim Harder <radhermit@gentoo.org> -gist-5.0.ebuild,
   -gist-5.1.ebuild:
