@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/stm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/stm/ChangeLog,v 1.13 2012/03/18 15:02:29 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/stm/ChangeLog,v 1.14 2012/08/03 13:18:26 hwoarang Exp $
+
+  03 Aug 2012; Markos Chandras <hwoarang@gentoo.org> stm-2.3.ebuild:
+  Stable on amd64 wrt bug #418701
 
   18 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org> stm-2.3.ebuild:
   ~ia64 keyworded
@@ -51,4 +54,3 @@
   20 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> +metadata.xml,
   +stm-2.1.1.0.ebuild:
   Initial version. Was previously a core library, now independent of ghc.
-
