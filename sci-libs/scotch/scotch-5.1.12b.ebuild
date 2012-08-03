@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scotch/scotch-5.1.12b.ebuild,v 1.1 2012/03/14 07:11:17 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scotch/scotch-5.1.12b.ebuild,v 1.2 2012/08/03 14:54:44 jlec Exp $
 
 EAPI=4
 
-inherit eutils toolchain-funcs versionator flag-o-matic
+inherit eutils toolchain-funcs versionator flag-o-matic multilib
 
 # use esmumps version to allow linking with mumps
 MYP="${PN}_${PV}_esmumps"
@@ -53,8 +53,9 @@ make_shared_lib() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-as-needed.patch
-	sed -e "s/-O3/${CFLAGS}/" \
+	sed \
 		-e "s/gcc/$(tc-getCC)/" \
+		-e "s/-O3/${CFLAGS}/" \
 		-e "s/ ar/ $(tc-getAR)/" \
 		-e "s/ranlib/$(tc-getRANLIB)/" \
 		src/Make.inc/Makefile.inc.i686_pc_linux2 > src/Makefile.inc || die

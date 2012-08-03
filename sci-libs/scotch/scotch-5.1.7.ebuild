@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scotch/scotch-5.1.7.ebuild,v 1.2 2011/06/26 10:08:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scotch/scotch-5.1.7.ebuild,v 1.3 2012/08/03 14:54:44 jlec Exp $
 
 EAPI=3
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="Software for graph, mesh and hypergraph partitioning"
 HOMEPAGE="http://www.labri.u-bordeaux.fr/perso/pelegrin/scotch/"
