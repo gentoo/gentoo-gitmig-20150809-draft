@@ -1,10 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kshutdown/kshutdown-2.0.ebuild,v 1.1 2011/06/17 22:32:13 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kshutdown/kshutdown-2.0.ebuild,v 1.2 2012/08/03 08:45:14 johu Exp $
 
 EAPI=4
 
-KDE_LINGUAS="ar bg cs da de el es fr hu it nb nl pl pt_BR ru sk sr@ijekavian sr@ijekavianlatin sr@latin sr sv tr zh_CN"
+KDE_LINGUAS="ar bg cs da de el es fr hu it nb nl pl pt_BR ru sk sr@ijekavian
+sr@ijekavianlatin sr@latin sr sv tr zh_CN"
 inherit kde4-base
 
 MY_P=${PN}-source-${PV/_}
