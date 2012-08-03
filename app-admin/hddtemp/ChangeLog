@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.117 2012/07/31 10:53:36 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.118 2012/08/03 07:44:02 aidecoe Exp $
+
+  03 Aug 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> files/hddgentoo.db:
+  Added ST9250315AS to hddgentoo.db.
 
   31 Jul 2012; Amadeusz Żołnowski <aidecoe@gentoo.org>
   +hddtemp-0.3_beta15-r4.ebuild:
