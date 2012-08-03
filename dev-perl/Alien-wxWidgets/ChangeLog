@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Alien-wxWidgets
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-wxWidgets/ChangeLog,v 1.42 2012/06/24 12:59:07 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-wxWidgets/ChangeLog,v 1.43 2012/08/03 11:02:26 ago Exp $
+
+  03 Aug 2012; Agostino Sarubbo <ago@gentoo.org>
+  Alien-wxWidgets-0.590.0.ebuild:
+  Stable for amd64, wrt bug #419197
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
