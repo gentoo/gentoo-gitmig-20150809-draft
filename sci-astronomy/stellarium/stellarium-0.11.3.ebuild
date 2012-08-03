@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.11.3.ebuild,v 1.5 2012/07/10 19:01:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.11.3.ebuild,v 1.6 2012/08/03 07:46:49 mr_bones_ Exp $
 
 EAPI=4
 CMAKE_MIN_VERSION="2.4.7"
@@ -51,6 +51,7 @@ done
 src_prepare() {
 	sed -e "/af ar az/d" -e "/GETTEXT_CREATE_TRANSLATIONS/a \ ${LINGUAS}" \
 		-i po/stellarium{,-skycultures}/CMakeLists.txt || die #403647
+	epatch "${FILESDIR}"/${P}-desktop.patch
 	use debug || append-cppflags -DQT_NO_DEBUG #415769
 }
 
@@ -72,5 +73,4 @@ src_install() {
 		doins "${DISTDIR}"/stars_[45678]_[12]v0_0*.cat
 	fi
 	newicon doc/images/stellarium-logo.png ${PN}.png
-	make_desktop_entry ${PN} Stellarium ${PN} "Education;Science;Astronomy"
 }
