@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/python-mode/python-mode-0.6.4.ebuild,v 1.1 2012/05/25 10:42:32 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/python-mode/python-mode-0.6.6.ebuild,v 1.1 2012/08/03 08:20:02 xarthisius Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ IUSE=""
 DEPEND=""
 RDEPEND="
 	dev-python/astng
-	dev-python/pep8
+	dev-python/autopep8
 	dev-python/pyflakes
 	dev-python/pylint
 	dev-python/rope
@@ -29,10 +29,12 @@ RDEPEND="
 	"
 
 src_prepare() {
-	rm -rf pylibs/{logilab,pep8.py,pyflakes,pylint,rope,ropemode} .gitignore
+	rm -rf pylibs/{logilab,*pep8.py,pyflakes,pylint,rope,ropemode} .gitignore
 	mv pylint.ini "${T}" || die
 	sed -e "s|expand(\"<sfile>:p:h:h\")|\"${EPREFIX}/usr/share/${PN}\"|" \
 		-i plugin/pymode.vim || die # use custom path
+	sed -e "s/pylibs.autopep8/autopep8/g" -i pylibs/pymode/auto.py || die
+	sed -e "s/pylibs.ropemode/ropemode/g" -i pylibs/ropevim.py || die
 }
 
 src_install() {
