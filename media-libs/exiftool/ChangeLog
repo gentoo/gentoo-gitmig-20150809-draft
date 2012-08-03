@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/exiftool
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/exiftool/ChangeLog,v 1.111 2012/04/29 10:51:38 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/exiftool/ChangeLog,v 1.112 2012/08/03 11:56:18 hwoarang Exp $
+
+  03 Aug 2012; Markos Chandras <hwoarang@gentoo.org> exiftool-8.900.0.ebuild:
+  Stable on amd64 wrt bug #419075
 
 *exiftool-8.900.0 (29 Apr 2012)
 
@@ -435,4 +438,3 @@
   +exiftool-6.13.ebuild:
   Initial import. This is a graphics package, but it includes some perl dark
   magic so belongs to both herds.
-
