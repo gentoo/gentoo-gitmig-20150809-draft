@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/habak
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/habak/ChangeLog,v 1.43 2011/05/17 11:33:01 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/habak/ChangeLog,v 1.44 2012/08/03 06:22:33 xmw Exp $
+
+  03 Aug 2012; Michael Weber <xmw@gentoo.org> habak-0.2.5-r1.ebuild:
+  Fix HOMEPAGE (bug 414339, thanks df)
 
   17 May 2011; Kacper Kowalik <xarthisius@gentoo.org> habak-0.2.5-r1.ebuild:
   Fix underlinking wrt #367711. Thanks to Diego Elio Pettenò
@@ -156,4 +159,3 @@
   Initial import, based on ebuild contributed by 
   lucass <at> gentoo.pl in #37043, lucass also provided an
   english translation of the documentation.
-
