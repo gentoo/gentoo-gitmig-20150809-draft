@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hwinfo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/ChangeLog,v 1.27 2012/04/14 08:01:46 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/ChangeLog,v 1.28 2012/08/03 15:56:44 ago Exp $
+
+  03 Aug 2012; Agostino Sarubbo <ago@gentoo.org> hwinfo-19.1.ebuild:
+  Stable for amd64, wrt bug #422173
 
   14 Apr 2012; Zac Medico <zmedico@gentoo.org> hwinfo-19.1.ebuild:
   Add ~amd64-linux keyword.
