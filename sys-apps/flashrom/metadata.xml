@@ -28,6 +28,7 @@
 		<flag name="nicnatsemi">Support for National Semiconductor NICs</flag>
 		<flag name="nicrealtek">Support for Realtek NICs</flag>
 		<flag name="ogp_spi">Enable support for OGP (Open Graphics Project) SPI flashing</flag>
+		<flag name="pony_spi">Enable support for SI-Prog like hardware by Lancos</flag>
 		<flag name="rayer_spi">RayeR SPIPGM hardware support</flag>
 		<flag name="satasii">Enable programmer for SiI SATA controllers</flag>
 		<flag name="satamv">Enable programmer for Marvell SATA controllers</flag>
