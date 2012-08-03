@@ -1,14 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/nlopt-2.3.ebuild,v 1.1 2012/08/03 00:00:28 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/nlopt-2.3-r1.ebuild,v 1.1 2012/08/03 17:43:29 bicatali Exp $
 
 EAPI=4
 
 SUPPORT_PYTHON_ABIS="1"
 PYTHON_DEPEND="python? *"
 RESTRICT_PYTHON_ABIS="3.* 2.7-pypy-* *-jython"
+AUTOTOOLS_AUTORECONF=1
 
-inherit python autotools-utils
+inherit  autotools-utils python
 
 DESCRIPTION="Non-linear optimization library"
 HOMEPAGE="http://ab-initio.mit.edu/nlopt/"
@@ -25,17 +26,21 @@ DEPEND="
 	python? ( dev-python/numpy )"
 RDEPEND="${DEPEND}"
 
-AUTOTOOLS_IN_SOURCE_BUILD=1
+PATCHES=(
+		"${FILESDIR}"/${PN}-2.2.4-fix-nlopt_hpp-location.patch
+		"${FILESDIR}"/${PN}-2.3-pkgconfig.patch
+		"${FILESDIR}"/${PN}-2.3-as-needed.patch
+)
 
 src_prepare() {
+	autotools-utils_src_prepare
 	if use python; then
 		sed -i \
 			-e '/^LTLIBRARIES/s:$(pyexec_LTLIBRARIES)::g' \
 			swig/Makefile.in || die
 		echo '#!/bin/sh' > py-compile
 	fi
-	epatch "${FILESDIR}"/${PN}-2.2.4-fix-nlopt_hpp-location.patch
-	eautoreconf
+	use python && python_src_prepare
 }
 
 src_configure() {
@@ -45,12 +50,11 @@ src_configure() {
 	else
 		export MKOCTFILE=None
 	fi
-	myeconfargs+=(
+	local myeconfargs=(
 		$(use_with cxx)
 		$(use_with guile)
 		$(use_with octave)
 		$(use_with python)
-		--without-matlab
 	)
 	autotools-utils_src_configure
 }
@@ -73,10 +77,21 @@ src_compile() {
 	fi
 }
 
+src_test() {
+	cd "${AUTOTOOLS_BUILD_DIR}"/test
+	local a f
+	for a in {1..9}; do
+		for f in {5..9}; do
+			./testopt -a $a -o $f || die "algorithm $a function $f failed"
+		done
+	done
+}
+
 src_install() {
 	autotools-utils_src_install
 	if use python; then
 		installation() {
+			cd "${AUTOTOOLS_BUILD_DIR}"
 			rm *.la
 			emake DESTDIR=${D} install \
 				pyexecdir="${EPREFIX}$(python_get_sitedir)" \
