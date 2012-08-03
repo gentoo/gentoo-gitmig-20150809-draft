@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/arrows/arrows-0.4.4.0.ebuild,v 1.2 2012/06/02 05:20:51 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/arrows/arrows-0.4.4.0.ebuild,v 1.3 2012/08/03 12:51:56 hwoarang Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND="dev-haskell/stream[profile?]
