@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/cabal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/ChangeLog,v 1.73 2012/05/02 20:41:21 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/ChangeLog,v 1.74 2012/08/03 13:01:12 hwoarang Exp $
+
+  03 Aug 2012; Markos Chandras <hwoarang@gentoo.org> cabal-1.14.0.ebuild:
+  Stable on amd64 wrt bug #418685
 
   02 May 2012; Jeff Horelick <jdhore@gentoo.org> cabal-1.10.2.0.ebuild,
   cabal-1.14.0.ebuild, cabal-1.8.0.6-r1.ebuild:
@@ -286,4 +289,3 @@
   26 Feb 2005; Andres Loeh <kosmikus@gentoo.org> +metadata.xml,
   +cabal-0.5.ebuild:
   Initial import.
-
