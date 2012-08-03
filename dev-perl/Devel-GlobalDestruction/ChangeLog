@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Devel-GlobalDestruction
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-GlobalDestruction/ChangeLog,v 1.16 2012/07/27 19:10:01 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-GlobalDestruction/ChangeLog,v 1.17 2012/08/03 11:08:12 ago Exp $
+
+  03 Aug 2012; Agostino Sarubbo <ago@gentoo.org>
+  Devel-GlobalDestruction-0.50.0.ebuild:
+  Stable for amd64, wrt bug #418805
 
 *Devel-GlobalDestruction-0.70.0 (27 Jul 2012)
 
