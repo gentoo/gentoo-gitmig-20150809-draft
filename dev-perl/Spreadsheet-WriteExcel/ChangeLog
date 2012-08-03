@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Spreadsheet-WriteExcel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spreadsheet-WriteExcel/ChangeLog,v 1.62 2012/07/29 21:59:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spreadsheet-WriteExcel/ChangeLog,v 1.63 2012/08/03 04:44:52 maekke Exp $
+
+  03 Aug 2012; Markus Meier <maekke@gentoo.org>
+  Spreadsheet-WriteExcel-2.370.0.ebuild:
+  add ~arm, bug #428248
 
   29 Jul 2012; Jeroen Roovers <jer@gentoo.org>
   Spreadsheet-WriteExcel-2.370.0.ebuild:
