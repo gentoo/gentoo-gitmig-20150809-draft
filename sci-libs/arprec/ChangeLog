@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/arprec
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/arprec/ChangeLog,v 1.10 2012/04/18 23:25:59 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arprec/ChangeLog,v 1.11 2012/08/03 16:47:24 bicatali Exp $
+
+  03 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> -arprec-2.2.10.ebuild,
+  -arprec-2.2.9.ebuild, -files/arprec-2.2.9-autotools.patch,
+  arprec-2.2.13.ebuild:
+  Removed old, keyword amd64-linux, x86-linux
 
 *arprec-2.2.13 (18 Apr 2012)
 
@@ -53,4 +58,3 @@
   14 Apr 2009; Andrey Grozin <grozin@gentoo.org> +metadata.xml,
   +arprec-2.2.2.ebuild:
   Initial import
-

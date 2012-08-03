@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/qd/qd-2.3.13.ebuild,v 1.2 2012/06/25 16:53:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/qd/qd-2.3.13.ebuild,v 1.3 2012/08/03 16:43:50 bicatali Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://crd.lbl.gov/~dhbailey/mpdist/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc fortran static-libs"
 
 DEPEND="fortran? ( virtual/fortran )"
@@ -28,10 +28,8 @@ PATCHES=( "${FILESDIR}"/${P}-autotools.patch )
 
 src_configure() {
 	local myeconfargs=(
-		--docdir="${EPREFIX}/usr/share/doc/${PF}"
-		--enable-shared
 		$(use_enable fortran enable_fortran)
-		)
+	)
 	autotools-utils_src_configure
 }
 

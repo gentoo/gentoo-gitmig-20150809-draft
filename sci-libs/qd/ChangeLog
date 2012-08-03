@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/qd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/qd/ChangeLog,v 1.12 2012/06/25 16:53:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/qd/ChangeLog,v 1.13 2012/08/03 16:43:50 bicatali Exp $
+
+  03 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/qd-2.3.11-configure-version.patch, -files/qd-2.3.11-docpath.patch,
+  -files/qd-2.3.12-autotools.patch, -files/qd-2.3.7-test.patch,
+  -qd-2.3.11.ebuild, -qd-2.3.12.ebuild, -qd-2.3.9.ebuild, qd-2.3.13.ebuild:
+  Removed old, keyword amd64-linux, x86-linux
 
   25 Jun 2012; Justin Lecher <jlec@gentoo.org> qd-2.3.12.ebuild,
   files/qd-2.3.12-autotools.patch, qd-2.3.13.ebuild,
@@ -57,4 +63,3 @@
   14 Apr 2009; Andrey Grozin <grozin@gentoo.org> +files/qd-2.3.7-test.patch,
   +metadata.xml, +qd-2.3.7.ebuild:
   Initial import
-
