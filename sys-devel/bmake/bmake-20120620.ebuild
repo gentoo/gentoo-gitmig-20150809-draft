@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bmake/bmake-20120620.ebuild,v 1.2 2012/08/03 03:12:12 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bmake/bmake-20120620.ebuild,v 1.3 2012/08/03 03:19:42 ryao Exp $
 
 EAPI=3
 
@@ -25,7 +25,7 @@ S="${WORKDIR}/${PN}"
 src_configure() {
 	econf \
 		--with-mksrc=../mk \
-		--with-default-sys-path=/usr/share/mk/${PN} \
+		--with-default-sys-path=${EPREFIX}/usr/share/mk/${PN} \
 		--with-machine_arch=${ARCH}
 }
 
