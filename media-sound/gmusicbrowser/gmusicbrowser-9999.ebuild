@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmusicbrowser/gmusicbrowser-9999.ebuild,v 1.3 2012/06/05 12:55:04 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmusicbrowser/gmusicbrowser-9999.ebuild,v 1.4 2012/08/03 08:51:49 hasufell Exp $
 
 EAPI=4
 
-inherit fdo-mime git-2
+inherit fdo-mime git-2 gnome2-utils
 
 DESCRIPTION="An open-source jukebox for large collections of mp3/ogg/flac files"
 HOMEPAGE="http://gmusicbrowser.org/"
@@ -46,30 +46,31 @@ done
 unset l
 
 src_prepare() {
-	sed -i -e '/menudir/d' Makefile || die
+	sed -i \
+		-e '/menudir/d' \
+		-e '/^LINGUAS=/d' \
+		Makefile || die
 }
 
 src_install() {
-	local LINGUAS
-	local l
-	for l in ${LANGS}; do
-		if use linguas_${l}; then
-			LINGUAS="${LINGUAS} ${l}"
-		fi
-	done
-
 	emake \
 		DOCS="AUTHORS NEWS README" \
 		DESTDIR="${D}" \
-		iconsdir="${D}/usr/share/pixmaps" \
-		LINGUAS="${LINGUAS}" \
+		iconsdir="${D}/usr/share/icons/hicolor/32x32/apps" \
+		liconsdir="${D}/usr/share/icons/hicolor/48x48/apps" \
+		miconsdir="${D}/usr/share/pixmaps" \
 		install
 
 	dohtml layout_doc.html
 }
 
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
 pkg_postinst() {
 	fdo-mime_desktop_database_update
+	gnome2_icon_cache_update
 
 	elog "Gmusicbrowser supports gstreamer, mplayer and mpg123/ogg123..."
 	elog "for audio playback. Needed dependencies:"
@@ -88,4 +89,5 @@ pkg_postinst() {
 
 pkg_postrm() {
 	fdo-mime_desktop_database_update
+	gnome2_icon_cache_update
 }
