@@ -1,0 +1,9 @@
+# ChangeLog for media-fonts/source-sans-pro
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/source-sans-pro/ChangeLog,v 1.1 2012/08/03 00:03:46 nirbheek Exp $
+
+*source-sans-pro-2012.07.31 (03 Aug 2012)
+
+  03 Aug 2012; Nirbheek Chauhan <nirbheek@gentoo.org> +metadata.xml,
+  +source-sans-pro-2012.07.31.ebuild:
+  Add an ebuild for Adobe's Source Sans Pro, their first open source font family
