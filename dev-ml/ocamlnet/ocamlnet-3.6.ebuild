@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ocamlnet-3.6.ebuild,v 1.1 2012/07/25 08:55:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ocamlnet-3.6.ebuild,v 1.2 2012/08/03 22:38:04 aballier Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ DESCRIPTION="Modules for OCaml application-level Internet protocols"
 HOMEPAGE="http://projects.camlcity.org/projects/ocamlnet.html"
 SRC_URI="http://download.camlcity.org/download/${MY_P}.tar.gz"
 
-LICENSE="as-is GPL-2"
+LICENSE="ZLIB GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="cryptokit gtk ssl tk httpd +ocamlopt +pcre zip"
