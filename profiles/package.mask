@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14027 2012/08/02 22:38:50 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14028 2012/08/03 11:58:44 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -755,12 +755,6 @@ media-libs/shivavg
 # doesn't compile against latest media-libs/spandsp.
 # not needed anymore for Asterisk 1.6.
 net-misc/asterisk-spandsp_codec_g726
-
-# Jeroen Roovers <jer@gentoo.org> (13 Jul 2010)
-# The ebuild still needs work, but if you can help testing
-# it, then please unmask (bug #317325)
-=net-analyzer/net-snmp-5.5*
-=net-analyzer/net-snmp-5.6*
 
 # Doug Goldstein <cardoe@gentoo.org> (07 Jul 2010)
 # No actual Gentoo support yet. If you're interested, please see bug #295993
