@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pxp/pxp-1.2.3.ebuild,v 1.3 2012/08/03 22:30:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pxp/pxp-1.2.3.ebuild,v 1.4 2012/08/03 22:33:17 aballier Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ DESCRIPTION="validating XML parser library for O'Caml"
 HOMEPAGE="http://projects.camlcity.org/projects/pxp.html"
 SRC_URI="http://download.camlcity.org/download/${MY_P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="MIT"
 KEYWORDS="amd64 ~ppc ~x86"
 
 SLOT="0"
