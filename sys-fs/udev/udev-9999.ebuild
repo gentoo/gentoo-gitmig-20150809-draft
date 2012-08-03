@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.101 2012/08/03 00:57:06 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.102 2012/08/03 21:29:16 williamh Exp $
 
 EAPI=4
 
@@ -380,6 +380,17 @@ pkg_postinst()
 	ewarn "The udev-acl functionality has been removed from standalone udev."
 	ewarn "If you are using standalone udev, consolekithandles this"
 	ewarn "functionality."
+
+	if [ -d ${ROOT}/lib/udev ]
+	then
+		ewarn
+		ewarn "This version of udev moves the files that were installed in"
+		ewarn "/lib/udev to /usr/lib/udev."
+		ewarn "We include a backward compatibility patch for gentoo to"
+		ewarn "allow the rules in /lib/udev/rules.d to be read. However,"
+		ewarn "bugs should be filed against packages that are installing"
+	ewarn "files in /lib/udev so they can be fixed."
+	fi
 
 	ewarn
 	ewarn "You need to restart udev as soon as possible to make the upgrade go"

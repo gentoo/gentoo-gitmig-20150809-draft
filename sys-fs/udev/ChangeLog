@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.703 2012/08/03 00:57:06 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.704 2012/08/03 21:29:16 williamh Exp $
+
+  03 Aug 2012; William Hubbs <williamh@gentoo.org> udev-187-r1.ebuild,
+  udev-9999.ebuild:
+  Add a warning for bug #429466 wrt the /lib/udev->/usr/lib/udev migration.
 
 *udev-187-r1 (03 Aug 2012)
 
