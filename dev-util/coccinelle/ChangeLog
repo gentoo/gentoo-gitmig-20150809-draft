@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/coccinelle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/ChangeLog,v 1.21 2012/08/01 07:15:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/ChangeLog,v 1.22 2012/08/03 00:24:52 radhermit Exp $
+
+  03 Aug 2012; Tim Harder <radhermit@gentoo.org> coccinelle-1.0.0_rc14.ebuild,
+  +files/coccinelle-1.0.0_rc14-findtool.patch:
+  Fix configure method of looking for external tools (bug #429556).
 
   01 Aug 2012; Tim Harder <radhermit@gentoo.org> -coccinelle-1.0.0_rc11.ebuild,
   -files/coccinelle-1.0.0_rc7-parallel-make.patch:

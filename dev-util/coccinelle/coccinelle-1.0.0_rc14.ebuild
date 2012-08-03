@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/coccinelle-1.0.0_rc14.ebuild,v 1.1 2012/08/01 07:12:04 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/coccinelle-1.0.0_rc14.ebuild,v 1.2 2012/08/03 00:24:52 radhermit Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
 
-inherit multilib eutils python bash-completion-r1 elisp-common
+inherit multilib eutils python bash-completion-r1 elisp-common autotools
 
 MY_P="${P/_/-}"
 DESCRIPTION="Program matching and transformation engine"
@@ -59,6 +59,10 @@ src_prepare() {
 		sed -i -e "/export PYTHONPATH/s:\$COCCINELLE_HOME/python:$(python_get_sitedir):" \
 			scripts/spatch.sh.in || die
 	fi
+
+	epatch "${FILESDIR}"/${P}-findtool.patch
+	cp Makefile Makefile.orig || die
+	eautoreconf
 }
 
 src_configure() {
@@ -71,6 +75,8 @@ src_configure() {
 	sed -i -e "s:^LIBDIR=.*:LIBDIR=/usr/$(get_libdir)/ocaml/stublibs/:" \
 		-e "s:^SHAREDIR=.*:SHAREDIR=/usr/$(get_libdir)/ocaml/${PN}/:" \
 		Makefile.config || die
+
+	cp Makefile.orig Makefile || die
 }
 
 src_compile() {
