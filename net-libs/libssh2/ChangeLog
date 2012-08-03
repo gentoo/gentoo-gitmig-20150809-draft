@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libssh2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/ChangeLog,v 1.67 2012/08/03 13:09:37 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/ChangeLog,v 1.68 2012/08/03 15:24:07 hwoarang Exp $
+
+  03 Aug 2012; Markos Chandras <hwoarang@gentoo.org> libssh2-1.4.2.ebuild:
+  Stable on amd64 wrt bug #422139
 
   03 Aug 2012; Anthony G. Basile <blueness@gentoo.org> libssh2-1.4.2.ebuild:
   Stable ppc ppc64, bug #422139
@@ -254,4 +257,3 @@
   +files/libssh2-0.14-peer-shutdown.patch, +metadata.xml,
   +libssh2-0.14.ebuild:
   Import from sunrise for bug 113844 thanks to Joe and cedk
-
