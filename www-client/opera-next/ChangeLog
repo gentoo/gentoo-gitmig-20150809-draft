@@ -1,6 +1,11 @@
 # ChangeLog for www-client/opera-next
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.113 2012/07/31 22:27:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.114 2012/08/03 18:21:33 jer Exp $
+
+*opera-next-12.50.1538 (03 Aug 2012)
+
+  03 Aug 2012; Jeroen Roovers <jer@gentoo.org> +opera-next-12.50.1538.ebuild:
+  http://my.opera.com/desktopteam/blog/2012/08/03/summer-core-update
 
   31 Jul 2012; Jeroen Roovers <jer@gentoo.org> -opera-next-12.00.1467.ebuild,
   -opera-next-12.01.1486.ebuild, -opera-next-12.01.1491.ebuild,
