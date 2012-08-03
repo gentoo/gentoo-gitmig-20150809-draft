@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DBD-Pg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.116 2012/08/02 06:43:42 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.117 2012/08/03 11:06:59 ago Exp $
+
+  03 Aug 2012; Agostino Sarubbo <ago@gentoo.org> DBD-Pg-2.19.2.ebuild:
+  Stable for amd64, wrt bug #418799
 
   02 Aug 2012; Jeff Horelick <jdhore@gentoo.org> DBD-Pg-2.19.2.ebuild:
   marked x86 per bug 418799
