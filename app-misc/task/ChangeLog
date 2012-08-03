@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/task
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/task/ChangeLog,v 1.33 2012/08/01 06:55:57 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/task/ChangeLog,v 1.34 2012/08/03 08:20:24 hwoarang Exp $
+
+  03 Aug 2012; Markos Chandras <hwoarang@gentoo.org> task-2.0.0-r1.ebuild:
+  Stable on amd64 wrt bug #418615
 
 *task-2.1.1 (01 Aug 2012)
 
@@ -156,4 +159,3 @@
   03 Oct 2010; Tim Harder <radhermit@gentoo.org> +task-1.9.2.ebuild,
   +metadata.xml:
   New package for bug #317867.
-
