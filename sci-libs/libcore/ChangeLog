@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libcore
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libcore/ChangeLog,v 1.8 2011/08/08 18:51:41 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libcore/ChangeLog,v 1.9 2012/08/03 19:34:54 bicatali Exp $
+
+  03 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> libcore-2.1.1-r1.ebuild:
+  Keyword amd64-linux x86-linux
 
 *libcore-2.1.1-r1 (08 Aug 2011)
 
@@ -44,4 +47,3 @@
   12 Oct 2006; <djay@gentoo.org> +files/core-1.7.patch, +metadata.xml,
   +core-1.7.ebuild:
   Initial Import
-

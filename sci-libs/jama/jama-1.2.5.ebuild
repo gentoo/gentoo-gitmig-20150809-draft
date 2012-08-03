@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/jama/jama-1.2.5.ebuild,v 1.1 2010/02/25 06:03:43 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/jama/jama-1.2.5.ebuild,v 1.2 2012/08/03 19:28:50 bicatali Exp $
 
 inherit versionator
 
@@ -14,7 +14,7 @@ SRC_URI="http://math.nist.gov/tnt/${MYP}.zip
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 
 IUSE="doc"
 

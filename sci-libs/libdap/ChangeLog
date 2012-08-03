@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/libdap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libdap/ChangeLog,v 1.14 2012/07/08 17:58:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libdap/ChangeLog,v 1.15 2012/08/03 19:37:27 bicatali Exp $
+
+  03 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> libdap-3.11.3.ebuild,
+  metadata.xml:
+  Keyword amd64-linux x86-linux
 
   08 Jul 2012; Justin Lecher <jlec@gentoo.org> libdap-3.11.3.ebuild,
   +files/libdap-3.11.3-gcc-4.7.patch, metadata.xml:
@@ -67,4 +71,3 @@
   19 Apr 2009; Steve Arnold <nerdboy@gentoo.org> +metadata.xml,
   +libdap-3.9.2.ebuild:
   New ebuild for OPeNDAP C++ library, a required dependency for ferret.
-

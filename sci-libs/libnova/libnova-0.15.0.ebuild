@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libnova/libnova-0.15.0.ebuild,v 1.2 2012/07/24 18:00:28 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libnova/libnova-0.15.0.ebuild,v 1.3 2012/08/03 19:30:14 bicatali Exp $
 
 EAPI=4
 inherit eutils autotools
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples static-libs"
 
 DEPEND="doc? ( app-doc/doxygen )"

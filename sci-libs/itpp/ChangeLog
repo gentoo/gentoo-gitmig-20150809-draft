@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/itpp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.115 2012/07/17 08:11:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.116 2012/08/03 19:24:33 bicatali Exp $
+
+  03 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> itpp-4.2-r2.ebuild:
+  Keyword amd64-linux x86-linux
 
   17 Jul 2012; Justin Lecher <jlec@gentoo.org> itpp-4.2-r1.ebuild,
   itpp-4.2-r2.ebuild, +files/itpp-4.2-pkg-config.patch:
@@ -471,4 +474,3 @@
   +itpp-3.9.1.ebuild:
   Initial import (fixes bug #120163). Many thanks to Adam Piątyszek
   <ediap@et.put.poznan.pl> for his ebuild.
-
