@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IO-Pager
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Pager/ChangeLog,v 1.24 2012/07/31 18:23:26 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Pager/ChangeLog,v 1.25 2012/08/03 10:47:58 ago Exp $
+
+  03 Aug 2012; Agostino Sarubbo <ago@gentoo.org> IO-Pager-0.240.0.ebuild:
+  Stable for amd64, wrt bug #418817
 
   31 Jul 2012; Johannes Huber <johu@gentoo.org> IO-Pager-0.240.0.ebuild:
   Stable for x86, wrt bug #418817
