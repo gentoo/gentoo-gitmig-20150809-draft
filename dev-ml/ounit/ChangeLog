@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ounit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ounit/ChangeLog,v 1.32 2012/08/02 15:02:15 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ounit/ChangeLog,v 1.33 2012/08/03 18:18:23 ago Exp $
+
+  03 Aug 2012; Agostino Sarubbo <ago@gentoo.org> ounit-1.1.2.ebuild:
+  Stable for amd64, wrt bug #428974
 
   02 Aug 2012; Anthony G. Basile <blueness@gentoo.org> ounit-1.1.2.ebuild:
   Stable ppc, bug #428974
