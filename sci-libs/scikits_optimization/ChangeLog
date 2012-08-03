@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/scikits_optimization
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_optimization/ChangeLog,v 1.2 2012/02/26 04:29:49 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_optimization/ChangeLog,v 1.3 2012/08/03 22:43:52 bicatali Exp $
+
+  03 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  scikits_optimization-0.1.ebuild:
+  keyword amd64-linux x86-linux
 
   26 Feb 2012; Patrick Lauer <patrick@gentoo.org>
   scikits_optimization-0.1.ebuild:
@@ -23,4 +27,3 @@
   26 Mar 2010; Sébastien Fabbro <bicatali@gentoo.org>
   +scikits_optimization-0.1.ebuild, +metadata.xml:
   Initial import
-
