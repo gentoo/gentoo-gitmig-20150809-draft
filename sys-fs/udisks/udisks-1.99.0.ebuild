@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.99.0.ebuild,v 1.3 2012/08/02 22:00:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.99.0.ebuild,v 1.4 2012/08/03 08:32:35 ssuominen Exp $
 
 EAPI=4
-inherit eutils bash-completion-r1 linux-info systemd
+inherit eutils bash-completion-r1 linux-info systemd toolchain-funcs
 
 DESCRIPTION="Daemon providing interfaces to work with storage devices"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/udisks"
@@ -54,6 +54,7 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.x-ntfs-3g.patch
 	use systemd || { sed -i -e 's:libsystemd-login:&use_USE_systemd:' configure || die; }
+	[[ $(gcc-version) < 4.6 ]] && epatch "${FILESDIR}"/${PN}-2.x-pragma.patch
 }
 
 src_configure() {
