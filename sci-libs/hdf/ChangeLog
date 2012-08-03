@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/hdf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/ChangeLog,v 1.25 2012/04/13 02:19:32 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/ChangeLog,v 1.26 2012/08/03 19:12:55 bicatali Exp $
+
+  03 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> hdf-4.2.7_p1.ebuild:
+  Keyword amd64-linux x86-linux
 
 *hdf-4.2.7_p1 (13 Apr 2012)
 
@@ -136,4 +139,3 @@
 
   17 Dec 2003; Patrick Kursawe <phosphan@gentoo.org> hdf-4.2.0.ebuild:
   Initial import. Let's see if it can work with external netCDF.
-

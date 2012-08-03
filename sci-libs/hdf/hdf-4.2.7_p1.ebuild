@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/hdf-4.2.7_p1.ebuild,v 1.1 2012/04/13 02:19:32 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/hdf-4.2.7_p1.ebuild,v 1.2 2012/08/03 19:12:55 bicatali Exp $
 
 EAPI=4
 inherit eutils fortran-2 toolchain-funcs autotools flag-o-matic
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.hdfgroup.org/hdf4.html"
 SRC_URI="http://www.hdfgroup.org/ftp/HDF/HDF_Current/src/${MYP}.tar.bz2"
 
 LICENSE="NCSA-HDF"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 SLOT="0"
 IUSE="fortran szip static-libs"
 
