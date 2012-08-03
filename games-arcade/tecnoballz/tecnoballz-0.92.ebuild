@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tecnoballz/tecnoballz-0.92.ebuild,v 1.7 2012/01/20 17:36:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tecnoballz/tecnoballz-0.92.ebuild,v 1.8 2012/08/03 16:09:38 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils autotools games
@@ -24,9 +24,8 @@ src_prepare() {
 		"${FILESDIR}"/${P}-automake.patch
 	mv man/${PN}.fr.6 man/fr/${PN}.6 || die
 	# don't combine explicit and implicit rules for make 3.82 (bug #334629)
-	sed -i \
-		-e '/supervisor.c /s/.c /.cc /' \
-		src/Makefile.am || die
+	sed -i -e '/supervisor.c /s/.c /.cc /' src/Makefile.am || die
+	sed -i -e '/^CXXFLAGS=/d' configure.ac || die
 	eautoreconf
 }
 
