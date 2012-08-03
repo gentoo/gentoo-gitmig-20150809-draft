@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Log/PEAR-Log-1.12.7-r1.ebuild,v 1.1 2012/02/09 11:26:11 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Log/PEAR-Log-1.12.7-r1.ebuild,v 1.2 2012/08/03 13:55:09 ago Exp $
 
 EAPI="4"
 inherit php-pear-r1
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 
 DESCRIPTION="The Log framework provides an abstracted logging system.@"
 LICENSE="PHP-3.01"
