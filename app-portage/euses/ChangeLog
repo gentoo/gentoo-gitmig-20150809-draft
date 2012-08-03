@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/euses
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/euses/ChangeLog,v 1.58 2012/07/02 03:26:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/euses/ChangeLog,v 1.59 2012/08/03 06:17:29 jdhore Exp $
+
+  03 Aug 2012; Jeff Horelick <jdhore@gentoo.org> euses-2.5.8.ebuild:
+  marked x86 per bug 429532
 
 *euses-2.5.8 (02 Jul 2012)
 
