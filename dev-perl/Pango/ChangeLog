@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Pango
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pango/ChangeLog,v 1.27 2012/06/24 12:58:37 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pango/ChangeLog,v 1.28 2012/08/03 10:53:31 ago Exp $
+
+  03 Aug 2012; Agostino Sarubbo <ago@gentoo.org> Pango-1.223.0.ebuild:
+  Stable for amd64, wrt bug #418839
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
