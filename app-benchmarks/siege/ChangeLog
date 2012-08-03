@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/siege
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/ChangeLog,v 1.53 2012/08/02 21:09:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/ChangeLog,v 1.54 2012/08/03 21:12:14 nativemad Exp $
+
+  03 Aug 2012; Andreas Schuerch <nativemad@gentoo.org> siege-2.72.ebuild:
+  x86 stable, see bug 418517
 
   02 Aug 2012; Markos Chandras <hwoarang@gentoo.org> siege-2.72.ebuild:
   Stable on amd64 wrt bug #418517
