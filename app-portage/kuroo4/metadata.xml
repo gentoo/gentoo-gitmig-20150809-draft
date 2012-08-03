@@ -3,7 +3,7 @@
 <pkgmetadata>
 	<herd>tools-portage</herd>
 	<herd>kde</herd>
-	<longdescription lang='en'>Grophical Portage frontend based on KDE4/Qt4</longdescription>
+	<longdescription lang='en'>Graphical Portage frontend based on KDE4/Qt4</longdescription>
 	<maintainer>
 		<email>galiven@users.sourceforge.net</email>
 		<name>Andrew Schenck</name>
