@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/dd-rescue
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dd-rescue/ChangeLog,v 1.22 2012/05/24 03:07:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dd-rescue/ChangeLog,v 1.23 2012/08/03 15:17:15 hwoarang Exp $
+
+  03 Aug 2012; Markos Chandras <hwoarang@gentoo.org> dd-rescue-1.25.ebuild:
+  Stable on amd64 wrt bug #422209
 
   24 May 2012; Mike Frysinger <vapier@gentoo.org> dd-rescue-1.10.ebuild,
   dd-rescue-1.24.ebuild, dd-rescue-1.25.ebuild:
