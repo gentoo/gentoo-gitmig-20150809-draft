@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/supertab
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/supertab/ChangeLog,v 1.40 2012/08/03 09:09:47 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/supertab/ChangeLog,v 1.41 2012/08/03 09:10:37 radhermit Exp $
+
+  03 Aug 2012; Tim Harder <radhermit@gentoo.org> -supertab-1.1.ebuild,
+  -supertab-1.5.ebuild:
+  Remove old.
 
 *supertab-2.0 (03 Aug 2012)
 
