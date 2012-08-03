@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/afflib/afflib-3.7.1.ebuild,v 1.1 2012/05/31 14:42:40 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/afflib/afflib-3.7.1.ebuild,v 1.2 2012/08/03 08:18:50 hwoarang Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -14,7 +14,7 @@ SRC_URI="mirror://github/simsong/AFFLIBv3/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~x86"
+KEYWORDS="amd64 ~hppa ~ppc ~x86"
 IUSE="fuse ncurses python qemu readline s3 static-libs threads"
 
 RDEPEND="dev-libs/expat
