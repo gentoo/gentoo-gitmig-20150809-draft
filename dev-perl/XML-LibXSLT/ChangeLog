@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-LibXSLT
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXSLT/ChangeLog,v 1.89 2012/06/24 13:00:29 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXSLT/ChangeLog,v 1.90 2012/08/03 10:58:03 ago Exp $
+
+  03 Aug 2012; Agostino Sarubbo <ago@gentoo.org> XML-LibXSLT-1.770.0.ebuild:
+  Stable for amd64, wrt bug #418869
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
