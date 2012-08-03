@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/torch/torch-3.1.ebuild,v 1.3 2010/07/24 18:37:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/torch/torch-3.1.ebuild,v 1.4 2012/08/03 20:20:35 bicatali Exp $
 
-EAPI="3"
+EAPI=4
 
 inherit eutils multilib toolchain-funcs
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.torch.ch/archives/Torch${PV%.1}src.tgz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug doc examples"
 
 S=${WORKDIR}/Torch${PV%.1}
@@ -41,20 +41,17 @@ src_compile() {
 }
 
 src_install() {
-	dolib lib/*/*.a || die
+	dolib.a lib/*/*.a
 	insinto /usr/include/torch
 	for directory in core ${TORCH_PACKAGES}; do
-		doins ${directory}/*.h || die
+		doins ${directory}/*.h
 	done
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}
-		doins -r examples || die
+		doins -r examples
 	fi
 
-	if use doc; then
-		cd "${WORKDIR}"/docs
-		doins *.pdf || die
-		dohtml -r manual/. || die
-	fi
+	use doc && dodoc "${WORKDIR}"/docs/*pdf \
+		&& dohtml -r "${WORKDIR}"/docs/manual/*
 }

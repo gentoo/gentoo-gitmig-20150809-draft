@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/torch
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/torch/ChangeLog,v 1.9 2010/07/24 18:37:44 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/torch/ChangeLog,v 1.10 2012/08/03 20:20:35 bicatali Exp $
+
+  03 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml,
+  torch-3.1.ebuild:
+  keyword amd64-linux x86-linux
 
   24 Jul 2010; Justin Lecher <jlec@gentoo.org> +files/3.1-prll.patch,
   torch-3.ebuild, torch-3.1.ebuild:
@@ -41,4 +45,3 @@
   17 Jun 2004; Patrick Kursawe <phosphan@gentoo.org> metadata.xml,
   torch-3.ebuild:
   Initial version.
-
