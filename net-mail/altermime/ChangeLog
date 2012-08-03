@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/altermime
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/altermime/ChangeLog,v 1.22 2011/08/26 11:05:06 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/altermime/ChangeLog,v 1.23 2012/08/03 15:23:12 hwoarang Exp $
+
+  03 Aug 2012; Markos Chandras <hwoarang@gentoo.org> altermime-0.3.11.ebuild:
+  Stable on amd64 wrt bug #419283
 
 *altermime-0.3.11 (26 Aug 2011)
 
@@ -96,4 +99,3 @@
 
   18 Jul 2003; Greg Fitzgerald <gregf@gentoo.org> altermime-0.3.1.ebuild:
   First Release
-
