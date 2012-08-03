@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.5.11-r1.ebuild,v 1.1 2012/06/07 16:47:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.5.11-r1.ebuild,v 1.2 2012/08/03 19:29:23 vapier Exp $
 
 EAPI=4
 
@@ -19,10 +19,12 @@ IUSE="debug threads truetype aqua xscreensaver"
 
 RDEPEND="
 	!aqua? (
+		media-libs/fontconfig
 		x11-libs/libX11
 		x11-libs/libXt
 		truetype? ( x11-libs/libXft )
-		xscreensaver? ( x11-libs/libXScrnSaver ) )
+		xscreensaver? ( x11-libs/libXScrnSaver )
+	)
 	~dev-lang/tcl-${PV}"
 DEPEND="${RDEPEND}
 	!aqua? ( x11-proto/xproto )"
@@ -43,7 +45,13 @@ src_prepare() {
 	# copy the tcl patch
 	epatch "${FILESDIR}"/tcl-8.5.9-gentoo-fbsd.patch
 
-	sed -i 's/FT_New_Face/XftFontOpen/g' unix/configure.in || die
+	# Make sure we use the right pkg-config, and link against fontconfig
+	# (since the code base uses Fc* functions).
+	sed -i \
+		-e 's/FT_New_Face/XftFontOpen/g' \
+		-e "s:\<pkg-config\>:$(tc-getPKG_CONFIG):" \
+		-e 's:xft freetype2:xft freetype2 fontconfig:' \
+		unix/configure.in || die
 
 	cd "${S}"/unix
 	eautoreconf
