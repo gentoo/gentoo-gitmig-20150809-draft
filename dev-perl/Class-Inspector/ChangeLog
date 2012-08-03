@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-Inspector
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Inspector/ChangeLog,v 1.78 2012/08/02 00:56:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Inspector/ChangeLog,v 1.79 2012/08/03 11:06:32 ago Exp $
+
+  03 Aug 2012; Agostino Sarubbo <ago@gentoo.org>
+  Class-Inspector-1.270.0.ebuild:
+  Stable for amd64, wrt bug #418797
 
   02 Aug 2012; Jeroen Roovers <jer@gentoo.org> Class-Inspector-1.270.0.ebuild:
   Stable for HPPA (bug #418797).
