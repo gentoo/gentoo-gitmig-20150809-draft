@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ipv6calc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ChangeLog,v 1.53 2012/04/17 16:00:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ChangeLog,v 1.54 2012/08/03 07:21:06 jdhore Exp $
+
+  03 Aug 2012; Jeff Horelick <jdhore@gentoo.org> ipv6calc-0.93.1.ebuild:
+  marked x86 per bug 419303
 
   17 Apr 2012; Brent Baude <ranger@gentoo.org> ipv6calc-0.92.0.ebuild:
   Marking ipv6calc-0.92.0 ppc for bug 404837
