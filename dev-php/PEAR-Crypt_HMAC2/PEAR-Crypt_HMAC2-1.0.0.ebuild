@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Crypt_HMAC2/PEAR-Crypt_HMAC2-1.0.0.ebuild,v 1.2 2012/01/18 19:37:42 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Crypt_HMAC2/PEAR-Crypt_HMAC2-1.0.0.ebuild,v 1.3 2012/08/03 19:53:10 olemarkus Exp $
 
 EAPI="4"
 
@@ -11,6 +11,13 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+
+src_install() {
+	php-pear-r1_src_install
+
+	#Useless file that often conflicts with other packages
+	rm ${D}/usr/share/php/generate_package_xml.php
+}
 
 pkg_postinst() {
 	if ! has_version "dev-lang/php[hash]" ; then
