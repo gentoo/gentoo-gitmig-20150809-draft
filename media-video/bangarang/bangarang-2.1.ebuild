@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bangarang/bangarang-2.1.ebuild,v 1.3 2012/07/15 15:24:55 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bangarang/bangarang-2.1.ebuild,v 1.4 2012/08/03 21:07:52 johu Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ EGIT_REPO_URI="git://gitorious.org/bangarang/bangarang.git"
 [[ ${PV} == 9999 ]] || SRC_URI="http://bangarangissuetracking.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-3"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 SLOT="4"
 IUSE="debug"
 
@@ -23,7 +23,10 @@ RDEPEND="
 	dev-libs/soprano
 	$(add_kdebase_dep kdelibs 'semantic-desktop')
 	$(add_kdebase_dep nepomuk)
-	$(add_kdebase_dep kdemultimedia-kioslaves)
+	|| (
+		$(add_kdebase_dep audiocd-kio)
+		$(add_kdebase_dep kdemultimedia-kioslaves)
+	)
 	media-libs/taglib
 	media-libs/phonon
 	x11-libs/qt-script:4
