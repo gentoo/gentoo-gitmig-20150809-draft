@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ipmiutil
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipmiutil/ChangeLog,v 1.16 2012/04/04 19:43:26 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipmiutil/ChangeLog,v 1.17 2012/08/03 15:15:44 hwoarang Exp $
+
+  03 Aug 2012; Markos Chandras <hwoarang@gentoo.org> ipmiutil-2.8.2.ebuild:
+  Stable on amd64 wrt bug #422175
 
   04 Apr 2012; Jeff Horelick <jdhore@gentoo.org> ipmiutil-2.7.7.ebuild:
   marked x86 per bug 400487
@@ -78,4 +81,3 @@
   25 Mar 2005; Robin H. Johnson <robbat2@gentoo.org>
   +files/ipmiutil-1.6.0-link-external-freeipmi.diff, +ipmiutil-1.6.0.ebuild:
   Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
-
