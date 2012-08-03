@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bmake/bmake-20120620.ebuild,v 1.1 2012/07/08 20:46:52 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bmake/bmake-20120620.ebuild,v 1.2 2012/08/03 03:12:12 ryao Exp $
 
 EAPI=3
 
@@ -14,7 +14,7 @@ SRC_URI="http://void.crufty.net/ftp/pub/sjg/${P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~x64-freebsd"
 IUSE=""
 
 DEPEND=""
@@ -50,6 +50,6 @@ src_install() {
 	dobin ${PN} || die
 	newman ${PN}.cat1 ${PN}.1 || die
 	FORCE_BSD_MK=1 SYS_MK_DIR=. \
-		sh ../mk/install-mk -v -m 644 "${D}"/usr/share/mk/${PN} \
+		sh ../mk/install-mk -v -m 644 "${ED}"/usr/share/mk/${PN} \
 		|| die "failed to install mk files"
 }
