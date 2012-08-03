@@ -5,6 +5,10 @@
 		<email>spatz@gentoo.org</email>
 		<name>Dror Levin</name>
 	</maintainer>
+	<maintainer>
+		<email>radhermit@gentoo.org</email>
+		<name>Tim Harder</name>
+	</maintainer>
 	<longdescription lang="en">
 		A parallel implementation of gzip for modern
 		multi-processor, multi-core machines.
