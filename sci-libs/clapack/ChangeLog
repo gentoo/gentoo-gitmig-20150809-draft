@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/clapack
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/clapack/ChangeLog,v 1.20 2012/04/12 19:55:43 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/clapack/ChangeLog,v 1.21 2012/08/03 17:19:41 bicatali Exp $
+
+  03 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> clapack-3.2.1-r6.ebuild:
+  keyword x86-linux
 
   12 Apr 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   -clapack-3.2.1-r4.ebuild, clapack-3.2.1-r6.ebuild:
@@ -95,5 +98,3 @@
   04 Mar 2010; Justin Lecher <jlec@gentoo.org>
   +clapack-3.2.1.ebuild, +metadata.xml:
   New ebuild, imported from sci on request 206934
-
-
