@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/pology/pology-0.11.ebuild,v 1.1 2012/08/03 13:09:18 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/pology/pology-0.11.ebuild,v 1.2 2012/08/03 13:10:09 scarabeus Exp $
 
 EAPI=4
 
@@ -51,7 +51,6 @@ src_install() {
 	dosym /usr/share/pology/syntax/kate/synder.xml /usr/share/apps/katepart/syntax/synder.xml
 
 	newbashcomp "${ED}"/usr/share/pology/completion/bash/pology ${PN}
-
 
 	einfo "You should also consider following packages to install:"
 	einfo "    app-text/aspell"
