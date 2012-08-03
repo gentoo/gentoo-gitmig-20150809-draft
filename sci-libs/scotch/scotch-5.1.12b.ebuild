@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scotch/scotch-5.1.12b.ebuild,v 1.2 2012/08/03 14:54:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scotch/scotch-5.1.12b.ebuild,v 1.3 2012/08/03 15:22:53 bicatali Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ SRC_URI="http://dev.gentooexperimental.org/~patrick/${MYP}.tar.gz"
 
 LICENSE="CeCILL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples int64 mpi static-libs tools"
 
 DEPEND="sys-libs/zlib
@@ -28,34 +28,33 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MYP/b}"
 
-LIBVER=$(get_major_version)
-make_shared_lib() {
-	local libstatic=${1}
+static_to_shared() {
+	local libstatic=${1}; shift
+	local libname=$(basename ${libstatic%.a})
+	local soname=${libname}$(get_libname $(get_version_component_range 1-2))
+	local libdir=$(dirname ${libstatic})
+
+	einfo "Making ${soname} from ${libstatic}"
 	if [[ ${CHOST} == *-darwin* ]] ; then
-		local dylibname=$(basename "${1%.a}").dylib
-		shift
-		einfo "Making ${dylibname}"
 		${LINK:-$(tc-getCC)} ${LDFLAGS}  \
-			-dynamiclib -install_name "${EPREFIX}"/usr/lib/"${dylibname}" \
-			-Wl,-all_load -Wl,"${libstatic}" \
-			"$@" -o $(dirname "${libstatic}")/"${dylibname}" || die
+			-dynamiclib -install_name "${EPREFIX}"/usr/lib/"${soname}" \
+			-Wl,-all_load -Wl,${libstatic} \
+			"$@" -o ${libdir}/${soname} || die "${soname} failed"
 	else
-		local soname=$(basename "${1%.a}").so.${LIBVER}
-		shift
-		einfo "Making ${soname}"
 		${LINK:-$(tc-getCC)} ${LDFLAGS}  \
-			-shared -Wl,-soname="${soname}" \
-			-Wl,--whole-archive "${libstatic}" -Wl,--no-whole-archive \
-			"$@" -o $(dirname "${libstatic}")/"${soname}" || die "${soname} failed"
-		ln -s "${soname}" $(dirname "${libstatic}")/"${soname%.*}"
+			-shared -Wl,-soname=${soname} \
+			-Wl,--whole-archive ${libstatic} -Wl,--no-whole-archive \
+			"$@" -o ${libdir}/${soname} || die "${soname} failed"
+		[[ $(get_version_component_count) -gt 1 ]] && \
+			ln -s ${soname} ${libdir}/${libname}$(get_libname $(get_major_version))
+		ln -s ${soname} ${libdir}/${libname}$(get_libname)
 	fi
 }
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-as-needed.patch
-	sed \
-		-e "s/gcc/$(tc-getCC)/" \
-		-e "s/-O3/${CFLAGS}/" \
+	sed -e "s/gcc/$(tc-getCC)/" \
+		-e "s/-O3/${CFLAGS} -pthread/" \
 		-e "s/ ar/ $(tc-getAR)/" \
 		-e "s/ranlib/$(tc-getRANLIB)/" \
 		src/Make.inc/Makefile.inc.i686_pc_linux2 > src/Makefile.inc || die
@@ -64,20 +63,20 @@ src_prepare() {
 
 src_compile() {
 	emake -C src CLIBFLAGS=-fPIC
-	make_shared_lib lib/libscotcherr.a
-	make_shared_lib lib/libscotcherrexit.a
-	make_shared_lib lib/libscotch.a -Llib -lz -lm -lrt -lscotcherr
-	make_shared_lib lib/libesmumps.a -Llib -lscotch
-	make_shared_lib lib/libscotchmetis.a -Llib -lscotch
+	static_to_shared lib/libscotcherr.a
+	static_to_shared lib/libscotcherrexit.a
+	static_to_shared lib/libscotch.a -Llib -lz -lm -lrt -lscotcherr
+	static_to_shared lib/libesmumps.a -Llib -lscotch
+	static_to_shared lib/libscotchmetis.a -Llib -lscotch
 
 	if use mpi; then
 		emake -C src CLIBFLAGS=-fPIC ptscotch
 		export LINK=mpicc
-		make_shared_lib lib/libptscotcherr.a
-		make_shared_lib lib/libptscotcherrexit.a
-		make_shared_lib lib/libptscotch.a -Llib -lptscotcherr -lz -lm -lrt
-		make_shared_lib lib/libptesmumps.a -Llib -lptscotch
-		make_shared_lib lib/libptscotchparmetis.a -Llib -lptscotch
+		static_to_shared lib/libptscotcherr.a
+		static_to_shared lib/libptscotcherrexit.a
+		static_to_shared lib/libptscotch.a -Llib -lptscotcherr -lz -lm -lrt
+		static_to_shared lib/libptesmumps.a -Llib -lptscotch
+		static_to_shared lib/libptscotchparmetis.a -Llib -lptscotch
 	fi
 	if use static-libs; then
 		emake -C src clean
@@ -87,7 +86,7 @@ src_compile() {
 }
 
 src_install() {
-	dolib.so lib/*.so*
+	dolib.so lib/lib*$(get_libname)*
 	use static-libs && dolib.a lib/*.a
 
 	insinto /usr/include/scotch
