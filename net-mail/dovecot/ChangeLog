@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.371 2012/08/02 14:24:45 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.372 2012/08/03 06:33:48 eras Exp $
+
+  03 Aug 2012; Eray Aslan <eras@gentoo.org> dovecot-2.1.9.ebuild:
+  Fix building with -sieve - bug #429582
 
 *dovecot-2.1.9 (02 Aug 2012)
 
