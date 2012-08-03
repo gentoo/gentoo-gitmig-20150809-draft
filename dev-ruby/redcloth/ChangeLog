@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/redcloth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.69 2012/07/22 07:57:24 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.70 2012/08/03 19:48:14 ago Exp $
+
+  03 Aug 2012; Agostino Sarubbo <ago@gentoo.org> redcloth-4.2.9.ebuild:
+  Stable for amd64, wrt bug #427594
 
   22 Jul 2012; Jeff Horelick <jdhore@gentoo.org> redcloth-4.2.9.ebuild:
   marked x86 per bug 427594
