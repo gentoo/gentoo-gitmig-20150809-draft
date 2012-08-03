@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/yankring
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/yankring/ChangeLog,v 1.3 2012/08/03 10:03:52 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/yankring/ChangeLog,v 1.4 2012/08/03 10:04:24 radhermit Exp $
+
+  03 Aug 2012; Tim Harder <radhermit@gentoo.org> -yankring-11.0.ebuild:
+  Remove old.
 
 *yankring-14.0 (03 Aug 2012)
 
