@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-constants/jnr-constants-0.8.3.ebuild,v 1.1 2012/05/28 14:24:19 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-constants/jnr-constants-0.8.3.ebuild,v 1.2 2012/08/03 18:16:28 ago Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ SRC_URI="https://github.com/jnr/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="|| ( Apache-2.0 LGPL-3 )"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND="
