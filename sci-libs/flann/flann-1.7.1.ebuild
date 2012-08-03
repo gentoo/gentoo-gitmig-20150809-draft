@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/flann-1.7.1.ebuild,v 1.3 2012/06/17 17:44:14 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/flann-1.7.1.ebuild,v 1.4 2012/08/03 17:33:35 bicatali Exp $
 
 EAPI=3
 
@@ -15,7 +15,7 @@ SRC_URI="http://people.cs.ubc.ca/~mariusm/uploads/FLANN/${P}-src.zip
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
 IUSE="doc mpi octave python static-libs test"
 # cuda needs to be implemented!
 
@@ -39,7 +39,7 @@ src_prepare() {
 	# python standard installation directory respected
 	sed -i \
 		-e "/share/d" \
-		-e "/COMMAND/s:install:install --root="${ED}" --no-compile:" \
+		-e "/COMMAND/s:install:install --root="${D}" --no-compile:" \
 		src/python/CMakeLists.txt || die
 	# produce pure octave files
 	# octave gentoo installation for .m files respected

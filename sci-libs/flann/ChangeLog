@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/flann
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/ChangeLog,v 1.15 2012/06/17 17:44:14 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/ChangeLog,v 1.16 2012/08/03 17:33:35 bicatali Exp $
+
+  03 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> flann-1.7.1.ebuild:
+  keyword amd64-linux x86-linux
 
   17 Jun 2012; Jeff Horelick <jdhore@gentoo.org> flann-1.7.1.ebuild:
   marked x86 per bug 420303
@@ -59,4 +62,3 @@
   30 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   +flann-1.6.8.ebuild, +metadata.xml:
   New library, dependency for media-libs/opencv-2.2
-
