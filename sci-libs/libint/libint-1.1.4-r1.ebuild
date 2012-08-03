@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libint/libint-1.1.4-r1.ebuild,v 1.7 2011/11/28 11:55:56 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libint/libint-1.1.4-r1.ebuild,v 1.8 2012/08/03 19:48:21 bicatali Exp $
 
 EAPI=4
 
@@ -12,8 +12,8 @@ SRC_URI="http://www.chem.vt.edu/chem-dept/valeev/software/libint/src/${P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 x86"
-IUSE=""
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
+IUSE="static-libs"
 
 DEPEND="virtual/fortran"
 RDEPEND="${DEPEND}"
@@ -30,7 +30,8 @@ src_configure() {
 		--with-cc=$(tc-getCC) \
 		--with-cxx=$(tc-getCXX) \
 		--with-cc-optflags="${CFLAGS}" \
-		--with-cxx-optflags="${CXXFLAGS}"
+		--with-cxx-optflags="${CXXFLAGS}" \
+		$(use_enable static-libs static)
 }
 
 src_compile() {
