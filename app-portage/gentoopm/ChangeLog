@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/gentoopm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.20 2012/08/01 06:11:15 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.21 2012/08/03 13:24:16 ago Exp $
+
+  03 Aug 2012; Agostino Sarubbo <ago@gentoo.org> gentoopm-0.2.5-r1.ebuild:
+  Stable for amd64, wrt bug #428896
 
   01 Aug 2012; Jeff Horelick <jdhore@gentoo.org> gentoopm-0.2.5-r1.ebuild:
   marked x86 per bug 428896
