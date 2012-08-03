@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/SQL-Statement
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Statement/ChangeLog,v 1.53 2012/06/24 12:58:47 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Statement/ChangeLog,v 1.54 2012/08/03 11:01:36 ago Exp $
+
+  03 Aug 2012; Agostino Sarubbo <ago@gentoo.org> SQL-Statement-1.330.0.ebuild:
+  Stable for amd64, wrt bug #418847
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
