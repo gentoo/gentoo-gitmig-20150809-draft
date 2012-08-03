@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/matio/matio-1.5.0.ebuild,v 1.1 2012/04/24 17:50:42 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/matio/matio-1.5.0.ebuild,v 1.2 2012/08/03 22:14:07 bicatali Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -9,7 +9,7 @@ DESCRIPTION="Library for reading and writing matlab files"
 HOMEPAGE="http://sourceforge.net/projects/matio/"
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples hdf5 sparse static-libs"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 RDEPEND="sys-libs/zlib

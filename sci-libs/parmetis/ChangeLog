@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/parmetis
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/parmetis/ChangeLog,v 1.8 2011/08/09 21:34:59 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/parmetis/ChangeLog,v 1.9 2012/08/03 22:20:54 bicatali Exp $
+
+  03 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> parmetis-3.2.0.ebuild:
+  keyword amd64-linux x86-linux
 
   09 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org> parmetis-3.1.1.ebuild,
   parmetis-3.2.0.ebuild:
@@ -41,4 +44,3 @@
   +files/parmetis-3.1-autotools.patch, +metadata.xml, +parmetis-3.1.ebuild:
   Initial import. Thankss Oliver Borm for his work and everyone else in bug
   #49953.
-
