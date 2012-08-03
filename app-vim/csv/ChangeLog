@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/csv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/csv/ChangeLog,v 1.8 2012/08/03 10:38:47 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/csv/ChangeLog,v 1.9 2012/08/03 10:39:20 radhermit Exp $
+
+  03 Aug 2012; Tim Harder <radhermit@gentoo.org> -csv-0.21.ebuild:
+  Remove old.
 
 *csv-0.26 (03 Aug 2012)
 
