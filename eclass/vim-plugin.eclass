@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim-plugin.eclass,v 1.28 2011/12/27 17:55:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim-plugin.eclass,v 1.29 2012/08/03 08:49:22 radhermit Exp $
 #
 # This eclass simplifies installation of app-vim plugins into
 # /usr/share/vim/vimfiles.  This is a version-independent directory
@@ -16,7 +16,8 @@ IUSE=""
 DEPEND="|| ( >=app-editors/vim-${VIM_PLUGIN_VIM_VERSION}
 	>=app-editors/gvim-${VIM_PLUGIN_VIM_VERSION} )"
 RDEPEND="${DEPEND}"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2
+	http://dev.gentoo.org/~radhermit/vim/${P}.tar.bz2"
 SLOT="0"
 
 vim-plugin_src_install() {
