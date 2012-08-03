@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/digest
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/digest/ChangeLog,v 1.16 2012/04/14 10:18:06 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/digest/ChangeLog,v 1.17 2012/08/03 13:03:49 hwoarang Exp $
+
+  03 Aug 2012; Markos Chandras <hwoarang@gentoo.org> digest-0.0.1.1.ebuild:
+  Stable on amd64 wrt bug #418689
 
 *digest-0.0.1.1 (14 Apr 2012)
 
@@ -57,4 +60,3 @@
   28 Mar 2010; Lennart Kolmodin <kolmodin@gentoo.org>
   +digest-0.0.0.8.ebuild, +metadata.xml:
   Initial version, indirect dependency of darcs.
-
