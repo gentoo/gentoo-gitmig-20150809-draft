@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/shapelib/shapelib-1.3.0-r1.ebuild,v 1.1 2012/08/02 23:24:26 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/shapelib/shapelib-1.3.0-r1.ebuild,v 1.2 2012/08/03 08:25:47 xarthisius Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs multilib versionator
@@ -40,6 +40,10 @@ static_to_shared() {
 	fi
 }
 
+pkg_setup() {
+	tc-export CC
+}
+
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-respect-user.patch
 }
@@ -56,7 +60,8 @@ src_test() {
 }
 
 src_install() {
-	dobin shp{create,dump,test,add} dbf{create,dump,add}
+	dobin shp{create,dump,add} dbf{create,dump,add}
+	use test && dobin shptest
 	dolib.so lib*$(get_libname)*
 	dodoc ChangeLog README*
 	use static-libs && dolib.a lib*.a
