@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/ansi-wl-pprint
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/ansi-wl-pprint/ChangeLog,v 1.16 2012/03/17 20:09:25 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/ansi-wl-pprint/ChangeLog,v 1.17 2012/08/03 12:49:31 hwoarang Exp $
+
+  03 Aug 2012; Markos Chandras <hwoarang@gentoo.org>
+  ansi-wl-pprint-0.6.4.ebuild:
+  Stable on amd64 wrt bug #418679
 
   17 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org>
   ansi-wl-pprint-0.6.3.ebuild:
@@ -64,4 +68,3 @@
   14 Mar 2010; Lennart Kolmodin <kolmodin@gentoo.org>
   +ansi-wl-pprint-0.5.1.ebuild, +metadata.xml:
   Initial version.
-
