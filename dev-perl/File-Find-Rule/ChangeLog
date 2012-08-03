@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-Find-Rule
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Find-Rule/ChangeLog,v 1.61 2012/08/02 00:58:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Find-Rule/ChangeLog,v 1.62 2012/08/03 11:09:26 ago Exp $
+
+  03 Aug 2012; Agostino Sarubbo <ago@gentoo.org> File-Find-Rule-0.330.0.ebuild:
+  Stable for amd64, wrt bug #418811
 
   02 Aug 2012; Jeroen Roovers <jer@gentoo.org> File-Find-Rule-0.330.0.ebuild:
   Stable for HPPA (bug #418811).
