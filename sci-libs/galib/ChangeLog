@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/galib
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/galib/ChangeLog,v 1.9 2011/06/26 10:33:03 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/galib/ChangeLog,v 1.10 2012/08/03 17:53:22 bicatali Exp $
+
+  03 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> galib-2.4.7.ebuild,
+  metadata.xml:
+  keyword amd64-linux x86-linux
 
   26 Jun 2011; Justin Lecher <jlec@gentoo.org> galib-2.4.6.ebuild,
   galib-2.4.7.ebuild, metadata.xml:
@@ -49,4 +53,3 @@
   16 Oct 2003; Patrick Kursawe <phosphan@gentoo.org> galib-2.4.5.ebuild,
   metadata.xml:
   Initial import, suggested in bug 26493
-

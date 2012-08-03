@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/galib/galib-2.4.7.ebuild,v 1.2 2011/06/26 10:33:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/galib/galib-2.4.7.ebuild,v 1.3 2012/08/03 17:53:22 bicatali Exp $
 
 EAPI=4
 
@@ -14,15 +14,15 @@ SRC_URI="http://lancet.mit.edu/ga/dist/galib${MYPV}.tgz"
 
 LICENSE="GAlib"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples"
 
 S="${WORKDIR}/galib${MYPV}"
 
 src_prepare() {
 	sed -i \
-		-e 's:/include:/usr/include:' \
-		-e "s:/lib:/usr/$(get_libdir):" \
+		-e 's:/include:${EPREFIX}/usr/include:' \
+		-e "s:/lib:${EPREFIX}/usr/$(get_libdir):" \
 		-e '/^CXX/d' \
 		-e '/^CXXFLAGS/d' \
 		-e '/^LD/d' \
