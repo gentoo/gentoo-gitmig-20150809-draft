@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmaa/libmaa-1.3.1.ebuild,v 1.3 2012/04/07 07:38:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmaa/libmaa-1.3.1.ebuild,v 1.4 2012/08/03 13:41:16 hwoarang Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/dict/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~ia64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~ia64-linux ~x86-linux"
 IUSE=""
 
 DOCS="ChangeLog NEWS README doc/libmaa.600dpi.ps"
