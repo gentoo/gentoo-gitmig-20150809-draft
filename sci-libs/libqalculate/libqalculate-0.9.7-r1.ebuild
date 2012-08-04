@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libqalculate/libqalculate-0.9.7-r1.ebuild,v 1.1 2012/07/10 15:15:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libqalculate/libqalculate-0.9.7-r1.ebuild,v 1.2 2012/08/04 21:40:15 bicatali Exp $
 
 EAPI=4
 inherit eutils
@@ -51,7 +51,7 @@ src_install() {
 	# docs/reference/Makefile.am -> referencedir=
 	emake \
 		DESTDIR="${D}" \
-		referencedir=/usr/share/doc/${PF}/html/reference \
+		referencedir="${EPREFIX}"/usr/share/doc/${PF}/html/reference \
 		install
 
 	dodoc AUTHORS ChangeLog NEWS README* TODO
