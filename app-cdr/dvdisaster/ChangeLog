@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/dvdisaster
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/ChangeLog,v 1.26 2012/07/27 07:42:34 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/ChangeLog,v 1.27 2012/08/04 13:41:14 ago Exp $
+
+  04 Aug 2012; Agostino Sarubbo <ago@gentoo.org> dvdisaster-0.72.4.ebuild:
+  Stable for amd64, wrt bug #428050
 
   27 Jul 2012; Jeff Horelick <jdhore@gentoo.org> dvdisaster-0.72.4.ebuild:
   marked x86 per bug 428050
