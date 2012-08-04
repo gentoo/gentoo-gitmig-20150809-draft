@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-currency/qalculate-currency-0.9.4-r2.ebuild,v 1.7 2012/05/21 19:21:05 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-currency/qalculate-currency-0.9.4-r2.ebuild,v 1.8 2012/08/04 21:43:38 bicatali Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/qalculate/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="nls"
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 x86 ~amd64-linux ~x86-linux"
 
 RDEPEND="
 	sci-libs/libqalculate
