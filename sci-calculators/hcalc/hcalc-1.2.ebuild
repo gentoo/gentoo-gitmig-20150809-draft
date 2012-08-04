@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/hcalc/hcalc-1.2.ebuild,v 1.1 2012/07/07 15:22:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/hcalc/hcalc-1.2.ebuild,v 1.2 2012/08/04 22:24:01 bicatali Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://github/jlec/hcalc/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="

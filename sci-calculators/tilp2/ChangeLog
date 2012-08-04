@@ -1,6 +1,10 @@
 # ChangeLog for sci-calculators/tilp2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tilp2/ChangeLog,v 1.8 2012/05/04 06:52:08 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tilp2/ChangeLog,v 1.9 2012/08/04 22:14:46 bicatali Exp $
+
+  04 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> -tilp2-1.14.ebuild,
+  tilp2-1.16.ebuild:
+  keyword amd64-linux, x86-linux
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> tilp2-1.14.ebuild,
   tilp2-1.16.ebuild:
@@ -60,4 +64,3 @@
   15 Jun 2007; Christian Helbling <helch@gmx.ch> +tilp2-1.03.ebuild,
   +metadata.xml:
   New ebuild for bug 109220 thanks to Henning Schild
-

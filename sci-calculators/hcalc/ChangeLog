@@ -1,6 +1,10 @@
 # ChangeLog for sci-calculators/hcalc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/hcalc/ChangeLog,v 1.15 2012/07/07 15:22:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/hcalc/ChangeLog,v 1.16 2012/08/04 22:24:01 bicatali Exp $
+
+  04 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> hcalc-1.2.ebuild,
+  metadata.xml:
+  keyword amd64-linux, x86-linux
 
 *hcalc-1.2 (07 Jul 2012)
 
@@ -64,4 +68,3 @@
 
   16 Jul 2003; Don Seiler <rizzo@gentoo.org>; hcalc-1.0.ebuild:
   ebuild submitted by damjan.bole(at)studioproteus.si
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tilp2/tilp2-1.16.ebuild,v 1.2 2012/05/04 06:52:08 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tilp2/tilp2-1.16.ebuild,v 1.3 2012/08/04 22:14:46 bicatali Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/tilp/tilp2-linux/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="nls threads xinerama"
 
 RDEPEND="dev-libs/glib:2
@@ -40,9 +40,7 @@ src_configure() {
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die
 	rm -f "${ED}"usr/share/${PN}/{Manpage.txt,COPYING,RELEASE,AUTHORS,LICENSES}
-	dodoc README AUTHORS ChangeLog RELEASE TODO
 	make_desktop_entry tilp "TiLP TI Linker" \
 		"${EPREFIX}"/usr/share/${PN}/pixmaps/icon.xpm
 }

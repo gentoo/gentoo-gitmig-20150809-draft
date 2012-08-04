@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/tiemu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tiemu/ChangeLog,v 1.8 2012/05/04 06:52:08 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tiemu/ChangeLog,v 1.9 2012/08/04 22:11:04 bicatali Exp $
+
+  04 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> tiemu-3.03.ebuild:
+  keyword amd64-linux, x86-linux
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> tiemu-3.03.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -42,4 +45,3 @@
   +tiemu-3.02.ebuild:
   Version bump and transfer upstream's renaming (was sci-calculators/tiemu3).
   Bug is still #112985.
-

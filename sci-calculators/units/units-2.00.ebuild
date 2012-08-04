@@ -1,17 +1,17 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/units-2.00.ebuild,v 1.2 2012/07/02 04:20:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/units-2.00.ebuild,v 1.3 2012/08/04 22:20:18 bicatali Exp $
 
 EAPI=4
 inherit eutils
 
-DESCRIPTION="unit conversion program"
+DESCRIPTION="Unit conversion program"
 HOMEPAGE="http://www.gnu.org/software/units/units.html"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 DEPEND="
