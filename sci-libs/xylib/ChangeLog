@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/xylib
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/xylib/ChangeLog,v 1.8 2011/01/26 17:33:09 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/xylib/ChangeLog,v 1.9 2012/08/04 15:29:17 bicatali Exp $
+
+*xylib-1.0 (04 Aug 2012)
+
+  04 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> +xylib-1.0.ebuild,
+  -xylib-0.6.ebuild, -xylib-0.7.ebuild:
+  Version bump
 
 *xylib-0.8 (26 Jan 2011)
 
@@ -43,4 +49,3 @@
   18 Apr 2008; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
   +xylib-0.2.ebuild:
   Initial import. Library needed for fityk
-
