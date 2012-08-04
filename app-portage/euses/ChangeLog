@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/euses
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/euses/ChangeLog,v 1.61 2012/08/04 08:40:10 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/euses/ChangeLog,v 1.62 2012/08/04 11:15:34 blueness Exp $
+
+  04 Aug 2012; Anthony G. Basile <blueness@gentoo.org> euses-2.5.8.ebuild:
+  Stable arm, bug #429532
 
   04 Aug 2012; Anthony G. Basile <blueness@gentoo.org> euses-2.5.8.ebuild:
   Stable ppc, keyword ~ppc64, bug #429532
