@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/libextractor-0.6.3-r1.ebuild,v 1.4 2012/08/03 07:08:41 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/libextractor-0.6.3-r1.ebuild,v 1.5 2012/08/04 13:57:53 ago Exp $
 
 EAPI=4
 inherit eutils flag-o-matic multilib toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~sparc x86"
 IUSE="ffmpeg gsf gtk pdf qt4" # test
 
 RESTRICT="test"
