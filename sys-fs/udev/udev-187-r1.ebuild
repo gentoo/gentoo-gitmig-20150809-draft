@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-187-r1.ebuild,v 1.2 2012/08/03 21:29:16 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-187-r1.ebuild,v 1.3 2012/08/04 16:09:32 williamh Exp $
 
 EAPI=4
 
@@ -129,7 +129,7 @@ src_prepare()
 		-i rules/*.rules \
 	|| die "failed to change group dialout to uucp"
 
-	if [ ! -e configure ]
+	if [[ ! -e configure ]]
 	then
 		if use doc
 		then
@@ -381,7 +381,7 @@ pkg_postinst()
 	ewarn "If you are using standalone udev, consolekithandles this"
 	ewarn "functionality."
 
-	if [ -d ${ROOT}/lib/udev ]
+	if [[ -d ${ROOT}lib/udev ]]
 	then
 		ewarn
 		ewarn "This version of udev moves the files that were installed in"
