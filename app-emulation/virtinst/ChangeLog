@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/virtinst
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/ChangeLog,v 1.40 2012/07/11 05:23:59 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/ChangeLog,v 1.41 2012/08/04 19:19:31 cardoe Exp $
+
+*virtinst-0.600.3 (04 Aug 2012)
+
+  04 Aug 2012; Doug Goldstein <cardoe@gentoo.org> -virtinst-0.600.2.ebuild,
+  +virtinst-0.600.3.ebuild:
+  Quick bump to fix --cpuset=auto and cloning a block device.
 
 *virtinst-0.600.2 (10 Jul 2012)
 
