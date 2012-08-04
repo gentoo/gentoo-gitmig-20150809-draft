@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-da
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-da/ChangeLog,v 1.39 2012/08/02 22:36:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-da/ChangeLog,v 1.40 2012/08/04 18:58:59 johu Exp $
+
+  04 Aug 2012; Johannes Huber <johu@gentoo.org> aspell-da-1.6.34.ebuild:
+  Stable for x86, wrt bug #418527
 
   02 Aug 2012; Markos Chandras <hwoarang@gentoo.org> aspell-da-1.6.34.ebuild:
   Stable on amd64 wrt bug #418527
