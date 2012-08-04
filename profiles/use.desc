@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.490 2012/07/12 22:14:46 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.491 2012/08/04 07:33:54 mr_bones_ Exp $
 
 # Keep them sorted
 
@@ -215,7 +215,6 @@ mpeg - Adds libmpeg3 support to various packages
 mpi - Adds MPI (Message Passing Interface) layer to the apps that support it
 mplayer - Enable mplayer support for playback or encoding
 msn - Enable MSN Messenger IM protocol support
-msql - Adds support for the MSQL database server
 mssql - Adds support for Microsoft SQL Server database
 mtp - Enable support for Media Transfer Protocol
 mule - Adds multi-language support to XEmacs
