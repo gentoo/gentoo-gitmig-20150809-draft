@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/nspluginwrapper-1.4.4-r3.ebuild,v 1.2 2012/05/03 06:08:02 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/nspluginwrapper-1.4.4-r3.ebuild,v 1.3 2012/08/04 09:44:23 ago Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://web.mit.edu/davidben/Public/nspluginwrapper/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2:2
