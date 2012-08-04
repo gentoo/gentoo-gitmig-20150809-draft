@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/e2fsprogs-libs-1.42.5.ebuild,v 1.1 2012/08/03 16:05:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/e2fsprogs-libs-1.42.5.ebuild,v 1.2 2012/08/04 19:38:15 vapier Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ case ${PV} in
 *)      UP_PV=${PV} ;;
 esac
 
-inherit toolchain-funcs
+inherit toolchain-funcs eutils
 
 DESCRIPTION="e2fsprogs libraries (common error and subsystem)"
 HOMEPAGE="http://e2fsprogs.sourceforge.net/"
@@ -29,6 +29,7 @@ DEPEND="nls? ( sys-devel/gettext )
 S=${WORKDIR}/${P%_pre*}
 
 src_prepare() {
+	epatch "${FILESDIR}"/${PN}-1.42.5-ldflags.patch #429756
 	printf 'all:\n%%:;@:\n' > doc/Makefile.in # don't bother with docs #305613
 }
 
