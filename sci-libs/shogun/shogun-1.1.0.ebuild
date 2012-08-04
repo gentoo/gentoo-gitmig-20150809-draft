@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/shogun/shogun-1.1.0.ebuild,v 1.3 2012/07/24 13:50:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/shogun/shogun-1.1.0.ebuild,v 1.4 2012/08/04 20:51:03 bicatali Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ SRC_URI="ftp://shogun-toolbox.org/shogun/releases/${MYPV}/sources/${P}.tar.bz2
 
 LICENSE="GPL-3 free-noncomm"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="arpack bzip2 doc examples glpk gzip hdf5 json lapack lpsolve mono lua lzma
 	lzo java R ruby	octave python readline snappy static-libs superlu test xml"
 
@@ -58,7 +58,8 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-respect-ldflags.patch \
 		"${FILESDIR}"/${P}-test-snappy.patch \
-		"${FILESDIR}"/${P}-test-readline.patch
+		"${FILESDIR}"/${P}-test-readline.patch \
+		"${FILESDIR}"/${P}-as-needed.patch
 
 	# dist-packages is only for debian
 	# remove exagarated optimizations (-O9 does not exist...)
@@ -134,7 +135,7 @@ src_compile() {
 src_test() {
 	use lapack || return
 	ln -s ../../${MYPD}/* ../data/
-	emake DESTDIR="${D}" install
+	emake DESTDIR="${ED}" install
 	# disable because very long and buggy dynamic paths (assumed install)
 	# emake tests
 	emake -C shogun check-examples
