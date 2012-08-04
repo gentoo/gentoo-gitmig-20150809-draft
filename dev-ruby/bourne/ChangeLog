@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bourne
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bourne/ChangeLog,v 1.4 2012/08/02 05:36:10 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bourne/ChangeLog,v 1.5 2012/08/04 06:50:51 graaff Exp $
+
+  04 Aug 2012; Hans de Graaff <graaff@gentoo.org> -bourne-1.1.2.ebuild:
+  Remove version with broken gemspec.
 
 *bourne-1.1.2-r1 (02 Aug 2012)
 
