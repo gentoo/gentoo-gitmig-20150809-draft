@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.12.0.ebuild,v 1.2 2012/07/31 06:51:24 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.12.0.ebuild,v 1.3 2012/08/04 13:36:01 hwoarang Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.kadu.net"
 SRC_URI="http://download.kadu.im/stable/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 SLOT="0"
 IUSE="ayatana +gadu mpd phonon sdk speech spell xmpp"
 REQUIRED_USE="
