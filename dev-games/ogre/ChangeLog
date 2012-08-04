@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/ogre
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.83 2012/07/18 09:23:08 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.84 2012/08/04 09:44:02 ago Exp $
+
+  04 Aug 2012; Agostino Sarubbo <ago@gentoo.org> ogre-1.8.0.ebuild:
+  Stable for amd64, wrt bug #427056
 
   18 Jul 2012; Jeff Horelick <jdhore@gentoo.org> ogre-1.8.0.ebuild:
   marked x86 per bug 427056
