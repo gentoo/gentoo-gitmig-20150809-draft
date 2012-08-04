@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/json
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.93 2012/07/31 06:52:32 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.94 2012/08/04 14:13:20 hwoarang Exp $
+
+  04 Aug 2012; Markos Chandras <hwoarang@gentoo.org> json-1.6.7.ebuild:
+  Stable on amd64 wrt bug #428756
 
   31 Jul 2012; Jeff Horelick <jdhore@gentoo.org> json-1.6.7.ebuild:
   marked x86 per bug 428756
@@ -374,4 +377,3 @@
   28 Dec 2008; Hans de Graaff <graaff@gentoo.org> +metadata.xml,
   +json-1.1.3.ebuild:
   Initial import from my personal overlay. Dependency for httparty.
-
