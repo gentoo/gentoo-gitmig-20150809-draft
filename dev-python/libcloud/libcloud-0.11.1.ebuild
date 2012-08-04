@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libcloud/libcloud-0.7.1.ebuild,v 1.2 2011/12/30 18:17:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libcloud/libcloud-0.11.1.ebuild,v 1.1 2012/08/04 16:02:47 floppym Exp $
 
 EAPI="3"
 
@@ -20,15 +20,15 @@ SRC_URI="mirror://apache/${PN}/apache-${P}.tar.bz2"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="examples"
+IUSE="examples test"
 
 RDEPEND=""
-DEPEND=""
+DEPEND="test? ( dev-python/mock )"
 
 S="${WORKDIR}/apache-${P}"
 
 src_test() {
-	cp test/secrets.py-dist test/secrets.py || die
+	cp libcloud/test/secrets.py-dist libcloud/test/secrets.py || die
 	distutils_src_test
 }
 
