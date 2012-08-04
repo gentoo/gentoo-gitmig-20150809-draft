@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/opencsg/opencsg-1.3.2.ebuild,v 1.1 2012/08/02 02:06:34 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/opencsg/opencsg-1.3.2.ebuild,v 1.2 2012/08/04 14:12:50 kensington Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-CDEPEND="media-libs/glew x11-libs/qt-core"
+CDEPEND="media-libs/glew x11-libs/qt-core:4"
 DEPEND="${CDEPEND} sys-devel/gcc"
 RDEPEND="${CDEPEND}"
 
