@@ -5,7 +5,7 @@
     <email>admin@pinkbyte.ru</email>
     <name>Sergey Popov</name>
   </maintainer>
-  <herd>proxy-maint</herd>
+  <herd>proxy-maintainers</herd>
   <use>
     <flag name='banlists'>Install upstream provided simple banlists</flag>
   </use>
