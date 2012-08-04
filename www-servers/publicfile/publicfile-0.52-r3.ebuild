@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/publicfile/publicfile-0.52-r3.ebuild,v 1.2 2012/08/03 16:52:47 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/publicfile/publicfile-0.52-r3.ebuild,v 1.3 2012/08/04 11:57:23 jer Exp $
 
 EAPI=4
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs user
 
 DESCRIPTION="publish files through FTP and HTTP"
 HOMEPAGE="http://cr.yp.to/publicfile.html"
@@ -52,7 +52,7 @@ src_install() {
 	newexe ftpd publicfile-ftpd
 	newexe httpd publicfile-httpd
 	newexe configure publicfile-conf
-	dodoc CHANGES FILES README SYSDEPS TARGETS TODO VERSION
+	dodoc CHANGES README TODO
 }
 
 pkg_preinst() {
