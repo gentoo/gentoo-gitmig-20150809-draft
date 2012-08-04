@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/xf86-video-virtualbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.93 2012/06/20 16:15:39 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.94 2012/08/04 10:01:24 polynomial-c Exp $
+
+  04 Aug 2012; Lars Wendler <polynomial-c@gentoo.org>
+  xf86-video-virtualbox-4.1.12.ebuild, xf86-video-virtualbox-4.1.16.ebuild,
+  xf86-video-virtualbox-4.1.18.ebuild:
+  Drivers don't work with >=xorg-server-1.12.99 so make them depend on older
+  versions for now. Fixed tab spaces.
 
 *xf86-video-virtualbox-4.1.18 (20 Jun 2012)
 
