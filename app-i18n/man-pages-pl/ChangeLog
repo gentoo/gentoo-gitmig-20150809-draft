@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/man-pages-pl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-pl/ChangeLog,v 1.27 2012/08/02 21:15:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-pl/ChangeLog,v 1.28 2012/08/04 11:47:08 jer Exp $
+
+  04 Aug 2012; Jeroen Roovers <jer@gentoo.org> man-pages-pl-20070628-r2.ebuild:
+  Stable for HPPA (bug #418589).
 
   02 Aug 2012; Markos Chandras <hwoarang@gentoo.org>
   man-pages-pl-20070628-r2.ebuild:
