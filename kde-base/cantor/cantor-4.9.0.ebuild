@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/cantor/cantor-4.9.0.ebuild,v 1.1 2012/08/01 22:16:56 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/cantor/cantor-4.9.0.ebuild,v 1.2 2012/08/04 14:07:49 johu Exp $
 
 EAPI=4
 
@@ -26,6 +26,8 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	>=dev-cpp/eigen-2.0.3:2
 "
+
+PATCHES=( "${FILESDIR}/${P}-parallel-build.patch" )
 
 src_configure() {
 	mycmakeargs=(
