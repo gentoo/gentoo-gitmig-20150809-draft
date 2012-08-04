@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/minit
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/minit/ChangeLog,v 1.11 2009/12/09 14:00:34 vostorga Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/minit/ChangeLog,v 1.12 2012/08/04 16:55:19 vostorga Exp $
+
+  04 Aug 2012; Víctor Ostorga <vostorga@gentoo.org> minit-0.10.ebuild:
+  Allowing minit to cross-compile, bug 375653. Patch thanks to Bertrand Jacquin
+  <beber@meleeweb.net>
 
   09 Dec 2009; Víctor Ostorga <vostorga@gentoo.org> minit-0.10.ebuild:
   Specifying DIET variable, thanks to Andreas Wiese
