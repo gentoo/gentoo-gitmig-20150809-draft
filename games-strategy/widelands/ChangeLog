@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/widelands
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/ChangeLog,v 1.43 2012/05/21 19:23:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/ChangeLog,v 1.44 2012/08/04 14:39:10 mr_bones_ Exp $
+
+  04 Aug 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/widelands-0.17-gcc47.patch, widelands-0.17.ebuild:
+  add upstream patch for gcc47 extracted by Michał Górny (bug #420961)
 
   21 May 2012; Michael Sterrett <mr_bones_@gentoo.org> widelands-0.16.ebuild,
   widelands-0.17.ebuild:

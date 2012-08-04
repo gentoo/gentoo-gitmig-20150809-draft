@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.17.ebuild,v 1.3 2012/05/21 19:23:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.17.ebuild,v 1.4 2012/08/04 14:39:10 mr_bones_ Exp $
 
 EAPI=3
 inherit eutils versionator cmake-utils games
@@ -32,7 +32,9 @@ CMAKE_BUILD_TYPE=Release
 PREFIX=${GAMES_DATADIR}/${PN}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-cxxflags.patch
+	epatch \
+		"${FILESDIR}"/${P}-cxxflags.patch \
+		"${FILESDIR}"/${P}-gcc47.patch
 
 	sed -i -e 's:__ppc__:__PPC__:' src/s2map.cc || die
 	sed -i -e '74i#define OF(x) x' src/io/filesystem/{un,}zip.h || die
