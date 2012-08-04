@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/linux-gpib-3.2.16-r2.ebuild,v 1.1 2012/08/03 07:31:12 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/linux-gpib-3.2.16-r2.ebuild,v 1.2 2012/08/04 01:39:55 mr_bones_ Exp $
 
 EAPI=4
 PERL_EXPORT_PHASE_FUNCTIONS=no
@@ -75,7 +75,7 @@ src_configure() {
 		$(use_enable tcl tcl-binding) \
 		$(use_enable doc documentation) \
 		--with-linux-srcdir=${KV_DIR} \
-	
+
 }
 
 src_compile() {
