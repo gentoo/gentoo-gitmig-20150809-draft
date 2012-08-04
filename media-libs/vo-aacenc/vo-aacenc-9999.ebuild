@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vo-aacenc/vo-aacenc-9999.ebuild,v 1.8 2012/05/15 13:08:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vo-aacenc/vo-aacenc-9999.ebuild,v 1.9 2012/08/04 17:26:53 hasufell Exp $
 
 EAPI=4
 
@@ -36,6 +36,7 @@ src_prepare() {
 
 src_configure() {
 	econf \
+		--disable-silent-rules \
 		--disable-dependency-tracking \
 		$(use_enable examples example) \
 		$(use_enable neon armv7neon) \
