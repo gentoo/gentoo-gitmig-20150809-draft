@@ -1,6 +1,12 @@
 # ChangeLog for sci-calculators/gonvert
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/gonvert/ChangeLog,v 1.11 2011/08/06 21:20:51 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/gonvert/ChangeLog,v 1.12 2012/08/04 21:15:30 bicatali Exp $
+
+  04 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> -files/0.2.12-about.patch,
+  -files/0.2.15-glade.patch, -files/0.2.19-paths.patch,
+  -gonvert-0.2.15-r1.ebuild, -gonvert-0.2.19.ebuild, -gonvert-0.2.23.ebuild,
+  gonvert-0.2.25.ebuild:
+  keyword amd64-linux, x86-linux, removed old
 
 *gonvert-0.2.25 (06 Aug 2011)
 
@@ -56,4 +62,3 @@
   +metadata.xml, +gonvert-0.2.12.ebuild:
   Initial commit, closes bug #62492 by Marius Konitzer. Ebuild by Yaakov S
   <yselkowitz@hotmail.com>.
-
