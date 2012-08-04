@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.237 2012/08/01 13:40:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.238 2012/08/04 16:39:50 jer Exp $
+
+  04 Aug 2012; Jeroen Roovers <jer@gentoo.org> curl-7.27.0-r2.ebuild:
+  Marked ~hppa (bug #428520).
 
   01 Aug 2012; Alexis Ballier <aballier@gentoo.org> curl-7.27.0-r2.ebuild:
   keyword ~amd64-fbsd
