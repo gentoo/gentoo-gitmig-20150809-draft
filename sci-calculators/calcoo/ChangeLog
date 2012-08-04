@@ -1,6 +1,10 @@
 # ChangeLog for sci-calculators/calcoo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/calcoo/ChangeLog,v 1.20 2012/05/21 20:00:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/calcoo/ChangeLog,v 1.21 2012/08/04 21:08:01 bicatali Exp $
+
+  04 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> -calcoo-1.3.16.ebuild,
+  calcoo-1.3.18.ebuild, metadata.xml:
+  keyword amd64-linux, x86-linux, removed old
 
   21 May 2012; Samuli Suominen <ssuominen@gentoo.org> calcoo-1.3.18.ebuild:
   inherit eutils for make_desktop_entry
