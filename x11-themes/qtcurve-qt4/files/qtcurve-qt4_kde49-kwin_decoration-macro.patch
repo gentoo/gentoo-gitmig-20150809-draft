@@ -1,15 +1,12 @@
-diff -Naur a/kwin/qtcurvehandler.cpp b/kwin/qtcurvehandler.cpp
---- a/kwin/qtcurvehandler.cpp	2012-08-02 13:36:58.811347708 +0000
-+++ b/kwin/qtcurvehandler.cpp	2012-08-02 13:38:03.240996792 +0000
-@@ -489,6 +489,11 @@
- 
- extern "C"
- {
-+    KWIN_EXPORT int decoration_version()
-+    {
-+        return KWIN_DECORATION_API_VERSION;
-+    }
-+
-     KDE_EXPORT KDecorationFactory *create_factory()
-     {
+--- kwin/qtcurvehandler.cpp.org	2012-08-04 13:31:51.391630113 +0200
++++ kwin/qtcurvehandler.cpp	2012-08-04 15:24:44.732256341 +0200
+@@ -494,6 +494,9 @@
          KWinQtCurve::handler = new KWinQtCurve::QtCurveHandler();
+         return KWinQtCurve::handler;
+     }
++#if KDE_IS_VERSION(4,8,80)
++    KDE_EXPORT int decoration_version() { return KWIN_DECORATION_API_VERSION; }
++#endif
+ }
+ 
+ #include "qtcurvedbus.moc"
