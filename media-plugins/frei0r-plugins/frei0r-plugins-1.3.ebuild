@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/frei0r-plugins/frei0r-plugins-1.3.ebuild,v 1.6 2012/06/14 14:12:20 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/frei0r-plugins/frei0r-plugins-1.3.ebuild,v 1.7 2012/08/04 08:01:54 ssuominen Exp $
 
 EAPI=4
 inherit cmake-utils multilib
@@ -36,7 +36,12 @@ src_prepare() {
 	sed -i \
 		-e '/set(CMAKE_C_FLAGS/d' \
 		-e "/LIBDIR.*frei0r-1/s:lib:$(get_libdir):" \
-		${f}
+		${f} || die
+
+	# http://bugs.gentoo.org/418243
+	sed -i \
+		-e '/set.*CMAKE_C_FLAGS/s:"): ${CMAKE_C_FLAGS}&:' \
+		src/filter/*/${f} || die
 
 	use facedetect || sed -i -e '/package.*OpenCV/d' ${f}
 	use scale0tilt || sed -i -e '/modules.*gavl/d' ${f}
