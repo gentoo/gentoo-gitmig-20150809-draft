@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.54 2012/07/24 19:17:41 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.55 2012/08/04 19:57:41 zmedico Exp $
 
 EAPI=3
 inherit git-2 eutils multilib python
@@ -26,7 +26,7 @@ python_dep="${python_dep//ssl,}"
 
 # The pysqlite blocker is for bug #282760.
 DEPEND="${python_dep}
-	!build? ( >=sys-apps/sed-4.0.5 )
+	>=sys-apps/sed-4.0.5 sys-devel/patch
 	doc? ( app-text/xmlto ~app-text/docbook-xml-dtd-4.4 )
 	epydoc? ( >=dev-python/epydoc-2.0 !<=dev-python/pysqlite-2.4.1 )"
 # Require sandbox-2.2 for bug #288863.
