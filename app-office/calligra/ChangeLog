@@ -1,6 +1,13 @@
 # ChangeLog for app-office/calligra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.57 2012/07/20 21:23:34 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.58 2012/08/04 16:17:34 johu Exp $
+
+*calligra-2.4.3-r1 (04 Aug 2012)
+
+  04 Aug 2012; Johannes Huber <johu@gentoo.org> +calligra-2.4.3-r1.ebuild,
+  +files/calligra-2.4.3-security-fix-buffer-overflow.patch,
+  -calligra-2.4.3.ebuild:
+  Revision bump adds a upstream security patch which fixes a buffer overflow.
 
 *calligra-2.4.92 (20 Jul 2012)
 

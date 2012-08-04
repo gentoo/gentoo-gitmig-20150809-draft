@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.4.3.ebuild,v 1.2 2012/07/19 16:18:40 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.4.3-r1.ebuild,v 1.1 2012/08/04 16:17:34 johu Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -121,7 +121,10 @@ PDEPEND=">=app-office/calligra-l10n-$(get_version_component_range 1-2)"
 RESTRICT=test
 # bug 394273
 
-PATCHES=( "${FILESDIR}/${PN}-2.4.2-marble.patch" )
+PATCHES=(
+	"${FILESDIR}/${PN}-2.4.2-marble.patch"
+	"${FILESDIR}/${PN}-2.4.3-security-fix-buffer-overflow.patch"
+)
 
 src_configure() {
 	local cal_ft
