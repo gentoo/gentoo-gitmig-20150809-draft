@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/mathgl-2.0.3.ebuild,v 1.2 2012/08/04 18:10:02 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/mathgl-2.0.3.ebuild,v 1.3 2012/08/04 19:11:50 bicatali Exp $
 
 EAPI=4
 
 WX_GTK_VER=2.8
 
-inherit cmake-utils eutils python wxwidgets multilib
+inherit cmake-utils eutils python wxwidgets multilib flag-o-matic
 
 DESCRIPTION="Math Graphics Library"
 HOMEPAGE="http://mathgl.sourceforge.net/"
@@ -70,7 +70,7 @@ src_prepare() {
 	# bored of reporting bad libdir upstream
 	sed -i \
 		-e '/DESTINATION/s:lib$:lib${LIB_SUFFIX}:g' \
-		*/CMakeLists.txt || die
+		{src,widgets}/CMakeLists.txt || die
 	echo "" > lang/install.m || die
 	epatch "${FILESDIR}"/${P}-fix-hardcoded-paths.patch
 }
@@ -105,7 +105,7 @@ src_configure() {
 			"${CMAKE_BUILD_DIR}"/lang/cmake_install.cmake || die
 		# fix location of numpy
 		use python && append-cppflags \
-			-I$(echo "import numpy; print numpy.get_include()" | "$(PYTHON)" - 2>/dev/null)
+			-I$(echo "import numpy; print(numpy.get_include())" | "$(PYTHON)" - 2>/dev/null)
 	fi
 
 }
