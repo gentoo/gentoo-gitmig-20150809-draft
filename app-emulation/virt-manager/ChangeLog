@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/virt-manager
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.72 2012/07/11 05:29:56 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.73 2012/08/04 19:28:31 cardoe Exp $
+
+*virt-manager-0.9.4 (04 Aug 2012)
+
+  04 Aug 2012; Doug Goldstein <cardoe@gentoo.org> -virt-manager-0.9.3.ebuild,
+  +virt-manager-0.9.4.ebuild:
+  Bump for bug fix for VNC keyboard focus issues.
 
 *virt-manager-0.9.3 (10 Jul 2012)
 
