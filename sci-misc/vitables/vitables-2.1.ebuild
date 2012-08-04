@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/vitables/vitables-2.1.ebuild,v 1.2 2012/04/22 08:00:54 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/vitables/vitables-2.1.ebuild,v 1.3 2012/08/04 19:07:00 bicatali Exp $
 
-EAPI="2"
+EAPI=4
 
 PYTHON_DEPEND="2:2.5"
 SUPPORT_PYTHON_ABIS="1"
@@ -19,27 +19,38 @@ SRC_URI="http://${PN}.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples"
 
-DEPEND="
+RDEPEND="
 	dev-python/pytables
 	dev-python/PyQt4[X]"  # FIXME: check if any other useflags are needed
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	doc? ( dev-python/sphinx )"
 
 S=${WORKDIR}/${MY_P}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-no-docs.patch
+}
+
+src_compile() {
+	distutils_src_compile
+	if use doc; then
+		# fixme: multiple python (anyone cares?)
+	   python setup.py build_sphinx || die
+	fi
+}
 
 src_install() {
 	dodir /usr/share/icons/hicolor/scalable/apps
 	dodir /usr/share/applications
-	XDG_DATA_DIRS="${D}/usr/share" distutils_src_install
+	XDG_DATA_DIRS="${ED}/usr/share" distutils_src_install
 
 	if use examples; then
-		insinto /usr/share/doc/${P}/examples
-		doins -r examples/* || die
+		insinto /usr/share/doc/${PF}/examples
+		doins -r examples/*
 	fi
-
-	if use doc; then
-		dodoc doc/* || die
-	fi
+	use doc && dohtml -r build/sphinx/html/* && \
+		dodoc build/sphinx/latex/*.pdf
 }
