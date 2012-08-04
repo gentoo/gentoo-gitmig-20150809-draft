@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.142 2012/07/15 23:10:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.143 2012/08/04 16:25:42 vapier Exp $
+
+  04 Aug 2012; Mike Frysinger <vapier@gentoo.org>
+  files/xbmc-9999-nomythtv.patch:
+  Update mythtv patch to latest git #429588 by BT.
 
   15 Jul 2012; Mike Frysinger <vapier@gentoo.org>
   +files/xbmc-11.0-nomythtv.patch, files/xbmc-9999-nomythtv.patch,

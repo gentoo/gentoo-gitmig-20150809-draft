@@ -13,17 +13,8 @@ index 9ffae7e..17cc525 100755
 -ifeq (@USE_MYSQL@,1)
 +ifeq (@USE_MYTHTV@,1)
  LIB_DIRS += lib/cmyth
+ CMYTH=cmyth
  endif
- 
-@@ -322,7 +322,7 @@ imagelib: dllloader
- codecs: papcodecs dvdpcodecs
- 
- libs: libhdhomerun libid3tag imagelib libexif system/libcpluff-@ARCH@.so
--ifeq (@USE_MYSQL@,1)
-+ifeq (@USE_MYTHTV@,1)
- libs += cmyth
- endif
- 
 diff --git a/configure.in b/configure.in
 index d44825f..629d7b4 100755
 --- a/configure.in
