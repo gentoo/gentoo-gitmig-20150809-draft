@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/imapsync
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/imapsync/ChangeLog,v 1.56 2012/08/03 18:18:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/imapsync/ChangeLog,v 1.57 2012/08/04 11:32:30 blueness Exp $
+
+  04 Aug 2012; Anthony G. Basile <blueness@gentoo.org> imapsync-1.488.ebuild:
+  Stable ppc, bug #429176
 
   03 Aug 2012; Agostino Sarubbo <ago@gentoo.org> imapsync-1.488.ebuild:
   Stable for amd64, wrt bug #429176
