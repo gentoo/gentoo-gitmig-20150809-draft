@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libunwind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libunwind/ChangeLog,v 1.22 2012/07/23 21:01:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libunwind/ChangeLog,v 1.23 2012/08/04 09:46:36 ago Exp $
+
+  04 Aug 2012; Agostino Sarubbo <ago@gentoo.org> libunwind-1.0.1-r1.ebuild:
+  Stable for amd64, wrt bug #427136
 
   23 Jul 2012; Markus Meier <maekke@gentoo.org> libunwind-1.0.1-r1.ebuild:
   add ~arm, bug #426430
