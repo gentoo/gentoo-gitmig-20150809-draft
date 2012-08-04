@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/ceph
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ChangeLog,v 1.22 2012/06/27 13:53:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ChangeLog,v 1.23 2012/08/04 10:23:37 alexxy Exp $
+
+*ceph-0.49 (04 Aug 2012)
+
+  04 Aug 2012; Alexey Shvetsov <alexxy@gentoo.org> +ceph-0.49.ebuild:
+  [sys-cluster/ceph] version bump per bug #424791
 
   27 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> ceph-0.44.ebuild:
   Missing dev-libs/fcgi and dev-libs/libaio dependencies wrt #410003 by Stoian
@@ -113,4 +118,3 @@
   07 Dec 2010; Alexey Shvetsov <alexxy@gentoo.org> +ceph-0.23.1.ebuild,
   +files/ceph.confd, +files/ceph.initd, +metadata.xml:
   Initial import per bug #338008
-
