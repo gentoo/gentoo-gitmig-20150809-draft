@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/cyphesis-0.5.26.ebuild,v 1.4 2012/07/24 17:13:53 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/cyphesis-0.5.26.ebuild,v 1.5 2012/08/04 10:51:53 ago Exp $
 
 EAPI=2
 PYTHON_DEPEND=2
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/worldforge/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=media-libs/skstream-0.3.8
