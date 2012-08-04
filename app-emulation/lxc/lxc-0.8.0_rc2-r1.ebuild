@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-0.8.0_rc2.ebuild,v 1.1 2012/07/21 05:07:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-0.8.0_rc2-r1.ebuild,v 1.1 2012/08/04 04:58:06 flameeyes Exp $
 
 EAPI="4"
 
 MY_P="${P/_/-}"
 
-BACKPORTS=1
+BACKPORTS=2
 
 inherit eutils linux-info versionator flag-o-matic
 
@@ -110,9 +110,8 @@ src_configure() {
 src_install() {
 	default
 
-	rm -r "${D}"/usr/sbin/lxc-{setcap,ls} \
-		"${D}"/usr/share/man/man1/lxc-ls.1 \
-		|| die "unable to remove extraenous content"
+	rm -r "${D}"/usr/sbin/lxc-setcap \
+		|| die "unable to remove lxc-setcap"
 
 	keepdir /etc/lxc /usr/lib/lxc/rootfs
 
