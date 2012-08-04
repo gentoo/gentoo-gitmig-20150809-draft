@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/vamp-plugin-sdk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vamp-plugin-sdk/ChangeLog,v 1.42 2012/08/03 16:34:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vamp-plugin-sdk/ChangeLog,v 1.43 2012/08/04 12:01:43 jer Exp $
+
+  04 Aug 2012; Jeroen Roovers <jer@gentoo.org> vamp-plugin-sdk-2.3.ebuild:
+  Stable for HPPA (bug #419107).
 
   03 Aug 2012; Agostino Sarubbo <ago@gentoo.org> vamp-plugin-sdk-2.3.ebuild:
   Stable for amd64, wrt bug #419107
