@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/h5utils/h5utils-1.12.1-r2.ebuild,v 1.4 2012/04/25 17:01:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/h5utils/h5utils-1.12.1-r2.ebuild,v 1.5 2012/08/04 16:05:24 bicatali Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://ab-initio.mit.edu/h5utils/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc x86 ~amd64-linux ~x86-linux"
 IUSE="hdf octave"
 
 DEPEND="
