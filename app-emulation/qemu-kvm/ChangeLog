@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.144 2012/08/04 09:48:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.145 2012/08/04 19:33:45 cardoe Exp $
+
+  04 Aug 2012; Doug Goldstein <cardoe@gentoo.org> qemu-kvm-1.1.1-r1.ebuild:
+  Switch from QA_PRESTRIPPED to QA_PREBUILT since these files are in fact
+  pre-built and won't respect CFLAGS.
 
   04 Aug 2012; Agostino Sarubbo <ago@gentoo.org> qemu-kvm-1.0.1-r1.ebuild:
   Stable for amd64, wrt bug #425206
