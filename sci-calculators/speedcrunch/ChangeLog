@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/speedcrunch
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/speedcrunch/ChangeLog,v 1.3 2009/12/25 17:56:38 yngwin Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/speedcrunch/ChangeLog,v 1.4 2012/08/04 21:52:55 bicatali Exp $
+
+  04 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> speedcrunch-0.10.1.ebuild:
+  keyword amd64-linux, x86-linux
 
   25 Dec 2009; Ben de Groot <yngwin@gentoo.org> speedcrunch-0.10.1.ebuild:
   Remove deprecated dependency on x11-libs/qt
@@ -19,4 +22,3 @@
   02 Jun 2008; Sébastien Fabbro <bicatali@gentoo.org>
   +files/speedcrunch-0.10-fix-icon-name.patch, +speedcrunch-0.10.ebuild:
   Initial import, see bug #78113
-
