@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/xbase
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xbase/ChangeLog,v 1.28 2012/07/29 18:19:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xbase/ChangeLog,v 1.29 2012/08/04 13:44:27 hwoarang Exp $
+
+  04 Aug 2012; Markos Chandras <hwoarang@gentoo.org> xbase-3.1.2.ebuild:
+  Stable on amd64 wrt bug #428926
 
   29 Jul 2012; Raúl Porcel <armin76@gentoo.org> xbase-2.0.0.ebuild,
   xbase-2.0.0-r1.ebuild, xbase-2.0.0-r2.ebuild, xbase-3.1.2.ebuild:
@@ -101,4 +104,3 @@
   20 Jul 2004; Carsten Lohrke <carlo@gentoo.org> +metadata.xml,
   +xbase-2.0.0.ebuild:
   Initial ebuild.
-
