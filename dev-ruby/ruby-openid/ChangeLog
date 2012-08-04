@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-openid
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-openid/ChangeLog,v 1.21 2012/05/01 18:24:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-openid/ChangeLog,v 1.22 2012/08/04 09:22:34 graaff Exp $
+
+*ruby-openid-2.2.0 (04 Aug 2012)
+
+  04 Aug 2012; Hans de Graaff <graaff@gentoo.org> +ruby-openid-2.2.0.ebuild:
+  Version bump. Add ruby19, jruby.
 
   01 May 2012; Raúl Porcel <armin76@gentoo.org> ruby-openid-2.1.8.ebuild:
   Drop ia64/sparc keywords
