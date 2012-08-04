@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/udav
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/udav/ChangeLog,v 1.9 2012/05/02 17:26:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/udav/ChangeLog,v 1.10 2012/08/04 17:55:35 bicatali Exp $
+
+  04 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> udav-0.7.1.2-r1.ebuild:
+  Block newer mathgl
 
 *udav-0.7.1.2-r1 (02 May 2012)
 
@@ -59,4 +62,3 @@
   07 Dec 2008; Andrey Grozin <grozin@gentoo.org> +files/udav-0.5-pro.patch,
   +metadata.xml, +udav-0.5.ebuild:
   Initial import, based on ebuild in the science overlay.
-
