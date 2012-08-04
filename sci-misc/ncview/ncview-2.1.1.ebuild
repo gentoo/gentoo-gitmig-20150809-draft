@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/ncview/ncview-2.1.1.ebuild,v 1.1 2011/08/06 16:34:07 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/ncview/ncview-2.1.1.ebuild,v 1.2 2012/08/04 18:24:48 bicatali Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://cirrus.ucsd.edu/pub/ncview/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 
 DEPEND="media-libs/libpng
 	>=sci-libs/netcdf-4.1[hdf5]
