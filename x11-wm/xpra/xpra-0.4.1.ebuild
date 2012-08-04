@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.4.1.ebuild,v 1.1 2012/08/01 07:15:21 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.4.1.ebuild,v 1.2 2012/08/04 09:56:55 xmw Exp $
 
 EAPI=3
 
@@ -40,7 +40,7 @@ RDEPEND="${COMMON_DEPEND}
 	server? ( x11-base/xorg-server[xvfb,-minimal] )"
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
-	dev-python/cython"
+	>=dev-python/cython-0.16"
 
 src_prepare() {
 	use server || epatch disable-posix-server.patch
