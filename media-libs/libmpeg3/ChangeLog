@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmpeg3
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.75 2012/08/03 16:36:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.76 2012/08/04 12:00:31 jer Exp $
+
+  04 Aug 2012; Jeroen Roovers <jer@gentoo.org> libmpeg3-1.8.ebuild:
+  Stable for HPPA (bug #419087).
 
   03 Aug 2012; Agostino Sarubbo <ago@gentoo.org> libmpeg3-1.8.ebuild:
   Stable for amd64, wrt bug #419087
