@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/pango/pango-0.12.3.ebuild,v 1.3 2012/08/04 13:53:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/pango/pango-0.12.3.ebuild,v 1.4 2012/08/04 13:54:58 hwoarang Exp $
 
 EAPI=4
 
@@ -24,4 +24,4 @@ RDEPEND="=dev-haskell/cairo-0.12*[profile?]
 		x11-libs/cairo
 		x11-libs/pango"
 DEPEND="${RDEPEND}
-		dev-haskell/gtk2hs-buildtools"
+		>=dev-haskell/gtk2hs-buildtools-0.12.3-r3"
