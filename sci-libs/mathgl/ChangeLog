@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/mathgl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/ChangeLog,v 1.27 2012/03/01 07:41:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/ChangeLog,v 1.28 2012/08/04 02:05:04 bicatali Exp $
+
+*mathgl-2.0.3 (04 Aug 2012)
+
+  04 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> +mathgl-2.0.3.ebuild,
+  metadata.xml:
+  Version bump. Switched to cmake, so had to rewrite from scratch
 
   01 Mar 2012; Justin Lecher <jlec@gentoo.org> mathgl-1.11.2.ebuild,
   +files/mathgl-1.11.2-cast.patch, metadata.xml:
@@ -146,4 +152,3 @@
   02 Dec 2008; Andrey Grozin <grozin@gentoo.org> +metadata.xml,
   +mathgl-1.8.ebuild:
   Initial import, based on ebuild in the science overlay
-
