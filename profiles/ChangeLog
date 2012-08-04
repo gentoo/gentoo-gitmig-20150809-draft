@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6868 2012/08/04 11:01:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6869 2012/08/04 13:12:23 mabi Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 Aug 2012; Matti Bickel <mabi@gentoo.org> package.mask:
+  removed www-apps/zina
 
   04 Aug 2012; Jeroen Roovers <jer@gentoo.org> base/package.use.mask:
   Unmask net-misc/curl USE=metalink again (bug #429334).

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14028 2012/08/03 11:58:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14029 2012/08/04 13:12:23 mabi Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -206,11 +206,6 @@ dev-util/boost-build:1.50
 # Dead upstream. Doesn't compile with current kernels.
 # Removal in 30 days.
 app-laptop/lenovo-sl-laptop
-
-# Matti Bickel <mabi@gentoo.org> (3 Jul 2012)
-# Dead upstream. Possible replacement is www-apps/ampache
-# Removal on 3rd Aug 2012
-www-apps/zina
 
 # Samuli Suominen <ssuominen@gentoo.org> (02 Jul 2012)
 # The functionality of libsexy has been moved to GTK+
