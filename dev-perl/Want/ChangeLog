@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Want
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Want/ChangeLog,v 1.49 2012/08/03 10:57:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Want/ChangeLog,v 1.50 2012/08/04 11:33:03 jer Exp $
+
+  04 Aug 2012; Jeroen Roovers <jer@gentoo.org> Want-0.210.0.ebuild:
+  Stable for HPPA (bug #418865).
 
   03 Aug 2012; Agostino Sarubbo <ago@gentoo.org> Want-0.210.0.ebuild:
   Stable for amd64, wrt bug #418865
