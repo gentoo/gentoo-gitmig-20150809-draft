@@ -1,0 +1,14 @@
+diff --git a/boost/config/stdlib/libstdcpp3.hpp b/boost/config/stdlib/libstdcpp3.hpp
+index 52d5837..aaa8890 100644
+--- a/boost/config/stdlib/libstdcpp3.hpp
++++ b/boost/config/stdlib/libstdcpp3.hpp
+@@ -33,7 +33,8 @@
+ 
+ #ifdef __GLIBCXX__ // gcc 3.4 and greater:
+ #  if defined(_GLIBCXX_HAVE_GTHR_DEFAULT) \
+-        || defined(_GLIBCXX__PTHREADS)
++        || defined(_GLIBCXX__PTHREADS) \
++        || defined(_GLIBCXX_HAS_GTHREADS)
+       //
+       // If the std lib has thread support turned on, then turn it on in Boost
+       // as well.  We do this because some gcc-3.4 std lib headers define _REENTANT
