@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/netwmpager
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/netwmpager/ChangeLog,v 1.16 2012/06/04 19:52:37 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/netwmpager/ChangeLog,v 1.17 2012/08/04 13:56:26 hwoarang Exp $
+
+  04 Aug 2012; Markos Chandras <hwoarang@gentoo.org> netwmpager-2.04.ebuild:
+  Stable on amd64 wrt bug #429238
 
 *netwmpager-2.04 (04 Jun 2012)
 
@@ -65,4 +68,3 @@
   +netwmpager-1.6.ebuild:
   Initial import. Ebuild submitted by Timo Hirvonen <tihirvon@ee.oulu.fi>;
   bug #91872.
-

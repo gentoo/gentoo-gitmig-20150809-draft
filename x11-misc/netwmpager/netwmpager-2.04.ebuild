@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/netwmpager/netwmpager-2.04.ebuild,v 1.1 2012/06/04 19:52:37 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/netwmpager/netwmpager-2.04.ebuild,v 1.2 2012/08/04 13:56:26 hwoarang Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/sf-xpaint/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND="x11-libs/libX11
