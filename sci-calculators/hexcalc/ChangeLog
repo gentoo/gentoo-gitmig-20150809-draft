@@ -1,6 +1,10 @@
 # ChangeLog for sci-calculators/hexcalc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/hexcalc/ChangeLog,v 1.14 2012/04/26 16:40:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/hexcalc/ChangeLog,v 1.15 2012/08/04 21:22:08 bicatali Exp $
+
+  04 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> hexcalc-1.11-r2.ebuild,
+  metadata.xml:
+  keyword amd64-linux, x86-linux
 
   26 Apr 2012; Justin Lecher <jlec@gentoo.org> -hexcalc-1.11.ebuild,
   hexcalc-1.11-r2.ebuild, metadata.xml:
