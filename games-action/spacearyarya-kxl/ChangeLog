@@ -1,6 +1,12 @@
 # ChangeLog for games-action/spacearyarya-kxl
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/spacearyarya-kxl/ChangeLog,v 1.10 2009/06/03 13:21:33 nyhm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/spacearyarya-kxl/ChangeLog,v 1.11 2012/08/04 15:38:54 hasufell Exp $
+
+  04 Aug 2012; Julian Ospald <hasufell@gentoo.org>
+  -files/1.0.2-gentoo-paths.patch, spacearyarya-kxl-1.0.2-r1.ebuild,
+  +files/spacearyarya-kxl-1.0.2-flags.patch,
+  +files/spacearyarya-kxl-1.0.2-gentoo-paths.patch:
+  respect CFLAGS wrt bug #429422
 
   03 Jun 2009; Tristan Heaven <nyhm@gentoo.org>
   spacearyarya-kxl-1.0.2-r1.ebuild:

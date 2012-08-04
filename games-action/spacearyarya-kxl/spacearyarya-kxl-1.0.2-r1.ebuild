@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/spacearyarya-kxl/spacearyarya-kxl-1.0.2-r1.ebuild,v 1.7 2011/12/05 08:46:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/spacearyarya-kxl/spacearyarya-kxl-1.0.2-r1.ebuild,v 1.8 2012/08/04 15:38:54 hasufell Exp $
 
 inherit autotools eutils games
 
@@ -24,7 +24,8 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${PV}-gentoo-paths.patch
+	epatch "${FILESDIR}"/${P}-gentoo-paths.patch \
+		"${FILESDIR}"/${P}-flags.patch
 	eautoreconf
 }
 
