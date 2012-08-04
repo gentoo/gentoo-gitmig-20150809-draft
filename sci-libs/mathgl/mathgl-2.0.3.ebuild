@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/mathgl-2.0.3.ebuild,v 1.1 2012/08/04 02:05:04 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/mathgl-2.0.3.ebuild,v 1.2 2012/08/04 18:10:02 bicatali Exp $
 
 EAPI=4
 
@@ -15,10 +15,16 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz mirror://sourceforge/${PN}/STIX_
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="doc fltk gif glut gsl hdf hdf5 jpeg mpi octave opengl pdf png python
-	qt4 static-libs threads wxwidgets zlib"
+IUSE="doc double-precision fltk gif glut gsl hdf hdf5 jpeg mpi octave opengl pdf
+	png python qt4 static-libs threads wxwidgets zlib"
+
+LANGS="ru"
+for l in ${LANGS}; do
+	IUSE+=" linguas_${l}"
+done
 
 RDEPEND="
+	!sci-visualization/udav
 	virtual/opengl
 	fltk? ( x11-libs/fltk:1 )
 	gif? ( media-libs/giflib )
@@ -64,13 +70,16 @@ src_prepare() {
 	# bored of reporting bad libdir upstream
 	sed -i \
 		-e '/DESTINATION/s:lib$:lib${LIB_SUFFIX}:g' \
-		*/CMakeLists.txt || diex
+		*/CMakeLists.txt || die
+	echo "" > lang/install.m || die
+	epatch "${FILESDIR}"/${P}-fix-hardcoded-paths.patch
 }
 
 src_configure() {
 	local mycmakeargs=(
 		-DHDF4_INCLUDE_DIR="${EPREFIX}/usr/include"
 		$(cmake-utils_use doc enable-doc)
+		$(cmake-utils_use double-precision enable-double)
 		$(cmake-utils_use fltk enable-fltk)
 		$(cmake-utils_use gif enable-gif)
 		$(cmake-utils_use glut enable-glut)
@@ -89,14 +98,33 @@ src_configure() {
 		$(cmake-utils_use zlib enable-zlib)
 	)
 	cmake-utils_src_configure
-	sed -i -e "s:--prefix=\(.*\) :--prefix=\$ENV{DESTDIR}\1 :" \
-		${CMAKE_BUILD_DIR}/lang/cmake_install.cmake || die
+	# to whoever cares: TODO: do for multiple python ABI
+	if use python; then
+		sed -i \
+			-e "s:--prefix=\(.*\) :--prefix=\$ENV{DESTDIR}\1 :" \
+			"${CMAKE_BUILD_DIR}"/lang/cmake_install.cmake || die
+		# fix location of numpy
+		use python && append-cppflags \
+			-I$(echo "import numpy; print numpy.get_include()" | "$(PYTHON)" - 2>/dev/null)
+	fi
+
 }
 
 src_install() {
 	cmake-utils_src_install
 	dodoc README* *.txt AUTHORS
 	use static-libs || rm "${ED}"/usr/$(get_libdir)/*.a
+	if use qt4 ; then
+		local lang
+		insinto /usr/share/udav
+		for lang in ${LANGS} ; do
+			use linguas_${lang} && doins udav/udav_${lang}.qm
+		done
+	fi
+	if use octave ; then
+		insinto /usr/share/${PN}/octave
+		doins "${CMAKE_BUILD_DIR}"/lang/${PN}.tar.gz
+	fi
 }
 
 pkg_postinst() {

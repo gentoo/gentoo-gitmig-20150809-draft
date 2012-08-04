@@ -14,5 +14,6 @@
 </longdescription>
 <use>
   <flag name="octave">Add bindings for <pkg>sci-mathematics/octave</pkg></flag>
+  <flag name="double-precision">Add double precision calculations</flag>
 </use>
 </pkgmetadata>
