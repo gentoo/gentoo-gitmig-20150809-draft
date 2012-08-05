@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/wcslib-4.14.ebuild,v 1.1 2012/07/17 19:59:47 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/wcslib-4.14.ebuild,v 1.2 2012/08/05 20:50:19 bicatali Exp $
 
 EAPI=4
 
-inherit eutils fortran-2
+inherit eutils fortran-2 multilib
 
 DESCRIPTION="Astronomical World Coordinate System transformations library"
 HOMEPAGE="http://www.atnf.csiro.au/people/mcalabre/WCS/"
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.atnf.csiro.au/pub/software/${PN}/${P}.tar.bz2"
 SLOT="0"
 LICENSE="LGPL-3"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="fortran fits pgplot static-libs"
+IUSE="doc fortran fits pgplot static-libs"
 
 RDEPEND="fortran? ( virtual/fortran )
 	fits? ( sci-libs/cfitsio )
@@ -51,5 +51,7 @@ src_install () {
 	default
 	# static libs are same as shared (compiled with PIC)
 	# so they are not compiled twice
-	use static-libs || rm -f "${ED}"/usr/$(get_libdir)/lib*.a
+	use static-libs || rm "${ED}"/usr/$(get_libdir)/lib*.a
+	use doc || rm -r "${ED}"/usr/share/doc/${PF}/html \
+		"${ED}"/usr/share/doc/${PF}/*.pdf
 }
