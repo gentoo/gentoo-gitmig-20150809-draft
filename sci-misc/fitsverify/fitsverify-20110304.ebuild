@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/fitsverify/fitsverify-20110304.ebuild,v 1.2 2012/05/04 07:50:52 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/fitsverify/fitsverify-20110304.ebuild,v 1.3 2012/08/05 14:11:38 bicatali Exp $
 
-EAPI=2
+EAPI=4
 inherit toolchain-funcs
 
 DESCRIPTION="FITS file format checker"
@@ -11,7 +11,7 @@ SRC_URI="${HOMEPAGE}/${PN}.tar -> ${P}.tar"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND=">=sci-libs/cfitsio-3"
@@ -27,6 +27,6 @@ src_compile() {
 }
 
 src_install() {
-	dobin fitsverify || die
+	dobin fitsverify
 	dodoc README
 }
