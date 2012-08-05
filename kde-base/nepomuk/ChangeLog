@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/nepomuk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk/ChangeLog,v 1.132 2012/08/01 22:17:02 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk/ChangeLog,v 1.133 2012/08/05 05:02:37 creffett Exp $
+
+  05 Aug 2012; Chris Reffett <creffett@gentoo.org> nepomuk-4.9.0.ebuild:
+  Remove blocker on virtuoso-6.1.5, which was removed from the tree.
 
 *nepomuk-4.9.0 (01 Aug 2012)
 
@@ -528,4 +531,3 @@
   18 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org> +metadata.xml,
   +nepomuk-4.0.0.ebuild:
   Added KDE 4.0.0's nepomuk.
-

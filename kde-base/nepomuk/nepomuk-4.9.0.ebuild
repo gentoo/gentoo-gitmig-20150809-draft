@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk/nepomuk-4.9.0.ebuild,v 1.1 2012/08/01 22:17:02 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk/nepomuk-4.9.0.ebuild,v 1.2 2012/08/05 05:02:37 creffett Exp $
 
 EAPI=4
 
@@ -18,9 +18,6 @@ DEPEND="
 	$(add_kdebase_dep kdelibs 'semantic-desktop')
 	$(add_kdebase_dep nepomuk-core)
 	!kde-misc/nepomukcontroller
-	!~dev-db/virtuoso-server-6.1.5
-	!~dev-db/virtuoso-odbc-6.1.5
-	!~dev-db/virtuoso-jdbc-6.1.5
 "
 RDEPEND="${DEPEND}"
 
