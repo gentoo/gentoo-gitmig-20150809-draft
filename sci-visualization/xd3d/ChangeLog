@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/xd3d
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xd3d/ChangeLog,v 1.17 2012/06/21 14:50:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xd3d/ChangeLog,v 1.18 2012/08/05 16:26:45 jlec Exp $
+
+  05 Aug 2012; Justin Lecher <jlec@gentoo.org> xd3d-8.3.1.ebuild,
+  +files/xd3d-8.3.1-cflags.patch:
+  Respect CFLAGS, #430032
 
   21 Jun 2012; Justin Lecher <jlec@gentoo.org> xd3d-8.3.1.ebuild:
   Add missing multilib.eclass
