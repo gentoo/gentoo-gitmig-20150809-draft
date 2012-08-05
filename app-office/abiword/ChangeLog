@@ -1,6 +1,9 @@
 # ChangeLog for app-office/abiword
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.261 2012/05/29 22:11:54 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.262 2012/08/05 21:44:50 blueness Exp $
+
+  05 Aug 2012; Anthony G. Basile <blueness@gentoo.org> abiword-2.8.6-r2.ebuild:
+  Keyword ~arm
 
   29 May 2012; Anthony G. Basile <blueness@gentoo.org> abiword-2.8.6-r2.ebuild:
   Keyword ~mips

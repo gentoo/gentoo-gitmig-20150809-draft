@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.8.6-r2.ebuild,v 1.10 2012/05/29 22:11:54 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.8.6-r2.ebuild,v 1.11 2012/08/05 21:44:50 blueness Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -16,7 +16,7 @@ SRC_URI="http://www.abisource.com/downloads/${PN}/${PV}/source/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="alpha amd64 ia64 ~mips ppc ppc64 sparc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="alpha amd64 ~arm ia64 ~mips ppc ppc64 sparc x86 ~amd64-linux ~x86-linux"
 IUSE="collab cups gnome grammar latex math ots openxml +plugins readline spell wordperfect wmf thesaurus" # svg
 
 # You need 'plugins' enabled if want to enable the extra plugins
