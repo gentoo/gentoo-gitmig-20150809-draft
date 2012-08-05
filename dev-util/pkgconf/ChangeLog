@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pkgconf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.44 2012/08/04 10:26:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.45 2012/08/05 13:31:45 grobian Exp $
+
+  05 Aug 2012; Fabian Groffen <grobian@gentoo.org> pkgconf-0.8.5.ebuild:
+  Marked ~{ppc,x86,x64}-macos, ~{x86,x64}-freebsd
 
   04 Aug 2012; Agostino Sarubbo <ago@gentoo.org> pkgconf-0.8.5.ebuild:
   Stable for amd64, wrt bug #427680
