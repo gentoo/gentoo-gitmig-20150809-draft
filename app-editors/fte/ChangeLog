@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/fte
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/ChangeLog,v 1.50 2011/01/10 16:18:31 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/ChangeLog,v 1.51 2012/08/05 23:32:28 ottxor Exp $
+
+*fte-20051115-r3 (05 Aug 2012)
+
+  05 Aug 2012; Christoph Junghans <ottxor@gentoo.org> +files/fte-interix.patch,
+  +fte-20051115-r3.ebuild, -fte-20051115-r2.ebuild:
+  EAPI bumped to 4, add prefix changes
 
   10 Jan 2011; Jeroen Roovers <jer@gentoo.org> fte-20051115-r2.ebuild:
   Fix obvious typo thanks to Paul Hartman and Rafał Mużyło (bug #350701).

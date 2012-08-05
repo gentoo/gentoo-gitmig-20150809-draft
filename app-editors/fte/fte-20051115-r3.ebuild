@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20051115-r2.ebuild,v 1.2 2011/01/10 16:18:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20051115-r3.ebuild,v 1.1 2012/08/05 23:32:28 ottxor Exp $
 
-EAPI="2"
+EAPI=4
 
 inherit eutils toolchain-funcs
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/fte/${P}-src.zip
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc -sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc -sparc ~x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="gpm slang X"
 
 S="${WORKDIR}/${PN}"
@@ -35,15 +35,19 @@ set_targets() {
 	use slang && TARGETS="${TARGETS} sfte"
 	use X && TARGETS="${TARGETS} xfte"
 
-	TARGETS="${TARGETS} vfte"
+	[[ ${CHOST} == *-linux-gnu* ]] \
+		&& TARGETS="${TARGETS} vfte" \
+		|| TARGETS="${TARGETS} nfte"
 }
 
 src_prepare() {
 	epatch "${FILESDIR}"/fte-gcc34
 	epatch "${FILESDIR}"/${PN}-new_keyword.patch
 	epatch "${FILESDIR}"/${PN}-slang.patch
+	epatch "${FILESDIR}"/${PN}-interix.patch
 
-	sed /usr/include/linux/keyboard.h -e '/wait.h/d' > src/hacked_keyboard.h
+	[[ -e /usr/include/linux/keyboard.h ]] && \
+		sed /usr/include/linux/keyboard.h -e '/wait.h/d' > src/hacked_keyboard.h
 
 	sed \
 		-e "s:<linux/keyboard.h>:\"hacked_keyboard.h\":" \
@@ -59,6 +63,9 @@ src_configure() {
 	set_targets
 	sed \
 		-e "s:@targets@:${TARGETS}:" \
+		-e '/^XINCDIR  =/c\XINCDIR  =' \
+		-e '/^XLIBDIR  =/c\XLIBDIR  = -lstdc++' \
+		-e '/^SINCDIR   =/c\SINCDIR = -I'"${EPREFIX}"'/usr/include/slang' \
 		-i src/fte-unix.mak || die "sed targets"
 
 	if ! use gpm; then
@@ -72,12 +79,14 @@ src_configure() {
 }
 
 src_compile() {
-	DEFFLAGS="PREFIX=/usr CONFIGDIR=/usr/share/fte \
-		DEFAULT_FTE_CONFIG=../config/main.fte"
+	local os="-DLINUX" # by now the default in makefile
+	[[ ${CHOST} == *-interix* ]] && os=
+
+	DEFFLAGS="PREFIX='${EPREFIX}'/usr CONFIGDIR='${EPREFIX}'/usr/share/fte \
+		DEFAULT_FTE_CONFIG=../config/main.fte UOS=${os}"
 
 	set_targets
-	emake CXX=$(tc-getCXX) OPTIMIZE="${CXXFLAGS}" ${DEFFLAGS} TARGETS="${TARGETS}" \
-		all || die "emake failed"
+	emake CXX=$(tc-getCXX) OPTIMIZE="${CXXFLAGS}" ${DEFFLAGS} TARGETS="${TARGETS}" all
 }
 
 src_install() {
@@ -91,10 +100,10 @@ src_install() {
 	files="${TARGETS} cfte"
 
 	for i in ${files}; do
-		dobin src/$i || die "dobin ${i}"
+		dobin src/$i
 	done
 
-	dobin "${FILESDIR}"/fte || die "dobin fte"
+	dobin "${FILESDIR}"/fte
 
 	dodoc Artistic CHANGES BUGS HISTORY README TODO
 	dohtml doc/*
@@ -103,12 +112,12 @@ src_install() {
 	insinto /usr/share/fte
 	doins -r config/*
 
-	rm -rf "${D}"/usr/share/fte/CVS
+	rm -rf "${ED}"/usr/share/fte/CVS
 }
 
 pkg_postinst() {
 	ebegin "Compiling configuration"
-	cd /usr/share/fte || die "missing configuration dir"
-	/usr/bin/cfte main.fte /etc/fte/system.fterc
+	cd "${EPREFIX}"/usr/share/fte || die "missing configuration dir"
+	"${EPREFIX}"/usr/bin/cfte main.fte "${EPREFIX}"/etc/fte/system.fterc
 	eend $?
 }
