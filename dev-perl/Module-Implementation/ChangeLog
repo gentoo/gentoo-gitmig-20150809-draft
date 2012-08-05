@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Module-Implementation
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Implementation/ChangeLog,v 1.11 2012/08/02 01:15:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Implementation/ChangeLog,v 1.12 2012/08/05 18:33:11 maekke Exp $
+
+  05 Aug 2012; Markus Meier <maekke@gentoo.org>
+  Module-Implementation-0.60.0.ebuild:
+  arm stable, bug #418803
 
   02 Aug 2012; Jeroen Roovers <jer@gentoo.org>
   Module-Implementation-0.60.0.ebuild:
