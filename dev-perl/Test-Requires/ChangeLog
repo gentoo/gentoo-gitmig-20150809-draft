@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Requires
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Requires/ChangeLog,v 1.21 2012/08/02 01:11:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Requires/ChangeLog,v 1.22 2012/08/05 16:37:39 maekke Exp $
+
+  05 Aug 2012; Markus Meier <maekke@gentoo.org> Test-Requires-0.60.0.ebuild:
+  arm stable, bug #418803
 
   02 Aug 2012; Jeroen Roovers <jer@gentoo.org> Test-Requires-0.60.0.ebuild:
   Stable for HPPA (bug #418803).

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Dist-CheckConflicts
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Dist-CheckConflicts/ChangeLog,v 1.16 2012/08/02 01:18:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Dist-CheckConflicts/ChangeLog,v 1.17 2012/08/05 16:41:23 maekke Exp $
+
+  05 Aug 2012; Markus Meier <maekke@gentoo.org>
+  Dist-CheckConflicts-0.20.0.ebuild:
+  arm stable, bug #418803
 
   02 Aug 2012; Jeroen Roovers <jer@gentoo.org>
   Dist-CheckConflicts-0.20.0.ebuild:
