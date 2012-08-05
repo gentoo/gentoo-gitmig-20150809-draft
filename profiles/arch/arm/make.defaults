@@ -11,4 +11,4 @@ FCFLAGS="${CFLAGS}"
 
 # 2006/08/18 - Donnie Berkholz <dberkholz@gentoo.org>
 # Defaults for video drivers
-VIDEO_CARDS="fbdev omapfb"
+VIDEO_CARDS="exynos fbdev omap omapfb"
