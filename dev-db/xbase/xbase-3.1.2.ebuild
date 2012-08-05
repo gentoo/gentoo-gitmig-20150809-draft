@@ -1,11 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xbase/xbase-3.1.2.ebuild,v 1.3 2012/08/04 13:44:27 hwoarang Exp ${PN}/${PN}-2.0.0-r1.ebuild,v 1.6 2012/06/29 14:42:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xbase/xbase-3.1.2.ebuild,v 1.4 2012/08/05 14:35:50 jer Exp ${PN}/${PN}-2.0.0-r1.ebuild,v 1.6 2012/06/29 14:42:09 jer Exp $
 
 EAPI=4
-
 AUTOTOOLS_AUTORECONF=no
-
 inherit autotools-utils
 
 DESCRIPTION="xbase (i.e. dBase, FoxPro, etc.) compatible C++ class library"
@@ -17,11 +15,6 @@ LICENSE="GPL-2"
 KEYWORDS="amd64 ~hppa ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="doc static-libs"
 
-RDEPEND=""
-DEPEND="${DEPEND}
-	sys-devel/automake
-	sys-devel/libtool"
-
 S="${WORKDIR}"/${PN}64-${PV}
 
 PATCHES=(
@@ -32,7 +25,8 @@ PATCHES=(
 		"${FILESDIR}"/${P}-lesserg.patch
 		"${FILESDIR}"/${P}-outofsource.patch
 		"${FILESDIR}"/${P}-gcc47.patch
-		"${FILESDIR}"/${P}-gcc-version.patch )
+		"${FILESDIR}"/${P}-gcc-version.patch
+)
 
 src_install() {
 	autotools-utils_src_install
@@ -42,6 +36,6 @@ src_install() {
 	if use doc; then
 		dohtml html/*
 		insinto /usr/share/doc/${PF}/examples
-		doins examples/{*.cpp,examples.ide,makefile.g95}
+		doins examples/*
 	fi
 }
