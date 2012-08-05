@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/virtuoso-server-6.1.5.ebuild,v 1.1 2012/07/13 22:25:39 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/virtuoso-server-6.1.6.ebuild,v 1.1 2012/08/05 03:54:13 creffett Exp $
 
 EAPI=4
 
@@ -51,11 +51,7 @@ VOS_EXTRACT="
 
 DOCS=(AUTHORS ChangeLog CREDITS INSTALL NEWS README)
 
-PATCHES=(
-	"${FILESDIR}/${PN}-6.1.4-unbundle-minizip.patch"
-	"${FILESDIR}/${PN}-6.1.4-strncat-overflow.patch"
-
-)
+PATCHES=( "${FILESDIR}/${PN}-6.1.4-unbundle-minizip.patch" )
 
 src_prepare() {
 	sed -e '/^lib_LTLIBRARIES\s*=.*/s/lib_/noinst_/' -i binsrc/virtuoso/Makefile.am \

@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/virtuoso-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/ChangeLog,v 1.39 2012/07/13 22:25:39 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/ChangeLog,v 1.40 2012/08/05 03:54:13 creffett Exp $
+
+*virtuoso-server-6.1.6 (05 Aug 2012)
+
+  05 Aug 2012; Chris Reffett <creffett@gentoo.org>
+  +virtuoso-server-6.1.6.ebuild, -virtuoso-server-6.1.5.ebuild:
+  Version bump, remove 6.1.5 because it's somewhat broken and unsupported for
+  KDE 4.9.
 
 *virtuoso-server-6.1.5 (13 Jul 2012)
 
