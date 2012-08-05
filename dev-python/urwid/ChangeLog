@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/urwid
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/ChangeLog,v 1.51 2012/07/14 00:42:04 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/ChangeLog,v 1.52 2012/08/05 21:47:58 blueness Exp $
+
+  05 Aug 2012; Anthony G. Basile <blueness@gentoo.org> urwid-1.0.2.ebuild:
+  Keyword ~arm
 
 *urwid-1.0.2 (14 Jul 2012)
 
