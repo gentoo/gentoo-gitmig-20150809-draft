@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Test-Simple
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test-Simple/ChangeLog,v 1.80 2012/08/02 01:15:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test-Simple/ChangeLog,v 1.81 2012/08/05 16:59:53 maekke Exp $
+
+  05 Aug 2012; Markus Meier <maekke@gentoo.org>
+  perl-Test-Simple-0.980.0-r2.ebuild:
+  arm stable, bug #418803
 
   02 Aug 2012; Jeroen Roovers <jer@gentoo.org>
   perl-Test-Simple-0.980.0-r2.ebuild:
