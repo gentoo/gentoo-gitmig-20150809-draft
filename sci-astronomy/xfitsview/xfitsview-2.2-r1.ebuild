@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xfitsview/xfitsview-2.2-r1.ebuild,v 1.2 2010/10/10 21:14:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xfitsview/xfitsview-2.2-r1.ebuild,v 1.3 2012/08/05 20:00:56 bicatali Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils
 
 MY_PN=XFITSview
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.cv.nrao.edu/fits/os-support/unix/xfitsview/${PN}${PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 DEPEND=">=x11-libs/openmotif-2.3:0"
@@ -28,6 +28,6 @@ src_prepare() {
 }
 
 src_install() {
-	dobin XFITSview || die
-	dodoc README changes notes.text || die
+	dobin XFITSview
+	dodoc README changes notes.text
 }
