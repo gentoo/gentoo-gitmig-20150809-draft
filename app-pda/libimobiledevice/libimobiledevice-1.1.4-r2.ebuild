@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libimobiledevice/libimobiledevice-1.1.4-r2.ebuild,v 1.1 2012/08/05 13:03:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libimobiledevice/libimobiledevice-1.1.4-r2.ebuild,v 1.2 2012/08/05 14:49:41 ssuominen Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2:2.7"
@@ -59,5 +59,5 @@ src_install() {
 	default
 	dohtml docs/html/*
 
-	find "${ED}" -name '*.la' -exec rm -f {} +
+	prune_libtool_files --all
 }
