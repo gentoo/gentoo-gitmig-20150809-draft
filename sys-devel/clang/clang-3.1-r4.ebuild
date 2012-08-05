@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.1-r4.ebuild,v 1.3 2012/07/27 18:22:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.1-r4.ebuild,v 1.4 2012/08/05 14:07:08 ryao Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ SRC_URI="http://llvm.org/releases/${PV}/llvm-${PV}.src.tar.gz
 
 LICENSE="UoI-NCSA"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86 ~amd64-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos"
+KEYWORDS="~amd64 ~arm ~x86 ~amd64-fbsd ~x64-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos"
 IUSE="debug kernel_FreeBSD multitarget +static-analyzer test"
 
 DEPEND="static-analyzer? ( dev-lang/perl )"
