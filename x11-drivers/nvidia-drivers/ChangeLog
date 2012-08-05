@@ -1,6 +1,16 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.371 2012/07/25 21:59:25 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.372 2012/08/05 22:43:04 cardoe Exp $
+
+*nvidia-drivers-302.17-r1 (05 Aug 2012)
+*nvidia-drivers-295.59-r1 (05 Aug 2012)
+
+  05 Aug 2012; Doug Goldstein <cardoe@gentoo.org>
+  +files/nvidia-blacklist-vga-pmu-registers-256-304.diff,
+  +nvidia-drivers-295.59-r1.ebuild, -nvidia-drivers-302.17.ebuild,
+  +nvidia-drivers-302.17-r1.ebuild:
+  Fix CVE-2012-xxxx. With access to /dev/nvidia* a malicious user could exploit
+  the VGA window size to read/write from kernel memory and gain root access.
 
   25 Jul 2012; Doug Goldstein <cardoe@gentoo.org> nvidia-drivers-304.22.ebuild:
   New approach to QA warning prevention. Don't prevent prelinking. Fix white

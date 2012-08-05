@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-302.17.ebuild,v 1.2 2012/07/22 17:10:05 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-295.59-r1.ebuild,v 1.1 2012/08/05 22:43:04 cardoe Exp $
 
 EAPI="2"
 
@@ -295,6 +295,9 @@ src_prepare() {
 	use kernel_FreeBSD && cd doc
 
 	if use kernel_linux; then
+		# Fix CVE-2012-xxxx VGA window resize vulnerability
+		epatch "${FILESDIR}"/nvidia-blacklist-vga-pmu-registers-256-304.diff
+		
 		# Quiet down warnings the user does not need to see
 		sed -i \
 			-e 's:-Wsign-compare::g' \
