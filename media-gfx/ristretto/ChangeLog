@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/ristretto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ristretto/ChangeLog,v 1.73 2012/07/29 21:54:35 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ristretto/ChangeLog,v 1.74 2012/08/05 23:10:41 angelos Exp $
+
+*ristretto-0.6.3 (05 Aug 2012)
+
+  05 Aug 2012; Christoph Mende <angelos@gentoo.org> +ristretto-0.6.3.ebuild:
+  Version bump
 
 *ristretto-0.6.2 (29 Jul 2012)
 
