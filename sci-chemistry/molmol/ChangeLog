@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/molmol
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/ChangeLog,v 1.30 2012/02/17 09:24:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/ChangeLog,v 1.31 2012/08/05 12:38:45 jlec Exp $
+
+*molmol-2k_p2-r3 (05 Aug 2012)
+
+  05 Aug 2012; Justin Lecher <jlec@gentoo.org> molmol-2k_p2-r2.ebuild,
+  +molmol-2k_p2-r3.ebuild, +files/molmol-2k_p2-fink.patch:
+  Add patch from fink, enhances code style and fixes OGL bug, #429974
 
   17 Feb 2012; Justin Lecher <jlec@gentoo.org> molmol-2k_p2-r2.ebuild:
   Add altenative dependency on libGLw
