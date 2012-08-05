@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fricas/fricas-1.1.7-r1.ebuild,v 1.1 2012/06/22 07:35:14 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fricas/fricas-1.1.7-r1.ebuild,v 1.2 2012/08/05 05:28:50 grozin Exp $
 EAPI=4
-inherit eutils multilib elisp-common
+inherit eutils multilib elisp-common autotools
 
 DESCRIPTION="FriCAS is a fork of Axiom computer algebra system"
 HOMEPAGE="http://${PN}.sourceforge.net/"
@@ -49,6 +49,10 @@ RESTRICT="strip"
 src_prepare() {
 	# fix a bug in src/graph/view3D/smoothShade3d.c
 	epatch "${FILESDIR}"/${P}.patch
+
+	# workaround for broken sbcl
+	epatch "${FILESDIR}"/${PN}-sbcl.patch
+	eautoreconf
 }
 
 src_configure() {
