@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/flexlm/flexlm-9.5-r2.ebuild,v 1.3 2012/07/12 15:56:47 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/flexlm/flexlm-9.5-r2.ebuild,v 1.4 2012/08/05 16:05:45 hasufell Exp $
 
 EAPI=4
-inherit eutils user
+inherit user
 
 DESCRIPTION="Macrovision FLEXlm license manager and utils"
 HOMEPAGE="http://www.macrovision.com/services/support/flexlm/lmgrd.shtml"
@@ -21,22 +21,20 @@ LICENSE="as-is GPL-2"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
-RESTRICT="strip"
+
+QA_PREBUILT="
+	opt/flexlm/bin/lmgrd
+	opt/flexlm/bin/lmutil"
 
 S="${WORKDIR}"
 
-src_unpack() {
-	unpack ${A}
-
-	mv lmutil-${ARCH} lmutil
-	mv lmgrd-${ARCH} lmgrd
-
-	cp "${DISTDIR}"/enduser.pdf "${S}"
+src_prepare() {
+	mv lmutil-* lmutil || die
+	mv lmgrd-* lmgrd || die
 }
 
 src_install () {
 	# executables
-	dodir /opt/flexlm/bin
 	exeinto /opt/flexlm/bin
 	doexe lmgrd lmutil
 
@@ -50,7 +48,7 @@ src_install () {
 	dosym lmutil /opt/flexlm/bin/lmver
 
 	# documentation
-	dodoc enduser.pdf
+	dodoc "${DISTDIR}"/enduser.pdf
 
 	# init files
 	newinitd "${FILESDIR}"/flexlm-init flexlm
@@ -71,7 +69,7 @@ pkg_postinst() {
 	enewuser flexlm -1 /bin/bash /opt/flexlm flexlm
 
 	# See bug 383787
-	chown flexlm /var/log/flexlm || die
+	chown flexlm /var/log/flexlm || eerror "'chown flexlm /var/log/flexlm' failed!"
 
 	elog "FlexLM installed. Config is in /etc/conf.d/flexlm"
 	elog "Default location for license file is /etc/flexlm/license.dat"
