@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.263 2012/08/04 15:14:09 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.264 2012/08/05 17:43:29 slyfox Exp $
+
+*mc-4.8.4-r3 (05 Aug 2012)
+
+  05 Aug 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/mc-4.8.4-Ticket-2856-aspell-sigsegv.patch, +mc-4.8.4-r3.ebuild,
+  -mc-4.8.4-r2.ebuild:
+  Fixed mcedit segfaults when aspell dictionaries are missing (bug #429794 by
+  Lars Wendler)
 
   04 Aug 2012; Julian Ospald <hasufell@gentoo.org> mc-4.8.1-r1.ebuild,
   mc-4.8.3-r2.ebuild, mc-4.8.4-r2.ebuild, mc-9999.ebuild:
