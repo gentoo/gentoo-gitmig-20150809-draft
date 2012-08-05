@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/loudmouth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.108 2012/05/05 02:54:31 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.109 2012/08/05 20:50:11 blueness Exp $
+
+  05 Aug 2012; Anthony G. Basile <blueness@gentoo.org>
+  loudmouth-1.4.3-r2.ebuild:
+  Keyword ~arm
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> loudmouth-1.4.3-r2.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
