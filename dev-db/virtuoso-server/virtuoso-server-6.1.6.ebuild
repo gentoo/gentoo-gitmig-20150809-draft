@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/virtuoso-server-6.1.6.ebuild,v 1.1 2012/08/05 03:54:13 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/virtuoso-server-6.1.6.ebuild,v 1.2 2012/08/05 19:47:22 reavertm Exp $
 
 EAPI=4
 
@@ -26,6 +26,7 @@ COMMON_DEPEND="
 	readline? ( sys-libs/readline:0 )
 "
 DEPEND="${COMMON_DEPEND}
+	>=dev-util/gperf-2.7.2
 	sys-apps/gawk
 	>=sys-devel/bison-2.3
 	>=sys-devel/flex-2.5.33
