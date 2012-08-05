@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Server/PEAR-Net_Server-1.0.2-r1.ebuild,v 1.6 2012/07/04 14:52:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Server/PEAR-Net_Server-1.0.2-r1.ebuild,v 1.7 2012/08/05 18:21:29 armin76 Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ DESCRIPTION="Generic server class for PHP."
 
 LICENSE="PHP-3.01"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 RDEPEND="dev-lang/php[sockets]"
