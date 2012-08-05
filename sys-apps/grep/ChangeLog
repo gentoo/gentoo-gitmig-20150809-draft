@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/grep
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.113 2012/08/05 15:19:13 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.114 2012/08/05 15:44:21 blueness Exp $
+
+  05 Aug 2012; Anthony G. Basile <blueness@gentoo.org> grep-2.12.ebuild:
+  Stable arm, bug #429694
 
   05 Aug 2012; Anthony G. Basile <blueness@gentoo.org> grep-2.12.ebuild:
   Stable ppc ppc64, bug #429694
