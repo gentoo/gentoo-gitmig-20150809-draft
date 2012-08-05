@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-premiereepg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-premiereepg/ChangeLog,v 1.13 2012/06/12 19:31:11 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-premiereepg/ChangeLog,v 1.14 2012/08/05 19:50:09 hd_brummy Exp $
+
+  05 Aug 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-premiereepg-0.2.0-r1.ebuild:
+  stable amd64 x86, bug 429132
 
 *vdr-premiereepg-0.2.0-r1 (12 Jun 2012)
 
