@@ -1,6 +1,11 @@
 # ChangeLog for sci-astronomy/galaxy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/galaxy/ChangeLog,v 1.6 2012/02/02 11:22:26 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/galaxy/ChangeLog,v 1.7 2012/08/05 17:53:57 bicatali Exp $
+
+  05 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> -galaxy-2.0.ebuild,
+  galaxy-2.1.ebuild, metadata.xml:
+  Links with posix threads, fixed for prefix, keyword amd64-linux, x86-linux,
+  removed old
 
 *galaxy-2.1 (02 Feb 2012)
 
@@ -28,4 +33,3 @@
   +files/galaxy-1.8-gentoo.patch, +metadata.xml:
   New ebuild for galaxy. Ebuild written by Juan Pablo Lassala. Fixes bug
   321719
-
