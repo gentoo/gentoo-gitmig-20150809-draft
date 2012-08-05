@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/snakeoil
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.51 2012/08/05 05:37:48 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.52 2012/08/05 05:43:28 ferringb Exp $
+
+  05 Aug 2012; Brian Harring <ferringb@gentoo.org> snakeoil-0.5.ebuild:
+  Update the python dep to >=2.5 && not 3.0
 
 *snakeoil-0.5 (05 Aug 2012)
 
@@ -257,4 +260,3 @@
   06 Jun 2007; Marien Zwart <marienz@gentoo.org> +metadata.xml,
   +snakeoil-0.1_rc2.ebuild:
   New ebuild.
-

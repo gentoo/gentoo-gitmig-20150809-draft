@@ -1,10 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/snakeoil-0.5.ebuild,v 1.1 2012/08/05 05:37:48 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/snakeoil-0.5.ebuild,v 1.2 2012/08/05 05:43:28 ferringb Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
 
+PYTHON_ABI="2.5 2.6 2.7 3.1 3.2"
 inherit distutils
 
 DESCRIPTION="Miscellaneous python utility code."
