@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/gtk+extra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/ChangeLog,v 1.42 2012/05/05 03:52:24 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/ChangeLog,v 1.43 2012/08/05 08:45:41 ssuominen Exp $
+
+  05 Aug 2012; Samuli Suominen <ssuominen@gentoo.org>
+  -gtk+extra-2.1.2-r1.ebuild, -files/gtk+extra-2.1.2-build.patch,
+  -files/gtk+extra-2.1.2-gtk+-2.21.patch,
+  -files/gtk+extra-2.1.2-itementry-crash.patch,
+  -files/gtk+extra-2.1.2-marshal.patch:
+  old
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> gtk+extra-2.1.2-r1.ebuild,
   gtk+extra-3.0.1.ebuild:
