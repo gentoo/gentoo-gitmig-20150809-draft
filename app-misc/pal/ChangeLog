@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/pal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pal/ChangeLog,v 1.32 2012/05/10 15:17:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pal/ChangeLog,v 1.33 2012/08/05 23:57:54 ottxor Exp $
+
+*pal-0.4.3-r1 (05 Aug 2012)
+
+  05 Aug 2012; Christoph Junghans <ottxor@gentoo.org>
+  +files/pal-0.4.3-prefix.patch, +pal-0.4.3-r1.ebuild:
+  EAPI bumped to 4 and added prefix changes
 
   10 May 2012; Agostino Sarubbo <ago@gentoo.org> -pal-0.3.4-r1.ebuild:
   Remove old
@@ -116,4 +122,3 @@
 
   03 Oct 2003; Ian Leitch <port001@gentoo.org> pal-0.2.5.ebuild:
   New package, submited by authority of its author Scott Kuhl
-
