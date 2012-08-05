@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/link-grammar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/link-grammar/ChangeLog,v 1.43 2012/04/28 18:27:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/link-grammar/ChangeLog,v 1.44 2012/08/05 20:41:12 blueness Exp $
+
+  05 Aug 2012; Anthony G. Basile <blueness@gentoo.org>
+  link-grammar-4.7.6.ebuild:
+  Keyword ~arm
 
 *link-grammar-4.7.6 (28 Apr 2012)
 

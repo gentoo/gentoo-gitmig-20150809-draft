@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/link-grammar/link-grammar-4.7.6.ebuild,v 1.1 2012/04/28 18:27:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/link-grammar/link-grammar-4.7.6.ebuild,v 1.2 2012/08/05 20:41:12 blueness Exp $
 
 EAPI=4
 inherit java-pkg-opt-2
@@ -12,7 +12,7 @@ SRC_URI="http://www.abisource.com/downloads/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 # Set the same default as used in app-text/enchant
 IUSE="aspell +hunspell java static-libs threads"
