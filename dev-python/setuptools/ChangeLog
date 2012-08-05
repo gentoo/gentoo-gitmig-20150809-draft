@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/setuptools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.155 2012/05/20 00:31:04 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.156 2012/08/05 14:08:09 ryao Exp $
+
+  05 Aug 2012; Richard Yao <ryao@gentoo.org> setuptools-0.6.27.ebuild:
+  Keyword ~x64-freebsd
 
 *setuptools-0.6.27 (20 May 2012)
 

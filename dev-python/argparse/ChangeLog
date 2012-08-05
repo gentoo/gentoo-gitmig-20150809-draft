@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/argparse
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/ChangeLog,v 1.31 2012/04/26 22:17:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/ChangeLog,v 1.32 2012/08/05 14:08:38 ryao Exp $
+
+  05 Aug 2012; Richard Yao <ryao@gentoo.org> argparse-1.2.1.ebuild:
+  Keyword ~x64-freebsd
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> argparse-1.2.1.ebuild:
   keyword ~amd64-fbsd
