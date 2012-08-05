@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cppi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppi/ChangeLog,v 1.7 2012/03/15 14:22:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppi/ChangeLog,v 1.8 2012/08/05 00:50:26 jer Exp $
+
+*cppi-1.17 (05 Aug 2012)
+
+  05 Aug 2012; Jeroen Roovers <jer@gentoo.org> +cppi-1.17.ebuild:
+  Version bump.
 
   15 Mar 2012; Jeroen Roovers <jer@gentoo.org> -cppi-1.14.ebuild,
   -cppi-1.15.ebuild:
