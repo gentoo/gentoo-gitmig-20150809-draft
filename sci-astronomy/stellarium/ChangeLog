@@ -1,6 +1,10 @@
 # ChangeLog for sci-astronomy/stellarium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.99 2012/08/03 07:46:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.100 2012/08/05 19:56:26 bicatali Exp $
+
+  05 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml,
+  stellarium-0.11.3.ebuild:
+  fixed for new linguas, keyword amd64-linux, x86-linux
 
   03 Aug 2012; Michael Sterrett <mr_bones_@gentoo.org>
   +files/stellarium-0.11.3-desktop.patch, stellarium-0.11.3.ebuild:
