@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/perl-support
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/perl-support/ChangeLog,v 1.42 2011/11/01 19:44:58 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/perl-support/ChangeLog,v 1.43 2012/08/05 23:56:04 radhermit Exp $
+
+*perl-support-5.1 (05 Aug 2012)
+
+  05 Aug 2012; Tim Harder <radhermit@gentoo.org> +perl-support-5.1.ebuild:
+  Version bump.
 
 *perl-support-4.14 (01 Nov 2011)
 
