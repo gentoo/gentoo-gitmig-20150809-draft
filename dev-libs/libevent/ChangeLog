@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libevent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.230 2012/07/23 21:05:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.231 2012/08/05 14:15:52 ryao Exp $
+
+  05 Aug 2012; Richard Yao <ryao@gentoo.org> libevent-2.0.19.ebuild:
+  Keyword ~x64-freebsd
 
   23 Jul 2012; Markus Meier <maekke@gentoo.org> libevent-2.0.19.ebuild:
   arm stable, bug #427126
