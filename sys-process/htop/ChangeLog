@@ -1,6 +1,12 @@
 # ChangeLog for sys-process/htop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.119 2012/07/12 18:14:57 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.120 2012/08/05 08:34:11 ryao Exp $
+
+*htop-1.0.1-r1 (05 Aug 2012)
+
+  05 Aug 2012; Richard Yao <ryao@gentoo.org> +htop-1.0.1-r1.ebuild,
+  htop-1.0.1.ebuild:
+  Make ebuild use /compat/linux/proc on FreeBSD; Keyword ~x64-freebsd
 
   12 Jul 2012; Christian Ruppert <idl0r@gentoo.org> htop-1.0.1.ebuild:
   Inherit autotools eclass for the auto* dependencies
