@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.8.0.ebuild,v 1.1 2012/08/01 19:52:35 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.8.0.ebuild,v 1.2 2012/08/05 09:52:51 johu Exp $
 
 EAPI=4
 
@@ -41,7 +41,7 @@ DEPEND="${COMMON_DEPEND}
 	test? ( >=x11-libs/qt-test-4.5.0:4 )
 "
 RDEPEND="${COMMON_DEPEND}
-	virtuoso? ( >=dev-db/virtuoso-server-6.1.0 )
+	virtuoso? ( >=dev-db/virtuoso-server-6.1.6 )
 "
 
 CMAKE_IN_SOURCE_BUILD="1"
