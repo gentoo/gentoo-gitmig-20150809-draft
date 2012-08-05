@@ -1,6 +1,10 @@
 # ChangeLog for sci-astronomy/pyephem
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/pyephem/ChangeLog,v 1.17 2012/08/05 19:18:28 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/pyephem/ChangeLog,v 1.18 2012/08/05 19:20:35 bicatali Exp $
+
+  05 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> -pyephem-3.7.4.1.ebuild,
+  metadata.xml:
+  removed old
 
   05 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> pyephem-3.7.5.1.ebuild:
   keyword amd64-linux, x86-linux, switch to EAPI4
