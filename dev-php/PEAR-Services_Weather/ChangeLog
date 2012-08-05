@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Services_Weather
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Services_Weather/ChangeLog,v 1.54 2012/07/04 14:53:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Services_Weather/ChangeLog,v 1.55 2012/08/05 18:23:39 armin76 Exp $
+
+  05 Aug 2012; Raúl Porcel <armin76@gentoo.org>
+  PEAR-Services_Weather-1.4.6.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #418895
 
   04 Jul 2012; Jeroen Roovers <jer@gentoo.org>
   PEAR-Services_Weather-1.4.6.ebuild:
