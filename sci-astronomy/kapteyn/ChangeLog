@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/kapteyn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/kapteyn/ChangeLog,v 1.10 2012/04/20 14:45:52 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/kapteyn/ChangeLog,v 1.11 2012/08/05 17:57:22 bicatali Exp $
+
+  05 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> kapteyn-2.2.ebuild:
+  keyword amd64-linux, x86-linux
 
   20 Apr 2012; Kacper Kowalik <xarthisius@gentoo.org> -kapteyn-2.1.ebuild,
   kapteyn-2.2.ebuild:
@@ -47,4 +50,3 @@
   13 Jul 2010; Kacper Kowalik <xarthisius@gentoo.org> +kapteyn-1.9.2.ebuild,
   +metadata.xml:
   Initial import
-

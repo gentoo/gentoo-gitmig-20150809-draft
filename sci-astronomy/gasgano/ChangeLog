@@ -1,6 +1,10 @@
 # ChangeLog for sci-astronomy/gasgano
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/gasgano/ChangeLog,v 1.6 2012/06/04 22:15:20 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/gasgano/ChangeLog,v 1.7 2012/08/05 17:59:37 bicatali Exp $
+
+  05 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> -gasgano-2.4.0.ebuild,
+  gasgano-2.4.3.ebuild:
+  keyword amd64-linux, x86-linux
 
 *gasgano-2.4.3 (04 Jun 2012)
 
@@ -31,4 +35,3 @@
   +sci-astronomy/gasgano/files/gasgano-2.2.8_beta1-no-ext.patch,
   +sci-astronomy/gasgano/metadata.xml:
   Initial import
-
