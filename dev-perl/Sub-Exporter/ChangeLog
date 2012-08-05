@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Sub-Exporter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Exporter/ChangeLog,v 1.20 2012/08/02 01:18:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Exporter/ChangeLog,v 1.21 2012/08/05 16:21:19 maekke Exp $
+
+  05 Aug 2012; Markus Meier <maekke@gentoo.org> Sub-Exporter-0.984.0.ebuild:
+  arm stable, bug #418803
 
   02 Aug 2012; Jeroen Roovers <jer@gentoo.org> Sub-Exporter-0.984.0.ebuild:
   Stable for HPPA (bug #418803).
