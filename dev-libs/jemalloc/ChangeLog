@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/jemalloc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/ChangeLog,v 1.19 2012/06/07 21:40:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/ChangeLog,v 1.20 2012/08/05 01:38:28 jer Exp $
+
+  05 Aug 2012; Jeroen Roovers <jer@gentoo.org> jemalloc-3.0.0.ebuild:
+  Marked ~hppa (bug #429946).
 
   07 Jun 2012; Brent Baude <ranger@gentoo.org> jemalloc-2.2.5-r1.ebuild:
   Marking jemalloc-2.2.5-r1 ppc for bug 418743
