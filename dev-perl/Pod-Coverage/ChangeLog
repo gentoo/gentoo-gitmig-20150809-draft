@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Pod-Coverage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Coverage/ChangeLog,v 1.81 2012/08/05 01:03:34 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Coverage/ChangeLog,v 1.82 2012/08/05 15:52:03 maekke Exp $
+
+  05 Aug 2012; Markus Meier <maekke@gentoo.org> Pod-Coverage-0.220.0.ebuild:
+  arm stable, bug #418845
 
   05 Aug 2012; Johannes Huber <johu@gentoo.org> Pod-Coverage-0.220.0.ebuild:
   Stable for x86, wrt bug #418845
