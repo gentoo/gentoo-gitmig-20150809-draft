@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.139 2012/07/22 19:03:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.140 2012/08/05 18:40:48 armin76 Exp $
+
+  05 Aug 2012; Raúl Porcel <armin76@gentoo.org> package.use.mask, use.mask:
+  Use.mask gts, devil for bug #419621, unmask qt4, p.use.mask
+  x11-misc/google-gadgets qt4 because it requires qt-webkit which we don't have
 
   22 Jul 2012; Raúl Porcel <armin76@gentoo.org> package.use.mask:
   Remove media-gfx/gimp udev from p.use.mask

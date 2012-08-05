@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.100 2012/07/22 19:03:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.101 2012/08/05 18:40:48 armin76 Exp $
 
 # Raúl Porcel <armin76@gentoo.org> (25 Jun 2012)
 # x11-libs/qt-webkit doesn't seem to work
@@ -8,6 +8,7 @@ dev-python/PyQt4 webkit
 x11-libs/qt-assistant webkit
 x11-libs/qt-declarative webkit
 net-irc/kvirc webkit
+x11-misc/google-gadgets qt4
 
 # Raúl Porcel <armin76@gentoo.org> (28 May 2012)
 # Needs x11-misc/lightdm(which also requires some other deps)
