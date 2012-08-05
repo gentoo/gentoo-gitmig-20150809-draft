@@ -6,5 +6,6 @@
     <remote-id type="cpan">Spiffy</remote-id>
     <remote-id type="cpan-module">DB</remote-id>
     <remote-id type="cpan-module">Spiffy</remote-id>
+    <remote-id type="cpan-module">Spiffy::mixin</remote-id>
   </upstream>
 </pkgmetadata>
