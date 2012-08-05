@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtkmathview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/ChangeLog,v 1.48 2012/07/15 18:33:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/ChangeLog,v 1.49 2012/08/05 20:14:02 blueness Exp $
+
+  05 Aug 2012; Anthony G. Basile <blueness@gentoo.org>
+  gtkmathview-0.8.0-r2.ebuild:
+  Keyword ~arm
 
   15 Jul 2012; Raúl Porcel <armin76@gentoo.org> gtkmathview-0.8.0-r1.ebuild:
   alpha/ia64/sparc stable wrt #410611
