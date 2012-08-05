@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/gccxml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gccxml/ChangeLog,v 1.34 2012/07/06 01:01:33 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gccxml/ChangeLog,v 1.35 2012/08/05 18:30:54 armin76 Exp $
+
+  05 Aug 2012; Raúl Porcel <armin76@gentoo.org>
+  gccxml-0.9.0_pre20090516-r1.ebuild, gccxml-0.9.0_pre20120309.ebuild:
+  Drop ia64/s390/sh/sparc keywords
 
   06 Jul 2012; Jeff Horelick <jdhore@gentoo.org>
   gccxml-0.9.0_pre20120309.ebuild:
