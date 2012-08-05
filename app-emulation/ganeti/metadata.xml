@@ -28,6 +28,8 @@
 		<flag name='filestorage'>Enable File Storage</flag>
 		<flag name='sharedstorage'>Enable Shared Storage support</flag>
 		<flag name='htools'>Enable htools support</flag>
+		<flag name='haskell-daemons'>Build haskell daemons instead of python</flag>
+		<flag name='rbd'>Enable rados block device support via sys-cluster/ceph</flag>
 	</use>
 </pkgmetadata>
 
