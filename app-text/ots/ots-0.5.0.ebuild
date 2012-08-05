@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ots-0.5.0.ebuild,v 1.10 2012/05/04 03:33:11 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ots-0.5.0.ebuild,v 1.11 2012/08/05 20:51:32 blueness Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/libots/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ~mips ppc ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 ~arm hppa ~mips ppc ppc64 ~sparc x86"
 IUSE=""
 
 RDEPEND="=dev-libs/glib-2*
