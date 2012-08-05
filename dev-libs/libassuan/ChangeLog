@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libassuan
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassuan/ChangeLog,v 1.87 2012/08/03 08:18:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassuan/ChangeLog,v 1.88 2012/08/05 15:46:07 maekke Exp $
+
+  05 Aug 2012; Markus Meier <maekke@gentoo.org> libassuan-2.0.3.ebuild:
+  arm stable, bug #418747
 
   03 Aug 2012; Markos Chandras <hwoarang@gentoo.org> libassuan-2.0.3.ebuild:
   Stable on amd64 wrt bug #418747
