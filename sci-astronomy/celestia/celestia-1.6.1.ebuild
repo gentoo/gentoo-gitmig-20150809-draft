@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.6.1.ebuild,v 1.13 2012/06/03 15:37:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.6.1.ebuild,v 1.14 2012/08/05 14:56:28 bicatali Exp $
 
-EAPI=2
+EAPI=4
 
 inherit eutils flag-o-matic gnome2 autotools pax-utils
 
@@ -12,14 +12,14 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86"
+KEYWORDS="amd64 ppc ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="cairo gnome gtk nls pch theora threads"
 
 RDEPEND="
 	virtual/opengl
 	virtual/jpeg
 	media-libs/libpng
-	>=dev-lang/lua-5.0
+	<dev-lang/lua-5.2
 	gtk? ( !gnome? ( x11-libs/gtk+:2 >=x11-libs/gtkglext-1.0 ) )
 	gnome? (
 		x11-libs/gtk+:2
@@ -64,6 +64,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc47.patch
 
 	# remove flags to let the user decide
+	local
 	for cf in -O2 -ffast-math \
 		-fexpensive-optimizations \
 		-fomit-frame-pointer; do
@@ -104,13 +105,14 @@ src_install() {
 	if [[ ${CELESTIA_GUI} == gnome ]]; then
 		gnome2_src_install
 	else
-		emake DESTDIR="${D}" install || die "emake install failed"
+		emake DESTDIR="${D}" install
+		local size
 		for size in 16 22 32 48 ; do
 			insinto /usr/share/icons/hicolor/${size}x${size}/apps
 			newins "${S}"/src/celestia/kde/data/hi${size}-app-${PN}.png ${PN}.png
 		done
 	fi
 	[[ ${CELESTIA_GUI} == glut ]] && domenu celestia.desktop
-	dodoc AUTHORS README TRANSLATORS *.txt || die
-	pax-mark -m "${D}"/usr/bin/${PN} #365359
+	dodoc AUTHORS README TRANSLATORS *.txt
+	pax-mark -m "${ED}"/usr/bin/${PN} #365359
 }
