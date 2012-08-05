@@ -1,6 +1,10 @@
 # ChangeLog for sci-astronomy/cpl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/cpl/ChangeLog,v 1.9 2012/06/21 18:49:26 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/cpl/ChangeLog,v 1.10 2012/08/05 15:03:02 bicatali Exp $
+
+  05 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> -cpl-5.3.1.ebuild,
+  cpl-6.1.1.ebuild:
+  keyword amd64-linux, x86-linux, removed old
 
   21 Jun 2012; Kacper Kowalik <xarthisius@gentoo.org> -cpl-5.2.0-r1.ebuild,
   -files/cpl-5.2.0-test.patch, cpl-6.1.1.ebuild:

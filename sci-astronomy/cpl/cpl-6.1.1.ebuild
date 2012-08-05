@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/cpl/cpl-6.1.1.ebuild,v 1.2 2012/06/21 18:49:26 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/cpl/cpl-6.1.1.ebuild,v 1.3 2012/08/05 15:03:02 bicatali Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.eso.org/pub/dfs/pipelines/libraries/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 
 IUSE="doc gasgano static-libs threads"
 
@@ -37,7 +37,7 @@ src_prepare() {
 }
 
 src_configure() {
-	myeconfargs+=(
+	local myeconfargs=(
 		--htmldir="${EPREFIX}/usr/share/doc/${PF}/html"
 		--disable-ltdl-install
 		--without-included-ltdl
