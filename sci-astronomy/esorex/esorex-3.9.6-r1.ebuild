@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/esorex/esorex-3.9.6.ebuild,v 1.1 2012/06/04 22:57:51 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/esorex/esorex-3.9.6-r1.ebuild,v 1.1 2012/08/05 17:23:27 bicatali Exp $
 
 EAPI=4
 
@@ -19,7 +19,15 @@ IUSE="examples"
 DEPEND=">=sci-astronomy/cpl-6"
 RDEPEND="${DEPEND}"
 
-PATCHES=( "${FILESDIR}"/${P}-use-shared-libs.patch )
+PATCHES=(
+	"${FILESDIR}"/${P}-autoconf-26.patch
+	"${FILESDIR}"/${P}-use-system-ltdl.patch
+	"${FILESDIR}"/${P}-use-shared-libs.patch
+	"${FILESDIR}"/${P}-set-default-plugin-path.patch
+	"${FILESDIR}"/${P}-move-rcfile-to-etc.patch
+)
+
+export CPLDIR="${EPREFIX}/usr"
 
 src_install() {
 	autotools-utils_src_install
