@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/gpsim-0.26.1.ebuild,v 1.6 2012/08/04 10:52:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/gpsim-0.26.1.ebuild,v 1.7 2012/08/05 08:37:23 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -14,17 +14,18 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE="doc gtk static-libs"
 
-RDEPEND="dev-libs/glib:2
+RDEPEND=">=dev-embedded/gputils-0.12
+	!dev-embedded/gpsim-lcd
+	dev-libs/glib:2
 	dev-libs/popt
-	>=dev-embedded/gputils-0.12
-	gtk? ( >=x11-libs/gtk+extra-2 )
-	sys-libs/readline"
+	sys-libs/readline
+	gtk? ( >=x11-libs/gtk+extra-2 )"
 DEPEND="${RDEPEND}
-	virtual/pkgconfig
 	sys-devel/flex
-	|| ( dev-util/yacc sys-devel/bison )"
+	virtual/pkgconfig
+	virtual/yacc"
 
-DOCS=(ANNOUNCE AUTHORS ChangeLog HISTORY PROCESSORS README README.MODULES TODO)
+DOCS="ANNOUNCE AUTHORS ChangeLog HISTORY PROCESSORS README README.MODULES TODO"
 
 src_prepare() {
 	epatch \
