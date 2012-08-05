@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/thttpd-2.26.4.ebuild,v 1.1 2012/07/13 14:08:26 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/thttpd-2.26.4-r1.ebuild,v 1.1 2012/08/05 15:50:57 blueness Exp $
 
 EAPI="4"
 
@@ -48,6 +48,13 @@ src_install () {
 
 	insinto /etc/thttpd
 	doins "${FILESDIR}"/thttpd.conf.sample
+
+	docompress -x /usr/share/doc/"${PF}"/htdocs.dist
+
+	mv "${ED}"/var/www/localhost/htdocs \
+		"${ED}"/usr/share/doc/"${PF}"/htdocs.dist
+
+	mkdir "${ED}"/var/www/localhost/htdocs
 }
 
 pkg_postinst() {
