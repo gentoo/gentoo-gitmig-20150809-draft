@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.377 2012/08/03 18:14:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.378 2012/08/05 00:10:49 jer Exp $
+
+  05 Aug 2012; Jeroen Roovers <jer@gentoo.org> postfix-2.9.3.ebuild:
+  Stable for HPPA (bug #426760).
 
   03 Aug 2012; Agostino Sarubbo <ago@gentoo.org> postfix-2.9.3.ebuild:
   Stable for amd64, wrt bug #426760
