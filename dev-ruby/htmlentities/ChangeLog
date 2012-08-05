@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/htmlentities
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/htmlentities/ChangeLog,v 1.28 2012/07/31 06:39:57 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/htmlentities/ChangeLog,v 1.29 2012/08/05 20:55:41 ago Exp $
+
+  05 Aug 2012; Agostino Sarubbo <ago@gentoo.org> htmlentities-4.3.1.ebuild:
+  Stable for amd64, wrt bug #428688
 
   31 Jul 2012; Jeff Horelick <jdhore@gentoo.org> htmlentities-4.3.1.ebuild:
   marked x86 per bug 428688
