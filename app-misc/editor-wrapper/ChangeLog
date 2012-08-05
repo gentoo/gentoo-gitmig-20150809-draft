@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/editor-wrapper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/editor-wrapper/ChangeLog,v 1.18 2012/07/05 13:21:26 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/editor-wrapper/ChangeLog,v 1.19 2012/08/05 12:10:36 grobian Exp $
+
+  05 Aug 2012; Fabian Groffen <grobian@gentoo.org> editor-wrapper-4.ebuild:
+  Marked ~x86-freebsd
 
   05 Jul 2012; Richard Yao <ryao@gentoo.org> editor-wrapper-4.ebuild:
   Keyword ~x64-freebsd, Bug #424836
@@ -120,4 +123,3 @@
   +files/gentoo-editor-1.sh, +metadata.xml:
   Initial import, bug 286017. gentoo-editor script by Diego Pettenò, with
   modifications by me.
-
