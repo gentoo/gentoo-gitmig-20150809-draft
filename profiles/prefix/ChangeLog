@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.356 2012/08/01 10:46:14 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.357 2012/08/05 13:45:16 grobian Exp $
+
+  05 Aug 2012; Fabian Groffen <grobian@gentoo.org>
+  +bsd/freebsd/9.1/package.mask:
+  Mask GCC >=4.3 on FreeBSD 9.1, bug #429992
 
   01 Aug 2012; Fabian Groffen <grobian@gentoo.org>
   darwin/macos/package.use.mask:
