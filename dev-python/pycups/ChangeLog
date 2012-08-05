@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pycups
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/ChangeLog,v 1.58 2012/07/31 08:09:49 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/ChangeLog,v 1.59 2012/08/05 22:07:31 reavertm Exp $
+
+*pycups-1.9.62 (05 Aug 2012)
+
+  05 Aug 2012; Maciej Mrozowski <reavertm@gentoo.org> +pycups-1.9.62.ebuild,
+  -pycups-1.9.49.ebuild, -pycups-1.9.57.ebuild, -pycups-1.9.60.ebuild,
+  -pycups-1.9.61-r1.ebuild:
+  Version bump, remove old.
 
 *pycups-1.9.61-r1 (31 Jul 2012)
 
