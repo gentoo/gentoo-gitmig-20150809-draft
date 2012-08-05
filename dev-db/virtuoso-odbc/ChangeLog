@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/virtuoso-odbc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-odbc/ChangeLog,v 1.33 2012/07/13 22:20:20 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-odbc/ChangeLog,v 1.34 2012/08/05 03:48:34 creffett Exp $
+
+*virtuoso-odbc-6.1.6 (05 Aug 2012)
+
+  05 Aug 2012; Chris Reffett <creffett@gentoo.org> +virtuoso-odbc-6.1.6.ebuild,
+  -virtuoso-odbc-6.1.5.ebuild:
+  Version bump, remove 6.1.5 because it's somewhat broken and unsupported for
+  KDE 4.9.
 
 *virtuoso-odbc-6.1.5 (13 Jul 2012)
 
