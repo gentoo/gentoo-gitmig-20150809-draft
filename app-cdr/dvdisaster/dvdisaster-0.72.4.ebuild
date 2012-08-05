@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/dvdisaster-0.72.4.ebuild,v 1.5 2012/08/04 13:41:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/dvdisaster-0.72.4.ebuild,v 1.6 2012/08/05 11:02:50 ssuominen Exp $
 
 EAPI=4
-inherit eutils gnome2-utils
+inherit eutils gnome2-utils toolchain-funcs
 
 DESCRIPTION="Data-protection and recovery tool for DVDs"
 HOMEPAGE="http://dvdisaster.sourceforge.net/"
@@ -26,12 +26,10 @@ RDEPEND="app-arch/bzip2
 	sys-libs/zlib
 	>=x11-libs/gtk+-2.14:2"
 DEPEND="${RDEPEND}
-	virtual/pkgconfig
-	virtual/os-headers"
+	virtual/os-headers
+	virtual/pkgconfig"
 
 src_configure() {
-	use nls && dvdi_makeopts=( -j1 )
-
 	./configure \
 		--prefix=/usr \
 		--bindir=/usr/bin \
@@ -45,7 +43,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake "${dvdi_makeopts[@]}"
+	emake $(use nls && echo -j1) CC="$(tc-getCC)"
 }
 
 src_install() {
@@ -60,8 +58,7 @@ src_install() {
 
 	local res
 	for res in 16 32 48 64; do
-		insinto /usr/share/icons/hicolor/${res}x${res}/apps
-		newins contrib/${PN}${res}.png ${PN}.png
+		newicon -s ${res} contrib/${PN}${res}.png ${PN}.png
 	done
 
 	local dest="${ED}"/usr/share
