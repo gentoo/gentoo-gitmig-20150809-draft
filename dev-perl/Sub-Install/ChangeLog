@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Sub-Install
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Install/ChangeLog,v 1.20 2012/08/03 11:02:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Install/ChangeLog,v 1.21 2012/08/05 01:26:12 johu Exp $
+
+  05 Aug 2012; Johannes Huber <johu@gentoo.org> Sub-Install-0.926.0.ebuild:
+  Stable for x86, wrt bug #418851
 
   03 Aug 2012; Agostino Sarubbo <ago@gentoo.org> Sub-Install-0.926.0.ebuild:
   Stable for amd64, wrt bug #418851
