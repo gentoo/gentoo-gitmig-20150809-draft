@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.1.1-r1.ebuild,v 1.5 2012/08/04 19:33:45 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.1.1-r1.ebuild,v 1.6 2012/08/05 20:59:02 ago Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ else
 	SRC_URI="mirror://sourceforge/kvm/${PN}/${P}.tar.gz
 	${BACKPORTS:+
 		http://dev.gentoo.org/~cardoe/distfiles/${P}-bp-${BACKPORTS}.tar.xz}"
-	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+	KEYWORDS="amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 fi
 
 DESCRIPTION="QEMU + Kernel-based Virtual Machine userland tools"
