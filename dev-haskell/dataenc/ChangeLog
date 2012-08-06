@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/dataenc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dataenc/ChangeLog,v 1.20 2012/08/03 13:02:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dataenc/ChangeLog,v 1.21 2012/08/06 21:04:51 ranger Exp $
+
+  06 Aug 2012; Brent Baude <ranger@gentoo.org> dataenc-0.14.0.3.ebuild:
+  Marking dataenc-0.14.0.3 ppc64 for bug 418687
 
   03 Aug 2012; Markos Chandras <hwoarang@gentoo.org> dataenc-0.14.0.3.ebuild:
   Stable on amd64 wrt bug #418687
