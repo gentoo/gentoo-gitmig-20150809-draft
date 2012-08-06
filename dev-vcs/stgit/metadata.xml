@@ -7,10 +7,6 @@
   <description>Proxy maintainer, assign bugs</description>
 </maintainer>
 <maintainer>
-  <email>darkside@gentoo.org</email>
-  <description>Proxy committer, CC bugs</description>
-</maintainer>
-<maintainer>
   <email>flameeyes@gentoo.org</email>
   <description>Proxy/Backup, CC bugs</description>
 </maintainer>
