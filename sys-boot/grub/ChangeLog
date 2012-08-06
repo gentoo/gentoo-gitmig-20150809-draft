@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.234 2012/07/24 15:49:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.235 2012/08/06 08:06:01 ago Exp $
+
+  06 Aug 2012; Agostino Sarubbo <ago@gentoo.org> grub-0.97-r12.ebuild:
+  Stable for X86, wrt bug #418393
 
   24 Jul 2012; Mike Frysinger <vapier@gentoo.org> grub-0.97-r13.ebuild:
   Touch up style/messages to match grub-static -- no functional changes.
