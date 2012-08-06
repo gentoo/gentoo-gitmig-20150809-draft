@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.13.4.ebuild,v 1.1 2011/09/18 23:08:35 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.13.4.ebuild,v 1.2 2012/08/06 19:42:06 vapier Exp $
 
 EAPI=4
 
@@ -51,8 +51,6 @@ src_configure() {
 
 src_install() {
 	default
-
-	use ipv6 && cat "${FILESDIR}"/wgetrc-ipv6 >> "${ED}"/etc/wgetrc
 
 	sed -i \
 		-e "s:/usr/local/etc:${EPREFIX}/etc:g" \
