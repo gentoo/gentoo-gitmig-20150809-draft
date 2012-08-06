@@ -1,9 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/six/six-1.1.0.ebuild,v 1.6 2012/07/14 17:34:20 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/six/six-1.1.0.ebuild,v 1.7 2012/08/06 07:53:02 patrick Exp $
 
 EAPI="4"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="2.5-jython"
 
 inherit distutils
 
