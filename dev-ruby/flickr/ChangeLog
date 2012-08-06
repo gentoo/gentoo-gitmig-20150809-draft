@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/flickr
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flickr/ChangeLog,v 1.11 2011/12/14 17:39:35 ago Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flickr/ChangeLog,v 1.12 2012/08/06 17:43:02 graaff Exp $
+
+  06 Aug 2012; Hans de Graaff <graaff@gentoo.org> -flickr-1.0.2-r1.ebuild:
+  Cleanup.
 
   14 Dec 2011; Agostino Sarubbo <ago@gentoo.org> flickr-1.0.2-r3.ebuild:
   Stable for AMD64, wrt bug #387911
