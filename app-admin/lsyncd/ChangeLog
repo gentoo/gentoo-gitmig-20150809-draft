@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/lsyncd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lsyncd/ChangeLog,v 1.21 2012/05/31 02:34:22 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lsyncd/ChangeLog,v 1.22 2012/08/06 19:48:39 darkside Exp $
+
+*lsyncd-2.0.7 (06 Aug 2012)
+
+  06 Aug 2012; Jeremy Olexa <darkside@gentoo.org> -lsyncd-2.0.4-r1.ebuild,
+  +lsyncd-2.0.7.ebuild, metadata.xml:
+  Version bump, bug fixes from upstream (bug 409771), remove old version, drop
+  maintainership since I do not use
 
   31 May 2012; Zac Medico <zmedico@gentoo.org> lsyncd-2.0.4-r1.ebuild:
   inherit multilib for get_libdir
