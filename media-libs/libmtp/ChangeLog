@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmtp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.109 2012/06/09 00:12:46 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.110 2012/08/06 13:20:46 ssuominen Exp $
+
+  06 Aug 2012; Samuli Suominen <ssuominen@gentoo.org> libmtp-1.1.3.ebuild,
+  libmtp-9999.ebuild:
+  Read udev.pc pkg-config file for --with-udev= value.
 
   09 Jun 2012; Zac Medico <zmedico@gentoo.org> libmtp-1.1.1.ebuild,
   libmtp-1.1.3.ebuild, libmtp-9999.ebuild:

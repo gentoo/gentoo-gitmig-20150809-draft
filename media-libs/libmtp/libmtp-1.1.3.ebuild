@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/libmtp-1.1.3.ebuild,v 1.3 2012/06/09 00:12:46 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/libmtp-1.1.3.ebuild,v 1.4 2012/08/06 13:20:46 ssuominen Exp $
 
 EAPI=4
 
-inherit autotools user
+inherit autotools user toolchain-funcs
 
 if [[ ${PV} == *9999* ]]; then
 	EGIT_REPO_URI="git://${PN}.git.sourceforge.net/gitroot/${PN}/${PN}"
@@ -21,7 +21,8 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 IUSE="+crypt doc examples static-libs"
 
-RDEPEND="virtual/libusb:1
+RDEPEND="sys-fs/udev
+	virtual/libusb:1
 	crypt? ( dev-libs/libgcrypt )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
@@ -45,6 +46,7 @@ src_configure() {
 		$(use_enable static-libs static) \
 		$(use_enable doc doxygen) \
 		$(use_enable crypt mtpz) \
+		--with-udev="$($(tc-getPKG_CONFIG) --variable=udevdir udev)" \
 		--with-udev-group=plugdev \
 		--with-udev-mode=0660
 }
