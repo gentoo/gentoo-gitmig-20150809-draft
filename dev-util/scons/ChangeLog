@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/scons
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.115 2012/08/02 22:21:51 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.116 2012/08/06 03:39:23 patrick Exp $
+
+  06 Aug 2012; Patrick Lauer <patrick@gentoo.org> scons-2.1.0.ebuild:
+  Fixing jython for 2.1.0 too
 
   02 Aug 2012; Jesus Rivero <neurogeek@gentoo.org> scons-2.0.1.ebuild,
   scons-2.0.1-r1.ebuild:
