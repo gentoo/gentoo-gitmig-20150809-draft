@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-0.48.ebuild,v 1.1 2012/08/04 10:31:52 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-0.48.ebuild,v 1.2 2012/08/06 14:29:01 alexxy Exp $
 
 EAPI=4
 
@@ -32,6 +32,7 @@ CDEPEND="
 	radosgw? (
 				dev-libs/fcgi
 				dev-libs/expat
+				net-misc/curl
 			)
 	tcmalloc? ( dev-util/google-perftools )
 	"
@@ -41,6 +42,8 @@ RDEPEND="${CDEPEND}
 	sys-fs/btrfs-progs"
 
 STRIP_MASK="/usr/lib*/rados-classes/*"
+
+S="${WORKDIR}/${P}argonaut"
 
 src_prepare() {
 	sed -e 's:invoke-rc\.d.*:/etc/init.d/ceph reload >/dev/null:' \
