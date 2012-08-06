@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/geoclue
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geoclue/ChangeLog,v 1.10 2012/05/27 22:11:15 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geoclue/ChangeLog,v 1.11 2012/08/06 20:56:57 ranger Exp $
+
+  06 Aug 2012; Brent Baude <ranger@gentoo.org> geoclue-0.12.0_p20110307.ebuild:
+  Marking geoclue-0.12.0_p20110307 ppc64 for bug 427556
 
   27 May 2012; Joseph Jezak <josejx@gentoo.org>
   geoclue-0.12.0_p20110307.ebuild:
