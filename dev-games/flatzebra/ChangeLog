@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/flatzebra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/flatzebra/ChangeLog,v 1.26 2012/05/03 06:35:31 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/flatzebra/ChangeLog,v 1.27 2012/08/06 00:50:08 mr_bones_ Exp $
+
+*flatzebra-0.1.6 (06 Aug 2012)
+
+  06 Aug 2012; Michael Sterrett <mr_bones_@gentoo.org> +flatzebra-0.1.6.ebuild:
+  version bump
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> flatzebra-0.1.5.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
