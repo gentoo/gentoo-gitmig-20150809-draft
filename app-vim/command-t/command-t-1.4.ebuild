@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/command-t/command-t-1.4.ebuild,v 1.1 2012/08/03 09:42:37 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/command-t/command-t-1.4.ebuild,v 1.2 2012/08/06 21:06:34 radhermit Exp $
 
 EAPI="4"
 USE_RUBY="ruby18 ruby19"
@@ -25,7 +25,7 @@ each_ruby_configure() {
 
 each_ruby_compile() {
 	cd ruby/${PN}
-	emake
+	emake V=1
 	rm *.o *.c *.h *.log extconf.rb depend Makefile || die
 }
 
