@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/hashcat-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/hashcat-bin/ChangeLog,v 1.4 2012/07/04 17:48:59 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/hashcat-bin/ChangeLog,v 1.5 2012/08/06 03:20:47 zerochaos Exp $
+
+*hashcat-bin-0.40 (06 Aug 2012)
+
+  06 Aug 2012; Rick Farina <zerochaos@gentoo.org> +hashcat-bin-0.40.ebuild:
+  version bump to 0.40 and MacOSX (prefix) support
 
   04 Jul 2012; Rick Farina <zerochaos@gentoo.org> hashcat-bin-0.39.ebuild:
   minor QA for ebuild
