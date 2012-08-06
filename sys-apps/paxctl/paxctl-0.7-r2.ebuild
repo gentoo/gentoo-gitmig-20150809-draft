@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paxctl/paxctl-0.7-r2.ebuild,v 1.5 2012/08/05 18:16:41 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paxctl/paxctl-0.7-r2.ebuild,v 1.6 2012/08/06 23:16:36 blueness Exp $
 
 EAPI="4"
 
@@ -18,8 +18,6 @@ SLOT="0"
 DEPEND=">=sys-devel/binutils-2.14.90.0.8-r1"
 RDEPEND=""
 
-DOCS=( README ChangeLog )
-
 src_prepare() {
 	sed \
 		"s:--owner 0 --group 0::g" \
@@ -35,4 +33,5 @@ src_compile() {
 
 src_install () {
 	emake DESTDIR="${ED}" install
+	dodoc README ChangeLog
 }
