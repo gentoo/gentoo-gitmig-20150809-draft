@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/elvis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/ChangeLog,v 1.46 2012/08/02 22:36:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/ChangeLog,v 1.47 2012/08/06 21:21:49 ranger Exp $
+
+  06 Aug 2012; Brent Baude <ranger@gentoo.org> elvis-2.2.0-r4.ebuild:
+  Marking elvis-2.2.0-r4 ppc64 for bug 418557
 
   02 Aug 2012; Markos Chandras <hwoarang@gentoo.org> elvis-2.2.0-r4.ebuild:
   Stable on amd64 wrt bug #418557
