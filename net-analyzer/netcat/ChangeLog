@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netcat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/ChangeLog,v 1.45 2012/08/06 13:52:09 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/ChangeLog,v 1.46 2012/08/06 13:58:32 blueness Exp $
+
+  06 Aug 2012; Anthony G. Basile <blueness@gentoo.org> netcat-110-r9.ebuild:
+  Stable ppc ppc64, bug #423531
 
   06 Aug 2012; Anthony G. Basile <blueness@gentoo.org> netcat-110-r9.ebuild:
   Stable arm, bug #423531
