@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.101 2012/08/02 13:07:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.102 2012/08/06 14:11:46 aballier Exp $
 
 EAPI="4"
 
@@ -33,8 +33,8 @@ IUSE="
 	cpudetection debug doc +encode faac flite fontconfig frei0r gnutls gsm
 	+hardcoded-tables iec61883 ieee1394 jack jpeg2k libass libcaca libv4l
 	modplug mp3	network openal openssl opus oss pic pulseaudio rtmp schroedinger
-	sdl speex static-libs test theora threads truetype v4l vaapi vdpau vorbis
-	vpx X x264 xvid +zlib
+	sdl speex static-libs test theora threads truetype twolame v4l vaapi vdpau
+	vorbis vpx X x264 xvid +zlib
 	"
 
 # String for CPU features in the useflag[:configure_option] form
@@ -65,6 +65,7 @@ RDEPEND="
 		faac? ( media-libs/faac )
 		mp3? ( >=media-sound/lame-3.98.3 )
 		theora? ( >=media-libs/libtheora-1.1.1[encode] media-libs/libogg )
+		twolame? ( media-sound/twolame )
 		x264? ( >=media-libs/x264-0.0.20111017 )
 		xvid? ( >=media-libs/xvid-1.1.0 )
 	)
@@ -151,7 +152,7 @@ src_configure() {
 		use mp3 && myconf="${myconf} --enable-libmp3lame"
 		use aac && { myconf="${myconf} --enable-libvo-aacenc" ; version3=" --enable-version3" ; }
 		use amr && { myconf="${myconf} --enable-libvo-amrwbenc" ; version3=" --enable-version3" ; }
-		for i in theora x264 xvid; do
+		for i in theora twolame x264 xvid; do
 			use ${i} && myconf="${myconf} --enable-lib${i}"
 		done
 		use aacplus && myconf="${myconf} --enable-libaacplus --enable-nonfree"
