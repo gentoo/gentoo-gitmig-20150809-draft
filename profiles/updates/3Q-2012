@@ -16,3 +16,4 @@ move sys-kernel/amd-ucode sys-firmware/amd-ucode
 move sys-apps/seabios sys-firmware/seabios
 move sys-apps/sgabios sys-firmware/sgabios
 move sys-apps/vgabios sys-firmware/vgabios
+move net-wireless/iwl1000-ucode sys-firmware/iwl1000-ucode
