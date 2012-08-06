@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-96.43.20.ebuild,v 1.7 2012/07/22 17:10:05 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-96.43.20.ebuild,v 1.8 2012/08/06 22:09:31 cardoe Exp $
 
 EAPI="2"
 
@@ -130,18 +130,7 @@ QA_DT_HASH_x86="usr/lib/libcuda.so.${PV}
 	usr/bin/nvidia-smi
 	usr/bin/nvidia-xconfig"
 
-if use x86; then
-	PKG_V="-pkg0"
-	NV_PACKAGE="${X86_NV_PACKAGE}"
-elif use amd64; then
-	PKG_V="-pkg2"
-	NV_PACKAGE="${AMD64_NV_PACKAGE}"
-elif use x86-fbsd; then
-	PKG_V=""
-	NV_PACKAGE="${X86_FBSD_NV_PACKAGE}"
-fi
-
-S="${WORKDIR}/${NV_PACKAGE}${PKG_V}"
+S="${WORKDIR}/"
 
 mtrr_check() {
 	ebegin "Checking for MTRR support"
@@ -206,6 +195,7 @@ pkg_setup() {
 
 	# set variables to where files are in the package structure
 	if use kernel_FreeBSD; then
+		use x86-fbsd && S="${WORKDIR}/${X86_FBSD_NV_PACKAGE}"
 		NV_DOC="${S}/doc"
 		NV_EXEC="${S}/obj"
 		NV_LIB="${S}/obj"
