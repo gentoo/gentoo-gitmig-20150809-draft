@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gtypist
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gtypist/ChangeLog,v 1.31 2011/12/01 17:59:12 darkside Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gtypist/ChangeLog,v 1.32 2012/08/06 19:52:58 darkside Exp $
+
+  06 Aug 2012; Jeremy Olexa <darkside@gentoo.org> metadata.xml:
+  Drop maintainership since I no longer use application
 
 *gtypist-2.9.1 (01 Dec 2011)
 
