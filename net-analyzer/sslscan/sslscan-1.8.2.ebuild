@@ -3,7 +3,7 @@
 
 EAPI=4
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Fast SSL port scanner"
 HOMEPAGE="https://www.titania-security.com/labs/sslscan"
@@ -18,7 +18,7 @@ DEPEND="dev-libs/openssl"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	sed -i -e 's/gcc -g/$(CC)/' Makefile || die
+	epatch "${FILESDIR}"/${P}-makefile.patch
 }
 
 src_compile() {
