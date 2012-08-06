@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/pyxplot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/pyxplot/ChangeLog,v 1.26 2012/08/06 09:05:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/pyxplot/ChangeLog,v 1.27 2012/08/06 20:34:31 bicatali Exp $
+
+  06 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml,
+  pyxplot-0.9.0.ebuild:
+  fixed for prefix and keyword for amd64-linux, x86-linux
 
 *pyxplot-0.9.0 (06 Aug 2012)
 
@@ -126,4 +130,3 @@
   +files/0.5.8-dont-build-pyx.patch, +files/0.5.8-respect-destdir.patch,
   +metadata.xml, +pyxplot-0.5.8.ebuild:
   Graphing program similar to gnuplot to produce publication-quality figures.
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/pyxplot/pyxplot-0.9.0.ebuild,v 1.1 2012/08/06 09:05:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/pyxplot/pyxplot-0.9.0.ebuild,v 1.2 2012/08/06 20:34:31 bicatali Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}_${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="
@@ -37,9 +37,9 @@ pkg_setup() {
 
 src_prepare() {
 	sed \
-		-e 's:/local:/:' \
+		-e "s:/usr/local:${EROOT}usr/:" \
 		-e "s:/lib/:/$(get_libdir)/:" \
-		-e "s:\${USRDIR}/share/${PN}:/$(python_get_sitedir)/${PN}:" \
+		-e "s:\${USRDIR}/share/${PN}:${EPREFIX}/$(python_get_sitedir)/${PN}:" \
 		-e "s:/doc/${PN}:/doc/${PF}:" \
 		-i Makefile.skel || die "sed Makefile.skel failed"
 	sed -i -e 's/-ltermcap//' configure || die
