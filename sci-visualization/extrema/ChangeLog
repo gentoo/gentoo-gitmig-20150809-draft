@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/extrema
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/extrema/ChangeLog,v 1.10 2011/06/18 12:16:03 grozin Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/extrema/ChangeLog,v 1.11 2012/08/06 20:50:04 bicatali Exp $
+
+  06 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> extrema-4.4.5.ebuild,
+  metadata.xml:
+  Added static-libs, switch to EAPI4, keyword amd64-linux, x86-linux
 
   18 Jun 2011; Andrey Grozin <grozin@gentoo.org> extrema-4.4.5.ebuild:
   Depend on wxGTK[X], bug #371579, thanks to Piotr Szymaniak
@@ -50,4 +54,3 @@
   04 May 2008; Andrey Grozin <grozin@gentoo.org> +metadata.xml,
   +extrema-4.3.5.ebuild:
   Initial import.
-

@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/extrema/extrema-4.4.5.ebuild,v 1.2 2011/06/18 12:16:03 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/extrema/extrema-4.4.5.ebuild,v 1.3 2012/08/06 20:50:04 bicatali Exp $
 
-EAPI=2
+EAPI=4
 WX_GTK_VER="2.8"
 inherit eutils fdo-mime wxwidgets
 
@@ -10,8 +10,8 @@ DESCRIPTION="Interactive data analysis and visualization tool"
 HOMEPAGE="http://exsitewebware.com/extrema/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
-IUSE="doc examples"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+IUSE="doc examples static-libs"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 # File collision, see bug #249423
@@ -30,23 +30,19 @@ src_prepare() {
 src_configure() {
 	# extrema cannot be compiled with versions of minuit
 	# available in portage
-	econf --enable-shared
+	econf \
+		--enable-shared \
+		$(use_enable static-libs static)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-
+	default
 	make_desktop_entry ${PN}
 	dodir /usr/share/icons/hicolor
-	tar xjf extrema_icons.tar.bz2 -C "${D}usr/share/icons/hicolor"
-	dosym /usr/share/icons/hicolor/48x48/apps/extrema.png /usr/share/pixmaps/extrema.png
+	tar xjf extrema_icons.tar.bz2 -C "${ED}usr/share/icons/hicolor"
+	dosym ../../icons/hicolor/48x48/apps/extrema.png /usr/share/pixmaps/extrema.png
 
-	dodoc AUTHORS ChangeLog || die "dodoc failed"
-	if use doc; then
-		insinto /usr/share/doc/${PF}
-		doins doc/*.pdf || die
-	fi
-
+	use doc && dodoc doc/*.pdf
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
 		doins Scripts/*.pcm Scripts/*.dat || die
