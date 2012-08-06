@@ -1,6 +1,12 @@
 # ChangeLog for games-arcade/burgerspace
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/burgerspace/ChangeLog,v 1.31 2012/05/04 04:22:28 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/burgerspace/ChangeLog,v 1.32 2012/08/06 17:03:13 mr_bones_ Exp $
+
+*burgerspace-1.9.1 (06 Aug 2012)
+
+  06 Aug 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  +burgerspace-1.9.1.ebuild:
+  version bump
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> burgerspace-1.9.0.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
