@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.30 2012/07/28 21:47:04 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.31 2012/08/06 13:48:44 ryao Exp $
 
 EAPI="4"
 
@@ -28,12 +28,16 @@ LICENSE="BSD-2 CDDL MIT"
 SLOT="0"
 IUSE="custom-cflags debug dracut +rootfs test test-suite static-libs"
 
-DEPEND="
+COMMON_DEPEND="
 	=sys-kernel/spl-${PV}*
 	sys-apps/util-linux[static-libs?]
 	sys-libs/zlib[static-libs(+)?]
 "
-RDEPEND="${DEPEND}
+DEPEND="${COMMON_DEPEND}
+	virtual/pkgconfig
+"
+
+RDEPEND="${COMMON_DEPEND}
 	!sys-fs/zfs-fuse
 	!prefix? ( sys-fs/udev )
 	test-suite? (
@@ -105,7 +109,7 @@ src_configure() {
 		--with-config=all
 		--with-linux="${KV_DIR}"
 		--with-linux-obj="${KV_OUT_DIR}"
-		--with-udevdir="${EPREFIX}/lib/udev"
+		--with-udevdir="$(tc-getPKG_CONFIG) --variable=udevdir udev"
 		$(use_enable debug)
 	)
 	autotools-utils_src_configure
