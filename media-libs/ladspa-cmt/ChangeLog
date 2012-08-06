@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ladspa-cmt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.37 2012/08/03 16:35:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.38 2012/08/06 21:15:33 ranger Exp $
+
+  06 Aug 2012; Brent Baude <ranger@gentoo.org> ladspa-cmt-1.16.ebuild:
+  Marking ladspa-cmt-1.16 ppc64 for bug 419079
 
   03 Aug 2012; Agostino Sarubbo <ago@gentoo.org> ladspa-cmt-1.16.ebuild:
   Stable for amd64, wrt bug #419079
