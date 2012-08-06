@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/dbd-sqlite
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbd-sqlite/ChangeLog,v 1.10 2012/05/01 18:24:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbd-sqlite/ChangeLog,v 1.11 2012/08/06 17:48:12 ago Exp $
+
+  06 Aug 2012; Agostino Sarubbo <ago@gentoo.org> dbd-sqlite-0.1.2-r1.ebuild:
+  Stable for amd64, wrt bug #429976
 
   01 May 2012; Raúl Porcel <armin76@gentoo.org> dbd-sqlite-0.1.2.ebuild,
   dbd-sqlite-0.1.2-r1.ebuild:
