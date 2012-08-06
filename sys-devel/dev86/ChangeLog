@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/dev86
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/dev86/ChangeLog,v 1.22 2012/01/28 15:10:03 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/dev86/ChangeLog,v 1.23 2012/08/06 02:28:35 zerochaos Exp $
+
+  06 Aug 2012; Rick Farina <zerochaos@gentoo.org> dev86-0.16.18.ebuild:
+  fixed multilib-strict QA violation
 
   28 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> dev86-0.16.18.ebuild:
   x86 stable wrt bug #400685
@@ -94,4 +97,3 @@
   26 Oct 2005; Chris Bainbridge <chrb@gentoo.org> +metadata.xml,
   +dev86-0.16.17.ebuild:
   This package was submitted by Olaf Wepner in bug #101754
-

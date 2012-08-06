@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/dev86/dev86-0.16.18.ebuild,v 1.4 2012/01/28 15:10:03 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/dev86/dev86-0.16.18.ebuild,v 1.5 2012/08/06 02:28:35 zerochaos Exp $
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="Bruce's C compiler - Simple C compiler to generate 8086 code"
 HOMEPAGE="http://www.debath.co.uk/"
@@ -55,7 +55,7 @@ src_compile() {
 }
 
 src_install() {
-	emake -j1 install-all DIST="${D}" || die
+	emake -j1 install-all LIBDIR="/usr/$(get_libdir)/bcc" INCLDIR="/usr/$(get_libdir)/bcc" DIST="${D}" || die
 	dobin bootblocks/makeboot || die
 	# remove all the stuff supplied by bin86
 	cd "${D}"
