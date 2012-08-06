@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xsd2jibx
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xsd2jibx/ChangeLog,v 1.6 2009/06/01 21:56:22 caster Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xsd2jibx/ChangeLog,v 1.7 2012/08/06 16:58:28 sera Exp $
+
+  06 Aug 2012; Ralph Sennhauser <sera@gentoo.org> xsd2jibx-0.2a_beta-r2.ebuild:
+  Fix dohtml call. #430172
 
 *xsd2jibx-0.2a_beta-r2 (01 Jun 2009)
 

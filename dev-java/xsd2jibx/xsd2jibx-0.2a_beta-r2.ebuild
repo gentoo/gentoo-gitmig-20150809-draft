@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xsd2jibx/xsd2jibx-0.2a_beta-r2.ebuild,v 1.1 2009/06/01 21:56:22 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xsd2jibx/xsd2jibx-0.2a_beta-r2.ebuild,v 1.2 2012/08/06 16:58:28 sera Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source"
@@ -48,7 +48,7 @@ EANT_EXTRA_ARGS="-Djibxhome=/usr/share/jibx/"
 src_install() {
 	java-pkg_dojar lib/${PN}.jar
 
-	dohtml -R docs/*
+	dohtml -r docs/*
 	use doc && java-pkg_dojavadoc api
 	use source && java-pkg_dosrc src/main/org
 }
