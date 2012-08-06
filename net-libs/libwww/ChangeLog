@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libwww
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.82 2012/05/05 02:54:28 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.83 2012/08/06 03:02:18 ottxor Exp $
+
+*libwww-5.4.0-r8 (06 Aug 2012)
+
+  06 Aug 2012; Christoph Junghans <ottxor@gentoo.org> +libwww-5.4.0-r8.ebuild:
+  EAPI bumped to 4 and included prefix patches
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> libwww-5.4.0-r7.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
