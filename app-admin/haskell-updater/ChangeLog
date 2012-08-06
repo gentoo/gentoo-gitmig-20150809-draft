@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/haskell-updater
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/haskell-updater/ChangeLog,v 1.32 2012/08/03 20:38:49 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/haskell-updater/ChangeLog,v 1.33 2012/08/06 21:02:39 ranger Exp $
+
+  06 Aug 2012; Brent Baude <ranger@gentoo.org>
+  haskell-updater-1.2.0.5-r1.ebuild:
+  Marking haskell-updater-1.2.0.5-r1 ppc64 for bug 418493
 
   03 Aug 2012; Andreas Schuerch <nativemad@gentoo.org>
   haskell-updater-1.2.0.5-r1.ebuild:
