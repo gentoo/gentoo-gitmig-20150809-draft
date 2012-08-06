@@ -1,6 +1,17 @@
 # ChangeLog for app-admin/system-config-printer-gnome
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/ChangeLog,v 1.57 2012/07/15 16:21:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/ChangeLog,v 1.58 2012/08/06 00:11:05 reavertm Exp $
+
+*system-config-printer-gnome-1.3.11 (06 Aug 2012)
+
+  06 Aug 2012; Maciej Mrozowski <reavertm@gentoo.org>
+  +files/system-config-printer-gnome-1.3.11-split.patch,
+  +system-config-printer-gnome-1.3.11.ebuild,
+  -files/system-config-printer-gnome-1.3.3-split.patch,
+  -files/system-config-printer-gnome-1.3.5-split.patch,
+  -system-config-printer-gnome-1.3.6.ebuild,
+  -system-config-printer-gnome-1.3.7.ebuild:
+  Version bump, remove old
 
   15 Jul 2012; Raúl Porcel <armin76@gentoo.org>
   system-config-printer-gnome-1.3.9-r1.ebuild:
@@ -315,4 +326,3 @@
   +system-config-printer-gnome-1.1.16.ebuild,
   +files/system-config-printer-gnome-1.1.16-split.patch, +metadata.xml:
   Added new ebuild, bug 299648
-
