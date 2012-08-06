@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.8.1-r1.ebuild,v 1.2 2012/08/03 21:33:05 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.8.1-r1.ebuild,v 1.3 2012/08/06 09:41:38 jer Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -144,25 +144,27 @@ src_configure() {
 	use doc-pdf || export ac_cv_prog_HAVE_FOP=false
 
 	# dumpcap requires libcap, setuid-install requires dumpcap
-	econf $(use_enable gtk wireshark) \
-		$(use_enable profile profile-build) \
-		$(use_with ssl gnutls) \
-		$(use_with gcrypt) \
+	econf \
+		$(use pcap && use_enable !caps setuid-install) \
+		$(use pcap && use_enable caps setcap-install) \
+		$(use_enable gtk wireshark) \
 		$(use_enable ipv6) \
-		$(use_with lua) \
-		$(use_with kerberos krb5) \
-		$(use_with smi libsmi) \
-		$(use_with zlib) \
+		$(use_enable profile profile-build) \
+		$(use_with caps libcap) \
+		$(use_with gcrypt) \
 		$(use_with geoip) \
+		$(use_with kerberos krb5) \
+		$(use_with lua) \
+		$(use_with pcap dumpcap-group wireshark) \
+		$(use_with pcap) \
 		$(use_with portaudio) \
 		$(use_with python) \
-		$(use_with caps libcap) \
-		$(use_with pcap) \
-		$(use_with pcap dumpcap-group wireshark) \
-		$(use pcap && use_enable caps setcap-install) \
-		$(use pcap && use_enable !caps setuid-install) \
-		--sysconfdir="${EPREFIX}"/etc/wireshark \
+		$(use_with smi libsmi) \
+		$(use_with ssl gnutls) \
+		$(use_with zlib) \
 		--disable-extra-gcc-checks \
+		--disable-usr-local \
+		--sysconfdir="${EPREFIX}"/etc/wireshark \
 		${myconf}
 }
 
