@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-2.1.9-r1.ebuild,v 1.3 2012/07/10 20:07:42 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-2.1.9-r1.ebuild,v 1.4 2012/08/06 07:46:08 patrick Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? *"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="*-jython *-pypy-*"
+RESTRICT_PYTHON_ABIS="*-jython *-pypy-* 2.5 2.6 3.*"
 
 inherit multilib python toolchain-funcs eutils
 
