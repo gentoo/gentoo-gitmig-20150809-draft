@@ -3,10 +3,10 @@
 <pkgmetadata>
 <herd>sci-astronomy</herd>
 <longdescription lang="en">
-Predict is a satellite tracking program. It is probably mostly of interest
-to users of amateur satellites, but includes support for optionally
-announcing azimuth and elevation to help in manual antenna pointing,
-or optical observation of satellites.
+  Predict is a satellite tracking program. It is probably mostly of interest
+  to users of amateur satellites, but includes support for optionally
+  announcing azimuth and elevation to help in manual antenna pointing,
+  or optical observation of satellites.
 </longdescription>
 <use>
   <flag name='xforms'>Add a "map" client which uses the
