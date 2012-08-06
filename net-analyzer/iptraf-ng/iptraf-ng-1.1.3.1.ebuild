@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf-ng/iptraf-ng-1.1.3.1.ebuild,v 1.9 2012/08/04 10:26:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf-ng/iptraf-ng-1.1.3.1.ebuild,v 1.10 2012/08/06 14:39:38 ssuominen Exp $
 
 EAPI=4
 inherit toolchain-funcs
@@ -18,7 +18,9 @@ RESTRICT="test"
 
 RDEPEND=">=sys-libs/ncurses-5.7-r7"
 DEPEND="${RDEPEND}
-	!net-analyzer/iptraf"
+	virtual/os-headers
+	!net-analyzer/iptraf
+	!>=sys-kernel/linux-headers-3.5"
 
 src_prepare() {
 	sed -i \
