@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmath/tuxmath-1.7.2.ebuild,v 1.4 2009/11/23 17:36:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmath/tuxmath-1.7.2.ebuild,v 1.5 2012/08/06 22:29:18 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -18,7 +18,7 @@ IUSE="nls"
 RDEPEND="media-libs/libsdl
 	media-libs/sdl-pango
 	media-libs/sdl-image[jpeg,png]
-	media-libs/sdl-mixer[mikmod]
+	media-libs/sdl-mixer[mod]
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
