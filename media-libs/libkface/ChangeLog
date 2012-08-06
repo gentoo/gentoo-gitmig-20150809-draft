@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libkface
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkface/ChangeLog,v 1.18 2012/07/09 20:40:31 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkface/ChangeLog,v 1.19 2012/08/06 17:50:06 ago Exp $
+
+  06 Aug 2012; Agostino Sarubbo <ago@gentoo.org> libkface-2.6.0.ebuild:
+  Stable for amd64, wrt bug #429842
 
 *libkface-2.7.0 (09 Jul 2012)
 
