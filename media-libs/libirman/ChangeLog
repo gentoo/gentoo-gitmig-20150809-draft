@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libirman
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libirman/ChangeLog,v 1.29 2012/08/03 16:34:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libirman/ChangeLog,v 1.30 2012/08/06 21:11:36 ranger Exp $
+
+  06 Aug 2012; Brent Baude <ranger@gentoo.org> libirman-0.4.5.ebuild:
+  Marking libirman-0.4.5 ppc64 for bug 429122
 
   03 Aug 2012; Agostino Sarubbo <ago@gentoo.org> libirman-0.4.5.ebuild:
   Stable for amd64, wrt bug #429122
