@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/command-t
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/command-t/ChangeLog,v 1.8 2012/08/06 21:06:34 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/command-t/ChangeLog,v 1.9 2012/08/06 21:16:16 radhermit Exp $
+
+  06 Aug 2012; Tim Harder <radhermit@gentoo.org> -command-t-1.2.1-r1.ebuild:
+  Remove old.
 
   06 Aug 2012; Tim Harder <radhermit@gentoo.org> command-t-1.4.ebuild:
   Enable verbose build output.
