@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/vhba-20120422.ebuild,v 1.2 2012/07/16 07:20:03 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/vhba-20120422.ebuild,v 1.3 2012/08/06 18:20:39 mgorny Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~x86"
 IUSE=""
 
-RDEPEND=">=sys-fs/udev-125"
+RDEPEND="|| ( >=sys-fs/udev-125 >=sys-apps/systemd-187 )"
 DEPEND=""
 
 S=${WORKDIR}/${MY_P}
