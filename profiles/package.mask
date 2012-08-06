@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14034 2012/08/06 23:53:49 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14035 2012/08/06 23:55:10 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -36,7 +36,7 @@
 # Upstream is dead. There's no real way to support this anymore. Masked for
 # removal in 30 days. Unfortunately the best lightweight replacement I can
 # recommend is app-text/apvlv, otherwise you can go for app-text/acroread
-# (huge, commercial), kde-base/okular (KDE), or app-text/evince (Gnome).
+# (huge, closed source), kde-base/okular (KDE), or app-text/evince (Gnome).
 app-text/epdfview
 
 # Tim Harder <radhermit@gentoo.org> (6 Aug 2012)
