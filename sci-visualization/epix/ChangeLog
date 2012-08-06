@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/epix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/ChangeLog,v 1.42 2012/05/21 19:24:17 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/ChangeLog,v 1.43 2012/08/06 20:37:06 bicatali Exp $
+
+  06 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> epix-1.2.10.ebuild:
+  keyword amd64-linux, x86-linux
 
   21 May 2012; Kacper Kowalik <xarthisius@gentoo.org> epix-1.2.10.ebuild,
   epix-1.2.6.ebuild, epix-1.2.9.ebuild:
