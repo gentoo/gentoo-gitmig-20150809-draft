@@ -1,6 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/aview/aview-1.3.0_rc1-r2.ebuild,v 1.1 2011/02/23 17:56:58 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/aview/aview-1.3.0_rc1-r3.ebuild,v 1.1 2012/08/06 01:09:29 ottxor Exp $
+
+EAPI=4
 
 inherit base
 
@@ -12,7 +14,7 @@ HOMEPAGE="http://aa-project.sourceforge.net/aview/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
 DEPEND=">=media-libs/aalib-1.4_rc4"
@@ -23,13 +25,17 @@ PATCHES=(
 	"${FILESDIR}"/${P}-includes.patch
 )
 
+src_prepare() {
+	base_src_prepare
+
+	sed -i -e 's:#include <malloc.h>:#include <stdlib.h>:g' "${S}"/*.c || die
+}
+
 src_compile() {
-	econf || die
-	make aview || die
+	make aview
 }
 
 src_install() {
-	into /usr
 	dobin aview asciiview
 
 	doman *.1
