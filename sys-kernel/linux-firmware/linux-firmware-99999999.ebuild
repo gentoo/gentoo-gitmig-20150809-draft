@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/linux-firmware-99999999.ebuild,v 1.17 2012/06/12 22:22:52 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/linux-firmware-99999999.ebuild,v 1.18 2012/08/06 15:39:32 ulm Exp $
 
 EAPI=4
 inherit savedconfig
@@ -36,7 +36,7 @@ RDEPEND="!savedconfig? (
 		!net-dialup/ueagle4-atm
 		!net-wireless/ar9271-firmware
 		!net-wireless/i2400m-fw
-		!net-wireless/iwl1000-ucode
+		!sys-firmware/iwl1000-ucode
 		!net-wireless/iwl2030-ucode
 		!net-wireless/iwl3945-ucode
 		!net-wireless/iwl4965-ucode
