@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Tree-DAG_Node
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tree-DAG_Node/ChangeLog,v 1.29 2012/07/29 18:48:30 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tree-DAG_Node/ChangeLog,v 1.30 2012/08/06 13:22:16 aballier Exp $
+
+  06 Aug 2012; Alexis Ballier <aballier@gentoo.org>
+  Tree-DAG_Node-1.60.0.ebuild:
+  keyword ~amd64-fbsd
 
   29 Jul 2012; Torsten Veller <tove@gentoo.org> -Tree-DAG_Node-1.05.ebuild:
   Cleanup

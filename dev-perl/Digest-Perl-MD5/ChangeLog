@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Digest-Perl-MD5
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-Perl-MD5/ChangeLog,v 1.7 2012/08/02 20:32:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-Perl-MD5/ChangeLog,v 1.8 2012/08/06 13:20:23 aballier Exp $
+
+  06 Aug 2012; Alexis Ballier <aballier@gentoo.org>
+  Digest-Perl-MD5-1.800.0.ebuild:
+  keyword ~amd64-fbsd
 
   02 Aug 2012; Markus Meier <maekke@gentoo.org> Digest-Perl-MD5-1.800.0.ebuild:
   add ~arm, bug #428248
