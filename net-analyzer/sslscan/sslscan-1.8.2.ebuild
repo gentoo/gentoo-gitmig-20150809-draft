@@ -6,7 +6,7 @@ EAPI=4
 inherit toolchain-funcs
 
 DESCRIPTION="Fast SSL port scanner"
-HOMEPAGE="http://www.titania.co.uk/sslscan.php"
+HOMEPAGE="https://www.titania-security.com/labs/sslscan"
 SRC_URI="mirror://sourceforge/sslscan/${P}.tgz"
 
 LICENSE="GPL-3"
