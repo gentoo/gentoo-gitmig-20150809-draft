@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/happy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.54 2012/08/03 13:10:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.55 2012/08/06 21:05:42 ranger Exp $
+
+  06 Aug 2012; Brent Baude <ranger@gentoo.org> happy-1.18.9.ebuild:
+  Marking happy-1.18.9 ppc64 for bug 418697
 
   03 Aug 2012; Markos Chandras <hwoarang@gentoo.org> happy-1.18.9.ebuild:
   Stable on amd64 wrt bug #418697
