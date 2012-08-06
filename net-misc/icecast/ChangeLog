@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/icecast
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/ChangeLog,v 1.85 2009/07/21 17:18:54 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/ChangeLog,v 1.86 2012/08/06 19:30:29 hwoarang Exp $
+
+*icecast-2.3.3 (06 Aug 2012)
+
+  06 Aug 2012; Markos Chandras <hwoarang@gentoo.org> +icecast-2.3.3.ebuild,
+  metadata.xml:
+  Version bump. Eapi4fy it. Take exclusive maintainership
 
   21 Jul 2009; Samuli Suominen <ssuominen@gentoo.org> icecast-2.3.2.ebuild:
   Touch access.log and error.log and chown them to icecast:nogroup wrt
@@ -331,4 +337,3 @@
   comments should well explained and written in clean English. The details about
   writing correct changelogs are explained in the skel.ChangeLog file which you
   can find in the root directory of the portage repository.
-

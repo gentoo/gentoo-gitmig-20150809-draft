@@ -3,7 +3,8 @@
 <pkgmetadata>
   <herd>sound</herd>
   <maintainer>
-    <email>sound@gentoo.org</email>
+    <email>hwoarang@gentoo.org</email>
+	<name>Markos Chandras</name>
   </maintainer>
   <use>
     <flag name="yp">Build support for yp public directory listings</flag>
