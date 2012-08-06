@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/cgminer-2.5.0.ebuild,v 1.2 2012/08/06 16:20:09 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/cgminer-2.6.3.ebuild,v 1.1 2012/08/06 16:20:09 blueness Exp $
 
 EAPI="4"
 
@@ -11,19 +11,20 @@ S="${WORKDIR}/${PN}-${MY_PV}"
 
 DESCRIPTION="Bitcoin CPU/GPU/FPGA miner in C"
 HOMEPAGE="https://bitcointalk.org/index.php?topic=28402.0"
-SRC_URI="http://ck.kolivas.org/apps/${PN}/${PN}-2.5/${PN}-${MY_PV}.tar.bz2"
+SRC_URI="http://ck.kolivas.org/apps/${PN}/${PN}-${MY_PV}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 
-IUSE="+adl altivec bitforce +cpumining examples hardened icarus modminer ncurses +opencl padlock sse2 sse2_4way sse4 +udev ztex"
+IUSE="+adl altivec bitforce +cpumining examples hardened icarus modminer ncurses +opencl padlock scrypt sse2 sse2_4way sse4 +udev ztex"
 REQUIRED_USE="
 	|| ( bitforce cpumining icarus modminer opencl ztex )
 	adl? ( opencl )
 	altivec? ( cpumining ppc ppc64 )
 	opencl? ( ncurses )
 	padlock? ( cpumining || ( amd64 x86 ) )
+	scrypt? ( || ( cpumining opencl ) )
 	sse2? ( cpumining || ( amd64 x86 ) )
 	sse4? ( cpumining amd64 )
 "
@@ -92,6 +93,7 @@ src_configure() {
 		$(use_enable modminer) \
 		$(use_with ncurses curses) \
 		$(use_enable opencl) \
+		$(use_enable scrypt) \
 		$(use_with udev libudev) \
 		$(use_enable ztex)
 	# sanitize directories
@@ -101,6 +103,9 @@ src_configure() {
 src_install() {
 	dobin cgminer
 	dodoc AUTHORS NEWS README API-README
+	if use scrypt; then
+		dodoc SCRYPT-README
+	fi
 	if use icarus || use bitforce; then
 		dodoc FPGA-README
 	fi
