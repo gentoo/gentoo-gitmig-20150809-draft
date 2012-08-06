@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/kbuild
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/ChangeLog,v 1.29 2012/06/20 20:04:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/ChangeLog,v 1.30 2012/08/06 17:27:55 polynomial-c Exp $
+
+*kbuild-0.1.9998_pre20120806 (06 Aug 2012)
+
+  06 Aug 2012; Lars Wendler <polynomial-c@gentoo.org>
+  +kbuild-0.1.9998_pre20120806.ebuild,
+  +files/kbuild-0.1.9998_pre20120806-qa.patch:
+  New snapshot. Needed for the upcoming virtualbox-4.2 series.
 
 *kbuild-0.1.9998_pre20110817-r1 (20 Jun 2012)
 
