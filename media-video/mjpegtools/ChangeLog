@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.176 2012/07/10 17:52:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.177 2012/08/06 20:53:00 ranger Exp $
+
+  06 Aug 2012; Brent Baude <ranger@gentoo.org> mjpegtools-2.0.0-r2.ebuild:
+  Marking mjpegtools-2.0.0-r2 ppc64 for bug 425232
 
   10 Jul 2012; Brent Baude <ranger@gentoo.org> mjpegtools-2.0.0-r2.ebuild:
   Marking mjpegtools-2.0.0-r2 ppc for bug 425232
