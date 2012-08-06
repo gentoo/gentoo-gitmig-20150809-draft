@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcpcd-ui
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd-ui/ChangeLog,v 1.5 2012/05/26 18:29:24 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd-ui/ChangeLog,v 1.6 2012/08/06 20:09:59 darkside Exp $
+
+  06 Aug 2012; Jeremy Olexa <darkside@gentoo.org> metadata.xml:
+  Drop maintainership since I no longer use application
 
 *dhcpcd-ui-0.6.0 (26 May 2012)
 
