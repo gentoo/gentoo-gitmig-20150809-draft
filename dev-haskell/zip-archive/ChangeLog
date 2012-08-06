@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/zip-archive
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/zip-archive/ChangeLog,v 1.14 2012/08/03 13:20:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/zip-archive/ChangeLog,v 1.15 2012/08/06 21:07:30 ranger Exp $
+
+  06 Aug 2012; Brent Baude <ranger@gentoo.org> zip-archive-0.1.1.8.ebuild:
+  Marking zip-archive-0.1.1.8 ppc64 for bug 418705
 
   03 Aug 2012; Markos Chandras <hwoarang@gentoo.org> zip-archive-0.1.1.8.ebuild:
   Stable on amd64 wrt bug #418705
