@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vamp-plugin-sdk/vamp-plugin-sdk-2.3.ebuild,v 1.6 2012/08/05 20:19:00 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vamp-plugin-sdk/vamp-plugin-sdk-2.3.ebuild,v 1.7 2012/08/06 21:15:52 ranger Exp $
 
 inherit toolchain-funcs eutils multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://code.soundsoftware.ac.uk/attachments/download/224/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~arm hppa ~mips ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~arm hppa ~mips ~ppc ppc64 ~x86"
 IUSE="doc"
 
 RDEPEND="media-libs/libsndfile"
