@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.146 2012/08/05 20:59:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.147 2012/08/06 00:03:12 cardoe Exp $
+
+  06 Aug 2012; Doug Goldstein <cardoe@gentoo.org> -files/65-gentoo-kvm.rules,
+  -files/qemu-kvm-0.12.3-fix-crash-with-sdl.patch,
+  -files/qemu-kvm-0.12.3-include-madvise-defines.patch, -qemu-kvm-1.1.0.ebuild,
+  -files/qemu-kvm-guest-hang-on-usb-add.patch:
+  Remove older version and older files.
 
   05 Aug 2012; Agostino Sarubbo <ago@gentoo.org> qemu-kvm-1.1.1-r1.ebuild:
   Stable for amd64, wrt bug #428476
