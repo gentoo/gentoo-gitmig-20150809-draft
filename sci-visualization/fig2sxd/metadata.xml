@@ -2,4 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>sci</herd>
+<longdescription lang="en">
+  This program converts a file in XFig format into a .sxd file for
+  OpenOffice.org Draw.
+</longdescription>
 </pkgmetadata>
