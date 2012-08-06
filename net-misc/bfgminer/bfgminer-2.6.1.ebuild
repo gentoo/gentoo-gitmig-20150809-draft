@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/bfgminer-2.6.1.ebuild,v 1.1 2012/07/31 01:57:54 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/bfgminer-2.6.1.ebuild,v 1.2 2012/08/06 16:02:58 blueness Exp $
 
-EAPI=4
+EAPI="4"
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 
 IUSE="+adl altivec bitforce +cpumining examples hardened icarus modminer ncurses +opencl padlock scrypt sse2 sse2_4way sse4 +udev ztex"
-REQUIRED_USE='
+REQUIRED_USE="
 	|| ( bitforce cpumining icarus modminer opencl ztex )
 	adl? ( opencl )
 	altivec? ( cpumining ppc ppc64 )
@@ -23,9 +23,9 @@ REQUIRED_USE='
 	scrypt? ( || ( cpumining opencl ) )
 	sse2? ( cpumining || ( amd64 x86 ) )
 	sse4? ( cpumining amd64 )
-'
+"
 
-DEPEND='
+DEPEND="
 	net-misc/curl
 	ncurses? (
 		sys-libs/ncurses
@@ -37,7 +37,7 @@ DEPEND='
 	ztex? (
 		virtual/libusb:1
 	)
-'
+"
 RDEPEND="${DEPEND}"
 DEPEND="${DEPEND}
 	virtual/pkgconfig
@@ -46,18 +46,7 @@ DEPEND="${DEPEND}
 		x11-libs/amd-adl-sdk
 	)
 	opencl? (
-		|| (
-			virtual/opencl
-			virtual/opencl-sdk
-			app-admin/eselect-opencl
-			dev-util/ati-stream-sdk
-			dev-util/ati-stream-sdk-bin
-			dev-util/amdstream
-			dev-util/amd-app-sdk
-			dev-util/amd-app-sdk-bin
-			dev-util/nvidia-cuda-sdk[opencl]
-			dev-util/intel-opencl-sdk
-		)
+		virtual/opencl
 	)
 	sse2? (
 		>=dev-lang/yasm-1.0.1
