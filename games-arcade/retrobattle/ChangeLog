@@ -1,0 +1,11 @@
+# ChangeLog for games-arcade/retrobattle
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/retrobattle/ChangeLog,v 1.1 2012/08/06 16:41:53 hasufell Exp $
+
+*retrobattle-1.0.0 (06 Aug 2012)
+
+  06 Aug 2012; Julian Ospald <hasufell@gentoo.org> +retrobattle-1.0.0.ebuild,
+  +files/retrobattle-1.0.0-build.patch, +files/retrobattle-1.0.0-sound.patch,
+  +metadata.xml:
+  initial commit based on ebuild from Alexander Berntsen
+
