@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.27.0-r2.ebuild,v 1.4 2012/08/04 16:39:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.27.0-r2.ebuild,v 1.5 2012/08/06 13:45:17 blueness Exp $
 
 EAPI="4"
 
@@ -87,7 +87,8 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-7.27.0-curl-config.patch \
 		"${FILESDIR}"/${PN}-7.27.0-prefix.patch \
 		"${FILESDIR}"/${PN}-respect-cflags-3.patch \
-		"${FILESDIR}"/${PN}-fix-gnutls-nettle.patch
+		"${FILESDIR}"/${PN}-fix-gnutls-nettle.patch \
+		"${FILESDIR}"/${PN}-7.20.0-fix-nettle-include.patch
 	sed -i '/LD_LIBRARY_PATH=/d' configure.ac || die #382241
 
 	eprefixify curl-config.in
