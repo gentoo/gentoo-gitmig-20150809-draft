@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXaw3d
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw3d/ChangeLog,v 1.20 2012/07/27 23:16:01 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw3d/ChangeLog,v 1.21 2012/08/07 15:49:44 mattst88 Exp $
+
+  07 Aug 2012; Matt Turner <mattst88@gentoo.org> -files/Xaw3d-out-of-tree.diff,
+  -files/Xaw3d-xfree86.diff, -libXaw3d-1.5-r1.ebuild:
+  Drop old libXaw3d-1.5.
 
   27 Jul 2012; Christoph Junghans <ottxor@gentoo.org> libXaw3d-1.6.2.ebuild:
   added prefix keywords from x11-libs/Xaw3d
