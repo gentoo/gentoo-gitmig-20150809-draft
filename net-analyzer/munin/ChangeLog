@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.89 2012/08/06 20:47:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.90 2012/08/07 01:19:49 flameeyes Exp $
+
+*munin-2.0.4-r2 (07 Aug 2012)
+
+  07 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> +munin-2.0.4-r2.ebuild,
+  -munin-2.0.4-r1.ebuild, -munin-2.0.4.ebuild:
+  Fix ipmi_ plugin that was pushed different from what was tested; add a mysql_
+  patch from Robin to handle multiple instances on the same host.
 
   06 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> munin-2.0.4-r1.ebuild:
   Add another patch to make ipmi_ monitor voltages as well as the other

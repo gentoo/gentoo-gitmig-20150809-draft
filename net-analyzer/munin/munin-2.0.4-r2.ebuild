@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.4.ebuild,v 1.1 2012/07/30 15:16:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.4-r2.ebuild,v 1.1 2012/08/07 01:19:49 flameeyes Exp $
 
 EAPI=4
 
-PATCHSET=3
+PATCHSET=6
 
 inherit eutils user java-pkg-opt-2
 
@@ -24,7 +24,7 @@ REQUIRED_USE="cgi? ( !minimal )"
 # Upstream's listing of required modules is NOT correct!
 # Some of the postgres plugins use DBD::Pg, while others call psql directly.
 # Some of the mysql plugins use DBD::mysql, while others call mysqladmin directly.
-# We replace the original ipmi plugisn with the freeipmi_ plugin which at least works.
+# We replace the original ipmi plugins with the freeipmi_ plugin which at least works.
 DEPEND_COM="dev-lang/perl
 			sys-process/procps
 			asterisk? ( dev-perl/Net-Telnet )
@@ -108,6 +108,7 @@ LIBDIR=\$(PREFIX)/libexec/munin
 HTMLDIR=\$(DESTDIR)/var/www/localhost/htdocs/munin
 CGIDIR=${cgidir}
 DBDIR=\$(DESTDIR)/var/lib/munin
+SPOOLDIR=\$(DESTDIR)/var/spool/munin
 LOGDIR=\$(DESTDIR)/var/log/munin
 PERLSITELIB=$(perl -V:vendorlib | cut -d"'" -f2)
 JCVALID=$(usex java yes no)
@@ -124,6 +125,7 @@ src_install() {
 	local dirs="
 		/var/log/munin/
 		/var/lib/munin/plugin-state/
+		/var/spool/munin/
 		/etc/munin/plugin-conf.d/
 		/etc/munin/plugins/"
 	keepdir ${dirs}
@@ -144,9 +146,11 @@ src_install() {
 	insinto /etc/munin/plugin-conf.d/
 	newins "${FILESDIR}"/${PN}-1.3.2-plugins.conf munin-node
 
-	# make sure we've got everything in the correct directory
 	newinitd "${FILESDIR}"/munin-node_init.d_2.0.2 munin-node
 	newconfd "${FILESDIR}"/munin-node_conf.d_1.4.6-r2 munin-node
+
+	newinitd "${FILESDIR}"/munin-asyncd.init munin-asyncd
+
 	dodoc README ChangeLog INSTALL build/resources/apache*
 
 	# bug 254968
