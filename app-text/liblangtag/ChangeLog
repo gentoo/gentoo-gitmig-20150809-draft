@@ -1,0 +1,10 @@
+# ChangeLog for app-text/liblangtag
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/liblangtag/ChangeLog,v 1.1 2012/08/07 11:42:43 scarabeus Exp $
+
+*liblangtag-0.3 (07 Aug 2012)
+
+  07 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/liblangtag-0.3-automagic-tests.patch, +liblangtag-0.3.ebuild,
+  +metadata.xml:
+  Initial commit, will be required by libreoffice-3.7.
