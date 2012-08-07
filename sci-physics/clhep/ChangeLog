@@ -1,6 +1,14 @@
 # ChangeLog for sci-physics/clhep
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/clhep/ChangeLog,v 1.41 2012/06/28 00:31:06 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/clhep/ChangeLog,v 1.42 2012/08/07 18:05:12 bicatali Exp $
+
+*clhep-2.1.2.4 (07 Aug 2012)
+
+  07 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> +clhep-2.1.2.4.ebuild,
+  +files/clhep-2.1.2.4-libdir.patch, -clhep-2.1.1.0.ebuild,
+  -clhep-2.1.2.0.ebuild, -clhep-2.1.2.2.ebuild,
+  -files/clhep-2.1.2.2-automake-1.12.patch, clhep-2.1.0.1.ebuild, metadata.xml:
+  Version bump, fixed older version for automake-1.9, bug #428006
 
 *clhep-2.1.2.3 (28 Jun 2012)
 
