@@ -1,6 +1,12 @@
 # ChangeLog for sci-visualization/spectromatic
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/spectromatic/ChangeLog,v 1.11 2012/05/04 08:07:00 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/spectromatic/ChangeLog,v 1.12 2012/08/07 02:33:07 bicatali Exp $
+
+  07 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/spectromatic-1.0-waveheaderstruct-amd64.patch,
+  -files/spectromatic-1.0-gentoo.diff, files/spectromatic-1.0-makefile.patch,
+  spectromatic-1.0-r2.ebuild:
+  Fixed for reading RIFF/WAV files on amd64, thanks to Ilya Gordeev, bug #428644
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> spectromatic-1.0-r2.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

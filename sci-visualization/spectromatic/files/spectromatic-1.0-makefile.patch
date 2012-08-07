@@ -10,7 +10,8 @@ Fix install paths
 -LIBS = -lgsl -lgslcblas -lpng -lm
 +LIBS = -lpng `pkg-config --libs gsl`
  DESTDIR =
- TOPLEVEL_HOME = /usr
+-TOPLEVEL_HOME = /usr
++TOPLEVEL_HOME ?= /usr
  
 -CC = gcc -I.
 -
@@ -29,7 +30,7 @@ Fix install paths
  all:	$(OBJ)
 -	$(CC) -o $(TARGET) $(OBJ) $(LIBS)
 -	strip $(TARGET)
-+	$(CC) $(LDFLAGS) -o $(TARGET) $(OBJ) $(LIBS)
++	$(CC) $(LDFLAGS) $(OBJ) $(LIBS) -o $(TARGET)
 +
 +install: $(TARGET)
 +	mkdir -p $(DESTDIR)$(TOPLEVEL_HOME)/bin
