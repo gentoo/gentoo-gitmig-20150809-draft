@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/bwwhois-5.0.ebuild,v 1.4 2012/07/29 17:23:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/bwwhois-5.5.1.ebuild,v 1.1 2012/08/07 18:11:20 kensington Exp $
 
-inherit perl-app
+EAPI=4
+
+inherit eutils perl-app
 
 MY_P=${P/bw/}
 
@@ -12,24 +14,29 @@ HOMEPAGE="http://whois.bw.org/"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="dev-lang/perl"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	virtual/perl-Getopt-Long"
 
 S=${WORKDIR}/${MY_P}
 
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-tel.patch
+}
+
 src_install() {
 	exeinto usr/bin
-	newexe whois bwwhois || die
+	newexe whois bwwhois
 
-	newman whois.1 bwwhois.1 || die
+	newman whois.1 bwwhois.1
 
 	insinto /etc/whois
-	doins whois.conf tld.conf sd.conf || die
+	doins whois.conf tld.conf sd.conf
 
 	perlinfo
-	insinto "${SITE_LIB}"
-	doins bwInclude.pm || die
+	insinto "${VENDOR_LIB}"
+	doins bwInclude.pm
 }
