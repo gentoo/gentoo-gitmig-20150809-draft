@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/quickplot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/quickplot/ChangeLog,v 1.17 2012/05/04 08:07:00 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/quickplot/ChangeLog,v 1.18 2012/08/07 03:46:47 bicatali Exp $
+
+  07 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml,
+  quickplot-0.10.3.ebuild:
+  Version bump
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> quickplot-0.8.13-r1.ebuild,
   quickplot-0.10.2.ebuild, quickplot-0.10.3.ebuild:
@@ -102,4 +106,3 @@
   Initial import - thanks to Michael Labhard <m.labhard@comcast.net> bug 49103,
   and Lance Arenault <lanceman@bev.net> bug 49725 for the initial ebuilds. I
   added the gcc patch to fix compilation problems with GCC 3.4.
-

@@ -1,16 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/quickplot/quickplot-0.10.3.ebuild,v 1.2 2012/05/04 08:07:00 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/quickplot/quickplot-0.10.3.ebuild,v 1.3 2012/08/07 03:46:47 bicatali Exp $
 
 EAPI=4
-
-#AUTOTOOLS_AUTORECONF=true
 
 inherit autotools-utils eutils
 
 DESCRIPTION="A fast interactive 2D plotter"
 HOMEPAGE="http://quickplot.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.xz"
 
 SLOT="0"
 LICENSE="GPL-3"
@@ -33,8 +31,7 @@ src_configure() {
 
 src_install () {
 	autotools-utils_src_install
-
 	make_desktop_entry 'quickplot --no-pipe' Quickplot quickplot Graphics
-	mv "${D}"/usr/share/applications/quickplot*.desktop \
-		"${D}"/usr/share/applications/quickplot.desktop || die
+	mv "${ED}"/usr/share/applications/quickplot*.desktop \
+		"${ED}"/usr/share/applications/quickplot.desktop || die
 }
