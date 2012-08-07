@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/enable
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enable/ChangeLog,v 1.16 2012/02/24 09:37:06 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enable/ChangeLog,v 1.17 2012/08/07 04:03:10 patrick Exp $
+
+  07 Aug 2012; Patrick Lauer <patrick@gentoo.org> enable-4.1.0.ebuild:
+  Restricting py-2.5
 
   24 Feb 2012; Patrick Lauer <patrick@gentoo.org> enable-3.4.0.ebuild,
   enable-3.4.1.ebuild, enable-4.0.0.ebuild, enable-4.1.0.ebuild:
@@ -78,4 +81,3 @@
   15 Jan 2009; Sébastien Fabbro <bicatali@gentoo.org>
   +files/enable-3.0.2-nofreetype.patch, +metadata.xml, +enable-3.0.2.ebuild:
   Initial import
-
