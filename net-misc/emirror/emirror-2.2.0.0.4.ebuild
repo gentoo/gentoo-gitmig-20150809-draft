@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/emirror/emirror-2.2.0.0.4.ebuild,v 1.2 2012/02/16 19:05:59 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/emirror/emirror-2.2.0.0.4.ebuild,v 1.3 2012/08/07 18:27:09 ago Exp $
 
 inherit versionator
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 S="${WORKDIR}"/${PN}-${MY_PV}
