@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.3.3.ebuild,v 1.1 2012/08/06 19:30:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.3.3.ebuild,v 1.2 2012/08/07 17:46:18 hwoarang Exp $
 
 EAPI=4
-inherit eutils libtool
+inherit eutils autotools
 
 DESCRIPTION="An opensource alternative to shoutcast that supports mp3, ogg (vorbis/theora) and aac streaming"
 HOMEPAGE="http://www.icecast.org/"
@@ -12,7 +12,7 @@ SRC_URI="http://downloads.xiph.org/releases/icecast/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="+speex +ssl +theora +yp"
+IUSE="kate +speex +ssl +theora +yp"
 
 #Although there is a --with-ogg and --with-orbis configure option, they're
 #only useful for specifying paths, not for disabling.
@@ -20,6 +20,7 @@ DEPEND="dev-libs/libxslt
 	dev-libs/libxml2
 	media-libs/libogg
 	media-libs/libvorbis
+	kate? ( media-libs/libkate )
 	speex? ( media-libs/speex )
 	theora? ( media-libs/libtheora )
 	yp? ( net-misc/curl )
@@ -30,13 +31,16 @@ pkg_setup() {
 }
 
 src_prepare() {
-	elibtoolize
+	# bug #368539
+	epatch "${FILESDIR}"/${P}-libkate.patch
+	eautoreconf
 }
 
 src_configure() {
 	econf \
 		--disable-dependency-tracking \
 		--sysconfdir=/etc/icecast2 \
+		$(use_enable kate) \
 		$(use_with theora) \
 		$(use_with speex) \
 		$(use_with yp curl) \
