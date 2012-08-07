@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/graphviz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.267 2012/08/05 18:46:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.268 2012/08/07 21:02:58 aballier Exp $
+
+  07 Aug 2012; Alexis Ballier <aballier@gentoo.org> graphviz-2.28.0.ebuild:
+  keyword ~amd64-fbsd, bug #419621
 
   05 Aug 2012; Raúl Porcel <armin76@gentoo.org> graphviz-2.28.0.ebuild:
   Re-add ~alpha/~ia64/~sparc wrt #419621
