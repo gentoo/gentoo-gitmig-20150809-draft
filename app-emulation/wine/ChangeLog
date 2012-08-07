@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.422 2012/07/19 13:57:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.423 2012/08/07 08:06:43 tetromino Exp $
+
+*wine-1.5.10 (07 Aug 2012)
+
+  07 Aug 2012; Alexandre Rostovtsev <tetromino@gentoo.org> +wine-1.5.10.ebuild,
+  +files/wine-1.5.10-osmesa-check.patch, wine-9999.ebuild, metadata.xml:
+  Bump, see http://www.winehq.org/announce/1.5.10 for the announcement, thanks
+  to Rafał Mużyło (bug #429386). Note that on amd64, osmesa support is for
+  now win64-only.
 
   19 Jul 2012; Tomáš Chvátal <scarabeus@gentoo.org> wine-1.4.1.ebuild:
   Amd64 stable wrt bug#427060.
