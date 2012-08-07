@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/ocsigen/ocsigen-1.3.4.ebuild,v 1.2 2011/02/15 21:20:59 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/ocsigen/ocsigen-1.3.4.ebuild,v 1.3 2012/08/07 19:42:10 aballier Exp $
 
 EAPI=2
 
@@ -23,7 +23,7 @@ DEPEND="dev-ml/findlib
 		dev-ml/obrowser
 		>=dev-ml/pcre-ocaml-6.0.1
 		>=dev-lang/ocaml-3.10.2[ocamlopt?]
-		!sqlite? ( !dbm? ( >=dev-lang/ocaml-3.10.2[gdbm] ) )
+		!sqlite? ( !dbm? ( || ( dev-ml/camldbm >=dev-lang/ocaml-3.10.2[gdbm] ) ) )
 		>=dev-ml/ocamlnet-2.2
 		>=dev-ml/ocaml-ssl-0.4
 		ocamlduce? ( >=dev-ml/ocamlduce-3.10.0 )
