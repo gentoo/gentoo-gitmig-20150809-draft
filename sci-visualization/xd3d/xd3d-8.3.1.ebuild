@@ -1,18 +1,18 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xd3d/xd3d-8.3.1.ebuild,v 1.12 2012/08/05 16:26:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xd3d/xd3d-8.3.1.ebuild,v 1.13 2012/08/07 03:56:17 bicatali Exp $
 
 EAPI=4
 
 inherit eutils fortran-2 multilib toolchain-funcs
 
-DESCRIPTION="scientific visualization tool"
+DESCRIPTION="Scientific visualization tool"
 HOMEPAGE="http://www.cmap.polytechnique.fr/~jouve/xd3d/"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86"
+KEYWORDS="amd64 ppc ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="examples"
 
 RDEPEND="
@@ -35,7 +35,7 @@ src_prepare() {
 src_configure() {
 	tc-export FC CC
 	sed \
-		-e "s:##D##:${D}:" \
+		-e "s:##D##:${ED}:" \
 		-e "s:##lib##:$(get_libdir):" \
 		-i RULES.gentoo \
 		|| die "failed to set up RULES.gentoo"
