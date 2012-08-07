@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/gentoopm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.21 2012/08/03 13:24:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.22 2012/08/07 20:34:00 aballier Exp $
+
+  07 Aug 2012; Alexis Ballier <aballier@gentoo.org> gentoopm-0.2.5-r1.ebuild:
+  keyword ~amd64-fbsd, bug #393183
 
   03 Aug 2012; Agostino Sarubbo <ago@gentoo.org> gentoopm-0.2.5-r1.ebuild:
   Stable for amd64, wrt bug #428896
