@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/ct-ng
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/ct-ng/ChangeLog,v 1.38 2012/08/07 15:13:02 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/ct-ng/ChangeLog,v 1.39 2012/08/07 16:28:38 blueness Exp $
+
+  07 Aug 2012; Anthony G. Basile <blueness@gentoo.org> ct-ng-1.15.3.ebuild,
+  +files/ct-ng-kconfig-respect-flags.patch:
+  Respect CFLAGS/LDFLAGS, fix documentation, bug #429936
 
   07 Aug 2012; Anthony G. Basile <blueness@gentoo.org> -ct-ng-1.15.2.ebuild:
   Remove older unstable in 1.15 branch
