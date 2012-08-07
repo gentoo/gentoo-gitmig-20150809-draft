@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kiten
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kiten/ChangeLog,v 1.210 2012/08/01 22:16:59 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kiten/ChangeLog,v 1.211 2012/08/07 11:04:33 johu Exp $
+
+*kiten-4.8.5 (07 Aug 2012)
+
+  07 Aug 2012; Johannes Huber <johu@gentoo.org> +kiten-4.8.5.ebuild:
+  Version bump KDE SC 4.8.5
 
 *kiten-4.9.0 (01 Aug 2012)
 

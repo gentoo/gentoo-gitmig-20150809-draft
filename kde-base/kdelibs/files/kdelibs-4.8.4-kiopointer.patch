@@ -1,5 +1,3 @@
-http://quickgit.kde.org/index.php?p=kdelibs.git&a=commit&h=e4c73e47a52cde8f5f73a00b60a8ae10fd2d1a4d
-
 --- a/kio/kio/accessmanager.cpp
 +++ b/kio/kio/accessmanager.cpp
 @@ -37,7 +37,7 @@
