@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camldbm/camldbm-1.0.ebuild,v 1.1 2012/08/07 19:31:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camldbm/camldbm-1.0.ebuild,v 1.2 2012/08/07 19:35:16 aballier Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND="|| ( >=sys-libs/gdbm-1.9.1-r2[berkdb] <sys-libs/gdbm-1.9.1-r2 )
-	dev-lang/ocaml
+	>=dev-lang/ocaml-3.12[ocamlopt]
 	!<dev-lang/ocaml-4[gdbm]"
 RDEPEND="${DEPEND}"
 
