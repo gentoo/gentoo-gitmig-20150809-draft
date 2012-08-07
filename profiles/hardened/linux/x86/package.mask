@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/x86/package.mask,v 1.6 2010/05/19 18:07:03 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/x86/package.mask,v 1.7 2012/08/07 03:45:22 zerochaos Exp $
 
-# These packages do more harm than good on hardened.
+# Although it may build, these packages do more harm than good on hardened.
+# X almost certainly will not load, same with anything related to opengl.
 # Users with nVidia GPUs must use the OSS "nouveau" or "nv" Xorg drivers.
 x11-drivers/nvidia-drivers
 media-video/nvidia-settings
