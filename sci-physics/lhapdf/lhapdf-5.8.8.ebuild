@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lhapdf/lhapdf-5.8.6.ebuild,v 1.1 2011/08/06 20:53:59 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lhapdf/lhapdf-5.8.8.ebuild,v 1.1 2012/08/07 17:34:13 bicatali Exp $
 
 EAPI=4
 
@@ -13,14 +13,15 @@ DESCRIPTION="Les Houches Parton Density Function unified library"
 HOMEPAGE="http://projects.hepforge.org/lhapdf/"
 SRC_URI="http://www.hepforge.org/archive/lhapdf/${MY_PF}.tar.gz
 	test? (
-		http://svn.hepforge.org/${PN}/pdfsets/tags/${MY_PV}/cteq61.LHgrid
-		http://svn.hepforge.org/${PN}/pdfsets/tags/${MY_PV}/MRST2004nlo.LHgrid
-		http://svn.hepforge.org/${PN}/pdfsets/tags/${MY_PV}/cteq61.LHpdf
-		octave? ( http://svn.hepforge.org/${PN}/pdfsets/tags/${MY_PV}/cteq5l.LHgrid ) )"
+		http://www.hepforge.org/archive/${PN}/pdfsets/${MY_PV}/cteq61.LHgrid
+		http://www.hepforge.org/archive/${PN}/pdfsets/${MY_PV}/MRST2004nlo.LHgrid
+		http://www.hepforge.org/archive/${PN}/pdfsets/${MY_PV}/cteq61.LHpdf
+		http://www.hepforge.org/archive/${PN}/pdfsets/${MY_PV}/CT10.LHgrid
+		octave? ( http://www.hepforge.org/archive/${PN}/pdfsets/${MY_PV}/cteq5l.LHgrid ) )"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="cxx doc examples octave python static-libs test"
 REQUIRED_USE="octave? ( cxx )"
 RDEPEND="octave? ( sci-mathematics/octave )"
@@ -57,8 +58,6 @@ src_test() {
 
 src_install() {
 	default
-	# leftover
-	rm -rf "${ED}"/usr/share/${PN}/doc || die
 	use doc && use cxx && dohtml -r ccwrap/doxy/html/*
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
