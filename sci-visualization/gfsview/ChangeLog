@@ -1,6 +1,12 @@
 # ChangeLog for sci-visualization/gfsview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gfsview/ChangeLog,v 1.10 2012/05/04 08:07:00 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gfsview/ChangeLog,v 1.11 2012/08/07 00:52:47 bicatali Exp $
+
+*gfsview-20120706 (07 Aug 2012)
+
+  07 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> +gfsview-20120706.ebuild,
+  -gfsview-20091219.ebuild, -gfsview-20100407.ebuild, metadata.xml:
+  Version bump. Added OpenGL underlinking fix
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> gfsview-20091219.ebuild,
   gfsview-20100407.ebuild, gfsview-20111003.ebuild:
@@ -52,4 +58,3 @@
   +gfsview-0.4.ebuild:
   Initial import (fixes bug #102325). Many thanks to Tim Cera 
   <timcera@earthlink.net> for his ebuild and patches.
-
