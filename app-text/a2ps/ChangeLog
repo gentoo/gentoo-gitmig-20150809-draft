@@ -1,6 +1,9 @@
 # ChangeLog for app-text/a2ps
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.107 2012/08/07 00:01:47 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.108 2012/08/07 03:32:05 blueness Exp $
+
+  07 Aug 2012; Anthony G. Basile <blueness@gentoo.org> a2ps-4.14-r3.ebuild:
+  Stable ppc ppc64, bug #428900
 
   07 Aug 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   -files/4.13c-gcc34.patch, -files/a2ps-4.13-fixcachecheck.patch,
