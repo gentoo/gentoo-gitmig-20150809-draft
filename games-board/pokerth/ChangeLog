@@ -1,6 +1,9 @@
 # ChangeLog for games-board/pokerth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/ChangeLog,v 1.37 2012/07/02 17:16:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/ChangeLog,v 1.38 2012/08/07 13:02:56 ago Exp $
+
+  07 Aug 2012; Agostino Sarubbo <ago@gentoo.org> pokerth-0.9.5.ebuild:
+  Stable for amd64, wrt bug #430282
 
 *pokerth-0.9.5 (02 Jul 2012)
 
