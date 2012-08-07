@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/virtualbox-additions
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-additions/ChangeLog,v 1.48 2012/06/20 16:13:17 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-additions/ChangeLog,v 1.49 2012/08/07 21:13:35 hwoarang Exp $
+
+  07 Aug 2012; Markos Chandras <hwoarang@gentoo.org>
+  virtualbox-additions-4.1.18.ebuild:
+  Stable on amd64 wrt bug #427852
 
 *virtualbox-additions-4.1.18 (20 Jun 2012)
 
@@ -159,4 +163,3 @@
   06 Jan 2011; Lars Wendler <polynomial-c@gentoo.org>
   +virtualbox-additions-4.0.0.ebuild, +metadata.xml:
   Initial version.
-

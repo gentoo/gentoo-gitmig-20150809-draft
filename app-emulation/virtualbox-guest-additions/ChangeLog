@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/virtualbox-guest-additions
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.99 2012/06/20 16:16:06 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.100 2012/08/07 21:14:52 hwoarang Exp $
+
+  07 Aug 2012; Markos Chandras <hwoarang@gentoo.org>
+  virtualbox-guest-additions-4.1.18.ebuild:
+  Stable on amd64 wrt bug #427852
 
 *virtualbox-guest-additions-4.1.18 (20 Jun 2012)
 
@@ -724,4 +728,3 @@
   virtualbox-guest-tools-1.5.4.ebuild,
   -virtualbox-guest-tools-1.5.4-remove-alsa.patch:
   fix src_install for amd64
-
