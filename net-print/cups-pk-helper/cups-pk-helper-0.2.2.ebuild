@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pk-helper/cups-pk-helper-0.2.2.ebuild,v 1.4 2012/05/27 23:12:09 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pk-helper/cups-pk-helper-0.2.2.ebuild,v 1.5 2012/08/07 09:10:52 tetromino Exp $
 
 EAPI="4"
+
+inherit eutils
 
 DESCRIPTION="PolicyKit helper to configure cups with fine-grained privileges"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/cups-pk-helper"
@@ -29,6 +31,9 @@ DEPEND="${COMMON_DEPEND}
 
 src_prepare() {
 	DOCS="AUTHORS HACKING NEWS README"
+
+	# bug #428544, https://bugs.freedesktop.org/show_bug.cgi?id=52265
+	epatch "${FILESDIR}/${PN}-0.2.2-cups-1.6.patch"
 
 	# Regenerate dbus-codegen files to fix build with glib-2.30.x; bug #410773
 	rm -v src/cph-iface-mechanism.{c,h} || die

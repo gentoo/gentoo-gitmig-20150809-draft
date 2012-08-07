@@ -1,6 +1,11 @@
 # ChangeLog for net-print/cups-pk-helper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pk-helper/ChangeLog,v 1.7 2012/05/27 23:12:09 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pk-helper/ChangeLog,v 1.8 2012/08/07 09:10:52 tetromino Exp $
+
+  07 Aug 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  cups-pk-helper-0.2.2.ebuild, +files/cups-pk-helper-0.2.2-cups-1.6.patch:
+  Fix build failure with cups-1.6.x (bug #428544, thanks to Diego Elio Pettenò
+  and Andreas K. Hüttel).
 
   27 May 2012; Matt Turner <mattst88@gentoo.org> cups-pk-helper-0.2.2.ebuild:
   Added ~alpha, bug 379651.
