@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/oasis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/oasis/ChangeLog,v 1.7 2012/07/09 20:56:49 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/oasis/ChangeLog,v 1.8 2012/08/07 16:32:13 aballier Exp $
+
+  07 Aug 2012; Alexis Ballier <aballier@gentoo.org> -oasis-0.3.0_rc6.ebuild:
+  remove old
 
   09 Jul 2012; Ulrich Müller <ulm@gentoo.org> oasis-0.3.0.ebuild,
   oasis-0.3.0_rc6.ebuild:

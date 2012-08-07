@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/ocaml-data-notation
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-data-notation/ChangeLog,v 1.9 2012/07/07 16:20:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-data-notation/ChangeLog,v 1.10 2012/08/07 16:33:06 aballier Exp $
+
+  07 Aug 2012; Alexis Ballier <aballier@gentoo.org>
+  -ocaml-data-notation-0.0.8.ebuild:
+  remove old
 
 *ocaml-data-notation-0.0.9 (07 Jul 2012)
 
