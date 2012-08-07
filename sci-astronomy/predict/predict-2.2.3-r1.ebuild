@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/predict/predict-2.2.3-r1.ebuild,v 1.1 2012/08/06 20:23:47 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/predict/predict-2.2.3-r1.ebuild,v 1.2 2012/08/07 04:00:29 mr_bones_ Exp $
 
 EAPI=4
 
@@ -149,7 +149,6 @@ src_install() {
 	dobin geosat
 	newdoc README README.geosa
 	newman "${S}"/debian/geosat.man geosat.1
-
 
 	cd "${S}"/utils/moontracker
 	dobin moontracker
