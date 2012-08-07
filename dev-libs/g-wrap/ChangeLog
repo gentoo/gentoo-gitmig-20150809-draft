@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/g-wrap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.82 2012/07/26 17:07:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.83 2012/08/07 21:21:32 ranger Exp $
+
+  07 Aug 2012; Brent Baude <ranger@gentoo.org> g-wrap-1.9.13.ebuild:
+  Marking g-wrap-1.9.13 ppc64 for bug 427470
 
   26 Jul 2012; Justin Lecher <jlec@gentoo.org> g-wrap-1.9.11.ebuild,
   g-wrap-1.9.13.ebuild, g-wrap-1.9.14.ebuild:
