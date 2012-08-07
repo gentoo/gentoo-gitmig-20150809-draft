@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.357 2012/08/05 13:45:16 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.358 2012/08/07 13:24:19 heroxbd Exp $
+
+  07 Aug 2012; Benda Xu <heroxbd@gentoo.org> package.mask:
+  mask baselayout-prefix-1.12.14-r1 for testing openrc. bug 415895.
 
   05 Aug 2012; Fabian Groffen <grobian@gentoo.org>
   +bsd/freebsd/9.1/package.mask:
