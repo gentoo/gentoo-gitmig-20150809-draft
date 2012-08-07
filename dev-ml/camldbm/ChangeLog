@@ -1,0 +1,11 @@
+# ChangeLog for dev-ml/camldbm
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camldbm/ChangeLog,v 1.1 2012/08/07 19:31:34 aballier Exp $
+
+*camldbm-1.0 (07 Aug 2012)
+
+  07 Aug 2012; Alexis Ballier <aballier@gentoo.org> +camldbm-1.0.ebuild,
+  +files/hasgotfix.patch, +files/include_fix.patch, +metadata.xml:
+  Initial import, standalone version of the OCaml gdbm bindings split out of
+  dev-lang/ocaml; ebuild by me.
+
