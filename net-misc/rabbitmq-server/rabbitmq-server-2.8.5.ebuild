@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/rabbitmq-server-2.8.1.ebuild,v 1.2 2012/05/12 19:46:46 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/rabbitmq-server-2.8.5.ebuild,v 1.1 2012/08/07 12:55:12 ultrabug Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
 
-inherit eutils python
+inherit eutils python systemd
 
 DESCRIPTION="RabbitMQ is a high-performance AMQP-compliant message broker written in Erlang."
 HOMEPAGE="http://www.rabbitmq.com/"
@@ -67,6 +67,7 @@ src_install() {
 
 	# install the init script
 	newinitd "${FILESDIR}"/rabbitmq-server.init-r3 rabbitmq
+	systemd_dounit "${FILESDIR}/rabbitmq.service"
 
 	# install documentation
 	doman docs/*.[15]
