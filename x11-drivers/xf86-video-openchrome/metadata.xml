@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>x11</herd>
-<maintainer>
-<email>jer@gentoo.org</email>
-<name>Jeroen Roovers</name>
-</maintainer>
 <use>
 <flag name="viaregtool">Install registers dumper tool</flag>
 </use>
