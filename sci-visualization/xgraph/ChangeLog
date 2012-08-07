@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/xgraph
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xgraph/ChangeLog,v 1.15 2010/06/28 21:34:25 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xgraph/ChangeLog,v 1.16 2012/08/07 04:46:51 bicatali Exp $
+
+*xgraph-12.1-r3 (07 Aug 2012)
+
+  07 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> +xgraph-12.1-r3.ebuild:
+  Updated debian patch, use more modern autotools
 
   28 Jun 2010; Justin Lecher <jlec@gentoo.org> xgraph-12.1-r2.ebuild:
   Corrected prefix import, 325055
@@ -71,4 +76,3 @@
   10 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> xgraph-12.1.ebuild:
   Initial commit, original ebuild by Christophe Radovcic
   <christophe.radovcic@laposte.net>, updated by robbat2@gentoo.org
-
