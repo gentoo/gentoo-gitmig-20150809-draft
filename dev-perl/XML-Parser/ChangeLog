@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/XML-Parser
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Parser/ChangeLog,v 1.62 2012/06/24 13:00:34 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Parser/ChangeLog,v 1.63 2012/08/07 15:21:54 grobian Exp $
+
+*XML-Parser-2.410.0-r1 (07 Aug 2012)
+
+  07 Aug 2012; Fabian Groffen <grobian@gentoo.org>
+  +XML-Parser-2.410.0-r1.ebuild:
+  Fix expat detection for FreeBSD that silently went unnoticed.
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
