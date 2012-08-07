@@ -1,14 +1,16 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-1.0.2.ebuild,v 1.1 2012/07/30 18:49:38 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-1.0.2.ebuild,v 1.2 2012/08/07 19:04:32 williamh Exp $
 
 EAPI=4
 
-EHG_REPO_URI="https://go.googlecode.com/hg"
+export CTARGET=${CTARGET:-${CHOST}}
 
-[[ ${PV} == 9999 ]] && vcs=mercurial
-
-inherit $vcs bash-completion-r1 elisp-common eutils
+if [[ ${PV} = 9999 ]]; then
+	EHG_REPO_URI="https://go.googlecode.com/hg"
+	inherit mercurial
+fi
+inherit bash-completion-r1 elisp-common eutils
 
 if [[ ${PV} != 9999 ]]; then
 	SRC_URI="http://go.googlecode.com/files/go${PV}.src.tar.gz"
@@ -35,7 +37,9 @@ RDEPEND="bash-completion? ( app-shells/bash-completion )
 	# These are _NOT_ libraries, and should not be stripped.
 STRIP_MASK="/usr/lib/go/pkg/linux*/*.a"
 
-[[ ${PV} == 9999 ]] || S="${WORKDIR}"/go
+if [[ ${PV} != 9999 ]]; then
+	S="${WORKDIR}"/go
+fi
 
 src_prepare()
 {
@@ -47,11 +51,13 @@ src_prepare()
 
 src_compile()
 {
-	export HOST_EXTRA_CFLAGS="${CFLAGS}"
-	export HOST_EXTRA_LDFLAGS="${LDFLAGS}"
 	export GOROOT_FINAL=/usr/lib/go
 	export GOROOT="$(pwd)"
 	export GOBIN="${GOROOT}/bin"
+	if [[ $CTARGET = arm5* ]]
+	then
+		export GOARM=5
+	fi
 
 	cd src
 	./make.bash || die "build failed"
@@ -65,7 +71,8 @@ src_compile()
 src_test()
 {
 	cd src
-	PATH="$GOBIN:${PATH}" ./run.bash --no-rebuild --banner || die "tests failed"
+	PATH="${GOBIN}:${PATH}" \
+		./run.bash --no-rebuild --banner || die "tests failed"
 }
 
 src_install()
