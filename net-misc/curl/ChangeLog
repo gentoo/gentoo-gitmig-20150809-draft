@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.239 2012/08/06 13:45:17 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.240 2012/08/07 12:38:58 blueness Exp $
+
+  07 Aug 2012; Anthony G. Basile <blueness@gentoo.org>
+  -files/curl-respect-cflags-2.patch,
+  -files/curl-7.20.0-fix-nettle-include.patch, curl-7.27.0-r2.ebuild,
+  +files/curl-7.27.0-fix-metalink-gnutls.patch,
+  +files/curl-7.27.0-fix-nettle-include.patch, -files/config.h.ed,
+  -files/curlbuild.h.ed:
+  Fix build with metalink + gnutls, bug 428592. Cleaned out unused patch files.
 
   06 Aug 2012; Anthony G. Basile <blueness@gentoo.org>
   +files/curl-7.20.0-fix-nettle-include.patch, curl-7.27.0-r2.ebuild:
