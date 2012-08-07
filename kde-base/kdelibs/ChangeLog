@@ -1,6 +1,19 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.857 2012/08/07 11:04:46 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.858 2012/08/07 14:13:47 johu Exp $
+
+  07 Aug 2012; Johannes Huber <johu@gentoo.org>
+  files/kdelibs-4.3.2-solaris-fileunix.patch,
+  files/kdelibs-4.3.2-solaris-getgrouplist.patch,
+  files/kdelibs-4.3.2-solaris-ksyscoca.patch,
+  files/kdelibs-4.3.80-kdeui_util_kkeyserver_mac.patch,
+  files/kdelibs-4.4.90-xslt.patch, files/kdelibs-4.6.2-armlinking.patch,
+  files/kdelibs-4.6.3-no_suid_kdeinit.patch,
+  files/kdelibs-4.7.96-mimetypes.patch, files/kdelibs-4.8.1-norpath.patch,
+  files/kdelibs-4.8.2-calculator_key.patch, files/kdelibs-4.8.4-bytecode.patch,
+  kdelibs-4.8.4-r1.ebuild, kdelibs-4.8.5.ebuild, kdelibs-4.9.0.ebuild:
+  Add sys-apps/dbus[X] to RDEPEND for non-desktop profiles, see bugs #429910,
+  #429916. Thanks to Michael Mair-Keimberger <bu9zilla@gmail.com>.
 
 *kdelibs-4.8.5 (07 Aug 2012)
 
