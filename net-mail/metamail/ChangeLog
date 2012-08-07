@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/metamail
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/metamail/ChangeLog,v 1.46 2011/12/19 20:33:25 eras Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/metamail/ChangeLog,v 1.47 2012/08/07 12:13:30 eras Exp $
+
+*metamail-2.7.53.3-r1 (07 Aug 2012)
+
+  07 Aug 2012; Eray Aslan <eras@gentoo.org> +metamail-2.7.53.3-r1.ebuild:
+  Add blocker to run-mailcap - bug #251181. Respect CFLAGS - bug #427380. Fix QA
+  warnings
 
   19 Dec 2011; Eray Aslan <eras@gentoo.org> -metamail-2.7.45.3-r1.ebuild:
   remove old
@@ -170,4 +176,3 @@
 
   Initial checkin of this package.  
   Ebuild originally created by Alexander Holler <holler@ahsoftware.de>
-
