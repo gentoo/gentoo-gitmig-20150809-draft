@@ -1,6 +1,13 @@
 # ChangeLog for gnome-base/gnome-control-center
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/ChangeLog,v 1.106 2012/07/19 02:46:04 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/ChangeLog,v 1.107 2012/08/07 10:18:15 tetromino Exp $
+
+  07 Aug 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -gnome-control-center-3.2.2.ebuild, gnome-control-center-3.2.3.ebuild,
+  +files/gnome-control-center-3.2.3-cups-1.6.patch,
+  gnome-control-center-3.4.2-r1.ebuild,
+  +files/gnome-control-center-3.4.2-cups-1.6.patch:
+  Fix build failure with cups-1.6.x; drop old.
 
 *gnome-control-center-3.4.2-r1 (19 Jul 2012)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.2.3.ebuild,v 1.2 2012/05/27 23:14:36 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.2.3.ebuild,v 1.3 2012/08/07 10:18:15 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -111,6 +111,10 @@ src_prepare() {
 
 	# Make some panels optional; requires eautoreconf
 	epatch "${FILESDIR}/${PN}-3.2.3-optional-colord-goa.patch"
+
+	# https://bugzilla.gnome.org/show_bug.cgi?id=679759
+	epatch "${FILESDIR}/${PN}-3.2.3-cups-1.6.patch"
+
 	eautoreconf
 
 	gnome2_src_prepare
