@@ -1,6 +1,13 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.418 2012/06/24 20:07:37 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.419 2012/08/07 18:09:58 eras Exp $
+
+*clamav-0.97.5-r1 (07 Aug 2012)
+
+  07 Aug 2012; Eray Aslan <eras@gentoo.org> +clamav-0.97.5-r1.ebuild,
+  +files/clamd.initd:
+  Create run dir during startup if necessary - bug #333783. Thanks to Valery
+  Kartel
 
   24 Jun 2012; Tim Harder <radhermit@gentoo.org> clamav-0.97.5.ebuild:
   Use prune_libtool_files instead of autotools-utils.

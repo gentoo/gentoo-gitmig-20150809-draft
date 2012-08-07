@@ -1,0 +1,119 @@
+#!/sbin/runscript
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/files/clamd.initd,v 1.1 2012/08/07 18:09:58 eras Exp $
+
+extra_commands="logfix"
+
+depend() {
+	use net
+	provide antivirus
+}
+
+get_config() {
+	clamconf | \
+	sed 's/["=]//g' | \
+	awk "{
+	 if(\$0==\"Config file: $1.conf\")S=1
+	 if(S==1&&\$0==\"\")exit
+	 if(S==1&&\$1~\"^$2\$\"){
+		print \$2!=\"disabled\"?\$2:\"$3\";
+		exit
+	 }
+	}"
+}
+
+start() {
+	local clamd_socket=$(get_config clamd LocalSocket /tmp/clamd)
+	local clamd_socket_dir=`dirname ${clamd_socket}`
+	logfix
+
+	if [ "${START_CLAMD}" = "yes" ]; then
+		if [ ! -e "${clamd_socket_dir}" ]; then
+			mkdir ${clamd_socket_dir}
+			chown $(get_config clamd User clamav) ${clamd_socket_dir}
+		fi
+		if [ -S "${clamd_socket}" ]; then
+			rm -f ${clamd_socket}
+		fi
+		ebegin "Starting clamd"
+		start-stop-daemon --start --quiet \
+			--nicelevel ${CLAMD_NICELEVEL:-0} \
+			--exec /usr/sbin/clamd
+		eend $? "Failed to start clamd"
+	fi
+
+	if [ "${START_FRESHCLAM}" = "yes" ]; then
+		ebegin "Starting freshclam"
+		start-stop-daemon --start --quiet \
+			--nicelevel ${FRESHCLAM_NICELEVEL:-0} \
+			--exec /usr/bin/freshclam -- -d
+		retcode=$?
+		if [ ${retcode} = 1 ]; then
+			eend 0
+			einfo "Virus databases are already up to date."
+		else
+			eend ${retcode} "Failed to start freshclam"
+		fi
+	fi
+
+	if [ "${START_MILTER}" = "yes" ]; then
+		if [ -z "${MILTER_CONF_FILE}" ]; then
+			MILTER_CONF_FILE="/etc/clamav-milter.conf"
+		fi
+
+		ebegin "Starting clamav-milter"
+		start-stop-daemon --start --quiet \
+			--nicelevel ${MILTER_NICELEVEL:-0} \
+			--exec /usr/sbin/clamav-milter -- -c ${MILTER_CONF_FILE}
+		eend $? "Failed to start clamav-milter"
+	fi
+}
+
+stop() {
+	if [ "${START_CLAMD}" = "yes" ]; then
+		ebegin "Stopping clamd"
+		start-stop-daemon --stop --quiet --name clamd
+		eend $? "Failed to stop clamd"
+	fi
+	if [ "${START_FRESHCLAM}" = "yes" ]; then
+		ebegin "Stopping freshclam"
+		start-stop-daemon --stop --quiet --name freshclam
+		eend $? "Failed to stop freshclam"
+	fi
+	if [ "${START_MILTER}" = "yes" ]; then
+		ebegin "Stopping clamav-milter"
+		start-stop-daemon --stop --quiet --name clamav-milter
+		eend $? "Failed to stop clamav-milter"
+	fi
+}
+
+logfix() {
+	if [ "${START_CLAMD}" = "yes" ]; then
+		# fix clamd log permissions
+		# (might be clobbered by logrotate or something)
+		local logfile=$(get_config clamd LogFile)
+		local clamav_user=$(get_config clamd User)
+		if [ -n "${logfile}" ] && [ -n "${clamav_user}" ]; then
+			if [ ! -f "${logfile}" ]; then
+				touch ${logfile}
+			fi
+			chown ${clamav_user} ${logfile}
+			chmod 640 ${logfile}
+		fi
+	fi
+
+	if [ "${START_FRESHCLAM}" = "yes" ]; then
+		# fix freshclam log permissions
+		# (might be clobbered by logrotate or something)
+		local logfile=$(get_config freshclam UpdateLogFile)
+		local freshclam_user=$(get_config freshclam DatabaseOwner clamav)
+		if [ -n "${logfile}" -a -n "${clamav_user}" ]; then
+			if [ ! -f "${logfile}" ]; then
+				touch ${logfile}
+			fi	
+			chown ${freshclam_user} ${logfile}
+			chmod 640 ${logfile}
+		fi
+	fi
+}
