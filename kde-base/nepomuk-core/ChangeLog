@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/nepomuk-core
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk-core/ChangeLog,v 1.2 2012/08/05 05:03:41 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk-core/ChangeLog,v 1.3 2012/08/07 17:45:24 johu Exp $
+
+*nepomuk-core-4.9.0-r1 (07 Aug 2012)
+
+  07 Aug 2012; Johannes Huber <johu@gentoo.org>
+  +files/nepomuk-core-4.9.0-kinotify-memleak.patch,
+  +nepomuk-core-4.9.0-r1.ebuild, -nepomuk-core-4.9.0.ebuild:
+  Revision bump adds upstream patch which fixes memleak in knotify spotted by
+  Dennis Schridde <devurandom@gmx.net> wrt bug #430226. Remove old.
 
   05 Aug 2012; Chris Reffett <creffett@gentoo.org> nepomuk-core-4.9.0.ebuild:
   Remove blocker on virtuoso-6.1.5, which was removed from the tree.
