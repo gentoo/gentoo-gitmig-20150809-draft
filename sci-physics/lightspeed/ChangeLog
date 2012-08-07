@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/lightspeed
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lightspeed/ChangeLog,v 1.20 2012/05/04 07:55:34 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lightspeed/ChangeLog,v 1.21 2012/08/07 17:35:36 bicatali Exp $
+
+  07 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> lightspeed-1.2a-r1.ebuild:
+  keyword amd64-linux, x86-linux
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> lightspeed-1.2a-r1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -92,4 +95,3 @@
   12 Jan 2003; Marin Holzer <mholzer@gentoo.org> lightspeed-1.2a.ebuild
   files/digest-lightspeed-1.2a ChangeLog :
   Added initial Version submitted by pez@apocalyptech.com in #13029
-
