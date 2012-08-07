@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6879 2012/08/07 18:51:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6880 2012/08/07 19:15:25 kensington Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Aug 2012; Michael Palimaka <kensington@gentoo.org> updates/3Q-2012:
+  Move net-misc/ferm to net-firewall/ferm.
 
   07 Aug 2012; Alexis Ballier <aballier@gentoo.org> license_groups:
   add LGPL-2-with-linking-exception to GPL-COMPATIBLE group
