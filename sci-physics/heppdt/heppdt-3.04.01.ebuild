@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/heppdt/heppdt-3.04.01.ebuild,v 1.3 2010/05/25 21:20:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/heppdt/heppdt-3.04.01.ebuild,v 1.4 2012/08/07 17:19:39 bicatali Exp $
 
-EAPI=2
+EAPI=4
 inherit autotools
 
 MYP=HepPDT-${PV}
@@ -13,8 +13,8 @@ SRC_URI="${HOMEPAGE}/download/${MYP}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
-IUSE="doc examples"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
+IUSE="doc examples static-libs"
 
 RDEPEND=""
 DEPEND="${RDEPEND}"
@@ -33,10 +33,18 @@ src_prepare() {
 	eautoreconf
 }
 
+src_configure() {
+	econf $(use_enable static-libs static)
+}
+
+src_test() {
+	LD_LIBRARY_PATH="${S}/src/HepPDT:${S}/src/HepPID" \
+		emake check MY_LD=-L SHEXT=so
+}
+
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc README ChangeLog
-	use doc && mv "${D}"usr/doc/* "${D}"usr/share/doc/${PF}/
-	use examples && mv "${D}"usr/examples "${D}"usr/share/doc/${PF}/
-	rm -rf "${D}"usr/{doc,examples}
+	default
+	use doc && mv "${ED}"usr/doc/* "${ED}"usr/share/doc/${PF}/
+	use examples && mv "${ED}"usr/examples "${ED}"usr/share/doc/${PF}/
+	rm -r "${ED}"usr/{doc,examples}
 }
