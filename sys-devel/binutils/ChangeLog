@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.457 2012/08/06 21:21:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.458 2012/08/07 17:15:24 armin76 Exp $
+
+  07 Aug 2012; Raúl Porcel <armin76@gentoo.org> binutils-2.22-r1.ebuild:
+  s390 stable wrt #414865
 
   06 Aug 2012; Brent Baude <ranger@gentoo.org> binutils-2.22-r1.ebuild:
   Marking binutils-2.22-r1 ppc64 for bug 414865
