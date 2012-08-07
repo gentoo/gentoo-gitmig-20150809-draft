@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.63a-r2.ebuild,v 1.3 2012/07/21 14:40:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.63a-r2.ebuild,v 1.4 2012/08/07 23:12:27 flameeyes Exp $
 
 EAPI=4
 PYTHON_DEPEND="3:3.2"
 
-PATCHSET="2"
+PATCHSET="3"
 
 inherit multilib scons-utils eutils python versionator flag-o-matic toolchain-funcs pax-utils check-reqs
 
@@ -31,7 +31,7 @@ case ${PV} in
 esac
 
 if [[ -n ${PATCHSET} ]]; then
-	SRC_URI+=" http://dev.gentoo.org/~flameeyes/${PN}/${P}-patches-${PATCHSET}.tar.bz2"
+	SRC_URI+=" http://dev.gentoo.org/~flameeyes/${PN}/${P}-patches-${PATCHSET}.tar.xz"
 fi
 
 SLOT="0"
