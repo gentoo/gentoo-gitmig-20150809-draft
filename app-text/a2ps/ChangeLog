@@ -1,6 +1,13 @@
 # ChangeLog for app-text/a2ps
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.106 2012/06/23 05:54:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.107 2012/08/07 00:01:47 dilfridge Exp $
+
+  07 Aug 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  -files/4.13c-gcc34.patch, -files/a2ps-4.13-fixcachecheck.patch,
+  -files/a2ps-4.13-select-freebsd.patch, -a2ps-4.13c-r6.ebuild,
+  -files/a2ps-4.13c-fixps.patch, -files/a2ps-4.13c-psmandup.diff,
+  -files/a2ps-4.13c-stdarg.patch:
+  Drop old
 
 *a2ps-4.14-r3 (23 Jun 2012)
 
