@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/bullet-2.80.ebuild,v 1.2 2012/06/27 18:12:33 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/bullet-2.80.ebuild,v 1.3 2012/08/07 05:02:10 bicatali Exp $
 
 EAPI=4
 
@@ -33,7 +33,7 @@ src_prepare() {
 }
 
 src_configure() {
-	mycmakeargs=(
+	local mycmakeargs=(
 		-DBUILD_SHARED_LIBS=ON
 		-DBUILD_CPU_DEMOS=OFF
 		-DBUILD_DEMOS=OFF
@@ -55,7 +55,7 @@ src_compile() {
 
 src_install() {
 	cmake-utils_src_install
-	use doc && dodoc *.pdf && dohtml -r html
+	use doc && dodoc *.pdf && dohtml -r html/*
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
 		doins -r Extras Demos

@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/bullet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/ChangeLog,v 1.28 2012/06/27 18:12:33 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/ChangeLog,v 1.29 2012/08/07 05:02:10 bicatali Exp $
+
+  07 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> -bullet-2.79-r1.ebuild,
+  bullet-2.80.ebuild, metadata.xml:
+  removed old
 
   27 Jun 2012; Sebastien Fabbro <fabbros@gentoo.org> bullet-2.80.ebuild:
   html docs are built with doxygen if doc flag is set, bug #421827, thanks
@@ -140,4 +144,3 @@
   +bullet-2.67.ebuild:
   Initial import. Thanks Renato Caldas <seventhguardian@gmail.com> for his
   initial work. Closing bug #166192
-
