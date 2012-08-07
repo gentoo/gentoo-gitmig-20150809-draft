@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/blockcanvas
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/blockcanvas/ChangeLog,v 1.12 2012/01/17 06:17:23 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/blockcanvas/ChangeLog,v 1.13 2012/08/07 04:04:48 patrick Exp $
+
+  07 Aug 2012; Patrick Lauer <patrick@gentoo.org> blockcanvas-4.0.0.ebuild,
+  blockcanvas-4.0.1.ebuild:
+  Fixing jython restrict
 
 *blockcanvas-4.0.1 (17 Jan 2012)
 
@@ -64,4 +68,3 @@
   15 Jan 2009; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
   +blockcanvas-3.0.1.ebuild:
   Initial import
-
