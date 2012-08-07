@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ansi2html/ansi2html-0.9.1.ebuild,v 1.2 2012/07/22 07:38:45 iksaif Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ansi2html/ansi2html-0.9.1.ebuild,v 1.3 2012/08/07 09:28:57 patrick Exp $
 
 EAPI="4"
 
@@ -8,6 +8,7 @@ EAPI="4"
 PYTHON_DEPEND="*:2.7"
 SUPPORT_PYTHON_ABIS="1"
 DISTUTILS_SRC_TEST="nosetests"
+RESTRICT_PYTHON_ABIS="2.5 2.5-jython"
 
 inherit distutils eutils
 

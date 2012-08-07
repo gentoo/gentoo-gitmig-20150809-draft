@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/whoosh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/whoosh/ChangeLog,v 1.4 2012/07/03 19:45:02 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/whoosh/ChangeLog,v 1.5 2012/08/07 09:26:28 patrick Exp $
+
+  07 Aug 2012; Patrick Lauer <patrick@gentoo.org> whoosh-2.4.1.ebuild:
+  Restricting py-2.5 and jython
 
   03 Jul 2012; Mike Gilbert <floppym@gentoo.org> whoosh-2.4.1.ebuild:
   Simplify PYTHON_DEPEND per Arfrever.
