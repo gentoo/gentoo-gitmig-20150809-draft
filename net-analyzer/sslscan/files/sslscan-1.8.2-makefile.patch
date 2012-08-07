@@ -5,7 +5,7 @@
  
  all:
 -	gcc -g -Wall -lssl -o sslscan $(SRCS) $(LDFLAGS) $(CFLAGS)
-+	$(CC) -Wall -o sslscan $(SRCS) -lssl $(LDFLAGS) $(CFLAGS)
++	$(CC) -Wall $(LDFLAGS) $(CFLAGS) -o sslscan $(SRCS) -lssl 
  
  install:
  	cp sslscan $(BINPATH)
