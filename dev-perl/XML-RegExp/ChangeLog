@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-RegExp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RegExp/ChangeLog,v 1.36 2012/08/05 15:47:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RegExp/ChangeLog,v 1.37 2012/08/07 21:48:37 ranger Exp $
+
+  07 Aug 2012; Brent Baude <ranger@gentoo.org> XML-RegExp-0.40.0.ebuild:
+  Marking XML-RegExp-0.40.0 ppc64 for bug 418871
 
   05 Aug 2012; Markus Meier <maekke@gentoo.org> XML-RegExp-0.40.0.ebuild:
   arm stable, bug #418871
