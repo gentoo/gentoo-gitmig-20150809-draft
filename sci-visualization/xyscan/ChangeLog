@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/xyscan
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xyscan/ChangeLog,v 1.15 2012/05/21 10:16:11 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xyscan/ChangeLog,v 1.16 2012/08/07 04:52:22 bicatali Exp $
+
+  07 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml,
+  xyscan-3.3.1.ebuild:
+  keyword amd64-linux, x86-linux, cleaned up ebuild
 
   21 May 2012; Johannes Huber <johu@gentoo.org> -xyscan-3.2.1.ebuild,
   -xyscan-3.2.2.ebuild, -xyscan-3.3.0.ebuild:
@@ -63,4 +67,3 @@
   +files/xyscan-3.02-docs.patch, +metadata.xml, +xyscan-3.02.ebuild:
   New package (see bug #226481). Thanks much to Benjamin Bannier
   <benni@netronaut.de> for his ebuild.
-
