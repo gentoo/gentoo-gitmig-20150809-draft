@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/baselayout-prefix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/ChangeLog,v 1.18 2012/05/24 04:19:13 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/ChangeLog,v 1.19 2012/08/07 13:31:03 heroxbd Exp $
+
+*baselayout-prefix-1.12.14-r1 (07 Aug 2012)
+
+  07 Aug 2012; Benda Xu <heroxbd@gentoo.org>
+  +baselayout-prefix-1.12.14-r1.ebuild:
+  add new revision for testing openrc. bug 415895
 
   24 May 2012; Jeremy Olexa <darkside@gentoo.org>
   -baselayout-prefix-1.12.5-r9.ebuild, -baselayout-prefix-1.12.5-r10.ebuild:
