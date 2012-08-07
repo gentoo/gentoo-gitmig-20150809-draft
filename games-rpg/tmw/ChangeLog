@@ -1,0 +1,10 @@
+# ChangeLog for games-rpg/tmw
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/tmw/ChangeLog,v 1.43 2012/08/07 22:19:15 hasufell Exp $
+
+*tmw-20120727 (07 Aug 2012)
+
+  07 Aug 2012; Julian Ospald <hasufell@gentoo.org> +tmw-20120727.ebuild,
+  +files/tmw-branding-gentoo.patch, +metadata.xml:
+  re-add wrt #428784
+
