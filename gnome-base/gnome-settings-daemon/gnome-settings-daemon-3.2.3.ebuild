@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-3.2.3.ebuild,v 1.3 2012/05/27 17:56:06 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-3.2.3.ebuild,v 1.4 2012/08/07 08:59:55 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -110,6 +110,9 @@ src_prepare() {
 
 	# Make colord optional; requires eautoreconf
 	epatch "${FILESDIR}/${PN}-3.2.1-optional-colord.patch"
+
+	# bug #428816, https://bugzilla.gnome.org/show_bug.cgi?id=679761
+	epatch "${FILESDIR}/${PN}-3.4.2-cups-1.6.patch"
 
 	eautoreconf
 

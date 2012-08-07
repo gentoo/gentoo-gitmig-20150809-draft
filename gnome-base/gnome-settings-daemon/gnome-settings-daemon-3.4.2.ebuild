@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-3.4.2.ebuild,v 1.1 2012/05/20 10:43:38 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-3.4.2.ebuild,v 1.2 2012/08/07 08:59:55 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -108,6 +108,9 @@ src_prepare() {
 	# Useful patches in next release
 	epatch "${FILESDIR}/${P}-double-unref.patch"
 	epatch "${FILESDIR}/${P}-XI-2.2.patch"
+
+	# bug #428816, https://bugzilla.gnome.org/show_bug.cgi?id=679761
+	epatch "${FILESDIR}/${PN}-3.4.2-cups-1.6.patch"
 
 	eautoreconf
 
