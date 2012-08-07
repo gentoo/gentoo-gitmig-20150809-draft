@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.50 2012/05/22 16:52:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.51 2012/08/07 18:22:21 lu_zero Exp $
 
 EAPI=4
 
@@ -35,7 +35,7 @@ IUSE="aac alsa amr bindist +bzip2 cdio cpudetection custom-cflags debug doc
 
 # String for CPU features in the useflag[:configure_option] form
 # if :configure_option isn't set, it will use 'useflag' as configure option
-CPU_FEATURES="3dnow:amd3dnow 3dnowext:amd3dnowext altivec avx mmx mmxext:mmx2 neon ssse3 vis"
+CPU_FEATURES="3dnow:amd3dnow 3dnowext:amd3dnowext altivec avx mmx mmxext neon ssse3 vis"
 for i in ${CPU_FEATURES} ; do
 	IUSE+=" ${i%:*}"
 done
@@ -213,7 +213,7 @@ src_configure() {
 	# disable mmx accelerated code if PIC is required
 	# as the provided asm decidedly is not PIC for x86.
 	if use pic && use x86 ; then
-		myconf+=" --disable-mmx --disable-mmx2"
+		myconf+=" --disable-mmx --disable-mmxext"
 	fi
 
 	# Option to force building pic
