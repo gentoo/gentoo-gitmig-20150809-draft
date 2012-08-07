@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/piklab/piklab-0.16.1.ebuild,v 1.1 2012/08/07 15:55:30 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/piklab/piklab-0.16.1.ebuild,v 1.2 2012/08/07 16:02:31 kensington Exp $
 
 EAPI=4
 KDE_REQUIRED="optional"
@@ -8,7 +8,7 @@ KDE_HANDBOOK="optional"
 KDE_LINGUAS="de cs es fr hu it"
 inherit kde4-base
 
-DESCRIPTION="CLI programmer and debugger for PIC and dsPIC microcontrollers"
+DESCRIPTION="IDE for applications based on PIC and dsPIC microcontrollers"
 HOMEPAGE="http://piklab.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
