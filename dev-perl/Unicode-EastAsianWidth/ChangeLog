@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Unicode-EastAsianWidth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-EastAsianWidth/ChangeLog,v 1.20 2012/08/03 10:48:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-EastAsianWidth/ChangeLog,v 1.21 2012/08/07 21:53:10 ranger Exp $
+
+  07 Aug 2012; Brent Baude <ranger@gentoo.org>
+  Unicode-EastAsianWidth-1.320.0.ebuild:
+  Marking Unicode-EastAsianWidth-1.320.0 ppc64 for bug 422053
 
   03 Aug 2012; Agostino Sarubbo <ago@gentoo.org>
   Unicode-EastAsianWidth-1.320.0.ebuild:
