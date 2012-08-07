@@ -1,5 +1,8 @@
 # ChangeLog for sys-libs/glibc
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.863 2012/07/03 20:07:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.864 2012/08/07 20:25:04 ranger Exp $
+
+  07 Aug 2012; Brent Baude <ranger@gentoo.org> glibc-2.15-r2.ebuild:
+  Marking glibc-2.15-r2 ppc64 for bug 430346
 
 *glibc-2.16.0 (03 Jul 2012)
 
