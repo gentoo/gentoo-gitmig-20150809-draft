@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6878 2012/08/07 13:46:10 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6879 2012/08/07 18:51:16 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Aug 2012; Alexis Ballier <aballier@gentoo.org> license_groups:
+  add LGPL-2-with-linking-exception to GPL-COMPATIBLE group
 
   07 Aug 2012; Michael Palimaka <kensington@gentoo.org> package.mask:
   Mask dev-util/cccc for removal wrt bug #430250.
