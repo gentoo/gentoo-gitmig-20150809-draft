@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Chart
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Chart/ChangeLog,v 1.41 2012/08/04 20:05:10 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Chart/ChangeLog,v 1.42 2012/08/07 21:30:31 ranger Exp $
+
+  07 Aug 2012; Brent Baude <ranger@gentoo.org> Chart-2.4.5.ebuild:
+  Marking Chart-2.4.5 ppc64 for bug 418793
 
   04 Aug 2012; Johannes Huber <johu@gentoo.org> Chart-2.4.5.ebuild:
   Stable for x86, wrt bug #418793
