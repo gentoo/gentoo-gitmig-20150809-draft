@@ -1,6 +1,12 @@
 # ChangeLog for net-print/libgnomecups
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/ChangeLog,v 1.84 2012/07/15 18:22:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/ChangeLog,v 1.85 2012/08/07 11:21:31 tetromino Exp $
+
+*libgnomecups-0.2.3-r3 (07 Aug 2012)
+
+  07 Aug 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +libgnomecups-0.2.3-r3.ebuild, +files/libgnomecups-0.2.3-cups-1.6.patch:
+  Fix build failure with cups-1.6 (bug #428812, thanks to Diego Elio Pettenò).
 
   15 Jul 2012; Raúl Porcel <armin76@gentoo.org> libgnomecups-0.2.3-r2.ebuild:
   alpha/ia64/sh/sparc stable wrt #410611
