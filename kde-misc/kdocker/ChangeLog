@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/kdocker
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdocker/ChangeLog,v 1.13 2012/07/15 16:27:34 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdocker/ChangeLog,v 1.14 2012/08/07 10:04:56 kensington Exp $
+
+*kdocker-4.8 (07 Aug 2012)
+
+  07 Aug 2012; Michael Palimaka <kensington@gentoo.org> +kdocker-4.8.ebuild,
+  -kdocker-4.6-r2.ebuild, metadata.xml:
+  Version bump, remove old. Add upstream metadata.
 
   15 Jul 2012; Michael Palimaka <kensington@gentoo.org> kdocker-4.6-r2.ebuild,
   kdocker-4.7.ebuild:

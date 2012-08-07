@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdocker/kdocker-4.6-r2.ebuild,v 1.2 2012/07/15 16:27:34 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdocker/kdocker-4.8.ebuild,v 1.1 2012/08/07 10:04:56 kensington Exp $
 
 EAPI=4
 LANGS="it"
@@ -24,12 +24,7 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
-DOCS="AUTHORS BUGS ChangeLog CREDITS README TODO"
-
-PATCHES=(
-	"${FILESDIR}/${P}-icon.patch"
-	"${FILESDIR}/${P}-gcc-4.7.patch"
-)
+DOCS=( AUTHORS BUGS ChangeLog CREDITS README TODO )
 
 src_prepare() {
 	qt4-r2_src_prepare
