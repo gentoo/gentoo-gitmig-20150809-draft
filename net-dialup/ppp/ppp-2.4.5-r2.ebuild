@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.5-r2.ebuild,v 1.3 2012/06/14 01:48:45 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.5-r2.ebuild,v 1.4 2012/08/07 15:05:23 vapier Exp $
 
 EAPI="2"
 
@@ -25,6 +25,9 @@ DEPEND="activefilter? ( net-libs/libpcap )
 RDEPEND="${DEPEND}"
 
 src_prepare() {
+	# Use the headers from the kernel #427684
+	rm include/linux/if_pppol2tp.h || die
+
 	epatch "${WORKDIR}/patch/make-vars.patch"
 	epatch "${WORKDIR}/patch/mpls.patch"
 	epatch "${WORKDIR}/patch/killaddr-smarter.patch"
@@ -40,7 +43,6 @@ src_prepare() {
 	epatch "${WORKDIR}/patch/pppd-usepeerwins.patch"
 	epatch "${WORKDIR}/patch/connect-errors.patch"
 	epatch "${WORKDIR}/patch/Makefile.patch"
-	epatch "${WORKDIR}/patch/pppol2tpv3-2.6.35.patch"
 	epatch "${WORKDIR}/patch/pado-timeout.patch"
 	epatch "${WORKDIR}/patch/lcp-echo-adaptive.patch"
 
