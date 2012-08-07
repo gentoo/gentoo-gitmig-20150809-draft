@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/camfr-20070717-r3.ebuild,v 1.2 2012/05/04 07:55:34 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/camfr-20070717-r3.ebuild,v 1.3 2012/08/07 05:43:12 bicatali Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://sourceforge/camfr/${P}.tgz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="virtual/fortran
@@ -47,8 +47,8 @@ src_prepare() {
 		# Configure to compile against selected python version
 		cat <<-EOF >> machine_cfg.py
 			include_dirs = []
-			include_dirs.append("$(python_get_includedir)")
-			include_dirs.append("$(python_get_sitedir)")
+			include_dirs.append("${EPREFIX}/$(python_get_includedir)")
+			include_dirs.append("${EPREFIX}/$(python_get_sitedir)")
 		EOF
 		local x
 		for x in $(pkg-config --libs-only-l lapack); do
@@ -59,7 +59,7 @@ src_prepare() {
 		done
 		cat <<-EOF >> machine_cfg.py
 			library_dirs = [${lapack_libdirs#,}]
-			libs = ["boost_python-${PYTHON_ABI}", "blitz"${lapack_libs}]
+			libs = ["boost_python-${PYTHON_ABI}-mt", "blitz"${lapack_libs}]
 		EOF
 	}
 	python_execute_function -s preparation
