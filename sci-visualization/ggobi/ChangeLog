@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/ggobi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/ggobi/ChangeLog,v 1.11 2012/06/26 05:19:19 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/ggobi/ChangeLog,v 1.12 2012/08/07 01:05:27 bicatali Exp $
+
+  07 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> ggobi-2.1.9-r1.ebuild,
+  metadata.xml:
+  keyword amd64-linux, x86-linux
 
 *ggobi-2.1.9-r1 (26 Jun 2012)
 
