@@ -8,6 +8,7 @@
 	<flag name="adiumstyles">Build support for Adium styles</flag>
 	<flag name="autoidler">Build support for automatic status changing according to user idle time</flag>
 	<flag name="autopaste">Build Autopaste for pasting long texts to pastebins</flag>
+	<flag name="birthdaynotifier">Build Birthday Notifier for you to not forget about birthdays of your contacts.</flag>
 	<flag name="chathistory">Build ChatHistory which stories chat history</flag>
 	<flag name="depester">Build Depester which enables to ignore MUC participants</flag>
 	<flag name="embedmedia">Build EmbedMedia for embedding flash videos and images directly into chat windows</flag>

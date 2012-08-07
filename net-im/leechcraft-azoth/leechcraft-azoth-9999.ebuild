@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/leechcraft-azoth/leechcraft-azoth-9999.ebuild,v 1.13 2012/07/15 16:05:12 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/leechcraft-azoth/leechcraft-azoth-9999.ebuild,v 1.14 2012/08/07 14:21:37 maksbotan Exp $
 
 EAPI="4"
 
@@ -10,10 +10,10 @@ DESCRIPTION="Azoth, the modular IM client for LeechCraft."
 
 SLOT="0"
 KEYWORDS=""
-IUSE="debug astrality +acetamide +adiumstyles +autoidler +autopaste +chathistory +crypt
-		+depester +embedmedia +herbicide +hili +isterique +juick +keeso +lastseen
-		+metacontacts media +modnok +nativeemoticons +otroid +p100q +rosenthal
-		+standardstyles +xoox +xtazy +zheet"
+IUSE="debug astrality +acetamide +adiumstyles +autoidler +autopaste +birthdaynotifier
+		+chathistory +crypt	+depester +embedmedia +herbicide +hili +isterique
+		+juick +keeso +lastseen	+metacontacts media +modnok +nativeemoticons
+		+otroid +p100q +rosenthal +standardstyles +xoox +xtazy +zheet"
 
 DEPEND="~net-misc/leechcraft-core-${PV}
 		x11-libs/qt-webkit:4
@@ -41,13 +41,14 @@ RDEPEND="${DEPEND}
 	)"
 
 src_configure() {
-	local mycmakeargs="
+	local mycmakeargs=(
 		$(cmake-utils_use_enable crypt CRYPT)
 		$(cmake-utils_use_enable acetamide AZOTH_ACETAMIDE)
 		$(cmake-utils_use_enable adiumstyles AZOTH_ADIUMSTYLES)
 		$(cmake-utils_use_enable astrality AZOTH_ASTRALITY)
 		$(cmake-utils_use_enable autoidler AZOTH_AUTOIDLER)
 		$(cmake-utils_use_enable autopaste AZOTH_AUTOPASTE)
+		$(cmake-utils_use_enable birthdaynotifier AZOTH_BIRTHDAYNOTIFIER)
 		$(cmake-utils_use_enable chathistory AZOTH_CHATHISTORY)
 		$(cmake-utils_use_enable depester AZOTH_DEPESTER)
 		$(cmake-utils_use_enable embedmedia AZOTH_EMBEDMEDIA)
@@ -67,7 +68,8 @@ src_configure() {
 		$(cmake-utils_use_enable standardstyles AZOTH_STANDARDSTYLES)
 		$(cmake-utils_use_enable xoox AZOTH_XOOX)
 		$(cmake-utils_use_enable xtazy AZOTH_XTAZY)
-		$(cmake-utils_use_enable zheet AZOTH_ZHEET)"
+		$(cmake-utils_use_enable zheet AZOTH_ZHEET)
+	)
 
 	cmake-utils_src_configure
 }
