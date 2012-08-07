@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx-samples/opendx-samples-4.4.0-r1.ebuild,v 1.4 2010/01/20 20:07:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx-samples/opendx-samples-4.4.0-r1.ebuild,v 1.5 2012/08/07 01:41:23 bicatali Exp $
 
-EAPI=2
+EAPI=4
 
-inherit eutils autotools
+inherit eutils autotools multilib
 
 MY_PN="dxsamples"
 MY_P="${MY_PN}-${PV}"
@@ -18,7 +18,7 @@ SLOT="0"
 
 S="${WORKDIR}/${MY_P}"
 
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND=">=sci-visualization/opendx-4.4.4-r2"
@@ -29,12 +29,4 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-nojava.patch"
 	epatch "${WORKDIR}/${P}-install.patch"
 	eautoreconf
-}
-
-src_configure() {
-	econf --libdir="/usr/$(get_libdir)"
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
 }

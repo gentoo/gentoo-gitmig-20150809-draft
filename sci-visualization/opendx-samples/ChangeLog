@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/opendx-samples
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx-samples/ChangeLog,v 1.12 2010/01/20 20:07:53 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx-samples/ChangeLog,v 1.13 2012/08/07 01:41:23 bicatali Exp $
+
+  07 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  opendx-samples-4.4.0-r1.ebuild:
+  keyword amd64-linux, x86-linux
 
   20 Jan 2010; Markus Meier <maekke@gentoo.org>
   opendx-samples-4.4.0-r1.ebuild:
@@ -70,4 +74,3 @@
   08 Aug 2005; Patrick Kursawe <phosphan@gentoo.org>
   +opendx-samples-4.3.2.ebuild:
   Initial import, mainly provided in bug #22217 and demanded again in #54047.
-
