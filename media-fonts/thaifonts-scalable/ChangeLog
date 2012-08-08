@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/thaifonts-scalable
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/thaifonts-scalable/ChangeLog,v 1.12 2012/08/03 16:35:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/thaifonts-scalable/ChangeLog,v 1.13 2012/08/08 13:44:11 johu Exp $
+
+  08 Aug 2012; Johannes Huber <johu@gentoo.org>
+  thaifonts-scalable-0.4.17.ebuild:
+  Stable for x86, wrt bug #419063
 
   03 Aug 2012; Agostino Sarubbo <ago@gentoo.org>
   thaifonts-scalable-0.4.17.ebuild:
