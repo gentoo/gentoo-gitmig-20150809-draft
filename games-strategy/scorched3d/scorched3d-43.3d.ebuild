@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-43.3d.ebuild,v 1.6 2012/07/10 19:16:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-43.3d.ebuild,v 1.7 2012/08/08 19:53:17 ranger Exp $
 
 EAPI=2
 WX_GTK_VER=2.8
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/scorched3d/Scorched3D-${PV}-src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ppc64 x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="dedicated mysql"
 
 DEPEND="media-libs/libsdl[video]

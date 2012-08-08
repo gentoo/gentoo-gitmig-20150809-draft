@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/scorched3d
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.88 2012/07/10 19:16:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.89 2012/08/08 19:53:17 ranger Exp $
+
+  08 Aug 2012; Brent Baude <ranger@gentoo.org> scorched3d-43.3d.ebuild:
+  Marking scorched3d-43.3d ppc for bug 424243
 
   10 Jul 2012; Brent Baude <ranger@gentoo.org> scorched3d-43.3d.ebuild:
   Marking scorched3d-43.3d ppc64 for bug 424243
