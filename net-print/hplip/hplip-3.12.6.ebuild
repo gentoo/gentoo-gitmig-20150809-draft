@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.12.6.ebuild,v 1.2 2012/07/01 12:51:02 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.12.6.ebuild,v 1.3 2012/08/08 18:00:38 billie Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ inherit fdo-mime linux-info python autotools
 DESCRIPTION="HP Linux Imaging and Printing. Includes printer, scanner, fax drivers and service tools."
 HOMEPAGE="http://hplipopensource.com/hplip-web/index.html"
 SRC_URI="mirror://sourceforge/hplip/${P}.tar.gz
-		http://dev.gentoo.org/~billie/distfiles/${P}-patches-1.tar.xz"
+		http://dev.gentoo.org/~billie/distfiles/${P}-patches-2.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"

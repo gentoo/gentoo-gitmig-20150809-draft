@@ -1,6 +1,9 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.230 2012/07/01 12:51:02 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.231 2012/08/08 18:00:38 billie Exp $
+
+  08 Aug 2012; Daniel Pielmeier <billie@gentoo.org> hplip-3.12.6.ebuild:
+  Fix building with cups-1.6. Thanks to all involved in bug #428672.
 
   01 Jul 2012; Daniel Pielmeier <billie@gentoo.org> hplip-3.12.6.ebuild:
   Fix bug #424155. Thanks Derk W te Bokkel for the report.
