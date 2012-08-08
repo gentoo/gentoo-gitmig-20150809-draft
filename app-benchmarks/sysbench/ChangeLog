@@ -1,6 +1,10 @@
 # ChangeLog for app-benchmarks/sysbench
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/sysbench/ChangeLog,v 1.6 2012/08/02 21:10:51 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/sysbench/ChangeLog,v 1.7 2012/08/08 12:13:07 nativemad Exp $
+
+  08 Aug 2012; Andreas Schuerch <nativemad@gentoo.org>
+  sysbench-0.4.12-r1.ebuild:
+  x86 stable, see bug 418519
 
   02 Aug 2012; Markos Chandras <hwoarang@gentoo.org> sysbench-0.4.12-r1.ebuild:
   Stable on amd64 wrt bug #418519
