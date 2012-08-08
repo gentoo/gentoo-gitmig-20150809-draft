@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/pth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/ChangeLog,v 1.71 2012/05/09 15:21:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/ChangeLog,v 1.72 2012/08/08 15:01:43 armin76 Exp $
+
+  08 Aug 2012; Raúl Porcel <armin76@gentoo.org> pth-2.0.7-r3.ebuild,
+  +files/pth-2.0.7-kernel-3.patch:
+  Add patch to fix building in some arches with kernel-3
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> pth-2.0.7-r3.ebuild:
   keyword ~amd64-fbsd
