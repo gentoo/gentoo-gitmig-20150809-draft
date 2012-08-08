@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/install-mask
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/install-mask/ChangeLog,v 1.7 2012/08/07 20:27:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/install-mask/ChangeLog,v 1.8 2012/08/08 14:35:58 mgorny Exp $
+
+  08 Aug 2012; Michał Górny <mgorny@gentoo.org> files/location-db.xml:
+  Remove tmpfiles.d from systemd locations, since that directory is used by
+  OpenRC now.
 
   07 Aug 2012; Alexis Ballier <aballier@gentoo.org> install-mask-0.0.2.ebuild:
   keyword ~amd64-fbsd, bug #393181
@@ -28,4 +32,3 @@
   19 Sep 2011; Michał Górny <mgorny@gentoo.org> +install-mask-0.0.1.ebuild,
   +files/location-db.xml, +metadata.xml:
   Introduce install-mask, a tool to manage INSTALL_MASK setting.
-

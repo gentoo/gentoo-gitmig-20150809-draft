@@ -2,7 +2,6 @@
 <install-mask>
 	<location id="systemd">
 		<path>/usr/lib/systemd/system</path>
-		<path>/usr/lib/tmpfiles.d</path>
 		<description>
 			systemd unit and auxiliary files.
 		</description>
