@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/essays1743
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/essays1743/ChangeLog,v 1.23 2012/08/07 22:56:04 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/essays1743/ChangeLog,v 1.24 2012/08/08 19:44:22 ranger Exp $
+
+  08 Aug 2012; Brent Baude <ranger@gentoo.org> essays1743-2.000.ebuild:
+  Marking essays1743-2.000 ppc for bug 419057
 
   07 Aug 2012; Johannes Huber <johu@gentoo.org> essays1743-2.000.ebuild:
   Stable for x86, wrt bug #419057

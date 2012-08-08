@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/essays1743/essays1743-2.000.ebuild,v 1.5 2012/08/07 22:56:04 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/essays1743/essays1743-2.000.ebuild,v 1.6 2012/08/08 19:44:22 ranger Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.thibault.org/fonts/essays/${P}-1-ttf.tar.gz"
 
 LICENSE="|| ( LGPL-2.1 OFL-1.1 )"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~ppc ~s390 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ppc ~s390 ~sh ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=""
