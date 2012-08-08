@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.168 2012/07/15 16:22:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.169 2012/08/08 21:15:31 hwoarang Exp $
+
+  08 Aug 2012; Markos Chandras <hwoarang@gentoo.org>
+  webkit-gtk-1.8.1-r201.ebuild, webkit-gtk-1.8.1-r301.ebuild:
+  Lower sys-devel/bison dependencies per bug #428012
 
   15 Jul 2012; Raúl Porcel <armin76@gentoo.org> webkit-gtk-1.6.3-r200.ebuild,
   webkit-gtk-1.6.3-r300.ebuild:
@@ -892,4 +896,3 @@
   09 Jan 2008; Luca Bruno (Lethalman) <lethalman88@gmail.com> +metadata.xml,
   +webkitgtk-29336.ebuild:
   New EBuild for bug 190347 thanks to Joonas, Dale, genstef and helch
-

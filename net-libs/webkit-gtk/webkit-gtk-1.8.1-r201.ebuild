@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.8.1-r201.ebuild,v 1.5 2012/06/20 06:34:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.8.1-r201.ebuild,v 1.6 2012/08/08 21:15:31 hwoarang Exp $
 
 EAPI="4"
 
@@ -53,7 +53,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	dev-lang/perl
 	=dev-lang/python-2*
-	sys-devel/bison
+	<sys-devel/bison-2.6
 	>=sys-devel/flex-2.5.33
 	sys-devel/gettext
 	dev-util/gperf
