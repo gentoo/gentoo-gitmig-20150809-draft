@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.2-r4.ebuild,v 1.15 2012/07/23 15:09:45 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.2-r4.ebuild,v 1.16 2012/08/08 17:28:41 dilfridge Exp $
 
 EAPI=4
 
@@ -60,6 +60,7 @@ RDEPEND="
 	usb? ( virtual/libusb:0 )
 	X? ( x11-misc/xdg-utils )
 	xinetd? ( sys-apps/xinetd )
+	!net-print/cups-filters
 "
 
 DEPEND="${RDEPEND}
