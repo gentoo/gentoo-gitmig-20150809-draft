@@ -1,6 +1,12 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.329 2012/07/31 20:41:33 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.330 2012/08/08 16:51:59 dilfridge Exp $
+
+*poppler-0.20.2-r2 (08 Aug 2012)
+
+  08 Aug 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  -poppler-0.20.2.ebuild, -poppler-0.20.2-r1.ebuild, +poppler-0.20.2-r2.ebuild:
+  Remove xpdf-headers useflag; the headers are now always installed.
 
   31 Jul 2012; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
   Improve use-flag description
