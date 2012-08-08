@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.63a-r2.ebuild,v 1.4 2012/08/07 23:12:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.63a-r2.ebuild,v 1.5 2012/08/08 01:20:31 flameeyes Exp $
 
 EAPI=4
 PYTHON_DEPEND="3:3.2"
 
-PATCHSET="3"
+PATCHSET="4"
 
 inherit multilib scons-utils eutils python versionator flag-o-matic toolchain-funcs pax-utils check-reqs
 
