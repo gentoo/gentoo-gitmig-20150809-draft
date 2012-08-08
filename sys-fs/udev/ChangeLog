@@ -1,6 +1,18 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.709 2012/08/08 07:55:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.710 2012/08/08 22:54:46 williamh Exp $
+
+*udev-187-r3 (08 Aug 2012)
+
+  08 Aug 2012; William Hubbs <williamh@gentoo.org> +udev-187-r3.ebuild,
+  udev-9999.ebuild:
+  rev bump to put /lib/udev back in /usr/lib/udev as well as add a second
+  compatibility patch so we can run helpers in /lib/udev.
+  Thanks to Egor Egorov for the patch.
+  I also spoke with the other udev maintainer (Samuli), and he agrees that
+  we should be using /usr/lib and allowing packages to put things in /lib
+  for now.
+  This is for bug #430412.
 
   08 Aug 2012; Justin Lecher <jlec@gentoo.org> udev-187-r1.ebuild,
   udev-187-r2.ebuild, udev-9999.ebuild:
