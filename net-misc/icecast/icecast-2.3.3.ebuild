@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.3.3.ebuild,v 1.2 2012/08/07 17:46:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.3.3.ebuild,v 1.3 2012/08/08 17:18:53 hwoarang Exp $
 
 EAPI=4
 inherit eutils autotools
@@ -33,6 +33,8 @@ pkg_setup() {
 src_prepare() {
 	# bug #368539
 	epatch "${FILESDIR}"/${P}-libkate.patch
+	# bug #430434
+	epatch "${FILESDIR}"/${P}-fix-xiph_openssl.patch
 	eautoreconf
 }
 
