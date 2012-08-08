@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-4.0.297.ebuild,v 1.9 2012/08/01 16:48:21 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-4.0.297.ebuild,v 1.10 2012/08/08 12:04:53 hasufell Exp $
 
 EAPI=4
-inherit eutils multilib versionator toolchain-funcs
+inherit eutils flag-o-matic multilib versionator toolchain-funcs
 
 # those 2 below change pretty much every release
 # url number
@@ -73,6 +73,9 @@ src_prepare() {
 }
 
 src_compile() {
+	# wrt #418453#c3
+	append-ldflags $(no-as-needed)
+
 	if [[ $(tc-getCXX) == *g++ ]]; then
 		myconf="compiler=gcc"
 	elif [[ $(tc-getCXX) == *ic*c ]]; then

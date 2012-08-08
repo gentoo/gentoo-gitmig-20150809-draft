@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/tbb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.24 2012/08/01 16:48:21 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.25 2012/08/08 12:04:53 hasufell Exp $
+
+  08 Aug 2012; Julian Ospald <hasufell@gentoo.org> tbb-4.0.297.ebuild:
+  filter out --as-needed wrt #418453#c3
 
   01 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> tbb-4.0.297.ebuild:
   Fixed for cross-compiling, bug #428406, thanks to Thomas
