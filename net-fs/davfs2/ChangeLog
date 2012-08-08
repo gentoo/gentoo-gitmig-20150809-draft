@@ -1,6 +1,14 @@
 # ChangeLog for net-fs/davfs2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/ChangeLog,v 1.55 2012/06/26 04:39:03 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/ChangeLog,v 1.56 2012/08/08 17:06:38 darkside Exp $
+
+*davfs2-1.4.7 (08 Aug 2012)
+
+  08 Aug 2012; Jeremy Olexa <darkside@gentoo.org> -davfs2-1.3.3.ebuild,
+  -davfs2-1.4.1.ebuild, +davfs2-1.4.7.ebuild,
+  +files/davfs2-1.4.7-destdir.patch, -files/fortify_sources_fix.patch:
+  Version bump (bugfixes from upstream), also fix Gentoo bugs 384703 and
+  415011. Remove old versions.
 
   26 Jun 2012; Zac Medico <zmedico@gentoo.org> davfs2-1.4.5-r1.ebuild:
   inherit user for enewgroup
