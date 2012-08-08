@@ -1,4 +1,5 @@
 http://bugs.gentoo.org/332865
+https://savannah.nongnu.org/bugs/?28916
 
 --- src/dav_coda.c
 +++ src/dav_coda.c

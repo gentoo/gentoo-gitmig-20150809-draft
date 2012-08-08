@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/davfs2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/ChangeLog,v 1.56 2012/08/08 17:06:38 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/ChangeLog,v 1.57 2012/08/08 18:49:21 darkside Exp $
+
+  08 Aug 2012; Jeremy Olexa <darkside@gentoo.org>
+  files/davfs2-1.4.5-glibc212.patch, davfs2-1.4.7.ebuild:
+  Drop glibc patch after further investigation, Upstream bug:
+  https://savannah.nongnu.org/bugs/?28916
 
 *davfs2-1.4.7 (08 Aug 2012)
 
