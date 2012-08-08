@@ -1,13 +1,13 @@
 # ChangeLog for x11-drivers/xf86-video-vmware
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-vmware/ChangeLog,v 1.66 2012/08/08 23:33:08 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-vmware/ChangeLog,v 1.67 2012/08/08 23:35:05 chithanh Exp $
 
 *xf86-video-vmware-12.0.2-r1 (08 Aug 2012)
 
   08 Aug 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   +files/xf86-video-vmware-12.0.2-xorg-server-1.13.patch,
   +xf86-video-vmware-12.0.2-r1.ebuild:
-  Add patch to allow building against xorg-server-1.13, reported and tested by
+  Add patch to allow building against xorg-server-1.13, bug #430294, tested by
   jmbsvicetto.
 
   24 Jun 2012; Agostino Sarubbo <ago@gentoo.org>
