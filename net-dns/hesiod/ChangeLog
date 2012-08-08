@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/hesiod
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/ChangeLog,v 1.44 2012/08/05 17:51:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/ChangeLog,v 1.45 2012/08/08 20:24:42 ranger Exp $
+
+  08 Aug 2012; Brent Baude <ranger@gentoo.org> hesiod-3.1.0.ebuild:
+  Marking hesiod-3.1.0 ppc for bug 419715
 
   05 Aug 2012; Raúl Porcel <armin76@gentoo.org> hesiod-3.1.0.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #419715
