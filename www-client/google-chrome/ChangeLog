@@ -1,6 +1,13 @@
 # ChangeLog for www-client/google-chrome
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/ChangeLog,v 1.170 2012/08/07 19:38:06 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/ChangeLog,v 1.171 2012/08/08 01:24:46 floppym Exp $
+
+*google-chrome-22.0.1229.0_alpha150285 (08 Aug 2012)
+
+  08 Aug 2012; Mike Gilbert <floppym@gentoo.org>
+  +google-chrome-22.0.1229.0_alpha150285.ebuild,
+  -google-chrome-22.0.1221.1_alpha149058.ebuild:
+  Dev channel bump.
 
 *google-chrome-21.0.1180.75_beta150248 (07 Aug 2012)
 
