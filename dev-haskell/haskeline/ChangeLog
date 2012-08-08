@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/haskeline
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskeline/ChangeLog,v 1.18 2012/08/06 21:01:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskeline/ChangeLog,v 1.19 2012/08/08 20:02:16 ranger Exp $
+
+  08 Aug 2012; Brent Baude <ranger@gentoo.org> haskeline-0.6.4.6-r1.ebuild:
+  Marking haskeline-0.6.4.6-r1 ppc for bug 417811
 
   06 Aug 2012; Brent Baude <ranger@gentoo.org> haskeline-0.6.4.6-r1.ebuild:
   Marking haskeline-0.6.4.6-r1 ppc64 for bug 417811
