@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/vo/vo-0.8.ebuild,v 1.2 2012/08/02 17:53:52 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/vo/vo-0.8.ebuild,v 1.3 2012/08/08 19:13:19 bicatali Exp $
 
 EAPI=4
 
@@ -18,7 +18,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 LICENSE="BSD"
 
-RDEPEND="dev-libs/expat"
+RDEPEND="dev-libs/expat
+	!dev-python/astropy"
 DEPEND="${RDEPEND}"
 
 PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
