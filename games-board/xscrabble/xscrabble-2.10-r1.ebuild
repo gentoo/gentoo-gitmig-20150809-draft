@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xscrabble/xscrabble-2.10-r1.ebuild,v 1.9 2010/10/31 01:54:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xscrabble/xscrabble-2.10-r1.ebuild,v 1.10 2012/08/08 16:12:57 hasufell Exp $
 
 EAPI=2
 inherit eutils multilib games
@@ -30,7 +30,7 @@ src_unpack() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-path-fixes.patch \
-		"${FILESDIR}"/${P}-ldflags.patch
+		"${FILESDIR}"/${P}-build.patch
 	sed -i '/install/s/-s //' build || die "sed failed"
 }
 
