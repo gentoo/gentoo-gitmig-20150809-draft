@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/mscgen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mscgen/ChangeLog,v 1.5 2012/08/08 14:01:00 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mscgen/ChangeLog,v 1.6 2012/08/08 14:58:25 blueness Exp $
+
+  08 Aug 2012; Anthony G. Basile <blueness@gentoo.org> mscgen-0.20.ebuild:
+  Stable arm for bug #430430
 
   08 Aug 2012; Anthony G. Basile <blueness@gentoo.org> mscgen-0.20.ebuild:
   Keyword ~ppc ~ppc64, bug #419987
