@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.2.ebuild,v 1.13 2012/06/16 16:30:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.2.ebuild,v 1.14 2012/08/08 16:31:42 dilfridge Exp $
 
 EAPI=4
 inherit eutils flag-o-matic autotools gnome2
@@ -20,7 +20,7 @@ IUSE="dia gnome postscript inkjar lcms nls spell wmf"
 RESTRICT="test"
 
 COMMON_DEPEND="
-	>=app-text/poppler-0.12.3-r3[cairo,xpdf-headers]
+	>=app-text/poppler-0.12.3-r3[cairo,xpdf-headers(+)]
 	dev-cpp/glibmm
 	>=dev-cpp/gtkmm-2.18.0:2.4
 	>=dev-libs/boehm-gc-6.4
