@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xfractint
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/ChangeLog,v 1.60 2012/07/12 07:52:15 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/ChangeLog,v 1.61 2012/08/08 20:25:49 ranger Exp $
+
+  08 Aug 2012; Brent Baude <ranger@gentoo.org> xfractint-20.04_p12.ebuild:
+  Marking xfractint-20.04_p12 ppc for bug 425830
 
   12 Jul 2012; Jeff Horelick <jdhore@gentoo.org> xfractint-20.04_p12.ebuild:
   marked x86 per bug 425830
