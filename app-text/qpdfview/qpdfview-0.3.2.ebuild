@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/qpdfview-0.3.2_beta3.ebuild,v 1.1 2012/07/31 11:23:08 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/qpdfview-0.3.2.ebuild,v 1.1 2012/08/08 16:11:04 dilfridge Exp $
 
 EAPI=4
 PLOCALES="cs de el ru sk"
