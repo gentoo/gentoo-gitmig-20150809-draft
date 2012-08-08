@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.9.0.ebuild,v 1.1 2012/08/01 22:17:13 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.9.0.ebuild,v 1.2 2012/08/08 12:01:09 kensington Exp $
 
 EAPI=4
 
@@ -81,12 +81,6 @@ src_unpack() {
 	fi
 
 	kde4-meta_src_unpack
-}
-
-src_prepare() {
-	sed -i -e '1ifind_package(KdepimLibs)' plasma/CMakeLists.txt || die
-
-	kde4-meta_src_prepare
 }
 
 src_configure() {
