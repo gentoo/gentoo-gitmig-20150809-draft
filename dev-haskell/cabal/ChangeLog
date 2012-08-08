@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/cabal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/ChangeLog,v 1.76 2012/08/08 18:11:08 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/ChangeLog,v 1.77 2012/08/08 20:10:07 ranger Exp $
+
+  08 Aug 2012; Brent Baude <ranger@gentoo.org> cabal-1.14.0.ebuild:
+  Marking cabal-1.14.0 ppc for bug 418685
 
   08 Aug 2012; Andreas Schuerch <nativemad@gentoo.org> cabal-1.14.0.ebuild:
   x86 stable, see bug 418685
