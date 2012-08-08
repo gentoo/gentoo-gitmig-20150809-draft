@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.12.ebuild,v 1.4 2012/08/02 21:05:36 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.12.ebuild,v 1.5 2012/08/08 19:49:53 ranger Exp $
 
 EAPI=2
 DESCRIPTION="Open Dynamics Engine SDK"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/opende/${P}.tar.bz2"
 
 LICENSE="|| ( LGPL-2.1 BSD )"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-fbsd ~x86-linux"
+KEYWORDS="amd64 ppc ~ppc64 ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="debug doc double-precision examples gyroscopic static-libs"
 
 RDEPEND="examples? (
