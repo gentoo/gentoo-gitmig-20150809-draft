@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/sphinx-2.0.4-r1.ebuild,v 1.1 2012/07/21 08:00:54 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/sphinx-2.0.4-r1.ebuild,v 1.2 2012/08/08 18:32:32 graaff Exp $
 
 EAPI=4
 inherit eutils autotools
@@ -44,15 +44,13 @@ src_prepare() {
 		"${FILESDIR}"/${P}_gcc-4.7.patch
 
 	# drop nasty hardcoded search path breaking Prefix
-	sed -i -e '/\/usr\/local\//d' configure.ac || die
+	# We patch configure directly since otherwise we need to run
+	# eautoreconf twice and that causes problems, bug 425380
+	sed -i -e 's/\/usr\/local\//\/someplace\/nonexisting\//g' configure || die
 
-	# Regenerate autoconf files in the api directory first to avoid
-	# running elibtoolize twice, which results in a warning.
 	pushd api/libsphinxclient || die
 	eautoreconf
 	popd || die
-
-	eautoreconf
 }
 
 src_configure() {

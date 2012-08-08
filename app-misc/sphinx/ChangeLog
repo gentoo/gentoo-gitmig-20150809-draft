@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/sphinx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.47 2012/07/21 08:00:54 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.48 2012/08/08 18:32:32 graaff Exp $
+
+  08 Aug 2012; Hans de Graaff <graaff@gentoo.org> sphinx-2.0.4-r1.ebuild:
+  Avoid eautoreconf and thus the problem reported in bug 425380, thanks to
+  grobian.
 
 *sphinx-2.0.4-r1 (21 Jul 2012)
 
