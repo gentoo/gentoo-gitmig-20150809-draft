@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.93 2012/08/07 11:44:11 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.94 2012/08/08 12:01:15 scarabeus Exp $
 
 EAPI=4
 
@@ -17,8 +17,8 @@ PYTHON_USE_WITH="threads,xml"
 # everyone happy.
 DEV_URI="
 	http://dev-builds.libreoffice.org/pre-releases/src
-	http://download.documentfoundation.org/libreoffice/src
-	http://download.documentfoundation.org/libreoffice/old/src
+	http://download.documentfoundation.org/libreoffice/src/${PV:0:5}/
+	http://download.documentfoundation.org/libreoffice/old/${PV}/
 "
 EXT_URI="http://ooo.itc.hu/oxygenoffice/download/libreoffice"
 ADDONS_URI="http://dev-www.libreoffice.org/src/"
@@ -176,7 +176,7 @@ RDEPEND="${COMMON_DEPEND}
 "
 
 PDEPEND="
-	>=app-office/libreoffice-l10n-3.5
+	>=app-office/libreoffice-l10n-3.6
 "
 
 # FIXME: cppunit should be moved to test conditional

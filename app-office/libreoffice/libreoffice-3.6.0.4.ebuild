@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.6.9999.ebuild,v 1.12 2012/08/08 12:01:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.6.0.4.ebuild,v 1.1 2012/08/08 12:01:15 scarabeus Exp $
 
 EAPI=4
 
@@ -154,7 +154,7 @@ COMMON_DEPEND="
 	)
 	mysql? ( >=dev-db/mysql-connector-c++-1.1.0 )
 	opengl? ( virtual/opengl )
-	postgres? ( >=dev-db/postgresql-base-8.4.0[kerberos] )
+	postgres? ( >=dev-db/postgresql-base-8.4.0 )
 	svg? ( gnome-base/librsvg )
 	webdav? ( net-libs/neon )
 	xmlsec? ( ${NSS_DEPEND} )
@@ -211,6 +211,7 @@ DEPEND="${COMMON_DEPEND}
 "
 
 PATCHES=(
+	"${FILESDIR}/libreoffice-3.6.0-kde-fpicker.patch"
 	# not upstreamable stuff
 	"${FILESDIR}/${PN}-3.6-system-pyuno.patch"
 )
