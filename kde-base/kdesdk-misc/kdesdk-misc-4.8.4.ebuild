@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/kdesdk-misc-4.8.4.ebuild,v 1.2 2012/07/12 13:07:26 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/kdesdk-misc-4.8.4.ebuild,v 1.3 2012/08/08 11:56:42 johu Exp $
 
 EAPI=4
 
@@ -28,6 +28,9 @@ KMEXTRA="
 	poxml/
 	scheck/
 "
+# java deps on anltr cant be properly explained to cmake deps
+# needs to be run in one thread
+MAKEOPTS+=" -j1"
 
 src_configure() {
 	mycmakeargs=(
