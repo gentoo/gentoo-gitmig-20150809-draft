@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/irrlicht
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/ChangeLog,v 1.54 2012/07/12 11:24:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/ChangeLog,v 1.55 2012/08/08 19:51:00 ranger Exp $
+
+  08 Aug 2012; Brent Baude <ranger@gentoo.org> irrlicht-1.7.3.ebuild:
+  Marking irrlicht-1.7.3 ppc for bug 425860
 
   12 Jul 2012; Agostino Sarubbo <ago@gentoo.org> irrlicht-1.7.3.ebuild:
   Stable for amd64, wrt bug #425860
