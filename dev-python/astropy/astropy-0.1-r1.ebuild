@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astropy/astropy-0.1-r1.ebuild,v 1.2 2012/06/27 00:08:15 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astropy/astropy-0.1-r1.ebuild,v 1.3 2012/08/08 19:10:03 bicatali Exp $
 
 EAPI=4
 
@@ -21,7 +21,9 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc test"
 
 RDEPEND="dev-libs/expat
-	dev-python/numpy"
+	dev-python/numpy
+	!dev-python/pyfits
+	!dev-python/vo"
 DEPEND="${RDEPEND}
 	dev-python/configobj
 	dev-python/pytest
