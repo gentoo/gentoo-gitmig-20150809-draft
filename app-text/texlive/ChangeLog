@@ -1,6 +1,9 @@
 # ChangeLog for app-text/texlive
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/ChangeLog,v 1.108 2012/08/03 04:55:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/ChangeLog,v 1.109 2012/08/08 01:22:07 naota Exp $
+
+  08 Aug 2012; Naohiro Aota <naota@gentoo.org> texlive-2012.ebuild:
+  Add ~x86-fbsd wrt bug #428248
 
   03 Aug 2012; Markus Meier <maekke@gentoo.org> texlive-2012.ebuild:
   add ~arm, bug #428248
@@ -137,4 +140,3 @@
   20 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
   texlive-2010-r1.ebuild, texlive-2010-r2.ebuild:
   Marked ~ppc/~ppc64 wrt #352300, #355353
-
