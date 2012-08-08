@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/alex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/ChangeLog,v 1.56 2012/08/06 21:08:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/ChangeLog,v 1.57 2012/08/08 20:16:58 ranger Exp $
+
+  08 Aug 2012; Brent Baude <ranger@gentoo.org> alex-3.0.2.ebuild:
+  Marking alex-3.0.2 ppc for bug 422015
 
   06 Aug 2012; Brent Baude <ranger@gentoo.org> alex-3.0.2.ebuild:
   Marking alex-3.0.2 ppc64 for bug 422015
