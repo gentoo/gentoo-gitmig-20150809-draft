@@ -1,12 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/monkeyd-1.0.1-r1.ebuild,v 1.1 2012/08/08 12:17:18 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/monkeyd-1.0.1-r1.ebuild,v 1.2 2012/08/08 12:35:24 blueness Exp $
 
 EAPI="4"
 
 inherit toolchain-funcs depend.php multilib
-
-WEBROOT="/var/www/localhost"
 
 MY_P="${PN/d}-${PV}"
 DESCRIPTION="A small, fast, and scalable web server"
@@ -21,6 +19,8 @@ IUSE="php"
 RDEPEND="php? ( virtual/httpd-php )"
 
 S="${WORKDIR}/${MY_P}"
+
+WEBROOT="/var/www/localhost"
 
 pkg_setup() {
 	use php && require_php_cgi
@@ -66,10 +66,13 @@ src_install() {
 	newinitd "${FILESDIR}"/monkeyd.initd monkeyd
 	newconfd "${FILESDIR}"/monkeyd.confd monkeyd
 
+	#move htdocs to docdir, bug #429632
 	docompress -x /usr/share/doc/"${PF}"/htdocs.dist
-
 	mv "${D}"${WEBROOT}/htdocs \
 		"${D}"/usr/share/doc/"${PF}"/htdocs.dist
-
 	mkdir "${D}"${WEBROOT}/htdocs
+
+	keepdir \
+		/var/log/monkeyd \
+		${WEBROOT}/htdocs
 }
