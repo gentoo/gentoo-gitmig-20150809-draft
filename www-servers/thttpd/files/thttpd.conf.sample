@@ -9,7 +9,7 @@
 ## what interface to bind to?
 ## (default is binding to any interface)
 #host=www.example.org
-port=8080
+port=80
 user=thttpd
 ##
 ## CGI:

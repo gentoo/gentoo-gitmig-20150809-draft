@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/thttpd-2.26.4-r1.ebuild,v 1.1 2012/08/05 15:50:57 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/thttpd-2.26.4-r1.ebuild,v 1.2 2012/08/08 13:24:57 blueness Exp $
 
 EAPI="4"
 
@@ -21,9 +21,11 @@ IUSE=""
 RDEPEND=""
 DEPEND=""
 
+WEBROOT="/var/www/localhost"
+
 THTTPD_USER=thttpd
 THTTPD_GROUP=thttpd
-THTTPD_DOCROOT="${EPREFIX}/var/www/localhost/htdocs"
+THTTPD_DOCROOT="${EPREFIX}${WEBROOT}/htdocs"
 
 DOCS=( README TODO )
 
@@ -49,12 +51,13 @@ src_install () {
 	insinto /etc/thttpd
 	doins "${FILESDIR}"/thttpd.conf.sample
 
+	#move htdocs to docdir, bug #429632
 	docompress -x /usr/share/doc/"${PF}"/htdocs.dist
-
-	mv "${ED}"/var/www/localhost/htdocs \
+	mv "${ED}"${WEBROOT}/htdocs \
 		"${ED}"/usr/share/doc/"${PF}"/htdocs.dist
+	mkdir "${ED}"${WEBROOT}/htdocs
 
-	mkdir "${ED}"/var/www/localhost/htdocs
+	keepdir ${WEBROOT}/htdocs
 }
 
 pkg_postinst() {
@@ -62,7 +65,6 @@ pkg_postinst() {
 		|| die "Failed chown makeweb"
 	chmod 2751 "${EROOT}/usr/sbin/makeweb" \
 		|| die "Failed chmod makeweb"
-	chmod 755 "${THTTPD_DOCROOT}/cgi-bin/printenv" \
+	chmod 755 "${EROOT}/usr/share/doc/${PF}/htdocs.dist/cgi-bin/printenv" \
 		|| die "Failed chmod printenv"
-	elog "Adjust THTTPD_DOCROOT in /etc/conf.d/thttpd !"
 }

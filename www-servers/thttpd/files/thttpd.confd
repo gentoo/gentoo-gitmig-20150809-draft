@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/files/thttpd.confd,v 1.2 2012/04/04 15:05:36 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/files/thttpd.confd,v 1.3 2012/08/08 13:24:57 blueness Exp $
 
 ## Config file for /etc/init.d/thttpd
 
 ## the startup-dir of thttpd is the docroot, so we specify it here
 ## and the init-script does a "cd" prior to startup:
-THTTPD_DOCROOT="/var/www/localhost"
+THTTPD_DOCROOT="/var/www/localhost/htdocs"
 
 ## There are 2 ways to configure thttpd:
 ##	1) specify all params on the cmd-line
