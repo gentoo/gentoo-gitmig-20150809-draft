@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.8.2.ebuild,v 1.4 2012/05/05 08:02:25 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.8.2.ebuild,v 1.5 2012/08/08 14:49:49 ssuominen Exp $
 
 EAPI=4
 
 PYTHON_DEPEND="python? 2:2.6"
 
-inherit mono python
+inherit eutils mono python toolchain-funcs
 
 DESCRIPTION="Shared library to access the contents of an iPod"
 HOMEPAGE="http://www.gtkpod.org/libgpod/"
@@ -53,6 +53,9 @@ src_prepare() {
 }
 
 src_configure() {
+	local udevdir=/lib/udev
+	use udev && udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
+
 	econf \
 		$(use_enable static-libs static) \
 		$(use_enable udev) \
@@ -60,6 +63,7 @@ src_configure() {
 		$(use_enable python pygobject) \
 		--without-hal \
 		$(use_with ios libimobiledevice) \
+		--with-udev-dir="${udevdir}" \
 		--with-html-dir=/usr/share/doc/${PF}/html \
 		$(use_with python) \
 		$(use_with mono)
@@ -67,7 +71,7 @@ src_configure() {
 
 src_install() {
 	default
-	find "${D}" -name '*.la' -exec rm -f {} +
+	prune_libtool_files --all
 }
 
 pkg_postinst() {

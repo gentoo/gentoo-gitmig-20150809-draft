@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libgpod
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.90 2012/05/05 08:02:25 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.91 2012/08/08 14:49:49 ssuominen Exp $
+
+  08 Aug 2012; Samuli Suominen <ssuominen@gentoo.org> libgpod-0.8.2.ebuild:
+  Query udev.pc pkg-config file for udevdir value to be compatible with
+  sys-fs/udev >= 187.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> libgpod-0.8.0.ebuild,
   libgpod-0.8.2.ebuild:
