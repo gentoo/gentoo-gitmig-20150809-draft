@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/xfoil/xfoil-6.97.ebuild,v 1.8 2011/06/21 14:31:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/xfoil/xfoil-6.97.ebuild,v 1.9 2012/08/08 05:36:07 bicatali Exp $
 
-EAPI=3
+EAPI=4
 inherit eutils fortran-2
 
 DESCRIPTION="Design and analysis of subsonic isolated airfoils"
@@ -12,7 +12,7 @@ SRC_URI="http://web.mit.edu/drela/Public/web/${PN}/${PN}${PV}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples"
 
 RDEPEND="
@@ -44,27 +44,27 @@ src_prepare() {
 src_compile() {
 	export FC="$(tc-getFC)" F77="$(tc-getF77)"
 	cd "${S}"/orrs/bin
-	emake FLG="${FFLAGS}" FTNLIB="${LDFLAGS}" OS || die "failed to build orrs"
+	emake FLG="${FFLAGS}" FTNLIB="${LDFLAGS}" OS
 	cd "${S}"/orrs
 	bin/osgen osmaps_ns.lst
 	cd "${S}"/plotlib
-	emake CFLAGS="${CFLAGS} -DUNDERSCORE" || die "failed to build plotlib"
+	emake CFLAGS="${CFLAGS} -DUNDERSCORE"
 	cd "${S}"/bin
 	for i in xfoil pplot pxplot; do
 		emake \
 			PLTOBJ="../plotlib/libPlt.a" \
 			CFLAGS="${CFLAGS} -DUNDERSCORE" \
 			FTNLIB="${LDFLAGS}" \
-			${i} || die "failed to build ${i}"
+			${i}
 	done
 }
 
 src_install() {
-	dobin bin/pplot bin/pxplot bin/xfoil || die "dobin failed"
+	dobin bin/pplot bin/pxplot bin/xfoil
 	insinto /usr/share/xfoil/orrs
-	doins orrs/osm*.dat || die "orrs data install failed"
-	dodoc *.txt README || die "dodoc failed"
+	doins orrs/osm*.dat
+	dodoc *.txt README
 	insinto /usr/share/doc/${PF}/
-	use examples && { doins -r runs || die "examples install failed"; }
+	use examples && doins -r runs
 	use doc && dodoc "${DISTDIR}"/dataflow.pdf
 }

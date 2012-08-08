@@ -6,8 +6,8 @@
   <email>robbat2@gentoo.org</email>
 </maintainer>
 <longdescription lang="en">
-XFOIL is an interactive program for the design and analysis of subsonic isolated airfoils.
-It consists of a collection of menu-driven routines which perform various useful functions such as:
+  XFOIL is an interactive program for the design and analysis of subsonic isolated airfoils.
+  It consists of a collection of menu-driven routines which perform various useful functions such as:
     * Viscous (or inviscid) analysis of an existing airfoil
     * Airfoil design and redesign by interactive modification of surface speed distributions
     * Airfoil redesign by interactive modification of geometric parameters
