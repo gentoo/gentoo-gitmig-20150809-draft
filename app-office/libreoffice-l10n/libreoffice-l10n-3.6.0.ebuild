@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.6.0.ebuild,v 1.1 2012/08/08 12:00:29 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.6.0.ebuild,v 1.2 2012/08/08 15:54:27 scarabeus Exp $
 
 EAPI=4
 
 MY_PV="3.6.0"
 
-RC_VERSION="rc4" # CHECK ME WITH EVERY BUMP!
+RC_VERSION=".4" # CHECK ME WITH EVERY BUMP!
 BASE_SRC_URI="http://download.documentfoundation.org/${PN/-l10n/}/stable/${MY_PV}/rpm"
 
 inherit rpm eutils multilib versionator
