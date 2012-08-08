@@ -1,13 +1,13 @@
 # ChangeLog for app-text/rarian
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rarian/ChangeLog,v 1.55 2012/08/08 18:32:12 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rarian/ChangeLog,v 1.56 2012/08/08 18:36:54 tetromino Exp $
 
 *rarian-0.8.1-r2 (08 Aug 2012)
 
   08 Aug 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   +rarian-0.8.1-r2.ebuild:
   Use getopt-long on non-linux systems (bug #409811, thanks to Stuart Shelton,
-  Fabian Groffen, Naohiro Aota).
+  Fabian Groffen, Naohiro Aota)
 
   30 Apr 2012; Fabian Groffen <grobian@gentoo.org> rarian-0.8.1-r1.ebuild:
   Fix for Prefix, add Prefix keywords
