@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.20.ebuild,v 1.2 2012/08/05 15:35:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.20.ebuild,v 1.3 2012/08/08 16:25:18 dilfridge Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ IUSE="jpeg perl png static-libs tiff"
 
 RDEPEND="
 	app-text/ghostscript-gpl
-	app-text/poppler[cxx,jpeg?,lcms,tiff?,xpdf-headers]
+	app-text/poppler[cxx,jpeg?,lcms,tiff?,xpdf-headers(+)]
 	media-libs/fontconfig
 	media-libs/freetype:2
 	media-libs/lcms:2
