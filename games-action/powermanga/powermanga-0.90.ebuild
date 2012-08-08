@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/powermanga-0.90.ebuild,v 1.11 2012/08/03 04:25:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/powermanga-0.90.ebuild,v 1.12 2012/08/08 15:00:01 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils autotools games
@@ -21,8 +21,9 @@ DEPEND=">=media-libs/libsdl-1.2[audio,joystick,video]
 	media-libs/sdl-mixer[mikmod]"
 
 src_prepare() {
-	sed -i -e "/null/d" graphics/Makefile.in || die "sed failed"
-	sed -i -e "/zozo/d" texts/text_en.txt || die "sed failed"
+	sed -i -e "/null/d" graphics/Makefile.in || die
+	sed -i -e "/zozo/d" texts/text_en.txt || die
+	sed -i -e '/^CFLAGS=/s/-O3 -Wall/${CFLAGS}/' configure.ac || die
 	local f
 	for f in src/assembler.S src/assembler_opt.S ; do
 		einfo "patching $f"
@@ -39,24 +40,24 @@ src_prepare() {
 }
 
 src_configure() {
-	egamesconf --prefix=/usr || die "egamesconf failed"
+	egamesconf --prefix=/usr || die
 }
 
 src_install() {
-	dogamesbin powermanga || die "dogamesbin failed"
+	dogamesbin powermanga || die
 	doman powermanga.6
 	dodoc AUTHORS CHANGES README
 
 	insinto "${GAMES_DATADIR}/powermanga"
-	doins -r data sounds graphics texts || die "doins failed"
+	doins -r data sounds graphics texts || die
 
 	find "${D}${GAMES_DATADIR}/powermanga/" -name "Makefil*" -exec rm -f \{\} +
 
 	insinto /var/games
 	local f
 	for f in powermanga.hi-easy powermanga.hi powermanga.hi-hard ; do
-		touch "${D}/var/games/${f}" || die "touch ${f} failed"
-		fperms 660 "/var/games/${f}" || die "fperms ${f} failed"
+		touch "${D}/var/games/${f}" || die
+		fperms 660 "/var/games/${f}" || die
 	done
 
 	make_desktop_entry powermanga Powermanga
