@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/hawknl/hawknl-1.68-r2.ebuild,v 1.5 2012/04/24 22:37:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/hawknl/hawknl-1.68-r2.ebuild,v 1.6 2012/08/08 19:47:41 ranger Exp $
 
 EAPI=2
 inherit toolchain-funcs eutils multilib
@@ -11,7 +11,7 @@ SRC_URI="http://www.sonic.net/~philf/download/HawkNL${PV/./}src.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 hppa ~ppc x86"
+KEYWORDS="amd64 hppa ppc x86"
 IUSE="doc"
 
 RDEPEND=""
