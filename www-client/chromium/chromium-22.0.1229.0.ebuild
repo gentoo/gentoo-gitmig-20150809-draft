@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-22.0.1215.0.ebuild,v 1.2 2012/08/01 00:43:28 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-22.0.1229.0.ebuild,v 1.1 2012/08/08 02:20:41 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -112,11 +112,6 @@ src_prepare() {
 	# Fix build without NaCl glibc toolchain.
 	epatch "${FILESDIR}/${PN}-ppapi-r0.patch"
 
-	epatch "${FILESDIR}/${PN}-libyuv-system-libjpeg-r0.patch"
-
-	# Bug 427438.
-	epatch "${FILESDIR}/${PN}-bison-2.6-r0.patch"
-
 	epatch_user
 
 	# Remove most bundled libraries. Some are still needed.
@@ -155,6 +150,7 @@ src_prepare() {
 		\! -path 'third_party/ots/*' \
 		\! -path 'third_party/protobuf/*' \
 		\! -path 'third_party/qcms/*' \
+		\! -path 'third_party/re2/*' \
 		\! -path 'third_party/scons-2.0.1/*' \
 		\! -path 'third_party/sfntly/*' \
 		\! -path 'third_party/skia/*' \

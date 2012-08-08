@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.125 2012/07/24 03:27:28 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.126 2012/08/08 02:20:41 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -205,6 +205,7 @@ src_prepare() {
 		\! -path 'third_party/ots/*' \
 		\! -path 'third_party/protobuf/*' \
 		\! -path 'third_party/qcms/*' \
+		\! -path 'third_party/re2/*' \
 		\! -path 'third_party/scons-2.0.1/*' \
 		\! -path 'third_party/sfntly/*' \
 		\! -path 'third_party/skia/*' \
