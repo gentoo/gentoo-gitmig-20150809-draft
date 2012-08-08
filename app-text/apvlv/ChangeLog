@@ -1,6 +1,10 @@
 # ChangeLog for app-text/apvlv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/apvlv/ChangeLog,v 1.20 2012/08/03 12:37:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/apvlv/ChangeLog,v 1.21 2012/08/08 16:57:17 dilfridge Exp $
+
+  08 Aug 2012; Andreas K. Huettel <dilfridge@gentoo.org> apvlv-0.1.2-r1.ebuild,
+  apvlv-0.1.4.ebuild:
+  Needs xpdf headers
 
   03 Aug 2012; Markos Chandras <hwoarang@gentoo.org> -apvlv-0.1.1.ebuild,
   -apvlv-0.1.2.ebuild, apvlv-0.1.2-r1.ebuild:

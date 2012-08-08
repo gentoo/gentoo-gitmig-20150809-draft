@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/apvlv/apvlv-0.1.4.ebuild,v 1.1 2012/07/16 22:34:27 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/apvlv/apvlv-0.1.4.ebuild,v 1.2 2012/08/08 16:57:17 dilfridge Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug djvu"
 
 RDEPEND="
-	>=app-text/poppler-0.18[cairo]
+	>=app-text/poppler-0.18[cairo,xpdf-headers(+)]
 	>=x11-libs/gtk+-2.10.4:2
 	djvu? ( app-text/djvu )
 "
