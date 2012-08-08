@@ -4,5 +4,6 @@
 <herd>netmon</herd>
 <use>
 <flag name="utils">Install command line interface utils</flag>
+<flag name="doc">Install development documentation</flag>
 </use>
 </pkgmetadata>
