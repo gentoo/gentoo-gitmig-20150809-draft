@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-video-qxl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-qxl/ChangeLog,v 1.13 2012/08/08 13:22:32 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-qxl/ChangeLog,v 1.14 2012/08/08 13:33:10 chithanh Exp $
+
+*xf86-video-qxl-0.0.17-r1 (08 Aug 2012)
+
+  08 Aug 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/xf86-video-qxl-0.0.17-xorg-server-1.13.patch,
+  +xf86-video-qxl-0.0.17-r1.ebuild:
+  Add compatibility to xorg-server-1.13, bug #430162.
 
   08 Aug 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   -xf86-video-qxl-0.0.13.ebuild, -xf86-video-qxl-0.0.14.ebuild,
