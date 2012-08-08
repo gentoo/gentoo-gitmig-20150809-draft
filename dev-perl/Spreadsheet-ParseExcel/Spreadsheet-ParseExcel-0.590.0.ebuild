@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spreadsheet-ParseExcel/Spreadsheet-ParseExcel-0.590.0.ebuild,v 1.8 2012/08/06 13:28:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spreadsheet-ParseExcel/Spreadsheet-ParseExcel-0.590.0.ebuild,v 1.9 2012/08/08 01:25:12 naota Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Get information from Excel file"
 
 SLOT="0"
-KEYWORDS="amd64 ~arm ~hppa x86 ~amd64-fbsd ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="amd64 ~arm ~hppa x86 ~amd64-fbsd ~x86-fbsd ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE="test cjk unicode"
 
 # Digest::Perl::MD5 cannot be replaced by Digest::MD5, as this module actually

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Crypt-RC4
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-RC4/ChangeLog,v 1.7 2012/08/06 13:20:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-RC4/ChangeLog,v 1.8 2012/08/08 01:27:07 naota Exp $
+
+  08 Aug 2012; Naohiro Aota <naota@gentoo.org> Crypt-RC4-2.020.0.ebuild:
+  Add ~x86-fbsd wrt bug #428248
 
   06 Aug 2012; Alexis Ballier <aballier@gentoo.org> Crypt-RC4-2.020.0.ebuild:
   keyword ~amd64-fbsd
