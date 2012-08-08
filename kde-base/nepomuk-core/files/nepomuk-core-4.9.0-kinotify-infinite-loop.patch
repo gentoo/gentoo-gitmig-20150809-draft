@@ -1,0 +1,21 @@
+commit 7322b28f46969adb721daecf5a7fb67b8e0c6ae4
+Author: Vishesh Handa <me@vhanda.in>
+Date:   Wed Aug 8 14:33:02 2012 +0530
+
+    Break out of kinotify's _k_addWatches loop
+    
+    Didn't test the patch out after making a super trivial change in the
+    review request. Stupid Stupid me!
+
+diff --git a/services/filewatch/kinotify.cpp b/services/filewatch/kinotify.cpp
+index 47eb8ed..509abff 100644
+--- a/services/filewatch/kinotify.cpp
++++ b/services/filewatch/kinotify.cpp
+@@ -152,6 +152,7 @@ public:
+             }
+             else {
+                 delete dirIterators.dequeue();
++                break;
+             }
+         }
+ 
