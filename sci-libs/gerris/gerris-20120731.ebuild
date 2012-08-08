@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gerris/gerris-20120731.ebuild,v 1.1 2012/08/02 21:30:17 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gerris/gerris-20120731.ebuild,v 1.2 2012/08/08 17:11:25 bicatali Exp $
 
 EAPI=4
 
-inherit autotools eutils flag-o-matic
+inherit eutils flag-o-matic autotools
 
 MYP=${P/-20/-snapshot-}
 
@@ -26,8 +26,8 @@ RDEPEND="dev-libs/glib:2
 	sci-libs/netcdf
 	sci-libs/gsl
 	sci-libs/gts
-	sci-libs/hypre
-	sci-libs/lis
+	sci-libs/hypre[mpi?]
+	sci-libs/lis[mpi?]
 	sci-libs/proj
 	>=sci-libs/fftw-3
 	virtual/lapack
@@ -36,6 +36,14 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 S="${WORKDIR}/${MYP}"
+
+# buggy tests, need extra packages and require gerris to be installed
+RESTRICT=test
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-hypre-no-mpi.patch
+	eautoreconf
+}
 
 src_configure() {
 	append-cppflags "-I${EPREFIX}/usr/include/hypre"
