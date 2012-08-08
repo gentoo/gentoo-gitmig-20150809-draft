@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/pyfits-2.4.0.ebuild,v 1.4 2012/02/23 04:47:44 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/pyfits-2.4.0.ebuild,v 1.5 2012/08/08 19:11:00 bicatali Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -17,7 +17,8 @@ SLOT="0"
 KEYWORDS="amd64 x86 ~x86-fbsd"
 LICENSE="BSD"
 
-RDEPEND="dev-python/numpy"
+RDEPEND="dev-python/numpy
+	!dev-python/astropy"
 DEPEND="${RDEPEND}"
 
 # current tests need data which are not in tar ball
