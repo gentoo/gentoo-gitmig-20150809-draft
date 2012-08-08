@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/pythia-6.4.26.ebuild,v 1.1 2011/11/25 21:50:37 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/pythia-6.4.26.ebuild,v 1.2 2012/08/08 04:17:29 bicatali Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ SRC_URI="http://dev.gentoo.org/~bicatali/${P}.tar.bz2
 
 SLOT="6"
 LICENSE="public-domain"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples static-libs"
 
 DEPEND="virtual/fortran"

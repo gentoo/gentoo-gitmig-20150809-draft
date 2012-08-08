@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/pythia-8.1.65.ebuild,v 1.1 2012/05/22 17:32:22 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/pythia-8.1.65.ebuild,v 1.2 2012/08/08 04:17:29 bicatali Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="http://home.thep.lu.se/~torbjorn/${PN}${MV}/${MY_P}.tgz"
 
 SLOT="8"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples +hepmc static-libs"
 
 DEPEND="hepmc? ( sci-physics/hepmc )"
@@ -83,6 +83,6 @@ src_install() {
 	fi
 	if use examples; then
 		insinto /usr/share/doc/${PF}
-		doins -r examples || die "examples install failed"
+		doins -r examples
 	fi
 }
