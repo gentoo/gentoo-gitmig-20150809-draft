@@ -1,6 +1,12 @@
 # ChangeLog for sci-physics/mpb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/mpb/ChangeLog,v 1.15 2012/06/23 16:57:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/mpb/ChangeLog,v 1.16 2012/08/08 04:08:59 bicatali Exp $
+
+  08 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/mpb-1.4.2-guile18.patch, -files/mpb-1.4.2-gcc4.patch, metadata.xml,
+  mpb-1.4.2-r2.ebuild:
+  Fixed for guile-1.8. Switched to EAPI4. Cleanup ebuild. Install properly mpbi.
+  Keyword amd64-linux, x86-linux
 
   23 Jun 2012; Justin Lecher <jlec@gentoo.org> mpb-1.4.2-r2.ebuild,
   metadata.xml:
@@ -57,4 +63,3 @@
 
   04 Jan 2006; Peter Bienstman <pbienst@gentoo.org> +mpb-1.4.2.ebuild:
   New ebuild (closes #36581).
-
