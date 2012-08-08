@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-187-r1.ebuild,v 1.3 2012/08/04 16:09:32 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-187-r1.ebuild,v 1.4 2012/08/08 04:38:08 tetromino Exp $
 
 EAPI=4
 
@@ -33,7 +33,7 @@ IUSE="doc gudev hwdb introspection keymap +openrc selinux static-libs"
 RESTRICT="test"
 
 COMMON_DEPEND="gudev? ( dev-libs/glib:2 )
-	introspection? ( dev-libs/gobject-introspection )
+	introspection? ( >=dev-libs/gobject-introspection-1.31.1 )
 	selinux? ( sys-libs/libselinux )
 	>=sys-apps/kmod-5
 	>=sys-apps/util-linux-2.20
