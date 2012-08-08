@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-187-r1.ebuild,v 1.4 2012/08/08 04:38:08 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-187-r1.ebuild,v 1.5 2012/08/08 07:55:00 jlec Exp $
 
 EAPI=4
 
@@ -378,7 +378,7 @@ pkg_postinst()
 
 	ewarn
 	ewarn "The udev-acl functionality has been removed from standalone udev."
-	ewarn "If you are using standalone udev, consolekithandles this"
+	ewarn "If you are using standalone udev, consolekit handles this"
 	ewarn "functionality."
 
 	if [[ -d ${ROOT}lib/udev ]]

@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.708 2012/08/08 05:04:57 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.709 2012/08/08 07:55:00 jlec Exp $
+
+  08 Aug 2012; Justin Lecher <jlec@gentoo.org> udev-187-r1.ebuild,
+  udev-187-r2.ebuild, udev-9999.ebuild:
+  Fix typo
 
   08 Aug 2012; Alexandre Rostovtsev <tetromino@gentoo.org> udev-187-r1.ebuild,
   udev-187-r2.ebuild, udev-9999.ebuild:
