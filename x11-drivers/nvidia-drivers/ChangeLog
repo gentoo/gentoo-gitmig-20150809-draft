@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.373 2012/08/06 22:09:31 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.374 2012/08/08 18:23:34 cardoe Exp $
+
+*nvidia-drivers-295.71 (08 Aug 2012)
+
+  08 Aug 2012; Doug Goldstein <cardoe@gentoo.org>
+  +nvidia-drivers-295.71.ebuild:
+  Fix CVE-2012-xxxx. With access to /dev/nvidia* a malicious user could
+  exploit the VGA window size to read/write from kernel memory and gain root
+  access.
 
   06 Aug 2012; Doug Goldstein <cardoe@gentoo.org>
   nvidia-drivers-96.43.20.ebuild, nvidia-drivers-173.14.34.ebuild,
