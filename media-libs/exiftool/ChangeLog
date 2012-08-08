@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/exiftool
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/exiftool/ChangeLog,v 1.113 2012/08/06 21:00:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/exiftool/ChangeLog,v 1.114 2012/08/08 19:57:46 ranger Exp $
+
+  08 Aug 2012; Brent Baude <ranger@gentoo.org> exiftool-8.900.0.ebuild:
+  Marking exiftool-8.900.0 ppc for bug 419075
 
   06 Aug 2012; Brent Baude <ranger@gentoo.org> exiftool-8.900.0.ebuild:
   Marking exiftool-8.900.0 ppc64 for bug 419075
