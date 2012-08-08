@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.5.3.ebuild,v 1.3 2012/07/31 14:18:06 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.5.3.ebuild,v 1.4 2012/08/08 16:37:34 dilfridge Exp $
 
 EAPI=4
 
@@ -129,7 +129,7 @@ COMMON_DEPEND="
 	jemalloc? ( dev-libs/jemalloc )
 	mysql? ( >=dev-db/mysql-connector-c++-1.1.0 )
 	opengl? ( virtual/opengl )
-	pdfimport? ( >=app-text/poppler-0.16[xpdf-headers,cxx] )
+	pdfimport? ( >=app-text/poppler-0.16[xpdf-headers(+),cxx] )
 	postgres? ( >=dev-db/postgresql-base-8.4.0 )
 	svg? ( gnome-base/librsvg )
 	webdav? ( net-libs/neon )

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.94 2012/08/08 12:01:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.95 2012/08/08 16:37:34 dilfridge Exp $
 
 EAPI=4
 
@@ -146,7 +146,7 @@ COMMON_DEPEND="
 		>=media-libs/gst-plugins-base-0.10
 	)
 	jemalloc? ( dev-libs/jemalloc )
-	libreoffice_extensions_pdfimport? ( >=app-text/poppler-0.16[xpdf-headers,cxx] )
+	libreoffice_extensions_pdfimport? ( >=app-text/poppler-0.16[xpdf-headers(+),cxx] )
 	libreoffice_extensions_scripting-beanshell? ( >=dev-java/bsh-2.0_beta4 )
 	libreoffice_extensions_scripting-javascript? ( dev-java/rhino:1.6 )
 	libreoffice_extensions_wiki-publisher? (
