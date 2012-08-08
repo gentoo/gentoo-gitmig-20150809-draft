@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.274 2012/07/05 08:55:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.275 2012/08/08 07:54:45 ssuominen Exp $
+
+*lvm2-2.02.95-r4 (08 Aug 2012)
+
+  08 Aug 2012; Samuli Suominen <ssuominen@gentoo.org> +lvm2-2.02.95-r4.ebuild:
+  Use udev.pc pkg-config file to determine correct udevdir for compability with
+  sys-fs/udev >= 187.
 
 *lvm2-2.02.95-r3 (05 Jul 2012)
 
