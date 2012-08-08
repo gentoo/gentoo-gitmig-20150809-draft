@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/rpm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.157 2012/08/03 22:28:56 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.158 2012/08/08 22:29:31 blueness Exp $
+
+  08 Aug 2012; Anthony G. Basile <blueness@gentoo.org> rpm-4.10.0.ebuild:
+  Stable arm, bug #428148
 
   03 Aug 2012; Markos Chandras <hwoarang@gentoo.org> rpm-4.10.0.ebuild:
   Stable on amd64 wrt bug #428148
