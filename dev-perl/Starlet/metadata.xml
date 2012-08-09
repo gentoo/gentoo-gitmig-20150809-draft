@@ -5,7 +5,6 @@
   <upstream>
     <remote-id type="cpan">Starlet</remote-id>
     <remote-id type="cpan-module">Plack::Handler::Starlet</remote-id>
-    <remote-id type="cpan-module">Plack::Server::Standalone::Prefork::Server::Starter</remote-id>
     <remote-id type="cpan-module">Starlet</remote-id>
     <remote-id type="cpan-module">Starlet::Server</remote-id>
   </upstream>
