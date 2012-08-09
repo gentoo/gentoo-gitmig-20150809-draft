@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.4.3-r1.ebuild,v 1.2 2012/08/09 12:07:11 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.4.3-r1.ebuild,v 1.3 2012/08/09 13:45:28 ago Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -26,7 +26,7 @@ HOMEPAGE="http://www.calligra.org/"
 
 LICENSE="GPL-2"
 SLOT="4"
-[[ ${PV} == *9999 ]] || KEYWORDS="~amd64 x86"
+[[ ${PV} == *9999 ]] || KEYWORDS="amd64 x86"
 IUSE="attica +crypt +eigen +exif fftw +fontconfig freetds +gif glew +glib +gsf
 gsl +iconv +jpeg jpeg2k +kdcraw kdepim +lcms marble mysql +mso +okular openctl openexr
 +pdf postgres +semantic-desktop +ssl sybase test tiff +threads +truetype
