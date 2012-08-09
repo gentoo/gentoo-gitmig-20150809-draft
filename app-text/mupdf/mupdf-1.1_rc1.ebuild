@@ -1,18 +1,18 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.22 2012/08/09 06:25:45 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-1.1_rc1.ebuild,v 1.1 2012/08/09 06:25:45 xmw Exp $
 
 EAPI=4
 
-inherit eutils flag-o-matic git-2 multilib toolchain-funcs
+inherit eutils flag-o-matic multilib toolchain-funcs
 
 DESCRIPTION="a lightweight PDF viewer and toolkit written in portable C"
 HOMEPAGE="http://mupdf.com/"
-EGIT_REPO_URI="git://git.ghostscript.com/mupdf.git"
+SRC_URI=" http://${PN}.googlecode.com/files/${P/_rc/-rc}-source.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="X vanilla"
 
 RDEPEND="media-libs/freetype:2
@@ -24,11 +24,13 @@ RDEPEND="media-libs/freetype:2
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
+S=${WORKDIR}/${P/_rc/-rc}-source
+
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.1_rc1-buildsystem.patch
+	epatch "${FILESDIR}"/${P}-buildsystem.patch
 
 	if ! use vanilla ; then
-		epatch "${FILESDIR}"/${PN}-1.1_rc1-zoom-2.patch
+		epatch "${FILESDIR}"/${P}-zoom-2.patch
 	fi
 }
 
