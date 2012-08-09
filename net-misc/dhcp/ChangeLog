@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.214 2012/08/02 20:55:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.215 2012/08/09 18:25:30 ranger Exp $
+
+  09 Aug 2012; Brent Baude <ranger@gentoo.org> dhcp-4.2.4_p1.ebuild:
+  Marking dhcp-4.2.4_p1 ppc for bug 428120
 
   02 Aug 2012; Markus Meier <maekke@gentoo.org> dhcp-4.2.4_p1.ebuild:
   arm stable, bug #428120
