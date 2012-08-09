@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.6.12-r2.ebuild,v 1.5 2012/07/14 18:59:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.6.12-r2.ebuild,v 1.6 2012/08/09 18:23:00 ranger Exp $
 
 EAPI="3"
 
@@ -16,7 +16,7 @@ SRC_URI="
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="alpha amd64 hppa ia64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ~ppc64 sparc x86"
 
 LANGS="am ar ast az be bg ca ca@valencia cs da de dz el en_CA en_GB eo es et eu fa fi fr ga gl gu he hi hr hu id is it ja ka kk km kn ko lt lv mk ml mr ms my nb nds ne nl nn oc or pa pl pt pt_BR ro ru rw si sk sl sr sr@latin sv ta th tr tt uk vi xh yi zh_CN zh_HK zh_TW"
 IUSE="alsa aalib altivec curl dbus debug doc exif gnome jpeg lcms mmx mng pdf png python smp sse svg tiff webkit wmf"
