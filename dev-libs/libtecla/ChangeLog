@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libtecla
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtecla/ChangeLog,v 1.22 2012/08/05 09:40:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtecla/ChangeLog,v 1.23 2012/08/09 16:32:51 bicatali Exp $
+
+*libtecla-1.6.2 (09 Aug 2012)
+
+  09 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> +libtecla-1.6.2.ebuild,
+  metadata.xml:
+  Version bump
 
   05 Aug 2012; Justin Lecher <jlec@gentoo.org> -libtecla-1.6.1.ebuild,
   -libtecla-1.6.1-r1.ebuild:
@@ -97,4 +103,3 @@
   Initial import, by Peter Simons <simons+gentoo@cryp.to> and 
   olivier.fisette@sympatico.ca, slightly modified by me
   See bug #39393
-
