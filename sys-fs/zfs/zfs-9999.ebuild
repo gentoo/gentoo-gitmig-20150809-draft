@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.31 2012/08/06 13:48:44 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.32 2012/08/09 13:28:12 ryao Exp $
 
 EAPI="4"
 
@@ -65,6 +65,7 @@ pkg_setup() {
 		BLK_DEV_LOOP
 		EFI_PARTITION
 		MODULES
+		!PAX_KERNEXEC_PLUGIN_METHOD_OR
 		ZLIB_DEFLATE
 		ZLIB_INFLATE"
 	use rootfs && \
