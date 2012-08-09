@@ -1,5 +1,8 @@
 # ChangeLog for sys-libs/glibc
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.865 2012/08/08 18:05:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.866 2012/08/09 09:34:04 blueness Exp $
+
+  09 Aug 2012; Anthony G. Basile <blueness@gentoo.org> glibc-2.15-r2.ebuild:
+  Keyword ~arm, bug #430346
 
   08 Aug 2012; Raúl Porcel <armin76@gentoo.org> glibc-2.15-r2.ebuild:
   sparc stable wrt #430346
