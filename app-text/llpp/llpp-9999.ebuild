@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-9999.ebuild,v 1.14 2012/04/29 03:56:55 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-9999.ebuild,v 1.15 2012/08/09 06:38:23 xmw Exp $
 
 EAPI=4
 
@@ -27,6 +27,10 @@ DEPEND="${RDEPEND}
 	>=app-text/mupdf-1.0
 	dev-lang/ocaml[ocamlopt]
 	dev-ml/lablgl[glut]"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-11-WM_CLASS.patch
+}
 
 src_compile() {
 	ocaml str.cma keystoml.ml KEYS > help.ml || die

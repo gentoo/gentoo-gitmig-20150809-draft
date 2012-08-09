@@ -1,6 +1,9 @@
 # ChangeLog for app-text/llpp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/ChangeLog,v 1.29 2012/06/05 19:55:18 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/ChangeLog,v 1.30 2012/08/09 06:38:23 xmw Exp $
+
+  09 Aug 2012; Michael Weber <xmw@gentoo.org> llpp-12.ebuild, llpp-9999.ebuild:
+  Fix mupdf dep, apply WM_CLASS patch on -9999 version.
 
   05 Jun 2012; Michael Weber <xmw@gentoo.org> -files/llpp-WM_CLASS.patch:
   remove old version
@@ -116,4 +119,3 @@
 
   31 Jan 2011; Michael Weber <xmw@gentoo.org> +llpp-9999.ebuild, +metadata.xml:
   Initial import
-
