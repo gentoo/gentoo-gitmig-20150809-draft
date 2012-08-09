@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygpgme/pygpgme-0.3.ebuild,v 1.3 2012/07/31 14:09:22 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygpgme/pygpgme-0.3.ebuild,v 1.4 2012/08/09 08:13:49 patrick Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.7 3:3.2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.[56] 3.1"
+RESTRICT_PYTHON_ABIS="2.[56] 3.1 *-pypy-* *-jython"
 
 inherit distutils
 
