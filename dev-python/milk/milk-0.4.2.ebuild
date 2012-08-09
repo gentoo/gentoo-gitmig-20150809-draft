@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/milk/milk-0.4.2.ebuild,v 1.6 2012/08/09 04:42:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/milk/milk-0.4.2.ebuild,v 1.7 2012/08/09 05:56:52 patrick Exp $
 
 EAPI=4
 
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-pypy-* *-jython"
+RESTRICT_PYTHON_ABIS="2.5 3.* *-pypy-* *-jython"
 DISTUTILS_SRC_TEST="setup.py"
 
 inherit distutils
