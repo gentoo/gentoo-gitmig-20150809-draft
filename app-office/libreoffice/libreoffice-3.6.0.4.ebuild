@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.6.0.4.ebuild,v 1.4 2012/08/09 11:35:19 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.6.0.4.ebuild,v 1.5 2012/08/09 15:44:04 scarabeus Exp $
 
 EAPI=4
 
@@ -225,6 +225,8 @@ REQUIRED_USE="
 	libreoffice_extensions_scripting-javascript? ( java )
 	libreoffice_extensions_wiki-publisher? ( java )
 "
+
+RESTRICT="test"
 
 S="${WORKDIR}/${PN}-core-${PV}"
 
