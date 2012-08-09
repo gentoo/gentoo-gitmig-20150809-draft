@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari-data/pari-data-20110727.ebuild,v 1.2 2011/07/30 13:49:47 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari-data/pari-data-20120726.ebuild,v 1.1 2012/08/09 20:23:38 bicatali Exp $
 
-EAPI="4"
+EAPI=4
 
 DESCRIPTION="Data sets for pari"
 HOMEPAGE="http://pari.math.u-bordeaux.fr/"
