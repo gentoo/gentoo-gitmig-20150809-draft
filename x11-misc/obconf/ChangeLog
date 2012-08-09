@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/obconf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.98 2012/05/16 18:34:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.99 2012/08/09 17:08:33 blueness Exp $
+
+  09 Aug 2012; Anthony G. Basile <blueness@gentoo.org>
+  obconf-2.0.3_p20111019.ebuild:
+  Stable ppc, bug #430494
 
   16 May 2012; Markos Chandras <hwoarang@gentoo.org> obconf-2.0.3-r1.ebuild,
   obconf-2.0.3.ebuild, obconf-2.0.3_p20110314-r1.ebuild,
