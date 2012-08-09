@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/freesmee/freesmee-0.7-r2.ebuild,v 1.2 2012/06/30 13:49:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/freesmee/freesmee-0.7-r3.ebuild,v 1.1 2012/08/09 17:30:42 ago Exp $
 
 EAPI=4
 
