@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.3.3.ebuild,v 1.3 2012/08/08 17:18:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.3.3.ebuild,v 1.4 2012/08/09 12:01:25 nativemad Exp $
 
 EAPI=4
 inherit eutils autotools
@@ -11,7 +11,7 @@ SRC_URI="http://downloads.xiph.org/releases/icecast/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="kate +speex +ssl +theora +yp"
 
 #Although there is a --with-ogg and --with-orbis configure option, they're
