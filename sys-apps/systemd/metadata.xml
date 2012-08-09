@@ -13,6 +13,5 @@
 		<flag name='gudev'>Enable libudev gobject interface</flag>
 		<flag name="introspection">Use <pkg>dev-libs/gobject-introspection</pkg>
 			for introspection</flag>
-		<flag name='plymouth'>Enable support for <pkg>sys-boot/plymouth</pkg></flag>
 	</use>
 </pkgmetadata>

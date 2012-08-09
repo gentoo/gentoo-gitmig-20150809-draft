@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-44-r2.ebuild,v 1.1 2012/08/09 14:54:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-44-r2.ebuild,v 1.2 2012/08/09 20:52:23 mgorny Exp $
 
 EAPI=4
 
@@ -29,7 +29,7 @@ RDEPEND=">=sys-apps/dbus-1.4.10
 	>=sys-apps/kmod-5
 	sys-apps/sysvinit
 	>=sys-apps/util-linux-2.19
-	<sys-fs/udev-187
+	<sys-fs/udev-187-r2
 	>=sys-fs/udev-172
 	sys-libs/libcap
 	acl? ( sys-apps/acl )
