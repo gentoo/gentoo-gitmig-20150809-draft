@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Lite/MIME-Lite-3.28.0.ebuild,v 1.4 2012/08/07 21:39:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Lite/MIME-Lite-3.28.0.ebuild,v 1.5 2012/08/09 18:00:29 ranger Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Low-calorie MIME generator"
 
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ppc64 ~sparc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 ~ia64 ppc ppc64 ~sparc x86 ~amd64-linux ~x86-linux"
 IUSE="test"
 
 RDEPEND="dev-perl/Email-Date-Format
