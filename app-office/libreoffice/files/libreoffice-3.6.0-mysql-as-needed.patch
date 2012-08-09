@@ -1,0 +1,36 @@
+From 130a064c29f218699c0b64b50367b3ddd3a3d2db Mon Sep 17 00:00:00 2001
+From: Tomas Chvatal <tchvatal@suse.cz>
+Date: Wed, 08 Aug 2012 19:10:17 +0000
+Subject: Use LIBS not LDFLAGS to not fail with enforced as-needed.
+
+Change-Id: Ia27e97c12e9a8f36e106c9ae3c399cd776433387
+(cherry picked from commit 0c7617a388d8e2e3a0d6c451b6412a5d32dd3d6e)
+
+Signed-off-by: Michael Stahl <mstahl@redhat.com>
+---
+diff --git a/configure.in b/configure.in
+index 2dd9390..444cf82 100644
+--- a/configure.in
++++ b/configure.in
+@@ -6833,8 +6833,8 @@ if test "$ENABLE_MYSQLC" = "YES"; then
+                     [AC_MSG_ERROR(mysql_driver.h not found. install MySQL C++ Connectivity)], [])
+         AC_CHECK_LIB([mysqlcppconn], [main], [:],
+                     [AC_MSG_ERROR(MySQL C++ Connectivity lib not found or functional)], [])
+-        save_LDFLAGS=$LDFLAGS
+-        LDFLAGS="$LDFLAGS -lmysqlcppconn"
++        save_LIBS=$LIBS
++        LIBS="$LIBS -lmysqlcppconn"
+         AC_MSG_CHECKING([version])
+         AC_RUN_IFELSE([AC_LANG_SOURCE([[
+ #include <mysql_driver.h>
+@@ -6852,7 +6852,7 @@ int main(int argc, char **argv) {
+       ]])],[AC_MSG_RESULT(OK)],[AC_MSG_ERROR([not suitable, we need >= 1.0.6])],[])
+ 
+         AC_LANG_POP([C++])
+-        LDFLAGS=$save_LDFLAGS
++        LIBS=$save_LIBS
+     else
+         AC_MSG_RESULT([internal])
+         AC_MSG_CHECKING([for mysqlcppconn module])
+--
+cgit v0.9.0.2-2-gbebe

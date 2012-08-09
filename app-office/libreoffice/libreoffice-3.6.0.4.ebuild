@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.6.0.4.ebuild,v 1.2 2012/08/08 16:37:34 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.6.0.4.ebuild,v 1.3 2012/08/09 08:22:14 scarabeus Exp $
 
 EAPI=4
 
@@ -212,6 +212,7 @@ DEPEND="${COMMON_DEPEND}
 
 PATCHES=(
 	"${FILESDIR}/libreoffice-3.6.0-kde-fpicker.patch"
+	"${FILESDIR}/libreoffice-3.6.0-mysql-as-needed.patch"
 	# not upstreamable stuff
 	"${FILESDIR}/${PN}-3.6-system-pyuno.patch"
 )
