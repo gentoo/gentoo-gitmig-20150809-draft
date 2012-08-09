@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/cmdlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cmdlib/ChangeLog,v 1.2 2012/05/05 13:19:44 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cmdlib/ChangeLog,v 1.3 2012/08/09 13:06:50 slyfox Exp $
+
+  09 Aug 2012; Sergei Trofimovich <slyfox@gentoo.org> cmdlib-0.3.5.ebuild:
+  Keyworded ~alpha/~ia64/~ppc/~ppc64/~sparc for darcs-2.8
 
   05 May 2012; Mark Wright <gienah@gentoo.org> cmdlib-0.3.5.ebuild:
   EAPI=4. [profile?] for haskell libs (part of fix for bug 341795).
@@ -10,4 +13,3 @@
   05 May 2012; Mark Wright <gienah@gentoo.org>
   +files/cmdlib-0.3.4-ghc-6.12.patch, +cmdlib-0.3.5.ebuild, +metadata.xml:
   Add cmdlib for darcs 2.8.0 tests
-

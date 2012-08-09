@@ -1,10 +1,13 @@
 # ChangeLog for dev-haskell/unix-compat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/unix-compat/ChangeLog,v 1.1 2012/05/05 12:55:20 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/unix-compat/ChangeLog,v 1.2 2012/08/09 13:01:00 slyfox Exp $
+
+  09 Aug 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  unix-compat-0.3.0.1.ebuild:
+  Keyworded ~alpha/~ia64/~ppc/~ppc64/~sparc for darcs-2.8
 
 *unix-compat-0.3.0.1 (05 May 2012)
 
   05 May 2012; Mark Wright <gienah@gentoo.org> +unix-compat-0.3.0.1.ebuild,
   +metadata.xml:
   Add unix-compat for darcs-2.8.0 tests
-
