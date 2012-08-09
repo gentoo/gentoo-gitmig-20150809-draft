@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.244 2012/06/04 19:00:52 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.245 2012/08/09 17:05:07 blueness Exp $
+
+  09 Aug 2012; Anthony G. Basile <blueness@gentoo.org>
+  openbox-3.5.0_p20111019.ebuild:
+  Stable ppc, bug #430494
 
   04 Jun 2012; Jeff Horelick <jdhore@gentoo.org> openbox-3.5.0-r1.ebuild,
   openbox-3.5.0_p20111019.ebuild, openbox-9999.ebuild:
