@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.8.4.ebuild,v 1.9 2012/05/05 06:25:17 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.8.4.ebuild,v 1.10 2012/08/09 00:52:29 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 GNOME_ORG_MODULE="network-manager-applet"
 
-inherit gnome2
+inherit autotools eutils gnome2
 
 DESCRIPTION="Gnome applet for NetworkManager."
 HOMEPAGE="http://projects.gnome.org/NetworkManager/"
@@ -33,8 +33,11 @@ RDEPEND=">=dev-libs/glib-2.16:2
 	virtual/freedesktop-icon-theme"
 
 DEPEND="${RDEPEND}
+	>=dev-util/intltool-0.40
 	virtual/pkgconfig
-	>=dev-util/intltool-0.40"
+
+	gnome-base/gnome-common"
+# eautoreconf needs gnome-base/gnome-common
 
 pkg_setup () {
 	G2CONF="${G2CONF}
@@ -44,4 +47,10 @@ pkg_setup () {
 		$(use_with bluetooth)"
 
 	DOCS="AUTHORS ChangeLog NEWS README"
+}
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-utils-libm.patch" #430360
+	eautoreconf
+	gnome2_src_prepare
 }
