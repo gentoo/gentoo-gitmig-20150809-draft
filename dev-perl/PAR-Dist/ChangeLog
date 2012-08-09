@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PAR-Dist
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR-Dist/ChangeLog,v 1.74 2012/06/24 12:58:33 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR-Dist/ChangeLog,v 1.75 2012/08/09 17:27:55 grobian Exp $
+
+  09 Aug 2012; Fabian Groffen <grobian@gentoo.org> PAR-Dist-0.480.0.ebuild:
+  Marked ~ppc-macos
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
