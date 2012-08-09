@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/kterm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/ChangeLog,v 1.32 2012/05/31 08:27:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/ChangeLog,v 1.33 2012/08/09 13:50:56 ottxor Exp $
+
+  09 Aug 2012; Christoph Junghans <ottxor@gentoo.org> kterm-6.2.0-r5.ebuild:
+  added prefix support
 
   31 May 2012; Agostino Sarubbo <ago@gentoo.org> kterm-6.2.0-r5.ebuild:
   Stable for amd64, wrt bug #418261
@@ -126,4 +129,3 @@
 
   Initial ebuild added to portage tree. Ebuild and patch submitted by
   Atzm Watanabe <sitosito@p.chan.ne.jp>.
-
