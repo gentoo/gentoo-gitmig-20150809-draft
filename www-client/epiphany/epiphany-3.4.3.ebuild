@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-3.4.1.ebuild,v 1.2 2012/05/03 06:01:03 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-3.4.3.ebuild,v 1.1 2012/08/09 08:42:41 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -25,7 +25,7 @@ RDEPEND="
 	>=dev-libs/libxml2-2.6.12:2
 	>=dev-libs/libxslt-1.1.7
 	>=app-text/iso-codes-0.35
-	>=net-libs/webkit-gtk-1.7.92:3[introspection?]
+	>=net-libs/webkit-gtk-1.8.2:3[introspection?]
 	>=net-libs/libsoup-gnome-2.37.1:2.4
 	>=gnome-base/gnome-keyring-2.26.0
 	>=gnome-base/gsettings-desktop-schemas-0.0.1
@@ -47,9 +47,9 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	app-text/gnome-doc-utils
 	>=dev-util/intltool-0.40
-	virtual/pkgconfig
-	sys-apps/paxctl
 	sys-devel/gettext
+	virtual/pkgconfig
+	jit? ( sys-apps/paxctl )
 	doc? ( >=dev-util/gtk-doc-1 )"
 
 pkg_setup() {
@@ -77,10 +77,17 @@ src_prepare() {
 	gnome2_src_prepare
 }
 
+src_compile() {
+	# needed to avoid "Command line `dbus-launch ...' exited with non-zero exit status 1"
+	unset DISPLAY
+	gnome2_src_compile
+}
+
 src_test() {
 	# FIXME: this should be handled at eclass level
 	"${EROOT}${GLIB_COMPILE_SCHEMAS}" --allow-any-name "${S}/data" || die
 
+	use jit && pax-mark m $(list-paxables tests/test*) #415801
 	GSETTINGS_SCHEMA_DIR="${S}/data" Xemake check
 }
 
