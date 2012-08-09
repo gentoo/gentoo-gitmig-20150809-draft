@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/milk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/milk/ChangeLog,v 1.5 2012/08/02 18:01:52 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/milk/ChangeLog,v 1.6 2012/08/09 04:42:54 patrick Exp $
+
+  09 Aug 2012; Patrick Lauer <patrick@gentoo.org> milk-0.4.2.ebuild:
+  Restricting jython
 
   02 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml,
   milk-0.4.2.ebuild:
