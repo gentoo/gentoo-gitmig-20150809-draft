@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/darcs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/ChangeLog,v 1.32 2012/05/24 05:38:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/ChangeLog,v 1.33 2012/08/09 13:09:53 slyfox Exp $
+
+  09 Aug 2012; Sergei Trofimovich <slyfox@gentoo.org> darcs-2.8.0.ebuild:
+  Rekeyworded
+  ~alpha/~ia64/~ppc/~ppc64/~sparc/~x86-fbsd/~x86-freebsd/~amd64-linux/~x86-linux
+  /~ppc-macos/~x86-macos/~x86-solaris
 
   24 May 2012; Mike Frysinger <vapier@gentoo.org> darcs-2.5.2-r1.ebuild,
   darcs-2.5.2-r2.ebuild, darcs-2.8.0.ebuild:
@@ -636,4 +641,3 @@
   Initial import. darcs is a version control system with advanced underlying
   theory. It is written in Haskell. Thanks to Peter Simons
   <simons+gentoo@cryp.to> for pushing me (bug 23771) to do this.
-
