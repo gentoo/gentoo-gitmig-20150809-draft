@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-39.ebuild,v 1.3 2012/05/24 02:36:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-44-r2.ebuild,v 1.1 2012/08/09 14:54:00 mgorny Exp $
 
 EAPI=4
 
@@ -12,54 +12,48 @@ SRC_URI="http://www.freedesktop.org/software/systemd/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-IUSE="acl audit cryptsetup gtk lzma pam plymouth selinux tcpd"
+KEYWORDS="~amd64 ~arm ~x86"
+IUSE="acl audit cryptsetup lzma pam selinux tcpd"
 
 # We need to depend on sysvinit for sulogin which is used in the rescue
 # mode. Bug #399615.
 
-COMMON_DEPEND=">=sys-apps/dbus-1.4.10
+# A little higher than upstream requires
+# but I had real trouble with 2.6.37 and systemd.
+MINKV="2.6.38"
+
+# dbus version because of systemd units
+# sysvinit for sulogin
+# new udev versions because they break randomly
+RDEPEND=">=sys-apps/dbus-1.4.10
+	>=sys-apps/kmod-5
 	sys-apps/sysvinit
 	>=sys-apps/util-linux-2.19
+	<sys-fs/udev-187
 	>=sys-fs/udev-172
 	sys-libs/libcap
 	acl? ( sys-apps/acl )
 	audit? ( >=sys-process/audit-2 )
 	cryptsetup? ( sys-fs/cryptsetup )
-	gtk? (
-		dev-libs/dbus-glib
-		>=dev-libs/glib-2.26
-		dev-libs/libgee:0
-		x11-libs/gtk+:2
-		>=x11-libs/libnotify-0.7 )
 	lzma? ( app-arch/xz-utils )
 	pam? ( virtual/pam )
-	plymouth? ( sys-boot/plymouth )
 	selinux? ( sys-libs/libselinux )
 	tcpd? ( sys-apps/tcp-wrappers )"
 
-# Vala-0.10 doesn't work with libnotify 0.7.1
-VALASLOT="0.14"
-# A little higher than upstream requires
-# but I had real trouble with 2.6.37 and systemd.
-MINKV="2.6.38"
-
-# dbus, udev versions because of systemd units
-# blocker on old packages to avoid collisions with above
-# openrc blocker to avoid udev rules starting openrc scripts
-RDEPEND="${COMMON_DEPEND}
-	!<sys-apps/openrc-0.8.3"
-DEPEND="${COMMON_DEPEND}
+DEPEND="${RDEPEND}
 	app-arch/xz-utils
 	app-text/docbook-xsl-stylesheets
 	dev-libs/libxslt
 	dev-util/gperf
 	dev-util/intltool
-	gtk? ( dev-lang/vala:${VALASLOT} )
 	>=sys-kernel/linux-headers-${MINKV}"
 
-# Due to vala being broken.
-AUTOTOOLS_IN_SOURCE_BUILD=1
+PATCHES=(
+	# bug #408879: Session Logout File Deletion Weakness (CVE-2012-1174)
+	"${FILESDIR}"/0001-util-never-follow-symlinks-in-rm_rf_children.patch
+	# bug #410973: fails to build on ARM due to PAGE_SIZE not being defined
+	"${FILESDIR}"/0002-journal-PAGE_SIZE-is-not-known-on-ppc-and-other-arch.patch
+)
 
 pkg_setup() {
 	enewgroup lock # used by var-lock.mount
@@ -67,11 +61,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# Force the rebuild of .vala sources
-	touch src/*.vala || die
-
-	# Fix hardcoded path in .vala.
-	sed -i -e 's:/lib/systemd:/usr/lib/systemd:g' src/*.vala || die
+	# systemd-analyze is for python2.7 only nowadays.
+	sed -i -e '1s/python/&2.7/' src/systemd-analyze
 
 	autotools-utils_src_prepare
 }
@@ -85,21 +76,20 @@ src_configure() {
 		# but pam modules have to lie in /lib*
 		--with-pamlibdir=/$(get_libdir)/security
 		--localstatedir=/var
-		--docdir=/tmp/docs
+		# make sure we get /bin:/sbin in $PATH
+		--enable-split-usr
 		$(use_enable acl)
 		$(use_enable audit)
 		$(use_enable cryptsetup libcryptsetup)
-		$(use_enable gtk)
 		$(use_enable lzma xz)
 		$(use_enable pam)
-		$(use_enable plymouth)
 		$(use_enable selinux)
 		$(use_enable tcpd tcpwrap)
+		# now in sys-apps/systemd-ui
+		--disable-gtk
+		# removed in newer version, so no point in fixing it
+		--disable-plymouth
 	)
-
-	if use gtk; then
-		export VALAC="$(type -p valac-${VALASLOT})"
-	fi
 
 	autotools-utils_src_configure
 }
@@ -109,19 +99,21 @@ src_install() {
 		bashcompletiondir=/tmp
 
 	# compat for init= use
-	dosym ../usr/bin/systemd /bin/systemd
+	dosym ../usr/lib/systemd/systemd /bin/systemd
+	dosym ../lib/systemd/systemd /usr/bin/systemd
 	# rsyslog.service depends on it...
 	dosym ../usr/bin/systemctl /bin/systemctl
 
 	# move files as necessary
 	newbashcomp "${D}"/tmp/systemd-bash-completion.sh ${PN}
-	dodoc "${D}"/tmp/docs/*
 	rm -r "${D}"/tmp || die
 
 	# we just keep sysvinit tools, so no need for the mans
 	rm "${D}"/usr/share/man/man8/{halt,poweroff,reboot,runlevel,shutdown,telinit}.8 \
 		|| die
 	rm "${D}"/usr/share/man/man1/init.1 || die
+	# collision with -ui
+	rm "${D}"/usr/share/man/man1/systemadm.1 || die
 
 	# Create /run/lock as required by new baselay/OpenRC compat.
 	insinto /usr/lib/tmpfiles.d
@@ -141,7 +133,17 @@ pkg_preinst() {
 }
 
 optfeature() {
-	elog "	[\e[1m$(has_version ${1} && echo I || echo ' ')\e[0m] ${1} (${2})"
+	local i desc=${1} text
+	shift
+
+	text="  [\e[1m$(has_version ${1} && echo I || echo ' ')\e[0m] ${1}"
+	shift
+
+	for i; do
+		elog "${text}"
+		text="& [\e[1m$(has_version ${1} && echo I || echo ' ')\e[0m] ${1}"
+	done
+	elog "${text} (${desc})"
 }
 
 pkg_postinst() {
@@ -162,8 +164,12 @@ pkg_postinst() {
 
 	elog "To get additional features, a number of optional runtime dependencies may"
 	elog "be installed:"
-	optfeature 'dev-python/dbus-python' 'for systemd-analyze'
-	optfeature 'dev-python/pycairo[svg]' 'for systemd-analyze plotting ability'
+	optfeature 'for systemd-analyze' \
+		'dev-lang/python:2.7' 'dev-python/dbus-python'
+	optfeature 'for systemd-analyze plotting ability' \
+		'dev-python/pycairo[svg]'
+	optfeature 'for GTK+ systemadm UI and gnome-ask-password-agent' \
+		'sys-apps/systemd-ui'
 	elog
 
 	ewarn "Please note this is a work-in-progress and many packages in Gentoo"

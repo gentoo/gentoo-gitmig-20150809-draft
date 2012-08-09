@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.35 2012/08/06 16:30:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.36 2012/08/09 14:54:00 mgorny Exp $
+
+*systemd-44-r2 (09 Aug 2012)
+
+  09 Aug 2012; Michał Górny <mgorny@gentoo.org> +systemd-44-r2.ebuild,
+  -systemd-29-r3.ebuild, -systemd-29-r6.ebuild, -systemd-39.ebuild,
+  -systemd-44-r1.ebuild:
+  Drop old, and require older udev in older systemd.
 
 *systemd-187 (06 Aug 2012)
 
