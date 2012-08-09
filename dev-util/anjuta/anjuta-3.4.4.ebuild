@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-3.4.1.ebuild,v 1.1 2012/05/07 04:49:52 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-3.4.4.ebuild,v 1.1 2012/08/09 08:54:19 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -102,7 +102,11 @@ src_prepare() {
 	# https://bugzilla.gnome.org/show_bug.cgi?id=675584
 	# avoid autoreconf
 	sed -e 's:valac:$(VALAC):' \
-		-i plugins/language-support-vala/Makefile.{am,in} || die "sed failed"
+		-i plugins/language-support-vala/Makefile.{am,in} || die "sed 1 failed"
+
+	# python2.7-configure in Fedora vs. python-configure in Gentoo
+	sed -e 's:$PYTHON-config:$PYTHON$PYTHON_VERSION-config:g' \
+		-i plugins/am-project/tests/anjuta.lst || die "sed 2 failed"
 
 	gnome2_src_prepare
 }
