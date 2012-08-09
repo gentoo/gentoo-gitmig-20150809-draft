@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cgal/cgal-4.0.2.ebuild,v 1.1 2012/07/07 12:44:10 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cgal/cgal-4.0.2.ebuild,v 1.2 2012/08/09 18:06:20 bicatali Exp $
 
 EAPI=4
 CMAKE_BUILD_TYPE=Release
@@ -17,7 +17,7 @@ SRC_URI="http://gforge.inria.fr/frs/download.php/${PID}/${MY_P}.tar.xz
 
 LICENSE="LGPL-3 GPL-3 Boost-1.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples +gmp mpfi qt4"
 
 RDEPEND="dev-libs/boost
