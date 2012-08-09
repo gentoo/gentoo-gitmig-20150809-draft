@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/warsow
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/ChangeLog,v 1.36 2012/07/29 21:02:31 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/ChangeLog,v 1.37 2012/08/09 20:45:24 hasufell Exp $
+
+  09 Aug 2012; Julian Ospald <hasufell@gentoo.org>
+  files/warsow-1.0-build.patch:
+  respect flags
 
   29 Jul 2012; Julian Ospald <hasufell@gentoo.org> warsow-1.0.ebuild:
   drop toolchain-funcs not explicitly used

@@ -70,7 +70,7 @@ g) address parallel make issues
 -CFLAGS_COMMON=$(CFLAGS) -pipe -I. -I$(LOCALBASE)/include -I$(X11BASE)/include -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -Wall -Wno-unused-function -fvisibility=hidden
 -CFLAGS_RELEASE=-O2 -fno-strict-aliasing -ffast-math -funroll-loops -DNDEBUG -msse3
 -CFLAGS_DEBUG=-O0 -ggdb -D_DEBUG
-+CFLAGS_COMMON=$(CFLAGS) -I. -I$(LOCALBASE)/include -I$(X11BASE)/include -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -Wall -Wno-unused-function -fvisibility=hidden
++CFLAGS_COMMON=$(CFLAGS) -I. -I$(LOCALBASE)/include -I$(X11BASE)/include -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -fvisibility=hidden
 +CFLAGS_RELEASE=-fno-strict-aliasing -DNDEBUG
 +CFLAGS_DEBUG=-D_DEBUG
  ifeq ($(DEBUG_BUILD),YES)
@@ -552,3 +552,14 @@ g) address parallel make issues
  endif
  
  BUILDDIR=Build/obj
+--- libsrcs/angelscript/angelSVN/sdk/angelscript/projects/gnuc/makefile
++++ libsrcs/angelscript/angelSVN/sdk/angelscript/projects/gnuc/makefile
+@@ -47,7 +47,7 @@
+ 	CXX ?= gcc
+ 	# On i686 architecture you may need to add -march=i686 if you get 
+ 	# an undefined symbol for __sync_sub_and_fetch_4 in as_atomic.cpp.
+-	CXXFLAGS += -g -Wall -fPIC -fno-strict-aliasing
++	CXXFLAGS += -fPIC -fno-strict-aliasing
+ endif
+ 
+ AR ?= ar
