@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.80 2012/08/04 11:13:35 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.81 2012/08/09 16:17:55 aidecoe Exp $
+
+*dracut-022-r5 (09 Aug 2012)
+
+  09 Aug 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-022-r4.ebuild,
+  +dracut-022-r5.ebuild:
+  pkg-config is now used to configure udevdir path in the ebuild.
+
+  09 Aug 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-022-r4.ebuild:
+  Use pkg-config to detect udevdir.
 
   04 Aug 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-019-r4.ebuild,
   -dracut-022-r3.ebuild:
