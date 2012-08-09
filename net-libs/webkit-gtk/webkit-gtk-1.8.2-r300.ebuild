@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.8.0-r200.ebuild,v 1.4 2012/05/05 02:54:26 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.8.2-r300.ebuild,v 1.1 2012/08/09 08:11:43 tetromino Exp $
 
 EAPI="4"
 
@@ -11,28 +11,28 @@ MY_P="webkit-${PV}"
 DESCRIPTION="Open source web browser engine"
 HOMEPAGE="http://www.webkitgtk.org/"
 SRC_URI="http://www.webkitgtk.org/releases/${MY_P}.tar.xz"
-#SRC_URI="mirror://gentoo/${P}.tar.xz"
 
 LICENSE="LGPL-2 LGPL-2.1 BSD"
-SLOT="2"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-macos"
-# geoclue
-IUSE="aqua coverage debug +geoloc +gstreamer +introspection +jit spell +webgl"
-# bug 372493
-REQUIRED_USE="introspection? ( gstreamer )"
+SLOT="3"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-macos"
+IUSE="aqua coverage debug doc +geoloc +gstreamer +introspection +jit spell +webgl webkit2"
+# bugs 372493, 416331
+REQUIRED_USE="introspection? ( geoloc gstreamer )"
 
 # use sqlite, svg by default
 # dependency on >=x11-libs/gtk+-2.13:2 for gail
+# Aqua support in gtk3 is untested
+# gtk2 is needed for plugin process support
 RDEPEND="
 	dev-libs/libxml2:2
 	dev-libs/libxslt
 	virtual/jpeg
 	>=media-libs/libpng-1.4:0
 	>=x11-libs/cairo-1.10
-	>=dev-libs/glib-2.31.2:2
-	>=x11-libs/gtk+-2.13:2[aqua=,introspection?]
+	>=dev-libs/glib-2.32:2
+	>=x11-libs/gtk+-3.4:3[aqua=,introspection?]
 	>=dev-libs/icu-3.8.1-r1
-	>=net-libs/libsoup-2.37.2.1:2.4[introspection?]
+	>=net-libs/libsoup-2.37.92:2.4[introspection?]
 	dev-db/sqlite:3
 	>=x11-libs/pango-1.21
 	x11-libs/libXrender
@@ -48,6 +48,8 @@ RDEPEND="
 	spell? ( >=app-text/enchant-0.22 )
 
 	webgl? ( virtual/opengl )
+
+	webkit2? ( >=x11-libs/gtk+-2.13:2 )
 "
 # paxctl needed for bug #407085
 DEPEND="${RDEPEND}
@@ -59,9 +61,12 @@ DEPEND="${RDEPEND}
 	dev-util/gperf
 	virtual/pkgconfig
 	dev-util/gtk-doc-am
+	doc? ( >=dev-util/gtk-doc-1.10 )
 	introspection? ( jit? ( sys-apps/paxctl ) )
-	test? ( x11-themes/hicolor-icon-theme
+	test? (
+		x11-themes/hicolor-icon-theme
 		jit? ( sys-apps/paxctl ) )
+	webkit2? ( app-accessibility/at-spi2-core )
 "
 # Need real bison, not yacc
 
@@ -81,11 +86,17 @@ src_prepare() {
 	# TODO: FAILS TO APPLY!
 	#use sparc && epatch "${FILESDIR}"/${PN}-1.2.3-fix-pool-sparc.patch
 
-	# CVE-2011-3064, https://bugzilla.redhat.com/show_bug.cgi?id=807596
-	epatch "${FILESDIR}/${P}-svgimagebuffer-clip.patch"
+	# webkit2 build failure with gcc-4.5, bug #412027
+	epatch "${FILESDIR}/${PN}-1.8.0-typedef-WebKitWebView.patch"
 
-	# Build failure with USE=-geoloc, bug #411955
-	epatch "${FILESDIR}/${P}-no-geoloc.patch"
+	# USE=-gstreamer build failure, bug #412221, https://bugs.webkit.org/show_bug.cgi?id=84526
+	epatch "${FILESDIR}/${PN}-1.8.1-CodeGeneratorGObject-properties.patch"
+
+	# bug #416057; in 1.9.x
+	epatch "${FILESDIR}/${PN}-1.8.1-gst-required-version.patch"
+
+	# bug #428012; in 1.9.x
+	epatch "${FILESDIR}/${PN}-1.8.2-bison-2.6.patch"
 
 	# intermediate MacPorts hack while upstream bug is not fixed properly
 	# https://bugs.webkit.org/show_bug.cgi?id=28727
@@ -124,8 +135,20 @@ src_prepare() {
 		-e '/Programs\/unittests\/testmimehandling/ d' \
 		-e '/Programs\/unittests\/testwebdatasource/ d' \
 		-i Source/WebKit/gtk/GNUmakefile.am || die
+	# FIXME: TestWebKitWebView always fails for webkit-gtk-1.8.2-r300. Why?
+	# if ! use gstreamer; then
+		# webkit2's TestWebKitWebView requires <video> support
+		sed -e '/Programs\/WebKit2APITests\/TestWebKitWebView/ d' \
+			-i Source/WebKit2/UIProcess/API/gtk/tests/GNUmakefile.am || die
+	# fi
 	# garbage collection test fails intermittently if icedtea-web is installed
 	epatch "${FILESDIR}/${PN}-1.7.90-test_garbage_collection.patch"
+
+	# occasional test failure due to additional Xvfb process spawned
+	epatch "${FILESDIR}/${PN}-1.8.1-tests-xvfb.patch"
+
+	# For >=sys-devel/automake-1.12 compability wrt #420591
+	sed -i -e 's:mkdir_p:MKDIR_P:' {.,Source/WebKit/gtk/po}/GNUmakefile.am || die
 
 	# Respect CC, otherwise fails on prefix #395875
 	tc-export CC
@@ -152,24 +175,23 @@ src_configure() {
 
 	# XXX: Check Web Audio support
 	# XXX: dependency-tracking is required so parallel builds won't fail
-	# WebKit2 can only be built with gtk3
-	# API documentation (gtk-doc) is built in webkit-gtk:3, always disable here
 	myconf="
 		$(use_enable coverage)
 		$(use_enable debug)
 		$(use_enable debug debug-features)
+		$(use_enable doc gtk-doc)
 		$(use_enable geoloc geolocation)
 		$(use_enable spell spellcheck)
 		$(use_enable introspection)
 		$(use_enable gstreamer video)
 		$(use_enable jit)
 		$(use_enable webgl)
+		$(use_enable webkit2)
 		--enable-web-sockets
-		--with-gtk=2.0
-		--disable-gtk-doc
-		--disable-webkit2
+		--with-gtk=3.0
 		--enable-dependency-tracking
 		$(use aqua && echo "--with-font-backend=pango --with-target=quartz")"
+		# Aqua support in gtk3 is untested
 
 	econf ${myconf}
 }
@@ -180,16 +202,17 @@ src_compile() {
 	emake -j1 all-built-sources-local
 	emake all-ltlibraries-local
 	emake all-programs-local
-	use introspection && emake WebKit-1.0.gir
-	emake all-data-local
+	use introspection && emake WebKit-3.0.gir
+	emake -j1 all-data-local
 	default
 }
 
 src_test() {
 	# Tests expect an out-of-source build in WebKitBuild
 	ln -s . WebKitBuild || die "ln failed"
+
 	# Prevents test failures on PaX systems
-	use jit && pax-mark m $(list-paxables Programs/unittests/test*) \
+	use jit && pax-mark m $(list-paxables Programs/*[Tt]ests/*) \
 		Programs/unittests/.libs/test*
 	unset DISPLAY
 	# Tests need virtualx, bug #294691, bug #310695
@@ -209,9 +232,5 @@ src_install() {
 	find "${D}" -name '*.la' -exec rm -f '{}' +
 
 	# Prevents crashes on PaX systems
-	use jit && pax-mark m "${ED}usr/bin/jsc-1"
-
-	# File collisions with slot 3
-	# bug #402699, https://bugs.webkit.org/show_bug.cgi?id=78134
-	rm -rf "${ED}usr/share/gtk-doc" || die
+	use jit && pax-mark m "${ED}usr/bin/jsc-3"
 }
