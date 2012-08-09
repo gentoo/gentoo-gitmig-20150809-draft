@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTML-Template
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Template/ChangeLog,v 1.46 2012/08/03 11:10:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Template/ChangeLog,v 1.47 2012/08/09 17:53:40 ranger Exp $
+
+  09 Aug 2012; Brent Baude <ranger@gentoo.org> HTML-Template-2.910.0.ebuild:
+  Marking HTML-Template-2.910.0 ppc for bug 418815
 
   03 Aug 2012; Agostino Sarubbo <ago@gentoo.org> HTML-Template-2.910.0.ebuild:
   Stable for amd64, wrt bug #418815
