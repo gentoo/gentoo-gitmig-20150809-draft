@@ -1,18 +1,6 @@
-From 61df95a86f4997e342d50d7779b00aba2e8849a6 Mon Sep 17 00:00:00 2001
-From: Dave Airlie <airlied@redhat.com>
-Date: Wed, 06 Jun 2012 08:58:01 +0000
-Subject: vmware: port vmware driver to new compat API
-
-This is a port of the vmware driver to the new compat API.
-
-Tested-by: Jakob Bornecrantz <jakob@vmware.com>
-Reviewed-by: Jakob Bornecrantz <jakob@vmware.com>
-Signed-off-by: Dave Airlie <airlied@redhat.com>
-Signed-off-by: Jakob Bornecrantz <jakob@vmware.com>
----
-diff -ur a/saa/saa.c b/saa/saa.c
+diff -urN a/saa/saa.c b/saa/saa.c
 --- a/saa/saa.c	2012-03-08 17:13:16.000000000 +0100
-+++ b/saa/saa.c	2012-08-09 01:20:23.000000000 +0200
++++ b/saa/saa.c	2012-08-09 01:23:14.000000000 +0200
 @@ -594,7 +594,7 @@
   * screen private, before calling down to the next CloseScreen.
   */
@@ -31,9 +19,9 @@ diff -ur a/saa/saa.c b/saa/saa.c
  }
  
  struct saa_driver *
-diff -ur a/saa/saa.h b/saa/saa.h
+diff -urN a/saa/saa.h b/saa/saa.h
 --- a/saa/saa.h	2012-03-08 17:13:16.000000000 +0100
-+++ b/saa/saa.h	2012-08-09 01:20:23.000000000 +0200
++++ b/saa/saa.h	2012-08-09 01:23:14.000000000 +0200
 @@ -44,6 +44,8 @@
  #include <damage.h>
  #include <picturestr.h>
@@ -52,10 +40,112 @@ diff -ur a/saa/saa.h b/saa/saa.h
  
  extern _X_EXPORT Bool
  saa_gc_reads_destination(DrawablePtr pDrawable, GCPtr pGC);
-Nur in b/src: compat-api.h.
-diff -ur a/src/Makefile.am b/src/Makefile.am
+diff -urN a/src/compat-api.h b/src/compat-api.h
+--- a/src/compat-api.h	1970-01-01 01:00:00.000000000 +0100
++++ b/src/compat-api.h	2012-08-09 01:20:23.000000000 +0200
+@@ -0,0 +1,99 @@
++/*
++ * Copyright 2012 Red Hat, Inc.
++ *
++ * Permission is hereby granted, free of charge, to any person obtaining a
++ * copy of this software and associated documentation files (the "Software"),
++ * to deal in the Software without restriction, including without limitation
++ * the rights to use, copy, modify, merge, publish, distribute, sublicense,
++ * and/or sell copies of the Software, and to permit persons to whom the
++ * Software is furnished to do so, subject to the following conditions:
++ *
++ * The above copyright notice and this permission notice (including the next
++ * paragraph) shall be included in all copies or substantial portions of the
++ * Software.
++ *
++ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
++ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
++ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
++ * THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
++ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
++ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
++ * DEALINGS IN THE SOFTWARE.
++ *
++ * Author: Dave Airlie <airlied@redhat.com>
++ */
++
++/* this file provides API compat between server post 1.13 and pre it,
++   it should be reused inside as many drivers as possible */
++#ifndef COMPAT_API_H
++#define COMPAT_API_H
++
++#ifndef GLYPH_HAS_GLYPH_PICTURE_ACCESSOR
++#define GetGlyphPicture(g, s) GlyphPicture((g))[(s)->myNum]
++#define SetGlyphPicture(g, s, p) GlyphPicture((g))[(s)->myNum] = p
++#endif
++
++#ifndef XF86_HAS_SCRN_CONV
++#define xf86ScreenToScrn(s) xf86Screens[(s)->myNum]
++#define xf86ScrnToScreen(s) screenInfo.screens[(s)->scrnIndex]
++#endif
++
++#ifndef XF86_SCRN_INTERFACE
++
++#define SCRN_ARG_TYPE int
++#define SCRN_INFO_PTR(arg1) ScrnInfoPtr pScrn = xf86Screens[(arg1)]
++
++#define SCREEN_ARG_TYPE int
++#define SCREEN_PTR(arg1) ScreenPtr pScreen = screenInfo.screens[(arg1)]
++
++#define SCREEN_INIT_ARGS_DECL int i, ScreenPtr pScreen, int argc, char **argv
++
++#define BLOCKHANDLER_ARGS_DECL int arg, pointer blockData, pointer pTimeout, pointer pReadmask
++#define BLOCKHANDLER_ARGS arg, blockData, pTimeout, pReadmask
++
++#define CLOSE_SCREEN_ARGS_DECL int scrnIndex, ScreenPtr pScreen
++#define CLOSE_SCREEN_ARGS scrnIndex, pScreen
++
++#define ADJUST_FRAME_ARGS_DECL int arg, int x, int y, int flags
++#define ADJUST_FRAME_ARGS(arg, x, y) (arg)->scrnIndex, x, y, 0
++
++#define SWITCH_MODE_ARGS_DECL int arg, DisplayModePtr mode, int flags
++#define SWITCH_MODE_ARGS(arg, m) (arg)->scrnIndex, m, 0
++
++#define FREE_SCREEN_ARGS_DECL int arg, int flags
++
++#define VT_FUNC_ARGS_DECL int arg, int flags
++#define VT_FUNC_ARGS pScrn->scrnIndex, 0
++
++#define XF86_SCRN_ARG(x) ((x)->scrnIndex)
++#else
++#define SCRN_ARG_TYPE ScrnInfoPtr
++#define SCRN_INFO_PTR(arg1) ScrnInfoPtr pScrn = (arg1)
++
++#define SCREEN_ARG_TYPE ScreenPtr
++#define SCREEN_PTR(arg1) ScreenPtr pScreen = (arg1)
++
++#define SCREEN_INIT_ARGS_DECL ScreenPtr pScreen, int argc, char **argv
++
++#define BLOCKHANDLER_ARGS_DECL ScreenPtr arg, pointer pTimeout, pointer pReadmask
++#define BLOCKHANDLER_ARGS arg, pTimeout, pReadmask
++
++#define CLOSE_SCREEN_ARGS_DECL ScreenPtr pScreen
++#define CLOSE_SCREEN_ARGS pScreen
++
++#define ADJUST_FRAME_ARGS_DECL ScrnInfoPtr arg, int x, int y
++#define ADJUST_FRAME_ARGS(arg, x, y) arg, x, y
++
++#define SWITCH_MODE_ARGS_DECL ScrnInfoPtr arg, DisplayModePtr mode
++#define SWITCH_MODE_ARGS(arg, m) arg, m
++
++#define FREE_SCREEN_ARGS_DECL ScrnInfoPtr arg
++
++#define VT_FUNC_ARGS_DECL ScrnInfoPtr arg
++#define VT_FUNC_ARGS pScrn
++
++#define XF86_SCRN_ARG(x) (x)
++
++#endif
++
++#endif
+diff -urN a/src/Makefile.am b/src/Makefile.am
 --- a/src/Makefile.am	2012-03-14 00:06:41.000000000 +0100
-+++ b/src/Makefile.am	2012-08-09 01:20:23.000000000 +0200
++++ b/src/Makefile.am	2012-08-09 01:23:14.000000000 +0200
 @@ -37,6 +37,7 @@
  vmware_drv_la_SOURCES = \
  	bits2pixels.c \
@@ -64,9 +154,9 @@ diff -ur a/src/Makefile.am b/src/Makefile.am
  	guest_os.h \
  	includeCheck.h \
  	svga_escape.h \
-diff -ur a/src/vmware.c b/src/vmware.c
+diff -urN a/src/vmware.c b/src/vmware.c
 --- a/src/vmware.c	2012-03-21 19:57:59.000000000 +0100
-+++ b/src/vmware.c	2012-08-09 01:20:23.000000000 +0200
++++ b/src/vmware.c	2012-08-09 01:23:14.000000000 +0200
 @@ -901,8 +901,8 @@
                                                           pScrn->pScreen->rootDepth),
                                             (pointer)(pVMWARE->FbBase + pScrn->fbOffset));
@@ -195,9 +285,9 @@ diff -ur a/src/vmware.c b/src/vmware.c
  {
      return MODE_OK;
  }
-diff -ur a/src/vmware_common.h b/src/vmware_common.h
+diff -urN a/src/vmware_common.h b/src/vmware_common.h
 --- a/src/vmware_common.h	2012-03-08 17:13:16.000000000 +0100
-+++ b/src/vmware_common.h	2012-08-09 01:20:23.000000000 +0200
++++ b/src/vmware_common.h	2012-08-09 01:23:14.000000000 +0200
 @@ -32,6 +32,8 @@
  #include <X11/extensions/panoramiXproto.h>
  #include <xf86.h>
@@ -207,9 +297,9 @@ diff -ur a/src/vmware_common.h b/src/vmware_common.h
  xXineramaScreenInfo *
  VMWAREParseTopologyString(ScrnInfoPtr pScrn,
                            const char *topology,
-diff -ur a/src/vmware.h b/src/vmware.h
+diff -urN a/src/vmware.h b/src/vmware.h
 --- a/src/vmware.h	2012-03-08 17:13:16.000000000 +0100
-+++ b/src/vmware.h	2012-08-09 01:20:23.000000000 +0200
++++ b/src/vmware.h	2012-08-09 01:23:14.000000000 +0200
 @@ -177,7 +177,7 @@
  #define VMWAREPTR(p) ((VMWAREPtr)((p)->driverPrivate))
  
@@ -219,9 +309,9 @@ diff -ur a/src/vmware.h b/src/vmware.h
  }
  
  #define MIN(a,b) ((a)<(b)?(a):(b))
-diff -ur a/vmwgfx/vmwgfx_dri2.c b/vmwgfx/vmwgfx_dri2.c
+diff -urN a/vmwgfx/vmwgfx_dri2.c b/vmwgfx/vmwgfx_dri2.c
 --- a/vmwgfx/vmwgfx_dri2.c	2012-03-08 17:13:16.000000000 +0100
-+++ b/vmwgfx/vmwgfx_dri2.c	2012-08-09 01:20:23.000000000 +0200
++++ b/vmwgfx/vmwgfx_dri2.c	2012-08-09 01:23:14.000000000 +0200
 @@ -83,7 +83,7 @@
  dri2_do_create_buffer(DrawablePtr pDraw, DRI2Buffer2Ptr buffer, unsigned int format)
  {
@@ -240,9 +330,9 @@ diff -ur a/vmwgfx/vmwgfx_dri2.c b/vmwgfx/vmwgfx_dri2.c
      modesettingPtr ms = modesettingPTR(pScrn);
      DRI2InfoRec dri2info;
      int major, minor;
-diff -ur a/vmwgfx/vmwgfx_driver.c b/vmwgfx/vmwgfx_driver.c
+diff -urN a/vmwgfx/vmwgfx_driver.c b/vmwgfx/vmwgfx_driver.c
 --- a/vmwgfx/vmwgfx_driver.c	2012-03-08 17:13:16.000000000 +0100
-+++ b/vmwgfx/vmwgfx_driver.c	2012-08-09 01:20:23.000000000 +0200
++++ b/vmwgfx/vmwgfx_driver.c	2012-08-09 01:23:14.000000000 +0200
 @@ -107,14 +107,13 @@
   */
  
@@ -443,9 +533,9 @@ diff -ur a/vmwgfx/vmwgfx_driver.c b/vmwgfx/vmwgfx_driver.c
  {
      return MODE_OK;
  }
-diff -ur a/vmwgfx/vmwgfx_driver.h b/vmwgfx/vmwgfx_driver.h
+diff -urN a/vmwgfx/vmwgfx_driver.h b/vmwgfx/vmwgfx_driver.h
 --- a/vmwgfx/vmwgfx_driver.h	2012-03-08 17:13:16.000000000 +0100
-+++ b/vmwgfx/vmwgfx_driver.h	2012-08-09 01:20:23.000000000 +0200
++++ b/vmwgfx/vmwgfx_driver.h	2012-08-09 01:23:14.000000000 +0200
 @@ -46,6 +46,7 @@
  #include <xa_tracker.h>
  #include <xf86Module.h>
@@ -467,9 +557,9 @@ diff -ur a/vmwgfx/vmwgfx_driver.h b/vmwgfx/vmwgfx_driver.h
      Bool (*saved_UseHWCursor)(ScreenPtr, CursorPtr);
      Bool (*saved_UseHWCursorARGB)(ScreenPtr, CursorPtr);
  
-diff -ur a/vmwgfx/vmwgfx_saa.c b/vmwgfx/vmwgfx_saa.c
+diff -urN a/vmwgfx/vmwgfx_saa.c b/vmwgfx/vmwgfx_saa.c
 --- a/vmwgfx/vmwgfx_saa.c	2012-03-21 19:57:59.000000000 +0100
-+++ b/vmwgfx/vmwgfx_saa.c	2012-08-09 01:20:23.000000000 +0200
++++ b/vmwgfx/vmwgfx_saa.c	2012-08-09 01:23:14.000000000 +0200
 @@ -460,7 +460,7 @@
      struct vmwgfx_saa *vsaa =
  	to_vmwgfx_saa(saa_get_driver(pScreen));
@@ -488,9 +578,9 @@ diff -ur a/vmwgfx/vmwgfx_saa.c b/vmwgfx/vmwgfx_saa.c
  
      /*
       * Make dri2 drawables up to date, or add them to the flush list
-diff -ur a/vmwgfx/vmwgfx_tex_video.c b/vmwgfx/vmwgfx_tex_video.c
+diff -urN a/vmwgfx/vmwgfx_tex_video.c b/vmwgfx/vmwgfx_tex_video.c
 --- a/vmwgfx/vmwgfx_tex_video.c	2012-03-08 17:13:16.000000000 +0100
-+++ b/vmwgfx/vmwgfx_tex_video.c	2012-08-09 01:20:23.000000000 +0200
++++ b/vmwgfx/vmwgfx_tex_video.c	2012-08-09 01:23:14.000000000 +0200
 @@ -638,7 +638,7 @@
            DrawablePtr pDraw)
  {

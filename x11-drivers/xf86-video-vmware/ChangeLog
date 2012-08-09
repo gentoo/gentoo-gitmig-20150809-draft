@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-vmware
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-vmware/ChangeLog,v 1.67 2012/08/08 23:35:05 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-vmware/ChangeLog,v 1.68 2012/08/09 11:49:52 chithanh Exp $
+
+  09 Aug 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  files/xf86-video-vmware-12.0.2-xorg-server-1.13.patch:
+  Add missing compat-api.h to patch, bug #430506.
 
 *xf86-video-vmware-12.0.2-r1 (08 Aug 2012)
 
