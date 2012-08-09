@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.226 2012/07/28 03:50:20 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.227 2012/08/09 08:19:42 xarthisius Exp $
+
+  09 Aug 2012; Kacper Kowalik <xarthisius@gentoo.org> doxygen-1.8.1.2.ebuild:
+  Increase default buffer stack for Fortran parser
 
 *doxygen-1.8.1.2 (28 Jul 2012)
 

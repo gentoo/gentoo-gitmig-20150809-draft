@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.8.1.2.ebuild,v 1.1 2012/07/28 03:50:20 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.8.1.2.ebuild,v 1.2 2012/08/09 08:19:42 xarthisius Exp $
 
 EAPI=4
 
@@ -115,6 +115,10 @@ src_prepare() {
 	# fix pdf doc
 	sed -i.orig -e "s:g_kowal:g kowal:" \
 		doc/maintainers.txt || die
+
+	# old value is not enough for codes written in modern Fortran
+	sed -i -e '/define MAX_INCLUDE_DEPTH/ s/10/20/g' \
+		src/fortranscanner.* || die
 
 	if is-flagq "-O3" ; then
 		echo
