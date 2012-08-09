@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/mathgl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/ChangeLog,v 1.30 2012/08/04 19:11:50 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/ChangeLog,v 1.31 2012/08/09 16:07:53 bicatali Exp $
+
+  09 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> mathgl-2.0.3.ebuild:
+  Forced png flag for pdf, bug #430584
 
   04 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> mathgl-2.0.3.ebuild,
   metadata.xml:

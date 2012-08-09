@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/mathgl-2.0.3.ebuild,v 1.3 2012/08/04 19:11:50 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/mathgl-2.0.3.ebuild,v 1.4 2012/08/09 16:07:53 bicatali Exp $
 
 EAPI=4
 
@@ -46,13 +46,10 @@ DEPEND="${RDEPEND}
 	octave? ( dev-lang/swig )
 	python? ( dev-lang/swig )"
 
-REQUIRED_USE="mpi? ( hdf5 ) png? ( zlib )"
+REQUIRED_USE="mpi? ( hdf5 ) png? ( zlib ) pdf? ( png )"
 
 pkg_setup() {
-	if use mpi; then
-		export CC=mpicc
-		export CXX=mpicxx
-	fi
+	use mpi && export CC=mpicc CXX=mpicxx
 	use python && python_pkg_setup
 	use wxwidgets && wxwidgets_pkg_setup
 }
