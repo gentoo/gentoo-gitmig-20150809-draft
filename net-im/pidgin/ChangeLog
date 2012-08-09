@@ -1,6 +1,9 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.288 2012/08/09 16:05:47 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.289 2012/08/09 18:24:16 ranger Exp $
+
+  09 Aug 2012; Brent Baude <ranger@gentoo.org> pidgin-2.10.6.ebuild:
+  Marking pidgin-2.10.6 ppc for bug 425076
 
   09 Aug 2012; Andreas Schuerch <nativemad@gentoo.org> pidgin-2.10.6.ebuild:
   x86 stable, see bug 425076
