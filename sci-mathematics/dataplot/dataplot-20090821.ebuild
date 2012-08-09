@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/dataplot/dataplot-20090821.ebuild,v 1.4 2012/05/04 07:46:51 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/dataplot/dataplot-20090821.ebuild,v 1.5 2012/08/09 18:26:47 bicatali Exp $
 
-EAPI=3
+EAPI=4
 
 inherit eutils fortran-2 toolchain-funcs autotools
 
@@ -13,7 +13,7 @@ MY_P=dpsrc_${MY_PV}
 MY_PV_AUX=2009_07_15
 MY_P_AUX=dplib.${MY_PV_AUX}
 
-DESCRIPTION="A program for scientific visualization and statistical analyis"
+DESCRIPTION="Program for scientific visualization and statistical analyis"
 HOMEPAGE="http://www.itl.nist.gov/div898/software/dataplot/"
 SRC_URI="
 	ftp://ftp.nist.gov/pub/dataplot/unix/${MY_P}.tar.gz
@@ -21,7 +21,7 @@ SRC_URI="
 
 SLOT="0"
 LICENSE="public-domain"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="examples gd opengl X"
 
 COMMON_DEPEND="
@@ -71,15 +71,15 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
-		doins -r "${S_AUX}"/data/* || die "installing examples failed"
+		doins -r "${S_AUX}"/data/*
 	fi
 	insinto /usr/share/dataplot
-	doins "${S_AUX}"/dp{mes,sys,log}f.tex || die "doins failed."
-	doenvd "${FILESDIR}"/90${PN} || die "doenvd failed"
+	doins "${S_AUX}"/dp{mes,sys,log}f.tex
+	doenvd "${FILESDIR}"/90${PN}
 }
 
 pkg_postinst() {

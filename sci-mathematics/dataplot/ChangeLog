@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/dataplot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/dataplot/ChangeLog,v 1.16 2012/06/16 16:24:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/dataplot/ChangeLog,v 1.17 2012/08/09 18:26:47 bicatali Exp $
+
+  09 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> dataplot-20090821.ebuild:
+  keyword amd64-linux x86-linux
 
   16 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
   Remove unused local description for USE="gs"
@@ -150,4 +153,3 @@
   +dataplot-20080225.ebuild, +files/dpsrc-patchset-20080225.patch,
   +metadata.xml:
   New Ebuild for bug #217390, thanks to Tommy[D] for reviewing
-
