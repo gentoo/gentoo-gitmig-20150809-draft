@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.96 2012/08/09 11:35:19 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.97 2012/08/10 08:32:43 scarabeus Exp $
 
 EAPI=4
 
@@ -419,6 +419,7 @@ src_configure() {
 	# --enable-release-build: build the libreoffice as release
 	# --disable-fetch-external: prevent dowloading during compile phase
 	# --disable-gnome-vfs: old gnome virtual fs support
+	# --disable-gstreamer: support for 1.0 api, we use gstreamer-0.10 for now
 	# --disable-kdeab: kde3 adressbook
 	# --disable-kde: kde3 support
 	# --disable-mozilla: mozilla internal is for contact integration, never
@@ -455,6 +456,7 @@ src_configure() {
 		--disable-epm \
 		--disable-fetch-external \
 		--disable-gnome-vfs \
+		--disable-gstreamer \
 		--disable-ext-report-builder \
 		--disable-kdeab \
 		--disable-kde \
@@ -494,7 +496,7 @@ src_configure() {
 		$(use_enable gnome gio) \
 		$(use_enable gnome lockdown) \
 		$(use_enable graphite) \
-		$(use_enable gstreamer) \
+		$(use_enable gstreamer gstreamer-0-10) \
 		$(use_enable gtk) \
 		$(use_enable gtk3) \
 		$(use_enable kde kde4) \
