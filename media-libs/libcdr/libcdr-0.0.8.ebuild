@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdr/libcdr-0.0.8.ebuild,v 1.1 2012/06/11 12:47:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdr/libcdr-0.0.8.ebuild,v 1.2 2012/08/10 08:09:34 scarabeus Exp $
 
 EAPI=4
 
@@ -37,6 +37,7 @@ src_prepare() {
 
 src_configure() {
 	econf \
+		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		$(use_enable static-libs static) \
 		--disable-werror \
 		$(use_with doc docs)

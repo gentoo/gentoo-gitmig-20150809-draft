@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libcdr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdr/ChangeLog,v 1.13 2012/06/11 12:47:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdr/ChangeLog,v 1.14 2012/08/10 08:09:34 scarabeus Exp $
+
+  10 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> libcdr-0.0.8.ebuild,
+  libcdr-9999.ebuild:
+  Fix wrong docdir settings. Fixes bug#430672. Thanks to Chris Mayo for the
+  patch.
 
 *libcdr-0.0.8 (11 Jun 2012)
 
@@ -62,4 +67,3 @@
   08 Dec 2011; Tomáš Chvátal <scarabeus@gentoo.org> +libcdr-9999.ebuild,
   +metadata.xml:
   Intial commit of cdr parser. For libreoffice-3.6
-
