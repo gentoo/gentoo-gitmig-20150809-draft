@@ -1,9 +1,9 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.376 2012/08/10 09:59:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.377 2012/08/10 10:00:51 jer Exp $
 
   10 Aug 2012; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-173.14.35.ebuild:
-  Stable for HPPA (bug #426642).
+  Stable for AMD64 (bug #426642).
 
   10 Aug 2012; Samuli Suominen <ssuominen@gentoo.org>
   nvidia-drivers-295.59-r1.ebuild, nvidia-drivers-302.17-r1.ebuild,
