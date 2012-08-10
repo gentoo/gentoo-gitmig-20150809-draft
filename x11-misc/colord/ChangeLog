@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/colord
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.30 2012/05/27 03:59:19 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.31 2012/08/10 17:08:35 ssuominen Exp $
+
+*colord-0.1.21-r1 (10 Aug 2012)
+
+  10 Aug 2012; Samuli Suominen <ssuominen@gentoo.org> +colord-0.1.21-r1.ebuild:
+  Query udevdir from udev.pc pkg-config file for correct rules.d path.
 
   27 May 2012; Matt Turner <mattst88@gentoo.org> colord-0.1.21.ebuild:
   Added ~alpha, bug 390345.
