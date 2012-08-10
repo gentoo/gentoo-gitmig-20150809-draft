@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/mathgl-2.0.3.ebuild,v 1.4 2012/08/09 16:07:53 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/mathgl-2.0.3.ebuild,v 1.5 2012/08/10 00:20:48 bicatali Exp $
 
 EAPI=4
 
@@ -89,6 +89,7 @@ src_configure() {
 		$(cmake-utils_use opengl enable-opengl)
 		$(cmake-utils_use pdf enable-pdf)
 		$(cmake-utils_use png enable-png)
+		$(cmake-utils_use qt4 enable-qt)
 		$(cmake-utils_use threads enable-pthread)
 		$(cmake-utils_use python enable-python)
 		$(cmake-utils_use wxwidgets enable-wx)
