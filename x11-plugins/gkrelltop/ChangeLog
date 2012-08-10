@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrelltop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrelltop/ChangeLog,v 1.35 2012/08/08 20:22:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrelltop/ChangeLog,v 1.36 2012/08/10 13:41:04 johu Exp $
+
+  10 Aug 2012; Johannes Huber <johu@gentoo.org> gkrelltop-2.2.11-r1.ebuild:
+  Stable for x86, wrt bug #422397
 
   08 Aug 2012; Brent Baude <ranger@gentoo.org> gkrelltop-2.2.11-r1.ebuild:
   Marking gkrelltop-2.2.11-r1 ppc for bug 422397
