@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/giblib
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giblib/ChangeLog,v 1.22 2011/04/09 14:43:49 klausman Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giblib/ChangeLog,v 1.23 2012/08/10 15:50:59 vapier Exp $
+
+*giblib-1.2.4-r1 (10 Aug 2012)
+
+  10 Aug 2012; Mike Frysinger <vapier@gentoo.org> +giblib-1.2.4-r1.ebuild:
+  Clean up, update to EAPI=4, add USE=static-libs, and fix LDFLAGS in config
+  scripts #430724 by Sergey Popov.
 
   09 Apr 2011; Tobias Klausmann <klausman@gentoo.org> giblib-1.2.4.ebuild:
   Move to proper USE-deps instead of using built_with_use
