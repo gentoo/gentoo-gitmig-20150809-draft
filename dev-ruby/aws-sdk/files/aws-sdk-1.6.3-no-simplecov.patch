@@ -1,0 +1,38 @@
+From d507e8f8a03e4a5e517d1b6cad9b1a7a8dbbd7f6 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Diego=20Elio=20Petten=C3=B2?= <flameeyes@flameeyes.eu>
+Date: Fri, 10 Aug 2012 08:28:06 -0700
+Subject: [PATCH] spec: do not force simplecov presence.
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+For Gentoo packaging for instance we don't want to know how much of
+the code is covered by the tests, we just want to make sure that the
+tests pass properly.
+
+Signed-off-by: Diego Elio Pettenò <flameeyes@flameeyes.eu>
+---
+ spec/spec_helper.rb |    7 +++++--
+ 1 files changed, 5 insertions(+), 2 deletions(-)
+
+diff --git a/spec/spec_helper.rb b/spec/spec_helper.rb
+index 0214460..8001b3a 100644
+--- a/spec/spec_helper.rb
++++ b/spec/spec_helper.rb
+@@ -11,8 +11,11 @@
+ # ANY KIND, either express or implied. See the License for the specific
+ # language governing permissions and limitations under the License.
+ 
+-require 'simplecov'
+-SimpleCov.start
++begin
++  require 'simplecov'
++  SimpleCov.start
++rescue LoadError
++end
+ 
+ $: << File.join(File.dirname(File.dirname(__FILE__)), "lib")
+ 
+-- 
+1.7.8.6
+

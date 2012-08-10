@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/aws-sdk/aws-sdk-1.6.2.ebuild,v 1.1 2012/08/08 21:02:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/aws-sdk/aws-sdk-1.6.3.ebuild,v 1.1 2012/08/10 15:40:58 flameeyes Exp $
 
 EAPI=4
 
@@ -36,9 +36,10 @@ ruby_add_rdepend "virtual/ruby-ssl
 	>=dev-ruby/nokogiri-1.4.4
 	>=dev-ruby/uuidtools-2.1"
 
-all_ruby_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.5.3-disabletest.patch
-}
+RUBY_PATCHES=(
+	${PN}-1.5.3-disabletest.patch
+	${PN}-1.6.3-no-simplecov.patch
+)
 
 all_ruby_compile() {
 	if use doc; then
