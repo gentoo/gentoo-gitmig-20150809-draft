@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-304.22.ebuild,v 1.9 2012/08/10 08:23:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-304.22.ebuild,v 1.10 2012/08/10 11:28:11 jer Exp $
 
 EAPI=4
 
-inherit eutils unpacker multilib portability versionator \
-	linux-mod flag-o-matic nvidia-driver linux-info toolchain-funcs
+inherit eutils flag-o-matic linux-info linux-mod multilib nvidia-driver \
+	portability toolchain-funcs unpacker user versionator
 
 X86_NV_PACKAGE="NVIDIA-Linux-x86-${PV}"
 AMD64_NV_PACKAGE="NVIDIA-Linux-x86_64-${PV}"
