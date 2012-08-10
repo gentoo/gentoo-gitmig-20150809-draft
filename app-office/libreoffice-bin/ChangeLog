@@ -1,6 +1,11 @@
 # ChangeLog for app-office/libreoffice-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.85 2012/08/03 08:07:47 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.86 2012/08/10 11:48:33 scarabeus Exp $
+
+  10 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-bin-3.5.5.3.ebuild:
+  Fix the dep over l10n in the binary to use only same major-minor. Wrt
+  bug#430464.
 
 *libreoffice-bin-3.5.5.3 (03 Aug 2012)
 

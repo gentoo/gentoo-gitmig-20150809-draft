@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.5.5.3.ebuild,v 1.1 2012/08/03 08:07:47 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.5.5.3.ebuild,v 1.2 2012/08/10 11:48:33 scarabeus Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ CMAKE_REQUIRED="never"
 BASE_AMD64_URI="mirror://gentoo/amd64-bin-"
 BASE_X86_URI="mirror://gentoo/x86-bin-"
 
-inherit kde4-base java-pkg-opt-2 pax-utils prefix
+inherit kde4-base java-pkg-opt-2 pax-utils prefix versionator
 
 DESCRIPTION="LibreOffice, a full office productivity suite. Binary package."
 HOMEPAGE="http://www.libreoffice.org"
@@ -125,7 +125,7 @@ RDEPEND="${COMMON_DEPEND}
 "
 
 PDEPEND="
-	>=app-office/libreoffice-l10n-3.5.0
+	=app-office/libreoffice-l10n-$(get_version_component_range 1-2)*
 "
 
 DEPEND=""
