@@ -1,6 +1,17 @@
 # ChangeLog for media-plugins/kipi-plugins
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.119 2012/08/06 17:51:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.120 2012/08/10 04:06:20 creffett Exp $
+
+*kipi-plugins-2.7.0-r1 (10 Aug 2012)
+*kipi-plugins-2.6.0-r1 (10 Aug 2012)
+
+  10 Aug 2012; Chris Reffett <creffett@gentoo.org>
+  +kipi-plugins-2.6.0-r1.ebuild, +kipi-plugins-2.7.0-r1.ebuild,
+  -kipi-plugins-2.7.0.ebuild, kipi-plugins-2.6.0.ebuild:
+  Bump 2.6.0 and 2.7.0 to -r1 to fix incorrect cmake variable (Sane instead of
+  KSane for scanner) wrt bug 430302. Thanks to Christian Schmitt
+  <chrschmitt@gmail.com> for the catch. Ignoring 2.5.0 because it will be punted
+  as soon as 2.6.0 is stable.
 
   06 Aug 2012; Agostino Sarubbo <ago@gentoo.org> kipi-plugins-2.6.0.ebuild:
   Stable for amd64, wrt bug #429842
@@ -601,4 +612,3 @@
   18 Oct 2004; Carsten Lohrke <carlo@gentoo.org> +metadata.xml,
   +kipi-plugins-0.1_beta1.ebuild:
   Initial commit. Thanks to Maarten Wisse, #67644
-

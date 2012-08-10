@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-2.6.0.ebuild,v 1.3 2012/08/10 04:06:20 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-2.6.0-r1.ebuild,v 1.1 2012/08/10 04:06:20 creffett Exp $
 
 EAPI=4
 
@@ -26,7 +26,7 @@ SRC_URI="mirror://sourceforge/digikam/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2
 	handbook? ( FDL-1.2 )"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="~amd64 ~x86"
 SLOT="4"
 IUSE="cdr calendar crypt debug expoblending gpssync +imagemagick ipod mediawiki mjpeg panorama redeyes scanner vkontakte"
 
@@ -110,7 +110,7 @@ src_configure() {
 		$(cmake-utils_use_with redeyes OpenCV)
 		$(cmake-utils_use_with opengl OpenGL)
 		$(cmake-utils_use_with crypt QCA2)
-		$(cmake-utils_use_with scanner Sane)
+		$(cmake-utils_use_with scanner KSane)
 		$(cmake-utils_use_enable expoblending)
 		$(cmake-utils_use_enable panorama)
 	)
