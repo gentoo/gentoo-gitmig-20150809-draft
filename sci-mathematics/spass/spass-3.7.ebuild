@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/spass/spass-3.7.ebuild,v 1.2 2012/08/10 05:56:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/spass/spass-3.7.ebuild,v 1.3 2012/08/10 05:58:33 jlec Exp $
 
 EAPI=4
 
@@ -25,7 +25,6 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/SPASS-${PV}"
 
 src_prepare() {
-	#epatch "${FILESDIR}"/${P}-fla
 	sed \
 		-e "s:-O3:${CFLAGS}:g" \
 		-i configure || die
