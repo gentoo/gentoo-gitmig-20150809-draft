@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/global
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.100 2012/06/13 18:45:00 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.101 2012/08/10 11:28:05 blueness Exp $
+
+  10 Aug 2012; Anthony G. Basile <blueness@gentoo.org> global-6.2.4.ebuild:
+  Stable ppc, bug #429058
 
   13 Jun 2012; Jeff Horelick <jdhore@gentoo.org> global-6.2.2.ebuild:
   marked x86 per bug 418957
