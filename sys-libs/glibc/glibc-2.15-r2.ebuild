@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.15-r2.ebuild,v 1.14 2012/08/09 19:49:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.15-r2.ebuild,v 1.15 2012/08/10 19:45:27 vapier Exp $
 
 inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib unpacker multiprocessing
 
@@ -33,7 +33,7 @@ esac
 MANPAGE_VER=""                                 # pregenerated manpages
 INFOPAGE_VER=""                                # pregenerated infopages
 LIBIDN_VER=""                                  # it's integrated into the main tarball now
-PATCH_VER="18"                                 # Gentoo patchset
+PATCH_VER="19"                                 # Gentoo patchset
 PORTS_VER=${RELEASE_VER}                       # version of glibc ports addon
 NPTL_KERN_VER=${NPTL_KERN_VER:-"2.6.9"}        # min kernel version nptl requires
 
@@ -175,14 +175,6 @@ for x in setup {pre,post}inst ; do
 		eval "pkg_${x}() { eblit-run pkg_${x} ; }"
 	fi
 done
-
-eblit-src_unpack-pre() {
-	if [[ ${CTARGET} == x86_64* ]] && has x32 $(get_all_abis) ; then
-		GLIBC_PATCH_EXCLUDE+=" 0080_all_glibc-2.15-revert-x86_64-eagain-pthread_cond_wait.patch"
-	else
-		GLIBC_PATCH_EXCLUDE+=" 120?_all_glibc-${PV}-x32*.patch"
-	fi
-}
 
 eblit-src_unpack-post() {
 	if use hardened ; then
