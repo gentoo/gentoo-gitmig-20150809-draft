@@ -19,3 +19,4 @@ move sys-apps/vgabios sys-firmware/vgabios
 move net-wireless/iwl1000-ucode sys-firmware/iwl1000-ucode
 move kde-misc/kdocker x11-misc/kdocker
 move net-misc/ferm net-firewall/ferm
+move sys-apps/whdd sys-block/whdd
