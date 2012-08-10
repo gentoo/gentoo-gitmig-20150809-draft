@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/lib_users
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lib_users/ChangeLog,v 1.24 2012/06/13 17:34:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lib_users/ChangeLog,v 1.25 2012/08/10 07:47:53 jlec Exp $
+
+  10 Aug 2012; Justin Lecher <jlec@gentoo.org> lib_users-0.5.ebuild:
+  Keyworded for ~-linux prefix
 
   13 Jun 2012; Jeroen Roovers <jer@gentoo.org> lib_users-0.5.ebuild:
   Stable for HPPA (bug #420039).
@@ -90,4 +93,3 @@
   28 Jul 2010; Jeroen Roovers <jer@gentoo.org> +lib_users-0.1.ebuild,
   +metadata.xml:
   Initial commit.
-
