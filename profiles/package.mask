@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14039 2012/08/08 16:16:12 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14040 2012/08/10 17:52:16 radhermit Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -485,10 +485,6 @@ net-p2p/leechcraft-eiskaltdcpp
 # Even its author admits that it's an ugly hack. Crashes e.g.
 # firefox with kde-4.8. Unmask at your own risk.
 kde-misc/kgtk
-
-# Tim Harder <radhermit@gentoo.org> (09 Mar 2012)
-# Masked for testing
-=mail-client/roundcube-0.8*
 
 # Samuli Suominen <ssuominen@gentoo.org> (06 Mar 2012)
 # Masked for testing since this is known to break nearly
