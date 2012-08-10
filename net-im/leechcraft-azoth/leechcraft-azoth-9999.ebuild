@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/leechcraft-azoth/leechcraft-azoth-9999.ebuild,v 1.14 2012/08/07 14:21:37 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/leechcraft-azoth/leechcraft-azoth-9999.ebuild,v 1.15 2012/08/10 09:02:05 maksbotan Exp $
 
 EAPI="4"
 
@@ -39,6 +39,8 @@ RDEPEND="${DEPEND}
 		)
 		virtual/latex-base
 	)"
+
+REQUIRED_USE="|| ( standardstyles adiumstyles )"
 
 src_configure() {
 	local mycmakeargs=(
