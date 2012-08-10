@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-0.1.18.ebuild,v 1.7 2012/05/16 15:02:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-0.1.18.ebuild,v 1.8 2012/08/10 17:11:37 ssuominen Exp $
 
 EAPI="4"
 
-inherit autotools eutils systemd base
+inherit autotools eutils user systemd base
 
 DESCRIPTION="System service to accurately color manage input and output devices"
 HOMEPAGE="http://www.freedesktop.org/software/colord/"
