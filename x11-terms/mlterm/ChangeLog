@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/mlterm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.92 2012/08/10 12:45:02 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.93 2012/08/10 13:40:40 jer Exp $
+
+  10 Aug 2012; Jeroen Roovers <jer@gentoo.org> mlterm-3.0.11-r1.ebuild:
+  Stable for HPPA (bug #429244).
 
   10 Aug 2012; Anthony G. Basile <blueness@gentoo.org> mlterm-3.0.11-r1.ebuild:
   Stable ppc ppc64, bug #429244

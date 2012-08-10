@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-3.0.11-r1.ebuild,v 1.2 2012/08/10 12:45:02 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-3.0.11-r1.ebuild,v 1.3 2012/08/10 13:40:40 jer Exp $
 
 EAPI="3"
 inherit autotools eutils
@@ -12,7 +12,7 @@ HOMEPAGE="http://mlterm.sourceforge.net/"
 SRC_URI="mirror://sourceforge/mlterm/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ppc ppc64 ~x86"
+KEYWORDS="~amd64 hppa ppc ppc64 ~x86"
 LICENSE="BSD"
 
 RDEPEND="|| ( sys-libs/libutempter sys-apps/utempter )
