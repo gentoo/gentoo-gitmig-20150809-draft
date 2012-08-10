@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/dmenu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/ChangeLog,v 1.91 2012/03/15 13:48:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/ChangeLog,v 1.92 2012/08/10 16:04:10 jer Exp $
+
+*dmenu-4.5-r2 (10 Aug 2012)
+
+  10 Aug 2012; Jeroen Roovers <jer@gentoo.org> +dmenu-4.5-r2.ebuild:
+  Respect CFLAGS again by Diego Elio Pettenò (bug #430790). Make build verbose
+  so we can actually see that happening.
 
   15 Mar 2012; Jeroen Roovers <jer@gentoo.org> -dmenu-4.4.1.ebuild,
   -dmenu-4.4.1-r1.ebuild, -dmenu-4.5.ebuild:
