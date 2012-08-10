@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-295.59-r1.ebuild,v 1.4 2012/08/10 11:28:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-295.59-r1.ebuild,v 1.5 2012/08/10 14:40:54 jer Exp $
 
 EAPI="2"
 
@@ -46,7 +46,7 @@ RDEPEND="${COMMON}
 		x11-libs/gtk+:2
 		x11-libs/libX11
 		x11-libs/libXext
-		x11-libs/pango
+		x11-libs/pango[X]
 	)"
 PDEPEND=">=x11-libs/libvdpau-0.3-r1"
 
