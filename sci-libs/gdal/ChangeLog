@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/gdal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.129 2012/06/05 21:08:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.130 2012/08/10 06:12:37 jlec Exp $
+
+  10 Aug 2012; Justin Lecher <jlec@gentoo.org> gdal-1.9.1.ebuild,
+  +files/gdal-1.9.1-poppler-0.20.1.patch:
+  Add fix for poppler-0.20.1, #426584; thanks Andreas Sturmlechner for the
+  backport; use eautoreconf because it seems to work
 
   05 Jun 2012; Brent Baude <ranger@gentoo.org> gdal-1.8.1-r1.ebuild:
   Marking gdal-1.8.1-r1 ppc64 for bug 413835

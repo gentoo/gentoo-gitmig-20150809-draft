@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.9.1.ebuild,v 1.4 2012/05/27 07:49:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.9.1.ebuild,v 1.5 2012/08/10 06:12:37 jlec Exp $
 
 EAPI=4
 
@@ -120,11 +120,15 @@ src_prepare() {
 		-e 's:FREEXL_LIBS=missing):FREEXL_LIBS=missing,-lm):g' \
 		configure.in || die
 
+	epatch "${FILESDIR}"/${P}-poppler-0.20.1.patch
+
 	# autoheader fail
-	eaclocal
-	eautoconf
-	eautomake
-	elibtoolize
+#	eaclocal
+#	eautoconf
+#	eautomake
+#	elibtoolize
+	# Seems to work here.
+	eautoreconf
 }
 
 src_configure() {
