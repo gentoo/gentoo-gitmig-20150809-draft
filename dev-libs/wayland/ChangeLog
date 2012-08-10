@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/wayland
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/ChangeLog,v 1.5 2012/06/14 23:17:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/ChangeLog,v 1.6 2012/08/10 22:22:40 mattst88 Exp $
+
+*wayland-0.95.0 (10 Aug 2012)
+
+  10 Aug 2012; Matt Turner <mattst88@gentoo.org> +wayland-0.95.0.ebuild:
+  Version bump.
 
   14 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> wayland-0.85.0.ebuild:
   Use virtual/libffi instead of dev-libs/libffi.
