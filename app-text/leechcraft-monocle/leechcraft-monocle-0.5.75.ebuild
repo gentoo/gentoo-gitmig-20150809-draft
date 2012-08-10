@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/leechcraft-monocle/leechcraft-monocle-0.5.75.ebuild,v 1.1 2012/07/19 19:54:26 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/leechcraft-monocle/leechcraft-monocle-0.5.75.ebuild,v 1.2 2012/08/10 09:10:00 maksbotan Exp $
 
 EAPI="4"
 
@@ -15,6 +15,8 @@ IUSE="debug +fb2 +pdf"
 DEPEND="~net-misc/leechcraft-core-${PV}
 		pdf? ( app-text/poppler[qt4] )"
 RDEPEND="${DEPEND}"
+
+PATCHES=( "${FILESDIR}"/monocle-poppler.patch )
 
 src_configure() {
 	local mycmakeargs="

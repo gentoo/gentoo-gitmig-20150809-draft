@@ -1,6 +1,10 @@
 # ChangeLog for app-text/leechcraft-monocle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/leechcraft-monocle/ChangeLog,v 1.2 2012/07/19 19:54:27 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/leechcraft-monocle/ChangeLog,v 1.3 2012/08/10 09:10:00 maksbotan Exp $
+
+  10 Aug 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +files/monocle-poppler.patch, leechcraft-monocle-0.5.75.ebuild:
+  Fix compilation with new poppler, bug 430108
 
 *leechcraft-monocle-0.5.75 (19 Jul 2012)
 
