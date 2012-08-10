@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-geode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-geode/ChangeLog,v 1.17 2012/01/01 16:27:52 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-geode/ChangeLog,v 1.18 2012/08/10 22:54:27 chithanh Exp $
+
+  10 Aug 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xf86-video-geode-2.11.12.ebuild, xf86-video-geode-2.11.13.ebuild:
+  Does not work with xorg-server-1.13, per leio on IRC.
 
 *xf86-video-geode-2.11.13 (01 Jan 2012)
 
@@ -95,4 +99,3 @@
   +xf86-video-geode-2.9.0.ebuild:
   Add renamed AMD Geode GX and LX video driver. This is a pkgmove with a
   version bump over xf86-video-amd-2.7.7.7, as noted in bug 217301
-
