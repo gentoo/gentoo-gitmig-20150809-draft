@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/ntfs3g
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.134 2012/05/04 19:09:18 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.135 2012/08/10 17:29:28 ssuominen Exp $
+
+*ntfs3g-2012.1.15-r2 (10 Aug 2012)
+
+  10 Aug 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +ntfs3g-2012.1.15-r2.ebuild:
+  Query correct udevdir from udev.pc pkg-config file. Remove pointless
+  USE="udev" since it has been a policy for a while to install minimalistic
+  files.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> ntfs3g-2012.1.15-r1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
