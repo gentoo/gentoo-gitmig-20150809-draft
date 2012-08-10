@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.520 2012/07/03 05:29:05 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.521 2012/08/10 07:24:10 dev-zero Exp $
+
+*samba-3.6.7 (10 Aug 2012)
+
+  10 Aug 2012; Tiziano Müller <dev-zero@gentoo.org> +samba-3.6.7.ebuild,
+  metadata.xml:
+  Version bump: fixes building with cups-1.6.x (bug #428490), added dmapi USE
+  flag (bug #425166), enable idmap_tdb2 with USE=cluster (bug #418331).
 
 *samba-3.6.6 (03 Jul 2012)
 *samba-3.5.16 (03 Jul 2012)
