@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/synergy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.84 2012/07/19 15:59:54 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.85 2012/08/10 13:49:23 darkside Exp $
+
+*synergy-1.4.10 (10 Aug 2012)
+
+  10 Aug 2012; Jeremy Olexa <darkside@gentoo.org> -synergy-1.3.1.ebuild,
+  -synergy-1.3.6.ebuild, -synergy-1.4.2.ebuild, +synergy-1.4.10.ebuild:
+  Version bump from upstream with many, many bug fixes. Bug 430694 by Dustin C.
+  Hatch
 
   19 Jul 2012; Michael Palimaka <kensington@gentoo.org> synergy-1.4.2.ebuild,
   synergy-1.4.5-r2.ebuild, synergy-1.4.7.ebuild:

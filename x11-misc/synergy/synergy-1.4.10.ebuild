@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/synergy-1.4.2.ebuild,v 1.4 2012/07/19 15:59:54 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/synergy-1.4.10.ebuild,v 1.1 2012/08/10 13:49:23 darkside Exp $
 
-EAPI=3
+EAPI=4
 
 inherit eutils cmake-utils qt4-r2
 
@@ -19,7 +19,7 @@ RDEPEND="x11-libs/libXtst
 	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXinerama
-	qt4? ( x11-libs/qt-gui:4 )
+	qt4? ( x11-libs/qt-gui )
 	qt4? ( !x11-misc/qsynergy )"
 DEPEND="${RDEPEND}
 	x11-proto/xextproto
@@ -31,10 +31,13 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${P}-Source
 
 src_configure() {
+	# 1.4.4+ : http://synergy-foss.org/pm/issues/3016
+	append-ldflags $(no-as-needed)
+
 	cmake-utils_src_configure
 
 	if use qt4 ; then
-		cd gui
+		cd src/gui
 		qt4-r2_src_configure
 	fi
 }
@@ -43,27 +46,27 @@ src_compile() {
 	cmake-utils_src_compile
 
 	if use qt4 ; then
-		cd gui
+		cd src/gui
 		qt4-r2_src_compile
 	fi
 }
 
 src_install () {
-	dobin "${CMAKE_BUILD_DIR}"/${PN}{c,s} || die
+	dobin bin/${PN}{c,s}
 
 	if use qt4 ; then
-		dobin bin/q${PN} || die
-		insinto /usr/share/icons
-		newins gui/res/win/QSynergy.ico q${PN}.ico
+		newbin bin/${PN} qsynergy
+		# FIXME: convert the .ico file to a real png instead
+		newicon src/gui/res/win/QSynergy.ico q${PN}.png
 		make_desktop_entry q${PN} ${PN/s/S} q${PN} Utility;
 	fi
 
 	insinto /etc
-	doins conf/synergy.conf || die
+	newins doc/synergy.conf.example synergy.conf
 
 	mv doc/${PN}c.man  doc/${PN}c.1 || die
 	mv doc/${PN}s.man  doc/${PN}s.1 || die
-	doman doc/${PN}{c,s}.1 || die
+	doman doc/${PN}{c,s}.1
 
-	dodoc README doc/synergy.conf.example* || die
+	dodoc README doc/synergy.conf.example* ChangeLog
 }
