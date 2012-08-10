@@ -1,0 +1,12 @@
+# ChangeLog for x11-libs/colord-gtk
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/colord-gtk/ChangeLog,v 1.1 2012/08/10 19:03:00 tetromino Exp $
+
+*colord-gtk-0.1.22 (10 Aug 2012)
+
+  10 Aug 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +colord-gtk-0.1.22.ebuild, +files/colord-gtk-0.1.22-automagic-vala.patch,
+  +metadata.xml:
+  New ebuild for colord's gtk support library, split off from x11-misc/colord;
+  prevents a circular dependency betweek gtk+[colord] and colord[gtk].
+
