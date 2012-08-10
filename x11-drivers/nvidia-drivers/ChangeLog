@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.374 2012/08/08 18:23:34 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.375 2012/08/10 08:23:13 ssuominen Exp $
+
+  10 Aug 2012; Samuli Suominen <ssuominen@gentoo.org>
+  nvidia-drivers-295.59-r1.ebuild, nvidia-drivers-302.17-r1.ebuild,
+  nvidia-drivers-304.22.ebuild:
+  Read udevdir from udev.pc pkg-config file for compability with sys-fs/udev >=
+  187.
 
 *nvidia-drivers-295.71 (08 Aug 2012)
 

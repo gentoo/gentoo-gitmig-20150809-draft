@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-304.22.ebuild,v 1.8 2012/07/25 21:59:25 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-304.22.ebuild,v 1.9 2012/08/10 08:23:13 ssuominen Exp $
 
 EAPI=4
 
 inherit eutils unpacker multilib portability versionator \
-	linux-mod flag-o-matic nvidia-driver linux-info
+	linux-mod flag-o-matic nvidia-driver linux-info toolchain-funcs
 
 X86_NV_PACKAGE="NVIDIA-Linux-x86-${PV}"
 AMD64_NV_PACKAGE="NVIDIA-Linux-x86_64-${PV}"
@@ -34,7 +34,10 @@ COMMON="app-admin/eselect-opencl
 		>=app-admin/eselect-opengl-1.0.9
 	)"
 DEPEND="${COMMON}
-	kernel_linux? ( virtual/linux-sources )"
+	kernel_linux? (
+		virtual/linux-sources
+		virtual/pkgconfig
+	)"
 RDEPEND="${COMMON}
 	acpi? ( sys-power/acpid )
 	tools? (
@@ -225,11 +228,14 @@ src_install() {
 		insinto /etc/modprobe.d
 		newins "${WORKDIR}"/nvidia nvidia.conf || die
 
+		local udevdir=/lib/udev
+		has_version sys-fs/udev && udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
+
 		# Ensures that our device nodes are created when not using X
-		exeinto /lib/udev
+		exeinto "${udevdir}"
 		doexe "${FILESDIR}"/nvidia-udev.sh
 
-		insinto /lib/udev/rules.d
+		insinto "${udevdir}"/rules.d
 		newins "${FILESDIR}"/nvidia.udev-rule 99-nvidia.rules
 	elif use kernel_FreeBSD; then
 		if use x86-fbsd; then
