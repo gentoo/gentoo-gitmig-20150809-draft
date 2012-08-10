@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/qscintilla-python
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.89 2012/07/09 14:51:59 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.90 2012/08/10 21:50:03 blueness Exp $
+
+  10 Aug 2012; Anthony G. Basile <blueness@gentoo.org>
+  qscintilla-python-2.6.2.ebuild:
+  Stable ppc, bug #429042
 
   09 Jul 2012; Davide Pesavento <pesa@gentoo.org>
   -files/qscintilla-python-2.4-nostrip.patch, -qscintilla-python-2.4.5.ebuild:
