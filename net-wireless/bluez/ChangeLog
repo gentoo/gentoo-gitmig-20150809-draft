@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.140 2012/07/23 15:40:24 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.141 2012/08/10 08:48:24 ssuominen Exp $
+
+*bluez-4.101-r2 (10 Aug 2012)
+
+  10 Aug 2012; Samuli Suominen <ssuominen@gentoo.org> +bluez-4.101-r2.ebuild:
+  Dummy revision bump to let upstream ./configure logic read udevdir from
+  udev.pc pkg-config file wrt #430414 by Egor Y. Egorov
 
   23 Jul 2012; <swift@gentoo.org> bluez-4.98-r2.ebuild, bluez-4.99.ebuild,
   bluez-4.101-r1.ebuild:
