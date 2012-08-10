@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/spass
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/spass/ChangeLog,v 1.2 2012/08/10 00:31:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/spass/ChangeLog,v 1.3 2012/08/10 05:56:51 jlec Exp $
+
+  10 Aug 2012; Justin Lecher <jlec@gentoo.org> spass-3.7.ebuild, metadata.xml:
+  Respect CFLAGS, #430676; add missing USE=examples
 
   10 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Fix metadata.

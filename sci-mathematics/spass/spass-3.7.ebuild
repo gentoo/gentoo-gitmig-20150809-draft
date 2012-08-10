@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/spass/spass-3.7.ebuild,v 1.1 2012/05/30 00:53:38 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/spass/spass-3.7.ebuild,v 1.2 2012/08/10 05:56:51 jlec Exp $
 
-EAPI="4"
+EAPI=4
 
 inherit versionator
 
@@ -15,32 +15,34 @@ SRC_URI="http://www.spass-prover.org/download/sources/${MY_P}.tgz"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
-IUSE="doc isabelle"
+KEYWORDS="~amd64 ~x86"
+IUSE="doc examples isabelle"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
-		isabelle? (
-			>=sci-mathematics/isabelle-2011.1-r1
-		)"
+		isabelle? ( >=sci-mathematics/isabelle-2011.1-r1 )"
 
 S="${WORKDIR}/SPASS-${PV}"
 
+src_prepare() {
+	#epatch "${FILESDIR}"/${P}-fla
+	sed \
+		-e "s:-O3:${CFLAGS}:g" \
+		-i configure || die
+}
+
 src_install() {
-	emake DESTDIR="${D}" install
+	default
 
 	if use examples; then
-		dodir /usr/share/${PN}/examples
-		insinto /usr/share/${PN}/examples
+		insinto /usr/share/${PN}/
 		doins -r examples
 	fi
 
 	if use isabelle; then
-		ISABELLE_HOME="$(isabelle getenv ISABELLE_HOME | cut -d'=' -f 2)" \
-			|| die "isabelle getenv ISABELLE_HOME failed"
-		if [[ -z "${ISABELLE_HOME}" ]]; then
-			die "ISABELLE_HOME empty"
-		fi
+		ISABELLE_HOME="$(isabelle getenv ISABELLE_HOME | cut -d'=' -f 2)"
+		[[ -z "${ISABELLE_HOME}" ]] || die "ISABELLE_HOME empty"
+
 		dodir "${ISABELLE_HOME}/contrib/${PN}-${PV}/etc"
 		cat <<- EOF >> "${S}/settings"
 			SPASS_HOME="${ROOT}usr/bin"
