@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/unscd/unscd-0.49.ebuild,v 1.1 2012/07/06 14:58:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/unscd/unscd-0.49.ebuild,v 1.2 2012/08/10 15:26:34 vapier Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://busybox.net/~vda/unscd/nscd-${PV}.c"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 S=${WORKDIR}
