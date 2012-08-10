@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-9999.ebuild,v 1.8 2012/07/30 10:50:43 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-9999.ebuild,v 1.9 2012/08/10 23:09:31 johu Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ HOMEPAGE="http://tomahawk-player.org/"
 
 LICENSE="GPL-3 BSD"
 SLOT="0"
-IUSE="debug fftw jabber libsamplerate twitter"
+IUSE="debug jabber twitter"
 
 DEPEND="
 	app-crypt/qca
@@ -41,9 +41,7 @@ DEPEND="
 	>=x11-libs/qt-gui-${QT_MINIMAL}:4
 	>=x11-libs/qt-sql-${QT_MINIMAL}:4[sqlite]
 	>=x11-libs/qt-webkit-${QT_MINIMAL}:4
-	fftw? ( sci-libs/fftw:3.0 )
 	jabber? ( net-libs/jreen )
-	libsamplerate? ( media-libs/libsamplerate )
 	twitter? ( net-libs/qtweetlib )
 "
 RDEPEND="${DEPEND}
