@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sigil/sigil-0.4.2.ebuild,v 1.1 2012/01/10 03:11:52 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sigil/sigil-0.4.2.ebuild,v 1.2 2012/08/10 13:40:45 kensington Exp $
 
 EAPI=4
 CMAKE_BUILD_TYPE="Release"
@@ -19,10 +19,10 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="
-	>=x11-libs/qt-xmlpatterns-4.7.2
-	>=x11-libs/qt-webkit-4.7.2
-	>=x11-libs/qt-svg-4.7.2
-	>=x11-libs/qt-gui-4.7.2"
+	>=x11-libs/qt-xmlpatterns-4.7.2:4
+	>=x11-libs/qt-webkit-4.7.2:4
+	>=x11-libs/qt-svg-4.7.2:4
+	>=x11-libs/qt-gui-4.7.2:4"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}"
