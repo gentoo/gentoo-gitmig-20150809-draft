@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-core/leechcraft-core-0.5.70-r1.ebuild,v 1.1 2012/08/10 13:52:47 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-core/leechcraft-core-0.5.70-r1.ebuild,v 1.2 2012/08/10 16:26:50 mr_bones_ Exp $
 
 EAPI="4"
 
@@ -28,7 +28,7 @@ pkg_setup() {
 }
 
 src_configure() {
-	local mycmakeargs=(	
+	local mycmakeargs=(
 		-DWITH_PLUGINS=False
 		-DLEECHCRAFT_VERSION=${PV}
 	)
