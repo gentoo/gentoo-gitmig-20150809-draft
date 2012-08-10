@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/binutils-apple
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/ChangeLog,v 1.32 2012/06/12 17:34:33 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/ChangeLog,v 1.33 2012/08/10 09:19:17 grobian Exp $
+
+*binutils-apple-3.2 (10 Aug 2012)
+
+  10 Aug 2012; Fabian Groffen <grobian@gentoo.org> +binutils-apple-3.2.ebuild,
+  +files/binutils-apple-3.2-armv7-defines.patch:
+  Restore version that's necessary to bootstrap on Mac OS X 10.5
 
   12 Jun 2012; Fabian Groffen <grobian@gentoo.org> -binutils-apple-3.1.1.ebuild,
   -binutils-apple-3.2-r1.ebuild, -binutils-apple-3.2.2.ebuild,
@@ -240,4 +246,3 @@
   +binutils-apple-20080922.ebuild:
   Initial import of binutils-apple, Apple's linker tools, based on the work by
   Elias Pipping in bug #238601.  Not ready for public consumption.
-
