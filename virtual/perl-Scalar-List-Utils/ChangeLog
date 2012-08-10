@@ -1,6 +1,11 @@
 # ChangeLog for virtual/perl-Scalar-List-Utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Scalar-List-Utils/ChangeLog,v 1.53 2012/05/21 11:50:38 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Scalar-List-Utils/ChangeLog,v 1.54 2012/08/10 00:38:24 jer Exp $
+
+  10 Aug 2012; Jeroen Roovers <jer@gentoo.org>
+  perl-Scalar-List-Utils-1.230.0-r2.ebuild,
+  perl-Scalar-List-Utils-1.250.0.ebuild:
+  Remove duplicate keyword by zvasylvv (bug #430658).
 
 *perl-Scalar-List-Utils-1.230.0-r2 (21 May 2012)
 
