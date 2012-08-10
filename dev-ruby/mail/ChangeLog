@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mail
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mail/ChangeLog,v 1.23 2012/07/20 19:00:55 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mail/ChangeLog,v 1.24 2012/08/10 06:13:08 graaff Exp $
+
+  10 Aug 2012; Hans de Graaff <graaff@gentoo.org> mail-2.3.3.ebuild:
+  Add untested ppc keyword to fix rails dependency tree.
 
   20 Jul 2012; Hans de Graaff <graaff@gentoo.org> -mail-2.3.0.ebuild:
   Remove old version.
