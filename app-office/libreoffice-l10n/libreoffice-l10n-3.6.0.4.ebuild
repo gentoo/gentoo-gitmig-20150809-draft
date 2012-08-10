@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.6.0.4.ebuild,v 1.1 2012/08/09 09:12:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.6.0.4.ebuild,v 1.2 2012/08/10 12:03:10 scarabeus Exp $
 
 EAPI=4
 
@@ -41,10 +41,8 @@ unset lang helppack langpack lang2
 
 RDEPEND+="
 	app-text/hunspell
-	|| (
-		>=app-office/libreoffice-$(get_version_component_range 1-2)
-		>=app-office/libreoffice-bin-$(get_version_component_range 1-2)
-	)
+	!<app-office/libreoffice-$(get_version_component_range 1-2)
+	!<app-office/libreoffice-bin-$(get_version_component_range 1-2)
 "
 
 RESTRICT="strip"
