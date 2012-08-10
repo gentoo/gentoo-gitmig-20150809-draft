@@ -6,7 +6,7 @@ Date:   Thu Aug 9 18:57:40 2012 +0200
 
 --- a/configure.ac
 +++ b/configure.ac
-@@ -16,37 +16,11 @@
+@@ -16,38 +16,13 @@
  
  AC_SUBST(dunelegacydatadir)
  
@@ -31,48 +31,18 @@ Date:   Thu Aug 9 18:57:40 2012 +0200
  dnl Check for SDL library
  SDL_VERSION=1.2.0
 -AM_PATH_SDL($SDL_VERSION, : , AC_MSG_ERROR([*** SDL version $SDL_VERSION not found!]))
--CFLAGS="$CFLAGS $SDL_CFLAGS"
--CXXFLAGS="$CXXFLAGS $SDL_CFLAGS"
--LIBS="$LIBS $SDL_LIBS"
--
++PKG_CHECK_MODULES([SDL], [sdl >= 1.2.0 SDL_mixer])
+ CFLAGS="$CFLAGS $SDL_CFLAGS"
+ CXXFLAGS="$CXXFLAGS $SDL_CFLAGS"
+ LIBS="$LIBS $SDL_LIBS"
+ 
 -dnl Check for SDL_mixer library.
 -AC_CHECK_LIB(SDL_mixer, 
 -       Mix_OpenAudio, 
 -       LIBS="$LIBS -lSDL_mixer", 
 -       AC_MSG_ERROR([*** SDL_mixer library not found!]) 
 -)
-+PKG_CHECK_MODULES([SDL], [sdl >= 1.2.0 SDL_mixer])
-+AM_CFLAGS="$SDL_CFLAGS"
-+AM_CXXFLAGS="$SDL_CFLAGS"
- 
+-
  dnl enet defines
  AC_CHECK_FUNC(gethostbyaddr_r, [AC_DEFINE(HAS_GETHOSTBYADDR_R)])
-@@ -71,4 +45,9 @@
- 		dunelegacydatadir='.'
- fi
- 
-+AC_SUBST([AM_CFLAGS])
-+AC_SUBST([AM_CXXFLAGS])
-+AC_SUBST([SDL_CFLAGS])
-+AC_SUBST([SDL_LIBS])
-+
- AC_OUTPUT(Makefile src/Makefile tests/Makefile)
---- a/src/Makefile.am
-+++ b/src/Makefile.am
-@@ -194,4 +194,6 @@ dunelegacy_SOURCES =	AStarSearch.cpp\
- 						units/Trooper.cpp\
- 						$(NULL)
- 
-+dunelegacy_LDADD = @SDL_LIBS@
-+
- AM_CPPFLAGS = -DDUNELEGACY_DATADIR='"$(dunelegacydatadir)"' -I$(top_srcdir)/include
---- a/tests/Makefile.am
-+++ b/tests/Makefile.am
-@@ -54,5 +54,6 @@
- 
- 
- 
--runtests_CXXFLAGS = $(CPPUNIT_CFLAGS) -DTESTSRC=\"$(srcdir)\" -I$(top_srcdir)/include
-+runtests_CXXFLAGS = $(CPPUNIT_CFLAGS) -DTESTSRC=\"$(srcdir)\" -I$(top_srcdir)/include @SDL_CFLAGS@
-+runtests_LDADD = @SDL_LIBS@
- runtests_LDFLAGS = $(CPPUNIT_LIBS) -lcppunit
+ AC_CHECK_FUNC(gethostbyname_r, [AC_DEFINE(HAS_GETHOSTBYNAME_R)])
