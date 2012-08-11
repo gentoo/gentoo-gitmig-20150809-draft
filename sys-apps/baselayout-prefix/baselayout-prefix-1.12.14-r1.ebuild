@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-1.12.14-r1.ebuild,v 1.1 2012/08/07 13:31:03 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-1.12.14-r1.ebuild,v 1.2 2012/08/11 10:19:18 heroxbd Exp $
 
 EAPI=3
 
@@ -41,7 +41,6 @@ src_prepare() {
 	eprefixify \
 		etc/env.d/00basic \
 		etc/profile \
-		sbin/functions.sh
 
 	# add the host OS MANPATH
 	echo 'MANPATH="/usr/share/man"' > etc/env.d/99basic || die "can't make file"
@@ -117,11 +116,6 @@ src_install() {
 	into /
 	# These moved from /etc/init.d/ to /sbin to help newb systems
 	# from breaking
-	dosbin functions.sh
-
-	# Compat symlinks between /etc/init.d and /sbin
-	# (some stuff have hardcoded paths)
-	dosym ../../sbin/functions.sh /etc/init.d/functions.sh
 
 	#
 	# Install baselayout utilities
