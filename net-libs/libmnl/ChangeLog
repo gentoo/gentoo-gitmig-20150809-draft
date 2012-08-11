@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libmnl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmnl/ChangeLog,v 1.9 2012/08/03 15:21:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmnl/ChangeLog,v 1.10 2012/08/11 14:32:53 maekke Exp $
+
+  11 Aug 2012; Markus Meier <maekke@gentoo.org> libmnl-1.0.2.ebuild:
+  x86 stable, bug #419263
 
   03 Aug 2012; Markos Chandras <hwoarang@gentoo.org> libmnl-1.0.2.ebuild:
   Stable on amd64 wrt bug #419263
