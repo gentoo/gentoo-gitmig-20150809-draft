@@ -1,6 +1,15 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.280 2012/08/11 18:27:05 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.281 2012/08/11 20:33:38 hwoarang Exp $
+
+  11 Aug 2012; Markos Chandras <hwoarang@gentoo.org>
+  -files/1.4.25-fix-CVE-2010-0295.patch,
+  -files/1.4.25-fix-unknown-AM_SILENT_RULES.patch,
+  -files/1.4.26-fix-ssl-return-check-r2716.patch,
+  -files/lighttpd-1.4.28-detect-libev.patch,
+  -files/lighttpd-1.4.29-ssl-no-ecdh.patch, -files/lighttpd.initd-1.4.13-r3,
+  -files/spawn-fcgi.confd, -files/spawn-fcgi.initd:
+  Remove obsolete files from FILESDIR
 
   11 Aug 2012; Anthony G. Basile <blueness@gentoo.org> lighttpd-1.4.31.ebuild:
   Stable ppc ppc64, bug #430902
@@ -1507,4 +1516,3 @@
   23 Apr 2004; Stuart Herbert <stuart@gentoo.org> lighttpd-1.1.8.ebuild,
   files/lighttpd-1.1.8-gentoo.diff, files/lighttpd.initd:
   Initial import; thanks to Boris <sirro@nurfuerspam.de>; see bug #46833
-
