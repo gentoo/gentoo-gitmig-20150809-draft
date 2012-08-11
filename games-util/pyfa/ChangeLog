@@ -1,6 +1,12 @@
 # ChangeLog for games-util/pyfa
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/ChangeLog,v 1.13 2012/08/08 22:18:44 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/ChangeLog,v 1.14 2012/08/11 19:36:52 tetromino Exp $
+
+*pyfa-1.1.9-r1 (11 Aug 2012)
+
+  11 Aug 2012; Alexandre Rostovtsev <tetromino@gentoo.org> -pyfa-1.1.9.ebuild,
+  +pyfa-1.1.9-r1.ebuild:
+  Upstream source tarball was updated but not renamed.
 
 *pyfa-1.1.9 (08 Aug 2012)
 
