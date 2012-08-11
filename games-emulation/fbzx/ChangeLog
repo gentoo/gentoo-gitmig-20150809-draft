@@ -1,6 +1,12 @@
 # ChangeLog for games-emulation/fbzx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fbzx/ChangeLog,v 1.25 2012/05/04 04:38:38 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fbzx/ChangeLog,v 1.26 2012/08/11 21:23:51 mr_bones_ Exp $
+
+*fbzx-2.10.0 (11 Aug 2012)
+
+  11 Aug 2012; Michael Sterrett <mr_bones_@gentoo.org> +fbzx-2.10.0.ebuild,
+  +files/fbzx-2.10.0-build.patch:
+  version bump
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> fbzx-2.4.1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -100,4 +106,3 @@
 
   21 Mar 2004; David Holm <dholm@gentoo.org> fbzx-1.4.ebuild, metadata.xml:
   Initial import.
-
