@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libosmocore/libosmocore-0.5.2-r1.ebuild,v 1.1 2012/08/01 23:40:13 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libosmocore/libosmocore-0.5.3.ebuild,v 1.1 2012/08/11 04:59:50 chithanh Exp $
 
 EAPI="4"
 inherit autotools eutils
@@ -27,8 +27,6 @@ DEPEND="${RDEPEND}
 	app-doc/doxygen"
 
 src_prepare() {
-	# fix building against gcc-4.6
-	epatch "${FILESDIR}"/${P}-gcc-4.6.patch
 	# set correct version in pkgconfig files
 	sed -i "s/UNKNOWN/${PV}/" git-version-gen || die
 	eautoreconf
