@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti-htools/ganeti-htools-0.3.1.ebuild,v 1.3 2012/08/03 12:40:34 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti-htools/ganeti-htools-0.3.1.ebuild,v 1.4 2012/08/11 12:42:36 maekke Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="http://ganeti.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="doc test"
 
 DEPEND="dev-lang/ghc
