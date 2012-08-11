@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw/libXaw-1.0.11-r1.ebuild,v 1.1 2012/08/11 17:17:38 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw/libXaw-1.0.11-r1.ebuild,v 1.2 2012/08/11 20:43:54 mattst88 Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ pkg_setup() {
 	xorg-2_pkg_setup
 
 	XORG_CONFIGURE_OPTIONS=(
-		$(use_enable deprecacted xaw6)
+		$(use_enable deprecated xaw6)
 		$(use_enable doc specs)
 		$(use_with doc xmlto)
 		--without-fop
