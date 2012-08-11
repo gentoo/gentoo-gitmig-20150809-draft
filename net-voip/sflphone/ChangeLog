@@ -1,6 +1,16 @@
 # ChangeLog for net-voip/sflphone
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/sflphone/ChangeLog,v 1.11 2012/03/02 14:58:32 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/sflphone/ChangeLog,v 1.12 2012/08/11 22:31:59 tetromino Exp $
+
+*sflphone-1.0.1-r1 (11 Aug 2012)
+
+  11 Aug 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +sflphone-1.0.1-r1.ebuild, +files/sflphone-1.0.1-glib-2.32-headers-1.patch,
+  +files/sflphone-1.0.1-glib-2.32-headers-2.patch,
+  +files/sflphone-1.0.1-glib-2.32-headers-3.patch,
+  +files/sflphone-1.0.1-pjsip-1.14.patch:
+  Non-maintainer commit: fix building with glib-2.32 (bug #417765, thanks to
+  Petr Gregor) and compatibility with pjsip-1.14.
 
   02 Mar 2012;  <elvanor@gentoo.org> sflphone-1.0.1.ebuild:
   Fixed bug #396707.
