@@ -1,14 +1,14 @@
-From 4d6860efaaaf14a99d18812c15aa063b43fe2834 Mon Sep 17 00:00:00 2001
+From 86f115fa46ed6af9717899e1e2251b68abd96d5b Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Micha=C5=82=20G=C3=B3rny?= <mgorny@gentoo.org>
 Date: Sat, 11 Aug 2012 01:38:23 +0200
 Subject: [PATCH] Disable udev targets.
 
 ---
- Makefile.am | 183 +-----------------------------------------------------------
- 1 file changed, 1 insertion(+), 182 deletions(-)
+ Makefile.am | 189 +-----------------------------------------------------------
+ 1 file changed, 1 insertion(+), 188 deletions(-)
 
 diff --git a/Makefile.am b/Makefile.am
-index 39afb62..2126383 100644
+index 39afb62..de22af7 100644
 --- a/Makefile.am
 +++ b/Makefile.am
 @@ -1588,12 +1588,6 @@ SUBDIRS += \
@@ -165,27 +165,33 @@ index 39afb62..2126383 100644
  EXTRA_DIST += \
  	src/udev/scsi_id/README
  
-@@ -1911,9 +1837,6 @@ v4l_id_SOURCES = \
+@@ -1911,12 +1837,6 @@ v4l_id_SOURCES = \
  v4l_id_LDADD = \
  	-ludev
  
 -udevlibexec_PROGRAMS += \
 -	v4l_id
 -
- dist_udevrules_DATA += \
- 	rules/60-persistent-v4l.rules
- 
-@@ -1925,9 +1848,6 @@ accelerometer_LDADD = \
+-dist_udevrules_DATA += \
+-	rules/60-persistent-v4l.rules
+-
+ # ------------------------------------------------------------------------------
+ accelerometer_SOURCES = \
+ 	src/udev/accelerometer/accelerometer.c
+@@ -1925,12 +1845,6 @@ accelerometer_LDADD = \
  	-ludev -lm \
  	libsystemd-shared.la
  
 -udevlibexec_PROGRAMS += \
 -	accelerometer
 -
- dist_udevrules_DATA += \
- 	rules/61-accelerometer.rules
- 
-@@ -2111,98 +2031,11 @@ nodist_keymap_SOURCES = \
+-dist_udevrules_DATA += \
+-	rules/61-accelerometer.rules
+-
+ # ------------------------------------------------------------------------------
+ if ENABLE_GUDEV
+ if ENABLE_GTK_DOC
+@@ -2111,98 +2025,11 @@ nodist_keymap_SOURCES = \
  BUILT_SOURCES += \
  	$(nodist_keymap_SOURCES)
  
@@ -284,7 +290,7 @@ index 39afb62..2126383 100644
  src/udev/keymap/keys.txt: Makefile
  	$(AM_V_at)$(MKDIR_P) $(dir $@)
  	$(AM_V_GEN)$(CPP) $(CFLAGS) $(AM_CPPFLAGS) $(CPPFLAGS) -dM -include linux/input.h - < /dev/null | $(AWK) '/^#define[ \t]+KEY_[^ ]+[ \t]+[0-9]/ { if ($$2 != "KEY_MAX") { print $$2 } }' | sed 's/^KEY_COFFEE$$/KEY_SCREENLOCK/' > $@
-@@ -2230,12 +2063,6 @@ mtd_probe_SOURCES =  \
+@@ -2230,12 +2057,6 @@ mtd_probe_SOURCES =  \
  mtd_probe_CPPFLAGS = \
  	$(AM_CPPFLAGS)
  
@@ -297,7 +303,7 @@ index 39afb62..2126383 100644
  # ------------------------------------------------------------------------------
  libsystemd_id128_la_SOURCES = \
  	src/libsystemd-id128/sd-id128.c
-@@ -3244,14 +3071,6 @@ systemd_multi_seat_x_LDADD = \
+@@ -3244,14 +3065,6 @@ systemd_multi_seat_x_LDADD = \
  rootlibexec_PROGRAMS += \
  	systemd-multi-seat-x
  
