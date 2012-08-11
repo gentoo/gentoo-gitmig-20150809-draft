@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/latex2rtf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/ChangeLog,v 1.35 2012/06/22 16:09:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/ChangeLog,v 1.36 2012/08/11 19:01:57 ago Exp $
+
+  11 Aug 2012; Agostino Sarubbo <ago@gentoo.org> latex2rtf-2.2.1b.ebuild:
+  Stable for amd64, wrt bug #429050
 
 *latex2rtf-2.2.1b (22 Jun 2012)
 
