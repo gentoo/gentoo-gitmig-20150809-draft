@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.32 2012/08/09 13:28:12 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.33 2012/08/11 20:05:05 ryao Exp $
 
 EAPI="4"
 
@@ -110,7 +110,7 @@ src_configure() {
 		--with-config=all
 		--with-linux="${KV_DIR}"
 		--with-linux-obj="${KV_OUT_DIR}"
-		--with-udevdir="$(tc-getPKG_CONFIG) --variable=udevdir udev"
+		--with-udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
 		$(use_enable debug)
 	)
 	autotools-utils_src_configure
