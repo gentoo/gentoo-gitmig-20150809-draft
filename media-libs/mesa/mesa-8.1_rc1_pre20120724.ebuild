@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-8.1_rc1_pre20120724.ebuild,v 1.3 2012/07/27 13:29:59 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-8.1_rc1_pre20120724.ebuild,v 1.4 2012/08/11 18:00:37 mattst88 Exp $
 
 EAPI=4
 
@@ -128,11 +128,6 @@ DEPEND="${RDEPEND}
 	)
 	=dev-lang/python-2*
 	dev-libs/libxml2[python]
-	!amd64-fbsd? (
-		!x86-fbsd? (
-			dev-util/indent
-		)
-	)
 	sys-devel/bison
 	sys-devel/flex
 	virtual/pkgconfig

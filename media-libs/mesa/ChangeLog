@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.412 2012/07/27 13:29:59 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.413 2012/08/11 18:00:38 mattst88 Exp $
+
+  11 Aug 2012; Matt Turner <mattst88@gentoo.org>
+  mesa-8.1_rc1_pre20120724.ebuild:
+  Remove indent dependency since only compiled code is indented.
 
   27 Jul 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   mesa-8.1_rc1_pre20120724.ebuild:
