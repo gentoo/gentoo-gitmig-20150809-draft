@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/mailutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.53 2012/04/24 10:36:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.54 2012/08/11 16:01:29 jer Exp $
+
+  11 Aug 2012; Jeroen Roovers <jer@gentoo.org> mailutils-2.2.ebuild,
+  +files/mailutils-2.2-gets.patch:
+  Fix building against sys-libs/glibc-2.16 by Diego Elio Pettenò (bug
+  #426188).
 
   24 Apr 2012; Michał Górny <mgorny@gentoo.org> mailutils-2.2.ebuild:
   Update to use mirror://.
