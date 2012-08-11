@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/drod-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/drod-bin/ChangeLog,v 1.16 2012/02/08 21:30:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/drod-bin/ChangeLog,v 1.17 2012/08/11 12:52:02 maekke Exp $
+
+  11 Aug 2012; Markus Meier <maekke@gentoo.org> drod-bin-1.6.7.ebuild:
+  x86 stable, bug #418987
 
   08 Feb 2012; Mike Frysinger <vapier@gentoo.org> drod-bin-1.6.6.ebuild,
   drod-bin-1.6.7.ebuild:

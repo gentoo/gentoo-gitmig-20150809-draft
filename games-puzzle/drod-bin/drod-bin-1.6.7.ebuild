@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/drod-bin/drod-bin-1.6.7.ebuild,v 1.2 2012/02/08 21:30:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/drod-bin/drod-bin-1.6.7.ebuild,v 1.3 2012/08/11 12:52:02 maekke Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/drod/Linux%20Setup/Caravel%20DROD%201.6.7%20Setup/
 
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* ~amd64 x86"
 IUSE=""
 RESTRICT="strip"
 
