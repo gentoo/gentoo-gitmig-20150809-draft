@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ohai/ohai-0.6.10.ebuild,v 1.2 2012/03/05 10:29:56 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ohai/ohai-6.14.0.ebuild,v 1.1 2012/08/11 09:14:47 hollow Exp $
 
 EAPI=4
-USE_RUBY="ruby18"
+USE_RUBY="ruby18 ruby19"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="CHANGELOG README.rdoc"
@@ -22,20 +22,20 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-ruby_add_bdepend "test? ( dev-ruby/rspec:2 dev-ruby/sigar )"
+RUBY_PATCHES=( "${FILESDIR}/ohai-6.14.0-multiple-ruby.patch" )
+
+ruby_add_bdepend "test? ( dev-ruby/rspec:2 )"
 
 ruby_add_rdepend "
-	dev-ruby/yajl-ruby
+	dev-ruby/ipaddress
 	dev-ruby/mixlib-cli
 	dev-ruby/mixlib-config
 	dev-ruby/mixlib-log
-	>=dev-ruby/systemu-2.2.0"
+	dev-ruby/systemu
+	dev-ruby/yajl-ruby"
 
 all_ruby_prepare() {
 	rm Gemfile || die
-	# Be more lenient to work with versions of systemu that we have in
-	# the tree.
-	sed -i -e 's/~> 2.2.0/>= 2.2.0/' ohai.gemspec || die
 }
 
 all_ruby_install() {
