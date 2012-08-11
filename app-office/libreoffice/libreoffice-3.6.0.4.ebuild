@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.6.0.4.ebuild,v 1.7 2012/08/11 08:44:28 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.6.0.4.ebuild,v 1.8 2012/08/11 08:51:51 scarabeus Exp $
 
 EAPI=4
 
@@ -208,6 +208,7 @@ DEPEND="${COMMON_DEPEND}
 		>=dev-java/ant-core-1.7
 		test? ( dev-java/junit:4 )
 	)
+	odk? ( app-doc/doxygen )
 	test? ( dev-util/cppunit )
 "
 
@@ -510,6 +511,7 @@ src_configure() {
 		$(use_enable xmlsec) \
 		$(use_with java) \
 		$(use_with mysql system-mysql-cppconn) \
+		$(use_with odk doxygen) \
 		${internal_libs} \
 		${java_opts} \
 		${ext_opts}

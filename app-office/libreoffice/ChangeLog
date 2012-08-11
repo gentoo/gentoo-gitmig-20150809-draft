@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.354 2012/08/11 08:44:28 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.355 2012/08/11 08:51:51 scarabeus Exp $
+
+  11 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-3.6.0.4.ebuild,
+  libreoffice-3.6.9999.ebuild, libreoffice-9999-r2.ebuild:
+  Try to bond together odk and doxygen to avoid issues wrt bug#430878.
 
   11 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-3.6.0.4.ebuild,
   libreoffice-3.6.9999.ebuild, libreoffice-9999-r2.ebuild:
