@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kwordquiz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwordquiz/ChangeLog,v 1.215 2012/08/07 11:04:57 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwordquiz/ChangeLog,v 1.216 2012/08/11 18:31:54 dilfridge Exp $
+
+  11 Aug 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  kwordquiz-4.9.0.ebuild:
+  libkdeedu is also RDEPEND, bug 430804
 
 *kwordquiz-4.8.5 (07 Aug 2012)
 

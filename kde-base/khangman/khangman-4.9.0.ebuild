@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/khangman/khangman-4.9.0.ebuild,v 1.1 2012/08/01 22:17:16 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/khangman/khangman-4.9.0.ebuild,v 1.2 2012/08/11 18:29:33 dilfridge Exp $
 
 EAPI=4
 
@@ -15,3 +15,4 @@ IUSE="debug"
 DEPEND="
 	$(add_kdebase_dep libkdeedu)
 "
+RDEPEND=${DEPEND}
