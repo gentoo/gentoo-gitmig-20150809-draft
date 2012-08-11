@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/arx-libertatis/arx-libertatis-1.0.2-r1.ebuild,v 1.4 2012/07/31 09:07:27 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/arx-libertatis/arx-libertatis-1.0.2-r1.ebuild,v 1.5 2012/08/11 10:19:32 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/arx/${P}/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="cdinstall demo debug unity-build crash-reporter tools"
 
 COMMON_DEPEND=">=dev-libs/boost-1.39

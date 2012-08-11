@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/arx-fatalis-demo/arx-fatalis-demo-0.ebuild,v 1.2 2012/06/30 15:09:54 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/arx-fatalis-demo/arx-fatalis-demo-0.ebuild,v 1.3 2012/08/11 10:20:19 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="arx_demo_english.zip"
 
 LICENSE="ArxFatalisDemo"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 RESTRICT="fetch"
 
