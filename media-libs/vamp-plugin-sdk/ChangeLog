@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/vamp-plugin-sdk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vamp-plugin-sdk/ChangeLog,v 1.45 2012/08/06 21:15:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vamp-plugin-sdk/ChangeLog,v 1.46 2012/08/11 14:05:28 maekke Exp $
+
+  11 Aug 2012; Markus Meier <maekke@gentoo.org> vamp-plugin-sdk-2.3.ebuild:
+  x86 stable, bug #419107
 
   06 Aug 2012; Brent Baude <ranger@gentoo.org> vamp-plugin-sdk-2.3.ebuild:
   Marking vamp-plugin-sdk-2.3 ppc64 for bug 419107
