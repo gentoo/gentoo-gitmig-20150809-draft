@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/thrulay
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thrulay/ChangeLog,v 1.12 2012/08/03 15:59:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thrulay/ChangeLog,v 1.13 2012/08/11 14:22:53 maekke Exp $
+
+  11 Aug 2012; Markus Meier <maekke@gentoo.org> thrulay-0.9-r1.ebuild:
+  x86 stable, bug #419239
 
   03 Aug 2012; Markos Chandras <hwoarang@gentoo.org> thrulay-0.9-r1.ebuild:
   Stable on amd64 wrt bug #419239
