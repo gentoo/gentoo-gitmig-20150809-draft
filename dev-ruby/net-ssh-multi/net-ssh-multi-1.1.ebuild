@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh-multi/net-ssh-multi-1.1.ebuild,v 1.2 2012/05/01 18:24:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh-multi/net-ssh-multi-1.1.ebuild,v 1.3 2012/08/11 09:29:26 hollow Exp $
 
 EAPI=4
-USE_RUBY="ruby18 ree18"
+USE_RUBY="ruby18 ruby19 ree18"
 
 RUBY_FAKEGEM_DOCDIR="doc"
 RUBY_FAKEGEM_EXTRADOC="CHANGELOG.rdoc README.rdoc"
