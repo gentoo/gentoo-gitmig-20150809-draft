@@ -10,7 +10,7 @@ index a54de8e..67591d0 100644
  
  def run_ruby(command)
 -  cmd = "ruby -e \"require 'rbconfig'; #{command}\""
-+  ruby = ::File.join(::Config::CONFIG['bindir'], ::Config::CONFIG['ruby_install_name'])
++  ruby = ::File.join(::RbConfig::CONFIG['bindir'], ::RbConfig::CONFIG['ruby_install_name'])
 +  cmd = %{#{ruby} -e "require 'rbconfig'; #{command}"}
    status, stdout, stderr = run_command(:no_status_check => true, :command => cmd)
    stdout.strip
