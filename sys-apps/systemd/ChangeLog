@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.39 2012/08/11 07:34:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.40 2012/08/11 09:32:16 mgorny Exp $
+
+  11 Aug 2012; Michał Górny <mgorny@gentoo.org> metadata.xml,
+  systemd-188.ebuild:
+  Remove leftover from USE=doc, and cleanup metadata.xml.
 
   11 Aug 2012; Michał Górny <mgorny@gentoo.org>
   files/0001-Disable-udev-targets.patch:

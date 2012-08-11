@@ -9,10 +9,5 @@
 		<!-- XXX: describe those two better -->
 		<flag name='audit'>Enable support for <pkg>sys-process/audit</pkg></flag>
 		<flag name='cryptsetup'>Use libcryptsetup</flag>
-		<flag name='doc'>Build gtk-doc API docs</flag>
-		<flag name='gudev'>Enable libudev gobject interface</flag>
-		<flag name="introspection">Use <pkg>dev-libs/gobject-introspection</pkg>
-			for introspection</flag>
-		<flag name='plymouth'>Enable support for <pkg>sys-boot/plymouth</pkg></flag>
 	</use>
 </pkgmetadata>

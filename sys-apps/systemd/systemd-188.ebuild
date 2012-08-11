@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-188.ebuild,v 1.1 2012/08/11 00:14:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-188.ebuild,v 1.2 2012/08/11 09:32:16 mgorny Exp $
 
 EAPI=4
 
@@ -87,11 +87,11 @@ src_configure() {
 		--enable-split-usr
 		# udev parts
 		--disable-introspection
+		--disable-gtk-doc
 		--disable-gudev
 		$(use_enable acl)
 		$(use_enable audit)
 		$(use_enable cryptsetup libcryptsetup)
-		$(use_enable doc gtk-doc)
 		$(use_enable lzma xz)
 		$(use_enable pam)
 		$(use_enable selinux)
