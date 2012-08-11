@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/couchdb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.58 2012/08/08 20:14:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.59 2012/08/11 18:38:43 ago Exp $
+
+  11 Aug 2012; Agostino Sarubbo <ago@gentoo.org> couchdb-1.2.0.ebuild:
+  Stable for amd64, wrt bug #428920
 
   08 Aug 2012; Brent Baude <ranger@gentoo.org> couchdb-1.2.0.ebuild:
   Marking couchdb-1.2.0 ppc for bug 428920
