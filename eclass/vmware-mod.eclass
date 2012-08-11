@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vmware-mod.eclass,v 1.20 2012/07/01 19:43:30 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vmware-mod.eclass,v 1.21 2012/08/11 14:04:11 ssuominen Exp $
 
 # @DEAD
 
 # Ensure vmware comes before linux-mod since we want linux-mod's pkg_preinst and
 # pkg_postinst, along with our own pkg_setup, src_unpack and src_compile
-inherit flag-o-matic eutils vmware linux-mod
+inherit flag-o-matic eutils vmware linux-mod toolchain-funcs
 
 DESCRIPTION="Modules for Vmware Programs"
 HOMEPAGE="http://www.vmware.com/"
@@ -19,6 +19,10 @@ SRC_URI="http://platan.vc.cvut.cz/ftp/pub/vmware/${ANY_ANY}.tar.gz
 LICENSE="vmware"
 SLOT="0"
 IUSE=""
+
+RDEPEND=""
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
 # Provide vaguely sensible defaults
 [[ -z "${VMWARE_VER}" ]] && VMWARE_VER="VME_V55"
@@ -92,9 +96,11 @@ vmware-mod_src_install() {
 	# this adds udev rules for vmmon*
 	if [[ -n "`echo ${VMWARE_MODULE_LIST} | grep vmmon`" ]];
 	then
-		dodir /etc/udev/rules.d
-		echo 'KERNEL=="vmmon*", GROUP="'$VMWARE_GROUP'" MODE=660' >> "${D}/etc/udev/rules.d/60-vmware.rules" || die
-		echo 'KERNEL=="vmnet*", GROUP="'$VMWARE_GROUP'" MODE=660' >> "${D}/etc/udev/rules.d/60-vmware.rules" || die
+		local udevdir=/lib/udev
+		has_version sys-fs/udev && udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
+		dodir "${udevdir}"/rules.d
+		echo 'KERNEL=="vmmon*", GROUP="'$VMWARE_GROUP'" MODE=660' >> "${D}/${udevdir}"/rules.d/60-vmware.rules || die
+		echo 'KERNEL=="vmnet*", GROUP="'$VMWARE_GROUP'" MODE=660' >> "${D}/${udevdir}"/rules.d/60-vmware.rules || die
 	fi
 
 	linux-mod_src_install
