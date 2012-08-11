@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mkrf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mkrf/ChangeLog,v 1.26 2012/08/08 17:10:34 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mkrf/ChangeLog,v 1.27 2012/08/11 19:47:19 ago Exp $
+
+  11 Aug 2012; Agostino Sarubbo <ago@gentoo.org> mkrf-0.2.3-r2.ebuild:
+  Stable for amd64, wrt bug #430206
 
   08 Aug 2012; Hans de Graaff <graaff@gentoo.org> mkrf-0.2.3-r2.ebuild:
   Workaround to make test pass with ruby19 and rake 0.8. This is already fixed
