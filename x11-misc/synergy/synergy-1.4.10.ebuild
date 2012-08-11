@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/synergy-1.4.10.ebuild,v 1.2 2012/08/11 17:34:54 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/synergy-1.4.10.ebuild,v 1.3 2012/08/11 17:42:57 hasufell Exp $
 
 EAPI=4
 
@@ -72,13 +72,13 @@ src_install () {
 }
 
 pkg_preinst() {
-	gnome2_icon_savelist
+	use qt4 && gnome2_icon_savelist
 }
 
 pkg_postinst() {
-	gnome2_icon_cache_update
+	use qt4 && gnome2_icon_cache_update
 }
 
 pkg_postrm() {
-	gnome2_icon_cache_update
+	use qt4 && gnome2_icon_cache_update
 }
