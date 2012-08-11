@@ -19,6 +19,5 @@
 <use>
 	<flag name='nodot'>removes graphviz dependency, along with dot graphs</flag>
 	<flag name='dot'>allow to create dot graphs using <pkg>media-gfx/graphviz</pkg></flag>
-	<flag name='tcl'>adds experimental support for parsing/documenting Tcl source code</flag>
 </use>
 </pkgmetadata>
