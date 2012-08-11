@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geoclue/geoclue-0.12.99.ebuild,v 1.1 2012/08/11 17:41:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geoclue/geoclue-0.12.99.ebuild,v 1.2 2012/08/11 17:46:16 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -36,6 +36,8 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-0.12.0_p20110307-use-fallback-mac.patch \
 		"${FILESDIR}"/${P}-gpsd.patch
 
+	sed -i -e '/CFLAGS/s:-g ::' configure.ac || die #399177
+
 	eautoreconf
 }
 
@@ -44,6 +46,7 @@ src_configure() {
 	# Gypsy has multiple vulnerabilities:
 	# https://bugs.freedesktop.org/show_bug.cgi?id=33431
 	econf \
+		--disable-silent-rules \
 		$(use_enable static-libs static) \
 		--disable-schemas-compile \
 		$(use_enable gtk tests) \
