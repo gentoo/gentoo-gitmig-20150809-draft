@@ -1,34 +1,34 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-9999.ebuild,v 1.11 2012/08/11 13:57:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.3-r1.ebuild,v 1.1 2012/08/11 13:57:38 ssuominen Exp $
 
 EAPI="4"
 
-inherit bash-completion-r1 autotools git-2 toolchain-funcs
+inherit bash-completion-r1 eutils toolchain-funcs
 
 DESCRIPTION="OpenVZ ConTainers control utility"
 HOMEPAGE="http://openvz.org/"
-EGIT_REPO_URI="git://git.openvz.org/pub/${PN}
-	http://git.openvz.org/pub/${PN}"
+SRC_URI="http://download.openvz.org/utils/${PN}/${PV}/src/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
 	net-firewall/iptables
 	sys-apps/ed
 	sys-apps/iproute2
-	sys-fs/vzquota"
+	sys-fs/vzquota
+	sys-cluster/ploop"
 
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
-	# Set default OSTEMPLATE on gentoo
+	# Set default OSTEMPLATE on gentoo added
 	sed -e 's:=redhat-:=gentoo-:' -i etc/dists/default || die
-	eautoreconf
+
 	local udevdir=/lib/udev
 	has_version sys-fs/udev && udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
 	sed -i -e "s:/lib/udev:${udevdir}:" src/lib/dev.c || die

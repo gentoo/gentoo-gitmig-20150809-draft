@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/vzctl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.92 2012/07/17 05:35:02 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.93 2012/08/11 13:57:38 ssuominen Exp $
+
+*vzctl-3.3-r1 (11 Aug 2012)
+
+  11 Aug 2012; Samuli Suominen <ssuominen@gentoo.org> +vzctl-3.3-r1.ebuild,
+  vzctl-9999.ebuild:
+  Stop hardcoding /lib/udev in src/lib/dev.c and redefine udevdir for install
+  target from udev.pc pkg-config file.
 
 *vzctl-3.3 (17 Jul 2012)
 
