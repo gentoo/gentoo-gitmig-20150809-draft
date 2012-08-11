@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-2.2.0.35-r99.ebuild,v 1.5 2012/05/21 21:05:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-2.2.0.35-r99.ebuild,v 1.6 2012/08/11 18:34:28 swift Exp $
 
 EAPI=4
 inherit eutils gnome2-utils qt4-r2 pax-utils
@@ -18,7 +18,7 @@ SRC_URI="qt-static? ( http://download.skype.com/linux/${SFILENAME} )
 LICENSE="skype-eula"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="pax_kernel qt-static"
+IUSE="pax_kernel selinux qt-static"
 
 RESTRICT="mirror strip" #299368
 EMUL_VER=20120520
@@ -52,10 +52,12 @@ RDEPEND="
 			x11-libs/qt-gui:4[accessibility,dbus]
 			)
 		)
-	virtual/ttf-fonts"
+	virtual/ttf-fonts
+	selinux? ( sec-policy/selinux-skype )"
 
 # Required to get `lrelease` command for src_install()
-DEPEND="!qt-static? ( x11-libs/qt-core:4 )"
+DEPEND="!qt-static? ( x11-libs/qt-core:4 )
+	selinux? ( sec-policy/selinux-skype )"
 
 QA_EXECSTACK="opt/skype/skype"
 QA_WX_LOAD="opt/skype/skype"

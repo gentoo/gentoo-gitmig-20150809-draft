@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.0.0.8-r1.ebuild,v 1.1 2012/08/06 08:49:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.0.0.8-r1.ebuild,v 1.2 2012/08/11 18:34:28 swift Exp $
 
 EAPI=4
 inherit eutils gnome2-utils pax-utils
@@ -14,7 +14,7 @@ SRC_URI="!qt-static? ( ${SKYPE_URI}/${P}.tar.bz2 )
 LICENSE="${PN}-4.0.0.7-copyright ${PN}-4.0.0.7-third-party_attributions.txt"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="pax_kernel qt-static"
+IUSE="pax_kernel selinux qt-static"
 
 QA_PREBUILT=opt/bin/${PN}
 RESTRICT="mirror strip" #299368
@@ -49,7 +49,8 @@ RDEPEND="virtual/ttf-fonts
 			x11-libs/qt-dbus:4
 			x11-libs/qt-gui:4[accessibility,dbus]
 		)
-	)"
+	)
+	selinux? ( sec-policy/selinux-skype )"
 
 src_unpack() {
 	unpack ${A}
