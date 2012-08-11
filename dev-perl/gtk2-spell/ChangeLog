@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/gtk2-spell
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-spell/ChangeLog,v 1.29 2012/08/04 11:35:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-spell/ChangeLog,v 1.30 2012/08/11 13:01:38 maekke Exp $
+
+  11 Aug 2012; Markus Meier <maekke@gentoo.org> gtk2-spell-1.40.0.ebuild:
+  x86 stable, bug #418879
 
   04 Aug 2012; Jeroen Roovers <jer@gentoo.org> gtk2-spell-1.40.0.ebuild:
   Stable for HPPA (bug #418879).
