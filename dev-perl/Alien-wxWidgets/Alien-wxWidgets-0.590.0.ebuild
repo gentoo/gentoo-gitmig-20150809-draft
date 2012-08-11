@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-wxWidgets/Alien-wxWidgets-0.590.0.ebuild,v 1.2 2012/08/03 11:02:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-wxWidgets/Alien-wxWidgets-0.590.0.ebuild,v 1.3 2012/08/11 14:23:22 maekke Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ inherit wxwidgets perl-module
 DESCRIPTION="Building, finding and using wxWidgets binaries"
 
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~x86"
+KEYWORDS="amd64 ~ia64 x86"
 IUSE="test"
 
 RDEPEND="
