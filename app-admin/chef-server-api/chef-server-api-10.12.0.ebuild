@@ -1,12 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-server-api/chef-server-api-0.10.2.ebuild,v 1.2 2012/01/29 12:22:49 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-server-api/chef-server-api-10.12.0.ebuild,v 1.1 2012/08/11 12:47:54 hollow Exp $
 
-EAPI="2"
-USE_RUBY="ruby18"
+EAPI=4
+USE_RUBY="ruby18 ruby19"
 
 RUBY_FAKEGEM_TASK_DOC=""
-RUBY_FAKEGEM_TASK_TEST=""
+RUBY_FAKEGEM_TASK_TEST="spec"
+
+RUBY_FAKEGEM_EXTRADOC="README.rdoc"
 
 inherit ruby-fakegem
 
@@ -18,19 +20,25 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
+# specs require root access
+RESTRICT="test"
+
 RDEPEND=">=dev-db/couchdb-0.10.0
 	>=net-misc/rabbitmq-server-1.7.0"
 
 ruby_add_rdepend "~app-admin/chef-${PV}
 	>=dev-ruby/dep_selector-0.0.3
-	>=dev-ruby/json-1.4.4
-	<=dev-ruby/json-1.4.6
-	>=dev-ruby/mixlib-authentication-1.1.3
 	>=dev-ruby/merb-assets-1.1.0
+	<dev-ruby/merb-assets-1.2
 	>=dev-ruby/merb-core-1.1.0
+	<dev-ruby/merb-core-1.2
 	>=dev-ruby/merb-helpers-1.1.0
+	<dev-ruby/merb-helpers-1.2
 	>=dev-ruby/merb-param-protection-1.1.0
+	<dev-ruby/merb-param-protection-1.2
+	>=dev-ruby/mixlib-authentication-1.1.3
 	>=dev-ruby/uuidtools-2.1.1
+	<dev-ruby/uuidtools-2.2
 	www-servers/thin"
 
 each_ruby_install() {
