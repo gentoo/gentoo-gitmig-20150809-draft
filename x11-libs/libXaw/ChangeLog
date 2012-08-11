@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libXaw
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw/ChangeLog,v 1.104 2012/07/12 17:44:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw/ChangeLog,v 1.105 2012/08/11 17:17:38 mattst88 Exp $
+
+*libXaw-1.0.11-r1 (11 Aug 2012)
+
+  11 Aug 2012; Matt Turner <mattst88@gentoo.org> +libXaw-1.0.11-r1.ebuild,
+  metadata.xml:
+  Add deprecated USE flag to control Xaw6 library.
 
   12 Jul 2012; Brent Baude <ranger@gentoo.org> libXaw-1.0.11.ebuild:
   Marking libXaw-1.0.11 ppc stable for bug 419473
@@ -368,4 +374,3 @@
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +libXaw-0.99.0.ebuild:
   Initial commit for modular X.
-
