@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/etckeeper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/ChangeLog,v 1.6 2012/07/24 21:18:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/ChangeLog,v 1.7 2012/08/11 16:05:37 hasufell Exp $
+
+  11 Aug 2012; Julian Ospald <hasufell@gentoo.org> +files/99etckeeper,
+  etckeeper-0.63.ebuild:
+  make deps more logical, add prefix support wrt #430952 by heroxbd
 
   24 Jul 2012; Markos Chandras <hwoarang@gentoo.org> etckeeper-0.63.ebuild:
   Stable on amd64 wrt bug #427656
