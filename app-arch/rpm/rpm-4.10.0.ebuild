@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.10.0.ebuild,v 1.7 2012/08/08 22:29:31 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.10.0.ebuild,v 1.8 2012/08/11 18:26:03 swift Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86"
 
-IUSE="nls python doc caps lua acl"
+IUSE="nls python doc caps lua acl selinux"
 
 RDEPEND="!app-arch/rpm5
 	>=sys-libs/db-4.5
@@ -32,7 +32,8 @@ RDEPEND="!app-arch/rpm5
 	nls? ( virtual/libintl )
 	lua? ( >=dev-lang/lua-5.1.0[deprecated] )
 	acl? ( virtual/acl )
-	caps? ( >=sys-libs/libcap-2.0 )"
+	caps? ( >=sys-libs/libcap-2.0 )
+	selinux? ( sec-policy/selinux-rpm )"
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
