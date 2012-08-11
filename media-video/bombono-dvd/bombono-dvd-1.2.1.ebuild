@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/bombono-dvd-1.2.1.ebuild,v 1.6 2012/07/04 10:11:57 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/bombono-dvd-1.2.1.ebuild,v 1.7 2012/08/11 16:20:50 dilfridge Exp $
 
 EAPI=4
 SCONS_MIN_VERSION="0.96.1"
@@ -38,6 +38,9 @@ RDEPEND="${COMMONDEPEND}
 DEPEND="${COMMONDEPEND}
 	virtual/pkgconfig
 "
+
+RESTRICT=test
+# bug 419655
 
 PATCHES=(
 	"${FILESDIR}/${PN}-1.0.1-cflags.patch"
