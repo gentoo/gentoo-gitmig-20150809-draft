@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/parley
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/parley/ChangeLog,v 1.124 2012/08/07 11:04:54 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/parley/ChangeLog,v 1.125 2012/08/11 18:33:57 johu Exp $
+
+  11 Aug 2012; Johannes Huber <johu@gentoo.org> parley-4.9.0.ebuild:
+  Add missing runtime dep on kde-base/libkdeedu by Joost Ruis
+  <joost.ruis@sabayonlinux.org> wrt bug #430804.
 
 *parley-4.8.5 (07 Aug 2012)
 
@@ -496,4 +500,3 @@
   18 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org> +metadata.xml,
   +parley-4.0.0.ebuild:
   Added KDE 4.0.0's parley.
-
