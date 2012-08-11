@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6885 2012/08/11 00:14:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6886 2012/08/11 16:53:36 kensington Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Aug 2012; Michael Palimaka <kensington@gentoo.org> package.mask:
+  Unmask dev-util/cccc wrt bug #430250.
 
   11 Aug 2012; Michał Górny <mgorny@gentoo.org> package.mask, repo_name:
   Unmask systemd since it now uses external udev.
