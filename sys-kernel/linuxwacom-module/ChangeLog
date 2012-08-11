@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/linuxwacom-module
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linuxwacom-module/ChangeLog,v 1.3 2012/05/02 21:42:36 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linuxwacom-module/ChangeLog,v 1.4 2012/08/11 12:54:55 ssuominen Exp $
+
+*linuxwacom-module-0.8.8_p10-r1 (11 Aug 2012)
+
+  11 Aug 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +linuxwacom-module-0.8.8_p10-r1.ebuild:
+  Stop using /etc/udev which is reserved for user modified rules and read
+  udevdir value from udev.pc pkg-config file instead.
 
   02 May 2012; Jeff Horelick <jdhore@gentoo.org>
   linuxwacom-module-0.8.8_p10.ebuild:
