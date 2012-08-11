@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.7.6.1.ebuild,v 1.13 2012/05/08 10:27:47 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.7.6.1.ebuild,v 1.14 2012/08/11 09:30:03 xarthisius Exp $
 
 EAPI=4
 
@@ -115,6 +115,9 @@ src_prepare() {
 	# fix pdf doc
 	sed -i.orig -e "s:g_kowal:g kowal:" \
 		doc/maintainers.txt || die
+
+	sed -e "s/\$(DATE)/$(LC_ALL="C" LANG="C" date)/g" \
+		-i Makefile.in || die #428280
 
 	if is-flagq "-O3" ; then
 		echo
