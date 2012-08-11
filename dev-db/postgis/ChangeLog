@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/postgis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.68 2012/07/25 12:41:46 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.69 2012/08/11 15:26:08 maekke Exp $
+
+  11 Aug 2012; Markus Meier <maekke@gentoo.org> postgis-2.0.0.ebuild:
+  x86 stable, bug #420125
 
 *postgis-2.0.1 (25 Jul 2012)
 
