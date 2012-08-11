@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups-filters
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.28 2012/08/08 17:26:17 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.29 2012/08/11 09:21:41 scarabeus Exp $
+
+  11 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> cups-filters-9999.ebuild:
+  Fontembed is mit licensed.
 
   08 Aug 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   cups-filters-1.0.19-r1.ebuild, cups-filters-1.0.20.ebuild,

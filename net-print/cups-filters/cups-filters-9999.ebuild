@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-9999.ebuild,v 1.22 2012/08/08 17:26:17 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-9999.ebuild,v 1.23 2012/08/11 09:21:41 scarabeus Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ fi
 DESCRIPTION="Cups PDF filters"
 HOMEPAGE="http://www.linuxfoundation.org/collaborate/workgroups/openprinting/pdfasstandardprintjobformat"
 
-LICENSE="GPL-2"
+LICENSE="MIT GPL-2"
 SLOT="0"
 IUSE="jpeg perl png static-libs tiff"
 
