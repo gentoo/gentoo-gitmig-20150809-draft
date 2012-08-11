@@ -1,5 +1,9 @@
 # ChangeLog for sys-libs/glibc
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.872 2012/08/11 16:27:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.873 2012/08/11 16:29:11 vapier Exp $
+
+  11 Aug 2012; Mike Frysinger <vapier@gentoo.org> glibc-2.16.0.ebuild,
+  glibc-9999.ebuild:
+  Fix default hppa nptl kernel version #430904 by Hans.
 
   11 Aug 2012; Mike Frysinger <vapier@gentoo.org> glibc-2.15-r2.ebuild:
   Add some alpha love #430346.
