@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libofx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/ChangeLog,v 1.72 2012/06/30 20:01:52 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/ChangeLog,v 1.73 2012/08/11 19:01:13 ago Exp $
+
+  11 Aug 2012; Agostino Sarubbo <ago@gentoo.org> libofx-0.9.5.ebuild:
+  Stable for amd64, wrt bug #428964
 
 *libofx-0.9.5 (30 Jun 2012)
 
