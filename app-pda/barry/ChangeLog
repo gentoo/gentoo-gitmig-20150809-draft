@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/barry
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/ChangeLog,v 1.22 2012/05/22 16:39:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/ChangeLog,v 1.23 2012/08/11 16:45:51 ssuominen Exp $
+
+*barry-0.17.1-r1 (11 Aug 2012)
+
+  11 Aug 2012; Samuli Suominen <ssuominen@gentoo.org> +barry-0.17.1-r1.ebuild:
+  Query udev.pc pkg-config file for correct udevdir value.
 
   22 May 2012; Samuli Suominen <ssuominen@gentoo.org> barry-0.16.ebuild,
   barry-0.17.1.ebuild:
