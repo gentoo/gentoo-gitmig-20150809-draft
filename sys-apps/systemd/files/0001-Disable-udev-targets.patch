@@ -1,0 +1,317 @@
+From 4d6860efaaaf14a99d18812c15aa063b43fe2834 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Micha=C5=82=20G=C3=B3rny?= <mgorny@gentoo.org>
+Date: Sat, 11 Aug 2012 01:38:23 +0200
+Subject: [PATCH] Disable udev targets.
+
+---
+ Makefile.am | 183 +-----------------------------------------------------------
+ 1 file changed, 1 insertion(+), 182 deletions(-)
+
+diff --git a/Makefile.am b/Makefile.am
+index 39afb62..2126383 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -1588,12 +1588,6 @@ SUBDIRS += \
+ 	docs/libudev
+ endif
+ 
+-include_HEADERS += \
+-	src/libudev/libudev.h
+-
+-lib_LTLIBRARIES += \
+-	-ludev
+-
+ libudev_la_SOURCES =\
+ 	src/libudev/libudev-private.h \
+ 	src/libudev/libudev.c \
+@@ -1616,9 +1610,6 @@ libudev_la_LDFLAGS = \
+ libudev_la_LIBADD = \
+ 	libsystemd-shared.la
+ 
+-pkgconfiglib_DATA += \
+-	src/libudev/libudev.pc
+-
+ EXTRA_DIST += \
+ 	src/libudev/libudev.pc.in \
+ 	src/libudev/libudev.sym
+@@ -1639,12 +1630,7 @@ libudev-install-move-hook:
+ libudev-uninstall-move-hook:
+ 	rm -f $(DESTDIR)$(rootlibdir)/libudev.so*
+ 
+-INSTALL_EXEC_HOOKS += libudev-install-move-hook
+-UNINSTALL_EXEC_HOOKS += libudev-uninstall-move-hook
+-
+ # ------------------------------------------------------------------------------
+-noinst_LTLIBRARIES += \
+-	libudev-private.la
+ 
+ libudev_private_la_SOURCES =\
+ 	$(libudev_la_SOURCES) \
+@@ -1659,15 +1645,6 @@ libudev_private_la_LIBADD = \
+ 	libsystemd-shared.la
+ 
+ # ------------------------------------------------------------------------------
+-MANPAGES += \
+-	man/udev.7 \
+-	man/udevadm.8 \
+-	man/systemd-udevd.service.8
+-
+-MANPAGES_ALIAS += \
+-	man/systemd-udevd.8 \
+-	man/systemd-udevd-control.socket.8 \
+-	man/systemd-udevd-kernel.socket.8
+ 
+ man/systemd-udevd.8: man/systemd-udevd.service.8
+ man/systemd-udevd-control.socket.8: man/systemd-udevd.service.8
+@@ -1679,27 +1656,7 @@ udev-confdirs:
+ INSTALL_DATA_HOOKS += udev-confdirs
+ 
+ dist_udevrules_DATA += \
+-	rules/99-systemd.rules \
+-	rules/42-usb-hid-pm.rules \
+-	rules/50-udev-default.rules \
+-	rules/60-persistent-storage-tape.rules \
+-	rules/60-persistent-serial.rules \
+-	rules/60-persistent-input.rules \
+-	rules/60-persistent-alsa.rules \
+-	rules/60-persistent-storage.rules \
+-	rules/75-net-description.rules \
+-	rules/75-tty-description.rules \
+-	rules/78-sound-card.rules \
+-	rules/80-drivers.rules \
+-	rules/95-udev-late.rules
+-
+-udevconfdir = $(sysconfdir)/udev
+-dist_udevconf_DATA = \
+-	src/udev/udev.conf
+-
+-sharepkgconfigdir = $(datadir)/pkgconfig
+-sharepkgconfig_DATA = \
+-	src/udev/udev.pc
++	rules/99-systemd.rules
+ 
+ EXTRA_DIST += \
+ 	rules/99-systemd.rules.in \
+@@ -1729,15 +1686,6 @@ systemd-install-hook:
+ 
+ INSTALL_DATA_HOOKS += systemd-install-hook
+ 
+-bin_PROGRAMS += \
+-	udevadm
+-
+-rootlibexec_PROGRAMS += \
+-	systemd-udevd
+-
+-noinst_LTLIBRARIES += \
+-	libudev-core.la
+-
+ libudev_core_la_SOURCES = \
+ 	src/udev/udev.h \
+ 	src/udev/udev-event.c \
+@@ -1803,14 +1751,6 @@ udevadm_LDADD = \
+ 	libsystemd-shared.la
+ 
+ # ------------------------------------------------------------------------------
+-TESTS += \
+-	test/udev-test.pl \
+-	test/rules-test.sh
+-
+-noinst_PROGRAMS += \
+-	test-libudev \
+-	test-udev
+-
+ test_libudev_SOURCES = \
+ 	src/test/test-libudev.c
+ 
+@@ -1860,8 +1800,6 @@ ata_id_LDADD = \
+ 	libudev-private.la \
+ 	libsystemd-shared.la
+ 
+-udevlibexec_PROGRAMS += \
+-	ata_id
+ 
+ # ------------------------------------------------------------------------------
+ cdrom_id_SOURCES = \
+@@ -1871,12 +1809,6 @@ cdrom_id_LDADD = \
+ 	-ludev \
+ 	libsystemd-shared.la
+ 
+-udevlibexec_PROGRAMS += \
+-	cdrom_id
+-
+-dist_udevrules_DATA += \
+-	rules/60-cdrom_id.rules
+-
+ # ------------------------------------------------------------------------------
+ collect_SOURCES = \
+ 	src/udev/collect/collect.c
+@@ -1884,9 +1816,6 @@ collect_SOURCES = \
+ collect_LDADD = \
+ 	libudev-private.la
+ 
+-udevlibexec_PROGRAMS += \
+-	collect
+-
+ # ------------------------------------------------------------------------------
+ scsi_id_SOURCES =\
+ 	src/udev/scsi_id/scsi_id.c \
+@@ -1898,9 +1827,6 @@ scsi_id_LDADD = \
+ 	libudev-private.la \
+ 	libsystemd-shared.la
+ 
+-udevlibexec_PROGRAMS += \
+-	scsi_id
+-
+ EXTRA_DIST += \
+ 	src/udev/scsi_id/README
+ 
+@@ -1911,9 +1837,6 @@ v4l_id_SOURCES = \
+ v4l_id_LDADD = \
+ 	-ludev
+ 
+-udevlibexec_PROGRAMS += \
+-	v4l_id
+-
+ dist_udevrules_DATA += \
+ 	rules/60-persistent-v4l.rules
+ 
+@@ -1925,9 +1848,6 @@ accelerometer_LDADD = \
+ 	-ludev -lm \
+ 	libsystemd-shared.la
+ 
+-udevlibexec_PROGRAMS += \
+-	accelerometer
+-
+ dist_udevrules_DATA += \
+ 	rules/61-accelerometer.rules
+ 
+@@ -2111,98 +2031,11 @@ nodist_keymap_SOURCES = \
+ BUILT_SOURCES += \
+ 	$(nodist_keymap_SOURCES)
+ 
+-udevlibexec_PROGRAMS += \
+-	keymap
+-
+-dist_doc_DATA += \
+-	src/udev/keymap/README.keymap.txt
+-
+-dist_udevrules_DATA += \
+-	src/udev/keymap/95-keymap.rules \
+-	src/udev/keymap/95-keyboard-force-release.rules
+-
+-dist_udevhome_SCRIPTS = \
+-	src/udev/keymap/findkeyboards \
+-	src/udev/keymap/keyboard-force-release.sh
+-
+-TESTS += \
+-	src/udev/keymap/check-keymaps.sh
+-
+ CLEANFILES += \
+ 	src/udev/keymap/keys.txt \
+ 	src/udev/keymap/keys-from-name.gperf \
+ 	src/udev/keymap/keyboard-force-release.sh
+ 
+-udevkeymapdir = $(udevlibexecdir)/keymaps
+-dist_udevkeymap_DATA = \
+-	keymaps/acer \
+-	keymaps/acer-aspire_5720 \
+-	keymaps/acer-aspire_8930 \
+-	keymaps/acer-aspire_5920g \
+-	keymaps/acer-aspire_6920 \
+-	keymaps/acer-travelmate_c300 \
+-	keymaps/asus \
+-	keymaps/compaq-e_evo \
+-	keymaps/dell \
+-	keymaps/dell-latitude-xt2 \
+-	keymaps/everex-xt5000 \
+-	keymaps/fujitsu-amilo_li_2732 \
+-	keymaps/fujitsu-amilo_pa_2548 \
+-	keymaps/fujitsu-amilo_pro_edition_v3505 \
+-	keymaps/fujitsu-amilo_pro_v3205 \
+-	keymaps/fujitsu-amilo_si_1520 \
+-	keymaps/fujitsu-esprimo_mobile_v5 \
+-	keymaps/fujitsu-esprimo_mobile_v6 \
+-	keymaps/genius-slimstar-320 \
+-	keymaps/hewlett-packard \
+-	keymaps/hewlett-packard-2510p_2530p \
+-	keymaps/hewlett-packard-compaq_elitebook \
+-	keymaps/hewlett-packard-pavilion \
+-	keymaps/hewlett-packard-presario-2100 \
+-	keymaps/hewlett-packard-tablet \
+-	keymaps/hewlett-packard-tx2 \
+-	keymaps/ibm-thinkpad-usb-keyboard-trackpoint \
+-	keymaps/inventec-symphony_6.0_7.0 \
+-	keymaps/lenovo-3000 \
+-	keymaps/lenovo-ideapad \
+-	keymaps/lenovo-thinkpad-usb-keyboard-trackpoint \
+-	keymaps/lenovo-thinkpad_x6_tablet \
+-	keymaps/lenovo-thinkpad_x200_tablet \
+-	keymaps/lg-x110 \
+-	keymaps/logitech-wave \
+-	keymaps/logitech-wave-cordless \
+-	keymaps/logitech-wave-pro-cordless \
+-	keymaps/maxdata-pro_7000 \
+-	keymaps/medion-fid2060 \
+-	keymaps/medionnb-a555 \
+-	keymaps/micro-star \
+-	keymaps/module-asus-w3j \
+-	keymaps/module-ibm \
+-	keymaps/module-lenovo \
+-	keymaps/module-sony \
+-	keymaps/module-sony-old \
+-	keymaps/module-sony-vgn \
+-	keymaps/olpc-xo \
+-	keymaps/onkyo \
+-	keymaps/oqo-model2 \
+-	keymaps/samsung-other \
+-	keymaps/samsung-90x3a \
+-	keymaps/samsung-sq1us \
+-	keymaps/samsung-sx20s \
+-	keymaps/toshiba-satellite_a100 \
+-	keymaps/toshiba-satellite_a110 \
+-	keymaps/toshiba-satellite_m30x \
+-	keymaps/zepto-znote
+-
+-udevkeymapforcereldir = $(udevlibexecdir)/keymaps/force-release
+-dist_udevkeymapforcerel_DATA = \
+-	keymaps-force-release/dell-touchpad \
+-	keymaps-force-release/dell-xps \
+-	keymaps-force-release/hp-other \
+-	keymaps-force-release/samsung-other \
+-	keymaps-force-release/samsung-90x3a \
+-	keymaps-force-release/common-volume-keys
+-
+ src/udev/keymap/keys.txt: Makefile
+ 	$(AM_V_at)$(MKDIR_P) $(dir $@)
+ 	$(AM_V_GEN)$(CPP) $(CFLAGS) $(AM_CPPFLAGS) $(CPPFLAGS) -dM -include linux/input.h - < /dev/null | $(AWK) '/^#define[ \t]+KEY_[^ ]+[ \t]+[0-9]/ { if ($$2 != "KEY_MAX") { print $$2 } }' | sed 's/^KEY_COFFEE$$/KEY_SCREENLOCK/' > $@
+@@ -2230,12 +2063,6 @@ mtd_probe_SOURCES =  \
+ mtd_probe_CPPFLAGS = \
+ 	$(AM_CPPFLAGS)
+ 
+-dist_udevrules_DATA += \
+-	rules/75-probe_mtd.rules
+-
+-udevlibexec_PROGRAMS += \
+-	mtd_probe
+-
+ # ------------------------------------------------------------------------------
+ libsystemd_id128_la_SOURCES = \
+ 	src/libsystemd-id128/sd-id128.c
+@@ -3244,14 +3071,6 @@ systemd_multi_seat_x_LDADD = \
+ rootlibexec_PROGRAMS += \
+ 	systemd-multi-seat-x
+ 
+-dist_udevrules_DATA += \
+-	src/login/70-uaccess.rules \
+-	src/login/70-power-switch.rules
+-
+-nodist_udevrules_DATA += \
+-	src/login/71-seat.rules \
+-	src/login/73-seat-late.rules
+-
+ MANPAGES += \
+ 	man/systemd-logind.service.8 \
+ 	man/logind.conf.5 \
+-- 
+1.7.11.1
+

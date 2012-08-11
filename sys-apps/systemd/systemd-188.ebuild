@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-187.ebuild,v 1.1 2012/08/06 16:30:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-188.ebuild,v 1.1 2012/08/11 00:14:07 mgorny Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.freedesktop.org/software/systemd/${P}.tar.xz"
 LICENSE="GPL-2 LGPL-2.1 MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="acl audit cryptsetup doc gudev introspection lzma pam selinux tcpd"
+IUSE="acl audit cryptsetup lzma pam selinux tcpd"
 
 # We need to depend on sysvinit for sulogin which is used in the rescue
 # mode. Bug #399615.
@@ -23,34 +23,29 @@ MINKV="2.6.39"
 COMMON_DEPEND=">=sys-apps/dbus-1.4.10
 	>=sys-apps/kmod-5
 	>=sys-apps/util-linux-2.20
+	=sys-fs/udev-187-r3
 	sys-libs/libcap
 	acl? ( sys-apps/acl )
 	audit? ( >=sys-process/audit-2 )
 	cryptsetup? ( >=sys-fs/cryptsetup-1.4.2 )
-	gudev? ( dev-libs/glib:2 )
-	introspection? ( dev-libs/gobject-introspection )
 	lzma? ( app-arch/xz-utils )
 	pam? ( virtual/pam )
 	selinux? ( sys-libs/libselinux )
 	tcpd? ( sys-apps/tcp-wrappers )"
 
 # sysvinit for sulogin
-# udev is bundled
-# udev-init-scripts not to break systems running openrc
 RDEPEND="${COMMON_DEPEND}
 	sys-apps/hwids
 	sys-apps/sysvinit
-	>=sys-fs/udev-init-scripts-14
-	!sys-fs/udev
-	!<sys-libs/glibc-2.10"
+	!<sys-libs/glibc-2.10
+	!<sys-fs/udev-187-r3"
 DEPEND="${COMMON_RDEPEND}
 	app-arch/xz-utils
 	app-text/docbook-xsl-stylesheets
 	dev-libs/libxslt
 	dev-util/gperf
 	dev-util/intltool
-	>=sys-kernel/linux-headers-${MINKV}
-	doc? ( dev-util/gtk-doc )"
+	>=sys-kernel/linux-headers-${MINKV}"
 
 AUTOTOOLS_IN_SOURCE_BUILD=1
 
@@ -63,15 +58,17 @@ src_prepare() {
 	# systemd-analyze is for python2.7 only nowadays.
 	sed -i -e '1s/python/&2.7/' src/analyze/systemd-analyze
 
-	# change rules back to group uucp instead of dialout for now
-	sed -e '/GROUP=/s:dialout:uucp:' \
-		-i rules/*.rules || die
+	# link against external udev.
+	sed -i -e 's:libudev\.la:-ludev:' Makefile.am
 
 	local PATCHES=(
-		"${FILESDIR}"/0001-udev-add-lib-udev-rules.d-to-rules-directories.patch
+		"${FILESDIR}"/0001-Disable-udev-targets.patch
 	)
 
 	autotools-utils_src_prepare
+
+	# XXX: support it within eclass
+	eautomake
 }
 
 src_configure() {
@@ -86,16 +83,15 @@ src_configure() {
 		# this avoids dep on pciutils & usbutils
 		--with-pci-ids-path=/usr/share/misc/pci.ids
 		--with-usb-ids-path=/usr/share/misc/usb.ids
-		# firmware search path
-		--with-firmware-path=/usr/lib/firmware/updates:/usr/lib/firmware:/lib/firmware/updates:/lib/firmware
 		# make sure we get /bin:/sbin in $PATH
 		--enable-split-usr
+		# udev parts
+		--disable-introspection
+		--disable-gudev
 		$(use_enable acl)
 		$(use_enable audit)
 		$(use_enable cryptsetup libcryptsetup)
 		$(use_enable doc gtk-doc)
-		$(use_enable gudev)
-		$(use_enable introspection)
 		$(use_enable lzma xz)
 		$(use_enable pam)
 		$(use_enable selinux)
@@ -128,9 +124,9 @@ src_install() {
 	insinto /usr/lib/tmpfiles.d
 	doins "${FILESDIR}"/gentoo-run.conf
 
-	# Gentoo rules for udev.
-	insinto /usr/lib/udev/rules.d
-	doins "${FILESDIR}"/40-gentoo.rules
+	# Check whether we won't break user's system.
+	[[ -x "${D}"/bin/systemd ]] || die '/bin/systemd symlink broken, aborting.'
+	[[ -x "${D}"/usr/bin/systemd ]] || die '/usr/bin/systemd symlink broken, aborting.'
 }
 
 pkg_preinst() {
