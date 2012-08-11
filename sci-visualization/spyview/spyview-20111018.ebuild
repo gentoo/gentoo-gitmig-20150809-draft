@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/spyview/spyview-20111018.ebuild,v 1.1 2012/01/21 21:10:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/spyview/spyview-20111018.ebuild,v 1.2 2012/08/11 15:53:48 dilfridge Exp $
 
 EAPI=4
 
@@ -43,6 +43,8 @@ src_prepare() {
 	# this one leads to an insane amount of warnings
 
 	append-ldflags -L$(dirname $(fltk-config --libs))
+
+	find "${S}" -name Makefile.in -exec sed -i -e 's:-mwindows -mconsole::g' {} +
 
 	base_src_prepare
 }
