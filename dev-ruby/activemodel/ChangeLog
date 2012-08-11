@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/activemodel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activemodel/ChangeLog,v 1.37 2012/08/10 06:42:53 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activemodel/ChangeLog,v 1.38 2012/08/11 08:36:17 graaff Exp $
+
+*activemodel-3.1.8 (11 Aug 2012)
+*activemodel-3.0.17 (11 Aug 2012)
+
+  11 Aug 2012; Hans de Graaff <graaff@gentoo.org> +activemodel-3.0.17.ebuild,
+  +activemodel-3.1.8.ebuild:
+  Version bumps for security bug 430718.
 
 *activemodel-3.2.8 (10 Aug 2012)
 
