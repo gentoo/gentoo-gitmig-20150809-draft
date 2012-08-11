@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-171-r6.ebuild,v 1.9 2012/07/31 04:43:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-171-r6.ebuild,v 1.10 2012/08/11 17:03:29 ssuominen Exp $
 
 EAPI=4
 
@@ -50,7 +50,7 @@ COMMON_DEPEND="selinux? ( sys-libs/libselinux )
 	introspection? ( dev-libs/gobject-introspection )
 	action_modeswitch? ( virtual/libusb:0 )
 	>=sys-apps/util-linux-2.16
-	!<sys-libs/glibc-2.10"
+	!<sys-libs/glibc-2.12"
 
 DEPEND="${COMMON_DEPEND}
 	keymap? ( dev-util/gperf )

@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.711 2012/08/11 00:10:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.712 2012/08/11 17:03:29 ssuominen Exp $
+
+  11 Aug 2012; Samuli Suominen <ssuominen@gentoo.org> udev-164-r2.ebuild,
+  udev-171-r6.ebuild, udev-187-r1.ebuild, udev-187-r3.ebuild, udev-9999.ebuild:
+  Update sys-libs/glibc block from <2.9 to <2.12 wrt #388075 by Tiago Marques
 
   11 Aug 2012; Michał Górny <mgorny@gentoo.org> udev-187-r3.ebuild:
   Block older versions of systemd hoping for a sane migration.
