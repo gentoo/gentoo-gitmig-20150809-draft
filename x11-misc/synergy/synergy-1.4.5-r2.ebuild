@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/synergy-1.4.5-r2.ebuild,v 1.6 2012/07/19 15:59:54 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/synergy-1.4.5-r2.ebuild,v 1.7 2012/08/11 17:34:54 hasufell Exp $
 
 EAPI=4
 
-inherit eutils cmake-utils qt4-r2
+inherit eutils flag-o-matic cmake-utils qt4-r2
 
 DESCRIPTION="Lets you easily share a single mouse and keyboard between multiple computers."
 HOMEPAGE="http://synergy-foss.org/"

@@ -1,14 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/synergy-1.4.10.ebuild,v 1.1 2012/08/10 13:49:23 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/synergy-1.4.10.ebuild,v 1.2 2012/08/11 17:34:54 hasufell Exp $
 
 EAPI=4
 
-inherit eutils cmake-utils qt4-r2
+inherit eutils flag-o-matic gnome2-utils cmake-utils qt4-r2
 
 DESCRIPTION="Lets you easily share a single mouse and keyboard between multiple computers."
 HOMEPAGE="http://synergy-foss.org/"
-SRC_URI="http://${PN}.googlecode.com/files/${P}-Source.tar.gz"
+SRC_URI="http://${PN}.googlecode.com/files/${P}-Source.tar.gz
+	http://dev.gentoo.org/~hasufell/distfiles/${PN}.png"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -56,8 +57,7 @@ src_install () {
 
 	if use qt4 ; then
 		newbin bin/${PN} qsynergy
-		# FIXME: convert the .ico file to a real png instead
-		newicon src/gui/res/win/QSynergy.ico q${PN}.png
+		newicon -s 256 "${DISTDIR}"/${PN}.png q${PN}.png
 		make_desktop_entry q${PN} ${PN/s/S} q${PN} Utility;
 	fi
 
@@ -69,4 +69,16 @@ src_install () {
 	doman doc/${PN}{c,s}.1
 
 	dodoc README doc/synergy.conf.example* ChangeLog
+}
+
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
+pkg_postinst() {
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	gnome2_icon_cache_update
 }
