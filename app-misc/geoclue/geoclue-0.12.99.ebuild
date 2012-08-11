@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geoclue/geoclue-0.12.99.ebuild,v 1.2 2012/08/11 17:46:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geoclue/geoclue-0.12.99.ebuild,v 1.3 2012/08/11 19:08:59 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -19,7 +19,6 @@ REQUIRED_USE="skyhook? ( networkmanager )"
 RDEPEND=">=dev-libs/dbus-glib-0.100
 	>=dev-libs/glib-2
 	dev-libs/libxml2
-	gnome-base/gconf
 	sys-apps/dbus
 	gps? ( sci-geosciences/gpsd )
 	gtk? ( x11-libs/gtk+:2 )
