@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ultimate/ultimate-3.0.2-r2.ebuild,v 1.2 2012/05/03 06:27:13 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ultimate/ultimate-3.0.2-r2.ebuild,v 1.3 2012/08/11 14:28:40 maekke Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ DESCRIPTION="An IRCd server based on DALnet's DreamForge IRCd"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.shadow-realm.org/"
 
-KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~amd64-linux"
+KEYWORDS="~amd64 ~ppc ~sparc x86 ~amd64-linux"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="ssl"
