@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/libplist
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libplist/ChangeLog,v 1.25 2012/05/16 00:16:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libplist/ChangeLog,v 1.26 2012/08/11 18:02:33 ago Exp $
+
+  11 Aug 2012; Agostino Sarubbo <ago@gentoo.org> libplist-1.8-r1.ebuild:
+  Stable for amd64, wrt bug #423155
 
   16 May 2012; Alexis Ballier <aballier@gentoo.org> libplist-1.8-r1.ebuild:
   keyword ~amd64-fbsd
