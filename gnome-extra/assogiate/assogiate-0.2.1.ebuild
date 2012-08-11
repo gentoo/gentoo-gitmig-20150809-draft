@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/assogiate/assogiate-0.2.1.ebuild,v 1.8 2012/05/05 06:25:16 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/assogiate/assogiate-0.2.1.ebuild,v 1.9 2012/08/11 20:01:06 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -29,11 +29,17 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
 src_prepare() {
-	gnome2_src_prepare
-
 	# Fix desktop file
 	epatch "${FILESDIR}/${P}-desktop.patch"
 
 	# Fix compilation, bug #374911
 	epatch "${FILESDIR}/${P}-typedialog.patch"
+
+	# Fix building with glib-2.32, bug #417765
+	epatch "${FILESDIR}/${P}-glib-2.32.patch"
+
+	# Fix building with gcc-4.7
+	epatch "${FILESDIR}/${P}-gcc-4.7.patch"
+
+	gnome2_src_prepare
 }
