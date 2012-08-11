@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/runit/runit-2.1.1-r1.ebuild,v 1.2 2012/02/06 03:13:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/runit/runit-2.1.1-r1.ebuild,v 1.3 2012/08/11 11:11:52 heroxbd Exp $
 
 EAPI="3"
 
@@ -19,7 +19,7 @@ S=${WORKDIR}/admin/${P}/src
 
 src_prepare() {
 	# we either build everything or nothing static
-	sed -i -e 's:-static: :' src/Makefile
+	sed -i -e 's:-static: :' Makefile
 }
 
 src_configure() {
@@ -38,7 +38,7 @@ src_install() {
 
 	dobin $(<../package/commands) || die "dobin"
 	dodir /sbin
-	mv "${D}"/usr/bin/{runit-init,runit,utmpset} "${D}"/sbin/ || die "dosbin"
+	mv "${ED}"/usr/bin/{runit-init,runit,utmpset} "${ED}"/sbin/ || die "dosbin"
 
 	cd "${S}"/..
 	dodoc package/{CHANGES,README,THANKS,TODO}
