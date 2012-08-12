@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.52.ebuild,v 1.6 2012/07/25 09:05:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.52.ebuild,v 1.7 2012/08/12 22:19:18 ottxor Exp $
 
 EAPI=4
 LANGS="en es kk lt pt_BR ru"
@@ -148,7 +148,7 @@ src_install() {
 
 	if use qt4; then
 		pushd qt >/dev/null
-		emake INSTALL_ROOT="${D}"/usr install
+		emake INSTALL_ROOT="${ED}"/usr install
 
 		domenu ${PN}-qt.desktop
 

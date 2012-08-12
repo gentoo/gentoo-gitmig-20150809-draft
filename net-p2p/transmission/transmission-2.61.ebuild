@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.61.ebuild,v 1.2 2012/07/27 16:41:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.61.ebuild,v 1.3 2012/08/12 22:19:18 ottxor Exp $
 
 EAPI=4
 LANGS="en es eu kk lt pt_BR ru"
@@ -12,7 +12,7 @@ if [[ ${PV} == *9999* ]]; then
 	inherit subversion
 else
 	SRC_URI="http://download.transmissionbt.com/${PN}/files/${P}.tar.xz"
-	KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd"
+	KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux"
 fi
 
 DESCRIPTION="A Fast, Easy and Free BitTorrent client"
@@ -141,7 +141,7 @@ src_install() {
 
 	if use qt4; then
 		pushd qt >/dev/null
-		emake INSTALL_ROOT="${D}"/usr install
+		emake INSTALL_ROOT="${ED}"/usr install
 
 		domenu ${PN}-qt.desktop
 

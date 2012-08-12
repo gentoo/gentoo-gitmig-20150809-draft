@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.204 2012/07/27 16:41:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.205 2012/08/12 22:19:18 ottxor Exp $
+
+  12 Aug 2012; Christoph Junghans <ottxor@gentoo.org> transmission-2.52.ebuild,
+  transmission-2.61.ebuild, transmission-9999.ebuild:
+  added prefix keywords
 
   27 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> transmission-2.61.ebuild,
   transmission-9999.ebuild:
@@ -997,4 +1001,3 @@
   +transmission-0.5.ebuild:
   Initial import. Thanks to Eric Johney <ericjohney@gmail.com> for this ebuild
   in #124721.
-
