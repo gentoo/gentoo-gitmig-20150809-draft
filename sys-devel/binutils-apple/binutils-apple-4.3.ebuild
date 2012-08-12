@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-4.3.ebuild,v 1.2 2012/03/05 11:47:13 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-4.3.ebuild,v 1.3 2012/08/12 18:58:06 grobian Exp $
 
 EAPI="3"
 
@@ -208,12 +208,14 @@ compile_ld64() {
 compile_cctools() {
 	einfo "building ${CCTOOLS}"
 	cd "${S}"/${CCTOOLS}
+	# -j1 because it fails too often with weird errors
 	emake \
 		LIB_PRUNETRIE="-L../../${LD64}/src -lprunetrie" \
 		EFITOOLS= LTO= \
 		COMMON_SUBDIRS='libstuff ar misc otool' \
 		SUBDIRS_32= \
 		RC_CFLAGS="${CFLAGS}" OFLAG="${CFLAGS}" \
+		-j1 \
 		|| die "emake failed for the cctools"
 	cd "${S}"/${CCTOOLS}/as
 	emake \
