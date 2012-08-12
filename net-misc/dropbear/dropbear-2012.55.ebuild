@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-2012.55.ebuild,v 1.11 2012/06/29 15:54:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-2012.55.ebuild,v 1.12 2012/08/12 03:56:20 vapier Exp $
 
 EAPI="4"
 
-inherit eutils savedconfig pam
+inherit eutils savedconfig pam user
 
 DESCRIPTION="small SSH 2 client/server designed for small memory environments"
 HOMEPAGE="http://matt.ucc.asn.au/dropbear/dropbear.html"
