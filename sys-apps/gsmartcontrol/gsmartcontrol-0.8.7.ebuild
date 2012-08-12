@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gsmartcontrol/gsmartcontrol-0.8.7.ebuild,v 1.1 2012/08/12 12:33:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gsmartcontrol/gsmartcontrol-0.8.7.ebuild,v 1.2 2012/08/12 12:37:24 ssuominen Exp $
 
 EAPI=4
 inherit gnome2-utils
@@ -22,7 +22,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	test? ( dev-util/gtk-builder-convert )"
 
-DOCS="todo" # See 'dist_doc_DATA' value in Makefile.am
+DOCS="TODO" # See 'dist_doc_DATA' value in Makefile.am
 
 src_configure() {
 	econf \
