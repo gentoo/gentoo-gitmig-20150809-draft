@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.5.6-r1.ebuild,v 1.6 2012/05/05 08:58:55 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.5.6-r2.ebuild,v 1.1 2012/08/12 02:16:13 pesa Exp $
 
 EAPI=4
 
@@ -102,9 +102,9 @@ src_prepare() {
 	    -e "s!FILE(GLOB.*avidemux.*)!SET(ts_files ${avidemux_ts_files})!" \
 		"${S}/cmake/Ts.cmake" || die "sed failed"
 
-	# fix exec command wrt bug #316599 and #291453
-	sed -i -e '/^Exec/ s:\[\$e\]::' avidemux2-gtk.desktop || die
-	sed -i -e '/^Exec/ s:\(avidemux2_\)gtk:\1qt4:' avidemux2.desktop || die
+	# fix major issues in desktop files wrt bugs #291453, #316599, #430500
+	sed -i -re '/^(Exec|Path)/ s:\[\$e\]::' avidemux2-gtk.desktop || die
+	sed -i -re '/^Exec/ s:(avidemux2_)gtk:\1qt4:' avidemux2.desktop || die
 
 	# don't install Windows-only files
 	sed -i -e '/addons\/avsfilter/d' CMakeLists.txt || die
