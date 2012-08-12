@@ -1,6 +1,13 @@
 # ChangeLog for media-video/isight-firmware-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/isight-firmware-tools/ChangeLog,v 1.16 2012/04/15 15:51:51 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/isight-firmware-tools/ChangeLog,v 1.17 2012/08/12 06:42:08 ssuominen Exp $
+
+*isight-firmware-tools-1.6-r1 (12 Aug 2012)
+
+  12 Aug 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +isight-firmware-tools-1.6-r1.ebuild:
+  Read udev.pc pkg-config file and install ift-load and 70-isight.rules to
+  correct directory.
 
   15 Apr 2012; Gilles Dartiguelongue <eva@gentoo.org>
   -isight-firmware-tools-1.5.92.ebuild, -isight-firmware-tools-1.5.93.ebuild:
