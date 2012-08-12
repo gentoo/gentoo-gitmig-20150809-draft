@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw-runtime/mingw-runtime-3.20.ebuild,v 1.3 2012/08/12 04:49:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw-runtime/mingw-runtime-3.20.ebuild,v 1.4 2012/08/12 04:57:53 vapier Exp $
 
 EAPI="4"
 
@@ -70,6 +70,7 @@ src_install() {
 		emake install DESTDIR="${insdir}" || die
 		env -uRESTRICT CHOST=${CTARGET} prepallstrip
 		rm -rf "${insdir}"/usr/doc
+		docinto ${CTARGET} # Avoid collisions with other cross-compilers.
 		dodoc CONTRIBUTORS ChangeLog README TODO readme.txt
 	fi
 	is_crosscompile && dosym usr /usr/${CTARGET}/mingw
