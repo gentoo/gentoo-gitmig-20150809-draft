@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6888 2012/08/12 15:23:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6889 2012/08/12 19:48:38 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Aug 2012; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  qbittorrent-3.0.0_rc* is no more
 
   12 Aug 2012; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Fix sys-fs/mdadm mask (after recent revision bump of mdadm to 3.2.5-r1)

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14044 2012/08/12 15:23:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14045 2012/08/12 19:48:38 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -222,10 +222,6 @@ app-laptop/lenovo-sl-laptop
 # See, http://bugs.gentoo.org/380193
 # Removal in 30 days
 dev-python/sexy-python
-
-# Markos Chandras <hwoarang@gentoo.org> (02 Jul 2012)
-# Mask rc release for testing
-=net-p2p/qbittorrent-3.0.0_rc*
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> (2012/06/30)
 # masked for removal on 2012/07/28
