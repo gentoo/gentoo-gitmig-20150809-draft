@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/acr38u/acr38u-1.7.10-r1.ebuild,v 1.2 2012/05/03 18:16:38 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/acr38u/acr38u-1.7.10-r1.ebuild,v 1.3 2012/08/12 07:50:39 ssuominen Exp $
 
 EAPI=3
 
@@ -47,6 +47,6 @@ src_install() {
 	# Remove useless .la files
 	find "${D}" -name '*.la' -delete
 
-	insinto /$(get_libdir)/udev/rules.d
+	insinto /lib/udev/rules.d
 	doins "${FILESDIR}/92-pcscd-acr38u.rules"
 }
