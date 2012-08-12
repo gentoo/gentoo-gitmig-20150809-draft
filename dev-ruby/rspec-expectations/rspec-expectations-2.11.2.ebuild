@@ -1,21 +1,24 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-expectations/rspec-expectations-2.11.1.ebuild,v 1.1 2012/07/15 06:57:20 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-expectations/rspec-expectations-2.11.2.ebuild,v 1.1 2012/08/12 21:09:21 flameeyes Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ree18 ruby19 jruby"
 
-RUBY_FAKEGEM_TASK_TEST="none"
+RUBY_FAKEGEM_RECIPE_TEST="rspec"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="Changelog.md README.md"
+
+RUBY_FAKEGEM_GEMSPEC="${PN}.gemspec"
+
+RUBY_S="rspec-${PN}-*"
 
 inherit ruby-fakegem
 
 DESCRIPTION="A Behaviour Driven Development (BDD) framework for Ruby"
 HOMEPAGE="http://rspec.rubyforge.org/"
 SRC_URI="https://github.com/rspec/${PN}/tarball/v${PV} -> ${P}-git.tgz"
-RUBY_S="rspec-${PN}-*"
 
 LICENSE="MIT"
 SLOT="2"
@@ -35,8 +38,10 @@ all_ruby_prepare() {
 
 	# Remove the Gemfile to avoid running through 'bundle exec'
 	rm Gemfile || die
-}
 
-each_ruby_test() {
-	PATH="${S}/bin:${PATH}" RUBYLIB="${S}/lib" ${RUBY} -S rspec spec || die
+	# fix up the gemspecs
+	sed -i \
+		-e '/git ls/d' \
+		-e '/add_development_dependency/d' \
+		"${RUBY_FAKEGEM_GEMSPEC}" || die
 }
