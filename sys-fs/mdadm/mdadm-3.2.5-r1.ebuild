@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-3.2.5-r1.ebuild,v 1.1 2012/08/12 15:21:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-3.2.5-r1.ebuild,v 1.2 2012/08/12 15:25:08 ssuominen Exp $
 
 EAPI="4"
-inherit eutils flag-o-matic toolchain-funcs
+inherit multilib eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="A useful tool for running RAID systems - it can be used as a replacement for the raidtools"
 HOMEPAGE="http://neil.brown.name/blog/mdadm"
