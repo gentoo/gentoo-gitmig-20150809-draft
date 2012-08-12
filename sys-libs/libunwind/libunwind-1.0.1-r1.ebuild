@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libunwind/libunwind-1.0.1-r1.ebuild,v 1.5 2012/08/04 09:46:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libunwind/libunwind-1.0.1-r1.ebuild,v 1.6 2012/08/12 03:34:51 vapier Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.savannah.nongnu.org/releases/libunwind/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="7"
-KEYWORDS="amd64 ~arm ~ia64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ~arm ~ia64 ~ppc x86 ~x86-fbsd"
 IUSE="debug debug-frame static-libs"
 
 # https://savannah.nongnu.org/bugs/?22368

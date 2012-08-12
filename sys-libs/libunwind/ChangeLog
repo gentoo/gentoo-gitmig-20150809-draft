@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libunwind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libunwind/ChangeLog,v 1.23 2012/08/04 09:46:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libunwind/ChangeLog,v 1.24 2012/08/12 03:34:51 vapier Exp $
+
+  12 Aug 2012; Mike Frysinger <vapier@gentoo.org> libunwind-1.0.1-r1.ebuild:
+  Add ppc love.
 
   04 Aug 2012; Agostino Sarubbo <ago@gentoo.org> libunwind-1.0.1-r1.ebuild:
   Stable for amd64, wrt bug #427136
