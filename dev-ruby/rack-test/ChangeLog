@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rack-test
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-test/ChangeLog,v 1.21 2012/05/01 18:24:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-test/ChangeLog,v 1.22 2012/08/12 20:51:39 flameeyes Exp $
+
+  12 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> rack-test-0.6.1.ebuild:
+  Bump to EAPI 4; use the new rspec recipe for testing, and stop using bundler
+  (these last two let the test work instead of failing on a missing diff/lcs).
 
   01 May 2012; Raúl Porcel <armin76@gentoo.org> rack-test-0.5.7.ebuild:
   Drop ia64/sparc keywords
@@ -81,4 +85,3 @@
   21 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   +rack-test-0.5.3.ebuild, +metadata.xml:
   Initial import of rack-test, needed for sinatra's tests.
-
