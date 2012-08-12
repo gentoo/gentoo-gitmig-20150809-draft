@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/rawstudio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawstudio/ChangeLog,v 1.24 2012/05/05 07:00:24 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawstudio/ChangeLog,v 1.25 2012/08/12 10:01:13 ssuominen Exp $
+
+  12 Aug 2012; Samuli Suominen <ssuominen@gentoo.org> rawstudio-2.0.ebuild,
+  +files/rawstudio-2.0-g_thread_init.patch:
+  Link to -lgthread-2.0 for symbol g_thread_init wrt #424505 by Andreas Prieß
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> rawstudio-1.2.ebuild,
   rawstudio-2.0.ebuild:

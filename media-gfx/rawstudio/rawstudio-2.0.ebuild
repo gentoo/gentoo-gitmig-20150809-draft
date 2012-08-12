@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawstudio/rawstudio-2.0.ebuild,v 1.2 2012/05/05 07:00:24 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawstudio/rawstudio-2.0.ebuild,v 1.3 2012/08/12 10:01:13 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -40,7 +40,9 @@ DOCS=( AUTHORS NEWS README TODO )
 src_prepare() {
 	find . -name Makefile.am -exec sed -i -e 's:-O4:-Wall:' {} +
 	sed -i -e '/^icondir/s:icons:pixmaps:' pixmaps/Makefile.am || die
-	epatch "${FILESDIR}"/${P}-libpng15.patch
+	epatch \
+		"${FILESDIR}"/${P}-libpng15.patch \
+		"${FILESDIR}"/${P}-g_thread_init.patch
 	eautoreconf
 }
 
@@ -50,5 +52,5 @@ src_configure() {
 
 src_install() {
 	default
-	find "${ED}"usr -name '*.la' -exec rm -f {} +
+	prune_libtool_files --all
 }
