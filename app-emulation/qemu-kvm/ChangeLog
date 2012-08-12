@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.147 2012/08/06 00:03:12 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.148 2012/08/12 22:13:05 cardoe Exp $
+
+  12 Aug 2012; Doug Goldstein <cardoe@gentoo.org> qemu-kvm-9999.ebuild:
+  Switch from QA_PRESTRIPPED to QA_PREBUILT since these files are actually
+  prebuilt so that we prevent QA warnings.
 
   06 Aug 2012; Doug Goldstein <cardoe@gentoo.org> -files/65-gentoo-kvm.rules,
   -files/qemu-kvm-0.12.3-fix-crash-with-sdl.patch,

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.50 2012/07/28 22:20:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.51 2012/08/12 22:13:05 cardoe Exp $
 
 EAPI="4"
 
@@ -104,7 +104,7 @@ DEPEND="${RDEPEND}
 
 STRIP_MASK="/usr/share/qemu/palcode-clipper"
 
-QA_PRESTRIPPED="
+QA_PREBUILT="
 	usr/share/qemu/openbios-ppc
 	usr/share/qemu/openbios-sparc64
 	usr/share/qemu/openbios-sparc32
