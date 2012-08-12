@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/chunky_png/chunky_png-1.2.5.ebuild,v 1.1 2011/10/15 04:52:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/chunky_png/chunky_png-1.2.6.ebuild,v 1.1 2012/08/12 23:41:21 flameeyes Exp $
 
 EAPI=4
 
 USE_RUBY="ruby18 ree18 ruby19 jruby"
 
-RUBY_FAKEGEM_TASK_TEST="spec"
+RUBY_FAKEGEM_RECIPE_TEST="rspec"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_DOCDIR=""
@@ -25,9 +25,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-ruby_add_bdepend "test? ( dev-ruby/rspec:2 )"
-
 all_ruby_prepare() {
-	sed -i -e '/[bB]undler/s:^:#:' {spec,benchmarks}/*.rb
-	rm Gemfile
+	sed -i -e '/[bB]undler/s:^:#:' {spec,benchmarks}/*.rb || die
+	rm Gemfile* || die
 }
