@@ -13,7 +13,6 @@
 	<flag name="messaging">Build the QtMessaging module</flag>
 	<flag name="multimedia">Build the QtMultimediaKit module</flag>
 	<flag name="networkmanager">Enable NetworkManager support in QtBearer and QtSystemInfo modules</flag>
-	<flag name="opengl">Enable OpenGL support in QtMultimediaKit module</flag>
 	<flag name="organizer">Build the QtOrganizer module</flag>
 	<flag name="publishsubscribe">Build the QtPublishSubscribe module</flag>
 	<flag name="pulseaudio">Enable PulseAudio support in QtMultimediaKit module</flag>
