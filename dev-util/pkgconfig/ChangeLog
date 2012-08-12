@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pkgconfig
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.109 2012/08/12 11:49:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.110 2012/08/12 15:33:36 jer Exp $
+
+  12 Aug 2012; Jeroen Roovers <jer@gentoo.org> pkgconfig-0.27.ebuild:
+  Stable for HPPA (bug #430814).
 
   12 Aug 2012; Agostino Sarubbo <ago@gentoo.org> pkgconfig-0.27.ebuild:
   Stable for amd64, wrt bug #430814
