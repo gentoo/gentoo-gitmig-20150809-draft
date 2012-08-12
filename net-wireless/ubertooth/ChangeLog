@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/ubertooth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ChangeLog,v 1.6 2012/07/29 01:25:23 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ChangeLog,v 1.7 2012/08/12 07:38:01 ssuominen Exp $
+
+  12 Aug 2012; Samuli Suominen <ssuominen@gentoo.org>
+  ubertooth-0.0_p534.ebuild, ubertooth-9999.ebuild:
+  Fix bug 428402 again for USE flag "dfu"
 
   29 Jul 2012; Rick Farina <zerochaos@gentoo.org> ubertooth-0.0_p534.ebuild,
   ubertooth-9999.ebuild:
