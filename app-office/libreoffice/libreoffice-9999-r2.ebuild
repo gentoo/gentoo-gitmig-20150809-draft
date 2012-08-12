@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.100 2012/08/11 08:51:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.101 2012/08/12 09:00:35 scarabeus Exp $
 
 EAPI=4
 
@@ -59,7 +59,7 @@ unset DEV_URI
 # These are bundles that can't be removed for now due to huge patchsets.
 # If you want them gone, patches are welcome.
 ADDONS_SRC+=" ${ADDONS_URI}/ea91f2fb4212a21d708aced277e6e85a-vigra1.4.0.tar.gz"
-ADDONS_SRC+=" xmlsec? ( ${ADDONS_URI}/1f24ab1d39f4a51faf22244c94a6203f-xmlsec1-1.2.14.tar.gz )" # modifies source code
+ADDONS_SRC+=" ${ADDONS_URI}/1f24ab1d39f4a51faf22244c94a6203f-xmlsec1-1.2.14.tar.gz" # modifies source code
 ADDONS_SRC+=" java? ( ${ADDONS_URI}/17410483b5b5f267aa18b7e00b65e6e0-hsqldb_1_8_0.zip )"
 ADDONS_SRC+=" java? ( ${ADDONS_URI}/ada24d37d8d638b3d8a9985e80bc2978-source-9.0.0.7-bj.zip )"
 ADDONS_SRC+=" libreoffice_extensions_wiki-publisher? ( ${ADDONS_URI}/a7983f859eafb2677d7ff386a023bc40-xsltml_2.1.2.zip )" # no release for 8 years, should we package it?
@@ -73,7 +73,7 @@ unset ADDONS_SRC
 
 IUSE="binfilter binfilterdebug +branding +cups dbus eds gnome +graphite
 gstreamer +gtk gtk3 jemalloc kde mysql odk opengl postgres svg test +vba
-+webdav +xmlsec"
++webdav"
 
 LO_EXTS="nlpsolver pdfimport presenter-console presenter-minimizer scripting-beanshell scripting-javascript wiki-publisher"
 # Unpackaged separate extensions:
@@ -92,10 +92,6 @@ LICENSE="|| ( LGPL-3 MPL-1.1 )"
 SLOT="0"
 [[ ${PV} == *9999* ]] || KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 
-NSS_DEPEND="
-	>=dev-libs/nspr-4.8.8
-	>=dev-libs/nss-3.12.9
-"
 COMMON_DEPEND="
 	app-arch/zip
 	app-arch/unzip
@@ -114,6 +110,8 @@ COMMON_DEPEND="
 	>=dev-libs/glib-2.28
 	>=dev-libs/hyphen-2.7.1
 	>=dev-libs/icu-4.8.1.1
+	>=dev-libs/nspr-4.8.8
+	>=dev-libs/nss-3.12.9
 	>=dev-lang/perl-5.0
 	>=dev-libs/openssl-1.0.0d
 	>=dev-libs/redland-1.0.14[ssl]
@@ -162,7 +160,6 @@ COMMON_DEPEND="
 	postgres? ( >=dev-db/postgresql-base-9.0[kerberos] )
 	svg? ( gnome-base/librsvg )
 	webdav? ( net-libs/neon )
-	xmlsec? ( ${NSS_DEPEND} )
 "
 
 RDEPEND="${COMMON_DEPEND}
@@ -452,6 +449,7 @@ src_configure() {
 		--enable-randr-link \
 		--enable-release-build \
 		--enable-unix-qstart-libpng \
+		--enable-xmlsec \
 		--disable-ccache \
 		--disable-crashdump \
 		--disable-dependency-tracking \
@@ -510,7 +508,6 @@ src_configure() {
 		$(use_enable test linkoo) \
 		$(use_enable vba) \
 		$(use_enable webdav neon) \
-		$(use_enable xmlsec) \
 		$(use_with java) \
 		$(use_with mysql system-mysql-cppconn) \
 		$(use_with odk doxygen) \

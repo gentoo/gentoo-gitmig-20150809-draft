@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.355 2012/08/11 08:51:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.356 2012/08/12 09:00:35 scarabeus Exp $
+
+  12 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-3.6.9999.ebuild,
+  libreoffice-9999-r2.ebuild:
+  Hard enable xmlsec as build fails when it gets disabled. Fixes bug#428328.
 
   11 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-3.6.0.4.ebuild,
   libreoffice-3.6.9999.ebuild, libreoffice-9999-r2.ebuild:
