@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-9999.ebuild,v 1.5 2012/08/01 21:51:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-9999.ebuild,v 1.6 2012/08/12 08:18:33 ssuominen Exp $
 
 EAPI="4"
 
@@ -46,6 +46,7 @@ RDEPEND="X? ( dev-python/pygtk:2 )
 	ntp? ( || ( net-misc/ntp net-misc/chrony ) )
 	qt4? ( x11-libs/qt-gui:4 )"
 DEPEND="${RDEPEND}
+	virtual/pkgconfig
 	test? ( sys-devel/bc )"
 
 # xml packages are for man page generation
@@ -89,6 +90,10 @@ src_prepare() {
 			"${FILESDIR}"/${PN}-3.3-setup.py > setup.py || die
 		distutils_src_prepare
 	fi
+
+	local udevdir=/lib/udev
+	has_version sys-fs/udev && udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
+	sed -i -e "s:/lib/udev:${udevdir}:" gpsd.rules SConstruct || die
 }
 
 src_configure() {
