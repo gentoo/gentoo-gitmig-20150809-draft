@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/bittorrent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.150 2012/03/06 21:55:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.151 2012/08/12 23:56:48 ottxor Exp $
+
+  12 Aug 2012; Christoph Junghans <ottxor@gentoo.org>
+  bittorrent-4.4.0-r1.ebuild, bittorrent-4.4.0-r2.ebuild:
+  add prefix support (bug #431146)
 
   06 Mar 2012; Brent Baude <ranger@gentoo.org> bittorrent-4.4.0-r2.ebuild:
   Marking bittorrent-4.4.0-r2 ppc64 for bug 390591
@@ -634,4 +638,3 @@
 
   04 Nov 2002; Bruce A. Locke <blocke@shivan.org> bittorrent-3.0.1.ebuild:
   Initial version.
-

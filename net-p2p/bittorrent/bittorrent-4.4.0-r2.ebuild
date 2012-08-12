@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-4.4.0-r2.ebuild,v 1.10 2012/03/06 21:55:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-4.4.0-r2.ebuild,v 1.11 2012/08/12 23:56:48 ottxor Exp $
 
 EAPI="3"
 
@@ -24,8 +24,8 @@ SRC_URI="http://www.bittorrent.com/dl/${MY_P}.tar.gz"
 
 LICENSE="BitTorrent"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
-IUSE="gtk"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-solaris"
+IUSE="aqua gtk"
 
 RDEPEND=">=dev-python/pycrypto-2.0
 	gtk? (	>=x11-libs/gtk+-2.6:2
@@ -65,8 +65,8 @@ src_install() {
 	if use gtk; then
 		doicon images/bittorrent.ico
 		domenu "${FILESDIR}"/${PN}.desktop
-	else
-		rm -f "${D}"usr/bin/{bit,make}torrent
+	elif use !aqua; then
+		rm -f "${ED}"usr/bin/{bit,make}torrent
 	fi
 
 	insinto /etc/pki/bittorrent/
