@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-mobility/qt-mobility-1.2.2_p20120403.ebuild,v 1.3 2012/06/21 13:45:40 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-mobility/qt-mobility-1.2.2_p20120403.ebuild,v 1.4 2012/08/12 01:42:32 pesa Exp $
 
 EAPI=4
 
@@ -36,6 +36,7 @@ RDEPEND="
 		>=x11-libs/qt-dbus-4.7.0:4
 		bluetooth? ( net-wireless/bluez )
 	)
+	contacts? ( >=x11-libs/qt-gui-4.7.0:4 )
 	gallery? ( >=x11-libs/qt-dbus-4.7.0:4 )
 	location? (
 		>=x11-libs/qt-declarative-4.7.0:4
