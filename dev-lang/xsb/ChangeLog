@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/xsb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.41 2012/08/11 12:47:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.42 2012/08/12 08:41:35 keri Exp $
+
+  10 Aug 2012; <keri@gentoo.org> -xsb-3.3.2.ebuild, -xsb-3.3.3.ebuild:
+  Remove old versions
 
   11 Aug 2012; Markus Meier <maekke@gentoo.org> xsb-3.3.5.ebuild:
   x86 stable, bug #418735
