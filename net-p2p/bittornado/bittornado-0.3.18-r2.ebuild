@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/bittornado-0.3.18-r2.ebuild,v 1.4 2011/12/09 15:44:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/bittornado-0.3.18-r2.ebuild,v 1.5 2012/08/12 22:07:25 ottxor Exp $
 
 # note: wxGTK interface has been removed wrt #391685. this ebuild is only for
 # cmdline tools as is.
@@ -19,7 +19,7 @@ SRC_URI="http://download2.bittornado.com/download/${MY_P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 
-KEYWORDS="alpha amd64 ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ppc ppc64 ~sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE=""
 
 RDEPEND="dev-python/pycrypto"
@@ -48,7 +48,7 @@ src_install() {
 	distutils_src_install
 
 	# get rid of any reference to the not-installed gui version
-	rm "${D}"/usr/bin/*gui.py
+	rm "${ED}"/usr/bin/*gui.py
 
 	newconfd "${FILESDIR}"/bttrack.conf bttrack
 	newinitd "${FILESDIR}"/bttrack.rc bttrack
