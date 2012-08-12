@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/parsetree
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parsetree/ChangeLog,v 1.47 2012/04/09 13:15:52 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parsetree/ChangeLog,v 1.48 2012/08/12 23:58:20 flameeyes Exp $
+
+*parsetree-3.0.9 (12 Aug 2012)
+
+  12 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> +parsetree-3.0.9.ebuild:
+  Version bump.
 
   09 Apr 2012; Hans de Graaff <graaff@gentoo.org> parsetree-3.0.8.ebuild:
   Account for new ruby-inline paths and adjust dependency accordingly. Fixes
@@ -197,4 +202,3 @@
   13 Apr 2007; Robin H. Johnson <robbat2@gentoo.org>
   +parsetree-1.7.0.ebuild:
   Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
-
