@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/leechcraft-sidebar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-sidebar/ChangeLog,v 1.7 2012/07/19 20:08:45 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-sidebar/ChangeLog,v 1.8 2012/08/12 08:30:32 maksbotan Exp $
+
+  12 Aug 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  leechcraft-sidebar-0.5.70.ebuild, leechcraft-sidebar-0.5.75.ebuild,
+  leechcraft-sidebar-9999.ebuild:
+  Change deps on leechcraft-core from = to ~
 
 *leechcraft-sidebar-0.5.75 (19 Jul 2012)
 
