@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.31.ebuild,v 1.4 2012/08/11 18:27:05 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.31.ebuild,v 1.5 2012/08/12 12:15:27 ago Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.lighttpd.net/lighttpd/releases-1.4.x/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="bzip2 doc fam gdbm ipv6 kerberos ldap libev lua minimal mmap memcache mysql pcre php rrdtool selinux ssl test uploadprogress webdav xattr zlib"
 
 REQUIRED_USE="kerberos? ( ssl )"
