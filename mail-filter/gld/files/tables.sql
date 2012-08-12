@@ -1,5 +1,5 @@
 CREATE TABLE `greylist` (
-	`ip` CHAR( 16 ) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL COMMENT 'IP of Sending Host',
+	`ip` CHAR( 39 ) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL COMMENT 'IP of Sending Host',
 	`sender` CHAR( 242 ) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL COMMENT 'Address of Sender',
 	`recipient` CHAR( 242 ) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL COMMENT 'Address of Recipient',
 	`first` INT( 11 ) NOT NULL DEFAULT '0' COMMENT 'Date, when this Sender has first been seen',
