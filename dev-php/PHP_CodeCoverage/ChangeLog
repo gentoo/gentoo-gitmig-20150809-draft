@@ -1,6 +1,9 @@
-# ChangeLog for dev-php/php-codecoverage
+# ChangeLog for dev-php/PHP_CodeCoverage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PHP_CodeCoverage/ChangeLog,v 1.4 2012/06/24 18:18:53 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PHP_CodeCoverage/ChangeLog,v 1.5 2012/08/12 11:47:09 ago Exp $
+
+  12 Aug 2012; Agostino Sarubbo <ago@gentoo.org> PHP_CodeCoverage-1.1.2.ebuild:
+  Stable for amd64, wrt bug #430576
 
   24 Jun 2012; Ole Markus With <olemarkus@gentoo.org>
   -PHP_CodeCoverage-1.1.0.ebuild:
