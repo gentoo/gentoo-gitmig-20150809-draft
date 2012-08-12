@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.16.0.ebuild,v 1.3 2012/08/12 03:11:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.16.0.ebuild,v 1.4 2012/08/12 04:45:49 vapier Exp $
 
 inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib unpacker multiprocessing
 
@@ -8,7 +8,7 @@ DESCRIPTION="GNU libc6 (also called glibc2) C library"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
 LICENSE="LGPL-2"
-#KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+#KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 RESTRICT="strip" # strip ourself #46186
 EMULTILIB_PKG="true"
 
