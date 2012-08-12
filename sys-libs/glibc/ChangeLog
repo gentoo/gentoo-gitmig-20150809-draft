@@ -1,5 +1,9 @@
 # ChangeLog for sys-libs/glibc
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.876 2012/08/12 04:45:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.877 2012/08/12 05:44:34 vapier Exp $
+
+  12 Aug 2012; Mike Frysinger <vapier@gentoo.org> files/eblits/src_unpack.eblit:
+  Do not use the -lgcc_eh hack with glibc-2.17+ since its been addressed
+  upstream.
 
   12 Aug 2012; Mike Frysinger <vapier@gentoo.org> glibc-2.16.0.ebuild:
   Add alpha/arm keywords since it builds for both.
