@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ices/ices-2.0.1-r1.ebuild,v 1.6 2012/05/05 03:20:41 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ices/ices-2.0.1-r1.ebuild,v 1.7 2012/08/12 13:21:19 chithanh Exp $
 
-inherit eutils
+inherit eutils user
 
 DESCRIPTION="Icecast OGG streaming client, supports on the fly re-encoding."
 HOMEPAGE="http://www.icecast.org/ices.php"
@@ -10,7 +10,7 @@ SRC_URI="http://downloads.xiph.org/releases/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ppc64 sparc x86"
+KEYWORDS="~alpha amd64 ~arm ppc64 sparc x86"
 IUSE=""
 
 RDEPEND="dev-libs/libxml2

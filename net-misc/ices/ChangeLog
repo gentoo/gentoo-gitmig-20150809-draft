@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ices
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ices/ChangeLog,v 1.27 2012/05/05 03:20:41 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ices/ChangeLog,v 1.28 2012/08/12 13:21:19 chithanh Exp $
+
+  12 Aug 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  ices-2.0.1-r1.ebuild:
+  Keyword ~arm, inherit user.eclass.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> ices-2.0.1-r1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
