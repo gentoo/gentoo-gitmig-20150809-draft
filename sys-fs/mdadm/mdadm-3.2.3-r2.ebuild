@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-3.2.3-r2.ebuild,v 1.2 2012/08/12 15:25:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-3.2.3-r2.ebuild,v 1.3 2012/08/12 15:40:26 ssuominen Exp $
 
 EAPI="2"
 inherit multilib eutils flag-o-matic toolchain-funcs
@@ -25,12 +25,14 @@ RESTRICT="test"
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.2.1-mdassemble.patch #211426
 	epatch "${FILESDIR}"/${PN}-3.2.3-segv-assemble.patch #211426
-	epatch "${FILESDIR}"/${PN}-3.2.x-udevdir.patch #430900
+
+	local udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
+	has_version sys-fs/udev && udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
+	sed -i -e "s:/lib/udev:${udevdir}:" Makefile || die #430900
 }
 
 mdadm_emake() {
 	emake \
-		PKG_CONFIG="$(tc-getPKG_CONFIG)" \
 		CC="$(tc-getCC)" \
 		CWFLAGS="-Wall" \
 		CXFLAGS="${CFLAGS}" \
