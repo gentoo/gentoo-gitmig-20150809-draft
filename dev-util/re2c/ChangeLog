@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/re2c
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/re2c/ChangeLog,v 1.64 2012/08/10 14:58:18 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/re2c/ChangeLog,v 1.65 2012/08/12 13:47:13 blueness Exp $
+
+  12 Aug 2012; Anthony G. Basile <blueness@gentoo.org> re2c-0.13.5-r1.ebuild:
+  Stable ppc, bug #418963
 
   10 Aug 2012; Johannes Huber <johu@gentoo.org> re2c-0.13.5-r1.ebuild:
   Stable for x86, wrt bug #418963
