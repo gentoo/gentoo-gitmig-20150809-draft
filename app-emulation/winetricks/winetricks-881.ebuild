@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winetricks/winetricks-696.ebuild,v 1.1 2011/09/22 12:48:28 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winetricks/winetricks-881.ebuild,v 1.1 2012/08/12 21:06:16 tetromino Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ else
 	KEYWORDS="~amd64 ~x86"
 fi
 
-DESCRIPTION="easy way to install DLLs needed to work around problems in Wine"
+DESCRIPTION="Easy way to install DLLs needed to work around problems in Wine"
 HOMEPAGE="http://code.google.com/p/winetricks/ http://wiki.winehq.org/winetricks"
 
 LICENSE="LGPL-2.1"
