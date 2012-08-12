@@ -1,6 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw-runtime/mingw-runtime-3.20.ebuild,v 1.2 2012/01/02 07:15:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw-runtime/mingw-runtime-3.20.ebuild,v 1.3 2012/08/12 04:49:07 vapier Exp $
+
+EAPI="4"
 
 export CBUILD=${CBUILD:-${CHOST}}
 export CTARGET=${CTARGET:-${CHOST}}
@@ -10,7 +12,7 @@ if [[ ${CTARGET} == ${CHOST} ]] ; then
 	fi
 fi
 
-inherit flag-o-matic
+inherit flag-o-matic autotools
 
 MY_P="mingwrt-${PV}-mingw32"
 DESCRIPTION="Free Win32 runtime and import library definitions"
@@ -20,8 +22,7 @@ SRC_URI="mirror://sourceforge/mingw/${MY_P}-src.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-# See https://bugs.gentoo.org/395893
-#KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="crosscompile_opts_headers-only"
 RESTRICT="strip"
 
@@ -40,23 +41,21 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	sed -i \
-		-e "/W32API_INCLUDE/s:=.*:='-I /usr/${CTARGET}/usr/include':" \
-		$(find -name configure) || die
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-3.20-LDBL_MIN_EXP.patch #395893
+	eautoconf
 	sed -i \
 		-e '/^install_dlls_host:/s:$: install-dirs:' \
 		Makefile.in || die # fix parallel install
 }
 
-src_compile() {
+src_configure() {
 	just_headers && return 0
 
 	CHOST=${CTARGET} strip-unsupported-flags
-	econf --host=${CTARGET} || die
-	emake || die
+	econf \
+		--host=${CTARGET} \
+		--with-w32api-srcdir="/usr/${CTARGET}/usr"
 }
 
 src_install() {
