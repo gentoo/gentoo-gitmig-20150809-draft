@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gsmartcontrol/gsmartcontrol-0.8.7.ebuild,v 1.2 2012/08/12 12:37:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gsmartcontrol/gsmartcontrol-0.8.7.ebuild,v 1.3 2012/08/12 12:42:09 ssuominen Exp $
 
 EAPI=4
 inherit gnome2-utils
@@ -15,10 +15,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
-RDEPEND="dev-cpp/gtkmm:2.4
+COMMON_DEPEND="dev-cpp/gtkmm:2.4
 	dev-libs/libpcre
 	sys-apps/smartmontools"
-DEPEND="${RDEPEND}
+RDEPEND="${COMMON_DEPEND}
+	x11-apps/xmessage"
+DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 	test? ( dev-util/gtk-builder-convert )"
 
