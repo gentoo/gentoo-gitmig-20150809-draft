@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.52 2012/08/12 23:03:17 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.1.1-r2.ebuild,v 1.1 2012/08/12 23:03:17 cardoe Exp $
 
 EAPI="4"
 
@@ -247,6 +247,7 @@ src_configure() {
 		--disable-werror \
 		--enable-vnc-jpeg \
 		--enable-vnc-png \
+		--enable-vnc-thread \
 		--python=python2 \
 		$(use_enable aio linux-aio) \
 		$(use_enable bluetooth bluez) \
@@ -280,7 +281,6 @@ src_configure() {
 		$(use_enable virtfs) \
 		$(use_enable xattr attr) \
 		$(use_enable xen) \
-		$(use_enable xen xen-pci-passthrough) \
 		$(use_enable xfs xfsctl) \
 		--audio-drv-list="${audio_opts}" \
 		--target-list="${softmmu_targets} ${user_targets}" \
