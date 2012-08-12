@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/daemons
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemons/ChangeLog,v 1.76 2012/07/26 12:25:28 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemons/ChangeLog,v 1.77 2012/08/12 23:13:25 flameeyes Exp $
+
+*daemons-1.1.9 (12 Aug 2012)
+
+  12 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> +daemons-1.1.9.ebuild:
+  Version bump.
 
   26 Jul 2012; Hans de Graaff <graaff@gentoo.org> -daemons-1.1.3.ebuild:
   Cleanup.
@@ -285,4 +290,3 @@
   17 Nov 2005; Michael Kohl <citizen428@gentoo.org> +metadata.xml,
   +daemons-0.4.2.ebuild:
   Initial import.
-
