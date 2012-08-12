@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/spectools/spectools-9999.ebuild,v 1.6 2012/08/12 08:43:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/spectools/spectools-2011.08.1-r2.ebuild,v 1.1 2012/08/12 08:43:43 ssuominen Exp $
 
 EAPI=4
 inherit toolchain-funcs
@@ -12,9 +12,8 @@ MY_P="${MY_PN}-${MY_PV}"
 S=${WORKDIR}/${MY_P}
 
 if [[ ${PV} == "9999" ]] ; then
-		EGIT_REPO_URI="https://www.kismetwireless.net/${PN}.git"
-		SRC_URI=""
-		inherit git-2
+	ESVN_REPO_URI="https://www.kismetwireless.net/code/svn/tools/${PN}"
+		inherit subversion
 		KEYWORDS=""
 else
 		SRC_URI="http://www.kismetwireless.net/code/${MY_P}.tar.gz"
@@ -26,7 +25,7 @@ HOMEPAGE="http://www.kismetwireless.net/spectools/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="debug ncurses gtk"
+IUSE="ncurses gtk"
 
 RDEPEND="virtual/libusb:0
 	ncurses? ( sys-libs/ncurses )
@@ -41,13 +40,15 @@ DEPEND="${RDEPEND}
 src_compile() {
 	emake depend
 
-	emake spectool_net
+	emake spectool_net spectool_raw
 
-	use debug && emake spectool_raw
+	if use ncurses; then
+		emake spectool_curses
+	fi
 
-	use ncurses && emake spectool_curses
-
-	use gtk && emake spectool_gtk
+	if use gtk; then
+		emake spectool_gtk
+	fi
 
 	#if use maemo; then
 	#	emake spectool_hildon usbcontrol \
@@ -56,8 +57,7 @@ src_compile() {
 }
 
 src_install() {
-	dobin spectool_net
-	use debug && dobin spectool_raw
+	dobin spectool_net spectool_raw
 	use ncurses && dobin spectool_curses
 	use gtk && dobin spectool_gtk
 
