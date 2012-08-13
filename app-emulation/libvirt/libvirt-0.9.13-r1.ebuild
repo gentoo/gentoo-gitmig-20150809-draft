@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.13-r1.ebuild,v 1.1 2012/08/13 03:17:30 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.13-r1.ebuild,v 1.2 2012/08/13 04:53:10 cardoe Exp $
 
 EAPI=4
 
@@ -117,7 +117,6 @@ LXC_CONFIG_CHECK="
 	~NAMESPACES
 	~UTS_NS
 	~IPC_NS
-	~USER_NS
 	~PID_NS
 	~NET_NS
 	~DEVPTS_MULTIPLE_INSTANCES
@@ -156,6 +155,7 @@ pkg_setup() {
 
 	CONFIG_CHECK=""
 	use lxc && CONFIG_CHECK+="${LXC_CONFIG_CHECK}"
+	kernel_is lt 3 5 && use lxc && CONFIG_CHECK+=" ~USER_NS"
 	use macvtap && CONFIG_CHECK+="${MACVTAP}"
 	use virt-network && CONFIG_CHECK+="${VIRTNET_CONFIG_CHECK}"
 	if [[ -n ${CONFIG_CHECK} ]]; then
