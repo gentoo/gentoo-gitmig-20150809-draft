@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-22.0.1221.1.ebuild,v 1.1 2012/08/02 22:52:35 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-22.0.1229.2-r1.ebuild,v 1.1 2012/08/13 07:11:05 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -41,6 +41,7 @@ RDEPEND="app-arch/bzip2
 	media-libs/flac
 	>=media-libs/libjpeg-turbo-1.2.0-r1
 	media-libs/libpng
+	>=media-libs/libwebp-0.2.0_rc1
 	media-libs/speex
 	pulseaudio? ( media-sound/pulseaudio )
 	sys-fs/udev
@@ -112,9 +113,6 @@ src_prepare() {
 	# Fix build without NaCl glibc toolchain.
 	epatch "${FILESDIR}/${PN}-ppapi-r0.patch"
 
-	# Bug 427438.
-	epatch "${FILESDIR}/${PN}-bison-2.6-r0.patch"
-
 	epatch_user
 
 	# Remove most bundled libraries. Some are still needed.
@@ -140,7 +138,6 @@ src_prepare() {
 		\! -path 'third_party/libusb/libusb.h' \
 		\! -path 'third_party/libva/*' \
 		\! -path 'third_party/libvpx/*' \
-		\! -path 'third_party/libwebp/*' \
 		\! -path 'third_party/libxml/chromium/*' \
 		\! -path 'third_party/libXNVCtrl/*' \
 		\! -path 'third_party/libyuv/*' \
@@ -153,6 +150,7 @@ src_prepare() {
 		\! -path 'third_party/ots/*' \
 		\! -path 'third_party/protobuf/*' \
 		\! -path 'third_party/qcms/*' \
+		\! -path 'third_party/re2/*' \
 		\! -path 'third_party/scons-2.0.1/*' \
 		\! -path 'third_party/sfntly/*' \
 		\! -path 'third_party/skia/*' \
@@ -212,8 +210,6 @@ src_configure() {
 	# TODO: use_system_ssl (http://crbug.com/58087).
 	# TODO: use_system_sqlite (http://crbug.com/22208).
 	# TODO: use_system_vpx
-	# TODO: use_system_webp (https://chromiumcodereview.appspot.com/10496016
-	#       needs to become part of webp release)
 	myconf+="
 		-Duse_system_bzip2=1
 		-Duse_system_flac=1
@@ -222,6 +218,7 @@ src_configure() {
 		-Duse_system_libjpeg=1
 		-Duse_system_libpng=1
 		-Duse_system_libusb=1
+		-Duse_system_libwebp=1
 		-Duse_system_libxml=1
 		-Duse_system_speex=1
 		-Duse_system_v8=1
@@ -239,6 +236,11 @@ src_configure() {
 		$(gyp_use kerberos)
 		$(gyp_use pulseaudio)
 		$(gyp_use selinux selinux)"
+
+	# Use explicit library dependencies instead of dlopen.
+	# This makes breakages easier to detect by revdep-rebuild.
+	myconf+="
+		-Dlinux_link_gsettings=1"
 
 	if ! use selinux; then
 		# Enable SUID sandbox.
