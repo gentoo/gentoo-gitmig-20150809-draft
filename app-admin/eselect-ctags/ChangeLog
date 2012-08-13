@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-ctags
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ctags/ChangeLog,v 1.58 2012/08/13 12:28:36 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ctags/ChangeLog,v 1.59 2012/08/13 18:35:35 blueness Exp $
+
+  13 Aug 2012; Anthony G. Basile <blueness@gentoo.org>
+  eselect-ctags-1.14.ebuild:
+  Stable arm, bug #431206
 
   13 Aug 2012; Ulrich Müller <ulm@gentoo.org> eselect-ctags-1.14.ebuild:
   Drop keywords to unstable again, we need to be in sync with eselect-emacs.
