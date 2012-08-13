@@ -1,5 +1,8 @@
 # ChangeLog for sys-libs/glibc
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.877 2012/08/12 05:44:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.878 2012/08/13 15:08:28 vapier Exp $
+
+  13 Aug 2012; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  Document what USE=gd does.
 
   12 Aug 2012; Mike Frysinger <vapier@gentoo.org> files/eblits/src_unpack.eblit:
   Do not use the -lgcc_eh hack with glibc-2.17+ since its been addressed
