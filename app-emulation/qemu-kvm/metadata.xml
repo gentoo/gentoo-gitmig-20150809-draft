@@ -8,18 +8,14 @@
     <flag name='brltty'>Adds support for braille displays using brltty</flag>
 	<flag name='curl'>Support ISOs / -cdrom directives vis HTTP or HTTPS.</flag>
     <flag name='fdt'>Enables firmware device tree support</flag>
-    <flag name='jpeg'>Enable JPEG compression for the VNC console server</flag>
 	<flag name='mixemu'>Enable audio mixer emulation. On Fedora, known to cause performance problems when using SDL output and ALSA. For OSS, locks the sound device from other applications.</flag>
     <flag name='ncurses'>Enable the ncurses-based console</flag>
-    <flag name='nss'>Build support for Smartcard devices emulation using <pkg>dev-libs/nss</pkg></flag>
-    <flag name='png'>Enable PNG compression for the VNC console server</flag>
     <flag name='pulseaudio'>Enable pulseaudio output for sound emulation</flag>
     <flag name='qemu-ifup'>Provides the qemu-ifup script for use with QEMU's
 		built in bridging</flag>
     <flag name='rbd'>Enable rados block device backend support, see http://ceph.newdream.net/wiki/QEMU-RBD</flag>
     <flag name='sdl'>Enable the SDL-based console</flag>
     <flag name='spice'>Enable Spice protocol support via <pkg>app-emulation/spice</pkg></flag>
-    <flag name='ssl'>Enable TLS support for the VNC console server</flag>
 	<flag name='systemtap'>Enable SystemTAP/DTrace tracing</flag>
 	<flag name='tci'>Enable the TCG Interpreter which can speed up or slowdown workloads depending on the host and guest CPUs being emulated. In the future it will be a runtime option but for now its compile time.</flag>
     <flag name='tls'>Enable TLS support for the VNC console server</flag>
