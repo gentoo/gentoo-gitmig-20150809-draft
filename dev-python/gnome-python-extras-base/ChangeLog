@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/gnome-python-extras-base
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras-base/ChangeLog,v 1.23 2012/05/04 15:12:12 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras-base/ChangeLog,v 1.24 2012/08/13 09:22:14 tetromino Exp $
+
+  13 Aug 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-python-extras-base-2.25.3.ebuild,
+  +files/gnome-python-extras-base-2.25.3-python-libs.patch:
+  Finally fix horribly slow python libs detection (bug #344231).
 
   04 May 2012; Patrick Lauer <patrick@gentoo.org>
   gnome-python-extras-base-2.25.3.ebuild:
