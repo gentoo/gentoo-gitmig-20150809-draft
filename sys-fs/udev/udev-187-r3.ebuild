@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-187-r3.ebuild,v 1.3 2012/08/11 17:03:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-187-r3.ebuild,v 1.4 2012/08/13 16:05:15 ssuominen Exp $
 
 EAPI=4
 
@@ -68,7 +68,7 @@ RDEPEND="${COMMON_DEPEND}
 
 S="${WORKDIR}/systemd-${PV}"
 
-check_KV()
+udev_check_KV()
 {
 	if kernel_is lt ${KV_min//./ }
 	then
@@ -100,7 +100,7 @@ pkg_setup()
 
 	linux-info_pkg_setup
 
-	if ! check_KV
+	if ! udev_check_KV
 	then
 		eerror "Your kernel version (${KV_FULL}) is too old to run ${P}"
 		eerror "It must be at least ${KV_min}!"
@@ -108,7 +108,7 @@ pkg_setup()
 
 	KV_FULL_SRC=${KV_FULL}
 	get_running_version
-	if ! check_KV
+	if ! udev_check_KV
 	then
 		eerror
 		eerror "Your running kernel version (${KV_FULL}) is too old"
