@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.2.2-r3.ebuild,v 1.2 2012/06/27 21:16:52 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.2.2-r3.ebuild,v 1.3 2012/08/13 17:40:11 hwoarang Exp $
 
 EAPI=4
 inherit autotools eutils pam
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
 IUSE="+introspection qt4"
 
-COMMON_DEPEND="dev-libs/glib:2
+COMMON_DEPEND=">=dev-libs/glib-2.32.3:2
 	dev-libs/libxml2
 	sys-apps/accountsservice
 	virtual/pam
