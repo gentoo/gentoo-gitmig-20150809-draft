@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.49 2012/08/13 21:18:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.50 2012/08/13 22:21:26 flameeyes Exp $
 
 # @ECLASS: ruby-ng.eclass
 # @MAINTAINER:
@@ -686,6 +686,11 @@ ruby-ng_cucumber() {
 			cucumber_params+=" --format progress"
 			;;
 	esac
+
+	if [[ ${RUBY} == *jruby ]]; then
+		ewarn "Skipping cucumber tests on JRuby (unsupported)."
+		return 0
+	fi
 
 	${RUBY} -S cucumber ${cucumber_params} "$@" || die "cucumber failed"
 }
