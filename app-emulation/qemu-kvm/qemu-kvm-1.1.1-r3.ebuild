@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.1.1-r2.ebuild,v 1.1 2012/08/12 23:03:17 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.1.1-r3.ebuild,v 1.1 2012/08/13 00:00:38 cardoe Exp $
 
 EAPI="4"
 
 PYTHON_DEPEND="2"
 inherit eutils flag-o-matic linux-info toolchain-funcs multilib python user
-BACKPORTS=1
+BACKPORTS=2
 
 if [[ ${PV} = *9999* ]]; then
 	EGIT_REPO_URI="git://git.kernel.org/pub/scm/virt/kvm/qemu-kvm.git"
@@ -214,6 +214,9 @@ src_configure() {
 		conf_opts="${conf_opts} --disable-linux-user"
 	fi
 
+	# Add support for SystemTAP
+	use systemtap && conf_opts="${conf_opts} --enable-trace-backend=dtrace"
+
 	# Fix QA issues. QEMU needs executable heaps and we need to mark it as such
 	#conf_opts="${conf_opts} --extra-ldflags=-Wl,-z,execheap"
 
@@ -229,9 +232,10 @@ src_configure() {
 
 	# audio options
 	audio_opts="oss"
-	use alsa && audio_opts="alsa ${audio_opts}"
-	use pulseaudio && audio_opts="pa ${audio_opts}"
-	use sdl && audio_opts="sdl ${audio_opts}"
+	use alsa && audio_opts="alsa,${audio_opts}"
+	use sdl && audio_opts="sdl,${audio_opts}"
+	use pulseaudio && audio_opts="pa,${audio_opts}"
+	use mixemu && conf_opts="${conf_opts} --enable-mixemu"
 
 	# conditionally making UUID work on Linux only is wrong
 	# but the Gentoo/FreeBSD guys need to figure out what
@@ -263,7 +267,6 @@ src_configure() {
 		$(use_enable kernel_linux kvm-device-assignment) \
 		$(use_enable kernel_linux nptl) \
 		$(use_enable kernel_linux uuid) \
-		$(use_enable mixemu) \
 		$(use_enable ncurses curses) \
 		$(use_enable opengl) \
 		$(use_enable rbd) \
@@ -272,7 +275,6 @@ src_configure() {
 		$(use_enable smartcard smartcard) \
 		$(use_enable smartcard smartcard-nss) \
 		$(use_enable spice) \
-		$(use_enable systemtap trace-backend=dtrace) \
 		$(use_enable tci tcg-interpreter) \
 		$(use_enable tls vnc-tls) \
 		$(use_enable usbredir usb-redir) \
@@ -282,7 +284,7 @@ src_configure() {
 		$(use_enable xattr attr) \
 		$(use_enable xen) \
 		$(use_enable xfs xfsctl) \
-		--audio-drv-list="${audio_opts}" \
+		--audio-drv-list=${audio_opts} \
 		--target-list="${softmmu_targets} ${user_targets}" \
 		--cc="$(tc-getCC)" \
 		--host-cc="$(tc-getBUILD_CC)" \

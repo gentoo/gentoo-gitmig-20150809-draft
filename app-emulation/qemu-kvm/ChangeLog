@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.150 2012/08/12 23:42:59 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.151 2012/08/13 00:00:38 cardoe Exp $
+
+*qemu-kvm-1.1.1-r3 (12 Aug 2012)
+
+  12 Aug 2012; Doug Goldstein <cardoe@gentoo.org> -qemu-kvm-1.1.1-r2.ebuild,
+  +qemu-kvm-1.1.1-r3.ebuild, qemu-kvm-9999.ebuild:
+  Upstreamed fixes for the following: issues with --disable-kvm, glibc 2.16
+  support, USB redir babble, ECHI assert when using isoc transfers. Ebuild
+  fixes for potential issues with audio output selection, mixemu can only be
+  enabled, systemtap can only be enabled.
 
   12 Aug 2012; Doug Goldstein <cardoe@gentoo.org> qemu-kvm-9999.ebuild:
   Live ebuild doesn't use BACKPORTS.
