@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/gwenhywfar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.100 2012/08/11 11:21:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.101 2012/08/13 23:41:40 blueness Exp $
+
+  13 Aug 2012; Anthony G. Basile <blueness@gentoo.org> gwenhywfar-4.3.3.ebuild:
+  Stable ppc, bug #422227
 
   11 Aug 2012; Agostino Sarubbo <ago@gentoo.org> gwenhywfar-4.3.3.ebuild:
   Stable for amd64, wrt bug #422227
