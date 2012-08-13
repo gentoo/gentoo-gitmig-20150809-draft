@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/android-ndk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-ndk/ChangeLog,v 1.3 2012/08/13 18:00:14 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-ndk/ChangeLog,v 1.4 2012/08/13 21:30:06 cardoe Exp $
+
+  13 Aug 2012; Doug Goldstein <cardoe@gentoo.org> android-ndk-8b.ebuild:
+  Fix bug in ending the PATH
 
   13 Aug 2012; Doug Goldstein <cardoe@gentoo.org> +android-ndk-5c.ebuild:
   Add back NDK 5c since its necessary for older Android support.

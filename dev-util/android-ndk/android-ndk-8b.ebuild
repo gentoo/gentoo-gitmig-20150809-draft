@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-ndk/android-ndk-8b.ebuild,v 1.1 2012/08/13 17:24:01 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-ndk/android-ndk-8b.ebuild,v 1.2 2012/08/13 21:30:06 cardoe Exp $
 
 EAPI=3
 
@@ -60,7 +60,7 @@ src_install() {
 		"${EPREFIX}/${ANDROID_TC_MIPS_ANDROID_4_4}/bin/:" \
 		"${EPREFIX}/${ANDROID_TC_MIPS_ANDROID_4_6}/bin/:" \
 		"${EPREFIX}/${ANDROID_TC_X86_ANDROID_4_4}/bin/:" \
-		"${EPREFIX}/${ANDROID_TC_X86_ANDROID_4_6}/bin/:" \
+		"${EPREFIX}/${ANDROID_TC_X86_ANDROID_4_6}/bin/\"" \
 		$'\n' \
 		> "${T}/80${PN}"  || die
 
