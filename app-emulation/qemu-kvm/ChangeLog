@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.153 2012/08/13 00:05:06 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.154 2012/08/13 00:59:46 cardoe Exp $
+
+  13 Aug 2012; Doug Goldstein <cardoe@gentoo.org> qemu-kvm-1.0.1.ebuild,
+  qemu-kvm-1.0.1-r1.ebuild, qemu-kvm-1.1.1-r1.ebuild, qemu-kvm-1.1.1-r3.ebuild,
+  qemu-kvm-9999.ebuild:
+  Update LICENSE field to match all the files included.
 
   13 Aug 2012; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   Remove unused local USE flag descriptions.

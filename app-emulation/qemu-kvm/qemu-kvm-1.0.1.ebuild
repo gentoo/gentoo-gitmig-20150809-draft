@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.0.1.ebuild,v 1.7 2012/07/28 22:20:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.0.1.ebuild,v 1.8 2012/08/13 00:59:46 cardoe Exp $
 
 #BACKPORTS=1
 
@@ -27,7 +27,7 @@ fi
 DESCRIPTION="QEMU + Kernel-based Virtual Machine userland tools"
 HOMEPAGE="http://www.linux-kvm.org"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2 LGPL-2 BSD-2"
 SLOT="0"
 # xen is disabled until the deps are fixed
 IUSE="+aio alsa bluetooth brltty +curl debug fdt ncurses \

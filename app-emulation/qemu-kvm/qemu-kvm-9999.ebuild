@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.54 2012/08/13 00:00:38 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.55 2012/08/13 00:59:46 cardoe Exp $
 
 EAPI="4"
 
@@ -23,7 +23,7 @@ fi
 DESCRIPTION="QEMU + Kernel-based Virtual Machine userland tools"
 HOMEPAGE="http://www.linux-kvm.org"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2 LGPL-2 BSD-2"
 SLOT="0"
 IUSE="+aio alsa bluetooth brltty +caps +curl debug doc fdt kernel_linux \
 kernel_FreeBSD mixemu ncurses opengl pulseaudio python rbd sasl sdl \
