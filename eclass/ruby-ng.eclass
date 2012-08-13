@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.48 2012/07/08 12:38:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.49 2012/08/13 21:18:41 flameeyes Exp $
 
 # @ECLASS: ruby-ng.eclass
 # @MAINTAINER:
@@ -657,6 +657,37 @@ ruby-ng_rspec() {
 	esac
 
 	${RUBY} -S rspec ${rspec_params} "$@" || die "rspec failed"
+}
+
+# @FUNCTION: ruby-ng_cucumber
+# @DESCRIPTION:
+# This is simply a wrapper around the cucumber command (executed by $RUBY})
+# which also respects TEST_VERBOSE and NOCOLOR environment variables.
+ruby-ng_cucumber() {
+	if [[ ${DEPEND} != *"dev-util/cucumber"* ]]; then
+		ewarn "Missing dev-util/cucumber in \${DEPEND}"
+	fi
+
+	local cucumber_params=
+	case ${NOCOLOR} in
+		1|yes|true)
+			cucumber_params+=" --no-color"
+			;;
+		*)
+			cucumber_params+=" --color"
+			;;
+	esac
+
+	case ${TEST_VERBOSE} in
+		1|yes|true)
+			cucumber_params+=" --format pretty"
+			;;
+		*)
+			cucumber_params+=" --format progress"
+			;;
+	esac
+
+	${RUBY} -S cucumber ${cucumber_params} "$@" || die "cucumber failed"
 }
 
 # @FUNCTION: ruby-ng_testrb-2
