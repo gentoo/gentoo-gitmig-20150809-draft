@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.5.2.ebuild,v 1.1 2012/08/10 00:44:31 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.5.2.ebuild,v 1.2 2012/08/13 04:40:43 pesa Exp $
 
 EAPI=4
 
@@ -8,13 +8,20 @@ LANGS="cs de es fr hu it ja pl ru sl uk zh_CN"
 
 inherit multilib eutils flag-o-matic qt4-r2
 
-MY_P=${PN}-${PV/_/-}-src
-
 DESCRIPTION="Lightweight IDE for C++ development centering around Qt"
 HOMEPAGE="http://qt.nokia.com/products/developer-tools"
-SRC_URI="http://get.qt.nokia.com/qtcreator/${MY_P}.tar.gz"
-
 LICENSE="LGPL-2.1"
+
+if [[ ${PV} == *9999* ]]; then
+	inherit git-2
+	EGIT_REPO_URI="git://gitorious.org/${PN}/${PN}.git
+		https://git.gitorious.org/${PN}/${PN}.git"
+else
+	MY_P=${PN}-${PV/_/-}-src
+	SRC_URI="http://get.qt.nokia.com/qtcreator/${MY_P}.tar.gz"
+	S=${WORKDIR}/${MY_P}
+fi
+
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
@@ -52,8 +59,6 @@ PDEPEND="
 	subversion? ( dev-vcs/subversion )
 	valgrind? ( dev-util/valgrind )
 "
-
-S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	qt4-r2_src_prepare

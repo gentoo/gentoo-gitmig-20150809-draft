@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/qt-creator
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/ChangeLog,v 1.125 2012/08/10 00:44:31 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/ChangeLog,v 1.126 2012/08/13 04:40:43 pesa Exp $
+
+  13 Aug 2012; Davide Pesavento <pesa@gentoo.org> qt-creator-2.5.2.ebuild:
+  Merge with live ebuild.
 
 *qt-creator-2.5.2 (10 Aug 2012)
 
