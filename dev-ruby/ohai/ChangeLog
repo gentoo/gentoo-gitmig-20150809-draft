@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/ohai
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ohai/ChangeLog,v 1.13 2012/08/11 16:17:12 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ohai/ChangeLog,v 1.14 2012/08/13 21:33:55 flameeyes Exp $
+
+*ohai-6.14.0-r1 (13 Aug 2012)
+
+  13 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> +ohai-6.14.0-r1.ebuild,
+  -files/ohai-6.14.0-multiple-ruby.patch, -ohai-6.14.0.ebuild,
+  ohai-0.6.12.ebuild:
+  Revision bump to remove the patch that does not work; drop ruby19 support as
+  tests blatantly fail expecting Ruby 1.8 instead.
 
   11 Aug 2012; Benedikt Böhm <hollow@gentoo.org> ohai-0.6.12.ebuild:
   add ruby19 support
@@ -66,4 +74,3 @@
   03 Jul 2010; Benedikt Böhm <hollow@gentoo.org> +ohai-0.5.6.ebuild,
   +files/ohai-lsb-release.patch, +metadata.xml:
   initial ebuild, thanks to Gábor Vészi
-

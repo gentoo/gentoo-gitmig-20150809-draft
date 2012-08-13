@@ -1,14 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ohai/ohai-6.14.0.ebuild,v 1.1 2012/08/11 09:14:47 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ohai/ohai-6.14.0-r1.ebuild,v 1.1 2012/08/13 21:33:55 flameeyes Exp $
 
 EAPI=4
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby18"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="CHANGELOG README.rdoc"
 
-RUBY_FAKEGEM_TASK_TEST="spec"
+RUBY_FAKEGEM_RECIPE_TEST="rspec"
 
 inherit ruby-fakegem
 
@@ -21,10 +21,6 @@ LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-
-RUBY_PATCHES=( "${FILESDIR}/ohai-6.14.0-multiple-ruby.patch" )
-
-ruby_add_bdepend "test? ( dev-ruby/rspec:2 )"
 
 ruby_add_rdepend "
 	dev-ruby/ipaddress
