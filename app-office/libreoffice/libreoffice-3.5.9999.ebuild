@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.9999.ebuild,v 1.54 2012/08/08 16:37:34 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.9999.ebuild,v 1.55 2012/08/13 18:33:39 scarabeus Exp $
 
 EAPI=4
 
@@ -139,7 +139,7 @@ COMMON_DEPEND="
 RDEPEND="${COMMON_DEPEND}
 	!app-office/libreoffice-bin
 	!app-office/libreoffice-bin-debug
-	!app-office/openoffice-bin
+	!<app-openoffice/openoffice-bin-3.4.0-r1
 	!app-office/openoffice
 	media-fonts/libertine-ttf
 	media-fonts/liberation-fonts
