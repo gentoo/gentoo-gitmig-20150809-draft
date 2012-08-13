@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rack-mount
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-mount/ChangeLog,v 1.23 2012/05/12 18:02:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-mount/ChangeLog,v 1.24 2012/08/13 18:41:25 graaff Exp $
+
+  13 Aug 2012; Hans de Graaff <graaff@gentoo.org> rack-mount-0.8.3.ebuild:
+  Actually comment out the failing test. Fixes bug 430714.
 
   12 May 2012; Diego E. Pettenò <flameeyes@gentoo.org> rack-mount-0.6.14.ebuild:
   Add Ruby 1.9 to the supported list.

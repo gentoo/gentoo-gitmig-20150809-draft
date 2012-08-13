@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-mount/rack-mount-0.8.3.ebuild,v 1.4 2012/04/04 09:35:32 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-mount/rack-mount-0.8.3.ebuild,v 1.5 2012/08/13 18:41:25 graaff Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19 ree18 jruby"
@@ -26,5 +26,5 @@ ruby_add_rdepend ">=dev-ruby/rack-1.0.0"
 
 all_ruby_prepare() {
 	# Avoid fragile test depending on hash ordering.
-	sed -i -e '/foo=1&bar=2/ s:#:^:' test/test_utils.rb || die
+	sed -i -e '/foo=1&bar=2/ s:^:#:' test/test_utils.rb || die
 }
