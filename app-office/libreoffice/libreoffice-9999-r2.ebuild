@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.101 2012/08/12 09:00:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.102 2012/08/13 09:06:51 scarabeus Exp $
 
 EAPI=4
 
@@ -71,9 +71,8 @@ unset ADDONS_URI
 unset EXT_URI
 unset ADDONS_SRC
 
-IUSE="binfilter binfilterdebug +branding +cups dbus eds gnome +graphite
-gstreamer +gtk gtk3 jemalloc kde mysql odk opengl postgres svg test +vba
-+webdav"
+IUSE="binfilter binfilterdebug +branding +cups dbus eds gnome gstreamer +gtk
+gtk3 jemalloc kde mysql odk opengl postgres svg test +vba +webdav"
 
 LO_EXTS="nlpsolver pdfimport presenter-console presenter-minimizer scripting-beanshell scripting-javascript wiki-publisher"
 # Unpackaged separate extensions:
@@ -115,6 +114,7 @@ COMMON_DEPEND="
 	>=dev-lang/perl-5.0
 	>=dev-libs/openssl-1.0.0d
 	>=dev-libs/redland-1.0.14[ssl]
+	media-gfx/graphite2
 	>=media-libs/fontconfig-2.8.0
 	media-libs/freetype:2
 	media-libs/lcms:2
@@ -139,10 +139,9 @@ COMMON_DEPEND="
 		>=x11-libs/gtk+-2.24:2
 	)
 	gtk3? ( >=x11-libs/gtk+-3.2:3 )
-	graphite? ( media-gfx/graphite2 )
 	gstreamer? (
-		>=media-libs/gstreamer-0.10
-		>=media-libs/gst-plugins-base-0.10
+		>=media-libs/gstreamer-0.10:0.10
+		>=media-libs/gst-plugins-base-0.10:0.10
 	)
 	jemalloc? ( dev-libs/jemalloc )
 	libreoffice_extensions_pdfimport? ( >=app-text/poppler-0.16[xpdf-headers(+),cxx] )
@@ -414,8 +413,10 @@ src_configure() {
 	# system headers/libs/...: enforce using system packages
 	# --enable-unix-qstart-libpng: use libpng splashscreen that is faster
 	# --enable-cairo: ensure that cairo is always required
+	# --enable-graphite: disabling causes build breakages
 	# --enable-*-link: link to the library rather than just dlopen on runtime
 	# --enable-release-build: build the libreoffice as release
+	# --enable-xmlsec: disabling causes build breakages
 	# --disable-fetch-external: prevent dowloading during compile phase
 	# --disable-gnome-vfs: old gnome virtual fs support
 	# --disable-gstreamer: support for 1.0 api, we use gstreamer-0.10 for now
@@ -442,6 +443,7 @@ src_configure() {
 		--with-system-jars \
 		--with-system-dicts \
 		--enable-cairo-canvas \
+		--enable-graphite \
 		--enable-largefile \
 		--enable-mergelibs \
 		--enable-python=system \
@@ -495,7 +497,6 @@ src_configure() {
 		$(use_enable gnome gconf) \
 		$(use_enable gnome gio) \
 		$(use_enable gnome lockdown) \
-		$(use_enable graphite) \
 		$(use_enable gstreamer gstreamer-0-10) \
 		$(use_enable gtk) \
 		$(use_enable gtk3) \
