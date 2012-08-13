@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/mixlib-log
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mixlib-log/ChangeLog,v 1.8 2012/08/11 16:13:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mixlib-log/ChangeLog,v 1.9 2012/08/13 21:20:30 flameeyes Exp $
+
+  13 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> mixlib-log-1.4.1.ebuild:
+  Convert to use from Rake to rspec+cucumber directly; use the newly introduced
+  helper for cucumber as well.
 
   11 Aug 2012; Hans de Graaff <graaff@gentoo.org> mixlib-log-1.4.1.ebuild:
   Avoid unneeded dependency on bundler.
@@ -36,4 +40,3 @@
   03 Jul 2010; Benedikt Böhm <hollow@gentoo.org> +mixlib-log-1.1.0.ebuild,
   +metadata.xml:
   initial ebuild, thanks to Gábor Vészi
-
