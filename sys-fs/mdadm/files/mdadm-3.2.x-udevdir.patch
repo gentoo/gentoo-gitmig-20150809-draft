@@ -6,7 +6,7 @@ http://bugs.gentoo.org/430900
  MAN4DIR = $(MANDIR)/man4
  MAN5DIR = $(MANDIR)/man5
  MAN8DIR = $(MANDIR)/man8
-+PKG_CONFIG = pkg-config
++PKG_CONFIG ?= pkg-config
 +
 +UDEVDIR := $(shell $(PKG_CONFIG) --variable=udevdir udev 2>/dev/null)
 +ifndef UDEVDIR
