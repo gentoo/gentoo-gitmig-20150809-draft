@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/webrat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webrat/ChangeLog,v 1.14 2012/07/02 06:06:47 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webrat/ChangeLog,v 1.15 2012/08/13 17:40:06 flameeyes Exp $
+
+  13 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> webrat-0.7.3.ebuild:
+  Use new syntax.
 
   02 Jul 2012; Hans de Graaff <graaff@gentoo.org> webrat-0.7.3.ebuild:
   Add dependency on mechanize for testing, fixing bug 424387.
@@ -63,4 +66,3 @@
   +metadata.xml:
   Initial import from my overlay. Also reported by CS Shyam Sundar in
   #280286.
-
