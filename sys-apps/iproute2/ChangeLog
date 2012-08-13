@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.199 2012/08/02 03:02:44 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.200 2012/08/13 15:30:47 vapier Exp $
+
+*iproute2-3.5.0-r1 (13 Aug 2012)
+
+  13 Aug 2012; Mike Frysinger <vapier@gentoo.org>
+  +files/iproute2-3.5.0-ip-a-s.patch, +iproute2-3.5.0-r1.ebuild:
+  Fix `ip a s` so it shows addresses #430320 by Graham Murray.  Move ip into
+  /bin #330115 by Thilo Bangert.
 
 *iproute2-3.5.0 (02 Aug 2012)
 
