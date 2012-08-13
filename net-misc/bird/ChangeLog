@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/bird
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bird/ChangeLog,v 1.19 2012/01/23 14:48:52 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bird/ChangeLog,v 1.20 2012/08/13 10:54:49 chainsaw Exp $
+
+*bird-1.3.8 (13 Aug 2012)
+
+  13 Aug 2012; Tony Vroon <chainsaw@gentoo.org> +files/1.3.8-v4-v6-build.patch,
+  +files/initd-v4-bird-1.3.8, +files/initd-v6-bird-1.3.8, +bird-1.3.8.ebuild:
+  Version bump, as requested by Moyaze Shivji in the LINX engineering
+  department. Rediffed "almost clean" build system patch, addressed OpenRC
+  deprecation warning in init scripts.
 
 *bird-1.3.6 (23 Jan 2012)
 
