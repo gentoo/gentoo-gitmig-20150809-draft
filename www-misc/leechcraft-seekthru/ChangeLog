@@ -1,6 +1,12 @@
 # ChangeLog for www-misc/leechcraft-seekthru
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/leechcraft-seekthru/ChangeLog,v 1.15 2012/07/19 20:20:15 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/leechcraft-seekthru/ChangeLog,v 1.16 2012/08/13 14:19:16 maksbotan Exp $
+
+*leechcraft-seekthru-0.5.80 (13 Aug 2012)
+
+  13 Aug 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-seekthru-0.5.80.ebuild:
+  Bump LeechCraft to 0.5.80, thanks to 0xd34df00d
 
 *leechcraft-seekthru-0.5.75 (19 Jul 2012)
 
