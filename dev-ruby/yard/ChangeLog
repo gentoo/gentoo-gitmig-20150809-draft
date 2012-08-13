@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/yard
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yard/ChangeLog,v 1.30 2012/08/08 18:24:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yard/ChangeLog,v 1.31 2012/08/13 23:09:54 flameeyes Exp $
+
+  13 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> yard-0.8.2.1.ebuild:
+  use the rspec recipe for tests, add missing test dependency over ruby-gettext.
 
 *yard-0.8.2.1 (08 Aug 2012)
 
@@ -130,4 +133,3 @@
   20 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org> +yard-0.5.2.ebuild,
   +metadata.xml:
   Initial import of yard, needed for haml's documentation generation.
-

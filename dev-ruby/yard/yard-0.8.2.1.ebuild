@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yard/yard-0.8.2.1.ebuild,v 1.1 2012/08/08 18:24:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yard/yard-0.8.2.1.ebuild,v 1.2 2012/08/13 23:09:54 flameeyes Exp $
 
 EAPI=4
 
 USE_RUBY="ruby18 ruby19 ree18 jruby"
 
-RUBY_FAKEGEM_TASK_TEST="specs"
+RUBY_FAKEGEM_RECIPE_TEST="rspec"
 RUBY_FAKEGEM_TASK_DOC="yard"
 
 RUBY_FAKEGEM_EXTRADOC="README.md ChangeLog"
@@ -25,13 +25,14 @@ RUBY_S="lsegal-yard-*"
 
 LICENSE="as-is" # truly
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE=""
 
 RUBY_PATCHES=( ${P}-test-failures.patch )
 
 ruby_add_bdepend "doc? ( || ( dev-ruby/bluecloth dev-ruby/maruku dev-ruby/rdiscount dev-ruby/kramdown ) )"
-ruby_add_bdepend "test? ( dev-ruby/rspec:2 )"
+
+ruby_add_bdepend "test? ( dev-ruby/ruby-gettext )"
 
 each_ruby_prepare() {
 	case ${RUBY} in
