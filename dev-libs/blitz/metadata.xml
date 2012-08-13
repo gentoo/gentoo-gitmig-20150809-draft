@@ -16,4 +16,7 @@
   optimizations such as loop fusion, unrolling, tiling, and algorithm
   specialization can be performed automatically at compile time.
 </longdescription>
+<use>
+<flag name='boost'>Enable usage of boost::serialization</flag>
+</use>
 </pkgmetadata>
