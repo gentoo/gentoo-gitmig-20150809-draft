@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.511 2012/08/11 12:56:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.512 2012/08/13 08:09:54 ulm Exp $
+
+*emacs-24.1-r1 (13 Aug 2012)
+*emacs-23.4-r4 (13 Aug 2012)
+
+  13 Aug 2012; Ulrich Müller <ulm@gentoo.org> +emacs-23.4-r4.ebuild,
+  +emacs-24.1-r1.ebuild:
+  Fix security flaw in enable-local-eval, bug 431178.
 
   11 Aug 2012; Markus Meier <maekke@gentoo.org> emacs-24.1.ebuild:
   arm stable, bug #428212
