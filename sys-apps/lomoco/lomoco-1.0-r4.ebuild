@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lomoco/lomoco-1.0-r4.ebuild,v 1.2 2011/01/28 15:34:30 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lomoco/lomoco-1.0-r4.ebuild,v 1.3 2012/08/13 17:34:07 ssuominen Exp $
 
 EAPI="2"
 
