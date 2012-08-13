@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/docky/docky-2.1.3.ebuild,v 1.4 2012/05/05 06:25:24 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/docky/docky-2.1.3.ebuild,v 1.5 2012/08/13 16:43:14 angelos Exp $
 
 EAPI=3
 inherit eutils gnome2 mono
@@ -22,7 +22,7 @@ RDEPEND="dev-dotnet/dbus-sharp
 	dev-dotnet/gnome-desktop-sharp
 	dev-dotnet/gnome-keyring-sharp
 	dev-dotnet/gtk-sharp
-	dev-dotnet/mono-addins
+	dev-dotnet/mono-addins[gtk]
 	dev-dotnet/notify-sharp
 	dev-dotnet/rsvg-sharp
 	dev-dotnet/wnck-sharp"
