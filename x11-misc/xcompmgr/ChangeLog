@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xcompmgr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcompmgr/ChangeLog,v 1.49 2012/07/12 18:06:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcompmgr/ChangeLog,v 1.50 2012/08/13 20:40:49 scarabeus Exp $
+
+  13 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> xcompmgr-1.1.6.ebuild:
+  Fix qa warning. Wrt bug#424775.
 
   12 Jul 2012; Brent Baude <ranger@gentoo.org> xcompmgr-1.1.6.ebuild:
   Marking xcompmgr-1.1.6 ppc stable for bug 419473
@@ -199,4 +202,3 @@
   21 Aug 2004; Seemant Kulleen <seemant@gentoo.org> +xcompmgr-0.1.ebuild:
   New ebuild from 20040821 cvs snapshot of xcompmgr from xapps module over at
   freedesktop.org. This should allow use of the xcomposite part of xorg-x11
-
