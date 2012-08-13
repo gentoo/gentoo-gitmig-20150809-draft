@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/mixlib-config
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mixlib-config/ChangeLog,v 1.4 2012/08/13 20:50:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mixlib-config/ChangeLog,v 1.5 2012/08/13 21:26:01 flameeyes Exp $
+
+  13 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  mixlib-config-1.1.2.ebuild:
+  Use the newly-introduced cucumber helper.
 
   13 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org>
   mixlib-config-1.1.2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mixlib-config/mixlib-config-1.1.2.ebuild,v 1.4 2012/08/13 20:50:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mixlib-config/mixlib-config-1.1.2.ebuild,v 1.5 2012/08/13 21:26:01 flameeyes Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19 ree18"
@@ -29,5 +29,5 @@ ruby_add_bdepend "test? (
 
 each_ruby_test() {
 	ruby-ng_rspec
-	${RUBY} -S cucumber features || die
+	ruby-ng_cucumber
 }
