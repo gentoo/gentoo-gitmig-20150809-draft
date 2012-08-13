@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fxscintilla
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/ChangeLog,v 1.52 2012/04/25 16:43:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/ChangeLog,v 1.53 2012/08/13 16:07:07 mabi Exp $
+
+  13 Aug 2012; Matti Bickel <mabi@gentoo.org> fxscintilla-2.28.0.ebuild:
+  remove dohtml call left over from version 1.7 (bug #430542)
 
   25 Apr 2012; Justin Lecher <jlec@gentoo.org> fxscintilla-1.71-r2.ebuild:
   Drop unnessecary die
@@ -201,4 +204,3 @@
 
   25 Feb 2004; Ryan Phillips <rphillips@gentoo.org> fxscintilla-1.55.ebuild:
   New packages created by Mathias Gumz
-

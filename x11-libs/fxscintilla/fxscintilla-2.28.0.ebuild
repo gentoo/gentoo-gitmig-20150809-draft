@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/fxscintilla-2.28.0.ebuild,v 1.2 2012/03/08 16:41:05 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/fxscintilla-2.28.0.ebuild,v 1.3 2012/08/13 16:07:07 mabi Exp $
 
 EAPI=4
 
@@ -33,11 +33,8 @@ src_configure() {
 src_install () {
 	emake DESTDIR="${D}" install
 
-	dodoc README
-	if use doc ; then
-		dodoc scintilla/doc/Lexer.txt
-		dohtml scintilla/doc/*
-	fi
+	dodoc README ChangeLog
+	use doc && dohtml doc/*
 }
 
 pkg_postinst() {
