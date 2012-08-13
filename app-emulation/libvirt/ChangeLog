@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.201 2012/07/19 09:00:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.202 2012/08/13 01:13:38 cardoe Exp $
+
+  13 Aug 2012; Doug Goldstein <cardoe@gentoo.org> libvirt-0.9.13.ebuild:
+  Work around for people that used the masked ebuild and didn't get the qemu
+  user added to the kvm group correctly. bug #430808
 
   19 Jul 2012; Justin Lecher <jlec@gentoo.org>
   +files/libvirt-0.9.13-libnl3.patch, libvirt-0.9.13.ebuild:

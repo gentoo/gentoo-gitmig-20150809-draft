@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.13.ebuild,v 1.5 2012/07/19 09:00:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.13.ebuild,v 1.6 2012/08/13 01:13:38 cardoe Exp $
 
 EAPI=4
 
@@ -145,6 +145,14 @@ pkg_setup() {
 
 	enewgroup qemu 77
 	enewuser qemu 77 -1 -1 qemu kvm
+
+	# Some people used the masked ebuild which was not adding the qemu
+	# user to the kvm group originally. This results in VMs failing to
+	# start for some users. bug #430808
+	egetent group kvm | grep -q qemu
+	if [[ $? -ne 0 ]]; then
+		gpasswd -a qemu kvm
+	fi
 
 	CONFIG_CHECK=""
 	use lxc && CONFIG_CHECK+="${LXC_CONFIG_CHECK}"
