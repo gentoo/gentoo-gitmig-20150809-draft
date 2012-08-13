@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-3.5.0.ebuild,v 1.1 2012/08/02 03:02:44 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-3.5.1.ebuild,v 1.1 2012/08/13 18:08:52 vapier Exp $
 
 EAPI="4"
 
@@ -93,6 +93,9 @@ src_install() {
 		ARPDDIR="${EPREFIX}"/var/lib/arpd \
 		install
 
+	dodir /bin
+	mv "${ED}"/{s,}bin/ip || die #330115
+
 	dolib.a lib/libnetlink.a
 	insinto /usr/include
 	doins include/libnetlink.h
@@ -100,7 +103,7 @@ src_install() {
 	if use berkdb ; then
 		dodir /var/lib/arpd
 		# bug 47482, arpd doesn't need to be in /sbin
-		dodir /usr/sbin
-		mv "${ED}"/sbin/arpd "${ED}"/usr/sbin/
+		dodir /usr/bin
+		mv "${ED}"/sbin/arpd "${ED}"/usr/bin/ || die
 	fi
 }

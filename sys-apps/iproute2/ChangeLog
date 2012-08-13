@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.200 2012/08/13 15:30:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.201 2012/08/13 18:08:52 vapier Exp $
+
+*iproute2-3.5.1 (13 Aug 2012)
+
+  13 Aug 2012; Mike Frysinger <vapier@gentoo.org> +iproute2-3.5.1.ebuild,
+  -files/iproute2-3.5.0-ip-a-s.patch, -iproute2-3.5.0-r1.ebuild,
+  -iproute2-3.5.0.ebuild:
+  Add official 3.5.1 release which fixes regressions in 3.5.0.
 
 *iproute2-3.5.0-r1 (13 Aug 2012)
 
