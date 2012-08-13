@@ -1,6 +1,11 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.231 2012/08/08 18:00:38 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.232 2012/08/13 11:13:13 ssuominen Exp $
+
+*hplip-3.12.6-r1 (13 Aug 2012)
+
+  13 Aug 2012; Samuli Suominen <ssuominen@gentoo.org> +hplip-3.12.6-r1.ebuild:
+  Use udev.pc pkg-config file to determine correct udevdir for rules.
 
   08 Aug 2012; Daniel Pielmeier <billie@gentoo.org> hplip-3.12.6.ebuild:
   Fix building with cups-1.6. Thanks to all involved in bug #428672.
