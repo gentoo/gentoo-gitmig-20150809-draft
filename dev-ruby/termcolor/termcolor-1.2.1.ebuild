@@ -1,12 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/termcolor/termcolor-1.2.1.ebuild,v 1.2 2012/07/14 07:12:51 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/termcolor/termcolor-1.2.1.ebuild,v 1.3 2012/08/13 17:42:57 flameeyes Exp $
 
-EAPI="2"
+EAPI=4
+
 #*** Using highline effectively in JRuby requires manually installing the ffi-ncurses gem.
 USE_RUBY="ruby18 ruby19 ree18"
 
-RUBY_FAKEGEM_TASK_TEST="spec"
+RUBY_FAKEGEM_RECIPE_TEST="rspec"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="History.txt README.rdoc"
@@ -23,9 +24,4 @@ IUSE=""
 
 RUBY_PATCHES=( ${P}-fix-spec.patch )
 
-ruby_add_bdepend "dev-ruby/rspec:0"
 ruby_add_rdepend ">=dev-ruby/highline-1.5.0"
-
-each_ruby_test() {
-	${RUBY} -S spec spec || die
-}
