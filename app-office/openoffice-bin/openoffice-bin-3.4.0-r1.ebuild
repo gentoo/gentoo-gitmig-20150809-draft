@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.4.0.ebuild,v 1.3 2012/05/13 11:12:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.4.0-r1.ebuild,v 1.1 2012/08/13 18:34:00 scarabeus Exp $
 
 EAPI="4"
 
@@ -47,9 +47,8 @@ LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 
-RDEPEND="!app-office/libreoffice
+RDEPEND="
 	!app-office/openoffice
-	!app-office/libreoffice-bin
 	!prefix? ( sys-libs/glibc )
 	app-arch/unzip
 	app-arch/zip
@@ -171,6 +170,24 @@ src_install () {
 	# prevent revdep-rebuild from attempting to rebuild all the time
 	insinto /etc/revdep-rebuild && doins "${T}/50-${PN}"
 
+	# remove soffice bin
+	rm -rf "${ED}${EPREFIX}/usr/bin/soffice"
+
+	# replace all symlinks by bash shell code in order to nicely cope with
+	# libreoffice
+	cd "${ED}${EPREFIX}/usr/bin/"
+	for i in oo*; do
+		[[ ${i} == ooffice ]] && continue
+
+		rm ${i}
+		cat >> ${i} << EOF
+#!/usr/bin/env bash
+pushd "${EPREFIX}/usr/lib64/openoffice/program" > /dev/null
+./${i/oo/s}
+popd > /dev/null
+EOF
+		chmod +x ${i}
+	done
 }
 
 pkg_preinst() {
