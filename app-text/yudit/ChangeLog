@@ -1,6 +1,9 @@
 # ChangeLog for app-text/yudit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yudit/ChangeLog,v 1.27 2012/08/03 13:27:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/yudit/ChangeLog,v 1.28 2012/08/13 12:37:53 johu Exp $
+
+  13 Aug 2012; Johannes Huber <johu@gentoo.org> yudit-2.9.2.ebuild:
+  Stable for x86, wrt bug #428908
 
   03 Aug 2012; Agostino Sarubbo <ago@gentoo.org> yudit-2.9.2.ebuild:
   Stable for amd64, wrt bug #428908
