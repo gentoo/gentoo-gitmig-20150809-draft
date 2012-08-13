@@ -1,13 +1,13 @@
 # ChangeLog for sys-apps/lomoco
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lomoco/ChangeLog,v 1.15 2012/08/13 17:33:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lomoco/ChangeLog,v 1.16 2012/08/13 17:37:04 ssuominen Exp $
 
 *lomoco-1.0-r7 (13 Aug 2012)
 
   13 Aug 2012; Samuli Suominen <ssuominen@gentoo.org> +lomoco-1.0-r7.ebuild,
   +files/lomoco-pm-utils-r1:
   Use udevdir value from udev.pc pkg-config file to determine correct install
-  path(s) for the helpers and rules.
+  path(s) for the helpers and rules wrt #362821 by Anton Bolshakov
 
   08 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Drop myself out of metadata.
