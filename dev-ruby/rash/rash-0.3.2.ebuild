@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rash/rash-0.3.2.ebuild,v 1.1 2011/12/24 13:26:05 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rash/rash-0.3.2.ebuild,v 1.2 2012/08/13 23:53:35 flameeyes Exp $
 
 EAPI=4
-USE_RUBY="ruby18 ree18 jruby"
+USE_RUBY="ruby18 ruby19 ree18 jruby"
 
-RUBY_FAKEGEM_TASK_TEST="spec"
+RUBY_FAKEGEM_RECIPE_TEST="rspec"
 
 RUBY_FAKEGEM_EXTRADOC="README.rdoc"
 
@@ -20,7 +20,6 @@ KEYWORDS="~amd64"
 IUSE=""
 
 ruby_add_rdepend ">=dev-ruby/hashie-1.2.0"
-ruby_add_bdepend "test? ( >=dev-ruby/rspec-2.5.0:2 )"
 
 all_ruby_prepare() {
 	rm Gemfile || die
