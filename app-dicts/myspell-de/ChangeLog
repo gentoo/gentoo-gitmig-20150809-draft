@@ -1,6 +1,12 @@
 # ChangeLog for app-dicts/myspell-de
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-de/ChangeLog,v 1.28 2012/06/17 10:31:03 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-de/ChangeLog,v 1.29 2012/08/13 11:37:24 scarabeus Exp $
+
+*myspell-de-2012.06.17 (13 Aug 2012)
+
+  13 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +myspell-de-2012.06.17.ebuild:
+  Version bump.
 
 *myspell-de-2012.06.10 (17 Jun 2012)
 
@@ -111,4 +117,3 @@
   01 May 2006; Kevin F. Quinn <kevquinn@gentoo.org> +metadata.xml,
   +myspell-de-20060316.ebuild:
   New ebuild for German myspell dictionary
-
