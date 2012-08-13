@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.62 2012/08/13 11:48:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.63 2012/08/13 13:19:20 scarabeus Exp $
+
+  13 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/mplayer2-py2compat.patch, mplayer2-9999.ebuild:
+  Add back support for building with python2. So at least I don't have to
+  install py3.
 
   13 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> mplayer2-9999.ebuild:
   There needs to be only one dependency on py3.
