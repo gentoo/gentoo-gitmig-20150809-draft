@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt-snmp/libvirt-snmp-0.0.2-r1.ebuild,v 1.1 2012/06/26 09:34:34 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt-snmp/libvirt-snmp-0.0.2-r2.ebuild,v 1.1 2012/08/13 05:32:58 cardoe Exp $
 
 EAPI=4
+
+inherit eutils
 
 DESCRIPTION="Provides SNMP functionality for libvirt."
 HOMEPAGE="http://libvirt.org"
@@ -17,6 +19,10 @@ RDEPEND="app-emulation/libvirt
 	net-analyzer/net-snmp"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
+
+src_prepare() {
+	epatch "${FILESDIR}"/0001-Fix-build-rules-to-use-LDADD-to-add-libraries.patch
+}
 
 src_install() {
 	default
