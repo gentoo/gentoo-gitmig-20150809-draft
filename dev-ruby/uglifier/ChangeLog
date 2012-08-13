@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/uglifier
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uglifier/ChangeLog,v 1.12 2012/07/05 22:19:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uglifier/ChangeLog,v 1.13 2012/08/13 00:24:21 flameeyes Exp $
+
+*uglifier-1.2.7 (13 Aug 2012)
+
+  13 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> +uglifier-1.2.7.ebuild:
+  Version bump; simplify as the uglifyjs package is no longer required for
+  testing.
 
   05 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> uglifier-1.2.6.ebuild:
   Fix name of the uglifyjs snapshot tarball.
