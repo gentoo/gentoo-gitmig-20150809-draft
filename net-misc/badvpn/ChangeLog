@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/badvpn
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/badvpn/ChangeLog,v 1.1 2012/08/13 10:40:22 hasufell Exp $
+
+*badvpn-1.999.123 (13 Aug 2012)
+
+  13 Aug 2012; Julian Ospald <hasufell@gentoo.org> +badvpn-1.999.123.ebuild,
+  +files/badvpn-ncd.conf, +files/badvpn-ncd.init, +files/badvpn-server.conf,
+  +files/badvpn-server.init, +metadata.xml:
+  initial commit with Ambroz Bizjak
+
