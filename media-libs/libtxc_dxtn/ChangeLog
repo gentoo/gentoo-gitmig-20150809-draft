@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libtxc_dxtn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtxc_dxtn/ChangeLog,v 1.7 2012/08/11 17:19:59 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtxc_dxtn/ChangeLog,v 1.8 2012/08/13 16:43:27 mattst88 Exp $
+
+  13 Aug 2012; Matt Turner <mattst88@gentoo.org> libtxc_dxtn-1.0.1.ebuild:
+  Add multilib USE flag, bug #431216. Thanks to Peter Alfredsen.
 
   11 Aug 2012; Matt Turner <mattst88@gentoo.org> libtxc_dxtn-1.0.1.ebuild:
   Added ~ppc ~ppc64 per user report, bug 410201.

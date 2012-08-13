@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtxc_dxtn/libtxc_dxtn-1.0.1.ebuild,v 1.7 2012/08/11 17:19:59 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtxc_dxtn/libtxc_dxtn-1.0.1.ebuild,v 1.8 2012/08/13 16:43:27 mattst88 Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="http://people.freedesktop.org/~cbrill/${PN}/${P}.tar.bz2"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64 ~ppc ~ppc64 x86"
-IUSE=""
+IUSE="multilib"
 
 RDEPEND="media-libs/mesa"
 DEPEND="${RDEPEND}"
@@ -21,12 +21,15 @@ DEPEND="${RDEPEND}"
 RESTRICT="bindist"
 
 foreachabi() {
-	local ABI
-
-	for ABI in $(get_all_abis); do
-		multilib_toolchain_setup ${ABI}
-		AUTOTOOLS_BUILD_DIR=${WORKDIR}/${ABI} "${@}"
-	done
+	if use multilib; then
+		local ABI
+		for ABI in $(get_all_abis); do
+			multilib_toolchain_setup ${ABI}
+			AUTOTOOLS_BUILD_DIR=${WORKDIR}/${ABI} "${@}"
+		done
+	else
+		"${@}"
+	fi
 }
 
 src_configure() {
