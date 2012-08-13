@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yajl-ruby/yajl-ruby-1.1.0.ebuild,v 1.8 2012/07/05 21:44:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yajl-ruby/yajl-ruby-1.1.0.ebuild,v 1.9 2012/08/13 19:16:07 flameeyes Exp $
 
 EAPI=2
 
@@ -20,12 +20,10 @@ HOMEPAGE="http://github.com/brianmario/yajl-ruby"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-IUSE="test"
+IUSE=""
 
 RDEPEND="${RDEPEND} dev-libs/yajl"
 DEPEND="${DEPEND} dev-libs/yajl"
-
-ruby_add_bdepend "test? ( dev-ruby/rspec:2 )"
 
 each_ruby_configure() {
 	${RUBY} -Cext/yajl extconf.rb || die "extconf.rb failed"
