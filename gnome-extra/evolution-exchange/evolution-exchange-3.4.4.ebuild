@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/evolution-exchange-3.4.1.ebuild,v 1.1 2012/05/07 05:58:29 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/evolution-exchange-3.4.4.ebuild,v 1.1 2012/08/13 04:59:56 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
