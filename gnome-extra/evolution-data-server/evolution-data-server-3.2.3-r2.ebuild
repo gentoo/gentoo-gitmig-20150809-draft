@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.2.3-r2.ebuild,v 1.2 2012/06/20 06:51:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.2.3-r2.ebuild,v 1.3 2012/08/13 04:58:39 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -41,7 +41,7 @@ RDEPEND=">=dev-libs/glib-2.28:2
 	weather? ( >=dev-libs/libgweather-2.90.0:2 )
 "
 DEPEND="${RDEPEND}
-	dev-lang/perl
+	dev-util/fix-la-relink-command
 	dev-util/gperf
 	virtual/pkgconfig
 	>=dev-util/intltool-0.35.5
@@ -122,8 +122,7 @@ src_install() {
 	# every .la file's relink_command field, forcing libtool to look there
 	# first during relinking. This will mangle the .la files installed by
 	# make install, but we don't care because we will be punting them anyway.
-	perl "${FILESDIR}/fix_relink_command.pl" . ||
-		die "fix_relink_command.pl failed"
+	fix-la-relink-command . || die "fix-la-relink-command failed"
 	gnome2_src_install
 
 	if use ldap; then
