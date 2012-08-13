@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/subexec/subexec-0.2.2.ebuild,v 1.1 2012/04/30 18:50:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/subexec/subexec-0.2.2.ebuild,v 1.2 2012/08/13 19:11:14 flameeyes Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ USE_RUBY="ruby18 ree18 jruby ruby19"
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="README.md"
 
-RUBY_FAKEGEM_TASK_TEST="spec"
+RUBY_FAKEGEM_RECIPE_TEST="rspec"
 
 inherit ruby-fakegem eutils
 
@@ -28,9 +28,7 @@ RUBY_S="${GITHUB_USER}-${PN}-*"
 
 RUBY_PATCHES=( "${P}-lang.patch" )
 
-ruby_add_bdepend "test? (
-	dev-ruby/shoulda
-	dev-ruby/rspec:2 )"
+ruby_add_bdepend "test? ( dev-ruby/shoulda )"
 
 all_ruby_prepare() {
 	rm Gemfile* || die
