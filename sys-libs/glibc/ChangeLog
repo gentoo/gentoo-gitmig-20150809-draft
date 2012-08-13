@@ -1,5 +1,13 @@
 # ChangeLog for sys-libs/glibc
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.878 2012/08/13 15:08:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.879 2012/08/13 22:48:53 vapier Exp $
+
+  13 Aug 2012; Mike Frysinger <vapier@gentoo.org> glibc-2.10.1-r1.ebuild,
+  glibc-2.11.3.ebuild, glibc-2.12.1-r3.ebuild, glibc-2.12.2.ebuild,
+  glibc-2.13-r2.ebuild, glibc-2.13-r4.ebuild, glibc-2.14.1-r2.ebuild,
+  glibc-2.14.1-r3.ebuild, glibc-2.14.ebuild, glibc-2.15-r1.ebuild,
+  glibc-2.15-r2.ebuild, glibc-2.16.0.ebuild, glibc-2.9_p20081201-r3.ebuild,
+  glibc-9999.ebuild:
+  Tweak CATEGORY processing to make it easier to understand.
 
   13 Aug 2012; Mike Frysinger <vapier@gentoo.org> metadata.xml:
   Document what USE=gd does.
