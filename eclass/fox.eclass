@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fox.eclass,v 1.15 2012/02/12 21:45:28 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fox.eclass,v 1.16 2012/08/13 15:54:08 mabi Exp $
 
 # @ECLASS: fox.eclass
 # @MAINTAINER:
@@ -210,12 +210,21 @@ fox_pkg_postinst() {
 		einfo "(adie, calculator, pathfinder, shutterbug) are now available as"
 		einfo "separate ebuilds."
 		echo
-		einfo "The fox-config script has been installed as fox-${FOXVER}-config."
-		einfo "The fox-wrapper package is used to direct calls to fox-config"
-		einfo "to the correct versioned script, based on the WANT_FOX variable."
-		einfo "For example:"
-		einfo
-		einfo "    WANT_FOX=\"${FOXVER}\" fox-config <options>"
+
+		if version_is_at_least "1.7.25"; then
+			einfo "Fox versions after 1.7.25 ships a pkg-config file called fox17.pc"
+			einfo "instead of the previous fox-config tool."
+			einfo "You now get all info via pkg-config:"
+			einfo
+			einfo "pkg-config fox17 --libs (etc.)"
+		else
+			einfo "The fox-config script has been installed as fox-${FOXVER}-config."
+			einfo "The fox-wrapper package is used to direct calls to fox-config"
+			einfo "to the correct versioned script, based on the WANT_FOX variable."
+			einfo "For example:"
+			einfo
+			einfo "    WANT_FOX=\"${FOXVER}\" fox-config <options>"
+		fi
 		einfo
 	fi
 }
