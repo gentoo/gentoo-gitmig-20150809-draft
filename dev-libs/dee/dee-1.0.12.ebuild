@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dee/dee-1.0.10.ebuild,v 1.4 2012/08/13 20:01:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dee/dee-1.0.12.ebuild,v 1.1 2012/08/13 20:01:20 jlec Exp $
 
 EAPI=4
 
@@ -23,10 +23,6 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	dev-util/gtk-doc
 	test? ( dev-util/dbus-test-runner )"
-
-PATCHES=(
-	"${FILESDIR}"/${P}-gcc-4.5.patch
-	"${FILESDIR}"/${P}-vapigen.patch )
 
 src_prepare() {
 	sed \

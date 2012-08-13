@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/dee
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dee/ChangeLog,v 1.5 2012/05/09 17:52:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dee/ChangeLog,v 1.6 2012/08/13 20:01:20 jlec Exp $
+
+*dee-1.0.12 (13 Aug 2012)
+
+  13 Aug 2012; Justin Lecher <jlec@gentoo.org> dee-1.0.10.ebuild,
+  +dee-1.0.12.ebuild:
+  Version Bump
 
   09 May 2012; Justin Lecher <jlec@gentoo.org> dee-1.0.10.ebuild:
   Addmissing dep on gtk-doc, #415257
