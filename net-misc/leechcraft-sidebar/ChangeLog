@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/leechcraft-sidebar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-sidebar/ChangeLog,v 1.8 2012/08/12 08:30:32 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-sidebar/ChangeLog,v 1.9 2012/08/13 14:10:36 maksbotan Exp $
+
+*leechcraft-sidebar-0.5.80 (13 Aug 2012)
+
+  13 Aug 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-sidebar-0.5.80.ebuild:
+  Bump LeechCraft to 0.5.80, thanks to 0xd34df00d
 
   12 Aug 2012; Maxim Koltsov <maksbotan@gentoo.org>
   leechcraft-sidebar-0.5.70.ebuild, leechcraft-sidebar-0.5.75.ebuild,
