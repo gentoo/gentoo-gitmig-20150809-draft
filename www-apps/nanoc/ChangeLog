@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/nanoc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoc/ChangeLog,v 1.3 2012/05/12 07:00:27 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoc/ChangeLog,v 1.4 2012/08/13 19:14:32 graaff Exp $
+
+*nanoc-3.4.0 (13 Aug 2012)
+
+  13 Aug 2012; Hans de Graaff <graaff@gentoo.org> +nanoc-3.4.0.ebuild:
+  Version bump. Add ruby19, bug 406375.
 
   12 May 2012; Alex Legler <a3li@gentoo.org> nanoc-3.3.1.ebuild:
   Add doc? dependencies, fixes bug 406371 by Shunsuke Shimizu
