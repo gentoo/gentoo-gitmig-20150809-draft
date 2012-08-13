@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.78.1.ebuild,v 1.1 2012/08/13 12:31:53 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.78.1.ebuild,v 1.2 2012/08/13 14:13:19 mr_bones_ Exp $
 
 inherit bash-completion eutils
 
@@ -60,7 +60,7 @@ pkg_setup() {
 		die "Rebuild dev-libs/libpcre with USE=cxx"
 	fi
 
-	if use test && 
+	if use test &&
 		! built_with_use dev-cpp/gtest threads ; then
 		eerror "Paludis needs dev-cpp/gtest built with threads support"
 		eerror "Please build dev-cpp/gtest with USE=threads support"
