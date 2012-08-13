@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.61 2012/07/29 18:07:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.62 2012/08/13 11:48:57 scarabeus Exp $
+
+  13 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> mplayer2-9999.ebuild:
+  There needs to be only one dependency on py3.
 
   29 Jul 2012; Raúl Porcel <armin76@gentoo.org> mplayer2-2.0_p20120309.ebuild:
   alpha/arm/ia64/sparc stable wrt #416359
@@ -343,4 +346,3 @@
   10 Jun 2010; Nikoli <nikoli@lavabit.com> +mplayer-uau-9999.ebuild,
   +metadata.xml:
   Initial ebuild
-

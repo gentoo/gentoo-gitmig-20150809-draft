@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.40 2012/07/20 15:42:00 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.41 2012/08/13 11:48:57 scarabeus Exp $
 
 EAPI=4
 
@@ -152,9 +152,8 @@ RDEPEND+="
 ASM_DEP="dev-lang/yasm"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
-	dev-lang/python
-	sys-devel/gettext
 	=dev-lang/python-3*
+	sys-devel/gettext
 	X? (
 		x11-proto/videoproto
 		x11-proto/xf86vidmodeproto
