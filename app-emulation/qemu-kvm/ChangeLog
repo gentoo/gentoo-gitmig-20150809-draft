@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.154 2012/08/13 00:59:46 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.155 2012/08/13 15:06:59 cardoe Exp $
+
+  13 Aug 2012; Doug Goldstein <cardoe@gentoo.org> files/qemu-kvm:
+  Fix --enable-kvm argument to -enable-kvm. bug #431088
 
   13 Aug 2012; Doug Goldstein <cardoe@gentoo.org> qemu-kvm-1.0.1.ebuild,
   qemu-kvm-1.0.1-r1.ebuild, qemu-kvm-1.1.1-r1.ebuild, qemu-kvm-1.1.1-r3.ebuild,
