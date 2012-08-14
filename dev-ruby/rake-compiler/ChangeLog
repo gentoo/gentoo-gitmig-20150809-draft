@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/rake-compiler
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/ChangeLog,v 1.52 2012/07/26 12:43:48 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/ChangeLog,v 1.53 2012/08/14 14:05:59 flameeyes Exp $
+
+*rake-compiler-0.8.1-r1 (14 Aug 2012)
+
+  14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +rake-compiler-0.8.1-r1.ebuild, -files/rake-compiler-0.7.0+ruby-1.8.7.patch:
+  Remove unused patch; add a new revision of rake-compiler that calls RSpec and
+  Cucumber properly.
 
   26 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
   rake-compiler-0.8.1.ebuild:
@@ -215,4 +222,3 @@
   21 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   +rake-compiler-0.7.0.ebuild, +metadata.xml:
   Initial import of rake-compiler, to be used by nokogiri and sqlite3-ruby.
-
