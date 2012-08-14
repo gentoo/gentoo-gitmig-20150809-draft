@@ -1,8 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyamg/pyamg-2.0.4.ebuild,v 1.1 2012/04/23 18:21:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyamg/pyamg-2.0.4.ebuild,v 1.2 2012/08/14 16:58:16 jlec Exp $
 
 EAPI=4
+
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython 2.7-pypy-*"
@@ -26,6 +27,11 @@ DEPEND="${RDEPEND}
 	test? ( dev-python/nose )"
 
 S="${WORKDIR}/${PN}"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc-4.7.patch
+	distutils_src_prepare
+}
 
 src_compile() {
 	distutils_src_compile
