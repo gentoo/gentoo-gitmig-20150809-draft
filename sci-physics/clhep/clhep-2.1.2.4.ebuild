@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/clhep/clhep-2.1.2.4.ebuild,v 1.1 2012/08/07 18:05:12 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/clhep/clhep-2.1.2.4.ebuild,v 1.2 2012/08/14 20:17:28 bicatali Exp $
 
 EAPI=4
 
@@ -22,6 +22,7 @@ S="${WORKDIR}/${PV}/CLHEP"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-libdir.patch
+	epatch "${FILESDIR}"/${P}-lsb-whitespace.patch
 	# respect flags
 	sed -i -e 's:-O::g' cmake/Modules/ClhepVariables.cmake || die
 	# dont build test if not asked

@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/clhep
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/clhep/ChangeLog,v 1.42 2012/08/07 18:05:12 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/clhep/ChangeLog,v 1.43 2012/08/14 20:17:28 bicatali Exp $
+
+  14 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/clhep-2.1.2.4-lsb-whitespace.patch, clhep-2.1.2.4.ebuild:
+  Fix when lsb_release is installed by stripping whitespaces, bug #430656
 
 *clhep-2.1.2.4 (07 Aug 2012)
 
