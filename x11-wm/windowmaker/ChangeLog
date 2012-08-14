@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/windowmaker
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.135 2012/07/11 13:10:11 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.136 2012/08/14 00:43:00 chithanh Exp $
+
+  14 Aug 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  windowmaker-0.95.3-r1.ebuild:
+  Keyword ~arm.
 
 *windowmaker-0.95.3-r1 (11 Jul 2012)
 
