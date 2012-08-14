@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/rec
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rec/ChangeLog,v 1.7 2010/02/21 11:59:15 patrick Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rec/ChangeLog,v 1.8 2012/08/14 11:08:21 jlec Exp $
+
+  14 Aug 2012; Justin Lecher <jlec@gentoo.org> rec-1.6.ebuild:
+  Use QA_PREBUILt for binary packages, #430978
 
   21 Feb 2010; Patrick Lauer <patrick@gentoo.org> rec-1.6.ebuild:
   Adding ~amd64 for #302892

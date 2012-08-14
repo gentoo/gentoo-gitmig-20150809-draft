@@ -1,28 +1,40 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rec/rec-1.6.ebuild,v 1.7 2010/02/21 11:59:15 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rec/rec-1.6.ebuild,v 1.8 2012/08/14 11:08:21 jlec Exp $
+
+EAPI=4
 
 inherit eutils
 
 DESCRIPTION="Reverse Engineering Compiler"
 HOMEPAGE="http://www.backerstreet.com/rec/rec.htm"
 SRC_URI="http://www.backerstreet.com/rec/rec16lx.zip"
+
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
+
 RESTRICT="strip"
+
 DEPEND="app-arch/unzip"
-RDEPEND="sys-libs/ncurses sys-libs/gpm"
+RDEPEND="
+	sys-libs/ncurses
+	sys-libs/gpm"
+
 S=${WORKDIR}
+
+QA_PREBUILT="/opt/bin/rec"
 
 src_unpack() {
 	unzip -L -d "${S}" -q "${DISTDIR}/${A}" || die
 }
 
-src_compile() {
-	sed -i 's#\(^.*$\)#/opt/rec/\1#g' proto.lst
+src_prepare() {
+	sed -i 's#\(^.*$\)#/opt/rec/\1#g' proto.lst || die
 }
+
+src_compile() { :; }
 
 src_install() {
 	dodir /opt/rec
