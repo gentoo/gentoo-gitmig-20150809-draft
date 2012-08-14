@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/pinentry
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.123 2012/07/03 19:38:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.124 2012/08/14 12:09:49 scarabeus Exp $
+
+*pinentry-0.8.2 (14 Aug 2012)
+
+  14 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> +pinentry-0.8.2.ebuild:
+  Version bump, I was testing if it had fixed the issue from bug#400751 but it
+  did not. Commiting as it works perfect otherwise.
 
   03 Jul 2012; Jeroen Roovers <jer@gentoo.org> pinentry-0.8.1.ebuild:
   Stable for HPPA (bug #421593).
