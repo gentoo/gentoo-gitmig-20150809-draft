@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openimageio/openimageio-1.0.8.ebuild,v 1.1 2012/08/02 17:55:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openimageio/openimageio-1.0.8.ebuild,v 1.2 2012/08/14 18:51:41 ssuominen Exp $
 
 EAPI=4
 
@@ -16,6 +16,8 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="jpeg2k opengl python qt4 tbb"
+
+RESTRICT=test #431412
 
 RDEPEND="dev-libs/boost[python?]
 	dev-libs/pugixml
