@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bluecloth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/ChangeLog,v 1.57 2012/07/30 18:38:26 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/ChangeLog,v 1.58 2012/08/14 01:06:58 flameeyes Exp $
+
+  14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> bluecloth-2.2.0.ebuild:
+  Port to rspec helper for testing. Bump to EAPI 4.
 
   30 Jul 2012; Hans de Graaff <graaff@gentoo.org> -bluecloth-2.1.0.ebuild:
   Cleanup.
@@ -220,4 +223,3 @@
   +bluecloth-1.0.0.ebuild:
   Initial import. Ebuild submitted by Ben de Groot <ben@stijlstek.nl> in bug
   #101561.
-
