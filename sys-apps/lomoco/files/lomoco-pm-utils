@@ -1,7 +1,0 @@
-#!/bin/sh
-
-case "$1" in
-    thaw|resume)
-        /usr/libexec/lomoco-helper
-        ;;
-esac
