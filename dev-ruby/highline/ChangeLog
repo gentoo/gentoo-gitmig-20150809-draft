@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/highline
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/highline/ChangeLog,v 1.56 2012/01/24 15:44:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/highline/ChangeLog,v 1.57 2012/08/14 06:03:59 graaff Exp $
+
+*highline-1.6.13 (14 Aug 2012)
+
+  14 Aug 2012; Hans de Graaff <graaff@gentoo.org> +highline-1.6.13.ebuild:
+  Version bump. Avoid tests with highline and jruby since these hang. Not a
+  regression since that is already the case for 1.6.11.
 
 *highline-1.6.11 (24 Jan 2012)
 
