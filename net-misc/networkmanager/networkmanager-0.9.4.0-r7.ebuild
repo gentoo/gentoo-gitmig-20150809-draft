@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.4.0-r2.ebuild,v 1.6 2012/06/27 14:41:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.4.0-r7.ebuild,v 1.1 2012/08/14 04:47:00 tetromino Exp $
 
 EAPI="4"
 GNOME_ORG_MODULE="NetworkManager"
 
-inherit autotools eutils gnome.org linux-info systemd user
+inherit autotools eutils gnome.org linux-info systemd user toolchain-funcs
 
 DESCRIPTION="Network configuration and management in an easy way. Desktop environment independent."
 HOMEPAGE="http://www.gnome.org/projects/NetworkManager/"
@@ -109,18 +109,30 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-libnm-glib-init-gerror.patch"
 	# Fix building against linux-headers-3.4, #417055
 	epatch "${FILESDIR}/${P}-ip_ppp.h.patch"
+	# Fix ipv6 default route bug, #417529
+	epatch "${FILESDIR}/${P}-ipv6-route.patch"
+	# Bug #335147, https://bugzilla.gnome.org/show_bug.cgi?id=679428
+	epatch "${FILESDIR}/${P}-dhclient-ipv6.patch"
+	# Bug #426844, wext vs. nl80211 API issues
+	epatch "${FILESDIR}/${P}-nl80211-encryption-caps.patch"
+	epatch "${FILESDIR}/${P}-wifi-kernel-api.patch"
+
+	epatch_user
 
 	eautoreconf
 	default
 }
 
 src_configure() {
+	local udevdir=/lib/udev
+	has_version sys-fs/udev && udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
+
 	ECONF="--disable-more-warnings
 		--disable-static
 		--localstatedir=/var
 		--with-distro=gentoo
 		--with-dbus-sys-dir=/etc/dbus-1/system.d
-		--with-udev-dir=/lib/udev
+		--with-udev-dir=${udevdir}
 		--with-iptables=/sbin/iptables
 		--enable-concheck
 		$(use_enable doc gtk-doc)
@@ -160,7 +172,7 @@ src_install() {
 
 	# Provide openrc net dependency only when nm is connected
 	exeinto /etc/NetworkManager/dispatcher.d
-	newexe "${FILESDIR}/10-openrc-status-r1" 10-openrc-status
+	newexe "${FILESDIR}/10-openrc-status-r2" 10-openrc-status
 	sed -e "s:@EPREFIX@:${EPREFIX}:g" \
 		-i "${ED}/etc/NetworkManager/dispatcher.d/10-openrc-status" || die
 
@@ -171,6 +183,8 @@ src_install() {
 	newins "${FILESDIR}/nm-system-settings.conf-ifnet" NetworkManager.conf
 
 	# Allow users in plugdev group to modify system connections
+	insinto /usr/share/polkit-1/rules.d/
+	doins "${FILESDIR}/01-org.freedesktop.NetworkManager.settings.modify.system.rules"
 	if has_version '<sys-auth/polkit-0.106'; then
 		insinto /etc/polkit-1/localauthority/10-vendor.d
 		doins "${FILESDIR}/01-org.freedesktop.NetworkManager.settings.modify.system.pkla"
@@ -193,5 +207,24 @@ pkg_postinst() {
 		ewarn "to ${EROOT}etc/NetworkManager/NetworkManager.conf"
 		ewarn
 		ewarn "After doing so, you can remove ${EROOT}etc/NetworkManager/nm-system-settings.conf"
+	fi
+
+	# The polkit rules file moved to /usr/share
+	old_rules="${EROOT}etc/polkit-1/rules.d/01-org.freedesktop.NetworkManager.settings.modify.system.rules"
+	if [[ -f "${old_rules}" ]]; then
+		case "$(md5sum ${old_rules})" in
+		  574d0cfa7e911b1f7792077003060240* )
+			# Automatically delete the old rules.d file if the user did not change it
+			elog
+			elog "Removing old ${old_rules} ..."
+			rm -f "${old_rules}" || eerror "Failed, please remove ${old_rules} manually"
+			;;
+		  * )
+			elog "The ${old_rules}"
+			elog "file moved to /usr/share/polkit-1/rules.d/ in >=networkmanager-0.9.4.0-r4"
+			elog "If you edited ${old_rules}"
+			elog "without changing its behavior, you may want to remove it."
+			;;
+		esac
 	fi
 }

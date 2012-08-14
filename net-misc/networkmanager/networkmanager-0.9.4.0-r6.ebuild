@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.4.0-r6.ebuild,v 1.1 2012/08/10 17:34:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.4.0-r6.ebuild,v 1.2 2012/08/14 04:47:00 tetromino Exp $
 
 EAPI="4"
 GNOME_ORG_MODULE="NetworkManager"
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gnome.org/projects/NetworkManager/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="avahi bluetooth connection-sharing dhclient +dhcpcd doc gnutls +introspection kernel_linux +nss modemmanager +ppp resolvconf systemd +wext wimax"
+IUSE="avahi bluetooth connection-sharing dhclient +dhcpcd doc gnutls +introspection kernel_linux +nss modemmanager +ppp resolvconf +wext wimax" # systemd
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 
 REQUIRED_USE="
@@ -53,8 +53,9 @@ COMMON_DEPEND=">=sys-apps/dbus-1.2
 
 RDEPEND="${COMMON_DEPEND}
 	modemmanager? ( >=net-misc/modemmanager-0.4 )
-	systemd? ( >=sys-apps/systemd-31 )
-	!systemd? ( sys-auth/consolekit )"
+	sys-auth/consolekit"
+#	systemd? ( >=sys-apps/systemd-31 )
+#	!systemd? ( sys-auth/consolekit )
 
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
@@ -153,11 +154,11 @@ src_configure() {
 			ECONF="${ECONF} $(use_with gnutls crypto=gnutls)"
 		fi
 
-		if use systemd; then
-			ECONF="${ECONF} --with-session-tracking=systemd"
-		else
+#		if use systemd; then
+#			ECONF="${ECONF} --with-session-tracking=systemd"
+#		else
 			ECONF="${ECONF} --with-session-tracking=ck"
-		fi
+#		fi
 
 	econf ${ECONF}
 }
