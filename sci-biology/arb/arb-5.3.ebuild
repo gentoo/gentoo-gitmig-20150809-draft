@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/arb/arb-5.2.ebuild,v 1.5 2012/08/14 16:47:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/arb/arb-5.3.ebuild,v 1.1 2012/08/14 16:47:19 jlec Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ DESCRIPTION="Tools for DNA/RNA sequence database handling and data analysis, phy
 HOMEPAGE="http://www.arb-home.de/"
 SRC_URI="
 	http://download.arb-home.de/release/arb_${PV}/arbsrc.tgz -> ${P}.tgz
-	http://dev.gentoo.org/~jlec/distfiles/${P}-linker.patch.bz2"
+	http://dev.gentoo.org/~jlec/distfiles/${P}-linker.patch.xz"
 
 SLOT="0"
 LICENSE="arb"
@@ -46,14 +46,12 @@ src_prepare() {
 		"${WORKDIR}"/${P}-linker.patch \
 		"${FILESDIR}"/5.1-libs.patch \
 		"${FILESDIR}"/5.1-bfr-overflow.patch \
-		"${FILESDIR}"/${PV}-libpng15.patch \
-		"${FILESDIR}"/${P}-gcc-47.patch
+		"${FILESDIR}"/5.2-libpng15.patch \
+		"${FILESDIR}"/${PN}-5.2-gcc-47.patch
 	sed \
 		-e 's/all: checks/all:/' \
 		-e "s/GCC:=.*/GCC=$(tc-getCC) ${CFLAGS}/" \
 		-e "s/GPP:=.*/GPP=$(tc-getCXX) ${CXXFLAGS}/" \
-		-e 's:-O4::g' \
-		-e 's:-pipe::g' \
 		-i "${S}/Makefile" || die
 	cp config.makefile.template config.makefile
 	sed -i -e '/^[ \t]*read/ d' -e 's/SHELL_ANS=0/SHELL_ANS=1/' "${S}/arb_install.sh" || die
