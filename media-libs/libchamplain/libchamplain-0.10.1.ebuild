@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.10.1.ebuild,v 1.3 2012/05/05 08:02:28 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.10.1.ebuild,v 1.4 2012/08/14 22:57:01 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -10,7 +10,7 @@ GNOME_TARBALL_SUFFIX="bz2"
 inherit gnome2
 
 DESCRIPTION="Clutter based world map renderer"
-HOMEPAGE="http://blog.pierlux.com/projects/libchamplain/en/"
+HOMEPAGE="http://projects.gnome.org/libchamplain/"
 
 LICENSE="LGPL-2"
 SLOT="0.10"

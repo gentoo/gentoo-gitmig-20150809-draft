@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.6.0.ebuild,v 1.14 2012/05/05 08:02:28 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.6.0.ebuild,v 1.15 2012/08/14 22:57:01 tetromino Exp $
 
 EAPI="3"
 
@@ -11,7 +11,7 @@ RESTRICT_PYTHON_ABIS="3.*"
 inherit gnome2 python
 
 DESCRIPTION="Clutter based world map renderer"
-HOMEPAGE="http://blog.pierlux.com/projects/libchamplain/en/"
+HOMEPAGE="http://projects.gnome.org/libchamplain/"
 
 LICENSE="LGPL-2"
 SLOT="0.6"
