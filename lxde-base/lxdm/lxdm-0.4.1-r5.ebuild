@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/lxdm-0.4.1-r5.ebuild,v 1.4 2012/08/13 07:18:30 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/lxdm-0.4.1-r5.ebuild,v 1.5 2012/08/14 17:39:47 vostorga Exp $
 
 EAPI="2"
 
@@ -42,6 +42,10 @@ src_prepare() {
 
 	# 412025
 	epatch "${FILESDIR}"/${P}-event-check.patch
+
+	# 393329 Selinux support
+	epatch "${FILESDIR}"/${P}-selinux-support.patch
+
 	# this replaces the bootstrap/autogen script in most packages
 	eautoreconf
 
