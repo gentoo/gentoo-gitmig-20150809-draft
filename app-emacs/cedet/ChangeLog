@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/cedet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.75 2012/06/20 22:52:02 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.76 2012/08/14 20:25:10 blueness Exp $
+
+  14 Aug 2012; Anthony G. Basile <blueness@gentoo.org> cedet-1.1.ebuild:
+  Stable ppc, bug #431378
 
   20 Jun 2012; Ulrich Müller <ulm@gentoo.org> cedet-1.1.ebuild:
   When installing, ignore *.pt files produced by tests. Bug 422697.
