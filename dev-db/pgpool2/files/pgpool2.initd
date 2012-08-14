@@ -1,29 +1,75 @@
 #!/sbin/runscript
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool2/files/pgpool2.initd,v 1.2 2011/03/02 08:52:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool2/files/pgpool2.initd,v 1.3 2012/08/14 19:50:17 titanofold Exp $
+
+extra_started_commands="reload"
+
+CONFIGFILE="/etc/pgpool2/pgpool.conf"
+LOGFILE="/var/log/pgpool2.log"
+PIDFILE=""
 
 depend() {
-	need net
+    use net
+    use postgresql
 }
 
-ARGS="-f /etc/pgpool2/pgpool.conf -a /etc/pgpool2/pool_hba.conf -F /etc/pgpool2/pcp.conf -D"
-LOGFILE="/var/log/pgpool2.log"
+get_config() {
+    [ -f ${CONFIGFILE} ] || return 1
+
+    eval echo $(sed -e 's:#.*::' ${CONFIGFILE} | \
+        awk '$1 == "'$1'" { print ($2 == "=" ? $3 : $2) }')
+}
+
+PIDFILE="$(get_config pid_file_name)"
+
+prep() {
+    checkpath -o pgpool:postgres -m 0770 -d $(dirname ${PIDFILE}) || return 1
+    checkpath -o pgpool:postgres -m 0770 -d $(get_config logdir) || return 1
+    checkpath -o pgpool:postgres -m 0660 -f ${LOGFILE} || return 1
+    checkpath -o postgres:postgres -m 0770 -d $(get_config socket_dir) || return 1
+    checkpath -o postgres:postgres -m 0770 -d $(get_config pcp_socket_dir) || return 1
+}
 
 start() {
-	ebegin "Starting pgpool2"
-	/usr/bin/pgpool ${ARGS} >> "${LOGFILE}" 2>&1
-	eend $?
+    prep || return 1
+
+    ebegin "Starting pgpool2"
+
+    start-stop-daemon --start \
+        --user pgpool:postgres \
+        --pidfile ${PIDFILE} \
+        --exec /usr/bin/pgpool
+
+    eend
 }
 
 stop() {
-	ebegin "Stopping pgpool2"
-	/usr/bin/pgpool -m fast stop >> "${LOGFILE}" 2>&1
-	eend $?
+    local seconds=$(( ${NICE_TIMEOUT} + ${RUDE_TIMEOUT} + ${FORCE_TIMEOUT} ))
+    ebegin "Stopping pgpool (this can take up to ${seconds} seconds)"
+
+    local retval
+    local retries=SIGTERM/${NICE_TIMEOUT}
+
+    if [ "${RUDE_QUIT}" != "NO" ] ; then
+        einfo "RUDE_QUIT enabled."
+        retries="${retries}/SIGINT/${RUDE_TIMEOUT}"
+    fi
+    if [ "${FORCE_QUIT}" = "YES" ] ; then
+        einfo "FORCE_QUIT enabled."
+        ewarn "A recover-run might be executed on next startup."
+        retries="${retries}/SIGQUIT/${FORCE_TIMEOUT}"
+    fi
+
+    # Loops through nice, rude, and force quit in one go.
+    start-stop-daemon --stop \
+        --pidfile ${PIDFILE} \
+        --retry ${retries}
+
+    eend
 }
 
-restart() {
-	svc_stop
-	sleep 3
-	svc_start
+reload() {
+    start-stop-daemon --signal HUP \
+        --pidfile ${PIDFILE}
 }
