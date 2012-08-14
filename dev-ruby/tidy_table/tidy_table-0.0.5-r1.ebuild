@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tidy_table/tidy_table-0.0.5-r1.ebuild,v 1.6 2010/07/21 12:52:55 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tidy_table/tidy_table-0.0.5-r1.ebuild,v 1.7 2012/08/14 00:07:02 flameeyes Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -24,5 +24,5 @@ ruby_add_bdepend "
 	doc? ( dev-ruby/hoe )
 	test? (
 		dev-ruby/hoe
-		dev-ruby/rspec
+		dev-ruby/rspec:0
 	)"
