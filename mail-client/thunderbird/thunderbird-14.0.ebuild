@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-14.0.ebuild,v 1.2 2012/07/29 17:29:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-14.0.ebuild,v 1.3 2012/08/14 02:25:10 zerochaos Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -147,6 +147,10 @@ src_prepare() {
 		einfo edos2unix "${file}"
 		edos2unix "${file}"
 	done
+
+	if use debug ; then
+		unset PYTHONDONTWRITEBYTECODE
+	fi
 
 	# Allow user to apply any additional patches without modifing ebuild
 	epatch_user
