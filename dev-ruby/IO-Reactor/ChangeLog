@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/IO-Reactor
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/IO-Reactor/ChangeLog,v 1.10 2012/03/09 07:01:47 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/IO-Reactor/ChangeLog,v 1.11 2012/08/14 03:49:38 flameeyes Exp $
+
+  14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> IO-Reactor-1.0.4.ebuild:
+  Port to rspec helper for testing. Bump to EAPI 4.
 
   09 Mar 2012; Hans de Graaff <graaff@gentoo.org> -IO-Reactor-0.0.6.ebuild:
   Remove old version.
@@ -35,4 +38,3 @@
   24 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
   +IO-Reactor-0.0.6.ebuild:
   Initial import, needed for Ruby-MemCache.
-
