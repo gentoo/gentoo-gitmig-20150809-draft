@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ansi2html/ansi2html-0.9.1.ebuild,v 1.3 2012/08/07 09:28:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ansi2html/ansi2html-0.9.1-r1.ebuild,v 1.1 2012/08/14 21:14:18 iksaif Exp $
 
 EAPI="4"
 
@@ -30,8 +30,8 @@ DEPEND="${RDEPEND}
 	dev-python/setuptools"
 
 src_prepare() {
+	epatch "${FILESDIR}/${PN}-0.9.1-fix-0-control-code.patch"
 	if use test; then
-		epatch "${FILESDIR}/${PN}-0.9.1-fix-0-control-code.patch"
 		epatch "${FILESDIR}/${PN}-0.9.1-fix-sys-argv-in-tests.patch"
 	fi
 }
