@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxde-meta
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-meta/ChangeLog,v 1.47 2012/08/11 21:28:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-meta/ChangeLog,v 1.48 2012/08/14 22:09:19 johu Exp $
+
+  14 Aug 2012; Johannes Huber <johu@gentoo.org> lxde-meta-0.5.5-r2.ebuild:
+  Stable for x86, wrt bug #430494
 
   11 Aug 2012; Agostino Sarubbo <ago@gentoo.org> lxde-meta-0.5.5-r2.ebuild:
   Stable for amd64, wrt bug #430494

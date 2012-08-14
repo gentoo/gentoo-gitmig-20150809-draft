@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxde-icon-theme
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-icon-theme/ChangeLog,v 1.12 2012/08/11 21:28:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-icon-theme/ChangeLog,v 1.13 2012/08/14 22:11:05 johu Exp $
+
+  14 Aug 2012; Johannes Huber <johu@gentoo.org> lxde-icon-theme-0.5.0.ebuild:
+  Stable for x86, wrt bug #430494
 
   11 Aug 2012; Agostino Sarubbo <ago@gentoo.org> lxde-icon-theme-0.5.0.ebuild:
   Stable for amd64, wrt bug #430494
