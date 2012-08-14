@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.41.ebuild,v 1.1 2012/08/14 15:28:15 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.41.ebuild,v 1.2 2012/08/14 15:56:50 ryao Exp $
 
 # genkernel-9999        -> latest Git branch "master"
 # genkernel-VERSION     -> normal genkernel release
@@ -73,17 +73,12 @@ src_unpack() {
 	else
 		unpack ${P}.tar.bz2
 	fi
+}
+
+src_prepare() {
 	use selinux && sed -i 's/###//g' "${S}"/gen_compile.sh
-}
 
-src_compile() {
-	if [[ ${PV} == 9999* ]]; then
-		emake || die
-	fi
-}
-
-src_install() {
-	# This block updates software.sh
+	# Update software.sh
 	sed -i \
 		-e "s:VERSION_BUSYBOX:$VERSION_BUSYBOX:" \
 		-e "s:VERSION_MDADM:$VERSION_MDADM:" \
@@ -95,6 +90,15 @@ src_install() {
 		-e "s:VERSION_GPG:$VERSION_GPG:" \
 		"${S}"/defaults/software.sh \
 		|| die "Could not adjust versions"
+}
+
+src_compile() {
+	if [[ ${PV} == 9999* ]]; then
+		emake || die
+	fi
+}
+
+src_install() {
 	insinto /etc
 	doins "${S}"/genkernel.conf || die "doins genkernel.conf"
 

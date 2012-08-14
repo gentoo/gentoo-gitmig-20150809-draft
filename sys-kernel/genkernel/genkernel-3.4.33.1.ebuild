@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.33.1.ebuild,v 1.3 2012/07/26 20:39:22 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.33.1.ebuild,v 1.4 2012/08/14 15:56:50 ryao Exp $
 
 # genkernel-9999        -> latest Git branch "master"
 # genkernel-VERSION     -> normal genkernel release
@@ -77,17 +77,12 @@ src_unpack() {
 	else
 		unpack ${P}.tar.bz2
 	fi
+}
+
+src_prepare() {
 	use selinux && sed -i 's/###//g' "${S}"/gen_compile.sh
-}
 
-src_compile() {
-	if [[ ${PV} == 9999* ]]; then
-		emake || die
-	fi
-}
-
-src_install() {
-	# This block updates genkernel.conf
+	# Update software.sh
 	sed \
 		-e "s:VERSION_BUSYBOX:$VERSION_BUSYBOX:" \
 		-e "s:VERSION_MDADM:$VERSION_MDADM:" \
@@ -100,6 +95,15 @@ src_install() {
 		"${S}"/genkernel.conf > "${T}"/genkernel.conf \
 		|| die "Could not adjust versions"
 	insinto /etc
+}
+
+src_compile() {
+	if [[ ${PV} == 9999* ]]; then
+		emake || die
+	fi
+}
+
+src_install() {
 	doins "${T}"/genkernel.conf || die "doins genkernel.conf"
 
 	doman genkernel.8 || die "doman"

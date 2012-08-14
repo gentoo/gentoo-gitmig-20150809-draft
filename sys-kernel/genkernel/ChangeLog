@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.333 2012/08/14 15:28:15 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.334 2012/08/14 15:56:50 ryao Exp $
+
+  14 Aug 2012; Richard Yao <ryao@gentoo.org> genkernel-3.4.26.ebuild,
+  genkernel-3.4.27.ebuild, genkernel-3.4.28.ebuild, genkernel-3.4.29.ebuild,
+  genkernel-3.4.32.ebuild, genkernel-3.4.33.1.ebuild, genkernel-3.4.34.ebuild,
+  genkernel-3.4.35.ebuild, genkernel-3.4.36.ebuild, genkernel-3.4.37.ebuild,
+  genkernel-3.4.38.ebuild, genkernel-3.4.40.ebuild, genkernel-3.4.41.ebuild,
+  genkernel-9999.ebuild:
+  Move sed invocations to src_prepare
 
 *genkernel-3.4.41 (14 Aug 2012)
 
