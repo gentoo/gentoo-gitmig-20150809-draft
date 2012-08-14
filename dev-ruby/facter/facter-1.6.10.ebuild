@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/facter-1.6.10.ebuild,v 1.1 2012/08/05 13:08:08 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/facter-1.6.10.ebuild,v 1.2 2012/08/14 03:29:59 flameeyes Exp $
 
 EAPI="4"
 
@@ -20,11 +20,12 @@ SLOT="0"
 IUSE=""
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
-RDEPEND="${RDEPEND}
+CDEPEND="
 	sys-apps/dmidecode
 	sys-apps/lsb-release
 	sys-apps/pciutils"
 
-ruby_add_bdepend "test? (
-		dev-ruby/mocha
-	)"
+RDEPEND+=" ${CDEPEND}"
+DEPEND+=" test? ( ${CDEPEND} )"
+
+ruby_add_bdepend "test? ( dev-ruby/mocha )"
