@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.104 2012/08/13 18:33:39 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.105 2012/08/14 11:56:15 scarabeus Exp $
 
 EAPI=4
 
@@ -417,7 +417,6 @@ src_configure() {
 	# --enable-graphite: disabling causes build breakages
 	# --enable-*-link: link to the library rather than just dlopen on runtime
 	# --enable-release-build: build the libreoffice as release
-	# --enable-xmlsec: disabling causes build breakages
 	# --disable-fetch-external: prevent dowloading during compile phase
 	# --disable-gnome-vfs: old gnome virtual fs support
 	# --disable-gstreamer: support for 1.0 api, we use gstreamer-0.10 for now
@@ -452,7 +451,6 @@ src_configure() {
 		--enable-randr-link \
 		--enable-release-build \
 		--enable-unix-qstart-libpng \
-		--enable-xmlsec \
 		--disable-ccache \
 		--disable-crashdump \
 		--disable-dependency-tracking \
