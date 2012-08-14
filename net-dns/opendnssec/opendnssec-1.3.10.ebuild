@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/opendnssec-1.3.6.ebuild,v 1.3 2012/07/11 23:44:53 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/opendnssec-1.3.10.ebuild,v 1.1 2012/08/14 19:43:33 mschiff Exp $
 
 EAPI=4
 
@@ -156,7 +156,7 @@ src_install() {
 	default
 
 	# remove useless .la files
-	find "${ED}" -name '*.la' -exec rm -f {} +
+	find "${ED}" -name '*.la' -delete
 
 	# Remove subversion tags from config files to avoid useless config updates
 	sed -i \
