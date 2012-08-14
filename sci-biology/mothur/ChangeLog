@@ -1,6 +1,15 @@
 # ChangeLog for sci-biology/mothur
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mothur/ChangeLog,v 1.9 2011/07/08 10:58:34 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mothur/ChangeLog,v 1.10 2012/08/14 15:37:59 jlec Exp $
+
+*mothur-1.27.0 (14 Aug 2012)
+*mothur-1.13.0-r2 (14 Aug 2012)
+
+  14 Aug 2012; Justin Lecher <jlec@gentoo.org> mothur-1.6.0.ebuild,
+  mothur-1.13.0-r1.ebuild, +mothur-1.13.0-r2.ebuild,
+  +files/mothur-1.13.0-overflows2.patch, +mothur-1.27.0.ebuild,
+  +files/mothur-1.27.0-makefile.patch, +files/mothur-1.27.0-overflows.patch:
+  Version BUmp; fix for buffer overflows, #431258
 
   08 Jul 2011; Samuli Suominen <ssuominen@gentoo.org> mothur-1.13.0-r1.ebuild:
   Convert from "useq" to "use".

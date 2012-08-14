@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mothur/mothur-1.13.0-r1.ebuild,v 1.3 2012/08/14 15:37:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mothur/mothur-1.13.0-r2.ebuild,v 1.1 2012/08/14 15:37:59 jlec Exp $
 
 EAPI="2"
 
@@ -26,8 +26,10 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-makefile.patch \
-		"${FILESDIR}"/${P}-overflows.patch
+	epatch \
+		"${FILESDIR}"/${P}-makefile.patch \
+		"${FILESDIR}"/${P}-overflows.patch \
+		"${FILESDIR}"/${P}-overflows2.patch
 }
 
 use_yn() {

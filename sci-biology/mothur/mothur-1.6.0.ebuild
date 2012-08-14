@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mothur/mothur-1.6.0.ebuild,v 1.3 2010/02/06 13:06:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mothur/mothur-1.6.0.ebuild,v 1.4 2012/08/14 15:37:59 jlec Exp $
 
-EAPI="2"
+EAPI=4
 
 inherit toolchain-funcs
 
 DESCRIPTION="A suite of algorithms for ecological bioinformatics"
-HOMEPAGE="http://schloss.micro.umass.edu/wiki/Main_Page"
+HOMEPAGE="http://www.mothur.org/"
 SRC_URI="mirror://gentoo/${P}.zip"
 
 LICENSE="GPL-3"
@@ -21,10 +21,13 @@ RDEPEND=""
 S="${WORKDIR}/mothur-v.${PV}"
 
 src_prepare() {
-	sed -i -e 's/CC_OPTIONS =/CC_OPTIONS = ${CXXFLAGS} /' \
-		-e 's|CC = g++|CC = '$(tc-getCXX)'|' "${S}/makefile" || die
+	sed \
+		-e 's/CC_OPTIONS =.*$/CC_OPTIONS = ${CXXFLAGS} /' \
+		-e 's|CC = g++|CC = '$(tc-getCXX)'|' \
+		-e '/^LNK_OPTIONS/s:$:${LDFLAGS}:g' \
+		-i makefile || die
 }
 
 src_install() {
-	dobin mothur || die
+	dobin ${PN}
 }
