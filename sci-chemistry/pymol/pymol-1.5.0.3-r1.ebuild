@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.5.0.3-r1.ebuild,v 1.3 2012/08/12 17:41:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.5.0.3-r1.ebuild,v 1.4 2012/08/14 06:50:55 jlec Exp $
 
 EAPI=4
 
@@ -107,8 +107,11 @@ src_install() {
 
 pkg_postinst() {
 	elog "\t USE=shaders was removed,"
-	elog "please use pymol config settings"
+	elog "please use pymol config settings (~/.pymolrc)"
 	elog "\t set use_shaders, 1"
+	elog "in case of crashes, please deactivate this experimental feature by setting"
+	elog "\t set use_shaders, 0"
+	elog "\t set sphere_mode, 0"
 	distutils_pkg_postinst
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
