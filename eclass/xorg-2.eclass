@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.57 2012/06/11 13:02:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.58 2012/08/14 06:34:16 scarabeus Exp $
 
 # @ECLASS: xorg-2.eclass
 # @MAINTAINER:
@@ -424,8 +424,16 @@ xorg-2_src_configure() {
 	fi
 
 	[[ -n "${FONT}" ]] && xorg-2_font_configure
+
+	# Check if package supports disabling of dep tracking
+	# Fixes warnings like:
+	#    WARNING: unrecognized options: --disable-dependency-tracking
+	if grep -q -s "disable-depencency-tracking" ${ECONF_SOURCE:-.}/configure; then
+		local dep_track="--disable-dependency-tracking"
+	fi
+
 	local myeconfargs=(
-		--disable-dependency-tracking
+		${dep_track}
 		${FONT_OPTIONS}
 		"${xorgconfadd[@]}"
 	)
