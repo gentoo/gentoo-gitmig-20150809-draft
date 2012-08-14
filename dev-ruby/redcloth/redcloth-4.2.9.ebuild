@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/redcloth-4.2.9.ebuild,v 1.6 2012/08/09 14:34:23 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/redcloth-4.2.9.ebuild,v 1.7 2012/08/14 14:18:25 flameeyes Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ USE_RUBY="ruby18 ree18 ruby19"
 
 RUBY_FAKEGEM_NAME="RedCloth"
 
-RUBY_FAKEGEM_TASK_TEST="spec"
+RUBY_FAKEGEM_RECIPE_TEST="rspec"
 RUBY_FAKEGEM_TASK_DOC=""
 
 RUBY_FAKEGEM_DOCDIR="doc"
@@ -33,17 +33,12 @@ SLOT="0"
 KEYWORDS="amd64 ~hppa ~ia64 ppc ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE=""
 
-DEPEND="$DEPEND
-	dev-util/ragel"
-RDEPEND="$RDEPEND"
+DEPEND+=" dev-util/ragel"
 
 ruby_add_bdepend "
 	>=dev-ruby/rake-0.8.7
 	>=dev-ruby/rake-compiler-0.7.1
-	test? (
-		>=dev-ruby/rspec-2.4
-		>=dev-ruby/diff-lcs-1.1.2
-	)"
+	test? ( >=dev-ruby/diff-lcs-1.1.2 )"
 
 pkg_setup() {
 	ruby-ng_pkg_setup
@@ -63,8 +58,4 @@ each_ruby_compile() {
 	# We cannot run this manually easily, because Ragel re-generation
 	# is a mess
 	${RUBY} -S rake compile || die "rake compile failed"
-}
-
-each_ruby_test() {
-	${RUBY} -I lib -S rspec spec || die
 }
