@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fssm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fssm/ChangeLog,v 1.20 2012/06/17 07:38:58 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fssm/ChangeLog,v 1.21 2012/08/14 03:40:16 flameeyes Exp $
+
+  14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> fssm-0.2.8.1.ebuild:
+  Port to rspec helper for testing.
 
   17 Jun 2012; Hans de Graaff <graaff@gentoo.org> fssm-0.2.8.1.ebuild:
   Avoid a dependency on git, fixing bug 420953.
@@ -80,4 +83,3 @@
   09 Jan 2011; Hans de Graaff <graaff@gentoo.org> +fssm-0.2.3.ebuild,
   +metadata.xml:
   Initial import. New dependency of dev-ruby/haml.
-
