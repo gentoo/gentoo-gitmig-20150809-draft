@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openvpn/networkmanager-openvpn-0.8.2-r1.ebuild,v 1.6 2012/05/05 03:20:40 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openvpn/networkmanager-openvpn-0.8.2-r1.ebuild,v 1.7 2012/08/14 04:20:06 tetromino Exp $
 
 EAPI="2"
 
@@ -16,13 +16,13 @@ SRC_URI="${SRC_URI//${PN}/${MY_PN}}"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="gnome"
+IUSE="gtk"
 
 RDEPEND="
 	>=net-misc/networkmanager-${PV}
 	>=net-misc/openvpn-2.1_rc9
 	>=dev-libs/dbus-glib-0.74
-	gnome? (
+	gtk? (
 		>=x11-libs/gtk+-2.6:2
 		gnome-base/gconf:2
 		gnome-base/gnome-keyring
@@ -52,7 +52,7 @@ src_prepare() {
 
 src_configure() {
 	ECONF="--disable-more-warnings
-		$(use_with gnome)"
+		$(use_with gtk gnome)"
 
 	econf ${ECONF}
 }
