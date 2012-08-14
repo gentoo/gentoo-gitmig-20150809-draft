@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cwiid/cwiid-20110107-r1.ebuild,v 1.3 2012/08/14 23:23:45 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cwiid/cwiid-20110107-r1.ebuild,v 1.4 2012/08/14 23:25:36 hasufell Exp $
 
 EAPI="3"
 
@@ -28,7 +28,8 @@ IUSE="python"
 DEPEND="sys-apps/gawk
 	sys-apps/sed
 	sys-devel/bison
-	>=sys-devel/flex-2.5.35"
+	>=sys-devel/flex-2.5.35
+	virtual/pkgconfig"
 
 RDEPEND="net-wireless/bluez
 	x11-libs/gtk+:2
