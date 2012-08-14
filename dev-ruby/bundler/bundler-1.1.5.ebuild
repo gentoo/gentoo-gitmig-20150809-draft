@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/bundler-1.1.5.ebuild,v 1.1 2012/07/30 19:38:31 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/bundler-1.1.5.ebuild,v 1.2 2012/08/14 03:10:38 flameeyes Exp $
 
-EAPI=2
+EAPI=4
 
 # jruby → needs to be tested because jruby-1.5.1 fails in multiple
 # ways unrelated to this package.
@@ -28,10 +28,10 @@ ruby_add_rdepend virtual/rubygems
 
 ruby_add_bdepend "test? ( app-text/ronn )"
 
-RDEPEND="${RDEPEND}
-	dev-vcs/git"
-DEPEND="${DEPEND}
-	test? ( dev-vcs/git )"
+RDEPEND+=" dev-vcs/git"
+DEPEND+=" test? ( dev-vcs/git )"
+
+RUBY_PATCHES=( "${P}-nouserpriv.patch" )
 
 all_ruby_prepare() {
 	# Bundler only supports running the specs from git:
@@ -43,15 +43,4 @@ all_ruby_prepare() {
 	# failing spec, so patch out this spec for now since it is not a
 	# regression.
 	sed -i -e '/works when you bundle exec bundle/,/^  end/ s:^:#:' spec/install/deploy_spec.rb || die
-}
-
-each_ruby_prepare() {
-	case ${RUBY} in
-		*ruby19)
-			# Account for different wording in ruby 1.9.3.
-#			sed -i -e 's/no such file to load/cannot load such file/' spec/runtime/require_spec.rb spec/install/gems/groups_spec.rb || die
-			;;
-		*)
-			;;
-	esac
 }
