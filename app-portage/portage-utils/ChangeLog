@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/portage-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.135 2012/07/03 16:21:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.136 2012/08/14 18:18:20 vapier Exp $
+
+*portage-utils-0.11 (14 Aug 2012)
+
+  14 Aug 2012; Mike Frysinger <vapier@gentoo.org> +portage-utils-0.11.ebuild:
+  Version bump.
 
   03 Jul 2012; Brent Baude <ranger@gentoo.org> portage-utils-0.10.ebuild:
   Marking portage-utils-0.10 ppc for bug 419663
@@ -655,4 +660,3 @@
   +qfile-0.0.1.ebuild:
   - initial creation of qfile package. A very small and fast c implementation of
   portage query file tool
-
