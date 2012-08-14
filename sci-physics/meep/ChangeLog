@@ -1,6 +1,14 @@
 # ChangeLog for sci-physics/meep
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/meep/ChangeLog,v 1.16 2010/06/23 20:18:30 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/meep/ChangeLog,v 1.17 2012/08/14 22:50:51 bicatali Exp $
+
+*meep-1.2 (14 Aug 2012)
+
+  14 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/meep-1.2-no-auto-mpb.patch, +files/meep-1.2-pc-no-ldflags.patch,
+  +meep-1.2.ebuild, metadata.xml:
+  Version bump, removed LDFLAGS from the pkg-config flag, added a mpb flag to
+  compile against sci-physics/mpb, avoiding automagic
 
   23 Jun 2010; Sébastien Fabbro <bicatali@gentoo.org> meep-1.1.1.ebuild:
   Removed bindist flag, should be compatible GPL-3 anyway
@@ -69,4 +77,3 @@
   06 Feb 2008; Sébastien Fabbro <bicatali@gentoo.org>
   +files/meep-0.10.1-configure.ac.patch, +metadata.xml, +meep-0.10.1.ebuild:
   Initial import. Ebuild first submitted by Ben Schwartz, see bug #170989
-
