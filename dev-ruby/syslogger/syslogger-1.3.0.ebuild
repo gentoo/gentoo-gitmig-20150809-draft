@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/syslogger/syslogger-1.3.0.ebuild,v 1.1 2012/04/22 07:02:27 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/syslogger/syslogger-1.3.0.ebuild,v 1.2 2012/08/14 00:12:13 flameeyes Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ree18 ruby19 jruby"
 
-RUBY_FAKEGEM_TASK_TEST="spec"
+RUBY_FAKEGEM_RECIPE_TEST="rspec"
 
 RUBY_FAKEGEM_DOCDIR="rdoc"
 RUBY_FAKEGEM_EXTRADOC="README.rdoc"
@@ -26,7 +26,6 @@ KEYWORDS="~amd64"
 IUSE=""
 
 ruby_add_bdepend "
-	test? ( dev-ruby/rspec:2 )
 	doc? ( >=dev-ruby/rdoc-2.4.2 )"
 
 all_ruby_prepare() {
