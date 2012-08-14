@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/bird
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bird/ChangeLog,v 1.20 2012/08/13 10:54:49 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bird/ChangeLog,v 1.21 2012/08/14 20:08:55 scarabeus Exp $
+
+*bird-1.3.8-r1 (14 Aug 2012)
+
+  14 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> +bird-1.3.8-r1.ebuild:
+  Bump eapi on bird to latest as dicussed on council meeting. Acked by chainsaw.
 
 *bird-1.3.8 (13 Aug 2012)
 
@@ -157,4 +162,3 @@
   Resurrected ebuild that was in the tree earlier. With thanks to Chet
   McNeill <chet@somedec.com> in bug #122823 for an initial ebuild and patch
   set.
-
