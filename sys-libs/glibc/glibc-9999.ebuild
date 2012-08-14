@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-9999.ebuild,v 1.13 2012/08/13 22:48:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-9999.ebuild,v 1.14 2012/08/14 16:12:33 vapier Exp $
 
 inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib unpacker multiprocessing
 
@@ -72,18 +72,10 @@ is_crosscompile() {
 # Everyone knows 2.2 > 0, duh.
 SLOT="2.2"
 
-# General: We need a new-enough binutils for as-needed
-# arch: we need to make sure our binutils/gcc supports TLS
-DEPEND=">=sys-devel/gcc-3.4.4
-	arm? ( >=sys-devel/binutils-2.16.90 >=sys-devel/gcc-4.1.0 )
-	x86? ( >=sys-devel/gcc-4.3 )
-	amd64? ( >=sys-devel/binutils-2.19 >=sys-devel/gcc-4.3 )
-	ppc? ( >=sys-devel/gcc-4.1.0 )
-	ppc64? ( >=sys-devel/gcc-4.1.0 )
-	>=sys-devel/binutils-2.15.94
-	>=app-misc/pax-utils-0.1.10
-	virtual/os-headers
-	!<sys-apps/sandbox-1.2.18.1-r2
+# General: We need a new-enough binutils/gcc to match upstream baseline.
+# arch: we need to make sure our binutils/gcc supports TLS.
+DEPEND=">=app-misc/pax-utils-0.1.10
+	!<sys-apps/sandbox-1.6
 	!<sys-apps/portage-2.1.2
 	selinux? ( sys-libs/libselinux )"
 RDEPEND="!sys-kernel/ps3-sources
@@ -91,11 +83,18 @@ RDEPEND="!sys-kernel/ps3-sources
 	!sys-libs/nss-db"
 
 if [[ ${CATEGORY} == cross-* ]] ; then
-	DEPEND="${DEPEND} !crosscompile_opts_headers-only? ( ${CATEGORY}/gcc )"
-	[[ ${CATEGORY} == *-linux* ]] && DEPEND="${DEPEND} ${CATEGORY}/linux-headers"
+	DEPEND+=" !crosscompile_opts_headers-only? (
+		>=${CATEGORY}/binutils-2.20
+		>=${CATEGORY}/gcc-4.3
+	)"
+	[[ ${CATEGORY} == *-linux* ]] && DEPEND+=" ${CATEGORY}/linux-headers"
 else
-	DEPEND="${DEPEND} !vanilla? ( >=sys-libs/timezone-data-2007c )"
-	RDEPEND="${RDEPEND}
+	DEPEND+="
+		>=sys-devel/binutils-2.20
+		>=sys-devel/gcc-4.3
+		virtual/os-headers
+		!vanilla? ( >=sys-libs/timezone-data-2012c )"
+	RDEPEND+="
 		vanilla? ( !sys-libs/timezone-data )
 		!vanilla? ( sys-libs/timezone-data )"
 fi
