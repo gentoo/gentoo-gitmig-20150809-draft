@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cwiid/cwiid-20110107-r1.ebuild,v 1.2 2011/03/28 01:04:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cwiid/cwiid-20110107-r1.ebuild,v 1.3 2012/08/14 23:23:45 hasufell Exp $
 
 EAPI="3"
 
@@ -51,6 +51,7 @@ src_prepare() {
 	# Fix broken build system
 	sed -i "s:--disable-ldconfig:--without-ldconfig:g" "${S}"/configure.ac || die
 	sed -i "s:enable_ldconfig:with_ldconfig:g" "${S}"/configure.ac || die
+	epatch "${FILESDIR}"/${P}-underlinking.patch
 	eautoreconf
 }
 src_configure() {
