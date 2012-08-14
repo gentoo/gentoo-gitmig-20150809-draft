@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14049 2012/08/13 21:31:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14050 2012/08/14 16:49:57 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -164,12 +164,6 @@ gnustep-apps/vindaloo
 # Replaced by ssh-copy-id from net-misc/openssh.
 # Removal in 30 days.
 net-misc/ssh-installkeys
-
-# Markos Chandras <hwoarang@gentoo.org> (14 Jul 2012)
-# Does not work with recent kernels (#339758)
-# Does not build (#426542)
-# Removal in 30 days
-app-laptop/omnibook
 
 # Ralph Sennhauser <sera@gentoo.org> (13 Jul 2012)
 # Mask for removal in 30 days. Fails to build with java 7 #421917.
