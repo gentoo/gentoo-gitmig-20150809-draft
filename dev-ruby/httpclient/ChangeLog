@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/httpclient
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httpclient/ChangeLog,v 1.41 2012/05/21 10:17:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httpclient/ChangeLog,v 1.42 2012/08/14 18:49:02 graaff Exp $
+
+  14 Aug 2012; Hans de Graaff <graaff@gentoo.org>
+  -httpclient-2.1.5.2-r1.ebuild, -httpclient-2.2.4.ebuild:
+  Cleanup.
 
   21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> httpclient-2.2.2.ebuild:
   x86 stable wrt bug #393583
