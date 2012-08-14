@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-pptp/networkmanager-pptp-0.9.2.0.ebuild,v 1.3 2012/05/05 03:20:41 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-pptp/networkmanager-pptp-0.9.2.0.ebuild,v 1.4 2012/08/14 04:28:49 tetromino Exp $
 
 EAPI="4"
 GNOME_ORG_MODULE="NetworkManager-${PN##*-}"
@@ -13,14 +13,14 @@ HOMEPAGE="http://www.gnome.org/projects/NetworkManager/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="gnome"
+IUSE="gtk"
 
 RDEPEND="
 	>=net-misc/networkmanager-${PV}
 	>=dev-libs/dbus-glib-0.74
 	net-dialup/ppp
 	net-dialup/pptpclient
-	gnome? (
+	gtk? (
 		>=x11-libs/gtk+-2.91.4:3
 		gnome-base/gnome-keyring
 	)"
@@ -43,7 +43,7 @@ src_configure() {
 		--disable-static
 		--with-dist-version=Gentoo
 		--with-gtkver=3
-		$(use_with gnome)"
+		$(use_with gtk gnome)"
 
 	econf ${ECONF}
 }

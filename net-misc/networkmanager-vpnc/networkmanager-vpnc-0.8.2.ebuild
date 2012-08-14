@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-vpnc/networkmanager-vpnc-0.8.2.ebuild,v 1.4 2012/05/05 03:20:41 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-vpnc/networkmanager-vpnc-0.8.2.ebuild,v 1.5 2012/08/14 04:28:50 tetromino Exp $
 
 EAPI="2"
 
@@ -16,13 +16,13 @@ SRC_URI="${SRC_URI//${PN}/${MY_PN}}"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="gnome"
+IUSE="gtk"
 
 RDEPEND="
 	>=net-misc/networkmanager-${PV}
 	>=dev-libs/dbus-glib-0.74
 	>=net-misc/vpnc-0.5
-	gnome? (
+	gtk? (
 		>=x11-libs/gtk+-2.6:2
 		gnome-base/gconf:2
 		gnome-base/gnome-keyring
@@ -50,7 +50,7 @@ src_prepare() {
 
 src_configure() {
 	ECONF="--disable-more-warnings
-		$(use_with gnome)"
+		$(use_with gtk gnome)"
 
 	econf ${ECONF}
 }
