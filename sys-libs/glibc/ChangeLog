@@ -1,5 +1,8 @@
 # ChangeLog for sys-libs/glibc
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.879 2012/08/13 22:48:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.880 2012/08/14 16:06:06 vapier Exp $
+
+  14 Aug 2012; Mike Frysinger <vapier@gentoo.org> files/eblits/src_unpack.eblit:
+  Fix inverted version logic with libgcc_eh #431304 by David Flogeras.
 
   13 Aug 2012; Mike Frysinger <vapier@gentoo.org> glibc-2.10.1-r1.ebuild,
   glibc-2.11.3.ebuild, glibc-2.12.1-r3.ebuild, glibc-2.12.2.ebuild,
