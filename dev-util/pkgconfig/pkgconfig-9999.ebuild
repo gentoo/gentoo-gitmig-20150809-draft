@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-9999.ebuild,v 1.3 2012/07/13 09:27:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-9999.ebuild,v 1.4 2012/08/14 09:33:26 ssuominen Exp $
 
 EAPI=4
 
@@ -71,9 +71,6 @@ src_configure() {
 
 src_install() {
 	default
-
-	# http://bugs.freedesktop.org/show_bug.cgi?id=52044
-	rm -f "${ED}"/usr/share/aclocal/g{settings,lib-gettext,lib-2.0}.m4
 
 	if use prefix; then
 		# Add an explicit reference to $EPREFIX to PKG_CONFIG_PATH to

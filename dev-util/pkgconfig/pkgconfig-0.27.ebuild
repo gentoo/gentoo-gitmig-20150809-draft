@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-0.27.ebuild,v 1.6 2012/08/14 00:31:51 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-0.27.ebuild,v 1.7 2012/08/14 09:33:26 ssuominen Exp $
 
 EAPI=4
 
@@ -72,7 +72,8 @@ src_configure() {
 src_install() {
 	default
 
-	# http://bugs.freedesktop.org/show_bug.cgi?id=52044
+	# http://bugs.freedesktop.org/show_bug.cgi?id=52031
+	# http://cgit.freedesktop.org/pkg-config/commit/?id=40dc57fb41205c80f5ab69023669efb31edf840d
 	rm -f "${ED}"/usr/share/aclocal/g{settings,lib-gettext,lib-2.0}.m4
 
 	if use prefix; then
