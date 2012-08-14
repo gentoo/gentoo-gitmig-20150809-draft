@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mixlib-shellout/mixlib-shellout-1.0.0.ebuild,v 1.2 2012/08/11 08:45:09 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mixlib-shellout/mixlib-shellout-1.0.0.ebuild,v 1.3 2012/08/14 04:25:25 flameeyes Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19"
 
 RUBY_FAKEGEM_TASK_DOC=""
-RUBY_FAKEGEM_TASK_TEST="spec"
+RUBY_FAKEGEM_RECIPE_TEST="rspec"
 
 RUBY_FAKEGEM_EXTRA_DOC="README.md"
 
@@ -21,5 +21,3 @@ LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-
-ruby_add_bdepend "test? ( dev-ruby/rspec:2 )"
