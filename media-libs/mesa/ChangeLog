@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.413 2012/08/11 18:00:38 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.414 2012/08/14 21:27:15 chithanh Exp $
+
+*mesa-8.1_rc1_pre20120814 (14 Aug 2012)
+
+  14 Aug 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +mesa-8.1_rc1_pre20120814.ebuild:
+  New snapshot. Installs gl.pc even when osmesa is enabled, bug #428164. Fixes
+  building with gbm and i915g, bug #428508. Does not build some tests when
+  shared-glapi is enabled, bug #429720.
 
   11 Aug 2012; Matt Turner <mattst88@gentoo.org>
   mesa-8.1_rc1_pre20120724.ebuild:
