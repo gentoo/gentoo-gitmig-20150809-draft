@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/libextractor-0.6.3-r1.ebuild,v 1.5 2012/08/04 13:57:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/libextractor-0.6.3-r1.ebuild,v 1.6 2012/08/14 09:49:47 ssuominen Exp $
 
 EAPI=4
 inherit eutils flag-o-matic multilib toolchain-funcs
@@ -60,6 +60,8 @@ src_prepare() {
 
 src_configure() {
 	local myconf
+
+	use pdf && append-cppflags "$($(tc-getPKG_CONFIG) --cflags-only-I poppler)"
 
 	if use qt4; then
 		append-cppflags "$($(tc-getPKG_CONFIG) --cflags-only-I QtGui QtSvg)"
