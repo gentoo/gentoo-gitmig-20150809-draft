@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ruby-gettext-2.2.1.ebuild,v 1.1 2012/05/28 05:52:30 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ruby-gettext-2.2.1.ebuild,v 1.2 2012/08/14 00:48:44 flameeyes Exp $
 
 EAPI=4
 
@@ -29,13 +29,11 @@ LICENSE="Ruby"
 
 ruby_add_rdepend ">=dev-ruby/locale-2.0.5"
 
-RDEPEND="${RDEPEND}
-	sys-devel/gettext"
-DEPEND="${DEPEND}
-	sys-devel/gettext"
-
 ruby_add_bdepend "doc? ( dev-ruby/yard )
 	dev-ruby/racc"
+
+RDEPEND+=" sys-devel/gettext"
+DEPEND+=" sys-devel/gettext"
 
 all_ruby_prepare() {
 	# Add missing require on yard.
