@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/meep/meep-1.1.1.ebuild,v 1.4 2010/06/23 20:18:30 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/meep/meep-1.1.1.ebuild,v 1.5 2012/08/14 23:11:40 bicatali Exp $
 
 EAPI=2
 inherit eutils
@@ -28,6 +28,12 @@ src_configure() {
 		$(use_with mpi) \
 		$(use_with hdf5) \
 		$(use_with guile libctl)
+}
+
+src_test() {
+	# bug #423247
+	emake pml -C tests CXXFLAGS=-O0 || die
+	emake check || die
 }
 
 src_install() {
