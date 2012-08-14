@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/zipper/zipper-1.4.ebuild,v 1.2 2012/06/08 11:37:27 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/zipper/zipper-1.4.ebuild,v 1.3 2012/08/14 22:06:46 ago Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://gap.nongnu.org/zipper"
 SRC_URI="http://savannah.nongnu.org/download/gap/${P/z/Z}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 pkg_postinst() {
