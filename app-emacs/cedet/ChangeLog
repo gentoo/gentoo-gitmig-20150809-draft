@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/cedet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.76 2012/08/14 20:25:10 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/ChangeLog,v 1.77 2012/08/14 21:12:50 ago Exp $
+
+  14 Aug 2012; Agostino Sarubbo <ago@gentoo.org> cedet-1.1.ebuild:
+  Stable for amd64, wrt bug #431378
 
   14 Aug 2012; Anthony G. Basile <blueness@gentoo.org> cedet-1.1.ebuild:
   Stable ppc, bug #431378
