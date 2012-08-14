@@ -12,6 +12,7 @@
 		<flag name='graylog2'>Enable logging to graylog2 (see http://graylog2.org/).</flag>
 		<flag name='json'>Support json as a configuration file format.</flag>
 		<flag name='nagios'>Add nagios-friendly logging output (see http://projects.unbit.it/uwsgi/wiki/Nagios).</flag>
+		<flag name='pam'>Add the pam plugin.</flag>
 		<flag name='rrdtool'>Enable support for writing requests data in RRD files.</flag>
 		<flag name='rsyslog'>Support direct logging to a <pkg>app-admin/rsyslog</pkg> socket (without going through the syslog interface).</flag>
 		<flag name='spooler'>Build a plugin which gives a network spooler (see http://projects.unbit.it/uwsgi/wiki/Spooler).</flag>
