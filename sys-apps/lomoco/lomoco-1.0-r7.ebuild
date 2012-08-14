@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lomoco/lomoco-1.0-r7.ebuild,v 1.1 2012/08/13 17:33:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lomoco/lomoco-1.0-r7.ebuild,v 1.2 2012/08/14 09:18:18 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils multilib toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="http://www.lomoco.org/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~x86"
+KEYWORDS="~alpha amd64 x86"
 IUSE=""
 
 RDEPEND="!<sys-fs/udev-114
