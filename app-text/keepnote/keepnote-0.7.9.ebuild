@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/keepnote/keepnote-0.7.8.ebuild,v 1.2 2012/08/14 08:23:20 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/keepnote/keepnote-0.7.9.ebuild,v 1.1 2012/08/14 08:23:19 hasufell Exp $
 
 EAPI=4
 
@@ -29,7 +29,7 @@ DOCS="CHANGES"
 src_prepare() {
 	distutils_src_prepare
 
-	epatch "${FILESDIR}"/${P}-desktopfile.patch
+	epatch "${FILESDIR}"/${PN}-0.7.8-desktopfile.patch
 }
 
 src_test() {
