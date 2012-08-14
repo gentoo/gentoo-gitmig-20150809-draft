@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/softhsm/softhsm-1.3.1-r1.ebuild,v 1.1 2012/01/25 22:34:15 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/softhsm/softhsm-1.3.3.ebuild,v 1.1 2012/08/14 19:43:10 mschiff Exp $
 
 EAPI=4
 
@@ -31,19 +31,5 @@ src_configure() {
 
 src_install() {
 	default
-	find "${ED}" -name '*.la' -exec rm -f {} +
-}
-
-pkg_postinst() {
-	ewarn "Please note: The system path of this library has changed."
-	ewarn ""
-	ewarn "Applications using the full path to libsofthsm.so in their"
-	ewarn "configuration need to be updated."
-	ewarn ""
-	ewarn "Old path: /usr/lib/libsofthsm.so"
-	ewarn "New path: /usr/lib/softhsm/libsofthsm.so"
-	ewarn ""
-	ewarn "Please update your configuration accordingly."
-	ewarn ""
-	ewarn "net-dns/opendnssec users: That means you"
+	find "${ED}" -name '*.la' -delete
 }
