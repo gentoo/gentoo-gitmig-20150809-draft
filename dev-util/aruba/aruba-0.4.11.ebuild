@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aruba/aruba-0.4.11.ebuild,v 1.5 2012/07/11 16:29:10 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aruba/aruba-0.4.11.ebuild,v 1.6 2012/08/14 15:22:24 flameeyes Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19 ree18"
 
 RUBY_FAKEGEM_TASK_DOC=""
-RUBY_FAKEGEM_TASK_TEST="cucumber"
+RUBY_FAKEGEM_RECIPE_TEST="cucumber"
 RUBY_FAKEGEM_EXTRADOC="History.md README.md"
 
 RUBY_FAKEGEM_GEMSPEC="aruba.gemspec"

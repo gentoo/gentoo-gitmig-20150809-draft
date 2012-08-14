@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/aruba
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aruba/ChangeLog,v 1.16 2012/07/11 16:29:10 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aruba/ChangeLog,v 1.17 2012/08/14 15:22:24 flameeyes Exp $
+
+  14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> aruba-0.4.11.ebuild:
+  Port to cucumber recipe for testing.
 
   11 Jul 2012; Andreas Schuerch <nativemad@gentoo.org> aruba-0.4.11.ebuild:
   x86 keyword set, see bug 417573
@@ -70,4 +73,3 @@
   12 Apr 2011; Hans de Graaff <graaff@gentoo.org> +aruba-0.3.5.ebuild,
   +metadata.xml:
   Initial import.
-
