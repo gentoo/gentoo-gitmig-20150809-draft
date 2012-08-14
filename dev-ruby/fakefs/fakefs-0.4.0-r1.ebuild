@@ -1,14 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakefs/fakefs-0.4.0-r1.ebuild,v 1.2 2012/05/20 18:28:15 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakefs/fakefs-0.4.0-r1.ebuild,v 1.3 2012/08/14 03:35:45 flameeyes Exp $
 
-EAPI=2
+EAPI=4
 
-# jruby → Marshal/DeMarshal to clone directories fail; tests fail in
-# release 0.2.1
 USE_RUBY="ruby18 ree18 ruby19 jruby"
 
-RUBY_FAKEGEM_TASK_TEST="test spec"
+RUBY_FAKEGEM_RECIPE_TEST="none"
 
 # requires sdoc
 RUBY_FAKEGEM_TASK_DOC=""
@@ -25,16 +23,22 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE=""
 
-ruby_add_bdepend "test? ( dev-ruby/rspec:2 )"
+ruby_add_bdepend "
+	test? (
+		dev-ruby/rspec:2
+		>=dev-ruby/test-unit-2.5.1-r1
+	)"
+
+RUBY_PATCHES=(
+	"${P}-ruby193.patch"
+	"${P}-ruby193-advise.patch"
+	"${P}-ruby193-pathname.patch"
+	"${P}-ruby193-ruby-pathname.patch"
+)
 
 all_ruby_prepare() {
 	# Remove bundler
 	rm Gemfile || die
-
-	epatch "${FILESDIR}/${P}-ruby193.patch"
-	epatch "${FILESDIR}/${P}-ruby193-advise.patch"
-	epatch "${FILESDIR}/${P}-ruby193-pathname.patch"
-	epatch "${FILESDIR}/${P}-ruby193-ruby-pathname.patch"
 }
 
 each_ruby_prepare() {
@@ -47,4 +51,9 @@ each_ruby_prepare() {
 		*)
 			;;
 	esac
+}
+
+each_ruby_test() {
+	ruby-ng_rspec
+	ruby-ng_testrb-2 -Ilib:test test/**/*_test.rb
 }

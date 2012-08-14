@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/fakefs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakefs/ChangeLog,v 1.23 2012/05/20 18:28:15 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakefs/ChangeLog,v 1.24 2012/08/14 03:35:45 flameeyes Exp $
+
+  14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> fakefs-0.4.0-r1.ebuild:
+  Bump to EAPI 4; use RUBY_PATCHES to add the patches; use the ruby-ng helpers
+  for rspec and testrb-2.
 
   20 May 2012; Hans de Graaff <graaff@gentoo.org> fakefs-0.4.0-r1.ebuild:
   Add jruby but ignore some tests similar to upstream. Needed for newer rspec:2
@@ -86,4 +90,3 @@
   12 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   +fakefs-0.2.1.ebuild, +files/fakefs-0.2.1-ruby19.patch, +metadata.xml:
   Initial import of fakefs as needed by rspec testsuite.
-
