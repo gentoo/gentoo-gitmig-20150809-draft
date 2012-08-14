@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.91 2012/08/14 16:15:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.92 2012/08/14 21:45:35 flameeyes Exp $
+
+  14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> -munin-2.0.4-r2.ebuild,
+  munin-2.0.5.ebuild:
+  Remove previous; disable cgi by default, following Debian and opening the road
+  for next upstream release. CGI is known to have security issues at this point.
 
 *munin-2.0.5 (14 Aug 2012)
 

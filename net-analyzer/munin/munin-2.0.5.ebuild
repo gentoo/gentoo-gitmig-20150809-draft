@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.5.ebuild,v 1.1 2012/08/14 16:15:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.5.ebuild,v 1.2 2012/08/14 21:45:35 flameeyes Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://sourceforge/munin/${MY_P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~mips ~x86"
-IUSE="asterisk irc java memcached minimal mysql postgres ssl test +cgi ipv6 syslog ipmi http"
+IUSE="asterisk irc java memcached minimal mysql postgres ssl test cgi ipv6 syslog ipmi http"
 REQUIRED_USE="cgi? ( !minimal )"
 
 # Upstream's listing of required modules is NOT correct!
