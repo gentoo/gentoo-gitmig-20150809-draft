@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/color/color-1.4.1-r1.ebuild,v 1.4 2012/08/06 17:52:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/color/color-1.4.1-r1.ebuild,v 1.5 2012/08/14 12:13:25 johu Exp $
 
 EAPI="2"
 USE_RUBY="ruby18 ree18 ruby19 jruby"
@@ -15,7 +15,7 @@ DESCRIPTION="Colour management with Ruby"
 HOMEPAGE="http://color.rubyforge.org/"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 ruby_add_bdepend "
