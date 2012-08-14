@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/locale_rails
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale_rails/ChangeLog,v 1.22 2012/02/07 07:50:27 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale_rails/ChangeLog,v 1.23 2012/08/14 18:38:16 flameeyes Exp $
+
+  14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Update metadata.xml so that it's the same as most other packages.
 
   07 Feb 2012; Hans de Graaff <graaff@gentoo.org> -locale_rails-2.0.5.ebuild:
   Remove old version.
@@ -93,4 +96,3 @@
   05 Apr 2009; Hans de Graaff <graaff@gentoo.org> +metadata.xml,
   +locale_rails-2.0.0.ebuild:
   Initial import for new ruby-gettext version.
-

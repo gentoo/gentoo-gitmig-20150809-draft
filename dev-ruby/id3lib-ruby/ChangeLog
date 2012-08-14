@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/id3lib-ruby
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/id3lib-ruby/ChangeLog,v 1.9 2012/05/01 18:24:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/id3lib-ruby/ChangeLog,v 1.10 2012/08/14 18:36:40 flameeyes Exp $
+
+  14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Update metadata.xml so that it's the same as most other packages.
 
   01 May 2012; Raúl Porcel <armin76@gentoo.org> id3lib-ruby-0.6.0.ebuild:
   Drop ia64/sparc keywords
@@ -34,4 +37,3 @@
   13 Aug 2007; David Shakaryan <omp@gentoo.org> +metadata.xml,
   +id3lib-ruby-0.5.0.ebuild:
   Initial commit.
-

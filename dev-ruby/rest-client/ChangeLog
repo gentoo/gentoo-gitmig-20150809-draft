@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rest-client
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rest-client/ChangeLog,v 1.13 2012/08/13 17:29:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rest-client/ChangeLog,v 1.14 2012/08/14 18:47:20 flameeyes Exp $
+
+  14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Update metadata.xml so that it's the same as most other packages.
 
   13 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org>
   rest-client-1.6.7-r1.ebuild:

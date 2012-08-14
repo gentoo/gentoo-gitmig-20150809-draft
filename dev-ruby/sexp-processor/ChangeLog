@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/sexp-processor
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sexp-processor/ChangeLog,v 1.40 2012/04/21 07:06:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sexp-processor/ChangeLog,v 1.41 2012/08/14 18:56:29 flameeyes Exp $
+
+  14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Update metadata.xml so that it's the same as most other packages.
 
 *sexp-processor-3.2.0 (21 Apr 2012)
 
@@ -177,4 +180,3 @@
   +sexp-processor-3.0.0.ebuild:
   Initial import. This package is split out of the ParseTree package, so I've
   kept the original keywords from that package.
-

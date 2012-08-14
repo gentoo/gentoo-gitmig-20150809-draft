@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-openid
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-openid/ChangeLog,v 1.22 2012/08/04 09:22:34 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-openid/ChangeLog,v 1.23 2012/08/14 18:53:03 flameeyes Exp $
+
+  14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Update metadata.xml so that it's the same as most other packages.
 
 *ruby-openid-2.2.0 (04 Aug 2012)
 
@@ -96,4 +99,3 @@
   31 Mar 2007; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
   +ruby-openid-1.1.4.ebuild:
   Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
-

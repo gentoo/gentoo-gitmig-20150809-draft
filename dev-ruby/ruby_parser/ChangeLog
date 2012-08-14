@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby_parser
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ChangeLog,v 1.36 2011/12/31 18:01:46 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ChangeLog,v 1.37 2012/08/14 18:55:04 flameeyes Exp $
+
+  14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Update metadata.xml so that it's the same as most other packages.
 
   31 Dec 2011; Fabian Groffen <grobian@gentoo.org> ruby_parser-2.3.1.ebuild:
   Add Prefix keywords, bug #396547
@@ -141,4 +144,3 @@
   06 Aug 2009; Hans de Graaff <graaff@gentoo.org> +ruby_parser-2.0.3.ebuild,
   +metadata.xml:
   Initial import. New dependency for dev-ruby/ruby2ruby.
-

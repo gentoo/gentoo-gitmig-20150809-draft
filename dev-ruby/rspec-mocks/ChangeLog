@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rspec-mocks
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-mocks/ChangeLog,v 1.30 2012/07/26 12:36:34 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-mocks/ChangeLog,v 1.31 2012/08/14 18:49:22 flameeyes Exp $
+
+  14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Update metadata.xml so that it's the same as most other packages.
 
   26 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
   rspec-mocks-2.6.0-r1.ebuild:
@@ -116,4 +119,3 @@
   13 Sep 2010; Hans de Graaff <graaff@gentoo.org>
   +rspec-mocks-2.0.0_beta22.ebuild, +metadata.xml:
   Initial import of rspec-2.
-

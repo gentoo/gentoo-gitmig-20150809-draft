@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubyfilter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyfilter/ChangeLog,v 1.8 2012/05/01 18:24:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyfilter/ChangeLog,v 1.9 2012/08/14 18:55:21 flameeyes Exp $
+
+  14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Update metadata.xml so that it's the same as most other packages.
 
   01 May 2012; Raúl Porcel <armin76@gentoo.org> rubyfilter-0.12-r1.ebuild:
   Drop ia64/sparc keywords
@@ -32,4 +35,3 @@
   +rubyfilter-0.12.ebuild:
   Initial import. Ebuild submitted by Botykai Zsolt <zsolt.botykai@online.hu>
   in bug #86385.
-

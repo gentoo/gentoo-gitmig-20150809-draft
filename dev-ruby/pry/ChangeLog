@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/pry
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pry/ChangeLog,v 1.7 2012/08/09 06:07:59 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pry/ChangeLog,v 1.8 2012/08/14 18:45:38 flameeyes Exp $
+
+  14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Update metadata.xml so that it's the same as most other packages.
 
   09 Aug 2012; Hans de Graaff <graaff@gentoo.org> pry-0.9.7.4.ebuild:
   Add a blocker against dev-python/pry for bug 430536.
@@ -27,4 +30,3 @@
   24 Oct 2011; Hans de Graaff <graaff@gentoo.org> +pry-0.9.6.2.ebuild,
   +metadata.xml:
   Initial import. New dependency for dev-ruby/adhearsion.
-

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/amatch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amatch/ChangeLog,v 1.32 2012/08/01 10:12:49 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amatch/ChangeLog,v 1.33 2012/08/14 19:03:19 flameeyes Exp $
+
+  14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Update metadata.xml so that it's the same as most other packages.
 
   01 Aug 2012; Anthony G. Basile <blueness@gentoo.org> amatch-0.2.10.ebuild:
   Stable ppc64, bug #428454
@@ -119,4 +122,3 @@
   27 Oct 2005; Rene Nussbaumer <killerfox@gentoo.org> +metadata.xml,
   +amatch-0.2.1.ebuild:
   Initial import. ebuild written by myself.
-

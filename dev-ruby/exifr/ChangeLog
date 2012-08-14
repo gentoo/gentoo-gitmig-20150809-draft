@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/exifr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/exifr/ChangeLog,v 1.29 2012/08/05 12:11:36 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/exifr/ChangeLog,v 1.30 2012/08/14 18:33:46 flameeyes Exp $
+
+  14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Update metadata.xml so that it's the same as most other packages.
 
   05 Aug 2012; Hans de Graaff <graaff@gentoo.org> -exifr-1.1.1.ebuild,
   -exifr-1.1.2.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-irc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-irc/ChangeLog,v 1.7 2010/07/05 18:50:26 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-irc/ChangeLog,v 1.8 2012/08/14 18:52:15 flameeyes Exp $
+
+  14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Update metadata.xml so that it's the same as most other packages.
 
   05 Jul 2010; Hans de Graaff <graaff@gentoo.org> -ruby-irc-1.0.12.ebuild:
   Remove old version.
@@ -29,4 +32,3 @@
 
   17 Feb 2007; Robin H. Johnson <robbat2@gentoo.org> +ruby-irc-1.0.7.ebuild:
   Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
-

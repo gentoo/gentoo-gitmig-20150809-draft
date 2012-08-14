@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/hpricot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/ChangeLog,v 1.39 2012/08/11 07:33:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/ChangeLog,v 1.40 2012/08/14 18:36:11 flameeyes Exp $
+
+  14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Update metadata.xml so that it's the same as most other packages.
 
   11 Aug 2012; Agostino Sarubbo <ago@gentoo.org> hpricot-0.8.6-r1.ebuild:
   Stable for amd64, wrt bug #421617
@@ -157,4 +160,3 @@
   04 Feb 2007; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org> +metadata.xml,
   +hpricot-0.5.ebuild:
   Initial ebuild by Aggelos Orfanakos <agorf@void.gr>, #146373
-

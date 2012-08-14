@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/cerberus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cerberus/ChangeLog,v 1.17 2012/08/04 15:09:19 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cerberus/ChangeLog,v 1.18 2012/08/14 18:30:53 flameeyes Exp $
+
+  14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Update metadata.xml so that it's the same as most other packages.
 
   04 Aug 2012; Hans de Graaff <graaff@gentoo.org> -cerberus-0.7.8-r1.ebuild:
   Cleanup.
@@ -68,4 +71,3 @@
   17 Feb 2007; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
   +cerberus-0.3.4.ebuild:
   Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
-

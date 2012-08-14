@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/radiant
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/radiant/ChangeLog,v 1.23 2011/12/08 19:41:44 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/radiant/ChangeLog,v 1.24 2012/08/14 18:46:12 flameeyes Exp $
+
+  14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Update metadata.xml so that it's the same as most other packages.
 
 *radiant-1.0.0_rc3-r1 (08 Dec 2011)
 
@@ -126,4 +129,3 @@
   04 Feb 2007; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org> +metadata.xml,
   +radiant-0.5.2.ebuild:
   Initial ebuild by Hans de Graaff <graaff@gentoo.org>, #147671
-

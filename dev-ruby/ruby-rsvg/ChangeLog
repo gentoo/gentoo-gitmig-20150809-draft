@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-rsvg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-rsvg/ChangeLog,v 1.35 2012/08/04 12:29:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-rsvg/ChangeLog,v 1.36 2012/08/14 18:53:54 flameeyes Exp $
+
+  14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Update metadata.xml so that it's the same as most other packages.
 
   04 Aug 2012; Agostino Sarubbo <ago@gentoo.org> ruby-rsvg-1.1.3.ebuild:
   Stable for amd64, wrt bug #428040
@@ -144,4 +147,3 @@
   15 Nov 2005; Michael Kohl <citizen428@gentoo.org> +metadata.xml,
   +ruby-rsvg-0.14.1.ebuild:
   Initial import. See bugs #103470 and #109641.
-

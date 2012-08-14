@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/snmplib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/snmplib/ChangeLog,v 1.38 2012/05/01 18:24:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/snmplib/ChangeLog,v 1.39 2012/08/14 18:57:34 flameeyes Exp $
+
+  14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Update metadata.xml so that it's the same as most other packages.
 
   01 May 2012; Raúl Porcel <armin76@gentoo.org> snmplib-1.0.3.ebuild,
   snmplib-1.0.4.ebuild, snmplib-1.1.0.ebuild:
@@ -147,4 +150,3 @@
   08 Nov 2004; Michael Kohl <citizen428@gentoo.org> +metadata.xml,
   +snmplib-0.3.0.ebuild:
   Initial import. Ebuild submitted by pyon <gentoo@pyon.net>, closing bug #67047
-

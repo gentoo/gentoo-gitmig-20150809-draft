@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-xslt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-xslt/ChangeLog,v 1.29 2012/05/01 18:24:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-xslt/ChangeLog,v 1.30 2012/08/14 18:54:10 flameeyes Exp $
+
+  14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Update metadata.xml so that it's the same as most other packages.
 
   01 May 2012; Raúl Porcel <armin76@gentoo.org> ruby-xslt-0.9.8.ebuild,
   ruby-xslt-0.9.9.ebuild:
@@ -112,4 +115,3 @@
 
   16 Aug 2005; Michael Kohl <citizen428@gentoo.org> +ruby-xslt-0.8.1.ebuild:
   Initial import. Added as an optional dependency for dev-ruby/nitro.
-

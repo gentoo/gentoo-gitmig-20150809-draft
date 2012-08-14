@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/podcast
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/podcast/ChangeLog,v 1.9 2011/06/24 14:33:38 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/podcast/ChangeLog,v 1.10 2012/08/14 18:45:20 flameeyes Exp $
+
+  14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Update metadata.xml so that it's the same as most other packages.
 
   24 Jun 2011; Raúl Porcel <armin76@gentoo.org> podcast-0.0.4-r1.ebuild:
   Drop ia64 keywords
@@ -35,4 +38,3 @@
   10 Jan 2006; Grant Goodyear <g2boojum@gentoo.org> +metadata.xml,
   +podcast-0.0.4.ebuild:
   New package
-

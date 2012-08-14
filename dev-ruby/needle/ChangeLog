@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/needle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/needle/ChangeLog,v 1.28 2012/05/01 18:24:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/needle/ChangeLog,v 1.29 2012/08/14 18:42:25 flameeyes Exp $
+
+  14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Update metadata.xml so that it's the same as most other packages.
 
   01 May 2012; Raúl Porcel <armin76@gentoo.org> needle-1.3.0-r1.ebuild:
   Drop ia64/sparc keywords
@@ -90,4 +93,3 @@
   10 Aug 2005; Michael Kohl <citizen428@gentoo.org> +metadata.xml,
   +needle-1.2.1.ebuild:
   Initial import. Needed as a dependency for dev-ruby/net-ssh.
-

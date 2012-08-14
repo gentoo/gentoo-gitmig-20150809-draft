@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/wirble
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/wirble/ChangeLog,v 1.20 2012/02/01 18:33:47 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/wirble/ChangeLog,v 1.21 2012/08/14 19:00:50 flameeyes Exp $
+
+  14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Update metadata.xml so that it's the same as most other packages.
 
 *wirble-0.1.3-r2 (01 Feb 2012)
 
@@ -71,4 +74,3 @@
   04 Feb 2007; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
   +wirble-0.1.2.ebuild:
   Initial ebuild by Armando Di Cianno <armando@goodship.net>, #163492
-

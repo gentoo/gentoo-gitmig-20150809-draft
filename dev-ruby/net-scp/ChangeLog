@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/net-scp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-scp/ChangeLog,v 1.30 2012/05/01 18:24:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-scp/ChangeLog,v 1.31 2012/08/14 18:43:00 flameeyes Exp $
+
+  14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Update metadata.xml so that it's the same as most other packages.
 
   01 May 2012; Raúl Porcel <armin76@gentoo.org> net-scp-1.0.4.ebuild,
   net-scp-1.0.4-r1.ebuild:
@@ -111,4 +114,3 @@
   20 Sep 2008; Hans de Graaff <graaff@gentoo.org> +metadata.xml,
   +net-scp-1.0.1.ebuild:
   Initial import for capistrano 2.5.0.
-

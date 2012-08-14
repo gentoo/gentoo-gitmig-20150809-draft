@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/erubis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/erubis/ChangeLog,v 1.19 2012/08/05 12:08:19 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/erubis/ChangeLog,v 1.20 2012/08/14 18:33:20 flameeyes Exp $
+
+  14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Update metadata.xml so that it's the same as most other packages.
 
   05 Aug 2012; Hans de Graaff <graaff@gentoo.org> -erubis-2.6.6.ebuild:
   Cleanup.
@@ -69,4 +72,3 @@
   28 Mar 2010; Hans de Graaff <graaff@gentoo.org> +erubis-2.6.5.ebuild,
   +metadata.xml:
   Initial import, new test dependency for dev-ruby/sinatra.
-

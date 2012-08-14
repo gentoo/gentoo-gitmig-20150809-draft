@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fastthread
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fastthread/ChangeLog,v 1.50 2012/07/08 16:20:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fastthread/ChangeLog,v 1.51 2012/08/14 18:34:39 flameeyes Exp $
+
+  14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Update metadata.xml so that it's the same as most other packages.
 
   08 Jul 2012; Jeroen Roovers <jer@gentoo.org> fastthread-1.0.7-r2.ebuild:
   Marked ~hppa (bug #417573).
@@ -194,4 +197,3 @@
   04 Jan 2007; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org> +metadata.xml,
   +fastthread-0.5.3.1.ebuild:
   New ebuild, for #126925
-

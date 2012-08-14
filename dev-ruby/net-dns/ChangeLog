@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/net-dns
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-dns/ChangeLog,v 1.7 2010/06/26 18:39:07 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-dns/ChangeLog,v 1.8 2012/08/14 18:42:39 flameeyes Exp $
+
+  14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Update metadata.xml so that it's the same as most other packages.
 
   26 Jun 2010; Hans de Graaff <graaff@gentoo.org> -net-dns-0.6.0.ebuild:
   Remove old version.
@@ -30,4 +33,3 @@
   30 Aug 2009; Benedikt Böhm <hollow@gentoo.org> +net-dns-0.5.3.ebuild,
   +metadata.xml:
   initial ebuild
-

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/quixml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/quixml/ChangeLog,v 1.13 2012/05/01 18:24:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/quixml/ChangeLog,v 1.14 2012/08/14 18:45:55 flameeyes Exp $
+
+  14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Update metadata.xml so that it's the same as most other packages.
 
   01 May 2012; Raúl Porcel <armin76@gentoo.org> quixml-0.2.1-r1.ebuild,
   quixml-0.2.1-r2.ebuild:
@@ -53,4 +56,3 @@
   05 Oct 2005; Rene Nussbaumer <killerfox@gentoo.org> +metadata.xml,
   +quixml-0.2.1.ebuild:
   Initial import. ebuild written by myself
-

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/radius
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/radius/ChangeLog,v 1.9 2012/05/17 10:58:56 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/radius/ChangeLog,v 1.10 2012/08/14 18:46:29 flameeyes Exp $
+
+  14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Update metadata.xml so that it's the same as most other packages.
 
   17 May 2012; Thomas Kahle <tomka@gentoo.org> radius-0.7.3.ebuild:
   marked ~x86 per bug 396547
@@ -40,4 +43,3 @@
   04 Feb 2007; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org> +metadata.xml,
   +radius-0.5.1.ebuild:
   Initial ebuild by Hans de Graaff <graaff@gentoo.org>, #147670
-

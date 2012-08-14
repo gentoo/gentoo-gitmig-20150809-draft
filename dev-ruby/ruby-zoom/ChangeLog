@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-zoom
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-zoom/ChangeLog,v 1.14 2012/05/01 18:24:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-zoom/ChangeLog,v 1.15 2012/08/14 18:54:41 flameeyes Exp $
+
+  14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Update metadata.xml so that it's the same as most other packages.
 
   01 May 2012; Raúl Porcel <armin76@gentoo.org> ruby-zoom-0.4.1-r1.ebuild:
   Drop ia64/sparc keywords
@@ -57,4 +60,3 @@
   25 Aug 2005; Michael Kohl <citizen428@gentoo.org> +metadata.xml,
   +ruby-zoom-0.2.0.ebuild:
   Initial import. Added because app-misc/alexandria depends on it.
-
