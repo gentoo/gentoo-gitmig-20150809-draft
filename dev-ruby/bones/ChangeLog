@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/bones
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bones/ChangeLog,v 1.17 2012/08/14 01:22:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bones/ChangeLog,v 1.18 2012/08/14 14:32:45 flameeyes Exp $
+
+*bones-3.8.0 (14 Aug 2012)
+
+  14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> +bones-3.8.0.ebuild:
+  Version bump; skip tests on JRuby as java itself crashes.
 
   14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> bones-3.7.0.ebuild:
   Port to rspec helper for testing. Bump to EAPI 4.
