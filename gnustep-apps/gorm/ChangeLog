@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/gorm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gorm/ChangeLog,v 1.44 2012/06/20 08:21:59 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gorm/ChangeLog,v 1.45 2012/08/14 22:05:43 ago Exp $
+
+  14 Aug 2012; Agostino Sarubbo <ago@gentoo.org> gorm-1.2.18.ebuild:
+  Stable for amd64, wrt bug #429074
 
 *gorm-1.2.18 (20 Jun 2012)
 
