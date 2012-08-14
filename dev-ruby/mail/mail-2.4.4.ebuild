@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mail/mail-2.4.4.ebuild,v 1.1 2012/04/04 13:56:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mail/mail-2.4.4.ebuild,v 1.2 2012/08/14 04:18:14 flameeyes Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19 ree18"
 
-RUBY_FAKEGEM_TASK_TEST="spec"
+RUBY_FAKEGEM_RECIPE_TEST="rspec"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="CHANGELOG.rdoc README.md ROADMAP TODO.rdoc"
@@ -32,8 +32,6 @@ ruby_add_rdepend "
 	>=dev-ruby/i18n-0.4.0
 	>=dev-ruby/mime-types-1.16
 	>=dev-ruby/treetop-1.4.8"
-
-ruby_add_bdepend "test? ( dev-ruby/rspec:2 )"
 
 all_ruby_prepare() {
 	rm Gemfile || die
