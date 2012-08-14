@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/jhead
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jhead/ChangeLog,v 1.137 2012/08/08 19:55:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jhead/ChangeLog,v 1.138 2012/08/14 08:46:38 johu Exp $
+
+  14 Aug 2012; Johannes Huber <johu@gentoo.org> jhead-2.96.ebuild:
+  Stable for x86, wrt bug #429118
 
   08 Aug 2012; Brent Baude <ranger@gentoo.org> jhead-2.96.ebuild:
   Marking jhead-2.96 ppc for bug 429118
