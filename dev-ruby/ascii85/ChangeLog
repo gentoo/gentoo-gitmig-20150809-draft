@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ascii85
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ascii85/ChangeLog,v 1.14 2012/07/29 07:26:28 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ascii85/ChangeLog,v 1.15 2012/08/14 00:56:40 flameeyes Exp $
+
+  14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> ascii85-1.0.1.ebuild:
+  Port to rspec helper for testing.
 
   29 Jul 2012; Hans de Graaff <graaff@gentoo.org> -ascii85-1.0.0-r1.ebuild:
   Cleanup.
@@ -52,4 +55,3 @@
   28 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   +ascii85-1.0.0.ebuild, +metadata.xml:
   Initial import of ascii85, dependency of newer pdf-reader.
-
