@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/iw
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/ChangeLog,v 1.54 2012/07/01 14:43:35 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/ChangeLog,v 1.55 2012/08/15 13:55:18 zerochaos Exp $
+
+*iw-3.6 (15 Aug 2012)
+
+  15 Aug 2012; Rick Farina <zerochaos@gentoo.org> +iw-3.6.ebuild:
+  bump
 
   01 Jul 2012; Rick Farina <zerochaos@gentoo.org> metadata.xml:
   adding myself as co-maintainer per GurliGebis
