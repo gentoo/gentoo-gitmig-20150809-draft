@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/xbase
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xbase/ChangeLog,v 1.32 2012/08/06 21:10:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xbase/ChangeLog,v 1.33 2012/08/15 07:44:41 johu Exp $
+
+  15 Aug 2012; Johannes Huber <johu@gentoo.org> xbase-3.1.2.ebuild:
+  Stable for x86, wrt bug #428926
 
   06 Aug 2012; Brent Baude <ranger@gentoo.org> xbase-3.1.2.ebuild:
   Marking xbase-3.1.2 ppc64 for bug 428926
