@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/starpu/starpu-1.0.2.ebuild,v 1.1 2012/08/15 18:06:32 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/starpu/starpu-1.0.2.ebuild,v 1.2 2012/08/15 18:30:31 bicatali Exp $
 
 EAPI=4
 
 AUTOTOOLS_AUTORECONF=1
-inherit autotools-utils
+inherit autotools-utils toolchain-funcs
 
 PID=31334
 
@@ -25,10 +25,10 @@ RDEPEND="sys-apps/hwloc
 	fftw? ( sci-libs/fftw:3.0 )
 	mpi? ( virtual/mpi )
 	opencl? ( virtual/opencl )
-	qt4? ( >=x11-libs/qt-gui-4.7
-		   >=x11-libs/qt-opengl-4.7
-		   >=x11-libs/qt-sql-4.7
-		   x11-libs/qwt )"
+	qt4? (  >=x11-libs/qt-gui-4.7:4
+			>=x11-libs/qt-opengl-4.7:4
+			>=x11-libs/qt-sql-4.7:4
+			x11-libs/qwt )"
 
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
@@ -43,13 +43,14 @@ PATCHES=(
 )
 
 src_prepare() {
-	sed -i -e '/AM_INIT_AUTOMAKE/s:-Werror ::' configure.ac || die #423011
+	# do not force -Werror, Gentoo bug #423011
+	sed -i -e '/AM_INIT_AUTOMAKE/s:-Werror ::' configure.ac || die
 	autotools-utils_src_prepare
 }
 
 src_configure() {
-	use blas && export BLAS_LIBS="$(pkg-config --libs blas)"
-	myeconfargs+=(
+	use blas && export BLAS_LIBS="$($(tc-getPKG_CONFIG) --libs blas)"
+	local myeconfargs=(
 		$(use_enable cuda)
 		$(use_enable fftw starpufft)
 		$(use_enable gcc-plugin gcc-extensions)

@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/starpu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/starpu/ChangeLog,v 1.4 2012/08/15 18:06:32 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/starpu/ChangeLog,v 1.5 2012/08/15 18:30:31 bicatali Exp $
+
+  15 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> -starpu-1.0.1.ebuild,
+  starpu-1.0.2.ebuild:
+  Slot qt4 in preparation of qt5, allow cross-compilation with pkg-config, added
+  comments, removed old version
 
 *starpu-1.0.2 (15 Aug 2012)
 
