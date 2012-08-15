@@ -1,3 +1,6 @@
+Do not add LDFLAGS to pkg-config flags, let user use its own
+
+bicatali@gentoo.org
 --- libstarpu.pc.in.orig	2012-05-29 23:16:20.000000000 +0100
 +++ libstarpu.pc.in	2012-05-30 01:09:41.000000000 +0100
 @@ -24,6 +24,6 @@

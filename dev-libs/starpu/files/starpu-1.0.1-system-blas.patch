@@ -1,3 +1,8 @@
+Allow user to set BLAS_LIBS for own blas libraries and mimic standard AX_BLAS
+autoconf macro behaviour.
+
+bicatali@gentoo.org
+
 --- starpu-1.0.1/configure.ac.orig	2012-05-29 23:30:19.000000000 +0100
 +++ starpu-1.0.1/configure.ac	2012-05-30 00:02:22.000000000 +0100
 @@ -1434,6 +1434,11 @@

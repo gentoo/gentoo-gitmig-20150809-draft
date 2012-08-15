@@ -1,3 +1,6 @@
+Allow detection of qt, and disable when qt is present but user does not want it
+
+bicatali@gentoo.org
 --- configure.ac.orig	2012-05-31 19:31:03.000000000 +0100
 +++ configure.ac	2012-05-31 19:50:42.000000000 +0100
 @@ -1085,13 +1085,13 @@

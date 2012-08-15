@@ -1,3 +1,7 @@
+Do not force optimization flags on user
+
+bicatali@gentoo.org
+
 --- configure.ac.orig	2012-05-29 23:16:20.000000000 +0100
 +++ configure.ac	2012-05-29 23:20:48.000000000 +0100
 @@ -773,8 +773,6 @@
