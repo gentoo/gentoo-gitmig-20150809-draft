@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/haveged/haveged-1.3a.ebuild,v 1.4 2012/04/14 12:44:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/haveged/haveged-1.5.ebuild,v 1.1 2012/08/15 14:58:49 flameeyes Exp $
 
 EAPI=4
 DESCRIPTION="A simple entropy daemon using the HAVEGE algorithm"
@@ -9,16 +9,18 @@ SRC_URI="http://www.issihosts.com/haveged/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="sys-devel/gcc"
 RDEPEND="sys-apps/openrc"
 
-S="${WORKDIR}/${P/3a/3}"
-
 src_configure() {
 	econf --bindir=/usr/sbin --enable-nistest
+}
+
+src_test() {
+	emake check
 }
 
 src_install() {
