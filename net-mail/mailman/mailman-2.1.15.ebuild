@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.15.ebuild,v 1.1 2012/08/08 17:37:43 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.15.ebuild,v 1.2 2012/08/15 12:48:25 hanno Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -158,7 +158,6 @@ pkg_postinst() {
 	ewarn "a pre 2.1.9-r2 installation), you should move your old lists/ and"
 	ewarn "archives/ directory to the new location, ensuring that the"
 	ewarn "permissions is correct.  See bug #208789 for a discussion."
-	ebeep
 }
 
 pkg_postrm() {

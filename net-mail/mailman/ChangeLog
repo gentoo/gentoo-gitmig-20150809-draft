@@ -1,6 +1,18 @@
 # ChangeLog for net-mail/mailman
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.130 2012/08/08 17:37:43 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.131 2012/08/15 12:48:25 hanno Exp $
+
+  15 Aug 2012; Hanno Boeck <hanno@gentoo.org> -files/50_mailman.conf,
+  -files/mailman-2.1.8_rc1-directory-check.patch, -mailman-2.1.9-r3.ebuild,
+  -files/mailman-2.1.9-fix-XSS.patch, -mailman-2.1.11.ebuild,
+  -mailman-2.1.12.ebuild, -files/mailman-2.1.12-add-destdir.patch,
+  -files/mailman-2.1.12-directory-check.patch, -mailman-2.1.13.ebuild,
+  -mailman-2.1.14_rc1.ebuild, mailman-2.1.15.ebuild, -files/README.gentoo-r2,
+  -files/mailman.conf:
+  Remove old.
+
+  15 Aug 2012; Hanno Boeck <hanno@gentoo.org> mailman-2.1.15.ebuild:
+  Remove ebeep (#431516).
 
 *mailman-2.1.15 (08 Aug 2012)
 
