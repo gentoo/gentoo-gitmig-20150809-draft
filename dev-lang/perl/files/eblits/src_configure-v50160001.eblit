@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/files/eblits/src_configure-v50160001.eblit,v 1.3 2012/08/13 20:19:37 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/files/eblits/src_configure-v50160001.eblit,v 1.4 2012/08/15 18:51:06 grobian Exp $
 
 myconf() {
 	# the myconf array is declared in src_configure
@@ -79,7 +79,6 @@ eblit-perl-src_configure() {
 	# something compatible.
 	if use prefix ; then
 		local ldir
-		local llib
 		local paths=""
 		echo "int main() {}" > "${T}"/t.c
 		# need to ensure dirs contain compatible libs,
@@ -87,14 +86,14 @@ eblit-perl-src_configure() {
 		$(tc-getCC) -o "${T}"/t "${T}"/t.c > /dev/null || die
 		local scantool=scanelf
 		[[ ${CHOST} == *-darwin* ]] && scantool=scanmacho
-		local mtype=$(${scantool} -BF "%a#f" "${T}"/t)
+		local mtype=$(${scantool} -BF "%M%D#f" "${T}"/t)
+		einfo "searching libdirs for ${mtype}"
 		for ldir in /lib/*-linux-gnu /usr/lib/*-linux-gnu /lib64 /lib/64 /usr/lib64 /usr/lib/64 /lib32 /usr/lib32 /lib /usr/lib ; do
-			 [[ -d ${ldir} ]] || continue
-			 # find a random lib from here
-			 llib=( ${ldir}/*$(get_libname) )
-			 [[ -e ${llib[0]} ]] || continue
-			 [[ $(${scantool} -BF "%a#f" ${llib[0]}) == ${mtype} ]] \
-				  && paths="${paths} ${ldir}"
+			[[ -d ${ldir} ]] || continue
+			if ${scantool} -BF "%M%D#f" ${ldir} | grep -q ${mtype} ; then
+				paths="${paths} ${ldir}"
+				einfo "found ${ldir}"
+			fi
 		done
 		myconf "-Dlibpth=${EPREFIX}/$(get_libdir) ${EPREFIX}/usr/$(get_libdir) ${paths}"
 	elif [[ $(get_libdir) != "lib" ]] ; then
