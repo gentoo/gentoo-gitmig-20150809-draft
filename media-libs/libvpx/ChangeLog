@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libvpx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.62 2012/08/14 15:58:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.63 2012/08/15 15:35:23 vapier Exp $
+
+  15 Aug 2012; Mike Frysinger <vapier@gentoo.org>
+  +files/libvpx-1.1.0-generic-gnu-shared.patch, libvpx-1.1.0.ebuild:
+  Fix --enabled-shared for generic-gnu fallback targets (like ia64).
 
   14 Aug 2012; Mike Frysinger <vapier@gentoo.org> libvpx-1.0.0.ebuild:
   Mark stable for arm.

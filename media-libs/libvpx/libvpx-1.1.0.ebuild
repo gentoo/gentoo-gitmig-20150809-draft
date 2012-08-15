@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.1.0.ebuild,v 1.11 2012/08/14 15:45:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.1.0.ebuild,v 1.12 2012/08/15 15:35:23 vapier Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs base
@@ -39,7 +39,10 @@ REQUIRED_USE="
 	sse2? ( mmx )
 	"
 
-PATCHES=( "${FILESDIR}/${P}-chost.patch" )
+PATCHES=(
+	"${FILESDIR}/${P}-chost.patch"
+	"${FILESDIR}/${P}-generic-gnu-shared.patch"
+)
 
 src_configure() {
 	#let the build system decide which AS to use (it honours $AS but
