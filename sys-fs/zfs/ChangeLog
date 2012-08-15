@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/zfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.43 2012/08/11 20:05:05 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.44 2012/08/15 23:04:21 ryao Exp $
+
+*zfs-0.6.0_rc10 (15 Aug 2012)
+
+  15 Aug 2012; Richard Yao <ryao@gentoo.org> +zfs-0.6.0_rc10.ebuild,
+  zfs-9999.ebuild:
+  Add 0.6.0-rc10 release
 
   11 Aug 2012; Richard Yao <ryao@gentoo.org> zfs-0.6.0_rc9-r6.ebuild,
   zfs-9999.ebuild:
@@ -192,4 +198,3 @@
   27 Jan 2012; Mike Gilbert <floppym@gentoo.org> +files/zfs.initd,
   +metadata.xml, +zfs-9999.ebuild:
   New package.
-
