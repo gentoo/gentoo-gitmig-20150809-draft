@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.26 2012/08/14 15:45:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.27 2012/08/15 03:40:29 mr_bones_ Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs
@@ -82,4 +82,3 @@ src_install() {
 	# Override base.eclass's src_install.
 	default
 }
-
