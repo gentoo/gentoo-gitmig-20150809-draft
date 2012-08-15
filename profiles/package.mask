@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14053 2012/08/15 14:18:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14054 2012/08/15 14:59:27 polynomial-c Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Lars Wendler (polynomial-c@gentoo.org) (15 Aug 2012)
+# Masked until patches file is available (bug #431534)
+=sys-fs/udev-188
 
 # Hans de Graaff (graaff@gentoo.org) (14 Aug 2012)
 # Mask old slots for removal in 30 days. Nothing in the

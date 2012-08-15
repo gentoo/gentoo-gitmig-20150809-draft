@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6897 2012/08/15 14:18:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6898 2012/08/15 14:59:27 polynomial-c Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Aug 2012; Lars Wendler <polynomial-c@gentoo.org> package.mask:
+  Masked =sys-fs/udev-188 because of missing patches (bug #431534).
 
   15 Aug 2012; Jeroen Roovers <jer@gentoo.org> package.mask:
   Mask >www-client/opera-12.02.
