@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.0.4.ebuild,v 1.12 2012/07/15 16:55:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.0.4.ebuild,v 1.13 2012/08/15 17:51:46 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -19,6 +19,7 @@ LICENSE="LGPL-2.1"
 SLOT="3"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="+cairo examples test +threads" # doc
+REQUIRED_USE="test? ( cairo )"
 
 COMMON_DEPEND=">=dev-libs/glib-2.24.0:2
 	>=dev-libs/gobject-introspection-1.29
@@ -26,9 +27,12 @@ COMMON_DEPEND=">=dev-libs/glib-2.24.0:2
 	cairo? ( >=dev-python/pycairo-1.10.0 )"
 DEPEND="${COMMON_DEPEND}
 	test? (
+		dev-libs/atk[introspection]
 		media-fonts/font-cursor-misc
 		media-fonts/font-misc-misc
-		>=dev-libs/gobject-introspection-1.29.17 )
+		x11-libs/gdk-pixbuf:2[introspection]
+		x11-libs/gtk+:3[introspection]
+		x11-libs/pango[introspection] )
 	virtual/pkgconfig"
 # docs disabled for now per upstream default since they are very out of date
 #	doc? (
