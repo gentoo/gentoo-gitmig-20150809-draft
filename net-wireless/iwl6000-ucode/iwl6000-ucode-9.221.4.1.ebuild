@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl6000-ucode/iwl6000-ucode-9.221.4.1.ebuild,v 1.4 2012/08/10 17:00:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl6000-ucode/iwl6000-ucode-9.221.4.1.ebuild,v 1.5 2012/08/15 20:28:02 johu Exp $
 
 MY_PN="iwlwifi-6000-ucode"
 
@@ -10,7 +10,7 @@ SRC_URI="http://intellinuxwireless.org/iwlwifi/downloads/${MY_PN}-${PV}.tgz"
 
 LICENSE="ipw3945"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 RDEPEND=""
 
