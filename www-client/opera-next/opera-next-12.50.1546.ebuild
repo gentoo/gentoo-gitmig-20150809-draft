@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/opera-next-12.50.1546.ebuild,v 1.1 2012/08/10 14:06:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/opera-next-12.50.1546.ebuild,v 1.2 2012/08/15 17:46:17 jer Exp $
 
 EAPI=4
 inherit eutils fdo-mime gnome2-utils multilib pax-utils versionator
@@ -33,7 +33,7 @@ O_LINGUAS="
 "
 
 for O_LINGUA in ${O_LINGUAS}; do
-	IUSE="${IUSE} linguas_${O_LINGUA/-/_}"
+	IUSE+=" linguas_${O_LINGUA/-/_}"
 done
 
 DEPEND="
