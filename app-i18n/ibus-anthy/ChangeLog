@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/ibus-anthy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ChangeLog,v 1.37 2012/08/11 18:38:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ChangeLog,v 1.38 2012/08/15 18:06:20 blueness Exp $
+
+  15 Aug 2012; Anthony G. Basile <blueness@gentoo.org>
+  ibus-anthy-1.2.7-r1.ebuild:
+  Stable ppc, bug #428870
 
   11 Aug 2012; Agostino Sarubbo <ago@gentoo.org> ibus-anthy-1.2.7-r1.ebuild:
   Stable for amd64, wrt bug #428870
