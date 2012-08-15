@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/singular
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/ChangeLog,v 1.53 2012/06/23 10:50:20 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/ChangeLog,v 1.54 2012/08/15 09:59:46 tomka Exp $
+
+  15 Aug 2012; Thomas Kahle <tomka@gentoo.org>
+  +files/singular-3.1.3.3-install_name.patch:
+  Add missing OS-X patch.  Thanks Francois Bissey
 
   23 Jun 2012; Kacper Kowalik <xarthisius.kk@gmail.com>
   singular-3.1.4-r1.ebuild:
@@ -321,4 +325,3 @@
   files/singular-2.0.4-gentoo.diff:
   Initial import, based on the submission in bug 26115. Thanks to all
   contributors.
-
