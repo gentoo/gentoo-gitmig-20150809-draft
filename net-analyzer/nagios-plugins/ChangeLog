@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-plugins
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.146 2012/08/15 16:38:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.147 2012/08/15 18:29:21 flameeyes Exp $
+
+  15 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/nagios-plugins-1.4.16-parallelmake.patch, nagios-plugins-1.4.16.ebuild:
+  Fix building in parallel (tested on 32-way system).
 
   15 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org>
   nagios-plugins-1.4.16.ebuild:
