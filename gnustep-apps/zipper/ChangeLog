@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/zipper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/zipper/ChangeLog,v 1.19 2012/08/14 22:06:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/zipper/ChangeLog,v 1.20 2012/08/15 00:43:55 blueness Exp $
+
+  15 Aug 2012; Anthony G. Basile <blueness@gentoo.org> zipper-1.4.ebuild:
+  Stable ppc, bug #429082
 
   14 Aug 2012; Agostino Sarubbo <ago@gentoo.org> zipper-1.4.ebuild:
   Stable for amd64, wrt bug #429082
