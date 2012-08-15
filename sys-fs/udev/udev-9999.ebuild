@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.109 2012/08/13 16:05:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.110 2012/08/15 19:44:05 williamh Exp $
 
 EAPI=4
 
@@ -13,12 +13,12 @@ then
 	EGIT_REPO_URI="git://anongit.freedesktop.org/systemd/systemd"
 	inherit git-2
 else
-	patchversion=
+	patchset=
 	SRC_URI="http://www.freedesktop.org/software/systemd/systemd-${PV}.tar.xz"
-	if [[ -n "${patchversion}" ]]
+	if [[ -n "${patchset}" ]]
 		then
 				SRC_URI="${SRC_URI}
-					mirror://gentoo/${P}-patches-${patchversion}.tar.bz2"
+					http://dev.gentoo.org/~williamh/dist/${P}-patches-${patchset}.tar.bz2"
 			fi
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 fi
@@ -28,11 +28,12 @@ HOMEPAGE="http://www.freedesktop.org/wiki/Software/systemd"
 
 LICENSE="LGPL-2.1 MIT GPL-2"
 SLOT="0"
-IUSE="doc gudev hwdb introspection keymap +openrc selinux static-libs"
+IUSE="acl doc gudev hwdb introspection keymap +openrc selinux static-libs"
 
 RESTRICT="test"
 
-COMMON_DEPEND="gudev? ( dev-libs/glib:2 )
+COMMON_DEPEND="acl? ( sys-apps/acl )
+	gudev? ( dev-libs/glib:2 )
 	introspection? ( >=dev-libs/gobject-introspection-1.31.1 )
 	selinux? ( sys-libs/libselinux )
 	>=sys-apps/kmod-5
@@ -59,6 +60,7 @@ RDEPEND="${COMMON_DEPEND}
 	openrc? ( >=sys-fs/udev-init-scripts-16
 		!<sys-apps/openrc-0.9.9 )
 	!sys-apps/coldplug
+	!=sys-apps/systemd-188
 	!<sys-fs/lvm2-2.02.45
 	!sys-fs/device-mapper
 	!<sys-fs/udev-init-scripts-16
@@ -119,7 +121,7 @@ pkg_setup()
 src_prepare()
 {
 	# backport some patches
-	if [[ -n "${patchversion}" ]]
+	if [[ -n "${patchset}" ]]
 	then
 		EPATCH_SUFFIX=patch EPATCH_FORCE=yes epatch
 	fi
@@ -162,7 +164,6 @@ src_configure()
 		--with-rootlibdir=/usr/$(get_libdir)
 		--with-rootprefix=/usr
 		--with-usb-ids-path=/usr/share/misc/usb.ids
-		--disable-acl
 		--disable-audit
 		--disable-coredump
 		--disable-hostnamed
@@ -178,6 +179,7 @@ src_configure()
 		--disable-tcpwrap
 		--disable-timedated
 		--disable-xz
+		$(use_enable acl)
 		$(use_enable doc gtk-doc)
 		$(use_enable gudev)
 		$(use_enable introspection)
@@ -231,6 +233,7 @@ src_install()
 		install-binPROGRAMS
 		install-rootlibexecPROGRAMS
 		install-udevlibexecPROGRAMS
+		install-dist_systemunitDATA
 		install-dist_udevconfDATA
 		install-dist_udevhomeSCRIPTS
 		install-dist_udevkeymapDATA
@@ -239,11 +242,13 @@ src_install()
 		install-girDATA
 		install-man7
 		install-man8
+		install-nodist_systemunitDATA
 		install-pkgconfiglibDATA
 		install-sharepkgconfigDATA
 		install-typelibsDATA
 		install-dist_docDATA
 		udev-confdirs
+		systemd-install-hook
 	)
 
 	if use gudev
@@ -259,6 +264,11 @@ src_install()
 		lib_LTLIBRARIES="${lib_LTLIBRARIES}"
 		MANPAGES="man/udev.7 man/udevadm.8 man/systemd-udevd.service.8"
 		MANPAGES_ALIAS="man/systemd-udevd.8"
+		dist_systemunit_DATA="units/systemd-udevd-control.socket \
+			units/systemd-udevd-kernel.socket"
+		nodist_systemunit_DATA="units/systemd-udevd.service \
+				units/systemd-udev-trigger.service \
+				units/systemd-udev-settle.service"
 		pkgconfiglib_DATA="${pkgconfiglib_DATA}"
 	)
 	emake DESTDIR="${D}" "${targets[@]}"
