@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fbzx/fbzx-2.10.0.ebuild,v 1.1 2012/08/11 21:23:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fbzx/fbzx-2.10.0.ebuild,v 1.2 2012/08/15 02:40:47 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -22,7 +22,9 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	sed -i -e "s|/usr/share/|${GAMES_DATADIR}/${PN}/|g" emulator.c || die
-	epatch "${FILESDIR}"/${P}-build.patch
+	epatch \
+		"${FILESDIR}"/${P}-build.patch \
+		"${FILESDIR}"/${P}-keyboard.patch
 }
 
 src_install() {

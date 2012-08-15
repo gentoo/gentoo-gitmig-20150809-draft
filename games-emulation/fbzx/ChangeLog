@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/fbzx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fbzx/ChangeLog,v 1.26 2012/08/11 21:23:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fbzx/ChangeLog,v 1.27 2012/08/15 02:40:47 mr_bones_ Exp $
+
+  15 Aug 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/fbzx-2.10.0-keyboard.patch, fbzx-2.10.0.ebuild:
+  add patch from Chris Mayo to fix keyboard icon (bug #431418)
 
 *fbzx-2.10.0 (11 Aug 2012)
 
