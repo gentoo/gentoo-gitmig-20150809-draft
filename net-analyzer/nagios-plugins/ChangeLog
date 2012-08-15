@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nagios-plugins
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.145 2012/07/31 21:53:01 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.146 2012/08/15 16:38:19 flameeyes Exp $
+
+  15 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  nagios-plugins-1.4.16.ebuild:
+  QA: stop parallel build as the build system is unsafe. I'll provide a fix
+  asap.
 
 *nagios-plugins-1.4.16 (31 Jul 2012)
 
@@ -274,4 +279,3 @@
   +files/nagios-plugins-1.4.11-autoconf-2.62.patch,
   +nagios-plugins-1.4.11-r1.ebuild:
   Fix for autoconf-2.62, bug #218704
-
