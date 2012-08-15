@@ -1,17 +1,36 @@
-From 86f115fa46ed6af9717899e1e2251b68abd96d5b Mon Sep 17 00:00:00 2001
+From d8f51d193f93c442795b8c91d750f1e3ffdad544 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Micha=C5=82=20G=C3=B3rny?= <mgorny@gentoo.org>
-Date: Sat, 11 Aug 2012 01:38:23 +0200
-Subject: [PATCH] Disable udev targets.
+Date: Wed, 15 Aug 2012 14:02:07 +0200
+Subject: [PATCH] Disable udev targets, for udev-188.
 
 ---
- Makefile.am | 189 +-----------------------------------------------------------
- 1 file changed, 1 insertion(+), 188 deletions(-)
+ Makefile.am | 188 +-----------------------------------------------------------
+ 1 file changed, 1 insertion(+), 187 deletions(-)
 
 diff --git a/Makefile.am b/Makefile.am
-index 39afb62..de22af7 100644
+index 39afb62..4997902 100644
 --- a/Makefile.am
 +++ b/Makefile.am
-@@ -1588,12 +1588,6 @@ SUBDIRS += \
+@@ -307,8 +307,6 @@ dist_systemunit_DATA = \
+ 	units/systemd-ask-password-wall.path \
+ 	units/systemd-ask-password-console.path \
+ 	units/syslog.target \
+-	units/systemd-udevd-control.socket \
+-	units/systemd-udevd-kernel.socket \
+ 	units/system-update.target
+ 
+ nodist_systemunit_DATA = \
+@@ -338,9 +336,6 @@ nodist_systemunit_DATA = \
+ 	units/systemd-kexec.service \
+ 	units/systemd-fsck@.service \
+ 	units/systemd-fsck-root.service \
+-	units/systemd-udevd.service \
+-	units/systemd-udev-trigger.service \
+-	units/systemd-udev-settle.service \
+ 	units/debug-shell.service
+ 
+ dist_userunit_DATA = \
+@@ -1588,12 +1583,6 @@ SUBDIRS += \
  	docs/libudev
  endif
  
@@ -24,7 +43,7 @@ index 39afb62..de22af7 100644
  libudev_la_SOURCES =\
  	src/libudev/libudev-private.h \
  	src/libudev/libudev.c \
-@@ -1616,9 +1610,6 @@ libudev_la_LDFLAGS = \
+@@ -1616,9 +1605,6 @@ libudev_la_LDFLAGS = \
  libudev_la_LIBADD = \
  	libsystemd-shared.la
  
@@ -34,7 +53,7 @@ index 39afb62..de22af7 100644
  EXTRA_DIST += \
  	src/libudev/libudev.pc.in \
  	src/libudev/libudev.sym
-@@ -1639,12 +1630,7 @@ libudev-install-move-hook:
+@@ -1639,12 +1625,7 @@ libudev-install-move-hook:
  libudev-uninstall-move-hook:
  	rm -f $(DESTDIR)$(rootlibdir)/libudev.so*
  
@@ -47,7 +66,7 @@ index 39afb62..de22af7 100644
  
  libudev_private_la_SOURCES =\
  	$(libudev_la_SOURCES) \
-@@ -1659,15 +1645,6 @@ libudev_private_la_LIBADD = \
+@@ -1659,15 +1640,6 @@ libudev_private_la_LIBADD = \
  	libsystemd-shared.la
  
  # ------------------------------------------------------------------------------
@@ -63,7 +82,7 @@ index 39afb62..de22af7 100644
  
  man/systemd-udevd.8: man/systemd-udevd.service.8
  man/systemd-udevd-control.socket.8: man/systemd-udevd.service.8
-@@ -1679,27 +1656,7 @@ udev-confdirs:
+@@ -1679,27 +1651,7 @@ udev-confdirs:
  INSTALL_DATA_HOOKS += udev-confdirs
  
  dist_udevrules_DATA += \
@@ -92,10 +111,12 @@ index 39afb62..de22af7 100644
  
  EXTRA_DIST += \
  	rules/99-systemd.rules.in \
-@@ -1729,15 +1686,6 @@ systemd-install-hook:
+@@ -1727,17 +1679,6 @@ systemd-install-hook:
+ 	ln -sf ../systemd-udevd.service $(DESTDIR)$(systemunitdir)/sysinit.target.wants/systemd-udevd.service
+ 	ln -sf ../systemd-udev-trigger.service $(DESTDIR)$(systemunitdir)/sysinit.target.wants/systemd-udev-trigger.service
  
- INSTALL_DATA_HOOKS += systemd-install-hook
- 
+-INSTALL_DATA_HOOKS += systemd-install-hook
+-
 -bin_PROGRAMS += \
 -	udevadm
 -
@@ -108,7 +129,7 @@ index 39afb62..de22af7 100644
  libudev_core_la_SOURCES = \
  	src/udev/udev.h \
  	src/udev/udev-event.c \
-@@ -1803,14 +1751,6 @@ udevadm_LDADD = \
+@@ -1803,14 +1744,6 @@ udevadm_LDADD = \
  	libsystemd-shared.la
  
  # ------------------------------------------------------------------------------
@@ -123,7 +144,7 @@ index 39afb62..de22af7 100644
  test_libudev_SOURCES = \
  	src/test/test-libudev.c
  
-@@ -1860,8 +1800,6 @@ ata_id_LDADD = \
+@@ -1860,8 +1793,6 @@ ata_id_LDADD = \
  	libudev-private.la \
  	libsystemd-shared.la
  
@@ -132,7 +153,7 @@ index 39afb62..de22af7 100644
  
  # ------------------------------------------------------------------------------
  cdrom_id_SOURCES = \
-@@ -1871,12 +1809,6 @@ cdrom_id_LDADD = \
+@@ -1871,12 +1802,6 @@ cdrom_id_LDADD = \
  	-ludev \
  	libsystemd-shared.la
  
@@ -145,7 +166,7 @@ index 39afb62..de22af7 100644
  # ------------------------------------------------------------------------------
  collect_SOURCES = \
  	src/udev/collect/collect.c
-@@ -1884,9 +1816,6 @@ collect_SOURCES = \
+@@ -1884,9 +1809,6 @@ collect_SOURCES = \
  collect_LDADD = \
  	libudev-private.la
  
@@ -155,7 +176,7 @@ index 39afb62..de22af7 100644
  # ------------------------------------------------------------------------------
  scsi_id_SOURCES =\
  	src/udev/scsi_id/scsi_id.c \
-@@ -1898,9 +1827,6 @@ scsi_id_LDADD = \
+@@ -1898,9 +1820,6 @@ scsi_id_LDADD = \
  	libudev-private.la \
  	libsystemd-shared.la
  
@@ -165,7 +186,7 @@ index 39afb62..de22af7 100644
  EXTRA_DIST += \
  	src/udev/scsi_id/README
  
-@@ -1911,12 +1837,6 @@ v4l_id_SOURCES = \
+@@ -1911,12 +1830,6 @@ v4l_id_SOURCES = \
  v4l_id_LDADD = \
  	-ludev
  
@@ -178,7 +199,7 @@ index 39afb62..de22af7 100644
  # ------------------------------------------------------------------------------
  accelerometer_SOURCES = \
  	src/udev/accelerometer/accelerometer.c
-@@ -1925,12 +1845,6 @@ accelerometer_LDADD = \
+@@ -1925,12 +1838,6 @@ accelerometer_LDADD = \
  	-ludev -lm \
  	libsystemd-shared.la
  
@@ -191,7 +212,7 @@ index 39afb62..de22af7 100644
  # ------------------------------------------------------------------------------
  if ENABLE_GUDEV
  if ENABLE_GTK_DOC
-@@ -2111,98 +2025,11 @@ nodist_keymap_SOURCES = \
+@@ -2111,98 +2018,11 @@ nodist_keymap_SOURCES = \
  BUILT_SOURCES += \
  	$(nodist_keymap_SOURCES)
  
@@ -290,7 +311,7 @@ index 39afb62..de22af7 100644
  src/udev/keymap/keys.txt: Makefile
  	$(AM_V_at)$(MKDIR_P) $(dir $@)
  	$(AM_V_GEN)$(CPP) $(CFLAGS) $(AM_CPPFLAGS) $(CPPFLAGS) -dM -include linux/input.h - < /dev/null | $(AWK) '/^#define[ \t]+KEY_[^ ]+[ \t]+[0-9]/ { if ($$2 != "KEY_MAX") { print $$2 } }' | sed 's/^KEY_COFFEE$$/KEY_SCREENLOCK/' > $@
-@@ -2230,12 +2057,6 @@ mtd_probe_SOURCES =  \
+@@ -2230,12 +2050,6 @@ mtd_probe_SOURCES =  \
  mtd_probe_CPPFLAGS = \
  	$(AM_CPPFLAGS)
  
@@ -303,21 +324,6 @@ index 39afb62..de22af7 100644
  # ------------------------------------------------------------------------------
  libsystemd_id128_la_SOURCES = \
  	src/libsystemd-id128/sd-id128.c
-@@ -3244,14 +3065,6 @@ systemd_multi_seat_x_LDADD = \
- rootlibexec_PROGRAMS += \
- 	systemd-multi-seat-x
- 
--dist_udevrules_DATA += \
--	src/login/70-uaccess.rules \
--	src/login/70-power-switch.rules
--
--nodist_udevrules_DATA += \
--	src/login/71-seat.rules \
--	src/login/73-seat-late.rules
--
- MANPAGES += \
- 	man/systemd-logind.service.8 \
- 	man/logind.conf.5 \
 -- 
 1.7.11.1
 

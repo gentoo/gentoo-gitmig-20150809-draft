@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-188.ebuild,v 1.2 2012/08/11 09:32:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-188-r1.ebuild,v 1.1 2012/08/15 12:36:31 mgorny Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ MINKV="2.6.39"
 COMMON_DEPEND=">=sys-apps/dbus-1.4.10
 	>=sys-apps/kmod-5
 	>=sys-apps/util-linux-2.20
-	=sys-fs/udev-187-r3
+	~sys-fs/udev-188
 	sys-libs/libcap
 	acl? ( sys-apps/acl )
 	audit? ( >=sys-process/audit-2 )
@@ -38,7 +38,7 @@ RDEPEND="${COMMON_DEPEND}
 	sys-apps/hwids
 	sys-apps/sysvinit
 	!<sys-libs/glibc-2.10
-	!<sys-fs/udev-187-r3"
+	!~sys-fs/udev-187"
 DEPEND="${COMMON_RDEPEND}
 	app-arch/xz-utils
 	app-text/docbook-xsl-stylesheets
@@ -62,7 +62,7 @@ src_prepare() {
 	sed -i -e 's:libudev\.la:-ludev:' Makefile.am
 
 	local PATCHES=(
-		"${FILESDIR}"/0001-Disable-udev-targets.patch
+		"${FILESDIR}"/0001-Disable-udev-targets-for-udev-188.patch
 	)
 
 	autotools-utils_src_prepare
