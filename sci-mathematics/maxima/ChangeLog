@@ -1,6 +1,18 @@
 # ChangeLog for sci-mathematics/maxima
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.98 2012/06/14 15:54:14 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.99 2012/08/15 16:40:41 grozin Exp $
+
+*maxima-5.28.0 (15 Aug 2012)
+
+  15 Aug 2012; Andrey Grozin <grozin@gentoo.org> -maxima-5.23.2.ebuild,
+  -files/maxima-5.23.2-emacs-version.patch, -files/maxima-5.23.2-wish.patch,
+  -files/maxima-5.23.2.patch, -maxima-5.24.0-r1.ebuild,
+  -files/maxima-5.24.0-wish.patch, -files/maxima-5.24.0.patch,
+  -maxima-5.25.1.ebuild, -files/maxima-5.25.1-wish.patch,
+  -files/maxima-5.25.1.patch, +maxima-5.28.0.ebuild,
+  +files/maxima-5.28.0-sbcl.patch, +files/maxima-5.28.0-wish.patch,
+  +files/maxima-5.28.0.patch:
+  Version bump, cleaning old
 
 *maxima-5.27.0-r1 (14 Jun 2012)
 

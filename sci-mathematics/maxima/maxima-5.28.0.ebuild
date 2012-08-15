@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.23.2.ebuild,v 1.4 2012/05/21 19:24:08 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.28.0.ebuild,v 1.1 2012/08/15 16:40:41 grozin Exp $
 
 EAPI=3
 
-inherit autotools eutils elisp-common
+inherit autotools elisp-common eutils
 
 DESCRIPTION="Free computer algebra environment based on Macsyma"
 HOMEPAGE="http://maxima.sourceforge.net/"
@@ -114,9 +114,17 @@ src_prepare() {
 	# remove rmaxima if not needed
 	epatch "${FILESDIR}"/${PN}-rmaxima.patch
 
-	epatch "${FILESDIR}"/${P}-emacs-version.patch
+	# fix LDFLAGS handling in ecl (#378195)
+	epatch "${FILESDIR}"/${PN}-ecl-ldflags.patch
+
+	# workaround for the broken sbcl
+	epatch "${FILESDIR}"/${P}-sbcl.patch
+
 	# bug #343331
 	rm share/Makefile.in || die
+	rm src/Makefile.in || die
+	touch src/*.mk
+	touch src/Makefile.am
 	eautoreconf
 }
 
@@ -164,6 +172,21 @@ src_install() {
 
 	if use emacs; then
 		elisp-site-file-install "${FILESDIR}"/50maxima-gentoo.el || die
+	fi
+
+	# if we use ecls, build an ecls library for maxima
+	if use ecls; then
+		cd src
+		mkdir ./lisp-cache
+		ecl \
+			-eval '(require `asdf)' \
+			-eval '(setf asdf::*user-cache* (truename "./lisp-cache"))' \
+			-eval '(load "maxima-build.lisp")' \
+			-eval '(asdf:make-build :maxima :type :fasl :move-here ".")' \
+			-eval '(quit)'
+		ECLLIB=`ecl -eval "(princ (SI:GET-LIBRARY-PATHNAME))" -eval "(quit)"`
+		insinto "${ECLLIB#${EPREFIX}}"
+		newins maxima.fasb maxima.fas
 	fi
 }
 
