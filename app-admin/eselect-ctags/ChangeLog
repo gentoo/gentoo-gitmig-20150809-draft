@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-ctags
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ctags/ChangeLog,v 1.63 2012/08/14 14:55:03 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ctags/ChangeLog,v 1.64 2012/08/15 01:38:17 jer Exp $
+
+  15 Aug 2012; Jeroen Roovers <jer@gentoo.org> eselect-ctags-1.14.ebuild:
+  Stable for HPPA (bug #431206).
 
   14 Aug 2012; Johannes Huber <johu@gentoo.org> eselect-ctags-1.14.ebuild:
   Stable for x86, wrt bug #431206
