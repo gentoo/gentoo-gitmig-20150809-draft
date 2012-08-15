@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/scim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.157 2012/08/05 18:03:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.158 2012/08/15 01:21:59 naota Exp $
+
+*scim-1.4.14 (15 Aug 2012)
+
+  15 Aug 2012; Naohiro Aota <naota@gentoo.org> +scim-1.4.14.ebuild:
+  version bump. #430410
 
   05 Aug 2012; Raúl Porcel <armin76@gentoo.org> scim-1.4.11-r1.ebuild:
   alpha/sparc stable wrt #422875
@@ -660,4 +665,3 @@
 
   25 May 2003; Alastair Tse <liquidx@gentoo.org> scim-0.4.1.ebuild:
   New ebuild of another Chinese Input System
-
