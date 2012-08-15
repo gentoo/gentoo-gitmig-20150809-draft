@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mustache
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mustache/ChangeLog,v 1.20 2012/08/11 07:34:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mustache/ChangeLog,v 1.21 2012/08/15 09:30:44 johu Exp $
+
+  15 Aug 2012; Johannes Huber <johu@gentoo.org> mustache-0.99.4-r1.ebuild:
+  Stable for x86, wrt bug #428698
 
   11 Aug 2012; Agostino Sarubbo <ago@gentoo.org> mustache-0.99.4-r1.ebuild:
   Stable for amd64, wrt bug #421617
