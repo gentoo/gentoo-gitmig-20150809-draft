@@ -13,6 +13,10 @@
 # django project, but you can still override them here.
 #CELERY_DJANGO="yes"
 
+# This is generaly a good idea to set the environment correctly
+# because a lot of python package try to use HOME on init
+#export HOME="/var/lib/myproject"
+
 # Full path to the python project directory.
 #CELERY_PROJDIR="/var/lib/myproject"
 

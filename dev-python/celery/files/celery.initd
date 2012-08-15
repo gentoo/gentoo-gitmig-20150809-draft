@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the BSD license
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/files/celery.initd,v 1.2 2012/07/16 08:33:58 iksaif Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/files/celery.initd,v 1.3 2012/08/15 08:25:23 iksaif Exp $
 
 extra_started_commands="reload"
 
@@ -43,29 +43,17 @@ else
 	CELERYEV=${CELERYEV:-"celeryev"}
 fi
 
-CELERYD_OPTS="$CELERYD_OPTS -f $CELERYD_LOG_FILE -l $CELERYD_LOG_LEVEL"
+CELERYD_OPTS="$CELERYD_OPTS"
 CELERYBEAT_OPTS="$CELERYBEAT_OPTS -f $CELERYBEAT_LOG_FILE -l $CELERYBEAT_LOG_LEVEL"
 CELERYEV_OPTS="$CELERYEV_OPTS -f $CELERYEV_LOG_FILE -l $CELERYEV_LOG_LEVEL -c $CELERYEV_CAM"
 
 create_dirs() {
 	local logfile="$1"
 	local pidfile="$2"
-	local logdir=`dirname $logfile`
-	local piddir=`dirname $pidfile`
+	local logdir=$(dirname $logfile)
+	local piddir=$(dirname $pidfile)
 
-	if [ ! -d "$logdir" ]; then
-		mkdir -p $logdir
-	fi
-	if [ ! -d "$piddir" ]; then
-		mkdir -p $piddir
-	fi
-
-	if [ -n "$CELERY_USER" ]; then
-		chown "$CELERY_USER" $logdir $piddir
-	fi
-	if [ -n "$CELERY_GROUP" ]; then
-		chown ":$CELERY_GROUP" $logdir $piddir
-	fi
+	checkpath -d -q -m 0750 -o ${CELERY_USER:-"root"}:${CELERY_GROUP:-"root"} $logdir $piddir
 }
 
 if [ -n "$CELERY_USER" ]; then
