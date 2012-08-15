@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xbae/xbae-4.60.4.ebuild,v 1.16 2012/05/25 14:24:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xbae/xbae-4.60.4.ebuild,v 1.17 2012/08/15 17:43:22 bicatali Exp $
 
 EAPI=4
 
@@ -26,6 +26,10 @@ RDEPEND="
 
 DEPEND="${RDEPEND}"
 
+# tests need X display
+# and are interactive so virtualx will not help
+RESTRICT=test
+
 PATCHES=(
 	"${FILESDIR}"/${P}-tmpl.patch
 	"${FILESDIR}"/${P}-lxmp.patch
@@ -38,9 +42,9 @@ src_configure() {
 }
 
 src_test() {
-	cd examples
+	cd ${AUTOTOOLS_BUILD_DIR}/examples
 	emake
-	./testall || die
+	"${S}"/examples/testall
 	emake clean
 }
 
@@ -54,7 +58,7 @@ src_install() {
 
 	if use examples; then
 		find examples -name '*akefile*' -delete || die
-		rm -f examples/{testall,extest} || die
+		rm examples/{testall,extest} || die
 		insinto /usr/share/doc/${PF}
 		doins -r examples
 	fi
