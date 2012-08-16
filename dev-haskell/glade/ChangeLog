@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/glade
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/glade/ChangeLog,v 1.4 2012/05/13 14:58:04 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/glade/ChangeLog,v 1.5 2012/08/16 16:40:54 nativemad Exp $
+
+  16 Aug 2012; Andreas Schuerch <nativemad@gentoo.org> glade-0.12.1.ebuild:
+  x86 stable, see bug 422021
 
 *glade-0.12.1 (13 May 2012)
 
