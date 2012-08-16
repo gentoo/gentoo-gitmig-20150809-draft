@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.694 2012/08/16 18:24:55 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.695 2012/08/16 18:44:52 floppym Exp $
+
+  16 Aug 2012; Mike Gilbert <floppym@gentoo.org> chromium-22.0.1229.6.ebuild,
+  chromium-9999-r1.ebuild:
+  Array elements undergo file glob expansion; quote them to avoid this.
 
 *chromium-22.0.1229.6 (16 Aug 2012)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.129 2012/08/16 09:58:08 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.130 2012/08/16 18:44:52 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -392,10 +392,10 @@ src_test() {
 	}
 
 	local excluded_base_unittests=(
-		ICUStringConversionsTest.* # bug #350347
-		MessagePumpLibeventTest.* # bug #398591
+		"ICUStringConversionsTest.*" # bug #350347
+		"MessagePumpLibeventTest.*" # bug #398591
 	)
-	runtest out/Release/base_unittests ${excluded_base_unittests[*]}
+	runtest out/Release/base_unittests "${excluded_base_unittests[@]}"
 
 	runtest out/Release/cacheinvalidation_unittests
 	runtest out/Release/crypto_unittests
@@ -404,13 +404,13 @@ src_test() {
 	runtest out/Release/media_unittests
 
 	local excluded_net_unittests=(
-		NetUtilTest.IDNToUnicode* # bug 361885
-		NetUtilTest.FormatUrl* # see above
-		DnsConfigServiceTest.GetSystemConfig # bug #394883
-		CertDatabaseNSSTest.ImportServerCert_SelfSigned # bug #399269
-		URLFetcher* # bug #425764
+		"NetUtilTest.IDNToUnicode*" # bug 361885
+		"NetUtilTest.FormatUrl*" # see above
+		"DnsConfigServiceTest.GetSystemConfig" # bug #394883
+		"CertDatabaseNSSTest.ImportServerCert_SelfSigned" # bug #399269
+		"URLFetcher*" # bug #425764
 	)
-	runtest out/Release/net_unittests ${excluded_net_unittests[*]}
+	runtest out/Release/net_unittests "${excluded_net_unittests[@]}"
 
 	runtest out/Release/printing_unittests
 	runtest out/Release/sql_unittests
