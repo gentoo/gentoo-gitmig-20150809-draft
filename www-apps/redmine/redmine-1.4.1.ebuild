@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/redmine-1.4.1.ebuild,v 1.1 2012/04/25 15:02:00 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/redmine-1.4.1.ebuild,v 1.2 2012/08/16 03:58:52 flameeyes Exp $
 
 EAPI="3"
 # ruby19: dev-ruby/rack has no ruby19
@@ -30,7 +30,7 @@ ruby_add_rdepend "virtual/ruby-ssl
 	>=dev-ruby/tzinfo-0.3.31
 	dev-ruby/rake
 	>=dev-ruby/rails-2.3.14:2.3
-	fastcgi? ( dev-ruby/ruby-fcgi )
+	fastcgi? ( dev-ruby/fcgi )
 	imagemagick? ( >=dev-ruby/rmagick-2 )
 	ldap? ( >=dev-ruby/ruby-net-ldap-0.3.1 )
 	openid? ( >=dev-ruby/ruby-openid-2.1.4 )
@@ -41,12 +41,12 @@ ruby_add_rdepend "virtual/ruby-ssl
 #	ruby_targets_ruby18? (
 #		>=dev-ruby/fastercsv-1.5
 #		postgres? ( >=dev-ruby/pg-0.11 )
-#		sqlite3? ( dev-ruby/sqlite3-ruby )
+#		sqlite3? ( dev-ruby/sqlite3 )
 #		mysql? ( dev-ruby/mysql )
 #	)
 #	ruby_targets_ruby19? (
 #		postgres? ( >=dev-ruby/pg-0.11 )
-#		sqlite3? ( dev-ruby/sqlite3-ruby )
+#		sqlite3? ( dev-ruby/sqlite3 )
 #		mysql? ( dev-ruby/mysql2:0.2 )
 #	)
 #	ruby_targets_jruby? (
