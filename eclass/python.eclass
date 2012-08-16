@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.155 2012/06/09 10:01:19 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.156 2012/08/16 07:46:15 patrick Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -2768,7 +2768,6 @@ _python_clean_compiled_modules() {
 				else
 					[[ -f "${py_file}" ]] && continue
 				fi
-				echo "${_BLUE}<<< ${compiled_file%[co]}[co]${_NORMAL}"
 				rm -f "${compiled_file%[co]}"[co]
 			elif [[ "${compiled_file}" == *\$py.class ]]; then
 				if [[ "${dir}" == "__pycache__" ]]; then
@@ -2783,7 +2782,6 @@ _python_clean_compiled_modules() {
 				else
 					[[ -f "${py_file}" ]] && continue
 				fi
-				echo "${_BLUE}<<< ${compiled_file}${_NORMAL}"
 				rm -f "${compiled_file}"
 			else
 				die "${FUNCNAME}(): Unrecognized file type: '${compiled_file}'"
@@ -2792,9 +2790,7 @@ _python_clean_compiled_modules() {
 			# Delete empty parent directories.
 			dir="${compiled_file%/*}"
 			while [[ "${dir}" != "${root}" ]]; do
-				if rmdir "${dir}" 2> /dev/null; then
-					echo "${_CYAN}<<< ${dir}${_NORMAL}"
-				else
+				if ! rmdir "${dir}" 2> /dev/null; then
 					break
 				fi
 				dir="${dir%/*}"
