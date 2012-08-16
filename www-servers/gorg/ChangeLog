@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/gorg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/ChangeLog,v 1.33 2012/03/08 06:30:51 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/ChangeLog,v 1.34 2012/08/16 03:59:20 flameeyes Exp $
+
+  16 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> gorg-0.6.4-r1.ebuild:
+  Update after Ruby packages move.
 
   08 Mar 2012; Hans de Graaff <graaff@gentoo.org> -gorg-0.6.3-r2.ebuild,
   -gorg-0.6.4.ebuild:
@@ -139,4 +142,3 @@
   30 Apr 2005; Lance Albertson <ramereth@gentoo.org> +metadata.xml,
   +gorg-0.5.ebuild:
   initial commit, thanks neysx for the initial ebuild
-
