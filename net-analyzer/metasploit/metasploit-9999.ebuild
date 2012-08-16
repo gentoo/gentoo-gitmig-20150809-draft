@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-9999.ebuild,v 1.2 2012/06/08 09:28:04 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-9999.ebuild,v 1.3 2012/08/16 03:58:21 flameeyes Exp $
 
 EAPI="3"
 inherit eutils subversion
@@ -22,7 +22,7 @@ RDEPEND="dev-lang/ruby
 	gui? ( virtual/jre )
 	mysql? ( dev-ruby/mysql-ruby
 		dev-ruby/activerecord[mysql] )
-	postgres? ( dev-ruby/ruby-postgres
+	postgres? ( dev-ruby/postgres
 		dev-ruby/activerecord[postgres] )"
 DEPEND=""
 
