@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeldap/activeldap-1.2.2-r1.ebuild,v 1.2 2012/08/16 15:20:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeldap/activeldap-1.2.2-r1.ebuild,v 1.3 2012/08/16 15:21:29 flameeyes Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -42,10 +42,6 @@ all_ruby_prepare() {
 	sed -i -e "s/= 2.3.8/~>2.3.5/" lib/active_ldap.rb || die
 	# And use our own stub metadata to avoid problems there as well.
 	rm ../metadata || die
-}
-
-each_ruby_test() {
-	${RUBY} -S rake test || die "Tests failed."
 }
 
 all_ruby_install() {
