@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/dslib/dslib-2.1.0.ebuild,v 1.1 2012/07/18 18:26:14 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/dslib/dslib-2.1.0.ebuild,v 1.2 2012/08/16 12:05:55 scarabeus Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.nic.cz/public_media/datove_schranky/releases/datovka-2.1.1/s
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="
