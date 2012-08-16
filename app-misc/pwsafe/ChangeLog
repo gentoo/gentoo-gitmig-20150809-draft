@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/pwsafe
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pwsafe/ChangeLog,v 1.14 2012/02/25 16:01:11 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pwsafe/ChangeLog,v 1.15 2012/08/16 10:11:44 ago Exp $
+
+  16 Aug 2012; Agostino Sarubbo <ago@gentoo.org> pwsafe-0.2.0-r2.ebuild:
+  Stable for amd64, wrt bug #431596
 
 *pwsafe-0.2.0-r2 (25 Feb 2012)
 
