@@ -20,3 +20,12 @@ move net-wireless/iwl1000-ucode sys-firmware/iwl1000-ucode
 move kde-misc/kdocker x11-misc/kdocker
 move net-misc/ferm net-firewall/ferm
 move sys-apps/whdd sys-block/whdd
+move dev-ruby/ruby-liquid dev-ruby/liquid
+move dev-ruby/sexp-processor dev-ruby/sexp_processor
+move dev-ruby/sqlite3-ruby dev-ruby/sqlite3
+move dev-ruby/ruby-zoom dev-ruby/zoom
+move dev-ruby/ruby-activeldap dev-ruby/activeldap
+move dev-ruby/ruby-fcgi dev-ruby/fcgi
+move dev-ruby/ruby-postgres dev-ruby/postgres
+move dev-ruby/ruby-inline dev-ruby/RubyInline
+move dev-ruby/ruby-ferret dev-ruby/ferret
