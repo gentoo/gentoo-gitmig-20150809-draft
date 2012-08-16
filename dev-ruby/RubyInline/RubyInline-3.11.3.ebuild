@@ -1,14 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/RubyInline/RubyInline-3.11.3.ebuild,v 1.1 2012/08/16 03:44:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/RubyInline/RubyInline-3.11.3.ebuild,v 1.2 2012/08/16 17:05:30 flameeyes Exp $
 
 EAPI=4
 
 USE_RUBY="ruby18 ree18 ruby19"
 
-RUBY_FAKEGEM_NAME="RubyInline"
-
-RUBY_FAKEGEM_TASK_DOC="docs"
+RUBY_FAKEGEM_RECIPE_DOC="rdoc"
 RUBY_FAKEGEM_DOCDIR="doc"
 RUBY_FAKEGEM_EXTRADOC="README.txt History.txt"
 
@@ -25,23 +23,18 @@ IUSE="doc test"
 ruby_add_rdepend dev-ruby/zentest
 
 ruby_add_bdepend "
-	doc? (
-		dev-ruby/hoe
-		dev-ruby/hoe-seattlerb
-	)
 	test? (
 		dev-ruby/hoe
 		dev-ruby/hoe-seattlerb
+		virtual/ruby-minitest
 	)"
 
+RUBY_PATCHES=(
+	ruby-inline-3.11.0-gentoo.patch
+	ruby-inline-3.11.1-ldflags.patch
+)
+
 all_ruby_prepare() {
-	epatch "${FILESDIR}/ruby-inline-3.11.0-gentoo.patch"
-
-	# Respect ruby's (and thus Gentoo's) LDFLAGS, and explicitly link
-	# against the ruby shared library to avoid confusion and potential
-	# crashes when later using the shared object.
-	epatch "${FILESDIR}/ruby-inline-3.11.1-ldflags.patch"
-
 	sed -i -e '/isolate/ s:^:#:' Rakefile || die
 }
 

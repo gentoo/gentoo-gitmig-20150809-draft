@@ -1,6 +1,10 @@
-# ChangeLog for dev-ruby/ruby-inline
+# ChangeLog for dev-ruby/RubyInline
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/RubyInline/ChangeLog,v 1.1 2012/08/16 03:44:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/RubyInline/ChangeLog,v 1.2 2012/08/16 17:05:30 flameeyes Exp $
+
+  16 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> RubyInline-3.11.3.ebuild:
+  Remove FAKEGEM_NAME; use rdoc recipe for doc building (avoids hoe dependencies
+  on USE=doc); apply patches with RUBY_PATCHES.
 
   14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Update metadata.xml so that it's the same as most other packages.
