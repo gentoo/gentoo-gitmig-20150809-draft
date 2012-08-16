@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.382 2012/08/14 12:48:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.383 2012/08/16 15:37:41 cardoe Exp $
+
+*nvidia-drivers-304.37 (16 Aug 2012)
+
+  16 Aug 2012; Doug Goldstein <cardoe@gentoo.org>
+  +nvidia-drivers-304.37.ebuild:
+  Version bump. fixes #286445, #236260, #356395, #388725, #412707, #413461,
+  #431262. Not a final fix for #414725.
 
   13 Aug 2012; Rick Farina <zerochaos@gentoo.org>
   nvidia-drivers-295.59-r1.ebuild, nvidia-drivers-295.71.ebuild:
