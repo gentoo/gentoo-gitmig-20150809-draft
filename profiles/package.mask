@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14056 2012/08/15 18:53:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14057 2012/08/16 15:19:21 kensington Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -172,12 +172,6 @@ gnustep-apps/vindaloo
 # Tests fails to build, needs >=net-libs/telepathy-glib-0.19.0.
 # Not in tree yet...
 >=net-libs/telepathy-qt-0.9.3
-
-# Michael Palimaka <kensington@gentoo.org> (15 Jul 2012)
-# Bundles dev-python/pexpect (bug #315843)
-# Replaced by ssh-copy-id from net-misc/openssh.
-# Removal in 30 days.
-net-misc/ssh-installkeys
 
 # Ralph Sennhauser <sera@gentoo.org> (13 Jul 2012)
 # Mask for removal in 30 days. Fails to build with java 7 #421917.
