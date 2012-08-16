@@ -1,6 +1,10 @@
-# ChangeLog for dev-ruby/ruby-postgres
+# ChangeLog for dev-ruby/postgres
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/postgres/ChangeLog,v 1.1 2012/08/16 03:44:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/postgres/ChangeLog,v 1.2 2012/08/16 16:56:49 flameeyes Exp $
+
+  16 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  postgres-0.7.9.20080128-r2.ebuild:
+  Remove FAKEGEM_NAME usage.
 
   01 Jul 2012; Raúl Porcel <armin76@gentoo.org>
   ruby-postgres-0.7.9.20080128-r2.ebuild:

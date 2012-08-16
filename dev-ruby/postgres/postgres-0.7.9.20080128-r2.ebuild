@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/postgres/postgres-0.7.9.20080128-r2.ebuild,v 1.1 2012/08/16 03:44:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/postgres/postgres-0.7.9.20080128-r2.ebuild,v 1.2 2012/08/16 16:56:49 flameeyes Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18"
@@ -8,8 +8,6 @@ USE_RUBY="ruby18 ree18"
 RUBY_FAKEGEM_TASK_TEST=""
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="Contributors README"
-
-RUBY_FAKEGEM_NAME="postgres"
 
 # changes 0.7.1.20060406 to 0.7.1.2006.04.06
 
