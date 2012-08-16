@@ -1,6 +1,13 @@
 # ChangeLog for games-simulation/openttd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.126 2012/08/03 04:18:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.127 2012/08/16 19:33:54 mr_bones_ Exp $
+
+*openttd-1.2.2 (16 Aug 2012)
+
+  16 Aug 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/openttd-1.2.2-cflags.patch, +openttd-1.2.2.ebuild,
+  -files/openttd-1.2.1-cflags.patch, -openttd-1.2.1.ebuild:
+  version bump
 
 *openttd-1.2.1 (03 Aug 2012)
 
@@ -494,4 +501,3 @@
   27 Jun 2004; David Holm <dholm@gentoo.org> +openttd-20040626.ebuild:
   Initial import, ebuild by Hinrik Örn Sigurðsson <flanders at simnet dot is>
   (bug #49113).
-
