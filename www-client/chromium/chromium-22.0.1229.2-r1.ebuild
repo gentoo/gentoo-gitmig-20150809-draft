@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-22.0.1229.2-r1.ebuild,v 1.2 2012/08/13 10:22:21 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-22.0.1229.2-r1.ebuild,v 1.3 2012/08/16 09:58:08 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -331,14 +331,16 @@ src_test() {
 	runtest() {
 		local cmd=$1
 		shift
-		einfo "${cmd}" "$@"
-		LC_ALL="${mylocale}" VIRTUALX_COMMAND="${cmd}" virtualmake "$@"
+		local filter="--gtest_filter=$(IFS=:; echo "-${*}")"
+		einfo "${cmd}" "${filter}"
+		LC_ALL="${mylocale}" VIRTUALX_COMMAND="${cmd}" virtualmake "${filter}"
 	}
 
-	# ICUStringConversionsTest: bug #350347.
-	# MessagePumpLibeventTest: bug #398501.
-	runtest out/Release/base_unittests \
-		'--gtest_filter=-ICUStringConversionsTest.*:MessagePumpLibeventTest.*'
+	local excluded_base_unittests=(
+		ICUStringConversionsTest.* # bug #350347
+		MessagePumpLibeventTest.* # bug #398591
+	)
+	runtest out/Release/base_unittests ${excluded_base_unittests[*]}
 
 	runtest out/Release/cacheinvalidation_unittests
 	runtest out/Release/crypto_unittests
@@ -346,11 +348,14 @@ src_test() {
 	runtest out/Release/gpu_unittests
 	runtest out/Release/media_unittests
 
-	# NetUtilTest: bug #361885.
-	# DnsConfigServiceTest.GetSystemConfig: bug #394883.
-	# CertDatabaseNSSTest.ImportServerCert_SelfSigned: bug #399269.
-	runtest out/Release/net_unittests \
-		'--gtest_filter=-NetUtilTest.IDNToUnicode*:NetUtilTest.FormatUrl*:DnsConfigServiceTest.GetSystemConfig:CertDatabaseNSSTest.ImportServerCert_SelfSigned:URLFetcher*'
+	local excluded_net_unittests=(
+		NetUtilTest.IDNToUnicode* # bug 361885
+		NetUtilTest.FormatUrl* # see above
+		DnsConfigServiceTest.GetSystemConfig # bug #394883
+		CertDatabaseNSSTest.ImportServerCert_SelfSigned # bug #399269
+		URLFetcher* # bug #425764
+	)
+	runtest out/Release/net_unittests ${excluded_net_unittests[*]}
 
 	runtest out/Release/printing_unittests
 	runtest out/Release/sql_unittests

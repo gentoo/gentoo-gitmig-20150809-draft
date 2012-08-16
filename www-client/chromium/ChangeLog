@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.692 2012/08/13 10:22:21 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.693 2012/08/16 09:58:08 phajdan.jr Exp $
+
+  16 Aug 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-22.0.1229.2-r1.ebuild, chromium-9999-r1.ebuild:
+  Use bash arrays so that comments about excluded tests can be inline.
 
   13 Aug 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   chromium-21.0.1180.57.ebuild, chromium-21.0.1180.77-r1.ebuild,
