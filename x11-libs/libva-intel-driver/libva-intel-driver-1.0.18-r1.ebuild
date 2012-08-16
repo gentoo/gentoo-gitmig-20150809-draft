@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-intel-driver/libva-intel-driver-1.0.18-r1.ebuild,v 1.1 2012/08/16 13:16:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-intel-driver/libva-intel-driver-1.0.18-r1.ebuild,v 1.2 2012/08/16 21:39:57 aballier Exp $
 
 EAPI="3"
 
@@ -20,7 +20,7 @@ if [ "${PV%9999}" != "${PV}" ] ; then # Live ebuild
 	S="${WORKDIR}/${PN}"
 else
 	MY_P=${P#libva-}
-	SRC_URI="http://cgit.freedesktop.org/vaapi/intel-driver/snapshot/${MY_P}.tar.gz"
+	SRC_URI="http://cgit.freedesktop.org/vaapi/intel-driver/snapshot/${MY_P}.tar.xz"
 	S="${WORKDIR}/${MY_P}"
 fi
 
@@ -38,6 +38,7 @@ RDEPEND=">=x11-libs/libva-1.0.16
 	>=x11-libs/libdrm-2.4.23[video_cards_intel]"
 
 DEPEND="${RDEPEND}
+	app-arch/xz-utils
 	virtual/pkgconfig"
 
 src_prepare() {
