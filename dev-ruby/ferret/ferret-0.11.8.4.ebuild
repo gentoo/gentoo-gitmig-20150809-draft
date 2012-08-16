@@ -1,13 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ferret/ferret-0.11.8.4.ebuild,v 1.1 2012/08/16 03:44:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ferret/ferret-0.11.8.4.ebuild,v 1.2 2012/08/16 14:19:27 flameeyes Exp $
 
-EAPI=2
+EAPI=4
 
 # ruby19 fails tests
 USE_RUBY="ruby18 ree18"
 
 RUBY_FAKEGEM_NAME="ferret"
+
+RUBY_FAKEGEM_RECIPE_TEST="none"
 
 RUBY_FAKEGEM_TASK_DOC="doc"
 RUBY_FAKEGEM_DOCDIR="doc/api"
@@ -24,19 +26,17 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
+ruby_add_bdepend "test? ( virtual/ruby-test-unit )"
+
 each_ruby_configure() {
 	${RUBY} -Cext extconf.rb || die
 }
 
 each_ruby_compile() {
-	emake -Cext || die
+	emake -Cext CFLAGS="${CFLAGS} -fPIC" archflag="${LDFLAGS}"
+	cp ext/ferret_ext$(get_modname) lib/ || die
 }
 
 each_ruby_test() {
-	${RUBY} -Iext:lib test/test_all.rb || die
-}
-
-each_ruby_install() {
-	mv ext/ferret_ext$(get_modname) lib/ || die
-	each_fakegem_install
+	${RUBY} -Ilib test/test_all.rb || die
 }
