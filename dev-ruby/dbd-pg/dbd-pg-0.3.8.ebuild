@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbd-pg/dbd-pg-0.3.8.ebuild,v 1.9 2012/05/01 18:24:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbd-pg/dbd-pg-0.3.8.ebuild,v 1.10 2012/08/16 03:52:09 flameeyes Exp $
 
 inherit "ruby"
 
@@ -15,7 +15,7 @@ IUSE="test"
 
 RDEPEND="
 	>=dev-ruby/ruby-dbi-0.4.2
-	>=dev-ruby/ruby-postgres-0.7.9.20080128"
+	>=dev-ruby/postgres-0.7.9.20080128"
 
 # ruby-postgres is not yet ruby19
 USE_RUBY="ruby18"

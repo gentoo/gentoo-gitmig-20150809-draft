@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/i18n-0.6.0-r1.ebuild,v 1.5 2012/04/04 09:20:09 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/i18n-0.6.0-r1.ebuild,v 1.6 2012/08/16 03:58:55 flameeyes Exp $
 
 EAPI=4
 
@@ -34,7 +34,7 @@ RDEPEND="${DEPEND}"
 #	ruby_add_bdepend "
 #			test? (
 #				dev-ruby/activerecord
-#				dev-ruby/sqlite3-ruby
+#				dev-ruby/sqlite3
 #				dev-ruby/ruby2ruby
 #			)"
 

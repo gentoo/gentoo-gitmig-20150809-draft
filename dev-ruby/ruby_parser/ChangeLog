@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby_parser
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ChangeLog,v 1.37 2012/08/14 18:55:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ChangeLog,v 1.38 2012/08/16 03:57:01 flameeyes Exp $
+
+  16 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> ruby_parser-2.0.5.ebuild,
+  ruby_parser-2.3.0.ebuild, ruby_parser-2.3.1.ebuild:
+  Update after Ruby packages move.
 
   14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Update metadata.xml so that it's the same as most other packages.

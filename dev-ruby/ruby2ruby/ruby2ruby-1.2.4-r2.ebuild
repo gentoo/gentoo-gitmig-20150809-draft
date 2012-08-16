@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby2ruby/ruby2ruby-1.2.4-r2.ebuild,v 1.10 2011/09/15 04:49:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby2ruby/ruby2ruby-1.2.4-r2.ebuild,v 1.11 2012/08/16 04:01:35 flameeyes Exp $
 
 EAPI=2
 
@@ -25,6 +25,6 @@ KEYWORDS="amd64 hppa ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos
 IUSE=""
 
 ruby_add_rdepend "=dev-ruby/parsetree-3.0*
-	=dev-ruby/sexp-processor-3.0*
+	=dev-ruby/sexp_processor-3.0*
 	=dev-ruby/ruby_parser-2.0*"
 ruby_add_bdepend doc "dev-ruby/hoe dev-ruby/hoe-seattlerb"

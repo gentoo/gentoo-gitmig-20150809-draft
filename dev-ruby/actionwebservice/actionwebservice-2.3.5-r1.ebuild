@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionwebservice/actionwebservice-2.3.5-r1.ebuild,v 1.1 2011/12/21 10:38:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionwebservice/actionwebservice-2.3.5-r1.ebuild,v 1.2 2012/08/16 03:49:45 flameeyes Exp $
 
 EAPI=4
 USE_RUBY="ruby18"
@@ -29,7 +29,7 @@ ruby_add_rdepend ">=dev-ruby/actionpack-2.3.5:2.3
 
 # it uses activerecord when running tests, but they don't work so
 # ignore them for now.
-#ruby_add_bdepend test 'dev-ruby/sqlite3-ruby'
+#ruby_add_bdepend test 'dev-ruby/sqlite3'
 RESTRICT=test
 
 all_ruby_prepare() {

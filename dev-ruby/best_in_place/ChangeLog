@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/best_in_place
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/best_in_place/ChangeLog,v 1.8 2012/07/30 18:34:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/best_in_place/ChangeLog,v 1.9 2012/08/16 03:51:44 flameeyes Exp $
+
+  16 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  best_in_place-1.1.2.ebuild:
+  Update after Ruby packages move.
 
   30 Jul 2012; Hans de Graaff <graaff@gentoo.org> -best_in_place-1.0.6.ebuild,
   -best_in_place-1.1.0.ebuild:
@@ -51,4 +55,3 @@
   +best_in_place-1.0.4.ebuild,
   +files/best_in_place-1.0.4-disable-some-tests.patch, +metadata.xml:
   Import of best_in_place gem.
-

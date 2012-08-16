@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/rack-1.4.1.ebuild,v 1.7 2012/08/10 10:35:25 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/rack-1.4.1.ebuild,v 1.8 2012/08/16 03:55:23 flameeyes Exp $
 
 EAPI="2"
 USE_RUBY="ruby18 ree18 ruby19 jruby"
@@ -25,7 +25,7 @@ ruby_add_rdepend "virtual/ruby-ssl"
 # memcache-client, thin, mongrel and camping; not sure if we should
 # make them dependencies at all. We do add the fcgi dependency because
 # that spec isn't optional.
-ruby_add_bdepend "test? ( dev-ruby/bacon dev-ruby/ruby-fcgi )"
+ruby_add_bdepend "test? ( dev-ruby/bacon dev-ruby/fcgi )"
 
 # Block against versions in older slots that also try to install a binary.
 RDEPEND="${RDEPEND} !<dev-ruby/rack-1.1.3-r1:0 !<dev-ruby/rack-1.2.5:1.2 !<dev-ruby/rack-1.3.6-r1:1.3"

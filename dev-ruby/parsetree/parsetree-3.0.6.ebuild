@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parsetree/parsetree-3.0.6.ebuild,v 1.7 2011/07/10 23:03:03 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parsetree/parsetree-3.0.6.ebuild,v 1.8 2012/08/16 03:59:53 flameeyes Exp $
 
 EAPI=2
 
@@ -23,8 +23,8 @@ KEYWORDS="amd64 ~hppa ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-maco
 IUSE=""
 
 ruby_add_rdepend '
-	>=dev-ruby/ruby-inline-3.8.4-r1
-	>=dev-ruby/sexp-processor-3.0.0'
+	>=dev-ruby/RubyInline-3.8.4-r1
+	>=dev-ruby/sexp_processor-3.0.0'
 ruby_add_bdepend "
 	test? (
 		dev-ruby/hoe

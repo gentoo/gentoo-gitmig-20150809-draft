@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/radiant/radiant-1.0.0_rc3-r1.ebuild,v 1.1 2011/12/08 19:41:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/radiant/radiant-1.0.0_rc3-r1.ebuild,v 1.2 2012/08/16 03:55:50 flameeyes Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -37,7 +37,7 @@ ruby_add_rdepend ">=dev-ruby/redcloth-4.0.0
 	>=dev-ruby/radius-0.5.1
 	=dev-ruby/will_paginate-2.3*
 	dev-ruby/rack-cache
-	>=dev-ruby/sqlite3-ruby-1.3.4
+	>=dev-ruby/sqlite3-1.3.4
 	dev-ruby/bundler
 	>=dev-ruby/activesupport-2.3.14-r1:2.3"
 

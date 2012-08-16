@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/activerecord-2.3.14.ebuild,v 1.7 2012/05/01 18:24:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/activerecord-2.3.14.ebuild,v 1.8 2012/08/16 03:50:41 flameeyes Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18 jruby"
@@ -26,7 +26,7 @@ ruby_add_rdepend "~dev-ruby/activesupport-${PV}"
 #ruby_add_rdepend sqlite ">=dev-ruby/sqlite-ruby-2.2.2"
 USE_RUBY=ruby18 \
 	ruby_add_rdepend "
-		sqlite3? ( dev-ruby/sqlite3-ruby )
+		sqlite3? ( dev-ruby/sqlite3 )
 		mysql? ( >=dev-ruby/mysql-ruby-2.7 )
 		postgres? ( dev-ruby/pg )"
 

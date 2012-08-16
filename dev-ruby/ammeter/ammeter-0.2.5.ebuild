@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ammeter/ammeter-0.2.5.ebuild,v 1.2 2012/07/23 20:04:21 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ammeter/ammeter-0.2.5.ebuild,v 1.3 2012/08/16 03:51:20 flameeyes Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19 ree18"
@@ -39,7 +39,7 @@ ruby_add_bdepend "
 		dev-ruby/jquery-rails
 		dev-util/cucumber
 		dev-util/aruba
-		dev-ruby/sqlite3-ruby
+		dev-ruby/sqlite3
 	)"
 
 all_ruby_prepare() {

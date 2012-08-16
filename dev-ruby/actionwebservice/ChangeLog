@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/actionwebservice
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionwebservice/ChangeLog,v 1.79 2011/12/21 10:38:28 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionwebservice/ChangeLog,v 1.80 2012/08/16 03:49:45 flameeyes Exp $
+
+  16 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  actionwebservice-2.3.5-r1.ebuild:
+  Update after Ruby packages move.
 
 *actionwebservice-2.3.5-r1 (21 Dec 2011)
 
@@ -391,4 +395,3 @@
   28 Feb 2005; Caleb Tennis <caleb@gentoo.org> +metadata.xml,
   +actionwebservice-0.5.0.ebuild:
   Initial import for rails - see bug #83446
-

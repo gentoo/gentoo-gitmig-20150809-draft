@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/i18n
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/ChangeLog,v 1.47 2012/07/26 17:44:50 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/ChangeLog,v 1.48 2012/08/16 03:58:55 flameeyes Exp $
+
+  16 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> i18n-0.3.7.ebuild,
+  i18n-0.4.2.ebuild, i18n-0.5.0-r1.ebuild, i18n-0.6.0-r1.ebuild:
+  Update after Ruby packages move.
 
   26 Jul 2012; Hans de Graaff <graaff@gentoo.org> -i18n-0.5.0.ebuild,
   -i18n-0.6.0.ebuild:
@@ -182,4 +186,3 @@
   +metadata.xml:
   Initial import of i18n support for Rails. USE=doc is missing because of
   missing jeweler.
-

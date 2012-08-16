@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/best_in_place/best_in_place-1.1.2.ebuild,v 1.1 2012/05/29 15:47:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/best_in_place/best_in_place-1.1.2.ebuild,v 1.2 2012/08/16 03:51:44 flameeyes Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ree18 ruby19"
@@ -36,7 +36,7 @@ ruby_add_bdepend "
 		>=dev-ruby/nokogiri-1.5.0
 		>=dev-ruby/capybara-1.0.1
 		dev-ruby/rails:3.2
-		>=dev-ruby/sqlite3-ruby-1.3.4-r1
+		>=dev-ruby/sqlite3-1.3.4-r1
 		dev-ruby/kramdown
 	)"
 

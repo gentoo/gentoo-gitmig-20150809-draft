@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ruby_parser-2.3.1.ebuild,v 1.4 2011/12/31 18:01:46 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ruby_parser-2.3.1.ebuild,v 1.5 2012/08/16 03:57:01 flameeyes Exp $
 
 EAPI=2
 
@@ -21,9 +21,9 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-lin
 IUSE=""
 
 # The sexp-processor dependency is needed to make tests pass for ruby 1.9.
-ruby_add_rdepend ">=dev-ruby/sexp-processor-3.0.9"
+ruby_add_rdepend ">=dev-ruby/sexp_processor-3.0.9"
 ruby_add_bdepend "doc? ( >=dev-ruby/hoe-2.9.1 )"
-ruby_add_bdepend "test? ( virtual/ruby-test-unit >=dev-ruby/sexp-processor-3.0.6 )"
+ruby_add_bdepend "test? ( virtual/ruby-test-unit >=dev-ruby/sexp_processor-3.0.6 )"
 
 all_ruby_prepare() {
 	# Remove reference to perforce method that is not in a released

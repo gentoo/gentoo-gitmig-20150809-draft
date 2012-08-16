@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/activerecord-3.1.3.ebuild,v 1.3 2012/03/11 14:09:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/activerecord-3.1.3.ebuild,v 1.4 2012/08/16 03:50:41 flameeyes Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19 ree18"
@@ -30,7 +30,7 @@ ruby_add_rdepend "~dev-ruby/activesupport-${PV}
 	~dev-ruby/activemodel-${PV}
 	>=dev-ruby/arel-2.2.1:2.1
 	>=dev-ruby/tzinfo-0.3.29
-	sqlite3? ( >=dev-ruby/sqlite3-ruby-1.3.4 )
+	sqlite3? ( >=dev-ruby/sqlite3-1.3.4 )
 	mysql? ( >=dev-ruby/mysql2-0.3.6:0.3 )
 	postgres? ( >=dev-ruby/pg-0.11.0 )"
 
@@ -38,7 +38,7 @@ ruby_add_bdepend "
 	test? (
 		dev-ruby/bundler
 		~dev-ruby/actionpack-${PV}
-		>=dev-ruby/sqlite3-ruby-1.3.3
+		>=dev-ruby/sqlite3-1.3.3
 		>=dev-ruby/mocha-0.9.5
 		virtual/ruby-test-unit
 	)"

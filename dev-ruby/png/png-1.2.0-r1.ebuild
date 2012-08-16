@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/png/png-1.2.0-r1.ebuild,v 1.2 2010/07/29 00:14:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/png/png-1.2.0-r1.ebuild,v 1.3 2012/08/16 03:54:49 flameeyes Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -26,7 +26,7 @@ ruby_add_bdepend "
 		dev-ruby/minitest
 	)"
 
-ruby_add_rdepend ">=dev-ruby/ruby-inline-3.5.0"
+ruby_add_rdepend ">=dev-ruby/RubyInline-3.5.0"
 
 src_test() {
 	chmod 0755 "${HOME}" || die "Failed to fix permissions on home."

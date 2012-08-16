@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/dbd-sqlite3
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbd-sqlite3/ChangeLog,v 1.12 2012/08/06 17:48:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbd-sqlite3/ChangeLog,v 1.13 2012/08/16 03:52:35 flameeyes Exp $
+
+  16 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  dbd-sqlite3-1.2.5-r1.ebuild, dbd-sqlite3-1.2.5.ebuild:
+  Update after Ruby packages move.
 
   06 Aug 2012; Agostino Sarubbo <ago@gentoo.org> dbd-sqlite3-1.2.5-r1.ebuild:
   Stable for amd64, wrt bug #429976
@@ -47,4 +51,3 @@
   26 Aug 2009; Alex Legler <a3li@gentoo.org> +dbd-sqlite3-1.2.5.ebuild,
   +metadata.xml:
   Initial import, ebuild by /me.
-

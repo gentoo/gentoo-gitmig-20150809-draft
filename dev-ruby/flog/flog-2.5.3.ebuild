@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flog/flog-2.5.3.ebuild,v 1.1 2011/10/07 06:18:28 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flog/flog-2.5.3.ebuild,v 1.2 2012/08/16 03:53:14 flameeyes Exp $
 
 EAPI="2"
 USE_RUBY="ruby18 ree18"
@@ -23,4 +23,4 @@ ruby_add_bdepend "doc? ( dev-ruby/hoe )"
 ruby_add_bdepend "test? ( dev-ruby/hoe dev-ruby/minitest )"
 
 ruby_add_rdepend "=dev-ruby/ruby_parser-2*
-	=dev-ruby/sexp-processor-3*"
+	=dev-ruby/sexp_processor-3*"
