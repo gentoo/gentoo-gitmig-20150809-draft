@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/libva-1.1.0.ebuild,v 1.2 2012/06/08 15:33:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/libva-1.0.16.ebuild,v 1.1 2012/08/16 13:14:05 aballier Exp $
 
 EAPI="3"
 
@@ -29,7 +29,7 @@ if [ "${PV%9999}" = "${PV}" ] ; then
 else
 	KEYWORDS=""
 fi
-IUSE="egl opengl"
+IUSE="opengl"
 
 VIDEO_CARDS="dummy nvidia intel fglrx"
 for x in ${VIDEO_CARDS}; do
@@ -41,7 +41,6 @@ RDEPEND=">=x11-libs/libdrm-2.4
 	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXfixes
-	egl? ( media-libs/mesa[egl] )
 	opengl? ( virtual/opengl )"
 
 DEPEND="${RDEPEND}
@@ -60,8 +59,7 @@ src_configure() {
 		--with-drivers-path="${EPREFIX}/usr/$(get_libdir)/va/drivers" \
 		$(use_enable video_cards_dummy dummy-driver) \
 		$(use_enable video_cards_dummy dummy-backend) \
-		$(use_enable opengl glx) \
-		$(use_enable egl)
+		$(use_enable opengl glx)
 }
 
 src_install() {
