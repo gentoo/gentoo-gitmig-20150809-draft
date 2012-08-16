@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/liquid/liquid-2.3.0.ebuild,v 1.2 2012/08/16 07:38:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/liquid/liquid-2.3.0.ebuild,v 1.3 2012/08/16 13:58:49 flameeyes Exp $
 
-EAPI="2"
+EAPI=4
 USE_RUBY="ruby18 ree18 jruby"
 
 RUBY_FAKEGEM_TASK_DOC=""
@@ -20,6 +20,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86-fbsd ~x86"
 IUSE=""
 
+ruby_add_bdepend "test? ( >=dev-ruby/test-unit-2.5.1-r1 )"
+
 each_ruby_test() {
-	${RUBY} -Ilib:test -S testrb test/liquid/*_test.rb || die
+	ruby-ng_testrb-2 -Ilib:test test/liquid/*_test.rb
 }
