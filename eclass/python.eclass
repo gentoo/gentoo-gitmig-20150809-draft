@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.156 2012/08/16 07:46:15 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.157 2012/08/16 23:57:32 floppym Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -2713,6 +2713,10 @@ python_disable_pyc() {
 	export PYTHONDONTWRITEBYTECODE="1"
 }
 
+_python_vecho() {
+	[[ -z ${PORTAGE_VERBOSE} ]] || echo "$@"
+}
+
 _python_clean_compiled_modules() {
 	_python_initialize_prefix_variables
 	_python_set_color_variables
@@ -2735,7 +2739,7 @@ _python_clean_compiled_modules() {
 				# Delete empty child directories.
 				find "${path}" -type d | sort -r | while read -r dir; do
 					if rmdir "${dir}" 2> /dev/null; then
-						echo "${_CYAN}<<< ${dir}${_NORMAL}"
+						_python_vecho "<<< ${dir}"
 					fi
 				done
 			fi
@@ -2768,6 +2772,7 @@ _python_clean_compiled_modules() {
 				else
 					[[ -f "${py_file}" ]] && continue
 				fi
+				_python_vecho "<<< ${compiled_file%[co]}[co]"
 				rm -f "${compiled_file%[co]}"[co]
 			elif [[ "${compiled_file}" == *\$py.class ]]; then
 				if [[ "${dir}" == "__pycache__" ]]; then
@@ -2782,6 +2787,7 @@ _python_clean_compiled_modules() {
 				else
 					[[ -f "${py_file}" ]] && continue
 				fi
+				_python_vecho "<<< ${compiled_file}"
 				rm -f "${compiled_file}"
 			else
 				die "${FUNCNAME}(): Unrecognized file type: '${compiled_file}'"
@@ -2790,7 +2796,9 @@ _python_clean_compiled_modules() {
 			# Delete empty parent directories.
 			dir="${compiled_file%/*}"
 			while [[ "${dir}" != "${root}" ]]; do
-				if ! rmdir "${dir}" 2> /dev/null; then
+				if rmdir "${dir}" 2> /dev/null; then
+					_python_vecho "<<< ${dir}"
+				else
 					break
 				fi
 				dir="${dir%/*}"
