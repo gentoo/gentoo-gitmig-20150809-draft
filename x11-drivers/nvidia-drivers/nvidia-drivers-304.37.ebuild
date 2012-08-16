@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-304.37.ebuild,v 1.1 2012/08/16 15:37:41 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-304.37.ebuild,v 1.2 2012/08/16 22:31:37 cardoe Exp $
 
 EAPI=4
 
@@ -59,10 +59,6 @@ QA_PREBUILT=""
 S=${WORKDIR}/
 
 pkg_pretend() {
-
-	if [ "${I_AM_CRAZY_TO_USE_MASKED_VERSIONS}" != "1" ]; then
-		die "Don't use experimental in development ebuilds"
-	fi
 
 	if use amd64 && has_multilib_profile && \
 		[ "${DEFAULT_ABI}" != "amd64" ]; then
