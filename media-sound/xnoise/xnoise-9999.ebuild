@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/xnoise-9999.ebuild,v 1.10 2012/07/29 10:31:52 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/xnoise-9999.ebuild,v 1.11 2012/08/16 19:08:27 angelos Exp $
 
 EAPI=4
 inherit fdo-mime gnome2-utils git-2
@@ -51,7 +51,8 @@ src_configure() {
 		--enable-soundmenu2 \
 		--enable-mediakeys \
 		$(use_enable lyrics chartlyrics) \
-		$(use_enable lyrics azlyrics)
+		$(use_enable lyrics azlyrics) \
+		--disable-ubuntuone
 }
 
 src_install() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/xnoise-0.2.3.ebuild,v 1.1 2012/07/12 13:51:35 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/xnoise-0.2.5.ebuild,v 1.1 2012/08/16 19:08:27 angelos Exp $
 
 EAPI=4
 inherit fdo-mime gnome2-utils
@@ -15,17 +15,18 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+lastfm libnotify +lyrics"
 
-RDEPEND="dev-db/sqlite:3
+RDEPEND="x11-libs/gtk+:3
 	>=dev-libs/glib-2.30:2
-	dev-libs/libxml2:2
-	media-libs/gst-plugins-base:0.10
 	media-libs/gstreamer:0.10
+	media-libs/gst-plugins-base:0.10
+	dev-db/sqlite:3
 	media-libs/taglib
 	x11-libs/cairo
-	x11-libs/gtk+:3
+	x11-libs/libX11
 	lastfm? ( net-libs/libsoup:2.4 )
 	libnotify? ( x11-libs/libnotify )
-	lyrics? ( net-libs/libsoup:2.4 )"
+	lyrics? ( net-libs/libsoup:2.4
+		dev-libs/libxml2:2 )"
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	virtual/pkgconfig
@@ -38,9 +39,12 @@ src_configure() {
 		$(use_enable lyrics lyricwiki) \
 		$(use_enable lastfm) \
 		$(use_enable libnotify notifications) \
+		--enable-mpris \
 		--enable-soundmenu2 \
+		--enable-mediakeys \
 		$(use_enable lyrics chartlyrics) \
-		$(use_enable lyrics azlyrics)
+		$(use_enable lyrics azlyrics) \
+		--disable-ubuntuone
 }
 
 src_install() {
