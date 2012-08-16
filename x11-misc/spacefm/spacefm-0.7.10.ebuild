@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/spacefm-0.7.10.ebuild,v 1.1 2012/07/25 17:40:53 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/spacefm-0.7.10.ebuild,v 1.2 2012/08/16 22:06:25 hasufell Exp $
 
 EAPI=4
 
-inherit fdo-mime gnome2-utils linux-info
+inherit eutils fdo-mime gnome2-utils linux-info
 
 DESCRIPTION="A multi-panel tabbed file manager"
 HOMEPAGE="http://ignorantguru.github.com/spacefm/"
@@ -30,6 +30,10 @@ DEPEND="${RDEPEND}
 	dev-util/intltool
 	virtual/pkgconfig
 	sys-devel/gettext"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-0.7.10-desktopfiles.patch
+}
 
 src_configure() {
 	econf \
