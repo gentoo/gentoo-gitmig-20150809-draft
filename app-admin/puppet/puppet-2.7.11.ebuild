@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-2.7.11.ebuild,v 1.8 2012/07/04 20:06:49 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-2.7.11.ebuild,v 1.9 2012/08/16 03:48:50 flameeyes Exp $
 
 EAPI="4"
 # ruby19: dev-ruby/ruby-ldap has no ruby19
@@ -27,7 +27,7 @@ ruby_add_rdepend "
 	doc? ( dev-ruby/rdoc )
 	ldap? ( dev-ruby/ruby-ldap )
 	shadow? ( dev-ruby/ruby-shadow )
-	sqlite3? ( dev-ruby/sqlite3-ruby )
+	sqlite3? ( dev-ruby/sqlite3 )
 	virtual/ruby-ssl"
 #	couchdb? ( dev-ruby/couchrest )
 #	mongrel? ( www-servers/mongrel )
