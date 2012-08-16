@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/fax4cups/fax4cups-1.29.ebuild,v 1.3 2012/08/03 15:37:15 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/fax4cups/fax4cups-1.29.ebuild,v 1.4 2012/08/16 18:15:50 nativemad Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://vigna.dsi.unimi.it/fax4CUPS/"
 SRC_URI="http://vigna.dsi.unimi.it/fax4CUPS/fax4CUPS-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="+hylafax mgetty-fax efax capisuite-fax"
 
 DEPEND="net-print/cups"
