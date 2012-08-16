@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/dunelegacy/dunelegacy-0.96.2.ebuild,v 1.1 2012/08/09 20:44:51 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dunelegacy/dunelegacy-0.96.2.ebuild,v 1.2 2012/08/16 09:35:44 hasufell Exp $
 
 EAPI=4
 inherit autotools eutils gnome2-utils games
@@ -12,13 +12,15 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="+alsa pulseaudio"
 
-# exits on start without libsdl[alsa]
-RDEPEND="media-libs/libsdl[X,alsa,audio,video]
+RDEPEND="media-libs/libsdl[X,alsa?,audio,pulseaudio?,video]
 	media-libs/sdl-mixer[midi,mp3,vorbis]"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
+
+# exits on start without libsdl[alsa] or libsdl[pulseaudio]
+REQUIRED_USE="|| ( alsa pulseaudio )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-build.patch
