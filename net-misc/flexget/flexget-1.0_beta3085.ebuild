@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-1.0_beta2821.ebuild,v 1.1 2012/04/01 19:06:47 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-1.0_beta3085.ebuild,v 1.1 2012/08/16 03:28:22 floppym Exp $
 
 EAPI=4
 
@@ -27,13 +27,14 @@ HOMEPAGE="http://flexget.com/"
 
 LICENSE="MIT"
 SLOT="0"
-IUSE="deluge test transmission"
+IUSE="test"
 
-RDEPEND="
-	>=dev-python/feedparser-5.1
+DEPEND="
+	>=dev-python/feedparser-5.1.2
 	>=dev-python/sqlalchemy-0.7
 	dev-python/pyyaml
 	dev-python/beautifulsoup:python-2
+	dev-python/beautifulsoup:4
 	dev-python/html5lib
 	dev-python/jinja
 	dev-python/PyRSS2Gen
@@ -44,16 +45,11 @@ RDEPEND="
 	dev-python/python-dateutil
 	>=dev-python/requests-0.10.0
 	!=dev-python/requests-0.10.1
-"
-DEPEND="
+	|| ( dev-lang/python:2.7 dev-python/argparse )
 	dev-python/setuptools
-	test? ( ${RDEPEND} dev-python/nose )
 "
-RDEPEND+="
-	dev-python/setuptools
-	deluge? ( net-p2p/deluge )
-	transmission? ( dev-python/transmissionrpc )
-"
+RDEPEND="${DEPEND}"
+DEPEND+=" test? ( dev-python/nose )"
 
 if [[ ${PV} == 9999 ]]; then
 	DEPEND+=" dev-python/paver"
@@ -64,6 +60,9 @@ fi
 src_prepare() {
 	# Prevent setup from grabbing nose from pypi
 	sed -e /setup_requires/d \
+		-e '/SQLAlchemy/s/, <0.8//' \
+		-e '/BeautifulSoup/s/, <3.3//' \
+		-e '/beautifulsoup4/s/, <4.2//' \
 		-e '/requests/s/, <0.11//' \
 		-i pavement.py || die
 
