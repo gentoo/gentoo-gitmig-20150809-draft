@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.27 2012/08/15 03:40:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.28 2012/08/16 23:03:00 vapier Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs
@@ -40,9 +40,13 @@ REQUIRED_USE="
 	"
 
 src_configure() {
-	#let the build system decide which AS to use (it honours $AS but
-	#then feeds it with yasm flags without checking...) bug 345161
-	unset AS
+	# let the build system decide which AS to use (it honours $AS but
+	# then feeds it with yasm flags without checking...) #345161
+	local a
+	tc-export AS
+	for a in {amd64,x86}{,-{fbsd,linux}} ; do
+		use ${a} && unset AS
+	done
 
 	# build verbose by default
 	MAKEOPTS="${MAKEOPTS} verbose=yes"
