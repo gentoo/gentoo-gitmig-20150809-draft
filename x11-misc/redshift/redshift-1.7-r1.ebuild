@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/redshift-1.7-r1.ebuild,v 1.4 2012/07/23 15:11:21 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/redshift-1.7-r1.ebuild,v 1.5 2012/08/16 20:40:38 hasufell Exp $
 
 EAPI=4
 
@@ -52,7 +52,6 @@ src_configure() {
 
 src_install() {
 	default
-	rm -R "${D}"/usr/$(get_libdir)/python* || die
 
 	# handle multiple python abi support
 	per_abi_install() {
@@ -62,6 +61,7 @@ src_install() {
 	}
 
 	if use gtk ; then
+		rm -R "${D}"/usr/$(get_libdir)/python* || die
 		python_execute_function per_abi_install
 		python_generate_wrapper_scripts -f "${D}"/usr/bin/gtk-redshift
 	fi

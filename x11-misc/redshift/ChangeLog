@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/redshift
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/ChangeLog,v 1.17 2012/07/23 15:11:21 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/ChangeLog,v 1.18 2012/08/16 20:40:38 hasufell Exp $
+
+  16 Aug 2012; Julian Ospald <hasufell@gentoo.org> redshift-1.7-r1.ebuild:
+  fix build for -gtk wrt #431646
 
   23 Jul 2012; Julian Ospald <hasufell@gentoo.org> redshift-1.7-r1.ebuild:
   remove obsolete die
