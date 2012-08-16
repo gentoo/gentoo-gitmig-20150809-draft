@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/alexandria-0.6.7.ebuild,v 1.4 2012/01/04 18:02:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/alexandria-0.6.7.ebuild,v 1.5 2012/08/16 03:49:27 flameeyes Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -65,5 +65,5 @@ pkg_postinst() {
 	echo
 	elog "  For Z39.50 support and the Library of Congress and"
 	elog "  British Library book proviers:"
-	elog "    dev-ruby/ruby-zoom"
+	elog "    dev-ruby/zoom"
 }
