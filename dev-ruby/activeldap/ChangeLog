@@ -1,6 +1,11 @@
-# ChangeLog for dev-ruby/ruby-activeldap
+# ChangeLog for dev-ruby/activeldap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeldap/ChangeLog,v 1.1 2012/08/16 03:43:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeldap/ChangeLog,v 1.2 2012/08/16 15:20:40 flameeyes Exp $
+
+  16 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> -activeldap-3.1.1.ebuild,
+  activeldap-1.2.2-r1.ebuild, activeldap-3.1.1-r1.ebuild:
+  Remove old; drop FAKEGEM_NAME; add proper dependency over test-unit:2 (even if
+  restricted); only depend on hoe for doc building or tests.
 
 *ruby-activeldap-3.1.1-r1 (02 Jul 2012)
 
@@ -159,4 +164,3 @@
   19 Aug 2005; Rob Holland <tigger@gentoo.org> +metadata.xml,
   +ruby-activeldap-0.5.7.ebuild:
   Initial version.
-

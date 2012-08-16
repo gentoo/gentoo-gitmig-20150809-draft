@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeldap/activeldap-1.2.2-r1.ebuild,v 1.1 2012/08/16 03:43:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeldap/activeldap-1.2.2-r1.ebuild,v 1.2 2012/08/16 15:20:40 flameeyes Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -9,14 +9,11 @@ RUBY_FAKEGEM_TASK_DOC="docs"
 RUBY_FAKEGEM_DOCDIR="doc"
 RUBY_FAKEGEM_EXTRADOC="CHANGES README TODO"
 RUBY_FAKEGEM_EXTRAINSTALL="data po rails rails_generators"
-RUBY_FAKEGEM_NAME="activeldap"
 
 inherit ruby-fakegem
 
-MY_P="${P/ruby-/}"
 DESCRIPTION="Ruby/ActiveLDAP provides an activerecord inspired object oriented interface to LDAP"
 HOMEPAGE="http://ruby-activeldap.rubyforge.org/doc/"
-SRC_URI="mirror://rubygems/${MY_P}.gem"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -26,8 +23,12 @@ IUSE=""
 # Most tests require a live LDAP server to run.
 RESTRICT="test"
 
-ruby_add_bdepend "dev-ruby/hoe"
-ruby_add_bdepend "test? ( virtual/ruby-test-unit )"
+ruby_add_bdepend "
+	doc? ( dev-ruby/hoe )
+	test? (
+		dev-ruby/hoe
+		dev-ruby/test-unit:2
+	)"
 
 ruby_add_rdepend "
 	=dev-ruby/activerecord-2.3*
@@ -44,9 +45,7 @@ all_ruby_prepare() {
 }
 
 each_ruby_test() {
-	# Tests use test-unit-2 which is currently masked in tree.
-	# Version 2.0.6 is bundled so use that for now.
-	RUBYLIB=test-unit/lib ${RUBY} -S rake test || die "Tests failed."
+	${RUBY} -S rake test || die "Tests failed."
 }
 
 all_ruby_install() {
