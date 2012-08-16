@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/fluidsynth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/ChangeLog,v 1.70 2012/08/16 16:50:38 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/ChangeLog,v 1.71 2012/08/16 16:56:42 radhermit Exp $
+
+  16 Aug 2012; Tim Harder <radhermit@gentoo.org> -fluidsynth-1.0.9.ebuild,
+  -files/fluidsynth-1.0.9-pkg.patch, -fluidsynth-1.1.3.ebuild,
+  -fluidsynth-1.1.4.ebuild:
+  Remove old.
 
 *fluidsynth-1.1.6 (16 Aug 2012)
 
