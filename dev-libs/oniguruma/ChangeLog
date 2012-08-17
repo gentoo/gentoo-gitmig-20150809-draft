@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/oniguruma
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/oniguruma/ChangeLog,v 1.51 2012/05/04 14:35:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/oniguruma/ChangeLog,v 1.52 2012/08/17 14:41:06 naota Exp $
+
+*oniguruma-5.9.2-r1 (17 Aug 2012)
+
+  17 Aug 2012; Naohiro Aota <naota@gentoo.org>
+  +files/oniguruma-5.9.2-makefile.patch, +oniguruma-5.9.2-r1.ebuild,
+  metadata.xml, oniguruma-5.9.2.ebuild:
+  Patch Makefile.am not to include $(includedir). Patch-By: John Keeping
+  #430476; Patch configure.in to fix invalid test statement; Add new USE flags
+  to configure some options.
 
   04 May 2012; Alexis Ballier <aballier@gentoo.org> oniguruma-5.9.2.ebuild:
   keyword ~amd64-fbsd
@@ -197,4 +206,3 @@
 
   27 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> oniguruma-1.9.5.ebuild:
   Initial import
-
