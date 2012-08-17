@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/pgplot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/ChangeLog,v 1.24 2012/07/05 22:00:11 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/ChangeLog,v 1.25 2012/08/17 20:59:10 bicatali Exp $
+
+  17 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  files/pgplot-makemake.patch:
+  Fixed soname when tk or motif flags are on, bug #425496
 
 *pgplot-5.2.2-r5 (05 Jul 2012)
 
@@ -118,4 +122,3 @@
   +files/pgplot-makemake.patch, +metadata.xml, +pgplot-5.2.2.ebuild:
   A Fortran- or C-callable, device-independent graphics package for making
   simple scientific graphs.
-

@@ -128,7 +128,7 @@
  	$(RANLIB) libXmPgplot.a
  
 +libXmPgplot.so: XmPgplot.h XmPgplot.o
-+	$(SHARED_LD) $(SHARED_LD_CPGPLOT_OPTS) XmPgplot.o -L. -lcpgplot $(MOTIF_LIBS) -o libXmPgplot.so.5
++	$(SHARED_LD) $(LDFLAGS) -Wl,-soname,libXmPgplot.so.5 XmPgplot.o -L. -lcpgplot $(MOTIF_LIBS) -o libXmPgplot.so.5
 +	ln -s libXmPgplot.so.5 libXmPgplot.so
 +
  XmPgplot.h: $(XMDIR)/XmPgplot.h 
@@ -139,7 +139,7 @@
  	$(RANLIB) libtkpgplot.a
  
 +libtkpgplot.so: tkpgplot.h tkpgplot.o
-+	$(SHARED_LD) $(SHARED_LD_CPGPLOT_OPTS) tkpgplot.o -L. -lcpgplot $(TK_LIBS) -o libtkpgplot.so.5
++	$(SHARED_LD) $(LDFLAGS) -Wl,-soname,libtkpgplot.so.5 tkpgplot.o -L. -lcpgplot $(TK_LIBS) -o libtkpgplot.so.5
 +	ln -s libtkpgplot.so.5 libtkpgplot.so
 +
  tkpgplot.h: $(TKDIR)/tkpgplot.h 
