@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.5.ebuild,v 1.2 2012/08/14 21:45:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.5-r1.ebuild,v 1.1 2012/08/17 15:24:27 flameeyes Exp $
 
 EAPI=4
 
-PATCHSET=1
+PATCHSET=2
 
 inherit eutils user java-pkg-opt-2
 
@@ -75,7 +75,10 @@ DEPEND="${DEPEND_COM}
 		dev-perl/IO-Socket-INET6
 	)"
 RDEPEND="${DEPEND_COM}
-		java? ( >=virtual/jre-1.5 )
+		java? (
+			>=virtual/jre-1.5
+			|| ( net-analyzer/netcat6 net-analyzer/netcat )
+		)
 		!minimal? (
 			virtual/cron
 			media-fonts/dejavu
@@ -130,11 +133,12 @@ src_install() {
 		/etc/munin/plugins/"
 	keepdir ${dirs}
 	fowners munin:munin ${dirs}
-	use minimal || dirs+=" /etc/munin/munin-conf.d/"
 
 	local install_targets="install-common-prime install-node-prime install-plugins-prime"
 	use java && install_targets+=" install-plugins-java"
+
 	use minimal || install_targets=install
+	use minimal || dirs+=" /etc/munin/munin-conf.d/"
 
 	# parallel install doesn't work and it's also pointless to have this
 	# run in parallel for now (because it uses internal loops).
@@ -164,7 +168,11 @@ src_install() {
 			"${D}"/etc/munin/munin-node.conf || die
 	fi
 
-	if ! use minimal; then
+	if use minimal; then
+		# This requires the presence of munin-update, which is part of
+		# the non-minimal install...
+		rm "${D}"/usr/libexec/munin/plugins/munin_stats
+	else
 		exeinto /etc/local.d/
 		newexe "${FILESDIR}"/localstart-munin 50munin.start
 

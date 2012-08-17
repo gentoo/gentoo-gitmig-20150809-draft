@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.92 2012/08/14 21:45:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.93 2012/08/17 15:24:27 flameeyes Exp $
+
+*munin-2.0.5-r1 (17 Aug 2012)
+
+  17 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> +munin-2.0.5-r1.ebuild,
+  -munin-2.0.5.ebuild:
+  Improvement related to node autoconfiguration: depend on netcat if java is
+  enabled (required for JMX's autoconfiguration); drop munin_stats if not
+  installing master; update patches to fix autoconf for more plugins.
 
   14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> -munin-2.0.4-r2.ebuild,
   munin-2.0.5.ebuild:
