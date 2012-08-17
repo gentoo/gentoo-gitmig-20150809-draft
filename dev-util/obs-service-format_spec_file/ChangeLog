@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/obs-service-format_spec_file
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/obs-service-format_spec_file/ChangeLog,v 1.3 2012/03/07 14:52:33 miska Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/obs-service-format_spec_file/ChangeLog,v 1.4 2012/08/17 13:08:41 scarabeus Exp $
+
+  17 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Use suse herd.
 
   07 Mar 2012; Michal Hrusecky <miska@gentoo.org> metadata.xml,
   obs-service-format_spec_file-0.1.ebuild,
@@ -19,4 +22,3 @@
   16 Sep 2011; Michal Hrusecky <miska@gentoo.org>
   +obs-service-format_spec_file-9999.ebuild, metadata.xml:
   New ebuild for obs-service-format_spec_file. Ebuild written by me.
-

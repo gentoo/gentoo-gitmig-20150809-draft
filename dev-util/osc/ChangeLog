@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/osc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/osc/ChangeLog,v 1.3 2012/03/07 12:56:19 miska Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/osc/ChangeLog,v 1.4 2012/08/17 13:06:06 scarabeus Exp $
+
+  17 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Use suse herd.
 
 *osc-0.132.6 (07 Mar 2012)
 
@@ -18,4 +21,3 @@
   20 Jun 2011; Michal Hrusecky <miska@gentoo.org> +osc-0.130.1.ebuild,
   +osc-9999.ebuild, +metadata.xml:
   New ebuild for osc. Ebuild written by me. Fixes bug 350599
-
