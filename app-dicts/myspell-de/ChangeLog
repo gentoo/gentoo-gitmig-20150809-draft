@@ -1,6 +1,12 @@
 # ChangeLog for app-dicts/myspell-de
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-de/ChangeLog,v 1.29 2012/08/13 11:37:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-de/ChangeLog,v 1.30 2012/08/17 11:23:56 scarabeus Exp $
+
+*myspell-de-2012.06.17-r1 (17 Aug 2012)
+
+  17 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +myspell-de-2012.06.17-r1.ebuild, -myspell-de-2012.06.17.ebuild:
+  Remove the frami suffix from dict files to solve bug#430468.
 
 *myspell-de-2012.06.17 (13 Aug 2012)
 
