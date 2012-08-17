@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/unace
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unace/ChangeLog,v 1.38 2011/03/30 08:55:01 xmw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unace/ChangeLog,v 1.39 2012/08/17 04:10:08 vapier Exp $
+
+*unace-2.5-r3 (17 Aug 2012)
+
+  17 Aug 2012; Mike Frysinger <vapier@gentoo.org> +unace-2.5-r3.ebuild:
+  Update to latest Debian patchset and EAPI=4.
 
   30 Mar 2011; Michael Weber <xmw@gentoo.org> unace-2.5-r2.ebuild:
   added ~arm (bug 302981)
