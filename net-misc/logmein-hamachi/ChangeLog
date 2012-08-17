@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/logmein-hamachi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/logmein-hamachi/ChangeLog,v 1.5 2012/06/29 08:06:49 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/logmein-hamachi/ChangeLog,v 1.6 2012/08/17 11:54:58 titanofold Exp $
+
+*logmein-hamachi-2.1.0.68-r1 (17 Aug 2012)
+
+  17 Aug 2012; Aaron W. Swenson <titanofold@gentoo.org>
+  +logmein-hamachi-2.1.0.68-r1.ebuild:
+  Fixes bug 430234. Per Simone Scanzoni.
 
 *logmein-hamachi-2.1.0.68 (29 Jun 2012)
 
