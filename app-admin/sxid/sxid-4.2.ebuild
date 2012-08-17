@@ -1,14 +1,14 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sxid/sxid-4.2.ebuild,v 1.1 2011/07/26 21:29:28 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sxid/sxid-4.2.ebuild,v 1.2 2012/08/17 17:10:32 kensington Exp $
 
-EAPI=3
+EAPI=4
 
-inherit base toolchain-funcs
+inherit toolchain-funcs
 
 DESCRIPTION="suid, sgid file and directory checking"
-SRC_URI="http://linukz.org/download/${P}.tar.gz"
 HOMEPAGE="http://freshmeat.net/projects/sxid"
+SRC_URI="http://linukz.org/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -20,18 +20,16 @@ DEPEND="sys-apps/sed
 	sys-devel/gcc
 	sys-devel/autoconf"
 
-PATCHES=( "${FILESDIR}/${PN}-64bit-clean.patch" )
-
 src_prepare() {
 	# this is an admin application and really requires root to run correctly
 	# we need to move the binary to the sbin directory
-	sed -i s/bindir/sbindir/g source/Makefile.in
+	sed -i s/bindir/sbindir/g source/Makefile.in || die
 	tc-export CC
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc docs/{sxid.{conf,cron}.example,TODO} || die
+	emake DESTDIR="${D}" install
+	dodoc docs/sxid.{conf,cron}.example
 }
 
 pkg_postinst() {
