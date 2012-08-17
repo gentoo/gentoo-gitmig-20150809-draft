@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/elisp.eclass,v 1.54 2011/12/03 08:54:46 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/elisp.eclass,v 1.55 2012/08/17 20:29:24 ulm Exp $
 #
 # @ECLASS: elisp.eclass
 # @MAINTAINER:
@@ -76,7 +76,6 @@ esac
 
 DEPEND=">=virtual/emacs-${NEED_EMACS:-21}"
 RDEPEND="${DEPEND}"
-IUSE=""
 
 # @FUNCTION: elisp_pkg_setup
 # @DESCRIPTION:
