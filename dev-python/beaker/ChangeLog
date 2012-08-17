@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/beaker
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beaker/ChangeLog,v 1.38 2012/08/05 07:06:24 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beaker/ChangeLog,v 1.39 2012/08/17 06:54:53 patrick Exp $
+
+*beaker-1.6.4 (17 Aug 2012)
+
+  17 Aug 2012; Patrick Lauer <patrick@gentoo.org> +beaker-1.6.4.ebuild:
+  Bump
 
   05 Aug 2012; Anthony G. Basile <blueness@gentoo.org> beaker-1.5.4-r1.ebuild:
   Stable arm, bug #427546
@@ -162,4 +167,3 @@
   05 Feb 2007; Tiziano Müller <dev-zero@gentoo.org> +beaker-0.6.2.ebuild,
   +metadata.xml:
   Initial ebuild
-
