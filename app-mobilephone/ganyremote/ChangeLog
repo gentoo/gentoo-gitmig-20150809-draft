@@ -1,6 +1,12 @@
 # ChangeLog for app-mobilephone/ganyremote
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/ganyremote/ChangeLog,v 1.19 2012/06/09 16:11:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/ganyremote/ChangeLog,v 1.20 2012/08/17 18:00:04 hwoarang Exp $
+
+*ganyremote-6.0.1 (17 Aug 2012)
+
+  17 Aug 2012; Markos Chandras <hwoarang@gentoo.org> +ganyremote-6.0.1.ebuild,
+  -ganyremote-5.11.6.ebuild, -ganyremote-5.12.ebuild:
+  Version bump. Remove old
 
 *ganyremote-6.0 (09 Jun 2012)
 
@@ -78,4 +84,3 @@
   21 Mar 2010; Serkan Kaba <serkan@gentoo.org> +ganyremote-5.11.3.ebuild, +metadata.xml:
   Add ganyremote. Initial ebuild submitted by Norman Jonas
   <bugs.gentoo.org_4@devport.codepilot.net> Fixes bug #210442
-

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/ganyremote/ganyremote-5.11.6.ebuild,v 1.3 2010/10/05 21:11:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/ganyremote/ganyremote-6.0.1.ebuild,v 1.1 2012/08/17 18:00:04 hwoarang Exp $
 
 EAPI="2"
 
@@ -12,10 +12,10 @@ SRC_URI="mirror://sourceforge/anyremote/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="bluetooth"
 
-DEPEND="app-mobilephone/anyremote[bluetooth=]
+DEPEND=">=app-mobilephone/anyremote-6.0[bluetooth=]
 	dev-python/pygtk
 	bluetooth? ( dev-python/pybluez )"
 RDEPEND="${DEPEND}"
