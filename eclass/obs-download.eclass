@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/obs-download.eclass,v 1.1 2011/09/16 15:49:19 miska Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/obs-download.eclass,v 1.2 2012/08/17 13:04:25 scarabeus Exp $
 
 # @ECLASS: obs-download.eclass
 # @MAINTAINER:
-# miska@gentoo.org
+# suse@gentoo.org
 # @BLURB: Simplifies downloading from openSUSE Build Service.
 # @DESCRIPTION:
 # This eclass constructs OBS_URI based on provided project in openSUSE Build

@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/obs-service.eclass,v 1.2 2012/02/25 22:56:56 miska Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/obs-service.eclass,v 1.3 2012/08/17 13:04:25 scarabeus Exp $
 
 # @ECLASS: obs-service.eclass
 # @MAINTAINER:
-# miska@gentoo.org
+# suse@gentoo.org
 # @BLURB: Reduces code duplication in the Open Build Service services.
 # @DESCRIPTION:
 # This eclass makes it easier to package Open Build Service services. Based on
