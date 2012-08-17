@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/paramiko
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.70 2012/08/01 19:19:23 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.71 2012/08/17 07:04:47 patrick Exp $
+
+*paramiko-1.7.7.2 (17 Aug 2012)
+
+  17 Aug 2012; Patrick Lauer <patrick@gentoo.org> +paramiko-1.7.7.2.ebuild:
+  Bump for #426232
 
   01 Aug 2012; Ulrich Müller <ulm@gentoo.org> paramiko-1.7.7.1.ebuild:
   Add ~amd64-fbsd keyword, with permission from ryao.
@@ -265,4 +270,3 @@
   15 Aug 2004; Lukasz Strzygowski <lucass@gentoo.org> +metadata.xml,
   +paramiko-0.9h.ebuild:
   Initial commit. Thanks for submittion to Sourav Mandal in #57324.
-
