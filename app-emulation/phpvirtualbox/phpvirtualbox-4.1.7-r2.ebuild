@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/phpvirtualbox/phpvirtualbox-4.1.7-r2.ebuild,v 1.1 2012/06/18 17:28:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/phpvirtualbox/phpvirtualbox-4.1.7-r2.ebuild,v 1.2 2012/08/17 18:25:03 hwoarang Exp $
 
 EAPI="2"
 
@@ -39,8 +39,11 @@ src_install() {
 	webapp_serverowned "${MY_HTDOCSDIR}"/config.php-example
 
 	webapp_src_install
-
-	newinitd "${FILESDIR}"/vboxinit-initd vboxinit
+	if has_version app-emulation/virtualbox[vboxwebsrv] || \
+		has_version app-emulation/virtualbox-bin[vboxwebsrv]
+	then
+		newinitd "${FILESDIR}"/vboxinit-initd vboxinit
+	fi
 }
 
 pkg_postinst() {
@@ -58,5 +61,7 @@ pkg_postinst() {
 	elog "default runlevel on the virtualbox host:"
 	elog "\`rc-update add vboxinit default\`"
 	elog "If the server is on a remote host, than the script must be"
-	elog "copied manually."
+	elog "copied manually from"
+	elog "${FILESDIR}/vboxinit to /etc/init.d/vboxinit"
+	elog "on the remote host."
 }

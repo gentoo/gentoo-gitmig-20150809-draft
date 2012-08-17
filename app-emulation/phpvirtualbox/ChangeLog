@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/phpvirtualbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/phpvirtualbox/ChangeLog,v 1.3 2012/06/18 17:28:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/phpvirtualbox/ChangeLog,v 1.4 2012/08/17 18:25:03 hwoarang Exp $
+
+  17 Aug 2012; Markos Chandras <hwoarang@gentoo.org>
+  phpvirtualbox-4.1.7-r2.ebuild:
+  install init script only if virtualbox{-bin} is present. Reword elog message.
+  Bug #420991
 
 *phpvirtualbox-4.1.7-r2 (18 Jun 2012)
 
@@ -22,4 +27,3 @@
   +phpvirtualbox-4.1.7.ebuild:
   Moved from my overlay. Bug #338804. Thanks to Florian Knodt
   <f.knodt@yotaweb.de> for the original ebuild
-
