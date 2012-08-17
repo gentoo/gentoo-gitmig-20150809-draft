@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.248 2012/08/14 22:07:42 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.249 2012/08/17 21:38:57 hwoarang Exp $
+
+*openbox-3.5.0_p20111019-r1 (17 Aug 2012)
+
+  17 Aug 2012; Markos Chandras <hwoarang@gentoo.org>
+  +files/openbox-3.5.0-gtk34.patch, +openbox-3.5.0_p20111019-r1.ebuild:
+  Apply fix against gtk-3.4. Bug #424747. Thanks to Francisco Vazquez
+  <fjvazquezaraujo@gmail.com>
 
   14 Aug 2012; Johannes Huber <johu@gentoo.org> openbox-3.5.0_p20111019.ebuild:
   Stable for x86, wrt bug #430494
