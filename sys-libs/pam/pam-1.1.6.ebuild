@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.6.ebuild,v 1.1 2012/08/17 14:09:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.6.ebuild,v 1.2 2012/08/17 14:26:10 flameeyes Exp $
 
 EAPI=4
 
-inherit libtool multilib eutils pam toolchain-funcs flag-o-matic db-use
+inherit libtool multilib eutils pam toolchain-funcs flag-o-matic db-use autotools
 
 MY_PN="Linux-PAM"
 MY_P="${MY_PN}-${PV}"
@@ -12,7 +12,8 @@ MY_P="${MY_PN}-${PV}"
 HOMEPAGE="https://fedorahosted.org/linux-pam/"
 DESCRIPTION="Linux-PAM (Pluggable Authentication Modules)"
 
-SRC_URI="http://www.linux-pam.org/library/${MY_P}.tar.bz2"
+SRC_URI="http://www.linux-pam.org/library/${MY_P}.tar.bz2
+	http://www.linux-pam.org/documentation/${MY_P}-docs.tar.bz2"
 
 LICENSE="|| ( BSD GPL-2 )"
 SLOT="0"
@@ -84,6 +85,9 @@ pkg_pretend() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${MY_P}-destdir.patch
+
+	eautoreconf
 	elibtoolize
 }
 
