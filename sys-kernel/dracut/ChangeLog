@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.83 2012/08/09 16:33:30 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.84 2012/08/17 08:53:29 aidecoe Exp $
+
+  17 Aug 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-022-r5.ebuild:
+  Move udev to common dependencies, because its configuration is being checked
+  in the ebuild.
 
   09 Aug 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-019-r5.ebuild:
   Remove udev-187 blocker from 019.  Fixes bug #430002.

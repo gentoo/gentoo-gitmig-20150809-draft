@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-022-r5.ebuild,v 1.1 2012/08/09 16:17:55 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-022-r5.ebuild,v 1.2 2012/08/17 08:53:29 aidecoe Exp $
 
 EAPI=4
 
@@ -59,7 +59,8 @@ IUSE="debug device-mapper optimization net selinux ${IUSE_DRACUT_MODULES}"
 
 RESTRICT="test"
 
-RDEPEND="
+CDEPEND=">=sys-fs/udev-166"
+RDEPEND="${CDEPEND}
 	app-arch/cpio
 	>=app-shells/bash-4.0
 	>=app-shells/dash-0.5.4.11
@@ -67,7 +68,6 @@ RDEPEND="
 	|| ( >=sys-apps/module-init-tools-3.8 >sys-apps/kmod-5[tools] )
 	>=sys-apps/sysvinit-2.87-r3
 	>=sys-apps/util-linux-2.20
-	>=sys-fs/udev-166
 
 	debug? ( dev-util/strace )
 	device-mapper? ( || ( sys-fs/device-mapper >=sys-fs/lvm2-2.02.33 ) )
@@ -91,7 +91,7 @@ RDEPEND="
 	dracut_modules_ssh-client? ( dev-libs/openssl )
 	dracut_modules_syslog? ( || ( app-admin/syslog-ng app-admin/rsyslog ) )
 	"
-DEPEND="
+DEPEND="${CDEPEND}
 	app-text/asciidoc
 	>=dev-libs/libxslt-1.1.26
 	app-text/docbook-xml-dtd:4.5
