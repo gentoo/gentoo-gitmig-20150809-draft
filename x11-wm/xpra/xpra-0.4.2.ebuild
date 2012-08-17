@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.4.2.ebuild,v 1.1 2012/08/17 14:07:10 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.4.2.ebuild,v 1.2 2012/08/17 22:19:06 xmw Exp $
 
 EAPI=3
 
@@ -52,13 +52,13 @@ src_prepare() {
 
 	$(PYTHON -2) make_constants_pxi.py wimpiggy/lowlevel/constants.txt wimpiggy/lowlevel/constants.pxi || die
 
-    #python_copy_sources
+	#python_copy_sources
 	#
-    #patching() {
-    #    [[ "${PYTHON_ABI}" == 2.* ]] && return
+	#patching() {
+	#    [[ "${PYTHON_ABI}" == 2.* ]] && return
 	#	2to3 --no-diffs -x all -f except -w -n .
 	#}
-    #python_execute_function --action-message 'Applying patches with $(python_get_implementation) $(python_get_version)' -s patching
+	#python_execute_function --action-message 'Applying patches with $(python_get_implementation) $(python_get_version)' -s patching
 }
 
 src_install() {
