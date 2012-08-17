@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/requests-0.13.1.ebuild,v 1.1 2012/07/17 19:28:59 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/requests-0.13.1.ebuild,v 1.2 2012/08/17 17:31:06 floppym Exp $
 
 EAPI="4"
-PYTHON_DEPEND="*:2.7"
+PYTHON_DEPEND="*:2.6"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.4 2.5 2.6"
+RESTRICT_PYTHON_ABIS="2.4 2.5"
 DISTUTILS_SRC_TEST="nosetests"
 
 inherit distutils eutils
@@ -27,4 +27,5 @@ RDEPEND="app-misc/ca-certificates
 src_prepare() {
 	# Fix up dependencies (gentoo-specific), see patch for details
 	epatch "${FILESDIR}/${PN}-0.12.1-setup.py.patch"
+	epatch "${FILESDIR}/${PN}-0.13-python2.6.patch"
 }
