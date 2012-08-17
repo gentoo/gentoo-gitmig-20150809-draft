@@ -29,3 +29,4 @@ move dev-ruby/ruby-fcgi dev-ruby/fcgi
 move dev-ruby/ruby-postgres dev-ruby/postgres
 move dev-ruby/ruby-inline dev-ruby/RubyInline
 move dev-ruby/ruby-ferret dev-ruby/ferret
+move net-wireless/iwl6000-ucode sys-firmware/iwl6000-ucode
