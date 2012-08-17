@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-0.5.0.ebuild,v 1.9 2012/08/17 22:26:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-0.6.0_rc1.ebuild,v 1.1 2012/08/17 22:26:33 hwoarang Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://${PN}.git.sourceforge.net/gitroot/${PN}/${PN}"
 else
 	KEYWORDS="~amd64 ~x86"
-	SRC_URI="mirror://sourceforge/project/${PN}/${PN}/${PV}/${P}.tar.bz2"
+	SRC_URI="mirror://sourceforge/project/${PN}/${PN}/${PV/_/-}/${P/_/-}.tar.bz2"
 fi
 
 DESCRIPTION="OpenOCD - Open On-Chip Debugger"
@@ -23,7 +23,7 @@ IUSE="blaster dummy ftd2xx ftdi minidriver parport presto segger usb versaloon"
 RESTRICT="strip" # includes non-native binaries
 
 # libftd2xx is the default because it is reported to work better.
-DEPEND="<=dev-lang/jimtcl-0.73
+DEPEND=">=dev-lang/jimtcl-0.73
 	usb? ( virtual/libusb:0 )
 	presto? ( dev-embedded/libftd2xx )
 	ftd2xx? ( dev-embedded/libftd2xx )
@@ -31,6 +31,8 @@ DEPEND="<=dev-lang/jimtcl-0.73
 RDEPEND="${DEPEND}"
 
 REQUIRED_USE="blaster? ( || ( ftdi ftd2xx ) ) ftdi? ( !ftd2xx )"
+
+S="${WORKDIR}"/${P/_/-}
 
 src_prepare() {
 	if [[ ${PV} == "9999" ]] ; then
