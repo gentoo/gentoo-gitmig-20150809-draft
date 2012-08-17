@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.13.ebuild,v 1.1 2012/07/30 22:57:45 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.13.ebuild,v 1.2 2012/08/17 21:06:33 bicatali Exp $
 
 EAPI=4
 
@@ -47,6 +47,7 @@ DEPEND="${CDEPEND}
 src_prepare() {
 	distutils_src_prepare
 	epatch "${FILESDIR}"/${PN}-0.12-globalpath.patch
+	epatch "${FILESDIR}"/${PN}-0.13-umlaut.patch
 
 	# fix for gentoo python scripts
 	sed -i \
