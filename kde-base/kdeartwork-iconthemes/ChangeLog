@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-iconthemes
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-iconthemes/ChangeLog,v 1.210 2012/08/07 11:04:37 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-iconthemes/ChangeLog,v 1.211 2012/08/17 11:03:54 johu Exp $
+
+  17 Aug 2012; Johannes Huber <johu@gentoo.org>
+  -kdeartwork-iconthemes-4.8.4.ebuild:
+  Remove KDE SC 4.8.4
 
 *kdeartwork-iconthemes-4.8.5 (07 Aug 2012)
 

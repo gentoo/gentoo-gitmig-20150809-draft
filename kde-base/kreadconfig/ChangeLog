@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kreadconfig
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kreadconfig/ChangeLog,v 1.192 2012/08/07 11:04:27 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kreadconfig/ChangeLog,v 1.193 2012/08/17 11:04:32 johu Exp $
+
+  17 Aug 2012; Johannes Huber <johu@gentoo.org> -kreadconfig-4.8.4.ebuild:
+  Remove KDE SC 4.8.4
 
 *kreadconfig-4.8.5 (07 Aug 2012)
 
