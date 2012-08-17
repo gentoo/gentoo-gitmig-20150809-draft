@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/jimtcl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/jimtcl/ChangeLog,v 1.5 2012/05/05 16:51:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/jimtcl/ChangeLog,v 1.6 2012/08/17 22:23:51 hwoarang Exp $
+
+*jimtcl-0.73 (17 Aug 2012)
+
+  17 Aug 2012; Markos Chandras <hwoarang@gentoo.org> +jimtcl-0.73.ebuild,
+  jimtcl-9999.ebuild:
+  Version bump. Bug #417465
 
   05 May 2012; Markos Chandras <hwoarang@gentoo.org>
   jimtcl-0.70_pre20110317.ebuild, jimtcl-9999.ebuild:
@@ -25,4 +31,3 @@
   +jimtcl-0.70_pre20110317.ebuild, +jimtcl-9999.ebuild, +metadata.xml:
   Initial commit of jimtcl package. Required for newer openocd packages. Thanks
   to Peter Stuge <peter@stuge.se> for the initial ebuild. Bug #346473
-
