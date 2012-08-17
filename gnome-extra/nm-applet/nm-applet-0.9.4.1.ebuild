@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.9.4.1.ebuild,v 1.3 2012/08/16 12:19:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.9.4.1.ebuild,v 1.4 2012/08/17 09:45:34 johu Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -15,7 +15,7 @@ HOMEPAGE="http://projects.gnome.org/NetworkManager/"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="bluetooth"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 
 RDEPEND=">=dev-libs/glib-2.16:2
 	>=dev-libs/dbus-glib-0.88
