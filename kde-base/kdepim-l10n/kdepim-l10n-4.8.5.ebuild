@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-l10n/kdepim-l10n-4.8.5.ebuild,v 1.1 2012/08/07 11:04:33 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-l10n/kdepim-l10n-4.8.5.ebuild,v 1.2 2012/08/17 15:18:55 johu Exp $
 
 EAPI=4
 
@@ -53,6 +53,12 @@ src_unpack() {
 	# add all linguas to cmake
 	if [[ -n ${A} ]]; then
 		for LNG in ${LINGUAS}; do
+
+			# Upstream failed to package danisch locale properly
+			if [[ -f "${FILESDIR}/kde-l10n-${LNG}-${PV}.patch" ]]; then
+				epatch "${FILESDIR}/kde-l10n-${LNG}-${PV}.patch"
+			fi
+
 			DIR="kde-l10n-${LNG}-${PV}"
 			if [[ -d "${DIR}" ]] ; then
 				echo "add_subdirectory( ${DIR} )" >> "${S}"/CMakeLists.txt
