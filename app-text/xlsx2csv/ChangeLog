@@ -1,6 +1,11 @@
 # ChangeLog for app-text/xlsx2csv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xlsx2csv/ChangeLog,v 1.6 2012/02/23 04:22:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xlsx2csv/ChangeLog,v 1.7 2012/08/17 02:10:44 radhermit Exp $
+
+*xlsx2csv-0.20 (17 Aug 2012)
+
+  17 Aug 2012; Tim Harder <radhermit@gentoo.org> +xlsx2csv-0.20.ebuild:
+  Version bump.
 
   23 Feb 2012; Tim Harder <radhermit@gentoo.org> -xlsx2csv-0.14.ebuild,
   -xlsx2csv-0.15.ebuild:
