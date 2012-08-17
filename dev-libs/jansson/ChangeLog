@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/jansson
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jansson/ChangeLog,v 1.5 2012/08/14 10:07:50 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jansson/ChangeLog,v 1.6 2012/08/17 18:02:41 hwoarang Exp $
+
+  17 Aug 2012; Markos Chandras <hwoarang@gentoo.org> -jansson-2.2.1.ebuild,
+  -jansson-2.3.ebuild:
+  Remove old ebuilds
 
   14 Aug 2012; Johannes Huber <johu@gentoo.org> jansson-2.3.1.ebuild:
   Stable for x86, wrt bug #430622
@@ -23,4 +27,3 @@
   04 Nov 2011; Markos Chandras <hwoarang@gentoo.org> +jansson-2.2.1.ebuild,
   +metadata.xml:
   Initial commit. Bug #358237. Thanks to Johan Bergstrom <bugs@bergstroem.nu>
-
