@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/icinga-web
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga-web/ChangeLog,v 1.3 2012/07/22 00:33:57 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga-web/ChangeLog,v 1.4 2012/08/17 20:31:15 prometheanfire Exp $
+
+*icinga-web-1.7.2 (17 Aug 2012)
+
+  17 Aug 2012; Matthew Thode <prometheanfire@gentoo.org>
+  +icinga-web-1.7.2.ebuild:
+  update to 1.7.2 to get rid of need to patch for compression and fix crontab
+  for bug #431762
 
   22 Jul 2012; Christian Ruppert <idl0r@gentoo.org> icinga-web-1.7.1-r1.ebuild:
   Add missing inherits
