@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ecore-1.2.1.ebuild,v 1.1 2012/06/17 12:54:11 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ecore-1.2.1.ebuild,v 1.2 2012/08/18 03:11:09 vapier Exp $
 
 EAPI=2
 
-inherit virtualx enlightenment
+inherit virtualx enlightenment eutils
 
 DESCRIPTION="Enlightenment's core event abstraction layer and OS abstraction layer"
 SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
@@ -44,6 +44,10 @@ DEPEND="${RDEPEND}"
 
 #tests depend on temp data from eina WORKDIR
 RESTRICT=test
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-glibc-2.16.patch #426812
+}
 
 src_configure() {
 	local SSL_FLAGS="" EVAS_FLAGS="" X_FLAGS=""

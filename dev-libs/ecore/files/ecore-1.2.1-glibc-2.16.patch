@@ -1,0 +1,37 @@
+------------------------------------------------------------------------
+r72684 | caro | 2012-06-22 01:36:00 -0400 (Fri, 22 Jun 2012) | 8 lines
+
+ecore_exe: fix compilation on fedora 18.
+
+setpriority needs sys/resource.h. See:
+
+http://linux.die.net/man/2/setpriority
+
+I let sys/time.h, it does not hurt on linux and is anyway needed for BSD systems.
+
+
+Index: src/lib/ecore/ecore_exe.c
+===================================================================
+--- src/lib/ecore/ecore_exe.c	(revision 72683)
++++ src/lib/ecore/ecore_exe.c	(revision 72684)
+@@ -2,11 +2,6 @@
+ # include <config.h>
+ #endif
+ 
+-#if defined (__FreeBSD__) || defined (__OpenBSD__) || defined (__NetBSD__)
+-# include <sys/time.h>
+-# include <sys/resource.h>
+-#endif
+-
+ #include <stdlib.h>
+ #include <stdio.h>
+ #include <string.h>
+@@ -14,6 +9,8 @@
+ #include <sys/types.h>
+ #include <unistd.h>
+ #include <fcntl.h>
++#include <sys/time.h>
++#include <sys/resource.h>
+ 
+ #ifdef HAVE_SYS_PRCTL_H
+ # include <sys/prctl.h>
