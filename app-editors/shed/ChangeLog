@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/shed
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/shed/ChangeLog,v 1.23 2011/08/13 07:01:53 hattya Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/shed/ChangeLog,v 1.24 2012/08/18 03:43:33 ottxor Exp $
+
+  18 Aug 2012; Christoph Junghans <ottxor@gentoo.org>
+  +files/shed-1.15-interix.patch, shed-1.15.ebuild:
+  add prefix support (bug #430098)
 
   13 Aug 2011; Akinori Hattori <hattya@gentoo.org> shed-1.12.ebuild,
   shed-1.13.ebuild:
@@ -78,4 +82,3 @@
   shed-1.10.ebuild:
   Initial revision. Ebuild submitted by Sven Wegener <sven.wegener@stealer.net>
   in bug #41629.
-
