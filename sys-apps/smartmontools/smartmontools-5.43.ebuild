@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-5.43.ebuild,v 1.1 2012/06/30 19:16:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-5.43.ebuild,v 1.2 2012/08/18 04:44:38 vapier Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ if [[ ${PV} == "9999" ]] ; then
 	SRC_URI=""
 else
 	SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x64-macos"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x64-macos"
 fi
 
 DESCRIPTION="Self-Monitoring, Analysis and Reporting Technology System (S.M.A.R.T.) monitoring tools"
