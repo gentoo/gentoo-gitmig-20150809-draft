@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.10.2-r1.ebuild,v 1.1 2012/08/01 16:38:00 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.10.2-r1.ebuild,v 1.2 2012/08/18 09:16:11 eras Exp $
 
 EAPI=4
 inherit eutils flag-o-matic versionator
@@ -21,6 +21,7 @@ RDEPEND="!!app-crypt/heimdal
 	dev-libs/libverto
 	keyutils? ( sys-apps/keyutils )
 	openldap? ( net-nds/openldap )
+	pkinit? ( dev-libs/openssl )
 	xinetd? ( sys-apps/xinetd )"
 DEPEND="${RDEPEND}
 	virtual/yacc

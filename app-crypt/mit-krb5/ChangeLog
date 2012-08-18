@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.336 2012/08/12 16:38:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.337 2012/08/18 09:16:11 eras Exp $
+
+  18 Aug 2012; Eray Aslan <eras@gentoo.org> mit-krb5-1.10.1-r2.ebuild,
+  mit-krb5-1.10.2-r1.ebuild, mit-krb5-1.10.3.ebuild, mit-krb5-1.9.2-r2.ebuild,
+  mit-krb5-1.9.4-r1.ebuild, mit-krb5-1.9.4.ebuild:
+  Add optional openssl dependency - bug #431814
 
   12 Aug 2012; Markus Meier <maekke@gentoo.org> mit-krb5-1.9.4-r1.ebuild:
   arm stable, bug #429324
