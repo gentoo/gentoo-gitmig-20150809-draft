@@ -2,13 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>netmon</herd>
-  <maintainer>
-    <email>robbat2@gentoo.org</email>
-    <name>Robin H. Johnson</name>
-  </maintainer>
-  <maintainer restrict="&gt;=net-analyzer/munin-2.0.2">
-    <email>flameeyes@gentoo.org</email>
-  </maintainer>
   <longdescription lang="en">
     Munin the tool surveys all your computers and remembers what it saw. It
     presents all the information in in graphs through a web interface. Its

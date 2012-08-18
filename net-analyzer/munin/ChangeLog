@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.93 2012/08/17 15:24:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.94 2012/08/18 00:21:28 flameeyes Exp $
+
+  18 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Give maintainership back to general netmon, as I added myself in there.
 
 *munin-2.0.5-r1 (17 Aug 2012)
 
