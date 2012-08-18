@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tomboy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.132 2012/06/16 11:54:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.133 2012/08/18 12:22:16 xmw Exp $
+
+  18 Aug 2012; Michael Weber <xmw@gentoo.org> tomboy-1.8.3.ebuild:
+  ppc stable (bug 407701)
 
   16 Jun 2012; Agostino Sarubbo <ago@gentoo.org> -tomboy-1.6.1.ebuild:
   Remove old as requested by Pacho Ramos, <pacho@gentoo.org>
@@ -593,4 +596,3 @@
   28 Oct 2004; Peter Johanson <latexer@gentoo.org> +metadata.xml,
   +tomboy-0.2.2.ebuild:
   Initial commit. Ebuild simultaneously by yours truly. See bug #64554
-
