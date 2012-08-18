@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/fbiterm
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fbiterm/ChangeLog,v 1.10 2008/11/24 16:52:22 matsuu Exp $
+# Copyright 2000-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fbiterm/ChangeLog,v 1.11 2012/08/18 15:57:43 naota Exp $
+
+  18 Aug 2012; Naohiro Aota <naota@gentoo.org> +files/fbiterm-0.5-cflags.patch,
+  fbiterm-0.5-r2.ebuild:
+  Respect CFLAGS. #431110
 
 *fbiterm-0.5-r2 (24 Nov 2008)
 
@@ -37,4 +41,3 @@
   files/fbiterm-0.5-gentoo.diff:
   Initial import. Ebuild submitted by Zhen Lin <lowzl@hotmail.com>.
   See bug #27700.
-

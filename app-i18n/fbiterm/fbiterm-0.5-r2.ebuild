@@ -1,8 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fbiterm/fbiterm-0.5-r2.ebuild,v 1.1 2008/11/24 16:52:22 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fbiterm/fbiterm-0.5-r2.ebuild,v 1.2 2012/08/18 15:57:43 naota Exp $
 
-inherit autotools eutils multilib
+EAPI=4
+
+inherit autotools-utils eutils multilib
 
 IUSE=""
 
@@ -22,24 +24,21 @@ RDEPEND="${DEPEND}
 	media-fonts/font-sony-misc
 	media-fonts/unifont"
 
+PATCHES=(
+	"${FILESDIR}"/${PF}-gentoo.diff
+	"${FILESDIR}"/${P}-cflags.patch
+)
+DOCS=( AUTHORS ChangeLog README{,.jp,.zh_CN} )
+AUTOTOOLS_AUTORECONF=1
+
 S="${WORKDIR}/iterm/unix/fbiterm"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${PF}-gentoo.diff"
-	eautoreconf
-}
-
-src_compile() {
-	econf --x-includes=/usr/include \
-		--x-libraries=/usr/$(get_libdir) || die
-	emake || die
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog README*
+src_configure() {
+	local myeconfargs=(
+		--x-includes=/usr/include 
+		--x-libraries=/usr/$(get_libdir)
+	)
+	autotools-utils_src_configure
 }
 
 pkg_postinst() {
