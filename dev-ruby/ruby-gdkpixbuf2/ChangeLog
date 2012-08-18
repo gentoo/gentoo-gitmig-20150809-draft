@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-gdkpixbuf2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkpixbuf2/ChangeLog,v 1.77 2012/08/17 13:03:28 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkpixbuf2/ChangeLog,v 1.78 2012/08/18 07:37:52 graaff Exp $
+
+*ruby-gdkpixbuf2-1.1.4 (18 Aug 2012)
+
+  18 Aug 2012; Hans de Graaff <graaff@gentoo.org>
+  +ruby-gdkpixbuf2-1.1.4.ebuild:
+  Version bump.
 
   17 Aug 2012; Johannes Huber <johu@gentoo.org> ruby-gdkpixbuf2-1.1.3.ebuild:
   Stable for x86, wrt bug #428040
