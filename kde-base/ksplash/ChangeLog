@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/ksplash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksplash/ChangeLog,v 1.131 2012/08/17 11:04:16 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksplash/ChangeLog,v 1.132 2012/08/18 00:46:10 johu Exp $
+
+*ksplash-4.8.5-r1 (18 Aug 2012)
+
+  18 Aug 2012; Johannes Huber <johu@gentoo.org> +ksplash-4.8.5-r1.ebuild,
+  -ksplash-4.8.5.ebuild:
+  Revision bump adds patch to restores default theme, which was not packaged in
+  KDE SC 4.8.5 upstream tarball.
 
   17 Aug 2012; Johannes Huber <johu@gentoo.org> -ksplash-4.8.4.ebuild:
   Remove KDE SC 4.8.4
@@ -516,4 +523,3 @@
   18 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org> +metadata.xml,
   +ksplash-4.0.0.ebuild:
   Added KDE 4.0.0's ksplash.
-
