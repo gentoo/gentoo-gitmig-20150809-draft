@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/zlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.110 2012/07/08 16:38:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.111 2012/08/18 04:05:39 vapier Exp $
+
+  18 Aug 2012; Mike Frysinger <vapier@gentoo.org> zlib-1.2.7.ebuild:
+  Remove libz/libminizip static files by name to avoid deleting files for
+  targets that need more #419645 by Maciej Szmigiero.
 
   08 Jul 2012; Raúl Porcel <armin76@gentoo.org> zlib-1.2.5.1-r1.ebuild,
   zlib-1.2.5.1-r2.ebuild:

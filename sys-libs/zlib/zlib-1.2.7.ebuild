@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.7.ebuild,v 1.2 2012/05/03 19:08:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.7.ebuild,v 1.3 2012/08/18 04:05:39 vapier Exp $
 
 AUTOTOOLS_AUTO_DEPEND="no"
 inherit autotools toolchain-funcs
@@ -89,5 +89,5 @@ src_install() {
 		dodoc *.txt
 	fi
 
-	use static-libs || rm -f "${D}"/usr/$(get_libdir)/*.{a,la}
+	use static-libs || rm -f "${D}"/usr/$(get_libdir)/lib{z,minizip}.{a,la} #419645
 }
