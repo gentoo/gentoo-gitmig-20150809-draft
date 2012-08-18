@@ -1,0 +1,26 @@
+#!/sbin/runscript
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nsca/files/nsca.init,v 1.1 2012/08/18 00:17:19 flameeyes Exp $
+
+get_pidfile() {
+    sed -n -e 's:^[ \t]*pid_file=\([^#]\+\).*:\1:p' \
+	/etc/nagios/nsca.cfg
+}
+
+extra_started_commands="reload"
+
+command=/usr/libexec/${SVCNAME}
+command_args="-c /etc/nagios/nsca.cfg --daemon"
+pidfile=$(get_pidfile)
+start_stop_daemon_args="--user nagios:nagios"
+
+depend() {
+    need net
+}
+
+reload() {
+    ebegin "Reloading nsca"
+    kill -HUP `cat $(get_pidfile)`
+    eend $? "Failed to reload nsca"
+}

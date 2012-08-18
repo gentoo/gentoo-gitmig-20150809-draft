@@ -1,6 +1,17 @@
 # ChangeLog for net-analyzer/nagios-nsca
 # Copyright 2002-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nsca/ChangeLog,v 1.38 2012/02/09 10:37:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nsca/ChangeLog,v 1.39 2012/08/18 00:17:19 flameeyes Exp $
+
+*nagios-nsca-2.7.2-r101 (18 Aug 2012)
+
+  18 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> +files/nsca.init,
+  +nagios-nsca-2.7.2-r101.ebuild, -files/nsca, -files/nsca.cfg,
+  -files/send_nsca.cfg, -nagios-nsca-2.7.2.ebuild:
+  Remove old; revbump and cleanup ebuild: use EAPI 4, use econf, set up the
+  nagios user correctly, instead of depending on nagios-plugins for that; make
+  tcpd dependency non-automagic; fix install path of send_ncsa; don't chown
+  files that are world-executable; init script is cleaned up, uses the new
+  runscript syntax and is safe to run on LXC hosts as well.
 
   09 Feb 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #85926
