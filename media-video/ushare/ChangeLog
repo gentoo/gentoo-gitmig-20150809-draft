@@ -1,6 +1,13 @@
 # ChangeLog for media-video/ushare
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ushare/ChangeLog,v 1.13 2012/07/04 03:17:03 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ushare/ChangeLog,v 1.14 2012/08/18 15:06:05 hwoarang Exp $
+
+*ushare-1.1a-r4 (18 Aug 2012)
+
+  18 Aug 2012; Markos Chandras <hwoarang@gentoo.org> +ushare-1.1a-r4.ebuild,
+  -ushare-1.1a-r1.ebuild, files/ushare.init.d:
+  Revbump directly to stable to replace -c with -u in the init script. Remove
+  old
 
   04 Jul 2012; Jeff Horelick <jdhore@gentoo.org> ushare-1.1a-r3.ebuild:
   marked x86 per bug 423747
@@ -59,4 +66,3 @@
   +files/ushare.conf.d, +files/ushare.init.d, +metadata.xml:
   Initial import. Many thanks to all the contributors on bug 192561. Moved
   from sunrise overlay with modifications by myself
-

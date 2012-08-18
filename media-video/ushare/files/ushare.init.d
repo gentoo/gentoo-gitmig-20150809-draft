@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ushare/files/ushare.init.d,v 1.1 2009/12/23 22:27:37 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ushare/files/ushare.init.d,v 1.2 2012/08/18 15:06:05 hwoarang Exp $
 
 depend() {
 	use net
@@ -61,7 +61,7 @@ start() {
 		local ushare_dlna=
 	fi
 
-	start-stop-daemon --start --quiet -c ${USHARE_USER:-root} \
+	start-stop-daemon --start --quiet -u ${USHARE_USER:-root} \
 	--exec /usr/bin/ushare -- -D -i ${USHARE_IFACE}           \
 	-n ${USHARE_NAME} ${USHARE_OPTS} ${USHARE_DIRS}           \
 	${ushare_port}                                            \
