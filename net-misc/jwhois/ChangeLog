@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/jwhois
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jwhois/ChangeLog,v 1.35 2012/06/14 13:27:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jwhois/ChangeLog,v 1.36 2012/08/18 05:24:08 vapier Exp $
+
+*jwhois-4.0-r1 (18 Aug 2012)
+
+  18 Aug 2012; Mike Frysinger <vapier@gentoo.org>
+  +files/jwhois-4.0-connect-logic.patch, +jwhois-4.0-r1.ebuild:
+  Fix network connect bug (as seen with .tel domains) #276751 by DEMAINE Benoît-
+  Pierre, aka DoubleHP.
 
   14 Jun 2012; Agostino Sarubbo <ago@gentoo.org> jwhois-4.0.ebuild:
   stable for amd64
