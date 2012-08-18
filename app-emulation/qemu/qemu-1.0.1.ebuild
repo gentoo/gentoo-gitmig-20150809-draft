@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.0.1.ebuild,v 1.5 2012/05/03 18:49:05 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.0.1.ebuild,v 1.6 2012/08/18 17:24:16 vapier Exp $
 
 EAPI=4
 
@@ -138,6 +138,7 @@ src_prepare() {
 
 	epatch "${FILESDIR}"/${PN}-1.0-unmagic-debug.patch
 	epatch "${FILESDIR}"/${PN}-1.0-unmagic-xfsctl.patch
+	epatch "${FILESDIR}"/${P}-siginfo.patch
 
 	# prevent docs to get automatically installed
 	sed -i '/$(DESTDIR)$(docdir)/d' Makefile || die
