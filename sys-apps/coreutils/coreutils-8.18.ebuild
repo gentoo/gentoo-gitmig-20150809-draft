@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-8.18.ebuild,v 1.2 2012/08/18 22:01:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-8.18.ebuild,v 1.3 2012/08/18 22:14:00 vapier Exp $
 
 EAPI="3"
 
@@ -20,11 +20,12 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd"
 IUSE="acl caps gmp nls selinux static userland_BSD vanilla xattr"
 
-RDEPEND="caps? ( sys-libs/libcap )
-	gmp? ( dev-libs/gmp )
+LIB_DEPEND="acl? ( sys-apps/acl[static-libs] )
+	caps? ( sys-libs/libcap )
+	gmp? ( dev-libs/gmp[static-libs] )
+	xattr? ( !userland_BSD? ( sys-apps/attr[static-libs] ) )"
+RDEPEND="!static? ( ${LIB_DEPEND//\[static-libs]} )
 	selinux? ( sys-libs/libselinux )
-	acl? ( sys-apps/acl )
-	xattr? ( !userland_BSD? ( sys-apps/attr ) )
 	nls? ( >=sys-devel/gettext-0.15 )
 	!app-misc/realpath
 	!<sys-apps/util-linux-2.13
@@ -35,6 +36,7 @@ RDEPEND="caps? ( sys-libs/libcap )
 	!<net-fs/netatalk-2.0.3-r4
 	!<sci-chemistry/ccp4-6.1.1"
 DEPEND="${RDEPEND}
+	static? ( ${LIB_DEPEND} )
 	app-arch/xz-utils"
 
 src_prepare() {
