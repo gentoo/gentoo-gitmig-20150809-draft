@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-9999.ebuild,v 1.9 2012/08/18 04:44:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-9999.ebuild,v 1.10 2012/08/18 04:53:03 vapier Exp $
 
 EAPI="3"
 
-inherit flag-o-matic
+inherit flag-o-matic systemd
 if [[ ${PV} == "9999" ]] ; then
 	ESVN_REPO_URI="https://smartmontools.svn.sourceforge.net/svnroot/smartmontools/trunk/smartmontools"
 	ESVN_PROJECT="smartmontools"
@@ -20,9 +20,10 @@ HOMEPAGE="http://smartmontools.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="static minimal caps"
+IUSE="caps minimal selinux static"
 
-DEPEND="!minimal? ( caps? ( sys-libs/libcap-ng ) )"
+DEPEND="caps? ( sys-libs/libcap-ng )
+	selinux? ( sys-libs/libselinux )"
 RDEPEND="${DEPEND}
 	!minimal? ( virtual/mailx )"
 
@@ -34,22 +35,14 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf
 	use minimal && einfo "Skipping the monitoring daemon for minimal build."
 	use static && append-ldflags -static
-
-	if ! use minimal; then
-		myconf="${myconf} $(use_with caps libcap-ng)"
-	else
-		# disable it so that we stay safe
-		myconf="${myconf} --without-libcap-ng"
-	fi
-
 	econf \
 		--with-docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		--with-initscriptdir="/toss-it-away" \
-		${myconf} \
-		|| die
+		$(use_with caps libcap-ng) \
+		$(use_with selinux) \
+		$(systemd_with_unitdir)
 }
 
 src_install() {
