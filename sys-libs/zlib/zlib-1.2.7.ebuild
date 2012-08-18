@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.7.ebuild,v 1.3 2012/08/18 04:05:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.7.ebuild,v 1.4 2012/08/18 23:27:03 vapier Exp $
 
 AUTOTOOLS_AUTO_DEPEND="no"
 inherit autotools toolchain-funcs
@@ -44,7 +44,13 @@ src_compile() {
 			zlib.pc.in > zlib.pc || die
 		;;
 	*)	# not an autoconf script, so can't use econf
-		echoit ./configure --shared --prefix=/usr --libdir=/usr/$(get_libdir) || die
+		local uname=$(/usr/share/gnuconfig/config.sub "${CHOST}" | cut -d- -f3) #347167
+		echoit ./configure \
+			--shared \
+			--prefix=/usr \
+			--libdir=/usr/$(get_libdir) \
+			${uname:+--uname=${uname}} \
+			|| die
 		emake || die
 		;;
 	esac
