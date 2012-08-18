@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jwhois/jwhois-4.0-r1.ebuild,v 1.1 2012/08/18 05:24:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jwhois/jwhois-4.0-r1.ebuild,v 1.2 2012/08/18 18:42:29 vapier Exp $
 
 EAPI="4"
 
@@ -19,7 +19,7 @@ RDEPEND="idn? ( net-dns/libidn )"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-connect-logic.patch #276751
+	epatch "${FILESDIR}"/${P}-connect-logic.patch #208875
 }
 
 src_configure() {
