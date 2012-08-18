@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-5.0.15.ebuild,v 1.8 2012/06/17 16:04:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-5.0.15.ebuild,v 1.9 2012/08/18 23:46:41 vapier Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
@@ -28,6 +28,10 @@ src_prepare() {
 		sed -i -e 's:#\(.*pos\):\1:' Makefile || die
 	else
 		sed -i -e '/ENABLE_NLS/s:define:undef:' config.h || die
+
+		# don't generate po files when nls is disabled (bug #419889)
+		sed -i -e '/^all:/s/ pos//' \
+			-e '/^install:/s/ install-pos//' Makefile || die
 	fi
 }
 
