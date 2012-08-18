@@ -1,6 +1,16 @@
 # ChangeLog for kde-base/okular
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.146 2012/08/17 11:04:38 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.147 2012/08/18 11:23:54 johu Exp $
+
+*okular-4.8.5-r1 (18 Aug 2012)
+*okular-4.9.0-r1 (18 Aug 2012)
+
+  18 Aug 2012; Johannes Huber <johu@gentoo.org>
+  +files/okular-4.9.0-memory-corruption-warning.patch, +okular-4.8.5-r1.ebuild,
+  +okular-4.9.0-r1.ebuild, -okular-4.8.5.ebuild, -okular-4.9.0.ebuild:
+  Backport upstream patch fixes a to early destructed object, which produces a
+  ugly warning. This will leak standalone popupmenus and could lead to crashes.
+  Spotted by Toralf Förster <toralf.foerster@gmx.de>, bug #431126.
 
   17 Aug 2012; Johannes Huber <johu@gentoo.org> -okular-4.8.4.ebuild:
   Remove KDE SC 4.8.4
