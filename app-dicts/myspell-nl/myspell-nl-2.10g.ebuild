@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-nl/myspell-nl-2.10g.ebuild,v 1.1 2012/06/30 08:34:28 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-nl/myspell-nl-2.10g.ebuild,v 1.2 2012/08/18 15:04:28 jer Exp $
 
 EAPI=4
 
@@ -20,8 +20,8 @@ MYSPELL_THES=(
 
 inherit myspell-r2
 
-DESCRIPTION="Czech dictionaries for myspell/hunspell"
-HOMEPAGE="http://www.liberix.cz/doplnky/slovniky/ooo/"
+DESCRIPTION="Dutch dictionaries for myspell/hunspell"
+HOMEPAGE="http://opentaal.org/"
 # Thesarus is not versioned at all, I suppose we could bump it with each dict
 # release, or when people say that the download uri checksum changed.
 SRC_URI="
