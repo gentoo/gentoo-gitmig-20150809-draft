@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sxid/sxid-4.2.ebuild,v 1.2 2012/08/17 17:10:32 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sxid/sxid-4.2-r1.ebuild,v 1.1 2012/08/18 13:05:33 ago Exp $
 
 EAPI=4
 
-inherit toolchain-funcs
+inherit autotools
 
 DESCRIPTION="suid, sgid file and directory checking"
 HOMEPAGE="http://freshmeat.net/projects/sxid"
@@ -16,20 +16,15 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND="virtual/mailx"
-DEPEND="sys-apps/sed
-	sys-devel/gcc
-	sys-devel/autoconf"
+DEPEND=""
+
+DOCS=( docs/sxid.{conf,cron}.example )
 
 src_prepare() {
 	# this is an admin application and really requires root to run correctly
 	# we need to move the binary to the sbin directory
 	sed -i s/bindir/sbindir/g source/Makefile.in || die
-	tc-export CC
-}
-
-src_install() {
-	emake DESTDIR="${D}" install
-	dodoc docs/sxid.{conf,cron}.example
+	eautoreconf
 }
 
 pkg_postinst() {
