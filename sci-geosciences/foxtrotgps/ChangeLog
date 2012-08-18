@@ -1,6 +1,11 @@
 # ChangeLog for sci-geosciences/foxtrotgps
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/foxtrotgps/ChangeLog,v 1.8 2012/05/24 19:49:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/foxtrotgps/ChangeLog,v 1.9 2012/08/18 07:59:21 scarabeus Exp $
+
+*foxtrotgps-1.1.1 (18 Aug 2012)
+
+  18 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> +foxtrotgps-1.1.1.ebuild:
+  Version bump to latest.
 
   24 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> foxtrotgps-1.1.0.ebuild:
   Stable on amd64 and x86. Works for me, no issues, stabling as per this worked
@@ -36,4 +41,3 @@
   08 Nov 2010; Thilo Bangert <bangert@gentoo.org> +foxtrotgps-1.0.0.ebuild,
   +metadata.xml:
   foxtroxgps - a community fork of tangogps
-
