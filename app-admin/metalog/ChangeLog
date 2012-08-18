@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/metalog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.103 2012/07/15 22:21:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.104 2012/08/18 17:35:11 vapier Exp $
+
+*metalog-3 (18 Aug 2012)
+
+  18 Aug 2012; Mike Frysinger <vapier@gentoo.org> +metalog-3.ebuild:
+  Version bump.
 
   15 Jul 2012; Mike Frysinger <vapier@gentoo.org>
   +files/metalog-2-no-gets.patch, metalog-2.ebuild:
