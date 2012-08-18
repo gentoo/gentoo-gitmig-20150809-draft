@@ -1,27 +1,33 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.14.ebuild,v 1.12 2012/06/12 02:44:29 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.16-r1.ebuild,v 1.1 2012/08/18 02:52:01 flameeyes Exp $
 
-EAPI=1
+EAPI=4
+
+PATCHSET=2
 
 inherit autotools eutils multilib user
 
 DESCRIPTION="Nagios $PV plugins - Pack of plugins to make Nagios work properly"
 HOMEPAGE="http://www.nagios.org/"
-SRC_URI="mirror://sourceforge/nagiosplug/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/nagiosplug/${P}.tar.gz
+	http://dev.gentoo.org/~flameeyes/${PN}/${P}-patches-${PATCHSET}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
-IUSE="+ssl samba mysql postgres ldap snmp nagios-dns nagios-ntp nagios-ping
-nagios-ssh nagios-game ups ipv6 radius +suid"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+IUSE="+ssl samba mysql postgres ldap snmp nagios-dns nagios-ntp nagios-ping nagios-ssh nagios-game ups ipv6 radius +suid jabber gnutls"
 
 DEPEND="ldap? ( >=net-nds/openldap-2.0.25 )
 	mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql-base )
-	ssl? ( >=dev-libs/openssl-0.9.6g )
+	ssl? (
+		!gnutls? ( >=dev-libs/openssl-0.9.6g )
+		gnutls? ( net-libs/gnutls )
+	)
 	radius? ( >=net-dialup/radiusclient-0.3.2 )"
 
+# tests try to ssh into the box itself
 RESTRICT="test"
 
 RDEPEND="${DEPEND}
@@ -37,54 +43,39 @@ RDEPEND="${DEPEND}
 	nagios-ping? ( >=net-analyzer/fping-2.4_beta2-r1 )
 	nagios-ssh? ( >=net-misc/openssh-3.5_p1 )
 	ups? ( >=sys-power/nut-1.4 )
-	!sparc? ( nagios-game? ( >=games-util/qstat-2.6 ) )"
+	nagios-game? ( >=games-util/qstat-2.6 )
+	jabber? ( >=dev-perl/Net-Jabber-2.0 )"
 
 pkg_setup() {
 	enewgroup nagios
 	enewuser nagios -1 /bin/bash /var/nagios/home nagios
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	if ! use radius; then
-		EPATCH_OPTS="-p1 -d ${S}" epatch \
-		"${FILESDIR}"/nagios-plugins-1.4.10-noradius.patch
-	fi
-	epatch "${FILESDIR}"/${P}-implicit-pointer-conversion.patch
-	epatch "${FILESDIR}"/${PN}-1.4.10-contrib.patch
-	epatch "${FILESDIR}"/${PN}-1.4.12-pgsqlconfigure.patch
+src_prepare() {
+	epatch "${WORKDIR}"/patches/*.patch
 
 	eautoreconf
 }
 
-src_compile() {
-
-	local conf
+src_configure() {
+	local myconf
 	if use ssl; then
-		conf="${conf} --with-openssl=/usr"
+		myconf+="
+			$(use_with !gnutls openssl /usr)
+			$(use_with gnutls gnutls /usr)"
 	else
-		conf="${conf} --without-openssl"
-	fi
-
-	if use postgres; then
-		conf="${conf} --with-pgsql=/usr"
+		myconf+=" --without-openssl --without-gnutls"
 	fi
 
 	econf \
 		$(use_with mysql) \
 		$(use_with ipv6) \
-		${conf} \
-		--host=${CHOST} \
-		--prefix=/usr \
+		$(use_with ldap) \
+		$(use_with radius) \
+		$(use_with postgres pgsql /usr) \
+		${myconf} \
 		--libexecdir=/usr/$(get_libdir)/nagios/plugins \
-		--sysconfdir=/etc/nagios || die "econf failed"
-
-	# fix problem with additional -
-	sed -i -e 's:/bin/ps -axwo:/bin/ps axwo:g' config.h || die "sed failed"
-
-	emake || die "emake failed"
+		--sysconfdir=/etc/nagios
 }
 
 src_install() {
@@ -114,6 +105,11 @@ src_install() {
 
 	mv "${S}"/contrib "${D}"/usr/$(get_libdir)/nagios/plugins/contrib
 
+	if ! use jabber; then
+		rm "${D}"usr/$(get_libdir)/nagios/plugins/contrib/nagios_sendim.pl \
+			|| die "Failed to remove XMPP notification addon"
+	fi
+
 	chown -R root:nagios "${D}"/usr/$(get_libdir)/nagios/plugins \
 		|| die "Failed chown of ${D}usr/$(get_libdir)/nagios/plugins"
 
@@ -131,9 +127,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "This ebuild has a number of USE flags which determines what nagios is able to monitor."
-	einfo "Depending on what you want to monitor with nagios, some or all of these USE"
-	einfo "flags need to be set for nagios to function correctly."
-	echo
-	einfo "contrib plugins are installed into /usr/$(get_libdir)/nagios/plugins/contrib"
+	elog "This ebuild has a number of USE flags which determines what nagios is able to monitor."
+	elog "Depending on what you want to monitor with nagios, some or all of these USE"
+	elog "flags need to be set for nagios to function correctly."
+	elog "contrib plugins are installed into /usr/$(get_libdir)/nagios/plugins/contrib"
 }

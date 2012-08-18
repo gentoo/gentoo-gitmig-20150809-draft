@@ -1,17 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>netmon</herd>
-	<longdescription lang="en">
-		Nagios plugins - Pack of plugins to make Nagios work properly
-	</longdescription>
-	<use>
-		<flag name='nagios-dns'>installs deps for dns monitoring</flag>
-		<flag name='nagios-game'>installs deps for monitoring <pkg>games-util/qstat</pkg></flag>
-		<flag name='nagios-ntp'>installs deps for ntp monitoring</flag>
-		<flag name='nagios-ping'>installs deps for fancy ping monitoring</flag>
-		<flag name='nagios-ssh'>installs deps for monitoring ssh</flag>
-		<flag name='ups'>installs deps for monitoring Network-UPS (<pkg>sys-power/nut</pkg>)</flag>
-	</use>
+  <herd>netmon</herd>
+  <use>
+    <flag name='nagios-dns'>
+      Install <pkg>net-dns/bind-tools</pkg> required for monitoring
+      DNS servers. Disabling the flag does not remove any plugin file.
+    </flag>
+    <flag name='nagios-game'>
+      Install <pkg>games-util/qstat</pkg> required for monitoring FPS
+      servers. Disabling the flag does not remove any plugin file.
+    </flag>
+    <flag name='nagios-ntp'>
+      Install <pkg>net-misc/ntp</pkg> required for monitoring NTP
+      servers and drifts. Disabling the flag does not remove any
+      plugin file.
+    </flag>
+    <flag name='nagios-ping'>
+      Install <pkg>net-analyzer/fping</pkg> required for fancy ping
+      monitoring. Disabling the flag does not remove any plugin file.
+    </flag>
+    <flag name='nagios-ssh'>
+      Install <pkg>net-misc/openssh</pkg> required for monitoring SSH
+      servers. Disabling the flag does not remove any plugin file.
+    </flag>
+    <flag name='ups'>
+      Install <pkg>sys-power/nut</pkg> required for monitoring
+      compatible UPS units. Disabling the flag does not remove any
+      plugin file.
+    </flag>
+    <flag name='jabber'>
+      Install the script for sending IM notifications over Jabber with
+      Nagios.
+    </flag>
+  </use>
 </pkgmetadata>
 
