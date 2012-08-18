@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.20 2012/08/18 18:51:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.1.1.ebuild,v 1.1 2012/08/18 18:51:35 vapier Exp $
 
 EAPI=4
 
@@ -13,8 +13,9 @@ fi
 inherit eutils flag-o-matic ${GIT_ECLASS} linux-info toolchain-funcs python
 
 if [[ ${PV} != *9999* ]]; then
-	SRC_URI="http://wiki.qemu.org/download/${P}.tar.bz2"
-	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+	SRC_URI="http://wiki.qemu.org/download/${P}-1.tar.bz2"
+	# Pending review
+	#KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 fi
 
 DESCRIPTION="QEMU emulator and ABI wrapper"
@@ -130,6 +131,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${PN}-1.0.1-siginfo.patch
+
 	# prevent docs to get automatically installed
 	sed -i '/$(DESTDIR)$(docdir)/d' Makefile || die
 
