@@ -1,6 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.1.5.1.ebuild,v 1.2 2012/08/17 19:26:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.1.5.1.ebuild,v 1.3 2012/08/18 21:28:14 vapier Exp $
+
+EAPI="2"
 
 inherit eutils libtool toolchain-funcs pam multilib
 
@@ -29,16 +31,14 @@ DEPEND="${RDEPEND}
 RDEPEND="${RDEPEND}
 	pam? ( >=sys-auth/pambase-20120417 )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${PN}-4.1.3-dots-in-usernames.patch #22920
 	epatch_user
 	elibtoolize
 	epunt_cxx
 }
 
-src_compile() {
+src_configure() {
 	tc-is-cross-compiler && export ac_cv_func_setpgrp_void=yes
 	econf \
 		--without-group-name-max-length \
@@ -55,7 +55,6 @@ src_compile() {
 		$(use_with elibc_glibc nscd) \
 		$(use_with xattr attr)
 	has_version 'sys-libs/uclibc[-rpc]' && sed -i '/RLOGIN/d' config.h #425052
-	emake || die
 }
 
 set_login_opt() {
