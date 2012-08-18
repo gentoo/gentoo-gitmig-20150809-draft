@@ -1,5 +1,10 @@
 # ChangeLog for sys-libs/glibc
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.883 2012/08/18 18:40:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.884 2012/08/18 23:14:16 vapier Exp $
+
+  18 Aug 2012; Mike Frysinger <vapier@gentoo.org>
+  files/eblits/src_install.eblit:
+  Disable --foreground in init.d script for older versions #431886 by Nick
+  Bowler.
 
   18 Aug 2012; Mike Frysinger <vapier@gentoo.org> glibc-2.10.1-r1.ebuild,
   glibc-2.11.3.ebuild, glibc-2.12.1-r3.ebuild, glibc-2.12.2.ebuild,

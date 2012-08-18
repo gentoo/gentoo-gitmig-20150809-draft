@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_install.eblit,v 1.22 2012/07/03 20:07:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_install.eblit,v 1.23 2012/08/18 23:14:16 vapier Exp $
 
 toolchain-glibc_src_install() {
 	local GBUILDDIR
@@ -150,7 +150,11 @@ toolchain-glibc_src_install() {
 	doins "${WORKDIR}"/extra/etc/*.conf || die
 	doinitd "${WORKDIR}"/extra/etc/nscd || die
 
-	sed -i -e "s:@PIDFILE@:$(strings "${D}"/usr/sbin/nscd | grep nscd.pid):" "${D}"/etc/init.d/nscd
+	local nscd_args=(
+		-e "s:@PIDFILE@:$(strings "${D}"/usr/sbin/nscd | grep nscd.pid):"
+	)
+	version_is_at_least 2.16 || nscd_args+=( -e 's: --foreground : :' )
+	sed -i "${nscd_args[@]}" "${D}"/etc/init.d/nscd
 
 	echo 'LDPATH="include ld.so.conf.d/*.conf"' > "${T}"/00glibc
 	doenvd "${T}"/00glibc || die
