@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hyperdex/hyperdex-0.4.0.ebuild,v 1.1 2012/08/18 14:22:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hyperdex/hyperdex-0.4.0.ebuild,v 1.2 2012/08/18 15:09:35 patrick Exp $
 EAPI=4
 
 inherit eutils python
@@ -24,6 +24,11 @@ DEPEND="dev-cpp/glog
 	dev-libs/popt
 	trace-player? ( dev-libs/libbsd )"
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	# file has moved
+	sed -i -e 's:vis.h:bsd/vis.h:' trace-player.cc || die "Failed to fix include file path"
+}
 
 src_configure() {
 	econf \
