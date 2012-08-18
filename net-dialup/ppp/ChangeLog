@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.279 2012/08/10 04:12:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.280 2012/08/18 14:10:16 scarabeus Exp $
+
+  18 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> ppp-2.4.5-r3.ebuild:
+  Make patch apply. Fixes bug#430830. Patch by Andrey Volkov.
 
 *ppp-2.4.5-r3 (10 Aug 2012)
 

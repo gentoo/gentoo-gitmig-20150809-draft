@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.5-r3.ebuild,v 1.1 2012/08/10 04:12:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.5-r3.ebuild,v 1.2 2012/08/18 14:10:16 scarabeus Exp $
 
 EAPI="4"
 
@@ -29,6 +29,15 @@ src_prepare() {
 	# Use the headers from the kernel #427684
 	rm include/linux/if_pppol2tp.h || die
 
+	if use dhcp ; then
+		# copy the ppp-dhcp plugin files
+		einfo "Adding ppp-dhcp plugin files"
+		mv "${WORKDIR}/dhcp" "${S}/pppd/plugins" || die
+		sed -i \
+			-e 's/\(SUBDIRS := .*rp-pppoe.*\)$/\1 dhcp/' \
+			pppd/plugins/Makefile.linux || die
+	fi
+
 	use eap-tls || EPATCH_EXCLUDE+=" 8?_all_eaptls-*"
 	use dhcp || EPATCH_EXCLUDE+=" 8?_all_dhcp-*"
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}"/patch
@@ -55,15 +64,6 @@ src_prepare() {
 
 	einfo "Enabling CBCP"
 	sed -i "s/^#CBCP=y/CBCP=y/" pppd/Makefile.linux
-
-	if use dhcp ; then
-		# copy the ppp-dhcp plugin files
-		einfo "Adding ppp-dhcp plugin files"
-		mv "${WORKDIR}/dhcp" "${S}/pppd/plugins" || die
-		sed -i \
-			-e 's/\(SUBDIRS := .*rp-pppoe.*\)$/\1 dhcp/' \
-			pppd/plugins/Makefile.linux || die
-	fi
 
 	# Set correct libdir
 	sed -i -e "s:/lib/pppd:/$(get_libdir)/pppd:" \
