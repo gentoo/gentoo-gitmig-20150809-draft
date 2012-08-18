@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-3.0.9-r2.ebuild,v 1.5 2012/06/30 11:31:59 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-3.0.9-r2.ebuild,v 1.6 2012/08/18 15:38:05 vapier Exp $
 
 EAPI="4"
 
@@ -21,7 +21,6 @@ LIB_DEPEND="acl? ( virtual/acl[static-libs(+)] )
 RDEPEND="!static? ( ${LIB_DEPEND//\[static-libs(+)]} )
 	iconv? ( virtual/libiconv )"
 DEPEND="${RDEPEND}
-	dev-lang/perl
 	static? ( ${LIB_DEPEND} )"
 
 S=${WORKDIR}/${P/_/}

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/rsync
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.228 2012/06/30 11:31:59 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.229 2012/08/18 15:38:05 vapier Exp $
+
+  18 Aug 2012; Mike Frysinger <vapier@gentoo.org> rsync-3.0.9-r2.ebuild,
+  rsync-3.0.9.ebuild:
+  Revert wrong perl change.
 
   30 Jun 2012; Fabian Groffen <grobian@gentoo.org> rsync-3.0.9-r2.ebuild:
   Fix elementary Prefix error using ED for DESTDIR in make install.
