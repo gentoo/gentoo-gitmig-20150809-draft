@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.12.6-r1.ebuild,v 1.1 2012/08/13 11:13:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.12.6-r1.ebuild,v 1.2 2012/08/18 08:31:27 billie Exp $
 
 EAPI=4
 
@@ -46,6 +46,7 @@ DEPEND="${COMMON_DEPEND}
 
 RDEPEND="${COMMON_DEPEND}
 	>=app-text/ghostscript-gpl-8.71-r3
+	dev-python/dbus-python
 	policykit? (
 		sys-auth/polkit
 	)
