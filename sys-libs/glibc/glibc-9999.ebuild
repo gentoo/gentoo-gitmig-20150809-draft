@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-9999.ebuild,v 1.14 2012/08/14 16:12:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-9999.ebuild,v 1.15 2012/08/18 18:40:21 vapier Exp $
 
 inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib unpacker multiprocessing
 
@@ -14,31 +14,20 @@ EMULTILIB_PKG="true"
 
 # Configuration variables
 RELEASE_VER=""
-BRANCH_UPDATE=""
-SNAP_VER=""
 case ${PV} in
 9999*)
 	EGIT_REPO_URIS="git://sourceware.org/git/glibc.git"
 	EGIT_SOURCEDIRS="${S}"
 	inherit git-2
 	;;
-*_p*)
-	RELEASE_VER=${PV%_p*}
-	SNAP_VER=${PV#*_p}
-	;;
 *)
 	RELEASE_VER=${PV}
 	;;
 esac
-MANPAGE_VER=""                                 # pregenerated manpages
-INFOPAGE_VER=""                                # pregenerated infopages
-LIBIDN_VER=""                                  # it's integrated into the main tarball now
 PATCH_VER=""                                   # Gentoo patchset
-PORTS_VER=""                                   # version of glibc ports addon
 NPTL_KERN_VER=${NPTL_KERN_VER:-"2.6.16"}       # min kernel version nptl requires
 
 IUSE="debug gd hardened multilib selinux systemtap profile vanilla crosscompile_opts_headers-only"
-[[ -n ${RELEASE_VER} ]] && S=${WORKDIR}/glibc-${RELEASE_VER}${SNAP_VER:+-${SNAP_VER}}
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -109,20 +98,8 @@ SRC_URI=$(
 		echo mirror://gentoo/$1 ${devspace//URI/$1}
 	}
 
-	TARNAME=${PN}
-	if [[ -n ${SNAP_VER} ]] ; then
-		TARNAME="${PN}-${RELEASE_VER}"
-		[[ -n ${PORTS_VER} ]] && PORTS_VER=${SNAP_VER}
-		upstream_uris ${TARNAME}-${SNAP_VER}.tar.bz2
-	elif [[ -z ${EGIT_REPO_URIS} ]] ; then
-		upstream_uris ${TARNAME}-${RELEASE_VER}.tar.xz
-	fi
-	[[ -n ${LIBIDN_VER}    ]] && upstream_uris glibc-libidn-${LIBIDN_VER}.tar.bz2
-	[[ -n ${PORTS_VER}     ]] && upstream_uris ${TARNAME}-ports-${PORTS_VER}.tar.xz
-	[[ -n ${BRANCH_UPDATE} ]] && gentoo_uris glibc-${RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch.bz2
-	[[ -n ${PATCH_VER}     ]] && gentoo_uris glibc-${RELEASE_VER}-patches-${PATCH_VER}.tar.bz2
-	[[ -n ${MANPAGE_VER}   ]] && gentoo_uris glibc-manpages-${MANPAGE_VER}.tar.bz2
-	[[ -n ${INFOPAGE_VER}  ]] && gentoo_uris glibc-infopages-${INFOPAGE_VER}.tar.bz2
+	[[ -z ${EGIT_REPO_URIS} ]] && upstream_uris ${P}.tar.xz
+	[[ -n ${PATCH_VER}      ]] && gentoo_uris ${P}-patches-${PATCH_VER}.tar.bz2
 )
 
 # eblit-include [--skip] <function> [version]
@@ -224,22 +201,4 @@ eblit-pkg_preinst-post() {
 			fi
 		fi
 	fi
-}
-
-maint_pkg_create() {
-	local base="/usr/local/src/gnu/glibc/glibc-${PV:0:1}_${PV:2:1}"
-	cd ${base}
-	local stamp=$(date +%Y%m%d)
-	local d
-	for d in libc ports ; do
-		#(cd ${d} && cvs up)
-		case ${d} in
-			libc)  tarball="${P}";;
-			ports) tarball="${PN}-ports-${PV}";;
-		esac
-		rm -f ${tarball}*
-		ln -sf ${d} ${tarball}
-		tar hcf - ${tarball} --exclude-vcs | lzma > "${T}"/${tarball}.tar.lzma
-		du -b "${T}"/${tarball}.tar.lzma
-	done
 }

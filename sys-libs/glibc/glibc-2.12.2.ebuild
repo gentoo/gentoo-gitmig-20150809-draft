@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.12.2.ebuild,v 1.19 2012/08/13 22:48:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.12.2.ebuild,v 1.20 2012/08/18 18:40:21 vapier Exp $
 
 inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib multiprocessing
 
@@ -221,22 +221,4 @@ eblit-src_unpack-post() {
 			nscd/Makefile \
 			|| die "Failed to ensure nscd builds with ssp-all"
 	fi
-}
-
-maint_pkg_create() {
-	local base="/usr/local/src/gnu/glibc/glibc-${PV:0:1}_${PV:2:1}"
-	cd ${base}
-	local stamp=$(date +%Y%m%d)
-	local d
-	for d in libc ports ; do
-		#(cd ${d} && cvs up)
-		case ${d} in
-			libc)  tarball="${P}";;
-			ports) tarball="${PN}-ports-${PV}";;
-		esac
-		rm -f ${tarball}*
-		ln -sf ${d} ${tarball}
-		tar hcf - ${tarball} --exclude-vcs | lzma > "${T}"/${tarball}.tar.lzma
-		du -b "${T}"/${tarball}.tar.lzma
-	done
 }
