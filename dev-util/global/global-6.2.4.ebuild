@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-6.2.4.ebuild,v 1.3 2012/08/11 19:02:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-6.2.4.ebuild,v 1.4 2012/08/18 14:50:33 naota Exp $
 
 EAPI="4"
 
-inherit elisp-common
+inherit elisp-common eutils
 
 DESCRIPTION="GNU Global is a tag system to find the locations of a specified object in various sources."
 HOMEPAGE="http://www.gnu.org/software/global/global.html"
@@ -61,6 +61,8 @@ src_install() {
 		elisp-install ${PN} *.{el,elc} || die "elisp-install failed"
 		elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die "elisp-site-file-install failed"
 	fi
+
+	prune_libtool_files --all
 }
 
 pkg_postinst() {
