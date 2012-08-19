@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rdesktop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.139 2012/07/15 18:18:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.140 2012/08/19 23:47:24 ottxor Exp $
+
+  19 Aug 2012; Christoph Junghans <ottxor@gentoo.org> rdesktop-1.7.1.ebuild:
+  added prefix keywords
 
   15 Jul 2012; Raúl Porcel <armin76@gentoo.org> rdesktop-1.7.1.ebuild:
   alpha/ia64/sparc stable wrt #419553
@@ -549,4 +552,3 @@
   files/digest-rdesktop-1.1.0 :
 
   Checkin new package, first version.
-
