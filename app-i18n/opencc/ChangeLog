@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/opencc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/opencc/ChangeLog,v 1.7 2012/08/19 08:45:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/opencc/ChangeLog,v 1.8 2012/08/19 08:46:39 scarabeus Exp $
+
+  19 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  opencc-0.3.0_pre20120819.ebuild:
+  amd64 x86 and ppc stable wrt bug#431902.
 
 *opencc-0.3.0_pre20120819 (19 Aug 2012)
 
