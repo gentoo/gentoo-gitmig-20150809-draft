@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fbiterm/fbiterm-0.5-r2.ebuild,v 1.2 2012/08/18 15:57:43 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fbiterm/fbiterm-0.5-r2.ebuild,v 1.3 2012/08/19 00:33:24 mr_bones_ Exp $
 
 EAPI=4
 
@@ -35,7 +35,7 @@ S="${WORKDIR}/iterm/unix/fbiterm"
 
 src_configure() {
 	local myeconfargs=(
-		--x-includes=/usr/include 
+		--x-includes=/usr/include
 		--x-libraries=/usr/$(get_libdir)
 	)
 	autotools-utils_src_configure
