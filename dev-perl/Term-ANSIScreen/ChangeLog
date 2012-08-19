@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Term-ANSIScreen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ANSIScreen/ChangeLog,v 1.25 2012/07/14 04:28:52 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ANSIScreen/ChangeLog,v 1.26 2012/08/19 16:53:31 armin76 Exp $
+
+  19 Aug 2012; Raúl Porcel <armin76@gentoo.org>
+  Term-ANSIScreen-1.420.0.ebuild, Term-ANSIScreen-1.500.0.ebuild:
+  Drop ia64/sparc keywords
 
   14 Jul 2012; Akinori Hattori <hattya@gentoo.org>
   Term-ANSIScreen-1.500.0.ebuild:
