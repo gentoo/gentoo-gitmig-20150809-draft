@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/aruba
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aruba/ChangeLog,v 1.17 2012/08/14 15:22:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aruba/ChangeLog,v 1.18 2012/08/19 11:08:09 blueness Exp $
+
+  19 Aug 2012; Anthony G. Basile <blueness@gentoo.org> aruba-0.4.11.ebuild:
+  Keyword ~ppc ~ppc64, bug #417573
 
   14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> aruba-0.4.11.ebuild:
   Port to cucumber recipe for testing.
