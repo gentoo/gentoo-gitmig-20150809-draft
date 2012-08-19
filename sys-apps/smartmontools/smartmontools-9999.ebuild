@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-9999.ebuild,v 1.10 2012/08/18 04:53:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-9999.ebuild,v 1.11 2012/08/19 23:13:57 ottxor Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ if [[ ${PV} == "9999" ]] ; then
 	SRC_URI=""
 else
 	SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x64-macos"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~ia64-linux ~x86-freebsd ~x86-linux ~x64-macos"
 fi
 
 DESCRIPTION="Self-Monitoring, Analysis and Reporting Technology System (S.M.A.R.T.) monitoring tools"
@@ -51,7 +51,7 @@ src_install() {
 		doman smartctl.8
 	else
 		emake install DESTDIR="${D}" || die
-		rm -rf "${D}"/toss-it-away
+		rm -rf "${ED}"/toss-it-away
 		newinitd "${FILESDIR}"/smartd.rc smartd
 		newconfd "${FILESDIR}"/smartd.confd smartd
 	fi

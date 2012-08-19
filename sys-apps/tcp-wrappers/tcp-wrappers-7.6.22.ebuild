@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6.22.ebuild,v 1.2 2012/04/26 12:20:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6.22.ebuild,v 1.3 2012/08/19 23:17:56 ottxor Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ SRC_URI="ftp://ftp.porcupine.org/pub/security/${MY_P}.tar.gz
 
 LICENSE="tcp_wrappers_license"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux"
 IUSE="ipv6 netgroups static-libs"
 
 S=${WORKDIR}/${MY_P}
@@ -82,5 +82,5 @@ src_install() {
 
 pkg_preinst() {
 	# don't clobber people with our default example config
-	[[ -e ${ROOT}/etc/hosts.allow ]] && cp -pP "${ROOT}"/etc/hosts.allow "${D}"/etc/hosts.allow
+	[[ -e ${EROOT}/etc/hosts.allow ]] && cp -pP "${EROOT}"/etc/hosts.allow "${ED}"/etc/hosts.allow
 }
