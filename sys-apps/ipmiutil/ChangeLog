@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/ipmiutil
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipmiutil/ChangeLog,v 1.18 2012/08/03 15:57:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipmiutil/ChangeLog,v 1.19 2012/08/19 03:54:49 flameeyes Exp $
+
+*ipmiutil-2.8.5 (19 Aug 2012)
+
+  19 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> +ipmiutil-2.8.5.ebuild,
+  -ipmiutil-2.6.7.ebuild:
+  Version bump; OpenRC init scripts are still missing and there is only a static
+  library, work on this package is required.
 
   03 Aug 2012; Agostino Sarubbo <ago@gentoo.org> ipmiutil-2.8.2.ebuild:
   Stable for amd64, wrt bug #422175
