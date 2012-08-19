@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14062 2012/08/19 00:52:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14063 2012/08/19 02:30:03 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego Elio Pettenò <flameeyes@gentoo.org> (18 Aug 2012)
+# Pending removal on 18 Sep 2012
+# Could never have worked due to bug #59891
+www-apache/mod_ap2_snmp
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (18 Aug 2012)
 # Pending removal on 18 Sep 2012.
