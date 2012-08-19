@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.94 2012/08/18 00:21:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.95 2012/08/19 03:25:14 flameeyes Exp $
+
+  19 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Change herd to sysadmin.
 
   18 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Give maintainership back to general netmon, as I added myself in there.

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>netmon</herd>
+  <herd>sysadmin</herd>
   <longdescription lang="en">
     Munin the tool surveys all your computers and remembers what it saw. It
     presents all the information in in graphs through a web interface. Its
