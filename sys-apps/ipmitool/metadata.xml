@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<maintainer>
-  <email>robbat2@gentoo.org</email>
-</maintainer>
-	<use>
-		<flag name='openipmi'>Use the system OpenIPMI implementation.</flag>
-		<!-- <flag name='freeipmi'>Use the system FreeIPMI implementation.</flag> -->
-	</use>
+  <herd>sysadmin</herd>
+  <use>
+    <flag name='openipmi'>Use the system OpenIPMI implementation.</flag>
+    <!-- <flag name='freeipmi'>Use the system FreeIPMI implementation.</flag> -->
+  </use>
 </pkgmetadata>
