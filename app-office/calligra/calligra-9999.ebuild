@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-9999.ebuild,v 1.25 2012/07/19 16:18:40 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-9999.ebuild,v 1.26 2012/08/19 19:36:19 dilfridge Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -42,7 +42,7 @@ SLOT="4"
 [[ ${PV} == *9999 ]] || KEYWORDS="~amd64 ~x86"
 
 IUSE="attica +crypt +eigen +exif fftw +fontconfig freetds +gif glew +glib +gsf
-gsl +iconv +jpeg jpeg2k +kdcraw kdepim +lcms marble mysql +mso +okular opengtl openexr
+gsl +iconv +jpeg jpeg2k +kdcraw kdepim +lcms marble mysql +okular opengtl openexr
 +pdf postgres +semantic-desktop +ssl sybase test tiff +threads +truetype
 word-perfect xbase +xml +xslt"
 
@@ -150,6 +150,7 @@ src_configure() {
 		"-DGHNS=ON"
 		"-DWITH_X11=ON"
 		"-DWITH_Qt4=ON"
+		"-DBUILD_libmsooxml=ON"
 		"-DQT3SUPPORT=ON" # kde4-base.eclass pulls this in anyway
 	)
 
@@ -206,7 +207,6 @@ src_configure() {
 		$(cmake-utils_use_with word-perfect WPG)
 		$(cmake-utils_use_with xbase XBase)
 		$(cmake-utils_use_with xslt LibXslt)
-		$(cmake-utils_use_build mso libmsooxml)
 	)
 
 	# applications
