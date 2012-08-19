@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14063 2012/08/19 02:30:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14064 2012/08/19 16:43:56 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -45,6 +45,7 @@ app-admin/prelude-lml
 app-admin/prelude-manager
 dev-libs/libprelude
 dev-libs/libpreludedb
+net-analyzer/prewikka
 
 # Markos Chandras <hwoarang@gentoo.org> (17 August 2012)
 # Masked rc release. Required by dev-lang/jimctl-0.73

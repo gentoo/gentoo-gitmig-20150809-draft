@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6908 2012/08/19 02:30:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6909 2012/08/19 16:43:56 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Add missing prewikka mask.
 
   19 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Mask www-apache/mod_ap2_snmp for removal.
