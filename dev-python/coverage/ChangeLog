@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/coverage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/ChangeLog,v 1.70 2012/07/10 19:02:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/ChangeLog,v 1.71 2012/08/19 15:58:35 armin76 Exp $
+
+  19 Aug 2012; Raúl Porcel <armin76@gentoo.org> coverage-3.5.2.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #422059
 
   10 Jul 2012; Brent Baude <ranger@gentoo.org> coverage-3.5.2.ebuild:
   Marking coverage-3.5.2 ppc64 for bug 422059
