@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.7.4.1.ebuild,v 1.2 2012/05/04 06:08:11 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.7.4.1.ebuild,v 1.3 2012/08/19 02:56:26 zerochaos Exp $
 
 EAPI=4
 
@@ -38,8 +38,12 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.7.3-as-needed.patch
 	epatch "${FILESDIR}"/${PN}-0.7.4-autotools.patch
 	epatch "${FILESDIR}"/${PN}-0.7.4-flags.patch
+	epatch "${FILESDIR}"/${PN}-0.7.4-use-g-idle.patch
 
 	eautoreconf
+
+	#ettercap defaults to using mozilla so let's try to use xdg-open and pray it works
+	sed -i 's#mozilla -remote openurl(http://%host%url)#xdg-open 'http://%host%url'#' "${S}"/share/etter.conf
 }
 
 src_configure() {
