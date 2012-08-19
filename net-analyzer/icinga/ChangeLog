@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/icinga
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/ChangeLog,v 1.21 2012/08/19 04:43:24 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/ChangeLog,v 1.22 2012/08/19 08:25:22 prometheanfire Exp $
+
+  19 Aug 2012; Matthew Thode <prometheanfire@gentoo.org> files/ido2db-init.d-2:
+  forgot to change the need mysql/postgresql to use
 
 *icinga-1.7.1-r4 (19 Aug 2012)
 

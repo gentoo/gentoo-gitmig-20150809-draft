@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/files/ido2db-init.d-2,v 1.1 2012/08/19 04:43:25 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/files/ido2db-init.d-2,v 1.2 2012/08/19 08:25:22 prometheanfire Exp $
 
 get_config() {
     sed -n -e 's:^[ \t]*'$1'=\([^#]\+\).*:\1:p' \
@@ -20,9 +20,9 @@ depend() {
 
 	case $(get_config db_servertype) in
 	    mysql)
-		need mysql ;;
+		use mysql ;;
 	    pgsql)
-		need postgresql ;;
+		use postgresql ;;
 	esac
 }
 
