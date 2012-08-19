@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.14.ebuild,v 1.1 2012/08/15 01:21:59 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.14.ebuild,v 1.2 2012/08/19 03:15:25 naota Exp $
 
 EAPI="4"
 inherit eutils flag-o-matic multilib gnome2-utils autotools-utils
@@ -27,6 +27,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	>=dev-util/intltool-0.33
 	sys-devel/libtool"
+AUTOTOOLS_IN_SOURCE_BUILD=1
 DOCS=(
 	README
 	AUTHORS
@@ -43,6 +44,11 @@ src_configure() {
 		--enable-ld-version-script
 	)
 	autotools-utils_src_configure
+}
+
+src_compile() {
+	autotools-utils_src_compile
+	use doc && emake docs
 }
 
 src_install() {
