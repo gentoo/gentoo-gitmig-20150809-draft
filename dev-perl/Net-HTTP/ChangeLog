@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-HTTP
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-HTTP/ChangeLog,v 1.30 2012/07/14 04:25:55 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-HTTP/ChangeLog,v 1.31 2012/08/19 16:52:50 armin76 Exp $
+
+  19 Aug 2012; Raúl Porcel <armin76@gentoo.org> Net-HTTP-6.30.0.ebuild:
+  alpha/m68k/s390/sh/sparc stable wrt #414749
 
   14 Jul 2012; Akinori Hattori <hattya@gentoo.org> Net-HTTP-6.30.0.ebuild:
   ia64 stable wrt bug #414749
