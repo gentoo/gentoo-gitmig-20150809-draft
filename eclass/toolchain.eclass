@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.550 2012/06/11 21:07:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.551 2012/08/19 01:23:44 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -892,6 +892,10 @@ gcc-compiler-configure() {
 			confgcc+=" --with-python-dir=${DATAPATH/$PREFIX/}/python"
 		fi
 	fi
+
+	# Enable build warnings by default with cross-compilers when system
+	# paths are included (e.g. via -I flags).
+	is_crosscompile && confgcc+=" --enable-poison-system-directories"
 
 	# For newer versions of gcc, use the default ("release"), because no
 	# one (even upstream apparently) tests with it disabled. #317217
