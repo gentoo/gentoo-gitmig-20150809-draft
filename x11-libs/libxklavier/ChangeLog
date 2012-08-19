@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libxklavier
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/ChangeLog,v 1.172 2012/07/14 12:22:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/ChangeLog,v 1.173 2012/08/19 18:37:02 armin76 Exp $
+
+  19 Aug 2012; Raúl Porcel <armin76@gentoo.org> libxklavier-5.2.1.ebuild:
+  alpha/ia64/sh/sparc stable wrt #422363
 
   14 Jul 2012; Markus Meier <maekke@gentoo.org> libxklavier-5.2.1.ebuild:
   arm stable, bug #422363
