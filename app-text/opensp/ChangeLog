@@ -1,6 +1,9 @@
 # ChangeLog for app-text/opensp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.63 2012/07/12 14:58:55 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.64 2012/08/19 16:14:23 armin76 Exp $
+
+  19 Aug 2012; Raúl Porcel <armin76@gentoo.org> opensp-1.5.2-r3.ebuild:
+  alpha/m68k/s390/sh/sparc stable wrt #410273
 
   12 Jul 2012; Akinori Hattori <hattya@gentoo.org> opensp-1.5.2-r3.ebuild:
   ia64 stable wrt bug #410273
