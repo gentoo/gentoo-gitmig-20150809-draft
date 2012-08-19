@@ -1,6 +1,16 @@
 # ChangeLog for dev-util/boost-build
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.96 2012/07/21 17:18:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.97 2012/08/19 18:22:31 dev-zero Exp $
+
+*boost-build-1.50.0-r1 (19 Aug 2012)
+
+  19 Aug 2012; Tiziano Müller <dev-zero@gentoo.org>
+  +boost-build-1.50.0-r1.ebuild, +files/boost-build-1.50.0-fix-test.patch,
+  +files/boost-build-1.50.0-respect-c_ld-flags.patch:
+  Fix tests. Fix installation of boost-build python-rewrite and optimize/cleanup
+  installed .py files (bug #324375). Rechecked build regarding LDFLAGS (bug
+  #334467), replaced workaround with a patch and added verbosity flag to the
+  bjam-call.
 
   21 Jul 2012; Jeroen Roovers <jer@gentoo.org> boost-build-1.49.0.ebuild:
   Stable for HPPA (bug #425354).
