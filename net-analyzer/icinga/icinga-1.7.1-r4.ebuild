@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/icinga-1.7.1-r2.ebuild,v 1.1 2012/07/09 20:44:38 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/icinga-1.7.1-r4.ebuild,v 1.1 2012/08/19 04:43:24 prometheanfire Exp $
 
 EAPI=2
 
@@ -22,8 +22,7 @@ DEPEND="idoutils? ( dev-db/libdbi-drivers[mysql?,postgres?] )
 	virtual/mailx
 	web? (
 		media-libs/gd[jpeg,png]
-		lighttpd? ( www-servers/lighttpd dev-lang/php[cgi] )
-		apache2? ( || ( dev-lang/php[apache2] dev-lang/php[cgi] ) )
+		lighttpd? ( www-servers/lighttpd )
 	)
 	!net-analyzer/nagios-core"
 RDEPEND="${DEPEND}
@@ -125,10 +124,10 @@ src_install() {
 		emake DESTDIR="${D}" install-eventhandlers || die
 	fi
 
-	newinitd "${FILESDIR}"/icinga-init.d icinga || die
+	newinitd "${FILESDIR}"/icinga-init.d-2 icinga || die
 	newconfd "${FILESDIR}"/icinga-conf.d icinga || die
 	if use idoutils ; then
-		newinitd "${FILESDIR}"/ido2db-init.d ido2db || die
+		newinitd "${FILESDIR}"/ido2db-init.d-2 ido2db || die
 		newconfd "${FILESDIR}"/ido2db-conf.d ido2db || die
 		insinto /usr/share/icinga/contrib/db
 		doins -r module/idoutils/db/* || die
