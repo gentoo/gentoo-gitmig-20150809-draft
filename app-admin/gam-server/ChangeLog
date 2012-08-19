@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/gam-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gam-server/ChangeLog,v 1.20 2012/07/04 14:40:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gam-server/ChangeLog,v 1.21 2012/08/19 19:08:13 armin76 Exp $
+
+  19 Aug 2012; Raúl Porcel <armin76@gentoo.org> gam-server-0.1.10-r1.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #421979
 
   04 Jul 2012; Jeroen Roovers <jer@gentoo.org> gam-server-0.1.10-r1.ebuild:
   Stable for HPPA (bug #421979).
