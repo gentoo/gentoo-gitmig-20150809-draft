@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-Listing
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Listing/ChangeLog,v 1.31 2012/07/14 03:59:21 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Listing/ChangeLog,v 1.32 2012/08/19 16:26:32 armin76 Exp $
+
+  19 Aug 2012; Raúl Porcel <armin76@gentoo.org> File-Listing-6.40.0.ebuild:
+  alpha/m68k/s390/sh/sparc stable wrt #414735
 
   14 Jul 2012; Akinori Hattori <hattya@gentoo.org> File-Listing-6.40.0.ebuild:
   ia64 stable wrt bug #414735
