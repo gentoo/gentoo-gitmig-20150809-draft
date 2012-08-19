@@ -6,7 +6,7 @@
  PLUGINLDFLAGS += -shared -rdynamic
 -LIBS	+= -lstdc++ -lusb-1.0 -lpthread -lbtbb
 -CFLAGS	?= $(CFLAGS) $(CPPFLAGS)
-+LIBS	+= -lstdc++ -lusb-1.0 -lpthread -lbtbb -lubertooth
++LIBS	+= -lstdc++ -lusb-1.0 -lpthread -lbtbb
  CFLAGS	+= -I$(KIS_INC_DIR) -I$(RXTX_INC_DIR) -g -fPIC
 +CXXFLAGS += -I$(KIS_INC_DIR) -I$(RXTX_INC_DIR) -g -fPIC
  
