@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/makepp/makepp-2.0-r1.ebuild,v 1.1 2012/07/01 18:52:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/makepp/makepp-2.0-r1.ebuild,v 1.2 2012/08/19 21:25:38 ottxor Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PV%_*}/${MY_P}.txz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~ppc ~sparc ~x86 ~x86-linux ~ppc-macos"
 IUSE=""
 
 DEPEND=">=dev-lang/perl-5.6.0"
@@ -36,11 +36,11 @@ src_prepare() {
 src_configure() {
 	# not an autoconf configure script
 	./configure \
-		--prefix=/usr \
-		--bindir=/usr/bin \
-		--htmldir=/usr/share/doc/${PF}/html \
-		--mandir=/usr/share/man \
-		--datadir=/usr/share/makepp \
+		--prefix="${EPREFIX}"/usr \
+		--bindir="${EPREFIX}"/usr/bin \
+		--htmldir="${EPREFIX}"/usr/share/doc/${PF}/html \
+		--mandir="${EPREFIX}"/usr/share/man \
+		--datadir="${EPREFIX}"/usr/share/makepp \
 		|| die "configure failed"
 }
 
