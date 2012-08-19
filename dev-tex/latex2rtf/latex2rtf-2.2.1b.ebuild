@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/latex2rtf-2.2.1b.ebuild,v 1.3 2012/08/15 13:42:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/latex2rtf-2.2.1b.ebuild,v 1.4 2012/08/19 16:07:42 aballier Exp $
 
 EAPI=4
 
@@ -23,6 +23,7 @@ DEPEND="${RDEPEND}
 	test? (
 		dev-texlive/texlive-langgerman
 		dev-texlive/texlive-fontsrecommended
+		dev-texlive/texlive-latexextra
 		dev-tex/latex2html
 	)"
 
