@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagircbot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagircbot/ChangeLog,v 1.10 2012/05/04 06:08:10 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagircbot/ChangeLog,v 1.11 2012/08/19 15:35:43 flameeyes Exp $
+
+  19 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Re-assign to sysadmin herd.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> nagircbot-0.0.33.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -45,4 +48,3 @@
   12 Apr 2008; Caleb Tennis <caleb@gentoo.org> +files/conf, +files/init,
   +metadata.xml, +nagircbot-0.0.26.ebuild:
   Initial import
-

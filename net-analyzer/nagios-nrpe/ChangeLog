@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios-nrpe
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/ChangeLog,v 1.81 2012/07/15 17:03:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/ChangeLog,v 1.82 2012/08/19 15:24:18 flameeyes Exp $
+
+  19 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Re-assign to sysadmin herd.
 
   15 Jul 2012; Raúl Porcel <armin76@gentoo.org> nagios-nrpe-2.13-r2.ebuild:
   alpha/sparc stable wrt #397603

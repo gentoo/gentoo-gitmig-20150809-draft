@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios-core
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.184 2012/06/12 02:34:26 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.185 2012/08/19 15:31:03 flameeyes Exp $
+
+  19 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Re-assign to sysadmin herd.
 
   12 Jun 2012; Zac Medico <zmedico@gentoo.org> nagios-core-3.2.3.ebuild,
   nagios-core-3.3.1.ebuild:
@@ -846,4 +849,3 @@
   Initial import. Ebuild submitted by Dean Bailey <alron@gentoo.org>.
   Christian - Manny Calavera - Neumair <christian-neumair@web.de> also
   had submitted a bug report about nagios.
-
