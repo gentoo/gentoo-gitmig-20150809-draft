@@ -1,6 +1,17 @@
 # ChangeLog for app-portage/emerge-delta-webrsync
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/emerge-delta-webrsync/ChangeLog,v 1.33 2012/08/18 01:58:17 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/emerge-delta-webrsync/ChangeLog,v 1.34 2012/08/19 06:15:17 zmedico Exp $
+
+*emerge-delta-webrsync-3.6 (19 Aug 2012)
+
+  19 Aug 2012; Zac Medico <zmedico@gentoo.org>
+  +emerge-delta-webrsync-3.6.ebuild:
+  3.6 version bump. This fixes bug #124072 (duplicate slashes in fetch URIs),
+  bug #147763 (honor http_proxy and ftp_proxy), bug #153513 (fix bugs in date
+  calculations involving daylight saving), bug #176008 (handle being called by
+  non-root users), bug #189084 (remove old umd5sum file from DISTDIR), bug
+  #198362 (don't hardcode /tmp for temp files), and bug #286373 (support
+  FEATURES=webrsync-gpg).
 
   18 Aug 2012; Zac Medico <zmedico@gentoo.org> metadata.xml:
   Change maintainer to dev-portage alias.
