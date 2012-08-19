@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tree
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tree/ChangeLog,v 1.101 2012/07/19 20:15:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tree/ChangeLog,v 1.102 2012/08/19 18:50:48 armin76 Exp $
+
+  19 Aug 2012; Raúl Porcel <armin76@gentoo.org> tree-1.6.0-r1.ebuild:
+  alpha/m68k/s390/sh/sparc stable wrt #424469
 
   19 Jul 2012; Markus Meier <maekke@gentoo.org> tree-1.6.0-r1.ebuild:
   arm stable, bug #424469
