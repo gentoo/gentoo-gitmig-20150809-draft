@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.5.10.ebuild,v 1.2 2012/08/12 21:53:11 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.5.10.ebuild,v 1.3 2012/08/19 02:24:09 tetromino Exp $
 
 EAPI="4"
 
@@ -131,7 +131,7 @@ src_unpack() {
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.1.15-winegcc.patch #260726
 	epatch "${FILESDIR}"/${PN}-1.4_rc2-multilib-portage.patch #395615
-	epatch "${FILESDIR}"/${PN}-1.5.10-osmesa-check.patch #429386
+	epatch "${FILESDIR}"/${PN}-1.5.11-osmesa-check.patch #429386
 	epatch "${DISTDIR}/${PULSE_PATCH}" #421365
 	epatch_user #282735
 	eautoreconf
