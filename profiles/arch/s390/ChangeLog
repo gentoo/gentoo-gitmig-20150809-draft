@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/s390 profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/s390/ChangeLog,v 1.48 2012/08/05 18:44:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/s390/ChangeLog,v 1.49 2012/08/19 15:51:07 armin76 Exp $
+
+  19 Aug 2012; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Add clang to use.mask, needs testing
 
   05 Aug 2012; Raúl Porcel <armin76@gentoo.org> use.mask:
   Use.mask gts, devil, bug #419621

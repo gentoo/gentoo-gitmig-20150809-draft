@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.69 2012/08/16 17:03:12 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.70 2012/08/19 15:48:36 armin76 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -alpha
@@ -46,6 +46,7 @@ pm-utils
 
 # Stuff that doesn't work on alpha, or not tested
 avi
+clang
 djbfft
 emboss
 freetts

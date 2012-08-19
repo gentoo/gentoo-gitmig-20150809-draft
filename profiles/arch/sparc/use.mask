@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.90 2012/08/19 00:51:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.91 2012/08/19 15:50:41 armin76 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -sparc
@@ -117,6 +117,7 @@ systemd
 soundcloud
 devil
 gts
+clang
 
 # No hardware to test
 ifp

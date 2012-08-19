@@ -90,6 +90,7 @@ ladspa
 aacplus
 devil
 gts
+clang
 
 # Stuff that doesn't compile on ia64
 chicken
