@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/nagios-plugins
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.149 2012/08/19 15:25:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.150 2012/08/19 18:57:13 flameeyes Exp $
+
+  19 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml,
+  nagios-plugins-1.4.16-r1.ebuild:
+  Drop dependency over net-analyzer/net-snmp: all the SNMP plugins use dev-
+  perl/Net::SNMP instead. Since the dependency does not require any rebuild,
+  make this behave like nagios-game and don't remove the plugins.
 
   19 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Re-assign to sysadmin herd.

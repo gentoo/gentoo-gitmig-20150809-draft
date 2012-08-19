@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.16-r1.ebuild,v 1.1 2012/08/18 02:52:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.16-r1.ebuild,v 1.2 2012/08/19 18:57:13 flameeyes Exp $
 
 EAPI=4
 
@@ -33,9 +33,7 @@ RESTRICT="test"
 RDEPEND="${DEPEND}
 	>=dev-lang/perl-5.6.1-r7
 	samba? ( >=net-fs/samba-2.2.5-r1 )
-	snmp? ( >=dev-perl/Net-SNMP-4.0.1-r1
-			>=net-analyzer/net-snmp-5.0.6
-			)
+	snmp? ( >=dev-perl/Net-SNMP-4.0.1-r1 )
 	mysql? ( dev-perl/DBI
 			 dev-perl/DBD-mysql )
 	nagios-dns? ( >=net-dns/bind-tools-9.2.2_rc1 )
@@ -96,11 +94,6 @@ src_install() {
 		dodir /usr/$(get_libdir)/nagios/plugins
 		exeinto /usr/$(get_libdir)/nagios/plugins
 		doexe "${S}"/contrib/check_nagios_db.pl
-	fi
-
-	if ! use snmp; then
-		rm "${D}"/usr/$(get_libdir)/nagios/plugins/check_if{operstatus,status} \
-			|| die "Failed to remove SNMP check plugins"
 	fi
 
 	mv "${S}"/contrib "${D}"/usr/$(get_libdir)/nagios/plugins/contrib
