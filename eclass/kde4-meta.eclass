@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.66 2012/08/02 07:29:29 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.67 2012/08/19 11:12:35 johu Exp $
 #
 # @ECLASS: kde4-meta.eclass
 # @MAINTAINER:
@@ -35,28 +35,6 @@ case ${KMNAME} in
 	kdegames)
 		if [[ ${PN} != libkdegames ]]; then
 			COMMONDEPEND+=" $(add_kdebase_dep libkdegames)"
-		fi
-		;;
-	koffice)
-		[[ ${PN} != koffice-data ]] && IUSE+=" debug"
-		RDEPEND+="
-			!app-office/${PN}:0
-			!app-office/koffice:0
-			!app-office/koffice-meta:0
-		"
-		if has openexr ${IUSE//+}; then
-			COMMONDEPEND+=" media-gfx/imagemagick[openexr?]"
-		else
-			COMMONDEPEND+=" media-gfx/imagemagick"
-		fi
-
-		COMMONDEPEND+="
-			dev-cpp/eigen:2
-			media-libs/fontconfig
-			media-libs/freetype:2
-		"
-		if [[ ${PN} != koffice-libs && ${PN} != koffice-data ]]; then
-			COMMONDEPEND+=" >=app-office/koffice-libs-${PV}:${SLOT}"
 		fi
 		;;
 esac
@@ -356,20 +334,6 @@ kde4-meta_create_extractlists() {
 			KMEXTRACTONLY+="
 				kdeutils-version.h"
 			;;
-		koffice)
-			KMEXTRACTONLY+="
-				filters/config-filters.h.cmake
-			"
-			case ${PV} in
-				2.[12].*)
-					KMEXTRACTONLY+="
-						config-endian.h.cmake
-						config-openexr.h.cmake
-						config-opengl.h.cmake
-						config-prefix.h.cmake"
-				;;
-			esac
-			;;
 	esac
 	# Don't install cmake modules for split ebuilds, to avoid collisions.
 	# note: kdegraphics >= 4.6.2 does not even have code to do that, so we
@@ -619,14 +583,6 @@ kde4-meta_change_cmakelists() {
 				-e 's/find_package(Boost REQUIRED)/macro_optional_find_package(Boost)/' \
 				-i CMakeLists.txt || die "failed to disable hardcoded checks"
 			;;
-		koffice)
-			# Prevent collisions
-			if [[ ${PN} != koffice-data ]]; then
-				sed -e '/install(.*FindKOfficeLibs.cmake/,/)/ d' \
-					-i cmake/modules/CMakeLists.txt || die "${LINENO}: sed died in collision prevention section"
-				sed -e '/install(.\+config-openexr\.h.\+)/d' \
-					-i CMakeLists.txt || die "${LINENO}: sed died in collision prevention section"
-			fi
 	esac
 
 	popd > /dev/null

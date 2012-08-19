@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.120 2012/08/01 19:38:52 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.121 2012/08/19 11:12:35 johu Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -65,9 +65,6 @@ case ${KDEBASE} in
 	kde-base)
 		SLOT=4
 		KDE_MINIMAL="${PV}"
-		;;
-	koffice)
-		SLOT="2"
 		;;
 	kdevelop)
 		if [[ ${KDE_BUILD_TYPE} = live ]]; then
@@ -190,10 +187,6 @@ case ${KDEBASE} in
 				;;
 		esac
 		;;
-	koffice)
-		HOMEPAGE="http://www.koffice.org/"
-		LICENSE="GPL-2"
-		;;
 	kdevelop)
 		HOMEPAGE="http://www.kdevelop.org/"
 		LICENSE="GPL-2"
@@ -206,10 +199,8 @@ esac
 if version_is_at_least 4.8.50 "${KDE_MINIMAL}"; then
 	# Upstream has added an *undeclared* dependency on Qt 4.8...
 	QT_MINIMAL="${QT_MINIMAL:-4.8.0}"
-elif version_is_at_least 4.7.80 "${KDE_MINIMAL}"; then
-	QT_MINIMAL="${QT_MINIMAL:-4.7.4}"
 else
-	QT_MINIMAL="${QT_MINIMAL:-4.7.0}"
+	QT_MINIMAL="${QT_MINIMAL:-4.7.4}"
 fi
 
 # Declarative dependencies
@@ -421,7 +412,7 @@ RDEPEND+=" ${COMMONDEPEND}"
 unset COMMONDEPEND
 
 # Fetch section - If the ebuild's category is not 'kde-base' and if it is not a
-# koffice ebuild, the URI should be set in the ebuild itself
+# kdevelop ebuild, the URI should be set in the ebuild itself
 _calculate_src_uri() {
 	debug-print-function ${FUNCNAME} "$@"
 
@@ -456,18 +447,9 @@ _calculate_src_uri() {
 				4.[1234567].[12345])
 					# Stable KDE SC with old .bz2 support
 					SRC_URI="mirror://kde/stable/${PV}/src/${_kmname_pv}.tar.bz2" ;;
-				4.[89].8[05] | 4.[89].9[0235678])
-					# Unstable KDE SC releases
-					SRC_URI="mirror://kde/unstable/${PV}/src/${_kmname_pv}.tar.xz" ;;
 				*)
 					# Stable KDE SC releases
 					SRC_URI="mirror://kde/stable/${PV}/src/${_kmname_pv}.tar.xz" ;;
-			esac
-			;;
-		koffice)
-			case ${PV} in
-				2.[1234].[6-9]*) SRC_URI="mirror://kde/unstable/${_kmname_pv}/${_kmname_pv}.tar.bz2" ;;
-				*) SRC_URI="mirror://kde/stable/${_kmname_pv}/${_kmname_pv}.tar.bz2" ;;
 			esac
 			;;
 		kdevelop|kdevelop-php*|kdevplatform)
@@ -537,9 +519,6 @@ _calculate_live_repo() {
 						ESVN_REPO_URI="${ESVN_MIRROR}/trunk/${KMNAME}/${KMMODULE}"
 						ESVN_PROJECT="${PN}${ESVN_PROJECT_SUFFIX}"
 						;;
-					koffice)
-						ESVN_REPO_URI="${ESVN_MIRROR}/trunk/${KMNAME}"
-						;;
 					*)
 						ESVN_REPO_URI="${ESVN_MIRROR}/trunk/${KMNAME}/${KMMODULE}"
 						;;
@@ -552,9 +531,9 @@ _calculate_live_repo() {
 			# @ECLASS-VARIABLE: ESVN_UP_FREQ
 			# @DESCRIPTION:
 			# This variable is used for specifying the timeout between svn synces
-			# for kde-base and koffice modules. Does not affect misc apps.
+			# for kde-base modules. Does not affect misc apps.
 			# Default value is 1 hour.
-			[[ ${KDEBASE} = kde-base || ${KDEBASE} = koffice ]] && ESVN_UP_FREQ=${ESVN_UP_FREQ:-1}
+			[[ ${KDEBASE} = kde-base ]] && ESVN_UP_FREQ=${ESVN_UP_FREQ:-1}
 			;;
 		git)
 			local _kmname
@@ -735,7 +714,7 @@ kde4-base_src_prepare() {
 		load_library_dependencies
 	fi
 
-	# Hack for manuals relying on outdated DTD, only outside kde-base/koffice/...
+	# Hack for manuals relying on outdated DTD, only outside kde-base/...
 	if [[ -z ${KDEBASE} ]]; then
 		find "${S}" -name "*.docbook" \
 			-exec sed -i -r \

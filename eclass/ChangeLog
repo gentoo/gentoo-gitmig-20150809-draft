@@ -1,6 +1,12 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.376 2012/08/19 11:04:37 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.377 2012/08/19 11:12:35 johu Exp $
+
+  19 Aug 2012; Johannes Huber <johu@gentoo.org> kde4-base.eclass,
+  kde4-functions.eclass, kde4-meta.eclass:
+  Remove obsolete koffice handling. Simplify Qt minimal requirement. Remove
+  duplicated entry for unstable KDE SC releases in SRC_URI calculation. Arrange
+  docs example for KDE_LINGUAS alphabetically.
 
   19 Aug 2012; Johannes Huber <johu@gentoo.org> -tetex-3.eclass, -tetex.eclass:
   Remove obsolete. Announced on 2012/07/18.

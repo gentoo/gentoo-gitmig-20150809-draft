@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.60 2012/08/01 19:38:52 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.61 2012/08/19 11:12:35 johu Exp $
 
 inherit versionator
 
@@ -32,13 +32,10 @@ esac
 # @ECLASS-VARIABLE: KDEBASE
 # @DESCRIPTION:
 # This gets set to a non-zero value when a package is considered a kde or
-# koffice ebuild.
+# kdevelop ebuild.
 if [[ ${CATEGORY} = kde-base ]]; then
 	debug-print "${ECLASS}: KDEBASE ebuild recognized"
 	KDEBASE=kde-base
-elif [[ ${KMNAME-${PN}} = koffice ]]; then
-	debug-print "${ECLASS}: KOFFICE ebuild recognized"
-	KDEBASE=koffice
 elif [[ ${KMNAME-${PN}} = kdevelop ]]; then
 	debug-print "${ECLASS}: KDEVELOP ebuild recognized"
 	KDEBASE=kdevelop
@@ -92,7 +89,7 @@ esac
 # translations, ebuilds must call enable_selected_linguas(). kde4-{base,meta}.eclass does
 # this for you.
 #
-# Example: KDE_LINGUAS="en_GB de nl"
+# Example: KDE_LINGUAS="de en_GB nl"
 if [[ ${KDE_BUILD_TYPE} != live || -n ${KDE_LINGUAS_LIVE_OVERRIDE} ]]; then
 	for _lingua in ${KDE_LINGUAS}; do
 		IUSE="${IUSE} linguas_${_lingua}"
