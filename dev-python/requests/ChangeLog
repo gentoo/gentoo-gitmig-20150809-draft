@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/requests
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.15 2012/08/17 19:54:27 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.16 2012/08/19 10:07:06 ago Exp $
+
+  19 Aug 2012; Agostino Sarubbo <ago@gentoo.org> requests-0.13.1.ebuild:
+  Stable for amd64, wrt bug #431758
 
 *requests-0.13.6 (17 Aug 2012)
 

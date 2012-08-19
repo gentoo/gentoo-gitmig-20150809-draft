@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/rsa
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rsa/ChangeLog,v 1.4 2012/07/03 19:44:15 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rsa/ChangeLog,v 1.5 2012/08/19 10:06:18 ago Exp $
+
+  19 Aug 2012; Agostino Sarubbo <ago@gentoo.org> rsa-3.1.1.ebuild:
+  Stable for amd64, wrt bug #431758
 
   03 Jul 2012; Mike Gilbert <floppym@gentoo.org> rsa-3.1.1.ebuild:
   Drop unzip dep per Arfrever.

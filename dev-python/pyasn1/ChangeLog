@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyasn1
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1/ChangeLog,v 1.34 2012/05/18 04:15:20 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1/ChangeLog,v 1.35 2012/08/19 10:05:55 ago Exp $
+
+  19 Aug 2012; Agostino Sarubbo <ago@gentoo.org> pyasn1-0.1.3.ebuild:
+  Stable for amd64, wrt bug #431758
 
 *pyasn1-0.1.3 (18 May 2012)
 
