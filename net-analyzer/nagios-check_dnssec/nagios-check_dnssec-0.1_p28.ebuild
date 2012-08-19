@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-check_dnssec/nagios-check_dnssec-0.1_p28.ebuild,v 1.1 2012/03/20 02:29:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-check_dnssec/nagios-check_dnssec-0.1_p28.ebuild,v 1.2 2012/08/19 20:25:39 flameeyes Exp $
 
 EAPI=4
 
@@ -28,11 +28,4 @@ src_prepare() {
 	eautoreconf
 }
 
-src_configure() {
-	econf || die "econf failed"
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc ChangeLog README AUTHORS
-}
+DOCS=( ChangeLog README AUTHORS )
