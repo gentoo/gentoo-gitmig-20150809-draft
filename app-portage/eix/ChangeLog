@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.425 2012/08/04 09:50:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.426 2012/08/19 15:54:04 armin76 Exp $
+
+  19 Aug 2012; Raúl Porcel <armin76@gentoo.org> eix-0.26.1.ebuild:
+  Re-add ~alpha/~ia64/~sparc wrt #425494
 
   04 Aug 2012; Agostino Sarubbo <ago@gentoo.org> eix-0.25.5.ebuild:
   Stable for amd64, wrt bug #427100
