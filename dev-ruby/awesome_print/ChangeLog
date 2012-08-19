@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/awesome_print
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/awesome_print/ChangeLog,v 1.12 2012/07/30 18:27:50 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/awesome_print/ChangeLog,v 1.13 2012/08/19 11:00:17 blueness Exp $
+
+  19 Aug 2012; Anthony G. Basile <blueness@gentoo.org>
+  awesome_print-1.0.2.ebuild:
+  Keyword ~ppc ~ppc64, bug #417573
 
 *awesome_print-1.0.2 (30 Jul 2012)
 
