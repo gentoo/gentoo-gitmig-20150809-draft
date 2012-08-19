@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jay/jay-1.1.1-r2.ebuild,v 1.6 2012/04/06 19:43:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jay/jay-1.1.1-r2.ebuild,v 1.7 2012/08/19 21:18:42 ottxor Exp $
 
 EAPI=4
 inherit mono java-pkg-opt-2 toolchain-funcs
@@ -12,7 +12,7 @@ SRC_URI="http://www.cs.rit.edu/~ats/projects/lp/doc/jay/doc-files/src.zip -> ${P
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="java mono"
 
 COMMON_DEPEND="!<=dev-lang/mono-2.4
@@ -50,7 +50,7 @@ src_compile() {
 
 	if use mono; then
 		pushd cs >/dev/null
-		/usr/bin/gmcs /target:library /out:yydebug.dll /keyfile:"${WORKDIR}"/${P}-mono.snk yyDebug.cs || die
+		"${EPREFIX}"/usr/bin/gmcs /target:library /out:yydebug.dll /keyfile:"${WORKDIR}"/${P}-mono.snk yyDebug.cs || die
 		popd >/dev/null
 	fi
 }

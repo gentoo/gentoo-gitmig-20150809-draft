@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/jay
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jay/ChangeLog,v 1.8 2012/04/06 19:43:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jay/ChangeLog,v 1.9 2012/08/19 21:18:42 ottxor Exp $
+
+  19 Aug 2012; Christoph Junghans <ottxor@gentoo.org> jay-1.1.1-r2.ebuild:
+  added prefix keywords
 
   06 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> jay-1.1.1-r2.ebuild,
   -files/mono.snk:
@@ -43,4 +46,3 @@
   22 Mar 2009; James Le Cuirot <chewi@aura-online.co.uk> +jay-1.1.1.ebuild:
   Initial import. Only builds jay binary and yydebug.jar, not jay.jar or any of
   the C# stuff, for the sake of my sanity.
-
