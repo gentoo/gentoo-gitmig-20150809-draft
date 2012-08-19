@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/latex2rtf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/ChangeLog,v 1.38 2012/08/19 16:07:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/ChangeLog,v 1.39 2012/08/19 19:03:46 blueness Exp $
+
+  19 Aug 2012; Anthony G. Basile <blueness@gentoo.org> latex2rtf-2.2.1b.ebuild:
+  Stable ppc ppc64, bug #429050
 
   19 Aug 2012; Alexis Ballier <aballier@gentoo.org> latex2rtf-2.2.1b.ebuild:
   add missing dev-texlive/texlive-latexextra dep for tests, bug #431812
