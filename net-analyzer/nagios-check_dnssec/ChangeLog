@@ -1,10 +1,12 @@
 # ChangeLog for net-analyzer/nagios-check_dnssec
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-check_dnssec/ChangeLog,v 1.1 2012/03/20 02:29:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-check_dnssec/ChangeLog,v 1.2 2012/08/19 18:44:47 flameeyes Exp $
+
+  19 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Re-assign to sysadmin herd.
 
 *nagios-check_dnssec-0.1_p28 (20 Mar 2012)
 
   20 Mar 2012; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
   +nagios-check_dnssec-0.1_p28.ebuild:
   Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
-
