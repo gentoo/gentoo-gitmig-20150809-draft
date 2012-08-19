@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-4.2.1.ebuild,v 1.8 2012/06/10 09:15:46 qiaomuf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-4.2.1.ebuild,v 1.9 2012/08/19 08:47:40 scarabeus Exp $
 
 EAPI="3"
 
@@ -8,11 +8,15 @@ inherit multilib cmake-utils eutils
 
 DESCRIPTION="Free Chinese Input Toy for X. Another Chinese XIM Input Method"
 HOMEPAGE="http://www.fcitx.org/"
-SRC_URI="http://fcitx.googlecode.com/files/${P}.tar.xz"
+SRC_URI="
+	http://fcitx.googlecode.com/files/${P}.tar.xz
+	http://fcitx.googlecode.com/files/pinyin.tar.gz
+	http://fcitx.googlecode.com/files/table.tar.gz
+"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ppc ~ppc64 x86"
 IUSE="cairo dbus debug gtk gtk3 opencc pango qt4 table"
 
 RDEPEND="x11-libs/libX11
@@ -47,6 +51,12 @@ update_gtk3_immodules() {
 	if [ -x "${EPREFIX}/usr/bin/gtk-query-immodules-3.0" ] ; then
 		"${EPREFIX}/usr/bin/gtk-query-immodules-3.0" --update-cache
 	fi
+}
+
+src_unpack() {
+	unpack ${P}.tar.xz
+	cp "${DISTDIR}"/pinyin.tar.gz "${S}"/data/
+	cp "${DISTDIR}/table.tar.gz" "${S}/data/table"
 }
 
 src_configure() {
