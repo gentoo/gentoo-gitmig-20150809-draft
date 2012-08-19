@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cucumber
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.52 2012/07/14 07:30:59 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.53 2012/08/19 11:33:25 blueness Exp $
+
+  19 Aug 2012; Anthony G. Basile <blueness@gentoo.org> cucumber-1.1.4.ebuild:
+  Keyword ~ppc ~ppc64, bug #417573
 
   14 Jul 2012; Hans de Graaff <graaff@gentoo.org> cucumber-1.1.4.ebuild:
   Fix tests failing due to hash ordering issues, bug 425398.
