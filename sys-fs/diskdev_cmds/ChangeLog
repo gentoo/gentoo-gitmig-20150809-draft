@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/diskdev_cmds
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/diskdev_cmds/ChangeLog,v 1.6 2011/09/18 21:39:36 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/diskdev_cmds/ChangeLog,v 1.7 2012/08/19 00:53:16 zerochaos Exp $
+
+  19 Aug 2012; Rick Farina <zerochaos@gentoo.org> diskdev_cmds-332.14_p1.ebuild:
+  fixing missing openssl dep per #431778
 
   18 Sep 2011; Markus Meier <maekke@gentoo.org> diskdev_cmds-332.14_p1.ebuild:
   x86 stable, bug #382493
@@ -29,4 +32,3 @@
   13 Nov 2006; Joseph Jezak <josejx@gentoo.org> +metadata.xml,
   +diskdev_cmds-332.14.ebuild:
   Initial commit, fixes bug #46342!
-
