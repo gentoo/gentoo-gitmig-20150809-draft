@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/prawn-layout
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn-layout/ChangeLog,v 1.15 2012/07/11 14:46:56 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn-layout/ChangeLog,v 1.16 2012/08/19 11:31:52 blueness Exp $
+
+  19 Aug 2012; Anthony G. Basile <blueness@gentoo.org>
+  prawn-layout-0.8.4-r2.ebuild:
+  Keyword ~ppc ~ppc64, bug #417573
 
   11 Jul 2012; Andreas Schuerch <nativemad@gentoo.org>
   prawn-layout-0.8.4-r2.ebuild:
