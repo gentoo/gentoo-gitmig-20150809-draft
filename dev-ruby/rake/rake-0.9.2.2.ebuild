@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/rake-0.9.2.2.ebuild,v 1.7 2012/07/18 02:17:38 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/rake-0.9.2.2.ebuild,v 1.8 2012/08/19 18:27:01 graaff Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ree18 ruby19 jruby"
@@ -29,6 +29,11 @@ ruby_add_bdepend "doc? ( dev-ruby/rdoc )
 all_ruby_prepare() {
 	# Comment out unimportant test which failes on ruby18 at least.
 	sed -i -e '/def test_classic_namespace/,/^  end/ s:^:#:' test/test_rake_application_options.rb || die
+
+	# Avoid tests which can't work in bootstrapping because the test runs
+	# in a directory that can't access the file being loaded.
+	rm test/test_rake_clean.rb || die
+	sed -i -e '/test_run_code_rake/,/^  end/ s:^:#:' test/test_rake_test_task.rb || die
 
 	# Decompress the file. The compressed version has errors, ignore them.
 	zcat doc/rake.1.gz > doc/rake.1

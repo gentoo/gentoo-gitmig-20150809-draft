@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rake
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.125 2012/07/25 20:29:54 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.126 2012/08/19 18:27:01 graaff Exp $
+
+  19 Aug 2012; Hans de Graaff <graaff@gentoo.org> rake-0.9.2.2.ebuild:
+  Avoid tests that cannot work during bootstrap, fixing bug 430614.
 
   25 Jul 2012; Anthony G. Basile <blueness@gentoo.org> rake-0.8.7-r6.ebuild:
   Stable ppc64, bug #411507
