@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/cracklib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.170 2012/08/04 09:46:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.171 2012/08/19 21:03:34 ottxor Exp $
+
+  19 Aug 2012; Christoph Junghans <ottxor@gentoo.org> cracklib-2.8.19.ebuild:
+  added prefix keywords
 
   04 Aug 2012; Agostino Sarubbo <ago@gentoo.org> cracklib-2.8.19.ebuild:
   Stable for amd64, wrt bug #427132
