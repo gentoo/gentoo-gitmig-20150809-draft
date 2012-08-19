@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.142 2012/07/31 14:37:45 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.143 2012/08/19 00:52:26 flameeyes Exp $
 
 # not ready for primetime
 packagekit
@@ -284,3 +284,7 @@ dxr3
 python_targets_jython2_5
 python_targets_jython2_7
 python_targets_jython3_1
+
+# Diego Elio Pettenò <flameeyes@gentoo.org> (18 Aug 2012)
+# Prelude is being masked for removal
+prelude

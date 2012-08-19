@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14061 2012/08/18 00:04:58 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14062 2012/08/19 00:52:25 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego Elio Pettenò <flameeyes@gentoo.org> (18 Aug 2012)
+# Pending removal on 18 Sep 2012.
+# Prelude OSS has moved, a new release is out but even their SSL
+# certificate is broken; multiple issues: bug #318839 334437 344955
+# 350389 365353 388825 424307. Requires a dedicated maintainer.
+app-admin/prelude-lml
+app-admin/prelude-manager
+dev-libs/libprelude
+dev-libs/libpreludedb
 
 # Markos Chandras <hwoarang@gentoo.org> (17 August 2012)
 # Masked rc release. Required by dev-lang/jimctl-0.73
