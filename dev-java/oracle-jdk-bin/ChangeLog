@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/oracle-jdk-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.20 2012/07/23 15:52:48 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.21 2012/08/19 17:59:31 caster Exp $
+
+*oracle-jdk-bin-1.7.0.6 (19 Aug 2012)
+
+  19 Aug 2012; Vlastimil Babka <caster@gentoo.org>
+  -oracle-jdk-bin-1.7.0.3.ebuild, -oracle-jdk-bin-1.7.0.4.ebuild,
+  -oracle-jdk-bin-1.7.0.5.ebuild, +oracle-jdk-bin-1.7.0.6.ebuild:
+  Version bump, bug #431692. Version 1.7.0.5 is no longer officially
+  available...
 
 *oracle-jdk-bin-1.7.0.5-r2 (23 Jul 2012)
 

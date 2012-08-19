@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/oracle-jdk-bin-1.7.0.3.ebuild,v 1.3 2012/05/05 15:08:57 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/oracle-jdk-bin-1.7.0.6.ebuild,v 1.1 2012/08/19 17:59:31 caster Exp $
 
 EAPI="4"
 
 inherit java-vm-2 eutils prefix versionator
 
 # This URIs need to be updated when bumping!
-JDK_URI="http://www.oracle.com/technetwork/java/javase/downloads/jdk-7u3-download-1501626.html"
+JDK_URI="http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1637583.html"
 JCE_URI="http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html"
 
 UPDATE="$(get_version_component_range 4)"
@@ -34,49 +34,25 @@ JCE_FILE="${JCE_DIR}JDK7.zip"
 DESCRIPTION="Oracle's Java SE Development Kit"
 HOMEPAGE="http://www.oracle.com/technetwork/java/javase/"
 SRC_URI="
-	x86? (
-		${X86_AT}
-		examples? (
-			${X86_DEMOS}
-		)
-	)
-	amd64? (
-		${AMD64_AT}
-		examples? (
-			${AMD64_DEMOS}
-		)
-	)
-	x86-solaris? (
-		${SOL_X86_AT}
-		examples? (
-			${SOL_X86_DEMOS}
-		)
-	)
-	x64-solaris? (
-		${SOL_X86_AT} ${SOL_AMD64_AT}
-		examples? (
-			${SOL_X86_DEMOS} ${SOL_AMD64_DEMOS}
-		)
-	)
-	sparc-solaris? (
-		${SOL_SPARC_AT}
-		examples? (
-			${SOL_SPARC_DEMOS}
-		)
-	)
-	sparc64-solaris? (
-		${SOL_SPARC_AT} ${SOL_SPARCv9_AT}
-		examples? (
-			${SOL_SPARC_DEMOS} ${SOL_SPARCv9_DEMOS}
-		)
-	)
+	x86? ( ${X86_AT}
+		examples? ( ${X86_DEMOS} ) )
+	amd64? ( ${AMD64_AT}
+		examples? ( ${AMD64_DEMOS} ) )
+	x86-solaris? ( ${SOL_X86_AT}
+		examples? ( ${SOL_X86_DEMOS} ) )
+	x64-solaris? ( ${SOL_X86_AT} ${SOL_AMD64_AT}
+		examples? ( ${SOL_X86_DEMOS} ${SOL_AMD64_DEMOS} ) )
+	sparc-solaris? ( ${SOL_SPARC_AT}
+		examples? ( ${SOL_SPARC_DEMOS} ) )
+	sparc64-solaris? ( ${SOL_SPARC_AT} ${SOL_SPARCv9_AT}
+		examples? ( ${SOL_SPARC_DEMOS} ${SOL_SPARCv9_DEMOS} ) )
 	jce? ( ${JCE_FILE} )"
 
-LICENSE="Oracle-BCLA-JavaSE"
+LICENSE="Oracle-BCLA-JavaSE examples? ( BSD )"
 SLOT="1.7"
-KEYWORDS="~amd64 x86 ~amd64-linux ~x86-linux ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 
-IUSE="X alsa derby doc examples jce nsplugin +source"
+IUSE="+X alsa derby doc examples +fontconfig jce nsplugin pax_kernel +source"
 RESTRICT="fetch strip"
 
 RDEPEND="
@@ -89,9 +65,13 @@ RDEPEND="
 	)
 	alsa? ( media-libs/alsa-lib )
 	doc? ( dev-java/java-sdk-docs:1.7 )
+	fontconfig? ( media-libs/fontconfig )
 	!prefix? ( sys-libs/glibc )"
+# scanelf won't create a PaX header, so depend on paxctl to avoid fallback
+# marking. #427642
 DEPEND="
-	jce? ( app-arch/unzip )"
+	jce? ( app-arch/unzip )
+	pax_kernel? ( sys-apps/paxctl )"
 
 S="${WORKDIR}/jdk${S_PV}"
 
@@ -165,6 +145,9 @@ src_compile() {
 }
 
 src_install() {
+	local dest="/opt/${P}"
+	local ddest="${ED}${dest}"
+
 	# We should not need the ancient plugin for Firefox 2 anymore, plus it has
 	# writable executable segments
 	if use x86; then
@@ -180,41 +163,41 @@ src_install() {
 			{,jre/}lib/${arch}/libjavaplugin_jni.so
 	fi
 
-	dodir /opt/${P}
-	cp -pPR bin include jre lib man "${ED}"/opt/${P} || die
+	dodir "${dest}"
+	cp -pPR bin include jre lib man "${ddest}" || die
 
 	if use derby; then
-		cp -pPR db "${ED}"/opt/${P} || die
+		cp -pPR db "${ddest}" || die
 	fi
 
 	if use examples; then
-		cp -pPR demo sample "${ED}"/opt/${P} || die
+		cp -pPR demo sample "${ddest}" || die
 	fi
 
 	# Remove empty dirs we might have copied
-	rmdir -v $(find "${D}" -type d -empty) || die
+	find "${D}" -type d -empty -exec rmdir {} + || die
 
 	dodoc COPYRIGHT
 	dohtml README.html
 
 	if use jce; then
-		dodir /opt/${P}/jre/lib/security/strong-jce
-		mv "${ED}"/opt/${P}/jre/lib/security/US_export_policy.jar \
-			"${ED}"/opt/${P}/jre/lib/security/strong-jce || die
-		mv "${ED}"/opt/${P}/jre/lib/security/local_policy.jar \
-			"${ED}"/opt/${P}/jre/lib/security/strong-jce || die
-		dosym /opt/${P}/jre/lib/security/${JCE_DIR}/US_export_policy.jar \
-			/opt/${P}/jre/lib/security/US_export_policy.jar
-		dosym /opt/${P}/jre/lib/security/${JCE_DIR}/local_policy.jar \
-			/opt/${P}/jre/lib/security/local_policy.jar
+		dodir "${dest}"/jre/lib/security/strong-jce
+		mv "${ddest}"/jre/lib/security/US_export_policy.jar \
+			"${ddest}"/jre/lib/security/strong-jce || die
+		mv "${ddest}"/jre/lib/security/local_policy.jar \
+			"${ddest}"/jre/lib/security/strong-jce || die
+		dosym "${dest}"/jre/lib/security/${JCE_DIR}/US_export_policy.jar \
+			"${dest}"/jre/lib/security/US_export_policy.jar
+		dosym "${dest}"/jre/lib/security/${JCE_DIR}/local_policy.jar \
+			"${dest}"/jre/lib/security/local_policy.jar
 	fi
 
 	if use nsplugin; then
-		install_mozilla_plugin /opt/${P}/jre/lib/${arch}/libnpjp2.so
+		install_mozilla_plugin "${dest}"/jre/lib/${arch}/libnpjp2.so
 	fi
 
 	if use source; then
-		cp src.zip "${ED}"/opt/${P} || die
+		cp src.zip "${ddest}" || die
 	fi
 
 	# Install desktop file for the Java Control Panel.
@@ -229,11 +212,16 @@ src_install() {
 		"${T}"/jcontrol-${PN}-${SLOT}.desktop || die
 	domenu "${T}"/jcontrol-${PN}-${SLOT}.desktop
 
-	# bug #56444
-	cp "${FILESDIR}"/fontconfig.Gentoo.properties "${T}"/fontconfig.properties || die
-	eprefixify "${T}"/fontconfig.properties
-	insinto /opt/${P}/jre/lib/
-	doins "${T}"/fontconfig.properties
+	# Prune all fontconfig files so libfontconfig will be used and only install
+	# a Gentoo specific one if fontconfig is disabled.
+	# http://docs.oracle.com/javase/7/docs/technotes/guides/intl/fontconfig.html
+	rm "${ddest}"/jre/lib/fontconfig.*
+	if ! use fontconfig; then
+		cp "${FILESDIR}"/fontconfig.Gentoo.properties "${T}"/fontconfig.properties || die
+		eprefixify "${T}"/fontconfig.properties
+		insinto "${dest}"/jre/lib/
+		doins "${T}"/fontconfig.properties
+	fi
 
 	set_java_env
 	java-vm_revdep-mask
@@ -256,6 +244,7 @@ QA_FLAGS_IGNORED="
 	/opt/${P}/bin/javah
 	/opt/${P}/bin/javap
 	/opt/${P}/bin/javaws
+	/opt/${P}/bin/jcmd
 	/opt/${P}/bin/jconsole
 	/opt/${P}/bin/jdb
 	/opt/${P}/bin/jhat
@@ -283,6 +272,15 @@ QA_FLAGS_IGNORED="
 	/opt/${P}/bin/wsgen
 	/opt/${P}/bin/wsimport
 	/opt/${P}/bin/xjc
+	/opt/${P}/demo/jvmti/compiledMethodLoad/lib/libcompiledMethodLoad.so
+	/opt/${P}/demo/jvmti/gctest/lib/libgctest.so
+	/opt/${P}/demo/jvmti/heapTracker/lib/libheapTracker.so
+	/opt/${P}/demo/jvmti/heapViewer/lib/libheapViewer.so
+	/opt/${P}/demo/jvmti/hprof/lib/libhprof.so
+	/opt/${P}/demo/jvmti/minst/lib/libminst.so
+	/opt/${P}/demo/jvmti/mtrace/lib/libmtrace.so
+	/opt/${P}/demo/jvmti/versionCheck/lib/libversionCheck.so
+	/opt/${P}/demo/jvmti/waiters/lib/libwaiters.so
 	/opt/${P}/jre/bin/java
 	/opt/${P}/jre/bin/java_vm
 	/opt/${P}/jre/bin/javaws
@@ -318,10 +316,12 @@ for java_system_arch in amd64 i386; do
 		/opt/${P}/jre/lib/${java_system_arch}/libj2pkcs11.so
 		/opt/${P}/jre/lib/${java_system_arch}/libjaas_unix.so
 		/opt/${P}/jre/lib/${java_system_arch}/libjava_crw_demo.so
+		/opt/${P}/jre/lib/${java_system_arch}/libjavaplugin_jni.so
 		/opt/${P}/jre/lib/${java_system_arch}/libjava.so
 		/opt/${P}/jre/lib/${java_system_arch}/libjawt.so
 		/opt/${P}/jre/lib/${java_system_arch}/libJdbcOdbc.so
 		/opt/${P}/jre/lib/${java_system_arch}/libjdwp.so
+		/opt/${P}/jre/lib/${java_system_arch}/libjfr.so
 		/opt/${P}/jre/lib/${java_system_arch}/libjpeg.so
 		/opt/${P}/jre/lib/${java_system_arch}/libjsdt.so
 		/opt/${P}/jre/lib/${java_system_arch}/libjsig.so
@@ -334,6 +334,7 @@ for java_system_arch in amd64 i386; do
 		/opt/${P}/jre/lib/${java_system_arch}/libnative_chmod.so
 		/opt/${P}/jre/lib/${java_system_arch}/libnet.so
 		/opt/${P}/jre/lib/${java_system_arch}/libnio.so
+		/opt/${P}/jre/lib/${java_system_arch}/libnpjp2.so
 		/opt/${P}/jre/lib/${java_system_arch}/libnpt.so
 		/opt/${P}/jre/lib/${java_system_arch}/librmi.so
 		/opt/${P}/jre/lib/${java_system_arch}/libsaproc.so
