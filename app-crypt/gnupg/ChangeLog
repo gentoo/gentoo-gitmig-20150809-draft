@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.436 2012/07/10 18:51:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.437 2012/08/19 18:43:45 armin76 Exp $
+
+  19 Aug 2012; Raúl Porcel <armin76@gentoo.org> gnupg-2.0.19.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #421591
 
   10 Jul 2012; Brent Baude <ranger@gentoo.org> gnupg-2.0.19.ebuild:
   Marking gnupg-2.0.19 ppc64 for bug 421591
