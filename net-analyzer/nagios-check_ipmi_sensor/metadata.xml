@@ -10,4 +10,5 @@
 		<name>Werner Fischer</name>
 		<description>Upstream Maintainer (please CC on bugs)</description>
 	</maintainer>
+	<herd>sysadmin</herd>
 </pkgmetadata>
