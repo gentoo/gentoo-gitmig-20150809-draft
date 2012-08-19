@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/webrat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webrat/ChangeLog,v 1.16 2012/08/14 19:00:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webrat/ChangeLog,v 1.17 2012/08/19 08:14:21 graaff Exp $
+
+  19 Aug 2012; Hans de Graaff <graaff@gentoo.org> webrat-0.7.3.ebuild:
+  Avoid tests depending on launchy which is not in the gentoo tree, bug 430646.
 
   14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Update metadata.xml so that it's the same as most other packages.
