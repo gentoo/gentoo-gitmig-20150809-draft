@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTTP-Daemon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Daemon/ChangeLog,v 1.26 2012/07/14 04:11:35 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Daemon/ChangeLog,v 1.27 2012/08/19 16:51:42 armin76 Exp $
+
+  19 Aug 2012; Raúl Porcel <armin76@gentoo.org> HTTP-Daemon-6.10.0.ebuild:
+  alpha/m68k/s390/sh/sparc stable wrt #414739
 
   14 Jul 2012; Akinori Hattori <hattya@gentoo.org> HTTP-Daemon-6.10.0.ebuild:
   ia64 stable wrt bug #414739
