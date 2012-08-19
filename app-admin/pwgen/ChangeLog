@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/pwgen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.63 2012/07/08 09:18:31 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.64 2012/08/19 18:44:55 armin76 Exp $
+
+  19 Aug 2012; Raúl Porcel <armin76@gentoo.org> pwgen-2.06-r1.ebuild:
+  alpha/sparc stable wrt #421565
 
   08 Jul 2012; Akinori Hattori <hattya@gentoo.org> pwgen-2.06-r1.ebuild:
   ia64 stable wrt bug #421565
