@@ -1,6 +1,19 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.228 2012/08/03 11:51:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.229 2012/08/19 02:23:59 flameeyes Exp $
+
+*net-snmp-5.7.2_rc1 (19 Aug 2012)
+
+  19 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> +files/snmpd.init.2,
+  +files/snmptrapd.init.2, +net-snmp-5.7.2_rc1.ebuild,
+  -net-snmp-5.4.3-r1.ebuild, -net-snmp-5.5.ebuild, -net-snmp-5.6.1.ebuild,
+  metadata.xml:
+  Version bump; remove old. This version closes bug #209667 (disabled ucd-snmp
+  compatibility); bug #328177 (lm_sensors 3 is supported by default now);
+  #425990 (added GPL-2 to LICENSE); should close bug #351051 as well, for the
+  most part; add new init scripts to use the new runscript features; restrict
+  tests (tests that might or might not fail are useless); build in parallel
+  (upstream fixed it); drop USE flags that added no dependencies.
 
   03 Aug 2012; Jeroen Roovers <jer@gentoo.org> files/snmpd.init:
   Fix bashishms by Outer Measure (bug #414703).

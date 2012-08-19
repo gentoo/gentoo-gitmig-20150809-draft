@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>netmon</herd>
-	<use>
-		<flag name='diskio'>Enable the use of diskio mibs</flag>
-		<flag name='elf'>Enable the use of elf utils to check uptime on some systems</flag>
-		<flag name='extensible'>build deprecated extensible mib module (extend is successor)</flag>
-		<flag name='mfd-rewrites'>Use MFD rewrites of mib modules where available</flag>
-		<flag name='rpm'>Enable the rpm snmp probing</flag>
-		<flag name='sendmail'>Enable sendmail statistics monitoring</flag>
-		<flag name='smux'>Enable the smux MIBS module</flag>
-	</use>
+  <herd>netmon</herd>
+  <use>
+    <flag name='diskio'>Enable the use of diskio mibs</flag>
+    <flag name='elf'>Enable the use of elf utils to check uptime on some systems</flag>
+    <flag name='extensible'>build deprecated extensible mib module (extend is successor)</flag>
+    <flag name='mfd-rewrites'>Use MFD rewrites of mib modules where available</flag>
+    <flag name='rpm'>Enable the rpm snmp probing</flag>
+    <flag name='sendmail'>Enable sendmail statistics monitoring</flag>
+    <flag name='smux'>Enable the smux MIBS module</flag>
+  </use>
 </pkgmetadata>
