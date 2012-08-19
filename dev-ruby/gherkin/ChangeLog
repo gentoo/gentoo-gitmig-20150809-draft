@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/gherkin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/ChangeLog,v 1.41 2012/07/11 16:30:44 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/ChangeLog,v 1.42 2012/08/19 11:13:12 blueness Exp $
+
+  19 Aug 2012; Anthony G. Basile <blueness@gentoo.org> gherkin-2.7.3.ebuild:
+  Keyword ~ppc ~ppc64, bug #417573
 
   11 Jul 2012; Andreas Schuerch <nativemad@gentoo.org> gherkin-2.7.3.ebuild:
   x86 keyword set, see bug 417573
