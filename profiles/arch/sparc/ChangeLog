@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sparc profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.170 2012/08/05 18:43:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.171 2012/08/19 00:51:55 flameeyes Exp $
+
+  19 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> use.mask:
+  Mask nagios-game USE flag.
 
   05 Aug 2012; Raúl Porcel <armin76@gentoo.org> use.mask:
   Use.mask gts, devil, bug #419621, unmask qt4

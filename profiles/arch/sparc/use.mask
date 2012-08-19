@@ -1,11 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.89 2012/08/05 18:43:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.90 2012/08/19 00:51:55 flameeyes Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -sparc
 
 # This file contains a list of useflags that cannot be used on sparc.
+
+# Diego Elio Pettenò <flameeyes@gentoo.org> (17 Aug 2012)
+# qstat is not available on sparc, as it is
+nagios-game
 
 # Samuli Suominen <ssuominen@gentoo.org> (07 May 2012)
 # Missing keywording in www-client/firefox wrt #360427,
