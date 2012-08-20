@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-2.10.0-r1.ebuild,v 1.1 2012/06/02 03:36:51 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-2.10.0-r1.ebuild,v 1.2 2012/08/20 02:06:01 ottxor Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ LICENSE="BSD"
 SLOT="0"
 # ia64 lost as we don't have ghc-7 there yet
 # ppc64 needs to be rekeyworded due to xhtml not being keyworded
-KEYWORDS="~alpha ~amd64 -ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 -ia64 ~ppc ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos ~x86-solaris"
 IUSE=""
 
 RDEPEND="dev-haskell/ghc-paths[profile?]
@@ -63,5 +63,5 @@ src_install() {
 	cabal_src_install
 	# haddock uses GHC-api to process TH source.
 	# TH requires GHCi which needs mmap('rwx') (bug #299709)
-	pax-mark -m "${D}/usr/bin/${PN}"
+	pax-mark -m "${ED}/usr/bin/${PN}"
 }
