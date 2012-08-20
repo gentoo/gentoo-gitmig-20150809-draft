@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/getdelta
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/getdelta/ChangeLog,v 1.22 2012/03/19 07:57:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/getdelta/ChangeLog,v 1.23 2012/08/20 02:55:43 patrick Exp $
+
+*getdelta-0.7.9-r1 (20 Aug 2012)
+
+  20 Aug 2012; Patrick Lauer <patrick@gentoo.org> +getdelta-0.7.9-r1.ebuild:
+  Hackfix for #431816
 
   19 Mar 2012; Michael Sterrett <mr_bones_@gentoo.org> getdelta-0.7.9.ebuild:
   inherit goes near the top
@@ -104,4 +109,3 @@
   New ebuild thanks to Alexander Jenisch <nt-@gmx.de> in bug 66790, thanks to
   Nicolai Lissner <nlissne@linux01.gwdg.de> for getdelta and ebuild mirroring
   and to Torsten Veller <torsten@veller.net> for previous ebuild enhancements
-
