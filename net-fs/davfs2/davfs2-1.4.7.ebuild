@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/davfs2-1.4.7.ebuild,v 1.2 2012/08/08 18:49:21 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/davfs2-1.4.7.ebuild,v 1.3 2012/08/20 19:43:07 darkside Exp $
 
 EAPI=4
 
@@ -26,7 +26,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-destdir.patch
+	epatch "${FILESDIR}"/${P}-destdir.patch # fixed in 1.4.7+ upstream
 	sed -e "s/^NE_REQUIRE_VERSIONS.*29/& 30/" -i configure.ac
 	eautoreconf
 }

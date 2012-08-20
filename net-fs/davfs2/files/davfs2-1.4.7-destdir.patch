@@ -1,6 +1,8 @@
 https://bugs.gentoo.org/384703
 Patch by Jeroen Roovers
 
+https://savannah.nongnu.org/support/?108104
+
 --- a/src/Makefile.am
 +++ b/src/Makefile.am
 @@ -51,8 +51,8 @@
