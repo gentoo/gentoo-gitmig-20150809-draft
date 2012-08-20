@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sxid/sxid-4.2-r1.ebuild,v 1.2 2012/08/20 09:55:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sxid/sxid-4.2-r1.ebuild,v 1.3 2012/08/20 15:14:14 johu Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://linukz.org/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE=""
 
 RDEPEND="virtual/mailx"
