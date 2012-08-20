@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-cddl/freebsd-cddl-9.0.ebuild,v 1.8 2012/05/27 06:23:08 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-cddl/freebsd-cddl-9.0.ebuild,v 1.9 2012/08/20 06:18:40 naota Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~amd64-fbsd ~x86-fbsd"
 
 IUSE="build"
-LICENSE="CDDL"
+LICENSE="CDDL GPL-2"
 
 SRC_URI="mirror://gentoo/${P}.tar.bz2
 		mirror://gentoo/${CONTRIB}.tar.bz2

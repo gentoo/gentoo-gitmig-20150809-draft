@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-cddl/freebsd-cddl-8.0.ebuild,v 1.2 2010/04/04 21:04:18 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-cddl/freebsd-cddl-8.0.ebuild,v 1.3 2012/08/20 06:18:40 naota Exp $
 
 inherit bsdmk freebsd flag-o-matic eutils
 
@@ -9,7 +9,7 @@ SLOT="0"
 KEYWORDS="~x86-fbsd"
 
 IUSE="build"
-LICENSE="CDDL"
+LICENSE="CDDL GPL-2"
 
 SRC_URI="mirror://gentoo/${P}.tar.bz2
 		mirror://gentoo/${CONTRIB}.tar.bz2
