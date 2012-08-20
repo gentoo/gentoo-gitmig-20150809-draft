@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-022-r5.ebuild,v 1.2 2012/08/17 08:53:29 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-022-r5.ebuild,v 1.3 2012/08/20 21:54:16 aidecoe Exp $
 
 EAPI=4
 
@@ -170,11 +170,11 @@ src_prepare() {
 }
 
 src_compile() {
+	emake prefix=/usr sysconfdir=/etc DESTDIR="${D}" doc
 	if use optimization; then
 		ewarn "Enabling experimental optimization!"
 		tc-export CC
-		emake prefix=/usr sysconfdir=/etc DESTDIR="${D}" doc \
-			install/dracut-install
+		emake prefix=/usr sysconfdir=/etc DESTDIR="${D}" install/dracut-install
 	fi
 }
 
