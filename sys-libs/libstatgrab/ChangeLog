@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libstatgrab
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstatgrab/ChangeLog,v 1.23 2012/02/20 06:10:56 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstatgrab/ChangeLog,v 1.24 2012/08/20 23:02:18 johu Exp $
+
+  20 Aug 2012; Johannes Huber <johu@gentoo.org> libstatgrab-0.17.ebuild:
+  Stable for x86, wrt bug #422233
 
   20 Feb 2012; Tim Harder <radhermit@gentoo.org> -libstatgrab-0.10.3.ebuild:
   Remove old.
