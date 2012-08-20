@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/silo-1.4.14_p20120226.ebuild,v 1.3 2012/08/20 18:54:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/silo-1.4.14_p20120819.ebuild,v 1.1 2012/08/20 18:54:40 armin76 Exp $
 
 inherit mount-boot flag-o-matic toolchain-funcs eutils
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://git.kernel.org/?p=linux/kernel/git/davem/silo.git;a=summary"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="-* sparc"
-IUSE="hardened"
+IUSE=""
 
 DEPEND="sys-fs/e2fsprogs
 	sys-apps/sparc-utils"
@@ -33,7 +33,7 @@ src_unpack() {
 	cd "${S}"
 
 	#Set the correct version
-	sed -i -e "s/1.4.14/1.4.14_git20120226_p1/g" Rules.make
+	sed -i -e "s/1.4.14/1.4.14_git2012226_p1/g" Rules.make
 
 	# Fix build failure
 	sed -i -e "s/-fno-strict-aliasing/-fno-strict-aliasing -U_FORTIFY_SOURCE -mcpu=v9/g" Rules.make
@@ -42,12 +42,7 @@ src_unpack() {
 src_compile() {
 	filter-flags "-fstack-protector"
 
-	if use hardened
-	then
-		make ${MAKEOPTS} CC="$(tc-getCC) -fno-stack-protector -fno-pic"
-	else
-		make ${MAKEOPTS} CC="$(tc-getCC)" || die
-	fi
+	make ${MAKEOPTS} CC="$(tc-getCC)" || die
 }
 
 src_install() {
@@ -66,5 +61,4 @@ pkg_postinst() {
 	ewarn "      file has changed, else the system will fail to load"
 	ewarn "      SILO at the next boot."
 	ewarn
-	ewarn "Support for EXT4 is broken, you've been warned!!"
 }

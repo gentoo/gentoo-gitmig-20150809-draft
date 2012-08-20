@@ -1,6 +1,13 @@
 # ChangeLog for sys-boot/silo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/ChangeLog,v 1.51 2012/07/29 16:30:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/ChangeLog,v 1.52 2012/08/20 18:54:40 armin76 Exp $
+
+*silo-1.4.14_p20120819 (20 Aug 2012)
+
+  20 Aug 2012; Raúl Porcel <armin76@gentoo.org> silo-1.4.14_p20120226.ebuild,
+  +silo-1.4.14_p20120819.ebuild:
+  Version bump, straight to stable since it fixes issues with the previous
+  version
 
   29 Jul 2012; Raúl Porcel <armin76@gentoo.org> silo-1.4.14_p20120226.ebuild:
   Add RDEPEND
