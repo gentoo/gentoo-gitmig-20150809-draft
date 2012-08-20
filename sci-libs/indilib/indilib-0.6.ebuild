@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/indilib/indilib-0.6.ebuild,v 1.10 2011/10/30 15:47:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/indilib/indilib-0.6.ebuild,v 1.11 2012/08/20 17:08:21 jer Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN/lib/}/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ppc ppc64 x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="fits nova usb v4l"
 
 # libfli: not in portage
