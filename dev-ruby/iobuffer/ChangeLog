@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/iobuffer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/iobuffer/ChangeLog,v 1.11 2012/08/14 03:44:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/iobuffer/ChangeLog,v 1.12 2012/08/20 18:18:18 graaff Exp $
+
+  20 Aug 2012; Hans de Graaff <graaff@gentoo.org> -iobuffer-1.0.0.ebuild,
+  -iobuffer-1.1.2-r1.ebuild:
+  Cleanup.
 
   14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> iobuffer-1.1.2-r2.ebuild:
   Port to rspec helper for testing. Drop bundler dependency.
