@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/pkgconf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.45 2012/08/05 13:31:45 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.46 2012/08/20 13:46:40 jdhore Exp $
+
+*pkgconf-0.8.7 (20 Aug 2012)
+
+  20 Aug 2012; Jeff Horelick <jdhore@gentoo.org> +pkgconf-0.8.7.ebuild:
+  Version bump
 
   05 Aug 2012; Fabian Groffen <grobian@gentoo.org> pkgconf-0.8.5.ebuild:
   Marked ~{ppc,x86,x64}-macos, ~{x86,x64}-freebsd
