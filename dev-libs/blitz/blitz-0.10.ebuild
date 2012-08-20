@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.10.ebuild,v 1.1 2012/08/13 21:11:11 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.10.ebuild,v 1.2 2012/08/20 17:30:01 bicatali Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ RDEPEND="boost? ( >=dev-libs/boost-1.40 )"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen[dot] )"
 
-PATCHES=( "${FILESDIR}"/${P}-{docs,gcc47}.patch )
+PATCHES=( "${FILESDIR}"/${P}-{docs,gcc47,set-default-arg-value}.patch )
 
 src_configure() {
 	# blas / fortran only needed for benchmarks
@@ -36,6 +36,7 @@ src_configure() {
 		$(use_enable doc doxygen)
 		$(use_enable doc html-docs)
 		$(use_with boost boost "${EPREFIX}/usr")
+		$(use_with boost boost-serialization)
 	)
 	autotools-utils_src_configure
 }
