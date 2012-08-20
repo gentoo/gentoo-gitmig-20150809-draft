@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.118 2012/08/03 07:44:02 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.119 2012/08/20 21:43:44 aidecoe Exp $
+
+  20 Aug 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> files/hddgentoo.db:
+  Added WDC WD800BB-00JHC0 and WD2500AAKS-00VSA0 to hddgentoo.db.
+  Fixes bug #422859.
 
   03 Aug 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> files/hddgentoo.db:
   Added ST9250315AS to hddgentoo.db.
