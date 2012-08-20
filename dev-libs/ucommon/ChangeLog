@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/ucommon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucommon/ChangeLog,v 1.5 2012/08/19 21:22:42 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucommon/ChangeLog,v 1.6 2012/08/20 06:32:06 qnikst Exp $
+
+*ucommon-5.2.2-r3 (20 Aug 2012)
+
+  20 Aug 2012; Alexander Vershilov <qnikst@gentoo.org>
+  -ucommon-5.2.2-r2.ebuild, +ucommon-5.2.2-r3.ebuild,
+  files/ucommon-5.2.2-address.patch:
+  ucommon-5.2.2 patch fixed
 
 *ucommon-5.2.2-r2 (20 Aug 2012)
 
