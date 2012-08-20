@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.7.2_rc1.ebuild,v 1.1 2012/08/19 02:23:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.7.2_rc1.ebuild,v 1.2 2012/08/20 02:10:11 jer Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2"
 
-inherit perl-module python
+inherit eutils perl-module python
 
 MY_P="${P/_rc/.rc}"
 
@@ -94,6 +94,9 @@ src_prepare() {
 	sed -i \
 		-e "s|PACKAGE_VERSION|\"${PV}\"|g" \
 		snmplib/snmp_version.c || die "sedding version failed"
+
+	# Fix toolchain quadruplet detection, bug #330353, #432004
+	epatch "${FILESDIR}"/${P}-hppa.patch
 }
 
 src_configure() {
