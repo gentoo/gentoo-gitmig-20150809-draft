@@ -1,8 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hyperdex/hyperdex-0.4.0.ebuild,v 1.3 2012/08/20 13:21:32 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hyperdex/hyperdex-0.4.0.ebuild,v 1.4 2012/08/20 13:33:23 patrick Exp $
 EAPI=4
 
+PYTHON_DEPEND="2:2.6"
 inherit eutils python
 
 DESCRIPTION="A searchable distributed Key-Value Store"
@@ -24,6 +25,10 @@ DEPEND="dev-cpp/glog
 	dev-libs/popt
 	trace-player? ( dev-libs/libbsd )"
 RDEPEND="${DEPEND}"
+
+pkg_setup() {
+	python_set_active_version 2
+}
 
 src_prepare() {
 	# file has moved
