@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hyperdex/hyperdex-0.4.0.ebuild,v 1.2 2012/08/18 15:09:35 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hyperdex/hyperdex-0.4.0.ebuild,v 1.3 2012/08/20 13:21:32 patrick Exp $
 EAPI=4
 
 inherit eutils python
@@ -32,8 +32,8 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		$(use_enable trace-player)
-		$(use_enable python)
+		$(use_enable trace-player) \
+		$(use_enable python python-bindings)
 }
 
 src_install() {
