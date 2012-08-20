@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hunit/hunit-1.2.4.3.ebuild,v 1.1 2012/06/17 08:48:50 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hunit/hunit-1.2.4.3.ebuild,v 1.2 2012/08/20 02:12:42 ottxor Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ SRC_URI="http://hackage.haskell.org/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x86-macos"
 IUSE=""
 
 RDEPEND="dev-haskell/deepseq[profile?]
@@ -39,5 +39,5 @@ src_install() {
 	cabal_src_install
 
 	# remove hunit self-tests, we don't want to install them
-	rm -rf "${D}/usr/bin"
+	rm -rf "${ED}/usr/bin"
 }
