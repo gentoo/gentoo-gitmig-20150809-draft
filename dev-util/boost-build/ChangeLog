@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/boost-build
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.97 2012/08/19 18:22:31 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.98 2012/08/20 21:52:36 dev-zero Exp $
+
+*boost-build-1.50.0-r2 (20 Aug 2012)
+
+  20 Aug 2012; Tiziano Müller <dev-zero@gentoo.org>
+  +boost-build-1.50.0-r2.ebuild, +files/site-config.jam:
+  Install site-config.jam with our variants (gentoorelease & -debug) to ease
+  usage. Remove unneeded code. Fix python-code removal. Simplify call to
+  python_mod_{cleanup,optimize}.
 
 *boost-build-1.50.0-r1 (19 Aug 2012)
 
