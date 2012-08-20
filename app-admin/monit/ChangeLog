@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/monit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/ChangeLog,v 1.70 2012/05/18 04:04:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/ChangeLog,v 1.71 2012/08/20 06:43:50 heroxbd Exp $
+
+  20 Aug 2012; Benda Xu <heroxbd@gentoo.org> monit-5.4-r1.ebuild:
+  keyword ~amd64-linux
 
 *monit-5.4-r1 (18 May 2012)
 
