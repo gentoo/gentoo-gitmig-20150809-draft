@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-2.0.1.ebuild,v 1.1 2012/07/25 12:41:46 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-2.0.1.ebuild,v 1.2 2012/08/20 01:46:29 ottxor Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://postgis.refractions.net"
 SRC_URI="http://postgis.refractions.net/download/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc gtk"
 
 RDEPEND="
