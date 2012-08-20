@@ -1,23 +1,26 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.7.2_rc1.ebuild,v 1.2 2012/08/20 02:10:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.7.2_rc1.ebuild,v 1.3 2012/08/20 02:41:58 flameeyes Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2"
 
-inherit eutils perl-module python
+PATCHSET=1
+
+inherit eutils perl-module python autotools
 
 MY_P="${P/_rc/.rc}"
 
 DESCRIPTION="Software for generating and retrieving SNMP data"
 HOMEPAGE="http://net-snmp.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz
+	http://dev.gentoo.org/~flameeyes/${PN}/${MY_P}-patches-${PATCHSET}.tar.xz"
 
 # GPL-2 for the init scripts
 LICENSE="as-is BSD GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="bzip2 doc elf ipv6 mfd-rewrites minimal perl python rpm selinux ssl tcpd X zlib lm_sensors"
+IUSE="bzip2 doc elf ipv6 mfd-rewrites minimal perl python rpm selinux ssl tcpd X zlib lm_sensors ucd-compat"
 
 COMMON="ssl? ( >=dev-libs/openssl-0.9.6d )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
@@ -42,7 +45,6 @@ RDEPEND="${COMMON}
 
 # Dependency on autoconf due to bug #225893
 DEPEND="${COMMON}
-	>=sys-devel/autoconf-2.61-r2
 	>=sys-apps/sed-4
 	doc? ( app-doc/doxygen )"
 
@@ -60,49 +62,19 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# fix access violation in make check
-	sed -i \
-		-e 's/\(snmpd.*\)-Lf/\1-l/' \
-		testing/fulltests/support/simple_eval_tools.sh || die "sed eval_tools.sh failed"
-
-	# fix path in fixproc
-	sed -i \
-		-e 's|\(database_file =.*\)/local\(.*\)$|\1\2|' \
-		local/fixproc || die "sed fixproc failed"
-
-	if use python ; then
-		PYTHON_DIR="$(python_get_sitedir)"
-		sed -i -e "s:\(install --basedir=\$\$dir\):\1 --root='${D}':" Makefile.in || \
-			die "sed python failed"
-	fi
-
 	# snmpconf generates config files with proper selinux context
 	use selinux && epatch "${FILESDIR}"/${PN}-5.1.2-snmpconf-selinux.patch
 
-	# remove CFLAGS from net-snmp-config script (bug #257622):
-	sed -i \
-		-e 's|@CFLAGS@ ||g' \
-		-e 's|@LDFLAGS@ ||g' \
-		net-snmp-config.in || die "sedding CFLAGS failed"
-
-	# Respect LDFLAGS
-	sed -i Makefile.top \
-		-e '/^LIB_LD_CMD/{s|$(CFLAGS)|& $(LDFLAGS)|g}' \
-		|| die "sed LDFLAGS failed"
-
-	# Fix version number:
-	sed -i \
-		-e "s|PACKAGE_VERSION|\"${PV}\"|g" \
-		snmplib/snmp_version.c || die "sedding version failed"
-
-	# Fix toolchain quadruplet detection, bug #330353, #432004
-	epatch "${FILESDIR}"/${P}-hppa.patch
+	epatch "${WORKDIR}"/patches/*.patch
+	eautoconf
 }
 
 src_configure() {
 	# keep this in the same line, configure.ac arguments are passed down to config.h
 	local mibs="host ucd-snmp/dlmod ucd-snmp/diskio ucd-snmp/extensible mibII/mta_sendmail smux"
 	use lm_sensors && mibs="${mibs} ucd-snmp/lmsensorsMib"
+
+	use python && export PYTHON_DIR="$(python_get_sitedir)"
 
 	econf \
 		--with-install-prefix="${D}" \
@@ -112,7 +84,7 @@ src_configure() {
 		--with-mib-modules="${mibs}" \
 		--with-logfile="/var/log/net-snmpd.log" \
 		--with-persistent-directory="/var/lib/net-snmp" \
-		--disable-ucd-snmp-compatibility \
+		$(use_enable ucd-compat ucd-snmp-compatibility) \
 		--enable-shared --disable-static \
 		--with-ldflags="${LDFLAGS}" \
 		$(use_enable ipv6) \

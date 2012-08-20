@@ -10,5 +10,9 @@
     <flag name='rpm'>Enable the rpm snmp probing</flag>
     <flag name='sendmail'>Enable sendmail statistics monitoring</flag>
     <flag name='smux'>Enable the smux MIBS module</flag>
+    <flag name='ucd-compat'>
+      Build UCD compatibility library. Increases significantly the
+      install size.
+    </flag>
   </use>
 </pkgmetadata>
