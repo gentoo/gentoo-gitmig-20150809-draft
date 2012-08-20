@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.5.2-r1.ebuild,v 1.1 2012/07/31 08:44:48 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.5.2-r1.ebuild,v 1.2 2012/08/20 02:44:35 ottxor Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}/${PV}/${PN}_installer-${PV}.jar"
 
 LICENSE="PSF-2"
 SLOT="2.5"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="readline"
 
 # Missing in installer jar.
