@@ -1,10 +1,14 @@
 # ChangeLog for net-libs/libkgapi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libkgapi/ChangeLog,v 1.1 2012/06/19 19:16:28 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkgapi/ChangeLog,v 1.2 2012/08/20 12:14:59 johu Exp $
+
+*libkgapi-0.4.2 (20 Aug 2012)
+
+  20 Aug 2012; Johannes Huber <johu@gentoo.org> +libkgapi-0.4.2.ebuild:
+  Version bump.
 
 *libkgapi-0.4.1 (19 Jun 2012)
 
   19 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   +libkgapi-0.4.1.ebuild, +metadata.xml:
   New KDE support library, see bug 421601
-
