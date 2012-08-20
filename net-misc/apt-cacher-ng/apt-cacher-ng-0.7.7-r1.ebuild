@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-cacher-ng/apt-cacher-ng-0.7.7.ebuild,v 1.1 2012/08/07 00:04:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-cacher-ng/apt-cacher-ng-0.7.7-r1.ebuild,v 1.1 2012/08/20 00:32:23 jer Exp $
 
 EAPI="4"
 
@@ -101,10 +101,8 @@ src_install() {
 	dodir /var/log/${PN}
 	# Some directories must exists
 	keepdir /var/log/${PN}
-	keepdir /var/run/${PN}
 	fowners -R ${PN}:${PN} \
 		/etc/${PN} \
 		/var/log/${PN} \
-		/var/cache/${PN} \
-		/var/run/${PN}
+		/var/cache/${PN}
 }
