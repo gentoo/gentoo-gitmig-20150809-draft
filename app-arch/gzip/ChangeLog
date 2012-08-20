@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/gzip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip/ChangeLog,v 1.117 2012/08/19 14:25:23 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip/ChangeLog,v 1.118 2012/08/20 02:52:06 jer Exp $
+
+  20 Aug 2012; Jeroen Roovers <jer@gentoo.org> gzip-1.5.ebuild:
+  Stable for HPPA (bug #431844).
 
   19 Aug 2012; Johannes Huber <johu@gentoo.org> gzip-1.5.ebuild:
   Stable for x86, wrt bug #431844
