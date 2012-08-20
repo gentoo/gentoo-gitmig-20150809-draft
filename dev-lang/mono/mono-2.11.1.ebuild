@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.11.1.ebuild,v 1.1 2012/05/10 18:47:12 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.11.1.ebuild,v 1.2 2012/08/20 02:53:45 ottxor Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.mono-project.com/Main_Page"
 
 LICENSE="MIT LGPL-2.1 GPL-2 BSD-4 NPL-1.1 Ms-PL GPL-2-with-linking-exception IDPL"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux"
 
 IUSE="minimal pax_kernel xen"
 
@@ -136,7 +136,7 @@ pkg_preinst() {
 	local symlink
 	local NUNIT_DIR="/usr/$(get_libdir)/mono/nunit"
 	local pv_atom
-	if  [[ "$(readlink "${ROOT}"/${NUNIT_DIR})" == *"mono-nunit"* ]]
+	if  [[ "$(readlink "${EROOT}"/${NUNIT_DIR})" == *"mono-nunit"* ]]
 	then
 		for pv_atom in 2.2{,-r1,-r2,-r3,-r4} '2.4_pre*' '2.4_rc*' 2.4
 		do
@@ -146,10 +146,10 @@ pkg_preinst() {
 				einfo "be advised that this is a known problem, which will now be fixed:"
 				ebegin "Found broken symlinks created by $(best_version dev-lang/mono), fixing"
 				for symlink in						\
-					"${ROOT}/${NUNIT_DIR}"				\
-					"${ROOT}/usr/$(get_libdir)/pkgconfig/nunit.pc"	\
-					"${ROOT}/usr/bin/nunit-console"			\
-					"${ROOT}/usr/bin/nunit-console2"
+					"${EROOT}/${NUNIT_DIR}"				\
+					"${EROOT}/usr/$(get_libdir)/pkgconfig/nunit.pc"	\
+					"${EROOT}/usr/bin/nunit-console"			\
+					"${EROOT}/usr/bin/nunit-console2"
 				do
 					if [[ -L "${symlink}" ]]
 					then
