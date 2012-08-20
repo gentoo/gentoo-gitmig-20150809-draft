@@ -8,7 +8,6 @@
 <maintainer>
 	<email>xmw@gentoo.org</email>
 	<name>Michael Weber</name>
-	<description>Proxy maintainer</description>
 </maintainer>
 <use>
 	<flag name="xrandr">Add support for xrandr</flag>

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/notion/notion-9999.ebuild,v 1.3 2012/07/02 07:15:59 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/notion/notion-9999.ebuild,v 1.4 2012/08/20 10:42:46 xmw Exp $
 
 EAPI="4"
 
@@ -40,7 +40,7 @@ src_prepare() {
 		-e "s:^\(LUA_DIR=\).*$:\1\$(PREFIX)/usr:" \
 		-e "s:^\(VARDIR=\).*$:\1${ROOT}var/cache/${PN}:" \
 		-e "s:^\(X11_PREFIX=\).*:\1\$(PREFIX)/usr:" \
-		-i system.mk || die
+		-i system-autodetect.mk || die
 	sed -e "/_install:/,+3s:\(\$(BINDIR)\):\$(DESTDIR)\1:" \
 		-i mod_notionflux/notionflux/Makefile || die
 	export STRIPPROG=cat
