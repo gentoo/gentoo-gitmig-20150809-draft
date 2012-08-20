@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.255 2012/08/04 13:39:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.256 2012/08/20 21:55:03 dev-zero Exp $
+
+*boost-1.50.0-r1 (20 Aug 2012)
+
+  20 Aug 2012; Tiziano Müller <dev-zero@gentoo.org> +boost-1.50.0-r1.ebuild:
+  Require boost-build-1.50.0-r2 for gentoo-build-variants. Do not install
+  eselect-stuff anymore. Make sure libiconv is installed if icu is not available
+  (for boost.locale). Simplify some code.
 
   04 Aug 2012; Markos Chandras <hwoarang@gentoo.org>
   +files/boost-1.48.0-gcc47.patch, boost-1.48.0-r2.ebuild:
