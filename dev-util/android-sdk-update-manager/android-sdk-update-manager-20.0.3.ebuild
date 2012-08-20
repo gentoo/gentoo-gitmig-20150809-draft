@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/android-sdk-update-manager-20.0.3.ebuild,v 1.1 2012/08/14 13:36:49 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/android-sdk-update-manager-20.0.3.ebuild,v 1.2 2012/08/20 14:22:24 rich0 Exp $
 
 EAPI="3"
 
@@ -64,7 +64,7 @@ src_install(){
 	echo "PATH=\"${EPREFIX}${ANDROID_SDK_DIR}/tools:${EPREFIX}${ANDROID_SDK_DIR}/platform-tools\"" > "${T}/80${PN}" || die
 
 	SWT_PATH=
-	SWT_VERSIONS="3.7 3.6 3.5"
+	SWT_VERSIONS="4.2 3.7 3.6 3.5"
 	for version in $SWT_VERSIONS; do
 		# redirecting stderr to /dev/null
 		# not sure if this is best, but avoids misleading error messages
