@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djview/djview-4.8.ebuild,v 1.8 2012/08/20 23:43:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djview/djview-4.9.ebuild,v 1.1 2012/08/20 23:43:23 jer Exp $
 
 EAPI=4
 
-inherit autotools eutils gnome2-utils fdo-mime flag-o-matic versionator toolchain-funcs multilib nsplugins
+inherit autotools gnome2-utils fdo-mime flag-o-matic versionator toolchain-funcs multilib nsplugins
 
 MY_P=${PN}-$(replace_version_separator 2 '-')
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/djvu/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ppc ~ppc64 x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~x86"
 IUSE="debug nsplugin"
 
 RDEPEND="
@@ -25,11 +25,9 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	nsplugin? ( dev-libs/glib:2 )"
 
-S=${WORKDIR}/${PN}-$(get_version_component_range 1-2)
+S=${WORKDIR}/${PN}4-${PV}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-qt48.patch
-
 	# Force XEmbed instead of Xt-based mainloop (disable Xt autodep)
 	sed -e 's:\(ac_xt=\)yes:\1no:' -i configure* || die
 	sed 's/AC_CXX_OPTIMIZE/OPTS=;AC_SUBST(OPTS)/' -i configure.ac || die #263688
