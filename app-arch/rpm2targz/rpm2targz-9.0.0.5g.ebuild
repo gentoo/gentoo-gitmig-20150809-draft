@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/rpm2targz-9.0.0.5g.ebuild,v 1.1 2012/05/17 05:03:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/rpm2targz-9.0.0.5g.ebuild,v 1.2 2012/08/20 20:15:47 vapier Exp $
 
 EAPI="4"
 
@@ -23,6 +23,6 @@ src_compile() {
 }
 
 src_install() {
-	default
+	emake DESTDIR="${ED}" install # need explicit install line #397835
 	dodoc *.README*
 }
