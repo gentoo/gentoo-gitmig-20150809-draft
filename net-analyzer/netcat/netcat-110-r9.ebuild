@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/netcat-110-r9.ebuild,v 1.6 2012/08/06 13:58:32 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/netcat-110-r9.ebuild,v 1.7 2012/08/20 14:44:22 johu Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/nc110/${MY_P}.tgz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc64-solaris ~x64-solaris"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc64-solaris ~x64-solaris"
 IUSE="crypt ipv6 static"
 
 LIB_DEPEND="crypt? ( dev-libs/libmix[static-libs(+)] )"
