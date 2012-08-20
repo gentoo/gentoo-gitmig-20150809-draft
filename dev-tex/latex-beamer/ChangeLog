@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/latex-beamer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.107 2012/08/19 18:56:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.108 2012/08/20 17:21:04 radhermit Exp $
+
+  20 Aug 2012; Tim Harder <radhermit@gentoo.org> -latex-beamer-3.16.ebuild:
+  Remove old.
 
   19 Aug 2012; Raúl Porcel <armin76@gentoo.org> latex-beamer-3.20.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #425194
