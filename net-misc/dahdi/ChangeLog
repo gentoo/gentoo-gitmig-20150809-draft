@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/dahdi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.43 2012/06/26 07:44:38 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.44 2012/08/20 09:17:01 chainsaw Exp $
+
+*dahdi-2.6.1-r1 (20 Aug 2012)
+
+  20 Aug 2012; Tony Vroon <chainsaw@gentoo.org> +dahdi-2.6.1-r1.ebuild:
+  Fix by Jaco Kroon to wctdm24xxp to ensure ringing is detected early &
+  reliably on South African analog lines. This was a regression in 2.6.1 where
+  North American-centric timings/values were used. Closes bug #431294.
 
   26 Jun 2012; Jeff Horelick <jdhore@gentoo.org> dahdi-2.6.1.ebuild:
   marked x86 per bug 422143
