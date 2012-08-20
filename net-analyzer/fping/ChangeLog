@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/fping
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.50 2012/05/29 20:03:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.51 2012/08/20 05:33:25 radhermit Exp $
+
+*fping-3.3 (20 Aug 2012)
+
+  20 Aug 2012; Tim Harder <radhermit@gentoo.org> +fping-3.3.ebuild:
+  Version bump. Add suid use flag.
 
   29 May 2012; Tim Harder <radhermit@gentoo.org>
   +fping-2.4_beta2_p161-r1.ebuild, +files/fping-2.4_beta2_p161-min-time.patch:
