@@ -1,6 +1,10 @@
 # ChangeLog for app-text/pdfshuffler
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdfshuffler/ChangeLog,v 1.17 2012/08/18 14:28:39 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdfshuffler/ChangeLog,v 1.18 2012/08/20 10:37:22 xmw Exp $
+
+  20 Aug 2012; Michael Weber <xmw@gentoo.org>
+  -files/pdfshuffler-poppler-0.18.patch, -pdfshuffler-0.5.1-r1.ebuild:
+  Drop old
 
   18 Aug 2012; Johannes Huber <johu@gentoo.org> pdfshuffler-0.6.0.ebuild:
   Stable for x86, wrt bug #428904
@@ -72,4 +76,3 @@
   01 Jun 2009; Peter Alfredsen <loki_val@gentoo.org>
   +pdfshuffler-0.4.2.ebuild, +metadata.xml:
   Initial commit. Ebuild by me.
-
