@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.33_pre20110403.ebuild,v 1.5 2011/11/20 09:20:49 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.33_pre20110403.ebuild,v 1.6 2012/08/20 03:25:24 ottxor Exp $
 
 EAPI="3"
 
@@ -16,7 +16,7 @@ SRC_URI="http://nodeload.github.com/${GITHUB_AUTHOR}/${GITHUB_PROJECT}/tarball/v
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm -hppa ~mips ~sparc x86"
+KEYWORDS="~alpha amd64 ~arm -hppa ~mips ~sparc x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 DEPEND=""
@@ -46,7 +46,7 @@ pkg_setup() {
 }
 
 src_compile() {
-	emake prefix=${DIETHOME} \
+	emake prefix="${EPREFIX}"${DIETHOME} \
 		CC="$(tc-getCC)" \
 		CFLAGS="${CFLAGS}" \
 		STRIP=":" \
@@ -54,15 +54,15 @@ src_compile() {
 }
 
 src_install() {
-	emake prefix=${DIETHOME} \
-		DESTDIR="${D}" \
+	emake prefix="${EPREFIX}"${DIETHOME} \
+		DESTDIR="${ED}" \
 		install-bin \
 		install-headers \
 		|| die "make install failed"
 
-	dobin "${D}"${DIETHOME}/bin/* || die "dobin failed"
-	doman "${D}"${DIETHOME}/man/*/* || die "doman failed"
-	rm -r "${D}"${DIETHOME}/{man,bin}
+	dobin "${ED}"${DIETHOME}/bin/* || die "dobin failed"
+	doman "${ED}"${DIETHOME}/man/*/* || die "doman failed"
+	rm -r "${ED}"${DIETHOME}/{man,bin}
 
 	dodoc AUTHOR BUGS CAVEAT CHANGES README THANKS TODO PORTING
 }

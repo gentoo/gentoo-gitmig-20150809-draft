@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/dietlibc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.89 2012/01/29 13:00:13 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.90 2012/08/20 03:25:24 ottxor Exp $
+
+  20 Aug 2012; Christoph Junghans <ottxor@gentoo.org>
+  dietlibc-0.33_pre20110403.ebuild:
+  added prefix keywords
 
   29 Jan 2012; Benedikt Böhm <hollow@gentoo.org>
   -files/0.24-dirent-prototype.patch, -files/dietlibc-0.26-ssp.patch,
