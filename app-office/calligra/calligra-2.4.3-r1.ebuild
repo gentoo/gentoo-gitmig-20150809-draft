@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.4.3-r1.ebuild,v 1.3 2012/08/09 13:45:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.4.3-r1.ebuild,v 1.4 2012/08/20 21:01:45 dilfridge Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -28,7 +28,7 @@ LICENSE="GPL-2"
 SLOT="4"
 [[ ${PV} == *9999 ]] || KEYWORDS="amd64 x86"
 IUSE="attica +crypt +eigen +exif fftw +fontconfig freetds +gif glew +glib +gsf
-gsl +iconv +jpeg jpeg2k +kdcraw kdepim +lcms marble mysql +mso +okular openctl openexr
+gsl +jpeg jpeg2k +kdcraw kdepim +lcms marble mysql +mso +okular openctl openexr
 +pdf postgres +semantic-desktop +ssl sybase test tiff +threads +truetype
 word-perfect xbase +xml +xslt"
 
@@ -67,6 +67,7 @@ RDEPEND="
 	media-libs/libpng
 	sys-libs/zlib
 	>=x11-libs/qt-gui-4.8.1-r1:4
+	virtual/libiconv
 	attica? ( dev-libs/libattica )
 	crypt? ( app-crypt/qca:2 )
 	eigen? ( dev-cpp/eigen:2 )
@@ -79,7 +80,6 @@ RDEPEND="
 	glib? ( dev-libs/glib:2 )
 	gsf? ( gnome-extra/libgsf )
 	gsl? ( sci-libs/gsl )
-	iconv? ( virtual/libiconv )
 	jpeg? ( virtual/jpeg )
 	jpeg2k? ( media-libs/openjpeg )
 	kdcraw? ( $(add_kdebase_dep libkdcraw) )
@@ -139,6 +139,7 @@ src_configure() {
 		"-DGHNS=ON"
 		"-DWITH_X11=ON"
 		"-DWITH_Qt4=ON"
+		"-DWITH_Iconv=ON"
 		"-DQT3SUPPORT=ON" # kde4-base.eclass pulls this in anyway
 	)
 
@@ -169,7 +170,6 @@ src_configure() {
 		$(cmake-utils_use_with glib GObject)
 		$(cmake-utils_use_with gsf LIBGSF)
 		$(cmake-utils_use_with gsl GSL)
-		$(cmake-utils_use_with iconv Iconv)
 		$(cmake-utils_use_with jpeg JPEG)
 		$(cmake-utils_use_with jpeg2k OpenJPEG)
 		$(cmake-utils_use_with kdcraw Kdcraw)
