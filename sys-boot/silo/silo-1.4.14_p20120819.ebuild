@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/silo-1.4.14_p20120819.ebuild,v 1.1 2012/08/20 18:54:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/silo-1.4.14_p20120819.ebuild,v 1.2 2012/08/20 18:55:43 armin76 Exp $
 
 inherit mount-boot flag-o-matic toolchain-funcs eutils
 
@@ -33,7 +33,7 @@ src_unpack() {
 	cd "${S}"
 
 	#Set the correct version
-	sed -i -e "s/1.4.14/1.4.14_git2012226_p1/g" Rules.make
+	sed -i -e "s/1.4.14/1.4.14_git20120819_p1/g" Rules.make
 
 	# Fix build failure
 	sed -i -e "s/-fno-strict-aliasing/-fno-strict-aliasing -U_FORTIFY_SOURCE -mcpu=v9/g" Rules.make
