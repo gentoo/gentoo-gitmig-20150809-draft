@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.6.7.2.ebuild,v 1.1 2012/05/09 04:03:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.6.7.2.ebuild,v 1.2 2012/08/20 02:32:48 ottxor Exp $
 
 EAPI="4"
 JAVA_PKG_IUSE="doc source test"
@@ -13,7 +13,7 @@ HOMEPAGE="http://jruby.codehaus.org/"
 SRC_URI="http://jruby.org.s3.amazonaws.com/downloads/${PV}/${PN}-src-${PV}.tar.gz"
 LICENSE="|| ( CPL-1.0 GPL-2 LGPL-2.1 )"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="bsf ssl"
 
 # jffi still needed? Or do we call that jnr-ffi?
@@ -152,7 +152,7 @@ src_test() {
 	#bsf optionally depends on jruby, which means that the previously
 	#installed jruby will be added to classpath, nasty things will happen.
 	local cpath=`java-pkg_getjars ${EANT_GENTOO_CLASSPATH// /,},junit-4`
-	cpath="$(echo ${cpath} | sed -e "s_${ROOT}/usr/share/jruby/lib/jruby.jar:__g")"
+	cpath="$(echo ${cpath} | sed -e "s_${EROOT}/usr/share/jruby/lib/jruby.jar:__g")"
 	cpath="${cpath}:$(java-pkg_getjars --build-only commons-logging,xalan)"
 	EANT_GENTOO_CLASSPATH=""
 
@@ -193,7 +193,7 @@ src_install() {
 
 	# Remove all the references to RubyGems as we're just going to
 	# install it through dev-ruby/rubygems.
-	find "${D}${RUBY_HOME}" -type f \
+	find "${ED}${RUBY_HOME}" -type f \
 		'(' '(' -path '*rubygems*' -not -name 'jruby.rb' ')' -or -name 'ubygems.rb' -or -name 'datadir.rb' ')' \
 		-delete || die
 }
