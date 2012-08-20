@@ -1,21 +1,22 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-proxy/ucspi-proxy-0.98.ebuild,v 1.1 2010/01/14 13:35:21 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-proxy/ucspi-proxy-0.98.ebuild,v 1.2 2012/08/20 20:02:12 vapier Exp $
 
 EAPI="2"
 
 inherit toolchain-funcs multilib
 
-DESCRIPTION="A proxy program for two connections set up by a UCSPI server and a UCSPI client."
+DESCRIPTION="proxy program for two connections set up by a UCSPI server and a UCSPI client"
 HOMEPAGE="http://untroubled.org/ucspi-proxy/"
 SRC_URI="http://untroubled.org/ucspi-proxy/archive/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND=">=dev-libs/bglibs-1.106
-	sys-apps/sed"
+
 RDEPEND=">=dev-libs/bglibs-1.106"
+DEPEND="${RDEPEND}"
 
 src_prepare() {
 	sed -i -e '/^>bin$/ac:::755::ucspi-proxy' INSTHIER

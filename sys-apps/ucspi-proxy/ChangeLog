@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ucspi-proxy
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-proxy/ChangeLog,v 1.16 2011/07/20 17:32:34 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-proxy/ChangeLog,v 1.17 2012/08/20 20:02:12 vapier Exp $
+
+  20 Aug 2012; Mike Frysinger <vapier@gentoo.org> ucspi-proxy-0.98.ebuild:
+  Drop pointless sed dependency.
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #118937
@@ -68,4 +71,3 @@
 
   11 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> ucspi-proxy-0.95.ebuild:
   Initial commit, thanks to Kalin Kozhuharov <kalin@thinrope.net>, bug #23836
-
