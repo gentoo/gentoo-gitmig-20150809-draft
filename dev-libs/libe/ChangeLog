@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libe
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libe/ChangeLog,v 1.1 2012/08/18 14:09:44 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libe/ChangeLog,v 1.2 2012/08/20 13:07:40 patrick Exp $
+
+  20 Aug 2012; Patrick Lauer <patrick@gentoo.org> +files/libe-getpid.patch,
+  libe-0.2.7.ebuild:
+  Fix getpid / unistd.h issue
 
 *libe-0.2.7 (18 Aug 2012)
 
