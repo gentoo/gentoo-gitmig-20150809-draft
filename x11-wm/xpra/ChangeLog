@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/xpra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/ChangeLog,v 1.23 2012/08/17 22:19:06 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/ChangeLog,v 1.24 2012/08/20 21:18:40 xmw Exp $
+
+*xpra-0.5.0 (20 Aug 2012)
+
+  20 Aug 2012; Michael Weber <xmw@gentoo.org> +xpra-0.5.0.ebuild:
+  Version bump
 
   17 Aug 2012; Michael Weber <xmw@gentoo.org> xpra-0.4.2.ebuild:
   Fix whitespaces.
