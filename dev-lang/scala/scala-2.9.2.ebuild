@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/scala-2.9.2.ebuild,v 1.1 2012/06/21 12:23:30 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/scala-2.9.2.ebuild,v 1.2 2012/08/20 03:00:19 ottxor Exp $
 
 EAPI="3"
 JAVA_PKG_IUSE="doc examples source"
@@ -21,7 +21,7 @@ SRC_URI="!binary? ( ${HOMEPAGE}downloads/distrib/files/${MY_P}.tgz -> ${P}.tar.g
 	binary? ( http://dev.gentoo.org/~ali_bush/distfiles/${P}-gentoo-binary.tar.bz2 )"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="binary emacs"
 # one fails with 1.7, two with 1.4 (blackdown)
 #RESTRICT="test"
@@ -88,8 +88,8 @@ src_test() {
 }
 
 #scala_launcher() {
-#	local SCALADIR="/usr/share/${PN}"
-#	local bcp="${SCALADIR}/lib/scala-library.jar"
+#	local SCALADIR="${EPREFIX}/usr/share/${PN}"
+#	local bcp="${EPREFIX}${SCALADIR}/lib/scala-library.jar"
 #	java-pkg_dolauncher "${1}" --main "${2}" \
 #		--java_args "-Xmx256M -Xms32M -Dscala.home=${SCALADIR} -Denv.emacs=${EMACS}"
 #}
@@ -127,7 +127,7 @@ src_install() {
 
 	dodir /usr/bin
 	for b in $(find bin/ -type f ! -iname '*.bat'); do
-		#pushd "${D}/usr/bin" &>/dev/null
+		#pushd "${ED}/usr/bin" &>/dev/null
 		local _name=$(basename "${b}")
 		dosym "/usr/share/${JAVA_PKG_NAME}/bin/${_name}" "/usr/bin/${_name}"
 		#popd &>/dev/null

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/scala
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/ChangeLog,v 1.30 2012/06/21 12:23:30 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/ChangeLog,v 1.31 2012/08/20 03:00:19 ottxor Exp $
+
+  20 Aug 2012; Christoph Junghans <ottxor@gentoo.org> scala-2.9.2.ebuild:
+  added prefix keywords
 
 *scala-2.9.2 (21 Jun 2012)
 
@@ -148,4 +151,3 @@
   package in more appropriate category. Based on ebuilds from Michel Ganguin
   <ganguin@romandie.com> and John Reed Riley <john.reed.riley@gmail.com> in
   bug #147599.
-
