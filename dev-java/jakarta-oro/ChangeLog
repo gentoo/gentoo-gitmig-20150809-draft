@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jakarta-oro
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-oro/ChangeLog,v 1.22 2012/06/07 21:26:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-oro/ChangeLog,v 1.23 2012/08/20 02:25:36 ottxor Exp $
+
+  20 Aug 2012; Christoph Junghans <ottxor@gentoo.org>
+  jakarta-oro-2.0.8-r3.ebuild:
+  added prefix keywords
 
   07 Jun 2012; Brent Baude <ranger@gentoo.org> jakarta-oro-2.0.8-r3.ebuild:
   Marking jakarta-oro-2.0.8-r3 ppc for bug 419195
@@ -80,4 +84,3 @@
   +jakarta-oro-2.0.8.ebuild:
   Initial import, move from dev-java/oro to dev-java/jakarta-oro. see #71337.
   Introduced support for the examples and source useflag.
-
