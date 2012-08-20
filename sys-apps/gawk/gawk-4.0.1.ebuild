@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-4.0.1.ebuild,v 1.4 2012/08/20 09:56:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-4.0.1.ebuild,v 1.5 2012/08/20 20:28:52 vapier Exp $
 
 EAPI="4"
 
@@ -27,6 +27,7 @@ src_prepare() {
 		-e '/^LN =/s:=.*:= $(LN_S):' \
 		-e '/install-exec-hook:/s|$|\nfoo:|' \
 		Makefile.in doc/Makefile.in
+	sed -i '/^pty1:$/s|$|\n_pty1:|' test/Makefile.in #413327
 }
 
 src_configure() {
