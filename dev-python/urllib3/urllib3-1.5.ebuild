@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urllib3/urllib3-1.5.ebuild,v 1.1 2012/08/19 03:03:11 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urllib3/urllib3-1.5.ebuild,v 1.2 2012/08/20 23:31:28 floppym Exp $
 
 EAPI=4
 
@@ -19,10 +19,11 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc test"
+IUSE="test"
 
 RDEPEND="dev-python/six"
 DEPEND="${RDEPEND}
+	dev-python/setuptools
 	test? ( www-servers/tornado )"
 
 src_prepare() {
