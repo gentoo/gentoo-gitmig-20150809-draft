@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/flask
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask/ChangeLog,v 1.15 2012/08/17 07:45:01 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask/ChangeLog,v 1.16 2012/08/20 17:23:44 floppym Exp $
+
+  20 Aug 2012; Mike Gilbert <floppym@gentoo.org> flask-0.9.ebuild:
+  Drop unused sed statement; applied upstream. Thanks to Arfrever.
 
 *flask-0.9 (17 Aug 2012)
 
