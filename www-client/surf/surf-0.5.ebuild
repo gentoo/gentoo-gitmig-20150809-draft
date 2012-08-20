@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/surf/surf-0.5.ebuild,v 1.1 2012/07/18 17:37:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/surf/surf-0.5.ebuild,v 1.2 2012/08/20 19:12:09 johu Exp $
 
 EAPI=4
 inherit savedconfig toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="http://dl.suckless.org/${PN}/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND="
