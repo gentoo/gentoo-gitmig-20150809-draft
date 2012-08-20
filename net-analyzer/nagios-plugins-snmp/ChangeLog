@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/nagios-plugins-snmp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins-snmp/ChangeLog,v 1.16 2012/08/19 15:38:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins-snmp/ChangeLog,v 1.17 2012/08/20 03:20:17 flameeyes Exp $
+
+*nagios-plugins-snmp-0.6.0-r2 (20 Aug 2012)
+
+  20 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +nagios-plugins-snmp-0.6.0-r2.ebuild, -nagios-plugins-snmp-0.6.0.ebuild:
+  Respect user cflags (bug #432016); install in the same locations as other
+  plugins instead of inventing /usr/nagios; use EAPI=4 and default functions
+  whenever possible.
 
   19 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Re-assign to sysadmin herd.
