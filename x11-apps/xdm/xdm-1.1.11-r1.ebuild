@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/xdm-1.1.11-r1.ebuild,v 1.10 2012/03/18 19:14:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/xdm-1.1.11-r1.ebuild,v 1.11 2012/08/20 21:28:34 mgorny Exp $
 
 EAPI=4
 
@@ -26,7 +26,8 @@ RDEPEND="x11-apps/xrdb
 	x11-apps/sessreg
 	x11-apps/xconsole
 	consolekit? ( sys-auth/consolekit )
-	pam? ( virtual/pam )"
+	pam? ( virtual/pam )
+	!<sys-apps/systemd-187"
 DEPEND="${RDEPEND}
 	consolekit? ( !=sys-auth/pambase-20101024-r1 )
 	x11-proto/xineramaproto
@@ -45,6 +46,14 @@ pkg_setup() {
 	)
 }
 
+src_prepare() {
+	# fedora invented that in -187...
+	sed -i -e 's:^Alias=.*$:Alias=display-manager.service:' \
+		xdm.service.in || die
+
+	xorg-2_src_prepare
+}
+
 src_install() {
 	xorg-2_src_install
 
@@ -55,17 +64,4 @@ src_install() {
 
 	# Keep /var/lib/xdm. This is where authfiles are stored. See #286350.
 	keepdir /var/lib/xdm
-}
-
-pkg_postinst() {
-	# Mea culpa, feel free to remove that after some time --mgorny.
-	if [[ -L "${ROOT}"/etc/systemd/system/graphical.target.wants/${PN}'@tty7'.service ]]
-	then
-		ebegin "Renaming ${PN}@tty7.service to ${PN}.service"
-		ln -s "${ROOT}"/lib/systemd/system/xdm.service \
-			"${ROOT}"/etc/systemd/system/graphical.target.wants/${PN}.service && \
-		rm -f "${ROOT}"/etc/systemd/system/graphical.target.wants/${PN}'@tty7'.service
-		eend ${?} \
-			"Please try to re-enable xdm.service"
-	fi
 }
