@@ -1,6 +1,11 @@
 # ChangeLog for net-nntp/inn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.41 2012/02/08 06:41:07 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.42 2012/08/20 01:12:05 jer Exp $
+
+*inn-2.5.3 (20 Aug 2012)
+
+  20 Aug 2012; Jeroen Roovers <jer@gentoo.org> +inn-2.5.3.ebuild, files/innd:
+  Version bump (bug #432002).
 
   08 Feb 2012; Sergei Trofimovich <slyfox@gentoo.org> files/innd:
   Converted /etc/init.d/innd to use --user instead of --chuid.
