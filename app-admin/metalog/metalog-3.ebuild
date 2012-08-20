@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/metalog-3.ebuild,v 1.1 2012/08/18 17:35:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/metalog-3.ebuild,v 1.2 2012/08/20 02:52:02 vapier Exp $
 
 EAPI="3"
 
@@ -17,6 +17,7 @@ IUSE="unicode"
 
 RDEPEND=">=dev-libs/libpcre-3.4"
 DEPEND="${RDEPEND}
+	virtual/pkgconfig
 	app-arch/xz-utils"
 
 src_prepare() {
