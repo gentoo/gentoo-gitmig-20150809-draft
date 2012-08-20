@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/confuse/confuse-2.7.ebuild,v 1.10 2012/05/04 18:35:53 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/confuse/confuse-2.7.ebuild,v 1.11 2012/08/20 03:17:01 ottxor Exp $
 
 EAPI=3
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://nongnu/confuse/${P}.tar.gz"
 
 LICENSE="ISC"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~sparc-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE="nls static-libs"
 
 DEPEND="sys-devel/flex
