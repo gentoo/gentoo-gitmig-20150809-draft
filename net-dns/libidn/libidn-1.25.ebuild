@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-1.25.ebuild,v 1.8 2012/08/19 18:58:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-1.25.ebuild,v 1.9 2012/08/20 00:01:59 ottxor Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gnu/libidn/${P}.tar.gz"
 
 LICENSE="GPL-2 GPL-3 LGPL-3"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="doc emacs java mono nls static-libs"
 
 DOCS=( AUTHORS ChangeLog FAQ NEWS README THANKS TODO )
@@ -43,7 +43,7 @@ src_configure() {
 		$(use_enable mono csharp mono) \
 		$(use_enable static-libs static) \
 		--disable-valgrind-tests \
-		--with-lispdir="${SITELISP}/${PN}" \
+		--with-lispdir="${EPREFIX}${SITELISP}/${PN}" \
 		--with-packager="Gentoo" \
 		--with-packager-version="r${PR}" \
 		--with-packager-bug-reports="https://bugs.gentoo.org"
@@ -65,7 +65,7 @@ src_install() {
 		elisp-install ${PN} src/*.elc || die
 		elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die
 	else
-		rm -rf "${D}/usr/share/emacs"
+		rm -rf "${ED}/usr/share/emacs"
 	fi
 
 	if use doc ; then
@@ -74,14 +74,14 @@ src_install() {
 
 	if use java ; then
 		java-pkg_newjar java/${P}.jar ${PN}.jar || die
-		rm -rf "${D}"/usr/share/java || die
+		rm -rf "${ED}"/usr/share/java || die
 
 		if use doc ; then
 			java-pkg_dojavadoc doc/java
 		fi
 	fi
 	if ! use static-libs; then
-		rm -f "${D}"/usr/lib*/lib*.la
+		rm -f "${ED}"/usr/lib*/lib*.la
 	fi
 }
 
