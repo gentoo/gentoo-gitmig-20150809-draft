@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.231 2012/08/20 02:41:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.232 2012/08/20 03:46:29 flameeyes Exp $
+
+  20 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  -files/net-snmp-5.7.2_rc1-hppa.patch, net-snmp-5.7.2_rc1.ebuild:
+  Make sure not to depend on automake (not required).
 
   20 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml,
   net-snmp-5.7.2_rc1.ebuild:
