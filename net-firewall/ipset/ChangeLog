@@ -1,6 +1,12 @@
 # ChangeLog for net-firewall/ipset
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.59 2012/06/14 05:57:20 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.60 2012/08/20 05:19:02 robbat2 Exp $
+
+*ipset-6.13 (20 Aug 2012)
+
+  20 Aug 2012; Robin H. Johnson <robbat2@gentoo.org> +ipset-6.13.ebuild:
+  Bug #431456, #418019: version bump. Bug #429814: ensure compile with no
+  /usr/src/linux. Bug #396097 is fixed by upstream as well.
 
   14 Jun 2012; Michael Weber <xmw@gentoo.org> ipset-6.11.ebuild:
   adding ~ppc keyword (bug 304037)
@@ -306,4 +312,3 @@
   10 Mar 2005; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
   +ipset-2.1.0.20050119.ebuild:
   Initial commit, ebuild by Robin H. Johnson <robbat2@gentoo.org>.
-
