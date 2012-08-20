@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/xz-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/ChangeLog,v 1.47 2012/08/20 02:53:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/ChangeLog,v 1.48 2012/08/20 22:22:12 blueness Exp $
+
+  20 Aug 2012; Anthony G. Basile <blueness@gentoo.org> xz-utils-5.0.4.ebuild:
+  Stable ppc ppc64, bug #431846
 
   20 Aug 2012; Jeroen Roovers <jer@gentoo.org> xz-utils-5.0.4.ebuild:
   Stable for HPPA (bug #431846).
