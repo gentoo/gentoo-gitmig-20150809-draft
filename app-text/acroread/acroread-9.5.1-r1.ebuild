@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.5.1-r1.ebuild,v 1.2 2012/06/03 20:30:59 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.5.1-r1.ebuild,v 1.3 2012/08/20 01:26:07 ottxor Exp $
 
 EAPI=4
 
@@ -34,7 +34,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="Adobe"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* ~amd64 ~x86 ~amd64-linux ~x86-linux"
 RESTRICT="strip mirror"
 
 DEPEND="dev-util/bsdiff"
@@ -212,12 +212,12 @@ src_install() {
 
 	dodir /opt
 	chown -R --dereference -L root:0 Adobe
-	cp -dpR Adobe "${D}"opt/ || die
+	cp -dpR Adobe "${ED}"opt/ || die
 
 	# remove some bundled libs
 	for mylib in ${REMOVELIBS} ; do
 		einfo Removing bundled ${mylib}
-		rm -v "${D}"/opt/Adobe/Reader9/Reader/intellinux/lib/${mylib}*
+		rm -v "${ED}"/opt/Adobe/Reader9/Reader/intellinux/lib/${mylib}*
 	done
 
 	doman Adobe/Reader9/Resource/Shell/acroread.1.gz
@@ -240,7 +240,7 @@ src_install() {
 		if use x86 ; then
 			for lib in /opt/seamonkey /usr/lib/seamonkey /usr/lib/mozilla-firefox ; do
 				if [[ -f ${lib}/libgtkembedmoz.so ]] ; then
-					echo "MOZILLA_COMP_PATH=${lib}" >> "${D}"${INSTALLDIR}/Adobe/Reader9/Reader/GlobalPrefs/mozilla_config
+					echo "MOZILLA_COMP_PATH=${lib}" >> "${ED}"${INSTALLDIR}/Adobe/Reader9/Reader/GlobalPrefs/mozilla_config
 					elog "Adobe Reader depends on libgtkembedmoz.so, which I've found on"
 					elog "your system in ${lib}, and configured in ${INSTALLDIR}/Adobe/Reader9/Reader/GlobalPrefs/mozilla_config."
 					break # don't search any more libraries

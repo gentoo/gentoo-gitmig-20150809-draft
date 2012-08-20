@@ -1,6 +1,9 @@
 # ChangeLog for app-text/acroread
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.186 2012/06/03 20:30:59 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.187 2012/08/20 01:26:08 ottxor Exp $
+
+  20 Aug 2012; Christoph Junghans <ottxor@gentoo.org> acroread-9.5.1-r1.ebuild:
+  added prefix keywords
 
   03 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   acroread-9.5.1-r1.ebuild:
