@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.235 2012/08/20 17:06:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.236 2012/08/20 21:19:29 johu Exp $
+
+  20 Aug 2012; Johannes Huber <johu@gentoo.org> net-snmp-5.7.2_rc1.ebuild:
+  Stable for x86, wrt bug #431752
 
   20 Aug 2012; Jeroen Roovers <jer@gentoo.org> net-snmp-5.7.2_rc1.ebuild:
   Fix Manifest.
