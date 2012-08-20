@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.400 2012/06/20 09:26:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.401 2012/08/20 19:45:57 vapier Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -658,7 +658,7 @@ edos2unix() {
 # @CODE
 # binary:   what command does the app run with ?
 # name:     the name that will show up in the menu
-# icon:     give your little like a pretty little icon ...
+# icon:     the icon to use in the menu entry
 #           this can be relative (to /usr/share/pixmaps) or
 #           a full path to an icon
 # type:     what kind of application is this?
