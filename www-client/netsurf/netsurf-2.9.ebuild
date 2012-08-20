@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/netsurf/netsurf-2.9.ebuild,v 1.3 2012/07/18 17:05:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/netsurf/netsurf-2.9.ebuild,v 1.4 2012/08/20 10:52:31 xmw Exp $
 
 EAPI=4
 
@@ -58,6 +58,7 @@ src_prepare() {
 
 	epatch "${FILESDIR}"/${P}-buildsystem.patch
 	epatch "${FILESDIR}"/${P}-includes.patch
+	epatch "${FILESDIR}"/${P}-conditionally-include-image-headers.patch
 }
 
 src_configure() {
