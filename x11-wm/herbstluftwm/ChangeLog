@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/herbstluftwm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/herbstluftwm/ChangeLog,v 1.5 2012/06/17 07:06:45 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/herbstluftwm/ChangeLog,v 1.6 2012/08/20 16:59:22 radhermit Exp $
+
+*herbstluftwm-0.4 (20 Aug 2012)
+
+  20 Aug 2012; Tim Harder <radhermit@gentoo.org> +herbstluftwm-0.4.ebuild:
+  Version bump.
 
   17 Jun 2012; Tim Harder <radhermit@gentoo.org> herbstluftwm-9999.ebuild:
   Drop unused eutils eclass.
