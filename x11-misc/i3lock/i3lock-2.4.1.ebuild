@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/i3lock/i3lock-2.4.1.ebuild,v 1.2 2012/08/03 15:59:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/i3lock/i3lock-2.4.1.ebuild,v 1.3 2012/08/20 20:01:01 johu Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://i3wm.org/${PN}/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="+cairo"
 
 RDEPEND="virtual/pam
