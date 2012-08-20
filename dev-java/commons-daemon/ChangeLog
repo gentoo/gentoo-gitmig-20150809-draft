@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-daemon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-daemon/ChangeLog,v 1.55 2012/06/04 06:47:03 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-daemon/ChangeLog,v 1.56 2012/08/20 02:18:02 ottxor Exp $
+
+  20 Aug 2012; Christoph Junghans <ottxor@gentoo.org>
+  commons-daemon-1.0.9.ebuild:
+  added prefix keywords
 
   04 Jun 2012; Johannes Huber <johu@gentoo.org> commons-daemon-1.0.9.ebuild:
   Stable for x86, wrt bug #418709
@@ -222,4 +226,3 @@
   27 Feb 2004; Chris Aniszczyk <zx@gentoo.org> commons-daemon-1.0.ebuild:
   Initial Import.
   Thanks to Greg Bowyer <bg115@gre.ac.uk> for the initial ebuild. Closes #37931
-
