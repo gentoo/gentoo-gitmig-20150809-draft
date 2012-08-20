@@ -1,6 +1,37 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.84 2012/08/17 08:53:29 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.85 2012/08/20 21:37:10 aidecoe Exp $
+
+*dracut-023 (20 Aug 2012)
+
+  20 Aug 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-023.ebuild:
+  Version bump.  This version allows to install systemd module which has been
+  disabled in previous ebuilds.
+
+  NEWS
+  ~~~~
+  - resume from hibernate fixes
+  - -N option for --no-hostonly
+  - support for systemd crypto handling
+  - new dracut module "crypt-loop"
+  - deprecate the old kernel command line options
+  - more documentation
+  - multipath fixes
+  - i18n: fixed inclusion of "include" keymaps
+  - root on cifs support
+  - support for xfs / reiserfs separate journal device
+
+  Following changes has been backported to Gentoo's 022-r5 and are included by
+  upstream in 023:
+
+  - honor CFLAGS for dracut-install build
+  - / is mounted according to rootflags parameter but forced ro at first.
+    Later it is remounted according to /etc/fstab + rootflags parameter
+    and "ro"/"rw".
+  - new "ro_mnt" option to force ro mount of / and /usr
+  - dracut-install: fixed issue for /var/tmp containing a symlink
+  - only lazy resolve with ldd, if the /var/tmp partition is not mounted with
+  "noexec"
 
   17 Aug 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-022-r5.ebuild:
   Move udev to common dependencies, because its configuration is being checked
