@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6911 2012/08/20 00:35:58 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6912 2012/08/20 16:16:25 aidecoe Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Aug 2012; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  desc/dracut_modules.desc:
+  Add cifs, crypt-loop and systemd to dracut_modules.
 
   20 Aug 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.mask:
   media-gfx/gnome-scan was removed from the tree.
