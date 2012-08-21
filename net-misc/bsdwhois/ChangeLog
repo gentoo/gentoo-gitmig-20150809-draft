@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/bsdwhois
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bsdwhois/ChangeLog,v 1.12 2009/11/04 16:09:24 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bsdwhois/ChangeLog,v 1.13 2012/08/21 03:44:26 ottxor Exp $
+
+  21 Aug 2012; Christoph Junghans <ottxor@gentoo.org> bsdwhois-1.43.2.1.ebuild:
+  added prefix support (bug #432000)
 
   04 Nov 2009; Markus Meier <maekke@gentoo.org> bsdwhois-1.43.2.1.ebuild:
   x86 stable, bug #214397
@@ -48,4 +51,3 @@
   18 Oct 2006; Timothy Redaelli <drizzt@gentoo.org> +metadata.xml,
   +bsdwhois-1.43.2.1.ebuild:
   Initial version, BSD version of whois, usable also on Linux.
-
