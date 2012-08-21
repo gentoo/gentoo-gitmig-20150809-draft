@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/libprelude-1.0.0-r1.ebuild,v 1.13 2012/06/23 09:22:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/libprelude-1.0.0-r1.ebuild,v 1.14 2012/08/21 03:56:55 ottxor Exp $
 
 EAPI="3"
 GENTOO_DEPEND_ON_PERL="no"
@@ -16,7 +16,7 @@ SRC_URI="${HOMEPAGE}/download/releases/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="doc lua perl python ruby"
 
 RDEPEND=">=dev-libs/libgcrypt-1.1.94
