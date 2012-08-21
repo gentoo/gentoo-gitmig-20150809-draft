@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xmlrpc-c
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.120 2012/06/05 20:20:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.121 2012/08/21 12:03:25 qnikst Exp $
+
+  21 Aug 2012; Alexander Vershilov <qnikst@gentoo.org> -xmlrpc-c-1.28.03.ebuild:
+  removing xmlrpc-c due to 320253, 409549; thanks to slepnoga
 
   05 Jun 2012; Brent Baude <ranger@gentoo.org> xmlrpc-c-1.28.03-r1.ebuild:
   Marking xmlrpc-c-1.28.03-r1 ppc for bug 409549
