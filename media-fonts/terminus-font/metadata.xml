@@ -36,5 +36,8 @@
 		<flag name="ru-k">
 			Changes view of Russian letter 'k' (see homepage)
 		</flag>
+		<flag name="center-tilda">
+			Place the '~' character vertically centered on the line instead of to the top.
+		</flag>
 	</use>
 </pkgmetadata>
