@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/json
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.96 2012/08/15 14:41:55 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.97 2012/08/21 19:04:25 graaff Exp $
+
+*json-1.7.5 (21 Aug 2012)
+
+  21 Aug 2012; Hans de Graaff <graaff@gentoo.org> +json-1.7.5.ebuild:
+  Version bump.
 
   15 Aug 2012; Anthony G. Basile <blueness@gentoo.org> json-1.6.7.ebuild:
   Stable ppc ppc64, bug #428756
