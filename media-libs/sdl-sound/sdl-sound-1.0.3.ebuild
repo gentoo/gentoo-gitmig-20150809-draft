@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/sdl-sound-1.0.3.ebuild,v 1.8 2012/05/05 08:02:44 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/sdl-sound-1.0.3.ebuild,v 1.9 2012/08/21 19:47:33 hasufell Exp $
 
 EAPI=2
+inherit autotools eutils
+
 MY_P="${P/sdl-/SDL_}"
 DESCRIPTION="A library that handles the decoding of sound file formats"
 HOMEPAGE="http://icculus.org/SDL_sound/"
@@ -25,6 +27,11 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-underlinking.patch
+	eautoreconf
+}
 
 src_configure() {
 	econf \
