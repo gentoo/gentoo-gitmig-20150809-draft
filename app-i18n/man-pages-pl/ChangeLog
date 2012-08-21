@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/man-pages-pl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-pl/ChangeLog,v 1.31 2012/08/08 14:14:13 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-pl/ChangeLog,v 1.32 2012/08/21 05:59:24 xmw Exp $
+
+  21 Aug 2012; Michael Weber <xmw@gentoo.org> man-pages-pl-20070628-r2.ebuild:
+  ppc stable (bug 418589)
 
   08 Aug 2012; Andreas Schuerch <nativemad@gentoo.org>
   man-pages-pl-20070628-r2.ebuild:
