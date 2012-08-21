@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice-vdagent/spice-vdagent-0.10.1.ebuild,v 1.2 2012/08/19 00:07:14 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice-vdagent/spice-vdagent-0.10.1.ebuild,v 1.3 2012/08/21 21:25:52 cardoe Exp $
 
 EAPI=4
 
@@ -18,6 +18,8 @@ IUSE="+consolekit"
 RDEPEND="x11-libs/libXfixes
 	x11-libs/libXrandr
 	x11-libs/libX11
+	x11-libs/libXinerama
+	>=x11-libs/libpciaccess-0.10
 	>=app-emulation/spice-protocol-0.10.1
 	consolekit? ( sys-auth/consolekit sys-apps/dbus )"
 DEPEND="virtual/pkgconfig
