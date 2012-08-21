@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/vuze
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.54 2012/06/05 15:04:15 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.55 2012/08/21 00:34:13 dirtyepic Exp $
+
+*vuze-4.7.1.2 (21 Aug 2012)
+
+  21 Aug 2012; Ryan Hill <dirtyepic@gentoo.org> +vuze-4.7.1.2.ebuild:
+  Version bump.
 
   05 Jun 2012; Ralph Sennhauser <sera@gentoo.org> vuze-4.7.0.2.ebuild:
   Set xmx value for sparc. Thanks to Alex Buell <alex.buell@munted.eu>. #346743
