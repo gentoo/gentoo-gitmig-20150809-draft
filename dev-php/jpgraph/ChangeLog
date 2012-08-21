@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/jpgraph
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/jpgraph/ChangeLog,v 1.27 2012/07/15 16:59:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/jpgraph/ChangeLog,v 1.28 2012/08/21 07:39:47 xmw Exp $
+
+  21 Aug 2012; Michael Weber <xmw@gentoo.org> jpgraph-3.0.7-r1.ebuild:
+  ppc stable (303745)
 
   15 Jul 2012; Raúl Porcel <armin76@gentoo.org> jpgraph-3.0.7-r1.ebuild:
   alpha/sparc stable wrt #303745
@@ -158,4 +161,3 @@
   18 Sep 2005; Benedikt Boehm <hollow@gentoo.org> +metadata.xml,
   +jpgraph-2.0_beta.ebuild:
   initial version
-
