@@ -1,6 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.133 2012/08/01 20:15:30 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.134 2012/08/21 12:43:29 xmw Exp $
+
+# Michael Weber <xmw@gentoo.org> (21 Aug 2012)
+# Masked for missing keywords on sys-libs/freeipmi
+net-analyzer/munin ipmi
 
 # Anthony G. Basile <blueness@gentoo.org> (16 Jul 2012)
 # Only work on amd64/x86
