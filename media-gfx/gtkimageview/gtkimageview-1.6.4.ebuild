@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkimageview/gtkimageview-1.6.4.ebuild,v 1.25 2012/05/29 16:42:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkimageview/gtkimageview-1.6.4.ebuild,v 1.26 2012/08/21 04:39:21 ottxor Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="http://trac.bjourne.webfactional.com/attachment/wiki/WikiStart/${P}.tar
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x64-solaris ~x86-solaris"
 IUSE="doc examples static-libs"
 
 # tests do not work with userpriv
@@ -45,7 +45,7 @@ src_prepare() {
 	sed -e '/libtest.la/s:$: -lm:g' -i tests/Makefile.am || die
 
 	if use doc; then
-		sed "/^TARGET_DIR/i \GTKDOC_REBASE=/usr/bin/gtkdoc-rebase" \
+		sed "/^TARGET_DIR/i \GTKDOC_REBASE=${EPREFIX}/usr/bin/gtkdoc-rebase" \
 			-i gtk-doc.make || die "sed 3 failed"
 	else
 		sed "/^TARGET_DIR/i \GTKDOC_REBASE=true" \
