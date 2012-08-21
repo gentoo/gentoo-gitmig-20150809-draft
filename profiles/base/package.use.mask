@@ -1,9 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.383 2012/08/04 11:01:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.384 2012/08/21 14:54:50 flameeyes Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Diego Elio Pettenò (20 Aug 2012)
+# The prevent-removal USE flag is only implemented for Linux.
+sys-auth/pam_mktemp prevent-removal
 
 # Ben de Groot <yngwin@gentoo.org> (30 Jul 2012)
 # fontconfig-infinality dependency not yet keyworded on most arches
