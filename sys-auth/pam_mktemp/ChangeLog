@@ -1,6 +1,12 @@
 # ChangeLog for sys-auth/pam_mktemp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mktemp/ChangeLog,v 1.27 2012/04/26 17:54:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mktemp/ChangeLog,v 1.28 2012/08/21 02:32:02 flameeyes Exp $
+
+  21 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/pam_mktemp-1.1.1-e2fsprogs-libs.patch, -pam_mktemp-1.0.3.ebuild,
+  pam_mktemp-1.1.1.ebuild:
+  Remove old; fix building when e2fsprogs is not installed (by using linux-
+  headers instead), closes bug #432128.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> pam_mktemp-1.1.1.ebuild:
   keyword ~amd64-fbsd
@@ -95,4 +101,3 @@
   17 Apr 2007; Sven Wegener <swegener@gentoo.org> +metadata.xml,
   +pam_mktemp-1.0.2.ebuild:
   Initial commit, ebuild written by me.
-
