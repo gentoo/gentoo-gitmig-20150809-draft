@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/neatx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neatx/ChangeLog,v 1.17 2012/02/05 01:53:02 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neatx/ChangeLog,v 1.18 2012/08/21 13:34:00 voyageur Exp $
+
+*neatx-0.3.1_p59-r3 (21 Aug 2012)
+
+  21 Aug 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  neatx-0.3.1_p59-r1.ebuild, neatx-0.3.1_p59-r2.ebuild,
+  +neatx-0.3.1_p59-r3.ebuild, +files/neatx-0.3.1_p59-use_libexecdir.patch:
+  Use libexecdir instead of libdir (error in newer automake), bug #428626.
+  Inherit user eclass
 
   05 Feb 2012; Mike Gilbert <floppym@gentoo.org> neatx-0.3.1_p59-r1.ebuild,
   neatx-0.3.1_p59-r2.ebuild:

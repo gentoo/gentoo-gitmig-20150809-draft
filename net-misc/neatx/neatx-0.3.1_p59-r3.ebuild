@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neatx/neatx-0.3.1_p59-r2.ebuild,v 1.7 2012/08/21 13:34:00 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neatx/neatx-0.3.1_p59-r3.ebuild,v 1.1 2012/08/21 13:34:00 voyageur Exp $
 
-EAPI="3"
+EAPI=4
 
 PYTHON_DEPEND="2"
 inherit eutils autotools python multilib user
@@ -45,6 +45,8 @@ pkg_setup () {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-use_libexecdir.patch
+
 	sed -i -e "s/rst2html]/rst2html.py]/" configure.ac \
 		|| die "configure.ac sed failed"
 	sed -e "s#/lib/neatx#/neatx#" \
@@ -66,7 +68,7 @@ src_compile() {
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die "Failed to install"
+	emake install DESTDIR="${D}"
 	fperms 777 /var/lib/neatx/sessions
 	dodir ${NX_HOME_DIR}/.ssh
 	fowners nx:nx ${NX_HOME_DIR}
