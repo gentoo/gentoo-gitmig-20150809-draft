@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs-vcs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.109 2012/08/15 18:55:19 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.110 2012/08/21 19:20:42 ulm Exp $
+
+  21 Aug 2012; Ulrich Müller <ulm@gentoo.org> emacs-vcs-24.2.9999.ebuild:
+  Upstream changed hard link for emacs binary to symbolic link. Remove the
+  symlink and rename the binary. Bug 432194.
 
 *emacs-vcs-24.2.9999 (15 Aug 2012)
 
