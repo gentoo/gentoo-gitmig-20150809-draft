@@ -1,6 +1,12 @@
 # ChangeLog for net-print/cups-filters
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.31 2012/08/21 14:01:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.32 2012/08/21 18:01:08 scarabeus Exp $
+
+*cups-filters-1.0.23 (21 Aug 2012)
+
+  21 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> +cups-filters-1.0.23.ebuild,
+  -cups-filters-1.0.19-r1.ebuild, -cups-filters-1.0.20.ebuild:
+  Version bump to 1.0.23. Drop older. Depend on qpdf.
 
   21 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> cups-filters-9999.ebuild:
   Depend on qpdf.
