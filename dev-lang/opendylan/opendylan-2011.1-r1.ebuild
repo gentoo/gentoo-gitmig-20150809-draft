@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/opendylan/opendylan-2011.1.ebuild,v 1.1 2012/08/20 09:21:25 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/opendylan/opendylan-2011.1-r1.ebuild,v 1.1 2012/08/21 05:22:33 patrick Exp $
 EAPI=4
 
 inherit autotools
@@ -40,7 +40,7 @@ src_configure() {
 	if has_version =dev-lang/opendylan-bin-2011.1; then
 		PATH=/opt/opendylan-2011.1/bin/:$PATH
 	fi
-	econf || die
+	econf --prefix=/opt/opendylan || die
 }
 
 src_compile() {

@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/opendylan
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/opendylan/ChangeLog,v 1.1 2012/08/20 09:21:25 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/opendylan/ChangeLog,v 1.2 2012/08/21 05:22:33 patrick Exp $
+
+*opendylan-9999 (21 Aug 2012)
+*opendylan-2011.1-r1 (21 Aug 2012)
+
+  21 Aug 2012; Patrick Lauer <patrick@gentoo.org> +opendylan-2011.1-r1.ebuild,
+  +opendylan-9999.ebuild, -opendylan-2011.1.ebuild:
+  Changing install path, adding live ebuild
 
 *opendylan-2011.1 (20 Aug 2012)
 
