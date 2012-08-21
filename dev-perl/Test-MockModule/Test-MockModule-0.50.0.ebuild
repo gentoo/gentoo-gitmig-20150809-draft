@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-MockModule/Test-MockModule-0.50.0.ebuild,v 1.1 2012/07/16 15:46:01 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-MockModule/Test-MockModule-0.50.0.ebuild,v 1.2 2012/08/21 15:48:51 xmw Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Override subroutines in a module for unit testing"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="test"
 
 DEPEND="
