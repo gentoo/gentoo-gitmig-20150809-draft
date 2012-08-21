@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-9999.ebuild,v 1.19 2012/05/31 11:15:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-9999.ebuild,v 1.20 2012/08/21 13:28:37 scarabeus Exp $
 
 EAPI=4
 
-PYTHON_DEPEND="python? *"
+PYTHON_DEPEND="python? 2" # it can use only ONE python, so stick with two for now
 
 EGIT_REPO_URI="git://git.sv.gnu.org/weechat.git"
 [[ ${PV} == "9999" ]] && GIT_ECLASS="git-2"
@@ -56,7 +56,10 @@ for X in "${LANGS[@]}" ; do
 done
 
 pkg_setup() {
-	use python && python_pkg_setup
+	if use python; then
+		python_set_active_version 2
+		python_pkg_setup
+	fi
 }
 
 src_prepare() {
