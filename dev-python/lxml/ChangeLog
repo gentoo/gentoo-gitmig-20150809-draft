@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/lxml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.132 2012/08/07 20:25:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.133 2012/08/21 07:50:52 radhermit Exp $
+
+*lxml-2.3.5 (21 Aug 2012)
+
+  21 Aug 2012; Tim Harder <radhermit@gentoo.org> +lxml-2.3.5.ebuild:
+  Version bump. Update to EAPI 4.
 
   07 Aug 2012; Alexis Ballier <aballier@gentoo.org> lxml-2.3.4.ebuild:
   keyword ~amd64-fbsd
