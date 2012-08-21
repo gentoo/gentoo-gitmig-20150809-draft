@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/use.mask,v 1.8 2012/07/16 04:15:42 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/use.mask,v 1.9 2012/08/21 15:16:14 flameeyes Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -amd64-fbsd
@@ -42,3 +42,6 @@ python_targets_pypy1_7
 python_targets_pypy1_8
 python_targets_jython2_5
 
+# Diego Elio Pettenò <flameeyes@gentoo.org> (21 Aug 2012)
+# IPMI is only implemented for x86, amd64 and ia64
+-ipmi

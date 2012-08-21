@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6914 2012/08/21 15:01:43 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6915 2012/08/21 15:16:14 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  arch/amd64-fbsd/use.mask, arch/amd64/use.mask, arch/ia64/use.mask,
+  arch/powerpc/package.use.mask, arch/x86-fbsd/use.mask, arch/x86/use.mask,
+  base/use.mask:
+  Mask ipmi USE flag on all arches but x86/amd64/ia64.
 
   21 Aug 2012; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
   Remove mask on gnustep-libs/popplerkit and gnustep-apps/vindaloo after last
