@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.33_pre20110403.ebuild,v 1.6 2012/08/20 03:25:24 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.33_pre20110403.ebuild,v 1.7 2012/08/21 03:29:23 ottxor Exp $
 
 EAPI="3"
 
@@ -55,7 +55,7 @@ src_compile() {
 
 src_install() {
 	emake prefix="${EPREFIX}"${DIETHOME} \
-		DESTDIR="${ED}" \
+		DESTDIR="${D}" \
 		install-bin \
 		install-headers \
 		|| die "make install failed"
