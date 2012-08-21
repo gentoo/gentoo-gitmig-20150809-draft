@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.7.6.ebuild,v 1.1 2012/08/21 20:05:14 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.7.6.ebuild,v 1.2 2012/08/21 20:53:41 tommy Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -185,7 +185,6 @@ src_configure() {
 		--disable-mod-activation \
 		--disable-neon-version-check \
 		--disable-static
-#		--with-sqlite="${EPREFIX}/usr"
 }
 
 src_compile() {
