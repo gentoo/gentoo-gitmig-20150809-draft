@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups-filters
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.30 2012/08/16 17:08:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.31 2012/08/21 14:01:17 scarabeus Exp $
+
+  21 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> cups-filters-9999.ebuild:
+  Depend on qpdf.
 
   16 Aug 2012; Jeroen Roovers <jer@gentoo.org> cups-filters-1.0.20.ebuild:
   Marked ~hppa (bug #428356).
