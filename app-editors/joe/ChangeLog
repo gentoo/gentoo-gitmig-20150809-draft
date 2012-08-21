@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/joe
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/ChangeLog,v 1.76 2012/02/10 17:53:39 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/ChangeLog,v 1.77 2012/08/21 14:21:30 flameeyes Exp $
+
+  21 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> joe-3.7-r1.ebuild:
+  QA: restore src_compile after prefix screwup.
 
   10 Feb 2012; Fabian Groffen <grobian@gentoo.org>
   +files/joe-3.7-sanitise-includes.patch, joe-3.7-r1.ebuild:

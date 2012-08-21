@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/joe-3.7-r1.ebuild,v 1.8 2012/02/10 17:53:39 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/joe-3.7-r1.ebuild,v 1.9 2012/08/21 14:21:29 flameeyes Exp $
 
 EAPI="3"
 
@@ -33,7 +33,7 @@ src_prepare() {
 	fi
 }
 
-src_compile() {
+src_configure() {
 	# Bug 34609 (joe 2.9.8 editor seg-faults on 'find and replace' when compiled with -Os)
 	replace-flags "-Os" "-O2"
 
