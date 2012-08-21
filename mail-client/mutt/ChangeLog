@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/mutt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.229 2012/06/22 02:25:54 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.230 2012/08/21 11:21:53 ago Exp $
+
+  21 Aug 2012; Agostino Sarubbo <ago@gentoo.org> mutt-1.5.21-r10.ebuild:
+  Stable for amd64, wrt bug #432050
 
   22 Jun 2012; Fabian Groffen <grobian@gentoo.org> mutt-1.5.21-r10.ebuild:
   Drop Solaris ncurses pach, it no longer fixes, but rather seems to introduce
