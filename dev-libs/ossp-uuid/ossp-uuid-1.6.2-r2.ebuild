@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ossp-uuid/ossp-uuid-1.6.2-r2.ebuild,v 1.1 2012/05/24 20:07:50 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ossp-uuid/ossp-uuid-1.6.2-r2.ebuild,v 1.2 2012/08/21 04:09:52 ottxor Exp $
 
 EAPI="4"
 
@@ -20,7 +20,7 @@ HOMEPAGE="http://www.ossp.org/pkg/lib/uuid/"
 SRC_URI="ftp://ftp.ossp.org/pkg/lib/uuid/${MY_P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-macos"
 IUSE="+cxx perl php static-libs"
 
 DEPEND="perl? ( dev-lang/perl )"
@@ -52,7 +52,7 @@ src_configure() {
 	# * collides with e2fstools libs and includes if not moved around
 	# * pgsql-bindings need PostgreSQL-sources and are included since PostgreSQL 8.3
 	econf \
-		--includedir=/usr/include/ossp \
+		--includedir="${EPREFIX}"/usr/include/ossp \
 		--with-dce \
 		--without-pgsql \
 		--without-php \
@@ -84,11 +84,11 @@ src_install() {
 		newins uuid.php5 uuid.php
 	fi
 
-	use static-libs || rm -rf "${D}"/usr/lib*/*.la
+	use static-libs || rm -rf "${ED}"/usr/lib*/*.la
 
-	mv "${D}/usr/$(get_libdir)/pkgconfig"/{,ossp-}uuid.pc
-	mv "${D}/usr/share/man/man3"/uuid.3{,ossp}
-	mv "${D}/usr/share/man/man3"/uuid++.3{,ossp}
+	mv "${ED}/usr/$(get_libdir)/pkgconfig"/{,ossp-}uuid.pc
+	mv "${ED}/usr/share/man/man3"/uuid.3{,ossp}
+	mv "${ED}/usr/share/man/man3"/uuid++.3{,ossp}
 }
 
 src_test() {
