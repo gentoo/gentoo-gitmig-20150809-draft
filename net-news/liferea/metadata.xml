@@ -17,8 +17,5 @@
 		<flag name='libnotify'>
 			Enable popup notifications
 		</flag>
-		<flag name='lua'>
-			Enable lua scripting
-		</flag>
 	</use>
 </pkgmetadata>
