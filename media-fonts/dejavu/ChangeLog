@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/dejavu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/ChangeLog,v 1.166 2012/04/26 19:28:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/ChangeLog,v 1.167 2012/08/21 12:44:19 scarabeus Exp $
+
+  21 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> -dejavu-2.30.ebuild,
+  -dejavu-2.32.ebuild:
+  No need to keep the older around. Cleanup.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> dejavu-2.33.ebuild:
   keyword ~amd64-fbsd
@@ -625,4 +629,3 @@
   +dejavu-1.4.ebuild:
   Initial import. Ebuild submitted by Vaclov Slavik
   <vaclav.slavik@matfyz.cz>, closing bug #55950.
-
