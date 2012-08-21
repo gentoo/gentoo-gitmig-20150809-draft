@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/i3
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/ChangeLog,v 1.20 2012/06/26 06:39:36 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/ChangeLog,v 1.21 2012/08/21 11:31:11 xarthisius Exp $
+
+  21 Aug 2012; Kacper Kowalik <xarthisius@gentoo.org> -i3-4.1.2-r1.ebuild:
+  Drop old
 
   26 Jun 2012; Jeff Horelick <jdhore@gentoo.org> i3-4.2.ebuild:
   marked x86 per bug 422441
@@ -104,4 +107,3 @@
   Initial import. Ebuild based on extensive work done by Ondrej Sukup (mimi_vx)
   <mimi.vx@gmail.com> and Andre-Patrick Bubel (moredread) <code@andre-bubel.de>
   in sunrise overlay. Fixes bug 267476
-
