@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds9/pyds9-1.4.ebuild,v 1.2 2012/08/02 17:35:29 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds9/pyds9-1.5.ebuild,v 1.1 2012/08/21 11:55:00 xarthisius Exp $
 
 EAPI=3
 
@@ -14,10 +14,10 @@ DESCRIPTION="Python interface to XPA to communicate with DS9"
 HOMEPAGE="http://hea-www.harvard.edu/saord/ds9/pyds9/"
 SRC_URI="http://hea-www.harvard.edu/saord/download/ds9/python/${P}.tar.gz"
 
-IUSE=""
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-LICENSE="BSD"
+IUSE=""
 
 DEPEND="x11-libs/xpa"
 RDEPEND="${DEPEND}
