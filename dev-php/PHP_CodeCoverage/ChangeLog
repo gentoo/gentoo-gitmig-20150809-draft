@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PHP_CodeCoverage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PHP_CodeCoverage/ChangeLog,v 1.6 2012/08/21 12:42:30 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PHP_CodeCoverage/ChangeLog,v 1.7 2012/08/21 14:54:29 olemarkus Exp $
+
+  21 Aug 2012; Ole Markus With <olemarkus@gentoo.org>
+  -PHP_CodeCoverage-1.0.4.ebuild:
+  Removing old version
 
   21 Aug 2012; Johannes Huber <johu@gentoo.org> PHP_CodeCoverage-1.1.2.ebuild:
   Stable for x86, wrt bug #430576
@@ -63,4 +67,3 @@
   04 Oct 2010; Markus Ullmann <jokey@gentoo.org>
   +PEAR-PHP_CodeCoverage-1.0.0.ebuild, +metadata.xml:
   Initial import for phpunit-3.5
-
