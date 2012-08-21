@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/jruby-openssl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jruby-openssl/ChangeLog,v 1.16 2012/07/09 09:38:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jruby-openssl/ChangeLog,v 1.17 2012/08/21 18:09:58 graaff Exp $
+
+  21 Aug 2012; Hans de Graaff <graaff@gentoo.org> -jruby-openssl-0.6-r1.ebuild:
+  Cleanup.
 
   09 Jul 2012; Hans de Graaff <graaff@gentoo.org> metadata.xml:
   Put ruby herd as the primary herd so match actual work done, as dicussed with
