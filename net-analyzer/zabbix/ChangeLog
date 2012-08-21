@@ -1,6 +1,17 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.105 2012/08/01 22:27:49 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.106 2012/08/21 08:01:44 mattm Exp $
+
+*zabbix-1.8.15 (21 Aug 2012)
+
+  21 Aug 2012; Matthew Marlowe <mattm@gentoo.org> +zabbix-1.8.15.ebuild,
+  -zabbix-1.8.11-r2.ebuild, -zabbix-1.8.14.ebuild, -zabbix-2.0.2.ebuild:
+  Bump for Zabbix 1.8.15 Removed releases with recent security vulnerabilities.
+  Note -- 1.8.15 will become the new stable after I have time to do more testing
+  with it. 1.8.15 will be the last stable of the 1.8.x train which a 2.0.x
+  stable will not immediately supersede. 2.0.x releases are currently at
+  2.0.2..we'll probably move 2.0.3 or 2.0.4 out of testing arches to stable if
+  the amount of bug fixing churn slows down significantly.
 
 *zabbix-2.0.2-r1 (01 Aug 2012)
 
