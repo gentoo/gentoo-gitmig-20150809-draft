@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm5/rpm5-5.3.5.ebuild,v 1.1 2012/07/26 08:02:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm5/rpm5-5.3.5.ebuild,v 1.2 2012/08/21 03:39:33 ottxor Exp $
 
 EAPI=4
 
@@ -197,13 +197,13 @@ pkg_postinst() {
 	chown -R rpm:rpm "${EROOT}"/usr/$(get_libdir)/rpm
 	chown -R rpm:rpm "${EROOT}"/var/lib/rpm
 	chown rpm:rpm "${EROOT}"/usr/bin/rpm{,2cpio,build,constant}
-	if [[ ${EROOT} == "/" ]] ; then
+	if [[ ${ROOT} == "/" ]] ; then
 		if [[ -f ${EROOT}/var/lib/rpm/Packages ]] ; then
 			einfo "RPM database found... Rebuilding database (may take a while)..."
-			"${EROOT}"/usr/bin/rpm --rebuilddb --root="${ROOT}"
+			"${EROOT}"/usr/bin/rpm --rebuilddb --root="${EROOT}"
 		else
 			einfo "No RPM database found... Creating database..."
-			"${EROOT}"/usr/bin/rpm --initdb --root="${ROOT}"
+			"${EROOT}"/usr/bin/rpm --initdb --root="${EROOT}"
 		fi
 	fi
 	chown rpm:rpm "${EROOT}"/var/lib/rpm/*
