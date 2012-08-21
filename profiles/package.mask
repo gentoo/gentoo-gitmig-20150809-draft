@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14066 2012/08/20 00:35:58 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14067 2012/08/21 15:01:43 voyageur Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -170,15 +170,6 @@ dev-ruby/mail:0
 # A more recent source build maintained by the community is available in the
 # seden overlay. A more recent binary is available in the java-overlay.
 <=dev-util/eclipse-sdk-3.5.1-r1
-
-# Bernard Cafarelli <voyageur@gentoo.org> (16 Jul 2012)
-# No upstream development since 2008
-# Needs patching for poppler-0.20
-# Fails to run with current GNUstep runtime and stable poppler
-# Use another poppler-based viewer or gnustep-apps/gspdf instead
-# Removal in 30 days (bug #426268)
-gnustep-libs/popplerkit
-gnustep-apps/vindaloo
 
 # Johannes Huber <johu@gentoo.org> (16 Jul 2012)
 # Tests fails to build, needs >=net-libs/telepathy-glib-0.19.0.
