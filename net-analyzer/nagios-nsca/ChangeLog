@@ -1,6 +1,17 @@
 # ChangeLog for net-analyzer/nagios-nsca
 # Copyright 2002-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nsca/ChangeLog,v 1.40 2012/08/19 15:22:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nsca/ChangeLog,v 1.41 2012/08/21 17:30:54 flameeyes Exp $
+
+*nagios-nsca-2.7.2-r102 (21 Aug 2012)
+
+  21 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +nagios-nsca-2.7.2-r102.ebuild, -nagios-nsca-2.7.2-r101.ebuild,
+  files/nsca.init, metadata.xml:
+  Revision bump: inherit user eclass for creating the nagios user and group;
+  don't drop to nagios:nagios through s-s-d, leave it to the daemon to do that,
+  otherwise we don't get a pid_file; make sure that nsca is queued after icinga
+  or nagios when starting the init script; add a crypt USE flag to depend on
+  libmcrypt so that you can disable it.
 
   19 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Re-assign to sysadmin herd.
