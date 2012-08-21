@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/dbd-pg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbd-pg/ChangeLog,v 1.13 2012/08/16 03:52:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbd-pg/ChangeLog,v 1.14 2012/08/21 16:37:49 johu Exp $
+
+  21 Aug 2012; Johannes Huber <johu@gentoo.org> dbd-pg-0.3.9.ebuild:
+  Stable for x86, wrt bug #429976
 
   16 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> dbd-pg-0.3.8.ebuild:
   Update after Ruby packages move.
