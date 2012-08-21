@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/qterm-0.5.12.ebuild,v 1.6 2012/07/19 15:35:06 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/qterm-0.5.12.ebuild,v 1.7 2012/08/21 01:14:41 naota Exp $
 
 EAPI=3
 inherit cmake-utils eutils
@@ -23,7 +23,8 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/"${PN}"-0.5.11-gentoo.patch \
-			"${FILESDIR}"/${P}-qt4.patch
+			"${FILESDIR}"/${P}-qt4.patch \
+			"${FILESDIR}"/${P}-glibc216.patch
 }
 
 src_install() {
