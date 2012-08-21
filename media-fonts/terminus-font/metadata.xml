@@ -6,9 +6,6 @@
 		<flag name="a-like-o">
 			Changes view of letter 'a' - a looks like o	(see homepage)
 		</flag>
-		<flag name="bolddiag">
-			Boldified diagonal parts of '4', 'k', 'x' and some other chars
-		</flag>
 		<flag name="distinct-l">
 			ll2 variant with more distinctive l (lowercase L)
 		</flag>
@@ -39,6 +36,5 @@
 		<flag name="ru-k">
 			Changes view of Russian letter 'k' (see homepage)
 		</flag>
-		<flag name="width">Wider versions of some font elements</flag>
 	</use>
 </pkgmetadata>
