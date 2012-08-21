@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.9.0.ebuild,v 1.1 2012/08/01 22:17:23 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.9.0.ebuild,v 1.2 2012/08/21 20:21:58 johu Exp $
 
 EAPI=4
 
@@ -53,6 +53,8 @@ KMEXTRACTONLY="
 "
 
 add_blocker kdeaccessibility-colorschemes '<4.6.50'
+
+PATCHES=( "${FILESDIR}/${P}-parallel-build.patch" )
 
 src_unpack() {
 	if use handbook; then

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.8.5.ebuild,v 1.1 2012/08/07 11:05:02 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.8.5.ebuild,v 1.2 2012/08/21 20:21:58 johu Exp $
 
 EAPI=4
 
@@ -51,6 +51,8 @@ KMEXTRACTONLY="
 	libs/
 	plasma/
 "
+
+PATCHES=( "${FILESDIR}/${PN}-4.9.0-parallel-build.patch" )
 
 add_blocker kdeaccessibility-colorschemes '<4.6.50'
 
