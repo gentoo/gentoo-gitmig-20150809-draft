@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.11.3.ebuild,v 1.7 2012/08/05 19:56:26 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.11.3.ebuild,v 1.8 2012/08/21 20:36:48 mr_bones_ Exp $
 
 EAPI=4
 CMAKE_MIN_VERSION="2.4.7"
@@ -40,11 +40,11 @@ DEPEND="${RDEPEND}
 	x11-libs/libXt"
 DOCS=( AUTHORS ChangeLog README )
 
-LANGS=( aa ab ae af ak am an ar as ast av az ba be bg bh bi bn bo br bs
-ca ce cs cv cy da de dv el en en_AU en_CA en_GB en_US eo es et eu fa fi
-fil fj fr fy ga gd gl gn gu gv haw he hi hr hrx ht hu hy ia id is it ja
-ka kg kk kn ko ky la lb lo lt lv mi mk ml mn mo mr ms mt nan nb nl nn oc
-os pa pl pt pt_BR ro ru sco se si sk sl sm sq sr su sv sw ta te tg th tl
+LANGS=( af ak am ar as ast az be bg bn bo br bs
+ca cs cy da de el en en_CA en_GB en_US eo es et eu fa fi
+fil fr fy ga gd gl gu he hi hr hu hy ia id is it ja
+ka kk kn ko ky la lb lo lt lv mk ml mn mr ms mt nan nb nl nn oc
+pa pl pt pt_BR ro ru sco se si sk sl sq sr sv sw ta te tg th tl
 tr tt uk uz vi zh_CN zh_HK zh_TW zu )
 for X in "${LANGS[@]}" ; do
 	IUSE="${IUSE} linguas_${X}"

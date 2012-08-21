@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/stellarium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.100 2012/08/05 19:56:26 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.101 2012/08/21 20:36:48 mr_bones_ Exp $
+
+  21 Aug 2012; Michael Sterrett <mr_bones_@gentoo.org> stellarium-0.11.3.ebuild:
+  punt unsupported locales (bug #432064)
 
   05 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml,
   stellarium-0.11.3.ebuild:
