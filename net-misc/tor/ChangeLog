@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.344 2012/08/21 17:02:39 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.345 2012/08/21 17:09:04 blueness Exp $
+
+  21 Aug 2012; Anthony G. Basile <blueness@gentoo.org> tor-0.2.2.38.ebuild:
+  Stable ppc ppc64, masked tor-hardening, bug #432188
 
   21 Aug 2012; Anthony G. Basile <blueness@gentoo.org> tor-0.2.2.38.ebuild:
   Stable arm, bug #432188
