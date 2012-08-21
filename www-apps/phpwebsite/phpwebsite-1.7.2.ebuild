@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/phpwebsite-1.7.2.ebuild,v 1.3 2012/07/15 17:04:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/phpwebsite-1.7.2.ebuild,v 1.4 2012/08/21 16:04:22 xmw Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://phpwebsite.appstate.edu"
 SRC_URI="mirror://sourceforge/${PN}/${PN}_${MY_PV}.tar.gz"
 
 LICENSE="LGPL-2.1"
-KEYWORDS="~amd64 ~ppc ~ppc64 x86"
+KEYWORDS="~amd64 ppc ~ppc64 x86"
 IUSE="+mysql postgres"
 REQUIRED_USE="|| ( mysql postgres )"
 

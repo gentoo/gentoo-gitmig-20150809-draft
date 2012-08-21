@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/phpwebsite
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/ChangeLog,v 1.64 2012/07/15 17:04:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/ChangeLog,v 1.65 2012/08/21 16:04:22 xmw Exp $
+
+  21 Aug 2012; Michael Weber <xmw@gentoo.org> phpwebsite-1.7.2.ebuild:
+  ppc stable (bug 260274)
 
   15 Jul 2012; Raúl Porcel <armin76@gentoo.org> phpwebsite-0.10.2.ebuild,
   phpwebsite-1.7.2.ebuild:
