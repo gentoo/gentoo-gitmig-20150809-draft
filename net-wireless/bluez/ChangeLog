@@ -1,6 +1,16 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.141 2012/08/10 08:48:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.142 2012/08/21 13:04:10 pacho Exp $
+
+*bluez-4.101-r3 (21 Aug 2012)
+
+  21 Aug 2012; Pacho Ramos <pacho@gentoo.org> +bluez-4.101-r3.ebuild,
+  +files/bluez-4.101-network1.patch, +files/bluez-4.101-network2.patch,
+  +files/bluez-4.101-network3.patch, +files/bluez-4.101-network4.patch:
+  Include some upstream fixes for networking, this also solves PAN connection
+  allowing it to work with NetworkManager again (and allowing me to commit this
+  ;)) without getting 'Error connecting with bluez: Method Connect with
+  signature s on interface org.bluez.Network doesn't exist'.
 
 *bluez-4.101-r2 (10 Aug 2012)
 
