@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.5.0.ebuild,v 1.3 2012/08/20 21:01:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.5.0.ebuild,v 1.4 2012/08/21 19:06:56 dilfridge Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -43,7 +43,7 @@ SLOT="4"
 
 IUSE="attica +crypt +eigen +exif fftw +fontconfig freetds +gif glew +glib +gsf
 gsl +jpeg jpeg2k +kdcraw kdepim +lcms marble mysql +okular opengtl openexr
-+pdf postgres +semantic-desktop +ssl sybase test tiff +threads +truetype
++pdf postgres +semantic-desktop spacenav +ssl sybase test tiff +threads +truetype
 word-perfect xbase +xml +xslt"
 
 # please do not sort here, order is same as in CMakeLists.txt
@@ -113,6 +113,7 @@ RDEPEND="
 		dev-libs/libpqxx
 	)
 	semantic-desktop? ( dev-libs/soprano $(add_kdebase_dep kdelibs semantic-desktop) )
+	spacenav? ( dev-libs/libspnav  )
 	ssl? ( dev-libs/openssl )
 	sybase? ( dev-db/freetds )
 	tiff? ( media-libs/tiff )
@@ -150,9 +151,9 @@ src_configure() {
 		"-DGHNS=ON"
 		"-DWITH_X11=ON"
 		"-DWITH_Qt4=ON"
-		"-DBUILD_libmsooxml=ON"
-		"-DWITH_Iconv=ON"
-		"-DQT3SUPPORT=ON" # kde4-base.eclass pulls this in anyway
+		"-DBUILD_libmsooxml=ON"      # only internal code, no deps
+		"-DWITH_Iconv=ON"            # available on all supported arches and many more
+		"-DQT3SUPPORT=ON"            # kde4-base.eclass pulls this in anyway
 	)
 
 	# default disablers
@@ -164,7 +165,6 @@ src_configure() {
 		"-DWITH_TINY=OFF"
 		"-DWITH_CreateResources=OFF" # NOT PACKAGED: http://create.freedesktop.org/
 		"-DWITH_DCMTK=OFF"           # NOT PACKAGED: http://www.dcmtk.org/dcmtk.php.en
-		"-DWITH_Spnav=OFF"           # NOT PACKAGED: http://spacenav.sourceforge.net/
 	)
 
 	# regular options
@@ -198,6 +198,7 @@ src_configure() {
 		$(cmake-utils_use_with postgres PostgreSQL)
 		$(cmake-utils_use_with semantic-desktop Soprano)
 		$(cmake-utils_use semantic-desktop NEPOMUK)
+		$(cmake-utils_use_with spacenav Spnav)
 		$(cmake-utils_use_with ssl OpenSSL)
 		$(cmake-utils_use_with sybase FreeTDS)
 		$(cmake-utils_use_with tiff TIFF)
