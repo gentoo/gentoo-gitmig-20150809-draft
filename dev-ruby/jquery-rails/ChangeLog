@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/jquery-rails
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jquery-rails/ChangeLog,v 1.17 2012/06/17 06:48:57 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jquery-rails/ChangeLog,v 1.18 2012/08/21 06:35:04 graaff Exp $
+
+*jquery-rails-2.1.1 (21 Aug 2012)
+
+  21 Aug 2012; Hans de Graaff <graaff@gentoo.org> +jquery-rails-2.1.1.ebuild:
+  Version bump with jquery 1.8.
 
   17 Jun 2012; Hans de Graaff <graaff@gentoo.org> jquery-rails-1.0.19.ebuild,
   jquery-rails-2.0.2.ebuild:
