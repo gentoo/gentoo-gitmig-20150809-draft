@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/ldb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ChangeLog,v 1.31 2012/08/21 12:43:43 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ChangeLog,v 1.32 2012/08/21 14:35:07 qnikst Exp $
+
+*ldb-1.1.10 (21 Aug 2012)
+
+  21 Aug 2012; Alexander Vershilov <qnikst@gentoo.org> +ldb-1.1.10.ebuild:
+  bump ldb-1.1.10, thanks to slepnoga
 
 *ldb-1.1.6-r1 (21 Aug 2012)
 
