@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/nagstamon-0.9.8.ebuild,v 1.3 2012/01/28 14:46:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/nagstamon-0.9.8.ebuild,v 1.4 2012/08/21 21:23:54 idl0r Exp $
 
 EAPI="3"
 
@@ -25,7 +25,7 @@ IUSE="gnome"
 DEPEND=""
 RDEPEND="dev-python/pygtk
 	dev-python/lxml
-	dev-python/beautifulsoup
+	dev-python/beautifulsoup:python-2
 	gnome? ( dev-python/egg-python )"
 
 #S="${WORKDIR}/${MY_P}"
