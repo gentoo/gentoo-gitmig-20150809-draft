@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.388 2012/08/22 04:10:28 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.389 2012/08/22 04:50:23 cardoe Exp $
+
+  22 Aug 2012; Doug Goldstein <cardoe@gentoo.org>
+  nvidia-drivers-304.37-r1.ebuild:
+  Sometimes committing from an iPad is not optimal. fix bug in last commit.
 
   22 Aug 2012; Doug Goldstein <cardoe@gentoo.org>
   nvidia-drivers-304.37-r1.ebuild:
