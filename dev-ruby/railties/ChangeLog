@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/railties
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/ChangeLog,v 1.35 2012/08/11 08:38:31 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/ChangeLog,v 1.36 2012/08/22 00:18:15 flameeyes Exp $
+
+  22 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> railties-3.0.17.ebuild,
+  railties-3.1.8.ebuild:
+  Permit newer thor on railties 3.0/3.1.
 
 *railties-3.1.8 (11 Aug 2012)
 *railties-3.0.17 (11 Aug 2012)
@@ -155,4 +159,3 @@
   05 Dec 2010; Hans de Graaff <graaff@gentoo.org> +railties-3.0.3.ebuild,
   +metadata.xml:
   Initial import for Rails 3. Split off from dev-ruby/rails.
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/railties-3.0.17.ebuild,v 1.1 2012/08/11 08:38:31 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/railties-3.0.17.ebuild,v 1.2 2012/08/22 00:18:15 flameeyes Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ree18"
@@ -45,3 +45,8 @@ ruby_add_bdepend "
 	doc? (
 		>=dev-ruby/redcloth-4.1.1
 	)"
+
+all_ruby_prepare() {
+	# allow newer thor
+	sed -i -e '/dependency.*thor/s:~>:>=:' ${RUBY_FAKEGEM_GEMSPEC} || die
+}

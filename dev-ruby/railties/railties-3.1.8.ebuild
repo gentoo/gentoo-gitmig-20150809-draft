@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/railties-3.1.8.ebuild,v 1.1 2012/08/11 08:38:31 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/railties-3.1.8.ebuild,v 1.2 2012/08/22 00:18:15 flameeyes Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19 ree18"
@@ -51,4 +51,7 @@ all_ruby_prepare() {
 	# Remove items from the common Gemfile that we don't need for this
 	# test run. This also requires handling some gemspecs.
 	sed -i -e '/\(uglifier\|system_timer\|sdoc\|w3c_validators\|pg\)/d' ../Gemfile || die
+
+	# allow newer thor
+	sed -i -e '/dependency.*thor/s:~>:>=:' ${RUBY_FAKEGEM_GEMSPEC} || die
 }
