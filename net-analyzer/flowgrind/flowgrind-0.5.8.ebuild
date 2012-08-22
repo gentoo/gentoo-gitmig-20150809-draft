@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flowgrind/flowgrind-0.5.8.ebuild,v 1.3 2012/03/21 05:01:40 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flowgrind/flowgrind-0.5.8.ebuild,v 1.4 2012/08/22 00:42:56 flameeyes Exp $
 
 EAPI="4"
 
@@ -21,7 +21,8 @@ RDEPEND="dev-libs/xmlrpc-c[abyss,curl]
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-cflags.patch
+	# see https://github.com/gentoo/flowgrind/tree/flowgrind-0.5.8-gentoo
+	epatch "${FILESDIR}"/${P}-gentoo.patch
 	eautoreconf
 }
 
