@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.1.12.ebuild,v 1.6 2012/08/21 09:19:11 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.1.12.ebuild,v 1.7 2012/08/22 21:15:58 polynomial-c Exp $
 
 EAPI=4
 
@@ -176,7 +176,7 @@ src_prepare() {
 
 	# Fix compile error on hardened bug 339914 (disable PIE)
 	if gcc-specs-pie ; then
-		epatch "${FILESDIR}"/virtualbox_nopie.patch
+		epatch "${FILESDIR}"/${PN}-4.1.8-nopie.patch
 	fi
 }
 

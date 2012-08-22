@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.122 2012/08/22 11:37:28 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.123 2012/08/22 21:15:58 polynomial-c Exp $
+
+  22 Aug 2012; Lars Wendler <polynomial-c@gentoo.org>
+  +files/virtualbox-4.1.8-nopie.patch, virtualbox-4.1.12.ebuild,
+  virtualbox-4.1.18.ebuild, virtualbox-4.1.20-r1.ebuild,
+  +files/virtualbox-4.1.20-nopie.patch, -files/virtualbox_nopie.patch:
+  Fixed nopie patch. Thanks to Dave Armstrong who reported this in bug #432314
+  and also provided a working patch.
 
 *virtualbox-4.1.20-r1 (22 Aug 2012)
 
