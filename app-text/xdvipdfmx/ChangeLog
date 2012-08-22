@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xdvipdfmx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvipdfmx/ChangeLog,v 1.55 2012/07/26 12:14:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvipdfmx/ChangeLog,v 1.56 2012/08/22 14:17:39 xmw Exp $
+
+  22 Aug 2012; Michael Weber <xmw@gentoo.org> xdvipdfmx-0.7.8_p20110705.ebuild:
+  ppc stable (bug 414965).
 
 *xdvipdfmx-0.7.8_p20120701 (26 Jul 2012)
 
@@ -199,4 +202,3 @@
 
   18 Oct 2006; Joslwah <joslwah@gentoo.org> ChangeLog:
   Initial creation of ebuild, to support XeTeX.
-
