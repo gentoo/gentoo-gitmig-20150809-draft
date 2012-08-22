@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.1-r1.ebuild,v 1.4 2012/08/01 10:43:48 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.1-r1.ebuild,v 1.5 2012/08/22 15:24:11 aballier Exp $
 
 EAPI=4
 
@@ -194,6 +194,7 @@ REQUIRED_USE="bindist? ( !faac !win32codecs )
 PATCHES=(
 	"${FILESDIR}/${PN}-1.0_rc4-pkg-config.patch"
 	"${FILESDIR}/${P}-ffmpeg.patch"
+	"${FILESDIR}/${P}-codecid.patch"
 )
 
 pkg_setup() {
