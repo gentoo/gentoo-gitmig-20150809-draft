@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/pecl-ssh2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-ssh2/ChangeLog,v 1.5 2012/03/03 16:49:37 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-ssh2/ChangeLog,v 1.6 2012/08/22 11:27:55 ago Exp $
+
+  22 Aug 2012; Agostino Sarubbo <ago@gentoo.org> pecl-ssh2-0.11.3-r1.ebuild:
+  Stable for amd64, wrt bug #427024
 
 *pecl-ssh2-0.11.3-r1 (03 Mar 2012)
 
