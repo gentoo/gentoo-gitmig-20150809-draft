@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/libcanberra-0.29.ebuild,v 1.1 2012/06/25 05:07:50 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/libcanberra-0.29.ebuild,v 1.2 2012/08/22 02:41:49 ottxor Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://0pointer.de/lennart/projects/${PN}/${P}.tar.xz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~sparc-solaris ~x86-solaris"
 IUSE="alsa gnome gstreamer +gtk +gtk3 oss pulseaudio +sound tdb udev"
 
 COMMON_DEPEND="media-libs/libvorbis
@@ -44,7 +44,7 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--docdir=/usr/share/doc/${PF} \
+		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
 		--disable-dependency-tracking \
 		$(use_enable alsa) \
 		$(use_enable oss) \
@@ -56,7 +56,8 @@ src_configure() {
 		$(use_enable udev) \
 		$(systemd_with_unitdir) \
 		--disable-lynx \
-		--disable-gtk-doc
+		--disable-gtk-doc \
+		--with-html-dir="${EPREFIX}"/usr/share/doc/${PF}/html
 }
 
 src_install() {
@@ -69,5 +70,5 @@ src_install() {
 	# prefix; if that fails, it will append the module extension for the
 	# current system and try that (".so" on Linux, ".bundle" on Darwin, ".dll"
 	# on Windows, etc.).  Only if both fail will it return an error.
-	find "${D}" -name '*.la' -exec rm -f {} + || die "la file removal failed"
+	find "${ED}" -name '*.la' -exec rm -f {} + || die "la file removal failed"
 }
