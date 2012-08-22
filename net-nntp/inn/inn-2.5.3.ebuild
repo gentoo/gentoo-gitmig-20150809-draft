@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/inn-2.5.3.ebuild,v 1.1 2012/08/20 01:12:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/inn-2.5.3.ebuild,v 1.2 2012/08/22 02:19:48 jer Exp $
 
 EAPI=4
 inherit autotools multilib ssl-cert
@@ -106,7 +106,7 @@ src_install() {
 		/var/spool/news/overview \
 		/var/spool/news/tmp
 
-	chown news:news /var/log/news
+	fowners news:news /var/log/news
 
 	dodoc ChangeLog MANIFEST README* doc/checklist
 	use ipv6 && dodoc doc/IPv6-info

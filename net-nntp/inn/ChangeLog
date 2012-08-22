@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/inn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.42 2012/08/20 01:12:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.43 2012/08/22 02:19:48 jer Exp $
+
+  22 Aug 2012; Jeroen Roovers <jer@gentoo.org> inn-2.5.3.ebuild:
+  Use fowners instead of chown (bug #432256).
 
 *inn-2.5.3 (20 Aug 2012)
 
