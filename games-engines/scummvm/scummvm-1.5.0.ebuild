@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-1.5.0.ebuild,v 1.1 2012/08/02 23:02:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-1.5.0.ebuild,v 1.2 2012/08/22 15:37:10 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/scummvm/${P/_/}.tar.bz2"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
-IUSE="alsa debug flac fluidsynth freetype mp3 vorbis"
+IUSE="alsa debug flac fluidsynth truetype mp3 vorbis"
 RESTRICT="test"  # it only looks like there's a test there #77507
 
 RDEPEND=">=media-libs/libsdl-1.2.2[audio,joystick,video]
@@ -22,7 +22,7 @@ RDEPEND=">=media-libs/libsdl-1.2.2[audio,joystick,video]
 	alsa? ( media-libs/alsa-lib )
 	mp3? ( media-libs/libmad )
 	flac? ( media-libs/flac )
-	freetype? ( media-libs/freetype:2 )
+	truetype? ( media-libs/freetype:2 )
 	fluidsynth? ( media-sound/fluidsynth )"
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )"
@@ -64,7 +64,7 @@ src_configure() {
 		$(use_enable mp3 mad) \
 		$(use_enable flac) \
 		$(use_enable vorbis) \
-		$(use_enable freetype freetype2) \
+		$(use_enable truetype freetype2) \
 		$(use_enable x86 nasm) \
 		${myconf} || die
 }

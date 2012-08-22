@@ -1,6 +1,10 @@
 # ChangeLog for games-engines/scummvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.114 2012/08/02 23:02:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.115 2012/08/22 15:37:10 mr_bones_ Exp $
+
+  22 Aug 2012; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml,
+  scummvm-1.5.0.ebuild:
+  freetype -> truetype (bug #431876)
 
 *scummvm-1.5.0 (02 Aug 2012)
 
