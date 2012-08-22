@@ -1,6 +1,18 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.147 2012/08/19 16:58:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.148 2012/08/22 04:44:08 robbat2 Exp $
+
+*git-1.7.12-r1 (22 Aug 2012)
+*git-1.7.12 (22 Aug 2012)
+
+  22 Aug 2012; Robin H. Johnson <robbat2@gentoo.org>
+  +files/git-1.7.12-git-svn-backport.patch,
+  +files/git-1.7.12-optional-cvs.patch, +git-1.7.12-r1.ebuild,
+  +git-1.7.12.ebuild:
+  Finally, a Git that works with SVN 1.7, per bug #418431! 1.7.12-r1 contains
+  backported ms/git-svn-1.7 branch that will be merged into Git 1.7.13.
+  1.7.12-r0 excludes that backport but is otherwise identical. Thanks to Michael
+  Schwern for the development work!
 
   19 Aug 2012; Raúl Porcel <armin76@gentoo.org> git-1.7.8.6.ebuild:
   alpha/s390/sh/sparc stable wrt #418381
