@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Log
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Log/ChangeLog,v 1.100 2012/08/11 13:09:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Log/ChangeLog,v 1.101 2012/08/22 08:48:41 xmw Exp $
+
+  22 Aug 2012; Michael Weber <xmw@gentoo.org> PEAR-Log-1.12.7-r1.ebuild:
+  ppc stable (bug 418887).
 
   11 Aug 2012; Markus Meier <maekke@gentoo.org> PEAR-Log-1.12.7-r1.ebuild:
   x86 stable, bug #418887
