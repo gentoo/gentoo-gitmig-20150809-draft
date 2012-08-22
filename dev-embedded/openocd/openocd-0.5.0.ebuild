@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-0.5.0.ebuild,v 1.9 2012/08/17 22:26:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-0.5.0.ebuild,v 1.10 2012/08/22 17:29:19 hwoarang Exp $
 
 EAPI="4"
 
@@ -23,7 +23,7 @@ IUSE="blaster dummy ftd2xx ftdi minidriver parport presto segger usb versaloon"
 RESTRICT="strip" # includes non-native binaries
 
 # libftd2xx is the default because it is reported to work better.
-DEPEND="<=dev-lang/jimtcl-0.73
+DEPEND="<dev-lang/jimtcl-0.73
 	usb? ( virtual/libusb:0 )
 	presto? ( dev-embedded/libftd2xx )
 	ftd2xx? ( dev-embedded/libftd2xx )
