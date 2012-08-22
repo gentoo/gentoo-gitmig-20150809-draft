@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/print-manager
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/print-manager/ChangeLog,v 1.1 2012/08/05 22:02:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/print-manager/ChangeLog,v 1.2 2012/08/22 22:07:07 dilfridge Exp $
+
+*print-manager-0.2.0 (22 Aug 2012)
+
+  22 Aug 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +print-manager-0.2.0.ebuild:
+  Version bump
 
 *print-manager-0.1.0-r1 (05 Aug 2012)
 
