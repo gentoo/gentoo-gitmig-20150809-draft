@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libaacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacs/ChangeLog,v 1.11 2012/08/06 21:12:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacs/ChangeLog,v 1.12 2012/08/22 15:14:56 aballier Exp $
+
+*libaacs-0.5.0 (22 Aug 2012)
+
+  22 Aug 2012; Alexis Ballier <aballier@gentoo.org> +files/bison_2.6.patch,
+  +libaacs-0.5.0.ebuild:
+  Version bump and import a patch from Openelec.tv to build with bison 2.6, bug
+  #430458
 
   06 Aug 2012; Brent Baude <ranger@gentoo.org> libaacs-0.4.0.ebuild:
   Marking libaacs-0.4.0 ppc64 for bug 422105
