@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/camlimages
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/ChangeLog,v 1.33 2012/07/24 10:50:03 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlimages/ChangeLog,v 1.34 2012/08/22 23:54:41 xmw Exp $
+
+  22 Aug 2012; Michael Weber <xmw@gentoo.org> camlimages-4.0.1.ebuild:
+  ppc stable (bug 416527).
 
   24 Jul 2012; Johannes Huber <johu@gentoo.org> camlimages-4.0.1.ebuild:
   Stable for x86, wrt bug #416527
