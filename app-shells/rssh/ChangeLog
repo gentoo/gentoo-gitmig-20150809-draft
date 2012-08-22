@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/rssh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/ChangeLog,v 1.29 2012/07/15 17:00:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/ChangeLog,v 1.30 2012/08/22 14:18:26 xmw Exp $
+
+  22 Aug 2012; Michael Weber <xmw@gentoo.org> rssh-2.3.3-r2.ebuild:
+  ppc stable (bug 415255).
 
   15 Jul 2012; Raúl Porcel <armin76@gentoo.org> rssh-2.3.3-r2.ebuild:
   Drop sparc keywords
