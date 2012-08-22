@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-9999.ebuild,v 1.21 2012/05/11 17:38:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-9999.ebuild,v 1.22 2012/08/22 19:15:40 darkside Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -68,8 +68,7 @@ src_install() {
 	if use prefix; then
 		elog "The revdep-rebuild command is removed, the preserve-libs"
 		elog "feature of portage will handle issues."
-		rm "${ED}"/usr/bin/revdep-rebuild
-		rm "${ED}"/usr/bin/revdep-rebuild.sh
+		rm "${ED}"/usr/bin/revdep-rebuild*
 		rm "${ED}"/usr/share/man/man1/revdep-rebuild.1
 		rm -rf "${ED}"/etc/revdep-rebuild
 		rm -rf "${ED}"/var
