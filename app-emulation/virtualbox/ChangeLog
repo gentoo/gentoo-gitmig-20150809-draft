@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.121 2012/08/22 10:21:56 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.122 2012/08/22 11:37:28 polynomial-c Exp $
+
+*virtualbox-4.1.20-r1 (22 Aug 2012)
+
+  22 Aug 2012; Lars Wendler <polynomial-c@gentoo.org>
+  -virtualbox-4.1.20.ebuild, +virtualbox-4.1.20-r1.ebuild:
+  Revbump to make users suffering from bug #432260 happy. Pax-marked VBoxSVC
+  without side-effects (bug #403453).
 
   22 Aug 2012; Anthony G. Basile <blueness@gentoo.org>
   virtualbox-4.1.20.ebuild, virtualbox-9999.ebuild:
