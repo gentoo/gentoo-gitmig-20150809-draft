@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.22-r2.ebuild,v 1.6 2012/06/08 03:01:10 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.22-r2.ebuild,v 1.7 2012/08/22 02:09:10 ottxor Exp $
 
 EAPI="4"
 
@@ -139,7 +139,7 @@ SRC_URI="ftp://ftp.sane-project.org/pub/sane/${P}/${P}.tar.gz
 	ftp://ftp.sane-project.org/pub/sane/old-versions/${P}/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2 public-domain"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 
 pkg_setup() {
 	enewgroup scanner
@@ -220,7 +220,7 @@ src_compile() {
 
 src_install () {
 	emake INSTALL_LOCKPATH="" DESTDIR="${D}" install \
-		docdir=/usr/share/doc/${PF} || die
+		docdir="${EPREFIX}"/usr/share/doc/${PF} || die
 	keepdir /var/lib/lock/sane
 	fowners root:scanner /var/lib/lock/sane
 	fperms g+w /var/lib/lock/sane
@@ -231,12 +231,12 @@ src_install () {
 		doins tools/hotplug/libsane.usermap
 		doexe tools/hotplug/libusbscanner
 		newdoc tools/hotplug/README README.hotplug
-		echo >> "${D}"/etc/env.d/30sane "USB_DEVFS_PATH=/dev/bus/usb"
+		echo >> "${ED}"/etc/env.d/30sane "USB_DEVFS_PATH=/dev/bus/usb"
 	fi
 	insinto /lib/udev/rules.d
 	newins tools/udev/libsane.rules 41-libsane.rules
 
 	dodoc NEWS AUTHORS ChangeLog* README README.linux
-	echo "SANE_CONFIG_DIR=/etc/sane.d" >> "${D}"/etc/env.d/30sane
-	find "${D}" -name "*.la" | while read file; do rm "${file}"; done
+	echo "SANE_CONFIG_DIR=${EPREFIX}/etc/sane.d" >> "${ED}"/etc/env.d/30sane
+	find "${ED}" -name "*.la" | while read file; do rm "${file}"; done
 }
