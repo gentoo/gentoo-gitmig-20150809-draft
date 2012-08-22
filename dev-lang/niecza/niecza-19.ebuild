@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/niecza/niecza-19.ebuild,v 1.1 2012/08/22 03:30:17 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/niecza/niecza-19.ebuild,v 1.2 2012/08/22 03:34:07 patrick Exp $
 
 EAPI=4
 
@@ -25,8 +25,8 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${GITHUB_CRAP}
 
 src_prepare() {
-	epatch ${FILESDIR}/fix-bootstrap.patch || die "Failed to fix"
-	cd ${S}
+	epatch "${FILESDIR}"/fix-bootstrap.patch || die "Failed to fix"
+	cd "${S}"
 	# bootstrap only works from git dirs? sigh :)
 	sed -i -e 's:@git describe --tags:echo "v19":' Makefile
 	# silly workaround for stuff trying to write everywhere: copy the installed niecza here (sigh)
@@ -50,8 +50,8 @@ src_test() {
 }
 
 src_install() {
-	mkdir -p ${D}/opt/niecza
+	mkdir -p "${D}"/opt/niecza
 	for i in docs lib obj run README.pod; do
-		cp -r ${S}/$i ${D}/opt/niecza/ || die "Failed to install"
+		cp -r "${S}"/$i "${D}"/opt/niecza/ || die "Failed to install"
 	done
 }
