@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.98 2012/06/03 08:27:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.99 2012/08/22 16:03:08 vapier Exp $
 
 # @ECLASS: multilib.eclass
 # @MAINTAINER:
@@ -287,6 +287,7 @@ multilib_env() {
 		x86_64*)
 			export CFLAGS_x86=${CFLAGS_x86--m32}
 			export CHOST_x86=${CTARGET/x86_64/i686}
+			CHOST_x86=${CHOST_x86/%-gnux32/-gnu}
 			export CTARGET_x86=${CHOST_x86}
 			if [[ ${SYMLINK_LIB} == "yes" ]] ; then
 				export LIBDIR_x86="lib32"
@@ -295,17 +296,25 @@ multilib_env() {
 			fi
 
 			export CFLAGS_amd64=${CFLAGS_amd64--m64}
-			export CHOST_amd64=${CTARGET}
+			export CHOST_amd64=${CTARGET/%-gnux32/-gnu}
 			export CTARGET_amd64=${CHOST_amd64}
 			export LIBDIR_amd64="lib64"
 
 			export CFLAGS_x32=${CFLAGS_x32--mx32}
-			export CHOST_x32=${CTARGET}
+			export CHOST_x32=${CTARGET/%-gnu/-gnux32}
 			export CTARGET_x32=${CHOST_x32}
 			export LIBDIR_x32="libx32"
 
-			: ${MULTILIB_ABIS=amd64 x86}
-			: ${DEFAULT_ABI=amd64}
+			case ${CTARGET} in
+			*-gnux32)
+				: ${MULTILIB_ABIS=x32 amd64 x86}
+				: ${DEFAULT_ABI=x32}
+				;;
+			*)
+				: ${MULTILIB_ABIS=amd64 x86}
+				: ${DEFAULT_ABI=amd64}
+				;;
+			esac
 		;;
 		mips64*)
 			export CFLAGS_o32=${CFLAGS_o32--mabi=32}
