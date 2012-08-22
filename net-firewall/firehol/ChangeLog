@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/firehol
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.51 2012/08/22 17:01:16 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.52 2012/08/22 17:02:48 johu Exp $
+
+  22 Aug 2012; Johannes Huber <johu@gentoo.org> -firehol-1.273-r1.ebuild,
+  -firehol-1.273-r2.ebuild:
+  Remove old.
 
   22 Aug 2012; Johannes Huber <johu@gentoo.org> firehol-1.273-r3.ebuild:
   Stable for x86, wrt bug #429162
@@ -250,4 +254,3 @@
   05 Apr 2003; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog, firehol-1.91.ebuild, files/digest-firehol-1.91 :
 
   Initial commit, made by Maik Schreiber <blizzy@blizzy.de> in bug #18808
-
