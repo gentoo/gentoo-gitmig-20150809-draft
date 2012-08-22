@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/make.defaults,v 1.12 2012/06/16 11:44:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/make.defaults,v 1.13 2012/08/22 15:57:46 vapier Exp $
 
 ARCH="amd64"
 ACCEPT_KEYWORDS="${ARCH}"
@@ -31,7 +31,7 @@ CHOST_x86="i686-pc-linux-gnu"
 # 64-32bit specific settings.
 CFLAGS_x32="-mx32"
 LDFLAGS_x32="-m elf32_x86_64"
-CHOST_x32="x86_64-pc-linux-gnu"
+CHOST_x32="x86_64-pc-linux-gnux32"
 
 # 2006/10/24 - Simon Stelling <blubb@gentoo.org>
 # They are masked, but we can enable them anyway for those who have 

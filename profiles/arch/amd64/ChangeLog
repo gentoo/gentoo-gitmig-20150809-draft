@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.184 2012/07/31 14:37:45 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.185 2012/08/22 15:57:46 vapier Exp $
+
+  22 Aug 2012; Mike Frysinger <vapier@gentoo.org> make.defaults:
+  Update default CHOST for x32 targets.
 
   31 Jul 2012; Ralph Sennhauser <sera@gentoo.org> use.mask:
   Unmask python_targets_jython2_5 as it's available on amd64.
