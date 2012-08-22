@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.185 2012/08/21 17:06:19 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.186 2012/08/22 12:16:48 xmw Exp $
+
+  22 Aug 2012; Michael Weber <xmw@gentoo.org> package.use.mask:
+  x11-themes/gtk-engines-qtcurve[mozilla]: Masked for missing stable on
+  >=www-client/firefox-3
 
   21 Aug 2012; Anthony G. Basile <blueness@gentoo.org> package.use.mask:
   Mask net-misc/tor[tor-hardening] on ppc/ppc64
