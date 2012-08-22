@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6915 2012/08/21 15:16:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6916 2012/08/22 16:56:35 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Aug 2012; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  net-misc/snitch is gone. Bug #424349
 
   21 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org>
   arch/amd64-fbsd/use.mask, arch/amd64/use.mask, arch/ia64/use.mask,

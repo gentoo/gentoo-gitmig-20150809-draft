@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14067 2012/08/21 15:01:43 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14068 2012/08/22 16:56:35 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -145,12 +145,6 @@ net-fs/mount-cifs
 # Contains multiple API changes and needs apps to be ported
 >=media-gfx/gphoto2-2.5
 >=media-libs/libgphoto2-2.5
-
-# Markos Chandras <hwoarang@gentoo.org> (21 Jul 2012)
-# Package sources have been removed fro website (#424349)
-# Does not respect CFLAGS/CXXFLAGS/LDFLAGS (#337361)
-# Removal in 30 days
-net-misc/snitch
 
 # Hans de Graaff <graaff@gentoo.org> (21 Jul 2012)
 # Slot masked for security bug 427370. Nothing in the tree
