@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygame
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.89 2012/07/03 20:38:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.90 2012/08/22 15:21:56 xmw Exp $
+
+  22 Aug 2012; Michael Weber <xmw@gentoo.org>
+  pygame-1.9.2_pre20120101-r1.ebuild:
+  ppc stable (bug 418283).
 
   03 Jul 2012; Jeroen Roovers <jer@gentoo.org>
   pygame-1.9.2_pre20120101-r1.ebuild:
