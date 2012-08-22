@@ -1,19 +1,19 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/gtklp-1.2.8.ebuild,v 1.7 2012/05/03 07:22:29 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/gtklp-1.2.9.ebuild,v 1.1 2012/08/22 12:40:38 scarabeus Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit autotools eutils
 
 DESCRIPTION="A GUI for cupsd"
-HOMEPAGE="http://gtklp.sourceforge.net"
+HOMEPAGE="http://gtklp.sirtobi.com/"
 SRC_URI="mirror://sourceforge/gtklp/${P}.src.tar.gz
 	mirror://sourceforge/gtklp/logo.xpm.gz -> gtklp-logo.xpm.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="nls ssl"
 
 RDEPEND="x11-libs/gtk+:2
@@ -22,6 +22,8 @@ RDEPEND="x11-libs/gtk+:2
 	ssl? ( dev-libs/openssl )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
+
+DOCS="AUTHORS BUGS ChangeLog README TODO USAGE"
 
 src_prepare() {
 	sed -e '/DEF_BROWSER_CMD/{s:netscape:firefox:}' \
@@ -38,10 +40,9 @@ src_configure() {
 }
 
 src_install () {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS BUGS ChangeLog README TODO USAGE || die
+	default
 
 	doicon "${WORKDIR}"/gtklp-logo.xpm
-	make_desktop_entry 'gtklp -i' "Print files via CUPS" gtklp-logo 'System;Printing'
-	make_desktop_entry gtklpq "CUPS queue manager" gtklp-logo 'System;Printing'
+	make_desktop_entry 'gtklp -i' "Print files via CUPS" gtklp-logo 'System;HardwareSettings;Settings;Printing'
+	make_desktop_entry gtklpq "CUPS queue manager" gtklp-logo 'System;HardwareSettings;Settings;Printing'
 }
