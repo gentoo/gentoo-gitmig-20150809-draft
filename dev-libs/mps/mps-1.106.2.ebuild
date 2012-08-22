@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mps/mps-1.106.2.ebuild,v 1.1 2012/08/22 07:45:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mps/mps-1.106.2.ebuild,v 1.2 2012/08/22 08:37:37 patrick Exp $
 EAPI=4
 
 DESCRIPTION="Ravenbrook Memory Pool System"
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.ravenbrook.com/project/mps/"
 SRC_URI="http://www.ravenbrook.com/project/${PN}/release/${PV}/${MY_P}.tar.gz"
 LICENSE="Ravenbrook"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86"
 
 IUSE=""
 

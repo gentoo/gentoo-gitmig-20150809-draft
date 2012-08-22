@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/mps
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mps/ChangeLog,v 1.1 2012/08/22 07:45:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mps/ChangeLog,v 1.2 2012/08/22 08:37:37 patrick Exp $
+
+  22 Aug 2012; Patrick Lauer <patrick@gentoo.org> mps-1.106.2.ebuild:
+  Removing amd64 keyword, upstream doesn't have full support yet
 
 *mps-1.106.2 (22 Aug 2012)
 
