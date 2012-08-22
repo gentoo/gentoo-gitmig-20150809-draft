@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libisofs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.105 2012/07/26 19:20:21 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.106 2012/08/22 12:34:31 xmw Exp $
+
+  22 Aug 2012; Michael Weber <xmw@gentoo.org> libisofs-1.2.2.ebuild:
+  ppc stable (bug 414159).
 
 *libisofs-1.2.4 (26 Jul 2012)
 
@@ -441,4 +444,3 @@
   13 Dec 2006; Steve Dibb <beandog@gentoo.org> +metadata.xml,
   +libisofs-0.2.3.ebuild:
   Initial import
-
