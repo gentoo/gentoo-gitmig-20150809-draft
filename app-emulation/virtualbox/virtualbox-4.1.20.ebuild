@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.1.20.ebuild,v 1.2 2012/08/21 15:55:24 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.1.20.ebuild,v 1.3 2012/08/22 00:31:50 blueness Exp $
 
 EAPI=4
 
@@ -273,7 +273,7 @@ src_install() {
 	fperms 4750 /usr/$(get_libdir)/${PN}/VBoxNetDHCP
 
 	if ! use headless ; then
-		for each in VBox{SDL,Headless} ; do
+		for each in VBox{SDL,SVC,Headless} ; do
 			doins $each || die
 			fowners root:vboxusers /usr/$(get_libdir)/${PN}/${each}
 			fperms 4750 /usr/$(get_libdir)/${PN}/${each}

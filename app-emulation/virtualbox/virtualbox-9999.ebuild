@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-9999.ebuild,v 1.30 2012/05/31 23:49:02 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-9999.ebuild,v 1.31 2012/08/22 00:31:50 blueness Exp $
 
 EAPI=2
 
@@ -147,7 +147,7 @@ src_install() {
 	fi
 
 	if ! use headless; then
-			for each in VBox{SDL,Headless} ; do
+			for each in VBox{SDL,SVC,Headless} ; do
 				doins $each
 				fowners root:vboxusers /usr/lib/${PN}/${each}
 				fperms 4750 /usr/lib/${PN}/${each}
