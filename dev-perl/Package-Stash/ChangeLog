@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Package-Stash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-Stash/ChangeLog,v 1.39 2012/08/05 16:51:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-Stash/ChangeLog,v 1.40 2012/08/22 07:56:51 xmw Exp $
+
+  22 Aug 2012; Michael Weber <xmw@gentoo.org> Package-Stash-0.330.0.ebuild:
+  ppc stable (bug 418803)
 
   05 Aug 2012; Markus Meier <maekke@gentoo.org> Package-Stash-0.330.0.ebuild:
   arm stable, bug #418803
