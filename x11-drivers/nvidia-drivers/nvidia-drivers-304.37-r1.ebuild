@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-304.37-r1.ebuild,v 1.1 2012/08/21 21:15:17 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-304.37-r1.ebuild,v 1.2 2012/08/22 04:10:28 cardoe Exp $
 
 EAPI=4
 
@@ -273,6 +273,7 @@ src_install() {
 	if use kernel_linux; then
 		insinto /etc/OpenCL/vendors
 		doins nvidia.icd
+		donvidia ${libdir}/libnvidia-opencl.so ${NV_SOVER}
 	fi
 
 	# Documentation
@@ -370,7 +371,6 @@ src_install-libs() {
 	# CUDA & OpenCL
 	if use kernel_linux; then
 		donvidia ${libdir}/libcuda.so ${NV_SOVER}
-		donvidia ${libdir}/libnvidia-opencl.so ${NV_SOVER}
 		donvidia ${libdir}/libnvidia-compiler.so ${NV_SOVER}
 		donvidia ${libdir}/libOpenCL.so 1.0.0 ${CL_ROOT}
 	fi
