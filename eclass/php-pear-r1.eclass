@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear-r1.eclass,v 1.29 2012/01/18 17:50:58 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear-r1.eclass,v 1.30 2012/08/22 15:06:20 olemarkus Exp $
 
 # @ECLASS: php-pear-r1.eclass
 # @MAINTAINER:
@@ -57,6 +57,7 @@ php-pear-r1_src_install() {
 	# SNMP support
 	addpredict /usr/share/snmp/mibs/.index
 	addpredict /var/lib/net-snmp/
+	addpredict /var/lib/net-snmp/mib_indexes
 	addpredict /session_mm_cli0.sem
 
 	PHP_BIN="/usr/bin/php"

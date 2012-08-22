@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.28 2012/08/01 10:55:29 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.29 2012/08/22 15:06:20 olemarkus Exp $
 
 # @ECLASS: php-ext-source-r2.eclass
 # @MAINTAINER:
@@ -142,6 +142,7 @@ php-ext-source-r2_phpize() {
 php-ext-source-r2_src_configure() {
 	# net-snmp creates this file #385403
 	addpredict /usr/share/snmp/mibs/.index
+	addpredict /var/lib/net-snmp/mib_indexes
 
 	local slot
 	for slot in $(php_get_slots); do
@@ -157,6 +158,8 @@ php-ext-source-r2_src_configure() {
 php-ext-source-r2_src_compile() {
 	# net-snmp creates this file #324739
 	addpredict /usr/share/snmp/mibs/.index
+	addpredict /var/lib/net-snmp/mib_indexes
+
 	# shm extension createss a semaphore file #173574
 	addpredict /session_mm_cli0.sem
 	local slot
