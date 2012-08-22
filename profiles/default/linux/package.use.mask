@@ -1,6 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/package.use.mask,v 1.36 2012/08/22 07:35:52 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/package.use.mask,v 1.37 2012/08/22 07:37:18 ryao Exp $
+
+# Richard Yao <ryao@gentoo.org> (22 August 2012)
+# USE=kernel-builtin is dangerous. Only those that know what they are doing
+# should use it until documentation improves.
+sys-fs/zfs kernel-builtin
 
 # Diego Elio Pettenò (20 Aug 2012)
 # The prevent-removal USE flag is only implemented for Linux.
