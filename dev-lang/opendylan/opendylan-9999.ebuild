@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/opendylan/opendylan-9999.ebuild,v 1.2 2012/08/21 08:30:04 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/opendylan/opendylan-9999.ebuild,v 1.3 2012/08/22 03:42:00 patrick Exp $
 EAPI=4
 
 inherit autotools git-2
@@ -15,9 +15,6 @@ EGIT_REPO_URI="https://github.com/dylan-lang/opendylan.git"
 
 LICENSE="Opendylan"
 SLOT="0"
-
-# not tested on x86
-KEYWORDS="~amd64"
 
 IUSE=""
 
