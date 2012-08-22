@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/inn-2.5.3.ebuild,v 1.2 2012/08/22 02:19:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/inn-2.5.3.ebuild,v 1.3 2012/08/22 13:29:17 ago Exp $
 
 EAPI=4
 inherit autotools multilib ssl-cert
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.isc.org/isc/inn/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="as-is BSD GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="berkdb innkeywords inntaggedhash ipv6 kerberos perl python sasl ssl"
 
 DEPEND="
