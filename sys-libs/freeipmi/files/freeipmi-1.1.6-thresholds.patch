@@ -1,15 +1,3 @@
-commit 9f1ac701f28d32eae557590da324f58bc83077dc
-Author: chu11 <chu11@f7bdd6f0-feb3-4745-876d-a5d75e847258>
-Date:   Sat Jul 28 06:50:54 2012 +0000
-
-    support --output-sensor-thresholds in ipmi-senosrs
-    
-    git-svn-id: svn://svn.savannah.gnu.org/freeipmi/branches/ipmisensorsoutputthreshold@9392 f7bdd6f0-feb3-4745-876d-a5d75e847258
-
-diff --git a/ChangeLog b/ChangeLog
-index 2573c83..61a6ae6 100644
-diff --git a/NEWS b/NEWS
-index 84c77ba..4746148 100644
 diff --git a/common/toolcommon/tool-config-file-common.c b/common/toolcommon/tool-config-file-common.c
 index 27974ea..7ba77ee 100644
 --- a/common/toolcommon/tool-config-file-common.c

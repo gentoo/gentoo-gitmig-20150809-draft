@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/freeipmi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/ChangeLog,v 1.53 2012/08/19 03:58:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/ChangeLog,v 1.54 2012/08/22 02:28:24 flameeyes Exp $
+
+  22 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/freeipmi-1.1.6-thresholds.patch:
+  Cleanup patch so that it doesn't remove ChangeLog and NEWS with alpha versions
+  of sys-devel/patch.
 
   19 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> -freeipmi-1.1.6.ebuild,
   metadata.xml:
