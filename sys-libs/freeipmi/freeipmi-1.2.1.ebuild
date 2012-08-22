@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/freeipmi-1.2.0_beta0.ebuild,v 1.1 2012/07/31 01:41:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/freeipmi-1.2.1.ebuild,v 1.1 2012/08/22 23:12:08 flameeyes Exp $
 
 EAPI=4
 
@@ -76,4 +76,7 @@ src_install() {
 
 	newinitd "${FILESDIR}"/bmc-watchdog.initd.4 bmc-watchdog
 	newconfd "${FILESDIR}"/bmc-watchdog.confd bmc-watchdog
+
+	newinitd "${FILESDIR}"/bmc-watchdog.initd.4 ipmiseld
+	newconfd "${FILESDIR}"/ipmiseld.confd ipmiseld
 }

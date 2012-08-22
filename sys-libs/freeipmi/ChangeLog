@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/freeipmi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/ChangeLog,v 1.54 2012/08/22 02:28:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/ChangeLog,v 1.55 2012/08/22 23:12:08 flameeyes Exp $
+
+*freeipmi-1.2.1 (22 Aug 2012)
+
+  22 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> +files/ipmiseld.confd,
+  +freeipmi-1.2.1.ebuild, -freeipmi-1.2.0_beta0.ebuild:
+  Version bump; add ipmiseld init script and config file.
 
   22 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org>
   files/freeipmi-1.1.6-thresholds.patch:
