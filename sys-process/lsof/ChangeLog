@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/lsof
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/lsof/ChangeLog,v 1.91 2012/05/28 16:22:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/lsof/ChangeLog,v 1.92 2012/08/22 04:03:33 vapier Exp $
+
+  22 Aug 2012; Mike Frysinger <vapier@gentoo.org> +files/lsof-4.85-cross.patch,
+  lsof-4.85-r2.ebuild:
+  Fix cross-compiling by avoiding executing compiled configure tests #432120 by
+  Dennis Schridde.
 
   28 May 2012; Raúl Porcel <armin76@gentoo.org> lsof-4.85-r2.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #413273
