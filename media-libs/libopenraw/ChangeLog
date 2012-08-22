@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libopenraw
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/ChangeLog,v 1.61 2012/05/30 13:27:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/ChangeLog,v 1.62 2012/08/22 03:03:53 ottxor Exp $
+
+  22 Aug 2012; Christoph Junghans <ottxor@gentoo.org> libopenraw-0.0.9.ebuild:
+  added prefix keywords
 
   30 May 2012; Alexis Ballier <aballier@gentoo.org> libopenraw-0.0.9.ebuild:
   keyword ~amd64-fbsd
@@ -224,4 +227,3 @@
 
   09 Aug 2007; Samuli Suominen <drac@gentoo.org> +libopenraw-0.0.2.ebuild:
   Initial commit for bug 188245.
-

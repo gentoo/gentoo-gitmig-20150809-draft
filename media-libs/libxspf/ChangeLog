@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libxspf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libxspf/ChangeLog,v 1.11 2012/07/30 10:27:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libxspf/ChangeLog,v 1.12 2012/08/22 03:12:50 ottxor Exp $
+
+  22 Aug 2012; Christoph Junghans <ottxor@gentoo.org> libxspf-1.2.0.ebuild:
+  added prefix keywords
 
   30 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> libxspf-1.2.0.ebuild,
   +files/libxspf-1.2.0-gcc47.patch:
@@ -42,4 +45,3 @@
   +files/libxspf-1.2.0-gcc44.patch:
   Initial commit for bug 261604 with GCC 4.4 compile fix. This is renamed
   (by upstream) media-libs/libspiff. Thanks to Sebastian Pipping.
-

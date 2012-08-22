@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libxspf/libxspf-1.2.0.ebuild,v 1.11 2012/07/30 10:27:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libxspf/libxspf-1.2.0.ebuild,v 1.12 2012/08/22 03:12:50 ottxor Exp $
 
 EAPI=4
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/libspiff/${P}.tar.bz2"
 
 LICENSE="BSD LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE="doc static-libs test"
 
 RDEPEND=">=dev-libs/expat-2
@@ -37,7 +37,7 @@ src_configure() {
 	export XDG_CONFIG_HOME="${T}" #398881#c2
 
 	econf \
-		--docdir=/usr/share/doc/${PF} \
+		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
 		$(use_enable static-libs static) \
 		$(use_enable test) \
 		$(use_enable doc)
