@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/unpacker.eclass,v 1.9 2012/05/11 07:46:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/unpacker.eclass,v 1.10 2012/08/22 01:41:12 ottxor Exp $
 
 # @ECLASS: unpacker.eclass
 # @MAINTAINER:
@@ -276,6 +276,25 @@ unpack_deb() {
 	unpacker ./data.tar*
 }
 
+# @FUNCTION: unpack_cpio
+# @USAGE: <one cpio to unpack>
+# @DESCRIPTION:
+# Unpack a cpio archive, file "-" means stdin.
+unpack_cpio() {
+	[[ $# -eq 1 ]] || die "Usage: ${FUNCNAME} <file>"
+
+	# needed as cpio always reads from stdin
+	local cpio_cmd=( cpio --make-directories --extract --preserve-modification-time )
+	if [[ $1 == "-" ]] ; then
+		unpack_banner "stdin"
+		"${cpio_cmd[@]}"
+	else
+		local cpio=$(find_unpackable_file "$1")
+		unpack_banner "${cpio}"
+		"${cpio_cmd[@]}" <"${cpio}"
+	fi
+}
+
 # @FUNCTION: _unpacker
 # @USAGE: <one archive to unpack>
 # @INTERNAL
@@ -309,6 +328,8 @@ _unpacker() {
 	case ${m} in
 	*.tgz|*.tbz|*.tbz2|*.txz|*.tar.*|*.tar)
 		arch="tar --no-same-owner -xof" ;;
+	*.cpio.*|*.cpio)
+		arch="unpack_cpio" ;;
 	*.deb)
 		arch="unpack_deb" ;;
 	*.run)
@@ -381,6 +402,8 @@ unpacker_src_uri_depends() {
 
 	for uri in "$@" ; do
 		case ${uri} in
+		*.cpio.*|*.cpio)
+			d="app-arch/cpio" ;;
 		*.rar|*.RAR)
 			d="app-arch/unrar" ;;
 		*.7z)
