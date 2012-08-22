@@ -1,5 +1,8 @@
 
 
+  22 Aug 2012; Anthony G. Basile <blueness@gentoo.org> -cgminer-2.4.3.ebuild:
+  Remove older unstable
+
   21 Aug 2012; Anthony G. Basile <blueness@gentoo.org> ChangeLog, Manifest:
   Correct previous changelog entry
 
