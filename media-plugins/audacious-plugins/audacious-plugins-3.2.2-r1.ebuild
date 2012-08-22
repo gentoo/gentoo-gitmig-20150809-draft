@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-3.2.2-r1.ebuild,v 1.9 2012/07/29 17:10:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-3.2.2-r1.ebuild,v 1.10 2012/08/22 14:24:38 xmw Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://distfiles.audacious-media-player.org/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ~ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux"
+KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux"
 IUSE="aac adplug alsa bs2b cdda cue ffmpeg flac fluidsynth gnome +gtk gtk3 ipv6 jack
 lame libnotify libsamplerate midi mms mp3 mtp nls oss pulseaudio scrobbler sdl sid sndfile vorbis wavpack"
 
