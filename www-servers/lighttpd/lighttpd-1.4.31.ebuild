@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.31.ebuild,v 1.8 2012/08/20 17:07:00 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.31.ebuild,v 1.9 2012/08/22 16:50:45 hwoarang Exp $
 
 EAPI="4"
 
@@ -114,6 +114,7 @@ src_configure() {
 	econf --libdir=/usr/$(get_libdir)/${PN} \
 		--enable-lfs \
 		$(use_enable ipv6) \
+		$(use_enable mmap) \
 		$(use_with bzip2) \
 		$(use_with fam) \
 		$(use_with gdbm) \
@@ -122,7 +123,6 @@ src_configure() {
 		$(use_with libev) \
 		$(use_with lua) \
 		$(use_with memcache) \
-		$(use_with mmap) \
 		$(use_with mysql) \
 		$(use_with pcre) \
 		$(use_with ssl openssl) \
