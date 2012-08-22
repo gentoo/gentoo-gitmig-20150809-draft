@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/colord-gtk/colord-gtk-0.1.22.ebuild,v 1.1 2012/08/10 19:03:00 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/colord-gtk/colord-gtk-0.1.22.ebuild,v 1.2 2012/08/22 21:23:32 tetromino Exp $
 
 EAPI="4"
 
@@ -26,6 +26,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.28:2
 RDEPEND="${COMMON_DEPEND}
 	!<x11-misc/colord-0.1.22"
 DEPEND="${COMMON_DEPEND}
+	app-arch/xz-utils
 	dev-libs/libxslt
 	>=dev-util/intltool-0.35
 	>=sys-devel/gettext-0.17
@@ -35,6 +36,8 @@ DEPEND="${COMMON_DEPEND}
 		>=dev-util/gtk-doc-1.9
 	)
 	vala? ( dev-lang/vala:0.14[vapigen] )"
+
+RESTRICT="test" # Tests need a display device with a default color profile set
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-0.1.22-automagic-vala.patch"
