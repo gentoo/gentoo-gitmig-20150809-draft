@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.35 2012/08/22 07:31:11 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.36 2012/08/22 07:32:18 ryao Exp $
 
 EAPI="4"
 
@@ -26,7 +26,7 @@ HOMEPAGE="http://zfsonlinux.org/"
 
 LICENSE="BSD-2 CDDL MIT"
 SLOT="0"
-IUSE="custom-cflags +rootfs test-suite static-libs"
+IUSE="custom-cflags kernel-builtin +rootfs test-suite static-libs"
 RESTRICT="test"
 
 COMMON_DEPEND="
@@ -38,7 +38,7 @@ DEPEND="${COMMON_DEPEND}
 "
 
 RDEPEND="${COMMON_DEPEND}
-	=sys-fs/zfs-kmod-${PV}*
+	!kernel-builtin? ( =sys-fs/zfs-kmod-${PV}* )
 	!sys-fs/zfs-fuse
 	!prefix? ( sys-fs/udev )
 	test-suite? (
