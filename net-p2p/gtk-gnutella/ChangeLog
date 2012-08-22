@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.140 2012/08/08 20:01:09 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.141 2012/08/22 20:03:37 johu Exp $
+
+  22 Aug 2012; Johannes Huber <johu@gentoo.org> gtk-gnutella-0.98.3.ebuild:
+  Stable for x86, wrt bug #429190
 
   08 Aug 2012; Brent Baude <ranger@gentoo.org> gtk-gnutella-0.98.3.ebuild:
   Marking gtk-gnutella-0.98.3 ppc for bug 429190
