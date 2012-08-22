@@ -1,6 +1,9 @@
 # ChangeLog for app-text/opensp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.64 2012/08/19 16:14:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.65 2012/08/22 07:38:31 xmw Exp $
+
+  22 Aug 2012; Michael Weber <xmw@gentoo.org> opensp-1.5.2-r3.ebuild:
+  ppc stable (bug 410273).
 
   19 Aug 2012; Raúl Porcel <armin76@gentoo.org> opensp-1.5.2-r3.ebuild:
   alpha/m68k/s390/sh/sparc stable wrt #410273
@@ -218,4 +221,3 @@
 
   28 Apr 2003; Alastair Tse <liquidx@gentoo.org> opensp-1.5.ebuild:
   opensp has just been split out of openjade.
-
