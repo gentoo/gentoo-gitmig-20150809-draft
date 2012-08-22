@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/package.use.mask,v 1.35 2012/08/21 14:54:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/package.use.mask,v 1.36 2012/08/22 07:35:52 ryao Exp $
 
 # Diego Elio Pettenò (20 Aug 2012)
 # The prevent-removal USE flag is only implemented for Linux.
@@ -8,11 +8,6 @@ sys-auth/pam_mktemp -prevent-removal
 
 sys-devel/gcc hardened
 sys-libs/glibc hardened
-
-# Richard Yao <ryao@gentoo.org> (25 Jul 2012)
-# USE=dracut is incompatible with >=sys-kernel/dracut-014
-# Compatible versions of dracut are no longer in the tree.
-sys-fs/zfs dracut
 
 # Anthony G. Basile <blueness@gentoo.org> (23 Jul 2012)
 # USE=system-libs is potentially unreliable and insecure
