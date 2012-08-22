@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/bfgminer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/ChangeLog,v 1.20 2012/08/11 20:35:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/ChangeLog,v 1.21 2012/08/22 02:10:20 blueness Exp $
+
+*bfgminer-2.7.0 (21 Aug 2012)
+*bfgminer-2.6.5 (21 Aug 2012)
+*bfgminer-2.6.4 (21 Aug 2012)
+
+  21 Aug 2012; Anthony G. Basile <blueness@gentoo.org> bfgminer-2.3.6.ebuild,
+  bfgminer-2.4.4.ebuild, bfgminer-2.5.0.ebuild, bfgminer-2.5.3.ebuild,
+  bfgminer-2.6.1.ebuild, bfgminer-2.6.3.ebuild, +bfgminer-2.6.4.ebuild,
+  +bfgminer-2.6.5.ebuild, +bfgminer-2.7.0.ebuild:
+  Version bumps
 
   11 Aug 2012; Agostino Sarubbo <ago@gentoo.org> bfgminer-2.5.0.ebuild:
   Stable for amd64, wrt bug #430210
