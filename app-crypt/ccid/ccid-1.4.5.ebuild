@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ccid-1.4.5.ebuild,v 1.5 2012/04/15 16:56:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ccid-1.4.5.ebuild,v 1.6 2012/08/22 12:03:09 xmw Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ SRC_URI="http://alioth.debian.org/download.php/${STUPID_NUM}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm hppa ~ppc ~ppc64 x86"
+KEYWORDS="amd64 arm hppa ppc ~ppc64 x86"
 IUSE="twinserial +usb"
 
 DEPEND=">=sys-apps/pcsc-lite-1.6.5
