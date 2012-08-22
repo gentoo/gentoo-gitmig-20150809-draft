@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r16.ebuild,v 1.11 2012/03/21 06:27:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r16.ebuild,v 1.12 2012/08/22 02:22:53 ottxor Exp $
 
 EAPI=4
 inherit eutils flag-o-matic
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/png-mng/${P}-jumbo-patches-${JUMBOV}.tar.gz
 
 LICENSE="xv"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="jpeg tiff png"
 
 DEPEND="x11-libs/libXt
@@ -57,7 +57,7 @@ src_prepare() {
 		-e "s/\(^LIBS = .*\)/\1${IMAGE_LIBS}/g" Makefile
 
 	# /usr/bin/gzip => /bin/gzip
-	sed -i -e 's#/usr\(/bin/gzip\)#\1#g' config.h
+	sed -i -e 's#/usr\(/bin/gzip\)#'"${EPREFIX}"'\1#g' config.h
 
 	# Fix installation of ps docs
 	sed -i -e 's#$(DESTDIR)$(LIBDIR)#$(LIBDIR)#g' Makefile
@@ -71,8 +71,8 @@ src_compile() {
 
 	emake \
 		CC="$(tc-getCC)" CCOPTS="${CFLAGS}" LDFLAGS="${LDFLAGS}" \
-		PREFIX=/usr \
-		DOCDIR=/usr/share/doc/${PF} \
+		PREFIX="${EPREFIX}"/usr \
+		DOCDIR="${EPREFIX}/usr/share/doc/${PF}" \
 		LIBDIR="${T}"
 }
 
@@ -82,8 +82,8 @@ src_install() {
 
 	emake \
 		DESTDIR="${D}" \
-		PREFIX=/usr \
-		DOCDIR=/usr/share/doc/${PF} \
+		PREFIX="${EPREFIX}"/usr \
+		DOCDIR="${EPREFIX}/usr/share/doc/${PF}" \
 		LIBDIR="${T}" install
 
 	dodoc CHANGELOG BUGS IDEAS

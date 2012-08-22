@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.114 2012/03/21 06:27:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.115 2012/08/22 02:22:53 ottxor Exp $
+
+  22 Aug 2012; Christoph Junghans <ottxor@gentoo.org> xv-3.10a-r16.ebuild:
+  added prefix keywords
 
   21 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> xv-3.10a-r16.ebuild:
   Use gentoo mirrors.
