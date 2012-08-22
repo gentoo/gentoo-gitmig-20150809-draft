@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde-imp
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-imp/ChangeLog,v 1.70 2011/03/22 21:24:52 a3li Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-imp/ChangeLog,v 1.71 2012/08/22 15:20:53 a3li Exp $
+
+  22 Aug 2012; Alex Legler <a3li@gentoo.org> metadata.xml:
+  removing from metadata
 
 *horde-imp-4.3.9 (22 Mar 2011)
 

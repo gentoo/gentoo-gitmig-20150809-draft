@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>web-apps</herd>
-	<maintainer>
-		<email>a3li@gentoo.org</email>
-		<name>Alex Legler</name>
-	</maintainer>
+<herd>web-apps</herd>
 <longdescription>
 Turba is the Horde contact management application. It is a production 
 level address book, and makes heavy use of the Horde framework to 

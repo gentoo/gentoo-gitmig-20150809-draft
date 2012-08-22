@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde-mnemo
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-mnemo/ChangeLog,v 1.35 2011/12/22 14:53:01 ago Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-mnemo/ChangeLog,v 1.36 2012/08/22 15:25:27 a3li Exp $
+
+  22 Aug 2012; Alex Legler <a3li@gentoo.org> metadata.xml:
+  removing from metadata
 
   22 Dec 2011; Agostino Sarubbo <ago@gentoo.org> horde-mnemo-2.2.4.ebuild:
   Stable for AMD64, wrt bug #393797

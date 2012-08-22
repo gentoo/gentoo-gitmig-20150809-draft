@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde-turba
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-turba/ChangeLog,v 1.56 2012/03/19 18:59:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-turba/ChangeLog,v 1.57 2012/08/22 15:28:27 a3li Exp $
+
+  22 Aug 2012; Alex Legler <a3li@gentoo.org> metadata.xml:
+  removing from metadata
 
   19 Mar 2012; Raúl Porcel <armin76@gentoo.org> horde-turba-2.3.4.ebuild,
   horde-turba-2.3.5.ebuild:

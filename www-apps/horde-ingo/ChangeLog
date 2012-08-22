@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde-ingo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-ingo/ChangeLog,v 1.35 2012/03/18 19:37:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-ingo/ChangeLog,v 1.36 2012/08/22 15:23:55 a3li Exp $
+
+  22 Aug 2012; Alex Legler <a3li@gentoo.org> metadata.xml:
+  removing from metadata
 
   18 Mar 2012; Raúl Porcel <armin76@gentoo.org> horde-ingo-1.1.2.ebuild,
   horde-ingo-1.2.3.ebuild, horde-ingo-1.2.5.ebuild:

@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>web-apps</herd>
-<maintainer>
-	<email>a3li@gentoo.org</email>
-	<name>Alex Legler</name>
-</maintainer>
 <longdescription>
 The Horde Application Framework is a general-purpose web application 
 framework in PHP, providing classes for dealing with preferences, 

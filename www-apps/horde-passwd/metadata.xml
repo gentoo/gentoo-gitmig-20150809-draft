@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>web-apps</herd>
-<maintainer>
-	<email>a3li@gentoo.org</email>
-	<name>Alex Legler</name>
-</maintainer>
 <longdescription>
 Passwd is the Horde password changing application. While it has been 
 released and is in production use at many sites, it is also under heavy 
