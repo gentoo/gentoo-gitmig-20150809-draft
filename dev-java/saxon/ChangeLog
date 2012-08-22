@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/saxon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/ChangeLog,v 1.40 2012/05/07 06:26:31 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/ChangeLog,v 1.41 2012/08/22 08:00:46 xmw Exp $
+
+  22 Aug 2012; Michael Weber <xmw@gentoo.org> saxon-9.2.0.6.ebuild:
+  ppc stable (bug 414381).
 
   07 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> saxon-9.2.0.6.ebuild:
   x86 stable wrt bug #414381
@@ -128,4 +131,3 @@
   +files/saxon-8.4b-jikes.patch, +metadata.xml, +saxon-8.4b.ebuild:
   no longer uses packed jars, ebuild by Josh Nichols <nichoj@alum.rpi.edu> in
   97431
-
