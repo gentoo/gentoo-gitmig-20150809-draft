@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libgphoto2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.212 2012/07/21 11:27:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.213 2012/08/22 02:51:16 ottxor Exp $
+
+  22 Aug 2012; Christoph Junghans <ottxor@gentoo.org> libgphoto2-2.5.0.ebuild:
+  added prefix keywords
 
 *libgphoto2-2.5.0 (21 Jul 2012)
 
