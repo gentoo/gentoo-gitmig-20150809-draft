@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pcre-ocaml/pcre-ocaml-6.2.5.ebuild,v 1.4 2012/07/03 16:12:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pcre-ocaml/pcre-ocaml-6.2.5.ebuild,v 1.5 2012/08/22 14:23:06 aballier Exp $
 
 EAPI="2"
 
@@ -17,6 +17,8 @@ DEPEND="${RDEPEND}"
 SLOT="0"
 IUSE="examples +ocamlopt"
 KEYWORDS="amd64 ppc x86 ~x86-fbsd"
+
+CLIBS="" # Workaround for bug #422663
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-6.0.1-linkopts.patch"

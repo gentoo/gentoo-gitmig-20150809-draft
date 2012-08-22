@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/pcre-ocaml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pcre-ocaml/ChangeLog,v 1.47 2012/07/05 02:07:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pcre-ocaml/ChangeLog,v 1.48 2012/08/22 14:23:06 aballier Exp $
+
+  22 Aug 2012; Alexis Ballier <aballier@gentoo.org> pcre-ocaml-6.2.5.ebuild:
+  set empty CLIBS, fixing bug #422663
 
   05 Jul 2012; Alexis Ballier <aballier@gentoo.org> -pcre-ocaml-6.1.1.ebuild,
   -pcre-ocaml-6.2.2.ebuild:
