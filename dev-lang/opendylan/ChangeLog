@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/opendylan
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/opendylan/ChangeLog,v 1.4 2012/08/22 03:42:00 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/opendylan/ChangeLog,v 1.5 2012/08/22 07:50:20 patrick Exp $
+
+  22 Aug 2012; Patrick Lauer <patrick@gentoo.org> opendylan-2011.1-r1.ebuild:
+  Adding x86, with lots of buildsystem hackery to make mps integration work
 
   22 Aug 2012; Patrick Lauer <patrick@gentoo.org> opendylan-9999.ebuild:
   Remove keywords from live ebuild

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/opendylan/opendylan-2011.1-r1.ebuild,v 1.2 2012/08/21 08:30:04 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/opendylan/opendylan-2011.1-r1.ebuild,v 1.3 2012/08/22 07:50:20 patrick Exp $
 EAPI=4
 
 inherit autotools
@@ -19,21 +19,48 @@ LICENSE="Opendylan"
 SLOT="0"
 
 # not tested on x86
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 
 IUSE=""
 
-DEPEND="dev-libs/boehm-gc
+DEPEND="app-arch/unzip
+	dev-libs/boehm-gc
 	dev-lang/perl
 	dev-perl/XML-Parser
-	|| ( dev-lang/opendylan-bin dev-lang/opendylan )"
+	|| ( dev-lang/opendylan-bin dev-lang/opendylan )
+	x86? ( dev-libs/mps )"
 RDEPEND="${DEPEND}"
+
+# on x86 there's a dependency on mps, but the build system is a bit ... hmm ... 
+# let's give it more of a chance to survive then
+NAUGHTY_FILES=(
+	sources/lib/run-time/collector.c.malloc
+	sources/lib/run-time/collector.c
+	sources/lib/run-time/pentium-win32/buffalo-collector.c
+	sources/lib/run-time/pentium-win32/heap-stats.c
+	sources/lib/run-time/heap-utils.h
+	)
+
+NAUGHTY_HEADERS=(
+	mps.h
+	mpscmv.h
+	mpscamc.h
+	mpsavm.h
+	)
 
 src_prepare() {
 	mkdir -p build-aux
 	elibtoolize && eaclocal || die "Fail"
 	automake --foreign --add-missing # this one dies wrongfully
 	eautoconf || die "Fail"
+	# mps headers, included wrong
+	if use x86; then
+	for i in ${NAUGHTY_FILES[@]}; do
+		for header in ${NAUGHTY_HEADERS[@]}; do
+			sed -i -e "s:\"${header}\":<${header}>:" $i
+		done
+	done
+	fi
 }
 
 src_configure() {
@@ -42,7 +69,19 @@ src_configure() {
 	else
 		PATH=/opt/opendylan/bin:$PATH
 	fi
-	econf --prefix=/opt/opendylan || die
+	if use amd64; then
+		econf --prefix=/opt/opendylan || die
+	else
+		econf --prefix=/opt/opendylan --with-mps=/usr/include/mps/ || die
+	fi
+	if use x86; then
+        # Includedir, pointing at something wrong
+        sed -i -e 's:-I$(MPS)/code:-I$(MPS):'  sources/lib/run-time/pentium-linux/Makefile || die "Couldn't fix mps path"
+	sed -i -e 's~(cd $(MPS)/code; make -f lii4gc.gmk mmdw.a)~:;~' sources/lib/run-time/pentium-linux/Makefile || die "Couldn't fix mps building"
+	sed -i -e 's~(cd $(MPS)/code; make -f lii4gc.gmk mpsplan.a)~:;~' sources/lib/run-time/pentium-linux/Makefile || die "Couldn't fix mps building"
+	sed -i -e 's~$(MPS_LIB)/mpsplan.a~/usr/lib/mpsplan.a~' sources/lib/run-time/pentium-linux/Makefile || die "Couldn't fix mps clone"
+	sed -i -e 's~$(MPS_LIB)/mmdw.a~/usr/lib/mmdw.a~' sources/lib/run-time/pentium-linux/Makefile || die "Couldn't fix mps clone"
+	fi
 }
 
 src_compile() {
