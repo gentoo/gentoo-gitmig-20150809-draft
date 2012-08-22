@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.169 2012/07/25 17:23:44 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.170 2012/08/22 10:17:17 fordfrog Exp $
+
+  22 Aug 2012; Miroslav Šulc <fordfrog@gentoo.org> netbeans-7.2.ebuild:
+  fixed emerge when bg locale is specified (bug #432172)
 
   25 Jul 2012; Miroslav Šulc <fordfrog@gentoo.org>
   -files/6.8/nbbuild_build.xml.patch,
