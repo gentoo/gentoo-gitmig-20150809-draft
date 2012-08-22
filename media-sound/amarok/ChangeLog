@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.434 2012/08/11 20:40:33 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.435 2012/08/22 22:59:15 xmw Exp $
+
+  22 Aug 2012; Michael Weber <xmw@gentoo.org> amarok-2.5.0-r4.ebuild:
+  ppc stable (bug 418321).
 
 *amarok-2.6.0 (11 Aug 2012)
 
