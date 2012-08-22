@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-9999.ebuild,v 1.1 2012/08/22 07:28:13 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-9999.ebuild,v 1.2 2012/08/22 07:50:06 ryao Exp $
 
 EAPI="4"
 
@@ -54,11 +54,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# Workaround for hard coded path
-	sed -i "s|/sbin/lsmod|/bin/lsmod|" scripts/common.sh.in || die
-	# Workaround rename
-	sed -i "s|/usr/bin/scsi-rescan|/usr/sbin/rescan-scsi-bus|" scripts/common.sh.in || die
-
 	if [ ${PV} != "9999" ]
 	then
 		# Fix various deadlocks
@@ -82,16 +77,6 @@ src_configure() {
 		$(use_enable debug)
 	)
 	autotools-utils_src_configure
-}
-
-src_test() {
-	if [ $UID -ne 0 ]
-	then
-		ewarn "Cannot run make check tests with FEATURES=userpriv."
-		ewarn "Skipping make check tests."
-	else
-		autotools-utils_src_test
-	fi
 }
 
 src_install() {

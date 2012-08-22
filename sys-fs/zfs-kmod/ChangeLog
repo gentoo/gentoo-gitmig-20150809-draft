@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/zfs-kmod
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.1 2012/08/22 07:28:13 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.2 2012/08/22 07:50:06 ryao Exp $
+
+  22 Aug 2012; Richard Yao <ryao@gentoo.org> zfs-kmod-0.6.0_rc10.ebuild,
+  zfs-kmod-9999.ebuild:
+  Remove obsolete code from src_prepare() and src_test()
 
 *zfs-kmod-9999 (22 Aug 2012)
 *zfs-kmod-0.6.0_rc10 (22 Aug 2012)
