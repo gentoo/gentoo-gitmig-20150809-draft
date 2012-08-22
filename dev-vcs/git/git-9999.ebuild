@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-9999.ebuild,v 1.34 2012/06/14 05:01:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-9999.ebuild,v 1.35 2012/08/22 05:10:14 robbat2 Exp $
 
 EAPI=4
 
@@ -32,7 +32,7 @@ if [[ ${PV} != *9999 ]]; then
 			${SRC_URI_KORG}/${PN}-htmldocs-${DOC_VER}.tar.${SRC_URI_SUFFIX}
 			${SRC_URI_GOOG}/${PN}-htmldocs-${DOC_VER}.tar.${SRC_URI_SUFFIX}
 			)"
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 else
 	SRC_URI=""
 	KEYWORDS=""
@@ -46,10 +46,10 @@ IUSE="+blksha1 +curl cgi doc emacs +gpg gtk +iconv +nls +pcre +perl +python ppcs
 CDEPEND="
 	!blksha1? ( dev-libs/openssl )
 	sys-libs/zlib
-	pcre?   ( dev-libs/libpcre )
-	perl?   ( dev-lang/perl[-build] )
-	tk?     ( dev-lang/tk )
-	curl?   (
+	pcre? ( dev-libs/libpcre )
+	perl? ( dev-lang/perl[-build] )
+	tk? ( dev-lang/tk )
+	curl? (
 		net-misc/curl
 		webdav? ( dev-libs/expat )
 	)
@@ -207,28 +207,12 @@ src_unpack() {
 }
 
 src_prepare() {
-	# Noperl is being merged to upstream as of 2009/04/05
-	#epatch "${FILESDIR}"/20090305-git-1.6.2-noperl.patch
-
-	# GetOpt-Long v2.38 is strict
-	# Merged in 1.6.3 final 2009/05/07
-	#epatch "${FILESDIR}"/20090505-git-1.6.2.5-getopt-fixes.patch
-
-	# JS install fixup
-	# Merged in 1.7.5.x
-	#epatch "${FILESDIR}"/git-1.7.2-always-install-js.patch
-
-	# Fix false positives with t3404 due to SHELL=/bin/false for the portage
-	# user.
-	# Merged upstream
-	#epatch "${FILESDIR}"/git-1.7.3.4-avoid-shell-issues.patch
-
-	# bug #350075: t9001: fix missing prereq on some tests
-	# Merged upstream
-	#epatch "${FILESDIR}"/git-1.7.3.4-fix-perl-test-prereq.patch
+	# bug #418431 - stated for upstream 1.7.13. Developed by Michael Schwern,
+	# funded as a bounty by the Gentoo Foundation.
+	epatch "${FILESDIR}"/git-1.7.12-git-svn-backport.patch
 
 	# bug #350330 - automagic CVS when we don't want it is bad.
-	epatch "${FILESDIR}"/git-1.7.11-optional-cvs.patch
+	epatch "${FILESDIR}"/git-1.7.12-optional-cvs.patch
 
 	sed -i \
 		-e 's:^\(CFLAGS =\).*$:\1 $(OPTCFLAGS) -Wall:' \
@@ -247,36 +231,6 @@ src_prepare() {
 	# Fix docbook2texi command
 	sed -i 's/DOCBOOK2X_TEXI=docbook2x-texi/DOCBOOK2X_TEXI=docbook2texi.pl/' \
 		Documentation/Makefile || die "sed failed"
-
-	# bug #318289
-	# Merged upstream
-	#epatch "${FILESDIR}"/git-1.7.3.2-interix.patch
-
-	# merged upstream
-	#epatch "${FILESDIR}"/git-1.7.5-interix.patch
-
-	# merged upstream
-	#epatch "${FILESDIR}"/git-1.7.6-interix.patch
-
-	# Newer versions of SVN hate a whitespace in the file URL.
-	# So we avoid that by replaced the space with an underscore.
-	#Initialized empty Git repository in /dev/shm/portage/dev-vcs/git-9999/work/git-9999/t/t d.t9155/git_project/.git/
-	#svn: E235000: In file 'subversion/libsvn_subr/dirent_uri.c' line 2291: assertion failed (svn_uri_is_canonical(url, pool))
-	#
-	# With this change the following tests still fail: t9100 t9118 t9120
-	# Without it, MOST of t91* fails, due to the space tripping up the
-	# svn_uri_is_canonical.
-    #
-	# git-svn actually needs to be fixed here, but this chagne is useful for
-	# testing it.
-	#
-	# This patch is my work to date on fixing git-svn, but it causes more
-	# breakage than it fixes (it's manually-edited now to do nothing).
-	epatch "${FILESDIR}"/git-1.7.8-git-svn-1.7-canonical-path.patch
-	cd "${S}"/t
-	sed -i \
-		-e 's/trash directory/trash_directory/g' \
-		test-lib.sh t0000-basic.sh Makefile || die "sed failed"
 }
 
 git_emake() {
@@ -307,6 +261,8 @@ src_configure() {
 }
 
 src_compile() {
+	git_emake perl/PM.stamp || die "emake perl/PM.stamp failed"
+	git_emake perl/perl.mak || die "emake perl/perl.mak failed"
 	git_emake || die "emake failed"
 
 	if use emacs ; then
@@ -375,6 +331,8 @@ src_install() {
 		dodoc "${S}"/contrib/gitview/gitview.txt
 	fi
 
+	#dobin contrib/fast-import/git-p4 # Moved upstream
+	#dodoc contrib/fast-import/git-p4.txt # Moved upstream
 	newbin contrib/fast-import/import-tars.perl import-tars
 	newbin contrib/git-resurrect.sh git-resurrect
 
@@ -455,6 +413,8 @@ src_test() {
 		t1004-read-tree-m-u-wf.sh \
 		t3700-add.sh \
 		t7300-clean.sh"
+	# t9100 still fails with symlinks in SVN 1.7
+	local test_svn="t9100-git-svn-basic.sh"
 
 	# Unzip is used only for the testcase code, not by any normal parts of Git.
 	if ! has_version app-arch/unzip ; then
@@ -489,6 +449,9 @@ src_test() {
 		einfo "Disabling tests that need Perl"
 		disabled="${disabled} ${tests_perl}"
 	fi
+
+	einfo "Disabling tests that fail with SVN 1.7"
+	disabled="${disabled} ${test_svn}"
 
 	# Reset all previously disabled tests
 	cd "${S}/t"
