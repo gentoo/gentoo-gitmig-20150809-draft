@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-3.41.ebuild,v 1.1 2012/05/30 18:57:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-3.41.ebuild,v 1.2 2012/08/22 15:17:29 vapier Exp $
 
 EAPI=3
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://kernel/linux/docs/man-pages/Archive/${P}.tar.gz
 
 LICENSE="as-is GPL-2 BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~ia64-linux ~x86-linux"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-linux ~ia64-linux ~x86-linux"
 IUSE_LINGUAS=" da de fr it ja nl pl ro ru zh_CN"
 IUSE="nls ${IUSE_LINGUAS// / linguas_}"
 RESTRICT="binchecks"
