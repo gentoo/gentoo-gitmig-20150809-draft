@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.12-r1.ebuild,v 1.2 2012/08/22 05:10:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.12-r1.ebuild,v 1.3 2012/08/22 05:14:49 zmedico Exp $
 
 EAPI=4
 
@@ -261,8 +261,10 @@ src_configure() {
 }
 
 src_compile() {
-	git_emake perl/PM.stamp || die "emake perl/PM.stamp failed"
-	git_emake perl/perl.mak || die "emake perl/perl.mak failed"
+	if use perl ; then
+		git_emake perl/PM.stamp || die "emake perl/PM.stamp failed"
+		git_emake perl/perl.mak || die "emake perl/perl.mak failed"
+	fi
 	git_emake || die "emake failed"
 
 	if use emacs ; then
