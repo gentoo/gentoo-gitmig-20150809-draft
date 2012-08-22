@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.465 2012/08/10 04:29:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.466 2012/08/22 14:16:33 xmw Exp $
+
+  22 Aug 2012; Michael Weber <xmw@gentoo.org> binutils-2.22-r1.ebuild:
+  ppc stable (bug 414865).
 
   10 Aug 2012; Mike Frysinger <vapier@gentoo.org> binutils-2.22-r1.ebuild:
   Build with -fPIC on s390x #430554 by Raúl Porcel.
