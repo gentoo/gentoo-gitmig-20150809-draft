@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/zfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.46 2012/08/22 07:32:18 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.47 2012/08/22 07:51:18 ryao Exp $
+
+  22 Aug 2012; Richard Yao <ryao@gentoo.org> zfs-0.6.0_rc10-r1.ebuild,
+  zfs-9999.ebuild:
+  Remove obsolete src_test()
 
   22 Aug 2012; Richard Yao <ryao@gentoo.org> zfs-0.6.0_rc10-r1.ebuild,
   zfs-9999.ebuild:

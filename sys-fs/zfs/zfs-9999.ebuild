@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.36 2012/08/22 07:32:18 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.37 2012/08/22 07:51:18 ryao Exp $
 
 EAPI="4"
 
@@ -77,16 +77,6 @@ src_configure() {
 		--with-udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
 	)
 	autotools-utils_src_configure
-}
-
-src_test() {
-	if [ $UID -ne 0 ]
-	then
-		ewarn "Cannot run make check tests with FEATURES=userpriv."
-		ewarn "Skipping make check tests."
-	else
-		autotools-utils_src_test
-	fi
 }
 
 src_install() {
