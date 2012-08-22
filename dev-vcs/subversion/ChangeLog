@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.81 2012/08/21 20:53:41 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.82 2012/08/22 20:33:10 tommy Exp $
+
+  22 Aug 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  subversion-1.7.6.ebuild, +files/subversion-1.7.6-kwallet.patch:
+  Add patch for kwallet, upstream applied it to trunk, but did not include it
+  in the following release, should now really fix bug 421575
 
   21 Aug 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
   subversion-1.7.6.ebuild:

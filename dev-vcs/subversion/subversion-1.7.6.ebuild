@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.7.6.ebuild,v 1.2 2012/08/21 20:53:41 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.7.6.ebuild,v 1.3 2012/08/22 20:33:10 tommy Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -109,7 +109,8 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-1.5.6-aix-dso.patch \
 		"${FILESDIR}"/${PN}-1.6.3-hpux-dso.patch \
 		"${FILESDIR}"/${PN}-fix-parallel-build-support-for-perl-bindings.patch \
-		"${FILESDIR}"/${P}-revert-mod_dontdothat-move.patch
+		"${FILESDIR}"/${P}-revert-mod_dontdothat-move.patch \
+		"${FILESDIR}"/${P}-kwallet.patch
 
 	fperms +x build/transform_libtool_scripts.sh
 
