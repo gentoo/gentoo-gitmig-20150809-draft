@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/gargoyle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/ChangeLog,v 1.19 2012/08/21 19:18:49 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/ChangeLog,v 1.20 2012/08/22 16:29:24 hasufell Exp $
+
+  22 Aug 2012; Julian Ospald <hasufell@gentoo.org> gargoyle-2011.1.ebuild:
+  rework ebuild, also fix #432304 and #432306
 
   21 Aug 2012; Julian Ospald <hasufell@gentoo.org> gargoyle-2011.1.ebuild,
   +files/gargoyle-2011.1-desktopfile.patch:
