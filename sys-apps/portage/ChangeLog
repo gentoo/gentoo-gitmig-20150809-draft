@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1074 2012/08/11 23:42:17 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1075 2012/08/22 23:36:19 zmedico Exp $
+
+*portage-2.1.11.11 (22 Aug 2012)
+
+  22 Aug 2012; Zac Medico <zmedico@gentoo.org> +portage-2.1.11.11.ebuild:
+  2.1.11.11 version bump. This fixes bug #142202 (fix emerge-webrsync to handle
+  permissions when non-root users), bug #364105 (fix emerge-webrsync to use
+  PORTAGE_RSYNC_OPTS), bug #392565 (add warning in make.conf man page about
+  PORTAGE_TMPDIR under PORTDIR), bug #432024 (emerge poll loop optimizations),
+  and bug #432170 (add PORTAGE_CHECKSUM_FILTER variable that can be used to skip
+  whirlpool checksums on slow computers). Bug #431026 tracks all bugs fixed
+  since portage-2.1.11.9.
 
 *portage-2.2.0_alpha121 (11 Aug 2012)
 
