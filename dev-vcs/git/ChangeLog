@@ -1,6 +1,15 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.150 2012/08/22 05:14:49 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.151 2012/08/23 05:38:18 robbat2 Exp $
+
+*git-1.7.12-r2 (23 Aug 2012)
+
+  23 Aug 2012; Robin H. Johnson <robbat2@gentoo.org> +git-1.7.12-r2.ebuild,
+  files/git-daemon.confd:
+  Bug #373335: missing --base-path in conf.d/git. Bug #414437: OpenSSL is
+  required for more parts of Git now. Bug #423605: OSX keychain helper. Bug
+  #432328: Upstream has split the bash completion in two parts: git & git-
+  prompt; the latter defines __git_ps1 for your nice prompt.
 
   22 Aug 2012; Zac Medico <zmedico@gentoo.org> git-1.7.12-r1.ebuild:
   Quick fix for USE=-perl.
