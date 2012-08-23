@@ -1,14 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsca/nsca-2.7.2-r103.ebuild,v 1.1 2012/08/23 21:27:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsca/nsca-2.7.2-r103.ebuild,v 1.2 2012/08/23 21:28:49 flameeyes Exp $
 
 EAPI=4
 
 inherit multilib user eutils
 
-DESCRIPTION="Nagios NSCA  - Nagios Service Check Acceptor"
+DESCRIPTION="Nagios Service Check Acceptor"
 HOMEPAGE="http://www.nagios.org/"
-SRC_URI="mirror://sourceforge/nagios/nsca-${PV}.tar.gz"
+SRC_URI="mirror://sourceforge/nagios/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -21,8 +21,6 @@ DEPEND="crypt? ( >=dev-libs/libmcrypt-2.5.1-r4 )
 RDEPEND="${DEPEND}
 	!minimal? ( || ( net-analyzer/icinga net-analyzer/nagios ) )
 	sys-apps/openrc"
-
-S="${WORKDIR}/nsca-${PV}"
 
 pkg_setup() {
 	if ! use minimal; then
