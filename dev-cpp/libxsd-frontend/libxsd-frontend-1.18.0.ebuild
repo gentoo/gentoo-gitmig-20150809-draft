@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxsd-frontend/libxsd-frontend-1.18.0.ebuild,v 1.1 2012/06/01 20:50:58 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxsd-frontend/libxsd-frontend-1.18.0.ebuild,v 1.2 2012/08/23 13:19:38 dev-zero Exp $
 
 EAPI="4"
 
-inherit toolchain-funcs versionator
+inherit eutils toolchain-funcs versionator
 
 DESCRIPTION="A compiler frontend for the W3C XML Schema definition language."
 HOMEPAGE="http://www.codesynthesis.com/projects/libxsd-frontend/"
@@ -21,6 +21,10 @@ RDEPEND=">=dev-libs/xerces-c-3
 DEPEND="${RDEPEND}
 	dev-util/build:0.3"
 
+src_prepare() {
+	epatch "${FILESDIR}/1.17.0-boost-filesystem-v2-deprecation.patch"
+}
+
 src_configure() {
 	BOOST_PKG="$(best_version ">=dev-libs/boost-1.35.0-r5")"
 	BOOST_VER="$(get_version_component_range 1-2 "${BOOST_PKG/*boost-/}")"
@@ -36,7 +40,7 @@ cxx_id       := gnu
 cxx_optimize := n
 cxx_debug    := n
 cxx_rpath    := n
-cxx_pp_extra_options := -DBOOST_FILESYSTEM_VERSION=2
+cxx_pp_extra_options :=
 cxx_extra_options    := ${CXXFLAGS} -I${BOOST_INC}
 cxx_ld_extra_options := ${LDFLAGS}
 cxx_extra_libs       :=
