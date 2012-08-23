@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/pacemaker-1.1.7.ebuild,v 1.2 2012/05/30 14:55:32 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/pacemaker-1.1.7.ebuild,v 1.3 2012/08/23 11:21:54 xarthisius Exp $
 
 EAPI=4
 
@@ -34,6 +34,8 @@ DEPEND="
 	snmp? ( net-analyzer/net-snmp )
 "
 RDEPEND="${DEPEND}"
+
+PATCHES=( "${FILESDIR}"/${PV}-glibc2.16.patch )
 
 S="${WORKDIR}/ClusterLabs-${PN}-${MY_TREE}"
 
