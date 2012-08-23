@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/scrollz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/scrollz/ChangeLog,v 1.42 2012/08/11 14:25:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/scrollz/ChangeLog,v 1.43 2012/08/23 14:37:38 xmw Exp $
+
+  23 Aug 2012; Michael Weber <xmw@gentoo.org> scrollz-2.2.1.ebuild:
+  ppc stable (bug 419251).
 
   11 Aug 2012; Markus Meier <maekke@gentoo.org> scrollz-2.2.1.ebuild:
   x86 stable, bug #419251
