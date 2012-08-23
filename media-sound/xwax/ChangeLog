@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/xwax
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/ChangeLog,v 1.43 2012/07/10 18:59:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/ChangeLog,v 1.44 2012/08/23 19:10:03 xmw Exp $
+
+  23 Aug 2012; Michael Weber <xmw@gentoo.org> xwax-1.2.ebuild:
+  ppc stable (bug 422131).
 
   10 Jul 2012; Brent Baude <ranger@gentoo.org> xwax-1.2.ebuild:
   Marking xwax-1.2 ppc64 for bug 422131
@@ -187,4 +190,3 @@
   13 Sep 2008; Joe Sapp <nixphoeni@gentoo.org> +files/xwax-0.4-fonts.patch,
   +metadata.xml, +xwax-0.4.ebuild:
   Initial commit
-
