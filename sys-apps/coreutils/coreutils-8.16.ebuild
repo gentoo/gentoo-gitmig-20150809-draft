@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-8.16.ebuild,v 1.5 2012/08/20 02:51:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-8.16.ebuild,v 1.6 2012/08/23 21:08:56 maekke Exp $
 
 EAPI="3"
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://gnu-alpha/coreutils/${P}.tar.xz
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="acl caps gmp nls selinux static unicode vanilla xattr"
 
 RDEPEND="caps? ( sys-libs/libcap )
