@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/stella-3.7.2.ebuild,v 1.1 2012/08/11 20:49:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/stella-3.7.2.ebuild,v 1.2 2012/08/23 23:38:49 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils gnome2-utils games
@@ -52,7 +52,7 @@ src_configure() {
 src_install() {
 	# icons
 	local i
-	for i in 48 128 ; do 
+	for i in 48 128 ; do
 		newicon -s ${i} src/common/stella-${i}x${i}.png stella.png
 	done
 
