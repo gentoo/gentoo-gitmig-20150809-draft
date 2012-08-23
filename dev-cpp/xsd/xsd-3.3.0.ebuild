@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/xsd/xsd-3.3.0.ebuild,v 1.3 2012/06/01 20:52:32 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/xsd/xsd-3.3.0.ebuild,v 1.4 2012/08/23 13:40:52 dev-zero Exp $
 
 EAPI="2"
 
@@ -30,7 +30,8 @@ src_prepare() {
 		"${FILESDIR}/${PV}-disable_examples_and_tests.patch" \
 		"${FILESDIR}/${PV}-xsdcxx-rename.patch" \
 		"${FILESDIR}/${PV}-fix_include.patch" \
-		"${FILESDIR}/${PV}-fix_tests.patch"
+		"${FILESDIR}/${PV}-fix_tests.patch" \
+		"${FILESDIR}/${PV}-boost-filesystem-v2-deprecation.patch"
 }
 
 use_yesno() {
@@ -65,7 +66,7 @@ cxx_id       := gnu
 cxx_optimize := n
 cxx_debug    := n
 cxx_rpath    := n
-cxx_pp_extra_options := -DBOOST_FILESYSTEM_VERSION=2
+cxx_pp_extra_options :=
 cxx_extra_options    := ${CXXFLAGS} -I${BOOST_INC}
 cxx_ld_extra_options := ${LDFLAGS}
 cxx_extra_libs       :=
