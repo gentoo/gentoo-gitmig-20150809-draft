@@ -1,6 +1,9 @@
 # ChangeLog for app-text/qpdf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qpdf/ChangeLog,v 1.7 2012/08/19 07:01:40 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdf/ChangeLog,v 1.8 2012/08/23 00:13:26 jer Exp $
+
+  23 Aug 2012; Jeroen Roovers <jer@gentoo.org> qpdf-3.0.1.ebuild:
+  Marked ~hppa (bug #428356).
 
 *qpdf-3.0.1 (19 Aug 2012)
 
