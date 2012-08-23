@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.2.5-r1.ebuild,v 1.8 2012/08/11 14:12:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.2.5-r1.ebuild,v 1.9 2012/08/23 05:55:42 xmw Exp $
 
 EAPI=4
 inherit eutils
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="lirc oss sdl sid vorbis"
 
 RDEPEND=">=sys-libs/ncurses-5.7-r7
