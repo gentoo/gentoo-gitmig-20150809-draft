@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/eaccelerator
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/eaccelerator/ChangeLog,v 1.29 2012/08/11 12:43:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/eaccelerator/ChangeLog,v 1.30 2012/08/23 16:33:52 olemarkus Exp $
+
+  23 Aug 2012; Ole Markus With <olemarkus@gentoo.org>
+  -eaccelerator-0.9.6.1-r1.ebuild, -eaccelerator-0.9.6.1-r3.ebuild,
+  -eaccelerator-0.9.6.1-r4.ebuild:
+  Removing old ebuilds
 
   11 Aug 2012; Markus Meier <maekke@gentoo.org> eaccelerator-0.9.6.1-r5.ebuild:
   x86 stable, bug #418897
@@ -208,4 +213,3 @@
   05 Mar 2006; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
   +eaccelerator-0.9.5_beta1.ebuild:
   Initial ebuild.
-
