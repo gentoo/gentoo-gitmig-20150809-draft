@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/nagios-nrpe-2.13-r2.ebuild,v 1.7 2012/08/23 23:03:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/nagios-nrpe-2.13-r3.ebuild,v 1.1 2012/08/23 23:03:15 flameeyes Exp $
 
 EAPI=4
 
@@ -12,8 +12,8 @@ SRC_URI="mirror://sourceforge/nagios/nrpe-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ppc ~ppc64 sparc x86"
-IUSE="command-args ssl tcpd xinetd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+IUSE="command-args ssl tcpd"
 
 DEPEND=">=net-analyzer/nagios-plugins-1.3.0
 	ssl? ( dev-libs/openssl )
@@ -21,8 +21,6 @@ DEPEND=">=net-analyzer/nagios-plugins-1.3.0
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/nrpe-${PV}"
-
-RESTRICT="mirror"
 
 pkg_setup() {
 	enewgroup nagios
@@ -45,8 +43,7 @@ src_prepare() {
 	# Make command-args really conditional, bug 397603
 	epatch "${FILESDIR}/nagios-nrpe-2.13-command-args.patch"
 
-	sed -i -e "s:/usr/local/nagios/var/rw/nagios.cmd:${NAGIOS_COMMAND_FILE:-/var/rw/nagios.cmd}:" contrib/nrpe_check_control.c || die
-	sed -i -e "s:/usr/local/nagios/etc/services.cfg:${NAGIOS_SERVICES_FILE:-/etc/services.cfg}:" contrib/nrpe_check_control.c || die
+	sed -i -e '/define \(COMMAND\|SERVICES\)_FILE/d' contrib/nrpe_check_control.c || die
 
 	sed -i -e \
 		"s#pid_file=/var/run/nrpe.pid#pid_file=/var/run/nrpe/nrpe.pid#" \
@@ -57,8 +54,6 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--host=${CHOST} \
-		--prefix=/usr \
 		--libexecdir=/usr/$(get_libdir)/nagios/plugins \
 		--localstatedir=/var/nagios \
 		--sysconfdir=/etc/nagios \
@@ -73,8 +68,10 @@ src_compile() {
 	emake all
 
 	# Add nifty nrpe check tool
-	cd contrib
-	$(tc-getCC) ${CFLAGS} ${LDFLAGS} -o nrpe_check_control nrpe_check_control.c || die
+	$(tc-getCC) ${CPPFLAGS} ${CFLAGS} \
+		-DCOMMAND_FILE=\"${NAGIOS_COMMAND_FILE:-/var/rw/nagios.cmd}\" \
+		-DSERVICES_FILE=\"${NAGIOS_SERVICES_FILE:-/etc/services.cfg}\" \
+		${LDFLAGS} -o nrpe_check_control contrib/nrpe_check_control.c || die
 }
 
 src_install() {
@@ -83,35 +80,28 @@ src_install() {
 	fowners root:nagios /etc/nagios/nrpe.cfg
 	fperms 0640 /etc/nagios/nrpe.cfg
 
-	exeopts -m 0750 -o nagios -g nagios
-	exeinto /usr/bin
+	exeinto /usr/libexec
 	doexe src/nrpe
 
-	exeopts -m 0750 -o nagios -g nagios
-	exeinto /usr/$(get_libdir)/nagios/plugins
-	doexe src/check_nrpe contrib/nrpe_check_control
-
-	exeopts -m 0755
-	newinitd "${FILESDIR}"/nrpe-nagios3-r1 nrpe
+	newinitd "${FILESDIR}"/nrpe.init nrpe
 
 	dodoc LEGAL Changelog README SECURITY \
-		contrib/README.nrpe_check_control
+		contrib/README.nrpe_check_control \
+		$(usex ssl README.SSL)
 
-	use ssl && dodoc README.SSL
+	insinto /etc/xinetd.d/
+	doins "${FILESDIR}/nrpe.xinetd.2"
 
-	if use xinetd; then
-		insinto /etc/xinetd.d/
-		doins "${FILESDIR}/nrpe.xinetd"
-	fi
+	exeinto /usr/$(get_libdir)/nagios/plugins
+	doexe src/check_nrpe nrpe_check_control
 }
 
 pkg_postinst() {
-	einfo
-	einfo "If you are using the nrpe daemon, remember to edit"
-	einfo "the config file /etc/nagios/nrpe.cfg"
-	einfo
+	elog "If you are using the nrpe daemon, remember to edit"
+	elog "the config file /etc/nagios/nrpe.cfg"
 
 	if use command-args ; then
+		ewarn ""
 		ewarn "You have enabled command-args for NRPE. This enables"
 		ewarn "the ability for clients to supply arguments to commands"
 		ewarn "which should be run. "
