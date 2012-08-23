@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Moose
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moose/ChangeLog,v 1.100 2012/07/03 18:37:37 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moose/ChangeLog,v 1.101 2012/08/23 14:37:37 xmw Exp $
+
+  23 Aug 2012; Michael Weber <xmw@gentoo.org> Moose-2.60.300.ebuild:
+  add ~ppc keyword (bug 379451)
 
 *Moose-2.60.300 (03 Jul 2012)
 
