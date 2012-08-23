@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/automake
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.171 2012/08/19 14:49:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.172 2012/08/23 14:45:01 xmw Exp $
+
+  23 Aug 2012; Michael Weber <xmw@gentoo.org> automake-1.11.6.ebuild:
+  ppc stable (bug 426336).
 
   19 Aug 2012; Raúl Porcel <armin76@gentoo.org> automake-1.11.6.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #426336
