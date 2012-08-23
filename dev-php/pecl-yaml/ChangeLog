@@ -1,6 +1,9 @@
-# ChangeLog for dev-php5/pecl-yaml
+# ChangeLog for dev-php/pecl-yaml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-yaml/ChangeLog,v 1.2 2012/05/20 15:50:14 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-yaml/ChangeLog,v 1.3 2012/08/23 19:19:41 olemarkus Exp $
+
+  23 Aug 2012; Ole Markus With <olemarkus@gentoo.org> -pecl-yaml-1.0.1.ebuild:
+  Removing old ebuilds
 
 *pecl-yaml-1.1.0 (20 May 2012)
 
@@ -26,4 +29,3 @@
   +pecl-yaml-0.6.3.ebuild, +pecl-yaml-0.6.3-r1.ebuild, +metadata.xml:
   Initial commit of pecl-yaml (requested in #347511). Thanks to nathan for
   the ebuild.
-

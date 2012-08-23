@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/suhosin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/suhosin/ChangeLog,v 1.9 2012/02/18 19:43:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/suhosin/ChangeLog,v 1.10 2012/08/23 19:17:39 olemarkus Exp $
+
+  23 Aug 2012; Ole Markus With <olemarkus@gentoo.org> -suhosin-0.9.33.ebuild:
+  Removing old ebuilds
 
   18 Feb 2012; Raúl Porcel <armin76@gentoo.org> suhosin-0.9.33.ebuild:
   ia64/s390/sh/sparc stable wrt #399427
@@ -286,4 +289,3 @@
   04 Mar 2007; Luca Longinotti <chtekk@gentoo.org> +metadata.xml,
   +suhosin-0.9.16.ebuild:
   Add Suhosin.
-
