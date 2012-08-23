@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.2.9999.ebuild,v 1.2 2012/08/21 19:20:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.2.9999.ebuild,v 1.3 2012/08/23 20:13:25 ulm Exp $
 
 EAPI=4
 
@@ -238,10 +238,8 @@ src_compile() {
 }
 
 src_install () {
-	emake install DESTDIR="${D}"
+	emake install DESTDIR="${D}" NO_BIN_LINK=t
 
-	rm "${ED}"/usr/bin/emacs-${EMACS_SUFFIX} \
-		|| die "Removing link to emacs executable failed"
 	mv "${ED}"/usr/bin/{emacs-${FULL_VERSION}-,}${EMACS_SUFFIX} \
 		|| die "Moving emacs executable failed"
 
