@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14069 2012/08/22 23:42:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14070 2012/08/23 19:23:59 floppym Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Mike Gilbert <floppym@gentoo.org> (23 Aug 2012)
+# Dev channel releases are only for people who are developers or want more
+# experimental features and accept a more unstable release.
+>=www-client/chromium-23
+>=www-client/google-chrome-23
+
+# Mike Gilbert <floppym@gentoo.org> (23 Aug 2012)
+# Mask v8 versions used for www-client/chromium dev channel releases.
+>=dev-lang/v8-3.13
 
 # Julian Ospald <hasufell@gentoo.org> (19 Aug 2012)
 # Masked for removal in 30 days
@@ -173,13 +183,6 @@ dev-ruby/mail:0
 # binary package in his overlay. (layman -a xmw)
 =app-misc/jbidwatcher-1*
 
-# Mike Gilbert <floppym@gentoo.org> (09 Jul 2012)
-# Dev channel releases are only for people who are developers or want more
-# experimental features and accept a more unstable release.
->=www-client/chromium-22
->=www-client/google-chrome-22
->=dev-lang/nacl-toolchain-newlib-0_p9093
-
 # Diego Elio Pettenò <flameeyes@gentoo.org> (08 Jul 2012)
 # Dead upstream (domain is gone as well), very bad code.
 # If possible use net-ftp/tftp-hpa; if that is not possible, we're
@@ -218,10 +221,6 @@ dev-python/sexy-python
 # bug 424263 423047
 # dead on upstream, fails on gcc-4.7
 =media-plugins/vdr-cdda-0.1.0-r1
-
-# Mike Gilbert <floppym@gentoo.org> (29 Jun 2012)
-# Mask v8 versions used for www-client/chromium dev channel releases.
->=dev-lang/v8-3.12
 
 # Michael Weber <xmw@gentoo.org> (29 Jun 2012)
 # Masking for security reasons (bug 424025, CVE-2012-3366)
