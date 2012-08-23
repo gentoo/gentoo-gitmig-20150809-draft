@@ -1,6 +1,6 @@
 diff -Naur neatx.orig/Makefile.am neatx/Makefile.am
---- neatx.orig/Makefile.am	2012-08-21 12:09:25.504181479 +0200
-+++ neatx/Makefile.am	2012-08-21 12:11:55.254498131 +0200
+--- neatx.orig/Makefile.am	2012-08-23 12:01:14.290018757 +0200
++++ neatx/Makefile.am	2012-08-23 14:16:42.119497905 +0200
 @@ -16,7 +16,7 @@
  appdir = $(pkgpythondir)/app
  docdir = $(datadir)/doc/$(PACKAGE)
@@ -46,7 +46,15 @@ diff -Naur neatx.orig/Makefile.am neatx/Makefile.am
  	  echo 's#@PKGPYTHONDIR@#$(pkgpythondir)#g'; \
  	} > $@
  
-@@ -206,7 +206,7 @@
+@@ -199,14 +199,14 @@
+ $(LOG_WRAPPER): Makefile stamp-directories $(GEN_LOG_WRAPPER)
+ 	set -e; \
+ 	progname=`basename $@ | sed -e 's/-wrapper//'`; \
+-	$(GEN_LOG_WRAPPER) "$(pkglibdir)/$$progname" "$(DESTDIR)$(pythondir)" > $@ || rm -f $@
++	$(GEN_LOG_WRAPPER) "$(pkglibexecdir)/$$progname" "$(DESTDIR)$(pythondir)" > $@ || rm -f $@
+ 	chmod u+x $@
+ 
+ # We need to create symlinks because "make distcheck" will not install Python
  # files when building.
  srclinks: stamp-directories
  	set -e; \
@@ -56,8 +64,8 @@ diff -Naur neatx.orig/Makefile.am neatx/Makefile.am
  			$(LN_S) $(abs_top_srcdir)/$$i $$i; \
  		fi; \
 diff -Naur neatx.orig/lib/constants.py neatx/lib/constants.py
---- neatx.orig/lib/constants.py	2012-08-21 12:09:25.504181479 +0200
-+++ neatx/lib/constants.py	2012-08-21 12:12:46.964539145 +0200
+--- neatx.orig/lib/constants.py	2012-08-23 12:01:14.290018757 +0200
++++ neatx/lib/constants.py	2012-08-23 12:01:23.405734335 +0200
 @@ -40,14 +40,14 @@
  START_GNOME_COMMAND = "gnome-session"
  

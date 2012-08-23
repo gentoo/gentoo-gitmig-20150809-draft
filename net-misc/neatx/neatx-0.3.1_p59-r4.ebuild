@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neatx/neatx-0.3.1_p59-r3.ebuild,v 1.1 2012/08/21 13:34:00 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neatx/neatx-0.3.1_p59-r4.ebuild,v 1.1 2012/08/23 12:30:40 voyageur Exp $
 
 EAPI=4
 
 PYTHON_DEPEND="2"
-inherit eutils autotools python multilib user
+inherit eutils autotools python user
 
 DESCRIPTION="Google implementation of NX server"
 HOMEPAGE="http://code.google.com/p/neatx/"
@@ -123,12 +123,12 @@ pkg_postinst () {
 	# Other NX servers ebuilds may have already created the nx account
 	# However they use different login shell/home directory paths
 	if [[ ${ROOT} == "/" ]]; then
-		usermod -s /usr/$(get_libdir)/neatx/nxserver-login nx || die "Unable to set login shell of nx user!!"
+		usermod -s /usr/libexec/neatx/nxserver-login nx || die "Unable to set login shell of nx user!!"
 		usermod -d ${NX_HOME_DIR} nx || die "Unable to set home directory of nx user!!"
 	else
 		elog "If you had another NX server installed before, please make sure"
 		elog "the nx user account is correctly set to:"
-		elog " * login shell: /usr/$(get_libdir)/neatx/nxserver-login"
+		elog " * login shell: /usr/libexec/neatx/nxserver-login"
 		elog " * home directory: ${NX_HOME_DIR}"
 	fi
 

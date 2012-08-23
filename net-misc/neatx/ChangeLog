@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/neatx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neatx/ChangeLog,v 1.18 2012/08/21 13:34:00 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neatx/ChangeLog,v 1.19 2012/08/23 12:30:40 voyageur Exp $
+
+*neatx-0.3.1_p59-r4 (23 Aug 2012)
+
+  23 Aug 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  -neatx-0.3.1_p59-r3.ebuild, +neatx-0.3.1_p59-r4.ebuild,
+  files/neatx-0.3.1_p59-use_libexecdir.patch:
+  Fix missing parts for libexecdir migration, thanks Damien Granger in bug
+  #432274
 
 *neatx-0.3.1_p59-r3 (21 Aug 2012)
 
