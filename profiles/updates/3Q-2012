@@ -39,3 +39,4 @@ move net-wireless/iwl6005-ucode sys-firmware/iwl6005-ucode
 move net-wireless/iwl6030-ucode sys-firmware/iwl6030-ucode
 move net-wireless/iwl6050-ucode sys-firmware/iwl6050-ucode
 move net-analyzer/nagios-nsca net-analyzer/nsca
+move net-analyzer/nagios-nrpe net-analyzer/nrpe
