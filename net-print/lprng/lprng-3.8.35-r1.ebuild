@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.35.ebuild,v 1.2 2012/02/05 13:58:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.35-r1.ebuild,v 1.1 2012/08/23 20:23:41 dilfridge Exp $
 
 EAPI=4
 
