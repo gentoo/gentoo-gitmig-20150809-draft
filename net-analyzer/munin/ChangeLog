@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.95 2012/08/19 03:25:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.96 2012/08/23 19:20:42 flameeyes Exp $
+
+*munin-2.0.5-r2 (23 Aug 2012)
+
+  23 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/munin-asyncd.init.2, +files/munin-node_init.d_2.0.5,
+  +munin-2.0.5-r2.ebuild, -munin-1.4.7-r2.ebuild:
+  Remove old; revision bump: implement munin-asyncd support properly with an
+  init script that drops privilege and a separate role uid to run on; pkg_config
+  also generates SSH keys for the munin user for SSH transport support.
 
   19 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Change herd to sysadmin.

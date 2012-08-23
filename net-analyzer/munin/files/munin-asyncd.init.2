@@ -1,0 +1,20 @@
+#!/sbin/runscript
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/files/munin-asyncd.init.2,v 1.1 2012/08/23 19:20:42 flameeyes Exp $
+
+command=/usr/libexec/munin/munin-asyncd
+command_args="--fork"
+pidfile="/var/run/munin/munin-asyncd.pid"
+start_stop_daemon_args="--background --make-pidfile --user munin-asyncd"
+
+depend() {
+	need munin-node
+	before cron
+}
+
+start_pre() {
+	checkpath -d -o munin-async -m 0700 /var/spool/munin
+}
+
+# vim: filetype=gentoo-init-d:
