@@ -1,6 +1,9 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.100 2012/08/19 14:06:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.101 2012/08/23 08:44:54 xmw Exp $
+
+  23 Aug 2012; Michael Weber <xmw@gentoo.org> libav-0.8.3.ebuild:
+  ppc stable (bug 422537).
 
   19 Aug 2012; Raúl Porcel <armin76@gentoo.org> libav-0.8.3.ebuild:
   alpha/ia64/sparc stable wrt #422537
@@ -420,4 +423,3 @@
   Initial commit for ffmpeg fork/alternative. Ebuild adjusted from ffmpeg ones.
   Thanks for lu_zero for help with testing it. Virtual pkg and dependency
   testing on current ffmpeg deps still needs to be done.
-
