@@ -2,7 +2,7 @@
 #
 # icecream-create-env - helper script to create icecc environments(mostly for cross-compiling)
 #
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 #
 # Please note, this script has been designed to work with Gentoo's crossdev, it may or may
@@ -50,12 +50,12 @@ tmpfile=`mktemp`
 target=`gcc -dumpmachine`
 if [ "x${target}" = "x${prefix}" ]
 then
-	/usr/lib/icecc/icecc-create-env \
+	/usr/libexec/icecc/icecc-create-env \
 		/usr/${prefix}/gcc-bin/${version}/gcc \
 		/usr/${prefix}/gcc-bin/${version}/g++ \
 		| tee ${tmpfile}
 else
-	/usr/lib/icecc/icecc-create-env \
+	/usr/libexec/icecc/icecc-create-env \
 		/usr/${target}/${prefix}/gcc-bin/${version}/${prefix}-gcc \
 		/usr/${target}/${prefix}/gcc-bin/${version}/${prefix}-g++ \
 		| tee ${tmpfile}
