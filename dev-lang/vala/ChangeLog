@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/vala
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.114 2012/08/20 18:39:57 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.115 2012/08/23 15:25:46 tetromino Exp $
+
+  23 Aug 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  vala-0.10.4-r2.ebuild, vala-0.12.1-r1.ebuild:
+  Fix file collision with vala-common (bug #432456, thanks to Travis Hansen).
 
 *vala-0.17.5 (20 Aug 2012)
 *vala-0.16.1-r2 (20 Aug 2012)
