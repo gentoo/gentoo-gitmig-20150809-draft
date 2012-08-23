@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.319 2012/08/20 02:46:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.320 2012/08/23 01:17:53 vapier Exp $
+
+  23 Aug 2012; Mike Frysinger <vapier@gentoo.org> bash-4.2_p37.ebuild:
+  Disable readline-specific options in bashrc when USE=-readline #432338 by
+  Agostino Sarubbo.
 
   20 Aug 2012; Jeroen Roovers <jer@gentoo.org> bash-4.2_p37.ebuild:
   Stable for HPPA (bug #431850).

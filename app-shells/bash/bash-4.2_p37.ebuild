@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.2_p37.ebuild,v 1.5 2012/08/20 02:46:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.2_p37.ebuild,v 1.6 2012/08/23 01:17:53 vapier Exp $
 
 EAPI="1"
 
@@ -151,8 +151,20 @@ src_install() {
 		newins "${FILESDIR}"/dot-${f} .${f}
 	done
 
-	sed -i -e "s:#${USERLAND}#@::" "${D}"/etc/skel/.bashrc "${D}"/etc/bash/bashrc
-	sed -i -e '/#@/d' "${D}"/etc/skel/.bashrc "${D}"/etc/bash/bashrc
+	local sed_args=(
+		-e "s:#${USERLAND}#@::"
+		-e '/#@/d'
+	)
+	if ! use readline ; then
+		sed_args+=( #432338
+			-e '/^shopt -s histappend/s:^:#:'
+			-e 's:use_color=true:use_color=false:'
+		)
+	fi
+	sed -i \
+		"${sed_args[@]}" \
+		"${D}"/etc/skel/.bashrc \
+		"${D}"/etc/bash/bashrc || die
 
 	if use plugins ; then
 		exeinto /usr/$(get_libdir)/bash
