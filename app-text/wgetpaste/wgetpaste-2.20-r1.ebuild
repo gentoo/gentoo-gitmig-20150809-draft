@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/wgetpaste-2.20-r1.ebuild,v 1.3 2012/07/25 04:54:48 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/wgetpaste-2.20-r1.ebuild,v 1.4 2012/08/23 15:30:33 darkside Exp $
 
 EAPI="4"
 
@@ -16,6 +16,10 @@ IUSE="zsh-completion +lodgeit-default"
 DEPEND=""
 RDEPEND="net-misc/wget
 	zsh-completion? ( app-shells/zsh )"
+
+src_prepare() {
+	sed -i -e "s:/etc:\"${EPREFIX}\"/etc:g" wgetpaste || die
+}
 
 src_install() {
 	dobin ${PN}

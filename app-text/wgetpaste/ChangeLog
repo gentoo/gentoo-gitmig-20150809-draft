@@ -1,6 +1,10 @@
 # ChangeLog for app-text/wgetpaste
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/ChangeLog,v 1.126 2012/07/25 04:54:48 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/ChangeLog,v 1.127 2012/08/23 15:30:33 darkside Exp $
+
+  23 Aug 2012; Jeremy Olexa <darkside@gentoo.org> wgetpaste-2.20-r1.ebuild:
+  Better support Gentoo Prefix by looking in the offset for config files, no
+  revbump due to such minor change
 
   25 Jul 2012; Richard Yao <ryao@gentoo.org> wgetpaste-2.20-r1.ebuild:
   Keyword ~amd64-fbsd and ~x64-freebsd
