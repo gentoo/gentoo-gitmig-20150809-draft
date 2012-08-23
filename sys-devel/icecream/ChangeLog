@@ -1,6 +1,15 @@
 # ChangeLog for sys-devel/icecream
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/ChangeLog,v 1.42 2012/05/24 02:41:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/ChangeLog,v 1.43 2012/08/23 10:42:09 xarthisius Exp $
+
+*icecream-0.9.7-r1 (23 Aug 2012)
+
+  23 Aug 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  +files/0.9.7-automake.patch, +icecream-0.9.7-r1.ebuild,
+  -files/0.9.7-automake-1.11.2.patch, -icecream-0.9.6-r1.ebuild,
+  -icecream-0.9.7.ebuild:
+  Backport patch fixing build issues with recent automake, drop my patch that
+  caused bug #399259 by Vu Tran Kien <vutrankien.vn@gmail.com>
 
   24 May 2012; Mike Frysinger <vapier@gentoo.org> icecream-0.9.6-r1.ebuild,
   icecream-0.9.7.ebuild:
@@ -223,4 +232,3 @@
   +files/icecream.nokde.patch, +files/icecream_disable.patch,
   +files/icecreamdaemon, +files/icecreamscheduler:
   Initial import. The ebuild was contributed by Alexander Holler.
-

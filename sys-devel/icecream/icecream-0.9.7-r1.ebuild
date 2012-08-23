@@ -1,15 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/icecream-0.9.6-r1.ebuild,v 1.2 2012/05/24 02:41:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/icecream-0.9.7-r1.ebuild,v 1.1 2012/08/23 10:42:09 xarthisius Exp $
 
-EAPI=3
+EAPI=4
 
-inherit base autotools user
+inherit autotools base user
 
-MY_P="icecc-${PV}"
+MY_P=icecc-${PV}
 
 DESCRIPTION="icecc is a program for distributed compiling of C(++) code across several machines; based on distcc"
-HOMEPAGE="http://old-en.opensuse.org/Icecream"
+HOMEPAGE="http://en.opensuse.org/Icecream"
 SRC_URI="ftp://ftp.suse.com/pub/projects/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
@@ -17,11 +17,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~sparc ~x86"
 IUSE=""
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 PATCHES=(
-	"${FILESDIR}/${PV}-symlinks.patch"
-	"${FILESDIR}/${PV}-crosscompile.patch"
+	"${FILESDIR}/0.9.6-symlinks.patch"
+	"${FILESDIR}/0.9.6-crosscompile.patch"
+	"${FILESDIR}/${PV}-automake.patch"
 	"${FILESDIR}/${PN}-conf.d-verbosity.patch"
 	"${FILESDIR}/${PN}-gentoo-multilib.patch"
 )
@@ -38,13 +39,13 @@ src_prepare() {
 }
 
 src_install() {
-	base_src_install
+	default
 
-	dosbin "${FILESDIR}"/icecream-config || die "install failed"
-	dosbin "${FILESDIR}"/icecream-create-env || die "install failed"
+	dosbin "${FILESDIR}"/icecream-config
+	dosbin "${FILESDIR}"/icecream-create-env
 
-	newconfd suse/sysconfig.icecream icecream || die "install failed"
-	doinitd "${FILESDIR}"/icecream || die "install failed"
+	newconfd suse/sysconfig.icecream icecream
+	doinitd "${FILESDIR}"/icecream
 
 	diropts -m0755
 	keepdir /usr/lib/icecc/bin
