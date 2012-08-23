@@ -15,5 +15,6 @@ maintaining speed and efficiency.
 <use>
 	<flag name='escreen'>Enable built-in <pkg>app-misc/screen</pkg>
 		support</flag>
+	<flag name='utempter'>Include libutempter support</flag>
 </use>
 </pkgmetadata>
