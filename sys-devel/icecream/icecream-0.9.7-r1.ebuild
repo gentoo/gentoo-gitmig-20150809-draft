@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/icecream-0.9.7-r1.ebuild,v 1.1 2012/08/23 10:42:09 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/icecream-0.9.7-r1.ebuild,v 1.2 2012/08/23 11:16:17 xarthisius Exp $
 
 EAPI=4
 
@@ -34,7 +34,7 @@ pkg_setup() {
 
 src_prepare() {
 	base_src_prepare
-
+	sed -i -e "s/Defaut/Default/g" suse/sysconfig.icecream || die #275761
 	eautoreconf
 }
 

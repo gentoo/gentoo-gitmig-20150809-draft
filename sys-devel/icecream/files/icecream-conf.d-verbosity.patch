@@ -1,11 +1,10 @@
-diff -urN icecream.orig/suse/sysconfig.icecream icecream/suse/sysconfig.icecream
---- icecream.orig/suse/sysconfig.icecream
-+++ icecream/suse/sysconfig.icecream
+--- a/suse/sysconfig.icecream
++++ b/suse/sysconfig.icecream
 @@ -39,6 +39,15 @@
  #
  ## Type: string
  ## Path: Applications/icecream
-+## Defaut: -v
++## Default: -v
 +#
 +# icecream's level of verbosity ([-v[v[v]]])
 +#
