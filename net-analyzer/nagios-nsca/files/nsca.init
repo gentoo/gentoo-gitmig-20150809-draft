@@ -1,26 +1,35 @@
 #!/sbin/runscript
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nsca/files/nsca.init,v 1.2 2012/08/21 17:30:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nsca/files/nsca.init,v 1.3 2012/08/23 21:23:31 flameeyes Exp $
 
-get_pidfile() {
-    sed -n -e 's:^[ \t]*pid_file=\([^#]\+\).*:\1:p' \
-	/etc/nagios/nsca.cfg
+: ${CFGFILE:=/etc/nagios/nsca.cfg}
+
+get_config() {
+    [ -f ${CFGFILE} ] || return 1
+
+    sed -n -e 's:^[ \t]*'$1'=\([^#]\+\).*:\1:p' \
+	${CFGFILE}
 }
 
 extra_started_commands="reload"
 
 command=/usr/libexec/${SVCNAME}
-command_args="-c /etc/nagios/nsca.cfg --daemon"
-pidfile=$(get_pidfile)
+command_args="-c ${CFGFILE} --daemon"
+pidfile=$(get_config pid_file)
 
 depend() {
+    config ${CFGFILE}
+
     need net
-    use icinga nagios
+    case $(get_config nsca_user) in
+	icinga) need icinga ;;
+	nagios) need nagios ;;
+    esac
 }
 
 reload() {
     ebegin "Reloading nsca"
-    kill -HUP `cat $(get_pidfile)`
+    kill -HUP `cat $(get_config pid_file)`
     eend $? "Failed to reload nsca"
 }

@@ -1,6 +1,16 @@
 # ChangeLog for net-analyzer/nagios-nsca
 # Copyright 2002-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nsca/ChangeLog,v 1.41 2012/08/21 17:30:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nsca/ChangeLog,v 1.42 2012/08/23 21:23:31 flameeyes Exp $
+
+*nagios-nsca-2.7.2-r103 (23 Aug 2012)
+
+  23 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> +files/nsca.conf,
+  +nagios-nsca-2.7.2-r103.ebuild, files/nsca.init, metadata.xml:
+  Revision bump: add a minimal USE flag to only build send_nsca instead of the
+  daemon; add a dependency on either nagios or icinga for the non-minimal
+  install; install a configuration file with icinga defaults (user/group and
+  paths); allow changing the configuration file for the init script (install
+  conf.d file for that) and depend properly on icinga/nagios.
 
 *nagios-nsca-2.7.2-r102 (21 Aug 2012)
 

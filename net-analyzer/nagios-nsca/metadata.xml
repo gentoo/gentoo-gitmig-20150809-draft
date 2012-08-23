@@ -25,6 +25,11 @@
       flag unless all the communication will be handled in an
       absolutely safe environment.
     </flag>
+    <flag name='minimal'>
+      Only build and install the send_nsca command and not the
+      daemon. This allows a very minimal install with no overhead when
+      setting up a node.
+    </flag>
   </use>
 </pkgmetadata>
 
