@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ant-testutil
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-testutil/ChangeLog,v 1.15 2012/06/11 13:08:57 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-testutil/ChangeLog,v 1.16 2012/08/23 08:27:19 xmw Exp $
+
+  23 Aug 2012; Michael Weber <xmw@gentoo.org> ant-testutil-1.8.4.ebuild:
+  ppc stable (bug 417909).
 
   11 Jun 2012; Johannes Huber <johu@gentoo.org> ant-testutil-1.8.4.ebuild:
   Stable for x86, wrt bug #417909
@@ -60,4 +63,3 @@
   20 Feb 2010; Vlastimil Babka <caster@gentoo.org>
   +ant-testutil-1.8.0.ebuild, +metadata.xml:
   Previously unpackaged part of dev-java/ant, fixes bug #266954.
-
