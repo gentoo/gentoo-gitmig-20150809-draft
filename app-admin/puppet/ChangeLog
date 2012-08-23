@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/puppet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.119 2012/08/16 03:48:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.120 2012/08/23 09:39:36 xmw Exp $
+
+  23 Aug 2012; Michael Weber <xmw@gentoo.org> puppet-2.7.18.ebuild:
+  ppc stable (bug 425112).
 
   16 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> puppet-2.7.11.ebuild,
   puppet-2.7.12.ebuild, puppet-2.7.13.ebuild, puppet-2.7.18.ebuild:
