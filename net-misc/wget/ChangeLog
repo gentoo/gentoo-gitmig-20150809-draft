@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/wget
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.164 2012/08/06 19:43:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.165 2012/08/23 18:14:40 vapier Exp $
+
+  23 Aug 2012; Mike Frysinger <vapier@gentoo.org> metadata.xml,
+  wget-1.14.ebuild:
+  Add USE="pcre uuid zlib" flags to control new deps #432468 by Yuta SATOH.
 
 *wget-1.14 (06 Aug 2012)
 
