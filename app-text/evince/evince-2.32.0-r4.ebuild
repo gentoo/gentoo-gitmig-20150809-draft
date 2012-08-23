@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.32.0-r4.ebuild,v 1.12 2012/07/15 17:34:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.32.0-r4.ebuild,v 1.13 2012/08/23 16:01:12 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -47,8 +47,7 @@ DEPEND="${RDEPEND}
 	~app-text/docbook-xml-dtd-4.1.2
 	virtual/pkgconfig
 	sys-devel/gettext
-	>=dev-util/intltool-0.35
-	>=dev-util/gtk-doc-am-1.13"
+	>=dev-util/intltool-0.35"
 
 ELTCONF="--portage"
 
