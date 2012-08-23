@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-2.8.0.ebuild,v 1.2 2012/08/11 18:08:40 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-2.8.0.ebuild,v 1.3 2012/08/23 10:52:55 dilfridge Exp $
 
 EAPI=4
 
@@ -69,6 +69,9 @@ RDEPEND="${DEPEND}
 "
 
 S=${WORKDIR}/${MY_P}/extra/${PN}
+
+RESTRICT=test
+# bug 420203
 
 PATCHES=(
 	"${FILESDIR}/${PN}-2.6.0_beta3-options.patch"
