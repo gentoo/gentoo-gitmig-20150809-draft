@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/icecream-0.9.7-r1.ebuild,v 1.2 2012/08/23 11:16:17 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/icecream-0.9.7-r1.ebuild,v 1.3 2012/08/23 11:42:07 xarthisius Exp $
 
 EAPI=4
 
@@ -23,6 +23,7 @@ PATCHES=(
 	"${FILESDIR}/0.9.6-symlinks.patch"
 	"${FILESDIR}/0.9.6-crosscompile.patch"
 	"${FILESDIR}/${PV}-automake.patch"
+	"${FILESDIR}/${PV}-glibc2.16.patch"
 	"${FILESDIR}/${PN}-conf.d-verbosity.patch"
 	"${FILESDIR}/${PN}-gentoo-multilib.patch"
 )
