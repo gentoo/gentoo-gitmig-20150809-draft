@@ -7,3 +7,4 @@
 (setq jde-checkstyle-style "/usr/share/checkstyle/checks/sun_checks.xml")
 (setq jde-html-directory "/usr/share/doc/@PF@/html")
 (setq bsh-html-directory "/usr/share/doc/@PF@/html")
+(setq jde-check-version-flag nil)
