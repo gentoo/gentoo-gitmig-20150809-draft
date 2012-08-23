@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.330 2012/08/03 13:53:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.331 2012/08/23 19:41:13 caster Exp $
+
+*sun-jdk-1.6.0.34 (23 Aug 2012)
+
+  23 Aug 2012; Vlastimil Babka <caster@gentoo.org> +sun-jdk-1.6.0.34.ebuild:
+  Version bump, bug #431492. USE=examples on amd64 has broken distfile, so no
+  demos will be installed.
 
   03 Aug 2012; Agostino Sarubbo <ago@gentoo.org> sun-jdk-1.6.0.33-r1.ebuild:
   Stable for amd64, wrt bug #421073
