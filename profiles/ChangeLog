@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6918 2012/08/23 19:23:59 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6919 2012/08/23 21:26:55 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> updates/3Q-2012:
+  Move nagios-nsca to just nsca.
 
   23 Aug 2012; Mike Gilbert <floppym@gentoo.org> package.mask:
   Adjust chromium dev channel mask for chromium-23.
