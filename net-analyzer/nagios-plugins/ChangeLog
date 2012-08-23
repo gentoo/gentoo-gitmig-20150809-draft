@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/nagios-plugins
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.150 2012/08/19 18:57:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.151 2012/08/23 22:03:56 flameeyes Exp $
+
+*nagios-plugins-1.4.16-r2 (23 Aug 2012)
+
+  23 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +nagios-plugins-1.4.16-r2.ebuild, metadata.xml:
+  Revision bump: cleanup contrib plugins install; add a sudo and smartctl USE
+  flag so that plugins using sudo have a way to be configured.
 
   19 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml,
   nagios-plugins-1.4.16-r1.ebuild:
