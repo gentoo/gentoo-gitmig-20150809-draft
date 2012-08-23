@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gsoap/gsoap-2.8.0.ebuild,v 1.2 2010/10/02 10:28:46 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gsoap/gsoap-2.8.10.ebuild,v 1.1 2012/08/23 04:06:12 patrick Exp $
 
-EAPI=2
+EAPI=4
 
 inherit autotools eutils
 
@@ -15,12 +15,13 @@ SRC_URI="mirror://sourceforge/gsoap2/gsoap_${PV}.zip"
 LICENSE="GPL-2 gSOAP"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc debug examples +ssl"
+IUSE="doc debug examples ipv6 gnutls +ssl"
 
 DEPEND="app-arch/unzip
 	sys-devel/flex
 	sys-devel/bison
 	sys-libs/zlib
+	gnutls? ( net-libs/gnutls )
 	ssl? ( dev-libs/openssl )"
 RDEPEND=""
 
@@ -28,29 +29,28 @@ S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	# Fix Pre-ISO headers
-	epatch "${FILESDIR}/${PN}-2.7-fix-pre-iso-headers.patch"
 	epatch "${FILESDIR}/${PN}-2.7.10-fedora-install_soapcpp2_wsdl2h_aux.patch"
-
-	# causes compilation of app-emulation/virtualbox-ose[vboxwebsrv] to
-	# break (bug #320901):
-	#epatch "${FILESDIR}/${PN}-2.7.15-use_libtool.patch"
 
 	eautoreconf
 }
 
 src_configure() {
+	local myconf=
+	use ssl || myconf+="--disable-ssl "
+	use gnutls && myconf+="--enable-gnutls "
+	use ipv6 && myconf+="--enable-ipv6 "
 	econf \
-		$(use_enable ssl openssl) \
-		$(use_enable examples samples) \
-		$(use_enable debug)
+		${myconf} \
+		$(use_enable debug) \
+		$(use_enable examples samples)
 }
 
 src_compile() {
-	emake -j1 || die "emake failed"
+	emake -j1
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "Install failed"
+	emake DESTDIR="${D}" install
 
 	# yes, we also install the license-file since
 	# it contains info about how to apply the licenses
@@ -58,7 +58,7 @@ src_install() {
 
 	dohtml changelog.html
 
-	rm -rf "${D}"/usr/lib*/*.la
+	find "${D}"/usr/ -name "*.la" -exec rm {} \;
 
 	if use examples; then
 		rm -rf gsoap/samples/Makefile* gsoap/samples/*/Makefile* gsoap/samples/*/*.o
