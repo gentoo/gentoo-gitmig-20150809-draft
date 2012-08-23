@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/opera-next-12.50.1546.ebuild,v 1.2 2012/08/15 17:46:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/opera-next-12.50.1546.ebuild,v 1.3 2012/08/23 14:02:52 jer Exp $
 
 EAPI=4
 inherit eutils fdo-mime gnome2-utils multilib pax-utils versionator
@@ -99,7 +99,6 @@ src_prepare() {
 	unset count
 
 	# Remove unwanted linguas
-	einfo "Keeping these locales (linguas): ${LINGUAS}."
 	for LINGUA in ${O_LINGUAS}; do
 		if ! use linguas_${LINGUA/-/_}; then
 			LINGUA=$(find "${LNGDIR}" -maxdepth 1 -type d -iname ${LINGUA/_/-})
