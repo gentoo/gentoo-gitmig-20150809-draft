@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/qtcurve-qt4
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.145 2012/08/22 12:06:50 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.146 2012/08/23 05:08:41 yngwin Exp $
+
+*qtcurve-qt4-1.8.14 (23 Aug 2012)
+
+  23 Aug 2012; Ben de Groot <yngwin@gentoo.org> +qtcurve-qt4-1.8.14.ebuild:
+  Version bump. Drop patch for kde49 fixed upstream.
 
   22 Aug 2012; Michael Weber <xmw@gentoo.org> qtcurve-qt4-1.8.12.ebuild:
   ppc stable (bug 411845).
