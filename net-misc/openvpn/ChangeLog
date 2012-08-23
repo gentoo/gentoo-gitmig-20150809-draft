@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.237 2012/08/23 03:49:47 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.238 2012/08/23 17:15:24 grobian Exp $
+
+  23 Aug 2012; Fabian Groffen <grobian@gentoo.org> openvpn-2.2.2.ebuild,
+  openvpn-9999.ebuild:
+  Drop ~x86-macos, it doesn't compile, and we don't care enough to fix it
 
   23 Aug 2012; Christoph Junghans <ottxor@gentoo.org> openvpn-2.2.2.ebuild:
   added prefix keywords (bug #417519)
