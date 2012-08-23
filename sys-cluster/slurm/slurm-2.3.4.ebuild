@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/slurm-2.3.4.ebuild,v 1.3 2012/05/09 07:37:21 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/slurm-2.3.4.ebuild,v 1.4 2012/08/23 09:36:49 xarthisius Exp $
 
 EAPI=4
 RESTRICT="primaryuri"
 
-inherit eutils versionator pam perl-module
+inherit eutils versionator pam perl-module user
 
 MY_PV=$(replace_version_separator 3 '-') # stable releases
 #MY_PV=$(replace_version_separator 3 '-0.') # pre-releases
@@ -71,6 +71,8 @@ src_prepare() {
 	sed -e 's:/tmp:/var/tmp:g' \
 		-i "${S}/etc/slurm.conf.example" \
 			|| die "Can't sed for StateSaveLocation=*./tmp"
+
+	epatch "${FILESDIR}"/${P}-glibc2.16.patch
 }
 
 src_configure() {
