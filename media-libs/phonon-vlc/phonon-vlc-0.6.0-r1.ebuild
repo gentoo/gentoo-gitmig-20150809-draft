@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-vlc/phonon-vlc-0.6.0.ebuild,v 1.1 2012/08/09 09:13:37 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-vlc/phonon-vlc-0.6.0-r1.ebuild,v 1.1 2012/08/23 12:26:47 johu Exp $
 
 EAPI=4
 
@@ -34,6 +34,8 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 DOCS=( AUTHORS )
+
+PATCHES=( "${FILESDIR}/${P}-desktop.patch" )
 
 pkg_postinst() {
 	elog "For more verbose debug information, export the following variables:"
