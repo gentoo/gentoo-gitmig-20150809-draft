@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.23.ebuild,v 1.2 2012/08/23 00:14:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.23-r1.ebuild,v 1.1 2012/08/23 21:18:15 dilfridge Exp $
 
 EAPI=4
 
@@ -52,6 +52,7 @@ src_configure() {
 	econf \
 		$(use_enable static-libs static) \
 		--with-fontdir="fonts/conf.avail" \
+		--with-pdftops=pdftops \
 		--enable-imagefilters \
 		$(use_with jpeg) \
 		$(use_with png) \
