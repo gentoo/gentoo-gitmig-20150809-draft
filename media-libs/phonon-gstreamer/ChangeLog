@@ -1,6 +1,17 @@
 # ChangeLog for media-libs/phonon-gstreamer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-gstreamer/ChangeLog,v 1.22 2012/08/13 08:25:58 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-gstreamer/ChangeLog,v 1.23 2012/08/23 11:56:42 johu Exp $
+
+*phonon-gstreamer-4.6.2-r1 (23 Aug 2012)
+
+  23 Aug 2012; Johannes Huber <johu@gentoo.org>
+  +files/phonon-gstreamer-4.6.2-desktop.patch,
+  +phonon-gstreamer-4.6.2-r1.ebuild,
+  -files/4.5.1-fix-searching-for-phonon.patch, -phonon-gstreamer-4.5.1.ebuild,
+  -phonon-gstreamer-4.6.0.ebuild, -phonon-gstreamer-4.6.1.ebuild,
+  -phonon-gstreamer-4.6.2.ebuild:
+  Revision bump adds upstream patch to fix .desktop validation by Michael
+  Palimaka <kensington@gentoo.org> wrt bug #431602. Remove old.
 
 *phonon-gstreamer-4.6.2 (13 Aug 2012)
 
