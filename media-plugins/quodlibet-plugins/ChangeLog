@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/quodlibet-plugins
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-plugins/ChangeLog,v 1.14 2012/06/12 06:07:32 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-plugins/ChangeLog,v 1.15 2012/08/23 20:34:38 xmw Exp $
+
+  23 Aug 2012; Michael Weber <xmw@gentoo.org> quodlibet-plugins-2.4.ebuild:
+  ppc stable (bug 420045).
 
   12 Jun 2012; Jeff Horelick <jdhore@gentoo.org> quodlibet-plugins-2.4.ebuild:
   marked x86 per bug 420045
@@ -63,4 +66,3 @@
   08 Apr 2010; Samuli Suominen <ssuominen@gentoo.org>
   +quodlibet-plugins-2.2.1.ebuild:
   Initial commit wrt #304221.
-
