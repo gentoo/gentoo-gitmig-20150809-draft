@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.4.2.ebuild,v 1.2 2012/07/17 20:13:28 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.4.2.ebuild,v 1.3 2012/08/23 11:06:59 dilfridge Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.6"
@@ -22,7 +22,7 @@ RDEPEND="
 	app-arch/bzip2
 	dev-python/numpy
 	sys-libs/zlib
-	cuda? ( >=dev-util/nvidia-cuda-toolkit-4.1 )
+	cuda? ( >=dev-util/nvidia-cuda-toolkit-4.2 )
 	eigen? ( dev-cpp/eigen:2 )
 	ffmpeg? ( virtual/ffmpeg )
 	gstreamer? (
@@ -131,8 +131,8 @@ src_configure() {
 	)
 
 	if use cuda; then
-		if [[ "$(gcc-version)" > "4.5" ]]; then
-			ewarn "CUDA and >=sys-devel/gcc-4.6 do not play well together. Disabling CUDA support."
+		if [[ "$(gcc-version)" > "4.6" ]]; then
+			ewarn "CUDA and >=sys-devel/gcc-4.7 do not play well together. Disabling CUDA support."
 			mycmakeargs+=( "-DWITH_CUDA=OFF" )
 			mycmakeargs+=( "-DWITH_CUBLAS=OFF" )
 			mycmakeargs+=( "-DWITH_CUFFT=OFF" )
