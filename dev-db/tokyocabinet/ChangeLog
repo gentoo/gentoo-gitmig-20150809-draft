@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/tokyocabinet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tokyocabinet/ChangeLog,v 1.42 2012/04/25 16:22:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tokyocabinet/ChangeLog,v 1.43 2012/08/23 04:23:59 patrick Exp $
+
+*tokyocabinet-1.4.48 (23 Aug 2012)
+
+  23 Aug 2012; Patrick Lauer <patrick@gentoo.org> +tokyocabinet-1.4.48.ebuild:
+  Bump
 
   25 Apr 2012; Justin Lecher <jlec@gentoo.org> tokyocabinet-1.4.47.ebuild:
   Drop unnessecary die
@@ -184,4 +189,3 @@
   +tokyocabinet-1.4.34-r1.ebuild, +files/fix_rpath.patch, +metadata.xml:
   Initial import of tokyocabinet. Thanks to Petteri Räty, Mark Lewandowski
   and Johan Bergstroem for the ebuild. Fixes #240696
-
