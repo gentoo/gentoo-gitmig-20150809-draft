@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/badvpn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/badvpn/ChangeLog,v 1.4 2012/08/19 18:09:49 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/badvpn/ChangeLog,v 1.5 2012/08/23 01:37:21 williamh Exp $
+
+*badvpn-1.999.123-r2 (23 Aug 2012)
+
+  23 Aug 2012; William Hubbs <williamh@gentoo.org> -badvpn-1.999.123-r1.ebuild,
+  +badvpn-1.999.123-r2.ebuild, files/badvpn-ncd.init, files/badvpn-server.init:
+  My initial rewrite of the init scripts broke them for stable OpenRc
+  users, so this fixes that issue.
 
   19 Aug 2012; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   add williamh as maintainer
