@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-4.3.1-r1.ebuild,v 1.3 2012/06/05 13:41:29 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-4.3.1-r1.ebuild,v 1.4 2012/08/23 06:04:28 xmw Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ IUSE="+cmake +cxx debug okteta qthelp"
 if [[ $PV == *9999* ]]; then
 	KEYWORDS=""
 else
-	KEYWORDS="amd64 ~ppc ~ppc64 x86"
+	KEYWORDS="amd64 ppc ~ppc64 x86"
 fi
 
 DEPEND="
