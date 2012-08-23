@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dropbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/ChangeLog,v 1.24 2012/07/25 02:39:58 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/ChangeLog,v 1.25 2012/08/23 03:31:07 ottxor Exp $
+
+  23 Aug 2012; Christoph Junghans <ottxor@gentoo.org> dropbox-1.4.7-r1.ebuild:
+  added ~x86-linux (bug #378719)
 
 *dropbox-1.4.3-r1 (25 Jul 2012)
 *dropbox-1.4.7-r1 (25 Jul 2012)
