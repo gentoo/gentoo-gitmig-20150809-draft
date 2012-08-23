@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/weka
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/ChangeLog,v 1.46 2012/08/03 13:58:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/ChangeLog,v 1.47 2012/08/23 05:46:36 xmw Exp $
+
+  23 Aug 2012; Michael Weber <xmw@gentoo.org> weka-3.6.6-r1.ebuild:
+  ppc stable (bug 418965).
 
   03 Aug 2012; Agostino Sarubbo <ago@gentoo.org> weka-3.6.6-r1.ebuild:
   Stable for amd64, wrt bug #418965
@@ -181,4 +184,3 @@
   16 May 2004; Chris Aniszczyk <zx@gentoo.org> +metadata.xml,
   +weka-3.4.1.ebuild:
   Initial Import. Closes #50414
-
