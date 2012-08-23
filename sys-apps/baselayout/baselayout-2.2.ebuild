@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.2.ebuild,v 1.1 2012/08/20 20:45:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.2.ebuild,v 1.2 2012/08/23 21:47:35 vapier Exp $
 
 inherit eutils multilib
 
@@ -85,6 +85,7 @@ multilib_layout() {
 				mkdir -p "${prefix}" || die
 				rm -f "${prefix}lib" || die
 				ln -s ${def_libdir} "${prefix}lib" || die
+				mkdir -p "${prefix}${def_libdir}" #423571
 			fi
 		else
 			# we need to make sure "lib" is a dir
