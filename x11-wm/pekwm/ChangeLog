@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/pekwm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/ChangeLog,v 1.60 2012/05/04 08:58:55 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/ChangeLog,v 1.61 2012/08/23 16:10:19 xarthisius Exp $
+
+*pekwm-0.1.15 (23 Aug 2012)
+
+  23 Aug 2012; Kacper Kowalik <xarthisius@gentoo.org> +pekwm-0.1.15.ebuild:
+  Version bump wrt #430918 by <theodor@suremail.info>
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> pekwm-0.1.14.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -239,4 +244,3 @@
   ChangeLog, files/digest-pekwm-0.1.2 :
 
   Initial import.
-
