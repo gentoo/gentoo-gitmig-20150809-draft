@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/task
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/task/ChangeLog,v 1.35 2012/08/08 14:55:42 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/task/ChangeLog,v 1.36 2012/08/23 16:05:35 radhermit Exp $
+
+  23 Aug 2012; Tim Harder <radhermit@gentoo.org>
+  -files/0001-Merge-Uri-support.patch, -task-1.9.4-r1.ebuild,
+  -files/task-1.9.4-rcdir.patch, -files/task-1.9.4-remove-ncurses.patch:
+  Remove old.
 
   08 Aug 2012; Andreas Schuerch <nativemad@gentoo.org> task-2.0.0-r1.ebuild:
   x86 stable, see bug 418615
