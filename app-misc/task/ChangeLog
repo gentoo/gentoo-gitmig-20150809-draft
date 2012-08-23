@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/task
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/task/ChangeLog,v 1.36 2012/08/23 16:05:35 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/task/ChangeLog,v 1.37 2012/08/23 16:07:00 radhermit Exp $
+
+  23 Aug 2012; Tim Harder <radhermit@gentoo.org> task-2.0.0-r1.ebuild,
+  task-2.1.1.ebuild:
+  Alter description for bug #432428.
 
   23 Aug 2012; Tim Harder <radhermit@gentoo.org>
   -files/0001-Merge-Uri-support.patch, -task-1.9.4-r1.ebuild,
