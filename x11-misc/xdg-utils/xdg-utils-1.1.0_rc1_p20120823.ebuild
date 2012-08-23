@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/xdg-utils-1.1.0_rc1_p20122308.ebuild,v 1.1 2012/08/23 02:28:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/xdg-utils-1.1.0_rc1_p20120823.ebuild,v 1.1 2012/08/23 02:33:35 ssuominen Exp $
 
 # See .spec in http://pkgs.fedoraproject.org/gitweb/?p=xdg-utils.git;a=summary
 # The source tree MUST be cleaned before rolling a snapshot tarball:
@@ -11,7 +11,7 @@ EAPI=4
 
 DESCRIPTION="Portland utils for cross-platform/cross-toolkit/cross-desktop interoperability"
 HOMEPAGE="http://portland.freedesktop.org/"
-SRC_URI="http://dev.gentoo.org/~ssuominen/${P}.tar.xz"
+SRC_URI="http://dev.gentoo.org/~ssuominen/${P/0823/2308}.tar.xz -> ${P}.tar.xz" # typo :(
 #SRC_URI="http://portland.freedesktop.org/download/${MY_P}.tar.gz"
 
 LICENSE="MIT"
@@ -30,6 +30,8 @@ DEPEND=""
 DOCS="ChangeLog README RELEASE_NOTES TODO"
 
 RESTRICT="test" # Disabled because of sandbox violation(s)
+
+S=${WORKDIR}/${P/0823/2308}
 
 #src_prepare() {
 #	emake scripts-clean -C scripts
