@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.5.1-r1.ebuild,v 1.3 2012/08/20 01:26:07 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.5.1-r1.ebuild,v 1.4 2012/08/23 21:38:03 johu Exp $
 
 EAPI=4
 
@@ -34,7 +34,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="Adobe"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="-* ~amd64 x86 ~amd64-linux ~x86-linux"
 RESTRICT="strip mirror"
 
 DEPEND="dev-util/bsdiff"
