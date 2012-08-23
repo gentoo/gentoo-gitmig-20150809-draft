@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsca/files/nsca.init,v 1.1 2012/08/23 21:27:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsca/files/nsca.init,v 1.2 2012/08/23 23:08:41 flameeyes Exp $
 
 : ${CFGFILE:=/etc/nagios/nsca.cfg}
 
@@ -29,7 +29,7 @@ depend() {
 }
 
 reload() {
-    ebegin "Reloading nsca"
+    ebegin "Reloading ${SVCNAME}"
     kill -HUP `cat $(get_config pid_file)`
-    eend $? "Failed to reload nsca"
+    eend $?
 }
