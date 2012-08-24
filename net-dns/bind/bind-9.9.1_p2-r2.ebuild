@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.9.1_p2-r1.ebuild,v 1.3 2012/07/28 21:29:03 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.9.1_p2-r2.ebuild,v 1.1 2012/08/24 19:01:09 idl0r Exp $
 
 # Re dlz/mysql and threads, needs to be verified..
 # MySQL uses thread local storage in its C api. Thus MySQL
@@ -226,7 +226,7 @@ src_install() {
 	newins "${FILESDIR}"/127.zone-r1 127.zone
 	newins "${FILESDIR}"/localhost.zone-r3 localhost.zone
 
-	newinitd "${FILESDIR}"/named.init-r11 named
+	newinitd "${FILESDIR}"/named.init-r12 named
 	newconfd "${FILESDIR}"/named.confd-r6 named
 
 	if use gost; then
