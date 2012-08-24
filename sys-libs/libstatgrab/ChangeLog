@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libstatgrab
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstatgrab/ChangeLog,v 1.24 2012/08/20 23:02:18 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstatgrab/ChangeLog,v 1.25 2012/08/24 13:40:23 xmw Exp $
+
+  24 Aug 2012; Michael Weber <xmw@gentoo.org> libstatgrab-0.17.ebuild:
+  ppc stable (bug 422233).
 
   20 Aug 2012; Johannes Huber <johu@gentoo.org> libstatgrab-0.17.ebuild:
   Stable for x86, wrt bug #422233
@@ -113,4 +116,3 @@
   15 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   +libstatgrab-0.10.ebuild:
   Initial import thanks to Jens Gutzeit <jens@gutzeit.at> in bug #52628
-
