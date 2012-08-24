@@ -1,10 +1,10 @@
 # ChangeLog for media-libs/sdl-mixer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/ChangeLog,v 1.108 2012/08/24 06:56:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/ChangeLog,v 1.109 2012/08/24 07:16:21 mr_bones_ Exp $
 
   24 Aug 2012; Michael Sterrett <mr_bones_@gentoo.org>
   sdl-mixer-1.2.12-r1.ebuild:
-  clean old; re-add dropped ia64 keyword
+  re-add dropped ia64 keyword
 
   23 Aug 2012; Michael Sterrett <mr_bones_@gentoo.org> -sdl-mixer-1.2.12.ebuild:
   old
