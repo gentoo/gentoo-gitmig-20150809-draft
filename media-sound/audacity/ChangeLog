@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/audacity
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.176 2012/06/30 04:07:44 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.177 2012/08/24 05:03:30 radhermit Exp $
+
+*audacity-2.0.2 (24 Aug 2012)
+
+  24 Aug 2012; Tim Harder <radhermit@gentoo.org> +audacity-2.0.2.ebuild:
+  Version bump.
 
 *audacity-2.0.1 (30 Jun 2012)
 
