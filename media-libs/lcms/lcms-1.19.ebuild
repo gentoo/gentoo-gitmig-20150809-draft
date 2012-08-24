@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.19.ebuild,v 1.13 2012/04/26 20:40:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.19.ebuild,v 1.14 2012/08/24 21:55:47 dilfridge Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -35,6 +35,7 @@ src_prepare() {
 	sed -e "/SUBDIRS =/s/ python//" -i Makefile.am
 
 	epatch "${FILESDIR}/${P}-disable_static_modules.patch"
+	epatch "${FILESDIR}/${P}-implicit.patch"
 
 	eautoreconf
 

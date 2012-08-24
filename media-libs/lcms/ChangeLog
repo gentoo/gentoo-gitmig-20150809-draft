@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/lcms
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.145 2012/08/22 02:33:56 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.146 2012/08/24 21:55:47 dilfridge Exp $
+
+  24 Aug 2012; Andreas K. Huettel <dilfridge@gentoo.org> lcms-1.19.ebuild,
+  +files/lcms-1.19-implicit.patch:
+  Add patch from OpenSuSE to get rid of an implicit function declaration, bug
+  430372
 
   22 Aug 2012; Christoph Junghans <ottxor@gentoo.org> lcms-2.3.ebuild:
   added prefix keywords
