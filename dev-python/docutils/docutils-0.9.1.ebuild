@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.9.1.ebuild,v 1.1 2012/08/24 08:00:45 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.9.1.ebuild,v 1.2 2012/08/24 18:24:40 floppym Exp $
 
 EAPI="4"
 SUPPORT_PYTHON_ABIS="1"
@@ -19,17 +19,11 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE="glep"
 
 RDEPEND="dev-python/pygments"
-DEPEND="dev-python/setuptools
-		${RDEPEND}"
+DEPEND="${RDEPEND}"
 
 DOCS="*.txt"
 
 GLEP_SRC="${WORKDIR}/glep-0.4-r1"
-
-src_prepare() {
-	distutils_src_prepare
-	sed -e "s/from distutils.core/from setuptools/" -i setup.py || die "sed setup.py failed"
-}
 
 src_compile() {
 	distutils_src_compile
@@ -106,4 +100,17 @@ src_install() {
 		}
 		python_execute_function --action-message 'Installation of GLEP tools with $(python_get_implementation_and_version)' installation_of_glep_tools
 	fi
+}
+
+pkg_preinst() {
+	# Remove egg-info directory left over from setuptools.
+	remove_egg_info() {
+		local lv="$(python_get_version --language)"
+		local sitedir="$(python_get_sitedir --base-path)"
+		local egg_info="${ROOT}${sitedir}/${P}-py${lv}.egg-info"
+		if [[ -d "${egg_info}" ]]; then
+			rm -r "${egg_info}"
+		fi
+	}
+	python_execute_function -q remove_egg_info
 }
