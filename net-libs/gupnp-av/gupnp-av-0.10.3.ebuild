@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-av/gupnp-av-0.10.1.ebuild,v 1.2 2012/05/05 02:54:26 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-av/gupnp-av-0.10.3.ebuild,v 1.1 2012/08/24 17:43:27 eva Exp $
 
 EAPI="4"
 
@@ -29,9 +29,7 @@ src_configure() {
 		$(use_enable introspection) \
 		--disable-dependency-tracking \
 		--disable-static \
-		--disable-gtk-doc \
-		--disable-gtk-doc-html \
-		--disable-gtk-doc-pdf
+		--disable-gtk-doc
 }
 
 src_install() {
