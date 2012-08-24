@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.9.1.ebuild,v 1.2 2012/08/24 18:24:40 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.9.1.ebuild,v 1.3 2012/08/24 18:35:06 floppym Exp $
 
 EAPI="4"
 SUPPORT_PYTHON_ABIS="1"
@@ -104,6 +104,7 @@ src_install() {
 
 pkg_preinst() {
 	# Remove egg-info directory left over from setuptools.
+	[[ ${PV} == 0.9.1 ]] || die "pkg_preinst no longer needed"
 	remove_egg_info() {
 		local lv="$(python_get_version --language)"
 		local sitedir="$(python_get_sitedir --base-path)"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/docutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.155 2012/08/24 18:24:40 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.156 2012/08/24 18:35:06 floppym Exp $
+
+  24 Aug 2012; Mike Gilbert <floppym@gentoo.org> docutils-0.9.1.ebuild:
+  Call die if pkg_preinst is not removed on the next bump.
 
   24 Aug 2012; Mike Gilbert <floppym@gentoo.org> docutils-0.9.1.ebuild:
   Remove unneeded setuptools. Please drop pkg_preinst on the next version bump.
