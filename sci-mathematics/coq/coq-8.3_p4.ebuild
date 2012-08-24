@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.3_p4.ebuild,v 1.1 2012/05/17 14:52:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.3_p4.ebuild,v 1.2 2012/08/24 13:39:48 aballier Exp $
 
 EAPI="2"
 
@@ -40,6 +40,7 @@ src_prepare() {
 	# wild sed which replaces \"$LABLGTKLIB\" by $LABLGTKLIB.  Note
 	# during pl2-bump: Hmm, my patch did not get applied upstream?
 	sed -i "s/\\\\\"\\\$LABLGTKLIB\\\\\"/\\\$LABLGTKLIB/" configure
+	has_version '>=dev-ml/lablgtk-2.16' && epatch "${FILESDIR}/lablgtk216.patch"
 }
 
 src_configure() {
