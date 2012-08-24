@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.41 2012/08/15 12:36:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.42 2012/08/24 17:21:06 mgorny Exp $
+
+*systemd-189 (24 Aug 2012)
+
+  24 Aug 2012; Michał Górny <mgorny@gentoo.org>
+  +files/0001-Disable-udev-targets-for-udev-189.patch,
+  +files/0002-journald-add-missing-includes.patch, +systemd-189.ebuild,
+  metadata.xml:
+  Version bump.
 
 *systemd-188-r1 (15 Aug 2012)
 
