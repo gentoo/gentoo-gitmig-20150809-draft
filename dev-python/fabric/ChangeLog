@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/fabric
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/ChangeLog,v 1.24 2012/05/16 17:51:54 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/ChangeLog,v 1.25 2012/08/24 08:06:08 patrick Exp $
+
+*fabric-1.4.3 (24 Aug 2012)
+
+  24 Aug 2012; Patrick Lauer <patrick@gentoo.org> +fabric-1.4.3.ebuild:
+  Bump
 
   16 May 2012; Mike Gilbert <floppym@gentoo.org> fabric-1.4.2-r1.ebuild:
   Unrestrict tests with correct fudge dependency. Restrict pypy due to
@@ -133,4 +138,3 @@
   18 Mar 2009; Benedikt Böhm <hollow@gentoo.org> +metadata.xml,
   +fabric-0.1.0.ebuild:
   initial ebuild, thanks to Jürgen Geuter, bug #261419
-
