@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.521 2012/08/24 08:16:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.522 2012/08/24 11:37:12 ulm Exp $
+
+*emacs-24.2_rc2 (24 Aug 2012)
+
+  24 Aug 2012; Ulrich Müller <ulm@gentoo.org> +emacs-24.2_rc2.ebuild:
+  Version bump.
 
   24 Aug 2012; Ulrich Müller <ulm@gentoo.org> emacs-18.59-r8.ebuild:
   Support x32 ABI on amd64.
