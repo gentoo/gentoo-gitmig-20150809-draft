@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsca/nsca-2.7.2-r103.ebuild,v 1.3 2012/08/23 21:30:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsca/nsca-2.7.2-r103.ebuild,v 1.4 2012/08/24 15:19:07 flameeyes Exp $
 
 EAPI=4
 
@@ -43,7 +43,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake -C src send_nsca $(usex !minimal nsca)
+	emake -C src send_nsca $(use minimal || echo nsca)
 
 	# prepare the alternative configuration file
 	sed \

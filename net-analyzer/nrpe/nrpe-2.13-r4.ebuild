@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nrpe/nrpe-2.13-r4.ebuild,v 1.1 2012/08/24 04:54:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nrpe/nrpe-2.13-r4.ebuild,v 1.2 2012/08/24 15:18:24 flameeyes Exp $
 
 EAPI=4
 
@@ -65,7 +65,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake -C src check_nrpe $(usex !minimal nrpe)
+	emake -C src check_nrpe $(use minimal || echo nrpe)
 
 	# Add nifty nrpe check tool
 	$(tc-getCC) ${CPPFLAGS} ${CFLAGS} \
@@ -77,7 +77,7 @@ src_compile() {
 src_install() {
 	dodoc LEGAL Changelog README SECURITY \
 		contrib/README.nrpe_check_control \
-		$(usex ssl README.SSL)
+		$(usex ssl && echo README.SSL)
 
 	exeinto /usr/$(get_libdir)/nagios/plugins
 	doexe src/check_nrpe nrpe_check_control
