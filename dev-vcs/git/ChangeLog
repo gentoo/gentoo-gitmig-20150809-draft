@@ -1,6 +1,13 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.152 2012/08/23 20:18:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.153 2012/08/24 03:51:48 zmedico Exp $
+
+  24 Aug 2012; Zac Medico <zmedico@gentoo.org> git-1.7.10.2.ebuild,
+  git-1.7.10.ebuild, git-1.7.11.1.ebuild, git-1.7.12-r1.ebuild,
+  git-1.7.12-r2.ebuild, git-1.7.12.ebuild, git-1.7.9.1.ebuild,
+  git-1.7.9.2.ebuild, git-1.7.9.3.ebuild, git-1.7.9.4.ebuild,
+  git-1.7.9.7.ebuild, git-1.7.9.ebuild, git-1.7.9_rc2.ebuild, git-9999.ebuild:
+  Fix IUSE.missing for new highlight flag.
 
   23 Aug 2012; Robin H. Johnson <robbat2@gentoo.org> git-1.6.4.5.ebuild,
   git-1.7.10.2.ebuild, git-1.7.10.ebuild, git-1.7.11.1.ebuild,
