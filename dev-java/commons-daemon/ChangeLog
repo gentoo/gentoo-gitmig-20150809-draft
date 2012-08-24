@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-daemon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-daemon/ChangeLog,v 1.56 2012/08/20 02:18:02 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-daemon/ChangeLog,v 1.57 2012/08/24 12:30:52 xmw Exp $
+
+  24 Aug 2012; Michael Weber <xmw@gentoo.org> commons-daemon-1.0.9.ebuild:
+  ppc stable (bug 418709).
 
   20 Aug 2012; Christoph Junghans <ottxor@gentoo.org>
   commons-daemon-1.0.9.ebuild:
