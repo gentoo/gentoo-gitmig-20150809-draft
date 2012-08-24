@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/mtd-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/ChangeLog,v 1.58 2012/08/20 22:15:44 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/ChangeLog,v 1.59 2012/08/24 13:38:51 xmw Exp $
+
+  24 Aug 2012; Michael Weber <xmw@gentoo.org> mtd-utils-1.5.0.ebuild:
+  ppc stable (bug 422217).
 
   20 Aug 2012; Johannes Huber <johu@gentoo.org> mtd-utils-1.5.0.ebuild:
   Stable for x86, wrt bug #422217
@@ -230,4 +233,3 @@
   +mtd-utils-20060606.ebuild:
   Initial commit. New variant of the old sys-fs/mtd package, maintained
   seperately by upstream.
-
