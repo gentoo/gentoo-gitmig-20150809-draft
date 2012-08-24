@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/moodle/moodle-1.9.19.ebuild,v 1.2 2012/07/11 23:00:12 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moodle/moodle-1.9.19.ebuild,v 1.3 2012/08/24 10:22:46 blueness Exp $
 
 EAPI="4"
 
@@ -29,6 +29,7 @@ AUTHMODES=${AUTHMODES//,/ }
 PHPFLAGS="ctype,curl,gd,iconv,session,ssl,tokenizer,xml,xmlrpc,zlib"
 
 IUSE="${DBTYPES} ${AUTHMODES} vhosts"
+REQUIRED_USE="|| ( ${DBTYPES} )"
 
 # No forced dependency on
 #  mysql? ( virtual/mysql )
@@ -53,15 +54,16 @@ pkg_setup() {
 		fi
 	done
 
-	if [[ ${DB_COUNT} -eq 0 ]]; then
-		eerror
-		eerror "\033[1;31m**************************************************\033[00m"
-		eerror "No database selected in your USE flags,"
-		eerror "You must select at least one."
-		eerror "\033[1;31m**************************************************\033[00m"
-		eerror
-		die
-	fi
+	# REQUIRED_USE above guarantees that ${DB_COUNT} cannot be zero
+	#if [[ ${DB_COUNT} -eq 0 ]]; then
+	#	eerror
+	#	eerror "\033[1;31m**************************************************\033[00m"
+	#	eerror "No database selected in your USE flags,"
+	#	eerror "You must select at least one."
+	#	eerror "\033[1;31m**************************************************\033[00m"
+	#	eerror
+	#	die
+	#fi
 
 	if [[ ${DB_COUNT} -gt 1 ]]; then
 		MYDB=""
