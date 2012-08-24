@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/mono
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.245 2012/08/20 02:53:45 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.246 2012/08/24 12:07:53 xmw Exp $
+
+  24 Aug 2012; Michael Weber <xmw@gentoo.org> mono-2.10.9-r1.ebuild:
+  ppc stable (bug 426688).
 
   20 Aug 2012; Christoph Junghans <ottxor@gentoo.org> mono-2.11.1.ebuild:
   added prefix keywords
