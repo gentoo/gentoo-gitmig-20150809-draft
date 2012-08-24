@@ -1,6 +1,9 @@
 # ChangeLog for app-text/qpdfview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/ChangeLog,v 1.16 2012/08/24 12:35:55 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/ChangeLog,v 1.17 2012/08/24 13:07:12 johu Exp $
+
+  24 Aug 2012; Johannes Huber <johu@gentoo.org> qpdfview-0.3.2.ebuild:
+  Stable for x86, wrt bug #432536
 
   24 Aug 2012; Johannes Huber <johu@gentoo.org> qpdfview-0.3.2.ebuild:
   Add missing die's by Agostino Sarubbo <ago@gentoo.org>.
