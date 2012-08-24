@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.5-r2.ebuild,v 1.1 2012/08/23 19:20:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.5-r2.ebuild,v 1.2 2012/08/24 22:13:22 flameeyes Exp $
 
 EAPI=4
 
@@ -167,6 +167,12 @@ src_install() {
 		sed -i -e '/log_file/s| .*| Sys::Syslog|' \
 			"${D}"/etc/munin/munin-node.conf || die
 	fi
+
+	# Use a simpler pid file to avoid trouble with /run in tmpfs. The
+	# munin-node service is ran as user root, and only later drops
+	# privileges.
+	sed -i -e 's:/var/run/munin/munin-node.pid:/var/run/munin-node.pid:' \
+		"${D}"/etc/munin/munin-node.conf || die
 
 	keepdir /var/lib/munin-async/.ssh /var/spool/munin-async
 	touch "${D}"/var/lib/munin-async/.ssh/authorized_keys

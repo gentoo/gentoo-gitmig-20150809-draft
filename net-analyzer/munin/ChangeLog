@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.96 2012/08/23 19:20:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.97 2012/08/24 22:13:22 flameeyes Exp $
+
+  24 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> files/localstart-munin,
+  files/munin-node_init.d_2.0.5, munin-2.0.5-r2.ebuild:
+  Restore checkpath for the pidfile, but don't set owner on it (it doesn't need
+  to have one, here); always change owners in the localstart script instead.
+  Change the default pid_file for the node to /var/run/munin-node.pid as the
+  node does not use anything else in that directory.
 
 *munin-2.0.5-r2 (23 Aug 2012)
 
