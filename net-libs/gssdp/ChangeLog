@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/gssdp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gssdp/ChangeLog,v 1.43 2012/05/05 02:54:27 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gssdp/ChangeLog,v 1.44 2012/08/24 18:15:33 eva Exp $
+
+*gssdp-0.12.2.1 (24 Aug 2012)
+
+  24 Aug 2012; Gilles Dartiguelongue <eva@gentoo.org> -gssdp-0.7.1.ebuild,
+  -gssdp-0.12.0.ebuild, +gssdp-0.12.2.1.ebuild:
+  Version bump. Now handles its vala vapi files itself through introspection.
+  Drop old revision.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> gssdp-0.7.1.ebuild,
   gssdp-0.7.2.ebuild, gssdp-0.10.0.ebuild, gssdp-0.12.0.ebuild,
