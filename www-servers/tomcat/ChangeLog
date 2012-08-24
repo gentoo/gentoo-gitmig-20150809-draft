@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.296 2012/07/25 08:12:48 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.297 2012/08/24 13:37:03 xmw Exp $
+
+  24 Aug 2012; Michael Weber <xmw@gentoo.org> tomcat-7.0.27.ebuild:
+  ppc stable (bug 414375).
 
   25 Jul 2012; Ralph Sennhauser <sera@gentoo.org> files/tomcat.init:
   Pass to vm instead of catalina in init script. Thanks to Märt Bakhoff
@@ -1905,4 +1908,3 @@
    
   14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> tomcat-3.2.2.ebuild :
   Added KEYWORDS, SLOT.
-
