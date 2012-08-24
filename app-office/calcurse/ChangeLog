@@ -1,6 +1,9 @@
 # ChangeLog for app-office/calcurse
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calcurse/ChangeLog,v 1.22 2012/08/23 16:28:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calcurse/ChangeLog,v 1.23 2012/08/24 13:50:44 jer Exp $
+
+  24 Aug 2012; Jeroen Roovers <jer@gentoo.org> calcurse-3.0.0.ebuild:
+  Remove duplicate linguas_* entries.
 
   23 Aug 2012; Michael Sterrett <mr_bones_@gentoo.org> calcurse-3.0.0.ebuild:
   add missing test to IUSE
