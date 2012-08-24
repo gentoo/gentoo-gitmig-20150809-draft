@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-0.6.0_rc10.ebuild,v 1.1 2012/08/15 23:03:39 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-0.6.0_rc10.ebuild,v 1.2 2012/08/24 14:57:32 ryao Exp $
 
 EAPI="4"
 AUTOTOOLS_AUTORECONF="1"
@@ -40,7 +40,12 @@ pkg_setup() {
 		ZLIB_DEFLATE
 		ZLIB_INFLATE
 	"
+
 	kernel_is ge 2 6 26 || die "Linux 2.6.26 or newer required"
+
+	[ ${PV} != "9999" ] && \
+		{ kernel_is le 3 5 || die "Linux 3.5 is the latest supported version."; }
+
 	check_extra_config
 }
 
