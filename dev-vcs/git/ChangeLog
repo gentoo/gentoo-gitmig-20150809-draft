@@ -1,6 +1,16 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.154 2012/08/24 16:55:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.155 2012/08/24 17:11:07 robbat2 Exp $
+
+  24 Aug 2012; Robin H. Johnson <robbat2@gentoo.org>
+  -files/git-1.7.10.2-optional-cvs.patch,
+  -files/git-1.7.11.1-optional-cvs.patch, -files/git-1.7.5-interix.patch,
+  -files/git-1.7.6-interix.patch,
+  -files/git-1.7.8-git-svn-1.7-canonical-path.patch, -git-1.7.10.2.ebuild,
+  -git-1.7.10.ebuild, -git-1.7.11.1.ebuild, -git-1.7.9.1.ebuild,
+  -git-1.7.9.2.ebuild, -git-1.7.9.3.ebuild, -git-1.7.9.4.ebuild,
+  -git-1.7.9.7.ebuild, -git-1.7.9.ebuild, -git-1.7.9_rc2.ebuild:
+  Trim versions that were always masked.
 
   24 Aug 2012; Robin H. Johnson <robbat2@gentoo.org> git-1.7.12-r2.ebuild,
   git-1.7.8.6.ebuild:
