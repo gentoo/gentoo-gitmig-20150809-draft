@@ -221,3 +221,7 @@ wayland
 # Diego Elio Pettenò <flameeyes@gentoo.org> (21 Aug 2012)
 # IPMI is only implemented for x86, amd64 and ia64
 -ipmi
+
+# Michael Sterrett <mr_bones_@gentoo.org) (24 Aug 2012)
+# media-sound/fluidsynth isn't keyworded
+fluidsynth

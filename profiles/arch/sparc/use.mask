@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.91 2012/08/19 15:50:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.92 2012/08/24 06:38:38 mr_bones_ Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -sparc
@@ -170,8 +170,6 @@ java
 java-internal
 java-external
 lirc
-mod
-modplug
 mpm-peruser
 mythtv
 netbeans
