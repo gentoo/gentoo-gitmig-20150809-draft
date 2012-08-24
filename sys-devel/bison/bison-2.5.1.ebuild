@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-2.5.1.ebuild,v 1.3 2012/08/03 15:43:06 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-2.5.1.ebuild,v 1.4 2012/08/24 15:57:21 vapier Exp $
 
 EAPI=4
 
@@ -34,14 +34,14 @@ src_install() {
 	default
 
 	# This one is installed by dev-util/yacc
-	mv -v "${ED}"/usr/bin/yacc{,.bison} || die
-	mv -v "${ED}"/usr/share/man/man1/yacc{,.bison}.1 || die
+	mv "${ED}"/usr/bin/yacc{,.bison} || die
+	mv "${ED}"/usr/share/man/man1/yacc{,.bison}.1 || die
 
 	# We do not need liby.a
 	rm -r "${ED}"/usr/lib* || die
 
 	# Move to documentation directory and leave compressing for EAPI>=4
-	mv -v "${ED}"/usr/share/${PN}/README "${ED}"/usr/share/doc/${PF}/README.data
+	mv "${ED}"/usr/share/${PN}/README "${ED}"/usr/share/doc/${PF}/README.data
 }
 
 pkg_postinst() {
