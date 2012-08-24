@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/vor
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/vor/ChangeLog,v 1.7 2011/05/19 15:20:41 tupone Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/vor/ChangeLog,v 1.8 2012/08/24 07:49:43 mr_bones_ Exp $
+
+  24 Aug 2012; Michael Sterrett <mr_bones_@gentoo.org> vor-0.5.4.ebuild:
+  any mod support will do
 
   19 May 2011; Tupone Alfredo <tupone@gentoo.org> vor-0.5.4.ebuild,
   +files/vor-0.5.4-underlink.patch:
@@ -28,4 +31,3 @@
   22 May 2007; Tristan Heaven <nyhm@gentoo.org> +metadata.xml,
   +vor-0.5.3.ebuild:
   Initial commit, bug #128384
-

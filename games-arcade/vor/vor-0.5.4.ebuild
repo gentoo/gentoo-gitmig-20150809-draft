@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/vor/vor-0.5.4.ebuild,v 1.4 2011/05/19 15:20:41 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/vor/vor-0.5.4.ebuild,v 1.5 2012/08/24 07:49:43 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -16,7 +16,7 @@ IUSE=""
 
 DEPEND="media-libs/libsdl
 	media-libs/sdl-image[png]
-	media-libs/sdl-mixer[mikmod]"
+	media-libs/sdl-mixer[mod]"
 
 PATCHES=( "${FILESDIR}"/${P}-underlink.patch )
 
