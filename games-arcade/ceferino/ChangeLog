@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/ceferino
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ceferino/ChangeLog,v 1.15 2009/05/14 20:28:02 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ceferino/ChangeLog,v 1.16 2012/08/24 07:01:08 mr_bones_ Exp $
+
+  24 Aug 2012; Michael Sterrett <mr_bones_@gentoo.org> ceferino-0.97.8.ebuild:
+  any mod support will do
 
   14 May 2009; Markus Meier <maekke@gentoo.org> ceferino-0.97.8.ebuild:
   amd64/x86 stable, bug #269726
@@ -57,4 +60,3 @@
   09 May 2005; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
   +ceferino-0.94.ebuild:
   initial commit - ebuild submitted by TGL via bug #90888
-
