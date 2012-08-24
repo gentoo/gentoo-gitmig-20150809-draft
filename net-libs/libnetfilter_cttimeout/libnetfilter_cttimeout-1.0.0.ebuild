@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_cttimeout/libnetfilter_cttimeout-1.0.0.ebuild,v 1.1 2012/08/23 01:33:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_cttimeout/libnetfilter_cttimeout-1.0.0.ebuild,v 1.2 2012/08/24 13:57:26 jer Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.netfilter.org/projects/${PN}/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="static-libs"
 
 RDEPEND="net-libs/libmnl"
