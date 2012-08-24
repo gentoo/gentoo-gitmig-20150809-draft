@@ -1,6 +1,12 @@
 # ChangeLog for app-text/kding
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kding/ChangeLog,v 1.16 2011/01/30 12:42:03 tampakrap Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/kding/ChangeLog,v 1.17 2012/08/24 09:40:23 johu Exp $
+
+*kding-0.6-r1 (24 Aug 2012)
+
+  24 Aug 2012; Johannes Huber <johu@gentoo.org> +kding-0.6-r1.ebuild:
+  Bump to EAPI 4. Shorten the description. Use kde4 eclass specific var for
+  handbook use flag. Fix .desktop file to pass validation.
 
   30 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org> kding-0.6.ebuild:
   EAPI3
@@ -71,4 +77,3 @@
   +files/kding-0.4.1-localization-de.patch, +metadata.xml,
   +kding-0.4.1.ebuild:
   Initial ebuild. Bug 189125, also thanks to Tobias Roeser (bug 124466).
-
