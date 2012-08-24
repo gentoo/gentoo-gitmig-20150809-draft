@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.624 2012/08/24 04:56:32 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.625 2012/08/24 14:19:41 jer Exp $
+
+  24 Aug 2012; Jeroen Roovers <jer@gentoo.org> php-5.4.6.ebuild:
+  Stable for HPPA (bug #427024).
 
   24 Aug 2012; Michael Weber <xmw@gentoo.org> php-5.4.6.ebuild:
   ppc stable (bug 427024).
