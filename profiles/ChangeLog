@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6920 2012/08/23 23:06:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6921 2012/08/24 18:47:42 eva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Aug 2012; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
+  Add gnome-extra/at-spi-2.4 to gnome 3.4 mask.
 
   23 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> updates/3Q-2012:
   Move nagios-nrpe to just nrpe.

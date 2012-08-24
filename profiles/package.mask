@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14070 2012/08/23 19:23:59 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14071 2012/08/24 18:47:42 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -401,6 +401,7 @@ net-p2p/leechcraft-eiskaltdcpp
 =gnome-base/libgnome-keyring-3.4*
 =gnome-base/libgnomekbd-3.4*
 =gnome-base/nautilus-3.4*
+=gnome-extra/at-spi-2.4*
 =gnome-extra/evolution-data-server-3.4*
 =gnome-extra/evolution-ews-3.4*
 =gnome-extra/evolution-exchange-3.4*
