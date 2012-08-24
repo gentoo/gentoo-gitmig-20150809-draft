@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.50.0-r1.ebuild,v 1.1 2012/08/20 21:55:03 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.50.0-r2.ebuild,v 1.1 2012/08/24 09:46:08 dev-zero Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? *"
@@ -531,5 +531,65 @@ __EOF__
 		python_execute_function -f -q testing
 	else
 		testing
+	fi
+}
+
+pkg_postinst() {
+	# mostly copy/paste from eselect-boost
+
+	_boost_tools="bcp bjam compiler_status inspect library_status process_jam_log quickbook wave"
+
+	# ... meaning: <none> and -debug:
+	_suffices="|-debug"
+
+	einfo "Removing symlinks from old version"
+
+	local link
+	for link in "${ROOT}/usr/include/boost" "${ROOT}/usr/share/boostbook" ; do
+		if [[ -L "${link}" ]] ; then
+			rm "${link}" || die -q "Couldn't remove \"${link}\" symlink"
+		else
+			[[ -e "${link}" ]] && die -q "\"${link}\" exists and isn't a symlink"
+		fi
+	done
+
+	pushd "${ROOT}/usr/lib64" 1>/dev/null
+	local lib
+	for lib in libboost_*.{a,so} ; do
+		[[ -L "${lib}" && "${lib}" != libboost_*[[:digit:]]_[[:digit:]][[:digit:]]@(${_suffices}).@(a|so) ]] || continue
+		rm "${lib}" || die -q "Unable to remove \"/usr/lib64/${lib}\" symlink"
+	done
+	popd 1>/dev/null
+
+	pushd "${ROOT}"/usr/bin 1>/dev/null
+	local tool
+	for tool in ${_boost_tools} ; do
+		[[ -L "${tool}" ]] && ( rm "${tool}" || die -q "Unable to remove \"/usr/bin/${tool}\" symlink" )
+	done
+	popd 1>/dev/null
+
+	local python_module python_module_dir
+	for python_module in mpi.py mpi_debug.py ; do
+		for python_module_dir in "${ROOT}"usr/lib64/python*/site-packages ; do
+			if [[ -e "${python_module_dir}/${python_module}" ]] ; then
+				rm "${python_module_dir}/${python_module}" || die -q "Unable to remove \"${python_module_dir}/${python_module}\""
+			fi
+		done
+	done
+
+	# Deprecated code for older versions of Boost.
+	local mod="mpi.so"
+	for moddir in "${ROOT}"/usr/lib64/python*/site-packages ; do
+		if [ -L "${moddir}/${mod}" ] ; then
+			rm "${moddir}/${mod}" || die -q "Unable to remove \"${moddir}/${mod}\" symlink"
+		else
+			[[ -e "${moddir}/${mod}" ]] && die -q "\"${moddir}/${mod}\" exists and isn't a symlink"
+		fi
+	done
+
+	if [ -L "${ROOT}/etc/eselect/boost/active" ] ; then
+		rm  "${ROOT}/etc/eselect/boost/active" || die -q "Unable to remove \"${ROOT}/etc/eselect/boost/active\" symlink"
+	else
+		[[ -e "${ROOT}/etc/eselect/boost/active" ]] && die -q "\"${ROOT}/etc/eselect/boost/active\" exists and isn't a symlink"
 	fi
 }
