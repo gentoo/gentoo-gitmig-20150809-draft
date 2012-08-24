@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Net-CUPS
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-CUPS/ChangeLog,v 1.39 2012/06/24 13:00:18 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-CUPS/ChangeLog,v 1.40 2012/08/24 22:21:00 dilfridge Exp $
+
+*Net-CUPS-0.610.0-r1 (24 Aug 2012)
+
+  24 Aug 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  Net-CUPS-0.610.0.ebuild, +Net-CUPS-0.610.0-r1.ebuild,
+  +files/Net-CUPS-0.610.0-cups16.patch:
+  Add patch by Jiří Popelka to fix build against cups-1.6, bug 428740
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
