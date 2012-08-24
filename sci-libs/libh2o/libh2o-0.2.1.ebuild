@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libh2o/libh2o-0.2.1.ebuild,v 1.1 2012/06/11 21:03:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libh2o/libh2o-0.2.1.ebuild,v 1.2 2012/08/24 18:48:34 mgorny Exp $
 
 EAPI=4
 
@@ -14,6 +14,8 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug static-libs"
+
+DEPEND="virtual/pkgconfig"
 
 src_configure() {
 	local myeconfargs=(

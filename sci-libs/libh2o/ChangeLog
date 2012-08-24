@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/libh2o
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libh2o/ChangeLog,v 1.4 2012/06/11 21:03:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libh2o/ChangeLog,v 1.5 2012/08/24 18:48:34 mgorny Exp $
+
+  24 Aug 2012; Michał Górny <mgorny@gentoo.org> -libh2o-0.1.ebuild,
+  -libh2o-0.2.ebuild, libh2o-0.2.1.ebuild:
+  Add missing virtual/pkgconfig dep wrt bug #432616.
 
 *libh2o-0.2.1 (11 Jun 2012)
 
@@ -22,4 +26,3 @@
   +metadata.xml:
   Initial commit of libh2o, a lightweight library for properties of water and
   steam.
-
