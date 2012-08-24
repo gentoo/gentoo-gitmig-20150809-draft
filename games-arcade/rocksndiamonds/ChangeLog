@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/rocksndiamonds
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/rocksndiamonds/ChangeLog,v 1.44 2012/03/26 11:58:27 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/rocksndiamonds/ChangeLog,v 1.45 2012/08/24 08:31:56 mr_bones_ Exp $
+
+  24 Aug 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  rocksndiamonds-3.3.0.1-r1.ebuild:
+  any mod support will do
 
   26 Mar 2012; Tupone Alfredo <tupone@gentoo.org>
   rocksndiamonds-3.3.0.1-r1.ebuild:

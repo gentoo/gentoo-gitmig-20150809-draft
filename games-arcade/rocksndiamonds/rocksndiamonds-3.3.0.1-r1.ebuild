@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/rocksndiamonds/rocksndiamonds-3.3.0.1-r1.ebuild,v 1.2 2012/03/26 11:58:27 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/rocksndiamonds/rocksndiamonds-3.3.0.1-r1.ebuild,v 1.3 2012/08/24 08:31:56 mr_bones_ Exp $
 
 EAPI=2
 inherit flag-o-matic eutils games
@@ -28,7 +28,7 @@ RDEPEND="X? ( x11-libs/libX11 )
 	!sdl? ( x11-libs/libX11 )
 	sdl? (
 		>=media-libs/libsdl-1.2.3[joystick,video]
-		>=media-libs/sdl-mixer-1.2.4[mikmod,mp3,timidity]
+		>=media-libs/sdl-mixer-1.2.4[mod,mp3,timidity]
 		media-libs/sdl-net
 		>=media-libs/sdl-image-1.2.2[gif]
 		media-libs/smpeg
