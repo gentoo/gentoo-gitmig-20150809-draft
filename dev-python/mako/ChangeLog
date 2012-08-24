@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/mako
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.54 2012/08/05 19:12:41 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.55 2012/08/24 09:03:10 patrick Exp $
+
+*mako-0.7.1 (24 Aug 2012)
+
+  24 Aug 2012; Patrick Lauer <patrick@gentoo.org> +mako-0.7.1.ebuild:
+  Bump
 
   05 Aug 2012; Anthony G. Basile <blueness@gentoo.org> mako-0.7.0.ebuild:
   Stable arm, bug #427546
@@ -211,4 +216,3 @@
   09 Mar 2008; Alec Warner <antarus@gentoo.org> +metadata.xml,
   +mako-0.1.10.ebuild:
   Initial import of mako templating thing
-
