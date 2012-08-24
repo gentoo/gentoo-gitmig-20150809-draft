@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.14.0.ebuild,v 1.1 2012/07/07 07:48:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.14.0.ebuild,v 1.2 2012/08/24 17:03:27 ssuominen Exp $
 
 EAPI=4
-inherit autotools eutils elisp-common user
+inherit autotools eutils elisp-common user systemd
 
 MY_PV=${PV/_/-}
 MY_P=TiMidity++-${MY_PV}
@@ -112,16 +112,18 @@ src_install() {
 	emake DESTDIR="${D}" install
 
 	dodoc AUTHORS ChangeLog*
-	dodoc NEWS README* "${FILESDIR}/timidity.cfg-r1"
+	dodoc NEWS README* "${FILESDIR}"/timidity.cfg-r1
 
 	# these are only for the ALSA sequencer mode
 	if use alsa; then
 		newconfd "${FILESDIR}"/conf.d.timidity.2 timidity
 		newinitd "${FILESDIR}"/init.d.timidity.4 timidity
+
+		systemd_dounit "${FILESDIR}"/timidity.service
 	fi
 
 	insinto /etc
-	newins "${FILESDIR}/timidity.cfg-r1" timidity.cfg
+	newins "${FILESDIR}"/timidity.cfg-r1 timidity.cfg
 
 	dodir /usr/share/timidity
 	dosym /etc/timidity.cfg /usr/share/timidity/timidity.cfg
