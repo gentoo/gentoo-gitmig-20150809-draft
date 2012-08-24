@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/gupnp-0.18.1.ebuild,v 1.2 2012/05/05 02:54:30 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/gupnp-0.18.4.ebuild,v 1.1 2012/08/24 17:50:18 eva Exp $
 
 EAPI="4"
 
@@ -12,14 +12,19 @@ HOMEPAGE="http://gupnp.org/"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="+introspection kernel_linux networkmanager"
+IUSE="connman +introspection kernel_linux networkmanager"
 
 RDEPEND=">=net-libs/gssdp-0.11.2[introspection?]
 	>=net-libs/libsoup-2.28.2:2.4[introspection?]
 	>=dev-libs/glib-2.24:2
 	dev-libs/libxml2
-	|| ( >=sys-apps/util-linux-2.16 <sys-libs/e2fsprogs-libs-1.41.8 )
+	|| (
+		>=sys-apps/util-linux-2.16
+		<sys-libs/e2fsprogs-libs-1.41.8 )
 	introspection? ( >=dev-libs/gobject-introspection-0.6.4 )
+	connman? (
+		>=dev-libs/glib-2.28
+		>=net-misc/connman-0.80 )
 	networkmanager? ( >=dev-libs/glib-2.26 )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
@@ -30,6 +35,7 @@ DOCS="AUTHORS ChangeLog NEWS README"
 src_configure() {
 	local backend=unix
 	use kernel_linux && backend=linux
+	use connman && backend=connman
 	use networkmanager && backend=network-manager
 
 	econf \
