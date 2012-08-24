@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/rygel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/ChangeLog,v 1.23 2012/07/22 21:26:46 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/ChangeLog,v 1.24 2012/08/24 17:21:20 eva Exp $
+
+*rygel-0.14.3 (24 Aug 2012)
+
+  24 Aug 2012; Gilles Dartiguelongue <eva@gentoo.org -rygel-0.14.0.ebuild,
+  +rygel-0.14.3.ebuild:
+  Version bump. Drop old revision. Indexing speed up for MediaExport plugin.
+  Translation updates.
 
 *rygel-0.14.2 (22 Jul 2012)
 
