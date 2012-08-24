@@ -1,11 +1,12 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.520 2012/08/23 21:04:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.521 2012/08/24 08:16:38 ulm Exp $
 
-  23 Aug 2012; Markus Meier <maekke@gentoo.org> emacs-24.1-r1.ebuild:
-  arm stable, bug #431178
+  24 Aug 2012; Ulrich Müller <ulm@gentoo.org> emacs-18.59-r8.ebuild:
+  Support x32 ABI on amd64.
 
-  23 Aug 2012; Markus Meier <maekke@gentoo.org> emacs-23.4-r4.ebuild:
+  23 Aug 2012; Markus Meier <maekke@gentoo.org> emacs-23.4-r4.ebuild,
+  emacs-24.1-r1.ebuild:
   arm stable, bug #431178
 
   21 Aug 2012; Johannes Huber <johu@gentoo.org> emacs-23.4-r4.ebuild,
@@ -21,10 +22,8 @@
   emacs-24.1-r1.ebuild:
   Stable for HPPA (bug #431178).
 
-  14 Aug 2012; Agostino Sarubbo <ago@gentoo.org> emacs-24.1-r1.ebuild:
-  Stable for amd64, wrt bug #431178
-
-  14 Aug 2012; Agostino Sarubbo <ago@gentoo.org> emacs-23.4-r4.ebuild:
+  14 Aug 2012; Agostino Sarubbo <ago@gentoo.org> emacs-23.4-r4.ebuild,
+  emacs-24.1-r1.ebuild:
   Stable for amd64, wrt bug #431178
 
 *emacs-24.1-r1 (13 Aug 2012)

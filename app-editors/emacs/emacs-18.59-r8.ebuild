@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r8.ebuild,v 1.5 2012/05/19 15:58:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r8.ebuild,v 1.6 2012/08/24 08:16:38 ulm Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ DESCRIPTION="The extensible self-documenting text editor"
 HOMEPAGE="http://www.gnu.org/software/emacs/"
 SRC_URI="mirror://gnu/old-gnu/emacs/${P}.tar.gz
 	ftp://ftp.splode.com/pub/users/friedman/emacs/${P}-linux22x-elf-glibc21.diff.gz
-	mirror://gentoo/${P}-patches-7.tar.bz2"
+	mirror://gentoo/${P}-patches-8.tar.bz2"
 
 LICENSE="GPL-1 GPL-2 BSD" #as-is
 SLOT="18"
@@ -32,9 +32,16 @@ src_configure() {
 	# autoconf? What's autoconf? We are living in 1992. ;-)
 	local arch
 	case ${ARCH} in
-		amd64) arch=intel386; multilib_toolchain_setup x86 ;;
-		x86)   arch=intel386 ;;
-		*)	   die "Architecture ${ARCH} not yet supported" ;;
+		amd64)
+			if [[ ${DEFAULT_ABI} = x32 ]]; then
+				arch=x86-x32
+				multilib_toolchain_setup x32
+			else
+				arch=intel386
+				multilib_toolchain_setup x86
+			fi ;;
+		x86) arch=intel386 ;;
+		*) die "Architecture ${ARCH} not yet supported" ;;
 	esac
 	local cmd="s/\"s-.*\.h\"/\"s-linux.h\"/;s/\"m-.*\.h\"/\"m-${arch}.h\"/"
 	#use X && cmd="${cmd};s/.*\(#define HAVE_X_WINDOWS\).*/\1/"
