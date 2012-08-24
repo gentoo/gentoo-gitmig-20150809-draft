@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.12-r2.ebuild,v 1.3 2012/08/24 03:51:48 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.12-r2.ebuild,v 1.4 2012/08/24 16:55:29 robbat2 Exp $
 
 EAPI=4
 
@@ -508,7 +508,9 @@ showpkgdeps() {
 pkg_postinst() {
 	use emacs && elisp-site-regen
 	use python && python_mod_optimize git_remote_helpers
-		einfo "Please read /usr/share/bash-completion/git for Git bash completion"
+	einfo "Please read /usr/share/bash-completion/git for Git bash command completion"
+	einfo "Please read /usr/share/bash-completion/git-prompt for Git bash prompt"
+	einfo "Note that the prompt bash code is now in the seperate script"
 	elog "These additional scripts need some dependencies:"
 	echo
 	showpkgdeps git-quiltimport "dev-util/quilt"
