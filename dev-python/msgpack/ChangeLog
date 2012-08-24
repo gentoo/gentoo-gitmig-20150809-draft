@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/msgpack
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/msgpack/ChangeLog,v 1.4 2012/02/21 09:06:26 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/msgpack/ChangeLog,v 1.5 2012/08/24 09:16:00 patrick Exp $
+
+*msgpack-0.2.1 (24 Aug 2012)
+
+  24 Aug 2012; Patrick Lauer <patrick@gentoo.org> +msgpack-0.2.1.ebuild:
+  Bump
 
   21 Feb 2012; Patrick Lauer <patrick@gentoo.org> msgpack-0.1.12.ebuild:
   Restricting jython
@@ -13,4 +18,3 @@
   28 Dec 2011; Patrick Lauer <patrick@gentoo.org> +metadata.xml,
   +msgpack-0.1.12.ebuild:
   Initial import for #370267, ebuild by Johan Bergstroem
-
