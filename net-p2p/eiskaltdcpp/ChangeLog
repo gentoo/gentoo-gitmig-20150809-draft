@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/eiskaltdcpp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.39 2012/06/02 19:51:50 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.40 2012/08/24 13:01:21 ago Exp $
+
+  24 Aug 2012; Agostino Sarubbo <ago@gentoo.org> eiskaltdcpp-2.2.7.ebuild:
+  Non-maintainer commit, disable sr@latin wrt to bug #429786
 
   02 Jun 2012; Peter Volkov <pva@gentoo.org> eiskaltdcpp-9999.ebuild:
   Fix uri in vcs ebuild, thank Nikoli for report.
@@ -179,4 +182,3 @@
   26 Apr 2010; Peter Volkov <pva@gentoo.org> +eiskaltdcpp-2.0.1.ebuild,
   +eiskaltdcpp-9999.ebuild, +metadata.xml:
   Initial import, bug #317127, thank Nikoli for this job.
-

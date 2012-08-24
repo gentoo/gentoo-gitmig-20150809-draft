@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-2.2.7.ebuild,v 1.1 2012/06/01 16:24:26 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-2.2.7.ebuild,v 1.2 2012/08/24 13:01:21 ago Exp $
 
 EAPI="4"
 
-LANGS="be bg cs de el en es fr hu it pl ru sk sr@latin uk"
+LANGS="be bg cs de el en es fr hu it pl ru sk uk" # drop sr@latin for bug #429786
 
 [[ ${PV} = *9999* ]] && VCS_ECLASS="git-2" || VCS_ECLASS=""
 inherit cmake-utils ${VCS_ECLASS}
