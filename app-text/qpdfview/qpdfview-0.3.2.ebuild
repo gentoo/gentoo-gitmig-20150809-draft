@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/qpdfview-0.3.2.ebuild,v 1.2 2012/08/24 12:04:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/qpdfview-0.3.2.ebuild,v 1.3 2012/08/24 12:35:55 johu Exp $
 
 EAPI=4
 PLOCALES="cs de el ru sk"
@@ -47,6 +47,6 @@ src_configure() {
 rm_loc() {
 	einfo "Removing ${1} localization..."
 	sed -e "s;translations/${PN}_${1}.ts;;" \
-		-i ${PN}.pro
-	rm translations/${PN}_${1}.{qm,ts}
+		-i ${PN}.pro || die "sed translations failed"
+	rm translations/${PN}_${1}.{qm,ts} || die "rm translations failed"
 }
