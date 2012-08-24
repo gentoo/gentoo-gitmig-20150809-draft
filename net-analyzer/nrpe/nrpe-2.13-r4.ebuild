@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nrpe/nrpe-2.13-r3.ebuild,v 1.1 2012/08/23 23:07:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nrpe/nrpe-2.13-r4.ebuild,v 1.1 2012/08/24 04:54:29 flameeyes Exp $
 
 EAPI=4
 
@@ -8,19 +8,17 @@ inherit eutils toolchain-funcs multilib user autotools
 
 DESCRIPTION="Nagios Remote Plugin Executor"
 HOMEPAGE="http://www.nagios.org/"
-SRC_URI="mirror://sourceforge/nagios/nrpe-${PV}.tar.gz"
+SRC_URI="mirror://sourceforge/nagios/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
-IUSE="command-args ssl tcpd"
+IUSE="command-args ssl tcpd minimal"
 
-DEPEND=">=net-analyzer/nagios-plugins-1.3.0
-	ssl? ( dev-libs/openssl )
-	tcpd? ( sys-apps/tcp-wrappers )"
-RDEPEND="${DEPEND}"
-
-S="${WORKDIR}/nrpe-${PV}"
+DEPEND="ssl? ( dev-libs/openssl )
+	!minimal? ( tcpd? ( sys-apps/tcp-wrappers ) )"
+RDEPEND="${DEPEND}
+	!minimal? ( >=net-analyzer/nagios-plugins-1.3.0 )"
 
 pkg_setup() {
 	enewgroup nagios
@@ -45,14 +43,17 @@ src_prepare() {
 
 	sed -i -e '/define \(COMMAND\|SERVICES\)_FILE/d' contrib/nrpe_check_control.c || die
 
-	sed -i -e \
-		"s#pid_file=/var/run/nrpe.pid#pid_file=/var/run/nrpe/nrpe.pid#" \
-		sample-config//nrpe.cfg.in || die "sed failed"
-
 	eautoreconf
 }
 
 src_configure() {
+	local myconf
+	if use minimal; then
+		myconf="--disable-tcp-wrapper --disable-command-args"
+	else
+		myconf="$(use_enable tcpd tcp-wrapper) $(use_enable command-args)"
+	fi
+
 	econf \
 		--libexecdir=/usr/$(get_libdir)/nagios/plugins \
 		--localstatedir=/var/nagios \
@@ -60,12 +61,11 @@ src_configure() {
 		--with-nrpe-user=nagios \
 		--with-nrpe-group=nagios \
 		$(use_enable ssl) \
-		$(use_enable tcpd tcp-wrapper) \
-		$(use_enable command-args)
+		${myconf}
 }
 
 src_compile() {
-	emake all
+	emake -C src check_nrpe $(usex !minimal nrpe)
 
 	# Add nifty nrpe check tool
 	$(tc-getCC) ${CPPFLAGS} ${CFLAGS} \
@@ -75,6 +75,17 @@ src_compile() {
 }
 
 src_install() {
+	dodoc LEGAL Changelog README SECURITY \
+		contrib/README.nrpe_check_control \
+		$(usex ssl README.SSL)
+
+	exeinto /usr/$(get_libdir)/nagios/plugins
+	doexe src/check_nrpe nrpe_check_control
+
+	use minimal && return 0
+
+	## NON-MINIMAL INSTALL FOLLOWS ##
+
 	insinto /etc/nagios
 	newins sample-config/nrpe.cfg nrpe.cfg
 	fowners root:nagios /etc/nagios/nrpe.cfg
@@ -85,15 +96,13 @@ src_install() {
 
 	newinitd "${FILESDIR}"/nrpe.init nrpe
 
-	dodoc LEGAL Changelog README SECURITY \
-		contrib/README.nrpe_check_control \
-		$(usex ssl README.SSL)
-
 	insinto /etc/xinetd.d/
-	doins "${FILESDIR}/nrpe.xinetd.2"
+	newins "${FILESDIR}/nrpe.xinetd.2" nrpe
 
-	exeinto /usr/$(get_libdir)/nagios/plugins
-	doexe src/check_nrpe nrpe_check_control
+	if use tcpd; then
+		sed -i -e '/^reload()/, /^}/ d' -e '/extra_started_commands/s:reload::' \
+			"${D}"/etc/init.d/nrpe
+	fi
 }
 
 pkg_postinst() {

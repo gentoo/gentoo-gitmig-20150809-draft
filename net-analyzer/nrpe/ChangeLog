@@ -1,6 +1,13 @@
-# ChangeLog for net-analyzer/nagios-nrpe
+# ChangeLog for net-analyzer/nrpe
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nrpe/ChangeLog,v 1.1 2012/08/23 23:07:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nrpe/ChangeLog,v 1.2 2012/08/24 04:54:29 flameeyes Exp $
+
+*nrpe-2.13-r4 (24 Aug 2012)
+
+  24 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> +nrpe-2.13-r4.ebuild,
+  -nrpe-2.13-r3.ebuild, metadata.xml:
+  Fix xinetd install; remove reload function from init script when using tcpd,
+  due to bug #289730; add minimal USE flag to not install the daemon at all.
 
 *nagios-nrpe-2.13-r3 (23 Aug 2012)
 
