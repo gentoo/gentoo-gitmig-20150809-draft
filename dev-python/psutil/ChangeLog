@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/psutil
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psutil/ChangeLog,v 1.12 2012/07/11 22:14:04 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psutil/ChangeLog,v 1.13 2012/08/24 09:39:04 patrick Exp $
+
+*psutil-0.6.1 (24 Aug 2012)
+
+  24 Aug 2012; Patrick Lauer <patrick@gentoo.org> +psutil-0.6.1.ebuild:
+  Bump
 
 *psutil-0.5.1 (11 Jul 2012)
 
@@ -53,4 +58,3 @@
   30 May 2011; Tim Harder <radhermit@gentoo.org> +psutil-0.2.1.ebuild,
   +metadata.xml:
   Initial import from sunrise thanks to Michał Górny (bug #322977).
-
