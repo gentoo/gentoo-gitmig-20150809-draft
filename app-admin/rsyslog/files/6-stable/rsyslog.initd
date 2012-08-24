@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/files/6-stable/rsyslog.initd,v 1.1 2012/06/01 12:54:17 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/files/6-stable/rsyslog.initd,v 1.2 2012/08/24 14:40:14 ultrabug Exp $
 
 extra_started_commands="reload"
 
@@ -12,7 +12,7 @@ depend() {
 start() {
 	ebegin "Starting rsyslogd"
 	start-stop-daemon \
-		--start --quiet --exec /usr/sbin/rsyslogd \
+		--start --quiet --exec /usr/sbin/rsyslogd --pidfile "${PIDFILE}" \
 		-- ${RSYSLOG_OPTS} -i "${PIDFILE}" -f "${CONFIGFILE}"
 	eend $?
 }
