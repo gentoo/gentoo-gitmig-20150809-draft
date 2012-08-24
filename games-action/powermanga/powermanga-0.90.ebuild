@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/powermanga-0.90.ebuild,v 1.12 2012/08/08 15:00:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/powermanga-0.90.ebuild,v 1.13 2012/08/24 06:59:11 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils autotools games
@@ -18,7 +18,7 @@ DEPEND=">=media-libs/libsdl-1.2[audio,joystick,video]
 	media-libs/libpng
 	x11-libs/libXext
 	x11-libs/libXxf86dga
-	media-libs/sdl-mixer[mikmod]"
+	media-libs/sdl-mixer[mod]"
 
 src_prepare() {
 	sed -i -e "/null/d" graphics/Makefile.in || die
