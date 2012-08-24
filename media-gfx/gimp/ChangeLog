@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.380 2012/08/09 18:23:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.381 2012/08/24 19:11:50 sping Exp $
+
+*gimp-2.8.2 (24 Aug 2012)
+
+  24 Aug 2012; Sebastian Pipping <sping@gentoo.org> +gimp-2.8.2.ebuild:
+  Bump to 2.8.2 (bug #432574)
 
   09 Aug 2012; Brent Baude <ranger@gentoo.org> gimp-2.6.12-r2.ebuild:
   Marking gimp-2.6.12-r2 ppc for bug 418425
