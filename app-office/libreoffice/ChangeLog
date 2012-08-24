@@ -1,6 +1,9 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.363 2012/08/23 21:47:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.364 2012/08/24 08:16:25 scarabeus Exp $
+
+  24 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-3.6.9999.ebuild:
+  Mergedlib fixed up again.
 
   23 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-3.6.0.4.ebuild,
   libreoffice-3.6.9999.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.6.9999.ebuild,v 1.23 2012/08/23 21:47:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.6.9999.ebuild,v 1.24 2012/08/24 08:16:25 scarabeus Exp $
 
 EAPI=4
 
@@ -421,7 +421,6 @@ src_configure() {
 	# --disable-ldap: ldap requires internal mozilla stuff, same like mozab
 	# --disable-mozilla: disable mozilla build that is used for adresbook, not
 	#   affecting the nsplugin that is always ON
-	# --disable-mergelibs: cause build time failures
 	# --disable-pch: precompiled headers cause build crashes
 	# --disable-rpath: relative runtime path is not desired
 	# --disable-systray: quickstarter does not actually work at all so do not
@@ -441,7 +440,7 @@ src_configure() {
 		--enable-graphite \
 		--enable-cairo-canvas \
 		--enable-largefile \
-		--disable-mergelibs \
+		--enable-mergelibs \
 		--enable-python=system \
 		--enable-randr \
 		--enable-randr-link \
