@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libaacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacs/ChangeLog,v 1.12 2012/08/22 15:14:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacs/ChangeLog,v 1.13 2012/08/24 12:04:21 xmw Exp $
+
+  24 Aug 2012; Michael Weber <xmw@gentoo.org> libaacs-0.4.0.ebuild:
+  ppc stable (bug 422105).
 
 *libaacs-0.5.0 (22 Aug 2012)
 
@@ -48,4 +51,3 @@
   12 Dec 2011; Tim Harder <radhermit@gentoo.org> +libaacs-0.3.0.ebuild,
   +metadata.xml:
   Initial import (bug #352031). Ebuild by me.
-
