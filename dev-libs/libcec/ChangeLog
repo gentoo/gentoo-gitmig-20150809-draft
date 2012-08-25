@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libcec
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcec/ChangeLog,v 1.11 2012/08/08 18:02:15 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcec/ChangeLog,v 1.12 2012/08/25 18:33:11 thev00d00 Exp $
+
+*libcec-1.8.1-r1 (25 Aug 2012)
+
+  25 Aug 2012; <iwhyman@gentoo.org> +libcec-1.8.1-r1.ebuild,
+  +files/libcec-1.8.1-eintr-retry.patch:
+  Add patch from pull request 38, fix eintr handling
 
 *libcec-1.8.1 (08 Aug 2012)
 
