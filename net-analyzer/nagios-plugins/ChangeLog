@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-plugins
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.151 2012/08/23 22:03:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.152 2012/08/25 00:17:33 flameeyes Exp $
+
+  25 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  nagios-plugins-1.4.16-r2.ebuild:
+  Fix build with sudo USE flag disabled.
 
 *nagios-plugins-1.4.16-r2 (23 Aug 2012)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.16-r2.ebuild,v 1.1 2012/08/23 22:03:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.16-r2.ebuild,v 1.2 2012/08/25 00:17:33 flameeyes Exp $
 
 EAPI=4
 
@@ -98,9 +98,10 @@ User_Alias NAGIOS_PLUGINS_USERS = nagios, icinga
 
 NAGIOS_PLUGINS_USERS ALL=(root) NOPASSWD: NAGIOS_PLUGINS_CMDS
 EOF
+
+		insinto /etc/sudoers.d
+		doins "${T}"/50${PN}
 	fi
-	insinto /etc/sudoers.d
-	doins "${T}"/50${PN}
 
 	cd contrib/
 	dodoc *README*
