@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.278 2012/07/21 03:52:09 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.279 2012/08/25 13:59:32 ssuominen Exp $
+
+*pulseaudio-2.1-r1 (25 Aug 2012)
+
+  25 Aug 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +pulseaudio-2.1-r1.ebuild, pulseaudio-9999.ebuild:
+  Read the value of udevdir from udev.pc pkg-config file wrt #432684 by Arne
+  Stäcker
 
   21 Jul 2012; Arun Raghavan <ford_prefect@gentoo.org> pulseaudio-9999.ebuild:
   Bring live ebuild in sync with regular ebuilds (add systemd USE flag).
