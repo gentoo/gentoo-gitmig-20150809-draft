@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/hashcat-gui/hashcat-gui-0.5.1.ebuild,v 1.4 2012/07/27 18:21:33 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/hashcat-gui/hashcat-gui-0.5.1.ebuild,v 1.5 2012/08/25 22:32:36 zerochaos Exp $
 
 EAPI=4
 
@@ -15,11 +15,13 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE=""
+IUSE="cuda opencl"
 
 RDEPEND="app-crypt/hashcat-bin
-	app-crypt/oclhashcat-plus-bin
-	app-crypt/oclhashcat-lite-bin
+	cuda? ( app-crypt/oclhashcat-plus-bin
+	app-crypt/oclhashcat-lite-bin )
+	opencl? ( app-crypt/oclhashcat-plus-bin
+	app-crypt/oclhashcat-lite-bin )
 	x11-libs/qt-gui:4
 	x11-libs/qt-core:4"
 
