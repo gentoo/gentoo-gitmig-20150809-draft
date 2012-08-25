@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/psmisc-22.16.ebuild,v 1.9 2012/07/08 16:35:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/psmisc-22.16.ebuild,v 1.10 2012/08/25 22:33:18 vapier Exp $
 
 EAPI="4"
 
@@ -52,5 +52,5 @@ src_install() {
 
 	# fuser is needed by init.d scripts
 	dodir /bin
-	mv -vf "${ED}"/usr/bin/fuser "${ED}"/bin || die
+	mv "${ED}"/usr/bin/fuser "${ED}"/bin || die
 }
