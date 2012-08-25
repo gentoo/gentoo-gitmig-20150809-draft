@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts/liberation-fonts-2.00.0-r1.ebuild,v 1.1 2012/08/24 18:34:32 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts/liberation-fonts-2.00.0-r1.ebuild,v 1.2 2012/08/25 08:16:33 scarabeus Exp $
 
 EAPI=4
 
 inherit font
 
-DESCRIPTION="A GPL-2 Helvetica/Times/Courier replacement TrueType font set, courtesy of Red Hat"
+DESCRIPTION="A Helvetica/Times/Courier replacement TrueType font set, courtesy of Red Hat"
 HOMEPAGE="https://fedorahosted.org/liberation-fonts"
 SRC_URI="!fontforge? ( https://fedorahosted.org/releases/l/i/${PN}/${PN}-ttf-${PV}.tar.gz )
 fontforge? ( https://fedorahosted.org/releases/l/i/${PN}/${P}.tar.gz )"
