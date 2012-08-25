@@ -1,9 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/tabbed/tabbed-0.4.1.ebuild,v 1.1 2012/08/23 03:09:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/tabbed/tabbed-0.4.1.ebuild,v 1.2 2012/08/25 15:36:49 jer Exp $
 
-EAPI="3"
-
+EAPI=4
 inherit savedconfig toolchain-funcs
 
 DESCRIPTION="Simple generic tabbed fronted to xembed aware applications"
@@ -41,9 +40,9 @@ src_prepare() {
 }
 
 src_compile() {
-	emake CC=$(tc-getCC) || die "emake compile failed"
+	emake CC=$(tc-getCC)
 }
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	default
 	save_config config.h
 }
