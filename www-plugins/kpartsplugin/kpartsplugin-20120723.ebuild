@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/kpartsplugin/kpartsplugin-20120723.ebuild,v 1.1 2012/08/02 20:54:14 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/kpartsplugin/kpartsplugin-20120723.ebuild,v 1.2 2012/08/25 19:54:58 dilfridge Exp $
 
-EAPI=3
+EAPI=4
 inherit kde4-base nsplugins
 
 DESCRIPTION="Plugin using KDE's KParts technology to embed file viewers into non-KDE browsers"
