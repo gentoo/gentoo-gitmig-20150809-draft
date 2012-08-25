@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/multipath-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/ChangeLog,v 1.46 2012/08/11 13:27:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/ChangeLog,v 1.47 2012/08/25 22:35:16 vapier Exp $
+
+  25 Aug 2012; Mike Frysinger <vapier@gentoo.org>
+  multipath-tools-0.4.9-r5.ebuild:
+  Drop useless -vf args to mv #432632 by Joshua B. Kahlenberg.
 
 *multipath-tools-0.4.9-r5 (11 Aug 2012)
 
@@ -239,4 +243,3 @@
   21 Feb 2005; Martin Schlemmer <azarah@gentoo.org> +metadata.xml,
   +files/rc-multipathd, +multipath-tools-0.4.2.ebuild:
   Initial version.  Ebuild and scripts by Seemant.
-

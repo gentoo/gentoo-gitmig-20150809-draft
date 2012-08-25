@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/multipath-tools-0.4.9-r5.ebuild,v 1.1 2012/08/11 13:27:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/multipath-tools-0.4.9-r5.ebuild,v 1.2 2012/08/25 22:35:16 vapier Exp $
 
 EAPI=4
 inherit base eutils toolchain-funcs
@@ -52,9 +52,9 @@ src_install() {
 	insinto /etc
 	newins "${S}"/multipath.conf.annotated multipath.conf
 	# drop this one it doesnt work with recent udev bug #413063
-	rm "${D}"/etc/udev/rules.d/65-multipath.rules
+	rm "${D}"/etc/udev/rules.d/65-multipath.rules || die
 	# /etc/udev is reserved for user modified rules!
-	mv -vf "${D}"/etc/udev/rules.d "${D}/${udevdir}"/
+	mv "${D}"/etc/udev/rules.d "${D}/${udevdir}"/ || die
 	fperms 644 "${udevdir}"/rules.d/66-kpartx.rules
 	newinitd "${FILESDIR}"/rc-multipathd multipathd
 	newinitd "${FILESDIR}"/multipath.rc multipath

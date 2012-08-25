@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2012.1.15-r1.ebuild,v 1.12 2012/05/04 19:09:18 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2012.1.15-r1.ebuild,v 1.13 2012/08/25 22:37:41 vapier Exp $
 
 EAPI=4
 inherit linux-info
@@ -73,7 +73,7 @@ src_install() {
 
 	# http://bugs.gentoo.org/398069
 	dodir /usr/sbin
-	mv -vf "${D}"/sbin/* "${ED}"/usr/sbin || die
+	mv "${D}"/sbin/* "${ED}"/usr/sbin || die
 	rm -rf "${D}"/sbin
 
 	dosym mount.ntfs-3g /usr/sbin/mount.ntfs #374197
