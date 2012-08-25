@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-5.43.ebuild,v 1.4 2012/08/19 23:13:57 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-5.43.ebuild,v 1.5 2012/08/25 22:50:24 vapier Exp $
 
 EAPI="3"
 
@@ -37,9 +37,11 @@ src_prepare() {
 src_configure() {
 	use minimal && einfo "Skipping the monitoring daemon for minimal build."
 	use static && append-ldflags -static
+	# The build installs /etc/init.d/smartd, but we clobber it
+	# in our src_install, so no need to manually delete it.
 	econf \
 		--with-docdir="${EPREFIX}/usr/share/doc/${PF}" \
-		--with-initscriptdir="/toss-it-away" \
+		--with-initscriptdir="${EPREFIX}/etc/init.d" \
 		$(use_with caps libcap-ng) \
 		$(use_with selinux) \
 		$(systemd_with_unitdir)
@@ -51,7 +53,6 @@ src_install() {
 		doman smartctl.8
 	else
 		emake install DESTDIR="${D}" || die
-		rm -rf "${ED}"/toss-it-away
 		newinitd "${FILESDIR}"/smartd.rc smartd
 		newconfd "${FILESDIR}"/smartd.confd smartd
 	fi
