@@ -1,8 +1,8 @@
-diff -r -U1 maxima-5.28.0.orig/src/Makefile.in maxima-5.28.0/src/Makefile.in
---- maxima-5.28.0.orig/src/Makefile.in	2012-08-13 04:21:58.000000000 +0700
-+++ maxima-5.28.0/src/Makefile.in	2012-08-15 18:16:12.000000000 +0700
-@@ -235,3 +235,3 @@
- @SBCL_EXEC_TRUE@SBCL_INST_MAXIMA = $(INSTALL_PROGRAM) $(SBCL_MAXIMA) "$(DESTDIR)$(verpkglibdir)/$(SBCL_MAXIMA)"
--@SBCL_TRUE@EXECUTESBCL = "$(SBCL_NAME)" --noinform --noprint --eval
-+@SBCL_TRUE@EXECUTESBCL = "$(SBCL_NAME)" --noinform --noprint --sysinit /dev/null --userinit /dev/null --eval
- @GCL_TRUE@EXECUTEGCL = $(GCL_NAME) -batch -eval
+diff -r -U1 maxima-5.28.0.orig/src/Makefile.am maxima-5.28.0/src/Makefile.am
+--- maxima-5.28.0.orig/src/Makefile.am	2012-06-15 12:21:34.000000000 +0700
++++ maxima-5.28.0/src/Makefile.am	2012-08-25 09:32:26.000000000 +0700
+@@ -199,3 +199,3 @@
+ if SBCL
+-EXECUTESBCL = "$(SBCL_NAME)" --noinform --noprint --eval
++EXECUTESBCL = "$(SBCL_NAME)" --noinform --noprint --no-sysinit --no-userinit --eval
+ all-local: sharefiles.mk $(SBCL_MAXIMA)

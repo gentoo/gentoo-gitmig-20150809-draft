@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.28.0.ebuild,v 1.1 2012/08/15 16:40:41 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.28.0.ebuild,v 1.2 2012/08/25 04:10:19 grozin Exp $
 
 EAPI=3
 
@@ -102,8 +102,10 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-xdg-utils.patch
 
 	# Don't use lisp init files
-	# ClozureCL (former OpenMCL) executable name is ccl
 	epatch "${FILESDIR}"/${P}.patch
+
+	# ClozureCL (former OpenMCL) executable name is ccl
+	epatch "${FILESDIR}"/${PN}-ccl.patch
 
 	# make xmaxima conditional on tk (wish)
 	epatch "${FILESDIR}"/${P}-wish.patch

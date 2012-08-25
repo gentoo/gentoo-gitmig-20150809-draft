@@ -1,6 +1,12 @@
 # ChangeLog for sci-mathematics/maxima
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.99 2012/08/15 16:40:41 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.100 2012/08/25 04:10:19 grozin Exp $
+
+  25 Aug 2012; Andrey Grozin <grozin@gentoo.org> maxima-5.28.0.ebuild,
+  files/maxima-5.28.0-sbcl.patch, files/maxima-5.28.0.patch,
+  +files/maxima-ccl.patch:
+  Correcting sbcl workaround (#411453); dont load init file in ccl (#432246,
+  thanks to RCV <reich-cv@yandex.ru>)
 
 *maxima-5.28.0 (15 Aug 2012)
 
