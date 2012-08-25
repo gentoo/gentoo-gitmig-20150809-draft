@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libkvkontakte/libkvkontakte-2.6.0.ebuild,v 1.2 2012/08/06 17:51:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkvkontakte/libkvkontakte-2.6.0.ebuild,v 1.3 2012/08/25 07:35:03 johu Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ DESCRIPTION="Library for accessing the features of social networking site vkonta
 HOMEPAGE="http://www.digikam.org/"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 SLOT=4
 
