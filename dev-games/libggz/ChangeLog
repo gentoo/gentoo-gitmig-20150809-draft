@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/libggz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/libggz/ChangeLog,v 1.32 2012/02/19 13:37:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/libggz/ChangeLog,v 1.33 2012/08/25 07:30:28 tupone Exp $
+
+  25 Aug 2012; Alfredo Tupone <tupone@gentoo.org> libggz-0.0.14.1.ebuild,
+  +files/libggz-0.0.14.1-gnutls3.patch:
+  Fix build with gnutls-3. Bug #421455 by Diego Elio Pettenò
 
   19 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org> libggz-0.0.14.1.ebuild:
   Do not install static-libs unless requested and remove not-required .la

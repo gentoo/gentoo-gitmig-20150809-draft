@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/libggz/libggz-0.0.14.1.ebuild,v 1.14 2012/02/19 13:37:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/libggz/libggz-0.0.14.1.ebuild,v 1.15 2012/08/25 07:30:28 tupone Exp $
 
 EAPI=4
 
@@ -17,6 +17,8 @@ DEPEND="dev-libs/libgcrypt
 	gnutls? ( net-libs/gnutls )
 	!gnutls? ( dev-libs/openssl )"
 RDEPEND="${DEPEND}"
+
+PATCHES=( "${FILESDIR}"/${P}-gnutls3.patch )
 
 src_configure() {
 	games-ggz_src_configure \
