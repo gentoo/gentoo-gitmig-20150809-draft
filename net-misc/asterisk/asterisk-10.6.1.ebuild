@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-10.6.1.ebuild,v 1.1 2012/07/18 07:39:22 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-10.6.1.ebuild,v 1.2 2012/08/25 17:30:08 swift Exp $
 
 EAPI=4
 inherit autotools base eutils linux-info multilib
@@ -20,7 +20,7 @@ IUSE_VOICEMAIL_STORAGE="
 	voicemail_storage_odbc
 	voicemail_storage_imap
 "
-IUSE="${IUSE_VOICEMAIL_STORAGE} ais alsa bluetooth calendar +caps curl dahdi debug doc freetds gtalk http iconv jabber jingle ldap lua mysql newt +samples odbc osplookup oss portaudio postgres radius snmp span speex srtp static syslog vorbis"
+IUSE="${IUSE_VOICEMAIL_STORAGE} ais alsa bluetooth calendar +caps curl dahdi debug doc freetds gtalk http iconv jabber jingle ldap lua mysql newt +samples odbc osplookup oss portaudio postgres radius selinux snmp span speex srtp static syslog vorbis"
 IUSE_EXPAND="VOICEMAIL_STORAGE"
 REQUIRED_USE="gtalk? ( jabber )
 	^^ ( ${IUSE_VOICEMAIL_STORAGE/+/} )
@@ -61,6 +61,7 @@ RDEPEND="dev-db/sqlite:3
 	portaudio? ( media-libs/portaudio )
 	postgres? ( dev-db/postgresql-base )
 	radius? ( net-dialup/radiusclient-ng )
+	selinux? ( sec-policy/selinux-asterisk )
 	snmp? ( net-analyzer/net-snmp )
 	span? ( media-libs/spandsp )
 	speex? ( media-libs/speex )
