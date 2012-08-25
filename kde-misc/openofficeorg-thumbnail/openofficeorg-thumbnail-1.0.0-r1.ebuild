@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/openofficeorg-thumbnail/openofficeorg-thumbnail-1.0.0-r1.ebuild,v 1.1 2012/08/25 19:39:20 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/openofficeorg-thumbnail/openofficeorg-thumbnail-1.0.0-r1.ebuild,v 1.2 2012/08/25 19:46:43 creffett Exp $
 
 EAPI=4
 
@@ -23,4 +23,5 @@ src_prepare() {
 	sed -e "s:CacheThumbnail:X-CacheThumbnail:" \
 		-e	"s:IgnoreMaximumSize:X-IgnoreMaximumSize:" \
 		-i	src/openofficeorgthumbnail.desktop || die "fixing .desktop file	failed"
+	kde4-base_src_prepare
 }
