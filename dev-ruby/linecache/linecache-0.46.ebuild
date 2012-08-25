@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/linecache/linecache-0.46.ebuild,v 1.8 2012/05/01 18:24:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/linecache/linecache-0.46.ebuild,v 1.9 2012/08/25 06:19:41 graaff Exp $
 
-EAPI=2
+EAPI=4
+# ruby19 → not supported in extconf.rb
+# jruby → compiled extension
 USE_RUBY="ruby18 ree18"
 
 RUBY_FAKEGEM_DOCDIR="doc"
@@ -19,8 +21,7 @@ KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-
 IUSE=""
 
 ruby_add_rdepend "dev-ruby/require_relative"
-ruby_add_bdepend "dev-ruby/rake
-	test? ( virtual/ruby-test-unit )"
+ruby_add_bdepend "dev-ruby/rake"
 
 all_ruby_prepare() {
 	sed -i -e 's/rbx-require-relative/require_relative/' ../metadata || die
