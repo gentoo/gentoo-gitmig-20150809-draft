@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.240 2012/08/07 12:38:58 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.241 2012/08/25 09:23:42 blueness Exp $
+
+  25 Aug 2012; Anthony G. Basile <blueness@gentoo.org> curl-7.26.0.ebuild:
+  Stable arm, bug #421479
 
   07 Aug 2012; Anthony G. Basile <blueness@gentoo.org>
   -files/curl-respect-cflags-2.patch,
