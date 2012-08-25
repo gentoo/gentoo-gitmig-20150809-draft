@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/git-bzr-ng
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-bzr-ng/ChangeLog,v 1.4 2012/08/11 09:30:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-bzr-ng/ChangeLog,v 1.5 2012/08/25 04:41:42 tetromino Exp $
+
+*git-bzr-ng-0_pre20120822 (25 Aug 2012)
+
+  25 Aug 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +git-bzr-ng-0_pre20120822.ebuild:
+  New snapshot.
 
   11 Aug 2012; Agostino Sarubbo <ago@gentoo.org>
   git-bzr-ng-0_pre20120130.ebuild:
