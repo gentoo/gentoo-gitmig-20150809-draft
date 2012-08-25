@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.6.9999.ebuild,v 1.24 2012/08/24 08:16:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.6.9999.ebuild,v 1.25 2012/08/25 08:43:24 scarabeus Exp $
 
 EAPI=4
 
@@ -556,6 +556,9 @@ src_install() {
 	# https://bugs.freedesktop.org/show_bug.cgi?id=46506
 	insinto /usr/$(get_libdir)/libreoffice/help
 	doins xmlhelp/util/*.xsl
+
+	# Remove desktop files for support to old installs that can't parse mime
+	rm -rf "${ED}"/usr/share/mimelnk/
 }
 
 pkg_preinst() {
