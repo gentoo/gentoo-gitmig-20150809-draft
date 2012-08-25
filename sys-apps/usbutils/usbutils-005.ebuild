@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-005.ebuild,v 1.4 2012/05/04 09:17:26 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-005.ebuild,v 1.5 2012/08/25 22:35:26 vapier Exp $
 
 EAPI="4"
 
@@ -57,7 +57,7 @@ src_install() {
 
 	use python || rm -f "${ED}"/usr/bin/lsusb.py
 
-	mv -vf "${ED}"/usr/sbin/update-usbids{.sh,} || die
+	mv "${ED}"/usr/sbin/update-usbids{.sh,} || die
 	newbin "${FILESDIR}"/usbmodules.sh usbmodules
 
 	use network-cron || return 0

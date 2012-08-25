@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.350 2012/07/25 21:06:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.351 2012/08/25 22:36:01 vapier Exp $
+
+  25 Aug 2012; Mike Frysinger <vapier@gentoo.org> dbus-1.4.16.ebuild:
+  Drop useless -vf args to mv #432632 by Joshua B. Kahlenberg.
 
   25 Jul 2012; Markus Meier <maekke@gentoo.org> dbus-1.6.2.ebuild:
   arm stable, bug #416725
@@ -1420,4 +1423,3 @@
   21 Jun 2003; Seemant Kulleen <seemant@gentoo.org> dbus-0.11.ebuild,
   files/dbus-0.11-cvs-update.patch:
   dbus thingy from freedesktop.org -- for upcoming apps like xmms2 etc
-

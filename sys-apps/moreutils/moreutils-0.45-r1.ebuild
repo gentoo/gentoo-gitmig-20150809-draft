@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/moreutils-0.45-r1.ebuild,v 1.8 2012/07/08 15:19:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/moreutils-0.45-r1.ebuild,v 1.9 2012/08/25 22:35:15 vapier Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs prefix
@@ -55,7 +55,7 @@ src_install() {
 
 	# sys-process is more advanced than parallel from moreutils, rename it
 	if use doc; then
-		mv -vf "${ED}"usr/share/man/man1/{,${PN}_}parallel.1 || die
+		mv "${ED}"usr/share/man/man1/{,${PN}_}parallel.1 || die
 	fi
-	mv -vf "${ED}"usr/bin/{,${PN}_}parallel || die
+	mv "${ED}"usr/bin/{,${PN}_}parallel || die
 }

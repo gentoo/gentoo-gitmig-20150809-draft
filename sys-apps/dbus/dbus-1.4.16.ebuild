@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.4.16.ebuild,v 1.11 2012/05/24 04:21:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.4.16.ebuild,v 1.12 2012/08/25 22:36:01 vapier Exp $
 
 EAPI=2
 inherit autotools eutils multilib flag-o-matic python systemd virtualx user
@@ -186,6 +186,6 @@ pkg_postinst() {
 
 	# Move to /etc per #370451 and ensure unique id is generated
 	[[ -e ${ROOT}/var/lib/dbus/machine-id ]] && \
-		mv -vf "${ROOT}"/var/lib/dbus/machine-id "${ROOT}"/etc/machine-id
+		mv "${ROOT}"/var/lib/dbus/machine-id "${ROOT}"/etc/machine-id
 	dbus-uuidgen --ensure="${ROOT}"/etc/machine-id
 }
