@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/jffi-1.0.0.ebuild,v 1.7 2012/05/03 07:42:51 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/jffi-1.0.0.ebuild,v 1.8 2012/08/25 19:09:47 thev00d00 Exp $
 
 # Probably best to leave the CFLAGS as they are here. See...
 # http://weblogs.java.net/blog/kellyohair/archive/2006/01/compilation_of_1.html
@@ -50,6 +50,9 @@ java_prepare() {
 	sed -i '/<zipfileset src="archive\//d' custom-build.xml || die
 	sed -i '/libs.CopyLibs.classpath/d' lib/nblibraries.properties || die
 	sed -i '/copylibstask.jar/d' lib/nblibraries.properties || die
+
+	# Fix build with GCC 4.7 #421501
+	sed -i -e "s|-mimpure-text||g" jni/GNUmakefile || die
 }
 
 EANT_EXTRA_ARGS="-Duse.system.libffi=1"

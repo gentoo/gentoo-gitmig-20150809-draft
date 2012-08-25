@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/jffi-1.0.11.ebuild,v 1.4 2012/05/09 17:10:15 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/jffi-1.0.11.ebuild,v 1.5 2012/08/25 19:09:47 thev00d00 Exp $
 
 EAPI="4"
 
@@ -39,6 +39,9 @@ java_prepare() {
 	epatch "${FILESDIR}"/${P}_no-werror.patch
 
 	find "${WORKDIR}" -iname '*.jar' -delete
+
+	# Fix build with GCC 4.7 #421501
+	sed -i -e "s|-mimpure-text||g" jni/GNUmakefile || die
 }
 
 JAVA_ANT_REWRITE_CLASSPATH="yes"
