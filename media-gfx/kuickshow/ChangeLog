@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/kuickshow
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kuickshow/ChangeLog,v 1.8 2011/03/06 13:33:09 fauli Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kuickshow/ChangeLog,v 1.9 2012/08/25 20:31:55 creffett Exp $
+
+*kuickshow-0.9.1-r1 (25 Aug 2012)
+
+  25 Aug 2012; Chris Reffett <creffett@gentoo.org> +kuickshow-0.9.1-r1.ebuild:
+  Revision bump, update to EAPI 4 and fix repoman warning
 
   06 Mar 2011; Christian Faulhammer <fauli@gentoo.org>
   kuickshow-0.9.1.ebuild:
@@ -24,4 +29,3 @@
   09 Nov 2009; Alex Alexander <wired@gentoo.org>
   +kuickshow-0.9.1_p20091105.ebuild, +metadata.xml:
   new ebuild
-
