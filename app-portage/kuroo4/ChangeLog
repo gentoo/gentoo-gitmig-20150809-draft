@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/kuroo4
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kuroo4/ChangeLog,v 1.4 2012/08/05 20:45:42 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kuroo4/ChangeLog,v 1.5 2012/08/25 08:24:09 johu Exp $
+
+  25 Aug 2012; Johannes Huber <johu@gentoo.org>
+  +files/kuroo4-0.90.2-gcc47.patch, kuroo4-0.90.2.ebuild:
+  Add upstream patch to fix build with gcc47 by Andrew Schenck
+  <galiven@users.sourceforge.net> wrt bug #432596.
 
   05 Aug 2012; Maciej Mrozowski <reavertm@gentoo.org> kuroo4-0.90.2.ebuild:
   Improve deps.
