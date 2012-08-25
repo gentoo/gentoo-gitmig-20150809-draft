@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.80.ebuild,v 1.1 2012/05/31 10:51:53 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.80.ebuild,v 1.2 2012/08/25 05:35:43 ssuominen Exp $
 
 EAPI="3"
 
@@ -23,7 +23,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-solaris"
 
-DEPEND=">=sys-apps/sed-4.0.5
+COMMON_DEPEND=">=sys-apps/sed-4.0.5
 	>=sys-libs/db-3.2
 	dev-libs/libpcre
 	perl? ( sys-devel/libperl )
@@ -46,11 +46,12 @@ DEPEND=">=sys-apps/sed-4.0.5
 	)
 	sqlite? ( dev-db/sqlite )
 	radius? ( net-dialup/radiusclient )
-	virtual/pkgconfig
 	virtual/libiconv
 	"
 	# added X check for #57206
-RDEPEND="${DEPEND}
+DEPEND="${COMMON_DEPEND}
+	virtual/pkgconfig"
+RDEPEND="${COMMON_DEPEND}
 	!mail-mta/courier
 	!mail-mta/esmtp
 	!mail-mta/mini-qmail
