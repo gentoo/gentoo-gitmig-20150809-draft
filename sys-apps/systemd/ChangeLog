@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.42 2012/08/24 17:21:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.43 2012/08/25 15:48:04 mgorny Exp $
+
+  25 Aug 2012; Michał Górny <mgorny@gentoo.org>
+  +files/0003-journal-add-HAVE_XZ-check-to-avoid-build-failure.patch,
+  systemd-189.ebuild:
+  Backport patch for USE=-lzma build failure. Bug #432700.
 
 *systemd-189 (24 Aug 2012)
 

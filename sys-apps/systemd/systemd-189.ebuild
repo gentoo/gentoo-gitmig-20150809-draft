@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-189.ebuild,v 1.1 2012/08/24 17:21:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-189.ebuild,v 1.2 2012/08/25 15:48:04 mgorny Exp $
 
 EAPI=4
 
@@ -66,6 +66,7 @@ src_prepare() {
 	local PATCHES=(
 		"${FILESDIR}"/0001-Disable-udev-targets-for-udev-189.patch
 		"${FILESDIR}"/0002-journald-add-missing-includes.patch
+		"${FILESDIR}"/0003-journal-add-HAVE_XZ-check-to-avoid-build-failure.patch
 	)
 
 	autotools-utils_src_prepare
