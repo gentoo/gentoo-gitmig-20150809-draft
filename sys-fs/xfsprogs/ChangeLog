@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/xfsprogs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.151 2012/08/19 17:11:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.152 2012/08/25 23:10:10 vapier Exp $
+
+  25 Aug 2012; Mike Frysinger <vapier@gentoo.org>
+  +files/xfsprogs-3.1.8-readline.patch, xfsprogs-3.1.8.ebuild:
+  Link libxcmd against readline #432644 by David Badia.
 
   19 Aug 2012; Raúl Porcel <armin76@gentoo.org> xfsprogs-3.1.8.ebuild:
   alpha/ia64/sh/sparc stable wrt #422225
