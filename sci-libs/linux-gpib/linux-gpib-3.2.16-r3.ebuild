@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/linux-gpib-3.2.16-r3.ebuild,v 1.2 2012/08/25 16:45:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/linux-gpib-3.2.16-r3.ebuild,v 1.3 2012/08/25 16:46:18 ssuominen Exp $
 
 EAPI=4
 PERL_EXPORT_PHASE_FUNCTIONS=no
@@ -107,7 +107,7 @@ src_install() {
 	fi
 
 	local udevdir=/lib/udev
-	has_version sys_fs/udev && udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
+	has_version sys-fs/udev && udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
 	echo "KERNEL==\"gpib[0-9]*\",	MODE=\"0660\", GROUP=\"gpib\"" >> 99-gpib.rules
 	insinto "${udevdir}"/rules.d
 	doins 99-gpib.rules
