@@ -1,6 +1,14 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.249 2012/08/17 21:38:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.250 2012/08/25 09:41:35 hwoarang Exp $
+
+  25 Aug 2012; Markos Chandras <hwoarang@gentoo.org>
+  openbox-3.5.0_p20111019-r1.ebuild, openbox-9999.ebuild:
+  Add a new Gentoo Openbox theme that gets installed and configured to be
+  the default one when the 'branding' useflag is enabled. Thanks to
+  David Abbott <dabbott@gentoo.org> for providing the theme. It is based on
+  the original Surreal one found on
+  http://box-look.org/content/show.php?content=66397
 
 *openbox-3.5.0_p20111019-r1 (17 Aug 2012)
 

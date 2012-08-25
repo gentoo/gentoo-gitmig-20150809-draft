@@ -1,18 +1,19 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.5.0_p20111019-r1.ebuild,v 1.1 2012/08/17 21:38:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.5.0_p20111019-r1.ebuild,v 1.2 2012/08/25 09:41:35 hwoarang Exp $
 
 EAPI="2"
 inherit multilib autotools eutils
 
 DESCRIPTION="A standards compliant, fast, light-weight, extensible window manager"
 HOMEPAGE="http://openbox.org/"
-SRC_URI="http://dev.gentoo.org/~hwoarang/distfiles/${P}.tar.gz"
+SRC_URI="http://dev.gentoo.org/~hwoarang/distfiles/${P}.tar.gz
+branding? ( http://dev/gentoo.org/~hwoarang/distfiles/surreal-gentoo.tar.gz )"
 
 LICENSE="GPL-2"
 SLOT="3"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="debug imlib nls python session startup-notification static-libs"
+IUSE="branding debug imlib nls python session startup-notification static-libs"
 
 RDEPEND="dev-libs/glib:2
 	>=dev-libs/libxml2-2.0
@@ -60,6 +61,15 @@ src_install() {
 	echo "/usr/bin/openbox-session" > "${D}/etc/X11/Sessions/${PN}"
 	fperms a+x /etc/X11/Sessions/${PN}
 	emake DESTDIR="${D}" install || die "emake install failed"
+    if use branding; then
+        insinto /usr/share/themes
+        doins -r "${WORKDIR}"/Surreal_Gentoo
+        # make it the default theme
+        sed -i \
+            "/<theme>/{n; s@<name>.*</name>@<name>Surreal_Gentoo</name>@}" \
+            "${D}"/etc/xdg/openbox/rc.xml \
+            || die "failed to set Surreal Gentoo as the default theme"
+    fi
 	! use static-libs && rm "${D}"/usr/$(get_libdir)/lib{obt,obrender}.la
 	! use python && rm "${D}"/usr/libexec/openbox-xdg-autostart
 }
