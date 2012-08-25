@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kde-gtk-config
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kde-gtk-config/ChangeLog,v 1.6 2012/08/15 10:25:40 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kde-gtk-config/ChangeLog,v 1.7 2012/08/25 06:42:16 xmw Exp $
+
+  25 Aug 2012; Michael Weber <xmw@gentoo.org> kde-gtk-config-2.0.ebuild:
+  ppc stable (bug 422089).
 
 *kde-gtk-config-2.1 (15 Aug 2012)
 
