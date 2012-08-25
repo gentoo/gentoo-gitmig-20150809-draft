@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.894 2012/08/21 11:00:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.895 2012/08/25 09:08:39 blueness Exp $
+
+  25 Aug 2012; Anthony G. Basile <blueness@gentoo.org> gcc-4.5.4.ebuild:
+  Stable arm, bug #431878
 
   21 Aug 2012; Agostino Sarubbo <ago@gentoo.org> gcc-4.5.4.ebuild:
   Stable for AMD64, wrt bug #431878
