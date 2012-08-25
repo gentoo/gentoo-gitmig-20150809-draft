@@ -1,6 +1,13 @@
 # ChangeLog for dev-vcs/hgview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hgview/ChangeLog,v 1.6 2012/08/23 01:05:34 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hgview/ChangeLog,v 1.7 2012/08/25 10:03:54 pesa Exp $
+
+*hgview-1.6.2-r1 (25 Aug 2012)
+
+  25 Aug 2012; Davide Pesavento <pesa@gentoo.org> +hgview-1.6.2-r1.ebuild,
+  -hgview-1.6.2.ebuild:
+  Fix installation of man page and add missing deps (bug 432396 by Nikoli).
+  Thanks to Arfrever for some clarifications about distutils.eclass.
 
 *hgview-1.6.2 (23 Aug 2012)
 
