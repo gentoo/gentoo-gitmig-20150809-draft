@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.55 2012/08/13 00:59:46 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.56 2012/08/25 22:38:02 cardoe Exp $
 
 EAPI="4"
 
@@ -242,6 +242,7 @@ src_configure() {
 	# provides libuuid on their platform
 	# --enable-vnc-thread will go away in 1.2
 	# $(use_enable xen xen-pci-passthrough) for 1.2
+	# $(use_enable debug debug-mon) goes away for 1.2
 	./configure --prefix=/usr \
 		--sysconfdir=/etc \
 		--disable-bsd-user \
@@ -258,7 +259,6 @@ src_configure() {
 		$(use_enable caps cap-ng) \
 		$(use_enable curl) \
 		$(use_enable debug debug-info) \
-		$(use_enable debug debug-mon) \
 		$(use_enable debug debug-tcg) \
 		$(use_enable doc docs) \
 		$(use_enable fdt) \
