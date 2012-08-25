@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jython
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.77 2012/08/20 02:44:35 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.78 2012/08/25 19:57:23 thev00d00 Exp $
+
+*jython-2.5.3 (25 Aug 2012)
+
+  25 Aug 2012; <iwhyman@gentoo.org> +jython-2.5.3.ebuild:
+  Version bump to 2.5.3
 
   20 Aug 2012; Christoph Junghans <ottxor@gentoo.org> jython-2.5.2-r1.ebuild:
   added prefix keywords
