@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja/ninja-120715.ebuild,v 1.1 2012/08/18 04:38:45 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja/ninja-120715.ebuild,v 1.2 2012/08/25 14:17:27 ottxor Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ if [ "${PV}" = "999999" ]; then
 else
 	inherit vcs-snapshot
 	SRC_URI="https://github.com/martine/ninja/tarball/release-${PV} -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 ~x86 ~ppc-macos"
 fi
 
 DESCRIPTION="A small build system similar to make."
