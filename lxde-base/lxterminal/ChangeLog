@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxterminal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxterminal/ChangeLog,v 1.28 2012/08/11 21:28:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxterminal/ChangeLog,v 1.29 2012/08/25 00:05:46 hwoarang Exp $
+
+  25 Aug 2012; Markos Chandras <hwoarang@gentoo.org> -lxterminal-0.1.9.ebuild:
+  Remove old LXDE packages
 
   11 Aug 2012; Agostino Sarubbo <ago@gentoo.org> lxterminal-0.1.11.ebuild:
   Stable for amd64, wrt bug #430494

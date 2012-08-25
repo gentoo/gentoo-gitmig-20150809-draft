@@ -1,6 +1,11 @@
 # ChangeLog for lxde-base/lxappearance
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxappearance/ChangeLog,v 1.32 2012/08/14 22:08:29 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxappearance/ChangeLog,v 1.33 2012/08/25 00:00:44 hwoarang Exp $
+
+  25 Aug 2012; Markos Chandras <hwoarang@gentoo.org> -lxappearance-0.2.1.ebuild,
+  -lxappearance-0.4.0.ebuild, -lxappearance-0.5.0.ebuild,
+  -lxappearance-0.5.1.ebuild:
+  Remove old LXDE packages
 
   14 Aug 2012; Johannes Huber <johu@gentoo.org> lxappearance-0.5.2.ebuild:
   Stable for x86, wrt bug #430494
@@ -144,4 +149,3 @@
 
   17 May 2008; Samuli Suominen <drac@gentoo.org> +lxappearance-0.2.ebuild:
   Initial commit wrt #157989, thanks to Ryoichiro Suzuki and Jonathan Dehan.
-

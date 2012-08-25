@@ -1,6 +1,10 @@
 # ChangeLog for lxde-base/lxde-icon-theme
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-icon-theme/ChangeLog,v 1.13 2012/08/14 22:11:05 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-icon-theme/ChangeLog,v 1.14 2012/08/25 00:01:00 hwoarang Exp $
+
+  25 Aug 2012; Markos Chandras <hwoarang@gentoo.org>
+  -lxde-icon-theme-0.0.1.ebuild:
+  Remove old LXDE packages
 
   14 Aug 2012; Johannes Huber <johu@gentoo.org> lxde-icon-theme-0.5.0.ebuild:
   Stable for x86, wrt bug #430494
@@ -54,4 +58,3 @@
   +lxde-icon-theme-0.0.1.ebuild:
   New package lxde-icon-theme , which was splitted from lxde-common and
   contains nuoveXT2 iconset
-
