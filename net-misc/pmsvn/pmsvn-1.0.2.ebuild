@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pmsvn/pmsvn-1.0.2.ebuild,v 1.2 2010/06/22 18:54:37 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pmsvn/pmsvn-1.0.2.ebuild,v 1.3 2012/08/25 09:48:33 hwoarang Exp $
 
 EAPI=3
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND="net-analyzer/nagios-nrpe
+RDEPEND="net-analyzer/nrpe
 	>=app-shells/bash-4.0_p37
 	>=sys-apps/sed-4.2
 	>=dev-vcs/subversion-1.6.9"
