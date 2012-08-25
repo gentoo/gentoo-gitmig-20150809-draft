@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/synapse/synapse-0.2.10.ebuild,v 1.3 2012/05/05 06:25:17 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/synapse/synapse-0.2.10.ebuild,v 1.4 2012/08/25 11:28:21 ssuominen Exp $
 
 EAPI=4
 
@@ -10,12 +10,13 @@ inherit gnome2 autotools-utils gnome2-utils
 
 DESCRIPTION="A program launcher in the style of GNOME Do"
 HOMEPAGE="http://launchpad.net/synapse-project/"
-SRC_URI="http://launchpad.net/synapse-project/0.2/${PV}/+download/${P}.tar.gz"
+SRC_URI="http://launchpad.net/synapse-project/${PV%.*}/${PV}/+download/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="ayatana plugins +zeitgeist"
+# "ayatana" support pending on GTK+-3.x version of synapse wrt #41161
+IUSE="plugins +zeitgeist"
 
 RDEPEND="
 	dev-lang/vala:0.14
@@ -31,7 +32,6 @@ RDEPEND="
 	x11-libs/libnotify
 	x11-libs/pango
 	x11-themes/gnome-icon-theme
-	ayatana? ( dev-libs/libappindicator )
 	plugins? ( net-libs/rest )
 	zeitgeist? (
 		dev-libs/libzeitgeist
@@ -39,6 +39,7 @@ RDEPEND="
 		gnome-extra/zeitgeist-extensions
 		|| ( gnome-extra/zeitgeist[fts] gnome-extra/zeitgeist-extensions[fts] )
 		)"
+	#ayatana? ( dev-libs/libappindicator )
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	virtual/pkgconfig"
@@ -59,7 +60,7 @@ src_prepare() {
 
 src_configure() {
 	local myeconfargs=(
-		$(use_enable ayatana indicator yes)
+		--enable-indicator=no
 		$(use_enable plugins librest yes)
 		$(use_enable zeitgeist)
 		VALAC="$(type -P valac-0.14)"
