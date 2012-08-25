@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcfclock/pcfclock-0.44-r6.ebuild,v 1.3 2010/11/16 16:31:29 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcfclock/pcfclock-0.44-r6.ebuild,v 1.4 2012/08/25 16:59:48 ssuominen Exp $
 
 #EAPI="2"  can't be used because of linux-mod
 
-inherit eutils linux-mod
+inherit eutils linux-mod toolchain-funcs
 
 DESCRIPTION="driver for the parallel port radio clock sold by Conrad Electronic"
 HOMEPAGE="http://www-stud.ims.uni-stuttgart.de/~voegelas/pcf.html"
@@ -14,6 +14,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~ppc"
 IUSE=""
+
+RDEPEND=""
+DEPEND="virtual/pkgconfig"
 
 pkg_setup() {
 	CONFIG_CHECK="PARPORT"
@@ -46,7 +49,9 @@ src_install() {
 	dodoc AUTHORS ChangeLog NEWS README THANKS
 
 	# Add configuration for udev
-	dodir /etc/udev/rules.d
+	local udevdir=/lib/udev
+	has_version sys-fs/udev && udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
+	dodir "${udevdir}"/rules.d
 	echo 'KERNEL=="pcfclock*", NAME="%k", MODE="0444"' \
-		> "${D}/etc/udev/rules.d/55-${PN}.rules"
+		> "${D}/${udevdir}"/rules.d/55-${PN}.rules
 }
