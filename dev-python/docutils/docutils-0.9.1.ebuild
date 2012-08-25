@@ -1,10 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.9.1.ebuild,v 1.4 2012/08/24 20:46:24 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.9.1.ebuild,v 1.5 2012/08/25 01:06:12 floppym Exp $
 
 EAPI="4"
 SUPPORT_PYTHON_ABIS="1"
-PYTHON_TESTS_FAILURES_TOLERANT_ABIS="*-jython 3.*"
 
 inherit distutils
 
@@ -35,8 +34,9 @@ src_compile() {
 
 	pushd tools > /dev/null
 
-	echo PYTHONPATH="../build-$(PYTHON -f --ABI)/lib" "$(PYTHON -f)" $([[ -f ../build-$(PYTHON -f --ABI)/lib/tools/buildhtml.py ]] && echo ../build-$(PYTHON -f --ABI)/lib/tools/buildhtml.py || echo ../tools/buildhtml.py) --input-encoding=utf-8 --stylesheet-path=../html4css1.css --traceback ../docs
-	PYTHONPATH="../build-$(PYTHON -f --ABI)/lib" "$(PYTHON -f)" $([[ -f ../build-$(PYTHON -f --ABI)/lib/tools/buildhtml.py ]] && echo ../build-$(PYTHON -f --ABI)/lib/tools/buildhtml.py || echo ../tools/buildhtml.py) --input-encoding=utf-8 --stylesheet-path=../html4css1.css --traceback ../docs || die "buildhtml.py failed"
+	PYTHONPATH="../build-$(PYTHON -f --ABI)/lib" "$(PYTHON -f)" \
+		../tools/buildhtml.py --input-encoding=utf-8 \
+		--stylesheet-path=../html4css1.css --traceback ../docs || die
 
 	popd > /dev/null
 
@@ -46,11 +46,9 @@ src_compile() {
 
 src_test() {
 	testing() {
-		local testfile
+		local testfile=test/alltests.py
 		if [[ $(python_get_version --language --major) == 3 ]]; then
 			testfile=test3/alltests.py
-		else
-			testfile=test/alltests.py
 		fi
 		echo PYTHONPATH="build-${PYTHON_ABI}/lib" "$(PYTHON)" "${testfile}"
 		PYTHONPATH="build-${PYTHON_ABI}/lib" "$(PYTHON)" "${testfile}"
@@ -71,12 +69,8 @@ src_install() {
 	postinstallational_preparation() {
 		# Install tools.
 		mkdir -p "${T}/images/${PYTHON_ABI}${EPREFIX}/usr/bin"
-		pushd $([[ -d build-${PYTHON_ABI}/lib/tools ]] && echo build-${PYTHON_ABI}/lib/tools || echo tools) > /dev/null
-		cp buildhtml.py quicktest.py "${T}/images/${PYTHON_ABI}${EPREFIX}/usr/bin"
-		popd > /dev/null
-
-		# Delete useless files, which are installed only with Python 3.
-		rm -fr "${ED}$(python_get_sitedir)/"{test,tools}
+		cp tools/{buildhtml,quicktest}.py \
+			"${T}/images/${PYTHON_ABI}${EPREFIX}/usr/bin"
 	}
 	python_execute_function -q postinstallational_preparation
 	python_merge_intermediate_installation_images "${T}/images"
