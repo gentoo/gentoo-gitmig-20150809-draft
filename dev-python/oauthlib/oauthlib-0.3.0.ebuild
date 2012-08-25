@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oauthlib/oauthlib-0.3.0.ebuild,v 1.1 2012/08/24 09:26:21 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oauthlib/oauthlib-0.3.0.ebuild,v 1.2 2012/08/25 00:36:48 mr_bones_ Exp $
 
 EAPI="4"
 
@@ -26,7 +26,7 @@ IUSE="test"
 RDEPEND="dev-python/rsa"
 DEPEND="${RDEPEND}
 	dev-python/setuptools
-	test? ( dev-python/unittest2 
+	test? ( dev-python/unittest2
 		dev-python/pycrypto )"
 
 src_test() {
