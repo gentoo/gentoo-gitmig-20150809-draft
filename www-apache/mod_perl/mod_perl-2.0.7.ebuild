@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.7.ebuild,v 1.2 2012/06/07 13:51:31 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.7.ebuild,v 1.3 2012/08/25 12:51:18 ago Exp $
 
 EAPI="3"
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://apache/perl/${P}.tar.gz"
 HOMEPAGE="http://perl.apache.org/"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="debug"
 SLOT="1"
 
