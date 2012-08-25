@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/hashcat-bin/hashcat-bin-0.40.ebuild,v 1.1 2012/08/06 03:20:47 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/hashcat-bin/hashcat-bin-0.40.ebuild,v 1.2 2012/08/25 22:21:36 zerochaos Exp $
 
 EAPI=4
 
@@ -50,7 +50,7 @@ src_install() {
 			#! /bin/sh
 			cd "${EPREFIX}"/opt/${PN}
 			echo "Warning: hashcat-cli32.bin is running from ${EPREFIX}/opt/${PN} so be careful of relative paths."
-			exec ./hashcat-cli32.bin $@
+			exec ./hashcat-cli32.bin \$@
 		EOF
 		fperms +x /opt/bin/hashcat-cli32.bin
 	fi
@@ -61,7 +61,7 @@ src_install() {
 			#! /bin/sh
 			cd "${EPREFIX}"/opt/${PN}
 			echo "Warning: hashcat-cli64.bin is running from ${EPREFIX}/opt/${PN} so be careful of relative paths."
-			exec ./hashcat-cli64.bin $@
+			exec ./hashcat-cli64.bin \$@
 		EOF
 		fperms +x /opt/bin/hashcat-cli64.bin
 	fi
@@ -72,7 +72,7 @@ src_install() {
 			#! /bin/sh
 			cd "${EPREFIX}"/opt/${PN}
 			echo "Warning: hashcat-cli64.app is running from ${EPREFIX}/opt/${PN} so be careful of relative paths."
-			exec ./hashcat-cli64.app $@
+			exec ./hashcat-cli64.app \$@
 		EOF
 		fperms +x /opt/bin/hashcat-cli64.app
 	fi
