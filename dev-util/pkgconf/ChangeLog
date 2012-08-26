@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pkgconf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.46 2012/08/20 13:46:40 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.47 2012/08/26 17:22:15 armin76 Exp $
+
+  26 Aug 2012; Raúl Porcel <armin76@gentoo.org> pkgconf-0.8.5.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #427680
 
 *pkgconf-0.8.7 (20 Aug 2012)
 
