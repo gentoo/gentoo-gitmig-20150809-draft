@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/memcached
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/ChangeLog,v 1.120 2012/02/21 09:02:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/ChangeLog,v 1.121 2012/08/26 19:54:29 armin76 Exp $
+
+  26 Aug 2012; Raúl Porcel <armin76@gentoo.org> memcached-1.4.0-r2.ebuild,
+  memcached-1.4.0-r3.ebuild, memcached-1.4.1-r1.ebuild,
+  memcached-1.4.2-r1.ebuild, memcached-1.4.4-r1.ebuild,
+  memcached-1.4.5-r1.ebuild, memcached-1.4.7-r1.ebuild,
+  memcached-1.4.8-r1.ebuild, memcached-1.4.10-r1.ebuild,
+  memcached-1.4.11.ebuild, memcached-1.4.13.ebuild:
+  Add ~s390 wrt #399329
 
 *memcached-1.4.13 (21 Feb 2012)
 
