@@ -27,6 +27,9 @@ perhaps providing other extra functionality.
   Enable debug messages and assert warnings.  Note that these will all be sent
   straight to stderr rather than some logging facility.
  </flag>
+ <flag name='magic'>
+  Add magic file support (sys-apps/file) to automatically detect appropriate syntax highlighting
+ </flag>
  <flag name='minimal'>
   Disable all fancy features, including ones that otherwise have a dedicated
   USE flag (such as spelling).
