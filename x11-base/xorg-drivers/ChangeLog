@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.78 2012/07/12 17:26:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.79 2012/08/26 20:09:55 armin76 Exp $
+
+  26 Aug 2012; Raúl Porcel <armin76@gentoo.org> xorg-drivers-1.12.ebuild:
+  alpha/ia64/sh/sparc stable wrt #419473
 
   12 Jul 2012; Brent Baude <ranger@gentoo.org> xorg-drivers-1.12.ebuild:
   Marking xorg-drivers-1.12 ppc stable for bug 419473
