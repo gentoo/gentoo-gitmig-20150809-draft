@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.14-r1.ebuild,v 1.9 2012/04/26 15:30:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.14-r1.ebuild,v 1.10 2012/08/26 18:31:58 flameeyes Exp $
 
 EAPI="2"
 
@@ -19,6 +19,8 @@ DEPEND="tcpd? ( >=sys-apps/tcp-wrappers-7.6-r2 )
 	rpc? ( net-libs/libtirpc )"
 RDEPEND="${DEPEND}
 	perl? ( dev-lang/perl )"
+DEPEND="${DEPEND}
+	virtual/pkgconfig"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-DESTDIR.patch
