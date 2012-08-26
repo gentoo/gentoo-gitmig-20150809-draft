@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.5.3.ebuild,v 1.1 2012/08/25 19:57:23 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.5.3-r1.ebuild,v 1.1 2012/08/26 13:43:40 thev00d00 Exp $
 
 EAPI="4"
 
@@ -12,12 +12,11 @@ PYTHON_ABI="${SLOT}-jython"
 
 DESCRIPTION="An implementation of Python written in Java"
 HOMEPAGE="http://www.jython.org"
-SRC_URI="mirror://sourceforge/${PN}/${PN}/${PV}/${PN}_installer-${PV}.jar"
 SRC_URI="http://central.maven.org/maven2/org/python/${PN}-installer/${PV}/${PN}-installer-${PV}.jar"
 
 LICENSE="PSF-2"
 SLOT="2.5"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="readline"
 
 # Missing in installer jar.
@@ -112,34 +111,28 @@ src_install() {
 	use source && java-pkg_dosrc src/*
 	use examples && java-pkg_doexamples Demo/*
 
-	cat > "${T}"/pre <<-EOF
-		if [[ -n "\${JYTHON_SYSTEM_CACHEDIR}" ]]; then
-			jython_cache_dir="${EPREFIX}/var/cache/${PN}/${SLOT}-\${EUID}"
-		else
-			jython_cache_dir="\${HOME}/.jythoncachedir"
-		fi
-	EOF
 	local java_args=(
 		-Dpython.home="${EPREFIX}"/usr/share/${PN}-${SLOT}
 		-Dpython.executable="${EPREFIX}"/usr/bin/jython${SLOT}
-		-Dpython.cachedir="\${jython_cache_dir}"
+		-Dpython.cachedir="\${HOME}/.jythoncachedir"
 	)
 	java-pkg_dolauncher jython${SLOT} \
 		--main org.python.util.jython \
-		--java_args "${java_args[*]}" \
-		-pre "${T}"/pre
+		--java_args "${java_args[*]}"
 
 	if use readline; then
 		sed -i -e "/#python.console.readlinelib=JavaReadline/a \
 			python.console=org.python.util.ReadlineConsole\npython.console.readlinelib=GnuReadline" \
 			"${ED}"/usr/share/${PN}-${SLOT}/registry || die
 	fi
-}
 
-pkg_postinst() {
-	python_mod_optimize -f -x "/(site-packages|test|tests)/" $(python_get_libdir)
-}
+	# the jvm opens classfiles rw ...
+	dodir /etc/sandbox.d
+	echo "SANDBOX_PREDICT=/usr/share/${PN}-${SLOT}" > "${ED}/etc/sandbox.d/20${P}-${SLOT}"
 
-pkg_postrm() {
-	python_mod_cleanup $(python_get_libdir)
+	# compile aot
+	java -cp "$(java-pkg_getjars "${EANT_GENTOO_CLASSPATH}"):${EANT_GENTOO_CLASSPATH_EXTRA}:dist/${PN}-dev.jar" \
+		-Dpython.home="${ED}"/usr/share/${PN}-${SLOT} \
+		-Dpython.cachedir="${T}/.jythoncachedir" \
+		org.python.util.jython -m compileall -f -q -x "/test/" "${ED}" || die
 }
