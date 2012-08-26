@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.86 2012/07/21 11:48:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.87 2012/08/26 19:11:18 armin76 Exp $
 
 # Pacho Ramos <pacho@gentoo.org> (30 Jun 2012)
 # Missing keywords for connman
@@ -139,6 +139,7 @@ dev-ruby/nokogiri ffi
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (29 Jul 2010)
 # Mask python3 for stable portage until python-3.x is marked stable.
+=sys-apps/portage-2.1.11* python3
 =sys-apps/portage-2.1.10* python3
 =sys-apps/portage-2.1.9* python3
 
