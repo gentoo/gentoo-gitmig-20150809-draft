@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/nikola
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/nikola/ChangeLog,v 1.3 2012/08/26 17:15:20 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nikola/ChangeLog,v 1.4 2012/08/26 17:19:13 yngwin Exp $
+
+  26 Aug 2012; Ben de Groot <yngwin@gentoo.org> nikola-4.0.1.ebuild:
+  Update deps
 
 *nikola-4.0.1 (26 Aug 2012)
 

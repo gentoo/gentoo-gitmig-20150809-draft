@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/nikola/nikola-4.0.1.ebuild,v 1.1 2012/08/26 17:15:20 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nikola/nikola-4.0.1.ebuild,v 1.2 2012/08/26 17:19:13 yngwin Exp $
 
 EAPI=4
 PYTHON_COMPAT="python2_6 python2_7"
@@ -20,8 +20,10 @@ DEPEND=""
 RDEPEND="dev-python/docutils
 	dev-python/doit
 	dev-python/imaging
+	dev-python/lxml
 	>=dev-python/mako-0.6
-	dev-python/pygments"
+	dev-python/pygments
+	dev-python/unidecode"
 
 src_install() {
 	python-distutils-ng_src_install
