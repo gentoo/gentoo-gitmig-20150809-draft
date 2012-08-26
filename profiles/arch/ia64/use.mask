@@ -47,6 +47,7 @@ celt
 capi
 lensfun
 kde
+metalink
 quvi
 upnp
 systemd
