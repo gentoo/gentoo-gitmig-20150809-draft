@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hwinfo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/ChangeLog,v 1.29 2012/08/24 07:17:05 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/ChangeLog,v 1.30 2012/08/26 19:35:47 radhermit Exp $
+
+*hwinfo-20.0 (26 Aug 2012)
+
+  26 Aug 2012; Tim Harder <radhermit@gentoo.org> +hwinfo-20.0.ebuild:
+  Version bump.
 
   24 Aug 2012; Michael Weber <xmw@gentoo.org> hwinfo-19.1.ebuild:
   ppc stable (bug 422173).
