@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfontsel/xfontsel-1.0.4.ebuild,v 1.7 2012/07/12 17:16:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfontsel/xfontsel-1.0.4.ebuild,v 1.8 2012/08/26 16:45:08 armin76 Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit xorg-2
 
 DESCRIPTION="point and click selection of X11 font names"
 
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="x11-libs/libXaw

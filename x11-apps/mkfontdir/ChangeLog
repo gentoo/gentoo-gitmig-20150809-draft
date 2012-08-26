@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/mkfontdir
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/mkfontdir/ChangeLog,v 1.80 2012/07/12 17:10:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/mkfontdir/ChangeLog,v 1.81 2012/08/26 16:25:28 armin76 Exp $
+
+  26 Aug 2012; Raúl Porcel <armin76@gentoo.org> mkfontdir-1.0.7.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #419473
 
   12 Jul 2012; Brent Baude <ranger@gentoo.org> mkfontdir-1.0.7.ebuild:
   Marking mkfontdir-1.0.7 ppc stable for bug 419473
