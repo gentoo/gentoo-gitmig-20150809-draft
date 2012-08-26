@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libfontenc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfontenc/ChangeLog,v 1.71 2012/07/12 17:57:09 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfontenc/ChangeLog,v 1.72 2012/08/26 18:58:00 armin76 Exp $
+
+  26 Aug 2012; Raúl Porcel <armin76@gentoo.org> libfontenc-1.1.1.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #419473
 
   12 Jul 2012; Brent Baude <ranger@gentoo.org> libfontenc-1.1.1.ebuild:
   Marking libfontenc-1.1.1 ppc stable for bug 419473
