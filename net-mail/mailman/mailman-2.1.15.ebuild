@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.15.ebuild,v 1.5 2012/08/21 09:11:38 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.15.ebuild,v 1.6 2012/08/26 16:01:17 armin76 Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.list.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ppc ~sparc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND="virtual/mta
