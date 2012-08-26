@@ -1,31 +1,38 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ubertooth-9999.ebuild,v 1.8 2012/08/12 07:40:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ubertooth-9999.ebuild,v 1.9 2012/08/26 05:45:45 zerochaos Exp $
 
 EAPI="4"
 
-inherit multilib #flag-o-matic
+PYTHON_DEPEND="python? 2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
+
+inherit multilib distutils
 
 HOMEPAGE="http://ubertooth.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="+dfu +specan ubertooth0-firmware +ubertooth1-firmware"
-REQUIRED_USE="ubertooth0-firmware? ( dfu )
-		ubertooth1-firmware? ( dfu )"
+IUSE="+dfu +specan +python ubertooth0-firmware +ubertooth1-firmware"
+REQUIRED_USE="dfu? ( python )
+		specan? ( python )
+		ubertooth0-firmware? ( dfu )
+		ubertooth1-firmware? ( dfu )
+		python? ( || ( dfu specan ) )"
 DEPEND=""
-RDEPEND="specan? ( virtual/libusb:1 )
-	dfu? ( virtual/libusb:1 )
-	specan? ( >=x11-libs/qt-gui-4.7.2:4
+RDEPEND="specan? ( virtual/libusb:1
+		 >=x11-libs/qt-gui-4.7.2:4
 		>=dev-python/pyside-1.0.2
 		>=dev-python/numpy-1.3
 		>=dev-python/pyusb-1.0.0_alpha1 )
-	dfu? ( >=dev-python/pyusb-1.0.0_alpha1 )"
+	dfu? ( virtual/libusb:1
+		>=dev-python/pyusb-1.0.0_alpha1 )"
 
 if [[ ${PV} == "9999" ]] ; then
-	ESVN_REPO_URI="https://ubertooth.svn.sourceforge.net/svnroot/ubertooth/trunk/"
+	EGIT_REPO_URI="git://ubertooth.git.sourceforge.net/gitroot/ubertooth/ubertooth"
 	SRC_URI=""
-	inherit subversion
+	inherit git-2
 	KEYWORDS=""
 	DEPEND="=net-libs/libbtbb-9999"
 	RDEPEND="${RDEPEND}
@@ -55,23 +62,36 @@ pkg_setup() {
 		eerror "  $ crossdev --genv 'USE=\"-openmp -fortran\"' -s4 -t arm-none-eabi"
 		die "arm-none-eabi toolchain not found"
 	fi
+	if use python; then
+	#I would prefer like this but we can't multiconditional PYTHON_DEPEND in EAPI4
+	#if use dfu || use specan; then
+		python_pkg_setup;
+		DISTUTILS_SETUP_FILES=()
+		if use dfu; then
+			DISTUTILS_SETUP_FILES+=("${S}/host/usb_dfu|setup.py")
+			PYTHON_MODNAME="dfu"
+		fi
+		if use specan; then
+			DISTUTILS_SETUP_FILES+=("${S}/host/specan_ui|setup.py")
+			PYTHON_MODNAME+=" specan"
+		fi
+	fi
 }
 
 src_compile() {
-	#sometimes needed to build, remove when a release is made after r534 if not needed
-	#filter-ldflags -Wl,--as-needed
 	cd "${S}/host/bluetooth_rxtx" || die
 	emake
 
+	use python && distutils_src_compile
 	if [[ ${PV} == "9999" ]] ; then
 		cd "${S}"/firmware/bluetooth_rxtx || die
 		if use ubertooth0-firmware; then
-			SVN_REV_NUM="-D'SVN_REV_NUM'=${ESVN_WC_REVISION}" DFU_TOOL=/usr/bin/ubertooth-dfu BOARD=UBERTOOTH_ZERO emake -j1
+			SVN_REV_NUM="-D'SVN_REV_NUM'=${ESVN_WC_REVISION}" BOARD=UBERTOOTH_ZERO emake -j1
 			mv bluetooth_rxtx.bin bluetooth_rxtx_U0.bin || die
 			emake clean
 		fi
 		if use ubertooth1-firmware; then
-			SVN_REV_NUM="-D'SVN_REV_NUM'=${ESVN_WC_REVISION}" DFU_TOOL=/usr/bin/ubertooth-dfu emake -j1
+			SVN_REV_NUM="-D'SVN_REV_NUM'=${ESVN_WC_REVISION}" emake -j1
 			mv bluetooth_rxtx.bin bluetooth_rxtx_U1.bin || die
 		fi
 	fi
@@ -83,13 +103,8 @@ src_install() {
 		bluetooth_rxtx/ubertooth-btle bluetooth_rxtx/ubertooth-uap \
 		bluetooth_rxtx/ubertooth-hop bluetooth_rxtx/ubertooth-util
 
-	use specan && dobin bluetooth_rxtx/ubertooth-specan specan_ui/specan.py specan_ui/ubertooth-specan-ui
+	use python && distutils_src_install
 
-	use dfu && dobin usb_dfu/ubertooth-dfu usb_dfu/dfu.py
-
-	#newlib.so bluetooth_rxtx/libubertooth.so.0.svn-exported libubertooth.so.0.svn-"${ESVN_WC_REVISION}"
-	#dosym libubertooth.so.0.svn-"${ESVN_WC_REVISION}" /usr/$(get_libdir)/libubertooth.so.0
-	#dosym libubertooth.so.0.svn-"${ESVN_WC_REVISION}" /usr/$(get_libdir)/libubertooth.so
 	dolib.so bluetooth_rxtx/libubertooth.so.0.1
 	dosym libubertooth.so.0.1 /usr/$(get_libdir)/libubertooth.so.0
 	dosym libubertooth.so.0.1 /usr/$(get_libdir)/libubertooth.so
@@ -112,6 +127,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	use python && distutils_pkg_postinst
+
 	if use ubertooth0-firmware || use ubertooth1-firmware; then
 		ewarn "currently the firmware builds using cross dev but is completely"
 		ewarn "NON-FUNCTIONAL.  This is supported for development only."
@@ -120,4 +137,8 @@ pkg_postinst() {
 		ewarn "you can find repair instructions at ${HOMEPAGE}"
 		ewarn "You have been warned."
 	fi
+}
+
+pkg_postrm() {
+	use python && distutils_pkg_postrm
 }
