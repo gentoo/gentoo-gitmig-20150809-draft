@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xcompmgr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcompmgr/ChangeLog,v 1.50 2012/08/13 20:40:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcompmgr/ChangeLog,v 1.51 2012/08/26 19:29:11 armin76 Exp $
+
+  26 Aug 2012; Raúl Porcel <armin76@gentoo.org> xcompmgr-1.1.6.ebuild:
+  sparc stable wrt #419473
 
   13 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> xcompmgr-1.1.6.ebuild:
   Fix qa warning. Wrt bug#424775.
