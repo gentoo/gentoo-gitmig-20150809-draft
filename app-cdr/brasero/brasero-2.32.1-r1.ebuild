@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.32.1-r1.ebuild,v 1.9 2012/05/03 07:51:48 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.32.1-r1.ebuild,v 1.10 2012/08/26 08:41:38 hasufell Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -26,6 +26,7 @@ COMMON_DEPEND="
 	>=media-libs/gst-plugins-base-0.10:0.10
 	>=dev-libs/libxml2-2.6:2
 	>=dev-libs/libunique-1:1
+	x11-libs/libICE
 	x11-libs/libSM
 	introspection? ( >=dev-libs/gobject-introspection-0.6.3 )
 	libburn? (
@@ -59,6 +60,7 @@ PDEPEND="gnome-base/gvfs"
 
 pkg_setup() {
 	G2CONF="${G2CONF}
+		--disable-silent-rules
 		--disable-scrollkeeper
 		--disable-caches
 		--disable-dependency-tracking
@@ -79,6 +81,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-underlinking.patch
+
 	# Fix link against installed libraries, bug #340767
 	epatch "${FILESDIR}/${PN}-2.32.0-build-plugins-against-local-library.patch"
 
