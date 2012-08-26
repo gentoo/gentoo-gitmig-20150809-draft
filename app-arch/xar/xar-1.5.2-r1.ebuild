@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xar/xar-1.5.2-r1.ebuild,v 1.5 2012/08/02 21:19:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xar/xar-1.5.2-r1.ebuild,v 1.6 2012/08/26 17:02:08 armin76 Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://xar.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="alpha amd64 hppa ia64 ~ppc ~ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="acl +bzip2"
 
 DEPEND="dev-libs/openssl
