@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-23.0.1243.2.ebuild,v 1.1 2012/08/25 17:23:29 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-23.0.1243.2.ebuild,v 1.2 2012/08/26 17:20:30 mr_bones_ Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -121,10 +121,10 @@ src_prepare() {
 
 	mkdir -p chrome/test/data/nacl
 	cat > chrome/test/data/nacl/nacl_test_data.gyp <<-EOF
-	{ 
+	{
 	  'targets': [
 	    {
-	      'target_name': 'nacl_tests', 
+	      'target_name': 'nacl_tests',
 	      'type': 'none',
 	    },
 	  ],
