@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.242 2012/08/25 15:16:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.243 2012/08/26 18:17:33 armin76 Exp $
+
+  26 Aug 2012; Raúl Porcel <armin76@gentoo.org> curl-7.27.0-r2.ebuild:
+  Re-add ~alpha/~ia64/~sparc wrt #428520
 
   25 Aug 2012; Agostino Sarubbo <ago@gentoo.org> curl-7.26.0.ebuild:
   Stable for amd64, wrt bug #421479
