@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/djbdns
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.134 2012/08/04 09:51:23 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.135 2012/08/26 18:20:23 armin76 Exp $
+
+  26 Aug 2012; Raúl Porcel <armin76@gentoo.org> djbdns-1.05-r26.ebuild:
+  alpha/sparc stable wrt #419193
 
   04 Aug 2012; Michael Weber <xmw@gentoo.org> metadata.xml:
   Fix metadata.xml
