@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xinput
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinput/ChangeLog,v 1.49 2012/07/12 17:19:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinput/ChangeLog,v 1.50 2012/08/26 20:14:10 armin76 Exp $
+
+  26 Aug 2012; Raúl Porcel <armin76@gentoo.org> xinput-1.6.0.ebuild:
+  alpha/ia64/sh/sparc stable wrt #419473
 
   12 Jul 2012; Brent Baude <ranger@gentoo.org> xinput-1.6.0.ebuild:
   Marking xinput-1.6.0 ppc stable for bug 419473
