@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/skstream/skstream-0.3.8.ebuild,v 1.3 2012/08/04 10:51:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/skstream/skstream-0.3.8.ebuild,v 1.4 2012/08/26 17:28:26 armin76 Exp $
 EAPI=2
 
 inherit base eutils
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.worldforge.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="test"
 
 DEPEND="test? ( dev-util/cppunit )"
