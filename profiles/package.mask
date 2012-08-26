@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14072 2012/08/25 23:56:49 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14073 2012/08/26 13:02:52 idl0r Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -313,11 +313,6 @@ x11-misc/transset-df
 # upstream bug http://bugzilla-geant4.kek.jp/show_bug.cgi?id=1317
 =sci-physics/geant-4.9.5_p01
 =sci-physics/geant-python-4.9.5_p01
-
-# Christian Ruppert <idl0r@gentoo.org> (20 May 2012)
-# Temp. mask gitolite-3* as it likely breaks gitolite-2* setups
-# Also, it has been re-written (almost?) completely.
-=dev-vcs/gitolite-3*
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (20 May 2012)
 # Requires dev-scheme/guile-2.0.5 which is in lisp overlay and masked;
