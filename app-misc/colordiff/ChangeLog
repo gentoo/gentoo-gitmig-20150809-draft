@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/colordiff
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/colordiff/ChangeLog,v 1.88 2012/08/03 13:26:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/colordiff/ChangeLog,v 1.89 2012/08/26 17:05:48 armin76 Exp $
+
+  26 Aug 2012; Raúl Porcel <armin76@gentoo.org> colordiff-1.0.10.ebuild:
+  alpha/ia64/sparc stable wrt #428878
 
   03 Aug 2012; Agostino Sarubbo <ago@gentoo.org> colordiff-1.0.10.ebuild:
   Stable for amd64, wrt bug #428878
