@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-da
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-da/ChangeLog,v 1.42 2012/08/06 20:48:11 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-da/ChangeLog,v 1.43 2012/08/26 18:30:33 armin76 Exp $
+
+  26 Aug 2012; Raúl Porcel <armin76@gentoo.org> aspell-da-1.6.34.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #418527
 
   06 Aug 2012; Brent Baude <ranger@gentoo.org> aspell-da-1.6.34.ebuild:
   Marking aspell-da-1.6.34 ppc64 for bug 418527
