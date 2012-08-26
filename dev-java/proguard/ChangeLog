@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/proguard
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/proguard/ChangeLog,v 1.26 2011/12/25 21:00:54 fordfrog Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/proguard/ChangeLog,v 1.27 2012/08/26 13:21:02 thev00d00 Exp $
+
+*proguard-4.8 (26 Aug 2012)
+
+  26 Aug 2012; Ian Whyman <thev00d00@gentoo.org> +proguard-4.8.ebuild:
+  Version bump, bug #431050
 
 *proguard-4.7 (25 Dec 2011)
 
