@@ -1,17 +1,17 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/grive/grive-0.2.0.ebuild,v 1.2 2012/07/21 19:20:33 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/grive/grive-0.2.0.ebuild,v 1.3 2012/08/26 18:50:16 ottxor Exp $
 
 EAPI=4
 
 inherit cmake-utils eutils multilib
 
-if [ "${PV}" != "9999" ]; then
-	SRC_URI="http://www.lbreda.com/${PN}/_media/packages/${PV}/${P}.tar.gz"
-else
-	SRC_URI=""
+if [[ ${PV} = *9999 ]]; then
 	inherit git-2
 	EGIT_REPO_URI="git://github.com/Grive/${PN}.git"
+else
+	inherit vcs-snapshot
+	SRC_URI="https://github.com/Grive/${PN}/tarball/v${PV} -> ${P}.tar.gz"
 fi
 
 DESCRIPTION="an open source Linux client for Google Drive"
