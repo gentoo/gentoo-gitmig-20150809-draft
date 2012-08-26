@@ -1,8 +1,8 @@
 # ChangeLog for dev-java/jffi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/ChangeLog,v 1.23 2012/08/25 19:09:47 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/ChangeLog,v 1.24 2012/08/26 13:45:24 thev00d00 Exp $
 
-  25 Aug 2012; <iwhyman@gentoo.org> jffi-0.6.0.2.ebuild,
+  25 Aug 2012; Ian Whyman <thev00d00@gentoo.org> jffi-0.6.0.2.ebuild,
   jffi-0.6.0.2-r1.ebuild, jffi-0.7_pre20100131.ebuild, jffi-1.0.0.ebuild,
   jffi-1.0.11.ebuild:
   Fix build with GCC 4.7 #421501
