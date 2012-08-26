@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.237 2012/08/21 15:45:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.238 2012/08/26 14:14:42 armin76 Exp $
+
+  26 Aug 2012; Raúl Porcel <armin76@gentoo.org> net-snmp-5.7.2_rc1.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #431752
 
   21 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> files/snmpd.init.2:
   Fix init script. Thanks Seraphin in bug #432208.
