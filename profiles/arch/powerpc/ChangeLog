@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.186 2012/08/22 12:16:48 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.187 2012/08/26 09:54:58 jlec Exp $
+
+  26 Aug 2012; Justin Lecher <jlec@gentoo.org> package.use.force:
+  Foce USE=minimal for sci-libs/cctbx because sci-chemistry/cns is missing for
+  ppc
 
   22 Aug 2012; Michael Weber <xmw@gentoo.org> package.use.mask:
   x11-themes/gtk-engines-qtcurve[mozilla]: Masked for missing stable on
