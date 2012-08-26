@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/ipython
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.97 2012/08/17 21:06:33 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.98 2012/08/26 18:48:25 armin76 Exp $
+
+  26 Aug 2012; Raúl Porcel <armin76@gentoo.org> ipython-0.10.ebuild,
+  ipython-0.10.1.ebuild, ipython-0.10.2.ebuild:
+  Drop ia64/s390 keywords
 
   17 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org>
   +files/ipython-0.13-umlaut.patch, ipython-0.13.ebuild:
