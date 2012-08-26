@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/seaview-4.3.3.ebuild,v 1.1 2012/07/04 10:09:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/seaview-4.3.3.ebuild,v 1.2 2012/08/26 13:41:51 jlec Exp $
 
 EAPI=4
 
@@ -40,6 +40,10 @@ src_prepare() {
 		-e "s:^#HELPFILE:HELPFILE:" \
 		-e "s:/usr/share/doc/seaview/seaview.htm:/usr/share/seaview/seaview.htm:" \
 		-e "s:^#PHYMLNAME:PHYMLNAME:" \
+		-e 's:-lXinerama::g' \
+		-e 's:-lpng::g' \
+		-e 's:-ljpeg::g' \
+		-e 's:-lfontconfig::g' \
 		-i Makefile || die "sed failed while editing Makefile"
 
 	if use xft; then
