@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libpciaccess
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.82 2012/07/12 17:57:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.83 2012/08/26 18:59:49 armin76 Exp $
+
+  26 Aug 2012; Raúl Porcel <armin76@gentoo.org> libpciaccess-0.13.1.ebuild:
+  alpha/ia64/sh/sparc stable wrt #419473
 
   12 Jul 2012; Brent Baude <ranger@gentoo.org> libpciaccess-0.13.1.ebuild:
   Marking libpciaccess-0.13.1 ppc stable for bug 419473
