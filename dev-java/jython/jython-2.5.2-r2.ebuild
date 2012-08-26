@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.5.2-r1.ebuild,v 1.2 2012/08/20 02:44:35 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.5.2-r2.ebuild,v 1.1 2012/08/26 16:16:22 thev00d00 Exp $
 
 EAPI="4"
 
@@ -59,6 +59,9 @@ java_prepare() {
 	epatch "${FILESDIR}/${P}-build.xml.patch"
 
 	epatch "${FILESDIR}/${P}-sax-parser-fix.patch"
+
+	# 431754
+	epatch "${FILESDIR}/${P}-sax-parser-class-not-found.patch"
 
 	epatch "${FILESDIR}/${P}-distutils_byte_compilation.patch"
 	epatch "${FILESDIR}/${P}-distutils_scripts_location.patch"

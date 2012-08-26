@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jython
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.79 2012/08/26 13:43:40 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.80 2012/08/26 16:16:22 thev00d00 Exp $
+
+*jython-2.5.2-r2 (26 Aug 2012)
+
+  26 Aug 2012; Ian Whyman <thev00d00@gentoo.org> -jython-2.5.2-r1.ebuild,
+  +jython-2.5.2-r2.ebuild,
+  +files/jython-2.5.2-sax-parser-class-not-found.patch:
+  Add patch to fix SAXParser ClassNotFoundException #431754
 
 *jython-2.5.3-r1 (26 Aug 2012)
 
