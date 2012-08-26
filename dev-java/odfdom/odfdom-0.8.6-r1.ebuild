@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/odfdom/odfdom-0.8.6.ebuild,v 1.2 2012/08/26 14:04:54 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/odfdom/odfdom-0.8.6-r1.ebuild,v 1.1 2012/08/26 14:04:54 thev00d00 Exp $
 
-EAPI="3"
+EAPI="4"
 
 JAVA_PKG_IUSE="doc source test"
 
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~ppc-aix ~hppa-hpux ~ia64-hpux ~x86-linux ~sparc-solaris ~x86-s
 IUSE=""
 
 CDEPEND="dev-java/xerces:2
-	dev-java/xml-commons-external:1.3"
+	dev-java/xml-commons-external:1.4"
 
 RDEPEND=">=virtual/jre-1.5
 	${CDEPEND}"
@@ -31,23 +31,23 @@ DEPEND=">=virtual/jdk-1.5
 
 S="${WORKDIR}/${P}-sources"
 
+EANT_GENTOO_CLASSPATH="xerces-2,xml-commons-external-1.4"
+JAVA_ANT_REWRITE_CLASSPATH="yes"
+
 src_prepare() {
 	cp "${FILESDIR}/build-${PV}.xml" build.xml || die
 
 	mkdir lib || die
-	java-pkg_jar-from --into lib xerces-2 xercesImpl.jar xercesImpl-2.9.1.jar
-	java-pkg_jar-from --into lib xml-commons-external-1.3 xml-apis.jar \
-		xml-apis-1.3.04.jar
 }
 
 EANT_BUILD_TARGET="package"
 EANT_JAVADOC_TARGET="javadoc"
 EANT_EXTRA_ARGS="-Dmaven.test.skip=true"
+EANT_TEST_GENTOO_CLASSPATH="${EANT_GENTOO_CLASSPATH},hamcrest-core,junit-4"
 
 src_test() {
-	java-pkg_jar-from --into lib junit-4 junit.jar junit-4.5.jar
-	java-pkg_jar-from --into lib hamcrest-core
-	ANT_TASKS="ant-junit" eant test
+	EANT_EXTRA_ARGS="" \
+		java-pkg-2_src_test
 }
 
 src_install() {
