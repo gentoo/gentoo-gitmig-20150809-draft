@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.32.1.ebuild,v 1.11 2012/05/05 05:38:10 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.32.1.ebuild,v 1.12 2012/08/26 08:49:57 hasufell Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -40,6 +40,7 @@ pkg_setup() {
 	python_set_active_version 2
 
 	G2CONF="${G2CONF}
+		--disable-silent-rules
 		PYTHON=$(PYTHON -a)
 		--with-gnome-distributor=Gentoo
 		--disable-scrollkeeper
@@ -47,6 +48,11 @@ pkg_setup() {
 		--disable-deprecations
 		$(use_enable doc desktop-docs)"
 	DOCS="AUTHORS ChangeLog HACKING NEWS README"
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gold.patch
+	gnome2_src_prepare
 }
 
 src_install() {

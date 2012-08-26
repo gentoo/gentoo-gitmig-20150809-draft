@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-desktop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/ChangeLog,v 1.304 2012/06/21 09:28:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/ChangeLog,v 1.305 2012/08/26 08:49:57 hasufell Exp $
+
+  26 Aug 2012; Julian Ospald <hasufell@gentoo.org> gnome-desktop-2.32.1.ebuild:
+  fix underlinking wrt #429272
 
   21 Jun 2012; Justin Lecher <jlec@gentoo.org>
   +files/gnome-desktop-2.32.1-gold.patch, gnome-desktop-2.32.1-r1.ebuild:
