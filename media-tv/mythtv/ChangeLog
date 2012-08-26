@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.377 2012/07/27 15:11:16 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.378 2012/08/26 02:39:35 cardoe Exp $
+
+*mythtv-0.25.2_p20120825 (26 Aug 2012)
+
+  26 Aug 2012; Doug Goldstein <cardoe@gentoo.org>
+  +mythtv-0.25.2_p20120825.ebuild, +files/mythtv.logrotate.d-r3:
+  Version bump to get latest upstream fixes. Update to logrotate configuration
+  for bug #426242
 
   27 Jul 2012; Michael Palimaka <kensington@gentoo.org>
   mythtv-0.25.1_p20120708.ebuild, mythtv-0.25.1_p20120715.ebuild,
