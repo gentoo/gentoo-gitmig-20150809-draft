@@ -1,6 +1,9 @@
 # ChangeLog for media-video/minitube
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.71 2012/07/27 04:36:58 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.72 2012/08/26 13:09:42 ago Exp $
+
+  26 Aug 2012; Agostino Sarubbo <ago@gentoo.org> minitube-1.8.ebuild:
+  Stable for amd64, wrt bug #432778
 
   27 Jul 2012; Ben de Groot <yngwin@gentoo.org> minitube-1.7.1.ebuild,
   minitube-1.8.ebuild:
