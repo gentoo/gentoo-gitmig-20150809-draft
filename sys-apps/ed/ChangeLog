@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ed
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.95 2012/08/03 15:20:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.96 2012/08/26 17:06:35 armin76 Exp $
+
+  26 Aug 2012; Raúl Porcel <armin76@gentoo.org> ed-1.6.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #427116
 
   03 Aug 2012; Markos Chandras <hwoarang@gentoo.org> ed-1.6.ebuild:
   Stable on amd64 wrt bug #427116
