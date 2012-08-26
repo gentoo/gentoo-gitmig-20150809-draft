@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1078 2012/08/26 20:18:04 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1079 2012/08/26 23:08:55 zmedico Exp $
+
+*portage-2.1.11.12 (26 Aug 2012)
+
+  26 Aug 2012; Zac Medico <zmedico@gentoo.org> +portage-2.1.11.12.ebuild:
+  2.1.11.12 version bump. This fixes bug #421099 (parallel debugedit/strip
+  interference), but #431078 (EAPI 5 stable use masking), and bug #432862
+  (ignore irrelevant validate-desktop-entry errors/warnings, especially for KDE
+  service entries). Bug #431026 tracks all bugs fixed since portage-2.1.11.9.
 
   26 Aug 2012; Zac Medico <zmedico@gentoo.org> -portage-2.1.10.65.ebuild,
   -portage-2.1.11.10.ebuild, -portage-2.2.0_alpha110.ebuild,
