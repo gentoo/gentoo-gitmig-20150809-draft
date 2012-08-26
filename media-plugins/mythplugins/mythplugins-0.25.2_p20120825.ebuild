@@ -1,18 +1,18 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythplugins/mythplugins-0.25.1.ebuild,v 1.3 2012/07/12 01:51:54 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythplugins/mythplugins-0.25.2_p20120825.ebuild,v 1.1 2012/08/26 02:44:38 cardoe Exp $
 
 EAPI=4
 
 PYTHON_DEPEND="2:2.6"
-#BACKPORTS=""
+BACKPORTS="46cab93562"
 MY_P=${P%_p*}
 
 inherit eutils python
 
 DESCRIPTION="Official MythTV plugins"
 HOMEPAGE="http://www.mythtv.org"
-SRC_URI="ftp://ftp.osuosl.org/pub/mythtv/mythplugins-0.25.1.tar.bz2
+SRC_URI="ftp://ftp.osuosl.org/pub/mythtv/${MY_P}.tar.bz2
 	${BACKPORTS:+http://dev.gentoo.org/~cardoe/distfiles/${MY_P}-${BACKPORTS}.tar.xz}"
 
 LICENSE="GPL-2"
@@ -87,6 +87,8 @@ REQUIRED_USE="
 	fftw? ( mythmusic )
 	mythnews? ( mythbrowser )
 	raw? ( mythgallery )"
+
+S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	python_set_active_version 2
