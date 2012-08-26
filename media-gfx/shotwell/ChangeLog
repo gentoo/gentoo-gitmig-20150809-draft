@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/shotwell
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.37 2012/05/21 20:38:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.38 2012/08/26 00:39:29 hwoarang Exp $
+
+  26 Aug 2012; Markos Chandras <hwoarang@gentoo.org> -files/0.10-ldflags.patch,
+  -files/0.11.0-ldflags.patch, -files/shotwell-0.10.1-libraw-config.patch,
+  -files/shotwell-0.11.2-libraw-0.14.patch, -shotwell-0.12.1.ebuild,
+  -shotwell-0.12.2.ebuild:
+  Remove old ebuilds. Clean up files
 
   21 May 2012; Markos Chandras <hwoarang@gentoo.org> shotwell-0.12.3.ebuild:
   respect LINGUAS. Bug #407853
@@ -179,4 +185,3 @@
   07 Apr 2010; Benedikt Böhm <hollow@gentoo.org> +shotwell-0.5.0.ebuild,
   +metadata.xml:
   initial ebuild wrt #309615
-
