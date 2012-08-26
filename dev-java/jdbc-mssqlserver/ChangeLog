@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jdbc-mssqlserver
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mssqlserver/ChangeLog,v 1.21 2008/05/02 13:31:55 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mssqlserver/ChangeLog,v 1.22 2012/08/26 15:35:54 thev00d00 Exp $
+
+*jdbc-mssqlserver-4.0.2206.100 (26 Aug 2012)
+
+  26 Aug 2012; Ian Whyman <thev00d00@gentoo.org>
+  -jdbc-mssqlserver-2.2.0040-r1.ebuild, +jdbc-mssqlserver-4.0.2206.100.ebuild,
+  -jdbc-mssqlserver-2005.1.2.2828.100.ebuild:
+  Remove old versions as they are unfetchable, bump to 4.0
 
   02 May 2008; Markus Meier <maekke@gentoo.org>
   jdbc-mssqlserver-2005.1.2.2828.100.ebuild:
