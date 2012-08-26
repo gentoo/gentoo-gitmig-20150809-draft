@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/altermime/altermime-0.3.10-r1.ebuild,v 1.4 2011/08/12 21:33:57 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/altermime/altermime-0.3.10-r1.ebuild,v 1.5 2012/08/26 18:51:05 armin76 Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -11,7 +11,7 @@ HOMEPAGE="http://pldaniels.com/altermime/"
 
 LICENSE="Sendmail"
 SLOT="0"
-KEYWORDS="amd64 ppc ~s390 x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 src_prepare() {
