@@ -1,21 +1,20 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/aisleriot/aisleriot-3.2.3.1.ebuild,v 1.2 2012/05/04 04:30:09 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/aisleriot/aisleriot-3.2.3.2-r1.ebuild,v 1.1 2012/08/26 15:43:23 tetromino Exp $
 
-EAPI="3"
-GNOME_TARBALL_SUFFIX="xz"
+EAPI="4"
 GCONF_DEBUG="yes"
 
 # make sure games is inherited first so that the gnome2
 # functions will be called if they are not overridden
-inherit eutils games gnome2
+inherit eutils games gnome2 multilib
 
 DESCRIPTION="A collection of solitaire card games for GNOME"
 HOMEPAGE="http://live.gnome.org/Aisleriot"
 
 LICENSE="GPL-3 LGPL-3 FDL-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~mips ~x86"
 IUSE="gnome"
 
 # FIXME: quartz support?
@@ -60,11 +59,29 @@ pkg_setup() {
 		--disable-schemas-compile
 		--with-card-theme-formats=all
 		--with-kde-card-theme-path="${EPREFIX}"/usr/share/apps/carddecks
-		--with-pysol-card-theme-path="${EPREFIX}${GAMES_DATADIR}"/pysolfc"
+		--with-pysol-card-theme-path=${GAMES_DATADIR}/pysolfc
+		--exec-prefix=${GAMES_PREFIX}
+		--localstatedir=${GAMES_STATEDIR}
+		--with-valgrind-dir="${EPREFIX}"/usr/$(get_libdir)/valgrind"
+
+	export MAKEOPTS="${MAKEOPTS} pkgdatadir=${GAMES_DATADIR}/aisleriot"
+
+	games_pkg_setup
+}
+
+src_install() {
+	gnome2_src_install
+	prepgamesdirs
+}
+
+pkg_preinst() {
+	gnome2_pkg_preinst
+	games_pkg_preinst
 }
 
 pkg_postinst() {
 	gnome2_pkg_postinst
+	games_pkg_postinst
 
 	elog "Aisleriot can use additional card themes from games-board/pysolfc"
 	elog "and kde-base/libkdegames."
