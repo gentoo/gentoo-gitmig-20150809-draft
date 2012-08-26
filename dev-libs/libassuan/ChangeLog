@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libassuan
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassuan/ChangeLog,v 1.90 2012/08/21 03:48:59 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassuan/ChangeLog,v 1.91 2012/08/26 18:29:18 armin76 Exp $
+
+  26 Aug 2012; Raúl Porcel <armin76@gentoo.org> libassuan-2.0.3.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #418747
 
   21 Aug 2012; Christoph Junghans <ottxor@gentoo.org> libassuan-2.0.3.ebuild:
   added prefix keywords
