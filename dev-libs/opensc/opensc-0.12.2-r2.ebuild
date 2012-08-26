@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.12.2-r1.ebuild,v 1.3 2012/06/24 08:18:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.12.2-r2.ebuild,v 1.1 2012/08/26 23:40:02 flameeyes Exp $
 
-EAPI="4"
+EAPI=4
 
 inherit eutils autotools
 
@@ -63,6 +63,7 @@ src_configure() {
 		$(use_enable openct) \
 		$(use_enable readline) \
 		$(use_enable zlib) \
+		$(use_enable ssl openssl) \
 		${myconf}
 }
 
