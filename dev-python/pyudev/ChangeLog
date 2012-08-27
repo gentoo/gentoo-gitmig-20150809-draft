@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyudev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyudev/ChangeLog,v 1.14 2012/04/29 14:52:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyudev/ChangeLog,v 1.15 2012/08/27 08:44:17 patrick Exp $
+
+*pyudev-0.16.1 (27 Aug 2012)
+
+  27 Aug 2012; Patrick Lauer <patrick@gentoo.org> +pyudev-0.16.1.ebuild:
+  Bump for #429490
 
   29 Apr 2012; Markus Meier <maekke@gentoo.org> pyudev-0.15.ebuild:
   x86 stable, bug #401639
@@ -66,4 +71,3 @@
   25 Jul 2010; Stefan Briesenick <sbriesen@gentoo.org> +pyudev-0.2.ebuild,
   +metadata.xml:
   initial commit.
-
