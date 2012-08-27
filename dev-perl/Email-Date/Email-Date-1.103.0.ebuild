@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Date/Email-Date-1.103.0.ebuild,v 1.7 2012/03/24 19:59:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Date/Email-Date-1.103.0.ebuild,v 1.8 2012/08/27 18:10:48 armin76 Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Find and Format Date Headers"
 
 SLOT="0"
-KEYWORDS="alpha amd64 ppc ppc64 x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE=""
 
 RDEPEND=">=dev-perl/TimeDate-1.16
