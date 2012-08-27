@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/glut/glut-2.1.1.1.ebuild,v 1.5 2010/09/16 18:08:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/glut/glut-2.1.1.1.ebuild,v 1.6 2012/08/27 18:02:08 armin76 Exp $
 
 CABAL_FEATURES="lib profile haddock"
 CABAL_MIN_VERSION=1.2
@@ -15,7 +15,7 @@ SRC_URI="http://hackage.haskell.org/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 sparc x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=">=dev-lang/ghc-6.4
