@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/pecl-memcache
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-memcache/ChangeLog,v 1.5 2012/08/27 08:24:52 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-memcache/ChangeLog,v 1.6 2012/08/27 08:27:13 olemarkus Exp $
+
+  27 Aug 2012; Ole Markus With <olemarkus@gentoo.org>
+  pecl-memcache-3.0.5-r1.ebuild:
+  Dropping stable keywords since failover is broken
 
 *pecl-memcache-2.2.6-r2 (27 Aug 2012)
 
