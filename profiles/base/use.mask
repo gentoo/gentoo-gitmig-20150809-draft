@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.144 2012/08/21 15:16:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.145 2012/08/27 15:19:57 flameeyes Exp $
 
 # not ready for primetime
 packagekit
@@ -292,3 +292,7 @@ prelude
 # Diego Elio Pettenò <flameeyes@gentoo.org> (21 Aug 2012)
 # IPMI is only implemented for x86, amd64 and ia64
 ipmi
+
+# Diego Elio Pettenò <flameeyes@gentoo.org> (27 Aug 2012)
+# netlink is a Linux-specific interface
+netlink
