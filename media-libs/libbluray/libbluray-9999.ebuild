@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-9999.ebuild,v 1.10 2012/05/05 08:02:42 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-9999.ebuild,v 1.11 2012/08/27 06:19:51 radhermit Exp $
 
 EAPI=4
 
-inherit autotools java-pkg-opt-2 git-2 flag-o-matic
+inherit autotools java-pkg-opt-2 git-2 flag-o-matic eutils
 
 EGIT_REPO_URI="git://git.videolan.org/libbluray.git"
 
@@ -81,5 +81,5 @@ src_install() {
 		doenvd "${FILESDIR}"/90${PN}
 	fi
 
-	use static-libs || find "${ED}" -name '*.la' -exec rm -f '{}' +
+	prune_libtool_files
 }
