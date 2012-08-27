@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.50.0-r2.ebuild,v 1.1 2012/08/24 09:46:08 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.50.0-r2.ebuild,v 1.2 2012/08/27 08:11:30 dev-zero Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? *"
@@ -553,11 +553,11 @@ pkg_postinst() {
 		fi
 	done
 
-	pushd "${ROOT}/usr/lib64" 1>/dev/null
+	pushd "${ROOT}/usr/$(get_libdir)" 1>/dev/null
 	local lib
 	for lib in libboost_*.{a,so} ; do
 		[[ -L "${lib}" && "${lib}" != libboost_*[[:digit:]]_[[:digit:]][[:digit:]]@(${_suffices}).@(a|so) ]] || continue
-		rm "${lib}" || die -q "Unable to remove \"/usr/lib64/${lib}\" symlink"
+		rm "${lib}" || die -q "Unable to remove \"/usr/$(get_libdir)/${lib}\" symlink"
 	done
 	popd 1>/dev/null
 
@@ -570,7 +570,7 @@ pkg_postinst() {
 
 	local python_module python_module_dir
 	for python_module in mpi.py mpi_debug.py ; do
-		for python_module_dir in "${ROOT}"usr/lib64/python*/site-packages ; do
+		for python_module_dir in "${ROOT}"usr/$(get_libdir)/python*/site-packages ; do
 			if [[ -e "${python_module_dir}/${python_module}" ]] ; then
 				rm "${python_module_dir}/${python_module}" || die -q "Unable to remove \"${python_module_dir}/${python_module}\""
 			fi
@@ -579,7 +579,7 @@ pkg_postinst() {
 
 	# Deprecated code for older versions of Boost.
 	local mod="mpi.so"
-	for moddir in "${ROOT}"/usr/lib64/python*/site-packages ; do
+	for moddir in "${ROOT}"/usr/$(get_libdir)/python*/site-packages ; do
 		if [ -L "${moddir}/${mod}" ] ; then
 			rm "${moddir}/${mod}" || die -q "Unable to remove \"${moddir}/${mod}\" symlink"
 		else
