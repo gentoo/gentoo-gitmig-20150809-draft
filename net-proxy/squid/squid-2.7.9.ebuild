@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.7.9.ebuild,v 1.7 2010/10/01 14:54:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.7.9.ebuild,v 1.8 2012/08/27 13:20:26 eras Exp $
 
 EAPI="2"
 
-inherit eutils pam toolchain-funcs autotools
+inherit eutils pam toolchain-funcs autotools user
 
 #lame archive versioning scheme..
 S_PMV="${PV%%.*}"
