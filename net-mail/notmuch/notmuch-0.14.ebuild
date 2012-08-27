@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.14.ebuild,v 1.1 2012/08/26 11:38:15 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.14.ebuild,v 1.2 2012/08/27 13:35:19 aidecoe Exp $
 
 EAPI=4
 
@@ -122,7 +122,7 @@ src_install() {
 	fi
 
 	if use nmbug; then
-		dobin contrib/nmbug
+		dobin contrib/nmbug/nmbug
 	fi
 
 	if use mutt; then
