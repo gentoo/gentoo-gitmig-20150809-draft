@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/fabric-1.4.3.ebuild,v 1.1 2012/08/24 08:06:08 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/fabric-1.4.3.ebuild,v 1.2 2012/08/27 04:23:50 patrick Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.5"
@@ -29,11 +29,6 @@ DEPEND="${RDEPEND}
 	test? ( <dev-python/fudge-1.0 )"
 
 PYTHON_MODULES="fabfile fabric"
-
-src_prepare() {
-	use doc &&
-		epatch "${FILESDIR}"/${P}-git_tags_docs.patch
-}
 
 src_compile() {
 	distutils_src_compile
