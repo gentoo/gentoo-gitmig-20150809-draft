@@ -3,16 +3,34 @@
 <pkgmetadata>
   <herd>netmon</herd>
   <use>
-    <flag name='diskio'>Enable the use of diskio mibs</flag>
+    <flag name='diskio' restrict='&lt;net-analyzer/net-snmp-5.7.2_rc1'>
+      Enable the use of diskio MIBs.
+    </flag>
     <flag name='elf'>Enable the use of elf utils to check uptime on some systems</flag>
-    <flag name='extensible'>build deprecated extensible mib module (extend is successor)</flag>
+    <flag name='extensible' restrict='&lt;net-analyzer/net-snmp-5.7.2_rc1'>
+      Build deprecated extensible mib module (extend is successor)
+    </flag>
     <flag name='mfd-rewrites'>Use MFD rewrites of mib modules where available</flag>
-    <flag name='rpm'>Enable the rpm snmp probing</flag>
+    <flag name='rpm'>
+      Enable monitoring of <pkg>app-arch/rpm</pkg>. This flag requires
+      the bzip2 and zlib flags to be enabled as well.
+    </flag>
     <flag name='sendmail'>Enable sendmail statistics monitoring</flag>
-    <flag name='smux'>Enable the smux MIBS module</flag>
+    <flag name='smux' restrict='&lt;net-analyzer/net-snmp-5.7.2_rc1'>
+      Enable the SNMP multiplexing (smux) MIBs module
+    </flag>
     <flag name='ucd-compat'>
       Build UCD compatibility library. Increases significantly the
       install size.
+    </flag>
+    <flag name='pci'>
+      Use libpci (from <pkg>sys-apps/pciutils</pkg>) to look up
+      network interface description. This feature is only available on
+      Linux.
+    </flag>
+    <flag name='netlink'>
+      Use <pkg>dev-libs/libnl</pkg> to fetch TCP statistics instead of
+      using /proc/net/tcp (Linux only).
     </flag>
   </use>
 </pkgmetadata>

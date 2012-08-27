@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.238 2012/08/26 14:14:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.239 2012/08/27 15:28:20 flameeyes Exp $
+
+*net-snmp-5.7.2_rc1-r1 (27 Aug 2012)
+
+  27 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +net-snmp-5.7.2_rc1-r1.ebuild, metadata.xml:
+  Add an USE flag to make picutils dependency optional (bug #432926), as well as
+  a netlink one to use libnl instead of parsing /proc/net/tcp.
 
   26 Aug 2012; Raúl Porcel <armin76@gentoo.org> net-snmp-5.7.2_rc1.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #431752
