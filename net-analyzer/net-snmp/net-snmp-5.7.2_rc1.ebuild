@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.7.2_rc1.ebuild,v 1.8 2012/08/26 14:14:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.7.2_rc1.ebuild,v 1.9 2012/08/27 16:17:05 flameeyes Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2"
 
 WANT_AUTOMAKE=none
 
-PATCHSET=1
+PATCHSET=3
 
 inherit eutils perl-module python autotools
 
@@ -100,7 +100,9 @@ src_configure() {
 		$(use_with tcpd libwrap) \
 		$(use_with bzip2) \
 		$(use_with zlib) \
-		$(use_with rpm)
+		$(use_with rpm) \
+		--without-nl \
+		--with-pci
 }
 
 src_compile() {

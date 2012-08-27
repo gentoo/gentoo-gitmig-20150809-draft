@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.7.2_rc1-r1.ebuild,v 1.1 2012/08/27 15:28:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.7.2_rc1-r1.ebuild,v 1.2 2012/08/27 16:17:05 flameeyes Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2"
 
 WANT_AUTOMAKE=none
 
-PATCHSET=1
+PATCHSET=3
 
 inherit eutils perl-module python autotools
 
@@ -79,11 +79,6 @@ src_configure() {
 
 	use python && export PYTHON_DIR="$(python_get_sitedir)"
 
-	if ! use pci; then
-		export ac_cv_header_pci_pci_h=no
-		export netsnmp_cv_func_pci_lookup_name_LMIBLIBS=no
-	fi
-
 	econf \
 		--with-install-prefix="${D}" \
 		--with-sys-location="Unknown" \
@@ -107,7 +102,8 @@ src_configure() {
 		$(use_with bzip2) \
 		$(use_with zlib) \
 		$(use_with rpm) \
-		$(use_with netlink libnl)
+		$(use_with netlink nl) \
+		$(use_with pci)
 }
 
 src_compile() {
