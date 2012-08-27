@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6924 2012/08/26 23:43:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6925 2012/08/27 13:54:17 eras Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Aug 2012; Eray Aslan <eras@gentoo.org> package.mask:
+  Mask squid-3.2 until net-libs/libecap-0.2.0 is unmasked - bug #432942
 
   26 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Mask scsign for removal.
