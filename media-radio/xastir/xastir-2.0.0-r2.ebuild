@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xastir/xastir-2.0.0-r2.ebuild,v 1.2 2012/06/04 17:51:52 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xastir/xastir-2.0.0-r2.ebuild,v 1.3 2012/08/27 18:37:40 tomjbe Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -43,12 +43,15 @@ src_prepare() {
 	# fix breakage with >=sci-libs/proj-4.8
 	epatch "${FILESDIR}"/${P}-proj48.diff
 
+	# do not use builtin shapelib if sci-libs/shapelib is not installed
+	# instead build without shapelib support (bug #430704)
+	epatch "${FILESDIR}"/${P}-no-builtin-shapelib.diff
+
 	eautoreconf
 }
 
 src_configure() {
-	econf --without-graphicsmagick \
-		--with-pcre \
+	econf --with-pcre \
 		--with-shapelib \
 		--with-dbfawk \
 		--without-ax25 \
