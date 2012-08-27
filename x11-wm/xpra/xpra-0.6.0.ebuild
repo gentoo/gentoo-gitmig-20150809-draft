@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.4.1.ebuild,v 1.2 2012/08/04 09:56:55 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.6.0.ebuild,v 1.1 2012/08/27 20:10:45 xmw Exp $
 
 EAPI=3
 
-PYTHON_DEPEND="2"
+PYTHON_DEPEND="*"
 RESTRICT_PYTHON_ABIS="2.4 2.5 3.*"
 SUPPORT_PYTHON_ABIS="1"
 inherit distutils eutils
@@ -16,7 +16,7 @@ SRC_URI="http://xpra.org/src/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="ffmpeg jpeg libnotify parti png server ssh x264"
+IUSE="+clipboard ffmpeg jpeg libnotify parti png +rencode server ssh x264"
 
 COMMON_DEPEND="dev-python/pygtk:2
 	x11-libs/libX11
@@ -49,8 +49,18 @@ src_prepare() {
 	else
 		epatch disable-vpx.patch disable-x264.patch
 	fi
+	use clipboard || epatch disable-clipboard.patch
+	use rencode || epatch disable-rencode.patch
 
 	$(PYTHON -2) make_constants_pxi.py wimpiggy/lowlevel/constants.txt wimpiggy/lowlevel/constants.pxi || die
+
+	#python_copy_sources
+	#
+	#patching() {
+	#    [[ "${PYTHON_ABI}" == 2.* ]] && return
+	#	2to3 --no-diffs -x all -f except -w -n .
+	#}
+	#python_execute_function --action-message 'Applying patches with $(python_get_implementation) $(python_get_version)' -s patching
 }
 
 src_install() {

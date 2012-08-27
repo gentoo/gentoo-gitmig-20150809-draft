@@ -9,5 +9,7 @@
 	<flag name='parti'>Runtime support for partioning window manager</flag>
 	<flag name='server'>Build server-side code</flag>
 	<flag name='ssh'>Runtime support for secure shell communication</flag>
+	<flag name='clipboard'>Enable clipboard support</flag>
+	<flag name='rencode'>Enable rencode support</flag>
 </use>
 </pkgmetadata>
