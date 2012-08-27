@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hgview/hgview-1.6.2-r1.ebuild,v 1.1 2012/08/25 10:03:54 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hgview/hgview-1.6.2-r1.ebuild,v 1.2 2012/08/27 03:16:08 pesa Exp $
 
 EAPI=4
 
@@ -29,8 +29,8 @@ DEPEND="${RDEPEND}
 		app-text/xmlto
 	)"
 
-# If this flag is not set, distutils.eclass won't pass
-# any arguments to the "build" action in src_install()
+# If this flag is not set, arguments are passed to the "build" command
+# only for distutils_src_compile(), but not for distutils_src_install()
 DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES="1"
 PYTHON_MODNAME="hgext/hgview.py hgviewlib"
 
