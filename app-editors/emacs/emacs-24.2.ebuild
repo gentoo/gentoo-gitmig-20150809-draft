@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-24.2_rc2.ebuild,v 1.1 2012/08/24 11:37:12 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-24.2.ebuild,v 1.1 2012/08/27 16:36:11 ulm Exp $
 
 EAPI=4
 
@@ -8,8 +8,8 @@ inherit autotools elisp-common eutils flag-o-matic multilib
 
 DESCRIPTION="The extensible, customizable, self-documenting real-time display editor"
 HOMEPAGE="http://www.gnu.org/software/emacs/"
-SRC_URI="mirror://gnu-alpha/emacs/pretest/${P/_/-}.tar.gz
-	mirror://gentoo/${P%%_*}-patches-1.tar.bz2"
+SRC_URI="mirror://gnu/emacs/${P}.tar.xz
+	mirror://gentoo/${P}-patches-1.tar.xz"
 
 LICENSE="GPL-3 FDL-1.3 BSD as-is MIT W3C unicode PSF-2"
 SLOT="24"
@@ -65,6 +65,7 @@ RDEPEND="sys-libs/ncurses
 	)"
 
 DEPEND="${RDEPEND}
+	app-arch/xz-utils
 	alsa? ( virtual/pkgconfig )
 	dbus? ( virtual/pkgconfig )
 	gnutls? ( virtual/pkgconfig )
@@ -72,9 +73,6 @@ DEPEND="${RDEPEND}
 	X? ( virtual/pkgconfig )
 	gzip-el? ( app-arch/gzip )
 	pax_kernel? ( sys-apps/paxctl )"
-
-RDEPEND="${RDEPEND}
-	!<app-editors/emacs-vcs-24.1.9999-r1"
 
 EMACS_SUFFIX="emacs-${SLOT}"
 SITEFILE="20${PN}-${SLOT}-gentoo.el"
