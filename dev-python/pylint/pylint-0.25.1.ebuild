@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.25.1.ebuild,v 1.1 2012/02/08 04:52:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.25.1.ebuild,v 1.2 2012/08/27 15:24:56 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*:2.5"
@@ -10,7 +10,7 @@ RESTRICT_PYTHON_ABIS="2.4"
 inherit distutils
 
 DESCRIPTION="Python code static checker"
-HOMEPAGE="http://www.logilab.org/projects/pylint/ http://pypi.python.org/pypi/pylint"
+HOMEPAGE="http://www.logilab.org/project/pylint http://pypi.python.org/pypi/pylint"
 SRC_URI="ftp://ftp.logilab.org/pub/${PN}/${P}.tar.gz mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"

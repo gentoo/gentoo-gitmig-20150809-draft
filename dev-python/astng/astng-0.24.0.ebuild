@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/astng-0.24.0.ebuild,v 1.1 2012/08/24 07:23:25 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/astng-0.24.0.ebuild,v 1.2 2012/08/27 15:20:01 floppym Exp $
 
 EAPI="4"
 SUPPORT_PYTHON_ABIS="1"
@@ -9,7 +9,7 @@ PYTHON_TESTS_RESTRICTED_ABIS="3.* *-jython *-pypy-*"
 inherit distutils
 
 DESCRIPTION="Abstract Syntax Tree New Generation for logilab packages"
-HOMEPAGE="http://www.logilab.org/projects/astng/ http://pypi.python.org/pypi/logilab-astng"
+HOMEPAGE="http://www.logilab.org/project/logilab-astng http://pypi.python.org/pypi/logilab-astng"
 SRC_URI="ftp://ftp.logilab.org/pub/astng/logilab-${P}.tar.gz mirror://pypi/l/logilab-astng/logilab-${P}.tar.gz"
 
 LICENSE="LGPL-2.1"

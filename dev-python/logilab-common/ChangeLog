@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/logilab-common
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.102 2012/08/24 08:45:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.103 2012/08/27 15:21:50 floppym Exp $
+
+  27 Aug 2012; Mike Gilbert <floppym@gentoo.org> logilab-common-0.55.2.ebuild,
+  logilab-common-0.57.1.ebuild, logilab-common-0.57.2.ebuild,
+  logilab-common-0.58.1.ebuild:
+  Update HOMEPAGE to prevent redirect. Suggested by Arfrever.
 
 *logilab-common-0.58.1 (24 Aug 2012)
 

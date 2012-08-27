@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-constraint/logilab-constraint-0.4.0.ebuild,v 1.8 2012/04/12 16:00:56 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-constraint/logilab-constraint-0.4.0.ebuild,v 1.9 2012/08/27 15:23:30 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -11,7 +11,7 @@ inherit distutils
 
 MY_P="${P#logilab-}"
 DESCRIPTION="A finite domain constraints solver written in 100% pure Python"
-HOMEPAGE="http://www.logilab.org/projects/constraint/"
+HOMEPAGE="http://www.logilab.org/project/logilab-constraint"
 SRC_URI="ftp://ftp.logilab.org/pub/constraint/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
