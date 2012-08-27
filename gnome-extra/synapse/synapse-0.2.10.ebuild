@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/synapse/synapse-0.2.10.ebuild,v 1.4 2012/08/25 11:28:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/synapse/synapse-0.2.10.ebuild,v 1.5 2012/08/27 07:28:03 ssuominen Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="http://launchpad.net/synapse-project/${PV%.*}/${PV}/+download/${P}.tar.
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-# "ayatana" support pending on GTK+-3.x version of synapse wrt #41161
+# "ayatana" support pending on GTK+-3.x version of synapse wrt #411613
 IUSE="plugins +zeitgeist"
 
 RDEPEND="
