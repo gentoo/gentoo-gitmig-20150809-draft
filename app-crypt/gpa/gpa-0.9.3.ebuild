@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.9.3.ebuild,v 1.1 2012/08/27 01:52:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.9.3.ebuild,v 1.2 2012/08/27 14:42:15 flameeyes Exp $
 
 EAPI=4
 
@@ -29,8 +29,7 @@ src_configure() {
 		--libexecdir=/usr/libexec \
 		--with-gpgme-prefix=/usr \
 		--with-libassuan-prefix=/usr \
-		$(use_enable nls) \
-		${myconf}
+		$(use_enable nls)
 }
 
 DOCS=( AUTHORS ChangeLog README NEWS TODO )
