@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/gejengel
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/ChangeLog,v 1.21 2011/12/21 12:55:10 aballier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/ChangeLog,v 1.22 2012/08/27 09:58:47 hwoarang Exp $
+
+*gejengel-0.1.4-r1 (27 Aug 2012)
+
+  27 Aug 2012; Markos Chandras <hwoarang@gentoo.org> +gejengel-0.1.4-r1.ebuild:
+  Respect CXXFLAGS. Bug #429950. Fix deprecation warnings for the desktop file.
 
   21 Dec 2011; Alexis Ballier <aballier@gentoo.org> gejengel-0.1.4.ebuild,
   +files/gejengel-0.1.4-ffmpeg.patch:
@@ -81,4 +86,3 @@
   Vanden
   Boer ( upstream developer )<dirk.vdb@gmail.com> for the initial ebuild. He
   will be proxy maintainer.
-
