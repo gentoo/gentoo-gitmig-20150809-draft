@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/gpa
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.79 2012/05/03 18:16:38 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.80 2012/08/27 01:52:43 flameeyes Exp $
+
+*gpa-0.9.3 (27 Aug 2012)
+
+  27 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> +gpa-0.9.3.ebuild,
+  -files/gpa-desktop-file-validate-new.patch, -gpa-0.9.1_pre20100416-r1.ebuild:
+  Version bump (thanks to Arfrever in bug #432636 for reporting). Simplify
+  thanks to EAPI 4 and fix bug #417437.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> gpa-0.9.1_pre20100416.ebuild,
   gpa-0.9.1_pre20100416-r1.ebuild:
