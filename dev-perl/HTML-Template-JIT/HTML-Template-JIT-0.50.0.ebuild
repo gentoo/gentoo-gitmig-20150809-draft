@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Template-JIT/HTML-Template-JIT-0.50.0.ebuild,v 1.2 2011/09/03 21:04:48 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Template-JIT/HTML-Template-JIT-0.50.0.ebuild,v 1.3 2012/08/27 18:25:46 armin76 Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="a just-in-time compiler for HTML::Template"
 
 SLOT="0"
-KEYWORDS="amd64 ia64 sparc x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=dev-perl/HTML-Template-2.8
