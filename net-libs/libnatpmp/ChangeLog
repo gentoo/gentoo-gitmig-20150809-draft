@@ -1,4 +1,12 @@
 
+
+*libnatpmp-20120821 (27 Aug 2012)
+
+  27 Aug 2012; Anthony G. Basile <blueness@gentoo.org>
+  +libnatpmp-20120821.ebuild, +files/remove-static-lib-20120821.patch,
+  +files/respect-FLAGS-20120821.patch, +files/respect-libdir-20120821.patch:
+  Version bump
+
   25 Mar 2012; Naohiro Aota <naota@gentoo.org> libnatpmp-20110808-r1.ebuild:
   Add ~x86-fbsd. #400929
 
