@@ -1,6 +1,12 @@
 # ChangeLog for app-forensics/libewf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/libewf/ChangeLog,v 1.22 2012/03/01 23:30:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/libewf/ChangeLog,v 1.23 2012/08/27 09:22:35 patrick Exp $
+
+*libewf-20120813 (27 Aug 2012)
+
+  27 Aug 2012; Patrick Lauer <patrick@gentoo.org> +libewf-20120813.ebuild,
+  metadata.xml:
+  Bump
 
   01 Mar 2012; Brent Baude <ranger@gentoo.org> libewf-20100226-r1.ebuild:
   Marking libewf-20100226-r1 ppc stable for bug 374321
@@ -80,4 +86,3 @@
   01 Mar 2009; Patrick Lauer <patrick@gentoo.org> +metadata.xml,
   +libewf-20090209.ebuild:
   Initial import. Ebuild by RB <aoz.syn@gmail.com>. Fixes #224121
-
