@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lessfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lessfs/ChangeLog,v 1.56 2012/08/26 09:20:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lessfs/ChangeLog,v 1.57 2012/08/27 09:18:46 hwoarang Exp $
+
+  27 Aug 2012; Markos Chandras <hwoarang@gentoo.org> lessfs-1.5.12.ebuild:
+  tokyocabinet is not optional. Bug #432840
 
   26 Aug 2012; Markos Chandras <hwoarang@gentoo.org> -lessfs-1.2.2.6.ebuild,
   -lessfs-1.4.9.ebuild, -lessfs-1.5.9.ebuild:
