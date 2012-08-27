@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nvi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.87 2012/06/17 22:37:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.88 2012/08/27 15:47:49 neurogeek Exp $
+
+  27 Aug 2012; Jesus Rivero <neurogeek@gentoo.org> files/nvi-1.81.6-db44.patch:
+  Fixed logic in db44 patch. Closes bug #421671. Thanks Diego
 
   17 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org>
   files/nvi-1.81.6-db.patch, files/nvi-1.81.6-db44.patch,
