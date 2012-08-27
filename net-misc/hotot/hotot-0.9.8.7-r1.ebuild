@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hotot/hotot-0.9.8.7.ebuild,v 1.6 2012/08/27 08:29:44 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hotot/hotot-0.9.8.7-r1.ebuild,v 1.1 2012/08/27 08:29:44 patrick Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="https://github.com/shellex/Hotot/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="chrome gtk kde qt4"
 
 RDEPEND="dev-python/PyQt4[sql]
