@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/webob-1.2.2.ebuild,v 1.2 2012/08/27 16:06:22 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/webob-1.2.2.ebuild,v 1.3 2012/08/27 18:40:22 floppym Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ MY_PN=WebOb
 MY_P=${MY_PN}-${PV}
 
 DESCRIPTION="WSGI request and response object"
-HOMEPAGE="http://pythonpaste.org/webob/ http://pypi.python.org/pypi/WebOb"
+HOMEPAGE="http://webob.org/ http://pypi.python.org/pypi/WebOb"
 SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.zip"
 
 LICENSE="MIT"
