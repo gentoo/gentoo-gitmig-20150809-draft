@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>netmon</herd>
-<longdescription>A system-independent library for user-level network packet capture</longdescription>
-<use>
-	<flag name='libnl'>link with <pkg>dev-libs/libnl</pkg> (used to put wireless
-	interfaces in monitor mode)</flag>
-</use>
+  <herd>netmon</herd>
+  <longdescription>A system-independent library for user-level network packet capture</longdescription>
+  <use>
+    <flag name='netlink'>
+      Use <pkg>dev-libs/libnl</pkg> to put wireless interfaces in monitor mode.
+    </flag>
+  </use>
 </pkgmetadata>
