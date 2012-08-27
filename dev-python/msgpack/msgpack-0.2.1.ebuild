@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/msgpack/msgpack-0.2.1.ebuild,v 1.1 2012/08/24 09:16:00 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/msgpack/msgpack-0.2.1.ebuild,v 1.2 2012/08/27 15:59:48 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5 3"
@@ -23,7 +23,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
-DEPEND="dev-python/six"
+DEPEND="test? ( dev-python/six )"
 RDEPEND=""
 
 S="${WORKDIR}/${MY_P}"
