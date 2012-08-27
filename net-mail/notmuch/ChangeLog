@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/notmuch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.61 2012/08/27 13:35:19 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.62 2012/08/27 13:46:02 aidecoe Exp $
+
+  27 Aug 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> -notmuch-0.13.ebuild:
+  Removed old not stable revisions: 0.13.
 
   27 Aug 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> notmuch-0.14.ebuild:
   Path of nmbug has changed inside upstream's archive.  Fixed that in the
