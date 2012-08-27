@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/File-Find-Rule
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Find-Rule/ChangeLog,v 1.64 2012/08/09 17:51:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Find-Rule/ChangeLog,v 1.65 2012/08/27 18:22:39 armin76 Exp $
+
+  27 Aug 2012; Raúl Porcel <armin76@gentoo.org> File-Find-Rule-0.320.0.ebuild,
+  File-Find-Rule-0.330.0.ebuild:
+  Drop alpha/ia64/sparc keywords
 
   09 Aug 2012; Brent Baude <ranger@gentoo.org> File-Find-Rule-0.330.0.ebuild:
   Marking File-Find-Rule-0.330.0 ppc for bug 418811
