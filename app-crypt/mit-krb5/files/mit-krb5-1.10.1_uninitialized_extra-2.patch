@@ -33,3 +33,16 @@
      char *out = NULL, *outtmp, *s;
      krb5_ucs4 *ucs = NULL, *p, *ucsout = NULL;
      krb5_data *newdata;
+diff --git a/src/util/profile/prof_init.c b/src/util/profile/prof_init.c
+index 7dc5b47..cd90db8 100644
+--- a/src/util/profile/prof_init.c
++++ b/src/util/profile/prof_init.c
+@@ -255,7 +255,7 @@ copy_vtable_profile(profile_t profile, profile_t *ret_new_profile)
+ {
+     errcode_t err;
+     void *cbdata;
+-    profile_t new_profile;
++    profile_t new_profile = NULL;
+ 
+     *ret_new_profile = NULL;
+ 
