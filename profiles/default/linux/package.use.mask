@@ -1,6 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/package.use.mask,v 1.37 2012/08/22 07:37:18 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/package.use.mask,v 1.38 2012/08/27 14:52:24 flameeyes Exp $
+
+# Diego Elio Pettenò (27 Aug 2012)
+# The libpci access is only used for linux.
+net-analyzer/net-snmp -pci
 
 # Richard Yao <ryao@gentoo.org> (22 August 2012)
 # USE=kernel-builtin is dangerous. Only those that know what they are doing
