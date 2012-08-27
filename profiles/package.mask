@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14075 2012/08/26 23:43:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14076 2012/08/27 04:39:16 cardoe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -39,6 +39,7 @@ app-crypt/scsign
 # Doug Goldstein <cardoe@gentoo.org> (25 Aug 2012)
 # Mask the release candidates
 =app-emulation/libvirt-0.10.0_rc1
+=app-emulation/libvirt-0.10.0_rc2
 
 # Mike Gilbert <floppym@gentoo.org> (23 Aug 2012)
 # Dev channel releases are only for people who are developers or want more
