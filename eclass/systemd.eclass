@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/systemd.eclass,v 1.11 2012/01/07 17:53:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/systemd.eclass,v 1.12 2012/08/27 21:53:04 mgorny Exp $
 
 # @ECLASS: systemd.eclass
 # @MAINTAINER:
@@ -92,6 +92,20 @@ systemd_dotmpfilesd() {
 	(
 		insinto /usr/lib/tmpfiles.d/
 		doins "${@}"
+	)
+}
+
+# @FUNCTION: systemd_newtmpfilesd
+# @USAGE: oldname newname.conf
+# @DESCRIPTION:
+# Install systemd tmpfiles.d file under a new name. Uses newins, thus it
+# is fatal in EAPI 4 and non-fatal in earlier EAPIs.
+systemd_newtmpfilesd() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	(
+		insinto /usr/lib/tmpfiles.d/
+		newins "${@}"
 	)
 }
 
