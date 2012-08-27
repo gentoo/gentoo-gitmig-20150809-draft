@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bitten/bitten-0.6.ebuild,v 1.1 2012/08/27 11:01:40 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bitten/bitten-0.6-r1.ebuild,v 1.1 2012/08/27 15:46:41 xarthisius Exp $
 
 EAPI=4
 
@@ -35,7 +35,7 @@ pkg_setup() {
 	python_pkg_setup
 	DISTUTILS_GLOBAL_OPTIONS=("2.* $(use_with server master)")
 	enewgroup tracd
-	enewuser ${PN} -1 -1 -1 tracd
+	enewuser ${PN} -1 -1 /var/tmp/${PN} tracd
 }
 
 src_install() {
