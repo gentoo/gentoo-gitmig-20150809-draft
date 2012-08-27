@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/fabric-1.4.3.ebuild,v 1.2 2012/08/27 04:23:50 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/fabric-1.4.3.ebuild,v 1.3 2012/08/27 15:35:47 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.5"
@@ -11,11 +11,14 @@ DISTUTILS_SRC_TEST="nosetests"
 # Requires multiprocessing package from py2.6+
 PYTHON_TESTS_RESTRICTED_ABIS="2.5"
 
-inherit distutils eutils vcs-snapshot
+inherit distutils eutils
+
+MY_PN="Fabric"
+MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Fabric is a simple, Pythonic tool for remote execution and deployment."
 HOMEPAGE="http://fabfile.org http://pypi.python.org/pypi/Fabric"
-SRC_URI="http://github.com/${PN}/${PN}/tarball/${PV} -> ${P}.tar.gz"
+SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -28,6 +31,7 @@ DEPEND="${RDEPEND}
 	doc? ( dev-python/sphinx )
 	test? ( <dev-python/fudge-1.0 )"
 
+S="${WORKDIR}/${MY_P}"
 PYTHON_MODULES="fabfile fabric"
 
 src_compile() {
