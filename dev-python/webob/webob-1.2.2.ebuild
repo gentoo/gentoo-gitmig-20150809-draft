@@ -1,17 +1,17 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/webob-1.2.2.ebuild,v 1.1 2012/08/24 07:04:49 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/webob-1.2.2.ebuild,v 1.2 2012/08/27 16:06:22 floppym Exp $
 
-EAPI="3"
-PYTHON_DEPEND="2"
+EAPI=4
+
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.4 3.*"
-DISTUTILS_SRC_TEST="nosetests"
+RESTRICT_PYTHON_ABIS="2.5 3.1"
+DISTUTILS_SRC_TEST=nosetests
 
-inherit distutils eutils
+inherit distutils
 
-MY_PN="WebOb"
-MY_P="${MY_PN}-${PV}"
+MY_PN=WebOb
+MY_P=${MY_PN}-${PV}
 
 DESCRIPTION="WSGI request and response object"
 HOMEPAGE="http://pythonpaste.org/webob/ http://pypi.python.org/pypi/WebOb"
@@ -20,22 +20,20 @@ SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.zip"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
-IUSE="doc test"
+IUSE="doc"
 
 DEPEND="app-arch/unzip
 	dev-python/setuptools
-	doc? ( dev-python/sphinx )
-	test? ( dev-python/webtest )"
+	doc? ( dev-python/sphinx )"
 RDEPEND=""
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 src_compile() {
 	distutils_src_compile
 
 	if use doc; then
-		einfo "Generation of documentation"
-		"$(PYTHON -f)" setup.py build_sphinx || die "Generation of documentation failed"
+		"$(PYTHON -f)" setup.py build_sphinx || die
 	fi
 }
 
@@ -43,9 +41,6 @@ src_install() {
 	distutils_src_install
 
 	if use doc; then
-		pushd build/sphinx/html > /dev/null
-		insinto /usr/share/doc/${PF}/html
-		doins -r [a-z]* _static || die "Installation of documentation failed"
-		popd > /dev/null
+		dohtml -r build/sphinx/html/
 	fi
 }
