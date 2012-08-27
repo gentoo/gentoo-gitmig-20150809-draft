@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xmldiff
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmldiff/ChangeLog,v 1.22 2012/02/26 03:03:32 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmldiff/ChangeLog,v 1.23 2012/08/27 15:18:13 floppym Exp $
+
+  27 Aug 2012; Mike Gilbert <floppym@gentoo.org> xmldiff-0.6.10.ebuild,
+  xmldiff-0.6.9-r1.ebuild, xmldiff-0.6.9.ebuild:
+  Update HOMEPAGE to prevent redirect. Suggested by Arfrever.
 
   26 Feb 2012; Patrick Lauer <patrick@gentoo.org> xmldiff-0.6.10.ebuild,
   xmldiff-0.6.9-r1.ebuild:
@@ -86,4 +90,3 @@
   +files/xmldiff-0.6.8-python2.5.patch, +metadata.xml,
   +xmldiff-0.6.8.ebuild:
   Initial commit, fixes bug #181256
-
