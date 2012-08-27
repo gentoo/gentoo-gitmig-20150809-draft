@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/systemd.eclass,v 1.12 2012/08/27 21:53:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/systemd.eclass,v 1.13 2012/08/27 21:54:19 mgorny Exp $
 
 # @ECLASS: systemd.eclass
 # @MAINTAINER:
@@ -89,6 +89,11 @@ systemd_newunit() {
 systemd_dotmpfilesd() {
 	debug-print-function ${FUNCNAME} "${@}"
 
+	for f; do
+		[[ ${f} == *.conf ]] \
+			|| die 'tmpfiles.d files need to have .conf suffix.'
+	done
+
 	(
 		insinto /usr/lib/tmpfiles.d/
 		doins "${@}"
@@ -102,6 +107,9 @@ systemd_dotmpfilesd() {
 # is fatal in EAPI 4 and non-fatal in earlier EAPIs.
 systemd_newtmpfilesd() {
 	debug-print-function ${FUNCNAME} "${@}"
+
+	[[ ${2} == *.conf ]] \
+		|| die 'tmpfiles.d files need to have .conf suffix.'
 
 	(
 		insinto /usr/lib/tmpfiles.d/
