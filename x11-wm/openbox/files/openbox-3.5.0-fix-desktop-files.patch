@@ -1,0 +1,74 @@
+https://bugs.gentoo.org/show_bug.cgi?id=431784
+
+fix desktop files according to fd.o desktop entry specifications
+
+diff --git a/data/gnome-wm-properties/openbox.desktop b/data/gnome-wm-properties/openbox.desktop
+index 67e49e4..266c147 100644
+--- a/data/gnome-wm-properties/openbox.desktop
++++ b/data/gnome-wm-properties/openbox.desktop
+@@ -7,7 +7,7 @@ Exec=openbox
+ X-GNOME-WMName=Openbox
+ 
+ # our config tool
+-ConfigExec=obconf
++X-ConfigExec=obconf
+ 
+-[Window Manager]
++[X-Window Manager]
+ SessionManaged=true
+diff --git a/data/openbox.desktop b/data/openbox.desktop
+index d49ae22..631778b 100644
+--- a/data/openbox.desktop
++++ b/data/openbox.desktop
+@@ -1,6 +1,5 @@
+ [Desktop Entry]
+ Type=Application
+-Encoding=UTF-8
+ Name=Openbox
+ Exec=openbox
+ Icon=openbox
+diff --git a/data/xsession/openbox-gnome.desktop.in b/data/xsession/openbox-gnome.desktop.in
+index 19ae82e..24931b5 100644
+--- a/data/xsession/openbox-gnome.desktop.in
++++ b/data/xsession/openbox-gnome.desktop.in
+@@ -1,8 +1,7 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ Name=GNOME/Openbox
+ Comment=Use the Openbox window manager inside of the GNOME desktop environment
+ Exec=@bindir@/openbox-gnome-session
+ TryExec=gnome-session
+-Icon=openbox.png
+-Type=XSession
++Icon=openbox
++Type=Application
+diff --git a/data/xsession/openbox-kde.desktop.in b/data/xsession/openbox-kde.desktop.in
+index ddfc72d..bc78a97 100644
+--- a/data/xsession/openbox-kde.desktop.in
++++ b/data/xsession/openbox-kde.desktop.in
+@@ -1,8 +1,7 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ Name=KDE/Openbox
+ Comment=Use the Openbox window manager inside of the K Desktop Environment
+ Exec=@bindir@/openbox-kde-session
+ TryExec=startkde
+-Icon=openbox.png
+-Type=XSession
++Icon=openbox
++Type=Application
+diff --git a/data/xsession/openbox.desktop.in b/data/xsession/openbox.desktop.in
+index 0914e5b..21669cf 100644
+--- a/data/xsession/openbox.desktop.in
++++ b/data/xsession/openbox.desktop.in
+@@ -1,8 +1,7 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ Name=Openbox
+ Comment=Log in using the Openbox window manager (without a session manager)
+ Exec=@bindir@/openbox-session
+ TryExec=@bindir@/openbox-session
+-Icon=openbox.png
+-Type=XSession
++Icon=openbox
++Type=Application

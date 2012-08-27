@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.5.0_p20111019-r1.ebuild,v 1.3 2012/08/25 22:49:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.5.0_p20111019-r2.ebuild,v 1.1 2012/08/27 10:29:27 hwoarang Exp $
 
 EAPI="2"
 inherit multilib autotools eutils
@@ -38,6 +38,7 @@ S="${WORKDIR}"
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-gnome-session-3.4.9.patch
 	epatch "${FILESDIR}"/${P/_p*/}-gtk34.patch
+	epatch "${FILESDIR}"/${P/_p*/}-fix-desktop-files.patch
 	sed -i -e "s:-O0 -ggdb ::" "${S}"/m4/openbox.m4 || die
 	epatch_user
 	eautopoint
@@ -61,15 +62,15 @@ src_install() {
 	echo "/usr/bin/openbox-session" > "${D}/etc/X11/Sessions/${PN}"
 	fperms a+x /etc/X11/Sessions/${PN}
 	emake DESTDIR="${D}" install || die "emake install failed"
-    if use branding; then
-        insinto /usr/share/themes
-        doins -r "${WORKDIR}"/Surreal_Gentoo
-        # make it the default theme
-        sed -i \
-            "/<theme>/{n; s@<name>.*</name>@<name>Surreal_Gentoo</name>@}" \
-            "${D}"/etc/xdg/openbox/rc.xml \
-            || die "failed to set Surreal Gentoo as the default theme"
-    fi
+	if use branding; then
+		insinto /usr/share/themes
+		doins -r "${WORKDIR}"/Surreal_Gentoo
+		# make it the default theme
+		sed -i \
+			"/<theme>/{n; s@<name>.*</name>@<name>Surreal_Gentoo</name>@}" \
+			"${D}"/etc/xdg/openbox/rc.xml \
+			|| die "failed to set Surreal Gentoo as the default theme"
+	fi
 	! use static-libs && rm "${D}"/usr/$(get_libdir)/lib{obt,obrender}.la
 	! use python && rm "${D}"/usr/libexec/openbox-xdg-autostart
 }

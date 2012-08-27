@@ -1,6 +1,15 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.251 2012/08/25 22:49:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.252 2012/08/27 10:29:27 hwoarang Exp $
+
+*openbox-3.5.0_p20111019-r2 (27 Aug 2012)
+
+  27 Aug 2012; Markos Chandras <hwoarang@gentoo.org>
+  +files/openbox-3.5.0-fix-desktop-files.patch,
+  +openbox-3.5.0_p20111019-r2.ebuild, -openbox-3.5.0_p20111019-r1.ebuild,
+  openbox-9999.ebuild:
+  fix desktop files according to fd.o desktop entry specifications. Thanks to
+  Julian Ospald <hasufell@gentoo.org>. Bug #431784
 
   25 Aug 2012; Agostino Sarubbo <ago@gentoo.org>
   openbox-3.5.0_p20111019-r1.ebuild:
