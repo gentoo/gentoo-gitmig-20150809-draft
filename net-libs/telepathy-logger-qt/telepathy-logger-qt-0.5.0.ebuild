@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-logger-qt/telepathy-logger-qt-0.5.0.ebuild,v 1.1 2012/08/25 12:43:20 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-logger-qt/telepathy-logger-qt-0.5.0.ebuild,v 1.2 2012/08/27 14:47:55 scarabeus Exp $
 
 EAPI=4
 
 inherit kde4-base python
 
 DESCRIPTION="Qt4 bindings for the Telepathy logger"
-HOMEPAGE="https://projects.kde.org/projects/kdereview/telepathy-logger-qt"
+HOMEPAGE="https://projects.kde.org/projects/extragear/network/telepathy/telepathy-logger-qt"
 if [[ ${PV} != *9999* ]]; then
 	SRC_URI="mirror://kde/unstable/kde-telepathy/${PV}/src/${P}.tar.bz2"
 	KEYWORDS="~amd64 ~x86"
