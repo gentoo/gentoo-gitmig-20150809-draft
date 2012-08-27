@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.22.ebuild,v 1.4 2012/05/04 15:12:13 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.22.ebuild,v 1.5 2012/08/27 06:59:33 leio Exp $
 
 EAPI=4
 
@@ -33,7 +33,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.10.9-lazy.patch
-	>py-compile #396689
+	python_clean_py-compile_files #396689
 	AT_M4DIR="common/m4" eautoreconf
 	python_src_prepare
 }
