@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/guile-1.8.8-r1.ebuild,v 1.11 2012/04/26 16:37:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/guile-1.8.8-r1.ebuild,v 1.12 2012/08/27 08:15:35 xarthisius Exp $
 
 EAPI=3
 inherit eutils autotools flag-o-matic elisp-common
@@ -29,7 +29,8 @@ MAJOR="1.8"
 
 src_prepare() {
 	#
-	epatch "${FILESDIR}/${P}-fix_guile-config.patch"
+	epatch "${FILESDIR}/${P}-fix_guile-config.patch" \
+		"${FILESDIR}"/${P}-gcc46.patch
 	eautoreconf
 }
 
