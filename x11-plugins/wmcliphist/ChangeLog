@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmcliphist
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcliphist/ChangeLog,v 1.17 2012/05/05 05:12:01 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcliphist/ChangeLog,v 1.18 2012/08/27 09:26:54 voyageur Exp $
+
+*wmcliphist-1.0 (27 Aug 2012)
+
+  27 Aug 2012; Bernard Cafarelli <voyageur@gentoo.org> +wmcliphist-1.0.ebuild:
+  Version bump, integrates Gentoo patches and some new features
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> wmcliphist-0.6-r1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
