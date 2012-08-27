@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mozrunner
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mozrunner/ChangeLog,v 1.17 2012/08/24 09:19:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mozrunner/ChangeLog,v 1.18 2012/08/27 15:56:37 floppym Exp $
+
+  27 Aug 2012; Mike Gilbert <floppym@gentoo.org> mozrunner-5.10.ebuild:
+  Fix LICENSE and dependencies.
 
 *mozrunner-5.10 (24 Aug 2012)
 
