@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+<maintainer>
+	<email>eras@gentoo.org</email>
+	<name>Eray Aslan</name>
+</maintainer>
 <herd>net-proxy</herd>
 <longdescription>A full-featured web proxy cache</longdescription>
 <use>
@@ -15,6 +19,10 @@
 	<flag name='kqueue'>Enables *BSD kqueue() support</flag>
 	<flag name='pf-transparent'>Adds transparent proxy support for systems using
 		PF (only for *bsd)</flag>
+	<flag name='qos'>Adds support for Quality of Service using netfilter conntrack
+		- see qos_flow directive for more info</flag>
+	<flag name='ssl-crtd'>Adds support for dynamic SSL certificate generation in
+		SslBump environments</flag>
 	<flag name='tproxy'>Enables real Transparent Proxy support for Linux Netfilter
 		TPROXY</flag>
 	<flag name='zero-penalty-hit'>Add Zero Penalty Hit patch
