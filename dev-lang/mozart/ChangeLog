@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/mozart
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart/ChangeLog,v 1.39 2012/08/26 19:57:31 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart/ChangeLog,v 1.40 2012/08/27 08:05:52 keri Exp $
+
+  27 Aug 2012; <keri@gentoo.org> -files/mozart-1.3.2-const-cast.patch,
+  -files/mozart-1.3.2-contrib.patch, -files/mozart-1.3.2-emubin.patch,
+  -files/mozart-1.3.2-gcc4.patch, -files/mozart-1.3.2-nostrip.patch,
+  -files/mozart-1.3.2-ozplatform.patch, -files/mozart-1.3.2-portage.patch,
+  -files/mozart-1.3.2-ri-fpe.patch:
+  Remove old patch files
 
   26 Aug 2012; <keri@gentoo.org> -mozart-1.3.2.ebuild, -mozart-1.3.2-r1.ebuild,
   -mozart-1.4.0.ebuild, -mozart-1.4.0-r1.ebuild:
