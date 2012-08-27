@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/libpst
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/ChangeLog,v 1.33 2012/06/28 10:40:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/ChangeLog,v 1.34 2012/08/27 09:31:59 patrick Exp $
+
+*libpst-0.6.55 (27 Aug 2012)
+
+  27 Aug 2012; Patrick Lauer <patrick@gentoo.org> +libpst-0.6.55.ebuild:
+  Bump
 
   28 Jun 2012; Agostino Sarubbo <ago@gentoo.org> libpst-0.6.54-r1.ebuild:
   Stable for amd64, wrt bug #420885
@@ -148,4 +153,3 @@
   05 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> libpst-0.3.4.ebuild,
   metadata.xml:
   Initial import
-
