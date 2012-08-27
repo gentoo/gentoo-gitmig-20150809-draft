@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/files/uwsgi.initd,v 1.2 2012/01/27 11:10:27 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/files/uwsgi.initd,v 1.3 2012/08/27 08:34:07 ultrabug Exp $
 
 PROGNAME=${SVCNAME#*.}
 
@@ -25,7 +25,7 @@ start() {
 		eerror
 		eerror "  ln -s uwsgi /etc/init.d/uwsgi.trac"
 		eerror "  cp /etc/conf.d/uwsgi /etc/conf.d/uwsgi.trac"
-		eerror "  `basename "${EDITOR}"` /etc/conf.d/uwsgi.trac"
+		eerror "  nano /etc/conf.d/uwsgi.trac"
 		eerror
 		return 1
 	fi

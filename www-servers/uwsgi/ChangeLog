@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/uwsgi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.26 2012/08/14 08:33:01 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.27 2012/08/27 08:34:07 ultrabug Exp $
+
+  27 Aug 2012; Ultrabug <ultrabug@gentoo.org> files/uwsgi.initd,
+  files/uwsgi.initd-r1:
+  hard-code EDITOR in init scripts wrt #432606.
 
 *uwsgi-1.2.5 (14 Aug 2012)
 
