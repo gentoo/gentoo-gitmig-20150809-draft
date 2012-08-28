@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-188-r1.ebuild,v 1.1 2012/08/15 12:36:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-188-r1.ebuild,v 1.2 2012/08/28 16:53:42 zmedico Exp $
 
 EAPI=4
 
@@ -39,7 +39,7 @@ RDEPEND="${COMMON_DEPEND}
 	sys-apps/sysvinit
 	!<sys-libs/glibc-2.10
 	!~sys-fs/udev-187"
-DEPEND="${COMMON_RDEPEND}
+DEPEND="${COMMON_DEPEND}
 	app-arch/xz-utils
 	app-text/docbook-xsl-stylesheets
 	dev-libs/libxslt
