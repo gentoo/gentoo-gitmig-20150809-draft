@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mirall/mirall-1.0.5.ebuild,v 1.1 2012/08/28 13:19:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mirall/mirall-1.0.5.ebuild,v 1.2 2012/08/28 16:20:24 scarabeus Exp $
 
 EAPI=4
 
-inherit kde4-base
+inherit cmake-utils
 
 DESCRIPTION="Synchronization of your folders with another computers"
 HOMEPAGE="http://owncloud.org/"
@@ -15,6 +15,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="net-misc/csync[sftp,samba,webdav]"
-RDEPEND="${DEPEND}"
+RDEPEND="
+	net-misc/csync[sftp,samba,webdav]
+	x11-libs/qt-core:4
+	x11-libs/qt-gui:4
+"
+DEPEND="${RDEPEND}"
 
