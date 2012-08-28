@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.61.ebuild,v 1.3 2012/06/14 02:08:14 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.61.ebuild,v 1.4 2012/08/28 17:11:42 chutzpah Exp $
 
 EAPI=4
 
@@ -79,6 +79,7 @@ src_compile() {
 		PREFIX=/usr \
 		CC="$(tc-getCC)" \
 		CFLAGS="${CFLAGS}" \
+		LDFLAGS="${LDFLAGS}" \
 		COPTS="${COPTS}" \
 		all$(use nls && echo "-i18n")
 }

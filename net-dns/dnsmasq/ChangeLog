@@ -1,6 +1,16 @@
 # ChangeLog for net-dns/dnsmasq
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.215 2012/06/14 02:08:14 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.216 2012/08/28 17:11:42 chutzpah Exp $
+
+*dnsmasq-2.63 (28 Aug 2012)
+
+  28 Aug 2012; Patrick McLean <chutzpah@gentoo.org> -dnsmasq-2.57-r1.ebuild,
+  -dnsmasq-2.59.ebuild, -dnsmasq-2.60.ebuild, dnsmasq-2.61.ebuild,
+  +dnsmasq-2.63.ebuild, +files/dnsmasq.service,
+  -files/dnsmasq-fbsd-config.patch, -files/dnsmasq-init-r1:
+  Version bump (bug #431836). Add installation of a systemd unit (bug #
+  371871). Make sure LDFLAGS are respected (bug #414223). Clean up some older
+  versions.
 
   14 Jun 2012; Zac Medico <zmedico@gentoo.org> dnsmasq-2.57-r1.ebuild,
   dnsmasq-2.59.ebuild, dnsmasq-2.60.ebuild, dnsmasq-2.61.ebuild:
