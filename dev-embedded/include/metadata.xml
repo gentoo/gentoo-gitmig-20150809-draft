@@ -2,9 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>dev-embedded</herd>
-<maintainer>
-  <email>dev-embedded@gentoo.org</email>
-</maintainer>
-<longdescription>This is a collection of the useful independent include files for C/Assembler 
-developers.</longdescription>
 </pkgmetadata>
