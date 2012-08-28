@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/widelands
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/ChangeLog,v 1.44 2012/08/04 14:39:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/ChangeLog,v 1.45 2012/08/28 20:38:39 mr_bones_ Exp $
+
+  28 Aug 2012; Michael Sterrett <mr_bones_@gentoo.org> widelands-0.17.ebuild:
+  set up boost variables to use the right version
 
   04 Aug 2012; Michael Sterrett <mr_bones_@gentoo.org>
   +files/widelands-0.17-gcc47.patch, widelands-0.17.ebuild:
@@ -199,4 +202,3 @@
   Initial import. Original ebuild by Elias Kunnas <elias_kunnas@welho.com>.
   Ebuild modified by Christoph Brill <egore@gmx.de> and by myself. Original
   amd64 patch idea by Peter Roozemaal <mathfox@xs4all.nl>. Closing bug #59674.
-

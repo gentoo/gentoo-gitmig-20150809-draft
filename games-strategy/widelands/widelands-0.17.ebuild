@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.17.ebuild,v 1.4 2012/08/04 14:39:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.17.ebuild,v 1.5 2012/08/28 20:38:39 mr_bones_ Exp $
 
 EAPI=3
-inherit eutils versionator cmake-utils games
+inherit eutils versionator toolchain-funcs flag-o-matic cmake-utils games
 
 MY_PV=build$(get_version_component_range 2)
 MY_P=${PN}-${MY_PV}-src
@@ -24,7 +24,7 @@ RDEPEND="dev-lang/lua
 	media-libs/glew
 	media-libs/sdl-ttf"
 DEPEND="${RDEPEND}
-	dev-libs/boost"
+	>=dev-libs/boost-1.37"
 
 S=${WORKDIR}/${MY_P}
 
@@ -40,6 +40,21 @@ src_prepare() {
 	sed -i -e '74i#define OF(x) x' src/io/filesystem/{un,}zip.h || die
 	sed -i -e '22i#define OF(x) x' src/io/filesystem/ioapi.h || die
 	sed -i -e '/Boost_USE_STATIC_LIBS/s:ON:OFF:' CMakeLists.txt || die
+
+	# how do I hate boost? Let me count the ways...
+	local boost_ver=$(best_version ">=dev-libs/boost-1.37")
+
+	boost_ver=${boost_ver/*boost-/}
+	boost_ver=${boost_ver%.*}
+	boost_ver=${boost_ver/./_}
+
+	einfo "Using boost version ${boost_ver}"
+	append-cxxflags \
+		-I/usr/include/boost-${boost_ver}
+	append-ldflags \
+		-L/usr/$(get_libdir)/boost-${boost_ver}
+	export BOOST_INCLUDEDIR="/usr/include/boost-${boost_ver}"
+	export BOOST_LIBRARYDIR="/usr/$(get_libdir)/boost-${boost_ver}"
 }
 
 src_configure() {
