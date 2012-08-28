@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sphinxcontrib-googleanalytics
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinxcontrib-googleanalytics/ChangeLog,v 1.2 2012/08/05 03:53:12 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinxcontrib-googleanalytics/ChangeLog,v 1.3 2012/08/28 19:11:24 floppym Exp $
+
+  28 Aug 2012; Mike Gilbert <floppym@gentoo.org>
+  sphinxcontrib-googleanalytics-0.1.ebuild:
+  Restrict python 3.
 
   05 Aug 2012; Mike Gilbert <floppym@gentoo.org> +files/setup.py.utf-8.patch,
   sphinxcontrib-googleanalytics-0.1.ebuild:
