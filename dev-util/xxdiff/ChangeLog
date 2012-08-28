@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/xxdiff
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/ChangeLog,v 1.55 2011/12/14 15:10:59 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/ChangeLog,v 1.56 2012/08/28 14:38:07 ssuominen Exp $
+
+  28 Aug 2012; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
+  Push to maintainer-needed.
 
   14 Dec 2011; Samuli Suominen <ssuominen@gentoo.org>
   xxdiff-4.0_beta1_p20110426.ebuild:
