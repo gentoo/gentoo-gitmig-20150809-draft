@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14078 2012/08/28 03:10:35 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14079 2012/08/28 07:55:54 johu Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -182,6 +182,20 @@ dev-ruby/mail:0
 # Tests fails to build, needs >=net-libs/telepathy-glib-0.19.0.
 # Not in tree yet...
 >=net-libs/telepathy-qt-0.9.3
+~net-im/kde-telepathy-meta-0.5.0
+~net-im/ktp-accounts-kcm-0.5.0
+~net-im/ktp-approver-0.5.0
+~net-im/ktp-auth-handler-0.5.0
+~net-im/ktp-call-ui-0.5.0
+~net-im/ktp-common-internals-0.5.0
+~net-im/ktp-contact-applet-0.5.0
+~net-im/ktp-contact-list-0.5.0
+~net-im/ktp-contact-runner-0.5.0
+~net-im/ktp-filetransfer-handler-0.5.0
+~net-im/ktp-kded-module-0.5.0
+~net-im/ktp-presence-applet-0.5.0
+~net-im/ktp-send-file-0.5.0
+~net-im/ktp-text-ui-0.5.0
 
 # Ralph Sennhauser <sera@gentoo.org> (13 Jul 2012)
 # Mask for removal in 30 days. Fails to build with java 7 #421917.
