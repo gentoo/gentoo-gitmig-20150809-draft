@@ -1,6 +1,9 @@
 # ChangeLog for app-text/texlive
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/ChangeLog,v 1.109 2012/08/08 01:22:07 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/ChangeLog,v 1.110 2012/08/28 21:28:42 blueness Exp $
+
+  28 Aug 2012; Anthony G. Basile <blueness@gentoo.org> texlive-2012.ebuild:
+  Keyword ~mips for bug #428248
 
   08 Aug 2012; Naohiro Aota <naota@gentoo.org> texlive-2012.ebuild:
   Add ~x86-fbsd wrt bug #428248
