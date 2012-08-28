@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6927 2012/08/27 15:19:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6928 2012/08/28 00:23:11 vapier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Aug 2012; Mike Frysinger <vapier@gentoo.org> profiles.desc:
+  Add new s390x linux profile.
 
   27 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> base/use.mask,
   default/linux/use.mask:
