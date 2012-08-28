@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/csync/csync-0.50.8.ebuild,v 1.3 2012/08/28 13:07:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/csync/csync-0.50.8.ebuild,v 1.4 2012/08/28 13:21:00 scarabeus Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ IUSE="doc log samba +sftp test +webdav"
 
 RDEPEND="
 	dev-db/sqlite:3
-	dev-libs/iniparser
+	>=dev-libs/iniparser-3.1
 	dev-libs/openssl:0
 	log? ( dev-libs/log4c )
 	samba? ( net-fs/samba )
