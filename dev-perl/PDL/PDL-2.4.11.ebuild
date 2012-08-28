@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.11.ebuild,v 1.2 2012/07/06 03:53:51 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.11.ebuild,v 1.3 2012/08/28 16:37:26 bicatali Exp $
 
 EAPI=4
 
@@ -58,6 +58,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.4.2-makemakerfix.patch
 	# respect user choice for fortran compiler+flags, add pic
 	epatch "${FILESDIR}"/${PN}-2.4.11-fortran.patch
+	# search for shared fftw instead of static
+	epatch "${FILESDIR}"/${PN}-2.4.11-shared-fftw.patch
 	# search for shared hdf instead of static
 	epatch "${FILESDIR}"/${PN}-2.4.11-shared-hdf.patch
 	find . -name Makefile.PL -exec \
