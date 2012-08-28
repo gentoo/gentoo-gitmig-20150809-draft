@@ -1,19 +1,20 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/niecza/niecza-9999.ebuild,v 1.2 2012/08/28 07:50:36 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/niecza/niecza-21.ebuild,v 1.1 2012/08/28 07:50:36 patrick Exp $
 
 EAPI=4
 
-inherit eutils git-2
+inherit eutils multilib
 
-GITHUB_CRAP="sorear-niecza-3743eb0"
+GITHUB_CRAP="sorear-niecza-50939fa"
 
 DESCRIPTION="A Perl 6 compiler targetting the CLR with an experimental focus on optimizations."
 HOMEPAGE="https://github.com/sorear/niecza"
-EGIT_REPO_URI="https://github.com/sorear/niecza.git"
+SRC_URI="https://github.com/sorear/niecza/zipball/v${PV} -> niecza-${PV}.zip"
 
 LICENSE="Artistic-2"
 SLOT="0"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-lang/mono"
@@ -26,7 +27,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/fix-bootstrap-${PV}.patch || die "Failed to fix"
 	cd "${S}"
 	# bootstrap only works from git dirs? sigh :)
-	sed -i -e 's:@git describe --tags:echo "v9999":' Makefile
+	sed -i -e 's:@git describe --tags:echo "v${PV}":' Makefile
 	# silly workaround for stuff trying to write everywhere: copy the installed niecza here (sigh)
 	# since we have different installation paths for the bin version we need to check here
 	mkdir boot -p
@@ -41,11 +42,11 @@ src_prepare() {
 src_configure() { :; }
 
 src_compile() {
+	export XDG_DATA_HOME="${S}"
 	emake -j1 || die
 }
 
 src_test() {
-	export XDG_DATA_HOME="${S}"
 	emake -j1 test || die
 }
 
