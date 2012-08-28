@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/opensc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.125 2012/08/28 10:32:07 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.126 2012/08/28 12:20:06 blueness Exp $
+
+  28 Aug 2012; Anthony G. Basile <blueness@gentoo.org> opensc-0.12.2-r2.ebuild:
+  Stable arm, bug #432766
 
   28 Aug 2012; Anthony G. Basile <blueness@gentoo.org> opensc-0.12.2-r2.ebuild:
   Stable ppc, bug #432766
