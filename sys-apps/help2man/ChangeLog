@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/help2man
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.95 2012/08/26 17:32:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.96 2012/08/28 09:07:00 radhermit Exp $
+
+*help2man-1.40.12 (28 Aug 2012)
+
+  28 Aug 2012; Tim Harder <radhermit@gentoo.org> +help2man-1.40.12.ebuild:
+  Version bump.
 
   26 Aug 2012; Raúl Porcel <armin76@gentoo.org> help2man-1.40.11.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #428774
