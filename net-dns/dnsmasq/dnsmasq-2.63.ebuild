@@ -1,21 +1,23 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.63.ebuild,v 1.1 2012/08/28 17:11:42 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.63.ebuild,v 1.2 2012/08/28 17:26:00 chutzpah Exp $
 
 EAPI=4
 
 inherit eutils toolchain-funcs flag-o-matic user systemd
 
-MY_P="${P/_/}"
-MY_PV="${PV/_/}"
 DESCRIPTION="Small forwarding DNS server"
 HOMEPAGE="http://www.thekelleys.org.uk/dnsmasq/"
-SRC_URI="http://www.thekelleys.org.uk/dnsmasq/${MY_P}.tar.xz"
+SRC_URI="http://www.thekelleys.org.uk/dnsmasq/${P}.tar.xz"
 
 LICENSE="|| ( GPL-2 GPL-3 )"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="conntrack dbus +dhcp idn ipv6 lua nls script tftp"
+DM_LINGUAS="de es fi fr id it no pl pt_BR ro"
+for dm_lingua in ${DM_LINGUAS}; do
+	IUSE+=" linguas_${dm_lingua}"
+done
 
 RDEPEND="dbus? ( sys-apps/dbus )
 	idn? ( net-dns/libidn )
@@ -29,8 +31,6 @@ RDEPEND="dbus? ( sys-apps/dbus )
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	app-arch/xz-utils"
-
-S="${WORKDIR}/${PN}-${MY_PV}"
 
 REQUIRED_USE="lua? ( script )"
 
@@ -90,6 +90,12 @@ src_install() {
 		MANDIR=/usr/share/man \
 		DESTDIR="${D}" \
 		install$(use nls && echo "-i18n")
+
+	local lingua
+	for lingua in ${DM_LINGUAS}; do
+		use linguas_${lingua} || rm -rf "${D}"/usr/share/locale/${lingua}
+	done
+	rmdir --ignore-fail-on-non-empty "${D}"/usr/share/locale/
 
 	dodoc CHANGELOG CHANGELOG.archive FAQ
 	dodoc -r logo
