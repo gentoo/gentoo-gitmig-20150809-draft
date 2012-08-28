@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-pictures
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-pictures/ChangeLog,v 1.70 2012/07/27 12:27:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-pictures/ChangeLog,v 1.71 2012/08/28 21:18:06 blueness Exp $
+
+  28 Aug 2012; Anthony G. Basile <blueness@gentoo.org>
+  texlive-pictures-2012.ebuild:
+  Keyword ~mips for bug #428248
 
   27 Jul 2012; Alexis Ballier <aballier@gentoo.org>
   texlive-pictures-2012.ebuild:
