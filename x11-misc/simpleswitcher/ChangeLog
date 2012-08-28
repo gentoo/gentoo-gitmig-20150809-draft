@@ -1,0 +1,9 @@
+# ChangeLog for x11-misc/simpleswitcher
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/simpleswitcher/ChangeLog,v 1.1 2012/08/28 11:29:44 xmw Exp $
+
+*simpleswitcher-9999 (28 Aug 2012)
+
+  28 Aug 2012; Michael Weber <xmw@gentoo.org> +metadata.xml,
+  +simpleswitcher-9999.ebuild:
+  Initial import, based on the work of avx on bug 432954.
