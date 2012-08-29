@@ -1,6 +1,12 @@
 # ChangeLog for dev-embedded/openocd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/ChangeLog,v 1.32 2012/08/22 17:29:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/ChangeLog,v 1.33 2012/08/29 17:51:45 hwoarang Exp $
+
+*openocd-0.6.0_rc2 (29 Aug 2012)
+
+  29 Aug 2012; Markos Chandras <hwoarang@gentoo.org> +openocd-0.6.0_rc2.ebuild,
+  -openocd-0.6.0_rc1.ebuild, openocd-9999.ebuild:
+  Version bump. Fix jimtcl dependency on live ebuild
 
   22 Aug 2012; Markos Chandras <hwoarang@gentoo.org> openocd-0.5.0.ebuild:
   Fix dependency for jimtcl
