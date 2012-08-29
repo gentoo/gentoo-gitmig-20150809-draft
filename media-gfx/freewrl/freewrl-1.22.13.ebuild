@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.22.13.ebuild,v 1.4 2012/06/28 19:12:02 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.22.13.ebuild,v 1.5 2012/08/29 14:25:19 axs Exp $
 
 EAPI=4
 
@@ -45,6 +45,7 @@ RDEPEND="${COMMONDEPEND}
 	sox? ( media-sound/sox )"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-fontconfig-match.patch
 	if has_version ">=dev-lang/spidermonkey-1.8.7" ; then
 		epatch "${FILESDIR}"/${P}-mozjs187-config.patch
 		eautoreconf

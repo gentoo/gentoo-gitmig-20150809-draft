@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/freewrl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.45 2012/06/28 19:12:02 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.46 2012/08/29 14:25:19 axs Exp $
+
+  29 Aug 2012; Ian Stakenvicius <axs@gentoo.org> freewrl-1.22.13.ebuild,
+  +files/freewrl-1.22.13-fontconfig-match.patch:
+  fixed upstream bug id 3553666 re compatibility with fontconfig-2.90, thanks
+  to Ian Abbott for reporting
 
   28 Jun 2012; Ian Stakenvicius <axs@gentoo.org> freewrl-1.22.13.ebuild,
   +files/freewrl-1.22.13-mozjs187-config.patch:
