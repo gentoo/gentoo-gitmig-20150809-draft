@@ -1,31 +1,30 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hotot/hotot-0.9.8.7-r1.ebuild,v 1.2 2012/08/29 15:00:14 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hotot/hotot-0.9.8.8_pre.ebuild,v 1.1 2012/08/29 22:22:13 xmw Exp $
 
 EAPI=4
 
 PYTHON_DEPEND="gtk? 2"
 RESTRICT_PYTHON_ABIS="3.*"
 
-inherit cmake-utils python vcs-snapshot
+inherit cmake-utils eutils python vcs-snapshot
 
 DESCRIPTION="lightweight & open source microblogging client"
 HOMEPAGE="http://hotot.org"
-SRC_URI="https://github.com/shellex/Hotot/tarball/${PV} -> ${P}.tar.gz"
+SRC_URI="https://github.com/shellex/Hotot/tarball/d1ad4f714 -> ${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="chrome gtk kde qt4"
 
-RDEPEND="dev-python/PyQt4[sql]
-	dev-python/dbus-python
+RDEPEND="dev-python/dbus-python
 	gtk? ( dev-python/pywebkitgtk )
 	qt4? ( x11-libs/qt-webkit:4
-		x11-libs/qt-sql:4
 		kde? ( kde-base/kdelibs ) )"
 DEPEND="${RDEPEND}
-	sys-devel/gettext"
+	sys-devel/gettext
+	qt4? ( x11-libs/qt-sql:4 )"
 
 REQUIRED_USE="|| ( chrome gtk qt4 )"
 
@@ -36,6 +35,10 @@ pkg_setup() {
 		fi
 	fi
 	python_pkg_setup
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-it_IT.patch
 }
 
 src_configure() {
