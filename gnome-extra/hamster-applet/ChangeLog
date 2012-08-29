@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/hamster-applet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hamster-applet/ChangeLog,v 1.45 2012/05/05 06:25:22 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hamster-applet/ChangeLog,v 1.46 2012/08/29 05:03:09 leio Exp $
+
+  29 Aug 2012; Mart Raudsepp <leio@gentoo.org> hamster-applet-2.32.1.ebuild:
+  QA: Fix python[sqlite] depend to eclass method. This avoids portage trying to
+  satisfy the sqlite USE dep by installing a python3 version with USE=sqlite if
+  no version is installed with USE=sqlite, and properly requiring it of a
+  python2 SLOT instead (though not necessarily the latest python2 we end up
+  using)
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> hamster-applet-2.32.1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
