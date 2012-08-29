@@ -1,11 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipdb/ipdb-0.6.ebuild,v 1.1 2011/09/16 15:59:46 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipdb/ipdb-0.7.ebuild,v 1.1 2012/08/29 08:04:30 xarthisius Exp $
 
 EAPI="3"
-PYTHON_DEPEND="2"
+PYTHON_DEPEND="*"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils
 
