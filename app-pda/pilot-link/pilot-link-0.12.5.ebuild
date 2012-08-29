@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.12.5.ebuild,v 1.10 2012/06/16 14:02:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.12.5.ebuild,v 1.11 2012/08/29 03:20:32 blueness Exp $
 
 EAPI=3
 
@@ -16,7 +16,7 @@ SRC_URI="http://pilot-link.org/source/${P}.tar.bz2"
 
 LICENSE="|| ( GPL-2 LGPL-2 )"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="bluetooth debug java perl png python readline static-libs threads usb"
 
 COMMON_DEPEND="dev-libs/popt
