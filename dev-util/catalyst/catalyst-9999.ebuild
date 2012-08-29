@@ -1,15 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-9999.ebuild,v 1.20 2012/05/15 16:54:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-9999.ebuild,v 1.21 2012/08/29 04:53:52 jmbsvicetto Exp $
 
 # catalyst-9999         -> latest Git
-# catalyst-2.9999       -> catalyst_2 branch from Git
+# catalyst-3.9999       -> catalyst_3 branch from Git
 # catalyst-VER          -> normal catalyst release
 
 EAPI=3
 PYTHON_DEPEND="2"
 
-if [[ ${PV} == 9999* || ${PV} == 2.9999* ]]; then
+if [[ ${PV} == 9999* || ${PV} == 3.9999* ]]; then
 	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/catalyst.git"
 	inherit git-2
 	SRC_URI=""
@@ -51,7 +51,7 @@ pkg_setup() {
 	einfo "and they are considered to be the authorative source of information"
 	einfo "on catalyst."
 	echo
-	if [[ ${PV} == 9999* || ${PV} == 2.9999* ]]; then
+	if [[ ${PV} == 9999* || ${PV} == 3.9999* ]]; then
 		ewarn "The ${EGIT_BRANCH:-master} branch (what you get with this ${PV} ebuild) contains"
 		ewarn "work-in-progress code. Be aware that it's likely that it will not"
 		ewarn "be in a working state at any given point. Please do not file bugs"
@@ -69,7 +69,7 @@ src_install() {
 	insinto /usr/$(get_libdir)/${PN}
 	exeinto /usr/$(get_libdir)/${PN}
 	doexe catalyst || die "copying catalyst"
-	if [[ ${PV} == 9999* ]]; then
+	if [[ ${PV} == 3.9999* ]]; then
 		doins -r modules files || die "copying files"
 	else
 		doins -r arch modules livecd || die "copying files"

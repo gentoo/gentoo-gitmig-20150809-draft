@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.7.1.ebuild,v 1.2 2012/05/03 03:50:25 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.7.1.ebuild,v 1.3 2012/08/29 04:53:52 jmbsvicetto Exp $
 
 # catalyst-9999         -> latest Git
 # catalyst-2.9999       -> catalyst_2 branch from Git
