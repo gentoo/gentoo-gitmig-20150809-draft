@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.0.55-r1.ebuild,v 1.6 2012/06/08 11:33:25 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.0.55-r1.ebuild,v 1.7 2012/08/29 03:17:11 mattst88 Exp $
 
 EAPI=3
 inherit multilib eutils flag-o-matic pax-utils
@@ -11,8 +11,6 @@ BV_AMD64=1.0.37
 BV_PPC=1.0.28
 BV_SPARC=1.0.28
 BV_ALPHA=1.0.28
-BV_MIPS=1.0.23
-BV_MIPSEL=1.0.28
 
 DESCRIPTION="Steel Bank Common Lisp (SBCL) is an implementation of ANSI Common Lisp."
 HOMEPAGE="http://sbcl.sourceforge.net/"
@@ -21,14 +19,12 @@ SRC_URI="mirror://sourceforge/sbcl/${P}-source.tar.bz2
 	amd64? ( mirror://sourceforge/sbcl/${PN}-${BV_AMD64}-x86-64-linux-binary.tar.bz2 )
 	ppc? ( mirror://sourceforge/sbcl/${PN}-${BV_PPC}-powerpc-linux-binary.tar.bz2 )
 	sparc? ( mirror://sourceforge/sbcl/${PN}-${BV_SPARC}-sparc-linux-binary.tar.bz2 )
-	alpha? ( mirror://sourceforge/sbcl/${PN}-${BV_ALPHA}-alpha-linux-binary.tar.bz2 )
-	mips? ( !cobalt? ( mirror://sourceforge/sbcl/${PN}-${BV_MIPS}-mips-linux-binary.tar.bz2 ) )
-	mips? ( cobalt? ( mirror://sourceforge/sbcl/${PN}-${BV_MIPSEL}-mipsel-linux-binary.tar.bz2 ) )"
+	alpha? ( mirror://sourceforge/sbcl/${PN}-${BV_ALPHA}-alpha-linux-binary.tar.bz2 )"
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64 ppc ~sparc x86"
-IUSE="+asdf ldb source +threads +unicode debug doc cobalt pax_kernel"
+IUSE="+asdf ldb source +threads +unicode debug doc pax_kernel"
 
 DEPEND="doc? ( sys-apps/texinfo >=media-gfx/graphviz-2.26.0 )
 	pax_kernel? ( sys-apps/paxctl )"
