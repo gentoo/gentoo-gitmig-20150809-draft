@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/pyzmq-2.2.0.1.ebuild,v 1.2 2012/08/29 09:16:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/pyzmq-2.2.0.1.ebuild,v 1.3 2012/08/29 17:00:38 floppym Exp $
 
 EAPI="3"
-PYTHON_DEPEND="*:2.5"
+PYTHON_DEPEND="*:2.6"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.4 3.* *-jython 2.7-pypy-*"
+RESTRICT_PYTHON_ABIS="2.4 2.5 3.* *-jython 2.7-pypy-*"
 DISTUTILS_SRC_TEST="nosetests"
 PYTHON_TESTS_RESTRICTED_ABIS="3*"
 
