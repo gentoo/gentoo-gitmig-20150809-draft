@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.13.3.1.ebuild,v 1.1 2012/08/28 16:19:09 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.13.3.1.ebuild,v 1.2 2012/08/29 17:13:26 phajdan.jr Exp $
 
 EAPI="4"
 
@@ -24,11 +24,14 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.10.8.10-freebsd9.patch
+	epatch "${FILESDIR}"/${PN}-makefile-hardfp-r0.patch
 }
 
 src_compile() {
 	tc-export AR CC CXX RANLIB
 	export LINK=${CXX}
+
+	local hardfp=off
 
 	# Use target arch detection logic from bug #354601.
 	case ${CHOST} in
@@ -39,6 +42,9 @@ src_compile() {
 			else
 				myarch=x64
 			fi ;;
+		arm*-hardfloat-*)
+			hardfp=on
+			myarch=arm ;;
 		arm*-*) myarch=arm ;;
 		*) die "Unrecognized CHOST: ${CHOST}"
 	esac
@@ -57,6 +63,7 @@ src_compile() {
 		werror=no \
 		soname_version=${soname_version} \
 		snapshot=${snapshot} \
+		hardfp=${hardfp} \
 		${mytarget} || die
 
 	pax-mark m out/${mytarget}/{cctest,d8,shell} || die

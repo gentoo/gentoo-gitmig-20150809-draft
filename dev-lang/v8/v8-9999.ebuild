@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.31 2012/07/28 20:25:57 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.32 2012/08/29 17:13:26 phajdan.jr Exp $
 
 EAPI="4"
 
@@ -32,6 +32,8 @@ src_compile() {
 	tc-export AR CC CXX RANLIB
 	export LINK=${CXX}
 
+	local hardfp=off
+
 	# Use target arch detection logic from bug #354601.
 	case ${CHOST} in
 		i?86-*) myarch=ia32 ;;
@@ -41,6 +43,9 @@ src_compile() {
 			else
 				myarch=x64
 			fi ;;
+		arm*-hardfloat-*)
+			hardfp=on
+			myarch=arm ;;
 		arm*-*) myarch=arm ;;
 		*) die "Unrecognized CHOST: ${CHOST}"
 	esac
@@ -60,6 +65,7 @@ src_compile() {
 		werror=no \
 		soname_version=${soname_version} \
 		snapshot=${snapshot} \
+		hardfp=${hardfp} \
 		${mytarget} || die
 
 	pax-mark m out/${mytarget}/{cctest,d8,shell} || die

@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/v8
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.225 2012/08/28 16:19:09 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.226 2012/08/29 17:13:26 phajdan.jr Exp $
+
+  29 Aug 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/v8-makefile-hardfp-r0.patch, v8-3.13.3.1.ebuild, v8-9999.ebuild:
+  Recognize hardfp on arm, bug #429298 by Till Crueger.
 
 *v8-3.13.3.1 (28 Aug 2012)
 
