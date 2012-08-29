@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.391 2012/08/29 03:41:50 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.392 2012/08/29 03:50:01 cardoe Exp $
+
+  29 Aug 2012; Doug Goldstein <cardoe@gentoo.org> nvidia-drivers-304.43.ebuild:
+  Change how QA_PREBUILT is set based on Mike Gilbert <floppym@gentoo.org>
+  suggestion. bug #432370
 
   29 Aug 2012; Doug Goldstein <cardoe@gentoo.org> nvidia-drivers-304.43.ebuild,
   +files/nvidia-drivers-pax-const.patch,

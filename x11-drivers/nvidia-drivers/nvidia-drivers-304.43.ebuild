@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-304.43.ebuild,v 1.2 2012/08/29 03:41:50 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-304.43.ebuild,v 1.3 2012/08/29 03:50:01 cardoe Exp $
 
 EAPI=4
 
@@ -54,7 +54,7 @@ PDEPEND="X? ( >=x11-libs/libvdpau-0.3-r1 )"
 
 REQUIRED_USE="tools? ( X )"
 
-QA_PREBUILT=""
+QA_PREBUILT="opt/* usr/lib*"
 
 S=${WORKDIR}/
 
@@ -194,9 +194,6 @@ donvidia() {
 
 	# Get just the library name
 	libname=$(basename $1)
-
-	# Add it to QA_PREBUILT
-	QA_PREBUILT+=" ${MY_DEST}/${libname}.${MY_SOVER}"
 
 	# Install the library with the correct SOVER
 	${action} ${MY_LIB}.${MY_SOVER} || \
