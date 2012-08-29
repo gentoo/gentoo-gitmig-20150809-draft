@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-0.62.ebuild,v 1.3 2012/06/13 16:36:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-0.62.ebuild,v 1.4 2012/08/29 22:47:28 hasufell Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs versionator games
@@ -63,6 +63,7 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-build.patch \
 		"${FILESDIR}"/${PN}-0.5-pic.patch
+	epatch_user
 }
 
 src_compile() {

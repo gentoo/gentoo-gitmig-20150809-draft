@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-1.0.ebuild,v 1.2 2012/07/29 21:02:31 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-1.0.ebuild,v 1.3 2012/08/29 22:47:28 hasufell Exp $
 
 EAPI=4
 inherit eutils check-reqs gnome2-utils games
@@ -64,6 +64,7 @@ src_prepare() {
 	cd "${WORKDIR}"/${MY_P}_sdk || die
 	epatch "${FILESDIR}"/${P}-build.patch \
 		"${FILESDIR}"/${PN}-0.5-pic.patch
+	epatch_user
 }
 
 src_compile() {
