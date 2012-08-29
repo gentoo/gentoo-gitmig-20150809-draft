@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/tdb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/ChangeLog,v 1.44 2012/07/06 01:58:58 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/ChangeLog,v 1.45 2012/08/29 02:29:46 ottxor Exp $
+
+  29 Aug 2012; Christoph Junghans <ottxor@gentoo.org> tdb-1.2.10.ebuild:
+  added ~amd64-linux
 
   06 Jul 2012; Jeff Horelick <jdhore@gentoo.org> tdb-1.2.9.ebuild:
   marked x86 per bug 417107
@@ -160,4 +163,3 @@
   +metadata.xml:
   Initial commit. Ebuilds based on those provided by Marcel Greter in
   #231273
-
