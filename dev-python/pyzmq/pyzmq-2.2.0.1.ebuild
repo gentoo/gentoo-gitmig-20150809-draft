@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/pyzmq-2.2.0.1.ebuild,v 1.3 2012/08/29 17:00:38 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/pyzmq-2.2.0.1.ebuild,v 1.4 2012/08/29 17:11:31 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*:2.6"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.4 2.5 3.* *-jython 2.7-pypy-*"
+RESTRICT_PYTHON_ABIS="2.4 2.5 *-jython 2.7-pypy-*"
 DISTUTILS_SRC_TEST="nosetests"
 PYTHON_TESTS_RESTRICTED_ABIS="3*"
 
@@ -27,6 +27,11 @@ DEPEND="${RDEPEND}
 
 DOCS="README.rst"
 PYTHON_MODNAME="zmq"
+
+src_prepare() {
+	epatch "${FILESDIR}/${PN}-2.2.0.1-python3.patch"
+	distutils_src_prepare
+}
 
 src_test() {
 	testing() {
