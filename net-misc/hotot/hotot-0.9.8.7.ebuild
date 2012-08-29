@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hotot/hotot-0.9.8.7.ebuild,v 1.6 2012/08/27 08:29:44 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hotot/hotot-0.9.8.7.ebuild,v 1.7 2012/08/29 15:00:14 xmw Exp $
 
 EAPI=4
 
@@ -22,6 +22,7 @@ RDEPEND="dev-python/PyQt4[sql]
 	dev-python/dbus-python
 	gtk? ( dev-python/pywebkitgtk )
 	qt4? ( x11-libs/qt-webkit:4
+		x11-libs/qt-sql:4
 		kde? ( kde-base/kdelibs ) )"
 DEPEND="${RDEPEND}
 	sys-devel/gettext"

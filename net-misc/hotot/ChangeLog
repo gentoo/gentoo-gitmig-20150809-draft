@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/hotot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hotot/ChangeLog,v 1.20 2012/08/29 14:22:52 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hotot/ChangeLog,v 1.21 2012/08/29 15:00:14 xmw Exp $
+
+  29 Aug 2012; Michael Weber <xmw@gentoo.org> hotot-0.9.8.7-r1.ebuild,
+  hotot-0.9.8.7.ebuild:
+  Temporary fix for bug 427294, revert previous unconditional addition of dev-
+  python/PyQt4[sql]
 
   29 Aug 2012; Michael Weber <xmw@gentoo.org> -hotot-0.9.8.4.ebuild,
   -hotot-0.9.8.ebuild:
