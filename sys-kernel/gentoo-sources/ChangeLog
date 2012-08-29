@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1006 2012/08/26 17:14:37 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1007 2012/08/29 18:16:41 mpagano Exp $
+
+*gentoo-sources-3.4.10 (29 Aug 2012)
+
+  29 Aug 2012; Michael Pagano <mpagano@gentoo.org>
+  +gentoo-sources-3.4.10.ebuild:
+  Linux patch 3.4.10. Fix build warnings for lpfc when debugfs is not defined.
+  Bug #432604
 
 *gentoo-sources-3.5.3 (26 Aug 2012)
 
