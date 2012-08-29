@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.401 2012/08/20 19:45:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.402 2012/08/29 13:42:42 mgorny Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -1395,8 +1395,8 @@ usex() { use "$1" && echo "${2-yes}$4" || echo "${3-no}$5" ; } #382963
 # that they should not be linked to, i.e. whenever these files
 # correspond to plugins.
 #
-# Note: if your package installs any .pc files, this function implicitly
-# calls pkg-config. You should add it to your DEPEND in that case.
+# Note: if your package installs both static libraries and .pc files,
+# you need to add pkg-config to your DEPEND.
 prune_libtool_files() {
 	debug-print-function ${FUNCNAME} "$@"
 
@@ -1410,25 +1410,6 @@ prune_libtool_files() {
 				die "Invalid argument to ${FUNCNAME}(): ${opt}"
 		esac
 	done
-
-	# Create a list of all .pc-covered libs.
-	local pc_libs=()
-	if [[ ! ${removing_all} ]]; then
-		local f
-		local tf=${T}/prune-lt-files.pc
-		local pkgconf=$(tc-getPKG_CONFIG)
-
-		while IFS= read -r -d '' f; do # for all .pc files
-			local arg
-
-			sed -e '/^Requires:/d' "${f}" > "${tf}"
-			for arg in $("${pkgconf}" --libs "${tf}"); do
-				[[ ${arg} == -l* ]] && pc_libs+=( lib${arg#-l}.la )
-			done
-		done < <(find "${D}" -type f -name '*.pc' -print0)
-
-		rm -f "${tf}"
-	fi
 
 	local f
 	while IFS= read -r -d '' f; do # for all .la files
@@ -1453,17 +1434,40 @@ prune_libtool_files() {
 		# - respective static archive doesn't exist,
 		# - they are covered by a .pc file already,
 		# - they don't provide any new information (no libs & no flags).
-		local reason
+		local reason pkgconfig_scanned
 		if [[ ${removing_all} ]]; then
 			reason='requested'
 		elif [[ ! -f ${archivefile} ]]; then
 			reason='no static archive'
-		elif has "${f##*/}" "${pc_libs[@]}"; then
-			reason='covered by .pc'
 		elif [[ ! $(sed -nre \
 				"s/^(dependency_libs|inherited_linker_flags)='(.*)'$/\2/p" \
 				"${f}") ]]; then
 			reason='no libs & flags'
+		else
+			if [[ ! ${pkgconfig_scanned} ]]; then
+				# Create a list of all .pc-covered libs.
+				local pc_libs=()
+				if [[ ! ${removing_all} ]]; then
+					local f
+					local tf=${T}/prune-lt-files.pc
+					local pkgconf=$(tc-getPKG_CONFIG)
+
+					while IFS= read -r -d '' f; do # for all .pc files
+						local arg
+
+						sed -e '/^Requires:/d' "${f}" > "${tf}"
+						for arg in $("${pkgconf}" --libs "${tf}"); do
+							[[ ${arg} == -l* ]] && pc_libs+=( lib${arg#-l}.la )
+						done
+					done < <(find "${D}" -type f -name '*.pc' -print0)
+
+					rm -f "${tf}"
+				fi
+
+				pkgconfig_scanned=1
+			fi
+
+			has "${f##*/}" "${pc_libs[@]}" && reason='covered by .pc'
 		fi
 
 		if [[ ${reason} ]]; then

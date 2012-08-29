@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.382 2012/08/28 15:28:01 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.383 2012/08/29 13:42:42 mgorny Exp $
+
+  29 Aug 2012; Michał Górny <mgorny@gentoo.org> eutils.eclass:
+  prune_libtool_files: run pkg-config code only if necessary.
 
   28 Aug 2012; Michael Pagano <mpagano@gentoo.org> linux-mod.eclass:
   Remove deprecated and unrecommended parameter -r from depmod
