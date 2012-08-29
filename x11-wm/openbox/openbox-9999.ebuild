@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-9999.ebuild,v 1.19 2012/08/27 10:29:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-9999.ebuild,v 1.20 2012/08/29 10:52:59 hasufell Exp $
 
 EAPI="2"
 inherit multilib autotools eutils git-2
@@ -40,13 +40,16 @@ src_prepare() {
 	# Lets try to replace docbook-to-man with docbook2man.pl since
 	# Gentoo does not provide (why?) a docbook-to-man package
 	sed -i -e "s:docbook-to-man:docbook2man.pl:" "${S}"/Makefile.am
+	sed -i \
+		-e 's/-fno-strict-aliasing//' \
+		m4/openbox.m4 || die
 	epatch_user
-	eautopoint
 	eautoreconf
 }
 
 src_configure() {
 	econf \
+		--disable-silent-rules \
 		--docdir=/usr/share/doc/${PF} \
 		$(use_enable debug) \
 		$(use_enable imlib imlib2) \
