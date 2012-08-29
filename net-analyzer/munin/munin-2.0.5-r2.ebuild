@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.5-r2.ebuild,v 1.2 2012/08/24 22:13:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.5-r2.ebuild,v 1.3 2012/08/29 18:04:07 flameeyes Exp $
 
 EAPI=4
 
@@ -37,10 +37,6 @@ DEPEND_COM="dev-lang/perl
 			memcached? ( dev-perl/Cache-Memcached )
 			cgi? ( dev-perl/FCGI )
 			syslog? ( virtual/perl-Sys-Syslog )
-			ipmi? (
-				>=sys-libs/freeipmi-1.1.6-r1
-				virtual/awk
-			)
 			http? ( dev-perl/libwww-perl )
 			dev-perl/DBI
 			dev-perl/DateManip
@@ -75,6 +71,8 @@ DEPEND="${DEPEND_COM}
 		dev-perl/IO-Socket-INET6
 	)"
 RDEPEND="${DEPEND_COM}
+		virtual/awk
+		ipmi? ( >=sys-libs/freeipmi-1.1.6-r1 )
 		java? (
 			>=virtual/jre-1.5
 			|| ( net-analyzer/netcat6 net-analyzer/netcat )
