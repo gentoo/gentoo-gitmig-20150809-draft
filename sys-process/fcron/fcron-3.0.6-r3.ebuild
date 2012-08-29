@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.6-r3.ebuild,v 1.1 2012/08/29 17:38:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.6-r3.ebuild,v 1.2 2012/08/29 17:48:36 flameeyes Exp $
 
 EAPI=4
 
@@ -142,7 +142,7 @@ auth		sufficient		pam_permit.so
 
 # Still use the system-auth stack for account and session as the
 # sysadmin might have set up stuff properly, and also avoids
-# sidestepping limits (since fcrontab will run $EDITOR).
+# sidestepping limits (since fcrontab will run \$EDITOR).
 account		include			system-auth
 session		include			system-auth
 EOF
