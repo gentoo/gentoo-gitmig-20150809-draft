@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gst-python
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.107 2012/08/27 06:59:33 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.108 2012/08/30 21:29:43 ago Exp $
+
+  30 Aug 2012; Agostino Sarubbo <ago@gentoo.org> gst-python-0.10.22.ebuild:
+  Stable for amd64, wrt bug #432946
 
   27 Aug 2012; Mart Raudsepp <leio@gentoo.org> gst-python-0.10.22.ebuild:
   Use python.eclass standard function for automake compatibility instead of
