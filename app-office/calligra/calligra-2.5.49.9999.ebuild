@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.4.49.9999.ebuild,v 1.7 2012/08/20 21:01:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.5.49.9999.ebuild,v 1.1 2012/08/30 11:30:45 dilfridge Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -8,7 +8,7 @@
 
 EAPI=4
 
-EGIT_BRANCH="calligra/2.4"
+EGIT_BRANCH="calligra/2.5"
 
 KDE_SCM=git
 KDE_MINIMAL=4.6.4
@@ -22,14 +22,30 @@ inherit kde4-base versionator
 
 DESCRIPTION="KDE Office Suite"
 HOMEPAGE="http://www.calligra.org/"
-[[ ${PV} == *9999 ]] || SRC_URI="mirror://kde/stable/${P}/${P}.tar.bz2"
+
+case ${PV} in
+	2.[456789].[789]?)
+		# beta or rc releases
+		SRC_URI="mirror://kde/unstable/${P}/${P}.tar.bz2" ;;
+	2.[456789].?)
+		# stable releases
+		SRC_URI="mirror://kde/stable/${P}/${P}.tar.bz2" ;;
+	2.[456789].9999)
+		# stable branch live ebuild
+		SRC_URI="" ;;
+	9999)
+		# master branch live ebuild
+		SRC_URI="" ;;
+esac
 
 LICENSE="GPL-2"
 SLOT="4"
+
 [[ ${PV} == *9999 ]] || KEYWORDS="~amd64 ~x86"
+
 IUSE="attica +crypt +eigen +exif fftw +fontconfig freetds +gif glew +glib +gsf
-gsl +jpeg jpeg2k +kdcraw kdepim +lcms marble mysql +mso +okular openctl openexr
-+pdf postgres +semantic-desktop +ssl sybase test tiff +threads +truetype
+gsl +jpeg jpeg2k +kdcraw kdepim +lcms marble mysql +okular opengtl openexr
++pdf postgres +semantic-desktop spacenav +ssl sybase test tiff +threads +truetype
 word-perfect xbase +xml +xslt"
 
 # please do not sort here, order is same as in CMakeLists.txt
@@ -88,7 +104,7 @@ RDEPEND="
 	marble? ( $(add_kdebase_dep marble) )
 	mysql? ( virtual/mysql )
 	okular? ( $(add_kdebase_dep okular) )
-	openctl? ( >=media-libs/opengtl-0.9.15 )
+	opengtl? ( >=media-libs/opengtl-0.9.15 )
 	openexr? ( media-libs/openexr )
 	pdf? (
 		app-text/poppler
@@ -99,6 +115,7 @@ RDEPEND="
 		dev-libs/libpqxx
 	)
 	semantic-desktop? ( dev-libs/soprano $(add_kdebase_dep kdelibs semantic-desktop) )
+	spacenav? ( dev-libs/libspnav  )
 	ssl? ( dev-libs/openssl )
 	sybase? ( dev-db/freetds )
 	tiff? ( media-libs/tiff )
@@ -116,12 +133,12 @@ RDEPEND="
 	)
 "
 DEPEND="${RDEPEND}"
-PDEPEND=">=app-office/calligra-l10n-$(get_version_component_range 1-2)"
+
+[[ ${PV} == 9999 ]] && LANGVERSION="2.4" || LANGVERSION="$(get_version_component_range 1-2)"
+PDEPEND=">=app-office/calligra-l10n-${LANGVERSION}"
 
 RESTRICT=test
 # bug 394273
-
-PATCHES=( "${FILESDIR}/${PN}-2.4.2-marble.patch" )
 
 src_configure() {
 	local cal_ft
@@ -136,8 +153,9 @@ src_configure() {
 		"-DGHNS=ON"
 		"-DWITH_X11=ON"
 		"-DWITH_Qt4=ON"
-		"-DWITH_Iconv=ON"
-		"-DQT3SUPPORT=ON" # kde4-base.eclass pulls this in anyway
+		"-DBUILD_libmsooxml=ON"      # only internal code, no deps
+		"-DWITH_Iconv=ON"            # available on all supported arches and many more
+		"-DQT3SUPPORT=ON"            # kde4-base.eclass pulls this in anyway
 	)
 
 	# default disablers
@@ -149,7 +167,6 @@ src_configure() {
 		"-DWITH_TINY=OFF"
 		"-DWITH_CreateResources=OFF" # NOT PACKAGED: http://create.freedesktop.org/
 		"-DWITH_DCMTK=OFF"           # NOT PACKAGED: http://www.dcmtk.org/dcmtk.php.en
-		"-DWITH_Spnav=OFF"           # NOT PACKAGED: http://spacenav.sourceforge.net/
 	)
 
 	# regular options
@@ -174,25 +191,29 @@ src_configure() {
 		$(cmake-utils_use_with lcms LCMS2)
 		$(cmake-utils_use_with marble Marble)
 		$(cmake-utils_use_with mysql MySQL)
+		$(cmake-utils_use_build mysql)
 		$(cmake-utils_use_with okular Okular)
-		$(cmake-utils_use_with openctl OpenCTL)
+		$(cmake-utils_use_with opengtl OpenCTL)
 		$(cmake-utils_use_with openexr OpenEXR)
 		$(cmake-utils_use_with opengl OpenGL)
 		$(cmake-utils_use_with pdf Poppler)
 		$(cmake-utils_use_with pdf Pstoedit)
 		$(cmake-utils_use_with postgres PostgreSQL)
+		$(cmake-utils_use_build postgres pqxx)
 		$(cmake-utils_use_with semantic-desktop Soprano)
 		$(cmake-utils_use semantic-desktop NEPOMUK)
+		$(cmake-utils_use_with spacenav Spnav)
 		$(cmake-utils_use_with ssl OpenSSL)
 		$(cmake-utils_use_with sybase FreeTDS)
+		$(cmake-utils_use_build sybase sybase)
 		$(cmake-utils_use_with tiff TIFF)
 		$(cmake-utils_use_with threads Threads)
 		$(cmake-utils_use_with truetype Freetype)
 		$(cmake-utils_use_with word-perfect WPD)
 		$(cmake-utils_use_with word-perfect WPG)
 		$(cmake-utils_use_with xbase XBase)
+		$(cmake-utils_use_build xbase xbase)
 		$(cmake-utils_use_with xslt LibXslt)
-		$(cmake-utils_use_build mso libmsooxml)
 	)
 
 	# applications

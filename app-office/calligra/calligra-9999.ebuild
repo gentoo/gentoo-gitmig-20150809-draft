@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-9999.ebuild,v 1.28 2012/08/21 19:06:56 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-9999.ebuild,v 1.29 2012/08/30 11:30:45 dilfridge Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -153,7 +153,7 @@ src_configure() {
 		"-DWITH_Qt4=ON"
 		"-DBUILD_libmsooxml=ON"      # only internal code, no deps
 		"-DWITH_Iconv=ON"            # available on all supported arches and many more
-		"-DQT3SUPPORT=ON" # kde4-base.eclass pulls this in anyway
+		"-DQT3SUPPORT=ON"            # kde4-base.eclass pulls this in anyway
 	)
 
 	# default disablers
@@ -189,6 +189,7 @@ src_configure() {
 		$(cmake-utils_use_with lcms LCMS2)
 		$(cmake-utils_use_with marble Marble)
 		$(cmake-utils_use_with mysql MySQL)
+		$(cmake-utils_use_build mysql)
 		$(cmake-utils_use_with okular Okular)
 		$(cmake-utils_use_with opengtl OpenCTL)
 		$(cmake-utils_use_with openexr OpenEXR)
@@ -196,17 +197,20 @@ src_configure() {
 		$(cmake-utils_use_with pdf Poppler)
 		$(cmake-utils_use_with pdf Pstoedit)
 		$(cmake-utils_use_with postgres PostgreSQL)
+		$(cmake-utils_use_build postgres pqxx)
 		$(cmake-utils_use_with semantic-desktop Soprano)
 		$(cmake-utils_use semantic-desktop NEPOMUK)
 		$(cmake-utils_use_with spacenav Spnav)
 		$(cmake-utils_use_with ssl OpenSSL)
 		$(cmake-utils_use_with sybase FreeTDS)
+		$(cmake-utils_use_build sybase sybase)
 		$(cmake-utils_use_with tiff TIFF)
 		$(cmake-utils_use_with threads Threads)
 		$(cmake-utils_use_with truetype Freetype)
 		$(cmake-utils_use_with word-perfect WPD)
 		$(cmake-utils_use_with word-perfect WPG)
 		$(cmake-utils_use_with xbase XBase)
+		$(cmake-utils_use_build xbase xbase)
 		$(cmake-utils_use_with xslt LibXslt)
 	)
 
