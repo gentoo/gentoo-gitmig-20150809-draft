@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<maintainer>
-  <email>pinkbyte@mail.ru</email>
-  <name>Pinkbyte</name>
-  <description>Maintainer. Assign bugs to him</description>
-</maintainer>
-<maintainer>
-  <email>naota@gentoo.org</email>
-  <name>Naohiro Aota</name>
-  <description>Proxy maintainer. CC him on bugs</description>
-</maintainer>
 <herd>desktop-effects</herd>
 <longdescription lang="en">Emerald themes are the themes for emerald
 </longdescription>
