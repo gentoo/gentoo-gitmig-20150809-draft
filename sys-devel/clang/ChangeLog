@@ -1,6 +1,19 @@
 # ChangeLog for sys-devel/clang
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.76 2012/08/05 14:07:08 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.77 2012/08/30 09:41:16 voyageur Exp $
+
+  30 Aug 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  -files/cl-patches/0001-Add-r600-TargetInfo.patch,
+  +files/cl-patches/clang-0001-Add-r600-TargetInfo.patch,
+  -files/cl-patches/0002-r600-Add-some-target-builtins.patch,
+  +files/cl-patches/llvm-0001-r600-Add-some-intrinsic-definitions.patch,
+  +files/cl-patches/llvm-0002-r600-Add-get_global_size-and-get_local_size-intri
+  nsi.patch, +files/cl-patches/clang-0002-r600-Add-some-target-builtins.patch,
+  +files/cl-patches/clang-0003-r600-Add-read_global_size-and-read_local_size-bu
+  ilti.patch, clang-3.1-r5.ebuild,
+  -files/cl-patches/0003-r600-Add-read_global_size-and-read_local_size-builti.p
+  atch:
+  Also apply llvm r600 patches, should fix bug #427206
 
   05 Aug 2012; Richard Yao <ryao@gentoo.org> clang-3.1-r4.ebuild:
   Keyword ~x64-freebsd
