@@ -1,6 +1,11 @@
 # ChangeLog for dev-embedded/msp430-libc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/msp430-libc/ChangeLog,v 1.9 2012/05/17 03:07:36 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/msp430-libc/ChangeLog,v 1.10 2012/08/30 18:21:30 radhermit Exp $
+
+*msp430-libc-20120716 (30 Aug 2012)
+
+  30 Aug 2012; Tim Harder <radhermit@gentoo.org> +msp430-libc-20120716.ebuild:
+  Version bump.
 
 *msp430-libc-20120514 (17 May 2012)
 
