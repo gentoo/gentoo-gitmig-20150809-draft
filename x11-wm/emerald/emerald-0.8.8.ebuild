@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/emerald/emerald-0.8.8.ebuild,v 1.1 2012/05/07 01:50:19 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/emerald/emerald-0.8.8.ebuild,v 1.2 2012/08/30 11:47:15 pinkbyte Exp $
 
 EAPI="2"
 
@@ -41,14 +41,13 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--disable-dependency-tracking \
 		--disable-static \
 		--enable-fast-install \
-		--disable-mime-update || die "econf failed"
+		--disable-mime-update
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 
 	find "${D}" -name '*.la' -delete || die
 }
