@@ -1,0 +1,114 @@
+ MakeDepend.cc                | 1 +
+ Vec.h                        | 4 ++--
+ feudal/FeudalControlBlock.cc | 1 +
+ feudal/FeudalFileReader.h    | 1 +
+ feudal/MasterVec.h           | 6 +++---
+ feudal/SerfVec.h             | 4 ++--
+ 6 files changed, 10 insertions(+), 7 deletions(-)
+
+diff --git a/MakeDepend.cc b/MakeDepend.cc
+index 93032e8..619e6f7 100644
+--- a/MakeDepend.cc
++++ b/MakeDepend.cc
+@@ -25,6 +25,7 @@
+ #include <iterator>
+ #include <iostream>
+ #include <ctype.h>
++#include <unistd.h>
+ 
+ using namespace std;
+ 
+diff --git a/Vec.h b/Vec.h
+index f26f3f4..57eeff9 100644
+--- a/Vec.h
++++ b/Vec.h
+@@ -259,7 +259,7 @@ template <class T> class vec : public vector<T> {
+ 
+   template <class U>
+   void append( const vec<U>& y ) 
+-  {    insert( this->end( ), y.begin( ), y.end( ) );    }
++  {    this->insert( this->end( ), y.begin( ), y.end( ) );    }
+   
+   void append( const vec<T>& y, size_type i, size_type j ) {
+     if ( j == y.size( ) ) insert( this->end( ), y.begin( ) + i, y.end( ) );
+@@ -402,7 +402,7 @@ template <class T> class vec : public vector<T> {
+ 
+   /// EraseValue: erase all entries having the given value.
+   void EraseValue( const T& x ) {
+-    erase(remove(this->begin(), this->end(), x), this->end());
++    this->erase(remove(this->begin(), this->end(), x), this->end());
+   }
+ 
+   /// print values to ostream, separated by sep.
+diff --git a/feudal/FeudalControlBlock.cc b/feudal/FeudalControlBlock.cc
+index bc64ecd..a709320 100644
+--- a/feudal/FeudalControlBlock.cc
++++ b/feudal/FeudalControlBlock.cc
+@@ -24,6 +24,7 @@
+ #include <string.h>
+ #include <errno.h>
+ #include <iostream>
++#include <unistd.h>
+ 
+ using std::cout;
+ using std::endl;
+diff --git a/feudal/FeudalFileReader.h b/feudal/FeudalFileReader.h
+index b71bf6d..073a1a1 100644
+--- a/feudal/FeudalFileReader.h
++++ b/feudal/FeudalFileReader.h
+@@ -13,6 +13,7 @@
+ #include <string>
+ #include <cassert>
+ #include <sstream>
++#include <unistd.h>
+ #include "feudal/BinaryStream.h"
+ 
+ /**
+diff --git a/feudal/MasterVec.h b/feudal/MasterVec.h
+index e6477d9..45a8640 100644
+--- a/feudal/MasterVec.h
++++ b/feudal/MasterVec.h
+@@ -60,7 +60,7 @@ public:
+     /// This function is deprecated: Use reserve() instead.
+     /// The pool size argument is ignored, anyway.
+     MasterVec& Reserve( unsigned long raw_mem_size_ignored, size_type capacity )
+-    { reserve(capacity); return *this; }
++    { this->reserve(capacity); return *this; }
+ 
+     /// This function is deprecated:  Use clear().shrink_to_fit().
+     MasterVec& destroy() { BaseT::clear(); BaseT::shrink_to_fit(); return *this; }
+@@ -73,7 +73,7 @@ public:
+     MasterVec& push_back_reserve( T const& val,
+                                   size_type growthIncr = 0,
+                                   float growthFact = 1.3f )
+-    { push_back(val,growthFact,growthIncr); return *this; }
++    { this->push_back(val,growthFact,growthIncr); return *this; }
+ 
+     /// This function is deprecated:  Use append().
+     MasterVec& Append( MasterVec const& that )
+@@ -99,7 +99,7 @@ public:
+     { if ( !append ) BaseT::clear();
+       FeudalFileReader rdr(fileName.c_str(),T::fixedDataLen());
+       size_type siz = rdr.getNElements();
+-      reserve(BaseT::size()+siz);
++      this->reserve(BaseT::size()+siz);
+       for ( size_type iii = 0; iii < siz; ++iii )
+         appendFromReader(rdr,iii);
+       return *this; }
+diff --git a/feudal/SerfVec.h b/feudal/SerfVec.h
+index e91847c..d5f053d 100644
+--- a/feudal/SerfVec.h
++++ b/feudal/SerfVec.h
+@@ -79,10 +79,10 @@ public:
+     /// Deprecated:  Use assign().
+     SerfVec& SetToSubOf( SerfVec const& that, size_type pos, size_type len )
+     { if ( this != &that )
+-      { assign(that.begin(pos),that.begin(pos+len)); }
++      { this->assign(that.begin(pos),that.begin(pos+len)); }
+       else
+       { assert(that.size()>=pos+len);
+-        erase(BaseT::begin(),BaseT::begin(pos));
++        this->erase(BaseT::begin(),BaseT::begin(pos));
+         BaseT::resize(len); }
+       return *this; }
+ 

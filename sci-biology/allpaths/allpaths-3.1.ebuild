@@ -1,37 +1,39 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/allpaths/allpaths-3.1.ebuild,v 1.1 2010/01/26 20:43:21 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/allpaths/allpaths-3.1.ebuild,v 1.2 2012/08/30 07:32:21 jlec Exp $
 
-EAPI="2"
+EAPI=4
 
 inherit base
 
 DESCRIPTION="De novo assembly of whole-genome shotgun microreads"
 HOMEPAGE="http://www.broadinstitute.org/science/programs/genome-biology/crd"
-SRC_URI="ftp://ftp.broad.mit.edu/pub/crd/ALLPATHS/Release-3-0/allpaths-${PV}.tgz
+SRC_URI="
+	ftp://ftp.broad.mit.edu/pub/crd/ALLPATHS/Release-3-0/allpaths-${PV}.tgz
 	ftp://ftp.broad.mit.edu/pub/crd/ALLPATHS/Release-3-0/AllPathsV3_Manual_r1.0.docx"
 
 LICENSE="Whitehead-MIT"
 SLOT="3"
 IUSE=""
-KEYWORDS="~amd64"
-
-DEPEND=">=sys-devel/gcc-4.3.2"
-RDEPEND=""
+KEYWORDS="~amd64 ~x86"
 
 S="${WORKDIR}/AllPaths"
 
+PATCHES=( "${FILESDIR}"/${P}-gcc4.7.patch )
+
 src_compile() {
 	base_src_compile
-	emake install_scripts || die
+	emake install_scripts
 }
 
 src_install() {
-	exeinto /usr/share/${P}/bin
+	exeinto /usr/libexec/${P}/
 	find bin -type f -executable | xargs doexe || die
-	echo "PATH=\"/usr/share/${P}/bin\"" > "${S}/99${P}"
-	doenvd "${S}/99${P}" || die
-	dosym /usr/share/${P}/bin/RunAllPaths3G /usr/bin/RunAllPaths3G || die
-	insinto /usr/share/doc/${PF}
-	doins "${DISTDIR}/AllPathsV3_Manual_r1.0.docx"
+
+	echo "PATH=\"/usr/libexec/${P}/\"" > "${S}/50${P}"
+	doenvd "${S}/50${P}" || die
+
+	dosym /usr/libexec/${P}/RunAllPaths3G /usr/bin/RunAllPaths3G
+
+	dodoc "${DISTDIR}/AllPathsV3_Manual_r1.0.docx"
 }
