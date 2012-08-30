@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14081 2012/08/30 16:27:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14082 2012/08/30 16:44:26 pinkbyte Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -80,10 +80,6 @@ net-analyzer/prewikka
 # Markos Chandras <hwoarang@gentoo.org> (17 August 2012)
 # Masked rc release. Required by dev-lang/jimctl-0.73
 =dev-embedded/openocd-0.6.0_rc*
-
-# Michael Sterrett <mr_bones_@gentoo.org> (16 Aug 2012)
-# missing patch from maksbotan@gentoo.org
-=x11-plugins/compiz-plugins-extra-0.8.8
 
 # Ulrich Mueller <ulm@gentoo.org> (15 Aug 2012)
 # Emacs live ebuilds. Use at your own risk.
@@ -500,9 +496,6 @@ kde-misc/kgtk
 x11-libs/compiz-bcop
 x11-libs/compizconfig-backend-gconf
 x11-libs/compizconfig-backend-kconfig4
-x11-plugins/compiz-plugins-extra
-x11-plugins/compiz-plugins-main
-x11-plugins/compiz-plugins-unsupported
 x11-wm/compiz-fusion
 
 # Michał Górny <mgorny@gentoo.org> (21 Jan 2012)
