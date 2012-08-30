@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-main/compiz-plugins-main-0.8.8.ebuild,v 1.1 2012/06/13 23:00:45 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-main/compiz-plugins-main-0.8.8.ebuild,v 1.2 2012/08/30 16:32:22 pinkbyte Exp $
 
 EAPI="4"
 
@@ -49,7 +49,7 @@ src_configure() {
 
 src_install() {
 	default
-	find "${D}" -name '*.la' -delete || die
+	prune_libtool_files
 }
 
 pkg_preinst() {
