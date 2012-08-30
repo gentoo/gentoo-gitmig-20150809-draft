@@ -1,6 +1,11 @@
 # ChangeLog for x11-apps/ccsm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/ccsm/ChangeLog,v 1.24 2012/08/29 10:14:37 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/ccsm/ChangeLog,v 1.25 2012/08/30 17:39:47 pinkbyte Exp $
+
+*ccsm-0.8.4-r2 (30 Aug 2012)
+
+  30 Aug 2012; Sergey Popov <pinkbyte@gentoo.org> +ccsm-0.8.4-r2.ebuild:
+  Add new EAPI4 revision
 
   29 Aug 2012; Naohiro Aota <naota@gentoo.org> ccsm-0.8.4-r1.ebuild:
   Add missing dependency x11-themes/hicolor-icon-theme #291533; Drop dev-
