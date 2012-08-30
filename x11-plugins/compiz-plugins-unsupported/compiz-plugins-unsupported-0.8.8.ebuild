@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-unsupported/compiz-plugins-unsupported-0.8.8.ebuild,v 1.1 2012/05/07 01:55:54 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-unsupported/compiz-plugins-unsupported-0.8.8.ebuild,v 1.2 2012/08/30 16:19:41 pinkbyte Exp $
 
-EAPI="2"
+EAPI="4"
 
 DESCRIPTION="Compiz Fusion Window Decorator Unsupported Plugins"
 HOMEPAGE="http://www.compiz.org/"
@@ -30,6 +30,4 @@ DEPEND="${RDEPEND}
 
 RESTRICT="mirror"
 
-src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-}
+DOCS="AUTHORS ChangeLog INSTALL NEWS README TODO"
