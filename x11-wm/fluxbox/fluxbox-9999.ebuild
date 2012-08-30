@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-9999.ebuild,v 1.11 2012/08/30 09:56:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-9999.ebuild,v 1.12 2012/08/30 10:01:23 ssuominen Exp $
 
 EAPI=4
 inherit eutils flag-o-matic toolchain-funcs git-2 prefix
@@ -73,7 +73,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake || die "make failed"
+	emake
 
 	ebegin "Creating a menu file (may take a while)"
 	mkdir -p "${T}/home/.fluxbox" || die "mkdir home failed"
@@ -86,22 +86,22 @@ src_compile() {
 
 src_install() {
 	dodir /usr/share/fluxbox
-	emake DESTDIR="${D}" STRIP="" install || die "install failed"
+	emake DESTDIR="${D}" STRIP="" install
 	dodoc README* AUTHORS TODO* ChangeLog NEWS
 
 	dodir /usr/share/xsessions
 	insinto /usr/share/xsessions
-	doins "${FILESDIR}/${PN}.desktop"
+	doins "${FILESDIR}"/${PN}.desktop
 
 	exeinto /etc/X11/Sessions
-	newexe "${FILESDIR}/${PN}.xsession" fluxbox
+	newexe "${FILESDIR}"/${PN}.xsession fluxbox
 
 	dodir /usr/share/fluxbox/menu.d
 
 	# Styles menu framework
 	dodir /usr/share/fluxbox/menu.d/styles
 	insinto /usr/share/fluxbox/menu.d/styles
-	doins "${FILESDIR}/styles-menu-fluxbox" || die
-	doins "${FILESDIR}/styles-menu-commonbox" || die
-	doins "${FILESDIR}/styles-menu-user" || die
+	doins "${FILESDIR}"/styles-menu-fluxbox
+	doins "${FILESDIR}"/styles-menu-commonbox
+	doins "${FILESDIR}"/styles-menu-user
 }
