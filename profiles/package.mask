@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14079 2012/08/28 07:55:54 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14080 2012/08/30 12:25:58 pinkbyte Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -503,9 +503,7 @@ x11-libs/compizconfig-backend-kconfig4
 x11-plugins/compiz-plugins-extra
 x11-plugins/compiz-plugins-main
 x11-plugins/compiz-plugins-unsupported
-x11-themes/emerald-themes
 x11-wm/compiz-fusion
-x11-wm/emerald
 
 # Michał Górny <mgorny@gentoo.org> (21 Jan 2012)
 # Blocks sysvinit yet doesn't provide all tools provided by it.
