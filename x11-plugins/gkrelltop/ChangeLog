@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/gkrelltop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrelltop/ChangeLog,v 1.36 2012/08/10 13:41:04 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrelltop/ChangeLog,v 1.37 2012/08/30 00:28:32 lack Exp $
+
+*gkrelltop-2.2.13 (30 Aug 2012)
+
+  30 Aug 2012; Jim Ramsay <jim_ramsay@gentoo.org> +gkrelltop-2.2.13.ebuild,
+  gkrelltop-2.2.11-r1.ebuild, gkrelltop-2.2.11.ebuild:
+  Bug #363591: Version bump to 2.2.13
 
   10 Aug 2012; Johannes Huber <johu@gentoo.org> gkrelltop-2.2.11-r1.ebuild:
   Stable for x86, wrt bug #422397
@@ -143,4 +149,3 @@
   23 Oct 2003; Martin Holzer <mholzer@gentoo.org> gkrelltop-2.2.ebuild:
   initial ebuild. submitted by Ciaran McCreesh <ciaranm@firedrop.org.uk> in
   #29382.
-
