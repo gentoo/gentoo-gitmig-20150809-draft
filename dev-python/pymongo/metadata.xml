@@ -11,6 +11,11 @@
 		<email>ultrabug@gentoo.org</email>
 		<name>Alexys Jacob</name>
 	</maintainer>
+	<maintainer>
+		<email>julien@thebault.co</email>
+		<name>Lujeni</name>
+		<description>Proxy-Maintainer, assign bugs</description>
+	</maintainer>
 	<longdescription lang="en">PyMongo is a Python distribution containing tools 
 	for working with MongoDB, and is the recommended way to work 
 	with MongoDB from Python.</longdescription>

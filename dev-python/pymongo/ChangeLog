@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pymongo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/ChangeLog,v 1.11 2012/07/09 11:07:12 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/ChangeLog,v 1.12 2012/08/30 09:00:27 ultrabug Exp $
+
+*pymongo-2.3 (30 Aug 2012)
+
+  30 Aug 2012; Ultrabug <ultrabug@gentoo.org> -pymongo-2.1.1.ebuild,
+  -pymongo-2.2.ebuild, +pymongo-2.3.ebuild, metadata.xml:
+  Version bump, welcome new proxy-maintainer Lujeni, drop old.
 
 *pymongo-2.2.1 (09 Jul 2012)
 
