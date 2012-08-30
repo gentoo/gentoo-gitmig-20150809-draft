@@ -1,6 +1,9 @@
 # ChangeLog for app-text/qpdf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qpdf/ChangeLog,v 1.9 2012/08/27 05:47:04 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdf/ChangeLog,v 1.10 2012/08/30 10:26:48 blueness Exp $
+
+  30 Aug 2012; Anthony G. Basile <blueness@gentoo.org> qpdf-3.0.1.ebuild:
+  Keyword ~mips
 
   27 Aug 2012; Tim Harder <radhermit@gentoo.org> -qpdf-2.3.1.ebuild,
   -files/qpdf-2.3.1-gcc47.patch, -files/qpdf-2.3.1-libpcre-8.30.patch,
