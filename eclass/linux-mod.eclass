@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.106 2012/08/28 15:28:01 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.107 2012/08/30 23:52:59 mpagano Exp $
 
 # @ECLASS: linux-mod.eclass
 # @MAINTAINER:
@@ -34,7 +34,7 @@
 
 # @ECLASS-VARIABLE: BUILD_TARGETS
 # @DESCRIPTION:
-# It's a string with the build targets to pass to make. The default value is "clean modules"
+# It's a string with the build targets to pass to make. The default value is "clean module"
 
 # @ECLASS-VARIABLE: MODULE_NAMES
 # @DESCRIPTION:
