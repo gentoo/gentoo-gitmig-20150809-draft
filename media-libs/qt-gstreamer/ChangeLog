@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/qt-gstreamer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qt-gstreamer/ChangeLog,v 1.2 2012/07/31 07:03:55 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qt-gstreamer/ChangeLog,v 1.3 2012/08/30 18:07:46 dilfridge Exp $
+
+  30 Aug 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  qt-gstreamer-0.10.2.ebuild:
+  Add boost dependency, bug 432242
 
   31 Jul 2012; Tomáš Chvátal <scarabeus@gentoo.org> qt-gstreamer-0.10.2.ebuild:
   Stable on amd64 and x86 as it works just fine.
