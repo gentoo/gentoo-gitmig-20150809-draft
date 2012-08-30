@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/compiz-plugins-main
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-main/ChangeLog,v 1.19 2012/08/30 16:32:22 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-main/ChangeLog,v 1.20 2012/08/30 16:35:41 pinkbyte Exp $
+
+  30 Aug 2012; Sergey Popov <pinkbyte@gentoo.org>
+  compiz-plugins-main-0.8.8.ebuild:
+  disable-dependency-tracking is unneeded for EAPI 4
 
   30 Aug 2012; Sergey Popov <pinkbyte@gentoo.org>
   compiz-plugins-main-0.8.8.ebuild:
