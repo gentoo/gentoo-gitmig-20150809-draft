@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14082 2012/08/30 16:44:26 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14083 2012/08/30 17:49:43 pinkbyte Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -489,14 +489,6 @@ kde-misc/kgtk
 # Robin H. Johnson <robbat2@gentoo.org> (09 Feb 2012)
 # Masked for testing
 =sys-libs/db-5.3*
-
-# Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (22 Jan 2012)
-# Mask compiz for last-rites unless someone steps up
-# to maintain it. Proxy maintainers will take care of this.
-x11-libs/compiz-bcop
-x11-libs/compizconfig-backend-gconf
-x11-libs/compizconfig-backend-kconfig4
-x11-wm/compiz-fusion
 
 # Michał Górny <mgorny@gentoo.org> (21 Jan 2012)
 # Blocks sysvinit yet doesn't provide all tools provided by it.
