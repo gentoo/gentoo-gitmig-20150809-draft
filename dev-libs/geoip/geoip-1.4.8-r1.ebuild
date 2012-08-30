@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.4.8-r1.ebuild,v 1.1 2012/08/30 08:05:35 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.4.8-r1.ebuild,v 1.2 2012/08/30 09:14:37 pinkbyte Exp $
 
 EAPI=4
 
@@ -12,6 +12,7 @@ DESCRIPTION="easily lookup countries by IP addresses, even when Reverse DNS entr
 HOMEPAGE="http://www.maxmind.com/app/ip-location"
 SRC_URI="
 	http://www.maxmind.com/download/geoip/api/c/${MY_P}.tar.gz
+	http://geolite.maxmind.com/download/geoip/database/asnum/GeoIPASNum.dat.gz
 	ipv6? ( http://geolite.maxmind.com/download/geoip/database/GeoIPv6.dat.gz
 		http://geolite.maxmind.com/download/geoip/database/GeoLiteCityv6-beta/GeoLiteCityv6.dat.gz )
 "
@@ -52,8 +53,10 @@ src_install() {
 		rm -f "${ED}"/usr/lib*/lib*.la
 	fi
 
+	insinto /usr/share/GeoIP
+	doins "${WORKDIR}/GeoIPASNum.dat"
+
 	if use ipv6; then
-		insinto /usr/share/GeoIP
 		doins "${WORKDIR}/GeoIPv6.dat" || die
 		doins "${WORKDIR}/GeoLiteCityv6.dat"
 	fi
