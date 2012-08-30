@@ -1,10 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet-ubertooth/kismet-ubertooth-9999.ebuild,v 1.6 2012/08/30 23:18:08 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet-ubertooth/kismet-ubertooth-0.0_p534-r1.ebuild,v 1.1 2012/08/30 23:18:08 zerochaos Exp $
 
 EAPI="4"
 
-inherit multilib
+inherit eutils multilib
+
+DESCRIPTION="Provides basic bluetooth support in kismet"
+HOMEPAGE="http://ubertooth.sourceforge.net/"
 
 if [[ ${PV} == "9999" ]] ; then
 	ESVN_REPO_URI="https://ubertooth.svn.sourceforge.net/svnroot/ubertooth/trunk/host"
@@ -19,18 +22,18 @@ else
 	S="${WORKDIR}/ubertooth-${MY_PV}/host/"
 fi
 
-DESCRIPTION="Provides basic bluetooth support in kismet"
-HOMEPAGE="http://ubertooth.sourceforge.net/"
-
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 
 DEPEND=">=net-wireless/kismet-2011.03.2-r1 \
-	=net-wireless/ubertooth-9999 \
-	=net-libs/libbtbb-9999 \
-	virtual/libusb:1"
+		>=net-libs/libbtbb-0.8 \
+		virtual/libusb:1"
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-respect-cflags.patch
+}
 
 src_compile() {
 	if has_version =net-wireless/kismet-9999; then
