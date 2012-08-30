@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.10.1.ebuild,v 1.7 2012/07/29 17:39:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.12.ebuild,v 1.1 2012/08/30 13:33:34 polynomial-c Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -16,7 +16,7 @@ MOZ_PV="${MOZ_PV/_rc/rc}"
 MOZ_P="${PN}-${MOZ_PV}"
 
 if [[ ${PV} == *_pre* ]] ; then
-	MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/${PN}/nightly/${MOZ_PV}-candidates/build${PV##*_pre}"
+	MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/${PN}/candidates/${MOZ_PV}-candidates/build${PV##*_pre}"
 	MOZ_LANGPACK_PREFIX="linux-i686/xpi/"
 	# And the langpack stuff stays at eclass defaults
 else
@@ -27,9 +27,9 @@ fi
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-3 multilib pax-utils fdo-mime autotools mozextension python nsplugins mozlinguas
 
-PATCHFF="firefox-13.0-patches-0.3"
+PATCHFF="firefox-15.0-patches-0.2"
 PATCH="${PN}-2.7-patches-03"
-EMVER="1.4.2"
+EMVER="1.4.4"
 
 DESCRIPTION="Seamonkey Web Browser"
 HOMEPAGE="http://www.seamonkey-project.org"
@@ -41,16 +41,16 @@ if [[ ${PV} == *_pre* ]] ; then
 else
 	# This is where arch teams should change the KEYWORDS.
 
-	KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86"
+	KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 fi
 
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
-IUSE="+alsa +chatzilla +crypt +ipc +jit +roaming system-sqlite +webm"
+IUSE="+alsa +chatzilla +crypt gstreamer +ipc +jit +roaming system-sqlite +webm"
 
 SRC_URI+="${SRC_URI}
 	${MOZ_FTP_URI}/source/${MOZ_P}.source.tar.bz2 -> ${P}.source.tar.bz2
-	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCHFF}.tar.xz
+	http://dev.gentoo.org/~nirbheek/mozilla/patchsets/${PATCHFF}.tar.xz
 	http://dev.gentoo.org/~polynomial-c/mozilla/patchsets/${PATCH}.tar.xz
 	crypt? ( http://www.mozilla-enigmail.org/download/source/enigmail-${EMVER}.tar.gz )"
 
@@ -67,12 +67,19 @@ RDEPEND=">=sys-devel/binutils-2.16.1
 	>=x11-libs/pango-1.14.0
 	>=x11-libs/gtk+-2.14
 	virtual/libffi
+	gstreamer? (
+		>=media-libs/gstreamer-0.10.33:0.10
+		>=media-libs/gst-plugins-base-0.10.33:0.10
+	)
 	system-sqlite? ( >=dev-db/sqlite-3.7.10[fts3,secure-delete,threadsafe,unlock-notify,debug=] )
 	crypt? ( >=app-crypt/gnupg-1.4 )
-	webm? ( >=media-libs/libvpx-1.0.0
-		media-libs/alsa-lib )"
+	webm? (
+		>=media-libs/libvpx-1.0.0
+		kernel_linux? ( media-libs/alsa-lib )
+	)"
 
 DEPEND="${RDEPEND}
+	!elibc_glibc? ( dev-libs/libexecinfo )
 	virtual/pkgconfig
 	webm? ( amd64? ( ${ASM_DEPEND} )
 		x86? ( ${ASM_DEPEND} )
@@ -113,6 +120,7 @@ src_prepare() {
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}/firefox"
+	epatch "${FILESDIR}"/firefox-15.0-fix-gstreamer-html5-crash.patch
 	popd &>/dev/null || die
 
 	# Shell scripts sometimes contain DOS line endings; bug 391889
@@ -153,6 +161,9 @@ src_prepare() {
 	# system.
 	sed '/^MOZ_PKG_FATAL_WARNINGS/s@= 1@= 0@' \
 		-i "${S}"/suite/installer/Makefile.in || die
+	# Don't error out when there's no files to be removed:
+	sed 's@\(xargs rm\)$@\1 -f@' \
+		-i "${S}"/mozilla/toolkit/mozapps/installer/packager.mk || die
 
 	eautoreconf
 	cd "${S}"/mozilla
@@ -196,6 +207,7 @@ src_configure() {
 	mozconfig_annotate '' --target="${CTARGET:-${CHOST}}"
 	mozconfig_annotate '' --enable-safe-browsing
 
+	mozconfig_use_enable gstreamer
 	mozconfig_use_enable system-sqlite
 	# Both methodjit and tracejit conflict with PaX
 	mozconfig_use_enable jit methodjit
