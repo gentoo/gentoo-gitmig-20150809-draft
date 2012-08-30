@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-1.3.2.ebuild,v 1.8 2012/05/28 15:48:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-1.3.2.ebuild,v 1.9 2012/08/30 09:56:44 ssuominen Exp $
 
 EAPI=4
-inherit eutils prefix
+inherit eutils flag-o-matic toolchain-funcs prefix
 
 IUSE="nls xinerama bidi +truetype +imlib +slit +toolbar vim-syntax"
 
@@ -20,13 +20,14 @@ RDEPEND="x11-libs/libXpm
 	|| ( x11-misc/gkmessage x11-apps/xmessage )
 	xinerama? ( x11-libs/libXinerama )
 	truetype? ( media-libs/freetype )
-	bidi? ( dev-libs/fribidi )
+	bidi? ( >=dev-libs/fribidi-0.19.2 )
 	imlib? ( >=media-libs/imlib2-1.2.0[X] )
 	vim-syntax? ( app-vim/fluxbox-syntax )
 	!!<x11-themes/fluxbox-styles-fluxmod-20040809-r1
 	!!<=x11-misc/fluxconf-0.9.9
 	!!<=x11-misc/fbdesk-1.2.1"
-DEPEND="nls? ( sys-devel/gettext )
+DEPEND="bidi? ( virtual/pkgconfig )
+	nls? ( sys-devel/gettext )
 	x11-proto/xextproto
 	${RDEPEND}"
 
@@ -55,6 +56,8 @@ src_prepare() {
 }
 
 src_configure() {
+	use bidi && append-cppflags "$($(tc-getPKG_CONFIG) --cflags fribidi)"
+
 	econf \
 		$(use_enable nls) \
 		$(use_enable xinerama) \
