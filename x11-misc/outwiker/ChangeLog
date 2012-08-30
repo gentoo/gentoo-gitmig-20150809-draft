@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/outwiker
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/outwiker/ChangeLog,v 1.1 2012/07/18 06:46:43 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/outwiker/ChangeLog,v 1.2 2012/08/30 18:32:41 pinkbyte Exp $
+
+  30 Aug 2012; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
+  Set correct email address, drop proxy maintainers' herd
 
 *outwiker-1.6.0 (18 Jul 2012)
 
