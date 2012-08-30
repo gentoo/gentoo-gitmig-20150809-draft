@@ -5,16 +5,6 @@
   <flag name="emerald">Install the <pkg>x11-wm/emerald</pkg> package.</flag>
   <flag name="unsupported">Install the <pkg>x11-plugins/compiz-fusion-plugins-unsupported</pkg> package.</flag>
 </use>
-<maintainer>
-  <email>pinkbyte@mail.ru</email>
-  <name>Pinkbyte</name>
-  <description>Maintainer. Assign bugs to him</description>
-</maintainer>
-<maintainer>
-  <email>naota@gentoo.org</email>
-  <name>Naohiro Aota</name>
-  <description>Proxy maintainer. CC him on bugs</description>
-</maintainer>
 <herd>desktop-effects</herd>
 <longdescription>
 compiz-fusion is a community-driven project that is aimed at extending the compiz window manager.
