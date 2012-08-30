@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.491 2012/08/04 07:33:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.492 2012/08/30 22:00:26 mgorny Exp $
 
 # Keep them sorted
 
@@ -14,7 +14,7 @@ aalib - Adds support for media-libs/aalib (ASCII-Graphics Library)
 accessibility - Adds support for accessibility (eg 'at-spi' library)
 acl - Adds support for Access Control Lists
 acpi - Adds support for Advanced Configuration and Power Interface
-adns - Adds support for the adns DNS client library
+adns - Adds support for asynchronous DNS resolution
 afs - Adds OpenAFS support (distributed file system)
 aim - Enable AIM IM protocol support
 alsa - Adds support for media-libs/alsa-lib (Advanced Linux Sound Architecture)
