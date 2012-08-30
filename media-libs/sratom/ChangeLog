@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/sratom
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sratom/ChangeLog,v 1.4 2012/05/22 16:04:12 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sratom/ChangeLog,v 1.5 2012/08/30 21:55:06 aballier Exp $
+
+*sratom-0.4.0 (30 Aug 2012)
+
+  30 Aug 2012; Alexis Ballier <aballier@gentoo.org> +sratom-0.4.0.ebuild:
+  version bump
 
   22 May 2012; Johannes Huber <johu@gentoo.org> sratom-0.2.0.ebuild:
   Add ~x86 wrt bug #413037
