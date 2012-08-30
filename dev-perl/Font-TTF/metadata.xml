@@ -20,12 +20,17 @@
     <remote-id type="cpan-module">Font::TTF::EBLC</remote-id>
     <remote-id type="cpan-module">Font::TTF::Fdsc</remote-id>
     <remote-id type="cpan-module">Font::TTF::Feat</remote-id>
+    <remote-id type="cpan-module">Font::TTF::Features::Cvar</remote-id>
+    <remote-id type="cpan-module">Font::TTF::Features::Size</remote-id>
+    <remote-id type="cpan-module">Font::TTF::Features::Sset</remote-id>
     <remote-id type="cpan-module">Font::TTF::Fmtx</remote-id>
     <remote-id type="cpan-module">Font::TTF::Font</remote-id>
     <remote-id type="cpan-module">Font::TTF::Fpgm</remote-id>
     <remote-id type="cpan-module">Font::TTF::GDEF</remote-id>
     <remote-id type="cpan-module">Font::TTF::GPOS</remote-id>
     <remote-id type="cpan-module">Font::TTF::GSUB</remote-id>
+    <remote-id type="cpan-module">Font::TTF::Glat</remote-id>
+    <remote-id type="cpan-module">Font::TTF::Gloc</remote-id>
     <remote-id type="cpan-module">Font::TTF::Glyf</remote-id>
     <remote-id type="cpan-module">Font::TTF::Glyph</remote-id>
     <remote-id type="cpan-module">Font::TTF::GrFeat</remote-id>
@@ -61,6 +66,7 @@
     <remote-id type="cpan-module">Font::TTF::Prep</remote-id>
     <remote-id type="cpan-module">Font::TTF::Prop</remote-id>
     <remote-id type="cpan-module">Font::TTF::Segarr</remote-id>
+    <remote-id type="cpan-module">Font::TTF::Silf</remote-id>
     <remote-id type="cpan-module">Font::TTF::Sill</remote-id>
     <remote-id type="cpan-module">Font::TTF::Table</remote-id>
     <remote-id type="cpan-module">Font::TTF::Ttc</remote-id>
@@ -69,6 +75,9 @@
     <remote-id type="cpan-module">Font::TTF::Vhea</remote-id>
     <remote-id type="cpan-module">Font::TTF::Vmtx</remote-id>
     <remote-id type="cpan-module">Font::TTF::Win32</remote-id>
+    <remote-id type="cpan-module">Font::TTF::Woff</remote-id>
+    <remote-id type="cpan-module">Font::TTF::Woff::MetaData</remote-id>
+    <remote-id type="cpan-module">Font::TTF::Woff::PrivateData</remote-id>
     <remote-id type="cpan-module">Font::TTF::XMLparse</remote-id>
   </upstream>
 </pkgmetadata>
