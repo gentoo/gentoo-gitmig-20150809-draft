@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>proxy-maintainers</herd>
 	<maintainer>
-		<email>admin@pinkbyte.ru</email>
+		<email>pinkbyte@gentoo.org</email>
 		<name>Sergey Popov</name>
-	</maintainer>
-	<maintainer>
-		<email>maksbotan@gentoo.org</email>
-		<name>Maxim Koltsov</name>
 	</maintainer>
 	<use>
 		<flag name="plugins">Enable support for installing plugins with <pkg>dev-vcs/git</pkg></flag>
