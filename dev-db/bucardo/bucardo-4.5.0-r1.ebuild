@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/bucardo/bucardo-4.5.0.ebuild,v 1.1 2012/08/28 03:03:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/bucardo/bucardo-4.5.0-r1.ebuild,v 1.1 2012/08/30 03:02:46 patrick Exp $
 
 EAPI="4"
 
@@ -27,8 +27,6 @@ RDEPEND="dev-perl/DBIx-Safe"
 S=${WORKDIR}/${MY_PN}-${PV}
 
 src_install() {
-        # little bug in make install
-        sed -i -e 's:$(INSTALL_BASE)/usr/share/bucardo:$(DESTDIR)/usr/share/bucardo:' Makefile || die "Failed to fix install path"
-	emake DESTDIR=${D} install -j1
+	emake DESTDIR=${D} INSTALL_BASE=${D} install -j1
 	keepdir /var/run/bucardo
 }
