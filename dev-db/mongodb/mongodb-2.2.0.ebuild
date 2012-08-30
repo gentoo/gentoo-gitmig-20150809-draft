@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.2.0.ebuild,v 1.1 2012/08/30 10:14:54 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.2.0.ebuild,v 1.2 2012/08/30 15:47:24 ultrabug Exp $
 
 EAPI=4
 SCONS_MIN_VERSION="1.2.0"
@@ -52,6 +52,10 @@ src_prepare() {
 	sed -e 's@third_party/js-1.7/@/usr/include/js/@g' \
 		-i src/mongo/scripting/engine_spidermonkey.h  \
 		-i src/mongo/scripting/engine_spidermonkey.cpp || die
+
+	if use v8; then
+		sed -e "s/LIBS=\['js',/LIBS=\[/g" -i SConstruct || die
+	fi
 }
 
 src_compile() {
