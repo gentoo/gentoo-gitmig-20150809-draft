@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/diffmask
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/diffmask/ChangeLog,v 1.10 2012/02/26 08:55:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/diffmask/ChangeLog,v 1.11 2012/08/30 22:56:56 mgorny Exp $
+
+*diffmask-0.3.3-r1 (30 Aug 2012)
+
+  30 Aug 2012; Michał Górny <mgorny@gentoo.org> +diffmask-0.3.3-r1.ebuild,
+  -diffmask-0.3.3.ebuild, metadata.xml:
+  Sync to the live ebuild.
 
   26 Feb 2012; Patrick Lauer <patrick@gentoo.org> diffmask-0.3.3.ebuild:
   Restricting py3
@@ -47,4 +53,3 @@
   23 Oct 2010; Michał Górny <mgorny@gentoo.org> +diffmask-0.3.1.ebuild,
   +metadata.xml:
   Initial import.
-
