@@ -4,7 +4,7 @@
 <herd>netmon</herd>
 <use>
 	<flag name="perl-geoipupdate">Install pure perl version of geoipupdate, with
-	Proxy Server support via via the "http_proxy" environment variable and easy to
+	Proxy Server support via the "http_proxy" environment variable and easy to
 	customize.</flag>
 </use>
 <longdescription>easily lookup countries by IP addresses, even when Reverse DNS entries don't exist</longdescription>
