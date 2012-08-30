@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/emerald/emerald-0.8.8.ebuild,v 1.2 2012/08/30 11:47:15 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/emerald/emerald-0.8.8.ebuild,v 1.3 2012/08/30 11:49:44 pinkbyte Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit eutils
 
@@ -31,6 +31,8 @@ DEPEND="${RDEPEND}
 	>=sys-devel/gettext-0.15
 "
 
+DOCS="AUTHORS ChangeLog INSTALL NEWS README TODO"
+
 src_prepare() {
 	# Fix pkg-config file pollution wrt #380197
 	epatch "${FILESDIR}"/${P}-pkgconfig-pollution.patch
@@ -47,7 +49,6 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
-
-	find "${D}" -name '*.la' -delete || die
+	default
+	prune_libtool_files
 }
