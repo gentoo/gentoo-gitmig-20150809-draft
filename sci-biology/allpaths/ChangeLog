@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/allpaths
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/allpaths/ChangeLog,v 1.7 2012/08/30 07:32:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/allpaths/ChangeLog,v 1.8 2012/08/30 07:46:16 jlec Exp $
+
+  30 Aug 2012; Justin Lecher <jlec@gentoo.org> allpaths-3.1.ebuild:
+  Respect CXXFLAGS
 
   30 Aug 2012; Justin Lecher <jlec@gentoo.org> allpaths-3.1.ebuild,
   +files/allpaths-3.1-gcc4.7.patch:
