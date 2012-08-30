@@ -1,5 +1,10 @@
 
 
+*cgminer-2.7.4 (30 Aug 2012)
+
+  30 Aug 2012; Anthony G. Basile <blueness@gentoo.org> +cgminer-2.7.4.ebuild:
+  Version bump
+
   22 Aug 2012; Anthony G. Basile <blueness@gentoo.org> -cgminer-2.4.3.ebuild:
   Remove older unstable
 
