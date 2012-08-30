@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer>
-    <email>admin@pinkbyte.ru</email>
+    <email>pinkbyte@gentoo.org</email>
     <name>Sergey Popov</name>
   </maintainer>
-  <herd>proxy-maintainers</herd>
 </pkgmetadata>
