@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/znotes/znotes-0.4.5.ebuild,v 1.1 2012/01/30 07:49:35 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/znotes/znotes-0.4.5.ebuild,v 1.2 2012/08/30 16:28:42 kensington Exp $
 
 EAPI=4
 inherit qt4-r2
@@ -19,6 +19,8 @@ DEPEND="x11-libs/qt-core:4
 RDEPEND="${DEPEND}"
 
 DOCS="CHANGELOG THANKS"
+
+PATCHES=( "${FILESDIR}/${P}-gcc-4.7.patch" )
 
 src_configure() {
 	lrelease znotes.pro || die "lrelease failed"
