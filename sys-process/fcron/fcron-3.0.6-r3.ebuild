@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.6-r3.ebuild,v 1.2 2012/08/29 17:48:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.6-r3.ebuild,v 1.3 2012/08/30 06:42:46 jlec Exp $
 
 EAPI=4
 
@@ -35,9 +35,8 @@ pkg_setup() {
 	[[ ${rootgroup} ]] || rootgroup=root
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-buffer-overflow.patch
 
 	# respect LDFLAGS
 	sed -i "s:\(@LIBS@\):\$(LDFLAGS) \1:" Makefile.in || die "sed failed"
@@ -76,7 +75,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake || die "make failed"
+	default
 
 	# bug #216460
 	sed -i \
@@ -135,17 +134,17 @@ src_install() {
 	fperms 0640 /etc/fcron/fcron.{allow,deny,conf}
 
 	pamd_mimic system-services fcron auth account session
-	cat - > "${T}"/fcrontab.pam <<EOF
-# Don't ask for the user's password; fcrontab will only allow to
-# change user if running as root.
-auth		sufficient		pam_permit.so
+	cat > "${T}"/fcrontab.pam <<- EOF
+	# Don't ask for the user's password; fcrontab will only allow to
+	# change user if running as root.
+	auth		sufficient		pam_permit.so
 
-# Still use the system-auth stack for account and session as the
-# sysadmin might have set up stuff properly, and also avoids
-# sidestepping limits (since fcrontab will run \$EDITOR).
-account		include			system-auth
-session		include			system-auth
-EOF
+	# Still use the system-auth stack for account and session as the
+	# sysadmin might have set up stuff properly, and also avoids
+	# sidestepping limits (since fcrontab will run \$EDITOR).
+	account		include			system-auth
+	session		include			system-auth
+	EOF
 	newpamd "${T}"/fcrontab.pam fcrontab
 
 	newinitd "${FILESDIR}"/fcron.init.3 fcron
@@ -170,9 +169,9 @@ pkg_postinst() {
 	elog "  emerge --config ${CATEGORY}/${PN}"
 	elog "to configure the proper settings."
 	if ! use system-crontab; then
-		ewarn ""
+		echo ""
 		ewarn "Remember that fcron will *not* use /etc/cron.d in this configuration"
-		ewarn ""
+		echo ""
 	fi
 }
 
@@ -192,11 +191,11 @@ pkg_config() {
 	else
 		elog "This is going to set up fcron to set up a default systab that"
 		elog "executes /etc/cron.{hourly,daily,weekly,monthly}."
-		fcrontab -u systab - <<EOF
-0  *  * * *      rm -f /var/spool/cron/lastrun/cron.hourly
-1  3  * * *      rm -f /var/spool/cron/lastrun/cron.daily
-15 4  * * 6      rm -f /var/spool/cron/lastrun/cron.weekly
-30 5  1 * *      rm -f /var/spool/cron/lastrun/cron.monthly
-EOF
+		fcrontab -u systab - <<- EOF
+		0  *  * * *      rm -f /var/spool/cron/lastrun/cron.hourly
+		1  3  * * *      rm -f /var/spool/cron/lastrun/cron.daily
+		15 4  * * 6      rm -f /var/spool/cron/lastrun/cron.weekly
+		30 5  1 * *      rm -f /var/spool/cron/lastrun/cron.monthly
+		EOF
 	fi
 }
