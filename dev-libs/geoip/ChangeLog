@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/geoip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.130 2012/06/19 20:59:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.131 2012/08/30 08:05:35 pinkbyte Exp $
+
+*geoip-1.4.8-r1 (30 Aug 2012)
+
+  30 Aug 2012; Sergey Popov <pinkbyte@gentoo.org> +files/geoipupdate-r1.sh,
+  +geoip-1.4.8-r1.ebuild:
+  New revision, added IPv6 database for cities wrt bug #429932. Thanks to mva
 
   19 Jun 2012; Jeroen Roovers <jer@gentoo.org> geoip-1.4.8.ebuild:
   Update HOMEPAGE.
