@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mlt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.92 2012/07/19 07:15:56 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.93 2012/08/31 03:39:11 yngwin Exp $
+
+*mlt-0.8.2 (31 Aug 2012)
+
+  31 Aug 2012; Ben de Groot <yngwin@gentoo.org> +mlt-0.8.2.ebuild:
+  Version bump. Drop libavcodec54 patch which has been applied upstream.
 
   19 Jul 2012; Ben de Groot <yngwin@gentoo.org> mlt-0.8.0.ebuild:
   Add use dependency on libsdl[X,opengl], bug #426964
