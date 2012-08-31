@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/oracle-jdk-bin-1.7.0.7.ebuild,v 1.1 2012/08/31 10:03:42 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/oracle-jdk-bin-1.7.0.7.ebuild,v 1.2 2012/08/31 17:02:27 caster Exp $
 
 EAPI="4"
 
 inherit java-vm-2 eutils prefix versionator
 
 # This URIs need to be updated when bumping!
-JDK_URI="http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1637583.html"
+JDK_URI="http://www.oracle.com/technetwork/java/javase/downloads/jdk7u7-downloads-1836413.html"
 JCE_URI="http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html"
 
 UPDATE="$(get_version_component_range 4)"
