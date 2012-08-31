@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.8.2-r1.ebuild,v 1.4 2012/08/31 16:34:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.8.2-r1.ebuild,v 1.5 2012/08/31 16:45:21 zerochaos Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -18,8 +18,6 @@ IUSE="
 	adns doc doc-pdf gtk ipv6 libadns lua gcrypt geoip kerberos profile
 	+pcap portaudio python +caps selinux smi ssl zlib
 "
-REQUIRED_USE="libadns? ( adns )"
-
 RDEPEND=">=dev-libs/glib-2.14:2
 	zlib? ( sys-libs/zlib
 		!=sys-libs/zlib-1.2.4 )
@@ -36,8 +34,8 @@ RDEPEND=">=dev-libs/glib-2.14:2
 	portaudio? ( media-libs/portaudio )
 	adns? (
 		!libadns? ( >=net-dns/c-ares-1.5 )
-		libadns? ( net-libs/adns )
 	)
+	libadns? ( net-libs/adns )
 	geoip? ( dev-libs/geoip )
 	lua? ( >=dev-lang/lua-5.1 )
 	selinux? ( sec-policy/selinux-wireshark )"
@@ -134,6 +132,10 @@ src_configure() {
 			myconf+=" --with-adns --without-c-ares"
 		else
 			myconf+=" --without-adns --with-c-ares"
+		fi
+	else
+		if use libadns; then
+			myconf+=" --with-adns --without-c-ares"
 		fi
 	fi
 	# Workaround bug #213705. If krb5-config --libs has -lcrypto then pass
