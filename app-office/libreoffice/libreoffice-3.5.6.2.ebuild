@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.6.2.ebuild,v 1.2 2012/08/21 10:17:38 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.6.2.ebuild,v 1.3 2012/08/31 14:08:51 scarabeus Exp $
 
 EAPI=4
 
@@ -75,7 +75,7 @@ jemalloc kde mysql nlpsolver +nsplugin odk opengl pdfimport postgres svg test
 +vba +webdav +xmlsec"
 LICENSE="LGPL-3"
 SLOT="0"
-[[ ${PV} == *9999* ]] || KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+[[ ${PV} == *9999* ]] || KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
 
 NSS_DEPEND="
 	>=dev-libs/nspr-4.8.8
