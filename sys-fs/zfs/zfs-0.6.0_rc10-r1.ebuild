@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-0.6.0_rc10-r1.ebuild,v 1.3 2012/08/22 07:51:18 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-0.6.0_rc10-r1.ebuild,v 1.4 2012/08/31 18:07:26 ryao Exp $
 
 EAPI="4"
 
@@ -38,6 +38,7 @@ DEPEND="${COMMON_DEPEND}
 "
 
 RDEPEND="${COMMON_DEPEND}
+	!=sys-apps/grep-2.13*
 	!kernel-builtin? ( =sys-fs/zfs-kmod-${PV}* )
 	!sys-fs/zfs-fuse
 	!prefix? ( sys-fs/udev )
