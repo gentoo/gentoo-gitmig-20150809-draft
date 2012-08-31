@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/gentoopm-0.2.5-r1.ebuild,v 1.4 2012/08/07 20:34:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/gentoopm-0.2.5-r1.ebuild,v 1.5 2012/08/31 09:11:17 mgorny Exp $
 
 EAPI=4
 PYTHON_COMPAT='python2_6 python2_7 python3_1 python3_2'
@@ -8,8 +8,8 @@ PYTHON_COMPAT='python2_6 python2_7 python3_1 python3_2'
 inherit base python-distutils-ng
 
 DESCRIPTION="A common interface to Gentoo package managers"
-HOMEPAGE="https://github.com/mgorny/gentoopm/"
-SRC_URI="mirror://github/mgorny/${PN}/${P}.tar.bz2"
+HOMEPAGE="https://bitbucket.org/mgorny/gentoopm/"
+SRC_URI="mirror://bitbucket/mgorny/${PN}/downloads/${P}.tar.bz2"
 
 LICENSE="BSD-2"
 SLOT="0"
