@@ -1,6 +1,12 @@
 # ChangeLog for app-office/scribus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.163 2012/08/06 12:12:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.164 2012/08/31 14:17:26 jlec Exp $
+
+*scribus-1.4.1-r1 (31 Aug 2012)
+
+  31 Aug 2012; Justin Lecher <jlec@gentoo.org> +scribus-1.4.1-r1.ebuild:
+  Fix installation of LINGUAS dependened content and installation of
+  templates/examples, #416767
 
   06 Aug 2012; Justin Lecher <jlec@gentoo.org> scribus-9999.ebuild:
   Add missing dependency on x11-libs/qt-webkit to live ebuild, thanks John
