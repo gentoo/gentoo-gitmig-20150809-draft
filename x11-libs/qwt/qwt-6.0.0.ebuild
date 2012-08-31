@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-6.0.0.ebuild,v 1.8 2012/03/03 15:56:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-6.0.0.ebuild,v 1.9 2012/08/31 06:51:31 jlec Exp $
 
 EAPI=4
 
@@ -67,7 +67,7 @@ src_prepare() {
 		-e 's:libqwt:libqwt6:g' \
 		-i qwtbuild.pri || die
 
-	use svg && echo >> qwtconfig.pri "CONFIG += QwtSvg"
+	use svg && echo "QWT_CONFIG += QwtSvg" >> qwtconfig.pri
 	cp *.pri examples/ || die
 }
 
