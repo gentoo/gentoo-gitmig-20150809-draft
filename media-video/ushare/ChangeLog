@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ushare
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ushare/ChangeLog,v 1.14 2012/08/18 15:06:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ushare/ChangeLog,v 1.15 2012/08/31 23:09:24 hwoarang Exp $
+
+  31 Aug 2012; Markos Chandras <hwoarang@gentoo.org> -ushare-1.1a-r3.ebuild:
+  Remove old
 
 *ushare-1.1a-r4 (18 Aug 2012)
 
