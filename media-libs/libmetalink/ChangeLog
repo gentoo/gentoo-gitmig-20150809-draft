@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libmetalink
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmetalink/ChangeLog,v 1.5 2012/08/01 14:35:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmetalink/ChangeLog,v 1.6 2012/08/31 21:13:47 hwoarang Exp $
+
+*libmetalink-0.1.0-r1 (31 Aug 2012)
+
+  31 Aug 2012; Markos Chandras <hwoarang@gentoo.org>
+  +libmetalink-0.1.0-r1.ebuild:
+  EAPI4fy. Introduce xml useflag. Rework econf to pass --with/--without as
+  expected. Support static libs. bug #433042
 
 *libmetalink-0.1.0 (01 Aug 2012)
 
@@ -24,4 +31,3 @@
   +metadata.xml:
   Moved from sunrise overlay. Thanks to Sebastian Pipping <sping@gentoo.org>.
   Bug #273118
-
