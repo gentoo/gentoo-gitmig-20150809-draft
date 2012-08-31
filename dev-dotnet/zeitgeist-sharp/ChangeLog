@@ -1,6 +1,12 @@
 # ChangeLog for dev-dotnet/zeitgeist-sharp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/zeitgeist-sharp/ChangeLog,v 1.4 2012/06/28 17:08:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/zeitgeist-sharp/ChangeLog,v 1.5 2012/08/31 15:36:35 jlec Exp $
+
+*zeitgeist-sharp-0.8.0.0-r1 (31 Aug 2012)
+
+  31 Aug 2012; Justin Lecher <jlec@gentoo.org>
+  +zeitgeist-sharp-0.8.0.0-r1.ebuild:
+  Fix unchanged variable in pkgconfig file, #432334
 
   28 Jun 2012; Justin Lecher <jlec@gentoo.org> zeitgeist-sharp-0.8.0.0.ebuild,
   +files/zeitgeist-sharp-0.8.0.0-zg-0.9.patch:
