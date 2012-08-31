@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/autoupnp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/autoupnp/ChangeLog,v 1.3 2012/04/23 17:32:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/autoupnp/ChangeLog,v 1.4 2012/08/31 08:56:47 mgorny Exp $
+
+  31 Aug 2012; Michał Górny <mgorny@gentoo.org> autoupnp-0.4.6.ebuild,
+  metadata.xml:
+  Sync to the live ebuild, use prune_libtool_files().
 
   23 Apr 2012; Michał Górny <mgorny@gentoo.org> autoupnp-0.4.6.ebuild:
   Use mirror:// in SRC_URI.
@@ -18,4 +22,3 @@
   +metadata.xml:
   Introduce an ebuild for autoupnp, automatic UPnP port forwarder (bug
   #322057).
-
