@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.8.2-r1.ebuild,v 1.1 2012/08/31 15:26:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.8.2-r1.ebuild,v 1.2 2012/08/31 15:55:55 jer Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -15,12 +15,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="
-	adns +ares doc doc-pdf gtk ipv6 libadns lua gcrypt geoip kerberos profile
+	adns doc doc-pdf gtk ipv6 libadns lua gcrypt geoip kerberos profile
 	+pcap portaudio python +caps selinux smi ssl zlib
-"
-REQUIRED_USE="
-	adns? ( ^^ ( ares libadns ) )
-	adns? ( || ( ares libadns ) )
 "
 
 RDEPEND=">=dev-libs/glib-2.14:2
@@ -38,7 +34,7 @@ RDEPEND=">=dev-libs/glib-2.14:2
 	kerberos? ( virtual/krb5 )
 	portaudio? ( media-libs/portaudio )
 	adns? (
-		ares? ( >=net-dns/c-ares-1.5 )
+		!libadns? ( >=net-dns/c-ares-1.5 )
 		libadns? ( net-libs/adns )
 	)
 	geoip? ( dev-libs/geoip )
@@ -132,6 +128,13 @@ src_configure() {
 		append-flags $(test-flags-CC -nopie)
 	fi
 
+	if use adns; then
+		if use libadns; then
+			myconf+="--with-adns --without-c-ares"
+		else
+			myconf+="--without-adns --with-c-ares"
+		fi
+	fi
 	# Workaround bug #213705. If krb5-config --libs has -lcrypto then pass
 	# --with-ssl to ./configure. (Mimics code from acinclude.m4).
 	if use kerberos; then
@@ -156,12 +159,10 @@ src_configure() {
 		$(use_enable gtk wireshark) \
 		$(use_enable ipv6) \
 		$(use_enable profile profile-build) \
-		$(use_with ares c-ares) \
 		$(use_with caps libcap) \
 		$(use_with gcrypt) \
 		$(use_with geoip) \
 		$(use_with kerberos krb5) \
-		$(use_with libadns adns) \
 		$(use_with lua) \
 		$(use_with pcap dumpcap-group wireshark) \
 		$(use_with pcap) \

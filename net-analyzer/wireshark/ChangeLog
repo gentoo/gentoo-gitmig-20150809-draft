@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.383 2012/08/31 15:41:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.384 2012/08/31 15:55:55 jer Exp $
+
+  31 Aug 2012; Jeroen Roovers <jer@gentoo.org> wireshark-1.6.10-r1.ebuild,
+  wireshark-1.8.2-r1.ebuild, metadata.xml:
+  Simplify aDNS support choices by zerochaos.
 
   31 Aug 2012; Jeroen Roovers <jer@gentoo.org> wireshark-1.6.10-r1.ebuild:
   Prefer USE=ares.
