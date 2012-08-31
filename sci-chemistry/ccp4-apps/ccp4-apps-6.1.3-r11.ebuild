@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r10.ebuild,v 1.10 2012/06/01 09:06:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r11.ebuild,v 1.1 2012/08/31 07:41:17 jlec Exp $
 
 EAPI=3
 
@@ -340,7 +340,12 @@ src_install() {
 	doins -r "${S}"/share/smartie || die
 
 	# Install docs and examples
-	doman "${S}"/man/cat1/*
+	local _man
+	pushd "${S}"/man/cat1 > /dev/null
+	for _man in *; do
+		newman ${_man} ${_man%??}-ccp4${_man:${#_man}-2:2}
+	done
+	popd > /dev/null
 
 	mv "${S}"/manual/README "${S}"/manual/README-manual
 	dodoc manual/* README CHANGES doc/* examples/README || die
@@ -371,12 +376,6 @@ src_install() {
 	# Needed for ccp4i docs to work
 	dosym ../../share/doc/${PF}/examples /usr/$(get_libdir)/ccp4/examples || die
 	dosym ../../share/doc/${PF}/html /usr/$(get_libdir)/ccp4/html || die
-
-	# Fix overlaps with other packages
-	rm -f "${ED}"/usr/share/man/man1/rasmol.1* "${ED}"/usr/lib/font84.dat || die
-	mv "${ED}"/usr/share/man/man1/truncate{,-ccp4}.1 || die
-	mv "${ED}"/usr/share/man/man1/rapper{,-ccp4}.1 || die
-	mv "${ED}"/usr/share/man/man1/sc{,-ccp4}.1 || die
 
 	cat >> "${T}"/baubles <<- EOF
 	#!${EPREFIX}/bin/bash
