@@ -1,6 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mr/mr-1.11.ebuild,v 1.1 2012/02/18 15:49:20 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mr/mr-1.13.ebuild,v 1.1 2012/08/31 13:55:32 tove Exp $
+
+EAPI=4
 
 DESCRIPTION="Multiple Repository management tool"
 HOMEPAGE="http://kitenet.net/~joey/code/mr/"
@@ -19,10 +21,10 @@ RDEPEND="${DEPEND}
 S=${WORKDIR}/${PN}
 
 src_install() {
-	dobin mr webcheckout || die
-	doman mr.1 webcheckout.1 || die
+	dobin mr webcheckout
+	doman mr.1 webcheckout.1
 	dodoc README TODO debian/changelog \
-		mrconfig mrconfig.complex || die
+		mrconfig mrconfig.complex
 	insinto /usr/share/${PN}
-	doins lib/* || die
+	doins lib/*
 }
