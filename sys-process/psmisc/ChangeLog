@@ -1,6 +1,12 @@
 # ChangeLog for sys-process/psmisc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.136 2012/08/25 22:33:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.137 2012/08/31 07:35:39 ssuominen Exp $
+
+*psmisc-22.19-r1 (31 Aug 2012)
+
+  31 Aug 2012; Samuli Suominen <ssuominen@gentoo.org> +psmisc-22.19-r1.ebuild:
+  Upstream patch for fuser to work with unix sockets wrt #398811. Thanks to
+  Piotr Karbowski and Mike Frysinger.
 
   25 Aug 2012; Mike Frysinger <vapier@gentoo.org> psmisc-22.16.ebuild,
   psmisc-22.18.ebuild, psmisc-22.19.ebuild:
