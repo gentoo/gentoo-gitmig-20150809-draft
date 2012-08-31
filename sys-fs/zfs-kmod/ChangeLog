@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/zfs-kmod
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.5 2012/08/26 00:20:48 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.6 2012/08/31 07:10:29 ryao Exp $
+
+  31 Aug 2012; Richard Yao <ryao@gentoo.org> zfs-kmod-9999.ebuild:
+  Remove CONFIG_PREEMPT restriction: Preemption support has been merged upstream
 
   26 Aug 2012; Richard Yao <ryao@gentoo.org> zfs-kmod-0.6.0_rc10.ebuild,
   zfs-kmod-9999.ebuild:

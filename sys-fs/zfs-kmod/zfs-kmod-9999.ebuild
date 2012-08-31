@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-9999.ebuild,v 1.5 2012/08/26 00:20:48 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-9999.ebuild,v 1.6 2012/08/31 07:10:29 ryao Exp $
 
 EAPI="4"
 
@@ -40,7 +40,6 @@ RDEPEND="${DEPEND}
 
 pkg_setup() {
 	CONFIG_CHECK="!DEBUG_LOCK_ALLOC
-		!PREEMPT
 		BLK_DEV_LOOP
 		EFI_PARTITION
 		IOSCHED_NOOP
