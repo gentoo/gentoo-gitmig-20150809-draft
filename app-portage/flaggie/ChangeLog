@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/flaggie
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/flaggie/ChangeLog,v 1.31 2012/08/07 20:18:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/flaggie/ChangeLog,v 1.32 2012/08/31 09:13:52 mgorny Exp $
+
+*flaggie-0.2-r1 (31 Aug 2012)
+
+  31 Aug 2012; Michał Górny <mgorny@gentoo.org> +flaggie-0.2-r1.ebuild,
+  -flaggie-0.1.4.ebuild, flaggie-0.2.ebuild, metadata.xml:
+  Sync to the live ebuild.
 
   07 Aug 2012; Alexis Ballier <aballier@gentoo.org> flaggie-0.2.ebuild:
   keyword ~amd64-fbsd
@@ -151,4 +157,3 @@
   07 Nov 2010; Michał Górny <mgorny@gentoo.org> +flaggie-0.0.1.ebuild,
   +metadata.xml:
   Introducing flaggie, a new CLI package.* file mangler.
-
