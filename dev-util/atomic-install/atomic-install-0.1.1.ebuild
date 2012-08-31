@@ -1,8 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/atomic-install/atomic-install-0.1.1.ebuild,v 1.1 2011/11/19 17:26:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/atomic-install/atomic-install-0.1.1.ebuild,v 1.2 2012/08/31 08:58:54 mgorny Exp $
 
 EAPI=4
+
 inherit autotools-utils
 
 DESCRIPTION="A library and tool to atomically install sets of files"
