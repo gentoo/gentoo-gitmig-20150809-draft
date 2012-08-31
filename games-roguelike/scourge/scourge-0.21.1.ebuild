@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/scourge/scourge-0.21.1.ebuild,v 1.6 2010/09/24 23:13:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/scourge/scourge-0.21.1.ebuild,v 1.7 2012/08/31 19:37:57 tupone Exp $
 
 EAPI=2
 inherit autotools eutils wxwidgets games
@@ -38,6 +38,7 @@ src_prepare() {
 	sed -i \
 		-e '/snprintf/s/tmp, 256/tmp, sizeof(tmp)/' \
 		src/scourgehandler.cpp || die
+	epatch "${FILESDIR}"/${P}-gcc47.patch
 	eautoreconf
 }
 
