@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/coccinelle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/ChangeLog,v 1.24 2012/08/20 17:34:06 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/ChangeLog,v 1.25 2012/08/31 21:28:13 radhermit Exp $
+
+*coccinelle-1.0.0_rc15-r1 (31 Aug 2012)
+
+  31 Aug 2012; Tim Harder <radhermit@gentoo.org>
+  +coccinelle-1.0.0_rc15-r1.ebuild:
+  Revision bump. Fix script location for spatch binary.
 
   20 Aug 2012; Tim Harder <radhermit@gentoo.org> -coccinelle-1.0.0_rc12.ebuild:
   Remove old.
