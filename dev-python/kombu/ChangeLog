@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/kombu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/ChangeLog,v 1.6 2012/08/30 06:55:43 iksaif Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/ChangeLog,v 1.7 2012/08/31 21:02:39 iksaif Exp $
+
+*kombu-2.4.5 (31 Aug 2012)
+
+  31 Aug 2012; Corentin Chary <iksaif@gentoo.org> +kombu-2.4.5.ebuild:
+  Bump to 2.4.5.
 
 *kombu-2.4.3 (30 Aug 2012)
 
