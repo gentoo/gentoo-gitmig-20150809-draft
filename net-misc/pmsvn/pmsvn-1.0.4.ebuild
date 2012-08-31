@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pmsvn/pmsvn-1.0.2.ebuild,v 1.3 2012/08/25 09:48:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pmsvn/pmsvn-1.0.4.ebuild,v 1.1 2012/08/31 19:27:17 hwoarang Exp $
 
-EAPI=3
+EAPI=4
 
 DESCRIPTION="Server's configuration management and monitoring tool"
 HOMEPAGE="http://sourceforge.net/projects/pmsvn/"
@@ -28,10 +28,10 @@ src_prepare() {
 }
 
 src_install() {
-	dosbin "${PN}" || die "dosbin failed"
-	dodoc README || die "dodoc failed"
+	dosbin "${PN}"
+	dodoc README
 	insinto /etc/${PN}/
-	doins pmsvn.conf.sample || die "doins failed"
+	doins pmsvn.conf.sample
 }
 
 pkg_postinst(){
