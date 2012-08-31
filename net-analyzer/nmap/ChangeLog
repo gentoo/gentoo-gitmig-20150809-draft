@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.254 2012/06/20 17:33:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.255 2012/08/31 16:54:12 jer Exp $
+
+  31 Aug 2012; Jeroen Roovers <jer@gentoo.org> nmap-6.00.ebuild,
+  nmap-6.01.ebuild:
+  Depend on net-libs/libpcap[ipv6] by Arvydas Sidorenko (bug #417759).
 
 *nmap-6.01 (20 Jun 2012)
 
