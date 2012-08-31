@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.6.10-r1.ebuild,v 1.4 2012/08/31 16:26:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.6.10-r1.ebuild,v 1.5 2012/08/31 16:34:43 jer Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2"
@@ -18,6 +18,7 @@ IUSE="
 	adns doc doc-pdf gtk ipv6 libadns lua gcrypt geoip kerberos profile
 	+pcap portaudio python +caps selinux smi ssl threads zlib
 "
+REQUIRED_USE="libadns? ( adns )"
 
 RDEPEND=">=dev-libs/glib-2.14:2
 	zlib? ( sys-libs/zlib
