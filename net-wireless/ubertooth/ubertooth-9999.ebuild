@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ubertooth-9999.ebuild,v 1.9 2012/08/26 05:45:45 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ubertooth-9999.ebuild,v 1.10 2012/08/31 03:55:07 zerochaos Exp $
 
 EAPI="4"
 
@@ -14,14 +14,15 @@ HOMEPAGE="http://ubertooth.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="+dfu +specan +python ubertooth0-firmware +ubertooth1-firmware"
+IUSE="+dfu clock_debug +specan +python ubertooth0-firmware +ubertooth1-firmware"
 REQUIRED_USE="dfu? ( python )
 		specan? ( python )
 		ubertooth0-firmware? ( dfu )
 		ubertooth1-firmware? ( dfu )
 		python? ( || ( dfu specan ) )"
-DEPEND=""
-RDEPEND="specan? ( virtual/libusb:1
+DEPEND="clock_debug? ( net-wireless/bluez )"
+RDEPEND="${DEPEND}
+	specan? ( virtual/libusb:1
 		 >=x11-libs/qt-gui-4.7.2:4
 		>=dev-python/pyside-1.0.2
 		>=dev-python/numpy-1.3
@@ -52,6 +53,10 @@ else
 fi
 DESCRIPTION="An open source wireless development platform suitable for Bluetooth experimentation"
 
+have_clock_debug() {
+	use clock_debug && echo "true" || echo "false"
+}
+
 pkg_setup() {
 	ebegin "arm-none-eabi-gcc"
 	if type -p arm-none-eabi-gcc > /dev/null ; then
@@ -80,7 +85,8 @@ pkg_setup() {
 
 src_compile() {
 	cd "${S}/host/bluetooth_rxtx" || die
-	emake
+	emake \
+	clock_debug="$(have_clock_debug)"
 
 	use python && distutils_src_compile
 	if [[ ${PV} == "9999" ]] ; then
@@ -102,6 +108,7 @@ src_install() {
 	dobin bluetooth_rxtx/ubertooth-dump bluetooth_rxtx/ubertooth-lap \
 		bluetooth_rxtx/ubertooth-btle bluetooth_rxtx/ubertooth-uap \
 		bluetooth_rxtx/ubertooth-hop bluetooth_rxtx/ubertooth-util
+	use clock_debug && dobin bluetooth_rxtx/ubertooth-follow
 
 	use python && distutils_src_install
 
