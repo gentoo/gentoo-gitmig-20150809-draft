@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/oracle-jdk-bin-1.7.0.7.ebuild,v 1.2 2012/08/31 17:02:27 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/oracle-jdk-bin-1.7.0.7.ebuild,v 1.3 2012/08/31 17:53:07 mr_bones_ Exp $
 
 EAPI="4"
 
@@ -126,7 +126,7 @@ pkg_nofetch() {
 
 src_prepare() {
 	[[ ${PV} != 1.7.0.7 ]] && die "Check if new demos are provided before bumping. Adjust DEMOS_(S)PV accordingly."
-	
+
 	if use jce; then
 		mv "${WORKDIR}"/${JCE_DIR} "${S}"/jre/lib/security/ || die
 	fi
