@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/pe-format
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pe-format/ChangeLog,v 1.39 2012/04/14 15:38:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pe-format/ChangeLog,v 1.40 2012/08/31 09:02:13 mgorny Exp $
+
+  31 Aug 2012; Michał Górny <mgorny@gentoo.org> metadata.xml,
+  pe-format-2.1.1.ebuild:
+  Sync to the live ebuild (URIs).
 
   14 Apr 2012; Michał Górny <mgorny@gentoo.org> -pe-format-1.ebuild,
   -pe-format-2.0.5.ebuild, -pe-format-2.1.ebuild:
@@ -157,4 +161,3 @@
   +files/pe-format.conf, +files/pe-format.init, +metadata.xml,
   +pe-format-0.ebuild:
   Initial import of ebuild
-
