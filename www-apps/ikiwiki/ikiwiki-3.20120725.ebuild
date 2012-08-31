@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ikiwiki/ikiwiki-3.20120516.ebuild,v 1.1 2012/05/19 08:36:44 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ikiwiki/ikiwiki-3.20120725.ebuild,v 1.1 2012/08/31 14:05:46 tove Exp $
 
-EAPI=3
+EAPI=4
 
 inherit perl-module
 
@@ -85,12 +85,12 @@ src_prepare() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" pure_install || die "make install failed"
+	emake DESTDIR="${D}" pure_install
 	insinto /etc/ikiwiki
-	doins wikilist || die
+	doins wikilist
 
 	#insinto /usr/share/doc/${PF}/examples
-	#doins -r doc/examples/* || die
-	dohtml -r -A setup html/* || die
-	dodoc debian/{NEWS,changelog} || die
+	#doins -r doc/examples/*
+	dohtml -r -A setup html/*
+	dodoc debian/{NEWS,changelog}
 }
