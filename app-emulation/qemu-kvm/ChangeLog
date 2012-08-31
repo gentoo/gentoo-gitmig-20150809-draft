@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.156 2012/08/25 22:38:02 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.157 2012/08/31 16:34:06 cardoe Exp $
+
+  31 Aug 2012; Doug Goldstein <cardoe@gentoo.org> qemu-kvm-1.1.1-r1.ebuild,
+  qemu-kvm-1.1.1-r3.ebuild, qemu-kvm-9999.ebuild:
+  Add a note about USE=static being unstable.
 
   25 Aug 2012; Doug Goldstein <cardoe@gentoo.org> qemu-kvm-9999.ebuild:
   Remove --disable-debug-mon which is an obsolete option for 1.2. bug #432484
