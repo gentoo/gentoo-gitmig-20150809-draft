@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.6.10-r1.ebuild,v 1.3 2012/08/31 15:55:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.6.10-r1.ebuild,v 1.4 2012/08/31 16:26:54 jer Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2"
@@ -132,9 +132,9 @@ src_configure() {
 
 	if use adns; then
 		if use libadns; then
-			myconf+="--with-adns --without-c-ares"
+			myconf+=" --with-adns --without-c-ares"
 		else
-			myconf+="--without-adns --with-c-ares"
+			myconf+=" --without-adns --with-c-ares"
 		fi
 	fi
 
