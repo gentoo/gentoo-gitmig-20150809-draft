@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/simgear-2.8.0.ebuild,v 1.1 2012/08/27 23:57:39 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/simgear-2.8.0.ebuild,v 1.2 2012/08/31 21:25:05 reavertm Exp $
 
 EAPI=4
 
@@ -29,7 +29,6 @@ COMMON_DEPEND="
 "
 DEPEND="${COMMON_DEPEND}
 	>=dev-libs/boost-1.37
-	>=media-libs/plib-1.8.5
 "
 RDEPEND="${COMMON_DEPEND}"
 
