@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/guayadeque/guayadeque-0.3.5.ebuild,v 1.2 2012/05/05 08:31:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/guayadeque/guayadeque-0.3.5.ebuild,v 1.3 2012/08/31 15:43:21 jlec Exp $
 
-EAPI=3
+EAPI=4
 
 WX_GTK_VER="2.8"
 
@@ -70,6 +70,10 @@ src_prepare() {
 	esvn_clean
 
 	sed 's:-O2::g' -i CMakeLists.txt || die
+
+	sed \
+		-e '/Encoding/d' \
+		-i guayadeque.desktop || die
 }
 
 src_configure() {
