@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/f2c/f2c-20100827.ebuild,v 1.1 2012/06/19 23:49:25 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/f2c/f2c-20100827.ebuild,v 1.2 2012/08/31 06:59:53 jlec Exp $
 
 EAPI=4
 
@@ -12,7 +12,8 @@ DEB_P=${PN}_${DEB_PV}
 
 DESCRIPTION="Fortran to C converter"
 HOMEPAGE="http://www.netlib.org/f2c"
-SRC_URI="mirror://debian/pool/main/${PN:0:1}/${PN}/${DEB_P}.orig.tar.gz
+SRC_URI="
+	mirror://debian/pool/main/${PN:0:1}/${PN}/${DEB_P}.orig.tar.gz
 	mirror://debian/pool/main/${PN:0:1}/${PN}/${DEB_P}-${DEB_PR}.debian.tar.gz"
 
 LICENSE="as-is"
@@ -33,6 +34,7 @@ src_prepare() {
 		"${WORKDIR}"/debian/patches/0003-struct-init-braces.patch \
 		"${WORKDIR}"/debian/patches/0004-man-dash-hyphen-slash.patch
 	sed -i -e '/^CC/d' -e '/^CFLAGS/d' src/makefile.u || die
+	tc-export CC
 }
 
 src_compile() {
