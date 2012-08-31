@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.8.65.ebuild,v 1.1 2012/08/17 21:15:57 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.8.67.ebuild,v 1.1 2012/08/31 17:12:17 zmedico Exp $
 
 EAPI=4
 PYTHON_DEPEND=2:2.7
@@ -26,6 +26,7 @@ COMMON_DEPEND="
 	>=dev-libs/chmlib-0.40
 	>=dev-libs/icu-4.4
 	>=dev-python/beautifulsoup-3.0.5:python-2
+	dev-python/netifaces
 	dev-python/python-dateutil
 	>=dev-python/dnspython-1.6.0
 	>=dev-python/cssutils-0.9.9
@@ -83,7 +84,6 @@ src_prepare() {
 '-e', 's|^CXXFLAGS .*|\\\\\\\\0 ${CXXFLAGS}|', \
 '-e', 's|^LFLAGS .*|\\\\\\\\0 ${LDFLAGS}|', \
 '-i', 'Makefile'])" \
-		-e "s:if not opts.only:if True:" \
 		-i setup/extensions.py || die "sed failed to patch extensions.py"
 }
 
