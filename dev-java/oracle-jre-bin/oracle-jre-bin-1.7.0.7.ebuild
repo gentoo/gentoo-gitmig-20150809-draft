@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/oracle-jre-bin-1.7.0.7.ebuild,v 1.1 2012/08/31 10:31:04 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/oracle-jre-bin-1.7.0.7.ebuild,v 1.2 2012/08/31 17:13:18 caster Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ X86_AT="jre-${MY_PV}-linux-i586.tar.gz"
 AMD64_AT="jre-${MY_PV}-linux-x64.tar.gz"
 
 # This URIs need updating when bumping!
-JRE_URI="http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1637588.html"
+JRE_URI="http://www.oracle.com/technetwork/java/javase/downloads/jre7u7-downloads-1836441.html"
 JCE_URI="http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html"
 
 JCE_DIR="UnlimitedJCEPolicy"
