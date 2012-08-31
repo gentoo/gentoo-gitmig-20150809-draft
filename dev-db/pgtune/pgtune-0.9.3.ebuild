@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgtune/pgtune-0.9.3.ebuild,v 1.1 2012/08/29 08:09:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgtune/pgtune-0.9.3.ebuild,v 1.2 2012/08/31 17:52:35 mr_bones_ Exp $
 EAPI=4
 
 inherit eutils
@@ -21,7 +21,7 @@ DEPEND="${RDEPEND}"
 src_install() {
 	mkdir -p ${D}/usr/bin
 	mkdir -p ${D}/usr/share/doc/${P}
-	cp "${S}/pgtune" "${D}/usr/bin/pgtune" || die 
+	cp "${S}/pgtune" "${D}/usr/bin/pgtune" || die
 	for i in COPYRIGHT  README  TODO  pg_settings-8.4-32  pg_settings-8.4-64 pgtune-settingsdir.patch  pgtune.spec  postgresql.conf.sample; do
 		cp "${S}/${i}" "${D}/usr/share/doc/${P}" || die
 	done
