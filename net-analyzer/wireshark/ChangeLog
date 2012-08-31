@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.381 2012/08/26 15:55:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.382 2012/08/31 15:26:42 jer Exp $
+
+*wireshark-1.8.2-r1 (31 Aug 2012)
+*wireshark-1.6.10-r1 (31 Aug 2012)
+
+  31 Aug 2012; Jeroen Roovers <jer@gentoo.org> +wireshark-1.6.10-r1.ebuild,
+  +wireshark-1.8.2-r1.ebuild, metadata.xml:
+  Add general USE=adns and distinct USE=ares/libadns.
 
   26 Aug 2012; Raúl Porcel <armin76@gentoo.org> wireshark-1.6.10.ebuild,
   wireshark-1.8.2.ebuild:
