@@ -1,6 +1,13 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.173 2012/08/25 07:09:30 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.174 2012/09/01 23:44:39 anarchy Exp $
+
+*firefox-15.0 (01 Sep 2012)
+*firefox-10.0.7 (01 Sep 2012)
+
+  01 Sep 2012; <anarchy@gentoo.org> +firefox-10.0.7.ebuild,
+  +firefox-15.0.ebuild, +files/firefox-15.0-fix-gstreamer-html5-crash.patch:
+  Security/Version Bump
 
   25 Aug 2012; Michael Weber <xmw@gentoo.org> firefox-10.0.6.ebuild:
   ppc stable (bug 427224)
