@@ -1,6 +1,10 @@
 # ChangeLog for games-action/d2x
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/ChangeLog,v 1.26 2011/07/08 11:10:06 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/ChangeLog,v 1.27 2012/09/01 18:42:36 tupone Exp $
+
+  01 Sep 2012; Alfredo Tupone <tupone@gentoo.org> d2x-0.2.5-r3.ebuild,
+  +files/d2x-0.2.5-ovflw.patch:
+  Fix some overflow. Bug #431800 by Diego Elio Pettenò
 
   08 Jul 2011; Samuli Suominen <ssuominen@gentoo.org> d2x-0.2.5-r3.ebuild:
   Convert from "useq" to "use".

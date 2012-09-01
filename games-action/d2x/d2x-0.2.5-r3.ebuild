@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/d2x-0.2.5-r3.ebuild,v 1.10 2011/07/08 11:10:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/d2x-0.2.5-r3.ebuild,v 1.11 2012/09/01 18:42:36 tupone Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -30,6 +30,7 @@ dir=${GAMES_DATADIR}/${PN}
 src_prepare() {
 	epatch \
 		"${FILESDIR}/${PV}-shellscripts.patch" \
+		"${FILESDIR}"/${P}-ovflw.patch \
 		"${FILESDIR}/${P}-dofpcalcs-macro.patch"
 
 	sed -i \
