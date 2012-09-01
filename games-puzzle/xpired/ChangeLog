@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/xpired
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xpired/ChangeLog,v 1.6 2010/10/13 23:37:47 mr_bones_ Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xpired/ChangeLog,v 1.7 2012/09/01 06:12:11 mr_bones_ Exp $
+
+  01 Sep 2012; Michael Sterrett <mr_bones_@gentoo.org> xpired-1.22.ebuild:
+  any mod support will do
 
   13 Oct 2010; Michael Sterrett <mr_bones_@gentoo.org> xpired-1.22.ebuild,
   files/xpired-1.22-ldflags.patch:
@@ -20,4 +23,3 @@
 
   12 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> xpired-1.22.ebuild:
   initial commit; ebuild supplied by Eric Harney via bug 33254
-
