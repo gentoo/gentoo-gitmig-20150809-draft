@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Text-CSV-Simple
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-CSV-Simple/ChangeLog,v 1.9 2012/06/24 12:59:51 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-CSV-Simple/ChangeLog,v 1.10 2012/09/01 11:57:58 grobian Exp $
+
+  01 Sep 2012; Fabian Groffen <grobian@gentoo.org> Text-CSV-Simple-1.0.0.ebuild:
+  Marked ~ppc-aix, bug #432288
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Fatal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Fatal/ChangeLog,v 1.28 2012/08/07 21:13:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Fatal/ChangeLog,v 1.29 2012/09/01 11:56:12 grobian Exp $
+
+  01 Sep 2012; Fabian Groffen <grobian@gentoo.org> Test-Fatal-0.10.0.ebuild:
+  Marked ~ppc-aix, bug #432288
 
   07 Aug 2012; Brent Baude <ranger@gentoo.org> Test-Fatal-0.10.0.ebuild:
   Marking Test-Fatal-0.10.0 ppc64 for bug 418803

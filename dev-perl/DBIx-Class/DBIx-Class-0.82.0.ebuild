@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-Class/DBIx-Class-0.82.0.ebuild,v 1.1 2012/08/25 19:19:50 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-Class/DBIx-Class-0.82.0.ebuild,v 1.2 2012/09/01 11:28:06 grobian Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Extensible and flexible object <-> relational mapper"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~ppc-aix"
 IUSE="test admin admin_script deploy replicated"
 
 RDEPEND_MOOSE_BASIC="

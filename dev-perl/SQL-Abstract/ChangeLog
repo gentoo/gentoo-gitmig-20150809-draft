@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/SQL-Abstract
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Abstract/ChangeLog,v 1.54 2012/07/13 17:15:10 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Abstract/ChangeLog,v 1.55 2012/09/01 11:50:24 grobian Exp $
+
+  01 Sep 2012; Fabian Groffen <grobian@gentoo.org> SQL-Abstract-1.730.0.ebuild:
+  Marked ~ppc-aix, bug #432288
 
 *SQL-Abstract-1.730.0 (13 Jul 2012)
 
@@ -238,4 +241,3 @@
   04 Nov 2005; Chris White <chriswhite@gentoo.org> +metadata.xml,
   +SQL-Abstract-1.20.ebuild:
   Initial import into the tree for Apache-AuthTicket dep.
-

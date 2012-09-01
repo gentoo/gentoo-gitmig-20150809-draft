@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Data-OptList
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-OptList/ChangeLog,v 1.23 2012/08/05 16:18:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-OptList/ChangeLog,v 1.24 2012/09/01 11:29:22 grobian Exp $
+
+  01 Sep 2012; Fabian Groffen <grobian@gentoo.org> Data-OptList-0.107.0.ebuild:
+  Marked ~ppc-aix, bug #432288
 
   05 Aug 2012; Markus Meier <maekke@gentoo.org> Data-OptList-0.107.0.ebuild:
   arm stable, bug #418803

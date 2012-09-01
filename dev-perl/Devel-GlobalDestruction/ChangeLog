@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Devel-GlobalDestruction
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-GlobalDestruction/ChangeLog,v 1.21 2012/08/09 18:38:28 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-GlobalDestruction/ChangeLog,v 1.22 2012/09/01 11:32:38 grobian Exp $
+
+  01 Sep 2012; Fabian Groffen <grobian@gentoo.org>
+  Devel-GlobalDestruction-0.90.0.ebuild:
+  Marked ~ppc-aix, bug #432288
 
 *Devel-GlobalDestruction-0.90.0 (09 Aug 2012)
 

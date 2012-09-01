@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/B-Hooks-EndOfScope
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/B-Hooks-EndOfScope/ChangeLog,v 1.20 2012/06/24 12:58:32 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/B-Hooks-EndOfScope/ChangeLog,v 1.21 2012/09/01 11:13:39 grobian Exp $
+
+  01 Sep 2012; Fabian Groffen <grobian@gentoo.org>
+  B-Hooks-EndOfScope-0.110.0.ebuild:
+  Marked ~ppc-aix, bug #432288
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

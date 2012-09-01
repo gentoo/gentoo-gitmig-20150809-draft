@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/strictures
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/strictures/ChangeLog,v 1.7 2012/07/13 16:50:38 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/strictures/ChangeLog,v 1.8 2012/09/01 12:04:01 grobian Exp $
+
+  01 Sep 2012; Fabian Groffen <grobian@gentoo.org> strictures-1.4.1.ebuild:
+  Marked ~ppc-aix, bug #432288
 
 *strictures-1.4.1 (13 Jul 2012)
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Package-DeprecationManager
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-DeprecationManager/ChangeLog,v 1.30 2012/08/09 18:03:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-DeprecationManager/ChangeLog,v 1.31 2012/09/01 11:45:56 grobian Exp $
+
+  01 Sep 2012; Fabian Groffen <grobian@gentoo.org>
+  Package-DeprecationManager-0.130.0.ebuild:
+  Marked ~ppc-aix, bug #432288
 
   09 Aug 2012; Brent Baude <ranger@gentoo.org>
   Package-DeprecationManager-0.130.0.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/CPAN-Mini
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini/ChangeLog,v 1.46 2012/08/30 18:26:15 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini/ChangeLog,v 1.47 2012/09/01 11:14:04 grobian Exp $
+
+  01 Sep 2012; Fabian Groffen <grobian@gentoo.org> CPAN-Mini-1.111.9.ebuild:
+  Marked ~ppc-aix, bug #432288
 
 *CPAN-Mini-1.111.9 (30 Aug 2012)
 

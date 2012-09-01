@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Unicode-Map
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-Map/ChangeLog,v 1.31 2012/08/07 18:35:57 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-Map/ChangeLog,v 1.32 2012/09/01 12:00:48 grobian Exp $
+
+  01 Sep 2012; Fabian Groffen <grobian@gentoo.org> Unicode-Map-0.112.0.ebuild:
+  Marked ~ppc-aix, bug #432288
 
   07 Aug 2012; Naohiro Aota <naota@gentoo.org> Unicode-Map-0.112.0.ebuild:
   Add ~x86-fbsd; #428248
