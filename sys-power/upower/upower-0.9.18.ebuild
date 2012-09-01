@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.18.ebuild,v 1.1 2012/08/25 05:53:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.18.ebuild,v 1.2 2012/09/01 14:16:17 ssuominen Exp $
 
 EAPI=4
 
@@ -33,7 +33,8 @@ COMMON_DEPEND=">=dev-libs/dbus-glib-0.100
 		)
 	systemd? ( sys-apps/systemd )"
 RDEPEND="${COMMON_DEPEND}
-	kernel_linux? ( >=sys-power/pm-utils-1.4.1 )"
+	kernel_linux? ( >=sys-power/pm-utils-1.4.1 )
+	systemd? ( app-shells/bash )"
 DEPEND="${COMMON_DEPEND}
 	dev-libs/libxslt
 	app-text/docbook-xsl-stylesheets
