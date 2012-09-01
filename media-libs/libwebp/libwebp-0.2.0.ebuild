@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwebp/libwebp-0.2.0.ebuild,v 1.1 2012/08/25 11:20:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwebp/libwebp-0.2.0.ebuild,v 1.2 2012/09/01 14:37:32 ago Exp $
 
 EAPI=4
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="http://webp.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~x86 ~amd64-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~x86 ~amd64-fbsd"
 IUSE="experimental static-libs"
 
 RDEPEND="media-libs/libpng:0
