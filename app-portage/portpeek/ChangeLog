@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/portpeek
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.150 2012/08/19 17:02:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.151 2012/09/01 16:10:04 mpagano Exp $
+
+*portpeek-2.0.25 (01 Sep 2012)
+
+  01 Sep 2012; Michael Pagano <mpagano@gentoo.org> +portpeek-2.0.25.ebuild:
+  Use get_iuse instead of get_flags for package.use processing
 
   19 Aug 2012; Raúl Porcel <armin76@gentoo.org> portpeek-2.0.24.ebuild:
   sparc stable wrt #421997
