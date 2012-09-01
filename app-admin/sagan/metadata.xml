@@ -3,9 +3,14 @@
 <pkgmetadata>
 <maintainer>
   <email>andreis.vinogradovs@gmail.com</email>
+  <name>Andreis Vinogradovs</name>
 </maintainer>
 <maintainer>
   <email>maksbotan@gentoo.org</email>
+</maintainer>
+<maintainer>
+  <email>qnikst@gentoo.org</email>
+  <name>Alexander Vershilov</name>
 </maintainer>
 <use>
   <flag name='smtp'>Build witch SMTP (E-Mail) support</flag>
