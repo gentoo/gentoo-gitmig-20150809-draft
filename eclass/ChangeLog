@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.385 2012/09/01 09:39:07 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.386 2012/09/01 20:49:01 vadimk Exp $
+
+  01 Sep 2012; Vadim Kuznetsov vadimk@gentoo.org -vmware.eclass,
+  -vmware-mod.eclass:
+  removed vmware and vmware-mod elsasses
 
   01 Sep 2012; Ulrich Müller <ulm@gentoo.org> elisp-common.eclass:
   Suppress warning message in elisp-site-regen for initial installation.
