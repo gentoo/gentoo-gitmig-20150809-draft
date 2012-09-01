@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.5.6-r2.ebuild,v 1.1 2012/08/12 02:16:13 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.5.6-r2.ebuild,v 1.2 2012/09/01 07:56:17 pesa Exp $
 
 EAPI=4
 
@@ -111,10 +111,12 @@ src_prepare() {
 }
 
 src_configure() {
-	# Add lax vector typing for PowerPC
+	# add lax vector typing for PowerPC
 	if use ppc || use ppc64; then
 		append-cflags -flax-vector-conversions
 	fi
+	# bug 432322
+	use x86 && replace-flags -O0 -O1
 
 	local mycmakeargs=(
 		-DAVIDEMUX_SOURCE_DIR="${S}"
