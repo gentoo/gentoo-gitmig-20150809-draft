@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.132 2012/08/28 20:49:34 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.133 2012/09/01 08:40:23 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -54,7 +54,7 @@ RDEPEND="app-arch/bzip2
 	kerberos? ( virtual/krb5 )
 	selinux? ( sys-libs/libselinux )"
 DEPEND="${RDEPEND}
-	>=dev-lang/nacl-toolchain-newlib-0_p9093
+	!arm? ( >=dev-lang/nacl-toolchain-newlib-0_p9093 )
 	dev-lang/perl
 	dev-lang/yasm
 	dev-python/ply
@@ -161,8 +161,10 @@ pkg_setup() {
 }
 
 src_prepare() {
-	ln -s /usr/$(get_libdir)/nacl-toolchain-newlib \
-		native_client/toolchain/linux_x86_newlib || die
+	if ! use arm; then
+		ln -s /usr/$(get_libdir)/nacl-toolchain-newlib \
+			native_client/toolchain/linux_x86_newlib || die
+	fi
 
 	# zlib-1.2.5.1-r1 renames the OF macro in zconf.h, bug 383371.
 	sed -i '1i#define OF(x) x' \
@@ -323,6 +325,11 @@ src_configure() {
 		myconf+=" -Dtarget_arch=x64"
 	elif [[ $myarch = x86 ]] ; then
 		myconf+=" -Dtarget_arch=ia32"
+	elif [[ $myarch = arm ]] ; then
+		# TODO: re-enable NaCl (NativeClient).
+		myconf+=" -Dtarget_arch=arm
+			-Darm_neon=0
+			-Ddisable_nacl=1"
 	else
 		die "Failed to determine target arch, got '$myarch'."
 	fi
@@ -431,10 +438,12 @@ src_install() {
 
 	doexe out/Release/chromedriver || die
 
-	doexe out/Release/nacl_helper{,_bootstrap} || die
-	insinto "${CHROMIUM_HOME}"
-	doins out/Release/nacl_irt_*.nexe || die
-	doins out/Release/libppGoogleNaClPluginChrome.so || die
+	if ! use arm; then
+		doexe out/Release/nacl_helper{,_bootstrap} || die
+		insinto "${CHROMIUM_HOME}"
+		doins out/Release/nacl_irt_*.nexe || die
+		doins out/Release/libppGoogleNaClPluginChrome.so || die
+	fi
 
 	newexe "${FILESDIR}"/chromium-launcher-r2.sh chromium-launcher.sh || die
 	if [[ "${CHROMIUM_SUFFIX}" != "" ]]; then
