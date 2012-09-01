@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<maintainer>
-  <email>@gmail.com</email>
- <description>Description of the maintainership</description> 
-</maintainer>
- <longdescription>Long description of the package</longdescription> 
+  <maintainer>
+	<email>andreis.vinogradovs@gmail.com</email>
+  </maintainer>
+  <maintainer>
+	<email>qnikst@gentoo.org</email>
+  </maintainer>
+  <longdescription>Long description of the package</longdescription> 
 <use>
 </use>
 </pkgmetadata>
