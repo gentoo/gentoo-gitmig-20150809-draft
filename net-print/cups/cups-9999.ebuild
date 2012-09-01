@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.18 2012/08/31 10:37:11 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.19 2012/09/01 17:42:25 blueness Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ MY_PV=${PV/_beta/b}
 
 if [[ "${PV}" != "9999" ]]; then
 	SRC_URI="mirror://easysw/${PN}/${MY_PV}/${MY_P}-source.tar.bz2"
-	KEYWORDS="~amd64 ~arm ~hppa ~mips ~x86"
+	KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~x86"
 else
 	inherit subversion
 	ESVN_REPO_URI="http://svn.easysw.com/public/cups/trunk"
