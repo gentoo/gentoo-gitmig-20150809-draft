@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.81 2012/07/18 14:28:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.82 2012/09/01 09:39:07 ulm Exp $
 #
 # @ECLASS: elisp-common.eclass
 # @MAINTAINER:
@@ -386,7 +386,8 @@ elisp-site-regen() {
 		mv "${T}"/site-gentoo.el "${sitelisp}"/site-gentoo.el
 		eend
 		case ${#sflist[@]} in
-			0) ewarn "... Huh? No site initialisation files found." ;;
+			0) [[ ${PN} = emacs-common-gentoo ]] \
+				|| ewarn "... Huh? No site initialisation files found." ;;
 			1) einfo "... ${#sflist[@]} site initialisation file included." ;;
 			*) einfo "... ${#sflist[@]} site initialisation files included." ;;
 		esac

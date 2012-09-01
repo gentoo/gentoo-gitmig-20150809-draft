@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.384 2012/08/30 23:52:59 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.385 2012/09/01 09:39:07 ulm Exp $
+
+  01 Sep 2012; Ulrich Müller <ulm@gentoo.org> elisp-common.eclass:
+  Suppress warning message in elisp-site-regen for initial installation.
 
   30 Aug 2012; Michael Pagano <mpagano@gentoo.org> linux-mod.eclass:
   Minor typo fix to documentation line. Bug #419469
