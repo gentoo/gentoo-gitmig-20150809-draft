@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/DBIx-Safe
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-Safe/ChangeLog,v 1.1 2012/09/01 02:21:28 patrick Exp $
+
+*DBIx-Safe-1.2.5 (01 Sep 2012)
+
+  01 Sep 2012; Patrick Lauer <patrick@gentoo.org> +DBIx-Safe-1.2.5.ebuild,
+  +metadata.xml:
+  Initial import, ebuild by me
