@@ -1,6 +1,9 @@
 # ChangeLog for app-text/qpdf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qpdf/ChangeLog,v 1.10 2012/08/30 10:26:48 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdf/ChangeLog,v 1.11 2012/09/01 16:42:12 blueness Exp $
+
+  01 Sep 2012; Anthony G. Basile <blueness@gentoo.org> qpdf-3.0.1.ebuild:
+  Keyword ~ppc, bug #428356
 
   30 Aug 2012; Anthony G. Basile <blueness@gentoo.org> qpdf-3.0.1.ebuild:
   Keyword ~mips
