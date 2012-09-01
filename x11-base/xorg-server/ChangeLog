@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.681 2012/08/26 20:12:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.682 2012/09/01 12:50:31 chithanh Exp $
+
+  01 Sep 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xorg-server-1.12.99.905.ebuild:
+  Disable libdrm for minimal build, bug #431914.
 
   26 Aug 2012; Raúl Porcel <armin76@gentoo.org> xorg-server-1.12.2.ebuild:
   alpha/ia64/sh/sparc stable wrt #419473
