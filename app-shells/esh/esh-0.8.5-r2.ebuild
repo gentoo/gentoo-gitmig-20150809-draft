@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/esh/esh-0.8.5-r2.ebuild,v 1.1 2012/07/11 18:54:56 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/esh/esh-0.8.5-r2.ebuild,v 1.2 2012/09/01 13:39:22 blueness Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://slon.ttk.ru/esh/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ppc ~x86"
 IUSE="debug"
 
 DEPEND=">=sys-libs/ncurses-5.1

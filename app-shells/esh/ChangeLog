@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/esh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/esh/ChangeLog,v 1.25 2012/07/11 18:54:56 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/esh/ChangeLog,v 1.26 2012/09/01 13:39:22 blueness Exp $
+
+  01 Sep 2012; Anthony G. Basile <blueness@gentoo.org> esh-0.8.5-r2.ebuild:
+  Stable ppc, bug #433191
 
 *esh-0.8.5-r2 (11 Jul 2012)
 
