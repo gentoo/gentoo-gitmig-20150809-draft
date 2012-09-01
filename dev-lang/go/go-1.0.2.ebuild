@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-1.0.2.ebuild,v 1.2 2012/08/07 19:04:32 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-1.0.2.ebuild,v 1.3 2012/09/01 17:34:11 williamh Exp $
 
 EAPI=4
 
@@ -54,7 +54,7 @@ src_compile()
 	export GOROOT_FINAL=/usr/lib/go
 	export GOROOT="$(pwd)"
 	export GOBIN="${GOROOT}/bin"
-	if [[ $CTARGET = arm5* ]]
+	if [[ $CTARGET = armv5* ]]
 	then
 		export GOARM=5
 	fi

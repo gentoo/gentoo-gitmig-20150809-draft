@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/go
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/ChangeLog,v 1.4 2012/07/30 18:49:38 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/ChangeLog,v 1.5 2012/09/01 17:34:11 williamh Exp $
+
+  01 Sep 2012; William Hubbs <williamh@gentoo.org> go-1.0.2.ebuild,
+  go-9999.ebuild:
+  Fix arm5 detection thanks to Markus Meier.
 
 *go-1.0.2 (30 Jul 2012)
 
@@ -28,4 +32,3 @@
   ebuild. Also, I would like to thank powerman-asdf@yandex.ru for the
   original hardened patch and everyone else who worked with me on the bug
   so we could get this into the tree.
-
