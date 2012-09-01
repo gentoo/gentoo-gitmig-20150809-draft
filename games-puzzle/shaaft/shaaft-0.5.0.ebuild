@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/shaaft/shaaft-0.5.0.ebuild,v 1.15 2011/09/17 16:22:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/shaaft/shaaft-0.5.0.ebuild,v 1.16 2012/09/01 02:31:18 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -16,9 +16,9 @@ IUSE=""
 
 DEPEND="virtual/opengl
 	sys-libs/zlib
-	media-libs/libpng
+	media-libs/libpng:0
 	media-libs/libsdl[audio,opengl,video]
-	media-libs/sdl-mixer[mikmod]
+	media-libs/sdl-mixer[mod]
 	media-libs/sdl-image[png]"
 
 S=${WORKDIR}/${P/s/S}
@@ -40,7 +40,7 @@ src_prepare() {
 		"${FILESDIR}"/${P}-gcc41.patch \
 		"${FILESDIR}"/${P}-gcc43.patch \
 		"${FILESDIR}"/${P}-libpng15.patch
-
+	mv configure.in configure.ac || die
 	eautoreconf
 }
 

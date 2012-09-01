@@ -1,5 +1,5 @@
---- utils/hashMap.hpp.old	2006-05-21 13:46:38.000000000 +0200
-+++ utils/hashMap.hpp	2006-05-21 13:47:22.000000000 +0200
+--- utils/hashMap.hpp.old
++++ utils/hashMap.hpp
 @@ -14,7 +14,7 @@
  //
  #if defined( __GNUC__ )

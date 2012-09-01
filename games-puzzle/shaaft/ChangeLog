@@ -1,6 +1,12 @@
 # ChangeLog for games-puzzle/shaaft
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/shaaft/ChangeLog,v 1.13 2011/09/17 16:22:20 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/shaaft/ChangeLog,v 1.14 2012/09/01 02:31:18 mr_bones_ Exp $
+
+  01 Sep 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  files/shaaft-0.5.0-gcc34.patch, files/shaaft-0.5.0-gcc41.patch,
+  files/shaaft-0.5.0-gcc43.patch, files/shaaft-0.5.0-libpng15.patch,
+  shaaft-0.5.0.ebuild:
+  any mod support will do
 
   17 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> shaaft-0.5.0.ebuild,
   +files/shaaft-0.5.0-libpng15.patch:
@@ -44,4 +50,3 @@
   01 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml,
   shaaft-0.5.0.ebuild:
   initial commit; ebuild submitted by Chris Aniszczyk via bug 40031
-

@@ -1,6 +1,5 @@
-diff -uprN Shaaft-0.5.0.orig/utils/HashString.hpp Shaaft-0.5.0/utils/HashString.hpp
---- Shaaft-0.5.0.orig/utils/HashString.hpp	2005-06-05 18:12:29.000000000 +0200
-+++ Shaaft-0.5.0/utils/HashString.hpp	2005-06-05 18:24:05.000000000 +0200
+--- Shaaft-0.5.0.orig/utils/HashString.hpp
++++ Shaaft-0.5.0/utils/HashString.hpp
 @@ -21,6 +21,7 @@ using namespace std;
  
  namespace HASH_NAMESPACE
