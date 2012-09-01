@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Math-BigInt-FastCalc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Math-BigInt-FastCalc/ChangeLog,v 1.33 2012/05/21 11:50:35 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Math-BigInt-FastCalc/ChangeLog,v 1.34 2012/09/01 12:13:45 grobian Exp $
+
+  01 Sep 2012; Fabian Groffen <grobian@gentoo.org>
+  perl-Math-BigInt-FastCalc-0.300.0-r1.ebuild:
+  Marked ~ppc-aix, bug #432288
 
 *perl-Math-BigInt-FastCalc-0.300.0-r1 (21 May 2012)
 
@@ -164,4 +168,3 @@
   +perl-Math-BigInt-FastCalc-0.16.ebuild,
   +perl-Math-BigInt-FastCalc-0.19.ebuild:
   Adding virtuals for dual-lifed modules that come with perl-5.10
-
