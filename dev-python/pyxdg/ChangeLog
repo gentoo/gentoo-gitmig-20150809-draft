@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyxdg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.94 2012/08/24 14:22:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.95 2012/09/01 18:04:57 maekke Exp $
+
+  01 Sep 2012; Markus Meier <maekke@gentoo.org> pyxdg-0.23.ebuild:
+  arm stable, bug #432384
 
   24 Aug 2012; Jeroen Roovers <jer@gentoo.org> pyxdg-0.23.ebuild:
   Stable for HPPA (bug #432384).
