@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/rime-data/rime-data-0.9.2.ebuild,v 1.1 2012/09/01 10:46:21 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/rime-data/rime-data-0.9.2.ebuild,v 1.2 2012/09/01 10:47:34 yngwin Exp $
 
 EAPI=4
 
@@ -19,5 +19,5 @@ DEPEND="app-i18n/librime"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	cp ${FILESDIR}/Makefile ${S} || die
+	cp "${FILESDIR}"/Makefile "${S}" || die
 }
