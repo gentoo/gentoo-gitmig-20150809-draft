@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.55 2012/08/04 19:57:41 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.56 2012/09/01 20:15:23 zmedico Exp $
 
 EAPI=3
-inherit git-2 eutils multilib python
+inherit git-2 eutils python
 
 DESCRIPTION="Portage is the package management and distribution system for Gentoo"
 HOMEPAGE="http://www.gentoo.org/proj/en/portage/index.xml"
@@ -81,10 +81,6 @@ current_python_has_xattr() {
 }
 
 pkg_setup() {
-	# Bug #359731 - Die early if get_libdir fails.
-	[[ -z $(get_libdir) ]] && \
-		die "get_libdir returned an empty string"
-
 	if use python2 && use python3 ; then
 		ewarn "Both python2 and python3 USE flags are enabled, but only one"
 		ewarn "can be in the shebangs. Using python3."
@@ -239,7 +235,6 @@ src_install() {
 	emake DESTDIR="${D}" \
 		sysconfdir="${EPREFIX}/etc" \
 		prefix="${EPREFIX}/usr" \
-		libdir="${EPREFIX}/usr/$(get_libdir)" \
 		install || die
 
 	# Use dodoc for compression, since the Makefile doesn't do that.
@@ -285,7 +280,7 @@ pkg_preinst() {
 pkg_postinst() {
 	# Compile all source files recursively. Any orphans
 	# will be identified and removed in postrm.
-	python_mod_optimize /usr/$(get_libdir)/portage/pym
+	python_mod_optimize /usr/lib/portage/pym
 
 	if $WORLD_MIGRATION_UPGRADE && \
 		grep -q "^@" "${EROOT}/var/lib/portage/world"; then
@@ -316,5 +311,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	python_mod_cleanup /usr/$(get_libdir)/portage/pym
+	python_mod_cleanup /usr/lib/portage/pym
 }
