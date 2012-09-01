@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Time-Local
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-Local/ChangeLog,v 1.65 2012/07/27 19:26:43 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-Local/ChangeLog,v 1.66 2012/09/01 12:09:57 grobian Exp $
+
+  01 Sep 2012; Fabian Groffen <grobian@gentoo.org> Time-Local-1.230.0.ebuild:
+  Marked ~ppc-aix, bug #432288
 
 *Time-Local-1.230.0 (27 Jul 2012)
 
