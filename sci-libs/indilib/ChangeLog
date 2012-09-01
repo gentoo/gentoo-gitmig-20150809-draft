@@ -1,6 +1,15 @@
 # ChangeLog for sci-libs/indilib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/indilib/ChangeLog,v 1.24 2012/08/20 17:08:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/indilib/ChangeLog,v 1.25 2012/09/01 18:00:23 scarabeus Exp $
+
+*indilib-0.9.5 (01 Sep 2012)
+
+  01 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> +indilib-0.9.5.ebuild,
+  -files/0.6-fix_symlink.patch, -files/0.6-multilib.patch,
+  -files/0.6.2-fix_fits_harddep.patch, -files/0.6.2-fix_symlinks.patch,
+  -files/0.7.2-fix_linking_pthread.patch, -files/0.7.2-fix_pkgconfig.patch,
+  -indilib-0.6.ebuild, -indilib-0.7.2.ebuild:
+  Version bump to latest. Drop some older.
 
   20 Aug 2012; Jeroen Roovers <jer@gentoo.org> indilib-0.6.ebuild,
   indilib-0.7.2.ebuild, indilib-0.9.1.ebuild:
