@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.6.7_p1.ebuild,v 1.3 2012/09/01 20:15:23 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.6.7_p1.ebuild,v 1.4 2012/09/01 21:10:02 zmedico Exp $
 
-inherit eutils python
+inherit eutils multilib python
 
 DESCRIPTION="Portage is the package management and distribution system for Gentoo"
 HOMEPAGE="http://www.gentoo.org/proj/en/portage/index.xml"
@@ -64,6 +64,12 @@ done
 S="${WORKDIR}"/${PN}-${TARBALL_PV}
 S_PL="${WORKDIR}"/${PN}-${PV_PL}
 
+pkg_setup() {
+	# Bug #359731 - Die early if get_libdir fails.
+	[[ -z $(get_libdir) ]] && \
+		die "get_libdir returned an empty string"
+}
+
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
@@ -113,7 +119,8 @@ src_test() {
 }
 
 src_install() {
-	local portage_base="/usr/lib/portage"
+	local libdir=$(get_libdir)
+	local portage_base="/usr/${libdir}/portage"
 	local portage_share_config=/usr/share/portage/config
 
 	cd "${S}"/cnf
@@ -184,14 +191,14 @@ src_install() {
 
 	dodir /usr/bin
 	for x in ebuild emerge portageq repoman xpak; do
-		dosym ../lib/portage/bin/${x} /usr/bin/${x}
+		dosym ../${libdir}/portage/bin/${x} /usr/bin/${x}
 	done
 
 	dodir /usr/sbin
 	local x
 	for x in archive-conf dispatch-conf emaint emerge-webrsync env-update \
 		etc-update fixpackages quickpkg regenworld ; do
-		dosym ../lib/portage/bin/${x} /usr/sbin/${x}
+		dosym ../${libdir}/portage/bin/${x} /usr/sbin/${x}
 	done
 	dosym env-update /usr/sbin/update-env
 	dosym etc-update /usr/sbin/update-etc
@@ -213,7 +220,7 @@ pkg_preinst() {
 pkg_postinst() {
 	# Compile all source files recursively. Any orphans
 	# will be identified and removed in postrm.
-	python_mod_optimize /usr/lib/portage/pym
+	python_mod_optimize /usr/$(get_libdir)/portage/pym
 
 	local warning_shown=0
 	if [ $DOWNGRADE_FROM_2_2 = 0 ] ; then
@@ -252,5 +259,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	python_mod_cleanup /usr/lib/portage/pym
+	python_mod_cleanup /usr/$(get_libdir)/portage/pym
 }
