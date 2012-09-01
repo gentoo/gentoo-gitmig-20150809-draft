@@ -1,12 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/kramdown/kramdown-0.13.7.ebuild,v 1.1 2012/06/04 00:49:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/kramdown/kramdown-0.13.8.ebuild,v 1.1 2012/09/01 12:35:04 flameeyes Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19 ree18 jruby"
 
-RAKE_FAKEGEM_DOCDIR="htmldoc/rdoc"
-RUBY_FAKEGEM_EXTRADOC="README ChangeLog"
+RUBY_FAKEGEM_EXTRADOC="README.md AUTHORS ChangeLog CONTRIBUTERS"
+
+RUBY_FAKEGEM_RECIPE_DOC="rdoc"
+RUBY_FAKEGEM_DOC_SOURCES="lib README.md"
 
 RUBY_FAKEGEM_EXTRAINSTALL="data"
 
@@ -21,7 +23,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="latex"
 
-RDEPEND+="latex? ( dev-texlive/texlive-latex dev-texlive/texlive-latexextra )"
+LATEX_DEPS="latex? ( dev-texlive/texlive-latex dev-texlive/texlive-latexextra )"
+RDEPEND+=" ${LATEX_DEPS}"
+DEPEND+=" test? ( ${LATEX_DEPS} )"
 
 ruby_add_bdepend "doc? ( dev-ruby/rdoc )
 	test? ( >=dev-ruby/coderay-1.0.0 )"
@@ -32,12 +36,6 @@ all_ruby_prepare() {
 		# present at all, but not when components are missing (most
 		# notable ucs.sty).
 		sed -i -e '/latex -v/,/^  end/ s:^:#:' test/test_files.rb || die
-	fi
-}
-
-all_ruby_compile() {
-	if use doc; then
-		rdoc-2 -o htmldoc/rdoc --main README --title kramdown lib README || die "Unable to generate documentation"
 	fi
 }
 

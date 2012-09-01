@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/kramdown
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/kramdown/ChangeLog,v 1.15 2012/08/25 06:12:44 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/kramdown/ChangeLog,v 1.16 2012/09/01 12:35:04 flameeyes Exp $
+
+*kramdown-0.13.8 (01 Sep 2012)
+
+  01 Sep 2012; Diego E. Pettenò <flameeyes@gentoo.org> +kramdown-0.13.8.ebuild,
+  -kramdown-0.13.7.ebuild:
+  Version bump; make sure latex dependencies are also added during test with the
+  flag enabled; use the rdoc recipe for documentation building.
 
   25 Aug 2012; Hans de Graaff <graaff@gentoo.org> -kramdown-0.13.3.ebuild,
   -kramdown-0.13.4.ebuild, -kramdown-0.13.5.ebuild, -kramdown-0.13.5-r1.ebuild,
@@ -75,4 +82,3 @@
   +metadata.xml:
   Initial import. This is a mandatory dependency of app-text/webgen, bug
   341067.
-
