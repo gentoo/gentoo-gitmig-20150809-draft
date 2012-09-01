@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/cuyo
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/cuyo/ChangeLog,v 1.23 2010/01/07 18:22:28 josejx Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/cuyo/ChangeLog,v 1.24 2012/09/01 05:05:39 mr_bones_ Exp $
+
+  01 Sep 2012; Michael Sterrett <mr_bones_@gentoo.org> cuyo-2.1.1.ebuild:
+  any mod support will do
 
   07 Jan 2010; Joseph Jezak <josejx@gentoo.org> cuyo-2.1.1.ebuild:
   Marked ppc stable for bug #299412.
