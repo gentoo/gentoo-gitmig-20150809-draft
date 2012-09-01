@@ -1,6 +1,9 @@
 # ChangeLog for net-print/lprng
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.62 2012/08/24 14:22:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.63 2012/09/01 18:06:12 maekke Exp $
+
+  01 Sep 2012; Markus Meier <maekke@gentoo.org> lprng-3.8.35-r1.ebuild:
+  arm stable, bug #432488
 
   24 Aug 2012; Agostino Sarubbo <ago@gentoo.org> lprng-3.8.35-r1.ebuild:
   Stable for amd64, wrt bug #432488
