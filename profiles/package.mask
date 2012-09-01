@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14083 2012/08/30 17:49:43 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14084 2012/09/01 07:47:29 radhermit Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Tim Harder <radhermit@gentoo.org> (1 Sep 2012)
+# Mask development releases
+=media-sound/lilypond-2.17*
 
 # Eray Aslan <eras@gentoo.org> (27 Aug 2012)
 # Mask squid-3.2 until net-libs/libecap-0.2.0 is
