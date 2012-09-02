@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/librime/librime-0.9.2.ebuild,v 1.1 2012/09/01 10:42:58 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/librime/librime-0.9.2.ebuild,v 1.2 2012/09/02 01:34:01 mr_bones_ Exp $
 
 EAPI=4
 
@@ -37,4 +37,3 @@ src_configure() {
 	)
 	cmake-utils_src_configure
 }
-
