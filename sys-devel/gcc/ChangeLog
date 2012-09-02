@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.896 2012/09/01 09:17:47 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.897 2012/09/02 00:58:19 xmw Exp $
+
+  02 Sep 2012; Michael Weber <xmw@gentoo.org> gcc-4.4.7.ebuild,
+  gcc-4.5.4.ebuild:
+  ppc stable (bug 431878).
 
   01 Sep 2012; Michael Weber <xmw@gentoo.org> gcc-4.5.4.ebuild:
   ppc stable (bug 431878).
