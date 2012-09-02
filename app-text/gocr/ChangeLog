@@ -1,6 +1,10 @@
 # ChangeLog for app-text/gocr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.67 2012/04/01 15:16:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.68 2012/09/02 04:27:33 radhermit Exp $
+
+  02 Sep 2012; Tim Harder <radhermit@gentoo.org> -gocr-0.45.ebuild,
+  -files/gocr-0.45-makefile.patch, -gocr-0.48.ebuild:
+  Remove old.
 
   01 Apr 2012; Raúl Porcel <armin76@gentoo.org> gocr-0.49.ebuild:
   alpha/sparc/x86 stable wrt #408165
