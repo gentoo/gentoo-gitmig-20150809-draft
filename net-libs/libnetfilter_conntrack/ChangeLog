@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libnetfilter_conntrack
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_conntrack/ChangeLog,v 1.47 2012/08/26 17:07:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_conntrack/ChangeLog,v 1.48 2012/09/02 11:16:43 xmw Exp $
+
+  02 Sep 2012; Michael Weber <xmw@gentoo.org>
+  libnetfilter_conntrack-1.0.0.ebuild:
+  ppc stable (bug 433076).
 
   26 Aug 2012; Raúl Porcel <armin76@gentoo.org>
   libnetfilter_conntrack-1.0.0.ebuild:
@@ -261,4 +265,3 @@
   13 Nov 2006; Cedric Krier <ced@ced.homedns.org> +metadata.xml,
   +libnetfilter_conntrack-0.0.31.ebuild:
   New ebuild for libnetfilter_conntrack
-
