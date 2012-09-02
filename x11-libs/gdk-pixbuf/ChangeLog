@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gdk-pixbuf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.67 2012/07/15 18:31:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.68 2012/09/02 19:07:14 nirbheek Exp $
+
+*gdk-pixbuf-2.26.3 (02 Sep 2012)
+
+  02 Sep 2012; Nirbheek Chauhan <nirbheek@gentoo.org> +gdk-pixbuf-2.26.3.ebuild:
+  Bump to 2.26.3
 
   15 Jul 2012; Raúl Porcel <armin76@gentoo.org> gdk-pixbuf-2.24.1.ebuild:
   alpha/ia64/sh/sparc stable wrt #410611
@@ -263,4 +268,3 @@
   +gdk-pixbuf-2.22.0.ebuild, +metadata.xml:
   Add gdk-pixbuf, split off gtk+ so it can be shared b/w gtk+:2 and gtk+:3.
   Inherits gtk's keywords.
-
