@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/ganglia
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ChangeLog,v 1.48 2012/02/01 17:03:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ChangeLog,v 1.49 2012/09/02 14:48:51 xarthisius Exp $
+
+  02 Sep 2012; Kacper Kowalik <xarthisius@gentoo.org> -ganglia-3.1.2.ebuild,
+  -ganglia-3.1.7-r2.ebuild, -ganglia-3.1.7-r3.ebuild:
+  Drop old
 
   01 Feb 2012; Brent Baude <ranger@gentoo.org> ganglia-3.2.0.ebuild:
   Marking ganglia-3.2.0 ppc for bug 386277
