@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.56 2012/09/01 20:15:23 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.57 2012/09/02 17:31:58 zmedico Exp $
 
 EAPI=3
 inherit git-2 eutils python
@@ -208,12 +208,6 @@ src_prepare() {
 		eerror "Please notify the arch maintainer about this issue. Using generic."
 		eerror ""
 	fi
-
-	# BSD and OSX need a sed wrapper so that find/xargs work properly
-	if use userland_GNU; then
-		rm -f "${S}"/bin/ebuild-helpers/sed || \
-			die "Failed to remove sed wrapper"
-	fi
 }
 
 src_compile() {
@@ -239,6 +233,13 @@ src_install() {
 
 	# Use dodoc for compression, since the Makefile doesn't do that.
 	dodoc "${S}"/{ChangeLog,NEWS,RELEASE-NOTES} || die
+
+	# Set PYTHONPATH for portage API consumers. This way we don't have
+	# to rely on patched python having the correct path, since it has
+	# been known to incorrectly add /usr/libx32/portage/pym to sys.path.
+	echo "PYTHONPATH=${EPREFIX}/usr/lib/portage/pym" > \
+		"${T}/05portage" || die
+	doenvd "${T}/05portage"
 }
 
 pkg_preinst() {

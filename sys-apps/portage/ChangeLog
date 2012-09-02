@@ -1,6 +1,18 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1083 2012/09/01 21:10:02 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1084 2012/09/02 17:31:58 zmedico Exp $
+
+*portage-2.1.11.12-r2 (02 Sep 2012)
+*portage-2.2.0_alpha123-r2 (02 Sep 2012)
+
+  02 Sep 2012; Zac Medico <zmedico@gentoo.org> +portage-2.1.11.12-r2.ebuild,
+  +portage-2.2.0_alpha123-r2.ebuild, -portage-2.1.11.12-r1.ebuild,
+  -portage-2.2.0_alpha123-r1.ebuild, portage-9999.ebuild:
+  Add /usr/lib/portage/pym to PYTHONPATH via /etc/env.d/05portage, for portage
+  API consumers. This way we don't have to rely on patched python having the
+  correct path, since it has been known to incorrectly add
+  /usr/libx32/portage/pym to sys.path. Also, remove obsolete ebuild-helpers/sed
+  code from portage-9999.ebuild.
 
 *portage-2.1.11.12-r1 (01 Sep 2012)
 *portage-2.2.0_alpha123-r1 (01 Sep 2012)

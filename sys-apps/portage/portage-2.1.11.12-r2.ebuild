@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.11.12-r1.ebuild,v 1.1 2012/09/01 21:10:02 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.11.12-r2.ebuild,v 1.1 2012/09/02 17:31:58 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -226,6 +226,13 @@ src_install() {
 		doman -i18n=pl "${S_PL}"/man/pl/*.[0-9] || die
 		doman -i18n=pl_PL.UTF-8 "${S_PL}"/man/pl_PL.UTF-8/*.[0-9] || die
 	fi
+
+	# Set PYTHONPATH for portage API consumers. This way we don't have
+	# to rely on patched python having the correct path, since it has
+	# been known to incorrectly add /usr/libx32/portage/pym to sys.path.
+	echo "PYTHONPATH=/usr/lib/portage/pym" > \
+		"${T}/05portage" || die
+	doenvd "${T}/05portage" || die
 }
 
 pkg_preinst() {
