@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.80 2012/09/02 10:52:37 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.81 2012/09/02 11:48:02 caster Exp $
+
+*icedtea-6.1.11.4 (02 Sep 2012)
+
+  02 Sep 2012; Vlastimil Babka <caster@gentoo.org> +icedtea-6.1.11.4.ebuild:
+  Version bump from java-overlay, security bug #433389.
 
 *icedtea-7.2.3.2 (02 Sep 2012)
 
