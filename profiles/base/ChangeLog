@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.427 2012/08/31 13:48:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.428 2012/09/02 17:59:42 chithanh Exp $
+
+  02 Sep 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.use.mask:
+  Mask wayland for one more version of mesa so it can go stable, bug #432400.
 
   31 Aug 2012; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
   Mask USE="cdr" of app-pda/gtkpod for #433535
