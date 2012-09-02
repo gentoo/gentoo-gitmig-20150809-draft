@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/dbi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbi/ChangeLog,v 1.2 2012/09/02 13:28:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbi/ChangeLog,v 1.3 2012/09/02 13:40:52 flameeyes Exp $
+
+  02 Sep 2012; Diego E. Pettenò <flameeyes@gentoo.org> dbi-0.4.3.ebuild:
+  Fix typo.
 
 *dbi-0.4.5 (02 Sep 2012)
 
