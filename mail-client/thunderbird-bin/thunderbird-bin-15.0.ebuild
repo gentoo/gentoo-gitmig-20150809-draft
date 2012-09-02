@@ -1,9 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-10.0.5.ebuild,v 1.4 2012/07/04 19:56:06 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-15.0.ebuild,v 1.1 2012/09/02 14:01:27 jdhore Exp $
 
 EAPI="4"
-MOZ_ESR="1"
 
 # Can be updated using scripts/get_langs.sh from mozilla overlay
 MOZ_LANGS=(ar ast be bg bn-BD br ca cs da de el en en-GB en-US es-AR es-ES et eu
@@ -14,12 +13,6 @@ pt-PT rm ro ru si sk sl sq sr sv-SE ta-LK tr uk vi zh-CN zh-TW)
 MOZ_PN="${PN/-bin}"
 MOZ_PV="${PV/_beta/b}"
 MOZ_PV="${MOZ_PV/_rc/rc}"
-
-if [[ ${MOZ_ESR} == 1 ]]; then
-	# ESR releases have slightly version numbers
-	MOZ_PV="${MOZ_PV}esr"
-fi
-
 MOZ_P="${MOZ_PN}-${MOZ_PV}"
 
 # Upstream ftp release URI that's used by mozlinguas.eclass
@@ -35,9 +28,9 @@ SRC_URI="${SRC_URI}
 HOMEPAGE="http://www.mozilla.com/thunderbird"
 RESTRICT="strip mirror binchecks"
 
-KEYWORDS="-* amd64 x86"
+KEYWORDS="-* ~amd64 ~x86"
 SLOT="0"
-LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
+LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
 IUSE="+crashreporter"
 
 DEPEND="app-arch/unzip"
