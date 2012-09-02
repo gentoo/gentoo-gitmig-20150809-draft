@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/systemsettings
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.156 2012/08/21 20:21:58 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.157 2012/09/02 20:41:42 ago Exp $
+
+  02 Sep 2012; Agostino Sarubbo <ago@gentoo.org> systemsettings-4.8.5.ebuild:
+  Stable for amd64, wrt bug #431892
 
   21 Aug 2012; Johannes Huber <johu@gentoo.org>
   +files/systemsettings-4.9.0-parallel-build.patch, systemsettings-4.8.5.ebuild,
