@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/pyblosxom/pyblosxom-1.4.3.ebuild,v 1.3 2011/04/11 18:53:53 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/pyblosxom/pyblosxom-1.4.3.ebuild,v 1.4 2012/09/02 22:59:11 blueness Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -14,7 +14,7 @@ HOMEPAGE="http://pyblosxom.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 
 # This installs python library files.
 SLOT=0

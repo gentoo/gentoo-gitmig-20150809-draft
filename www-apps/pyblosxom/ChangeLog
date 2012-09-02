@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/pyblosxom
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/pyblosxom/ChangeLog,v 1.13 2011/04/11 18:53:53 arfrever Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/pyblosxom/ChangeLog,v 1.14 2012/09/02 22:59:11 blueness Exp $
+
+  02 Sep 2012; Anthony G. Basile <blueness@gentoo.org> pyblosxom-1.4.3.ebuild:
+  Keyword ~arm, bug #343507
 
   11 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pyblosxom-1.4.3.ebuild:
