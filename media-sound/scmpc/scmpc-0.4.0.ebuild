@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/scmpc/scmpc-0.4.0.ebuild,v 1.2 2012/07/23 01:18:10 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/scmpc/scmpc-0.4.0.ebuild,v 1.3 2012/09/02 18:24:24 hwoarang Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://github/cmende/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-libs/glib:2
