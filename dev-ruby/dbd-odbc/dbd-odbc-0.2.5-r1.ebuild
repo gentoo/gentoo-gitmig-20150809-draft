@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbd-odbc/dbd-odbc-0.2.5-r1.ebuild,v 1.4 2012/08/21 16:26:35 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbd-odbc/dbd-odbc-0.2.5-r1.ebuild,v 1.5 2012/09/02 09:04:51 flameeyes Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -17,7 +17,7 @@ KEYWORDS="amd64 ~ppc x86"
 IUSE="test"
 
 ruby_add_rdepend "
-	>=dev-ruby/ruby-dbi-0.4.2
+	>=dev-ruby/dbi-0.4.2
 	dev-ruby/ruby-odbc"
 
 src_test() {

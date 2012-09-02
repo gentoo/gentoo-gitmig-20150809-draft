@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/dbd-mysql
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbd-mysql/ChangeLog,v 1.14 2012/05/01 18:24:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbd-mysql/ChangeLog,v 1.15 2012/09/02 09:04:22 flameeyes Exp $
+
+  02 Sep 2012; Diego E. Pettenò <flameeyes@gentoo.org> dbd-mysql-0.4.4.ebuild:
+  Fix dependency for renamed package.
 
   01 May 2012; Raúl Porcel <armin76@gentoo.org> dbd-mysql-0.4.4.ebuild:
   Drop ia64/sparc keywords
@@ -50,4 +53,3 @@
   26 Aug 2009; Alex Legler <a3li@gentoo.org> +dbd-mysql-0.4.3.ebuild,
   +metadata.xml:
   Initial import, ebuild done by /me.
-

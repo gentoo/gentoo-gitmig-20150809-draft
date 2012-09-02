@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbd-sqlite/dbd-sqlite-0.1.2.ebuild,v 1.9 2012/05/01 18:24:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbd-sqlite/dbd-sqlite-0.1.2.ebuild,v 1.10 2012/09/02 09:06:26 flameeyes Exp $
 
 inherit "ruby"
 
@@ -14,7 +14,7 @@ KEYWORDS="amd64 ppc x86"
 IUSE="test"
 
 RDEPEND="
-	>=dev-ruby/ruby-dbi-0.4.2
+	>=dev-ruby/dbi-0.4.2
 	dev-ruby/sqlite-ruby"
 
 USE_RUBY="ruby18"

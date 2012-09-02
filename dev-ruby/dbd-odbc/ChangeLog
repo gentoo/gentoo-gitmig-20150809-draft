@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/dbd-odbc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbd-odbc/ChangeLog,v 1.12 2012/08/21 16:26:35 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbd-odbc/ChangeLog,v 1.13 2012/09/02 09:04:51 flameeyes Exp $
+
+  02 Sep 2012; Diego E. Pettenò <flameeyes@gentoo.org> dbd-odbc-0.2.5-r1.ebuild,
+  dbd-odbc-0.2.5.ebuild:
+  Fix dependency for renamed package.
 
   21 Aug 2012; Johannes Huber <johu@gentoo.org> dbd-odbc-0.2.5-r1.ebuild:
   Stable for x86, wrt bug #429976
@@ -44,4 +48,3 @@
   26 Aug 2009; Alex Legler <a3li@gentoo.org> +dbd-odbc-0.2.5.ebuild,
   +metadata.xml:
   Initial import, ebuild by /me.
-
