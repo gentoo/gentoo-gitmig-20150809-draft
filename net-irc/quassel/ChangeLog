@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/quassel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.141 2012/07/29 16:05:57 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.142 2012/09/02 18:16:13 chithanh Exp $
+
+  02 Sep 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  quassel-0.8.0.ebuild:
+  Keyword ~arm, tested by me.
 
   29 Jul 2012; Michael Palimaka <kensington@gentoo.org> quassel-0.8.0.ebuild,
   quassel-9999.ebuild:
