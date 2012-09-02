@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Log-TraceMessages
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-TraceMessages/ChangeLog,v 1.16 2012/06/23 18:39:07 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-TraceMessages/ChangeLog,v 1.17 2012/09/02 16:00:48 tove Exp $
+
+  02 Sep 2012; Torsten Veller <tove@gentoo.org> -Log-TraceMessages-1.4.ebuild:
+  Cleanup
 
 *Log-TraceMessages-1.400.0 (23 Jun 2012)
 

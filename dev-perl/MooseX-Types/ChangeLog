@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MooseX-Types
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Types/ChangeLog,v 1.31 2012/06/24 13:00:00 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Types/ChangeLog,v 1.32 2012/09/02 15:48:53 tove Exp $
+
+  02 Sep 2012; Torsten Veller <tove@gentoo.org> -MooseX-Types-0.310.0.ebuild:
+  Cleanup
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
