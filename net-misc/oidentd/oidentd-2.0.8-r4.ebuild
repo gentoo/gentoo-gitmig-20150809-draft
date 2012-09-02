@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/oidentd-2.0.8-r4.ebuild,v 1.2 2012/09/02 22:50:41 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/oidentd-2.0.8-r4.ebuild,v 1.3 2012/09/02 22:53:56 blueness Exp $
 
 inherit eutils systemd
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/ojnk/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ppc ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 arm ~hppa ~ia64 ~mips ppc ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="debug ipv6 masquerade"
 
 RDEPEND=""
