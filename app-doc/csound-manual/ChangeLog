@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/csound-manual
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/csound-manual/ChangeLog,v 1.1 2012/04/11 22:16:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/csound-manual/ChangeLog,v 1.2 2012/09/02 03:32:22 radhermit Exp $
+
+*csound-manual-5.18 (02 Sep 2012)
+
+  02 Sep 2012; Tim Harder <radhermit@gentoo.org> +csound-manual-5.18.ebuild:
+  Version bump.
 
 *csound-manual-5.17 (11 Apr 2012)
 
