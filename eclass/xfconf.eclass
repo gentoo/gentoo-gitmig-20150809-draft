@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.42 2012/07/02 08:43:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.43 2012/09/02 07:58:15 ssuominen Exp $
 
 # @ECLASS: xfconf.eclass
 # @MAINTAINER:
@@ -112,9 +112,7 @@ xfconf_src_install() {
 
 	base_src_install "$@" || die
 
-	find "${ED}" -name '*.la' -exec rm -f {} +
-
-	validate_desktop_entries
+	prune_libtool_files --all
 }
 
 # @FUNCTION: xfconf_pkg_preinst
