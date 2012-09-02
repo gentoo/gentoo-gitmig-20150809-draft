@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/bitcoin-qt-0.6.0.9.ebuild,v 1.2 2012/07/26 17:12:19 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/bitcoin-qt-0.6.0.9-r1.ebuild,v 1.1 2012/09/02 20:51:14 blueness Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit db-use eutils qt4-r2 versionator
 
 DESCRIPTION="An end-user Qt4 GUI for the Bitcoin crypto-currency"
 HOMEPAGE="http://bitcoin.org/"
-SRC_URI="http://gitorious.org/bitcoin/bitcoind-stable/archive-tarball/v${PV/_/} -> bitcoin-v${PV}.tgz
+SRC_URI="http://dev.gentoo.org/~blueness/misc/bitcoin-0.6.0.9.tgz
 	eligius? ( http://luke.dashjr.org/programs/bitcoin/files/eligius_sendfee/0.6.0-eligius_sendfee.patch.xz )
 "
 
