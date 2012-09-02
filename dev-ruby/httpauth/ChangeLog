@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/httpauth
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httpauth/ChangeLog,v 1.1 2012/09/02 07:47:53 graaff Exp $
+
+*httpauth-0.1 (02 Sep 2012)
+
+  02 Sep 2012; Hans de Graaff <graaff@gentoo.org> +httpauth-0.1.ebuild,
+  +metadata.xml:
+  Initial import; new dependency for oauth2.
+
