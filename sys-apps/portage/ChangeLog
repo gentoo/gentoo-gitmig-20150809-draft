@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1084 2012/09/02 17:31:58 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1085 2012/09/02 23:59:51 zmedico Exp $
+
+*portage-2.1.11.13 (02 Sep 2012)
+
+  02 Sep 2012; Zac Medico <zmedico@gentoo.org> +portage-2.1.11.13.ebuild:
+  2.1.11.13 version bump. This fixes bug #433694 (emaint cleanconfmem is too
+  aggressive), and also adds support for experimental EAPI 5_pre1. For
+  information about EAPI 5_pre1, refer to the html documentation that's
+  installed when USE=doc is enabled. Bug #431026 tracks all bugs fixed since
+  portage-2.1.11.9.
 
 *portage-2.1.11.12-r2 (02 Sep 2012)
 *portage-2.2.0_alpha123-r2 (02 Sep 2012)
