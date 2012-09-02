@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/csound-manual/csound-manual-5.17.ebuild,v 1.1 2012/04/11 22:16:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/csound-manual/csound-manual-5.17.ebuild,v 1.2 2012/09/02 03:33:27 radhermit Exp $
 
 EAPI="4"
 
@@ -9,12 +9,12 @@ MY_P="Csound${PV}"
 DESCRIPTION="The Csound reference manual"
 HOMEPAGE="http://csounds.com/"
 SRC_URI="
-	mirror://sourceforge/${PN}/${MY_P}_manual_pdf.zip
-	linguas_fr? ( mirror://sourceforge/${PN}/${MY_P}_manual-fr_pdf.zip )
+	mirror://sourceforge/csound/${MY_P}_manual_pdf.zip
+	linguas_fr? ( mirror://sourceforge/csound/${MY_P}_manual-fr_pdf.zip )
 
 	html? (
-		mirror://sourceforge/${PN}/${MY_P}_manual_html.zip
-		linguas_fr? ( mirror://sourceforge/${PN}/${MY_P}_manual-fr_html.zip )
+		mirror://sourceforge/csound/${MY_P}_manual_html.zip
+		linguas_fr? ( mirror://sourceforge/csound/${MY_P}_manual-fr_html.zip )
 	)"
 
 LICENSE="FDL-1.3"
