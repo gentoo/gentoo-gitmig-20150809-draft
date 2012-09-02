@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-12.02.1578.ebuild,v 1.1 2012/08/30 16:25:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-12.02.1578.ebuild,v 1.2 2012/09/02 12:40:55 jer Exp $
 
 EAPI=4
 inherit eutils fdo-mime gnome2-utils multilib pax-utils versionator
@@ -21,9 +21,9 @@ O_P="${PN}-${O_V}-${O_B}"
 O_U="mirror://opera/"
 
 SRC_URI="
-	amd64? ( ${O_U}${O_D}/${O_P}.x86_64.linux.tar.xz )
-	x86? ( ${O_U}${O_D}/${O_P}.i386.linux.tar.xz )
-	x86-fbsd? ( ${O_U}${O_D}/${O_P}.i386.freebsd.tar.xz )
+	amd64? ( ${O_U}linux/${O_D}/${O_P}.x86_64.linux.tar.xz )
+	x86? ( ${O_U}linux/${O_D}/${O_P}.i386.linux.tar.xz )
+	x86-fbsd? ( ${O_U}unix/${O_D}/${O_P}.i386.freebsd.tar.xz )
 "
 
 O_LINGUAS="
