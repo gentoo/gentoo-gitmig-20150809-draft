@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkcddb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkcddb/ChangeLog,v 1.217 2012/09/02 20:17:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkcddb/ChangeLog,v 1.218 2012/09/02 23:05:24 ago Exp $
+
+  02 Sep 2012; Agostino Sarubbo <ago@gentoo.org> libkcddb-4.8.5.ebuild:
+  Stable for x86, wrt bug #431892
 
   02 Sep 2012; Agostino Sarubbo <ago@gentoo.org> libkcddb-4.8.5.ebuild:
   Stable for amd64, wrt bug #431892

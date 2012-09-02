@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/juk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.231 2012/09/02 18:32:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.232 2012/09/02 21:21:29 ago Exp $
+
+  02 Sep 2012; Agostino Sarubbo <ago@gentoo.org> juk-4.8.5.ebuild:
+  Stable for x86, wrt bug #431892
 
   02 Sep 2012; Agostino Sarubbo <ago@gentoo.org> juk-4.8.5.ebuild:
   Stable for amd64, wrt bug #431892

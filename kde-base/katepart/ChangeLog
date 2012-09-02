@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/katepart
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/katepart/ChangeLog,v 1.36 2012/09/02 18:39:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/katepart/ChangeLog,v 1.37 2012/09/02 21:28:18 ago Exp $
+
+  02 Sep 2012; Agostino Sarubbo <ago@gentoo.org> katepart-4.8.5.ebuild:
+  Stable for x86, wrt bug #431892
 
   02 Sep 2012; Agostino Sarubbo <ago@gentoo.org> katepart-4.8.5.ebuild:
   Stable for amd64, wrt bug #431892

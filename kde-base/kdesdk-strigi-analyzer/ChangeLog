@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdesdk-strigi-analyzer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-strigi-analyzer/ChangeLog,v 1.109 2012/09/02 19:14:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-strigi-analyzer/ChangeLog,v 1.110 2012/09/02 22:03:23 ago Exp $
+
+  02 Sep 2012; Agostino Sarubbo <ago@gentoo.org>
+  kdesdk-strigi-analyzer-4.8.5.ebuild:
+  Stable for x86, wrt bug #431892
 
   02 Sep 2012; Agostino Sarubbo <ago@gentoo.org>
   kdesdk-strigi-analyzer-4.8.5.ebuild:

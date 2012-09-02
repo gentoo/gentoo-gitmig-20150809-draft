@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/solid
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/ChangeLog,v 1.149 2012/09/02 20:38:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/ChangeLog,v 1.150 2012/09/02 23:25:28 ago Exp $
+
+  02 Sep 2012; Agostino Sarubbo <ago@gentoo.org> solid-4.8.5.ebuild:
+  Stable for x86, wrt bug #431892
 
   02 Sep 2012; Agostino Sarubbo <ago@gentoo.org> solid-4.8.5.ebuild:
   Stable for amd64, wrt bug #431892

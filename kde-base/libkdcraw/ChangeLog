@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkdcraw
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdcraw/ChangeLog,v 1.121 2012/09/02 20:18:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdcraw/ChangeLog,v 1.122 2012/09/02 23:06:18 ago Exp $
+
+  02 Sep 2012; Agostino Sarubbo <ago@gentoo.org> libkdcraw-4.8.5.ebuild:
+  Stable for x86, wrt bug #431892
 
   02 Sep 2012; Agostino Sarubbo <ago@gentoo.org> libkdcraw-4.8.5.ebuild:
   Stable for amd64, wrt bug #431892

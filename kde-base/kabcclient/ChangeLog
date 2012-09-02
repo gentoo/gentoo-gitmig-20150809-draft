@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kabcclient
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kabcclient/ChangeLog,v 1.100 2012/09/02 18:32:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kabcclient/ChangeLog,v 1.101 2012/09/02 21:21:58 ago Exp $
+
+  02 Sep 2012; Agostino Sarubbo <ago@gentoo.org> kabcclient-4.8.5.ebuild:
+  Stable for x86, wrt bug #431892
 
   02 Sep 2012; Agostino Sarubbo <ago@gentoo.org> kabcclient-4.8.5.ebuild:
   Stable for amd64, wrt bug #431892

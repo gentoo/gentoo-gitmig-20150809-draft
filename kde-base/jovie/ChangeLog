@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/jovie
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/jovie/ChangeLog,v 1.57 2012/09/02 18:31:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/jovie/ChangeLog,v 1.58 2012/09/02 21:21:01 ago Exp $
+
+  02 Sep 2012; Agostino Sarubbo <ago@gentoo.org> jovie-4.8.5.ebuild:
+  Stable for x86, wrt bug #431892
 
   02 Sep 2012; Agostino Sarubbo <ago@gentoo.org> jovie-4.8.5.ebuild:
   Stable for amd64, wrt bug #431892

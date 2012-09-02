@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kontact
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact/ChangeLog,v 1.223 2012/09/02 19:49:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact/ChangeLog,v 1.224 2012/09/02 22:37:54 ago Exp $
+
+  02 Sep 2012; Agostino Sarubbo <ago@gentoo.org> kontact-4.8.5.ebuild:
+  Stable for x86, wrt bug #431892
 
   02 Sep 2012; Agostino Sarubbo <ago@gentoo.org> kontact-4.8.5.ebuild:
   Stable for amd64, wrt bug #431892

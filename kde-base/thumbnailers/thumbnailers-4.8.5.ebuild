@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/thumbnailers/thumbnailers-4.8.5.ebuild,v 1.2 2012/09/02 20:42:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/thumbnailers/thumbnailers-4.8.5.ebuild,v 1.3 2012/09/02 23:28:49 ago Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ KMNAME="kdegraphics-thumbnailers"
 inherit kde4-base
 
 DESCRIPTION="KDE 4 thumbnail generators for PDF/PS files"
-KEYWORDS="amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 DEPEND="

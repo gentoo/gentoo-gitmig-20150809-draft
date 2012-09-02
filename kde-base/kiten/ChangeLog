@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kiten
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kiten/ChangeLog,v 1.213 2012/09/02 19:32:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kiten/ChangeLog,v 1.214 2012/09/02 22:20:58 ago Exp $
+
+  02 Sep 2012; Agostino Sarubbo <ago@gentoo.org> kiten-4.8.5.ebuild:
+  Stable for x86, wrt bug #431892
 
   02 Sep 2012; Agostino Sarubbo <ago@gentoo.org> kiten-4.8.5.ebuild:
   Stable for amd64, wrt bug #431892
