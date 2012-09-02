@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnetfilter_acct
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_acct/ChangeLog,v 1.3 2012/09/02 10:32:11 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_acct/ChangeLog,v 1.4 2012/09/02 10:36:00 pinkbyte Exp $
+
+  02 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
+  Add package description to metadata
 
   02 Sep 2012; Sergey Popov <pinkbyte@gentoo.org>
   libnetfilter_acct-1.0.0.ebuild:
