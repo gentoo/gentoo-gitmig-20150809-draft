@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Template-Latex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Latex/ChangeLog,v 1.21 2012/03/19 20:39:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Latex/ChangeLog,v 1.22 2012/09/02 18:06:07 armin76 Exp $
+
+  02 Sep 2012; Raúl Porcel <armin76@gentoo.org> Template-Latex-2.170.0.ebuild:
+  Drop alpha keywords
 
   19 Mar 2012; Raúl Porcel <armin76@gentoo.org> Template-Latex-2.170.0.ebuild:
   Drop ia64/sparc keywords
