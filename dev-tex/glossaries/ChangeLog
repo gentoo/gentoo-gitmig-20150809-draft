@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/glossaries
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/ChangeLog,v 1.50 2012/05/09 17:24:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/ChangeLog,v 1.51 2012/09/02 04:11:48 radhermit Exp $
+
+*glossaries-3.02 (02 Sep 2012)
+
+  02 Sep 2012; Tim Harder <radhermit@gentoo.org> +glossaries-3.02.ebuild:
+  Version bump.
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> glossaries-3.01.ebuild:
   keyword ~amd64-fbsd
