@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Email-Valid
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Valid/ChangeLog,v 1.62 2012/06/24 12:58:39 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Valid/ChangeLog,v 1.63 2012/09/02 16:41:02 tove Exp $
+
+  02 Sep 2012; Torsten Veller <tove@gentoo.org>
+  -files/0.181-disable-online-test.patch, -Email-Valid-0.184.ebuild,
+  -Email-Valid-0.187.0.ebuild, -Email-Valid-0.188.0.ebuild:
+  Cleanup
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
