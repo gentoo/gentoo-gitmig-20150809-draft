@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/dnsmasq
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.217 2012/08/28 17:26:00 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.218 2012/09/02 10:54:38 xmw Exp $
+
+  02 Sep 2012; Michael Weber <xmw@gentoo.org> dnsmasq-2.61.ebuild:
+  ppc stable (bug 433076).
 
   28 Aug 2012; Patrick McLean <chutzpah@gentoo.org> dnsmasq-2.63.ebuild:
   Make dnsmasq-2.63 respect LINGUAS and remove no-longer-necessary MY_*
