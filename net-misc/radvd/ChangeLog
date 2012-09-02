@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/radvd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.95 2012/09/02 22:34:55 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.96 2012/09/02 22:40:39 blueness Exp $
+
+  02 Sep 2012; Anthony G. Basile <blueness@gentoo.org> radvd-1.9.1-r1.ebuild:
+  Stable ppc, bug #433341
 
   02 Sep 2012; Anthony G. Basile <blueness@gentoo.org> radvd-1.9.1-r1.ebuild:
   Stable arm, bug #433341
