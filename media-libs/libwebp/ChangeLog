@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libwebp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwebp/ChangeLog,v 1.32 2012/09/01 14:37:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwebp/ChangeLog,v 1.33 2012/09/02 06:30:05 phajdan.jr Exp $
+
+  02 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> libwebp-0.2.0.ebuild:
+  x86 stable wrt security bug #433551
 
   01 Sep 2012; Agostino Sarubbo <ago@gentoo.org> libwebp-0.2.0.ebuild:
   Stable for amd64, wrt bug #433551
