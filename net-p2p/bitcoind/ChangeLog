@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/bitcoind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.41 2012/09/02 20:54:11 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.42 2012/09/02 21:23:56 blueness Exp $
+
+*bitcoind-0.6.0.9-r2 (02 Sep 2012)
+
+  02 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
+  -bitcoind-0.6.0.9-r1.ebuild, +bitcoind-0.6.0.9-r2.ebuild:
+  Fix tarball name, again
 
 *bitcoind-0.6.0.9-r1 (02 Sep 2012)
 
