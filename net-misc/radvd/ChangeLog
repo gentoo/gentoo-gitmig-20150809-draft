@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/radvd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.93 2012/07/29 17:56:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.94 2012/09/02 18:04:31 hwoarang Exp $
+
+  02 Sep 2012; Markos Chandras <hwoarang@gentoo.org> radvd-1.9.1-r1.ebuild:
+  Stable on amd64 wrt bug #433341
 
   29 Jul 2012; Raúl Porcel <armin76@gentoo.org> radvd-1.8.5-r1.ebuild:
   sparc stable wrt #417999
