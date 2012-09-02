@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gip/ChangeLog,v 1.23 2012/07/26 13:48:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gip/ChangeLog,v 1.24 2012/09/02 18:15:51 hwoarang Exp $
+
+  02 Sep 2012; Markos Chandras <hwoarang@gentoo.org> gip-1.7.0.1.ebuild:
+  Stable on amd64 wrt bug #433331
 
 *gip-1.7.0.1 (26 Jul 2012)
 
@@ -90,4 +93,3 @@
   24 Jun 2004; Josh Glover <jmglov@gentoo.org> gip-1.0.0.1.ebuild,
   metadata.xml:
   This package was submitted by Josh Glover in bug #55055
-
