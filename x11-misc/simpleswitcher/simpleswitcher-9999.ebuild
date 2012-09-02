@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/simpleswitcher/simpleswitcher-9999.ebuild,v 1.1 2012/08/28 11:29:44 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/simpleswitcher/simpleswitcher-9999.ebuild,v 1.2 2012/09/02 10:42:48 xmw Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libXft
 	x11-libs/libXinerama"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_compile() {
 	tc-export CC
