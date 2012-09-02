@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.43 2012/09/02 10:14:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0_p20120902.ebuild,v 1.1 2012/09/02 10:14:23 scarabeus Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.mplayer2.org/"
 if [[ ${PV} == *9999* ]]; then
 	EGIT_REPO_URI="git://git.mplayer2.org/mplayer2.git"
 else
-	RELEASE_URI="http://dev.gentoo.org/~lu_zero/${PN}/${P}.tar.xz"
+	RELEASE_URI="http://dev.gentooexperimental.org/~scarabeus/${P}.tar.xz"
 fi
 SRC_URI="${RELEASE_URI}
 	!truetype? (
