@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.705 2012/09/01 14:36:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.706 2012/09/02 06:30:58 phajdan.jr Exp $
+
+  02 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-21.0.1180.57.ebuild, -chromium-21.0.1180.81.ebuild,
+  chromium-21.0.1180.89.ebuild, -chromium-22.0.1229.12.ebuild:
+  x86 stable wrt security bug #433551. Remove old.
 
   01 Sep 2012; Agostino Sarubbo <ago@gentoo.org> chromium-21.0.1180.89.ebuild:
   Stable for amd64, wrt bug #433551
