@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/requests
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.18 2012/09/02 20:10:41 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.19 2012/09/02 20:16:40 radhermit Exp $
+
+  02 Sep 2012; Tim Harder <radhermit@gentoo.org> -requests-0.10.6.ebuild,
+  -requests-0.11.1.ebuild, -requests-0.12.1.ebuild, -requests-0.12.1-r1.ebuild:
+  Remove old.
 
 *requests-0.13.9 (02 Sep 2012)
 
