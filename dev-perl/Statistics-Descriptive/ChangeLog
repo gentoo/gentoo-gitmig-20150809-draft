@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Statistics-Descriptive
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Statistics-Descriptive/ChangeLog,v 1.46 2012/08/16 16:46:27 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Statistics-Descriptive/ChangeLog,v 1.47 2012/09/02 08:11:50 tove Exp $
+
+  02 Sep 2012; Torsten Veller <tove@gentoo.org>
+  -Statistics-Descriptive-3.40.0.ebuild:
+  Cleanup
 
   16 Aug 2012; Andreas Schuerch <nativemad@gentoo.org>
   Statistics-Descriptive-3.60.300.ebuild:
