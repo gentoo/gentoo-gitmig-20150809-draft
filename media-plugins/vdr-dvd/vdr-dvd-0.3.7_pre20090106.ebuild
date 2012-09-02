@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvd/vdr-dvd-0.3.7_pre20090106.ebuild,v 1.5 2012/06/30 20:36:04 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvd/vdr-dvd-0.3.7_pre20090106.ebuild,v 1.6 2012/09/02 17:11:24 hd_brummy Exp $
 
 EAPI="4"
 
@@ -22,6 +22,9 @@ RDEPEND=">=media-video/vdr-1.6.0
 	>=media-libs/libdvdnav-4.2.0
 	>=media-libs/a52dec-0.7.4"
 DEPEND="${RDEPEND}"
+
+# vdr-plugin-2.eclass fix
+KEEP_I18NOBJECT="yes"
 
 PATCHES=(
 	"${FILESDIR}"/${P}-compile_warnings.diff
