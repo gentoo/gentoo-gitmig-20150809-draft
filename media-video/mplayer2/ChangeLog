@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.64 2012/09/02 10:14:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.65 2012/09/02 10:19:59 scarabeus Exp $
+
+  02 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  mplayer2-2.0_p20120902.ebuild, mplayer2-9999.ebuild:
+  Localised docs are goner. So remove those.
 
 *mplayer2-2.0_p20120902 (02 Sep 2012)
 

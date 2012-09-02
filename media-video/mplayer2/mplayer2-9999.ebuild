@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.43 2012/09/02 10:14:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.44 2012/09/02 10:19:59 scarabeus Exp $
 
 EAPI=4
 
@@ -467,23 +467,7 @@ src_configure() {
 
 src_compile() {
 	base_src_compile
-	# Build only user-requested docs if they're available.
-	if use doc ; then
-		# select available languages from $LINGUAS
-		LINGUAS=${LINGUAS/zh/zh_CN}
-		local ALLOWED_LINGUAS="cs de en es fr hu it pl ru zh_CN"
-		local BUILT_DOCS=""
-		for i in ${LINGUAS} ; do
-			has ${i} ${ALLOWED_LINGUAS} && BUILT_DOCS+=" ${i}"
-		done
-		if [[ -z $BUILT_DOCS ]]; then
-			emake -j1 -C DOCS/xml html-chunked
-		else
-			for i in ${BUILT_DOCS}; do
-				emake -j1 -C DOCS/xml html-chunked-${i}
-			done
-		fi
-	fi
+	use doc && emake -j1 -C DOCS/xml html-chunked
 }
 
 src_install() {
