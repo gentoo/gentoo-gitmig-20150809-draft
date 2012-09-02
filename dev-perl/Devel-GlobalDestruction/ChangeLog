@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Devel-GlobalDestruction
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-GlobalDestruction/ChangeLog,v 1.22 2012/09/01 11:32:38 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-GlobalDestruction/ChangeLog,v 1.23 2012/09/02 17:16:49 tove Exp $
+
+  02 Sep 2012; Torsten Veller <tove@gentoo.org>
+  -Devel-GlobalDestruction-0.40.0.ebuild,
+  -Devel-GlobalDestruction-0.60.0.ebuild,
+  -Devel-GlobalDestruction-0.80.0.ebuild:
+  Cleanup
 
   01 Sep 2012; Fabian Groffen <grobian@gentoo.org>
   Devel-GlobalDestruction-0.90.0.ebuild:

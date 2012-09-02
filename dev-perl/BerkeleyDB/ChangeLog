@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/BerkeleyDB
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/ChangeLog,v 1.94 2012/08/27 18:03:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/ChangeLog,v 1.95 2012/09/02 17:44:32 tove Exp $
+
+  02 Sep 2012; Torsten Veller <tove@gentoo.org> -BerkeleyDB-0.430.0.ebuild,
+  -BerkeleyDB-0.490.0.ebuild, -BerkeleyDB-0.500.0.ebuild:
+  Cleanup
 
   27 Aug 2012; Raúl Porcel <armin76@gentoo.org> BerkeleyDB-0.510.0.ebuild:
   alpha/ia64/sparc stable wrt #418789

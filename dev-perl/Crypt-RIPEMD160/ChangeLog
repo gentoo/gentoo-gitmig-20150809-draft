@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Crypt-RIPEMD160
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-RIPEMD160/ChangeLog,v 1.28 2012/06/24 12:58:11 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-RIPEMD160/ChangeLog,v 1.29 2012/09/02 17:32:13 tove Exp $
+
+  02 Sep 2012; Torsten Veller <tove@gentoo.org> -Crypt-RIPEMD160-0.04.ebuild:
+  Cleanup
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
