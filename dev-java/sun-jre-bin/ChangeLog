@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sun-jre-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.222 2012/08/31 22:01:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.223 2012/09/02 18:03:48 ago Exp $
+
+  02 Sep 2012; Agostino Sarubbo <ago@gentoo.org> sun-jre-bin-1.6.0.35.ebuild:
+  Stable for amd64, wrt bug #433094
 
   31 Aug 2012; Agostino Sarubbo <ago@gentoo.org> sun-jre-bin-1.6.0.34.ebuild:
   Stable for amd64, wrt bug #431492
