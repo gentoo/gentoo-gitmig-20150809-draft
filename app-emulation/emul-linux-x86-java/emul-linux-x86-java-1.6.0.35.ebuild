@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.6.0.35.ebuild,v 1.2 2012/08/31 17:01:21 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.6.0.35.ebuild,v 1.3 2012/09/02 18:04:04 ago Exp $
 
 EAPI="4"
 
@@ -20,7 +20,7 @@ SRC_URI="${X86_AT}"
 
 LICENSE="Oracle-BCLA-JavaSE"
 SLOT="1.6"
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* amd64"
 IUSE="X alsa nsplugin pax_kernel"
 
 RESTRICT="fetch strip"
