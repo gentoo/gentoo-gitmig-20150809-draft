@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-12.02.1578.ebuild,v 1.2 2012/09/02 12:40:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-12.02.1578.ebuild,v 1.3 2012/09/02 12:51:33 jer Exp $
 
 EAPI=4
 inherit eutils fdo-mime gnome2-utils multilib pax-utils versionator
@@ -9,7 +9,7 @@ DESCRIPTION="A fast and secure web browser and Internet suite"
 HOMEPAGE="http://www.opera.com/"
 
 SLOT="0"
-LICENSE="OPERA-11 LGPL-2 LGPL-3"
+LICENSE="OPERA-12 LGPL-2 LGPL-3"
 KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE="elibc_FreeBSD gtk kde +gstreamer multilib"
 

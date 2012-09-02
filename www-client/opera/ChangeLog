@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.744 2012/09/02 12:40:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.745 2012/09/02 12:51:33 jer Exp $
+
+  02 Sep 2012; Jeroen Roovers <jer@gentoo.org> opera-12.01.1532.ebuild,
+  opera-12.02.1578.ebuild:
+  Add new Opera license, remove old.
 
   02 Sep 2012; Jeroen Roovers <jer@gentoo.org> opera-12.02.1578.ebuild:
   Fix SRC_URI by Nikos Chantziaras.
