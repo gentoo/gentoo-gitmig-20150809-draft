@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_acct/libnetfilter_acct-1.0.0.ebuild,v 1.2 2012/09/01 22:34:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_acct/libnetfilter_acct-1.0.0.ebuild,v 1.3 2012/09/02 10:32:11 pinkbyte Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ IUSE="examples"
 
 RDEPEND="net-libs/libmnl"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	virtual/pkgconfig"
 
 src_configure() {
 	econf \
