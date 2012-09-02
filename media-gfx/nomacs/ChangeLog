@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/nomacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nomacs/ChangeLog,v 1.1 2012/06/29 07:37:18 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nomacs/ChangeLog,v 1.2 2012/09/02 02:10:42 pesa Exp $
+
+*nomacs-0.4.0 (02 Sep 2012)
+
+  02 Sep 2012; Davide Pesavento <pesa@gentoo.org> +nomacs-0.4.0.ebuild,
+  -nomacs-0.3.2.ebuild:
+  Version bump, adjust deps.
 
 *nomacs-0.3.2 (29 Jun 2012)
 
