@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/lincity-ng
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity-ng/ChangeLog,v 1.23 2012/07/30 08:23:11 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity-ng/ChangeLog,v 1.24 2012/09/02 01:39:04 mr_bones_ Exp $
+
+  02 Sep 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  files/lincity-ng-2.0-build.patch:
+  fix desktop file
 
   30 Jul 2012; Julian Ospald <hasufell@gentoo.org> lincity-ng-2.0.ebuild,
   +files/lincity-ng-2.0-build.patch:
@@ -101,4 +105,3 @@
   23 Jun 2005; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
   +lincity-ng-1.0.ebuild:
   initial commit - ebuild submitted by Anno v. Heimburg via bug #94809
-
