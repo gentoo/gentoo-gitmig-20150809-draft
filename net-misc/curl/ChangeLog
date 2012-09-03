@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.247 2012/09/02 13:19:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.248 2012/09/03 12:31:16 blueness Exp $
+
+  03 Sep 2012; Anthony G. Basile <blueness@gentoo.org> -curl-7.24.0.ebuild:
+  Remove older stable, bug #433281
 
   02 Sep 2012; Jeroen Roovers <jer@gentoo.org> curl-7.26.0.ebuild:
   Stable for HPPA (bug #421479).
