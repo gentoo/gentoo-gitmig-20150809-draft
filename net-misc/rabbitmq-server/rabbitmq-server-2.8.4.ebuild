@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/rabbitmq-server-2.8.4.ebuild,v 1.1 2012/07/23 10:13:38 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/rabbitmq-server-2.8.4.ebuild,v 1.2 2012/09/03 16:00:40 ultrabug Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -11,7 +11,7 @@ DESCRIPTION="RabbitMQ is a high-performance AMQP-compliant message broker writte
 HOMEPAGE="http://www.rabbitmq.com/"
 SRC_URI="http://www.rabbitmq.com/releases/rabbitmq-server/v${PV}/rabbitmq-server-${PV}.tar.gz"
 
-LICENSE="MPL-1.1"
+LICENSE="GPL-2 MPL-1.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
