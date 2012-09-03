@@ -41,3 +41,4 @@ move net-wireless/iwl6050-ucode sys-firmware/iwl6050-ucode
 move net-analyzer/nagios-nsca net-analyzer/nsca
 move net-analyzer/nagios-nrpe net-analyzer/nrpe
 move dev-ruby/ruby-dbi dev-ruby/dbi
+move app-arch/TheUnarchiver app-arch/unar
