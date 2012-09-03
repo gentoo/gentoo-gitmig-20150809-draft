@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/telepathy-glib-0.18.1.ebuild,v 1.2 2012/05/05 02:54:30 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/telepathy-glib-0.18.1.ebuild,v 1.3 2012/09/03 03:53:01 nirbheek Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.5"
@@ -18,13 +18,13 @@ IUSE="debug +introspection +vala"
 
 RDEPEND=">=dev-libs/glib-2.30.0:2
 	>=dev-libs/dbus-glib-0.90
-	introspection? ( >=dev-libs/gobject-introspection-1.30 )
+	introspection? ( >=dev-libs/gobject-introspection-1.30 )"
+DEPEND="${RDEPEND}
+	dev-libs/libxslt
+	virtual/pkgconfig
 	vala? (
 		>=dev-lang/vala-0.14.0:0.14[vapigen]
 		>=dev-libs/gobject-introspection-1.30 )"
-DEPEND="${RDEPEND}
-	dev-libs/libxslt
-	virtual/pkgconfig"
 
 src_prepare() {
 	python_convert_shebangs -r 2 examples tests tools
