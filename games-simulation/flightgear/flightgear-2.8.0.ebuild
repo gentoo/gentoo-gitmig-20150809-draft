@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-2.8.0.ebuild,v 1.1 2012/08/27 23:59:46 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-2.8.0.ebuild,v 1.2 2012/09/03 20:11:18 reavertm Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ IUSE="debug jpeg +jsbsim larcsim subversion test +udev uiuc +yasim"
 
 COMMON_DEPEND="
 	>=dev-games/openscenegraph-3.0.1[png]
-	>=dev-games/simgear-2.8[jpeg?,subversion?]
+	~dev-games/simgear-${PV}[jpeg?,subversion?]
 	sys-libs/zlib
 	virtual/opengl
 	udev? ( sys-fs/udev )
