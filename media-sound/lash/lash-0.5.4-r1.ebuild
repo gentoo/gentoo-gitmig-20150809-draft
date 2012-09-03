@@ -1,16 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/lash-0.5.4-r1.ebuild,v 1.15 2012/09/03 16:30:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/lash-0.5.4-r1.ebuild,v 1.16 2012/09/03 17:05:05 ssuominen Exp $
 
 EAPI=4
 
 PYTHON_DEPEND="python? 2:2.6"
-
 inherit autotools eutils python
 
 DESCRIPTION="LASH Audio Session Handler"
 HOMEPAGE="http://www.nongnu.org/lash/"
-SRC_URI="http://download.savannah.gnu.org/releases/lash/${P}.tar.gz"
+SRC_URI="mirror://nongnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -38,7 +37,7 @@ pkg_setup() {
 
 src_prepare() {
 	sed -i \
-		-e '/texi2html/ s/-number/&-sections/' \
+		-e '/texi2html/s:-number:&-sections:' \
 		docs/Makefile.am || die #422045
 
 	epatch \
@@ -49,11 +48,11 @@ src_prepare() {
 }
 
 src_configure() {
+	# 'no' could be '$(usex doc)' but we use the pregenerated lash-manual.html
 	export ac_cv_prog_lash_texi2html=no #422045
 
+	# --enable-pylash would disable it
 	local myconf
-
-	# Yet-another-broken-configure: --enable-pylash would disable it.
 	use python || myconf='--disable-pylash'
 
 	econf \
@@ -66,5 +65,6 @@ src_configure() {
 
 src_install() {
 	default
-	prune_libtool_files --all
+	dohtml docs/lash-manual-html-*/lash-manual.html
+	prune_libtool_files --all # --all for _lash.la in python directory
 }
