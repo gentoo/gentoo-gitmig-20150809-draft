@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kstartperf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstartperf/ChangeLog,v 1.109 2012/09/03 12:20:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstartperf/ChangeLog,v 1.110 2012/09/03 13:00:21 johu Exp $
+
+  03 Sep 2012; Johannes Huber <johu@gentoo.org> -kstartperf-4.8.3.ebuild:
+  Remove KDE SC 4.8.3
 
   03 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> kstartperf-4.8.5.ebuild:
   Stable on ppc wrt bug#431892.

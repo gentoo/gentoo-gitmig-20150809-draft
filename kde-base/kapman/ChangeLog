@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kapman
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kapman/ChangeLog,v 1.107 2012/09/03 12:20:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kapman/ChangeLog,v 1.108 2012/09/03 13:00:32 johu Exp $
+
+  03 Sep 2012; Johannes Huber <johu@gentoo.org> -kapman-4.8.3.ebuild:
+  Remove KDE SC 4.8.3
 
   03 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> kapman-4.8.5.ebuild:
   Stable on ppc wrt bug#431892.

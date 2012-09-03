@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ktuberling
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktuberling/ChangeLog,v 1.214 2012/09/03 12:20:40 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktuberling/ChangeLog,v 1.215 2012/09/03 13:00:48 johu Exp $
+
+  03 Sep 2012; Johannes Huber <johu@gentoo.org> -ktuberling-4.8.3.ebuild:
+  Remove KDE SC 4.8.3
 
   03 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> ktuberling-4.8.5.ebuild:
   Stable on ppc wrt bug#431892.

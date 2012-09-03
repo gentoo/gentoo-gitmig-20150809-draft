@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/knotes
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knotes/ChangeLog,v 1.211 2012/09/03 12:20:55 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knotes/ChangeLog,v 1.212 2012/09/03 13:01:03 johu Exp $
+
+  03 Sep 2012; Johannes Huber <johu@gentoo.org> -knotes-4.8.3.ebuild:
+  Remove KDE SC 4.8.3
 
   03 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> knotes-4.8.5.ebuild:
   Stable on ppc wrt bug#431892.
