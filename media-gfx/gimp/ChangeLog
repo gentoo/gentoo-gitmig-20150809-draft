@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.381 2012/08/24 19:11:50 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.382 2012/09/03 22:26:02 sping Exp $
+
+  03 Sep 2012; Sebastian Pipping <sping@gentoo.org> gimp-2.8.2.ebuild:
+  Prevent dead symlink gimp-console.1 (bug #433527)
 
 *gimp-2.8.2 (24 Aug 2012)
 
