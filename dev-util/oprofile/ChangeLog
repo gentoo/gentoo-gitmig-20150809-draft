@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/oprofile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.80 2012/06/07 21:41:19 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.81 2012/09/03 13:36:43 kensington Exp $
+
+  03 Sep 2012; Michael Palimaka <kensington@gentoo.org> oprofile-0.9.7.ebuild:
+  Add missing slot dependencies on Qt.
 
   07 Jun 2012; Zac Medico <zmedico@gentoo.org> oprofile-0.9.6.ebuild,
   oprofile-0.9.7.ebuild:
@@ -331,4 +334,3 @@
   23 Oct 2003; Stefan Jones <cretin@gentoo.org>:
   Initial import.  Ebuild submitted by Marc Bevand <bevand_m@epita.fr>.
   See bug #31101.
-
