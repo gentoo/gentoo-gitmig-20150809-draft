@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/clucene
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/ChangeLog,v 1.44 2012/03/22 11:35:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/ChangeLog,v 1.45 2012/09/03 22:46:56 creffett Exp $
+
+  03 Sep 2012; Chris Reffett <creffett@gentoo.org> clucene-2.3.3.4-r3.ebuild:
+  Restricting tests, bug 421765
 
 *clucene-2.3.3.4-r3 (22 Mar 2012)
 
@@ -176,4 +179,3 @@
   Initial import. Clucene is the C++ equivalent to Java's lucene package.
   Thanks to Rohan McGovern <rohan@rohanpm.net> in bug #95633 for work on this
   package.
-
