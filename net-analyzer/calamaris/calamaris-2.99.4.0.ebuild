@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/calamaris/calamaris-2.99.4.0.ebuild,v 1.1 2006/12/19 22:17:09 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/calamaris/calamaris-2.99.4.0.ebuild,v 1.2 2012/09/03 21:53:02 blueness Exp $
 
 DESCRIPTION="Calamaris parses the logfiles of a wide variety of Web proxy servers and generates reports"
 HOMEPAGE="http://calamaris.cord.de/"
@@ -8,7 +8,7 @@ SRC_URI="http://calamaris.cord.de/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~x86"
 
 DEPEND=""
 RDEPEND="dev-lang/perl
