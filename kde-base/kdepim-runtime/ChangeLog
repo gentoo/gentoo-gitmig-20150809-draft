@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim-runtime
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/ChangeLog,v 1.91 2012/09/03 13:29:16 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/ChangeLog,v 1.92 2012/09/03 13:57:14 johu Exp $
+
+  03 Sep 2012; Johannes Huber <johu@gentoo.org>
+  -files/kdepim-runtime-4.8.3-fix-dav.patch:
+  Remove old.
 
   03 Sep 2012; Johannes Huber <johu@gentoo.org> -kdepim-runtime-4.7.4.ebuild:
   Remove KDE SC 4.7.4
@@ -431,4 +435,3 @@
   08 Feb 2010; Alexey Shvetsov <alexxy@gentoo.org>
   +kdepim-runtime-4.4.0.ebuild:
   Version bump to KDE SC 4.4.0
-

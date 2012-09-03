@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdepim-common-libs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-common-libs/ChangeLog,v 1.50 2012/09/03 13:29:51 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-common-libs/ChangeLog,v 1.51 2012/09/03 13:54:26 johu Exp $
+
+  03 Sep 2012; Johannes Huber <johu@gentoo.org>
+  -files/kdepim-common-libs-4.7.4-namespace.patch,
+  -files/kdepim-common-libs-4.8.3-qt47-compat.patch,
+  -files/kdepim-common-libs-4.8.4-sec.patch:
+  Remove old.
 
   03 Sep 2012; Johannes Huber <johu@gentoo.org>
   -kdepim-common-libs-4.7.4.ebuild:
@@ -244,4 +250,3 @@
   23 Apr 2011; Theo Chatzimichos <tampakrap@gentoo.org>
   +kdepim-common-libs-4.5.95.ebuild:
   Version bump KDEPIM 4.5.95 (4.6 beta 5)
-
