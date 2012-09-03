@@ -1,6 +1,10 @@
 # ChangeLog for app-text/mythes
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mythes/ChangeLog,v 1.15 2012/07/02 09:32:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mythes/ChangeLog,v 1.16 2012/09/03 08:22:34 scarabeus Exp $
+
+  03 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> -mythes-1.2.2.ebuild,
+  mythes-1.2.3.ebuild:
+  Stabilise on amd64 x86 and ppc. Drop older. Wrt bug#433201.
 
 *mythes-1.2.3 (02 Jul 2012)
 
