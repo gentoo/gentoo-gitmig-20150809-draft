@@ -10,4 +10,7 @@
 		<email>ago@gentoo.org</email>
 		<name>Agostino Sarubbo</name>
 	</maintainer>
+	<use>
+		<flag name="plugins">Install ettercap plugins (et_*.so)</flag>
+	</use>
 </pkgmetadata>
