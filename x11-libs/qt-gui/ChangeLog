@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-gui
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.198 2012/07/19 21:01:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.199 2012/09/03 07:44:20 pesa Exp $
+
+  03 Sep 2012; Davide Pesavento <pesa@gentoo.org> qt-gui-4.8.1-r1.ebuild,
+  qt-gui-4.8.2.ebuild:
+  Install qdbusviewer icon wrt bug 430726 by Samuel Bauer.
 
   19 Jul 2012; Markus Meier <maekke@gentoo.org> qt-gui-4.8.2.ebuild:
   arm stable, bug #424625

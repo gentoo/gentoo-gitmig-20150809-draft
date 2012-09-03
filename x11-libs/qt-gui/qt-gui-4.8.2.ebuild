@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.8.2.ebuild,v 1.10 2012/07/19 21:01:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.8.2.ebuild,v 1.11 2012/09/03 07:44:20 pesa Exp $
 
 EAPI=4
 
@@ -199,7 +199,7 @@ src_install() {
 	# which are located under tools/designer/src/lib/*
 	# So instead of installing both, we create the private folder
 	# and drop tools/designer/src/lib/* headers in it.
-	if use aqua && [[ ${CHOST##*-darwin} -ge 9 ]] ; then
+	if use aqua && [[ ${CHOST##*-darwin} -ge 9 ]]; then
 		insinto "${QTLIBDIR#${EPREFIX}}"/QtDesigner.framework/Headers/private/
 	else
 		insinto "${QTHEADERDIR#${EPREFIX}}"/QtDesigner/private/
@@ -208,14 +208,14 @@ src_install() {
 	doins "${S}"/tools/designer/src/lib/sdk/*
 
 	# install private headers
-	if use aqua && [[ ${CHOST##*-darwin} -ge 9 ]] ; then
+	if use aqua && [[ ${CHOST##*-darwin} -ge 9 ]]; then
 		insinto "${QTLIBDIR#${EPREFIX}}"/QtGui.framework/Headers/private/
 	else
 		insinto "${QTHEADERDIR#${EPREFIX}}"/QtGui/private
 	fi
 	find "${S}"/src/gui -type f -name '*_p.h' -exec doins {} +
 
-	if use aqua && [[ ${CHOST##*-darwin} -ge 9 ]] ; then
+	if use aqua && [[ ${CHOST##*-darwin} -ge 9 ]]; then
 		# rerun to get links to headers right
 		fix_includes
 	fi
@@ -227,19 +227,20 @@ src_install() {
 
 	doicon tools/designer/src/designer/images/designer.png \
 		tools/linguist/linguist/images/icons/linguist-128-32.png
+	use dbus && doicon tools/qdbus/qdbusviewer/images/qdbusviewer-128.png
 	make_desktop_entry designer Designer designer 'Qt;Development;GUIDesigner'
 	make_desktop_entry linguist Linguist linguist-128-32 'Qt;Development;GUIDesigner'
 }
 
 pkg_postinst() {
-	# raster is the default graphicssystems, set it if first install
+	# raster is the default graphicssystems, set it on first install
 	eselect qtgraphicssystem set raster --use-old
-	elog "Starting with Qt 4.8.0, you may choose the active Qt Graphics System"
+
+	elog "Starting with Qt 4.8, you may choose the active Qt Graphics System"
 	elog "by using a new eselect module called qtgraphicssystem."
-	elog "Run"
-	elog "  eselect qtgraphicssystem"
-	elog "for more information."
-	if use gtkstyle ; then
+	elog "Run \`eselect qtgraphicssystem\` for more information."
+
+	if use gtkstyle; then
 		# see bug 388551
 		elog "For Qt's GTK style to work, you need to either export"
 		elog "the following variable into your environment:"
