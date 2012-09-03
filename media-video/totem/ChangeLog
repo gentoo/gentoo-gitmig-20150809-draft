@@ -1,6 +1,9 @@
 # ChangeLog for media-video/totem
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.341 2012/07/04 23:37:25 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.342 2012/09/03 18:58:36 nirbheek Exp $
+
+  03 Sep 2012; Nirbheek Chauhan <nirbheek@gentoo.org> totem-3.4.3.ebuild:
+  Vala should be in DEPEND not RDEPEND
 
 *totem-3.4.3 (04 Jul 2012)
 

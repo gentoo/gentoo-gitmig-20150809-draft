@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.4.3.ebuild,v 1.1 2012/07/04 23:37:25 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.4.3.ebuild,v 1.2 2012/09/03 18:58:36 nirbheek Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -74,7 +74,6 @@ RDEPEND=">=dev-libs/glib-2.27.92:2
 			dev-python/httplib2
 			dev-python/feedparser
 			dev-python/beautifulsoup ) )
-	vala? ( >=dev-lang/vala-0.14.2-r1:0.14 )
 	zeitgeist? ( dev-libs/libzeitgeist )
 	zeroconf? ( >net-libs/libepc-0.4.0 )"
 # XXX: zeroconf requires unreleased version of libepc
@@ -89,7 +88,8 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto
 	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.14 )
-	test? ( python? ( dev-python/pylint ) )"
+	test? ( python? ( dev-python/pylint ) )
+	vala? ( >=dev-lang/vala-0.14.2-r1:0.14 )"
 # docbook-xml-dtd is needed for user doc
 
 # see bug #359379
