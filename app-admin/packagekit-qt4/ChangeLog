@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/packagekit-qt4
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-qt4/ChangeLog,v 1.16 2012/07/20 13:40:30 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-qt4/ChangeLog,v 1.17 2012/09/03 13:54:48 kensington Exp $
+
+  03 Sep 2012; Michael Palimaka <kensington@gentoo.org>
+  packagekit-qt4-0.6.22.ebuild, packagekit-qt4-0.7.4.ebuild:
+  Add missing slot dependencies on Qt.
 
   20 Jul 2012; Fabio Erculiani <lxnay@gentoo.org> packagekit-qt4-0.7.4.ebuild:
   Remove check for polkit-backend-1 which is now marked as noinst in polkit >=
@@ -75,4 +79,3 @@
   19 Jul 2011; Fabio Erculiani <lxnay@gentoo.org>
   +packagekit-qt4-0.6.16.ebuild, +metadata.xml:
   new ebuild
-
