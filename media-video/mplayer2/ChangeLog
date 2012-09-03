@@ -1,6 +1,14 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.65 2012/09/02 10:19:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.66 2012/09/03 16:33:52 scarabeus Exp $
+
+*mplayer2-2.0_p20120828 (03 Sep 2012)
+
+  03 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> +files/generate-tarball.sh,
+  +mplayer2-2.0_p20120828.ebuild, -mplayer2-2.0_p20120902.ebuild, metadata.xml,
+  mplayer2-9999.ebuild:
+  Update the tarball to use proper versioning. Update the ebuild from multimedia
+  overlay. Add bump script. Thanks to Nikoli for the patches.
 
   02 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   mplayer2-2.0_p20120902.ebuild, mplayer2-9999.ebuild:
