@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/jvgs/jvgs-0.5.ebuild,v 1.3 2010/07/07 14:42:48 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/jvgs/jvgs-0.5.ebuild,v 1.4 2012/09/03 19:28:12 hasufell Exp $
 
 EAPI=2
 CMAKE_IN_SOURCE_BUILD=1
@@ -25,6 +25,10 @@ DEPEND="${RDEPEND}
 	dev-lang/swig"
 
 S=${WORKDIR}/${P}-src
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-flags.patch
+}
 
 src_configure() {
 	cmake-utils_src_configure
