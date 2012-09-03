@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksystemlog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksystemlog/ChangeLog,v 1.119 2012/09/03 13:00:51 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksystemlog/ChangeLog,v 1.120 2012/09/03 13:29:46 johu Exp $
+
+  03 Sep 2012; Johannes Huber <johu@gentoo.org> -ksystemlog-4.7.4.ebuild:
+  Remove KDE SC 4.7.4
 
   03 Sep 2012; Johannes Huber <johu@gentoo.org> -ksystemlog-4.8.3.ebuild:
   Remove KDE SC 4.8.3

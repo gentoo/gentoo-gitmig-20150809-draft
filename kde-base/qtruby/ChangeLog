@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/qtruby
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.120 2012/09/03 13:00:41 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.121 2012/09/03 13:29:34 johu Exp $
+
+  03 Sep 2012; Johannes Huber <johu@gentoo.org> -qtruby-4.7.4.ebuild:
+  Remove KDE SC 4.7.4
 
   03 Sep 2012; Johannes Huber <johu@gentoo.org> -qtruby-4.8.3.ebuild:
   Remove KDE SC 4.8.3

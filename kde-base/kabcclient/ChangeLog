@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kabcclient
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kabcclient/ChangeLog,v 1.103 2012/09/03 13:00:39 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kabcclient/ChangeLog,v 1.104 2012/09/03 13:29:32 johu Exp $
+
+  03 Sep 2012; Johannes Huber <johu@gentoo.org> -kabcclient-4.7.4.ebuild:
+  Remove KDE SC 4.7.4
 
   03 Sep 2012; Johannes Huber <johu@gentoo.org> -kabcclient-4.8.3.ebuild:
   Remove KDE SC 4.8.3

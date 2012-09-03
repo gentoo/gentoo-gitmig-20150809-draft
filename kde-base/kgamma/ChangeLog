@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kgamma
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgamma/ChangeLog,v 1.218 2012/09/03 13:00:24 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgamma/ChangeLog,v 1.219 2012/09/03 13:29:17 johu Exp $
+
+  03 Sep 2012; Johannes Huber <johu@gentoo.org> -kgamma-4.7.4.ebuild:
+  Remove KDE SC 4.7.4
 
   03 Sep 2012; Johannes Huber <johu@gentoo.org> -kgamma-4.8.3.ebuild:
   Remove KDE SC 4.8.3

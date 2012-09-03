@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim-common-libs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-common-libs/ChangeLog,v 1.49 2012/09/03 13:00:56 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-common-libs/ChangeLog,v 1.50 2012/09/03 13:29:51 johu Exp $
+
+  03 Sep 2012; Johannes Huber <johu@gentoo.org>
+  -kdepim-common-libs-4.7.4.ebuild:
+  Remove KDE SC 4.7.4
 
   03 Sep 2012; Johannes Huber <johu@gentoo.org>
   -kdepim-common-libs-4.8.3-r1.ebuild:

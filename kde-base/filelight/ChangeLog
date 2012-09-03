@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/filelight
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/filelight/ChangeLog,v 1.57 2012/09/03 13:00:40 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/filelight/ChangeLog,v 1.58 2012/09/03 13:29:33 johu Exp $
+
+  03 Sep 2012; Johannes Huber <johu@gentoo.org> -filelight-4.7.4.ebuild:
+  Remove KDE SC 4.7.4
 
   03 Sep 2012; Johannes Huber <johu@gentoo.org> -filelight-4.8.3.ebuild:
   Remove KDE SC 4.8.3

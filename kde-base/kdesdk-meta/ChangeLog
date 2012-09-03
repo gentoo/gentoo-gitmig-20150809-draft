@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdesdk-meta
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-meta/ChangeLog,v 1.210 2012/09/03 13:00:20 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-meta/ChangeLog,v 1.211 2012/09/03 13:29:13 johu Exp $
+
+  03 Sep 2012; Johannes Huber <johu@gentoo.org> -kdesdk-meta-4.7.4.ebuild:
+  Remove KDE SC 4.7.4
 
   03 Sep 2012; Johannes Huber <johu@gentoo.org> -kdesdk-meta-4.8.3.ebuild:
   Remove KDE SC 4.8.3
