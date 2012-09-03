@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.14-r4.ebuild,v 1.9 2011/11/11 16:12:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.14-r4.ebuild,v 1.10 2012/09/03 13:27:47 kensington Exp $
 
 EAPI=4
 
@@ -35,7 +35,7 @@ RDEPEND=">=x11-libs/qt-gui-4.4:4[qt3support,dbus?]
 	>=app-crypt/qca-2.0.2:2
 	spell? ( >=app-text/enchant-1.3.0 )
 	xscreensaver? ( x11-libs/libXScrnSaver )
-	extras? ( webkit? ( x11-libs/qt-webkit ) )
+	extras? ( webkit? ( x11-libs/qt-webkit:4 ) )
 	app-arch/unzip
 	|| ( >=sys-libs/zlib-1.2.5.1-r2[minizip] <sys-libs/zlib-1.2.5.1-r1 )"
 
