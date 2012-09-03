@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/qtads
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/qtads/ChangeLog,v 1.20 2012/08/24 17:34:20 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/qtads/ChangeLog,v 1.21 2012/09/03 13:35:13 kensington Exp $
+
+  03 Sep 2012; Michael Palimaka <kensington@gentoo.org> qtads-2.1.4.ebuild:
+  Add missing slot dependencies on Qt.
 
 *qtads-2.1.4 (24 Aug 2012)
 
@@ -51,4 +54,3 @@
   +metadata.xml:
   initial commit of version 2 (bug #338986) with ebuild submitted by Nikos
   Chantziaras
-
