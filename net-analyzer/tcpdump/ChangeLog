@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/tcpdump
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.154 2012/09/03 19:58:14 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.155 2012/09/03 21:49:42 blueness Exp $
+
+  03 Sep 2012; Anthony G. Basile <blueness@gentoo.org> tcpdump-4.3.0.ebuild:
+  Stable ppc, bug #433263
 
   03 Sep 2012; Anthony G. Basile <blueness@gentoo.org> tcpdump-4.3.0.ebuild:
   Stable arm, bug #433263
