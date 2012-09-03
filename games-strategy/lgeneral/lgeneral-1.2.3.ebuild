@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/lgeneral-1.2.3.ebuild,v 1.3 2012/07/03 23:31:11 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/lgeneral-1.2.3.ebuild,v 1.4 2012/09/03 10:05:13 phajdan.jr Exp $
 
 EAPI=2
 inherit eutils autotools games
@@ -79,6 +79,7 @@ src_install() {
 	keepdir "${GAMES_DATADIR}"/${PN}/{ai_modules,music,terrain}
 
 	# Generate scenario data:
+	dodir "${GAMES_DATADIR}"/${PN}/gfx/{flags,units,terrain} #413901
 	SDL_VIDEODRIVER=dummy "${WORKDIR}"/tmp-build/lgc-pg/lgc-pg \
 		-s "${WORKDIR}"/pg-data \
 		-d "${D}/${GAMES_DATADIR}"/${PN} \
