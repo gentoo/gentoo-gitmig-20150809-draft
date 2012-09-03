@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-video-intel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.98 2012/09/02 19:35:47 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.99 2012/09/03 09:25:25 chithanh Exp $
+
+  03 Sep 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xf86-video-intel-2.18.0.ebuild, xf86-video-intel-2.19.0.ebuild,
+  xf86-video-intel-2.20.0.ebuild, xf86-video-intel-2.20.1.ebuild,
+  xf86-video-intel-2.20.2.ebuild, xf86-video-intel-2.20.3.ebuild,
+  xf86-video-intel-2.20.5.ebuild, xf86-video-intel-2.20.6.ebuild:
+  Depend on pixman unconditionally, bug #410813 comment 3.
 
 *xf86-video-intel-2.20.6 (02 Sep 2012)
 

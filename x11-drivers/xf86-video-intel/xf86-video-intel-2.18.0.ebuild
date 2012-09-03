@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.18.0.ebuild,v 1.4 2012/07/04 22:13:45 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.18.0.ebuild,v 1.5 2012/09/03 09:25:25 chithanh Exp $
 
 EAPI=4
 
@@ -16,11 +16,11 @@ RDEPEND="x11-libs/libXext
 	x11-libs/libXfixes
 	x11-libs/libXvMC
 	>=x11-libs/libxcb-1.5
+	>=x11-libs/pixman-0.24
 	x11-libs/xcb-util
 	>=x11-libs/libdrm-2.4.29[video_cards_intel]
 	sna? (
 		>=x11-base/xorg-server-1.10
-		>=x11-libs/pixman-0.24
 	)"
 DEPEND="${RDEPEND}
 	>=x11-proto/dri2proto-2.6"
