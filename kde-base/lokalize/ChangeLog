@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/lokalize
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/lokalize/ChangeLog,v 1.120 2012/09/03 13:29:12 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/lokalize/ChangeLog,v 1.121 2012/09/03 14:30:21 johu Exp $
+
+  03 Sep 2012; Johannes Huber <johu@gentoo.org>
+  -files/lokalize-4.6.5-hunspell.patch:
+  Remove old.
 
   03 Sep 2012; Johannes Huber <johu@gentoo.org> -lokalize-4.7.4.ebuild:
   Remove KDE SC 4.7.4
@@ -488,4 +492,3 @@
   02 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   +metadata.xml, +lokalize-4.1.2.ebuild:
   Add kde-4.1.2 into the tree from the kde-testing overlay.
-

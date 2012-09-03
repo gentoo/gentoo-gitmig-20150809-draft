@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/superkaramba
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/superkaramba/ChangeLog,v 1.211 2012/09/03 13:29:29 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/superkaramba/ChangeLog,v 1.212 2012/09/03 14:41:55 johu Exp $
+
+  03 Sep 2012; Johannes Huber <johu@gentoo.org>
+  -files/superkaramba-as-needed.patch:
+  Remove old.
 
   03 Sep 2012; Johannes Huber <johu@gentoo.org> -superkaramba-4.7.4.ebuild:
   Remove KDE SC 4.7.4
@@ -897,4 +901,3 @@
   07 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
   +superkaramba-3.5_alpha1.ebuild:
   Added 3.5_alpha1 split ebuild.
-

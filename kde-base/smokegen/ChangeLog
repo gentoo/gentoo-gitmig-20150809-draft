@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/smokegen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smokegen/ChangeLog,v 1.37 2012/09/03 13:29:21 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smokegen/ChangeLog,v 1.38 2012/09/03 14:40:39 johu Exp $
+
+  03 Sep 2012; Johannes Huber <johu@gentoo.org>
+  -files/smokegen-4.7.4-akonadicrash.patch:
+  Remove old.
 
   03 Sep 2012; Johannes Huber <johu@gentoo.org> -smokegen-4.7.4-r1.ebuild:
   Remove KDE SC 4.7.4
@@ -147,4 +151,3 @@
   27 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> +smokegen-4.7.0.ebuild,
   +metadata.xml:
   Version bump KDE SC 4.7.0
-
