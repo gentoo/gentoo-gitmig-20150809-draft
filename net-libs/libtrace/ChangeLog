@@ -1,0 +1,10 @@
+# ChangeLog for net-libs/libtrace
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtrace/ChangeLog,v 1.1 2012/09/03 22:22:03 radhermit Exp $
+
+*libtrace-3.0.14 (03 Sep 2012)
+
+  03 Sep 2012; Tim Harder <radhermit@gentoo.org> +libtrace-3.0.14.ebuild,
+  +files/libtrace-3.0.14-no-doxygen.patch, +metadata.xml:
+  Initial import, ebuild by me (bug #404099).
+
