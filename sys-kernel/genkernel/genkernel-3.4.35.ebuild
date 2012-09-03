@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.35.ebuild,v 1.4 2012/08/14 15:56:50 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.35.ebuild,v 1.5 2012/09/03 21:59:41 sping Exp $
 
 # genkernel-9999        -> latest Git branch "master"
 # genkernel-VERSION     -> normal genkernel release
@@ -94,7 +94,6 @@ src_prepare() {
 		-e "s:VERSION_GPG:$VERSION_GPG:" \
 		"${S}"/genkernel.conf > "${T}"/genkernel.conf \
 		|| die "Could not adjust versions"
-	insinto /etc
 }
 
 src_compile() {
@@ -104,6 +103,7 @@ src_compile() {
 }
 
 src_install() {
+	insinto /etc
 	doins "${T}"/genkernel.conf || die "doins genkernel.conf"
 
 	doman genkernel.8 || die "doman"
