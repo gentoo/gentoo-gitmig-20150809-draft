@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdemultimedia-kioslaves
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kioslaves/ChangeLog,v 1.224 2012/09/02 21:54:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kioslaves/ChangeLog,v 1.225 2012/09/03 08:11:17 scarabeus Exp $
+
+  03 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  kdemultimedia-kioslaves-4.8.5.ebuild:
+  Add blocker on kscd to avoid collision on +handbook install.
 
   02 Sep 2012; Agostino Sarubbo <ago@gentoo.org>
   kdemultimedia-kioslaves-4.8.5.ebuild:
@@ -1060,4 +1064,3 @@
   +kdemultimedia-kioslaves-3.4.0_beta1.ebuild:
   Adding the split ebuilds to portage. For KDE 3.4, we've created separate
   ebuilds for all the KDE apps.
-
