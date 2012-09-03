@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdesdk-scripts
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-scripts/ChangeLog,v 1.202 2012/09/02 22:02:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-scripts/ChangeLog,v 1.203 2012/09/03 12:20:18 scarabeus Exp $
+
+  03 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  kdesdk-scripts-4.8.5.ebuild:
+  Stable on ppc wrt bug#431892.
 
   02 Sep 2012; Agostino Sarubbo <ago@gentoo.org> kdesdk-scripts-4.8.5.ebuild:
   Stable for x86, wrt bug #431892

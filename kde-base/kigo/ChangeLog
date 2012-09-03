@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kigo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kigo/ChangeLog,v 1.75 2012/09/02 22:17:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kigo/ChangeLog,v 1.76 2012/09/03 12:20:57 scarabeus Exp $
+
+  03 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> kigo-4.8.5.ebuild:
+  Stable on ppc wrt bug#431892.
 
   02 Sep 2012; Agostino Sarubbo <ago@gentoo.org> kigo-4.8.5.ebuild:
   Stable for x86, wrt bug #431892

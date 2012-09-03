@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcontrol
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.257 2012/09/02 21:35:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.258 2012/09/03 12:20:57 scarabeus Exp $
+
+  03 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> kcontrol-4.8.5.ebuild:
+  Stable on ppc wrt bug#431892.
 
   02 Sep 2012; Agostino Sarubbo <ago@gentoo.org> kcontrol-4.8.5.ebuild:
   Stable for x86, wrt bug #431892

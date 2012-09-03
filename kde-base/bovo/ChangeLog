@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/bovo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/bovo/ChangeLog,v 1.123 2012/09/02 21:15:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/bovo/ChangeLog,v 1.124 2012/09/03 12:20:23 scarabeus Exp $
+
+  03 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> bovo-4.8.5.ebuild:
+  Stable on ppc wrt bug#431892.
 
   02 Sep 2012; Agostino Sarubbo <ago@gentoo.org> bovo-4.8.5.ebuild:
   Stable for x86, wrt bug #431892

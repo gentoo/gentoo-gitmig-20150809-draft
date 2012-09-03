@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/blinken
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/blinken/ChangeLog,v 1.193 2012/09/02 21:13:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/blinken/ChangeLog,v 1.194 2012/09/03 12:20:33 scarabeus Exp $
+
+  03 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> blinken-4.8.5.ebuild:
+  Stable on ppc wrt bug#431892.
 
   02 Sep 2012; Agostino Sarubbo <ago@gentoo.org> blinken-4.8.5.ebuild:
   Stable for x86, wrt bug #431892
