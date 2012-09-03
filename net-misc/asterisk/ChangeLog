@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.411 2012/08/25 17:30:08 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.412 2012/09/03 08:37:12 chainsaw Exp $
+
+*asterisk-1.8.15.1 (03 Sep 2012)
+
+  03 Sep 2012; Tony Vroon <chainsaw@gentoo.org> +files/1.8.0/asterisk.initd3,
+  +asterisk-1.8.15.1.ebuild:
+  Security upgrade on the 1.8 branch, addressing a privilege escalation in the
+  manager interface and a failure to apply IAX2 ACLs when using Asterisk
+  Realtime Architecture (ARA). Fixes by Jaco Kroon address bug #429492 and bug
+  #432464.
 
   25 Aug 2012; <swift@gentoo.org> asterisk-1.8.14.1.ebuild,
   asterisk-1.8.15.0.ebuild, asterisk-10.6.1.ebuild, asterisk-10.7.0.ebuild:
