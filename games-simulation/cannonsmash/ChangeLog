@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/cannonsmash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/cannonsmash/ChangeLog,v 1.21 2012/05/02 21:16:56 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/cannonsmash/ChangeLog,v 1.22 2012/09/03 19:30:21 hasufell Exp $
+
+  03 Sep 2012; Julian Ospald <hasufell@gentoo.org> cannonsmash-0.6.6.ebuild,
+  +files/cannonsmash-0.6.6-flags.patch, -files/cannonsmash-0.6.6-ldflags.patch:
+  respect flags wrt #427788
 
   02 May 2012; Jeff Horelick <jdhore@gentoo.org> cannonsmash-0.6.6.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
