@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/greenbone-security-desktop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/greenbone-security-desktop/ChangeLog,v 1.3 2012/05/04 06:08:11 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/greenbone-security-desktop/ChangeLog,v 1.4 2012/09/03 13:49:59 kensington Exp $
+
+  03 Sep 2012; Michael Palimaka <kensington@gentoo.org>
+  greenbone-security-desktop-1.2.0.ebuild:
+  Add missing slot dependencies on Qt.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org>
   greenbone-security-desktop-1.2.0.ebuild:
@@ -15,4 +19,3 @@
   09 Oct 2011; Hanno Boeck <hanno@gentoo.org>
   +greenbone-security-desktop-1.2.0.ebuild, +metadata.xml:
   Initial commit, GUI for openvas.
-

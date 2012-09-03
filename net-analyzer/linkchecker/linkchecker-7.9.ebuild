@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/linkchecker-7.9.ebuild,v 1.3 2012/08/18 21:38:12 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/linkchecker-7.9.ebuild,v 1.4 2012/09/03 13:47:44 kensington Exp $
 
 EAPI=4
 
@@ -39,7 +39,7 @@ RDEPEND="
 		dev-python/qscintilla-python
 		)"
 DEPEND="
-	doc? ( x11-libs/qt-assistant )"
+	doc? ( x11-libs/qt-assistant:4 )"
 
 RESTRICT="test"
 
