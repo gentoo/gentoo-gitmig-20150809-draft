@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pkgconfig
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.116 2012/09/02 19:00:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.117 2012/09/03 22:05:01 blueness Exp $
+
+  03 Sep 2012; Anthony G. Basile <blueness@gentoo.org> pkgconfig-0.27.1.ebuild:
+  Stable ppc, bug #433780
 
   02 Sep 2012; Raúl Porcel <armin76@gentoo.org> pkgconfig-0.27.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #430814
