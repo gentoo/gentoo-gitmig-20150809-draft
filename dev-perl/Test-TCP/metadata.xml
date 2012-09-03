@@ -5,5 +5,6 @@
   <upstream>
     <remote-id type="cpan">Test-TCP</remote-id>
     <remote-id type="cpan-module">Test::TCP</remote-id>
+    <remote-id type="cpan-module">Test::TCP::CheckPort</remote-id>
   </upstream>
 </pkgmetadata>
