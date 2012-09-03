@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libecap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libecap/ChangeLog,v 1.22 2012/03/25 14:53:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libecap/ChangeLog,v 1.23 2012/09/03 18:07:33 eras Exp $
+
+  03 Sep 2012; Eray Aslan <eras@gentoo.org> libecap-0.2.0.ebuild:
+  move to slot 2 - bug #432942
 
   25 Mar 2012; Raúl Porcel <armin76@gentoo.org> libecap-0.0.3.ebuild:
   alpha/ia64/sparc stable wrt #400439
@@ -73,4 +76,3 @@
   +metadata.xml, +libecap-0.0.2.ebuild:
   Initial import from bug 277883, thanks to Ivan Mironov
   <mironov.ivan@gmail.com>.
-
