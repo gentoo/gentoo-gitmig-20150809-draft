@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.8.0-r1.ebuild,v 1.4 2012/05/03 18:16:39 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.8.0-r1.ebuild,v 1.5 2012/09/03 13:53:02 kensington Exp $
 
 EAPI=3
 inherit multilib eutils flag-o-matic
@@ -19,7 +19,7 @@ RDEPEND="app-admin/eselect-pinentry
 	!static? (
 		gtk? ( x11-libs/gtk+:2 )
 		ncurses? ( sys-libs/ncurses )
-		qt4? ( >=x11-libs/qt-gui-4.4.1 )
+		qt4? ( >=x11-libs/qt-gui-4.4.1:4 )
 		!gtk? ( !qt4? ( !ncurses? ( sys-libs/ncurses ) ) )
 	)
 	caps? ( sys-libs/libcap )"
