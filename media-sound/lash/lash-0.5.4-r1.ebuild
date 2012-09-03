@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/lash-0.5.4-r1.ebuild,v 1.16 2012/09/03 17:05:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/lash-0.5.4-r1.ebuild,v 1.17 2012/09/03 17:11:05 ssuominen Exp $
 
 EAPI=4
 
@@ -67,4 +67,12 @@ src_install() {
 	default
 	dohtml docs/lash-manual-html-*/lash-manual.html
 	prune_libtool_files --all # --all for _lash.la in python directory
+}
+
+pkg_postinst() {
+	use python && python_mod_optimize lash.py
+}
+
+pkg_postrm() {
+	use python && python_mod_cleanup lash.py
 }
