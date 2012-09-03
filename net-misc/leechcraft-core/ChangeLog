@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/leechcraft-core
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-core/ChangeLog,v 1.26 2012/09/03 12:06:00 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-core/ChangeLog,v 1.27 2012/09/03 12:14:27 pinkbyte Exp $
+
+  03 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> leechcraft-core-9999.ebuild:
+  Applying fix for bug #431436 to live ebuild too
 
   03 Sep 2012; Sergey Popov <pinkbyte@gentoo.org>
   leechcraft-core-0.5.80.ebuild:
