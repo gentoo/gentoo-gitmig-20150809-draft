@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/mpc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/ChangeLog,v 1.32 2012/04/26 14:39:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/ChangeLog,v 1.33 2012/09/03 20:47:07 dirtyepic Exp $
+
+*mpc-1.0 (03 Sep 2012)
+
+  03 Sep 2012; Ryan Hill <dirtyepic@gentoo.org> +mpc-1.0.ebuild:
+  Version bump.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> mpc-0.9-r1.ebuild:
   keyword ~amd64-fbsd
