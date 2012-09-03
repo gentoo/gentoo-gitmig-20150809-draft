@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi-scripts/libquvi-scripts-0.4.8.ebuild,v 1.1 2012/08/24 04:43:04 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi-scripts/libquvi-scripts-0.4.8.ebuild,v 1.2 2012/09/03 16:32:39 scarabeus Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/quvi/${PV:0:3}/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="offensive"
 
 DEPEND="app-arch/xz-utils"

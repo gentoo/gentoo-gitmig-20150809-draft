@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libquvi-scripts
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi-scripts/ChangeLog,v 1.16 2012/08/24 04:43:04 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi-scripts/ChangeLog,v 1.17 2012/09/03 16:32:39 scarabeus Exp $
+
+  03 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  libquvi-scripts-0.4.8.ebuild:
+  Keyword ppc and ppc64 for mplayer2.
 
 *libquvi-scripts-0.4.8 (24 Aug 2012)
 
@@ -71,4 +75,3 @@
   10 Oct 2011; Tim Harder <radhermit@gentoo.org> +libquvi-scripts-0.4.0.ebuild,
   +metadata.xml:
   Initial import.
-
