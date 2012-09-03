@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/mk-livestatus
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mk-livestatus/ChangeLog,v 1.3 2011/04/27 13:50:15 idl0r Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mk-livestatus/ChangeLog,v 1.4 2012/09/03 18:48:33 idl0r Exp $
+
+  03 Sep 2012; Christian Ruppert <idl0r@gentoo.org>
+  mk-livestatus-1.1.10_p1.ebuild, +files/gcc-4.7-compile.patch:
+  Add missing includes patch, fixes bug 425182 and bug 433800
 
 *mk-livestatus-1.1.10_p1 (27 Apr 2011)
 
