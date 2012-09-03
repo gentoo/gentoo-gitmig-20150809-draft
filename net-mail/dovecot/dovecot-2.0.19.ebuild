@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.0.19.ebuild,v 1.8 2012/05/28 17:25:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.0.19.ebuild,v 1.9 2012/09/03 16:05:01 eras Exp $
 
 EAPI=4
 
-inherit eutils versionator ssl-cert
+inherit eutils versionator ssl-cert user multilib
 
 MY_P="${P/_/.}"
 major_minor="$( get_version_component_range 1-2 )"
