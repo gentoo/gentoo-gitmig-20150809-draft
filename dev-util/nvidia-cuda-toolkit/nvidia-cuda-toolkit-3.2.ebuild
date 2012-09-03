@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-3.2.ebuild,v 1.9 2012/02/21 22:44:39 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-3.2.ebuild,v 1.10 2012/09/03 13:45:45 kensington Exp $
 
 EAPI=2
 
@@ -27,10 +27,10 @@ RDEPEND="${DEPEND}
 	>=sys-devel/binutils-2.20
 	>=sys-devel/gcc-4.0
 	profiler? ( x86? (
-		x11-libs/qt-gui
-		x11-libs/qt-core
-		x11-libs/qt-assistant
-		x11-libs/qt-sql[sqlite] )
+		x11-libs/qt-gui:4
+		x11-libs/qt-core:4
+		x11-libs/qt-assistant:4
+		x11-libs/qt-sql:4[sqlite] )
 		media-libs/libpng:1.2
 	)
 	debugger? ( >=sys-libs/libtermcap-compat-2.0.8-r2 )
