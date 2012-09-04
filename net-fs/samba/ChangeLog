@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.522 2012/09/04 05:54:17 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.523 2012/09/04 09:32:30 patrick Exp $
+
+  04 Sep 2012; Patrick Lauer <patrick@gentoo.org> samba-3.5.17.ebuild:
+  Restricting cups 1.6
 
 *samba-3.5.17 (04 Sep 2012)
 

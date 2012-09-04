@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.5.17.ebuild,v 1.1 2012/09/04 05:54:17 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.5.17.ebuild,v 1.2 2012/09/04 09:32:30 patrick Exp $
 
 EAPI=4
 
@@ -20,6 +20,7 @@ IUSE="acl addns ads +aio avahi caps +client cluster cups debug doc examples fam
 	ldap ldb +netapi pam quota +readline +server +smbclient smbsharemodes smbtav2
 	swat syslog winbind"
 
+# upstream doesn't support cups 1.6 for samba 3.5
 DEPEND="dev-libs/popt
 	!net-fs/samba-client
 	!net-fs/samba-libs
@@ -35,7 +36,7 @@ DEPEND="dev-libs/popt
 	client? ( !net-fs/mount-cifs
 		dev-libs/iniparser )
 	cluster? ( >=dev-db/ctdb-1.0.114_p1 )
-	cups? ( net-print/cups )
+	cups? ( <net-print/cups-1.6 )
 	fam? ( virtual/fam )
 	ldap? ( net-nds/openldap )
 	pam? ( virtual/pam
