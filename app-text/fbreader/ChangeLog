@@ -1,6 +1,11 @@
 # ChangeLog for app-text/fbreader
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/ChangeLog,v 1.24 2012/06/02 08:04:58 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/ChangeLog,v 1.25 2012/09/04 11:18:36 alexxy Exp $
+
+*fbreader-0.99.1 (04 Sep 2012)
+
+  04 Sep 2012; Alexey Shvetsov <alexxy@gentoo.org> +fbreader-0.99.1.ebuild:
+  [app-text/fbreader] Version bump. Thanks to yury Puhalsky
 
   02 Jun 2012; Zac Medico <zmedico@gentoo.org> fbreader-0.12.10.ebuild:
   inherit multilib for get_libdir
@@ -115,4 +120,3 @@
   02 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org> +metadata.xml,
   +fbreader-0.10.2.ebuild:
   Initial import of fbreader; this fixes bug #117021
-
