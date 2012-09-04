@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-2.9.0.ebuild,v 1.1 2012/09/03 19:21:10 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-2.9.0.ebuild,v 1.2 2012/09/04 14:56:27 creffett Exp $
 
 EAPI=4
 
@@ -31,7 +31,6 @@ IUSE="addressbook debug doc gphoto2 mysql semantic-desktop themedesigner +thumbn
 
 #Keep libf2c blocker until bug 433782 is resolved
 CDEPEND="
-	!=dev-libs/libf2c-20110801-r1
 	$(add_kdebase_dep kdelibs 'semantic-desktop=')
 	$(add_kdebase_dep kdebase-kioslaves)
 	$(add_kdebase_dep libkdcraw)
