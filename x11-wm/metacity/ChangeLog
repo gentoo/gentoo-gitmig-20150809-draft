@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/metacity
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.273 2012/05/14 00:03:35 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.274 2012/09/04 23:34:37 nirbheek Exp $
+
+*metacity-2.34.8 (04 Sep 2012)
+
+  04 Sep 2012; Nirbheek Chauhan <nirbheek@gentoo.org> +metacity-2.34.8.ebuild:
+  Bump to 2.34.8
 
 *metacity-2.34.3 (14 May 2012)
 
@@ -1043,4 +1048,3 @@
 * metacity-2.3.233 (22 May 2002)
   22 May 2002; Spider <spider@gentoo.org>  metacity-2.3.233.ebuild :
   a gtk+ 2.0 windowmanager thats gnome compliant
-
