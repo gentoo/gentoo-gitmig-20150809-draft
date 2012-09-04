@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.67 2012/08/19 11:12:35 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.68 2012/09/04 14:08:24 johu Exp $
 #
 # @ECLASS: kde4-meta.eclass
 # @MAINTAINER:
@@ -342,7 +342,8 @@ kde4-meta_create_extractlists() {
 	#   it may be possible to formulate this shorter, but it should also
 	#   still be understandable...
 	if [[ ${KMNAME} != kdegraphics || ( ( $(get_kde_version) != 4.6 || ${PV} < 4.6.2 ) && $(get_kde_version) < 4.7 ) ]] \
-		&& ! [[ ${KMNAME} == kdeedu && ( ${PV} == 4.6.4 || ${PV} == 4.6.5 ) ]]; then
+		&& ! [[ ${KMNAME} == kdeedu && ( ${PV} == 4.6.4 || ${PV} == 4.6.5 ) ]] \
+		&& ! [[ ${KMNAME} == kdegames && ${PV} > 4.9.0 ]]; then
 		case ${KMNAME} in
 			kdebase-runtime|kde-runtime|kdebase-workspace|kde-workspace|kdeedu|kdegames|kdegraphics)
 				KMEXTRACTONLY+="

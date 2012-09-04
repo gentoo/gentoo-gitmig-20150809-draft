@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.386 2012/09/01 20:49:01 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.387 2012/09/04 14:08:24 johu Exp $
+
+  04 Sep 2012; Johannes Huber <johu@gentoo.org> kde4-meta.eclass:
+  Dont try to extract cmake/modules for kdegames > 4.9.0. Its removed from
+  top-level directory by upstream, fixes bug #431924.
 
   01 Sep 2012; Vadim Kuznetsov vadimk@gentoo.org -vmware.eclass,
   -vmware-mod.eclass:
