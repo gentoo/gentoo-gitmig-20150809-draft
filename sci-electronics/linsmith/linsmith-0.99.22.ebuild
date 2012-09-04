@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/linsmith/linsmith-0.99.22.ebuild,v 1.3 2012/09/04 07:47:25 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/linsmith/linsmith-0.99.22.ebuild,v 1.4 2012/09/04 10:54:51 tomjbe Exp $
 
 EAPI="2"
 
@@ -36,7 +36,7 @@ src_prepare() {
 	# fix QA warnings about wrong categories in .desktop file
 	sed -i -e "s/Application;Engineering;/Education;Science;Electronics;/" \
 		-e "s/Encoding=/#Encoding=/" \
-		${PN}.desktop
+		${PN}.desktop || die
 
 	# fix QA warnings about 'maintainer mode'
 	eautoreconf
