@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/leechcraft-launchy
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-launchy/ChangeLog,v 1.1 2012/09/04 17:55:55 pinkbyte Exp $
+
+*leechcraft-launchy-9999 (04 Sep 2012)
+
+  04 Sep 2012; Sergey Popov <pinkbyte@gentoo.org>
+  +leechcraft-launchy-9999.ebuild, +metadata.xml:
+  Add net-misc/leechcraft-launchy, thanks to 0xd34df00d
+
