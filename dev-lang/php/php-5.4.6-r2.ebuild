@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.6-r2.ebuild,v 1.1 2012/08/29 13:12:48 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.6-r2.ebuild,v 1.2 2012/09/04 14:47:24 ottxor Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SUHOSIN_VERSION=""
 FPM_VERSION="builtin"
 EXPECTED_TEST_FAILURES=""
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 
 function php_get_uri ()
 {
@@ -321,7 +321,14 @@ eblit-pkg() {
 
 eblit-pkg pkg_setup v3
 
-src_prepare() { eblit-run src_prepare v4 ; }
+src_prepare() {
+	eblit-run src_prepare v4
+
+	if [[ ${CHOST} == *-darwin* ]] ; then
+		# http://bugs.php.net/bug.php?id=48795, bug #343481
+		sed -i -e '/BUILD_CGI="\\$(CC)/s/CC/CXX/' configure || die
+	fi
+}
 src_configure() { eblit-run src_configure v54 ; }
 src_compile() { eblit-run src_compile v2 ; }
 src_install() { eblit-run src_install v3 ; }
@@ -354,7 +361,7 @@ pkg_postinst() {
 		fi
 	done
 
-	elog "Make sure that PHP_TARGETS in /etc/make.conf includes php${SLOT/./-} in order"
+	elog "Make sure that PHP_TARGETS in ${EPREFIX}/etc/make.conf includes php${SLOT/./-} in order"
 	elog "to compile extensions for the ${SLOT} ABI"
 	elog
 	if ! use readline && use cli ; then
@@ -364,8 +371,8 @@ pkg_postinst() {
 	elog
 	elog "This ebuild installed a version of php.ini based on php.ini-${PHP_INI_VERSION} version."
 	elog "You can chose which version of php.ini to install by default by setting PHP_INI_VERSION to either"
-	elog "'production' or 'development' in /etc/make.conf"
-	elog "Both versions of php.ini can be found in /usr/share/doc/${PF}"
+	elog "'production' or 'development' in ${EPREFIX}/etc/make.conf"
+	elog "Both versions of php.ini can be found in ${EPREFIX}/usr/share/doc/${PF}"
 
 	elog
 	elog "For more details on how minor version slotting works (PHP_TARGETS) please read the upgrade guide:"
