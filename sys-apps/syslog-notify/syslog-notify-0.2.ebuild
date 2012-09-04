@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/syslog-notify/syslog-notify-0.2.ebuild,v 1.2 2012/07/12 19:12:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/syslog-notify/syslog-notify-0.2.ebuild,v 1.3 2012/09/04 19:10:02 hwoarang Exp $
 
 EAPI=4
 
@@ -21,11 +21,11 @@ DOCS="AUTHORS CHANGELOG HACKING README"
 
 src_install() {
 	default
-
-	ebegin "Creating /var/spool/syslog-notify FIFO"
 	dodir /var/spool
+}
+
+pkg_postinst() {
 	mkfifo "${ED}"/var/spool/syslog-notify
-	eend $?
 }
 
 pkg_postinst() {
