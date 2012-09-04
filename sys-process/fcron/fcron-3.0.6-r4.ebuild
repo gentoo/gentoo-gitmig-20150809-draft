@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.6-r3.ebuild,v 1.3 2012/08/30 06:42:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.6-r4.ebuild,v 1.1 2012/09/04 15:34:44 flameeyes Exp $
 
 EAPI=4
 
@@ -122,11 +122,11 @@ src_install() {
 	# anyway
 	fowners ${rootuser}:fcron \
 		/usr/libexec/fcronsighup \
-		/etc/fcron \
 		/etc/fcron/fcron.{allow,deny,conf} \
+		/etc/fcron
 
 	fperms 6770 /var/spool/fcron
-	fperms 2775 /usr/bin/fcron{dyn,tab}
+	fperms 6775 /usr/bin/fcron{dyn,tab}
 
 	fperms 4710 /usr/libexec/fcronsighup
 
