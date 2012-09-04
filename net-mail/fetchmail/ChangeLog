@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/fetchmail
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.227 2012/08/30 17:32:34 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.228 2012/09/04 15:45:26 jer Exp $
+
+  04 Sep 2012; Jeroen Roovers <jer@gentoo.org> fetchmail-6.3.22.ebuild:
+  Stable for HPPA (bug #431284).
 
   30 Aug 2012; Tim Harder <radhermit@gentoo.org> fetchmail-6.3.21.ebuild:
   Inherit user eclass and add quotes to appease repoman.
