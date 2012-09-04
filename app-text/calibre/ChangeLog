@@ -1,6 +1,9 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.224 2012/08/31 17:12:17 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.225 2012/09/04 16:45:46 zmedico Exp $
+
+  04 Sep 2012; Zac Medico <zmedico@gentoo.org> calibre-0.8.67.ebuild:
+  Use system liberation-fonts for bug #433932.
 
 *calibre-0.8.67 (31 Aug 2012)
 
