@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/knot/knot-1.0.6-r1.ebuild,v 1.1 2012/07/26 14:00:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/knot/knot-1.1.0.ebuild,v 1.1 2012/09/04 09:28:36 scarabeus Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit eutils autotools
 
 DESCRIPTION="High-performance authoritative-only DNS server"
 HOMEPAGE="http://www.knot-dns.cz/"
-SRC_URI="http://public.nic.cz/files/knot-dns/${P}.tar.gz"
+SRC_URI="http://public.nic.cz/files/knot-dns/${P/_/-}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -26,11 +26,10 @@ DEPEND="${RDEPEND}
 	virtual/yacc
 "
 
+S="${WORKDIR}/${P/_/-}"
+
 src_prepare() {
-	epatch \
-		"${FILESDIR}"/${PN}-move-pidfile-to-var.patch \
-		"${FILESDIR}"/${PN}-braindead-lto.patch \
-		"${FILESDIR}"/${P}-userpriv.patch
+	epatch "${FILESDIR}"/${PN}-move-pidfile-to-var.patch
 	sed -i \
 		-e 's:-Werror::g' \
 		configure.ac || die
@@ -41,12 +40,23 @@ src_configure() {
 	econf \
 		--sysconfdir="${EPREFIX}/etc/${PN}" \
 		--libexecdir="${EPREFIX}/usr/libexec/${PN}" \
+		--disable-lto \
 		--enable-recvmmsg \
-		$(use_enable debug debug verbose)
+		$(use_enable debug debug server,zones,xfr,packet,dname,rr,ns,hash,compiler) \
+		$(use_enable debug debuglevel details)
 }
 
 src_install() {
 	default
 
 	newinitd "${FILESDIR}/knot.init" knot-dns
+}
+
+pkg_postinst() {
+	if [[ -n ${REPLACING_VERSIONS} ]] ; then
+		einfo "Remember to recompile all zones after update. Run:"
+		einfo "    # knotc stop"
+		einfo "    # knotc compile"
+		einfo "    # knotc start"
+	fi
 }
