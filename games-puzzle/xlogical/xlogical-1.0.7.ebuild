@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xlogical/xlogical-1.0.7.ebuild,v 1.7 2009/01/13 02:02:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xlogical/xlogical-1.0.7.ebuild,v 1.8 2012/09/04 21:11:17 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools versionator eutils games
@@ -19,7 +19,7 @@ IUSE="alt_gfx"
 
 RDEPEND="media-libs/libsdl
 	media-libs/sdl-image[jpeg]
-	media-libs/sdl-mixer[mikmod]"
+	media-libs/sdl-mixer[mod]"
 DEPEND="${RDEPEND}
 	alt_gfx? ( app-arch/unzip )"
 
@@ -34,7 +34,7 @@ src_unpack() {
 }
 
 src_prepare() {
-	sed -i '/^CXXFLAGS/d' Makefile.am || die "sed failed"
+	sed -i '/^CXXFLAGS/d' Makefile.am || die
 	edos2unix properties.h anim.h exception.h
 	epatch \
 		"${FILESDIR}"/${P}-gcc41.patch \
@@ -43,15 +43,14 @@ src_prepare() {
 }
 
 src_install() {
-	dogamesbin ${PN} || die "installing the binary failed"
+	dogamesbin ${PN} || die
 
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins -r ${PN}.{properties,levels} music sound images \
-		 || die "installing game data failed"
+	doins -r ${PN}.{properties,levels} music sound images || die
 	find "${D}" -name "Makefile*" -exec rm -f '{}' +
 
 	insinto "${GAMES_STATEDIR}"/${PN}
-	doins ${PN}.scores || die "installing hi-score failed"
+	doins ${PN}.scores || die
 	fperms 0660 "${GAMES_STATEDIR}"/${PN}/${PN}.scores
 
 	dodoc AUTHORS ChangeLog NEWS README TODO
