@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/pokerth-0.9.5.ebuild,v 1.7 2012/09/01 00:11:01 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/pokerth-0.9.5.ebuild,v 1.8 2012/09/04 19:13:38 mr_bones_ Exp $
 
 EAPI=2
 inherit flag-o-matic eutils qt4-r2 games
@@ -17,6 +17,7 @@ IUSE="dedicated"
 
 RDEPEND="dev-db/sqlite:3
 	>=dev-libs/boost-1.44
+	<dev-libs/boost-1.50
 	dev-libs/libgcrypt
 	dev-libs/tinyxml[stl]
 	net-libs/libircclient
@@ -48,7 +49,7 @@ src_prepare() {
 
 	epatch "${FILESDIR}"/${P}-underlinking.patch
 
-	local boost_ver=$(best_version ">=dev-libs/boost-1.41")
+	local boost_ver=$(best_version "<dev-libs/boost-1.50")
 
 	boost_ver=${boost_ver/*boost-/}
 	boost_ver=${boost_ver%.*}
