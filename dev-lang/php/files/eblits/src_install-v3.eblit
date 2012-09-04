@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_install-v3.eblit,v 1.5 2011/11/08 18:14:08 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_install-v3.eblit,v 1.6 2012/09/04 09:52:00 olemarkus Exp $
 
 eblit-php-src_install() {
 	# see bug #324739 for what happens when we don't have that
@@ -153,6 +153,11 @@ php_install_ini() {
 	fi
 
 	if [[ ${SLOT} == '5.3' ]]; then
+		dodoc php.ini-development
+		dodoc php.ini-production
+	fi
+
+	if [[ ${SLOT} == '5.4' ]]; then
 		dodoc php.ini-development
 		dodoc php.ini-production
 	fi
