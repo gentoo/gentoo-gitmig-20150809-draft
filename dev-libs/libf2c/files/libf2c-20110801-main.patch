@@ -1,3 +1,11 @@
+Add weak alias for MAIN__
+
+https://bugs.gentoo.org/show_bug.cgi?id=421975
+https://bugs.gentoo.org/show_bug.cgi?id=433782
+https://groups.google.com/forum/#!msg/comp.os.linux.development.apps/41siJKfcJ78/iIcRfZ4y9G8J
+
+Patch written by Chris Reffett <creffett@gentoo.org>
+and Kacper Kowalik <xarthisius@gentoo.org>
 --- a/makefile.u
 +++ b/makefile.u
 @@ -27,7 +27,7 @@
@@ -20,10 +28,9 @@
  	qbitbits.c qbitshft.c r_abs.c r_acos.c r_asin.c r_atan.c r_atn2.c \
 --- /dev/null
 +++ b/main_foo.c
-@@ -0,0 +1,10 @@
+@@ -0,0 +1,9 @@
 +#include <stdio.h>
 +#include <stdlib.h>
-+
 +
 +void missing_MAIN__ (void)
 +{

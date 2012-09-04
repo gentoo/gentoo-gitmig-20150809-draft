@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libf2c
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/ChangeLog,v 1.48 2012/09/04 07:09:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/ChangeLog,v 1.49 2012/09/04 07:16:32 xarthisius Exp $
+
+  04 Sep 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  files/libf2c-20110801-main.patch:
+  Clean patch
 
 *libf2c-20110801-r2 (04 Sep 2012)
 
