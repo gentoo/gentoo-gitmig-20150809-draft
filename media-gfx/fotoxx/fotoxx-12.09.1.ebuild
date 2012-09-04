@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/fotoxx-12.06.1.ebuild,v 1.1 2012/06/02 17:21:54 grozin Exp $
-EAPI=3
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/fotoxx-12.09.1.ebuild,v 1.1 2012/09/04 14:58:42 grozin Exp $
+EAPI=4
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Program for improving image files made with a digital camera."
-HOMEPAGE="http://kornelix.squarespace.com/fotoxx"
-SRC_URI="http://kornelix.squarespace.com/storage/downloads/${P}.tar.gz"
+HOMEPAGE="http://www.kornelix.com/fotoxx.html"
+SRC_URI="http://www.kornelix.com/uploads/1/3/0/3/13035936/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -26,13 +26,13 @@ src_prepare() {
 
 src_compile() {
 	tc-export CXX
-	emake || die "emake failed"
+	emake
 }
 
 src_install() {
 	# For the Help menu items to work, *.html must be in /usr/share/doc/${PF},
 	# and README, CHANGES, TRANSLATIONS must not be compressed
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 	make_desktop_entry ${PN} "Fotoxx" /usr/share/${PN}/icons/${PN}.png \
 		"Application;Graphics;2DGraphics"
 }

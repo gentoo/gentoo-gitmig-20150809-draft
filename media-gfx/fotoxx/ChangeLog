@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/fotoxx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/ChangeLog,v 1.35 2012/08/05 02:45:31 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/ChangeLog,v 1.36 2012/09/04 14:58:42 grozin Exp $
+
+*fotoxx-12.09.1 (04 Sep 2012)
+
+  04 Sep 2012; Andrey Grozin <grozin@gentoo.org> -fotoxx-12.06.1.ebuild,
+  -files/fotoxx-12.06.1.patch, +fotoxx-12.09.1.ebuild,
+  +files/fotoxx-12.09.1.patch:
+  Version bump
 
 *fotoxx-12.08 (05 Aug 2012)
 
