@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/linsmith
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/linsmith/ChangeLog,v 1.7 2012/05/04 07:10:20 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/linsmith/ChangeLog,v 1.8 2012/09/04 06:23:04 leio Exp $
+
+  04 Sep 2012; Mart Raudsepp <leio@gentoo.org>
+  -files/0.99.12-configure.in.patch, -linsmith-0.99.12.ebuild:
+  Remove old libgnomeprint using redundant version with maintainer ack
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> linsmith-0.99.12.ebuild,
   linsmith-0.99.21.ebuild, linsmith-0.99.22.ebuild:
