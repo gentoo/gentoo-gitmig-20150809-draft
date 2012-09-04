@@ -1,8 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/libf2c-20110801-r1.ebuild,v 1.1 2012/08/31 07:04:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/libf2c-20110801-r2.ebuild,v 1.1 2012/09/04 07:09:31 jlec Exp $
 
 EAPI=4
+
 inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="Library that converts FORTRAN to C source"
@@ -23,7 +24,8 @@ S="${WORKDIR}"
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/20051004-add-ofiles-dep.patch \
-		"${FILESDIR}"/20090407-link-shared-libf2c-correctly.patch
+		"${FILESDIR}"/20090407-link-shared-libf2c-correctly.patch \
+		"${FILESDIR}"/${P}-main.patch
 	sed -i -e "s/ld /$(tc-getLD) /" makefile.u || die
 }
 
