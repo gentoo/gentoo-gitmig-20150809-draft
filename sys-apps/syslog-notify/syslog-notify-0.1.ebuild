@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/syslog-notify/syslog-notify-0.1.ebuild,v 1.7 2012/09/04 19:10:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/syslog-notify/syslog-notify-0.1.ebuild,v 1.8 2012/09/04 19:11:55 hwoarang Exp $
 
 EAPI=2
 inherit eutils
@@ -29,7 +29,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	mkfifo "${D}"var/spool/syslog-notify || die
+	mkfifo "${ROOT}"var/spool/syslog-notify || die
 }
 
 pkg_postinst() {
