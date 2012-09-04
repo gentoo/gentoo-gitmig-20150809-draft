@@ -1,10 +1,12 @@
 # ChangeLog for games-roguelike/stone-soup
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/stone-soup/ChangeLog,v 1.1 2012/08/28 23:17:53 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/stone-soup/ChangeLog,v 1.2 2012/09/04 20:19:53 mr_bones_ Exp $
+
+  04 Sep 2012; Michael Sterrett <mr_bones_@gentoo.org> stone-soup-0.10.3.ebuild:
+  add missing test to IUSE
 
 *stone-soup-0.10.3 (28 Aug 2012)
 
   28 Aug 2012; Julian Ospald <hasufell@gentoo.org> +stone-soup-0.10.3.ebuild,
   +files/stone-soup-0.10.3-build.patch, +metadata.xml:
   initial import wrt #374852 reviewed by Michael Sterrett
-
