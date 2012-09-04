@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/flobopuyo
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/flobopuyo/ChangeLog,v 1.17 2009/01/19 18:56:06 mr_bones_ Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/flobopuyo/ChangeLog,v 1.18 2012/09/04 22:21:54 mr_bones_ Exp $
+
+  04 Sep 2012; Michael Sterrett <mr_bones_@gentoo.org> flobopuyo-0.20-r1.ebuild:
+  any mod support will do
 
   19 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
   flobopuyo-0.20-r1.ebuild:
@@ -70,4 +73,3 @@
   15 Oct 2004; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
   +flobopuyo-0.20.ebuild:
   initial commit - ebuild submitted by Rob Cakebread via bug #67028
-

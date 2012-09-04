@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/flobopuyo/flobopuyo-0.20-r1.ebuild,v 1.8 2009/01/19 18:56:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/flobopuyo/flobopuyo-0.20-r1.ebuild,v 1.9 2012/09/04 22:21:54 mr_bones_ Exp $
 
 EAPI=2
 inherit toolchain-funcs eutils games
@@ -17,7 +17,7 @@ IUSE="opengl"
 
 DEPEND="media-libs/libsdl
 	media-libs/sdl-image[jpeg,png]
-	media-libs/sdl-mixer[mikmod]
+	media-libs/sdl-mixer[mod]
 	opengl? ( virtual/opengl )"
 
 src_prepare() {
@@ -31,17 +31,17 @@ src_prepare() {
 		-e "s:^DATADIR=.*:DATADIR=\"${GAMES_DATADIR}/${PN}\":" \
 		-e "/^INSTALL_BINDIR/s:/\$(PREFIX)/games:${GAMES_BINDIR}:" \
 		Makefile \
-		|| die "sed failed"
+		|| die
 }
 
 src_compile() {
 	emake CXX="$(tc-getCXX)" \
 		ENABLE_OPENGL="$(use opengl && echo true || echo false)" \
-		|| die "emake failed"
+		|| die
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 	dodoc Changelog TODO
 	doman man/flobopuyo.6
 	doicon "${DISTDIR}/${PN}.png"
