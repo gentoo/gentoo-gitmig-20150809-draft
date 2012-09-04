@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sagan/sagan-0.2.2_p2.ebuild,v 1.1 2012/09/01 17:43:29 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sagan/sagan-0.2.2_p2-r1.ebuild,v 1.1 2012/09/04 21:16:55 pinkbyte Exp $
 
 EAPI=4
 
@@ -61,13 +61,13 @@ src_install() {
 	diropts -g sagan -o sagan -m 775
 
 	dodir /var/log/sagan
-	dodir /var/run/sagan
+	dodir /run/sagan
 
 	keepdir /var/log/sagan
-	keepdir /var/run/sagan
+	keepdir /run/sagan
 
-	mkfifo -m 0640 "${ED}"/var/run/sagan.fifo
-	chown sagan.root "${ED}"/var/run/sagan.fifo
+	mkfifo -m 0640 "${ED}"/run/sagan.fifo
+	chown sagan.root "${ED}"/run/sagan.fifo
 
 	touch "${ED}"/var/log/sagan/sagan.log
 	chown sagan.sagan "${ED}"/var/log/sagan/sagan.log
