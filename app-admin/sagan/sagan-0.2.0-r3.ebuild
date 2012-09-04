@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sagan/sagan-0.2.1-r1.ebuild,v 1.1 2012/06/19 14:18:17 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sagan/sagan-0.2.0-r3.ebuild,v 1.1 2012/09/04 21:33:45 pinkbyte Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="http://sagan.softwink.com/download/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="smtp mysql postgres prelude snort +lognorm +libdnet +pcap"
+IUSE="smtp mysql postgres prelude +lognorm +libdnet +pcap"
 
 DEPEND="virtual/pkgconfig
 	${RDEPEND}"
@@ -26,9 +26,7 @@ RDEPEND="dev-libs/libpcre
 	postgres? ( dev-db/postgresql-base )
 	prelude? ( dev-libs/libprelude )
 	lognorm? ( dev-libs/liblognorm )
-	libdnet? ( dev-libs/libdnet )
-	snort? ( >=net-analyzer/snortsam-2.50 )
-	"
+	libdnet? ( dev-libs/libdnet )"
 
 AUTOTOOLS_IN_SOURCE_BUILD=1
 DOCS=(AUTHORS ChangeLog FAQ INSTALL README NEWS TODO)
@@ -46,9 +44,7 @@ src_configure() {
 		$(use_enable prelude )
 		$(use_enable lognorm)
 		$(use_enable libdnet)
-		$(use_enable pcap libpcap)
-		$(use_enable snort snortsam)
-		)
+		$(use_enable pcap libpcap) )
 
 	autotools-utils_src_configure
 }
@@ -59,13 +55,13 @@ src_install() {
 	diropts -g sagan -o sagan -m 775
 
 	dodir /var/log/sagan
-	dodir /var/run/sagan
+	dodir /run/sagan
 
 	keepdir /var/log/sagan
-	keepdir /var/run/sagan
+	keepdir /run/sagan
 
-	mkfifo -m 0640 "${ED}"/var/run/sagan.fifo
-	chown sagan.root "${ED}"/var/run/sagan.fifo
+	mkfifo -m 0640 "${ED}"/run/sagan.fifo
+	chown sagan.root "${ED}"/run/sagan.fifo
 
 	touch "${ED}"/var/log/sagan/sagan.log
 	chown sagan.sagan "${ED}"/var/log/sagan/sagan.log
