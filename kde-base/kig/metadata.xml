@@ -3,6 +3,7 @@
 <pkgmetadata>
 <use>
 	<flag name="kig-scripting">Support Python scripting</flag>
+	<flag name="scripting">Support Python scripting</flag>
 </use>
 <herd>kde</herd>
 </pkgmetadata>
