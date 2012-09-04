@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Locale-PO
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-PO/ChangeLog,v 1.55 2012/06/24 12:59:29 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-PO/ChangeLog,v 1.56 2012/09/04 17:43:47 tove Exp $
+
+*Locale-PO-0.220.0 (04 Sep 2012)
+
+  04 Sep 2012; Torsten Veller <tove@gentoo.org> +Locale-PO-0.220.0.ebuild:
+  Version bump
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
