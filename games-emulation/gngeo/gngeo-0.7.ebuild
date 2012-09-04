@@ -1,6 +1,7 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gngeo/gngeo-0.7.ebuild,v 1.6 2009/01/17 18:21:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gngeo/gngeo-0.7.ebuild,v 1.7 2012/09/04 05:07:50 tupone Exp $
+EAPI=2
 
 inherit eutils autotools games
 
@@ -15,21 +16,21 @@ IUSE=""
 
 DEPEND="virtual/opengl
 	media-libs/sdl-image
-	media-libs/libsdl"
+	media-libs/libsdl
+	sys-libs/zlib[minizip]"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-build.patch \
 		"${FILESDIR}"/${P}-execstacks.patch \
-		"${FILESDIR}"/${P}-concurrentMake.patch
+		"${FILESDIR}"/${P}-concurrentMake.patch \
+		"${FILESDIR}"/${P}-zlib.patch
+
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	egamesconf --disable-i386asm || die "egamesconf failed"
-	emake || die "emake failed"
 }
 
 src_install() {

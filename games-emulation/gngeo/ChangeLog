@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/gngeo
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gngeo/ChangeLog,v 1.21 2009/01/17 18:21:17 mr_bones_ Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gngeo/ChangeLog,v 1.22 2012/09/04 05:07:50 tupone Exp $
+
+  04 Sep 2012; Alfredo Tupone <tupone@gentoo.org> gngeo-0.7.ebuild,
+  +files/gngeo-0.7-zlib.patch:
+  Build with latest zlib. Bug #431118 by Diego Elio Pettenò
 
   17 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org> gngeo-0.7.ebuild:
   Doesn't work with latest nasm so disable that for now (bug #249834)
