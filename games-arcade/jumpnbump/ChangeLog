@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/jumpnbump
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/jumpnbump/ChangeLog,v 1.18 2009/12/29 20:50:03 mr_bones_ Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/jumpnbump/ChangeLog,v 1.19 2012/09/05 07:05:30 mr_bones_ Exp $
+
+  05 Sep 2012; Michael Sterrett <mr_bones_@gentoo.org> jumpnbump-1.50-r1.ebuild:
+  any mod support will do
 
   29 Dec 2009; Michael Sterrett <mr_bones_@gentoo.org>
   jumpnbump-1.50-r1.ebuild, metadata.xml:

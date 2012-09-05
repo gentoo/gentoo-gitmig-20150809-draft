@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/jumpnbump/jumpnbump-1.50-r1.ebuild,v 1.13 2009/12/29 20:50:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/jumpnbump/jumpnbump-1.50-r1.ebuild,v 1.14 2012/09/05 07:05:30 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -18,7 +18,7 @@ IUSE="X fbcon kde svga tk +music"
 DEPEND="X? ( x11-libs/libXext )
 	kde? ( kde-base/kdialog )
 	media-libs/sdl-mixer
-	music? ( media-libs/sdl-mixer[mikmod] )
+	music? ( media-libs/sdl-mixer[mod] )
 	media-libs/libsdl[audio,joystick,video]
 	media-libs/sdl-net"
 RDEPEND="${DEPEND}
