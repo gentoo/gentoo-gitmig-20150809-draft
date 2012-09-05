@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.30.2-r1.ebuild,v 1.10 2012/05/05 06:25:24 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.30.2-r1.ebuild,v 1.11 2012/09/05 11:28:09 jlec Exp $
 
 EAPI="2"
 
@@ -114,8 +114,7 @@ src_install() {
 	fi
 
 	if use branding ; then
-		insinto /usr/share/pixmaps/
-		doins "${DISTDIR}/gentoo-logo.svg" || die "doins 1 failed"
+		doicon "${DISTDIR}/gentoo-logo.svg" || die "doins 1 failed"
 		insinto /usr/share/applications/screensavers/
 		doins "${FILESDIR}/gentoologo-floaters.desktop" || die "doins 2 failed"
 	fi

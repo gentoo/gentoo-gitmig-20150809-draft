@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-screensaver
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/ChangeLog,v 1.158 2012/07/17 23:14:28 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/ChangeLog,v 1.159 2012/09/05 11:28:09 jlec Exp $
+
+  05 Sep 2012; Justin Lecher <jlec@gentoo.org>
+  gnome-screensaver-2.30.2-r1.ebuild:
+  Use doicon instead insinto + doins to install icon files
 
 *gnome-screensaver-3.4.4 (17 Jul 2012)
 
@@ -779,4 +783,3 @@
   +gnome-screensaver-2.14.0.ebuild:
   Initial import of gnome-screensaver.  Ebuild by Saleem Abdulrasool
   <compnerd@gentoo.org>
-
