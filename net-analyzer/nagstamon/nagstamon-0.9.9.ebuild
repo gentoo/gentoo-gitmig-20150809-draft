@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/nagstamon-0.9.9.ebuild,v 1.4 2012/08/21 21:23:54 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/nagstamon-0.9.9.ebuild,v 1.5 2012/09/05 08:05:21 jlec Exp $
 
 EAPI="4"
 
@@ -60,8 +60,7 @@ src_install() {
 		insinto /usr/share/${PN}/resources
 		doins resources/* || die
 
-		insinto /usr/share/applications
-		doins "${FILESDIR}"/${PN}.desktop || die
+		domenu "${FILESDIR}"/${PN}.desktop || die
 	}
 
 	python_execute_function nagstamon_install
