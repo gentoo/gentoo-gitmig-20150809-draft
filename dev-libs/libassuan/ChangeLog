@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libassuan
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassuan/ChangeLog,v 1.91 2012/08/26 18:29:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassuan/ChangeLog,v 1.92 2012/09/05 06:25:21 radhermit Exp $
+
+  05 Sep 2012; Tim Harder <radhermit@gentoo.org> -libassuan-2.0.1.ebuild,
+  -libassuan-2.0.2.ebuild:
+  Remove old.
 
   26 Aug 2012; Raúl Porcel <armin76@gentoo.org> libassuan-2.0.3.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #418747
