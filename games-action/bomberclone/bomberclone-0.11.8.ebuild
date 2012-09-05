@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bomberclone/bomberclone-0.11.8.ebuild,v 1.8 2011/06/18 16:30:09 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bomberclone/bomberclone-0.11.8.ebuild,v 1.9 2012/09/05 07:44:06 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils autotools games
@@ -16,7 +16,7 @@ IUSE="X"
 
 DEPEND=">=media-libs/libsdl-1.1.0
 	media-libs/sdl-image[png]
-	media-libs/sdl-mixer[mikmod]
+	media-libs/sdl-mixer[mod]
 	X? ( x11-libs/libXt )"
 
 src_prepare() {
@@ -33,14 +33,14 @@ src_configure() {
 	sed -i \
 		-e "/PACKAGE_DATA_DIR/ s:/usr/games/share/games/:${GAMES_DATADIR}/:" \
 		config.h \
-		|| die "sed config.h failed"
+		|| die
 }
 
 src_install() {
-	dogamesbin src/${PN} || die "dogamesbin failed"
+	dogamesbin src/${PN} || die
 
 	insinto "${GAMES_DATADIR}/${PN}"
-	doins -r data/{gfx,maps,player,tileset,music} || die "doins failed"
+	doins -r data/{gfx,maps,player,tileset,music} || die
 	find "${D}" -name "Makefile*" -exec rm -f '{}' +
 
 	dodoc AUTHORS ChangeLog README TODO
