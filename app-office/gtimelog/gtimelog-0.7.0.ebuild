@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gtimelog/gtimelog-0.7.0.ebuild,v 1.2 2012/07/25 18:39:54 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gtimelog/gtimelog-0.7.0.ebuild,v 1.3 2012/09/05 09:21:06 jlec Exp $
 
 EAPI="4"
 
@@ -55,8 +55,7 @@ src_test() {
 
 src_install() {
 	domenu gtimelog.desktop
-	insinto /usr/share/pixmaps
-	doins src/gtimelog/gtimelog-*.png
+	doicon src/gtimelog/gtimelog-*.png
 	insinto /usr/share/gtimelog
 	doins src/gtimelog/*.ui src/gtimelog/gtimelog.png
 	exeinto /usr/share/gtimelog/scripts

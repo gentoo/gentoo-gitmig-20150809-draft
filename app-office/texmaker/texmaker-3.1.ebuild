@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-3.1.ebuild,v 1.9 2012/05/03 20:00:38 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-3.1.ebuild,v 1.10 2012/09/05 09:24:07 jlec Exp $
 
 EAPI="3"
 
@@ -57,9 +57,7 @@ src_prepare() {
 src_install() {
 	emake INSTALL_ROOT="${ED}" install || die "make install failed"
 
-	insinto /usr/share/pixmaps/texmaker
-	doins utilities/texmaker*.png || die "doins failed."
-	doins utilities/texmaker.svg || die "doins failed."
+	doicon utilities/texmaker*.png utilities/texmaker.svg || die
 
 	dodoc utilities/AUTHORS utilities/CHANGELOG.txt || die "dodoc failed"
 }

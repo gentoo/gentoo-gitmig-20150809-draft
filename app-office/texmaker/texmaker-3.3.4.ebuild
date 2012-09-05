@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-3.3.4.ebuild,v 1.4 2012/08/08 20:20:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-3.3.4.ebuild,v 1.5 2012/09/05 09:24:07 jlec Exp $
 
 EAPI=4
 
@@ -60,9 +60,7 @@ src_prepare() {
 src_install() {
 	emake INSTALL_ROOT="${ED}" install
 
-	insinto /usr/share/pixmaps/texmaker
-	doins utilities/texmaker*.png
-	doins utilities/texmaker.svg
+	doicon utilities/texmaker*.png utilities/texmaker.svg
 
 	dodoc utilities/AUTHORS utilities/CHANGELOG.txt
 }
