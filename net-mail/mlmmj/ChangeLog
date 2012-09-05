@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/mlmmj
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mlmmj/ChangeLog,v 1.39 2011/06/06 12:32:37 eras Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mlmmj/ChangeLog,v 1.40 2012/09/05 20:26:04 radhermit Exp $
+
+*mlmmj-1.2.18.0 (05 Sep 2012)
+
+  05 Sep 2012; Tim Harder <radhermit@gentoo.org> +mlmmj-1.2.18.0.ebuild:
+  Version bump (bug #421217).
 
   06 Jun 2011; Eray Aslan <eras@gentoo.org> -mlmmj-1.2.4.ebuild,
   -mlmmj-1.2.8.ebuild, -mlmmj-1.2.9.ebuild, -mlmmj-1.2.10.ebuild,
