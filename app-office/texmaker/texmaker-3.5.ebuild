@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-3.5.ebuild,v 1.2 2012/09/05 09:24:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-3.5.ebuild,v 1.3 2012/09/05 14:58:35 jlec Exp $
 
 EAPI=4
 
@@ -54,9 +54,9 @@ PATCHES=(
 src_configure() {
 	eqmake4 \
 		${PN}.pro \
-		PREFIX="${EPREFIX}/usr" \
-		DESKTOPDIR="${EPREFIX}/usr/share/applications" \
-		ICONDIR="${EPREFIX}/usr/share/pixmaps"
+		PREFIX=/usr \
+		DESKTOPDIR=/usr/share/applications \
+		ICONDIR=/usr/share/pixmaps
 }
 
 src_install() {
