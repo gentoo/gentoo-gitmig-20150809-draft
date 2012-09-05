@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/texstudio-2.2.ebuild,v 1.2 2012/05/03 20:00:40 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/texstudio-2.4.ebuild,v 1.1 2012/09/05 07:28:12 jlec Exp $
 
 EAPI=4
 
-inherit base qt4-r2
+inherit base fdo-mime qt4-r2
 
 DESCRIPTION="Free cross-platform LaTeX editor (former texmakerX)"
 HOMEPAGE="http://texstudio.sourceforge.net/"
@@ -36,13 +36,30 @@ DEPEND="${COMMON_DEPEND}
 
 S="${WORKDIR}"/${P/-/}
 
-PATCHES=( "${FILESDIR}/${P}-hunspell.patch" )
+PATCHES=(
+	"${FILESDIR}"/${P}-hunspell.patch
+	"${FILESDIR}"/${P}-desktop.patch
+# Get it from fedora once they have bumped
+#	"${FILESDIR}"/${P}-xdg-open.patch
+	)
 
 src_prepare() {
 	find hunspell -delete
 	sed 's:hunspell/hunspell:hunspell:g' -i *.h || die
 	if use video; then
-		sed "s:PHONON =:PHONON=true:g" -i ${PN}.pro || die
+		sed "/^PHONON/s:$:true:g" -i ${PN}.pro || die
 	fi
 	qt4-r2_src_prepare
+}
+
+src_install() {
+	for i in 16x16 22x22 32x32 48x48 64x64; do
+		insinto /usr/share/icons/hicolor/${i}
+		newins utilities/${PN}${i}.png ${PN}.png
+	done
+	qt4-r2_src_install
+}
+
+pkg_postinst() {
+	fdo-mime_desktop_database_update
 }

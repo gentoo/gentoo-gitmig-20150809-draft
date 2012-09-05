@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/texstudio-2.3-r1.ebuild,v 1.1 2012/07/15 09:31:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/texstudio-2.3-r1.ebuild,v 1.2 2012/09/05 07:28:12 jlec Exp $
 
 EAPI=4
 
-inherit base qt4-r2
+inherit base fdo-mime qt4-r2
 
 DESCRIPTION="Free cross-platform LaTeX editor (former texmakerX)"
 HOMEPAGE="http://texstudio.sourceforge.net/"
@@ -53,10 +53,14 @@ src_prepare() {
 }
 
 src_install() {
-	make_desktop_entry texstudio "LaTeX Editor" texstudio "text/x-tex"
+	make_desktop_entry texstudio "LaTeX Editor" texstudio "text/X-tex"
 	for i in 16x16 22x22 32x32 48x48 64x64; do
 		insinto /usr/share/icons/hicolor/${i}
 		newins utilities/${PN}${i}.png ${PN}.png
 	done
 	qt4-r2_src_install
+}
+
+pkg_postinst() {
+	fdo-mime_desktop_database_update
 }
