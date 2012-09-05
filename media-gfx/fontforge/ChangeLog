@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/fontforge
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.148 2012/05/09 02:09:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.149 2012/09/05 07:52:11 jlec Exp $
+
+  05 Sep 2012; Justin Lecher <jlec@gentoo.org> fontforge-20100501.ebuild,
+  fontforge-20110222-r1.ebuild, fontforge-20110222.ebuild:
+  Use domenu instead insinto + doins to install .desktop files
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org>
   fontforge-20110222-r1.ebuild:
@@ -680,4 +684,3 @@
   <Maarten.Wisse@urz.uni-heidelberg.de>, Martin Diers <martin@diers.us>,
   Akos Maroy <darkeye@tyrell.hu> and Stefan Illner <stillner@gmx.de>.
   Closing bug #46686
-

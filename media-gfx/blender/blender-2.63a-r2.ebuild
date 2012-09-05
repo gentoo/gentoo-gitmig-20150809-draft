@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.63a-r2.ebuild,v 1.5 2012/08/08 01:20:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.63a-r2.ebuild,v 1.6 2012/09/05 07:51:31 jlec Exp $
 
 EAPI=4
 PYTHON_DEPEND="3:3.2"
@@ -251,8 +251,7 @@ src_install() {
 	doins "${WORKDIR}"/${P}/source/blender/blenpluginapi/*.h
 
 	# install desktop file
-	insinto /usr/share/applications
-	doins release/freedesktop/blender.desktop
+	domenu release/freedesktop/blender.desktop
 
 	# install docs
 	doman "${WORKDIR}"/${P}/doc/manpage/blender.1

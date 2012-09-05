@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.49b-r2.ebuild,v 1.16 2012/07/17 06:33:23 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.49b-r2.ebuild,v 1.17 2012/09/05 07:51:31 jlec Exp $
 
 EAPI=2
 
@@ -156,9 +156,8 @@ src_install() {
 
 	insinto /usr/share/pixmaps
 	doins "${WORKDIR}"/install/linux2/icons/scalable/blender.svg
-	insinto /usr/share/applications
-	doins "${FILESDIR}"/${PN}.desktop || die
-	doins "${FILESDIR}"/${P}-insecure.desktop || die
+	domenu "${FILESDIR}"/${PN}.desktop || die
+	domenu "${FILESDIR}"/${P}-insecure.desktop || die
 
 	dodoc INSTALL README
 	dodoc "${WORKDIR}"/install/linux2/BlenderQuickStart.pdf

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20110222-r1.ebuild,v 1.7 2012/05/09 02:09:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20110222-r1.ebuild,v 1.8 2012/09/05 07:52:11 jlec Exp $
 
 # Some notes for maintainers this package:
 # 1. README-unix: freetype headers are required to make use of truetype debugger
@@ -103,8 +103,7 @@ src_install() {
 	fi
 
 	doicon Packaging/fontforge.png || die
-	insinto /usr/share/applications
-	doins Packaging/fontforge.desktop || die
+	domenu Packaging/fontforge.desktop || die
 	insinto /usr/share/mime/application
 	doins Packaging/fontforge.xml || die
 
