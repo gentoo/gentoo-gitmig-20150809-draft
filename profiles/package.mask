@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14089 2012/09/04 21:33:10 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14090 2012/09/05 18:34:10 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,11 +31,17 @@
 
 #--- END OF EXAMPLES ---
 
-# Doug Goldstein <cardoe@gentoo.org> (3 Sep 2012)
+# Samuli Suominen <ssuominen@gentoo.org> (05 Sep 2012)
+# Replaced by dev-java/antlr wrt bug #255699 and bug #430078
+# Removal in 30 days
+dev-util/pccts
+=dev-util/cccc-3.1.4-r1
+
+# Doug Goldstein <cardoe@gentoo.org> (03 Sep 2012)
 # masked due to bug #433692
 =app-accessibility/caribou-0.4.3
 
-# Tim Harder <radhermit@gentoo.org> (1 Sep 2012)
+# Tim Harder <radhermit@gentoo.org> (01 Sep 2012)
 # Mask development releases
 =media-sound/lilypond-2.17*
 
