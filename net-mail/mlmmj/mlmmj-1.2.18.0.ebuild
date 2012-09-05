@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mlmmj/mlmmj-1.2.18.0.ebuild,v 1.1 2012/09/05 20:26:04 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mlmmj/mlmmj-1.2.18.0.ebuild,v 1.2 2012/09/05 21:18:29 radhermit Exp $
 
 EAPI=4
 
@@ -15,7 +15,6 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 DEPEND="virtual/mta"
 S="${WORKDIR}/${MY_P}"
-SHAREDIR="/usr/share/mlmmj"
 
 DOCS="AUTHORS ChangeLog FAQ README* TODO TUNABLES UPGRADE"
 
@@ -26,7 +25,7 @@ src_configure() {
 src_install() {
 	default
 
-	insinto ${SHAREDIR}/texts
+	insinto /usr/share/mlmmj/texts
 	doins listtexts/*
 
 	insinto /usr/share/mlmmj
