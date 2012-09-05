@@ -1,61 +1,52 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gperiodic/gperiodic-2.0.10.ebuild,v 1.7 2012/05/04 07:02:32 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gperiodic/gperiodic-2.0.10.ebuild,v 1.8 2012/09/05 07:03:30 jlec Exp $
 
-EAPI="2"
+EAPI=4
 
-inherit toolchain-funcs eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Periodic table application for Linux"
-SRC_URI="http://www.frantz.fi/software/${P}.tar.gz"
 HOMEPAGE="http://www.frantz.fi/software/gperiodic.php"
+SRC_URI="http://www.frantz.fi/software/${P}.tar.gz"
 
 KEYWORDS="amd64 x86"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="nls"
 
-RDEPEND=">=sys-libs/ncurses-5.2
+RDEPEND="
+	sys-libs/ncurses:5
 	x11-libs/gtk+:2
 	x11-libs/cairo[X]
 	nls? ( sys-devel/gettext )"
-
 DEPEND="${RDEPEND}
 		virtual/pkgconfig"
 
-src_compile() {
+src_prepare() {
 	# The author has removed "unnecessary automake/autoconf setup"
 
-	sed -i -e "s|-DGTK_DISABLE_DEPRECATED|${CFLAGS}|" Makefile
-	sed -i -e "/make clean/d" Makefile
-	sed -i -e "s|CC=gcc|CC=$(tc-getCC)|" Makefile
+	sed -i -e "s|-DGTK_DISABLE_DEPRECATED|${CFLAGS}|" Makefile || die
+	sed -i -e "/make clean/d" Makefile || die
+	sed -i -e "s|CC=gcc|CC=$(tc-getCC)|" Makefile || die
 	if ! use nls; then
-		sed -i -e "/make -C po/d" Makefile
+		sed -i -e "/make -C po/d" Makefile || die
 	fi
-	emake || die "emake failed!"
 }
 
 src_install() {
-	sed -i -e "s|/usr/bin|${D}/usr/bin|" Makefile
-	sed -i -e "s|/usr/share|${D}/usr/share|" Makefile
-	sed -i -e "s|/usr/share|${D}/usr/share|" po/Makefile
+	sed -i -e "s|/usr/bin|${ED}/usr/bin|" Makefile || die
+	sed -i -e "s|/usr/share|${ED}/usr/share|" Makefile || die
+	sed -i -e "s|/usr/share|${ED}/usr/share|" po/Makefile || die
 
 	# Create directories - Makefile is quite broken.
-	dodir /usr/bin
-	dodir /usr/share/pixmaps
-	dodir /usr/share/applications
+	dodir \
+		/usr/bin \
+		/usr/share/pixmaps \
+		/usr/share/applications
 
-	emake install || die "make install failed."
-
-	# Fix permissions
-	chmod 644 "${D}/usr/share/pixmaps/*"
-	chmod 644 "${D}/usr/share/applications/*"
-
-	# Fix the chemistry category in the .desktop file, bug 97202.
-	sed -i -e "s|Chemestry|Chemistry|" "${D}/usr/share/applications/gperiodic.desktop"
+	default
 
 	# The man page seems to have been removed too.
-#	doman man/gperiodic.1
-	dodoc AUTHORS ChangeLog README NEWS || die
-	newdoc po/README README.translation || die
+	newdoc po/README README.translation
 }
