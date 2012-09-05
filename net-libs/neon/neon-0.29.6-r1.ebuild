@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/neon-0.29.6-r1.ebuild,v 1.12 2012/09/05 17:44:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/neon-0.29.6-r1.ebuild,v 1.13 2012/09/05 19:18:27 floppym Exp $
 
-EAPI="3"
+EAPI="4"
 
-inherit autotools libtool versionator eutils
+inherit autotools eutils libtool
 
 DESCRIPTION="HTTP and WebDAV client library"
 HOMEPAGE="http://www.webdav.org/neon/"
