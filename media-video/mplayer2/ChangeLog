@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.66 2012/09/03 16:33:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.67 2012/09/05 07:53:17 scarabeus Exp $
+
+  05 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  files/mplayer2-py2compat.patch:
+  Make the python scripts work again with py3. Fixes bug#433716.
 
 *mplayer2-2.0_p20120828 (03 Sep 2012)
 
