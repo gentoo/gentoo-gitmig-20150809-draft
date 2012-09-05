@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/rgain
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rgain/ChangeLog,v 1.4 2012/09/05 16:31:25 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rgain/ChangeLog,v 1.5 2012/09/05 16:48:21 sochotnicky Exp $
+
+  05 Sep 2012; Stanislav Ochotnicky <sochotnicky@gentoo.org>
+  rgain-1.0.2.ebuild:
+  Add media-libs/gst-plugins-good as RDEPEND
 
 *rgain-1.0.2 (05 Sep 2012)
 
