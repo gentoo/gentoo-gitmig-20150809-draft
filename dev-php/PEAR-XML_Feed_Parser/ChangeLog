@@ -1,0 +1,10 @@
+# ChangeLog for dev-php/PEAR-XML_Feed_Parser
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Feed_Parser/ChangeLog,v 1.1 2012/09/05 18:43:03 lordvan Exp $
+
+*PEAR-XML_Feed_Parser-1.0.5 (05 Sep 2012)
+
+  05 Sep 2012; <lordvan@gentoo.org> +PEAR-XML_Feed_Parser-1.0.5.ebuild:
+  inital import from bug #258604 Thanks to Lutz Heermann
+  <Lutz.Heermann@isa.de.com>
+
