@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/circuslinux/circuslinux-1.0.3.ebuild,v 1.17 2009/01/12 15:37:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/circuslinux/circuslinux-1.0.3.ebuild,v 1.18 2012/09/05 07:21:02 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -16,21 +16,21 @@ IUSE=""
 
 DEPEND="media-libs/libsdl
 	media-libs/sdl-image[png]
-	media-libs/sdl-mixer[mikmod]"
+	media-libs/sdl-mixer[mod]"
 
 src_prepare() {
 	sed -i \
 		-e "/^install-data-am/d" \
 		Makefile.in \
-		|| die "sed failed"
+		|| die
 	sed -i \
 		-e 's/\$(pkgdatadir)/$(DESTDIR)&/' \
 		data/Makefile.in \
-		|| die "sed failed"
+		|| die
 }
 
 src_install () {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 	newicon data/images/${PN}-icon.xpm ${PN}.xpm
 	make_desktop_entry ${PN} "Circus Linux!"
 	dodoc *.txt
