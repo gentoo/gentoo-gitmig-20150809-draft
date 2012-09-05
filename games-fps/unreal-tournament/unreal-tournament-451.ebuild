@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/unreal-tournament-451.ebuild,v 1.28 2012/02/05 06:10:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/unreal-tournament-451.ebuild,v 1.29 2012/09/05 09:52:19 jlec Exp $
 
 inherit eutils unpacker cdrom games
 
@@ -70,8 +70,7 @@ src_install() {
 	doins README icon.{bmp,xpm} || die "installing random files"
 
 	# install a menu item (closes bug #27542)
-	insinto /usr/share/pixmaps
-	newins icon.xpm ut.xpm
+	newicon icon.xpm ut.xpm
 	make_desktop_entry ut "Unreal Tournament" ut
 
 	# first apply any patch remaints loki has for us

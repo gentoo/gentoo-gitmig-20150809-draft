@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/sauerbraten/sauerbraten-2010.07.28.ebuild,v 1.1 2012/02/08 02:01:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/sauerbraten/sauerbraten-2010.07.28.ebuild,v 1.2 2012/09/05 09:50:56 jlec Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -72,7 +72,6 @@ src_install() {
 		games_make_wrapper "${PN}-client" "${LIBEXECDIR}/sauer_client -q\$HOME/.${PN} -r" "${DATADIR}"
 
 		# Create menu entry
-		insinto /usr/share/pixmaps
 		newicon data/cube.png ${PN}.png
 		make_desktop_entry "${PN}-client" "Cube 2: Sauerbraten"
 	fi
