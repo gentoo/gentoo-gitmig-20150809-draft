@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmlpq
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmlpq/ChangeLog,v 1.9 2011/05/19 19:11:04 c1pher Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmlpq/ChangeLog,v 1.10 2012/09/05 08:19:40 jlec Exp $
+
+  05 Sep 2012; Justin Lecher <jlec@gentoo.org> wmlpq-0.2.1-r1.ebuild,
+  wmlpq-0.2.1-r2.ebuild:
+  Use domenu instead insinto + doins to install .desktop files
 
 *wmlpq-0.2.1-r2 (19 May 2011)
 

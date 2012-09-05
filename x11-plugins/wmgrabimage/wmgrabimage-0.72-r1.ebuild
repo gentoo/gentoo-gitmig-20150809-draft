@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmgrabimage/wmgrabimage-0.72-r1.ebuild,v 1.11 2012/02/15 09:48:47 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmgrabimage/wmgrabimage-0.72-r1.ebuild,v 1.12 2012/09/05 08:16:38 jlec Exp $
 
 inherit eutils
 
@@ -48,6 +48,5 @@ src_install() {
 
 	dodoc ../{BUGS,CHANGES,HINTS,TODO}
 
-	insinto /usr/share/applications
-	doins "${FILESDIR}"/${PN}.desktop
+	domenu "${FILESDIR}"/${PN}.desktop
 }

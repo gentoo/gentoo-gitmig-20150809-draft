@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcdplay/wmcdplay-1.0_beta1.ebuild,v 1.9 2010/08/31 10:07:38 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcdplay/wmcdplay-1.0_beta1.ebuild,v 1.10 2012/09/05 08:14:17 jlec Exp $
 
 inherit eutils
 
@@ -46,6 +46,5 @@ src_install() {
 
 	dodoc ARTWORK README
 
-	insinto /usr/share/applications
-	doins "${FILESDIR}"/${PN}.desktop
+	domenu "${FILESDIR}"/${PN}.desktop
 }

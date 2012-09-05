@@ -1,14 +1,15 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmrecord/wmrecord-1.0.5.3-r1.ebuild,v 1.8 2010/09/13 16:28:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmrecord/wmrecord-1.0.5.3-r1.ebuild,v 1.9 2012/09/05 08:19:33 jlec Exp $
 
-IUSE=""
+inherit eutils
 
 DESCRIPTION="A Dockable General Purpose Recording Utility"
-SRC_URI="http://ret009t0.eresmas.net/other_software/wmrecord/${PN}-1.0.5_20040218_0029.tgz"
 HOMEPAGE="http://ret009t0.eresmas.net/other_software/wmrecord/"
+SRC_URI="http://ret009t0.eresmas.net/other_software/wmrecord/${PN}-1.0.5_20040218_0029.tgz"
 
-RDEPEND="x11-libs/libX11
+RDEPEND="
+	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXpm"
 DEPEND="${RDEPEND}
@@ -18,6 +19,7 @@ DEPEND="${RDEPEND}
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc"
+IUSE=""
 
 S=${WORKDIR}/${PN}-1.0.5
 
@@ -45,6 +47,5 @@ src_install() {
 
 	dodoc Changelog README TODO
 
-	insinto /usr/share/applications
-	doins "${FILESDIR}"/${PN}.desktop
+	domenu "${FILESDIR}"/${PN}.desktop
 }

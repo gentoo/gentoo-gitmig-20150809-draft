@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmjsql
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmjsql/ChangeLog,v 1.13 2012/02/15 09:49:12 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmjsql/ChangeLog,v 1.14 2012/09/05 08:16:55 jlec Exp $
+
+  05 Sep 2012; Justin Lecher <jlec@gentoo.org> wmjsql-0.5.ebuild:
+  Use domenu instead insinto + doins to install .desktop files
 
   15 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org> wmjsql-0.5.ebuild:
   Update HOMEPAGE and SRC_URI, thanks Lorenz in bug #394607
@@ -43,4 +46,3 @@
 
   17 Jul 2004; Michele Noberasco <s4t4n@gentoo.org> wmjsql-0.5.ebuild:
   Initial import. Thanks to Przemyslaw Maciag. Closes #54558.
-

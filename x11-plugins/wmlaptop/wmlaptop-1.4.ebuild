@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmlaptop/wmlaptop-1.4.ebuild,v 1.2 2012/02/15 09:49:42 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmlaptop/wmlaptop-1.4.ebuild,v 1.3 2012/09/05 08:17:10 jlec Exp $
 
 inherit eutils
 
@@ -42,6 +42,5 @@ src_install() {
 
 	dodoc ../AUTHORS ../README ../README.IT ../THANKS
 
-	insinto /usr/share/applications
-	doins "${FILESDIR}/${PN}.desktop"
+	domenu "${FILESDIR}/${PN}.desktop"
 }

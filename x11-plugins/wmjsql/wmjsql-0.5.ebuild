@@ -1,19 +1,19 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmjsql/wmjsql-0.5.ebuild,v 1.14 2012/02/15 09:49:12 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmjsql/wmjsql-0.5.ebuild,v 1.15 2012/09/05 08:16:55 jlec Exp $
 
 EAPI=2
 
-IUSE=""
+inherit eutils
 
 MY_P="${PN}"
-S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="MySQL monitor dockapp"
-SRC_URI="http://dockapps.windowmaker.org/download.php/id/73/${P}.tar.gz"
 HOMEPAGE="http://dockapps.windowmaker.org/file.php/id/42"
+SRC_URI="http://dockapps.windowmaker.org/download.php/id/73/${P}.tar.gz"
 
-RDEPEND="x11-libs/libX11
+RDEPEND="
+	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXpm"
 DEPEND="${RDEPEND}
@@ -24,14 +24,17 @@ DEPEND="${RDEPEND}
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="ppc sparc x86"
+IUSE=""
+
+S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-	sed -i "s/make/\$(MAKE)/g" src/Makefile
+	sed -i "s/make/\$(MAKE)/g" src/Makefile || die
 }
 
 src_compile() {
 	cd "${S}"/src
-	make clean
+	emake clean || die
 	emake CFLAGS="${CFLAGS}" SYSTEM="${LDFLAGS}" || die
 }
 
@@ -43,6 +46,5 @@ src_install() {
 	cd "${S}"
 	dodoc CREDITS README TODO
 
-	insinto /usr/share/applications
-	doins "${FILESDIR}"/${PN}.desktop
+	domenu "${FILESDIR}"/${PN}.desktop
 }
