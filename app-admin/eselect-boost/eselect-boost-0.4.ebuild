@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-boost/eselect-boost-0.4.ebuild,v 1.8 2012/06/03 16:25:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-boost/eselect-boost-0.4.ebuild,v 1.9 2012/09/05 22:34:58 blueness Exp $
 
 inherit multilib
 
@@ -10,7 +10,7 @@ SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ~ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd"
 IUSE=""
 
 DEPEND=""
