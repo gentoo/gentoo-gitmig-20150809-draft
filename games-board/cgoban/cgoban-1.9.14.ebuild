@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/cgoban/cgoban-1.9.14.ebuild,v 1.10 2012/09/03 18:28:30 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/cgoban/cgoban-1.9.14.ebuild,v 1.11 2012/09/05 16:49:24 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils autotools games
@@ -25,16 +25,14 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto"
 
 src_prepare() {
-	cp cgoban_icon.png ${PN}.png || die "cp failed"
-	mv configure.{in,ac} || dir "mv configure failed"
+	cp cgoban_icon.png ${PN}.png || die
+	mv configure.{in,ac} || die
 	epatch "${FILESDIR}"/${P}-cflags.patch
-#	sed -i -e "/^WMS_GET_CFLAGS/d" \
-#		configure.ac || die "sed failed"
 	eautoreconf
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README TODO
 	doicon ${PN}.png
 	make_desktop_entry cgoban Cgoban
