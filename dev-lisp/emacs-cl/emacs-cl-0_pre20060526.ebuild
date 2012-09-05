@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/emacs-cl/emacs-cl-0_pre20060526.ebuild,v 1.2 2010/01/02 11:27:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/emacs-cl/emacs-cl-0_pre20060526.ebuild,v 1.3 2012/09/05 17:06:16 mr_bones_ Exp $
 
 #ECVS_SERVER="cvs.nocrew.org:/usr/local/cvsroot"
 #ECVS_MODULE="emacs-cl"
@@ -28,7 +28,7 @@ src_compile() {
 
 src_test() {
 	# "make check" clears all *.elc files, so move them to a safe location
-	mkdir safe || dir "mkdir failed"
+	mkdir safe || die "mkdir failed"
 	mv *.elc safe || die "mv failed"
 	emake -j1 check EMACSEN="${EMACS}" || die "emake check failed"
 	mv safe/*.elc . || die "mv failed"
