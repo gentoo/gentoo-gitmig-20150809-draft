@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/xdelta-3.0.4.ebuild,v 1.1 2012/09/05 16:41:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/xdelta-3.0.4.ebuild,v 1.2 2012/09/05 17:05:21 ssuominen Exp $
 
 EAPI=4
 
-inherit python
+inherit autotools python
 
 MY_P=${PN}${PV%.*.*}-${PV}
 
@@ -34,9 +34,14 @@ src_prepare() {
 	# huh
 	sed -i -e '/python/s:2.6:2:' testing/xdelta3-regtest.py || die
 	sed -i -e '/python/s:2.7:2:' testing/xdelta3-test.py || die
+
+	# only build tests when required
+	sed -i -e '/xdelta3regtest/s:noinst_P:check_P:' Makefile.am || die
+	eautoreconf
 }
 
 src_test() {
+	default
 	./xdelta3regtest || die
 }
 
