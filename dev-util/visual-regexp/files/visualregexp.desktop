@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
 Exec=visualregexp
-Icon=/usr/share/pixmaps/visualregexp/visualregexp-icon.png
+Icon=visualregexp-icon.png
 Name=Visual Regexp
 Comment=An interactive regular expression editor
 Categories=Development;
