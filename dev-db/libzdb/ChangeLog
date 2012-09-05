@@ -1,0 +1,8 @@
+# ChangeLog for dev-db/libzdb
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libzdb/ChangeLog,v 1.1 2012/09/05 19:08:19 lordvan Exp $
+
+  05 Sep 2012; <lordvan@gentoo.org> libzdb-2.10.3.ebuild, metadata.xml:
+  using parts from ebuild from bug #251063 by Johan Bergström
+  <bugs@bergstroem.nu>
+
