@@ -1,6 +1,11 @@
 # ChangeLog for sys-power/powertop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.54 2012/06/01 18:36:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.55 2012/09/05 15:30:56 zerochaos Exp $
+
+*powertop-2.1 (05 Sep 2012)
+
+  05 Sep 2012; Rick Farina <zerochaos@gentoo.org> +powertop-2.1.ebuild:
+  version bump to 2.1
 
   01 Jun 2012; Mike Frysinger <vapier@gentoo.org> powertop-2.0.ebuild:
   Drop hardcoded CXXFLAGS that break things.
@@ -229,4 +234,3 @@
   +powertop-1.0.ebuild:
   New ebuild thanks to Christian Merkle <gentoo-bugzilla@luemmel.org> in bug
   178130
-
