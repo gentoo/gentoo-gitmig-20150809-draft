@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-datasources/zeitgeist-datasources-0.8.0.1.ebuild,v 1.4 2012/05/21 06:19:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-datasources/zeitgeist-datasources-0.8.0.1.ebuild,v 1.5 2012/09/05 08:39:03 jlec Exp $
 
 EAPI=4
 
@@ -29,7 +29,7 @@ RDEPEND="
 	eog? ( media-gfx/eog[python] )
 	geany? ( dev-util/geany )
 	gedit? ( app-editors/gedit[zeitgeist] )
-	vim? ( app-editors/vim )
+	vim? ( app-editors/vim[python] )
 	emacs? ( virtual/emacs )
 	tomboy? (
 		app-misc/tomboy

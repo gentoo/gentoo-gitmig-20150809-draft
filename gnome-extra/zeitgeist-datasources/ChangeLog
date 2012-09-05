@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/zeitgeist-datasources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-datasources/ChangeLog,v 1.5 2012/05/21 06:19:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-datasources/ChangeLog,v 1.6 2012/09/05 08:39:03 jlec Exp $
+
+  05 Sep 2012; Justin Lecher <jlec@gentoo.org>
+  zeitgeist-datasources-0.8.0.1.ebuild:
+  Depend on python support in vim, #433966 & #411867
 
   21 May 2012; Justin Lecher <jlec@gentoo.org>
   zeitgeist-datasources-0.8.0.1.ebuild:
