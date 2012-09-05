@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.6.0.ebuild,v 1.2 2012/09/05 10:27:15 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.5.3.ebuild,v 1.1 2012/09/05 10:27:15 xmw Exp $
 
 EAPI=3
 
@@ -15,8 +15,8 @@ SRC_URI="http://xpra.org/src/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
-IUSE="+clipboard ffmpeg jpeg libnotify parti png +rencode server ssh x264"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+IUSE="ffmpeg jpeg libnotify parti png server ssh x264"
 
 COMMON_DEPEND="dev-python/pygtk:2
 	x11-libs/libX11
@@ -49,8 +49,6 @@ src_prepare() {
 	else
 		epatch disable-vpx.patch disable-x264.patch
 	fi
-	use clipboard || epatch disable-clipboard.patch
-	use rencode || epatch disable-rencode.patch
 
 	$(PYTHON -2) make_constants_pxi.py wimpiggy/lowlevel/constants.txt wimpiggy/lowlevel/constants.pxi || die
 
