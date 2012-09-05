@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/searchmonkey/searchmonkey-2.0.0.ebuild,v 1.3 2012/07/15 16:19:29 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/searchmonkey/searchmonkey-2.0.0.ebuild,v 1.4 2012/09/05 07:17:10 jlec Exp $
 
 EAPI=4
 
@@ -33,6 +33,5 @@ src_install() {
 
 	# Hand-made desktop icon
 	doicon pixmaps/searchmonkey-300x300.png
-	insinto /usr/share/applications/
-	doins "${FILESDIR}"/${P}.desktop
+	domenu "${FILESDIR}"/${P}.desktop
 }

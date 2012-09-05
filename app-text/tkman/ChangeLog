@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tkman
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tkman/ChangeLog,v 1.24 2009/09/09 09:12:32 rbu Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/tkman/ChangeLog,v 1.25 2012/09/05 07:17:12 jlec Exp $
+
+  05 Sep 2012; Justin Lecher <jlec@gentoo.org> tkman-2.2-r1.ebuild:
+  Use domenu instead insinto + doins to install .desktop files
 
   09 Sep 2009; Robert Buchholz <rbu@gentoo.org>
   -files/tkman-2.1-r1-gentoo.diff, -tkman-2.1-r1.ebuild:

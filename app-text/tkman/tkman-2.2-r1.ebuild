@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tkman/tkman-2.2-r1.ebuild,v 1.6 2009/07/19 17:48:07 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tkman/tkman-2.2-r1.ebuild,v 1.7 2012/09/05 07:17:12 jlec Exp $
 
 EAPI=2
 inherit eutils
@@ -33,6 +33,5 @@ src_install() {
 	insinto /usr/share/icons
 	doins contrib/TkMan.gif
 
-	insinto /usr/share/applications
-	doins "${FILESDIR}"/tkman.desktop
+	domenu "${FILESDIR}"/tkman.desktop
 }
