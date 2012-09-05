@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/gargoyle-2010.1.ebuild,v 1.1 2012/05/04 15:01:10 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/gargoyle-2010.1.ebuild,v 1.2 2012/09/05 07:44:50 jlec Exp $
 
 EAPI=2
 
@@ -83,8 +83,7 @@ src_install() {
 	newins garglk/garglk.ini garglk.ini || die
 
 	# Install application entry and icon:
-	insinto /usr/share/applications
-	doins garglk/${PN}.desktop || die
+	domenu garglk/${PN}.desktop || die
 	doicon garglk/${PN}-house.png || die
 
 	# Install library:
