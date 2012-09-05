@@ -1,6 +1,10 @@
 # ChangeLog for media-video/pyqtrailer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/pyqtrailer/ChangeLog,v 1.13 2012/04/01 04:45:25 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/pyqtrailer/ChangeLog,v 1.14 2012/09/05 07:53:23 jlec Exp $
+
+  05 Sep 2012; Justin Lecher <jlec@gentoo.org> pyqtrailer-0.6.1.ebuild,
+  pyqtrailer-0.6.2.ebuild:
+  Use domenu instead insinto + doins to install .desktop files
 
   01 Apr 2012; Mike Gilbert <floppym@gentoo.org> pyqtrailer-0.6.1.ebuild,
   pyqtrailer-0.6.2.ebuild:
@@ -76,4 +80,3 @@
   +pyqtrailer-0.3.4.ebuild, +metadata.xml:
   New ebuild for pyqtrailer. Qt4 application for downloading trailers from
   apple.com.
-
