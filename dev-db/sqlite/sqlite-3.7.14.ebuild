@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.7.11.ebuild,v 1.2 2012/04/26 17:06:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.7.14.ebuild,v 1.1 2012/09/05 16:26:13 floppym Exp $
 
 EAPI="4"
 
@@ -152,6 +152,7 @@ src_install() {
 	doman sqlite3.1
 
 	if use doc; then
-		dohtml -r "${WORKDIR}/${PN}-doc-${DOC_PV}/"*
+		find "${WORKDIR}/${PN}-doc-${DOC_PV}" -name ".[_~]*" -delete
+		dohtml -A ico,odg,pdf,svg -r "${WORKDIR}/${PN}-doc-${DOC_PV}/"
 	fi
 }
