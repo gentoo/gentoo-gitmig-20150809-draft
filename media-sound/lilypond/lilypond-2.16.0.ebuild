@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.16.0.ebuild,v 1.1 2012/08/26 19:41:21 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.16.0.ebuild,v 1.2 2012/09/05 18:13:53 radhermit Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
 
-inherit elisp-common python autotools
+inherit elisp-common python autotools eutils
 
 DESCRIPTION="GNU Music Typesetter"
 SRC_URI="http://download.linuxaudio.org/lilypond/sources/v${PV:0:4}/${P}.tar.gz"
@@ -44,6 +44,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-tex-docs.patch
 	if ! use vim-syntax ; then
 		sed -i -e "s/vim//" GNUmakefile.in || die
 	fi
