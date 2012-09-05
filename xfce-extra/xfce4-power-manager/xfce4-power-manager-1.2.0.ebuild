@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/xfce4-power-manager-1.2.0.ebuild,v 1.5 2012/05/22 05:01:38 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/xfce4-power-manager-1.2.0.ebuild,v 1.6 2012/09/05 10:50:47 ssuominen Exp $
 
 EAPI=4
 inherit flag-o-matic linux-info xfconf
@@ -12,7 +12,7 @@ SRC_URI="mirror://xfce/src/apps/${PN}/${PV%.*}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 x86"
-IUSE="debug kernel_linux networkmanager policykit +xfce_plugins_brightness"
+IUSE="debug kernel_linux networkmanager policykit +udisks +xfce_plugins_brightness"
 
 COMMON_DEPEND=">=dev-libs/dbus-glib-0.98
 	>=dev-libs/glib-2.24
@@ -25,11 +25,11 @@ COMMON_DEPEND=">=dev-libs/dbus-glib-0.98
 	>=xfce-base/xfconf-4.10
 	>=xfce-base/libxfce4ui-4.10
 	>=xfce-base/libxfce4util-4.10
-	kernel_linux? ( sys-fs/udisks:0 )
 	policykit? ( >=sys-auth/polkit-0.104-r1 )
 	xfce_plugins_brightness? ( >=xfce-base/xfce4-panel-4.10 )"
 RDEPEND="${COMMON_DEPEND}
-	networkmanager? ( net-misc/networkmanager )"
+	networkmanager? ( net-misc/networkmanager )
+	udisks? ( sys-fs/udisks:0 )"
 DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
 	virtual/pkgconfig
