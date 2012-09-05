@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xchm/xchm-1.20.ebuild,v 1.1 2011/06/25 08:42:19 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xchm/xchm-1.20.ebuild,v 1.2 2012/09/05 07:22:23 jlec Exp $
 
 EAPI="4"
 
@@ -36,8 +36,7 @@ src_install() {
 	rm -f "${D}"/usr/share/pixmaps/xchm-*.xpm
 	rm -f "${D}"/usr/share/pixmaps/xchmdoc*.xpm
 
-	insinto /usr/share/applications
-	doins "${FILESDIR}"/xchm.desktop
+	domenu "${FILESDIR}"/xchm.desktop
 	insinto /usr/share/mime/packages
 	doins "${FILESDIR}"/xchm.xml
 }
