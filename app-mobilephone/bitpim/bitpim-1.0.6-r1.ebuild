@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/bitpim-1.0.6-r1.ebuild,v 1.7 2012/05/22 16:33:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/bitpim-1.0.6-r1.ebuild,v 1.8 2012/09/05 07:16:37 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -133,10 +133,9 @@ src_install() {
 	fi
 
 	# Desktop file
-	insinto /usr/share/applications
 	sed -i -e "s|%%INSTALLBINDIR%%|/usr/bin|" -e "s|%%INSTALLLIBDIR%%|${RLOC}|" \
 		packaging/bitpim.desktop
-	doins packaging/bitpim.desktop
+	domenu packaging/bitpim.desktop
 }
 
 pkg_postinst() {
