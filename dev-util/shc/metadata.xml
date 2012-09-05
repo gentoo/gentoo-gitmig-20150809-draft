@@ -2,6 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-<email>maintainer-needed@gentoo.org</email>
+	<email>pinkbyte@gentoo.org</email>
+	<name>Sergey Popov</name>
 </maintainer>
+<upstream>
+	<changelog>http://www.datsi.fi.upm.es/~frosal/sources/CHANGES</changelog>
+</upstream>
 </pkgmetadata>

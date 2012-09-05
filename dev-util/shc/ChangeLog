@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/shc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/shc/ChangeLog,v 1.23 2012/09/05 18:07:11 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/shc/ChangeLog,v 1.24 2012/09/05 18:12:44 pinkbyte Exp $
+
+  05 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
+  Pick up maintainance of package and add changelog info to metadata
 
 *shc-3.8.9 (05 Sep 2012)
 
