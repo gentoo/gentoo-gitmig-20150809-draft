@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/fping
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.51 2012/08/20 05:33:25 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.52 2012/09/05 15:58:45 jer Exp $
+
+*fping-3.4 (05 Sep 2012)
+
+  05 Sep 2012; Jeroen Roovers <jer@gentoo.org> -fping-3.3.ebuild,
+  +fping-3.4.ebuild:
+  Version bump, fixes bug #433139.
 
 *fping-3.3 (20 Aug 2012)
 
