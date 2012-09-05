@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/udns
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/udns/ChangeLog,v 1.25 2012/07/21 02:21:38 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/udns/ChangeLog,v 1.26 2012/09/05 15:51:52 jer Exp $
+
+*udns-0.2 (05 Sep 2012)
+
+  05 Sep 2012; Jeroen Roovers <jer@gentoo.org> +udns-0.2.ebuild:
+  Version bump. Respect CC. Install NEWS.
 
   21 Jul 2012; Anthony G. Basile <blueness@gentoo.org> udns-0.1.ebuild:
   Keyword ~ppc64
