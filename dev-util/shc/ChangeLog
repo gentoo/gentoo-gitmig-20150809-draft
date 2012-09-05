@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/shc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/shc/ChangeLog,v 1.22 2012/05/10 16:10:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/shc/ChangeLog,v 1.23 2012/09/05 18:07:11 pinkbyte Exp $
+
+*shc-3.8.9 (05 Sep 2012)
+
+  05 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> +shc-3.8.9.ebuild:
+  Version bump wrt bug #433970, thanks to Jan Psota
 
   10 May 2012; Agostino Sarubbo <ago@gentoo.org> -shc-3.6.ebuild,
   -shc-3.7.ebuild, -shc-3.8.3.ebuild:
