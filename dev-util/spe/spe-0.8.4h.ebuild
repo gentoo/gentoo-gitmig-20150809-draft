@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/spe-0.8.4h.ebuild,v 1.5 2012/07/08 15:27:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/spe-0.8.4h.ebuild,v 1.6 2012/09/05 07:43:56 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -34,6 +34,5 @@ src_install() {
 
 	doicon _spe/images/spe.png
 
-	insinto /usr/share/applications
-	doins spe.desktop
+	domenu spe.desktop
 }

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/spe
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/ChangeLog,v 1.42 2012/07/08 15:27:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/ChangeLog,v 1.43 2012/09/05 07:43:56 jlec Exp $
+
+  05 Sep 2012; Justin Lecher <jlec@gentoo.org> spe-0.8.4h.ebuild:
+  Use domenu instead insinto + doins to install .desktop files
 
   08 Jul 2012; Raúl Porcel <armin76@gentoo.org> spe-0.8.4h.ebuild:
   Drop sparc keywords
@@ -176,4 +179,3 @@
 
   22 Oct 2003; Rob Cakebread <pythonhead@gentoo.org> spe-0.4.1d.ebuild:
   Initial commit
-

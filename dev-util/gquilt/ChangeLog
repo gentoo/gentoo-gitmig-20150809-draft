@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gquilt
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gquilt/ChangeLog,v 1.18 2011/04/25 20:11:55 arfrever Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gquilt/ChangeLog,v 1.19 2012/09/05 07:40:49 jlec Exp $
+
+  05 Sep 2012; Justin Lecher <jlec@gentoo.org> gquilt-0.25.ebuild:
+  Use domenu instead insinto + doins to install .desktop files
 
 *gquilt-0.25 (25 Apr 2011)
 
@@ -96,4 +99,3 @@
   20 Jun 2005; Aaron Walker <ka0ttic@gentoo.org>
   +files/gquilt-0.06-fix-makefile.diff, +metadata.xml, +gquilt-0.06.ebuild:
   Initial commit.  Ebuild based on one submitted by Andrew Fink in bug 94340.
-

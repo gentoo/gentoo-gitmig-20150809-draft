@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gquilt/gquilt-0.25.ebuild,v 1.1 2011/04/25 20:11:55 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gquilt/gquilt-0.25.ebuild,v 1.2 2012/09/05 07:40:49 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -37,6 +37,5 @@ src_install() {
 
 	dobin ${PN} || die "dobin failed"
 
-	insinto /usr/share/applications
-	doins gquilt.desktop || die "doins failed"
+	domenu gquilt.desktop || die "doins failed"
 }

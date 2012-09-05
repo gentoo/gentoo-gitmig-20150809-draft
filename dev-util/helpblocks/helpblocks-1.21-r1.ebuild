@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/helpblocks/helpblocks-1.21-r1.ebuild,v 1.2 2011/03/29 13:13:32 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/helpblocks/helpblocks-1.21-r1.ebuild,v 1.3 2012/09/05 07:42:44 jlec Exp $
 
 EAPI=1
 
@@ -33,7 +33,6 @@ src_install() {
 	for i in 32x32 48x48 128x128; do
 	    dosym /opt/helpblocks/appicons/helpblocks${i}.png /usr/share/icons/hicolor/${i}/apps/helpblocks.png
 	done
-	insinto /usr/share/applications
-	doins "${FILESDIR}/helpblocks.desktop"
+	domenu "${FILESDIR}/helpblocks.desktop"
 	newbin "${FILESDIR}/helpblocks.sh" helpblocks
 }
