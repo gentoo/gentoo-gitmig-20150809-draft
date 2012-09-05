@@ -1,6 +1,10 @@
 # ChangeLog for www-client/xxxterm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/xxxterm/ChangeLog,v 1.11 2012/06/05 11:08:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/xxxterm/ChangeLog,v 1.12 2012/09/05 08:12:42 jlec Exp $
+
+  05 Sep 2012; Justin Lecher <jlec@gentoo.org> xxxterm-1.1103-r1.ebuild,
+  xxxterm-9999.ebuild:
+  Use domenu instead insinto + doins to install .desktop files
 
   05 Jun 2012; Agostino Sarubbo <ago@gentoo.org> -xxxterm-1.1103.ebuild,
   xxxterm-1.1103-r1.ebuild:
@@ -50,4 +54,3 @@
   23 Jul 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
   +xxxterm-1.425.ebuild, +metadata.xml:
   Initial commit.
-

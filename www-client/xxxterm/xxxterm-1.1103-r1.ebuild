@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/xxxterm/xxxterm-1.1103-r1.ebuild,v 1.2 2012/06/05 11:08:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/xxxterm/xxxterm-1.1103-r1.ebuild,v 1.3 2012/09/05 08:12:42 jlec Exp $
 
 EAPI="4"
 
@@ -78,8 +78,7 @@ src_install() {
 	insinto "/usr/share/${PN}"
 	doins ../*.png ../style.css
 
-	insinto /usr/share/applications
-	doins ../${PN}.desktop
+	domenu ../${PN}.desktop
 
 	doman ../${PN}.1
 
