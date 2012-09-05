@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/tkdvd
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/tkdvd/ChangeLog,v 1.19 2009/04/26 20:15:28 patrick Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/tkdvd/ChangeLog,v 1.20 2012/09/05 08:36:57 jlec Exp $
+
+  05 Sep 2012; Justin Lecher <jlec@gentoo.org> tkdvd-4.0.7.ebuild,
+  tkdvd-4.0.8.ebuild, tkdvd-4.0.9.ebuild:
+  Use doicon instead insinto + doins to install icon files
 
 *tkdvd-4.0.9 (26 Apr 2009)
 
@@ -88,4 +92,3 @@
   27 Apr 2005; Lars Weiler <pylon@gentoo.org> +metadata.xml,
   +tkdvd-3.4.ebuild:
   New ebuild.  Thanks to James Le Cuirot in Bug #90447.
-
