@@ -1,9 +1,7 @@
 [Desktop Entry]
-Encoding=UTF-8
-Version=1.5
 Name=TkVoice
 Type=Application
 Comment=Phone/Fax Utility
 Exec=tkvoice
 Icon=tkvoice
-Categories=Application;Utility;
+Categories=Utility;

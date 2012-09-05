@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/tkvoice
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/tkvoice/ChangeLog,v 1.2 2007/05/06 08:16:05 genone Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/tkvoice/ChangeLog,v 1.3 2012/09/05 08:05:53 jlec Exp $
+
+  05 Sep 2012; Justin Lecher <jlec@gentoo.org> files/tkvoice.desktop,
+  tkvoice-1.5.ebuild:
+  Use domenu instead insinto + doins to install .desktop files
 
   06 May 2007; Marius Mauch <genone@gentoo.org> tkvoice-1.5.ebuild:
   Replacing einfo with elog
@@ -10,4 +14,3 @@
   02 Apr 2006; Alin Nastac <mrness@gentoo.org> +files/tkvoice.desktop,
   +metadata.xml, +tkvoice-1.5.ebuild:
   Initial import from bug #125266, thanks to Peter Hyman <pete4abw@comcast.net>.
-
