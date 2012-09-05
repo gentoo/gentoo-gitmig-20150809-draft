@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.2.3-r1.ebuild,v 1.9 2012/05/03 07:51:49 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.2.3-r1.ebuild,v 1.10 2012/09/05 18:26:29 ssuominen Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils
 
 DESCRIPTION="Burn CDs in disk-at-once mode -- with optional GUI frontend"
@@ -17,22 +17,28 @@ fi
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
-IUSE="gcdmaster encode pccts mad vorbis"
+IUSE="gcdmaster encode mad vorbis"
 
 RDEPEND="virtual/cdrtools
-	encode? ( >=media-sound/lame-3.90 )
-	gcdmaster? ( dev-libs/libsigc++:2
+	encode? ( >=media-sound/lame-3.99 )
+	gcdmaster? (
+		dev-libs/libsigc++:2
 		>=dev-cpp/gtkmm-2.4:2.4
 		>=dev-cpp/libgnomeuimm-2.6:2.6
-		media-libs/libao )
-	mad? ( media-libs/libmad
-		media-libs/libao )
-	vorbis? ( media-libs/libvorbis
-		media-libs/libao )
-	!app-cdr/cue2toc"
+		media-libs/libao
+		)
+	mad? (
+		media-libs/libmad
+		media-libs/libao
+		)
+	vorbis? (
+		media-libs/libvorbis
+		media-libs/libao
+		)
+	!app-cdr/cue2toc
+	!dev-util/pccts"
 DEPEND="${RDEPEND}
-	virtual/pkgconfig
-	pccts? ( >=dev-util/pccts-1.33.24-r1 )"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${P/_}
 
@@ -42,7 +48,6 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--disable-dependency-tracking \
 		$(use_with gcdmaster xdao) \
 		$(use_with vorbis ogg-support) \
 		$(use_with mad mp3-support) \
@@ -50,6 +55,6 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 	dodoc AUTHORS ChangeLog CREDITS NEWS README{,.PlexDAE}
 }

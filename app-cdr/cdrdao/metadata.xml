@@ -8,7 +8,5 @@
 </longdescription>
 <use>
 	<flag name='gcdmaster'>Enable building of gcdmaster application</flag>
-	<flag name='pccts'>Use <pkg>dev-util/pccts</pkg> instead of the built-in
-		substitution</flag>
 </use>
 </pkgmetadata>
