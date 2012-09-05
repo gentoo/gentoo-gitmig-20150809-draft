@@ -1,6 +1,12 @@
 # ChangeLog for games-arcade/afternoonstalker
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/afternoonstalker/ChangeLog,v 1.16 2012/05/04 04:22:28 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/afternoonstalker/ChangeLog,v 1.17 2012/09/05 21:10:18 mr_bones_ Exp $
+
+*afternoonstalker-1.1.5 (05 Sep 2012)
+
+  05 Sep 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  +afternoonstalker-1.1.5.ebuild:
+  version bump
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> afternoonstalker-1.1.4.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -65,4 +71,3 @@
   24 Mar 2007; <tupone@gentoo.org> +metadata.xml,
   +afternoonstalker-1.1.1.ebuild:
   New package. Requested with bug #115201 by charly
-
