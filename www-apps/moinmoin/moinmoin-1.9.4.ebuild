@@ -1,9 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/moinmoin-1.9.4.ebuild,v 1.1 2012/09/05 00:55:15 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/moinmoin-1.9.4.ebuild,v 1.2 2012/09/05 20:10:17 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.5"
+PYTHON_USE_WITH="xml"
 PYTHON_MODNAME="MoinMoin"
 
 inherit distutils webapp

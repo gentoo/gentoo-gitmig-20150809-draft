@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/moinmoin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/ChangeLog,v 1.73 2012/09/05 00:55:15 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/ChangeLog,v 1.74 2012/09/05 20:10:17 floppym Exp $
+
+  05 Sep 2012; Mike Gilbert <floppym@gentoo.org> moinmoin-1.9.4.ebuild:
+  Require Python[xml]. Patch by Arfrever.
 
 *moinmoin-1.9.4 (05 Sep 2012)
 
