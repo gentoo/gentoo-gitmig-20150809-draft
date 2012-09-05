@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.8.1-r1.ebuild,v 1.3 2012/08/29 03:23:57 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.8.1-r1.ebuild,v 1.4 2012/09/05 07:48:27 jlec Exp $
 
 EAPI="4"
 
@@ -103,8 +103,7 @@ src_install() {
 	docinto tools
 	dodoc tools/README*
 
-	insinto /usr/share/applications
-	doins ${PN}.desktop
+	domenu ${PN}.desktop
 
 	einfo "Installing extra tools"
 	cd "${S}"/tools

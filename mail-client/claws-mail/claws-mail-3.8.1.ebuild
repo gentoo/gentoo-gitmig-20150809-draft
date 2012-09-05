@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.8.1.ebuild,v 1.1 2012/06/30 15:23:26 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.8.1.ebuild,v 1.2 2012/09/05 07:48:27 jlec Exp $
 
 EAPI="4"
 
-inherit autotools-utils multilib gnome2-utils
+inherit autotools-utils multilib gnome2-utils eutils
 
 DESCRIPTION="An email client (and news reader) based on GTK+"
 HOMEPAGE="http://www.claws-mail.org/"
@@ -99,8 +99,7 @@ src_install() {
 	docinto tools
 	dodoc tools/README*
 
-	insinto /usr/share/applications
-	doins ${PN}.desktop
+	domenu ${PN}.desktop
 
 	einfo "Installing extra tools"
 	cd "${S}"/tools
