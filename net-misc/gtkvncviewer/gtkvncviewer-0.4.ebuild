@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gtkvncviewer/gtkvncviewer-0.4.ebuild,v 1.1 2012/07/04 06:08:05 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gtkvncviewer/gtkvncviewer-0.4.ebuild,v 1.2 2012/09/05 08:07:06 jlec Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
@@ -24,8 +24,7 @@ DEPEND="${RDEPEND}"
 
 src_install() {
 	dodir /usr/share/gtkvncviewer
-	insinto /usr/share/applications
-	doins data/gtkvncviewer.desktop
+	domenu data/gtkvncviewer.desktop
 	rm -f data/gtkvncviewer.desktop
 	insinto /usr/share/gtkvncviewer
 	doins -r locale data gtkvncviewer.py
