@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/unetbootin-578.ebuild,v 1.4 2012/08/16 08:07:05 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/unetbootin-578.ebuild,v 1.5 2012/09/05 08:07:12 jlec Exp $
 
 EAPI="4"
 
-inherit qt4-r2
+inherit qt4-r2 eutils
 
 DESCRIPTION="Universal Netboot Installer creates Live USB systems for various OS
 distributions."
@@ -66,8 +66,7 @@ src_configure() {
 src_install() {
 	dobin ${PN}
 
-	insinto /usr/share/applications
-	doins ${PN}.desktop
+	domenu ${PN}.desktop
 
 	for file in ${PN}*.png; do
 		size="${file/${PN}_}"

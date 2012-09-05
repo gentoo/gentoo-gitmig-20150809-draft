@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/unetbootin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/ChangeLog,v 1.87 2012/08/27 10:06:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/ChangeLog,v 1.88 2012/09/05 08:07:12 jlec Exp $
+
+  05 Sep 2012; Justin Lecher <jlec@gentoo.org> unetbootin-575.ebuild,
+  unetbootin-577.ebuild, unetbootin-578.ebuild, unetbootin-581.ebuild:
+  Use domenu instead insinto + doins to install .desktop files
 
 *unetbootin-581 (27 Aug 2012)
 
