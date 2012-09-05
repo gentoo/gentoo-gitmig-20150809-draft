@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/neon-0.29.6-r1.ebuild,v 1.13 2012/09/05 19:18:27 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/neon-0.29.6-r1.ebuild,v 1.14 2012/09/05 19:43:54 floppym Exp $
 
 EAPI="4"
 
@@ -53,23 +53,23 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf
+	local myconf=()
 
 	if has_version sys-libs/glibc; then
 		einfo "Enabling SSL library thread-safety using POSIX threads..."
-		myconf+=" --enable-threadsafe-ssl=posix"
+		myconf+=(--enable-threadsafe-ssl=posix)
 	fi
 
 	if use expat; then
-		myconf+=" --with-expat"
+		myconf+=(--with-expat)
 	else
-		myconf+=" --with-libxml2"
+		myconf+=(--with-libxml2)
 	fi
 
 	if use gnutls; then
-		myconf+=" --with-ssl=gnutls --with-ca-bundle=${EPREFIX}/etc/ssl/certs/ca-certificates.crt"
+		myconf+=(--with-ssl=gnutls --with-ca-bundle="${EPREFIX}/etc/ssl/certs/ca-certificates.crt")
 	elif use ssl; then
-		myconf+=" --with-ssl=openssl"
+		myconf+=(--with-ssl=openssl)
 	fi
 
 	# work around broken check, we really need -lintl on Solaris
@@ -83,7 +83,7 @@ src_configure() {
 		$(use_with pkcs11 pakchois) \
 		$(use_enable static-libs static) \
 		$(use_with zlib) \
-		${myconf}
+		"${myconf[@]}"
 }
 
 src_install() {
