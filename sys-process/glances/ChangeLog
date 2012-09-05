@@ -1,0 +1,10 @@
+# ChangeLog for sys-process/glances
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/glances/ChangeLog,v 1.1 2012/09/05 14:36:58 xarthisius Exp $
+
+*glances-1.4 (05 Sep 2012)
+
+  05 Sep 2012; Kacper Kowalik <xarthisius@gentoo.org> +glances-1.4.ebuild,
+  +metadata.xml:
+  Initial import. Ebuild based on work of Weonbin <timid3000@gmail.com> and
+  Marcin Rataj <m@lidel.org>. Fixes #397731
