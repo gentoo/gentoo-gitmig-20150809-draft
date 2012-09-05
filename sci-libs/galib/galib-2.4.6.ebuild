@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/galib/galib-2.4.6.ebuild,v 1.6 2011/06/26 10:33:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/galib/galib-2.4.6.ebuild,v 1.7 2012/09/05 19:00:51 jlec Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ DESCRIPTION="Library for genetic algorithms in C++ programs"
 HOMEPAGE="http://lancet.mit.edu/ga/"
 SRC_URI="http://lancet.mit.edu/ga/dist/galib${MYPV}.tgz"
 
-LICENSE="GAlib"
+LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE=""

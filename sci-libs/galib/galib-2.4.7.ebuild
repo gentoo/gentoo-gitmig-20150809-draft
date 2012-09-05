@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/galib/galib-2.4.7.ebuild,v 1.3 2012/08/03 17:53:22 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/galib/galib-2.4.7.ebuild,v 1.4 2012/09/05 19:00:51 jlec Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ DESCRIPTION="Library for genetic algorithms in C++ programs"
 HOMEPAGE="http://lancet.mit.edu/ga/"
 SRC_URI="http://lancet.mit.edu/ga/dist/galib${MYPV}.tgz"
 
-LICENSE="GAlib"
+LICENSE="BSD examples? ( GPL-2 )"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples"
