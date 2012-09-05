@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.1.20-r1.ebuild,v 1.2 2012/08/22 21:15:58 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.1.20-r1.ebuild,v 1.3 2012/09/05 09:16:52 jlec Exp $
 
 EAPI=4
 
@@ -303,12 +303,10 @@ src_install() {
 		fi
 
 		pushd "${S}"/src/VBox/Resources/OSE &>/dev/null || die
-		for size in 16 20 32 40 48 64 128 ; do
-			insinto /usr/share/icons/hicolor/${size}x${size}/apps
-			newins ${PN}-${size}px.png ${PN}.png
+		for size in 16 32 48 64 128 ; do
+			newicon -s ${size} ${PN}-${size}px.png ${PN}.png
 		done
-		insinto /usr/share/pixmaps
-		newins ${PN}-48px.png ${PN}.png
+		newicon ${PN}-48px.png ${PN}.png
 		popd &>/dev/null || die
 	else
 		doins VBoxHeadless || die
