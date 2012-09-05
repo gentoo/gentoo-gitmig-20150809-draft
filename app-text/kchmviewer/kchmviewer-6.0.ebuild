@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/kchmviewer-6.0.ebuild,v 1.4 2012/05/29 19:49:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/kchmviewer-6.0.ebuild,v 1.5 2012/09/05 09:27:37 jlec Exp $
 
 EAPI=3
 KDE_REQUIRED="never"
-inherit fdo-mime qt4-r2 kde4-base
+inherit fdo-mime qt4-r2 kde4-base eutils
 
 DESCRIPTION="KchmViewer is a feature rich chm file viewer, based on Qt."
 HOMEPAGE="http://www.kchmviewer.net/"
@@ -71,8 +71,7 @@ src_install() {
 		domenu packages/kchmviewer.desktop || die
 		dodoc ChangeLog README || die
 	fi
-	insinto /usr/share/pixmaps/
-	doins packages/kchmviewer.png || die
+	doicon packages/kchmviewer.png || die
 	dodoc DBUS-bindings FAQ || die
 }
 
