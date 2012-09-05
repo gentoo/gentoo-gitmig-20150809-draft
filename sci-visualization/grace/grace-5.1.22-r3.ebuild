@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.22-r2.ebuild,v 1.17 2012/09/05 06:50:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.22-r3.ebuild,v 1.1 2012/09/05 06:50:00 jlec Exp $
 
 EAPI=4
 
@@ -9,12 +9,13 @@ inherit eutils fortran-2 multilib toolchain-funcs
 DESCRIPTION="Motif based XY-plotting tool"
 HOMEPAGE="http://plasma-gate.weizmann.ac.il/Grace/"
 SRC_URI="
+	http://pkgs.fedoraproject.org/cgit/grace.git/plain/grace.png
 	http://dev.gentoo.org/~jlec/distfiles/${PN}.png.tar
 	ftp://plasma-gate.weizmann.ac.il/pub/${PN}/src/stable/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="fortran fftw jpeg netcdf png"
 
 DEPEND="
@@ -103,5 +104,6 @@ src_install() {
 	doman "${ED}"/usr/share/doc/${PF}/html/*.1
 	rm -f "${ED}"/usr/share/doc/${PF}/html/*.1 || die
 	doicon "${WORKDIR}"/${PN}.png
-	make_desktop_entry xmgrace Grace grace
+	domenu "${FILESDIR}"/${PN}.desktop
+	doicon "${WORKDIR}"/${PN}.png
 }
