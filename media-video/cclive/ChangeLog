@@ -1,6 +1,11 @@
 # ChangeLog for media-video/cclive
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cclive/ChangeLog,v 1.48 2012/09/03 08:02:08 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cclive/ChangeLog,v 1.49 2012/09/05 01:17:35 radhermit Exp $
+
+*cclive-0.7.10-r1 (05 Sep 2012)
+
+  05 Sep 2012; Tim Harder <radhermit@gentoo.org> +cclive-0.7.10-r1.ebuild:
+  Revision bump to remove ccl symlink (bug #433802).
 
 *cclive-0.7.10 (03 Sep 2012)
 
