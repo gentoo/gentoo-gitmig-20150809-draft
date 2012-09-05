@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-9999.ebuild,v 1.9 2011/09/21 07:44:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-9999.ebuild,v 1.10 2012/09/05 09:20:17 jlec Exp $
 
 EAPI=2
 
@@ -93,8 +93,7 @@ src_install() {
 	fperms 4755 /usr/sbin/mgnokiidev
 
 	if use X; then
-		insinto /usr/share/pixmaps
-		newins Docs/sample/logo/gnokii.xpm xgnokii.xpm
+		newicon Docs/sample/logo/gnokii.xpm xgnokii.xpm
 	fi
 
 	if use sms; then

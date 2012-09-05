@@ -1,6 +1,11 @@
 # ChangeLog for app-mobilephone/gnokii
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.113 2011/09/21 07:44:16 mgorny Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.114 2012/09/05 09:20:17 jlec Exp $
+
+  05 Sep 2012; Justin Lecher <jlec@gentoo.org> gnokii-0.6.27-r2.ebuild,
+  gnokii-0.6.27-r4.ebuild, gnokii-0.6.28.1.ebuild, gnokii-0.6.29.ebuild,
+  gnokii-9999.ebuild:
+  Use doicon instead insinto + doins to install icon files
 
   21 Sep 2011; Michał Górny <mgorny@gentoo.org> gnokii-9999.ebuild:
   Migrate to git-2.
