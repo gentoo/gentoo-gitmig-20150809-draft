@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.9.4.1.ebuild,v 1.1 2012/07/28 22:56:25 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.9.4.1.ebuild,v 1.2 2012/09/05 07:40:56 jlec Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -97,9 +97,8 @@ src_install() {
 
 	dodoc "${S}"/docs/{CHANGES,PyManual,README,wxPackage,wxPythonManual}.txt
 
-	insinto /usr/share/applications
 	for x in {Py{AlaMode,Crust,Shell},XRCed}; do
-		newins "${S}"/distrib/${x}.desktop ${x}-${SLOT}.desktop
+		newmenu "${S}"/distrib/${x}.desktop ${x}-${SLOT}.desktop
 	done
 	insinto /usr/share/pixmaps
 	newins "${S}"/wx/py/PyCrust_32.png PyCrust-${SLOT}.png
