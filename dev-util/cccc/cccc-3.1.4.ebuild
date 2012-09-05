@@ -1,10 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cccc/cccc-3.1.4.ebuild,v 1.6 2012/08/06 00:37:28 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cccc/cccc-3.1.4.ebuild,v 1.7 2012/09/05 18:39:35 ssuominen Exp $
 
 EAPI=4
-
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="A code counter for C and C++"
 HOMEPAGE="http://cccc.sourceforge.net/"
@@ -15,10 +14,9 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
-DEPEND=""
-RDEPEND=""
-
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc-4.7.patch
+
 	sed -i -e "/^CFLAGS/s|=|+=|" pccts/antlr/makefile
 	sed -i -e "/^CFLAGS/s|=|+=|" pccts/dlg/makefile
 	sed -i -e "/^CFLAGS/s|=|+=|" \
@@ -28,8 +26,8 @@ src_prepare() {
 }
 
 src_compile() {
-	emake CCC=$(tc-getCXX) LD=$(tc-getCXX) pccts
-	emake CCC=$(tc-getCXX) LD=$(tc-getCXX) cccc
+	emake CCC="$(tc-getCXX)" LD="$(tc-getCXX)" pccts
+	emake CCC="$(tc-getCXX)" LD="$(tc-getCXX)" cccc
 }
 
 src_install() {
