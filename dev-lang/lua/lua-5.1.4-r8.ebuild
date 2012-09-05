@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.1.4-r8.ebuild,v 1.7 2012/08/15 01:36:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.1.4-r8.ebuild,v 1.8 2012/09/05 09:28:49 jlec Exp $
 
 EAPI=4
 
@@ -94,8 +94,7 @@ src_install() {
 	dodoc HISTORY README
 	dohtml doc/*.html doc/*.png doc/*.css doc/*.gif
 
-	insinto /usr/share/pixmaps
-	doins etc/lua.ico
+	doicon etc/lua.ico
 	insinto /usr/$(get_libdir)/pkgconfig
 	doins etc/lua.pc
 
