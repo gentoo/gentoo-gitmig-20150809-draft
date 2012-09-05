@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/visual-regexp/visual-regexp-3.0.ebuild,v 1.8 2011/06/13 12:03:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/visual-regexp/visual-regexp-3.0.ebuild,v 1.9 2012/09/05 09:45:09 jlec Exp $
 
 EAPI=4
 
@@ -31,10 +31,9 @@ src_install() {
 
 	newbin visual_regexp.tcl visualregexp
 
-	dosym /usr/bin/visualregexp /usr/bin/tkregexp
+	dosym visualregexp /usr/bin/tkregexp
 
-	insinto /usr/share/pixmaps/visualregexp
-	doins "${WORKDIR}"/visualregexp-icon.png
+	doicon "${WORKDIR}"/visualregexp-icon.png
 
 	domenu "${FILESDIR}"/visualregexp.desktop
 }

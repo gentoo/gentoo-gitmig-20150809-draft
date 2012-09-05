@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/visual-regexp
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/visual-regexp/ChangeLog,v 1.9 2011/06/13 12:03:54 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/visual-regexp/ChangeLog,v 1.10 2012/09/05 09:45:09 jlec Exp $
+
+  05 Sep 2012; Justin Lecher <jlec@gentoo.org> visual-regexp-3.0.ebuild:
+  Use doicon instead insinto + doins to install icon files
 
   13 Jun 2011; Justin Lecher <jlec@gentoo.org> visual-regexp-3.0.ebuild,
   -files/visualregexp-icon.png:
@@ -31,4 +34,3 @@
   +files/visualregexp-icon.png, +files/visualregexp.desktop,
   +visual-regexp-3.0.ebuild:
   Initial commit, bug #46194.
-

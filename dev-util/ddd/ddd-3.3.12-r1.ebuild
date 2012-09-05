@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.12-r1.ebuild,v 1.7 2010/10/10 17:54:50 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.12-r1.ebuild,v 1.8 2012/09/05 09:43:17 jlec Exp $
 
 EAPI=1
 
@@ -48,6 +48,5 @@ src_install() {
 	dodoc AUTHORS CREDITS INSTALL NEWS PROBLEMS README TIPS TODO
 	cp -R "${S}"/doc/* "${D}"/usr/share/doc/${PF}
 
-	insinto /usr/share/pixmaps
-	doins "${S}"/icons/ddd.xpm
+	doicon "${S}"/icons/ddd.xpm
 }

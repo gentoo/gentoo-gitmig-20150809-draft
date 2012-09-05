@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/wxglade
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/ChangeLog,v 1.57 2011/03/27 20:11:14 ranger Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/ChangeLog,v 1.58 2012/09/05 09:49:31 jlec Exp $
+
+  05 Sep 2012; Justin Lecher <jlec@gentoo.org> wxglade-0.6.3-r1.ebuild:
+  Use doicon instead insinto + doins to install icon files
 
   27 Mar 2011; Brent Baude <ranger@gentoo.org> wxglade-0.6.3-r1.ebuild:
   Marking wxglade-0.6.3-r1 ppc for bug 333735
@@ -228,4 +231,3 @@
   22 Nov 2003; Rob Cakebread <pythonhead@gentoo.org> metadata.xml,
   wxglade-0.3.1.ebuild:
   Initial commit
-
