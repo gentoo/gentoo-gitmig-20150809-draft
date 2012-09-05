@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/nvclock
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nvclock/ChangeLog,v 1.11 2012/05/16 19:44:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nvclock/ChangeLog,v 1.12 2012/09/05 08:12:47 jlec Exp $
+
+  05 Sep 2012; Justin Lecher <jlec@gentoo.org> nvclock-0.8_beta4-r4.ebuild,
+  nvclock-0.8_p20110102-r1.ebuild:
+  Use domenu instead insinto + doins to install .desktop files
 
   16 May 2012; Jeroen Roovers <jer@gentoo.org> nvclock-0.8_p20110102-r1.ebuild,
   +files/nvclock-0.8_p20110102-usleep.patch:

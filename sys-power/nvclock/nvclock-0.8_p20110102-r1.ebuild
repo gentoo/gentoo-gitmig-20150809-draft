@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nvclock/nvclock-0.8_p20110102-r1.ebuild,v 1.7 2012/05/16 19:44:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nvclock/nvclock-0.8_p20110102-r1.ebuild,v 1.8 2012/09/05 08:12:47 jlec Exp $
 
 EAPI="2"
 
@@ -52,8 +52,7 @@ src_install() {
 	newinitd "${FILESDIR}"/nvclock_initd nvclock
 	newconfd "${FILESDIR}"/nvclock_confd nvclock
 
-	#insinto /usr/share/applications
-	#doins nvclock.desktop
+	#domenu nvclock.desktop
 	#validate_desktop_entries /usr/share/applications/nvclock.desktop
 }
 
