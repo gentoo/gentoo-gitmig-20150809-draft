@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/neon-0.29.6-r1.ebuild,v 1.11 2012/07/01 18:40:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/neon-0.29.6-r1.ebuild,v 1.12 2012/09/05 17:44:38 pacho Exp $
 
 EAPI="3"
 
@@ -97,16 +97,4 @@ src_install() {
 
 	dodoc AUTHORS BUGS NEWS README THANKS TODO
 	doman doc/man/*.[1-8]
-}
-
-pkg_postinst() {
-	ewarn "Neon has a policy of breaking API across minor versions, this means"
-	ewarn "that any package that links against Neon may be broken after"
-	ewarn "updating. They will remain broken until they are ported to the"
-	ewarn "new API. You can downgrade Neon to the previous version by doing:"
-	ewarn
-	ewarn "  emerge --oneshot '<${CATEGORY}/${PN}-$(get_version_component_range 1-2 ${PV})'"
-	ewarn
-	ewarn "You may also have to downgrade any package that has not been"
-	ewarn "ported to the new API yet."
 }
