@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/penguin-command
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/penguin-command/ChangeLog,v 1.17 2011/08/07 19:07:49 mr_bones_ Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/penguin-command/ChangeLog,v 1.18 2012/09/05 06:37:57 mr_bones_ Exp $
+
+  05 Sep 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  penguin-command-1.6.11.ebuild:
+  any mod support will do
 
   07 Aug 2011; Michael Sterrett <mr_bones_@gentoo.org>
   penguin-command-1.6.11.ebuild:
@@ -86,4 +90,3 @@
   23 May 2002; George Shapovalov <george@gentoo.org> Changelog :
 
   Initial release
-
