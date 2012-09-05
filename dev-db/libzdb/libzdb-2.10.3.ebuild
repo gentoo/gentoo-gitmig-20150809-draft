@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libzdb/libzdb-2.10.3.ebuild,v 1.1 2012/09/05 19:08:19 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libzdb/libzdb-2.10.3.ebuild,v 1.2 2012/09/05 19:27:25 lordvan Exp $
 
 EAPI="4"
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs autotools-utils
 
 DESCRIPTION="A thread safe high level multi-database connection pool library"
 HOMEPAGE="http://www.tildeslash.com/libzdb/"
@@ -27,6 +27,10 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	sed -i -e "s|&& ./pool||g" test/Makefile.in || die
+	if ( use sqlite); then
+		epatch "$FILESDIR/sqlite_configure.patch"
+	fi
+	eautoreconf
 }
 
 src_configure() {
