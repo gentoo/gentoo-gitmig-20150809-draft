@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/pommed-1.39.ebuild,v 1.5 2012/07/15 12:44:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/pommed-1.39.ebuild,v 1.6 2012/09/05 07:13:42 jlec Exp $
 
 EAPI="1"
 
@@ -99,9 +99,7 @@ src_install() {
 			fi
 		done
 
-		insinto /usr/share/applications
-		doins gpomme/gpomme.desktop
-		doins gpomme/gpomme-c.desktop
+		domenu gpomme/gpomme.desktop gpomme/gpomme-c.desktop
 		insinto /usr/share/gpomme/
 		doins -r gpomme/themes
 	fi

@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/pommed
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/ChangeLog,v 1.62 2012/07/15 12:44:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/ChangeLog,v 1.63 2012/09/05 07:13:42 jlec Exp $
+
+  05 Sep 2012; Justin Lecher <jlec@gentoo.org> pommed-1.21-r1.ebuild,
+  pommed-1.30.ebuild, pommed-1.31.ebuild, pommed-1.39.ebuild:
+  Use domenu instead insinto + doins to install .desktop files
 
   15 Jul 2012; Agostino Sarubbo <ago@gentoo.org> pommed-1.39.ebuild:
   Stable for amd64, wrt bug #425828
@@ -267,4 +271,3 @@
   +files/pommed.rc, +metadata.xml, +pommed-1.2.ebuild:
   New ebuild for bug #163497 thanks to Daniel Vianna, Guillaume Pujol, Markus
   Rothe
-
