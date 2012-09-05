@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.7_beta11.ebuild,v 1.8 2012/05/05 04:53:45 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.7_beta11.ebuild,v 1.9 2012/09/05 08:13:55 jlec Exp $
 
 EAPI=2
 inherit eutils flag-o-matic autotools
@@ -49,15 +49,13 @@ src_install() {
 
 	#if use kde; then
 	#	set-kdedir
-	#	insinto /usr/share/applications
 	#	newins ${PN}.desktop{.kde,} || die "${PN}.desktop.kde failed"
 	#	insinto "${KDEDIR}/share/applnk/System/ScreenSavers"
 	#	newins ${PN}.desktop{.kde,} || die "${PN}.desktop.kde failed"
 	#fi
 
 	#if use gnome; then
-	#	insinto /usr/share/applications/screensavers
-	#	doins ${PN}.desktop || die "${PN}.desktop failed"
+	#	domenu ${PN}.desktop || die "${PN}.desktop failed"
 	#	exeinto /usr/libexec/gnome-screensaver
 	#	doexe ${PN}-saver || die "${PN}-saver failed"
 	#fi
