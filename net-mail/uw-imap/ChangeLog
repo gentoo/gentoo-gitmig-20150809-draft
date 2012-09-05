@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/uw-imap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.136 2012/07/11 19:17:27 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.137 2012/09/05 18:19:40 jer Exp $
+
+  05 Sep 2012; Jeroen Roovers <jer@gentoo.org> uw-imap-2007f-r1.ebuild:
+  Stable for HPPA (bug #433329).
 
 *uw-imap-2007f-r1 (11 Jul 2012)
 
