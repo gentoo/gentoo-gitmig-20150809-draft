@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/roadnav/roadnav-0.19.ebuild,v 1.3 2010/02/07 09:08:51 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/roadnav/roadnav-0.19.ebuild,v 1.4 2012/09/05 07:15:31 jlec Exp $
 
 EAPI=2
 WX_GTK_VER=2.8
@@ -50,8 +50,7 @@ src_install() {
 	# --docdir is broken and hardcoded to ${PN}
 	mv "${D}"/usr/share/doc/${PN} "${D}"/usr/share/doc/${P}
 
-	insinto /usr/share/applications
-	doins "${S}"/roadnav.desktop
+	domenu "${S}"/roadnav.desktop
 }
 
 pkg_postinst() {
