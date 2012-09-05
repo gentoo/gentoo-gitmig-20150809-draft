@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/jasspa-microemacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jasspa-microemacs/ChangeLog,v 1.53 2012/05/29 20:52:32 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jasspa-microemacs/ChangeLog,v 1.54 2012/09/05 07:09:11 jlec Exp $
+
+  05 Sep 2012; Justin Lecher <jlec@gentoo.org>
+  jasspa-microemacs-20091011-r2.ebuild:
+  Use domenu instead insinto + doins to install .desktop files
 
   29 May 2012; Ulrich Müller <ulm@gentoo.org>
   -jasspa-microemacs-20091011-r1.ebuild:
@@ -249,4 +253,3 @@
   jasspa-microemacs-20021205.ebuild, metadata.xml:
   Initial import. Ebuild submitted by Randy Roesler <xhl178@shaw.ca>,
   closing bug #23734
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-3.1.0.ebuild,v 1.6 2012/08/05 21:58:58 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-3.1.0.ebuild,v 1.7 2012/09/05 07:10:16 jlec Exp $
 
 EAPI="4"
 
@@ -80,8 +80,7 @@ src_install() {
 
 	# replace .desktop file with our own working version
 	rm -f "${ED}/usr/share/applications/SciTE.desktop"
-	insinto /usr/share/applications
-	doins "${FILESDIR}/scite.desktop"
+	domenu "${FILESDIR}/scite.desktop"
 
 	doman ../doc/scite.1
 	dodoc ../README
