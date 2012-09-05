@@ -1,0 +1,11 @@
+http://bugs.gentoo.org/show_bug.cgi?id=408529
+http://bugzilla.xfce.org/show_bug.cgi?id=8521
+
+--- gtk-2.0/gradient_draw.c
++++ gtk-2.0/gradient_draw.c
+@@ -278,4 +278,5 @@ void gradient_draw_shaded(cairo_t *cr, gint x, gint y, gint width, gint height,
+     cairo_fill (cr);
+ 
+     cairo_restore(cr);
++    cairo_pattern_destroy(gradient);
+ }
