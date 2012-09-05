@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Panotools-Script/Panotools-Script-0.270.0.ebuild,v 1.1 2012/07/13 17:30:04 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Panotools-Script/Panotools-Script-0.270.0.ebuild,v 1.2 2012/09/05 07:20:50 jlec Exp $
 
 EAPI=4
 
@@ -26,8 +26,7 @@ SRC_TEST="do"
 src_install() {
 	perl-module_src_install
 	if use gui ; then
-		insinto /usr/share/applications
-		doins "${S}"/desktop/*.desktop || die
+		domenu "${S}"/desktop/*.desktop || die
 	else
 		rm "${D}"/usr/bin/*-gui || die
 	fi
