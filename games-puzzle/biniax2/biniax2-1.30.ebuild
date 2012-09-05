@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/biniax2/biniax2-1.30.ebuild,v 1.3 2009/12/19 19:07:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/biniax2/biniax2-1.30.ebuild,v 1.4 2012/09/05 00:10:01 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -16,7 +16,7 @@ IUSE=""
 
 DEPEND="media-libs/libsdl
 	media-libs/sdl-image[png]
-	media-libs/sdl-mixer[mikmod]"
+	media-libs/sdl-mixer[mod]"
 
 S=${WORKDIR}
 
@@ -25,16 +25,16 @@ src_prepare() {
 	sed -i \
 		-e "s:data/:${GAMES_DATADIR}/${PN}/:" \
 		desktop/{gfx,snd}.c \
-		|| die "sed failed"
+		|| die
 	epatch \
 		"${FILESDIR}"/${P}-build.patch \
 		"${FILESDIR}"/${P}-dotfiles.patch
 }
 
 src_install() {
-	dogamesbin ${PN} || die "dogamesbin failed"
+	dogamesbin ${PN} || die
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins -r data/* || die "doins failed"
+	doins -r data/* || die
 	doicon "${FILESDIR}"/${PN}.xpm
 	make_desktop_entry ${PN} Biniax-2
 	prepgamesdirs
