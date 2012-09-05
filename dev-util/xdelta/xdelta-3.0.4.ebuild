@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/xdelta-3.0.4.ebuild,v 1.2 2012/09/05 17:05:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/xdelta-3.0.4.ebuild,v 1.3 2012/09/05 18:16:43 ssuominen Exp $
 
 EAPI=4
 
@@ -24,8 +24,10 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
+	if use test; then
+		python_set_active_version 2
+		python_pkg_setup
+	fi
 }
 
 src_prepare() {
