@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-4.9.1.ebuild,v 1.2 2012/09/05 11:21:54 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-4.9.1-r1.ebuild,v 1.1 2012/09/05 21:05:45 johu Exp $
 
 EAPI=4
 
@@ -48,6 +48,8 @@ KMEXTRACTONLY="
 
 # you need one of these
 REQUIRED_USE="!opengl? ( gles ) !gles? ( opengl )"
+
+PATCHES=("${FILESDIR}/${P}-tab-freeze.patch")
 
 src_configure() {
 	# FIXME Remove when activity API moved away from libkworkspace
