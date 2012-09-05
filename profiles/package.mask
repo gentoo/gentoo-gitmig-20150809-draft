@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14090 2012/09/05 18:34:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14091 2012/09/05 22:42:31 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -107,20 +107,6 @@ dev-db/pgpool
 # Benedikt Böhm <hollow@gentoo.org> (11 Aug 2012)
 # Regression in iproute code, does not detect IP addresses correctly anymore.
 ~dev-ruby/ohai-6.14.0
-
-# Andreas K. Huettel <dilfridge@gentoo.org> (7 Aug 2012)
-# Many display bugs and compatibility problems, does not build with cups-1.6.
-# Upstream is dead. There's no real way to support this anymore. Masked for
-# removal in 30 days. Possible replacements include:
-# * app-text/qpdfview (Qt application, not in stable yet but nice)
-# * app-text/apvlv
-# * app-text/mupdf
-# * app-text/zathura-meta
-# * app-text/acroread (closed source)
-# * kde-base/okular (KDE application)
-# * app-text/evince (Gnome application)
-# Bugs: 232351, 356263, 387125, 413589, 428498.
-app-text/epdfview
 
 # Jeroen Roovers <jer@gentoo.org> (2 Aug 2012)
 # Development version
