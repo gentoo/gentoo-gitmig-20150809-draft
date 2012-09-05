@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.9.1.ebuild,v 1.2 2012/02/14 15:26:56 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.9.1.ebuild,v 1.3 2012/09/05 07:00:23 jlec Exp $
 
-EAPI="3"
+EAPI=4
 
 PYTHON_DEPEND="2"
 
@@ -51,8 +51,12 @@ VMD_DOWNLOAD="http://www.ks.uiuc.edu/Development/Download/download.cgi?PackageNa
 # Binary only plugin!!
 QA_TEXTRELS="usr/lib*/vmd/plugins/LINUX/tcl/intersurf1.1/bin/intersurf.so"
 QA_PRESTRIPPED="usr/lib*/vmd/plugins/LINUX/tcl/intersurf1.1/bin/intersurf.so"
-QA_DT_HASH_amd64="usr/lib64/vmd/plugins/LINUX/tcl/intersurf1.1/bin/intersurf.so"
-QA_DT_HASH_x86="usr/lib/vmd/plugins/LINUX/tcl/intersurf1.1/bin/intersurf.so"
+QA_DT_HASH_amd64="
+	usr/lib64/vmd/plugins/LINUX/tcl/intersurf1.1/bin/intersurf.so
+	usr/lib64/vmd/plugins/LINUX/tcl/volutil1.3/volutil"
+QA_DT_HASH_x86="
+	usr/lib/vmd/plugins/LINUX/tcl/intersurf1.1/bin/intersurf.so
+	usr/lib/vmd/plugins/LINUX/tcl/volutil1.3/volutil"
 
 pkg_nofetch() {
 	elog "Please download ${P}.src.tar.gz from"
@@ -69,7 +73,8 @@ src_prepare() {
 
 	[[ ${SILENT} == yes ]] || sed '/^.SILENT/d' -i $(find -name Makefile)
 
-	sed -e "s:CC = gcc:CC = $(tc-getCC):" \
+	sed \
+		-e "s:CC = gcc:CC = $(tc-getCC):" \
 		-e "s:CXX = g++:CXX = $(tc-getCXX):" \
 		-e "s:COPTO =.*\":COPTO = -fPIC -o\":" \
 		-e "s:LOPTO = .*\":LOPTO = ${LDFLAGS} -fPIC -o\":" \
@@ -80,7 +85,8 @@ src_prepare() {
 		-e "s:-ltcl8.5:-ltcl:" \
 		-i Make-arch || die "Failed to set up plugins Makefile"
 
-	sed -e "s:\$(CXXFLAGS)::g" \
+	sed \
+		-e "s:\$(CXXFLAGS)::g" \
 		-i hesstrans/Makefile || die
 
 	# prepare vmd itself
@@ -168,11 +174,11 @@ src_compile() {
 		NETCDFLIB="$(pkg-config --libs-only-L netcdf)" \
 		NETCDFINC="$(pkg-config --cflags-only-I netcdf)" \
 		NETCDFLDFLAGS="$(pkg-config --libs netcdf)" \
-		LINUX || die
+		LINUX
 
 	# build vmd
 	cd "${S}"/src
-	emake || die "failed to build vmd"
+	emake
 }
 
 src_install() {
@@ -180,15 +186,15 @@ src_install() {
 	cd "${WORKDIR}"/plugins
 	emake \
 			PLUGINDIR="${ED}/usr/$(get_libdir)/${PN}/plugins" \
-			distrib || die "failed to install plugins"
+			distrib
 
 	# install vmd
 	cd "${S}"/src
-	emake install || die "failed to install vmd"
+	emake install
 
 	# install docs
 	cd "${S}"
-	dodoc Announcement README doc/ig.pdf doc/ug.pdf || die
+	dodoc Announcement README doc/ig.pdf doc/ug.pdf
 
 	# remove some of the things we don't want and need in
 	# /usr/lib
@@ -204,7 +210,6 @@ src_install() {
 
 	# install icon and generate desktop entry
 	insinto /usr/share/pixmaps
-	doins "${WORKDIR}"/vmd.png || die "Failed to install vmd icon"
-	insinto /usr/share/applications
-	doins "${WORKDIR}"/vmd.desktop || die "Failed to install desktop entry"
+	doins "${WORKDIR}"/vmd.png
+	domenu "${WORKDIR}"/vmd.desktop
 }
