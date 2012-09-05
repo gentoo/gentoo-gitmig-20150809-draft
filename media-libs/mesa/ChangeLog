@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.418 2012/09/04 14:49:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.419 2012/09/05 15:01:34 chithanh Exp $
+
+*mesa-9_pre20120831-r1 (05 Sep 2012)
+
+  05 Sep 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +mesa-9_pre20120831-r1.ebuild:
+  New revision to address i965 crashes.
 
   04 Sep 2012; Jeroen Roovers <jer@gentoo.org> mesa-8.0.4-r1.ebuild:
   Stable for HPPA (bug #432400).
