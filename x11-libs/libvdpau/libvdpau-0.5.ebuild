@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/libvdpau-0.5.ebuild,v 1.1 2012/09/05 10:41:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/libvdpau-0.5.ebuild,v 1.2 2012/09/05 11:00:27 ssuominen Exp $
 
 EAPI=4
 inherit eutils libtool
@@ -21,12 +21,12 @@ RDEPEND="x11-libs/libX11
 	!=x11-drivers/nvidia-drivers-190*"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
-	dri? ( >=x11-proto/dri2proto-2.2 )
 	doc? (
 		app-doc/doxygen
 		media-gfx/graphviz
 		virtual/latex-base
-	)"
+		)
+	dri? ( >=x11-proto/dri2proto-2.2 )"
 
 DOCS="AUTHORS ChangeLog"
 
