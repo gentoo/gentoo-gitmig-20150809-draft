@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-8.0.4.ebuild,v 1.1 2012/07/21 22:02:58 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-8.0.4.ebuild,v 1.2 2012/09/06 23:31:08 mattst88 Exp $
 
 EAPI=4
 
@@ -47,10 +47,9 @@ for card in ${VIDEO_CARDS}; do
 done
 
 IUSE="${IUSE_VIDEO_CARDS}
-	bindist +classic d3d debug +egl g3dvl +gallium gbm gles1 gles2 +llvm +nptl openvg osmesa pax_kernel pic selinux shared-dricore +shared-glapi vdpau wayland xa xvmc kernel_FreeBSD"
+	bindist +classic debug +egl g3dvl +gallium gbm gles1 gles2 +llvm +nptl openvg osmesa pax_kernel pic selinux shared-dricore +shared-glapi vdpau wayland xa xvmc kernel_FreeBSD"
 
 REQUIRED_USE="
-	d3d?    ( gallium )
 	g3dvl?  ( gallium )
 	llvm?   ( gallium )
 	openvg? ( egl gallium )
@@ -93,7 +92,6 @@ RDEPEND="${EXTERNAL_DEPEND}
 	x11-libs/libXext
 	x11-libs/libXxf86vm
 	>=x11-libs/libxcb-1.8
-	d3d? ( app-emulation/wine )
 	vdpau? ( >=x11-libs/libvdpau-0.4.1 )
 	wayland? ( dev-libs/wayland )
 	xvmc? ( >=x11-libs/libXvMC-1.0.6 )
@@ -208,7 +206,6 @@ src_configure() {
 
 	if use gallium; then
 		myconf+="
-			$(use_enable d3d d3d1x)
 			$(use_enable g3dvl gallium-g3dvl)
 			$(use_enable llvm gallium-llvm)
 			$(use_enable openvg)
