@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/qoauth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qoauth/ChangeLog,v 1.18 2012/05/21 20:14:08 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qoauth/ChangeLog,v 1.19 2012/09/06 13:28:54 scarabeus Exp $
+
+  06 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> qoauth-1.0.1.ebuild:
+  Mark ppc and ~ppc64. Per johu's request.
 
   21 May 2012; Davide Pesavento <pesa@gentoo.org> qoauth-1.0.1.ebuild:
   EAPI=4
@@ -70,4 +73,3 @@
   14 Jul 2009; Markos Chandras <hwoarang@gentoo.org> +qoauth-0.1.0.ebuild,
   +metadata.xml:
   Initial commit of qoauth library
-
