@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-5.0.0.ebuild,v 1.1 2012/07/01 10:45:17 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-5.0.0.ebuild,v 1.2 2012/09/06 18:53:41 gurligebis Exp $
 
 EAPI=2
 inherit eutils linux-info user
@@ -12,7 +12,7 @@ SRC_URI="http://download.strongswan.org/${P}.tar.bz2"
 LICENSE="GPL-2 RSA-MD5 RSA-PKCS11 DES"
 SLOT="0"
 KEYWORDS="~arm ~amd64 ~ppc ~sparc ~x86"
-IUSE="+caps curl debug dhcp eap farp gcrypt ldap +ikev1 +ikev2 mysql +non-root +openssl sqlite"
+IUSE="+caps curl debug dhcp eap pam farp gcrypt ldap +ikev1 +ikev2 mysql +non-root +openssl sqlite"
 
 COMMON_DEPEND="!net-misc/openswan
 	>=dev-libs/gmp-4.1.5
@@ -22,7 +22,8 @@ COMMON_DEPEND="!net-misc/openswan
 	ldap? ( net-nds/openldap )
 	openssl? ( >=dev-libs/openssl-0.9.8[-bindist] )
 	mysql? ( virtual/mysql )
-	sqlite? ( >=dev-db/sqlite-3.3.1 )"
+	sqlite? ( >=dev-db/sqlite-3.3.1 )
+	pam? ( sys-libs/pam )"
 DEPEND="${COMMON_DEPEND}
 	virtual/linux-sources
 	sys-kernel/linux-headers"
@@ -108,6 +109,11 @@ src_configure() {
 	# strongSwan builds and installs static libs by default which are
 	# useless to the user (and to strongSwan for that matter) because no
 	# header files or alike get installed... so disabling them is safe.
+	if use pam && use eap; then
+		myconf="${myconf} --enable-eap-gtc"
+	else
+		myconf="${myconf} --disable-eap-gtc"
+	fi
 	econf \
 		--disable-static \
 		$(use_with caps capabilities libcap) \
@@ -121,7 +127,6 @@ src_configure() {
 		$(use_enable eap eap-simaka-reauth) \
 		$(use_enable eap eap-identity) \
 		$(use_enable eap eap-md5) \
-		$(use_enable eap eap-gtc) \
 		$(use_enable eap eap-aka) \
 		$(use_enable eap eap-aka-3gpp2) \
 		$(use_enable eap eap-mschapv2) \

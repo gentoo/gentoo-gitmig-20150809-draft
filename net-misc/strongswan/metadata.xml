@@ -9,11 +9,6 @@
     <email>gurligebis@gentoo.org</email>
     <name>Bjarke Istrup Pedersen</name>
   </maintainer>
-  <maintainer>
-    <email>ua_bugz_gentoo@mortal-soul.de</email>
-    <name>Matthias Dahl</name>
-    <description>Proxy Maintainer, CC on all bugs</description>
-  </maintainer>
   <longdescription lang="en">
     StrongSwan is direct descendant of the discontinued FreeS/WAN project.
     As an IPsec based VPN solution which is focused on security and ease of
