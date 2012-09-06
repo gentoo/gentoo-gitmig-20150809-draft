@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/beecrypt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.82 2012/06/07 16:43:17 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.83 2012/09/06 05:41:11 vapier Exp $
+
+  06 Sep 2012; Mike Frysinger <vapier@gentoo.org>
+  files/beecrypt-4.2.1-build-system.patch:
+  Drop 32bit/64bit ABI overrides since we already handle these things ourselves
+  #423023 by Robert Trace.
 
   07 Jun 2012; Michael Palimaka <kensington@gentoo.org>
   +files/beecrypt-4.2.1-gcc-4.7.patch, beecrypt-4.2.1.ebuild:

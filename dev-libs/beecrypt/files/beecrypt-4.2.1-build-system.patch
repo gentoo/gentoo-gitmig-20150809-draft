@@ -27,6 +27,75 @@
      ])
    fi
  fi
+--- beecrypt-4.2.1/acinclude.m4
++++ beecrypt-4.2.1/acinclude.m4
+@@ -498,15 +498,6 @@ AC_DEFUN([BEE_GNU_CC],[
+     AC_SUBST(OPENMP_LIBS,"-lgomp")
+   fi
+   case $bc_target_arch in
+-  x86_64 | athlon64 | athlon-fx | k8 | opteron | em64t | nocona)
+-    CC="$CC -m64"
+-    ;;
+-  i[[3456]]86 | \
+-  pentium* | \
+-  athlon*)
+-    CC="$CC -m32"
+-    CCAS="$CCAS -m32"
+-    ;;
+   ia64)
+     case $target_os in
+     # HP/UX on Itanium needs to be told that a long is 64-bit!
+@@ -525,17 +516,8 @@ AC_DEFUN([BEE_GNU_CC],[
+     aix*)
+       CC="$CC -maix64"
+       ;;
+-    linux*)
+-      CC="$CC -m64"
+-      ;;
+     esac
+     ;;
+-  sparc | sparcv8*)
+-    CC="$CC -m32"
+-    ;;
+-  sparc64 | sparcv9*)
+-    CC="$CC -m64"
+-    ;;
+   esac
+   # Certain platforms needs special flags for multi-threaded code
+   if test "$ac_enable_threads" = yes; then
+@@ -646,14 +646,6 @@ dnl  BEE_GNU_CXX
+ AC_DEFUN([BEE_GNU_CXX],[
+   AC_REQUIRE([AC_PROG_CXX])
+   case $bc_target_arch in
+-  x86_64 | athlon64 | athlon-fx | k8 | opteron | em64t | nocona | core2)
+-    CXX="$CXX -m64"
+-    ;;
+-  i[[3456]]86 | \
+-  pentium* | \
+-  athlon*)
+-    CXX="$CXX -m32"
+-    ;;
+   ia64)
+     case $target_os in
+     # HP/UX on Itanium needs to be told that a long is 64-bit!
+@@ -672,17 +664,8 @@ AC_DEFUN([BEE_GNU_CXX],[
+     aix*)
+       CXX="$CXX -maix64"
+       ;;
+-    linux*)
+-      CXX="$CXX -m64"
+-      ;;
+     esac
+     ;;
+-  sparc | sparcv8*)
+-    CXX="$CXX -m32"
+-    ;;
+-  sparc64 | sparcv9*)
+-    CXX="$CXX -m64"
+-    ;;
+   esac
+   # Certain platforms needs special flags for multi-threaded code
+   if test "$ac_enable_threads" = yes; then
 --- beecrypt-4.2.1/java/Makefile.am
 +++ beecrypt-4.2.1/java/Makefile.am
 @@ -26,7 +26,7 @@
