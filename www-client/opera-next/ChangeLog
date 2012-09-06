@@ -1,6 +1,12 @@
 # ChangeLog for www-client/opera-next
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.121 2012/09/04 14:59:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.122 2012/09/06 15:17:45 jer Exp $
+
+*opera-next-12.50.1583 (06 Sep 2012)
+
+  06 Sep 2012; Jeroen Roovers <jer@gentoo.org> +opera-next-12.50.1583.ebuild:
+  http://my.opera.com/desktopteam/blog/2012/09/06/increased-security-when-insta
+  lling-extensions
 
 *opera-next-12.50.1581 (04 Sep 2012)
 
