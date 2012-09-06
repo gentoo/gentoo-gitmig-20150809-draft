@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/leechcraft-azoth/leechcraft-azoth-9999.ebuild,v 1.15 2012/08/10 09:02:05 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/leechcraft-azoth/leechcraft-azoth-9999.ebuild,v 1.16 2012/09/06 09:36:01 pinkbyte Exp $
 
 EAPI="4"
 
@@ -23,7 +23,7 @@ DEPEND="~net-misc/leechcraft-core-${PV}
 		otroid? ( net-libs/libotr )
 		media? ( x11-libs/qt-multimedia:4 )
 		rosenthal? ( app-text/hunspell )
-		xoox? ( =net-libs/qxmpp-9999[extras] media-libs/speex )
+		xoox? ( =net-libs/qxmpp-9999 media-libs/speex )
 		xtazy? ( x11-libs/qt-dbus:4 )
 		crypt? ( app-crypt/qca app-crypt/qca-gnupg )
 		zheet? ( net-libs/libmsn )"

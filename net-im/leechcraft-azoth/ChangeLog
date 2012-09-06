@@ -1,6 +1,10 @@
 # ChangeLog for net-im/leechcraft-azoth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/leechcraft-azoth/ChangeLog,v 1.31 2012/08/13 14:01:21 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/leechcraft-azoth/ChangeLog,v 1.32 2012/09/06 09:36:01 pinkbyte Exp $
+
+  06 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> leechcraft-azoth-9999.ebuild:
+  Remove USE-flag dependency on net-libs/qxmpp-9999, 'extras' USE-flag was
+  dropped from it earlier
 
 *leechcraft-azoth-0.5.80 (13 Aug 2012)
 
