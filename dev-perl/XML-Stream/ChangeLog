@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-Stream
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Stream/ChangeLog,v 1.25 2012/06/24 12:58:25 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Stream/ChangeLog,v 1.26 2012/09/06 01:32:36 blueness Exp $
+
+  06 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
+  XML-Stream-1.230.0.ebuild:
+  Keyword ~arm
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
