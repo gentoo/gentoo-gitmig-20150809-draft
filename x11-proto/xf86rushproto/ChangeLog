@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/xf86rushproto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86rushproto/ChangeLog,v 1.38 2012/08/26 18:28:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86rushproto/ChangeLog,v 1.39 2012/09/06 04:26:20 vapier Exp $
+
+  06 Sep 2012; Mike Frysinger <vapier@gentoo.org> xf86rushproto-1.1.2-r1.ebuild,
+  xf86rushproto-1.1.2.ebuild:
+  Punt unused depend settings.
 
   26 Aug 2012; Raúl Porcel <armin76@gentoo.org> xf86rushproto-1.1.2-r1.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #419473
@@ -146,4 +150,3 @@
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +xf86rushproto-1.1.ebuild:
   Initial commit for modular X
-
