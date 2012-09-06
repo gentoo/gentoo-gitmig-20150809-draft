@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jeweler/jeweler-1.8.4.ebuild,v 1.1 2012/07/05 23:35:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jeweler/jeweler-1.8.4.ebuild,v 1.2 2012/09/06 04:38:00 graaff Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19 ree18"
 
-RUBY_FAKEGEM_TASK_DOC="yard"
+RUBY_FAKEGEM_TASK_DOC="-Ilib yard"
 RUBY_FAKEGEM_DOCDIR="doc"
 
 # Tests and features also need the same set of dependencies present.

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/jeweler
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jeweler/ChangeLog,v 1.18 2012/08/20 18:20:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jeweler/ChangeLog,v 1.19 2012/09/06 04:38:00 graaff Exp $
+
+  06 Sep 2012; Hans de Graaff <graaff@gentoo.org> jeweler-1.8.4.ebuild:
+  Fix building when jeweler is not installed yet.
 
   20 Aug 2012; Hans de Graaff <graaff@gentoo.org> -jeweler-1.6.4.ebuild,
   -jeweler-1.8.3.ebuild:
