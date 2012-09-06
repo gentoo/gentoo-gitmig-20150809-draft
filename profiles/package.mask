@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14091 2012/09/05 22:42:31 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14092 2012/09/06 07:49:15 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -138,12 +138,6 @@ x11-misc/glipper
 # #258409, #265183, #337691, #342783, #279074
 # Removal in 30 days
 net-fs/mount-cifs
-
-# Michał Górny <mgorny@gentoo.org> (22 Jul 2012)
-# The OpenCL patches have been reported to cause segfaults in the clang
-# compiler. Bug #427206.
-=sys-devel/clang-3.1-r5
-=sys-devel/llvm-3.1-r2
 
 # Pacho Ramos <pacho@gentoo.org> (21 Jul 2012)
 # Contains multiple API changes and needs apps to be ported
