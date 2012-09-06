@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/cyassl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/cyassl/ChangeLog,v 1.16 2012/09/02 13:30:51 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/cyassl/ChangeLog,v 1.17 2012/09/06 10:27:49 blueness Exp $
+
+  06 Sep 2012; Anthony G. Basile <blueness@gentoo.org> cyassl-2.2.0.ebuild:
+  Stable ppc64, bug #421479
 
   02 Sep 2012; Anthony G. Basile <blueness@gentoo.org> cyassl-2.3.0.ebuild:
   Rekeyword ~arm ~hppa ~mips ~ppc ~ppc64 ~x86
