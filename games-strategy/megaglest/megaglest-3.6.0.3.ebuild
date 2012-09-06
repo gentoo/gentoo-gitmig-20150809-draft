@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/megaglest-3.6.0.3.ebuild,v 1.2 2012/09/01 00:08:16 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/megaglest-3.6.0.3.ebuild,v 1.3 2012/09/06 20:57:28 hasufell Exp $
 
 EAPI=4
 inherit eutils flag-o-matic cmake-utils wxwidgets gnome2-utils games
@@ -58,7 +58,7 @@ DEPEND="${RDEPEND}
 PDEPEND="~games-strategy/${PN}-data-${PV}"
 
 src_prepare() {
-	if use use editor || use model-viewer ; then
+	if use editor || use model-viewer ; then
 		WX_GTK_VER="2.8"
 		need-wxwidgets unicode
 	fi

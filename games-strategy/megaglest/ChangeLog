@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/megaglest
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/ChangeLog,v 1.2 2012/09/01 00:08:16 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/ChangeLog,v 1.3 2012/09/06 20:57:28 hasufell Exp $
+
+  06 Sep 2012; Julian Ospald <hasufell@gentoo.org> megaglest-3.6.0.3.ebuild:
+  fix editor useflag thanks to Arfrever
 
   01 Sep 2012; Julian Ospald <hasufell@gentoo.org> megaglest-3.6.0.3.ebuild,
   +files/megaglest-3.6.0.3-as-needed.patch:
