@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/cpl/cpl-6.1.1.ebuild,v 1.3 2012/08/05 15:03:02 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/cpl/cpl-6.1.1.ebuild,v 1.4 2012/09/06 16:34:35 bicatali Exp $
 
 EAPI=4
 
@@ -19,11 +19,13 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 
 IUSE="doc gasgano static-libs threads"
 
-RDEPEND=">=sci-libs/cfitsio-3.270
+RDEPEND="
 	>=sci-astronomy/wcslib-4.8.4
+	>=sci-libs/cfitsio-3.270
 	>=sci-libs/fftw-3.1.2
 	gasgano? ( sci-astronomy/gasgano )"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	doc? ( app-doc/doxygen )"
 
 PATCHES=(
 	"${FILESDIR}"/${P}-check-shared-libs.patch
@@ -41,6 +43,7 @@ src_configure() {
 		--htmldir="${EPREFIX}/usr/share/doc/${PF}/html"
 		--disable-ltdl-install
 		--without-included-ltdl
+		$(use_enable doc maintainer-mode)
 		$(use_enable threads)
 	)
 	if use gasgano; then
@@ -54,6 +57,10 @@ src_configure() {
 		myeconfargs+=( --disable-gasgano )
 	fi
 	autotools-utils_src_configure
+}
+
+src_compile() {
+	autotools-utils_src_compile all $(use doc && echo html)
 }
 
 src_install() {
