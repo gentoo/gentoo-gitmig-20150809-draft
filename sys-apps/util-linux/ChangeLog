@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.394 2012/08/22 02:39:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.395 2012/09/06 16:40:54 vapier Exp $
+
+*util-linux-2.22 (06 Sep 2012)
+
+  06 Sep 2012; Mike Frysinger <vapier@gentoo.org> +util-linux-2.22.ebuild,
+  util-linux-9999.ebuild:
+  Version bump.  We now provide eject and sulogin/utmpdump (from sysvinit).  We
+  still get su/login from shadow though.
 
   22 Aug 2012; Mike Frysinger <vapier@gentoo.org> util-linux-2.21.1.ebuild,
   util-linux-2.21.2.ebuild, util-linux-2.21.ebuild, util-linux-9999.ebuild:
