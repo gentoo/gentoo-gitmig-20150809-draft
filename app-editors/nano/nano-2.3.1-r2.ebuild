@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-2.3.1-r2.ebuild,v 1.1 2012/08/26 03:24:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-2.3.1-r2.ebuild,v 1.2 2012/09/06 19:56:00 vapier Exp $
 
 EAPI="3"
 
@@ -56,7 +56,7 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	rm -r "${ED}"/usr/share/nano/man-html || die
+	rm -rf "${ED}"/usr/share/nano/man-html
 
 	dodoc ChangeLog README doc/nanorc.sample AUTHORS BUGS NEWS TODO
 	dohtml doc/faq.html
