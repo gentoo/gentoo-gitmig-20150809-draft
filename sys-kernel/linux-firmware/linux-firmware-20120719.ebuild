@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/linux-firmware-20120719.ebuild,v 1.3 2012/08/18 20:15:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/linux-firmware-20120719.ebuild,v 1.4 2012/09/06 15:59:14 ago Exp $
 
 EAPI=4
 inherit savedconfig
@@ -17,7 +17,7 @@ DESCRIPTION="Linux firmware files"
 HOMEPAGE="http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git"
 
 LICENSE="GPL-1 GPL-2 GPL-3 BSD freedist"
-KEYWORDS="~amd64 ~arm ~ia64 ~x86"
+KEYWORDS="amd64 ~arm ~ia64 ~x86"
 SLOT="0"
 IUSE="savedconfig"
 
