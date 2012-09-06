@@ -1,6 +1,9 @@
 # ChangeLog for virtual/glu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/glu/ChangeLog,v 1.18 2012/05/10 18:26:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/glu/ChangeLog,v 1.19 2012/09/06 17:10:45 scarabeus Exp $
+
+  06 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> glu-7.0.ebuild:
+  Pull media-libs/glu as glu provider here.
 
   10 May 2012; Alexis Ballier <aballier@gentoo.org> glu-7.0.ebuild:
   keyword ~amd64-fbsd
@@ -56,4 +59,3 @@
   13 May 2006; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml,
   +glu-6.8.ebuild, +glu-7.0.ebuild:
   Add another X11 new-style virtual, for the OpenGL utility library.
-
