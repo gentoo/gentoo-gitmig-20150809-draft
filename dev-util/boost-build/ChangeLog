@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/boost-build
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.101 2012/09/05 22:36:58 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.102 2012/09/06 13:36:10 blueness Exp $
+
+  06 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
+  boost-build-1.49.0.ebuild:
+  Stable ppc, bug #425354
 
   05 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
   boost-build-1.49.0.ebuild:
