@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/postgrey
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.74 2012/06/05 00:03:02 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.75 2012/09/06 17:38:25 qnikst Exp $
+
+*postgrey-1.34-r1 (06 Sep 2012)
+
+  06 Sep 2012; Alexander Vershilov <qnikst@gentoo.org>
+  +files/targrey-0.31-postgrey-1.34.patch, +postgrey-1.34-r1.ebuild,
+  metadata.xml:
+  mail-filter/postgrey add targrey patch, thanks to slepnoga
 
   05 Jun 2012; Zac Medico <zmedico@gentoo.org> postgrey-1.34.ebuild:
   inherit user for enewgroup and enewuser
@@ -316,4 +323,3 @@
   28 Apr 2005; Andrej Kacian <ticho@gentoo.org> +files/postgrey.conf,
   +files/postgrey.rc, +metadata.xml, +postgrey-1.21.ebuild:
   Initial import. Ebuild provided by steveb <tp22a@softhome.net>, bug #59691.
-
