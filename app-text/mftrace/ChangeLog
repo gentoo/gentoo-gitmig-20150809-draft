@@ -1,6 +1,9 @@
 # ChangeLog for app-text/mftrace
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.68 2012/03/25 07:42:25 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.69 2012/09/06 14:34:07 blueness Exp $
+
+  06 Sep 2012; Anthony G. Basile <blueness@gentoo.org> mftrace-1.2.18.ebuild:
+  Stable ppc, bug #433890
 
   25 Mar 2012; Tim Harder <radhermit@gentoo.org> -mftrace-1.2.13.ebuild,
   -mftrace-1.2.13-r1.ebuild, -files/mftrace-1.2.13-python-2.6.patch,
