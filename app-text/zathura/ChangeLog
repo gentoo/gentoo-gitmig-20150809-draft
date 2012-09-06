@@ -1,6 +1,10 @@
 # ChangeLog for app-text/zathura
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/ChangeLog,v 1.38 2012/09/03 18:43:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/ChangeLog,v 1.39 2012/09/06 17:42:21 ssuominen Exp $
+
+  06 Sep 2012; Samuli Suominen <ssuominen@gentoo.org> zathura-0.2.1.ebuild:
+  Remove 0 byte manpages in src_prepare() for rst2man.py to generate them again
+  wrt #434140 by José Romildo Malaquias
 
 *zathura-0.2.1 (03 Sep 2012)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/zathura-0.2.1.ebuild,v 1.1 2012/09/03 18:43:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/zathura-0.2.1.ebuild,v 1.2 2012/09/06 17:42:21 ssuominen Exp $
 
 EAPI=4
 inherit eutils multilib toolchain-funcs
@@ -28,12 +28,18 @@ pkg_setup() {
 		ZATHURA_GTK_VERSION=2
 		WITH_SQLITE=$(usex sqlite 1 0)
 		LIBDIR='${PREFIX}'/$(get_libdir)
-		RSTTOMAN="$(type -P rst2man.py || echo true)"
+		RSTTOMAN="$(use doc && type -P rst2man.py)"
 		CC="$(tc-getCC)"
 		SFLAGS=""
 		VERBOSE=1
 		DESTDIR="${D}"
 		)
+}
+
+src_prepare() {
+	# http://bugs.pwmt.org/msg816
+	# these are 0 byte files in dist tarball wrt #434140
+	rm *.{1,5}
 }
 
 src_compile() {
@@ -43,7 +49,4 @@ src_compile() {
 src_install() {
 	emake "${myzathuraconf[@]}" install
 	dodoc AUTHORS
-
-	# For rst2man.py and type -P hack in pkg_setup()
-	use doc || rm -rf "${ED}"/usr/share/man
 }
