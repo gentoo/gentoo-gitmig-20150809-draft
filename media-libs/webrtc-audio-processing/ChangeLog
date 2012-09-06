@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/webrtc-audio-processing
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/webrtc-audio-processing/ChangeLog,v 1.2 2012/04/23 07:41:13 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/webrtc-audio-processing/ChangeLog,v 1.3 2012/09/06 12:00:42 ssuominen Exp $
+
+  06 Sep 2012; Samuli Suominen <ssuominen@gentoo.org>
+  webrtc-audio-processing-0.1.ebuild:
+  Introduce USE="static-libs" and prune_libtool_files from eutils.eclass.
 
   23 Apr 2012; Benda Xu <heroxbd@gentoo.org> webrtc-audio-processing-0.1.ebuild:
   keyword amd64-linux. bug #412819
