@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.32.4.ebuild,v 1.1 2012/07/16 04:27:23 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.32.4.ebuild,v 1.2 2012/09/06 19:43:26 vapier Exp $
 
 EAPI="4"
 PYTHON_DEPEND="utils? 2"
@@ -62,15 +62,6 @@ pkg_setup() {
 
 src_prepare() {
 	mv -vf "${WORKDIR}"/pkg-config-*/pkg.m4 "${WORKDIR}"/ || die
-
-	if use ia64 ; then
-		# Only apply for < 4.1
-		local major=$(gcc-major-version)
-		local minor=$(gcc-minor-version)
-		if (( major < 4 || ( major == 4 && minor == 0 ) )); then
-			epatch "${FILESDIR}/glib-2.10.3-ia64-atomic-ops.patch"
-		fi
-	fi
 
 	# Fix gmodule issues on fbsd; bug #184301
 	epatch "${FILESDIR}"/${PN}-2.12.12-fbsd.patch
