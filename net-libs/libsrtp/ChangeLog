@@ -1,6 +1,15 @@
 # ChangeLog for net-libs/libsrtp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsrtp/ChangeLog,v 1.16 2012/05/20 12:12:28 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsrtp/ChangeLog,v 1.17 2012/09/06 13:37:17 chainsaw Exp $
+
+*libsrtp-1.4.4-r2 (06 Sep 2012)
+
+  06 Sep 2012; Tony Vroon <chainsaw@gentoo.org> +libsrtp-1.4.4-r2.ebuild,
+  +files/libsrtp-1.4.4-invalid-index.patch:
+  Make compilation & installation of static libraries optional, closes bug
+  #378763 by Agostino "ago" Sarubbo. Patch scavenged by Matthias Nagl from
+  upstream tracker resolves a crash caused by an invalid index, closes bug
+  #409013.
 
   20 May 2012; Mark Loeser <halcy0n@gentoo.org> libsrtp-1.4.4-r1.ebuild:
   Stable for ppc64; bug #397617
