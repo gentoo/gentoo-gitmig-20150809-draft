@@ -5,9 +5,15 @@
 	<herd>apache</herd>
 	<maintainer>
 		<email>andreis.vinogradovs@gmail.com</email>
+		<name>Andreis Vinogradovs</name>
 	</maintainer>
 	<maintainer>
 		<email>maksbotan@gentoo.org</email>
 		<name>Maxim Koltsov</name>
 	</maintainer>
+	<maintainer>
+		<email>qnikst@gentoo.org</email>
+		<name>Alexander Vershilov</name>
+	</maintainer>
+
 </pkgmetadata>
