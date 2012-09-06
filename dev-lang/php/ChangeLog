@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.629 2012/09/04 14:47:24 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.630 2012/09/06 01:00:40 blueness Exp $
+
+  06 Sep 2012; Anthony G. Basile <blueness@gentoo.org> php-5.4.6.ebuild:
+  Stable ppc64
 
   04 Sep 2012; Christoph Junghans <ottxor@gentoo.org> php-5.4.6-r2.ebuild:
   added prefix support (bug #433842)
