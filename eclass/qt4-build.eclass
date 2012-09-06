@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.134 2012/07/10 21:43:19 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.135 2012/09/06 08:30:00 kensington Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -266,7 +266,13 @@ qt4-build_src_prepare() {
 		CXX='$(tc-getCXX)'\n\
 		CFLAGS='${CFLAGS}'\n\
 		CXXFLAGS='${CXXFLAGS}'\n\
-		LDFLAGS='${LDFLAGS}'\n" \
+		LDFLAGS='${LDFLAGS}'\n\
+		QMakeVar set QMAKE_CFLAGS_RELEASE\n\
+		QMakeVar set QMAKE_CFLAGS_DEBUG\n\
+		QMakeVar set QMAKE_CXXFLAGS_RELEASE\n\
+		QMakeVar set QMAKE_CXXFLAGS_DEBUG\n\
+		QMakeVar set QMAKE_LFLAGS_RELEASE\n\
+		QMakeVar set QMAKE_LFLAGS_DEBUG\n"\
 		-i configure \
 		|| die "sed SYSTEM_VARIABLES failed"
 

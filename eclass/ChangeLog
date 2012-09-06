@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.387 2012/09/04 14:08:24 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.388 2012/09/06 08:30:00 kensington Exp $
+
+  06 Sep 2012; Michael Palimaka <kensington@gentoo.org> qt4-build.eclass:
+  Improve respect for *FLAGS. Fixes part of bug #427782.
 
   04 Sep 2012; Johannes Huber <johu@gentoo.org> kde4-meta.eclass:
   Dont try to extract cmake/modules for kdegames > 4.9.0. Its removed from
