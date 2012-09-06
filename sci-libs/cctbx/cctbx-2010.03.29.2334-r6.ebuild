@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/cctbx-2010.03.29.2334-r6.ebuild,v 1.5 2012/06/19 14:59:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/cctbx-2010.03.29.2334-r6.ebuild,v 1.6 2012/09/06 09:32:54 jlec Exp $
 
 EAPI="3"
 
@@ -28,7 +28,7 @@ RDEPEND="
 		sci-chemistry/cns
 		sci-chemistry/shelx )"
 DEPEND="${RDEPEND}
-	>=dev-util/scons-1.2"
+	!prefix? ( >=dev-util/scons-1.2 )"
 
 S="${WORKDIR}"
 MY_S="${WORKDIR}"/cctbx_sources
@@ -60,14 +60,17 @@ src_prepare() {
 
 	eprefixify "${MY_S}"/scitbx/libtbx_refresh.py
 
-	rm -rf "${MY_S}/scons" "${MY_S}/boost" "${MY_S}/PyCifRW" || die
+	rm -rf "${MY_S}/boost" "${MY_S}/PyCifRW" || die
+	if ! use prefix; then
+		rm -rvf "${MY_S}/scons"
+		echo "import os, sys; os.execvp('scons', sys.argv)" > "${MY_S}"/libtbx/command_line/scons.py
+	fi
+
 	find "${MY_S}/clipper" -name "*.h" -delete || die
 
 	sed \
 		-e "/LIBS/s:boost_python:boost_python-${PYTHON_ABI}:g" \
 		-i "${MY_S}"/boost_adaptbx/SConscript "${MY_S}"/scitbx/boost_python/SConscript || die
-
-	echo "import os, sys; os.execvp('scons', sys.argv)" > "${MY_S}"/libtbx/command_line/scons.py
 }
 
 src_configure() {

@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cctbx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/ChangeLog,v 1.27 2012/08/26 09:55:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/ChangeLog,v 1.28 2012/09/06 09:32:54 jlec Exp $
+
+  06 Sep 2012; Justin Lecher <jlec@gentoo.org> cctbx-2010.03.29.2334-r6.ebuild:
+  Use bundled scons on prefix, #391377
 
   26 Aug 2012; Justin Lecher <jlec@gentoo.org>
   -cctbx-2010.03.29.2334-r3.ebuild, -cctbx-2010.03.29.2334-r4.ebuild,
