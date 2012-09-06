@@ -1,36 +1,42 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/subtitler-yuv/subtitler-yuv-0.6.5.ebuild,v 1.4 2010/07/21 00:01:16 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/subtitler-yuv/subtitler-yuv-0.6.5.ebuild,v 1.5 2012/09/06 13:03:41 ssuominen Exp $
 
-EAPI="2"
-
+EAPI=4
 inherit toolchain-funcs
 
 DESCRIPTION="for mjpegtools for adding subtitles, pictures, and effects embedded in the picture"
-HOMEPAGE="http://home.zonnet.nl/panteltje/subtitles/"
-#SRC_URI="http://home.zonnet.nl/panteltje/subtitles/${P}.tgz"
-# using ibibio mirror as the webpage itself seems to be offline at the moment
-SRC_URI="http://www.ibiblio.org/pub/linux/apps/video/subtitler-yuv-0.6.5.tgz"
+HOMEPAGE="http://panteltje.com/panteltje/subtitles/"
+SRC_URI="mirror://gentoo/${P}.tgz"
+
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
-DEPEND="x11-libs/libXaw"
-RDEPEND="${DEPEND}"
+
+RDEPEND="x11-libs/libX11
+	x11-libs/libXaw
+	x11-libs/libXt"
+DEPEND="${RDEPEND}"
 
 src_prepare() {
-	sed -i -e 's:/usr/X11R6:/usr:' \
-		-e 's:gcc:$(CC):g' \
-		Makefile || die "sed failed in Makefile"
+	sed -i \
+		-e '/^CFLAGS/s:= -O2:+=:' \
+		-e '/CFLAGS/s:gcc:$(CC):' \
+		-e 's:gcc -o:$(CC) $(LDFLAGS) -o:' \
+		-e 's:-L/usr/X11R6/lib/::' \
+		-e 's:-lXpm:-lX11:' \
+		Makefile || die
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die "emake failed"
+	tc-export CC
+	emake
 }
 
 src_install() {
-	dobin subtitler-yuv
-	dodoc CHANGES HOWTO_USE_THIS README README.COLOR.PROCESSOR README.PPML
+	dobin ${PN}
+	dodoc CHANGES HOWTO_USE_THIS README*
 	insinto /usr/share/${PN}
-	doins demo-yuv.ppml rose.ppm sun.ppm mp-arial-iso-8859-1.zip
+	doins *.{ppm,ppml,zip}
 }
