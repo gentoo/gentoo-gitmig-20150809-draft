@@ -1,6 +1,9 @@
 # ChangeLog for virtual/httpd-php
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/httpd-php/ChangeLog,v 1.22 2012/09/05 14:58:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/httpd-php/ChangeLog,v 1.23 2012/09/06 09:22:22 chainsaw Exp $
+
+  06 Sep 2012; Tony Vroon <chainsaw@gentoo.org> httpd-php-5.4-r1.ebuild:
+  Marked stable on AMD64 as requested by David Flogeras in bug #432994.
 
   05 Sep 2012; Jeroen Roovers <jer@gentoo.org> httpd-php-5.4-r1.ebuild:
   Stable for HPPA (bug #432994).
