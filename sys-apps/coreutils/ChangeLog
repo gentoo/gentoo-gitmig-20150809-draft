@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.347 2012/08/23 21:08:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.348 2012/09/06 18:49:24 vapier Exp $
+
+  06 Sep 2012; Mike Frysinger <vapier@gentoo.org> coreutils-8.16.ebuild:
+  Hack the glibc-2.16/gets issue to current stable (already fixed in newer
+  versions).
 
   23 Aug 2012; Markus Meier <maekke@gentoo.org> coreutils-8.16.ebuild:
   arm stable, bug #431722

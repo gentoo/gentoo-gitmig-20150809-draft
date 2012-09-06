@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-8.16.ebuild,v 1.6 2012/08/23 21:08:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-8.16.ebuild,v 1.7 2012/09/06 18:49:24 vapier Exp $
 
 EAPI="3"
 
@@ -44,6 +44,9 @@ src_prepare() {
 		PATCHDIR="${WORKDIR}/patch" \
 		EPATCH_EXCLUDE="001_all_coreutils-gen-progress-bar.patch" \
 		epatch
+
+		# This is fixed in newer versions -- this hack is for stable.
+		sed -i '/_GL_WARN_ON_USE.*gets,/d' lib/stdio.in.h || die
 	fi
 
 	# Since we've patched many .c files, the make process will try to
