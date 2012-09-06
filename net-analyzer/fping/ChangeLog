@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/fping
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.52 2012/09/05 15:58:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.53 2012/09/06 01:34:15 blueness Exp $
+
+  06 Sep 2012; Anthony G. Basile <blueness@gentoo.org> fping-3.4.ebuild:
+  Keyword ~arm
 
 *fping-3.4 (05 Sep 2012)
 
