@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack-tools/conntrack-tools-1.2.2-r1.ebuild,v 1.1 2012/09/06 14:36:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack-tools/conntrack-tools-1.2.2-r1.ebuild,v 1.2 2012/09/06 15:33:01 jer Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.netfilter.org/projects/conntrack-tools/files/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~x86"
-IUSE=""
+IUSE="doc"
 
 RDEPEND="
 	>=net-libs/libnetfilter_conntrack-1.0.1
@@ -21,6 +21,7 @@ RDEPEND="
 	>=net-libs/libnfnetlink-1.0.0
 	net-libs/libmnl"
 DEPEND="${RDEPEND}
+	doc? ( app-text/xmlto )
 	virtual/pkgconfig
 	sys-devel/bison
 	sys-devel/flex"
@@ -50,6 +51,11 @@ pkg_setup() {
 			"are not set when one at least should be."
 }
 
+src_compile() {
+	default
+	use doc && emake -C doc/manual
+}
+
 src_install() {
 	default
 
@@ -59,6 +65,6 @@ src_install() {
 	insinto /etc/conntrackd
 	doins doc/stats/conntrackd.conf
 
-	insinto /usr/share/doc/${PF}
-	doins -r doc/*
+	dodoc -r doc/sync doc/stats AUTHORS TODO
+	use doc && dohtml doc/manual/${PN}.html
 }
