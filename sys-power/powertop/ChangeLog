@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/powertop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.56 2012/09/06 17:29:40 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.57 2012/09/06 17:42:25 zerochaos Exp $
+
+  06 Sep 2012; Rick Farina <zerochaos@gentoo.org> powertop-2.1.ebuild:
+  refactor deps a big based on feedback from hasufell. likely more things can be
+  moved out of depend as well
 
   06 Sep 2012; Rick Farina <zerochaos@gentoo.org> powertop-2.1.ebuild:
   address dep issues, missing pkgconfig and libnl:3 requires slot
