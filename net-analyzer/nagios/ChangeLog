@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.109 2012/08/19 15:27:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.110 2012/09/06 01:47:06 blueness Exp $
+
+  05 Sep 2012; Anthony G. Basile <blueness@gentoo.org> nagios-3.3.1.ebuild:
+  Keyword ~arm, bug #389113
 
   19 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Re-assign to sysadmin herd.
