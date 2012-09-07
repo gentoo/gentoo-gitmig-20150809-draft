@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-21.0.1180.89_p154005.ebuild,v 1.1 2012/08/31 15:55:53 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-21.0.1180.89_p154005.ebuild,v 1.2 2012/09/07 16:46:08 floppym Exp $
 
 EAPI="4"
 
@@ -83,6 +83,12 @@ done
 
 QA_PREBUILT="*"
 S=${WORKDIR}
+
+pkg_nofetch() {
+	eerror "Please do not report bugs for google-chrome fetch failures."
+	eerror "The problem will be resolved with the next version bump."
+	eerror "Sync your portage tree and try again."
+}
 
 pkg_setup() {
 	CHROME_HOME="opt/google/chrome/"
