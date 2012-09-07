@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/entangle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/entangle/ChangeLog,v 1.2 2012/07/12 15:27:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/entangle/ChangeLog,v 1.3 2012/09/07 11:02:49 xarthisius Exp $
+
+  07 Sep 2012; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
+  Use proper herd
 
   12 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> entangle-0.4.0.ebuild:
   Fix dependency over Gtk+ to require at least version 3.3.18 (which introduced
