@@ -1,6 +1,13 @@
 # ChangeLog for x11-apps/fusion-icon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/fusion-icon/ChangeLog,v 1.13 2012/08/31 11:39:48 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/fusion-icon/ChangeLog,v 1.14 2012/09/07 08:25:35 pinkbyte Exp $
+
+*fusion-icon-0.1-r3 (07 Sep 2012)
+
+  07 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> +fusion-icon-0.1-r3.ebuild,
+  +files/fusion-icon-0.1-qt4-interface-subprocess-call.patch:
+  Revision bump. Add patch which uses subprocess call routine in qt4 interface
+  for newer Python
 
   31 Aug 2012; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
   Remove myself and proxy maintainer from maintainers
