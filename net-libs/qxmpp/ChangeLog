@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/qxmpp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/qxmpp/ChangeLog,v 1.18 2012/09/07 10:41:39 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/qxmpp/ChangeLog,v 1.19 2012/09/07 10:42:58 pinkbyte Exp $
+
+*qxmpp-0.7.3 (07 Sep 2012)
+
+  07 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> +qxmpp-0.7.3.ebuild:
+  Version bump
 
   07 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> qxmpp-9999.ebuild:
   Bump live ebuild to EAPI 4
