@@ -1,11 +1,16 @@
 # ChangeLog for dev-python/cssutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cssutils/ChangeLog,v 1.24 2012/05/29 11:23:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cssutils/ChangeLog,v 1.25 2012/09/07 12:54:58 lordvan Exp $
 
  05 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> cssutils-0.9.9.ebuild,
  -cssutils-0.9.7.ebuild:
  Stable on amd64 x86 and ppc wrt bug#414633.
- 
+
+*cssutils-0.9.10_beta1 (07 Sep 2012)
+
+  07 Sep 2012; <lordvan@gentoo.org> +cssutils-0.9.10_beta1.ebuild:
+  new version. fixes bug #416513
+
 *cssutils-0.9.9 (02 Mar 2012)
 
   02 Mar 2012; Dirkjan Ochtman <djc@gentoo.org> +cssutils-0.9.9.ebuild:
