@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/egroupware
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.101 2012/09/07 11:23:58 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.102 2012/09/07 15:46:31 ago Exp $
+
+  07 Sep 2012; Agostino Sarubbo <ago@gentoo.org>
+  egroupware-1.8.004.20120613.ebuild:
+  Stable for amd64, wrt bug #434040
 
   07 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
   egroupware-1.8.004.20120613.ebuild:
