@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/dbmail
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/ChangeLog,v 1.43 2011/07/15 21:08:51 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/ChangeLog,v 1.44 2012/09/07 12:37:47 lordvan Exp $
+
+*dbmail-3.0.2 (07 Sep 2012)
+
+  07 Sep 2012; <lordvan@gentoo.org> +dbmail-3.0.2.ebuild:
+  new stable release added (from my overlay) fixes bug #404355
 
   15 Jul 2011; Markus Meier <maekke@gentoo.org> dbmail-2.2.17.ebuild:
   x86 stable, bug #373503
