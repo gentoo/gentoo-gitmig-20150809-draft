@@ -42,3 +42,4 @@ move net-analyzer/nagios-nsca net-analyzer/nsca
 move net-analyzer/nagios-nrpe net-analyzer/nrpe
 move dev-ruby/ruby-dbi dev-ruby/dbi
 move app-arch/TheUnarchiver app-arch/unar
+slotmove =media-libs/gst-plugins-bad-0.10* 0 0.10
