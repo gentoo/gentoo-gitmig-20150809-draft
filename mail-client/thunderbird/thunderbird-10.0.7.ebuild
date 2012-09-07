@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-10.0.7.ebuild,v 1.1 2012/09/01 23:29:58 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-10.0.7.ebuild,v 1.2 2012/09/07 23:40:24 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -115,7 +115,9 @@ src_prepare() {
 
 	# Apply our patchset from firefox to thunderbird as well
 	pushd "${S}"/mozilla &>/dev/null || die
-	EPATCH_EXCLUDE="6012_fix_shlibsign.patch 6013_fix_abort_declaration.patch" \
+	EPATCH_EXCLUDE="5005_use_resource_urls_appropriately.patch
+		6012_fix_shlibsign.patch
+		6013_fix_abort_declaration.patch" \
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}/firefox"
