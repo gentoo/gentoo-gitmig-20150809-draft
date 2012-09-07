@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.897 2012/09/02 00:58:19 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.898 2012/09/07 15:50:06 jer Exp $
+
+  07 Sep 2012; Jeroen Roovers <jer@gentoo.org> gcc-4.4.7.ebuild,
+  gcc-4.5.4.ebuild:
+  Stable for HPPA (bug #431878).
 
   02 Sep 2012; Michael Weber <xmw@gentoo.org> gcc-4.4.7.ebuild,
   gcc-4.5.4.ebuild:
