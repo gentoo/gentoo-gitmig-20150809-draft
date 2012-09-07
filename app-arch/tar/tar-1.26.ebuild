@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.26.ebuild,v 1.10 2012/05/22 22:17:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.26.ebuild,v 1.11 2012/09/07 18:07:26 vapier Exp $
 
 EAPI="3"
 
@@ -21,6 +21,7 @@ DEPEND="${RDEPEND}
 	nls? ( >=sys-devel/gettext-0.10.35 )"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-no-gets.patch
 	if ! use userland_GNU ; then
 		sed -i \
 			-e 's:/backup\.sh:/gbackup.sh:' \
