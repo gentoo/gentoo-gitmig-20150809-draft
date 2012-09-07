@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/sslscan
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sslscan/ChangeLog,v 1.5 2012/08/07 07:20:31 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sslscan/ChangeLog,v 1.6 2012/09/07 10:57:37 xarthisius Exp $
+
+  07 Sep 2012; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
+  Drop empy herd tag
 
   07 Aug 2012; Hans de Graaff <graaff@gentoo.org>
   files/sslscan-1.8.2-makefile.patch:
@@ -23,4 +26,3 @@
   08 May 2012; Hans de Graaff <graaff@gentoo.org> +sslscan-1.8.2.ebuild,
   +metadata.xml:
   Initial import. Moved here from overlay graaff.
-
