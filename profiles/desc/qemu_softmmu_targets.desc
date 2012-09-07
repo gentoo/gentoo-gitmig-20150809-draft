@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/qemu_softmmu_targets.desc,v 1.4 2012/01/22 10:19:01 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/qemu_softmmu_targets.desc,v 1.5 2012/09/07 10:43:12 slyfox Exp $
 
 # This file contains descriptions of QEMU_SOFTMMU_TARGETS USE_EXPAND flags.
 
@@ -18,6 +18,7 @@ mips64el - system emulation target
 mips64 - system emulation target
 mipsel - system emulation target
 mips - system emulation target
+or32 - OpenRISC system emulation target
 ppc64 - system emulation target
 ppcemb - system emulation target
 ppc - system emulation target
@@ -26,6 +27,7 @@ sh4eb - system emulation target
 sh4 - system emulation target
 sparc - system emulation target
 sparc64 - system emulation target
+unicore32 - system emulation target
 x86_64 - system emulation target
 xtensaeb - system emulation target
 xtensa - system emulation target

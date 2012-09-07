@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6944 2012/09/06 07:49:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6945 2012/09/07 10:43:12 slyfox Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Sep 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  desc/qemu_softmmu_targets.desc, desc/qemu_user_targets.desc:
+  Added unicore32 and or32 (OpenRISC) as new qemu targets.
 
   06 Sep 2012; Michał Górny <mgorny@gentoo.org> package.mask:
   Unmask OpenCL-capable llvm & clang, the issue has been resolved.

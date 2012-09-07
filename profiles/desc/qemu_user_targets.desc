@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/qemu_user_targets.desc,v 1.3 2012/01/21 12:55:12 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/qemu_user_targets.desc,v 1.4 2012/09/07 10:43:12 slyfox Exp $
 
 # This file contains descriptions of QEMU_SOFTMMU_TARGETS USE_EXPAND flags.
 
@@ -18,6 +18,7 @@ mips64el - userspace emulation target
 mips64 - userspace emulation target
 mipsel - userspace emulation target
 mips - userspace emulation target
+or32 - OpenRISC userspace emulation target
 ppc64abi32 - userspace emulation target
 ppc64 - userspace emulation target
 ppc - userspace emulation target
