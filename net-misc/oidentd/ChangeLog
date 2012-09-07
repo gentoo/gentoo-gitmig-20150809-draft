@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/oidentd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/ChangeLog,v 1.55 2012/09/02 22:53:56 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/ChangeLog,v 1.56 2012/09/07 14:40:54 jer Exp $
+
+  07 Sep 2012; Jeroen Roovers <jer@gentoo.org> oidentd-2.0.8-r4.ebuild:
+  Stable for HPPA (bug #433339).
 
   02 Sep 2012; Anthony G. Basile <blueness@gentoo.org> oidentd-2.0.8-r4.ebuild:
   Stable arm, bug #433339
