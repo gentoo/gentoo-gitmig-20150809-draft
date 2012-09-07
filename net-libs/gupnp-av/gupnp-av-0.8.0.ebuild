@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-av/gupnp-av-0.8.0.ebuild,v 1.4 2012/05/05 02:54:26 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-av/gupnp-av-0.8.0.ebuild,v 1.5 2012/09/07 23:47:55 ago Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ SRC_URI="http://gupnp.org/sites/all/files/sources/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="+introspection"
 
 RDEPEND=">=dev-libs/glib-2.16:2
