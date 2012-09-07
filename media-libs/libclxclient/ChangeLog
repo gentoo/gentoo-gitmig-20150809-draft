@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libclxclient
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libclxclient/ChangeLog,v 1.14 2009/01/25 14:55:17 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libclxclient/ChangeLog,v 1.15 2012/09/07 22:38:10 radhermit Exp $
+
+  07 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove redundant maintainer from metadata.
 
   25 Jan 2009; Markus Meier <maekke@gentoo.org> libclxclient-3.3.2.ebuild:
   amd64/x86 stable, bug #256042

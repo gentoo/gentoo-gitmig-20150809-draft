@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libclthreads
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libclthreads/ChangeLog,v 1.12 2009/01/25 14:54:35 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libclthreads/ChangeLog,v 1.13 2012/09/07 22:39:55 radhermit Exp $
+
+  07 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove redundant maintainer from metadata.
 
   25 Jan 2009; Markus Meier <maekke@gentoo.org> libclthreads-2.2.1.ebuild:
   amd64/x86 stable, bug #256042
