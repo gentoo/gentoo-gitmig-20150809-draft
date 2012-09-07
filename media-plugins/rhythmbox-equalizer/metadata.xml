@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>sound</herd>
-<maintainer>
-  <email>sound@gentoo.org</email>
-</maintainer>
 <longdescription>
   A real-time 10 band graphic equalizer for rhythmbox.
 </longdescription>
