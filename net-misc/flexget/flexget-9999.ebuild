@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-9999.ebuild,v 1.22 2012/09/07 19:22:43 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-9999.ebuild,v 1.23 2012/09/07 21:59:43 floppym Exp $
 
 EAPI=4
 
@@ -43,7 +43,7 @@ DEPEND="
 	dev-python/flask
 	dev-python/cherrypy
 	dev-python/python-dateutil
-	>=dev-python/requests-0.14.0
+	=dev-python/requests-0.14*
 	|| ( dev-lang/python:2.7 dev-python/argparse )
 	dev-python/setuptools
 "
@@ -62,7 +62,6 @@ src_prepare() {
 		-e '/SQLAlchemy/s/, <0.8//' \
 		-e '/BeautifulSoup/s/, <3.3//' \
 		-e '/beautifulsoup4/s/, <4.2//' \
-		-e '/requests/s/, <0.15//' \
 		-i pavement.py || die
 
 	if [[ ${PV} == 9999 ]]; then
