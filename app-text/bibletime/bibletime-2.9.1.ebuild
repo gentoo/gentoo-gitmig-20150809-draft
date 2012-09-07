@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-2.9.1.ebuild,v 1.1 2012/09/04 13:32:55 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-2.9.1.ebuild,v 1.2 2012/09/07 09:53:09 johu Exp $
 
 EAPI=4
 inherit cmake-utils
@@ -37,8 +37,6 @@ DOCS=( ChangeLog README )
 src_prepare() {
 	sed -e "s:Dictionary;Qt:Dictionary;Office;TextTools;Utility;Qt;:" \
 	    -i cmake/platforms/linux/bibletime.desktop.cmake || die "fixing .desktop file failed"
-
-	cmake-utils_src_prepare
 }
 
 src_configure() {
