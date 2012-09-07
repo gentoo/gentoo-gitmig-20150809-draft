@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-189-r1.ebuild,v 1.1 2012/09/03 21:50:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-189-r1.ebuild,v 1.2 2012/09/07 21:27:54 mgorny Exp $
 
 EAPI=4
 
@@ -14,9 +14,6 @@ LICENSE="GPL-2 LGPL-2.1 MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
 IUSE="acl audit cryptsetup gcrypt lzma pam qrcode selinux tcpd"
-
-# We need to depend on sysvinit for sulogin which is used in the rescue
-# mode. Bug #399615.
 
 MINKV="2.6.39"
 
@@ -35,10 +32,12 @@ COMMON_DEPEND=">=sys-apps/dbus-1.4.10
 	selinux? ( sys-libs/libselinux )
 	tcpd? ( sys-apps/tcp-wrappers )"
 
-# sysvinit for sulogin
 RDEPEND="${COMMON_DEPEND}
 	sys-apps/hwids
-	sys-apps/sysvinit
+	|| (
+		>=sys-apps/util-linux-2.22
+		<sys-apps/sysvinit-2.88-r4
+	)
 	!<sys-libs/glibc-2.10
 	!~sys-fs/udev-187"
 DEPEND="${COMMON_DEPEND}
