@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/clucene
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/ChangeLog,v 1.46 2012/09/07 09:55:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/ChangeLog,v 1.47 2012/09/07 12:14:18 johu Exp $
+
+  07 Sep 2012; Johannes Huber <johu@gentoo.org> clucene-2.3.3.4-r3.ebuild:
+  Stable for x86, wrt bug #433812
 
   07 Sep 2012; Agostino Sarubbo <ago@gentoo.org> clucene-2.3.3.4-r3.ebuild:
   Stable for amd64, wrt bug #433812
