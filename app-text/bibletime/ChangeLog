@@ -1,6 +1,9 @@
 # ChangeLog for app-text/bibletime
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/ChangeLog,v 1.63 2012/09/07 09:53:09 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/ChangeLog,v 1.64 2012/09/07 09:56:51 ago Exp $
+
+  07 Sep 2012; Agostino Sarubbo <ago@gentoo.org> bibletime-2.9.1.ebuild:
+  Stable for amd64, wrt bug #434208
 
   07 Sep 2012; Johannes Huber <johu@gentoo.org> bibletime-2.9.1.ebuild:
   Dont call function that not exist by ago.
