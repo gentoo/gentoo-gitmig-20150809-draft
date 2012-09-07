@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/nzbget
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/ChangeLog,v 1.42 2012/06/17 08:34:42 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/ChangeLog,v 1.43 2012/09/07 23:51:10 ago Exp $
+
+  07 Sep 2012; Agostino Sarubbo <ago@gentoo.org> nzbget-0.8.0.ebuild:
+  Stable for amd64, wrt bug #433882
 
   17 Jun 2012; Tim Harder <radhermit@gentoo.org> nzbget-0.7.0.ebuild,
   nzbget-0.8.0.ebuild:
