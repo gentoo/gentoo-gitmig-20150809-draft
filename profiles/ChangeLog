@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6946 2012/09/07 13:41:47 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6947 2012/09/07 17:40:58 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Sep 2012; Ulrich Müller <ulm@gentoo.org> license_groups:
+  Remove some unused licenses.
 
   07 Sep 2012; Mart Raudsepp <leio@gentoo.org> updates/3Q-2012:
   slotmove media-libs/gst-plugins-bad to correct 0.10 slot as its split
