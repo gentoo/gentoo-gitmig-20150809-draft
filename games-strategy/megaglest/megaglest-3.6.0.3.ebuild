@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/megaglest-3.6.0.3.ebuild,v 1.3 2012/09/06 20:57:28 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/megaglest-3.6.0.3.ebuild,v 1.4 2012/09/07 20:03:40 hasufell Exp $
 
 EAPI=4
 inherit eutils flag-o-matic cmake-utils wxwidgets gnome2-utils games
@@ -28,7 +28,7 @@ RDEPEND="
 	virtual/glu
 	x11-libs/libX11
 	x11-libs/libXext
-	editor? ( x11-libs/wxGTK:2.8[X] )
+	editor? ( x11-libs/wxGTK:2.8[X,opengl] )
 	freetype? ( media-libs/freetype )
 	model-viewer? ( x11-libs/wxGTK:2.8[X] )
 	!static? (
