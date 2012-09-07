@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/ttysnoop
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ttysnoop/ChangeLog,v 1.1 2012/07/02 11:46:15 maksbotan Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ttysnoop/ChangeLog,v 1.2 2012/09/07 11:04:56 xarthisius Exp $
+
+  07 Sep 2012; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml,
+  ttysnoop-0.12d.ebuild:
+  Remove no-herd from metadata
 
 *ttysnoop-0.12d (21 Jul 2011)
 
@@ -9,4 +13,3 @@
   +files/ttysnoop-makefile.patch, +metadata.xml:
   Add ttysnoop-0.12d, #62397. Fixed some error from original ebuild and patched
   Makefile
-
