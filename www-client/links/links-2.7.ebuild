@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.7.ebuild,v 1.1 2012/06/26 14:20:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.7.ebuild,v 1.2 2012/09/07 09:51:00 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils fdo-mime
@@ -19,7 +19,10 @@ GRAPHICS_DEPEND=">=media-libs/libpng-1.2:0" #75685
 
 RDEPEND=">=sys-libs/ncurses-5.7-r7
 	bzip2? ( app-arch/bzip2 )
-	directfb? ( dev-libs/DirectFB )
+	directfb? (
+		${GRAPHICS_DEPEND}
+		dev-libs/DirectFB
+		)
 	fbcon? ( ${GRAPHICS_DEPEND} )
 	gpm? ( sys-libs/gpm )
 	jpeg? ( virtual/jpeg )
