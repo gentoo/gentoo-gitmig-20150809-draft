@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/install-mask/install-mask-0.0.2-r1.ebuild,v 1.1 2012/08/31 09:09:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/install-mask/install-mask-0.0.2-r1.ebuild,v 1.2 2012/09/07 10:47:31 mgorny Exp $
 
 EAPI=4
 PYTHON_COMPAT='python2_6 python2_7 python3_1 python3_2'
@@ -8,8 +8,8 @@ PYTHON_COMPAT='python2_6 python2_7 python3_1 python3_2'
 inherit base python-distutils-ng
 
 DESCRIPTION="Handle INSTALL_MASK setting in make.conf"
-HOMEPAGE="https://github.com/mgorny/install-mask/"
-SRC_URI="mirror://github/mgorny/${PN}/${P}.tar.bz2"
+HOMEPAGE="https://bitbucket.org/mgorny/install-mask/"
+SRC_URI="mirror://bitbucket/mgorny/${PN}/downloads/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
