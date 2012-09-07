@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.261 2012/09/06 13:37:44 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.262 2012/09/07 22:33:53 mgorny Exp $
+
+  07 Sep 2012; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Take some responsibility.
 
   06 Sep 2012; Anthony G. Basile <blueness@gentoo.org> boost-1.49.0-r1.ebuild:
   Stable ppc, bug #425354
