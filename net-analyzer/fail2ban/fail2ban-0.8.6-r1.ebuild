@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.6-r1.ebuild,v 1.1 2012/09/05 08:21:07 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.6-r1.ebuild,v 1.2 2012/09/07 12:01:41 pinkbyte Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 
-inherit distutils eutils
+inherit distutils eutils vcs-snapshot
 
 DESCRIPTION="Bans IP that make too many password failures"
 HOMEPAGE="http://www.fail2ban.org/"
@@ -22,8 +22,6 @@ RDEPEND="net-misc/whois
 	virtual/logger
 	net-firewall/iptables
 	selinux? ( sec-policy/selinux-fail2ban )"
-
-S="${WORKDIR}"/${PN}-${PN}-a20d1f8
 
 pkg_setup() {
 	python_set_active_version 2
