@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/inspircd-2.0.8.ebuild,v 1.2 2012/09/07 15:47:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/inspircd-2.0.8.ebuild,v 1.3 2012/09/07 17:31:55 nimiux Exp $
 
 EAPI=4
 
-inherit eutils flag-o-matic multilib
+inherit eutils flag-o-matic multilib toolchain-funcs
 
 DESCRIPTION="Inspire IRCd - The Stable, High-Performance Modular IRCd"
 HOMEPAGE="http://inspircd.github.com/"
@@ -58,26 +58,26 @@ src_configure() {
 	touch .force-root-ok || die
 
 	if [ -n "${extras}" ]; then
-		./configure --disable-interactive \
-			--enable-extras=${extras} || die
+		econf --disable-interactive --enable-extras=${extras}
 	fi
 
 	use !ssl && essl=""
 	use !gnutls && egnutls=""
 	use ipv6 && dipv6=""
 
-	./configure \
+	econf \
+		--with-cc="$(tc-getCXX)" \
 		--disable-interactive \
 		--prefix="/usr/$(get_libdir)/${PN}" \
 		--config-dir="/etc/${PN}" \
 		--binary-dir="/usr/bin" \
 		--module-dir="/usr/$(get_libdir)/${PN}/modules" \
-		${essl} ${egnutls} ${dipv6} || die
+		${essl} ${egnutls} ${dipv6}
 }
 
 src_compile() {
 	append-cxxflags -Iinclude -fPIC
-	emake LDFLAGS="${LDFLAGS}" CXXFLAGS="${CXXFLAGS}"
+	emake V=1 LDFLAGS="${LDFLAGS}" CXXFLAGS="${CXXFLAGS}"
 }
 
 src_install() {
