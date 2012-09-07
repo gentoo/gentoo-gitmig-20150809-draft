@@ -2,15 +2,12 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>sound</herd>
-  <maintainer>
-    <email>sound@gentoo.org</email>
-  </maintainer>
   <longdescription>
-The general idea of SDIF is to store information related to signal
-processing and specifically of sound, in files, according to a common
-format to all data types. Thus, it is possible to store results or
-parameters of analyses, syntheses...
-</longdescription>
+    The general idea of SDIF is to store information related to signal
+    processing and specifically of sound, in files, according to a common
+    format to all data types. Thus, it is possible to store results or
+    parameters of analyses, syntheses...
+  </longdescription>
   <use>
     <flag name="ftruncate">Enables usage of ftruncate v. truncate</flag>
   </use>
