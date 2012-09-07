@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/alsa-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.206 2012/04/01 15:14:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.207 2012/09/07 13:04:22 chainsaw Exp $
+
+*alsa-tools-1.0.26 (07 Sep 2012)
+
+  07 Sep 2012; Tony Vroon <chainsaw@gentoo.org> +alsa-tools-1.0.26.ebuild:
+  Version bump, as announced by Jaroslav Kysela on alsa-devel.
 
   01 Apr 2012; Raúl Porcel <armin76@gentoo.org> alsa-tools-1.0.25.ebuild:
   sparc stable wrt #406101
