@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/fusion-icon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/fusion-icon/ChangeLog,v 1.14 2012/09/07 08:25:35 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/fusion-icon/ChangeLog,v 1.15 2012/09/07 08:26:41 pinkbyte Exp $
+
+  07 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> fusion-icon-0.1-r2.ebuild,
+  fusion-icon-0.1-r3.ebuild:
+  Set proper homepage
 
 *fusion-icon-0.1-r3 (07 Sep 2012)
 
