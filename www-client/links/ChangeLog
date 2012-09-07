@@ -1,6 +1,9 @@
 # ChangeLog for www-client/links
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.179 2012/09/07 09:51:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.180 2012/09/07 15:44:10 ago Exp $
+
+  07 Sep 2012; Agostino Sarubbo <ago@gentoo.org> links-2.7.ebuild:
+  Stable for amd64, wrt bug #434210
 
   07 Sep 2012; Samuli Suominen <ssuominen@gentoo.org> links-2.7.ebuild:
   Missing ${GRAPHICS_DEPEND} dependency for USE="directfb" wrt #434194 by Tim
