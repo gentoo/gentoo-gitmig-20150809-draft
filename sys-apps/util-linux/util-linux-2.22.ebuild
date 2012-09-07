@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.22.ebuild,v 1.1 2012/09/06 16:40:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.22.ebuild,v 1.2 2012/09/07 04:23:04 vapier Exp $
 
 EAPI="3"
 
@@ -72,6 +72,7 @@ src_configure() {
 		--enable-fs-paths-extra=/usr/sbin \
 		$(use_enable nls) \
 		--enable-agetty \
+		$(use_enable perl chkdupexe) \
 		$(use_enable cramfs) \
 		$(use_enable ddate) \
 		$(use_enable old-linux elvtune) \
@@ -98,11 +99,6 @@ src_configure() {
 src_install() {
 	emake install DESTDIR="${D}" || die
 	dodoc AUTHORS NEWS README* Documentation/{TODO,*.txt}
-
-	if ! use perl ; then #284093
-		rm "${ED}"/usr/bin/chkdupexe || die
-		rm "${ED}"/usr/share/man/man1/chkdupexe.1 || die
-	fi
 
 	# need the libs in /
 	gen_usr_ldscript -a blkid mount uuid
