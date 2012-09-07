@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.157 2012/08/31 16:34:06 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.158 2012/09/07 10:46:07 slyfox Exp $
+
+  07 Sep 2012; Sergei Trofimovich <slyfox@gentoo.org> qemu-kvm-9999.ebuild:
+  Follow upstream removal of '--enable-kvm-device-assignment' switch. Add or32
+  (OpenRISC) user and softmmu targets. Disable libseccomp for now as in-tree
+  version is not compatible with current qemu.
 
   31 Aug 2012; Doug Goldstein <cardoe@gentoo.org> qemu-kvm-1.1.1-r1.ebuild,
   qemu-kvm-1.1.1-r3.ebuild, qemu-kvm-9999.ebuild:
