@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/keepalived
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.93 2012/07/11 09:37:59 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.94 2012/09/07 14:44:20 jer Exp $
+
+  07 Sep 2012; Jeroen Roovers <jer@gentoo.org> keepalived-1.2.2-r4.ebuild:
+  Stable for HPPA (bug #433361).
 
 *keepalived-1.2.2-r4 (11 Jul 2012)
 
