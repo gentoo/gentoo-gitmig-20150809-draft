@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/qsynth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/ChangeLog,v 1.56 2012/05/09 04:20:27 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/ChangeLog,v 1.57 2012/09/07 22:10:19 radhermit Exp $
+
+  07 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove redundant maintainer from metadata.
 
   09 May 2012; Ben de Groot <yngwin@gentoo.org> qsynth-0.3.6.ebuild:
   Apply patch by kensington which fixes bug #415049 (install failure when none

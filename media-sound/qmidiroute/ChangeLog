@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/qmidiroute
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmidiroute/ChangeLog,v 1.4 2009/12/27 00:05:46 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmidiroute/ChangeLog,v 1.5 2012/09/07 22:15:57 radhermit Exp $
+
+  07 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove redundant maintainer from metadata.
 
 *qmidiroute-0.3.0 (27 Dec 2009)
 

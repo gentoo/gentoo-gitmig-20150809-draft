@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gqradio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gqradio/ChangeLog,v 1.17 2012/05/05 08:27:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gqradio/ChangeLog,v 1.18 2012/09/07 22:19:40 radhermit Exp $
+
+  07 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove redundant maintainer from metadata.
 
   05 May 2012; Michał Górny <mgorny@gentoo.org> gqradio-1.9.2.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/darkice
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/ChangeLog,v 1.57 2011/12/13 16:28:27 beandog Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/ChangeLog,v 1.58 2012/09/07 22:13:07 radhermit Exp $
+
+  07 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove redundant maintainer from metadata.
 
 *darkice-1.1 (13 Dec 2011)
 

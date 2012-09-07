@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>sound</herd>
-	<maintainer>
-		<email>sound@gentoo.org</email>
-	</maintainer>
 	<longdescription>
 		GQradio interfaces with radio cards through the video4linux API.
 		Stations can be tuned manually, set to presets, or auto seek can find
