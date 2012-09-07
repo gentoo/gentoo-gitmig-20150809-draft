@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/icedtea-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/ChangeLog,v 1.26 2012/09/02 19:13:45 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/ChangeLog,v 1.27 2012/09/07 15:45:07 ago Exp $
+
+  07 Sep 2012; Agostino Sarubbo <ago@gentoo.org> icedtea-bin-6.1.11.4.ebuild:
+  Stable for amd64, wrt bug #433389
 
 *icedtea-bin-7.2.3.2 (02 Sep 2012)
 *icedtea-bin-6.1.11.4 (02 Sep 2012)
