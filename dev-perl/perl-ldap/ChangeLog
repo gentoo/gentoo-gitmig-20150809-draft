@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/perl-ldap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-ldap/ChangeLog,v 1.92 2012/09/02 18:51:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-ldap/ChangeLog,v 1.93 2012/09/07 09:00:43 tove Exp $
+
+*perl-ldap-0.460.0 (07 Sep 2012)
+
+  07 Sep 2012; Torsten Veller <tove@gentoo.org> +perl-ldap-0.460.0.ebuild:
+  Version bump
 
   02 Sep 2012; Raúl Porcel <armin76@gentoo.org> perl-ldap-0.440.0.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #418881
