@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/qxmpp/qxmpp-9999.ebuild,v 1.4 2012/09/04 16:37:47 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/qxmpp/qxmpp-9999.ebuild,v 1.5 2012/09/07 10:41:39 pinkbyte Exp $
 
-EAPI=3
+EAPI=4
 
 EGIT_REPO_URI="https://code.google.com/p/qxmpp"
 
@@ -17,8 +17,8 @@ KEYWORDS=""
 IUSE="debug"
 
 DEPEND="x11-libs/qt-core:4
-		x11-libs/qt-gui:4
-		media-libs/speex"
+	x11-libs/qt-gui:4
+	media-libs/speex"
 RDEPEND="${DEPEND}"
 
 src_configure(){
