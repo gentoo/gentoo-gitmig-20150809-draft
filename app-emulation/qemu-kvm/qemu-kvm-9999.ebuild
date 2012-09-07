@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.58 2012/09/07 10:46:07 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.59 2012/09/07 12:39:49 slyfox Exp $
 
 EAPI="4"
 
@@ -193,6 +193,7 @@ src_prepare() {
 
 	python_convert_shebangs -r 2 "${S}/scripts/kvm/kvm_stat"
 
+	epatch "${FILESDIR}"/${P}-fix-mipsen.patch
 	[[ -n ${BACKPORTS} ]] && \
 		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" \
 			epatch

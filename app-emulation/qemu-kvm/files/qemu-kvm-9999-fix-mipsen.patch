@@ -1,0 +1,18 @@
+Fixes link failure due to missing piix symbols.
+
+  LINK  mips-softmmu/qemu-system-mips
+hw/mips/../mips_malta.o: In function `mips_malta_init':
+mips_malta.c:(.text+0x2314): undefined reference to `piix4_pm_init'
+collect2: error: ld returned 1 exit status
+diff --git a/hw/mips/Makefile.objs b/hw/mips/Makefile.objs
+index 29a5d0d..89af0e9 100644
+--- a/hw/mips/Makefile.objs
++++ b/hw/mips/Makefile.objs
+@@ -1,6 +1,7 @@
+ obj-y = mips_r4k.o mips_jazz.o mips_malta.o mips_mipssim.o
+ obj-y += mips_addr.o mips_timer.o mips_int.o
+ obj-y += gt64xxx.o mc146818rtc.o
++obj-y += acpi.o acpi_piix4.o
+ obj-$(CONFIG_FULONG) += bonito.o vt82c686.o mips_fulong2e.o
+ 
+ obj-y := $(addprefix ../,$(obj-y))

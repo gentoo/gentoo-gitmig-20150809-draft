@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.158 2012/09/07 10:46:07 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.159 2012/09/07 12:39:49 slyfox Exp $
+
+  07 Sep 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/qemu-kvm-9999-fix-mipsen.patch, qemu-kvm-9999.ebuild:
+  Added build fix for mips*-softmmu targets.
 
   07 Sep 2012; Sergei Trofimovich <slyfox@gentoo.org> qemu-kvm-9999.ebuild:
   Follow upstream removal of '--enable-kvm-device-assignment' switch. Add or32
