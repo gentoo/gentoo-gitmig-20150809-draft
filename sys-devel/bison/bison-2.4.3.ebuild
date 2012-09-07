@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-2.4.3.ebuild,v 1.10 2011/08/17 03:43:40 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-2.4.3.ebuild,v 1.11 2012/09/07 20:08:49 vapier Exp $
 
 EAPI="2"
 
@@ -21,6 +21,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-uclibc-sched_param-def.patch
+	epatch "${FILESDIR}"/${P}-no-gets.patch
 }
 
 src_configure() {
