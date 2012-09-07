@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/leechcraft-full
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/ChangeLog,v 1.26 2012/08/13 14:04:36 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/ChangeLog,v 1.27 2012/09/07 12:22:33 pinkbyte Exp $
+
+  07 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> leechcraft-full-9999.ebuild:
+  Add net-misc/leechcraft-launchy and media-sound/leechcraft-hotstreams to
+  dependencies
 
 *leechcraft-full-0.5.80 (13 Aug 2012)
 
