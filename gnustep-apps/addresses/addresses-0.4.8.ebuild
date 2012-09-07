@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/addresses/addresses-0.4.8.ebuild,v 1.1 2012/07/25 12:15:27 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/addresses/addresses-0.4.8.ebuild,v 1.2 2012/09/07 23:49:07 ago Exp $
 
 EAPI=4
 inherit gnustep-2
@@ -11,7 +11,7 @@ SRC_URI="http://savannah.nongnu.org/download/gap/${P/a/A}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE=""
 
 S=${WORKDIR}/${P/a/A}
