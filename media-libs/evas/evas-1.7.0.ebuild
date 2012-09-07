@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/evas/evas-1.1.0.ebuild,v 1.1 2012/02/08 20:32:16 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/evas/evas-1.7.0.ebuild,v 1.1 2012/09/07 20:21:40 tommy Exp $
 
 EAPI=2
 
@@ -11,9 +11,9 @@ HOMEPAGE="http://trac.enlightenment.org/e/wiki/Evas"
 SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
 
 KEYWORDS="~amd64 ~x86"
-IUSE="altivec bidi +bmp directfb +eet fbcon +fontconfig gles gif +ico +jpeg mmx opengl +png +ppm +psd sdl sse svg static-libs tga +threads tiff X xcb xpm"
+IUSE="altivec bidi +bmp directfb +eet fbcon +fontconfig gles gif +ico +jpeg mmx opengl +png +ppm +psd sse sse3 svg static-libs tga +threads tiff X xcb xpm"
 
-RDEPEND=">=dev-libs/eina-1.0.0_beta
+RDEPEND=">=dev-libs/eina-1.7.0
 	>=media-libs/freetype-2.3.9
 	fontconfig? ( media-libs/fontconfig )
 	gles? ( media-libs/mesa[gallium,gles] )
@@ -22,7 +22,6 @@ RDEPEND=">=dev-libs/eina-1.0.0_beta
 	png? ( media-libs/libpng )
 	bidi? ( >=dev-libs/fribidi-0.19.1 )
 	directfb? ( >=dev-libs/DirectFB-0.9.16 )
-	sdl? ( media-libs/libsdl )
 	tiff? ( media-libs/tiff )
 	xpm? ( x11-libs/libXpm )
 	X? (
@@ -35,7 +34,7 @@ RDEPEND=">=dev-libs/eina-1.0.0_beta
 		xcb? (
 			x11-libs/xcb-util
 		) )
-	eet? ( >=dev-libs/eet-1.0.0_beta )
+	eet? ( >=dev-libs/eet-1.7.0 )
 	svg? (
 		>=gnome-base/librsvg-2.14.0
 		x11-libs/cairo
@@ -68,8 +67,6 @@ src_configure() {
 	fi
 
 	MY_ECONF+="
-		--disable-metric-cache
-		--disable-word-cache
 		$(use_enable altivec cpu-altivec)
 		$(use_enable bidi fribidi)
 		$(use_enable bmp image-loader-bmp)
@@ -89,15 +86,14 @@ src_configure() {
 		$(use_enable png image-loader-png)
 		$(use_enable ppm image-loader-pmaps)
 		$(use_enable psd image-loader-psd)
-		$(use_enable sdl software-sdl)
 		$(use_enable sse cpu-sse)
+		$(use_enable sse3 cpu-sse3)
 		$(use_enable svg image-loader-svg)
 		$(use_enable tga image-loader-tga)
 		$(use_enable tiff image-loader-tiff)
 		$(use_enable threads pthreads)
 		$(use_enable threads async-events)
 		$(use_enable threads async-preload)
-		$(use_enable threads async-render)
 		$(use_enable X software-xlib)
 		$(use_enable xpm image-loader-xpm)
 		--enable-evas-magic-debug \
@@ -129,6 +125,7 @@ src_configure() {
 		--enable-convert-32-rgb-rot-270 \
 		--enable-convert-32-rgb-rot-90 \
 		--enable-image-loader-generic \
+		--disable-harfbuzz \
 		--disable-image-loader-edb \
 		--disable-static-software-16 \
 		--disable-software-16-x11"

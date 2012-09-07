@@ -3,7 +3,6 @@
 <pkgmetadata>
 <herd>enlightenment</herd>
 <use>
- <flag name='cache'>Enable experimental caching to speed up rendering</flag>
  <flag name='bmp'>Support windows bitmap (bmp) image loader</flag>
  <flag name='eet'>Support dev-libs/eet</flag>
  <flag name='ico'>Support windows icon (ico) image loader</flag>
