@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/apsw-3.7.13.1.ebuild,v 1.2 2012/08/24 14:22:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/apsw-3.7.13.1.ebuild,v 1.3 2012/09/07 22:04:11 johu Exp $
 
 EAPI="4"
 SUPPORT_PYTHON_ABIS="1"
@@ -16,7 +16,7 @@ SRC_URI="http://apsw.googlecode.com/files/${PN}-${MY_PV}.zip"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc64 x86"
 IUSE="doc"
 
 RDEPEND=">=dev-db/sqlite-$(get_version_component_range 1-3)[extensions]"
