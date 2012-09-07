@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.602 2012/07/20 23:58:11 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.603 2012/09/07 01:50:21 nirbheek Exp $
+
+*gtk+-2.24.12 (07 Sep 2012)
+
+  07 Sep 2012; Nirbheek Chauhan <nirbheek@gentoo.org> +gtk+-2.24.12.ebuild:
+  Bump to 2.24.12; themeing updates, cups-1.6 support, etc
 
 *gtk+-2.24.11-r1 (20 Jul 2012)
 
@@ -2639,5 +2644,3 @@ unmasking the glib-2.0.1 packages
   10 Mar 2002; Bruce A. Locke <blocke@shivan.org> gtk+-1.2.10-r5.ebuild :
 
   NLS fixes submitted by seemant@rocketmail.com (Seemant Kulleen)
-
-
