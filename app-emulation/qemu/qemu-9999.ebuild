@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.20 2012/08/18 18:51:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.21 2012/09/07 13:35:48 slyfox Exp $
 
 EAPI=4
 
@@ -26,9 +26,9 @@ IUSE="+aio alsa bluetooth brltty curl fdt hardened jpeg kvm ncurses nss
 opengl png pulseaudio qemu-ifup rbd sasl sdl spice ssl static threads usbredir vde
 +vhost-net xattr xen xfs"
 
-COMMON_TARGETS="i386 x86_64 alpha arm cris m68k microblaze microblazeel mips mipsel ppc ppc64 sh4 sh4eb sparc sparc64 s390x"
-IUSE_SOFTMMU_TARGETS="${COMMON_TARGETS} lm32 mips64 mips64el ppcemb xtensa xtensaeb"
-IUSE_USER_TARGETS="${COMMON_TARGETS} armeb ppc64abi32 sparc32plus unicore32"
+COMMON_TARGETS="i386 x86_64 alpha arm cris m68k microblaze microblazeel mips mipsel or32 ppc ppc64 sh4 sh4eb sparc sparc64 s390x unicore32"
+IUSE_SOFTMMU_TARGETS="${COMMON_TARGETS} mips64 mips64el ppcemb xtensa xtensaeb"
+IUSE_USER_TARGETS="${COMMON_TARGETS} armeb ppc64abi32 sparc32plus"
 
 for target in ${IUSE_SOFTMMU_TARGETS}; do
 	IUSE="${IUSE} +qemu_softmmu_targets_${target}"
@@ -90,7 +90,7 @@ DEPEND="${RDEPEND}
 # alpha ELF binary. don't let portage mess with it
 STRIP_MASK="usr/share/qemu/palcode-clipper"
 
-QA_PRESTRIPPED="
+QA_PREBUILT="
 	usr/share/qemu/openbios-ppc
 	usr/share/qemu/openbios-sparc64
 	usr/share/qemu/openbios-sparc32
@@ -108,6 +108,7 @@ QA_WX_LOAD="${QA_PRESTRIPPED}
 	usr/bin/qemu-microblazeel
 	usr/bin/qemu-mips
 	usr/bin/qemu-mipsel
+	usr/bin/qemu-or32
 	usr/bin/qemu-ppc
 	usr/bin/qemu-ppc64
 	usr/bin/qemu-ppc64abi32
@@ -192,7 +193,6 @@ src_configure() {
 		$(use_enable sdl)
 		$(use_enable spice)
 		$(use_enable ssl vnc-tls)
-		$(use_enable threads vnc-thread)
 		$(use_enable vde)
 		$(use_enable vhost-net)
 		$(use_enable xen)
@@ -215,6 +215,7 @@ src_configure() {
 		--disable-libiscsi \
 		--enable-nptl \
 		--enable-uuid \
+		--disable-seccomp \
 		${conf_opts} \
 		--audio-card-list="ac97 es1370 sb16 cs4231a adlib gus hda" \
 		--audio-drv-list="${audio_opts}" \

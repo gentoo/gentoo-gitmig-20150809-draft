@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.115 2012/08/18 18:51:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.116 2012/09/07 13:35:48 slyfox Exp $
+
+  07 Sep 2012; Sergei Trofimovich <slyfox@gentoo.org> qemu-9999.ebuild:
+  Fixed configure failure (upstream got rid of '--enabke-vnc-thread' option).
+  Added new or32 target (OpenRISC).
 
 *qemu-1.1.1 (18 Aug 2012)
 
