@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.8.66.ebuild,v 1.1 2012/08/24 20:28:26 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.8.68.ebuild,v 1.1 2012/09/07 20:17:54 zmedico Exp $
 
 EAPI=4
 PYTHON_DEPEND=2:2.7
@@ -26,6 +26,7 @@ COMMON_DEPEND="
 	>=dev-libs/chmlib-0.40
 	>=dev-libs/icu-4.4
 	>=dev-python/beautifulsoup-3.0.5:python-2
+	dev-python/netifaces
 	dev-python/python-dateutil
 	>=dev-python/dnspython-1.6.0
 	>=dev-python/cssutils-0.9.9
@@ -35,6 +36,7 @@ COMMON_DEPEND="
 	>=dev-python/mechanize-0.1.11
 	>=dev-python/python-dateutil-1.4.1
 	>=dev-python/PyQt4-4.9.1[X,svg,webkit]
+	media-fonts/liberation-fonts
 	>=media-gfx/imagemagick-6.5.9[jpeg,png]
 	>=media-libs/libwmf-0.2.8
 	media-libs/libmtp
@@ -155,6 +157,13 @@ src_install() {
 	dobashcomp "${ED}"usr/etc/bash_completion.d/calibre
 	rm -r "${ED}"usr/etc/bash_completion.d
 	find "${ED}"usr/etc -type d -empty -delete
+
+	cd "${ED}"/usr/share/calibre/fonts/liberation || die
+	local x
+	for x in * ; do
+		[[ -f ${EROOT}usr/share/fonts/liberation-fonts/${x} ]] || continue
+		ln -sf "../../../fonts/liberation-fonts/${x}" "${x}" || die
+	done
 
 	python_convert_shebangs -r $(python_get_version) "${ED}"
 
