@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/powertop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.58 2012/09/07 11:27:23 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.59 2012/09/07 11:48:13 pinkbyte Exp $
+
+  07 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> powertop-2.1.ebuild:
+  Revert back src_configure logic and ncurses dependency, make it correct.
+  Thanks to leio for pointing on this issue
 
   07 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> powertop-2.1.ebuild:
   Add proper unicode flag handling. Fixes bug #415535
