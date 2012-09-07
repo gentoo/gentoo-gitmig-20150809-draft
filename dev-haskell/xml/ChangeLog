@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/xml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xml/ChangeLog,v 1.3 2012/03/18 13:15:40 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xml/ChangeLog,v 1.4 2012/09/07 23:45:55 ago Exp $
+
+  07 Sep 2012; Agostino Sarubbo <ago@gentoo.org> xml-1.3.12.ebuild:
+  Stable for amd64, wrt bug #421351
 
   18 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org> xml-1.3.12.ebuild:
   ~alpha/~ia64/~ppc/~sparc/~x86-fbsd keyworded (test-framework-0.5 rekeywording)

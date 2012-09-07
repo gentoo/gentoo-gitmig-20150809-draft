@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/http
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http/ChangeLog,v 1.21 2012/04/13 10:25:51 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http/ChangeLog,v 1.22 2012/09/07 23:41:13 ago Exp $
+
+  07 Sep 2012; Agostino Sarubbo <ago@gentoo.org> http-4000.2.3.ebuild:
+  Stable for amd64, wrt bug #421351
 
 *http-4000.2.3 (13 Apr 2012)
 
