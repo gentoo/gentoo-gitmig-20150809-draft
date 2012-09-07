@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.99 2012/09/01 15:06:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.100 2012/09/07 08:43:29 ago Exp $
+
+  07 Sep 2012; Agostino Sarubbo <ago@gentoo.org> munin-2.0.5-r1.ebuild:
+  Stable for amd64, wrt bug #412881
 
 *munin-2.0.6 (01 Sep 2012)
 
