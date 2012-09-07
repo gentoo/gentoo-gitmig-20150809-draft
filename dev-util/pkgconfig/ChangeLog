@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pkgconfig
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.120 2012/09/07 15:47:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.121 2012/09/07 19:57:38 johu Exp $
+
+  07 Sep 2012; Johannes Huber <johu@gentoo.org> pkgconfig-0.27.1.ebuild:
+  Stable for x86, wrt bug #433780
 
   07 Sep 2012; Agostino Sarubbo <ago@gentoo.org> pkgconfig-0.27.1.ebuild:
   Stable for amd64, wrt bug #433780
