@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libircclient
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libircclient/ChangeLog,v 1.7 2012/09/07 19:24:24 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libircclient/ChangeLog,v 1.8 2012/09/07 20:22:31 hasufell Exp $
+
+  07 Sep 2012; Julian Ospald <hasufell@gentoo.org> libircclient-1.6-r1.ebuild,
+  -files/libircclient-1.6-fpic.patch, +files/libircclient-1.6-shared.patch:
+  backported upstream commit for soname, fixed install rules
 
 *libircclient-1.6-r1 (07 Sep 2012)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libircclient/libircclient-1.6-r1.ebuild,v 1.1 2012/09/07 19:24:24 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libircclient/libircclient-1.6-r1.ebuild,v 1.2 2012/09/07 20:22:31 hasufell Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -19,7 +19,7 @@ DEPEND="ssl? ( dev-libs/openssl )"
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-build.patch \
-		"${FILESDIR}"/${P}-fpic.patch \
+		"${FILESDIR}"/${P}-shared.patch \
 		"${FILESDIR}"/${P}-include.patch
 	eautoconf
 }
@@ -37,10 +37,7 @@ src_compile() {
 }
 
 src_install() {
-	insinto /usr/include/libircclient
-	doins include/*.h
-	dolib.so src/libircclient.so
-	use static && dolib.a src/libircclient.a
+	emake -C src DESTDIR="${D}" $(usex static "install" "install-headers install-shared")
 
 	dodoc Changelog THANKS
 	if use doc ; then
