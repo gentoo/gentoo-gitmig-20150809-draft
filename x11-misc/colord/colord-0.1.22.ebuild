@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-0.1.22.ebuild,v 1.1 2012/08/10 19:01:58 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-0.1.22.ebuild,v 1.2 2012/09/08 02:23:08 nirbheek Exp $
 
 EAPI="4"
 
@@ -16,6 +16,9 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="doc examples +gusb +introspection scanner +udev vala"
 REQUIRED_USE="vala? ( introspection )"
 
+VALA_DEP="|| (
+	dev-lang/vala:0.18[vapigen]
+	>=dev-lang/vala-0.13.4:0.14[vapigen] )"
 COMMON_DEPEND="
 	dev-db/sqlite:3
 	>=dev-libs/glib-2.28.0:2
@@ -24,8 +27,7 @@ COMMON_DEPEND="
 	gusb? ( >=dev-libs/libgusb-0.1.1 )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.8 )
 	scanner? ( media-gfx/sane-backends )
-	udev? ( || ( sys-fs/udev[gudev] sys-fs/udev[extras] ) )
-"
+	udev? ( || ( sys-fs/udev[gudev] sys-fs/udev[extras] ) )"
 RDEPEND="${COMMON_DEPEND}
 	media-gfx/shared-color-profiles"
 DEPEND="${COMMON_DEPEND}
@@ -35,10 +37,8 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 	doc? (
 		app-text/docbook-xml-dtd:4.1.2
-		>=dev-util/gtk-doc-1.9
-	)
-	vala? ( dev-lang/vala:0.14[vapigen] )
-"
+		>=dev-util/gtk-doc-1.9 )
+	vala? ( ${VALA_DEP} )"
 
 # FIXME: needs pre-installed dbus service files
 RESTRICT="test"
@@ -58,6 +58,13 @@ src_prepare() {
 }
 
 src_configure() {
+	local vapigen
+	if has_version "dev-lang/vala:0.18"; then
+		vapigen="VAPIGEN=$(type -P vapigen-0.18)"
+	else
+		vapigen="VAPIGEN=$(type -P vapigen-0.14)"
+	fi
+
 	# Reverse tools require gusb
 	econf \
 		--disable-examples \
@@ -74,7 +81,8 @@ src_configure() {
 		$(use_enable udev gudev) \
 		$(use_enable vala) \
 		"$(systemd_with_unitdir)" \
-		VAPIGEN=$(type -P vapigen-0.14)
+		${vapigen}
+
 	# parallel make fails in doc/api
 	use doc && MAKEOPTS="${MAKEOPTS} -j1"
 }
