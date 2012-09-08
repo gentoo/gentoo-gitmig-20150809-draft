@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.116 2012/09/05 07:52:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.117 2012/09/08 17:44:28 vapier Exp $
 
 EAPI="4"
 
@@ -26,7 +26,7 @@ HOMEPAGE="http://xbmc.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="airplay alsa altivec avahi bluetooth bluray cec css debug goom joystick midi mysql profile +projectm pulseaudio pvr +rsxs rtmp +samba sse sse2 udev vaapi vdpau webserver +xrandr"
+IUSE="airplay alsa altivec avahi bluetooth bluray cec css debug goom joystick midi mysql profile +projectm pulseaudio pvr +rsxs rtmp +samba sse sse2 udev upnp vaapi vdpau webserver +xrandr"
 REQUIRED_USE="pvr? ( mysql )"
 
 COMMON_DEPEND="virtual/opengl
@@ -203,6 +203,7 @@ src_configure() {
 		$(use_enable rsxs) \
 		$(use_enable rtmp) \
 		$(use_enable samba) \
+		$(use_enable upnp) \
 		$(use_enable vaapi) \
 		$(use_enable vdpau) \
 		$(use_enable webserver) \
