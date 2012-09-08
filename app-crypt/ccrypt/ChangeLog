@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/ccrypt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccrypt/ChangeLog,v 1.23 2012/09/08 02:01:00 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccrypt/ChangeLog,v 1.24 2012/09/08 02:02:36 radhermit Exp $
+
+  08 Sep 2012; Tim Harder <radhermit@gentoo.org> -ccrypt-1.7-r1.ebuild,
+  -files/ccrypt-1.7-emacs.patch, -ccrypt-1.8.ebuild:
+  Remove old.
 
   08 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.
