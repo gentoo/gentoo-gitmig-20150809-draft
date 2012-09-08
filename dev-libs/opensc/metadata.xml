@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>crypto</herd>
-  <maintainer>
-    <email>crypto@gentoo.org</email>
-    <name>Crypto Herd</name>
-  </maintainer>
   <longdescription>
     OpenSC is a library for accessing SmartCard devices. It is also
     the core library of the OpenSC project.
