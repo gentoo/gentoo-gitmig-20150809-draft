@@ -1,25 +1,25 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ecore-1.0.1.ebuild,v 1.1 2011/05/29 16:12:30 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ecore-1.7.0.ebuild,v 1.1 2012/09/08 08:55:07 tommy Exp $
 
 EAPI=2
 
-inherit virtualx enlightenment
+inherit virtualx enlightenment eutils
 
 DESCRIPTION="Enlightenment's core event abstraction layer and OS abstraction layer"
 SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
 
 KEYWORDS="~amd64 ~x86"
-IUSE="ares curl directfb +evas fbcon glib gnutls +inotify opengl sdl ssl static-libs +threads tslib +X xcb xinerama xprint xscreensaver"
+IUSE="ares curl directfb +evas fbcon glib gnutls +inotify ipv6 opengl sdl ssl static-libs +threads tslib +X xcb xinerama xprint xscreensaver"
 
-RDEPEND=">=dev-libs/eina-1.0.0_beta
+RDEPEND=">=dev-libs/eina-1.7.0
 	ares? ( net-dns/c-ares )
 	glib? ( dev-libs/glib )
 	curl? ( net-misc/curl )
 	gnutls? ( net-libs/gnutls )
 	!gnutls? ( ssl? ( dev-libs/openssl ) )
 	evas? (
-		>=media-libs/evas-1.0.0_beta[directfb?,fbcon?,opengl?,sdl?,X?,xcb?]
+		>=media-libs/evas-1.7.0[directfb?,fbcon?,opengl?,X?,xcb?]
 		opengl? ( virtual/opengl )
 	)
 	directfb? ( >=dev-libs/DirectFB-0.9.16 )
@@ -41,6 +41,9 @@ RDEPEND=">=dev-libs/eina-1.0.0_beta
 	)
 	!X? ( xcb? ( x11-libs/xcb-util ) )"
 DEPEND="${RDEPEND}"
+
+#tests depend on temp data from eina WORKDIR
+RESTRICT=test
 
 src_configure() {
 	local SSL_FLAGS="" EVAS_FLAGS="" X_FLAGS=""
@@ -81,32 +84,25 @@ src_configure() {
 			ewarn "Compiling without opengl support."
 			EVAS_FLAGS+="
 				--disable-ecore-evas-software-x11
-				--disable-ecore-evas-xrender-x11
 				--disable-ecore-evas-software-16-x11
 			"
 		else
 			EVAS_FLAGS+="
 				--enable-ecore-evas-software-x11
-				--enable-ecore-evas-xrender-x11
 				--enable-ecore-evas-software-16-x11
 			"
 		fi
 		EVAS_FLAGS+="
 			$(use_enable directfb ecore-evas-directfb)
 			$(use_enable fbcon ecore-evas-fb)
-			$(use_enable sdl ecore-evas-software-sdl)
-			$(use_enable xcb ecore-evas-xrender-xcb)
 			$(use_enable opengl ecore-evas-opengl-x11)
 		"
 	else
 		EVAS_FLAGS+="
 			--disable-ecore-evas-directfb
 			--disable-ecore-evas-fb
-			--disable-ecore-evas-software-sdl
 			--disable-ecore-evas-software-x11
-			--disable-ecore-evas-xrender-x11
 			--disable-ecore-evas-software-16-x11
-			--disable-ecore-evas-xrender-xcb
 			--disable-ecore-evas-opengl-x11
 		"
 		if use opengl; then
@@ -181,6 +177,7 @@ src_configure() {
 	$(use_enable fbcon ecore-fb)
 	$(use_enable glib)
 	$(use_enable inotify)
+	$(use_enable ipv6)
 	$(use_enable sdl ecore-sdl)
 	$(use_enable test tests)
 	$(use_enable threads posix-threads)
