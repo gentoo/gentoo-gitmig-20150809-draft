@@ -3,9 +3,6 @@
 <pkgmetadata>
     <herd>forensics</herd>
     <maintainer>
-        <email>forensics@gentoo.org</email>
-    </maintainer>
-    <maintainer>
         <email>robbat2@gentoo.org</email>
 		<name>Robin H. Johnson</name>
 		<description>Primary maintainer</description>
