@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-22.0.1229.14.ebuild,v 1.1 2012/08/23 19:20:30 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-22.0.1229.39.ebuild,v 1.1 2012/09/08 23:45:30 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -45,7 +45,6 @@ RDEPEND="app-arch/bzip2
 	media-libs/speex
 	pulseaudio? ( media-sound/pulseaudio )
 	sys-fs/udev
-	sys-libs/zlib
 	virtual/libusb:1
 	x11-libs/gtk+:2
 	x11-libs/libXinerama
@@ -107,8 +106,8 @@ src_prepare() {
 		native_client/toolchain/linux_x86_newlib || die
 
 	# zlib-1.2.5.1-r1 renames the OF macro in zconf.h, bug 383371.
-	sed -i '1i#define OF(x) x' \
-		third_party/zlib/contrib/minizip/{ioapi,{,un}zip}.h || die
+	#sed -i '1i#define OF(x) x' \
+	#	third_party/zlib/contrib/minizip/{ioapi,{,un}zip}.h || die
 
 	# Fix build without NaCl glibc toolchain.
 	epatch "${FILESDIR}/${PN}-ppapi-r0.patch"
@@ -164,7 +163,7 @@ src_prepare() {
 		\! -path 'third_party/webdriver/*' \
 		\! -path 'third_party/webgl_conformance/*' \
 		\! -path 'third_party/webrtc/*' \
-		\! -path 'third_party/zlib/contrib/minizip/*' \
+		\! -path 'third_party/zlib/*' \
 		-delete || die
 
 	local v8_bundled="$(chromium_bundled_v8_version)"
@@ -224,7 +223,7 @@ src_configure() {
 		-Duse_system_v8=1
 		-Duse_system_xdg_utils=1
 		-Duse_system_yasm=1
-		-Duse_system_zlib=1"
+		-Duse_system_zlib=0"
 
 	# Optional dependencies.
 	# TODO: linux_link_kerberos, bug #381289.

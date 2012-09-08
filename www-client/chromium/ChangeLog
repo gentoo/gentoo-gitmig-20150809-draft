@@ -1,6 +1,12 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.708 2012/09/07 16:49:57 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.709 2012/09/08 23:45:30 floppym Exp $
+
+*chromium-22.0.1229.39 (08 Sep 2012)
+
+  08 Sep 2012; Mike Gilbert <floppym@gentoo.org> +chromium-22.0.1229.39.ebuild,
+  -chromium-22.0.1229.14.ebuild:
+  Beta channel bump.
 
 *chromium-22.0.1229.36 (07 Sep 2012)
 
