@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/audiofile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.110 2012/07/15 18:02:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.111 2012/09/08 08:53:26 radhermit Exp $
+
+  08 Sep 2012; Tim Harder <radhermit@gentoo.org> -audiofile-0.3.1.ebuild,
+  -audiofile-0.3.2.ebuild, -files/audiofile-0.3.2-gold.patch:
+  Remove old.
 
   15 Jul 2012; Raúl Porcel <armin76@gentoo.org> audiofile-0.3.3.ebuild:
   alpha/ia64/sh/sparc stable wrt #410611
