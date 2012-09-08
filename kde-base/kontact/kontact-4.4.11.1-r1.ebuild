@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact/kontact-4.4.11.1-r1.ebuild,v 1.1 2012/08/01 22:46:30 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact/kontact-4.4.11.1-r1.ebuild,v 1.2 2012/09/08 00:00:36 ago Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ KDE_HANDBOOK=optional
 inherit kde4-meta
 
 DESCRIPTION="KDE personal information manager"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 DEPEND="
