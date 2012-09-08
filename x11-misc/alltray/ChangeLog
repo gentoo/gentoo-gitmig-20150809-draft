@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/alltray
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/ChangeLog,v 1.46 2012/09/08 02:36:40 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/ChangeLog,v 1.47 2012/09/08 05:54:22 nirbheek Exp $
+
+  08 Sep 2012; Nirbheek Chauhan <nirbheek@gentoo.org> alltray-0.7.5.1.ebuild:
+  Revert previous changes. The brokenness is only for mixed stable/unstable
+  systems.
 
   08 Sep 2012; Nirbheek Chauhan <nirbheek@gentoo.org> alltray-0.7.5.1.ebuild:
   Use either vala-0.14, or vala-0.18
