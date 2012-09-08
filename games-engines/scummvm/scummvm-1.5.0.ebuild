@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-1.5.0.ebuild,v 1.3 2012/09/07 21:10:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-1.5.0.ebuild,v 1.4 2012/09/08 16:03:06 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -12,12 +12,13 @@ SRC_URI="mirror://sourceforge/scummvm/${P/_/}.tar.bz2"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
-IUSE="alsa debug flac fluidsynth truetype mp3 vorbis"
+IUSE="aac alsa debug flac fluidsynth truetype mp3 vorbis"
 RESTRICT="test"  # it only looks like there's a test there #77507
 
 RDEPEND=">=media-libs/libsdl-1.2.2[audio,joystick,video]
 	sys-libs/zlib
 	vorbis? ( media-libs/libogg media-libs/libvorbis )
+	aac? ( media-libs/faad2 )
 	alsa? ( media-libs/alsa-lib )
 	mp3? ( media-libs/libmad )
 	flac? ( media-libs/flac )
@@ -59,6 +60,7 @@ src_configure() {
 		--libdir="${GAMES_LIBDIR}" \
 		--enable-zlib \
 		$(use_enable debug) \
+		$(use_enable aac faad) \
 		$(use_enable alsa) \
 		$(use_enable mp3 mad) \
 		$(use_enable flac) \
