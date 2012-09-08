@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/apache-mode
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/apache-mode/ChangeLog,v 1.16 2008/06/14 23:21:19 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/apache-mode/ChangeLog,v 1.17 2012/09/08 09:15:21 ulm Exp $
+
+  08 Sep 2012; Ulrich Müller <ulm@gentoo.org> apache-mode-1.1.ebuild:
+  Change EAPI to 4.
 
   14 Jun 2008; Ulrich Mueller <ulm@gentoo.org> apache-mode-1.1.ebuild:
   Do not assign SIMPLE_ELISP since elisp.eclass now detects this case

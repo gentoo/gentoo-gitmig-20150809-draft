@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/analog
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/analog/ChangeLog,v 1.15 2008/06/14 23:20:53 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/analog/ChangeLog,v 1.16 2012/09/08 09:10:51 ulm Exp $
+
+  08 Sep 2012; Ulrich Müller <ulm@gentoo.org> analog-1.9.99.ebuild:
+  Change EAPI to 4.
 
   14 Jun 2008; Ulrich Mueller <ulm@gentoo.org> analog-1.9.99.ebuild:
   Do not assign SIMPLE_ELISP since elisp.eclass now detects this case

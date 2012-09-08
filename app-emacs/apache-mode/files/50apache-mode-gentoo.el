@@ -1,6 +1,3 @@
-
-;;; apache-mode site-lisp configuration
-
 (add-to-list 'load-path "@SITELISP@")
 (autoload 'apache-mode "apache-mode" "autoloaded" t)
 (add-to-list 'auto-mode-alist '("\\.htaccess$"   . apache-mode))
