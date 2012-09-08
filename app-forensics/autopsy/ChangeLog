@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/autopsy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/autopsy/ChangeLog,v 1.28 2012/09/08 02:13:53 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/autopsy/ChangeLog,v 1.29 2012/09/08 02:14:38 radhermit Exp $
+
+  08 Sep 2012; Tim Harder <radhermit@gentoo.org> -autopsy-2.24.ebuild:
+  Remove old.
 
   08 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.
