@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.12.3.ebuild,v 1.2 2012/05/29 16:19:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.12.3.ebuild,v 1.3 2012/09/08 07:51:14 tetromino Exp $
 
 EAPI=4
 GCONF_DEBUG=no
@@ -92,7 +92,10 @@ pkg_setup() {
 
 src_prepare() {
 	# Conditional patching purely to avoid eautoreconf
-	use gphoto2 && epatch "${FILESDIR}"/${PN}-1.2.2-gphoto2-stricter-checks.patch
+	if use gphoto2; then
+		epatch "${FILESDIR}"/${PN}-1.12.3-gphoto2-stricter-checks.patch
+		epatch "${FILESDIR}"/${PN}-1.12.3-gphoto2-2.5-{1,2}.patch
+	fi
 
 	if use archive; then
 		epatch "${FILESDIR}"/${PN}-1.2.2-expose-archive-backend.patch
