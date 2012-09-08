@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.268 2012/08/01 10:54:18 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.269 2012/09/08 06:35:00 radhermit Exp $
+
+*mpg123-1.14.4 (08 Sep 2012)
+
+  08 Sep 2012; Tim Harder <radhermit@gentoo.org> +mpg123-1.14.4.ebuild,
+  metadata.xml:
+  Version bump. Add int-quality use flag (bug #426578).
 
   01 Aug 2012; Fabian Groffen <grobian@gentoo.org> mpg123-1.14.3.ebuild:
   Disable CPU features for 32-bits Mac OS X due to asm failures.
