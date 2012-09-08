@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/radiotray-9999.ebuild,v 1.4 2012/09/08 08:52:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/radiotray-9999.ebuild,v 1.5 2012/09/08 09:25:06 hwoarang Exp $
 
 EAPI=4
 PYTHON_COMPAT='python2_6 python2_7'
@@ -45,11 +45,6 @@ DEPEND="${RDEPEND}"
 DOCS="AUTHORS CONTRIBUTORS NEWS README"
 
 S="${WORKDIR}"/${PN}
-
-pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
-}
 
 src_prepare() {
 	python_convert_shebangs -r 2 .

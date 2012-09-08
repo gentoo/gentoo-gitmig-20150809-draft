@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/radiotray-0.7.3-r1.ebuild,v 1.1 2012/09/08 08:52:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/radiotray-0.7.3-r1.ebuild,v 1.2 2012/09/08 09:25:06 hwoarang Exp $
 
 EAPI=4
 
@@ -34,8 +34,3 @@ RDEPEND="dev-python/dbus-python
 	media-plugins/gst-plugins-vorbis"
 
 DEPEND="dev-python/pyxdg"
-
-pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
-}
