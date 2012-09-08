@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/ownpaste
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ownpaste/ChangeLog,v 1.4 2012/06/15 03:18:05 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ownpaste/ChangeLog,v 1.5 2012/09/08 19:22:25 rafaelmartins Exp $
+
+  08 Sep 2012; Rafael G. Martins <rafaelmartins@gentoo.org>
+  ownpaste-0.2.2.ebuild, ownpaste-9999.ebuild:
+  Fix hg url
 
 *ownpaste-0.2.2 (15 Jun 2012)
 

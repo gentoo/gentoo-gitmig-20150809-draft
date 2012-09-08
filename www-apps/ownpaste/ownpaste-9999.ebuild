@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ownpaste/ownpaste-9999.ebuild,v 1.2 2012/06/10 21:40:14 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ownpaste/ownpaste-9999.ebuild,v 1.3 2012/09/08 19:22:25 rafaelmartins Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ PYTHON_COMPAT="python2_7"
 HG_ECLASS=""
 if [[ ${PV} = *9999* ]]; then
 	HG_ECLASS="mercurial"
-	EHG_REPO_URI="https://hg.rafaelmartins.eng.br/ownpaste/"
+	EHG_REPO_URI="http://hg.rafaelmartins.eng.br/ownpaste/"
 	EHG_REVISION="default"
 fi
 
