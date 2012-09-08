@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.14.2-r1.ebuild,v 1.1 2012/07/20 15:47:53 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.14.2-r1.ebuild,v 1.2 2012/09/08 02:07:53 nirbheek Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -26,6 +26,9 @@ RESTRICT="test"
 # vala is built with debug by default (see VALAFLAGS)
 # According to NEWS, introspection is non-optional
 # glibc-2.12 needed for SCHED_IDLE (see bug #385003)
+VALA_DEP="|| (
+	dev-lang/vala:0.18
+	>=dev-lang/vala-0.13.4:0.14 )"
 RDEPEND="
 	>=app-i18n/enca-1.9
 	>=dev-db/sqlite-3.7[threadsafe]
@@ -93,9 +96,9 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
 	>=sys-devel/gettext-0.17
 	virtual/pkgconfig
-	applet? ( >=dev-lang/vala-0.13.4:0.14 )
+	applet? ( ${VALA_DEP} )
 	gtk? (
-		>=dev-lang/vala-0.13.4:0.14
+		${VALA_DEP}
 		>=dev-libs/libgee-0.3 )
 	doc? (
 		app-office/dia
@@ -105,7 +108,7 @@ DEPEND="${RDEPEND}
 		>=dev-libs/dbus-glib-0.82-r1
 		>=sys-apps/dbus-1.3.1[X] )
 "
-#	strigi? ( >=dev-lang/vala-0.13.4:0.14 )
+#	strigi? ( ${VALA_DEP} )
 PDEPEND="nautilus? ( >=gnome-extra/nautilus-tracker-tags-0.14 )"
 
 function inotify_enabled() {
@@ -141,7 +144,11 @@ pkg_setup() {
 
 	# if use applet || use gtk || use strigi; then
 	if use applet || use gtk; then
-		G2CONF="${G2CONF} VALAC=$(type -P valac-0.14)"
+		if has_version "dev-lang/vala:0.18"; then
+			G2CONF="${G2CONF} VALAC=$(type -P valac-0.18)"
+		else
+			G2CONF="${G2CONF} VALAC=$(type -P valac-0.14)"
+		fi
 	fi
 
 	# if use mp3 && (use gtk || use qt4); then
