@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinelchi/vdr-skinelchi-0.1.1_pre2-r3.ebuild,v 1.11 2010/12/02 18:11:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinelchi/vdr-skinelchi-0.1.1_pre2-r3.ebuild,v 1.12 2012/09/08 10:23:34 xarthisius Exp $
 
 inherit vdr-plugin
 
@@ -9,7 +9,7 @@ MY_P=${P/_pre/pre}
 DESCRIPTION="Video Disk Recorder - Skin Plugin"
 HOMEPAGE="http://www.vdrportal.de/board/thread.php?threadid=41915&sid="
 SRC_URI="mirror://gentoo/${MY_P}.tgz
-		mirror://gentoo/${P}-vdr-1.5.5-getfont.diff.bz2"
+	http://dev.gentoo.org/~xarthisius/distfiles/${P}-vdr-1.5.5-getfont.diff.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
