@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/potrace
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/potrace/ChangeLog,v 1.43 2012/09/08 08:45:03 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/potrace/ChangeLog,v 1.44 2012/09/08 08:46:04 radhermit Exp $
+
+  08 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove redundant maintainer from metadata.
 
   08 Sep 2012; Tim Harder <radhermit@gentoo.org> -potrace-1.8.ebuild,
   -potrace-1.9.ebuild, -potrace-1.10.ebuild:
