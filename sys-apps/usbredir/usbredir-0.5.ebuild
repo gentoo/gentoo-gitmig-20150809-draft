@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbredir/usbredir-0.5.ebuild,v 1.1 2012/09/08 08:31:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbredir/usbredir-0.5.ebuild,v 1.2 2012/09/08 08:42:13 ssuominen Exp $
 
 EAPI=4
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="A simple TCP daemon and set of libraries for the usbredir protocol (redirecting USB traffic)"
 HOMEPAGE="http://spice-space.org/page/UsbRedir"
@@ -20,11 +20,9 @@ DEPEND="${RDEPEND}
 
 DOCS="ChangeLog README* TODO *.txt"
 
-src_prepare() {
-	sed -i -e 's:-Werror::' configure || die
-}
-
 src_configure() {
+	# http://bugs.freedesktop.org/show_bug.cgi?id=54643
+	append-cflags -Wno-error
 	econf $(use_enable static-libs static)
 }
 
