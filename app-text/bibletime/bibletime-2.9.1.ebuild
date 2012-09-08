@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-2.9.1.ebuild,v 1.4 2012/09/07 12:15:19 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-2.9.1.ebuild,v 1.5 2012/09/08 11:20:47 blueness Exp $
 
 EAPI=4
 inherit cmake-utils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/project/bibletime/BibleTime%202/BibleTime%202%20so
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="debug"
 
 # bug 313657
