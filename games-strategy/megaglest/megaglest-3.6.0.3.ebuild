@@ -1,9 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/megaglest-3.6.0.3.ebuild,v 1.4 2012/09/07 20:03:40 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/megaglest-3.6.0.3.ebuild,v 1.5 2012/09/08 21:49:44 hasufell Exp $
 
 EAPI=4
-inherit eutils flag-o-matic cmake-utils wxwidgets gnome2-utils games
+VIRTUALX_REQUIRED="manual"
+inherit eutils flag-o-matic cmake-utils virtualx wxwidgets gnome2-utils games
 
 DESCRIPTION="Cross-platform 3D realtime strategy game"
 HOMEPAGE="http://www.megaglest.org/"
@@ -23,6 +24,7 @@ RDEPEND="
 	media-libs/libvorbis
 	media-libs/openal
 	net-libs/gnutls
+	>=net-libs/libircclient-1.6-r1
 	sys-libs/zlib
 	virtual/opengl
 	virtual/glu
@@ -42,9 +44,10 @@ RDEPEND="
 		ftgl? ( media-libs/ftgl )
 	)"
 DEPEND="${RDEPEND}
-	net-libs/libircclient
 	sys-apps/help2man
 	virtual/pkgconfig
+	editor? ( ${VIRTUALX_DEPEND} )
+	model-viewer? ( ${VIRTUALX_DEPEND} )
 	static? (
 		dev-libs/xerces-c[static-libs]
 		media-libs/glew[static-libs]
@@ -64,6 +67,13 @@ src_prepare() {
 	fi
 
 	epatch "${FILESDIR}"/${P}-{static-build,build,as-needed}.patch
+
+	# Workaround for glew >=1.9.0
+	# https://sourceforge.net/tracker/?func=detail&aid=3565658&group_id=300350&atid=1266776
+	sed \
+		-e "/<GL\/glew.h>/a #undef GL_TYPE" \
+		-i source/shared_lib/include/graphics/freetype-gl/vertex-buffer.h \
+		|| die "fixing vertex-buffer.h for glew >=1.9.0 failed"
 }
 
 src_configure() {
@@ -107,7 +117,11 @@ src_configure() {
 }
 
 src_compile() {
-	cmake-utils_src_compile
+	if use editor || use model-viewer; then
+		VIRTUALX_COMMAND="cmake-utils_src_compile" virtualmake
+	else
+		cmake-utils_src_compile
+	fi
 }
 
 src_install() {
