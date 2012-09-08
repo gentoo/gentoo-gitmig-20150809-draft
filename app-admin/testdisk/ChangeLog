@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/testdisk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/ChangeLog,v 1.50 2012/09/08 02:11:51 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/ChangeLog,v 1.51 2012/09/08 09:51:48 radhermit Exp $
+
+  08 Sep 2012; Tim Harder <radhermit@gentoo.org> testdisk-6.12.ebuild,
+  testdisk-6.13.ebuild:
+  Fix HOMEPAGE, the wiki doesn't provide the proper page when using a trailing
+  slash.
 
   08 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.

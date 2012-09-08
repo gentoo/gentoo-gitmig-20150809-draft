@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-6.12.ebuild,v 1.7 2012/06/13 08:32:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-6.12.ebuild,v 1.8 2012/09/08 09:51:48 radhermit Exp $
 
 EAPI=4
 
 inherit eutils flag-o-matic
 
 DESCRIPTION="Checks and undeletes partitions + PhotoRec, signature based recovery tool"
-HOMEPAGE="http://www.cgsecurity.org/wiki/TestDisk/"
+HOMEPAGE="http://www.cgsecurity.org/wiki/TestDisk"
 SRC_URI="http://www.cgsecurity.org/${P}.tar.bz2"
 
 LICENSE="GPL-2"
