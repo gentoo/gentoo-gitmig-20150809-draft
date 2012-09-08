@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-189-r1.ebuild,v 1.2 2012/09/07 21:27:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-189-r2.ebuild,v 1.1 2012/09/08 21:10:28 mgorny Exp $
 
 EAPI=4
 
@@ -130,6 +130,8 @@ src_install() {
 
 	# Add mount-rules for /var/lock and /var/run, bug #433607
 	systemd_dounit "${FILESDIR}"/var-{lock,run}.mount
+	systemd_enable_service sysinit.target var-lock.mount
+	systemd_enable_service sysinit.target var-run.mount
 
 	# Check whether we won't break user's system.
 	[[ -x "${D}"/bin/systemd ]] || die '/bin/systemd symlink broken, aborting.'
