@@ -2,9 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>forensics</herd>
-<maintainer>
-  <email>forensics@gentoo.org</email>
-    <name>Forensics Herd</name>
-</maintainer>
-<longdescription>IE Cookie Parser</longdescription>
 </pkgmetadata>

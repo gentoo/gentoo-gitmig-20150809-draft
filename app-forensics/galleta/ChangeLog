@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/galleta
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/galleta/ChangeLog,v 1.7 2011/06/26 07:37:09 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/galleta/ChangeLog,v 1.8 2012/09/08 01:36:06 radhermit Exp $
+
+  08 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove redundant metadata.
 
   26 Jun 2011; Tim Harder <radhermit@gentoo.org> galleta-20040505_p1.ebuild:
   Respect LDFLAGS (bug #343675).
