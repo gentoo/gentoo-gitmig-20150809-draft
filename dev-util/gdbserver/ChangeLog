@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gdbserver
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbserver/ChangeLog,v 1.6 2012/07/08 19:38:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbserver/ChangeLog,v 1.7 2012/09/08 10:18:30 xarthisius Exp $
+
+  08 Sep 2012; Kacper Kowalik <xarthisius@gentoo.org> gdbserver-7.3.1.ebuild:
+  Point SRC_URI for patches to vapier's devspace
 
   08 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Drop myself out of metadata.
