@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/caribou
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/caribou/ChangeLog,v 1.10 2012/09/08 22:23:30 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/caribou/ChangeLog,v 1.11 2012/09/08 22:34:19 nirbheek Exp $
+
+  08 Sep 2012; Nirbheek Chauhan <nirbheek@gentoo.org> -caribou-0.4.3.ebuild:
+  Remove old version with incorrect dep on pygobject
 
 *caribou-0.4.4 (08 Sep 2012)
 
