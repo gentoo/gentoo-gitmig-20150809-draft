@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/binclock/binclock-1.7-r1.ebuild,v 1.6 2009/06/16 18:03:04 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/binclock/binclock-1.7-r1.ebuild,v 1.7 2012/09/08 17:55:42 ulm Exp $
+
+EAPI=4
 
 inherit elisp
 
@@ -13,4 +15,4 @@ SLOT="0"
 KEYWORDS="~alpha amd64 ppc ppc64 x86"
 IUSE=""
 
-SITEFILE=51${PN}-gentoo.el
+SITEFILE="50${PN}-gentoo.el"
