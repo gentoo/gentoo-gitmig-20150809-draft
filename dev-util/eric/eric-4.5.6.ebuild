@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.5.5.ebuild,v 1.1 2012/08/12 19:23:13 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.5.6.ebuild,v 1.1 2012/09/08 07:57:38 pesa Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
