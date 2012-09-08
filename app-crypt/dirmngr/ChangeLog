@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/dirmngr
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/dirmngr/ChangeLog,v 1.62 2011/06/01 14:18:21 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/dirmngr/ChangeLog,v 1.63 2012/09/08 02:05:25 radhermit Exp $
+
+  08 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove redundant maintainer from metadata.
 
   01 Jun 2011; Diego E. Pettenò <flameeyes@gentoo.org> dirmngr-1.1.0.ebuild:
   Force use of -lldap -llber for linking, closes bug #369321.

@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/ccrypt
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccrypt/ChangeLog,v 1.22 2010/04/01 21:22:48 abcd Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccrypt/ChangeLog,v 1.23 2012/09/08 02:01:00 radhermit Exp $
+
+  08 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove redundant maintainer from metadata.
 
   01 Apr 2010; Jonathan Callen <abcd@gentoo.org> ccrypt-1.9.ebuild:
   Bump to EAPI=3, add prefix keywords
