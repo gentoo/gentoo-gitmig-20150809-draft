@@ -2,9 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>dev-embedded</herd>
-<maintainer>
-  <email>dev-embedded@gentoo.org</email>
-</maintainer>
-<longdescription>JTAG Tools is a software package which enables working with JTAG-aware (IEEE 
-1149.1) hardware devices (parts) and boards through JTAG adapter.</longdescription>
 </pkgmetadata>
