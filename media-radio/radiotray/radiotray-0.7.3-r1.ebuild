@@ -1,13 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/radiotray-0.7.3.ebuild,v 1.1 2012/08/17 18:03:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/radiotray-0.7.3-r1.ebuild,v 1.1 2012/09/08 08:52:33 hwoarang Exp $
 
-EAPI=3
+EAPI=4
 
-PYTHON_DEPEND="2"
-RESTRICT_PYTHON_ABIS="3.*"
-
-inherit distutils
+PYTHON_COMPAT='python2_6 python2_7'
+inherit base python-distutils-ng
 
 DESCRIPTION="Online radio streaming player"
 HOMEPAGE="http://radiotray.sourceforge.net/"
@@ -36,3 +34,8 @@ RDEPEND="dev-python/dbus-python
 	media-plugins/gst-plugins-vorbis"
 
 DEPEND="dev-python/pyxdg"
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}

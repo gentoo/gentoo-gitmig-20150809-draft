@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/radiotray-9999.ebuild,v 1.3 2011/10/24 05:55:58 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/radiotray-9999.ebuild,v 1.4 2012/09/08 08:52:33 hwoarang Exp $
 
-EAPI=3
-PYTHON_DEPEND="2"
+EAPI=4
+PYTHON_COMPAT='python2_6 python2_7'
 
-inherit mercurial distutils
+inherit mercurial python-distutils-ng
 
 DESCRIPTION="Online radio streaming player"
 HOMEPAGE="http://radiotray.sourceforge.net/"
@@ -45,6 +45,11 @@ DEPEND="${RDEPEND}"
 DOCS="AUTHORS CONTRIBUTORS NEWS README"
 
 S="${WORKDIR}"/${PN}
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
 
 src_prepare() {
 	python_convert_shebangs -r 2 .
