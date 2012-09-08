@@ -60,7 +60,8 @@ move_file() {
 }
 
 # HEADERS (order matters for the consistency checks: leaves come first)
-FILES=" libavutil/x86_cpu.h \
+FILES=" libavutil/x86/asm.h \
+        libavutil/x86_cpu.h \
         libavformat/internal.h "
 # Files that are sed'ed but not compiled, used to check for availability of
 # some codecs
