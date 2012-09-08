@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy-2.eclass,v 1.13 2012/07/26 12:53:01 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy-2.eclass,v 1.14 2012/09/08 18:36:12 swift Exp $
 
 # Eclass for installing SELinux policy, and optionally
 # reloading the reference-policy based modules.
@@ -56,17 +56,27 @@
 # override it, but the user.
 : ${POLICY_TYPES:="targeted strict mcs mls"}
 
-inherit eutils
+extra_eclass=""
+case ${BASEPOL} in
+	9999)	extra_eclass="git-2";
+			EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/hardened-refpolicy.git";
+			EGIT_SOURCEDIR="${WORKDIR}/refpolicy";;
+esac
+
+inherit eutils ${extra_eclass}
 
 IUSE=""
 
 HOMEPAGE="http://www.gentoo.org/proj/en/hardened/selinux/"
-if [[ -n ${BASEPOL} ]];
+if [[ -n ${BASEPOL} ]] && [[ "${BASEPOL}" != "9999" ]];
 then
 	SRC_URI="http://oss.tresys.com/files/refpolicy/refpolicy-${PV}.tar.bz2
 		http://dev.gentoo.org/~swift/patches/selinux-base-policy/patchbundle-selinux-base-policy-${BASEPOL}.tar.bz2"
-else
+elif [[ "${BASEPOL}" != "9999" ]];
+then
 	SRC_URI="http://oss.tresys.com/files/refpolicy/refpolicy-${PV}.tar.bz2"
+else
+	SRC_URI=""
 fi
 
 LICENSE="GPL-2"
@@ -101,7 +111,12 @@ EXPORT_FUNCTIONS ${SELINUX_EXPF}
 # Unpack the policy sources as offered by upstream (refpolicy). In case of EAPI
 # older than 2, call src_prepare too.
 selinux-policy-2_src_unpack() {
-	unpack ${A}
+	if [[ "${BASEPOL}" != "9999" ]];
+	then
+		unpack ${A}
+	else
+		git-2_src_unpack
+	fi
 
 	# Call src_prepare explicitly for EAPI 0 or 1
 	has "${EAPI:-0}" 0 1 && selinux-policy-2_src_prepare
@@ -127,7 +142,7 @@ selinux-policy-2_src_prepare() {
 	cd "${S}/refpolicy/policy/modules" && mkdir 3rd_party;
 
 	# Patch the sources with the base patchbundle
-	if [[ -n ${BASEPOL} ]];
+	if [[ -n ${BASEPOL} ]] && [[ "${BASEPOL}" != "9999" ]];
 	then
 		cd "${S}"
 		EPATCH_MULTI_MSG="Applying SELinux policy updates ... " \

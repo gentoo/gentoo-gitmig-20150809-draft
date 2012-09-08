@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.388 2012/09/06 08:30:00 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.389 2012/09/08 18:36:12 swift Exp $
+
+  08 Sep 2012; <swift@gentoo.org> selinux-policy-2.eclass:
+  Support live policy builds
 
   06 Sep 2012; Michael Palimaka <kensington@gentoo.org> qt4-build.eclass:
   Improve respect for *FLAGS. Fixes part of bug #427782.
