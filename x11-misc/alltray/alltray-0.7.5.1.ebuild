@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/alltray-0.7.5.1.ebuild,v 1.6 2012/05/05 04:53:51 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/alltray-0.7.5.1.ebuild,v 1.7 2012/09/08 02:36:40 nirbheek Exp $
 
 EAPI=4
 inherit autotools
@@ -24,7 +24,8 @@ RDEPEND="dev-libs/glib:2
 	x11-libs/libXpm
 	x11-libs/libwnck:1"
 DEPEND="${RDEPEND}
-	dev-lang/vala:0.14
+	|| ( dev-lang/vala:0.18
+		 dev-lang/vala:0.14 )
 	virtual/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
@@ -40,7 +41,11 @@ src_prepare() {
 		-e '/Icon/s:.png::' \
 		data/alltray.desktop{,.in} || die
 
-	sed -i -e '/AC_PATH_PROG/s:valac:valac-0.14:g' configure.ac || die
+	if has_version "dev-lang/vala:0.18"; then
+		sed -i -e '/AC_PATH_PROG/s:valac:valac-0.18:g' configure.ac || die
+	else
+		sed -i -e '/AC_PATH_PROG/s:valac:valac-0.14:g' configure.ac || die
+	fi
 
 	eautoreconf
 }
