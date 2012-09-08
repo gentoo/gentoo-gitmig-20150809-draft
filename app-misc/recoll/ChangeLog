@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/recoll
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/ChangeLog,v 1.9 2012/07/31 20:45:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/ChangeLog,v 1.10 2012/09/08 09:32:47 hwoarang Exp $
+
+  08 Sep 2012; Markos Chandras <hwoarang@gentoo.org> recoll-1.17.3.ebuild:
+  Restrict python to version 2. Bug #425492
 
   31 Jul 2012; Markos Chandras <hwoarang@gentoo.org> recoll-1.17.3.ebuild:
   Add missing qt-webkit dependency. Bug #428720

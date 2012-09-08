@@ -1,10 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/recoll-1.17.3.ebuild,v 1.2 2012/07/31 20:45:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/recoll-1.17.3.ebuild,v 1.3 2012/09/08 09:32:47 hwoarang Exp $
 
 EAPI="4"
 
-inherit toolchain-funcs qt4-r2 linux-info
+PYTHON_DEPEND="2"
+inherit toolchain-funcs qt4-r2 linux-info python
 
 DESCRIPTION="A personal full text search package"
 HOMEPAGE="http://www.lesbonscomptes.com/recoll/"
@@ -66,6 +67,9 @@ pkg_pretend() {
 }
 
 pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+
 	local i at_least_one_helper
 
 	at_least_one_helper=0
