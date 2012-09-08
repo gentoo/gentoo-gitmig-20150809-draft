@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udiskie
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udiskie/ChangeLog,v 1.19 2012/07/16 11:33:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udiskie/ChangeLog,v 1.20 2012/09/08 13:14:05 ago Exp $
+
+  08 Sep 2012; Agostino Sarubbo <ago@gentoo.org> udiskie-0.4.1.ebuild:
+  Stable for amd64, wrt bug #433365
 
 *udiskie-0.4.1 (16 Jul 2012)
 
