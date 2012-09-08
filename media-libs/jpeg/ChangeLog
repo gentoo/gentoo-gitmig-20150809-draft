@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jpeg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.133 2012/05/21 14:43:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.134 2012/09/08 06:46:19 radhermit Exp $
+
+  08 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove redundant maintainer from metadata.
 
   21 May 2012; Samuli Suominen <ssuominen@gentoo.org> jpeg-8d.ebuild:
   ppc/ppc64/sparc/x86 stable wrt #413555
