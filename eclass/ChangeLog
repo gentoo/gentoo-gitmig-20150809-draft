@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.389 2012/09/08 18:36:12 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.390 2012/09/09 07:03:28 ulm Exp $
+
+  09 Sep 2012; Ulrich Müller <ulm@gentoo.org> cvs.eclass:
+  Rename ESCM_OFFLINE to EVCS_OFFLINE. Drop ESCM_VERSION. Fixes bug 410465.
 
   08 Sep 2012; <swift@gentoo.org> selinux-policy-2.eclass:
   Support live policy builds
