@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/abcm2ps
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcm2ps/ChangeLog,v 1.59 2012/09/08 09:26:18 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcm2ps/ChangeLog,v 1.60 2012/09/09 12:10:59 ago Exp $
+
+  09 Sep 2012; Agostino Sarubbo <ago@gentoo.org> abcm2ps-6.6.19.ebuild:
+  Stable for amd64, wrt bug #434308
 
 *abcm2ps-7.0.16 (08 Sep 2012)
 *abcm2ps-6.6.20 (08 Sep 2012)
