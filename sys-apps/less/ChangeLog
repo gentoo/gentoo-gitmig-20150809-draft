@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/less
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.152 2012/09/04 19:13:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.153 2012/09/09 16:06:19 armin76 Exp $
+
+  09 Sep 2012; Raúl Porcel <armin76@gentoo.org> less-451.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #431956
 
   04 Sep 2012; Mike Frysinger <vapier@gentoo.org> files/lesspipe.sh:
   Use the --wide flag when calling readelf to avoid truncating long symbol names
