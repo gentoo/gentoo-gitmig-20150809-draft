@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-Load
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Load/ChangeLog,v 1.37 2012/09/01 11:20:03 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Load/ChangeLog,v 1.38 2012/09/09 16:35:03 armin76 Exp $
+
+  09 Sep 2012; Raúl Porcel <armin76@gentoo.org> Class-Load-0.200.0.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #418803
 
   01 Sep 2012; Fabian Groffen <grobian@gentoo.org> Class-Load-0.200.0.ebuild:
   Marked ~ppc-aix, bug #432288
