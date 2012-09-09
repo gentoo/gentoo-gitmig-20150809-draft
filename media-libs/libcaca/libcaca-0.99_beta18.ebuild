@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta18.ebuild,v 1.7 2012/06/01 22:52:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta18.ebuild,v 1.8 2012/09/09 22:15:11 radhermit Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2:2.6"
@@ -26,6 +26,7 @@ COMMON_DEPEND="imlib? ( media-libs/imlib2 )
 	mono? ( dev-lang/mono )
 	ncurses? ( >=sys-libs/ncurses-5.3 )
 	opengl? (
+		virtual/glu
 		virtual/opengl
 		media-libs/freeglut
 		truetype? ( >=media-libs/ftgl-2.1.3_rc5 )
