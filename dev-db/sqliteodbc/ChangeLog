@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/sqliteodbc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqliteodbc/ChangeLog,v 1.33 2012/09/08 16:30:11 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqliteodbc/ChangeLog,v 1.34 2012/09/09 16:23:42 kensington Exp $
+
+  09 Sep 2012; Michael Palimaka <kensington@gentoo.org>
+  -files/sqliteodbc-0.83-respect_LDFLAGS.patch, -sqliteodbc-0.87.ebuild,
+  -sqliteodbc-0.94.ebuild:
+  Remove old.
 
   08 Sep 2012; Anthony G. Basile <blueness@gentoo.org> sqliteodbc-0.96.ebuild:
   Stable ppc, bug #433207
