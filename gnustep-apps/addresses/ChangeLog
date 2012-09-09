@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/addresses
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/addresses/ChangeLog,v 1.17 2012/09/07 23:49:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/addresses/ChangeLog,v 1.18 2012/09/09 15:54:30 blueness Exp $
+
+  09 Sep 2012; Anthony G. Basile <blueness@gentoo.org> addresses-0.4.8.ebuild:
+  Stable ppc, bug #433289
 
   07 Sep 2012; Agostino Sarubbo <ago@gentoo.org> addresses-0.4.8.ebuild:
   Stable for amd64, wrt bug #433289
