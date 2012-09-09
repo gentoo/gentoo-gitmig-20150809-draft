@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.9.7-r1.ebuild,v 1.3 2012/08/15 20:15:58 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.9.7-r1.ebuild,v 1.4 2012/09/09 15:13:33 armin76 Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.equi4.com/pub/mk/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ppc ~s390 ~sparc ~x86"
+KEYWORDS="amd64 ppc ~x86"
 IUSE="python static tcl"
 
 DEPEND="tcl? ( dev-lang/tcl )"
