@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgssglue/libgssglue-0.4.ebuild,v 1.7 2012/09/06 12:02:35 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgssglue/libgssglue-0.4.ebuild,v 1.8 2012/09/09 11:24:27 armin76 Exp $
 
 EAPI=4
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="http://www.citi.umich.edu/projects/nfsv4/linux/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 RDEPEND="!app-crypt/libgssapi"
