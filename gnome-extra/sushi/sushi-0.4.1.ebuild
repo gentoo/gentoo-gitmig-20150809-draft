@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sushi/sushi-0.4.1.ebuild,v 1.1 2012/05/07 08:05:18 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sushi/sushi-0.4.1.ebuild,v 1.2 2012/09/09 18:06:51 jlec Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
-inherit gnome2
+inherit autotools eutils gnome2
 
 DESCRIPTION="A quick previewer for Nautilus, the GNOME file manager"
 HOMEPAGE="http://git.gnome.org/browse/sushi"
@@ -52,4 +52,10 @@ pkg_setup() {
 		UNOCONV=$(type -P false)
 		--disable-static"
 	DOCS="AUTHORS NEWS README TODO"
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gold.patch
+	eautoreconf
+	gnome2_src_prepare
 }
