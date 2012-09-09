@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/emacs-daemon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.50 2012/09/06 15:56:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.51 2012/09/09 00:38:57 naota Exp $
+
+  09 Sep 2012; Naohiro Aota <naota@gentoo.org> emacs-daemon-0.19.ebuild:
+  Add ~x86-fbsd. #263222
 
   06 Sep 2012; Agostino Sarubbo <ago@gentoo.org> emacs-daemon-0.19.ebuild:
   Stable for amd64, wrt bug #433185
@@ -186,4 +189,3 @@
   30 Nov 2008; Ulrich Mueller <ulm@gentoo.org> +metadata.xml,
   +emacs-daemon-0.7.ebuild:
   Initial import. Ebuild contributed by me.
-
