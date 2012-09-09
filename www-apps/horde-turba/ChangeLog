@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/horde-turba
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-turba/ChangeLog,v 1.57 2012/08/22 15:28:27 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-turba/ChangeLog,v 1.58 2012/09/09 17:07:25 armin76 Exp $
+
+  09 Sep 2012; Raúl Porcel <armin76@gentoo.org> horde-turba-2.3.4.ebuild,
+  horde-turba-2.3.5.ebuild:
+  Drop alpha keywords
 
   22 Aug 2012; Alex Legler <a3li@gentoo.org> metadata.xml:
   removing from metadata
