@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/genromfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/genromfs/ChangeLog,v 1.16 2012/08/18 22:13:08 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/genromfs/ChangeLog,v 1.17 2012/09/09 15:22:09 armin76 Exp $
+
+  09 Sep 2012; Raúl Porcel <armin76@gentoo.org> genromfs-0.5.1.ebuild,
+  genromfs-0.5.2.ebuild:
+  s390 stable wrt #431634, drop sparc keywords
 
   18 Aug 2012; Johannes Huber <johu@gentoo.org> genromfs-0.5.2.ebuild:
   Stable for x86, wrt bug #431634
