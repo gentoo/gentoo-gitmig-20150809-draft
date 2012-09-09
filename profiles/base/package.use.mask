@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.387 2012/09/02 17:59:42 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.388 2012/09/09 01:40:13 tetromino Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -79,10 +79,6 @@ dev-db/firebird client
 # Requires icc which does not emerge (distfile unavailable)
 media-libs/opencv ipp
 
-# Alexandre Rostovtsev <tetromino@gentoo.org> (14 May 2012)
-# This is the GNOME 3.4 package.use mask
-=media-gfx/eog-plugins-3.4* map
-
 # Alexandre Rostovtsev <tetromino@gentoo.org> (10 May 2012)
 # This entry can be removed by anyone after gnome-panel-3.* is stabilized
 # Mask to allow stabilization (bug #414983)
@@ -91,11 +87,6 @@ media-libs/opencv ipp
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (02 May 2012)
 # Causes crashes and build failures, not needed by any package, bug #412177
 <x11-libs/cairo-1.12 qt4
-
-# Johannes Huber <johu@gentoo.org> (19 Apr 2012)
-# Required dep >=net-libs/telepathy-farstream is masked by gnome herd. Feel
-# free to remove this entry, if mask is lifted.
-net-libs/telepathy-qt farstream
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (13 Apr 2012)
 # Packages with optional systemd support. Masked in base and unmasked on arches
