@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-5.8.0.ebuild,v 1.1 2012/09/02 22:40:43 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-5.8.0.ebuild,v 1.2 2012/09/09 23:17:37 radhermit Exp $
 
 EAPI=4
-inherit eutils toolchain-funcs versionator wxwidgets
+inherit eutils toolchain-funcs versionator wxwidgets multiprocessing
 
 DESCRIPTION="Tools to create, alter, and inspect Matroska files"
 HOMEPAGE="http://www.bunkus.org/videotools/mkvtoolnix"
@@ -34,7 +34,7 @@ RDEPEND="
 	wxwidgets? ( x11-libs/wxGTK:2.8[X] )
 "
 DEPEND="${RDEPEND}
-	dev-ruby/rake
+	dev-lang/ruby
 	virtual/pkgconfig
 "
 
@@ -72,19 +72,15 @@ src_configure() {
 		${myconf} \
 		--disable-optimization \
 		--docdir=/usr/share/doc/${PF} \
-		--with-boost-regex=boost_regex \
-		--with-boost-filesystem=boost_filesystem \
-		--with-boost-system=boost_system \
 		--without-curl
 }
 
 src_compile() {
-	rake V=1 || die
+	./drake V=1 -j$(makeopts_jobs) || die
 }
 
 src_install() {
-	# Don't run strip while installing stuff, leave to portage the job.
-	DESTDIR="${D}" rake install || die
+	DESTDIR="${D}" ./drake -j$(makeopts_jobs) install || die
 
 	dodoc AUTHORS ChangeLog README TODO
 	doman doc/man/*.1
