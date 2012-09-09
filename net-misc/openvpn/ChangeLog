@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.238 2012/08/23 17:15:24 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.239 2012/09/09 17:15:31 jlec Exp $
+
+  09 Sep 2012; Justin Lecher <jlec@gentoo.org> openvpn-2.1.4.ebuild,
+  openvpn-2.2.2.ebuild, openvpn-9999.ebuild:
+  Drop unnessecary PN and '.' from DESCRIPTION
 
   23 Aug 2012; Fabian Groffen <grobian@gentoo.org> openvpn-2.2.2.ebuild,
   openvpn-9999.ebuild:
