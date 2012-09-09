@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/publicfile/publicfile-0.52-r3.ebuild,v 1.7 2012/08/20 23:01:15 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/publicfile/publicfile-0.52-r3.ebuild,v 1.8 2012/09/09 15:57:25 armin76 Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://cr.yp.to/publicfile/${P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 hppa ppc ~sparc x86"
+KEYWORDS="amd64 hppa ppc x86"
 IUSE="selinux vanilla"
 
 RDEPEND="virtual/daemontools
