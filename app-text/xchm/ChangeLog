@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xchm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xchm/ChangeLog,v 1.20 2012/09/09 11:58:52 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xchm/ChangeLog,v 1.21 2012/09/09 12:32:00 ago Exp $
+
+  09 Sep 2012; Agostino Sarubbo <ago@gentoo.org> xchm-1.20.ebuild:
+  Stable for amd64, wrt bug #434398
 
   09 Sep 2012; Anthony G. Basile <blueness@gentoo.org> xchm-1.20.ebuild:
   Stable ppc, bug #434398
