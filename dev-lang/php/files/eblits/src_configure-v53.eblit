@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_configure-v53.eblit,v 1.5 2012/08/22 15:01:54 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_configure-v53.eblit,v 1.6 2012/09/09 14:13:00 olemarkus Exp $
 
 eblit-php-src_configure() {
 	addpredict /usr/share/snmp/mibs/.index
@@ -60,9 +60,14 @@ eblit-php-src_configure() {
 	$(use_enable sharedmem shmop )
 	$(use_with snmp snmp )
 	$(use_enable soap soap )
-	$(use_enable sockets sockets )
-	$(use_with sqlite sqlite /usr)"
-    use sqlite && my_conf+=" $(use_enable unicode sqlite-utf8)"
+	$(use_enable sockets sockets )"
+	if version_is_at_least 5.3.16-r2; then
+		my_conf+=" $(use_with sqlite2 sqlite /usr) "
+		use sqlite2 && my_conf+=" $(use_enable unicode sqlite-utf8)"
+	else
+		my_conf+=" $(use_with sqlite sqlite /usr) "
+		use sqlite && my_conf+=" $(use_enable unicode sqlite-utf8)"
+	fi
     my_conf+="
 	$(use_with sqlite3 sqlite3 /usr)
 	$(use_with sybase-ct sybase-ct /usr)

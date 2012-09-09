@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.630 2012/09/06 01:00:40 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.631 2012/09/09 14:13:00 olemarkus Exp $
+
+*php-5.3.16-r2 (09 Sep 2012)
+
+  09 Sep 2012; Ole Markus With <olemarkus@gentoo.org> +php-5.3.16-r2.ebuild,
+  -files/eblits/src_configure-v2.eblit, -files/eblits/src_configure-v521.eblit,
+  files/eblits/src_configure-v53.eblit, metadata.xml:
+  Revbump renaming sqlite USE flag to sqlite2
 
   06 Sep 2012; Anthony G. Basile <blueness@gentoo.org> php-5.4.6.ebuild:
   Stable ppc64
