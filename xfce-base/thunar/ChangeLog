@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/thunar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.148 2012/07/14 12:29:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.149 2012/09/09 14:42:38 armin76 Exp $
+
+  09 Sep 2012; Raúl Porcel <armin76@gentoo.org> thunar-1.4.0.ebuild:
+  alpha/ia64/sparc stable wrt #416233
 
   14 Jul 2012; Markus Meier <maekke@gentoo.org> thunar-1.4.0.ebuild:
   arm stable, bug #416233
