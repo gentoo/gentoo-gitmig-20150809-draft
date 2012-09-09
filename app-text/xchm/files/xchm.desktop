@@ -8,4 +8,4 @@ Icon=xchm
 TryExec=xchm
 Exec=xchm %f
 MimeType=application/x-chm;
-Categories=Viewer;Utility;
+Categories=Office;Viewer;
