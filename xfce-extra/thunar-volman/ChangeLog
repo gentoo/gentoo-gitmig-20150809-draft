@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/thunar-volman
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/ChangeLog,v 1.77 2012/07/14 12:57:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/ChangeLog,v 1.78 2012/09/09 14:48:01 armin76 Exp $
+
+  09 Sep 2012; Raúl Porcel <armin76@gentoo.org> thunar-volman-0.8.0.ebuild:
+  alpha/ia64/sparc stable wrt #416233
 
   14 Jul 2012; Markus Meier <maekke@gentoo.org> thunar-volman-0.8.0.ebuild:
   arm stable, bug #416233
