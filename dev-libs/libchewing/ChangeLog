@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libchewing
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libchewing/ChangeLog,v 1.24 2012/09/09 12:12:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libchewing/ChangeLog,v 1.25 2012/09/09 20:59:22 blueness Exp $
+
+  09 Sep 2012; Anthony G. Basile <blueness@gentoo.org> libchewing-0.3.3.ebuild:
+  Stable ppc, bug #433167
 
   09 Sep 2012; Agostino Sarubbo <ago@gentoo.org> libchewing-0.3.3.ebuild:
   Stable for amd64, wrt bug #433167
