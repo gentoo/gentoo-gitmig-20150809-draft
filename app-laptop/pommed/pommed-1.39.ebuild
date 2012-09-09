@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/pommed-1.39.ebuild,v 1.6 2012/09/05 07:13:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/pommed-1.39.ebuild,v 1.7 2012/09/09 16:23:29 josejx Exp $
 
 EAPI="1"
 
@@ -13,7 +13,7 @@ SRC_URI="http://alioth.debian.org/frs/download.php/${ALIOTH_NUMBER}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="gtk X"
 
 COMMON_DEPEND="media-libs/alsa-lib
