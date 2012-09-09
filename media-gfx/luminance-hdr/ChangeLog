@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/luminance-hdr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/ChangeLog,v 1.22 2012/09/08 12:39:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/ChangeLog,v 1.23 2012/09/09 21:10:56 radhermit Exp $
+
+  09 Sep 2012; Tim Harder <radhermit@gentoo.org> luminance-hdr-2.3.0.ebuild:
+  Add check for SSE2 support (bug #369447 by Diego Elio Pettenò).
 
   08 Sep 2012; Agostino Sarubbo <ago@gentoo.org> luminance-hdr-2.3.0.ebuild:
   Stable for amd64, wrt bug #434302
