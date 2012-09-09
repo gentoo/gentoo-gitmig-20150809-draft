@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/gallery
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.187 2011/04/04 12:14:40 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.188 2012/09/09 11:43:04 olemarkus Exp $
+
+  09 Sep 2012; Ole Markus With <olemarkus@gentoo.org> gallery-2.3.1.ebuild:
+  Fix dependencies to handle also php 5.4 with sqlite. Cleaned up deps related
+  to php 5.2
 
   04 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> gallery-2.3.1.ebuild:
   Move to virtual/ffmpeg from media-video/ffmpeg.

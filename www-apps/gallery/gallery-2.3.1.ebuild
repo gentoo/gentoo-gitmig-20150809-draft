@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-2.3.1.ebuild,v 1.9 2011/04/04 12:14:40 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-2.3.1.ebuild,v 1.10 2012/09/09 11:43:04 olemarkus Exp $
 
 EAPI="2"
 
@@ -20,11 +20,11 @@ RDEPEND="raw? ( media-gfx/dcraw )
 	netpbm? ( media-libs/netpbm media-gfx/jhead )
 	unzip? ( app-arch/unzip )
 	zip? ( app-arch/zip )
-	sqlite? ( dev-lang/php[pdo] )
-	gd? ( || ( dev-lang/php[gd] dev-lang/php[gd-external] ) )
+	sqlite? ( dev-lang/php[pdo]
+			|| ( dev-lang/php:5.3[sqlite] dev-lang/php[sqlite3] )
+			)
 	mysql? ( || ( dev-lang/php[mysql] dev-lang/php[mysqli] ) )
-	dev-lang/php[session,postgres?,sqlite?]
-	|| ( <dev-lang/php-5.3[pcre] >=dev-lang/php-5.3 )"
+	dev-lang/php[session,postgres?,gd?]"
 
 S=${WORKDIR}/${PN}2
 
