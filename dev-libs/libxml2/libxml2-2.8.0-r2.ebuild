@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.7.8-r5.ebuild,v 1.10 2012/04/26 13:24:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.8.0-r2.ebuild,v 1.1 2012/09/09 02:29:31 tetromino Exp $
 
-EAPI="3"
+EAPI="4"
 PYTHON_DEPEND="python? 2"
 PYTHON_USE_WITH="xml"
 PYTHON_USE_WITH_OPT="python"
@@ -16,8 +16,8 @@ HOMEPAGE="http://www.xmlsoft.org/"
 
 LICENSE="MIT"
 SLOT="2"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris ~x86-winnt"
-IUSE="debug doc examples icu ipv6 python readline static-libs test"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris ~x86-winnt"
+IUSE="debug doc examples icu ipv6 lzma python readline static-libs test"
 
 XSTS_HOME="http://www.w3.org/XML/2004/xml-schema-test-suite"
 XSTS_NAME_1="xmlschema2002-01-16"
@@ -25,28 +25,31 @@ XSTS_NAME_2="xmlschema2004-01-14"
 XSTS_TARBALL_1="xsts-2002-01-16.tar.gz"
 XSTS_TARBALL_2="xsts-2004-01-14.tar.gz"
 
-SRC_URI="ftp://xmlsoft.org/${PN}/${P}.tar.gz
+SRC_URI="ftp://xmlsoft.org/${PN}/${PN}-${PV/_rc/-rc}.tar.gz
 	test? (
 		${XSTS_HOME}/${XSTS_NAME_1}/${XSTS_TARBALL_1}
-		${XSTS_HOME}/${XSTS_NAME_2}/${XSTS_TARBALL_2} )"
+		${XSTS_HOME}/${XSTS_NAME_2}/${XSTS_TARBALL_2} )
+	http://dev.gentoo.org/~tetromino/distfiles/${PN}/${P}-namespace-node-patches.tar.bz2"
 
 RDEPEND="sys-libs/zlib
 	icu? ( dev-libs/icu )
+	lzma? ( app-arch/xz-utils )
 	readline? ( sys-libs/readline )"
 
 DEPEND="${RDEPEND}
 	hppa? ( >=sys-devel/binutils-2.15.92.0.2 )"
 
+S="${WORKDIR}/${PN}-${PV%_rc*}"
+
 pkg_setup() {
-	if use python; then
-		python_pkg_setup
-	fi
+	use python && python_pkg_setup
 }
 
 src_unpack() {
 	# ${A} isn't used to avoid unpacking of test tarballs into $WORKDIR,
 	# as they are needed as tarballs in ${S}/xstc instead and not unpacked
-	unpack ${P}.tar.gz
+	unpack ${P/_rc/-rc}.tar.gz
+	unpack "${P}-namespace-node-patches.tar.bz2"
 	cd "${S}"
 
 	if use test; then
@@ -60,41 +63,19 @@ src_unpack() {
 src_prepare() {
 	# Patches needed for prefix support
 	epatch "${FILESDIR}"/${PN}-2.7.1-catalog_path.patch
-	epatch "${FILESDIR}"/${PN}-2.7.2-winnt.patch
+	epatch "${FILESDIR}"/${PN}-2.8.0_rc1-winnt.patch
 
 	eprefixify catalog.c xmlcatalog.c runtest.c xmllint.c
 
 	epunt_cxx
 
-	# Reactivate the shared library versionning script
-	epatch "${FILESDIR}/${P}-reactivate-script.patch"
+	epatch "${FILESDIR}/${PN}-2.7.8-disable_static_modules.patch"
 
-	# Fix a potential memory access error
-	epatch "${FILESDIR}/${P}-xpath-memory.patch"
+	# Prevent linking to out-of-build-tree libxml2, bug #417539
+	epatch "${FILESDIR}/${PN}-2.8.0-icu-linking.patch"
 
-	# Fix a potential freeing error in XPath
-	epatch "${FILESDIR}/${P}-xpath-freeing.patch"
-	epatch "${FILESDIR}/${P}-xpath-freeing2.patch"
-
-	# Fix some potential problems on reallocation failures
-	epatch "${FILESDIR}/${P}-reallocation-failures.patch"
-
-	epatch "${FILESDIR}/${P}-disable_static_modules.patch"
-
-	# Hardening of XPath evaluation
-	epatch "${FILESDIR}/${P}-hardening-xpath.patch"
-
-	# Fix missing error status in XPath evaluation
-	epatch "${FILESDIR}/${P}-error-xpath.patch"
-
-	# Heap-based overflow in parsing long entity references
-	epatch "${FILESDIR}/${P}-allocation-error-copying-entities.patch"
-
-	# Make hash functions less predictable to prevent DoS
-	epatch "${FILESDIR}/${P}-hash-randomization.patch"
-
-	# Fix building against pthreads-win32, bug #407371
-	epatch "${FILESDIR}/${P}-windows-thread_t.patch"
+	# Namespace nodes require special treatment, bug #434344
+	epatch ../patch/*.patch
 
 	# Please do not remove, as else we get references to PORTAGE_TMPDIR
 	# in /usr/lib/python?.?/site-packages/libxml2mod.la among things.
@@ -102,7 +83,11 @@ src_prepare() {
 #	elibtoolize
 
 	# Python bindings are built/tested/installed manually.
-	sed -e "s/@PYTHON_SUBDIR@//" -i Makefile.am || die "sed failed"
+	sed -e "s/@PYTHON_SUBDIR@//" -i Makefile.am || die "sed 1 failed"
+
+	# Use Gentoo's python-config naming scheme
+	sed -e 's/python$PYTHON_VERSION-config/python-config-$PYTHON_VERSION/' \
+		-i configure.in || die "sed 2 failed"
 
 	eautoreconf
 }
@@ -117,20 +102,22 @@ src_configure() {
 
 	# --with-mem-debug causes unusual segmentation faults (bug #105120).
 
-	local myconf="--with-html-subdir=${PF}/html
-		--docdir=${EPREFIX}/usr/share/doc/${PF}
+	local myconf=(
+		--with-html-subdir=${PF}/html
+		--docdir="${EPREFIX}/usr/share/doc/${PF}"
 		$(use_with debug run-debug)
 		$(use_with icu)
+		$(use_with lzma)
 		$(use_with python)
 		$(use_with readline)
 		$(use_with readline history)
 		$(use_enable ipv6)
-		$(use_enable static-libs static)"
+		$(use_enable static-libs static) )
 
 	# filter seemingly problematic CFLAGS (#26320)
 	filter-flags -fprefetch-loop-arrays -funroll-loops
 
-	econf ${myconf}
+	econf "${myconf[@]}"
 }
 
 src_compile() {
@@ -185,7 +172,7 @@ src_install() {
 	fi
 
 	rm -rf "${ED}"/usr/share/doc/${P}
-	dodoc AUTHORS ChangeLog Copyright NEWS README* TODO* || die "dodoc failed"
+	dodoc AUTHORS ChangeLog Copyright NEWS README* TODO*
 
 	if ! use python; then
 		rm -rf "${ED}"/usr/share/doc/${PF}/python
@@ -202,10 +189,8 @@ src_install() {
 		rm -rf "${ED}/usr/share/doc/${PF}/python/examples"
 	fi
 
-	if ! use static-libs; then
-		# Remove useless .la files
-		find "${D}" -name '*.la' -exec rm -f {} + || die "la file removal failed"
-	fi
+	# Always remove useless .la files
+	find "${D}" -name '*.la' -exec rm -f {} + || die "la file removal failed"
 }
 
 pkg_postinst() {
