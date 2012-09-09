@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Package-Stash-XS
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-Stash-XS/ChangeLog,v 1.27 2012/09/01 11:46:56 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-Stash-XS/ChangeLog,v 1.28 2012/09/09 16:22:09 armin76 Exp $
+
+  09 Sep 2012; Raúl Porcel <armin76@gentoo.org>
+  Package-Stash-XS-0.250.0.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #418803
 
   01 Sep 2012; Fabian Groffen <grobian@gentoo.org>
   Package-Stash-XS-0.250.0.ebuild:

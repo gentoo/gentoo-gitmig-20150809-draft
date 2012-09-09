@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Try-Tiny
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Try-Tiny/ChangeLog,v 1.38 2012/09/01 11:59:32 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Try-Tiny/ChangeLog,v 1.39 2012/09/09 16:18:49 armin76 Exp $
+
+  09 Sep 2012; Raúl Porcel <armin76@gentoo.org> Try-Tiny-0.110.0.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #418803
 
   01 Sep 2012; Fabian Groffen <grobian@gentoo.org> Try-Tiny-0.110.0.ebuild:
   Marked ~ppc-aix, bug #432288
