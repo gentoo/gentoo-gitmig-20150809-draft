@@ -1,16 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-10.ebuild,v 1.1 2012/09/08 17:35:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-10.ebuild,v 1.2 2012/09/09 17:38:10 williamh Exp $
 
 EAPI=4
 
-EGIT_REPO_URI="git://git.kernel.org/pub/scm/utils/kernel/${PN}/${PN}.git"
+inherit autotools eutils toolchain-funcs libtool
 
-[[ ${PV} == 9999 ]] && vcs=git-2
-inherit ${vcs} autotools eutils toolchain-funcs libtool
-unset vcs
-
-if [[ ${PV} != 9999 ]] ; then
+if [[ ${PV} == 9999 ]]; then
+	EGIT_REPO_URI="git://git.kernel.org/pub/scm/utils/kernel/${PN}/${PN}.git"
+	inherit git-2
+else
 	SRC_URI="mirror://kernel/linux/utils/kernel/kmod/${P}.tar.xz"
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 fi
