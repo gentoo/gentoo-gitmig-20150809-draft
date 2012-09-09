@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kanyremote/kanyremote-6.0.1.ebuild,v 1.2 2012/08/26 18:52:30 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kanyremote/kanyremote-6.0.1.ebuild,v 1.3 2012/09/09 12:09:21 ago Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/anyremote/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="bluetooth"
 
 RDEPEND="
