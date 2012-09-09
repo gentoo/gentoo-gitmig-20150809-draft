@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/xz-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/ChangeLog,v 1.49 2012/08/21 01:08:15 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/ChangeLog,v 1.50 2012/09/09 15:59:15 armin76 Exp $
+
+  09 Sep 2012; Raúl Porcel <armin76@gentoo.org> xz-utils-5.0.4.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #431846
 
   21 Aug 2012; Anthony G. Basile <blueness@gentoo.org> xz-utils-5.0.4.ebuild:
   Stable arm, bug #431846
