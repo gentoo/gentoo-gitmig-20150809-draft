@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/nca/nca-0.9.0.ebuild,v 1.2 2010/07/21 00:29:13 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/nca/nca-0.9.0.ebuild,v 1.3 2012/09/09 22:22:36 sbriesen Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ DESCRIPTION="Network Console on Acid"
 HOMEPAGE="http://www.xenoclast.org/nca/"
 SRC_URI="http://www.xenoclast.org/nca/download/${P}.tar.gz"
 
-LICENSE="BSD"
+LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
