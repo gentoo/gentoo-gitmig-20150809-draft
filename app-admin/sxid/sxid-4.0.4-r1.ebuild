@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sxid/sxid-4.0.4-r1.ebuild,v 1.11 2009/09/23 15:02:36 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sxid/sxid-4.0.4-r1.ebuild,v 1.12 2012/09/09 15:49:42 armin76 Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://freshmeat.net/projects/sxid"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-amd64 ppc sparc x86"
+KEYWORDS="-amd64 ppc x86"
 IUSE=""
 
 RDEPEND="virtual/mailx"
