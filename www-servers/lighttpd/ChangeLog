@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.286 2012/08/22 16:50:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.287 2012/09/09 17:05:15 armin76 Exp $
+
+  09 Sep 2012; Raúl Porcel <armin76@gentoo.org> lighttpd-1.4.31.ebuild:
+  alpha/ia64/sh/sparc stable wrt #430902
 
   22 Aug 2012; Markos Chandras <hwoarang@gentoo.org> lighttpd-1.4.31.ebuild:
   Replace (use_with mmap) with (use_enable mmap) as pointed out by Jeremy Olexa
