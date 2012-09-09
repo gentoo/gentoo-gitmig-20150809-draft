@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libgsasl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/ChangeLog,v 1.79 2012/08/22 19:10:44 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/ChangeLog,v 1.80 2012/09/09 17:09:27 armin76 Exp $
+
+  09 Sep 2012; Raúl Porcel <armin76@gentoo.org> libgsasl-1.8.0.ebuild:
+  alpha/ia64/sparc stable wrt #429710
 
   22 Aug 2012; Johannes Huber <johu@gentoo.org> libgsasl-1.8.0.ebuild:
   Stable for x86, wrt bug #429170
