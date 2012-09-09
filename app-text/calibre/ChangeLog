@@ -1,6 +1,10 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.226 2012/09/07 20:17:54 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.227 2012/09/09 17:30:17 zmedico Exp $
+
+  09 Sep 2012; Zac Medico <zmedico@gentoo.org> calibre-0.8.62.ebuild,
+  calibre-0.8.67.ebuild, calibre-0.8.68.ebuild:
+  Require libusb:1 instead of libusb:0 for bug #434448.
 
 *calibre-0.8.68 (07 Sep 2012)
 
