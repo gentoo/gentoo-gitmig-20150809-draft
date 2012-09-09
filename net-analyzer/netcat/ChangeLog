@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netcat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/ChangeLog,v 1.47 2012/08/20 14:44:22 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/ChangeLog,v 1.48 2012/09/09 15:47:01 armin76 Exp $
+
+  09 Sep 2012; Raúl Porcel <armin76@gentoo.org> netcat-110-r9.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #423531
 
   20 Aug 2012; Johannes Huber <johu@gentoo.org> netcat-110-r9.ebuild:
   Stable for x86, wrt bug #423531
