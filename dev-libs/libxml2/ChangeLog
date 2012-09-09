@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.353 2012/09/09 02:29:31 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.354 2012/09/09 02:30:22 tetromino Exp $
 
 *libxml2-2.8.0-r2 (09 Sep 2012)
 
@@ -18,6 +18,7 @@
   -files/libxml2-2.7.8-xpath-memory.patch, +libxml2-2.8.0-r2.ebuild:
   Add upstream patches to ensure special treatment for namespace nodes
   (CVE-2012-2871, bug #434344, thanks to Paweł Hajdan, Jr. and Sean Amoss).
+  Drop old version.
 
   04 Jun 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   libxml2-2.8.0-r1.ebuild, +files/libxml2-2.8.0-icu-linking.patch:
