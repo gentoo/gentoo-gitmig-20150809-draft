@@ -1,17 +1,21 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/muffin/muffin-1.0.1.ebuild,v 1.3 2012/05/22 06:41:16 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/muffin/muffin-1.0.3_p2.ebuild,v 1.1 2012/09/09 00:31:41 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="Compositing window manager forked from Mutter for use with Cinnamon"
 HOMEPAGE="http://cinnamon.linuxmint.com/"
 
-SRC_URI="https://github.com/linuxmint/muffin/tarball/${PV} -> ${P}.tar.gz"
+MY_PV="${PV/_p/-UP}"
+MY_P="${PN}-${MY_PV}"
+
+SRC_URI="https://github.com/linuxmint/muffin/tarball/${MY_PV} -> ${MY_P}.tar.gz
+	http://dev.gentoo.org/~tetromino/distfiles/${PN}/${MY_P}-gtk-doc-syntax.patch.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -56,7 +60,7 @@ DEPEND="${COMMON_DEPEND}
 RDEPEND="${COMMON_DEPEND}
 	!x11-misc/expocity"
 
-S="${WORKDIR}/linuxmint-muffin-e5c8fdb"
+S="${WORKDIR}/linuxmint-muffin-e00fc85"
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README* *.txt doc/*.txt"
@@ -72,4 +76,11 @@ pkg_setup() {
 		--with-libcanberra
 		$(use_enable introspection)
 		$(use_enable xinerama)"
+}
+
+src_prepare() {
+	# gobject-introspection-1.33 compat; in 1.0.9
+	epatch "${WORKDIR}/${MY_P}-gtk-doc-syntax.patch"
+
+	gnome2_src_prepare
 }
