@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/vbam-9999.ebuild,v 1.1 2012/09/08 23:22:51 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/vbam-9999.ebuild,v 1.2 2012/09/09 22:10:18 radhermit Exp $
 
 EAPI=4
 WX_GTK_VER="2.8"
@@ -22,6 +22,7 @@ RDEPEND=">=media-libs/libpng-1.4
 	media-libs/libsdl[joystick]
 	link? ( media-libs/libsfml )
 	sys-libs/zlib
+	virtual/glu
 	virtual/opengl
 	ffmpeg? ( virtual/ffmpeg )
 	gtk? ( >=dev-cpp/glibmm-2.4.0:2
