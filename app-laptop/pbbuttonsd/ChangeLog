@@ -1,6 +1,13 @@
 # ChangeLog for app-laptop/pbbuttonsd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/ChangeLog,v 1.77 2010/01/14 02:02:32 josejx Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/ChangeLog,v 1.78 2012/09/09 16:21:47 josejx Exp $
+
+*pbbuttonsd-0.8.1-r4 (09 Sep 2012)
+
+  09 Sep 2012; Joseph Jezak <josejx@gentoo.org> -pbbuttonsd-0.8.1-r2.ebuild,
+  +pbbuttonsd-0.8.1-r4.ebuild, +files/cpufreq.patch,
+  +files/laptopmode.sh.patch:
+  Removed old version, added patches from Massimo Burcheri (bug #429306).
 
   14 Jan 2010; Joseph Jezak <josejx@gentoo.org> pbbuttonsd-0.8.1-r3.ebuild:
   Marked ppc stable.

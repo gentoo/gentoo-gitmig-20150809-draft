@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.8.1-r2.ebuild,v 1.6 2008/12/28 02:14:12 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.8.1-r4.ebuild,v 1.1 2012/09/09 16:21:48 josejx Exp $
 
 inherit autotools flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/pbbuttons/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="acpi alsa debug doc ibam macbook oss"
 
 DEPEND="macbook? (
@@ -34,6 +34,12 @@ src_unpack() {
 	### Fix macbook -lz issue
 	epatch "${FILESDIR}/lz.patch"
 	epatch "${FILESDIR}/lm.patch"
+	### Fix new apple hid fnmode issue
+	epatch "${FILESDIR}/fnmode.patch"
+	### Add kernel 2.6.x stuff for 3.x as well
+	epatch "${FILESDIR}/laptopmode.sh.patch"
+	epatch "${FILESDIR}/cpufreq.patch"
+
 	eautoconf
 }
 
