@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs-vcs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.112 2012/09/07 17:10:56 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.113 2012/09/09 12:38:35 ulm Exp $
+
+  09 Sep 2012; Ulrich Müller <ulm@gentoo.org> emacs-vcs-24.2.9999.ebuild:
+  Remove sed for freebsd crt*.o files. This has been applied upstream.
 
   07 Sep 2012; Ulrich Müller <ulm@gentoo.org> metadata.xml:
   Add description for source USE flag.

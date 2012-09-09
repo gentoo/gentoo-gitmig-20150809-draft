@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.2.9999.ebuild,v 1.3 2012/08/23 20:13:25 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.2.9999.ebuild,v 1.4 2012/09/09 12:38:35 ulm Exp $
 
 EAPI=4
 
@@ -104,10 +104,6 @@ src_prepare() {
 	fi
 
 	epatch_user
-
-	# http://debbugs.gnu.org/12047#8
-	sed -i -e '/freebsd.*)/,+2s:[^ ]*crt\(begin\|\end\)\.o::' configure.ac \
-		|| die "unable to sed configure.ac"
 
 	if ! use alsa; then
 		# ALSA is detected even if not requested by its USE flag.
