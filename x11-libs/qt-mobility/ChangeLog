@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-mobility
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-mobility/ChangeLog,v 1.9 2012/08/12 01:42:32 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-mobility/ChangeLog,v 1.10 2012/09/09 07:42:29 pesa Exp $
+
+  09 Sep 2012; Davide Pesavento <pesa@gentoo.org>
+  qt-mobility-1.2.2_p20120403.ebuild:
+  Slot gst-plugins-bad dependency to :0.10
 
   12 Aug 2012; Davide Pesavento <pesa@gentoo.org>
   qt-mobility-1.2.2_p20120403.ebuild:

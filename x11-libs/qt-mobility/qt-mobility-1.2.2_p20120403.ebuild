@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-mobility/qt-mobility-1.2.2_p20120403.ebuild,v 1.4 2012/08/12 01:42:32 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-mobility/qt-mobility-1.2.2_p20120403.ebuild,v 1.5 2012/09/09 07:42:29 pesa Exp $
 
 EAPI=4
 
@@ -46,9 +46,9 @@ RDEPEND="
 	messaging? ( >=net-libs/qmf-2.0_p201209 )
 	multimedia? (
 		media-libs/alsa-lib
-		>=media-libs/gstreamer-0.10.19:0.10
-		>=media-libs/gst-plugins-bad-0.10.19
-		>=media-libs/gst-plugins-base-0.10.19:0.10
+		media-libs/gstreamer:0.10
+		media-libs/gst-plugins-bad:0.10
+		media-libs/gst-plugins-base:0.10
 		x11-libs/libX11
 		x11-libs/libXext
 		x11-libs/libXv
