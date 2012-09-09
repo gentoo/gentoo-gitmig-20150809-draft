@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.508 2012/09/01 17:42:25 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.509 2012/09/09 14:07:46 armin76 Exp $
+
+  09 Sep 2012; Raúl Porcel <armin76@gentoo.org> cups-1.5.2-r4.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #411887
 
   01 Sep 2012; Anthony G. Basile <blueness@gentoo.org> cups-1.6.1.ebuild,
   cups-9999.ebuild:
