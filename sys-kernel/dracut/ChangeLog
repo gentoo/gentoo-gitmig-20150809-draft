@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.86 2012/08/20 21:54:16 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.87 2012/09/09 16:48:14 aidecoe Exp $
+
+  09 Sep 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-014-r3.ebuild,
+  dracut-018-r2.ebuild, dracut-019-r5.ebuild, dracut-022-r5.ebuild,
+  dracut-023.ebuild:
+  Depend on net-misc/dhcp with "client" flag enabled. Fixes bug #433808.
 
   20 Aug 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-022-r5.ebuild:
   Building docs conditionally along with optimization is a mistake. Fixed.
