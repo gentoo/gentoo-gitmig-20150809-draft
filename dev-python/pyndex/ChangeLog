@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyndex
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyndex/ChangeLog,v 1.8 2010/12/25 16:52:25 arfrever Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyndex/ChangeLog,v 1.9 2012/09/09 15:09:31 armin76 Exp $
+
+  09 Sep 2012; Raúl Porcel <armin76@gentoo.org> pyndex-0.3.2a.ebuild:
+  Drop ia64/s390 keywords
 
   25 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pyndex-0.3.2a.ebuild:
