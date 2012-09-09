@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/qt-creator
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/ChangeLog,v 1.126 2012/08/13 04:40:43 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/ChangeLog,v 1.127 2012/09/09 20:45:34 blueness Exp $
+
+  09 Sep 2012; Anthony G. Basile <blueness@gentoo.org> qt-creator-2.5.2.ebuild:
+  Stable ppc, bug #434392
 
   13 Aug 2012; Davide Pesavento <pesa@gentoo.org> qt-creator-2.5.2.ebuild:
   Merge with live ebuild.
