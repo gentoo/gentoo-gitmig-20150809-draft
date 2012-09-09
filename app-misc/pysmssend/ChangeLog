@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/pysmssend
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pysmssend/ChangeLog,v 1.25 2012/06/10 15:44:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pysmssend/ChangeLog,v 1.26 2012/09/09 08:08:54 hwoarang Exp $
+
+  09 Sep 2012; Markos Chandras <hwoarang@gentoo.org> pysmssend-9999.ebuild:
+  Switch from make_desktop_entry to domenu as a .desktop file is provided in the
+  source
 
   10 Jun 2012; Markos Chandras <hwoarang@gentoo.org> pysmssend-9999.ebuild:
   Add post_inst() message for the optional dev-python/python-gnupg dependency
@@ -104,4 +108,3 @@
 
   06 Feb 2009; Markos Chandras <hwoarang@gentoo.org> +pysmssend-1.39.ebuild:
   Initial commit for pysmssend program
-
