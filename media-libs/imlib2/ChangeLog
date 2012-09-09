@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/imlib2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.109 2012/05/09 16:20:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.110 2012/09/09 14:50:29 blueness Exp $
+
+  09 Sep 2012; Anthony G. Basile <blueness@gentoo.org> imlib2-1.4.5.ebuild:
+  Stable ppc ppc64, bug #433309
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> imlib2-1.4.5.ebuild:
   keyword ~amd64-fbsd
