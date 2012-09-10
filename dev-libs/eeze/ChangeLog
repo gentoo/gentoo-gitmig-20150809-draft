@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/eeze
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eeze/ChangeLog,v 1.7 2012/09/08 11:56:07 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eeze/ChangeLog,v 1.8 2012/09/10 23:28:56 vapier Exp $
+
+  10 Sep 2012; Mike Frysinger <vapier@gentoo.org> eeze-1.7.0.ebuild:
+  Add arm love.
 
 *eeze-1.7.0 (08 Sep 2012)
 
@@ -41,4 +44,3 @@
   18 Nov 2010; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
   +eeze-1.0.0_beta2.ebuild, +metadata.xml:
   Initial commit, based on ebuild in enlightenment overlay
-

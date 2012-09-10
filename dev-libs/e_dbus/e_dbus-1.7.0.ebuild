@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/e_dbus/e_dbus-1.7.0.ebuild,v 1.1 2012/09/08 11:48:14 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/e_dbus/e_dbus-1.7.0.ebuild,v 1.2 2012/09/10 23:30:13 vapier Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ inherit enlightenment
 DESCRIPTION="Enlightenment's (Ecore) integration to DBus"
 SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE="bluetooth +connman +libnotify ofono static-libs test-binaries +udev"
 
 RDEPEND=">=dev-libs/eina-1.7.0

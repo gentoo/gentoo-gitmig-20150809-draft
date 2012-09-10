@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/eina
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eina/ChangeLog,v 1.11 2012/09/07 19:22:54 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eina/ChangeLog,v 1.12 2012/09/10 23:26:03 vapier Exp $
+
+  10 Sep 2012; Mike Frysinger <vapier@gentoo.org> eina-1.7.0.ebuild:
+  Add arm love.
 
   07 Sep 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> -eina-1.0.1.ebuild,
   -eina-1.1.0.ebuild:
@@ -57,4 +60,3 @@
   18 Nov 2010; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
   +eina-1.0.0_beta2.ebuild, +metadata.xml:
   Initial commit, based on ebuild in enlightenment overlay
-

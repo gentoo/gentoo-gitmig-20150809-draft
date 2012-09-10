@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ecore-1.7.0.ebuild,v 1.1 2012/09/08 08:55:07 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ecore-1.7.0.ebuild,v 1.2 2012/09/10 23:28:35 vapier Exp $
 
 EAPI=2
 
@@ -9,7 +9,7 @@ inherit virtualx enlightenment eutils
 DESCRIPTION="Enlightenment's core event abstraction layer and OS abstraction layer"
 SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE="ares curl directfb +evas fbcon glib gnutls +inotify ipv6 opengl sdl ssl static-libs +threads tslib +X xcb xinerama xprint xscreensaver"
 
 RDEPEND=">=dev-libs/eina-1.7.0
