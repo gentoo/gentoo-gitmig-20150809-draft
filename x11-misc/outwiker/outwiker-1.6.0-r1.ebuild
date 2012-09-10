@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/outwiker/outwiker-1.6.0.ebuild,v 1.1 2012/07/18 06:46:43 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/outwiker/outwiker-1.6.0-r1.ebuild,v 1.1 2012/09/10 08:34:31 pinkbyte Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.7"
@@ -15,8 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="dev-python/libgnomeprint-python
-	dev-python/pywebkitgtk
+RDEPEND="dev-python/pywebkitgtk
 	dev-python/wxpython"
 DEPEND="${RDEPEND}"
 

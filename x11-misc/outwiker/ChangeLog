@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/outwiker
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/outwiker/ChangeLog,v 1.2 2012/08/30 18:32:41 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/outwiker/ChangeLog,v 1.3 2012/09/10 08:34:31 pinkbyte Exp $
+
+*outwiker-1.6.0-r1 (10 Sep 2012)
+
+  10 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> -outwiker-1.6.0.ebuild,
+  +outwiker-1.6.0-r1.ebuild:
+  Revision bump - remove pointless dependency on
+  dev-python/libgnomeprint-python. Thanks to leio for discovering this issue
 
   30 Aug 2012; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
   Set correct email address, drop proxy maintainers' herd
