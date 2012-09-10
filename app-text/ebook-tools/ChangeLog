@@ -1,6 +1,11 @@
 # ChangeLog for app-text/ebook-tools
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ebook-tools/ChangeLog,v 1.21 2011/07/13 14:39:04 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/ebook-tools/ChangeLog,v 1.22 2012/09/10 23:05:25 johu Exp $
+
+*ebook-tools-0.2.2 (10 Sep 2012)
+
+  10 Sep 2012; Johannes Huber <johu@gentoo.org> +ebook-tools-0.2.2.ebuild:
+  Version bump.
 
   13 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> ebook-tools-0.2.1.ebuild:
   ppc64 stable wrt #354033
@@ -78,4 +83,3 @@
   28 Jan 2009; Alexey Shvetsov <alexxy@gentoo.org> +metadata.xml,
   +ebook-tools-0.1.1.ebuild:
   Initial import
-
