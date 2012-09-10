@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/libtorrent-0.13.2.ebuild,v 1.1 2012/06/09 15:57:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/libtorrent-0.13.2.ebuild,v 1.2 2012/09/10 02:26:09 ottxor Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://libtorrent.rakshasa.no/downloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris"
 IUSE="debug ipv6 ssl"
 
 RDEPEND="
@@ -37,7 +37,8 @@ src_configure() {
 		myconf="--without-posix-fallocate"
 	fi
 
-	econf \
+	# configure needs bash or script bombs out on some null shift, bug #291229
+	CONFIG_SHELL=${BASH} econf \
 		--disable-dependency-tracking \
 		--enable-aligned \
 		$(use_enable debug) \
