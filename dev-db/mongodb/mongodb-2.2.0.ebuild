@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.2.0.ebuild,v 1.2 2012/08/30 15:47:24 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.2.0.ebuild,v 1.3 2012/09/10 12:13:44 ultrabug Exp $
 
 EAPI=4
 SCONS_MIN_VERSION="1.2.0"
@@ -24,10 +24,10 @@ RDEPEND="!v8? ( <dev-lang/spidermonkey-1.8[unicode] )
 	v8? ( dev-lang/v8 )
 	dev-libs/boost
 	dev-libs/libpcre[cxx]
+	dev-util/google-perftools
 	net-libs/libpcap
 	app-arch/snappy"
 DEPEND="${RDEPEND}
-	dev-util/google-perftools
 	sys-libs/readline
 	sys-libs/ncurses"
 

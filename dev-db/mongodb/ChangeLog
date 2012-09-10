@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mongodb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.43 2012/08/30 15:47:24 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.44 2012/09/10 12:13:44 ultrabug Exp $
+
+  10 Sep 2012; Ultrabug <ultrabug@gentoo.org> mongodb-2.2.0.ebuild,
+  files/mongodb-2.2-fix-sconscript.patch:
+  Fix #433533 RDEPEND thx to Albert W. Hopkins. Fix x86 compilation #433507.
 
   30 Aug 2012; Ultrabug <ultrabug@gentoo.org> mongodb-2.2.0.ebuild:
   Fix v8 compilation when spidermonkey is not installed, by Jouni Kosonen.
