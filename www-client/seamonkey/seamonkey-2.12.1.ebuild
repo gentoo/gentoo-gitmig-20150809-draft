@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.12.ebuild,v 1.2 2012/09/08 12:34:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.12.1.ebuild,v 1.1 2012/09/10 07:49:31 polynomial-c Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -58,7 +58,7 @@ ASM_DEPEND=">=dev-lang/yasm-1.1"
 
 # Mesa 7.10 needed for WebGL + bugfixes
 RDEPEND=">=sys-devel/binutils-2.16.1
-	>=dev-libs/nss-3.13.5
+	>=dev-libs/nss-3.13.6
 	>=dev-libs/nspr-4.9.1
 	>=dev-libs/glib-2.26
 	>=media-libs/mesa-7.10
