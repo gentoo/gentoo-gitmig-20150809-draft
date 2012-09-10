@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-9999.ebuild,v 1.2 2012/09/10 08:21:04 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-9999.ebuild,v 1.3 2012/09/10 16:28:59 mr_bones_ Exp $
 
 EAPI="4"
 
@@ -18,7 +18,7 @@ SRC_URI=""
 KEYWORDS=""
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="examples paramiko +sudo"
+IUSE="examples paramiko +sudo test"
 
 DEPEND="test? (
 		dev-python/nose
