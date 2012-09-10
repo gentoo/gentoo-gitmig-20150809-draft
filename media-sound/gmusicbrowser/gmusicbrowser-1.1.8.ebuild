@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmusicbrowser/gmusicbrowser-1.1.8.ebuild,v 1.6 2012/08/03 08:51:49 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmusicbrowser/gmusicbrowser-1.1.8.ebuild,v 1.7 2012/09/10 07:39:55 hasufell Exp $
 
 # note: dev-perl/Gtk2-MozEmbed left out in purpose because gtkmozembed and xulrunner are obsolete
 
 EAPI=4
 
-inherit fdo-mime gnome2-utils
+inherit eutils fdo-mime gnome2-utils
 
 DESCRIPTION="An open-source jukebox for large collections of mp3/ogg/flac files"
 HOMEPAGE="http://gmusicbrowser.org/"
@@ -51,6 +51,8 @@ src_prepare() {
 		-e '/menudir/d' \
 		-e '/^LINGUAS=/d' \
 		Makefile || die
+
+	strip-linguas ${LANGS}
 }
 
 src_install() {
