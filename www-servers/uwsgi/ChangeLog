@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/uwsgi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.27 2012/08/27 08:34:07 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.28 2012/09/10 09:47:52 dev-zero Exp $
+
+*uwsgi-1.2.6 (10 Sep 2012)
+
+  10 Sep 2012; Tiziano Müller <dev-zero@gentoo.org>
+  +files/1.2.6-fixed-typecasting.patch, +uwsgi-1.2.6.ebuild:
+  Version bump.
 
   27 Aug 2012; Ultrabug <ultrabug@gentoo.org> files/uwsgi.initd,
   files/uwsgi.initd-r1:
@@ -141,4 +147,3 @@
   +files/uwsgi-0.9.5-respect_flags.patch, +metadata.xml:
   initial ebuild. thanks to Arfrever Frehtes Taifersar Arahesis for sane
   python ABI support. closes #314931
-
