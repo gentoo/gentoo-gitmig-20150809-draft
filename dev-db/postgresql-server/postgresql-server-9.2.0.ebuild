@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9.2.0_beta2-r1.ebuild,v 1.2 2012/07/28 12:34:49 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9.2.0.ebuild,v 1.1 2012/09/10 11:28:37 patrick Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -13,18 +13,18 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 SLOT="$(get_version_component_range 1-2)"
 
 # Comment the following six lines when not a beta or rc.
-MY_PV="${PV//_}"
-MY_FILE_PV="${SLOT}$(get_version_component_range 4)"
-S="${WORKDIR}/postgresql-${MY_FILE_PV}"
-SRC_URI="mirror://postgresql/source/v${MY_PV}/postgresql-${MY_FILE_PV}.tar.bz2
-		 http://dev.gentoo.org/~titanofold/postgresql-patches-${MY_FILE_PV}.tbz2
-		 http://dev.gentoo.org/~titanofold/postgresql-initscript-2.3.tbz2"
+#MY_PV="${PV//_}"
+#MY_FILE_PV="${SLOT}$(get_version_component_range 4)"
+#S="${WORKDIR}/postgresql-${MY_FILE_PV}"
+#SRC_URI="mirror://postgresql/source/v${MY_FILE_PV}/postgresql-${MY_FILE_PV}.tar.bz2
+#		 http://dev.gentoo.org/~titanofold/postgresql-patches-${SLOT}beta3.tbz2
+#		 http://dev.gentoo.org/~titanofold/postgresql-initscript-2.3.tbz2"
 
 # Comment the following four lines when a beta or rc.
-#S="${WORKDIR}/postgresql-${PV}"
-#SRC_URI="mirror://postgresql/source/v${PV}/postgresql-${PV}.tar.bz2
-#		 http://dev.gentoo.org/~titanofold/postgresql-patches-${PV}.tbz2
-#		 http://dev.gentoo.org/~titanofold/postgresql-initscript-2.1.tbz2"
+S="${WORKDIR}/postgresql-${PV}"
+SRC_URI="mirror://postgresql/source/v${PV}/postgresql-${PV}.tar.bz2
+		 http://dev.gentoo.org/~titanofold/postgresql-patches-${SLOT}beta3.tbz2
+		 http://dev.gentoo.org/~titanofold/postgresql-initscript-2.3.tbz2"
 
 LICENSE="POSTGRESQL GPL-2"
 DESCRIPTION="PostgreSQL server"

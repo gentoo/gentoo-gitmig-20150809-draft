@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/postgresql-docs-9.2.0_beta2.ebuild,v 1.1 2012/06/06 14:01:50 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/postgresql-docs-9.2.0.ebuild,v 1.1 2012/09/10 11:30:16 patrick Exp $
 
 EAPI="4"
 
@@ -11,14 +11,14 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 SLOT="$(get_version_component_range 1-2)"
 
 # Comment the following four lines when not a beta or rc.
-MY_PV="${PV//_}"
-MY_FILE_PV="${SLOT}$(get_version_component_range 4)"
-S="${WORKDIR}/postgresql-${MY_FILE_PV}"
-SRC_URI="mirror://postgresql/source/v${MY_PV}/postgresql-${MY_FILE_PV}.tar.bz2"
+#MY_PV="${PV//_}"
+#MY_FILE_PV="${SLOT}$(get_version_component_range 4)"
+#S="${WORKDIR}/postgresql-${MY_FILE_PV}"
+#SRC_URI="mirror://postgresql/source/v${MY_FILE_PV}/postgresql-${MY_FILE_PV}.tar.bz2"
 
 # Comment the following two lines when a beta or rc.
-#S="${WORKDIR}/postgresql-${PV}"
-# SRC_URI="mirror://postgresql/source/v${PV}/postgresql-${PV}.tar.bz2"
+S="${WORKDIR}/postgresql-${PV}"
+SRC_URI="mirror://postgresql/source/v${PV}/postgresql-${PV}.tar.bz2"
 
 LICENSE="POSTGRESQL"
 DESCRIPTION="PostgreSQL documentation"

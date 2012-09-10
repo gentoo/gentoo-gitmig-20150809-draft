@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/postgresql-docs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/ChangeLog,v 1.166 2012/08/29 07:10:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/ChangeLog,v 1.167 2012/09/10 11:30:16 patrick Exp $
+
+*postgresql-docs-9.2.0 (10 Sep 2012)
+
+  10 Sep 2012; Patrick Lauer <patrick@gentoo.org> +postgresql-docs-9.2.0.ebuild,
+  -postgresql-docs-9.2.0_beta1.ebuild, -postgresql-docs-9.2.0_beta2.ebuild,
+  -postgresql-docs-9.2.0_beta3.ebuild, -postgresql-docs-9.2.0_rc1.ebuild:
+  Bump
 
 *postgresql-docs-9.2.0_rc1 (29 Aug 2012)
 
