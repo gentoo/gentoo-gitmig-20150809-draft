@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/uhd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/uhd/ChangeLog,v 1.1 2012/09/10 03:13:47 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/uhd/ChangeLog,v 1.2 2012/09/10 03:27:08 zerochaos Exp $
+
+  10 Sep 2012; Rick Farina <zerochaos@gentoo.org> uhd-3.4.3.ebuild:
+  remove redundant dep on cmake as pointed out by radhermit
 
 *uhd-3.4.3 (10 Sep 2012)
 

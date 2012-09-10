@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/uhd/uhd-3.4.3.ebuild,v 1.1 2012/09/10 03:13:47 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/uhd/uhd-3.4.3.ebuild,v 1.2 2012/09/10 03:27:08 zerochaos Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.6"
@@ -19,8 +19,7 @@ S="${WORKDIR}"/EttusResearch-UHD-Mirror-6047010/host
 LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
-DEPEND="dev-util/cmake
-	virtual/libusb:1
+DEPEND="virtual/libusb:1
 	dev-libs/boost
 	dev-python/cheetah"
 RDEPEND="virtual/libusb:1
