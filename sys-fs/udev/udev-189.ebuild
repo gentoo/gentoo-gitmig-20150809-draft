@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-189.ebuild,v 1.1 2012/08/24 16:21:22 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-189.ebuild,v 1.2 2012/09/10 21:34:44 williamh Exp $
 
 EAPI=4
 
@@ -305,7 +305,7 @@ pkg_preinst()
 				/usr/share/gtk-doc/html/${htmldir}
 		fi
 	done
-	preserve_old_lib /usr/$(get_libdir)/libudev.so.0
+	preserve_old_lib /$(get_libdir)/libudev.so.0
 }
 
 # This function determines if a directory is a mount point.
@@ -404,7 +404,7 @@ pkg_postinst()
 	ewarn "generator. If you need persistent names for these devices,"
 	ewarn "place udev rules for them in ${ROOT}etc/udev/rules.d."
 
-	preserve_old_lib_notify /usr/$(get_libdir)/libudev.so.0
+	preserve_old_lib_notify /$(get_libdir)/libudev.so.0
 
 	elog
 	elog "For more information on udev on Gentoo, writing udev rules, and"
