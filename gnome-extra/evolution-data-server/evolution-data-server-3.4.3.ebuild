@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.4.3.ebuild,v 1.2 2012/08/13 04:58:39 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.4.3.ebuild,v 1.3 2012/09/10 17:07:04 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-solaris"
 IUSE="doc +gnome-online-accounts +introspection ipv6 ldap kerberos vala +weather"
 
-RDEPEND=">=dev-libs/glib-2.30:2
+RDEPEND=">=dev-libs/glib-2.31:2
 	>=x11-libs/gtk+-3.2:3
 	>=gnome-base/gconf-2
 	>=dev-db/sqlite-3.5
