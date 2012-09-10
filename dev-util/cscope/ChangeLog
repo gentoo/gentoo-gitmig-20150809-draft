@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cscope
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.133 2012/09/10 22:40:26 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.134 2012/09/10 23:04:45 blueness Exp $
+
+  10 Sep 2012; Anthony G. Basile <blueness@gentoo.org> cscope-15.8a.ebuild:
+  Stable ppc64, bug #434292
 
   10 Sep 2012; Anthony G. Basile <blueness@gentoo.org> cscope-15.8a.ebuild:
   Stable ppc, bug #434292
