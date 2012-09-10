@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/clucene
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/ChangeLog,v 1.50 2012/09/08 01:51:22 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/ChangeLog,v 1.51 2012/09/10 11:22:31 scarabeus Exp $
+
+*clucene-2.3.3.4-r4 (10 Sep 2012)
+
+  10 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> +clucene-2.3.3.4-r4.ebuild:
+  Fix copying of internal headers to installed files. Fixes bug#434476.
 
   08 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
   clucene-2.3.3.4-r3.ebuild:
