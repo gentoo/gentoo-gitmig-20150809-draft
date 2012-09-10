@@ -22,4 +22,7 @@
   <flag name="thin-splines">Enable thin plate splines</flag>
   <flag name="bitmap">Enable dot-matrix printers and pbm terminal</flag>
 </use>
+<upstream>
+	<remote-id type="sourceforge">gnuplot</remote-id>
+</upstream>
 </pkgmetadata>
