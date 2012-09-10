@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/trousers-0.3.6-r1.ebuild,v 1.1 2012/08/11 16:55:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/trousers-0.3.6-r1.ebuild,v 1.2 2012/09/10 23:00:32 vapier Exp $
 
 EAPI="3"
 
@@ -71,7 +71,9 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-0.3.5-nouseradd.patch"
 
-	sed -e "s/ -Werror//" -i configure.in
+	sed -i -r \
+		-e '/CFLAGS/s/ -(Werror|m64)//' \
+		configure.in || die
 	eautoreconf
 }
 

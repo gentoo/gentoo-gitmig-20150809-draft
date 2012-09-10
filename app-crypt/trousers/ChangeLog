@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/trousers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.35 2012/09/08 02:06:16 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.36 2012/09/10 23:00:32 vapier Exp $
+
+  10 Sep 2012; Mike Frysinger <vapier@gentoo.org> trousers-0.3.6-r1.ebuild:
+  Drop -m64 hardcode.
 
   08 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.
@@ -181,4 +184,3 @@
   06 Feb 2005; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   +files/0.1.7-makefile-statedir.patch, +trousers-0.1.7.ebuild:
   Initial import
-
