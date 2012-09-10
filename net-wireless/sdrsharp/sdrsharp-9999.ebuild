@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/sdrsharp/sdrsharp-9999.ebuild,v 1.1 2012/09/10 02:39:37 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/sdrsharp/sdrsharp-9999.ebuild,v 1.2 2012/09/10 06:11:56 zerochaos Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ DESCRIPTION="simple, intuitive, small and fast DSP application for SDR"
 HOMEPAGE="http://sdrsharp.com/"
 ESVN_REPO_URI="https://subversion.assembla.com/svn/sdrsharp/trunk"
 
-LICENSE="as-is"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS=""
 IUSE=""
