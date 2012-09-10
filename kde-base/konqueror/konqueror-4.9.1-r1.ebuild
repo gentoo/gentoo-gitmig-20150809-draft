@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/konqueror-4.9.1.ebuild,v 1.1 2012/09/04 18:45:02 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/konqueror-4.9.1-r1.ebuild,v 1.1 2012/09/10 11:05:43 johu Exp $
 
 EAPI=4
 
@@ -28,6 +28,8 @@ KMEXTRACTONLY="
 	konqueror/client/
 	lib/konq/
 "
+
+PATCHES=( "${FILESDIR}/${P}-focus.patch" )
 
 src_prepare() {
 	[[ ${CHOST} == *-solaris* ]] && append-ldflags -lmalloc
