@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/podcast
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/podcast/ChangeLog,v 1.10 2012/08/14 18:45:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/podcast/ChangeLog,v 1.11 2012/09/10 18:47:26 graaff Exp $
+
+  10 Sep 2012; Hans de Graaff <graaff@gentoo.org> podcast-0.0.4-r1.ebuild:
+  Add ruby19, ree18. Move to EAPI=4.
 
   14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Update metadata.xml so that it's the same as most other packages.

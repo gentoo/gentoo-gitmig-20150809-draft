@@ -1,9 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/podcast/podcast-0.0.4-r1.ebuild,v 1.2 2011/06/24 14:33:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/podcast/podcast-0.0.4-r1.ebuild,v 1.3 2012/09/10 18:47:26 graaff Exp $
 
-EAPI=2
-USE_RUBY="ruby18"
+EAPI=4
+USE_RUBY="ruby18 ruby19 ree18"
 
 RUBY_FAKEGEM_TASK_TEST=""
 RUBY_FAKEGEM_TASK_DOC=""
@@ -20,7 +20,6 @@ KEYWORDS="~amd64 ~x86"
 
 IUSE="test"
 
-ruby_add_bdepend "test? ( virtual/ruby-test-unit )"
 ruby_add_rdepend "dev-ruby/ruby-mp3info"
 
 each_ruby_test() {
