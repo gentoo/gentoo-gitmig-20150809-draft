@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/tremulous
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tremulous/ChangeLog,v 1.22 2011/08/08 22:46:43 mr_bones_ Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tremulous/ChangeLog,v 1.23 2012/09/10 15:54:18 mr_bones_ Exp $
+
+  10 Sep 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  tremulous-1.1.0-r4.ebuild:
+  add joystick dep (bug #434596)
 
   08 Aug 2011; Michael Sterrett <mr_bones_@gentoo.org>
   tremulous-1.1.0-r4.ebuild:
@@ -96,4 +100,3 @@
   +tremulous-1.1.0.ebuild:
   Initial import. Original ebuild by Paul Bredbury <brebs@sent.com>. Edited by
   Tristan Heaven <tristanheaven@gmail.com>. Closing bug #128370.
-

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tremulous/tremulous-1.1.0-r4.ebuild,v 1.8 2011/08/08 22:46:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tremulous/tremulous-1.1.0-r4.ebuild,v 1.9 2012/09/10 15:54:18 mr_bones_ Exp $
 
 EAPI=2
 
@@ -21,7 +21,7 @@ IUSE="dedicated openal +opengl +vorbis"
 
 UIDEPEND="
 	virtual/jpeg
-	media-libs/libsdl[opengl?]
+	media-libs/libsdl[joystick,opengl?]
 	vorbis? ( media-libs/libogg media-libs/libvorbis )
 	openal? ( media-libs/openal )
 	x11-libs/libXau
