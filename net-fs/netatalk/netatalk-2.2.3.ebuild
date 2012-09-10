@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-2.2.3.ebuild,v 1.2 2012/06/26 04:40:58 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-2.2.3.ebuild,v 1.3 2012/09/10 14:28:03 jlec Exp $
 
 EAPI="4"
 
@@ -15,30 +15,27 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="acl appletalk avahi cracklib cups debug kerberos ldap pam quota slp ssl static-libs tcpd"
 
-RDEPEND=">=sys-libs/db-4.2.52
-	avahi? ( net-dns/avahi[dbus] )
-	cracklib? ( sys-libs/cracklib )
-	pam? ( virtual/pam )
-	ssl? ( dev-libs/openssl )
-	tcpd? ( sys-apps/tcp-wrappers )
-	slp? ( net-libs/openslp )
-	kerberos? ( virtual/krb5 )
-	>=sys-apps/coreutils-7.1
+RDEPEND="
 	!app-text/yudit
 	dev-libs/libgcrypt
-	appletalk? (
-		cups? ( net-print/cups )
-	)
+	sys-apps/coreutils
+	>=sys-libs/db-4.2.52
 	acl? (
 		sys-apps/attr
 		sys-apps/acl
 	)
-	ldap? (
-		net-nds/openldap
-	)
+	appletalk? ( cups? ( net-print/cups ) )
+	avahi? ( net-dns/avahi[dbus] )
+	cracklib? ( sys-libs/cracklib )
+	kerberos? ( virtual/krb5 )
+	ldap? ( net-nds/openldap )
+	pam? ( virtual/pam )
+	slp? ( net-libs/openslp )
+	ssl? ( dev-libs/openssl )
+	tcpd? ( sys-apps/tcp-wrappers )
 	"
 DEPEND="${RDEPEND}"
-RDEPEND="sys-apps/openrc"
+PDEPEND="sys-apps/openrc"
 
 RESTRICT="test"
 

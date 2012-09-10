@@ -7,22 +7,30 @@
 	</maintainer>
 	<use>
 		<flag name="appletalk">
-      Build support for Apple's AppleTalk (DDP) protocol and its
-      utilities (atalkd, timelord, papd).
-    </flag>
+			Build support for Apple's AppleTalk (DDP) protocol and its
+			utilities (atalkd, timelord, papd).
+		</flag>
 		<flag name="cups">
-      Add support for <pkg>net-print/cups</pkg> printers in papd. This
-      flag is only considered if appletalk USE flag is enabled, and is
-      otherwise ignored.
-    </flag>
+			Add support for <pkg>net-print/cups</pkg> printers in papd. This
+			flag is only considered if appletalk USE flag is enabled, and is
+			otherwise ignored.
+		</flag>
+		<flag name="pgp">
+			Add support pgp authentication module
+		</flag>
+		<flag name="pgp">
+			Add support pgp authentication module
+		</flag>
 		<flag name="quota">
-      Add support for user quota on various filesystems.
-    </flag>
+			Add support for user quota on various filesystems.
+		</flag>
+		<flag name="shadow">
+			Add shadow support
+		</flag>
 		<flag name="ssl">
-      Use <pkg>dev-libs/openssl</pkg> to provide DHX User Access
-      Modules. These are not used with most recent versions of OS X
-      and can be kept disabled without risks.
-    </flag>
-		<flag name="xfs">Enable support for XFS Quota</flag>
+			Use <pkg>dev-libs/openssl</pkg> to provide DHX User Access
+			Modules. These are not used with most recent versions of OS X
+			and can be kept disabled without risks.
+		</flag>
 	</use>
 </pkgmetadata>
