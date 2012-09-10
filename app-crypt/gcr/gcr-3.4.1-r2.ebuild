@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/gcr-3.4.1-r1.ebuild,v 1.1 2012/09/10 06:15:03 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/gcr-3.4.1-r2.ebuild,v 1.1 2012/09/10 17:28:21 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -46,6 +46,7 @@ pkg_setup() {
 	DOCS="AUTHORS ChangeLog HACKING NEWS README"
 	G2CONF="${G2CONF}
 		$(use_enable debug)
+		$(use_enable introspection)
 		--disable-update-icon-cache
 		--disable-update-mime"
 }
