@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.59 2012/09/07 12:39:49 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.60 2012/09/10 21:39:34 cardoe Exp $
 
 EAPI="4"
 
@@ -67,6 +67,7 @@ RDEPEND="
 	>=dev-libs/glib-2.0
 	media-libs/libpng
 	sys-apps/pciutils
+	sys-firmware/ipxe
 	>=sys-firmware/seabios-1.7.0
 	sys-firmware/sgabios
 	sys-firmware/vgabios
@@ -356,6 +357,15 @@ src_install() {
 	# Remove sgabios since we're using the sgabios packaged one
 	rm "${ED}/usr/share/qemu/sgabios.bin"
 	dosym ../sgabios/sgabios.bin /usr/share/qemu/sgabios.bin
+
+	# Remove iPXE since we're using the iPXE packaged one
+	rm "${ED}/usr/share/qemu/pxe-*.rom"
+	dosym ../ipxe/808610de.rom /usr/share/qemu/pxe-e1000.rom
+	dosym ../ipxe/80861209.rom /usr/share/qemu/pxe-eepro100.rom
+	dosym ../ipxe/10500940.rom /usr/share/qemu/pxe-ne2k_pci.rom
+	dosym ../ipxe/10222000.rom /usr/share/qemu/pxe-pcnet.rom
+	dosym ../ipxe/10ec8139.rom /usr/share/qemu/pxe-rtl8139.rom
+	dosym ../ipxe/1af41000.rom /usr/share/qemu/pxe-virtio.rom
 }
 
 pkg_postinst() {
