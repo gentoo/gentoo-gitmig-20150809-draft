@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.159 2012/09/07 12:39:49 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.160 2012/09/10 02:20:44 cardoe Exp $
+
+  10 Sep 2012; Doug Goldstein <cardoe@gentoo.org> qemu-kvm-1.1.1-r1.ebuild,
+  qemu-kvm-1.1.1-r3.ebuild:
+  Update to only require texi2html with USE=doc. bug #413959
 
   07 Sep 2012; Sergei Trofimovich <slyfox@gentoo.org>
   +files/qemu-kvm-9999-fix-mipsen.patch, qemu-kvm-9999.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.1.1-r1.ebuild,v 1.8 2012/08/31 16:34:06 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-1.1.1-r1.ebuild,v 1.9 2012/09/10 02:20:44 cardoe Exp $
 
 EAPI="4"
 
@@ -97,8 +97,8 @@ RDEPEND="
 	xfs? ( sys-fs/xfsprogs )"
 
 DEPEND="${RDEPEND}
-	app-text/texi2html
 	virtual/pkgconfig
+	doc? ( app-text/texi2html )
 	kernel_linux? ( >=sys-kernel/linux-headers-2.6.35 )"
 
 STRIP_MASK="/usr/share/qemu/palcode-clipper"
