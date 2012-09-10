@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.2.2.ebuild,v 1.4 2012/06/04 08:00:14 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.2.2.ebuild,v 1.5 2012/09/10 17:17:46 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -53,6 +53,8 @@ RDEPEND=">=dev-libs/glib-2.27.92:2
 	x11-libs/libX11
 	x11-libs/libXtst
 	>=x11-libs/libXxf86vm-1.0.1
+
+	gnome-base/gsettings-desktop-schemas
 	x11-themes/gnome-icon-theme-symbolic
 
 	bluetooth? ( net-wireless/bluez )
