@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/quazip/quazip-0.4.4.ebuild,v 1.8 2012/09/10 05:55:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/quazip/quazip-0.5.ebuild,v 1.1 2012/09/10 05:55:01 jlec Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE=""
 
 DEPEND="
@@ -22,6 +22,6 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}"/${P}
 
-DOCS="NEWS README.txt"
+DOCS="NEWS.txt README.txt"
 
-PATCHES=( "${FILESDIR}"/${P}-zlib.patch )
+PATCHES=( "${FILESDIR}"/${PN}-0.4.4-zlib.patch )
