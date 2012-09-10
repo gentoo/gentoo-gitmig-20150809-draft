@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glog/glog-0.3.2.ebuild,v 1.2 2012/07/23 21:04:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glog/glog-0.3.2.ebuild,v 1.3 2012/09/10 22:04:15 vapier Exp $
 
 EAPI="4"
 inherit eutils
@@ -21,6 +21,10 @@ DEPEND="${RDEPEND}
 		dev-cpp/gmock
 		dev-cpp/gtest
 	)"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-avoid-inline-asm.patch
+}
 
 src_configure() {
 	export ac_cv_lib_gflags_main=$(usex gflags)
