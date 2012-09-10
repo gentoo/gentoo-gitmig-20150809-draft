@@ -1,9 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/gtkglext-1.2.0.ebuild,v 1.23 2012/09/10 05:53:07 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/gtkglext-1.2.0-r1.ebuild,v 1.1 2012/09/10 05:53:07 tetromino Exp $
 
-EAPI="2"
+EAPI="4"
 
+GNOME2_LA_PUNT="yes"
 inherit gnome2
 
 DESCRIPTION="GL extensions for Gtk+ 2.0"
@@ -12,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2:2
@@ -25,7 +26,10 @@ RDEPEND=">=dev-libs/glib-2:2
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-DOCS="AUTHORS ChangeLog* NEWS README TODO"
+pkg_setup() {
+	DOCS="AUTHORS ChangeLog* NEWS README TODO"
+	G2CONF="${G2CONF} --disable-static"
+}
 
 src_prepare() {
 	gnome2_src_prepare

@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/gtkglext
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/ChangeLog,v 1.70 2012/05/05 03:52:28 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/ChangeLog,v 1.71 2012/09/10 05:53:07 tetromino Exp $
+
+*gtkglext-1.2.0-r1 (10 Sep 2012)
+
+  10 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gtkglext-1.2.0.ebuild, +gtkglext-1.2.0-r1.ebuild:
+  Add virtual/glu dependency for mesa-9, bug #434426, thanks to Andreas
+  Sturmlechner. Add missing X deps. Revbump to drop static libraries and .la
+  files.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> gtkglext-1.2.0.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
