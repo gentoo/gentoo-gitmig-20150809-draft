@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera-next
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.122 2012/09/06 15:17:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.123 2012/09/10 00:30:05 jer Exp $
+
+  10 Sep 2012; Jeroen Roovers <jer@gentoo.org> Manifest:
+  Redo Manifest as upstream repackaged the tarballs, reported by Nikolay S.
+  Rybaloff (bug #434512).
 
 *opera-next-12.50.1583 (06 Sep 2012)
 
