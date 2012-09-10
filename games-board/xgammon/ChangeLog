@@ -1,6 +1,10 @@
 # ChangeLog for games-board/xgammon
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xgammon/ChangeLog,v 1.14 2010/09/06 08:54:07 tupone Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/xgammon/ChangeLog,v 1.15 2012/09/10 08:36:11 tupone Exp $
+
+  10 Sep 2012; Tupone Alfredo <tupone@gentoo.org> xgammon-0.98.ebuild:
+  Respect CFLAGS. Bug #430776 by Diego
+  Inform users about the fonts needed.
 
   06 Sep 2010; Alfredo Tupone <tupone@gentoo.org> xgammon-0.98.ebuild:
   Respect LDFLAGS. Bug #336112 by flameeyes@gentoo.org
