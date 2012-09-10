@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/gcr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/ChangeLog,v 1.2 2012/07/16 08:31:14 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/ChangeLog,v 1.3 2012/09/10 06:15:03 tetromino Exp $
+
+*gcr-3.4.1-r1 (10 Sep 2012)
+
+  10 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gcr-3.4.1-r1.ebuild, +files/gcr-3.4.1-invalid-whitespace.patch:
+  Fix whitespace removal in secret exchange, bug #434422, thanks to Hans de
+  Graaff.
 
   16 Jul 2012; Alexandre Rostovtsev <tetromino@gentoo.org> gcr-3.4.1.ebuild:
   Add missing gdbus-codegen dependency (bug #425390, thanks to cyrillic).
