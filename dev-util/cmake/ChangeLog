@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.217 2012/09/09 19:00:02 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.218 2012/09/10 06:43:47 johu Exp $
+
+  10 Sep 2012; Johannes Huber <johu@gentoo.org>
+  +files/cmake-2.8.4-FindPythonLibs.patch:
+  Restore patch that was unfortunately dropped, bug #434524.
 
   09 Sep 2012; Johannes Huber <johu@gentoo.org> -cmake-2.8.7-r5.ebuild,
   -files/cmake-2.8.3-more-no_host_paths.patch,
