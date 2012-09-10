@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-9999.ebuild,v 1.1 2012/09/09 08:59:42 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-9999.ebuild,v 1.2 2012/09/10 08:21:04 pinkbyte Exp $
 
 EAPI="4"
 
@@ -18,7 +18,7 @@ SRC_URI=""
 KEYWORDS=""
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="examples paramiko +sudo test"
+IUSE="examples paramiko +sudo"
 
 DEPEND="test? (
 		dev-python/nose
@@ -38,11 +38,8 @@ src_prepare() {
 	sed -i 's:PYTHONPATH=./lib nosetests.*:\0 -e \\(TestPlayBook.py\\|TestRunner.py\\):' Makefile || die "sed failed"
 }
 
-src_compile() {
-	distutils_src_compile
-	if use test; then
-		emake tests
-	fi
+src_test() {
+	make tests
 }
 
 src_install() {
