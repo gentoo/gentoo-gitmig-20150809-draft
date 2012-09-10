@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/librsvg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.279 2012/09/10 07:19:52 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.280 2012/09/10 16:23:24 tetromino Exp $
+
+  10 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  librsvg-2.36.3.ebuild:
+  Need vala-common for eautoreconf (bug #434544, thanks to megabaks et al.)
 
 *librsvg-2.36.3 (10 Sep 2012)
 

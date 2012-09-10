@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.36.3.ebuild,v 1.1 2012/09/10 07:19:52 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.36.3.ebuild,v 1.2 2012/09/10 16:23:24 tetromino Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -31,11 +31,12 @@ RDEPEND=">=dev-libs/glib-2.24:2
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	dev-libs/gobject-introspection-common
+	dev-libs/vala-common
 	>=dev-util/gtk-doc-am-1.13
 
 	doc? ( >=dev-util/gtk-doc-1.13 )"
 #	vala? ( >=dev-lang/vala-0.17.1.26:0.18[vapigen] )"
-# >=gtk-doc-am-1.13 and gobject-introspection-common needed by eautoreconf
+# >=gtk-doc-am-1.13, gobject-introspection-common, vala-common needed by eautoreconf
 
 pkg_setup() {
 	G2CONF="${G2CONF}
