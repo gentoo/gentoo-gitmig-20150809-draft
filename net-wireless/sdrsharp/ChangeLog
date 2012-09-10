@@ -1,0 +1,9 @@
+# ChangeLog for net-wireless/sdrsharp
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/sdrsharp/ChangeLog,v 1.1 2012/09/10 02:39:37 zerochaos Exp $
+
+*sdrsharp-9999 (10 Sep 2012)
+
+  10 Sep 2012; Rick Farina <zerochaos@gentoo.org> +files/sdrsharp,
+  +metadata.xml, +sdrsharp-9999.ebuild:
+  initial import of sdrsharp
