@@ -1,6 +1,12 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.390 2012/09/09 07:03:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.391 2012/09/10 02:07:08 ferringb Exp $
+
+  10 Sep 2012; Brian Harring <ferringb@gentoo.org> mysql.eclass,
+  mysql-v2.eclass:
+  Remove usage of strip_duplicate_slashes function.
+
+  It's outside of PMS, and is exposed by misbehaviour on portages part.
 
   09 Sep 2012; Ulrich Müller <ulm@gentoo.org> cvs.eclass:
   Rename ESCM_OFFLINE to EVCS_OFFLINE. Drop ESCM_VERSION. Fixes bug 410465.
