@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.8.0.ebuild,v 1.2 2012/08/05 09:52:51 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.8.0.ebuild,v 1.3 2012/09/10 08:48:02 dilfridge Exp $
 
 EAPI=4
 
@@ -20,14 +20,13 @@ HOMEPAGE="http://sourceforge.net/projects/soprano"
 
 LICENSE="LGPL-2"
 SLOT="0"
-IUSE="clucene +dbus debug doc elibc_FreeBSD +raptor +redland test +virtuoso"
+IUSE="+dbus debug doc elibc_FreeBSD +raptor +redland test +virtuoso"
 
 RESTRICT=test
 # bug 281712
 
 COMMON_DEPEND="
 	>=x11-libs/qt-core-4.5.0:4
-	clucene? ( dev-cpp/clucene )
 	dbus? ( >=x11-libs/qt-dbus-4.5.0:4 )
 	raptor? ( >=media-libs/raptor-2.0.4:2 )
 	redland? (
@@ -77,7 +76,7 @@ src_configure() {
 		-DSOPRANO_BUILD_TESTS=OFF
 		-DCMAKE_SKIP_RPATH=OFF
 		-DSOPRANO_DISABLE_SESAME2_BACKEND=ON
-		$(cmake-utils_use !clucene SOPRANO_DISABLE_CLUCENE_INDEX)
+		-DSOPRANO_DISABLE_CLUCENE_INDEX=ON
 		$(cmake-utils_use !dbus SOPRANO_DISABLE_DBUS)
 		$(cmake-utils_use !raptor SOPRANO_DISABLE_RAPTOR_PARSER)
 		$(cmake-utils_use !redland SOPRANO_DISABLE_RAPTOR_SERIALIZER)
