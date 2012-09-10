@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/kdepimlibs-4.9.1.ebuild,v 1.1 2012/09/04 18:45:11 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/kdepimlibs-4.9.1-r1.ebuild,v 1.1 2012/09/10 14:40:55 dilfridge Exp $
 
 EAPI=4
 
@@ -36,6 +36,8 @@ DEPEND="
 # boost is not linked to, but headers which include it are installed
 # bug #418071
 RDEPEND="${DEPEND}"
+
+PATCHES=( "${FILESDIR}/${PN}-4.9.1-boostincludes.patch" )
 
 src_prepare() {
 	kde4-base_src_prepare

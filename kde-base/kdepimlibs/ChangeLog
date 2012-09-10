@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdepimlibs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/ChangeLog,v 1.160 2012/09/04 18:45:11 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/ChangeLog,v 1.161 2012/09/10 14:40:55 dilfridge Exp $
+
+*kdepimlibs-4.9.1-r1 (10 Sep 2012)
+
+  10 Sep 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kdepimlibs-4.9.1.ebuild, +kdepimlibs-4.9.1-r1.ebuild,
+  +files/kdepimlibs-4.9.1-boostincludes.patch:
+  Save and reexport Boost header location, bug 434144; patch by Alex Turbov
 
 *kdepimlibs-4.9.1 (04 Sep 2012)
 
