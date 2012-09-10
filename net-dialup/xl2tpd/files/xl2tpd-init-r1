@@ -1,0 +1,35 @@
+#!/sbin/runscript
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/xl2tpd/files/xl2tpd-init-r1,v 1.1 2012/09/10 19:28:12 darkside Exp $
+
+depend() {
+	need net
+}
+
+checkconfig() {
+	if [ ! -f /etc/xl2tpd/xl2tpd.conf ] ; then
+		eerror "Missing /etc/xl2tpd/xl2tpd.conf configuration file!"
+		return 1
+	fi
+
+	if [ ! -d /var/run/nscd ] ; then
+		checkpath -d -m 755 /var/run/nscd
+	fi
+
+	return 0
+}
+
+start() {
+	checkconfig || return 1
+
+	ebegin "Starting xl2tpd"
+	start-stop-daemon --start --quiet --exec /usr/sbin/xl2tpd
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping xl2tpd"
+	start-stop-daemon --stop --quiet --pidfile /var/run/xl2tpd.pid
+	eend $?
+}
