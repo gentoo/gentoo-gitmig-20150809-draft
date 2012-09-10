@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.429 2012/09/09 01:40:13 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.430 2012/09/10 09:39:49 johu Exp $
+
+  10 Sep 2012; Johannes Huber <johu@gentoo.org> package.use.mask:
+  Restore mask net-libs/telepathy-qt[farstream] otherwise repoman will scream.
 
   09 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   GNOME 3.4 is unmasked
