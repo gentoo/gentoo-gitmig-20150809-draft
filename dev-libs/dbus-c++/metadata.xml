@@ -10,5 +10,6 @@
 	</longdescription>
 	<use>
 		<flag name="ecore">Use Ecore integration</flag>
+		<flag name="glib">Use glib integration</flag>
 	</use>
 </pkgmetadata>

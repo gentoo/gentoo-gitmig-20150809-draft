@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/dbus-c++
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-c++/ChangeLog,v 1.4 2012/05/04 18:35:55 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-c++/ChangeLog,v 1.5 2012/09/10 23:27:32 vapier Exp $
+
+*dbus-c++-0.9.0-r1 (10 Sep 2012)
+
+  10 Sep 2012; Mike Frysinger <vapier@gentoo.org> +dbus-c++-0.9.0-r1.ebuild,
+  +files/dbus-c++-0.9.0-gcc-4.7.patch, metadata.xml:
+  Add fix from ChromiumOS for building with gcc-4.7 #424707 by Diego Elio
+  Pettenò.  Update to EAPI=4 and add more USE flags to control optional
+  behavior.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org>
   dbus-c++-0.6.0_p20111126.ebuild, dbus-c++-0.9.0.ebuild:
@@ -20,4 +28,3 @@
   26 Nov 2011; <elvanor@gentoo.org> +dbus-c++-0.6.0_p20111126.ebuild,
   +metadata.xml:
   Initial import.
-
