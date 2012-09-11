@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_configure-v54.eblit,v 1.5 2012/09/11 01:38:31 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_configure-v54.eblit,v 1.6 2012/09/11 19:36:50 olemarkus Exp $
 
 eblit-php-src_configure() {
 	addpredict /usr/share/snmp/mibs/.index
@@ -105,7 +105,7 @@ eblit-php-src_configure() {
 	$(use_with xpm xpm-dir ${EPREFIX}/usr)"
 	# enable gd last, so configure can pick up the previous settings
 	my_conf+="
-	$(use_with gd gd ${EPREFIX}/usr)"
+	$(use_with gd gd)"
 
 	# IMAP support
 	if use imap ; then
