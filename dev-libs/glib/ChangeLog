@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.530 2012/09/06 19:43:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.531 2012/09/11 18:03:21 tetromino Exp $
+
+  11 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org> glib-2.30.2.ebuild,
+  glib-2.30.3.ebuild, glib-2.32.3.ebuild, glib-2.32.4.ebuild:
+  Avoid 'mv -v' for embedded/feature-limited users with busybox (bug #432628).
 
   06 Sep 2012; Mike Frysinger <vapier@gentoo.org> glib-2.32.4.ebuild:
   Drop ia64 hack since we no longer care about <gcc-4.1 versions.
