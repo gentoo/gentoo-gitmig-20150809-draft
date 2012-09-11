@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/mendeleydesktop/mendeleydesktop-1.6.ebuild,v 1.1 2012/09/10 13:42:02 miknix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/mendeleydesktop/mendeleydesktop-1.6.ebuild,v 1.2 2012/09/11 18:17:52 miknix Exp $
 
 EAPI="4"
 
@@ -8,12 +8,6 @@ inherit eutils multilib
 
 MY_P_AMD64="${P}-linux-x86_64"
 MY_P_X86="${P}-linux-i486"
-
-if use amd64 || use amd64-linux ; then
-	MY_P="${MY_P_AMD64}"
-elif use x86 || use x86-linux ; then
-	MY_P="${MY_P_X86}"
-fi
 
 DESCRIPTION="A free research management tool for desktop and web"
 HOMEPAGE="http://www.mendeley.com/"
@@ -36,16 +30,26 @@ RDEPEND=">=x11-libs/qt-core-4.6:4
 	>=x11-libs/qt-webkit-4.6:4
 	>=x11-libs/qt-xmlpatterns-4.6:4"
 
-S="${WORKDIR}/${MY_P}"
-
 QA_PRESTRIPPED="
 	/opt/mendeleydesktop/$(get_libdir)/mendeleydesktop/libexec/.*
 	/opt/mendeleydesktop/$(get_libdir)/lib.*so.*"
 
 pkg_nofetch() {
-	elog "Please download ${MY_P} from:"
+	elog "Please download ${A} from:"
 	elog "http://www.mendeley.com/download-mendeley-desktop/"
 	elog "and move it to ${DISTDIR}"
+}
+
+src_unpack() {
+	unpack ${A}
+
+	cd "${WORKDIR}"
+
+	if use amd64 || use amd64-linux ; then
+		mv -f "${MY_P_AMD64}" "${P}"
+	else
+		mv -f "${MY_P_X86}" "${P}"
+	fi
 }
 
 src_prepare() {
