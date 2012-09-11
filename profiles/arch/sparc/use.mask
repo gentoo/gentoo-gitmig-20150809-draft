@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.93 2012/08/26 18:13:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.94 2012/09/11 13:59:05 armin76 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -sparc
@@ -139,6 +139,7 @@ pda
 apcupsd
 bluray
 ups
+gps
 
 # Stuff we don't want
 schroedinger
