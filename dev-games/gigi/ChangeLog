@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/gigi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/gigi/ChangeLog,v 1.1 2012/09/11 15:57:21 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/gigi/ChangeLog,v 1.2 2012/09/11 16:04:25 tomka Exp $
+
+  11 Sep 2012; Thomas Kahle <tomka@gentoo.org> ChangeLog:
+  Bump to recent svn version and import to main tree (bug #349367)
 
   05 May 2012; Mike Gilbert <floppym@gentoo.org> gigi-0.8.0_pre1074.ebuild:
   Use pkgconfig virtual.
