@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-tools/tpm-tools-1.3.5-r1.ebuild,v 1.2 2012/05/14 19:40:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-tools/tpm-tools-1.3.5-r1.ebuild,v 1.3 2012/09/11 00:55:29 vapier Exp $
 
 EAPI=4
 inherit autotools eutils flag-o-matic
@@ -24,7 +24,9 @@ DEPEND="${COMMON_DEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_prepare() {
-	sed -i -e "s/-Werror //" configure.in || die "Sed failed"
+	sed -i -r \
+		-e '/CFLAGS/s/ -(Werror|m64)//' \
+		configure.in || die
 	epatch "${FILESDIR}"/${PN}-1.3.1-gold.patch
 
 	eautoreconf
