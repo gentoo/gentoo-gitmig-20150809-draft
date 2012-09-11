@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/qt-gstreamer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qt-gstreamer/ChangeLog,v 1.3 2012/08/30 18:07:46 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qt-gstreamer/ChangeLog,v 1.4 2012/09/11 10:22:34 johu Exp $
+
+  11 Sep 2012; Johannes Huber <johu@gentoo.org> qt-gstreamer-0.10.2.ebuild:
+  Add slot dependency on media-libs/gst*.
 
   30 Aug 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   qt-gstreamer-0.10.2.ebuild:

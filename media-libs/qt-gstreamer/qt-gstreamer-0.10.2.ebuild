@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qt-gstreamer/qt-gstreamer-0.10.2.ebuild,v 1.3 2012/08/30 18:07:46 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qt-gstreamer/qt-gstreamer-0.10.2.ebuild,v 1.4 2012/09/11 10:22:34 johu Exp $
 
 EAPI=4
 
@@ -28,8 +28,8 @@ RDEPEND="
 	dev-libs/glib
 	>=dev-libs/boost-1.40
 	>=dev-util/boost-build-1.40
-	>=media-libs/gstreamer-0.10.33
-	>=media-libs/gst-plugins-base-0.10.33
+	>=media-libs/gstreamer-0.10.33:0.10
+	>=media-libs/gst-plugins-base-0.10.33:0.10
 	>=x11-libs/qt-core-${QT_MINIMAL}:4
 	>=x11-libs/qt-declarative-${QT_MINIMAL}:4
 	>=x11-libs/qt-gui-${QT_MINIMAL}:4
