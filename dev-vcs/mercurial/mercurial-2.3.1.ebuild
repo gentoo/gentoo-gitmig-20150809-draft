@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-2.2.2.ebuild,v 1.1 2012/06/02 08:15:15 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-2.3.1.ebuild,v 1.1 2012/09/11 14:56:08 polynomial-c Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"

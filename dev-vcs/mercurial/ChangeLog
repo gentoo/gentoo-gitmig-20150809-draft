@@ -1,6 +1,13 @@
 # ChangeLog for dev-vcs/mercurial
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.83 2012/07/02 08:04:11 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.84 2012/09/11 14:56:08 polynomial-c Exp $
+
+*mercurial-2.3.1 (11 Sep 2012)
+
+  11 Sep 2012; Lars Wendler <polynomial-c@gentoo.org> -mercurial-2.2.2.ebuild,
+  +mercurial-2.3.1.ebuild:
+  non-maintainer commit: Version bump. Removed old. Permission kindly granted
+  by djc.
 
 *mercurial-2.2.3 (02 Jul 2012)
 
