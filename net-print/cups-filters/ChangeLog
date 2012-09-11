@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups-filters
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.39 2012/09/10 13:55:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.40 2012/09/11 14:13:44 tester Exp $
+
+  11 Sep 2012; Olivier Crête <tester@gentoo.org> cups-filters-1.0.24.ebuild,
+  cups-filters-9999.ebuild:
+  Now requires qpdf >=3.0.2, patch by deadhead, bug #434648
 
 *cups-filters-1.0.24 (10 Sep 2012)
 

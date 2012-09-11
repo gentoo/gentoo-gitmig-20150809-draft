@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-9999.ebuild,v 1.29 2012/09/01 17:41:16 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-9999.ebuild,v 1.30 2012/09/11 14:13:44 tester Exp $
 
 EAPI=4
 
@@ -26,7 +26,7 @@ IUSE="jpeg perl png static-libs tiff"
 RDEPEND="
 	app-text/ghostscript-gpl
 	app-text/poppler[cxx,jpeg?,lcms,tiff?,xpdf-headers(+)]
-	app-text/qpdf
+	>=app-text/qpdf-3.0.2
 	media-libs/fontconfig
 	media-libs/freetype:2
 	media-libs/lcms:2
