@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/cinnamon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/ChangeLog,v 1.15 2012/09/09 00:36:03 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/ChangeLog,v 1.16 2012/09/11 08:27:57 tetromino Exp $
+
+*cinnamon-1.4_p1-r1 (11 Sep 2012)
+
+  11 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +cinnamon-1.4_p1-r1.ebuild, +files/cinnamon-1.4-UP1-spin-buttons.patch,
+  +files/cinnamon-1.4-UP1-timedated.patch:
+  Port cinnamon-settings to new timedated dbus API (bug #434494, thanks to
+  Antoine Lemoine).
 
   09 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   -files/cinnamon-1.1.3-extensionjs_path.patch,
