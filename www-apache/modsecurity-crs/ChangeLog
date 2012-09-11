@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/modsecurity-crs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/modsecurity-crs/ChangeLog,v 1.26 2012/09/09 16:01:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/modsecurity-crs/ChangeLog,v 1.27 2012/09/11 22:21:13 flameeyes Exp $
+
+  11 Sep 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  -modsecurity-crs-2.1.2.ebuild, -modsecurity-crs-2.2.3.ebuild,
+  -modsecurity-crs-2.2.4.ebuild:
+  Remove old.
 
   09 Sep 2012; Raúl Porcel <armin76@gentoo.org> modsecurity-crs-2.2.5.ebuild:
   sparc stable wrt #429222
@@ -120,4 +125,3 @@
   +modsecurity-crs-2.0.8.ebuild, +metadata.xml:
   Add an ebuild for the ModSecurity Core Rule Set split out of mod_security
   itself.
-
