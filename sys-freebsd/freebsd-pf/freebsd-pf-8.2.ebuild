@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/freebsd-pf-8.2.ebuild,v 1.1 2011/07/06 06:04:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/freebsd-pf-8.2.ebuild,v 1.2 2012/09/11 17:28:00 aballier Exp $
 
-inherit bsdmk freebsd
+inherit bsdmk freebsd user
 
 DESCRIPTION="FreeBSD's base system libraries"
 SLOT="0"
