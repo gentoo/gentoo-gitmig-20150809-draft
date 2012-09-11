@@ -7,5 +7,8 @@
 	</maintainer>
 	<use>
 		<flag name="download">Monitor XDG download directory</flag>
+		<flag name="telepathy">
+			Telepathy logging support for 1-to-1 chats, calls and file transfers
+		</flag>
 	</use>
 </pkgmetadata>
