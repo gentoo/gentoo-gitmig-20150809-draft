@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.720 2012/09/10 22:45:14 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.721 2012/09/11 16:24:47 williamh Exp $
+
+  11 Sep 2012; William Hubbs <williamh@gentoo.org> udev-164-r2.ebuild,
+  udev-171-r6.ebuild, udev-189.ebuild, udev-9999.ebuild:
+  According to armin76, udev works fine on sh with glibc-2.11. To keep things
+  simple, I am adjusting the block to allow glibc-2.11 on all archs.
 
   10 Sep 2012; William Hubbs <williamh@gentoo.org> udev-189.ebuild,
   udev-9999.ebuild:
