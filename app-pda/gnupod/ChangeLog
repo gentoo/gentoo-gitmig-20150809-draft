@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/gnupod
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnupod/ChangeLog,v 1.23 2012/09/09 12:12:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnupod/ChangeLog,v 1.24 2012/09/11 01:06:53 blueness Exp $
+
+  11 Sep 2012; Anthony G. Basile <blueness@gentoo.org> gnupod-0.99.8.ebuild:
+  Stable ppc ppc64, bug #430158
 
   09 Sep 2012; Agostino Sarubbo <ago@gentoo.org> gnupod-0.99.8.ebuild:
   Stable for amd64, wrt bug #430158
