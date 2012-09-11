@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.2.0.ebuild,v 1.3 2012/09/10 12:13:44 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.2.0.ebuild,v 1.4 2012/09/11 17:47:10 ultrabug Exp $
 
 EAPI=4
 SCONS_MIN_VERSION="1.2.0"
@@ -48,6 +48,14 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.2-fix-scons.patch"
 	epatch "${FILESDIR}/${PN}-2.2-fix-sconscript.patch"
+
+	# FIXME: apply only this fix [1] on x86 boxes as it breaks /usr/lib symlink
+	# on amd64 machines [2].
+	# [1] https://jira.mongodb.org/browse/SERVER-5575
+	# [2] https://bugs.gentoo.org/show_bug.cgi?id=434664
+	if [ "$(get_libdir)" == "lib" ]; then
+		epatch "${FILESDIR}/${PN}-2.2-fix-x86client.patch"
+	fi
 
 	sed -e 's@third_party/js-1.7/@/usr/include/js/@g' \
 		-i src/mongo/scripting/engine_spidermonkey.h  \
