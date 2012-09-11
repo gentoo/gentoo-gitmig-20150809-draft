@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geoclue/geoclue-0.12.0_p20110307.ebuild,v 1.12 2012/08/08 19:42:09 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geoclue/geoclue-0.12.0_p20110307.ebuild,v 1.13 2012/09/11 14:01:50 armin76 Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -11,7 +11,7 @@ SRC_URI="http://dev.gentoo.org/~signals/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ppc ppc64 x86 ~amd64-fbsd"
+KEYWORDS="amd64 ~arm ppc ppc64 ~sparc x86 ~amd64-fbsd"
 IUSE="geonames gps gsmloc gtk hostip manual networkmanager nominatim plazes
 	skyhook yahoo-geo"
 
