@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.10_pre20120902.ebuild,v 1.1 2012/09/03 15:49:09 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.10_pre20120908.ebuild,v 1.1 2012/09/11 20:12:16 eras Exp $
 
 EAPI=4
 inherit eutils multilib ssl-cert toolchain-funcs flag-o-matic pam user versionator
