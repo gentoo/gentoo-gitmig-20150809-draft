@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_configure-v54.eblit,v 1.4 2012/08/22 15:01:54 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_configure-v54.eblit,v 1.5 2012/09/11 01:38:31 ottxor Exp $
 
 eblit-php-src_configure() {
 	addpredict /usr/share/snmp/mibs/.index
 	addpredict /var/lib/net-snmp/mib_indexes
 
-	PHP_DESTDIR="/usr/$(get_libdir)/php${SLOT}"
+	PHP_DESTDIR="${EPREFIX}/usr/$(get_libdir)/php${SLOT}"
 
 	# This is a global variable and should be in caps. It isn't because the
 	# phpconfutils eclass relies on exactly this name...
@@ -23,60 +23,61 @@ eblit-php-src_configure() {
 	#                             extension	      USE flag        shared
 	my_conf+="
 	$(use_enable bcmath bcmath )
-	$(use_with bzip2 bz2 )
+	$(use_with bzip2 bz2 "${EPREFIX}"/usr)
 	$(use_enable calendar calendar )
 	$(use_enable ctype ctype )
-	$(use_with curl curl )
-	$(use_with curlwrappers curlwrappers )
+	$(use_with curl curl "${EPREFIX}"/usr)
+	$(use_with curlwrappers curlwrappers "${EPREFIX}"/usr)
 	$(use_enable xml dom )
-	$(use_with enchant enchant /usr)
+	$(use_with enchant enchant "${EPREFIX}"/usr)
 	$(use_enable exif exif )
 	$(use_enable fileinfo fileinfo )
 	$(use_enable filter filter )
 	$(use_enable ftp ftp )
-	$(use_with nls gettext )
-	$(use_with gmp gmp )
+	$(use_with nls gettext "${EPREFIX}"/usr)
+	$(use_with gmp gmp "${EPREFIX}"/usr)
 	$(use_enable hash hash )
-	$(use_with mhash mhash )
+	$(use_with mhash mhash "${EPREFIX}"/usr)
 	$(use_with iconv iconv )
 	$(use_enable intl intl )
 	$(use_enable ipv6 ipv6 )
 	$(use_enable json json )
-	$(use_with kerberos kerberos /usr)
+	$(use_with kerberos kerberos "${EPREFIX}"/usr)
 	$(use_enable xml libxml )
+	$(use_with xml libxml-dir "${EPREFIX}"/usr)
 	$(use_enable unicode mbstring )
-	$(use_with crypt mcrypt )
-	$(use_with mssql mssql )
-	$(use_with unicode onig /usr)
-	$(use_with ssl openssl )
-	$(use_with ssl openssl-dir /usr)
+	$(use_with crypt mcrypt "${EPREFIX}"/usr)
+	$(use_with mssql mssql "${EPREFIX}"/usr)
+	$(use_with unicode onig "${EPREFIX}"/usr)
+	$(use_with ssl openssl "${EPREFIX}"/usr)
+	$(use_with ssl openssl-dir "${EPREFIX}"/usr)
 	$(use_enable pcntl pcntl )
 	$(use_enable phar phar )
 	$(use_enable pdo pdo )
-	$(use_with postgres pgsql )
+	$(use_with postgres pgsql "${EPREFIX}"/usr)
 	$(use_enable posix posix )
-	$(use_with spell pspell )
-	$(use_with recode recode )
+	$(use_with spell pspell "${EPREFIX}"/usr)
+	$(use_with recode recode "${EPREFIX}"/usr)
 	$(use_enable simplexml simplexml )
 	$(use_enable sharedmem shmop )
-	$(use_with snmp snmp )
+	$(use_with snmp snmp "${EPREFIX}"/usr)
 	$(use_enable soap soap )
 	$(use_enable sockets sockets )
-	$(use_with sqlite3 sqlite3 /usr)
-	$(use_with sybase-ct sybase-ct /usr)
+	$(use_with sqlite3 sqlite3 "${EPREFIX}"/usr)
+	$(use_with sybase-ct sybase-ct "${EPREFIX}"/usr)
 	$(use_enable sysvipc sysvmsg )
 	$(use_enable sysvipc sysvsem )
 	$(use_enable sysvipc sysvshm )
-	$(use_with tidy tidy )
+	$(use_with tidy tidy "${EPREFIX}"/usr)
 	$(use_enable tokenizer tokenizer )
 	$(use_enable wddx wddx )
 	$(use_enable xml xml )
 	$(use_enable xmlreader xmlreader )
 	$(use_enable xmlwriter xmlwriter )
-	$(use_with xmlrpc xmlrpc )
-	$(use_with xsl xsl )
+	$(use_with xmlrpc xmlrpc "${EPREFIX}"/usr)
+	$(use_with xsl xsl "${EPREFIX}"/usr)
 	$(use_enable zip zip )
-	$(use_with zlib zlib )
+	$(use_with zlib zlib "${EPREFIX}"/usr)
 	$(use_enable debug debug )"
 
 	# DBA support
@@ -87,44 +88,44 @@ eblit-php-src_configure() {
 
 	# DBA drivers support
 	my_conf+="
-	$(use_with cdb cdb )
-	$(use_with berkdb db4 )
+	$(use_with cdb cdb ${EPREFIX}/usr)
+	$(use_with berkdb db4 ${EPREFIX}/usr)
 	$(use_enable flatfile flatfile )
-	$(use_with gdbm gdbm )
+	$(use_with gdbm gdbm ${EPREFIX}/usr)
 	$(use_enable inifile inifile )
-	$(use_with qdbm qdbm )"
+	$(use_with qdbm qdbm ${EPREFIX}/usr)"
 
 	# Support for the GD graphics library
 	my_conf+="
-	$(use_with truetype freetype-dir /usr)
-	$(use_with truetype t1lib /usr)
+	$(use_with truetype freetype-dir ${EPREFIX}/usr)
+	$(use_with truetype t1lib ${EPREFIX}/usr)
 	$(use_enable cjk gd-jis-conv )
-	$(use_with gd jpeg-dir /usr)
-	$(use_with gd png-dir /usr)
-	$(use_with xpm xpm-dir /usr)"
+	$(use_with gd jpeg-dir ${EPREFIX}/usr)
+	$(use_with gd png-dir ${EPREFIX}/usr)
+	$(use_with xpm xpm-dir ${EPREFIX}/usr)"
 	# enable gd last, so configure can pick up the previous settings
 	my_conf+="
-	$(use_with gd gd )"
+	$(use_with gd gd ${EPREFIX}/usr)"
 
 	# IMAP support
 	if use imap ; then
 	    my_conf+="
-		$(use_with imap imap )
-		$(use_with ssl imap-ssl )"
+		$(use_with imap imap ${EPREFIX}/usr)
+		$(use_with ssl imap-ssl ${EPREFIX}/usr)"
 	fi
 
 	# Interbase/firebird support
 	
 	if use firebird ; then
 	    my_conf+="
-		$(use_with firebird interbase /usr)"
+		$(use_with firebird interbase ${EPREFIX}/usr)"
 	fi
 
 	# LDAP support
 	if use ldap ; then
 	    my_conf+="
-		$(use_with ldap ldap )
-		$(use_with ldap-sasl ldap-sasl )"
+		$(use_with ldap ldap ${EPREFIX}/usr)
+		$(use_with ldap-sasl ldap-sasl ${EPREFIX}/usr)"
 	fi
 
 	# MySQL support
@@ -134,10 +135,10 @@ eblit-php-src_configure() {
 			$(use_with mysql mysql mysqlnd)"
 		else
 	        my_conf+="
-			$(use_with mysql mysql /usr)"
+			$(use_with mysql mysql ${EPREFIX}/usr)"
 		fi
 	    my_conf+="
-		$(use_with mysql mysql-sock /var/run/mysqld/mysqld.sock)"
+		$(use_with mysql mysql-sock ${EPREFIX}/var/run/mysqld/mysqld.sock)"
 	fi
 
 	# MySQLi support
@@ -146,18 +147,18 @@ eblit-php-src_configure() {
 		$(use_with mysqli mysqli mysqlnd)"
 	else
 	    my_conf+="
-		$(use_with mysqli mysqli /usr/bin/mysql_config)"
+		$(use_with mysqli mysqli ${EPREFIX}/usr/bin/mysql_config)"
 	fi
 
 	# ODBC support
 	if use odbc ; then
 	    my_conf+="
-		$(use_with odbc unixODBC /usr)"
+		$(use_with odbc unixODBC ${EPREFIX}/usr)"
 	fi
 
 	if use iodbc ; then
 	    my_conf+="
-		$(use_with iodbc iodbc /usr)"
+		$(use_with iodbc iodbc ${EPREFIX}/usr)"
 	fi
 
 	# Oracle support
@@ -175,12 +176,12 @@ eblit-php-src_configure() {
 			$(use_with mysql pdo-mysql mysqlnd)"
 		else
 	        my_conf+="
-			$(use_with mysql pdo-mysql /usr)"
+			$(use_with mysql pdo-mysql ${EPREFIX}/usr)"
 		fi
 	    my_conf+="
 		$(use_with postgres pdo-pgsql )
-		$(use_with sqlite3 pdo-sqlite /usr)
-		$(use_with odbc pdo-odbc unixODBC,/usr)"
+		$(use_with sqlite3 pdo-sqlite ${EPREFIX}/usr)
+		$(use_with odbc pdo-odbc unixODBC,${EPREFIX}/usr)"
 		if use oci8-instant-client ; then
 	        my_conf+="
 			$(use_with oci8-instant-client pdo-oci)"
@@ -189,13 +190,13 @@ eblit-php-src_configure() {
 
 	# readline/libedit support
 	my_conf+="
-	$(use_with readline readline )
-	$(use_with libedit libedit )"
+	$(use_with readline readline ${EPREFIX}/usr)
+	$(use_with libedit libedit ${EPREFIX}/usr)"
 
 	# Session support
 	if use session ; then
 	    my_conf+="
-		$(use_with sharedmem mm )"
+		$(use_with sharedmem mm ${EPREFIX}/usr)"
 	else
 	    my_conf+="
 		$(use_enable session session )"
@@ -208,7 +209,7 @@ eblit-php-src_configure() {
 	# we use the system copy of pcre
 	# --with-pcre-regex affects ext/pcre
 	# --with-pcre-dir affects ext/filter and ext/zip
-	my_conf="${my_conf} --with-pcre-regex=/usr --with-pcre-dir=/usr"
+	my_conf="${my_conf} --with-pcre-regex=${EPREFIX}/usr --with-pcre-dir=${EPREFIX}/usr"
 
 	# Catch CFLAGS problems
     # Fixes bug #14067.
@@ -244,7 +245,7 @@ eblit-php-src_configure() {
 
 				apache2)
 					if [[ "${one_sapi}" == "${sapi}" ]] ; then
-						sapi_conf="${sapi_conf} --with-apxs2=/usr/sbin/apxs"
+						sapi_conf="${sapi_conf} --with-apxs2=${EPREFIX}/usr/sbin/apxs"
 					else
 						sapi_conf="${sapi_conf} --without-apxs2"
 					fi
