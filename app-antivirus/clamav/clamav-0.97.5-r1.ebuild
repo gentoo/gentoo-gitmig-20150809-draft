@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.97.5-r1.ebuild,v 1.6 2012/08/28 18:52:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.97.5-r1.ebuild,v 1.7 2012/09/11 03:29:29 ottxor Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ~ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris ~x86-solaris"
 IUSE="bzip2 clamdtop iconv ipv6 milter selinux static-libs"
 
 CDEPEND="bzip2? ( app-arch/bzip2 )
@@ -48,8 +48,9 @@ src_configure() {
 	econf \
 		--disable-experimental \
 		--enable-id-check \
-		--with-dbdir=/var/lib/clamav \
+		--with-dbdir="${EPREFIX}"/var/lib/clamav \
 		--with-system-tommath \
+		--with-zlib="${EPREFIX}"/usr
 		$(use_enable bzip2) \
 		$(use_enable clamdtop) \
 		$(use_enable ipv6) \
@@ -78,18 +79,18 @@ src_install() {
 
 	# Modify /etc/{clamd,freshclam}.conf to be usable out of the box
 	sed -i -e "s:^\(Example\):\# \1:" \
-		-e "s:.*\(PidFile\) .*:\1 /var/run/clamav/clamd.pid:" \
-		-e "s:.*\(LocalSocket\) .*:\1 /var/run/clamav/clamd.sock:" \
+		-e "s:.*\(PidFile\) .*:\1 ${EPREFIX}/var/run/clamav/clamd.pid:" \
+		-e "s:.*\(LocalSocket\) .*:\1 ${EPREFIX}/var/run/clamav/clamd.sock:" \
 		-e "s:.*\(User\) .*:\1 clamav:" \
-		-e "s:^\#\(LogFile\) .*:\1 /var/log/clamav/clamd.log:" \
+		-e "s:^\#\(LogFile\) .*:\1 ${EPREFIX}/var/log/clamav/clamd.log:" \
 		-e "s:^\#\(LogTime\).*:\1 yes:" \
 		-e "s:^\#\(AllowSupplementaryGroups\).*:\1 yes:" \
 		"${ED}"/etc/clamd.conf
 	sed -i -e "s:^\(Example\):\# \1:" \
-		-e "s:.*\(PidFile\) .*:\1 /var/run/clamav/freshclam.pid:" \
+		-e "s:.*\(PidFile\) .*:\1 ${EPREFIX}/var/run/clamav/freshclam.pid:" \
 		-e "s:.*\(DatabaseOwner\) .*:\1 clamav:" \
-		-e "s:^\#\(UpdateLogFile\) .*:\1 /var/log/clamav/freshclam.log:" \
-		-e "s:^\#\(NotifyClamd\).*:\1 /etc/clamd.conf:" \
+		-e "s:^\#\(UpdateLogFile\) .*:\1 ${EPREFIX}/var/log/clamav/freshclam.log:" \
+		-e "s:^\#\(NotifyClamd\).*:\1 ${EPREFIX}/etc/clamd.conf:" \
 		-e "s:^\#\(ScriptedUpdates\).*:\1 yes:" \
 		-e "s:^\#\(AllowSupplementaryGroups\).*:\1 yes:" \
 		"${ED}"/etc/freshclam.conf
@@ -99,12 +100,12 @@ src_install() {
 		# inet: which we want to leave
 		dodoc "${FILESDIR}"/clamav-milter.README.gentoo
 		sed -i -e "s:^\(Example\):\# \1:" \
-			-e "s:.*\(PidFile\) .*:\1 /var/run/clamav/clamav-milter.pid:" \
-			-e "s+^\#\(ClamdSocket\) .*+\1 unix:/var/run/clamav/clamd.sock+" \
+			-e "s:.*\(PidFile\) .*:\1 ${EPREFIX}/var/run/clamav/clamav-milter.pid:" \
+			-e "s+^\#\(ClamdSocket\) .*+\1 unix:${EPREFIX}/var/run/clamav/clamd.sock+" \
 			-e "s:.*\(User\) .*:\1 clamav:" \
-			-e "s+^\#\(MilterSocket\) /.*+\1 unix:/var/run/clamav/clamav-milter.sock+" \
+			-e "s+^\#\(MilterSocket\) /.*+\1 unix:${EPREFIX}/var/run/clamav/clamav-milter.sock+" \
 			-e "s:^\#\(AllowSupplementaryGroups\).*:\1 yes:" \
-			-e "s:^\#\(LogFile\) .*:\1 /var/log/clamav/clamav-milter.log:" \
+			-e "s:^\#\(LogFile\) .*:\1 ${EPREFIX}/var/log/clamav/clamav-milter.log:" \
 			"${ED}"/etc/clamav-milter.conf
 		cat > "${ED}"/etc/conf.d/clamd <<-EOF
 			MILTER_NICELEVEL=19

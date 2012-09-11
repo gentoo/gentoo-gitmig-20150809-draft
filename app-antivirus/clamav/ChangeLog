@@ -1,6 +1,9 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.425 2012/08/28 18:52:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.426 2012/09/11 03:29:29 ottxor Exp $
+
+  11 Sep 2012; Christoph Junghans <ottxor@gentoo.org> clamav-0.97.5-r1.ebuild:
+  added prefix support (bug #430604)
 
   28 Aug 2012; Brent Baude <ranger@gentoo.org> clamav-0.97.5-r1.ebuild:
   Marking clamav-0.97.5-r1 ppc64 for bug 428584
