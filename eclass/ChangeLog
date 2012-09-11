@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.392 2012/09/11 08:15:08 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.393 2012/09/11 16:40:05 radhermit Exp $
+
+  11 Sep 2012; Tim Harder <radhermit@gentoo.org> vim.eclass:
+  Allow vim to be built against ruby-1.9.
 
   11 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> chromium.eclass:
   Remove deprecated chromium_check_kernel_config.
