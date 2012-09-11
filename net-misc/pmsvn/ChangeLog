@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/pmsvn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pmsvn/ChangeLog,v 1.7 2012/08/31 19:27:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pmsvn/ChangeLog,v 1.8 2012/09/11 20:34:07 hwoarang Exp $
+
+*pmsvn-1.0.5 (11 Sep 2012)
+
+  11 Sep 2012; Markos Chandras <hwoarang@gentoo.org> +pmsvn-1.0.5.ebuild:
+  Version bump
 
 *pmsvn-1.0.4 (31 Aug 2012)
 
