@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6952 2012/09/11 17:49:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6953 2012/09/11 17:50:42 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Sep 2012; Alexis Ballier <aballier@gentoo.org> profiles.desc:
+  advertise fbsd 9.1 profiles
 
   11 Sep 2012; Alexis Ballier <aballier@gentoo.org> profiles.desc:
   bring back amd64-fbsd profile to its normal status, got broken in previous
