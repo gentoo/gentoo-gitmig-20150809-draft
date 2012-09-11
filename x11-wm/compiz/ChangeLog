@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/compiz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.69 2012/09/11 09:38:42 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.70 2012/09/11 10:03:31 pinkbyte Exp $
+
+  11 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> -files/0.3.6/compiz-start:
+  Remove old script
 
   11 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> compiz-0.8.8.ebuild,
   +files/compiz-kde-4.9.patch:
