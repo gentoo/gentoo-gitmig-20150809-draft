@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/pyrad
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/pyrad/ChangeLog,v 1.1 2011/07/17 16:55:11 dilfridge Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/pyrad/ChangeLog,v 1.2 2012/09/11 10:52:47 dilfridge Exp $
+
+  11 Sep 2012; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
+  Drop maintainership
 
 *pyrad-0.5.3-r1 (17 Jul 2011)
 

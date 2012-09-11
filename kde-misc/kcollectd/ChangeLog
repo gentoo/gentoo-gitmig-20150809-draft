@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kcollectd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcollectd/ChangeLog,v 1.10 2012/07/20 21:20:26 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcollectd/ChangeLog,v 1.11 2012/09/11 10:51:36 dilfridge Exp $
+
+  11 Sep 2012; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
+  Drop maintainership
 
   20 Jul 2012; Johannes Huber <johu@gentoo.org> kcollectd-0.9.ebuild:
   Move from SLOT 0 to 4.
