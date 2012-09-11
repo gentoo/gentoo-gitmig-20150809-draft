@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-rescue
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-rescue/ChangeLog,v 1.30 2012/05/02 21:41:15 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-rescue/ChangeLog,v 1.31 2012/09/11 20:04:19 aballier Exp $
+
+*freebsd-rescue-9.1_rc1 (11 Sep 2012)
+
+  11 Sep 2012; Alexis Ballier <aballier@gentoo.org>
+  +freebsd-rescue-9.1_rc1.ebuild, +files/freebsd-rescue-9.1-bsdtar.patch,
+  +files/freebsd-rescue-9.1-libcleverlink.patch:
+  bump to 9.1_rc1 from bsd overlay by Yuta SATOH, bug #426838
 
   02 May 2012; Jeff Horelick <jdhore@gentoo.org> freebsd-rescue-8.0.ebuild,
   freebsd-rescue-8.2.ebuild, freebsd-rescue-9.0.ebuild:
