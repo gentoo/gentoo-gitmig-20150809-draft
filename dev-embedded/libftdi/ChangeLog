@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/libftdi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/ChangeLog,v 1.61 2012/06/03 03:18:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/ChangeLog,v 1.62 2012/09/11 06:36:29 vapier Exp $
+
+  11 Sep 2012; Mike Frysinger <vapier@gentoo.org> libftdi-0.20.ebuild:
+  Do not clobber LIB_SUFFIX setting common code setup.
 
   03 Jun 2012; Mike Frysinger <vapier@gentoo.org> libftdi-0.20.ebuild:
   Fix python module install.
@@ -224,4 +227,3 @@
   05 Dec 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   +libftdi-0.5.ebuild:
   initial import bug #47812. Thanks to maj <maj@jamers.net>
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/libftdi-0.20.ebuild,v 1.2 2012/06/03 03:18:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/libftdi-0.20.ebuild,v 1.3 2012/09/11 06:36:29 vapier Exp $
 
 EAPI="2"
 
@@ -31,6 +31,9 @@ src_prepare() {
 	sed -i \
 		-e "s:[$]{PYTHON_LIB_INSTALL}/../site-packages:$(python_get_sitedir):" \
 		bindings/CMakeLists.txt || die
+	sed -i \
+		-e '/SET(LIB_SUFFIX /d' \
+		CMakeLists.txt || die
 }
 
 src_configure() {
