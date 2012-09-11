@@ -1,6 +1,11 @@
 # ChangeLog for sys-freebsd/boot0
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/boot0/ChangeLog,v 1.35 2012/05/17 14:36:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/boot0/ChangeLog,v 1.36 2012/09/11 16:58:18 aballier Exp $
+
+*boot0-9.1_rc1 (11 Sep 2012)
+
+  11 Sep 2012; Alexis Ballier <aballier@gentoo.org> +boot0-9.1_rc1.ebuild:
+  bump to 9.1_rc1 from bsd overlay by Yuta SATOH, bug #426838
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org> boot0-9.0.ebuild:
   drop now useless appends flags: we unpack the lib tarball.

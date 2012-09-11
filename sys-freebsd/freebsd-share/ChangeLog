@@ -1,6 +1,12 @@
 # ChangeLog for sys-freebsd/freebsd-share
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/ChangeLog,v 1.45 2012/06/16 00:12:39 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/ChangeLog,v 1.46 2012/09/11 16:54:09 aballier Exp $
+
+*freebsd-share-9.1_rc1 (11 Sep 2012)
+
+  11 Sep 2012; Alexis Ballier <aballier@gentoo.org>
+  +freebsd-share-9.1_rc1.ebuild:
+  bump to 9.1_rc1 from bsd overlay by Yuta SATOH, bug #426838
 
   16 Jun 2012; Naohiro Aota <naota@gentoo.org> freebsd-share-9.0.ebuild:
   Drop rc.conf{,.local} man pages. #420797

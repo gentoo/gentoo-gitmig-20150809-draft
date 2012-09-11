@@ -1,6 +1,15 @@
 # ChangeLog for sys-freebsd/freebsd-ubin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.80 2012/04/26 13:55:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.81 2012/09/11 17:07:42 aballier Exp $
+
+*freebsd-ubin-9.1_rc1 (11 Sep 2012)
+
+  11 Sep 2012; Alexis Ballier <aballier@gentoo.org>
+  +freebsd-ubin-9.1_rc1.ebuild, +files/freebsd-ubin-9.1-bsdar.patch,
+  +files/freebsd-ubin-9.1-grep.patch,
+  +files/freebsd-ubin-9.1-kdump-ioctl.patch,
+  +files/freebsd-ubin-9.1-minigzip.patch:
+  bump to 9.1_rc1 from bsd overlay by Yuta SATOH, bug #426838
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> freebsd-ubin-9.0-r1.ebuild:
   keyword ~amd64-fbsd

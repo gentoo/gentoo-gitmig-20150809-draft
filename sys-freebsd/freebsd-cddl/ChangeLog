@@ -1,6 +1,12 @@
 # ChangeLog for sys-freebsd/freebsd-cddl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-cddl/ChangeLog,v 1.25 2012/08/20 06:18:40 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-cddl/ChangeLog,v 1.26 2012/09/11 17:01:18 aballier Exp $
+
+*freebsd-cddl-9.1_rc1 (11 Sep 2012)
+
+  11 Sep 2012; Alexis Ballier <aballier@gentoo.org>
+  +freebsd-cddl-9.1_rc1.ebuild:
+  bump to 9.1_rc1 from bsd overlay by Yuta SATOH, bug #426838
 
   20 Aug 2012; Naohiro Aota <naota@gentoo.org> freebsd-cddl-7.2.ebuild,
   freebsd-cddl-8.0.ebuild, freebsd-cddl-8.2.ebuild, freebsd-cddl-9.0.ebuild:

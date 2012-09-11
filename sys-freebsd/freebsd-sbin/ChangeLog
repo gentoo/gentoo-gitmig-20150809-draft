@@ -1,6 +1,12 @@
 # ChangeLog for sys-freebsd/freebsd-sbin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.69 2012/05/12 14:28:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.70 2012/09/11 17:05:47 aballier Exp $
+
+*freebsd-sbin-9.1_rc1 (11 Sep 2012)
+
+  11 Sep 2012; Alexis Ballier <aballier@gentoo.org>
+  +freebsd-sbin-9.1_rc1.ebuild:
+  bump to 9.1_rc1 from bsd overlay by Yuta SATOH, bug #426838
 
   12 May 2012; Alexis Ballier <aballier@gentoo.org> -freebsd-sbin-8.2.ebuild,
   -freebsd-sbin-9.0.ebuild:
