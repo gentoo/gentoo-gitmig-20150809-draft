@@ -1,9 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/linux-gpib-3.2.16-r3.ebuild,v 1.3 2012/08/25 16:46:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/linux-gpib-3.2.16-r3.ebuild,v 1.4 2012/09/11 14:11:20 dilfridge Exp $
 
 EAPI=4
 PERL_EXPORT_PHASE_FUNCTIONS=no
+GENTOO_DEPEND_ON_PERL=no
 PYTHON_DEPEND="python? 2"
 
 inherit base linux-mod autotools perl-module python toolchain-funcs user
@@ -37,7 +38,7 @@ PATCHES=(
 )
 
 pkg_setup () {
-	perl-module_pkg_setup
+	use perl && perl-module_pkg_setup
 	python_pkg_setup
 	python_set_active_version 2
 	linux-mod_pkg_setup
@@ -139,13 +140,13 @@ src_install() {
 
 pkg_preinst () {
 	linux-mod_pkg_preinst
-	perl-module_pkg_preinst
+	use perl && perl-module_pkg_preinst
 	enewgroup gpib
 }
 
 pkg_postinst () {
 	linux-mod_pkg_postinst
-	perl-module_pkg_postinst
+	use perl && perl-module_pkg_postinst
 
 	einfo "You need to run the 'gpib_config' utility to setup the driver before"
 	einfo "you can use it. In order to do it automatically you can add to your"
