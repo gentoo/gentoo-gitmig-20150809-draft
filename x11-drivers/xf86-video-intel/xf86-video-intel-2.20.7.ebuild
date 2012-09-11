@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.20.7.ebuild,v 1.1 2012/09/10 20:08:24 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.20.7.ebuild,v 1.2 2012/09/11 21:06:42 remi Exp $
 
 EAPI=4
 
@@ -10,21 +10,24 @@ inherit linux-info xorg-2
 DESCRIPTION="X.Org driver for Intel cards"
 
 KEYWORDS="~amd64 ~ia64 ~x86 ~amd64-fbsd -x86-fbsd"
-IUSE="glamor +sna uxa"
+IUSE="glamor +sna uxa xvmc"
 
 RDEPEND="x11-libs/libXext
 	x11-libs/libXfixes
-	x11-libs/libXvMC
-	>=x11-libs/libxcb-1.5
 	>=x11-libs/pixman-0.27.1
-	x11-libs/xcb-util
 	>=x11-libs/libdrm-2.4.29[video_cards_intel]
 	glamor? (
 		x11-libs/glamor
 	)
 	sna? (
 		>=x11-base/xorg-server-1.10
-	)"
+	)
+	xvmc? (
+		x11-libs/libXvMC
+		>=x11-libs/libxcb-1.5
+		x11-libs/xcb-util
+	)
+"
 DEPEND="${RDEPEND}
 	>=x11-proto/dri2proto-2.6
 	x11-proto/resourceproto"
@@ -35,7 +38,7 @@ src_configure() {
 		$(use_enable glamor)
 		$(use_enable sna)
 		$(use_enable uxa)
-		--enable-xvmc
+		$(use_enable xvmc)
 	)
 	xorg-2_src_configure
 }
