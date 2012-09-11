@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.205 2012/09/11 13:01:54 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.206 2012/09/11 17:25:59 johu Exp $
+
+  11 Sep 2012; Johannes Huber <johu@gentoo.org> gettext-0.18.1.1-r3.ebuild:
+  Stable for x86, wrt bug #434566
 
   11 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
   gettext-0.18.1.1-r3.ebuild:
