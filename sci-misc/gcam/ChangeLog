@@ -1,6 +1,9 @@
 # ChangeLog for sci-misc/gcam
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/gcam/ChangeLog,v 1.5 2012/01/08 19:17:32 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/gcam/ChangeLog,v 1.6 2012/09/11 10:59:14 dilfridge Exp $
+
+  11 Sep 2012; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
+  Drop maintainership
 
   08 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   gcam-2010.07.27.ebuild, +files/gcam-2010.07.27-libpng15.patch,
