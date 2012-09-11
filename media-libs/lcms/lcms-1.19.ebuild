@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.19.ebuild,v 1.14 2012/08/24 21:55:47 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.19.ebuild,v 1.15 2012/09/11 02:45:36 ottxor Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -15,7 +15,7 @@ SRC_URI="http://www.littlecms.com/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="jpeg python static-libs tiff zlib"
 
 RDEPEND="tiff? ( media-libs/tiff:0 )
@@ -64,9 +64,9 @@ src_compile() {
 
 		building() {
 			emake \
-				LCMS_PYEXECDIR="$(python_get_sitedir)" \
-				LCMS_PYINCLUDE="$(python_get_includedir)" \
-				LCMS_PYLIB="$(python_get_libdir)" \
+				LCMS_PYEXECDIR="${EPREFIX}$(python_get_sitedir)" \
+				LCMS_PYINCLUDE="${EPREFIX}$(python_get_includedir)" \
+				LCMS_PYLIB="${EPREFIX}$(python_get_libdir)" \
 				PYTHON_VERSION="$(python_get_version)"
 		}
 		python_execute_function -s --source-dir python building
@@ -76,16 +76,16 @@ src_compile() {
 src_install() {
 	emake \
 		DESTDIR="${D}" \
-		BINDIR="${D}"/usr/bin \
-		libdir=/usr/$(get_libdir) \
+		BINDIR="${ED}"/usr/bin \
+		libdir="${EPREFIX}"/usr/$(get_libdir) \
 		install || die
 
 	if use python; then
 		installation() {
 			emake \
 				DESTDIR="${D}" \
-				LCMS_PYEXECDIR="$(python_get_sitedir)" \
-				LCMS_PYLIB="$(python_get_libdir)" \
+				LCMS_PYEXECDIR="${EPREFIX}$(python_get_sitedir)" \
+				LCMS_PYLIB="${EPREFIX}$(python_get_libdir)" \
 				PYTHON_VERSION="$(python_get_version)" \
 				install
 		}
