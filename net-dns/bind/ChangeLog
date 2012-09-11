@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.407 2012/09/10 02:05:05 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.408 2012/09/11 18:19:31 idl0r Exp $
+
+*bind-9.9.1_p2-r3 (11 Sep 2012)
+
+  11 Sep 2012; Christian Ruppert <idl0r@gentoo.org> +bind-9.9.1_p2-r3.ebuild,
+  -bind-9.8.3_p1.ebuild, -bind-9.8.3_p2.ebuild, -bind-9.9.1_p2-r2.ebuild,
+  -files/bind-9.8.1-sdlz_helper.patch, metadata.xml:
+  Remove old versions. Add DNS Response Rate Limit (RRL) patch, bug 434650.
 
   10 Sep 2012; Christoph Junghans <ottxor@gentoo.org> bind-9.9.1_p2-r2.ebuild:
   added prefix keywords
