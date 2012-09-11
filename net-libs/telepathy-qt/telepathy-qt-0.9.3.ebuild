@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/telepathy-qt-0.9.3.ebuild,v 1.1 2012/07/15 16:55:51 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/telepathy-qt-0.9.3.ebuild,v 1.2 2012/09/11 23:02:04 johu Exp $
 
 EAPI=4
 
 PYTHON_DEPEND="2:2.5"
-inherit python base cmake-utils
+inherit python base cmake-utils virtualx
 
 DESCRIPTION="Qt4 bindings for the Telepathy D-Bus protocol"
 HOMEPAGE="http://telepathy.freedesktop.org/"
@@ -24,7 +24,7 @@ RDEPEND="
 	)
 	farstream? (
 		>=net-libs/telepathy-farstream-0.2.2
-		>=net-libs/telepathy-glib-0.17.5
+		>=net-libs/telepathy-glib-0.18.0
 	)
 	!net-libs/telepathy-qt4
 "
@@ -42,6 +42,8 @@ REQUIRED_USE="farsight? ( !farstream )"
 
 DOCS=( AUTHORS ChangeLog HACKING NEWS README )
 
+PATCHES=( "${FILESDIR}/${P}-tp-glib-0.18-tests.patch" )
+
 pkg_setup() {
 	python_set_active_version 2
 	python_pkg_setup
@@ -56,4 +58,10 @@ src_configure() {
 		-DENABLE_EXAMPLES=OFF
 	)
 	cmake-utils_src_configure
+}
+
+src_test() {
+	pushd "${CMAKE_BUILD_DIR}" > /dev/null
+	Xemake test || die "tests failed"
+	popd > /dev/null
 }

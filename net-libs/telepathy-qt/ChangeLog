@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/telepathy-qt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/ChangeLog,v 1.15 2012/07/31 08:38:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/ChangeLog,v 1.16 2012/09/11 23:02:04 johu Exp $
+
+  11 Sep 2012; Johannes Huber <johu@gentoo.org>
+  +files/telepathy-qt-0.9.3-tp-glib-0.18-tests.patch, telepathy-qt-0.9.3.ebuild:
+  Make tests working with tp-glib-0.18 by adding upstream patch spotted by
+  Alexandre Rostovtsev <tetromino@gentoo.org> and usage of virtualx.eclass.
 
 *telepathy-qt-0.8.0 (31 Jul 2012)
 
