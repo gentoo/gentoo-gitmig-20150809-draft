@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/dpkg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.200 2012/09/01 16:48:02 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.201 2012/09/11 15:52:42 armin76 Exp $
+
+  11 Sep 2012; Raúl Porcel <armin76@gentoo.org> dpkg-1.16.8.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #432422
 
   01 Sep 2012; Anthony G. Basile <blueness@gentoo.org> dpkg-1.16.8.ebuild:
   Stable arm, bug #432422
