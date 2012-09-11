@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/xymtex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/xymtex/ChangeLog,v 1.7 2012/06/02 12:10:21 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/xymtex/ChangeLog,v 1.8 2012/09/11 10:31:42 dilfridge Exp $
+
+  11 Sep 2012; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
+  Drop maintainership
 
   02 Jun 2012; Johannes Huber <johu@gentoo.org> xymtex-5.00a.ebuild:
   Stable for x86, wrt bug #418935
