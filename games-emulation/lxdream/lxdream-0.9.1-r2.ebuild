@@ -1,9 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/lxdream/lxdream-0.9.1-r2.ebuild,v 1.2 2012/05/04 04:38:39 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/lxdream/lxdream-0.9.1-r2.ebuild,v 1.3 2012/09/11 19:41:33 pacho Exp $
 
-EAPI=2
-
+EAPI=4
 inherit eutils games
 
 DESCRIPTION="An emulator for the Sega Dreamcast system"
@@ -29,6 +28,8 @@ DEPEND="${RDEPEND}
 	virtual/os-headers"
 
 src_prepare() {
+	epatch "${FILESDIR}/${PN}-0.9.1-glib-single-include.patch"
+
 	# Make .desktop file pass desktop-file-validate
 	sed -i \
 		-e '/Encoding/d' \
@@ -56,7 +57,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "install failed"
-	dodoc ChangeLog NEWS README || die "dodoc failed"
+	emake DESTDIR="${D}" install
+	dodoc ChangeLog NEWS README
 	prepgamesdirs
 }
