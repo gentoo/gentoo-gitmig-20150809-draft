@@ -1,6 +1,15 @@
 # ChangeLog for x11-wm/compiz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.70 2012/09/11 10:03:31 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.71 2012/09/11 10:17:29 pinkbyte Exp $
+
+  11 Sep 2012; Sergey Popov <pinkbyte@gentoo.org>
+  -files/compiz-0.6.2-CVE-2007-3920.patch, -files/compiz-0.7.8-framesvg.patch,
+  -files/compiz-0.8.2-gtk-gnome-missing-gconf-flags.patch,
+  -files/compiz-0.8.4-crash-on-opening-windows.patch,
+  -files/compiz-0.8.4-gtk+-2.20-build.patch, -files/compiz-0.8.4-kde44.patch,
+  -files/compiz-0.8.4-libpng14.patch, -files/compiz-0.8.4-place-plugin.patch,
+  -files/compiz-0.8.4-window-region-calculation.patch:
+  Remove unneeded files
 
   11 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> -files/0.3.6/compiz-start:
   Remove old script
