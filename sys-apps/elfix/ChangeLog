@@ -1,5 +1,8 @@
 
 
+  11 Sep 2012; Raúl Porcel <armin76@gentoo.org> elfix-0.5.2.ebuild:
+  Add ~alpha/~ia64/~sparc wrt #428558
+
   01 Aug 2012; Jeroen Roovers <jer@gentoo.org> elfix-0.5.2.ebuild:
   Marked ~hppa (bug #428558).
 
