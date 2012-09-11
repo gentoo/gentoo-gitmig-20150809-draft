@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/libertas-firmware
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/libertas-firmware/ChangeLog,v 1.1 2010/10/19 20:35:30 dilfridge Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/libertas-firmware/ChangeLog,v 1.2 2012/09/11 10:57:49 dilfridge Exp $
+
+  11 Sep 2012; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
+  Drop maintainership
 
 *libertas-firmware-20101019 (19 Oct 2010)
 
