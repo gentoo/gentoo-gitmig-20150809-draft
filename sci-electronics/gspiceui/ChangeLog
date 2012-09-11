@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/gspiceui
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gspiceui/ChangeLog,v 1.7 2012/02/11 13:50:23 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gspiceui/ChangeLog,v 1.8 2012/09/11 10:58:26 dilfridge Exp $
+
+  11 Sep 2012; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
+  Drop maintainership
 
 *gspiceui-1.0.0 (11 Feb 2012)
 
