@@ -12,5 +12,6 @@ depending on the phone you have.
   <flag name='ical'>Enable support for <pkg>dev-libs/libical</pkg></flag>
   <flag name='irda'>Enable infrared support</flag>
   <flag name='sms'>Enable SMS support (build smsd)</flag>
+  <flag name='pcsc-lite'>Enable smartcard support with <pkg>sys-apps/pcsc-lite</pkg></flag>
 </use>
 </pkgmetadata>

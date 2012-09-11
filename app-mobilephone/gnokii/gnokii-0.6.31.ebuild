@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-9999.ebuild,v 1.11 2012/09/11 04:17:55 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.31.ebuild,v 1.1 2012/09/11 04:17:55 ottxor Exp $
 
 EAPI=4
 
@@ -29,7 +29,7 @@ RDEPEND="!app-mobilephone/smstools
 	bluetooth? ( kernel_linux? ( net-wireless/bluez ) )
 	sms? (
 		!app-mobilephone/smstools
-		>=dev-libs/glib-2
+		dev-libs/glib:2
 		postgres? ( >=dev-db/postgresql-base-8.0 )
 		mysql? ( >=virtual/mysql-4.1 )
 	)
@@ -42,13 +42,17 @@ DEPEND="${RDEPEND}
 
 CONFIG_CHECK="~UNIX98_PTYS"
 
+S="${WORKDIR}/${PN}-${PV%.1}"
+
 # Supported languages and translated documentation
 # Be sure all languages are prefixed with a single space!
 MY_AVAILABLE_LINGUAS=" cs de et fi fr it nl pl pt sk sl sv zh_CN"
 IUSE="${IUSE} ${MY_AVAILABLE_LINGUAS// / linguas_}"
 
 src_prepare() {
-	if [ "$PV" = "9999" ]; then
+	if [ "$PV" != "9999" ]; then
+		epatch "${FILESDIR}"/${P}-fix_xgnokii_inclusion.patch
+	else
 		epatch "${FILESDIR}"/${P}-icon.patch
 		epatch "${FILESDIR}"/${P}-translations.patch
 		intltoolize --force --copy --automake || die "intltoolize error"
@@ -103,6 +107,11 @@ src_install() {
 		doins README ChangeLog README.Tru64 action
 		popd
 	fi
+}
+
+src_test() {
+	echo common/phones/fake.c >> "${S}"/po/POTFILES.in
+	default
 }
 
 pkg_postinst() {
