@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-phonon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/ChangeLog,v 1.124 2012/07/19 21:07:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/ChangeLog,v 1.125 2012/09/11 10:47:23 johu Exp $
+
+  11 Sep 2012; Johannes Huber <johu@gentoo.org> qt-phonon-4.7.4.ebuild,
+  qt-phonon-4.8.1.ebuild, qt-phonon-4.8.2.ebuild:
+  Add slot dependency on media-libs/gstreamer and plugins.
 
   19 Jul 2012; Markus Meier <maekke@gentoo.org> qt-phonon-4.8.2.ebuild:
   arm stable, bug #424625

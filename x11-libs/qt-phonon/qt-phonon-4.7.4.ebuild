@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/qt-phonon-4.7.4.ebuild,v 1.5 2012/04/03 21:49:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/qt-phonon-4.7.4.ebuild,v 1.6 2012/09/11 10:47:23 johu Exp $
 
 EAPI="3"
 inherit qt4-build
@@ -15,8 +15,8 @@ DEPEND="~x11-libs/qt-gui-${PV}[aqua=,debug=,qt3support=]
 	!kde-base/phonon-xine
 	!media-libs/phonon
 	!media-sound/phonon
-	!aqua? ( media-libs/gstreamer
-			 media-plugins/gst-plugins-meta )
+	!aqua? ( media-libs/gstreamer:0.10
+			 media-plugins/gst-plugins-meta:0.10 )
 	aqua? ( ~x11-libs/qt-opengl-${PV}[aqua,qt3support=] )
 	dbus? ( ~x11-libs/qt-dbus-${PV}[aqua=,debug=] )"
 RDEPEND="${DEPEND}"
