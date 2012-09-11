@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/pnp4nagios
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/ChangeLog,v 1.44 2012/08/19 15:32:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/ChangeLog,v 1.45 2012/09/11 20:54:59 idl0r Exp $
+
+*pnp4nagios-0.6.19 (11 Sep 2012)
+
+  11 Sep 2012; Christian Ruppert <idl0r@gentoo.org> +pnp4nagios-0.6.19.ebuild:
+  Version bump to 0.6.19.
 
   19 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Re-assign to sysadmin herd.
