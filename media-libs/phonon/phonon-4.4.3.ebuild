@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/phonon-4.4.3.ebuild,v 1.5 2012/01/31 15:01:49 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/phonon-4.4.3.ebuild,v 1.6 2012/09/11 10:33:18 johu Exp $
 
 EAPI="2"
 
@@ -22,8 +22,8 @@ RDEPEND="
 	>=x11-libs/qt-gui-4.6.0:4[aqua=]
 	>=x11-libs/qt-opengl-4.6.0:4[aqua=]
 	gstreamer? (
-		media-libs/gstreamer
-		media-plugins/gst-plugins-meta[alsa?]
+		media-libs/gstreamer:0.10
+		media-plugins/gst-plugins-meta:0.10[alsa?]
 	)
 	pulseaudio? (
 		dev-libs/glib:2
