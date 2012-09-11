@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.173 2012/09/07 23:52:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.174 2012/09/11 19:39:18 jer Exp $
+
+  11 Sep 2012; Jeroen Roovers <jer@gentoo.org> libpcap-1.3.0.ebuild,
+  +files/libpcap-1.3.0-canusb.patch, metadata.xml:
+  Make CAN USB support optional by Alexander Zubkov (bug #434538).
 
   07 Sep 2012; Agostino Sarubbo <ago@gentoo.org> libpcap-1.3.0.ebuild:
   Stable for amd64, wrt bug #433263
