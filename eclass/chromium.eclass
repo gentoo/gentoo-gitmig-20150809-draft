@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/chromium.eclass,v 1.6 2012/07/17 03:56:26 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/chromium.eclass,v 1.7 2012/09/11 08:15:08 phajdan.jr Exp $
 
 # @ECLASS: chromium.eclass
 # @MAINTAINER:
@@ -32,16 +32,6 @@ chromium_suid_sandbox_check_kernel_config() {
 		CONFIG_CHECK="~PID_NS ~NET_NS"
 		check_extra_config
 	fi
-}
-
-# @FUNCTION: chromium_check_kernel_config
-# @USAGE:
-# @DESCRIPTION:
-# Ensures the system kernel is configured for full Chromium functionality.
-chromium_check_kernel_config() {
-	eqawarn "chromium_check_kernel_config is deprecated."
-	eqawarn "Please use chromium_suid_sandbox_check_kernel_config if applicable."
-	chromium_suid_sandbox_check_kernel_config
 }
 
 # @ECLASS-VARIABLE: CHROMIUM_LANGS
