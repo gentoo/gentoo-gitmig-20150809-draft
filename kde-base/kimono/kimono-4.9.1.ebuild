@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kimono/kimono-4.9.1.ebuild,v 1.1 2012/09/04 18:45:07 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kimono/kimono-4.9.1.ebuild,v 1.2 2012/09/11 20:09:15 kensington Exp $
 
 EAPI=4
 
@@ -16,7 +16,6 @@ DEPEND="
 	$(add_kdebase_dep smokeqt)
 	$(add_kdebase_dep smokekde 'semantic-desktop=')
 	plasma? ( $(add_kdebase_dep smokeqt 'webkit') )
-	semantic-desktop? ( >=dev-libs/soprano-2.8.0[clucene] )
 "
 RDEPEND="${DEPEND}"
 
@@ -35,7 +34,7 @@ src_configure() {
 		$(cmake-utils_use_with akonadi KdepimLibs)
 		$(cmake-utils_use_disable plasma)
 		$(cmake-utils_use_with semantic-desktop Nepomuk)
-		$(cmake-utils_use_with semantic-desktop Soprano)
+		-DWITH_Soprano=OFF
 	)
 	kde4-base_src_configure
 }
