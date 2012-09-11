@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.15-r2.ebuild,v 1.2 2012/09/11 18:22:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.15.1.ebuild,v 1.1 2012/09/11 18:22:26 jlec Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.gajim.org/downloads/$(get_version_component_range 1-2)/${P}.
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="avahi crypt dbus gmail gnome kde idle jingle libnotify networkmanager nls spell srv X xhtml"
+IUSE="avahi crypt dbus gnome kde idle jingle libnotify networkmanager nls spell +srv X xhtml"
 
 REQUIRED_USE="
 	libnotify? ( dbus )
@@ -42,7 +42,6 @@ RDEPEND="${COMMON_DEPEND}
 		libnotify? ( dev-python/notify-python )
 		avahi? ( net-dns/avahi[dbus,gtk,python] )
 		)
-	gmail? ( net-dns/bind-tools )
 	gnome? (
 		dev-python/libgnome-python
 		dev-python/gnome-keyring-python
@@ -70,8 +69,6 @@ pkg_setup() {
 
 src_prepare() {
 	epatch \
-		"${FILESDIR}"/${P}-plugin.patch \
-		"${FILESDIR}"/${P}-SA48695-2.patch \
 		"${FILESDIR}"/0.14-python-version.patch \
 		"${FILESDIR}"/0.14.1-testing.patch
 	echo '#!/bin/sh' > config/py-compile

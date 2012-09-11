@@ -1,6 +1,12 @@
 # ChangeLog for net-im/gajim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.144 2012/06/19 12:20:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.145 2012/09/11 18:22:26 jlec Exp $
+
+*gajim-0.15.1 (11 Sep 2012)
+
+  11 Sep 2012; Justin Lecher <jlec@gentoo.org> gajim-0.15-r2.ebuild,
+  +gajim-0.15.1.ebuild:
+  Version Bump and dropeed USE gajim in favour of srv, #434600
 
   19 Jun 2012; Agostino Sarubbo <ago@gentoo.org> -gajim-0.14.1-r2.ebuild,
   -gajim-0.14.4-r1.ebuild, -gajim-0.14.4-r2.ebuild:
