@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.114 2012/08/26 19:12:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.115 2012/09/11 14:22:54 armin76 Exp $
 
 # Raúl Porcel <armin76@gentoo.org> (08 Jul 2012)
 # x11-libs/qt-webkit doesn't seem to work
@@ -32,10 +32,7 @@ x11-misc/xscreensaver new-login
 # Alexandre Rostovtsev <tetromino@gentoo.org> (25 May 2012)
 # Remove mask entry when app-misc/geoclue and app-accessibility/at-spi2-core
 # are keyworded here, bug #411761
-net-libs/webkit-gtk geoloc webkit2
-# Remove mask entry when the geoloc flag above is unmasked, bug #432578
->=net-libs/webkit-gtk-1.8.1 introspection
->=www-client/epiphany-3.4 introspection
+net-libs/webkit-gtk webkit2
 
 # Samuli Suominen <ssuominen@gentoo.org> (15 May 2012)
 # UDisks2 untested wrt http://bugs.gentoo.org/412801
