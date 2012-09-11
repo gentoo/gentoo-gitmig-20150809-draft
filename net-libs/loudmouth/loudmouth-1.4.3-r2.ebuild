@@ -1,10 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/loudmouth-1.4.3-r2.ebuild,v 1.12 2012/08/05 20:50:11 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/loudmouth-1.4.3-r2.ebuild,v 1.13 2012/09/11 18:36:21 eva Exp $
 
 EAPI="4"
 GNOME_TARBALL_SUFFIX="bz2"
 GNOME2_LA_PUNT="yes"
+# Not using gnome macro, but behavior is similar, #434736
+GCONF_DEBUG="yes"
 
 inherit autotools eutils gnome2
 
@@ -15,7 +17,7 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="alpha amd64 ~arm ia64 ppc ppc64 sparc x86 ~ppc-macos"
 
-IUSE="asyncns debug doc ssl static-libs test"
+IUSE="asyncns doc ssl static-libs test"
 
 # Automagic libidn dependency
 RDEPEND=">=dev-libs/glib-2.4
@@ -32,22 +34,6 @@ DEPEND="${RDEPEND}
 	>=dev-util/gtk-doc-am-1"
 
 DOCS="AUTHORS ChangeLog NEWS README"
-
-pkg_setup() {
-	G2CONF="${G2CONF} $(use_enable debug) $(use_enable static-libs static)"
-
-	if use ssl; then
-		G2CONF="${G2CONF} --with-ssl=gnutls"
-	else
-		G2CONF="${G2CONF} --with-ssl=no"
-	fi
-
-	if use asyncns; then
-		G2CONF="${G2CONF} --with-asyncns=system"
-	else
-		G2CONF="${G2CONF}  --without-asyncns"
-	fi
-}
 
 src_prepare() {
 	# Use system libasyncns, bug #236844
@@ -86,4 +72,21 @@ src_prepare() {
 
 	eautoreconf
 	gnome2_src_prepare
+}
+
+src_configure() {
+	G2CONF="${G2CONF} $(use_enable static-libs static)"
+
+	if use ssl; then
+		G2CONF="${G2CONF} --with-ssl=gnutls"
+	else
+		G2CONF="${G2CONF} --with-ssl=no"
+	fi
+
+	if use asyncns; then
+		G2CONF="${G2CONF} --with-asyncns=system"
+	else
+		G2CONF="${G2CONF} --without-asyncns"
+	fi
+	gnome2_src_configure
 }
