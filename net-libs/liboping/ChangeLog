@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/liboping
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liboping/ChangeLog,v 1.8 2012/06/11 19:21:44 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liboping/ChangeLog,v 1.9 2012/09/11 10:57:06 dilfridge Exp $
+
+  11 Sep 2012; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
+  Drop maintainership
 
 *liboping-1.6.2 (11 Jun 2012)
 
