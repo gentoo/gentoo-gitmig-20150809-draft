@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/opencv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.80 2012/08/23 11:06:58 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.81 2012/09/11 14:03:47 dilfridge Exp $
+
+  11 Sep 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  -opencv-2.3.1a-r20.ebuild, -opencv-2.4.0.ebuild,
+  -files/opencv-2.4.0-cflags.patch, opencv-2.4.2.ebuild:
+  Add missing dependency on virtual/glu, bug 434434; remove old
 
   23 Aug 2012; Andreas K. Huettel <dilfridge@gentoo.org> opencv-2.4.2.ebuild:
   Bump required nvidia-cuda-toolkit version to allow gcc-4.6, bug 431808
