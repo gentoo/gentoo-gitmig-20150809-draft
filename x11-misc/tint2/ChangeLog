@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/tint2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/tint2/ChangeLog,v 1.25 2012/05/05 04:53:44 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/tint2/ChangeLog,v 1.26 2012/09/11 17:38:41 idl0r Exp $
+
+  11 Sep 2012; Christian Ruppert <idl0r@gentoo.org> -tint2-0.11.ebuild,
+  tint2-0.11-r1.ebuild:
+  Remove old version. Dependency fix, bug 434654.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> tint2-0.11.ebuild,
   tint2-0.11-r1.ebuild:
@@ -120,4 +124,3 @@
   07 Jun 2009; Christian Ruppert <idl0r@gentoo.org> +tint2-0.7_beta2.ebuild,
   +metadata.xml:
   New ebuild for bug 225733.
-
