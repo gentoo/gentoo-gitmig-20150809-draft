@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-2.0.2-r4.ebuild,v 1.1 2012/08/25 15:36:01 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-2.0.2-r4.ebuild,v 1.2 2012/09/11 13:43:33 kensington Exp $
 
 EAPI=4
 
@@ -52,7 +52,7 @@ RDEPEND="${DEPEND}
 	virtual/cdrtools
 	dvd? (
 		>=app-cdr/dvd+rw-tools-7
-		media-video/transcode[dvd]
+		encode? ( media-video/transcode[dvd] )
 	)
 	emovix? ( media-video/emovix )
 	sox? ( media-sound/sox )
