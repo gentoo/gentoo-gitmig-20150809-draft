@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/subtitlecomposer/subtitlecomposer-0.5.3-r1.ebuild,v 1.1 2012/08/25 20:57:59 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/subtitlecomposer/subtitlecomposer-0.5.3-r1.ebuild,v 1.2 2012/09/11 10:16:53 johu Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ SLOT="4"
 IUSE="debug gstreamer xine"
 
 RDEPEND="
-	gstreamer? ( media-libs/gstreamer )
+	gstreamer? ( media-libs/gstreamer:0.10 )
 	xine? ( media-libs/xine-lib )
 "
 DEPEND="${RDEPEND}
