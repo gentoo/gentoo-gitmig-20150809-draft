@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/make.defaults,v 1.8 2012/06/16 11:44:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/make.defaults,v 1.9 2012/09/11 12:09:08 aballier Exp $
 # System-wide defaults for the G/FBSD Portage system
 
 ARCH="amd64-fbsd"
@@ -25,3 +25,5 @@ USE="mmx sse sse2"
 VIDEO_CARDS="apm ark chips cirrus cyrix dummy i128 intel mach64 mga \
 	neomagic nv r128 radeon rendition s3 s3virge savage siliconmotion sis \
 	sisusb tga trident tseng via vmware"
+
+SYMLINK_LIB="no"
