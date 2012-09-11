@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libircclient
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libircclient/ChangeLog,v 1.9 2012/09/10 21:55:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libircclient/ChangeLog,v 1.10 2012/09/11 05:46:42 mr_bones_ Exp $
+
+  11 Sep 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  libircclient-1.6-r1.ebuild:
+  install headers in libircclient sub-directory as expected by the packages that
+  dep on this
 
   10 Sep 2012; Michael Sterrett <mr_bones_@gentoo.org>
   libircclient-1.6-r1.ebuild:

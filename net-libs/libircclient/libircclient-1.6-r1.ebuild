@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libircclient/libircclient-1.6-r1.ebuild,v 1.3 2012/09/10 21:55:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libircclient/libircclient-1.6-r1.ebuild,v 1.4 2012/09/11 05:46:42 mr_bones_ Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -37,7 +37,9 @@ src_compile() {
 }
 
 src_install() {
-	emake -C src DESTDIR="${D}" $(usex static-libs "install" "install-headers install-shared")
+	emake -C src DESTDIR="${D}" $(usex static-libs "install" "install-shared")
+	insinto /usr/include/libircclient
+	doins include/*.h
 
 	dodoc Changelog THANKS
 	if use doc ; then
