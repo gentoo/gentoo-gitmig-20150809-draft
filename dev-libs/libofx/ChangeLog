@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libofx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/ChangeLog,v 1.78 2012/09/09 15:44:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/ChangeLog,v 1.79 2012/09/11 10:47:03 dilfridge Exp $
+
+  11 Sep 2012; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
+  Drop maintainership
 
   09 Sep 2012; Raúl Porcel <armin76@gentoo.org> libofx-0.9.4.ebuild,
   libofx-0.9.5.ebuild:
