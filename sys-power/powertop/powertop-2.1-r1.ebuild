@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-2.1-r1.ebuild,v 1.1 2012/09/10 20:18:44 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-2.1-r1.ebuild,v 1.2 2012/09/11 12:22:31 zerochaos Exp $
 
 EAPI="4"
 
@@ -26,7 +26,6 @@ COMMON_DEPEND="
 	sys-apps/pciutils
 	sys-devel/gettext
 	sys-libs/ncurses[unicode?]
-	sys-libs/zlib
 "
 
 DEPEND="${COMMON_DEPEND}
@@ -40,6 +39,7 @@ RDEPEND="
 DOCS=( TODO README )
 
 pkg_setup() {
+	einfo "Warning: enabling all suggested kconfig params may have performance impacts"
 	CONFIG_CHECK="
 		X86_MSR
 		DEBUG_FS
@@ -48,7 +48,6 @@ pkg_setup() {
 		~NO_HZ
 		~HIGH_RES_TIMERS
 		~HPET_TIMER
-		~ACPI_PROCFS_POWER
 		~CPU_FREQ_STAT
 		~CPU_FREQ_GOV_ONDEMAND
 		~SND_HDA_POWER_SAVE
