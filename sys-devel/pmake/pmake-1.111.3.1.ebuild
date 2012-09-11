@@ -1,6 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.111.3.1.ebuild,v 1.7 2012/06/27 11:46:04 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.111.3.1.ebuild,v 1.8 2012/09/11 01:30:35 ottxor Exp $
+
+EAPI=4
 
 inherit eutils toolchain-funcs versionator
 
@@ -15,7 +17,7 @@ SRC_URI="mirror://debian/pool/main/p/pmake/${DEBIAN_SOURCE}
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 sparc x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND=""
@@ -23,10 +25,7 @@ DEPEND=""
 
 S="${WORKDIR}/${PN}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	EPATCH_FORCE="yes" \
 		EPATCH_OPTS="-g0 -E --no-backup-if-mismatch -p1" \
 		EPATCH_SUFFIX="diff" \
@@ -50,15 +49,16 @@ src_compile() {
 		-DHAVE_STRERROR -DHAVE_STRDUP -DHAVE_SETENV \
 		-D__COPYRIGHT\(x\)= -D__RCSID\(x\)= -I. \
 		-DMACHINE=\\\"gentoo\\\" -DMACHINE_ARCH=\\\"$(tc-arch-kernel)\\\" \
+		-D_PATH_DEFSHELLDIR=\\\"${EPREFIX}/bin\\\" \
+		-D_PATH_DEFSYSPATH=\\\"${EPREFIX}/usr/share/mk\\\" \
 		-DHAVE_VSNPRINTF"
 	if [[ "${USERLAND}" == "GNU" ]]; then
-		CFLAGS="${CFLAGS} -D_PATH_DEFSYSPATH=\\\"/usr/share/mk/${PN}\\\""
+		CFLAGS="${CFLAGS} -D_PATH_DEFSYSPATH=\\\"${EPREFIX}/usr/share/mk/${PN}\\\""
 	fi
 
 	emake -f Makefile.boot \
 		CC="$(tc-getCC)" \
-		CFLAGS="${CFLAGS}" \
-		|| die "make failed"
+		CFLAGS="${CFLAGS}"
 }
 
 src_install() {
@@ -68,8 +68,8 @@ src_install() {
 		doins mk/*
 	fi
 
-	newbin bmake pmake || die "newbin failed"
-	dobin mkdep || die "dobin failed"
+	newbin bmake pmake
+	dobin mkdep
 	mv make.1 pmake.1
 	doman mkdep.1 pmake.1
 	dodoc PSD.doc/tutorial.ms

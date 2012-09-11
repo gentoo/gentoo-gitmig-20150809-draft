@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/pmake
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/ChangeLog,v 1.45 2012/06/27 11:46:04 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/ChangeLog,v 1.46 2012/09/11 01:30:35 ottxor Exp $
+
+  11 Sep 2012; Christoph Junghans <ottxor@gentoo.org> pmake-1.111.3.1.ebuild:
+  add prefix support (bug #434530)
 
   27 Jun 2012; Naohiro Aota <naota@gentoo.org> pmake-1.111.3.1.ebuild:
   Add CFLAGS to build on gcc-4.7. #423013
@@ -165,4 +168,3 @@
   
   Initial import, thanks to Spider's work for getting it 100% :).
   
-
