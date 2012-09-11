@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/compiz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.68 2012/08/31 11:42:14 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.69 2012/09/11 09:38:42 pinkbyte Exp $
+
+  11 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> compiz-0.8.8.ebuild,
+  +files/compiz-kde-4.9.patch:
+  Add compatibility patch for KDE 4.9
 
   31 Aug 2012; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
   Remove myself and proxy maintainer from maintainers

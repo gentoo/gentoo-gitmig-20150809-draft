@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.8.8.ebuild,v 1.5 2012/07/31 22:36:58 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.8.8.ebuild,v 1.6 2012/09/11 09:38:42 pinkbyte Exp $
 
 EAPI=4
 inherit autotools eutils gnome2-utils
@@ -76,9 +76,11 @@ src_prepare() {
 	if ! use gnome || ! use gconf; then
 		epatch "${FILESDIR}"/${PN}-no-gconf.patch
 	fi
-	# patch for KDE 4.8. Picked up from stuff overlay
 	if use kde; then
+		# patch for KDE 4.8 compatibility. Picked up from stuff overlay
 		has_version ">=kde-base/kwin-4.8" && epatch "${FILESDIR}"/${PN}-kde-4.8.patch
+		# patch for KDE 4.9 compatibility. Picked up from http://cgit.compiz.org
+		has_version ">=kde-base/kwin-4.9" && epatch "${FILESDIR}"/${PN}-kde-4.9.patch
 	fi
 	eautoreconf
 }
