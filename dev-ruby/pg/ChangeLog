@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/pg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/ChangeLog,v 1.52 2012/08/04 07:15:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/ChangeLog,v 1.53 2012/09/11 00:28:45 blueness Exp $
+
+  11 Sep 2012; Anthony G. Basile <blueness@gentoo.org> pg-0.14.0.ebuild:
+  Stable ppc64, bug #434490
 
 *pg-0.14.0 (04 Aug 2012)
 
