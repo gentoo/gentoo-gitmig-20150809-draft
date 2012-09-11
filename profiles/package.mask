@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14096 2012/09/11 22:38:06 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14097 2012/09/11 23:13:41 johu Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -171,25 +171,6 @@ dev-ruby/mail:0
 # A more recent source build maintained by the community is available in the
 # seden overlay. A more recent binary is available in the java-overlay.
 <=dev-util/eclipse-sdk-3.5.1-r1
-
-# Johannes Huber <johu@gentoo.org> (16 Jul 2012)
-# Tests fails to build, needs >=net-libs/telepathy-glib-0.19.0.
-# Not in tree yet...
->=net-libs/telepathy-qt-0.9.3
-~net-im/kde-telepathy-meta-0.5.0
-~net-im/ktp-accounts-kcm-0.5.0
-~net-im/ktp-approver-0.5.0
-~net-im/ktp-auth-handler-0.5.0
-~net-im/ktp-call-ui-0.5.0
-~net-im/ktp-common-internals-0.5.0
-~net-im/ktp-contact-applet-0.5.0
-~net-im/ktp-contact-list-0.5.0
-~net-im/ktp-contact-runner-0.5.0
-~net-im/ktp-filetransfer-handler-0.5.0
-~net-im/ktp-kded-module-0.5.0
-~net-im/ktp-presence-applet-0.5.0
-~net-im/ktp-send-file-0.5.0
-~net-im/ktp-text-ui-0.5.0
 
 # Ralph Sennhauser <sera@gentoo.org> (13 Jul 2012)
 # Mask for removal in 30 days. Fails to build with java 7 #421917.
