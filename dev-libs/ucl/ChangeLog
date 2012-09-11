@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/ucl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucl/ChangeLog,v 1.40 2012/05/10 16:00:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucl/ChangeLog,v 1.41 2012/09/11 07:30:25 vapier Exp $
+
+  11 Sep 2012; Mike Frysinger <vapier@gentoo.org> +files/ucl-1.03-x32.patch,
+  ucl-1.03-r1.ebuild:
+  Port to the x32 ABI for fun #426334 by devsk.  Add USE=static-libs support.
 
   10 May 2012; Agostino Sarubbo <ago@gentoo.org> -ucl-1.01-r1.ebuild,
   -ucl-1.02.ebuild, -ucl-1.03.ebuild:
