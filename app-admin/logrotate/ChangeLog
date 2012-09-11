@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/logrotate
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.120 2012/09/10 18:06:03 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.121 2012/09/11 15:35:37 johu Exp $
+
+  11 Sep 2012; Johannes Huber <johu@gentoo.org> logrotate-3.8.2.ebuild:
+  Stable for x86, wrt bug #434348
 
   10 Sep 2012; Chema Alonso <nimiux@gentoo.org> logrotate-3.8.2.ebuild:
   Dropped mips and x86-fbsd stable keywords and tune flags wrt bug #434348
