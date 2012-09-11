@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.7.0_rc2.ebuild,v 1.2 2012/06/24 16:41:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.7.0_rc3.ebuild,v 1.1 2012/09/11 22:19:18 flameeyes Exp $
 
 EAPI=4
 
