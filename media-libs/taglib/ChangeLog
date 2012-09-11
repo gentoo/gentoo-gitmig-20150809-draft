@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/taglib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.132 2012/05/26 18:04:57 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.133 2012/09/11 09:54:19 johu Exp $
+
+*taglib-1.8 (11 Sep 2012)
+
+  11 Sep 2012; Johannes Huber <johu@gentoo.org> +taglib-1.8.ebuild:
+  Version bump wrt bug #434694.
 
   26 May 2012; Johannes Huber <johu@gentoo.org> -taglib-1.7.1.ebuild:
   Remove old wrt bug #416143.
@@ -464,4 +469,3 @@
 
   09 Dec 2003; Caleb Tennis <caleb@gentoo.org> metadata.xml, taglib-1.0_beta2.ebuild:
   Initial import
-
