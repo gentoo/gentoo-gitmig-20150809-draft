@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rack-mount
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-mount/ChangeLog,v 1.24 2012/08/13 18:41:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-mount/ChangeLog,v 1.25 2012/09/11 17:53:55 graaff Exp $
+
+  11 Sep 2012; Hans de Graaff <graaff@gentoo.org> -rack-mount-0.7.4.ebuild:
+  Cleanup. Nothing in the tree depends on it and this should probably have been
+  slot 0.8 anyway.
 
   13 Aug 2012; Hans de Graaff <graaff@gentoo.org> rack-mount-0.8.3.ebuild:
   Actually comment out the failing test. Fixes bug 430714.
