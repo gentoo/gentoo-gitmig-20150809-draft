@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.91 2011/12/27 17:55:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.92 2012/09/12 05:57:40 vapier Exp $
 
 # @ECLASS: enlightenment.eclass
 # @MAINTAINER:
@@ -133,6 +133,7 @@ enlightenment_src_unpack() {
 }
 
 enlightenment_src_prepare() {
+	epatch_user
 	[[ -s gendoc ]] && chmod a+rx gendoc
 	if [[ ${WANT_AUTOTOOLS} == "yes" ]] ; then
 		[[ -d po ]] && eautopoint -f
