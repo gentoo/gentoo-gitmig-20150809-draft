@@ -1,6 +1,18 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1089 2012/09/08 23:47:12 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1090 2012/09/12 07:59:43 zmedico Exp $
+
+*portage-2.1.11.15 (12 Sep 2012)
+
+  12 Sep 2012; Zac Medico <zmedico@gentoo.org> +portage-2.1.11.15.ebuild,
+  -portage-2.1.11.13.ebuild:
+  2.1.11.15 version bump. This fixes bug #310789 (fix repoman to handle unicode
+  paths when python things paths should be ascii), bug #332217 (fix timestamp
+  and permissions of WORKDIR after unpack), and bug #434540 (format binary
+  package USE mismatch display for pasting into package.use).This also adds
+  support for EAPI 5_pre2, which supports all features approved in the Gentoo
+  Council meeting on September 11. Bug #431026 tracks all bugs fixed since
+  portage-2.1.11.9.
 
 *portage-2.2.0_alpha125 (08 Sep 2012)
 
