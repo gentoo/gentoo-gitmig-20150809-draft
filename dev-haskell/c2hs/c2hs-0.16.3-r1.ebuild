@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/c2hs-0.16.3-r1.ebuild,v 1.6 2012/08/09 10:15:52 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/c2hs-0.16.3-r1.ebuild,v 1.7 2012/09/12 14:50:40 qnikst Exp $
 
 EAPI="3"
 
@@ -9,7 +9,7 @@ inherit base haskell-cabal
 
 DESCRIPTION="C->Haskell FFI tool that gives some cross-language type safety"
 HOMEPAGE="http://www.cse.unsw.edu.au/~chak/haskell/c2hs/"
-SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
+SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
