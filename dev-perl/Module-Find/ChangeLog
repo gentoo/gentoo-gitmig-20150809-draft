@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Module-Find
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Find/ChangeLog,v 1.15 2012/09/01 11:40:18 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Find/ChangeLog,v 1.16 2012/09/12 08:28:42 ago Exp $
+
+  12 Sep 2012; Agostino Sarubbo <ago@gentoo.org> Module-Find-0.110.0.ebuild:
+  Stable for amd64, wrt bug #428998
 
   01 Sep 2012; Fabian Groffen <grobian@gentoo.org> Module-Find-0.110.0.ebuild:
   Marked ~ppc-aix, bug #432288
