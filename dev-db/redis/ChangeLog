@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/redis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.47 2012/08/03 16:47:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.48 2012/09/12 15:52:37 neurogeek Exp $
+
+  12 Sep 2012; Jesus Rivero <neurogeek@gentoo.org> redis-2.4.4-r1.ebuild,
+  redis-2.4.10.ebuild, redis-2.4.13.ebuild, redis-2.4.14.ebuild,
+  redis-2.4.16.ebuild:
+  Moved tcmalloc and jemalloc to RDEPENDS
 
   03 Aug 2012; Robin H. Johnson <robbat2@gentoo.org> redis-2.4.16.ebuild:
   Missing fix from bug #427170.

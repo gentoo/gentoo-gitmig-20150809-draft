@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/redis-2.4.10.ebuild,v 1.4 2012/06/04 06:52:15 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/redis-2.4.10.ebuild,v 1.5 2012/09/12 15:52:37 neurogeek Exp $
 
 EAPI="4"
 
@@ -15,10 +15,9 @@ KEYWORDS="amd64 x86 ~x86-macos ~x86-solaris"
 IUSE="+jemalloc tcmalloc test"
 SLOT="0"
 
-RDEPEND=""
+RDEPEND="tcmalloc? ( dev-util/google-perftools )
+	jemalloc? ( dev-libs/jemalloc )"
 DEPEND=">=sys-devel/autoconf-2.63
-	tcmalloc? ( dev-util/google-perftools )
-	jemalloc? ( dev-libs/jemalloc )
 	test? ( dev-lang/tcl )
 	${RDEPEND}"
 REQUIRED_USE="tcmalloc? ( !jemalloc )
