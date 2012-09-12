@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/base-unicode-symbols/base-unicode-symbols-0.2.2.3.ebuild,v 1.2 2012/06/02 06:24:48 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/base-unicode-symbols/base-unicode-symbols-0.2.2.3.ebuild,v 1.3 2012/09/12 15:42:10 qnikst Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ inherit haskell-cabal
 
 DESCRIPTION="Unicode alternatives for common functions and operators"
 HOMEPAGE="http://haskell.org/haskellwiki/Unicode-symbols"
-SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
+SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
