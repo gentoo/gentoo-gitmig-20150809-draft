@@ -1,10 +1,12 @@
 # ChangeLog for dev-haskell/dlist
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dlist/ChangeLog,v 1.1 2011/04/23 12:05:06 slyfox Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dlist/ChangeLog,v 1.2 2012/09/12 15:15:48 qnikst Exp $
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> dlist-0.5.ebuild:
+  move dev-haskell/dlist/dlist-0.5.ebuild ebuild to mirror://hackage
 
 *dlist-0.5 (23 Apr 2011)
 
   23 Apr 2011; Sergei Trofimovich <slyfox@gentoo.org> +dlist-0.5.ebuild,
   +metadata.xml:
   Initial version.
-
