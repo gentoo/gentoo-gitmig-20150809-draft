@@ -1,10 +1,12 @@
 # ChangeLog for dev-haskell/wxcore
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxcore/ChangeLog,v 1.1 2010/09/04 13:59:36 kolmodin Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxcore/ChangeLog,v 1.2 2012/09/12 15:57:10 qnikst Exp $
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> wxcore-0.12.1.6.ebuild:
+  move dev-haskell/wxcore/wxcore-0.12.1.6.ebuild ebuild to mirror://hackage
 
 *wxcore-0.12.1.6 (04 Sep 2010)
 
   04 Sep 2010; Lennart Kolmodin <kolmodin@gentoo.org>
   +wxcore-0.12.1.6.ebuild, +metadata.xml:
   Initial import of wxcore, the wrappers to the native wxGTK library.
-
