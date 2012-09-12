@@ -1,6 +1,9 @@
 # ChangeLog for games-simulation/openttd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.127 2012/08/16 19:33:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.128 2012/09/12 02:05:41 mr_bones_ Exp $
+
+  12 Sep 2012; Michael Sterrett <mr_bones_@gentoo.org> openttd-1.2.2.ebuild:
+  restrict the test since it requires a graphics set to run
 
 *openttd-1.2.2 (16 Aug 2012)
 
