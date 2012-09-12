@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/blaze-html/blaze-html-0.5.0.0.ebuild,v 1.1 2012/06/02 03:21:29 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/blaze-html/blaze-html-0.5.0.0.ebuild,v 1.2 2012/09/12 15:44:14 qnikst Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ inherit haskell-cabal
 
 DESCRIPTION="A blazingly fast HTML combinator library for Haskell"
 HOMEPAGE="http://jaspervdj.be/blaze"
-SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
+SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
