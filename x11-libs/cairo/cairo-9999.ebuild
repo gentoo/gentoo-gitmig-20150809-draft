@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-9999.ebuild,v 1.21 2012/07/25 08:44:33 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-9999.ebuild,v 1.22 2012/09/12 05:37:43 mattst88 Exp $
 
 EAPI=4
 
@@ -29,7 +29,7 @@ RDEPEND="media-libs/fontconfig
 	media-libs/freetype:2
 	media-libs/libpng:0
 	sys-libs/zlib
-	>=x11-libs/pixman-0.18.4
+	>=x11-libs/pixman-0.22.0
 	directfb? ( dev-libs/DirectFB )
 	glib? ( >=dev-libs/glib-2.28.6:2 )
 	opengl? ( virtual/opengl )
