@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskeline/haskeline-0.6.4.7.ebuild,v 1.1 2012/05/29 09:45:40 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskeline/haskeline-0.6.4.7.ebuild,v 1.2 2012/09/12 15:45:34 qnikst Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ inherit haskell-cabal
 
 DESCRIPTION="A command-line interface for user input, written in Haskell."
 HOMEPAGE="http://trac.haskell.org/haskeline"
-SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
+SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
