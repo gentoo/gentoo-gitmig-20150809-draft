@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.8.8.ebuild,v 1.6 2012/09/11 09:38:42 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.8.8.ebuild,v 1.7 2012/09/12 18:14:41 pinkbyte Exp $
 
 EAPI=4
 inherit autotools eutils gnome2-utils
@@ -34,7 +34,10 @@ COMMONDEPEND="
 	cairo? (
 		x11-libs/cairo[X]
 	)
-	dbus? ( >=sys-apps/dbus-1.0 )
+	dbus? (
+		>=sys-apps/dbus-1.0
+		dev-libs/dbus-glib
+	)
 	fuse? ( sys-fs/fuse )
 	gnome? (
 		>=gnome-base/gnome-control-center-2.16.1:2
