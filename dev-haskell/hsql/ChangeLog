@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/hsql
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql/ChangeLog,v 1.16 2012/04/15 10:02:17 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql/ChangeLog,v 1.17 2012/09/12 14:55:04 qnikst Exp $
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> hsql-1.8.1.ebuild,
+  hsql-1.8.2.ebuild:
+  move dev-haskell/hsql/hsql-1.8.2.ebuild ebuild to mirror://hackage
 
 *hsql-1.8.2 (15 Apr 2012)
 
@@ -63,4 +67,3 @@
 
   23 Feb 2006; <dcoutts@gentoo.org> +metadata.xml, +hsql-1.7.ebuild:
   Initial import.
-
