@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/logrotate
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.122 2012/09/12 03:09:22 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.123 2012/09/12 03:20:37 blueness Exp $
+
+  12 Sep 2012; Anthony G. Basile <blueness@gentoo.org> logrotate-3.8.2.ebuild:
+  stable arm, bug #434348
 
   12 Sep 2012; Anthony G. Basile <blueness@gentoo.org> logrotate-3.8.2.ebuild:
   stable ppc ppc64, bug #434348
