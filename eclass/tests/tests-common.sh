@@ -1,6 +1,9 @@
 #!/bin/bash
 
-source /etc/init.d/functions.sh
+if ! source /etc/init.d/functions.sh ; then
+	echo "Missing functions.sh.  Please to install!" 1>&2
+	exit 1
+fi
 
 inherit() {
 	local e
