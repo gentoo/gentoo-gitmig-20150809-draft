@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/gio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gio/ChangeLog,v 1.6 2012/08/16 15:52:01 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gio/ChangeLog,v 1.7 2012/09/12 14:39:19 qnikst Exp $
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> gio-0.12.0.ebuild,
+  gio-0.12.3.ebuild:
+  move dev-haskell/gio/gio-0.12.0.ebuild ebuild to mirror://hackage
 
   16 Aug 2012; Andreas Schuerch <nativemad@gentoo.org> gio-0.12.3.ebuild:
   x86 stable, see bug 422019
@@ -25,4 +29,3 @@
   09 May 2011; Sergei Trofimovich <slyfox@gentoo.org> +gio-0.12.0.ebuild,
   +metadata.xml:
   Initial version. Haskell bindings for GIO subsystem of dev-libs/glib.
-
