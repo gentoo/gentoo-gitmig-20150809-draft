@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/crypto/crypto-4.2.5.ebuild,v 1.1 2012/06/02 06:34:53 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/crypto/crypto-4.2.5.ebuild,v 1.2 2012/09/12 15:42:29 qnikst Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Collects together existing Haskell cryptographic functions into a package"
 HOMEPAGE="http://hackage.haskell.org/package/Crypto"
-SRC_URI="http://hackage.haskell.org/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.gz"
+SRC_URI="mirror://hackage/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.gz"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
