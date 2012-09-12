@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/test-framework/test-framework-0.2.4.ebuild,v 1.9 2011/02/25 13:13:56 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/test-framework/test-framework-0.2.4.ebuild,v 1.10 2012/09/12 15:31:31 qnikst Exp $
 
 CABAL_FEATURES="bin lib profile haddock"
 inherit base haskell-cabal
 
 DESCRIPTION="Framework for running and organising tests, with HUnit and QuickCheck support"
 HOMEPAGE="http://batterseapower.github.com/test-framework/"
-SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
+SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
