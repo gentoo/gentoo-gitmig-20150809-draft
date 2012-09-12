@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/mmap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mmap/ChangeLog,v 1.20 2012/04/14 09:07:38 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mmap/ChangeLog,v 1.21 2012/09/12 14:58:13 qnikst Exp $
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> mmap-0.4.1.ebuild,
+  mmap-0.5.7.ebuild:
+  move dev-haskell/mmap/mmap-0.4.1.ebuild ebuild to mirror://hackage
 
   14 Apr 2012; Mark Wright <gienah@gentoo.org> metadata.xml, mmap-0.5.7.ebuild:
   EAPI=4, add hoogle to CABAL_FEATURES
@@ -67,4 +71,3 @@
   Initial import, needed by hashed-storage.
   It's not the latest version of mmap, but it's the most recent version
   hashed-storage supports.
-
