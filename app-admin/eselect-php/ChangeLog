@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-php
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-php/ChangeLog,v 1.37 2012/07/11 00:36:28 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-php/ChangeLog,v 1.38 2012/09/12 03:04:01 ottxor Exp $
+
+  12 Sep 2012; Christoph Junghans <ottxor@gentoo.org> eselect-php-0.6.7.ebuild:
+  added prefix keywords
 
   11 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
   eselect-php-0.6.7.ebuild:
