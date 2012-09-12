@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/timezone-olson
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/timezone-olson/ChangeLog,v 1.1 2012/04/13 20:30:05 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/timezone-olson/ChangeLog,v 1.2 2012/09/12 15:11:00 qnikst Exp $
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org>
+  timezone-olson-0.1.2.ebuild:
+  move dev-haskell/timezone-olson/timezone-olson-0.1.2.ebuild ebuild to
+  mirror://hackage
 
 *timezone-olson-0.1.2 (13 Apr 2012)
 
@@ -8,4 +13,3 @@
   +timezone-olson-0.1.2.ebuild:
   Initial version. A pure Haskell parser and renderer for binary Olson timezone
   files. Depend for x11-misc/xmobar-0.14
-
