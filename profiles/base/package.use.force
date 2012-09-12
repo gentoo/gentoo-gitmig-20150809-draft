@@ -1,6 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.force,v 1.22 2012/07/22 13:14:05 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.force,v 1.23 2012/09/12 01:08:49 pesa Exp $
+
+# Davide Pesavento <pesa@gentoo.org> (12 Sep 2012)
+# qt-creator-2.6.x uses botan-1.10.2, which isn't packaged yet,
+# thus force the usage of bundled copy for now.
+>=dev-util/qt-creator-2.6 botan-bundled
 
 # Samuli Suominen <ssuominen@gentoo.org> (23 Jan 2012)
 # Forcing enabled while waiting for eselect-notify-send wrt #379941

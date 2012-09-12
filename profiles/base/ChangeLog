@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.430 2012/09/10 09:39:49 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.431 2012/09/12 01:08:49 pesa Exp $
+
+  12 Sep 2012; Davide Pesavento <pesa@gentoo.org> package.use.force:
+  Force usage of bundled botan in >=qt-creator-2.6
 
   10 Sep 2012; Johannes Huber <johu@gentoo.org> package.use.mask:
   Restore mask net-libs/telepathy-qt[farstream] otherwise repoman will scream.
