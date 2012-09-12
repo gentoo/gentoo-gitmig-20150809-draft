@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alut/alut-2.2.0.0.ebuild,v 1.2 2012/06/02 11:08:46 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alut/alut-2.2.0.0.ebuild,v 1.3 2012/09/12 14:51:57 qnikst Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="A binding for the OpenAL Utility Toolkit"
 HOMEPAGE="http://connect.creativelabs.com/openal/"
-SRC_URI="http://hackage.haskell.org/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.gz"
+SRC_URI="mirror://hackage/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
