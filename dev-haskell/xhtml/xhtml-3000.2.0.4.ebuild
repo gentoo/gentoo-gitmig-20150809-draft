@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xhtml/xhtml-3000.2.0.4.ebuild,v 1.1 2012/01/23 12:14:57 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xhtml/xhtml-3000.2.0.4.ebuild,v 1.2 2012/09/12 15:26:23 qnikst Exp $
 
 EAPI="3"
 
@@ -10,7 +10,7 @@ inherit haskell-cabal
 
 DESCRIPTION="An XHTML combinator library"
 HOMEPAGE="https://github.com/haskell/xhtml"
-SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
+SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

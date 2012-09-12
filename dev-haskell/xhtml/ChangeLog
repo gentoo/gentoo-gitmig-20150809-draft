@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/xhtml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xhtml/ChangeLog,v 1.24 2012/06/02 03:33:21 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xhtml/ChangeLog,v 1.25 2012/09/12 15:26:23 qnikst Exp $
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> xhtml-3000.0.2.1.ebuild,
+  xhtml-3000.2.0.1.ebuild, xhtml-3000.2.0.4.ebuild, xhtml-3000.2.0.5.ebuild,
+  xhtml-3000.2.1.ebuild:
+  move dev-haskell/xhtml/xhtml-3000.2.0.4.ebuild ebuild to mirror://hackage
 
 *xhtml-3000.2.1 (02 Jun 2012)
 
@@ -94,4 +99,3 @@
   17 Mar 2007; Lennart Kolmodin <kolmodin@gentoo.org> +metadata.xml,
   +xhtml-2006.9.13.ebuild:
   Add modular lib to ghc 6.6. See bug 151012
-
