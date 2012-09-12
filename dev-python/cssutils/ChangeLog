@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cssutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cssutils/ChangeLog,v 1.25 2012/09/07 12:54:58 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cssutils/ChangeLog,v 1.26 2012/09/12 23:10:41 floppym Exp $
+
+  12 Sep 2012; Mike Gilbert <floppym@gentoo.org> cssutils-0.9.10_beta1.ebuild:
+  Remove obsolete sed. Thanks Arfrever.
 
  05 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> cssutils-0.9.9.ebuild,
  -cssutils-0.9.7.ebuild:
@@ -134,4 +137,3 @@
   10 Feb 2009; Thomas Raschbacher <lordvan@gentoo.org>
   +cssutils-0.9.5.1.ebuild, +cssutils-0.9.6_alpha1.ebuild:
   initial version
-

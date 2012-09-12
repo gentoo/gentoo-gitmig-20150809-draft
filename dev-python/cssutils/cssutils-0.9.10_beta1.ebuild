@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cssutils/cssutils-0.9.10_beta1.ebuild,v 1.1 2012/09/07 12:54:58 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cssutils/cssutils-0.9.10_beta1.ebuild,v 1.2 2012/09/12 23:10:41 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -38,9 +38,6 @@ src_prepare() {
 	if has_version dev-python/pyxml; then
 		sed -e "s/test_linecol/_&/" -i src/tests/test_errorhandler.py
 	fi
-
-	# https://bitbucket.org/cthedot/cssutils/issue/8/test-failure
-	sed -e "s/test_cssText2/_&/" -i src/tests/test_cssvariablesdeclaration.py
 }
 
 src_install() {
