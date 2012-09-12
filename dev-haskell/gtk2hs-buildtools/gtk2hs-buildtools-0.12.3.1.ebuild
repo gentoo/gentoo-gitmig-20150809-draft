@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs-buildtools/gtk2hs-buildtools-0.12.3.1.ebuild,v 1.1 2012/05/29 10:31:04 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs-buildtools/gtk2hs-buildtools-0.12.3.1.ebuild,v 1.2 2012/09/12 15:58:41 qnikst Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ inherit base haskell-cabal
 
 DESCRIPTION="Tools to build the Gtk2Hs suite of User Interface libraries."
 HOMEPAGE="http://projects.haskell.org/gtk2hs/"
-SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
+SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
