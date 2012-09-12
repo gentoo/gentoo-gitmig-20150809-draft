@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-cacher-ng/apt-cacher-ng-0.7.7-r1.ebuild,v 1.1 2012/08/20 00:32:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-cacher-ng/apt-cacher-ng-0.7.7-r1.ebuild,v 1.2 2012/09/12 02:10:12 jer Exp $
 
 EAPI="4"
 
@@ -8,7 +8,7 @@ inherit cmake-utils user
 
 DESCRIPTION="Yet another implementation of an HTTP proxy for Debian/Ubuntu software packages written in C++"
 HOMEPAGE="http://www.unix-ag.uni-kl.de/~bloch/acng/"
-LICENSE="as-is"
+LICENSE="as-is GPL-2"
 SLOT="0"
 SRC_URI="mirror://debian/pool/main/a/${PN}/${PN}_${PV}.orig.tar.xz"
 

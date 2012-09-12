@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/apt-cacher-ng
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-cacher-ng/ChangeLog,v 1.16 2012/08/20 00:52:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-cacher-ng/ChangeLog,v 1.17 2012/09/12 02:10:12 jer Exp $
+
+  12 Sep 2012; Jeroen Roovers <jer@gentoo.org> apt-cacher-ng-0.7.7-r1.ebuild:
+  Add GPL-2 to LICENSE for init.d script by Ian Stakenvicius (bug #426050).
 
   20 Aug 2012; Jeroen Roovers <jer@gentoo.org> -apt-cacher-ng-0.7.6.ebuild:
   Old.
