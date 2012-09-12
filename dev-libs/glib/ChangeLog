@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.531 2012/09/11 18:03:21 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.532 2012/09/12 04:53:41 tetromino Exp $
+
+  12 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org> glib-2.32.4.ebuild:
+  Add AS_IF patches from 2.33.x to fix cross-compiling; bug #434770, thanks to
+  Mike Frysinger.
 
   11 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org> glib-2.30.2.ebuild,
   glib-2.30.3.ebuild, glib-2.32.3.ebuild, glib-2.32.4.ebuild:
