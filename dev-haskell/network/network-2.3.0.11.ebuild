@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/network/network-2.3.0.11.ebuild,v 1.2 2012/04/14 01:51:41 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/network/network-2.3.0.11.ebuild,v 1.3 2012/09/12 15:47:25 qnikst Exp $
 
 EAPI="4"
 
@@ -9,7 +9,7 @@ inherit base haskell-cabal autotools
 
 DESCRIPTION="Low-level networking interface"
 HOMEPAGE="http://github.com/haskell/network"
-SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
+SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

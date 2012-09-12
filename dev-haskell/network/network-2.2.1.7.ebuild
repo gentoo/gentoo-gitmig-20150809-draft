@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/network/network-2.2.1.7.ebuild,v 1.7 2011/02/25 12:56:30 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/network/network-2.2.1.7.ebuild,v 1.8 2012/09/12 15:47:25 qnikst Exp $
 
 CABAL_FEATURES="lib profile haddock"
 inherit base haskell-cabal autotools
 
 DESCRIPTION="Networking-related facilities"
 HOMEPAGE="http://hackage.haskell.org/cgi-bin/hackage-scripts/package/network"
-SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
+SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
