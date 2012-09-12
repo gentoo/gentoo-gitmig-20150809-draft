@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/edit-distance/edit-distance-0.2.1.ebuild,v 1.1 2012/06/03 02:58:22 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/edit-distance/edit-distance-0.2.1.ebuild,v 1.2 2012/09/12 15:50:27 qnikst Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit haskell-cabal
 
 DESCRIPTION="Levenshtein and restricted Damerau-Levenshtein edit distances"
 HOMEPAGE="http://github.com/batterseapower/edit-distance"
-SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
+SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

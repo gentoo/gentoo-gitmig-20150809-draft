@@ -1,10 +1,14 @@
 # ChangeLog for dev-haskell/edit-distance
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/edit-distance/ChangeLog,v 1.1 2012/06/03 02:58:22 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/edit-distance/ChangeLog,v 1.2 2012/09/12 15:50:27 qnikst Exp $
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org>
+  edit-distance-0.2.1.ebuild:
+  move dev-haskell/edit-distance/edit-distance-0.2.1.ebuild ebuild to
+  mirror://hackage
 
 *edit-distance-0.2.1 (03 Jun 2012)
 
   03 Jun 2012; Mark Wright <gienah@gentoo.org> +edit-distance-0.2.1.ebuild,
   +metadata.xml:
   Add edit-distance
-
