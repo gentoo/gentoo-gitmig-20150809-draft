@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/cabal-install
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal-install/ChangeLog,v 1.12 2012/04/17 21:16:52 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal-install/ChangeLog,v 1.13 2012/09/12 15:54:00 qnikst Exp $
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org>
+  cabal-install-0.10.2-r2.ebuild, cabal-install-0.14.0.ebuild:
+  move dev-haskell/cabal-install/cabal-install-0.14.0.ebuild ebuild to
+  mirror://hackage
 
 *cabal-install-0.14.0 (17 Apr 2012)
 
@@ -65,4 +70,3 @@
 
   19 Apr 2009; Lennart Kolmodin <kolmodin@gentoo.org> ChangeLog:
   Initial version.
-
