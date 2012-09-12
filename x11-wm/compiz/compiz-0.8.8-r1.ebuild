@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.8.8-r1.ebuild,v 1.1 2012/09/12 18:34:56 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.8.8-r1.ebuild,v 1.2 2012/09/12 19:27:22 pinkbyte Exp $
 
 EAPI=4
-inherit autotools eutils gnome2-utils
+inherit autotools eutils gnome2-utils toolchain-funcs
 
 DESCRIPTION="OpenGL window and compositing manager"
 HOMEPAGE="http://www.compiz.org/"
@@ -77,6 +77,9 @@ RDEPEND="${COMMONDEPEND}
 src_prepare() {
 	echo gtk/gnome/compiz-wm.desktop.in >> po/POTFILES.skip
 	echo metadata/core.xml.in >> po/POTFILES.skip
+
+	# Patch for compatibility with gcc 4.7 or higher
+	[[ $(gcc-major-version) -eq 4 && $(gcc-minor-version) -ge 7 ]] && epatch "${FILESDIR}"/${PN}-gcc-4.7.patch
 
 	if ! use gnome || ! use gconf; then
 		epatch "${FILESDIR}"/${PN}-no-gconf.patch
