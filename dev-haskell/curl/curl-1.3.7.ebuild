@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/curl/curl-1.3.7.ebuild,v 1.4 2012/06/02 01:48:58 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/curl/curl-1.3.7.ebuild,v 1.5 2012/09/12 14:52:41 qnikst Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit haskell-cabal
 
 DESCRIPTION="Haskell binding to libcurl"
 HOMEPAGE="http://hackage.haskell.org/package/curl"
-SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
+SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
