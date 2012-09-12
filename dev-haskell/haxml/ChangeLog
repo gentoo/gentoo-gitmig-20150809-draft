@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/haxml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/ChangeLog,v 1.31 2012/06/18 14:25:39 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/ChangeLog,v 1.32 2012/09/12 15:20:42 qnikst Exp $
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> haxml-1.13.3.ebuild,
+  haxml-1.23.2.ebuild, haxml-1.23.ebuild:
+  move dev-haskell/haxml/haxml-1.23.2.ebuild ebuild to mirror://hackage
 
 *haxml-1.23.2 (18 Jun 2012)
 
@@ -124,4 +128,3 @@
   +files/HaXml-1.12.cabal, +haxml-1.12.ebuild:
   Initial import. Thanks to Lennart Kolmodin <kolmodin@dtek.chalmers.se> for
   submitting a first version (bug #83189).
-

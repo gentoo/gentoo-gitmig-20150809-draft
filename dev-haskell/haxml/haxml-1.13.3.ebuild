@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/haxml-1.13.3.ebuild,v 1.2 2010/07/24 19:00:05 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/haxml-1.13.3.ebuild,v 1.3 2012/09/12 15:20:42 qnikst Exp $
 
 CABAL_FEATURES="lib bin profile haddock"
 inherit haskell-cabal versionator
@@ -10,7 +10,7 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Utilities for manipulating XML documents"
 HOMEPAGE="http://www.cs.york.ac.uk/fp/HaXml/"
-SRC_URI="http://hackage.haskell.org/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.gz"
+SRC_URI="mirror://hackage/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
