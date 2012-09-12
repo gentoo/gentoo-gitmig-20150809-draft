@@ -10,9 +10,8 @@
  KWD::Window::Window (WId  parentId,
  		     WId  clientId,
  		     WId  frame,
-
---- configure.ac.orig	2012-09-12 23:13:18.741046000 +0400
-+++ configure.ac	2012-09-12 23:13:29.067999000 +0400
+--- configure.ac.orig	2012-09-12 23:39:54.093812000 +0400
++++ configure.ac	2012-09-12 23:40:37.253686000 +0400
 @@ -72,11 +72,6 @@
    *) CFLAGS="$CFLAGS -Wnested-externs" ;;
    esac
@@ -25,3 +24,15 @@
    if test "x$enable_ansi" = "xyes"; then
      case " $CFLAGS " in
      *[[\ \	]]-ansi[[\ \	]]*) ;;
+@@ -95,11 +90,6 @@
+   *[[\ \	]]-Wall[[\ \	]]*) ;;
+   *) CXXFLAGS="$CXXFLAGS -Wall" ;;
+   esac
+-
+-  case " $CXXFLAGS " in
+-  *[[\ \	]]-D_FORTIFY_SOURCE=2[[\ \	]]*) ;;
+-  *) CXXFLAGS="$CXXFLAGS -D_FORTIFY_SOURCE=2" ;;
+-  esac
+ fi
+ 
+ AC_C_BIGENDIAN
