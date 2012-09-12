@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hpc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hpc/ChangeLog,v 1.4 2012/03/20 15:54:52 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hpc/ChangeLog,v 1.5 2012/09/12 14:40:16 qnikst Exp $
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> hpc-0.5.1.1.ebuild:
+  move dev-haskell/hpc/hpc-0.5.1.1.ebuild ebuild to mirror://hackage
 
   20 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org> hpc-0.5.1.1.ebuild:
   Fix build breakage on <ghc-7.4.
@@ -10,4 +13,3 @@
   04 Mar 2012; Mark Wright <gienah@gentoo.org> +hpc-0.5.1.1.ebuild,
   +metadata.xml:
   Add hpc for ghc 7.4.1
-
