@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/data-binary-ieee754/data-binary-ieee754-0.4.2.1.ebuild,v 1.1 2012/01/12 16:35:53 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/data-binary-ieee754/data-binary-ieee754-0.4.2.1.ebuild,v 1.2 2012/09/12 15:55:49 qnikst Exp $
 
 EAPI="3"
 
@@ -9,7 +9,7 @@ inherit haskell-cabal
 
 DESCRIPTION="Parser/Serialiser for IEEE-754 floating-point values"
 HOMEPAGE="http://john-millikin.com/software/data-binary-ieee754/"
-SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
+SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
