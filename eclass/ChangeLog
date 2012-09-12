@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.393 2012/09/11 16:40:05 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.394 2012/09/12 20:22:39 tetromino Exp $
+
+  12 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org> +vala.eclass:
+  New eclass.
 
   11 Sep 2012; Tim Harder <radhermit@gentoo.org> vim.eclass:
   Allow vim to be built against ruby-1.9.
