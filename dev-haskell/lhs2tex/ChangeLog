@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/lhs2tex
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lhs2tex/ChangeLog,v 1.29 2011/08/02 19:03:59 slyfox Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lhs2tex/ChangeLog,v 1.30 2012/09/12 15:31:45 qnikst Exp $
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> lhs2tex-1.17.ebuild:
+  move dev-haskell/lhs2tex/lhs2tex-1.17.ebuild ebuild to mirror://hackage
 
   02 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org> -lhs2tex-1.16.ebuild:
   Removed old.
@@ -101,4 +104,3 @@
   20 Mar 2004; Andres Loeh <kosmikus@gentoo.org> lhs2tex-1.9.ebuild,
   metadata.xml:
   Initial import. Package has been requested in bug #45010.
-
