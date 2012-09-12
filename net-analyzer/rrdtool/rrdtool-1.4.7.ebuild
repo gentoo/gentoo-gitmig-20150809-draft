@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.7.ebuild,v 1.4 2012/09/06 16:25:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.7.ebuild,v 1.5 2012/09/12 20:14:48 pinkbyte Exp $
 
 EAPI="4"
 
@@ -66,10 +66,10 @@ src_configure() {
 	# Stub configure.ac
 	local myconf=()
 	if ! use tcpd; then
-		myconf+="--disable-libwrap"
+		myconf+=( "--disable-libwrap" )
 	fi
 	if ! use dbi; then
-		myconf+="--disable-libdbi"
+		myconf+=("--disable-libdbi" )
 	fi
 
 	econf \
