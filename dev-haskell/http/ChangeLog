@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/http
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http/ChangeLog,v 1.22 2012/09/07 23:41:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http/ChangeLog,v 1.23 2012/09/12 14:56:57 qnikst Exp $
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> http-4000.1.1.ebuild,
+  http-4000.1.2.ebuild, http-4000.2.2.ebuild, http-4000.2.3.ebuild:
+  move dev-haskell/http/http-4000.2.2.ebuild ebuild to mirror://hackage
 
   07 Sep 2012; Agostino Sarubbo <ago@gentoo.org> http-4000.2.3.ebuild:
   Stable for amd64, wrt bug #421351
@@ -96,4 +100,3 @@
 
   06 Jul 2006; <kolmodin@gentoo.org> +metadata.xml, +http-2006.7.5.ebuild:
   Initial import.
-
