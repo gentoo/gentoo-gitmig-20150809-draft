@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/elogv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/ChangeLog,v 1.69 2012/02/20 22:22:05 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/ChangeLog,v 1.70 2012/09/12 07:17:48 grobian Exp $
+
+  12 Sep 2012; Fabian Groffen <grobian@gentoo.org> elogv-0.7.5-r1.ebuild:
+  Marked ~ppc-macos, bug #434762
 
 *elogv-0.7.5-r1 (20 Feb 2012)
 
@@ -291,4 +294,3 @@
   +elogv-0.4.1.ebuild:
   initial commit of a viewer for Portage's ELOG capabilities, thanks to Luca
   Marturana <lucamarturana@gmail.com> in bug 150733
-

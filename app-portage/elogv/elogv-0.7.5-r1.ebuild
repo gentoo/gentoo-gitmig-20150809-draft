@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/elogv-0.7.5-r1.ebuild,v 1.1 2012/02/20 22:22:05 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/elogv-0.7.5-r1.ebuild,v 1.2 2012/09/12 07:17:48 grobian Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/gechi-overlay/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ppc ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="~alpha ~amd64 ~arm ~ppc ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="linguas_de linguas_es linguas_it linguas_pl"
 
 DEPEND=""
