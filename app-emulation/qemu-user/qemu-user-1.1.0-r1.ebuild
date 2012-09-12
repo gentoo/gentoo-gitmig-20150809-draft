@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/qemu-user-1.1.0-r1.ebuild,v 1.2 2012/06/25 20:25:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/qemu-user-1.1.0-r1.ebuild,v 1.3 2012/09/12 19:14:11 lu_zero Exp $
 
 EAPI=4
 
@@ -10,7 +10,9 @@ if [[ ${PV} == *9999 ]]; then
 	GIT_ECLASS="git-2"
 fi
 
-inherit eutils base flag-o-matic pax-utils toolchain-funcs ${GIT_ECLASS}
+PYTHON_DEPEND=2
+
+inherit eutils base flag-o-matic pax-utils toolchain-funcs python ${GIT_ECLASS}
 
 MY_P=${P/-user/}
 
@@ -72,6 +74,10 @@ QA_WX_LOAD="
 	usr/bin/qemu-static-mipsn32-binfmt
 "
 
+pkg_setup() {
+	python_set_active_version 2
+}
+
 src_prepare() {
 	cd "${S}"
 	# prevent docs to get automatically installed
@@ -101,7 +107,7 @@ src_configure() {
 	conf_opts+=" --disable-curses"
 	conf_opts+=" --disable-sdl"
 	conf_opts+=" --disable-vde"
-	conf_opts+=" --prefix=/usr --disable-bluez --disable-kvm"
+	conf_opts+=" --prefix=/usr --sysconfdir=/etc --disable-bluez --disable-kvm"
 	conf_opts+=" --cc=$(tc-getCC) --host-cc=$(tc-getBUILD_CC)"
 	conf_opts+=" --disable-smartcard --disable-smartcard-nss"
 	conf_opts+=" --extra-ldflags=-Wl,-z,execheap"
@@ -126,7 +132,7 @@ src_install() {
 	done
 
 	pax-mark r "${ED}"/usr/bin/qemu-static-*
-	rm -fr "${ED}/usr/share"
+	rm -fr "${ED}/usr/share" "${ED}/usr/libexec" "${ED}/etc"
 	dohtml qemu-doc.html
 	dohtml qemu-tech.html
 	newinitd "${FILESDIR}/qemu-binfmt.initd" qemu-binfmt
