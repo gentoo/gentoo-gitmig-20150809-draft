@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/readline/readline-1.0.1.0.ebuild,v 1.1 2010/07/24 13:59:26 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/readline/readline-1.0.1.0.ebuild,v 1.2 2012/09/12 16:00:58 qnikst Exp $
 
 CABAL_FEATURES="haddock lib profile"
 inherit haskell-cabal
 
 DESCRIPTION="Haskell interface to the GNU readline library"
 HOMEPAGE="http://hackage.haskell.org/cgi-bin/hackage-scripts/package/readline"
-SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
+SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 
