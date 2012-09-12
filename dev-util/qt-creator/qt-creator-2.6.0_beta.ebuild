@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.6.0_beta.ebuild,v 1.1 2012/09/12 01:15:05 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.6.0_beta.ebuild,v 1.2 2012/09/12 01:34:07 pesa Exp $
 
 EAPI=4
 
-LANGS="cs de fr ja pl ru sl zh_CN"
+PLOCALES="cs de fr hu ja pl ru sl zh_CN"
 
-inherit eutils flag-o-matic multilib qt4-r2
+inherit eutils flag-o-matic l10n multilib qt4-r2
 
 DESCRIPTION="Lightweight IDE for C++ development centering around Qt"
 HOMEPAGE="http://qt-project.org/wiki/Category:Tools::QtCreator"
@@ -76,7 +76,7 @@ src_prepare() {
 	done
 
 	# fix translations
-	sed -i -e "/^LANGUAGES/s:=.*:= ${LANGS}:" \
+	sed -i -e "/^LANGUAGES =/ s:=.*:= $(l10n_get_locales):" \
 		share/qtcreator/translations/translations.pro || die
 
 	if ! use botan-bundled; then
@@ -128,13 +128,4 @@ src_install() {
 	# Install icon & desktop file
 	doicon src/plugins/coreplugin/images/logo/256/qtcreator.png
 	make_desktop_entry qtcreator 'Qt Creator' qtcreator 'Qt;Development;IDE'
-
-	# Remove unneeded translations
-	local lang
-	for lang in ${LANGS}; do
-		if ! has ${lang} ${LINGUAS}; then
-			rm "${ED}"usr/share/qtcreator/translations/qtcreator_${lang}.qm \
-				|| eqawarn "Failed to remove ${lang} translation"
-		fi
-	done
 }
