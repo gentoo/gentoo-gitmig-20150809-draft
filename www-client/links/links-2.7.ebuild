@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.7.ebuild,v 1.7 2012/09/10 11:52:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.7.ebuild,v 1.8 2012/09/12 09:14:54 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils fdo-mime
@@ -8,7 +8,7 @@ inherit autotools eutils fdo-mime
 DESCRIPTION="A fast and lightweight web browser running in both graphics and text mode"
 HOMEPAGE="http://links.twibright.com/"
 SRC_URI="http://${PN}.twibright.com/download/${P}.tar.bz2
-	mirror://debian/pool/main/${PN:0:1}/${PN}2/${PN}2_2.6-2.debian.tar.gz"
+	mirror://debian/pool/main/${PN:0:1}/${PN}2/${PN}2_2.7-1.debian.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2"
