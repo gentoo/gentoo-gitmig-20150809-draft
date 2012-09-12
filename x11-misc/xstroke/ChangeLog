@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xstroke
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xstroke/ChangeLog,v 1.29 2012/05/05 04:53:52 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xstroke/ChangeLog,v 1.30 2012/09/12 01:51:34 jer Exp $
+
+  12 Sep 2012; Jeroen Roovers <jer@gentoo.org> xstroke-0.6-r1.ebuild,
+  +files/xstroke-0.6-underlinking.patch:
+  Fix underlinking, missing depencies by Michael Palimaka (kensington) (bug
+  #370011).
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> xstroke-0.6-r1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
