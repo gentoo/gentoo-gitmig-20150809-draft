@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/text
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/text/ChangeLog,v 1.13 2012/09/07 23:47:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/text/ChangeLog,v 1.14 2012/09/12 15:01:15 qnikst Exp $
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> text-0.11.1.1.ebuild,
+  text-0.11.1.12.ebuild, text-0.11.1.13-r1.ebuild, text-0.11.2.0.ebuild,
+  text-0.11.2.1.ebuild, text-0.11.2.2.ebuild:
+  move dev-haskell/text/text-0.11.1.1.ebuild ebuild to mirror://hackage
 
   07 Sep 2012; Agostino Sarubbo <ago@gentoo.org> text-0.11.2.2.ebuild:
   Stable for amd64, wrt bug #421351
@@ -57,4 +62,3 @@
   +metadata.xml:
   Initial version. New package: library for efficient packed Unicode text type
   string representation.
-
