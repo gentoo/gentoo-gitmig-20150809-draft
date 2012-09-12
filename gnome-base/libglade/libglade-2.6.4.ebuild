@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-2.6.4.ebuild,v 1.15 2012/05/12 20:19:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-2.6.4.ebuild,v 1.16 2012/09/12 06:13:33 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ HOMEPAGE="http://library.gnome.org/devel/libglade/stable/"
 
 LICENSE="LGPL-2"
 SLOT="2.0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="doc static-libs test"
 
 RDEPEND=">=dev-libs/glib-2.10:2
@@ -42,6 +42,9 @@ src_prepare() {
 	# Fails with gold due to recent changes in glib-2.32's pkg-config files
 	epatch "${FILESDIR}/${P}-gold-glib-2.32.patch"
 
+	# Needed for solaris, else gcc finds a syntax error in /usr/include/signal.h
+	epatch "${FILESDIR}/${P}-enable-extensions.patch"
+
 	sed -i -e 's:-D[A-Z_]*DISABLE_DEPRECATED:$(NULL):g' \
 		glade/Makefile.am glade/Makefile.in || die
 
@@ -65,15 +68,15 @@ src_install() {
 
 pkg_postinst() {
 	echo ">>> Updating XML catalog"
-	/usr/bin/xmlcatalog --noout --add "system" \
+	"${EPREFIX}"/usr/bin/xmlcatalog --noout --add "system" \
 		"http://glade.gnome.org/glade-2.0.dtd" \
-		/usr/share/xml/libglade/glade-2.0.dtd /etc/xml/catalog
+		"${EPREFIX}"/usr/share/xml/libglade/glade-2.0.dtd /etc/xml/catalog
 	gnome2_pkg_postinst
 }
 
 pkg_postrm() {
 	gnome2_pkg_postrm
 	echo ">>> removing entries from the XML catalog"
-	/usr/bin/xmlcatalog --noout --del \
-		/usr/share/xml/libglade/glade-2.0.dtd /etc/xml/catalog
+	"${EPREFIX}"/usr/bin/xmlcatalog --noout --del \
+		"${EPREFIX}"/usr/share/xml/libglade/glade-2.0.dtd /etc/xml/catalog
 }
