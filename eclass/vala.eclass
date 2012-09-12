@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vala.eclass,v 1.2 2012/09/12 20:43:08 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vala.eclass,v 1.3 2012/09/12 20:47:27 tetromino Exp $
 
 # @ECLASS: vala.eclass
 # @MAINTAINER:
@@ -99,7 +99,7 @@ vala_src_prepare() {
 	export VALAC=$(type -P valac-${version})
 
 	valafoo=$(type -P vala-gen-introspect-${version})
-	[[ ${valafoo} ]] && export VALA_GEN_INTROSPECT=$(type -P vala-gen-introspect-${version})
+	[[ ${valafoo} ]] && export VALA_GEN_INTROSPECT="${valafoo}"
 
 	valafoo=$(type -P vapigen-${version})
 	[[ ${valafoo} ]] && export VAPIGEN="${valafoo}"

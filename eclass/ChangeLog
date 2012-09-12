@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.395 2012/09/12 20:43:08 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.396 2012/09/12 20:47:27 tetromino Exp $
+
+  12 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org> vala.eclass:
+  Small stylistic fix.
 
   12 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org> vala.eclass:
   Typo: s/VALA_API_VERSION/version/
