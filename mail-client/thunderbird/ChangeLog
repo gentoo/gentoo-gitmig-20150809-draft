@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.166 2012/09/08 12:33:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.167 2012/09/12 22:57:55 anarchy Exp $
+
+*thunderbird-15.0.1 (12 Sep 2012)
+
+  12 Sep 2012; <anarchy@gentoo.org> -thunderbird-14.0.ebuild,
+  -thunderbird-15.0.ebuild, +thunderbird-15.0.1.ebuild:
+  Bumped thunderbird-15.0 to thunderbird-15.0.1. As it's a privacy relevant bug
+  fix
 
   08 Sep 2012; Agostino Sarubbo <ago@gentoo.org> thunderbird-10.0.7.ebuild:
   Stable for amd64, wrt bug #433383

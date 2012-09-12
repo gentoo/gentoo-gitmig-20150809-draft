@@ -1,15 +1,16 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-14.0.ebuild,v 1.3 2012/08/14 02:25:10 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-15.0.1.ebuild,v 1.1 2012/09/12 22:57:55 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
 MOZ_ESR=""
 
 # This list can be updated using scripts/get_langs.sh from the mozilla overlay
-MOZ_LANGS=(ar ast be bg bn-BD br ca cs da de el en en-GB en-US es-AR es-ES et
-eu fi fr fy-NL ga-IE gd gl he hr hu hy-AM id is it ja ko lt nb-NO nl nn-NO pa-IN
-pl pt-BR pt-PT rm ro ru si sk sl sq sr sv-SE ta-LK tr uk vi zh-CN zh-TW )
+MOZ_LANGS=(ar ast be bg bn-BD br ca cs da de el en en-GB en-US es-AR
+es-ES et eu fi fr fy-NL ga-IE gd gl he hr hu hy-AM id is it ja ko lt nb-NO
+nl nn-NO pa-IN pl pt-BR pt-PT rm ro ru si sk sl sq sr sv-SE ta-LK tr uk vi
+zh-CN zh-TW )
 
 # Convert the ebuild version to the upstream mozilla version, used by mozlinguas
 MOZ_PV="${PV/_beta/b}"
@@ -20,7 +21,7 @@ fi
 MOZ_P="${PN}-${MOZ_PV}"
 
 # Enigmail version
-EMVER="1.4.3"
+EMVER="1.4.4"
 # Upstream ftp release URI that's used by mozlinguas.eclass
 # We don't use the http mirror because it deletes old tarballs.
 MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/${PN}/releases/"
@@ -30,25 +31,26 @@ inherit flag-o-matic toolchain-funcs mozconfig-3 makeedit multilib autotools pax
 DESCRIPTION="Thunderbird Mail Client"
 HOMEPAGE="http://www.mozilla.com/en-US/thunderbird/"
 
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
 IUSE="bindist gconf +crypt +ipc +jit +lightning +minimal mozdom +webm selinux"
 
 PATCH="thunderbird-13.0-patches-0.1"
-PATCHFF="firefox-14.0-patches-0.3"
+PATCHFF="firefox-15.0-patches-0.2"
 
 SRC_URI="${SRC_URI}
 	${MOZ_FTP_URI}${MOZ_PV}/source/${MOZ_P}.source.tar.bz2
 	crypt? ( http://www.mozilla-enigmail.org/download/source/enigmail-${EMVER}.tar.gz )
 	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCH}.tar.xz
-	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCHFF}.tar.xz"
+	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCHFF}.tar.xz
+	http://dev.gentoo.org/~nirbheek/mozilla/patchsets/${PATCHFF}.tar.xz"
 
 ASM_DEPEND=">=dev-lang/yasm-1.1"
 
 RDEPEND=">=sys-devel/binutils-2.16.1
-	>=dev-libs/nss-3.13.5
-	>=dev-libs/nspr-4.9.1
+	>=dev-libs/nss-3.13.6
+	>=dev-libs/nspr-4.9.2
 	>=dev-libs/glib-2.26
 	gconf? ( >=gnome-base/gconf-1.2.1:2 )
 	>=media-libs/libpng-1.5.9[apng]
@@ -141,16 +143,16 @@ src_prepare() {
 		-i "${S}"/mozilla/config/system-headers \
 		-i "${S}"/mozilla/js/src/config/system-headers || die "Sed failed"
 
+	# Don't error out when there's no files to be removed:
+	sed 's@\(xargs rm\)$@\1 -f@' \
+		-i "${S}"/mozilla/toolkit/mozapps/installer/packager.mk || die
+
 	# Shell scripts sometimes contain DOS line endings; bug 391889
 	grep -rlZ --include="*.sh" $'\r$' . |
 	while read -r -d $'\0' file ; do
 		einfo edos2unix "${file}"
 		edos2unix "${file}"
 	done
-
-	if use debug ; then
-		unset PYTHONDONTWRITEBYTECODE
-	fi
 
 	# Allow user to apply any additional patches without modifing ebuild
 	epatch_user
