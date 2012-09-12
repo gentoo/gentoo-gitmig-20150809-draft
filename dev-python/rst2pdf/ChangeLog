@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/rst2pdf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rst2pdf/ChangeLog,v 1.23 2012/09/12 08:52:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rst2pdf/ChangeLog,v 1.24 2012/09/12 12:22:31 johu Exp $
+
+  12 Sep 2012; Johannes Huber <johu@gentoo.org> rst2pdf-0.92.ebuild:
+  Stable for x86, wrt bug #429038
 
   12 Sep 2012; Agostino Sarubbo <ago@gentoo.org> rst2pdf-0.92.ebuild:
   Stable for amd64, wrt bug #429038
