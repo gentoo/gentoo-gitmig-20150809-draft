@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-3.eclass,v 1.31 2012/07/18 00:22:30 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-3.eclass,v 1.32 2012/09/12 22:52:18 anarchy Exp $
 #
 # mozconfig.eclass: the new mozilla.eclass
 
@@ -91,6 +91,7 @@ mozconfig_config() {
 	mozconfig_annotate '' --disable-gnomevfs
 	mozconfig_annotate '' --disable-gnomeui
 	mozconfig_annotate '' --enable-gio
+	mozconfig_annotate '' --disable-crashreporter
 	if [[ ${PN} != thunderbird ]] ; then
 		mozconfig_annotate 'places' --enable-storage --enable-places --enable-places_bookmarks
 		mozconfig_annotate '' --enable-oji --enable-mathml
