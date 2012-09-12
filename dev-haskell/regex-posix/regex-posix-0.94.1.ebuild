@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-posix/regex-posix-0.94.1.ebuild,v 1.6 2011/02/25 13:08:22 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-posix/regex-posix-0.94.1.ebuild,v 1.7 2012/09/12 16:03:55 qnikst Exp $
 
 CABAL_FEATURES="lib profile haddock"
 inherit haskell-cabal
 
 DESCRIPTION="Replaces/Enhances Text.Regex"
 HOMEPAGE="http://sourceforge.net/projects/lazy-regex"
-SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
+SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

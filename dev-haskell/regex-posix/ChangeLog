@@ -1,6 +1,13 @@
 # ChangeLog for dev-haskell/regex-posix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-posix/ChangeLog,v 1.35 2012/05/05 16:45:05 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-posix/ChangeLog,v 1.36 2012/09/12 16:03:55 qnikst Exp $
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> regex-posix-0.71.ebuild,
+  regex-posix-0.72.0.2.ebuild, regex-posix-0.72.0.3.ebuild,
+  regex-posix-0.93.1.ebuild, regex-posix-0.94.1.ebuild,
+  regex-posix-0.95.1.ebuild:
+  move dev-haskell/regex-posix/regex-posix-0.95.1.ebuild ebuild to
+  mirror://hackage
 
   05 May 2012; Sergei Trofimovich <slyfox@gentoo.org> regex-posix-0.95.1.ebuild:
   alpha/ia64/ppc64/sparc stable (bug #404641)
@@ -139,4 +146,3 @@
   05 Aug 2007; Lennart Kolmodin <kolmodin@gentoo.org> +metadata.xml,
   +regex-posix-0.71.ebuild, +regex-posix-0.92.ebuild:
   Initial import.
-
