@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/split/split-0.1.4.3.ebuild,v 1.2 2012/09/07 23:47:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/split/split-0.1.4.3.ebuild,v 1.3 2012/09/12 15:24:07 qnikst Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit haskell-cabal
 
 DESCRIPTION="Combinator library for splitting lists."
 HOMEPAGE="http://code.haskell.org/~byorgey/code/split"
-SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
+SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
