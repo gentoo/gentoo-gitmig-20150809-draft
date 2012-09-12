@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/mtl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mtl/ChangeLog,v 1.46 2012/09/07 23:45:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mtl/ChangeLog,v 1.47 2012/09/12 14:42:20 qnikst Exp $
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> mtl-1.1.0.2.ebuild,
+  mtl-1.1.1.1.ebuild, mtl-2.0.1.0.ebuild, mtl-2.1.1.ebuild:
+  move dev-haskell/mtl/mtl-1.1.0.2.ebuild ebuild to mirror://hackage
 
   07 Sep 2012; Agostino Sarubbo <ago@gentoo.org> mtl-2.1.1.ebuild:
   Stable for amd64, wrt bug #421351
@@ -162,4 +166,3 @@
 
   11 Mar 2007; <kolmodin@gentoo.org> +mtl-1.0.ebuild:
   Add dummy package meant for GHC 6.4
-

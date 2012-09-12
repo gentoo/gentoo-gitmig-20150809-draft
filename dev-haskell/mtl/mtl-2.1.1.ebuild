@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mtl/mtl-2.1.1.ebuild,v 1.2 2012/09/07 23:45:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mtl/mtl-2.1.1.ebuild,v 1.3 2012/09/12 14:42:20 qnikst Exp $
 
 EAPI="4"
 
@@ -9,7 +9,7 @@ inherit haskell-cabal
 
 DESCRIPTION="Monad classes, using functional dependencies"
 HOMEPAGE="http://hackage.haskell.org/package/mtl"
-SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
+SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
