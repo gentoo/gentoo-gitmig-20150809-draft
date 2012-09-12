@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/json/json-0.4.3.ebuild,v 1.4 2011/04/23 15:33:14 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/json/json-0.4.3.ebuild,v 1.5 2012/09/12 14:57:34 qnikst Exp $
 
 CABAL_FEATURES="lib profile haddock"
 inherit haskell-cabal
 
 DESCRIPTION="Support for serialising Haskell to and from JSON"
 HOMEPAGE="http://hackage.haskell.org/package/json"
-SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
+SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
