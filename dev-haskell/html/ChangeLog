@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/html
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/html/ChangeLog,v 1.41 2011/06/05 13:04:09 slyfox Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/html/ChangeLog,v 1.42 2012/09/12 14:55:27 qnikst Exp $
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> html-1.0.1.2.ebuild:
+  move dev-haskell/html/html-1.0.1.2.ebuild ebuild to mirror://hackage
 
   05 Jun 2011; Sergei Trofimovich <slyfox@gentoo.org> -html-1.0.ebuild,
   -html-1.0-r1.ebuild, -html-1.0.1.ebuild, -html-1.0.1.1.ebuild:
@@ -139,4 +142,3 @@
 
   11 Mar 2007; <kolmodin@gentoo.org> +metadata.xml, +html-1.0.ebuild:
   Add dummy package meant for GHC 6.4
-
