@@ -1,16 +1,16 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cssc/cssc-1.3.0-r1.ebuild,v 1.1 2012/09/12 15:51:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cssc/cssc-1.3.0-r1.ebuild,v 1.2 2012/09/12 16:29:00 jer Exp $
 
 EAPI=4
 inherit eutils
 
 DESCRIPTION="CSSC is the GNU Project's replacement for SCCS"
-SRC_URI="mirror://gnu/${PN}/CSSC-${PV}.tar.gz"
+SRC_URI="mirror://gnu/${PN}/${P^^}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/cssc/"
 SLOT="0"
 LICENSE="GPL-3"
-S=${WORKDIR}/CSSC-${PV}
+S=${WORKDIR}/${P^^}
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE=""
 
