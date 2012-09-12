@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/x11
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11/ChangeLog,v 1.24 2012/03/06 07:53:46 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11/ChangeLog,v 1.25 2012/09/12 14:44:14 qnikst Exp $
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> x11-1.4.6.1.ebuild,
+  x11-1.5.0.0-r1.ebuild, x11-1.5.0.0.ebuild, x11-1.5.0.1.ebuild:
+  move dev-haskell/x11/x11-1.5.0.0.ebuild ebuild to mirror://hackage
 
 *x11-1.5.0.1 (06 Mar 2012)
 
@@ -112,4 +116,3 @@
   09 Jul 2007; Duncan Coutts <dcoutts@gentoo.org> +metadata.xml,
   +x11-1.1.ebuild, +x11-1.2.ebuild, +x11-1.2.1.ebuild, +x11-1.2.2.ebuild:
   Initial versions.
-

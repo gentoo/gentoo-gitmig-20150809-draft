@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11/x11-1.4.6.1.ebuild,v 1.7 2010/07/01 19:59:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11/x11-1.4.6.1.ebuild,v 1.8 2012/09/12 14:44:14 qnikst Exp $
 
 CABAL_FEATURES="lib profile haddock"
 inherit haskell-cabal eutils
@@ -10,7 +10,7 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="A binding to the X11 graphics library"
 HOMEPAGE="http://darcs.haskell.org/X11"
-SRC_URI="http://hackage.haskell.org/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.gz"
+SRC_URI="mirror://hackage/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
