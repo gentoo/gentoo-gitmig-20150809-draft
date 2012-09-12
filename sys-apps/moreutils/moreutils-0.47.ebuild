@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/moreutils-0.47.ebuild,v 1.5 2012/09/08 10:08:03 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/moreutils-0.47.ebuild,v 1.6 2012/09/12 15:27:55 jer Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs prefix
@@ -11,7 +11,7 @@ SRC_URI="mirror://debian/pool/main/${PN:0:1}/${PN}/${PN}_${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~ppc ~ppc64 x86 ~x86-linux"
+KEYWORDS="amd64 hppa ~ppc ~ppc64 x86 ~x86-linux"
 IUSE="+doc +perl"
 
 RDEPEND="
