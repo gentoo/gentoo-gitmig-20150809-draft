@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/syb/syb-0.3.6.1.ebuild,v 1.1 2012/06/02 06:19:02 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/syb/syb-0.3.6.1.ebuild,v 1.2 2012/09/12 14:46:49 qnikst Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ inherit haskell-cabal
 
 DESCRIPTION="Scrap Your Boilerplate"
 HOMEPAGE="http://www.cs.uu.nl/wiki/GenericProgramming/SYB"
-SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
+SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

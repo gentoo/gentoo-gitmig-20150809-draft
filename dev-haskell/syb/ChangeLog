@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/syb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/syb/ChangeLog,v 1.9 2012/06/02 06:19:02 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/syb/ChangeLog,v 1.10 2012/09/12 14:46:49 qnikst Exp $
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> syb-0.3.2.ebuild,
+  syb-0.3.6.1.ebuild, syb-0.3.6.ebuild:
+  move dev-haskell/syb/syb-0.3.6.ebuild ebuild to mirror://hackage
 
 *syb-0.3.6.1 (02 Jun 2012)
 
@@ -38,4 +42,3 @@
   23 Apr 2011; Sergei Trofimovich <slyfox@gentoo.org> +syb-0.3.ebuild,
   +metadata.xml:
   Initial version.
-
