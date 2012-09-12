@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.9.1_p2-r3.ebuild,v 1.1 2012/09/11 18:19:31 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.9.1_p3.ebuild,v 1.1 2012/09/12 18:16:34 idl0r Exp $
 
 # Re dlz/mysql and threads, needs to be verified..
 # MySQL uses thread local storage in its C api. Thus MySQL
@@ -24,11 +24,14 @@ SDB_LDAP_VER="1.1.0-fc14"
 # bind-9.8.0-P1-geoip-1.3.patch
 GEOIP_PV=1.3
 #GEOIP_PV_AGAINST="${MY_PV}"
-GEOIP_PV_AGAINST="9.9.1-P1"
+GEOIP_PV_AGAINST="9.9.1-P2"
 GEOIP_P="bind-${GEOIP_PV_AGAINST}-geoip-${GEOIP_PV}"
 GEOIP_PATCH_A="${GEOIP_P}.patch"
 GEOIP_DOC_A="bind-geoip-1.3-readme.txt"
 GEOIP_SRC_URI_BASE="http://bind-geoip.googlecode.com/"
+
+
+RRL_PV="9.9.1-P2"
 
 # GeoIP: http://bind-geoip.googlecode.com/
 # DNS RRL: http://www.redbarn.org/dns/ratelimits/
@@ -41,7 +44,7 @@ SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${MY_P}.tar.gz
 	geoip? ( ${GEOIP_SRC_URI_BASE}/files/${GEOIP_DOC_A}
 			 ${GEOIP_SRC_URI_BASE}/files/${GEOIP_PATCH_A} )
 	sdb-ldap? ( http://ftp.disconnected-by-peer.at/pub/bind-sdb-ldap-${SDB_LDAP_VER}.patch.bz2 )
-	rrl? ( http://ss.vix.com/~vixie/rl-${MY_PV}.patch )"
+	rrl? ( http://ss.vix.com/~vixie/rl-${RRL_PV}.patch )"
 
 LICENSE="as-is"
 SLOT="0"
@@ -125,13 +128,13 @@ src_prepare() {
 #		sed -i -e 's:^ RELEASETYPE=: RELEASETYPE=-P:' \
 #			-e 's:RELEASEVER=:RELEASEVER=1:' \
 #			${GEOIP_PATCH_A} || die
-		sed -i -e 's:RELEASEVER=1:RELEASEVER=2:' ${GEOIP_PATCH_A} || die
+		sed -i -e 's:RELEASEVER=2:RELEASEVER=3:' ${GEOIP_PATCH_A} || die
 		epatch ${GEOIP_PATCH_A}
 	fi
 
 	if use rrl; then
 		# Response Rate Limiting (DNS RRL) - bug 434650
-		epatch "${DISTDIR}/rl-${MY_PV}.patch"
+		epatch "${DISTDIR}/rl-${RRL_PV}.patch"
 	fi
 
 	# bug 425170
