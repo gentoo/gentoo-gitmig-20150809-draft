@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vala.eclass,v 1.1 2012/09/12 20:22:39 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vala.eclass,v 1.2 2012/09/12 20:43:08 tetromino Exp $
 
 # @ECLASS: vala.eclass
 # @MAINTAINER:
@@ -98,10 +98,10 @@ vala_src_prepare() {
 
 	export VALAC=$(type -P valac-${version})
 
-	valafoo=$(type -P vala-gen-introspect-${VALA_API_VERSION})
+	valafoo=$(type -P vala-gen-introspect-${version})
 	[[ ${valafoo} ]] && export VALA_GEN_INTROSPECT=$(type -P vala-gen-introspect-${version})
 
-	valafoo=$(type -P vapigen-${VALA_API_VERSION})
+	valafoo=$(type -P vapigen-${version})
 	[[ ${valafoo} ]] && export VAPIGEN="${valafoo}"
 
 	valafoo="${EPREFIX}/usr/share/vala/Makefile.vapigen"
@@ -112,8 +112,8 @@ vala_src_prepare() {
 	mkdir -p "${T}/pkgconfig" || die "mkdir failed"
 	for p in libvala vapigen; do
 		for d in "${EPREFIX}/usr/$(get_libdir)/pkgconfig" "${EPREFIX}/usr/share/pkgconfig"; do
-			if [[ -e ${d}/${p}-${VALA_API_VERSION}.pc ]]; then
-				ln -s "${d}/${p}-${VALA_API_VERSION}.pc" "${T}/pkgconfig/${p}.pc" || die "ln failed"
+			if [[ -e ${d}/${p}-${version}.pc ]]; then
+				ln -s "${d}/${p}-${version}.pc" "${T}/pkgconfig/${p}.pc" || die "ln failed"
 				break
 			fi
 		done
