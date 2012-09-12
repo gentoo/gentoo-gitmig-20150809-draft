@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/meld3/meld3-0.6.8.ebuild,v 1.1 2012/03/29 10:41:47 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/meld3/meld3-0.6.8.ebuild,v 1.2 2012/09/12 12:29:12 xarthisius Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="meld3 is an HTML/XML templating engine."
 HOMEPAGE="http://pypi.python.org/pypi/meld3"
@@ -23,10 +23,15 @@ RDEPEND=""
 
 DOCS="CHANGES.txt COPYRIGHT.txt LICENSE.txt README.txt TODO.txt"
 
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}_tests.patch
+	distutils_src_prepare
+}
+
 src_test() {
-	cd meld3
+	cd ${PN}
 	testing() {
-		"$(PYTHON)" test_meld3.py
+		"$(PYTHON)" test_${PN}.py
 	}
 	python_execute_function testing
 }

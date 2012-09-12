@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/meld3
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/meld3/ChangeLog,v 1.5 2012/03/29 10:41:47 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/meld3/ChangeLog,v 1.6 2012/09/12 12:29:12 xarthisius Exp $
+
+  12 Sep 2012; Kacper Kowalik <xarthisius@gentoo.org> +files/meld3_tests.patch,
+  meld3-0.6.8.ebuild:
+  Apply upstream patch to fix test failures with Python2.7. Thanks to Ian
+  Delaney <johneed@hotmail.com> for reporting issue upstream. Fixes bug 429412
+  by Diego Elio Pettenò <flameeyes@gentoo.org>
 
 *meld3-0.6.8 (29 Mar 2012)
 
@@ -24,4 +30,3 @@
 
   04 Mar 2010; Dirkjan Ochtman <djc@gentoo.org> +meld3-0.6.6.ebuild:
   Initial version of meld3 (dep of app-admin/supervisor).
-
