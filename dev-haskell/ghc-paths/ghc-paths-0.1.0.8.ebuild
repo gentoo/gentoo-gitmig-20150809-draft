@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/ghc-paths/ghc-paths-0.1.0.8.ebuild,v 1.2 2011/08/03 12:53:52 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/ghc-paths/ghc-paths-0.1.0.8.ebuild,v 1.3 2012/09/12 16:04:35 qnikst Exp $
 
 EAPI="3"
 
@@ -10,7 +10,7 @@ inherit haskell-cabal
 
 DESCRIPTION="Knowledge of GHC's installation directories"
 HOMEPAGE="http://hackage.haskell.org/package/ghc-paths"
-SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
+SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
