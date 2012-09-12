@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6955 2012/09/11 23:13:41 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6956 2012/09/12 00:52:01 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
+  hardened/linux/uclibc/package.accept_keywords:
+  Working towards fixing bug #434568
 
   11 Sep 2012; Johannes Huber <johu@gentoo.org> package.mask:
   Unmask telepathy-qt-0.9.3 and KDE telepathy 0.5.0 as issues with test use
