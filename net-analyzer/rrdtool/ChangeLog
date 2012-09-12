@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.230 2012/09/06 16:50:41 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.231 2012/09/12 20:10:17 pinkbyte Exp $
+
+  12 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> rrdtool-1.4.7-r1.ebuild:
+  Fix typos in ebuild, which cause issue with automagic dependencies on
+  sys-apps/tcp-wrappers and dev-db/libdbi
 
 *rrdtool-1.4.7-r1 (06 Sep 2012)
 
