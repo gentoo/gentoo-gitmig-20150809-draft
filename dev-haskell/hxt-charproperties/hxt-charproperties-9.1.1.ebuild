@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt-charproperties/hxt-charproperties-9.1.1.ebuild,v 1.1 2012/06/02 08:46:56 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt-charproperties/hxt-charproperties-9.1.1.ebuild,v 1.2 2012/09/12 16:01:17 qnikst Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit haskell-cabal
 
 DESCRIPTION="Character properties and classes for XML and Unicode"
 HOMEPAGE="http://www.fh-wedel.de/~si/HXmlToolbox/index.html"
-SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
+SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
