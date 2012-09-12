@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/statevar
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/statevar/ChangeLog,v 1.1 2011/07/31 15:59:31 slyfox Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/statevar/ChangeLog,v 1.2 2012/09/12 15:56:57 qnikst Exp $
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> statevar-1.0.0.0.ebuild:
+  move dev-haskell/statevar/statevar-1.0.0.0.ebuild ebuild to mirror://hackage
 
 *statevar-1.0.0.0 (31 Jul 2011)
 
@@ -8,4 +11,3 @@
   +metadata.xml:
   Initial import. Package contains state variables, which are references in the
   IO monad.
-
