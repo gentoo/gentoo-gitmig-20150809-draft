@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/libxml-sax
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/libxml-sax/ChangeLog,v 1.1 2012/01/12 16:44:25 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/libxml-sax/ChangeLog,v 1.2 2012/09/12 15:58:53 qnikst Exp $
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> libxml-sax-0.7.2.ebuild:
+  move dev-haskell/libxml-sax/libxml-sax-0.7.2.ebuild ebuild to mirror://hackage
 
 *libxml-sax-0.7.2 (12 Jan 2012)
 
@@ -8,4 +11,3 @@
   +metadata.xml:
   Initial import. Haskell library. Bindings for the libXML2 SAX interface.
   Depend for dev-util/bustle-0.3.1.
-
