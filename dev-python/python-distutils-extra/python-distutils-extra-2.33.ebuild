@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-distutils-extra/python-distutils-extra-2.33.ebuild,v 1.1 2012/06/28 07:15:04 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-distutils-extra/python-distutils-extra-2.33.ebuild,v 1.2 2012/09/12 08:52:04 ago Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -15,7 +15,7 @@ SRC_URI="http://launchpad.net/python-distutils-extra/trunk/${PV}/+download/${P}.
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="dev-python/setuptools"
