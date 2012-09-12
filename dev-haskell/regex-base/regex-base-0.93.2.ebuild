@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-base/regex-base-0.93.2.ebuild,v 1.6 2012/05/05 16:43:36 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-base/regex-base-0.93.2.ebuild,v 1.7 2012/09/12 15:38:10 qnikst Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ inherit haskell-cabal
 
 DESCRIPTION="Interface API for regex-posix,pcre,parsec,tdfa,dfa"
 HOMEPAGE="http://sourceforge.net/projects/lazy-regex"
-SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
+SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
