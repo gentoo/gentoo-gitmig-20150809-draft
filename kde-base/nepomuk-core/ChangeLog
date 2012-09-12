@@ -1,11 +1,11 @@
 # ChangeLog for kde-base/nepomuk-core
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk-core/ChangeLog,v 1.6 2012/09/12 00:00:23 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk-core/ChangeLog,v 1.7 2012/09/12 00:02:05 johu Exp $
 
   12 Sep 2012; Johannes Huber <johu@gentoo.org>
   +files/nepomuk-core-4.9.1-gcc44.patch, nepomuk-core-4.9.1.ebuild:
   Add upstream patch to fix build with gcc44 and clang spotted by Mr. Anderson
-  <walch.martin@web.de> amd Andreas Sturmlechner
+  <walch.martin@web.de> and Andreas Sturmlechner
   <andreas.sturmlechner@gmail.com> wrt bug #434340.
 
 *nepomuk-core-4.9.1 (04 Sep 2012)
