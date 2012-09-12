@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hinotify
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hinotify/ChangeLog,v 1.5 2011/08/31 17:40:33 slyfox Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hinotify/ChangeLog,v 1.6 2012/09/12 15:50:40 qnikst Exp $
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> hinotify-0.3.2.ebuild:
+  move dev-haskell/hinotify/hinotify-0.3.2.ebuild ebuild to mirror://hackage
 
   31 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org> -hinotify-0.3.1.ebuild:
   Removed old.
@@ -23,4 +26,3 @@
 
   26 Nov 2009; <kolmodin@gentoo.org> +hinotify-0.3.ebuild, +metadata.xml:
   Initial import.
-
