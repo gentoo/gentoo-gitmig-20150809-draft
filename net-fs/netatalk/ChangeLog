@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/netatalk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.87 2012/09/10 14:28:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.88 2012/09/12 06:33:40 jlec Exp $
+
+  12 Sep 2012; Justin Lecher <jlec@gentoo.org> netatalk-3.0.ebuild:
+  Add missing DEP on dev-libs/libevent, #434758
 
 *netatalk-3.0 (10 Sep 2012)
 
