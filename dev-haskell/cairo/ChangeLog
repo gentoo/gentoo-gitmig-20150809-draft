@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/cairo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cairo/ChangeLog,v 1.7 2012/08/16 16:53:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cairo/ChangeLog,v 1.8 2012/09/12 15:13:57 qnikst Exp $
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> cairo-0.12.0.ebuild,
+  cairo-0.12.3.1.ebuild, cairo-0.12.3.ebuild:
+  move dev-haskell/cairo/cairo-0.12.3.ebuild ebuild to mirror://hackage
 
   16 Aug 2012; Agostino Sarubbo <ago@gentoo.org> cairo-0.12.3.ebuild:
   Stable for amd64, wrt bug #422025
@@ -30,4 +34,3 @@
   09 May 2011; Sergei Trofimovich <slyfox@gentoo.org> +cairo-0.12.0.ebuild,
   +metadata.xml:
   Initial version. Haskell bindings for x11-libs/cairo.
-
