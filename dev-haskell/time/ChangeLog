@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/time
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/time/ChangeLog,v 1.32 2012/03/20 16:22:32 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/time/ChangeLog,v 1.33 2012/09/12 15:02:25 qnikst Exp $
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> time-1.2.0.3.ebuild,
+  time-1.4.0.1.ebuild, time-1.4.ebuild:
+  move dev-haskell/time/time-1.4.ebuild ebuild to mirror://hackage
 
   20 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org> time-1.4.0.1.ebuild,
   time-1.4.ebuild:
@@ -127,4 +131,3 @@
   17 Mar 2007; Lennart Kolmodin <kolmodin@gentoo.org> +metadata.xml,
   +time-1.0.ebuild:
   Add modular lib to ghc 6.6. See bug 151012
-
