@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/test-framework-hunit/test-framework-hunit-0.2.6.ebuild,v 1.1 2012/01/22 14:41:29 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/test-framework-hunit/test-framework-hunit-0.2.6.ebuild,v 1.2 2012/09/12 15:33:38 qnikst Exp $
 
 EAPI="3"
 
@@ -9,7 +9,7 @@ inherit haskell-cabal
 
 DESCRIPTION="HUnit support for the test-framework package."
 HOMEPAGE="http://batterseapower.github.com/test-framework/"
-SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
+SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
