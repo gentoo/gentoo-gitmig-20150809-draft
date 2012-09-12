@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/fgl/fgl-5.4.1.1.ebuild,v 1.5 2010/07/01 19:56:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/fgl/fgl-5.4.1.1.ebuild,v 1.6 2012/09/12 14:38:55 qnikst Exp $
 
 CABAL_FEATURES="lib profile haddock"
 inherit haskell-cabal versionator
 
 DESCRIPTION="A functional graph library for Haskell."
 HOMEPAGE="http://haskell.org/ghc/"
-SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
+SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
