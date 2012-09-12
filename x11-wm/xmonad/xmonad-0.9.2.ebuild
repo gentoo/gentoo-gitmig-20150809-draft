@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/xmonad-0.9.2.ebuild,v 1.1 2011/05/11 21:26:16 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/xmonad-0.9.2.ebuild,v 1.2 2012/09/12 16:11:42 qnikst Exp $
 
 EAPI="3"
 
@@ -9,7 +9,7 @@ inherit base haskell-cabal
 
 DESCRIPTION="A tiling window manager"
 HOMEPAGE="http://xmonad.org"
-SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
+SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

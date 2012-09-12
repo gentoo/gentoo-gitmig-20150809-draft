@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/xmonad
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/ChangeLog,v 1.25 2012/04/13 19:54:57 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/ChangeLog,v 1.26 2012/09/12 16:11:42 qnikst Exp $
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> xmonad-0.10.ebuild,
+  xmonad-0.9.2.ebuild, xmonad-0.9.ebuild:
+  move x11-wm/xmonad/xmonad-0.10.ebuild ebuild to mirror://hackage
 
   13 Apr 2012; Ulrich Müller <ulm@gentoo.org> xmonad-0.9.ebuild:
   Move EAPI assignment to top of ebuild, bug 411875.
@@ -97,4 +101,3 @@
   +metadata.xml, +xmonad-0.5.ebuild:
   Initial import. xmonad is a tiling window manager for X. xmonad is
   extensible in Haskell, allowing for powerful customisation.
-
