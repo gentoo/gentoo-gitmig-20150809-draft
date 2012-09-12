@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Next/File-Next-1.100.0.ebuild,v 1.1 2012/06/16 19:08:23 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Next/File-Next-1.100.0.ebuild,v 1.2 2012/09/12 08:23:11 ago Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="File::Next is an iterator-based module for finding files"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
+KEYWORDS="amd64 ~x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE="test"
 
 RDEPEND="virtual/perl-File-Spec
