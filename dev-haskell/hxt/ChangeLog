@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/hxt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt/ChangeLog,v 1.15 2012/06/02 08:45:59 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt/ChangeLog,v 1.16 2012/09/12 14:40:45 qnikst Exp $
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> hxt-9.1.5.ebuild,
+  hxt-9.2.2.ebuild:
+  move dev-haskell/hxt/hxt-9.2.2.ebuild ebuild to mirror://hackage
 
 *hxt-9.2.2 (02 Jun 2012)
 
@@ -71,4 +75,3 @@
   +hxt-4.02.ebuild:
   Initial import using an ebuild provided by Luis F. Araujo <araujo@lbsd.net>
   (bug #79590).
-
