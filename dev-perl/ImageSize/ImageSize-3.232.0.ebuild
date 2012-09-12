@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageSize/ImageSize-3.232.0.ebuild,v 1.1 2012/05/31 18:33:58 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageSize/ImageSize-3.232.0.ebuild,v 1.2 2012/09/12 08:24:41 ago Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ DESCRIPTION="A library to extract height/width from images"
 
 LICENSE="|| ( Artistic-2 LGPL-2.1 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 RDEPEND="

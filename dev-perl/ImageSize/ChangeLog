@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/ImageSize
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageSize/ChangeLog,v 1.78 2012/06/24 12:58:26 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageSize/ChangeLog,v 1.79 2012/09/12 08:24:41 ago Exp $
+
+  12 Sep 2012; Agostino Sarubbo <ago@gentoo.org> ImageSize-3.232.0.ebuild:
+  Stable for amd64, wrt bug #428986
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
