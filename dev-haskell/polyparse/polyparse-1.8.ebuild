@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/polyparse/polyparse-1.8.ebuild,v 1.1 2012/06/16 09:50:41 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/polyparse/polyparse-1.8.ebuild,v 1.2 2012/09/12 15:54:33 qnikst Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ inherit haskell-cabal
 
 DESCRIPTION="A variety of alternative parser combinator libraries."
 HOMEPAGE="http://code.haskell.org/~malcolm/polyparse/"
-SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
+SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
