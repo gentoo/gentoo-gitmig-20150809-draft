@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-shell-frippery/gnome-shell-frippery-0.3.4.ebuild,v 1.2 2012/01/12 19:18:10 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-shell-frippery/gnome-shell-frippery-0.4.1.ebuild,v 1.1 2012/09/12 03:44:43 tetromino Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ RDEPEND="app-admin/eselect-gnome-shell-extensions
 	>=dev-libs/gjs-1.29
 	dev-libs/gobject-introspection
 	gnome-base/gnome-menus:3[introspection]
-	>=gnome-base/gnome-shell-3.2
+	>=gnome-base/gnome-shell-3.4
 	media-libs/clutter:1.0[introspection]
 	x11-libs/pango[introspection]"
 DEPEND=""
