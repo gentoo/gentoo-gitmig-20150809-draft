@@ -1,21 +1,23 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.7.ebuild,v 1.8 2012/09/12 09:14:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.7.ebuild,v 1.9 2012/09/12 11:08:53 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils fdo-mime
 
+DEBIAN_REVISION=2.7-1
+
 DESCRIPTION="A fast and lightweight web browser running in both graphics and text mode"
 HOMEPAGE="http://links.twibright.com/"
 SRC_URI="http://${PN}.twibright.com/download/${P}.tar.bz2
-	mirror://debian/pool/main/${PN:0:1}/${PN}2/${PN}2_2.7-1.debian.tar.gz"
+	mirror://debian/pool/main/${PN:0:1}/${PN}2/${PN}2_${DEBIAN_REVISION}.debian.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="bzip2 +deprecated directfb fbcon gpm jpeg livecd lzma ssl suid svga tiff unicode X zlib"
 
-GRAPHICS_DEPEND=">=media-libs/libpng-1.2:0" #75685
+GRAPHICS_DEPEND="media-libs/libpng:0"
 
 RDEPEND=">=sys-libs/ncurses-5.7-r7
 	bzip2? ( app-arch/bzip2 )
@@ -35,7 +37,7 @@ RDEPEND=">=sys-libs/ncurses-5.7-r7
 	ssl? ( dev-libs/openssl:0 )
 	svga? (
 		${GRAPHICS_DEPEND}
-		>=media-libs/svgalib-1.4.3
+		media-libs/svgalib
 		)
 	tiff? ( media-libs/tiff:0 )
 	X? (
