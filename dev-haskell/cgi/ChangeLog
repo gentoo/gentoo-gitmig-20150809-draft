@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/cgi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cgi/ChangeLog,v 1.20 2012/04/11 20:33:41 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cgi/ChangeLog,v 1.21 2012/09/12 14:37:53 qnikst Exp $
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> cgi-3001.1.5.1.ebuild,
+  cgi-3001.1.7.1.ebuild, cgi-3001.1.8.2.ebuild:
+  move dev-haskell/cgi/cgi-3001.1.7.1.ebuild ebuild to mirror://hackage
 
 *cgi-3001.1.8.2 (11 Apr 2012)
 
@@ -73,4 +77,3 @@
   17 Mar 2007; Lennart Kolmodin <kolmodin@gentoo.org> +metadata.xml,
   +cgi-2006.9.6.ebuild:
   Add modular lib to ghc 6.6. See bug 151012
-
