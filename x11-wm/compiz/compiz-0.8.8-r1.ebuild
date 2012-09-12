@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.8.8.ebuild,v 1.7 2012/09/12 18:14:41 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.8.8-r1.ebuild,v 1.1 2012/09/12 18:34:56 pinkbyte Exp $
 
 EAPI=4
 inherit autotools eutils gnome2-utils
@@ -69,6 +69,8 @@ DEPEND="${COMMONDEPEND}
 
 RDEPEND="${COMMONDEPEND}
 	x11-apps/mesa-progs
+	x11-apps/xdpyinfo
+	x11-apps/xset
 	x11-apps/xvinfo
 "
 
