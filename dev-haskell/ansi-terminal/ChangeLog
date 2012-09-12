@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/ansi-terminal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/ansi-terminal/ChangeLog,v 1.16 2012/04/14 08:52:37 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/ansi-terminal/ChangeLog,v 1.17 2012/09/12 15:28:29 qnikst Exp $
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org>
+  ansi-terminal-0.5.0.ebuild, ansi-terminal-0.5.5.ebuild:
+  move dev-haskell/ansi-terminal/ansi-terminal-0.5.0.ebuild ebuild to
+  mirror://hackage
 
   14 Apr 2012; Mark Wright <gienah@gentoo.org> ansi-terminal-0.5.5.ebuild,
   metadata.xml:
@@ -63,4 +68,3 @@
   14 Mar 2010; Lennart Kolmodin <kolmodin@gentoo.org>
   +ansi-terminal-0.5.0.ebuild, +metadata.xml:
   Initial version.
-
