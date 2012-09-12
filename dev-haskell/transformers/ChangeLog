@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/transformers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/transformers/ChangeLog,v 1.4 2012/09/07 23:40:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/transformers/ChangeLog,v 1.5 2012/09/12 16:02:25 qnikst Exp $
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org>
+  transformers-0.2.2.0.ebuild, transformers-0.3.0.0.ebuild:
+  move dev-haskell/transformers/transformers-0.2.2.0.ebuild ebuild to
+  mirror://hackage
 
   07 Sep 2012; Agostino Sarubbo <ago@gentoo.org> transformers-0.3.0.0.ebuild:
   Stable for amd64, wrt bug #421351
@@ -22,4 +27,3 @@
   +transformers-0.2.2.0.ebuild:
   Initial version. Concrete functor and monad transformers (dev-haskell/monad-
   control dep)
-
