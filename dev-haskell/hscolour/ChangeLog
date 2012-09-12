@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/hscolour
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hscolour/ChangeLog,v 1.18 2012/05/05 16:38:52 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hscolour/ChangeLog,v 1.19 2012/09/12 16:01:51 qnikst Exp $
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> hscolour-1.17.ebuild,
+  hscolour-1.19.ebuild:
+  move dev-haskell/hscolour/hscolour-1.17.ebuild ebuild to mirror://hackage
 
   05 May 2012; Sergei Trofimovich <slyfox@gentoo.org> hscolour-1.19.ebuild:
   alpha/ia64/ppc64/sparc stable (bug #404635)
@@ -66,4 +70,3 @@
   26 Jul 2007; Duncan Coutts <dcoutts@gentoo.org> +metadata.xml,
   +hscolour-1.8.ebuild:
   Initial version.
-
