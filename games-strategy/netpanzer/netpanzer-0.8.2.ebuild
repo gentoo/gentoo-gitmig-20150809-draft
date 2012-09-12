@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/netpanzer-0.8.2.ebuild,v 1.8 2011/08/07 17:12:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/netpanzer-0.8.2.ebuild,v 1.9 2012/09/12 08:33:00 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -33,7 +33,7 @@ src_configure() {
 }
 
 src_compile() {
-	jam -q || die "jam failed"
+	AR="${AR} cru" jam -q || die "jam failed"
 
 	cd "${WORKDIR}"/${PN}-data-${DATAVERSION}
 	jam -q || die "jam failed (on data package)"
