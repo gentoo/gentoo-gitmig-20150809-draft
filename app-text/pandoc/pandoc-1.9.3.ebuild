@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pandoc/pandoc-1.9.3.ebuild,v 1.1 2012/06/02 09:49:45 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pandoc/pandoc-1.9.3.ebuild,v 1.2 2012/09/12 14:35:13 qnikst Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ inherit base haskell-cabal
 
 DESCRIPTION="Conversion between markup formats"
 HOMEPAGE="http://johnmacfarlane.net/pandoc"
-SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
+SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
