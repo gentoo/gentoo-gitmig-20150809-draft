@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/pango/pango-0.12.3.ebuild,v 1.5 2012/08/16 15:46:37 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/pango/pango-0.12.3.ebuild,v 1.6 2012/09/12 15:23:10 qnikst Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ inherit haskell-cabal
 
 DESCRIPTION="Binding to the Pango text rendering engine."
 HOMEPAGE="http://projects.haskell.org/gtk2hs/"
-SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
+SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"

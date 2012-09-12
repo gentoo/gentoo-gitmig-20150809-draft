@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/pango
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/pango/ChangeLog,v 1.8 2012/08/16 15:46:37 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/pango/ChangeLog,v 1.9 2012/09/12 15:23:10 qnikst Exp $
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> pango-0.12.0.ebuild,
+  pango-0.12.3.ebuild:
+  move dev-haskell/pango/pango-0.12.0.ebuild ebuild to mirror://hackage
 
   16 Aug 2012; Andreas Schuerch <nativemad@gentoo.org> pango-0.12.3.ebuild:
   x86 stable, see bug 422025
