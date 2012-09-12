@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/hsql-postgresql
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql-postgresql/ChangeLog,v 1.15 2012/04/15 11:14:47 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql-postgresql/ChangeLog,v 1.16 2012/09/12 15:11:42 qnikst Exp $
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org>
+  hsql-postgresql-1.8.1.ebuild, hsql-postgresql-1.8.2.ebuild:
+  move dev-haskell/hsql-postgresql/hsql-postgresql-1.8.2.ebuild ebuild to
+  mirror://hackage
 
 *hsql-postgresql-1.8.2 (15 Apr 2012)
 
@@ -70,4 +75,3 @@
   23 Feb 2006; <dcoutts@gentoo.org> +metadata.xml,
   +hsql-postgresql-1.7.ebuild:
   Initial import.
-
