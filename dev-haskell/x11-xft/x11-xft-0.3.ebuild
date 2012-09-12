@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11-xft/x11-xft-0.3.ebuild,v 1.4 2012/03/04 05:12:57 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11-xft/x11-xft-0.3.ebuild,v 1.5 2012/09/12 15:27:56 qnikst Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Bindings to the Xft, X Free Type interface library, and some Xrender parts"
 HOMEPAGE="http://hackage.haskell.org/cgi-bin/hackage-scripts/package/X11-xft"
-SRC_URI="http://hackage.haskell.org/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.gz"
+SRC_URI="mirror://hackage/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
