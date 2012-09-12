@@ -1,5 +1,8 @@
 # ChangeLog for sys-libs/glibc
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.888 2012/08/28 02:34:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.889 2012/09/12 00:48:49 blueness Exp $
+
+  12 Sep 2012; Anthony G. Basile <blueness@gentoo.org> glibc-2.15-r2.ebuild:
+  Stable ppc, bug #430346
 
   28 Aug 2012; Mike Frysinger <vapier@gentoo.org>
   files/eblits/src_install.eblit:
