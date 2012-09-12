@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda/agda-2.3.0.ebuild,v 1.4 2012/06/02 09:21:19 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda/agda-2.3.0.ebuild,v 1.5 2012/09/12 16:10:27 qnikst Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="A dependently typed functional programming language and proof assistant"
 HOMEPAGE="http://wiki.portal.chalmers.se/agda/"
-SRC_URI="http://hackage.haskell.org/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.gz"
+SRC_URI="mirror://hackage/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
