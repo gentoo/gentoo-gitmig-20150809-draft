@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.4.1-r1.ebuild,v 1.1 2012/09/12 09:22:54 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.4.1-r1.ebuild,v 1.2 2012/09/12 09:37:04 tetromino Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -8,7 +8,7 @@ GNOME2_LA_PUNT="yes"
 inherit autotools eutils gnome2 pam systemd user
 
 DESCRIPTION="GNOME Display Manager"
-HOMEPAGE="http://www.gnome.org/projects/gdm/"
+HOMEPAGE="https://live.gnome.org/GDM"
 
 LICENSE="GPL-2"
 SLOT="0"

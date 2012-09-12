@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.354 2012/09/12 09:22:54 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.355 2012/09/12 09:37:04 tetromino Exp $
+
+  12 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org> gdm-2.20.11.ebuild,
+  gdm-2.20.11-r1.ebuild, gdm-2.32.1.ebuild, gdm-2.32.1-r1.ebuild,
+  gdm-3.2.1.1-r1.ebuild, gdm-3.2.1.1-r2.ebuild, gdm-3.4.1.ebuild,
+  gdm-3.4.1-r1.ebuild:
+  Update homepage.
 
 *gdm-3.4.1-r1 (12 Sep 2012)
 
