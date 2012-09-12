@@ -1,22 +1,23 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.36.3.ebuild,v 1.2 2012/09/10 16:23:24 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.36.3.ebuild,v 1.3 2012/09/12 20:47:55 tetromino Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
 GCONF_DEBUG="no"
+VALA_MIN_API_VERSION="0.18"
+VALA_USE_DEPEND="vapigen"
 
-inherit autotools eutils gnome2 multilib
+inherit autotools eutils gnome2 multilib vala
 
 DESCRIPTION="Scalable Vector Graphics (SVG) rendering library"
 HOMEPAGE="http://librsvg.sourceforge.net/"
-SRC_URI="${SRC_URI} mirror://gentoo/introspection.m4.bz2"
 
 LICENSE="LGPL-2"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
-IUSE="doc +gtk +introspection tools" # vala
-#REQUIRED_USE="vala? ( introspection )"
+IUSE="doc +gtk +introspection tools vala"
+REQUIRED_USE="vala? ( introspection )"
 
 RDEPEND=">=dev-libs/glib-2.24:2
 	>=x11-libs/cairo-1.2
@@ -34,8 +35,8 @@ DEPEND="${RDEPEND}
 	dev-libs/vala-common
 	>=dev-util/gtk-doc-am-1.13
 
-	doc? ( >=dev-util/gtk-doc-1.13 )"
-#	vala? ( >=dev-lang/vala-0.17.1.26:0.18[vapigen] )"
+	doc? ( >=dev-util/gtk-doc-1.13 )
+	vala? ( $(vala_depend) )"
 # >=gtk-doc-am-1.13, gobject-introspection-common, vala-common needed by eautoreconf
 
 pkg_setup() {
@@ -44,9 +45,8 @@ pkg_setup() {
 		$(use_enable tools)
 		$(use_enable gtk gtk-theme)
 		$(use_enable introspection)
+		$(use_enable vala)
 		--enable-pixbuf-loader"
-		# TODO: Add vala support once vala.eclass is committed
-		#$(use_enable vala)
 	if use gtk && use tools; then
 		G2CONF="${G2CONF} --enable-rsvg-view"
 	else
@@ -61,6 +61,7 @@ pkg_setup() {
 src_prepare() {
 	# Make rsvg-view non-automagic
 	epatch "${FILESDIR}/${PN}-2.36.0-rsvg-view-automagic.patch"
+	use vala && vala_src_prepare
 
 	eautoreconf
 	gnome2_src_prepare
