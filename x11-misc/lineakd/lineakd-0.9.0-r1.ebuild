@@ -1,7 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/lineakd-0.9.0-r1.ebuild,v 1.9 2009/07/22 09:00:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/lineakd-0.9.0-r1.ebuild,v 1.10 2012/09/12 01:36:56 jer Exp $
 
+EAPI=4
 inherit eutils multilib
 
 MY_P=${P/.0/}
@@ -29,16 +30,14 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-gcc43.patch \
+src_prepare() {
+	epatch \
+		"${FILESDIR}"/${P}-gcc43.patch \
 		"${FILESDIR}"/${P}-DELL-XPS-M1330-XOrg-1_5.patch
 }
 
-src_compile() {
+src_configure() {
 	econf $(use_enable debug) --with-x
-	emake || die "emake failed."
 }
 
 src_install() {
@@ -46,13 +45,12 @@ src_install() {
 
 	dodir /usr/share/man/man8
 
-	emake -j1 DESTDIR="${D}" install || die "emake install failed."
+	emake -j1 DESTDIR="${D}" install
 	dodoc AUTHORS README TODO
 	keepdir /usr/$(get_libdir)/lineakd/plugins
 
 	insinto /etc/lineak
-	doins lineakd.conf.example
-	doins lineakd.conf.kde.example
+	doins lineakd.conf.example lineakd.conf.kde.example
 }
 
 pkg_postinst() {

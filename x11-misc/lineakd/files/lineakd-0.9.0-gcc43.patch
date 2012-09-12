@@ -1,6 +1,5 @@
-
---- lineakd-0.9.orig/lineak/xmgr.cpp
-+++ lineakd-0.9/lineak/xmgr.cpp
+--- a/lineak/xmgr.cpp
++++ b/lineak/xmgr.cpp
 @@ -21,6 +21,8 @@
  #include <lineak/lbutton.h>
  
@@ -10,8 +9,8 @@
     #include <signal.h>
     #include <X11/Xlib.h>
     #include <X11/keysym.h>
---- lineakd-0.9.orig/lineak/defloader.h
-+++ lineakd-0.9/lineak/defloader.h
+--- a/lineak/defloader.h
++++ b/lineak/defloader.h
 @@ -23,6 +23,7 @@
  #   endif
  
@@ -20,8 +19,8 @@
  #   include <map>
  
  class LDef;
---- lineakd-0.9.orig/lineak/pluginmanager.cpp
-+++ lineakd-0.9/lineak/pluginmanager.cpp
+--- a/lineak/pluginmanager.cpp
++++ b/lineak/pluginmanager.cpp
 @@ -34,6 +34,7 @@
  #include <unistd.h>
  #include <dirent.h>
@@ -30,8 +29,8 @@
  }
  
  using namespace lineak_core_functions;
---- lineakd-0.9.orig/lineak/cdromctrl.cpp
-+++ lineakd-0.9/lineak/cdromctrl.cpp
+--- a/lineak/cdromctrl.cpp
++++ b/lineak/cdromctrl.cpp
 @@ -51,6 +51,7 @@
  
  #include <stdio.h>

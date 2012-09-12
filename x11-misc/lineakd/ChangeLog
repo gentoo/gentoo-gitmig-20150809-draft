@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/lineakd
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/ChangeLog,v 1.53 2009/07/22 09:00:44 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/ChangeLog,v 1.54 2012/09/12 01:36:56 jer Exp $
+
+  12 Sep 2012; Jeroen Roovers <jer@gentoo.org> lineakd-0.9.0-r1.ebuild,
+  files/lineakd-0.9.0-DELL-XPS-M1330-XOrg-1_5.patch,
+  files/lineakd-0.9.0-gcc43.patch:
+  Clean up ebuild, patches.
 
   22 Jul 2009; Samuli Suominen <ssuominen@gentoo.org>
   lineakd-0.9.0-r1.ebuild,
