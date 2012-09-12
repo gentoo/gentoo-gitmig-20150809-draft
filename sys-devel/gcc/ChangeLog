@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.898 2012/09/07 15:50:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.899 2012/09/12 06:32:12 phajdan.jr Exp $
+
+  12 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> gcc-4.4.7.ebuild,
+  gcc-4.5.4.ebuild:
+  x86 stable wrt bug #431878
 
   07 Sep 2012; Jeroen Roovers <jer@gentoo.org> gcc-4.4.7.ebuild,
   gcc-4.5.4.ebuild:
