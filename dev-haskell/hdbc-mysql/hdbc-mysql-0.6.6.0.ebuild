@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-mysql/hdbc-mysql-0.6.6.0.ebuild,v 1.1 2012/06/02 05:59:19 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-mysql/hdbc-mysql-0.6.6.0.ebuild,v 1.2 2012/09/12 15:05:17 qnikst Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="MySQL driver for HDBC"
 HOMEPAGE="http://github.com/bos/hdbc-mysql"
-SRC_URI="http://hackage.haskell.org/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.gz"
+SRC_URI="mirror://hackage/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
