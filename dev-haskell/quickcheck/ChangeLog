@@ -1,6 +1,14 @@
 # ChangeLog for dev-haskell/quickcheck
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/quickcheck/ChangeLog,v 1.54 2012/09/07 23:43:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/quickcheck/ChangeLog,v 1.55 2012/09/12 15:10:42 qnikst Exp $
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org>
+  quickcheck-1.1.0.0.ebuild, quickcheck-1.2.0.0.ebuild,
+  quickcheck-1.2.0.1.ebuild, quickcheck-2.1.0.3.ebuild,
+  quickcheck-2.1.1.1.ebuild, quickcheck-2.4.1.1.ebuild,
+  quickcheck-2.4.2-r1.ebuild, quickcheck-2.4.2.ebuild:
+  move dev-haskell/quickcheck/quickcheck-1.2.0.0.ebuild ebuild to
+  mirror://hackage
 
   07 Sep 2012; Agostino Sarubbo <ago@gentoo.org> quickcheck-2.4.2-r1.ebuild:
   Stable for amd64, wrt bug #421351
@@ -218,4 +226,3 @@
 
   11 Mar 2007; <kolmodin@gentoo.org> +metadata.xml, +quickcheck-1.0.ebuild:
   Dummy package for GHC 6.4, see bug 151012
-

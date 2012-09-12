@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/quickcheck/quickcheck-2.1.0.3.ebuild,v 1.8 2011/02/25 13:15:18 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/quickcheck/quickcheck-2.1.0.3.ebuild,v 1.9 2012/09/12 15:10:42 qnikst Exp $
 
 CABAL_FEATURES="lib profile haddock"
 inherit haskell-cabal
@@ -10,7 +10,7 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Automatic testing of Haskell programs"
 HOMEPAGE="http://www.cs.chalmers.se/~koen"
-SRC_URI="http://hackage.haskell.org/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.gz"
+SRC_URI="mirror://hackage/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="2"
