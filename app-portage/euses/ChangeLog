@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/euses
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/euses/ChangeLog,v 1.65 2012/08/26 17:39:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/euses/ChangeLog,v 1.66 2012/09/12 03:03:00 blueness Exp $
+
+  12 Sep 2012; Anthony G. Basile <blueness@gentoo.org> euses-2.5.9.ebuild:
+  stable ppc, bug #434778
 
   26 Aug 2012; Raúl Porcel <armin76@gentoo.org> euses-2.5.8.ebuild:
   alpha/sparc stable wrt #429532
