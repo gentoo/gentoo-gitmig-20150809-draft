@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.322 2012/08/17 14:22:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.323 2012/09/13 13:50:38 flameeyes Exp $
+
+*sudo-1.8.6_p1 (13 Sep 2012)
+
+  13 Sep 2012; Diego E. Pettenò <flameeyes@gentoo.org> +sudo-1.8.6_p1.ebuild:
+  Version bump.
 
 *sudo-1.8.5_p3 (17 Aug 2012)
 
