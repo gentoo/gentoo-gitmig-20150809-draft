@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/emacs-vcs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.113 2012/09/09 12:38:35 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.114 2012/09/13 08:41:29 ulm Exp $
+
+  13 Sep 2012; Ulrich Müller <ulm@gentoo.org> emacs-vcs-24.2.9999.ebuild:
+  Upstream has changed the configure option for toolkit selection, gtk
+  defaults to GTK+3 now. Enable gtk3 per IUSE default and explicitly pass
+  --with-x-toolkit=gtk2 for USE="gtk -gtk3".
 
   09 Sep 2012; Ulrich Müller <ulm@gentoo.org> emacs-vcs-24.2.9999.ebuild:
   Remove sed for freebsd crt*.o files. This has been applied upstream.
