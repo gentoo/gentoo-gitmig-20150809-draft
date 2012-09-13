@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-4.2.ebuild,v 1.4 2012/06/26 06:39:36 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-4.2.ebuild,v 1.5 2012/09/13 20:13:02 xarthisius Exp $
 
 EAPI=4
 
@@ -56,4 +56,13 @@ src_install() {
 	doman i3bar/doc/i3bar.1 man/*.1
 	exeinto /etc/X11/Sessions
 	doexe "${T}"/i3wm
+}
+
+pkg_postinst() {
+	einfo "There are several packages that you may find useful with ${PN} and"
+	einfo "their usage is suggested by the upstream maintainers, namely:"
+	einfo "  x11-misc/dmenu"
+	einfo "  x11-misc/i3status"
+	einfo "  x11-misc/i3lock"
+	einfo "Please refer to their description for additional info."
 }

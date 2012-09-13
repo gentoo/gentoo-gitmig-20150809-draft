@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/i3
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/ChangeLog,v 1.21 2012/08/21 11:31:11 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/ChangeLog,v 1.22 2012/09/13 20:13:02 xarthisius Exp $
+
+  13 Sep 2012; Kacper Kowalik <xarthisius@gentoo.org> i3-4.2.ebuild:
+  Add postinst info about suggested optional dependencies wrt to #434388 and
+  #434898 by Erik Price <gentoo@erikprice.net> and avx <idevelop@ph030.de>
+  respectively
 
   21 Aug 2012; Kacper Kowalik <xarthisius@gentoo.org> -i3-4.1.2-r1.ebuild:
   Drop old
