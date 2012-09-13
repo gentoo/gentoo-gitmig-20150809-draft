@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/puddletag
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/puddletag/ChangeLog,v 1.20 2012/08/26 09:37:33 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/puddletag/ChangeLog,v 1.21 2012/09/13 18:41:30 billie Exp $
+
+  13 Sep 2012; Daniel Pielmeier <billie@gentoo.org>
+  -puddletag-1.0.0_beta6.ebuild, puddletag-1.0.0.ebuild, metadata.xml:
+  Add acoustid USE flag to fix bug #434176. Thanks to ci3nte for the report.
+  Remove old.
 
 *puddletag-1.0.0 (26 Aug 2012)
 
