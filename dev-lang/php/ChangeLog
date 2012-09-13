@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.633 2012/09/11 19:36:50 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.634 2012/09/13 09:40:46 olemarkus Exp $
+
+  13 Sep 2012; Ole Markus With <olemarkus@gentoo.org> metadata.xml:
+  Added gd USE flag description to reflect that we are using bundled gd, not
+  system
 
   11 Sep 2012; Ole Markus With <olemarkus@gentoo.org>
   files/eblits/src_configure-v54.eblit:

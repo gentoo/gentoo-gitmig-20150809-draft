@@ -9,6 +9,7 @@
 		<flag name='fileinfo'>Add fileinfo extension support</flag>
 		<flag name='filter'>Add filter extension support</flag>
 		<flag name='fpm'>Enable the FastCGI Process Manager SAPI</flag>
+		<flag name='gd'>Adds support for gd (bundled with PHP)</flag>
 		<flag name='hash'>Enable the hash extension</flag>
 		<flag name='json'>Enable JSON support</flag>
 		<flag name='ldap-sasl'>Add SASL support for the PHP LDAP extension</flag>
