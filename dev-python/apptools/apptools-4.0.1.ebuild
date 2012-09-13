@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apptools/apptools-4.0.1.ebuild,v 1.3 2012/03/05 10:49:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apptools/apptools-4.0.1.ebuild,v 1.4 2012/09/13 11:30:15 xarthisius Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython"
 DISTUTILS_SRC_TEST="nosetests"
 
-inherit distutils virtualx
+inherit distutils virtualx eutils
 
 DESCRIPTION="Enthought Tool Suite: Application tools"
 HOMEPAGE="http://code.enthought.com/projects/app_tools/ http://pypi.python.org/pypi/apptools"
@@ -30,7 +30,13 @@ DEPEND="dev-python/setuptools
 		>=dev-python/pyface-4
 		media-fonts/font-cursor-misc
 		media-fonts/font-misc-misc
+		sci-visualization/mayavi
 	)"
+
+src_prepare() {
+	distutils_src_prepare
+	epatch "${FILESDIR}"/${PN}_test.patch
+}
 
 src_compile() {
 	distutils_src_compile
@@ -38,7 +44,8 @@ src_compile() {
 }
 
 src_test() {
-	VIRTUALX_COMMAND="distutils_src_test" virtualmake
+	VIRTUALX_COMMAND="python_execute_nosetests -P ${S}/build-${PYTHON_ABI}/lib:${S}" \
+		virtualmake
 }
 
 src_install() {
