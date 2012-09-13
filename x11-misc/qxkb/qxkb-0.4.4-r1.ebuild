@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qxkb/qxkb-0.4.4.ebuild,v 1.1 2012/04/29 11:04:56 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qxkb/qxkb-0.4.4-r1.ebuild,v 1.1 2012/09/13 09:52:32 yngwin Exp $
 
 EAPI=4
 
@@ -18,4 +18,5 @@ IUSE="debug"
 DEPEND="x11-libs/libxkbfile
 	x11-libs/qt-gui:4
 	x11-libs/qt-svg:4"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	x11-apps/setxkbmap"
