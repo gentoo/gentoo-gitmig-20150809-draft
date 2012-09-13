@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-3.01_alpha08.ebuild,v 1.1 2012/08/18 09:05:01 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-3.01_alpha08.ebuild,v 1.2 2012/09/13 03:33:45 ottxor Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.berlios.de/pub/cdrecord/$([[ -z ${PV/*_alpha*} ]] && echo 'al
 
 LICENSE="GPL-2 LGPL-2.1 CDDL-Schily"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE="acl unicode"
 
 DEPEND="acl? ( virtual/acl )
@@ -71,6 +71,7 @@ src_prepare() {
 	# Schily make setup.
 	cd "${S}"/DEFAULTS
 	local os="linux"
+	[[ ${CHOST} == *-darwin* ]] && os="mac-os10"
 
 	sed -i \
 		-e "s:/opt/schily:/usr:g" \
@@ -101,7 +102,7 @@ src_compile() {
 	# If not built with -j1, "sometimes" cdda2wav will not be built.
 	emake -j1 CC="$(tc-getCC)" CPPOPTX="${CPPFLAGS}" COPTX="${CFLAGS}" \
 		LDOPTX="${LDFLAGS}" \
-		INS_BASE="${D}/usr" INS_RBASE="${D}" LINKMODE="dynamic" \
+		INS_BASE="${ED}/usr" INS_RBASE="${ED}" LINKMODE="dynamic" \
 		RUNPATH="" GMAKE_NOWARN="true"
 }
 
@@ -109,7 +110,7 @@ src_install() {
 	# If not built with -j1, "sometimes" manpages are not installed.
 	emake -j1 CC="$(tc-getCC)" CPPOPTX="${CPPFLAGS}" COPTX="${CFLAGS}" \
 		LDOPTX="${LDFLAGS}" \
-		INS_BASE="${D}/usr" INS_RBASE="${D}" LINKMODE="dynamic" \
+		INS_BASE="${ED}/usr" INS_RBASE="${ED}" LINKMODE="dynamic" \
 		RUNPATH="" GMAKE_NOWARN="true" install
 
 	# These symlinks are for compat with cdrkit.
@@ -127,5 +128,17 @@ src_install() {
 	dodoc ChangeLog* TODO
 
 	# Remove man pages related to the build system
-	rm -rvf "${D}"/usr/share/man/man5
+	rm -rvf "${ED}"/usr/share/man/man5
+}
+
+pkg_postinst() {
+	if [[ ${CHOST} == *-darwin* ]] ; then
+		einfo
+		einfo "Darwin/OS X use the following device names:"
+		einfo
+		einfo "CD burners: (probably) ./cdrecord dev=IOCompactDiscServices"
+		einfo
+		einfo "DVD burners: (probably) ./cdrecord dev=IODVDServices"
+		einfo
+	fi
 }
