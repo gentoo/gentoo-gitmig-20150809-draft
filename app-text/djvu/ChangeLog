@@ -1,6 +1,9 @@
 # ChangeLog for app-text/djvu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.130 2012/04/26 21:02:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.131 2012/09/13 04:07:30 ottxor Exp $
+
+  13 Sep 2012; Christoph Junghans <ottxor@gentoo.org> djvu-3.5.24-r1.ebuild:
+  added prefix keywords
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> djvu-3.5.24-r1.ebuild:
   keyword ~amd64-fbsd
