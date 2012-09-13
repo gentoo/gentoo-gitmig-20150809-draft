@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-3.4.2-r1.ebuild,v 1.2 2012/09/13 10:43:51 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-3.4.2-r1.ebuild,v 1.3 2012/09/13 11:26:19 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -19,6 +19,7 @@ KEYWORDS="~amd64 ~x86"
 COMMON_DEPEND=">=dev-libs/glib-2.29.90:2
 	>=x11-libs/gtk+-2.91.3:3[introspection?]
 	>=x11-libs/libnotify-0.7.0
+	sys-fs/udev
 
 	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )
 	sendto? ( >=gnome-extra/nautilus-sendto-2.91 )
@@ -26,7 +27,6 @@ COMMON_DEPEND=">=dev-libs/glib-2.29.90:2
 RDEPEND="${COMMON_DEPEND}
 	>=net-wireless/bluez-4.34
 	app-mobilephone/obexd
-	sys-fs/udev
 	x11-themes/gnome-icon-theme-symbolic"
 DEPEND="${COMMON_DEPEND}
 	!net-wireless/bluez-gnome
