@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.51 2012/08/07 18:22:21 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.52 2012/09/13 19:25:33 lu_zero Exp $
 
 EAPI=4
 
@@ -28,7 +28,7 @@ SLOT="0"
 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
 ~x64-solaris ~x86-solaris"
 IUSE="aac alsa amr bindist +bzip2 cdio cpudetection custom-cflags debug doc
-	+encode faac frei0r +gpl gsm +hardcoded-tables ieee1394 jack jpeg2k mp3
+	+encode faac fdk frei0r +gpl gsm +hardcoded-tables ieee1394 jack jpeg2k mp3
 	network openssl oss pic pulseaudio rtmp schroedinger sdl speex ssl
 	static-libs test theora threads tools truetype v4l vaapi vdpau vorbis vpx X
 	x264 xvid +zlib"
@@ -52,6 +52,7 @@ RDEPEND="
 		aac? ( media-libs/vo-aacenc )
 		amr? ( media-libs/vo-amrwbenc )
 		faac? ( media-libs/faac )
+		fdk? ( media-libs/fdk-aac )
 		mp3? ( >=media-sound/lame-3.98.3 )
 		theora? (
 			>=media-libs/libtheora-1.1.1[encode]
@@ -108,7 +109,7 @@ DEPEND="${RDEPEND}
 # faac and aac are concurent implementations
 # amr and aac require at least lgpl3
 # x264 requires gpl2
-REQUIRED_USE="bindist? ( !faac !openssl )
+REQUIRED_USE="bindist? ( !faac !openssl !fdk )
 	rtmp? ( network )
 	amr? ( gpl ) aac? ( gpl ) x264? ( gpl ) X? ( gpl )
 	test? ( encode zlib )
@@ -159,6 +160,7 @@ src_configure() {
 	# Encoders
 	if use encode; then
 		use faac && myconf+=" --enable-nonfree"
+		use fdk && myconf+=" --enable-nonfree --enable-libfdk-aac"
 		use mp3 && myconf+=" --enable-libmp3lame"
 		use amr && myconf+=" --enable-libvo-amrwbenc"
 		use aac && myconf+=" --enable-libvo-aacenc"
