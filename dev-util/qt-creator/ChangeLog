@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/qt-creator
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/ChangeLog,v 1.131 2012/09/12 01:40:43 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/ChangeLog,v 1.132 2012/09/13 00:14:44 pesa Exp $
+
+  13 Sep 2012; Davide Pesavento <pesa@gentoo.org> qt-creator-2.6.0_beta.ebuild:
+  Tweak sed expression to correctly disable clearcase plugin.
 
   12 Sep 2012; Davide Pesavento <pesa@gentoo.org> qt-creator-2.6.0_beta.ebuild:
   Delete useless doicon since icons are already installed by the buildsystem.
