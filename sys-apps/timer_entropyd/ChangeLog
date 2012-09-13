@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/timer_entropyd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/timer_entropyd/ChangeLog,v 1.13 2012/06/24 21:35:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/timer_entropyd/ChangeLog,v 1.14 2012/09/13 10:05:20 ago Exp $
+
+  13 Sep 2012; Agostino Sarubbo <ago@gentoo.org> timer_entropyd-0.2.ebuild:
+  Stable for amd64, wrt bug #429204
 
 *timer_entropyd-0.2 (24 Jun 2012)
 
