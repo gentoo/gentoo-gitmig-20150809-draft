@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.1.20-r1.ebuild,v 1.3 2012/09/05 09:16:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.2.0.ebuild,v 1.1 2012/09/13 19:44:15 polynomial-c Exp $
 
 EAPI=4
 
@@ -11,8 +11,10 @@ if [[ ${PV} == "9999" ]] ; then
 	ESVN_REPO_URI="http://www.virtualbox.org/svn/vbox/trunk"
 	inherit linux-mod subversion
 else
-	MY_P=VirtualBox-${PV}
-	SRC_URI="http://download.virtualbox.org/virtualbox/${PV}/${MY_P}.tar.bz2"
+	MY_PV="${PV/beta/BETA}"
+	MY_PV="${MY_PV/rc/RC}"
+	MY_P=VirtualBox-${MY_PV}
+	SRC_URI="http://download.virtualbox.org/virtualbox/${MY_PV}/${MY_P}.tar.bz2"
 	S="${WORKDIR}/${MY_P}"
 fi
 
@@ -50,7 +52,7 @@ RDEPEND="!app-emulation/virtualbox-bin
 	vnc? ( >=net-libs/libvncserver-0.9.9 )
 	java? ( || ( virtual/jre:1.7 virtual/jre:1.6 ) )"
 DEPEND="${RDEPEND}
-	>=dev-util/kbuild-0.1.999
+	>=dev-util/kbuild-0.1.9998_pre20120806
 	>=dev-lang/yasm-0.6.2
 	sys-devel/bin86
 	sys-devel/dev86
@@ -176,7 +178,7 @@ src_prepare() {
 
 	# Fix compile error on hardened bug 339914 (disable PIE)
 	if gcc-specs-pie ; then
-		epatch "${FILESDIR}"/${PN}-4.1.20-nopie.patch
+		epatch "${FILESDIR}"/virtualbox-4.1.20-nopie.patch
 	fi
 }
 
@@ -271,9 +273,6 @@ src_install() {
 	# VBoxNetAdpCtl and VBoxNetDHCP binaries need to be suid root in any case..
 	fperms 4750 /usr/$(get_libdir)/${PN}/VBoxNetAdpCtl
 	fperms 4750 /usr/$(get_libdir)/${PN}/VBoxNetDHCP
-
-	# VBoxSVC needs to be pax-marked (bug #403453)
-	pax-mark -m "${D}"/usr/$(get_libdir)/${PN}/VBoxSVC || die
 
 	if ! use headless ; then
 		for each in VBox{SDL,Headless} ; do
