@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/portaudio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/ChangeLog,v 1.86 2012/09/07 15:48:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/ChangeLog,v 1.87 2012/09/13 02:16:45 jer Exp $
+
+  13 Sep 2012; Jeroen Roovers <jer@gentoo.org> portaudio-19_pre20111121.ebuild:
+  Stable for HPPA (bug #433982).
 
   07 Sep 2012; Agostino Sarubbo <ago@gentoo.org>
   portaudio-19_pre20111121.ebuild:
