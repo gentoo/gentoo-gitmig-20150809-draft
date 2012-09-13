@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.818 2012/09/13 11:26:34 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.819 2012/09/13 11:30:10 blueness Exp $
+
+  13 Sep 2012; Anthony G. Basile <blueness@gentoo.org> -vlc-1.1.13.ebuild:
+  Remove vulnerable version, bug #408881
 
   13 Sep 2012; Anthony G. Basile <blueness@gentoo.org> vlc-2.0.1.ebuild:
   Stable ppc64, bug #408881
