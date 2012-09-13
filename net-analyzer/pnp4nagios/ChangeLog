@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/pnp4nagios
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/ChangeLog,v 1.45 2012/09/11 20:54:59 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/ChangeLog,v 1.46 2012/09/13 18:07:57 idl0r Exp $
+
+*pnp4nagios-0.6.19-r1 (13 Sep 2012)
+
+  13 Sep 2012; Christian Ruppert <idl0r@gentoo.org>
+  +pnp4nagios-0.6.19-r1.ebuild, -pnp4nagios-0.6.19.ebuild:
+  Fix bug 430358 - CVE-2012-3457
 
 *pnp4nagios-0.6.19 (11 Sep 2012)
 

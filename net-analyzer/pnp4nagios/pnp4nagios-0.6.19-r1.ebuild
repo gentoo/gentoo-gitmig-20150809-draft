@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/pnp4nagios-0.6.19.ebuild,v 1.1 2012/09/11 20:54:59 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/pnp4nagios-0.6.19-r1.ebuild,v 1.1 2012/09/13 18:07:57 idl0r Exp $
 
 EAPI="4"
 
@@ -73,6 +73,10 @@ src_install() {
 		insinto "${APACHE_MODULES_CONFDIR}"
 		doins "${FILESDIR}"/98_pnp4nagios.conf
 	fi
+
+	# Bug 430358 - CVE-2012-3457
+	find "${D}/etc/pnp" -type f -exec chmod 0640 {} \;
+	find "${D}/etc/pnp" -type d -exec chmod 0750 {} \;
 }
 
 pkg_postinst() {
