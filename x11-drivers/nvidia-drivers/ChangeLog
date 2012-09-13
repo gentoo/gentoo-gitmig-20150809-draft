@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.393 2012/08/29 03:56:39 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.394 2012/09/13 16:37:31 cardoe Exp $
+
+*nvidia-drivers-304.48 (13 Sep 2012)
+
+  13 Sep 2012; Doug Goldstein <cardoe@gentoo.org> +files/95-nvidia-settings,
+  +nvidia-drivers-304.48.ebuild:
+  Version bump. Should fix X.org input issues. fix bug #414725
 
   29 Aug 2012; Doug Goldstein <cardoe@gentoo.org>
   -files/195.30-unified-arch.patch,
