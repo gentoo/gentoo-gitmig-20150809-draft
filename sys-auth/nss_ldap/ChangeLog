@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/nss_ldap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/ChangeLog,v 1.68 2012/09/03 21:09:37 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/ChangeLog,v 1.69 2012/09/13 10:06:40 ago Exp $
+
+  13 Sep 2012; Agostino Sarubbo <ago@gentoo.org> nss_ldap-265-r1.ebuild:
+  Stable for amd64, wrt bug #429208
 
   03 Sep 2012; Anthony G. Basile <blueness@gentoo.org> nss_ldap-265-r1.ebuild:
   Keyword ~arm, bug #389559
