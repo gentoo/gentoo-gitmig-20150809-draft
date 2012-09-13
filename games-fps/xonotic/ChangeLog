@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/xonotic
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/xonotic/ChangeLog,v 1.7 2012/06/01 06:13:05 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/xonotic/ChangeLog,v 1.8 2012/09/13 21:14:57 mr_bones_ Exp $
+
+  13 Sep 2012; Michael Sterrett <mr_bones_@gentoo.org> xonotic-0.6.0.ebuild:
+  add x11-libs/libXpm dep (bug #434934)
 
   01 Jun 2012; Jeff Horelick <jdhore@gentoo.org> xonotic-0.6.0.ebuild:
   marked x86 per bug 418085
@@ -28,4 +31,3 @@
   16 Sep 2011; Michael Sterrett <mr_bones_@gentoo.org> +xonotic-0.5.0.ebuild,
   +metadata.xml:
   Initial commit - ebuild based on the one submitted by Nikoli (bug #324159)
-

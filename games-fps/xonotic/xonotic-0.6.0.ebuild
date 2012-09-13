@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/xonotic/xonotic-0.6.0.ebuild,v 1.3 2012/06/01 06:13:05 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/xonotic/xonotic-0.6.0.ebuild,v 1.4 2012/09/13 21:14:57 mr_bones_ Exp $
 
 EAPI=3
 inherit eutils check-reqs games
@@ -22,8 +22,9 @@ UIRDEPEND="
 	media-libs/libmodplug
 	x11-libs/libX11
 	x11-libs/libXau
-	x11-libs/libXdmcp
+	x11-libs/libXpm
 	x11-libs/libXext
+	x11-libs/libXdmcp
 	x11-libs/libXxf86dga
 	x11-libs/libXxf86vm
 	virtual/opengl
