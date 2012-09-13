@@ -1,6 +1,9 @@
 # ChangeLog for app-office/calligra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.69 2012/09/13 12:01:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.70 2012/09/13 13:37:21 scarabeus Exp $
+
+  13 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> calligra-2.5.2.ebuild:
+  Fix the ebuild to base of live where in cvs i accidentaly copied from 2.5.1.
 
 *calligra-2.5.2 (13 Sep 2012)
 

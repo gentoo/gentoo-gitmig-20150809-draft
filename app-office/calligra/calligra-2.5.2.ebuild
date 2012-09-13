@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.5.2.ebuild,v 1.1 2012/09/13 12:01:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.5.2.ebuild,v 1.2 2012/09/13 13:37:21 scarabeus Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -138,8 +138,6 @@ PDEPEND=">=app-office/calligra-l10n-${LANGVERSION}"
 RESTRICT=test
 # bug 394273
 
-PATCHES=( "${FILESDIR}/${PN}-2.5.0-kexi-automagic.patch" )
-
 src_configure() {
 	local cal_ft
 
@@ -191,7 +189,7 @@ src_configure() {
 		$(cmake-utils_use_with lcms LCMS2)
 		$(cmake-utils_use_with marble Marble)
 		$(cmake-utils_use_with mysql MySQL)
-		$(cmake-utils_use_build mysql mySQL)
+		$(cmake-utils_use_build mysql)
 		$(cmake-utils_use_with okular Okular)
 		$(cmake-utils_use_with opengtl OpenCTL)
 		$(cmake-utils_use_with openexr OpenEXR)
