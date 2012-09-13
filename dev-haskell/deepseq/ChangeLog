@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/deepseq
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/deepseq/ChangeLog,v 1.7 2012/09/12 15:06:17 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/deepseq/ChangeLog,v 1.8 2012/09/13 00:55:02 gienah Exp $
+
+  13 Sep 2012; Mark Wright <gienah@gentoo.org> deepseq-1.3.0.0.ebuild:
+  Thanks to jackhill for reporting, deepseq 1.3.0.0 is a ghc 7.4.2 core lib
 
   12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> deepseq-1.1.0.2.ebuild,
   deepseq-1.3.0.0.ebuild:
