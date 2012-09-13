@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/cifs-utils-5.6.ebuild,v 1.1 2012/09/13 18:00:29 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/cifs-utils-5.6.ebuild,v 1.2 2012/09/13 20:35:10 polynomial-c Exp $
 
 EAPI=4
 
@@ -40,11 +40,6 @@ pkg_setup() {
 		ewarn
 		ewarn "and recompile your kernel ..."
 	fi
-}
-
-src_prepare() {
-	# bug #424487
-	epatch "${FILESDIR}"/${P}-initialize_rc_var_properly.patch
 }
 
 src_configure() {
