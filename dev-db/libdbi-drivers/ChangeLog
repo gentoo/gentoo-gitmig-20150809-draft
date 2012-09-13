@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/libdbi-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/ChangeLog,v 1.52 2012/09/13 18:41:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/ChangeLog,v 1.53 2012/09/13 18:43:48 scarabeus Exp $
+
+  13 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  libdbi-drivers-0.8.3-r2.ebuild:
+  Conditionalize static lib creation and prune the .la file.
 
   13 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/libdbi-drivers-0.8.1-oci8.diff, -libdbi-drivers-0.8.1-r1.ebuild,

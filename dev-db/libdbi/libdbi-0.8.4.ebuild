@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/libdbi-0.8.4.ebuild,v 1.4 2012/09/13 18:37:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/libdbi-0.8.4.ebuild,v 1.5 2012/09/13 18:44:39 scarabeus Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://libdbi.sourceforge.net/"
 LICENSE="LGPL-2.1"
 
-IUSE="doc"
+IUSE="doc static-libs"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 SLOT=0
 
@@ -42,11 +42,15 @@ src_prepare() {
 }
 
 src_configure() {
-	econf $(use_enable doc docs)
+	econf \
+		$(use_enable doc docs) \
+		$(use_enable static-libs static)
 }
 
 src_install () {
 	default
+
+	prune_libtool_files --all
 
 	# syslog-ng requires dbi.pc
 	insinto /usr/$(get_libdir)/pkgconfig/

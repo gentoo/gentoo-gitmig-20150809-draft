@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/libdbi-drivers-0.8.3-r2.ebuild,v 1.2 2012/09/13 18:41:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/libdbi-drivers-0.8.3-r2.ebuild,v 1.3 2012/09/13 18:43:48 scarabeus Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 HOMEPAGE="http://libdbi-drivers.sourceforge.net/"
 LICENSE="LGPL-2.1"
 
-IUSE="bindist doc firebird mysql oci8 postgres +sqlite"
+IUSE="bindist doc firebird mysql oci8 postgres +sqlite static-libs"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 SLOT=0
 
@@ -65,6 +65,7 @@ src_configure() {
 
 	econf \
 		$(use_enable doc docs) \
+		$(use_enable static-libs static) \
 		${myconf}
 }
 
@@ -76,4 +77,10 @@ src_test() {
 	fi
 	einfo "Running interactive tests"
 	emake check
+}
+
+src_install() {
+	default
+
+	prune_libtool_files --all
 }
