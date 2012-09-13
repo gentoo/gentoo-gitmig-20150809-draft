@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quark/quark-3.24.ebuild,v 1.1 2012/05/31 16:09:44 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quark/quark-3.24.ebuild,v 1.2 2012/09/13 11:26:20 ago Exp $
 
 EAPI=4
 # I don't want gnome2 eclass
@@ -12,7 +12,7 @@ SRC_URI="http://hsgg.github.com/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="gnome"
 
 RDEPEND="dev-libs/glib:2
