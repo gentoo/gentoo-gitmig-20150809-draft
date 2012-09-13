@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/gnome-bluetooth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.112 2012/09/13 10:37:16 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.113 2012/09/13 10:43:51 tetromino Exp $
+
+  13 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-bluetooth-3.4.2-r1.ebuild:
+  Forgot to inherit toolchain-funcs
 
 *gnome-bluetooth-3.4.2-r1 (13 Sep 2012)
 
