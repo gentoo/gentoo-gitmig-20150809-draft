@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.899 2012/09/12 06:32:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.900 2012/09/13 14:45:46 blueness Exp $
+
+  13 Sep 2012; Anthony G. Basile <blueness@gentoo.org> gcc-4.5.4.ebuild:
+  Stable ppc64, bug #431878
 
   12 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> gcc-4.4.7.ebuild,
   gcc-4.5.4.ebuild:
