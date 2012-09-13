@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/icoutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/icoutils/ChangeLog,v 1.29 2012/07/03 16:19:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/icoutils/ChangeLog,v 1.30 2012/09/13 12:42:55 ssuominen Exp $
+
+  13 Sep 2012; Samuli Suominen <ssuominen@gentoo.org> -icoutils-0.26.0.ebuild,
+  -icoutils-0.29.1-r1.ebuild:
+  old
 
   03 Jul 2012; Brent Baude <ranger@gentoo.org> icoutils-0.29.1-r2.ebuild:
   Marking icoutils-0.29.1-r2 ppc for bug 421473
