@@ -1,6 +1,14 @@
 # ChangeLog for dev-cpp/tbb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.25 2012/08/08 12:04:53 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.26 2012/09/13 22:37:22 bicatali Exp $
+
+*tbb-4.1.20120718 (13 Sep 2012)
+
+  13 Sep 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/tbb-4.1.20120718-ldflags.patch, +tbb-4.1.20120718.ebuild,
+  tbb-4.0.297.ebuild:
+  Version bump. Updated patch to respect LDFLAGS. Stable and commercially-
+  aligned relaseses now merged to stable
 
   08 Aug 2012; Julian Ospald <hasufell@gentoo.org> tbb-4.0.297.ebuild:
   filter out --as-needed wrt #418453#c3

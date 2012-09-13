@@ -1,15 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-4.0.297.ebuild,v 1.11 2012/09/13 22:37:22 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-4.1.20120718.ebuild,v 1.1 2012/09/13 22:37:22 bicatali Exp $
 
 EAPI=4
 inherit eutils flag-o-matic multilib versionator toolchain-funcs
 
 # those 2 below change pretty much every release
 # url number
-MYU="78/181"
+MYU="77/188"
 # release update
-MYR="%20update%203"
+MYR=""
 
 PV1="$(get_version_component_range 1)"
 PV2="$(get_version_component_range 2)"
@@ -22,12 +22,13 @@ SRC_URI="http://www.threadingbuildingblocks.org/uploads/${MYU}/${PV1}.${PV2}${MY
 LICENSE="GPL-2-with-exceptions"
 
 SLOT="0"
-KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug doc examples"
 # FIXME
 # https://bugs.gentoo.org/show_bug.cgi?id=412675#c10
+# sep 12: still many tests are failing
 # restricting test for stabilization
-#RESTRICT="test"
+RESTRICT="test"
 
 DEPEND=""
 RDEPEND="${DEPEND}"
@@ -35,17 +36,17 @@ S="${WORKDIR}/${MYP}"
 
 src_prepare() {
 	epatch \
-		"${FILESDIR}"/${PN}-3.0.104-tests.patch \
-		"${FILESDIR}"/${PN}-4.0.297-underlinking.patch \
-		"${FILESDIR}"/${PN}-4.0.297-ldflags.patch
+		"${FILESDIR}"/${PN}-4.1.20120718-ldflags.patch \
+		"${FILESDIR}"/${PN}-4.0.297-underlinking.patch
 	# use fully qualified compilers. do not force pentium4 for x86 users
 	sed -i \
 		-e "s/-O2/${CXXFLAGS}/g" \
 		-e "/CPLUS/s/g++/$(tc-getCXX)/g" \
 		-e "/CONLY/s/gcc/$(tc-getCC)/g" \
-		-e "s/gcc -/$(tc-getCC) -v/g" \
+		-e "s/shell gcc/shell $(tc-getCC)/g" \
 		-e '/CPLUS_FLAGS +=/s/-march=pentium4//' \
 		-e 's/-m64//g' \
+		-e 's/-m32//g' \
 		build/*.inc || die
 	# - Strip the $(shell ... >$(NUL) 2>$(NUL)) wrapping, leaving just the
 	#   actual command.
@@ -53,10 +54,10 @@ src_prepare() {
 	#   is created.  This avoids a race when the user builds tbb and tbbmalloc
 	#   concurrently.  The choice of Makefile.tbb (instead of
 	#   Makefile.tbbmalloc) is arbitrary.
-	sed -i \
-		-e 's/^\t\$(shell \(.*\) >\$(NUL) 2>\$(NUL))\s*/\t\1/' \
-		-e 's!^\t@echo Created \$(work_dir)_\(debug\|release\).*$!&\n\t$(MAKE) -C "$(work_dir)_\1"  -r -f $(tbb_root)/build/Makefile.tbb cfg=\1 tbb_root=$(tbb_root) version_string.tmp!' \
-		src/Makefile || die
+	#sed -i \
+	#	-e 's/^\t\$(shell \(.*\) >\$(NUL) 2>\$(NUL))\s*/\t\1/' \
+	#	-e 's!^\t@echo Created \$(work_dir)_\(debug\|release\).*$!&\n\t$(MAKE) -C "$(work_dir)_\1"  -r -f $(tbb_root)/build/Makefile.tbb cfg=\1 tbb_root=$(tbb_root) version_string.tmp!' \
+	#	src/Makefile || die
 	find include -name \*.html -delete
 
 	cat <<-EOF > ${PN}.pc
@@ -68,7 +69,7 @@ src_prepare() {
 		Version: ${PV}
 		URL: ${HOMEPAGE}
 		Libs: -L\${libdir} -ltbb -ltbbmalloc
-		Cflags: -I\${includedir}/tbb
+		Cflags: -I\${includedir}
 	EOF
 }
 
@@ -93,7 +94,7 @@ src_test() {
 	if use debug || use examples; then
 		${ccconf}="${myconf} test_debug tbbmalloc_test_debug"
 	fi
-	emake -C src ${ccconf} test_release
+	emake -j1 -C src ${ccconf} test_release
 }
 
 src_install(){
