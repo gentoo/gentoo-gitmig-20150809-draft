@@ -1,8 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/smbtad/smbtad-1.2.4.ebuild,v 1.1 2011/05/09 13:21:27 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/smbtad/smbtad-1.2.6.ebuild,v 1.1 2012/09/13 18:53:38 scarabeus Exp $
 
-EAPI="4"
+EAPI=4
+
 inherit cmake-utils
 
 DESCRIPTION="Data receiver of the SMB Traffic Analyzer project"
@@ -14,15 +15,30 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
-DEPEND="dev-util/cmake
-	dev-db/libdbi"
-RDEPEND="net-fs/samba[smbtav2]"
+DEPEND="
+	dev-db/libdbi
+	dev-libs/iniparser
+	sys-libs/talloc
+"
+RDEPEND="${DEPEND}
+	|| (
+		<net-fs/samba-3.6[smbtav2]
+		>=net-fs/samba-3.6
+	)
+"
 
 DOCS="README AUTHORS"
 
+src_prepare() {
+	sed -i \
+		-e '/CMAKE_C_FLAGS/d' \
+		CMakeLists.txt || die
+}
+
 src_configure() {
-	mycmakeargs="${mycmakeargs} \
-		$(cmake-utils_use debug DEBUG)"
+	local mycmakeargs=(
+		$(cmake-utils_use debug)
+	)
 
 	cmake-utils_src_configure
 }
@@ -32,5 +48,4 @@ src_install() {
 
 	newinitd "${FILESDIR}"/smbtad.rc smbtad
 	newconfd dist/smbtad.conf_example smbtad.conf
-
 }
