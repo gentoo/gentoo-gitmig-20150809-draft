@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.434 2012/09/13 05:22:58 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.435 2012/09/13 05:55:30 zmedico Exp $
+
+  13 Sep 2012; Zac Medico <zmedico@gentoo.org> make.defaults:
+  Add IUSE injection variables to PROFILE_ONLY_VARIABLES.
 
   13 Sep 2012; Zac Medico <zmedico@gentoo.org> make.defaults:
   Populate variables for "Profile IUSE injection" (applies only to ebuilds
