@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xxkb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xxkb/ChangeLog,v 1.22 2012/05/22 20:36:29 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xxkb/ChangeLog,v 1.23 2012/09/13 10:11:46 ago Exp $
+
+  13 Sep 2012; Agostino Sarubbo <ago@gentoo.org> xxkb-1.11-r2.ebuild:
+  Stable for amd64, wrt bug #429242
 
 *xxkb-1.11-r2 (22 May 2012)
 
