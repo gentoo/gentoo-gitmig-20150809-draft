@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/quazip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/quazip/ChangeLog,v 1.20 2012/09/12 09:21:52 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/quazip/ChangeLog,v 1.21 2012/09/13 00:20:59 blueness Exp $
+
+  13 Sep 2012; Anthony G. Basile <blueness@gentoo.org> quazip-0.5.ebuild:
+  Keyword ~ppc64, for bug #383945
 
   12 Sep 2012; Anthony G. Basile <blueness@gentoo.org> quazip-0.5.ebuild:
   Keyword ~ppc, bug #383945
