@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.411 2012/09/13 19:43:09 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.412 2012/09/13 21:35:45 blueness Exp $
+
+  13 Sep 2012; Anthony G. Basile <blueness@gentoo.org> bind-9.9.1_p3.ebuild:
+  Stable ppc, bug #434876
 
   13 Sep 2012; Anthony G. Basile <blueness@gentoo.org> bind-9.9.1_p3.ebuild:
   Stable ppc64, bug #434876
