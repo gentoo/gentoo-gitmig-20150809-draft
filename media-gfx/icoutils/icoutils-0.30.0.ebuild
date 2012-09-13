@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/icoutils/icoutils-0.30.0.ebuild,v 1.1 2012/09/13 12:50:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/icoutils/icoutils-0.30.0.ebuild,v 1.2 2012/09/13 12:52:45 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils
 
-DESCRIPTION="A set of programs for extracting and converting images in Microsoft Windows icon and cursor files (.ico, .cur)."
+DESCRIPTION="A set of programs for extracting and converting images in icon and cursor files (.ico, .cur)"
 HOMEPAGE="http://www.nongnu.org/icoutils/"
 SRC_URI="mirror://nongnu/${PN}/${P}.tar.bz2"
 
