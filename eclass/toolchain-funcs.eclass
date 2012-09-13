@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.115 2012/07/26 16:43:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.116 2012/09/13 05:06:34 vapier Exp $
 
 # @ECLASS: toolchain-funcs.eclass
 # @MAINTAINER:
@@ -360,6 +360,7 @@ ninj() { [[ ${type} == "kern" ]] && echo $1 || echo $2 ; }
 	[[ -z ${host} ]] && host=${CTARGET:-${CHOST}}
 
 	case ${host} in
+		aarch64*)	ninj aarch64 arm;;
 		alpha*)		echo alpha;;
 		arm*)		echo arm;;
 		avr*)		ninj avr32 avr;;
@@ -446,6 +447,8 @@ tc-endian() {
 	host=${host%%-*}
 
 	case ${host} in
+		aarch64*be)	echo big;;
+		aarch64)	echo little;;
 		alpha*)		echo big;;
 		arm*b*)		echo big;;
 		arm*)		echo little;;
