@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-3.4.0.ebuild,v 1.2 2012/06/04 06:51:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-3.4.2-r1.ebuild,v 1.1 2012/09/13 10:37:16 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -65,7 +65,8 @@ pkg_setup() {
 src_install() {
 	gnome2_src_install
 
-	insinto /$(get_libdir)/udev/rules.d
+	local udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
+	insinto "${udevdir}"/rules.d
 	doins "${FILESDIR}"/80-rfkill.rules
 }
 

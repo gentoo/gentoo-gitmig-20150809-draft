@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/gnome-bluetooth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.111 2012/07/04 23:29:09 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.112 2012/09/13 10:37:16 tetromino Exp $
+
+*gnome-bluetooth-3.4.2-r1 (13 Sep 2012)
+
+  13 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -gnome-bluetooth-3.4.0.ebuild, +gnome-bluetooth-3.4.2-r1.ebuild:
+  Use pkgconfig to read udevdir from udev.pc (bug #433910, thanks to Martin von
+  Gagern). Drop old.
 
 *gnome-bluetooth-3.4.2 (04 Jul 2012)
 
