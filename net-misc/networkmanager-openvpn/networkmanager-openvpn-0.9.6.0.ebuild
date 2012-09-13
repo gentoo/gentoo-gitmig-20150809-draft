@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openvpn/networkmanager-openvpn-0.9.0.ebuild,v 1.3 2012/08/14 04:20:06 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openvpn/networkmanager-openvpn-0.9.6.0.ebuild,v 1.1 2012/09/13 09:55:14 tetromino Exp $
 
 EAPI="4"
 GNOME_ORG_MODULE="NetworkManager-${PN##*-}"
@@ -29,8 +29,20 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35
 	virtual/pkgconfig"
 
-# FAIL: (tls-import-data) unexpected 'ca' secret value
-#RESTRICT="test"
+src_prepare() {
+	# Test will fail if the machine doesn't have a particular locale installed
+	# FAIL: (tls-import-data) unexpected 'ca' secret value
+	sed '/test_non_utf8_import (plugin, test_dir)/ d' \
+		-i properties/tests/test-import-export.c || die "sed failed"
+
+	# Drop DEPRECATED flags, bug #385597
+	sed -i -e 's:-D[A-Z_]*DISABLE_DEPRECATED:$(NULL):g' \
+		auth-dialog/Makefile.am auth-dialog/Makefile.in \
+		common/Makefile.am common/Makefile.in \
+		properties/Makefile.am properties/Makefile.in \
+		src/Makefile.am src/Makefile.in \
+		configure.ac configure || die
+}
 
 src_configure() {
 	ECONF="--disable-more-warnings
