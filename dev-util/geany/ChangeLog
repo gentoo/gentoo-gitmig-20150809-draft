@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/geany
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/ChangeLog,v 1.55 2012/06/19 09:33:06 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/ChangeLog,v 1.56 2012/09/13 12:20:38 ago Exp $
+
+  13 Sep 2012; Agostino Sarubbo <ago@gentoo.org> geany-1.22.ebuild:
+  Stable for amd64, wrt bug #429056
 
   19 Jun 2012; Lars Wendler <polynomial-c@gentoo.org> geany-1.22.ebuild:
   Completed list of translations.
