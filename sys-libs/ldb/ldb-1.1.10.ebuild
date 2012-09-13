@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ldb-1.1.10.ebuild,v 1.1 2012/08/21 14:35:07 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ldb-1.1.10.ebuild,v 1.2 2012/09/13 19:09:27 scarabeus Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -39,10 +39,11 @@ pkg_setup() {
 }
 
 src_configure() {
-	waf-utils_src_configure --disable-rpath \
-	--disable-rpath-install --bundled-libraries=NONE \
-	--with-modulesdir="${EPREFIX}"/usr/$(get_libdir)/ldb/modules \
-	--builtin-libraries=NONE
+	waf-utils_src_configure \
+		--disable-rpath \
+		--disable-rpath-install --bundled-libraries=NONE \
+		--with-modulesdir="${EPREFIX}"/usr/$(get_libdir)/ldb/modules \
+		--builtin-libraries=NONE
 }
 
 src_compile(){
@@ -58,7 +59,6 @@ src_test() {
 
 src_install() {
 	waf-utils_src_install
-#	rm "${D}/$(python_get_sitedir)/"_tevent.so
 
 	if use doc; then
 		dohtml -r apidocs/html/*
