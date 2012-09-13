@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/wiggle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/wiggle/ChangeLog,v 1.26 2012/06/09 15:50:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/wiggle/ChangeLog,v 1.27 2012/09/13 10:03:35 ago Exp $
+
+  13 Sep 2012; Agostino Sarubbo <ago@gentoo.org> wiggle-0.9.ebuild:
+  Stable for amd64, wrt bug #429068
 
 *wiggle-0.9 (09 Jun 2012)
 
