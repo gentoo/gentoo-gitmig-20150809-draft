@@ -1,11 +1,6 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.433 2012/09/13 05:21:26 zmedico Exp $
-
-  13 Sep 2012; Zac Medico <zmedico@gentoo.org> make.defaults:
-  Populate variables for "Profile IUSE injection" (applies only to ebuilds
-  which use EAPI 5 or later). These are just minimal settings for ARCH, ELIBC,
-  KERNEL, and USERLAND flags which everyone can probably agree on.
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.434 2012/09/13 05:22:58 zmedico Exp $
 
   13 Sep 2012; Zac Medico <zmedico@gentoo.org> make.defaults:
   Populate variables for "Profile IUSE injection" (applies only to ebuilds
