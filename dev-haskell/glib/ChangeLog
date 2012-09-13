@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/glib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/glib/ChangeLog,v 1.6 2012/09/12 14:53:15 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/glib/ChangeLog,v 1.7 2012/09/13 09:59:17 ago Exp $
+
+  13 Sep 2012; Agostino Sarubbo <ago@gentoo.org> glib-0.12.3.1.ebuild:
+  Stable for amd64, wrt bug #428930
 
   12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> glib-0.12.0.ebuild,
   glib-0.12.3.1.ebuild, glib-0.12.3.ebuild:
