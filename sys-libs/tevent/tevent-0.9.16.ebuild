@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/tevent-0.9.16.ebuild,v 1.1 2012/07/04 09:10:05 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/tevent-0.9.16.ebuild,v 1.2 2012/09/13 19:00:54 scarabeus Exp $
 
 EAPI=4
-PYTHON_DEPEND="2"
+PYTHON_DEPEND="2:2.4"
 
 inherit waf-utils python
 
@@ -13,14 +13,14 @@ SRC_URI="http://samba.org/ftp/tevent/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="amd64 ~arm ~hppa ~ppc ~ppc64 x86 ~amd64-fbsd ~x86-fbsd"
 IUSE=""
 
-RDEPEND=">=dev-lang/python-2.4.2
-	>=sys-libs/talloc-2.0.6[python]"
+RDEPEND=">=sys-libs/talloc-2.0.6[python]"
 
 DEPEND="${RDEPEND}
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
 
 WAF_BINARY="${S}/buildtools/bin/waf"
 PATCHES=( "${FILESDIR}"/add-py-file.patch )
