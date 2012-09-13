@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-bin/nessus-bin-4.4.1.ebuild,v 1.2 2012/06/12 02:55:10 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-bin/nessus-bin-4.4.1.ebuild,v 1.3 2012/09/13 07:14:05 pinkbyte Exp $
 
 inherit multilib rpm
 
@@ -15,7 +15,7 @@ SRC_URI="
 
 RESTRICT="mirror fetch strip"
 
-LICENSE="Nessus-EULA"
+LICENSE="GPL-2 Nessus-EULA"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="X"
