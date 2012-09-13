@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libisoburn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/ChangeLog,v 1.97 2012/09/09 23:52:55 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/ChangeLog,v 1.98 2012/09/13 18:43:07 billie Exp $
+
+  13 Sep 2012; Daniel Pielmeier <billie@gentoo.org> -libisoburn-1.1.8.ebuild,
+  -libisoburn-1.2.2.ebuild:
+  Remove old.
 
   09 Sep 2012; Anthony G. Basile <blueness@gentoo.org> libisoburn-1.2.4.ebuild:
   Stable ppc ppc64, bug #433223
