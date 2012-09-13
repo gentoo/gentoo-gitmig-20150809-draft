@@ -34,6 +34,7 @@
 			DNS information</flag>
 		<flag name="systemd">Use <pkg>sys-apps/systemd</pkg> instead of
 			<pkg>sys-auth/consolekit</pkg> for session tracking</flag>
+		<flag name="vala">Enable bindings for <pkg>dev-lang/vala</pkg></flag>
 		<flag name="wext">Enable support for the deprecated Wext (Wireless
 			Extensions) API; needed for some older drivers (e.g. ipw2200,
 			ndiswrapper)</flag>
