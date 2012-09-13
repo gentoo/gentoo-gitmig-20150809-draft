@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.634 2012/09/13 09:40:46 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.635 2012/09/13 10:27:41 olemarkus Exp $
+
+  13 Sep 2012; Ole Markus With <olemarkus@gentoo.org>
+  files/eblits/src_configure-v54.eblit, php-5.4.6-r2.ebuild, php-5.4.6.ebuild:
+  Use bundled xmlrpc-whatnot. System did not work all that well
 
   13 Sep 2012; Ole Markus With <olemarkus@gentoo.org> metadata.xml:
   Added gd USE flag description to reflect that we are using bundled gd, not

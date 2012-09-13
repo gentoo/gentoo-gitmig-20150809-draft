@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_configure-v54.eblit,v 1.6 2012/09/11 19:36:50 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_configure-v54.eblit,v 1.7 2012/09/13 10:27:41 olemarkus Exp $
 
 eblit-php-src_configure() {
 	addpredict /usr/share/snmp/mibs/.index
@@ -74,7 +74,7 @@ eblit-php-src_configure() {
 	$(use_enable xml xml )
 	$(use_enable xmlreader xmlreader )
 	$(use_enable xmlwriter xmlwriter )
-	$(use_with xmlrpc xmlrpc "${EPREFIX}"/usr)
+	$(use_with xmlrpc xmlrpc)
 	$(use_with xsl xsl "${EPREFIX}"/usr)
 	$(use_enable zip zip )
 	$(use_with zlib zlib "${EPREFIX}"/usr)
