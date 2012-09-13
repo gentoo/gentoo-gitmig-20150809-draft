@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/p11-kit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/ChangeLog,v 1.33 2012/09/12 03:30:22 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/ChangeLog,v 1.34 2012/09/13 01:17:48 blueness Exp $
+
+  13 Sep 2012; Anthony G. Basile <blueness@gentoo.org> p11-kit-0.13.ebuild:
+  Stable arm, bug #434288
 
   12 Sep 2012; Anthony G. Basile <blueness@gentoo.org> p11-kit-0.13.ebuild:
   stable ppc ppc64, bug #434288
