@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ubertooth-9999.ebuild,v 1.10 2012/08/31 03:55:07 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ubertooth-9999.ebuild,v 1.11 2012/09/13 03:03:15 zerochaos Exp $
 
 EAPI="4"
 
@@ -58,15 +58,18 @@ have_clock_debug() {
 }
 
 pkg_setup() {
-	ebegin "arm-none-eabi-gcc"
-	if type -p arm-none-eabi-gcc > /dev/null ; then
-		eend 0
-	else
-		eend 1
-		eerror "Failed to locate 'arm-none-eabi-gcc' in \$PATH. You can install the needed toolchain using:"
-		eerror "  $ crossdev --genv 'USE=\"-openmp -fortran\"' -s4 -t arm-none-eabi"
-		die "arm-none-eabi toolchain not found"
-	fi
+if [[ ${PV} == "9999" ]] ; then
+	#ebegin "arm-none-eabi-gcc"
+	#if type -p arm-none-eabi-gcc > /dev/null ; then
+	#	eend 0
+	#else
+	#	eend 1
+	#	eerror "Failed to locate 'arm-none-eabi-gcc' in \$PATH. You can install the needed toolchain using:"
+	#	eerror "  $ crossdev --genv 'USE=\"-openmp -fortran\"' -s4 -t arm-none-eabi"
+	#	die "arm-none-eabi toolchain not found"
+	#fi
+	ewarn "bypassing live pkg_setup because firmware building doesn't work"
+fi
 	if use python; then
 	#I would prefer like this but we can't multiconditional PYTHON_DEPEND in EAPI4
 	#if use dfu || use specan; then
@@ -90,16 +93,17 @@ src_compile() {
 
 	use python && distutils_src_compile
 	if [[ ${PV} == "9999" ]] ; then
-		cd "${S}"/firmware/bluetooth_rxtx || die
-		if use ubertooth0-firmware; then
-			SVN_REV_NUM="-D'SVN_REV_NUM'=${ESVN_WC_REVISION}" BOARD=UBERTOOTH_ZERO emake -j1
-			mv bluetooth_rxtx.bin bluetooth_rxtx_U0.bin || die
-			emake clean
-		fi
-		if use ubertooth1-firmware; then
-			SVN_REV_NUM="-D'SVN_REV_NUM'=${ESVN_WC_REVISION}" emake -j1
-			mv bluetooth_rxtx.bin bluetooth_rxtx_U1.bin || die
-		fi
+		#cd "${S}"/firmware/bluetooth_rxtx || die
+		#if use ubertooth0-firmware; then
+		#	SVN_REV_NUM="-D'SVN_REV_NUM'=${ESVN_WC_REVISION}" BOARD=UBERTOOTH_ZERO emake -j1
+		#	mv bluetooth_rxtx.bin bluetooth_rxtx_U0.bin || die
+		#	emake clean
+		#fi
+		#if use ubertooth1-firmware; then
+		#	SVN_REV_NUM="-D'SVN_REV_NUM'=${ESVN_WC_REVISION}" emake -j1
+		#	mv bluetooth_rxtx.bin bluetooth_rxtx_U1.bin || die
+		#fi
+		ewarn "bypassing firmware build because the resulting firmware fails"
 	fi
 }
 
@@ -119,8 +123,9 @@ src_install() {
 	insinto /lib/firmware
 	cd "${S}"
 	if [[ ${PV} == "9999" ]] ; then
-		use ubertooth0-firmware && doins firmware/bluetooth_rxtx/bluetooth_rxtx_U0.bin
-	        use ubertooth1-firmware && doins firmware/bluetooth_rxtx/bluetooth_rxtx_U1.bin
+		#use ubertooth0-firmware && doins firmware/bluetooth_rxtx/bluetooth_rxtx_U0.bin
+	        #use ubertooth1-firmware && doins firmware/bluetooth_rxtx/bluetooth_rxtx_U1.bin
+		ewarn "bypassing firmware install because the built firmware doesn't work"
 	else
 		use ubertooth0-firmware && newins ubertooth-zero-firmware-bin/bluetooth_rxtx.bin bluetooth_rxtx_U0.bin
 	        use ubertooth1-firmware && newins ubertooth-one-firmware-bin/bluetooth_rxtx.bin bluetooth_rxtx_U1.bin
@@ -136,14 +141,14 @@ src_install() {
 pkg_postinst() {
 	use python && distutils_pkg_postinst
 
-	if use ubertooth0-firmware || use ubertooth1-firmware; then
-		ewarn "currently the firmware builds using cross dev but is completely"
-		ewarn "NON-FUNCTIONAL.  This is supported for development only."
-		ewarn "If you do not know what you are doing to NOT install this version"
-		ewarn "of the firmware. If you ignore this warning and break your device"
-		ewarn "you can find repair instructions at ${HOMEPAGE}"
-		ewarn "You have been warned."
-	fi
+	#if use ubertooth0-firmware || use ubertooth1-firmware; then
+	#	ewarn "currently the firmware builds using cross dev but is completely"
+	#	ewarn "NON-FUNCTIONAL.  This is supported for development only."
+	#	ewarn "If you do not know what you are doing to NOT install this version"
+	#	ewarn "of the firmware. If you ignore this warning and break your device"
+	#	ewarn "you can find repair instructions at ${HOMEPAGE}"
+	#	ewarn "You have been warned."
+	#fi
 }
 
 pkg_postrm() {
