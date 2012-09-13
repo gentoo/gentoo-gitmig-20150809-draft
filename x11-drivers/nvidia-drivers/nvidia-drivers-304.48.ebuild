@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-304.48.ebuild,v 1.1 2012/09/13 16:37:31 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-304.48.ebuild,v 1.2 2012/09/13 19:49:50 cardoe Exp $
 
 EAPI=4
 
@@ -324,8 +324,8 @@ src_install() {
 	if use tools ; then
 		newicon ${NV_OBJ}/nvidia-settings.png nvidia-drivers-settings.png
 		domenu "${FILESDIR}"/nvidia-drivers-settings.desktop
-		insinto /etc/X11/xinit/xinitrc.d
-		doins "${FILESDIR}"/95-nvidia-settings
+		exeinto /etc/X11/xinit/xinitrc.d
+		doexe "${FILESDIR}"/95-nvidia-settings
 	fi
 
 	#doenvd "${FILESDIR}"/50nvidia-prelink-blacklist
