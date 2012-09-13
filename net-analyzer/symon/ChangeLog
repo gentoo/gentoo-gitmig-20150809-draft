@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/symon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/symon/ChangeLog,v 1.12 2012/07/02 08:32:33 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/symon/ChangeLog,v 1.13 2012/09/13 07:07:53 pinkbyte Exp $
+
+  13 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> files/symon-init.d,
+  files/symux-init.d:
+  Change license of init.d scripts to BSD-2 wrt bug #426002
 
   02 Jul 2012; Matti Bickel <mabi@gentoo.org> -symon-2.84.ebuild:
   remove old version with permission from jer
