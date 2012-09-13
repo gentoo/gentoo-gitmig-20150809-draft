@@ -1,6 +1,12 @@
 # ChangeLog for net-nds/smbldap-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/smbldap-tools/ChangeLog,v 1.36 2012/06/12 20:05:05 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/smbldap-tools/ChangeLog,v 1.37 2012/09/13 19:15:03 scarabeus Exp $
+
+*smbldap-tools-0.9.9 (13 Sep 2012)
+
+  13 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> +smbldap-tools-0.9.9.ebuild,
+  -smbldap-tools-0.9.4-r1.ebuild, smbldap-tools-0.9.8.ebuild:
+  Stabilise 0.9.8 on relevant arches, remove older. Add latest version.
 
   12 Jun 2012; Víctor Ostorga <vostorga@gentoo.org>
   smbldap-tools-0.9.8.ebuild:
@@ -173,4 +179,3 @@
   17 Mar 2005; Christian Andreetta <satya@gentoo.org> :
   new ebuild: split from samba-3.0.11 ebuild. Addresses bugs #77482, #83196,
   #85048
-

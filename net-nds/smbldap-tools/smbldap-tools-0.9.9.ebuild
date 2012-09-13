@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/smbldap-tools/smbldap-tools-0.9.8.ebuild,v 1.3 2012/09/13 19:15:03 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/smbldap-tools/smbldap-tools-0.9.9.ebuild,v 1.1 2012/09/13 19:15:03 scarabeus Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ HOMEPAGE="https://gna.org/projects/smbldap-tools/"
 SRC_URI="http://download.gna.org/smbldap-tools/sources/${PV}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~hppa ia64 ~mips ppc ppc64 s390 sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE=""
 
 RDEPEND="
