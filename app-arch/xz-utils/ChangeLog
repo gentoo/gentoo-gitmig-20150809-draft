@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/xz-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/ChangeLog,v 1.50 2012/09/09 15:59:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/ChangeLog,v 1.51 2012/09/14 02:24:09 ottxor Exp $
+
+  14 Sep 2012; Christoph Junghans <ottxor@gentoo.org> xz-utils-5.0.4.ebuild,
+  xz-utils-9999.ebuild:
+  added prefix support (bug #434854)
 
   09 Sep 2012; Raúl Porcel <armin76@gentoo.org> xz-utils-5.0.4.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #431846

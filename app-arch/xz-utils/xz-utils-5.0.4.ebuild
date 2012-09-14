@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/xz-utils-5.0.4.ebuild,v 1.7 2012/09/09 15:59:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/xz-utils-5.0.4.ebuild,v 1.8 2012/09/14 02:24:09 ottxor Exp $
 
 # Remember: we cannot leverage autotools in this ebuild in order
 #           to avoid circular deps with autotools
 
-EAPI="2"
+EAPI="4"
 
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="http://git.tukaani.org/xz.git"
@@ -15,7 +15,7 @@ if [[ ${PV} == "9999" ]] ; then
 else
 	MY_P="${PN/-utils}-${PV/_}"
 	SRC_URI="http://tukaani.org/xz/${MY_P}.tar.gz"
-	KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+	KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~ppc-aix ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 	S=${WORKDIR}/${MY_P}
 	EXTRA_DEPEND=
 fi
@@ -50,18 +50,16 @@ src_configure() {
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die
-	find "${D}"/usr/ -name liblzma.la -delete || die # dependency_libs=''
-	rm "${D}"/usr/share/doc/xz/COPYING* || die
-	mv "${D}"/usr/share/doc/{xz,${PF}} || die
-	prepalldocs
-	dodoc AUTHORS ChangeLog NEWS README THANKS
+	default
+	find "${ED}"/usr/ -name liblzma.la -delete || die # dependency_libs=''
+	rm "${ED}"/usr/share/doc/xz/COPYING* || die
+	mv "${ED}"/usr/share/doc/{xz,${PF}} || die
 }
 
 pkg_preinst() {
-	preserve_old_lib /usr/$(get_libdir)/liblzma.so.0
+	preserve_old_lib /usr/$(get_libdir)/liblzma$(get_libname 0)
 }
 
 pkg_postinst() {
-	preserve_old_lib_notify /usr/$(get_libdir)/liblzma.so.0
+	preserve_old_lib_notify /usr/$(get_libdir)/liblzma$(get_libname 0)
 }
