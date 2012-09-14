@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libdshconfig
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdshconfig/ChangeLog,v 1.18 2011/12/11 09:18:26 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdshconfig/ChangeLog,v 1.19 2012/09/14 08:41:36 scarabeus Exp $
+
+*libdshconfig-0.20.13 (14 Sep 2012)
+
+  14 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +libdshconfig-0.20.13.ebuild, -libdshconfig-0.20.11.ebuild,
+  libdshconfig-0.20.12.ebuild:
+  Stable .12 on ppc. Prune older. Add latest version to testing and update it to
+  eapi4.
 
   11 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   libdshconfig-0.20.12.ebuild:
