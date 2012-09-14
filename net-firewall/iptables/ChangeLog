@@ -1,6 +1,16 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.274 2012/08/01 06:46:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.275 2012/09/14 17:58:26 axs Exp $
+
+*iptables-1.4.15-r1 (14 Sep 2012)
+*iptables-1.4.14-r1 (14 Sep 2012)
+*iptables-1.4.13-r2 (14 Sep 2012)
+
+  14 Sep 2012; Ian Stakenvicius <axs@gentoo.org> -iptables-1.4.13-r1.ebuild,
+  +iptables-1.4.13-r2.ebuild, +files/iptables-1.4.13-r1.init,
+  -iptables-1.4.14.ebuild, +iptables-1.4.14-r1.ebuild, -iptables-1.4.15.ebuild,
+  +iptables-1.4.15-r1.ebuild:
+  fixed init script to ensure rules save path will always exist on save
 
 *iptables-1.4.15 (01 Aug 2012)
 

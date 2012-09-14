@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.13-r1.ebuild,v 1.2 2012/06/26 04:36:01 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.14-r1.ebuild,v 1.1 2012/09/14 17:58:26 axs Exp $
 
 EAPI="4"
 
@@ -41,7 +41,6 @@ src_configure() {
 		--sbindir="${EPREFIX}/sbin" \
 		--libexecdir="${EPREFIX}/$(get_libdir)" \
 		--enable-devel \
-		--enable-libipq \
 		--enable-shared \
 		$(use_enable static-libs static) \
 		$(use_enable ipv6)
@@ -68,15 +67,15 @@ src_install() {
 	doins include/iptables/internal.h
 
 	keepdir /var/lib/iptables
-	newinitd "${FILESDIR}"/${PN}-1.4.13.init iptables
+	newinitd "${FILESDIR}"/${PN}-1.4.13-r1.init iptables
 	newconfd "${FILESDIR}"/${PN}-1.4.13.confd iptables
 	if use ipv6 ; then
 		keepdir /var/lib/ip6tables
-		newinitd "${FILESDIR}"/iptables-1.4.13.init ip6tables
+		newinitd "${FILESDIR}"/iptables-1.4.13-r1.init ip6tables
 		newconfd "${FILESDIR}"/ip6tables-1.4.13.confd ip6tables
 	fi
 
 	# Move important libs to /lib
-	gen_usr_ldscript -a ip{4,6}tc ipq iptc xtables
+	gen_usr_ldscript -a ip{4,6}tc iptc xtables
 	find "${ED}" -type f -name '*.la' -exec rm -rf '{}' '+' || die "la removal failed"
 }
