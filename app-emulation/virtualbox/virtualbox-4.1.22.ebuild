@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.1.22.ebuild,v 1.1 2012/09/09 15:23:01 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.1.22.ebuild,v 1.2 2012/09/14 10:47:27 polynomial-c Exp $
 
 EAPI=4
 
@@ -138,7 +138,7 @@ src_prepare() {
 	rm -rf kBuild/bin tools
 
 	# Disable things unused or split into separate ebuilds
-	sed -e "s/MY_LIBDIR/$(get_libdir)/" \
+	sed -e "s@MY_LIBDIR@$(get_libdir)@" \
 		"${FILESDIR}"/${PN}-4-localconfig > LocalConfig.kmk || die
 
 	# unset useless/problematic checks in configure
@@ -150,7 +150,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-4.1.4-asneeded.patch"
 
 	# Respect LDFLAGS
-	sed -e "s/_LDFLAGS\.${ARCH}*.*=/& ${LDFLAGS}/g" \
+	sed -e "s@_LDFLAGS\.${ARCH}*.*=@& ${LDFLAGS}@g" \
 		-i Config.kmk src/libs/xpcom18a4/Config.kmk || die
 
 	# We still want to use ${HOME}/.VirtualBox/Machines as machines dir.
@@ -162,14 +162,14 @@ src_prepare() {
 	# Use PAM only when pam USE flag is enbaled (bug #376531)
 	if ! use pam ; then
 		elog "Disabling PAM removes the possibility to use the VRDP features."
-		sed -i 's/^.*VBOX_WITH_PAM/#VBOX_WITH_PAM/' Config.kmk || die
-		sed -i 's;\(.*/auth/Makefile.kmk.*\);#\1;' \
+		sed -i 's@^.*VBOX_WITH_PAM@#VBOX_WITH_PAM@' Config.kmk || die
+		sed -i 's@\(.*/auth/Makefile.kmk.*\)@#\1@' \
 			src/VBox/HostServices/Makefile.kmk || die
 	fi
 
 	# add correct java path
 	if use java ; then
-		sed "s:/usr/lib/jvm/java-6-sun:$(java-config -O):" \
+		sed "s@/usr/lib/jvm/java-6-sun@$(java-config -O)@" \
 			-i "${S}"/Config.kmk || die
 		java-pkg-opt-2_src_prepare
 	fi
@@ -232,7 +232,7 @@ src_install() {
 
 	# Set the right libdir
 	sed -i \
-		-e "s/MY_LIBDIR/$(get_libdir)/" \
+		-e "s@MY_LIBDIR@$(get_libdir)@" \
 		"${D}"/etc/vbox/vbox.cfg || die "vbox.cfg sed failed"
 
 	# Symlink binaries to the shipped wrapper

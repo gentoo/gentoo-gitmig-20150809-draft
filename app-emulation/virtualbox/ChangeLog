@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.128 2012/09/14 06:01:15 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.129 2012/09/14 10:47:27 polynomial-c Exp $
+
+  14 Sep 2012; Lars Wendler <polynomial-c@gentoo.org> virtualbox-4.1.22.ebuild,
+  virtualbox-4.2.0-r1.ebuild:
+  Fixed separators in sed substitute commands to not collide with path
+  separators. Thanks to Zabuldon for reporting this in bug #435000.
 
 *virtualbox-4.2.0-r1 (14 Sep 2012)
 
