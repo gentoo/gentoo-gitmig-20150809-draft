@@ -1,6 +1,14 @@
 # ChangeLog for app-arch/fastjar
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/fastjar/ChangeLog,v 1.22 2010/07/19 01:14:13 josejx Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/fastjar/ChangeLog,v 1.23 2012/09/14 08:14:41 sera Exp $
+
+*fastjar-0.98-r2 (14 Sep 2012)
+
+  14 Sep 2012; Ralph Sennhauser <sera@gentoo.org> -fastjar-0.98.ebuild,
+  +fastjar-0.98-r2.ebuild:
+  EAPI bump for Prefix support by Christoph Junghans <ottxor@gentoo.org>.
+  #434782
+  Remove vulnerable. #325557
 
   19 Jul 2010; Joseph Jezak <josejx@gentoo.org> fastjar-0.98-r1.ebuild:
   Marked ppc stable for bug #325557.
