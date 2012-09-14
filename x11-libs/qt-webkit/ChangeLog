@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-webkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.167 2012/09/14 08:31:58 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.168 2012/09/14 12:11:45 yngwin Exp $
+
+  14 Sep 2012; Ben de Groot <yngwin@gentoo.org>
+  +files/qt-webkit-4.8.3+glib-2.31.patch, qt-webkit-4.8.3.ebuild:
+  Fix patches
 
 *qt-webkit-4.8.3 (14 Sep 2012)
 
