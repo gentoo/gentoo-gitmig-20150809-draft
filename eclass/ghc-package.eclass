@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.33 2012/04/09 18:08:45 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.34 2012/09/14 02:51:23 gienah Exp $
 
 # @ECLASS: ghc-package.eclass
 # @MAINTAINER:
@@ -39,7 +39,11 @@ ghc-getghcpkgbin() {
 	# the ghc-pkg executable changed name in ghc 6.10, as it no longer needs
 	# the wrapper script with the static flags
 	echo '[]' > "${T}/empty.conf"
-	echo "$(ghc-libdir)/ghc-pkg" "--global-conf=${T}/empty.conf"
+	if version_is_at_least "7.5.20120516" "$(ghc-version)"; then
+		echo "$(ghc-libdir)/ghc-pkg" "--global-package-db=${T}/empty.conf"
+	else
+		echo "$(ghc-libdir)/ghc-pkg" "--global-conf=${T}/empty.conf"
+	fi
 }
 
 # @FUNCTION: ghc-version

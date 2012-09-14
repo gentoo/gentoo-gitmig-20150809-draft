@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.397 2012/09/12 22:52:18 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.398 2012/09/14 02:51:23 gienah Exp $
+
+  14 Sep 2012; Mark Wright <gienah@gentoo.org> ghc-package.eclass:
+  ghc-pkg --global-conf parameter is renamed to --global-package-db in ghc
+  7.6.1
 
   12 Sep 2012; Jory A. Pratt <anarchy@gentoo.org> mozconfig-3.eclass:
   Disable crashreporter on all source builds, bug #433962.
