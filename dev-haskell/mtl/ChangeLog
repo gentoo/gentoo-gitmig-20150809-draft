@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/mtl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mtl/ChangeLog,v 1.47 2012/09/12 14:42:20 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mtl/ChangeLog,v 1.48 2012/09/14 10:46:25 gienah Exp $
+
+*mtl-2.1.2 (14 Sep 2012)
+
+  14 Sep 2012; Mark Wright <gienah@gentoo.org> +mtl-2.1.2.ebuild:
+  Bump mtl to 2.1.2
 
   12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> mtl-1.1.0.2.ebuild,
   mtl-1.1.1.1.ebuild, mtl-2.0.1.0.ebuild, mtl-2.1.1.ebuild:
