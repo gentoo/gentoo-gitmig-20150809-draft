@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Net_LDAP
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_LDAP/ChangeLog,v 1.17 2012/09/09 17:08:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_LDAP/ChangeLog,v 1.18 2012/09/14 14:00:31 mabi Exp $
+
+  14 Sep 2012; Matti Bickel <mabi@gentoo.org> -PEAR-Net_LDAP-1.0.0.ebuild:
+  remove old
 
   09 Sep 2012; Raúl Porcel <armin76@gentoo.org> PEAR-Net_LDAP-1.0.0.ebuild,
   PEAR-Net_LDAP-1.1.5.ebuild:
