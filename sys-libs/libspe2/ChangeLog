@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libspe2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libspe2/ChangeLog,v 1.5 2012/09/14 22:41:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libspe2/ChangeLog,v 1.6 2012/09/14 22:44:47 ago Exp $
+
+  14 Sep 2012; Agostino Sarubbo <ago@gentoo.org> libspe2-2.2.80_p95-r1.ebuild,
+  libspe2-2.3.0_p135.ebuild:
+  Fix homepage, wrt bug #435084
 
   14 Sep 2012; Agostino Sarubbo <ago@gentoo.org> -libspe2-2.2.80_p95.ebuild:
   Remove old
