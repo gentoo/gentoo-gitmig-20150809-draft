@@ -1,3 +1,5 @@
+"Submitted" upstream: https://github.com/xelerance/xl2tpd/pull/4
+
 === modified file 'Makefile'
 --- Makefile	2011-09-20 04:44:23 +0000
 +++ Makefile	2011-09-20 04:44:35 +0000
