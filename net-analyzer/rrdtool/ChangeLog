@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.236 2012/09/14 18:30:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.237 2012/09/14 19:01:48 maekke Exp $
+
+  14 Sep 2012; Markus Meier <maekke@gentoo.org> rrdtool-1.4.7-r1.ebuild:
+  arm stable, bug #404433
 
   14 Sep 2012; Markus Meier <maekke@gentoo.org> rrdtool-1.4.7.ebuild:
   arm stable, bug #404433
