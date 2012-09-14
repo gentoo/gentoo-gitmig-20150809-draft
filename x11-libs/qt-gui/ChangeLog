@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/qt-gui
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.199 2012/09/03 07:44:20 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.200 2012/09/14 07:49:53 yngwin Exp $
+
+*qt-gui-4.8.3 (14 Sep 2012)
+
+  14 Sep 2012; Ben de Groot <yngwin@gentoo.org> +files/44qt4-gtkstyle,
+  +qt-gui-4.8.3.ebuild:
+  Version bump. Drop qatomic-x32 patch applied upstream. Drop qpa useflag. Add
+  gtkstyle env.d file (bug #388551).
 
   03 Sep 2012; Davide Pesavento <pesa@gentoo.org> qt-gui-4.8.1-r1.ebuild,
   qt-gui-4.8.2.ebuild:
