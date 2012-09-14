@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/swi-prolog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.344 2012/09/12 12:00:13 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.345 2012/09/14 13:31:55 keri Exp $
+
+  14 Sep 2012; <keri@gentoo.org> swi-prolog-6.2.0.ebuild,
+  swi-prolog-6.2.1.ebuild, swi-prolog-6.3.0.ebuild:
+  Fix arithmetic right-shift when using optimized arithmetic
 
 *swi-prolog-6.2.1 (12 Sep 2012)
 
