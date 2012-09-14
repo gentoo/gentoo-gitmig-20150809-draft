@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/dosfstools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/ChangeLog,v 1.92 2012/09/11 15:47:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/ChangeLog,v 1.93 2012/09/14 18:44:39 vapier Exp $
+
+*dosfstools-3.0.13 (14 Sep 2012)
+
+  14 Sep 2012; Mike Frysinger <vapier@gentoo.org> +dosfstools-3.0.13.ebuild,
+  +files/dosfstools-3.0.13-reserved-sectors-hack.patch:
+  Version bump based on work by Manuel Rüger #434938.  Convert to EAPI=4.  Add
+  hack for embedded systems.
 
   11 Sep 2012; Raúl Porcel <armin76@gentoo.org> dosfstools-3.0.12.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #432330
