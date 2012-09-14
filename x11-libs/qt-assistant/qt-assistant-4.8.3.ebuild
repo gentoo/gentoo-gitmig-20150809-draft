@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.8.3.ebuild,v 1.1 2012/09/14 07:25:23 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.8.3.ebuild,v 1.2 2012/09/14 13:00:59 yngwin Exp $
 
 EAPI=4
 
@@ -29,7 +29,7 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 PATCHES=(
-	"${FILESDIR}/${P}+gcc-4.7.patch"
+	"${FILESDIR}/${PN}-4.8.2+gcc-4.7.patch"
 )
 
 pkg_setup() {
