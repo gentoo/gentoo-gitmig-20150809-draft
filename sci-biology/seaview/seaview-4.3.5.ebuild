@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/seaview-4.3.5.ebuild,v 1.1 2012/08/26 13:41:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/seaview-4.3.5.ebuild,v 1.2 2012/09/14 11:46:14 jlec Exp $
 
 EAPI=4
 
@@ -16,7 +16,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE="+xft"
 
 DEPEND="
+	sys-libs/zlib
 	x11-libs/fltk:1
+	x11-libs/libX11
 	xft? (
 		x11-libs/libXft
 		x11-libs/fltk:1[xft] )"
