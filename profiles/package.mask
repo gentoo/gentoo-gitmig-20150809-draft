@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14102 2012/09/14 14:38:12 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14103 2012/09/14 18:05:47 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -39,6 +39,7 @@
 # Julian Ospald <hasufell@gentoo.org> (12 Sep 2012)
 # outdated security package
 www-client/torbrowser
+www-misc/torbrowser-profile
 
 # Davide Pesavento <pesa@gentoo.org> (11 Sep 2012)
 # Mask beta version.
