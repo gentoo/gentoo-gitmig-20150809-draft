@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wdiff
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/ChangeLog,v 1.73 2012/09/13 11:27:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/ChangeLog,v 1.74 2012/09/14 18:36:25 maekke Exp $
+
+  14 Sep 2012; Markus Meier <maekke@gentoo.org> wdiff-1.1.2.ebuild:
+  arm stable, bug #428906
 
   13 Sep 2012; Agostino Sarubbo <ago@gentoo.org> wdiff-1.1.2.ebuild:
   Stable for amd64, wrt bug #428906
