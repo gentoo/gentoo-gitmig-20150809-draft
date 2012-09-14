@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-1.2.0.ebuild,v 1.7 2012/05/31 16:34:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-1.2.0.ebuild,v 1.8 2012/09/14 05:10:46 ferringb Exp $
 
 EAPI=3
 inherit eutils games
@@ -94,7 +94,6 @@ src_compile() {
 }
 
 src_test() {
-	vecho ">>> Test phase [test]: ${CATEGORY}/${PF}"
 	emake -j1 test || die "Make test failed. See above for details."
 }
 

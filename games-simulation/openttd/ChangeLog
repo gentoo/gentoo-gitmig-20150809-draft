@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/openttd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.128 2012/09/12 02:05:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.129 2012/09/14 05:10:46 ferringb Exp $
+
+  14 Sep 2012; Brian Harring <ferringb@gentoo.org> openttd-1.2.0.ebuild,
+  openttd-1.2.2.ebuild:
+  Drop vecho usage, and ebuild attempt to do UI the PM does for test phase.
 
   12 Sep 2012; Michael Sterrett <mr_bones_@gentoo.org> openttd-1.2.2.ebuild:
   restrict the test since it requires a graphics set to run
