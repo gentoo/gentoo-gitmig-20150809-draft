@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt-webkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.166 2012/07/30 05:20:09 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.167 2012/09/14 08:31:58 yngwin Exp $
+
+*qt-webkit-4.8.3 (14 Sep 2012)
+
+  14 Sep 2012; Ben de Groot <yngwin@gentoo.org> +qt-webkit-4.8.3.ebuild:
+  Version bump. Drop qatomic-x32 patch applied upstream. Drop qpa useflag.
 
   30 Jul 2012; Davide Pesavento <pesa@gentoo.org>
   +files/4.8.2-javascriptcore-x32.patch, qt-webkit-4.8.2.ebuild:
