@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/glimmerhmm/glimmerhmm-3.0.1-r1.ebuild,v 1.1 2011/06/20 08:32:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/glimmerhmm/glimmerhmm-3.0.1-r1.ebuild,v 1.2 2012/09/14 14:20:49 ago Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.cbcb.umd.edu/pub/software/glimmerhmm/${MY_P}-${PV}.tar.gz"
 LICENSE="Artistic"
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 src_unpack() {
 	unpack ${A}
