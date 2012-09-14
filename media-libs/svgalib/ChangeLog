@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/svgalib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.97 2012/07/22 08:57:14 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.98 2012/09/14 20:29:28 pacho Exp $
+
+  14 Sep 2012; Pacho Ramos <pacho@gentoo.org> -files/svgalib-1.9.25-fPIC.patch,
+  -files/svgalib-1.9.25-linux2.6.36.patch, -svgalib-1.9.25-r1.ebuild:
+  Drop old, thanks to Andrew Savchenko for remembering.
 
   22 Jul 2012; Jeff Horelick <jdhore@gentoo.org> svgalib-1.9.25-r4.ebuild:
   marked x86 per bug 427542
