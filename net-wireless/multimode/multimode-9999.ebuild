@@ -1,17 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/multimode/multimode-9999.ebuild,v 1.2 2012/09/13 23:40:07 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/multimode/multimode-9999.ebuild,v 1.3 2012/09/14 18:03:27 mr_bones_ Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.6"
 
 inherit python
-
-DESCRIPTION="multimode radio decoder for rtl-sdr devices using gnuradio"
-HOMEPAGE="https://www.cgran.org/browser/projects/multimode/trunk"
-LICENSE="BSD"
-SLOT="0"
-IUSE=""
 
 if [[ ${PV} == "9999" ]] ; then
 	ESVN_REPO_URI="https://www.cgran.org/svn/projects/multimode/trunk"
@@ -21,6 +15,12 @@ else
 	SRC_URI="http://www.sbrac.org/files/${PN}-r${PV}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
 fi
+
+DESCRIPTION="multimode radio decoder for rtl-sdr devices using gnuradio"
+HOMEPAGE="https://www.cgran.org/browser/projects/multimode/trunk"
+LICENSE="BSD"
+SLOT="0"
+IUSE=""
 
 DEPEND=""
 RDEPEND="${DEPEND}
