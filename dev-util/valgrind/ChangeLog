@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.156 2012/09/13 13:19:55 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.157 2012/09/14 14:14:32 ago Exp $
+
+  14 Sep 2012; Agostino Sarubbo <ago@gentoo.org> valgrind-3.7.0-r4.ebuild:
+  Stable for amd64, wrt bug #434884
 
   13 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
   -valgrind-3.7.0-r3.ebuild:
