@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.127 2012/09/14 04:16:41 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.128 2012/09/14 06:01:15 polynomial-c Exp $
+
+*virtualbox-4.2.0-r1 (14 Sep 2012)
+
+  14 Sep 2012; Lars Wendler <polynomial-c@gentoo.org> -virtualbox-4.2.0.ebuild,
+  +virtualbox-4.2.0-r1.ebuild:
+  Revbumped 4.2.0 version because I forgot to pax-mark VBoxSVC.
 
   14 Sep 2012; Lars Wendler <polynomial-c@gentoo.org> virtualbox-4.2.0.ebuild,
   +files/virtualbox-4.2.0-nopie.patch:

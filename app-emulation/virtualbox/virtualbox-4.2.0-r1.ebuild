@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.2.0.ebuild,v 1.2 2012/09/14 04:16:41 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.2.0-r1.ebuild,v 1.1 2012/09/14 06:01:15 polynomial-c Exp $
 
 EAPI=4
 
@@ -273,6 +273,9 @@ src_install() {
 	# VBoxNetAdpCtl and VBoxNetDHCP binaries need to be suid root in any case..
 	fperms 4750 /usr/$(get_libdir)/${PN}/VBoxNetAdpCtl
 	fperms 4750 /usr/$(get_libdir)/${PN}/VBoxNetDHCP
+
+	# VBoxSVC needs to be pax-marked (bug #403453)
+	pax-mark -m "${D}"/usr/$(get_libdir)/${PN}/VBoxSVC || die
 
 	if ! use headless ; then
 		for each in VBox{SDL,Headless} ; do
