@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/nemiver
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/ChangeLog,v 1.43 2012/05/21 18:50:09 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/ChangeLog,v 1.44 2012/09/14 20:53:09 pacho Exp $
+
+*nemiver-0.9.3 (14 Sep 2012)
+
+  14 Sep 2012; Pacho Ramos <pacho@gentoo.org> +nemiver-0.9.3.ebuild:
+  Version bump.
 
   21 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   nemiver-0.9.2.ebuild:
@@ -193,4 +198,3 @@
   +files/nemiver-0.2.0-breakpoints-fix.diff, +metadata.xml,
   +nemiver-0.2.0.ebuild:
   adding nemiver-0.2.0 (see bug #156895)
-
