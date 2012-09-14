@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/haddock
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.92 2012/08/20 02:06:01 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.93 2012/09/14 07:03:20 qnikst Exp $
+
+  14 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> haddock-2.10.0-r1.ebuild,
+  haddock-2.10.0.ebuild, haddock-2.4.2.ebuild, haddock-2.6.1.ebuild,
+  haddock-2.9.2.ebuild:
+  adding mirror://hackage
 
   20 Aug 2012; Christoph Junghans <ottxor@gentoo.org> haddock-2.10.0-r1.ebuild:
   added prefix keywords
