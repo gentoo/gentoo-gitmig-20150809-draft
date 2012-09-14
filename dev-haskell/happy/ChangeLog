@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/happy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.59 2012/09/14 07:06:28 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.60 2012/09/14 13:00:49 gienah Exp $
+
+  14 Sep 2012; Mark Wright <gienah@gentoo.org>
+  +files/happy-1.18.9-ghc-7.5.patch, happy-1.18.9.ebuild:
+  Patch happy 1.18.9 build for ghc 7.6.1
 
   14 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> happy-1.18.2.ebuild,
   happy-1.18.4.ebuild, happy-1.18.6.ebuild, happy-1.18.9.ebuild:
