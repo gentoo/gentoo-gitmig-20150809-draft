@@ -1,12 +1,12 @@
 # ChangeLog for app-admin/eselect
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.209 2012/09/14 21:22:34 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.210 2012/09/14 22:39:06 ulm Exp $
 
 *eselect-1.3.2-r1 (14 Sep 2012)
 
   14 Sep 2012; Ulrich Müller <ulm@gentoo.org> -eselect-1.3.2.ebuild,
   +eselect-1.3.2-r1.ebuild, +files/eselect-1.3.2-eroot.patch:
-  Remove trailing backslash from ROOT only if EPREFIX is set. This guarantees
+  Remove trailing slash from ROOT only if EPREFIX is set. This guarantees
   that EROOT is equal to ROOT for empty EPREFIX, which is assumed by at least
   one external module. See also bug 434956.
 
