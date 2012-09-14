@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jasper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/ChangeLog,v 1.67 2012/09/06 15:56:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/ChangeLog,v 1.68 2012/09/14 18:35:11 maekke Exp $
+
+  14 Sep 2012; Markus Meier <maekke@gentoo.org> jasper-1.900.1-r5.ebuild:
+  arm stable, bug #429120
 
   06 Sep 2012; Agostino Sarubbo <ago@gentoo.org> jasper-1.900.1-r5.ebuild:
   Stable for amd64, wrt bug #429120
