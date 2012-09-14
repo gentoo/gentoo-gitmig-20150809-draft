@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt-phonon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/ChangeLog,v 1.125 2012/09/11 10:47:23 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/ChangeLog,v 1.126 2012/09/14 08:17:40 yngwin Exp $
+
+*qt-phonon-4.8.3 (14 Sep 2012)
+
+  14 Sep 2012; Ben de Groot <yngwin@gentoo.org> +qt-phonon-4.8.3.ebuild:
+  Version bump. Drop qatomic-x32 patch applied upstream. Drop qpa useflag.
 
   11 Sep 2012; Johannes Huber <johu@gentoo.org> qt-phonon-4.7.4.ebuild,
   qt-phonon-4.8.1.ebuild, qt-phonon-4.8.2.ebuild:
