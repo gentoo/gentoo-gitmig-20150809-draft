@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/powertop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.61 2012/09/11 12:22:31 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.62 2012/09/14 13:33:55 zerochaos Exp $
+
+  14 Sep 2012; Rick Farina <zerochaos@gentoo.org> powertop-2.1-r1.ebuild:
+  bug #417485 requested xset become optional for users without X
 
   11 Sep 2012; Rick Farina <zerochaos@gentoo.org> powertop-2.1-r1.ebuild:
   addressing some concerns from bug# 414803
