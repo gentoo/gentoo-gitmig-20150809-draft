@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt-assistant
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.149 2012/07/19 19:48:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.150 2012/09/14 07:25:23 yngwin Exp $
+
+*qt-assistant-4.8.3 (14 Sep 2012)
+
+  14 Sep 2012; Ben de Groot <yngwin@gentoo.org> +qt-assistant-4.8.3.ebuild:
+  Version bump. Drop qatomic-x32 patch applied upstream. Drop qpa useflag.
 
   19 Jul 2012; Markus Meier <maekke@gentoo.org> qt-assistant-4.8.2-r1.ebuild:
   arm stable, bug #424625

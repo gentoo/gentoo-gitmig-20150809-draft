@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt-bearer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-bearer/ChangeLog,v 1.15 2012/07/19 20:44:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-bearer/ChangeLog,v 1.16 2012/09/14 07:28:19 yngwin Exp $
+
+*qt-bearer-4.8.3 (14 Sep 2012)
+
+  14 Sep 2012; Ben de Groot <yngwin@gentoo.org> +qt-bearer-4.8.3.ebuild:
+  Version bump. Drop qatomic-x32 patch applied upstream. Drop qpa useflag.
 
   19 Jul 2012; Markus Meier <maekke@gentoo.org> qt-bearer-4.8.2.ebuild:
   arm stable, bug #424625
@@ -52,4 +57,3 @@
   19 Apr 2012; Davide Pesavento <pesa@gentoo.org> +metadata.xml,
   +qt-bearer-4.8.1.ebuild:
   Initial commit of QtNetwork bearer plugins (bug #348430).
-
