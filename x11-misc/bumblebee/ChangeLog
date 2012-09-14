@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/bumblebee
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bumblebee/ChangeLog,v 1.8 2012/06/20 12:49:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bumblebee/ChangeLog,v 1.9 2012/09/14 20:24:21 pacho Exp $
+
+*bumblebee-3.0.1 (14 Sep 2012)
+
+  14 Sep 2012; Pacho Ramos <pacho@gentoo.org> +bumblebee-3.0.1.ebuild:
+  Version bump, bug #433381 by mrueg.
 
   20 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> bumblebee-3.0-r2.ebuild:
   Trivial commit, sort the logic and use ED instead of D.
@@ -41,4 +46,3 @@
   +files/bumblebee.nvidia-confd, +metadata.xml:
   Initial commit from bumblebee overlay, this fixes bug #384083. Thanks a lot to
   mva and rei4dan for their work.
-
