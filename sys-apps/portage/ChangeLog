@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1093 2012/09/12 08:25:42 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1094 2012/09/14 02:53:05 zmedico Exp $
+
+*portage-2.1.11.17 (14 Sep 2012)
+
+  14 Sep 2012; Zac Medico <zmedico@gentoo.org> +portage-2.1.11.17.ebuild,
+  -portage-2.1.11.14.ebuild:
+  2.1.11.17 version bump. This fixes a bug #373209 (bind FEATURES=-test to
+  USE=-test). Bug #431026 tracks all bugs fixed since portage-2.1.11.9.
 
 *portage-2.2.0_alpha127 (12 Sep 2012)
 
