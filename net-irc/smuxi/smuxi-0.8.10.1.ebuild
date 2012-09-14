@@ -1,9 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/smuxi/smuxi-0.8.9.2.ebuild,v 1.1 2012/06/30 11:43:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/smuxi/smuxi-0.8.10.1.ebuild,v 1.1 2012/09/14 21:01:02 pacho Exp $
 
-EAPI="4"
-
+EAPI=4
 inherit base mono eutils
 
 DESCRIPTION="A flexible, irssi-like and user-friendly IRC client for the Gnome Desktop."
@@ -12,7 +11,7 @@ SRC_URI="http://www.smuxi.org/jaws/data/files/${P}.tar.gz"
 
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="dbus debug gnome libnotify"
+IUSE="dbus debug gnome libnotify spell"
 LICENSE="|| ( GPL-2 GPL-3 )"
 
 RDEPEND=">=dev-lang/mono-2.0
@@ -27,7 +26,8 @@ RDEPEND=">=dev-lang/mono-2.0
 		 >=dev-dotnet/gconf-sharp-2.12
 		 >=dev-dotnet/glade-sharp-2.12
 		 >=dev-dotnet/glib-sharp-2.12 )
-	libnotify? ( dev-dotnet/notify-sharp )"
+	libnotify? ( dev-dotnet/notify-sharp )
+	spell? ( >=app-text/gtkspell-2.0.9:2 )"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.25
 	>=sys-devel/gettext-0.17
@@ -43,5 +43,6 @@ src_configure() {
 		--with-db4o=included \
 		$(use_enable debug)		\
 		$(use_enable gnome frontend-gnome) \
-		$(use_with libnotify notify)
+		$(use_with libnotify notify) \
+		$(use_with spell gtkspell)
 }
