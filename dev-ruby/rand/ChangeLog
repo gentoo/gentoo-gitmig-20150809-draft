@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rand
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rand/ChangeLog,v 1.6 2012/09/15 08:58:41 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rand/ChangeLog,v 1.7 2012/09/15 09:01:03 graaff Exp $
+
+  15 Sep 2012; Hans de Graaff <graaff@gentoo.org> rand-0.9.1.ebuild:
+  Remove useless dependency. Comment lack of ruby19 keyword.
 
   15 Sep 2012; Hans de Graaff <graaff@gentoo.org> -rand-0.9.0-r1.ebuild:
   Cleanup.
