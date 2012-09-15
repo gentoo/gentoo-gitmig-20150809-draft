@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-1.9.13.ebuild,v 1.11 2012/05/04 03:33:11 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-1.9.13.ebuild,v 1.12 2012/09/15 03:38:18 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -26,8 +26,8 @@ RDEPEND="
 	>=x11-libs/gtksourceview-2.4:2.0
 
 	gnome? (
-		gnome-extra/gnome-utils
-		>=gnome-extra/gucharmap-2 )
+		=gnome-extra/gnome-utils-2*
+		>=gnome-extra/gucharmap-2:0 )
 	http? ( >=dev-libs/json-glib-0.7.6 )
 	spell? ( >=app-text/gtkspell-2.0.2:2 )"
 DEPEND="${RDEPEND}

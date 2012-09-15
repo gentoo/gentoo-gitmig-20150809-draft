@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-2.90.8.ebuild,v 1.3 2012/08/13 18:43:17 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-2.90.8.ebuild,v 1.4 2012/09/15 03:38:18 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -31,7 +31,7 @@ COMMON_DEPEND="
 	gnome-base/gsettings-desktop-schemas
 
 	gnome? (
-		gnome-extra/gnome-utils
+		|| ( app-dicts/gnome-dictionary =gnome-extra/gnome-utils-3.2* )
 		x11-libs/gtk+:3[introspection] )
 	spell? ( app-text/gtkspell:3 )"
 RDEPEND="${COMMON_DEPEND}
