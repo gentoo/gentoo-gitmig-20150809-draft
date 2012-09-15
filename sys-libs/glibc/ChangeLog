@@ -1,5 +1,8 @@
 # ChangeLog for sys-libs/glibc
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.889 2012/09/12 00:48:49 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.890 2012/09/15 23:13:03 vapier Exp $
+
+  15 Sep 2012; Mike Frysinger <vapier@gentoo.org> glibc-2.16.0.ebuild:
+  Drop PaX patch as it doesn't seem to be needed anymore #431810.
 
   12 Sep 2012; Anthony G. Basile <blueness@gentoo.org> glibc-2.15-r2.ebuild:
   Stable ppc, bug #430346
