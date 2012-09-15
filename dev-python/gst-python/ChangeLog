@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gst-python
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.110 2012/09/14 18:28:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.111 2012/09/15 18:17:57 armin76 Exp $
+
+  15 Sep 2012; Raúl Porcel <armin76@gentoo.org> gst-python-0.10.22.ebuild:
+  alpha/ia64/sparc stable wrt #432946
 
   14 Sep 2012; Markus Meier <maekke@gentoo.org> gst-python-0.10.22.ebuild:
   arm stable, bug #432946
