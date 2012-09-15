@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/cdk-perl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/cdk-perl/ChangeLog,v 1.26 2012/09/12 11:16:03 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/cdk-perl/ChangeLog,v 1.27 2012/09/15 18:47:14 armin76 Exp $
+
+  15 Sep 2012; Raúl Porcel <armin76@gentoo.org> cdk-perl-20031210.ebuild,
+  cdk-perl-20120324.ebuild:
+  Drop alpha/ia64/s390/sparc keywords
 
   12 Sep 2012; Johannes Huber <johu@gentoo.org> cdk-perl-20120324.ebuild:
   Stable for x86, wrt bug #429016
