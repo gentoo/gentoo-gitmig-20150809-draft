@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.14.21.ebuild,v 1.10 2012/05/05 02:16:32 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.14.24.ebuild,v 1.1 2012/09/15 09:28:36 pacho Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 PYTHON_DEPEND="python? 2:2.6"
@@ -13,35 +13,28 @@ inherit autotools eutils gnome2 python multilib
 
 DESCRIPTION="The GNOME Structured File Library"
 HOMEPAGE="http://projects.gnome.org/libgsf/"
-SRC_URI="${SRC_URI}
-	mirror://gentoo/gnome-mplayer-0.9.6-gconf-2.m4.tgz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
-IUSE="bzip2 doc gnome gtk python thumbnail"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+IUSE="bzip2 doc gtk +introspection python"
 
-RDEPEND="
-	>=dev-libs/glib-2.16:2
+RDEPEND=">=dev-libs/glib-2.26:2
 	>=dev-libs/libxml2-2.4.16:2
 	sys-libs/zlib
 	bzip2? ( app-arch/bzip2 )
-	gnome? ( >=gnome-base/libbonobo-2 )
 	gtk? ( x11-libs/gtk+:2 )
+	introspection? ( >=dev-libs/gobject-introspection-1.0.0 )
 	python? (
 		>=dev-python/pygobject-2.10:2
-		>=dev-python/pygtk-2.10:2 )
-	thumbnail? ( >=gnome-base/gconf-2:2 )"
+		>=dev-python/pygtk-2.10:2 )"
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35.0
 	dev-util/gtk-doc-am
+	dev-libs/gobject-introspection-common
 	virtual/pkgconfig
-	doc? ( >=dev-util/gtk-doc-1 )"
-
-PDEPEND="gnome? ( || (
-	media-gfx/imagemagick
-	media-gfx/graphicsmagick[imagemagick] ) )"
+	doc? ( >=dev-util/gtk-doc-1.12 )"
 
 pkg_setup() {
 	DOCS="AUTHORS BUGS ChangeLog HACKING NEWS README TODO"
@@ -49,31 +42,23 @@ pkg_setup() {
 		--with-gio
 		--disable-static
 		$(use_with bzip2 bz2)
-		$(use_with gnome gnome-vfs)
-		$(use_with gnome bonobo)
 		$(use_with python)
-		$(use_with gtk gdk-pixbuf)
-		$(use_with thumbnail gconf)"
+		$(use_with gtk gdk-pixbuf)"
 
-	if use python; then
-		python_pkg_setup
-	fi
+	use python && python_pkg_setup
 }
 
 src_prepare() {
-	gnome2_src_prepare
-
-	cp "${WORKDIR}/gnome-mplayer-0.9.6-gconf-2.m4" m4/ \
-		|| die "failed to copy gconf macro"
+	# Drop DEPRECATED flags
+	sed -i -e "s/ -DG_DISABLE_DEPRECATED//" configure.in configure || die
 
 	# Python bindings are built/installed manually.
-	sed -e "/SUBDIRS += python/d" -i Makefile.am
+	sed -e "/SUBDIRS += python/d" -i Makefile.am || die
 
-	intltoolize --force --copy --automake || die "intltoolize failed"
+	use python && python_clean_py-compile_files
+
 	eautoreconf
-
-	# disable pyc compiling
-	>py-compile
+	gnome2_src_prepare
 }
 
 src_compile() {
