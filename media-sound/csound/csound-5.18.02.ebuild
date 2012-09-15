@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/csound/csound-5.18.02.ebuild,v 1.1 2012/09/02 03:28:04 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/csound/csound-5.18.02.ebuild,v 1.2 2012/09/15 05:49:58 radhermit Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -12,7 +12,7 @@ MY_P="${MY_PN}${PV}"
 
 DESCRIPTION="A sound design and signal processing system providing facilities for composition and performance"
 HOMEPAGE="http://csounds.com/"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.zip"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -52,7 +52,6 @@ RDEPEND=">=media-libs/libsndfile-1.0.16
 		>=dev-lang/tk-8.5 )
 	utils? ( !media-sound/snd )"
 DEPEND="${RDEPEND}
-	app-arch/unzip
 	sys-devel/flex
 	virtual/yacc
 	chua? ( dev-libs/boost )
