@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/telepathy-mission-control-5.12.0-r1.ebuild,v 1.1 2012/07/07 13:06:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/telepathy-mission-control-5.12.2.ebuild,v 1.1 2012/09/15 09:01:21 pacho Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -15,13 +15,13 @@ SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
-IUSE="gnome-keyring networkmanager +upower"
+IUSE="connman gnome-keyring networkmanager +upower"
 # IUSE="test"
 
-# Fixme: connman support
 RDEPEND=">=net-libs/telepathy-glib-0.17.5
 	>=dev-libs/dbus-glib-0.82
 	>=dev-libs/glib-2.30:2
+	connman? ( net-misc/connman )
 	gnome-keyring? ( gnome-base/libgnome-keyring )
 	networkmanager? ( >=net-misc/networkmanager-0.7 )
 	upower? ( >=sys-power/upower-0.9.11 )"
@@ -49,6 +49,7 @@ src_configure() {
 		--disable-mcd-plugins \
 		--disable-schemas-compile \
 		$(use_enable gnome-keyring) \
+		$(use_with connman connectivity connman) \
 		$(use_with networkmanager connectivity nm) \
 		$(use_enable upower)
 }
