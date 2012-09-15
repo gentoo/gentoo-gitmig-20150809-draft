@@ -1,5 +1,8 @@
 
 
+  15 Sep 2012; Anthony G. Basile <blueness@gentoo.org> elfix-0.5.2.ebuild:
+  Stable arm ppc ppc64, bug #435114
+
   11 Sep 2012; Raúl Porcel <armin76@gentoo.org> elfix-0.5.2.ebuild:
   Add ~alpha/~ia64/~sparc wrt #428558
 
