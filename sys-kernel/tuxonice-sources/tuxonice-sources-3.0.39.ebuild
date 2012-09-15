@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/tuxonice-sources-3.0.33.ebuild,v 1.1 2012/06/15 20:01:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/tuxonice-sources-3.0.39.ebuild,v 1.1 2012/09/15 10:13:17 pacho Exp $
 
 EAPI="4"
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="25"
+K_GENPATCHES_VER="28"
 
 inherit kernel-2
 detect_version
@@ -21,14 +21,8 @@ TUXONICE_VERSION=""
 TUXONICE_TARGET="3.0"
 
 # Because "current" patches can change without notifying, we need to supply them
-if [[ -n "${TUXONICE_SNAPSHOT}" ]]; then
-	TUXONICE_SRC="http://dev.gentoo.org/~pacho/tuxonice/current-tuxonice-for-${TUXONICE_TARGET}_${TUXONICE_SNAPSHOT}.patch"
-	UNIPATCH_LIST="${DISTDIR}/current-tuxonice-for-${TUXONICE_TARGET}_${TUXONICE_SNAPSHOT}.patch.bz2"
-else
-	TUXONICE_SRC="http://www.tuxonice.net/files/tuxonice-${TUXONICE_VERSION}-for-${TUXONICE_TARGET}.patch"
-	UNIPATCH_LIST="${DISTDIR}/tuxonice-${TUXONICE_VERSION}-for-${TUXONICE_TARGET}.patch.bz2"
-fi
-
+TUXONICE_SRC="http://dev.gentoo.org/~pacho/tuxonice/current-tuxonice-for-${TUXONICE_TARGET}_${TUXONICE_SNAPSHOT}.patch"
+UNIPATCH_LIST="${DISTDIR}/current-tuxonice-for-${TUXONICE_TARGET}_${TUXONICE_SNAPSHOT}.patch.bz2"
 TUXONICE_URI="${TUXONICE_SRC}.bz2"
 
 UNIPATCH_STRICTORDER="yes"
@@ -44,9 +38,3 @@ K_EXTRAELOG="If there are issues with this kernel, please direct any
 queries to the tuxonice-users mailing list:
 http://lists.tuxonice.net/mailman/listinfo/tuxonice-users/"
 K_SECURITY_UNSUPPORTED="1"
-
-pkg_postinst() {
-	kernel-2_pkg_postinst
-	einfo "For more info on this patchset, and how to report problems, see:"
-	einfo "${HOMEPAGE}"
-}
