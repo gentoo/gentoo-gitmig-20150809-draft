@@ -1,0 +1,9 @@
+# ChangeLog for x11-themes/ubuntu-wallpapers
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ubuntu-wallpapers/ChangeLog,v 1.1 2012/09/15 14:06:58 pacho Exp $
+
+*ubuntu-wallpapers-0.34.1 (15 Sep 2012)
+
+  15 Sep 2012; Pacho Ramos <pacho@gentoo.org> +metadata.xml,
+  +ubuntu-wallpapers-0.34.1.ebuild:
+  Add Ubuntu wallpapers.
