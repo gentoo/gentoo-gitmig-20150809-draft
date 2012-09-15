@@ -1,6 +1,13 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.398 2012/09/14 02:51:23 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.399 2012/09/15 16:16:53 zmedico Exp $
+
+  15 Sep 2012; Zac Medico <zmedico@gentoo.org> cannadic.eclass,
+  cmake-utils.eclass, confutils.eclass, embassy.eclass, eutils.eclass,
+  games.eclass, gnatbuild.eclass, gnuconfig.eclass, libtool.eclass,
+  linux-mod.eclass, nsplugins.eclass, perl-module.eclass, qmail.eclass,
+  toolchain-funcs.eclass:
+  Remove redundant DESCRIPTION variable settings.
 
   14 Sep 2012; Mark Wright <gienah@gentoo.org> ghc-package.eclass:
   ghc-pkg --global-conf parameter is renamed to --global-package-db in ghc

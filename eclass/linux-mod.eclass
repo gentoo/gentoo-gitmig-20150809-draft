@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.107 2012/08/30 23:52:59 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.108 2012/09/15 16:16:53 zmedico Exp $
 
 # @ECLASS: linux-mod.eclass
 # @MAINTAINER:
@@ -127,7 +127,6 @@ EXPORT_FUNCTIONS pkg_setup pkg_preinst pkg_postinst src_install src_compile pkg_
 
 IUSE="kernel_linux"
 SLOT="0"
-DESCRIPTION="Based on the $ECLASS eclass"
 RDEPEND="kernel_linux? ( virtual/modutils )"
 DEPEND="${RDEPEND}
 	sys-apps/sed

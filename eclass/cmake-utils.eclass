@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.79 2012/05/08 21:27:10 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.80 2012/09/15 16:16:53 zmedico Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -60,8 +60,6 @@ case ${EAPI:-0} in
 	*) die "Unknown EAPI, Bug eclass maintainers." ;;
 esac
 EXPORT_FUNCTIONS ${CMAKE_EXPF}
-
-: ${DESCRIPTION:="Based on the ${ECLASS} eclass"}
 
 if [[ ${PN} != cmake ]]; then
 	CMAKEDEPEND+=" >=dev-util/cmake-${CMAKE_MIN_VERSION}"
