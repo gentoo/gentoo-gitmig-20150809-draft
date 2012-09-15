@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/itstool/itstool-1.2.0.ebuild,v 1.1 2012/06/25 04:05:35 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/itstool/itstool-1.2.0.ebuild,v 1.2 2012/09/15 15:00:56 blueness Exp $
 
 EAPI="4"
 PYTHON_USE_WITH="xml"
@@ -15,7 +15,7 @@ SRC_URI="http://files.itstool.org/itstool/${P}.tar.bz2"
 # files in /usr/share/itstool/its are as-is
 LICENSE="GPL-3 as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~mips ~x86"
 IUSE=""
 
 RDEPEND="dev-libs/libxml2[python]"
