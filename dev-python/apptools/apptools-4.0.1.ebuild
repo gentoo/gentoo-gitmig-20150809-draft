@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apptools/apptools-4.0.1.ebuild,v 1.4 2012/09/13 11:30:15 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apptools/apptools-4.0.1.ebuild,v 1.5 2012/09/15 19:49:17 xarthisius Exp $
 
 EAPI=4
 
@@ -44,8 +44,8 @@ src_compile() {
 }
 
 src_test() {
-	VIRTUALX_COMMAND="python_execute_nosetests -P ${S}/build-${PYTHON_ABI}/lib:${S}" \
-		virtualmake
+	VIRTUALX_COMMAND="python_execute_nosetests" \
+		virtualmake -P '${S}/build-${PYTHON_ABI}/lib:${S}'
 }
 
 src_install() {

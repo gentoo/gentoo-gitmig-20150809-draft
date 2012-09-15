@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/apptools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apptools/ChangeLog,v 1.16 2012/09/13 11:30:15 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apptools/ChangeLog,v 1.17 2012/09/15 19:49:17 xarthisius Exp $
+
+  15 Sep 2012; Kacper Kowalik <xarthisius@gentoo.org> apptools-4.0.1.ebuild:
+  Fix virtualmake invocation in src_test(), thanks to Arfrever for all the help.
 
   13 Sep 2012; Kacper Kowalik <xarthisius@gentoo.org>
   +files/apptools_test.patch, apptools-4.0.1.ebuild:
