@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.413 2012/09/13 22:21:35 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.414 2012/09/15 18:05:48 armin76 Exp $
+
+  15 Sep 2012; Raúl Porcel <armin76@gentoo.org> bind-9.9.1_p3.ebuild:
+  alpha/ia64/s390/sh/sparc/x86 stable wrt #434876
 
   13 Sep 2012; Anthony G. Basile <blueness@gentoo.org> bind-9.9.1_p3.ebuild:
   Stable arm, bug #434876
