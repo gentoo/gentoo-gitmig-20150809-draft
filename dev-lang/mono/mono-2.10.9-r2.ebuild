@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.10.5.ebuild,v 1.6 2011/11/10 19:14:21 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.10.9-r2.ebuild,v 1.1 2012/09/15 13:37:04 pacho Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.mono-project.com/Main_Page"
 
 LICENSE="MIT LGPL-2.1 GPL-2 BSD-4 NPL-1.1 Ms-PL GPL-2-with-linking-exception IDPL"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE="minimal pax_kernel xen"
 
@@ -52,7 +52,10 @@ pkg_setup() {
 			ewarn "See http://bugs.gentoo.org/261869 for more info."
 		fi
 	fi
-	PATCHES=( "${FILESDIR}/${PN}-2.10.2-threads-access.patch" )
+	PATCHES=( "${FILESDIR}/${PN}-2.10.2-threads-access.patch"
+		"${FILESDIR}/${PN}-2.10.9-CVE-2012-3382.patch"
+		"${FILESDIR}/${PN}-2.10.9-CVE-2012-3543.patch"
+		"${FILESDIR}/${PN}-2.10.9-CVE-2012-3543_2.patch" )
 }
 
 src_prepare() {
@@ -71,7 +74,7 @@ src_configure() {
 	# mono's build system is finiky, strip the flags
 	strip-flags
 
-	#Remove this at your own peril. Mono will barf in unexpected ways.
+	# Remove this at your own peril. Mono will barf in unexpected ways.
 	append-flags -fno-strict-aliasing
 
 	# NOTE: We need the static libs for now so mono-debugger works.
@@ -118,8 +121,8 @@ src_install() {
 	# Remove files not respecting LDFLAGS and that we are not supposed to provide, see Fedora
 	# mono.spec and http://www.mail-archive.com/mono-devel-list@lists.ximian.com/msg24870.html
 	# for reference.
-	rm -f "${D}"/usr/$(get_libdir)/mono/2.0/mscorlib.dll.so
-	rm -f "${D}"/usr/$(get_libdir)/mono/2.0/mcs.exe.so
+	rm -f "${ED}"/usr/$(get_libdir)/mono/2.0/mscorlib.dll.so
+	rm -f "${ED}"/usr/$(get_libdir)/mono/2.0/mcs.exe.so
 }
 
 #THINK!!!! Before touching postrm and postinst
@@ -160,54 +163,42 @@ pkg_preinst() {
 	fi
 }
 
-pkg_postinst() {
-	elog "PLEASE TAKE NOTE!"
-	elog ""
-	elog "Some of the namespaces supported by Mono require extra packages to be installed."
-	elog "Below is a list of namespaces and the corresponding package you must install:"
-	elog ""
-	elog ">=x11-libs/cairo-1.6.4"
-	elog "	Mono.Cairo"
-	elog "Also read:"
-	elog "http://www.mono-project.com/Mono.Cairo"
-	elog ""
-	elog ">=dev-db/firebird-2.0.4.13130.1"
-	elog "	FirebirdSql.Data.Firebird"
-	elog "Also read:"
-	elog "http://www.mono-project.com/Firebird_Interbase"
-	elog ""
-	elog "=dev-dotnet/gluezilla-${GO_MONO_REL_PV}*"
-	elog "	Mono.Mozilla"
-	elog "	Mono.Mozilla.WebBrowser"
-	elog "	Mono.Mozilla.Widget"
-	elog "	Interop.SHDocVw"
-	elog "	AxInterop.SHDocVw"
-	elog "	Interop.mshtml.dll"
-	elog "	System.Windows.Forms.WebBrowser"
-	elog "	Microsoft.IE"
-	elog "Also read:"
-	elog "http://www.mono-project.com/WebBrowser"
-	elog ""
-	elog "dev-db/sqlite:3"
-	elog "	Mono.Data.Sqlite"
-	elog "Also read:"
-	elog "http://www.mono-project.com/SQLite"
-	elog ""
-	elog ">=dev-db/oracle-instantclient-basic-10.2"
-	elog "	System.Data.OracleClient"
-	elog "Also read:"
-	elog "http://www.mono-project.com/Oracle"
-	elog ""
-	elog "Mono also has support for packages that are not included in portage:"
-	elog ""
-	elog "No ebuild available:"
-	elog "	IBM.Data.DB2"
-	elog "Also read: http://www.mono-project.com/IBM_DB2"
-	elog ""
-	elog "No ebuild needed:"
-	elog "	Mono.Data.SybaseClient"
-	elog "Also read: http://www.mono-project.com/Sybase"
-}
+#pkg_postinst() {
+#	elog "PLEASE TAKE NOTE!"
+#	elog ""
+#	elog "Some of the namespaces supported by Mono require extra packages to be installed."
+#	elog "Below is a list of namespaces and the corresponding package you must install:"
+#	elog ""
+#	elog ">=x11-libs/cairo-1.6.4"
+#	elog "	Mono.Cairo"
+#	elog "Also read:"
+#	elog "http://www.mono-project.com/Mono.Cairo"
+#	elog ""
+#	elog ">=dev-db/firebird-2.0.4.13130.1"
+#	elog "	FirebirdSql.Data.Firebird"
+#	elog "Also read:"
+#	elog "http://www.mono-project.com/Firebird_Interbase"
+#	elog ""
+#	elog "dev-db/sqlite:3"
+#	elog "	Mono.Data.Sqlite"
+#	elog "Also read:"
+#	elog "http://www.mono-project.com/SQLite"
+#	elog ""
+#	elog ">=dev-db/oracle-instantclient-basic-10.2"
+#	elog "	System.Data.OracleClient"
+#	elog "Also read:"
+#	elog "http://www.mono-project.com/Oracle"
+#	elog ""
+#	elog "Mono also has support for packages that are not included in portage:"
+#	elog ""
+#	elog "No ebuild available:"
+#	elog "	IBM.Data.DB2"
+#	elog "Also read: http://www.mono-project.com/IBM_DB2"
+#	elog ""
+#	elog "No ebuild needed:"
+#	elog "	Mono.Data.SybaseClient"
+#	elog "Also read: http://www.mono-project.com/Sybase"
+#}
 
 # NOTICE: THE COPYRIGHT FILES IN THE TARBALL ARE UNCLEAR!
 # WHENEVER YOU THINK SOMETHING IS GPL-2+, IT'S ONLY GPL-2
