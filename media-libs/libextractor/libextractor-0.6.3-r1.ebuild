@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/libextractor-0.6.3-r1.ebuild,v 1.6 2012/08/14 09:49:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/libextractor-0.6.3-r1.ebuild,v 1.7 2012/09/15 06:17:20 radhermit Exp $
 
 EAPI=4
 inherit eutils flag-o-matic multilib toolchain-funcs
@@ -36,7 +36,6 @@ RDEPEND="app-arch/bzip2
 		x11-libs/qt-svg:4
 		)
 	!app-crypt/pkcrack
-	!media-sound/csound
 	!sci-biology/glimmer
 	!sci-chemistry/pdb-extract"
 DEPEND="${RDEPEND}
