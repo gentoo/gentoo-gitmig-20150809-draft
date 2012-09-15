@@ -1,24 +1,24 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.17.ebuild,v 1.8 2012/05/05 07:00:23 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.2.0.ebuild,v 1.1 2012/09/15 11:48:29 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
 
-inherit autotools eutils gnome2
+inherit eutils gnome2
 
 DESCRIPTION="A frontend for gPhoto 2"
 HOMEPAGE="http://gphoto.org/proj/gtkam"
-SRC_URI="mirror://sourceforge/gphoto/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/gphoto/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE="gimp gnome nls"
 
 # FIXME: why is exif not optional ?
 RDEPEND="x11-libs/gtk+:2
-	>media-libs/libgphoto2-2.4
+	>=media-libs/libgphoto2-2.5.0
 	>=media-libs/libexif-0.3.2
 	media-libs/libexif-gtk
 	gimp? ( >=media-gfx/gimp-2 )
@@ -43,16 +43,12 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# Fix .desktop validity, bug #271569
-	epatch "${FILESDIR}/${PN}-0.1.16.1-desktop-validation.patch"
-
-	intltoolize --automake --force --copy || die "intltoolize failed"
-	eautoreconf
 	gnome2_src_prepare
-}
 
+	# Fix .desktop validity, bug #271569
+	epatch "${FILESDIR}/${PN}-0.1.18-desktop-validation.patch"
+}
 src_install() {
 	gnome2_src_install
-
-	rm -rf "${D}"/usr/share/doc/gtkam || die "rm failed"
+	rm -rf "${ED}"/usr/share/doc/gtkam || die "rm failed"
 }
