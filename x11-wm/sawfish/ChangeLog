@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/sawfish
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.111 2012/07/08 12:03:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.112 2012/09/15 07:47:27 pacho Exp $
+
+*sawfish-1.9.1 (15 Sep 2012)
+
+  15 Sep 2012; Pacho Ramos <pacho@gentoo.org> +sawfish-1.9.1.ebuild:
+  Version bump.
 
 *sawfish-1.9.0 (08 Jul 2012)
 
