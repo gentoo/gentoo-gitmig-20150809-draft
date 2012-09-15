@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-gstreamer/phonon-gstreamer-4.6.2-r1.ebuild,v 1.3 2012/09/15 13:28:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-gstreamer/phonon-gstreamer-4.6.2-r1.ebuild,v 1.4 2012/09/15 13:32:58 ago Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ LICENSE="LGPL-2.1"
 if [[ ${PV} == *9999 ]]; then
 	KEYWORDS=""
 else
-	KEYWORDS="~amd64 ~arm ~hppa x86 ~amd64-fbsd"
+	KEYWORDS="amd64 ~arm ~hppa x86 ~amd64-fbsd"
 fi
 SLOT="0"
 IUSE="alsa debug +network"
