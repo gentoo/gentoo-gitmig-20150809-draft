@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.324 2012/08/28 02:00:59 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.325 2012/09/15 18:24:52 armin76 Exp $
+
+  15 Sep 2012; Raúl Porcel <armin76@gentoo.org> busybox-1.20.2.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #431948
 
   28 Aug 2012; Anthony G. Basile <blueness@gentoo.org> busybox-1.20.2.ebuild:
   Stable ppc, bug #431948
