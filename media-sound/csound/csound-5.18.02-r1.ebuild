@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/csound/csound-5.18.02-r1.ebuild,v 1.1 2012/09/15 06:11:30 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/csound/csound-5.18.02-r1.ebuild,v 1.2 2012/09/15 06:18:14 radhermit Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -181,7 +181,7 @@ src_install() {
 	fi
 
 	# rename extract to csound_extract (bug #247394)
-	mv "${D}"/usr/bin/{extract,csound_extract}
+	mv "${D}"/usr/bin/{extract,csound_extract} || die
 }
 
 pkg_postinst() {
