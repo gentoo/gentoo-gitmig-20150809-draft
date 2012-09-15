@@ -1,12 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwacom/libwacom-0.4.ebuild,v 1.2 2012/05/04 18:35:48 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwacom/libwacom-0.6.ebuild,v 1.1 2012/09/15 09:44:06 tetromino Exp $
 
 EAPI=4
-inherit gnome.org
+
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Library for identifying Wacom tablets and their model-specific features"
 HOMEPAGE="http://linuxwacom.sourceforge.net/"
+SRC_URI="mirror://sourceforge/linuxwacom/${PN}/${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
@@ -31,6 +33,13 @@ src_configure() {
 
 src_install() {
 	default
+	local udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
+	dodir "${udevdir}/rules.d"
+	# generate-udev-rules must be run from inside tools directory
+	pushd tools > /dev/null
+	./generate-udev-rules > "${ED}${udevdir}/rules.d/65-libwacom.rules" ||
+		die "generating udev rules failed"
+	popd > /dev/null
 	use doc && dohtml -r doc/html/*
-	find "${D}" -name '*.la' -exec rm -f {} + || die "la file removal failed"
+	prune_libtool_files
 }
