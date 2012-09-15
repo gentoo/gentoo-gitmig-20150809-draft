@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.14.ebuild,v 1.2 2012/08/19 03:15:25 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.14.ebuild,v 1.3 2012/09/15 12:41:47 naota Exp $
 
 EAPI="4"
 inherit eutils flag-o-matic multilib gnome2-utils autotools-utils
@@ -12,11 +12,12 @@ SRC_URI="mirror://sourceforge/scim/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="doc"
+IUSE="doc gtk3"
 
 RDEPEND="x11-libs/libX11
 	dev-libs/glib:2
-	x11-libs/gtk+:2
+	gtk3? ( x11-libs/gtk+:3 )
+	!gtk3? ( x11-libs/gtk+:2 )
 	>=dev-libs/atk-1
 	>=x11-libs/pango-1
 	!app-i18n/scim-cvs"
@@ -37,11 +38,19 @@ DOCS=(
 )
 
 src_configure() {
+	local gtk_version
+	if use gtk3; then
+		gtk_version="--with-gtk-version=3"
+	else
+		gtk_version="--with-gtk-version=2"
+	fi
+
 	# bug #83625
 	filter-flags -fvisibility-inlines-hidden -fvisibility=hidden
 	local myeconfargs=(
 		$(use_with doc doxygen)
 		--enable-ld-version-script
+		$gtk_version
 	)
 	autotools-utils_src_configure
 }
