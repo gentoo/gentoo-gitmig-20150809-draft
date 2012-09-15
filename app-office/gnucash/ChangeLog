@@ -1,6 +1,14 @@
 # ChangeLog for app-office/gnucash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.260 2012/05/24 13:31:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.261 2012/09/15 09:46:33 pacho Exp $
+
+*gnucash-2.4.11 (15 Sep 2012)
+
+  15 Sep 2012; Pacho Ramos <pacho@gentoo.org>
+  +files/gnucash-2.4.11-potfiles-skip.patch, +gnucash-2.4.11.ebuild,
+  -files/gnucash-2.4.7-python-detection.patch,
+  -files/gnucash-2.4.8-python-detection.patch, -gnucash-2.4.8.ebuild:
+  Version bump, drop old.
 
   24 May 2012; Samuli Suominen <ssuominen@gentoo.org> gnucash-2.4.10.ebuild:
   ppc stable wrt #410611

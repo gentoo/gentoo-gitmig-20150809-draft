@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.4.8.ebuild,v 1.7 2012/05/03 20:00:38 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.4.11.ebuild,v 1.1 2012/09/15 09:46:33 pacho Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
 GCONF_DEBUG="no"
 PYTHON_DEPEND="python? 2:2.5"
 
-inherit gnome2 python eutils autotools
+inherit gnome2 python eutils
 
 DOC_VER="2.2.0"
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ppc ~ppc64 x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="chipcard cxx debug +doc hbci mysql ofx postgres python quotes sqlite webkit"
 
 # FIXME: rdepend on dev-libs/qof when upstream fix their mess (see configure.ac)
@@ -38,7 +38,7 @@ RDEPEND=">=dev-libs/glib-2.13:2
 	x11-libs/pango
 	cxx? ( dev-cpp/gtkmm:2.4 )
 	ofx? ( >=dev-libs/libofx-0.9.1 )
-	hbci? ( >=net-libs/aqbanking-5[gtk]
+	hbci? ( >=net-libs/aqbanking-5[gtk,ofx?]
 		sys-libs/gwenhywfar[gtk]
 		chipcard? ( sys-libs/libchipcard )
 	)
@@ -92,6 +92,23 @@ pkg_setup() {
 	fi
 }
 
+src_prepare() {
+	# https://bugzilla.gnome.org/show_bug.cgi?id=680402
+	epatch "${FILESDIR}/${P}-potfiles-skip.patch"
+
+	if use python; then
+		python_convert_shebangs -r 2 .
+		python_clean_py-compile_files
+	fi
+
+	# Disable python binding tests because of missing file
+	sed 's/^\(SUBDIRS =.*\)tests\(.*\)$/\1\2/' \
+		-i src/optional/python-bindings/Makefile.{am,in} \
+		|| die "python tests sed failed"
+
+	gnome2_src_prepare
+}
+
 src_configure() {
 	# guile wrongly exports LDFLAGS as LIBS which breaks modules
 	# Filter until a better ebuild is available, bug #202205
@@ -104,24 +121,6 @@ src_configure() {
 	done
 
 	econf GUILE_LIBS="${GUILE_LIBS}" ${G2CONF}
-}
-
-src_prepare() {
-	: > "${S}"/py-compile
-
-	use python && python_convert_shebangs -r 2 .
-
-	# Disable python binding tests because of missing file
-	sed 's/^\(SUBDIRS =.*\)tests\(.*\)$/\1\2/' \
-		-i src/optional/python-bindings/Makefile.{am,in} \
-		|| die "python tests sed failed"
-
-	# Find python in a faster way, bug #344231, upstream bug #665203
-	epatch "${FILESDIR}/${PN}-2.4.8-python-detection.patch"
-
-	intltoolize --force --copy --automake || die "intltoolize failed"
-	eautoreconf
-	gnome2_src_prepare
 }
 
 src_test() {
