@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rbbr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rbbr/ChangeLog,v 1.18 2012/05/01 18:24:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rbbr/ChangeLog,v 1.19 2012/09/15 09:02:19 graaff Exp $
+
+  15 Sep 2012; Hans de Graaff <graaff@gentoo.org> -rbbr-0.6.0.ebuild:
+  Cleanup.
 
   01 May 2012; Raúl Porcel <armin76@gentoo.org> rbbr-0.6.0.ebuild,
   rbbr-0.6.0-r1.ebuild:
