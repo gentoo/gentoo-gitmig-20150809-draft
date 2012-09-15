@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.12.1.ebuild,v 1.1 2012/09/10 07:49:31 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.12.1.ebuild,v 1.2 2012/09/15 12:23:58 nativemad Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -41,7 +41,7 @@ if [[ ${PV} == *_pre* ]] ; then
 else
 	# This is where arch teams should change the KEYWORDS.
 
-	KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86"
+	KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86"
 fi
 
 SLOT="0"

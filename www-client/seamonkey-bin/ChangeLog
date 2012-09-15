@@ -1,6 +1,10 @@
 # ChangeLog for www-client/seamonkey-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.149 2012/09/11 08:30:02 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.150 2012/09/15 12:25:33 nativemad Exp $
+
+  15 Sep 2012; Andreas Schuerch <nativemad@gentoo.org>
+  seamonkey-bin-2.12.1.ebuild:
+  x86 stable, see bug 433383
 
 *seamonkey-bin-2.12.1 (11 Sep 2012)
 
