@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xdvik
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.89 2012/07/05 11:03:09 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.90 2012/09/15 09:36:49 naota Exp $
+
+  15 Sep 2012;  <naota@gentoo.org> xdvik-22.84.16.ebuild:
+  Import xvdvik-22.85-r1's change into -22.84.16 to add RDEPEND properly.
+  #434638
 
   05 Jul 2012; Anthony G. Basile <blueness@gentoo.org> xdvik-22.85-r1.ebuild:
   Keyword ~mips
@@ -338,4 +342,3 @@
   Initial import, closing bug #23130
   Great thanks to Timmy Douglas <timmy+gentoo@cc.gatech.edu> for
   persistent tests on the ebuild
-

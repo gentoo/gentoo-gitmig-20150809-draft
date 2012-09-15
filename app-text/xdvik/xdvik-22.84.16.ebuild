@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.84.16.ebuild,v 1.16 2011/08/28 16:31:50 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.84.16.ebuild,v 1.17 2012/09/15 09:36:49 naota Exp $
 
 EAPI=3
 inherit eutils flag-o-matic elisp-common toolchain-funcs
@@ -19,8 +19,13 @@ RDEPEND=">=media-libs/t1lib-5.0.2
 	x11-libs/libXp
 	x11-libs/libXpm
 	motif? ( >=x11-libs/openmotif-2.3:0 )
-	!motif? ( neXt? ( x11-libs/neXtaw )
-		!neXt? ( Xaw3d? ( x11-libs/libXaw3d ) ) )
+	!motif? (
+		neXt? ( x11-libs/neXtaw )
+		!neXt? (
+			Xaw3d? ( x11-libs/libXaw3d )
+			!Xaw3d? ( x11-libs/libXaw )
+		)
+	)
 	virtual/latex-base
 	!<app-text/texlive-2007"
 DEPEND="sys-devel/flex
@@ -48,8 +53,11 @@ src_configure() {
 
 	if use motif ; then
 		toolkit="motif"
+		use neXt && ewarn "neXt USE flag ignored (superseded by motif)"
+		use Xaw3d && ewarn "Xaw3d USE flag ignored (superseded by motif)"
 	elif use neXt ; then
 		toolkit="neXtaw"
+		use Xaw3d && ewarn "Xaw3d USE flag ignored (superseded by neXt)"
 	elif use Xaw3d ; then
 		toolkit="xaw3d"
 	else
