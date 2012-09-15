@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.8.5-r1.ebuild,v 1.1 2012/09/14 05:12:42 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.8.6.ebuild,v 1.1 2012/09/15 07:33:26 slyfox Exp $
 
 EAPI=4
 
@@ -43,8 +43,6 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	[[ -n ${LIVE_EBUILD} ]] && ./autogen.sh
-
-	epatch "${FILESDIR}"/${P}-Ticket-2881-fix-tabs.patch
 }
 
 S=${WORKDIR}/${MY_P}
