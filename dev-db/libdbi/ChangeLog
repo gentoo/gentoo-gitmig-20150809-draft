@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/libdbi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/ChangeLog,v 1.43 2012/05/03 02:33:10 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/ChangeLog,v 1.44 2012/09/15 15:09:30 ago Exp $
+
+  15 Sep 2012; Agostino Sarubbo <ago@gentoo.org> libdbi-0.8.4.ebuild:
+  Stable for amd64, wrt bug #425306
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> libdbi-0.8.3.ebuild,
   libdbi-0.8.4.ebuild:
