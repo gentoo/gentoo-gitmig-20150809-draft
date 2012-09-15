@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rcairo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/ChangeLog,v 1.76 2012/09/15 09:04:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/ChangeLog,v 1.77 2012/09/15 09:08:12 graaff Exp $
+
+*rcairo-1.12.2 (15 Sep 2012)
+
+  15 Sep 2012; Hans de Graaff <graaff@gentoo.org> +rcairo-1.12.2.ebuild:
+  Version bump.
 
   15 Sep 2012; Hans de Graaff <graaff@gentoo.org> -rcairo-1.10.2.ebuild:
   Cleanup.
