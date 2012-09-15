@@ -1,6 +1,10 @@
 # ChangeLog for net-news/liferea
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.227 2012/08/21 21:08:32 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.228 2012/09/15 14:40:44 vostorga Exp $
+
+  15 Sep 2012; Víctor Ostorga <vostorga@gentoo.org>
+  liferea-1.9.4_p20120821.ebuild:
+  Fixing missing gsettings-desktop-schemas dependency, bug #432510
 
 *liferea-1.9.4_p20120821 (21 Aug 2012)
 *liferea-1.8.7 (21 Aug 2012)

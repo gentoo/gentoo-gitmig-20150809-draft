@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.9.4_p20120821.ebuild,v 1.1 2012/08/21 21:08:32 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.9.4_p20120821.ebuild,v 1.2 2012/09/15 14:40:44 vostorga Exp $
 
 EAPI=4
 
@@ -32,7 +32,8 @@ RDEPEND=">=x11-libs/gtk+-2.91.4:3
 	dev-libs/json-glib
 	ayatana? ( dev-libs/libindicate )
 	libnotify? ( >=x11-libs/libnotify-0.3.2 )
-	>=dev-libs/libpeas-1.0.0[gtk]"
+	>=dev-libs/libpeas-1.0.0[gtk]
+	gnome-base/gsettings-desktop-schemas"
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	virtual/pkgconfig"
