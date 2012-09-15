@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/roundcube
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.86 2012/09/09 13:58:40 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.87 2012/09/15 15:06:31 ago Exp $
+
+  15 Sep 2012; Agostino Sarubbo <ago@gentoo.org> roundcube-0.8.1.ebuild:
+  Stable for amd64, wrt bug #434378
 
   09 Sep 2012; Ole Markus With <olemarkus@gentoo.org> roundcube-0.7.2.ebuild:
   Removed dependency of php[sqlite] since it is being implicitly pulled in
