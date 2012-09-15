@@ -1,6 +1,11 @@
 # ChangeLog for app-text/libspectre
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libspectre/ChangeLog,v 1.57 2012/05/09 15:11:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libspectre/ChangeLog,v 1.58 2012/09/15 09:31:53 pacho Exp $
+
+*libspectre-0.2.7 (15 Sep 2012)
+
+  15 Sep 2012; Pacho Ramos <pacho@gentoo.org> +libspectre-0.2.7.ebuild:
+  Version bump.
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> libspectre-0.2.6.ebuild:
   keyword ~amd64-fbsd
@@ -208,4 +213,3 @@
   06 Feb 2008; Bo Ørsted Andresen <zlin@gentoo.org> +metadata.xml,
   +libspectre-0.2.0.ebuild:
   Initial import of libspectre for bug #208617.
-
