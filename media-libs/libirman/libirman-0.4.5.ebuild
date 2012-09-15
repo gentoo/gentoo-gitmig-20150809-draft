@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libirman/libirman-0.4.5.ebuild,v 1.6 2012/08/26 18:41:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libirman/libirman-0.4.5.ebuild,v 1.7 2012/09/15 10:33:47 scarabeus Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.lirc.org/software/snapshots/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="amd64 ~ppc ppc64 x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="static-libs"
 
 DOCS=( TECHNICAL NEWS README TODO )

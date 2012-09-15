@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libirman
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libirman/ChangeLog,v 1.33 2012/09/14 17:33:12 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libirman/ChangeLog,v 1.34 2012/09/15 10:33:47 scarabeus Exp $
+
+  15 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> libirman-0.4.5.ebuild:
+  Stable ppc. Wrt bug#429112.
 
   14 Sep 2012; Ian Stakenvicius <axs@gentoo.org> +libirman-0.4.2-r1.ebuild,
   +files/libirman-0.4.2-PICShared.patch, +files/libirman-0.4.2-destdir.patch,
