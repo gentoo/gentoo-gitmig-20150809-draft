@@ -1,0 +1,11 @@
+# ChangeLog for dev-ml/ocamldap
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamldap/ChangeLog,v 1.1 2012/09/15 15:13:57 aballier Exp $
+
+*ocamldap-2.1.8 (15 Sep 2012)
+
+  15 Sep 2012; Alexis Ballier <aballier@gentoo.org> +ocamldap-2.1.8.ebuild,
+  +metadata.xml:
+  initial import, ebuild by Tomasz Bielaszewski and Jacques-Pascal Deplaix, bug
+  #316185
+
