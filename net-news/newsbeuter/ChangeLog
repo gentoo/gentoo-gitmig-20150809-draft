@@ -1,6 +1,9 @@
 # ChangeLog for net-news/newsbeuter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/ChangeLog,v 1.39 2012/09/15 06:59:57 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/ChangeLog,v 1.40 2012/09/15 07:01:06 radhermit Exp $
+
+  15 Sep 2012; Tim Harder <radhermit@gentoo.org> -newsbeuter-2.4.ebuild:
+  Remove old.
 
   15 Sep 2012; Tim Harder <radhermit@gentoo.org> newsbeuter-2.5.ebuild,
   +files/newsbeuter-2.5-gcc47.patch:
