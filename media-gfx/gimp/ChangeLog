@@ -1,6 +1,16 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.384 2012/09/14 22:42:43 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.385 2012/09/15 01:35:53 sping Exp $
+
+*gimp-2.6.12-r4 (15 Sep 2012)
+
+  15 Sep 2012; Sebastian Pipping <sping@gentoo.org> -gimp-2.6.12-r3.ebuild,
+  +gimp-2.6.12-r4.ebuild, +files/gimp-2.6.12-CVE-2012-3403.patch,
+  +files/gimp-2.6.12-CVE-2012-3481.patch,
+  -files/gimp-2.6.12-fix-type-overflow-CVE-2012-3481.patch,
+  -files/gimp-2.6.12-limit-len-and-height-CVE-2012-3481.patch:
+  Apply patch for CVE-2012-3403 and single-file patch for CVE-2012-3481 (both
+  from Fedora, Gentoo bug #434580)
 
 *gimp-2.6.12-r3 (14 Sep 2012)
 

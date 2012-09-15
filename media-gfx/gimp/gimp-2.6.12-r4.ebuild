@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.6.12-r3.ebuild,v 1.1 2012/09/14 22:42:43 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.6.12-r4.ebuild,v 1.1 2012/09/15 01:35:53 sping Exp $
 
 EAPI="3"
 
@@ -113,8 +113,9 @@ src_prepare() {
 
 	# CEL and GIF plug-ins: Heap-based buffer overflows (CVE-2012-{3403,3481})
 	# https://bugs.gentoo.org/show_bug.cgi?id=434580
-	epatch "${FILESDIR}"/${PN}-2.6.12-fix-type-overflow-CVE-2012-3481.patch
-	epatch "${FILESDIR}"/${PN}-2.6.12-limit-len-and-height-CVE-2012-3481.patch
+	# Patches from Fedora <http://pkgs.fedoraproject.org/cgit/gimp.git/tree/?h=f16>
+	epatch "${FILESDIR}"/${P}-CVE-2012-3403.patch
+	epatch "${FILESDIR}"/${P}-CVE-2012-3481.patch
 
 	echo '#!/bin/sh' > py-compile
 	gnome2_src_prepare
