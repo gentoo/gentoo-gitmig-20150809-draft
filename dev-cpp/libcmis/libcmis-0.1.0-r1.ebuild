@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libcmis/libcmis-0.1.0-r1.ebuild,v 1.1 2012/09/13 15:53:20 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libcmis/libcmis-0.1.0-r1.ebuild,v 1.2 2012/09/15 07:15:48 scarabeus Exp $
 
 EAPI=4
 
 EGIT_REPO_URI="git://gitorious.org/libcmis/libcmis.git"
 [[ ${PV} == 9999 ]] && SCM_ECLASS="git-2"
-inherit autotools ${SCM_ECLASS}
+inherit autotools alternatives ${SCM_ECLASS}
 unset SCM_ECLASS
 
 DESCRIPTION="C++ client library for the CMIS interface"
