@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/arping
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.62 2012/09/08 13:09:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.63 2012/09/15 18:34:47 armin76 Exp $
+
+  15 Sep 2012; Raúl Porcel <armin76@gentoo.org> arping-2.12.ebuild:
+  alpha/ia64/s390/sh/sparc/x86 stable wrt #433321
 
   08 Sep 2012; Agostino Sarubbo <ago@gentoo.org> arping-2.12.ebuild:
   Stable for amd64, wrt bug #433321
