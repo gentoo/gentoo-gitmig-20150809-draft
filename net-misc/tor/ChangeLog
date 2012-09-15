@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.354 2012/09/15 10:20:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.355 2012/09/15 10:21:56 ago Exp $
+
+  15 Sep 2012; Agostino Sarubbo <ago@gentoo.org> tor-0.2.2.39.ebuild:
+  Stable for amd64, wrt bug #434882
 
   15 Sep 2012; Agostino Sarubbo <ago@gentoo.org> tor-0.2.2.39.ebuild:
   Stable for x86, wrt bug #434882
