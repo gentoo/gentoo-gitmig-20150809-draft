@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/clutter-gst-1.6.0.ebuild,v 1.1 2012/07/03 07:30:49 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/clutter-gst-1.6.0.ebuild,v 1.2 2012/09/15 09:58:13 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -48,11 +48,16 @@ src_prepare() {
 	# FIXME: is this still needed? I don't think so, but not sure. ~nirbheek
 	#eautoreconf
 
+	# In 1.6.1
+	epatch "${FILESDIR}/${P}-glint.patch"
+	epatch "${FILESDIR}/${P}-doc-fixes.patch"
+
 	gnome2_src_prepare
 }
 
 src_compile() {
 	# Clutter tries to access dri without userpriv, upstream bug #661873
 	# Massive failure of a hack, see bug 360219, bug 360073, bug 363917
-	DISPLAY="999invalid" emake
+	unset DISPLAY
+	default
 }
