@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.2.39.ebuild,v 1.2 2012/09/15 01:57:49 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.2.39.ebuild,v 1.3 2012/09/15 02:05:40 blueness Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="https://archive.torproject.org/tor-package-archive/${PN}-${PV}.tar.gz"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~mips ppc ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 arm ~mips ppc ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="tor-hardening +transparent-proxy threads selinux"
 
 DEPEND="dev-libs/openssl
