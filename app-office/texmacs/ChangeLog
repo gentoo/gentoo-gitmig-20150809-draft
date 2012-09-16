@@ -1,6 +1,13 @@
 # ChangeLog for app-office/texmacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.104 2012/09/13 06:40:30 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.105 2012/09/16 04:52:45 grozin Exp $
+
+*texmacs-1.0.7.16-r1 (16 Sep 2012)
+
+  16 Sep 2012; Andrey Grozin <grozin@gentoo.org> -texmacs-1.0.7.16.ebuild,
+  +texmacs-1.0.7.16-r1.ebuild, +files/texmacs-updates.patch,
+  -files/texmacs-mime.patch:
+  Moving necessary actions to postinst/postrm
 
 *texmacs-1.0.7.16 (13 Sep 2012)
 
