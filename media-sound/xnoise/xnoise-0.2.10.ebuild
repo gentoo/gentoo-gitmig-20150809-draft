@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/xnoise-0.2.4.ebuild,v 1.1 2012/07/29 10:31:52 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/xnoise-0.2.10.ebuild,v 1.1 2012/09/16 11:53:58 angelos Exp $
 
 EAPI=4
 inherit fdo-mime gnome2-utils
@@ -8,7 +8,7 @@ inherit fdo-mime gnome2-utils
 DESCRIPTION="A media player for Gtk+ with a slick GUI, great speed and lots of
 features"
 HOMEPAGE="http://www.xnoise-media-player.com/"
-SRC_URI="mirror://github/shuerhaaken/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://github/shuerhaaken/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -43,7 +43,9 @@ src_configure() {
 		--enable-soundmenu2 \
 		--enable-mediakeys \
 		$(use_enable lyrics chartlyrics) \
-		$(use_enable lyrics azlyrics)
+		$(use_enable lyrics azlyrics) \
+		--disable-ubuntuone \
+		--enable-magnatune
 }
 
 src_install() {
