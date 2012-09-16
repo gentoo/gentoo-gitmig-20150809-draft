@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.200 2012/05/18 05:14:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.201 2012/09/16 20:24:32 vapier Exp $
+
+  16 Sep 2012; Mike Frysinger <vapier@gentoo.org> nfs-utils-1.2.6.ebuild:
+  Pull in sqlite when USE=nfsdcld #433062 by Guillaume Castagnino.
 
   18 May 2012; Mike Frysinger <vapier@gentoo.org> nfs-utils-1.2.6.ebuild:
   Update request-key.d config settings #415625 by Maciej Szmigiero.
