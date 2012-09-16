@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmp4v2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/ChangeLog,v 1.79 2012/09/09 17:38:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/ChangeLog,v 1.80 2012/09/16 17:48:32 ssuominen Exp $
+
+  16 Sep 2012; Samuli Suominen <ssuominen@gentoo.org> -libmp4v2-1.9.1.ebuild,
+  -libmp4v2-1.9.1_p479.ebuild:
+  old
 
   09 Sep 2012; Raúl Porcel <armin76@gentoo.org> libmp4v2-2.0.0.ebuild:
   alpha/ia64/sh/sparc stable wrt #422517
