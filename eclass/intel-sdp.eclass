@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/intel-sdp.eclass,v 1.1 2012/09/16 14:24:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/intel-sdp.eclass,v 1.2 2012/09/16 15:59:43 jlec Exp $
 
 # @ECLASS: intel-sdp.eclass
 # @MAINTAINER:
@@ -227,6 +227,11 @@ INTEL_SDP_DB="${EROOT%/}"/opt/intel/intel-sdp-products.db
 
 
 intel-sdp_pkg_postinst() {
+	elog "Make sure you have recieved the an Intel license."
+	elog "To receive a non-commercial license, you need to register at:"
+	elog "http://software.intel.com/en-us/articles/non-commercial-software-development/"
+	elog "Install the license file into ${EROOT}opt/intel/licenses."
+
 	# add product registry to intel "database"
 	local l r
 	for r in ${INTEL_RPMS}; do
