@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/hivex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hivex/ChangeLog,v 1.17 2012/06/21 18:35:22 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hivex/ChangeLog,v 1.18 2012/09/16 08:59:18 pinkbyte Exp $
+
+*hivex-1.3.6-r1 (16 Sep 2012)
+
+  16 Sep 2012; Sergey Popov <pinkbyte@gentoo.org>
+  +files/1.3.6-r1/disable_automagic_cumulative_patch.patch,
+  +hivex-1.3.6-r1.ebuild:
+  New revision, fixes bugs #433467 and #430168. Thanks to slepnoga
 
 *hivex-1.3.6 (21 Jun 2012)
 
