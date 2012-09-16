@@ -1,6 +1,12 @@
 # ChangeLog for sys-process/fcron
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.96 2012/09/04 15:34:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.97 2012/09/16 16:08:03 flameeyes Exp $
+
+*fcron-3.0.6-r5 (16 Sep 2012)
+
+  16 Sep 2012; Diego E. Pettenò <flameeyes@gentoo.org> +fcron-3.0.6-r5.ebuild,
+  -fcron-3.0.6-r4.ebuild:
+  Fix crontab symlink; thanks to Dennis Schridde in bug #435078.
 
 *fcron-3.0.6-r4 (04 Sep 2012)
 

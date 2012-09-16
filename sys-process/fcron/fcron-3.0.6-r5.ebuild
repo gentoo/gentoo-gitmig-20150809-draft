@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.6-r4.ebuild,v 1.1 2012/09/04 15:34:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.6-r5.ebuild,v 1.1 2012/09/16 16:08:03 flameeyes Exp $
 
 EAPI=4
 
@@ -98,7 +98,7 @@ src_install() {
 	doins files/fcron.{allow,deny,conf}
 
 	if use system-crontab; then
-		dosym /usr/bin/fcrontab crontab
+		dosym fcrontab /usr/bin/crontab
 
 		exeinto /usr/libexec
 		newexe script/check_system_crontabs.sh check_system_crontabs
