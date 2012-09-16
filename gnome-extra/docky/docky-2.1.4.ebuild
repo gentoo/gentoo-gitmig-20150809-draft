@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/docky/docky-2.1.4.ebuild,v 1.2 2012/08/13 16:43:14 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/docky/docky-2.1.4.ebuild,v 1.3 2012/09/16 23:14:57 ago Exp $
 
 EAPI=4
 inherit eutils gnome2 mono
@@ -11,7 +11,7 @@ SRC_URI="http://launchpad.net/${PN}/2.1/${PV}/+download/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="debug nls"
 
 RDEPEND="dev-dotnet/dbus-sharp
