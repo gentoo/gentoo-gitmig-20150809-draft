@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-additions/virtualbox-additions-4.1.22.ebuild,v 1.1 2012/09/09 15:19:50 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-additions/virtualbox-additions-4.1.22.ebuild,v 1.2 2012/09/16 23:34:35 ago Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ SRC_URI="http://download.virtualbox.org/virtualbox/${PV}/${MY_P}.iso"
 
 LICENSE="PUEL"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 RESTRICT="mirror"
 
