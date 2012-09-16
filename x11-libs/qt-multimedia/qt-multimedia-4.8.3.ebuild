@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-multimedia/qt-multimedia-4.8.3.ebuild,v 1.1 2012/09/14 07:52:45 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-multimedia/qt-multimedia-4.8.3.ebuild,v 1.2 2012/09/16 04:29:09 yngwin Exp $
 
 EAPI=4
 
@@ -16,8 +16,8 @@ fi
 IUSE="alsa"
 
 DEPEND="
-	~x11-libs/qt-core-${PV}[aqua=,c++0x=,debug=]
-	~x11-libs/qt-gui-${PV}[aqua=,c++0x=,debug=]
+	~x11-libs/qt-core-${PV}[aqua=,debug=]
+	~x11-libs/qt-gui-${PV}[aqua=,debug=]
 	alsa? ( media-libs/alsa-lib )
 "
 RDEPEND="${DEPEND}"

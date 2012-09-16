@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/qt-opengl-4.8.3.ebuild,v 1.1 2012/09/14 08:07:55 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/qt-opengl-4.8.3.ebuild,v 1.2 2012/09/16 04:31:32 yngwin Exp $
 
 EAPI=4
 
@@ -17,8 +17,8 @@ IUSE="egl qt3support"
 
 DEPEND="
 	virtual/opengl
-	~x11-libs/qt-core-${PV}[aqua=,c++0x=,debug=,qt3support=]
-	~x11-libs/qt-gui-${PV}[aqua=,c++0x=,debug=,egl=,qt3support=]
+	~x11-libs/qt-core-${PV}[aqua=,debug=,qt3support=]
+	~x11-libs/qt-gui-${PV}[aqua=,debug=,egl=,qt3support=]
 "
 RDEPEND="${DEPEND}"
 

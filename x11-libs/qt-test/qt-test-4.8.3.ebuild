@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-test/qt-test-4.8.3.ebuild,v 1.1 2012/09/14 08:26:21 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-test/qt-test-4.8.3.ebuild,v 1.2 2012/09/16 04:50:22 yngwin Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ fi
 IUSE=""
 
 DEPEND="
-	~x11-libs/qt-core-${PV}[aqua=,c++0x=,debug=]
+	~x11-libs/qt-core-${PV}[aqua=,debug=]
 "
 RDEPEND="${DEPEND}"
 

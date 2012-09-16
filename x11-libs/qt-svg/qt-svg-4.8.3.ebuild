@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-svg/qt-svg-4.8.3.ebuild,v 1.1 2012/09/14 08:24:45 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-svg/qt-svg-4.8.3.ebuild,v 1.2 2012/09/16 04:48:47 yngwin Exp $
 
 EAPI=4
 
@@ -17,8 +17,8 @@ IUSE="+accessibility"
 
 DEPEND="
 	sys-libs/zlib
-	~x11-libs/qt-core-${PV}[aqua=,c++0x=,debug=]
-	~x11-libs/qt-gui-${PV}[accessibility=,aqua=,c++0x=,debug=]
+	~x11-libs/qt-core-${PV}[aqua=,debug=]
+	~x11-libs/qt-gui-${PV}[accessibility=,aqua=,debug=]
 "
 RDEPEND="${DEPEND}"
 

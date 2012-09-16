@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.8.3.ebuild,v 1.2 2012/09/14 13:00:59 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.8.3.ebuild,v 1.3 2012/09/16 04:18:29 yngwin Exp $
 
 EAPI=4
 
@@ -22,8 +22,8 @@ fi
 IUSE="compat doc +glib qt3support trace webkit"
 
 DEPEND="
-	~x11-libs/qt-gui-${PV}[aqua=,c++0x=,debug=,glib=,qt3support=,trace?]
-	~x11-libs/qt-sql-${PV}[aqua=,c++0x=,debug=,qt3support=,sqlite]
+	~x11-libs/qt-gui-${PV}[aqua=,debug=,glib=,qt3support=,trace?]
+	~x11-libs/qt-sql-${PV}[aqua=,debug=,qt3support=,sqlite]
 	webkit? ( ~x11-libs/qt-webkit-${PV}[aqua=,debug=] )
 "
 RDEPEND="${DEPEND}"

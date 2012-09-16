@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-declarative/qt-declarative-4.8.3.ebuild,v 1.1 2012/09/14 07:44:15 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-declarative/qt-declarative-4.8.3.ebuild,v 1.2 2012/09/16 04:24:34 yngwin Exp $
 
 EAPI=4
 
@@ -16,14 +16,14 @@ fi
 IUSE="+accessibility qt3support webkit"
 
 DEPEND="
-	~x11-libs/qt-core-${PV}[aqua=,c++0x=,debug=,qt3support=]
-	~x11-libs/qt-gui-${PV}[accessibility=,aqua=,c++0x=,debug=,qt3support=]
-	~x11-libs/qt-opengl-${PV}[aqua=,c++0x=,debug=,qt3support=]
-	~x11-libs/qt-script-${PV}[aqua=,c++0x=,debug=]
-	~x11-libs/qt-sql-${PV}[aqua=,c++0x=,debug=,qt3support=]
-	~x11-libs/qt-svg-${PV}[accessibility=,aqua=,c++0x=,debug=]
-	~x11-libs/qt-xmlpatterns-${PV}[aqua=,c++0x=,debug=]
-	qt3support? ( ~x11-libs/qt-qt3support-${PV}[accessibility=,aqua=,c++0x=,debug=] )
+	~x11-libs/qt-core-${PV}[aqua=,debug=,qt3support=]
+	~x11-libs/qt-gui-${PV}[accessibility=,aqua=,debug=,qt3support=]
+	~x11-libs/qt-opengl-${PV}[aqua=,debug=,qt3support=]
+	~x11-libs/qt-script-${PV}[aqua=,debug=]
+	~x11-libs/qt-sql-${PV}[aqua=,debug=,qt3support=]
+	~x11-libs/qt-svg-${PV}[accessibility=,aqua=,debug=]
+	~x11-libs/qt-xmlpatterns-${PV}[aqua=,debug=]
+	qt3support? ( ~x11-libs/qt-qt3support-${PV}[accessibility=,aqua=,debug=] )
 	webkit? ( ~x11-libs/qt-webkit-${PV}[aqua=,debug=] )
 "
 RDEPEND="${DEPEND}"

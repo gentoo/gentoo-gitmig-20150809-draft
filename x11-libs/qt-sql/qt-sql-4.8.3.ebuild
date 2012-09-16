@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/qt-sql-4.8.3.ebuild,v 1.1 2012/09/14 08:23:22 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/qt-sql-4.8.3.ebuild,v 1.2 2012/09/16 04:44:36 yngwin Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ REQUIRED_USE="
 "
 
 DEPEND="
-	~x11-libs/qt-core-${PV}[aqua=,c++0x=,debug=,qt3support=]
+	~x11-libs/qt-core-${PV}[aqua=,debug=,qt3support=]
 	firebird? ( dev-db/firebird )
 	freetds? ( dev-db/freetds )
 	mysql? ( virtual/mysql )

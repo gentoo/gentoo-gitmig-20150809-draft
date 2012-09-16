@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-declarative
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-declarative/ChangeLog,v 1.54 2012/09/14 07:44:15 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-declarative/ChangeLog,v 1.55 2012/09/16 04:24:34 yngwin Exp $
+
+  16 Sep 2012; Ben de Groot <yngwin@gentoo.org> qt-declarative-4.8.3.ebuild:
+  Add overlay changes (c++0x useflag)
 
 *qt-declarative-4.8.3 (14 Sep 2012)
 
