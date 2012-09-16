@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-3.5.2.2.ebuild,v 1.5 2012/08/26 14:23:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-3.5.2.2.ebuild,v 1.6 2012/09/16 22:40:15 ottxor Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.phpmyadmin.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.xz"
 
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 hppa ~ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ~ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="setup"
 
 RDEPEND="
@@ -54,11 +54,11 @@ src_install() {
 		elog "It regularly is the target of various exploits."
 	fi
 
-	insinto "${MY_HTDOCSDIR}"
+	insinto "${MY_HTDOCSDIR#${EPREFIX}}"
 	doins -r .
 
-	webapp_configfile "${MY_HTDOCSDIR}"/libraries/config.default.php
-	webapp_serverowned "${MY_HTDOCSDIR}"/libraries/config.default.php
+	webapp_configfile "${MY_HTDOCSDIR#${EPREFIX}}"/libraries/config.default.php
+	webapp_serverowned "${MY_HTDOCSDIR#${EPREFIX}}"/libraries/config.default.php
 
 	webapp_postinst_txt en "${FILESDIR}"/postinstall-en-3.1.txt
 	webapp_src_install
