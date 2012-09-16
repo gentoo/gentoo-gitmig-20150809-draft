@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.220 2012/07/02 00:39:39 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.221 2012/09/16 02:56:06 tetromino Exp $
+
+  16 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  rhythmbox-2.96.ebuild, rhythmbox-2.97.ebuild:
+  Slot media-libs/grilo.
 
 *rhythmbox-2.97 (02 Jul 2012)
 

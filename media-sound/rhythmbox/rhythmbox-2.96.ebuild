@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-2.96.ebuild,v 1.4 2012/06/04 06:23:23 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-2.96.ebuild,v 1.5 2012/09/16 02:56:06 tetromino Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -76,8 +76,8 @@ RDEPEND="${COMMON_DEPEND}
 	>=media-plugins/gst-plugins-taglib-0.10.6
 	x11-themes/gnome-icon-theme-symbolic
 	upnp? (
-		>=media-libs/grilo-0.1.17
-		>=media-plugins/grilo-plugins-0.1.17[upnp] )
+		>=media-libs/grilo-0.1.17:0.1
+		>=media-plugins/grilo-plugins-0.1.17:0.1[upnp] )
 	python? (
 		>=dev-python/gst-python-0.10.8
 
