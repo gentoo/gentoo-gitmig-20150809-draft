@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.107 2012/07/29 18:25:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.108 2012/09/16 20:27:03 ottxor Exp $
+
+  16 Sep 2012; Christoph Junghans <ottxor@gentoo.org> gv-3.7.3-r1.ebuild:
+  added prefix keywords
 
   29 Jul 2012; Raúl Porcel <armin76@gentoo.org> gv-3.7.3-r1.ebuild:
   alpha/sparc stable wrt #418471
