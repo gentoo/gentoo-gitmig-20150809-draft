@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-9999.ebuild,v 1.6 2012/05/04 06:33:33 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-9999.ebuild,v 1.7 2012/09/16 17:20:56 hwoarang Exp $
 
-EAPI="2"
+EAPI="4"
 PYTHON_DEPEND="2"
 
-EGIT_REPO_URI="git://gitorious.org/${PN}/${PN}.git
-http://git.gitorious.org/${PN}/${PN}.git"
+EGIT_REPO_URI="git://github.com/${PN}/qBittorrent.git
+https://github.com/${PN}/qBittorrent.git"
 
 inherit python qt4-r2 versionator git-2
 
