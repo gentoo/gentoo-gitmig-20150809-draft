@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-inifile/ruby-inifile-2.0.0-r1.ebuild,v 1.1 2010/07/04 18:57:09 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-inifile/ruby-inifile-2.0.0-r1.ebuild,v 1.2 2012/09/16 08:26:13 graaff Exp $
 
-EAPI=2
-USE_RUBY="ruby18"
+EAPI=4
+USE_RUBY="ruby18 ruby19 ree18 jruby"
 
 inherit ruby-ng
 
@@ -15,7 +15,7 @@ SLOT="0"
 IUSE=""
 LICENSE="Ruby"
 KEYWORDS="~x86 ~amd64"
-S=${WORKDIR}/${PN}
+RUBY_S=${PN}
 
 each_ruby_test() {
 	cd tests
