@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/icinga
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/ChangeLog,v 1.24 2012/09/11 18:08:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/ChangeLog,v 1.25 2012/09/16 11:06:36 nativemad Exp $
+
+  16 Sep 2012; Andreas Schuerch <nativemad@gentoo.org> icinga-1.7.2.ebuild:
+  x86 stable, see bug 434586
 
   11 Sep 2012; Agostino Sarubbo <ago@gentoo.org> icinga-1.7.2.ebuild:
   Stable for amd64, wrt bug #434586
