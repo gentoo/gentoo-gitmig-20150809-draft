@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/wordpress
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.140 2012/09/06 21:42:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.141 2012/09/16 15:05:20 ago Exp $
+
+  16 Sep 2012; Agostino Sarubbo <ago@gentoo.org> -wordpress-3.4.1.ebuild:
+  Remove old
 
 *wordpress-3.4.2 (06 Sep 2012)
 
@@ -702,4 +705,3 @@
   wordpress-1.0.2.ebuild, files/wordpress-1.0.2.gentoo.diff:
   Initial import; thanks to Peter Westwood <peter.westwood@ftwr.co.uk>; see bug
   #43025
-
