@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/glproto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/ChangeLog,v 1.107 2012/09/12 10:51:10 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/ChangeLog,v 1.108 2012/09/16 19:40:24 maekke Exp $
+
+  16 Sep 2012; Markus Meier <maekke@gentoo.org> glproto-1.4.16.ebuild:
+  arm stable, bug #432400
 
   12 Sep 2012; Andreas Schuerch <nativemad@gentoo.org> glproto-1.4.16.ebuild:
   x86 stable, see bug 432400
