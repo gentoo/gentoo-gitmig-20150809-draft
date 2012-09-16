@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.101 2012/09/13 07:20:05 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.102 2012/09/16 16:12:31 flameeyes Exp $
+
+  16 Sep 2012; Diego E. Pettenò <flameeyes@gentoo.org> -munin-2.0.5-r2.ebuild,
+  files/munin-node_init.d_2.0.5:
+  Fix typo in init script's reload(). Remove old ebuild.
 
   13 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> munin-2.0.5-r1.ebuild:
   x86 stable wrt bug #412881
