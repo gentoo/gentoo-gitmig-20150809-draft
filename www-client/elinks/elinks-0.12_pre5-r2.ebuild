@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.12_pre5-r2.ebuild,v 1.3 2012/07/04 18:45:08 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.12_pre5-r2.ebuild,v 1.4 2012/09/16 11:06:11 pacho Exp $
 
 EAPI=4
 inherit eutils autotools flag-o-matic
@@ -68,9 +68,16 @@ src_prepare() {
 			epatch "${FILESDIR}"/${MY_P}-spidermonkey-callback.patch
 		fi
 	fi
-	epatch "${FILESDIR}"/${P}-ruby-config.patch
+	epatch "${FILESDIR}"/${P}-ruby-1.9.patch
+	# Regenerate acinclude.m4 - based on autogen.sh.
+	cat > acinclude.m4 <<- _EOF
+		dnl Automatically generated from config/m4/ files.
+		dnl Do not modify!
+	_EOF
+	cat config/m4/*.m4 >> acinclude.m4
 
 	sed -i -e 's/-Werror//' configure*
+
 	eautoreconf
 }
 
