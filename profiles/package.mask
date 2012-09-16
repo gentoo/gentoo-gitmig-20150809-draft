@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14106 2012/09/16 12:14:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14107 2012/09/16 12:44:06 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -180,16 +180,6 @@ net-analyzer/prewikka
 # Emacs live ebuilds. Use at your own risk.
 ~app-editors/emacs-vcs-24.2.9999
 
-# Hans de Graaff (graaff@gentoo.org) (14 Aug 2012)
-# Mask old slots for removal in 30 days. Nothing in the
-# tree depends on them anymore.
-dev-ruby/i18n:0.1
-dev-ruby/i18n:0.3
-
-# Aaron W. Swenson <titanofold@gentoo.org> (14 Aug 2012)
-# Obsolete. Superseded by dev-db/pgpool2. Removal 14 Sep 2012. (Bug #431414)
-dev-db/pgpool
-
 # Benedikt Böhm <hollow@gentoo.org> (11 Aug 2012)
 # Regression in iproute code, does not detect IP addresses correctly anymore.
 ~dev-ruby/ohai-6.14.0
@@ -198,43 +188,11 @@ dev-db/pgpool
 # Development version
 >app-admin/sysstat-10.1
 
-# Hans de Graaff <hans@degraaff.org> (1 Aug 2012)
-# spruz has been superseded by dev-ruby/tins. No packages
-# in the tree depend on spruz anymore.
-# Removal in 30 days.
-dev-ruby/spruz
-
-# Samuli Suominen <ssuominen@gentoo.org> (31 Jul 2012)
-# Masked for removal in 30 days wrt bug 425292. Replaced
-# by USE="internal-glib" in >=dev-util/pkgconfig-0.27 or
-# you can give dev-util/pkgconf a try.
-dev-util/pkg-config-lite
-
-# Samuli Suominen <ssuominen@gentoo.org> (26 Jul 2012)
-# We are in process of dropping most of GTK+-2.x Ubuntu
-# Ayatana libraries from tree and unfortunately glipper
-# has hardcoded dependency on libappindicator's Python
-# GTK+-2.x bindings
-# Removal in 30 days
-x11-misc/glipper
-
-# Tiziano Müller <dev-zero@gentoo.org> (24 Jul 2012)
-# Now part of net-fs/cifs-utils & unmaintained by upstream
-# Security bug #308067 and bugs #427702, #232608, #247809,
-# #258409, #265183, #337691, #342783, #279074
-# Removal in 30 days
-net-fs/mount-cifs
-
 # Pacho Ramos <pacho@gentoo.org> (21 Jul 2012)
 # Contains multiple API changes and needs apps to be ported
 >=media-gfx/gphoto2-2.5
 >=media-libs/libgphoto2-2.5
 >=media-gfx/gtkam-0.2.0
-
-# Hans de Graaff <graaff@gentoo.org> (21 Jul 2012)
-# Slot masked for security bug 427370. Nothing in the tree
-# depends on it. Removal in 30 days.
-dev-ruby/mail:0
 
 # Ian Stakenvicius <axs@gentoo.org> (19 Jul 2012)
 # Old versions no longer build againt newer kernels
@@ -250,60 +208,19 @@ dev-ruby/mail:0
 # seden overlay. A more recent binary is available in the java-overlay.
 <=dev-util/eclipse-sdk-3.5.1-r1
 
-# Ralph Sennhauser <sera@gentoo.org> (13 Jul 2012)
-# Mask for removal in 30 days. Fails to build with java 7 #421917.
-# QA issues #298701. Ceased to be useful long ago. #235124. Thanks
-# to Michael Weber <xmw@gentoo.org> #235124 for maintaining a
-# binary package in his overlay. (layman -a xmw)
-=app-misc/jbidwatcher-1*
-
 # Michael Weber <xmw@gentoo.org> (07 Jul 2012)
 # Masked for testing only beta (bug 424866)
 =sci-electronics/eagle-6.2.1_beta
-
-# Naohiro Aota <naota@gentoo.org> (07 Jul 2012)
-# Masked for removal in 30 days. Dead upstream and
-# can be replaced with dev-db/textsearch-ja. #425038
-dev-db/pgmecab
 
 # Mike Gilbert <floppym@gentoo.org> (06 Jul 2012)
 # Masked for testing per Arfrever.
 dev-libs/boost:1.50
 dev-util/boost-build:1.50
 
-# Ben de Groot <yngwin@gentoo.org> (3 Jul 2012)
-# Dead upstream. Doesn't compile with current kernels.
-# Removal in 30 days.
-app-laptop/lenovo-sl-laptop
-
-# Samuli Suominen <ssuominen@gentoo.org> (02 Jul 2012)
-# The functionality of libsexy has been moved to GTK+
-# Nothing is using these bindings in Portage anymore
-# See, http://bugs.gentoo.org/380193
-# Removal in 30 days
-dev-python/sexy-python
-
-# Joerg Bornkessel <hd_brummy@gentoo.org> (2012/06/30)
-# masked for removal on 2012/07/28
-# bug 424263 423047
-# dead on upstream, fails on gcc-4.7
-=media-plugins/vdr-cdda-0.1.0-r1
-
 # Michael Weber <xmw@gentoo.org> (29 Jun 2012)
 # Masking for security reasons (bug 424025, CVE-2012-3366)
 # Users of trigger plugin, update asap.
 <app-admin/bcfg2-1.2.2-r1
-
-# Hans de Graaff <graaff@gentoo.org> (26 Jun 2012)
-# Dead upstream. QA problems in ebuild. Still uses old
-# ruby.eclass. Use dev-ruby/memcache-client instead.
-# Masked for removal in 30 days.
-dev-ruby/Ruby-MemCache
-
-# Samuli Suominen <ssuominen@gentoo.org> (25 Jun 2012)
-# Replaced by the new 1.0.0 release of x11-apps/transset.
-# Removal in 30 days.
-x11-misc/transset-df
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (25 Jun 2012)
 # Mask live ebuild
