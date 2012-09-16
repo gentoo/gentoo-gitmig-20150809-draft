@@ -1,7 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tla.eclass,v 1.12 2012/02/26 16:13:38 pacho Exp $
-#
+# $Header: /var/cvsroot/gentoo-x86/eclass/tla.eclass,v 1.13 2012/09/16 18:37:44 ulm Exp $
+
+# @DEAD
+# To be removed on 2012-10-16.
+
 # Original Author:    Jeffrey Yasskin <jyasskin@mail.utexas.edu>
 #
 # Originally derived from the cvs eclass.
