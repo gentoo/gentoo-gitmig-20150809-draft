@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/intel-common
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/intel-common/ChangeLog,v 1.1 2012/09/16 19:10:55 jlec Exp $
+
+*intel-common-13.0.0.079 (16 Sep 2012)
+
+  16 Sep 2012; Justin Lecher <jlec@gentoo.org> +intel-common-13.0.0.079.ebuild,
+  +metadata.xml:
+  Imported from sci overlay; new package containing common libs, #297542
+
