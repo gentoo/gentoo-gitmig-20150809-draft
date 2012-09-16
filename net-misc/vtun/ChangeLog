@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vtun
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/ChangeLog,v 1.52 2012/09/16 12:41:57 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/ChangeLog,v 1.53 2012/09/16 12:57:43 blueness Exp $
+
+  16 Sep 2012; Anthony G. Basile <blueness@gentoo.org> vtun-3.0.2-r2.ebuild:
+  Stable ppc, bug #425814
 
 *vtun-3.0.3 (16 Sep 2012)
 
