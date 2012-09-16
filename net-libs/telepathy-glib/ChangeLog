@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/telepathy-glib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.115 2012/09/15 08:53:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.116 2012/09/16 00:15:03 tetromino Exp $
+
+  16 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  telepathy-glib-0.18.2.ebuild:
+  Fix vala.eclass usage (bug #435158, thanks to Alexandre and Rafał Mużyło)
+  and simplify dependencies.
 
 *telepathy-glib-0.18.2 (15 Sep 2012)
 
