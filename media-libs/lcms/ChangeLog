@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/lcms
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.147 2012/09/11 02:45:36 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.148 2012/09/16 04:59:16 radhermit Exp $
+
+*lcms-2.4 (16 Sep 2012)
+
+  16 Sep 2012; Tim Harder <radhermit@gentoo.org> +lcms-2.4.ebuild:
+  Version bump.
 
   11 Sep 2012; Christoph Junghans <ottxor@gentoo.org> lcms-1.19.ebuild:
   add prefix keywords
