@@ -1,5 +1,8 @@
 
 
+  16 Sep 2012; Agostino Sarubbo <ago@gentoo.org> pypax-0.5.2.ebuild:
+  Stable for amd64, wrt bug #435114
+
   15 Sep 2012; Anthony G. Basile <blueness@gentoo.org> pypax-0.5.2.ebuild:
   Stable arm ppc ppc64, bug #435114
 
