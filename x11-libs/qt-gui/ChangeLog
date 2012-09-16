@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/qt-gui
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.200 2012/09/14 07:49:53 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.201 2012/09/16 04:15:21 yngwin Exp $
+
+*qt-gui-4.8.3-r1 (16 Sep 2012)
+
+  16 Sep 2012; Ben de Groot <yngwin@gentoo.org> +qt-gui-4.8.3-r1.ebuild:
+  Import updates from live ebuild in overlay. Revert gtkstyle changes (bugs
+  #435054 and #435122).
 
 *qt-gui-4.8.3 (14 Sep 2012)
 
