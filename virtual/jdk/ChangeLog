@@ -1,6 +1,10 @@
 # ChangeLog for virtual/jdk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/ChangeLog,v 1.49 2012/07/09 20:43:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/ChangeLog,v 1.50 2012/09/16 13:17:36 chithanh Exp $
+
+  16 Sep 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  jdk-1.5.0.ebuild:
+  Keyword ~arm, bug #305773.
 
   09 Jul 2012; Agostino Sarubbo <ago@gentoo.org> jdk-1.6.0-r1.ebuild:
   Stable for amd64, wrt bug #425456
@@ -179,4 +183,3 @@
   06 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org> +metadata.xml,
   +jdk-1.3.ebuild, +jdk-1.4.ebuild, +jdk-1.5.ebuild:
   Initial version of virtual/jdk.
-
