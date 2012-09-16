@@ -1,6 +1,17 @@
 # ChangeLog for media-libs/grilo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/ChangeLog,v 1.7 2012/05/05 08:02:31 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/ChangeLog,v 1.8 2012/09/16 02:48:00 tetromino Exp $
+
+*grilo-0.2.0-r1 (16 Sep 2012)
+*grilo-0.1.20 (16 Sep 2012)
+*grilo-0.1.18-r1 (16 Sep 2012)
+
+  16 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -grilo-0.1.17.ebuild, -grilo-0.1.18.ebuild, +grilo-0.1.18-r1.ebuild,
+  +grilo-0.1.20.ebuild, +grilo-0.2.0-r1.ebuild, metadata.xml:
+  Version bump; slot to allow parallel installation of 0.2.x and 0.1.x; disable
+  USE=debug (it only adds debugging CFLAGS). Rename test-ui USE flag to gtk for
+  simplicity. Drop old.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> grilo-0.1.17.ebuild,
   grilo-0.1.18.ebuild:

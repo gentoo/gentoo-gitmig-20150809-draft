@@ -6,7 +6,6 @@
 			for introspection</flag>
 		<flag name='network'>Enable network access for media discovery using
 			<pkg>net-libs/libsoup</pkg></flag>
-		<flag name='test-ui'>Build and install a test UI for the library</flag>
 		<flag name='vala'>Generate bindings for <pkg>dev-lang/vala</pkg></flag>
 	</use>
 </pkgmetadata>
