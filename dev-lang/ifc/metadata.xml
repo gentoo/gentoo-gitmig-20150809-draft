@@ -11,8 +11,4 @@
   The product can be installed as a non-commercial as well. License,
   terms of qualifications can be found on the web site.
 </longdescription>
-	<use>
-		<flag name="idb">Install the Intel Debugger</flag>
-		<flag name="mkl">Install the Intel Math Kernel Library</flag>
-	</use>
 </pkgmetadata>

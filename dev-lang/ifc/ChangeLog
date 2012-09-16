@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/ifc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.63 2011/12/29 12:44:32 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.64 2012/09/16 19:23:09 jlec Exp $
+
+*ifc-13.0.0.079 (16 Sep 2012)
+
+  16 Sep 2012; Justin Lecher <jlec@gentoo.org> -ifc-11.1.072.ebuild,
+  +ifc-13.0.0.079.ebuild, metadata.xml:
+  Version Bump, #361539; Drop old, #410815
 
   29 Dec 2011; Justin Lecher <jlec@gentoo.org> ifc-10.0.026-r1.ebuild,
   ifc-11.1.072.ebuild:
