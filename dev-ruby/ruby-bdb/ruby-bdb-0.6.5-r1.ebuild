@@ -1,10 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bdb/ruby-bdb-0.6.5-r1.ebuild,v 1.6 2012/05/01 18:24:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bdb/ruby-bdb-0.6.5-r1.ebuild,v 1.7 2012/09/16 07:38:50 graaff Exp $
 
-EAPI=2
+EAPI=4
 
-USE_RUBY="ruby18"
+# ruby19 → configuration fails; jruby → compiled extension
+USE_RUBY="ruby18 ree18"
 
 inherit db-use ruby-ng
 
@@ -19,10 +20,10 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE="doc"
 
-S=${WORKDIR}/${MY_P}
+RUBY_S=${MY_P}
 
-RDEPEND=">=sys-libs/db-3.2.9"
-DEPEND="${RDEPEND}"
+RDEPEND="${RDEPEND} >=sys-libs/db-3.2.9"
+DEPEND="${DEPEND} >=sys-libs/db-3.2.9"
 
 each_ruby_configure() {
 	${RUBY} extconf.rb --with-db-include=$(db_includedir) \
