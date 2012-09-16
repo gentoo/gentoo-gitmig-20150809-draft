@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-meta/gst-plugins-meta-0.10-r7.ebuild,v 1.12 2012/07/23 22:38:21 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-meta/gst-plugins-meta-0.10-r7.ebuild,v 1.13 2012/09/16 11:27:43 pacho Exp $
 
 DESCRIPTION="Meta ebuild to pull in gst plugins for apps"
 HOMEPAGE="http://www.gentoo.org"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.gentoo.org"
 LICENSE="GPL-2"
 SLOT="0.10"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
-IUSE="aac a52 alsa dts dv dvb dvd ffmpeg flac http lame libvisual mms mp3 mpeg musepack mythtv ogg oss pulseaudio taglib theora v4l vcd vorbis vpx wavpack X xv"
+IUSE="aac a52 alsa dts dv dvb dvd ffmpeg flac http lame libvisual mms mp3 mpeg musepack ogg oss pulseaudio taglib theora v4l vcd vorbis vpx wavpack X xv"
 
 RDEPEND="=media-libs/gstreamer-0.10*
 	=media-libs/gst-plugins-base-0.10*
@@ -37,7 +37,6 @@ RDEPEND="=media-libs/gstreamer-0.10*
 		>=media-plugins/gst-plugins-mad-0.10 )
 	mpeg? ( >=media-plugins/gst-plugins-mpeg2dec-0.10 )
 	musepack? ( >=media-plugins/gst-plugins-musepack-0.10 )
-	mythtv? ( media-plugins/gst-plugins-mythtv )
 	ogg? ( >=media-plugins/gst-plugins-ogg-0.10 )
 	oss? ( >=media-plugins/gst-plugins-oss-0.10 )
 	pulseaudio? ( >=media-plugins/gst-plugins-pulse-0.10 )
