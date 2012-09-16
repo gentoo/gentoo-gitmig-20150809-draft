@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/liboop
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboop/ChangeLog,v 1.14 2010/01/14 21:37:35 fauli Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboop/ChangeLog,v 1.15 2012/09/16 11:45:53 pacho Exp $
+
+*liboop-1.0-r1 (16 Sep 2012)
+
+  16 Sep 2012; Pacho Ramos <pacho@gentoo.org> +liboop-1.0-r1.ebuild:
+  Drop libwww support (#320253) and .la files.
 
   14 Jan 2010; Christian Faulhammer <fauli@gentoo.org> liboop-1.0.ebuild:
   Transfer Prefix keywords
