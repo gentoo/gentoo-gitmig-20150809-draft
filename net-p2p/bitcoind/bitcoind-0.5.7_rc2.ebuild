@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.6.0.9-r2.ebuild,v 1.1 2012/09/02 21:23:56 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.5.7_rc2.ebuild,v 1.1 2012/09/16 12:30:48 blueness Exp $
 
 EAPI="4"
 
@@ -10,14 +10,17 @@ inherit db-use eutils versionator toolchain-funcs
 
 DESCRIPTION="Original Bitcoin crypto-currency wallet for automated services"
 HOMEPAGE="http://bitcoin.org/"
-SRC_URI="http://dev.gentoo.org/~blueness/misc/bitcoin-0.6.0.9.tgz
-	eligius? ( http://luke.dashjr.org/programs/bitcoin/files/eligius_sendfee/0.6.0-eligius_sendfee.patch.xz )
+SRC_URI="http://gitorious.org/bitcoin/bitcoind-stable/archive-tarball/v${PV/_/} -> bitcoin-v${PV}.tgz
+	bip16? ( http://luke.dashjr.org/programs/bitcoin/files/bip16/0.5.6-Minimal-support-for-mining-BIP16-pay-to-script-hash-.patch.xz )
+	eligius? (
+		!bip16? ( http://luke.dashjr.org/programs/bitcoin/files/eligius_sendfee/0.5.0.6rc1-eligius_sendfee.patch.xz )
+	)
 "
 
 LICENSE="MIT ISC GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="+eligius examples logrotate ssl upnp"
+IUSE="+bip16 +eligius examples logrotate ssl upnp"
 
 RDEPEND="
 	>=dev-libs/boost-1.41.0
@@ -44,8 +47,13 @@ pkg_setup() {
 
 src_prepare() {
 	cd src || die
-	use eligius && epatch "${WORKDIR}/0.6.0-eligius_sendfee.patch"
-	use logrotate && epatch "${FILESDIR}/0.6.0.8-reopen_log_file.patch"
+	if use bip16; then
+		epatch "${WORKDIR}/0.5.6-Minimal-support-for-mining-BIP16-pay-to-script-hash-.patch"
+		use eligius && epatch "${FILESDIR}/0.5.0.5+bip16-eligius_sendfee.patch"
+	else
+		use eligius && epatch "${WORKDIR}/0.5.0.6rc1-eligius_sendfee.patch"
+	fi
+	use logrotate && epatch "${FILESDIR}/0.4.7-reopen_log_file.patch"
 }
 
 src_compile() {
