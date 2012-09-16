@@ -1,9 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/opencascade/opencascade-6.5.ebuild,v 1.2 2012/06/22 13:13:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/opencascade/opencascade-6.5.ebuild,v 1.3 2012/09/16 10:18:52 pacho Exp $
 
 EAPI=4
-
 inherit autotools eutils check-reqs multilib java-pkg-opt-2 flag-o-matic
 
 DESCRIPTION="Software development platform for CAD/CAE, 3D surface/solid modeling and data exchange"
@@ -17,6 +16,7 @@ IUSE="debug doc examples gl2ps java"
 
 DEPEND="
 	media-libs/ftgl
+	virtual/glu
 	virtual/opengl
 	x11-libs/libXmu
 	>=dev-lang/tcl-8.4
