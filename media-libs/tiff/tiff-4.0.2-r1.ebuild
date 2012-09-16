@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-4.0.2-r1.ebuild,v 1.1 2012/09/16 17:24:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-4.0.2-r1.ebuild,v 1.2 2012/09/16 17:31:12 ssuominen Exp $
 
 EAPI=4
 inherit eutils libtool
@@ -22,7 +22,10 @@ RDEPEND="jpeg? ( virtual/jpeg )
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-CVE-2012-3401.patch
+	epatch \
+		"${FILESDIR}"/${P}-CVE-2012-3401.patch \
+		"${FILESDIR}"/${P}-bigendian.patch
+
 	elibtoolize
 }
 
