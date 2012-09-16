@@ -1,6 +1,12 @@
 # ChangeLog for dev-tcltk/tktreectrl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tktreectrl/ChangeLog,v 1.7 2011/06/12 10:15:51 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tktreectrl/ChangeLog,v 1.8 2012/09/16 14:19:16 jlec Exp $
+
+*tktreectrl-2.4.1 (16 Sep 2012)
+
+  16 Sep 2012; Justin Lecher <jlec@gentoo.org> +tktreectrl-2.4.1.ebuild,
+  metadata.xml:
+  Version Bump
 
   12 Jun 2011; Kacper Kowalik <xarthisius@gentoo.org> tktreectrl-2.2.9.ebuild,
   tktreectrl-2.2.10.ebuild:
