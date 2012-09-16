@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.6.2.ebuild,v 1.7 2012/05/04 03:33:16 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.6.2.ebuild,v 1.8 2012/09/16 19:00:59 dirtyepic Exp $
 
 EAPI=4
-inherit flag-o-matic
+inherit eutils flag-o-matic
 
 DESCRIPTION="Library for Bible reading software."
 HOMEPAGE="http://www.crosswire.org/sword/"
@@ -35,6 +35,8 @@ src_prepare() {
 	[Install]
 	DataPath=${EPREFIX}/usr/share/${PN}/
 	EOF
+
+	epatch "${FILESDIR}"/${P}-gcc47.patch
 }
 
 src_configure() {
