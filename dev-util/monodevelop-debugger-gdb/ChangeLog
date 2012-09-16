@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/monodevelop-debugger-gdb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-debugger-gdb/ChangeLog,v 1.20 2012/06/16 11:40:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-debugger-gdb/ChangeLog,v 1.21 2012/09/16 23:14:02 ago Exp $
+
+  16 Sep 2012; Agostino Sarubbo <ago@gentoo.org>
+  monodevelop-debugger-gdb-3.0.2.ebuild:
+  Stable for amd64, wrt bug #435202
 
 *monodevelop-debugger-gdb-3.0.2 (16 Jun 2012)
 

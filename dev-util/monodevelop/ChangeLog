@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/monodevelop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.101 2012/06/16 11:39:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.102 2012/09/16 23:14:32 ago Exp $
+
+  16 Sep 2012; Agostino Sarubbo <ago@gentoo.org> monodevelop-3.0.2-r1.ebuild:
+  Stable for amd64, wrt bug #435202
 
 *monodevelop-3.0.2-r1 (16 Jun 2012)
 
