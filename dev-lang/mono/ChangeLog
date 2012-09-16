@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/mono
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.247 2012/09/15 13:37:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.248 2012/09/16 10:43:42 ago Exp $
+
+  16 Sep 2012; Agostino Sarubbo <ago@gentoo.org> mono-2.10.9-r2.ebuild:
+  Stable for amd64, wrt bug #433768
 
 *mono-2.10.9-r2 (15 Sep 2012)
 
