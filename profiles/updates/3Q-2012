@@ -43,3 +43,5 @@ move net-analyzer/nagios-nrpe net-analyzer/nrpe
 move dev-ruby/ruby-dbi dev-ruby/dbi
 move app-arch/TheUnarchiver app-arch/unar
 slotmove =media-libs/gst-plugins-bad-0.10* 0 0.10
+slotmove <media-libs/grilo-0.2 0 0.1
+slotmove <media-plugins/grilo-plugins-0.2 0 0.1
