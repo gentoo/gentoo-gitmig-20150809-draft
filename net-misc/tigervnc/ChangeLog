@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/tigervnc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.138 2012/08/26 20:14:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.139 2012/09/16 16:14:17 armin76 Exp $
+
+*tigervnc-1.2.0 (16 Sep 2012)
+
+  16 Sep 2012; Raúl Porcel <armin76@gentoo.org> -tigervnc-1.1.0-r6.ebuild,
+  +tigervnc-1.2.0.ebuild, files/tigervnc.initd, metadata.xml:
+  Version bump, thanks to Uroš Vampl <mobile dot leecher at gmail dot com> for
+  the patches and ebuild, bug #410929, customize a bit more the init script
+  thanks to Rafal Lalik <rafallalik at gmail dot com>, bug #434382
 
   26 Aug 2012; Raúl Porcel <armin76@gentoo.org> tigervnc-1.1.0-r7.ebuild:
   alpha/ia64/sh/sparc stable wrt #421939

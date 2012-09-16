@@ -1,50 +1,50 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.1.0-r6.ebuild,v 1.6 2012/06/09 18:56:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.2.0.ebuild,v 1.1 2012/09/16 16:14:17 armin76 Exp $
 
 EAPI="1"
 
-inherit eutils toolchain-funcs multilib autotools
+inherit eutils cmake-utils autotools java-pkg-opt-2
 
-XSERVER_VERSION="1.11.4"
+PATCHVER="0.1"
+XSERVER_VERSION="1.13.0"
 OPENGL_DIR="xorg-x11"
 
 DESCRIPTION="Remote desktop viewer display system"
 HOMEPAGE="http://www.tigervnc.org"
-#SRC_URI="mirror://gentoo/${P}.tar.bz2
-#	http://dev.gentoo.org/~armin76/dist/${P}.tar.bz2
 SRC_URI="mirror://sourceforge/tigervnc/${P}.tar.gz
 	mirror://gentoo/${PN}.png
-	server? ( ftp://ftp.freedesktop.org/pub/xorg/individual/xserver/xorg-server-${XSERVER_VERSION}.tar.bz2
-		mirror://gentoo/tigervnc-1.1.0_xorg-1.11.patch.bz2 )"
+	mirror://gentoo/${P}-patches-${PATCHVER}.tar.bz2
+	http://dev.gentoo.org/~armin76/dist/${P}-patches-${PATCHVER}.tar.bz2
+	server? ( ftp://ftp.freedesktop.org/pub/xorg/individual/xserver/xorg-server-${XSERVER_VERSION}.tar.bz2	)"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86"
-IUSE="nptl +opengl server +xorgmodule"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
+IUSE="gnutls +internal-fltk java nptl +opengl pam server +xorgmodule"
 
 RDEPEND="virtual/jpeg
 	sys-libs/zlib
-	media-libs/freetype
-	x11-libs/libSM
 	x11-libs/libXtst
-	app-admin/eselect-opengl
+	gnutls? ( net-libs/gnutls )
+	java? ( >=virtual/jre-1.5 )
+	pam? ( virtual/pam )
+	!internal-fltk? ( x11-libs/fltk:1 )
+	internal-fltk? (
+		x11-libs/libXft
+		x11-libs/libXinerama
+		x11-libs/libXcursor )
 	server? (
 		x11-libs/libXi
 		x11-libs/libXfont
-		x11-libs/libXmu
 		x11-libs/libxkbfile
 		x11-libs/libXrender
 		x11-libs/pixman
 		x11-apps/xauth
 		x11-apps/xsetroot
 		x11-misc/xkeyboard-config
-		media-fonts/font-adobe-100dpi
-		media-fonts/font-adobe-75dpi
-		media-fonts/font-alias
-		media-fonts/font-cursor-misc
-		media-fonts/font-misc-misc
-		xorgmodule? ( ~x11-base/xorg-server-${XSERVER_VERSION} )
+		opengl? ( app-admin/eselect-opengl )
+		xorgmodule? ( =x11-base/xorg-server-${XSERVER_VERSION%.*}* )
 	)
 	!net-misc/vnc
 	!net-misc/tightvnc
@@ -52,9 +52,10 @@ RDEPEND="virtual/jpeg
 DEPEND="${RDEPEND}
 	amd64? ( dev-lang/nasm )
 	x86? ( dev-lang/nasm )
-	>=x11-proto/inputproto-1.5
-	>=x11-proto/xextproto-7.0.3
-	>=x11-proto/xproto-7.0.13
+	x11-proto/inputproto
+	x11-proto/xextproto
+	x11-proto/xproto
+	java? ( >=virtual/jdk-1.5 )
 	server?	(
 		virtual/pkgconfig
 		media-fonts/font-util
@@ -65,26 +66,18 @@ DEPEND="${RDEPEND}
 		x11-proto/dri2proto
 		x11-proto/fixesproto
 		x11-proto/fontsproto
-		>=x11-proto/randrproto-1.2.99
+		x11-proto/randrproto
+		x11-proto/renderproto
 		x11-proto/resourceproto
 		x11-proto/scrnsaverproto
-		x11-proto/trapproto
 		x11-proto/videoproto
 		x11-proto/xcmiscproto
 		x11-proto/xineramaproto
-		x11-proto/xf86bigfontproto
-		x11-proto/xf86dgaproto
-		x11-proto/xf86driproto
-		x11-proto/xf86miscproto
-		x11-proto/xf86vidmodeproto
-		opengl? ( >=x11-proto/glproto-1.4.10 )
-		>=media-libs/mesa-7.1
-		>=x11-proto/renderproto-0.9.3
-		x11-libs/libpciaccess
-		>=x11-libs/xtrans-1.2.2
+		x11-libs/xtrans
+		opengl? ( media-libs/mesa )
 	)"
 
-#S="${WORKDIR}/${PN}"
+CMAKE_IN_SOURCE_BUILD=1
 
 pkg_setup() {
 	if ! use server ; then
@@ -115,39 +108,42 @@ src_unpack() {
 
 	if use server ; then
 		cp -r "${WORKDIR}"/xorg-server-${XSERVER_VERSION}/* unix/xserver
+	else
+		rm "${WORKDIR}"/patches/*_server_*
 	fi
 
-	eautoreconf
-	cd unix
+	EPATCH_SOURCE="${WORKDIR}/patches" EPATCH_SUFFIX="patch" \
+		EPATCH_FORCE="yes" epatch
 
 	if use server ; then
-		epatch xserver110.patch
-		epatch "${WORKDIR}"/${P}_xorg-1.11.patch
-		cd xserver
-		epatch "${FILESDIR}"/1.1.0-export_missing_symbol.patch
-		epatch "${FILESDIR}"/1.1.0-gethomedir.patch
+		cd unix/xserver
 		eautoreconf
 	fi
+
 }
 
 src_compile() {
-	econf --without-included-zlib --with-system-jpeg || die "econf failed"
-	emake || die "emake failed"
+	mycmakeargs=(
+		-G "Unix Makefiles"
+		$(cmake-utils_use_use internal-fltk INCLUDED_FLTK)
+		$(cmake-utils_use_enable gnutls GNUTLS)
+		$(cmake-utils_use_enable pam PAM)
+		$(cmake-utils_use_build java JAVA)
+	)
+
+	cmake-utils_src_compile
 
 	if use server ; then
 		cd unix/xserver
 		econf \
 			--disable-xorg --disable-xnest --disable-xvfb --disable-dmx \
 			--disable-xwin --disable-xephyr --disable-kdrive --with-pic \
-			--disable-static --disable-xinerama \
-			--disable-composite \
-			--with-default-font-path=/usr/share/fonts/misc,/usr/share/fonts/75dpi,/usr/share/fonts/100dpi,/usr/share/fonts/TTF,/usr/share/fonts/Type1 \
-			--enable-install-libxf86config \
-			--enable-dri2 \
+			--disable-static --disable-xinerama --without-dtrace \
+			--disable-unit-tests --disable-devel-docs --disable-dri \
 			--disable-config-dbus \
 			--disable-config-hal \
-			--with-xmlto=no \
-			--disable-unit-tests \
+			--disable-config-udev \
+			--enable-dri2 \
 			$(use_enable opengl glx) \
 			$(use_enable nptl glx-tls) \
 			|| die "econf server failed"
@@ -156,17 +152,13 @@ src_compile() {
 }
 
 src_install() {
-	dodoc README.txt
-
-	cd unix
-	emake DESTDIR="${D}" install || die "emake install failed"
-	newman vncviewer/vncviewer.man vncviewer.1
+	cmake-utils_src_install
 
 	newicon "${DISTDIR}"/tigervnc.png vncviewer.png
 	make_desktop_entry vncviewer vncviewer vncviewer Network
 
 	if use server ; then
-		cd xserver/hw/vnc
+		cd unix/xserver/hw/vnc
 		emake DESTDIR="${D}" install || die "emake install failed"
 		! use xorgmodule && rm -rf "${D}"/usr/$(get_libdir)/xorg
 
