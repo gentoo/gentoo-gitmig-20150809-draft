@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14105 2012/09/15 11:46:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14106 2012/09/16 12:14:03 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,78 @@
 
 #--- END OF EXAMPLES ---
 
+# Pacho Ramos <pacho@gentoo.org> (16 Sep 2012)
+# Dead upstream, fails tests (#315565), wasn't updated
+# for recent MythTV versions. Removal in a month.
+media-libs/gmyth
+media-plugins/gst-plugins-mythtv
+
+# Pacho Ramos <pacho@gentoo.org> (16 Sep 2012)
+# Fails old-elibtoolize sanity check (#341721), has security
+# issues. Removal in a month.
+net-libs/libmonetra
+dev-php/pecl-mcve
+
+# Pacho Ramos <pacho@gentoo.org> (16 Sep 2012)
+# Current version in tree has multiple bugs, perl team recommends
+# to use CPAN version instead, bug #420515. Removal in a month.
+dev-vcs/svk
+
+# Pacho Ramos <pacho@gentoo.org> (16 Sep 2012)
+# Upstream keeps inactive for ages and, then, it has broke again
+# now with gnutls-3 (#421385). Removal in a month.
+net-im/jabberd
+
+# Pacho Ramos <pacho@gentoo.org> (16 Sep 2012)
+# Has insecure rpaths (#421971), current version in tree doesn't
+# start and upstream ceased development long time ago.
+# Removal in a month.
+net-p2p/sancho-bin
+
+# Pacho Ramos <pacho@gentoo.org> (16 Sep 2012)
+# Fails with kernel-3.4, its included alsa version should
+# support affected hardware (#422641). Removal in a month.
+media-sound/xfi-drivers
+
+# Pacho Ramos <pacho@gentoo.org> (16 Sep 2012)
+# Has overflows (#423619), upstream dead and only useful for MP3
+# players released in 1998. Removal in a month.
+app-misc/rio
+
+# Pacho Ramos <pacho@gentoo.org> (16 Sep 2012)
+# Upstream looks dead and is not fully compatible with current
+# audacious (#424103). Removal in a month.
+media-sound/audtty
+
+# Pacho Ramos <pacho@gentoo.org> (16 Sep 2012)
+# Diego Elio Pettenò <flameeyes@gentoo.org> (08 Jul 2012)
+# Dead upstream (domain is gone as well), very bad code.
+# If possible use net-ftp/tftp-hpa; if that is not possible, let us
+# know by filing a bug and blocking against bug #425362.
+# Removal in a month.
+net-ftp/netkit-tftp
+
+# Pacho Ramos <pacho@gentoo.org> (16 Sep 2012)
+# Fails to build with boost-1.50 (#425602), upstream dead for ages.
+# Removal in a month.
+gnome-extra/wp_tray
+
+# Pacho Ramos <pacho@gentoo.org> (16 Sep 2012)
+# Old version, you need to use sci-geosciences/qlandkartegt instead.
+# Removal in a month.
+sci-geosciences/qlandkarte
+
+# Pacho Ramos <pacho@gentoo.org> (16 Sep 2012)
+# Fails to build with latest binutils (#430362), dead upstream and
+# nothing needs it in the tree. Removal in a month.
+dev-libs/mpatrol
+
+# Pacho Ramos <pacho@gentoo.org> (16 Sep 2012)
+# It ignores CFLAGS (#431298), nothing in the tree needs it, 
+# upstream is dead and people can use hfsutils and netatalk 
+# as replacements. Removal in a month.
+app-arch/macutil
+ 
 # Julian Ospald <hasufell@gentoo.org> (12 Sep 2012)
 # outdated security package
 www-client/torbrowser
@@ -184,13 +256,6 @@ dev-ruby/mail:0
 # to Michael Weber <xmw@gentoo.org> #235124 for maintaining a
 # binary package in his overlay. (layman -a xmw)
 =app-misc/jbidwatcher-1*
-
-# Diego Elio Pettenò <flameeyes@gentoo.org> (08 Jul 2012)
-# Dead upstream (domain is gone as well), very bad code.
-# If possible use net-ftp/tftp-hpa; if that is not possible, we're
-# going to keep this around for a while, but let us know by filing a
-# bug and blocking against bug #425362
-net-ftp/netkit-tftp
 
 # Michael Weber <xmw@gentoo.org> (07 Jul 2012)
 # Masked for testing only beta (bug 424866)
