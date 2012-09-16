@@ -1,10 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bz2/ruby-bz2-0.2.2-r1.ebuild,v 1.1 2010/01/28 12:21:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bz2/ruby-bz2-0.2.2-r1.ebuild,v 1.2 2012/09/16 07:57:37 graaff Exp $
 
-EAPI=2
+EAPI=4
 
-USE_RUBY="ruby18"
+# ruby19 → configuration failures; jruby → compiled extension.
+USE_RUBY="ruby18 ree18"
 
 inherit ruby-ng
 
@@ -19,7 +20,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE="doc"
 
-S="${WORKDIR}/${MY_P}"
+RUBY_S="${MY_P}"
 
 RDEPEND="app-arch/bzip2"
 DEPEND="${RDEPEND}"
