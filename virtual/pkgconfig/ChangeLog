@@ -1,6 +1,9 @@
 # ChangeLog for virtual/pkgconfig
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/pkgconfig/ChangeLog,v 1.13 2012/07/31 07:41:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/pkgconfig/ChangeLog,v 1.14 2012/09/16 16:01:43 ssuominen Exp $
+
+  16 Sep 2012; Samuli Suominen <ssuominen@gentoo.org> pkgconfig-0.ebuild:
+  Force latest dev-util/pkgconfig to ensure installed pkg.m4 is up to date.
 
   31 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> pkgconfig-0.ebuild:
   Remove dev-util/pkg-config-lite wrt #425292
