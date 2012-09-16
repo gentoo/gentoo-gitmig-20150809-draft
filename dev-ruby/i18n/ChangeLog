@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/i18n
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/ChangeLog,v 1.48 2012/08/16 03:58:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/ChangeLog,v 1.49 2012/09/16 12:20:44 pacho Exp $
+
+  16 Sep 2012; Pacho Ramos <pacho@gentoo.org> -files/i18n-0.3.7-gentoo.patch,
+  -i18n-0.1.3.ebuild, -i18n-0.3.7.ebuild:
+  Drop masked versions.
 
   16 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> i18n-0.3.7.ebuild,
   i18n-0.4.2.ebuild, i18n-0.5.0-r1.ebuild, i18n-0.6.0-r1.ebuild:
