@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/icc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.85 2012/06/06 03:14:06 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.86 2012/09/16 19:17:52 jlec Exp $
+
+*icc-13.0.0.079 (16 Sep 2012)
+
+  16 Sep 2012; Justin Lecher <jlec@gentoo.org> -icc-11.1.072-r1.ebuild,
+  +icc-13.0.0.079.ebuild, metadata.xml:
+  Version bump, #347375; Drop oldwhich can't be fetch anymore; update HOMPAGE,
+  #420321
 
   06 Jun 2012; Zac Medico <zmedico@gentoo.org> icc-11.1.072-r1.ebuild:
   inherit multilib for get_libdir
