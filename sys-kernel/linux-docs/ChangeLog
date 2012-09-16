@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/linux-docs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-docs/ChangeLog,v 1.32 2012/09/13 10:07:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-docs/ChangeLog,v 1.33 2012/09/16 19:37:54 maekke Exp $
+
+  16 Sep 2012; Markus Meier <maekke@gentoo.org> linux-docs-3.4.1.ebuild:
+  arm stable, bug #429218
 
   13 Sep 2012; Agostino Sarubbo <ago@gentoo.org> linux-docs-3.4.1.ebuild:
   Stable for amd64, wrt bug #429218
