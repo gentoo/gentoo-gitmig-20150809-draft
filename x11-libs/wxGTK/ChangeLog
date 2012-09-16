@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.293 2012/09/16 02:54:05 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.294 2012/09/16 17:04:31 dirtyepic Exp $
+
+  17 Sep 2012; Ryan Hill <dirtyepic@gentoo.org> +wxGTK-2.9.3.1.ebuild:
+  Restore.
 
   16 Sep 2012; Ryan Hill <dirtyepic@gentoo.org> wxGTK-2.8.12.1.ebuild,
   -wxGTK-2.9.3.1.ebuild, wxGTK-2.9.4.1.ebuild:
