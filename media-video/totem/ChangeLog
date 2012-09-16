@@ -1,6 +1,10 @@
 # ChangeLog for media-video/totem
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.343 2012/09/10 17:17:46 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.344 2012/09/16 02:55:45 tetromino Exp $
+
+  16 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org> totem-3.2.2.ebuild,
+  totem-3.4.2.ebuild, totem-3.4.3.ebuild:
+  Slot media-libs/grilo.
 
   10 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org> totem-3.2.2.ebuild,
   totem-3.4.2.ebuild, totem-3.4.3.ebuild:
