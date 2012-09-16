@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libosinfo/libosinfo-0.2.0.ebuild,v 1.1 2012/09/15 12:05:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libosinfo/libosinfo-0.2.0.ebuild,v 1.2 2012/09/16 00:58:19 tetromino Exp $
 
 EAPI=4
 VALA_MIN_API_VERSION="0.16"
@@ -32,6 +32,10 @@ DEPEND="${RDEPEND}
 	vala? ( $(vala_depend) )"
 
 DOCS="AUTHORS ChangeLog NEWS README"
+
+src_prepare() {
+	use vala && vala_src_prepare
+}
 
 src_configure() {
 	local udevdir=/lib/udev
