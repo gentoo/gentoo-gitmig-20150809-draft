@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.421 2012/09/12 10:44:58 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.422 2012/09/16 19:42:18 maekke Exp $
+
+  16 Sep 2012; Markus Meier <maekke@gentoo.org> mesa-8.0.4-r1.ebuild:
+  arm stable, bug #432400
 
   12 Sep 2012; Andreas Schuerch <nativemad@gentoo.org> mesa-8.0.4-r1.ebuild:
   x86 stable, see bug 432400
