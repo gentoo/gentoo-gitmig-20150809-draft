@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-1.15.0.ebuild,v 1.1 2012/05/18 09:07:49 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-1.15.0.ebuild,v 1.2 2012/09/16 21:29:11 ottxor Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ DESCRIPTION="A download utility with resuming and segmented downloading with HTT
 HOMEPAGE="http://aria2.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 SLOT="0"
 IUSE="ares bittorrent doc expat gnutls metalink nettle nls scripts sqlite ssl test xmlrpc"
 REQUIRED_USE="gnutls? ( ssl )"
@@ -101,7 +101,7 @@ src_configure() {
 src_install() {
 	default
 
-	rm -rf "${D}/usr/share/doc/aria2"
+	rm -rf "${ED}/usr/share/doc/aria2"
 	dohtml README.html doc/aria2c.1.html
 
 	use bash-completion && dobashcomp doc/bash_completion/aria2c
