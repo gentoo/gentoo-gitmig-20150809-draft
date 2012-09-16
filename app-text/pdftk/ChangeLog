@@ -1,6 +1,10 @@
 # ChangeLog for app-text/pdftk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/ChangeLog,v 1.38 2012/01/28 20:58:51 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/ChangeLog,v 1.39 2012/09/16 20:39:01 chithanh Exp $
+
+  16 Sep 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  pdftk-1.44.ebuild:
+  Keyword ~arm
 
   28 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org> -pdftk-1.41-r1.ebuild,
   -pdftk-1.41-r2.ebuild, -files/pdftk-1.41-gcc-4.3.patch,
@@ -158,4 +162,3 @@
   15 Mar 2004; Mamoru KOMACHI <usata@gentoo.org> pdftk-0.93.ebuild:
   Initial import. Ebuild submitted by TGL <degrenier@easyconnect.fr>,
   closing bug #43929
-
