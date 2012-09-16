@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.399 2012/09/15 16:16:53 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.400 2012/09/16 15:08:12 jlec Exp $
+
+  16 Sep 2012; Justin Lecher <jlec@gentoo.org> intel-sdp.eclass:
+  Added new intel-sdp.eclass
 
   15 Sep 2012; Zac Medico <zmedico@gentoo.org> cannadic.eclass,
   cmake-utils.eclass, confutils.eclass, embassy.eclass, eutils.eclass,
@@ -150,6 +153,10 @@
   28 Jul 2012; Julian Ospald <hasufell@gentoo.org> games.eclass:
   omg, we checked the dirs in ${S} instead of ${D} which accidentially
   worked for some ebuilds (EAPI-4 related fix)
+
+  05 Aug 2012; Justin Lecher <jlec@gentoo.org> pam.eclass:
+  Add magic needed for app-portage/eclass-manpages to pam.eclass, changes
+  approved by author
 
   26 Jul 2012; Fabian Groffen <grobian@gentoo.org>
   +ELT-patches/sol2-ltmain/2.4.2, libtool.eclass:
