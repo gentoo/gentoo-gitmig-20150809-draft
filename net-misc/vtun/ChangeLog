@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/vtun
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/ChangeLog,v 1.51 2012/09/16 12:12:02 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/ChangeLog,v 1.52 2012/09/16 12:41:57 pinkbyte Exp $
+
+*vtun-3.0.3 (16 Sep 2012)
+
+  16 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> +vtun-3.0.3.ebuild,
+  +files/vtun-3.0.3-includes.patch:
+  Version bump
 
   16 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> -files/vtun-2.6-lzo2.patch,
   -files/vtun-2.6-makefile.patch:
