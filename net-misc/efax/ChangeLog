@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/efax
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/efax/ChangeLog,v 1.19 2012/06/27 16:54:39 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/efax/ChangeLog,v 1.20 2012/09/16 09:38:12 pacho Exp $
+
+*efax-0.9a-r4 (16 Sep 2012)
+
+  16 Sep 2012; Pacho Ramos <pacho@gentoo.org> +efax-0.9a-r4.ebuild:
+  Don't collide with mgetty, bug #429808 by flameeyes.
 
   27 Jun 2012; Michael Palimaka <kensington@gentoo.org> -efax-0.9a-r2.ebuild,
   -efax-0.9a.ebuild:
