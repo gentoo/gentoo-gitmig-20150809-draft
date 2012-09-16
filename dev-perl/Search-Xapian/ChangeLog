@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Search-Xapian
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Search-Xapian/ChangeLog,v 1.14 2012/09/15 15:35:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Search-Xapian/ChangeLog,v 1.15 2012/09/16 14:23:14 blueness Exp $
+
+  16 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
+  Search-Xapian-1.2.12.0.ebuild:
+  Stable ppc, bug #434564
 
   15 Sep 2012; Agostino Sarubbo <ago@gentoo.org> Search-Xapian-1.2.12.0.ebuild:
   Stable for amd64, wrt bug #434564
