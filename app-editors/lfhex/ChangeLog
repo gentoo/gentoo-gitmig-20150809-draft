@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/lfhex
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/lfhex/ChangeLog,v 1.29 2010/03/26 23:58:39 yngwin Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/lfhex/ChangeLog,v 1.30 2012/09/16 09:30:39 pacho Exp $
+
+  16 Sep 2012; Pacho Ramos <pacho@gentoo.org> +files/01-abs-llabs.dpatch,
+  +files/02-gcc-4.7.dpatch, lfhex-0.42.ebuild:
+  Apply debian patches to fix compilation errors like gcc-4.7 compat issues,
+  also install a desktop entry.
 
   26 Mar 2010; Ben de Groot <yngwin@gentoo.org> lfhex-0.42.ebuild:
   Use qt4-r2.eclass (bug #311481). Formatting.
@@ -115,4 +120,3 @@
   +lfhex-0.3.7.ebuild:
   Initial import. Ebuild thanks to CJ Kucera <gentoo@apocalyptech.com> in bug
   #52295
-

@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/lfhex/lfhex-0.42.ebuild,v 1.7 2010/03/26 23:58:39 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/lfhex/lfhex-0.42.ebuild,v 1.8 2012/09/16 09:30:39 pacho Exp $
 
-EAPI="2"
-inherit base qt4-r2
+EAPI=4
+inherit eutils qt4-r2
 
 DESCRIPTION="A fast, efficient hex-editor with support for large files and comparing binary files"
 HOMEPAGE="http://stoopidsimple.com/lfhex"
@@ -22,11 +22,17 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${P}/src
 
+src_prepare() {
+	# Apply Debian patches to fix compilation errors like gcc-4.7 compat
+	epatch "${FILESDIR}"/*.dpatch
+}
+
 src_configure() {
 	eqmake4
 }
 
 src_install() {
-	dobin lfhex || die
-	dodoc ../README || die
+	dobin lfhex
+	dodoc ../README
+	make_desktop_entry "${PN}" "${PN}"
 }
