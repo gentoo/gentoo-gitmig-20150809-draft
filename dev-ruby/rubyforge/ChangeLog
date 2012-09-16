@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubyforge
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/ChangeLog,v 1.91 2012/07/25 20:36:12 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/ChangeLog,v 1.92 2012/09/16 08:00:23 graaff Exp $
+
+  16 Sep 2012; Hans de Graaff <graaff@gentoo.org> -rubyforge-2.0.4.ebuild:
+  Cleanup.
 
   25 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
   rubyforge-2.0.4-r2.ebuild:
