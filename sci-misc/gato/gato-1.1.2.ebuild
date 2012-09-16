@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/gato/gato-1.1.2.ebuild,v 1.1 2012/08/04 16:01:17 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/gato/gato-1.1.2.ebuild,v 1.2 2012/09/16 16:07:37 jlec Exp $
 
 EAPI=4
 
 PYTHON_DEPEND="2"
-#PYTHON_USE_WITH="tk"
+PYTHON_USE_WITH="tk"
 
 inherit eutils python
 
