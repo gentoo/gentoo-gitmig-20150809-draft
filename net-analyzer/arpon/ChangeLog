@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/arpon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpon/ChangeLog,v 1.13 2012/06/08 12:03:27 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpon/ChangeLog,v 1.14 2012/09/16 11:45:04 ago Exp $
+
+  16 Sep 2012; Agostino Sarubbo <ago@gentoo.org> -arpon-2.1-r1.ebuild,
+  -arpon-2.6-r1.ebuild, -arpon-2.7.ebuild:
+  Remove old
 
   08 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> arpon-2.7-r1.ebuild:
   x86 stable wrt bug #419205
@@ -60,4 +64,3 @@
   +metadata.xml:
   Moved from sunrise overlay. Thanks to Giuseppe Marco Randazzo
   <gmrandazzo@gmail.com>. Bug #225125
-
