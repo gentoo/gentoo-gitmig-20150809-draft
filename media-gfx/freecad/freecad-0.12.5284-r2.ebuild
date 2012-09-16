@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/freecad-0.12.5284-r2.ebuild,v 1.3 2012/05/06 18:50:24 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/freecad-0.12.5284-r2.ebuild,v 1.4 2012/09/16 10:48:23 pacho Exp $
 
 EAPI=4
 PYTHON_DEPEND=2
@@ -32,6 +32,7 @@ RDEPEND="
 	>=sci-libs/opencascade-6.3-r3
 	sci-libs/gts
 	sys-libs/zlib
+	virtual/glu
 	virtual/fortran
 	x11-libs/qt-gui:4
 	x11-libs/qt-opengl:4
