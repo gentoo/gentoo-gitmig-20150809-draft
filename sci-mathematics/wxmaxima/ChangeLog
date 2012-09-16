@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/wxmaxima
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/ChangeLog,v 1.39 2012/06/06 21:44:02 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/ChangeLog,v 1.40 2012/09/16 15:57:30 grozin Exp $
+
+*wxmaxima-12.09.0 (16 Sep 2012)
+
+  16 Sep 2012; Andrey Grozin <grozin@gentoo.org> +wxmaxima-12.09.0.ebuild:
+  Version bump, closing #435096
 
 *wxmaxima-12.04.0 (06 Jun 2012)
 
