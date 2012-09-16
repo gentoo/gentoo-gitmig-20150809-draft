@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2html/pdf2html-1.4.ebuild,v 1.19 2011/09/14 15:02:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2html/pdf2html-1.4.ebuild,v 1.20 2012/09/16 20:04:30 ottxor Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="ftp://atrey.karlin.mff.cuni.cz/pub/local/clock/pdf2html/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~ppc sparc x86"
+KEYWORDS="alpha amd64 ~ppc sparc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
 DEPEND=">=media-libs/libpng-1.4
@@ -35,7 +35,7 @@ src_compile() {
 	echo "pbm2eps9: pbm2eps9.o printer.o" > Makefile
 	emake pbm2eps9
 
-	echo "cp /usr/share/${P}/*.png ." >> pdf2html
+	echo "cp \"${EPREFIX}\"/usr/share/${P}/*.png ." >> pdf2html
 }
 
 src_install() {
