@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/grilo-plugins-0.1.18.ebuild,v 1.3 2012/09/16 02:50:33 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/grilo-plugins-0.1.20.ebuild,v 1.1 2012/09/16 02:50:33 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no" # --enable-debug only changes CFLAGS
 GNOME2_LA_PUNT="yes"
 
-inherit autotools eutils gnome2
+inherit gnome2
 
 DESCRIPTION="A framework for easy media discovery and browsing"
 HOMEPAGE="https://live.gnome.org/Grilo"
@@ -14,19 +14,20 @@ HOMEPAGE="https://live.gnome.org/Grilo"
 LICENSE="LGPL-2.1"
 SLOT="0.1"
 KEYWORDS="~amd64 ~x86"
-IUSE="tracker upnp +vimeo +youtube"
+IUSE="+dvd tracker upnp +vimeo +youtube"
 
 RDEPEND="
-	>=dev-libs/glib-2.26:2
+	>=dev-libs/glib-2.28:2
 	~media-libs/grilo-${PV}:${SLOT}[network]
 
 	dev-libs/gmime:2.6
 	dev-libs/libxml2:2
 	dev-db/sqlite:3
 
+	dvd? ( >=dev-libs/totem-pl-parser-3.4.1 )
 	tracker? ( >=app-misc/tracker-0.10.5 )
 	youtube? ( >=dev-libs/libgdata-0.7
-		>=media-libs/libquvi-0.2.15 )
+		>=media-libs/libquvi-0.4 )
 	upnp? ( >=net-libs/gupnp-0.13
 		>=net-libs/gupnp-av-0.5 )
 	vimeo? ( net-libs/libsoup:2.4
@@ -60,6 +61,7 @@ pkg_setup() {
 		--enable-podcasts
 		--disable-bliptv
 		--disable-shoutcast
+		$(use_enable dvd optical-media)
 		$(use_enable tracker)
 		$(use_enable upnp)
 		$(use_enable vimeo)
@@ -68,11 +70,6 @@ pkg_setup() {
 
 src_prepare() {
 	sed -i -e 's/^\(SUBDIRS .*\)test/\1/g' Makefile.*
-
-	# Upstream patches, will be in next release
-	epatch "${FILESDIR}/${P}-tracker-0.14.patch" # requires eautoreconf
-
-	eautoreconf
 
 	gnome2_src_prepare
 }
