@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.117 2012/09/08 17:44:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.118 2012/09/16 20:19:21 vapier Exp $
 
 EAPI="4"
 
@@ -53,7 +53,6 @@ COMMON_DEPEND="virtual/opengl
 	>=media-libs/glew-1.5.6
 	media-libs/jasper
 	media-libs/jbigkit
-	virtual/jpeg
 	>=media-libs/libass-0.9.7
 	bluray? ( media-libs/libbluray )
 	css? ( media-libs/libdvdcss )
@@ -66,6 +65,7 @@ COMMON_DEPEND="virtual/opengl
 	media-libs/libsamplerate
 	media-libs/libsdl[audio,opengl,video,X]
 	alsa? ( media-libs/libsdl[alsa] )
+	>=media-libs/taglib-1.8
 	media-libs/libvorbis
 	media-libs/sdl-gfx
 	>=media-libs/sdl-image-1.2.10[gif,jpeg,png]
@@ -84,6 +84,7 @@ COMMON_DEPEND="virtual/opengl
 	bluetooth? ( net-wireless/bluez )
 	sys-apps/dbus
 	sys-libs/zlib
+	virtual/jpeg
 	mysql? ( virtual/mysql )
 	x11-apps/xdpyinfo
 	x11-apps/mesa-progs
