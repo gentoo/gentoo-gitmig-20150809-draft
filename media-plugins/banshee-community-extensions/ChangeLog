@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/banshee-community-extensions
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/banshee-community-extensions/ChangeLog,v 1.26 2012/06/15 20:41:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/banshee-community-extensions/ChangeLog,v 1.27 2012/09/16 11:55:40 pacho Exp $
+
+*banshee-community-extensions-2.4.0-r1 (16 Sep 2012)
+
+  16 Sep 2012; Pacho Ramos <pacho@gentoo.org>
+  +banshee-community-extensions-2.4.0-r1.ebuild,
+  banshee-community-extensions-2.4.0.ebuild:
+  Disable zeitgeist in version to stabilize.
 
 *banshee-community-extensions-2.4.0 (15 Jun 2012)
 
@@ -139,4 +146,3 @@
   Initial commit. This brings in several community extensions for Banshee
   and supercedes media-plugins/banshee-lyrics and
   media-plugins/banshee-mirage for the 1.5.x series.
-

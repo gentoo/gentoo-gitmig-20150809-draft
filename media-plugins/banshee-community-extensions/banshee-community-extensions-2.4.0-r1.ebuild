@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/banshee-community-extensions/banshee-community-extensions-2.4.0.ebuild,v 1.2 2012/09/16 11:55:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/banshee-community-extensions/banshee-community-extensions-2.4.0-r1.ebuild,v 1.1 2012/09/16 11:55:40 pacho Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ SRC_URI="http://download.banshee-project.org/${PN}/${PV}/${P}.tar.bz2"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc lastfmfingerprint lirc lyrics mirage telepathy"
+IUSE="doc lastfmfingerprint lirc lyrics mirage telepathy zeitgeist"
 
 DEPEND=">=dev-lang/mono-2.0
 	>=media-sound/banshee-2.4.0[web]
@@ -36,6 +36,10 @@ DEPEND=">=dev-lang/mono-2.0
 	telepathy? (
 		dev-dotnet/notify-sharp
 		>=dev-lang/mono-2.4.2
+	)
+	zeitgeist? (
+		dev-libs/libzeitgeist
+		dev-dotnet/zeitgeist-sharp
 	)"
 RDEPEND="${DEPEND}
 	!media-plugins/banshee-lyrics
@@ -69,7 +73,7 @@ src_configure() {
 		$(use_enable lyrics) \
 		$(use_enable mirage) \
 		$(use_enable telepathy) \
-		--disable-zeitgeistdataprovider \
+		$(use_enable zeitgeist zeitgeistdataprovider) \
 		$(use_enable test tests) \
 		${myconf}
 }
