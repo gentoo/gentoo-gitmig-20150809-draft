@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tigervnc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.139 2012/09/16 16:14:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.140 2012/09/16 17:46:15 armin76 Exp $
+
+  16 Sep 2012; Raúl Porcel <armin76@gentoo.org> files/tigervnc.initd:
+  Do a source /etc/profile, bug #307773
 
 *tigervnc-1.2.0 (16 Sep 2012)
 
