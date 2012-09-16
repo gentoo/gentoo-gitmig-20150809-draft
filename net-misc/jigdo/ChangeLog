@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/jigdo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jigdo/ChangeLog,v 1.27 2012/03/18 17:54:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jigdo/ChangeLog,v 1.28 2012/09/16 11:38:28 pacho Exp $
+
+*jigdo-0.7.3-r2 (16 Sep 2012)
+
+  16 Sep 2012; Pacho Ramos <pacho@gentoo.org> +jigdo-0.7.3-r2.ebuild,
+  -jigdo-0.7.3.ebuild:
+  Drop libwww support (#320253), install a menu entry.
 
   18 Mar 2012; Raúl Porcel <armin76@gentoo.org> jigdo-0.7.3.ebuild,
   jigdo-0.7.3-r1.ebuild:
@@ -104,4 +110,3 @@
   29 Jul 2003; Jason Wever <weeve@gentoo.org> jigdo-0.7.0.ebuild,
   metadata.xml, files/makefile.patch:
   Initial import. Resolves bug #21829.
-
