@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.1.0-r7.ebuild,v 1.10 2012/08/26 20:14:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.1.0-r7.ebuild,v 1.11 2012/09/16 18:14:10 armin76 Exp $
 
 EAPI="1"
 
@@ -28,18 +28,18 @@ RDEPEND="virtual/jpeg
 	sys-libs/zlib
 	media-libs/freetype
 	x11-libs/libSM
-	x11-libs/libXtst
-	app-admin/eselect-opengl
+	>=x11-libs/libXtst-1.0.99.2
+	>=app-admin/eselect-opengl-1.0.8
 	server? (
-		x11-libs/libXi
-		x11-libs/libXfont
-		x11-libs/libXmu
-		x11-libs/libxkbfile
+		>=x11-libs/libXi-1.2.99.1
+		>=x11-libs/libXfont-1.4.2
+		>=x11-libs/libXmu-1.0.3
+		>=x11-libs/libxkbfile-1.0.4
 		x11-libs/libXrender
-		x11-libs/pixman
-		x11-apps/xauth
+		>=x11-libs/pixman-0.21.8
+		>=x11-apps/xauth-1.0.3
 		x11-apps/xsetroot
-		x11-misc/xkeyboard-config
+		>=x11-misc/xkeyboard-config-2.4.1-r3
 		media-fonts/font-adobe-100dpi
 		media-fonts/font-adobe-75dpi
 		media-fonts/font-alias
@@ -60,19 +60,19 @@ DEPEND="${RDEPEND}
 		virtual/pkgconfig
 		media-fonts/font-util
 		x11-misc/util-macros
-		x11-proto/bigreqsproto
-		x11-proto/compositeproto
-		x11-proto/damageproto
-		x11-proto/dri2proto
-		x11-proto/fixesproto
-		x11-proto/fontsproto
+		>=x11-proto/bigreqsproto-1.1.0
+		>=x11-proto/compositeproto-0.4
+		>=x11-proto/damageproto-1.1
+		>=x11-proto/dri2proto-2.6
+		>=x11-proto/fixesproto-5.0
+		>=x11-proto/fontsproto-2.0.2
 		>=x11-proto/randrproto-1.2.99
-		x11-proto/resourceproto
-		x11-proto/scrnsaverproto
-		x11-proto/trapproto
-		x11-proto/videoproto
-		x11-proto/xcmiscproto
-		x11-proto/xineramaproto
+		>=x11-proto/resourceproto-1.0.2
+		>=x11-proto/scrnsaverproto-1.1
+		>=x11-proto/trapproto-3.4.3
+		>=x11-proto/videoproto-2.2.2
+		>=x11-proto/xcmiscproto-1.2.0
+		>=x11-proto/xineramaproto-1.1.3
 		x11-proto/xf86bigfontproto
 		x11-proto/xf86dgaproto
 		x11-proto/xf86driproto

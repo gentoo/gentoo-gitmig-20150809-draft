@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.2.0.ebuild,v 1.1 2012/09/16 16:14:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.2.0.ebuild,v 1.2 2012/09/16 18:14:10 armin76 Exp $
 
-EAPI="1"
+EAPI="4"
 
 inherit eutils cmake-utils autotools java-pkg-opt-2
 
@@ -25,7 +25,7 @@ IUSE="gnutls +internal-fltk java nptl +opengl pam server +xorgmodule"
 
 RDEPEND="virtual/jpeg
 	sys-libs/zlib
-	x11-libs/libXtst
+	>=x11-libs/libXtst-1.0.99.2
 	gnutls? ( net-libs/gnutls )
 	java? ( >=virtual/jre-1.5 )
 	pam? ( virtual/pam )
@@ -35,15 +35,15 @@ RDEPEND="virtual/jpeg
 		x11-libs/libXinerama
 		x11-libs/libXcursor )
 	server? (
-		x11-libs/libXi
-		x11-libs/libXfont
-		x11-libs/libxkbfile
+		>=x11-libs/libXi-1.2.99.1
+		>=x11-libs/libXfont-1.4.2
+		>=x11-libs/libxkbfile-1.0.4
 		x11-libs/libXrender
-		x11-libs/pixman
-		x11-apps/xauth
+		>=x11-libs/pixman-0.21.8
+		>=x11-apps/xauth-1.0.3
 		x11-apps/xsetroot
-		x11-misc/xkeyboard-config
-		opengl? ( app-admin/eselect-opengl )
+		>=x11-misc/xkeyboard-config-2.4.1-r3
+		opengl? ( >=app-admin/eselect-opengl-1.0.8 )
 		xorgmodule? ( =x11-base/xorg-server-${XSERVER_VERSION%.*}* )
 	)
 	!net-misc/vnc
@@ -52,29 +52,29 @@ RDEPEND="virtual/jpeg
 DEPEND="${RDEPEND}
 	amd64? ( dev-lang/nasm )
 	x86? ( dev-lang/nasm )
-	x11-proto/inputproto
-	x11-proto/xextproto
-	x11-proto/xproto
+	>=x11-proto/inputproto-2.1.99.3
+	>=x11-proto/xextproto-7.1.99
+	>=x11-proto/xproto-7.0.22
 	java? ( >=virtual/jdk-1.5 )
 	server?	(
 		virtual/pkgconfig
 		media-fonts/font-util
 		x11-misc/util-macros
-		x11-proto/bigreqsproto
-		x11-proto/compositeproto
-		x11-proto/damageproto
-		x11-proto/dri2proto
-		x11-proto/fixesproto
-		x11-proto/fontsproto
-		x11-proto/randrproto
-		x11-proto/renderproto
-		x11-proto/resourceproto
-		x11-proto/scrnsaverproto
-		x11-proto/videoproto
-		x11-proto/xcmiscproto
-		x11-proto/xineramaproto
-		x11-libs/xtrans
-		opengl? ( media-libs/mesa )
+		>=x11-proto/bigreqsproto-1.1.0
+		>=x11-proto/compositeproto-0.4
+		>=x11-proto/damageproto-1.1
+		>=x11-proto/fixesproto-5.0
+		>=x11-proto/fontsproto-2.0.2
+		>=x11-proto/randrproto-1.4.0
+		>=x11-proto/renderproto-0.11
+		>=x11-proto/resourceproto-1.0.2
+		>=x11-proto/scrnsaverproto-1.1
+		>=x11-proto/videoproto-2.2.2
+		>=x11-proto/xcmiscproto-1.2.0
+		>=x11-proto/xineramaproto-1.1.3
+	        >=x11-libs/xtrans-1.2.2
+		>=x11-proto/dri2proto-2.8
+		opengl? ( >=media-libs/mesa-7.8_rc[nptl=] )
 	)"
 
 CMAKE_IN_SOURCE_BUILD=1
@@ -102,10 +102,7 @@ switch_opengl_implem() {
 	eselect opengl set ${OLD_IMPLEM}
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	if use server ; then
 		cp -r "${WORKDIR}"/xorg-server-${XSERVER_VERSION}/* unix/xserver
 	else
@@ -119,7 +116,6 @@ src_unpack() {
 		cd unix/xserver
 		eautoreconf
 	fi
-
 }
 
 src_compile() {
