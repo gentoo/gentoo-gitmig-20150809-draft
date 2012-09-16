@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libxslt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.234 2012/09/16 10:29:53 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.235 2012/09/16 10:33:44 nativemad Exp $
+
+  16 Sep 2012; Andreas Schuerch <nativemad@gentoo.org> libxslt-1.1.26-r4.ebuild:
+  manifest forgotten...
 
   16 Sep 2012; Andreas Schuerch <nativemad@gentoo.org>
   libxslt-1.1.26-r4.ebuild:
