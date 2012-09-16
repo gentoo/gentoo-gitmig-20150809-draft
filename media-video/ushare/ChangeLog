@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ushare
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ushare/ChangeLog,v 1.15 2012/08/31 23:09:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ushare/ChangeLog,v 1.16 2012/09/16 14:29:06 hwoarang Exp $
+
+  16 Sep 2012; Markos Chandras <hwoarang@gentoo.org> files/ushare.init.d:
+  Add missing -c option for shared directories. Bug #434548. Thanks to Robert
+  Meyer <r.meyer@net-wizard.org>
 
   31 Aug 2012; Markos Chandras <hwoarang@gentoo.org> -ushare-1.1a-r3.ebuild:
   Remove old
