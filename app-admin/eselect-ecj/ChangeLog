@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-ecj
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ecj/ChangeLog,v 1.21 2012/06/10 17:46:25 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ecj/ChangeLog,v 1.22 2012/09/16 13:10:40 chithanh Exp $
+
+  16 Sep 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  eselect-ecj-0.7.ebuild:
+  Keyword ~arm, bug #305773.
 
   10 Jun 2012; Ralph Sennhauser <sera@gentoo.org> -eselect-ecj-0.6.ebuild,
   -eselect-ecj-0.6-r1.ebuild, -files/ecj-0.6.eselect:
@@ -93,4 +97,3 @@
   21 Jul 2008; Petteri Räty <betelgeuse@gentoo.org> +files/ecj.eselect,
   +metadata.xml, +eselect-ecj-0.3.ebuild:
   Initial addition. Thanks to Chewi <chewi@aura-online.co.uk> for the work.
-
