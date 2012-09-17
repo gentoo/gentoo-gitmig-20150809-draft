@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/coffee-script-source
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coffee-script-source/ChangeLog,v 1.6 2012/08/05 07:47:58 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coffee-script-source/ChangeLog,v 1.7 2012/09/17 19:21:10 grobian Exp $
+
+  17 Sep 2012; Fabian Groffen <grobian@gentoo.org>
+  coffee-script-source-1.3.3.ebuild:
+  Marked ~x86-solaris
 
   05 Aug 2012; Hans de Graaff <graaff@gentoo.org>
   -coffee-script-source-1.2.0.ebuild, -coffee-script-source-1.3.1.ebuild:
@@ -32,4 +36,3 @@
   +coffee-script-source-1.2.0.ebuild, +metadata.xml:
   Initial import. Dependency for dev-ruby/coffee-script that contains the
   actual coffee-script compiler.
-
