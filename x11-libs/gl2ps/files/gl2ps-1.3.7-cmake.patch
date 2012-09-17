@@ -1,36 +1,36 @@
- CMakeLists.txt |   25 ++++++++++---------------
- 1 files changed, 10 insertions(+), 15 deletions(-)
+From: Sebastien Fabbro <bicatali@gentoo.org>
 
-diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 69b88e2..e0b9278 100644
---- a/CMakeLists.txt
-+++ b/CMakeLists.txt
-@@ -46,6 +46,7 @@ project(gl2ps C)
+Patch to add various enhancements to cmake:
+* use GNU standard CMAKE_INSTALL_DOCDIR
+* optional documenation building
+* optional examples building
+* do not install static libraries
+
+--- CMakeLists.txt	2012-09-02 02:07:33.000000000 -0700
++++ CMakeLists.txt	2012-09-17 13:51:58.337832078 -0700
+@@ -46,6 +46,8 @@
  
  option(ENABLE_ZLIB "Enable compression using ZLIB" ON)
  option(ENABLE_PNG "Enable PNG support" ON)
 +option(ENABLE_DOC "Enable documentation" OFF)
++option(ENABLE_EXAMPLES "Build and install examples" OFF)
  
  set(GL2PS_MAJOR_VERSION 1)
  set(GL2PS_MINOR_VERSION 3)
-@@ -103,39 +104,33 @@ endif(ENABLE_PNG)
+@@ -103,8 +105,6 @@
  include_directories(${EXTERNAL_INCLUDES})
  
  if(OPENGL_FOUND)
 -  add_library(lib STATIC gl2ps.c gl2ps.h)
 -  set_target_properties(lib PROPERTIES OUTPUT_NAME gl2ps)
--
-+  #add_library(lib STATIC gl2ps.c gl2ps.h)
+ 
    add_library(shared SHARED gl2ps.c gl2ps.h)
-+  set_target_properties(shared PROPERTIES OUTPUT_NAME gl2ps)
-+
    target_link_libraries(shared ${EXTERNAL_LIBRARIES})
-   set_target_properties(shared PROPERTIES OUTPUT_NAME gl2ps)
-   if(MSVC)
+@@ -116,29 +116,32 @@
      set_target_properties(shared PROPERTIES COMPILE_FLAGS "-DGL2PSDLL -DGL2PSDLL_EXPORTS")
    endif(MSVC)
  
--  install(TARGETS lib shared DESTINATION lib)
+-  install(TARGETS lib shared DESTINATION lib${LIB_SUFFIX})
 +  install(TARGETS shared DESTINATION lib${LIB_SUFFIX})
  endif(OPENGL_FOUND)
  
@@ -38,7 +38,7 @@ index 69b88e2..e0b9278 100644
    set(GL2PS_DOC .)
  else(WIN32)
 -  set(GL2PS_DOC share/doc/gl2ps)
-+  set(GL2PS_DOC share/doc/gl2ps-${GL2PS_VERSION})
++  set(GL2PS_DOC ${CMAKE_INSTALL_DOCDIR})
  endif(WIN32)
  
  install(FILES gl2ps.h DESTINATION include)
@@ -46,30 +46,25 @@ index 69b88e2..e0b9278 100644
 -install(FILES ${CMAKE_SOURCE_DIR}/COPYING.LGPL DESTINATION ${GL2PS_DOC})
 -install(FILES ${CMAKE_SOURCE_DIR}/COPYING.GL2PS DESTINATION ${GL2PS_DOC})
 +install(FILES ${CMAKE_SOURCE_DIR}/TODO.txt DESTINATION ${GL2PS_DOC})
++
++
++if(ENABLE_EXAMPLES)
  install(FILES ${CMAKE_SOURCE_DIR}/gl2psTest.c DESTINATION ${GL2PS_DOC})
  install(FILES ${CMAKE_SOURCE_DIR}/gl2psTestSimple.c DESTINATION ${GL2PS_DOC})
-+install(FILES ${CMAKE_SOURCE_DIR}/gl2ps.pdf DESTINATION ${GL2PS_DOC})
- 
--if(GLUT_FOUND)
--  add_executable(gl2psTest WIN32 gl2psTest.c)
--  target_link_libraries(gl2psTest lib ${EXTERNAL_LIBRARIES})
--  add_executable(gl2psTestSimple WIN32 gl2psTestSimple.c)
--  target_link_libraries(gl2psTestSimple lib ${EXTERNAL_LIBRARIES})
--endif(GLUT_FOUND)
 -
+ if(GLUT_FOUND)
+   add_executable(gl2psTest WIN32 gl2psTest.c)
+   target_link_libraries(gl2psTest lib ${EXTERNAL_LIBRARIES})
+   add_executable(gl2psTestSimple WIN32 gl2psTestSimple.c)
+   target_link_libraries(gl2psTestSimple lib ${EXTERNAL_LIBRARIES})
+ endif(GLUT_FOUND)
++endif(ENABLE_EXAMPLES)
+ 
 +if(ENABLE_DOC)
  find_package(LATEX)
  if(PDFLATEX_COMPILER)
    add_custom_command(OUTPUT gl2ps.pdf DEPENDS gl2ps.tex 
-@@ -144,7 +139,6 @@ if(PDFLATEX_COMPILER)
-                      COMMAND ${PDFLATEX_COMPILER} ARGS ${CMAKE_SOURCE_DIR}/gl2ps.tex
-                      COMMAND ${CMAKE_COMMAND} -E copy gl2ps.pdf ${CMAKE_SOURCE_DIR})
-   add_custom_target(pdf ALL DEPENDS gl2ps.pdf)
--  install(FILES gl2ps.pdf DESTINATION ${GL2PS_DOC})
-   find_program(TTH tth)
-   if(TTH)
-     add_custom_command(OUTPUT gl2ps.html DEPENDS gl2ps.tex gl2ps.pdf
-@@ -154,6 +148,7 @@ if(PDFLATEX_COMPILER)
+@@ -157,6 +160,7 @@
      add_custom_target(html DEPENDS gl2ps.html)
    endif(TTH)
  endif(PDFLATEX_COMPILER)
