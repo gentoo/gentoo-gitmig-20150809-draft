@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-chips
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-chips/ChangeLog,v 1.54 2012/07/21 20:25:22 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-chips/ChangeLog,v 1.55 2012/09/17 15:01:46 aballier Exp $
+
+  17 Sep 2012; Alexis Ballier <aballier@gentoo.org>
+  xf86-video-chips-1.2.5.ebuild:
+  keyword ~amd64-fbsd, compile tested only.
 
 *xf86-video-chips-1.2.5 (21 Jul 2012)
 
