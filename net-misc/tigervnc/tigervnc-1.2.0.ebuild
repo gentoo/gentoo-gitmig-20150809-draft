@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.2.0.ebuild,v 1.2 2012/09/16 18:14:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.2.0.ebuild,v 1.3 2012/09/17 07:31:24 armin76 Exp $
 
 EAPI="4"
 
@@ -85,8 +85,6 @@ pkg_setup() {
 		einfo "The 'server' USE flag will build tigervnc's server."
 		einfo "If '-server' is chosen only the client is built to save space."
 		einfo "Stop the build now if you need to add 'server' to USE flags.\n"
-		ebeep
-		epause 5
 	else
 		ewarn "Forcing on xorg-x11 for new enough glxtokens.h..."
 		OLD_IMPLEM="$(eselect opengl show)"
@@ -118,7 +116,7 @@ src_prepare() {
 	fi
 }
 
-src_compile() {
+src_configure() {
 	mycmakeargs=(
 		-G "Unix Makefiles"
 		$(cmake-utils_use_use internal-fltk INCLUDED_FLTK)
@@ -126,7 +124,10 @@ src_compile() {
 		$(cmake-utils_use_enable pam PAM)
 		$(cmake-utils_use_build java JAVA)
 	)
+	cmake-utils_src_configure
+}
 
+src_compile() {
 	cmake-utils_src_compile
 
 	if use server ; then
