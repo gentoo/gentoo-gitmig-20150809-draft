@@ -1,36 +1,40 @@
 #!/sbin/runscript
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/files/ido2db-init.d,v 1.2 2011/12/04 19:27:46 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/files/ido2db-init.d,v 1.3 2012/09/17 19:48:49 prometheanfire Exp $
 
-IDO2DBBIN="/usr/sbin/ido2db"
-IDO2DBSOCKET="/var/lib/icinga/ido.sock"
-IDO2DBLOCK="/var/lib/icinga/ido2db.lock"
+get_config() {
+    if [ -e "${IDO2DBCFG}" ]; then
+        sed -n -e 's:^[ \t]*'$1'=\([^#]\+\).*:\1:p' "${IDO2DBCFG}"
+    fi
+}
 
-function check() {
+command=/usr/sbin/ido2db
+command_args="-c ${IDO2DBCFG}"
+pidfile="$(get_config lock_file)"
+
+depend() {
+	config "${IDO2DBCFG}"
+
+	need net
+	use dns logger firewall
+
+	case $(get_config db_servertype) in
+	    mysql)
+		use mysql ;;
+	    pgsql)
+		use postgresql ;;
+	esac
+}
+
+IDO2DBSOCKET="$(get_config socket_name)"
+
+
+start_pre() {
 	if [ -S "${IDO2DBSOCKET}" ] ; then
 		ewarn "Strange, the socket file already exist in \"${IDO2DBSOCKET}\""
 		ewarn "it will be removed now and re-created by ido2db"
 		ewarn "BUT please make your checks."
 		rm -f "${IDO2DBSOCKET}"
 	fi
-}
-
-depend() {
-	need net
-	use dns logger firewall
-	after mysql postgresql
-}
-
-start() {
-	check
-	ebegin "Starting ido2db"
-	start-stop-daemon --start --exec ${IDO2DBBIN} --pidfile ${IDO2DBLOCK} --name ${IDO2DBBIN} -- -c ${IDO2DBCFG}
-	eend $?
-}
-
-stop() {
-	ebegin "Stopping ido2db"
-	start-stop-daemon --stop --exec ${IDO2DBBIN} --pidfile ${IDO2DBLOCK} --name ${IDO2DBBIN}
-	eend $?
 }

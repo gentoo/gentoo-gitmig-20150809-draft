@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/icinga-1.7.2.ebuild,v 1.3 2012/09/16 11:06:36 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/icinga-1.7.2.ebuild,v 1.4 2012/09/17 19:48:49 prometheanfire Exp $
 
 EAPI=2
 
@@ -124,10 +124,10 @@ src_install() {
 		emake DESTDIR="${D}" install-eventhandlers || die
 	fi
 
-	newinitd "${FILESDIR}"/icinga-init.d-2 icinga || die
+	newinitd "${FILESDIR}"/icinga-init.d icinga || die
 	newconfd "${FILESDIR}"/icinga-conf.d icinga || die
 	if use idoutils ; then
-		newinitd "${FILESDIR}"/ido2db-init.d-2 ido2db || die
+		newinitd "${FILESDIR}"/ido2db-init.d ido2db || die
 		newconfd "${FILESDIR}"/ido2db-conf.d ido2db || die
 		insinto /usr/share/icinga/contrib/db
 		doins -r module/idoutils/db/* || die

@@ -1,18 +1,35 @@
 #!/sbin/runscript
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/files/icinga-init.d,v 1.3 2012/09/17 19:48:49 prometheanfire Exp $
 
-extra_commands="${extra_commands} reload checkconfig"
+: ${ICINGACFG:=/etc/icinga/icinga.cfg}
+
+extra_commands="checkconfig"
+extra_started_commands="reload"
+
+command=/usr/sbin/icinga
+command_args="-d ${ICINGACFG}"
+
+get_config() {
+    if [ -e "${ICINGACFG}" ]; then
+	    sed -n -e 's:^[ \t]*'$1'=\([^#]\+\).*:\1:p' "${ICINGACFG}"
+	fi
+}
+
+pidfile=$(get_config lock_file)
+start_stop_daemon_args="-e HOME=/var/lib/icinga"
 
 depend() {
 	need net
-	use dns logger firewall
-	after mysql postgresql ido2db
+	use dns logger firewall mysql postgresql ido2db
 }
 
 checkconfig() {
 	# Silent Check
-	/usr/sbin/icinga -v /etc/icinga/icinga.cfg &>/dev/null && return 0
+	${command} -v ${ICINGACFG} &>/dev/null && return 0
 	# Now we know there's problem - run again and display errors
-	/usr/sbin/icinga -v /etc/icinga/icinga.cfg
+	${command} -v ${ICINGACFG}
 	eend $? "Configuration Error. Please fix your configfile"
 }
 
@@ -20,25 +37,19 @@ reload()
 {
 	checkconfig || return 1
 	ebegin "Reloading configuration"
-	kill -HUP `cat /var/run/icinga/icinga.lock` &>/dev/null
+	kill -HUP $(cat ${pidfile}) &>/dev/null
 	eend $?
 }
 
-start() {
-	ebegin "Starting icinga"
-	checkpath -d -o icinga:icinga /tmp/icinga /var/run/icinga /var/log/icinga /var/lib/icinga
-	checkpath -f -o icinga:icinga /var/log/icinga/icinga.log
-	rm -f /var/lib/icinga/rw/icinga.cmd
-	start-stop-daemon --start --exec /usr/sbin/icinga -e HOME="/var/lib/icinga/home" --pidfile /var/run/icinga/icinga.lock -- -d /etc/icinga/icinga.cfg
-	eend $?
+start_pre() {
+	checkpath -d -o icinga:icinga $(get_config temp_path)  $(dirname $(get_config lock_file)) $(dirname $(get_config log_file)) $(dirname $(get_config status_file))
+	checkpath -f -o icinga:icinga $(get_config log_file)
+	rm -f $(get_config command_file)
 }
 
-stop() {
-	ebegin "Stopping icinga"
-	start-stop-daemon --stop --pidfile /var/run/icinga/icinga.lock
-	rm -f /var/lib/icinga/status.log /var/run/icinga/icinga.lock /var/lib/icinga/rw/icinga.cmd
+stop_post() {
+	rm -f $(get_config command_file)
 	rm -r /tmp/icinga
-	eend $?
 }
 
 svc_restart() {
@@ -48,3 +59,4 @@ svc_restart() {
 	svc_start
 	eend $?
 }
+
