@@ -1,16 +1,16 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/qupzilla-1.3.1.ebuild,v 1.3 2012/08/16 10:01:11 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/qupzilla-1.3.1.ebuild,v 1.4 2012/09/17 17:04:50 ago Exp $
 
 EAPI=4
 
 inherit multilib qt4-r2 vcs-snapshot
 
-MY_P="QupZilla%20${PV}"
+MY_P="QupZilla-${PV}"
 
 DESCRIPTION="Qt WebKit web browser"
 HOMEPAGE="http://www.qupzilla.com/"
-SRC_URI="https://github.com/downloads/QupZilla/qupzilla/${MY_P}.tar.gz"
+SRC_URI="mirror://github/QupZilla/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
