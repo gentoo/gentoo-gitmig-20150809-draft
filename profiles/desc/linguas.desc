@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.64 2012/07/26 09:00:09 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.65 2012/09/17 14:21:16 yngwin Exp $
 
 # This file contains descriptions of LINGUAS USE_EXPAND flags.
 
@@ -179,7 +179,9 @@ sr@ijekavian - Serbian-Ijekavian locale
 sr@ijekavianlatin - Serbian-Ijekavian (latin) locale
 sr@latin - Serbian (latin) locale
 sr@Latn - Serbian (latin) locale
+st_BA - Serbian locale for Bosnia and Herzegovina
 sr_CS - Serbian locale
+sr_RS - Serbian locale for Serbia
 ss - Swati locale
 st - Southern Sotho locale
 sv - Swedish locale
