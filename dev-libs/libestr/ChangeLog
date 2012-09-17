@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libestr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libestr/ChangeLog,v 1.14 2012/09/14 14:15:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libestr/ChangeLog,v 1.15 2012/09/17 20:15:33 hwoarang Exp $
+
+*libestr-0.1.4 (17 Sep 2012)
+
+  17 Sep 2012; Markos Chandras <hwoarang@gentoo.org> +libestr-0.1.4.ebuild:
+  Version bump
 
   14 Sep 2012; Agostino Sarubbo <ago@gentoo.org> libestr-0.1.3.ebuild:
   Stable for amd64, wrt bug #433225
