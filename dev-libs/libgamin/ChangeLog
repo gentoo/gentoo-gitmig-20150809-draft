@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgamin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgamin/ChangeLog,v 1.34 2012/09/16 19:48:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgamin/ChangeLog,v 1.35 2012/09/17 12:36:32 johu Exp $
+
+  17 Sep 2012; Johannes Huber <johu@gentoo.org> libgamin-0.1.10-r3.ebuild:
+  Stable for x86, wrt bug #433227
 
   16 Sep 2012; Markus Meier <maekke@gentoo.org> libgamin-0.1.10-r3.ebuild:
   arm stable, bug #433227
