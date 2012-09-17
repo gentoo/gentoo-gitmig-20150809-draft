@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/megaglest-3.6.0.3.ebuild,v 1.5 2012/09/08 21:49:44 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/megaglest-3.6.0.3.ebuild,v 1.6 2012/09/17 22:30:05 hasufell Exp $
 
 EAPI=4
 VIRTUALX_REQUIRED="manual"
@@ -13,13 +13,14 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}-source-${PV}.tar.xz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug +editor freetype +ftgl sse sse2 sse3 static +streflop +tools +unicode wxuniversal +model-viewer"
+IUSE="debug +editor sse sse2 sse3 static +streflop +tools +unicode wxuniversal +model-viewer"
 
 RDEPEND="
 	>=dev-lang/lua-5.1
 	dev-libs/icu
 	dev-libs/libxml2
 	media-libs/fontconfig
+	media-libs/freetype
 	media-libs/libsdl[X,audio,joystick,opengl,video]
 	media-libs/libvorbis
 	media-libs/openal
@@ -31,17 +32,16 @@ RDEPEND="
 	x11-libs/libX11
 	x11-libs/libXext
 	editor? ( x11-libs/wxGTK:2.8[X,opengl] )
-	freetype? ( media-libs/freetype )
 	model-viewer? ( x11-libs/wxGTK:2.8[X] )
 	!static? (
-		dev-libs/xerces-c
+		dev-libs/xerces-c[icu]
+		media-libs/ftgl
 		media-libs/glew
 		media-libs/libogg
 		media-libs/libpng:0
 		net-libs/miniupnpc
 		net-misc/curl
 		virtual/jpeg
-		ftgl? ( media-libs/ftgl )
 	)"
 DEPEND="${RDEPEND}
 	sys-apps/help2man
@@ -49,14 +49,14 @@ DEPEND="${RDEPEND}
 	editor? ( ${VIRTUALX_DEPEND} )
 	model-viewer? ( ${VIRTUALX_DEPEND} )
 	static? (
-		dev-libs/xerces-c[static-libs]
+		dev-libs/xerces-c[icu,static-libs]
+		media-libs/ftgl[static-libs]
 		media-libs/glew[static-libs]
 		media-libs/libogg[static-libs]
 		media-libs/libpng:0[static-libs]
 		net-libs/miniupnpc[static-libs]
 		net-misc/curl[static-libs]
 		virtual/jpeg[static-libs]
-		ftgl? ( media-libs/ftgl[static-libs] )
 	)"
 PDEPEND="~games-strategy/${PN}-data-${PV}"
 
@@ -98,8 +98,7 @@ src_configure() {
 		-DMEGAGLEST_DATA_INSTALL_PATH="${GAMES_DATADIR}/${PN}"
 		# icons are used at runtime, wrong default location share/pixmaps
 		-DMEGAGLEST_ICON_INSTALL_PATH="${GAMES_DATADIR}/${PN}"
-		$(cmake-utils_use_use freetype FREETYPEGL)
-		$(cmake-utils_use_use ftgl FTGL)
+		-DUSE_FTGL=ON
 		$(cmake-utils_use_want static STATIC_LIBS)
 		$(cmake-utils_use_want streflop STREFLOP)
 		-DWANT_SVN_STAMP=off
