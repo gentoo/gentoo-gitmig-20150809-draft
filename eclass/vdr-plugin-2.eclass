@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin-2.eclass,v 1.9 2012/08/05 19:26:36 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin-2.eclass,v 1.10 2012/09/17 19:32:49 hd_brummy Exp $
 
 # @ECLASS: vdr-plugin-2.eclass
 # @MAINTAINER:
@@ -262,7 +262,7 @@ linguas_support() {
 
 	for f in ${makefile_dir[*]}; do
 
-		PLUGIN_LINGUAS=$( ls ${f}/po --ignore="*.pot" | tr \\\012 ' ' | tr -d [:upper:] | tr -d [:punct:] |sed -e "s:po::g" )
+		PLUGIN_LINGUAS=$( ls ${f}/po --ignore="*.pot" | sed -e "s:.po::g" | cut -d_ -f1 | tr \\\012 ' ' )
 		einfo "LINGUAS=\"${PLUGIN_LINGUAS}\""
 
 		sed -i ${f}/Makefile \
