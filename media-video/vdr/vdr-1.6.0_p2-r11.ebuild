@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0_p2-r10.ebuild,v 1.5 2012/06/22 15:53:36 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0_p2-r11.ebuild,v 1.1 2012/09/17 19:28:12 hd_brummy Exp $
 
 EAPI="4"
 
@@ -40,7 +40,7 @@ SRC_URI="ftp://ftp.tvdr.de/vdr/${MY_P}.tar.bz2
 	ftp://ftp.tvdr.de/vdr/Developer/${MY_P}-2.diff
 	http://www.zulu-entertainment.de/files/patches/${EXT_P}.tar.bz2"
 
-KEYWORDS="~arm amd64 ~ppc x86"
+KEYWORDS="~arm ~amd64 ~ppc ~x86"
 SLOT="0"
 LICENSE="GPL-2"
 
@@ -174,12 +174,8 @@ EOT
 	eend 0
 }
 
-lang_linguas() {
-	LING1=$( cat /etc/make.conf | grep LINGUAS | sed -e "s:LINGUAS=::" -e "s:\"::g" )
-}
-
 lang_po() {
-	LING2=$( ls ${S}/po | tr \\\012 ' ' | sed -e "s:_::g" -e "s:[A-Z]::g" -e "s:.po::g" )
+	LING_PO=$( ls ${S}/po | sed -e "s:.po::g" | cut -d_ -f1 | tr \\\012 ' ')
 }
 
 src_prepare() {
@@ -315,17 +311,9 @@ src_prepare() {
 	einfo "\n \t VDR supports now the LINGUAS values"
 
 	lang_po
-	lang_linguas
 
-	einfo "\t Please set one of this values in /etc/make.conf"
-	einfo "\t LINGUAS=\"${LING2}\"\n"
-
-	if [[ -z ${LINGUAS} ]]; then
-		eerror "\n \t No values in LINGUAS="
-		eerror "\t you will get only english text on OSD \n"
-	else
-		einfo "\t Language for ${LING1} will installed \n"
-	fi
+	einfo "\t Please set one of this values in /etc/make.conf or /etc/portage/make.conf"
+	einfo "\t LINGUAS=\"${LING_PO}\"\n"
 
 	strip-linguas ${LING2} en
 }
