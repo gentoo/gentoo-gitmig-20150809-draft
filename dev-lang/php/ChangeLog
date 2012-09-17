@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.636 2012/09/16 16:33:38 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.637 2012/09/17 06:36:02 olemarkus Exp $
+
+*php-5.4.7 (17 Sep 2012)
+*php-5.3.17 (17 Sep 2012)
+
+  17 Sep 2012; Ole Markus With <olemarkus@gentoo.org> +php-5.3.17.ebuild,
+  +php-5.4.7.ebuild:
+  PHP bumps
 
   16 Sep 2012; Anthony G. Basile <blueness@gentoo.org> php-5.3.15.ebuild:
   stable ppc64, bug #427354
