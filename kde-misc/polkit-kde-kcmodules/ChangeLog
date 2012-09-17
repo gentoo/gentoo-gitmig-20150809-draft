@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/polkit-kde-kcmodules
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/polkit-kde-kcmodules/ChangeLog,v 1.7 2012/08/22 09:27:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/polkit-kde-kcmodules/ChangeLog,v 1.8 2012/09/17 13:36:18 johu Exp $
+
+*polkit-kde-kcmodules-0.98_pre20120917 (17 Sep 2012)
+
+  17 Sep 2012; Johannes Huber <johu@gentoo.org>
+  +polkit-kde-kcmodules-0.98_pre20120917.ebuild:
+  New snapshot fixes bug #358657.
 
   22 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   polkit-kde-kcmodules-0.98_pre20101127.ebuild:
