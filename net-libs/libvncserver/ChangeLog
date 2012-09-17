@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libvncserver
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.67 2012/09/17 14:11:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.68 2012/09/17 20:16:35 nativemad Exp $
+
+  17 Sep 2012; Andreas Schuerch <nativemad@gentoo.org>
+  libvncserver-0.9.9.ebuild:
+  x86 stable, as dep from bug 434872
 
   17 Sep 2012; Agostino Sarubbo <ago@gentoo.org> libvncserver-0.9.9.ebuild:
   Temporary workaround due to failure with USE='+png -zlib', thanks to nativemad
