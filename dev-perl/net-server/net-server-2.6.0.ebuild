@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-server/net-server-2.6.0.ebuild,v 1.2 2012/09/07 08:44:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-server/net-server-2.6.0.ebuild,v 1.3 2012/09/17 09:03:23 phajdan.jr Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ inherit perl-module eutils
 DESCRIPTION="Extensible, general Perl server engine"
 
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="ipv6"
 
 RDEPEND="dev-perl/IO-Multiplex
