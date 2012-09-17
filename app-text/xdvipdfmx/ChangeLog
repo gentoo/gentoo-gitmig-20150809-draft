@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xdvipdfmx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvipdfmx/ChangeLog,v 1.56 2012/08/22 14:17:39 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvipdfmx/ChangeLog,v 1.57 2012/09/17 14:22:05 ottxor Exp $
+
+  17 Sep 2012; Christoph Junghans <ottxor@gentoo.org>
+  xdvipdfmx-0.7.8_p20120701.ebuild:
+  added prefix support (bug #435264)
 
   22 Aug 2012; Michael Weber <xmw@gentoo.org> xdvipdfmx-0.7.8_p20110705.ebuild:
   ppc stable (bug 414965).

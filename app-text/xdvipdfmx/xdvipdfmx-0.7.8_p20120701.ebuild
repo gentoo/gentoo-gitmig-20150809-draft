@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvipdfmx/xdvipdfmx-0.7.8_p20120701.ebuild,v 1.1 2012/07/26 12:14:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvipdfmx/xdvipdfmx-0.7.8_p20120701.ebuild,v 1.2 2012/09/17 14:22:05 ottxor Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/texlive-${PV#*_p}-source.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd  ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris"
 IUSE="doc"
 
 RDEPEND="!<app-text/texlive-core-2010
@@ -30,6 +30,9 @@ RDEPEND="${RDEPEND}
 S=${WORKDIR}/texlive-${PV#*_p}-source/texk/${PN}
 
 src_configure() {
+	# don't do OSX stuff as it breaks on using long gone freetype funcs
+	export kpse_cv_have_ApplicationServices=no
+
 	econf \
 		--with-system-kpathsea \
 		--with-system-zlib \
