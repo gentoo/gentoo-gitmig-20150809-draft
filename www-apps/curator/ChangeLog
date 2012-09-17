@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/curator
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/curator/ChangeLog,v 1.11 2012/07/26 08:18:36 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/curator/ChangeLog,v 1.12 2012/09/17 10:57:39 ago Exp $
+
+  17 Sep 2012; Agostino Sarubbo <ago@gentoo.org> curator-3.0_p20110120.ebuild:
+  Stable for amd64, wrt bug #435240
 
   26 Jul 2012; Christian Faulhammer <fauli@gentoo.org>
   curator-3.0_p20110120.ebuild:
