@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netwag
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwag/ChangeLog,v 1.25 2012/07/09 00:34:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwag/ChangeLog,v 1.26 2012/09/17 22:11:34 zerochaos Exp $
+
+  17 Sep 2012; Rick Farina <zerochaos@gentoo.org> netwag-5.39.0.ebuild:
+  reorder deps so konsole isn't default (not everyone uses kde)
 
   09 Jul 2012; Jeroen Roovers <jer@gentoo.org> netwag-5.39.0.ebuild:
   Clean up.
@@ -108,4 +111,3 @@
   13 Jan 2005; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   +netwag-5.28.0.ebuild:
   initial import
-
