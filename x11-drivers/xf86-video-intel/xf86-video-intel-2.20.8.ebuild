@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.20.8.ebuild,v 1.1 2012/09/17 10:15:38 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.20.8.ebuild,v 1.2 2012/09/17 10:45:17 remi Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ inherit linux-info xorg-2
 DESCRIPTION="X.Org driver for Intel cards"
 
 KEYWORDS="~amd64 ~ia64 ~x86 ~amd64-fbsd -x86-fbsd"
-IUSE="glamor +sna uxa xvmc"
+IUSE="glamor +sna +udev uxa xvmc"
 
 REQUIRED_USE="|| ( glamor sna uxa )"
 
@@ -23,6 +23,9 @@ RDEPEND="x11-libs/libXext
 	)
 	sna? (
 		>=x11-base/xorg-server-1.10
+	)
+	udev? (
+		sys-fs/udev
 	)
 	xvmc? (
 		x11-libs/libXvMC
@@ -40,6 +43,7 @@ src_configure() {
 		$(use_enable glamor)
 		$(use_enable sna)
 		$(use_enable uxa)
+		$(use_enable udev)
 		$(use_enable xvmc)
 	)
 	xorg-2_src_configure
