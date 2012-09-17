@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/yafray
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/ChangeLog,v 1.54 2010/11/08 23:10:46 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/ChangeLog,v 1.55 2012/09/17 00:55:36 dirtyepic Exp $
+
+  17 Sep 2012; Ryan Hill <dirtyepic@gentoo.org> yafray-0.0.9-r1.ebuild,
+  +files/yafray-0.0.9-gcc47.patch:
+  Fix build with GCC 4.7 (bug #420975).
 
   08 Nov 2010; Markus Meier <maekke@gentoo.org> yafray-0.0.9-r1.ebuild:
   change jpeg dep to virtual/jpeg

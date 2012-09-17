@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/yafray-0.0.9-r1.ebuild,v 1.10 2010/11/08 23:10:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/yafray-0.0.9-r1.ebuild,v 1.11 2012/09/17 00:55:36 dirtyepic Exp $
 
 inherit eutils multilib python
 
@@ -29,7 +29,8 @@ src_unpack() {
 		"${FILESDIR}"/${P}-etc.patch \
 		"${FILESDIR}"/${P}-gcc43.patch \
 		"${FILESDIR}"/${P}-asneeded.patch \
-		"${FILESDIR}"/${P}-gcc44.patch
+		"${FILESDIR}"/${P}-gcc44.patch \
+		"${FILESDIR}"/${P}-gcc47.patch
 
 	sed -i -e "s:-O3:${CXXFLAGS} -fsigned-char:g" *-settings.py || die "sed	failed."
 }
