@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/aee/aee-2.2.15b.ebuild,v 1.3 2011/08/23 12:33:28 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/aee/aee-2.2.15b.ebuild,v 1.4 2012/09/17 11:39:00 ago Exp $
 
 EAPI="4"
 
@@ -25,13 +25,15 @@ src_prepare() {
 		-e "s/make -/\$(MAKE) -/g" \
 		-e "/^buildaee/s/$/ localaee/" \
 		-e "/^buildxae/s/$/ localxae/" \
-		Makefile
+		Makefile || die
 
 	sed -i \
 		-e "s/\([\t ]\)cc /\1\\\\\$(CC) /" \
 		-e "/CFLAGS =/s/\" >/ \\\\\$(LDFLAGS)\" >/" \
 		-e "/other_cflag/s/ \${strip_option}//" \
-		create.mk.{aee,xae}
+		create.mk.{aee,xae} || die
+
+	tc-export CC
 }
 
 src_compile() {
@@ -42,10 +44,10 @@ src_compile() {
 }
 
 src_install() {
-	dobin aee
-	dosym aee /usr/bin/rae
-	doman aee.1
-	dodoc Changes README.aee aee.i18n.guide aee.msg
+	dobin ${PN}
+	dosym ${PN} /usr/bin/rae
+	doman ${PN}.1
+	dodoc Changes README.${PN} ${PN}.i18n.guide ${PN}.msg
 
 	insinto /usr/share/${PN}
 	doins help.ae
