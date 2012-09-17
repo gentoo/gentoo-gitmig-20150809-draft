@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/ee
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ee/ChangeLog,v 1.6 2012/09/17 11:46:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ee/ChangeLog,v 1.7 2012/09/17 21:05:38 blueness Exp $
+
+  17 Sep 2012; Anthony G. Basile <blueness@gentoo.org> ee-1.5.2.ebuild:
+  Stable ppc ppc64, bug #435236
 
   17 Sep 2012; Agostino Sarubbo <ago@gentoo.org> ee-1.5.2.ebuild:
   Stable for amd64, wrt bug #435236
