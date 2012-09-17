@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0_p2-r11.ebuild,v 1.1 2012/09/17 19:28:12 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0_p2-r11.ebuild,v 1.2 2012/09/17 19:41:44 hd_brummy Exp $
 
 EAPI="4"
 
@@ -315,7 +315,7 @@ src_prepare() {
 	einfo "\t Please set one of this values in /etc/make.conf or /etc/portage/make.conf"
 	einfo "\t LINGUAS=\"${LING_PO}\"\n"
 
-	strip-linguas ${LING2} en
+	strip-linguas ${LING_PO} en
 }
 
 src_install() {
