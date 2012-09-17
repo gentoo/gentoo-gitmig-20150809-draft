@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/icinga
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/ChangeLog,v 1.26 2012/09/17 19:48:49 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/ChangeLog,v 1.27 2012/09/17 19:53:22 prometheanfire Exp $
+
+  17 Sep 2012; Matthew Thode <prometheanfire@gentoo.org> files/icinga-init.d,
+  files/ido2db-init.d:
+  part 2 of previous commit
 
   17 Sep 2012; Matthew Thode <prometheanfire@gentoo.org>
   -icinga-1.6.1-r2.ebuild, -icinga-1.7.0.ebuild, -icinga-1.7.1-r3.ebuild,

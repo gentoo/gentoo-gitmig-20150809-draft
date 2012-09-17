@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/files/ido2db-init.d,v 1.3 2012/09/17 19:48:49 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/files/ido2db-init.d,v 1.4 2012/09/17 19:53:22 prometheanfire Exp $
 
 get_config() {
     if [ -e "${IDO2DBCFG}" ]; then
