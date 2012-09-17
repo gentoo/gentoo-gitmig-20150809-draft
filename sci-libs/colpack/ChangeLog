@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/colpack
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/colpack/ChangeLog,v 1.3 2012/09/06 17:08:46 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/colpack/ChangeLog,v 1.4 2012/09/17 22:03:38 bicatali Exp $
+
+  17 Sep 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/colpack-1.0.8-no-bin.patch, colpack-1.0.8.ebuild:
+  Avoid installing a development executable on a non-standard directory
 
 *colpack-1.0.8 (06 Sep 2012)
 

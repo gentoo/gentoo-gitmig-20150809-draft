@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/colpack/colpack-1.0.8.ebuild,v 1.2 2012/09/07 18:16:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/colpack/colpack-1.0.8.ebuild,v 1.3 2012/09/17 22:03:38 bicatali Exp $
 
 EAPI=4
 
@@ -25,7 +25,10 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MYPN}-${PV}"
 
-PATCHES=( "${FILESDIR}"/${PN}-1.0.6-flags.patch )
+PATCHES=(
+	"${FILESDIR}"/${PN}-1.0.6-flags.patch
+	"${FILESDIR}"/${PN}-1.0.8-no-bin.patch
+)
 
 pkg_setup() {
 	if use openmp && [[ $(tc-getCC)$ == *gcc* ]] &&	! tc-has-openmp; then
