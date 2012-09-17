@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/mrxvt-0.5.4.ebuild,v 1.8 2010/11/08 12:35:28 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/mrxvt-0.5.4.ebuild,v 1.9 2012/09/17 03:41:04 ottxor Exp $
 
-EAPI=2
+EAPI=4
 inherit autotools eutils
 
 DESCRIPTION="Multi-tabbed rxvt clone with XFT, transparent background and CJK support"
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/materm/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~mips ppc x86"
+KEYWORDS="alpha amd64 ~mips ppc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 
 LINGUAS_IUSE="linguas_el linguas_ja linguas_ko linguas_th linguas_zh_CN linguas_zh_TW"
 IUSE="debug png jpeg session truetype menubar utempter xpm ${LINGUAS_IUSE}"
@@ -88,7 +88,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" docdir=/usr/share/doc/${PF} install || die
+	emake DESTDIR="${D}" docdir="${EPREFIX}"/usr/share/doc/${PF} install
 	# Give mrxvt perms to update utmp
 	fowners root:utmp /usr/bin/mrxvt
 	fperms g+s /usr/bin/mrxvt

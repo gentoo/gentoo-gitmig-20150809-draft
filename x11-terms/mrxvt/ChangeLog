@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/mrxvt
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/ChangeLog,v 1.77 2010/11/08 12:35:28 nelchael Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/ChangeLog,v 1.78 2012/09/17 03:41:04 ottxor Exp $
+
+  17 Sep 2012; Christoph Junghans <ottxor@gentoo.org> mrxvt-0.5.4.ebuild:
+  add prefix support (bug #428566)
 
   08 Nov 2010; Krzysztof Pawlik <nelchael@gentoo.org> mrxvt-0.5.4.ebuild:
   Change dependency: media-libs/jpeg -> virtual/jpeg.
@@ -320,4 +323,3 @@
   10 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
   +mrxvt-0.3.4.ebuild:
   Initial import. This closes bug #66831.
-
