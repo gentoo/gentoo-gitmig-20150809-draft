@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/nullmailer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/ChangeLog,v 1.55 2012/09/09 18:58:09 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/ChangeLog,v 1.56 2012/09/17 15:33:01 johu Exp $
+
+  17 Sep 2012; Johannes Huber <johu@gentoo.org> nullmailer-1.11.ebuild:
+  Stable for x86, wrt bug #433303
 
   09 Sep 2012; Rajiv Aaron Manglani <rajiv@gentoo.org> nullmailer-1.11.ebuild:
   fix automake errors, bug #434500.
