@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/pecl-crack
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-crack/ChangeLog,v 1.4 2012/08/24 05:00:58 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-crack/ChangeLog,v 1.5 2012/09/17 20:40:54 hanno Exp $
+
+*pecl-crack-0.4-r3 (17 Sep 2012)
+
+  17 Sep 2012; Hanno Boeck <hanno@gentoo.org> +pecl-crack-0.4-r3.ebuild:
+  Re-add patch to fix 64 bit support.
 
   24 Aug 2012; Michael Weber <xmw@gentoo.org> pecl-crack-0.4-r2.ebuild:
   ppc stable (bug 427024).
