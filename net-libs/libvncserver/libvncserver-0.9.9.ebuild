@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/libvncserver-0.9.9.ebuild,v 1.5 2012/09/16 23:37:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/libvncserver-0.9.9.ebuild,v 1.6 2012/09/17 14:11:08 ago Exp $
 
 EAPI="4"
 
@@ -9,12 +9,14 @@ inherit eutils libtool
 DESCRIPTION="library for creating vnc servers"
 HOMEPAGE="http://libvncserver.sourceforge.net/"
 SRC_URI="http://libvncserver.sourceforge.net/LibVNCServer-${PV/_}.tar.gz
-	mirror://sourceforge/libvncserver/LibVNCServer-${PV/_}.tar.gz"
+	mirror://sourceforge/${PN}/LibVNCServer-${PV/_}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="+24bpp gcrypt gnutls ipv6 +jpeg +png ssl test threads +zlib"
+
+REQUIRED_USE="png? ( zlib )"
 
 DEPEND="
 	gcrypt? ( dev-libs/libgcrypt )
@@ -32,6 +34,8 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}"/LibVNCServer-${PV/_}
+
+DOCS=( AUTHORS ChangeLog NEWS README TODO )
 
 src_prepare() {
 	sed -i -r \
@@ -59,9 +63,4 @@ src_configure() {
 src_compile() {
 	default
 	emake -C examples noinst_PROGRAMS=storepasswd
-}
-
-src_install() {
-	emake install DESTDIR="${D}"
-	dodoc AUTHORS ChangeLog NEWS README TODO
 }
