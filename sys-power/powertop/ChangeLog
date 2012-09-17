@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/powertop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.65 2012/09/14 18:07:07 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.66 2012/09/17 05:14:49 zerochaos Exp $
+
+  17 Sep 2012; Rick Farina <zerochaos@gentoo.org> powertop-2.1-r1.ebuild:
+  reorder a few things, hopefully this is safer and avoids env pollution
 
   14 Sep 2012; Rick Farina <zerochaos@gentoo.org> powertop-2.1-r1.ebuild:
   my attempt to clarify kconfig requirements, and adjust SND_HDA stuff based on
