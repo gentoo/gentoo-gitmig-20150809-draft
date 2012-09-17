@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/amyedit/amyedit-1.0-r2.ebuild,v 1.4 2012/05/03 18:33:02 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/amyedit/amyedit-1.0-r2.ebuild,v 1.5 2012/09/17 11:56:57 ago Exp $
 
 EAPI=3
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://amyedit.sf.net"
 SRC_URI="mirror://sourceforge/amyedit/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 RDEPEND=">=dev-cpp/gtkmm-2.6:2.4
 	>=dev-cpp/glibmm-2.14:2
