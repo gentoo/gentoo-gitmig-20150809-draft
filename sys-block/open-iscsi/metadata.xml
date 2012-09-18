@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>base-system</herd>
-<maintainer>
-  <email>base-system</email>
-</maintainer>
 <use>
   <flag name='modules'>Build the open-iscsi kernel modules</flag>
   <flag name='utils'>Build the open-iscsi utilities</flag>
