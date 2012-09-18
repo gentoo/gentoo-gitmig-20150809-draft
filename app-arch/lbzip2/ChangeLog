@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lbzip2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/ChangeLog,v 1.34 2012/09/18 12:32:48 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/ChangeLog,v 1.35 2012/09/18 13:08:18 johu Exp $
+
+  18 Sep 2012; Johannes Huber <johu@gentoo.org> lbzip2-2.2.ebuild:
+  Stable for x86, wrt bug #435228
 
   18 Sep 2012; Anthony G. Basile <blueness@gentoo.org> lbzip2-2.2.ebuild:
   stable ppc ppc64, bug #435228
