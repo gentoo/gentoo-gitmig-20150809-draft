@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.547 2012/09/18 11:11:03 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.548 2012/09/18 17:54:34 blueness Exp $
+
+  18 Sep 2012; Anthony G. Basile <blueness@gentoo.org> ruby-1.8.7_p370.ebuild:
+  stable ppc ppc64, bug #434480
 
   18 Sep 2012; Johannes Huber <johu@gentoo.org> ruby-1.8.7_p370.ebuild:
   Stable for x86, wrt bug #434480
