@@ -1,5 +1,8 @@
 
 
+  18 Sep 2012; Johannes Huber <johu@gentoo.org> pypax-0.5.2.ebuild:
+  Stable for x86, wrt bug #435114
+
   16 Sep 2012; Agostino Sarubbo <ago@gentoo.org> pypax-0.5.2.ebuild:
   Stable for amd64, wrt bug #435114
 
