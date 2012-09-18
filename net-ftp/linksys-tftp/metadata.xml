@@ -2,8 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>embedded</herd>
-<maintainer>
-  <email>embedded@gentoo.org</email>
-</maintainer>
 <longdescription>An extended version of BSD tftp with passwords</longdescription>
 </pkgmetadata>
