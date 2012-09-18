@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.203 2012/09/11 16:40:05 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.204 2012/09/18 01:26:55 radhermit Exp $
 
 # Authors:
 # 	Jim Ramsay <lack@gentoo.org>
@@ -245,7 +245,7 @@ vim_pkg_setup() {
 			# python.eclass only defines python_pkg_setup for EAPIs that support
 			# USE dependencies
 			python_pkg_setup
-		elif ! built_with_use =dev-lang/python-2* threads; then
+		elif ! has_version "=dev-lang/python-2*[threads]"; then
 			die "You must build dev-lang/python with USE=threads"
 		fi
 	fi

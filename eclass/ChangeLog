@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.403 2012/09/17 19:32:49 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.404 2012/09/18 01:26:55 radhermit Exp $
+
+  18 Sep 2012; Tim Harder <radhermit@gentoo.org> vim.eclass:
+  Use has_version instead of built_with_use.
 
   17 Sep 2012; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-plugin-2.eclass:
   better LINGUAS detection, vdr-plugin-2.eclass
