@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/hkscs-ming
-# Copyright 2000-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/hkscs-ming/ChangeLog,v 1.15 2012/05/14 02:24:51 naota Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/hkscs-ming/ChangeLog,v 1.16 2012/09/18 07:13:24 phajdan.jr Exp $
+
+  18 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -hkscs-ming-1.0_pre20030919-r1.ebuild, hkscs-ming-1.0_pre20030919-r2.ebuild:
+  Stable on all arches (bug #308951). Remove old and broken.
 
 *hkscs-ming-1.0_pre20030919-r2 (14 May 2012)
 
