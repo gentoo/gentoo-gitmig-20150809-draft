@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/sguil-sensor
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-sensor/ChangeLog,v 1.15 2012/06/12 03:07:34 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-sensor/ChangeLog,v 1.16 2012/09/18 01:38:36 radhermit Exp $
+
+  18 Sep 2012; Tim Harder <radhermit@gentoo.org> -sguil-sensor-0.6.1.ebuild:
+  Remove old.
 
   12 Jun 2012; Zac Medico <zmedico@gentoo.org> sguil-sensor-0.6.1.ebuild,
   sguil-sensor-0.8.0.ebuild:
