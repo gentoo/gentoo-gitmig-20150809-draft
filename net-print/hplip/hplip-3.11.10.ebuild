@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.11.10.ebuild,v 1.10 2012/05/05 15:50:38 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.11.10.ebuild,v 1.11 2012/09/18 18:10:42 billie Exp $
 
 EAPI=3
 
@@ -20,12 +20,11 @@ KEYWORDS="amd64 ~arm ppc ppc64 x86"
 
 # zeroconf does not work properly with >=cups-1.4.
 # Thus support for it is also disabled in hplip.
-IUSE="doc fax +hpcups hpijs kde libnotify minimal parport policykit qt4 scanner snmp static-ppds -acl X"
+IUSE="doc fax +hpcups hpijs kde libnotify minimal parport policykit qt4 scanner snmp static-ppds X"
 
 COMMON_DEPEND="
 	virtual/jpeg
 	hpijs? ( >=net-print/foomatic-filters-3.0.20080507[cups] )
-	acl? ( || ( >=sys-auth/consolekit-0.4.5-r3[acl] >=sys-fs/udev-171-r5[acl] <sys-fs/udev-171-r5[extras] ) )
 	snmp? (
 		net-analyzer/net-snmp
 		dev-libs/openssl
@@ -221,6 +220,7 @@ src_configure() {
 		--disable-lite-build \
 		--disable-foomatic-rip-hplip-install \
 		--disable-shadow-build \
+		--disable-udev-acl-rules \
 		--with-cupsbackenddir=$(cups-config --serverbin)/backend \
 		--with-cupsfilterdir=$(cups-config --serverbin)/filter \
 		--with-docdir=/usr/share/doc/${PF} \
@@ -233,8 +233,7 @@ src_configure() {
 		$(use_enable fax fax-build) \
 		$(use_enable parport pp-build) \
 		$(use_enable scanner scan-build) \
-		$(use_enable snmp network-build) \
-		$(use_enable acl udev-acl-rules)
+		$(use_enable snmp network-build)
 }
 
 src_install() {

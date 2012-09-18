@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.12.4.ebuild,v 1.8 2012/05/21 17:27:50 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.12.4.ebuild,v 1.9 2012/09/18 18:10:42 billie Exp $
 
 EAPI=4
 
@@ -21,12 +21,11 @@ KEYWORDS="amd64 ~arm ppc ppc64 x86"
 
 # zeroconf does not work properly with >=cups-1.4.
 # Thus support for it is also disabled in hplip.
-IUSE="doc fax +hpcups hpijs kde libnotify minimal parport policykit qt4 scanner snmp static-ppds -acl X"
+IUSE="doc fax +hpcups hpijs kde libnotify minimal parport policykit qt4 scanner snmp static-ppds X"
 
 COMMON_DEPEND="
 	virtual/jpeg
 	hpijs? ( >=net-print/foomatic-filters-3.0.20080507[cups] )
-	acl? ( || ( >=sys-auth/consolekit-0.4.5-r3[acl] >=sys-fs/udev-171-r5[acl] <sys-fs/udev-171-r5[extras] ) )
 	!minimal? (
 		>=net-print/cups-1.4.0
 		virtual/libusb:0
@@ -185,6 +184,7 @@ src_configure() {
 		--disable-foomatic-rip-hplip-install \
 		--disable-shadow-build \
 		--disable-qt3 \
+		--disable-udev-acl-rules \
 		--with-cupsbackenddir=$(cups-config --serverbin)/backend \
 		--with-cupsfilterdir=$(cups-config --serverbin)/filter \
 		--with-docdir=/usr/share/doc/${PF} \
@@ -197,7 +197,6 @@ src_configure() {
 		$(use_enable parport pp-build) \
 		$(use_enable scanner scan-build) \
 		$(use_enable snmp network-build) \
-		$(use_enable acl udev-acl-rules) \
 		$(use_enable qt4 gui-build) \
 		$(use_enable qt4) \
 		$(use_enable policykit)
