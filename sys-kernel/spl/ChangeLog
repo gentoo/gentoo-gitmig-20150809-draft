@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/spl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.27 2012/09/18 22:09:30 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.28 2012/09/18 22:12:45 ryao Exp $
+
+  18 Sep 2012; Richard Yao <ryao@gentoo.org>
+  -files/spl-0.6.0_rc9-alias-km-sleep-with-km-pushpage.patch,
+  -files/spl-0.6.0_rc9-constify-free-functions.patch,
+  -files/spl-0.6.0_rc9-detect-kernel-honors-gfp-flags.patch:
+  Remove sys-kernel/spl-0.6.0_rc9-r2 patch files
 
   18 Sep 2012; Richard Yao <ryao@gentoo.org> -spl-0.6.0_rc9-r2.ebuild:
   Remove sys-kernel/spl-0.6.0_rc9-r2
