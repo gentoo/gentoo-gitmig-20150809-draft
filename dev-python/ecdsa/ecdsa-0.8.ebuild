@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ecdsa/ecdsa-0.8.ebuild,v 1.1 2012/09/16 20:05:55 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ecdsa/ecdsa-0.8.ebuild,v 1.2 2012/09/18 04:28:48 mr_bones_ Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -16,7 +16,7 @@ SRC_URI="https://github.com/warner/python-${PN}/tarball/python-${P} -> ${P}.tar.
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="test"
 
 DEPEND="test? ( dev-libs/openssl:0 )"
 
