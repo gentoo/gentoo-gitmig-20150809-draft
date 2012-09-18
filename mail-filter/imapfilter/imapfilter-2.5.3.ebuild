@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/imapfilter/imapfilter-2.5.3.ebuild,v 1.3 2012/09/08 18:02:09 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/imapfilter/imapfilter-2.5.3.ebuild,v 1.4 2012/09/18 12:11:24 johu Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://github/lefcha/imapfilter/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 RDEPEND="dev-libs/openssl
