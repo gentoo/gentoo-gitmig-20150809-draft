@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/audiofile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.114 2012/09/18 11:32:21 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.115 2012/09/18 14:34:15 jer Exp $
+
+  18 Sep 2012; Jeroen Roovers <jer@gentoo.org> audiofile-0.3.4.ebuild:
+  Stable for HPPA (bug #434304).
 
   18 Sep 2012; Johannes Huber <johu@gentoo.org> audiofile-0.3.4.ebuild:
   Stable for x86, wrt bug #434304
