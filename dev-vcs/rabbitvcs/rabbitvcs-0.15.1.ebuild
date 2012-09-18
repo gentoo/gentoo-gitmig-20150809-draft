@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rabbitvcs/rabbitvcs-0.15.0.5-r1.ebuild,v 1.1 2012/03/07 23:11:43 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rabbitvcs/rabbitvcs-0.15.1.ebuild,v 1.1 2012/09/18 15:45:15 xmw Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ PYTHON_DEPEND="2:2.5"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.4 3.*"
 
-inherit gnome2-utils multilib distutils
+inherit eutils gnome2-utils multilib distutils
 
 DESCRIPTION="Integrated version control support for your desktop"
 HOMEPAGE="http://rabbitvcs.org"
@@ -53,7 +53,10 @@ src_install() {
 	if use gedit ; then
 		insinto /usr/$(get_libdir)/gedit-2/plugins
 		doins clients/gedit/${PN}-plugin.py
-		doins clients/gedit/${PN}.gedit-plugin
+		doins clients/gedit/${PN}-gedit2.gedit-plugin
+		insinto /usr/$(get_libdir)/gedit/plugins
+		doins clients/gedit/${PN}-plugin.py
+		doins clients/gedit/${PN}-gedit3.plugin
 	fi
 	if use nautilus ; then
 		insinto /usr/$(get_libdir)/nautilus/extensions-2.0/python
