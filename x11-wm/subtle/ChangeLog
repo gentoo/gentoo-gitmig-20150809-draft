@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/subtle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/subtle/ChangeLog,v 1.5 2012/06/20 19:40:15 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/subtle/ChangeLog,v 1.6 2012/09/18 23:02:48 radhermit Exp $
+
+  18 Sep 2012; Tim Harder <radhermit@gentoo.org>
+  files/subtle-0.11.3224-flags.patch:
+  Respect proper user flags.
 
   20 Jun 2012; Tim Harder <radhermit@gentoo.org> subtle-9999.ebuild:
   Update live ebuild.
