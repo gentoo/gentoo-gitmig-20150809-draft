@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-odbc/ruby-odbc-0.99994.ebuild,v 1.3 2012/09/16 11:10:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-odbc/ruby-odbc-0.99994.ebuild,v 1.4 2012/09/18 09:35:22 johu Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ SRC_URI="http://www.ch-werner.de/rubyodbc/${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 Ruby )"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="${DEPEND} >=dev-db/unixODBC-2.0.6"
