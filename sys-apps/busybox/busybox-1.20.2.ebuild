@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.20.2.ebuild,v 1.7 2012/09/15 18:24:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.20.2.ebuild,v 1.8 2012/09/18 03:37:18 vapier Exp $
 
 EAPI="4"
 inherit eutils flag-o-matic savedconfig toolchain-funcs multilib
@@ -133,7 +133,9 @@ src_configure() {
 	busybox_config_option n FEATURE_SUID_CONFIG
 	busybox_config_option n BUILD_AT_ONCE
 	busybox_config_option n BUILD_LIBBUSYBOX
+	busybox_config_option n FEATURE_CLEAN_UP
 	busybox_config_option n MONOTONIC_SYSCALL
+	busybox_config_option n USE_PORTABLE_CODE
 	busybox_config_option n WERROR
 
 	# If these are not set and we are using a uclibc/busybox setup
@@ -155,6 +157,7 @@ src_configure() {
 		&& busybox_config_option n PAM \
 		|| busybox_config_option pam PAM
 	busybox_config_option static STATIC
+	busybox_config_option systemd FEATURE_SYSTEMD
 	busybox_config_option math FEATURE_AWK_LIBM
 
 	# all the debug options are compiler related, so punt them
