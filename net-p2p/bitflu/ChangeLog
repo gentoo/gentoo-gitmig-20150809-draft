@@ -1,5 +1,8 @@
 
 
+  18 Sep 2012; Johannes Huber <johu@gentoo.org> bitflu-1.50.ebuild:
+  Stable for x86, wrt bug #433345
+
   14 Sep 2012; Agostino Sarubbo <ago@gentoo.org> bitflu-1.50.ebuild:
   Stable for amd64, wrt bug #433345
 
