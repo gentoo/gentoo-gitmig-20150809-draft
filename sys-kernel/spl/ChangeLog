@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/spl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.28 2012/09/18 22:12:45 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.29 2012/09/18 22:33:44 ryao Exp $
+
+*spl-0.6.0_rc11 (18 Sep 2012)
+
+  18 Sep 2012; Richard Yao <ryao@gentoo.org>
+  +files/spl-0.6.0_rc9-alias-km-sleep-with-km-pushpage.patch,
+  +spl-0.6.0_rc11.ebuild:
+  Add sys-kernel/spl-0.6.0_rc11 and reintroduce a patch that 0.6.0_rc10 needed
 
   18 Sep 2012; Richard Yao <ryao@gentoo.org>
   -files/spl-0.6.0_rc9-alias-km-sleep-with-km-pushpage.patch,
