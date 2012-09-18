@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14107 2012/09/16 12:44:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14108 2012/09/18 18:08:21 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -193,14 +193,6 @@ net-analyzer/prewikka
 >=media-gfx/gphoto2-2.5
 >=media-libs/libgphoto2-2.5
 >=media-gfx/gtkam-0.2.0
-
-# Ian Stakenvicius <axs@gentoo.org> (19 Jul 2012)
-# Old versions no longer build againt newer kernels
-# and have other bugs, but newr versions are potentially
-# not as functionally complete.  Masking for eventual
-# removal (~30 days) but need to get user feedback on any
-# regressions or demand for this version.
-<app-misc/lirc-0.8.7
 
 # Ralph Sennhauser <sera@gentoo.org> (18 Jul 2012)
 # Unmaintained, multiple vulnarabilities. #351626
