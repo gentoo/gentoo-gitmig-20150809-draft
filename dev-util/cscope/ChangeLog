@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cscope
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.135 2012/09/11 01:16:05 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.136 2012/09/18 16:59:55 jer Exp $
+
+  18 Sep 2012; Jeroen Roovers <jer@gentoo.org> cscope-15.8a.ebuild:
+  Stable for HPPA (bug #434292).
 
   11 Sep 2012; Anthony G. Basile <blueness@gentoo.org> cscope-15.8a.ebuild:
   Stable arm, bug #434292
