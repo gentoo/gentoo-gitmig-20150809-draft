@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.8.13.1.ebuild,v 1.4 2012/07/11 08:29:27 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-10.8.0.ebuild,v 1.1 2012/09/18 09:42:42 chainsaw Exp $
 
 EAPI=4
 inherit autotools base eutils linux-info multilib
@@ -10,22 +10,19 @@ MY_P="${PN}-${PV/_/-}"
 DESCRIPTION="Asterisk: A Modular Open Source PBX System"
 HOMEPAGE="http://www.asterisk.org/"
 SRC_URI="http://downloads.asterisk.org/pub/telephony/asterisk/releases/${MY_P}.tar.gz
-	 mirror://gentoo/gentoo-asterisk-patchset-1.13.tar.bz2"
+	 mirror://gentoo/gentoo-asterisk-patchset-2.6.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 IUSE_VOICEMAIL_STORAGE="
 	+voicemail_storage_file
 	voicemail_storage_odbc
 	voicemail_storage_imap
 "
-IUSE="${IUSE_VOICEMAIL_STORAGE} ais alsa bluetooth calendar +caps curl dahdi debug doc freetds gtalk http iconv jabber jingle ldap lua mysql newt +samples odbc osplookup oss portaudio postgres radius snmp span speex sqlite sqlite3 srtp static syslog usb vorbis"
-
+IUSE="${IUSE_VOICEMAIL_STORAGE} ais alsa bluetooth calendar +caps curl dahdi debug doc freetds gtalk http iconv jabber jingle ldap lua mysql newt +samples odbc osplookup oss portaudio postgres radius selinux snmp span speex srtp static syslog vorbis"
 IUSE_EXPAND="VOICEMAIL_STORAGE"
-
-REQUIRED_USE="
-	gtalk? ( jabber )
+REQUIRED_USE="gtalk? ( jabber )
 	^^ ( ${IUSE_VOICEMAIL_STORAGE/+/} )
 	voicemail_storage_odbc? ( odbc )
 "
@@ -33,7 +30,8 @@ REQUIRED_USE="
 EPATCH_SUFFIX="patch"
 PATCHES=( "${WORKDIR}/asterisk-patchset" )
 
-RDEPEND="dev-libs/popt
+RDEPEND="dev-db/sqlite:3
+	dev-libs/popt
 	dev-libs/libxml2
 	dev-libs/openssl
 	sys-libs/ncurses
@@ -63,19 +61,17 @@ RDEPEND="dev-libs/popt
 	portaudio? ( media-libs/portaudio )
 	postgres? ( dev-db/postgresql-base )
 	radius? ( net-dialup/radiusclient-ng )
+	selinux? ( sec-policy/selinux-asterisk )
 	snmp? ( net-analyzer/net-snmp )
 	span? ( media-libs/spandsp )
 	speex? ( media-libs/speex )
-	sqlite? ( dev-db/sqlite:0 )
-	sqlite3? ( dev-db/sqlite:3 )
 	srtp? ( net-libs/libsrtp )
-	usb? ( virtual/libusb:0
-		media-libs/alsa-lib )
 	vorbis? ( media-libs/libvorbis )"
 
 DEPEND="${RDEPEND}
+	!net-libs/openh323
 	voicemail_storage_imap? ( virtual/imap-c-client )
-	!net-libs/openh323"
+"
 
 RDEPEND="${RDEPEND}
 	syslog? ( virtual/logger )"
@@ -147,6 +143,10 @@ src_configure() {
 	menuselect/menuselect --enable func_aes menuselect.makeopts
 	menuselect/menuselect --enable chan_iax2 menuselect.makeopts
 
+	# SQlite3 is now the main database backend, enable related features
+	menuselect/menuselect --enable cdr_sqlite3_custom menuselect.makeopts
+	menuselect/menuselect --enable cel_sqlite3_custom menuselect.makeopts
+
 	# The others are based on USE-flag settings
 	use_select() {
 		local state=$(use "$1" && echo enable || echo disable)
@@ -181,11 +181,8 @@ src_configure() {
 	use_select snmp			res_snmp
 	use_select span			res_fax_spandsp
 	use_select speex		{codec,func}_speex
-	use_select sqlite		cdr_sqlite
-	use_select sqlite3		{cdr,cel}_sqlite3_custom
 	use_select srtp			res_srtp
 	use_select syslog		cdr_syslog
-	use_select usb			chan_usbradio
 	use_select vorbis		format_ogg_vorbis
 
 	# Voicemail storage ...
@@ -236,7 +233,7 @@ src_install() {
 	diropts -m 0750 -o asterisk -g asterisk
 	keepdir /var/log/asterisk/{cdr-csv,cdr-custom}
 
-	newinitd "${FILESDIR}"/1.8.0/asterisk.initd2 asterisk
+	newinitd "${FILESDIR}"/1.8.0/asterisk.initd3 asterisk
 	newconfd "${FILESDIR}"/1.8.0/asterisk.confd asterisk
 
 	# install the upgrade documentation
@@ -251,7 +248,7 @@ src_install() {
 		dodoc doc/*.pdf
 	fi
 
-	# install SIP scripts; bugs #300832 & #414585
+	# install SIP scripts; bug #300832
 	#
 	dodoc "${FILESDIR}/1.6.2/sip_calc_auth"
 	dodoc "${FILESDIR}/1.8.0/find_call_sip_trace.sh"

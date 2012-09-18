@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.415 2012/09/13 07:21:45 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.416 2012/09/18 09:42:42 chainsaw Exp $
+
+*asterisk-10.8.0 (18 Sep 2012)
+*asterisk-1.8.16.0 (18 Sep 2012)
+
+  18 Sep 2012; Tony Vroon <chainsaw@gentoo.org> -asterisk-1.8.13.1.ebuild,
+  +asterisk-1.8.16.0.ebuild, +asterisk-10.8.0.ebuild:
+  Upgrade on the 1.8 & 10 branches that addresses a severe memory leak in the
+  CEL logging modules, only recreates SRTP sessions when needed & copes better
+  with (extremely) out of order RFC2833 DTMF. Removed vulnerable stable ebuild
+  now that keywording for security bug #433750 is complete.
 
   13 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   asterisk-1.8.15.1.ebuild:
