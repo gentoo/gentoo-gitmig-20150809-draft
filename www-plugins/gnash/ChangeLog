@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/gnash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.87 2012/05/21 06:08:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.88 2012/09/18 21:26:35 chithanh Exp $
+
+  18 Sep 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  gnash-0.8.10-r2.ebuild:
+  Depend on virtual/glu, bug #434432.
 
   21 May 2012; Samuli Suominen <ssuominen@gentoo.org> gnash-0.8.10-r2.ebuild:
   Force net-misc/npapi-sdk for USE="nsplugin" instead of having || ( )
@@ -740,4 +744,3 @@
   10 Jan 2006; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
   +gnash-0.7_alpha20060110.ebuild:
   Alpha ebuild for gnash, closes bug 118527
-
