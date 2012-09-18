@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lbzip2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/ChangeLog,v 1.36 2012/09/18 14:50:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/ChangeLog,v 1.37 2012/09/18 17:56:35 blueness Exp $
+
+  18 Sep 2012; Anthony G. Basile <blueness@gentoo.org> lbzip2-2.2.ebuild:
+  stable arm, bug #435228
 
   18 Sep 2012; Jeroen Roovers <jer@gentoo.org> lbzip2-2.2.ebuild:
   Stable for HPPA (bug #435228).
