@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/spectrwm/spectrwm-1.2.0.ebuild,v 1.1 2012/08/01 10:48:36 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/spectrwm/spectrwm-1.2.0.ebuild,v 1.2 2012/09/18 01:26:03 xmw Exp $
 
 EAPI=4
 
@@ -20,6 +20,7 @@ DEPEND="${DEPEND}
 	x11-libs/libX11
 	x11-libs/libXrandr
 	x11-libs/libXtst
+	x11-libs/xcb-util
 	!x11-wm/scrotwm"
 
 S=${WORKDIR}/${P}/linux
