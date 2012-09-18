@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r8.ebuild,v 1.6 2012/08/24 08:16:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r8.ebuild,v 1.7 2012/09/18 06:52:43 ulm Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gnu/old-gnu/emacs/${P}.tar.gz
 	ftp://ftp.splode.com/pub/users/friedman/emacs/${P}-linux22x-elf-glibc21.diff.gz
 	mirror://gentoo/${P}-patches-8.tar.bz2"
 
-LICENSE="GPL-1 GPL-2 BSD" #as-is
+LICENSE="GPL-1+ GPL-2+ BSD" #as-is
 SLOT="18"
 KEYWORDS="amd64 x86"
 IUSE=""
