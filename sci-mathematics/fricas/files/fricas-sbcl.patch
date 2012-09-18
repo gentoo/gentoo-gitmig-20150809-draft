@@ -6,7 +6,7 @@ diff -r -U2 fricas-1.1.7.orig/configure.ac fricas-1.1.7/configure.ac
  
 +## Work-around for broken sbcl in Gentoo
 +if test $FRICAS_LISP = sbcl ; then
-+    FRICAS_LISP="$FRICAS_LISP --sysinit /dev/null --userinit /dev/null"
++    FRICAS_LISP="$FRICAS_LISP --no-sysinit --no-userinit"
 +fi
 +
  AC_ARG_WITH([lisp-flavor],

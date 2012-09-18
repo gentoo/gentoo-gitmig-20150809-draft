@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fricas/fricas-1.1.6.ebuild,v 1.1 2012/02/20 09:35:13 grozin Exp $
-EAPI=2
-inherit multilib elisp-common
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fricas/fricas-1.1.8.ebuild,v 1.1 2012/09/18 15:32:40 grozin Exp $
+EAPI=4
+inherit eutils multilib elisp-common autotools
 
 DESCRIPTION="FriCAS is a fork of Axiom computer algebra system"
 HOMEPAGE="http://${PN}.sourceforge.net/"
@@ -46,6 +46,12 @@ DEPEND="${RDEPEND}"
 # necessary for clisp and gcl
 RESTRICT="strip"
 
+src_prepare() {
+	# workaround for broken sbcl
+	epatch "${FILESDIR}"/${PN}-sbcl.patch
+	eautoreconf
+}
+
 src_configure() {
 	local LISP n
 	LISP=sbcl
@@ -66,7 +72,7 @@ src_configure() {
 
 src_compile() {
 	# bug #300132
-	emake -j1 || die "emake failed"
+	emake -j1
 }
 
 src_test() {
@@ -74,8 +80,8 @@ src_test() {
 }
 
 src_install() {
-	emake -j1 DESTDIR="${D}" install || die 'emake install failed'
-	dodoc README FAQ || die "dodoc failed"
+	emake -j1 DESTDIR="${D}" install
+	dodoc README FAQ
 
 	if use emacs; then
 		sed -e "s|(setq load-path (cons (quote \"/usr/$(get_libdir)/fricas/emacs\") load-path)) ||" \
