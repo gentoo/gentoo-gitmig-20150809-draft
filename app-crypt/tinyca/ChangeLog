@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/tinyca
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tinyca/ChangeLog,v 1.17 2009/11/20 13:15:13 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tinyca/ChangeLog,v 1.18 2012/09/18 04:46:37 radhermit Exp $
+
+  18 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove redundant maintainer from metadata.
 
   20 Nov 2009; Markus Meier <maekke@gentoo.org> tinyca-2.0.7.5.ebuild:
   amd64 stable, bug #284941

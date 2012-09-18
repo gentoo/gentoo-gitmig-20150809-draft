@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/aespipe
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/aespipe/ChangeLog,v 1.30 2010/06/06 14:45:55 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/aespipe/ChangeLog,v 1.31 2012/09/18 04:39:41 radhermit Exp $
+
+  18 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove redundant maintainer from metadata.
 
   06 Jun 2010; Raúl Porcel <armin76@gentoo.org> aespipe-2.3e.ebuild:
   arm stable wrt #301097

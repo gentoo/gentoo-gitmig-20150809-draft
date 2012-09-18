@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/coolkey
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/coolkey/ChangeLog,v 1.12 2012/05/03 18:16:38 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/coolkey/ChangeLog,v 1.13 2012/09/18 04:44:20 radhermit Exp $
+
+  18 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove redundant maintainer from metadata.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> coolkey-1.1.0-r2.ebuild,
   coolkey-1.1.0-r4.ebuild:
