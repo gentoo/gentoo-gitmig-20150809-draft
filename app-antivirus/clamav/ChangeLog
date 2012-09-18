@@ -1,6 +1,9 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.426 2012/09/11 03:29:29 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.427 2012/09/18 08:42:59 radhermit Exp $
+
+  18 Sep 2012; Tim Harder <radhermit@gentoo.org> clamav-0.97.5-r1.ebuild:
+  Add missing backslash for configure list.
 
   11 Sep 2012; Christoph Junghans <ottxor@gentoo.org> clamav-0.97.5-r1.ebuild:
   added prefix support (bug #430604)

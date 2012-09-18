@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.97.5-r1.ebuild,v 1.7 2012/09/11 03:29:29 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.97.5-r1.ebuild,v 1.8 2012/09/18 08:42:59 radhermit Exp $
 
 EAPI=4
 
@@ -50,7 +50,7 @@ src_configure() {
 		--enable-id-check \
 		--with-dbdir="${EPREFIX}"/var/lib/clamav \
 		--with-system-tommath \
-		--with-zlib="${EPREFIX}"/usr
+		--with-zlib="${EPREFIX}"/usr \
 		$(use_enable bzip2) \
 		$(use_enable clamdtop) \
 		$(use_enable ipv6) \
