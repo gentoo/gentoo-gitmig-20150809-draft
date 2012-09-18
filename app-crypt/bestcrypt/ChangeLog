@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/bestcrypt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.70 2012/09/18 04:42:00 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.71 2012/09/18 04:42:53 radhermit Exp $
+
+  18 Sep 2012; Tim Harder <radhermit@gentoo.org> -bestcrypt-1.6_p16.ebuild:
+  Remove old.
 
   18 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.
