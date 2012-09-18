@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/gnote-0.7.4.ebuild,v 1.5 2012/05/22 11:20:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/gnote-0.7.4.ebuild,v 1.6 2012/09/18 11:07:37 tetromino Exp $
 
 EAPI="3"
 GNOME2_LA_PUNT="yes"
@@ -10,7 +10,7 @@ inherit gnome2
 DESCRIPTION="Desktop note-taking application"
 HOMEPAGE="http://live.gnome.org/Gnote"
 
-LICENSE="GPL-3"
+LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="applet debug" # dbus
