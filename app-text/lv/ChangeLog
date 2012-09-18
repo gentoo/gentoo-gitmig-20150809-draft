@@ -1,6 +1,9 @@
 # ChangeLog for app-text/lv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lv/ChangeLog,v 1.41 2012/03/06 21:43:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lv/ChangeLog,v 1.42 2012/09/18 03:12:31 ottxor Exp $
+
+  18 Sep 2012; Christoph Junghans <ottxor@gentoo.org> lv-4.51-r3.ebuild:
+  added prefix keywords
 
   06 Mar 2012; Brent Baude <ranger@gentoo.org> lv-4.51-r3.ebuild:
   Marking lv-4.51-r3 ppc64 for bug 396839
@@ -137,4 +140,3 @@
   10 Dec 2002; Masatomo Nakano <nakano@gentoo.org> : lv-4.49.4.ebuild, files/digest-lv-4.49.4, ChangeLog
 
   Initial import.  
-
