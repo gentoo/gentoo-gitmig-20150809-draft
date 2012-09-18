@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.3.3.ebuild,v 1.7 2012/08/26 14:12:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.3.3.ebuild,v 1.8 2012/09/18 10:09:10 xarthisius Exp $
 
 EAPI=4
-inherit eutils autotools
+inherit eutils autotools user
 
 DESCRIPTION="An opensource alternative to shoutcast that supports mp3, ogg (vorbis/theora) and aac streaming"
 HOMEPAGE="http://www.icecast.org/"
@@ -11,7 +11,7 @@ SRC_URI="http://downloads.xiph.org/releases/icecast/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
 IUSE="kate +speex +ssl +theora +yp"
 
 #Although there is a --with-ogg and --with-orbis configure option, they're
@@ -25,6 +25,7 @@ DEPEND="dev-libs/libxslt
 	theora? ( media-libs/libtheora )
 	yp? ( net-misc/curl )
 	ssl? ( dev-libs/openssl )"
+RDEPEND="${DEPEND}"
 
 pkg_setup() {
 	enewuser icecast -1 -1 -1 nogroup
