@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.5.2.ebuild,v 1.3 2012/09/13 19:36:29 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.5.2.ebuild,v 1.4 2012/09/18 15:49:42 johu Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -137,6 +137,8 @@ PDEPEND=">=app-office/calligra-l10n-${LANGVERSION}"
 
 RESTRICT=test
 # bug 394273
+
+PATCHES=( "${FILESDIR}/${PN}-2.5.2-lcms24.patch" )
 
 src_configure() {
 	local cal_ft

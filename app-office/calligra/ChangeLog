@@ -1,6 +1,11 @@
 # ChangeLog for app-office/calligra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.71 2012/09/13 19:36:29 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.72 2012/09/18 15:49:42 johu Exp $
+
+  18 Sep 2012; Johannes Huber <johu@gentoo.org>
+  +files/calligra-2.5.2-lcms24.patch, calligra-2.5.2.ebuild:
+  Add patch to fix build with media-libs/lcms-2.4 by Franz Fellner
+  <alpine.art.de@googlemail.com> wrt bug #435392.
 
   13 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> calligra-2.5.2.ebuild,
   calligra-2.5.49.9999.ebuild, calligra-9999.ebuild:
