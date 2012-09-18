@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycurl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.75 2012/09/18 12:54:46 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.76 2012/09/18 15:08:48 jer Exp $
+
+  18 Sep 2012; Jeroen Roovers <jer@gentoo.org> pycurl-7.19.0-r1.ebuild:
+  Stable for HPPA (bug #434126).
 
   18 Sep 2012; Johannes Huber <johu@gentoo.org> pycurl-7.19.0-r1.ebuild:
   Stable for x86, wrt bug #434126
