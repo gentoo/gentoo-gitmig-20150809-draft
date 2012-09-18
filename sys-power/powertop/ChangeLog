@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/powertop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.66 2012/09/17 05:14:49 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.67 2012/09/18 23:36:31 zerochaos Exp $
+
+  18 Sep 2012; Rick Farina <zerochaos@gentoo.org> powertop-2.1-r1.ebuild,
+  powertop-9999.ebuild:
+  quiet a few useless warnings and fix live ebuild
 
   17 Sep 2012; Rick Farina <zerochaos@gentoo.org> powertop-2.1-r1.ebuild:
   reorder a few things, hopefully this is safer and avoids env pollution
