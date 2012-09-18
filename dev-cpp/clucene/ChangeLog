@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/clucene
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/ChangeLog,v 1.51 2012/09/10 11:22:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/ChangeLog,v 1.52 2012/09/18 14:28:10 jer Exp $
+
+  18 Sep 2012; Jeroen Roovers <jer@gentoo.org> clucene-2.3.3.4-r3.ebuild:
+  Stable for HPPA (bug #433812).
 
 *clucene-2.3.3.4-r4 (10 Sep 2012)
 
