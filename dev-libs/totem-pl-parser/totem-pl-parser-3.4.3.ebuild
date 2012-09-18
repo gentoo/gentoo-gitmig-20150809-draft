@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-3.4.3.ebuild,v 1.1 2012/09/18 10:14:05 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-3.4.3.ebuild,v 1.2 2012/09/18 13:22:46 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -47,6 +47,9 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# Avoid glib-2.34 dependency for now, bug #435408
+	epatch "${FILESDIR}/${P}-no-g_clear_pointer.patch"
+
 	gnome2_src_prepare
 
 	# Disable tests requiring network access, bug #346127
