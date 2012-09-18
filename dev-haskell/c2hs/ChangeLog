@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/c2hs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.53 2012/09/12 14:50:40 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.54 2012/09/18 06:42:39 gienah Exp $
+
+  18 Sep 2012; Mark Wright <gienah@gentoo.org> +files/c2hs-0.16.3-ghc-7.6.patch,
+  c2hs-0.16.3-r1.ebuild:
+  patch c2hs 0.16.3 for ghc 7.6.1
 
   12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> c2hs-0.16.3-r1.ebuild,
   c2hs-0.16.3.ebuild:

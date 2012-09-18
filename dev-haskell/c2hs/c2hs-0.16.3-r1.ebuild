@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/c2hs-0.16.3-r1.ebuild,v 1.7 2012/09/12 14:50:40 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/c2hs-0.16.3-r1.ebuild,v 1.8 2012/09/18 06:42:39 gienah Exp $
 
-EAPI="3"
+EAPI="4"
 
 CABAL_FEATURES="bin"
 inherit base haskell-cabal
@@ -24,7 +24,8 @@ DEPEND=">=dev-lang/ghc-6.6.1
 				>=dev-libs/libxslt-1.1.2 )"
 RDEPEND="dev-libs/gmp"
 
-PATCHES=("${FILESDIR}/${PN}"-0.16.3-language-c-0.4.patch)
+PATCHES=("${FILESDIR}/${PN}"-0.16.3-language-c-0.4.patch
+	"${FILESDIR}/${PN}"-0.16.3-ghc-7.6.patch)
 
 src_compile() {
 	cabal_src_compile
