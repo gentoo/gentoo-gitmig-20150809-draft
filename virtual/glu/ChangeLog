@@ -1,6 +1,12 @@
 # ChangeLog for virtual/glu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/glu/ChangeLog,v 1.19 2012/09/06 17:10:45 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/glu/ChangeLog,v 1.20 2012/09/18 23:45:34 chithanh Exp $
+
+*glu-9.0 (18 Sep 2012)
+
+  18 Sep 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +glu-9.0.ebuild, glu-7.0.ebuild:
+  Bump for updated dependencies.
 
   06 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> glu-7.0.ebuild:
   Pull media-libs/glu as glu provider here.
