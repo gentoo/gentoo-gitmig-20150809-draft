@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/tea-33.1.0.ebuild,v 1.1 2012/06/01 15:44:29 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/tea-33.3.0.ebuild,v 1.1 2012/09/18 08:31:17 pesa Exp $
 
 EAPI=4
 LANGS="de fr ru"
