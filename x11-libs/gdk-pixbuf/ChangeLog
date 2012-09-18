@@ -1,6 +1,15 @@
 # ChangeLog for x11-libs/gdk-pixbuf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.68 2012/09/02 19:07:14 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.69 2012/09/18 09:44:29 tetromino Exp $
+
+*gdk-pixbuf-2.26.4 (18 Sep 2012)
+
+  18 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gdk-pixbuf-2.24.0-r1.ebuild, gdk-pixbuf-2.24.1.ebuild,
+  gdk-pixbuf-2.24.1-r1.ebuild, -gdk-pixbuf-2.26.1.ebuild,
+  gdk-pixbuf-2.26.3.ebuild, +gdk-pixbuf-2.26.4.ebuild:
+  Version bump with color profile support in jpg files. Drop old. Use a more
+  portable mktemp call, thanks to Mart Raudsepp.
 
 *gdk-pixbuf-2.26.3 (02 Sep 2012)
 
