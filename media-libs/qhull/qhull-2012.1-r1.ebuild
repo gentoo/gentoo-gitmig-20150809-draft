@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/qhull-2012.1-r1.ebuild,v 1.3 2012/09/13 10:16:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/qhull-2012.1-r1.ebuild,v 1.4 2012/09/18 16:34:54 tomka Exp $
 
 EAPI=4
 
@@ -26,6 +26,13 @@ src_configure() {
 	)
 	cmake-utils_src_configure
 }
+
+pkg_preinst() {
+	# See https://bugs.gentoo.org/show_bug.cgi?id=435006
+	# If qhull-2010 is installed we need to remove its include dir so
+	# that it can be replaced with a symlink in this version.
+	rm -rf "${ROOT}"usr/include/qhull
+  }
 
 src_install() {
 	cmake-utils_src_install

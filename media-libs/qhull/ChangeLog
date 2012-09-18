@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/qhull
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/ChangeLog,v 1.49 2012/09/13 10:16:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/ChangeLog,v 1.50 2012/09/18 16:34:54 tomka Exp $
+
+  18 Sep 2012; Thomas Kahle <tomka@gentoo.org> qhull-2010.1-r2.ebuild,
+  qhull-2012.1-r1.ebuild:
+  Fix /usr/include/qhull symlink (bug 435006)
 
   13 Sep 2012; Agostino Sarubbo <ago@gentoo.org> qhull-2012.1-r1.ebuild:
   Stable for amd64, wrt bug #429128
