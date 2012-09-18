@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/curator/curator-3.0_p20110120.ebuild,v 1.3 2012/09/17 10:57:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/curator/curator-3.0_p20110120.ebuild,v 1.4 2012/09/18 13:17:53 johu Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/curator-3.0_pf078f1686a78.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~mips ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND=""
