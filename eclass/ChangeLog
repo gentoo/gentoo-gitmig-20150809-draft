@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.404 2012/09/18 01:26:55 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.405 2012/09/18 06:41:45 ulm Exp $
+
+  18 Sep 2012; Ulrich Müller <ulm@gentoo.org> bzr.eclass:
+  Use lightweight checkout instead of export if EBZR_WORKDIR_CHECKOUT is set;
+  bug 434746. Remove old cleanup code.
 
   18 Sep 2012; Tim Harder <radhermit@gentoo.org> vim.eclass:
   Use has_version instead of built_with_use.
