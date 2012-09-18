@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/minidlna
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/ChangeLog,v 1.22 2012/07/20 08:17:24 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/ChangeLog,v 1.23 2012/09/18 05:42:51 xmw Exp $
+
+  18 Sep 2012; Michael Weber <xmw@gentoo.org> minidlna-1.0.25-r1.ebuild:
+  Correct permissions hack in pkg_setup if user exists but /var/lib/minidlna
+  doesnt (bug 435204, thanks Ian Abbott)
 
   20 Jul 2012; Michael Weber <xmw@gentoo.org> minidlna-1.0.25-r1.ebuild:
   fix directory test, again

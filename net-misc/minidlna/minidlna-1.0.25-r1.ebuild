@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/minidlna-1.0.25-r1.ebuild,v 1.3 2012/07/20 08:17:24 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/minidlna-1.0.25-r1.ebuild,v 1.4 2012/09/18 05:42:51 xmw Exp $
 
 EAPI=4
 
@@ -31,9 +31,12 @@ pkg_setup() {
 	[ -d "${EPREFIX}"/var/lib/${PN} ] && my_is_new="no"
 	enewgroup ${PN}
 	enewuser ${PN} -1 -1 /var/lib/${PN} ${PN}
-	if [ "${my_is_new}" == "yes" ] ; then
-		chown ${PN}:${PN} /var/lib/${PN} || die
-		chmod 0750 /var/lib/${PN} || die
+	if [ -d "${EPREFIX}"/var/lib/${PN} ] && [ "${my_is_new}" == "yes" ] ; then
+		# created by above enewuser command w/ wrong group and permissions
+		chown ${PN}:${PN} "${EPREFIX}"/var/lib/${PN} || die
+		chmod 0750 "${EPREFIX}"/var/lib/${PN} || die
+		# if user already exists, but /var/lib/minidlna is missing
+		# rely on ${D}/var/lib/minidlna created in src_install
 	fi
 }
 
