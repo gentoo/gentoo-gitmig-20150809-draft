@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.8.2.ebuild,v 1.6 2012/09/12 03:20:37 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.8.2.ebuild,v 1.7 2012/09/18 14:24:06 jer Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="https://fedorahosted.org/releases/l/o/logrotate/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ppc ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ppc ppc64 ~s390 ~sh ~sparc x86"
 IUSE="acl selinux"
 
 RDEPEND="
