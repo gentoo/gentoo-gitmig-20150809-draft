@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/mypictures
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mypictures/ChangeLog,v 1.7 2012/09/18 04:19:21 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mypictures/ChangeLog,v 1.8 2012/09/18 04:23:44 radhermit Exp $
+
+  18 Sep 2012; Tim Harder <radhermit@gentoo.org> mypictures-20040202.ebuild,
+  mypictures-20040202-r1.ebuild:
+  Fix quoting.
 
   18 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.

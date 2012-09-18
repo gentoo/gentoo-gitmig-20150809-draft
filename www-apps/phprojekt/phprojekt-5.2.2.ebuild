@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phprojekt/phprojekt-5.2.2.ebuild,v 1.3 2007/06/02 20:28:01 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phprojekt/phprojekt-5.2.2.ebuild,v 1.4 2012/09/18 04:26:04 radhermit Exp $
 
 inherit webapp depend.php
 
@@ -27,11 +27,11 @@ src_install() {
 	dodoc readme install
 	local file
 
-	cp -R . ${D}/${MY_HTDOCSDIR}
+	cp -R . "${D}/${MY_HTDOCSDIR}"
 	for file in attach chat; do
-		webapp_serverowned ${MY_HTDOCSDIR}/${file}
+		webapp_serverowned "${MY_HTDOCSDIR}"/${file}
 	done
-	webapp_postinst_txt en ${FILESDIR}/postinstall-en.txt
+	webapp_postinst_txt en "${FILESDIR}"/postinstall-en.txt
 
 	webapp_src_install
 }
