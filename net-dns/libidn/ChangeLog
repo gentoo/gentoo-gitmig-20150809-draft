@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/libidn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.175 2012/08/20 00:01:59 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.176 2012/09/18 15:22:15 jer Exp $
+
+  18 Sep 2012; Jeroen Roovers <jer@gentoo.org> -libidn-1.24.ebuild:
+  Old.
 
   20 Aug 2012; Christoph Junghans <ottxor@gentoo.org> libidn-1.25.ebuild:
   added prefix keywords
