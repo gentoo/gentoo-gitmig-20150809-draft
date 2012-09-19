@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6974 2012/09/19 12:23:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6975 2012/09/19 12:51:59 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Sep 2012; Alexis Ballier <aballier@gentoo.org> profiles.desc:
+  restore sparc-fbsd profile otherwise repoman outputs warning on packages that
+  still have sparc-fbsd keywords
 
   19 Sep 2012; Alexis Ballier <aballier@gentoo.org> profiles.desc:
   remove fbsd 8.2 from profiles.desc, 8.2 is EOL, bug #435500 by Yuta SATOH
