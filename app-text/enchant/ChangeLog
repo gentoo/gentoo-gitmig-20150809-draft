@@ -1,6 +1,10 @@
 # ChangeLog for app-text/enchant
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.122 2012/05/18 08:30:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.123 2012/09/19 19:31:17 scarabeus Exp $
+
+  19 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> enchant-1.6.0.ebuild:
+  Fix eautoreconf call and use new la files punt function from eutils. Fixes
+  bug#435292. Patch provided by Alphat-PC.
 
   18 May 2012; Alexis Ballier <aballier@gentoo.org> enchant-1.6.0.ebuild:
   keyword ~amd64-fbsd

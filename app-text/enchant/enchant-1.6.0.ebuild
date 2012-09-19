@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/enchant-1.6.0.ebuild,v 1.16 2012/05/18 08:30:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/enchant-1.6.0.ebuild,v 1.17 2012/09/19 19:31:17 scarabeus Exp $
 
 EAPI=4
 
-inherit libtool autotools
+inherit eutils autotools
 
 DESCRIPTION="Spellchecker wrapping library"
 HOMEPAGE="http://www.abisource.com/enchant/"
@@ -23,7 +23,6 @@ COMMON_DEPENDS="dev-libs/glib:2
 RDEPEND="${COMMON_DEPENDS}
 	zemberek? ( app-text/zemberek-server )"
 
-# libtool is needed for the install-sh to work
 DEPEND="${COMMON_DEPENDS}
 	virtual/pkgconfig"
 
@@ -35,7 +34,7 @@ src_prepare() {
 	sed -i \
 		-e 's:noinst_PROGRAMS:check_PROGRAMS:' \
 		tests/Makefile.am || die
-	eautoreconf
+	AT_M4DIR=ac-helpers eautoreconf
 }
 
 src_configure() {
@@ -52,8 +51,5 @@ src_configure() {
 src_install() {
 	default
 
-	if ! use static-libs; then
-		# Remove useless .la files
-		find "${D}" -name '*.la' -exec rm -f {} + || die "la file removal failed"
-	fi
+	prune_libtool_files --all
 }
