@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.437 2012/09/19 23:35:09 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.438 2012/09/19 23:44:56 mattst88 Exp $
+
+  19 Sep 2012; Matt Turner <mattst88@gentoo.org> package.use.force:
+  Add media-libs/glu -multilib to package.use.force
 
   19 Sep 2012; Matt Turner <mattst88@gentoo.org> package.use.mask:
   Add media-libs/glu multilib to package.use.mask.
