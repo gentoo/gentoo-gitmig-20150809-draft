@@ -1,0 +1,10 @@
+# ChangeLog for www-misc/profile-sync-daemon
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/profile-sync-daemon/ChangeLog,v 1.1 2012/09/19 18:52:56 hasufell Exp $
+
+*profile-sync-daemon-3.13 (19 Sep 2012)
+
+  19 Sep 2012; Julian Ospald <hasufell@gentoo.org>
+  +profile-sync-daemon-3.13.ebuild, +metadata.xml:
+  initial import wrt #398431
+
