@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/raptor
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.134 2012/09/14 18:50:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.135 2012/09/19 13:56:27 jer Exp $
+
+  19 Sep 2012; Jeroen Roovers <jer@gentoo.org> raptor-2.0.8.ebuild:
+  Stable for HPPA (bug #429130).
 
   14 Sep 2012; Markus Meier <maekke@gentoo.org> raptor-2.0.8.ebuild:
   arm stable, bug #429130
