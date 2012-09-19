@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/regex-posix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-posix/ChangeLog,v 1.37 2012/09/19 07:00:44 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-posix/ChangeLog,v 1.38 2012/09/19 07:08:36 gienah Exp $
+
+*regex-posix-0.95.2 (19 Sep 2012)
+
+  19 Sep 2012; Mark Wright <gienah@gentoo.org> +regex-posix-0.95.2.ebuild:
+  Bump regex-posix to 0.95.2
 
   19 Sep 2012; Mark Wright <gienah@gentoo.org>
   +files/regex-posix-0.95.1-control-exception.patch,
