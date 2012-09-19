@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.125 2012/09/19 12:21:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.126 2012/09/19 12:50:34 aballier Exp $
+
+  19 Sep 2012; Alexis Ballier <aballier@gentoo.org> -fbsd/sparc/8.2/deprecated:
+  revert sparc-fbsd profile deprecation otherwise repoman warns on every
+  package with sparc-fbsd keywords since it has no valid profile
 
   19 Sep 2012; Alexis Ballier <aballier@gentoo.org> +fbsd/sparc/8.2/deprecated,
   +fbsd/x86/8.2/deprecated:
