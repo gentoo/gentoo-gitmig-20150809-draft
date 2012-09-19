@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/file
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.226 2012/09/06 19:51:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.227 2012/09/19 18:34:25 vapier Exp $
+
+  19 Sep 2012; Mike Frysinger <vapier@gentoo.org> file-5.11.ebuild:
+  Use BUILD_{CC,CXX} when cross-compiling #435324 by Ambroz Bizjak.
 
   06 Sep 2012; Mike Frysinger <vapier@gentoo.org> metadata.xml:
   List upstream bugzilla.

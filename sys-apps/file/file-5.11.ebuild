@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-5.11.ebuild,v 1.8 2012/07/26 16:35:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-5.11.ebuild,v 1.9 2012/09/19 18:34:25 vapier Exp $
 
 EAPI="2"
 PYTHON_DEPEND="python? *"
@@ -47,6 +47,7 @@ src_configure() {
 	# because people often don't keep matching host/target
 	# file versions #362941
 	if tc-is-cross-compiler && ! ROOT=/ has_version ~${CATEGORY}/${P} ; then
+		tc-export_build_env BUILD_C{C,XX}
 		ac_cv_header_zlib_h=no \
 		ac_cv_lib_z_gzopen=no \
 		CHOST=${CBUILD} \
@@ -54,6 +55,8 @@ src_configure() {
 		CXXFLAGS=${BUILD_CXXFLAGS} \
 		CPPFLAGS=${BUILD_CPPFLAGS} \
 		LDFLAGS="${BUILD_LDFLAGS} -static" \
+		CC=${BUILD_CC} \
+		CXX=${BUILD_CXX} \
 		do_configure --disable-shared
 	fi
 
