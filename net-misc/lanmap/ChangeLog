@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/lanmap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lanmap/ChangeLog,v 1.4 2012/04/14 19:03:38 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lanmap/ChangeLog,v 1.5 2012/09/19 20:22:03 darkside Exp $
+
+  19 Sep 2012; Jeremy Olexa <darkside@gentoo.org> metadata.xml:
+  dropping maintainership, backup herd exists
 
   14 Apr 2012; Zac Medico <zmedico@gentoo.org> lanmap-81-r1.ebuild:
   Add ~amd64-linux keyword.
