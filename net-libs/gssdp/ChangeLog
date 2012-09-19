@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gssdp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gssdp/ChangeLog,v 1.46 2012/09/18 01:38:38 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gssdp/ChangeLog,v 1.47 2012/09/19 13:38:50 jer Exp $
+
+  19 Sep 2012; Jeroen Roovers <jer@gentoo.org> gssdp-0.12.2.1.ebuild:
+  Stable for HPPA (bug #434300).
 
   18 Sep 2012; Anthony G. Basile <blueness@gentoo.org> gssdp-0.12.2.1.ebuild:
   stabe ppc ppc64, bug #434300
