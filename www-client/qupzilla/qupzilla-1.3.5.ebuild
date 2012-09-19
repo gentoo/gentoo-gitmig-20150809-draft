@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/qupzilla-1.3.5.ebuild,v 1.1 2012/09/19 08:05:52 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/qupzilla-1.3.5.ebuild,v 1.2 2012/09/19 08:11:14 yngwin Exp $
 
 EAPI=4
 PLOCALES="cs_CZ de_DE el_GR es_ES es_VE fa_IR fr_FR hu_HU id_ID it_IT ja_JP
@@ -12,7 +12,7 @@ MY_P="QupZilla-${PV}"
 
 DESCRIPTION="Qt WebKit web browser"
 HOMEPAGE="http://www.qupzilla.com/"
-SRC_URI="https://github.com/downloads/QupZilla/qupzilla/${MY_P}.tar.gz"
+SRC_URI="mirror://github/QupZilla/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -46,17 +46,12 @@ src_configure() {
 	export NONBLOCK_JS_DIALOGS=$(use nonblockdialogs && echo true || echo false)
 	has_version '>=x11-libs/qt-webkit-4.8.0:4' && export USE_QTWEBKIT_2_2=true
 
-	# needs qt-webkit with webgl enabled (which we currently don't)
-	# export USE_WEBGL=$(use webgl && echo true || echo false)
-
 	eqmake4
 }
 
 src_install() {
 	qt4-r2_src_install
 	l10n_for_each_disabled_locale_do rm_loc
-	# remove duplicated/outdated set of localizations:
-	#find "${D}"/usr/share/${PN}/locale/ -type f -name 'qt_*' -delete || die
 }
 
 rm_loc() {
