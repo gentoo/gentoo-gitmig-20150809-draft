@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/polyml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/polyml/ChangeLog,v 1.6 2012/01/09 12:46:58 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/polyml/ChangeLog,v 1.7 2012/09/19 12:48:01 gienah Exp $
+
+  19 Sep 2012; Mark Wright <gienah@gentoo.org> polyml-5.4.1.ebuild:
+  Thanks to Richard Yao for the fix to bug #398841 and #395009
 
   09 Jan 2012; Mark Wright <gienah@gentoo.org> polyml-5.4.1.ebuild,
   +files/polyml-5.4.1-configure.patch:
@@ -29,4 +32,3 @@
   Initial entry (bug 35548) thanks to Paulo Jorge de Oliveira Cantante de
   Matos <pocmatos@gmail.com>, Martin von Gagern <Martin.vGagern@gmx.net> and
   Unknown <chkno@chkno.net>
-
