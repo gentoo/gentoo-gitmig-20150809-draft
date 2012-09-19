@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-9999.ebuild,v 1.13 2012/09/18 23:36:31 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-9999.ebuild,v 1.14 2012/09/19 16:22:37 mr_bones_ Exp $
 
 EAPI="4"
 
@@ -82,7 +82,6 @@ src_prepare() {
 		eautoreconf
 	fi
 }
-
 
 src_configure() {
 	export ac_cv_search_delwin=$(usex unicode -lncursesw -lncurses)
