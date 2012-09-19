@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/linux-eoip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-eoip/ChangeLog,v 1.1 2012/09/04 18:48:43 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-eoip/ChangeLog,v 1.2 2012/09/19 18:41:31 pinkbyte Exp $
+
+  19 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
+  Add proxy-maintainers herd and maintainers' description
 
 *linux-eoip-0.5 (04 Sep 2012)
 
