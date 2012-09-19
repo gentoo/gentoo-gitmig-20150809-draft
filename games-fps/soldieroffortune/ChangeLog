@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/soldieroffortune
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/ChangeLog,v 1.28 2012/02/05 06:12:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/ChangeLog,v 1.29 2012/09/19 15:16:06 mr_bones_ Exp $
+
+  19 Sep 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  soldieroffortune-1.06a.ebuild:
+  fix sed typo noticed by Jared B (bug #435476)
 
   05 Feb 2012; Mike Frysinger <vapier@gentoo.org>
   soldieroffortune-1.06a.ebuild:
@@ -107,4 +111,3 @@
   27 Jul 2003; Chris Gianelloni <wolf31o2@gentoo.org>
   soldieroffortune-1.06a.ebuild, files/sof:
   Initial import.  Ebuild by me.
-
