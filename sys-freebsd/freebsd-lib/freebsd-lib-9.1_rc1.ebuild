@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.1_rc1.ebuild,v 1.1 2012/09/11 16:44:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.1_rc1.ebuild,v 1.2 2012/09/19 15:55:44 aballier Exp $
 
 EAPI=2
 
@@ -364,8 +364,6 @@ src_compile() {
 			CFLAGADD=""
 			if ! is_native_abi ; then
 				mymakeopts="${mymakeopts} COMPAT_32BIT="
-			else
-				use build || CFLAGS="${CFLAGS} -isystem /usr/include";
 			fi
 
 			einfo "Building for ABI ${ABI} and TARGET=$(tc-arch-kernel ${CHOST})"
