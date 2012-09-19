@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.14.ebuild,v 1.2 2012/08/27 13:35:19 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.14-r1.ebuild,v 1.1 2012/09/19 17:50:36 aidecoe Exp $
 
 EAPI=4
 
@@ -39,9 +39,10 @@ DEPEND="${CDEPEND}
 RDEPEND="${CDEPEND}
 	crypt? ( app-crypt/gnupg )
 	nmbug? ( dev-vcs/git virtual/perl-File-Temp virtual/perl-PodParser )
-	mutt? ( dev-perl/Mail-Box dev-perl/MailTools dev-perl/String-ShellQuote
-		dev-perl/Term-ReadLine-Gnu virtual/perl-File-Path
-		virtual/perl-Getopt-Long virtual/perl-PodParser
+	mutt? ( dev-perl/File-Which dev-perl/Mail-Box dev-perl/MailTools
+		dev-perl/String-ShellQuote dev-perl/Term-ReadLine-Gnu
+		virtual/perl-Digest-SHA virtual/perl-File-Path virtual/perl-Getopt-Long
+		virtual/perl-PodParser
 		)
 	zsh-completion? ( app-shells/zsh )
 	"
