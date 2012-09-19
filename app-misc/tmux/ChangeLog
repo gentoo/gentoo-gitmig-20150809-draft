@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tmux
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/ChangeLog,v 1.78 2012/08/10 10:09:26 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/ChangeLog,v 1.79 2012/09/19 21:48:54 blueness Exp $
+
+  19 Sep 2012; Anthony G. Basile <blueness@gentoo.org> tmux-1.6.ebuild:
+  stable ppc, bug #435320
 
   10 Aug 2012; Richard Yao <ryao@gentoo.org> tmux-1.6.ebuild:
   Keyword ~mips
