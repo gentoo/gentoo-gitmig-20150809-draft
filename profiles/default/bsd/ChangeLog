@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.124 2012/09/19 11:44:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.125 2012/09/19 12:21:47 aballier Exp $
+
+  19 Sep 2012; Alexis Ballier <aballier@gentoo.org> +fbsd/sparc/8.2/deprecated,
+  +fbsd/x86/8.2/deprecated:
+  deprecate fbsd 8.2 profiles, bug #435500
 
   19 Sep 2012; Alexis Ballier <aballier@gentoo.org> fbsd/package.use.mask:
   mask patch[xattr] as it requires gnu attr, bug #435474
