@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/cluster-glue
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cluster-glue/ChangeLog,v 1.25 2012/07/23 08:04:02 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cluster-glue/ChangeLog,v 1.26 2012/09/19 22:50:45 jer Exp $
+
+  19 Sep 2012; Jeroen Roovers <jer@gentoo.org> cluster-glue-1.0.10.ebuild:
+  Stable for HPPA (bug #433359).
 
 *cluster-glue-1.0.10 (23 Jul 2012)
 
