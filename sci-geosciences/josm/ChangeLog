@@ -1,6 +1,12 @@
 # ChangeLog for sci-geosciences/josm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/josm/ChangeLog,v 1.43 2012/07/27 22:28:32 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/josm/ChangeLog,v 1.44 2012/09/19 10:20:59 hanno Exp $
+
+*josm-5485 (19 Sep 2012)
+
+  19 Sep 2012; Hanno Boeck <hanno@gentoo.org> +josm-5485.ebuild:
+  Version bump and svn snapshots need subversion dependency to create version
+  string.
 
 *josm-5356 (27 Jul 2012)
 
