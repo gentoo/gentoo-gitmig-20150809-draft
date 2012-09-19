@@ -1,9 +1,9 @@
 # ChangeLog for net-libs/gupnp-igd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/ChangeLog,v 1.37 2012/09/19 13:35:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/ChangeLog,v 1.38 2012/09/19 13:37:43 jer Exp $
 
   19 Sep 2012; Jeroen Roovers <jer@gentoo.org> gupnp-igd-0.2.1.ebuild:
-  Stable for HPPA (bug #433645).
+  Stable for HPPA (bug #434300).
 
   18 Sep 2012; Anthony G. Basile <blueness@gentoo.org> ChangeLog:
   Fix failed manifest signing
