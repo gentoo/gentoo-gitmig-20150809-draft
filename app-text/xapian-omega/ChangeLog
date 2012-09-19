@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xapian-omega
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xapian-omega/ChangeLog,v 1.16 2012/09/16 19:52:21 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xapian-omega/ChangeLog,v 1.17 2012/09/19 09:42:33 johu Exp $
+
+  19 Sep 2012; Johannes Huber <johu@gentoo.org> xapian-omega-1.2.12.ebuild:
+  Stable for x86, wrt bug #434564
 
   16 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
   xapian-omega-1.2.12.ebuild:
