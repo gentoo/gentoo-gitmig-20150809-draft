@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.4a-r1.ebuild,v 1.3 2012/09/19 08:27:54 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.4b.ebuild,v 1.1 2012/09/19 08:27:54 voyageur Exp $
 
 EAPI=4
 inherit eutils multilib
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.proftpd.org/
 	http://www.castaglia.org/proftpd/
 	http://www.thrallingpenguin.com/resources/mod_clamav.htm
 	http://gssmod.sourceforge.net/"
-SRC_URI="ftp://ftp.proftpd.org/distrib/source/${P/_/}.tar.bz2
+SRC_URI="ftp://ftp.proftpd.org/distrib/source/${P/_/}.tar.gz
 	case? ( http://www.castaglia.org/${PN}/modules/${PN}-mod-case-${MOD_CASE}.tar.gz )
 	clamav? ( https://secure.thrallingpenguin.com/redmine/attachments/download/1/mod_clamav-${MOD_CLAMAV}.tar.gz )
 	diskuse? ( http://www.castaglia.org/${PN}/modules/${PN}-mod-diskuse-${MOD_DISKUSE}.tar.gz )
@@ -78,11 +78,8 @@ src_prepare() {
 	fi
 	use vroot && __prepare_module mod_vroot
 
-	# Fix Gentoo Bug #354295 / ProFTPD Bug #3682
-	epatch "${FILESDIR}"/${P}-ubug-3682.patch
-
-	# Fix Gentoo Bug #393189 / ProFTPD Bug #3728
-	epatch "${FILESDIR}"/${P}-ubug-3728.patch
+	# Fix Gentoo Bug #422941 / ProFTPD Bug #3795
+	epatch "${FILESDIR}"/${P}-ubug-3795.patch
 
 	# Prepare external kerberos module
 	if use kerberos ; then
