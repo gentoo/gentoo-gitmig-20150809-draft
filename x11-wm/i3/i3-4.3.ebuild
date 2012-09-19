@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-4.3.ebuild,v 1.3 2012/09/19 19:56:41 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-4.3.ebuild,v 1.4 2012/09/19 20:03:42 xarthisius Exp $
 
 EAPI=4
 
@@ -40,24 +40,19 @@ RDEPEND="${CDEPEND}
 
 DOCS=( RELEASE-NOTES-${PV} )
 
-pkg_setup() {
-	tc-export CC
-}
-
 src_prepare() {
-	sed -i common.mk \
-		-e "/DEBUG=/ s/1/0/" \
-		-e '/O2\|reorder\-blocks\|SILENT/d' || die
-
 	if ! use pango; then
-		sed -i common.mk \
-			-e '/PANGO/d' || die
+		sed -i common.mk -e '/PANGO/d' || die
 	fi
 
 	cat <<- EOF > "${T}"/i3wm
 		#!/bin/sh
 		exec /usr/bin/i3
 	EOF
+}
+
+src_compile() {
+	emake V=1 CC="$(tc-getCC)"
 }
 
 src_install() {

@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/i3
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/ChangeLog,v 1.25 2012/09/19 19:56:41 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/ChangeLog,v 1.26 2012/09/19 20:03:42 xarthisius Exp $
+
+  19 Sep 2012; Kacper Kowalik <xarthisius@gentoo.org> i3-4.3.ebuild:
+  Remove obsolete sed, simplify ebuild
 
   19 Sep 2012; Kacper Kowalik <xarthisius@gentoo.org> i3-4.3.ebuild:
   Remove bits that were left from ebuild development
