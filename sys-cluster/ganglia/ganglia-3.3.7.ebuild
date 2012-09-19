@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ganglia-3.3.7.ebuild,v 1.2 2012/09/04 03:49:50 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ganglia-3.3.7.ebuild,v 1.3 2012/09/19 12:59:15 nativemad Exp $
 
 EAPI="3"
 WEBAPP_OPTIONAL="yes"
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/ganglia/${P}.tar.gz"
 LICENSE="BSD"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="minimal pcre python examples"
 
 DEPEND="dev-libs/confuse
