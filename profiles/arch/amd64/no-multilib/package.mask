@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.115 2012/06/24 23:44:46 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.116 2012/09/19 17:31:10 pinkbyte Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -113,6 +113,7 @@ games-fps/rtcw
 games-fps/rtcwmp-demo
 games-fps/rtcwsp-demo
 games-fps/sauerbraten
+games-fps/serious-sam-tse
 games-fps/soldieroffortune
 games-fps/soldieroffortune-demo
 games-fps/unreal-tournament
