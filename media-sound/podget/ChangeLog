@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/podget
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/podget/ChangeLog,v 1.3 2011/02/15 21:54:50 darkside Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/podget/ChangeLog,v 1.4 2012/09/19 20:20:15 darkside Exp $
+
+  19 Sep 2012; Jeremy Olexa <darkside@gentoo.org> metadata.xml:
+  dropping maintainership, no bugs, app works
 
   15 Feb 2011; Jeremy Olexa <darkside@gentoo.org> podget-0.6.ebuild:
   remove calls to die, they die on their own in EAPI=4

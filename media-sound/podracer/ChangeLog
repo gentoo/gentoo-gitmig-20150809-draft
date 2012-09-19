@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/podracer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/podracer/ChangeLog,v 1.1 2012/01/16 16:35:48 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/podracer/ChangeLog,v 1.2 2012/09/19 20:19:44 darkside Exp $
+
+  19 Sep 2012; Jeremy Olexa <darkside@gentoo.org> metadata.xml:
+  dropping maintainership, no bugs, app works
 
 *podracer-1.4 (16 Jan 2012)
 
