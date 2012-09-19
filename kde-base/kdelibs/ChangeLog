@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.868 2012/09/04 18:45:15 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.869 2012/09/19 15:20:13 aballier Exp $
+
+  19 Sep 2012; Alexis Ballier <aballier@gentoo.org> kdelibs-4.9.1.ebuild:
+  keyword ~amd64-fbsd, bug #430072
 
 *kdelibs-4.9.1 (04 Sep 2012)
 
