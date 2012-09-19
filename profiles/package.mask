@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14110 2012/09/19 05:23:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14111 2012/09/19 06:58:59 pesa Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -116,10 +116,6 @@ app-arch/macutil
 # outdated security package
 www-client/torbrowser
 www-misc/torbrowser-profile
-
-# Davide Pesavento <pesa@gentoo.org> (11 Sep 2012)
-# Mask beta version.
-=dev-util/qt-creator-2.6.0_beta*
 
 # Rick Farina <zerochaos@gentoo.org> (10 Sep 2012)
 # Unclear licensing issues, upstream is distributing a file

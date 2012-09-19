@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6972 2012/09/19 05:23:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6973 2012/09/19 06:58:59 pesa Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Sep 2012; Davide Pesavento <pesa@gentoo.org> package.mask:
+  Unmask qt-creator 2.6 beta, it works fine.
 
   19 Sep 2012; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Mask drizzle 7.2 for testing.
