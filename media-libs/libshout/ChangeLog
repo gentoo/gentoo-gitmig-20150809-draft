@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libshout
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libshout/ChangeLog,v 1.39 2012/09/14 18:51:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libshout/ChangeLog,v 1.40 2012/09/19 13:56:51 jer Exp $
+
+  19 Sep 2012; Jeroen Roovers <jer@gentoo.org> libshout-2.3.1.ebuild:
+  Stable for HPPA (bug #429126).
 
   14 Sep 2012; Markus Meier <maekke@gentoo.org> libshout-2.3.1.ebuild:
   arm stable, bug #429126
