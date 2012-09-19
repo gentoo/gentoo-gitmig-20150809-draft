@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/radvd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.97 2012/09/11 16:02:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.98 2012/09/19 22:44:02 jer Exp $
+
+  19 Sep 2012; Jeroen Roovers <jer@gentoo.org> radvd-1.9.1-r1.ebuild:
+  Stable for HPPA (bug #433341).
 
   11 Sep 2012; Raúl Porcel <armin76@gentoo.org> radvd-1.9.1-r1.ebuild:
   sparc/x86 stable wrt #433341
