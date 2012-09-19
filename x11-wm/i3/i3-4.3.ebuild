@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-4.3.ebuild,v 1.1 2012/09/19 17:46:48 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-4.3.ebuild,v 1.2 2012/09/19 19:48:54 xarthisius Exp $
 
 EAPI=4
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="An improved dynamic tiling window manager"
 HOMEPAGE="http://i3wm.org/"
@@ -24,8 +24,8 @@ CDEPEND="dev-libs/libev
 	x11-libs/startup-notification
 	x11-libs/xcb-util
 	pango? (
-		>=x11-libs/pango-1.30.0
-		>=x11-libs/cairo-1.12.2
+		>=x11-libs/pango-1.30.0[X]
+		>=x11-libs/cairo-1.12.2[X,xcb]
 	)"
 DEPEND="${CDEPEND}
 	virtual/pkgconfig
@@ -53,6 +53,8 @@ src_prepare() {
 		sed -i common.mk \
 			-e '/PANGO/d' || die
 	fi
+
+	epatch "${FILESDIR}"/0001*patch
 
 	cat <<- EOF > "${T}"/i3wm
 		#!/bin/sh
