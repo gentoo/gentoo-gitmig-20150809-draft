@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14109 2012/09/18 23:17:35 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14110 2012/09/19 05:23:17 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego Elio Pettenò <flameeyes@gentoo.org> (18 Sep 2012)
+# Mask until Pavel can test it.
+=dev-db/drizzle-7.2*
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (18 Sep 2012)
 # Mask until multilib situation is sorted out, bug #433880.
