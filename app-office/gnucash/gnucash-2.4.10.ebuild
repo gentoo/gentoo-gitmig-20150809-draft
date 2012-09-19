@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.4.10.ebuild,v 1.6 2012/05/24 13:31:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.4.10.ebuild,v 1.7 2012/09/19 18:21:16 pacho Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -47,7 +47,7 @@ RDEPEND=">=dev-libs/glib-2.13:2
 		dev-perl/HTML-TableExtract )
 	webkit? ( net-libs/webkit-gtk:2 )
 	!webkit? ( >=gnome-extra/gtkhtml-3.16:3.14 )
-	sqlite? ( dev-db/libdbi dev-db/libdbi-drivers[sqlite3] )
+	sqlite? ( dev-db/libdbi dev-db/libdbi-drivers[sqlite] )
 	postgres? ( dev-db/libdbi dev-db/libdbi-drivers[postgres] )
 	mysql? ( dev-db/libdbi dev-db/libdbi-drivers[mysql] )
 "
