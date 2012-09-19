@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/exmap/exmap-0.10.ebuild,v 1.3 2012/05/04 17:51:43 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/exmap/exmap-0.10.ebuild,v 1.4 2012/09/19 08:58:36 xmw Exp $
 
 EAPI=2
 
@@ -49,6 +49,9 @@ src_prepare() {
 
 	# fix underlinking with -Wl,--as-needed
 	epatch "${FILESDIR}/${P}-as-needed.patch"
+
+	# no longer call make clean in kernel source dir
+	epatch "${FILESDIR}/${P}-kernel-3.5.patch"
 
 	rm -v src/{*.so,munged-ls-threeloads,prelinked-amule} || die
 }

@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/exmap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/exmap/ChangeLog,v 1.4 2012/05/04 17:51:43 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/exmap/ChangeLog,v 1.5 2012/09/19 08:58:36 xmw Exp $
+
+  19 Sep 2012; Michael Weber <xmw@gentoo.org>
+  +files/exmap-0.10-kernel-3.5.patch, exmap-0.10.ebuild:
+  No longer run make clean in kernel dir (bug 431068, reported by Wonko and
+  Andreas Sturmlechner).
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> exmap-0.10.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -18,4 +23,3 @@
   +metadata.xml:
   Initial commit for exmap. Fixes bug #158382, thanks to Paul Pacheco and
   all the other contributors there.
-
