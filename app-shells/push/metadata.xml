@@ -7,8 +7,7 @@
 		<description>Upstream developer, assign bugs</description>
 	</maintainer>
 	<maintainer>
-		<email>darkside@gentoo.org</email>
-		<name>Jeremy Olexa</name>
+		<email>axs@gentoo.org</email>
 		<description>Proxy committer, CC bugs</description>
 	</maintainer>
 	<upstream>
