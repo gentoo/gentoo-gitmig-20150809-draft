@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/monsterz/monsterz-0.7.1-r2.ebuild,v 1.5 2010/02/11 20:25:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/monsterz/monsterz-0.7.1-r2.ebuild,v 1.6 2012/09/19 02:01:24 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -16,7 +16,7 @@ IUSE=""
 
 DEPEND="dev-python/pygame
 	media-libs/sdl-image[png]
-	media-libs/sdl-mixer[mikmod]"
+	media-libs/sdl-mixer[mod]"
 
 src_prepare() {
 	epatch \
