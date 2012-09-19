@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.405 2012/09/18 06:41:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.406 2012/09/19 09:37:53 mgorny Exp $
+
+  19 Sep 2012; Michał Górny <mgorny@gentoo.org> +boost-utils.eclass:
+  Introduce boost-utils eclass, to support linking against arbitrary boost
+  version.
 
   18 Sep 2012; Ulrich Müller <ulm@gentoo.org> bzr.eclass:
   Use lightweight checkout instead of export if EBZR_WORKDIR_CHECKOUT is set;
