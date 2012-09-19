@@ -16,6 +16,6 @@ diff -uNr lib.ol/librtld_db/Makefile lib/librtld_db/Makefile
  
  CFLAGS+= -I${.CURDIR}
 +LDADD+=-lutil -lproc
-+LDFLAGS+=-L${.CURDIR}/../libutil -L${.CURDIR}/../libproc
++LDFLAGS+=-L${.OBJDIR}/../libutil -L${.OBJDIR}/../libproc
  
  .include <bsd.lib.mk>

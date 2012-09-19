@@ -6,7 +6,7 @@ Without this linking fails during a stage3 build.
  
  DPADD+=	${LIBGSSAPI}
  LDADD+=	-lgssapi
-+LDFLAGS+= 	-L${.CURDIR}/../libgssapi
++LDFLAGS+= 	-L${.OBJDIR}/../libgssapi
  
  VERSION_DEF=	${.CURDIR}/../libc/Versions.def
  SYMBOL_MAPS=	${.CURDIR}/Symbol.map

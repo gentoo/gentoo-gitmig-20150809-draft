@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.1_rc1.ebuild,v 1.2 2012/09/19 15:55:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.1_rc1.ebuild,v 1.3 2012/09/19 16:26:20 aballier Exp $
 
 EAPI=2
 
@@ -301,13 +301,6 @@ do_compile() {
 	need_bootstrap && do_bootstrap
 
 	export RAW_LDFLAGS=$(raw-ldflags)
-
-	#fixes bug 419477, multilib support
-	cd "${S}"
-	sed -i -e "s:^LDFLAGS+=.*:LDFLAGS+=-L ${MAKEOBJDIRPREFIX}/${S}/libgssapi:" \
-		librpcsec_gss/Makefile || die "Problem fixing \"librpcsec_gss/Makefile"
-	sed -i -e "s:^LDFLAGS+=.*:LDFLAGS+=-L ${MAKEOBJDIRPREFIX}/${S}/libutil -L ${MAKEOBJDIRPREFIX}/${S}/libproc:" \
-		librtld_db/Makefile || die "Problem fixing \"librtld_db/Makefile"
 
 	# Everything is now setup, build it!
 	for i in $(get_subdirs) ; do
