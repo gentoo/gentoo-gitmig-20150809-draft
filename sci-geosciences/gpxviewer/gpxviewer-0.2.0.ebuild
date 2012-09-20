@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpxviewer/gpxviewer-0.2.0.ebuild,v 1.7 2012/05/04 07:14:06 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpxviewer/gpxviewer-0.2.0.ebuild,v 1.8 2012/09/20 17:46:29 scarabeus Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ MY_PN="gpx-viewer"
 MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Simple program to visualize a gpx file"
-HOMEPAGE="http://blog.sarine.nl/${PN}/"
+HOMEPAGE="http://blog.sarine.nl/gpxviewer/"
 SRC_URI="http://edge.launchpad.net/${MY_PN}/trunk/${PV}/+download/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"

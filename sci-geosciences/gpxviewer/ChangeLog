@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/gpxviewer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpxviewer/ChangeLog,v 1.9 2012/05/04 07:14:06 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpxviewer/ChangeLog,v 1.10 2012/09/20 17:46:29 scarabeus Exp $
+
+  20 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> gpxviewer-0.2.0.ebuild:
+  Fix homepage. No vars there.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> gpxviewer-0.2.0.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -37,4 +40,3 @@
   +files/0.1.3_pre1-configure.ac.patch, +gpxviewer-0.1.3_pre1.ebuild,
   +metadata.xml:
   New addition #289912
-
