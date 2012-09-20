@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_configure-v54.eblit,v 1.7 2012/09/13 10:27:41 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_configure-v54.eblit,v 1.8 2012/09/20 17:32:02 olemarkus Exp $
 
 eblit-php-src_configure() {
 	addpredict /usr/share/snmp/mibs/.index
@@ -88,7 +88,7 @@ eblit-php-src_configure() {
 
 	# DBA drivers support
 	my_conf+="
-	$(use_with cdb cdb ${EPREFIX}/usr)
+	$(use_with cdb cdb)
 	$(use_with berkdb db4 ${EPREFIX}/usr)
 	$(use_enable flatfile flatfile )
 	$(use_with gdbm gdbm ${EPREFIX}/usr)
