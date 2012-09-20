@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libpostproc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpostproc/ChangeLog,v 1.11 2012/08/23 08:45:36 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpostproc/ChangeLog,v 1.12 2012/09/20 12:27:31 xarthisius Exp $
+
+  20 Sep 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  libpostproc-0.8.0.20120229.ebuild:
+  ppc64 stable wrt #422537
 
   23 Aug 2012; Michael Weber <xmw@gentoo.org> libpostproc-0.8.0.20120229.ebuild:
   ppc stable (bug 422537).
