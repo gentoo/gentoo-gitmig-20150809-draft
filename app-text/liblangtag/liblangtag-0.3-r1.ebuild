@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/liblangtag/liblangtag-0.3.ebuild,v 1.1 2012/08/07 11:42:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/liblangtag/liblangtag-0.3-r1.ebuild,v 1.1 2012/09/20 08:58:55 scarabeus Exp $
 
 EAPI=4
 
@@ -37,6 +37,11 @@ RESTRICT="test"
 
 src_prepare() {
 	base_src_prepare
+
+	# fixed in git
+	sed -i \
+		-e '$(libdir):${libdir}' \
+		*.pc.in || die
 
 	eautoreconf
 }
