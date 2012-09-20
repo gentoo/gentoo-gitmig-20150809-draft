@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.109 2012/09/17 13:17:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.110 2012/09/20 07:36:56 scarabeus Exp $
 
 EAPI=4
 
@@ -72,8 +72,8 @@ unset ADDONS_URI
 unset EXT_URI
 unset ADDONS_SRC
 
-IUSE="binfilter binfilterdebug +branding +cups dbus eds gnome gstreamer +gtk
-gtk3 jemalloc kde mysql odk opengl postgres svg test +vba +webdav"
+IUSE="binfilter bluetooth +branding +cups dbus eds gnome gstreamer +gtk
+gtk3 jemalloc kde mysql odk opengl postgres svg telepathy test +vba +webdav"
 
 LO_EXTS="nlpsolver pdfimport presenter-console presenter-minimizer scripting-beanshell scripting-javascript wiki-publisher"
 # Unpackaged separate extensions:
@@ -132,6 +132,7 @@ COMMON_DEPEND="
 	x11-libs/libXinerama
 	x11-libs/libXrandr
 	x11-libs/libXrender
+	bluetooth? ( net-wireless/bluez )
 	cups? ( net-print/cups )
 	dbus? ( >=dev-libs/dbus-glib-0.92 )
 	eds? ( gnome-extra/evolution-data-server )
@@ -163,6 +164,10 @@ COMMON_DEPEND="
 	)
 	postgres? ( >=dev-db/postgresql-base-9.0[kerberos] )
 	svg? ( gnome-base/librsvg )
+	telepathy? (
+		dev-libs/glib:2
+		>=net-libs/telepathy-glib-0.18.0
+	)
 	webdav? ( net-libs/neon )
 "
 
@@ -223,6 +228,7 @@ PATCHES=(
 )
 
 REQUIRED_USE="
+	bluetooth? ( dbus )
 	gnome? ( gtk )
 	eds? ( gnome )
 	libreoffice_extensions_nlpsolver? ( java )
@@ -326,13 +332,6 @@ src_prepare() {
 	fi
 
 	base_src_prepare
-
-	# please no debug in binfilter, it blows up things insanely
-	if use binfilter && ! use binfilterdebug ; then
-		for name in $(find "${S}/binfilter" -name makefile.mk) ; do
-			sed -i -e '1i\CFLAGS+= -g0' $name || die
-		done
-	fi
 
 	AT_M4DIR="m4"
 	eautoreconf
@@ -494,6 +493,7 @@ src_configure() {
 		--with-helppack-integration \
 		--without-sun-templates \
 		$(use_enable binfilter) \
+		$(use_enable bluetooth sdremote) \
 		$(use_enable cups) \
 		$(use_enable dbus) \
 		$(use_enable eds evolution2) \
@@ -509,6 +509,7 @@ src_configure() {
 		$(use_enable opengl) \
 		$(use_enable postgres postgresql-sdbc) \
 		$(use_enable svg librsvg system) \
+		$(use_enable telepathy) \
 		$(use_enable test linkoo) \
 		$(use_enable vba) \
 		$(use_enable webdav neon) \
