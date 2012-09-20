@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-2.15.ebuild,v 1.2 2012/04/12 20:13:56 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-2.17.ebuild,v 1.1 2012/09/20 12:16:44 grozin Exp $
 
-EAPI=3
+EAPI=4
 SUPPORT_PYTHON_ABIS=1
 PYTHON_DEPEND="python? 2"
 RESTRICT_PYTHON_ABIS="3.*"
@@ -14,11 +14,14 @@ SRC_URI="mirror://sourceforge/asymptote/${P}.src.tgz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
-IUSE="+boehm-gc doc emacs examples fftw gsl +imagemagick latex python sigsegv svg vim-syntax X"
+IUSE="+boehm-gc doc emacs examples fftw gsl +imagemagick latex offscreen +opengl python sigsegv svg vim-syntax X"
+REQUIRED_USE="offscreen? (  )"
 
 RDEPEND=">=sys-libs/readline-4.3-r5
 	>=sys-libs/ncurses-5.4-r5
 	imagemagick? ( media-gfx/imagemagick[png] )
+	opengl? ( >=media-libs/mesa-8 )
+	offscreen? ( media-libs/mesa[osmesa] )
 	svg? ( app-text/dvisvgm )
 	sigsegv? ( dev-libs/libsigsegv )
 	boehm-gc? ( >=dev-libs/boehm-gc-7.0[cxx,threads] )
@@ -59,33 +62,35 @@ src_configure() {
 		$(use_enable boehm-gc gc system) \
 		$(use_enable fftw) \
 		$(use_enable gsl) \
+		$(use_enable opengl gl) \
+		$(use_enable offscreen) \
 		$(use_with sigsegv)
 }
 
 src_compile() {
-	emake || die "emake failed"
+	emake
 
 	cd doc
-	emake asy.1 || die "emake asy.1 failed"
+	emake asy.1
 	if use doc; then
 		# info
 		einfo "Making info"
-		emake ${PN}.info || die "emake ${PN}.info failed"
+		emake ${PN}.info
 		cd FAQ
-		emake || die "emake FAQ failed"
+		emake
 		cd ..
 		# pdf
 		einfo "Making pdf docs"
 		export VARTEXFONTS="${T}"/fonts
 		# see bug #260606
-		emake -j1 asymptote.pdf || die "emake asymptote.pdf failed"
-		emake CAD.pdf || die "emake CAD.pdf failed"
+		emake -j1 asymptote.pdf
+		emake CAD.pdf
 	fi
 	cd ..
 
 	if use emacs; then
 		einfo "Compiling emacs lisp files"
-		elisp-compile base/*.el || die "elisp-compile failed"
+		elisp-compile base/*.el
 	fi
 }
 

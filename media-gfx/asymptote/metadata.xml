@@ -22,5 +22,8 @@
 		<flag name='sigsegv'>
 			Enables using <pkg>dev-libs/libsigsegv</pkg>
 		</flag>
+		<flag name='offscreen'>
+			Enables off-screen rendering
+		</flag>
 	</use>
 </pkgmetadata>
