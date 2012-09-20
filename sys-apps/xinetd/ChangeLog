@@ -1,5 +1,8 @@
 # ChangeLog for sys-apps/xinetd
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.68 2012/08/26 18:31:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.69 2012/09/20 12:05:15 xarthisius Exp $
+
+  20 Sep 2012; Kacper Kowalik <xarthisius@gentoo.org> xinetd-2.3.15.ebuild:
+  ppc64 stable wrt #420927
 
   26 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> xinetd-2.3.14-r1.ebuild,
   xinetd-2.3.15.ebuild:
