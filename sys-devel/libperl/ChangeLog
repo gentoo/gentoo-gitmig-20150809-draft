@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/libperl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.164 2012/04/26 13:00:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.165 2012/09/20 12:54:58 radhermit Exp $
+
+  20 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove redundant maintainer from metadata.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> libperl-5.10.1-r1.ebuild:
   keyword ~amd64-fbsd
