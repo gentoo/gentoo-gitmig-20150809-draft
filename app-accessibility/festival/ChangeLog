@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/festival
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.105 2012/05/31 02:14:16 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.106 2012/09/20 19:58:15 neurogeek Exp $
+
+  20 Sep 2012; Jesus Rivero <neurogeek@gentoo.org>
+  -festival-1.96_beta-r1.ebuild, -festival-2.0.95_beta.ebuild,
+  -files/festival-2.0.95_beta-init-scm.patch:
+  Updated Manifest wrt bug #435518. Removed keyworded versions.
 
   31 May 2012; Zac Medico <zmedico@gentoo.org> festival-1.96_beta-r1.ebuild,
   festival-1.96_beta.ebuild, festival-2.0.95_beta.ebuild, festival-2.1.ebuild:
