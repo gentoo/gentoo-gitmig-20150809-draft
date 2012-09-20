@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/pms
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/ChangeLog,v 1.32 2012/01/03 15:46:38 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/ChangeLog,v 1.33 2012/09/20 15:34:56 ulm Exp $
+
+*pms-5 (20 Sep 2012)
+
+  20 Sep 2012; Ulrich Müller <ulm@gentoo.org> +pms-5.ebuild:
+  Version bump. EAPI 5 has been approved by the council.
 
   03 Jan 2012; Mark Loeser <halcy0n@gentoo.org> pms-2.ebuild, pms-3.ebuild,
   pms-4_p20110118.ebuild:
