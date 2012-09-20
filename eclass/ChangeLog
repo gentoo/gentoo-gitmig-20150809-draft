@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.408 2012/09/20 04:48:26 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.409 2012/09/20 10:32:40 kensington Exp $
+
+  20 Sep 2012; Michael Palimaka <kensington@gentoo.org> cmake-utils.eclass:
+  Add support for the ninja build system wrt bug #430608. Improve prefix
+  support wrt bug #434086.
 
   20 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org> vala.eclass:
   VALA_{MIN,MAX}_API_VERSION are not unset by default.

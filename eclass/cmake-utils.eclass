@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.80 2012/09/15 16:16:53 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.81 2012/09/20 10:32:40 kensington Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -41,6 +41,12 @@ CMAKE_REMOVE_MODULES_LIST="${CMAKE_REMOVE_MODULES_LIST:-FindBLAS FindLAPACK}"
 # @DESCRIPTION:
 # Do we want to remove anything? yes or whatever else for no
 CMAKE_REMOVE_MODULES="${CMAKE_REMOVE_MODULES:-yes}"
+
+# @ECLASS-VARIABLE: CMAKE_MAKEFILE_GENERATOR
+# @DESCRIPTION:
+# Specify a makefile generator to be used by cmake. At this point only "make"
+# and "ninja" is supported.
+CMAKE_MAKEFILE_GENERATOR="${CMAKE_MAKEFILE_GENERATOR:-make}"
 
 CMAKEDEPEND=""
 case ${WANT_CMAKE} in
@@ -164,6 +170,15 @@ _check_build_dir() {
 	mkdir -p "${CMAKE_BUILD_DIR}"
 	echo ">>> Working in BUILD_DIR: \"$CMAKE_BUILD_DIR\""
 }
+
+# Determine which generator to use
+_generator_to_use() {
+	if [[ ${CMAKE_MAKEFILE_GENERATOR} = "ninja" ]]; then
+		has_version dev-util/ninja && echo "Ninja" && return
+	fi
+	echo "Unix Makefiles"
+}
+
 # @FUNCTION: cmake-utils_use_with
 # @USAGE: <USE flag> [flag name]
 # @DESCRIPTION:
@@ -351,7 +366,7 @@ enable_cmake-utils_src_configure() {
 	local libdir=$(get_libdir)
 	cat > "${common_config}" <<- _EOF_
 		SET (LIB_SUFFIX ${libdir/lib} CACHE STRING "library path suffix" FORCE)
-		SET (CMAKE_INSTALL_LIBDIR ${PREFIX}/${libdir} CACHE PATH "Output directory for libraries")
+		SET (CMAKE_INSTALL_LIBDIR ${libdir} CACHE PATH "Output directory for libraries")
 	_EOF_
 	[[ "${NOCOLOR}" = true || "${NOCOLOR}" = yes ]] && echo 'SET (CMAKE_COLOR_MAKEFILE OFF CACHE BOOL "pretty colors during make" FORCE)' >> "${common_config}"
 
@@ -370,6 +385,7 @@ enable_cmake-utils_src_configure() {
 	local cmakeargs=(
 		--no-warn-unused-cli
 		-C "${common_config}"
+		-G "$(_generator_to_use)"
 		-DCMAKE_INSTALL_PREFIX="${EPREFIX}${PREFIX}"
 		"${mycmakeargs_local[@]}"
 		-DCMAKE_BUILD_TYPE="${CMAKE_BUILD_TYPE}"
@@ -401,12 +417,23 @@ cmake-utils_src_make() {
 
 	_check_build_dir
 	pushd "${CMAKE_BUILD_DIR}" > /dev/null
-	# first check if Makefile exist otherwise die
-	[[ -e Makefile ]] || die "Makefile not found. Error during configure stage."
-	if [[ "${CMAKE_VERBOSE}" != "OFF" ]]; then
-		emake VERBOSE=1 "$@" || die "Make failed!"
+	if [[ $(_generator_to_use) = Ninja ]]; then
+		# first check if Makefile exist otherwise die
+		[[ -e build.ninja ]] || die "Makefile not found. Error during configure stage."
+		if [[ "${CMAKE_VERBOSE}" != "OFF" ]]; then
+			#TODO get load average from portage (-l option)
+			ninja ${MAKEOPTS} -v "$@"
+		else
+			ninja "$@"
+		fi || die "ninja failed!"
 	else
-		emake "$@" || die "Make failed!"
+		# first check if Makefile exist otherwise die
+		[[ -e Makefile ]] || die "Makefile not found. Error during configure stage."
+		if [[ "${CMAKE_VERBOSE}" != "OFF" ]]; then
+			emake VERBOSE=1 "$@" || die "Make failed!"
+		else
+			emake "$@" || die "Make failed!"
+		fi
 	fi
 	popd > /dev/null
 }
@@ -416,7 +443,12 @@ enable_cmake-utils_src_install() {
 
 	_check_build_dir
 	pushd "${CMAKE_BUILD_DIR}" > /dev/null
-	base_src_install "$@"
+	if [[ $(_generator_to_use) = Ninja ]]; then
+		DESTDIR=${D} ninja install "$@" || die "died running ninja install"
+		base_src_install_docs
+	else
+		base_src_install "$@"
+	fi
 	popd > /dev/null
 
 	# Backward compatibility, for non-array variables
