@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/isabelle/isabelle-2012.ebuild,v 1.2 2012/06/15 14:10:40 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/isabelle/isabelle-2012.ebuild,v 1.3 2012/09/20 13:07:43 gienah Exp $
 
 EAPI="4"
 
@@ -160,7 +160,10 @@ src_install() {
 	doins -r src
 	doins -r lib
 
+	docompress -x /usr/share/doc/${PF}
+	dodoc -r doc
 	if use doc; then
+		dosym /usr/share/doc/${PF}/doc "${TARGETDIR}/doc"
 		# The build of sci-mathematics/haskabelle with use doc requires
 		# sci-mathematics/isabelle[doc?]. The haskabelle doc build requires
 		# the doc-src directory stuff in the isabelle package.  Which is not
@@ -245,9 +248,6 @@ src_install() {
 		exeinto $(dirname "${TARGETDIR}/${i}")
 		doexe ${i}
 	done
-
-	docompress -x /usr/share/doc/${PF}
-	dodoc -r doc
 
 	dodir /etc/isabelle
 	insinto /etc/isabelle

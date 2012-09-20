@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/isabelle/isabelle-2011.1-r1.ebuild,v 1.1 2012/05/30 00:45:06 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/isabelle/isabelle-2011.1-r1.ebuild,v 1.2 2012/09/20 13:07:43 gienah Exp $
 
 EAPI="4"
 
@@ -189,6 +189,9 @@ src_install() {
 
 	docompress -x /usr/share/doc/${PF}
 	dodoc -r doc
+	if use doc; then
+		dosym /usr/share/doc/${PF}/doc "${TARGETDIR}/doc"
+	fi
 
 	dodir /etc/isabelle
 	insinto /etc/isabelle

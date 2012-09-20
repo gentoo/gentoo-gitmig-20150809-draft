@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/isabelle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/isabelle/ChangeLog,v 1.5 2012/06/15 14:10:40 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/isabelle/ChangeLog,v 1.6 2012/09/20 13:07:43 gienah Exp $
+
+  20 Sep 2012; Mark Wright <gienah@gentoo.org> isabelle-2011.1-r1.ebuild,
+  isabelle-2012.ebuild:
+  isabelle doc requires a symlink
 
   15 Jun 2012; Mark Wright <gienah@gentoo.org>
   +files/isabelle-2012-redundant-equations-in-function-definitions-error.patch,
@@ -40,4 +44,3 @@
   +files/isabelle-2011.1-graphbrowser.patch,
   +files/isabelle-2011.1-proofgeneral-gentoo-path.patch, +metadata.xml:
   New ebuild, thanks Mr. Anderson for earlier version, fixes #397995
-
