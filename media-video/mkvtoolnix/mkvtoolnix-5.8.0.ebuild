@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-5.8.0.ebuild,v 1.2 2012/09/09 23:17:37 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-5.8.0.ebuild,v 1.3 2012/09/20 15:15:49 ottxor Exp $
 
 EAPI=4
-inherit eutils toolchain-funcs versionator wxwidgets multiprocessing
+inherit eutils multilib toolchain-funcs versionator wxwidgets multiprocessing
 
 DESCRIPTION="Tools to create, alter, and inspect Matroska files"
 HOMEPAGE="http://www.bunkus.org/videotools/mkvtoolnix"
@@ -11,7 +11,7 @@ SRC_URI="http://www.bunkus.org/videotools/mkvtoolnix/sources/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="bzip2 debug lzo pch qt4 wxwidgets"
 
 RDEPEND="
@@ -71,7 +71,9 @@ src_configure() {
 		$(use_enable wxwidgets) \
 		${myconf} \
 		--disable-optimization \
-		--docdir=/usr/share/doc/${PF} \
+		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
+		--with-boost="${EPREFIX}"/usr \
+		--with-boost-libdir="${EPREFIX}"/usr/$(get_libdir) \
 		--without-curl
 }
 
