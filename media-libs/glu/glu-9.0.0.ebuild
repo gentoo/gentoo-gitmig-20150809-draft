@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glu/glu-9.0.0.ebuild,v 1.1 2012/09/18 23:24:45 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glu/glu-9.0.0.ebuild,v 1.2 2012/09/20 11:57:23 chithanh Exp $
 
 EAPI=4
 
@@ -29,7 +29,7 @@ IUSE="multilib static-libs"
 
 DEPEND="virtual/opengl"
 RDEPEND="${DEPEND}
-	!<=media-libs/mesa-9_pre20120831
+	!<media-libs/mesa-9
 	multilib? ( !app-emulation/emul-linux-x86-opengl )"
 
 foreachabi() {
