@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-opengl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/ChangeLog,v 1.125 2012/09/16 04:31:32 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/ChangeLog,v 1.126 2012/09/20 10:54:56 johu Exp $
+
+  20 Sep 2012; Johannes Huber <johu@gentoo.org> qt-opengl-4.7.4.ebuild,
+  qt-opengl-4.8.1.ebuild, qt-opengl-4.8.2.ebuild, qt-opengl-4.8.3.ebuild:
+  Add virtual/glu see bugs #432516, #435108.
 
   16 Sep 2012; Ben de Groot <yngwin@gentoo.org> qt-opengl-4.8.3.ebuild:
   Add overlay changes (c++0x useflag)
