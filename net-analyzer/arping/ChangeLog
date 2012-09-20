@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/arping
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.64 2012/09/18 14:23:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.65 2012/09/20 02:36:54 blueness Exp $
+
+  20 Sep 2012; Anthony G. Basile <blueness@gentoo.org> arping-2.12.ebuild:
+  Stable ppc64, bug #433321
 
   18 Sep 2012; Jeroen Roovers <jer@gentoo.org> arping-2.12.ebuild:
   Stable for HPPA (bug #433321).
