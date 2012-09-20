@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.407 2012/09/19 17:54:46 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.408 2012/09/20 04:48:26 tetromino Exp $
+
+  20 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org> vala.eclass:
+  VALA_{MIN,MAX}_API_VERSION are not unset by default.
 
   19 Sep 2012; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-plugin-2.eclass,
   vdr-plugin.eclass:
