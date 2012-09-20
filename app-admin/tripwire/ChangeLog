@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/tripwire
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.46 2012/08/15 14:12:16 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.47 2012/09/20 19:31:43 nimiux Exp $
+
+  20 Sep 2012; Chema Alonso <nimiux@gentoo.org>
+  -files/tripwire-2.3.0-50-rfc822.patch, -files/tripwire-2.3.1-2-fhs.patch,
+  -files/tripwire-2.3.1-2-gcc-3.3.patch, -tripwire-2.3.1.2-r1.ebuild,
+  -files/tripwire-2.3.1-gcc3.patch, -tripwire-2.3.1.2-r2.ebuild,
+  -files/tripwire-format-string-email-report.diff,
+  -files/tripwire-friend-classes.patch, -files/tripwire-jbj.patch,
+  -files/tripwire-mkstemp.patch:
+  Cleanup of version 2.3.
 
   15 Aug 2012; Anthony G. Basile <blueness@gentoo.org>
   tripwire-2.4.2.2-r1.ebuild:
