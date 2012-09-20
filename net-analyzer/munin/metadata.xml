@@ -43,6 +43,13 @@
       HTTP-based services such as Apache and nginx. Disabling the flag
       does not remove any plugin file.
     </flag>
+    <flag name="dhcpd">
+      Install <pkg>dev-perl/Net-IP</pkg>,
+      <pkg>dev-perl/HTTP-Date</pkg> and <pkg>net-misc/dhcp</pkg> to
+      monitor DHCP lease usage. This only works if the server is on
+      the same system as the node, so the server is also brought
+      in. Disabling the flag does not remove any plugin file.
+    </flag>
     <flag name="java">
       Build the Java-based plugins to monitor JMX-compatible
       applications. Disabling the flag removes the jmx monitoring
