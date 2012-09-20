@@ -1,6 +1,9 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.292 2012/08/19 14:16:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.293 2012/09/20 12:59:24 xarthisius Exp $
+
+  20 Sep 2012; Kacper Kowalik <xarthisius@gentoo.org> pidgin-2.10.6.ebuild:
+  ppc64 stable wrt #425076
 
   19 Aug 2012; Raúl Porcel <armin76@gentoo.org> pidgin-2.10.6.ebuild:
   alpha/ia64/sparc stable wrt #425076
