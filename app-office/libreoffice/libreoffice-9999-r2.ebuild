@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.110 2012/09/20 07:36:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.111 2012/09/20 08:19:36 scarabeus Exp $
 
 EAPI=4
 
@@ -224,7 +224,7 @@ DEPEND="${COMMON_DEPEND}
 
 PATCHES=(
 	# not upstreamable stuff
-	"${FILESDIR}/${PN}-3.6-system-pyuno.patch"
+	"${FILESDIR}/${PN}-3.7-system-pyuno.patch"
 )
 
 REQUIRED_USE="

@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.370 2012/09/20 07:36:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.371 2012/09/20 08:19:36 scarabeus Exp $
+
+  20 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/libreoffice-3.7-system-pyuno.patch, libreoffice-9999-r2.ebuild:
+  Update pyuno patch wrt bug#435222.
 
   20 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-9999-r2.ebuild,
   metadata.xml:
