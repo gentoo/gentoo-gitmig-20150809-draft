@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.388 2012/08/16 10:47:29 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.389 2012/09/20 12:56:50 radhermit Exp $
+
+  20 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove redundant maintainer from metadata.
 
   16 Aug 2012; Fabian Groffen <grobian@gentoo.org>
   files/eblits/src_configure-v50160001.eblit:
