@@ -1,6 +1,11 @@
 # ChangeLog for app-text/libmspub
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libmspub/ChangeLog,v 1.1 2012/06/07 11:41:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libmspub/ChangeLog,v 1.2 2012/09/20 14:32:34 scarabeus Exp $
+
+*libmspub-0.0.3 (20 Sep 2012)
+
+  20 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> +libmspub-0.0.3.ebuild:
+  Add release.
 
 *libmspub-9999 (07 Jun 2012)
 
@@ -8,4 +13,3 @@
   +metadata.xml:
   Initial commit, live ebuild for now. Required by trunk libreoffice. Fixes
   bug#419967.
-
