@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/perlbox-voice
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/perlbox-voice/ChangeLog,v 1.6 2009/04/01 18:42:21 williamh Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/perlbox-voice/ChangeLog,v 1.7 2012/09/20 12:53:09 radhermit Exp $
+
+  20 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove redundant maintainer from metadata.
 
   01 Apr 2009; William Hubbs <williamh@gentoo.org>
   perlbox-voice-0.09-r1.ebuild:
