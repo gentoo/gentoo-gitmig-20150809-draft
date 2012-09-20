@@ -3,7 +3,7 @@
 <pkgmetadata>
 	<herd>base-system</herd>
 	<maintainer>
-		<email>udev-bugs@gentoo.org></email>
+		<email>udev-bugs@gentoo.org</email>
 	</maintainer>
 
 	<use>
