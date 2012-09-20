@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/dpkg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.202 2012/09/20 15:28:58 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.203 2012/09/20 15:40:09 jer Exp $
+
+  20 Sep 2012; Jeroen Roovers <jer@gentoo.org> -dpkg-1.16.2.ebuild,
+  -dpkg-1.16.4.2-r1.ebuild, -dpkg-1.16.4.3.ebuild, -dpkg-1.16.6.ebuild,
+  -dpkg-1.16.7.ebuild:
+  Old.
 
   20 Sep 2012; Anthony G. Basile <blueness@gentoo.org> dpkg-1.16.8.ebuild:
   stable ppc64, bug #432422
