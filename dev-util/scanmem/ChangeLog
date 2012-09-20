@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/scanmem
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scanmem/ChangeLog,v 1.9 2011/11/22 21:26:55 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scanmem/ChangeLog,v 1.10 2012/09/20 11:08:39 radhermit Exp $
+
+*scanmem-0.13 (20 Sep 2012)
+
+  20 Sep 2012; Tim Harder <radhermit@gentoo.org> +scanmem-0.13.ebuild,
+  +files/scanmem-0.13-configure.patch, +files/scanmem-0.13-desktop.patch,
+  +files/scanmem-0.13-docs.patch, metadata.xml:
+  Version bump (bug #420657 by Sergey Popov).
 
   22 Nov 2011; Tim Harder <radhermit@gentoo.org> scanmem-0.07.ebuild,
   metadata.xml:
