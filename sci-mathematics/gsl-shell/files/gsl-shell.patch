@@ -1,0 +1,39 @@
+diff -r -U1 gsl-shell.orig/Makefile gsl-shell/Makefile
+--- gsl-shell.orig/Makefile	2012-09-12 01:13:31.000000000 +0700
++++ gsl-shell/Makefile	2012-09-20 21:53:31.000000000 +0700
+@@ -109,4 +109,2 @@
+ 	cp fox-gui/$(GSL_SHELL_GUI) $(INSTALL_BIN_DIR)
+-	strip $(INSTALL_BIN_DIR)/$(GSL_SHELL)
+-	strip $(INSTALL_BIN_DIR)/$(GSL_SHELL_GUI)
+ 	mkdir -p $(INSTALL_LIB_DIR)
+diff -r -U1 gsl-shell.orig/agg-plot/support_x11.cpp gsl-shell/agg-plot/support_x11.cpp
+--- gsl-shell.orig/agg-plot/support_x11.cpp	2012-09-12 01:13:31.000000000 +0700
++++ gsl-shell/agg-plot/support_x11.cpp	2012-09-20 22:16:30.000000000 +0700
+@@ -4,3 +4,3 @@
+ 
+-const char *ttf_names[] = {"ubuntu-font-family/Ubuntu-R.ttf", "freefont/FreeSans.ttf", "ttf-dejavu/DejaVuSans.ttf", 0};
++const char *ttf_names[] = {"ubuntu-font-family/Ubuntu-R.ttf", "freefont-ttf/FreeSans.ttf", "dejavu/DejaVuSans.ttf", 0};
+ 
+@@ -8,3 +8,3 @@
+ {
+-    const char* ttf_dir = "/usr/share/fonts/truetype/";
++    const char* ttf_dir = "/usr/share/fonts/";
+     unsigned len = strlen(ttf_dir);
+diff -r -U1 gsl-shell.orig/makeconfig gsl-shell/makeconfig
+--- gsl-shell.orig/makeconfig	2012-09-12 01:13:31.000000000 +0700
++++ gsl-shell/makeconfig	2012-09-20 19:56:02.000000000 +0700
+@@ -21,3 +21,3 @@
+ 
+-PREFIX= /usr/local
++PREFIX= /usr
+ DESTDIR=
+diff -r -U1 gsl-shell.orig/makepackages gsl-shell/makepackages
+--- gsl-shell.orig/makepackages	2012-09-12 01:13:31.000000000 +0700
++++ gsl-shell/makepackages	2012-09-20 21:27:01.000000000 +0700
+@@ -36,4 +36,4 @@
+ 
+-  FOX_INCLUDES := $(shell pkg-config fox --cflags)
+-  FOX_LIBS = $(shell pkg-config fox --libs)
++  FOX_INCLUDES := -I/usr/include/fox-1.6
++  FOX_LIBS = -lFOX-1.6 -lX11 -lXext -lfreetype -lXft -lXcursor -lXrender -lXrandr -lXfixes -lXi -lGL -lGLU -ldl -lpthread -lrt -ljpeg -lpng -ltiff -lz -lbz2 -lGLU -lGL
+ 

@@ -1,0 +1,10 @@
+# ChangeLog for sci-mathematics/gsl-shell
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gsl-shell/ChangeLog,v 1.1 2012/09/20 16:09:24 grozin Exp $
+
+*gsl-shell-2.2.0_beta1 (20 Sep 2012)
+
+  20 Sep 2012; Andrey Grozin <grozin@gentoo.org> +gsl-shell-2.2.0_beta1.ebuild,
+  +files/gsl-shell.patch, +metadata.xml:
+  Initial import
+
