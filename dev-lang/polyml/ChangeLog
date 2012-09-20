@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/polyml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/polyml/ChangeLog,v 1.7 2012/09/19 12:48:01 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/polyml/ChangeLog,v 1.8 2012/09/20 13:16:34 gienah Exp $
+
+*polyml-5.5.0 (20 Sep 2012)
+
+  20 Sep 2012; Mark Wright <gienah@gentoo.org> +files/polyml-5.5.0-asm.patch,
+  +files/polyml-5.5.0-configure.patch, +files/polyml-5.5.0-x-it-basis.patch,
+  +polyml-5.5.0.ebuild:
+  Bump polyml to 5.5.0 (also called 5.5, the tarball calls it 5.5, poly -v says
+  it is 5.5.0)
 
   19 Sep 2012; Mark Wright <gienah@gentoo.org> polyml-5.4.1.ebuild:
   Thanks to Richard Yao for the fix to bug #398841 and #395009
