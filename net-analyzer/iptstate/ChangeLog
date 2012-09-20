@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/iptstate
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptstate/ChangeLog,v 1.41 2012/08/24 14:23:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptstate/ChangeLog,v 1.42 2012/09/20 14:00:01 johu Exp $
+
+  20 Sep 2012; Johannes Huber <johu@gentoo.org> iptstate-2.2.5.ebuild:
+  Stable for x86, wrt bug #429152
 
   24 Aug 2012; Agostino Sarubbo <ago@gentoo.org> iptstate-2.2.5.ebuild:
   Stable for amd64, wrt bug #429152
