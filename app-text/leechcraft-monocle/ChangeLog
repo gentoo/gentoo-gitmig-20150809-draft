@@ -1,6 +1,10 @@
 # ChangeLog for app-text/leechcraft-monocle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/leechcraft-monocle/ChangeLog,v 1.5 2012/09/20 17:25:22 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/leechcraft-monocle/ChangeLog,v 1.6 2012/09/20 17:28:16 pinkbyte Exp $
+
+  20 Sep 2012; Sergey Popov <pinkbyte@gentoo.org>
+  leechcraft-monocle-9999.ebuild:
+  Live ebuild can be compiled only with gcc 4.6 or higher
 
   20 Sep 2012; Sergey Popov <pinkbyte@gentoo.org>
   leechcraft-monocle-9999.ebuild:
