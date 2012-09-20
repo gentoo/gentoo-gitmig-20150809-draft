@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6977 2012/09/19 23:51:42 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6978 2012/09/20 11:42:56 chithanh Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Sep 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +features/multilib/package.use.mask, base/package.use.force,
+  base/package.use.mask:
+  Move media-libs/glu multilib mask to multilib profile, bug #435622.
 
   19 Sep 2012; Matt Turner <mattst88@gentoo.org> package.mask:
   Remove mask on glu and mesa now that the multilib USE flag has been forced
