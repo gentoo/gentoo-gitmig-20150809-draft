@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/schroot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/ChangeLog,v 1.34 2012/05/26 06:25:17 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/ChangeLog,v 1.35 2012/09/20 08:46:20 abcd Exp $
+
+*schroot-1.6.3 (20 Sep 2012)
+
+  20 Sep 2012; Jonathan Callen <abcd@gentoo.org>
+  +files/schroot-1.6.3-tests.patch, +schroot-1.6.3.ebuild:
+  New upstream version
 
 *schroot-1.4.26 (26 May 2012)
 
@@ -169,4 +175,3 @@
   +files/schroot.initd, +metadata.xml:
   New ebuild. Thanks to Nick Fortino <nfortino@gmail.com> for initial ebuild
   and patches (bug #257334).
-
