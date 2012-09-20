@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.409 2012/09/20 10:32:40 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.410 2012/09/20 18:04:59 scarabeus Exp $
+
+  20 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> autotools.eclass:
+  Be more strict about eautoreconfig on aclocal.m4. Fixes bug#424763 and
+  bug#420631.
 
   20 Sep 2012; Michael Palimaka <kensington@gentoo.org> cmake-utils.eclass:
   Add support for the ninja build system wrt bug #430608. Improve prefix
