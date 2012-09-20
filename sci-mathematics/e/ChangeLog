@@ -1,9 +1,13 @@
 # ChangeLog for sci-mathematics/e
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/e/ChangeLog,v 1.1 2012/05/30 00:55:22 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/e/ChangeLog,v 1.2 2012/09/20 13:11:18 gienah Exp $
+
+*e-1.6 (20 Sep 2012)
+
+  20 Sep 2012; Mark Wright <gienah@gentoo.org> +e-1.6.ebuild:
+  Bump E to 1.6 Tiger Hill
 
 *e-1.5 (30 May 2012)
 
   30 May 2012; Mark Wright <gienah@gentoo.org> +e-1.5.ebuild, +metadata.xml:
   Add E theorem prover, with optional Isabelle/HOL sledgehammer integration.
-
