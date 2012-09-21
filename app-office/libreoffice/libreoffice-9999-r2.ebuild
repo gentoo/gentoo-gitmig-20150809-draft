@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.111 2012/09/20 08:19:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.112 2012/09/21 09:04:55 scarabeus Exp $
 
 EAPI=4
 
@@ -410,9 +410,6 @@ src_configure() {
 		# hack...
 		mv -v "${WORKDIR}/branding-intro.png" "${S}/icon-themes/galaxy/brand/intro.png" || die
 	fi
-
-	# it's not entirely clear to me where the failure is, boost libreoffice gcc come to my mind
-	append-cppflags -DBOOST_NO_0X_HDR_TYPEINDEX
 
 	# system headers/libs/...: enforce using system packages
 	# --enable-unix-qstart-libpng: use libpng splashscreen that is faster
