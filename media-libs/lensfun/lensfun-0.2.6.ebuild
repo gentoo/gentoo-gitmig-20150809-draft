@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/lensfun-0.2.6.ebuild,v 1.1 2012/07/02 16:15:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/lensfun-0.2.6.ebuild,v 1.2 2012/09/21 16:19:15 ottxor Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
 
 LICENSE="LGPL-3 CCPL-Attribution-ShareAlike-3.0" # See README for reasoning.
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~amd64-linux ~x86-linux"
 IUSE="doc sse sse2"
 
 RDEPEND=">=dev-libs/glib-2.28
@@ -38,7 +38,7 @@ pkg_setup() {
 
 src_configure() {
 	local mycmakeargs=(
-		-DDOCDIR=/usr/share/doc/${PF}/html
+		-DDOCDIR="${EPREFIX}"/usr/share/doc/${PF}/html
 		-DLIBDIR=$(get_libdir)
 		-DBUILD_AUXFUN=ON
 		$(cmake-utils_use_build doc)
