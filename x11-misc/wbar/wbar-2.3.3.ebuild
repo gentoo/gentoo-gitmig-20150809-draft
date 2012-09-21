@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/wbar-2.3.3.ebuild,v 1.1 2012/09/21 21:48:25 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/wbar-2.3.3.ebuild,v 1.2 2012/09/21 21:53:30 hasufell Exp $
 
 EAPI=4
 
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	use gtk || epatch "${FILESDIR}"/${P}-cfg.patch
-	epatch "${FILESDIR}"/${P}-{desktopfile,nowerror}.patch
+	epatch "${FILESDIR}"/${P}-{desktopfile,nowerror,test}.patch
 	eautoreconf
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/wbar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/ChangeLog,v 1.24 2012/09/21 21:48:25 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/ChangeLog,v 1.25 2012/09/21 21:53:30 hasufell Exp $
+
+  21 Sep 2012; Julian Ospald <hasufell@gentoo.org> wbar-2.3.3.ebuild,
+  +files/wbar-2.3.3-test.patch:
+  fix test phase
 
 *wbar-2.3.3 (21 Sep 2012)
 
