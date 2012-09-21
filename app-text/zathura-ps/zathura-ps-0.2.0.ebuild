@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-ps/zathura-ps-0.2.0.ebuild,v 1.3 2012/07/11 05:51:58 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-ps/zathura-ps-0.2.0.ebuild,v 1.4 2012/09/21 02:12:49 heroxbd Exp $
 
 EAPI=4
 inherit toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="http://pwmt.org/projects/zathura/plugins/download/${P}.tar.gz"
 
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND=">=app-text/libspectre-0.2.6
@@ -27,7 +27,7 @@ pkg_setup() {
 		CC="$(tc-getCC)"
 		LD="$(tc-getLD)"
 		VERBOSE=1
-		DESTDIR="${D}"
+		DESTDIR="${ED}"
 		)
 }
 
