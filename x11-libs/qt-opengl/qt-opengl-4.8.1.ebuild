@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/qt-opengl-4.8.1.ebuild,v 1.10 2012/09/20 10:54:56 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/qt-opengl-4.8.1.ebuild,v 1.11 2012/09/21 06:55:54 johu Exp $
 
 EAPI=4
 
@@ -12,7 +12,6 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ~ppc64 sparc x86 ~amd64-fbsd ~x86-
 IUSE="egl qt3support"
 
 DEPEND="
-	virtual/glu
 	virtual/opengl
 	~x11-libs/qt-core-${PV}[aqua=,c++0x=,debug=,qpa=,qt3support=]
 	~x11-libs/qt-gui-${PV}[aqua=,c++0x=,debug=,egl=,qpa=,qt3support=]
