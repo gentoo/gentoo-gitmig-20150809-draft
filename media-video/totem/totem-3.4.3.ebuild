@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.4.3.ebuild,v 1.4 2012/09/16 02:55:45 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.4.3.ebuild,v 1.5 2012/09/21 04:33:56 nirbheek Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -9,6 +9,7 @@ WANT_AUTOMAKE="1.11"
 PYTHON_DEPEND="python? 2:2.5"
 PYTHON_USE_WITH="threads"
 PYTHON_USE_WITH_OPT="python"
+VALA_MIN_API_VERSION="0.14"
 
 inherit gnome2 multilib python
 
@@ -17,7 +18,8 @@ HOMEPAGE="http://projects.gnome.org/totem/"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-IUSE="doc flash grilo +introspection iplayer lirc nautilus nsplugin +python test vala zeitgeist zeroconf"
+IUSE="doc flash grilo +introspection iplayer lirc nautilus nsplugin +python test
+vala zeitgeist zeroconf"
 KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 
 # TODO:
@@ -90,8 +92,9 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto
 	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.14 )
-	test? ( python? ( dev-python/pylint ) )
-	vala? ( >=dev-lang/vala-0.14.2-r1:0.14 )"
+	test? ( python? ( dev-python/pylint ) )"
+# Only needed when regenerating C sources from Vala files
+#	vala? ( $(vala_depend) )"
 # docbook-xml-dtd is needed for user doc
 
 # see bug #359379
@@ -118,8 +121,10 @@ pkg_setup() {
 		$(use_enable nsplugin browser-plugins)
 		$(use_enable python)
 		$(use_enable vala)
-		VALAC=$(type -P valac-0.14)
+		VALAC=$(type -P true)
 		BROWSER_PLUGIN_DIR=/usr/$(get_libdir)/nsbrowser/plugins"
+		# Only needed when regenerating C sources from Vala files
+		#VALAC=$(type -P valac-$(vala_best_api_version))
 
 	if ! use test; then
 		# pylint is checked unconditionally, but is only used for make check
@@ -127,18 +132,18 @@ pkg_setup() {
 	fi
 	#--with-smclient=auto needed to correctly link to libICE and libSM
 
-	# Disabled: sample-python, sample-vala, zeitgeist-dp
+	# Disabled: sample-python, sample-vala
 	local plugins="brasero-disc-recorder,chapters,im-status,gromit"
-	plugins="${plugins},media-player-keys,ontop,properties,screensaver"
-	plugins="${plugins},screenshot,sidebar-test,skipto"
-	use grilo && plugins="${plugins},grilo"
-	use iplayer && plugins="${plugins},iplayer"
-	use lirc && plugins="${plugins},lirc"
-	use nautilus && plugins="${plugins},save-file"
-	use python && plugins="${plugins},dbusservice,pythonconsole,opensubtitles"
-	use vala && plugins="${plugins},rotation"
-	use zeitgeist && plugins="${plugins},zeitgeist-dp"
-	use zeroconf && plugins="${plugins},publish"
+	plugins+=",media-player-keys,ontop,properties,screensaver"
+	plugins+=",screenshot,sidebar-test,skipto"
+	use grilo && plugins+=",grilo"
+	use iplayer && plugins+=",iplayer"
+	use lirc && plugins+=",lirc"
+	use nautilus && plugins+=",save-file"
+	use python && plugins+=",dbusservice,pythonconsole,opensubtitles"
+	use vala && plugins+=",rotation"
+	use zeitgeist && plugins+=",zeitgeist-dp"
+	use zeroconf && plugins+=",publish"
 
 	G2CONF="${G2CONF} --with-plugins=${plugins}"
 
@@ -156,7 +161,8 @@ src_prepare() {
 	#fi
 
 	use python && python_clean_py-compile_files
-
+	# Only needed when regenerating C sources from Vala files
+	#use vala && vala_src_prepare
 	gnome2_src_prepare
 }
 
