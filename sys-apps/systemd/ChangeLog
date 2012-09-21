@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.48 2012/09/17 09:56:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.49 2012/09/21 20:47:43 mgorny Exp $
+
+  21 Sep 2012; Michał Górny <mgorny@gentoo.org>
+  -files/0001-Disable-udev-targets-for-udev-188.patch,
+  -files/0001-util-never-follow-symlinks-in-rm_rf_children.patch,
+  -files/0002-journal-PAGE_SIZE-is-not-known-on-ppc-and-other-arch.patch,
+  -systemd-44-r2.ebuild:
+  Drop old.
 
 *systemd-189-r3 (17 Sep 2012)
 
