@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups-filters
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.40 2012/09/11 14:13:44 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.41 2012/09/21 09:37:21 blueness Exp $
+
+  21 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
+  cups-filters-9999.ebuild:
+  Keyword ~ppc64, bug #428356
 
   11 Sep 2012; Olivier Crête <tester@gentoo.org> cups-filters-1.0.24.ebuild,
   cups-filters-9999.ebuild:
