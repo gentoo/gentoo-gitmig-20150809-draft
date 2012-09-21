@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-viewer/virt-viewer-0.5.4.ebuild,v 1.1 2012/09/18 01:37:28 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-viewer/virt-viewer-0.5.4.ebuild,v 1.2 2012/09/21 17:51:53 cardoe Exp $
 
 EAPI=4
 inherit eutils gnome2 toolchain-funcs
@@ -29,6 +29,7 @@ RDEPEND=">=app-emulation/libvirt-0.9.7
 	spice? ( >=net-misc/spice-gtk-0.12[sasl?,gtk3=] )
 	vnc? ( >=net-libs/gtk-vnc-0.4.3 )"
 DEPEND="${RDEPEND}
+	>=dev-util/intltool-0.35.0
 	virtual/pkgconfig
 	nsplugin? ( >=net-misc/npapi-sdk-0.27 )"
 

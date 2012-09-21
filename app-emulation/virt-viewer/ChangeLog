@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/virt-viewer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-viewer/ChangeLog,v 1.18 2012/09/18 01:37:27 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-viewer/ChangeLog,v 1.19 2012/09/21 17:51:53 cardoe Exp $
+
+  21 Sep 2012; Doug Goldstein <cardoe@gentoo.org> virt-viewer-0.5.4.ebuild:
+  Add missing depend on dev-util/intltool. bug #435386
 
 *virt-viewer-0.5.4 (18 Sep 2012)
 
