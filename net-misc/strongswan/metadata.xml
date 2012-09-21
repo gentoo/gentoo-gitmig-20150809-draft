@@ -18,9 +18,6 @@
     Smartcards and virtual IP address pools.
   </longdescription>
   <use>
-    <flag name="cisco">
-      Enable support for the Cisco VPN client.
-    </flag>
     <flag name="dhcp">
       Enable server support for querying virtual IP addresses for clients
       from a DHCP server. (IKEv2 only)
@@ -37,16 +34,6 @@
       Blowfish, Camellia, CAST, DES, Serpent and Twofish ciphers along with
       MD4, MD5 and SHA1/2 hash algorithms, RSA and DH groups 1,2,5,14-18 and
       22-24(4.4+). Also includes a software random number generator.
-    </flag>
-    <flag name="ikev1">
-      Enable IKEv1 protocol (pluto daemon).
-    </flag>
-    <flag name="ikev2">
-      Enable IKEv2 protocol (charon daemon).
-    </flag>
-    <flag name="nat-transport">
-      Enable potentially insecure NAT traversal for transport mode in IKEv1.
-      Only enable if you really need this.
     </flag>
     <flag name="non-root">
       Force IKEv1/IKEv2 daemons to normal user privileges. This might impose

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-5.0.0.ebuild,v 1.2 2012/09/06 18:53:41 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-5.0.0.ebuild,v 1.3 2012/09/21 10:50:25 gurligebis Exp $
 
 EAPI=2
 inherit eutils linux-info user
@@ -12,7 +12,7 @@ SRC_URI="http://download.strongswan.org/${P}.tar.bz2"
 LICENSE="GPL-2 RSA-MD5 RSA-PKCS11 DES"
 SLOT="0"
 KEYWORDS="~arm ~amd64 ~ppc ~sparc ~x86"
-IUSE="+caps curl debug dhcp eap pam farp gcrypt ldap +ikev1 +ikev2 mysql +non-root +openssl sqlite"
+IUSE="+caps curl debug dhcp eap farp gcrypt ldap mysql +non-root +openssl sqlite pam"
 
 COMMON_DEPEND="!net-misc/openswan
 	>=dev-libs/gmp-4.1.5
@@ -43,15 +43,6 @@ pkg_setup() {
 		eerror "native Linux 2.6 IPsec stack on kernels >= 2.6.16."
 		eerror
 		die "Please install a recent 2.6 kernel."
-	fi
-
-	if use nat-transport; then
-		ewarn
-		ewarn "You have enabled NAT Traversal for transport mode with the IKEv1"
-		ewarn "protocol. Please double check if you really require this feature"
-		ewarn "as it is potentially insecure and usually only required in certain"
-		ewarn "situations when interoperating with Windows using L2TP/IPsec."
-		ewarn
 	fi
 
 	if kernel_is -lt 2 6 34; then
@@ -116,6 +107,8 @@ src_configure() {
 	fi
 	econf \
 		--disable-static \
+		--enable-ikev1 \
+		--enable-ikev2 \
 		$(use_with caps capabilities libcap) \
 		$(use_enable curl) \
 		$(use_enable ldap) \
@@ -135,8 +128,6 @@ src_configure() {
 		$(use_enable gcrypt) \
 		$(use_enable mysql) \
 		$(use_enable sqlite) \
-		$(use_enable ikev1) \
-		$(use_enable ikev2) \
 		$(use_enable dhcp) \
 		$(use_enable farp) \
 		${myconf}

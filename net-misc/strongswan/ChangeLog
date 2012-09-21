@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/strongswan
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.97 2012/09/06 18:53:41 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.98 2012/09/21 10:50:25 gurligebis Exp $
+
+  21 Sep 2012; <gurligebis@gentoo.org> -strongswan-4.6.4.ebuild,
+  strongswan-5.0.0.ebuild, metadata.xml:
+  Making IKEv1 and IKEv2 required, since it makes no sense without them, fixing
+  compiling problems in bug #435614, and removing old version.
 
   06 Sep 2012; <gurligebis@gentoo.org> strongswan-5.0.0.ebuild, metadata.xml:
   Fixing building with -pam and +eap use flags, fixing bug #434128
