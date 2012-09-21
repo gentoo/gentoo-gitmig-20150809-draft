@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/xbsql
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xbsql/ChangeLog,v 1.14 2012/09/17 20:20:01 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xbsql/ChangeLog,v 1.15 2012/09/21 14:13:31 johu Exp $
+
+  21 Sep 2012; Johannes Huber <johu@gentoo.org> xbsql-0.11-r2.ebuild:
+  Stable for x86, wrt bug #433209
 
   17 Sep 2012; Anthony G. Basile <blueness@gentoo.org> xbsql-0.11-r2.ebuild:
   Stable ppc, bug #433209
