@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/ddclient
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.57 2012/06/14 02:02:30 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.58 2012/09/21 18:42:12 ago Exp $
+
+  21 Sep 2012; Agostino Sarubbo <ago@gentoo.org> -ddclient-3.8.1-r1.ebuild,
+  -ddclient-3.8.1-r2.ebuild, -ddclient-3.8.1-r3.ebuild, -ddclient-3.8.1.ebuild:
+  Remove old
 
   14 Jun 2012; Zac Medico <zmedico@gentoo.org> ddclient-3.7.3-r1.ebuild,
   ddclient-3.8.0.ebuild, ddclient-3.8.1-r1.ebuild, ddclient-3.8.1-r2.ebuild,
