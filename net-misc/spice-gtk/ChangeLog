@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/spice-gtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.26 2012/09/21 19:28:27 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.27 2012/09/21 19:37:54 cardoe Exp $
+
+  21 Sep 2012; Doug Goldstein <cardoe@gentoo.org> spice-gtk-0.13.ebuild,
+  spice-gtk-0.14.ebuild:
+  Fix the parallel install correctly.
 
   21 Sep 2012; Doug Goldstein <cardoe@gentoo.org> spice-gtk-0.13.ebuild,
   spice-gtk-0.14.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.13.ebuild,v 1.2 2012/09/21 19:28:27 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.13.ebuild,v 1.3 2012/09/21 19:37:54 cardoe Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -68,6 +68,11 @@ pkg_setup() {
 	if use gstreamer && use pulseaudio ; then
 		ewarn "spice-gtk can use only one audio backend: pulseaudio will be used since you enabled both."
 	fi
+}
+
+src_prepare() {
+	epatch "${FILESDIR}/0.12-parallel-install.patch"
+	eautoreconf
 }
 
 src_configure() {
