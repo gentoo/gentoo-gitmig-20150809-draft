@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/girara/girara-0.1.4.ebuild,v 1.1 2012/09/03 18:34:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/girara/girara-0.1.4.ebuild,v 1.2 2012/09/21 02:01:27 heroxbd Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs
@@ -21,6 +21,7 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	mygiraraconf=(
+		PREFIX="${EPREFIX}"/usr
 		LIBDIR='${PREFIX}'/$(get_libdir)
 		GIRARA_GTK_VERSION=2
 		CC="$(tc-getCC)"
