@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.58 2012/09/21 18:56:49 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.59 2012/09/21 22:49:15 zmedico Exp $
 
 EAPI=3
 inherit git-2 eutils python
@@ -192,13 +192,14 @@ src_prepare() {
 			-e "s|^\(PORTDIR=\)\(/usr/portage\)|\\1\"${EPREFIX}\\2\"|" \
 			-e "s|^\(PORTAGE_TMPDIR=\)\(/var/tmp\)|\\1\"${EPREFIX}\\2\"|" \
 			-i cnf/make.globals || die "sed failed"
-		echo -e '\nFEATURES="${FEATURES} preserve-libs"' >> cnf/make.globals \
-			|| die "failed to append to make.globals"
 
 		einfo "Adding FEATURES=force-prefix to make.globals ..."
 		echo -e '\nFEATURES="${FEATURES} force-prefix"' >> cnf/make.globals \
 			|| die "failed to append to make.globals"
 	fi
+
+	echo -e '\nFEATURES="${FEATURES} preserve-libs"' >> cnf/make.globals \
+		|| die "failed to append to make.globals"
 
 	cd "${S}/cnf" || die
 	if [ -f "make.conf.${ARCH}".diff ]; then
