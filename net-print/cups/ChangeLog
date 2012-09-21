@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.510 2012/09/09 15:40:24 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.511 2012/09/21 09:43:02 blueness Exp $
+
+  21 Sep 2012; Anthony G. Basile <blueness@gentoo.org> cups-9999.ebuild:
+  Keyword ~ppc64, bug #428356
 
   09 Sep 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   -files/cups-1.4.0-backend-https.patch, -files/cups-1.4.2-str3200.patch,
