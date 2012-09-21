@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-23.0.1270.0_alpha157306.ebuild,v 1.1 2012/09/18 22:38:22 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-22.0.1229.64_beta157476.ebuild,v 1.1 2012/09/21 04:07:50 floppym Exp $
 
 EAPI="4"
 
@@ -43,33 +43,35 @@ IUSE="+plugins"
 RESTRICT="mirror strip"
 
 RDEPEND="
-	app-arch/bzip2
-	app-misc/ca-certificates
-	dev-libs/atk
-	dev-libs/expat
-	dev-libs/glib:2
-	dev-libs/libgcrypt
-	dev-libs/nspr
-	dev-libs/nss
-	gnome-base/gconf:2
 	media-libs/alsa-lib
-	media-libs/fontconfig
-	media-libs/freetype
+	app-arch/bzip2
+	x11-libs/cairo
 	net-print/cups
 	sys-apps/dbus
-	|| ( >=sys-devel/gcc-4.4.0[-nocxx] >=sys-devel/gcc-4.4.0[cxx] )
-	sys-fs/udev
-	x11-libs/cairo
+	dev-libs/expat
+	media-libs/fontconfig
+	media-libs/freetype
+	app-misc/ca-certificates
+	gnome-base/gconf:2
+	dev-libs/libgcrypt
 	x11-libs/gdk-pixbuf
 	x11-libs/gtk+:2
+	dev-libs/glib:2
+	dev-libs/nspr
+	dev-libs/nss
+	x11-libs/pango
+	media-libs/libpng:1.2
+	|| ( >=sys-devel/gcc-4.4.0[-nocxx] >=sys-devel/gcc-4.4.0[cxx] )
+	sys-fs/udev
 	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXfixes
-	x11-libs/libXrandr
 	x11-libs/libXrender
 	x11-libs/libXScrnSaver
-	x11-libs/pango
+	sys-libs/zlib
 	x11-misc/xdg-utils
+	net-misc/curl
+	dev-libs/openssl:0.9.8
 "
 
 # Add blockers for the other slots.
