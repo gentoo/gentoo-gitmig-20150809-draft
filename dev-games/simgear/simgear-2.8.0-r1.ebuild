@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/simgear-2.8.0.ebuild,v 1.2 2012/08/31 21:25:05 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/simgear-2.8.0-r1.ebuild,v 1.1 2012/09/21 22:37:18 reavertm Exp $
 
 EAPI=4
 
@@ -16,6 +16,7 @@ SLOT="0"
 IUSE="debug jpeg subversion test"
 
 COMMON_DEPEND="
+	dev-libs/expat
 	>=dev-games/openscenegraph-3.0.1
 	media-libs/freealut
 	media-libs/openal
@@ -32,17 +33,18 @@ DEPEND="${COMMON_DEPEND}
 "
 RDEPEND="${COMMON_DEPEND}"
 
-DOCS=(AUTHORS ChangeLog NEWS README Thanks)
+PATCHES=(
+	"${FILESDIR}/${P}-unbundle-expat.patch"
+)
 
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-underlinking.patch
-}
+DOCS=(AUTHORS ChangeLog NEWS README Thanks)
 
 src_configure() {
 	local mycmakeargs=(
 		-DENABLE_RTI=OFF
 		-DSIMGEAR_HEADLESS=OFF
 		-DSIMGEAR_SHARED=ON
+		-DSYSTEM_EXPAT=ON
 		$(cmake-utils_use jpeg JPEG_FACTORY)
 		$(cmake-utils_use_enable subversion LIBSVN)
 		$(cmake-utils_use_enable test TESTS)

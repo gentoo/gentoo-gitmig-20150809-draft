@@ -1,6 +1,13 @@
 # ChangeLog for dev-games/simgear
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.53 2012/08/31 21:25:05 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.54 2012/09/21 22:37:18 reavertm Exp $
+
+*simgear-2.8.0-r1 (21 Sep 2012)
+
+  21 Sep 2012; Maciej Mrozowski <reavertm@gentoo.org>
+  +files/simgear-2.8.0-unbundle-expat.patch, +simgear-2.8.0-r1.ebuild,
+  -files/simgear-2.8.0-underlinking.patch, -simgear-2.8.0.ebuild:
+  Unbundle expat, bug 253514. Drop obsolete patch.
 
   31 Aug 2012; Maciej Mrozowski <reavertm@gentoo.org> simgear-2.8.0.ebuild:
   Remove plib dependency, bug 433143.
