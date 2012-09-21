@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1099 2012/09/20 18:48:44 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1100 2012/09/21 19:00:08 zmedico Exp $
+
+  21 Sep 2012; Zac Medico <zmedico@gentoo.org> portage-9999.ebuild:
+  Append FEATURES=preserve-libs in make.globals, since it will soon be removed
+  from the default make.globals.
 
 *portage-2.2.0_alpha130 (20 Sep 2012)
 
