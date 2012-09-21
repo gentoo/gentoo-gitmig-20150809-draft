@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6978 2012/09/20 11:42:56 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6979 2012/09/21 14:33:14 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Sep 2012; Ulrich Müller <ulm@gentoo.org> license_groups:
+  Add GPL-1+ and LGPL-2+ to the OSI-APPROVED group.
 
   20 Sep 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   +features/multilib/package.use.mask, base/package.use.force,
