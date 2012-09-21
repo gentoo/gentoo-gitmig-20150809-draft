@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libcroco
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcroco/ChangeLog,v 1.76 2012/07/15 16:47:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcroco/ChangeLog,v 1.77 2012/09/21 05:21:31 nirbheek Exp $
+
+*libcroco-0.6.6 (21 Sep 2012)
+
+  21 Sep 2012; Nirbheek Chauhan <nirbheek@gentoo.org> +libcroco-0.6.6.ebuild:
+  Bump to 0.6.6
 
   15 Jul 2012; Raúl Porcel <armin76@gentoo.org> libcroco-0.6.5.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #410611
