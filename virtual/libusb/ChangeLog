@@ -1,6 +1,10 @@
 # ChangeLog for virtual/libusb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libusb/ChangeLog,v 1.24 2012/05/27 18:05:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libusb/ChangeLog,v 1.25 2012/09/21 05:13:33 ssuominen Exp $
+
+  21 Sep 2012; Samuli Suominen <ssuominen@gentoo.org> libusb-1.ebuild:
+  Force latest dev-libs/libusbx because <1.0.13 had issues with namespace
+  collision(s) wrt #423135
 
   27 May 2012; Samuli Suominen <ssuominen@gentoo.org> libusb-1.ebuild:
   Change order of preference for libusbx.
