@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-9999.ebuild,v 1.30 2012/09/13 19:36:29 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-9999.ebuild,v 1.31 2012/09/21 07:16:55 johu Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -102,6 +102,7 @@ RDEPEND="
 	marble? ( $(add_kdebase_dep marble) )
 	mysql? ( virtual/mysql )
 	okular? ( $(add_kdebase_dep okular) )
+	opengl? ( virtual/glu )
 	opengtl? ( >=media-libs/opengtl-0.9.15 )
 	openexr? ( media-libs/openexr )
 	pdf? (
