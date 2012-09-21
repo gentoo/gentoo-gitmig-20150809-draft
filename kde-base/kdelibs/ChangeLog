@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.869 2012/09/19 15:20:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.870 2012/09/21 09:32:40 johu Exp $
+
+  21 Sep 2012; Johannes Huber <johu@gentoo.org> -kdelibs-4.9.0.ebuild:
+  Remove KDE SC 4.9.0
 
   19 Sep 2012; Alexis Ballier <aballier@gentoo.org> kdelibs-4.9.1.ebuild:
   keyword ~amd64-fbsd, bug #430072

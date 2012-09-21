@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/konqueror
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.254 2012/09/10 11:05:43 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.255 2012/09/21 09:32:42 johu Exp $
+
+  21 Sep 2012; Johannes Huber <johu@gentoo.org> -konqueror-4.9.0.ebuild:
+  Remove KDE SC 4.9.0
 
 *konqueror-4.9.1-r1 (10 Sep 2012)
 

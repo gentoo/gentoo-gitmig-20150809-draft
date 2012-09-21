@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeplasma-addons
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.149 2012/09/07 12:05:53 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.150 2012/09/21 09:32:52 johu Exp $
+
+  21 Sep 2012; Johannes Huber <johu@gentoo.org> -kdeplasma-addons-4.9.0.ebuild:
+  Remove KDE SC 4.9.0
 
   07 Sep 2012; Johannes Huber <johu@gentoo.org> kdeplasma-addons-4.9.0.ebuild,
   kdeplasma-addons-4.9.1.ebuild, metadata.xml:
