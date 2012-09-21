@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/httplib2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/httplib2/ChangeLog,v 1.29 2012/08/02 18:15:40 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/httplib2/ChangeLog,v 1.30 2012/09/21 12:22:44 radhermit Exp $
+
+*httplib2-0.7.6 (21 Sep 2012)
+
+  21 Sep 2012; Tim Harder <radhermit@gentoo.org> +httplib2-0.7.6.ebuild:
+  Version bump.
 
   02 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> httplib2-0.7.4.ebuild:
   Keyword amd64-linux and x86-linux
