@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/evas/evas-1.7.0.ebuild,v 1.2 2012/09/10 23:28:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/evas/evas-1.7.0.ebuild,v 1.3 2012/09/21 14:35:35 tommy Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ IUSE="altivec bidi +bmp directfb +eet fbcon +fontconfig gles gif +ico +jpeg mmx 
 RDEPEND=">=dev-libs/eina-1.7.0
 	>=media-libs/freetype-2.3.9
 	fontconfig? ( media-libs/fontconfig )
-	gles? ( media-libs/mesa[gallium,gles] )
+	gles? ( media-libs/mesa[gallium,gles2] )
 	gif? ( media-libs/giflib )
 	jpeg? ( virtual/jpeg )
 	png? ( media-libs/libpng )
