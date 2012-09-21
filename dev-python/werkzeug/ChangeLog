@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/werkzeug
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/ChangeLog,v 1.33 2012/03/13 02:59:05 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/ChangeLog,v 1.34 2012/09/21 23:41:31 blueness Exp $
+
+  21 Sep 2012; Anthony G. Basile <blueness@gentoo.org> werkzeug-0.8.3.ebuild:
+  Keyword ~ppc, bug #433978
 
   13 Mar 2012; Mike Gilbert <floppym@gentoo.org> werkzeug-0.8.3.ebuild:
   Don't inherit unused eclass. Patch by Arfrever.
