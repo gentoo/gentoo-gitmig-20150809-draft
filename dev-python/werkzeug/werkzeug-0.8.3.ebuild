@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/werkzeug-0.8.3.ebuild,v 1.3 2012/09/21 23:41:31 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/werkzeug-0.8.3.ebuild,v 1.4 2012/09/22 02:09:27 blueness Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -19,7 +19,7 @@ SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~amd64 ~arm ~ppc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="test"
 
 RDEPEND="dev-python/simplejson"
