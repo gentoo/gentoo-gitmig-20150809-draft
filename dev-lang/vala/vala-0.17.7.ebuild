@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/vala-0.17.5.ebuild,v 1.1 2012/08/20 18:39:57 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/vala-0.17.7.ebuild,v 1.1 2012/09/22 10:17:26 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
