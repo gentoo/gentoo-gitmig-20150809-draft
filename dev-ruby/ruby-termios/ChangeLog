@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-termios
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-termios/ChangeLog,v 1.32 2012/07/01 18:31:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-termios/ChangeLog,v 1.33 2012/09/22 06:38:16 graaff Exp $
+
+*ruby-termios-0.9.6-r2 (22 Sep 2012)
+
+  22 Sep 2012; Hans de Graaff <graaff@gentoo.org>
+  +ruby-termios-0.9.6-r2.ebuild:
+  EAPI=4. Add ruby19. Restrict tests since these need a real TTY, bug 340575.
 
   01 Jul 2012; Raúl Porcel <armin76@gentoo.org> ruby-termios-0.9.6-r1.ebuild:
   Drop alpha keywords
