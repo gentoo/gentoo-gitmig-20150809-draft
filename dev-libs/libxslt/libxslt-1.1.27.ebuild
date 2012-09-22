@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.27.ebuild,v 1.1 2012/09/22 14:01:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.27.ebuild,v 1.2 2012/09/22 21:56:30 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -35,8 +35,14 @@ src_prepare() {
 
 	epatch "${FILESDIR}"/${PN}-1.1.26-disable_static_modules.patch
 
+	# Use python-config, not python2.7-config
+	epatch "${FILESDIR}/${PN}-1.1.27-python-config.patch"
+
+	# bug #435900, https://bugzilla.gnome.org/show_bug.cgi?id=684637
+	epatch "${FILESDIR}/${P}-python-includes.patch"
+
 	# Python bindings are built/tested/installed manually.
-	sed -e "s/@PYTHON_SUBDIR@//" -i Makefile.am || die "sed failed"
+	sed -e 's/$(PYTHON_SUBDIR)//' -i Makefile.am || die "sed failed"
 
 	eautoreconf
 	epunt_cxx
