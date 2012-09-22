@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/libcxx-0.0_p20120911.ebuild,v 1.1 2012/09/11 18:51:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/libcxx-0.0_p20120911.ebuild,v 1.2 2012/09/22 19:15:38 aballier Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ fi
 LICENSE="|| ( UoI-NCSA MIT )"
 SLOT="0"
 if [ "${PV%9999}" = "${PV}" ] ; then
-	KEYWORDS="~amd64"
+	KEYWORDS="~amd64 ~amd64-fbsd"
 else
 	KEYWORDS=""
 fi
