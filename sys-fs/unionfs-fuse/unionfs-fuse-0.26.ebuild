@@ -1,8 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs-fuse/unionfs-fuse-0.26.ebuild,v 1.1 2012/09/14 20:07:13 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs-fuse/unionfs-fuse-0.26.ebuild,v 1.2 2012/09/22 20:29:57 sping Exp $
 
 EAPI="3"
+
+inherit eutils
+
 
 DESCRIPTION="Self-syncing tree-merging file system based on FUSE"
 
@@ -16,6 +19,11 @@ IUSE=""
 
 DEPEND="sys-fs/fuse"
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-link-pthread.patch
+	epatch "${FILESDIR}"/${P}-declare-chroot.patch
+}
 
 src_install() {
 	dodir /usr/sbin /usr/share/man/man8/ || die "dodir failed"
