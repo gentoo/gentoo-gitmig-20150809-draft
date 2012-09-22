@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia-web/ganglia-web-3.5.2.ebuild,v 1.3 2012/09/22 12:13:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia-web/ganglia-web-3.5.2.ebuild,v 1.4 2012/09/22 13:50:30 blueness Exp $
 
 EAPI=4
 WEBAPP_MANUAL_SLOT="yes"
@@ -11,7 +11,7 @@ HOMEPAGE="http://ganglia.sourceforge.net"
 SRC_URI="mirror://sourceforge/ganglia/${PN}/${PV}/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="vhosts"
 
 DEPEND="net-misc/rsync"

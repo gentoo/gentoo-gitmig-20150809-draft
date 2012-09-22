@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/ganglia
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ChangeLog,v 1.54 2012/09/22 12:13:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ChangeLog,v 1.55 2012/09/22 13:48:56 blueness Exp $
+
+  22 Sep 2012; Anthony G. Basile <blueness@gentoo.org> ganglia-3.3.7.ebuild:
+  stable ppc, bug #428776
 
   22 Sep 2012; Agostino Sarubbo <ago@gentoo.org> ganglia-3.3.7.ebuild:
   Stable for amd64, wrt bug #428776
