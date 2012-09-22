@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.387 2012/09/22 20:58:04 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.388 2012/09/22 21:21:59 sping Exp $
+
+  22 Sep 2012; Sebastian Pipping <sping@gentoo.org> -gimp-2.6.11-r5.ebuild,
+  -gimp-2.6.11-r6.ebuild, -gimp-2.7.3.ebuild, -gimp-2.7.3-r1.ebuild,
+  -gimp-2.7.4.ebuild, -gimp-2.7.5.ebuild, -gimp-2.8.0_rc1.ebuild,
+  -gimp-2.8.0-r1.ebuild:
+  Remove everything but (1) latest stable and testing 2.6.x (2.6.12-r{2,4}),
+  (2) latest 2.8.x (2.8.2) and (3) live ebuild (9999)
 
   22 Sep 2012; Sebastian Pipping <sping@gentoo.org> -gimp-2.6.11-r1.ebuild,
   -gimp-2.6.11-r2.ebuild, -gimp-2.6.11-r3.ebuild, -gimp-2.6.11-r4.ebuild,
