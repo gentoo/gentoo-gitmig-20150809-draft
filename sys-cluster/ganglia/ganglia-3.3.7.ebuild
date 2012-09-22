@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ganglia-3.3.7.ebuild,v 1.3 2012/09/19 12:59:15 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ganglia-3.3.7.ebuild,v 1.4 2012/09/22 10:33:47 ago Exp $
 
 EAPI="3"
 WEBAPP_OPTIONAL="yes"
@@ -77,7 +77,7 @@ src_install() {
 	fi
 
 	if ! use minimal; then
-		rnsinto /etc/ganglia
+		insinto /etc/ganglia
 		doins gmetad/gmetad.conf
 		doman mans/gmetad.1
 
