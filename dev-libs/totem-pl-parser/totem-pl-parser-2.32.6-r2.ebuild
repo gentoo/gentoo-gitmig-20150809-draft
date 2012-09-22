@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-2.32.6.ebuild,v 1.7 2012/09/18 10:14:05 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-2.32.6-r2.ebuild,v 1.1 2012/09/22 17:45:37 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="Playlist parsing library"
 HOMEPAGE="http://projects.gnome.org/totem/ http://developer.gnome.org/totem-pl-parser/stable/"
@@ -16,15 +16,15 @@ HOMEPAGE="http://projects.gnome.org/totem/ http://developer.gnome.org/totem-pl-p
 
 LICENSE="LGPL-2+"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~sparc ~x86 ~x86-fbsd"
 IUSE="archive doc +introspection +quvi"
 
 RDEPEND=">=dev-libs/glib-2.24:2
-	dev-libs/gmime:2.4
+	dev-libs/gmime:2.6
 	>=net-libs/libsoup-gnome-2.30:2.4
 	archive? ( >=app-arch/libarchive-2.8.4 )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )
-	quvi? ( >=media-libs/quvi-0.2.15 )"
+	quvi? ( >=media-libs/libquvi-0.2.15 )"
 DEPEND="${RDEPEND}
 	!<media-video/totem-2.21
 	>=sys-devel/gettext-0.17
@@ -54,6 +54,9 @@ pkg_setup() {
 #}
 
 src_prepare() {
+	# bug #386651, https://bugzilla.gnome.org/show_bug.cgi?id=661451
+	epatch "${FILESDIR}/${PN}-2.32.6-quvi-0.4.patch"
+
 	gnome2_src_prepare
 
 	# Disable tests requiring network access, bug #346127
