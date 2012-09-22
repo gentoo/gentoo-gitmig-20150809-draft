@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/unzip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.85 2012/09/20 03:01:01 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.86 2012/09/22 12:13:54 ago Exp $
+
+  22 Sep 2012; Agostino Sarubbo <ago@gentoo.org> unzip-6.0-r3.ebuild:
+  Stable for amd64, wrt bug #420727
 
   20 Sep 2012; Anthony G. Basile <blueness@gentoo.org> unzip-6.0-r3.ebuild:
   stable arm, bug #420727
