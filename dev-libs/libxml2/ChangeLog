@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.360 2012/09/18 01:31:33 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.361 2012/09/22 10:23:23 pacho Exp $
+
+  22 Sep 2012; Pacho Ramos <pacho@gentoo.org>
+  -files/libxml2-2.8.0_rc1-randomization-threads.patch,
+  -libxml2-2.8.0-r1.ebuild, -libxml2-2.8.0_rc1.ebuild:
+  Drop old.
 
   18 Sep 2012; Anthony G. Basile <blueness@gentoo.org> libxml2-2.8.0-r2.ebuild:
   stable ppc, bug #434344
