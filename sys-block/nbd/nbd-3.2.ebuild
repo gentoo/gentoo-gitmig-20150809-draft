@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/nbd-3.2.ebuild,v 1.1 2012/07/05 01:52:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/nbd-3.2.ebuild,v 1.2 2012/09/22 21:26:41 ago Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/nbd/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 IUSE="zlib"
 
 RDEPEND=">=dev-libs/glib-2.0
