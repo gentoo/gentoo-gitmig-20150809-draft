@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/optipng
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/ChangeLog,v 1.87 2012/09/22 15:51:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/ChangeLog,v 1.88 2012/09/22 20:42:18 sping Exp $
+
+*optipng-0.7.3-r1 (22 Sep 2012)
+
+  22 Sep 2012; Sebastian Pipping <sping@gentoo.org> +optipng-0.7.3-r1.ebuild:
+  No longer calls gcc, ar, ranlib directly (bug #435780), patch by Agostino
 
   22 Sep 2012; Agostino Sarubbo <ago@gentoo.org> -optipng-0.7.1.ebuild,
   -optipng-0.7.2.ebuild, -optipng-0.7.ebuild:
