@@ -5,6 +5,7 @@
 <maintainer restrict="&gt;=sys-boot/grub-2">
 	<email>floppym@gentoo.org</email>
 	<name>Mike Gilbert</name>
+	<description>Please CC on grub-2 bugs; assign to base-system</description>
 </maintainer>
 <use>
 	<flag name='device-mapper'>
