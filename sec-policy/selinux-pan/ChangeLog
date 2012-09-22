@@ -1,5 +1,10 @@
 
 
+*selinux-pan-2.20120725-r5 (21 Sep 2012)
+
+  21 Sep 2012; <swift@gentoo.org> +selinux-pan-2.20120725-r5.ebuild:
+  Introducing policy for 2.20120725, rev5
+
   30 Jul 2012; <swift@gentoo.org> selinux-pan-2.20120215-r14.ebuild:
   Stabilization of revision 14 of the SELinux policy modules
 
