@@ -2,8 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>dotnet</herd>
-<use>
-	<flag name='galago'>Add support for the galago desktop presence framework
-		(<pkg>dev-dotnet/galago-sharp</pkg>)</flag>
-</use>
 </pkgmetadata>
