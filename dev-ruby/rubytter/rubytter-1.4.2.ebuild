@@ -1,10 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubytter/rubytter-1.4.2.ebuild,v 1.1 2011/12/25 07:37:08 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubytter/rubytter-1.4.2.ebuild,v 1.2 2012/09/22 06:48:05 graaff Exp $
 
-EAPI="2"
-# dev-ruby/oauth has only ruby18.
-USE_RUBY="ruby18 ree18"
+EAPI=4
+USE_RUBY="ruby18 ruby19 ree18"
 
 RUBY_FAKEGEM_TASK_TEST="spec"
 
