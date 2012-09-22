@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/telepathy-mission-control-5.12.1.ebuild,v 1.1 2012/07/21 11:50:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/telepathy-mission-control-5.12.3.ebuild,v 1.1 2012/09/22 09:32:38 pacho Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
