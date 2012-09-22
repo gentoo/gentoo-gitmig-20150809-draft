@@ -1,6 +1,9 @@
 # ChangeLog for games-simulation/flightgear
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.56 2012/09/03 20:11:18 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.57 2012/09/22 21:26:14 ago Exp $
+
+  22 Sep 2012; Agostino Sarubbo <ago@gentoo.org> flightgear-2.8.0.ebuild:
+  Stable for amd64, wrt bug #425838
 
   03 Sep 2012; Maciej Mrozowski <reavertm@gentoo.org> flightgear-2.8.0.ebuild:
   More strict simgear version dependency (~PV).

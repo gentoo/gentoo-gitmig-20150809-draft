@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-2.8.0.ebuild,v 1.2 2012/09/03 20:11:18 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-2.8.0.ebuild,v 1.3 2012/09/22 21:26:14 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://flightgear/Source/${P}.tar.bz2 mirror://flightgear/Shared/Flig
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="debug jpeg +jsbsim larcsim subversion test +udev uiuc +yasim"
 #fgpanel - disabled for now, doesn't link
 #fgpanel? (
