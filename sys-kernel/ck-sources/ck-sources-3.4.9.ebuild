@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-3.3.4.ebuild,v 1.1 2012/04/30 09:01:40 nelchael Exp $
+# $Header:
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="5"
+K_GENPATCHES_VER="10"
 K_SECURITY_UNSUPPORTED="1"
 
 inherit kernel-2 versionator
@@ -16,7 +16,7 @@ HOMEPAGE="http://dev.gentoo.org/~mpagano/genpatches/
 	http://users.on.net/~ckolivas/kernel/"
 
 BASE_VERSION="$(get_version_component_range 1-2)"
-CK_VERSION="1"
+CK_VERSION="3"
 
 CK_URI="http://ck.kolivas.org/patches/3.0/${BASE_VERSION}/${BASE_VERSION}-ck${CK_VERSION}/patch-${BASE_VERSION}-ck${CK_VERSION}.bz2"
 UNIPATCH_LIST="${DISTDIR}/patch-${BASE_VERSION}-ck${CK_VERSION}.bz2"
@@ -31,6 +31,7 @@ src_unpack() {
 
 	# Comment out EXTRAVERSION added by CK patch:
 	sed -i -e 's/\(^EXTRAVERSION :=.*$\)/# \1/' "${S}/Makefile"
+	epatch "${FILESDIR}"/${P}-calc_load_idle-aCOSwt_P3.patch
 }
 
 pkg_postinst() {
