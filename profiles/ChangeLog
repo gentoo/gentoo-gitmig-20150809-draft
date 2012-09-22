@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6979 2012/09/21 14:33:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6980 2012/09/22 01:47:09 pinkbyte Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Sep 2012; Sergey Popov <pinkbyte@gentoo.org>
+  arch/amd64/no-multilib/package.mask, features/64bit-native/package.mask:
+  games-fps/serious-sam-tfe can not run on amd64 non-multilib profiles, so
+  masking it on them
 
   21 Sep 2012; Ulrich Müller <ulm@gentoo.org> license_groups:
   Add GPL-1+ and LGPL-2+ to the OSI-APPROVED group.
