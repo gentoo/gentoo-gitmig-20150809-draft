@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/flite
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/ChangeLog,v 1.41 2012/04/13 20:24:43 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/ChangeLog,v 1.42 2012/09/22 11:34:31 pacho Exp $
+
+  22 Sep 2012; Pacho Ramos <pacho@gentoo.org>
+  +files/flite-1.4-audio-interface.patch, flite-1.4-r1.ebuild:
+  Fix undefined reference, #305539 by Diego Elio Pettenò and Michael Palimaka
+  (kensington).
 
   13 Apr 2012; Jesus Rivero <neurogeek@gentoo.org> flite-1.4-r1.ebuild:
   Added media-libs/alsa-lib as DEPEND and bumped EAPI. Fixes bug #390597

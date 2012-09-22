@@ -1,10 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/flite-1.4-r1.ebuild,v 1.4 2012/04/13 20:24:43 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/flite-1.4-r1.ebuild,v 1.5 2012/09/22 11:34:31 pacho Exp $
 
-EAPI="3"
-
-inherit eutils
+EAPI=4
+inherit autotools eutils
 
 DESCRIPTION="Flite text to speech engine"
 HOMEPAGE="http://www.speech.cs.cmu.edu/flite/index.html"
@@ -34,9 +33,11 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-fix-parallel-builds.patch
 	epatch "${FILESDIR}"/${P}-respect-destdir.patch
 	epatch "${FILESDIR}"/${P}-ldflags.patch
+	epatch "${FILESDIR}"/${P}-audio-interface.patch
 	sed -i main/Makefile \
 		-e '/-rpath/s|$(LIBDIR)|$(INSTALLLIBDIR)|g' \
 		|| die
+	eautoreconf
 }
 
 src_configure() {
@@ -45,16 +46,16 @@ src_configure() {
 		myconf=--enable-shared
 	fi
 	myconf="${myconf} --with-audio=$(get_audio)"
-	econf ${myconf} || die "configuration failed"
+	econf ${myconf}
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die "compilation failed"
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "installation failed"
-	dodoc ACKNOWLEDGEMENTS README || die "Documentation installation failed"
+	emake DESTDIR="${D}" install
+	dodoc ACKNOWLEDGEMENTS README
 	if ! use static-libs; then
 		rm -rf "${D}"/usr/lib*/*.a
 	fi
