@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.351 2012/08/25 22:36:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.352 2012/09/22 11:16:00 ssuominen Exp $
+
+*dbus-1.6.4-r1 (22 Sep 2012)
+
+  22 Sep 2012; Samuli Suominen <ssuominen@gentoo.org> dbus-1.6.4.ebuild,
+  +dbus-1.6.4-r1.ebuild,
+  +files/dbus-1.6.4-CVE-2012-3524-Don-t-access-environment-variables-or-.patch:
+  Import patch for CVE-2012-3524 from Fedora 18. Again, -r0 is for stable and
+  -r1 for ~arch because of the systemd dependency.
 
   25 Aug 2012; Mike Frysinger <vapier@gentoo.org> dbus-1.4.16.ebuild:
   Drop useless -vf args to mv #432632 by Joshua B. Kahlenberg.
