@@ -1,17 +1,17 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.5-r3.ebuild,v 1.2 2012/08/18 14:10:16 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.5-r3.ebuild,v 1.3 2012/09/22 20:58:11 vapier Exp $
 
 EAPI="4"
 
 inherit eutils multilib toolchain-funcs linux-info pam
 
-PATCH_VER="1"
+PATCH_VER="2"
 DESCRIPTION="Point-to-Point Protocol (PPP)"
 HOMEPAGE="http://www.samba.org/ppp"
 SRC_URI="ftp://ftp.samba.org/pub/ppp/${P}.tar.gz
 	http://dev.gentoo.org/~vapier/dist/${P}-patches-${PATCH_VER}.tar.xz
-	dhcp? ( http://www.netservers.co.uk/gpl/ppp-dhcpc.tgz )"
+	http://www.netservers.co.uk/gpl/ppp-dhcpc.tgz"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
@@ -29,41 +29,40 @@ src_prepare() {
 	# Use the headers from the kernel #427684
 	rm include/linux/if_pppol2tp.h || die
 
-	if use dhcp ; then
-		# copy the ppp-dhcp plugin files
-		einfo "Adding ppp-dhcp plugin files"
-		mv "${WORKDIR}/dhcp" "${S}/pppd/plugins" || die
-		sed -i \
-			-e 's/\(SUBDIRS := .*rp-pppoe.*\)$/\1 dhcp/' \
-			pppd/plugins/Makefile.linux || die
-	fi
+	mv "${WORKDIR}/dhcp" "${S}/pppd/plugins" || die
 
 	use eap-tls || EPATCH_EXCLUDE+=" 8?_all_eaptls-*"
-	use dhcp || EPATCH_EXCLUDE+=" 8?_all_dhcp-*"
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}"/patch
 
 	if use atm ; then
 		einfo "Enabling PPPoATM support"
-		sed -i "s/^#HAVE_LIBATM=yes/HAVE_LIBATM=yes/" pppd/plugins/pppoatm/Makefile.linux
+		sed -i '/^#HAVE_LIBATM=yes/s:#::' pppd/plugins/pppoatm/Makefile.linux || die
 	fi
 
 	if ! use activefilter ; then
 		einfo "Disabling active filter"
-		sed -i "s/^FILTER=y/#FILTER=y/" pppd/Makefile.linux
+		sed -i '/^FILTER=y/s:^:#:' pppd/Makefile.linux || die
 	fi
 
 	if use pam ; then
 		einfo "Enabling PAM"
-		sed -i "s/^#USE_PAM=y/USE_PAM=y/" pppd/Makefile.linux
+		sed -i '/^#USE_PAM=y/s:^#::' pppd/Makefile.linux || die
 	fi
 
 	if use ipv6 ; then
 		einfo "Enabling IPv6"
-		sed -i "s/#HAVE_INET6/HAVE_INET6/" pppd/Makefile.linux
+		sed -i '/#HAVE_INET6/s:#::' pppd/Makefile.linux || die
 	fi
 
 	einfo "Enabling CBCP"
-	sed -i "s/^#CBCP=y/CBCP=y/" pppd/Makefile.linux
+	sed -i '/^#CBCP=y/s:#::' pppd/Makefile.linux || die
+
+	if use dhcp ; then
+		einfo "Adding ppp-dhcp plugin files"
+		sed -i \
+			-e '/^SUBDIRS :=/s:$: dhcp:' \
+			pppd/plugins/Makefile.linux || die
+	fi
 
 	# Set correct libdir
 	sed -i -e "s:/lib/pppd:/$(get_libdir)/pppd:" \
