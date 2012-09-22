@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite/gitolite-3.04.ebuild,v 1.1 2012/08/26 13:00:38 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite/gitolite-3.04.ebuild,v 1.2 2012/09/22 15:17:47 idl0r Exp $
 
 EAPI=4
 
-inherit eutils perl-module user
+inherit eutils perl-module user versionator
 
 DESCRIPTION="Highly flexible server for git directory version tracker"
 HOMEPAGE="http://github.com/sitaramc/gitolite"
@@ -68,11 +68,12 @@ src_install() {
 }
 
 pkg_postinst() {
-	if has_version "=dev-vcs/gitolite-2*"; then
+	if [ "$(get_major_version $REPLACING_VERSIONS)" = "2" ]; then
 		ewarn
 		elog "***NOTE** This is a major upgrade and will likely break your existing gitolite-2.x setup!"
 		elog "Please read http://sitaramc.github.com/gitolite/install.html#migr first!"
 	fi
+
 	# bug 352291
 	ewarn
 	elog "Please make sure that your 'git' user has the correct homedir (/var/lib/gitolite)."
