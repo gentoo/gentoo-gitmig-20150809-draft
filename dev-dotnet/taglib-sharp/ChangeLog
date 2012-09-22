@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/taglib-sharp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/taglib-sharp/ChangeLog,v 1.39 2012/09/16 23:12:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/taglib-sharp/ChangeLog,v 1.40 2012/09/22 12:31:31 blueness Exp $
+
+  22 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
+  taglib-sharp-2.1.0.0.ebuild:
+  stable ppc, bug #435202
 
   16 Sep 2012; Agostino Sarubbo <ago@gentoo.org> taglib-sharp-2.1.0.0.ebuild:
   Stable for amd64, wrt bug #435202
