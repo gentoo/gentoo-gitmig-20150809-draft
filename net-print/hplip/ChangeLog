@@ -1,6 +1,13 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.236 2012/09/18 18:10:42 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.237 2012/09/22 13:52:14 billie Exp $
+
+*hplip-3.12.9-r1 (22 Sep 2012)
+
+  22 Sep 2012; Daniel Pielmeier <billie@gentoo.org> +hplip-3.12.9-r1.ebuild,
+  metadata.xml:
+  Fix bug #435606, cron file not working with locales other than english.
+  Thanks to Eckard Brauer for the report. Remove unused acl USE-description.
 
   18 Sep 2012; Daniel Pielmeier <billie@gentoo.org> hplip-3.11.10.ebuild,
   hplip-3.12.4.ebuild, hplip-3.12.6-r1.ebuild, hplip-3.12.9.ebuild:
