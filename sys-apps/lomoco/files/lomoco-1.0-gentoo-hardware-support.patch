@@ -1,8 +1,7 @@
-- Support for other hardware 
+- Support for other hardware
 - ssr comment in the mouse array.
 - Use of defines for numeric constants to improve code readability.
-
-Signed-off-by: Robin H. Johnson <robbat2@gentoo.org>
+- Debian patch integrated
 
 diff -Nuar --exclude '*~' lomoco-1.0.old/src/lomoco.c lomoco-1.0/src/lomoco.c
 --- lomoco-1.0.old/src/lomoco.c	2006-03-01 06:10:05.000000000 -0800
@@ -22,6 +21,14 @@ diff -Nuar --exclude '*~' lomoco-1.0.old/src/lomoco.c lomoco-1.0/src/lomoco.c
  	{0xc00e, "Wheel Mouse Optical",                        "M-BJ58",      0, 1, 0, 0, 0},
  	{0xc00f, "MouseMan Traveler",                          "M-BJ79",      0, 1, 0, 0, 0},
  	{0xc012, "MouseMan Dual Optical",                      "M-BL63B",     0, 1, 0, 0, 0},
+@@ -42,6 +42,7 @@
+ 	{0xc012, "MouseMan Dual Optical",                      "M-BL63B",     0, 1, 0, 0, 0},
+ 	{0xc01d, "MX510 Optical Mouse",                        "M-BS81A",     0, 1, 1, 1, 0},
+ 	{0xc01e, "MX518 Optical Mouse",                        "M-BS81A",     0, 1, 1, 0, 0},
++	{0xc051, "MX518 Optical Mouse",                        "M-BS81A",     0, 1, 1, 0, 0},
+ 	{0xc024, "MX300 Optical Mouse",                        "M-BP82",      0, 1, 0, 0, 0},
+ 	{0xc01b, "MX310 Optical Mouse",                        "M-BP86",      0, 1, 0, 0, 0},
+ 	{0xc025, "MX500 Optical Mouse",                        "M-BP81A",     0, 1, 1, 1, 0},
 @@ -49,50 +50,37 @@
  	{0xc041, "G5 Laser Gaming Mouse",                      "M-UAC113",    0, 1, 0, 1, 0},
  	{0xc501, "Mouse Receiver",                             "C-BA4-MSE",   1, 0, 0, 0, 0},
@@ -247,6 +254,15 @@ diff -Nuar --exclude '*~' lomoco-1.0.old/src/lomoco.c lomoco-1.0/src/lomoco.c
 +				m->has_ssr? "SSR ": "",
  				m->has_sms? "SMS ": ""
  				);
+ 		}
+@@ -667,7 +671,7 @@
+ 				device->filename,
+ 				device->descriptor.idVendor,
+ 				device->descriptor.idProduct,
+-				ret ? product : "Unknown"
++				ret > 0 ? product : "Unknown"
+ 				);
+ 			continue;
  		}
 diff -Nuar --exclude '*~' lomoco-1.0.old/src/lomoco.h lomoco-1.0/src/lomoco.h
 --- lomoco-1.0.old/src/lomoco.h	2006-03-01 06:10:05.000000000 -0800

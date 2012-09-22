@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/lomoco
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lomoco/ChangeLog,v 1.19 2012/08/19 22:12:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lomoco/ChangeLog,v 1.20 2012/09/22 17:37:30 hwoarang Exp $
+
+*lomoco-1.0-r9 (22 Sep 2012)
+
+  22 Sep 2012; Markos Chandras <hwoarang@gentoo.org> +lomoco-1.0-r9.ebuild,
+  files/lomoco-1.0-gentoo-hardware-support.patch:
+  Add patch for logitech MX-518. Thanks to Roman Porizka and Anton Bolshakov.
+  Bug #392583
 
 *lomoco-1.0-r8 (19 Aug 2012)
 
