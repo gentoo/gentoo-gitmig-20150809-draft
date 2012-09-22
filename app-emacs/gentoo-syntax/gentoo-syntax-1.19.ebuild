@@ -1,6 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/gentoo-syntax-1.19.ebuild,v 1.6 2012/07/01 18:16:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/gentoo-syntax-1.19.ebuild,v 1.7 2012/09/22 13:20:16 ulm Exp $
+
+EAPI=4
 
 inherit elisp
 
@@ -8,27 +10,13 @@ DESCRIPTION="Emacs modes for editing ebuilds and other Gentoo specific files"
 HOMEPAGE="http://www.gentoo.org/proj/en/lisp/emacs/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
-IUSE=""
 
 DOCS="ChangeLog"
+ELISP_TEXINFO="${PN}.texi"
 SITEFILE="50${PN}-gentoo.el"
-
-src_compile() {
-	elisp_src_compile
-	makeinfo gentoo-syntax.texi || die
-}
-
-src_install() {
-	elisp-install ${PN} *.el *.elc || die
-	sed -e "s:@PORTDIR@:${PORTDIR}:" \
-		"${FILESDIR}/${SITEFILE}" >"${T}/${SITEFILE}" || die
-	elisp-site-file-install "${T}/${SITEFILE}" || die
-	doinfo gentoo-syntax.info || die
-	dodoc ${DOCS} || die
-}
 
 pkg_postinst() {
 	elisp-site-regen

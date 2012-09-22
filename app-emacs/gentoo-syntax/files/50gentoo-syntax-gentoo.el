@@ -14,5 +14,3 @@
 (add-to-list 'interpreter-mode-alist '("runscript" . sh-mode))
 (modify-coding-system-alist
  'file "\\.\\(ebuild\\|eclass\\|eblit\\|eselect\\)\\'" 'utf-8)
-
-(setq ebuild-mode-portdir "@PORTDIR@")

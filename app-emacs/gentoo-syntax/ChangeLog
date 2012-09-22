@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/gentoo-syntax
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.81 2012/07/01 18:16:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.82 2012/09/22 13:20:16 ulm Exp $
+
+  22 Sep 2012; Ulrich Müller <ulm@gentoo.org> files/50gentoo-syntax-gentoo.el,
+  -gentoo-syntax-1.17.ebuild, -gentoo-syntax-1.18.ebuild,
+  gentoo-syntax-1.19.ebuild:
+  Don't initialise ebuild-mode-portdir from PORTDIR any more, which allows
+  using the default of elisp.eclass for most functions. Specify LICENSE more
+  precisely. Remove old.
 
   01 Jul 2012; Raúl Porcel <armin76@gentoo.org> gentoo-syntax-1.19.ebuild:
   alpha/ia64/sparc stable wrt #417305
