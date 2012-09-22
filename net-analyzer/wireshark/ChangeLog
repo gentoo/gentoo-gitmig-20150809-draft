@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.394 2012/09/19 14:53:31 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.395 2012/09/22 02:41:02 pinkbyte Exp $
+
+*wireshark-1.8.2-r3 (22 Sep 2012)
+
+  22 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> +wireshark-1.8.2-r3.ebuild:
+  Fix automagic with c-ares library wrt bug #435542
 
   19 Sep 2012; Richard Freeman <rich0@gentoo.org> wireshark-1.6.10-r2.ebuild,
   wireshark-1.8.2-r2.ebuild:
