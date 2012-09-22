@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/abrt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/abrt/ChangeLog,v 1.13 2012/07/25 12:41:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/abrt/ChangeLog,v 1.14 2012/09/22 20:12:52 tetromino Exp $
+
+*abrt-2.0.12 (22 Sep 2012)
+
+  22 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org> +abrt-2.0.12.ebuild,
+  +files/abrt-2.0.12-automake-1.12.patch,
+  +files/abrt-2.0.12-dbus-fallback.patch, +files/abrt-2.0.12-gentoo.patch,
+  +files/abrt-2.0.12-init:
+  Version bump. Fix automake-1.12 problems with a proper patch.
 
   25 Jul 2012; Justin Lecher <jlec@gentoo.org> abrt-2.0.8.ebuild, metadata.xml:
   Fix for automake-1.12, #427926
