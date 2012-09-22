@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/sshuttle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshuttle/ChangeLog,v 1.11 2012/07/19 07:01:52 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshuttle/ChangeLog,v 1.12 2012/09/22 21:24:42 ago Exp $
+
+  22 Sep 2012; Agostino Sarubbo <ago@gentoo.org> sshuttle-0.61.ebuild:
+  Stable for amd64, wrt bug #433347
 
 *sshuttle-0.61 (19 Jul 2012)
 
