@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/make.defaults,v 1.9 2012/09/11 12:09:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/make.defaults,v 1.10 2012/09/22 19:29:59 aballier Exp $
 # System-wide defaults for the G/FBSD Portage system
 
 ARCH="amd64-fbsd"
@@ -26,4 +26,10 @@ VIDEO_CARDS="apm ark chips cirrus cyrix dummy i128 intel mach64 mga \
 	neomagic nv r128 radeon rendition s3 s3virge savage siliconmotion sis \
 	sisusb tga trident tseng via vmware"
 
+# Vanilla FreeBSD has: lib for native 64 bits libs, lib32 for 32-bits emulation.
+# Let's do this too as this also happens to be more standard among other linux
+# distros.
+# Adjust multilib dirs for multilib-strict.
+LIBDIR_amd64_fbsd="lib"
+MULTILIB_STRICT_DIRS="/lib32 /usr/lib32 /usr/kde/*/lib32 /usr/qt/*/lib32 /usr/X11R6/lib32"
 SYMLINK_LIB="no"
