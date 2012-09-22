@@ -1,19 +1,19 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-9999.ebuild,v 1.25 2012/07/21 11:07:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-9999.ebuild,v 1.26 2012/09/22 16:32:37 hwoarang Exp $
 
-EAPI=3
+EAPI=4
 
 EGIT_REPO_URI="git://pcmanfm.git.sourceforge.net/gitroot/pcmanfm/${PN}"
 
-inherit autotools git-2 fdo-mime
+inherit autotools git-2 fdo-mime vala
 
 DESCRIPTION="A library for file management"
 HOMEPAGE="http://pcmanfm.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="debug doc examples"
+IUSE="debug doc examples vala"
 KEYWORDS=""
 
 COMMON_DEPEND=">=dev-libs/glib-2.18:2
@@ -32,6 +32,8 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 	sys-devel/gettext"
 
+DOCS=( AUTHORS TODO )
+
 src_prepare() {
 	if ! use doc; then
 		sed -ie '/SUBDIRS=/s#docs##' "${S}"/Makefile.am || die "sed failed"
@@ -46,13 +48,10 @@ src_prepare() {
 		echo "data/ui/"${trans}.ui >> po/POTFILES.in
 	done
 	sed -i -e "s:-O0::" -e "/-DG_ENABLE_DEBUG/s: -g::" "${S}"/configure.ac || die
-	myvalaver="$(best_version dev-lang/vala | sed -e's@dev-lang/vala-\([0-9]*\.[0-9]*\)\..*@\1@g')"
-	myvalac="$(type -p valac-${myvalaver})"
-	[[ -x "${myvalac}" ]] || die "Vala compiler ${myvalac} not found"
-	export VALAC=${myvalac}
 	#Remove -Werror for automake-1.12. Bug #421101
 	sed -i "s:-Werror::" configure.ac || die
 	eautoreconf
+	use vala && export VALAC="$(type -p valac-$(vala_best_api_version))"
 }
 
 src_configure() {
@@ -60,18 +59,16 @@ src_configure() {
 		--sysconfdir="${EPREFIX}/etc" \
 		--disable-dependency-tracking \
 		--disable-static \
+		--disable-udisks \
 		$(use_enable examples demo) \
 		$(use_enable debug) \
-		# Documentation fails to build at the moment
-		# $(use_enable doc gtk-doc) \
-		# $(use_enable doc gtk-doc-html) \
+		$(use_enable vala actions) \
+		$(use_enable doc gtk-doc) \
 		--with-html-dir=/usr/share/doc/${PF}/html
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS TODO
-
+	default
 	find "${D}" -name '*.la' -exec rm -f '{}' +
 }
 
