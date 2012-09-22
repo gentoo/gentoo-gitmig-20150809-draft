@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libreport
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libreport/ChangeLog,v 1.12 2012/07/08 17:19:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libreport/ChangeLog,v 1.13 2012/09/22 20:12:48 tetromino Exp $
+
+*libreport-2.0.13 (22 Sep 2012)
+
+  22 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +libreport-2.0.13.ebuild, +files/libreport-2.0.13-automake-1.12.patch,
+  +files/libreport-2.0.13-gentoo.patch:
+  Version bump. Fix automake-1.12 problems with a proper patch.
 
   08 Jul 2012; Justin Lecher <jlec@gentoo.org> libreport-2.0.10.ebuild:
   Add fix for automake-1.12, #425268
