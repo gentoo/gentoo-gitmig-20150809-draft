@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.26-r2.ebuild,v 1.7 2011/10/30 15:15:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.27.ebuild,v 1.1 2012/09/22 14:01:54 pacho Exp $
 
-EAPI="3"
+EAPI="4"
 PYTHON_DEPEND="python? 2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-jython"
+RESTRICT_PYTHON_ABIS="3.* *-jython *-pypy-*"
 
 inherit autotools eutils python toolchain-funcs
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://xmlsoft.org/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 IUSE="crypt debug python static-libs"
 
 DEPEND=">=dev-libs/libxml2-2.6.27:2
@@ -26,19 +26,17 @@ pkg_setup() {
 	if use python; then
 		python_pkg_setup
 	fi
+	DOCS="AUTHORS ChangeLog FEATURES NEWS README TODO"
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/libxslt.m4-${P}.patch \
-		"${FILESDIR}"/${PN}-1.1.23-parallel-install.patch \
-		"${FILESDIR}"/${P}-undefined.patch \
-		"${FILESDIR}"/${P}-disable_static_modules.patch
+	# https://bugzilla.gnome.org/show_bug.cgi?id=684621
+	epatch "${FILESDIR}"/libxslt.m4-${PN}-1.1.26.patch
+
+	epatch "${FILESDIR}"/${PN}-1.1.26-disable_static_modules.patch
 
 	# Python bindings are built/tested/installed manually.
 	sed -e "s/@PYTHON_SUBDIR@//" -i Makefile.am || die "sed failed"
-
-	# Fix generate-id() to not expose object addresses, bug #358615
-	epatch "${FILESDIR}/${P}-id-generation.patch"
 
 	eautoreconf
 	epunt_cxx
@@ -88,7 +86,7 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	default
 
 	if use python; then
 		installation() {
@@ -103,7 +101,6 @@ src_install() {
 
 	mv -vf "${ED}"/usr/share/doc/${PN}-python-${PV} \
 		"${ED}"/usr/share/doc/${PF}/python
-	dodoc AUTHORS ChangeLog FEATURES NEWS README TODO || die
 
 	if ! use static-libs; then
 		# Remove useless .la files
