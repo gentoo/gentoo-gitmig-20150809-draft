@@ -12,6 +12,9 @@ depend() {
 	need localmount
 	after bootmisc
 	before netmount
+	if yesno "${ncd_syslog:-NO}"; then
+		use logger
+	fi
 }
 
 start_pre() {

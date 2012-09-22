@@ -12,6 +12,9 @@ start_stop_daemon_args="--user \"${vpn_user:-badvpn}\""
 depend() {
 	need localmount
 	after bootmisc
+	if yesno "${vpn_syslog:-NO}"; then
+		use logger
+	fi
 }
 
 start_pre() {
