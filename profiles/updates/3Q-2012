@@ -45,3 +45,7 @@ move app-arch/TheUnarchiver app-arch/unar
 slotmove =media-libs/gst-plugins-bad-0.10* 0 0.10
 slotmove <media-libs/grilo-0.2 0 0.1
 slotmove <media-plugins/grilo-plugins-0.2 0 0.1
+slotmove app-doc/pms 2 0
+slotmove app-doc/pms 3 0
+slotmove app-doc/pms 4 0
+slotmove app-doc/pms 5 0
