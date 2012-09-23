@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-control-center
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/ChangeLog,v 1.108 2012/09/08 00:36:07 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/ChangeLog,v 1.109 2012/09/23 13:56:17 blueness Exp $
+
+  23 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
+  gnome-control-center-3.4.2.ebuild:
+  keyword ~ppc, bug #379651
 
   08 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   gnome-control-center-3.4.2.ebuild, gnome-control-center-3.4.2-r1.ebuild:
