@@ -6,6 +6,7 @@
     <remote-id type="cpan">perl-ldap</remote-id>
     <remote-id type="cpan-module">Bundle::Net::LDAP</remote-id>
     <remote-id type="cpan-module">LWP::Protocol::ldap</remote-id>
+    <remote-id type="cpan-module">LWP::Protocol::ldapi</remote-id>
     <remote-id type="cpan-module">LWP::Protocol::ldaps</remote-id>
     <remote-id type="cpan-module">Net::LDAP</remote-id>
     <remote-id type="cpan-module">Net::LDAP::ASN</remote-id>
