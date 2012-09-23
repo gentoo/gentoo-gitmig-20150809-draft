@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/pglinux
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/pglinux/ChangeLog,v 1.8 2012/08/03 18:15:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/pglinux/ChangeLog,v 1.9 2012/09/23 07:56:00 phajdan.jr Exp $
+
+  23 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  pglinux-2.2.1_p20120711.ebuild:
+  x86 stable wrt bug #429612
 
   03 Aug 2012; Agostino Sarubbo <ago@gentoo.org>
   pglinux-2.2.1_p20120711.ebuild:
