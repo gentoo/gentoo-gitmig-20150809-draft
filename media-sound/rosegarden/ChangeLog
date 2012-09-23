@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/rosegarden
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.100 2012/09/23 08:12:51 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.101 2012/09/23 12:11:08 ssuominen Exp $
+
+  23 Sep 2012; Samuli Suominen <ssuominen@gentoo.org>
+  -rosegarden-11.11.11.ebuild, -rosegarden-11.11.42.ebuild:
+  old
 
   23 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> rosegarden-12.04.ebuild:
   x86 stable wrt bug #434310
