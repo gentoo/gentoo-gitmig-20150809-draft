@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/origin/origin-1.0.8.ebuild,v 1.1 2012/09/01 12:54:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/origin/origin-1.0.9.ebuild,v 1.1 2012/09/23 03:54:52 flameeyes Exp $
 
 EAPI=4
 
