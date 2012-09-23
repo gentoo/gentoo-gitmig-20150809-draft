@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libwacom
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwacom/ChangeLog,v 1.4 2012/09/15 09:44:06 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwacom/ChangeLog,v 1.5 2012/09/23 04:16:27 blueness Exp $
+
+  23 Sep 2012; Anthony G. Basile <blueness@gentoo.org> libwacom-0.6.ebuild:
+  keyword ~ppc64, bug #379651
 
 *libwacom-0.6 (15 Sep 2012)
 
@@ -26,4 +29,3 @@
   +libwacom-0.4.ebuild, +metadata.xml:
   New ebuild for a library to identify Wacom tablet features; used by
   gnome-3.4.
-
