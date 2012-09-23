@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/multiskkserv/multiskkserv-20100128.ebuild,v 1.2 2012/08/11 18:36:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/multiskkserv/multiskkserv-20100128.ebuild,v 1.3 2012/09/23 08:33:55 phajdan.jr Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www3.big.or.jp/~sian/linux/products/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="app-arch/xz-utils
