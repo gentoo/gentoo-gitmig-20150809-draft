@@ -6,10 +6,11 @@
 		<name>Anthony G. Basile</name>
 	</maintainer>
 	<use>
+		<flag name='bufferevents'>Use Libevent's buffered IO</flag>
+		<flag name='stats'>Enable to keep track of how much of each kind of resource we download</flag>
+		<flag name='nat-pmp'>Enable NAT Port Mapping Protocol</flag>
 		<flag name='tor-hardening'>Compile tor with hardening on vanilla compilers/linkers</flag>
 		<flag name='transparent-proxy'>Enable transparent proxying</flag>
-		<flag name='bufferevents'>Use Libevent's buffered IO</flag>
-		<flag name='nat-pmp'>Enable NAT Port Mapping Protocol</flag>
 		<flag name='upnp'>Enable Universal Plug and Play</flag>
 		<flag name='web'>Enable tor2web support</flag>
 	</use>
