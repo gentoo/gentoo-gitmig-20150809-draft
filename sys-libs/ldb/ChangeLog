@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/ldb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ChangeLog,v 1.34 2012/09/23 19:21:14 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ChangeLog,v 1.35 2012/09/23 19:42:52 vostorga Exp $
+
+*ldb-1.1.12 (23 Sep 2012)
+
+  23 Sep 2012; Víctor Ostorga <vostorga@gentoo.org> ldb-1.1.10.ebuild,
+  +ldb-1.1.12.ebuild:
+  Version bump to 1.1.12 bug 435630
 
   23 Sep 2012; Víctor Ostorga <vostorga@gentoo.org> ldb-1.1.10.ebuild:
   Fixing up python and tdb DEPEND versions
