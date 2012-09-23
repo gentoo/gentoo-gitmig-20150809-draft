@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.161 2012/09/10 21:39:34 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.162 2012/09/23 08:47:42 phajdan.jr Exp $
+
+  23 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  qemu-kvm-1.1.1-r1.ebuild:
+  x86 stable wrt bug #428476
 
   10 Sep 2012; Doug Goldstein <cardoe@gentoo.org> qemu-kvm-9999.ebuild:
   Use sys-firmware/ipxe rather than the preshipped binaries.
