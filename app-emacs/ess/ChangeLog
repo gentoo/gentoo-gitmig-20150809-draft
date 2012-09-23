@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/ess
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ChangeLog,v 1.84 2012/09/13 10:13:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ChangeLog,v 1.85 2012/09/23 08:32:56 phajdan.jr Exp $
+
+  23 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> ess-12.04.4.ebuild:
+  x86 stable wrt bug #428864
 
   13 Sep 2012; Agostino Sarubbo <ago@gentoo.org> ess-12.04.4.ebuild:
   Stable for amd64, wrt bug #428864
