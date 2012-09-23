@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/gemrb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/gemrb/ChangeLog,v 1.25 2012/08/21 12:44:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/gemrb/ChangeLog,v 1.26 2012/09/23 08:48:59 phajdan.jr Exp $
+
+  23 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> gemrb-0.7.1.ebuild:
+  x86 stable wrt bug #432072
 
   21 Aug 2012; Agostino Sarubbo <ago@gentoo.org> gemrb-0.7.1.ebuild:
   Stable for amd64, wrt bug #432072
