@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jigdo/jigdo-0.7.3-r1.ebuild,v 1.6 2012/03/18 17:54:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jigdo/jigdo-0.7.3-r1.ebuild,v 1.7 2012/09/23 16:54:39 xarthisius Exp $
 
 EAPI=3
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="http://atterer.net/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 x86"
 IUSE="gtk nls berkdb libwww"
 
 RDEPEND="gtk? ( x11-libs/gtk+:2 )
