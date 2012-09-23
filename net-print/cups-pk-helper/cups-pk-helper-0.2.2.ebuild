@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pk-helper/cups-pk-helper-0.2.2.ebuild,v 1.5 2012/08/07 09:10:52 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pk-helper/cups-pk-helper-0.2.2.ebuild,v 1.6 2012/09/23 03:42:02 blueness Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.freedesktop.org/software/${PN}/releases/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ppc64 ~x86"
 IUSE=""
 
 # Require {glib,gdbus-codegen}-2.30.0 due to GDBus changes between 2.29.92
