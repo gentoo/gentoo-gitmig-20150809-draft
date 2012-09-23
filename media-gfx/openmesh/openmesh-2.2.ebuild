@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/openmesh-2.2.ebuild,v 1.2 2012/08/11 21:25:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/openmesh-2.2.ebuild,v 1.3 2012/09/23 08:26:50 phajdan.jr Exp $
 
 EAPI="3"
 inherit eutils cmake-utils
@@ -16,7 +16,7 @@ SRC_URI="http://openmesh.org/fileadmin/${PN}-files/${MY_PV/-RC/RC}/${MY_PN}-${MY
 # See COPYING.EXCEPTIONS
 LICENSE="LGPL-3 as-is"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="qt4 static-libs"
 
 RDEPEND="qt4? ( x11-libs/qt-gui:4
