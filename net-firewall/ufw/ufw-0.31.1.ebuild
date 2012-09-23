@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ufw/ufw-0.31.1.ebuild,v 1.2 2012/06/18 19:39:03 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ufw/ufw-0.31.1.ebuild,v 1.3 2012/09/23 18:20:24 thev00d00 Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.5"
@@ -41,6 +41,46 @@ pkg_pretend() {
 	fi
 
 	check_extra_config
+
+	# Check for default, useful optional features.
+	if ! linux_config_exists; then
+		ewarn "Cannot determine configuration of your kernel."
+		return
+	fi
+
+	local nf_nat_ftp_ok="yes"
+	local nf_conntrack_ftp_ok="yes"
+	local nf_conntrack_netbios_ns_ok="yes"
+
+	linux_chkconfig_present \
+		NF_NAT_FTP || nf_nat_ftp_ok="no"
+	linux_chkconfig_present \
+		NF_CONNTRACK_FTP || nf_conntrack_ftp_ok="no"
+	linux_chkconfig_present \
+		NF_CONNTRACK_NETBIOS_NS || nf_conntrack_netbios_ns_ok="no"
+
+	# This is better than an essay for each unset option...
+	if [[ ${nf_nat_ftp_ok} = no ]] || [[ ${nf_conntrack_ftp_ok} = no ]] \
+		|| [[ ${nf_conntrack_netbios_ns_ok} = no ]]
+	then
+		echo
+		local mod_msg="Kernel options listed below are not set. They are not"
+		mod_msg+=" mandatory, but they are often useful."
+		mod_msg+=" If you don't need some of them, please remove relevant"
+		mod_msg+=" module name(s) from IPT_MODULES in"
+		mod_msg+=" '${EROOT}etc/default/ufw' before (re)starting ufw."
+		mod_msg+=" Otherwise ufw may fail to start!"
+		ewarn "${mod_msg}"
+		if [[ ${nf_nat_ftp_ok} = no ]]; then
+			ewarn "NF_NAT_FTP: for better support for active mode FTP."
+		fi
+		if [[ ${nf_conntrack_ftp_ok} = no ]]; then
+			ewarn "NF_CONNTRACK_FTP: for better support for active mode FTP."
+		fi
+		if [[ ${nf_conntrack_netbios_ns_ok} = no ]]; then
+			ewarn "NF_CONNTRACK_NETBIOS_NS: for better Samba support."
+		fi
+	fi
 }
 
 src_prepare() {
