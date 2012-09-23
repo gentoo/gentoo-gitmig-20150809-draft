@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/mobile-broadband-provider-info
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mobile-broadband-provider-info/ChangeLog,v 1.14 2012/09/13 11:28:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mobile-broadband-provider-info/ChangeLog,v 1.15 2012/09/23 08:29:02 phajdan.jr Exp $
+
+  23 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  mobile-broadband-provider-info-20120614.ebuild:
+  x86 stable wrt bug #429182
 
   13 Sep 2012; Agostino Sarubbo <ago@gentoo.org>
   mobile-broadband-provider-info-20120614.ebuild:
