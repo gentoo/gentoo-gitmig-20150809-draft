@@ -1,6 +1,10 @@
 # ChangeLog for www-client/leechcraft-poshuku
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/leechcraft-poshuku/ChangeLog,v 1.17 2012/08/13 14:18:23 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/leechcraft-poshuku/ChangeLog,v 1.18 2012/09/23 10:10:07 pinkbyte Exp $
+
+  23 Sep 2012; Sergey Popov <pinkbyte@gentoo.org>
+  leechcraft-poshuku-9999.ebuild, metadata.xml:
+  Add pcre USE flag to support parsing CleanWeb rules through dev-libs/libpcre
 
 *leechcraft-poshuku-0.5.80 (13 Aug 2012)
 

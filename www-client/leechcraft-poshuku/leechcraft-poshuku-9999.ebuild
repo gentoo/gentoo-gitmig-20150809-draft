@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/leechcraft-poshuku/leechcraft-poshuku-9999.ebuild,v 1.4 2012/07/15 15:39:09 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/leechcraft-poshuku/leechcraft-poshuku-9999.ebuild,v 1.5 2012/09/23 10:10:07 pinkbyte Exp $
 
 EAPI="4"
 
@@ -11,14 +11,18 @@ DESCRIPTION="Poshuku, the full-featured web browser plugin for LeechCraft."
 SLOT="0"
 KEYWORDS=""
 IUSE="debug +cleanweb +fatape +filescheme +fua +idn +keywords +onlinebookmarks
-		wyfv +sqlite postgres pogooglue"
+		+pcre postgres pogooglue +sqlite wyfv"
 
 DEPEND="~net-misc/leechcraft-core-${PV}[postgres?,sqlite?]
 		x11-libs/qt-webkit:4
+		idn? ( net-dns/libidn )
 		onlinebookmarks? ( >=dev-libs/qjson-0.7.1-r1 )
-		idn? ( net-dns/libidn )"
+		pcre? ( >=dev-libs/libpcre-8.12 )
+"
 RDEPEND="${DEPEND}
 		virtual/leechcraft-downloader-http"
+
+REQUIRED_USE="pcre? ( cleanweb )"
 
 pkg_setup() {
 	confutils_require_any postgres sqlite
@@ -33,6 +37,7 @@ src_configure() {
 		$(cmake-utils_use_enable idn IDN)
 		$(cmake-utils_use_enable keywords POSHUKU_KEYWORDS)
 		$(cmake-utils_use_enable onlinebookmarks POSHUKU_ONLINEBOOKMARKS)
+		$(cmake-utils_use_enable pcre POSHUKU_CLEANWEB_PCRE)
 		$(cmake-utils_use_enable pogooglue POSHUKU_POGOOGLUE)
 		$(cmake-utils_use_enable wyfv POSHUKU_WYFV)
 		"
