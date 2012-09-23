@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.72.0.ebuild,v 1.2 2012/05/04 09:17:28 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.80.0.ebuild,v 1.1 2012/09/23 10:46:44 dev-zero Exp $
 
 inherit bash-completion eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="paludis, the other package mangler"
 HOMEPAGE="http://paludis.exherbo.org/"
 SRC_URI="http://paludis.exherbo.org/download/${P}.tar.bz2"
 
-IUSE="doc pbins portage pink prebuilt-documentation python-bindings ruby-bindings search-index vim-syntax visibility xml zsh-completion"
+IUSE="doc pbins portage pink prebuilt-documentation python-bindings ruby-bindings search-index test vim-syntax visibility xml zsh-completion"
 LICENSE="GPL-2 vim-syntax? ( vim )"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
@@ -19,7 +19,7 @@ COMMON_DEPEND="
 	>=sys-devel/gcc-4.4
 	dev-libs/libpcre
 	sys-apps/file
-	pbins? ( >=app-arch/libarchive-2.8.4 )
+	pbins? ( >=app-arch/libarchive-3.0.4 )
 	python-bindings? ( >=dev-lang/python-2.6 >=dev-libs/boost-1.41.0 )
 	ruby-bindings? ( >=dev-lang/ruby-1.8 )
 	xml? ( >=dev-libs/libxml2-2.6 )
@@ -34,10 +34,10 @@ DEPEND="${COMMON_DEPEND}
 		|| ( >=app-doc/doxygen-1.5.3 <=app-doc/doxygen-1.5.1 )
 		media-gfx/imagemagick
 		python-bindings? ( dev-python/epydoc dev-python/pygments )
-		ruby-bindings? ( dev-ruby/syntax dev-ruby/allison )
+		ruby-bindings? ( dev-ruby/syntax )
 	)
 	virtual/pkgconfig
-	dev-cpp/gtest"
+	test? ( dev-cpp/gtest )"
 
 RDEPEND="${COMMON_DEPEND}
 	sys-apps/sandbox"
@@ -60,7 +60,8 @@ pkg_setup() {
 		die "Rebuild dev-libs/libpcre with USE=cxx"
 	fi
 
-	if ! built_with_use dev-cpp/gtest threads ; then
+	if use test &&
+		! built_with_use dev-cpp/gtest threads ; then
 		eerror "Paludis needs dev-cpp/gtest built with threads support"
 		eerror "Please build dev-cpp/gtest with USE=threads support"
 		die "Rebuild dev-cpp/gtest with USE threads"
@@ -115,6 +116,7 @@ src_compile() {
 		$(use_enable visibility ) \
 		$(use_enable xml ) \
 		$(use_enable search-index ) \
+		$(use_enable test gtest ) \
 		--with-vim-install-dir=/usr/share/vim/vimfiles \
 		--with-repositories=${repositories} \
 		--with-environments=${environments} \
