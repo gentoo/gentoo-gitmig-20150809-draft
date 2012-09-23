@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-9999.1.ebuild,v 1.11 2012/07/28 19:39:32 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-9999.1.ebuild,v 1.12 2012/09/23 20:14:47 floppym Exp $
 
 EAPI="4"
 
@@ -24,7 +24,8 @@ HOMEPAGE="http://www.freerdp.com/"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-IUSE="alsa cups directfb doc ffmpeg pulseaudio smartcard sse2 test X xinerama xv"
+IUSE="alsa +channels +client cups debug directfb doc ffmpeg gstreamer jpeg
+	pulseaudio smartcard sse2 test X xinerama xv"
 
 RESTRICT="test"
 
@@ -33,26 +34,34 @@ RDEPEND="
 	sys-libs/zlib
 	alsa? ( media-libs/alsa-lib )
 	cups? ( net-print/cups )
-	directfb? ( dev-libs/DirectFB )
+	client? (
+		directfb? ( dev-libs/DirectFB )
+		X? (
+			x11-libs/libXcursor
+			x11-libs/libXext
+			xinerama? ( x11-libs/libXinerama )
+			xv? ( x11-libs/libXv )
+		)
+	)
 	ffmpeg? ( virtual/ffmpeg )
+	gstreamer? (
+		media-libs/gstreamer
+		media-libs/gst-plugins-base
+		x11-libs/libXrandr
+	)
+	jpeg? ( virtual/jpeg )
 	pulseaudio? ( media-sound/pulseaudio )
 	smartcard? ( sys-apps/pcsc-lite )
 	X? (
 		x11-libs/libX11
-		x11-libs/libXcursor
-		x11-libs/libXext
 		x11-libs/libxkbfile
-		xinerama? ( x11-libs/libXinerama )
-		xv? ( x11-libs/libXv )
 	)
 "
 DEPEND="${RDEPEND}
-	doc? (
-		X? (
-			app-text/docbook-xml-dtd:4.1.2
-			app-text/xmlto
-		)
-	)
+	client? ( X? ( doc? (
+		app-text/docbook-xml-dtd:4.1.2
+		app-text/xmlto
+	) ) )
 	test? ( dev-util/cunit )
 "
 
@@ -61,10 +70,15 @@ DOCS=( README )
 src_configure() {
 	local mycmakeargs=(
 		$(cmake-utils_use_with alsa ALSA)
+		$(cmake-utils_use_with channels CHANNELS)
+		$(cmake-utils_use_with client CLIENT)
 		$(cmake-utils_use_with cups CUPS)
+		$(cmake-utils_use_with debug DEBUG_ALL)
 		$(cmake-utils_use_with doc MANPAGES)
 		$(cmake-utils_use_with directfb DIRECTFB)
 		$(cmake-utils_use_with ffmpeg FFMPEG)
+		$(cmake-utils_use_with gstreamer GSTREAMER)
+		$(cmake-utils_use_with jpeg JPEG)
 		$(cmake-utils_use_with pulseaudio PULSEAUDIO)
 		$(cmake-utils_use_with smartcard PCSC)
 		$(cmake-utils_use_with sse2 SSE2)

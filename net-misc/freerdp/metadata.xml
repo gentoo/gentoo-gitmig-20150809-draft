@@ -5,4 +5,8 @@
 		<email>floppym@gentoo.org</email>
 		<name>Mike Gilbert</name>
 	</maintainer>
+	<use>
+		<flag name="channels">Build virtual channel plugins</flag>
+		<flag name="client">Build client binaries</flag>
+	</use>
 </pkgmetadata>
