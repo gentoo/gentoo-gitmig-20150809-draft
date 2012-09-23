@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-awk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-awk/ChangeLog,v 1.9 2012/08/26 18:40:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-awk/ChangeLog,v 1.10 2012/09/23 04:22:07 mattst88 Exp $
+
+  23 Sep 2012; Matt Turner <mattst88@gentoo.org> eselect-awk-0.2.ebuild:
+  Added ~mips, bug 419559.
 
   26 Aug 2012; Raúl Porcel <armin76@gentoo.org> eselect-awk-0.2.ebuild:
   Add ~alpha/~ia64/~m68k/~s390/~sh/~sparc wrt #419559
