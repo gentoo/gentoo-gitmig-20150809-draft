@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/blohg-0.10.1.ebuild,v 1.3 2012/08/04 19:58:28 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/blohg-0.11.ebuild,v 1.1 2012/09/23 04:51:59 rafaelmartins Exp $
 
 EAPI="3"
 
@@ -16,7 +16,7 @@ if [[ ${PV} = *9999* ]]; then
 	EHG_REVISION="default"
 fi
 
-inherit eutils distutils ${HG_ECLASS}
+inherit distutils ${HG_ECLASS}
 
 DESCRIPTION="A Mercurial-based blogging engine."
 HOMEPAGE="http://blohg.org/ http://pypi.python.org/pypi/blohg"
@@ -33,7 +33,7 @@ SLOT="0"
 IUSE="doc test"
 
 CDEPEND=">=dev-python/docutils-0.8
-	>=dev-python/flask-0.7
+	>=dev-python/flask-0.8
 	>=dev-python/flask-babel-0.7
 	>=dev-python/flask-script-0.3
 	>=dev-python/frozen-flask-0.7
@@ -47,11 +47,6 @@ DEPEND="${CDEPEND}
 	doc? ( dev-python/sphinx )"
 
 RDEPEND="${CDEPEND}"
-
-src_prepare() {
-	epatch "${FILESDIR}/${PV}_fix-tests.patch"
-	distutils_src_prepare
-}
 
 src_compile() {
 	distutils_src_compile
