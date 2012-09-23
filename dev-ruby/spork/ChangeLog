@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/spork
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/spork/ChangeLog,v 1.14 2012/08/19 10:25:19 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/spork/ChangeLog,v 1.15 2012/09/23 07:30:59 graaff Exp $
+
+  23 Sep 2012; Hans de Graaff <graaff@gentoo.org> -spork-0.8.4-r1.ebuild,
+  -spork-0.8.5.ebuild, -spork-0.9.0.ebuild:
+  Cleanup.
 
   19 Aug 2012; Anthony G. Basile <blueness@gentoo.org> spork-0.9.2.ebuild:
   Keyword ~ppc ~ppc64, bug #417573

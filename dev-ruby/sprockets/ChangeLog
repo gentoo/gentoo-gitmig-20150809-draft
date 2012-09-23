@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/sprockets
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets/ChangeLog,v 1.9 2012/06/14 06:26:13 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets/ChangeLog,v 1.10 2012/09/23 07:33:33 graaff Exp $
+
+  23 Sep 2012; Hans de Graaff <graaff@gentoo.org> -sprockets-2.0.3-r1.ebuild,
+  -sprockets-2.1.2.ebuild:
+  Cleanup.
 
 *sprockets-2.0.4 (14 Jun 2012)
 
