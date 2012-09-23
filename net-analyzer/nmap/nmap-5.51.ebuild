@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-5.51.ebuild,v 1.10 2011/06/12 22:14:04 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-5.51.ebuild,v 1.11 2012/09/23 09:14:51 pinkbyte Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -41,6 +41,12 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-5.21-python.patch
 	epatch "${FILESDIR}"/${PN}-5.51-su-to-zenmap-fix.patch
 	sed -i -e 's/-m 755 -s ncat/-m 755 ncat/' ncat/Makefile.in
+
+	# Fix desktop files wrt bug #432714
+	sed -i -e '/^Encoding/d' zenmap/install_scripts/unix/zenmap.desktop
+	sed -i -e '/^Encoding/d' zenmap/install_scripts/unix/zenmap-root.desktop
+	sed -i -e 's/Categories=Application;Network;Security/Categories=Network;System;Security;/' zenmap/install_scripts/unix/zenmap.desktop
+	sed -i -e 's/Categories=Application;Network;Security/Categories=Network;System;Security;/' zenmap/install_scripts/unix/zenmap-root.desktop
 }
 
 src_configure() {

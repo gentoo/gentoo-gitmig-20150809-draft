@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.255 2012/08/31 16:54:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.256 2012/09/23 09:14:51 pinkbyte Exp $
+
+  23 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> nmap-5.51.ebuild,
+  nmap-6.01.ebuild:
+  Fix desktop files wrt bug #432714
 
   31 Aug 2012; Jeroen Roovers <jer@gentoo.org> nmap-6.00.ebuild,
   nmap-6.01.ebuild:
