@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-3.4.2-r1.ebuild,v 1.4 2012/09/23 13:54:39 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-3.4.2-r1.ebuild,v 1.5 2012/09/23 14:06:14 blueness Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -14,7 +14,7 @@ HOMEPAGE="http://live.gnome.org/GnomeBluetooth"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="2"
 IUSE="doc +introspection sendto"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
 COMMON_DEPEND=">=dev-libs/glib-2.29.90:2
 	>=x11-libs/gtk+-2.91.3:3[introspection?]

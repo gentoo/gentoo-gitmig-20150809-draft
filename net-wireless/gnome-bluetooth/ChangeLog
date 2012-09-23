@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/gnome-bluetooth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.115 2012/09/23 13:54:39 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.116 2012/09/23 14:06:14 blueness Exp $
+
+  23 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
+  gnome-bluetooth-3.4.2-r1.ebuild:
+  keyword ~ppc64, bug #379651
 
   23 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
   gnome-bluetooth-3.4.2-r1.ebuild:
