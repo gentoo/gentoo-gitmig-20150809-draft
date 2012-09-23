@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ldb-1.1.10.ebuild,v 1.2 2012/09/13 19:09:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ldb-1.1.10.ebuild,v 1.3 2012/09/23 19:21:14 vostorga Exp $
 
 EAPI="4"
-PYTHON_DEPEND="2"
+PYTHON_DEPEND="2:2.4"
 
 inherit python waf-utils multilib
 
@@ -19,7 +19,7 @@ IUSE="doc"
 RDEPEND="dev-libs/popt
 	>=sys-libs/talloc-2.0.7[python]
 	>=sys-libs/tevent-0.9.16
-	>=sys-libs/tdb-1.2.9[python]
+	>=sys-libs/tdb-1.2.10[python]
 	net-nds/openldap
 	!!<net-fs/samba-3.6.0[ldb]
 	!!>=net-fs/samba-4.0.0[ldb]
