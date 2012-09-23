@@ -1,6 +1,17 @@
 # ChangeLog for app-admin/denyhosts
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/ChangeLog,v 1.49 2012/09/19 20:15:42 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/ChangeLog,v 1.50 2012/09/23 08:25:09 pacho Exp $
+
+*denyhosts-2.6-r6 (23 Sep 2012)
+
+  23 Sep 2012; Pacho Ramos <pacho@gentoo.org> +denyhosts-2.6-r6.ebuild,
+  +files/denyhosts-2.6-daemon-control.patch,
+  +files/denyhosts-2.6-defconffile.patch,
+  +files/denyhosts-2.6-foreground_mode.patch,
+  +files/denyhosts-2.6-hostname.patch, +files/denyhosts-2.6-plugin_deny.patch,
+  +files/denyhosts-2.6-single_config_switch.patch:
+  Include multiple Fedora and Debian patches that also provide a fix for plugin
+  deny behavior (#264165 by Christoph Erdle).
 
   19 Sep 2012; Jeremy Olexa <darkside@gentoo.org> metadata.xml:
   dropping maintainership, two very minor bugs remain open, app otherwise works
@@ -201,4 +212,3 @@
   07 Oct 2005; Benjamin Smee <strerror@gentoo.org> +files/denyhosts.init,
   +files/denyhosts-gentoo.patch, +metadata.xml, +denyhosts-1.1.2.ebuild:
   Initial import. Thanks to Rene Zbinden and Mike Kelly for initial ebuild
-
