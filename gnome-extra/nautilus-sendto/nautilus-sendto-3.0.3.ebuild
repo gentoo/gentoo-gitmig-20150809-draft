@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/nautilus-sendto-3.0.3.ebuild,v 1.1 2012/05/13 00:24:42 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/nautilus-sendto-3.0.3.ebuild,v 1.2 2012/09/23 05:14:58 blueness Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.gnome.org"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE="cdr doc gajim +mail pidgin upnp"
 
 COMMON_DEPEND=">=x11-libs/gtk+-2.90.3:3[X(+)]
