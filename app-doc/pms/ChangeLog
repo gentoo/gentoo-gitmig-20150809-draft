@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/pms
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/ChangeLog,v 1.33 2012/09/20 15:34:56 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/ChangeLog,v 1.34 2012/09/23 09:52:20 ulm Exp $
+
+  23 Sep 2012; Ulrich Müller <ulm@gentoo.org> -pms-2.ebuild, -pms-3.ebuild,
+  pms-4_p20110118.ebuild, pms-5.ebuild:
+  Remove slotting; newer versions include all previous EAPIs. Remove old.
 
 *pms-5 (20 Sep 2012)
 
