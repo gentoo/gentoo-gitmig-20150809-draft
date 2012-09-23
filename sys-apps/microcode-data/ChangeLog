@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/microcode-data
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-data/ChangeLog,v 1.19 2012/09/13 10:04:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-data/ChangeLog,v 1.20 2012/09/23 08:15:03 phajdan.jr Exp $
+
+  23 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  microcode-data-20120606.ebuild:
+  x86 stable wrt bug #429198
 
   13 Sep 2012; Agostino Sarubbo <ago@gentoo.org>
   microcode-data-20120606.ebuild:
