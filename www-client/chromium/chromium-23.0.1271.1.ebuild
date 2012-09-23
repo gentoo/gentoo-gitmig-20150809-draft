@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-23.0.1255.0.ebuild,v 1.1 2012/09/05 18:33:23 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-23.0.1271.1.ebuild,v 1.1 2012/09/23 12:37:33 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -52,7 +52,6 @@ RDEPEND="app-arch/bzip2
 	kerberos? ( virtual/krb5 )
 	selinux? ( sys-libs/libselinux )"
 DEPEND="${RDEPEND}
-	!arm? ( >=dev-lang/nacl-toolchain-newlib-0_p9093 )
 	dev-lang/perl
 	dev-lang/yasm
 	dev-python/ply
@@ -99,35 +98,35 @@ pkg_setup() {
 }
 
 src_prepare() {
-	if ! use arm; then
-		ln -s /usr/$(get_libdir)/nacl-toolchain-newlib \
-			native_client/toolchain/linux_x86_newlib || die
-	fi
+	# if ! use arm; then
+	#	ln -s /usr/$(get_libdir)/nacl-toolchain-newlib \
+	#		native_client/toolchain/linux_x86_newlib || die
+	# fi
 
 	# zlib-1.2.5.1-r1 renames the OF macro in zconf.h, bug 383371.
 	# sed -i '1i#define OF(x) x' \
 	#	third_party/zlib/contrib/minizip/{ioapi,{,un}zip}.h || die
 
 	# Fix build without NaCl glibc toolchain.
-	epatch "${FILESDIR}/${PN}-ppapi-r0.patch"
+	# epatch "${FILESDIR}/${PN}-ppapi-r0.patch"
 
 	# Missing gyp files in tarball.
 	# https://code.google.com/p/chromium/issues/detail?id=144823
-	if [[ -e chrome/test/data/nacl/nacl_test_data.gyp ]]; then
-		die "tarball fixed, please remove workaround"
-	fi
+	# if [[ -e chrome/test/data/nacl/nacl_test_data.gyp ]]; then
+	#	die "tarball fixed, please remove workaround"
+	# fi
 
-	mkdir -p chrome/test/data/nacl
-	cat > chrome/test/data/nacl/nacl_test_data.gyp <<-EOF
-	{
-	  'targets': [
-	    {
-	      'target_name': 'nacl_tests',
-	      'type': 'none',
-	    },
-	  ],
-	}
-	EOF
+	# mkdir -p chrome/test/data/nacl
+	# cat > chrome/test/data/nacl/nacl_test_data.gyp <<-EOF
+	# {
+	#  'targets': [
+	#    {
+	#      'target_name': 'nacl_tests',
+	#      'type': 'none',
+	#    },
+	#  ],
+	# }
+	# EOF
 
 	epatch_user
 
@@ -214,6 +213,10 @@ src_configure() {
 	# Disable tcmalloc, it causes problems with e.g. NVIDIA
 	# drivers, bug #413637.
 	myconf+=" -Dlinux_use_tcmalloc=0"
+
+	# TODO: re-enable nacl after fixing build errors, see
+	# http://forums.gentoo.org/viewtopic-t-937222-highlight-chromium.html
+	myconf+=" -Ddisable_nacl=1"
 
 	# Disable glibc Native Client toolchain, we don't need it (bug #417019).
 	myconf+=" -Ddisable_glibc=1"
@@ -379,6 +382,9 @@ src_test() {
 		"DnsConfigServiceTest.GetSystemConfig" # bug #394883
 		"CertDatabaseNSSTest.ImportServerCert_SelfSigned" # bug #399269
 		"URLFetcher*" # bug #425764
+		"HTTPSOCSPTest.*" # bug #426630
+		"HTTPSEVCRLSetTest.*" # see above
+		"HTTPSCRLSetTest.*" # see above
 	)
 	runtest out/Release/net_unittests "${excluded_net_unittests[@]}"
 
@@ -397,12 +403,12 @@ src_install() {
 
 	doexe out/Release/chromedriver || die
 
-	if ! use arm; then
-		doexe out/Release/nacl_helper{,_bootstrap} || die
-		insinto "${CHROMIUM_HOME}"
-		doins out/Release/nacl_irt_*.nexe || die
-		doins out/Release/libppGoogleNaClPluginChrome.so || die
-	fi
+	# if ! use arm; then
+	#	doexe out/Release/nacl_helper{,_bootstrap} || die
+	#	insinto "${CHROMIUM_HOME}"
+	#	doins out/Release/nacl_irt_*.nexe || die
+	#	doins out/Release/libppGoogleNaClPluginChrome.so || die
+	# fi
 
 	newexe "${FILESDIR}"/chromium-launcher-r2.sh chromium-launcher.sh || die
 	if [[ "${CHROMIUM_SUFFIX}" != "" ]]; then
