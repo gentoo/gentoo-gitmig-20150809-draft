@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.81.ebuild,v 1.8 2012/05/05 08:05:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.81.ebuild,v 1.9 2012/09/23 10:09:14 pacho Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -12,7 +12,7 @@ SRC_URI="http://www.alsaplayer.org/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~mips ~ppc ~sparc x86"
-IUSE="alsa audiofile doc flac gtk id3tag jack mad mikmod nas nls ogg opengl oss vorbis xosd"
+IUSE="+alsa audiofile doc flac gtk id3tag jack mad mikmod nas nls ogg opengl oss vorbis xosd"
 
 RDEPEND="media-libs/libsndfile
 	sys-libs/zlib

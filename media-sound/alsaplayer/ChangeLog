@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/alsaplayer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.81 2012/05/05 08:05:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.82 2012/09/23 10:09:14 pacho Exp $
+
+  23 Sep 2012; Pacho Ramos <pacho@gentoo.org> alsaplayer-0.99.81.ebuild:
+  Default to +alsa, bug #422813 by Flameeyes.
 
   05 May 2012; Michał Górny <mgorny@gentoo.org> alsaplayer-0.99.81.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
