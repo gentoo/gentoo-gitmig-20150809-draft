@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/test-spec
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-spec/ChangeLog,v 1.28 2012/08/10 10:31:22 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-spec/ChangeLog,v 1.29 2012/09/23 15:53:38 graaff Exp $
+
+  23 Sep 2012; Hans de Graaff <graaff@gentoo.org> -test-spec-0.10.0-r2.ebuild,
+  -test-spec-0.10.0-r3.ebuild:
+  Cleanup.
 
   10 Aug 2012; Anthony G. Basile <blueness@gentoo.org>
   test-spec-0.10.0-r4.ebuild:

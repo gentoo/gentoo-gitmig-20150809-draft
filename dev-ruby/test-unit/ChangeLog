@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/test-unit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.62 2012/07/30 19:47:03 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.63 2012/09/23 15:54:57 graaff Exp $
+
+  23 Sep 2012; Hans de Graaff <graaff@gentoo.org> -test-unit-2.1.2.ebuild:
+  Cleanup.
 
   30 Jul 2012; Anthony G. Basile <blueness@gentoo.org> test-unit-2.4.8.ebuild:
   Stable ppc64, bug #420709
