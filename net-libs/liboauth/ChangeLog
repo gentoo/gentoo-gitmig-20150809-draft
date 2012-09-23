@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/liboauth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liboauth/ChangeLog,v 1.15 2012/07/08 19:41:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liboauth/ChangeLog,v 1.16 2012/09/23 04:01:11 blueness Exp $
+
+  23 Sep 2012; Anthony G. Basile <blueness@gentoo.org> liboauth-0.9.7.ebuild:
+  keyword ~ppc64, bug #379651
 
   08 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Drop myself out of metadata.
