@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/tevent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/ChangeLog,v 1.21 2012/09/20 17:53:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/ChangeLog,v 1.22 2012/09/23 18:44:44 vostorga Exp $
+
+*tevent-0.9.17 (23 Sep 2012)
+
+  23 Sep 2012; Víctor Ostorga <vostorga@gentoo.org> +tevent-0.9.17.ebuild:
+  Version bump to 0.9.17
 
   20 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   +files/add-py-file-0.9.14.patch, +files/tevent-version.patch:
