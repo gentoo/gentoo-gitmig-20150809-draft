@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/simplejson-2.6.2.ebuild,v 1.1 2012/09/23 03:45:31 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/simplejson-2.6.2.ebuild,v 1.2 2012/09/23 22:00:02 radhermit Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -23,7 +23,7 @@ PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
 src_test() {
 	testing() {
 		if [[ "$(python_get_implementation)" != "Jython" ]]; then
-			ln -fs ../$(ls -d build-${PYTHON_ABI}/lib*)/simplejson/_speedups.so simplejson/_speedups.so || die
+			ln -fs ../$(ls -d build-${PYTHON_ABI}/lib*)/simplejson/_speedups.so simplejson/_speedups.so || return 1
 		fi
 		PYTHONPATH="build-${PYTHON_ABI}/lib" "$(PYTHON)" simplejson/tests/__init__.py
 	}

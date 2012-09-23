@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/simplejson
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/ChangeLog,v 1.75 2012/09/23 03:47:40 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/ChangeLog,v 1.76 2012/09/23 22:00:02 radhermit Exp $
+
+  23 Sep 2012; Tim Harder <radhermit@gentoo.org> simplejson-2.6.2.ebuild:
+  Revert return value on failure.
 
   23 Sep 2012; Tim Harder <radhermit@gentoo.org> -simplejson-2.3.0.ebuild,
   -simplejson-2.5.0.ebuild, -simplejson-2.5.2.ebuild:
