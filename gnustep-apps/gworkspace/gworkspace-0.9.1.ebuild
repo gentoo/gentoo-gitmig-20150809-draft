@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gworkspace/gworkspace-0.9.1.ebuild,v 1.3 2012/08/15 01:08:36 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gworkspace/gworkspace-0.9.1.ebuild,v 1.4 2012/09/23 07:51:40 phajdan.jr Exp $
 
 EAPI=3
 inherit gnustep-2
@@ -9,7 +9,7 @@ DESCRIPTION="A workspace manager for GNUstep"
 HOMEPAGE="http://www.gnustep.org/experience/GWorkspace.html"
 SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/usr-apps/${P}.tar.gz"
 
-KEYWORDS="amd64 ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 LICENSE="GPL-2"
 SLOT="0"
 
