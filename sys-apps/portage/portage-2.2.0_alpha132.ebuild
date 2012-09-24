@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.0_alpha130.ebuild,v 1.1 2012/09/20 18:48:44 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.0_alpha132.ebuild,v 1.1 2012/09/24 04:08:28 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -211,6 +211,9 @@ src_prepare() {
 		echo -e '\nFEATURES="${FEATURES} force-prefix"' >> cnf/make.globals \
 			|| die "failed to append to make.globals"
 	fi
+
+	echo -e '\nFEATURES="${FEATURES} preserve-libs"' >> cnf/make.globals \
+		|| die "failed to append to make.globals"
 
 	cd "${S}/cnf" || die
 	if [ -f "make.conf.${ARCH}".diff ]; then
