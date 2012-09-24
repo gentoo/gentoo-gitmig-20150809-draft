@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dos2unix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.101 2012/09/06 22:06:44 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.102 2012/09/24 18:31:08 armin76 Exp $
+
+  24 Sep 2012; Raúl Porcel <armin76@gentoo.org> dos2unix-6.0.ebuild:
+  alpha/s390/sh/sparc stable wrt #421999
 
 *dos2unix-6.0.2 (06 Sep 2012)
 
