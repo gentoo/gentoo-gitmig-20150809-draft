@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/rar-4.2.0.ebuild,v 1.1 2012/07/10 08:44:37 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/rar-4.2.0.ebuild,v 1.2 2012/09/24 00:40:40 vapier Exp $
 EAPI=4
 
 DESCRIPTION="RAR compressor/uncompressor"
@@ -26,7 +26,7 @@ RDEPEND="sys-libs/glibc"
 
 S=${WORKDIR}/${PN}
 
-QA_DT_HASH="opt/rar/default.sfx
+QA_FLAGS_IGNORED="opt/rar/default.sfx
 	opt/rar/default-elf32.sfx
 	opt/rar/default-elf64.sfx
 	opt/rar/default-win32.sfx
@@ -37,7 +37,7 @@ QA_DT_HASH="opt/rar/default.sfx
 	opt/rar/Zip64.SFX
 	opt/rar/unrar
 	opt/rar/rar"
-QA_PRESTRIPPED=${QA_DT_HASH}
+QA_PRESTRIPPED=${QA_FLAGS_IGNORED}
 
 src_unpack() {
 	use x86 && unpack ${URI_x86##*/}

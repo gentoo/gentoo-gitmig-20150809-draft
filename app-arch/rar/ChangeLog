@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/rar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/ChangeLog,v 1.83 2012/07/10 08:44:37 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/ChangeLog,v 1.84 2012/09/24 00:40:40 vapier Exp $
+
+  24 Sep 2012; Mike Frysinger <vapier@gentoo.org> rar-4.0.1.ebuild,
+  rar-4.1.1.ebuild, rar-4.2.0.ebuild:
+  QA_DT_HASH (old/deprecated) -> QA_FLAGS_IGNORED (new hotness).
 
 *rar-4.2.0 (10 Jul 2012)
 
