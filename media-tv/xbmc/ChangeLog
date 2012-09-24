@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.147 2012/09/16 20:19:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.148 2012/09/24 18:02:24 vapier Exp $
+
+  24 Sep 2012; Mike Frysinger <vapier@gentoo.org> metadata.xml,
+  xbmc-9999.ebuild:
+  Control NFS support via USE=nfs #436034 by oceand.dev.
 
   16 Sep 2012; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
   Depend on taglib-1.8 to match upstream #434658 by BT.
