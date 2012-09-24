@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/livestation/livestation-3.2.0.ebuild,v 1.3 2012/02/05 05:53:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/livestation/livestation-3.2.0.ebuild,v 1.4 2012/09/24 00:45:33 vapier Exp $
 
 inherit eutils unpacker
 
@@ -22,7 +22,7 @@ DEPEND=""
 MY_PN=${PN/l/L}
 
 QA_TEXTRELS="opt/${MY_PN}/lib/*"
-QA_DT_HASH="opt/${MY_PN}/${MY_PN}.bin opt/${MY_PN}/lib/.* opt/${MY_PN}/plugins/imageformats/.*"
+QA_FLAGS_IGNORED="opt/${MY_PN}/${MY_PN}.bin opt/${MY_PN}/lib/.* opt/${MY_PN}/plugins/imageformats/.*"
 QA_PRESTRIPPED="opt/${MY_PN}/${MY_PN}.bin opt/${MY_PN}/lib/.* opt/${MY_PN}/plugins/imageformats/.*"
 
 RESTRICT="mirror"
