@@ -1,6 +1,10 @@
 # ChangeLog for games-board/freedoko
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/freedoko/ChangeLog,v 1.18 2012/05/04 04:30:10 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/freedoko/ChangeLog,v 1.19 2012/09/24 08:45:18 tupone Exp $
+
+  24 Sep 2012; Tupone Alfredo <tupone@gentoo.org> freedoko-0.7.10.ebuild,
+  +files/freedoko-0.7.10-gcc47.patch:
+  Fix build with gcc-4.7 Bug #428574 by Diego
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> freedoko-0.7.8.ebuild,
   freedoko-0.7.10.ebuild:
