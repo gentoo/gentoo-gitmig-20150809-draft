@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/aegisub/aegisub-2.1.9999.ebuild,v 1.2 2012/05/05 08:58:56 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/aegisub/aegisub-2.1.9999.ebuild,v 1.3 2012/09/24 13:51:49 pinkbyte Exp $
 
 EAPI="4"
 
@@ -8,7 +8,7 @@ WX_GTK_VER="2.8"
 inherit autotools wxwidgets subversion
 
 DESCRIPTION="Advanced SSA/ASS subtitle editor"
-HOMEPAGE="http://www.aegisub.net/"
+HOMEPAGE="http://www.aegisub.org/"
 ESVN_REPO_URI="http://svn.aegisub.org/branches/aegisub_2.1.9/aegisub/"
 
 LICENSE="GPL-2"

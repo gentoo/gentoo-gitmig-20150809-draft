@@ -1,6 +1,11 @@
 # ChangeLog for media-video/aegisub
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/aegisub/ChangeLog,v 1.5 2012/05/21 22:39:37 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/aegisub/ChangeLog,v 1.6 2012/09/24 13:51:49 pinkbyte Exp $
+
+  24 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> aegisub-2.1.9.ebuild,
+  aegisub-2.1.9999.ebuild:
+  Update HOMEPAGE wrt bug #436050. Thanks to Emery Hemingway for discovering
+  this issue
 
   21 May 2012; Jeff Horelick <jdhore@gentoo.org> aegisub-2.1.9.ebuild:
   marked x86 per bug 416777
