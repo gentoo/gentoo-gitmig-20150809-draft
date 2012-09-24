@@ -1,6 +1,10 @@
 # ChangeLog for app-text/acroread
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.189 2012/08/24 12:07:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.190 2012/09/24 00:42:12 vapier Exp $
+
+  24 Sep 2012; Mike Frysinger <vapier@gentoo.org> acroread-9.5.1-r1.ebuild,
+  acroread-9.5.1.ebuild:
+  QA_DT_HASH (old/deprecated) -> QA_FLAGS_IGNORED (new hotness).
 
   24 Aug 2012; Agostino Sarubbo <ago@gentoo.org> acroread-9.5.1-r1.ebuild:
   Stable for amd64, wrt bug #432498

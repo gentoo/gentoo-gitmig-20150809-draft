@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.5.1.ebuild,v 1.5 2012/04/18 23:01:11 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.5.1.ebuild,v 1.6 2012/09/24 00:42:12 vapier Exp $
 
 EAPI=4
 
@@ -58,7 +58,7 @@ QA_EXECSTACK="opt/Adobe/Reader9/Reader/intellinux/bin/acroread
 	opt/Adobe/Reader9/Reader/intellinux/lib/libcrypto.so.0.9.8
 	opt/Adobe/Reader9/Reader/intellinux/plug_ins/PPKLite.api"
 
-QA_DT_HASH="opt/Adobe/Reader9/Reader/intellinux/plug_ins3d/.*.x3d
+QA_FLAGS_IGNORED="opt/Adobe/Reader9/Reader/intellinux/plug_ins3d/.*.x3d
 	opt/Adobe/Reader9/Reader/intellinux/lib/lib.*
 	opt/Adobe/Reader9/Reader/intellinux/bin/SynchronizerApp-binary
 	opt/Adobe/Reader9/Reader/intellinux/bin/acroread
