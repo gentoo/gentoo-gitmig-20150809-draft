@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera-next
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.128 2012/09/21 15:30:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.129 2012/09/24 00:49:03 vapier Exp $
+
+  24 Sep 2012; Mike Frysinger <vapier@gentoo.org> opera-next-12.10.1597.ebuild,
+  opera-next-12.10.1605.ebuild, opera-next-12.50.1583.ebuild:
+  QA_DT_HASH (old/deprecated) -> QA_FLAGS_IGNORED (new hotness).
 
 *opera-next-12.10.1605 (21 Sep 2012)
 

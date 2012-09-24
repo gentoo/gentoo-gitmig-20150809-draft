@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-12.02.1578.ebuild,v 1.5 2012/09/12 13:46:15 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-12.02.1578.ebuild,v 1.6 2012/09/24 00:49:03 vapier Exp $
 
 EAPI=4
 inherit eutils fdo-mime gnome2-utils multilib pax-utils versionator
@@ -85,7 +85,7 @@ src_unpack() {
 
 src_prepare() {
 	export OPREFIX="/usr/$(get_libdir)"
-	export QA_DT_HASH="${OPREFIX}/${PN}/.*"
+	export QA_FLAGS_IGNORED="${OPREFIX}/${PN}/.*"
 	export QA_PRESTRIPPED="${OPREFIX}/${PN}/.*"
 
 	local LNGDIR="share/${PN}/locale"
