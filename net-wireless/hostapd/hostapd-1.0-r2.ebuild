@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-1.0-r2.ebuild,v 1.1 2012/09/24 15:42:53 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-1.0-r2.ebuild,v 1.2 2012/09/24 16:02:09 ago Exp $
 
-EAPI="2"
+EAPI="4"
 
-inherit toolchain-funcs eutils
+inherit toolchain-funcs
 
 DESCRIPTION="IEEE 802.11 wireless LAN Host AP daemon"
 HOMEPAGE="http://hostap.epitest.fi"
@@ -25,11 +25,11 @@ DEPEND="ssl? ( dev-libs/openssl )
 		net-wireless/madwifi-old ) )"
 RDEPEND="${DEPEND}"
 
-S="${S}/hostapd"
+S="${S}/${PN}"
 
 src_prepare() {
 	sed -i -e "s:/etc/hostapd:/etc/hostapd/hostapd:g" \
-		"${S}/hostapd.conf"
+		"${S}/hostapd.conf" || die
 }
 
 src_configure() {
@@ -125,47 +125,42 @@ src_configure() {
 }
 
 src_compile() {
-	default_src_compile
-
-	#emake || die "emake failed"
+	emake V=1
 
 	if use ssl; then
-		emake nt_password_hash || die "emake nt_password_hash failed"
-		emake hlr_auc_gw || die "emake hlr_auc_gw failed"
+		emake V=1 nt_password_hash
+		emake V=1 hlr_auc_gw
 	fi
 }
 
 src_install() {
-	insinto /etc/hostapd
-	doins hostapd.conf hostapd.accept hostapd.deny \
-		hostapd.eap_user hostapd.radius_clients hostapd.sim_db hostapd.wpa_psk
-	fperms -R 600 /etc/hostapd
+	insinto /etc/${PN}
+	doins ${PN}.{conf,accept,deny,eap_user,radius_clients,sim_db,wpa_psk}
 
-	dosbin hostapd
-	dobin hostapd_cli
+	fperms -R 600 /etc/${PN}
 
-	use ssl && dobin nt_password_hash
-	use ssl && dobin hlr_auc_gw
+	dosbin ${PN}
+	dobin ${PN}_cli
 
-	newinitd "${FILESDIR}"/${PN}-init.d hostapd
-	newconfd "${FILESDIR}"/${PN}-conf.d hostapd
+	use ssl && dobin nt_password_hash hlr_auc_gw
 
-	doman hostapd.8 hostapd_cli.1
+	newinitd "${FILESDIR}"/${PN}-init.d ${PN}
+	newconfd "${FILESDIR}"/${PN}-conf.d ${PN}
+
+	doman ${PN}{.8,_cli.1}
 
 	dodoc ChangeLog README
-	if use wps; then
-		dodoc README-WPS
-	fi
+	use wps && dodoc README-WPS
 
 	docinto examples
 	dodoc wired.conf
 
 	if use logwatch; then
 		insinto /etc/log.d/conf/services/
-		doins logwatch/hostapd.conf
+		doins logwatch/${PN}.conf
 
 		exeinto /etc/log.d/scripts/services/
-		doexe logwatch/hostapd
+		doexe logwatch/${PN}
 	fi
 }
 
@@ -173,7 +168,7 @@ pkg_postinst() {
 	einfo
 	einfo "In order to use ${PN} you need to set up your wireless card"
 	einfo "for master mode in /etc/conf.d/net and then start"
-	einfo "/etc/init.d/hostapd."
+	einfo "/etc/init.d/${PN}."
 	einfo
 	einfo "Example configuration:"
 	einfo
@@ -188,7 +183,7 @@ pkg_postinst() {
 		einfo "You should remerge ${PN} after upgrading these packages."
 		einfo
 		einfo "Since you are using the madwifi-ng driver, you should disable or"
-		einfo "comment out wme_enabled from hostapd.conf, since it will"
+		einfo "comment out wme_enabled from ${PN}.conf, since it will"
 		einfo "cause problems otherwise (see bug #260377"
 	fi
 	#if [ -e "${KV_DIR}"/net/mac80211 ]; then
