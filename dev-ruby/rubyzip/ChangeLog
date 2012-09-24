@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubyzip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyzip/ChangeLog,v 1.23 2012/07/08 08:08:03 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyzip/ChangeLog,v 1.24 2012/09/24 19:12:51 ago Exp $
+
+  24 Sep 2012; Agostino Sarubbo <ago@gentoo.org> rubyzip-0.9.9.ebuild:
+  Stable for amd64, wrt bug #435824
 
   08 Jul 2012; Hans de Graaff <graaff@gentoo.org> -rubyzip-0.9.4-r1.ebuild:
   Remove old version.
