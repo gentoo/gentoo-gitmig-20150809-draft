@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ext4magic
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ext4magic/ChangeLog,v 1.6 2012/09/24 11:23:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ext4magic/ChangeLog,v 1.7 2012/09/24 14:00:50 pinkbyte Exp $
+
+  24 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
+  Package will be maintained by gokturk through proxy maintainers
 
 *ext4magic-0.3.1 (24 Sep 2012)
 
