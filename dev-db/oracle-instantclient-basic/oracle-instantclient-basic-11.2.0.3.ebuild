@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-11.2.0.3.ebuild,v 1.5 2012/03/09 17:04:41 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-11.2.0.3.ebuild,v 1.6 2012/09/24 18:49:44 haubi Exp $
 
 EAPI="4"
 
@@ -52,6 +52,14 @@ set_my_abivars() {
 	[[ -n ${MY_PLAT} ]]
 }
 
+oic_distfile_status() {
+	if [[ -r ${DISTDIR}/${1} ]]; then
+		echo "already here"
+	else
+		echo "still absent"
+	fi
+}
+
 pkg_nofetch() {
 	eerror "Please go to"
 	eerror "  ${HOMEPAGE%/*}/index-097480.html"
@@ -60,12 +68,12 @@ pkg_nofetch() {
 	do
 		set_my_abivars || continue
 		eerror "Instant Client for ${MY_PLAT}"
-		eerror "    Basic: ${MY_A}"
+		eerror "    Basic: ($(oic_distfile_status ${MY_A})) ${MY_A}"
 		if is_final_abi; then
-			eerror "    SDK:   ${MY_ASDK}"
+			eerror "    SDK:   ($(oic_distfile_status ${MY_ASDK})) ${MY_ASDK}"
 		fi
 	done
-	eerror "After downloading, put them in:"
+	eerror "After downloading these files (for *all* shown architectures), put them in:"
 	eerror "    ${DISTDIR}/"
 }
 
