@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/geocode-glib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/geocode-glib/ChangeLog,v 1.2 2012/09/24 17:19:40 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/geocode-glib/ChangeLog,v 1.3 2012/09/24 17:23:57 tetromino Exp $
+
+  24 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  geocode-glib-0.99.0.ebuild:
+  And one more USE=introspection fix.
 
   24 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   geocode-glib-0.99.0.ebuild:
