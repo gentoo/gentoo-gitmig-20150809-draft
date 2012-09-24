@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.167 2012/09/16 13:45:25 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.168 2012/09/24 01:50:14 vapier Exp $
+
+  24 Sep 2012; Mike Frysinger <vapier@gentoo.org> package.use.mask:
+  Drop old alsa/webm masks #433930.
 
   16 Sep 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> use.mask:
   Revert part of last commit, better wait for package.use.stable.mask
