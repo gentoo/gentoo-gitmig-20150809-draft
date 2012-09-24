@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1104 2012/09/22 01:35:24 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1105 2012/09/24 04:05:25 zmedico Exp $
+
+*portage-2.1.11.21 (24 Sep 2012)
+
+  24 Sep 2012; Zac Medico <zmedico@gentoo.org> +portage-2.1.11.21.ebuild,
+  -portage-2.1.11.19.ebuild:
+  2.1.11.21 version bump. This fixes bug #435834 (ensure that libx32/*.so is
+  executable). Bug #431026 tracks all bugs fixed since portage-2.1.11.9.
 
   22 Sep 2012; Zac Medico <zmedico@gentoo.org> portage-2.1.11.20.ebuild:
   Patch emerge man page to indicate that --depclean-lib-check is disabled by
