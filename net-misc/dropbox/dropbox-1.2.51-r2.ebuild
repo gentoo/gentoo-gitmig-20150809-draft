@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/dropbox-1.2.51-r2.ebuild,v 1.4 2012/07/08 20:44:32 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/dropbox-1.2.51-r2.ebuild,v 1.5 2012/09/24 00:46:46 vapier Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="+librsync-bundled"
 RESTRICT="mirror strip"
 
-QA_DT_HASH="opt/${PN}/.*"
+QA_FLAGS_IGNORED="opt/${PN}/.*"
 QA_EXECSTACK_x86="opt/dropbox/_ctypes.so"
 QA_EXECSTACK_amd64="opt/dropbox/_ctypes.so"
 

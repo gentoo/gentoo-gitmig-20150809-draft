@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk-g729
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-g729/ChangeLog,v 1.5 2012/03/18 22:00:26 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-g729/ChangeLog,v 1.6 2012/09/24 00:46:53 vapier Exp $
+
+  24 Sep 2012; Mike Frysinger <vapier@gentoo.org>
+  asterisk-g729-1.8.4.3.1.5-r2.ebuild, asterisk-g729-10.0.3.1.5.ebuild:
+  QA_DT_HASH (old/deprecated) -> QA_FLAGS_IGNORED (new hotness).
 
   18 Mar 2012; Tony Vroon <chainsaw@gentoo.org>
   asterisk-g729-10.0.3.1.5.ebuild:
@@ -34,4 +38,3 @@
   +asterisk-g729-1.8.4.3.1.5.ebuild, +metadata.xml:
   Initial commit. Ebuild by Jaco Kroon, subsequently ported to EAPI 4 and
   further improved by Agostino "ago" Sarubbo. Closes bug #33277.
-
