@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/nodejs-0.8.8.ebuild,v 1.1 2012/08/23 04:34:50 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/nodejs-0.9.1.ebuild,v 1.1 2012/09/24 05:06:00 patrick Exp $
 
-EAPI=3
+EAPI=4
 
 PYTHON_DEPEND="2"
 
@@ -35,9 +35,6 @@ src_prepare() {
 	# fix compilation on Darwin
 	# http://code.google.com/p/gyp/issues/detail?id=260
 	sed -i -e "/append('-arch/d" tools/gyp/pylib/gyp/xcode_emulation.py || die
-	# Hardcoded braindamage extraction helper
-	#sed -i -e 's:wafdir = join(prefix, "lib", "node"):wafdir = "/lib/node/":' tools/node-waf || die
-	python_convert_shebangs 2 tools/node-waf || die
 }
 
 src_configure() {
@@ -50,6 +47,7 @@ src_compile() {
 }
 
 src_install() {
+	docompress -x /lib/node_modules/npm/man
 	local MYLIB=$(get_libdir)
 	mkdir -p "${ED}"/usr/include/node
 	mkdir -p "${ED}"/usr/bin
@@ -59,8 +57,6 @@ src_install() {
 	cp -R deps/uv/include/* "${ED}"/usr/include/node || die "Failed to copy stuff"
 	cp 'out/Release/node' "${ED}"/usr/bin/node || die "Failed to copy stuff"
 	cp -R deps/npm/* "${ED}"/usr/"${MYLIB}"/node_modules/npm || die "Failed to copy stuff"
-	cp -R tools/wafadmin "${ED}"/usr/"${MYLIB}"/node/ || die "Failed to copy stuff"
-	cp 'tools/node-waf' "${ED}"/usr/bin/ || die "Failed to copy stuff"
 
 	# now add some extra stupid just because we can
 	# needs to be a symlink because of hardcoded paths ... no es bueno!

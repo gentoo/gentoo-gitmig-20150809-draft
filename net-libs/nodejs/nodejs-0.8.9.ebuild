@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/nodejs-0.9.0-r1.ebuild,v 1.1 2012/07/30 07:56:39 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/nodejs-0.8.9.ebuild,v 1.1 2012/09/24 05:06:00 patrick Exp $
 
-EAPI=3
+EAPI=4
 
 PYTHON_DEPEND="2"
 
@@ -50,6 +50,7 @@ src_compile() {
 }
 
 src_install() {
+	docompress -x /lib/node_modules/npm/man
 	local MYLIB=$(get_libdir)
 	mkdir -p "${ED}"/usr/include/node
 	mkdir -p "${ED}"/usr/bin
