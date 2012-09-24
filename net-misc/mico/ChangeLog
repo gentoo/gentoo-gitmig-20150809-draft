@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/mico
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/ChangeLog,v 1.35 2011/06/29 11:44:04 haubi Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/ChangeLog,v 1.36 2012/09/24 20:39:20 haubi Exp $
+
+*mico-2.3.13-r6 (24 Sep 2012)
+
+  24 Sep 2012; Michael Haubenwallner <haubi@gentoo.org> +mico-2.3.13-r6.ebuild:
+  Avoid the need to resolve hostnames within idl-compiler, bug#343827.
 
   29 Jun 2011; Michael Haubenwallner <haubi@gentoo.org>
   +files/find-bug343827.patch, mico-2.3.13-r5.ebuild, metadata.xml:
