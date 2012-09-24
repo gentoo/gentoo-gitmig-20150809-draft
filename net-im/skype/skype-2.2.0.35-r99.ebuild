@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-2.2.0.35-r99.ebuild,v 1.6 2012/08/11 18:34:28 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-2.2.0.35-r99.ebuild,v 1.7 2012/09/24 00:47:04 vapier Exp $
 
 EAPI=4
 inherit eutils gnome2-utils qt4-r2 pax-utils
@@ -61,7 +61,7 @@ DEPEND="!qt-static? ( x11-libs/qt-core:4 )
 
 QA_EXECSTACK="opt/skype/skype"
 QA_WX_LOAD="opt/skype/skype"
-QA_DT_HASH="opt/skype/skype"
+QA_FLAGS_IGNORED="opt/skype/skype"
 
 pkg_setup() { :; }
 
