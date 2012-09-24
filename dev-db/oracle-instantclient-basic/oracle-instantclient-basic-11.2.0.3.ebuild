@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-11.2.0.3.ebuild,v 1.6 2012/09/24 18:49:44 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-11.2.0.3.ebuild,v 1.7 2012/09/24 21:13:22 haubi Exp $
 
 EAPI="4"
 
@@ -163,7 +163,8 @@ src_install() {
 	eend $?
 
 	# create path for tnsnames.ora
-	dodir /etc/oracle
+	insinto /etc/oracle
+	doins "${FILESDIR}"/tnsnames.ora.sample
 
 	# Add OCI libs to library path
 	{
