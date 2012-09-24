@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.8.2-r3.ebuild,v 1.1 2012/09/22 02:41:02 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.8.2-r3.ebuild,v 1.2 2012/09/24 11:57:15 jer Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -108,6 +108,7 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.8.1-ldflags.patch
 	epatch "${FILESDIR}"/${PN}-1.8.2-CVE-2012-3548.patch
+	epatch "${FILESDIR}"/${PN}-1.8.2-python3.patch
 	sed -i -e 's|.png||g' ${PN}.desktop || die
 	eautoreconf
 }
