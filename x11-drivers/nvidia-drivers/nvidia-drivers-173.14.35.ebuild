@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-173.14.35.ebuild,v 1.8 2012/08/10 14:40:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-173.14.35.ebuild,v 1.9 2012/09/24 00:48:53 vapier Exp $
 
 EAPI="2"
 
@@ -99,7 +99,7 @@ QA_WX_LOAD_amd64="usr/lib32/opengl/nvidia/lib/libGL.so.${PV}
 
 QA_SONAME_amd64="usr/lib64/libnvcompiler.so.${PV}"
 
-QA_DT_HASH_amd64="usr/lib32/libcuda.so.${PV}
+QA_FLAGS_IGNORED_amd64="usr/lib32/libcuda.so.${PV}
 	usr/lib32/opengl/nvidia/lib/libGL.so.${PV}
 	usr/lib32/opengl/nvidia/lib/libGLcore.so.${PV}
 	usr/lib32/opengl/nvidia/lib/libnvidia-tls.so.${PV}
@@ -117,7 +117,7 @@ QA_DT_HASH_amd64="usr/lib32/libcuda.so.${PV}
 	opt/bin/nvidia-smi
 	opt/bin/nvidia-xconfig"
 
-QA_DT_HASH_x86="usr/lib/libcuda.so.${PV}
+QA_FLAGS_IGNORED_x86="usr/lib/libcuda.so.${PV}
 	usr/lib/libnvidia-cfg.so.${PV}
 	usr/lib/opengl/nvidia/lib/libGLcore.so.${PV}
 	usr/lib/opengl/nvidia/lib/libGL.so.${PV}

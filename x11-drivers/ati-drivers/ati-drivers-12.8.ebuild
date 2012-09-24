@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-12.8.ebuild,v 1.1 2012/09/09 22:42:15 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-12.8.ebuild,v 1.2 2012/09/24 00:48:41 vapier Exp $
 
 EAPI=4
 
@@ -106,7 +106,7 @@ QA_SONAME="
 	usr/lib\(32\|64\)\?/libamdocl\(32\|64\)\?.so
 "
 
-QA_DT_HASH="
+QA_FLAGS_IGNORED="
 	opt/bin/amdcccle
 	opt/bin/aticonfig
 	opt/bin/atiodcli

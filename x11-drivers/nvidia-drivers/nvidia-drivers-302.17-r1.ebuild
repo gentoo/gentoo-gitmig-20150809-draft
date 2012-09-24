@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-302.17-r1.ebuild,v 1.5 2012/08/10 14:40:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-302.17-r1.ebuild,v 1.6 2012/09/24 00:48:53 vapier Exp $
 
 EAPI="2"
 
@@ -134,7 +134,7 @@ QA_SONAME_x86="usr/lib/libnvidia-compiler.so.${PV}"
 QA_SONAME_amd64="usr/lib64/libnvidia-compiler.so.${PV}
 	usr/lib32/libnvidia-compiler.so.${PV}"
 
-QA_DT_HASH_amd64="usr/lib32/libcuda.so.${PV}
+QA_FLAGS_IGNORED_amd64="usr/lib32/libcuda.so.${PV}
 	usr/lib32/opengl/nvidia/lib/libGL.so.${PV}
 	usr/lib32/libnvidia-glcore.so.${PV}
 	usr/lib32/opengl/nvidia/lib/libnvidia-tls.so.${PV}
@@ -159,7 +159,7 @@ QA_DT_HASH_amd64="usr/lib32/libcuda.so.${PV}
 	opt/bin/nvidia-debugdump
 	opt/bin/nvidia-settings"
 
-QA_DT_HASH_x86="usr/lib/libcuda.so.${PV}
+QA_FLAGS_IGNORED_x86="usr/lib/libcuda.so.${PV}
 	usr/lib/libnvidia-cfg.so.${PV}
 	usr/lib/libnvidia-glcore.so.${PV}
 	usr/lib/libnvidia-ml.so.${PV}
