@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/snakeoil
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.52 2012/08/05 05:43:28 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.53 2012/09/24 14:44:44 patrick Exp $
+
+  24 Sep 2012; Patrick Lauer <patrick@gentoo.org> snakeoil-0.5.ebuild:
+  Adding mips keyword
 
   05 Aug 2012; Brian Harring <ferringb@gentoo.org> snakeoil-0.5.ebuild:
   Update the python dep to >=2.5 && not 3.0
