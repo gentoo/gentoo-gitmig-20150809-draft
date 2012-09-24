@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/hedgewars-0.9.17.ebuild,v 1.3 2012/01/15 15:39:48 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/hedgewars-0.9.17.ebuild,v 1.4 2012/09/24 00:40:19 vapier Exp $
 
 EAPI=2
 CMAKE_BUILD_TYPE=Release
@@ -15,7 +15,7 @@ LICENSE="GPL-2 Apache-2.0 FDL-1.3"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
-QA_DT_HASH=${GAMES_BINDIR}/hwengine # pascal sucks
+QA_FLAGS_IGNORED=${GAMES_BINDIR}/hwengine # pascal sucks
 QA_PRESTRIPPED=${GAMES_BINDIR}/hwengine # pascal sucks
 
 RDEPEND="x11-libs/qt-gui:4
