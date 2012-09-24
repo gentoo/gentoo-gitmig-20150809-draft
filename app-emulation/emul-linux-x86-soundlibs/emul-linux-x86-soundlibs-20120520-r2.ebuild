@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20120520-r2.ebuild,v 1.4 2012/07/25 14:33:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20120520-r2.ebuild,v 1.5 2012/09/24 00:41:07 vapier Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ IUSE="alsa"
 RDEPEND="~app-emulation/emul-linux-x86-baselibs-${PV}
 	~app-emulation/emul-linux-x86-medialibs-${PV}"
 
-QA_DT_HASH="usr/lib32/.*"
+QA_FLAGS_IGNORED="usr/lib32/.*"
 
 src_prepare() {
 	_ALLOWED="${S}/etc/env.d"

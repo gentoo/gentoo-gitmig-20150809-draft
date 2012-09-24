@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20120127.ebuild,v 1.3 2012/03/15 04:25:43 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20120127.ebuild,v 1.4 2012/09/24 00:41:18 vapier Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ KEYWORDS="-* amd64"
 DEPEND=""
 RDEPEND="!<app-emulation/emul-linux-x86-medialibs-10.2" # bug 168507
 
-QA_DT_HASH="usr/lib32/.*"
+QA_FLAGS_IGNORED="usr/lib32/.*"
 
 PYTHON_UPDATER_IGNORE="1"
 

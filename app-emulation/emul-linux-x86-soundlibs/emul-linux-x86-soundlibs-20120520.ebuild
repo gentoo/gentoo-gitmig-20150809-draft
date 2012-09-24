@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20120520.ebuild,v 1.1 2012/05/20 13:14:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20120520.ebuild,v 1.2 2012/09/24 00:41:07 vapier Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ RDEPEND="pulseaudio? ( media-sound/pulseaudio )
 	~app-emulation/emul-linux-x86-baselibs-${PV}
 	~app-emulation/emul-linux-x86-medialibs-${PV}"
 
-QA_DT_HASH="usr/lib32/.*"
+QA_FLAGS_IGNORED="usr/lib32/.*"
 
 src_prepare() {
 	_ALLOWED="${S}/etc/env.d"
