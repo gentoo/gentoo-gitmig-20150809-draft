@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ultraviolet
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ultraviolet/ChangeLog,v 1.7 2010/08/11 05:30:35 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ultraviolet/ChangeLog,v 1.8 2012/09/24 16:17:42 graaff Exp $
+
+*ultraviolet-1.0.0 (24 Sep 2012)
+
+  24 Sep 2012; Hans de Graaff <graaff@gentoo.org> +ultraviolet-1.0.0.ebuild:
+  Version bump.
 
   11 Aug 2010; Hans de Graaff <graaff@gentoo.org>
   -ultraviolet-0.10.2.ebuild:
