@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tomboy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.135 2012/09/22 13:58:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.136 2012/09/24 03:38:54 blueness Exp $
+
+  24 Sep 2012; Anthony G. Basile <blueness@gentoo.org> tomboy-1.10.1.ebuild:
+  stable ppc, bug #435202
 
   22 Sep 2012; Pacho Ramos <pacho@gentoo.org>
   +files/tomboy-1.10.1-gmime26.patch, -files/tomboy-1.4.2-insecure-path.patch,
