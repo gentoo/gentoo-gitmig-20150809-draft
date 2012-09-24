@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.820 2012/09/14 19:49:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.821 2012/09/24 19:14:08 ago Exp $
+
+  24 Sep 2012; Agostino Sarubbo <ago@gentoo.org> vlc-2.0.3.ebuild:
+  Stable for amd64, wrt bug #424435
 
   14 Sep 2012; Alexis Ballier <aballier@gentoo.org> metadata.xml:
   drop maintainership to herd
