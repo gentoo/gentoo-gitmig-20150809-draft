@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-4.1.ebuild,v 1.7 2012/02/21 21:42:21 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-4.1.ebuild,v 1.8 2012/09/24 00:44:31 vapier Exp $
 
 EAPI=2
 
@@ -31,8 +31,8 @@ RDEPEND="${DEPEND}
 
 S="${WORKDIR}"
 
-#QA_DT_HASH_x86="opt/cuda/.*"
-#QA_DT_HASH_amd64="opt/cuda/.*"
+#QA_FLAGS_IGNORED_x86="opt/cuda/.*"
+#QA_FLAGS_IGNORED_amd64="opt/cuda/.*"
 
 src_install() {
 	local DEST=/opt/cuda

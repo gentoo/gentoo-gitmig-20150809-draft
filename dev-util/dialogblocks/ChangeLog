@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/dialogblocks
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialogblocks/ChangeLog,v 1.22 2012/04/17 01:26:52 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialogblocks/ChangeLog,v 1.23 2012/09/24 00:44:25 vapier Exp $
+
+  24 Sep 2012; Mike Frysinger <vapier@gentoo.org> dialogblocks-4.33.ebuild:
+  QA_DT_HASH (old/deprecated) -> QA_FLAGS_IGNORED (new hotness).
 
   17 Apr 2012; Ryan Hill <dirtyepic@gentoo.org> metadata.xml:
   Set wxwidgets as maintainer.
@@ -125,4 +128,3 @@
   +files/dialogblocks.sh, +metadata.xml, +dialogblocks-3.06.ebuild:
   Initial ebuild import from the version published on DialogBlocks homepage.
   Closed bug #69791.
-

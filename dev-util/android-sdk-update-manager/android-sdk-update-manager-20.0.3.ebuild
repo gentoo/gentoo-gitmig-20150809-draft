@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/android-sdk-update-manager-20.0.3.ebuild,v 1.2 2012/08/20 14:22:24 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/android-sdk-update-manager-20.0.3.ebuild,v 1.3 2012/09/24 00:43:59 vapier Exp $
 
 EAPI="3"
 
@@ -27,7 +27,7 @@ RDEPEND=">=virtual/jdk-1.5
 	x86? ( x11-libs/gtk+:2 )"
 
 ANDROID_SDK_DIR="/opt/${PN}"
-QA_DT_HASH_x86="
+QA_FLAGS_IGNORED_x86="
 	${ANDROID_SDK_DIR/\/}/tools/emulator
 	${ANDROID_SDK_DIR/\/}/tools/adb
 	${ANDROID_SDK_DIR/\/}/tools/mksdcard
@@ -36,7 +36,7 @@ QA_DT_HASH_x86="
 	${ANDROID_SDK_DIR/\/}/tools/zipalign
 	${ANDROID_SDK_DIR/\/}/tools/dmtracedump
 "
-QA_DT_HASH_amd64="${QA_DT_HASH_x86}"
+QA_FLAGS_IGNORED_amd64="${QA_FLAGS_IGNORED_x86}"
 
 S="${WORKDIR}/android-sdk-linux"
 
