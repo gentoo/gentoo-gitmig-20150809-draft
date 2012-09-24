@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-5.1.3535.3218-r1.ebuild,v 1.8 2012/07/26 15:09:21 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-5.1.3535.3218-r1.ebuild,v 1.9 2012/09/24 00:48:04 vapier Exp $
 
 EAPI=2
 
@@ -71,7 +71,7 @@ opt/googleearth/libgoogleearth_lib.so
 opt/googleearth/libmoduleframework.so
 "
 
-QA_DT_HASH="opt/${PN}/.*"
+QA_FLAGS_IGNORED="opt/${PN}/.*"
 
 pkg_setup() {
 	GCC_VER="$(gcc-version)"

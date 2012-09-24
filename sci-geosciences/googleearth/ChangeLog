@@ -1,6 +1,12 @@
 # ChangeLog for sci-geosciences/googleearth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/ChangeLog,v 1.35 2012/07/26 15:09:21 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/ChangeLog,v 1.36 2012/09/24 00:48:04 vapier Exp $
+
+  24 Sep 2012; Mike Frysinger <vapier@gentoo.org>
+  googleearth-5.1.3535.3218-r1.ebuild, googleearth-5.2.1.1588.ebuild,
+  googleearth-6.0.2.2074.ebuild, googleearth-6.0.3.2197.ebuild,
+  googleearth-6.2.2.6613.ebuild:
+  QA_DT_HASH (old/deprecated) -> QA_FLAGS_IGNORED (new hotness).
 
   26 Jul 2012; Michael Palimaka <kensington@gentoo.org>
   googleearth-5.1.3535.3218-r1.ebuild, googleearth-5.2.1.1588.ebuild,
