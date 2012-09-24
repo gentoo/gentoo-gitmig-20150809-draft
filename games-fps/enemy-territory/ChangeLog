@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/enemy-territory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/ChangeLog,v 1.49 2012/02/05 06:01:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/ChangeLog,v 1.50 2012/09/24 00:33:35 vapier Exp $
+
+  24 Sep 2012; Mike Frysinger <vapier@gentoo.org> enemy-territory-2.60b.ebuild:
+  QA_DT_HASH (old/deprecated) -> QA_FLAGS_IGNORED (new hotness).
 
   05 Feb 2012; Mike Frysinger <vapier@gentoo.org> enemy-territory-2.60b.ebuild:
   Move to new unpacker eclass for unpack_makeself.

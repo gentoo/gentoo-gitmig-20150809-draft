@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.60b.ebuild,v 1.19 2012/02/05 06:01:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.60b.ebuild,v 1.20 2012/09/24 00:33:35 vapier Exp $
 
 inherit eutils unpacker games
 
@@ -42,7 +42,7 @@ QA_EXECSTACK="${dir:1}/et.x86
 	${dir:1}/etmain/cgame.mp.i386.so
 	${dir:1}/etmain/qagame.mp.i386.so
 	${dir:1}/etmain/ui.mp.i386.so"
-QA_DT_HASH="${QA_TEXTRELS}
+QA_FLAGS_IGNORED="${QA_TEXTRELS}
 	${QA_EXECSTACK}
 	${dir:1}/pb/pbweb.x86"
 QA_EXECSTACK_x86=${QA_EXECSTACK}
