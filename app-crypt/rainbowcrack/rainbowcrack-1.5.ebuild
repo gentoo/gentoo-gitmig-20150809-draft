@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/rainbowcrack/rainbowcrack-1.5.ebuild,v 1.1 2011/09/08 20:34:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/rainbowcrack/rainbowcrack-1.5.ebuild,v 1.2 2012/09/24 00:41:54 vapier Exp $
 
 EAPI=4
 inherit eutils
@@ -22,7 +22,7 @@ RESTRICT="mirror" # http://bugs.gentoo.org/show_bug.cgi?id=312497#c8
 
 RAINBOW_DESTDIR="opt/${PN}"
 
-QA_DT_HASH="${RAINBOW_DESTDIR}/.*"
+QA_FLAGS_IGNORED="${RAINBOW_DESTDIR}/.*"
 QA_PRESTRIPPED="${RAINBOW_DESTDIR}/.*"
 
 src_unpack() {
