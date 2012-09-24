@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-opengl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.108 2012/09/16 19:39:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.109 2012/09/24 17:58:08 armin76 Exp $
+
+  24 Sep 2012; Raúl Porcel <armin76@gentoo.org> eselect-opengl-1.2.6.1.ebuild:
+  alpha/ia64/sh/sparc stable wrt #432400
 
   16 Sep 2012; Markus Meier <maekke@gentoo.org> eselect-opengl-1.2.6.1.ebuild:
   arm stable, bug #432400
