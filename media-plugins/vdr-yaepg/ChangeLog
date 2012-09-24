@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/vdr-yaepg
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-yaepg/ChangeLog,v 1.9 2008/04/28 09:02:36 zzam Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-yaepg/ChangeLog,v 1.10 2012/09/24 17:24:14 hd_brummy Exp $
+
+*vdr-yaepg-0.0.10 (24 Sep 2012)
+
+  24 Sep 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +vdr-yaepg-0.0.10.ebuild:
+  bump, (no officell) release fixed by gentoo developers; converted to gettext,
+  removed obsolted i18n handling
 
   28 Apr 2008; Matthias Schwarzott <zzam@gentoo.org>
   vdr-yaepg-0.0.2.1.ebuild, vdr-yaepg-0.0.2.1-r1.ebuild:
