@@ -41,15 +41,15 @@ diff -ruN icclib.orig/Makefile.UNIX icclib/Makefile.UNIX
 -CCFLAGSDEF   = -DUNIX -c
 -CC        = cc $(CCFLAGS) $(INCFLAG)$(STDHDRS)
 +CCFLAGSDEF   = -DUNIX -fPIC -c
-+CC        = cc $(CCFLAGSDEF) $(CFLAGS) $(INCFLAG)$(STDHDRS)
++CC        = $(CC) $(CCFLAGSDEF) $(CFLAGS) $(INCFLAG)$(STDHDRS)
  CCOF      = -o 
 -LINKFLAGSDEF = -lm
 +LINKFLAGSDEF = -shared
  LINKLIBS  = 
 -LINK      = cc $(LINKFLAGS) $(LINKLIBS)
-+LINK      = cc $(LINKFLAGSDEF) $(LDFLAGS) $(LINKLIBS)
++LINK      = $(CC) $(LINKFLAGSDEF) $(LDFLAGS) $(LINKLIBS)
  LINKOF    = -o 
-+LIBU      = cc $(LINKFLAGSDEF) $(LDFLAGS) -Wl,-soname,libicc.so.$(ICCLIB_SOVERSION) $(LINKLIBS) -o
++LIBU      = $(CC) $(LINKFLAGSDEF) $(LDFLAGS) -Wl,-soname,libicc.so.$(ICCLIB_SOVERSION) $(LINKLIBS) -o
  
  .SUFFIXES:
  .SUFFIXES: .c $(SUFLIB) $(SUFOBJ) $(SUFEXE)
