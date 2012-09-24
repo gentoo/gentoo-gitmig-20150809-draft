@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/alsa-plugins
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.155 2012/09/07 13:08:18 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.156 2012/09/24 02:16:56 vapier Exp $
+
+  24 Sep 2012; Mike Frysinger <vapier@gentoo.org> alsa-plugins-1.0.26.ebuild:
+  Fix hardcoded /usr/lib/ path to use multilib paths #410261 by Michał Górny.
 
 *alsa-plugins-1.0.26 (07 Sep 2012)
 

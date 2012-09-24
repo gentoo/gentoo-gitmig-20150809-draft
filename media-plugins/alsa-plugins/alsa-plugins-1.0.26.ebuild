@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.26.ebuild,v 1.1 2012/09/07 13:08:18 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.26.ebuild,v 1.2 2012/09/24 02:16:56 vapier Exp $
 
 EAPI=4
 
 MY_P=${P/_/}
 
-inherit autotools eutils base flag-o-matic
+inherit autotools eutils base flag-o-matic multilib
 
 DESCRIPTION="ALSA extra plugins"
 HOMEPAGE="http://www.alsa-project.org/"
@@ -78,6 +78,9 @@ src_install() {
 		doins "${FILESDIR}"/pulse-default.conf
 		insinto /usr/share/alsa/alsa.conf.d
 		doins "${FILESDIR}"/51-pulseaudio-probe.conf
+		sed -i \
+			-e "s:/lib/:/$(get_libdir)/:" \
+			"${ED}"/usr/share/alsa/alsa.conf.d/51-pulseaudio-probe.conf || die #410261
 	fi
 
 	prune_libtool_files --all
