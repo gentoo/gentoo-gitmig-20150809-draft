@@ -1,8 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xml-mapping/xml-mapping-0.9.1.ebuild,v 1.3 2010/05/22 13:26:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xml-mapping/xml-mapping-0.9.1.ebuild,v 1.4 2012/09/24 16:30:05 graaff Exp $
 
-EAPI="2"
+EAPI=4
+# ruby19, jruby → fails tests
 USE_RUBY="ruby18"
 
 RUBY_FAKEGEM_TASK_TEST=""
@@ -19,10 +20,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-ruby_add_bdepend "test? ( virtual/ruby-test-unit )"
-
 each_ruby_test() {
-	${RUBY} test/all_tests.rb || die "Failed to run tests."
+	${RUBY} -I. test/all_tests.rb || die "Failed to run tests."
 }
 
 all_ruby_install() {
