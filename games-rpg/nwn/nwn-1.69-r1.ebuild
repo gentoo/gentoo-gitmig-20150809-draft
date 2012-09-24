@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.69-r1.ebuild,v 1.5 2011/12/11 01:16:01 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.69-r1.ebuild,v 1.6 2012/09/24 00:38:12 vapier Exp $
 
 EAPI=2
 inherit eutils games
@@ -21,7 +21,7 @@ KEYWORDS="-* amd64 x86"
 IUSE="sou hou"
 RESTRICT="mirror strip"
 
-QA_DT_HASH="/opt/nwn/en/nwserver /opt/nwn/en/nwmain /opt/nwn/lib/libSDL-1.2.so.0.11.2 /opt/nwn/lib/libelf.so.1"
+QA_FLAGS_IGNORED="/opt/nwn/en/nwserver /opt/nwn/en/nwmain /opt/nwn/lib/libSDL-1.2.so.0.11.2 /opt/nwn/lib/libelf.so.1"
 
 NWN_DATA=">=games-rpg/nwn-data-1.29-r3[sou?,hou?"
 

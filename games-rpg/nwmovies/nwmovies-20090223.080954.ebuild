@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwmovies/nwmovies-20090223.080954.ebuild,v 1.2 2010/06/28 22:27:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwmovies/nwmovies-20090223.080954.ebuild,v 1.3 2012/09/24 00:40:03 vapier Exp $
 
 EAPI=2
 inherit eutils games
@@ -26,7 +26,7 @@ DESTDIR="${GAMES_PREFIX_OPT}/nwn"
 QA_TEXTRELS="opt/nwn/nwmovies/binklib.so opt/nwn/nwmovies.so"
 QA_WX_LOAD="opt/nwn/nwmovies.so"
 QA_EXECSTACK="opt/nwn/nwmovies.so"
-QA_DT_HASH="opt/nwn/nwmovies/binklib.so opt/nwn/nwmovies/libdis/libdisasm.so opt/nwn/nwmovies.so"
+QA_FLAGS_IGNORED="opt/nwn/nwmovies/binklib.so opt/nwn/nwmovies/libdis/libdisasm.so opt/nwn/nwmovies.so"
 
 src_install() {
 	exeinto "${DESTDIR}"

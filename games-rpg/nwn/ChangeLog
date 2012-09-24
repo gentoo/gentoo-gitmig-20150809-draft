@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/nwn
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.77 2011/12/11 01:16:01 calchan Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.78 2012/09/24 00:38:12 vapier Exp $
+
+  24 Sep 2012; Mike Frysinger <vapier@gentoo.org> nwn-1.68-r5.ebuild,
+  nwn-1.69-r1.ebuild:
+  QA_DT_HASH (old/deprecated) -> QA_FLAGS_IGNORED (new hotness).
 
   11 Dec 2011; Denis Dupeyron <calchan@gentoo.org> nwn-1.68-r5.ebuild,
   nwn-1.69-r1.ebuild:
