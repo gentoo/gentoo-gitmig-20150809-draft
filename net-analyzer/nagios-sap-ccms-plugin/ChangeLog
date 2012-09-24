@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-sap-ccms-plugin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-sap-ccms-plugin/ChangeLog,v 1.12 2012/08/19 16:49:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-sap-ccms-plugin/ChangeLog,v 1.13 2012/09/24 00:47:14 vapier Exp $
+
+  24 Sep 2012; Mike Frysinger <vapier@gentoo.org>
+  nagios-sap-ccms-plugin-0.7.3-r1.ebuild, nagios-sap-ccms-plugin-0.8.ebuild:
+  QA_DT_HASH (old/deprecated) -> QA_FLAGS_IGNORED (new hotness).
 
   19 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org>
   -nagios-sap-ccms-plugin-0.7.3.ebuild:
