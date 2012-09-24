@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/tora
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.93 2012/02/09 14:27:56 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.94 2012/09/24 19:49:08 haubi Exp $
+
+  24 Sep 2012; Michael Haubenwallner <haubi@gentoo.org> tora-2.1.3-r1.ebuild,
+  +files/tora-2.1.3-gcc-4.7.patch:
+  Fix compilation with gcc-4.7, bug#430044.
 
   09 Feb 2012; Michael Haubenwallner <haubi@gentoo.org> metadata.xml:
   Taking over maintainership.

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-2.1.3-r1.ebuild,v 1.1 2011/12/10 02:04:05 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-2.1.3-r1.ebuild,v 1.2 2012/09/24 19:49:08 haubi Exp $
 
 EAPI=2
 
@@ -44,6 +44,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc-4.7.patch #430044
 	sed -i \
 		-e "/COPYING/ d" \
 		CMakeLists.txt || die "Removal of COPYING file failed"
