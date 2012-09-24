@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/mico-9999.ebuild,v 1.3 2011/05/26 20:47:56 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/mico-9999.ebuild,v 1.4 2012/09/24 21:03:50 haubi Exp $
 
 EAPI="3"
 
@@ -11,7 +11,7 @@ if [[ ${PV} == 9999 ]]; then
 	inherit darcs
 fi
 
-PATCH_VER=20110526
+PATCH_VER=20120924
 
 DESCRIPTION="A freely available and fully compliant implementation of the CORBA standard"
 HOMEPAGE="http://www.mico.org/"
@@ -71,11 +71,6 @@ src_prepare() {
 src_configure() {
 	tc-export CC CXX
 
-	if use gtk; then
-		# need gtk-1 wrapper for gtk-2
-		export PATH="${WORKDIR}"/helpers:${PATH}
-	fi
-
 	# Don't know which version of JavaCUP would suffice, but there is no
 	# configure argument to disable checking for JavaCUP.
 	# So we override the configure check to not find 'javac'.
@@ -98,8 +93,7 @@ src_configure() {
 
 	# '--without-*' or '--with-*=no' does not disable some features,
 	# the value needs to be empty instead.
-	# This applies to: gtk, pgsql, qt, tcl, bluetooth.
-	myconf --with-gtk=$(  use gtk      && echo "${EPREFIX}"/usr)
+	# This applies to: pgsql, qt, tcl, bluetooth.
 	myconf --with-pgsql=$(use postgres && echo "${EPREFIX}"/usr)
 	myconf --with-qt=$(   use qt4      && echo "${EPREFIX}"/usr)
 	myconf --with-tcl=$(  use tcl      && echo "${EPREFIX}"/usr)
@@ -108,6 +102,8 @@ src_configure() {
 	myconf --disable-wireless
 	# But --without-x works.
 	myconf $(use_with X x "${EPREFIX}"/usr)
+	# Same for gtk after patch 013, searches for gtk release.
+	myconf $(use_with gtk gtk 2)
 
 	# http://www.mico.org/pipermail/mico-devel/2009-April/010285.html
 	[[ ${CHOST} == *-hpux* ]] && append-cppflags -D_XOPEN_SOURCE_EXTENDED

@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/mico
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/ChangeLog,v 1.36 2012/09/24 20:39:20 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/ChangeLog,v 1.37 2012/09/24 21:03:50 haubi Exp $
+
+  24 Sep 2012; Michael Haubenwallner <haubi@gentoo.org> mico-9999.ebuild:
+  Update patchset: Drop obsole patches. Avoid the need to resolve hostnames
+  within idl-compiler, bug#343827. Search for gtk releases by major number, can
+  drop the gtk-1 wrapper. But still does not support gtk-3.
 
 *mico-2.3.13-r6 (24 Sep 2012)
 
