@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/tiff
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.214 2012/09/23 17:27:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.215 2012/09/24 06:42:41 ssuominen Exp $
+
+  24 Sep 2012; Samuli Suominen <ssuominen@gentoo.org> -tiff-4.0.2.ebuild:
+  old
 
   23 Sep 2012; Raúl Porcel <armin76@gentoo.org> tiff-4.0.2-r1.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #427166
