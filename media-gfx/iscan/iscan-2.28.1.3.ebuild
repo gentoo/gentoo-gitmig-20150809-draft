@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/iscan-2.28.1.3.ebuild,v 1.2 2012/07/01 12:49:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/iscan-2.28.1.3.ebuild,v 1.3 2012/09/24 00:45:14 vapier Exp $
 
 EAPI="4"
 
@@ -40,7 +40,7 @@ for X in ${IUSE_LINGUAS}; do IUSE="${IUSE} linguas_${X}"; done
 
 QA_PRESTRIPPED="usr/$(get_libdir)/libesmod.so.*"
 QA_TEXTRELS="${QA_PRESTRIPPED}"
-QA_DT_HASH="${QA_PRESTRIPPED}"
+QA_FLAGS_IGNORED="${QA_PRESTRIPPED}"
 
 # Upstream ships broken sanity test
 RESTRICT="test"
