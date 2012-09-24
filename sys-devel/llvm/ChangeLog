@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.91 2012/08/24 14:23:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.92 2012/09/24 11:43:29 nativemad Exp $
+
+  24 Sep 2012; Andreas Schuerch <nativemad@gentoo.org> llvm-3.0-r2.ebuild:
+  x86 stable, see bug 417027. Thanks Myckel Habets.
 
   24 Aug 2012; Agostino Sarubbo <ago@gentoo.org> llvm-3.0-r2.ebuild:
   Stable for amd64, wrt bug #417027
