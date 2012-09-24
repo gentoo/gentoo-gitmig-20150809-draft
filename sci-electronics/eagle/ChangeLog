@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/eagle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/ChangeLog,v 1.53 2012/07/07 13:00:07 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/ChangeLog,v 1.54 2012/09/24 00:47:51 vapier Exp $
+
+  24 Sep 2012; Mike Frysinger <vapier@gentoo.org> eagle-4.16_p2-r2.ebuild,
+  eagle-5.10.0-r1.ebuild, eagle-5.11.0.ebuild, eagle-6.2.0.ebuild,
+  eagle-6.2.1_beta.ebuild:
+  QA_DT_HASH (old/deprecated) -> QA_FLAGS_IGNORED (new hotness).
 
 *eagle-6.2.1_beta (07 Jul 2012)
 

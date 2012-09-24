@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-5.11.0.ebuild,v 1.3 2011/08/08 19:18:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-5.11.0.ebuild,v 1.4 2012/09/24 00:47:51 vapier Exp $
 
 EAPI="1"
 
@@ -17,7 +17,7 @@ SLOT="0"
 
 SRC_URI="ftp://ftp.cadsoft.de/eagle/program/${PV%\.[0-9]}/${PN}-lin-${PV}.run"
 
-QA_DT_HASH="opt/eagle-${PV}/bin/eagle"
+QA_FLAGS_IGNORED="opt/eagle-${PV}/bin/eagle"
 
 RDEPEND="sys-libs/glibc
 	x11-libs/libXext
