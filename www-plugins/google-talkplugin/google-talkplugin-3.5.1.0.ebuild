@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-3.5.1.0.ebuild,v 1.2 2012/09/16 19:06:50 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-3.5.1.0.ebuild,v 1.3 2012/09/24 00:49:11 vapier Exp $
 
 EAPI=4
 
@@ -59,7 +59,7 @@ QA_EXECSTACK="${INSTALL_BASE}/GoogleTalkPlugin"
 
 QA_TEXTRELS="${INSTALL_BASE}/libnpg*.so"
 
-QA_DT_HASH="${INSTALL_BASE}/libnpg.*so
+QA_FLAGS_IGNORED="${INSTALL_BASE}/libnpg.*so
 	${INSTALL_BASE}/lib/libCg.*so
 	${INSTALL_BASE}/GoogleTalkPlugin"
 
