@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/foldingathome-6.34-r1.ebuild,v 1.1 2011/06/28 15:14:16 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/foldingathome-6.34-r1.ebuild,v 1.2 2012/09/24 00:47:31 vapier Exp $
 
 EAPI="3"
 
@@ -19,7 +19,7 @@ S="${WORKDIR}"
 
 I="opt/foldingathome"
 
-QA_DT_HASH="${I}/.*"
+QA_FLAGS_IGNORED="${I}/.*"
 QA_PRESTRIPPED="${I}/fah6"
 
 pkg_setup() {
