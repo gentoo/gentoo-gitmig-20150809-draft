@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/geocode-glib/geocode-glib-0.99.0.ebuild,v 1.1 2012/05/15 05:57:42 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/geocode-glib/geocode-glib-0.99.0.ebuild,v 1.2 2012/09/24 17:19:40 tetromino Exp $
 
 EAPI="4"
 
@@ -19,9 +19,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE="+introspection test"
 
 RDEPEND="dev-libs/glib:2
-	>=dev-libs/json-glib-0.13.1
+	>=dev-libs/json-glib-0.13.1[introspection?]
 	gnome-base/gvfs[http]
-	net-libs/libsoup:2.4
+	net-libs/libsoup:2.4[introspection?]
 	introspection? ( >=dev-libs/gobject-introspection-0.6.3 )
 "
 DEPEND="${RDEPEND}
