@@ -2,6 +2,7 @@ This is required when passing --without-libnotify because otherwise the first ca
 PKG_CHECK_MODULES is not called and the ./configure will bail out.
 
 http://bugs.gentoo.org/435586
+http://code.google.com/p/transmission-remote-gtk/issues/detail?id=216
 
 --- configure.ac
 +++ configure.ac
