@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.3.1.ebuild,v 1.12 2012/08/08 16:31:43 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.3.1.ebuild,v 1.13 2012/09/24 04:56:49 radhermit Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ PYTHON_USE_WITH="xml"
 
 GCONF_DEBUG=no
 
-inherit autotools eutils flag-o-matic gnome2 python
+inherit autotools eutils flag-o-matic gnome2 python boost-utils
 
 MY_P="${P/_/}"
 S="${WORKDIR}/${MY_P}"
@@ -72,17 +72,7 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 	>=dev-util/intltool-0.29"
 
-pkg_setup() {
-	G2CONF="${G2CONF} --without-perl"
-	G2CONF="${G2CONF} --enable-poppler-cairo"
-	G2CONF="${G2CONF} $(use_with gnome gnome-vfs)"
-	G2CONF="${G2CONF} $(use_with inkjar)"
-	G2CONF="${G2CONF} $(use_enable lcms)"
-	G2CONF="${G2CONF} $(use_enable nls)"
-	G2CONF="${G2CONF} $(use_with spell aspell)"
-	G2CONF="${G2CONF} $(use_with spell gtkspell)"
-	DOCS="AUTHORS ChangeLog NEWS README*"
-}
+DOCS="AUTHORS ChangeLog NEWS README*"
 
 src_prepare() {
 	gnome2_src_prepare
@@ -96,6 +86,19 @@ src_prepare() {
 }
 
 src_configure() {
+	G2CONF="${G2CONF}
+		--without-perl
+		--enable-poppler-cairo
+		$(use_with gnome gnome-vfs)
+		$(use_with inkjar)
+		$(use_enable lcms)
+		$(use_enable nls)
+		$(use_with spell aspell)
+		$(use_with spell gtkspell)"
+
+	# support building with >=boost-1.50
+	append-cppflags -I$(boost-utils_get_includedir)
+
 	# aliasing unsafe wrt #310393
 	append-flags -fno-strict-aliasing
 	gnome2_src_configure
