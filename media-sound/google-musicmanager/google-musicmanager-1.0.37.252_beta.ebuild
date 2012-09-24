@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/google-musicmanager/google-musicmanager-1.0.37.252_beta.ebuild,v 1.3 2012/08/26 04:46:41 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/google-musicmanager/google-musicmanager-1.0.37.252_beta.ebuild,v 1.4 2012/09/24 00:46:23 vapier Exp $
 
 EAPI=4
 
@@ -49,7 +49,7 @@ INSTALL_BASE="opt/google/musicmanager"
 
 QA_TEXTRELS="${INSTALL_BASE}/libmpgdec.so.0"
 
-QA_DT_HASH="${INSTALL_BASE}/.*"
+QA_FLAGS_IGNORED="${INSTALL_BASE}/.*"
 
 S="${WORKDIR}/${INSTALL_BASE}"
 
