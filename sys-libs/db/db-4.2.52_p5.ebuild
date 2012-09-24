@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.2.52_p5.ebuild,v 1.7 2012/05/24 05:34:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.2.52_p5.ebuild,v 1.8 2012/09/24 00:31:53 vapier Exp $
 
 inherit eutils db java-pkg-opt-2 multilib
 
@@ -27,7 +27,7 @@ done
 LICENSE="DB"
 SLOT="4.2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="tcl java doc cxx"
+IUSE="tcl java doc cxx rpc"
 
 DEPEND="tcl? ( >=dev-lang/tcl-8.4 )
 	java? ( >=virtual/jdk-1.4 )"
@@ -92,7 +92,7 @@ src_compile() {
 		--libdir=/usr/"$(get_libdir)" \
 		--enable-compat185 \
 		--with-uniquename \
-		--enable-rpc \
+		$(use_enable rpc) \
 		--host="${CHOST}" \
 		${myconf} "${javaconf}" || die "configure failed"
 

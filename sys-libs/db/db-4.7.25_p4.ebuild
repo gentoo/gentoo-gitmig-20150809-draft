@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.7.25_p4.ebuild,v 1.15 2012/05/24 05:34:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.7.25_p4.ebuild,v 1.16 2012/09/24 00:31:53 vapier Exp $
 
 inherit eutils db flag-o-matic java-pkg-opt-2 autotools multilib
 
@@ -27,7 +27,7 @@ done
 LICENSE="OracleDB"
 SLOT="4.7"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="doc java cxx tcl test"
+IUSE="doc java cxx tcl test rpc"
 
 # the entire testsuite needs the TCL functionality
 DEPEND="tcl? ( >=dev-lang/tcl-8.4 )
@@ -116,7 +116,7 @@ src_compile() {
 		--enable-compat185 \
 		--enable-o_direct \
 		--without-uniquename \
-		--enable-rpc \
+		$(use_enable rpc) \
 		$(use arm && echo --with-mutex=ARM/gcc-assembly) \
 		$(use amd64 && echo --with-mutex=x86/gcc-assembly) \
 		$(use_enable cxx) \
