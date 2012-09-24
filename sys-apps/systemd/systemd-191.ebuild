@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-191.ebuild,v 1.1 2012/09/22 16:15:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-191.ebuild,v 1.2 2012/09/24 12:51:44 mgorny Exp $
 
 EAPI=4
 
@@ -66,7 +66,8 @@ src_prepare() {
 	sed -i -e 's:libudev\.la:-ludev:' Makefile.am
 
 	local PATCHES=(
-		"${FILESDIR}"/0001-Disable-udev-targets-for-udev-190.patch
+		"${FILESDIR}"/${PV}-0001-Disable-udev-targets-for-udev-190.patch
+		"${FILESDIR}"/${PV}-0002-journal-bring-mmap-cache-prototype-in-sync.patch
 	)
 
 	autotools-utils_src_prepare
