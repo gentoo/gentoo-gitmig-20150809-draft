@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/gweled
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gweled/ChangeLog,v 1.15 2012/05/04 04:45:28 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gweled/ChangeLog,v 1.16 2012/09/24 01:54:51 mr_bones_ Exp $
+
+*gweled-0.9.1 (24 Sep 2012)
+
+  24 Sep 2012; Michael Sterrett <mr_bones_@gentoo.org> +gweled-0.9.1.ebuild:
+  version bump - bug #395559 with patch from Peter Fox
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> gweled-0.7.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -56,4 +61,3 @@
   28 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> gweled-0.3.ebuild,
   metadata.xml:
   initial commit; ebuild supplied by Jeff Saucier via bug 34631 (modified)
-
