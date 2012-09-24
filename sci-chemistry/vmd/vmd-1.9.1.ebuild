@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.9.1.ebuild,v 1.3 2012/09/05 07:00:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.9.1.ebuild,v 1.4 2012/09/24 00:47:45 vapier Exp $
 
 EAPI=4
 
@@ -51,10 +51,10 @@ VMD_DOWNLOAD="http://www.ks.uiuc.edu/Development/Download/download.cgi?PackageNa
 # Binary only plugin!!
 QA_TEXTRELS="usr/lib*/vmd/plugins/LINUX/tcl/intersurf1.1/bin/intersurf.so"
 QA_PRESTRIPPED="usr/lib*/vmd/plugins/LINUX/tcl/intersurf1.1/bin/intersurf.so"
-QA_DT_HASH_amd64="
+QA_FLAGS_IGNORED_amd64="
 	usr/lib64/vmd/plugins/LINUX/tcl/intersurf1.1/bin/intersurf.so
 	usr/lib64/vmd/plugins/LINUX/tcl/volutil1.3/volutil"
-QA_DT_HASH_x86="
+QA_FLAGS_IGNORED_x86="
 	usr/lib/vmd/plugins/LINUX/tcl/intersurf1.1/bin/intersurf.so
 	usr/lib/vmd/plugins/LINUX/tcl/volutil1.3/volutil"
 
