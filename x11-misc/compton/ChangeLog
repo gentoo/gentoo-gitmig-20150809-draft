@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/compton
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/compton/ChangeLog,v 1.6 2012/05/06 00:14:51 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/compton/ChangeLog,v 1.7 2012/09/24 11:20:28 hasufell Exp $
+
+*compton-0_pre20120913 (24 Sep 2012)
+
+  24 Sep 2012; Julian Ospald <hasufell@gentoo.org>
+  +compton-0_pre20120913.ebuild:
+  version bump wrt #436042
 
   06 May 2012; Julian Ospald <hasufell@gentoo.org>
   compton-0_pre20120330.ebuild:
