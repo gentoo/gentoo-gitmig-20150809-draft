@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/moinmoin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/ChangeLog,v 1.80 2012/09/22 02:10:23 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/ChangeLog,v 1.81 2012/09/24 23:07:05 radhermit Exp $
+
+*moinmoin-1.9.5 (24 Sep 2012)
+
+  24 Sep 2012; Tim Harder <radhermit@gentoo.org> +moinmoin-1.9.5.ebuild:
+  Version bump.
 
   22 Sep 2012; Anthony G. Basile <blueness@gentoo.org> moinmoin-1.9.4.ebuild:
   keyword ~arm, bug #433978
