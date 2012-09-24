@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/opengtl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opengtl/ChangeLog,v 1.11 2012/09/24 11:41:31 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opengtl/ChangeLog,v 1.12 2012/09/24 15:18:14 johu Exp $
+
+  24 Sep 2012; Johannes Huber <johu@gentoo.org> -opengtl-0.9.15.2.ebuild:
+  Remove old.
 
   24 Sep 2012; Andreas Schuerch <nativemad@gentoo.org> opengtl-0.9.16.ebuild:
   x86 stable, see bug 417027. Thanks Myckel Habets.
@@ -47,4 +50,3 @@
   22 Jul 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   +opengtl-0.9.15.1.ebuild, +metadata.xml:
   New library, dependency of app-office/calligra
-
