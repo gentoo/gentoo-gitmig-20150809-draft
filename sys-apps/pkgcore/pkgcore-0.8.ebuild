@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.8.ebuild,v 1.1 2012/08/05 05:49:06 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.8.ebuild,v 1.2 2012/09/24 14:48:21 patrick Exp $
 
 EAPI="3"
 DISTUTILS_SRC_TEST="setup.py"
@@ -13,7 +13,7 @@ SRC_URI="http://pkgcore.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="-doc build"
 
 RDEPEND=">=dev-lang/python-2.5
