@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/fmod-4.38.00.ebuild,v 1.4 2011/11/20 04:49:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/fmod-4.38.00.ebuild,v 1.5 2012/09/24 00:45:16 vapier Exp $
 
 inherit versionator
 
@@ -18,7 +18,7 @@ IUSE="examples"
 
 RESTRICT="strip test"
 
-QA_DT_HASH="opt/fmodex/tools/fsbanklib/.*"
+QA_FLAGS_IGNORED="opt/fmodex/tools/fsbanklib/.*"
 
 QA_TEXTRELS="opt/fmodex/fmoddesignerapi/api/lib/*
 opt/fmodex/api/lib/*"

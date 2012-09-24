@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/fmod
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/ChangeLog,v 1.40 2011/11/20 04:49:36 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/ChangeLog,v 1.41 2012/09/24 00:45:16 vapier Exp $
+
+  24 Sep 2012; Mike Frysinger <vapier@gentoo.org> fmod-3.75.ebuild,
+  fmod-4.38.00.ebuild, fmod-4.38.02.ebuild:
+  QA_DT_HASH (old/deprecated) -> QA_FLAGS_IGNORED (new hotness).
 
   20 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> fmod-4.38.00.ebuild,
   fmod-4.38.02.ebuild:
