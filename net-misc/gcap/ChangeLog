@@ -1,10 +1,12 @@
 # ChangeLog for net-misc/gcap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gcap/ChangeLog,v 1.1 2012/08/20 15:08:29 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gcap/ChangeLog,v 1.2 2012/09/25 11:15:43 ago Exp $
+
+  25 Sep 2012; Agostino Sarubbo <ago@gentoo.org> gcap-0.1.1.ebuild:
+  Stable for AMD64, wrt bug #435876
 
 *gcap-0.1.1 (20 Aug 2012)
 
   20 Aug 2012; Julian Ospald <hasufell@gentoo.org> +gcap-0.1.1.ebuild,
   +metadata.xml:
   initial import
-
