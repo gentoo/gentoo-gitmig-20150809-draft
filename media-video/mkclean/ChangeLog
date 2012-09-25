@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mkclean
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkclean/ChangeLog,v 1.4 2012/06/12 21:42:24 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkclean/ChangeLog,v 1.5 2012/09/25 10:55:52 radhermit Exp $
+
+*mkclean-0.8.7 (25 Sep 2012)
+
+  25 Sep 2012; Tim Harder <radhermit@gentoo.org> +mkclean-0.8.7.ebuild:
+  Version bump.
 
   12 Jun 2012; Stefan Briesenick <sbriesen@gentoo.org> -mkclean-0.8.6.ebuild:
   removed old ebuild
