@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/maildrop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.134 2012/09/25 11:32:18 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.135 2012/09/25 11:33:37 eras Exp $
+
+  25 Sep 2012; Eray Aslan <eras@gentoo.org> -maildrop-2.5.4.ebuild,
+  -maildrop-2.5.5.ebuild:
+  Drop old
 
 *maildrop-2.6.0 (25 Sep 2012)
 
