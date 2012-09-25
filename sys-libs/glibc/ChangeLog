@@ -1,5 +1,8 @@
 # ChangeLog for sys-libs/glibc
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.890 2012/09/15 23:13:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.891 2012/09/25 01:03:18 vapier Exp $
+
+  25 Sep 2012; Mike Frysinger <vapier@gentoo.org> glibc-2.16.0.ebuild:
+  Add fix from upstream for x32 malloc failures #394175.
 
   15 Sep 2012; Mike Frysinger <vapier@gentoo.org> glibc-2.16.0.ebuild:
   Drop PaX patch as it doesn't seem to be needed anymore #431810.
