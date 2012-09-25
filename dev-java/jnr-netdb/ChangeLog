@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jnr-netdb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-netdb/ChangeLog,v 1.10 2012/05/28 17:55:54 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-netdb/ChangeLog,v 1.11 2012/09/25 10:45:51 sera Exp $
+
+*jnr-netdb-1.1.1 (25 Sep 2012)
+
+  25 Sep 2012; Ralph Sennhauser <sera@gentoo.org> +jnr-netdb-1.1.1.ebuild:
+  Version bump. #431936
 
 *jnr-netdb-1.0.6 (28 May 2012)
 
