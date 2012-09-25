@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/gnome-themes-standard-3.2.1.ebuild,v 1.10 2012/05/20 19:35:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/gnome-themes-standard-3.2.1.ebuild,v 1.11 2012/09/25 15:20:05 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -11,7 +11,7 @@ inherit gnome2
 DESCRIPTION="Adwaita theme for GNOME Shell"
 HOMEPAGE="http://www.gnome.org/"
 
-LICENSE="LGPL-2.1"
+LICENSE="LGPL-2.1+"
 SLOT="0"
 IUSE=""
 KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x64-solaris ~x86-solaris"
