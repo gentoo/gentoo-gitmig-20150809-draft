@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/text
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/text/ChangeLog,v 1.15 2012/09/14 13:14:16 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/text/ChangeLog,v 1.16 2012/09/25 14:16:31 nativemad Exp $
+
+  25 Sep 2012; Andreas Schuerch <nativemad@gentoo.org> text-0.11.2.2.ebuild:
+  x86 stable, see bug 421351
 
 *text-0.11.2.3 (14 Sep 2012)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/cmdlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cmdlib/ChangeLog,v 1.5 2012/09/12 15:41:58 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cmdlib/ChangeLog,v 1.6 2012/09/25 13:58:26 nativemad Exp $
+
+  25 Sep 2012; Andreas Schuerch <nativemad@gentoo.org> cmdlib-0.3.5.ebuild:
+  x86 stable, see bug 421351
 
   12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> cmdlib-0.3.5.ebuild:
   move dev-haskell/cmdlib/cmdlib-0.3.5.ebuild ebuild to mirror://hackage

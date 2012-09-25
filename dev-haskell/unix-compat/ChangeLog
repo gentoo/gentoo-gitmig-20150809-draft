@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/unix-compat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/unix-compat/ChangeLog,v 1.4 2012/09/12 15:57:28 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/unix-compat/ChangeLog,v 1.5 2012/09/25 14:00:53 nativemad Exp $
+
+  25 Sep 2012; Andreas Schuerch <nativemad@gentoo.org>
+  unix-compat-0.3.0.1.ebuild:
+  x86 stable, see bug 421351
 
   12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org>
   unix-compat-0.3.0.1.ebuild:
