@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14112 2012/09/19 23:51:42 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14113 2012/09/25 11:40:08 tetromino Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,23 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (25 Sep 2012)
+# GNOME 3.6 mask
+# Core libraries to be unmasked first:
+=dev-libs/atk-2.6*
+=dev-libs/gjs-1.34*
+=dev-libs/glib-2.34*:2
+=dev-libs/gobject-introspection-1.34*
+=dev-libs/gobject-introspection-common-1.34*
+=dev-python/pygobject-3.4*:3
+=dev-util/gdbus-codegen-2.34*
+=gnome-base/dconf-0.14*
+=gnome-base/gvfs-1.14*
+=net-libs/glib-networking-2.34*
+=x11-libs/gtk+-3.6*:3
+=x11-libs/vte-0.34*:2.90
+=x11-themes/gnome-themes-standard-3.6*
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (18 Sep 2012)
 # Mask until Pavel can test it.
