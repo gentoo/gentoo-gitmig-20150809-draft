@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.30.3.ebuild,v 1.12 2012/09/11 18:03:21 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.30.3.ebuild,v 1.13 2012/09/25 11:40:57 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="utils? 2"
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.gtk.org/"
 SRC_URI="${SRC_URI}
 	http://pkgconfig.freedesktop.org/releases/pkg-config-0.26.tar.gz" # pkg.m4 for eautoreconf
 
-LICENSE="LGPL-2"
+LICENSE="LGPL-2+"
 SLOT="2"
 IUSE="debug doc fam selinux +static-libs systemtap test utils xattr"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd ~x86-linux"
