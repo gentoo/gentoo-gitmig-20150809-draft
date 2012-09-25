@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-1.32.1.ebuild,v 1.7 2012/09/25 11:42:54 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-1.34.0.ebuild,v 1.1 2012/09/25 11:42:54 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -20,14 +20,14 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE="doc doctool test"
 
 RDEPEND=">=dev-libs/gobject-introspection-common-${PV}
-	>=dev-libs/glib-2.31.22:2
+	>=dev-libs/glib-2.34:2
 	doctool? ( dev-python/mako )
 	virtual/libffi"
 # Wants real bison, not virtual/yacc
 DEPEND="${RDEPEND}
-	virtual/pkgconfig
 	sys-devel/bison
 	sys-devel/flex
+	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.15 )"
 # PDEPEND to avoid circular dependencies, bug #391213
 PDEPEND="x11-libs/cairo[glib]"
@@ -62,10 +62,8 @@ src_prepare() {
 	if ! has_version "x11-libs/cairo[glib]"; then
 		# Bug #391213: enable cairo-gobject support even if it's not installed
 		# We only PDEPEND on cairo to avoid circular dependencies
-		export CAIRO_LIBS="-lcairo"
+		export CAIRO_LIBS="-lcairo -lcairo-gobject"
 		export CAIRO_CFLAGS="-I${EPREFIX}/usr/include/cairo"
-		export CAIRO_GOBJECT_LIBS="-lcairo-gobject"
-		export CAIRO_GOBJECT_CFLAGS="-I${EPREFIX}/usr/include/cairo"
 		if use test; then
 			G2CONF="${G2CONF} --disable-tests"
 			gi_skip_tests=yes
