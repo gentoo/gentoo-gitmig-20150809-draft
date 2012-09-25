@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/cdstatus
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdstatus/ChangeLog,v 1.17 2009/06/19 21:10:56 ranger Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdstatus/ChangeLog,v 1.18 2012/09/25 10:23:03 radhermit Exp $
+
+*cdstatus-0.97.03 (25 Sep 2012)
+
+  25 Sep 2012; Tim Harder <radhermit@gentoo.org> +cdstatus-0.97.03.ebuild:
+  Version bump.
 
   19 Jun 2009; Brent Baude <ranger@gentoo.org> cdstatus-0.95.04.ebuild:
   stable ppc64, bug 272756
