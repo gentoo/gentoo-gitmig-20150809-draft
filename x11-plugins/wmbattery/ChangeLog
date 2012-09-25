@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmbattery
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbattery/ChangeLog,v 1.22 2012/07/08 15:24:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbattery/ChangeLog,v 1.23 2012/09/25 14:08:40 voyageur Exp $
+
+*wmbattery-2.41 (25 Sep 2012)
+
+  25 Sep 2012; Bernard Cafarelli <voyageur@gentoo.org> +wmbattery-2.41.ebuild:
+  Version bump
 
   08 Jul 2012; Jeroen Roovers <jer@gentoo.org> wmbattery-2.19-r1.ebuild,
   wmbattery-2.40.ebuild:
