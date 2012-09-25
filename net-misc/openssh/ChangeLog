@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.451 2012/09/08 18:38:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.452 2012/09/25 12:29:34 ulm Exp $
+
+  25 Sep 2012; Ulrich Müller <ulm@gentoo.org> openssh-5.5_p1-r2.ebuild,
+  openssh-5.6_p1-r2.ebuild, openssh-5.7_p1-r1.ebuild, openssh-5.8_p1-r1.ebuild,
+  openssh-5.8_p2.ebuild, openssh-5.8_p2-r1.ebuild, openssh-5.9_p1-r3.ebuild,
+  openssh-5.9_p1-r4.ebuild, openssh-6.0_p1.ebuild, openssh-6.0_p1-r1.ebuild,
+  openssh-6.1_p1.ebuild:
+  Specify LICENSE more precisely. According to the upstream license note:
+  "All components are under a BSD licence, or a licence more free than that."
 
 *openssh-6.1_p1 (08 Sep 2012)
 
