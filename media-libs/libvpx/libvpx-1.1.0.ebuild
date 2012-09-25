@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.1.0.ebuild,v 1.14 2012/08/16 23:03:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.1.0.ebuild,v 1.15 2012/09/25 05:37:55 vapier Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs base
@@ -43,6 +43,7 @@ PATCHES=(
 	"${FILESDIR}/${P}-chost.patch"
 	"${FILESDIR}/${P}-generic-gnu-shared.patch"
 	"${FILESDIR}/${P}-arm.patch"
+	"${FILESDIR}/${P}-x32.patch"
 )
 
 src_configure() {
@@ -65,6 +66,7 @@ src_configure() {
 	# Link with gcc by default, the build system should override this if needed.
 	export LD="${CC}"
 
+	set -- \
 	./configure \
 		--prefix="${EPREFIX}"/usr \
 		--libdir="${EPREFIX}"/usr/$(get_libdir) \
@@ -84,8 +86,9 @@ src_configure() {
 		$(use_enable sse4_1) \
 		$(use_enable ssse3) \
 		$(use_enable static-libs static ) \
-		$(use_enable threads multithread) \
-		|| die
+		$(use_enable threads multithread)
+	echo "$@"
+	"$@" || die
 }
 
 src_install() {
