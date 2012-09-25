@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gjs/gjs-1.30.1.ebuild,v 1.3 2012/09/25 11:52:27 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gjs/gjs-1.34.0.ebuild,v 1.1 2012/09/25 11:52:27 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 PYTHON_DEPEND="2"
 
-inherit gnome2 python virtualx
+inherit gnome2 pax-utils python virtualx
 
 DESCRIPTION="Javascript bindings for GNOME"
 HOMEPAGE="http://live.gnome.org/Gjs"
@@ -15,15 +15,16 @@ HOMEPAGE="http://live.gnome.org/Gjs"
 LICENSE="MIT || ( MPL-1.1 LGPL-2+ GPL-2+ )"
 SLOT="0"
 IUSE="examples test"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~x86"
 
-RDEPEND=">=dev-libs/glib-2.18:2
-	>=dev-libs/gobject-introspection-1.29.16
+RDEPEND=">=dev-libs/glib-2.32:2
+	>=dev-libs/gobject-introspection-1.33.10
 
 	dev-libs/dbus-glib
 	sys-libs/readline
 	x11-libs/cairo
-	>=dev-lang/spidermonkey-1.8.5"
+	>=dev-lang/spidermonkey-1.8.5
+	virtual/libffi"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	virtual/pkgconfig"
@@ -35,11 +36,10 @@ pkg_setup() {
 	# FIXME: --enable-systemtap installs files in ${D}/${D} for some reason
 	# XXX: Do NOT enable coverage, completely useless for portage installs
 	G2CONF="${G2CONF}
-		--with-js-package=mozjs185
 		--disable-systemtap
 		--disable-dtrace
-		--disable-coverage"
-
+		--disable-coverage
+		$(use_enable test tests)"
 	python_set_active_version 2
 	python_pkg_setup
 }
@@ -62,4 +62,7 @@ src_install() {
 		insinto /usr/share/doc/${PF}/examples
 		doins ${S}/examples/*
 	fi
+
+	# Required for gjs-console to run correctly on PaX systems
+	pax-mark mr "${ED}/usr/bin/gjs-console"
 }
