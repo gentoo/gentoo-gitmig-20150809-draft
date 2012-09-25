@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/openafs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.181 2012/09/25 00:16:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.182 2012/09/25 00:18:43 vapier Exp $
+
+  25 Sep 2012; Mike Frysinger <vapier@gentoo.org> -openafs-1.4.14-r1.ebuild,
+  -openafs-1.6.0.ebuild, -openafs-1.6.1_pre1.ebuild:
+  Old #435990 by Andrej Filipcic.
 
   25 Sep 2012; Mike Frysinger <vapier@gentoo.org> openafs-1.4.14.1.ebuild,
   openafs-1.6.1.ebuild:
