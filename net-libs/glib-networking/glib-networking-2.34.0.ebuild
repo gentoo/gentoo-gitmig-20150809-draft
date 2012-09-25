@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/glib-networking-2.32.1.ebuild,v 1.3 2012/05/16 00:11:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/glib-networking-2.34.0.ebuild,v 1.1 2012/09/25 11:53:27 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -11,12 +11,12 @@ inherit gnome2 virtualx
 DESCRIPTION="Network-related giomodules for glib"
 HOMEPAGE="http://git.gnome.org/browse/glib-networking/"
 
-LICENSE="LGPL-2"
+LICENSE="LGPL-2+"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE="+gnome +libproxy smartcard +ssl test"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 
-RDEPEND=">=dev-libs/glib-2.31.6:2
+RDEPEND=">=dev-libs/glib-2.34:2
 	gnome? ( gnome-base/gsettings-desktop-schemas )
 	libproxy? ( >=net-libs/libproxy-0.4.6-r3 )
 	smartcard? (
@@ -49,7 +49,7 @@ src_prepare() {
 	gnome2_src_prepare
 
 	# Drop DEPRECATED flags
-	sed -e 's:-D[A-Z_]*DISABLE_DEPRECATED *\\:\\:g' \
+	LC_ALL=C sed -e 's:-D[A-Z_]*DISABLE_DEPRECATED *\\:\\:g' \
 		-e 's:-D[A-Z_]*DISABLE_DEPRECATED:$(NULL):g' \
 		-i Makefile.{decl,in} \
 		proxy/gnome/Makefile.in \
