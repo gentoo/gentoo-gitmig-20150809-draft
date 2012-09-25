@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/quvi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quvi/ChangeLog,v 1.41 2012/08/01 06:18:16 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quvi/ChangeLog,v 1.42 2012/09/25 02:46:07 blueness Exp $
+
+  25 Sep 2012; Anthony G. Basile <blueness@gentoo.org> quvi-0.4.2.ebuild:
+  Keyword ~ppc ~ppc64, bug #386611
 
   01 Aug 2012; Tim Harder <radhermit@gentoo.org> -quvi-0.4.1.ebuild:
   Remove old.
@@ -187,4 +190,3 @@
   14 Feb 2010; Hanno Boeck <hanno@gentoo.org> +quvi-0.1.1.ebuild,
   +metadata.xml:
   Initial commit, required for new cclive versions.
-
