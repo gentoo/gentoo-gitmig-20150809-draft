@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-atk/at-spi2-atk-2.4.0.ebuild,v 1.2 2012/09/25 15:18:21 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-atk/at-spi2-atk-2.6.0.ebuild,v 1.1 2012/09/25 15:18:21 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -17,18 +17,16 @@ KEYWORDS="~amd64 ~arm ~hppa ~x86"
 IUSE=""
 
 COMMON_DEPEND="
-	>=app-accessibility/at-spi2-core-2.4
+	>=app-accessibility/at-spi2-core-2.6
 	>=dev-libs/atk-2.1.0
 	dev-libs/glib:2
 	>=sys-apps/dbus-1
-	x11-libs/libX11
 "
 RDEPEND="${COMMON_DEPEND}
 	!<gnome-extra/at-spi-1.32.0-r1
 "
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
-	>=dev-util/intltool-0.40
 "
 
 pkg_setup() {
