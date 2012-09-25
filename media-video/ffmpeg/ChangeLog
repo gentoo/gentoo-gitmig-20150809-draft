@@ -1,6 +1,11 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.579 2012/09/21 11:49:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.580 2012/09/25 03:50:07 vapier Exp $
+
+  25 Sep 2012; Mike Frysinger <vapier@gentoo.org> ffmpeg-0.10.2.ebuild,
+  ffmpeg-0.10.3.ebuild, ffmpeg-0.10.4.ebuild, ffmpeg-0.10.5.ebuild,
+  ffmpeg-0.11.1.ebuild, ffmpeg-0.11.2.ebuild:
+  Disable asm for x32 ABIs for now #427004 by devsk.
 
   21 Sep 2012; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
   update git url
