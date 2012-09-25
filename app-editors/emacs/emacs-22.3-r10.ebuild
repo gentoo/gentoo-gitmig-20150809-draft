@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.3-r10.ebuild,v 1.3 2012/09/18 06:52:43 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.3-r10.ebuild,v 1.4 2012/09/25 19:12:18 ulm Exp $
 
 EAPI=4
 WANT_AUTOMAKE="none"
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gnu.org/software/emacs/"
 SRC_URI="mirror://gnu/emacs/${P}.tar.gz
 	mirror://gentoo/${P}-patches-8.tar.bz2"
 
-LICENSE="GPL-3+ FDL-1.2+ BSD as-is MIT"
+LICENSE="GPL-3+ FDL-1.2+ BSD HPND MIT"
 SLOT="22"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="alsa games gif gtk gzip-el hesiod jpeg kerberos motif png sound source tiff toolkit-scroll-bars X Xaw3d +xpm"
