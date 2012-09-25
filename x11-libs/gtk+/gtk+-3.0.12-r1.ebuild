@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.0.12-r1.ebuild,v 1.10 2012/06/03 12:48:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.0.12-r1.ebuild,v 1.11 2012/09/25 15:19:35 tetromino Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ DESCRIPTION="Gimp ToolKit +"
 HOMEPAGE="http://www.gtk.org/"
 SRC_URI="${SRC_URI} http://dev.gentoo.org/~pacho/gnome/${PN}-3.0.12-use-const2.patch.xz"
 
-LICENSE="LGPL-2"
+LICENSE="LGPL-2+"
 SLOT="3"
 # NOTE: This gtk+ has multi-gdk-backend support, see:
 #  * http://blogs.gnome.org/kris/2010/12/29/gdk-3-0-on-mac-os-x/

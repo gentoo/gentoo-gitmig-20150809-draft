@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.4.3.ebuild,v 1.3 2012/06/03 12:48:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.6.0.ebuild,v 1.1 2012/09/25 15:19:35 tetromino Exp $
 
 EAPI="4"
 
@@ -9,14 +9,14 @@ inherit eutils flag-o-matic gnome.org gnome2-utils multilib virtualx
 DESCRIPTION="Gimp ToolKit +"
 HOMEPAGE="http://www.gtk.org/"
 
-LICENSE="LGPL-2"
+LICENSE="LGPL-2+"
 SLOT="3"
 # NOTE: This gtk+ has multi-gdk-backend support, see:
 #  * http://blogs.gnome.org/kris/2010/12/29/gdk-3-0-on-mac-os-x/
 #  * http://mail.gnome.org/archives/gtk-devel-list/2010-November/msg00099.html
 # I tried this and got it all compiling, but the end result is unusable as it
 # horribly mixes up the backends -- grobian
-IUSE="aqua colord cups debug doc examples +introspection packagekit test vim-syntax wayland X xinerama"
+IUSE="aqua colord cups debug doc egl examples +introspection packagekit test vim-syntax wayland X xinerama"
 REQUIRED_USE="
 	|| ( aqua wayland X )
 	xinerama? ( X )"
@@ -27,6 +27,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd6
 # NOTE: cairo[svg] dep is due to bug 291283 (not patched to avoid eautoreconf)
 # Use gtk+:2 for gtk-update-icon-cache
 COMMON_DEPEND="X? (
+		>=app-accessibility/at-spi2-atk-2.5.3
 		x11-libs/libXrender
 		x11-libs/libX11
 		>=x11-libs/libXi-1.3
@@ -40,14 +41,14 @@ COMMON_DEPEND="X? (
 		xinerama? ( x11-libs/libXinerama )
 	)
 	wayland? (
-		dev-libs/wayland
-		media-libs/mesa[egl,wayland]
-		x11-libs/cairo[opengl]
+		>=dev-libs/wayland-0.95
+		media-libs/mesa[egl?,wayland]
 		x11-libs/libxkbcommon
+		egl? ( x11-libs/cairo[opengl] )
 	)
-	>=dev-libs/glib-2.32
+	>=dev-libs/glib-2.33.1
 	>=x11-libs/pango-1.30[introspection?]
-	>=dev-libs/atk-2.2[introspection?]
+	>=dev-libs/atk-2.5.3[introspection?]
 	>=x11-libs/cairo-1.10.0[aqua?,glib,svg,X?]
 	>=x11-libs/gdk-pixbuf-2.26:2[introspection?,X?]
 	>=x11-libs/gtk+-2.24:2
@@ -57,6 +58,9 @@ COMMON_DEPEND="X? (
 	cups? ( >=net-print/cups-1.2 )
 	introspection? ( >=dev-libs/gobject-introspection-1.32 )"
 DEPEND="${COMMON_DEPEND}
+	app-text/docbook-xsl-stylesheets
+	app-text/docbook-xml-dtd:4.1.2
+	dev-libs/libxslt
 	virtual/pkgconfig
 	X? (
 		x11-proto/xextproto
@@ -66,9 +70,7 @@ DEPEND="${COMMON_DEPEND}
 		xinerama? ( x11-proto/xineramaproto )
 	)
 	>=dev-util/gtk-doc-am-1.11
-	doc? (
-		>=dev-util/gtk-doc-1.11
-		~app-text/docbook-xml-dtd-4.1.2 )
+	doc? ( >=dev-util/gtk-doc-1.11 )
 	test? (
 		media-fonts/font-misc-misc
 		media-fonts/font-cursor-misc )"
@@ -99,17 +101,6 @@ src_prepare() {
 
 	# https://bugzilla.gnome.org/show_bug.cgi?id=654108
 	epatch "${FILESDIR}/${PN}-3.3.18-fallback-theme.patch"
-
-	# Apparently needed for new libxkbcommon headers; bug #408131
-	epatch "${FILESDIR}/${PN}-3.3.20-wayland-xkbcommon-headers.patch"
-
-	# Fix build with USE="cups debug", from 3.5.1; bug #416625
-	epatch "${FILESDIR}/${PN}-3.4.3-gtkprintbackendcups-debug.patch"
-
-	# Work around https://bugzilla.gnome.org/show_bug.cgi?id=663991
-	if [[ ${CHOST} == *-solaris* ]]; then
-		sed -i -e '/_XOPEN_SOURCE/s/500/600/' gtk/gtksearchenginesimple.c || die
-	fi
 
 	# Non-working test in gentoo's env
 	sed 's:\(g_test_add_func ("/ui-tests/keys-events.*\):/*\1*/:g' \
@@ -156,7 +147,10 @@ src_configure() {
 		$(use_enable X xrandr)
 		$(use_enable xinerama)
 		--disable-papi
+		--enable-man
 		--enable-gtk2-dependency"
+
+	use wayland && myconf="${myconf} $(use_enable egl wayland-cairo-gl)"
 
 	# Passing --disable-debug is not recommended for production use
 	use debug && myconf="${myconf} --enable-debug=yes"
@@ -170,15 +164,13 @@ src_test() {
 	# Tests require a new gnome-themes-standard, but adding it to DEPEND
 	# would result in circular dependencies.
 	# https://bugzilla.gnome.org/show_bug.cgi?id=669562
-	if ! has_version '>=x11-themes/gnome-themes-standard-3.3.91'; then
-		ewarn "Tests will be skipped beecause >=gnome-themes-standard-3.3.90"
+	if ! has_version '>=x11-themes/gnome-themes-standard-3.6[gtk3]'; then
+		ewarn "Tests will be skipped because >=gnome-themes-standard-3.6[gtk3]"
 		ewarn "is not installed. Please re-run tests after installing the"
 		ewarn "required version of gnome-themes-standard."
 		return 0
 	fi
-
 	unset DBUS_SESSION_BUS_ADDRESS
-
 	# Exporting HOME fixes tests using XDG directories spec since all defaults
 	# are based on $HOME. It is also backward compatible with functions not
 	# yet ported to this spec.
@@ -194,7 +186,7 @@ src_install() {
 	dodoc AUTHORS ChangeLog* HACKING NEWS* README*
 
 	# Remove unneeded *.la files
-	find "${D}" -name '*.la' -exec rm -f {} + || die
+	prune_libtool_files --all
 
 	# add -framework Carbon to the .pc files
 	use aqua && for i in gtk+-3.0.pc gtk+-quartz-3.0.pc gtk+-unix-print-3.0.pc; do

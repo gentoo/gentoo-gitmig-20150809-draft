@@ -1,6 +1,27 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.603 2012/09/07 01:50:21 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.604 2012/09/25 15:19:35 tetromino Exp $
+
+*gtk+-3.6.0 (25 Sep 2012)
+*gtk+-2.24.13 (25 Sep 2012)
+
+  25 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gtk+-1.2.10-r12.ebuild, -files/gtk+-2.24.4-old-icons.patch,
+  -files/gtk+-2.24.5-background-repaint.patch,
+  -files/gtk+-2.24.5-darwin-quartz-introspection.patch, -gtk+-2.24.8-r1.ebuild,
+  -files/gtk+-2.24.8-iconview-layout.patch,
+  -files/gtk+-2.24.9-printing-crash.patch, gtk+-2.24.10-r1.ebuild,
+  -gtk+-2.24.11.ebuild, -gtk+-2.24.11-r1.ebuild,
+  -files/gtk+-2.24.11-stuck-grab.patch, gtk+-2.24.12.ebuild,
+  +gtk+-2.24.13.ebuild, +files/gtk+-2.24.13-gold.patch, gtk+-3.0.12-r1.ebuild,
+  -files/gtk+-3.2.2-toolbutton-icon-widget-GtkMisc.patch, -gtk+-3.2.3.ebuild,
+  gtk+-3.2.4-r1.ebuild, -gtk+-3.4.3.ebuild, -gtk+-3.4.3-r1.ebuild,
+  -files/gtk+-3.4.3-gtkprintbackendcups-debug.patch, gtk+-3.4.4.ebuild,
+  +gtk+-3.6.0.ebuild, metadata.xml:
+  Version bump to 3.6.0; adds GtkSearchEntry, GtkMenuButton, and GtkLevelBar
+  widgets, and support for CSS cross-fading, animations, and blur shadows. Also
+  bump gtk2 to 2.24.13 with a fix for the F10 issues (bug #399589). Drop old.
+  Make license more precise.
 
 *gtk+-2.24.12 (07 Sep 2012)
 
