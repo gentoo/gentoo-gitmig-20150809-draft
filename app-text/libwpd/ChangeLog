@@ -1,6 +1,11 @@
 # ChangeLog for app-text/libwpd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/ChangeLog,v 1.100 2012/05/29 22:04:46 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/ChangeLog,v 1.101 2012/09/25 07:56:32 scarabeus Exp $
+
+*libwpd-0.9.6 (25 Sep 2012)
+
+  25 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> +libwpd-0.9.6.ebuild:
+  Version bump to latest libwpd.
 
   29 May 2012; Anthony G. Basile <blueness@gentoo.org> libwpd-0.9.4.ebuild:
   Keyword ~mips
