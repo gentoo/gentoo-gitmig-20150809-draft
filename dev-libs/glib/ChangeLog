@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.533 2012/09/25 11:40:57 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.534 2012/09/25 11:48:33 tetromino Exp $
 
 *glib-2.34.0 (25 Sep 2012)
 
@@ -11,7 +11,8 @@
   -files/glib-2.26.0-disable-volumemonitor-broken-test.patch,
   -files/glib-2.26.1-gatomic-header.patch,
   -files/glib-2.29.18-external-gdbus-codegen.patch, -glib-2.30.2.ebuild,
-  -glib-2.32.3.ebuild, +glib-2.34.0.ebuild,
+  -glib-2.32.3.ebuild, glib-1.2.10-r5.ebuild, glib-2.30.3.ebuild,
+  glib-2.32.4.ebuild, +glib-2.34.0.ebuild,
   +files/glib-2.34.0-testsuite-skip-gdbus-auth-tests.patch,
   +files/glib-2.34.0-testsuite-skip-thread4.patch:
   Version bump. Notable changes: thumbnails now cached in XDG_CACHE_HOME; more
