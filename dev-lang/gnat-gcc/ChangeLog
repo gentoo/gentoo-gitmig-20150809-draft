@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/gnat-gcc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.52 2012/03/02 15:52:24 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.53 2012/09/25 10:38:32 george Exp $
+
+*gnat-gcc-4.4.7 (25 Sep 2012)
+
+  25 Sep 2012; george <george@gentoo.org> +gnat-gcc-4.4.7.ebuild:
+  minor update
 
   02 Mar 2012; george <george@gentoo.org> Manifest:
   adjusted Manifest to correct reuploaded bootstrap for amd64 (#372179)
