@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/gavl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gavl/ChangeLog,v 1.20 2012/06/14 14:11:05 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gavl/ChangeLog,v 1.21 2012/09/25 10:41:29 radhermit Exp $
+
+*gavl-1.4.0 (25 Sep 2012)
+
+  25 Sep 2012; Tim Harder <radhermit@gentoo.org> +gavl-1.4.0.ebuild:
+  Version bump.
 
   14 Jun 2012; Michael Weber <xmw@gentoo.org> gavl-1.2.0.ebuild:
   ppc stable (bug 394291)
