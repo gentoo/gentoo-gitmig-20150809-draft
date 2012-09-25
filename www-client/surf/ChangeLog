@@ -1,6 +1,10 @@
 # ChangeLog for www-client/surf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/surf/ChangeLog,v 1.20 2012/08/20 19:12:09 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/surf/ChangeLog,v 1.21 2012/09/25 09:02:38 chainsaw Exp $
+
+  25 Sep 2012; Tony Vroon <chainsaw@gentoo.org> surf-0.5.ebuild:
+  Marked stable on AMD64 based on arch testing by Maurizio "k01" Camisaschi &
+  Elijah "Armageddon" El Lazkani in bug #432022.
 
   20 Aug 2012; Johannes Huber <johu@gentoo.org> surf-0.5.ebuild:
   Stable for x86, wrt bug #432022
