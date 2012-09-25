@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/love/love-9999.ebuild,v 1.5 2012/05/21 21:30:55 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/love/love-9999.ebuild,v 1.6 2012/09/25 11:21:58 ago Exp $
 
 EAPI=3
 
@@ -25,7 +25,7 @@ IUSE=""
 
 RDEPEND="dev-games/physfs
 	dev-lang/lua
-	media-libs/devil[mng,tiff]
+	media-libs/devil[mng,png,tiff]
 	media-libs/freetype
 	media-libs/libmodplug
 	media-libs/libsdl[joystick,opengl]

@@ -1,6 +1,10 @@
 # ChangeLog for games-engines/love
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/love/ChangeLog,v 1.6 2012/05/21 21:30:55 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/love/ChangeLog,v 1.7 2012/09/25 11:21:58 ago Exp $
+
+  25 Sep 2012; Agostino Sarubbo <ago@gentoo.org> love-0.7.2-r1.ebuild,
+  love-0.8.0.ebuild, love-9999.ebuild:
+  Fix depend because it needs media-libs/devil[png]
 
 *love-0.7.2-r1 (21 May 2012)
 
@@ -35,4 +39,3 @@
   05 Nov 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   +love-0.7.2.ebuild:
   Initial commit, taken from the gamerlay overlay.
-
