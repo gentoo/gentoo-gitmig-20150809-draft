@@ -1,6 +1,12 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.375 2012/09/25 09:53:19 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.376 2012/09/25 14:03:14 scarabeus Exp $
+
+*libreoffice-3.6.2.2 (25 Sep 2012)
+
+  25 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> +libreoffice-3.6.2.2.ebuild,
+  -libreoffice-3.6.1.2.ebuild:
+  Bump to 3.6.2.2 so more fixes are around.
 
   25 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   +files/libreoffice-3.7-separate-checks.patch, libreoffice-9999-r2.ebuild:

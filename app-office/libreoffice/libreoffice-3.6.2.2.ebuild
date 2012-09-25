@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.6.1.2.ebuild,v 1.5 2012/09/24 08:26:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.6.2.2.ebuild,v 1.1 2012/09/25 14:03:14 scarabeus Exp $
 
 EAPI=4
 
@@ -439,7 +439,7 @@ src_configure() {
 		--enable-graphite \
 		--enable-cairo-canvas \
 		--enable-largefile \
-		--disable-mergelibs \
+		--enable-mergelibs \
 		--enable-python=system \
 		--enable-randr \
 		--enable-randr-link \
