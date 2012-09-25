@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/bbdb
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/ChangeLog,v 1.41 2009/11/24 20:48:13 fauli Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/ChangeLog,v 1.42 2012/09/25 19:22:48 ulm Exp $
+
+  25 Sep 2012; Ulrich Müller <ulm@gentoo.org> bbdb-2.35-r1.ebuild:
+  Specify LICENSE more precisely. Bump ebuild to EAPI 4.
 
   24 Nov 2009; Christian Faulhammer <fauli@gentoo.org> bbdb-2.35-r1.ebuild:
   import changes from Prefix overlay

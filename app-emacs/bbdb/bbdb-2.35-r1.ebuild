@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/bbdb-2.35-r1.ebuild,v 1.6 2009/11/24 20:48:13 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/bbdb-2.35-r1.ebuild,v 1.7 2012/09/25 19:22:48 ulm Exp $
+
+EAPI=4
 
 inherit elisp
 
@@ -10,30 +12,29 @@ SRC_URI="http://bbdb.sourceforge.net/${P}.tar.gz
 	http://www.mit.edu/afs/athena/contrib/emacs-contrib/Fin/point-at.el
 	http://www.mit.edu/afs/athena/contrib/emacs-contrib/Fin/dates.el"
 
-LICENSE="GPL-2 as-is"
+LICENSE="GPL-2+ Texinfo-manual"
 SLOT="0"
 KEYWORDS="alpha amd64 ppc sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris"
 IUSE="tex"
 
-DEPEND=""
 RDEPEND="tex? ( virtual/tex-base )"
 
-SITEFILE=50${PN}-gentoo.el
+SITEFILE="50${PN}-gentoo.el"
 TEXMF="/usr/share/texmf-site"
 
-src_unpack() {
-	unpack ${P}.tar.gz
-	cd "${S}"
-
+src_prepare() {
 	sed -i -e '0,/^--- bbdb-mail-folders.el ---$/d;/^--- end ---$/,$d' \
 		bits/bbdb-mail-folders.el || die "sed failed"
 	sed -i -e '/^;/,$!d' bits/bbdb-sort-mailrc.el || die "sed failed"
 	cp "${DISTDIR}"/{dates,point-at}.el bits || die "cp failed"
 }
 
+src_configure() {
+	default
+}
+
 src_compile() {
-	econf || die "econf failed"
-	emake -j1 || die "emake failed"
+	emake -j1
 	BYTECOMPFLAGS="-L bits -L lisp"	elisp-compile bits/*.el || die
 }
 
