@@ -1,24 +1,30 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.11.ebuild,v 1.1 2012/09/09 17:18:17 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.11.ebuild,v 1.2 2012/09/25 06:12:02 jmbsvicetto Exp $
 
 # catalyst-9999         -> latest Git
 # catalyst-2.9999       -> catalyst_2 branch from Git
+# catalyst-3.9999       -> catalyst_3 branch from Git
 # catalyst-VER          -> normal catalyst release
 
 EAPI=3
 PYTHON_DEPEND="2"
 
-if [[ ${PV} == 9999* || ${PV} == 2.9999* ]]; then
+if [[ ${PV} == *9999* ]]; then
 	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/catalyst.git"
 	inherit git-2
 	SRC_URI=""
 	S="${WORKDIR}/${PN}"
 	KEYWORDS=""
+
+	case ${PV} in
+		2.9999) EGIT_BRANCH="catalyst_2" ;;
+		3.9999) EGIT_BRANCH="catalyst_3" ;;
+	esac
 else
 	SRC_URI="mirror://gentoo/${P}.tar.bz2
 		http://dev.gentoo.org/~jmbsvicetto/distfiles/${P}.tar.bz2"
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+	KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 fi
 inherit eutils multilib python
 
@@ -51,7 +57,7 @@ pkg_setup() {
 	einfo "and they are considered to be the authorative source of information"
 	einfo "on catalyst."
 	echo
-	if [[ ${PV} == 9999* || ${PV} == 2.9999* ]]; then
+	if [[ ${PV} == *9999* ]]; then
 		ewarn "The ${EGIT_BRANCH:-master} branch (what you get with this ${PV} ebuild) contains"
 		ewarn "work-in-progress code. Be aware that it's likely that it will not"
 		ewarn "be in a working state at any given point. Please do not file bugs"
@@ -69,7 +75,7 @@ src_install() {
 	insinto /usr/$(get_libdir)/${PN}
 	exeinto /usr/$(get_libdir)/${PN}
 	doexe catalyst || die "copying catalyst"
-	if [[ ${PV} == 9999* ]]; then
+	if [[ ${PV} == 3.9999* ]]; then
 		doins -r modules files || die "copying files"
 	else
 		doins -r arch modules livecd || die "copying files"
