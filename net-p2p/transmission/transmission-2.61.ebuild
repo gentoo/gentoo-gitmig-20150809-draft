@@ -1,10 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.61.ebuild,v 1.3 2012/08/12 22:19:18 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.61.ebuild,v 1.4 2012/09/25 09:40:01 ssuominen Exp $
 
 EAPI=4
-LANGS="en es eu kk lt pt_BR ru"
-
 inherit autotools eutils fdo-mime gnome2-utils qt4-r2 user
 
 if [[ ${PV} == *9999* ]]; then
@@ -117,13 +115,7 @@ src_compile() {
 	if use qt4; then
 		pushd qt >/dev/null
 		emake
-
-		local l
-		for l in ${LANGS}; do
-			if use linguas_${l}; then
-				lrelease translations/${PN}_${l}.ts
-			fi
-		done
+		lrelease translations/*.ts
 		popd >/dev/null
 	fi
 }
@@ -155,12 +147,7 @@ src_install() {
 		doins "${T}"/${PN}-magnet.protocol
 
 		insinto /usr/share/qt4/translations
-		local l
-		for l in ${LANGS}; do
-			if use linguas_${l}; then
-				doins translations/${PN}_${l}.qm
-			fi
-		done
+		doins translations/*.qm
 		popd >/dev/null
 	fi
 }

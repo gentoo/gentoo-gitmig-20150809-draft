@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.205 2012/08/12 22:19:18 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.206 2012/09/25 09:40:01 ssuominen Exp $
+
+  25 Sep 2012; Samuli Suominen <ssuominen@gentoo.org> transmission-2.61.ebuild,
+  transmission-9999.ebuild:
+  Punt ebuild LINGUAS handling since it is breaking GTK+ translation
+  installation wrt #428160 by Guillaume Ayoub
 
   12 Aug 2012; Christoph Junghans <ottxor@gentoo.org> transmission-2.52.ebuild,
   transmission-2.61.ebuild, transmission-9999.ebuild:
