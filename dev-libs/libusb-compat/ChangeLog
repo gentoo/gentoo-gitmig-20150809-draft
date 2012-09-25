@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libusb-compat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb-compat/ChangeLog,v 1.19 2012/07/21 06:47:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb-compat/ChangeLog,v 1.20 2012/09/25 10:44:09 ssuominen Exp $
+
+  25 Sep 2012; Samuli Suominen <ssuominen@gentoo.org>
+  libusb-compat-0.1.4.ebuild, -files/libusb-0.1-libusbx.patch:
+  Remove now unnecessary patch that was used only for <dev-libs/libusbx-1.0.13.
 
   21 Jul 2012; Samuli Suominen <ssuominen@gentoo.org>
   libusb-compat-0.1.4.ebuild, files/libusb-0.1-libusbx.patch:
