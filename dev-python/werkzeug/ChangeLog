@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/werkzeug
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/ChangeLog,v 1.35 2012/09/22 02:09:27 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/ChangeLog,v 1.36 2012/09/25 11:16:45 blueness Exp $
+
+  25 Sep 2012; Anthony G. Basile <blueness@gentoo.org> werkzeug-0.8.3.ebuild:
+  stable ppc, bug #433898
 
   22 Sep 2012; Anthony G. Basile <blueness@gentoo.org> werkzeug-0.8.3.ebuild:
   keyword ~arm, bug #433978
