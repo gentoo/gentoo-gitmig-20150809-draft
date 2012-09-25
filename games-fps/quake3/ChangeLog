@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake3
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/ChangeLog,v 1.61 2012/09/07 07:33:02 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/ChangeLog,v 1.62 2012/09/25 11:12:54 pinkbyte Exp $
+
+  25 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> quake3-1.36-r1.ebuild:
+  Disable patch for jpeg unbundling, cause it is uncompleted and may cause
+  graphics glitches
 
 *quake3-1.36-r1 (07 Sep 2012)
 

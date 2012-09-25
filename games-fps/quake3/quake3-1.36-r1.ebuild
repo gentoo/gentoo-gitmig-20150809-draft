@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.36-r1.ebuild,v 1.1 2012/09/07 07:33:02 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.36-r1.ebuild,v 1.2 2012/09/25 11:12:54 pinkbyte Exp $
 
 # quake3-9999          -> latest svn
 # quake3-9999.REV      -> use svn REV
@@ -26,8 +26,7 @@ KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 # "smp" is omitted, because currently it does not work.
 IUSE="dedicated opengl teamarena +openal curl vorbis voice mumble"
 
-UIDEPEND="virtual/jpeg
-	virtual/opengl
+UIDEPEND="virtual/opengl
 	media-libs/libsdl[audio,video,joystick,X,opengl]
 	openal? ( media-libs/openal )
 	vorbis? (
@@ -78,7 +77,7 @@ src_prepare() {
 	sed -i -e 's/\(-lspeex\)/\1 -lspeexdsp/' Makefile || die "sed failed"
 
 	# Use system jpeg library
-	epatch "${FILESDIR}"/${P}-remove-bundled-jpeg.patch
+#	epatch "${FILESDIR}"/${P}-remove-bundled-jpeg.patch
 }
 
 src_compile() {
