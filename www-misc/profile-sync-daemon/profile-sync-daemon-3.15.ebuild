@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/profile-sync-daemon/profile-sync-daemon-3.14.ebuild,v 1.1 2012/09/24 19:11:27 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/profile-sync-daemon/profile-sync-daemon-3.15.ebuild,v 1.1 2012/09/25 10:55:54 hasufell Exp $
 
 EAPI=4
 
