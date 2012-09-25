@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.10.1.ebuild,v 1.16 2012/05/05 05:38:09 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.10.1.ebuild,v 1.17 2012/09/25 11:46:48 tetromino Exp $
 
 EAPI=4
 GCONF_DEBUG=no
@@ -13,7 +13,7 @@ inherit autotools bash-completion-r1 eutils gnome2
 DESCRIPTION="GNOME Virtual Filesystem Layer"
 HOMEPAGE="http://www.gnome.org"
 
-LICENSE="LGPL-2"
+LICENSE="LGPL-2+"
 SLOT="0"
 
 if [[ ${PV} = 9999 ]]; then
