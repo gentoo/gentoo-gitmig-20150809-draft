@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gnome-games
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.323 2012/07/14 13:31:50 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.324 2012/09/25 09:02:41 tetromino Exp $
+
+  25 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-games-3.2.1-r1.ebuild, gnome-games-3.4.2.ebuild:
+  Add missing virtual/glu dependency, thanks to Gilles Dartiguelongue for
+  noticing.
 
   14 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
   gnome-games-3.2.1-r1.ebuild, gnome-games-3.4.2.ebuild:

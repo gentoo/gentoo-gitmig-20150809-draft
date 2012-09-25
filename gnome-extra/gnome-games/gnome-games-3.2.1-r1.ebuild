@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-3.2.1-r1.ebuild,v 1.6 2012/07/14 13:31:50 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-3.2.1-r1.ebuild,v 1.7 2012/09/25 09:02:41 tetromino Exp $
 
 EAPI="3"
 GNOME_TARBALL_SUFFIX="xz"
@@ -48,6 +48,7 @@ COMMON_DEPEND="
 	glchess? (
 		dev-db/sqlite:3
 		>=gnome-base/librsvg-2.32
+		virtual/glu
 		virtual/opengl
 		x11-libs/libX11 )"
 RDEPEND="${COMMON_DEPEND}
