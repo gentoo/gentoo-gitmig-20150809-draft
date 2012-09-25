@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/skipfish
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/skipfish/ChangeLog,v 1.10 2012/06/05 17:44:48 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/skipfish/ChangeLog,v 1.11 2012/09/25 13:55:29 pinkbyte Exp $
+
+*skipfish-2.09_beta (25 Sep 2012)
+
+  25 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> +skipfish-2.09_beta.ebuild,
+  metadata.xml:
+  Version bump wrt bug #434964. Ebuild updated by Georgy Kovtunov. He will
+  maintain this package through proxy maintainers
 
 *skipfish-2.07_beta (05 Jun 2012)
 
