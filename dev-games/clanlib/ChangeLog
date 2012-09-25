@@ -1,6 +1,13 @@
 # ChangeLog for dev-games/clanlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.56 2012/08/03 12:47:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.57 2012/09/25 11:44:48 tupone Exp $
+
+*clanlib-2.3.6 (25 Sep 2012)
+
+  25 Sep 2012; Tupone Alfredo <tupone@gentoo.org> +clanlib-2.3.6.ebuild,
+  +files/clanlib-2.3.6-autotools.patch:
+  Version bump to 2.3.6.
+  Adding required_use. Bug #425696 by Diego
 
   03 Aug 2012; Markos Chandras <hwoarang@gentoo.org> clanlib-2.3.4.ebuild:
   Stable on amd64 wrt bug #418677
@@ -24,7 +31,7 @@
 
   06 Feb 2012; Tupone Alfredo <tupone@gentoo.org> +clanlib-2.3.4.ebuild,
   +files/clanlib-2.3.4-autotools.patch:
-  Version bump to 2.4.3 Bug #288218 by proDOOMman
+  Version bump to 2.3.4 Bug #288218 by proDOOMman
 
   15 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> clanlib-0.8.1.ebuild,
   +files/clanlib-0.8.1-libpng15.patch:
