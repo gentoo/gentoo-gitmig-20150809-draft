@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6986 2012/09/25 12:33:24 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6987 2012/09/25 15:15:44 tetromino Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.mask:
+  Add at-spi2-* to gnome-3.6 mask, and unmask vte-0.34.
 
   25 Sep 2012; Ulrich Müller <ulm@gentoo.org> license_groups:
   Add man-pages to FREE-DOCUMENTS license group.
