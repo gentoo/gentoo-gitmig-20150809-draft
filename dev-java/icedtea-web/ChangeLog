@@ -1,6 +1,16 @@
 # ChangeLog for dev-java/icedtea-web
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/ChangeLog,v 1.27 2012/09/06 14:10:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/ChangeLog,v 1.28 2012/09/25 13:56:20 sera Exp $
+
+*icedtea-web-1.3-r7 (25 Sep 2012)
+*icedtea-web-1.3 (25 Sep 2012)
+
+  25 Sep 2012; Ralph Sennhauser <sera@gentoo.org> +icedtea-web-1.3.ebuild,
+  +icedtea-web-1.3-r7.ebuild, metadata.xml:
+  Version bump. #434094
+  Add missing dependencies on glib, gtk+ and pkgconfig.
+  Add gtk+:2/gtk+:3 support.
+  Simplyfy src_configure and src_install.
 
   06 Sep 2012; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Spelling.
