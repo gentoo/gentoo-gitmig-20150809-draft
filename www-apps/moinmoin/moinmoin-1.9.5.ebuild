@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/moinmoin-1.9.5.ebuild,v 1.2 2012/09/25 11:14:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/moinmoin-1.9.5.ebuild,v 1.3 2012/09/25 11:18:43 blueness Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.5"
@@ -17,7 +17,7 @@ SRC_URI="http://static.moinmo.in/files/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ppc ~x86"
+KEYWORDS="amd64 ~arm ppc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-python/docutils-0.4
