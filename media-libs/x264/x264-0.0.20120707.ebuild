@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-0.0.20120707.ebuild,v 1.2 2012/09/01 10:21:10 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-0.0.20120707.ebuild,v 1.3 2012/09/25 03:11:57 vapier Exp $
 
 EAPI=4
 
@@ -57,6 +57,7 @@ src_prepare() {
 	fi
 	# for OSX
 	sed -i -e "s|-arch x86_64||g" configure || die
+	epatch "${FILESDIR}"/x264-x32.patch #420241
 }
 
 src_configure() {
@@ -72,7 +73,7 @@ src_configure() {
 	# let upstream pick the optimization level by default
 	use custom-cflags || filter-flags -O?
 
-	if use x86 && use pic; then
+	if use x86 && use pic || [[ ${ABI} == "x32" ]] ; then
 		myconf+=" --disable-asm"
 	fi
 
