@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/qpdfview-0.3.3.ebuild,v 1.1 2012/09/06 04:20:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/qpdfview-0.3.3.ebuild,v 1.2 2012/09/25 01:12:44 chithanh Exp $
 
 EAPI=4
 PLOCALES="cs de el ru sk uk"
@@ -12,7 +12,7 @@ SRC_URI="https://launchpad.net/${PN}/trunk/${PV/_}/+download/${P/_}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE="cups dbus svg"
 
 RDEPEND="app-text/poppler[qt4]
