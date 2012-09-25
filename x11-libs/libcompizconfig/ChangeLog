@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libcompizconfig
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcompizconfig/ChangeLog,v 1.31 2012/08/30 16:01:22 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcompizconfig/ChangeLog,v 1.32 2012/09/25 14:40:53 pinkbyte Exp $
+
+  25 Sep 2012; Sergey Popov <pinkbyte@gentoo.org>
+  -libcompizconfig-0.8.4-r2.ebuild, -files/libcompizconfig-undefinedref.patch:
+  Drop old
 
   30 Aug 2012; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
   Remove myself and proxy maintainer from maintainers
