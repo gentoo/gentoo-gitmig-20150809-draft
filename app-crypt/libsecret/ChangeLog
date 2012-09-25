@@ -1,0 +1,11 @@
+# ChangeLog for app-crypt/libsecret
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/libsecret/ChangeLog,v 1.1 2012/09/25 10:06:41 tetromino Exp $
+
+*libsecret-0.10 (25 Sep 2012)
+
+  25 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +libsecret-0.10.ebuild, +metadata.xml:
+  Add a new library for accessing the freedesktop.org Secret Service API, which
+  is implemented by gnome-keyring and ksecrets.
+
