@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/yasm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/ChangeLog,v 1.55 2012/06/16 10:48:02 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/ChangeLog,v 1.56 2012/09/25 04:35:12 vapier Exp $
+
+*yasm-9999 (25 Sep 2012)
+
+  25 Sep 2012; Mike Frysinger <vapier@gentoo.org> +yasm-9999.ebuild:
+  Add live git ebuild #435838 by Alphat-PC.
 
   16 Jun 2012; Fabian Groffen <grobian@gentoo.org> yasm-1.2.0.ebuild:
   Fix autoreconf for platforms where /bin/sh doesn't understand $(xxx)
@@ -211,4 +216,3 @@
   09 Feb 2004; <augustus@gentoo.org> yasm-0.3.0.ebuild:
   New ebuild for yasm. Keyworded ~amd64 and ~x86. Ran tests that came with
   package. All seems well. Needs testing with some real code.
-
