@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/compiz-plugins-extra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-extra/ChangeLog,v 1.20 2012/08/16 19:17:15 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-extra/ChangeLog,v 1.21 2012/09/25 14:35:30 pinkbyte Exp $
+
+  25 Sep 2012; Sergey Popov <pinkbyte@gentoo.org>
+  -compiz-plugins-extra-0.8.6-r1.ebuild,
+  -files/compiz-plugins-extra-0.8.6-libnotify.patch:
+  Drop old
 
   16 Aug 2012; Maxim Koltsov <maksbotan@gentoo.org>
   +files/compiz-plugins-extra-0.8.8-libnotify.patch,
