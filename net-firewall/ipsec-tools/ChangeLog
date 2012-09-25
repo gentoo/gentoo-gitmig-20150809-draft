@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/ipsec-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.102 2012/09/16 17:57:53 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.103 2012/09/25 01:12:33 vapier Exp $
+
+  25 Sep 2012; Mike Frysinger <vapier@gentoo.org>
+  +files/ipsec-tools-0.8.0-sysctl.patch, ipsec-tools-0.8.0-r4.ebuild:
+  Drop useless sysctl.h includes #425770 by devsk.
 
   16 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
   ipsec-tools-0.8.0-r3.ebuild:
@@ -456,4 +460,3 @@
   This is the initial commit of ipsec-tools. Thanks for this ebuild go to all
   those involved in testing and developing it, please see Gentoo bug #26796 for
   details.
-
