@@ -1,10 +1,12 @@
 # ChangeLog for x11-wm/sithwm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sithwm/ChangeLog,v 1.1 2012/06/04 21:13:56 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sithwm/ChangeLog,v 1.2 2012/09/25 16:20:36 xmw Exp $
+
+  25 Sep 2012; Michael Weber <xmw@gentoo.org> sithwm-1.2.3.ebuild:
+  Remove strip flag from install (bug 430818, thanks jer for the fix)
 
 *sithwm-1.2.3 (04 Jun 2012)
 
   04 Jun 2012; Michael Weber <xmw@gentoo.org> +sithwm-1.2.3.ebuild,
   +files/sithwm-1.2.3-warnings.patch, +metadata.xml:
   Initial import (bug 212633, thanks Jon Daniel)
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sithwm/sithwm-1.2.3.ebuild,v 1.1 2012/06/04 21:13:56 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sithwm/sithwm-1.2.3.ebuild,v 1.2 2012/09/25 16:20:36 xmw Exp $
 
 EAPI=4
 
@@ -20,6 +20,8 @@ DEPEND="${RDEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-warnings.patch
+	sed -e 's|install -s|install|g' \
+		-i Makefile || die
 }
 
 src_compile() {
