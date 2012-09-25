@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/imapsync
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/imapsync/ChangeLog,v 1.63 2012/09/18 11:58:30 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/imapsync/ChangeLog,v 1.64 2012/09/25 10:12:09 radhermit Exp $
+
+*imapsync-1.508 (25 Sep 2012)
+
+  25 Sep 2012; Tim Harder <radhermit@gentoo.org> +imapsync-1.508.ebuild:
+  Version bump.
 
   18 Sep 2012; Johannes Huber <johu@gentoo.org> imapsync-1.498.ebuild:
   Stable for x86, wrt bug #434298
