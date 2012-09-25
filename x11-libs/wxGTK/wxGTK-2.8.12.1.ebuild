@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.8.12.1.ebuild,v 1.12 2012/09/16 02:54:04 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.8.12.1.ebuild,v 1.13 2012/09/25 03:49:06 vapier Exp $
 
 EAPI="4"
 
-inherit eutils versionator flag-o-matic
+inherit eutils versionator flag-o-matic multilib
 
 DESCRIPTION="GTK+ version of wxWidgets, a cross-platform C++ GUI toolkit"
 HOMEPAGE="http://wxwidgets.org/"
@@ -71,7 +71,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.8.7-mmedia.patch              # Bug #174874
 	epatch "${FILESDIR}"/${PN}-2.8.10.1-odbc-defines.patch     # Bug #310923
 	sed \
-		-e "/wx_cv_std_libpath/s: /usr: ${EPREFIX}/usr:g" \
+		-e "/wx_cv_std_libpath=/s:=.*:=$(get_libdir):" \
 		-i configure || die
 }
 
