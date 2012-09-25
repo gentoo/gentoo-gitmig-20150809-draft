@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/files/keepalived.init,v 1.1 2012/09/22 14:17:34 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/files/keepalived.init,v 1.2 2012/09/25 18:19:32 idl0r Exp $
 
 depend() {
 	use logger
@@ -10,7 +10,7 @@ depend() {
 }
 
 command="/usr/sbin/keepalived"
-command_args="${opts}"
+command_args="${KEEPALIVED_OPTS}"
 pidfile="/var/run/keepalived.pid"
 
 extra_commands="checkconfig"

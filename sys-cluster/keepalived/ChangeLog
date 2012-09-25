@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/keepalived
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.98 2012/09/22 14:17:34 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.99 2012/09/25 18:19:32 idl0r Exp $
+
+*keepalived-1.2.7-r1 (25 Sep 2012)
+
+  25 Sep 2012; Christian Ruppert <idl0r@gentoo.org> -keepalived-1.2.7.ebuild,
+  +keepalived-1.2.7-r1.ebuild, files/init-keepalived, +files/keepalived.confd,
+  files/keepalived.init:
+  Don't use $opts in init.d / conf.d, bug 436066
 
 *keepalived-1.2.7 (22 Sep 2012)
 
