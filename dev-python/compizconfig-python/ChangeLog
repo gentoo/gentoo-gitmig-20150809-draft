@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/compizconfig-python
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/compizconfig-python/ChangeLog,v 1.25 2012/08/30 17:27:56 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/compizconfig-python/ChangeLog,v 1.26 2012/09/25 14:42:49 pinkbyte Exp $
+
+  25 Sep 2012; Sergey Popov <pinkbyte@gentoo.org>
+  -compizconfig-python-0.8.4-r3.ebuild:
+  Drop old revision
 
   30 Aug 2012; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
   Remove myself and proxy maintainer from maintainers
