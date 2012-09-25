@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-9999.ebuild,v 1.21 2012/08/29 04:53:52 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-9999.ebuild,v 1.22 2012/09/25 05:59:37 jmbsvicetto Exp $
 
 # catalyst-9999         -> latest Git
 # catalyst-3.9999       -> catalyst_3 branch from Git
@@ -9,12 +9,17 @@
 EAPI=3
 PYTHON_DEPEND="2"
 
-if [[ ${PV} == 9999* || ${PV} == 3.9999* ]]; then
+if [[ ${PV} == *9999* ]]; then
 	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/catalyst.git"
 	inherit git-2
 	SRC_URI=""
 	S="${WORKDIR}/${PN}"
 	KEYWORDS=""
+
+	case ${PV} in
+		2.9999) EGIT_BRANCH="catalyst_2" ;;
+		3.9999) EGIT_BRANCH="catalyst_3" ;;
+	esac
 else
 	SRC_URI="mirror://gentoo/${P}.tar.bz2
 		http://dev.gentoo.org/~jmbsvicetto/distfiles/${P}.tar.bz2"
@@ -51,7 +56,7 @@ pkg_setup() {
 	einfo "and they are considered to be the authorative source of information"
 	einfo "on catalyst."
 	echo
-	if [[ ${PV} == 9999* || ${PV} == 3.9999* ]]; then
+	if [[ ${PV} == *9999* ]]; then
 		ewarn "The ${EGIT_BRANCH:-master} branch (what you get with this ${PV} ebuild) contains"
 		ewarn "work-in-progress code. Be aware that it's likely that it will not"
 		ewarn "be in a working state at any given point. Please do not file bugs"

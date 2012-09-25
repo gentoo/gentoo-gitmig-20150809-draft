@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/catalyst
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.248 2012/09/09 17:18:17 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.249 2012/09/25 05:59:37 jmbsvicetto Exp $
+
+*catalyst-3.9999 (25 Sep 2012)
+
+  25 Sep 2012; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +catalyst-3.9999.ebuild, catalyst-2.9999.ebuild, catalyst-9999.ebuild:
+  [dev-util/catalyst] Update live ebuilds to follow master, catalyst_2 and
+  catalyst_3 branches.
 
 *catalyst-2.0.11 (09 Sep 2012)
 
