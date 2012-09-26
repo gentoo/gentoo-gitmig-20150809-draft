@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.326 2012/09/18 03:37:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.327 2012/09/26 21:25:24 robbat2 Exp $
+
+  26 Sep 2012; Robin H. Johnson <robbat2@gentoo.org> files/mdev.rc.1:
+  New virtual init.d to split the /dev mount vs. daemon more cleanly.
 
   18 Sep 2012; Mike Frysinger <vapier@gentoo.org> busybox-1.20.2.ebuild,
   busybox-9999.ebuild, metadata.xml:
