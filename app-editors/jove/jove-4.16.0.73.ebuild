@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/jove-4.16.0.73.ebuild,v 1.5 2010/10/14 16:53:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/jove-4.16.0.73.ebuild,v 1.6 2012/09/26 04:49:12 ulm Exp $
+
+EAPI=4
 
 inherit eutils toolchain-funcs
 
@@ -8,7 +10,7 @@ DESCRIPTION="Jonathan's Own Version of Emacs - a light emacs-like editor without
 HOMEPAGE="ftp://ftp.cs.toronto.edu/cs/ftp/pub/hugh/jove-dev/"
 SRC_URI="ftp://ftp.cs.toronto.edu/cs/ftp/pub/hugh/jove-dev/${PN}${PV}.tgz"
 
-LICENSE="as-is"
+LICENSE="JOVE"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="doc"
@@ -18,9 +20,7 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${PN}${PV}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/${PN}-4.16.0.70.3.1-getline.patch"
 	epatch "${FILESDIR}/${P}-build.patch"
 	epatch "${FILESDIR}/${P}-sendmail.patch"
@@ -30,20 +30,20 @@ src_unpack() {
 src_compile() {
 	tc-export CC
 
-	emake OPTFLAGS="${CFLAGS}" SYSDEFS="-DSYSVR4 -D_XOPEN_SOURCE=500" || die
+	emake OPTFLAGS="${CFLAGS}" SYSDEFS="-DSYSVR4 -D_XOPEN_SOURCE=500"
 
 	if use doc; then
 		# Full manual (*not* man page)
-		emake doc/jove.man || die
+		emake doc/jove.man
 	fi
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 	keepdir /var/lib/jove/preserve
 
 	dodoc README
 	if use doc; then
-		dodoc doc/jove.man || die
+		dodoc doc/jove.man
 	fi
 }
