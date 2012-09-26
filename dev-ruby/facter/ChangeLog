@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/facter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.54 2012/08/14 03:29:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.55 2012/09/26 06:26:12 graaff Exp $
+
+*facter-1.6.12 (26 Sep 2012)
+
+  26 Sep 2012; Hans de Graaff <graaff@gentoo.org> +facter-1.6.12.ebuild:
+  Version bump.
 
   14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> facter-1.6.10.ebuild:
   Fix up dependencies, especially for tests.
