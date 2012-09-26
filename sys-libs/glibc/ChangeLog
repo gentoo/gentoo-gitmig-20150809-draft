@@ -1,5 +1,8 @@
 # ChangeLog for sys-libs/glibc
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.892 2012/09/25 19:47:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.893 2012/09/26 05:21:41 mattst88 Exp $
+
+  26 Sep 2012; Matt Turner <mattst88@gentoo.org> glibc-2.15-r2.ebuild:
+  Stable on alpha, bug 430346.
 
 *glibc-2.15-r3 (25 Sep 2012)
 
