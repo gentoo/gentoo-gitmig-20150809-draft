@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/nsat-1.5-r1.ebuild,v 1.1 2012/09/25 18:30:48 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/nsat-1.5-r1.ebuild,v 1.2 2012/09/26 07:14:40 pinkbyte Exp $
 
 inherit eutils autotools
 
@@ -32,7 +32,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-lvalue-gcc4.patch
 	epatch "${FILESDIR}"/${P}-strip.patch
 	# bug 389767
-	epatch "${FILESDIR}"/${P}-amd64-compat.patch
+	use amd64 && epatch "${FILESDIR}"/${P}-amd64-compat.patch
 
 	sed -i "s:^#CGIFile /usr/local/share/nsat/nsat.cgi$:#CGIFile /usr/share/nsat/nsat.cgi:g" \
 		nsat.conf
