@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hwids
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.21 2012/09/26 02:52:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.22 2012/09/26 10:33:20 ssuominen Exp $
+
+  26 Sep 2012; Samuli Suominen <ssuominen@gentoo.org> hwids-20120922.ebuild:
+  amd64/ppc/ppc64/x86 stable wrt #436186
 
   26 Sep 2012; Jeroen Roovers <jer@gentoo.org> hwids-20120922.ebuild:
   Stable for HPPA (bug #436186).
