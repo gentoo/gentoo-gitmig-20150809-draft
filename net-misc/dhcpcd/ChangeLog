@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.333 2012/05/05 22:49:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.334 2012/09/26 15:05:35 williamh Exp $
+
+*dhcpcd-5.6.2 (26 Sep 2012)
+
+  26 Sep 2012; William Hubbs <williamh@gentoo.org> +dhcpcd-5.6.2.ebuild:
+  version bump
 
   05 May 2012; Alexis Ballier <aballier@gentoo.org> dhcpcd-5.5.6.ebuild:
   keyword ~amd64-fbsd
@@ -1410,4 +1415,3 @@
 
   6 Jul 2002; phoen][x <phoenix@gentoo.org> ChangeLog dhcpcd-1.3.20_p0.ebuild:
   Added KEYWORDS, SLOT, LICENSE.
-
