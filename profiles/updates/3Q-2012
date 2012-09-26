@@ -49,3 +49,4 @@ slotmove app-doc/pms 2 0
 slotmove app-doc/pms 3 0
 slotmove app-doc/pms 4 0
 slotmove app-doc/pms 5 0
+move app-misc/lolcat games-misc/lolcat
