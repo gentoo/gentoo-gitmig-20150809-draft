@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/libv4l-0.8.8.ebuild,v 1.8 2012/08/27 17:24:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/libv4l-0.8.8.ebuild,v 1.9 2012/09/26 05:42:34 vapier Exp $
 
 EAPI=4
 inherit eutils linux-info multilib toolchain-funcs
@@ -25,6 +25,7 @@ S=${WORKDIR}/${MY_P}
 CONFIG_CHECK="~SHMEM"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-drop-Wp-flags.patch
 	sed -i \
 		-e "/^PREFIX =/s:=.*:= ${EPREFIX}/usr:" \
 		-e "/^LIBDIR =/s:/lib:/$(get_libdir):" \

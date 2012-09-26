@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libv4l
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/ChangeLog,v 1.71 2012/08/27 17:24:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/ChangeLog,v 1.72 2012/09/26 05:42:34 vapier Exp $
+
+  26 Sep 2012; Mike Frysinger <vapier@gentoo.org>
+  +files/libv4l-0.8.8-drop-Wp-flags.patch, libv4l-0.8.8.ebuild:
+  Drop useless gcc-specific -Wp flags.
 
   27 Aug 2012; Raúl Porcel <armin76@gentoo.org> libv4l-0.8.8.ebuild:
   alpha/ia64/sparc stable wrt #419099
