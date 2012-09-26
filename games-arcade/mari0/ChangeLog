@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/mari0
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/mari0/ChangeLog,v 1.5 2012/06/17 12:03:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/mari0/ChangeLog,v 1.6 2012/09/26 14:05:33 hasufell Exp $
+
+  26 Sep 2012; Julian Ospald <hasufell@gentoo.org> mari0-1.6.ebuild:
+  stable for amd64 wrt #435896 tested by Agostino Sarubbo
 
   17 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> mari0-1.6.ebuild:
   Use doicon -s scalable instead of doins -s scalable wrt #421553 by Jaakko
