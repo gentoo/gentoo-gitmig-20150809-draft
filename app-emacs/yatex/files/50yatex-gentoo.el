@@ -1,6 +1,3 @@
-
-;;; yatex site-lisp configuration
-
 ;; YaTeX-mode
 (setq auto-mode-alist
       (cons (cons "\\.tex$" 'yatex-mode) auto-mode-alist))
