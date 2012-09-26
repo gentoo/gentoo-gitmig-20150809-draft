@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libtasn1
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.168 2012/06/01 00:36:51 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.169 2012/09/26 21:42:19 radhermit Exp $
+
+*libtasn1-2.14 (26 Sep 2012)
+
+  26 Sep 2012; Tim Harder <radhermit@gentoo.org> +libtasn1-2.14.ebuild:
+  Version bump and switch to virtual/yacc dep instead of bison specifically.
 
 *libtasn1-2.13 (01 Jun 2012)
 
