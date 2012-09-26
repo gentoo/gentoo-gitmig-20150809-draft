@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.718 2012/09/26 10:54:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.719 2012/09/26 11:12:00 phajdan.jr Exp $
+
+  26 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-22.0.1229.79.ebuild:
+  Skip ChunkDemuxerTest.TestDurationChangeTimestampOffset, bug #431042.
 
   26 Sep 2012; Agostino Sarubbo <ago@gentoo.org> -chromium-21.0.1180.89.ebuild,
   -chromium-22.0.1229.64.ebuild:

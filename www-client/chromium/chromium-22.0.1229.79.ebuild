@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-22.0.1229.79.ebuild,v 1.3 2012/09/26 10:52:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-22.0.1229.79.ebuild,v 1.4 2012/09/26 11:12:00 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -345,7 +345,11 @@ src_test() {
 	runtest out/Release/crypto_unittests
 	runtest out/Release/googleurl_unittests
 	runtest out/Release/gpu_unittests
-	runtest out/Release/media_unittests
+
+	local excluded_media_unittests=(
+		"ChunkDemuxerTest.TestDurationChangeTimestampOffset" # bug #431042
+	)
+	runtest out/Release/media_unittests "${excluded_media_unittests[@]}"
 
 	local excluded_net_unittests=(
 		"NetUtilTest.IDNToUnicode*" # bug 361885
