@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim-anthy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-anthy/ChangeLog,v 1.62 2012/05/03 19:24:26 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-anthy/ChangeLog,v 1.63 2012/09/26 03:23:09 naota Exp $
+
+  26 Sep 2012;  <naota@gentoo.org> scim-anthy-1.2.6.ebuild,
+  scim-anthy-1.2.7.ebuild, scim-anthy-1.3.1.ebuild:
+  Force scim not to use gtk3.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> scim-anthy-1.2.6.ebuild,
   scim-anthy-1.2.7.ebuild, scim-anthy-1.3.1.ebuild:
@@ -276,4 +280,3 @@
   30 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
   +scim-anthy-0.2.0.ebuild:
   Initial import.
-

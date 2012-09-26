@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-anthy/scim-anthy-1.3.1.ebuild,v 1.5 2012/05/03 19:24:26 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-anthy/scim-anthy-1.3.1.ebuild,v 1.6 2012/09/26 03:23:09 naota Exp $
 
-EAPI="1"
+EAPI="2"
 
 inherit libtool
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="gtk nls"
 
-DEPEND=">=app-i18n/scim-1.2
+DEPEND=">=app-i18n/scim-1.2[-gtk3]
 	|| ( >=app-i18n/anthy-7500 >=app-i18n/anthy-ss-7500 )
 	nls? ( virtual/libintl )
 	gtk? ( >=x11-libs/gtk+-2.8:2 )"
@@ -25,17 +25,18 @@ DEPEND="${DEPEND}
 	nls? ( sys-devel/gettext )
 	virtual/pkgconfig"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	elibtoolize
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		$(use_enable nls) \
 		--disable-static \
-		--disable-dependency-tracking
+		--disable-dependency-tracking || die
+}
+
+src_compile() {
 	emake || die "emake failed"
 }
 
