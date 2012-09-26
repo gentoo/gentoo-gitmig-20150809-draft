@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/adtool
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/adtool/ChangeLog,v 1.16 2012/07/11 13:08:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/adtool/ChangeLog,v 1.17 2012/09/26 18:08:19 kensington Exp $
+
+  26 Sep 2012; Michael Palimaka <kensington@gentoo.org> -adtool-1.3.2.ebuild,
+  -files/adtool-1.3.2-asneeded.patch:
+  Remove old.
 
 *adtool-1.3.3 (11 Jul 2012)
 
@@ -70,4 +74,3 @@
   21 Jun 2004; Christian Andreetta <satya@gentoo.org> adtool-1.2.ebuild,
   metadata.xml:
   initial ebuild (Vlastimil Holer). See bug #50939
-
