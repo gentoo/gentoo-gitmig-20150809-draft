@@ -1,6 +1,9 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.715 2012/09/25 20:05:37 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.716 2012/09/26 10:11:33 ago Exp $
+
+  26 Sep 2012; Agostino Sarubbo <ago@gentoo.org> chromium-22.0.1229.79.ebuild:
+  Stable for amd64, wrt bug #436234
 
 *chromium-22.0.1229.79 (25 Sep 2012)
 
