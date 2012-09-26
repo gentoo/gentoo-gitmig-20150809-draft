@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nano
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.281 2012/09/26 11:15:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.282 2012/09/26 11:16:48 ago Exp $
+
+  26 Sep 2012; Agostino Sarubbo <ago@gentoo.org> nano-2.3.1-r2.ebuild:
+  Stable for X86, wrt bug #436126
 
   26 Sep 2012; Agostino Sarubbo <ago@gentoo.org> nano-2.3.1-r2.ebuild:
   Stable for AMD64, wrt bug #436126
