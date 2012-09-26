@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/Babel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Babel/ChangeLog,v 1.42 2012/05/09 00:15:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Babel/ChangeLog,v 1.43 2012/09/26 01:13:57 hasufell Exp $
+
+  26 Sep 2012; Julian Ospald <hasufell@gentoo.org> Babel-0.9.6.ebuild,
+  +files/Babel-0.9.6-setuptools.patch:
+  remove distutils fallback which is broken, thus enforcing usage of setuptools
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> Babel-0.9.6.ebuild:
   keyword ~amd64-fbsd

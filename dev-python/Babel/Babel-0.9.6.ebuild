@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Babel/Babel-0.9.6.ebuild,v 1.9 2012/05/09 00:15:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Babel/Babel-0.9.6.ebuild,v 1.10 2012/09/26 01:13:57 hasufell Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -8,7 +8,7 @@ SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 DISTUTILS_SRC_TEST="setup.py"
 
-inherit distutils
+inherit eutils distutils
 
 DESCRIPTION="A collection of tools for internationalizing Python applications"
 HOMEPAGE="http://babel.edgewall.org/ http://pypi.python.org/pypi/Babel"
@@ -24,6 +24,11 @@ DEPEND="dev-python/pytz
 RDEPEND="${DEPEND}"
 
 PYTHON_MODNAME="babel"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-setuptools.patch
+	distutils_src_prepare
+}
 
 src_install() {
 	distutils_src_install
