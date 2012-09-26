@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1106 2012/09/24 04:08:28 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1107 2012/09/26 04:26:21 zmedico Exp $
+
+*portage-2.1.11.22 (26 Sep 2012)
+
+  26 Sep 2012; Zac Medico <zmedico@gentoo.org> +portage-2.1.11.22.ebuild,
+  -portage-2.1.11.20.ebuild:
+  2.1.11.22 version bump. This fixes bug #436084 (avoid unnecessary scanning of
+  PKGDIR). This also adds support for experimental EAPI 5-hdepend. Bug #431026
+  tracks all bugs fixed since portage-2.1.11.9.
 
 *portage-2.2.0_alpha132 (24 Sep 2012)
 
