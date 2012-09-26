@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libkolab/libkolab-0.2.0.ebuild,v 1.1 2012/08/01 20:03:24 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkolab/libkolab-0.2.0.ebuild,v 1.2 2012/09/26 03:34:52 creffett Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ DESCRIPTION="Advanced Kolab Object Handling Library"
 HOMEPAGE="kolab.org"
 SRC_URI="http://dev.gentoo.org/~creffett/distfiles/${P}.tar.gz"
 
-LICENSE="GPL-2 GPL-3"
+LICENSE="LGPL-2+ LGPL-2.1+ LGPL-3+"
 SLOT="4"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
