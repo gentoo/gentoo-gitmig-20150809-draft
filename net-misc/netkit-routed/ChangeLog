@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/netkit-routed
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-routed/ChangeLog,v 1.21 2012/07/12 15:55:28 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-routed/ChangeLog,v 1.22 2012/09/26 18:45:31 kensington Exp $
+
+  26 Sep 2012; Michael Palimaka <kensington@gentoo.org>
+  -netkit-routed-0.17-r3.ebuild:
+  Remove old.
 
   12 Jul 2012; Ian Stakenvicius <axs@gentoo.org> netkit-routed-0.17-r3.ebuild,
   netkit-routed-0.17-r4.ebuild:
