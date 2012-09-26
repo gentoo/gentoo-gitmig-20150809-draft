@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.410 2012/09/20 18:04:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.411 2012/09/26 12:07:45 hasufell Exp $
+
+  26 Sep 2012; Julian Ospald <hasufell@gentoo.org> python-distutils-ng.eclass:
+  add PYTHON_USE wrt #426768
 
   20 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> autotools.eclass:
   Be more strict about eautoreconfig on aclocal.m4. Fixes bug#424763 and
