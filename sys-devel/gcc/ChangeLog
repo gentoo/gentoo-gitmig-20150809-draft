@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.901 2012/09/13 17:29:04 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.902 2012/09/26 18:51:59 mattst88 Exp $
+
+  26 Sep 2012; Matt Turner <mattst88@gentoo.org> gcc-4.4.7.ebuild,
+  gcc-4.5.4.ebuild:
+  Stable on alpha, bug 431878.
 
   13 Sep 2012; Anthony G. Basile <blueness@gentoo.org> gcc-4.4.7.ebuild:
   Stable ppc64, bug #431878 - forgot 4.4.7
