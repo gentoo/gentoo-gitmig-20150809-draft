@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/gsl-shell
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gsl-shell/ChangeLog,v 1.4 2012/09/26 12:36:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gsl-shell/ChangeLog,v 1.5 2012/09/26 14:50:50 grozin Exp $
+
+  26 Sep 2012; Andrey Grozin <grozin@gentoo.org> gsl-shell-2.2.0_beta1.ebuild:
+  Fixing a stupid typo
 
   26 Sep 2012; Agostino Sarubbo <ago@gentoo.org> gsl-shell-2.2.0_beta1.ebuild:
   add ~amd64, wrt to bug #435746
