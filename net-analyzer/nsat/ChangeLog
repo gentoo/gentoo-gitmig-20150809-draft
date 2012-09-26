@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nsat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/ChangeLog,v 1.19 2012/09/26 07:14:40 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/ChangeLog,v 1.20 2012/09/26 07:20:51 pinkbyte Exp $
+
+  26 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> nsat-1.5-r1.ebuild:
+  Bump ebuild's EAPI to 2, add some QA fixes wrt bug #335951
 
   26 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> nsat-1.5-r1.ebuild:
   Make amd64-compatibility patch applies only on amd64 systems

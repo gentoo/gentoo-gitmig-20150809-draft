@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/nsat-1.5-r1.ebuild,v 1.2 2012/09/26 07:14:40 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/nsat-1.5-r1.ebuild,v 1.3 2012/09/26 07:20:51 pinkbyte Exp $
+
+EAPI=2
 
 inherit eutils autotools
-
-WANT_AUTOCONF=2.5
 
 DESCRIPTION="Network Security Analysis Tool, an application-level network security scanner"
 HOMEPAGE="http://nsat.sourceforge.net/"
@@ -23,10 +23,7 @@ DEPEND="$RDEPEND >=sys-devel/autoconf-2.58"
 
 S="${WORKDIR}/${PN}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	cp -va configure.in{,.orig}
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-configure.patch
 	# bug 128204
 	epatch "${FILESDIR}"/${P}-lvalue-gcc4.patch
@@ -35,19 +32,21 @@ src_unpack() {
 	use amd64 && epatch "${FILESDIR}"/${P}-amd64-compat.patch
 
 	sed -i "s:^#CGIFile /usr/local/share/nsat/nsat.cgi$:#CGIFile /usr/share/nsat/nsat.cgi:g" \
-		nsat.conf
-	sed -i "s:/usr/local:/usr:g" Makefile.in
-	sed -i "s:/usr/local:/usr:g" tools/xnsat
+		nsat.conf || die "sed on nsat.conf failed"
+	sed -i "s:/usr/local:/usr:g" Makefile.in || die "sed on Makefile.in failed"
+	sed -i "s:/usr/local:/usr:g" tools/xnsat || die "sed on tools/xnsat failed"
 	sed -i -e "s:/usr/local/share/nsat/nsat.conf:/etc/nsat/nsat.conf:g" \
 		-e "s:/usr/local/share/nsat/nsat.cgi:/usr/share/nsat/nsat.cgi:g" \
-		src/lang.h
+		src/lang.h || die "sed on src/lang.h failed"
 
 	eautoreconf
 }
 
-src_compile() {
-	econf $( use_with X x ) || die
+src_configure() {
+	econf $(use_with X x) || die "configuration failed"
+}
 
+src_compile() {
 	make|| die "compile problem"
 }
 
