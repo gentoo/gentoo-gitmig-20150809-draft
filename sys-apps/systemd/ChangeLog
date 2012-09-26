@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.51 2012/09/24 12:51:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.52 2012/09/26 05:22:05 mgorny Exp $
+
+*systemd-191-r1 (26 Sep 2012)
+
+  26 Sep 2012; Michał Górny <mgorny@gentoo.org>
+  +files/191-0003-log-fix-repeated-invocation-of-vsnprintf-vaprintf-in.patch,
+  +systemd-191-r1.ebuild, -systemd-190.ebuild, -systemd-191.ebuild:
+  Fix libc segfault, bug #436196.
 
   24 Sep 2012; Michał Górny <mgorny@gentoo.org>
   +files/191-0001-Disable-udev-targets-for-udev-190.patch,

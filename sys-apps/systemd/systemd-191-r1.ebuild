@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-190.ebuild,v 1.1 2012/09/22 16:15:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-191-r1.ebuild,v 1.1 2012/09/26 05:22:05 mgorny Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ MINKV="2.6.39"
 COMMON_DEPEND=">=sys-apps/dbus-1.4.10
 	>=sys-apps/kmod-5
 	>=sys-apps/util-linux-2.20
-	~sys-fs/udev-190
+	~sys-fs/udev-191
 	sys-libs/libcap
 	acl? ( sys-apps/acl )
 	audit? ( >=sys-process/audit-2 )
@@ -66,7 +66,9 @@ src_prepare() {
 	sed -i -e 's:libudev\.la:-ludev:' Makefile.am
 
 	local PATCHES=(
-		"${FILESDIR}"/0001-Disable-udev-targets-for-udev-190.patch
+		"${FILESDIR}"/${PV}-0001-Disable-udev-targets-for-udev-190.patch
+		"${FILESDIR}"/${PV}-0002-journal-bring-mmap-cache-prototype-in-sync.patch
+		"${FILESDIR}"/${PV}-0003-log-fix-repeated-invocation-of-vsnprintf-vaprintf-in.patch
 	)
 
 	autotools-utils_src_prepare
