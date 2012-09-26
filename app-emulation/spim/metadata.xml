@@ -9,4 +9,7 @@
 		programs.  It also provides a simple debugger and a minimal set of
 		operating system services.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">spimsimulator</remote-id>
+	</upstream>
 </pkgmetadata>
