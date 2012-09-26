@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/compton/compton-9999.ebuild,v 1.1 2012/05/06 00:08:17 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/compton/compton-9999.ebuild,v 1.2 2012/09/26 18:21:50 hasufell Exp $
 
 EAPI=4
 
@@ -17,7 +17,10 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-COMMON_DEPEND="x11-libs/libX11
+COMMON_DEPEND="
+	dev-libs/libconfig
+	dev-libs/libpcre
+	x11-libs/libX11
 	x11-libs/libXcomposite
 	x11-libs/libXdamage
 	x11-libs/libXfixes
