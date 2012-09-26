@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.11.4.ebuild,v 1.1 2012/09/02 11:48:02 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.11.4.ebuild,v 1.2 2012/09/26 08:42:27 sera Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
@@ -213,7 +213,7 @@ src_configure() {
 	einfo "Configuring using --with-parallel-jobs=${procs}"
 
 	if use javascript ; then
-		config="${config} --with-rhino=$(java-pkg_getjar rhino:1.6 js.jar)"
+		config="${config} --with-rhino=$(java-pkg_getjar rhino-1.6 js.jar)"
 	else
 		config="${config} --without-rhino"
 	fi

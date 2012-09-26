@@ -1,6 +1,23 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.81 2012/09/02 11:48:02 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.82 2012/09/26 08:42:27 sera Exp $
+
+  26 Sep 2012; Ralph Sennhauser <sera@gentoo.org> -icedtea-6.1.11.2.ebuild,
+  -icedtea-6.1.11.3.ebuild, icedtea-6.1.11.4.ebuild,
+  -files/icedtea-7-compile_for_7_cacao_mem.patch,
+  -files/icedtea-7.2.0-explicit-gthread.patch,
+  -files/icedtea-7.2.0_pax_kernel_support.patch, -icedtea-7.2.1.ebuild,
+  -icedtea-7.2.1.1.ebuild, -files/icedtea-7.2.1.1-pax_mark_rmic_java.patch,
+  -files/icedtea-7.2.1.1-pr986-cacao_memory_fix.patch, -icedtea-7.2.2.ebuild,
+  -icedtea-7.2.2.1.ebuild, -files/icedtea-7.2.2.1-pax_mark_rmic_java.patch,
+  -files/icedtea-7.2.2.1-pr986-cacao_memory_fix.patch,
+  -files/icedtea-7.2.2.1-warnings_are_errors.patch,
+  -files/icedtea-7.2.2-no_suffix.patch, -icedtea-7.2.3.1.ebuild,
+  -files/icedtea-7.2.3.1-pax_mark_rmic_java.patch, icedtea-7.2.3.2.ebuild,
+  -files/icedtea-7-compiler_detection_cleanup.patch,
+  -files/icedtea-7-no_suffix.patch:
+  Fix package.env entry of rhino. #433283
+  Remove vulnarable. #433389
 
 *icedtea-6.1.11.4 (02 Sep 2012)
 
