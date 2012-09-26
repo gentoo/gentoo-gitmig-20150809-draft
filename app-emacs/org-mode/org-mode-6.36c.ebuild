@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-6.36c.ebuild,v 1.8 2011/06/19 16:03:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-6.36c.ebuild,v 1.9 2012/09/26 18:19:45 ulm Exp $
 
 inherit elisp
 
@@ -8,9 +8,9 @@ DESCRIPTION="An Emacs mode for notes and project planning"
 HOMEPAGE="http://www.orgmode.org/"
 SRC_URI="http://orgmode.org/org-${PV}.tar.gz"
 
-LICENSE="GPL-3 FDL-1.3"
+LICENSE="GPL-3+ FDL-1.3+"
 SLOT="0"
-KEYWORDS="amd64 ppc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE=""
 
 S="${WORKDIR}/org-${PV}"

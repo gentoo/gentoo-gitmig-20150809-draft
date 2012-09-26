@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-7.7.ebuild,v 1.6 2012/01/06 16:44:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-7.7.ebuild,v 1.7 2012/09/26 18:19:45 ulm Exp $
 
 EAPI=4
 NEED_EMACS=22
@@ -11,9 +11,9 @@ DESCRIPTION="An Emacs mode for notes and project planning"
 HOMEPAGE="http://www.orgmode.org/"
 SRC_URI="http://orgmode.org/org-${PV}.tar.gz"
 
-LICENSE="GPL-3 FDL-1.3 contrib? ( GPL-2 MIT as-is )"
+LICENSE="GPL-3+ FDL-1.3+ contrib? ( GPL-2+ MIT OASIS-Open )"
 SLOT="0"
-KEYWORDS="amd64 ppc x86 ~sparc-fbsd ~x86-fbsd ~x86-macos"
+KEYWORDS="amd64 ppc x86 ~x86-fbsd ~x86-macos"
 IUSE="contrib"
 
 S="${WORKDIR}/org-${PV}"
