@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pugixml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pugixml/ChangeLog,v 1.4 2012/09/20 15:07:47 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pugixml/ChangeLog,v 1.5 2012/09/26 01:22:04 naota Exp $
+
+  26 Sep 2012;  <naota@gentoo.org> pugixml-1.2.ebuild:
+  Add ~x86-fbsd. #418355
 
   20 Sep 2012; Christoph Junghans <ottxor@gentoo.org> pugixml-1.2.ebuild:
   added prefix keyword
