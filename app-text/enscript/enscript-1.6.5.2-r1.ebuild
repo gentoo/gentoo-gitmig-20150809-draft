@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enscript/enscript-1.6.5.2-r1.ebuild,v 1.4 2012/05/12 01:46:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enscript/enscript-1.6.5.2-r1.ebuild,v 1.5 2012/09/26 14:41:10 jer Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ DESCRIPTION="powerful text-to-postscript converter"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/enscript/enscript.html"
 
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="~alpha amd64 hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd"
 SLOT="0"
 LICENSE="GPL-3"
 IUSE="nls ruby"
