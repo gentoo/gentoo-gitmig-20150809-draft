@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/skanlite
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/skanlite/ChangeLog,v 1.21 2012/06/01 19:50:51 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/skanlite/ChangeLog,v 1.22 2012/09/26 12:14:43 johu Exp $
+
+*skanlite-0.9 (26 Sep 2012)
+
+  26 Sep 2012; Johannes Huber <johu@gentoo.org> +skanlite-0.9.ebuild:
+  Version bump.
 
   01 Jun 2012; Johannes Huber <johu@gentoo.org> -skanlite-0.7.ebuild:
   Remove old.
@@ -83,4 +88,3 @@
   03 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org> +metadata.xml,
   +skanlite-0.2.ebuild:
   Initial import of skanlite; this fixes bug #256744
-
