@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/nxml-gentoo-schemas
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-gentoo-schemas/ChangeLog,v 1.21 2011/11/29 21:08:05 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-gentoo-schemas/ChangeLog,v 1.22 2012/09/26 06:25:08 ulm Exp $
+
+  26 Sep 2012; Ulrich Müller <ulm@gentoo.org>
+  nxml-gentoo-schemas-20111129.ebuild:
+  Specify LICENSE more precisely. Bump ebuild to EAPI 4.
 
 *nxml-gentoo-schemas-20111129 (29 Nov 2011)
 
