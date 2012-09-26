@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nano
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.279 2012/09/10 19:54:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.280 2012/09/26 02:50:14 jer Exp $
+
+  26 Sep 2012; Jeroen Roovers <jer@gentoo.org> nano-2.3.1-r2.ebuild:
+  Stable for HPPA (bug #436126).
 
   10 Sep 2012; Mike Frysinger <vapier@gentoo.org> nano-2.3.1-r2.ebuild:
   Move GDP documentation to HOMEPAGE so emerge is less spammy.
