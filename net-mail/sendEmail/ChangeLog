@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/sendEmail
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sendEmail/ChangeLog,v 1.19 2012/04/06 21:57:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sendEmail/ChangeLog,v 1.20 2012/09/26 18:58:51 kensington Exp $
+
+  26 Sep 2012; Michael Palimaka <kensington@gentoo.org> -sendEmail-1.55.ebuild:
+  Remove old.
 
   06 Apr 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #63588
@@ -69,4 +72,3 @@
 
   19 Jun 2004; Gustavo Felisberto <humpback@gentoo.org>; :
   Initial import
-
