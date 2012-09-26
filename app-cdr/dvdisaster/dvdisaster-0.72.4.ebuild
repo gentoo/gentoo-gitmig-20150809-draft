@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/dvdisaster-0.72.4.ebuild,v 1.6 2012/08/05 11:02:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/dvdisaster-0.72.4.ebuild,v 1.7 2012/09/26 11:11:08 ssuominen Exp $
 
 EAPI=4
 inherit eutils gnome2-utils toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="mirror://debian/pool/main/${PN:0:1}/${PN}/${PN}_${PV}.orig.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="debug nls"
 
 dvdi_langs="cs de it pt_BR ru sv"

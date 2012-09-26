@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/dvdisaster
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/ChangeLog,v 1.28 2012/08/05 11:02:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/ChangeLog,v 1.29 2012/09/26 11:11:08 ssuominen Exp $
+
+  26 Sep 2012; Samuli Suominen <ssuominen@gentoo.org> dvdisaster-0.72.4.ebuild:
+  ppc stable wrt #428050
 
   05 Aug 2012; Samuli Suominen <ssuominen@gentoo.org> dvdisaster-0.72.4.ebuild:
   Use full compiler name wrt #429928 by Julian Ospald
