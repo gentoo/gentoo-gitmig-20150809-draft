@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.523 2012/09/04 09:32:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.524 2012/09/26 17:55:07 vostorga Exp $
+
+*samba-4.0.0_rc1 (26 Sep 2012)
+
+  26 Sep 2012; Víctor Ostorga <vostorga@gentoo.org>
+  -samba-4.0.0_alpha11.ebuild, +samba-4.0.0_rc1.ebuild:
+  Version bump of the ongoing samba 4. Ebuild based on the work of Torsten
+  Kurbad, Ewoud Kohl van Wijngaarden et all at bug 195703
 
   04 Sep 2012; Patrick Lauer <patrick@gentoo.org> samba-3.5.17.ebuild:
   Restricting cups 1.6
