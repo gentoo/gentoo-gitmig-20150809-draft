@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gsl-shell/gsl-shell-2.2.0_beta1.ebuild,v 1.3 2012/09/26 11:15:34 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gsl-shell/gsl-shell-2.2.0_beta1.ebuild,v 1.4 2012/09/26 12:36:54 ago Exp $
 
 EAPI=4
 inherit eutils versionator
@@ -11,7 +11,7 @@ MY_P=$(version_format_string '${PN}-$1.$2.$3-$4')
 SRC_URI="http://download.savannah.gnu.org/releases/${PN}/${MY_P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc fox"
 
 DEPEND=">=sci-libs/gsl-1.14
