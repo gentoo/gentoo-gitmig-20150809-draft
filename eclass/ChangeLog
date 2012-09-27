@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.414 2012/09/27 16:35:41 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.415 2012/09/27 17:12:34 axs Exp $
+
+  27 Sep 2012; Ian Stakenvicius <axs@gentoo.org> eutils.eclass:
+  Made 'usex' declaration conditional on lack of PM or EAPI5+ support
 
   27 Sep 2012; Ian Stakenvicius <axs@gentoo.org> fortran-2.eclass,
   selinux-policy-2.eclass, vdr-plugin-2.eclass, xorg-2.eclass,

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.403 2012/09/15 16:16:53 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.404 2012/09/27 17:12:34 axs Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -1371,9 +1371,13 @@ use_if_iuse() {
 # @FUNCTION: usex
 # @USAGE: <USE flag> [true output] [false output] [true suffix] [false suffix]
 # @DESCRIPTION:
+# Proxy to declare usex for package managers or EAPIs that do not provide it
+# and use the package manager implementation when available (i.e. EAPI >= 5).
 # If USE flag is set, echo [true output][true suffix] (defaults to "yes"),
 # otherwise echo [false output][false suffix] (defaults to "no").
-usex() { use "$1" && echo "${2-yes}$4" || echo "${3-no}$5" ; } #382963
+if ! declare -F usex >/dev/null ; then
+	usex() { use "$1" && echo "${2-yes}$4" || echo "${3-no}$5" ; } #382963
+fi
 
 # @FUNCTION: prune_libtool_files
 # @USAGE: [--all]
