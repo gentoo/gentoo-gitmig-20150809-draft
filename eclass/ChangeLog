@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.411 2012/09/26 12:07:45 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.412 2012/09/27 10:42:17 tetromino Exp $
+
+  27 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org> clutter.eclass:
+  Default clutter license is LGPL-2.1 or later.
 
   26 Sep 2012; Julian Ospald <hasufell@gentoo.org> python-distutils-ng.eclass:
   add PYTHON_USE wrt #426768
