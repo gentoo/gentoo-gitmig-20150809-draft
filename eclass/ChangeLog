@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.415 2012/09/27 17:12:34 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.416 2012/09/27 19:34:28 axs Exp $
+
+  27 Sep 2012; Ian Stakenvicius <axs@gentoo.org> toolchain-funcs.eclass:
+  Fixed tc-ninja_magic_to_arch() to also use KV_FULL and fail if no kernel
+  version specified, bug 432390
 
   27 Sep 2012; Ian Stakenvicius <axs@gentoo.org> eutils.eclass:
   Made 'usex' declaration conditional on lack of PM or EAPI5+ support
