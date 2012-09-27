@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/twisted-mail
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-mail/ChangeLog,v 1.68 2012/03/22 07:05:29 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-mail/ChangeLog,v 1.69 2012/09/27 18:16:26 marienz Exp $
+
+*twisted-mail-12.2.0 (27 Sep 2012)
+
+  27 Sep 2012; Marien Zwart <marienz@gentoo.org> +twisted-mail-12.2.0.ebuild:
+  Bump to 12.2.0 (bug #423789)
 
 *twisted-mail-12.0.0 (22 Mar 2012)
 
@@ -267,4 +272,3 @@
   08 Apr 2005; Thomas Raschbacher <lordvan@gentoo.org> twisted-mail-0.5.0:
   initial import
   twisted-mail was part of the main twisted release
-

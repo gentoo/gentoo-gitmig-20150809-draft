@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/twisted-names
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-names/ChangeLog,v 1.66 2012/03/22 07:06:12 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-names/ChangeLog,v 1.67 2012/09/27 18:16:45 marienz Exp $
+
+*twisted-names-12.2.0 (27 Sep 2012)
+
+  27 Sep 2012; Marien Zwart <marienz@gentoo.org> +twisted-names-12.2.0.ebuild:
+  Bump to 12.2.0 (bug #423789)
 
 *twisted-names-12.0.0 (22 Mar 2012)
 
@@ -263,4 +268,3 @@
   08 Apr 2005; Thomas Raschbacher <lordvan@gentoo.org> twisted-names-0.1.0:
   initial import
   twisted-names was part of the main twisted release
-
