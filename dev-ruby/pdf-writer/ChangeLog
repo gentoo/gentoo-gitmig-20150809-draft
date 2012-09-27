@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/pdf-writer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-writer/ChangeLog,v 1.26 2012/08/14 18:44:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-writer/ChangeLog,v 1.27 2012/09/27 09:16:06 ssuominen Exp $
+
+  27 Sep 2012; Samuli Suominen <ssuominen@gentoo.org>
+  pdf-writer-1.1.8-r2.ebuild:
+  Keyword ~ppc/~ppc64 wrt #417513
 
   14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Update metadata.xml so that it's the same as most other packages.
