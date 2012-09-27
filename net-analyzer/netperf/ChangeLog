@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/netperf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/ChangeLog,v 1.58 2012/09/27 15:35:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/ChangeLog,v 1.59 2012/09/27 15:52:23 jer Exp $
+
+  27 Sep 2012; Jeroen Roovers <jer@gentoo.org> netperf-2.6.0-r1.ebuild,
+  metadata.xml:
+  Add USE=demo to enable reporting interim results by Michał Górny (bug
+  #304651).
 
 *netperf-2.6.0-r1 (27 Sep 2012)
 
