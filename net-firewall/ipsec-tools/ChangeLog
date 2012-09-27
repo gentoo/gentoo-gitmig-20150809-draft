@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/ipsec-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.103 2012/09/25 01:12:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.104 2012/09/27 14:11:26 blueness Exp $
+
+  27 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
+  -ipsec-tools-0.7.3.ebuild, -ipsec-tools-0.7.3-r1.ebuild,
+  -files/ipsec-tools-duplicate-header.patch:
+  Remove older unstable version
 
   25 Sep 2012; Mike Frysinger <vapier@gentoo.org>
   +files/ipsec-tools-0.8.0-sysctl.patch, ipsec-tools-0.8.0-r4.ebuild:
