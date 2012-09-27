@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/liborcus-0.1.0.ebuild,v 1.1 2012/09/25 18:31:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/liborcus-0.1.0.ebuild,v 1.2 2012/09/27 16:44:53 scarabeus Exp $
 
 EAPI=4
 
@@ -16,11 +16,10 @@ HOMEPAGE="http://gitorious.org/orcus/pages/Home"
 
 LICENSE="MIT"
 SLOT="0"
-#[[ ${PV} == 9999 ]] || KEYWORDS="~amd64 ~x86"
+[[ ${PV} == 9999 ]] || KEYWORDS="~amd64 ~x86"
 IUSE="static-libs"
 
 RDEPEND="
-	>=dev-libs/libixion-0.4
 	dev-libs/libzip
 "
 DEPEND="${RDEPEND}
@@ -36,6 +35,7 @@ src_prepare() {
 
 src_configure() {
 	econf \
+		--disable-spreadsheet-model \
 		$(use_enable static-libs static)
 }
 
