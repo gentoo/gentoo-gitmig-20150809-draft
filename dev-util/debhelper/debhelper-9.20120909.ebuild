@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/debhelper-9.20120909.ebuild,v 1.1 2012/09/11 14:13:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/debhelper-9.20120909.ebuild,v 1.2 2012/09/27 08:05:35 blueness Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="mirror://debian/pool/main/d/${PN}/${P/-/_}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="nls linguas_de linguas_es linguas_fr test"
 
 RDEPEND="app-arch/dpkg
