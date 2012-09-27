@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-shout
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-shout/ChangeLog,v 1.16 2010/09/19 13:42:44 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-shout/ChangeLog,v 1.17 2012/09/27 18:57:46 johu Exp $
+
+  27 Sep 2012; Johannes Huber <johu@gentoo.org> ruby-shout-2.2.0.ebuild:
+  Stable for x86, wrt bug #435806
 
 *ruby-shout-2.2.0 (19 Sep 2010)
 
