@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/xkeyboard-config
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/ChangeLog,v 1.168 2012/08/26 19:31:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/ChangeLog,v 1.169 2012/09/27 00:16:48 chithanh Exp $
+
+*xkeyboard-config-2.7 (27 Sep 2012)
+
+  27 Sep 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xkeyboard-config-2.7.ebuild, xkeyboard-config-2.4.1-r2.ebuild:
+  Version bump.
 
   26 Aug 2012; Raúl Porcel <armin76@gentoo.org> xkeyboard-config-2.6.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #419473
@@ -705,4 +711,3 @@
   New, restructured, maintained package for XKB configuration data, expected
   to supercede xkbdata. Since it's the same collection of data files,
   keyworded ~arch for the same arches.
-
