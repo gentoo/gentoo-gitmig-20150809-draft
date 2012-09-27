@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/bwping
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwping/ChangeLog,v 1.6 2012/01/28 15:04:00 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwping/ChangeLog,v 1.7 2012/09/27 20:05:05 hwoarang Exp $
+
+*bwping-1.5 (27 Sep 2012)
+
+  27 Sep 2012; Markos Chandras <hwoarang@gentoo.org> +bwping-1.5.ebuild:
+  Version bump
 
   28 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> bwping-1.4.ebuild:
   x86 stable wrt bug #400419
@@ -33,4 +38,3 @@
   02 Sep 2008; Oleg Derevenetz (OlegD) <oleg@vsi.ru> +bwping-1.0.ebuild,
   +metadata.xml:
   New Ebuild for bug 236231 thanks to Peter Volkov
-
