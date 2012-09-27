@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.20.11.ebuild,v 1.14 2012/09/12 09:37:04 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.20.11.ebuild,v 1.15 2012/09/27 08:54:42 tetromino Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ inherit eutils pam gnome2 user
 DESCRIPTION="GNOME Display Manager"
 HOMEPAGE="https://live.gnome.org/GDM"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
 
