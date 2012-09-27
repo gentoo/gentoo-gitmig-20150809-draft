@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.102 2012/07/10 18:01:47 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.103 2012/09/27 19:04:00 williamh Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ fi
 
 LICENSE="BSD-2"
 SLOT="0"
-IUSE="debug elibc_glibc ncurses pam newnet selinux static-libs unicode
+IUSE="debug elibc_glibc ncurses pam newnet prefix selinux static-libs unicode
 	kernel_linux kernel_FreeBSD"
 
 RDEPEND="virtual/init
@@ -37,7 +37,9 @@ DEPEND="${RDEPEND}
 make_args() {
 	unset LIBDIR #266688
 
-	MAKE_ARGS="${MAKE_ARGS} LIBNAME=$(get_libdir) LIBEXECDIR=/$(get_libdir)/rc"
+	MAKE_ARGS="${MAKE_ARGS}
+		LIBNAME=$(get_libdir)
+		LIBEXECDIR=${EPREFIX}/$(get_libdir)/rc"
 
 	local brand="Unknown"
 	if use kernel_linux ; then
@@ -55,6 +57,7 @@ make_args() {
 			MAKE_ARGS="${MAKE_ARGS} MKSTATICLIBS=no"
 	fi
 	use newnet || MAKE_ARGS="${MAKE_ARGS} MKNET=oldnet"
+	use prefix && MAKE_ARGS="${MAKE_ARGS} MKPREFIX=yes PREFIX=${EPREFIX}"
 }
 
 pkg_setup() {
@@ -86,7 +89,7 @@ src_compile() {
 # set_config <file> <option name> <yes value> <no value> test
 # a value of "#" will just comment out the option
 set_config() {
-	local file="${D}/$1" var=$2 val com
+	local file="${ED}/$1" var=$2 val com
 	eval "${@:5}" && val=$3 || val=$4
 	[[ ${val} == "#" ]] && com="#" && val='\2'
 	sed -i -r -e "/^#?${var}=/{s:=([\"'])?([^ ]*)\1?:=\1${val}\1:;s:^#?:${com}:}" "${file}"
@@ -115,8 +118,8 @@ src_install() {
 
 	# Backup our default runlevels
 	dodir /usr/share/"${PN}"
-	cp -PR "${D}"/etc/runlevels "${D}"/usr/share/${PN} || die
-	rm -rf "${D}"/etc/runlevels
+	cp -PR "${ED}"/etc/runlevels "${ED}"/usr/share/${PN} || die
+	rm -rf "${ED}"/etc/runlevels
 
 	# Install the default net configuration
 	doconfd conf.d/net
@@ -169,6 +172,8 @@ add_boot_init_mit_config() {
 }
 
 pkg_preinst() {
+	use prefix && return 0
+
 	local f LIBDIR=$(get_libdir)
 
 	# default net script is just comments, so no point in biting people
@@ -346,6 +351,8 @@ migrate_from_baselayout_1() {
 }
 
 pkg_postinst() {
+	use prefix && return 0
+
 	local LIBDIR=$(get_libdir)
 
 	# Remove old baselayout links
