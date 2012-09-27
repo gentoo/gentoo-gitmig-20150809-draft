@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.902 2012/09/26 18:51:59 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.903 2012/09/27 20:59:58 vapier Exp $
+
+  27 Sep 2012; Mike Frysinger <vapier@gentoo.org> gcc-4.6.0.ebuild,
+  gcc-4.6.1-r1.ebuild, gcc-4.6.2.ebuild, gcc-4.6.3.ebuild, gcc-4.7.0.ebuild,
+  gcc-4.7.1.ebuild:
+  Drop -Werror from libgfortran, and push out accumulated patchesets for older
+  versions.
 
   26 Sep 2012; Matt Turner <mattst88@gentoo.org> gcc-4.4.7.ebuild,
   gcc-4.5.4.ebuild:
