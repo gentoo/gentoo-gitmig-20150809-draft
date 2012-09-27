@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.439 2012/09/25 15:15:45 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.440 2012/09/27 18:56:19 axs Exp $
+
+  27 Sep 2012; Ian Stakenvicius <axs@gentoo.org> make.defaults:
+  Added prefix flag to IUSE_IMPLICIT for EAPI=5 ebuild testing
 
   25 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   Mask gtk+[egl] since it's only useful with wayland.
