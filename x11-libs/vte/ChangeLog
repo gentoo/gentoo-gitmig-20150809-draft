@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/vte
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.331 2012/09/25 13:46:11 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.332 2012/09/27 05:35:17 mattst88 Exp $
+
+  27 Sep 2012; Matt Turner <mattst88@gentoo.org> vte-0.32.2.ebuild:
+  Stable on alpha, bug 427544.
 
 *vte-0.34.0 (25 Sep 2012)
 
