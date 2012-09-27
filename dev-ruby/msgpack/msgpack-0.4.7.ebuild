@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/msgpack/msgpack-0.4.7.ebuild,v 1.1 2012/05/15 06:33:09 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/msgpack/msgpack-0.4.7.ebuild,v 1.2 2012/09/27 09:39:02 ssuominen Exp $
 
 EAPI="3"
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://msgpack.sourceforge.jp/"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE=""
 
 each_ruby_configure() {
