@@ -1,17 +1,17 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-3.4.2-r1.ebuild,v 1.5 2012/09/23 14:06:14 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-3.4.2-r1.ebuild,v 1.6 2012/09/27 20:19:00 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
 GNOME2_LA_PUNT="yes"
 
-inherit eutils gnome2 multilib toolchain-funcs
+inherit eutils gnome2 multilib toolchain-funcs user
 
 DESCRIPTION="Fork of bluez-gnome focused on integration with GNOME"
 HOMEPAGE="http://live.gnome.org/GnomeBluetooth"
 
-LICENSE="GPL-2 LGPL-2.1"
+LICENSE="GPL-2+ LGPL-2.1+ FDL-1.1+"
 SLOT="2"
 IUSE="doc +introspection sendto"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
@@ -33,7 +33,7 @@ DEPEND="${COMMON_DEPEND}
 	app-text/docbook-xml-dtd:4.1.2
 	app-text/gnome-doc-utils
 	app-text/scrollkeeper
-	dev-libs/libxml2
+	dev-libs/libxml2:2
 	>=dev-util/intltool-0.40.0
 	dev-util/gdbus-codegen
 	>=sys-devel/gettext-0.17
@@ -60,6 +60,12 @@ pkg_setup() {
 	DOCS="AUTHORS README NEWS ChangeLog"
 
 	enewgroup plugdev
+}
+
+src_prepare() {
+	# Regenerate gdbus-codegen files to allow using any glib version; bug #436236
+	rm -v lib/bluetooth-client-glue.{c,h} || die
+	gnome2_src_prepare
 }
 
 src_install() {
