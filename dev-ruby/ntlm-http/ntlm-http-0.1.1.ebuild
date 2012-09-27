@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ntlm-http/ntlm-http-0.1.1.ebuild,v 1.1 2012/08/14 21:12:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ntlm-http/ntlm-http-0.1.1.ebuild,v 1.2 2012/09/27 10:31:39 ssuominen Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ HOMEPAGE="http://www.mindflowsolutions.net/"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~ppc ~ppc64"
 IUSE="test"
 
 ruby_add_bdepend "test? ( >=dev-ruby/test-unit-2.5.1-r1 )"

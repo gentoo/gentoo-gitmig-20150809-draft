@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/unf/unf-0.0.5-r1.ebuild,v 1.1 2012/08/14 17:36:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/unf/unf-0.0.5-r1.ebuild,v 1.2 2012/09/27 10:31:11 ssuominen Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ HOMEPAGE="https://github.com/knu/ruby-unf"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~ppc ~ppc64"
 IUSE="test"
 
 # jruby already has support for UNF so it does not need the extension.

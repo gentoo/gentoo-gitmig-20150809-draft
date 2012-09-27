@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-http-persistent/net-http-persistent-2.7.ebuild,v 1.2 2012/07/14 17:35:58 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-http-persistent/net-http-persistent-2.7.ebuild,v 1.3 2012/09/27 10:32:28 ssuominen Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ HOMEPAGE="https://github.com/drbrain/net-http-persistent"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~ppc ~ppc64"
 IUSE="doc test"
 
 ruby_add_bdepend "doc? ( dev-ruby/hoe )

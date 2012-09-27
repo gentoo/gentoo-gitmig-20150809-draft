@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ntlm-http
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ntlm-http/ChangeLog,v 1.1 2012/08/14 21:12:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ntlm-http/ChangeLog,v 1.2 2012/09/27 10:31:39 ssuominen Exp $
+
+  27 Sep 2012; Samuli Suominen <ssuominen@gentoo.org> ntlm-http-0.1.1.ebuild:
+  Keyword ~ppc/~ppc64 wrt #432830
 
 *ntlm-http-0.1.1 (14 Aug 2012)
 

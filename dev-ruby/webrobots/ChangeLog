@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/webrobots
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webrobots/ChangeLog,v 1.6 2012/08/17 06:00:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webrobots/ChangeLog,v 1.7 2012/09/27 10:26:39 ssuominen Exp $
+
+  27 Sep 2012; Samuli Suominen <ssuominen@gentoo.org> webrobots-0.0.13.ebuild:
+  Keyword ~ppc/~ppc64 wrt #432830
 
   17 Aug 2012; Hans de Graaff <graaff@gentoo.org> -webrobots-0.0.11.ebuild,
   -webrobots-0.0.12.ebuild:
