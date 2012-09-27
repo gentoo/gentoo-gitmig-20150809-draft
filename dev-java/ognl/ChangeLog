@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/ognl
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ognl/ChangeLog,v 1.8 2007/03/19 03:37:47 wltjr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ognl/ChangeLog,v 1.9 2012/09/27 18:57:27 sera Exp $
+
+*ognl-2.6.9-r2 (27 Sep 2012)
+
+  27 Sep 2012; Ralph Sennhauser <sera@gentoo.org> +ognl-2.6.9-r2.ebuild:
+  Drop all unused deps including javacc. #315557
+  EAPI bump and cleanup.
 
   19 Mar 2007; William L. Thomson Jr. <wltjr@gentoo.org> -ognl-2.6.9.ebuild:
   Removed older version that dep'd on slot 3.1 of javassist.
