@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-inspector/pdf-inspector-1.0.1.ebuild,v 1.1 2012/05/19 06:05:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-inspector/pdf-inspector-1.0.1.ebuild,v 1.2 2012/09/27 09:16:53 ssuominen Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://github.com/sandal/pdf-inspector"
 
 LICENSE="|| ( Ruby GPL-2 GPL-3 )"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 ruby_add_rdepend ">=dev-ruby/pdf-reader-0.9.0"
