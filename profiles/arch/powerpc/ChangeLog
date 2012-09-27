@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.187 2012/08/26 09:54:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.188 2012/09/27 09:57:42 ssuominen Exp $
+
+  27 Sep 2012; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
+  Mask USE="test" for dev-ruby/rack-test because dev-ruby/sinatra it relies has
+  expensive dependencies.
 
   26 Aug 2012; Justin Lecher <jlec@gentoo.org> package.use.force:
   Foce USE=minimal for sci-libs/cctbx because sci-chemistry/cns is missing for
