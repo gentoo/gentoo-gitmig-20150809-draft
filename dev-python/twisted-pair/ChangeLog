@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/twisted-pair
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-pair/ChangeLog,v 1.15 2012/03/22 07:07:38 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-pair/ChangeLog,v 1.16 2012/09/27 18:17:58 marienz Exp $
+
+*twisted-pair-12.2.0 (27 Sep 2012)
+
+  27 Sep 2012; Marien Zwart <marienz@gentoo.org> +twisted-pair-12.2.0.ebuild:
+  Bump to 12.2.0 (bug #423793)
 
 *twisted-pair-12.0.0 (22 Mar 2012)
 
@@ -12,4 +17,3 @@
   27 Dec 2011; Mike Gilbert <floppym@gentoo.org> +metadata.xml,
   +twisted-pair-11.1.0.ebuild:
   New package to fill in the twisted suite.
-
