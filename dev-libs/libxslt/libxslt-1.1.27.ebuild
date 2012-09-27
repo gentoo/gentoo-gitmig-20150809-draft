@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.27.ebuild,v 1.2 2012/09/22 21:56:30 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.27.ebuild,v 1.3 2012/09/27 13:13:54 ago Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -56,7 +56,6 @@ src_configure() {
 	fi
 
 	econf \
-		--disable-dependency-tracking \
 		--with-html-dir=/usr/share/doc/${PF} \
 		--with-html-subdir=html \
 		$(use_with crypt crypto) \
@@ -103,10 +102,10 @@ src_install() {
 		python_execute_function -s --source-dir python installation
 
 		python_clean_installation_image
-	fi
 
 	mv -vf "${ED}"/usr/share/doc/${PN}-python-${PV} \
 		"${ED}"/usr/share/doc/${PF}/python
+	fi
 
 	if ! use static-libs; then
 		# Remove useless .la files
