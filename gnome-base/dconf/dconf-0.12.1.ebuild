@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/dconf-0.12.1.ebuild,v 1.1 2012/05/01 19:39:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/dconf-0.12.1.ebuild,v 1.2 2012/09/27 22:59:19 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -10,7 +10,7 @@ inherit gnome2 bash-completion-r1
 DESCRIPTION="Simple low-level configuration system"
 HOMEPAGE="http://live.gnome.org/dconf"
 
-LICENSE="LGPL-2.1"
+LICENSE="LGPL-2.1+"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="doc +X"
@@ -20,6 +20,7 @@ RDEPEND=">=dev-libs/glib-2.31.18:2
 	X? ( >=dev-libs/libxml2-2.7.7:2
 		x11-libs/gtk+:3 )"
 DEPEND="${RDEPEND}
+	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.15 )"
 # eautoreconf requires gtk-doc-am
 
