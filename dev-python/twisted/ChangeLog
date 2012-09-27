@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/twisted
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.155 2012/05/09 00:02:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.156 2012/09/27 18:14:32 marienz Exp $
+
+*twisted-12.2.0 (27 Sep 2012)
+
+  27 Sep 2012; Marien Zwart <marienz@gentoo.org>
+  +files/twisted-12.1.0-remove-tests-conch-dependency.patch,
+  +twisted-12.2.0.ebuild:
+  Bump to 12.2.0 (bug #423777) with some test-related ebuild improvements.
 
   08 May 2012; Alexis Ballier <aballier@gentoo.org> twisted-12.0.0.ebuild:
   keyword ~amd64-fbsd
@@ -672,4 +679,3 @@
 
 
   Ebuild submitted by Gontran Zepeda <gontran@gontran.net>.
-
