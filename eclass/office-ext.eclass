@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/office-ext.eclass,v 1.6 2012/06/08 03:36:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/office-ext.eclass,v 1.7 2012/09/27 16:35:41 axs Exp $
 
 # @ECLASS: office-ext.eclass
 # @MAINTAINER:
@@ -12,7 +12,7 @@
 # Eclass for easing maitenance of libreoffice/openoffice extensions.
 
 case "${EAPI:-0}" in
-	4) OEXT_EXPORTED_FUNCTIONS="src_unpack src_install pkg_postinst pkg_prerm" ;;
+	4|5) OEXT_EXPORTED_FUNCTIONS="src_unpack src_install pkg_postinst pkg_prerm" ;;
 	*) die "EAPI=${EAPI} is not supported" ;;
 esac
 

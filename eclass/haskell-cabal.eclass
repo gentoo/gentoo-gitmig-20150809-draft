@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.33 2012/07/08 19:16:46 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.34 2012/09/27 16:35:41 axs Exp $
 
 # @ECLASS: haskell-cabal.eclass
 # @MAINTAINER:
@@ -57,7 +57,7 @@ inherit ghc-package multilib
 HASKELL_CABAL_EXPF="pkg_setup src_compile src_test src_install"
 
 case "${EAPI:-0}" in
-	2|3|4) HASKELL_CABAL_EXPF+=" src_configure" ;;
+	2|3|4|5) HASKELL_CABAL_EXPF+=" src_configure" ;;
 	*) ;;
 esac
 

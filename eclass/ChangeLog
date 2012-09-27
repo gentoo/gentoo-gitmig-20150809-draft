@@ -1,6 +1,22 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.413 2012/09/27 15:41:56 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.414 2012/09/27 16:35:41 axs Exp $
+
+  27 Sep 2012; Ian Stakenvicius <axs@gentoo.org> fortran-2.eclass,
+  selinux-policy-2.eclass, vdr-plugin-2.eclass, xorg-2.eclass,
+  autotools-utils.eclass, base.eclass, bash-completion-r1.eclass,
+  boost-utils.eclass, check-reqs.eclass, cmake-utils.eclass, emboss.eclass,
+  emul-linux-x86.eclass, enlightenment.eclass, fox.eclass, games.eclass,
+  games-ggz.eclass, git.eclass, gnome2-utils.eclass, gnome2.eclass,
+  gst-plugins-bad.eclass, gtk-sharp-module.eclass, haskell-cabal.eclass,
+  kde4-functions.eclass, leechcraft.eclass, mozlinguas.eclass, mysql.eclass,
+  mysql-v2.eclass, obs-service.eclass, office-ext.eclass, perl-module.eclass,
+  php-ext-source-r2.eclass, python-distutils-ng.eclass, qt4-build.eclass,
+  qt4-r2.eclass, ruby-ng.eclass, scons-utils.eclass, systemd.eclass,
+  vcs-snapshot.eclass, vdr-plugin.eclass, virtuoso.eclass, waf-utils.eclass,
+  xfconf.eclass:
+  naive bump of all EAPI-specific checks in eclasses to permit EAPI=5 where
+  EAPI=4 was previously allowed
 
   27 Sep 2012; Mike Gilbert <floppym@gentoo.org> python.eclass:
   Allow usage of EAPI 5.

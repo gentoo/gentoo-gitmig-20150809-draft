@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-module.eclass,v 1.35 2012/05/02 18:31:42 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-module.eclass,v 1.36 2012/09/27 16:35:41 axs Exp $
 
 # @ECLASS: gtk-sharp-module.eclass
 # @MAINTAINER:
@@ -17,7 +17,7 @@ WANT_AUTOCONF=none
 inherit eutils mono multilib libtool autotools base versionator
 
 case ${EAPI:-0} in
-	2|3|4) ;;
+	2|3|4|5) ;;
 	*) die "Unknown EAPI." ;;
 esac
 

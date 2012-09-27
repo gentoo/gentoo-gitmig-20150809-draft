@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/emboss.eclass,v 1.2 2011/08/22 04:46:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/emboss.eclass,v 1.3 2012/09/27 16:35:41 axs Exp $
 
 # @ECLASS: emboss.eclass
 # @MAINTAINER:
@@ -45,7 +45,7 @@
 # Extra config options passed to econf, similar to EXTRA_ECONF.
 
 case ${EAPI:-0} in
-	4) ;;
+	4|5) ;;
 	*) die "this eclass doesn't support < EAPI 4" ;;
 esac
 

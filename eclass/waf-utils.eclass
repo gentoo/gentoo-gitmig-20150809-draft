@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/waf-utils.eclass,v 1.13 2012/07/20 01:37:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/waf-utils.eclass,v 1.14 2012/09/27 16:35:42 axs Exp $
 
 # @ECLASS: waf-utils.eclass
 # @MAINTAINER:
@@ -18,7 +18,7 @@
 inherit base eutils multilib toolchain-funcs multiprocessing
 
 case ${EAPI:-0} in
-	4|3) EXPORT_FUNCTIONS src_configure src_compile src_install ;;
+	4|5|3) EXPORT_FUNCTIONS src_configure src_compile src_install ;;
 	*) die "EAPI=${EAPI} is not supported" ;;
 esac
 

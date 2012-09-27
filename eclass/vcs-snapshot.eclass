@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vcs-snapshot.eclass,v 1.4 2012/06/11 14:22:19 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vcs-snapshot.eclass,v 1.5 2012/09/27 16:35:42 axs Exp $
 
 # @ECLASS: vcs-snapshot.eclass
 # @MAINTAINER:
@@ -36,7 +36,7 @@
 # in ${WORKDIR}/${P}.
 
 case ${EAPI:-0} in
-	0|1|2|3|4) ;;
+	0|1|2|3|4|5) ;;
 	*) die "vcs-snapshot.eclass API in EAPI ${EAPI} not yet established."
 esac
 

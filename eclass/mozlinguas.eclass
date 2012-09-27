@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozlinguas.eclass,v 1.4 2012/07/19 12:09:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozlinguas.eclass,v 1.5 2012/09/27 16:35:41 axs Exp $
 
 # @ECLASS: mozlinguas.eclass
 # @MAINTAINER:
@@ -17,7 +17,7 @@ inherit mozextension
 case "${EAPI:-0}" in
 	0|1)
 		die "EAPI ${EAPI:-0} does not support the '->' SRC_URI operator";;
-	2|3|4)
+	2|3|4|5)
 		EXPORT_FUNCTIONS src_unpack src_install;;
 	*)
 		die "EAPI ${EAPI} is not supported, contact eclass maintainers";;

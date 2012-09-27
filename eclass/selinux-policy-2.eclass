@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy-2.eclass,v 1.14 2012/09/08 18:36:12 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy-2.eclass,v 1.15 2012/09/27 16:35:42 axs Exp $
 
 # Eclass for installing SELinux policy, and optionally
 # reloading the reference-policy based modules.
@@ -100,7 +100,7 @@ DEPEND="${RDEPEND}
 
 SELINUX_EXPF="src_unpack src_compile src_install pkg_postinst"
 case "${EAPI:-0}" in
-	2|3|4) SELINUX_EXPF+=" src_prepare" ;;
+	2|3|4|5) SELINUX_EXPF+=" src_prepare" ;;
 	*) ;;
 esac
 

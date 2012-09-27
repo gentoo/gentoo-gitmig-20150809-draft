@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.93 2012/09/12 06:03:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.94 2012/09/27 16:35:41 axs Exp $
 
 # @ECLASS: enlightenment.eclass
 # @MAINTAINER:
@@ -76,7 +76,7 @@ fi
 
 ENLIGHTENMENT_EXPF="src_unpack src_compile src_install"
 case "${EAPI:-0}" in
-		2|3|4) ENLIGHTENMENT_EXPF+=" src_prepare src_configure" ;;
+		2|3|4|5) ENLIGHTENMENT_EXPF+=" src_prepare src_configure" ;;
 		*) ;;
 esac
 EXPORT_FUNCTIONS ${ENLIGHTENMENT_EXPF}

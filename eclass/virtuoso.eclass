@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/virtuoso.eclass,v 1.13 2012/05/13 18:53:58 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/virtuoso.eclass,v 1.14 2012/09/27 16:35:42 axs Exp $
 
 # @ECLASS: virtuoso.eclass
 # @MAINTAINER:
@@ -12,7 +12,7 @@
 # This eclass provides common code for splitting Virtuoso OpenSource database
 
 case ${EAPI:-0} in
-	2|3|4) : ;;
+	2|3|4|5) : ;;
 	*) die "EAPI=${EAPI} is not supported" ;;
 esac
 

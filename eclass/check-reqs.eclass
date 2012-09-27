@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/check-reqs.eclass,v 1.10 2011/09/06 13:57:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/check-reqs.eclass,v 1.11 2012/09/27 16:35:41 axs Exp $
 
 # @ECLASS: check-reqs.eclass
 # @MAINTAINER:
@@ -63,7 +63,7 @@ inherit eutils
 EXPORT_FUNCTIONS pkg_setup
 case "${EAPI:-0}" in
 	0|1|2|3) ;;
-	4) EXPORT_FUNCTIONS pkg_pretend ;;
+	4|5) EXPORT_FUNCTIONS pkg_pretend ;;
 	*) die "EAPI=${EAPI} is not supported" ;;
 esac
 

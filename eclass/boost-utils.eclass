@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/boost-utils.eclass,v 1.1 2012/09/19 09:37:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/boost-utils.eclass,v 1.2 2012/09/27 16:35:41 axs Exp $
 
 if [[ ! ${_BOOST_ECLASS} ]]; then
 
@@ -24,7 +24,7 @@ if [[ ! ${_BOOST_ECLASS} ]]; then
 # and -L$(boost-utils_get_libdir) to LDFLAGS.
 
 case ${EAPI:-0} in
-	0|1|2|3|4) ;;
+	0|1|2|3|4|5) ;;
 	*) die "${ECLASS}.eclass API in EAPI ${EAPI} not yet established."
 esac
 

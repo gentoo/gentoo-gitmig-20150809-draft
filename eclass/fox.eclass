@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fox.eclass,v 1.16 2012/08/13 15:54:08 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fox.eclass,v 1.17 2012/09/27 16:35:41 axs Exp $
 
 # @ECLASS: fox.eclass
 # @MAINTAINER:
@@ -33,7 +33,7 @@ inherit autotools versionator
 
 FOX_EXPF="src_unpack src_compile src_install pkg_postinst"
 case "${EAPI:-0}" in
-	2|3|4) FOX_EXPF+=" src_prepare src_configure" ;;
+	2|3|4|5) FOX_EXPF+=" src_prepare src_configure" ;;
 	*) ;;
 esac
 EXPORT_FUNCTIONS ${FOX_EXPF}

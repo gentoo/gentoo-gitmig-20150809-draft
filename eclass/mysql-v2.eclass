@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-v2.eclass,v 1.18 2012/09/10 02:07:08 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-v2.eclass,v 1.19 2012/09/27 16:35:41 axs Exp $
 
 # @ECLASS: mysql-v2.eclass
 # @MAINTAINER:
@@ -53,7 +53,7 @@ inherit eutils flag-o-matic gnuconfig ${MYSQL_EXTRAS} ${BUILD_INHERIT} mysql_fx 
 #
 
 case "${EAPI:-0}" in
-	3|4) ;;
+	3|4|5) ;;
 	*) die "Unsupported EAPI: ${EAPI}" ;;
 esac
 

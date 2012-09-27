@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.27 2012/09/26 12:07:45 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.28 2012/09/27 16:35:41 axs Exp $
 
 # @ECLASS: python-distutils-ng
 # @MAINTAINER:
@@ -76,7 +76,7 @@ EXPORT_FUNCTIONS src_prepare src_configure src_compile src_test src_install
 case "${EAPI}" in
 	0|1|2|3)
 		die "Unsupported EAPI=${EAPI} (too old) for python-distutils-ng.eclass" ;;
-	4)
+	4|5)
 		# EAPI=4 needed for REQUIRED_USE
 		S="${S:-${WORKDIR}/${P}}"
 		;;
