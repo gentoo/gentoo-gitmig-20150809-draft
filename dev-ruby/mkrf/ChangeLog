@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mkrf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mkrf/ChangeLog,v 1.27 2012/08/11 19:47:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mkrf/ChangeLog,v 1.28 2012/09/27 10:40:22 ssuominen Exp $
+
+  27 Sep 2012; Samuli Suominen <ssuominen@gentoo.org> mkrf-0.2.3-r2.ebuild:
+  Keyword ~ppc64 wrt #422887
 
   11 Aug 2012; Agostino Sarubbo <ago@gentoo.org> mkrf-0.2.3-r2.ebuild:
   Stable for amd64, wrt bug #430206
