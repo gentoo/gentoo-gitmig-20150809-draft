@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.158 2012/09/27 15:41:56 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.159 2012/09/27 22:42:48 floppym Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -753,7 +753,7 @@ _python_calculate_PYTHON_ABIS() {
 
 	_python_initial_sanity_checks
 
-	if [[ "$(declare -p PYTHON_ABIS 2> /dev/null)" != "declare -x PYTHON_ABIS="* ]] && has "${EAPI:-0}" 0 1 2 3 4; then
+	if [[ "$(declare -p PYTHON_ABIS 2> /dev/null)" != "declare -x PYTHON_ABIS="* ]]; then
 		local PYTHON_ABI
 
 		if [[ "$(declare -p USE_PYTHON 2> /dev/null)" == "declare -x USE_PYTHON="* ]]; then
