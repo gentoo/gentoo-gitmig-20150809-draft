@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jasper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/ChangeLog,v 1.71 2012/09/27 01:51:30 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/ChangeLog,v 1.72 2012/09/27 04:53:09 mattst88 Exp $
+
+  27 Sep 2012; Matt Turner <mattst88@gentoo.org> jasper-1.900.1-r5.ebuild:
+  Stable on alpha, bug 429120.
 
   27 Sep 2012; Anthony G. Basile <blueness@gentoo.org> jasper-1.900.1-r5.ebuild:
   stable ppc ppc64, bug #429120
