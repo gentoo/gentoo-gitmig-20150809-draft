@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/gawk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.154 2012/09/24 18:08:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.155 2012/09/27 02:02:47 blueness Exp $
+
+  27 Sep 2012; Anthony G. Basile <blueness@gentoo.org> gawk-4.0.1.ebuild:
+  stable ppc ppc64, bug #431954
 
   24 Sep 2012; Raúl Porcel <armin76@gentoo.org> gawk-4.0.1.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #431954
