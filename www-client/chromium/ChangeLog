@@ -1,6 +1,15 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.720 2012/09/27 02:31:37 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.721 2012/09/27 11:24:50 phajdan.jr Exp $
+
+*chromium-23.0.1271.6 (27 Sep 2012)
+
+  27 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-dbus-glib-r0.patch, -chromium-23.0.1262.0.ebuild,
+  +chromium-23.0.1271.6.ebuild, chromium-9999-r1.ebuild,
+  +files/chromium-system-icu-r0.patch:
+  Dev channel bump. Drop unneeded dependency on dbus-glib, bug #434346 by Hans.
+  Remove old.
 
 *chromium-22.0.1229.91 (27 Sep 2012)
 
