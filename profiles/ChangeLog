@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6991 2012/09/26 10:57:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6992 2012/09/27 08:12:35 pinkbyte Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Sep 2012; Sergey Popov <pinkbyte@gentoo.org>
+  arch/amd64/no-multilib/package.mask, features/64bit-native/package.mask:
+  games-strategy/spaz can not run on amd64 non-multilib profiles, so masking it
+  on them
 
   26 Sep 2012; Samuli Suominen <ssuominen@gentoo.org>
   targets/desktop/package.use:

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.117 2012/09/22 01:47:09 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.118 2012/09/27 08:12:35 pinkbyte Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -150,6 +150,7 @@ games-strategy/heroes3-demo
 games-strategy/majesty-demo
 games-strategy/savage-bin
 games-strategy/smac
+games-strategy/spaz
 games-strategy/x2
 games-strategy/x2-demo
 <mail-client/thunderbird-bin-5.0
