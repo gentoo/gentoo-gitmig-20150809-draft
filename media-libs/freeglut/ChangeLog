@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freeglut
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.89 2012/07/30 21:39:08 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.90 2012/09/27 04:39:15 mattst88 Exp $
+
+  27 Sep 2012; Matt Turner <mattst88@gentoo.org> freeglut-2.8.0-r1.ebuild:
+  Stable on alpha, bug 433307.
 
 *freeglut-2.8.0-r1 (30 Jul 2012)
 
