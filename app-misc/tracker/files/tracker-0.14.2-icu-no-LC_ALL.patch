@@ -1,23 +1,20 @@
-From c0f298d3db5202d1e6de7e093923f396116eefc6 Mon Sep 17 00:00:00 2001
+From 48713ba26af38a15a97fc7ebb0828cd287ef2447 Mon Sep 17 00:00:00 2001
 From: Alexandre Rostovtsev <tetromino@gentoo.org>
 Date: Fri, 20 Jul 2012 10:46:33 -0400
-Subject: [PATCH] FTS parser: ICU cannot handle locale descriptions of > 157
- characters
+Subject: [PATCH] libtracker-fts: ICU cannot handle complex locale
+ descriptions
 
-ICU's unicode/uloc.h #defines ULOC_FULLNAME_CAPACITY as 157. If a locale
-description cannot fit in a buffer of size ULOC_FULLNAME_CAPACITY,
-ubrk_open(UBRK_WORD, locale, ...) will fail when attempring to
-canonicalize the locale string.
+ubrk_open expects the name of just a single locale (e.g. "en_US.UTF-8"),
+not the full definition of your various locale variables and their
+values as returned by glibc's setlocale(LC_ALL, NULL).
 
-To avoid this, we must not pass setlocale(LC_ALL, NULL) to ICU since that
-can easily be >200 chars for common locales. Instead, limit ourselves to
-LC_CTYPE, since after all, that's all we need to determine word
-boundaries.
+Instead, limit ourselves to LC_CTYPE, since after all, that's all we
+need to determine word boundaries.
 
-https://bugzilla.gnome.org/show_bug.cgi?id=675660
+Fixes GB#675660.
 ---
- src/libtracker-fts/tracker-parser-libicu.c |    2 +-
- 1 files changed, 1 insertions(+), 1 deletions(-)
+ src/libtracker-fts/tracker-parser-libicu.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/src/libtracker-fts/tracker-parser-libicu.c b/src/libtracker-fts/tracker-parser-libicu.c
 index 7388f69..69f75ed 100644
@@ -33,5 +30,5 @@ index 7388f69..69f75ed 100644
  		                       parser->utxt_size,
  		                       &error);
 -- 
-1.7.8.6
+1.7.12
 

@@ -1,6 +1,16 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.131 2012/09/08 02:07:53 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.132 2012/09/28 04:27:43 tetromino Exp $
+
+  28 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -tracker-0.10.27.ebuild, tracker-0.10.35.ebuild, tracker-0.12.10.ebuild,
+  tracker-0.12.10-r1.ebuild, -tracker-0.14.1.ebuild, tracker-0.14.2.ebuild,
+  tracker-0.14.2-r1.ebuild, files/tracker-0.14.2-icu-no-LC_ALL.patch,
+  tracker-9999.ebuild:
+  Evolution plugin fundamentally incompatible with evolution-3.6, see bug
+  #436460. Update license. Unify tracker-0.14.2-r1 and -9999 ebuilds as much as
+  possible for ease of maintenance. Update icu patch to upstreamed version.
+  Vala is not needed for 0.14.2 tarball release. Drop old versions.
 
   08 Sep 2012; Nirbheek Chauhan <nirbheek@gentoo.org> tracker-0.14.2-r1.ebuild:
   Use either vala-0.14, or vala-0.18
