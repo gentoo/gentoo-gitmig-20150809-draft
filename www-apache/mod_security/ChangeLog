@@ -1,6 +1,12 @@
 # ChangeLog for www-apache/mod_security
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.82 2012/09/11 22:19:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.83 2012/09/28 06:28:05 flameeyes Exp $
+
+*mod_security-2.6.8 (28 Sep 2012)
+
+  28 Sep 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +mod_security-2.6.8.ebuild, -mod_security-2.6.7.ebuild:
+  Version bump.
 
 *mod_security-2.7.0_rc3 (11 Sep 2012)
 
