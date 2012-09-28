@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/xtrs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/ChangeLog,v 1.39 2010/12/23 10:50:25 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/ChangeLog,v 1.40 2012/09/28 20:34:00 ulm Exp $
+
+*xtrs-4.9d-r1 (28 Sep 2012)
+
+  28 Sep 2012; Ulrich Müller <ulm@gentoo.org> +xtrs-4.9d-r1.ebuild,
+  metadata.xml:
+  Specify LICENSE more precisely. Install non-free LDOS/LS-DOS disk images for
+  Model 4P only with USE=ldos.
 
   23 Dec 2010; Ulrich Mueller <ulm@gentoo.org> xtrs-4.9d.ebuild:
   Fix bug 337941 properly.

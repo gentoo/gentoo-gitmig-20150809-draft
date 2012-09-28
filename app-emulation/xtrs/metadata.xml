@@ -20,4 +20,7 @@
   Physical cassettes can be read and written too. The user interface is a
   bit spartan, but it gets the job done.
 </longdescription>
+<use>
+  <flag name='ldos'>Install disk images for Model 4P</flag>
+</use>
 </pkgmetadata>
