@@ -3,4 +3,7 @@
 <pkgmetadata>
 	<herd>chromium</herd>
 	<longdescription>Chromium is the open-source web browser project behind Google Chrome</longdescription>
+	<use>
+		<flag name="tcmalloc">Use bundled tcmalloc instead of system malloc.</flag>
+	</use>
 </pkgmetadata>

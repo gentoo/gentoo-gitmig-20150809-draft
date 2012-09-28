@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-23.0.1271.1.ebuild,v 1.1 2012/09/23 12:37:33 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-23.0.1271.10.ebuild,v 1.1 2012/09/28 18:18:47 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -19,7 +19,7 @@ SRC_URI="http://commondatastorage.googleapis.com/chromium-browser-official/${P}.
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="bindist cups gnome gnome-keyring kerberos pulseaudio selinux"
+IUSE="bindist cups gnome gnome-keyring kerberos pulseaudio selinux tcmalloc"
 
 RDEPEND="app-arch/bzip2
 	cups? (
@@ -27,7 +27,6 @@ RDEPEND="app-arch/bzip2
 		>=net-print/cups-1.3.11
 	)
 	>=dev-lang/v8-3.11.10.6
-	dev-libs/dbus-glib
 	>=dev-libs/elfutils-0.149
 	dev-libs/expat
 	>=dev-libs/icu-49.1.1-r1
@@ -110,6 +109,12 @@ src_prepare() {
 	# Fix build without NaCl glibc toolchain.
 	# epatch "${FILESDIR}/${PN}-ppapi-r0.patch"
 
+	# Fix unnecessary dependency on dbus-glib, bug #434346.
+	epatch "${FILESDIR}/${PN}-dbus-glib-r0.patch"
+
+	# Fix build with system ICU.
+	epatch "${FILESDIR}/${PN}-system-icu-r0.patch"
+
 	# Missing gyp files in tarball.
 	# https://code.google.com/p/chromium/issues/detail?id=144823
 	# if [[ -e chrome/test/data/nacl/nacl_test_data.gyp ]]; then
@@ -174,6 +179,7 @@ src_prepare() {
 		\! -path 'third_party/smhasher/*' \
 		\! -path 'third_party/speex/*' \
 		\! -path 'third_party/sqlite/*' \
+		\! -path 'third_party/tcmalloc/*' \
 		\! -path 'third_party/tlslite/*' \
 		\! -path 'third_party/trace-viewer/*' \
 		\! -path 'third_party/undoview/*' \
@@ -210,9 +216,9 @@ src_configure() {
 	# additions, bug #336871.
 	myconf+=" -Ddisable_sse2=1"
 
-	# Disable tcmalloc, it causes problems with e.g. NVIDIA
+	# Optional tcmalloc. Note it causes problems with e.g. NVIDIA
 	# drivers, bug #413637.
-	myconf+=" -Dlinux_use_tcmalloc=0"
+	myconf+=" $(gyp_use tcmalloc linux_use_tcmalloc)"
 
 	# TODO: re-enable nacl after fixing build errors, see
 	# http://forums.gentoo.org/viewtopic-t-937222-highlight-chromium.html

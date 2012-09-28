@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.136 2012/09/27 11:24:50 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.137 2012/09/28 18:18:47 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -19,7 +19,7 @@ ESVN_REPO_URI="http://src.chromium.org/svn/trunk/src"
 LICENSE="BSD"
 SLOT="live"
 KEYWORDS=""
-IUSE="bindist cups gnome gnome-keyring kerberos pulseaudio selinux"
+IUSE="bindist cups gnome gnome-keyring kerberos pulseaudio selinux tcmalloc"
 
 RDEPEND="app-arch/bzip2
 	cups? (
@@ -210,6 +210,7 @@ src_prepare() {
 		\! -path 'third_party/smhasher/*' \
 		\! -path 'third_party/speex/*' \
 		\! -path 'third_party/sqlite/*' \
+		\! -path 'third_party/tcmalloc/*' \
 		\! -path 'third_party/tlslite/*' \
 		\! -path 'third_party/trace-viewer/*' \
 		\! -path 'third_party/undoview/*' \
@@ -246,9 +247,9 @@ src_configure() {
 	# additions, bug #336871.
 	myconf+=" -Ddisable_sse2=1"
 
-	# Disable tcmalloc, it causes problems with e.g. NVIDIA
+	# Optional tcmalloc. Note it causes problems with e.g. NVIDIA
 	# drivers, bug #413637.
-	myconf+=" -Dlinux_use_tcmalloc=0"
+	myconf+=" $(gyp_use tcmalloc linux_use_tcmalloc)"
 
 	# TODO: re-enable nacl after fixing build errors, see
 	# http://forums.gentoo.org/viewtopic-t-937222-highlight-chromium.html
