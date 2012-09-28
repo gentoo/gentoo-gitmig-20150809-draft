@@ -1,9 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.418 2012/09/28 15:07:30 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.419 2012/09/28 15:08:17 axs Exp $
 
   28 Sep 2012; Ian Stakenvicius <axs@gentoo.org> toolchain-funcs.eclass:
-  reverted fatal error from unset and made it a warning only shown when
+  reverted fatal error from unset KV and made it a warning only shown when
   checking for 'kern' arch, so that the portage environment call of tc-arch
   will not fail anymore, bug 436450
 
