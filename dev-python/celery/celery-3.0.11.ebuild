@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/celery-3.0.5-r1.ebuild,v 1.1 2012/08/15 08:25:23 iksaif Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/celery-3.0.11.ebuild,v 1.1 2012/09/28 10:37:24 iksaif Exp $
 
 EAPI="4"
 
@@ -26,17 +26,20 @@ IUSE="doc examples sql test"
 # jython would need: threadpool, simplejson
 # python2.5 would need: ordereddict, test? unittest2
 # python2.6 would need: multiprocessing, test? simplejson
-RDEPEND=">=dev-python/kombu-2.2.5
+RDEPEND=">=dev-python/kombu-2.4.7
 	<dev-python/kombu-3.0
 	sql? ( dev-python/sqlalchemy )
 	dev-python/python-dateutil
 	>=dev-python/anyjson-0.3.3
 	dev-python/pyparsing
-	>=dev-python/billiard-2.7.3.12
+	>=dev-python/billiard-2.7.3.17
+	dev-python/pytz
 	"
 DEPEND="${RDEPEND}
 	test? (
+		dev-python/gevent
 		>=dev-python/mock-0.7.0
+		>=dev-python/unittest2-0.4.0
 		dev-python/pyopenssl
 		dev-python/nose-cover3
 		dev-python/sqlalchemy
