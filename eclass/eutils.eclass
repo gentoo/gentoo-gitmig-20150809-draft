@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.404 2012/09/27 17:12:34 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.405 2012/09/28 15:18:04 ulm Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -1375,7 +1375,7 @@ use_if_iuse() {
 # and use the package manager implementation when available (i.e. EAPI >= 5).
 # If USE flag is set, echo [true output][true suffix] (defaults to "yes"),
 # otherwise echo [false output][false suffix] (defaults to "no").
-if ! declare -F usex >/dev/null ; then
+if has "${EAPI:-0}" 0 1 2 3 4; then
 	usex() { use "$1" && echo "${2-yes}$4" || echo "${3-no}$5" ; } #382963
 fi
 

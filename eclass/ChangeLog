@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.419 2012/09/28 15:08:17 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.420 2012/09/28 15:18:04 ulm Exp $
+
+  28 Sep 2012; Ulrich Müller <ulm@gentoo.org> eutils.eclass:
+  Test for the EAPI explicitly, because it isn't guaranteed that package
+  managers implement usex as a shell function.
 
   28 Sep 2012; Ian Stakenvicius <axs@gentoo.org> toolchain-funcs.eclass:
   reverted fatal error from unset KV and made it a warning only shown when
