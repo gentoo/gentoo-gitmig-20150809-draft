@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/symfony
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/symfony/ChangeLog,v 1.9 2012/09/28 12:46:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/symfony/ChangeLog,v 1.10 2012/09/28 12:49:07 ago Exp $
+
+  28 Sep 2012; Agostino Sarubbo <ago@gentoo.org> symfony-1.4.18.ebuild:
+  Stable for x86, wrt bug #401625
 
   28 Sep 2012; Agostino Sarubbo <ago@gentoo.org> symfony-1.4.18.ebuild:
   Stable for amd64, wrt bug #401625
