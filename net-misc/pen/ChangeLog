@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/pen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pen/ChangeLog,v 1.13 2012/02/16 19:10:47 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pen/ChangeLog,v 1.14 2012/09/28 09:29:54 ago Exp $
+
+  28 Sep 2012; Agostino Sarubbo <ago@gentoo.org> pen-0.18.0-r1.ebuild:
+  add ssl as RDEPEND
 
   16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> pen-0.18.0-r1.ebuild:
   x86 stable wrt bug #397179
@@ -53,4 +56,3 @@
 
   12 Mar 2004; Michael Imhof <tantive@gentoo.org> pen-0.12.1.ebuild:
   Initial import. Ebuild submitted in #40531 by Mark Dierolf <smark@3e0.com>.
-
