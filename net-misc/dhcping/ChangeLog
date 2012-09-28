@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcping
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcping/ChangeLog,v 1.7 2012/09/28 09:40:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcping/ChangeLog,v 1.8 2012/09/28 09:48:04 ago Exp $
+
+  28 Sep 2012; Agostino Sarubbo <ago@gentoo.org> dhcping-1.2.ebuild:
+  Stable for amd64, wrt bug #436444
 
   28 Sep 2012; Agostino Sarubbo <ago@gentoo.org> dhcping-1.2.ebuild:
   EAPI4 bump
