@@ -1,6 +1,11 @@
 # ChangeLog for media-video/clive
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/clive/ChangeLog,v 1.72 2011/10/24 04:42:44 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/clive/ChangeLog,v 1.73 2012/09/28 01:29:07 vapier Exp $
+
+*clive-2.3.0.1 (28 Sep 2012)
+
+  28 Sep 2012; Mike Frysinger <vapier@gentoo.org> +clive-2.3.0.1.ebuild:
+  Version bump #357255 by Dennis Nezic.
 
   24 Oct 2011; Tim Harder <radhermit@gentoo.org> -clive-2.2.23.ebuild,
   -clive-2.2.24.ebuild, -clive-2.2.25.ebuild:
@@ -315,4 +320,3 @@
   initial import, sharing this small ebuild I have had for a long time, others
   might like the tool too if they hate flash and still want to watch videos
   from various websites
-
