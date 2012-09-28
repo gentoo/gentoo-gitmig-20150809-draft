@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.535 2012/09/27 03:16:29 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.536 2012/09/28 18:54:44 tetromino Exp $
+
+  28 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org> glib-2.34.0.ebuild:
+  Really disable building tests when USE=-test (bug #436508, thanks to Jeff
+  Kowalczyk).
 
   26 Sep 2012; Matt Turner <mattst88@gentoo.org> glib-2.32.4.ebuild:
   Stable on alpha, bug 427544.

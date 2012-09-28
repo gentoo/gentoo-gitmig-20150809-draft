@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.34.0.ebuild,v 1.1 2012/09/25 11:40:57 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.34.0.ebuild,v 1.2 2012/09/28 18:54:44 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="utils? 2"
@@ -145,6 +145,8 @@ src_configure() {
 	# need to build tests if USE=doc for bug #387385
 	if use doc || use test; then
 		myconf="${myconf} --enable-modular-tests"
+	else
+		myconf="${myconf} --disable-modular-tests"
 	fi
 
 	# Always use internal libpcre, bug #254659
