@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-java3d-bin/sun-java3d-bin-1.4.0_pre5-r1.ebuild,v 1.6 2010/07/11 12:32:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-java3d-bin/sun-java3d-bin-1.4.0_pre5-r1.ebuild,v 1.7 2012/09/28 16:37:59 sera Exp $
 
 inherit java-pkg-2
 
@@ -24,9 +24,7 @@ IUSE=""
 DEPEND="app-arch/unzip"
 RDEPEND=">=virtual/jre-1.4"
 
-QA_TEXTRELS_x86="
-	usr/lib/sun-java3d-bin/libj3dcore-ogl.so
-	usr/lib/sun-java3d-bin/libj3dutils.so"
+QA_PREBUILT="*"
 
 src_unpack() {
 	unpack ${A}
