@@ -1,6 +1,17 @@
 # ChangeLog for dev-java/javacc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/ChangeLog,v 1.37 2012/05/12 03:17:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/ChangeLog,v 1.38 2012/09/28 10:18:50 sera Exp $
+
+*javacc-5.0-r1 (28 Sep 2012)
+
+  28 Sep 2012; Ralph Sennhauser <sera@gentoo.org> +javacc-5.0-r1.ebuild:
+  EAPI bump for Prefix support by Christoph Junghans <ottxor@gentoo.org>.
+  #435470
+  Also fix HOMEPAGE and SRC_URI.
+  Dont leak jre into DEPEND as it may confuse vm switching code.
+  Register run dep on junit. #298720
+  Make better use of eclasses, drop hacks.
+  Use java-pkg_doexamples to install examples.
 
   12 May 2012; Alexis Ballier <aballier@gentoo.org> javacc-4.2.ebuild:
   keyword ~amd64-fbsd
