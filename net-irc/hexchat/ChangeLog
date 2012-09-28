@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/hexchat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/ChangeLog,v 1.3 2012/09/24 11:33:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/ChangeLog,v 1.4 2012/09/28 23:51:19 blueness Exp $
+
+  28 Sep 2012; Anthony G. Basile <blueness@gentoo.org> hexchat-2.9.1.ebuild:
+  keyword ~ppc ~pcc64, bug #435872
 
   24 Sep 2012; Jeroen Roovers <jer@gentoo.org> hexchat-2.9.1.ebuild:
   Marked ~hppa (bug #435872).
