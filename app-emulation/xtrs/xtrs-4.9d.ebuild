@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/xtrs-4.9d.ebuild,v 1.7 2010/12/23 10:50:25 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/xtrs-4.9d.ebuild,v 1.8 2012/09/28 20:55:22 ulm Exp $
 
 EAPI=3
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.tim-mann.org/xtrs.html"
 SRC_URI="http://www.tim-mann.org/trs80/${P}.tar.gz
 	http://www.tim-mann.org/trs80/ld4-631.zip"
 
-LICENSE="as-is"
+LICENSE="xtrs freedist"
 SLOT="0"
 KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE=""
