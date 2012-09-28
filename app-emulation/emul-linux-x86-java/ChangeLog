@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/emul-linux-x86-java
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.117 2012/09/02 18:04:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.118 2012/09/28 15:33:43 sera Exp $
+
+  28 Sep 2012; Ralph Sennhauser <sera@gentoo.org>
+  -emul-linux-x86-java-1.6.0.33.ebuild,
+  -emul-linux-x86-java-1.6.0.33-r1.ebuild,
+  -emul-linux-x86-java-1.6.0.33-r2.ebuild:
+  Remove vulnerable. #433094
 
   02 Sep 2012; Agostino Sarubbo <ago@gentoo.org>
   emul-linux-x86-java-1.6.0.35.ebuild:
