@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/symfony
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/symfony/ChangeLog,v 1.10 2012/09/28 12:49:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/symfony/ChangeLog,v 1.11 2012/09/28 12:50:26 ago Exp $
+
+  28 Sep 2012; Agostino Sarubbo <ago@gentoo.org> -symfony-1.4.11.ebuild,
+  -symfony-1.4.12.ebuild, -symfony-1.4.16.ebuild, -symfony-1.4.17.ebuild:
+  Remove old
 
   28 Sep 2012; Agostino Sarubbo <ago@gentoo.org> symfony-1.4.18.ebuild:
   Stable for x86, wrt bug #401625
@@ -158,4 +162,3 @@
   30 Aug 2007; Jakub Moc <jakub@gentoo.org> +metadata.xml,
   +symfony-1.0.6.ebuild:
   New ebuild, Bug 186152
-
