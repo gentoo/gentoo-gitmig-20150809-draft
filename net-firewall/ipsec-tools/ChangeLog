@@ -1,6 +1,13 @@
 # ChangeLog for net-firewall/ipsec-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.104 2012/09/27 14:11:26 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.105 2012/09/28 00:45:26 blueness Exp $
+
+*ipsec-tools-0.8.0-r5 (28 Sep 2012)
+
+  28 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
+  +ipsec-tools-0.8.0-r5.ebuild, +files/ipsec-tools.conf,
+  +files/racoon.conf.d-r1, +files/racoon.init.d-r2:
+  Fix bug #435398 and #436144
 
   27 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
   -ipsec-tools-0.7.3.ebuild, -ipsec-tools-0.7.3-r1.ebuild,
