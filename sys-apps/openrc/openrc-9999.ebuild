@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.105 2012/09/28 19:56:14 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.106 2012/09/28 21:18:26 williamh Exp $
 
 EAPI=4
 
@@ -245,6 +245,12 @@ pkg_preinst() {
 
 	# swapfiles was added in 0.9.9 and needed in boot (february 2012)
 	has_version ">=sys-apps/openrc-0.9.9" || add_boot_init swapfiles
+
+	if [ has_version ">=sys-apps/openrc-0.9.9" ]; then
+		add_boot_init sysfs sysinit
+		add_boot_init tmpfilesd.sysinit sysinit
+		add_boot_init tmpfilesd.boot boot
+	fi
 
 	# set default interactive shell to sulogin if it exists
 	set_config /etc/rc.conf rc_shell /sbin/sulogin "#" test -e /sbin/sulogin
