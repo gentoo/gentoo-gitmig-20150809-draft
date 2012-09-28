@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.227 2012/09/27 19:04:00 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.228 2012/09/28 16:32:31 williamh Exp $
+
+  28 Sep 2012; William Hubbs <williamh@gentoo.org> openrc-9999.ebuild:
+  Fix the ebuild so we can use pre/postinst on prefix systems as well.
+  Originally I did not think we needed this, but thinking it over it is better
+  to have them.  Also this reworks the live portion of the ebuild to use a
+  separate inherit call.
 
   27 Sep 2012; William Hubbs <williamh@gentoo.org> openrc-9999.ebuild:
   Add prefix support for bug #415899. I would like to thank Benda Xu for working
