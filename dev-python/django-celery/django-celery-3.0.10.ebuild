@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-celery/django-celery-3.0.4.ebuild,v 1.1 2012/07/29 20:10:46 iksaif Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-celery/django-celery-3.0.10.ebuild,v 1.1 2012/09/28 10:39:38 iksaif Exp $
 
 EAPI="4"
 PYTHON_COMPAT="python2_7"
@@ -16,10 +16,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
-RDEPEND=">=dev-python/celery-3.0.1
+RDEPEND=">=dev-python/celery-3.0.10
 	>=dev-python/django-1.3"
 DEPEND="${RDEPEND}
-	test? ( dev-python/django-nose )
+	test? (
+		>=dev-python/unittest2-0.4.0
+		dev-python/django-nose
+		dev-python/nose-cover3
+		dev-python/python-memcached
+	)
 	dev-python/setuptools"
 
 python_test() {
