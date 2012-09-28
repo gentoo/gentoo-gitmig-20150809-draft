@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/gcj-jdk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gcj-jdk/ChangeLog,v 1.7 2012/09/16 13:16:05 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gcj-jdk/ChangeLog,v 1.8 2012/09/28 18:37:53 sera Exp $
+
+*gcj-jdk-4.6.3-r1 (28 Sep 2012)
+
+  28 Sep 2012; Ralph Sennhauser <sera@gentoo.org> +gcj-jdk-4.6.3-r1.ebuild:
+  No longer install symlinks in /usr/bin to work with recent gcc-config.
+  #431930
+  Add missing dodir for server vm.
+  Use get_libdir for vm home.
 
   16 Sep 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   gcj-jdk-4.6.3.ebuild:
