@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vncrec
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vncrec/ChangeLog,v 1.9 2012/09/26 18:11:24 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vncrec/ChangeLog,v 1.10 2012/09/28 18:43:28 ago Exp $
+
+  28 Sep 2012; Agostino Sarubbo <ago@gentoo.org> vncrec-0.2-r1.ebuild:
+  eapi4 + ~amd64 keyword
 
   26 Sep 2012; Michael Palimaka <kensington@gentoo.org> -vncrec-0.2.ebuild:
   Remove old.
