@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/parcellite/parcellite-1.0.2_rc5.ebuild,v 1.4 2012/08/15 20:51:04 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/parcellite/parcellite-1.0.2_rc5.ebuild,v 1.5 2012/09/28 14:57:59 jer Exp $
 
 EAPI=4
 inherit autotools eutils fdo-mime
@@ -29,8 +29,6 @@ S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-glib-2.31.patch
-	# Doh! Tarballs contains compiled target
-	emake clean
 	eautoreconf
 }
 
