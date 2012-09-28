@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.104 2012/09/28 16:32:31 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.105 2012/09/28 19:56:14 williamh Exp $
 
 EAPI=4
 
@@ -161,7 +161,7 @@ add_boot_init() {
 	fi
 
 	elog "Auto-adding '${initd}' service to your ${runlevel} runlevel"
-	ln -snf /etc/init.d/${initd} "${EROOT}"/etc/runlevels/${runlevel}/${initd}
+	ln -snf "${EROOT}"/etc/init.d/${initd} "${EROOT}"/etc/runlevels/${runlevel}/${initd}
 }
 add_boot_init_mit_config() {
 	local config=$1 initd=$2
