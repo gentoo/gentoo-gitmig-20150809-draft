@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.8_pre14.ebuild,v 1.2 2012/09/28 06:08:01 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.8_pre14.ebuild,v 1.3 2012/09/28 06:10:44 radhermit Exp $
 
 EAPI=4
 
@@ -80,11 +80,6 @@ src_configure() {
 		$(usex ssl "--with-$(usex gnutls gnutls ssl)=${EPREFIX}/usr" "") \
 		$(usex unicode "--with-screen=ncursesw" "")
 }
-
-#src_compile() {
-#	# see bug #403905
-#	emake -j1
-#}
 
 src_install() {
 	emake install DESTDIR="${D}"
