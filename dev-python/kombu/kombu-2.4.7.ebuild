@@ -1,11 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/kombu-2.3.2.ebuild,v 1.1 2012/08/14 07:22:17 iksaif Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/kombu-2.4.7.ebuild,v 1.1 2012/09/28 10:04:10 iksaif Exp $
 
 EAPI="4"
 
-PYTHON_DEPEND="*:2.5"
-RESTRICT_PYTHON_ABIS="2.4"
+PYTHON_TESTS_RESTRICTED_ABIS="3.* 2.7-pypy-*"
+PYTHON_DEPEND="*:2.7"
+RESTRICT_PYTHON_ABIS="2.[4-6]"
 SUPPORT_PYTHON_ABIS="1"
 DISTUTILS_SRC_TEST="nosetests"
 
@@ -21,10 +22,11 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc examples test"
 
 RDEPEND=">=dev-python/anyjson-0.3.3
-	>=dev-python/amqplib-1.0"
+	>=dev-python/amqplib-1.0.2"
 DEPEND="${RDEPEND}
 	test? ( dev-python/nose-cover3
 	dev-python/mock
+	>=dev-python/unittest2-0.5.0
 	dev-python/simplejson
 	dev-python/anyjson
 	dev-python/redis-py
