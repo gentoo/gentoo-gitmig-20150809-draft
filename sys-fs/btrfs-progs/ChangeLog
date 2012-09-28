@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/btrfs-progs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.48 2012/09/28 09:47:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.49 2012/09/28 18:59:05 blueness Exp $
+
+  28 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
+  btrfs-progs-0.19.11.ebuild:
+  stable ppc ppc64, bug #433363
 
   28 Sep 2012; Agostino Sarubbo <ago@gentoo.org> btrfs-progs-0.19.11.ebuild:
   Stable for amd64, wrt bug #433363
@@ -212,4 +216,3 @@
   +files/btrfs-progs-0.14-hotfix.patch, +metadata.xml,
   +btrfs-progs-0.14.ebuild:
   New package: Btrfs utilities
-
