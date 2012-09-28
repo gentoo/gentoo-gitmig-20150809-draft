@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.903 2012/09/27 20:59:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.904 2012/09/28 03:13:09 zmedico Exp $
+
+  28 Sep 2012; Zac Medico <zmedico@gentoo.org> gcc-2.95.3-r10.ebuild:
+  Drop global scope tc-arch call, which breaks metadata generation due to KV
+  being unset (since rev 1.118 of toolchain-funcs.eclass). The
+  GENTOO_PATCH_EXCLUDE setting that this tc-arch call triggers appears to be
+  obsolete anyway, since the variable is not exported and there are no
+  references to it whatsoever in any eclasses or ebuilds.
 
   27 Sep 2012; Mike Frysinger <vapier@gentoo.org> gcc-4.6.0.ebuild,
   gcc-4.6.1-r1.ebuild, gcc-4.6.2.ebuild, gcc-4.6.3.ebuild, gcc-4.7.0.ebuild,
