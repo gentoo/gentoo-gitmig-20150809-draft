@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-1.6.1.ebuild,v 1.1 2012/09/28 08:13:29 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-1.6.1.ebuild,v 1.2 2012/09/28 19:03:03 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -73,7 +73,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.29.10:2
 #    user switching with gdm-3.1.x)
 # 6. caribou needed for on-screen keyboard
 # 7. xdg-utils needed for xdg-open, used by extension tool
-# 8. gconf-python needed for cinnamon-settings
+# 8. gconf-python, imaging, lxml needed for cinnamon-settings
 # 9. gnome-icon-theme-symbolic needed for various icons
 # 10. pygobject needed for menu editor
 # 11. nemo - default file manager, tightly integrated with cinnamon
@@ -97,6 +97,7 @@ RDEPEND="${COMMON_DEPEND}
 	dev-python/dbus-python
 	dev-python/gconf-python:2
 	dev-python/imaging
+	dev-python/lxml
 
 	x11-themes/gnome-icon-theme-symbolic
 
