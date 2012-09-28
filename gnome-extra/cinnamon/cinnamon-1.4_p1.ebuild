@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-1.4_p1.ebuild,v 1.1 2012/09/09 00:31:58 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-1.4_p1.ebuild,v 1.2 2012/09/28 08:13:29 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -18,7 +18,7 @@ MY_P="${PN}-${MY_PV}"
 
 SRC_URI="https://github.com/linuxmint/Cinnamon/tarball/${MY_PV} -> ${MY_P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
 IUSE="+bluetooth +networkmanager"
 KEYWORDS="~amd64 ~x86"

@@ -1,6 +1,17 @@
 # ChangeLog for gnome-extra/cinnamon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/ChangeLog,v 1.16 2012/09/11 08:27:57 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/ChangeLog,v 1.17 2012/09/28 08:13:29 tetromino Exp $
+
+*cinnamon-1.6.1 (28 Sep 2012)
+
+  28 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org> cinnamon-1.4.ebuild,
+  cinnamon-1.4_p1.ebuild, cinnamon-1.4_p1-r1.ebuild, +cinnamon-1.6.1.ebuild,
+  +files/cinnamon-1.6.1-automagic-gnome-bluetooth.patch,
+  +files/cinnamon-1.6.1-optional-networkmanager.patch:
+  Version bump to the stable 1.6 series (bug #435828, thanks to Anton
+  Bolshakov). Lots of new features - nameable workspaces, new and improved
+  applets, and a new file manager. See http://cinnamon.linuxmint.com/?p=207 and
+  http://cinnamon.linuxmint.com/?p=216 for the release notes.
 
 *cinnamon-1.4_p1-r1 (11 Sep 2012)
 
