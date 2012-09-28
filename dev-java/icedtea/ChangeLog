@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.82 2012/09/26 08:42:27 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.83 2012/09/28 10:41:09 sera Exp $
+
+  28 Sep 2012; Ralph Sennhauser <sera@gentoo.org> icedtea-6.1.11.4.ebuild,
+  icedtea-7.2.3.2.ebuild:
+  Remove obsolete docompress workaround. #433685
 
   26 Sep 2012; Ralph Sennhauser <sera@gentoo.org> -icedtea-6.1.11.2.ebuild,
   -icedtea-6.1.11.3.ebuild, icedtea-6.1.11.4.ebuild,
