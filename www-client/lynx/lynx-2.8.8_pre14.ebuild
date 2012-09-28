@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.8_pre14.ebuild,v 1.1 2012/09/27 04:29:22 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.8_pre14.ebuild,v 1.2 2012/09/28 06:08:01 radhermit Exp $
 
 EAPI=4
 
@@ -58,23 +58,6 @@ src_prepare() {
 }
 
 src_configure() {
-	local myargs
-
-	if use ssl ; then
-		# --with-gnutls and --with-ssl are alternatives,
-		# the latter enabling openssl support so it should be
-		# _not_ be used if gnutls ssl implementation is desired
-		if use gnutls ; then
-			# ssl implementation = gnutls
-			myargs+=" --with-gnutls=${EPREFIX}/usr"
-		else
-			# ssl implementation = openssl
-			myargs+=" --with-ssl=${EPREFIX}/usr"
-		fi
-	fi
-
-	use unicode && myargs+=" --with-screen=ncursesw"
-
 	econf \
 		--enable-nested-tables \
 		--enable-cgi-links \
@@ -94,7 +77,8 @@ src_configure() {
 		$(use_enable cjk) \
 		$(use_enable unicode japanese-utf8) \
 		$(use_with bzip2 bzlib) \
-		$myargs
+		$(usex ssl "--with-$(usex gnutls gnutls ssl)=${EPREFIX}/usr" "") \
+		$(usex unicode "--with-screen=ncursesw" "")
 }
 
 #src_compile() {
