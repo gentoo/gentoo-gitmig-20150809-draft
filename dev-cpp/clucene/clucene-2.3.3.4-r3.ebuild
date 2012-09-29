@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/clucene-2.3.3.4-r3.ebuild,v 1.8 2012/09/18 14:28:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/clucene-2.3.3.4-r3.ebuild,v 1.9 2012/09/29 17:03:04 armin76 Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/clucene/${MY_P}.tar.gz"
 
 LICENSE="|| ( Apache-2.0 LGPL-2.1 )"
 SLOT="1"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos"
 
 IUSE="debug doc static-libs"
 
