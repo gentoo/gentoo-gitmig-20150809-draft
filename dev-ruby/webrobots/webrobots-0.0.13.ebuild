@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webrobots/webrobots-0.0.13.ebuild,v 1.2 2012/09/27 10:26:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webrobots/webrobots-0.0.13.ebuild,v 1.3 2012/09/29 15:42:40 grobian Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ree18 ruby19"
@@ -15,7 +15,7 @@ HOMEPAGE="http://rubygems.org/gems/webrobots"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE=""
 
 ruby_add_rdepend ">=dev-ruby/nokogiri-1.4.4"
