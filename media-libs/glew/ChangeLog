@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/glew
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/ChangeLog,v 1.80 2012/08/07 04:32:20 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/ChangeLog,v 1.81 2012/09/29 13:56:28 grobian Exp $
+
+  29 Sep 2012; Fabian Groffen <grobian@gentoo.org> glew-1.9.0.ebuild:
+  Fix build of dylibs on Darwin, bug #433934, keyworded ~x{86,64}-macos
 
 *glew-1.9.0 (07 Aug 2012)
 
@@ -289,4 +292,3 @@
   Initial import. Thanks to Derek Young, Vinicius Dias dos Santos, Philip
   Allison, Wojciech Milkowski, Robert Schuster, Charles Moad and Lawrence Lee
   for their ebuilds and testing.
-
