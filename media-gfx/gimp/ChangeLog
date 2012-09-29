@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.396 2012/09/29 16:11:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.397 2012/09/29 20:10:26 sping Exp $
+
+  29 Sep 2012; Sebastian Pipping <sping@gentoo.org> gimp-2.6.12-r2.ebuild,
+  gimp-2.6.12-r4.ebuild, gimp-2.6.12-r5.ebuild, gimp-2.8.2.ebuild:
+  Use einfo() rather than elog() to report about cleaning of locales (bug
+  #436616)
 
   29 Sep 2012; Raúl Porcel <armin76@gentoo.org> gimp-2.6.12-r5.ebuild:
   alpha/ia64/sparc stable wrt #434580
