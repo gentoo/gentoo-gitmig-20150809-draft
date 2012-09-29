@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/six/six-1.2.0.ebuild,v 1.1 2012/09/29 23:40:46 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/six/six-1.2.0.ebuild,v 1.2 2012/09/29 23:42:40 radhermit Exp $
 
 EAPI="4"
 SUPPORT_PYTHON_ABIS="1"
@@ -23,6 +23,8 @@ DEPEND="doc? ( dev-python/sphinx )"
 PYTHON_MODNAME="${PN}.py"
 
 src_prepare() {
+	distutils_src_prepare
+
 	# disable tests that require tkinter
 	sed -i "s/test_move_items/_\0/" test_six.py || die
 }
