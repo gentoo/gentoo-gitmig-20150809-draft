@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/btrfs-progs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.49 2012/09/28 18:59:05 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.50 2012/09/29 13:02:48 blueness Exp $
+
+  29 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
+  btrfs-progs-0.19.11.ebuild:
+  stable arm, bug #433363
 
   28 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
   btrfs-progs-0.19.11.ebuild:
