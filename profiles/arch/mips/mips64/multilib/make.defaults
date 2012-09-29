@@ -8,14 +8,11 @@ FCFLAGS="${CFLAGS}"
 
 CFLAGS_o32="-mabi=32"
 CHOST_o32="${CHOST}"
-LIBDIR_o32="lib"
 
 CFLAGS_n32="-mabi=n32"
 CHOST_n32=${CHOST}
-LIBDIR_n32="lib32"
 
 CFLAGS_n64="-mabi=64"
 CHOST_n64=${CHOST}
-LIBDIR_n64="lib64"
 
 SYMLINK_LIB="no"

@@ -4,4 +4,3 @@ CHOST="mips64-unknown-linux-gnu"
 
 DEFAULT_ABI="n32"
 ABI="${DEFAULT_ABI}"
-LIBDIR_n32="lib32"
