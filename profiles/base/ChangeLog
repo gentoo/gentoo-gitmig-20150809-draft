@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.440 2012/09/27 18:56:19 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.441 2012/09/29 16:56:23 swift Exp $
+
+  29 Sep 2012; <swift@gentoo.org> package.mask:
+  Add mask for selinux-rtorrent, new policy ebuild
 
   27 Sep 2012; Ian Stakenvicius <axs@gentoo.org> make.defaults:
   Added prefix flag to IUSE_IMPLICIT for EAPI=5 ebuild testing
