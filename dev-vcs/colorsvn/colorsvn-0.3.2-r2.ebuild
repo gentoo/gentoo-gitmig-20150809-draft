@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/colorsvn/colorsvn-0.3.2-r2.ebuild,v 1.3 2010/12/29 16:20:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/colorsvn/colorsvn-0.3.2-r2.ebuild,v 1.4 2012/09/29 15:06:47 grobian Exp $
 
 EAPI="3"
 
@@ -22,6 +22,11 @@ DEPEND="${RDEPEND}"
 src_prepare() {
 	# rxvt-unicode isn't listed by default :)
 	sed -i -e 's:rxvt:rxvt rxvt-unicode:' colorsvnrc-original || die
+	# Fix confdir location for Prefix, #435434
+	sed -i \
+		-e '/^confdir/d' \
+		-e 's/$(confdir)/$(sysconfdir)/g' \
+		Makefile.in || die
 
 	epatch "${FILESDIR}/0001-Don-t-colorize-svn-mkdir-bug-321451.-Use-IPC-open2-i.patch"
 }
