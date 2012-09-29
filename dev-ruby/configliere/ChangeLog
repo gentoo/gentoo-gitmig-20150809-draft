@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/configliere
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/configliere/ChangeLog,v 1.1 2012/09/29 06:17:36 flameeyes Exp $
+
+*configliere-0.4.17 (29 Sep 2012)
+
+  29 Sep 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +configliere-0.4.17.ebuild, +files/configliere-0.4.17-nobundler.patch,
+  +metadata.xml:
+  Initial import of configliere.
