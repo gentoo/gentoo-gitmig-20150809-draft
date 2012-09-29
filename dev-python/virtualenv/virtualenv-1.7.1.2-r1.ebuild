@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/virtualenv-1.7.1.2-r1.ebuild,v 1.5 2012/05/29 19:57:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/virtualenv-1.7.1.2-r1.ebuild,v 1.6 2012/09/29 23:13:34 radhermit Exp $
 
 EAPI="4"
 SUPPORT_PYTHON_ABIS="1"
@@ -18,7 +18,7 @@ SLOT="0"
 IUSE="doc"
 
 RDEPEND="dev-python/setuptools"
-DEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 		doc? ( dev-python/sphinx )
 		test? ( dev-python/mock )"
 
