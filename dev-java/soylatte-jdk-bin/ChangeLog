@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/soylatte-jdk-bin
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/soylatte-jdk-bin/ChangeLog,v 1.1 2012/09/29 11:08:58 grobian Exp $
+
+*soylatte-jdk-bin-1.0.3 (29 Sep 2012)
+
+  29 Sep 2012; Fabian Groffen <grobian@gentoo.org>
+  +files/soylatte-jdk-bin-1.6.env, +metadata.xml,
+  +soylatte-jdk-bin-1.0.3.ebuild:
+  Initial SoyLatte ebuild, based on the work of Elias Pipping from 2009
