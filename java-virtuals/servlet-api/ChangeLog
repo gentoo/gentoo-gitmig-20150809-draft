@@ -1,6 +1,9 @@
 # ChangeLog for java-virtuals/servlet-api
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/servlet-api/ChangeLog,v 1.41 2012/06/12 11:34:12 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/servlet-api/ChangeLog,v 1.42 2012/09/29 17:51:43 grobian Exp $
+
+  29 Sep 2012; Fabian Groffen <grobian@gentoo.org> servlet-api-2.3.ebuild:
+  Marked ~x64-macos
 
   12 Jun 2012; Johannes Huber <johu@gentoo.org> servlet-api-3.0-r1.ebuild:
   Stable for x86, wrt bug #420661
@@ -160,4 +163,3 @@
   +servlet-api-2.2.ebuild, +servlet-api-2.3.ebuild, +servlet-api-2.4.ebuild,
   +servlet-api-2.5.ebuild:
   Initial virtual ebuilds and package for Java Servlet API implemenations.
-
