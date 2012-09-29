@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/grilo-plugins-0.1.18.ebuild,v 1.3 2012/09/16 02:50:33 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/grilo-plugins-0.1.18.ebuild,v 1.4 2012/09/29 17:05:49 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no" # --enable-debug only changes CFLAGS
@@ -14,7 +14,7 @@ HOMEPAGE="https://live.gnome.org/Grilo"
 LICENSE="LGPL-2.1"
 SLOT="0.1"
 KEYWORDS="~amd64 ~x86"
-IUSE="tracker upnp +vimeo +youtube"
+IUSE="upnp +vimeo +youtube"
 
 RDEPEND="
 	>=dev-libs/glib-2.26:2
@@ -24,7 +24,6 @@ RDEPEND="
 	dev-libs/libxml2:2
 	dev-db/sqlite:3
 
-	tracker? ( >=app-misc/tracker-0.10.5 )
 	youtube? ( >=dev-libs/libgdata-0.7
 		>=media-libs/libquvi-0.2.15 )
 	upnp? ( >=net-libs/gupnp-0.13
@@ -60,7 +59,7 @@ pkg_setup() {
 		--enable-podcasts
 		--disable-bliptv
 		--disable-shoutcast
-		$(use_enable tracker)
+		--disable-tracker
 		$(use_enable upnp)
 		$(use_enable vimeo)
 		$(use_enable youtube)"
