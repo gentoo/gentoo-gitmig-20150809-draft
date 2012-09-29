@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Astro-FITS-Header
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Astro-FITS-Header/ChangeLog,v 1.33 2012/09/18 15:29:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Astro-FITS-Header/ChangeLog,v 1.34 2012/09/29 16:03:39 armin76 Exp $
+
+  29 Sep 2012; Raúl Porcel <armin76@gentoo.org>
+  Astro-FITS-Header-3.30.0.ebuild, Astro-FITS-Header-3.50.0.ebuild:
+  Drop alpha/ia64/s390/sh/sparc keywords
 
   18 Sep 2012; Jeroen Roovers <jer@gentoo.org> Astro-FITS-Header-3.50.0.ebuild:
   Stable for HPPA (bug #428978).
