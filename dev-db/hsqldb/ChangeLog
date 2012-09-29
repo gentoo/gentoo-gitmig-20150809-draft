@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/hsqldb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/ChangeLog,v 1.68 2012/07/13 14:19:56 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/ChangeLog,v 1.69 2012/09/29 17:45:02 grobian Exp $
+
+  29 Sep 2012; Fabian Groffen <grobian@gentoo.org> hsqldb-1.8.1.3.ebuild:
+  Marked ~x64-macos
 
   13 Jul 2012; Ralph Sennhauser <sera@gentoo.org> hsqldb-1.8.1.2-r1.ebuild,
   hsqldb-1.8.1.3.ebuild:
@@ -278,4 +281,3 @@
   inital import, ebuild contributed by Dan <dan@intuitivelyobvious.net>
   Also alot of thanks too Hendrik Sticher <hendrik_sticher@gmx.de> for his 
   contribution
-
