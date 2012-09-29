@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/tomcat-servlet-api
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/ChangeLog,v 1.135 2012/09/06 14:49:29 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/ChangeLog,v 1.136 2012/09/29 17:58:23 grobian Exp $
+
+  29 Sep 2012; Fabian Groffen <grobian@gentoo.org>
+  tomcat-servlet-api-4.1.36.ebuild:
+  Marked ~x64-macos
 
 *tomcat-servlet-api-7.0.30 (06 Sep 2012)
 

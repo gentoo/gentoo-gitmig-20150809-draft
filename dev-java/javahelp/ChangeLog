@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/javahelp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javahelp/ChangeLog,v 1.21 2012/01/20 13:26:19 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javahelp/ChangeLog,v 1.22 2012/09/29 17:52:40 grobian Exp $
+
+  29 Sep 2012; Fabian Groffen <grobian@gentoo.org> javahelp-2.0.05_p63.ebuild:
+  Marked ~x64-macos
 
   20 Jan 2012; Ralph Sennhauser <sera@gentoo.org> -javahelp-2.0.02_p46.ebuild:
   Remove old. Gets rid of dependency on dev-java/servletapi. #Bug 398689
@@ -67,4 +70,3 @@
   16 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> +metadata.xml,
   +javahelp-2.0.02_p46.ebuild:
   Initial commit for bug #168991. Ebuild written by me.
-

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/simplyhtml
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/simplyhtml/ChangeLog,v 1.23 2011/12/27 18:45:58 halcy0n Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/simplyhtml/ChangeLog,v 1.24 2012/09/29 17:59:03 grobian Exp $
+
+  29 Sep 2012; Fabian Groffen <grobian@gentoo.org> simplyhtml-0.13.1.ebuild:
+  Marked ~x64-macos
 
   27 Dec 2011; Mark Loeser <halcy0n@gentoo.org> simplyhtml-0.13.1.ebuild:
   Drop ppc64 simplyhtml-0.13.1.ebuild
@@ -91,4 +94,3 @@
   07 May 2007; Vlastimil Babka <caster@gentoo.org> +metadata.xml,
   +simplyhtml-0.12.2_pre20070424.ebuild:
   Initial ebuild as dependency of freemind. Had to package CVS snapshot for that.
-

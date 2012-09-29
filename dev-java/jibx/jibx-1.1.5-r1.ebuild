@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jibx/jibx-1.1.5-r1.ebuild,v 1.4 2009/07/19 13:54:52 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jibx/jibx-1.1.5-r1.ebuild,v 1.5 2012/09/29 18:03:19 grobian Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source"
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}_${MY_PV}.zip"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ppc x86 ~x64-macos"
 IUSE=""
 
 COMMON_DEP="dev-java/dom4j:1
