@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyproj
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyproj/ChangeLog,v 1.8 2012/02/20 14:58:50 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyproj/ChangeLog,v 1.9 2012/09/29 23:53:34 radhermit Exp $
+
+*pyproj-1.9.2 (29 Sep 2012)
+
+  29 Sep 2012; Tim Harder <radhermit@gentoo.org> +pyproj-1.9.2.ebuild:
+  Version bump.
 
   20 Feb 2012; Patrick Lauer <patrick@gentoo.org> pyproj-1.8.9.ebuild,
   pyproj-1.9.0.ebuild:
