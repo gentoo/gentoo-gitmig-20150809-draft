@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/openimageio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openimageio/ChangeLog,v 1.7 2012/08/14 18:51:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openimageio/ChangeLog,v 1.8 2012/09/29 15:30:34 blueness Exp $
+
+  29 Sep 2012; Anthony G. Basile <blueness@gentoo.org> openimageio-1.0.8.ebuild:
+  keyword ~ppc64, bug #436566
 
   14 Aug 2012; Samuli Suominen <ssuominen@gentoo.org> openimageio-1.0.8.ebuild:
   Temporarily disable testsuite wrt #431412

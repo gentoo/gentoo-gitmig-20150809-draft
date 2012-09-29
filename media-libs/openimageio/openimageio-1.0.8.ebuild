@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openimageio/openimageio-1.0.8.ebuild,v 1.3 2012/08/14 18:53:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openimageio/openimageio-1.0.8.ebuild,v 1.4 2012/09/29 15:30:34 blueness Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://github.com/OpenImageIO/oiio/tarball/Release-${PV} -> ${P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE="jpeg2k opengl python qt4 tbb"
 
 RESTRICT=test #431412
