@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/dosfstools-3.0.13.ebuild,v 1.1 2012/09/14 18:44:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/dosfstools-3.0.13.ebuild,v 1.2 2012/09/29 21:20:47 zmedico Exp $
 
 EAPI="4"
 
@@ -20,7 +20,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.0.12-name-ext.patch
 	epatch "${FILESDIR}"/${PN}-3.0.13-reserved-sectors-hack.patch #434938
 	sed -i \
-		-e "/^PREFIX/s:=.*:= ${EPREFIX:-/usr}:" \
+		-e "/^PREFIX/s:=.*:= ${EPREFIX}/usr:" \
 		-e '/^OPTFLAGS/d' \
 		Makefile || die
 	append-lfs-flags
