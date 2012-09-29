@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-qt7/phonon-qt7-0_pre20110424.ebuild,v 1.3 2012/05/04 13:43:44 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-qt7/phonon-qt7-0_pre20110424.ebuild,v 1.4 2012/09/29 19:04:25 grobian Exp $
 
 EAPI=4
 
@@ -32,3 +32,9 @@ PATCHES=(
 	"${FILESDIR}/${PN}-noshow.patch"
 	"${FILESDIR}"/${P}-QWidget-cast-dynamic.patch
 )
+
+src_prepare() {
+	cmake-utils_src_prepare
+	sed -i -e "/^include_directories/s:): ${EPREFIX}/usr/include):" \
+		CMakeLists.txt || die
+}
