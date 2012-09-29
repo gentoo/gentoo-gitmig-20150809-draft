@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ecb-2.40-r2.ebuild,v 1.4 2012/09/29 02:27:29 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ecb-2.40-r2.ebuild,v 1.5 2012/09/29 07:49:04 ulm Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ DESCRIPTION="Source code browser for Emacs"
 HOMEPAGE="http://ecb.sourceforge.net/"
 SRC_URI="mirror://sourceforge/ecb/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="java"

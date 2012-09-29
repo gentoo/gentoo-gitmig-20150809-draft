@@ -1,9 +1,10 @@
 # ChangeLog for app-emacs/ecb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ChangeLog,v 1.54 2012/09/29 06:31:19 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ChangeLog,v 1.55 2012/09/29 07:49:04 ulm Exp $
 
-  29 Sep 2012; Ulrich Müller <ulm@gentoo.org> -ecb-2.40-r1.ebuild:
-  Remove old.
+  29 Sep 2012; Ulrich Müller <ulm@gentoo.org> -ecb-2.40-r1.ebuild,
+  ecb-2.40-r2.ebuild:
+  Specify LICENSE more precisely. Remove old.
 
   29 Sep 2012; Anthony G. Basile <blueness@gentoo.org> ecb-2.40-r2.ebuild:
   stable ppc, bug #428862
