@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/hdparm-9.39.ebuild,v 1.9 2012/09/04 20:16:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/hdparm-9.39.ebuild,v 1.10 2012/09/29 09:58:03 ulm Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ DESCRIPTION="Utility to change hard drive performance parameters"
 HOMEPAGE="http://sourceforge.net/projects/hdparm/"
 SRC_URI="mirror://sourceforge/hdparm/${P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="BSD GPL-2" # GPL-2 only
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-linux ~x86-linux"
 IUSE=""
