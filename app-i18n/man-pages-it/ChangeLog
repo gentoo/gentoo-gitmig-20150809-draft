@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/man-pages-it
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-it/ChangeLog,v 1.13 2010/02/21 15:43:25 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-it/ChangeLog,v 1.14 2012/09/29 14:00:44 ulm Exp $
+
+  29 Sep 2012; Ulrich Müller <ulm@gentoo.org> man-pages-it-2.65.ebuild,
+  man-pages-it-2.80.ebuild:
+  Specify LICENSE more precisely: "as-is" is really "man-pages", GPL and FDL
+  are the "or later" variant.
 
   21 Feb 2010; Ulrich Mueller <ulm@gentoo.org> man-pages-it-2.65.ebuild,
   man-pages-it-2.80.ebuild:
