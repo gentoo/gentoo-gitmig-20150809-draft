@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.107 2012/09/28 22:05:15 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.108 2012/09/29 03:15:54 heroxbd Exp $
 
 EAPI=4
 
@@ -101,8 +101,8 @@ set_config_yes_no() {
 }
 
 src_install() {
-	make_args
-	emake ${MAKE_ARGS} DESTDIR="${ED}" install
+	[[ -z "${MAKE_ARGS}" ]] && make_args
+	emake ${MAKE_ARGS} DESTDIR="${D}" install
 
 	# move the shared libs back to /usr so ldscript can install
 	# more of a minimal set of files
@@ -212,7 +212,7 @@ pkg_preinst() {
 		rm -f "${EROOT}"/etc/init.d/clock
 	fi
 	if [[ -L ${EROOT}/etc/runlevels/boot/clock ]] ; then
-		 rm -f "${EROOT}"/etc/runlevels/boot/clock
+		rm -f "${EROOT}"/etc/runlevels/boot/clock
 		ln -snf /etc/init.d/${clock} "${EROOT}"/etc/runlevels/boot/${clock}
 	fi
 	if [[ -L ${EROOT}${LIBDIR}/rc/init.d/started/clock ]] ; then

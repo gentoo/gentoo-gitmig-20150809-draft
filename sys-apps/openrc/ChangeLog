@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.229 2012/09/28 22:05:15 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.230 2012/09/29 03:15:54 heroxbd Exp $
+
+  29 Sep 2012; Benda Xu <heroxbd@gentoo.org> openrc-9999.ebuild:
+  make_args should be called only once; ED -> D in src_install to avoid double
+  prefix. close 415899
 
   28 Sep 2012; William Hubbs <williamh@gentoo.org> openrc-9999.ebuild:
   fix typo
