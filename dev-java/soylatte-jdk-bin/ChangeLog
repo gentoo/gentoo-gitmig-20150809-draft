@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/soylatte-jdk-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/soylatte-jdk-bin/ChangeLog,v 1.1 2012/09/29 11:08:58 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/soylatte-jdk-bin/ChangeLog,v 1.2 2012/09/29 17:01:47 grobian Exp $
+
+  29 Sep 2012; Fabian Groffen <grobian@gentoo.org>
+  soylatte-jdk-bin-1.0.3.ebuild:
+  Fix thinkos that triggered invalid install_names when installing on x64-macos
 
 *soylatte-jdk-bin-1.0.3 (29 Sep 2012)
 

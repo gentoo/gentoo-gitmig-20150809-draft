@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/soylatte-jdk-bin/soylatte-jdk-bin-1.0.3.ebuild,v 1.1 2012/09/29 11:08:58 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/soylatte-jdk-bin/soylatte-jdk-bin-1.0.3.ebuild,v 1.2 2012/09/29 17:01:47 grobian Exp $
 
 EAPI="3"
 
@@ -30,7 +30,9 @@ S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	# fix install_names
-	local original_root=/data/Users/landonf/Documents/Code/Java/javasrc_1_6_jrl_darwin_stable/control/build/bsd-i586
+	local arch=i586
+	use x64-macos && arch=amd64
+	local original_root=/data/Users/landonf/Documents/Code/Java/javasrc_1_6_jrl_darwin_stable/control/build/bsd-${arch}
 	local original_demo=${original_root}/demo
 	local original_lib=${original_root}/lib
 	for dir in demo jre ; do
@@ -53,10 +55,10 @@ src_prepare() {
 							${dynamic_lib}
 					;;
 					libjvm.dylib)
-						# default to client JVM
+						# 64-bits binary has no client, so default to server JVM
 						install_name_tool -change \
 							${linked_against} \
-							"${EPREFIX}"/opt/${P}/jre/lib/$(use x86-macos && echo i386 || echo amd64)/client/libjvm.dylib \
+							"${EPREFIX}"/opt/${P}/jre/lib/$(use x86-macos && echo i386/client || echo amd64/server)/libjvm.dylib \
 							${dynamic_lib}
 					;;
 					*/libodbc*.dylib)
