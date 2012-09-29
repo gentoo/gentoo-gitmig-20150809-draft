@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ftp-0.17-r7.ebuild,v 1.9 2009/09/26 09:13:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ftp-0.17-r7.ebuild,v 1.10 2012/09/29 16:41:57 ulm Exp $
 
 PATCHLEVEL=1
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.hcs.harvard.edu/~dholland/computers/netkit.html"
 SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${MY_P}.tar.gz
 	mirror://gentoo/${MY_P}-patches-${PATCHLEVEL}.tar.bz2"
 
-LICENSE="as-is"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="ssl ipv6"

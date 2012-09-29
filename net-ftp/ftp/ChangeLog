@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/ftp
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ChangeLog,v 1.37 2011/09/17 07:27:19 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ChangeLog,v 1.38 2012/09/29 16:41:57 ulm Exp $
+
+  29 Sep 2012; Ulrich Müller <ulm@gentoo.org> ftp-0.17-r7.ebuild,
+  ftp-0.17.23.0.2.1.ebuild:
+  Fix LICENSE, all source files are BSD licensed with UCB copyright.
 
 *ftp-0.17.23.0.2.1 (17 Sep 2011)
 
