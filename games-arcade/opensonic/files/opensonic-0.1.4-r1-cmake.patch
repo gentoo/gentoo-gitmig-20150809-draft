@@ -6,6 +6,7 @@ use allegro-config
 remove "-O2" from pre-defined CFLAGS
 make paths modifiable
 add rules for icon, desktop-file and game-wrapper
+fix compilation for as-needed
 
 --- CMakeLists.txt
 +++ CMakeLists.txt
@@ -39,16 +40,19 @@ add rules for icon, desktop-file and game-wrapper
      IF(NOT ALLEGRO_UNIX_VERSION STREQUAL ALLEGRO_RECOMMENDED_VERSION)
        MESSAGE("\nWARNING: your Allegro version is ${ALLEGRO_UNIX_VERSION}. The recommended version is ${ALLEGRO_RECOMMENDED_VERSION}.\n         ${GAME_NAME} may not compile properly!.\n")
      ENDIF(NOT ALLEGRO_UNIX_VERSION STREQUAL ALLEGRO_RECOMMENDED_VERSION)
-@@ -251,7 +250,7 @@
+@@ -249,9 +248,8 @@
+ IF(UNIX)
+   SET(GAME_SRCS ${GAME_SRCS} src/misc/iconlin.c)
    ADD_EXECUTABLE(${GAME_UNIXNAME} ${GAME_SRCS})
-   SET_TARGET_PROPERTIES(${GAME_UNIXNAME} PROPERTIES LINK_FLAGS ${ALLEGRO_UNIX_LIBS})
-   TARGET_LINK_LIBRARIES(${GAME_UNIXNAME} m logg vorbisfile vorbis ogg jpgalleg z png loadpng)
+-  SET_TARGET_PROPERTIES(${GAME_UNIXNAME} PROPERTIES LINK_FLAGS ${ALLEGRO_UNIX_LIBS})
+-  TARGET_LINK_LIBRARIES(${GAME_UNIXNAME} m logg vorbisfile vorbis ogg jpgalleg z png loadpng)
 -  SET_TARGET_PROPERTIES(${GAME_UNIXNAME} PROPERTIES COMPILE_FLAGS "-Wall -O2 ${CFLAGS} ${CFLAGS_EXTRA}")
++  TARGET_LINK_LIBRARIES(${GAME_UNIXNAME} m logg vorbisfile vorbis ogg jpgalleg z png loadpng ${ALLEGRO_UNIX_LIBS})
 +  SET_TARGET_PROPERTIES(${GAME_UNIXNAME} PROPERTIES COMPILE_FLAGS "-Wall")
  ENDIF(UNIX)
  
  
-@@ -407,19 +406,43 @@
+@@ -407,19 +405,43 @@
  SET_TARGET_PROPERTIES(${GAME_UNIXNAME} PROPERTIES PROJECT_NAME "${GAME_NAME}")
  
  
