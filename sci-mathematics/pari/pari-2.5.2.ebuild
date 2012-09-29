@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.5.2.ebuild,v 1.1 2012/08/09 20:25:18 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.5.2.ebuild,v 1.2 2012/09/29 14:28:59 grobian Exp $
 
 EAPI=4
 
@@ -62,7 +62,8 @@ src_prepare() {
 		-e 's:"acroread":"xdg-open":' \
 		doc/gphelp.in || die "Failed to fix doc dir"
 
-	sed -i "s:/usr:${EPREFIX}/usr:g" config/get_X11 \
+	sed -i "s:/\(usr\|lib64\):${EPREFIX}/\1:g" \
+		config/get_{Qt,X11,include_path,libpth} \
 		|| die "Failed to fix get_X11"
 
 	# usersch3.tex is generated
