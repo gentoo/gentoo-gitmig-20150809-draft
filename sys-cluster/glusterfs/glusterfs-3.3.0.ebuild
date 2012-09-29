@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-3.3.0.ebuild,v 1.1 2012/09/26 06:48:39 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-3.3.0.ebuild,v 1.2 2012/09/29 15:38:34 xarthisius Exp $
 
 EAPI=4
 
@@ -116,14 +116,12 @@ pkg_postinst() {
 	elog "You can now treat glusterfsd2 like any other service"
 	elog
 	ewarn "You need to use a ntp client to keep the clocks synchronized across all"
-	ewarn "of your servers.  Setup a NTP synchronizing service before attempting to"
+	ewarn "of your servers. Setup a NTP synchronizing service before attempting to"
 	ewarn "run GlusterFS."
 
-	if [[ ${REPLACING_VERSIONS} < 3.2 ]]; then
-		elog
-		elog "You are upgrading from a previous version of ${PN}, please read:"
-		elog "http://vbellur.wordpress.com/2012/05/31/upgrading-to-glusterfs-3-3/"
-	fi
+    elog
+	elog "You are upgrading from a previous version of ${PN}, please read:"
+	elog "http://vbellur.wordpress.com/2012/05/31/upgrading-to-glusterfs-3-3/"
 
 	use emacs && elisp-site-regen
 }
