@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.106 2012/09/29 15:17:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.107 2012/09/29 15:34:17 aballier Exp $
 
 EAPI="4"
 
@@ -30,8 +30,8 @@ if [ "${PV#9999}" = "${PV}" ] ; then
 fi
 IUSE="
 	aac aacplus alsa amr avresample bindist bluray +bzip2 cdio celt
-	cpudetection debug doc +encode faac flite fontconfig frei0r gnutls gsm
-	+hardcoded-tables iec61883 ieee1394 jack jpeg2k libass libcaca libv4l
+	cpudetection debug doc +encode faac fdk flite fontconfig frei0r gnutls
+	gsm +hardcoded-tables iec61883 ieee1394 jack jpeg2k libass libcaca libv4l
 	modplug mp3	network openal openssl opus oss pic pulseaudio rtmp schroedinger
 	sdl speex static-libs test theora threads truetype twolame v4l vaapi vdpau
 	vorbis vpx X x264 xvid +zlib
@@ -63,6 +63,7 @@ RDEPEND="
 		aacplus? ( media-libs/libaacplus )
 		amr? ( media-libs/vo-amrwbenc )
 		faac? ( media-libs/faac )
+		fdk? ( media-libs/fdk-aac )
 		mp3? ( >=media-sound/lame-3.98.3 )
 		theora? ( >=media-libs/libtheora-1.1.1[encode] media-libs/libogg )
 		twolame? ( media-sound/twolame )
@@ -157,6 +158,7 @@ src_configure() {
 		done
 		use aacplus && myconf="${myconf} --enable-libaacplus --enable-nonfree"
 		use faac && myconf="${myconf} --enable-libfaac --enable-nonfree"
+		use fdk && myconf="${myconf} --enable-libfdk-aac --enable-nonfree"
 	else
 		myconf="${myconf} --disable-encoders"
 	fi
