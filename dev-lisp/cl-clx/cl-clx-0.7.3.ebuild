@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-clx/cl-clx-0.7.3.ebuild,v 1.4 2007/08/16 09:56:17 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-clx/cl-clx-0.7.3.ebuild,v 1.5 2012/09/29 16:56:32 ulm Exp $
 
 inherit common-lisp eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="CLX is the Common Lisp interface to the X11 protocol primarily for 
 HOMEPAGE="http://ftp.linux.org.uk/pub/lisp/sbcl/ http://www.cliki.net/CLX"
 SRC_URI="http://ftp.linux.org.uk/pub/lisp/sbcl/clx_${PV}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="HPND"
 SLOT="0"
 KEYWORDS="amd64 ppc ~sparc ~x86"
 IUSE=""
