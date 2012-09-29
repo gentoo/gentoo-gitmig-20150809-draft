@@ -1,6 +1,12 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.360 2012/09/09 10:23:33 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.361 2012/09/29 11:15:44 grobian Exp $
+
+  29 Sep 2012; Fabian Groffen <grobian@gentoo.org>
+  +darwin/macos/10.4/x86/package.unmask, +darwin/macos/10.5/x64/package.unmask,
+  +darwin/macos/10.5/x86/package.unmask, darwin/macos/package.mask:
+  Unmask soylatte-jdk-bin on 10.4/x86, 10.5/x86 and 10.5/x64, because it is the
+  only Java6 provider there
 
   09 Sep 2012; Fabian Groffen <grobian@gentoo.org>
   +sunos/solaris/make.defaults, darwin/macos/make.defaults:
