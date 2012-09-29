@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.108 2012/09/29 03:15:54 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.109 2012/09/29 20:38:12 williamh Exp $
 
 EAPI=4
 
@@ -35,7 +35,20 @@ RDEPEND="virtual/init
 DEPEND="${RDEPEND}
 	virtual/os-headers"
 
-make_args() {
+src_prepare() {
+	sed -i 's:0444:0644:' mk/sys.mk || die
+	sed -i "/^DIR/s:/openrc:/${PF}:" doc/Makefile || die #241342
+
+	if [[ ${PV} == "9999" ]] ; then
+		local ver="git-${EGIT_VERSION:0:6}"
+		sed -i "/^GITVER[[:space:]]*=/s:=.*:=${ver}:" mk/git.mk || die
+	fi
+
+	# Allow user patches to be applied without modifying the ebuild
+	epatch_user
+}
+
+src_compile() {
 	unset LIBDIR #266688
 
 	MAKE_ARGS="${MAKE_ARGS}
@@ -59,29 +72,9 @@ make_args() {
 	fi
 	use newnet || MAKE_ARGS="${MAKE_ARGS} MKNET=oldnet"
 	use prefix && MAKE_ARGS="${MAKE_ARGS} MKPREFIX=yes PREFIX=${EPREFIX}"
-}
-
-pkg_setup() {
 	export DEBUG=$(usev debug)
 	export MKPAM=$(usev pam)
 	export MKTERMCAP=$(usev ncurses)
-}
-
-src_prepare() {
-	sed -i 's:0444:0644:' mk/sys.mk || die
-	sed -i "/^DIR/s:/openrc:/${PF}:" doc/Makefile || die #241342
-
-	if [[ ${PV} == "9999" ]] ; then
-		local ver="git-${EGIT_VERSION:0:6}"
-		sed -i "/^GITVER[[:space:]]*=/s:=.*:=${ver}:" mk/git.mk || die
-	fi
-
-	# Allow user patches to be applied without modifying the ebuild
-	epatch_user
-}
-
-src_compile() {
-	make_args
 
 	tc-export CC AR RANLIB
 	emake ${MAKE_ARGS}
@@ -101,7 +94,6 @@ set_config_yes_no() {
 }
 
 src_install() {
-	[[ -z "${MAKE_ARGS}" ]] && make_args
 	emake ${MAKE_ARGS} DESTDIR="${D}" install
 
 	# move the shared libs back to /usr so ldscript can install

@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.230 2012/09/29 03:15:54 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.231 2012/09/29 20:38:12 williamh Exp $
+
+  29 Sep 2012; William Hubbs <williamh@gentoo.org> openrc-9999.ebuild:
+  The code in pkg_setup and make_args is only run once at the start of
+  src_compile, so we can move it into that function, thanks to Zac Medico for
+  the input.
 
   29 Sep 2012; Benda Xu <heroxbd@gentoo.org> openrc-9999.ebuild:
   make_args should be called only once; ED -> D in src_install to avoid double
