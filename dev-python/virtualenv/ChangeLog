@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/virtualenv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.77 2012/09/29 23:11:31 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.78 2012/09/29 23:12:29 radhermit Exp $
+
+  29 Sep 2012; Tim Harder <radhermit@gentoo.org> -virtualenv-1.6.4.ebuild,
+  -virtualenv-1.7.ebuild, -virtualenv-1.7.1.1.ebuild:
+  Remove old.
 
 *virtualenv-1.8.2 (29 Sep 2012)
 
