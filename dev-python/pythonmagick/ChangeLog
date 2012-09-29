@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pythonmagick
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.38 2012/05/04 15:12:12 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.39 2012/09/29 22:42:58 radhermit Exp $
+
+*pythonmagick-0.9.8 (29 Sep 2012)
+
+  29 Sep 2012; Tim Harder <radhermit@gentoo.org> +pythonmagick-0.9.8.ebuild:
+  Version bump. Fix build with >=boost-1.50.
 
   04 May 2012; Patrick Lauer <patrick@gentoo.org> pythonmagick-0.9.7-r1.ebuild,
   pythonmagick-0.9.7.ebuild:
