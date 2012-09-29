@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/paver
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paver/ChangeLog,v 1.15 2012/04/05 14:11:21 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paver/ChangeLog,v 1.16 2012/09/29 23:59:28 radhermit Exp $
+
+*paver-1.1.1 (29 Sep 2012)
+
+  29 Sep 2012; Tim Harder <radhermit@gentoo.org> +paver-1.1.1.ebuild:
+  Version bump. Add doc use flag.
 
   05 Apr 2012; Davide Pesavento <pesa@gentoo.org> metadata.xml:
   Remove qt herd from metadata.
