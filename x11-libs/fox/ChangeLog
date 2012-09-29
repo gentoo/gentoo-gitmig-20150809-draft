@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.158 2012/07/06 19:54:20 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.159 2012/09/29 14:03:04 grobian Exp $
+
+  29 Sep 2012; Fabian Groffen <grobian@gentoo.org> fox-1.7.33.ebuild:
+  Fix for Prefix, partial fix for bug #433531
 
   06 Jul 2012; Matti Bickel <mabi@gentoo.org> fox-1.7.33.ebuild:
   still need to call fox_src_prepare here
