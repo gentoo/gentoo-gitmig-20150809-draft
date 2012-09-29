@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.420 2012/09/28 15:18:04 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.421 2012/09/29 19:38:56 hd_brummy Exp $
+
+  29 Sep 2012; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-plugin-2.eclass:
+  added helper function to remove i18n.h includes, if media-plugins/vdr-* are
+  still use the obsoleted i18n handling and unsupported to gettext handling
 
   28 Sep 2012; Ulrich Müller <ulm@gentoo.org> eutils.eclass:
   Test for the EAPI explicitly, because it isn't guaranteed that package

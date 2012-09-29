@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin-2.eclass,v 1.12 2012/09/27 16:35:42 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin-2.eclass,v 1.13 2012/09/29 19:38:56 hd_brummy Exp $
 
 # @ECLASS: vdr-plugin-2.eclass
 # @MAINTAINER:
@@ -315,6 +315,19 @@ vdr_i18n() {
 		dev_check "obsolete tI18nPhrase not found, fine..."
 		dev_check "please review, may be in subdir... \n"
 	fi
+}
+
+remove_i18n_include() {
+	# remove uneeded i18.n includes
+	# call 'remove_i18n_include bla foo'
+
+	local f
+	for f; do
+		sed -i "${f}" \
+		-e "s:^#include[[:space:]]*\"i18n.h\"://:"
+	done
+
+	dev_check "removed i18n.h for ${@}"
 }
 # end new vdr-plugin-2.eclass content
 
