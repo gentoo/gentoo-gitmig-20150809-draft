@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libtasn1
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.170 2012/09/26 23:16:40 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.171 2012/09/29 12:08:11 blueness Exp $
+
+  29 Sep 2012; Anthony G. Basile <blueness@gentoo.org> libtasn1-2.13.ebuild:
+  stable ppc ppc64, bug #436366
 
   26 Sep 2012; Tim Harder <radhermit@gentoo.org> libtasn1-2.12.ebuild,
   libtasn1-2.13.ebuild:
@@ -618,4 +621,3 @@
   02 Sep 2003; Alastair Tse <liquidx@gentoo.org> libtasn1-0.2.5.ebuild,
   metadata.xml:
   initial ebuild. dependency for gnutls
-
