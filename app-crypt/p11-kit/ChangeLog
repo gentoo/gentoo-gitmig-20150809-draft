@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/p11-kit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/ChangeLog,v 1.36 2012/09/18 17:44:31 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/ChangeLog,v 1.37 2012/09/29 17:01:30 armin76 Exp $
+
+  29 Sep 2012; Raúl Porcel <armin76@gentoo.org> p11-kit-0.13.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #434288
 
   18 Sep 2012; Johannes Huber <johu@gentoo.org> p11-kit-0.13.ebuild:
   Stable for x86, wrt bug #434288
