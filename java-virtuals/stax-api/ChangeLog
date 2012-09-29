@@ -1,6 +1,9 @@
 # ChangeLog for java-virtuals/stax-api
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/stax-api/ChangeLog,v 1.17 2011/10/22 13:51:16 caster Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/stax-api/ChangeLog,v 1.18 2012/09/29 18:07:35 grobian Exp $
+
+  29 Sep 2012; Fabian Groffen <grobian@gentoo.org> stax-api-1-r4.ebuild:
+  Marked ~x64-macos
 
 *stax-api-1-r4 (22 Oct 2011)
 
@@ -68,4 +71,3 @@
   05 Oct 2008; Serkan Kaba <serkan@gentoo.org> +metadata.xml,
   +stax-api-1.ebuild:
   Add java-virtuals/stax-api. Fixes bug #224677.
-
