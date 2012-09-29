@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/man-pages-fr
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-fr/ChangeLog,v 1.7 2011/08/26 20:45:34 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-fr/ChangeLog,v 1.8 2012/09/29 10:53:42 ulm Exp $
+
+  29 Sep 2012; Ulrich Müller <ulm@gentoo.org> man-pages-fr-2.39.0.ebuild:
+  Specify LICENSE more precisely.
 
   26 Aug 2011; Fabian Groffen <grobian@gentoo.org> man-pages-fr-2.39.0.ebuild:
   Marked ~x86-linux, bug #375233
