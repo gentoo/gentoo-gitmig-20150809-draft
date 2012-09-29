@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/cantarell/cantarell-0.0.10.ebuild,v 1.1 2012/09/14 18:49:35 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/cantarell/cantarell-0.0.10.1.ebuild,v 1.1 2012/09/29 09:37:14 pacho Exp $
 
 EAPI="4"
 GNOME_ORG_MODULE="${PN}-fonts"
