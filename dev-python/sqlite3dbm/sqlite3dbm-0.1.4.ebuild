@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlite3dbm/sqlite3dbm-0.1.4.ebuild,v 1.3 2012/08/06 08:22:43 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlite3dbm/sqlite3dbm-0.1.4.ebuild,v 1.4 2012/09/29 06:54:25 heroxbd Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ SRC_URI="https://github.com/Yelp/${PN}/tarball/v${PV} -> ${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc test"
 
 RDEPEND=""
