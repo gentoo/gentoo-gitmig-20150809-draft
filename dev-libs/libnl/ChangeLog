@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libnl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.98 2012/09/04 15:42:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.99 2012/09/29 13:33:20 blueness Exp $
+
+  29 Sep 2012; Anthony G. Basile <blueness@gentoo.org> libnl-3.2.11.ebuild:
+  stable ppc ppc64, bug #430430
 
 *libnl-3.2.13 (04 Sep 2012)
 
@@ -396,4 +399,3 @@
   10 Sep 2005; Marcelo Goes <vanquirius@gentoo.org>
   +files/libnl-0.5.0-include.diff, +metadata.xml, +libnl-0.5.0.ebuild:
   Initial commit, separating this package from net-analyzer/bmon.
-
