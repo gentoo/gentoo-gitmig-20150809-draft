@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Deep
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Deep/ChangeLog,v 1.68 2012/09/18 15:34:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Deep/ChangeLog,v 1.69 2012/09/29 16:59:23 armin76 Exp $
+
+  29 Sep 2012; Raúl Porcel <armin76@gentoo.org> Test-Deep-0.110.0.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #429010
 
   18 Sep 2012; Jeroen Roovers <jer@gentoo.org> Test-Deep-0.110.0.ebuild:
   Stable for HPPA (bug #429010).
