@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.40 2011/08/22 04:46:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.41 2012/09/29 20:48:58 chithanh Exp $
 
 # @ECLASS: virtualx.eclass
 # @MAINTAINER:
@@ -81,7 +81,7 @@ virtualmake() {
 	local OLD_SANDBOX_ON="${SANDBOX_ON}"
 	local XVFB=$(type -p Xvfb)
 	local XHOST=$(type -p xhost)
-	local xvfbargs="-screen 0 800x600x24"
+	local xvfbargs="-screen 0 1280x1024x24"
 
 	# backcompat for maketype
 	if [[ -n ${maketype} ]]; then
