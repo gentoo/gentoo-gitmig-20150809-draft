@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/ee
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ee/ChangeLog,v 1.7 2012/09/17 21:05:38 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ee/ChangeLog,v 1.8 2012/09/29 16:48:39 armin76 Exp $
+
+  29 Sep 2012; Raúl Porcel <armin76@gentoo.org> ee-1.4.6.ebuild:
+  Move to ~ia64/~sparc
 
   17 Sep 2012; Anthony G. Basile <blueness@gentoo.org> ee-1.5.2.ebuild:
   Stable ppc ppc64, bug #435236
