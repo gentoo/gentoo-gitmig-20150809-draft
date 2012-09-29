@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/suacomp/suacomp-0.6.14.ebuild,v 1.1 2011/09/13 07:16:53 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/suacomp/suacomp-0.6.14.ebuild,v 1.2 2012/09/29 13:02:23 grobian Exp $
 
 EAPI=3
 
-inherit toolchain-funcs flag-o-matic
+inherit toolchain-funcs flag-o-matic eutils
 
 DESCRIPTION="library wrapping the interix lib-c to make it less buggy."
 HOMEPAGE="http://suacomp.sf.net"
@@ -39,6 +39,10 @@ pkg_setup() {
 	if use debug; then
 		append-flags -D_DEBUG -D_DEBUG_TRACE
 	fi
+}
+
+src_prepare() {
+	[[ ${CHOST} == *-interix6* ]] && epatch "${FILESDIR}"/${P}-strtoll.patch
 }
 
 src_compile() {
