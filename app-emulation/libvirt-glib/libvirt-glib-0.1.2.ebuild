@@ -1,12 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt-glib/libvirt-glib-0.0.9.ebuild,v 1.1 2012/06/25 15:57:40 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt-glib/libvirt-glib-0.1.2.ebuild,v 1.1 2012/09/29 13:39:02 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
+VALA_MIN_API_VERSION="0.14"
 
-inherit gnome2 python
+inherit gnome2 python vala
 
 DESCRIPTION="GLib and GObject mappings for libvirt"
 HOMEPAGE="http://libvirt.org/git/?p=libvirt-glib.git"
@@ -26,12 +27,15 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.10 )
-	vala? ( dev-lang/vala:0.14 )"
+	vala? ( $(vala_depend) )"
+
+src_prepare() {
+	use vala && vala_src_prepare
+}
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS README"
 	G2CONF="--disable-test-coverage
-		VAPIGEN=$(type -P vapigen-0.14)
 		$(use_enable introspection)
 		$(use_enable vala)
 		$(use_with python)"
