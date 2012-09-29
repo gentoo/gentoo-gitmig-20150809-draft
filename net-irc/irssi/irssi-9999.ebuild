@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-9999.ebuild,v 1.4 2012/05/03 06:27:14 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-9999.ebuild,v 1.5 2012/09/29 11:04:12 ago Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ KEYWORDS=""
 IUSE="ipv6 +perl ssl socks5"
 
 RDEPEND="sys-libs/ncurses
-	>=dev-libs/glib-2.2.1
+	>=dev-libs/glib-2.6.0
 	ssl? ( dev-libs/openssl )
 	perl? ( dev-lang/perl )
 	socks5? ( >=net-proxy/dante-1.1.18 )"
