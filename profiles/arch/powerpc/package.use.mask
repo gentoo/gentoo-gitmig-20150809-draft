@@ -1,6 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.139 2012/09/27 09:57:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.140 2012/09/29 15:28:50 blueness Exp $
+
+# Anthony G. Basile <blueness@gentoo.org> (29 Sep 2012)
+# dev-cpp/tbb does not build on ppc ppc64 so mask any
+# dependencies on it
+media-libs/openimageio tbb
 
 # Samuli Suominen <ssuominen@gentoo.org> (27 Sep 2012)
 # I don't want to open this can of worms yet. Feel free
