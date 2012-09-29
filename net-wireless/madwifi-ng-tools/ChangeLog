@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/madwifi-ng-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng-tools/ChangeLog,v 1.55 2012/09/23 08:30:45 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng-tools/ChangeLog,v 1.56 2012/09/29 04:07:44 blueness Exp $
+
+  29 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
+  madwifi-ng-tools-0.9.4.4180.20120502.ebuild:
+  stable ppc, bug #429192
 
   23 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   madwifi-ng-tools-0.9.4.4180.20120502.ebuild:
@@ -397,4 +401,3 @@
   06 Sep 2004; <solar@gentoo.org> +metadata.xml,
   +madwifi-tools-0.1_pre20040906.ebuild:
   initial commit of the madwifi-tools (broken out from the -driver) to the tree.
-
