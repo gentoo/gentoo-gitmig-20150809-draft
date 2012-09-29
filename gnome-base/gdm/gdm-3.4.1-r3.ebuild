@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.4.1-r2.ebuild,v 1.1 2012/09/27 08:54:42 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.4.1-r3.ebuild,v 1.1 2012/09/29 06:05:16 tetromino Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -201,6 +201,9 @@ src_install() {
 	# install XDG_DATA_DIRS gdm changes
 	echo 'XDG_DATA_DIRS="/usr/share/gdm"' > 99xdg-gdm
 	doenvd 99xdg-gdm
+
+	# pam.d/gdm is no longer needed, and can block pam-1.1.6, #435042
+	rm -v "${ED}etc/pam.d/gdm" || die
 
 	cd "${WORKDIR}/${G_P}"
 	local LDAP
