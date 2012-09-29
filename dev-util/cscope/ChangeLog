@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cscope
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.137 2012/09/20 13:37:15 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.138 2012/09/29 18:45:43 armin76 Exp $
+
+  29 Sep 2012; Raúl Porcel <armin76@gentoo.org> cscope-15.8a.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #434292
 
   20 Sep 2012; Johannes Huber <johu@gentoo.org> cscope-15.8a.ebuild:
   Stable for x86, wrt bug #434292
