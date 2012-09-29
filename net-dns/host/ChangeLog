@@ -1,6 +1,6 @@
 # ChangeLog for net-dns/host
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/host/ChangeLog,v 1.18 2012/09/24 18:57:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/host/ChangeLog,v 1.19 2012/09/29 16:37:36 jer Exp $
 
   24 Sep 2012; Raúl Porcel <armin76@gentoo.org> host-20070128-r1.ebuild:
   alpha/sparc stable wrt #434036
@@ -101,7 +101,7 @@
   06 Jul 2002; phoen][x <phoenix@gentoo.org> host-991529.ebuild :
   Added KEYWORDS, LICENSE, SLOT.
 
+*host-991529 (11 May 2002)
+
   11 May 2002; G Shapovalov <george@gentoo.org> host-991529.ebuild :
   initial release
-
-*host-991529 (11 May 2002)
