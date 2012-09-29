@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/spacenavd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/spacenavd/ChangeLog,v 1.5 2012/03/22 14:04:19 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/spacenavd/ChangeLog,v 1.6 2012/09/29 14:12:20 blueness Exp $
+
+  29 Sep 2012; Anthony G. Basile <blueness@gentoo.org> spacenavd-0.5-r2.ebuild:
+  keyword ~ppc64, bug #436566
 
   22 Mar 2012; Sebastian Pipping <sping@gentoo.org> spacenavd-0.5-r2.ebuild,
   +files/spacenavd-0.5-no-x11.patch:
@@ -27,4 +30,3 @@
   +files/spnavd, +metadata.xml:
   New package, needed for libspnav (bug #390427), co-operation with Anthoine
   Bourgeois
-
