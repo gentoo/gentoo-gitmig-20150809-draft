@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/colorsvn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/colorsvn/ChangeLog,v 1.8 2012/09/29 15:06:47 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/colorsvn/ChangeLog,v 1.9 2012/09/29 15:07:47 grobian Exp $
+
+  29 Sep 2012; Fabian Groffen <grobian@gentoo.org> colorsvn-0.3.2-r2.ebuild:
+  Marked ~x{86,64}-macos
 
   29 Sep 2012; Fabian Groffen <grobian@gentoo.org> colorsvn-0.3.2-r2.ebuild:
   Fix (sys)confdir location for Prefix, bug #435434
