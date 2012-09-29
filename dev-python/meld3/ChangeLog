@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/meld3
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/meld3/ChangeLog,v 1.7 2012/09/29 21:59:49 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/meld3/ChangeLog,v 1.8 2012/09/29 22:06:01 radhermit Exp $
+
+  29 Sep 2012; Tim Harder <radhermit@gentoo.org> meld3-0.6.7.ebuild,
+  meld3-0.6.8.ebuild, meld3-0.6.9.ebuild:
+  Add github homepage.
 
 *meld3-0.6.9 (29 Sep 2012)
 
