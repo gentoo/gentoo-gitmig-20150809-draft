@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.468 2012/09/19 04:54:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.469 2012/09/29 16:06:32 armin76 Exp $
+
+  29 Sep 2012; Raúl Porcel <armin76@gentoo.org> binutils-2.22-r1.ebuild:
+  alpha/ia64/sh/sparc stable wrt #414865
 
 *binutils-2.23.51.0.3 (19 Sep 2012)
 
