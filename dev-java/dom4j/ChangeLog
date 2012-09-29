@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/dom4j
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/ChangeLog,v 1.59 2012/07/14 18:04:47 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/ChangeLog,v 1.60 2012/09/29 18:10:00 grobian Exp $
+
+  29 Sep 2012; Fabian Groffen <grobian@gentoo.org> dom4j-1.6.1-r4.ebuild:
+  Marked ~x64-macos
 
   14 Jul 2012; Johannes Huber <johu@gentoo.org> dom4j-1.6.1-r4.ebuild:
   Stable for x86, wrt bug #419767
@@ -210,4 +213,3 @@
   31 Oct 2002; Karl Trygve Kalleberg <karltk@gentoo.org> dom4j-1.3.ebuild files/digest-dom4j :
   Initial import.  Ebuild submitted by Adrian Almenar
   <aalmenar@conectium.com>.
-
