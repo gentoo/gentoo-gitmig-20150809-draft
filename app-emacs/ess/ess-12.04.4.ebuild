@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ess-12.04.4.ebuild,v 1.5 2012/09/29 03:36:43 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ess-12.04.4.ebuild,v 1.6 2012/09/29 09:39:33 ulm Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ DESCRIPTION="Emacs Speaks Statistics"
 HOMEPAGE="http://ess.r-project.org/"
 SRC_URI="http://ess.r-project.org/downloads/ess/${MY_P}.tgz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+ GPL-3+ Texinfo-manual"
 SLOT="0"
 KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE=""

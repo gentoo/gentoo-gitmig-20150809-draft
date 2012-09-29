@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/ess
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ChangeLog,v 1.86 2012/09/29 03:36:43 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ChangeLog,v 1.87 2012/09/29 09:39:33 ulm Exp $
+
+*ess-12.09 (29 Sep 2012)
+
+  29 Sep 2012; Ulrich Müller <ulm@gentoo.org> -ess-5.12.ebuild,
+  ess-5.14.ebuild, ess-12.04.4.ebuild, +ess-12.09.ebuild:
+  Version bump. Specify LICENSE more precisely. Remove old.
 
   29 Sep 2012; Anthony G. Basile <blueness@gentoo.org> ess-12.04.4.ebuild:
   stable ppc, bug #428864
