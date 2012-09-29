@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/virtualgl/virtualgl-2.3.1.ebuild,v 1.1 2012/07/26 18:46:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/virtualgl/virtualgl-2.3.1-r1.ebuild,v 1.1 2012/09/29 09:33:10 pacho Exp $
 
 EAPI="4"
 
@@ -108,8 +108,8 @@ src_install() {
 	dodir /var/lib/VirtualGL
 	fowners root:video /var/lib/VirtualGL
 	fperms 0750 /var/lib/VirtualGL
-	newinitd "${FILESDIR}/vgl.initd" vgl
-	newconfd "${FILESDIR}/vgl.confd" vgl
+	newinitd "${FILESDIR}/vgl.initd-r1" vgl
+	newconfd "${FILESDIR}/vgl.confd-r1" vgl
 
 	# Rename glxinfo to vglxinfo to avoid conflict with x11-apps/mesa-progs
 	mv "${D}"/usr/bin/{,v}glxinfo || die

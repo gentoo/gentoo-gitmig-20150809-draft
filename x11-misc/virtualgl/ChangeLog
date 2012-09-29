@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/virtualgl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/virtualgl/ChangeLog,v 1.5 2012/09/14 20:26:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/virtualgl/ChangeLog,v 1.6 2012/09/29 09:33:10 pacho Exp $
+
+*virtualgl-2.3.1-r1 (29 Sep 2012)
+
+  29 Sep 2012; Pacho Ramos <pacho@gentoo.org> +virtualgl-2.3.1-r1.ebuild,
+  -virtualgl-2.3.1.ebuild, files/vgl.initd-r1:
+  Really use updated conf.d and init.d files as looks like I forgot to
+  effectively commit them in the past and was using them only locally, bug
+  #436386 by Szymon Walczak, My Th and mva.
 
   14 Sep 2012; Pacho Ramos <pacho@gentoo.org> -virtualgl-2.3.ebuild:
   Drop old.
