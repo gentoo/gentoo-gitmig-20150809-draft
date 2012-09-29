@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-2.2.9.ebuild,v 1.7 2011/10/04 14:21:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-2.2.11.ebuild,v 1.1 2012/09/29 09:55:43 pacho Exp $
 
-EAPI="3"
+EAPI="4"
 
 inherit base eutils gnome.org flag-o-matic
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://libsigc.sourceforge.net/"
 
 LICENSE="LGPL-2.1"
 SLOT="2"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 s390 sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="doc static-libs test"
 
 DEPEND="sys-devel/m4"
@@ -38,19 +38,13 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed."
-	dodoc AUTHORS ChangeLog README NEWS TODO || die "dodoc failed"
+	emake DESTDIR="${D}" install
+	dodoc AUTHORS ChangeLog README NEWS TODO
+	use static-libs || find "${D}" -name '*.la' -exec rm -f {} +
 
 	if use doc ; then
-		dohtml -r docs/reference/html/* docs/images/* || die "dohtml failed"
+		dohtml -r docs/reference/html/* docs/images/*
 		insinto /usr/share/doc/${PF}
-		doins -r examples || die "doins failed"
+		doins -r examples
 	fi
-}
-
-pkg_postinst() {
-	ewarn "To allow parallel installation of sigc++-1.0, sigc++-1.2, and sigc++2.0"
-	ewarn "the header files are now installed in a version specific"
-	ewarn "subdirectory.  Be sure to unmerge any libsigc++ versions"
-	ewarn "< 1.0.4 that you may have previously installed."
 }
