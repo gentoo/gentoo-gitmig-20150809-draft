@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2012.1.15-r2.ebuild,v 1.1 2012/08/10 17:29:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2012.1.15-r2.ebuild,v 1.2 2012/09/30 00:24:25 zmedico Exp $
 
 EAPI=4
 inherit linux-info toolchain-funcs
@@ -65,7 +65,10 @@ src_install() {
 	use suid && fperms u+s /usr/bin/${MY_PN}
 
 	local udevdir=/lib/udev
-	has_version sys-fs/udev && udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
+	if has_version sys-fs/udev; then
+		udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
+		udevdir=${udevdir#${EPREFIX}}
+	fi
 	insinto "${udevdir}"/rules.d
 	doins "${FILESDIR}"/99-ntfs3g.rules
 

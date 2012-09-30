@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ntfs3g
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.136 2012/08/25 22:37:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.137 2012/09/30 00:24:25 zmedico Exp $
+
+  30 Sep 2012; Zac Medico <zmedico@gentoo.org> ntfs3g-2012.1.15-r2.ebuild:
+  Fix possible "double prefix" for udevdir.
 
   25 Aug 2012; Mike Frysinger <vapier@gentoo.org> ntfs3g-2012.1.15-r1.ebuild:
   Drop useless -vf args to mv #432632 by Joshua B. Kahlenberg.
