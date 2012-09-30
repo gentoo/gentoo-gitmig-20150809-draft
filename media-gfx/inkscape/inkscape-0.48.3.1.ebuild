@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.3.1.ebuild,v 1.13 2012/09/24 04:56:49 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.3.1.ebuild,v 1.14 2012/09/30 01:05:56 radhermit Exp $
 
 EAPI=4
 
@@ -78,7 +78,8 @@ src_prepare() {
 	gnome2_src_prepare
 	epatch "${FILESDIR}"/${PN}-0.48.0-spell.patch \
 		"${FILESDIR}"/${PN}-0.48.1-libpng15.patch \
-		"${FILESDIR}"/${PN}-0.48.2-libwpg.patch
+		"${FILESDIR}"/${PN}-0.48.2-libwpg.patch \
+		"${FILESDIR}"/${P}-desktop.patch
 
 	has_version ">=app-text/poppler-0.20.0" && epatch "${WORKDIR}"/${P}-poppler-0.20.patch
 
