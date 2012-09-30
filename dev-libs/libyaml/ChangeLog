@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libyaml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libyaml/ChangeLog,v 1.28 2012/07/27 12:36:56 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libyaml/ChangeLog,v 1.29 2012/09/30 18:28:32 armin76 Exp $
+
+  30 Sep 2012; Raúl Porcel <armin76@gentoo.org> libyaml-0.1.4.ebuild:
+  alpha/s390/sh/sparc stable wrt #421611
 
   27 Jul 2012; Fabian Groffen <grobian@gentoo.org> libyaml-0.1.4.ebuild:
   Marked ~{sparc,sparc64,x64}-solaris
