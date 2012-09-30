@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/riece
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/riece/ChangeLog,v 1.83 2012/05/22 21:04:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/riece/ChangeLog,v 1.84 2012/09/30 18:07:22 armin76 Exp $
+
+  30 Sep 2012; Raúl Porcel <armin76@gentoo.org> riece-6.1.0.ebuild,
+  riece-8.0.0.ebuild:
+  Drop alpha keywords
 
   22 May 2012; Brent Baude <ranger@gentoo.org> riece-8.0.0.ebuild:
   Marking riece-8.0.0 ppc for bug 415067
