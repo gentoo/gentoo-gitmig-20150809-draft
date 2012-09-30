@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/bzr-gtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-gtk/ChangeLog,v 1.16 2012/03/17 10:02:21 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-gtk/ChangeLog,v 1.17 2012/09/30 18:38:37 armin76 Exp $
+
+  30 Sep 2012; Raúl Porcel <armin76@gentoo.org> bzr-gtk-0.100.0.ebuild,
+  bzr-gtk-0.103.0.ebuild:
+  Drop alpha keywords
 
 *bzr-gtk-0.103.0 (17 Mar 2012)
 

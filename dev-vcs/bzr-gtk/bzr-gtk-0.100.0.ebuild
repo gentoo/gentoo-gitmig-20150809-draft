@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-gtk/bzr-gtk-0.100.0.ebuild,v 1.5 2012/02/05 15:46:08 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-gtk/bzr-gtk-0.100.0.ebuild,v 1.6 2012/09/30 18:38:37 armin76 Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -17,7 +17,7 @@ SRC_URI="http://launchpad.net/${PN}/trunk/${PV}/+download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="gconf gnome-keyring gpg +sourceview nautilus"
 
 DEPEND=">=dev-vcs/bzr-1.6_rc1

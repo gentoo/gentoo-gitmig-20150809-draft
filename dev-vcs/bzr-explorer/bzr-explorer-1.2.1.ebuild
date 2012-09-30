@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-explorer/bzr-explorer-1.2.1.ebuild,v 1.4 2012/01/23 16:49:15 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-explorer/bzr-explorer-1.2.1.ebuild,v 1.5 2012/09/30 18:37:36 armin76 Exp $
 
 EAPI="3"
 
@@ -22,7 +22,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 
-KEYWORDS="alpha amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="gtk"
 
 DEPEND=""
