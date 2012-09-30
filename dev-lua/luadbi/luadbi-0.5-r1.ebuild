@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luadbi/luadbi-0.5-r1.ebuild,v 1.3 2012/05/04 04:01:52 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luadbi/luadbi-0.5-r1.ebuild,v 1.4 2012/09/30 11:57:08 djc Exp $
 
-EAPI=2
+EAPI=4
 
 inherit multilib toolchain-funcs flag-o-matic eutils
 
@@ -14,6 +14,7 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="mysql postgres sqlite"
+REQUIRED_USE="|| ( mysql postgres sqlite )"
 
 RDEPEND=">=dev-lang/lua-5.1
 		mysql? ( virtual/mysql )
@@ -40,19 +41,9 @@ src_compile() {
 	use postgres && drivers="${drivers} psql"
 	use sqlite && drivers="${drivers} sqlite3"
 
-	if [ -z "${drivers// /}" ] ; then
-		eerror
-		eerror "No driver was selected, cannot build."
-		eerror "Please set USE flags to build any driver."
-		eerror "Possible USE flags: mysql postgres sqlite"
-		eerror
-		die "No driver selected"
-	fi
-
 	append-flags -fPIC -c
 	for driver in "${drivers}" ; do
-		emake ${driver} \
-			|| die "Compiling driver '${drivers// /}' failed"
+		emake ${driver}
 	done
 }
 
@@ -63,7 +54,6 @@ src_install() {
 	use sqlite && drivers="${drivers} sqlite3"
 
 	for driver in ${drivers} ; do
-		emake DESTDIR="${D}" "install_${driver// /}" \
-			|| die "Install of driver '${drivers// /}' failed"
+		emake DESTDIR="${D}" "install_${driver// /}"
 	done
 }
