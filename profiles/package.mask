@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14119 2012/09/29 15:40:04 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14120 2012/09/30 19:14:24 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -163,11 +163,6 @@ dev-util/pccts
 # Mask development releases
 =media-sound/lilypond-2.17*
 
-# Diego Elio Pettenò <flameeyes@gentoo.org> (26 Aug 2012)
-# Pending removal on 26 Sep 2012
-# Does not work with modern OpenSC (bug #363019)
-app-crypt/scsign
-
 # Doug Goldstein <cardoe@gentoo.org> (25 Aug 2012)
 # Mask the release candidates
 =app-emulation/libvirt-0.10.0_rc1
@@ -187,22 +182,6 @@ app-crypt/scsign
 # Masked for removal in 30 days
 # games-strategy/megaglest supersedes games-strategy/glest
 games-strategy/glest
-
-# Diego Elio Pettenò <flameeyes@gentoo.org> (18 Aug 2012)
-# Pending removal on 18 Sep 2012
-# Could never have worked due to bug #59891
-www-apache/mod_ap2_snmp
-
-# Diego Elio Pettenò <flameeyes@gentoo.org> (18 Aug 2012)
-# Pending removal on 18 Sep 2012.
-# Prelude OSS has moved, a new release is out but even their SSL
-# certificate is broken; multiple issues: bug #318839 334437 344955
-# 350389 365353 388825 424307. Requires a dedicated maintainer.
-app-admin/prelude-lml
-app-admin/prelude-manager
-dev-libs/libprelude
-dev-libs/libpreludedb
-net-analyzer/prewikka
 
 # Markos Chandras <hwoarang@gentoo.org> (17 August 2012)
 # Masked rc release. Required by dev-lang/jimctl-0.73

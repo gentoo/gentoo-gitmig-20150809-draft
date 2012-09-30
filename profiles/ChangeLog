@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7000 2012/09/30 09:12:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7001 2012/09/30 19:14:24 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Sep 2012; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Remove masks from removed packages.
 
   30 Sep 2012; Hans de Graaff <graaff@gentoo.org> updates/3Q-2012:
   Slotmove dev-ruby/trollop-2.0 to a separate SLOT, bug 436344.
