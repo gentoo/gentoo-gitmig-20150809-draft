@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.168 2012/09/24 01:50:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.169 2012/09/30 22:19:59 mgorny Exp $
+
+  30 Sep 2012; Michał Górny <mgorny@gentoo.org> package.use.mask:
+  Mask systemd[http] due to non-keyworded dep.
 
   24 Sep 2012; Mike Frysinger <vapier@gentoo.org> package.use.mask:
   Drop old alsa/webm masks #433930.
