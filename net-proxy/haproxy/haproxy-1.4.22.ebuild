@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/haproxy-1.4.18-r1.ebuild,v 1.4 2012/02/28 22:41:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/haproxy-1.4.22.ebuild,v 1.1 2012/09/30 22:07:40 idl0r Exp $
 
-EAPI="3"
+EAPI="4"
 
 inherit eutils versionator toolchain-funcs flag-o-matic
 
@@ -12,8 +12,8 @@ SRC_URI="http://haproxy.1wt.eu/download/$(get_version_component_range 1-2)/src/$
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
-IUSE="examples pcre vim-syntax"
+KEYWORDS="~amd64 ~ppc ~x86"
+IUSE="+crypt examples +pcre vim-syntax"
 
 DEPEND="pcre? ( dev-libs/libpcre )"
 RDEPEND="${DEPEND}"
@@ -24,22 +24,36 @@ pkg_setup() {
 }
 
 src_compile() {
-	local args="TARGET=linux26"
+	local args="TARGET=linux2628"
 
-	use pcre && args="${args} USE_PCRE=1"
+	if use pcre; then
+		args="${args} USE_PCRE=1"
+	else
+		args="${args} USE_PCRE="
+	fi
 
-	use kernel_linux && args="${args} USE_LINUX_SPLICE=1"
-	use kernel_linux && args="${args} USE_LINUX_TPROXY=1"
+#	if use kernel_linux; then
+#		args="${args} USE_LINUX_SPLICE=1 USE_LINUX_TPROXY=1"
+#	else
+#		args="${args} USE_LINUX_SPLICE= USE_LINUX_TPROXY="
+#	fi
+
+	if use crypt; then
+		args="${args} USE_LIBCRYPT=1"
+	else
+		args="${args} USE_LIBCRYPT="
+	fi
 
 	# For now, until the strict-aliasing breakage will be fixed
-	append-cflags -fno-strict-aliasing
+#	append-cflags -fno-strict-aliasing
 
 	emake CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" CC=$(tc-getCC) ${args} || die
 }
 
 src_install() {
 	dobin haproxy || die
-	newinitd "${FILESDIR}/haproxy.initd-r1" haproxy || die
+
+	newinitd "${FILESDIR}/haproxy.initd-r2" haproxy || die
 
 	# Don't install useless files
 	rm examples/build.cfg doc/*gpl.txt
