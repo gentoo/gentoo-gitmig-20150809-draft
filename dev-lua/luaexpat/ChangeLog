@@ -1,6 +1,9 @@
 # ChangeLog for dev-lua/luaexpat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luaexpat/ChangeLog,v 1.8 2012/09/28 17:33:24 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luaexpat/ChangeLog,v 1.9 2012/09/30 12:00:47 djc Exp $
+
+  30 Sep 2012; Dirkjan Ochtman <djc@gentoo.org> -luaexpat-1.2.0.ebuild:
+  Remove old version.
 
   28 Sep 2012; Johannes Huber <johu@gentoo.org> luaexpat-1.2.0-r1.ebuild:
   Stable for x86, wrt bug #429606
