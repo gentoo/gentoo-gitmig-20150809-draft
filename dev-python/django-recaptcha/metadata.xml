@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>corentin.chary@gmail.com</email>
+		<email>iksaif@gentoo.org</email>
 		<name>Corentin Chary</name>
 	</maintainer>
 	<herd>python</herd>
