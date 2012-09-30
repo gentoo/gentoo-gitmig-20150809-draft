@@ -1,10 +1,17 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6998 2012/09/29 15:40:04 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.6999 2012/09/30 06:59:26 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Sep 2012; Diego E. Pettenò <flameeyes@gentoo.org> arch/amd64/use.mask,
+  arch/arm/use.mask, arch/hppa/use.mask, arch/ia64/use.mask,
+  arch/powerpc/package.use.mask, arch/sparc/use.mask, arch/x86/use.mask,
+  base/use.mask:
+  Mask oracle USe flag globally at base level and unmask for amd64/x86. This is
+  required for me to commit freeradius without dropping ppc keyword.
 
   29 Sep 2012; Kacper Kowalik <xarthisius@gentoo.org> package.mask:
   Drop mask on sys-cluster/glusterfs-3.3.0

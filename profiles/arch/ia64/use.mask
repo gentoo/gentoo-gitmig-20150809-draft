@@ -59,7 +59,6 @@ lasi
 mpi
 networkmanager
 octave
-oracle
 timidity
 semantic-desktop
 tunepimp

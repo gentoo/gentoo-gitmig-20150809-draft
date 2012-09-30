@@ -78,7 +78,6 @@ schroedinger
 hardened
 frei0r
 google-gadgets
-oracle
 libvirt
 pdfannotextractor
 prelude
