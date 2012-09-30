@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/ferm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ferm/ChangeLog,v 1.1 2012/08/07 19:12:37 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ferm/ChangeLog,v 1.2 2012/09/30 18:34:46 ago Exp $
+
+  30 Sep 2012; Agostino Sarubbo <ago@gentoo.org> ferm-2.1.1.ebuild:
+  nothing to compile here
 
   07 Aug 2012; Michael Palimaka <kensington@gentoo.org> +ferm-2.1.ebuild,
   +ferm-2.1.1.ebuild, +metadata.xml:

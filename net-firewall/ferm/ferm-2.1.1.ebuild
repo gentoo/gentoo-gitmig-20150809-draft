@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ferm/ferm-2.1.1.ebuild,v 1.1 2012/08/07 19:12:37 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ferm/ferm-2.1.1.ebuild,v 1.2 2012/09/30 18:34:46 ago Exp $
 
 EAPI=4
 
@@ -23,6 +23,8 @@ RDEPEND="dev-lang/perl
 src_prepare() {
 	sed -e "s/COPYING//" -i Makefile || die
 }
+
+src_compile() { :; }
 
 src_install () {
 	emake PREFIX="${D}/usr" DOCDIR="${D}/usr/share/doc/${PF}" install
