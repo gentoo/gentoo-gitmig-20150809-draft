@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/rpm2targz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/ChangeLog,v 1.90 2012/09/03 17:17:28 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/ChangeLog,v 1.91 2012/09/30 11:17:14 ulm Exp $
+
+  30 Sep 2012; Ulrich Müller <ulm@gentoo.org> rpm2targz-9.0.0.3g.ebuild,
+  rpm2targz-9.0.0.4g.ebuild, rpm2targz-9.0.0.5g.ebuild:
+  Specify LICENSE more precisely.
 
   03 Sep 2012; Christoph Junghans <ottxor@gentoo.org> rpm2targz-9.0.0.5g.ebuild:
   added prefix keywords (fix bug #433810)
