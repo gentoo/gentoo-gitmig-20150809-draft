@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-2.2.0.ebuild,v 1.1 2012/09/30 07:01:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-2.2.0.ebuild,v 1.2 2012/09/30 07:09:16 flameeyes Exp $
 
 EAPI=4
 
 PATCHSET=4
 
-inherit eutils pam autotools user
+inherit eutils pam autotools user python
 
 MY_P="${PN}-server-${PV}"
 
@@ -29,7 +29,7 @@ RDEPEND="!net-dialup/cistronradius
 	sys-devel/libtool
 	dev-lang/perl
 	sys-libs/gdbm
-	python? ( dev-lang/python )
+	python? ( >=dev-lang/python-2.4 )
 	readline? ( sys-libs/readline )
 	pcap? ( net-libs/libpcap )
 	mysql? ( virtual/mysql )
@@ -148,7 +148,7 @@ src_install() {
 	emake R="${D}" install
 	chown -R root:radius "${D}"/etc/raddb
 
-	sed -i -e '/run_dir/s:=.*:=/var/run/radiusd:' \
+	sed -i -e '/run_dir =/s:=.*:=/var/run/radiusd:' \
 		"${D}"/etc/raddb/radiusd.conf
 
 	pamd_mimic_system radiusd auth account password session
