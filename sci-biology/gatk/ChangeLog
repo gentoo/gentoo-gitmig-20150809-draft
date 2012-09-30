@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/gatk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/gatk/ChangeLog,v 1.4 2012/04/07 23:32:18 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/gatk/ChangeLog,v 1.5 2012/09/30 17:17:21 weaver Exp $
+
+*gatk-1.6 (30 Sep 2012)
+
+  30 Sep 2012; Andrey Kislyuk <weaver@gentoo.org> -gatk-1.4.ebuild,
+  -gatk-1.5.ebuild, +gatk-1.6.ebuild:
+  Version bump, remove old, add git dep
 
 *gatk-1.5 (07 Apr 2012)
 
