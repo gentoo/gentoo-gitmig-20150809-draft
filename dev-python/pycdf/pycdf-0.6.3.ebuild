@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycdf/pycdf-0.6.3.ebuild,v 1.4 2012/02/23 06:24:44 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycdf/pycdf-0.6.3.ebuild,v 1.5 2012/09/30 17:16:42 armin76 Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/pysclint/${MY_P}.tar.gz"
 
 LICENSE="PSF-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="examples"
 
 DEPEND="dev-python/numpy
