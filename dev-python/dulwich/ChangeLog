@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/dulwich
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.53 2012/06/21 01:20:46 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.54 2012/09/30 18:18:33 armin76 Exp $
+
+  30 Sep 2012; Raúl Porcel <armin76@gentoo.org> dulwich-0.8.1.ebuild,
+  dulwich-0.8.3.ebuild, dulwich-0.8.5.ebuild:
+  Drop alpha keywords
 
   21 Jun 2012; Jeff Horelick <jdhore@gentoo.org> dulwich-0.8.5.ebuild:
   marked x86 per bug 422061
