@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpeas/libpeas-1.4.0-r1.ebuild,v 1.2 2012/08/13 18:41:54 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpeas/libpeas-1.4.0-r1.ebuild,v 1.3 2012/09/30 07:36:54 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -12,7 +12,7 @@ inherit eutils gnome2 multilib python virtualx
 DESCRIPTION="A GObject plugins library"
 HOMEPAGE="http://www.gnome.org/"
 
-LICENSE="LGPL-2"
+LICENSE="LGPL-2+"
 SLOT="0"
 IUSE="doc gjs +gtk glade +python seed vala"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-freebsd ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux"
