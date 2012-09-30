@@ -1,6 +1,10 @@
 # ChangeLog for sci-astronomy/xephem
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xephem/ChangeLog,v 1.41 2012/09/30 11:58:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xephem/ChangeLog,v 1.42 2012/09/30 19:50:53 xarthisius Exp $
+
+  30 Sep 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  +files/xephem-3.7.5-respect-flags.patch, xephem-3.7.5.ebuild:
+  Respect AR, RANLIB wrt #436646 by Agostino Sarubbo <ago@gentoo.org>
 
   30 Sep 2012; Agostino Sarubbo <ago@gentoo.org> xephem-3.7.5.ebuild:
   Stable for amd64, wrt bug #423673
