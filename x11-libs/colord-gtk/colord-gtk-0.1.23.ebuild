@@ -1,10 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/colord-gtk/colord-gtk-0.1.22.ebuild,v 1.2 2012/08/22 21:23:32 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/colord-gtk/colord-gtk-0.1.23.ebuild,v 1.1 2012/09/30 09:33:17 pacho Exp $
 
 EAPI="4"
+VALA_MIN_API_VERSION="0.14"
+VALA_USE_DEPEND="vapigen"
 
-inherit autotools eutils
+inherit autotools eutils vala
 
 DESCRIPTION="GTK support library for colord"
 HOMEPAGE="http://www.freedesktop.org/software/colord/"
@@ -35,11 +37,14 @@ DEPEND="${COMMON_DEPEND}
 		app-text/docbook-xml-dtd:4.1.2
 		>=dev-util/gtk-doc-1.9
 	)
-	vala? ( dev-lang/vala:0.14[vapigen] )"
+	vala? ( $(vala_depend) )"
 
 RESTRICT="test" # Tests need a display device with a default color profile set
 
 src_prepare() {
+	use vala && vala_src_prepare
+
+	# https://bugs.freedesktop.org/show_bug.cgi?id=55464
 	epatch "${FILESDIR}/${PN}-0.1.22-automagic-vala.patch"
 	eautoreconf
 }
@@ -49,8 +54,7 @@ src_configure() {
 		--disable-static \
 		$(use_enable doc gtk-doc) \
 		$(use_enable introspection) \
-		$(use_enable vala) \
-		VAPIGEN=$(type -P vapigen-0.14)
+		$(use_enable vala)
 }
 
 src_install() {
