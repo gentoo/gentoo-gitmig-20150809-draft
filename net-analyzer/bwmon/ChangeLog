@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/bwmon
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwmon/ChangeLog,v 1.16 2011/12/15 16:16:19 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwmon/ChangeLog,v 1.17 2012/09/30 07:55:09 pinkbyte Exp $
+
+*bwmon-1.3-r1 (30 Sep 2012)
+
+  30 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> +bwmon-1.3-r1.ebuild:
+  New revision with EAPI 4 syntax
 
   15 Dec 2011; Jeroen Roovers <jer@gentoo.org> bwmon-1.3.ebuild:
   Build fix by Andrew Savchenko (bug #394827).
