@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/rygel-0.12.7.ebuild,v 1.3 2012/05/05 03:20:44 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/rygel-0.14.3-r1.ebuild,v 1.1 2012/09/30 12:37:42 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ HOMEPAGE="http://live.gnome.org/Rygel"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="X nls +sqlite tracker transcode"
+IUSE="X nls +sqlite tracker test transcode"
 
 # The deps for tracker? and transcode? are just the earliest available
 # version at the time of writing this ebuild
@@ -22,15 +22,18 @@ RDEPEND="
 	>=dev-libs/glib-2.26:2
 	>=dev-libs/libgee-0.5.2:0
 	>=media-libs/gupnp-dlna-0.5
-	>=media-libs/gstreamer-0.10.28
-	>=media-libs/gst-plugins-base-0.10.28
+	>=media-libs/gstreamer-0.10.35
+	>=media-libs/gst-plugins-base-0.10.35
 	>=net-libs/gssdp-0.11
 	>=net-libs/gupnp-0.17.1
 	>=net-libs/gupnp-av-0.9
 	>=net-libs/libsoup-2.34:2.4
 	>=sys-libs/e2fsprogs-libs-1.41.3
 	x11-misc/shared-mime-info
-	sqlite? ( >=dev-db/sqlite-3.5:3 )
+	sqlite? (
+		>=dev-db/sqlite-3.5:3
+		dev-libs/libunistring
+	)
 	tracker? ( >=app-misc/tracker-0.8.17 )
 	transcode? (
 		>=media-libs/gst-plugins-bad-0.10.14
@@ -45,8 +48,8 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
 "
 # Maintainer only
-#	>=dev-lang/vala-0.11.6
-#	>=net-libs/gupnp-vala-0.9
+#	>=dev-lang/vala-0.14.1
+#	>=net-libs/gupnp-vala-0.10.2
 #   dev-libs/libxslt
 
 pkg_setup() {
@@ -56,6 +59,7 @@ pkg_setup() {
 		--enable-mediathek-plugin
 		$(use_enable nls)
 		$(use_enable sqlite media-export-plugin)
+		$(use_enable test tests)
 		$(use_enable tracker tracker-plugin)
 		$(use_with X ui)"
 }

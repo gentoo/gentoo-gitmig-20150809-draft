@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/rygel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/ChangeLog,v 1.24 2012/08/24 17:21:20 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/ChangeLog,v 1.25 2012/09/30 12:37:42 pacho Exp $
+
+*rygel-0.14.3-r1 (30 Sep 2012)
+
+  30 Sep 2012; Pacho Ramos <pacho@gentoo.org> +rygel-0.14.3-r1.ebuild,
+  -rygel-0.12.7.ebuild, -rygel-0.14.2.ebuild, rygel-0.14.3.ebuild:
+  Disable tracker support for version to stabilize as it's not ready yet. Drop
+  old.
 
 *rygel-0.14.3 (24 Aug 2012)
 
@@ -124,4 +131,3 @@
   +metadata.xml:
   Add current stable Rygel release, 0.8.2. Almost identical to EvaSDK's
   original from his overlay.
-
