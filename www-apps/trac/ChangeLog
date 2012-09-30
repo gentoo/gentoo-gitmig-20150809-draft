@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/trac
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.128 2012/09/30 11:43:23 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.129 2012/09/30 11:45:03 djc Exp $
+
+  30 Sep 2012; Dirkjan Ochtman <djc@gentoo.org> -trac-0.12.2-r1.ebuild:
+  Remove old version.
 
 *trac-1.0 (30 Sep 2012)
 
@@ -568,4 +571,3 @@
   28 Apr 2004; Stuart Herbert <stuart@gentoo.org> metadata.xml,
   trac-0.6.1.ebuild, files/postinst-en.txt:
   Initial import; thanks to dju` <dju@elegiac.net>; see bug #48818
-
