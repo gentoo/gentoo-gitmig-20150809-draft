@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/icu4j
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/ChangeLog,v 1.56 2012/06/10 10:37:28 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/ChangeLog,v 1.57 2012/09/30 11:59:25 ago Exp $
+
+  30 Sep 2012; Agostino Sarubbo <ago@gentoo.org> icu4j-49.1.ebuild:
+  Stable for amd64, wrt bug #428078
 
 *icu4j-49.1 (10 Jun 2012)
 
