@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.524 2012/09/26 17:55:07 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.525 2012/09/30 17:59:25 floppym Exp $
+
+  30 Sep 2012; Mike Gilbert <floppym@gentoo.org> samba-4.0.0_rc1.ebuild:
+  Remove minimum python version.
 
 *samba-4.0.0_rc1 (26 Sep 2012)
 
