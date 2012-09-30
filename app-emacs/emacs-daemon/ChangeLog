@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/emacs-daemon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.56 2012/09/27 00:00:40 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.57 2012/09/30 17:08:39 armin76 Exp $
+
+  30 Sep 2012; Raúl Porcel <armin76@gentoo.org> emacs-daemon-0.19.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #433185
 
   27 Sep 2012; Anthony G. Basile <blueness@gentoo.org> emacs-daemon-0.19.ebuild:
   stable ppc ppc64, bug #433185
