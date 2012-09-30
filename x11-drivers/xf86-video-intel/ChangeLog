@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/xf86-video-intel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.104 2012/09/17 10:45:17 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.105 2012/09/30 12:07:55 chithanh Exp $
+
+*xf86-video-intel-2.20.9 (30 Sep 2012)
+
+  30 Sep 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xf86-video-intel-2.20.9.ebuild:
+  Version bump.
 
   17 Sep 2012; Rémi Cardona <remi@gentoo.org> xf86-video-intel-2.20.8.ebuild:
   Add udev USE flag, see bug #434794.
