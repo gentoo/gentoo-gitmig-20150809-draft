@@ -72,9 +72,6 @@
     </flag>
 	<flag name='vepa'>Virtual Ethernet Port Aggregator (VEPA) / 802.1Qbg
 		support. Relies on macvtap support.</flag>
-    <flag name='json'>
-      Support QEmu 0.13 JSON-based interface, using <pkg>dev-libs/yajl</pkg>.
-    </flag>
 	<flag name='virt-network'>
 		Enable virtual networking (NAT) support for guests. Includes all
 		the dependencies for NATed network mode. Effectively any network
