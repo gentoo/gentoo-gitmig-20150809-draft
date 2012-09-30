@@ -1,0 +1,9 @@
+# ChangeLog for media-gfx/iscan-plugin-gt-x820
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan-plugin-gt-x820/ChangeLog,v 1.1 2012/09/30 22:14:39 flameeyes Exp $
+
+*iscan-plugin-gt-x820-2.1.2.1 (30 Sep 2012)
+
+  30 Sep 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +iscan-plugin-gt-x820-2.1.2.1.ebuild, +metadata.xml:
+  Initial import. Thanks to Jared for the ebuild. Closes bug #394403.
