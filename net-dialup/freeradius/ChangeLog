@@ -1,6 +1,39 @@
 # ChangeLog for net-dialup/freeradius
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.103 2012/07/09 09:42:05 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.104 2012/09/30 07:01:04 flameeyes Exp $
+
+*freeradius-2.2.0 (30 Sep 2012)
+
+  30 Sep 2012; Diego E. Pettenò <flameeyes@gentoo.org> +files/radius.conf-r3,
+  +files/radius.init-r3, +freeradius-2.2.0.ebuild,
+  -files/freeradius-2.0.5-ssl.patch, -files/freeradius-2.0.5-threads.patch,
+  -files/freeradius-2.0.5-versionless-la-files.patch,
+  -files/freeradius-2.1.1-qafixes.patch, -files/freeradius-2.1.1-ssl.patch,
+  -files/freeradius-2.1.1-versionless-la-files.patch,
+  -files/freeradius-2.1.3-pkglibdir.patch,
+  -files/freeradius-2.1.3-qafixes.patch, -files/freeradius-2.1.3-ssl.patch,
+  -files/freeradius-2.1.3-versionless-la-files.patch,
+  -files/freeradius-2.1.6-nothreads.patch,
+  -files/freeradius-2.1.6-pkglibdir.patch,
+  -files/freeradius-2.1.6-qafixes.patch, -files/freeradius-2.1.6-ssl.patch,
+  -files/freeradius-2.1.6-versionless-la-files.patch,
+  -files/freeradius-2.1.7-nothreads.patch,
+  -files/freeradius-2.1.7-pkglibdir.patch,
+  -files/freeradius-2.1.7-qafixes.patch, -files/freeradius-2.1.7-ssl.patch,
+  -files/freeradius-2.1.7-versionless-la-files.patch, metadata.xml:
+  Remove stale patches. Version bump, ebuild and init script rewrite: patches
+  are now hosted on dev.gentoo.org instead than in $FILESDIR; remove threads USE
+  flag (solves bug #296907); enable DHCP support unconditionally, as it's not an
+  extra dependency (solves bug #376721); add "old" directory to SRC_URI (solves
+  bug #398771); adds sqlite support (solves bug #401569) as well as oracle
+  (untested), iodbc and unixodbc; make readline, python and pcap optional; use
+  REQUIRED_USE to disallow firebird support for bindist packages; support
+  USE=-ssl properly; always turn on optional features that add no extra
+  dependencies, including experimental modules (drops frascend, frxp and
+  udpfromto USE flags); enable edirectory support when ldap is enabled (drops
+  edirectory USE flag); add pkg_config function to generate required TLS
+  certificates; new init script uses the latest runscript syntax support, which
+  allows for detecting crashed radiusd instances.
 
 *freeradius-2.1.11-r1 (09 Jul 2012)
 

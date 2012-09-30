@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>net-dialup</herd>
-<longdescription>Highly configurable free RADIUS server.</longdescription>
-<use>
-	<flag name='edirectory'>Enables Novell eDirectory integration</flag>
-	<flag name='frascend'>Enables Ascend binary mode</flag>
-	<flag name='frxp'>Enables experimental modules</flag>
-	<flag name='udpfromto'>Compile in UDPFROMTO support (enables freeradius to
-	specify source address correctly in multi-homed setups)</flag>
-</use>
+  <herd>net-dialup</herd>
+  <use>
+    <flag name='edirectory' restrict='&lt;net-dialup/freeradius-2.2.0'>
+      Enables Novell eDirectory integration. Requires ldap USE flag enabled.
+    </flag>
+    <flag name='frascend' restrict='&lt;net-dialup/freeradius-2.2.0'>
+      Enables Ascend binary mode
+    </flag>
+    <flag name='frxp' restrict='&lt;net-dialup/freeradius-2.2.0'>
+      Enables experimental modules
+    </flag>
+    <flag name='udpfromto' restrict='&lt;net-dialup/freeradius-2.2.0'>
+      Compile in UDPFROMTO support (enables freeradius to
+      specify source address correctly in multi-homed setups)
+    </flag>
+    <flag name='pcap' restrict='&gt;=net-dialup/freeradius-2.2.0'>
+      Build the RADIUS sniffer which requires <pkg>net-libs/libpcap</pkg>.
+    </flag>
+  </use>
 </pkgmetadata>
