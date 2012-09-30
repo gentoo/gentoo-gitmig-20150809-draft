@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.613 2012/09/30 15:18:29 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.614 2012/09/30 15:24:28 djc Exp $
+
+  30 Sep 2012; Dirkjan Ochtman <djc@gentoo.org> -python-2.6.6-r2.ebuild,
+  -python-2.6.7-r2.ebuild, -python-2.7.2-r3.ebuild, -python-2.7.3.ebuild,
+  -python-2.7.3-r1.ebuild, -python-3.1.4-r3.ebuild, -python-3.1.4-r4.ebuild,
+  -python-3.2.2.ebuild, -python-3.2.2-r1.ebuild:
+  Remove old versions.
 
 *python-3.3.0 (30 Sep 2012)
 
