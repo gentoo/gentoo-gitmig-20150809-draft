@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/bwmon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwmon/ChangeLog,v 1.18 2012/09/30 07:56:14 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwmon/ChangeLog,v 1.19 2012/09/30 08:13:06 pinkbyte Exp $
+
+  30 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> bwmon-1.3-r1.ebuild,
+  +files/bwmon-1.3-typo-fix.patch:
+  Add typo fix patch for help output wrt bug #263326
 
   30 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> bwmon-1.3-r1.ebuild:
   Remove useless doecho function

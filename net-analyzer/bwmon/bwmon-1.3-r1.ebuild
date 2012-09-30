@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwmon/bwmon-1.3-r1.ebuild,v 1.2 2012/09/30 07:56:14 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwmon/bwmon-1.3-r1.ebuild,v 1.3 2012/09/30 08:13:06 pinkbyte Exp $
 
 EAPI="4"
 
-inherit toolchain-funcs flag-o-matic
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="Simple ncurses bandwidth monitor"
 HOMEPAGE="http://bwmon.sourceforge.net/"
@@ -27,6 +27,8 @@ src_prepare() {
 	# Respect LDFLAGS
 	sed -i '/^LDFLAGS/s:LDFLAGS:LIBS:' src/Makefile || die 'sed on LDFLAGS failed'
 	sed -i 's:$(CC) $(LDFLAGS) -o ../$@ $(OBJS):$(CC) $(CFLAGS) $(LDFLAGS) -o ../$@ $(OBJS) $(LIBS):' src/Makefile || die 'sed on compilation string failed'
+	# Fix a typo in help wrt bug #263326
+	epatch "${FILESDIR}"/${P}-typo-fix.patch
 }
 
 src_compile() {
