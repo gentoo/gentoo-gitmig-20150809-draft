@@ -1,6 +1,14 @@
 # ChangeLog for x11-wm/awesome
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.136 2012/05/11 07:29:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.137 2012/09/30 14:14:21 matsuu Exp $
+
+*awesome-3.4.13 (30 Sep 2012)
+
+  30 Sep 2012; MATSUU Takuto <matsuu@gentoo.org> -awesome-3.4.8.ebuild,
+  -awesome-3.4.9.ebuild, -awesome-3.4.9-r1.ebuild, -awesome-3.4.10.ebuild,
+  +awesome-3.4.13.ebuild:
+  Version bumped, bug #421025. Added gnome USE flag, bug #379833. Depends on
+  media-gfx/imagemagick[X], bug #421333. Removed old versions.
 
   11 May 2012; Agostino Sarubbo <ago@gentoo.org> awesome-3.4.11.ebuild:
   Stable for amd64, wrt bug #407861

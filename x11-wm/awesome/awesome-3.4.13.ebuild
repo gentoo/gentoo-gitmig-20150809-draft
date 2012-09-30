@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.4.9.ebuild,v 1.8 2012/05/04 08:58:56 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.4.13.ebuild,v 1.1 2012/09/30 14:14:21 matsuu Exp $
 
 EAPI="3"
 CMAKE_MIN_VERSION="2.8"
@@ -12,25 +12,24 @@ SRC_URI="http://awesome.naquadah.org/download/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
-IUSE="dbus doc elibc_FreeBSD"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd"
+IUSE="dbus doc elibc_FreeBSD gnome"
 
-RDEPEND=">=dev-lang/lua-5.1
-	<dev-lang/lua-5.2
+COMMON_DEPEND=">=dev-lang/lua-5.1
 	dev-libs/libev
 	>=dev-libs/libxdg-basedir-1
 	media-libs/imlib2[png]
 	x11-libs/cairo[xcb]
 	|| ( <x11-libs/libX11-1.3.99.901[xcb] >=x11-libs/libX11-1.3.99.901 )
-	>=x11-libs/libxcb-1.4
+	>=x11-libs/libxcb-1.6
 	>=x11-libs/pango-1.19.3
-	~x11-libs/startup-notification-0.10
-	~x11-libs/xcb-util-0.3.6
+	>=x11-libs/startup-notification-0.10_p20110426
+	>=x11-libs/xcb-util-0.3.8
 	dbus? ( >=sys-apps/dbus-1 )
 	elibc_FreeBSD? ( dev-libs/libexecinfo )"
 
 # graphicsmagick's 'convert -channel' has no Alpha support, bug #352282
-DEPEND="${RDEPEND}
+DEPEND="${COMMON_DEPEND}
 	>=app-text/asciidoc-8.4.5
 	app-text/xmlto
 	dev-util/gperf
@@ -44,7 +43,7 @@ DEPEND="${RDEPEND}
 		media-gfx/graphviz
 	)"
 
-RDEPEND="${RDEPEND}
+RDEPEND="${COMMON_DEPEND}
 	|| (
 		x11-misc/gxmessage
 		x11-apps/xmessage
@@ -57,7 +56,7 @@ RDEPEND="${RDEPEND}
 RDEPEND="${RDEPEND}
 	|| (
 	( x11-apps/xwininfo
-	  || ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] )
+	  || ( media-gfx/imagemagick[X] media-gfx/graphicsmagick[imagemagick,X] )
 	)
 	x11-misc/habak
 	media-gfx/feh
@@ -72,11 +71,11 @@ RDEPEND="${RDEPEND}
 DOCS="AUTHORS BUGS PATCHES README STYLE"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-3.4.2-backtrace.patch"
-	epatch "${FILESDIR}/${PN}-3.4.8-cmake-2.8.4.patch"
+	epatch \
+		"${FILESDIR}/${PN}-3.4.2-backtrace.patch"
 
-	# bug #396417
-	epatch "${FILESDIR}/${PN}-glib-fix.patch"
+	# bug  #408025
+	epatch "${FILESDIR}/${PN}-3.4.11-convert-path.patch"
 }
 
 src_configure() {
@@ -114,4 +113,17 @@ src_install() {
 
 	exeinto /etc/X11/Sessions
 	newexe "${FILESDIR}"/${PN}-session ${PN} || die
+
+	# GNOME-based awesome
+	if use gnome ; then
+		# GNOME session
+		insinto /usr/share/gnome-session/sessions
+		doins "${FILESDIR}/${PN}-gnome.session" || die
+		# Application launcher
+		insinto /usr/share/applications
+		doins "${FILESDIR}/${PN}-gnome.desktop" || die
+		# X Session
+		insinto /usr/share/xsessions/
+		doins "${FILESDIR}/${PN}-gnome-xsession.desktop" || die
+	fi
 }
