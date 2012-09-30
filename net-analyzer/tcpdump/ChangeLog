@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/tcpdump
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.159 2012/09/23 08:08:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.160 2012/09/30 16:39:54 armin76 Exp $
+
+  30 Sep 2012; Raúl Porcel <armin76@gentoo.org> tcpdump-4.3.0.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #435658
 
   23 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> tcpdump-4.3.0.ebuild:
   x86 stable wrt bug #433263
