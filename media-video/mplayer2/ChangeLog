@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.69 2012/09/27 23:02:48 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.70 2012/09/30 15:26:22 sping Exp $
+
+  30 Sep 2012; Sebastian Pipping <sping@gentoo.org>
+  mplayer2-2.0_p20120828.ebuild:
+  Produce more helpful errors when compiling with Python 2.6 active (bug
+  #434356, concept by Mike Gilbert)
 
   27 Sep 2012; Sebastian Pipping <sping@gentoo.org>
   mplayer2-2.0_p20120828.ebuild, mplayer2-9999.ebuild:

@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0_p20120828.ebuild,v 1.3 2012/09/27 23:02:48 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0_p20120828.ebuild,v 1.4 2012/09/30 15:26:22 sping Exp $
 
 EAPI=4
 
 [[ ${PV} = *9999* ]] && VCS_ECLASS="git-2" || VCS_ECLASS=""
 
-inherit toolchain-funcs eutils flag-o-matic multilib base ${VCS_ECLASS}
+inherit python toolchain-funcs eutils flag-o-matic multilib base ${VCS_ECLASS}
 
 NAMESUF="${PN/mplayer/}"
 DESCRIPTION="Media Player for Linux"
@@ -198,6 +198,13 @@ pkg_setup() {
 
 	einfo "For various format support you need to enable the support on your ffmpeg package:"
 	einfo "    media-video/libav or media-video/ffmpeg"
+
+	# https://bugs.gentoo.org/show_bug.cgi?id=434356#c4
+	python_pkg_setup
+	major=$(python_get_version --major)
+	minor=$(python_get_version --minor)
+	[[ ( ${major} -eq 2 && ${minor} -ge 7 ) || ${major} -ge 3 ]] \
+			|| die "Please eselect Python 2.7 or later"
 }
 
 src_prepare() {
