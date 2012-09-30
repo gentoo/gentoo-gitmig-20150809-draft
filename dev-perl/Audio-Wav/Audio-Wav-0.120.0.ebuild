@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-Wav/Audio-Wav-0.120.0.ebuild,v 1.7 2012/03/19 19:25:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-Wav/Audio-Wav-0.120.0.ebuild,v 1.8 2012/09/30 18:34:06 armin76 Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Modules for reading & writing Microsoft WAV files."
 
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ppc x86"
+KEYWORDS="amd64 hppa ppc x86"
 IUSE=""
 
 RDEPEND="dev-perl/Inline"
