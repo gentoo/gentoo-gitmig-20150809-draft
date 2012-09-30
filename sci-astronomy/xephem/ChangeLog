@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/xephem
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xephem/ChangeLog,v 1.39 2012/09/30 08:32:21 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xephem/ChangeLog,v 1.40 2012/09/30 10:15:42 xarthisius Exp $
+
+  30 Sep 2012; Kacper Kowalik <xarthisius@gentoo.org> xephem-3.7.5.ebuild:
+  ppc/ppc64 stable wrt #423673
 
   30 Sep 2012; Kacper Kowalik <xarthisius@gentoo.org> xephem-3.7.3.ebuild,
   xephem-3.7.5.ebuild:
