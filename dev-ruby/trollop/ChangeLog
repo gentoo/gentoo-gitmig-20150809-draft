@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/trollop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/trollop/ChangeLog,v 1.14 2012/09/27 06:02:08 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/trollop/ChangeLog,v 1.15 2012/09/30 09:10:42 graaff Exp $
+
+  30 Sep 2012; Hans de Graaff <graaff@gentoo.org> trollop-2.0.ebuild:
+  Move trollop 2.0 to a separate slot since its semantics changed, bug 436344.
 
   27 Sep 2012; Hans de Graaff <graaff@gentoo.org> trollop-2.0.ebuild:
   Add ruby19, bug 436344, thanks to Manuel Rüger.
