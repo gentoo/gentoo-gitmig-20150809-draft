@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.724 2012/09/26 00:13:06 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.725 2012/09/30 22:04:59 williamh Exp $
+
+*udev-193 (30 Sep 2012)
+
+  30 Sep 2012; William Hubbs <williamh@gentoo.org> +udev-193.ebuild:
+  version bump
 
 *udev-192 (26 Sep 2012)
 
