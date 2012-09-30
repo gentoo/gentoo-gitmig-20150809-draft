@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.3.0.ebuild,v 1.1 2012/09/30 15:18:29 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.3.0.ebuild,v 1.2 2012/09/30 15:29:01 djc Exp $
 
 EAPI="3"
 WANT_AUTOMAKE="none"
@@ -17,7 +17,7 @@ SRC_URI="http://www.python.org/ftp/python/${PV}/${MY_P}.tar.xz
 	mirror://gentoo/python-gentoo-patches-${PV}-${PATCHSET_REVISION}.tar.bz2"
 
 LICENSE="PSF-2"
-SLOT="3.2"
+SLOT="3.3"
 PYTHON_ABI="${SLOT}"
 KEYWORDS=""
 IUSE="build doc elibc_uclibc examples gdbm ipv6 +ncurses +readline sqlite +ssl +threads tk +wide-unicode wininst +xml"
