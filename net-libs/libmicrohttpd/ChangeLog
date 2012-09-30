@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libmicrohttpd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/ChangeLog,v 1.18 2012/09/15 15:07:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/ChangeLog,v 1.19 2012/09/30 23:43:38 blueness Exp $
+
+  30 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
+  libmicrohttpd-0.9.22.ebuild:
+  keyword ~arm, bug #436728
 
   15 Sep 2012; Agostino Sarubbo <ago@gentoo.org> libmicrohttpd-0.9.21.ebuild:
   Stable for amd64, wrt bug #433327
@@ -92,4 +96,3 @@
   +libmicrohttpd-0.9.0.ebuild, +metadata.xml:
   New ebuild for bug #224165. Thanks to rpansky, Adam Coyne, candrews and
   others
-
