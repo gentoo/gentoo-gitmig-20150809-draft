@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgamin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgamin/ChangeLog,v 1.37 2012/09/22 02:01:21 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgamin/ChangeLog,v 1.38 2012/09/30 16:18:22 armin76 Exp $
+
+  30 Sep 2012; Raúl Porcel <armin76@gentoo.org> libgamin-0.1.10-r3.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #433227
 
   22 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
   libgamin-0.1.10-r3.ebuild:
