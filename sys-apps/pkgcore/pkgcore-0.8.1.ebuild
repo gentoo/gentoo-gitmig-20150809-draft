@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.7.7.8-r2.ebuild,v 1.1 2012/05/21 02:07:41 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.8.1.ebuild,v 1.1 2012/09/30 07:34:30 ferringb Exp $
 
 EAPI="3"
 DISTUTILS_SRC_TEST="setup.py"
@@ -16,8 +16,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="-doc build"
 
-RDEPEND=">=dev-lang/python-2.4
-	>=dev-python/snakeoil-0.4.5
+RDEPEND=">=dev-lang/python-2.5
+	>=dev-python/snakeoil-0.5.1
 	|| ( >=dev-lang/python-2.5 dev-python/pycrypto )"
 DEPEND="${RDEPEND}
 	doc? ( dev-python/sphinx dev-python/pyparsing )"
@@ -30,25 +30,12 @@ pkg_setup() {
 	python_pkg_setup
 }
 
-src_prepare() {
-	epatch "${FILESDIR}/${PN}-${PV}"-fix-resolver-assert.patch
-	epatch "${FILESDIR}/${PN}-${PV}"-ebuild-envs-assert.patch
-}
-
 src_compile() {
-	distutils_src_compile
-
-	if use doc; then
-		python setup.py build_docs || die "doc building failed"
-	fi
+	distutils_src_compile $(use_enable doc html-docs)
 }
 
 src_install() {
-	distutils_src_install
-
-	if use doc; then
-		dohtml -r build/sphinx/html/*
-	fi
+	distutils_src_install $(use_enable doc html-docs)
 }
 
 pkg_postinst() {
