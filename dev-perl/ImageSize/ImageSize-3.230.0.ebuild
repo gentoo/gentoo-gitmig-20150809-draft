@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageSize/ImageSize-3.230.0.ebuild,v 1.7 2012/03/25 16:20:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageSize/ImageSize-3.230.0.ebuild,v 1.8 2012/09/30 19:02:47 armin76 Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ DESCRIPTION="The Perl Image-Size Module"
 
 LICENSE="|| ( Artistic-2 LGPL-2.1 )"
 SLOT="0"
-KEYWORDS="alpha amd64 ppc ppc64 x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE=""
 
 RDEPEND="
