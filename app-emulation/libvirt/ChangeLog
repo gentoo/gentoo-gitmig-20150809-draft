@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.213 2012/09/30 03:34:54 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.214 2012/09/30 05:07:07 cardoe Exp $
+
+  30 Sep 2012; Doug Goldstein <cardoe@gentoo.org> libvirt-0.10.2.ebuild,
+  libvirt-9999.ebuild, +files/libvirtd.init-r9:
+  Bump the init script to fix an issue where the halt command could not be used
+  during the correct phase with OpenRC.
 
   30 Sep 2012; Doug Goldstein <cardoe@gentoo.org> libvirt-9999.ebuild:
   Update the live ebuild to the latest tweak in 0.10.2.
