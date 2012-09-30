@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-LibXSLT
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXSLT/ChangeLog,v 1.94 2012/09/07 09:05:21 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXSLT/ChangeLog,v 1.95 2012/09/30 18:42:28 armin76 Exp $
+
+  30 Sep 2012; Raúl Porcel <armin76@gentoo.org> XML-LibXSLT-1.760.0.ebuild,
+  XML-LibXSLT-1.770.0.ebuild, XML-LibXSLT-1.780.0.ebuild:
+  Drop alpha keywords
 
 *XML-LibXSLT-1.780.0 (07 Sep 2012)
 
