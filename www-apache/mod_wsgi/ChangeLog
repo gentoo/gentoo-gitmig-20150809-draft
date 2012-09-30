@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/mod_wsgi
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_wsgi/ChangeLog,v 1.31 2011/05/11 19:12:59 arfrever Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_wsgi/ChangeLog,v 1.32 2012/09/30 11:28:26 djc Exp $
+
+*mod_wsgi-3.4 (30 Sep 2012)
+
+  30 Sep 2012; Dirkjan Ochtman <djc@gentoo.org> +mod_wsgi-3.4.ebuild:
+  Version bump to 3.4.
 
   11 May 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   files/mod_wsgi-3.3-python-3.2.patch:
