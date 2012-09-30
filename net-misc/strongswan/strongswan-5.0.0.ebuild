@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-5.0.0.ebuild,v 1.6 2012/09/30 17:05:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-5.0.0.ebuild,v 1.7 2012/09/30 17:54:41 gurligebis Exp $
 
 EAPI=2
 inherit eutils linux-info user
@@ -142,7 +142,6 @@ src_install() {
 	if use non-root; then
 		fowners ${UGID}:${UGID} \
 			/etc/ipsec.conf \
-			/etc/ipsec.secrets \
 			/etc/strongswan.conf
 
 		dir_ugid="${UGID}"

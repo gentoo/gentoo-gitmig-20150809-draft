@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/strongswan
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.101 2012/09/30 17:05:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.102 2012/09/30 17:54:41 gurligebis Exp $
+
+  30 Sep 2012; <gurligebis@gentoo.org> strongswan-5.0.0.ebuild:
+  Removing reference to missing ipsec.secrets file, fixing bug #436682
 
   30 Sep 2012; Raúl Porcel <armin76@gentoo.org> strongswan-5.0.0.ebuild:
   Drop sparc keywords
