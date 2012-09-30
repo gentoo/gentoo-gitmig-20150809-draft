@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mac/mac-3.99.4.5.7-r1.ebuild,v 1.4 2012/07/10 17:50:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mac/mac-3.99.4.5.7-r1.ebuild,v 1.5 2012/09/30 18:26:06 armin76 Exp $
 
 EAPI=4
 inherit flag-o-matic versionator
@@ -15,7 +15,7 @@ SRC_URI="http://etree.org/shnutils/shntool/support/formats/ape/unix/${MY_PV}-${P
 
 LICENSE="mac"
 SLOT="0"
-KEYWORDS="~alpha amd64 ppc x86"
+KEYWORDS="alpha amd64 ppc x86"
 IUSE="mmx static-libs"
 
 RDEPEND=""
