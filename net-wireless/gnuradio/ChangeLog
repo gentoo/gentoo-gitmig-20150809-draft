@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/gnuradio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/ChangeLog,v 1.17 2012/09/09 05:38:17 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/ChangeLog,v 1.18 2012/09/30 14:57:10 chithanh Exp $
+
+  30 Sep 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -files/gnuradio-3.6.0-cmake-sysconfdir.patch, -gnuradio-3.6.0-r1.ebuild,
+  -gnuradio-3.6.1-r1.ebuild, -gnuradio-3.6.1.ebuild:
+  Drop some obsolete versions.
 
 *gnuradio-9999 (09 Sep 2012)
 
