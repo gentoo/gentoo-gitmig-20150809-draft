@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.905 2012/09/28 03:37:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.906 2012/09/30 06:47:05 dirtyepic Exp $
+
+*gcc-4.7.2 (30 Sep 2012)
+
+  30 Sep 2012; Ryan Hill <dirtyepic@gentoo.org> gcc-4.7.0.ebuild,
+  gcc-4.7.1.ebuild, +gcc-4.7.2.ebuild:
+  Version bump (bug #435852). Fixes bug #421413 (libtheora ICE) and bug #423675
+  (gnash/boost ICE).
 
   28 Sep 2012; Zac Medico <zmedico@gentoo.org> gcc-2.95.3-r10.ebuild:
   Drop global scope tc-arch call, which breaks metadata generation due to KV
