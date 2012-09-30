@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/tempita
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tempita/ChangeLog,v 1.8 2012/09/24 02:49:54 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tempita/ChangeLog,v 1.9 2012/09/30 17:04:10 armin76 Exp $
+
+  30 Sep 2012; Raúl Porcel <armin76@gentoo.org> tempita-0.5.1.ebuild:
+  Add ~ia64/~s390/~sh/~sparc wrt #381709
 
   24 Sep 2012; Anthony G. Basile <blueness@gentoo.org> tempita-0.5.1.ebuild:
   keyword ~ppc64, bug #381709
