@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/modsecurity-crs/modsecurity-crs-2.2.6.ebuild,v 1.1 2012/09/28 20:59:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/modsecurity-crs/modsecurity-crs-2.2.6.ebuild,v 1.2 2012/09/30 18:02:09 flameeyes Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="lua geoip"
 
-RDEPEND=">=www-apache/mod_security-2.5.13-r1[lua?,geoip?]"
+RDEPEND=">=www-apache/mod_security-2.7[lua?,geoip?]"
 DEPEND=""
 
 S="${WORKDIR}/${P}"
