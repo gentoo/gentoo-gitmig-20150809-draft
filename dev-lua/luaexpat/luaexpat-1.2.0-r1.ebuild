@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luaexpat/luaexpat-1.2.0-r1.ebuild,v 1.4 2012/09/28 17:33:24 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luaexpat/luaexpat-1.2.0-r1.ebuild,v 1.5 2012/09/30 12:03:55 djc Exp $
 
 EAPI=4
 
@@ -39,7 +39,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install
+	emake DESTDIR="${D}" install
 	dodoc README
 	dohtml -r doc/*
 }
