@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/json-c
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-c/ChangeLog,v 1.21 2012/06/14 15:31:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-c/ChangeLog,v 1.22 2012/09/30 18:14:18 armin76 Exp $
+
+  30 Sep 2012; Raúl Porcel <armin76@gentoo.org> json-c-0.9-r1.ebuild:
+  alpha/ia64/sh/sparc stable wrt #418745
 
   14 Jun 2012; Jeroen Roovers <jer@gentoo.org> json-c-0.9-r1.ebuild:
   Stable for HPPA (bug #418745).
