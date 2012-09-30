@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.3.11-r1.ebuild,v 1.3 2012/09/23 21:11:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.3.11-r1.ebuild,v 1.4 2012/09/30 14:01:08 blueness Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://cyberelk.net/tim/software/system-config-printer/"
 SRC_URI="http://cyberelk.net/tim/data/${PN/-common}/${PV%.*}/${MY_P}.tar.xz"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ppc ppc64 ~sh ~sparc ~x86"
 SLOT="0"
 IUSE="doc policykit"
 
