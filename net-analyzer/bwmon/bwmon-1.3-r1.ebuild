@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwmon/bwmon-1.3-r1.ebuild,v 1.3 2012/09/30 08:13:06 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwmon/bwmon-1.3-r1.ebuild,v 1.4 2012/09/30 08:14:36 pinkbyte Exp $
 
 EAPI="4"
 
@@ -9,7 +9,6 @@ inherit eutils flag-o-matic toolchain-funcs
 DESCRIPTION="Simple ncurses bandwidth monitor"
 HOMEPAGE="http://bwmon.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-RESTRICT="mirror"
 
 DEPEND="sys-libs/ncurses"
 RDEPEND="${DEPEND}"
