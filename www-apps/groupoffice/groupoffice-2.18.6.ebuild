@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/groupoffice/groupoffice-2.18.6.ebuild,v 1.4 2008/08/25 15:31:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/groupoffice/groupoffice-2.18.6.ebuild,v 1.5 2012/09/30 18:43:13 armin76 Exp $
 
 inherit eutils webapp depend.php versionator
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://group-office.sourceforge.net/"
 SRC_URI="mirror://sourceforge/group-office/${PN}-com-${MY_PV}-stable-${MY_PV1}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND="app-arch/zip
