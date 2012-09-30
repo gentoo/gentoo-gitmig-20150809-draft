@@ -1,6 +1,10 @@
 # ChangeLog for app-text/an
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.34 2012/09/12 02:07:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/an/ChangeLog,v 1.35 2012/09/30 18:12:43 armin76 Exp $
+
+  30 Sep 2012; Raúl Porcel <armin76@gentoo.org> an-0.95.3.ebuild,
+  an-0.95.3.2.ebuild:
+  Drop alpha keywords
 
   12 Sep 2012; Jeroen Roovers <jer@gentoo.org> -files/an-0.95-make.patch:
   Remove unused patch by jalan (bug #344183).
