@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.38 2012/06/27 15:52:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.39 2012/09/30 03:34:54 cardoe Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ else
 	SRC_URI="http://libvirt.org/sources/${MY_P}.tar.gz
 		ftp://libvirt.org/libvirt/${MY_P}.tar.gz
 		${BACKPORTS:+
-			http://dev.gentoo.org/~cardoe/distfiles/${MY_P}-bp-${BACKPORTS}.tar.bz2}"
+			http://dev.gentoo.org/~cardoe/distfiles/${MY_P}-${BACKPORTS}.tar.bz2}"
 	KEYWORDS="~amd64 ~x86"
 fi
 S="${WORKDIR}/${P%_rc*}"
@@ -93,6 +93,7 @@ RDEPEND="sys-libs/readline
 	udev? ( >=sys-fs/udev-145 >=x11-libs/libpciaccess-0.10.9 )
 	virt-network? ( net-dns/dnsmasq
 		>=net-firewall/iptables-1.4.10
+		net-misc/radvd
 		net-firewall/ebtables
 		sys-apps/iproute2[-minimal] )
 	elibc_glibc? ( || ( >=net-libs/libtirpc-0.2.2-r1 <sys-libs/glibc-2.14 ) )"
