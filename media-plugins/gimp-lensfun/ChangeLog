@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gimp-lensfun
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gimp-lensfun/ChangeLog,v 1.2 2012/09/30 13:16:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gimp-lensfun/ChangeLog,v 1.3 2012/09/30 17:47:06 hwoarang Exp $
+
+*gimp-lensfun-0.2.2-r1 (30 Sep 2012)
+
+  30 Sep 2012; Markos Chandras <hwoarang@gentoo.org>
+  +files/gimp-lensfun-0.2.2-build.patch, +gimp-lensfun-0.2.2-r1.ebuild,
+  -gimp-lensfun-0.2.2.ebuild:
+  Build system fixes thanks to Julian Ospald (hasufell). Bug #436660
 
 *gimp-lensfun-0.2.2 (30 Sep 2012)
 
