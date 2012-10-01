@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.328 2012/06/08 18:50:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.329 2012/10/01 18:26:02 mr_bones_ Exp $
+
+  01 Oct 2012; Michael Sterrett <mr_bones_@gentoo.org> -syslog-ng-3.3.5.ebuild:
+  old
 
 *syslog-ng-3.3.5-r1 (08 Jun 2012)
 
