@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-meta
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-meta/ChangeLog,v 1.75 2012/09/16 11:27:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-meta/ChangeLog,v 1.76 2012/10/01 17:42:08 grobian Exp $
+
+  01 Oct 2012; Fabian Groffen <grobian@gentoo.org>
+  gst-plugins-meta-0.10-r7.ebuild:
+  Marked ~x64-macos
 
   16 Sep 2012; Pacho Ramos <pacho@gentoo.org> -gst-plugins-meta-0.10-r6.ebuild,
   gst-plugins-meta-0.10-r7.ebuild, metadata.xml:
