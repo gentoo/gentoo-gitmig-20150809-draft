@@ -1,0 +1,10 @@
+# ChangeLog for app-office/geierlein
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/geierlein/ChangeLog,v 1.1 2012/10/01 21:24:40 hanno Exp $
+
+*geierlein-0.3.4 (01 Oct 2012)
+
+  01 Oct 2012; Hanno Boeck <hanno@gentoo.org> +geierlein-0.3.4.ebuild,
+  +metadata.xml:
+  Initial commit, will replace taxbird someday.
+
