@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-check_glsa2/nagios-check_glsa2-20120930.ebuild,v 1.1 2012/09/30 23:35:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-check_glsa2/nagios-check_glsa2-20120930-r1.ebuild,v 1.1 2012/10/01 01:34:08 flameeyes Exp $
 
 EAPI=4
 
@@ -34,6 +34,7 @@ src_prepare() {
 src_install() {
 	local nagiosplugindir=/usr/$(get_libdir)/nagios/plugins
 	exeinto ${nagiosplugindir}
+	doexe *.sh
 
 	dodoc README
 
