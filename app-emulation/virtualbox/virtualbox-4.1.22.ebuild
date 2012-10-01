@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.1.22.ebuild,v 1.4 2012/09/17 20:17:37 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.1.22.ebuild,v 1.5 2012/10/01 09:25:39 polynomial-c Exp $
 
 EAPI=4
 
@@ -18,6 +18,8 @@ fi
 
 DESCRIPTION="Family of powerful x86 virtualization products for enterprise as well as home use"
 HOMEPAGE="http://www.virtualbox.org/"
+SRC_URI="${SRC_URI}
+	http://dev.gentoo.org/~polynomial-c/${PN}/patchsets/${PN}-4.1.22-patches-01.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -141,23 +143,9 @@ src_prepare() {
 	sed -e "s@MY_LIBDIR@$(get_libdir)@" \
 		"${FILESDIR}"/${PN}-4-localconfig > LocalConfig.kmk || die
 
-	# unset useless/problematic checks in configure
-	epatch "${FILESDIR}/${PN}-ose-3.2.8-mesa-check.patch" \
-		"${FILESDIR}/${PN}-4-makeself-check.patch" \
-		"${FILESDIR}/${PN}-4-mkisofs-check.patch"
-
-	# fix build with --as-needed (bug #249295 and bug #350907)
-	epatch "${FILESDIR}/${PN}-4.1.4-asneeded.patch"
-
 	# Respect LDFLAGS
 	sed -e "s@_LDFLAGS\.${ARCH}*.*=@& ${LDFLAGS}@g" \
 		-i Config.kmk src/libs/xpcom18a4/Config.kmk || die
-
-	# We still want to use ${HOME}/.VirtualBox/Machines as machines dir.
-	epatch "${FILESDIR}/${PN}-4.0.2-restore_old_machines_dir.patch"
-
-	# Don't build vboxpci.ko module (D'oh!)
-	epatch "${FILESDIR}"/${PN}-4.1.2-vboxpci-build.patch
 
 	# Use PAM only when pam USE flag is enbaled (bug #376531)
 	if ! use pam ; then
@@ -174,10 +162,13 @@ src_prepare() {
 		java-pkg-opt-2_src_prepare
 	fi
 
-	# Fix compile error on hardened bug 339914 (disable PIE)
-	if gcc-specs-pie ; then
-		epatch "${FILESDIR}"/${PN}-4.1.20-nopie.patch
+	if ! gcc-specs-pie ; then
+		EPATCH_EXCLUDE="050_${PN}-4.1.20-nopie.patch"
 	fi
+
+	EPATCH_SUFFIX="patch" \
+	EPATCH_FORCE="yes" \
+	epatch "${WORKDIR}"/patches
 }
 
 src_configure() {

@@ -1,6 +1,22 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.132 2012/09/18 05:36:39 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.133 2012/10/01 09:25:39 polynomial-c Exp $
+
+  01 Oct 2012; Lars Wendler <polynomial-c@gentoo.org>
+  -files/virtualbox-ose-3.2.8-mesa-check.patch,
+  -files/virtualbox-4.0.2-restore_old_machines_dir.patch,
+  -files/virtualbox-4.1.2-vboxpci-build.patch,
+  -files/virtualbox-4.1.4-asneeded.patch,
+  -files/virtualbox-4.1.6-yasm120-fix.patch,
+  -files/virtualbox-4.1.8-nopie.patch,
+  -files/virtualbox-4.1.10-libgsoapssl.patch,
+  -files/virtualbox-4.1.20-nopie.patch, virtualbox-4.1.22.ebuild,
+  virtualbox-4.2.0-r1.ebuild, -files/virtualbox-4.2.0-nopie.patch,
+  -files/virtualbox-4-asneeded.patch, -files/virtualbox-4-makeself-check.patch,
+  -files/virtualbox-4-mkisofs-check.patch:
+  Moved all patches into separate tar archives. Added a patch to fix
+  compilation with =dev-libs/libxslt-1.1.27 (bug #435994 and bug #436246).
+  Thanks to Jouni Kosonen for providing a patch.
 
   18 Sep 2012; Lars Wendler <polynomial-c@gentoo.org>
   -virtualbox-4.1.12.ebuild, -virtualbox-4.1.18.ebuild:
