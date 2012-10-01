@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/passook
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/passook/ChangeLog,v 1.15 2010/04/06 05:54:22 abcd Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/passook/ChangeLog,v 1.16 2012/10/01 20:08:36 ulm Exp $
+
+*passook-20121001 (01 Oct 2012)
+
+  01 Oct 2012; Ulrich Müller <ulm@gentoo.org> passook-1.0.0.ebuild,
+  +passook-20121001.ebuild:
+  New snapshot from upstream git repo. License is GPL-3+ now, bug 436178.
 
   06 Apr 2010; Jonathan Callen <abcd@gentoo.org> passook-1.0.0.ebuild,
   -files/passook.diff, +files/passook.patch:
