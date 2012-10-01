@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/buildbot-slave
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot-slave/ChangeLog,v 1.27 2012/09/30 17:29:45 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot-slave/ChangeLog,v 1.28 2012/10/01 10:43:05 djc Exp $
+
+  01 Oct 2012; Dirkjan Ochtman <djc@gentoo.org> buildbot-slave-0.8.7.ebuild:
+  Fix dependency on Twisted.
 
 *buildbot-slave-0.8.7 (30 Sep 2012)
 
