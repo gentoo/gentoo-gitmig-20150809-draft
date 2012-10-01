@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-qt7/phonon-qt7-0_pre20110424.ebuild,v 1.6 2012/09/30 13:13:57 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-qt7/phonon-qt7-0_pre20110424.ebuild,v 1.7 2012/10/01 17:45:14 grobian Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ HOMEPAGE="https://projects.kde.org/projects/kdesupport/phonon/phonon-quicktime"
 SRC_URI="http://dev.gentoo.org/~dilfridge/distfiles/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
-KEYWORDS="~ppc-macos"
+KEYWORDS="~ppc-macos ~x64-macos"
 SLOT="0"
 IUSE="debug"
 
