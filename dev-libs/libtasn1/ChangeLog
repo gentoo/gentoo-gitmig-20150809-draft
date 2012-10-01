@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libtasn1
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.171 2012/09/29 12:08:11 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.172 2012/10/01 17:52:21 grobian Exp $
+
+  01 Oct 2012; Fabian Groffen <grobian@gentoo.org> libtasn1-2.14.ebuild:
+  Marked ~x64-macos
 
   29 Sep 2012; Anthony G. Basile <blueness@gentoo.org> libtasn1-2.13.ebuild:
   stable ppc ppc64, bug #436366
