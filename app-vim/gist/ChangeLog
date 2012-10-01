@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/gist
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gist/ChangeLog,v 1.9 2012/10/01 09:35:36 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gist/ChangeLog,v 1.10 2012/10/01 09:36:03 radhermit Exp $
+
+  01 Oct 2012; Tim Harder <radhermit@gentoo.org> -gist-5.5.ebuild:
+  Remove old.
 
 *gist-7.0 (01 Oct 2012)
 
