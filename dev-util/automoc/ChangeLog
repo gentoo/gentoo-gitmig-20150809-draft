@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/automoc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/automoc/ChangeLog,v 1.4 2012/05/17 12:52:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/automoc/ChangeLog,v 1.5 2012/10/01 17:44:01 grobian Exp $
+
+  01 Oct 2012; Fabian Groffen <grobian@gentoo.org> automoc-0.9.88.ebuild:
+  Marked ~x64-macos
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org> automoc-0.9.88.ebuild:
   keyword ~amd64-fbsd
@@ -91,4 +94,3 @@
   02 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   +metadata.xml, +automoc-0.9.84.ebuild:
   Add kde-4.1.2 into the tree from the kde-testing overlay.
-
