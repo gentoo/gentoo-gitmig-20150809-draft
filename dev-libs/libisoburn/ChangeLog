@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libisoburn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/ChangeLog,v 1.99 2012/09/30 18:59:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/ChangeLog,v 1.100 2012/10/01 16:35:20 billie Exp $
+
+  01 Oct 2012; Daniel Pielmeier <billie@gentoo.org> -libisoburn-1.0.0.ebuild:
+  Remove old.
 
   30 Sep 2012; Raúl Porcel <armin76@gentoo.org> libisoburn-1.2.4.ebuild:
   alpha stable wrt #433223
