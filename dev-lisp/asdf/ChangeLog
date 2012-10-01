@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/asdf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/asdf/ChangeLog,v 1.1 2012/04/07 09:54:02 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/asdf/ChangeLog,v 1.2 2012/10/01 17:36:00 grobian Exp $
+
+  01 Oct 2012; Fabian Groffen <grobian@gentoo.org> asdf-1.89.ebuild:
+  Marked ~x64-macos
 
 *asdf-1.89 (07 Apr 2012)
 *asdf-1.86-r1 (07 Apr 2012)
@@ -129,4 +132,3 @@
 
   07 Jul 2003; Matthew Kennedy <mkennedy@gentoo.org> :
   initial import
-

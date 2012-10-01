@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/asdf-binary-locations
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/asdf-binary-locations/ChangeLog,v 1.1 2012/04/07 10:03:01 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/asdf-binary-locations/ChangeLog,v 1.2 2012/10/01 17:36:41 grobian Exp $
+
+  01 Oct 2012; Fabian Groffen <grobian@gentoo.org>
+  asdf-binary-locations-20061018.ebuild:
+  Marked ~x64-macos
 
 *asdf-binary-locations-20061018 (07 Apr 2012)
 
@@ -52,4 +56,3 @@
   09 Nov 2006; Matthew Kennedy <mkennedy@gentoo.org>
   +cl-asdf-binary-locations-20061018.ebuild:
   Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>.
-
