@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60_p20120127084908.ebuild,v 1.6 2012/07/23 01:12:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60_p20120127084908.ebuild,v 1.7 2012/10/01 05:43:22 vapier Exp $
 
 EAPI="3"
 
@@ -78,6 +78,7 @@ src_configure() {
 	set_opt I18N use nls
 	set_opt HAVE_HWIB has_version '>=sys-kernel/linux-headers-2.6'
 	set_opt HAVE_HWTR has_version '<sys-kernel/linux-headers-3.5'
+	set_opt HAVE_HWSTRIP has_version '<sys-kernel/linux-headers-3.6'
 	if use static ; then
 		append-flags -static
 		append-ldflags -static
