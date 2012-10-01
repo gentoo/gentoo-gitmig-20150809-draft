@@ -1,10 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.85 2012/09/30 22:19:59 mgorny Exp $
-
-# Michał Górny <mgorny@gentoo.org> (01 Oct 2012)
-# libmicrohttpd not keyworded for ARM.
-sys-apps/systemd http
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.86 2012/10/01 07:50:14 mgorny Exp $
 
 # Steev Klimaszewski <steev@gentoo.org> (03 Aug 2012)
 # No java on ARM
