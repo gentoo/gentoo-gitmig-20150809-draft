@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.5.1.ebuild,v 1.1 2012/07/21 12:01:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.5.1.ebuild,v 1.2 2012/10/01 16:38:09 pacho Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -8,7 +8,7 @@ PYTHON_DEPEND="python? 2"
 inherit base eutils gnome.org python
 
 DESCRIPTION="VNC viewer widget for GTK"
-HOMEPAGE="http://live.gnome.org/gtk-vnc"
+HOMEPAGE="https://live.gnome.org/gtk-vnc"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -130,16 +130,18 @@ src_test() {
 }
 
 src_install() {
+	# Parallel installation fails sometimes, bug #328273, upstream bug #651923
+
 	dodoc AUTHORS ChangeLog NEWS README
 
 	cd ${GTK2_BUILDDIR}
 	einfo "Running make install in ${GTK2_BUILDDIR}"
-	base_src_install
+	MAKEOPTS="${MAKEOPTS} -j1" base_src_install
 
 	if use gtk3; then
 		cd ${GTK3_BUILDDIR}
 		einfo "Running make install in ${GTK3_BUILDDIR}"
-		base_src_install
+		MAKEOPTS="${MAKEOPTS} -j1" base_src_install
 	fi
 
 	python_clean_installation_image
