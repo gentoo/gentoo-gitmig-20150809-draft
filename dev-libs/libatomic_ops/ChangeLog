@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libatomic_ops
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatomic_ops/ChangeLog,v 1.29 2012/05/29 18:52:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatomic_ops/ChangeLog,v 1.30 2012/10/01 09:21:10 radhermit Exp $
+
+*libatomic_ops-7.2d (01 Oct 2012)
+
+  01 Oct 2012; Tim Harder <radhermit@gentoo.org> +libatomic_ops-7.2d.ebuild:
+  Version bump.
 
 *libatomic_ops-7.2_alpha6 (29 May 2012)
 
