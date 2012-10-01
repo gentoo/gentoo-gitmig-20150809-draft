@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/owncloud
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/ChangeLog,v 1.15 2012/08/21 08:19:41 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/ChangeLog,v 1.16 2012/10/01 08:04:41 voyageur Exp $
+
+  01 Oct 2012; Bernard Cafarelli <voyageur@gentoo.org> -owncloud-3.0.3.ebuild:
+  Remove last 3.x version, not supported upstream anymore (and version 4 is
+  stabler now)
 
 *owncloud-4.0.7 (21 Aug 2012)
 
