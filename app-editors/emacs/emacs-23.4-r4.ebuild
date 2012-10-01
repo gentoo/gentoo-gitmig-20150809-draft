@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.4-r4.ebuild,v 1.9 2012/09/26 15:53:37 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.4-r4.ebuild,v 1.10 2012/10/01 19:55:18 ulm Exp $
 
 EAPI=4
 WANT_AUTOMAKE="none"
@@ -195,11 +195,13 @@ src_configure() {
 
 src_compile() {
 	export SANDBOX_ON=0			# for the unbelievers, see Bug #131505
-	emake CC="$(tc-getCC)"
+	emake CC="$(tc-getCC)" \
+		AR="$(tc-getAR) cq" \
+		RANLIB="$(tc-getRANLIB)"
 }
 
 src_install () {
-	emake install DESTDIR="${D}"
+	emake DESTDIR="${D}" install
 
 	rm "${ED}"/usr/bin/emacs-${FULL_VERSION}-${EMACS_SUFFIX} \
 		|| die "removing duplicate emacs executable failed"

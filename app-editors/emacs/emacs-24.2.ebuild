@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-24.2.ebuild,v 1.4 2012/10/01 08:46:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-24.2.ebuild,v 1.5 2012/10/01 19:55:18 ulm Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ inherit autotools elisp-common eutils flag-o-matic multilib
 DESCRIPTION="The extensible, customizable, self-documenting real-time display editor"
 HOMEPAGE="http://www.gnu.org/software/emacs/"
 SRC_URI="mirror://gnu/emacs/${P}.tar.xz
-	mirror://gentoo/${P}-patches-1.tar.xz"
+	mirror://gentoo/${P}-patches-2.tar.xz"
 
 LICENSE="GPL-3+ FDL-1.3+ BSD HPND MIT W3C unicode PSF-2"
 SLOT="24"
@@ -212,7 +212,7 @@ src_compile() {
 }
 
 src_install () {
-	emake install DESTDIR="${D}"
+	emake DESTDIR="${D}" install
 
 	rm "${ED}"/usr/bin/emacs-${FULL_VERSION}-${EMACS_SUFFIX} \
 		|| die "removing duplicate emacs executable failed"
