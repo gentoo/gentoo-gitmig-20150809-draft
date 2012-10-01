@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bsh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/ChangeLog,v 1.56 2012/01/23 18:58:59 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/ChangeLog,v 1.57 2012/10/01 08:47:15 ago Exp $
+
+  01 Oct 2012; Agostino Sarubbo <ago@gentoo.org> bsh-2.0_beta4-r4.ebuild:
+  Stable for amd64, wrt bug #436564
 
 *bsh-2.0_beta4-r4 (23 Jan 2012)
 
