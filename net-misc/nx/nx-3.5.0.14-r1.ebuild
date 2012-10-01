@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.5.0.14-r1.ebuild,v 1.1 2012/07/11 14:38:29 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.5.0.14-r1.ebuild,v 1.2 2012/10/01 11:00:53 rich0 Exp $
 
 EAPI=4
 inherit autotools eutils multilib
@@ -13,7 +13,7 @@ SRC_URI="http://code.x2go.org/releases/source/nx-libs/nx-libs-${PV}-full.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="elibc_glibc"
 
 RDEPEND="elibc_glibc? ( || ( net-libs/libtirpc <sys-libs/glibc-2.14 ) )
