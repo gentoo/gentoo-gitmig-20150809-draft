@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/clucene
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/ChangeLog,v 1.53 2012/09/29 17:03:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/ChangeLog,v 1.54 2012/10/01 11:41:11 johu Exp $
+
+  01 Oct 2012; Johannes Huber <johu@gentoo.org> -clucene-0.9.21b-r1.ebuild,
+  -files/clucene-0.9.21b-doxygen.patch, -files/clucene-0.9.21b-gcc44.patch:
+  Remove old.
 
   29 Sep 2012; Raúl Porcel <armin76@gentoo.org> clucene-2.3.3.4-r3.ebuild:
   alpha/ia64/sparc stable wrt #433812
