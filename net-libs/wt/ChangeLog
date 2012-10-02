@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/wt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wt/ChangeLog,v 1.13 2012/10/02 08:08:40 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wt/ChangeLog,v 1.14 2012/10/02 10:26:37 mattm Exp $
+
+  02 Oct 2012; Matthew Marlowe <mattm@gentoo.org> wt-3.2.2_p1.ebuild:
+  Hopefully last qa fix.  Because wt can act as its own webserver and can't
+  depend on apache or any other webserver users being installed, we need to
+  create its own user/group and tell cmake to set ownership of /var/run/wt and
+  other data directories to user/group wt.
 
   02 Oct 2012; Matthew Marlowe <mattm@gentoo.org> wt-3.2.2_p1.ebuild:
   Hopeful fix for the QA install issues associated with cmake eclass and net-

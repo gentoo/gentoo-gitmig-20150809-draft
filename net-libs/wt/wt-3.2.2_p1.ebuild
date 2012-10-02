@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wt/wt-3.2.2_p1.ebuild,v 1.2 2012/10/02 08:08:40 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wt/wt-3.2.2_p1.ebuild,v 1.3 2012/10/02 10:26:37 mattm Exp $
 
 EAPI="2"
 
@@ -45,6 +45,9 @@ pkg_setup() {
 	if use test && use !sqlite; then
 		ewarn "Tests need sqlite, disabling."
 	fi
+
+	enewgroup wt
+	enewuser wt -1 -1 /var/lib/wt/home wt
 }
 
 src_prepare() {
@@ -72,6 +75,8 @@ src_configure() {
 		-DSHARED_LIBS=ON
 		-DMULTI_THREADED=ON
 		-DUSE_SYSTEM_SQLITE3=ON
+		-DWEBUSER=wt
+		-DWEBGROUP=wt
 		$(cmake-utils_use extjs ENABLE_EXT)
 		$(cmake-utils_use graphicsmagick ENABLE_GM)
 		$(cmake-utils_use pdf ENABLE_HARU)
@@ -101,6 +106,10 @@ src_install() {
 	cmake-utils_src_install
 
 	use doc && dohtml -A pdf,xhtml -r doc/*
+
+	dodir \
+		/var/lib/wt \
+		/var/lib/wt/home
 }
 
 pkg_postinst() {
@@ -110,4 +119,10 @@ pkg_postinst() {
 		elog "You can use spawn-fcgi to spawn the witty-processes and run them"
 		elog "in a chroot environment."
 	fi
+
+	chown -R wt:wt "${ROOT}"/var/lib/wt
+	chmod 0750 \
+		"${ROOT}"/var/lib/wt \
+		"${ROOT}"/var/lib/wt/home
+
 }
