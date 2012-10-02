@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Path-Class
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Path-Class/ChangeLog,v 1.39 2012/09/12 11:07:28 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Path-Class/ChangeLog,v 1.40 2012/10/02 01:12:49 blueness Exp $
+
+  02 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  Path-Class-0.260.0.ebuild:
+  stable ppc ppc64, bug #429004
 
   12 Sep 2012; Johannes Huber <johu@gentoo.org> Path-Class-0.260.0.ebuild:
   Stable for x86, wrt bug #429004
