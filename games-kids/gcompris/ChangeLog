@@ -1,6 +1,9 @@
 # ChangeLog for games-kids/gcompris
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.78 2012/07/16 15:58:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.79 2012/10/02 00:37:03 mr_bones_ Exp $
+
+  02 Oct 2012; Michael Sterrett <mr_bones_@gentoo.org> gcompris-12.05.ebuild:
+  fix locale install (bug #427192)
 
 *gcompris-12.05 (16 Jul 2012)
 
