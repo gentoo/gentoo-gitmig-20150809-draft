@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wt/wt-3.2.2_p1.ebuild,v 1.1 2012/10/02 06:07:07 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wt/wt-3.2.2_p1.ebuild,v 1.2 2012/10/02 08:08:40 mattm Exp $
 
 EAPI="2"
 
@@ -67,7 +67,6 @@ src_configure() {
 	BOOST_INC="/usr/include/boost-${BOOST_VER}"
 
 	local mycmakeargs=(
-		-DDESTDIR="${D}"
 		-DLIB_INSTALL_DIR=$(get_libdir)
 		$(cmake-utils_use test BUILD_TESTS)
 		-DSHARED_LIBS=ON

@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/wt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wt/ChangeLog,v 1.12 2012/10/02 06:07:07 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wt/ChangeLog,v 1.13 2012/10/02 08:08:40 mattm Exp $
+
+  02 Oct 2012; Matthew Marlowe <mattm@gentoo.org> wt-3.2.2_p1.ebuild:
+  Hopeful fix for the QA install issues associated with cmake eclass and net-
+  libs/wt.
 
 *wt-3.2.2_p1 (02 Oct 2012)
 
