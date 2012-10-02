@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.441 2012/09/29 16:56:23 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.442 2012/10/02 18:27:07 ssuominen Exp $
+
+  02 Oct 2012; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
+  Mask <gnome-base/gvfs-1.12.3-r1[udisks] for stabilization bug #427544,
+  Comment #27
 
   29 Sep 2012; <swift@gentoo.org> package.mask:
   Add mask for selinux-rtorrent, new policy ebuild
