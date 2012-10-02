@@ -1,0 +1,9 @@
+# ChangeLog for kde-base/knavalbattle
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knavalbattle/ChangeLog,v 1.1 2012/10/02 18:11:59 johu Exp $
+
+*knavalbattle-4.9.2 (02 Oct 2012)
+
+  02 Oct 2012; Johannes Huber <johu@gentoo.org> +knavalbattle-4.9.2.ebuild:
+  Version bump KDE SC 4.9.2
+
