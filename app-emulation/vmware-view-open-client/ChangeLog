@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/vmware-view-open-client
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-view-open-client/ChangeLog,v 1.11 2012/05/03 18:49:08 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-view-open-client/ChangeLog,v 1.12 2012/10/02 12:17:49 slyfox Exp $
+
+  02 Oct 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/vmware-view-open-client-4.5.0.297975-unbundle-intltool.patch,
+  vmware-view-open-client-4.5.0.297975-r1.ebuild:
+  Fix build failure against newer intltool (bug #417335 by Randall Wald and
+  others).
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org>
   vmware-view-open-client-4.5.0.297975-r1.ebuild:
@@ -70,4 +76,3 @@
   16 Jul 2009; Timo Gurr <tgurr@gentoo.org>
   +vmware-view-open-client-3.1.0.169073.ebuild, +metadata.xml:
   Initial ebuild, thanks to Jeremy Wood. Fixes bug #257637.
-
