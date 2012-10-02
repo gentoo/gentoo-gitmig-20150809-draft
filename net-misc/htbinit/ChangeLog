@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/htbinit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/htbinit/ChangeLog,v 1.20 2012/09/30 18:11:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/htbinit/ChangeLog,v 1.21 2012/10/02 07:50:30 kensington Exp $
+
+  02 Oct 2012; Michael Palimaka <kensington@gentoo.org> -files/htb.sysconfig,
+  -files/rc_htbinit, -htbinit-0.8.5-r4.ebuild:
+  Remove old.
 
   30 Sep 2012; Raúl Porcel <armin76@gentoo.org> htbinit-0.8.5-r4.ebuild,
   htbinit-0.8.5-r5.ebuild:
@@ -85,4 +89,3 @@
 
   25 Aug 2003; J.Alberto Suárez L. <bass@gentoo.org> htbinit-0.8.4.ebuild:
     Added to initscript the "clear" & "reload" options. Juan J. Prieto <jjptapia@eresmas.com>.
-
