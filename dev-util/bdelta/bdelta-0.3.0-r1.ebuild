@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bdelta/bdelta-0.3.0.ebuild,v 1.2 2012/09/27 22:13:54 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bdelta/bdelta-0.3.0-r1.ebuild,v 1.1 2012/10/02 21:52:26 slyfox Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ else
 	UNPACKER_ECLASS="vcs-snapshot"
 fi
 
-inherit multilib toolchain-funcs ${UNPACKER_ECLASS}
+inherit eutils multilib toolchain-funcs ${UNPACKER_ECLASS}
 
 if [[ -z ${LIVE_EBUILD} ]]; then
 	KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~x86-linux"
@@ -25,6 +25,10 @@ HOMEPAGE="http://bdelta.org"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-soname.patch
+}
 
 src_compile() {
 	emake -C src \
