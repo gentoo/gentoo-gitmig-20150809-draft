@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.6.2.ebuild,v 1.3 2012/06/28 21:59:22 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.6.2.ebuild,v 1.4 2012/10/02 01:29:38 floppym Exp $
 
 EAPI=4
 
-PYTHON_DEPEND="*"
+PYTHON_DEPEND="*::3.2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="*-jython *-pypy-*"
+RESTRICT_PYTHON_ABIS="3.3 *-jython *-pypy-*"
 
 inherit distutils eutils flag-o-matic fortran-2 toolchain-funcs versionator
 
