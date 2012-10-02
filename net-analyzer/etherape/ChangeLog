@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/etherape
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/ChangeLog,v 1.66 2012/05/04 06:08:09 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/ChangeLog,v 1.67 2012/10/02 19:29:38 zerochaos Exp $
+
+  02 Oct 2012; Rick Farina <zerochaos@gentoo.org> etherape-0.9.12.ebuild:
+  cleanup a bunch of libGlade warnings by adjusting deps
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> etherape-0.9.12.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

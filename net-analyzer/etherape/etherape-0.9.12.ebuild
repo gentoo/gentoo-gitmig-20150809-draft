@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.9.12.ebuild,v 1.6 2012/05/04 06:08:09 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.9.12.ebuild,v 1.7 2012/10/02 19:29:38 zerochaos Exp $
 
 EAPI="2"
 inherit eutils gnome2
@@ -15,6 +15,7 @@ KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE=""
 
 RDEPEND=">=gnome-base/libglade-2.0
+	gnome-base/libgnomecanvas[glade]
 	>=gnome-base/libgnomeui-2.0
 	net-libs/libpcap"
 DEPEND="${RDEPEND}
