@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/aws-sdk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/aws-sdk/ChangeLog,v 1.10 2012/08/10 15:40:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/aws-sdk/ChangeLog,v 1.11 2012/10/02 01:29:04 flameeyes Exp $
+
+*aws-sdk-1.6.7 (02 Oct 2012)
+
+  02 Oct 2012; Diego E. Pettenò <flameeyes@gentoo.org> +aws-sdk-1.6.7.ebuild,
+  +files/aws-sdk-1.6.7.patch:
+  Version bump (finally) with a patch to support Ruby 1.8 syntax for a while
+  still.
 
 *aws-sdk-1.6.3 (10 Aug 2012)
 
