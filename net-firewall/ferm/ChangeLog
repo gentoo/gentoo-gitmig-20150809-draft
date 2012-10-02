@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/ferm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ferm/ChangeLog,v 1.3 2012/09/30 19:28:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ferm/ChangeLog,v 1.4 2012/10/02 01:27:42 blueness Exp $
+
+  02 Oct 2012; Anthony G. Basile <blueness@gentoo.org> ferm-2.1.1.ebuild:
+  stable ppc, bug #436324
 
   30 Sep 2012; Agostino Sarubbo <ago@gentoo.org> ferm-2.1.1.ebuild:
   Stable for amd64, wrt bug #436324
