@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/hexchat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/ChangeLog,v 1.7 2012/10/01 09:13:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/ChangeLog,v 1.8 2012/10/02 02:25:18 blueness Exp $
+
+  02 Oct 2012; Anthony G. Basile <blueness@gentoo.org> hexchat-2.9.1.ebuild:
+  keyword ~arm, bug #435872
 
   01 Oct 2012; Agostino Sarubbo <ago@gentoo.org> hexchat-2.9.1.ebuild:
   Stable for x86, wrt bug #435890
