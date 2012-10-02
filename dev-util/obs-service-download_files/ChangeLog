@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/obs-service-download_files
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/obs-service-download_files/ChangeLog,v 1.4 2012/10/02 11:04:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/obs-service-download_files/ChangeLog,v 1.5 2012/10/02 11:06:53 scarabeus Exp $
+
+  02 Oct 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  obs-service-download_files-9999.ebuild:
+  Set empty keywords.
 
   02 Oct 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   -obs-service-download_files-0.1.ebuild,
