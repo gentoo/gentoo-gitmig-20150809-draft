@@ -1,6 +1,12 @@
 # ChangeLog for app-text/build-docbook-catalog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/build-docbook-catalog/ChangeLog,v 1.30 2012/04/26 17:20:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/build-docbook-catalog/ChangeLog,v 1.31 2012/10/02 23:18:15 floppym Exp $
+
+*build-docbook-catalog-1.19.1 (02 Oct 2012)
+
+  02 Oct 2012; Mike Gilbert <floppym@gentoo.org>
+  +build-docbook-catalog-1.19.1.ebuild:
+  Version bump for bug 437004. Don't install /etc/xml/.keep.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org>
   build-docbook-catalog-1.19.ebuild:
@@ -127,4 +133,3 @@
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> +metadata.xml,
   +build-docbook-catalog-1.1.ebuild:
   New package to generate docbook-xml catalogs.  Submitted by myself in bug 52725
-
