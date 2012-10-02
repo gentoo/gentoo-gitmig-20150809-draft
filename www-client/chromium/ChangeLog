@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.722 2012/09/28 18:18:47 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.723 2012/10/02 07:02:09 phajdan.jr Exp $
+
+*chromium-23.0.1271.10-r1 (02 Oct 2012)
+
+  02 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-system-speex-r0.patch, -chromium-23.0.1271.6.ebuild,
+  +chromium-23.0.1271.10-r1.ebuild, chromium-9999-r1.ebuild:
+  Re-enable NaCl. Build with system speex (bug #432748 by floppym). Remove old.
 
 *chromium-23.0.1271.10 (28 Sep 2012)
 
