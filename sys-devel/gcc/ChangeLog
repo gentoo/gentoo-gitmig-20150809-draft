@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.906 2012/09/30 06:47:05 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.907 2012/10/02 04:54:42 vapier Exp $
+
+  02 Oct 2012; Mike Frysinger <vapier@gentoo.org> gcc-4.7.2.ebuild:
+  Update x32 patch #436756 by Alphat-PC.
 
 *gcc-4.7.2 (30 Sep 2012)
 
