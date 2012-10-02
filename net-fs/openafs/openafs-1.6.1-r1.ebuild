@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.6.1-r1.ebuild,v 1.1 2012/09/25 00:13:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.6.1-r1.ebuild,v 1.2 2012/10/02 23:17:48 naota Exp $
 
 EAPI="4"
 
@@ -18,7 +18,7 @@ SRC_URI="http://openafs.org/dl/openafs/${MY_PV}/${MY_P}-src.tar.bz2
 
 LICENSE="IBM BSD openafs-krb5-a APSL-2 sun-rpc"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86 ~amd64-linux ~x86-linux ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="~amd64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc kerberos pam"
 
 RDEPEND="~net-fs/openafs-kernel-${PV}
