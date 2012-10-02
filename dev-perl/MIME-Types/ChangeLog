@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/MIME-Types
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Types/ChangeLog,v 1.85 2012/09/29 16:58:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Types/ChangeLog,v 1.86 2012/10/02 00:29:03 blueness Exp $
+
+  02 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  MIME-Types-1.350.0.ebuild:
+  stable ppc ppc64, bug #428994
 
   29 Sep 2012; Raúl Porcel <armin76@gentoo.org> MIME-Types-1.350.0.ebuild:
   alpha/ia64/sparc stable wrt #428994
@@ -331,4 +335,3 @@
   05 Aug 2004; Aron Griffis <agriffis@gentoo.org> +metadata.xml,
   +MIME-Types-1.13.ebuild:
   Add MIME-Types module in support of cvsweb-3.0.1 (not yet in portage)
-
