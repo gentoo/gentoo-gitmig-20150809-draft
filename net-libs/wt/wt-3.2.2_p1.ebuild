@@ -1,14 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wt/wt-3.2.2.ebuild,v 1.1 2012/07/27 13:29:41 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wt/wt-3.2.2_p1.ebuild,v 1.1 2012/10/02 06:07:07 mattm Exp $
 
 EAPI="2"
 
-inherit cmake-utils
+inherit cmake-utils versionator
 
 DESCRIPTION="C++ library for developing interactive web applications."
+MY_P=${P/_/-}
 HOMEPAGE="http://webtoolkit.eu/"
-SRC_URI="mirror://sourceforge/witty/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/witty/wt/3.2.2/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -33,6 +34,7 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 
 DOCS="Changelog INSTALL"
+S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
 	if use !server && use !fcgi; then
@@ -59,6 +61,11 @@ src_prepare() {
 }
 
 src_configure() {
+	BOOST_PKG="$(best_version ">=dev-libs/boost-1.36.0")"
+	BOOST_VER="$(get_version_component_range 1-2 "${BOOST_PKG/*boost-/}")"
+	BOOST_VER="$(replace_all_version_separators _ "${BOOST_VER}")"
+	BOOST_INC="/usr/include/boost-${BOOST_VER}"
+
 	local mycmakeargs=(
 		-DDESTDIR="${D}"
 		-DLIB_INSTALL_DIR=$(get_libdir)
