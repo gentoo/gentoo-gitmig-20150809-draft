@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/host/host-20070128-r1.ebuild,v 1.7 2012/09/24 18:57:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/host/host-20070128-r1.ebuild,v 1.8 2012/10/02 19:03:17 blueness Exp $
 
 EAPI="2"
 inherit eutils toolchain-funcs multilib
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.weird.com/pub/Planix/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ppc sparc x86"
+KEYWORDS="alpha amd64 hppa ppc ~ppc64 sparc x86"
 IUSE="debug"
 
 # Bug 91515
