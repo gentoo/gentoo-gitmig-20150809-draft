@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/hteditor
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/ChangeLog,v 1.50 2012/06/06 06:36:50 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/ChangeLog,v 1.51 2012/10/02 14:35:04 kensington Exp $
+
+  02 Oct 2012; Michael Palimaka <kensington@gentoo.org> metadata.xml:
+  Add upstream metadata.
 
   06 Jun 2012; Richard Yao <ryao@gentoo.org> hteditor-2.0.20.ebuild:
   Add ~amd64-fbsd keyword; fix ~amd64-fbsd build failure

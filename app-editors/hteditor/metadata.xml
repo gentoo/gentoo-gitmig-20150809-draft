@@ -4,4 +4,8 @@
 	<maintainer>
 		<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
+	<upstream>
+		<remote-id type="sourceforge">hte</remote-id>
+		<bugs-to>http://sourceforge.net/tracker/?group_id=1066</bugs-to>
+	</upstream>
 </pkgmetadata>
