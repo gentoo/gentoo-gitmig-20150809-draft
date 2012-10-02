@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/intel-ocl-sdk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intel-ocl-sdk/ChangeLog,v 1.4 2012/10/02 05:48:24 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intel-ocl-sdk/ChangeLog,v 1.5 2012/10/02 06:43:43 xarthisius Exp $
+
+  02 Oct 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  intel-ocl-sdk-2.0.31360.ebuild, metadata.xml:
+  Add use flag for installing ioc64
 
 *intel-ocl-sdk-2.0.31360 (02 Oct 2012)
 
