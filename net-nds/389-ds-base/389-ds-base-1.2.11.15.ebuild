@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/389-ds-base-1.2.11.15.ebuild,v 1.1 2012/10/02 20:23:36 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/389-ds-base-1.2.11.15.ebuild,v 1.2 2012/10/02 20:25:09 lxnay Exp $
 
 EAPI=2
 
 WANT_AUTOMAKE="1.9"
 MY_P=${P/_alpha/.a}
 MY_P=${MY_P/_rc/.rc}
-inherit eutils multilib flag-o-matic autotools
+inherit user eutils multilib flag-o-matic autotools
 
 DESCRIPTION="389 Directory Server (core librares and daemons )"
 HOMEPAGE="http://port389.org/"
