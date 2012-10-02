@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/wt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wt/ChangeLog,v 1.15 2012/10/02 12:42:27 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wt/ChangeLog,v 1.16 2012/10/02 14:01:26 mattm Exp $
+
+  02 Oct 2012; Matthew Marlowe <mattm@gentoo.org> wt-3.2.2_p1.ebuild:
+  According to http://www.cmake.org/Wiki/CMake_FAQ#Does_CMake.27s_.22make_instal
+  l.22_support_DESTDIR.3F, cmake supports DESTDIR so I've added it to variables
+  passed during the call to the cmake install function.
 
   02 Oct 2012; Matthew Marlowe <mattm@gentoo.org> wt-3.2.2_p1.ebuild:
   Expanded dodir/chown/chmod commands in src_install in yet another try to see
