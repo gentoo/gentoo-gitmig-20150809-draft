@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/scipy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.78 2012/06/28 21:30:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.79 2012/10/02 01:36:36 floppym Exp $
+
+  02 Oct 2012; Mike Gilbert <floppym@gentoo.org> scipy-0.10.1.ebuild,
+  scipy-0.9.0-r1.ebuild:
+  Restrict python 3.3 based on testing by Arfrever.
 
   28 Jun 2012; Sebastien Fabbro <fabbros@gentoo.org> -scipy-0.10.0.ebuild,
   -scipy-0.9.0-r3.ebuild, scipy-0.10.1.ebuild:
@@ -399,4 +403,3 @@
   22 Aug 2005; Peter Bienstman <pbienst@gentoo.org> +files/system_info.diff,
   +metadata.xml, +scipy-0.3.2.ebuild:
   Initial import. Closes 24593. Thanks to D. Grant, D. Dale and others.
-

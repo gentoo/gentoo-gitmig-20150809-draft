@@ -1,11 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.9.0-r1.ebuild,v 1.9 2012/05/04 08:22:49 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.9.0-r1.ebuild,v 1.10 2012/10/02 01:36:36 floppym Exp $
 
 EAPI="3"
 
+PYTHON_DEPEND="*::3.2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="*-jython"
+RESTRICT_PYTHON_ABIS="3.3 *-jython"
 
 inherit eutils fortran-2 distutils flag-o-matic toolchain-funcs versionator
 
