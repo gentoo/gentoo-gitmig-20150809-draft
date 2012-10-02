@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/wesnoth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.211 2012/08/25 08:21:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.212 2012/10/02 21:46:54 blueness Exp $
+
+  02 Oct 2012; Anthony G. Basile <blueness@gentoo.org> wesnoth-1.10.4.ebuild:
+  stable ppc ppc64, bug #436816
 
 *wesnoth-1.10.4 (25 Aug 2012)
 
