@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.425 2012/10/02 10:46:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.426 2012/10/02 10:52:31 scarabeus Exp $
+
+  02 Oct 2012; Tomáš Chvátal <scarabeus@gentoo.org> obs-service.eclass:
+  Always use openSUSE:Tools as project to get updates. Remove obs_package
+  declaration as it is equal to pn.
 
   02 Oct 2012; Tomáš Chvátal <scarabeus@gentoo.org> obs-download.eclass:
   Change the documentation a bit and take OBS_PACKAGE from PN if not set.
