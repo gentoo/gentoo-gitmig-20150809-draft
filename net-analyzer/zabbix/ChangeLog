@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.108 2012/08/30 21:17:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.109 2012/10/02 05:34:04 mattm Exp $
+
+*zabbix-2.0.2-r2 (02 Oct 2012)
+
+  02 Oct 2012; Matthew Marlowe <mattm@gentoo.org> +zabbix-2.0.2-r2.ebuild:
+  Fixes for bug 435016, bug 433090, and bug 412247.
 
   30 Aug 2012; Agostino Sarubbo <ago@gentoo.org> zabbix-1.8.15.ebuild:
   Stable for amd64, wrt bug #428372
