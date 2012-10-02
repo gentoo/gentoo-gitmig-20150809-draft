@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.112 2012/07/10 14:03:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.113 2012/10/02 15:22:32 jer Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
@@ -32,10 +32,6 @@ media-sound/pulseaudio equalizer
 # Jeroen Roovers <jer@gentoo.org> (21 May 2012)
 # media-sound/lilypond has problems running mpost (bug #416961)
 app-text/asciidoc test
-
-# Jeroen Roovers <jer@gentoo.org> (16 May 2012)
-# Masked until dev-lang/python:3 goes stable again
-sys-apps/portage python3
 
 # Jeroen Roovers <jer@gentoo.org> (26 Apr 2012)
 # Untested dependency on net-misc/connman
