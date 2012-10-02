@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/suse-build
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/ChangeLog,v 1.5 2012/07/30 13:48:45 miska Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/ChangeLog,v 1.6 2012/10/02 11:17:27 scarabeus Exp $
+
+*suse-build-2012.09.27 (02 Oct 2012)
+
+  02 Oct 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +suse-build-2012.09.27.ebuild, -suse-build-2011.01.20-r1.ebuild,
+  -suse-build-2011.09.26-r1.ebuild, suse-build-9999.ebuild:
+  Version bump to latest. Cleanup older. Polish the ebuild a bit.
 
 *suse-build-2011.09.26-r1 (30 Jul 2012)
 *suse-build-2011.01.20-r1 (30 Jul 2012)
@@ -32,4 +39,3 @@
   +suse-build-2011.01.20.ebuild, +suse-build-9999.ebuild, +metadata.xml:
   New ebuild for suse-build. Ebuild written by me. Dependency for osc - bug
   #350599
-
