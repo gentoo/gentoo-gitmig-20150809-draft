@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/obs-download.eclass,v 1.2 2012/08/17 13:04:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/obs-download.eclass,v 1.3 2012/10/02 10:46:02 scarabeus Exp $
 
 # @ECLASS: obs-download.eclass
 # @MAINTAINER:
@@ -21,21 +21,23 @@
 # @ECLASS-VARIABLE: OPENSUSE_RELEASE
 # @DEFAULT_UNSET
 # @DESCRIPTION:
-# From which stable openSUSE realease to take files.
+# From which openSUSE realease to take files.
+# Eg.: 12.1, 12.2, Factory
 
 # @ECLASS-VARIABLE: OBS_PROJECT
 # @DEFAULT_UNSET
 # @DESCRIPTION:
-# In which obs project pakage is. This variable don't have to be set, if
+# In which obs project pakage is.
+# This variable does not have to be set, if
 # OPENSUSE_RELEASE is provided.
 
 # @ECLASS-VARIABLE: OBS_PACKAGE
-# @REQUIRED
 # @DESCRIPTION:
 # Name of the package we want to take files from.
+# By default taken from ${PN}.
 
 [[ -z ${OPENSUSE_RELEASE} ]] || OBS_PROJECT="openSUSE:${OPENSUSE_RELEASE}"
 [[ -n ${OBS_PROJECT} ]]      || die "OBS_PROJECT not set!"
-[[ -n ${OBS_PACKAGE} ]]      || die "OBS_PACKAGE not set!"
+[[ -n ${OBS_PACKAGE} ]]      || OBS_PACKAGE="${PN}"
 
 OBS_URI="https://api.opensuse.org/public/source/${OBS_PROJECT}/${OBS_PACKAGE}"
