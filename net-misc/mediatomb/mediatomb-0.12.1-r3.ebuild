@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/mediatomb-0.12.1-r3.ebuild,v 1.1 2012/10/02 03:32:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/mediatomb-0.12.1-r3.ebuild,v 1.2 2012/10/02 06:35:32 vapier Exp $
 
 EAPI="4"
 inherit autotools eutils linux-info user
@@ -15,7 +15,10 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~x86"
 IUSE="+curl debug +exif +ffmpeg id3tag inotify +javascript lastfm libextractor +magic +mp4 mysql +sqlite +taglib thumbnail +zlib"
-REQUIRED_USE="|| ( mysql sqlite ) ^^ ( taglib id3tag )"
+REQUIRED_USE="
+	|| ( mysql sqlite )
+	taglib? ( !id3tag ) id3tag? ( !taglib )
+"
 
 DEPEND="mysql? ( virtual/mysql )
 	id3tag? ( media-libs/id3lib )
@@ -59,6 +62,7 @@ src_prepare() {
 	if has_version ">=dev-lang/spidermonkey-1.8.7" ; then
 		sed -i 's:mozjs185:mozjs187:g' configure.ac || die #423991
 	fi
+	epatch "${FILESDIR}"/${P}-libextractor.patch #435394
 	eautoreconf
 }
 
