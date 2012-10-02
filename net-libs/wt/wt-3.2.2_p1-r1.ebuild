@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wt/wt-3.2.2_p1.ebuild,v 1.6 2012/10/02 14:20:35 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wt/wt-3.2.2_p1-r1.ebuild,v 1.1 2012/10/02 19:27:44 mattm Exp $
 
 EAPI="2"
 
-inherit cmake-utils versionator
+inherit cmake-utils versionator eutils
 
 DESCRIPTION="C++ library for developing interactive web applications."
 MY_P=${P/_/-}
@@ -51,6 +51,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "$FILESDIR/cmakelist.patch"
+
 	# just to be sure
 	rm -rf Wt/Dbo/backend/amalgamation
 
@@ -107,11 +109,9 @@ src_install() {
 
 	dodir \
 		/var/lib/wt \
-		/var/lib/wt/home \
-		/etc/wt \
-		/var/run/wt
+		/var/lib/wt/home
 
-	cmake-utils_src_install DESTDIR="${D}"
+	cmake-utils_src_install
 
 	use doc && dohtml -A pdf,xhtml -r doc/*
 
@@ -126,14 +126,10 @@ pkg_postinst() {
 	fi
 
 	chown -R wt:wt \
-		"${ROOT}"/var/lib/wt \
-		"${ROOT}"/var/run/wt \
-		"${ROOT}"/etc/wt
+		"${ROOT}"/var/lib/wt
 
 	chmod 0750 \
 		"${ROOT}"/var/lib/wt \
-		"${ROOT}"/var/lib/wt/home \
-		"${ROOT}"/var/run/wt \
-		"${ROOT}"/etc/wt
+		"${ROOT}"/var/lib/wt/home
 
 }
