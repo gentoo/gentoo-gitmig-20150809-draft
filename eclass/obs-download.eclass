@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/obs-download.eclass,v 1.3 2012/10/02 10:46:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/obs-download.eclass,v 1.4 2012/10/02 10:57:52 scarabeus Exp $
 
 # @ECLASS: obs-download.eclass
 # @MAINTAINER:
@@ -28,7 +28,7 @@
 # @DEFAULT_UNSET
 # @DESCRIPTION:
 # In which obs project pakage is.
-# This variable does not have to be set, if
+# This variable does not have to be set and is overriden, if
 # OPENSUSE_RELEASE is provided.
 
 # @ECLASS-VARIABLE: OBS_PACKAGE
