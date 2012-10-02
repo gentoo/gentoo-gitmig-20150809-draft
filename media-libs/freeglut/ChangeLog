@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freeglut
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.94 2012/09/30 17:28:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.95 2012/10/02 14:22:29 jer Exp $
+
+  02 Oct 2012; Jeroen Roovers <jer@gentoo.org> freeglut-2.8.0-r1.ebuild:
+  Stable for HPPA (bug #433307).
 
   30 Sep 2012; Raúl Porcel <armin76@gentoo.org> freeglut-2.8.0-r1.ebuild:
   arm/ia64/sh/sparc/x86 stable wrt #433307
