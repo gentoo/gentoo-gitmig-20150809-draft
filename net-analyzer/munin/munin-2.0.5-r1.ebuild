@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.5-r1.ebuild,v 1.4 2012/09/13 07:20:05 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.5-r1.ebuild,v 1.5 2012/10/02 21:04:14 flameeyes Exp $
 
 EAPI=4
 
@@ -59,6 +59,7 @@ DEPEND_COM="dev-lang/perl
 			!minimal? (
 				dev-perl/HTML-Template
 				dev-perl/IO-Socket-INET6
+				dev-perl/URI
 				>=net-analyzer/rrdtool-1.3[perl]
 			)"
 

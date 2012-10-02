@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.103 2012/09/20 21:39:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.104 2012/10/02 21:04:14 flameeyes Exp $
+
+  02 Oct 2012; Diego E. Pettenò <flameeyes@gentoo.org> munin-2.0.5-r1.ebuild,
+  munin-2.0.6.ebuild:
+  Add missing dependency over dev-perl/URI (for master only). Thanks to Illya
+  Bilash in bug #436952.
 
   20 Sep 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml,
   munin-2.0.6.ebuild:
