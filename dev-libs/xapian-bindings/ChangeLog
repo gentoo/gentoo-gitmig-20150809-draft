@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/xapian-bindings
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/ChangeLog,v 1.43 2012/09/19 09:44:44 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/ChangeLog,v 1.44 2012/10/02 22:48:00 blueness Exp $
+
+  02 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  -xapian-bindings-1.2.10.ebuild, -xapian-bindings-1.2.8.ebuild,
+  -xapian-bindings-1.2.9.ebuild:
+  Remove older versions
 
   19 Sep 2012; Johannes Huber <johu@gentoo.org> xapian-bindings-1.2.12.ebuild:
   Stable for x86, wrt bug #434564
@@ -233,4 +238,3 @@
   +files/xapian-bindings-0.9.5-skip-csharp-test.patch, +metadata.xml,
   +xapian-bindings-0.9.5.ebuild:
   New package.
-
