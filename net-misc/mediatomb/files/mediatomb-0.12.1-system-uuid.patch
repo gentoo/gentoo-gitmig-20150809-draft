@@ -1,5 +1,7 @@
-diff --git a/build/Makefile.am b/build/Makefile.am
-index 6cdfc16..64a965a 100644
+use libuuid from the system rather than local bundled code
+
+http://bugs.gentoo.org/270830
+
 --- a/build/Makefile.am
 +++ b/build/Makefile.am
 @@ -58,6 +58,7 @@ mediatomb_CXXFLAGS = -I$(top_srcdir)/src \
@@ -10,8 +12,6 @@ index 6cdfc16..64a965a 100644
      $(LIBEXIF_LDFLAGS) \
      $(ZLIB_LDFLAGS) \
      $(EXPAT_LDFLAGS) \
-diff --git a/build/libmediatomb_src b/build/libmediatomb_src
-index 1173942..9d4f7fd 100644
 --- a/build/libmediatomb_src
 +++ b/build/libmediatomb_src
 @@ -231,19 +231,6 @@ libmediatomb_a_SOURCES = \
