@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/gtk-builder-convert
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-builder-convert/ChangeLog,v 1.8 2012/07/16 06:37:59 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-builder-convert/ChangeLog,v 1.9 2012/10/02 15:39:01 jer Exp $
+
+  02 Oct 2012; Jeroen Roovers <jer@gentoo.org>
+  gtk-builder-convert-2.24.11.ebuild:
+  Stable for HPPA (bug #427544).
 
 *gtk-builder-convert-2.24.11 (16 Jul 2012)
 
