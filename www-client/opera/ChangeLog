@@ -1,6 +1,11 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.749 2012/09/24 00:49:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.750 2012/10/02 13:26:40 jer Exp $
+
+*opera-12.10.1615 (02 Oct 2012)
+
+  02 Oct 2012; Jeroen Roovers <jer@gentoo.org> +opera-12.10.1615.ebuild:
+  http://my.opera.com/desktopteam/blog/2012/10/02/opera-12-10-beta
 
   24 Sep 2012; Mike Frysinger <vapier@gentoo.org> opera-12.02.1578.ebuild:
   QA_DT_HASH (old/deprecated) -> QA_FLAGS_IGNORED (new hotness).
