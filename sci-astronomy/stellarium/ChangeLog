@@ -1,6 +1,10 @@
 # ChangeLog for sci-astronomy/stellarium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.102 2012/08/29 20:11:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.103 2012/10/02 20:04:18 blueness Exp $
+
+  02 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  stellarium-0.11.4a.ebuild:
+  stable ppc ppc64, bug #436810
 
 *stellarium-0.11.4a (29 Aug 2012)
 
