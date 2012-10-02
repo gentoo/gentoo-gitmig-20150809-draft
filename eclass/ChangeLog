@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.422 2012/09/29 20:48:58 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.423 2012/10/02 01:22:57 floppym Exp $
+
+  02 Oct 2012; Mike Gilbert <floppym@gentoo.org> python.eclass:
+  Add 3.3 as a supported python abi for testing.
 
   29 Sep 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   virtualx.eclass:
