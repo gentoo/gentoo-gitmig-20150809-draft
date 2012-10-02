@@ -1,5 +1,9 @@
 # ChangeLog for sys-libs/glibc
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.893 2012/09/26 05:21:41 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.894 2012/10/02 04:58:30 vapier Exp $
+
+  02 Oct 2012; Mike Frysinger <vapier@gentoo.org>
+  files/eblits/pkg_preinst.eblit:
+  Drop old /lib64 symlink migration as this has not been an issue for years.
 
   26 Sep 2012; Matt Turner <mattst88@gentoo.org> glibc-2.15-r2.ebuild:
   Stable on alpha, bug 430346.
