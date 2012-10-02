@@ -1,6 +1,13 @@
 # ChangeLog for dev-vcs/cvsps
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsps/ChangeLog,v 1.11 2012/08/26 18:26:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsps/ChangeLog,v 1.12 2012/10/02 15:58:59 slyfox Exp $
+
+*cvsps-2.2_beta1 (02 Oct 2012)
+
+  02 Oct 2012; Sergei Trofimovich <slyfox@gentoo.org> +cvsps-2.2_beta1.ebuild,
+  +files/cvsps-2.2_beta1-solaris.patch, metadata.xml:
+  Version bump by Jonas Bernoulli (stable versions are known to crash on real-
+  world repositories).
 
   26 Aug 2012; Raúl Porcel <armin76@gentoo.org> cvsps-2.1-r1.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #419894
