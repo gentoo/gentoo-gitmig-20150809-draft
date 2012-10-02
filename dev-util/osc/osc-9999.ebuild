@@ -1,16 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/osc/osc-9999.ebuild,v 1.3 2012/03/07 12:56:19 miska Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/osc/osc-9999.ebuild,v 1.4 2012/10/02 11:01:59 scarabeus Exp $
 
 EAPI=4
 
-EGIT_REPO_URI="git://gitorious.org/opensuse/osc.git"
-OPENSUSE_RELEASE="12.1"
-OBS_PACKAGE="${PN}"
+EGIT_REPO_URI="git://github.com/openSUSE/osc.git"
 
 if [[ "${PV}" == "9999" ]]; then
 	EXTRA_ECLASS="git-2"
 else
+	OBS_PROJECT="openSUSE:Tools"
 	EXTRA_ECLASS="obs-download"
 fi
 
@@ -27,11 +26,13 @@ SLOT="0"
 IUSE=""
 [[ "${PV}" == "9999" ]] || KEYWORDS="~amd64 ~x86"
 
-DEPEND="dev-python/urlgrabber
+DEPEND="
+	dev-python/urlgrabber
 	dev-python/pyxml
 	dev-python/elementtree
 	app-arch/rpm[python]
-	dev-python/m2crypto"
+	dev-python/m2crypto
+"
 RDEPEND="${DEPEND}"
 
 src_install() {
