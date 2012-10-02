@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wt/wt-3.2.2_p1.ebuild,v 1.3 2012/10/02 10:26:37 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wt/wt-3.2.2_p1.ebuild,v 1.4 2012/10/02 12:42:27 mattm Exp $
 
 EAPI="2"
 
@@ -103,13 +103,17 @@ src_test() {
 }
 
 src_install() {
+
+	dodir \
+		/var/lib/wt \
+		/var/lib/wt/home \
+		/etc/wt \
+		/var/run/wt
+
 	cmake-utils_src_install
 
 	use doc && dohtml -A pdf,xhtml -r doc/*
 
-	dodir \
-		/var/lib/wt \
-		/var/lib/wt/home
 }
 
 pkg_postinst() {
@@ -120,9 +124,15 @@ pkg_postinst() {
 		elog "in a chroot environment."
 	fi
 
-	chown -R wt:wt "${ROOT}"/var/lib/wt
+	chown -R wt:wt \
+		"${ROOT}"/var/lib/wt \
+		"${ROOT}"/var/run/wt \
+		"${ROOT}"/etc/wt
+
 	chmod 0750 \
 		"${ROOT}"/var/lib/wt \
-		"${ROOT}"/var/lib/wt/home
+		"${ROOT}"/var/lib/wt/home \
+		"${ROOT}"/var/run/wt \
+		"${ROOT}"/etc/wt
 
 }
