@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/lxml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.135 2012/09/29 21:50:31 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.136 2012/10/02 01:34:54 floppym Exp $
+
+  02 Oct 2012; Mike Gilbert <floppym@gentoo.org> lxml-2.3.4.ebuild,
+  lxml-2.3.5.ebuild, lxml-2.3.6.ebuild:
+  Restrict python 3.3 based on testing by Arfrever. This can be reversed in
+  lxml-3.0.
 
   29 Sep 2012; Tim Harder <radhermit@gentoo.org> -lxml-2.3.2.ebuild,
   -lxml-2.3.3.ebuild:
@@ -513,4 +518,3 @@
   01 Jun 2005; Lukasz Strzygowski <lucass@gentoo.org> +metadata.xml,
   +lxml-0.6.ebuild:
   Initial commit. Thanks to Henry Bucklow for bug #94623.
-
