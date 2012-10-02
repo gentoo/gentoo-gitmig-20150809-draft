@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.423 2012/10/02 01:22:57 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.424 2012/10/02 08:14:36 kensington Exp $
+
+  02 Oct 2012; Michael Palimaka <kensington@gentoo.org> cmake-utils.eclass,
+  virtualx.eclass:
+  Make VIRTUALX_COMMAND nonfatal so that Xvfb is always killed. Return status
+  at the end of CMake test phase. This fixes bug #406353.
 
   02 Oct 2012; Mike Gilbert <floppym@gentoo.org> python.eclass:
   Add 3.3 as a supported python abi for testing.
