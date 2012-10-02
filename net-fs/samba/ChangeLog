@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.525 2012/09/30 17:59:25 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.526 2012/10/02 08:00:47 polynomial-c Exp $
+
+*samba-3.6.8 (02 Oct 2012)
+
+  02 Oct 2012; Lars Wendler <polynomial-c@gentoo.org> -samba-3.5.14.ebuild,
+  -samba-3.5.16.ebuild, -samba-3.6.5.ebuild, +samba-3.6.8.ebuild:
+  non-maintainer commit: Version bump, removed old versions.
 
   30 Sep 2012; Mike Gilbert <floppym@gentoo.org> samba-4.0.0_rc1.ebuild:
   Remove minimum python version.
