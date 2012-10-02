@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-mimic
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mimic/ChangeLog,v 1.39 2011/10/15 18:35:19 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mimic/ChangeLog,v 1.40 2012/10/02 21:27:26 maekke Exp $
+
+  02 Oct 2012; Markus Meier <maekke@gentoo.org>
+  gst-plugins-mimic-0.10.19.ebuild:
+  arm stable, bug #427554
 
   15 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org>
   gst-plugins-mimic-0.10.22.ebuild:
