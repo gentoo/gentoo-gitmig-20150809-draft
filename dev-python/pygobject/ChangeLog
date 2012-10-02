@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygobject
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.166 2012/09/28 05:45:45 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.167 2012/10/02 01:32:04 floppym Exp $
+
+  02 Oct 2012; Mike Gilbert <floppym@gentoo.org> pygobject-3.0.4.ebuild,
+  pygobject-3.2.2.ebuild:
+  Restrict python 3.3 based on testing by Arfrever.
 
   28 Sep 2012; Matt Turner <mattst88@gentoo.org> pygobject-2.28.6-r52.ebuild,
   pygobject-3.2.2.ebuild:
@@ -739,4 +743,3 @@
   +pygobject-2.10.1.ebuild:
   Add GNOME 2 bindings for Python, needed for system-config-*. Based on 2.11
   ebuild in gnome overlay. Gnome herd, feel free to add yourself to metadata.
-

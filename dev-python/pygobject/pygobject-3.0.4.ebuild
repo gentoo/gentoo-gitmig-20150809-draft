@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.0.4.ebuild,v 1.14 2012/09/25 11:53:14 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.0.4.ebuild,v 1.15 2012/10/02 01:32:04 floppym Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 SUPPORT_PYTHON_ABIS="1"
-PYTHON_DEPEND="2:2.6 3:3.1"
-RESTRICT_PYTHON_ABIS="2.4 2.5 3.0 *-jython 2.7-pypy-*"
+PYTHON_DEPEND="2:2.6 3:3.1:3.2"
+RESTRICT_PYTHON_ABIS="2.4 2.5 3.0 3.3 *-jython 2.7-pypy-*"
 
 # XXX: Is the alternatives stuff needed anymore?
 inherit alternatives autotools eutils gnome2 python virtualx
