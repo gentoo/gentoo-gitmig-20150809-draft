@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14121 2012/10/02 07:48:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14122 2012/10/02 17:55:55 floppym Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Mike Gilbert <floppym@gentoo.org> (02 Oct 2012)
+# Dev channel releases are only for people who are developers or want more
+# experimental features and accept a more unstable release.
+>=www-client/chromium-24
+>=www-client/google-chrome-24
+
+# Mike Gilbert <floppym@gentoo.org> (02 Oct 2012)
+# Mask v8 versions used for www-client/chromium dev channel releases.
+>=dev-lang/v8-3.14
 
 # Samuli Suominen <ssuominen@gentoo.org> (25 Sep 2012)
 # Only package in tree incompatible with the new libmp4v2 API
@@ -160,16 +170,6 @@ dev-util/pccts
 # Mask the release candidates
 =app-emulation/libvirt-0.10.0_rc1
 =app-emulation/libvirt-0.10.0_rc2
-
-# Mike Gilbert <floppym@gentoo.org> (23 Aug 2012)
-# Dev channel releases are only for people who are developers or want more
-# experimental features and accept a more unstable release.
->=www-client/chromium-23
->=www-client/google-chrome-23
-
-# Mike Gilbert <floppym@gentoo.org> (23 Aug 2012)
-# Mask v8 versions used for www-client/chromium dev channel releases.
->=dev-lang/v8-3.13
 
 # Julian Ospald <hasufell@gentoo.org> (19 Aug 2012)
 # Masked for removal in 30 days
