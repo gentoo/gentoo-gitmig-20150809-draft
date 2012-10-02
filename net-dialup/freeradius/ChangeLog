@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/freeradius
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.106 2012/09/30 07:12:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.107 2012/10/02 09:58:12 nativemad Exp $
+
+  02 Oct 2012; Andreas Schuerch <nativemad@gentoo.org> freeradius-2.2.0.ebuild:
+  x86 stable, see bug 434802
 
   30 Sep 2012; Diego E. Pettenò <flameeyes@gentoo.org>
   -files/freeradius-2.1.10-ipv6.patch:
