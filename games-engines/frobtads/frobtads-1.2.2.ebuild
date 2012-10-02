@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/frobtads/frobtads-1.2.2.ebuild,v 1.1 2012/10/02 16:30:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/frobtads/frobtads-1.2.2.ebuild,v 1.2 2012/10/02 16:46:53 mr_bones_ Exp $
 
 EAPI=4
-inherit autotools eutils flag-o-matic games
+inherit eutils flag-o-matic games
 
 DESCRIPTION="Curses-based interpreter and development tools for TADS 2 and TADS 3 text adventures"
 HOMEPAGE="http://www.tads.org/frobtads.htm"
