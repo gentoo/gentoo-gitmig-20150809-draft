@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.0.11.ebuild,v 1.12 2012/09/29 14:04:36 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.0.11.ebuild,v 1.13 2012/10/02 06:15:02 grobian Exp $
 
 EAPI=4
 
@@ -30,7 +30,7 @@ pkg_setup() {
 		local base="${T}"/conftest
 		echo 'int main() { }' > "${base}".c
 		$(tc-getCC) -o "${base}" "${base}".c -lffi >&/dev/null
-		if [ $? -eq = 0 ]; then
+		if [ $? -eq 0 ]; then
 			eerror "The linker reported linking against -lffi to be working while it shouldn't have."
 			eerror "This is wrong and you should find and delete the old copy of libffi before continuing."
 			die "The system is in inconsistent state with unknown libffi installed."
