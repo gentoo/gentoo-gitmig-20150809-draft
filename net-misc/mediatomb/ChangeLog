@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/mediatomb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.34 2012/07/02 07:57:43 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.35 2012/10/02 03:32:15 vapier Exp $
+
+*mediatomb-0.12.1-r3 (02 Oct 2012)
+
+  02 Oct 2012; Mike Frysinger <vapier@gentoo.org>
+  +files/mediatomb-0.12.1-system-uuid.patch, +files/mediatomb-0.12.1.initd,
+  +mediatomb-0.12.1-r3.ebuild, metadata.xml:
+  Use system libuuid from util-linux #270830 by Diego Elio Pettenò.  Make mysql
+  init script optional all the time to support external services #368409 by
+  David Carlos Manuelda.  Update to EAPI=4 and split up USE flags to make things
+  more explicit.
 
   02 Jul 2012; Jeff Horelick <jdhore@gentoo.org> mediatomb-0.12.1-r2.ebuild:
   marked x86 per bug 422919
@@ -150,4 +160,3 @@
   +mediatomb-0.11.0.ebuild:
   Initial import of mediatomb, an UPnP media server compatible with Sony
   PlayStation 3. Thanks to BT in bug #172799 for the ebuild.
-
