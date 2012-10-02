@@ -1,5 +1,9 @@
 # ChangeLog for sys-libs/glibc
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.894 2012/10/02 04:58:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.895 2012/10/02 07:12:17 vapier Exp $
+
+  02 Oct 2012; Mike Frysinger <vapier@gentoo.org>
+  files/eblits/pkg_preinst.eblit:
+  Default host.conf:multi to on when /etc/hosts is small #436530 by Eray Aslan.
 
   02 Oct 2012; Mike Frysinger <vapier@gentoo.org>
   files/eblits/pkg_preinst.eblit:
