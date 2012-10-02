@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/gobject-introspection-common
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection-common/ChangeLog,v 1.6 2012/09/26 21:56:21 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection-common/ChangeLog,v 1.7 2012/10/02 15:29:10 jer Exp $
+
+  02 Oct 2012; Jeroen Roovers <jer@gentoo.org>
+  gobject-introspection-common-1.32.1.ebuild:
+  Stable for HPPA (bug #427544).
 
   26 Sep 2012; Matt Turner <mattst88@gentoo.org>
   gobject-introspection-common-1.32.1.ebuild:
