@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.225 2012/10/01 11:28:38 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.226 2012/10/02 10:23:44 kensington Exp $
+
+*cmake-2.8.9-r1 (02 Oct 2012)
+
+  02 Oct 2012; Michael Palimaka <kensington@gentoo.org> +cmake-2.8.9-r1.ebuild,
+  +files/cmake-2.8.9-tests.patch:
+  Disable TestUpload test since it requires network access, wrt bug #436188.
 
   01 Oct 2012; Johannes Huber <johu@gentoo.org> -cmake-2.8.8-r3.ebuild,
   -files/cmake-2.8.8-more-no_host_paths.patch,
