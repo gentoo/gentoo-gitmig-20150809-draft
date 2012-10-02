@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/RPC-XML
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/ChangeLog,v 1.71 2012/09/18 16:59:03 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/ChangeLog,v 1.72 2012/10/02 00:43:38 blueness Exp $
+
+  02 Oct 2012; Anthony G. Basile <blueness@gentoo.org> RPC-XML-0.770.0.ebuild:
+  stable ppc, bug #434306
 
   18 Sep 2012; Johannes Huber <johu@gentoo.org> RPC-XML-0.770.0.ebuild:
   Stable for x86, wrt bug #434306
