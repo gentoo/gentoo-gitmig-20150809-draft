@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/389-ds-base-1.2.9.6.ebuild,v 1.2 2012/05/03 04:24:37 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/389-ds-base-1.2.11.15.ebuild,v 1.1 2012/10/02 20:23:36 lxnay Exp $
 
 EAPI=2
 
@@ -19,22 +19,21 @@ KEYWORDS="~amd64 ~x86"
 IUSE="autobind auto-dn-suffix debug doc +pam-passthru +dna +ldapi +bitwise +presence kerberos selinux"
 
 ALL_DEPEND="!>=sys-libs/db-5.0
+	>=dev-libs/cyrus-sasl-2.1.19
+	>=dev-libs/icu-3.4
 	dev-libs/nss[utils]
 	dev-libs/nspr
 	dev-libs/svrcore
-	dev-libs/mozldap
-	>=dev-libs/cyrus-sasl-2.1.19
-	>=dev-libs/icu-3.4
-	>=sys-libs/db-4.5
-	>=net-analyzer/net-snmp-5.1.2
 	dev-libs/openssl
+	dev-libs/libpcre:3
+	dev-libs/mozldap
+	dev-perl/perl-mozldap
+	>=net-analyzer/net-snmp-5.1.2
 	sys-apps/tcp-wrappers
+	>=sys-libs/db-4.5
 	sys-libs/pam
 	sys-libs/zlib
-	dev-perl/perl-mozldap
-	dev-libs/libpcre:3
-	kerberos? ( net-nds/openldap
-		>=app-crypt/mit-krb5-1.7-r100[openldap] )
+	kerberos? ( net-nds/openldap >=app-crypt/mit-krb5-1.7-r100[openldap] )
 	selinux? ( >=sys-apps/policycoreutils-1.30.30
 		sec-policy/selinux-base-policy )"
 
@@ -57,6 +56,10 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}/selinux.patch"
+	# Fix compilation against mozldap
+	epatch "${FILESDIR}/389-ds-base-1.2.11-fix-mozldap.patch"
+	# Upstream patch, will be in 1.2.11.16, fixes CVE-2012-4450
+	epatch "${FILESDIR}/389-ds-base-1.2.11.16-cve-2012-4450.patch"
 
 	# as per 389 documentation, when 64bit, export USE_64
 	use amd64 && export USE_64=1
