@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/cdk-perl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/cdk-perl/ChangeLog,v 1.27 2012/09/15 18:47:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/cdk-perl/ChangeLog,v 1.28 2012/10/02 01:02:17 blueness Exp $
+
+  02 Oct 2012; Anthony G. Basile <blueness@gentoo.org> cdk-perl-20120324.ebuild:
+  stable ppc, bug #429016
 
   15 Sep 2012; Raúl Porcel <armin76@gentoo.org> cdk-perl-20031210.ebuild,
   cdk-perl-20120324.ebuild:
@@ -91,4 +94,3 @@
  
   Initial version submitted by  markus-krainer@chello.at (Markus Krainer) in
   bug # 3530
-
