@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/makemkv-1.7.6.ebuild,v 1.6 2012/07/04 09:28:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/makemkv-1.7.7.ebuild,v 1.1 2012/10/02 04:15:53 mattm Exp $
 
 EAPI=4
 inherit eutils gnome2-utils multilib
