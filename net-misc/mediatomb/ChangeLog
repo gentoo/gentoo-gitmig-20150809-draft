@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/mediatomb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.36 2012/10/02 06:35:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.37 2012/10/02 07:48:56 vapier Exp $
+
+  02 Oct 2012; Mike Frysinger <vapier@gentoo.org>
+  +files/mediatomb-0.12.1-mozjs187.patch, mediatomb-0.12.1-r3.ebuild:
+  Support spidermonkey-1.8.7 #423991 by Ian Stakenvicius.
 
   02 Oct 2012; Mike Frysinger <vapier@gentoo.org>
   +files/mediatomb-0.12.1-libextractor.patch, mediatomb-0.12.1-r3.ebuild:
