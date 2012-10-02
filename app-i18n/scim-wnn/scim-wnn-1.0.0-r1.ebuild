@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-wnn/scim-wnn-1.0.0-r1.ebuild,v 1.2 2012/05/03 19:24:27 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-wnn/scim-wnn-1.0.0-r1.ebuild,v 1.3 2012/10/02 02:40:49 naota Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+freewnn"
 
-RDEPEND=">=app-i18n/scim-1.4
+RDEPEND=">=app-i18n/scim-1.4[-gtk3]
 	dev-libs/wnn7sdk
 	freewnn? ( app-i18n/freewnn )"
 DEPEND="${RDEPEND}
