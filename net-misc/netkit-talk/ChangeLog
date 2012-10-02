@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/netkit-talk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-talk/ChangeLog,v 1.39 2012/10/01 18:09:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-talk/ChangeLog,v 1.40 2012/10/02 06:20:20 kensington Exp $
+
+  02 Oct 2012; Michael Palimaka <kensington@gentoo.org>
+  -netkit-talk-0.17-r4.ebuild:
+  Remove old.
 
   01 Oct 2012; Jeroen Roovers <jer@gentoo.org> netkit-talk-0.17-r5.ebuild:
   Stable for HPPA (bug #394019).
