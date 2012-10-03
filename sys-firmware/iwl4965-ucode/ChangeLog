@@ -1,6 +1,12 @@
 # ChangeLog for sys-firmware/iwl4965-ucode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/iwl4965-ucode/ChangeLog,v 1.1 2012/08/18 20:14:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/iwl4965-ucode/ChangeLog,v 1.2 2012/10/03 19:33:25 vapier Exp $
+
+  03 Oct 2012; Mike Frysinger <vapier@gentoo.org>
+  iwl4965-ucode-228.57.1.21.ebuild, iwl4965-ucode-228.57.2.21.ebuild,
+  iwl4965-ucode-228.57.2.23.ebuild, iwl4965-ucode-228.61.2.24.ebuild,
+  iwl4965-ucode-4.44.1.18.ebuild, iwl4965-ucode-4.44.1.20.ebuild:
+  Drop useless DEPEND strings -- these work fine w/out udev or hotplug.
 
   18 Aug 2012; Ulrich Müller <ulm@gentoo.org> +iwl4965-ucode-4.44.1.18.ebuild,
   +iwl4965-ucode-4.44.1.20.ebuild, +iwl4965-ucode-228.57.1.21.ebuild,
@@ -115,4 +121,3 @@
   11 Jul 2007; Saleem Abdulrasool <compnerd@gentoo.org> +metadata.xml,
   +iwl4965-ucode-4.44.15.ebuild:
   Initial import
-

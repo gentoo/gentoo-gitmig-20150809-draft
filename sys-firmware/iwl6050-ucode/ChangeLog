@@ -1,6 +1,10 @@
 # ChangeLog for sys-firmware/iwl6050-ucode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/iwl6050-ucode/ChangeLog,v 1.1 2012/08/18 20:15:26 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/iwl6050-ucode/ChangeLog,v 1.2 2012/10/03 19:35:09 vapier Exp $
+
+  03 Oct 2012; Mike Frysinger <vapier@gentoo.org>
+  iwl6050-ucode-41.28.5.1.ebuild, iwl6050-ucode-9.201.4.1.ebuild:
+  Drop useless DEPEND strings -- these work fine w/out udev or hotplug.
 
   18 Aug 2012; Ulrich Müller <ulm@gentoo.org> +iwl6050-ucode-9.201.4.1.ebuild,
   +iwl6050-ucode-41.28.5.1.ebuild, +metadata.xml:
@@ -30,4 +34,3 @@
   25 Jun 2010; Michael Pagano <mpagano@gentoo.org>
   +iwl6050-ucode-9.201.4.1.ebuild:
   Initial import of ucode for IWL 6050 series cards.
-

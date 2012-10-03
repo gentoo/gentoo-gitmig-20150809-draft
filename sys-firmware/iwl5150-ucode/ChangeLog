@@ -1,6 +1,9 @@
 # ChangeLog for sys-firmware/iwl5150-ucode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/iwl5150-ucode/ChangeLog,v 1.1 2012/08/18 20:12:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/iwl5150-ucode/ChangeLog,v 1.2 2012/10/03 19:33:51 vapier Exp $
+
+  03 Oct 2012; Mike Frysinger <vapier@gentoo.org> iwl5150-ucode-8.24.2.2.ebuild:
+  Drop useless DEPEND strings -- these work fine w/out udev or hotplug.
 
   18 Aug 2012; Ulrich Müller <ulm@gentoo.org> +iwl5150-ucode-8.24.2.2.ebuild,
   +metadata.xml:
@@ -15,4 +18,3 @@
   29 Jun 2009; Hanno Boeck <hanno@gentoo.org>
   +iwl5150-ucode-8.24.2.2.ebuild:
   Initial commit, resolves #270507.
-

@@ -1,6 +1,12 @@
 # ChangeLog for sys-firmware/iwl3945-ucode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/iwl3945-ucode/ChangeLog,v 1.1 2012/08/18 20:14:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/iwl3945-ucode/ChangeLog,v 1.2 2012/10/03 19:32:54 vapier Exp $
+
+  03 Oct 2012; Mike Frysinger <vapier@gentoo.org>
+  iwl3945-ucode-15.28.1.6.ebuild, iwl3945-ucode-15.28.1.8.ebuild,
+  iwl3945-ucode-15.28.2.8.ebuild, iwl3945-ucode-15.32.2.9.ebuild,
+  iwl3945-ucode-2.14.1.5.ebuild:
+  Drop useless DEPEND strings -- these work fine w/out udev or hotplug.
 
   18 Aug 2012; Ulrich Müller <ulm@gentoo.org> +iwl3945-ucode-2.14.1.5.ebuild,
   +iwl3945-ucode-15.28.1.6.ebuild, +iwl3945-ucode-15.28.1.8.ebuild,
@@ -78,4 +84,3 @@
   11 Jul 2007; Saleem Abdulrasool <compnerd@gentoo.org> +metadata.xml,
   +iwl3945-ucode-2.14.4.ebuild:
   Initial import
-

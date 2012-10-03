@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/iwl6005-ucode/iwl6005-ucode-17.168.5.3.ebuild,v 1.1 2012/08/18 20:12:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/iwl6005-ucode/iwl6005-ucode-17.168.5.3.ebuild,v 1.2 2012/10/03 19:34:18 vapier Exp $
 
 MY_PN="iwlwifi-6000g2a-ucode"
 
@@ -12,9 +12,6 @@ LICENSE="ipw3945"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-RDEPEND=""
-
-DEPEND="|| ( >=sys-fs/udev-096 >=sys-apps/hotplug-20040923 )"
 
 S="${WORKDIR}/${MY_PN}-${PV}"
 

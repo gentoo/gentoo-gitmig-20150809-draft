@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/iwl1000-ucode/iwl1000-ucode-128.50.3.1.ebuild,v 1.1 2012/08/06 15:30:25 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/iwl1000-ucode/iwl1000-ucode-128.50.3.1.ebuild,v 1.2 2012/10/03 19:32:13 vapier Exp $
 
 EAPI=4
 MY_P="iwlwifi-1000-ucode-${PV}"
@@ -13,8 +13,6 @@ LICENSE="ipw3945"
 SLOT="3"
 KEYWORDS=""
 IUSE=""
-
-RDEPEND="|| ( >=sys-fs/udev-096 >=sys-apps/hotplug-20040923 )"
 
 S="${WORKDIR}/${MY_P}"
 

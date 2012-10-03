@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/iwl3945-ucode/iwl3945-ucode-15.28.2.8.ebuild,v 1.1 2012/08/18 20:14:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/iwl3945-ucode/iwl3945-ucode-15.28.2.8.ebuild,v 1.2 2012/10/03 19:32:54 vapier Exp $
 
 MY_P="iwlwifi-3945-ucode-${PV}"
 
@@ -12,9 +12,6 @@ LICENSE="ipw3945"
 SLOT="1"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-
-DEPEND="|| ( >=sys-fs/udev-096 >=sys-apps/hotplug-20040923 )"
-RDEPEND=""
 
 S=${WORKDIR}/${MY_P}
 
