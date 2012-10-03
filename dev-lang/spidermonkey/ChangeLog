@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/spidermonkey
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.78 2012/07/04 18:51:57 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.79 2012/10/03 15:09:51 djc Exp $
+
+  03 Oct 2012; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Remove myself from the maintainers.
 
   04 Jul 2012; Jory A. Pratt <anarchy@gentoo.org> spidermonkey-1.8.7.ebuild,
   +files/spidermonkey-1.8.7-x32.patch:
