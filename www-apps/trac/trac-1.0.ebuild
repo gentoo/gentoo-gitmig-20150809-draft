@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-1.0.ebuild,v 1.1 2012/09/30 11:43:23 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-1.0.ebuild,v 1.2 2012/10/03 08:06:59 djc Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -87,10 +87,10 @@ src_install() {
 	newinitd "${FILESDIR}"/tracd.initd tracd
 
 	if use cgi; then
-		cp cgi-bin/trac.cgi "${ED}${MY_CGIBINDIR}" || die
+		cp contrib/cgi-bin/trac.cgi "${ED}${MY_CGIBINDIR}" || die
 	fi
 	if use fastcgi; then
-		cp cgi-bin/trac.fcgi "${ED}${MY_CGIBINDIR}" || die
+		cp contrib/cgi-bin/trac.fcgi "${ED}${MY_CGIBINDIR}" || die
 	fi
 
 	for lang in en; do
