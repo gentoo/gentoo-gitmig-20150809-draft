@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.105 2012/10/03 01:30:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.106 2012/10/03 02:12:40 robbat2 Exp $
+
+  03 Oct 2012; Robin H. Johnson <robbat2@gentoo.org>
+  files/munin-node_init.d_2.0.5:
+  Restore checkpath owner/group on /var/run/munin so it works here.
 
 *munin-2.0.7 (03 Oct 2012)
 
