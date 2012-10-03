@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/cosmosmash/cosmosmash-1.4.6.ebuild,v 1.1 2012/08/24 07:46:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/cosmosmash/cosmosmash-1.4.6.ebuild,v 1.2 2012/10/03 19:16:33 ago Exp $
 
 EAPI=2
 inherit autotools games
@@ -11,7 +11,7 @@ SRC_URI="http://perso.b2b2c.ca/sarrazip/dev/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=dev-games/flatzebra-0.1.6"
