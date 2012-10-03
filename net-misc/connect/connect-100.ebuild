@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connect/connect-100.ebuild,v 1.3 2009/09/23 19:35:04 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connect/connect-100.ebuild,v 1.4 2012/10/03 10:31:04 ago Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.meadowy.org/~gotoh/projects/connect/"
 SRC_URI="http://www.meadowy.org/~gotoh/ssh/${PN}-r${PV}.c"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 DEPEND=""
 S=${WORKDIR}
 
