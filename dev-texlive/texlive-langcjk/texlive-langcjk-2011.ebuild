@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langcjk/texlive-langcjk-2011.ebuild,v 1.12 2012/05/09 15:04:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langcjk/texlive-langcjk-2011.ebuild,v 1.13 2012/10/03 18:15:48 ulm Exp $
 
 EAPI="3"
 
@@ -11,7 +11,7 @@ TEXLIVE_MODULE_SRC_CONTENTS="c90.source cjkpunct.source garuda-c90.source jsclas
 inherit  texlive-module
 DESCRIPTION="TeXLive Chinese, Japanese, Korean"
 
-LICENSE="GPL-2 as-is BSD LPPL-1.3 "
+LICENSE="GPL-2 BSD LPPL-1.3 TeX-other-free"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE=""

@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-mathextra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-mathextra/ChangeLog,v 1.54 2012/07/31 14:26:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-mathextra/ChangeLog,v 1.55 2012/10/03 18:23:14 ulm Exp $
+
+  03 Oct 2012; Ulrich Müller <ulm@gentoo.org> texlive-mathextra-2011.ebuild,
+  texlive-mathextra-2012.ebuild, texlive-mathextra-2012-r1.ebuild:
+  "as-is" license cleanup, bug 436698.
 
 *texlive-mathextra-2012-r1 (31 Jul 2012)
 
