@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-web-photo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-web-photo/ChangeLog,v 1.23 2012/06/30 13:07:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-web-photo/ChangeLog,v 1.24 2012/10/03 15:20:34 phajdan.jr Exp $
+
+  03 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gnome-web-photo-0.10.6.ebuild:
+  x86 stable wrt bug #427544
 
 *gnome-web-photo-0.10.6 (30 Jun 2012)
 
