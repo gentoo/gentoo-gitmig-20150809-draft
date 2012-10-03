@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/gtksourceviewmm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtksourceviewmm/ChangeLog,v 1.28 2012/07/21 14:39:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtksourceviewmm/ChangeLog,v 1.29 2012/10/03 10:47:29 phajdan.jr Exp $
+
+  03 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gtksourceviewmm-2.10.3.ebuild:
+  x86 stable wrt bug #427544
 
   21 Jul 2012; Pacho Ramos <pacho@gentoo.org>
   +files/gtksourceviewmm-3.2.0-glib-single-include.patch,
