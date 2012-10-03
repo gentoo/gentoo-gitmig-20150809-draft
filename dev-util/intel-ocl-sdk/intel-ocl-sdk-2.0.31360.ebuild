@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intel-ocl-sdk/intel-ocl-sdk-2.0.31360.ebuild,v 1.2 2012/10/02 06:43:43 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intel-ocl-sdk/intel-ocl-sdk-2.0.31360.ebuild,v 1.3 2012/10/03 19:17:05 ago Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ SRC_URI="http://registrationcenter.intel.com/irc_nas/2563/intel_sdk_for_ocl_appl
 LICENSE="Intel-SDP"
 SLOT="0"
 IUSE="tools"
-KEYWORDS="~amd64 -x86"
+KEYWORDS="amd64 -x86"
 
 RDEPEND="app-admin/eselect-opencl
 	dev-cpp/tbb
