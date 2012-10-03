@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-9999.ebuild,v 1.24 2012/08/31 19:54:56 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-9999.ebuild,v 1.25 2012/10/03 00:06:36 ryao Exp $
 
 EAPI="4"
 AUTOTOOLS_AUTORECONF="1"
@@ -35,9 +35,9 @@ pkg_setup() {
 	CONFIG_CHECK="
 		!DEBUG_LOCK_ALLOC
 		!GRKERNSEC_HIDESYM
-		!PREEMPT
 		MODULES
 		KALLSYMS
+		!PAX_KERNEXEC_PLUGIN_METHOD_OR
 		ZLIB_DEFLATE
 		ZLIB_INFLATE
 	"
@@ -53,11 +53,6 @@ pkg_setup() {
 src_prepare() {
 	# Workaround for hard coded path
 	sed -i "s|/sbin/lsmod|/bin/lsmod|" scripts/check.sh || die
-
-	if [ ${PV} != "9999" ]
-	then
-		epatch "${FILESDIR}/${PN}-0.6.0_rc9-alias-km-sleep-with-km-pushpage.patch"
-	fi
 
 	autotools-utils_src_prepare
 }
