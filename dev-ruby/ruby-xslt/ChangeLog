@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-xslt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-xslt/ChangeLog,v 1.32 2012/09/27 19:00:58 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-xslt/ChangeLog,v 1.33 2012/10/03 17:23:17 graaff Exp $
+
+*ruby-xslt-0.9.9-r1 (03 Oct 2012)
+
+  03 Oct 2012; Hans de Graaff <graaff@gentoo.org> +ruby-xslt-0.9.9-r1.ebuild:
+  Remove forced -g CFLAG, bug 435820.
 
   27 Sep 2012; Johannes Huber <johu@gentoo.org> ruby-xslt-0.9.9.ebuild:
   Stable for x86, wrt bug #435820
