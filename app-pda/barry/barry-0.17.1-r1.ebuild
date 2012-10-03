@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/barry-0.17.1-r1.ebuild,v 1.1 2012/08/11 16:45:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/barry-0.17.1-r1.ebuild,v 1.2 2012/10/03 15:39:00 ssuominen Exp $
 
 EAPI="4"
 
@@ -32,6 +32,8 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	doc?	( >=app-doc/doxygen-1.5.6 )
 	nls?	( >=sys-devel/gettext-0.17 )"
+
+PATCHES=( "${FILESDIR}"/${P}-gcc47.patch )
 
 DOCS=(AUTHORS DEPUTY ChangeLog NEWS README TODO)
 
