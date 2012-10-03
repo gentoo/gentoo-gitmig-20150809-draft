@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/expat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.139 2012/05/28 16:06:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.140 2012/10/03 10:42:57 blueness Exp $
+
+  03 Oct 2012; Anthony G. Basile <blueness@gentoo.org> expat-2.1.0-r2.ebuild:
+  stable ppc ppc64, bug #437036
 
   28 May 2012; Samuli Suominen <ssuominen@gentoo.org> -expat-2.0.1-r6.ebuild,
   -files/expat-2.0.1-CVE-2009-3560-revised.patch,
