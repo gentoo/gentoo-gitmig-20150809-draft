@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.907 2012/10/02 04:54:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.908 2012/10/03 19:58:29 zorry Exp $
+
+  03 Oct 2012; Magnus Granberg <zorry@gentoo.org> gcc-4.7.2.ebuild:
+  Update piepatchset to 0.5.4 to fix 436924
 
   02 Oct 2012; Mike Frysinger <vapier@gentoo.org> gcc-4.7.2.ebuild:
   Update x32 patch #436756 by Alphat-PC.
