@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libepc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libepc/ChangeLog,v 1.6 2012/05/05 02:54:29 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libepc/ChangeLog,v 1.7 2012/10/03 15:41:50 phajdan.jr Exp $
+
+  03 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> libepc-0.4.4.ebuild:
+  x86 stable wrt bug #427544
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> libepc-0.4.3.ebuild,
   libepc-0.4.4.ebuild:
