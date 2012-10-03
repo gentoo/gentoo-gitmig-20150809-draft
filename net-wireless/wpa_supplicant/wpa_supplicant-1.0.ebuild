@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-1.0.ebuild,v 1.3 2012/06/03 08:03:26 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-1.0.ebuild,v 1.4 2012/10/03 19:22:03 gurligebis Exp $
 
 EAPI=4
 
@@ -14,6 +14,7 @@ LICENSE="|| ( GPL-2 BSD )"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="dbus debug gnutls eap-sim fasteap madwifi ps3 qt4 readline selinux ssl wimax wps kernel_linux kernel_FreeBSD"
+REQUIRED_USE="fasteap? ( !gnutls !ssl )"
 
 RDEPEND="dbus? ( sys-apps/dbus )
 	kernel_linux? (
@@ -41,10 +42,6 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${P}/${PN}"
 
 pkg_setup() {
-	if use fasteap && (use gnutls || use ssl) ; then
-		die "If you use fasteap, you must build with wpa_supplicant's internal TLS implementation.  That is, both 'gnutls' and 'ssl' USE flags must be disabled"
-	fi
-
 	if use gnutls && use ssl ; then
 		einfo "You have both 'gnutls' and 'ssl' USE flags enabled: defaulting to USE=\"ssl\""
 	fi
