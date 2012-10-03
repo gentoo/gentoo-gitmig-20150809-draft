@@ -1,6 +1,11 @@
 # ChangeLog for app-text/qpdfview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/ChangeLog,v 1.20 2012/09/25 01:12:44 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/ChangeLog,v 1.21 2012/10/03 06:35:04 yngwin Exp $
+
+*qpdfview-0.3.4 (03 Oct 2012)
+
+  03 Oct 2012; Ben de Groot <yngwin@gentoo.org> +qpdfview-0.3.4.ebuild:
+  Version bump; add pt_BR localization
 
   25 Sep 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   qpdfview-0.3.3.ebuild:
