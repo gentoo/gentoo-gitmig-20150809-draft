@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-levenshtein
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-levenshtein/ChangeLog,v 1.10 2012/05/24 12:53:31 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-levenshtein/ChangeLog,v 1.11 2012/10/03 11:45:56 ago Exp $
+
+  03 Oct 2012; Agostino Sarubbo <ago@gentoo.org>
+  python-levenshtein-0.10.2.ebuild:
+  Stable for amd64, wrt bug #436876
 
   24 May 2012; Johannes Huber <johu@gentoo.org>
   python-levenshtein-0.10.2.ebuild:
