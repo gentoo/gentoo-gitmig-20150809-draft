@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-12.05.ebuild,v 1.2 2012/10/02 00:37:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-12.05.ebuild,v 1.3 2012/10/03 12:44:45 pinkbyte Exp $
 
 EAPI=2
 PYTHON_DEPEND="2:2.6"
@@ -64,6 +64,9 @@ src_prepare() {
 		-e 's#^itlocaledir =.*$#itlocaledir = @localedir@#' \
 		po/Makefile.in.in || die
 
+	# Fix desktop files
+	sed -i '/Encoding/d' gcompris.desktop.in || die
+	sed -i '/Encoding/d' gcompris-edit.desktop.in || die
 }
 
 src_configure() {
