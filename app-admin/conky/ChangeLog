@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.184 2012/09/29 16:30:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.185 2012/10/03 18:01:22 ranger Exp $
+
+  03 Oct 2012; Brent Baude <ranger@gentoo.org> conky-1.9.0.ebuild:
+  Marking conky-1.9.0 ppc for bug 430638
 
   29 Sep 2012; Raúl Porcel <armin76@gentoo.org> conky-1.9.0.ebuild:
   alpha/sparc stable wrt #430638
