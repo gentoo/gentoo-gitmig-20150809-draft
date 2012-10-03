@@ -1,6 +1,10 @@
 # ChangeLog for media-video/gnome-video-effects
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-video-effects/ChangeLog,v 1.7 2012/05/14 06:48:42 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-video-effects/ChangeLog,v 1.8 2012/10/03 15:25:49 phajdan.jr Exp $
+
+  03 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gnome-video-effects-0.4.0.ebuild:
+  x86 stable wrt bug #427544
 
 *gnome-video-effects-0.4.0 (14 May 2012)
 
