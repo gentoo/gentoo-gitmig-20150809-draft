@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/java-access-bridge
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/ChangeLog,v 1.53 2012/06/30 18:05:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/ChangeLog,v 1.54 2012/10/03 09:32:51 phajdan.jr Exp $
+
+  03 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  java-access-bridge-1.26.2.ebuild:
+  x86 stable wrt bug #427544
 
 *java-access-bridge-1.26.2 (30 Jun 2012)
 
