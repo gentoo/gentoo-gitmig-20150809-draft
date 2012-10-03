@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.427 2012/10/02 10:57:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.428 2012/10/03 22:47:12 chithanh Exp $
+
+  03 Oct 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  virtualx.eclass:
+  Unbreak EAPI=2 and 3 users of virtualx.eclass, bug #406353
 
   02 Oct 2012; Tomáš Chvátal <scarabeus@gentoo.org> obs-download.eclass:
   More update the doc

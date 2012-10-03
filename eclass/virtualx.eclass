@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.42 2012/10/02 08:14:36 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.43 2012/10/03 22:47:12 chithanh Exp $
 
 # @ECLASS: virtualx.eclass
 # @MAINTAINER:
@@ -144,8 +144,13 @@ virtualmake() {
 		# Do not break on error, but setup $retval, as we need
 		# to kill Xvfb
 		debug-print "${FUNCNAME}: ${VIRTUALX_COMMAND} \"$@\""
-		nonfatal ${VIRTUALX_COMMAND} "$@"
-		retval=$?
+		if has "${EAPI}" 2 3; then
+			${VIRTUALX_COMMAND} "$@"
+			retval=$?
+		else
+			nonfatal ${VIRTUALX_COMMAND} "$@"
+			retval=$?
+		fi
 
 		# Now kill Xvfb
 		kill $(cat /tmp/.X${XDISPLAY}-lock)
