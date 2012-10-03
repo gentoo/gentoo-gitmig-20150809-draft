@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/light-themes/light-themes-0.1.8.32.ebuild,v 1.1 2012/04/03 19:17:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/light-themes/light-themes-0.1.8.32.ebuild,v 1.2 2012/10/03 16:25:48 phajdan.jr Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://ubuntu/pool/main/${PN:0:1}/${PN}/${PN}_${PV}-0ubuntu1.tar.gz"
 
 LICENSE="CCPL-Attribution-ShareAlike-3.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="gtk3"
 
 DEPEND=""
