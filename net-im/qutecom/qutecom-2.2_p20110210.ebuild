@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qutecom/qutecom-2.2_p20110210.ebuild,v 1.10 2012/07/26 16:57:57 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/qutecom/qutecom-2.2_p20110210.ebuild,v 1.11 2012/10/03 13:33:45 chithanh Exp $
 
 EAPI="3"
 
-inherit cmake-utils eutils flag-o-matic
+inherit cmake-utils eutils flag-o-matic versionator
 
 DESCRIPTION="Multi-protocol instant messenger and VoIP client"
 HOMEPAGE="http://www.qutecom.org/"
@@ -35,21 +35,26 @@ RDEPEND="dev-libs/boost
 	x11-libs/qt-webkit:4
 	xv? ( x11-libs/libXv )"
 DEPEND="${RDEPEND}
-	app-arch/xz-utils
-	media-libs/libv4l
-	sys-kernel/linux-headers"
+	media-libs/libv4l"
 
 pkg_setup() {
-	if has_version "<dev-libs/boost-1.41" && has_version ">=dev-libs/boost-1.41"; then
-		ewarn "QuteCom build system may mix up headers and libraries if versions of"
-		ewarn "dev-libs/boost both before and after 1.41 are installed. If the build"
-		ewarn "fails due to undefined boost symbols, remove older boost."
-	fi
 	# fails to find its libraries with --as-needed, bug #315045
 	append-ldflags $(no-as-needed)
 }
 
 src_prepare() {
+	# find correct version of boost, bug #425440
+	local boost_PF="$(best_version dev-libs/boost)"
+	local boost_PV="$(get_version_component_range 5-7 ${boost_PF})"
+	local boost_PV1="$(get_version_component_range 5-6 ${boost_PF})"
+	sed -i "s:usr/include:usr/include/boost-$(replace_all_version_separators _ ${boost_PV}):" owbuild/FindBoost.cmake || die
+	sed -i "s:usr/local/include:usr/include/boost-$(replace_all_version_separators _ ${boost_PV1}):" owbuild/FindBoost.cmake || die
+	sed -i "s:usr/lib:usr/lib/boost-$(replace_all_version_separators _ ${boost_PV}):" owbuild/FindBoost.cmake || die
+	sed -i "s:usr/local/lib:usr/lib/boost-$(replace_all_version_separators _ ${boost_PV1}):" owbuild/FindBoost.cmake || die
+
+	# fix building against gcc-4.7, bug #425440
+	epatch "${FILESDIR}"/${PN}-2.2-boost-1.50.patch
+
 	# build against >=linux-headers-2.6.38, bug 361181
 	sed -i -e "s|linux/videodev.h|libv4l1-videodev.h|" \
 		-e "s|__u16|uint16_t|" \
