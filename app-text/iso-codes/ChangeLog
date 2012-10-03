@@ -1,6 +1,9 @@
 # ChangeLog for app-text/iso-codes
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.124 2012/10/02 15:25:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.125 2012/10/03 10:29:23 phajdan.jr Exp $
+
+  03 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> iso-codes-3.37.ebuild:
+  x86 stable wrt bug #427544
 
   02 Oct 2012; Jeroen Roovers <jer@gentoo.org> iso-codes-3.37.ebuild:
   Stable for HPPA (bug #427544).
