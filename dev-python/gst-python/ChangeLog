@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gst-python
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.114 2012/09/24 03:04:00 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.115 2012/10/03 18:09:14 ranger Exp $
+
+  03 Oct 2012; Brent Baude <ranger@gentoo.org> gst-python-0.10.22.ebuild:
+  Marking gst-python-0.10.22 ppc for bug 432946
 
   24 Sep 2012; Mart Raudsepp <leio@gentoo.org> -gst-python-0.10.20.ebuild,
   -gst-python-0.10.21.ebuild:
