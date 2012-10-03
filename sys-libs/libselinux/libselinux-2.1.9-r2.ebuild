@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-2.1.9-r2.ebuild,v 1.1 2012/09/08 18:44:22 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-2.1.9-r2.ebuild,v 1.2 2012/10/03 20:42:02 vapier Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? *"
@@ -46,10 +46,10 @@ src_unpack() {
 
 src_prepare() {
 	# fix up paths for multilib
-	sed -i -e "/^LIBDIR/s/lib/$(get_libdir)/" "${S}/src/Makefile" \
-		|| die "Fix for multilib LIBDIR failed."
-	sed -i -e "/^SHLIBDIR/s/lib/$(get_libdir)/" "${S}/src/Makefile" \
-		|| die "Fix for multilib SHLIBDIR failed."
+	sed -i \
+		-e "/^LIBDIR/s/lib/$(get_libdir)/" \
+		-e "/^SHLIBDIR/s/lib/$(get_libdir)/" \
+		src/Makefile utils/Makefile || die
 	epatch "${FILESDIR}/${P}-mountsys.patch"
 }
 
