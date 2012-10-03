@@ -1,6 +1,9 @@
 # ChangeLog for games-board/cockatrice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/cockatrice/ChangeLog,v 1.1 2012/08/04 15:29:50 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/cockatrice/ChangeLog,v 1.2 2012/10/03 10:27:54 ago Exp $
+
+  03 Oct 2012; Agostino Sarubbo <ago@gentoo.org> cockatrice-20120702.ebuild:
+  Stable for amd64, wrt bug #435884
 
 *cockatrice-20120702 (04 Aug 2012)
 

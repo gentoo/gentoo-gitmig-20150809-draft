@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/cockatrice/cockatrice-20120702.ebuild,v 1.1 2012/08/04 15:29:50 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/cockatrice/cockatrice-20120702.ebuild,v 1.2 2012/10/03 10:27:54 ago Exp $
 
 EAPI=3
 inherit cmake-utils eutils gnome2-utils games
@@ -11,7 +11,7 @@ SRC_URI="http://cockatrice.de/files/${PN}_source_${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="dedicated server"
 
 DEPEND="
