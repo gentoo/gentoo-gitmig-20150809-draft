@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/hteditor
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/ChangeLog,v 1.51 2012/10/02 14:35:04 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/ChangeLog,v 1.52 2012/10/03 12:39:22 ago Exp $
+
+  03 Oct 2012; Agostino Sarubbo <ago@gentoo.org> hteditor-2.0.20.ebuild:
+  Respect AR / code cleanup
 
   02 Oct 2012; Michael Palimaka <kensington@gentoo.org> metadata.xml:
   Add upstream metadata.

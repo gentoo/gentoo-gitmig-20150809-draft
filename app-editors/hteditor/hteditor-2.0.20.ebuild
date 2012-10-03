@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/hteditor-2.0.20.ebuild,v 1.2 2012/06/06 06:36:50 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/hteditor-2.0.20.ebuild,v 1.3 2012/10/03 12:39:22 ago Exp $
 
 EAPI=4
+
+inherit toolchain-funcs
 
 MY_P=${P/editor}
 
@@ -22,6 +24,8 @@ DEPEND="${RDEPEND}
 	sys-devel/bison
 	sys-devel/flex"
 
+DOCS=( AUTHORS ChangeLog KNOWNBUGS README TODO )
+
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
@@ -36,10 +40,13 @@ src_configure() {
 		--disable-release
 }
 
+src_compile() {
+	emake AR="$(tc-getAR)"
+}
+
 src_install() {
-	chmod u+x "${S}/install-sh"
-	emake DESTDIR="${D}" install
-	dodoc AUTHORS ChangeLog KNOWNBUGS README TODO
+	default
+
 	dohtml doc/*.html
 	doinfo doc/*.info
 }
