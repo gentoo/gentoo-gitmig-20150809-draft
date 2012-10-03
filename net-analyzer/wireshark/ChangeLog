@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.403 2012/10/03 15:24:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.404 2012/10/03 16:21:09 jer Exp $
+
+*wireshark-1.8.3-r1 (03 Oct 2012)
+
+  03 Oct 2012; Jeroen Roovers <jer@gentoo.org> +wireshark-1.8.3-r1.ebuild,
+  +files/wireshark-1.8.3-gnutls3.patch, metadata.xml:
+  Add patch to build against net-libs/gnutls-3 by Bartosz Brachaczek (bug
+  #436212). Rename USE=gcrypt to USE=ipsec (name the feature, not the
+  implementation). Add dev-libs/libgcrypt dep when USE=ssl (bug #431888).
 
   03 Oct 2012; Jeroen Roovers <jer@gentoo.org> wireshark-1.8.3.ebuild,
   +files/wireshark-1.8.3-dtls-sctp.patch:
