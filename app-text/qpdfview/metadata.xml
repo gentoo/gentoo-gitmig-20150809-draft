@@ -6,4 +6,5 @@
     <email>ssuominen@gentoo.org</email>
     <name>Samuli Suominen</name>
   </maintainer>
+  <use><flag name='synctex'>Add support for searching TeX sources</flag></use>
 </pkgmetadata>
