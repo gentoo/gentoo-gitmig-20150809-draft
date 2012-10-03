@@ -1,6 +1,12 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.723 2012/10/02 07:02:09 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.724 2012/10/03 15:29:47 phajdan.jr Exp $
+
+*chromium-24.0.1284.2 (03 Oct 2012)
+
+  03 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +chromium-24.0.1284.2.ebuild, chromium-9999-r1.ebuild:
+  Dev channel bump. NaCl disabled again (pnacl-related build failures).
 
 *chromium-23.0.1271.10-r1 (02 Oct 2012)
 
