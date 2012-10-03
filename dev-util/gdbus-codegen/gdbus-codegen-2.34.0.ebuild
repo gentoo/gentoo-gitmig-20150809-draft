@@ -1,10 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/gdbus-codegen-2.34.0.ebuild,v 1.1 2012/09/25 11:42:03 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/gdbus-codegen-2.34.0.ebuild,v 1.2 2012/10/03 23:59:49 tetromino Exp $
 
 EAPI="4"
 GNOME_ORG_MODULE="glib"
 PYTHON_COMPAT="python2_5 python2_6 python2_7 python3_1 python3_2"
+PYTHON_USE="xml"
 
 inherit eutils gnome.org python-distutils-ng
 
@@ -16,12 +17,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE=""
 
-RDEPEND="python_targets_python2_5? ( dev-lang/python:2.5[xml] )
-	python_targets_python2_6? ( dev-lang/python:2.6[xml] )
-	python_targets_python2_7? ( dev-lang/python:2.7[xml] )
-	python_targets_python3_1? ( dev-lang/python:3.1[xml] )
-	python_targets_python3_2? ( dev-lang/python:3.2[xml] )
-"
+RDEPEND=""
 DEPEND=""
 
 # To prevent circular dependencies with glib[test]
