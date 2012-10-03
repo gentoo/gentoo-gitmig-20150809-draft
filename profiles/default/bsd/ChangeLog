@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.126 2012/09/19 12:50:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.127 2012/10/03 09:57:19 naota Exp $
+
+  03 Oct 2012; <naota@gentoo.org> fbsd/package.use.mask:
+  Mask USE=gbm for media-libs/mesa
 
   19 Sep 2012; Alexis Ballier <aballier@gentoo.org> -fbsd/sparc/8.2/deprecated:
   revert sparc-fbsd profile deprecation otherwise repoman warns on every
