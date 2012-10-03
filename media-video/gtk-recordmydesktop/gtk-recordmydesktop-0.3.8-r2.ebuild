@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gtk-recordmydesktop/gtk-recordmydesktop-0.3.8-r2.ebuild,v 1.1 2012/10/03 04:56:03 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gtk-recordmydesktop/gtk-recordmydesktop-0.3.8-r2.ebuild,v 1.2 2012/10/03 06:29:47 yngwin Exp $
 
 EAPI=4
 inherit eutils
@@ -29,7 +29,8 @@ DEPEND="${RDEPEND}"
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-check-for-jack.patch
 	# explicitly call python2, bug #415225
-	sed -e 's|#!/usr/bin/python|#!/usr/bin/python2|' -i src/gtk-recordMyDesktop.in
+	sed -e 's|#!/usr/bin/python|#!/usr/bin/python2|' \
+		-i src/gtk-recordMyDesktop.in || die 'sed failed'
 }
 
 src_install() {
