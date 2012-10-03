@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/qupzilla-1.3.5.ebuild,v 1.2 2012/09/19 08:11:14 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/qupzilla-1.3.5.ebuild,v 1.3 2012/10/03 07:21:20 yngwin Exp $
 
 EAPI=4
 PLOCALES="cs_CZ de_DE el_GR es_ES es_VE fa_IR fr_FR hu_HU id_ID it_IT ja_JP
@@ -35,6 +35,8 @@ DOCS="AUTHORS BUILDING CHANGELOG FAQ README.md TODO"
 src_prepare() {
 	# remove outdated copies of localizations:
 	rm -rf bin/locale || die
+	epatch "${FILESDIR}"/${P}-libX11-underlinking.patch
+	epatch_user
 }
 
 src_configure() {
