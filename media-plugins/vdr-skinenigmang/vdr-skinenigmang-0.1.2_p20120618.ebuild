@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinenigmang/vdr-skinenigmang-0.1.2_p20120618.ebuild,v 1.1 2012/09/27 14:54:21 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinenigmang/vdr-skinenigmang-0.1.2_p20120618.ebuild,v 1.2 2012/10/03 15:05:00 hd_brummy Exp $
 
 EAPI="4"
 
@@ -11,8 +11,7 @@ HG_REVISION_DATE="20120618"
 
 DESCRIPTION="VDR - Skin Plugin: enigma-ng"
 HOMEPAGE="http://andreas.vdr-developer.org/enigmang/"
-SRC_URI="http://projects.vdr-developer.org/git/vdr-plugin-skinenigmang.git/snapshot/vdr-plugin-skinenigmang-${HG_REVISION}.tar.gz
--> skinenigmang-0.1.2_p${HG_REVISION_DATE}.tar.gz"
+SRC_URI="http://vdr.websitec.de/download/vdr-skinenigmang/vdr-skinenigmang-0.1.2_p${HG_REVISION_DATE}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"

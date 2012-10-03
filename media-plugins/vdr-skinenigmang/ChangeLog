@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-skinenigmang
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinenigmang/ChangeLog,v 1.13 2012/09/27 14:54:21 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinenigmang/ChangeLog,v 1.14 2012/10/03 15:05:00 hd_brummy Exp $
+
+  03 Oct 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-skinenigmang-0.1.2_p20120618.ebuild:
+  fixed checksumerrors on every dl from hg server, moved distfile to another
+  wepspace
 
 *vdr-skinenigmang-0.1.2_p20120618 (27 Sep 2012)
 
