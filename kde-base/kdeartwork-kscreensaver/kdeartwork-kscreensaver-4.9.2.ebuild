@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kscreensaver/kdeartwork-kscreensaver-4.9.2.ebuild,v 1.1 2012/10/02 18:11:54 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kscreensaver/kdeartwork-kscreensaver-4.9.2.ebuild,v 1.2 2012/10/03 09:07:57 kensington Exp $
 
 EAPI=4
 
@@ -19,8 +19,12 @@ RDEPEND="
 	$(add_kdebase_dep kscreensaver 'opengl?')
 	$(add_kdebase_dep libkworkspace)
 	media-libs/libart_lgpl
+	x11-libs/libX11
 	kexiv2? ( $(add_kdebase_dep libkexiv2) )
-	opengl? ( virtual/opengl )
+	opengl? (
+		virtual/glu
+		virtual/opengl
+	)
 	xscreensaver? ( x11-misc/xscreensaver )
 "
 DEPEND="${RDEPEND}
