@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission-remote-gtk/transmission-remote-gtk-1.1.ebuild,v 1.2 2012/09/24 12:05:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission-remote-gtk/transmission-remote-gtk-1.1.ebuild,v 1.3 2012/10/03 05:19:13 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils fdo-mime gnome2-utils
@@ -16,10 +16,10 @@ IUSE="ayatana debug geoip libnotify libproxy"
 
 RESTRICT="test"
 
-RDEPEND=">=dev-libs/glib-2.30
+RDEPEND=">=dev-libs/glib-2.32
 	>=dev-libs/json-glib-0.12.6
 	net-misc/curl
-	x11-libs/gtk+:3
+	>=x11-libs/gtk+-3.4:3
 	ayatana? ( dev-libs/libappindicator:3 )
 	geoip? ( dev-libs/geoip )
 	libnotify? ( >=x11-libs/libnotify-0.7 )
