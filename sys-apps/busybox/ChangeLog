@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.327 2012/09/26 21:25:24 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.328 2012/10/03 18:51:18 vapier Exp $
+
+  03 Oct 2012; Mike Frysinger <vapier@gentoo.org> busybox-1.20.2.ebuild,
+  busybox-9999.ebuild:
+  Add systemd to IUSE #437054 by Arne Stäcker.
 
   26 Sep 2012; Robin H. Johnson <robbat2@gentoo.org> files/mdev.rc.1:
   New virtual init.d to split the /dev mount vs. daemon more cleanly.
