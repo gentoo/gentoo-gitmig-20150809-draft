@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/pekwm-themes-hewphoria/pekwm-themes-hewphoria-20080921.ebuild,v 1.2 2008/10/14 20:10:36 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/pekwm-themes-hewphoria/pekwm-themes-hewphoria-20080921.ebuild,v 1.3 2012/10/04 20:55:02 axs Exp $
 
 DESCRIPTION="A collection of PekWM themes from hewphoria"
-HOMEPAGE="http://hewphoria.com/"
-SRC_URI="http://devnull.core.ws/distfiles/${P}.tar.bz2"
+HOMEPAGE="https://www.pekwm.org/projects/pekwm/wikis/Community"
+SRC_URI="http://distfiles.lifeisabug.com/${P}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"

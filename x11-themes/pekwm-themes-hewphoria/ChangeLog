@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/pekwm-themes-hewphoria
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/pekwm-themes-hewphoria/ChangeLog,v 1.6 2010/06/11 21:50:14 yngwin Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/pekwm-themes-hewphoria/ChangeLog,v 1.7 2012/10/04 20:55:02 axs Exp $
+
+  04 Oct 2012; Ian Stakenvicius <axs@gentoo.org>
+  pekwm-themes-hewphoria-20080404.ebuild,
+  pekwm-themes-hewphoria-20080921.ebuild:
+  updated HOMEPAGE and SRC_URI as per upstream request
 
   11 Jun 2010; Ben de Groot <yngwin@gentoo.org> metadata.xml:
   Removing myself as proxy
