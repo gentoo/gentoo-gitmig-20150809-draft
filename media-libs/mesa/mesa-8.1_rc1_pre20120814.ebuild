@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-8.1_rc1_pre20120814.ebuild,v 1.2 2012/09/06 23:31:08 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-8.1_rc1_pre20120814.ebuild,v 1.3 2012/10/04 08:37:19 naota Exp $
 
 EAPI=4
 
@@ -179,6 +179,9 @@ src_prepare() {
 
 	# Tests fail against python-3, bug #407887
 	sed -i 's|/usr/bin/env python|/usr/bin/env python2|' src/glsl/tests/compare_ir || die
+
+	# Fix bash-ism test bug 435496
+	epatch "${FILESDIR}"/${PN}-8.0.4-configure-bsd.patch
 
 	base_src_prepare
 
