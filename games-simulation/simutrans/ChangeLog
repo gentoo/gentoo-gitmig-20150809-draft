@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/simutrans
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/ChangeLog,v 1.28 2012/03/23 20:14:06 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/ChangeLog,v 1.29 2012/10/04 06:58:18 tupone Exp $
+
+  04 Oct 2012; Tupone Alfredo <tupone@gentoo.org> simutrans-0.102.2.2.ebuild,
+  +files/simutrans-0.102.2.2-gcc47.patch:
+  Build with gcc-4.7 Bug #423653 by Diego
 
   23 Mar 2012; Tupone Alfredo <tupone@gentoo.org> simutrans-0.102.2.2.ebuild,
   +files/simutrans-0.102.2.2-zlib.patch:

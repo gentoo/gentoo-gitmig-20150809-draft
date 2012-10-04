@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/simutrans-0.102.2.2.ebuild,v 1.5 2012/03/23 20:14:06 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/simutrans-0.102.2.2.ebuild,v 1.6 2012/10/04 06:58:18 tupone Exp $
 
 EAPI=2
 inherit flag-o-matic eutils games
@@ -53,6 +53,7 @@ FLAGS=-DSTEPS16" > config.default \
 
 	rm -f simutrans/simutrans
 	epatch "${FILESDIR}"/${P}-gcc46.patch \
+		"${FILESDIR}"/${P}-gcc47.patch \
 		"${FILESDIR}"/${P}-zlib.patch
 }
 
