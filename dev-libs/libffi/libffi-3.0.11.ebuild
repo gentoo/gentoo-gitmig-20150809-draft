@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.0.11.ebuild,v 1.14 2012/10/04 06:46:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.0.11.ebuild,v 1.15 2012/10/04 11:12:07 ssuominen Exp $
 
 EAPI=4
 
@@ -26,7 +26,7 @@ DOCS="ChangeLog* README"
 
 pkg_setup() {
 	# Check for orphaned libffi, see http://bugs.gentoo.org/354903 for example
-	if [[ ${ROOT} != / ]] || ! has_version ${CATEGORY}/${PN}; then
+	if [[ ${ROOT} == / ]] && ! has_version ${CATEGORY}/${PN}; then
 		local base="${T}"/conftest
 		echo 'int main() { }' > "${base}".c
 		$(tc-getCC) -o "${base}" "${base}".c -lffi >&/dev/null
