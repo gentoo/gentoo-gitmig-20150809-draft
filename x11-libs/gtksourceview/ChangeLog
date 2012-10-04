@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtksourceview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.228 2012/07/15 18:59:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.229 2012/10/04 07:41:18 phajdan.jr Exp $
+
+  04 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gtksourceview-3.4.2.ebuild:
+  x86 stable wrt bug #427544
 
   15 Jul 2012; Raúl Porcel <armin76@gentoo.org>
   gtksourceview-2.10.5-r2.ebuild, gtksourceview-3.2.3.ebuild:
