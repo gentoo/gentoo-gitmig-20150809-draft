@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/qxmpp/qxmpp-0.7.4.ebuild,v 1.1 2012/10/01 19:44:24 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/qxmpp/qxmpp-0.7.4.ebuild,v 1.2 2012/10/04 15:19:59 pinkbyte Exp $
 
 EAPI=4
 
@@ -13,19 +13,31 @@ SRC_URI="http://qxmpp.googlecode.com/files/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug"
+IUSE="debug doc"
 
 DEPEND="x11-libs/qt-core:4
 	x11-libs/qt-gui:4
 	media-libs/speex"
 RDEPEND="${DEPEND}"
 
-src_configure() {
+src_prepare(){
+	if ! use doc; then
+		sed -i \
+			-e '/SUBDIRS/s/doc//' \
+			-e '/INSTALLS/d' \
+			qxmpp.pro || die "sed for removing docs failed"
+	fi
+	qt4-r2_src_prepare
+}
+
+src_configure(){
 	eqmake4 "${S}"/qxmpp.pro "PREFIX=/usr" "LIBDIR=$(get_libdir)"
 }
 
 src_install() {
 	qt4-r2_src_install
-	# Use proper path for documentation
-	mv "${ED}"/usr/share/doc/${PN} "${ED}"/usr/share/doc/${P} || die "doc mv failed"
+	if use doc; then
+		# Use proper path for documentation
+		mv "${ED}"/usr/share/doc/${PN} "${ED}"/usr/share/doc/${P} || die "doc mv failed"
+	fi
 }

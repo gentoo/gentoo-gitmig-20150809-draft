@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/qxmpp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/qxmpp/ChangeLog,v 1.21 2012/10/01 19:52:08 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/qxmpp/ChangeLog,v 1.22 2012/10/04 15:19:59 pinkbyte Exp $
+
+  04 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> qxmpp-0.7.4.ebuild,
+  qxmpp-9999.ebuild:
+  Add doc USE-flag wrt bug #437174, thanks to Nikoli
 
   01 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> qxmpp-9999.ebuild:
   Use proper path for documentation in live ebuild too
