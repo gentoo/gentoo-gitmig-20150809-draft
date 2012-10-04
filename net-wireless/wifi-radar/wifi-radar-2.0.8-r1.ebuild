@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifi-radar/wifi-radar-2.0.8-r1.ebuild,v 1.1 2012/10/03 04:08:10 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifi-radar/wifi-radar-2.0.8-r1.ebuild,v 1.2 2012/10/04 20:56:52 ago Exp $
 
 EAPI=4
 
@@ -27,11 +27,13 @@ RDEPEND=">=dev-python/pygtk-2.16.0-r1
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
-src_install ()
-{
+src_prepare() {
+	sed -i "s:/etc/wpa_supplicant.conf:/etc/wpa_supplicant/wpa_supplicant.conf:" wifi-radar || die
+}
+
+src_install() {
 	python_convert_shebangs -r 2 .
 	dosbin wifi-radar
-	sed "s:/etc/wpa_supplicant.conf:/etc/wpa_supplicant/wpa_supplicant.conf:" /usr/sbin/wifi-radar
 	dobin wifi-radar.sh
 	doicon -s scalable pixmaps/wifi-radar.svg
 	doicon -s 32 pixmaps/wifi_radar_32x32.png
@@ -45,8 +47,7 @@ src_install ()
 	keepdir /etc/wifi-radar
 }
 
-pkg_postinst()
-{
+pkg_postinst() {
 	einfo "Remember to edit configuration file /etc/wifi-radar.conf to suit your needs..."
 	echo
 	einfo "To use wifi-radar with a normal user (with sudo) add:"
