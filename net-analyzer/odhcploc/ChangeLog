@@ -1,0 +1,10 @@
+# ChangeLog for net-analyzer/odhcploc
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/odhcploc/ChangeLog,v 1.1 2012/10/04 03:22:54 jer Exp $
+
+*odhcploc-20111021 (04 Oct 2012)
+
+  04 Oct 2012; Jeroen Roovers <jer@gentoo.org> +odhcploc-20111021.ebuild,
+  +metadata.xml:
+  Initial commit.
+
