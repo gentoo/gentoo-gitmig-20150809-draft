@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/package.use.mask,v 1.31 2012/07/04 07:23:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/package.use.mask,v 1.32 2012/10/04 15:29:30 ssuominen Exp $
 
 # Justin Lecher <jlec@gentoo.org> (18 Mar 2010)
 # Unkeyworded deps
@@ -47,9 +47,6 @@ dev-libs/ppl prolog
 
 # gavl and opencv do not build
 media-plugins/frei0r-plugins scale0tilt facedetect
-
-# untested, bug 281573
-media-gfx/imagemagick autotrace
 
 # needs to rework xanim's ebuild to make it bsd-friendly
 media-video/mplayer xanim
