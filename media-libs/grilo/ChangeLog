@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/grilo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/ChangeLog,v 1.9 2012/10/03 15:24:40 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/ChangeLog,v 1.10 2012/10/04 14:56:33 ago Exp $
+
+  04 Oct 2012; Agostino Sarubbo <ago@gentoo.org> grilo-0.1.18-r1.ebuild:
+  Stable for amd64, wrt bug #427544
 
   03 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> grilo-0.1.18-r1.ebuild:
   x86 stable wrt bug #427544
