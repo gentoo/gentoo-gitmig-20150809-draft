@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.6.8.ebuild,v 1.4 2012/10/04 08:26:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.6.8-r1.ebuild,v 1.1 2012/10/04 08:26:54 phajdan.jr Exp $
 
 EAPI=4
-inherit autotools eutils linux-info flag-o-matic python virtualx user
+inherit autotools eutils linux-info flag-o-matic python systemd virtualx user
 
 DESCRIPTION="A message bus system, a simple way for applications to talk to each other"
 HOMEPAGE="http://dbus.freedesktop.org/"
@@ -11,14 +11,15 @@ SRC_URI="http://dbus.freedesktop.org/releases/dbus/${P}.tar.gz"
 
 LICENSE="|| ( AFL-2.1 GPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-linux"
-IUSE="debug doc selinux static-libs test X"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-linux"
+IUSE="debug doc selinux static-libs systemd test X"
 
 RDEPEND=">=dev-libs/expat-2
 	selinux? (
 		sec-policy/selinux-dbus
 		sys-libs/libselinux
 		)
+	systemd? ( >=sys-apps/systemd-44-r1 )
 	X? (
 		x11-libs/libX11
 		x11-libs/libXt
@@ -89,7 +90,7 @@ src_configure() {
 		$(use_enable selinux libaudit)
 		$(use_enable kernel_linux inotify)
 		$(use_enable kernel_FreeBSD kqueue)
-		--disable-systemd
+		$(use_enable systemd)
 		--disable-embedded-tests
 		--disable-modular-tests
 		$(use_enable debug stats)
@@ -99,6 +100,7 @@ src_configure() {
 		--with-system-socket=/var/run/dbus/system_bus_socket
 		--with-dbus-user=messagebus
 		$(use_with X x)
+		"$(systemd_with_unitdir)"
 		)
 
 	mkdir "${BD}"

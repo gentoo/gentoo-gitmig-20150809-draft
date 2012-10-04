@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.356 2012/10/02 15:40:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.357 2012/10/04 08:26:54 phajdan.jr Exp $
+
+*dbus-1.6.8-r1 (04 Oct 2012)
+
+  04 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> dbus-1.6.8.ebuild,
+  +dbus-1.6.8-r1.ebuild:
+  x86 stable wrt security bug #436028 (systemd-specific code rolled to -r1,
+  since systemd is not stable)
 
   02 Oct 2012; Jeroen Roovers <jer@gentoo.org> dbus-1.6.8.ebuild:
   Stable for HPPA (bug #436028).
