@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/egenix-mx-base
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.77 2012/08/19 17:01:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.78 2012/10/04 21:42:42 ranger Exp $
+
+  04 Oct 2012; Brent Baude <ranger@gentoo.org> egenix-mx-base-3.2.4.ebuild:
+  Marking egenix-mx-base-3.2.4 ppc for bug 422063
 
   19 Aug 2012; Raúl Porcel <armin76@gentoo.org> egenix-mx-base-3.2.4.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #422063
