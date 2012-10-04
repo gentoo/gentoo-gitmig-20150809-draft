@@ -1,6 +1,17 @@
 # ChangeLog for kde-base/nepomuk-core
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk-core/ChangeLog,v 1.10 2012/10/02 18:11:48 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk-core/ChangeLog,v 1.11 2012/10/04 07:25:15 johu Exp $
+
+*nepomuk-core-4.9.2-r1 (04 Oct 2012)
+
+  04 Oct 2012; Johannes Huber <johu@gentoo.org>
+  +files/nepomuk-core-4.9.2-dirwatch-null.patch,
+  +files/nepomuk-core-4.9.2-kinotify-delete.patch,
+  +nepomuk-core-4.9.2-r1.ebuild,
+  -files/nepomuk-core-4.9.0-kinotify-infinite-loop.patch,
+  -files/nepomuk-core-4.9.0-kinotify-memleak.patch, -nepomuk-core-4.9.2.ebuild:
+  Revision bump backports upstream patches to fix bug #435112. Remove unused
+  patches.
 
 *nepomuk-core-4.9.2 (02 Oct 2012)
 
