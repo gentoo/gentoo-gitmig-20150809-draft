@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sxid
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sxid/ChangeLog,v 1.32 2012/10/03 18:10:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sxid/ChangeLog,v 1.33 2012/10/04 07:38:36 kensington Exp $
+
+  04 Oct 2012; Michael Palimaka <kensington@gentoo.org>
+  -files/sxid-64bit-clean.patch, -sxid-4.0.4-r1.ebuild:
+  Remove old.
 
   03 Oct 2012; Brent Baude <ranger@gentoo.org> sxid-4.2-r1.ebuild:
   Marking sxid-4.2-r1 ppc for bug 431768
