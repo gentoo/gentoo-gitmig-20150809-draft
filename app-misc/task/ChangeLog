@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/task
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/task/ChangeLog,v 1.41 2012/09/24 10:37:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/task/ChangeLog,v 1.42 2012/10/04 22:33:32 radhermit Exp $
+
+  04 Oct 2012; Tim Harder <radhermit@gentoo.org> task-2.1.2.ebuild:
+  x86 stable, bug #435556
 
   24 Sep 2012; Agostino Sarubbo <ago@gentoo.org> task-2.1.2.ebuild:
   Stable for AMD64, wrt bug #435556
