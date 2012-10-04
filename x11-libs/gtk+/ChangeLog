@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.609 2012/10/04 07:40:58 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.610 2012/10/04 08:41:36 ago Exp $
+
+  04 Oct 2012; Agostino Sarubbo <ago@gentoo.org> gtk+-2.24.12.ebuild:
+  Stable for amd64, wrt bug #427544
 
   04 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> gtk+-3.4.4.ebuild:
   x86 stable wrt bug #427544
