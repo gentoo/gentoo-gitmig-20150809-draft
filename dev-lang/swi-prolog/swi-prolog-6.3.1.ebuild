@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-6.3.1.ebuild,v 1.2 2012/09/30 16:29:03 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-6.3.1.ebuild,v 1.3 2012/10/04 15:39:42 ottxor Exp $
 
-EAPI=2
+EAPI=4
 
 inherit eutils flag-o-matic java-pkg-opt-2 multilib
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.swi-prolog.org/download/devel/src/pl-${PV}.tar.gz
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="archive debug doc gmp hardened java minimal odbc readline ssl static-libs test zlib X"
 
 RDEPEND="sys-libs/ncurses
@@ -45,6 +45,9 @@ src_prepare() {
 	EPATCH_FORCE=yes
 	EPATCH_SUFFIX=patch
 	epatch "${WORKDIR}"/${PV}
+
+	# OSX/Intel ld doesn't like an archive without table of contents
+	sed -i -e 's/-cru/-scru/' packages/nlp/libstemmer_c/Makefile.pl || die
 }
 
 src_configure() {
@@ -53,19 +56,18 @@ src_configure() {
 	use hardened && append-flags -fno-unit-at-a-time
 	use debug && append-flags -DO_DEBUG
 
+	# ARCH is used in the configure script to figure out host and target
+	# specific stuff
+	export ARCH=${CHOST}
+
 	cd "${S}"/src
 	econf \
-		--libdir=/usr/$(get_libdir) \
+		--libdir="${EPREFIX}"/usr/$(get_libdir) \
 		$(use_enable gmp) \
 		$(use_enable readline) \
 		$(use_enable static-libs static) \
 		--enable-shared \
 		--enable-custom-flags COFLAGS="${CFLAGS}"
-}
-
-src_compile() {
-	cd "${S}"/src
-	emake || die "emake failed"
 
 	if ! use minimal ; then
 		local jpltestconf
@@ -75,7 +77,7 @@ src_compile() {
 
 		cd "${S}/packages"
 		econf \
-			--libdir=/usr/$(get_libdir) \
+			--libdir="${EPREFIX}"/usr/$(get_libdir) \
 			$(use_with archive) \
 			--with-chr \
 			--with-clib \
@@ -101,30 +103,38 @@ src_compile() {
 			$(use_with X xpce) \
 			$(use_with zlib) \
 			COFLAGS='"${CFLAGS}"'
+	fi
+}
 
-		emake || die "packages emake failed"
+src_compile() {
+	cd "${S}"/src
+	emake
+
+	if ! use minimal ; then
+		cd "${S}/packages"
+		emake
 	fi
 }
 
 src_test() {
 	cd "${S}/src"
-	emake check || die "make check failed. See above for details."
+	emake check
 
 	if ! use minimal ; then
 		cd "${S}/packages"
-		emake check || die "make check failed. See above for details."
+		emake check
 	fi
 }
 
 src_install() {
-	emake -C src DESTDIR="${D}" install || die "install src failed"
+	emake -C src DESTDIR="${D}" install
 
 	if ! use minimal ; then
-		emake -C packages DESTDIR="${D}" install || die "install packages failed"
+		emake -C packages DESTDIR="${D}" install
 		if use doc ; then
-			emake -C packages DESTDIR="${D}" html-install || die "html-install failed"
+			emake -C packages DESTDIR="${D}" html-install
 		fi
 	fi
 
-	dodoc ReleaseNotes/relnotes-5.10 INSTALL README VERSION || die
+	dodoc ReleaseNotes/relnotes-5.10 INSTALL README VERSION
 }
