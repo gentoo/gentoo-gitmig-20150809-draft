@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xosview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/ChangeLog,v 1.55 2012/10/03 12:52:38 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/ChangeLog,v 1.56 2012/10/04 00:49:46 blueness Exp $
+
+  04 Oct 2012; Anthony G. Basile <blueness@gentoo.org> xosview-1.9.4.ebuild:
+  stable ppc ppc64, bug #436988
 
   03 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> xosview-1.9.4.ebuild:
   amd64 stable, wrt bug #436988
