@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-mouse/xf86-input-mouse-1.8.1.ebuild,v 1.1 2012/08/09 19:45:37 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-mouse/xf86-input-mouse-1.8.1.ebuild,v 1.2 2012/10/04 21:30:49 naota Exp $
 
 EAPI=4
 inherit xorg-2
@@ -12,3 +12,8 @@ IUSE=""
 
 RDEPEND=">=x11-base/xorg-server-1.7"
 DEPEND="${RDEPEND}"
+
+# To workaround gcc-4.6 bug 435640
+PATCHES=(
+	"${FILESDIR}"/${P}-gcc46-workaround.patch
+)

@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/xf86-input-mouse
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-mouse/ChangeLog,v 1.124 2012/08/26 19:38:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-mouse/ChangeLog,v 1.125 2012/10/04 21:30:49 naota Exp $
+
+  04 Oct 2012;  <naota@gentoo.org>
+  +files/xf86-input-mouse-1.8.1-gcc46-workaround.patch,
+  xf86-input-mouse-1.8.1.ebuild:
+  Add patch to workaround gcc-4.6 bug. #435640
 
   26 Aug 2012; Raúl Porcel <armin76@gentoo.org> xf86-input-mouse-1.7.2.ebuild:
   alpha/ia64/sh/sparc stable wrt #419473
