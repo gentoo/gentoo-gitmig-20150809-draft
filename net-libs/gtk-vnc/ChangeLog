@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gtk-vnc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.95 2012/10/03 15:41:14 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.96 2012/10/04 14:59:46 ago Exp $
+
+  04 Oct 2012; Agostino Sarubbo <ago@gentoo.org> gtk-vnc-0.5.1.ebuild:
+  Stable for amd64, wrt bug #427544
 
   03 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> gtk-vnc-0.5.1.ebuild:
   x86 stable wrt bug #427544

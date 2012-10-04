@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.286 2012/10/03 15:42:33 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.287 2012/10/04 15:01:11 ago Exp $
+
+  04 Oct 2012; Agostino Sarubbo <ago@gentoo.org> libsoup-2.38.1.ebuild:
+  Stable for amd64, wrt bug #427544
 
   03 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> libsoup-2.38.1.ebuild:
   x86 stable wrt bug #427544

@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libdmapsharing
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libdmapsharing/ChangeLog,v 1.8 2012/10/04 08:40:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libdmapsharing/ChangeLog,v 1.9 2012/10/04 15:00:11 ago Exp $
+
+  04 Oct 2012; Agostino Sarubbo <ago@gentoo.org> libdmapsharing-2.9.15.ebuild:
+  Stable for amd64, wrt bug #427544
 
   04 Oct 2012; Agostino Sarubbo <ago@gentoo.org> libdmapsharing-2.1.13.ebuild:
   Stable for amd64, wrt bug #427544
