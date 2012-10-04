@@ -1,6 +1,10 @@
 # ChangeLog for java-virtuals/jmx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jmx/ChangeLog,v 1.17 2012/06/07 21:25:03 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jmx/ChangeLog,v 1.18 2012/10/04 17:37:57 sera Exp $
+
+  04 Oct 2012; Ralph Sennhauser <sera@gentoo.org> jmx-1.0-r1.ebuild,
+  jmx-1.0-r3.ebuild:
+  Change license to public-domain. #426800
 
   07 Jun 2012; Brent Baude <ranger@gentoo.org> jmx-1.0-r3.ebuild:
   Marking jmx-1.0-r3 ppc for bug 419001

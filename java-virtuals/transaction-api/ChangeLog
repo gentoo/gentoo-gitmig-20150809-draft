@@ -1,6 +1,9 @@
 # ChangeLog for java-virtuals/transaction-api
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/transaction-api/ChangeLog,v 1.3 2010/05/02 12:05:32 betelgeuse Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/transaction-api/ChangeLog,v 1.4 2012/10/04 17:41:36 sera Exp $
+
+  04 Oct 2012; Ralph Sennhauser <sera@gentoo.org> transaction-api-1.1.ebuild:
+  Change license to public-domain. #426800
 
   02 May 2010; Petteri Räty <betelgeuse@gentoo.org>
   transaction-api-1.1.ebuild:

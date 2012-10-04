@@ -1,6 +1,9 @@
 # ChangeLog for java-virtuals/jaxp-virtual
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jaxp-virtual/ChangeLog,v 1.10 2011/10/30 08:57:33 caster Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jaxp-virtual/ChangeLog,v 1.11 2012/10/04 17:35:40 sera Exp $
+
+  04 Oct 2012; Ralph Sennhauser <sera@gentoo.org> jaxp-virtual-1.4-r1.ebuild:
+  Change license to public-domain. #426800
 
   30 Oct 2011; Vlastimil Babka <caster@gentoo.org> -jaxp-virtual-1.4.ebuild:
   Remove old.

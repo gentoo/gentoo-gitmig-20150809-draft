@@ -1,6 +1,9 @@
 # ChangeLog for java-virtuals/jms
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jms/ChangeLog,v 1.8 2012/01/01 18:55:27 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jms/ChangeLog,v 1.9 2012/10/04 17:37:10 sera Exp $
+
+  04 Oct 2012; Ralph Sennhauser <sera@gentoo.org> jms-1.1.ebuild:
+  Change license to public-domain. #426800
 
   01 Jan 2012; Ralph Sennhauser <sera@gentoo.org> jms-1.1.ebuild:
   Drop ia64 support #345433
