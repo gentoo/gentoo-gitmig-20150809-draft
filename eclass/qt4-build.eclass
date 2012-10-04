@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.136 2012/09/27 16:35:41 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.137 2012/10/04 03:52:35 pesa Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -10,8 +10,8 @@
 # This eclass contains various functions that are used when building Qt4.
 
 case ${EAPI} in
-	2|3|4|5)	: ;;
-	*)	die "qt4-build.eclass requires EAPI 2, 3 or 4." ;;
+	2|3|4|5) : ;;
+	*)	 die "qt4-build.eclass: unsupported EAPI=${EAPI:-0}" ;;
 esac
 
 inherit eutils flag-o-matic multilib toolchain-funcs versionator
