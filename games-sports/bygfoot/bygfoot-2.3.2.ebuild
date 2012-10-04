@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/bygfoot/bygfoot-2.3.2.ebuild,v 1.5 2012/05/03 03:35:39 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/bygfoot/bygfoot-2.3.2.ebuild,v 1.6 2012/10/04 06:51:52 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -16,6 +16,7 @@ IUSE=""
 
 RDEPEND="x11-libs/gtk+:2
 	media-libs/freetype:2
+	app-arch/zip
 	virtual/libintl"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig

@@ -1,6 +1,9 @@
 # ChangeLog for games-sports/bygfoot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/bygfoot/ChangeLog,v 1.29 2012/05/03 03:35:39 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/bygfoot/ChangeLog,v 1.30 2012/10/04 06:51:52 mr_bones_ Exp $
+
+  04 Oct 2012; Michael Sterrett <mr_bones_@gentoo.org> bygfoot-2.3.2.ebuild:
+  add zip rdep (bug #437126)
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> bygfoot-2.3.2.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -138,4 +141,3 @@
   Initial import. Original ebuild by Duarte Loreto <happyguy_pt@hotmail.com>
   and edited by Laurent Duperval <lduperval@yahoo.com>, Priit Laes
   <amd@store20.com>, and myself. Closing bug #56264.
-
