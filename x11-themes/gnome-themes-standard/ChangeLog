@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-themes-standard
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/ChangeLog,v 1.24 2012/09/25 20:13:37 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/ChangeLog,v 1.25 2012/10/04 07:41:35 phajdan.jr Exp $
+
+  04 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gnome-themes-standard-3.4.2.ebuild:
+  x86 stable wrt bug #427544
 
 *gnome-themes-standard-3.6.0.2 (25 Sep 2012)
 

@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/zukitwo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/zukitwo/ChangeLog,v 1.12 2012/07/21 20:24:08 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/zukitwo/ChangeLog,v 1.13 2012/10/04 07:41:59 phajdan.jr Exp $
+
+  04 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  zukitwo-2012.07.02.ebuild:
+  x86 stable wrt bug #427544
 
 *zukitwo-2012.07.02-r1 (21 Jul 2012)
 
