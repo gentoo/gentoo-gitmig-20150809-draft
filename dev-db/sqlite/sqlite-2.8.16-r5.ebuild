@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-2.8.16-r5.ebuild,v 1.7 2012/06/04 06:55:12 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-2.8.16-r5.ebuild,v 1.8 2012/10/04 23:22:10 ulm Exp $
 
 inherit eutils alternatives multilib toolchain-funcs
 
@@ -9,7 +9,8 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbs
 DESCRIPTION="SQLite: an SQL Database Engine in a C Library."
 HOMEPAGE="http://www.sqlite.org/"
 SRC_URI="http://www.sqlite.org/${P}.tar.gz"
-LICENSE="as-is"
+
+LICENSE="public-domain"
 SLOT="0"
 IUSE="doc nls tcl"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.7.12.1.ebuild,v 1.8 2012/07/16 01:52:51 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.7.12.1.ebuild,v 1.9 2012/10/04 23:22:10 ulm Exp $
 
 EAPI="4"
 
@@ -19,7 +19,7 @@ SRC_URI="doc? ( http://sqlite.org/${PN}-doc-${DOC_PV}.zip )
 		!test? ( http://sqlite.org/${PN}-autoconf-${SRC_PV}.tar.gz )
 	)"
 
-LICENSE="as-is"
+LICENSE="public-domain"
 SLOT="3"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="debug doc +extensions +fts3 icu +readline secure-delete soundex tcl test +threadsafe unlock-notify"
