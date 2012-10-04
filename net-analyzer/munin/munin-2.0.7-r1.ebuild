@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.7.ebuild,v 1.1 2012/10/03 01:30:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.7-r1.ebuild,v 1.1 2012/10/04 17:18:27 flameeyes Exp $
 
 EAPI=4
 
-PATCHSET=1
+PATCHSET=2
 
 inherit eutils user java-pkg-opt-2
 

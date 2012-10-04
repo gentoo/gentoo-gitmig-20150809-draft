@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.106 2012/10/03 02:12:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.107 2012/10/04 17:18:27 flameeyes Exp $
+
+*munin-2.0.7-r1 (04 Oct 2012)
+
+  04 Oct 2012; Diego E. Pettenò <flameeyes@gentoo.org> +munin-2.0.7-r1.ebuild,
+  -munin-2.0.6.ebuild, -munin-2.0.7.ebuild, files/munin-node_init.d_2.0.5:
+  Revert change to init script; revbump to make sure nobody is using that (will
+  break your /run), and also add proper support for nsca notifications, which is
+  included upstream for 2.0.8.
 
   03 Oct 2012; Robin H. Johnson <robbat2@gentoo.org>
   files/munin-node_init.d_2.0.5:
