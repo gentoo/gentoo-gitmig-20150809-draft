@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/spice-0.11.0.ebuild,v 1.4 2012/06/14 20:18:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/spice-0.11.0.ebuild,v 1.5 2012/10/04 16:58:12 cardoe Exp $
 
 EAPI=4
 
@@ -18,6 +18,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="+client +gui sasl smartcard static-libs" # static
 
 RDEPEND=">=x11-libs/pixman-0.17.7
+	media-libs/alsa-lib
 	media-libs/celt:0.5.1
 	dev-libs/openssl
 	virtual/jpeg
@@ -26,7 +27,6 @@ RDEPEND=">=x11-libs/pixman-0.17.7
 	smartcard? ( >=app-emulation/libcacard-0.1.2 )
 	client? (
 		gui? ( =dev-games/cegui-0.6* )
-		media-libs/alsa-lib
 		>=x11-libs/libXrandr-1.2
 		x11-libs/libX11
 		x11-libs/libXext
