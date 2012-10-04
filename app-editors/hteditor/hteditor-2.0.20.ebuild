@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/hteditor-2.0.20.ebuild,v 1.5 2012/10/04 02:15:25 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/hteditor-2.0.20.ebuild,v 1.6 2012/10/04 08:11:59 ago Exp $
 
 EAPI=4
 
@@ -45,6 +45,9 @@ src_compile() {
 }
 
 src_install() {
+	#For prefix
+	chmod u+x "${S}/install-sh"
+
 	default
 
 	dohtml doc/*.html
