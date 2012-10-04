@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/partimage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/ChangeLog,v 1.52 2012/09/30 12:28:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/ChangeLog,v 1.53 2012/10/04 21:36:41 ranger Exp $
+
+  04 Oct 2012; Brent Baude <ranger@gentoo.org> partimage-0.6.9.ebuild:
+  Marking partimage-0.6.9 ppc for bug 436094
 
   30 Sep 2012; Markos Chandras <hwoarang@gentoo.org> partimage-0.6.9.ebuild:
   Stable on amd64 wrt bug #436094
