@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.363 2012/09/30 10:42:05 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.364 2012/10/04 06:50:24 grobian Exp $
+
+  04 Oct 2012; Fabian Groffen <grobian@gentoo.org> mint/make.defaults:
+  Drop ${USE} from first assignment, bug #437086
 
   30 Sep 2012; Fabian Groffen <grobian@gentoo.org>
   +darwin/macos/10.8/package.mask:
