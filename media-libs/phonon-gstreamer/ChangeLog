@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/phonon-gstreamer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-gstreamer/ChangeLog,v 1.32 2012/10/01 17:49:19 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-gstreamer/ChangeLog,v 1.33 2012/10/04 21:41:03 naota Exp $
+
+  04 Oct 2012;  <naota@gentoo.org> phonon-gstreamer-4.6.2-r1.ebuild:
+  Add ~x86-fbsd wrt bug #432420
 
   01 Oct 2012; Fabian Groffen <grobian@gentoo.org>
   phonon-gstreamer-4.6.2-r1.ebuild:
