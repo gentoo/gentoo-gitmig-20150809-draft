@@ -1,6 +1,19 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.241 2012/08/28 17:56:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.242 2012/10/04 15:30:14 flameeyes Exp $
+
+*net-snmp-5.7.2_rc3 (04 Oct 2012)
+
+  04 Oct 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +net-snmp-5.7.2_rc3.ebuild, -files/CVE-2008-6123.patch,
+  -files/net-snmp-5.4.1-sensors3-version_detect.patch,
+  -files/net-snmp-5.4.1-sensors3.patch,
+  -files/net-snmp-5.4.2.1-perlcc-hppa.patch, -files/snmpd.init,
+  -files/snmptrapd.init, -net-snmp-5.4.2.1-r5.ebuild,
+  -net-snmp-5.7.2_rc1-r1.ebuild, metadata.xml:
+  Version bump to 5.7.2_rc3; add USE=mysql (bug #433169, thanks to Dag Bakke);
+  update LICENSE (bug #437172, thanks to Ben Sagal); remove old versions
+  (vulnerable and non-stable-candidate) and unused files.
 
   28 Aug 2012; Brent Baude <ranger@gentoo.org> net-snmp-5.7.2_rc1.ebuild:
   Marking net-snmp-5.7.2_rc1 ppc64 for bug 431752

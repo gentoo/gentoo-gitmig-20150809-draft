@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.7.2_rc1-r1.ebuild,v 1.2 2012/08/27 16:17:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.7.2_rc3.ebuild,v 1.1 2012/10/04 15:30:14 flameeyes Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2"
 
 WANT_AUTOMAKE=none
 
-PATCHSET=3
+PATCHSET=1
 
 inherit eutils perl-module python autotools
 
@@ -19,10 +19,10 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz
 	http://dev.gentoo.org/~flameeyes/${PN}/${MY_P}-patches-${PATCHSET}.tar.xz"
 
 # GPL-2 for the init scripts
-LICENSE="as-is BSD GPL-2"
+LICENSE="HPND BSD GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="bzip2 doc elf ipv6 mfd-rewrites minimal perl python rpm selinux ssl tcpd X zlib lm_sensors ucd-compat pci netlink"
+IUSE="bzip2 doc elf ipv6 mfd-rewrites minimal perl python rpm selinux ssl tcpd X zlib lm_sensors ucd-compat pci netlink mysql"
 
 COMMON="ssl? ( >=dev-libs/openssl-0.9.6d )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
@@ -36,7 +36,8 @@ COMMON="ssl? ( >=dev-libs/openssl-0.9.6d )
 	python? ( dev-python/setuptools )
 	pci? ( sys-apps/pciutils )
 	lm_sensors? ( sys-apps/lm_sensors )
-	netlink? ( dev-libs/libnl:1.1 )"
+	netlink? ( dev-libs/libnl:1.1 )
+	mysql? ( virtual/mysql )"
 
 RDEPEND="${COMMON}
 	perl? (
@@ -103,7 +104,8 @@ src_configure() {
 		$(use_with zlib) \
 		$(use_with rpm) \
 		$(use_with netlink nl) \
-		$(use_with pci)
+		$(use_with pci) \
+		$(use_with mysql)
 }
 
 src_compile() {

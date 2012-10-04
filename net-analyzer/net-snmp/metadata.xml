@@ -3,21 +3,11 @@
 <pkgmetadata>
   <herd>netmon</herd>
   <use>
-    <flag name='diskio' restrict='&lt;net-analyzer/net-snmp-5.7.2_rc1'>
-      Enable the use of diskio MIBs.
-    </flag>
     <flag name='elf'>Enable the use of elf utils to check uptime on some systems</flag>
-    <flag name='extensible' restrict='&lt;net-analyzer/net-snmp-5.7.2_rc1'>
-      Build deprecated extensible mib module (extend is successor)
-    </flag>
     <flag name='mfd-rewrites'>Use MFD rewrites of mib modules where available</flag>
     <flag name='rpm'>
       Enable monitoring of <pkg>app-arch/rpm</pkg>. This flag requires
       the bzip2 and zlib flags to be enabled as well.
-    </flag>
-    <flag name='sendmail'>Enable sendmail statistics monitoring</flag>
-    <flag name='smux' restrict='&lt;net-analyzer/net-snmp-5.7.2_rc1'>
-      Enable the SNMP multiplexing (smux) MIBs module
     </flag>
     <flag name='ucd-compat'>
       Build UCD compatibility library. Increases significantly the
