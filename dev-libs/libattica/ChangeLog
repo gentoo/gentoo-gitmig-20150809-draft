@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libattica
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libattica/ChangeLog,v 1.33 2012/08/22 13:40:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libattica/ChangeLog,v 1.34 2012/10/04 13:05:41 kensington Exp $
+
+  04 Oct 2012; Michael Palimaka <kensington@gentoo.org>
+  +files/libattica-0.4.1-automagic.patch, libattica-0.4.1.ebuild:
+  Build tests conditionally, backporting a patch from upstream to correct a
+  dependency issue. Fixes bug #434670.
 
   22 Aug 2012; Agostino Sarubbo <ago@gentoo.org> libattica-0.4.1.ebuild:
   Add qt-test as a DEPEND, thanks to Vladimir V. Kamarzin, wrt to bug #432264
