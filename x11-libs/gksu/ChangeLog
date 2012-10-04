@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gksu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.66 2012/10/03 15:45:33 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.67 2012/10/04 15:03:51 ago Exp $
+
+  04 Oct 2012; Agostino Sarubbo <ago@gentoo.org> gksu-2.0.2-r1.ebuild:
+  Stable for amd64, wrt bug #427544
 
   03 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> gksu-2.0.2-r1.ebuild:
   x86 stable wrt bug #427544
