@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/nbd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/ChangeLog,v 1.73 2012/09/24 11:18:02 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/ChangeLog,v 1.74 2012/10/04 01:59:06 blueness Exp $
+
+  04 Oct 2012; Anthony G. Basile <blueness@gentoo.org> nbd-3.2.ebuild:
+  stable arm, bug #433357
 
   24 Sep 2012; Anthony G. Basile <blueness@gentoo.org> nbd-3.2.ebuild:
   keyword ~arm, bug #433357
