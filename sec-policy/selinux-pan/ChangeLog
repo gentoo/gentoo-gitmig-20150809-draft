@@ -1,5 +1,8 @@
 
 
+  04 Oct 2012; <swift@gentoo.org> selinux-pan-2.20120725-r5.ebuild:
+  Stabilization
+
 *selinux-pan-2.20120725-r5 (21 Sep 2012)
 
   21 Sep 2012; <swift@gentoo.org> +selinux-pan-2.20120725-r5.ebuild:

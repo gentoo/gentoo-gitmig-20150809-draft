@@ -1,6 +1,9 @@
 # ChangeLog for sec-policy/selinux-arpwatch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-arpwatch/ChangeLog,v 1.34 2012/09/22 09:27:15 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-arpwatch/ChangeLog,v 1.35 2012/10/04 18:29:43 swift Exp $
+
+  04 Oct 2012; <swift@gentoo.org> selinux-arpwatch-2.20120725-r5.ebuild:
+  Stabilization
 
 *selinux-arpwatch-2.20120725-r5 (21 Sep 2012)
 
