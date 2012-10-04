@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/emacs-daemon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.57 2012/09/30 17:08:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.58 2012/10/04 07:53:06 naota Exp $
+
+  04 Oct 2012;  <naota@gentoo.org> emacs-daemon-0.19.ebuild:
+  Add ~x86-fbsd wrt bug #263222
 
   30 Sep 2012; Raúl Porcel <armin76@gentoo.org> emacs-daemon-0.19.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #433185
