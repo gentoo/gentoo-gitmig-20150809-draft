@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygit2/pygit2-0.16.2.ebuild,v 1.1 2012/05/23 00:05:24 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygit2/pygit2-0.16.2.ebuild,v 1.2 2012/10/04 22:40:23 radhermit Exp $
 
 EAPI="4"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.5"
+RESTRICT_PYTHON_ABIS="2.5 *-pypy-*"
 DISTUTILS_SRC_TEST="setup.py"
 
 inherit distutils
