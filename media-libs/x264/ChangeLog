@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/x264
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/ChangeLog,v 1.76 2012/09/25 03:11:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/ChangeLog,v 1.77 2012/10/04 15:53:30 ottxor Exp $
+
+  04 Oct 2012; Christoph Junghans <ottxor@gentoo.org> x264-0.0.20120707.ebuild:
+  added prefix keywords (bug #351219)
 
   25 Sep 2012; Mike Frysinger <vapier@gentoo.org> +files/x264-x32.patch,
   x264-0.0.20120707.ebuild:
