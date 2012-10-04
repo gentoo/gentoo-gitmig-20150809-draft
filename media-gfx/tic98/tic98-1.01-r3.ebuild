@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tic98/tic98-1.01-r3.ebuild,v 1.5 2009/07/05 12:24:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tic98/tic98-1.01-r3.ebuild,v 1.6 2012/10/04 15:57:42 ottxor Exp $
+
+EAPI=4
 
 inherit eutils
 
@@ -10,19 +12,15 @@ SRC_URI="http://membled.com/work/mirror/tic98/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
-DEPEND=""
-RDEPEND=""
 RESTRICT="test"
 
 S="${WORKDIR}/${PN}"
 
-src_unpack() {
-	unpack ${A}
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-macos.patch
-	cd "${S}"
 	epatch "${FILESDIR}"/${P}-gentoo.diff
 	epatch "${FILESDIR}"/${P}-glibc-2.10.patch
 
@@ -35,14 +33,14 @@ src_unpack() {
 }
 
 src_compile() {
-	emake all || die
-	emake all2 || die
+	emake all
+	emake all2
 }
 
 src_install() {
 	dodir /usr/bin
-	emake BIN="${D}"usr/bin install || die
+	emake BIN="${ED}"usr/bin install
 
 	# collision with media-gfx/netpbm, see bug #207534
-	rm "${D}"/usr/bin/pbmclean || die
+	rm "${ED}"/usr/bin/pbmclean || die
 }

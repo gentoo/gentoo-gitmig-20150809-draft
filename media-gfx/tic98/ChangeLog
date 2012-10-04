@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/tic98
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tic98/ChangeLog,v 1.14 2009/07/05 12:24:52 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tic98/ChangeLog,v 1.15 2012/10/04 15:57:42 ottxor Exp $
+
+  04 Oct 2012; Christoph Junghans <ottxor@gentoo.org> tic98-1.01-r3.ebuild:
+  added prefix support (bug #433856)
 
   05 Jul 2009; Markus Meier <maekke@gentoo.org> tic98-1.01-r3.ebuild,
   +files/tic98-1.01-glibc-2.10.patch:
