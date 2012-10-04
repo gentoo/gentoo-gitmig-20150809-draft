@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/spice-vdagent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice-vdagent/ChangeLog,v 1.9 2012/10/04 17:08:03 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice-vdagent/ChangeLog,v 1.10 2012/10/04 17:08:40 cardoe Exp $
+
+*spice-vdagent-0.12.0 (04 Oct 2012)
+
+  04 Oct 2012; Doug Goldstein <cardoe@gentoo.org> +spice-vdagent-0.12.0.ebuild:
+  Version bump
 
   04 Oct 2012; Doug Goldstein <cardoe@gentoo.org> spice-vdagent-0.10.1.ebuild:
   Fix up to use console-kit correctly. bug #431890
