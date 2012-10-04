@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/snobol
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/snobol/ChangeLog,v 1.11 2008/01/29 21:31:52 grobian Exp $
+# Copyright 2000-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/snobol/ChangeLog,v 1.12 2012/10/04 15:32:51 ottxor Exp $
+
+  04 Oct 2012; Christoph Junghans <ottxor@gentoo.org> snobol-1.1.ebuild:
+  added prefix support (bug #433848)
 
   29 Jan 2008; Fabian Groffen <grobian@gentoo.org> snobol-1.1.ebuild:
   Dropped ppc-macos keyword, see you in prefix
@@ -44,4 +47,3 @@
   22 Dec 2003; Robin H. Johnson <robbat2@gentoo.org> snobol-0.99.4.ebuild:
   initial commit, ebuild by robbat2@gentoo.org, inspired by cleaning my room and
   finding a manual for this damn thing, circa 1968.
-
