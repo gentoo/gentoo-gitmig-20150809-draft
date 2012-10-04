@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libchewing/libchewing-0.3.3.ebuild,v 1.5 2012/09/23 07:50:00 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libchewing/libchewing-0.3.3.ebuild,v 1.6 2012/10/04 22:35:30 naota Exp $
 
 EAPI=3
 
-inherit multilib toolchain-funcs
+inherit multilib toolchain-funcs eutils
 
 DESCRIPTION="Library for Chinese Phonetic input method"
 HOMEPAGE="http://chewing.csie.net/"
@@ -22,6 +22,10 @@ DEPEND="${RDEPEND}
 		sys-libs/ncurses[unicode]
 		>=dev-libs/check-0.9.4
 	)"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PV}-strncat-fix.patch
+}
 
 src_configure() {
 	export CC_FOR_BUILD="$(tc-getBUILD_CC)"
