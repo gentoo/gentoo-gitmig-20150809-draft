@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mkvtoolnix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.177 2012/09/20 15:15:49 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.178 2012/10/04 07:41:24 naota Exp $
+
+  04 Oct 2012;  <naota@gentoo.org>
+  +files/mkvtoolnix-5.8.0-boost-configure.patch, mkvtoolnix-5.8.0.ebuild:
+  Add ~x86-fbsd with adding patch for configure script. #418355
 
   20 Sep 2012; Christoph Junghans <ottxor@gentoo.org> mkvtoolnix-5.8.0.ebuild:
   added prefix support (bug #431308)
