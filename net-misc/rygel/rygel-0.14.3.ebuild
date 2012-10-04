@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/rygel-0.14.3.ebuild,v 1.3 2012/10/03 15:43:32 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/rygel-0.14.3.ebuild,v 1.4 2012/10/04 15:02:02 ago Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ HOMEPAGE="http://live.gnome.org/Rygel"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="X nls +sqlite test transcode"
 
 # The deps for tracker? and transcode? are just the earliest available
