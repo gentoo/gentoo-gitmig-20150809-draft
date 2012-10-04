@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygobject
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.169 2012/10/03 10:55:58 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.170 2012/10/04 07:38:56 phajdan.jr Exp $
+
+  04 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> pygobject-3.2.2.ebuild:
+  x86 stable wrt bug #427544
 
   03 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   pygobject-2.28.6-r52.ebuild:
