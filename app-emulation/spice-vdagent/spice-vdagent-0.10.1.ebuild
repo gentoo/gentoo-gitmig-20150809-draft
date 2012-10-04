@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice-vdagent/spice-vdagent-0.10.1.ebuild,v 1.3 2012/08/21 21:25:52 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice-vdagent/spice-vdagent-0.10.1.ebuild,v 1.4 2012/10/04 17:08:03 cardoe Exp $
 
 EAPI=4
 
@@ -30,9 +30,13 @@ ERROR_INPUT_UINPUT="User level input support is required"
 ERROR_VIRTIO_CONSOLE="VirtIO console/serial device support is required"
 
 src_configure() {
+	local opt=
+
+	use consolekit && opt="${opt} --with-session-info=console-kit"
+
 	econf \
 		--localstatedir=/var \
-		$(use_enable consolekit console-kit)
+		${opt}
 }
 
 src_install() {
