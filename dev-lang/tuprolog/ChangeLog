@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tuprolog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/ChangeLog,v 1.47 2012/09/23 08:25:33 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/ChangeLog,v 1.48 2012/10/04 21:41:05 ranger Exp $
+
+  04 Oct 2012; Brent Baude <ranger@gentoo.org> tuprolog-2.4.0_rc5.ebuild:
+  Marking tuprolog-2.4.0_rc5 ppc for bug 429792
 
   23 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   tuprolog-2.4.0_rc5.ebuild:
