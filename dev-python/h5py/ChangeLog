@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/h5py
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/h5py/ChangeLog,v 1.9 2012/02/23 05:34:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/h5py/ChangeLog,v 1.10 2012/10/04 15:43:18 xarthisius Exp $
+
+*h5py-2.1.0 (04 Oct 2012)
+
+  04 Oct 2012; Kacper Kowalik <xarthisius@gentoo.org> +h5py-2.1.0.ebuild:
+  Version bump
 
   23 Feb 2012; Patrick Lauer <patrick@gentoo.org> h5py-2.0.1.ebuild:
   Restricting pypy and jython
@@ -73,4 +78,3 @@
   04 Nov 2008; Tim Cera <timcera@earthlink.net> +h5py-0.3.1.ebuild,
   +metadata.xml:
   Initial ebuild.
-
