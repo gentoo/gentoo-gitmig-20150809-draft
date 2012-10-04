@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/spice-0.11.3.ebuild,v 1.2 2012/10/04 16:58:12 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/spice-0.11.3.ebuild,v 1.3 2012/10/04 17:04:42 cardoe Exp $
 
 EAPI=4
 
@@ -26,7 +26,7 @@ RDEPEND=">=x11-libs/pixman-0.17.7
 	sasl? ( dev-libs/cyrus-sasl )
 	smartcard? ( >=app-emulation/libcacard-0.1.2 )
 	client? (
-		gui? ( =dev-games/cegui-0.6* )
+		gui? ( =dev-games/cegui-0.6*[opengl] )
 		>=x11-libs/libXrandr-1.2
 		x11-libs/libX11
 		x11-libs/libXext
