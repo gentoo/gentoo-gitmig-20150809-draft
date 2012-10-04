@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.8.352-r2.ebuild,v 1.1 2012/05/10 00:20:10 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.8.352-r2.ebuild,v 1.2 2012/10/04 15:28:42 ottxor Exp $
 
-EAPI="2"
+EAPI=4
 
 inherit eutils  multilib
 
@@ -12,7 +12,7 @@ SRC_URI="http://pike.ida.liu.se/pub/pike/all/${PV}/Pike-v${PV}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1 MPL-1.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
 IUSE="bzip2 debug doc fftw gdbm glut gnome gtk hardened java jpeg kerberos mysql odbc opengl pcre scanner sdl sqlite svg test tiff truetype zlib"
 
 DEPEND=">=dev-libs/nettle-2.1
@@ -92,11 +92,10 @@ src_compile() {
 			$(use_with tiff tifflib) \
 			$(use_with truetype freetype) \
 			$(use_with zlib) \
-			${myconf} \
-			" || die "compilation failed"
+			${myconf}"
 
 	if use doc; then
-		PATH="${S}/bin:${PATH}" emake -j1 doc || die "doc failed"
+		PATH="${S}/bin:${PATH}" emake -j1 doc
 	fi
 }
 
@@ -108,14 +107,14 @@ src_install() {
 	sed -i s/rm\(mod\+\"\.o\"\)\;/break\;/ "${S}"/bin/install.pike || die "Failed to modify install.pike (1)"
 	sed -i 's/\(Array.map *( *files_to_delete *- *files_to_not_delete,*rm*);\)/; \/\/ \1/' "${S}"/bin/install.pike || die "Failed to modify install.pike (2)"
 	if use doc ; then
-		emake -j1 INSTALLARGS="--traditional" buildroot="${D}" install || die "emake failed"
+		emake -j1 INSTALLARGS="--traditional" buildroot="${D}" install
 		einfo "Installing 60MB of docs, this could take some time ..."
 		dohtml -r "${S}"/refdoc/traditional_manual "${S}"/refdoc/modref
 	else
-		emake -j1 INSTALLARGS="--traditional" buildroot="${D}" install_nodoc || die "emake failed"
+		emake -j1 INSTALLARGS="--traditional" buildroot="${D}" install_nodoc
 	fi
 	# Installation is a bit broken.. remove the doc sources.
-	rm -rf "${D}/usr/doc"
+	rm -rf "${ED}/usr/doc"
 	# Install the man pages in the proper location.
-	rm -rf "${D}/usr/man" && doman "${S}/man/pike.1"
+	rm -rf "${ED}/usr/man" && doman "${S}/man/pike.1"
 }
