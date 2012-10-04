@@ -1,6 +1,9 @@
 # ChangeLog for games-kids/gcompris
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.82 2012/10/04 10:45:45 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.83 2012/10/04 10:47:15 blueness Exp $
+
+  04 Oct 2012; Anthony G. Basile <blueness@gentoo.org> ChangeLog:
+  gpg signing of Manifest failed, fixing that
 
   04 Oct 2012; Anthony G. Basile <blueness@gentoo.org> gcompris-12.05.ebuild:
   stable ppc, bug #436902
