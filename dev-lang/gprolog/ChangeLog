@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/gprolog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/ChangeLog,v 1.60 2012/09/22 15:00:46 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/ChangeLog,v 1.61 2012/10/04 15:15:16 ottxor Exp $
+
+  04 Oct 2012; Christoph Junghans <ottxor@gentoo.org> gprolog-1.4.1.ebuild:
+  added prefix support (bug #433830)
 
   22 Sep 2012; Anthony G. Basile <blueness@gentoo.org> gprolog-1.4.1.ebuild:
   stable ppc, bug #433219

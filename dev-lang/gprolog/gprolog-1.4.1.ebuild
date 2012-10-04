@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/gprolog-1.4.1.ebuild,v 1.3 2012/09/22 15:00:46 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/gprolog-1.4.1.ebuild,v 1.4 2012/10/04 15:15:16 ottxor Exp $
 
-EAPI=2
+EAPI=4
 
 inherit eutils flag-o-matic multilib
 
@@ -13,7 +13,7 @@ S="${WORKDIR}"/${P}
 
 LICENSE="GPL-2 LGPL-3"
 SLOT="0"
-KEYWORDS="amd64 ppc ~x86"
+KEYWORDS="amd64 ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-solaris"
 IUSE="debug doc examples"
 
 DEPEND=""
@@ -50,18 +50,18 @@ src_configure() {
 
 src_compile() {
 	cd "${S}"/src
-	emake || die "emake failed"
+	emake
 }
 
 src_test() {
 	cd "${S}"/src
-	emake check || die "make check failed. See above for details."
+	emake check
 }
 
 src_install() {
 	cd "${S}"/src
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 
 	cd "${S}"
-	dodoc ChangeLog NEWS PROBLEMS README VERSION || die "dodoc failed"
+	dodoc ChangeLog NEWS PROBLEMS README VERSION
 }
