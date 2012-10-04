@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.8.2.ebuild,v 1.1 2012/10/01 08:42:08 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.8.3.ebuild,v 1.1 2012/10/04 13:42:06 ferringb Exp $
 
 EAPI="3"
 DISTUTILS_SRC_TEST="setup.py"
