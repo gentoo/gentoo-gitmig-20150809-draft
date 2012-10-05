@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/arm-fdisk/arm-fdisk-3.0.6-r1.ebuild,v 1.9 2012/03/18 18:36:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/arm-fdisk/arm-fdisk-3.0.6-r1.ebuild,v 1.10 2012/10/05 19:33:35 ago Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DEB_VER=6.2
 DESCRIPTION="edit disk partitions on Acorn machines"
@@ -28,6 +28,12 @@ src_unpack() {
 		-e "/^CFLAGS/s:=:+=:" \
 		-e "/^LDFLAGS/s:=:+=:" \
 		-e '/^STRIP/s:strip:true:'
+}
+
+src_compile() {
+	emake \
+		CC="$(tc-getCC)" \
+		AR="$(tc-getAR)" || die
 }
 
 src_install() {
