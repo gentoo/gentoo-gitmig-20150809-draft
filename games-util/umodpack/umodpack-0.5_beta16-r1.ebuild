@@ -1,13 +1,13 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/umodpack/umodpack-0.5_beta16-r1.ebuild,v 1.7 2009/07/19 17:50:03 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/umodpack/umodpack-0.5_beta16-r1.ebuild,v 1.8 2012/10/05 20:39:51 mr_bones_ Exp $
 
 inherit perl-module toolchain-funcs
 
 MY_P=${P/_beta/b}
 DESCRIPTION="portable and useful [un]packer for Unreal Tournament's Umod files"
-HOMEPAGE="http://umodpack.sourceforge.net/"
-SRC_URI="http://umodpack.sourceforge.net/${MY_P}-allinone.tar.gz"
+HOMEPAGE="http://www.oldunreal.com/wiki/index.php?title=UmodPack"
+SRC_URI="mirror://gentoo/${MY_P}-allinone.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
