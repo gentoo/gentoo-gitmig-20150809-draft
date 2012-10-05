@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/niecza-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/niecza-bin/ChangeLog,v 1.1 2012/08/22 03:28:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/niecza-bin/ChangeLog,v 1.2 2012/10/05 05:20:03 patrick Exp $
+
+*niecza-bin-21 (05 Oct 2012)
+*niecza-bin-22 (05 Oct 2012)
+
+  05 Oct 2012; Patrick Lauer <patrick@gentoo.org> +niecza-bin-21.ebuild,
+  +niecza-bin-22.ebuild:
+  Bump
 
 *niecza-bin-20 (22 Aug 2012)
 
