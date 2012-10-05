@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/egads/egads-0.9.5.ebuild,v 1.10 2009/09/23 16:02:21 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/egads/egads-0.9.5.ebuild,v 1.11 2012/10/05 18:24:09 ago Exp $
 
-inherit multilib
+inherit multilib toolchain-funcs
 
 DESCRIPTION="Entropy Gathering And Distribution System"
 HOMEPAGE="http://www.securesoftware.com/download_${PN}.htm"
@@ -14,6 +14,7 @@ KEYWORDS="~ppc x86 ~amd64"
 IUSE=""
 
 DEPEND=""
+RDEPEND=""
 
 egadsdatadir=/var/run/egads
 
@@ -24,6 +25,7 @@ src_unpack() {
 		-e '/^LIBDIR/d' \
 		-e '/^INCLUDEDIR/d' \
 		"${S}"/Makefile.in || die "Failed to fix Makefile.in"
+	tc-export CC AR RANLIB
 }
 
 src_compile() {
