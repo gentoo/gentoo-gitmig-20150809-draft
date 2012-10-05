@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/make-3.82-r4.ebuild,v 1.1 2011/12/03 00:57:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/make-3.82-r4.ebuild,v 1.2 2012/10/05 05:28:59 vapier Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gnu//make/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="nls static"
 
 DEPEND="nls? ( sys-devel/gettext )"
@@ -26,7 +26,9 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-copy-on-expand.patch
 	epatch "${FILESDIR}"/${P}-oneshell.patch
 	epatch "${FILESDIR}"/${P}-parallel-remake.patch
-	epatch "${FILESDIR}"/${P}-long-cmdline.patch #300867 #301116
+	epatch "${FILESDIR}"/${P}-intermediate-parallel.patch #431250
+	epatch "${FILESDIR}"/${P}-construct-command-line.patch
+	epatch "${FILESDIR}"/${P}-long-command-line.patch
 }
 
 src_configure() {

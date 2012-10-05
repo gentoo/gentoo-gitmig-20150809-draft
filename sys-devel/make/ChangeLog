@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/make
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.101 2012/09/02 18:52:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.102 2012/10/05 05:28:59 vapier Exp $
+
+  05 Oct 2012; Mike Frysinger <vapier@gentoo.org>
+  +files/make-3.82-construct-command-line.patch,
+  +files/make-3.82-intermediate-parallel.patch,
+  +files/make-3.82-long-command-line.patch, -files/make-3.82-long-cmdline.patch,
+  make-3.82-r4.ebuild:
+  Add some more fixes from upstream #431250 by Vladimir.
 
   02 Sep 2012; Raúl Porcel <armin76@gentoo.org> make-3.82-r3.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #419941
