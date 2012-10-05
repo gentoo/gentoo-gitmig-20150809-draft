@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pypy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.23 2012/06/17 23:01:13 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.24 2012/10/05 08:27:00 djc Exp $
+
+  05 Oct 2012; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Remove local description of jit USE flag (bug 416605).
 
   17 Jun 2012; Jeremy Olexa <darkside@gentoo.org> pypy-1.9-r1.ebuild:
   add prefix keywords, bug 420621
