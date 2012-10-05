@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/nose
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/ChangeLog,v 1.84 2012/05/09 00:06:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/ChangeLog,v 1.85 2012/10/05 12:23:54 djc Exp $
+
+  05 Oct 2012; Dirkjan Ochtman <djc@gentoo.org>
+  -files/nose-0.10.0-tests-nonetwork.patch, -nose-1.0.0.ebuild,
+  -nose-1.1.1.ebuild:
+  Remove old versions.
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> nose-1.1.2.ebuild:
   keyword ~amd64-fbsd
