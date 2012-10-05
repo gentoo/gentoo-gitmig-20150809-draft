@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-2.6.0.ebuild,v 1.1 2012/09/30 09:57:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-2.6.0.ebuild,v 1.2 2012/10/05 17:52:22 pacho Exp $
 
 EAPI="4"
 
@@ -16,7 +16,6 @@ IUSE="+aac +cdda +bpm boo daap doc +encode ipod karma mtp test udev +web youtube
 
 RDEPEND=">=dev-lang/mono-2.4.3
 	gnome-base/gnome-settings-daemon
-	x11-themes/gnome-icon-theme
 	sys-apps/dbus
 	>=dev-dotnet/gtk-sharp-2.12:2
 	>=dev-dotnet/notify-sharp-0.4.0_pre20080912-r1
