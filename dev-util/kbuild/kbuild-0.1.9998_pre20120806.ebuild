@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/kbuild-0.1.9998_pre20120806.ebuild,v 1.1 2012/08/06 17:27:55 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/kbuild-0.1.9998_pre20120806.ebuild,v 1.2 2012/10/05 19:24:48 ago Exp $
 
 EAPI=4
 
 WANT_AUTOMAKE=1.9
 
-inherit eutils autotools
+inherit eutils autotools toolchain-funcs
 
 MY_P=kBuild-${PV/_/-}-src
 DESCRIPTION="A makefile framework for writing simple makefiles for complex tasks"
@@ -37,17 +37,18 @@ src_prepare() {
 		"${FILESDIR}/${PN}-0.1.9998_pre20110817-gold.patch" \
 		"${FILESDIR}/${PN}-0.1.9998_pre20110817-gcc-4.7.patch"
 
-	cd "${S}/src/kmk"
+	cd "${S}/src/kmk" || die
 	eautoreconf
-	cd "${S}/src/sed"
+	cd "${S}/src/sed" || die
 	eautoreconf
 
 	sed -e "s@_LDFLAGS\.${ARCH}*.*=@& ${LDFLAGS}@g" \
 		-i "${S}"/Config.kmk || die #332225
+	tc-export CC RANLIB #AR does not work here
 }
 
 src_compile() {
-	kBuild/env.sh --full make -f bootstrap.gmk AUTORECONF=true \
+	kBuild/env.sh --full make -f bootstrap.gmk AUTORECONF=true AR="$(tc-getAR)" \
 		|| die "bootstrap failed"
 }
 

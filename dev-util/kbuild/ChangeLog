@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kbuild
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/ChangeLog,v 1.30 2012/08/06 17:27:55 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/ChangeLog,v 1.31 2012/10/05 19:24:48 ago Exp $
+
+  05 Oct 2012; Agostino Sarubbo <ago@gentoo.org>
+  kbuild-0.1.9998_pre20120806.ebuild:
+  Respect CC,AR,RANLIB, wrt to bug #380063
 
 *kbuild-0.1.9998_pre20120806 (06 Aug 2012)
 
@@ -160,4 +164,3 @@
   03 Sep 2008; Alessio Cassibba (X-Drum) <swapon@gmail.com>
   +kbuild-0.1.3.ebuild, +metadata.xml:
   Initial ebuild for kBuild
-
