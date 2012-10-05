@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/gentoopm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.23 2012/08/31 09:11:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.24 2012/10/05 07:55:32 mgorny Exp $
+
+  05 Oct 2012; Michał Górny <mgorny@gentoo.org> gentoopm-0.2.5-r1.ebuild:
+  Update pkgcore dependency.
 
   31 Aug 2012; Michał Górny <mgorny@gentoo.org> -gentoopm-0.2.1.ebuild,
   -gentoopm-0.2.5.ebuild, gentoopm-0.2.5-r1.ebuild, metadata.xml:
