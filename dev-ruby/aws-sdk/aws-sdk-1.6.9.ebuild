@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/aws-sdk/aws-sdk-1.6.3.ebuild,v 1.1 2012/08/10 15:40:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/aws-sdk/aws-sdk-1.6.9.ebuild,v 1.1 2012/10/05 06:09:40 flameeyes Exp $
 
 EAPI=4
 
 USE_RUBY="ruby18 ruby19 ree18"
 
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
-RUBY_FAKEGEM_TASK_DOC=""
+RUBY_FAKEGEM_RECIPE_DOC="rdoc"
 RUBY_FAKEGEM_DOCDIR="doc"
 RUBY_FAKEGEM_EXTRADOC="README.rdoc"
 
@@ -17,7 +17,7 @@ GITHUB_USER="amazonwebservices"
 GITHUB_PROJECT="${PN}-for-ruby"
 RUBY_S="${GITHUB_USER}-${GITHUB_PROJECT}-*"
 
-RUBY_FAKEGEM_GEMSPEC="${T}/${P}.gemspec"
+RUBY_FAKEGEM_GEMSPEC="${PN}.gemspec"
 
 inherit ruby-fakegem
 
@@ -38,18 +38,10 @@ ruby_add_rdepend "virtual/ruby-ssl
 
 RUBY_PATCHES=(
 	${PN}-1.5.3-disabletest.patch
-	${PN}-1.6.3-no-simplecov.patch
 )
 
-all_ruby_compile() {
-	if use doc; then
-		rdoc || die
-	fi
-}
-
-each_ruby_install() {
-	sed -e "s:VERSION:${PV}:" "${FILESDIR}"/${PN}.gemspec > "${RUBY_FAKEGEM_GEMSPEC}"
-	each_fakegem_install
+all_ruby_prepare() {
+	sed -i -e 's:~>:>=:' "${RUBY_FAKEGEM_GEMSPEC}" || die
 }
 
 all_ruby_install() {
