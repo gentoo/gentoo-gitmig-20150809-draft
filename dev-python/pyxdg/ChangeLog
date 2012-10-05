@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyxdg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.96 2012/09/11 15:51:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.97 2012/10/05 18:08:03 ranger Exp $
+
+  05 Oct 2012; Brent Baude <ranger@gentoo.org> pyxdg-0.23.ebuild:
+  Marking pyxdg-0.23 ppc64 for bug 432384
 
   11 Sep 2012; Raúl Porcel <armin76@gentoo.org> pyxdg-0.23.ebuild:
   alpha/ia64/sparc stable wrt #432384
