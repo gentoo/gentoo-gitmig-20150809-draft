@@ -6,7 +6,8 @@
   	<name>Dirkjan Ochtman</name>
   </maintainer>
   <maintainer>
-    <email>gentoo@aixah.de</email>
+    <email>aranea@aixah.de</email>
+    <name>Luis Ressel</name>
     <description>Proxy-maintainer, assign bugs</description>
   </maintainer>
 </pkgmetadata>
