@@ -1,9 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/afio/afio-2.5.1.ebuild,v 1.1 2012/03/11 13:43:30 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/afio/afio-2.5.1.ebuild,v 1.2 2012/10/05 18:07:20 ago Exp $
 
 EAPI=4
-inherit eutils
+
+inherit eutils toolchain-funcs
 
 DESCRIPTION="makes cpio-format archives and deals somewhat gracefully with input data corruption."
 HOMEPAGE="http://members.chello.nl/k.holtman/afio.html"
@@ -16,6 +17,7 @@ IUSE=""
 
 src_prepare() {
 	epatch "${FILESDIR}"/Makefile-r1.patch
+	tc-export CC
 }
 
 src_install() {
