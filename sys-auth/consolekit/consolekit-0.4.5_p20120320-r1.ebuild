@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.4.5_p20120320-r1.ebuild,v 1.1 2012/08/08 14:42:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.4.5_p20120320-r1.ebuild,v 1.2 2012/10/05 14:58:54 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils linux-info pam systemd
@@ -107,5 +107,5 @@ src_install() {
 	exeinto /usr/lib/ConsoleKit/run-session.d
 	doexe "${FILESDIR}"/pam-foreground-compat.ck
 
-	find "${ED}" -name '*.la' -exec rm -f {} +
+	prune_libtool_files --all # --all for pam_ck_connector.la
 }
