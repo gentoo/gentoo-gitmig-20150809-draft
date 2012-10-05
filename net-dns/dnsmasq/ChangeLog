@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/dnsmasq
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.227 2012/10/04 11:48:06 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.228 2012/10/05 18:00:14 ranger Exp $
+
+  05 Oct 2012; Brent Baude <ranger@gentoo.org> dnsmasq-2.61.ebuild:
+  Marking dnsmasq-2.61 ppc64 for bug 433076
 
   04 Oct 2012; Anthony G. Basile <blueness@gentoo.org> dnsmasq-2.63.ebuild:
   stable arm, bug #436894
