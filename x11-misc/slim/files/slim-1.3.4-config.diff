@@ -5,7 +5,7 @@
  default_path        /bin:/usr/bin:/usr/local/bin
  default_xserver     /usr/bin/X
 -#xserver_arguments   -dpi 75
-+xserver_arguments   -nolisten tcp -br -deferglyphs 16
++xserver_arguments   -nolisten tcp -br -deferglyphs 16 vt07
  
  # Commands for halt, login, etc.
  halt_cmd            /sbin/shutdown -h now
