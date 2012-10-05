@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.4-r1.ebuild,v 1.1 2012/10/05 17:05:56 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.4-r1.ebuild,v 1.2 2012/10/05 19:22:14 axs Exp $
 
 EAPI=4
 
@@ -37,6 +37,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-config.diff
 	epatch "${FILESDIR}"/${P}-libpng.patch
 	epatch "${FILESDIR}"/${P}-pam-end.patch
+	epatch "${FILESDIR}"/${P}-arm.patch
 
 	if use elibc_FreeBSD; then
 		sed -i -e 's/"-DHAVE_SHADOW"/"-DNEEDS_BASENAME"/' CMakeLists.txt \
