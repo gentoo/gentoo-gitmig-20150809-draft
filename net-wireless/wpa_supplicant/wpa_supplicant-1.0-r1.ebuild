@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-1.0-r1.ebuild,v 1.1 2012/10/04 13:47:35 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-1.0-r1.ebuild,v 1.2 2012/10/05 21:16:20 gurligebis Exp $
 
 EAPI=4
 
@@ -74,8 +74,9 @@ src_prepare() {
 	echo 'SystemdService=wpa_supplicant.service' \
 		| tee -a dbus/*.service >/dev/null || die
 
+	cd "${WORKDIR}/${P}"
+
 	if use wimax; then
-		cd "${WORKDIR}/${P}"
 		epatch "${FILESDIR}/${P}-generate-libeap-peer.patch"
 
 		# multilib-strict fix (bug #373685)
@@ -94,7 +95,6 @@ src_prepare() {
 	#epatch "${FILESDIR}/${P}-dbus-WPAIE-fix.patch"
 
 	# libnl path fix
-	cd ..
 	epatch "${FILESDIR}/${P}-libnl_path_fix.patch"
 }
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.184 2012/10/04 13:47:35 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.185 2012/10/05 21:16:20 gurligebis Exp $
+
+  05 Oct 2012; <gurligebis@gentoo.org> wpa_supplicant-1.0-r1.ebuild:
+  Fixing bug caused by enabling wimax, making patch fail, fixing #437240
 
 *wpa_supplicant-1.0-r1 (04 Oct 2012)
 
