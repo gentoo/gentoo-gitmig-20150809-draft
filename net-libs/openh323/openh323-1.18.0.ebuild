@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.18.0.ebuild,v 1.11 2012/05/16 12:45:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.18.0.ebuild,v 1.12 2012/10/05 19:12:21 ago Exp $
 
 EAPI=4
 
-inherit eutils flag-o-matic multilib
+inherit eutils flag-o-matic multilib toolchain-funcs
 
 MY_P="${PN}-v${PV//./_}"
 
@@ -53,7 +53,11 @@ src_configure() {
 }
 
 src_compile() {
-	emake ${makeopts} opt
+	emake \
+		CC="$(tc-getCC)" \
+		CXX="$(tc-getCXX)" \
+		AR="$(tc-getAR)" \
+		${makeopts} opt
 }
 
 src_install() {
