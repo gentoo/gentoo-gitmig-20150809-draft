@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-9.0_pre20120918.ebuild,v 1.2 2012/09/21 11:01:28 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-9.0_pre20120918.ebuild,v 1.3 2012/10/05 06:08:59 naota Exp $
 
 EAPI=4
 
@@ -249,6 +249,8 @@ src_configure() {
 			$(use_enable x86 glx-rts)
 		"
 	fi
+
+	use userland_GNU || export INDENT=cat
 
 	econf \
 		--enable-dri \
