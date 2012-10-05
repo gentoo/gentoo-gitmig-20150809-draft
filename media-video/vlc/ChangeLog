@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.822 2012/09/24 20:08:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.823 2012/10/05 14:24:16 ranger Exp $
+
+  05 Oct 2012; Brent Baude <ranger@gentoo.org> vlc-2.0.3.ebuild:
+  Marking vlc-2.0.3 ppc for bug 424435
 
   24 Sep 2012; Agostino Sarubbo <ago@gentoo.org> vlc-2.0.3.ebuild:
   Stable for X86, wrt bug #424435
