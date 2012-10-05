@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/spice-0.12.0.ebuild,v 1.3 2012/10/04 17:04:42 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/spice-0.12.0.ebuild,v 1.4 2012/10/05 13:56:45 cardoe Exp $
 
 EAPI=4
 
@@ -65,7 +65,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch \
-		"${FILESDIR}/${PV}-gold.patch"
+		"${FILESDIR}/0.11.0-gold.patch"
 }
 
 src_configure() {
