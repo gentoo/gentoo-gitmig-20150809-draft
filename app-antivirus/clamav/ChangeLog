@@ -1,6 +1,9 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.428 2012/09/18 09:04:23 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.429 2012/10/05 15:49:20 ranger Exp $
+
+  05 Oct 2012; Brent Baude <ranger@gentoo.org> clamav-0.97.5-r1.ebuild:
+  Marking clamav-0.97.5-r1 ppc for bug 428584
 
 *clamav-0.97.6 (18 Sep 2012)
 
