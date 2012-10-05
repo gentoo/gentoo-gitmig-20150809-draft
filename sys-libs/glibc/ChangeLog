@@ -1,5 +1,9 @@
 # ChangeLog for sys-libs/glibc
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.895 2012/10/02 07:12:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.896 2012/10/05 03:36:15 vapier Exp $
+
+  05 Oct 2012; Mike Frysinger <vapier@gentoo.org> glibc-2.15-r3.ebuild,
+  glibc-2.16.0.ebuild:
+  Push out ppc fcntl.h fixes #436108 by Sean McGovern.
 
   02 Oct 2012; Mike Frysinger <vapier@gentoo.org>
   files/eblits/pkg_preinst.eblit:
