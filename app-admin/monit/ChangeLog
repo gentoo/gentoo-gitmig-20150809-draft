@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/monit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/ChangeLog,v 1.71 2012/08/20 06:43:50 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/ChangeLog,v 1.72 2012/10/05 06:06:50 patrick Exp $
+
+*monit-5.5 (05 Oct 2012)
+
+  05 Oct 2012; Patrick Lauer <patrick@gentoo.org> +monit-5.5.ebuild:
+  Bump
 
   20 Aug 2012; Benda Xu <heroxbd@gentoo.org> monit-5.4-r1.ebuild:
   keyword ~amd64-linux
@@ -298,4 +303,3 @@
 
   01 Oct 2003; Markus Nigbur <pyrania@gentoo.org> monit-4.0.ebuild:
   Initial ebuild. Thanks to rladams@kelsey-seybold.com (bug #16044).
-
