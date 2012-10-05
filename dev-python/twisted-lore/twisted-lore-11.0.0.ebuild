@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-lore/twisted-lore-11.0.0.ebuild,v 1.6 2011/07/17 11:01:46 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-lore/twisted-lore-11.0.0.ebuild,v 1.7 2012/10/05 14:45:16 marienz Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-jython"
+RESTRICT_PYTHON_ABIS="3.* *-jython *-pypy-*"
 MY_PACKAGE="Lore"
 
 inherit twisted versionator

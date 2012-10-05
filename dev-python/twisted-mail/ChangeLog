@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/twisted-mail
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-mail/ChangeLog,v 1.69 2012/09/27 18:16:26 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-mail/ChangeLog,v 1.70 2012/10/05 14:45:31 marienz Exp $
+
+  05 Oct 2012; Marien Zwart <marienz@gentoo.org> twisted-mail-10.2.0.ebuild,
+  twisted-mail-11.0.0.ebuild:
+  Restrict pypy in twisted < 11.1.0 (bug #420653).
 
 *twisted-mail-12.2.0 (27 Sep 2012)
 

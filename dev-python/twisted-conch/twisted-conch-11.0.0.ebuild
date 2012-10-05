@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/twisted-conch-11.0.0.ebuild,v 1.9 2012/02/20 14:32:33 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/twisted-conch-11.0.0.ebuild,v 1.10 2012/10/05 14:45:03 marienz Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-jython"
+RESTRICT_PYTHON_ABIS="3.* *-jython *-pypy-*"
 MY_PACKAGE="Conch"
 
 inherit twisted versionator

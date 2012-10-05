@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-runner/twisted-runner-11.0.0.ebuild,v 1.8 2012/01/02 00:59:55 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-runner/twisted-runner-11.0.0.ebuild,v 1.9 2012/10/05 14:46:17 marienz Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-jython"
+RESTRICT_PYTHON_ABIS="3.* *-jython *-pypy-*"
 MY_PACKAGE="Runner"
 
 inherit twisted versionator

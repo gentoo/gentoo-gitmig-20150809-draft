@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-mail/twisted-mail-10.2.0.ebuild,v 1.7 2011/01/25 17:05:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-mail/twisted-mail-10.2.0.ebuild,v 1.8 2012/10/05 14:45:31 marienz Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-jython"
+RESTRICT_PYTHON_ABIS="3.* *-jython *-pypy-*"
 MY_PACKAGE="Mail"
 
 inherit twisted versionator
