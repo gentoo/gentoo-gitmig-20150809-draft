@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.198 2012/09/09 15:52:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.199 2012/10/05 20:25:54 hwoarang Exp $
+
+*PyQt4-4.9.5 (05 Oct 2012)
+
+  05 Oct 2012; Markos Chandras <hwoarang@gentoo.org> +PyQt4-4.9.5.ebuild:
+  Version bump
 
   09 Sep 2012; Raúl Porcel <armin76@gentoo.org> PyQt4-4.9.4.ebuild:
   alpha/ia64/sparc stable wrt #429042
