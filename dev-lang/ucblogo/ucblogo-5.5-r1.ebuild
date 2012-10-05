@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ucblogo/ucblogo-5.5-r1.ebuild,v 1.2 2010/01/02 18:45:44 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ucblogo/ucblogo-5.5-r1.ebuild,v 1.3 2012/10/05 18:42:31 ago Exp $
 
-inherit eutils elisp-common
+inherit eutils elisp-common toolchain-funcs
 
 DESCRIPTION="a reflective, functional programming language"
 HOMEPAGE="http://www.cs.berkeley.edu/~bh/logo.html"
@@ -30,7 +30,7 @@ src_unpack() {
 
 src_compile() {
 	econf $(use_with X x) || die
-	emake || die
+	emake CC="$(tc-getCC)" || die
 }
 
 src_install() {
