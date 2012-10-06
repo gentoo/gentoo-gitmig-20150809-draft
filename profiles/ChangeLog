@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7008 2012/10/06 11:29:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7009 2012/10/06 12:12:34 sbriesen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Oct 2012; Stefan Briesenick <sbriesen@gentoo.org> package.mask:
+  masked only =www-apache/mod_musicindex-1.3.5 instead of all
 
   06 Oct 2012; Justin Lecher <jlec@gentoo.org> +updates/4Q-2012:
   Renaming sci-geosciences/gpxviewer to sci-geosciences/gpx-viewer to fit
