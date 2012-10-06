@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/viewmol
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/viewmol/ChangeLog,v 1.15 2011/06/25 18:12:02 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/viewmol/ChangeLog,v 1.16 2012/10/06 16:25:53 jlec Exp $
+
+  06 Oct 2012; Justin Lecher <jlec@gentoo.org> viewmol-2.4.1-r2.ebuild:
+  Add missing DEP on virtual/glu, #437076
 
   25 Jun 2011; Justin Lecher <jlec@gentoo.org> viewmol-2.4.1-r2.ebuild,
   metadata.xml:
