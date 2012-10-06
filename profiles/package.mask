@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14124 2012/10/06 12:12:34 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14125 2012/10/06 13:36:19 hasufell Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -153,6 +153,7 @@ app-arch/macutil
  
 # Julian Ospald <hasufell@gentoo.org> (12 Sep 2012)
 # outdated security package
+# removal at 05 Nov 2012
 www-client/torbrowser
 www-misc/torbrowser-profile
 
