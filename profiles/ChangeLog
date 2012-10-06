@@ -1,6 +1,6 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7011 2012/10/06 13:59:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7012 2012/10/06 20:11:31 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
@@ -8,6 +8,8 @@
 
   06 Oct 2012; Ulrich Müller <ulm@gentoo.org> license_groups:
   Add htmlc (the INRIA license) to MISC-FREE license group.
+  Add metapackage non-license to GPL-COMPATIBLE license group; this is really
+  a subcategory of public-domain which has been approved by the FSF.
 
   06 Oct 2012; Eray Aslan <eras@gentoo.org> package.mask:
   Mask mail-mta/nbsmtp for removal
