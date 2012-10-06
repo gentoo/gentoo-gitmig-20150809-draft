@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/winswitch/winswitch-0.12.13.ebuild,v 1.2 2012/05/22 16:18:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/winswitch/winswitch-0.12.16.ebuild,v 1.1 2012/10/06 10:05:28 xmw Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ inherit python distutils
 
 DESCRIPTION="client server tool to start and control virtual desktops"
 HOMEPAGE="http://winswitch.org"
-SRC_URI="https://winswitch.org/src/${P}.src.tar.bz2"
+SRC_URI="http://winswitch.org/src/${P}.src.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -34,7 +34,7 @@ DEPEND=""
 
 src_prepare() {
 	einfo "Remove bundled Vash"
-	rm -r skel/share/Vash
+	rm -r skel/share/Vash || die
 
 	python_convert_shebangs -r 2 skel
 }
