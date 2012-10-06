@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.5.0.3-r1.ebuild,v 1.7 2012/09/23 07:50:50 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.5.0.3-r1.ebuild,v 1.8 2012/10/06 12:02:10 jlec Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ SRC_URI="
 
 LICENSE="PSF-2.2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
 IUSE="apbs numpy vmd web"
 
 DEPEND="
@@ -63,6 +63,11 @@ src_prepare() {
 	rm ./modules/pmg_tk/startup/apbs_tools.py || die
 
 	echo "site_packages = \'$(python_get_sitedir -f)\'" > setup3.py || die
+
+	sed \
+		-e "s:/opt/local:${EPREFIX}/usr:g" \
+		-e '/ext_comp_args/s:\[.*\]:[]:g' \
+		-i setup.py || die
 
 	# python 3.* fix
 	# sed '452,465d' -i setup.py
