@@ -6,4 +6,7 @@
 		<email>xarthisius@gentoo.org</email>
 		<name>Kacper Kowalik</name>
 	</maintainer>
+	<use>
+		<flag name="html">optional for HTML export</flag>
+	</use>
 </pkgmetadata>
