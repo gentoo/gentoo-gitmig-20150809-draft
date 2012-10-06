@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/oasis/oasis-0.3.0.ebuild,v 1.2 2012/07/09 20:56:49 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/oasis/oasis-0.3.0.ebuild,v 1.3 2012/10/06 16:54:04 jlec Exp $
 
 EAPI=3
 
@@ -23,6 +23,7 @@ RDEPEND=">=dev-ml/ocaml-data-notation-0.0.3"
 DEPEND="${RDEPEND}
 	dev-ml/ocamlify
 	dev-ml/ocamlmod
+	!<sci-chemistry/oasis-4.0-r3
 	test? (
 		>=dev-ml/ocaml-fileutils-0.4.2
 		>=dev-ml/ounit-1.1.0
