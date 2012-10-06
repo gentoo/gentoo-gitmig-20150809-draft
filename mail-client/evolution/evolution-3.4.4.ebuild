@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.4.4.ebuild,v 1.1 2012/08/13 04:59:26 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.4.4.ebuild,v 1.2 2012/10/06 15:11:58 blueness Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.gnome.org/projects/evolution/"
 
 LICENSE="GPL-2 LGPL-2 OPENLDAP"
 SLOT="2.0"
-KEYWORDS="~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="clutter connman crypt doc +gnome-online-accounts gstreamer kerberos ldap map networkmanager python ssl"
 
 # We need a graphical pinentry frontend to be able to ask for the GPG
