@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/gentoo-bashcomp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-bashcomp/ChangeLog,v 1.47 2012/10/06 09:42:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-bashcomp/ChangeLog,v 1.48 2012/10/06 12:47:20 pacho Exp $
+
+  06 Oct 2012; Pacho Ramos <pacho@gentoo.org>
+  +files/gentoo-bashcomp-20101217-make_globals.patch:
+  Commit forgotten patch, thanks to ago for noticing.
 
 *gentoo-bashcomp-20101217-r1 (06 Oct 2012)
 
