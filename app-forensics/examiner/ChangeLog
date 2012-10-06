@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/examiner
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/examiner/ChangeLog,v 1.9 2012/10/06 08:43:17 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/examiner/ChangeLog,v 1.10 2012/10/06 10:00:30 ago Exp $
+
+  06 Oct 2012; Agostino Sarubbo <ago@gentoo.org> examiner-0.5-r2.ebuild:
+  Add ~amd64 and code improvements, wrt bug #437374
 
 *examiner-0.5-r2 (06 Oct 2012)
 
@@ -44,5 +47,3 @@
 
   19 Aug 2002; Bruce A. Locke <blocke@shivan.org> examiner-0.5.ebuild:
   Initial import.
-
-
