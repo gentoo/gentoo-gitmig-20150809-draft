@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/iperf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/ChangeLog,v 1.42 2012/10/06 13:37:47 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/ChangeLog,v 1.43 2012/10/06 13:43:23 pinkbyte Exp $
+
+  06 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> iperf-2.0.5.ebuild,
+  iperf-2.0.5-r1.ebuild:
+  Change package license from as-is to HPND
 
 *iperf-2.0.5-r1 (06 Oct 2012)
 
