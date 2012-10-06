@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/nsat-1.5-r1.ebuild,v 1.3 2012/09/26 07:20:51 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/nsat-1.5-r1.ebuild,v 1.4 2012/10/06 19:00:44 pinkbyte Exp $
 
 EAPI=2
 
@@ -30,6 +30,12 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-strip.patch
 	# bug 389767
 	use amd64 && epatch "${FILESDIR}"/${P}-amd64-compat.patch
+
+	# Respect LDFLAGS
+	sed -i -e '/..\/nsat/,+1s/${CFLAGS}/${CFLAGS} ${LDFLAGS}/' \
+		src/Makefile.in  || die 'first sed for respecting LDFLAGS failed'
+	sed -i -e '/@$(CC)/s/$(CFLAGS)/$(CFLAGS) $(LDFLAGS)/' \
+		src/smb/Makefile.in || die 'second sed for respecting LDFLAGS failed'
 
 	sed -i "s:^#CGIFile /usr/local/share/nsat/nsat.cgi$:#CGIFile /usr/share/nsat/nsat.cgi:g" \
 		nsat.conf || die "sed on nsat.conf failed"
