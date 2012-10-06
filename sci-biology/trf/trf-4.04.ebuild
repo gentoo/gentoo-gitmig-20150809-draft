@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/trf/trf-4.04.ebuild,v 1.3 2010/04/05 12:11:35 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/trf/trf-4.04.ebuild,v 1.4 2012/10/06 16:57:02 jlec Exp $
 
-EAPI="2"
+EAPI=4
 
 inherit eutils
 
@@ -17,20 +17,18 @@ SLOT="0"
 IUSE=""
 KEYWORDS="amd64 x86"
 
-DEPEND=""
-RDEPEND=""
-# gtk? ( x11-libs/gtk+ ) x11-libs/pango[X]
-
 S="${WORKDIR}"
 
+QA_PREBUILT="opt/${PN}/.*"
+
 src_unpack() {
-	cp "${DISTDIR}/${MY_P}.linux.exe" "${S}"
+	cp "${DISTDIR}/${MY_P}.linux.exe" "${S}" || die
 }
 
 src_install() {
 	exeinto /opt/${PN}
-	doexe trf404.linux.exe || die
-	dosym /opt/${PN}/${MY_P}.linux.exe /usr/bin/trf || die
+	doexe trf404.linux.exe
+	dosym /opt/${PN}/${MY_P}.linux.exe /usr/bin/trf
 	# GTK version (http://tandem.bu.edu/trf/downloads/trf400.linuxgtk.exe) has broken linking
 	#if use gtk; then
 	#	doexe trf400.linuxgtk.exe || die
