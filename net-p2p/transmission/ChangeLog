@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.208 2012/10/04 19:30:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.209 2012/10/06 21:51:42 blueness Exp $
+
+  06 Oct 2012; Anthony G. Basile <blueness@gentoo.org> transmission-2.61.ebuild:
+  stable ppc ppc64, bug #428196
 
   04 Oct 2012; Agostino Sarubbo <ago@gentoo.org> transmission-2.61.ebuild:
   Stable for amd64, wrt bug #428196
