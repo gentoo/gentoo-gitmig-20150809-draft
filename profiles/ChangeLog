@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7006 2012/10/04 16:22:00 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7007 2012/10/06 07:05:08 naota Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Oct 2012; <naota@gentoo.org> package.mask:
+  Mask app-i18n/ibus-table-{array30,cangjie,cantonese,xingma,yinma} for
+  removal. They should be replaced by ibus-table-chinese.
 
   04 Oct 2012; Hanno Boeck <hanno@gentoo.org> license_groups:
   Re-add as-is to MISC-FREE - all packages having as-is that are not free
