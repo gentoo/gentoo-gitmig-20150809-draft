@@ -2,6 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>net-mail</herd>
+<maintainer>
+	<email>pacho@gentoo.org</email>
+</maintainer>
 <longdescription>
 A GNOME trayicon which checks for email. Supports mbox, MH,
 Maildir, IMAP, Sylpheed, POP3, Gmail and Evolution.  Authenticates via

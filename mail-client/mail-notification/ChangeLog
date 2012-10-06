@@ -1,6 +1,15 @@
 # ChangeLog for mail-client/mail-notification
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.112 2012/05/21 23:35:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.113 2012/10/06 08:58:28 pacho Exp $
+
+*mail-notification-5.4-r6 (06 Oct 2012)
+
+  06 Oct 2012; Pacho Ramos <pacho@gentoo.org> +mail-notification-5.4-r6.ebuild,
+  metadata.xml:
+  Revision bump syncing with fedora, it includes a snapshot incorporating most
+  of the fixes have been around different distributions for years, also port it
+  to gtk3, gmime-2.6 and stop using glade. It's also compatible with Gnome3.
+  Taken maintainership also.
 
   21 May 2012; Mike Frysinger <vapier@gentoo.org>
   mail-notification-5.4-r4.ebuild, mail-notification-5.4-r5.ebuild:
