@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/vala-0.18.0.ebuild,v 1.1 2012/09/25 07:56:30 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/vala-0.18.0.ebuild,v 1.2 2012/10/06 09:24:09 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -22,8 +22,8 @@ DEPEND="${RDEPEND}
 	!${CATEGORY}/${PN}:0
 	dev-libs/libxslt
 	sys-devel/flex
-	|| ( sys-devel/bison dev-util/byacc dev-util/yacc )
 	virtual/pkgconfig
+	virtual/yacc
 	test? (
 		dev-libs/dbus-glib
 		>=dev-libs/glib-2.26:2 )"
