@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gssdp/gssdp-0.12.2.1.ebuild,v 1.5 2012/10/01 08:28:36 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gssdp/gssdp-0.12.2.1.ebuild,v 1.6 2012/10/06 09:55:08 pacho Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ RDEPEND=">=dev-libs/glib-2.22:2
 		>=dev-libs/gobject-introspection-0.6.7
 		dev-lang/vala:0.14[vapigen]
 	)
-	!<net-libs/gupnp-vala-0.10.2
+	!<net-libs/gupnp-vala-0.10.3
 "
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
