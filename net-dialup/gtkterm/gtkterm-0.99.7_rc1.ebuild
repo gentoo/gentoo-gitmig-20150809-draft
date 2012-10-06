@@ -1,8 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gtkterm/gtkterm-0.99.7_rc1.ebuild,v 1.1 2012/10/06 10:29:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gtkterm/gtkterm-0.99.7_rc1.ebuild,v 1.2 2012/10/06 10:35:00 pacho Exp $
 
 EAPI=4
+inherit eutils
 
 MY_P="${P/_/-}"
 DESCRIPTION="A serial port terminal written in GTK+, similar to Windows' HyperTerminal"
@@ -40,6 +41,7 @@ src_prepare() {
 
 src_install() {
 	einstall || die "einstall failed"
+	make_desktop_entry "${PN}"
 
 	if use nls; then
 		cd "${S}/po"

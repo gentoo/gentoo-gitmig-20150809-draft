@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/gtkterm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gtkterm/ChangeLog,v 1.22 2012/10/06 10:29:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gtkterm/ChangeLog,v 1.23 2012/10/06 10:35:00 pacho Exp $
+
+  06 Oct 2012; Pacho Ramos <pacho@gentoo.org> gtkterm-0.99.7_rc1.ebuild:
+  Install desktop entry also, bug #346703 by Miguel R. Caudevilla.
 
 *gtkterm-0.99.7_rc1 (06 Oct 2012)
 
