@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.16.5.ebuild,v 1.11 2012/06/01 03:11:53 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.17.2.ebuild,v 1.1 2012/10/06 20:50:20 angelos Exp $
 
 EAPI=4
-inherit eutils flag-o-matic linux-info multilib user
+inherit eutils flag-o-matic linux-info multilib systemd user
 
 DESCRIPTION="The Music Player Daemon (mpd)"
 HOMEPAGE="http://www.musicpd.org"
@@ -11,49 +11,59 @@ SRC_URI="mirror://sourceforge/musicpd/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm hppa ppc ppc64 sh sparc x86 ~x86-fbsd"
-IUSE="aac +alsa ao audiofile bzip2 cdio cue +curl debug +fifo +ffmpeg flac
-fluidsynth profile +id3tag inotify ipv6 jack lame lastfmradio mms libsamplerate
-+mad mikmod modplug mpg123 musepack +network ogg openal oss pipe pulseaudio sid
-sndfile sqlite tcpd twolame unicode vorbis wavpack wildmidi zeroconf zip"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x64-macos"
+IUSE="aac +alsa ao audiofile bzip2 cdio +curl debug +fifo +ffmpeg flac
+fluidsynth gme +id3tag inotify ipv6 jack lame lastfmradio mms libsamplerate +mad
+mikmod modplug mpg123 musepack +network ogg openal oss pipe pulseaudio recorder
+sid sndfile soundcloud soup sqlite systemd tcpd twolame unicode vorbis wavpack
+wildmidi zeroconf zip"
 
-REQUIRED_USE="|| ( alsa ao fifo jack network openal oss pipe pulseaudio )
-	|| ( aac audiofile ffmpeg flac fluidsynth mad mikmod modplug mpg123 musepack
-			ogg flac sid vorbis wavpack wildmidi )
-	network? ( || ( audiofile flac lame twolame vorbis ) )
+OUTPUT_PLUGINS="alsa ao fifo jack network openal oss pipe pulseaudio recorder"
+INPUT_PLUGINS="aac audiofile ffmpeg flac fluidsynth mad mikmod modplug mpg123
+	musepack ogg flac sid vorbis wavpack wildmidi"
+ENCODER_PLUGINS="audiofile flac lame twolame vorbis"
+
+REQUIRED_USE="|| ( ${OUTPUT_PLUGINS} )
+	|| ( ${INPUT_PLUGINS} )
+	network? ( || ( ${ENCODER_PLUGINS} ) )
+	recorder? ( || ( ${ENCODER_PLUGINS} ) )
 	lastfmradio? ( curl )"
 
 RDEPEND="!<sys-cluster/mpich2-1.4_rc2
 	dev-libs/glib:2
 	aac? ( media-libs/faad2 )
-	alsa? ( media-sound/alsa-utils )
+	alsa? ( media-sound/alsa-utils
+		media-libs/alsa-lib )
 	ao? ( media-libs/libao[alsa?,pulseaudio?] )
 	audiofile? ( media-libs/audiofile )
 	bzip2? ( app-arch/bzip2 )
 	cdio? ( dev-libs/libcdio[-minimal] )
-	cue? ( media-libs/libcue )
 	curl? ( net-misc/curl )
 	ffmpeg? ( virtual/ffmpeg )
 	flac? ( media-libs/flac[ogg?] )
 	fluidsynth? ( media-sound/fluidsynth )
-	network? ( >=media-libs/libshout-2
-		!lame? ( !vorbis? ( media-libs/libvorbis ) ) )
+	gme? ( >=media-libs/game-music-emu-0.6.0_pre20120802 )
 	id3tag? ( media-libs/libid3tag )
 	jack? ( media-sound/jack-audio-connection-kit )
 	lame? ( network? ( media-sound/lame ) )
-	mms? ( media-libs/libmms )
 	libsamplerate? ( media-libs/libsamplerate )
 	mad? ( media-libs/libmad )
 	mikmod? ( media-libs/libmikmod:0 )
+	mms? ( media-libs/libmms )
 	modplug? ( media-libs/libmodplug )
 	mpg123? ( >=media-sound/mpg123-1.12.2 )
 	musepack? ( media-sound/musepack-tools )
+	network? ( >=media-libs/libshout-2
+		!lame? ( !vorbis? ( media-libs/libvorbis ) ) )
 	ogg? ( media-libs/libogg )
 	openal? ( media-libs/openal )
 	pulseaudio? ( media-sound/pulseaudio )
 	sid? ( media-libs/libsidplay:2 )
 	sndfile? ( media-libs/libsndfile )
+	soundcloud? ( >=dev-libs/yajl-2 )
+	soup? ( net-libs/libsoup:2.4 )
 	sqlite? ( dev-db/sqlite:3 )
+	systemd? ( sys-apps/systemd )
 	tcpd? ( sys-apps/tcp-wrappers )
 	twolame? ( media-sound/twolame )
 	vorbis? ( media-libs/libvorbis )
@@ -83,9 +93,9 @@ src_prepare() {
 }
 
 src_configure() {
-	local mpdconf="--enable-tcp --enable-un	--disable-documentation
-		--disable-ffado --disable-gme --enable-largefile
-		--disable-mvp --docdir=${EPREFIX}/usr/share/doc/${PF}"
+	local mpdconf="--disable-despotify --disable-documentation --disable-ffado
+		--disable-mvp --disable-roar --enable-largefile
+		--enable-tcp --enable-un --docdir=${EPREFIX}/usr/share/doc/${PF}"
 
 	if use network; then
 		mpdconf+=" --enable-shout $(use_enable vorbis vorbis-encoder)
@@ -98,12 +108,6 @@ src_configure() {
 			--disable-twolame-encoder --disable-wave-encoder"
 	fi
 
-	if use flac && use ogg; then
-		mpdconf+=" --enable-oggflac"
-	else
-		mpdconf+=" --disable-oggflac"
-	fi
-
 	append-lfs-flags
 	append-ldflags "-L/usr/$(get_libdir)/sidplay/builders"
 
@@ -113,40 +117,45 @@ src_configure() {
 		$(use_enable ao) \
 		$(use_enable audiofile) \
 		$(use_enable bzip2) \
+		$(use_enable cdio cdio-paranoia) \
 		$(use_enable cdio iso9660) \
-		$(use_enable cue) \
 		$(use_enable curl) \
 		$(use_enable debug) \
 		$(use_enable ffmpeg) \
 		$(use_enable fifo) \
 		$(use_enable flac) \
 		$(use_enable fluidsynth) \
+		$(use_enable gme) \
 		$(use_enable id3tag id3) \
 		$(use_enable inotify) \
 		$(use_enable ipv6) \
 		$(use_enable jack) \
 		$(use_enable lastfmradio lastfm) \
-		$(use_enable mms) \
 		$(use_enable libsamplerate lsr) \
 		$(use_enable mad) \
 		$(use_enable mikmod) \
+		$(use_enable mms) \
 		$(use_enable modplug) \
 		$(use_enable mpg123) \
 		$(use_enable musepack mpc) \
 		$(use_enable openal) \
 		$(use_enable oss) \
 		$(use_enable pipe pipe-output) \
-		$(use_enable profile gprof) \
 		$(use_enable pulseaudio pulse) \
+		$(use_enable recorder recorder-output) \
 		$(use_enable sid sidplay) \
 		$(use_enable sndfile sndfile) \
+		$(use_enable soundcloud) \
+		$(use_enable soup) \
 		$(use_enable sqlite) \
+		$(use_enable systemd systemd-daemon) \
 		$(use_enable tcpd libwrap) \
 		$(use_enable vorbis) \
 		$(use_enable wavpack) \
 		$(use_enable wildmidi) \
 		$(use_enable zip zzip) \
 		$(use_with zeroconf zeroconf avahi) \
+		"$(systemd_with_unitdir)" \
 		${mpdconf}
 }
 
@@ -160,10 +169,10 @@ src_install() {
 
 	if use unicode; then
 		sed -i -e 's:^#filesystem_charset.*$:filesystem_charset "UTF-8":' \
-			"${D}"/etc/mpd.conf || die "sed failed"
+			"${ED}"/etc/mpd.conf || die "sed failed"
 	fi
 
-	diropts -m0755 -o mpd -g audio
+	use prefix || diropts -m0755 -o mpd -g audio
 	dodir /var/lib/mpd
 	keepdir /var/lib/mpd
 	dodir /var/lib/mpd/music

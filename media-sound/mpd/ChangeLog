@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.300 2012/10/05 17:56:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.301 2012/10/06 20:50:20 angelos Exp $
+
+*mpd-0.17.2 (06 Oct 2012)
+
+  06 Oct 2012; Christoph Mende <angelos@gentoo.org> +mpd-0.17.2.ebuild,
+  -files/0.15.1-mpdconf.patch, -files/mpd-0.16.3-ffmpeg.patch,
+  -files/mpd-0.16.4-include-stdio.patch, -files/mpd-0.17-noise.patch,
+  -files/mpd.conf.patch, -files/mpd.rc, -mpd-0.16.2.ebuild, -mpd-0.16.5.ebuild,
+  -mpd-0.16.6.ebuild, -mpd-0.16.7.ebuild, -mpd-0.17-r1.ebuild, -mpd-0.17.ebuild:
+  Version bump, remove old
 
   05 Oct 2012; Brent Baude <ranger@gentoo.org> mpd-0.16.8.ebuild:
   Marking mpd-0.16.8 ppc64 for bug 426834
