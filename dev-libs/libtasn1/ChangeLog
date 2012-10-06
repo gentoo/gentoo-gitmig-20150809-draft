@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libtasn1
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.175 2012/10/03 10:28:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.176 2012/10/06 17:11:16 armin76 Exp $
+
+  06 Oct 2012; Raúl Porcel <armin76@gentoo.org> libtasn1-2.13.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc/x86 stable wrt #436366
 
   03 Oct 2012; Agostino Sarubbo <ago@gentoo.org> libtasn1-2.13.ebuild:
   Stable for amd64, wrt bug #436366
