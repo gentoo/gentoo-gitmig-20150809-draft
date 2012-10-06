@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/markdown
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/markdown/ChangeLog,v 1.21 2012/05/10 21:44:41 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/markdown/ChangeLog,v 1.22 2012/10/06 23:50:48 floppym Exp $
+
+  06 Oct 2012; Mike Gilbert <floppym@gentoo.org> markdown-2.1.0.ebuild,
+  markdown-2.1.1.ebuild:
+  Depend on nose for tests, bug 437442 by Vicente Olivert Riera.
 
   10 May 2012; Mike Gilbert <floppym@gentoo.org> markdown-2.1.1.ebuild:
   Call 2to3-${PYTHON_ABI}, spotted by Arfrever.
@@ -85,4 +89,3 @@
   +markdown-2.0.ebuild:
   Initial import. Fixes #156999. Thanks to Naoaki Shindo, Torsten Rehn and
   Priit Laes for working on the ebuild.
-
