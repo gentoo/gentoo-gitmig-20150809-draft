@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/gtkterm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gtkterm/ChangeLog,v 1.21 2012/05/03 03:54:07 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gtkterm/ChangeLog,v 1.22 2012/10/06 10:29:15 pacho Exp $
+
+*gtkterm-0.99.7_rc1 (06 Oct 2012)
+
+  06 Oct 2012; Pacho Ramos <pacho@gentoo.org>
+  +files/gtkterm-0.99.7_rc1-configure.patch, +gtkterm-0.99.7_rc1.ebuild:
+  Version bump, also fixes compilation with current vte (#406105 by Xake).
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> gtkterm-0.99.5-r1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -77,4 +83,3 @@
 
   09 Jul 2003; Martin Holzer <mholzer@gentoo.org> gtkterm-0.99.3.ebuild:
   Initial ebuild submitted by Zach Bagnall <yem@y3m.net> in #23735.
-
