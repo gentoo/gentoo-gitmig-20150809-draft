@@ -1,6 +1,11 @@
 # ChangeLog for app-laptop/thinkfan
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkfan/ChangeLog,v 1.8 2012/06/23 23:18:19 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkfan/ChangeLog,v 1.9 2012/10/06 09:46:10 xmw Exp $
+
+*thinkfan-0.8.1 (06 Oct 2012)
+
+  06 Oct 2012; Michael Weber <xmw@gentoo.org> +thinkfan-0.8.1.ebuild:
+  Version bump (euscan), drop old patches
 
   23 Jun 2012; Michael Weber <xmw@gentoo.org> -thinkfan-0.8_alpha2.ebuild:
   Drop old
