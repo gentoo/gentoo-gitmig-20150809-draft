@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14125 2012/10/06 13:36:19 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14126 2012/10/06 13:56:48 eras Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Eray Aslan <eras@gentoo.org> (06 Oct 2012)
+# Dead upstream.  Use one of the alternatives in mail-mta category.
+# nullmailer and msmtp are good light weight choices.  Bug #389373
+# Removal in 30 days.
+mail-mta/nbsmtp
 
 # Naohiro Aota <naota@gentoo.org> (06 Oct 2012)
 # Masked for removal in 30 days. Obsolete packages. Please migrate to
