@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/redoflacs/redoflacs-0.14.1.ebuild,v 1.1 2012/09/23 04:06:03 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/redoflacs/redoflacs-0.15.ebuild,v 1.1 2012/10/06 07:40:48 yngwin Exp $
 
 EAPI=4
 inherit vcs-snapshot
@@ -18,9 +18,7 @@ DEPEND=""
 RDEPEND="app-shells/bash
 	media-libs/flac
 	sys-apps/coreutils
-	sys-apps/findutils
-	sys-apps/gawk
-	sys-apps/grep"
+	sys-apps/findutils"
 
 src_install() {
 	exeinto /usr/bin
@@ -29,8 +27,6 @@ src_install() {
 
 pkg_postinst() {
 	elog "This script makes use of optional programs if installed:"
-	elog "   sys-libs/ncurses   ->  support for full terminal width"
-	elog "   sys-apps/less      ->  support for piping help through 'less'"
 	elog "   media-sound/sox    ->  support for creating spectrograms"
 	elog "   media-libs/libpng  ->  needed by media-sound/sox"
 }
