@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/iperf
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/ChangeLog,v 1.41 2011/12/11 21:51:04 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/ChangeLog,v 1.42 2012/10/06 13:37:47 pinkbyte Exp $
+
+*iperf-2.0.5-r1 (06 Oct 2012)
+
+  06 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> +iperf-2.0.5-r1.ebuild,
+  +files/iperf-fix-bandwidth-limit.patch:
+  Revision bump, add fix for bug #387129, bump to EAPI 4
 
   11 Dec 2011; Markus Meier <maekke@gentoo.org> iperf-2.0.5.ebuild:
   add ~arm, bug #389451
