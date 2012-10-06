@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/expat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.143 2012/10/03 19:37:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.144 2012/10/06 17:14:41 armin76 Exp $
+
+  06 Oct 2012; Raúl Porcel <armin76@gentoo.org> expat-2.1.0-r2.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #437036
 
   03 Oct 2012; Jeroen Roovers <jer@gentoo.org> expat-2.1.0-r2.ebuild:
   Stable for HPPA (bug #437036).
