@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/requests
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.21 2012/10/05 00:10:25 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.22 2012/10/06 02:03:36 blueness Exp $
+
+  06 Oct 2012; Anthony G. Basile <blueness@gentoo.org> requests-0.14.1.ebuild:
+  keyword ~arm, bug #437250
 
 *requests-0.14.1 (05 Oct 2012)
 
