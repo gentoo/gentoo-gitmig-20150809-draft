@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-2.1.10-r5.ebuild,v 1.1 2012/09/08 18:40:59 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-2.1.10-r5.ebuild,v 1.2 2012/10/06 16:39:54 swift Exp $
 
 EAPI="4"
 PYTHON_DEPEND="*"
@@ -15,7 +15,7 @@ SEMNG_VER="2.1.6"
 SELNX_VER="2.1.9"
 SEPOL_VER="2.1.4"
 
-IUSE="audit pam dbus sesandbox"
+IUSE="audit pam dbus"
 
 DESCRIPTION="SELinux core utilities"
 HOMEPAGE="http://userspace.selinuxproject.org"
@@ -25,7 +25,7 @@ SRC_URI="http://userspace.selinuxproject.org/releases/20120216/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 COMMON_DEPS=">=sys-libs/libselinux-${SELNX_VER}[python]
 	>=sys-libs/glibc-2.4
@@ -35,7 +35,6 @@ COMMON_DEPS=">=sys-libs/libselinux-${SELNX_VER}[python]
 	>=sys-libs/libsepol-${SEPOL_VER}
 	sys-devel/gettext
 	dev-python/ipy
-	sesandbox? ( dev-libs/libcgroup )
 	dbus? (
 		sys-apps/dbus
 		dev-libs/dbus-glib
@@ -83,7 +82,6 @@ src_compile() {
 	use audit && use_audit="y";
 	use pam && use_pam="y";
 	use dbus && use_dbus="y";
-	use sesandbox && use_sesandbox="y";
 
 	python_copy_sources semanage sandbox
 	building() {
@@ -104,7 +102,6 @@ src_install() {
 	use audit && use_audit="y";
 	use pam && use_pam="y";
 	use dbus && use_dbus="y";
-	use sesandbox && use_sesandbox="y";
 
 	# Python scripts are present in many places. There are no extension modules.
 	installation() {
