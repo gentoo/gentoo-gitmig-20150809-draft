@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.9-r5.ebuild,v 1.1 2012/10/05 17:43:57 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.9-r5.ebuild,v 1.2 2012/10/06 23:28:17 zerochaos Exp $
 
 EAPI="4"
 
@@ -32,6 +32,9 @@ RDEPEND="!minimal? ( >=dev-libs/openssl-0.9.7:0 )
 	cuda? ( x11-drivers/nvidia-drivers dev-util/nvidia-cuda-toolkit )
 	opencl? ( virtual/opencl )"
 DEPEND="${RDEPEND}"
+
+#per bug #437426
+RESTRICT="test"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -190,20 +193,21 @@ src_compile() {
 		$(get_target)
 }
 
-src_test() {
-	cd run
-	if [[ -f "${EPREFIX}/etc/john/john.conf" || -f "${EPREFIX}/etc/john/john.ini" ]] ; then
+#src_test() {
+#	cd run
+#	if [[ -f "${EPREFIX}/etc/john/john.conf" || -f "${EPREFIX}/etc/john/john.ini" ]] ; then
 		# This requires that MPI is actually 100% online on your system, which might not
 		# be the case, depending on which MPI implementation you are using.
 		#if use mpi; then
 		#	mpirun -np 2 ./john --test || die "self test failed"
 		#else
 
-		./john --test || die 'self test failed'
-	else
-		ewarn "Tests require '${EPREFIX}/etc/john/john.conf' or '${EPREFIX}/etc/john/john.ini'"
-	fi
-}
+#		pax-mark -mr john
+#		./john --test || die 'self test failed'
+#	else
+#		ewarn "Tests require '${EPREFIX}/etc/john/john.conf' or '${EPREFIX}/etc/john/john.ini'"
+#	fi
+#}
 
 src_install() {
 	# executables
