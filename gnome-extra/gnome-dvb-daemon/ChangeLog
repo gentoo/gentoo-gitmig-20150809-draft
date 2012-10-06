@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-dvb-daemon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-dvb-daemon/ChangeLog,v 1.16 2012/10/06 06:37:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-dvb-daemon/ChangeLog,v 1.17 2012/10/06 06:43:33 pacho Exp $
+
+  06 Oct 2012; Pacho Ramos <pacho@gentoo.org> gnome-dvb-daemon-0.2.10.ebuild:
+  It needs gir files from gtk3 (#416599 by Stephan Ritscher).
 
 *gnome-dvb-daemon-0.2.10 (06 Oct 2012)
 
