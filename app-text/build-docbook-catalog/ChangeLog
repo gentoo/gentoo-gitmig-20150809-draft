@@ -1,6 +1,10 @@
 # ChangeLog for app-text/build-docbook-catalog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/build-docbook-catalog/ChangeLog,v 1.34 2012/10/04 02:57:58 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/build-docbook-catalog/ChangeLog,v 1.35 2012/10/06 17:15:54 armin76 Exp $
+
+  06 Oct 2012; Raúl Porcel <armin76@gentoo.org>
+  build-docbook-catalog-1.19.1.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc/x86 stable wrt #437024
 
   04 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
   build-docbook-catalog-1.19.1.ebuild:
