@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.4.ebuild,v 1.1 2012/08/24 16:01:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.4.ebuild,v 1.2 2012/10/06 21:07:26 aballier Exp $
 
 EAPI="2"
 
@@ -16,9 +16,10 @@ SRC_URI="http://${PN}.inria.fr/V${MY_PV}/files/${MY_P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="gtk debug +ocamlopt doc"
+IUSE="gtk debug +ocamlopt doc camlp5"
 
 RDEPEND=">=dev-lang/ocaml-3.11.2[ocamlopt?]
+	camlp5? ( >=dev-ml/camlp5-6.02.3[ocamlopt?] )
 	gtk? ( >=dev-ml/lablgtk-2.10.1[ocamlopt?] )"
 DEPEND="${RDEPEND}
 	doc? (
@@ -47,7 +48,6 @@ src_configure() {
 		--coqdocdir /usr/$(get_libdir)/coq/coqdoc
 		--docdir /usr/share/doc/${PF}
 		--configdir /etc/xdg/${PN}
-		--usecamlp4
 		--lablgtkdir ${ocaml_lib}/lablgtk2"
 
 	use debug && myconf="--debug $myconf"
@@ -61,6 +61,9 @@ src_configure() {
 	fi
 	use ocamlopt || myconf="$myconf -byte-only"
 	use ocamlopt && myconf="$myconf --opt"
+
+	use camlp5 || myconf="$myconf --usecamlp4"
+	use camlp5 && myconf="$myconf --camlp5dir ${ocaml_lib}/camlp5"
 
 	export CAML_LD_LIBRARY_PATH="${S}/kernel/byterun/"
 	./configure $myconf || die "configure failed"
