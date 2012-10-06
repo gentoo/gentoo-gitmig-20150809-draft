@@ -1,6 +1,11 @@
 # ChangeLog for app-forensics/examiner
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/examiner/ChangeLog,v 1.8 2012/09/08 02:18:50 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/examiner/ChangeLog,v 1.9 2012/10/06 08:43:17 pinkbyte Exp $
+
+*examiner-0.5-r2 (06 Oct 2012)
+
+  06 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> +examiner-0.5-r2.ebuild:
+  New revision, fixes bug #241256 and a lot of QA issues. Bumped to EAPI 4
 
   08 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.
