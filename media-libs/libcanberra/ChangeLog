@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libcanberra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/ChangeLog,v 1.87 2012/10/04 14:56:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/ChangeLog,v 1.88 2012/10/06 09:29:25 maekke Exp $
+
+  06 Oct 2012; Markus Meier <maekke@gentoo.org> libcanberra-0.29.ebuild:
+  arm stable, bug #427544
 
   04 Oct 2012; Agostino Sarubbo <ago@gentoo.org> libcanberra-0.29.ebuild:
   Stable for amd64, wrt bug #427544
