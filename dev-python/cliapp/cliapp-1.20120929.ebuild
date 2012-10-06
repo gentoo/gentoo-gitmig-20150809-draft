@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cliapp/cliapp-0.29.ebuild,v 1.3 2012/06/27 04:44:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cliapp/cliapp-1.20120929.ebuild,v 1.1 2012/10/06 23:26:35 mschiff Exp $
 
 EAPI=4
 
