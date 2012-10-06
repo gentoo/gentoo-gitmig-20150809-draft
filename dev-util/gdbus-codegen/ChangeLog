@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/gdbus-codegen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/ChangeLog,v 1.35 2012/10/06 08:55:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/ChangeLog,v 1.36 2012/10/06 21:16:55 blueness Exp $
+
+  06 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  gdbus-codegen-2.32.4.ebuild:
+  stable ppc ppc64, bug #427544
 
   06 Oct 2012; Markus Meier <maekke@gentoo.org> gdbus-codegen-2.32.4.ebuild:
   arm stable, bug #427544
@@ -144,4 +148,3 @@
   27 Sep 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   +gdbus-codegen-2.30.0.ebuild, +metadata.xml:
   Move from GNOME overlay for GNOME 3.2. Ebuild by tetromino.
-
