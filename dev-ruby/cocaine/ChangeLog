@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/cocaine
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cocaine/ChangeLog,v 1.2 2012/08/14 03:18:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cocaine/ChangeLog,v 1.3 2012/10/06 06:29:39 graaff Exp $
+
+*cocaine-0.4.0 (06 Oct 2012)
+
+  06 Oct 2012; Hans de Graaff <graaff@gentoo.org> cocaine-0.2.1.ebuild,
+  +cocaine-0.4.0.ebuild:
+  Version bump. Drop ree18 since it no longer passes the tests and will be
+  removed shortly anyway.
 
   14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> cocaine-0.2.1.ebuild:
   Port to rspec helper for testing.
