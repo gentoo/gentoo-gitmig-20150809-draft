@@ -1,12 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/focuswriter/focuswriter-1.3.90.ebuild,v 1.1 2012/09/02 01:38:30 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/focuswriter/focuswriter-1.4.0.ebuild,v 1.1 2012/10/06 06:00:12 yngwin Exp $
 
 EAPI=4
-
-#does nothing useful, LANGS="cs de el en es_MX es fi fr hu it nl pl pt_BR pt ru sv uk"
-
-inherit qt4-r2
+PLOCALES="ca cs da de el en es es_MX fi fr hu it ja nl pl pt_BR pt ru sk sv uk zh_CN"
+PLOCALE_BACKUP="en"
+inherit qt4-r2 l10n
 
 DESCRIPTION="A fullscreen and distraction-free word processor"
 HOMEPAGE="http://gottcode.org/focuswriter/"
@@ -30,6 +29,15 @@ DEPEND="${RDEPEND}
 
 DOCS=( ChangeLog CREDITS README )
 
+src_prepare() {
+	l10n_for_each_disabled_locale_do rm_loc
+}
+
 src_configure() {
 	eqmake4 PREFIX="${EPREFIX}/usr"
+}
+
+rm_loc() {
+	sed -e "s|translations/${PN}_${1}.ts||"	-i ${PN}.pro || die 'sed failed'
+	rm translations/${PN}_${1}.{ts,qm} || die "removing ${1} locale failed"
 }
