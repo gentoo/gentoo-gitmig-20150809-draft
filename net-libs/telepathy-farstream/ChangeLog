@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/telepathy-farstream
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-farstream/ChangeLog,v 1.6 2012/06/25 04:17:12 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-farstream/ChangeLog,v 1.7 2012/10/06 12:22:43 ago Exp $
+
+  06 Oct 2012; Agostino Sarubbo <ago@gentoo.org>
+  telepathy-farstream-0.2.3.ebuild:
+  Stable for amd64, wrt bug #422989
 
 *telepathy-farstream-0.4.0 (25 Jun 2012)
 
