@@ -1,42 +1,10 @@
 # ChangeLog for sci-geosciences/gpxviewer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpxviewer/ChangeLog,v 1.10 2012/09/20 17:46:29 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpxviewer/ChangeLog,v 1.11 2012/10/06 11:22:34 jlec Exp $
 
-  20 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> gpxviewer-0.2.0.ebuild:
-  Fix homepage. No vars there.
+*gpxviewer-0.3.0 (06 Oct 2012)
 
-  04 May 2012; Jeff Horelick <jdhore@gentoo.org> gpxviewer-0.2.0.ebuild:
-  dev-util/pkgconfig -> virtual/pkgconfig
+  06 Oct 2012; Justin Lecher <jlec@gentoo.org> -gpxviewer-0.2.0.ebuild,
+  +gpxviewer-0.3.0.ebuild, metadata.xml:
+  Version BUmp, #431820; drop old
 
-  14 Feb 2012; Ulrich Müller <ulm@gentoo.org> gpxviewer-0.2.0.ebuild:
-  QA: Fix ebuild header, bug 398773.
-
-  06 Mar 2011; Justin Lecher <jlec@gentoo.org> gpxviewer-0.2.0.ebuild:
-  Correct Slots for gtk 3 introduction to tree
-
-  02 Mar 2011; Justin Lecher <jlec@gentoo.org> gpxviewer-0.2.0.ebuild:
-  Correct Slots for gtk 3 introduction to tree
-
-  02 Mar 2011; Justin Lecher <jlec@gentoo.org> gpxviewer-0.2.0.ebuild:
-  Correct Slots for gtk 3 introduction to tree
-
-  04 Oct 2010; Justin Lecher <jlec@gentoo.org>
-  files/0.2.0-configure.ac.patch:
-  Change slot
-
-  03 Oct 2010; Justin Lecher <jlec@gentoo.org> gpxviewer-0.2.0.ebuild:
-  Some QA, 339598
-
-*gpxviewer-0.2.0 (02 Oct 2010)
-
-  02 Oct 2010; Justin Lecher <jlec@gentoo.org>
-  -files/0.1.3_pre1-configure.ac.patch, -gpxviewer-0.1.3_pre1.ebuild,
-  +files/0.2.0-configure.ac.patch, +gpxviewer-0.2.0.ebuild:
-  Version Bump
-
-*gpxviewer-0.1.3_pre1 (18 Jun 2010)
-
-  18 Jun 2010; Justin Lecher <jlec@gentoo.org>
-  +files/0.1.3_pre1-configure.ac.patch, +gpxviewer-0.1.3_pre1.ebuild,
-  +metadata.xml:
-  New addition #289912
