@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-3.0.ebuild,v 1.3 2012/10/06 12:41:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-3.0.1.ebuild,v 1.1 2012/10/06 12:41:07 jlec Exp $
 
 EAPI=4
 
@@ -44,7 +44,7 @@ REQUIRED_USE="ldap? ( acl )"
 
 DOCS=( CONTRIBUTORS NEWS VERSION AUTHORS doc/DEVELOPER )
 
-PATCHES=( "${FILESDIR}"/${PN}-3.0-gentoo.patch )
+PATCHES=( "${FILESDIR}"/${P}-gentoo.patch )
 
 src_configure() {
 	local myeconfargs=()
@@ -79,10 +79,12 @@ src_configure() {
 		--enable-overwrite
 		--disable-krb4-uam
 		--disable-afs
-		--disable-bundled-libevent
+		--with-libevent-header=/usr/include
+		--with-libevent-lib=/usr/$(get_libdir)
 		--with-bdb=/usr
 		--with-uams-path=/usr/$(get_libdir)/${PN}
 		--disable-silent-rules
+		--with-init-style=gentoo
 		)
 	autotools-utils_src_configure
 }
@@ -90,9 +92,11 @@ src_configure() {
 src_install() {
 	autotools-utils_src_install
 
-	newinitd "${FILESDIR}"/${PN}.init ${PN}
-
-	use avahi || sed -i -e '/need avahi-daemon/d' "${D}"/etc/init.d/${PN}
+	if use avahi; then
+		sed -i -e '/avahi-daemon/s:use:need:g' "${D}"/etc/init.d/${PN} || die
+	else
+		sed -i -e '/avahi-daemon/d' "${D}"/etc/init.d/${PN} || die
+	fi
 
 	# The pamd file isn't what we need, use pamd_mimic_system
 	rm -rf "${D}/etc/pam.d"
