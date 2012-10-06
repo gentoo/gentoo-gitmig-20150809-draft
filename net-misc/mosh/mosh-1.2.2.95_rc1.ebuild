@@ -1,16 +1,18 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/mosh-1.2.1.ebuild,v 1.3 2012/06/02 06:19:23 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/mosh-1.2.2.95_rc1.ebuild,v 1.1 2012/10/06 09:34:02 xmw Exp $
 
 EAPI=4
 
+inherit autotools vcs-snapshot
+
 DESCRIPTION="Mobile shell that supports roaming and intelligent local echo"
 HOMEPAGE="http://mosh.mit.edu"
-SRC_URI="https://github.com/downloads/keithw/${PN}/${P}.tar.gz"
+SRC_URI="https://github.com/downloads/keithw/${PN}/${P/_/}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~mips ~ppc ~x86"
 IUSE="bash-completion +client examples +mosh-hardening +server ufw +utempter"
 REQUIRED_USE="|| ( client server )
 	examples? ( client )"
@@ -23,6 +25,10 @@ RDEPEND="dev-libs/protobuf
 	utempter? ( sys-libs/libutempter )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
+
+src_prepare() {
+	eautoreconf
+}
 
 src_configure() {
 	econf \
