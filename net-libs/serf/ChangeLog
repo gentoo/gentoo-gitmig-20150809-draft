@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/serf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.73 2012/09/02 18:18:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.74 2012/10/06 19:56:17 floppym Exp $
+
+*serf-1.1.1 (06 Oct 2012)
+
+  06 Oct 2012; Mike Gilbert <floppym@gentoo.org> +serf-1.1.1.ebuild:
+  Version bump. Ebuild by Arfrever.
 
   02 Sep 2012; Raúl Porcel <armin76@gentoo.org> serf-1.1.0.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #428076
@@ -247,4 +252,3 @@
   +files/0.1.2-disable-unneeded-linking.patch, +metadata.xml,
   +serf-0.1.2.ebuild:
   initial ebuild, bug #219391
-
