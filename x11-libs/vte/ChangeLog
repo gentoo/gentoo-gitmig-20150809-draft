@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/vte
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.336 2012/10/06 09:59:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.337 2012/10/06 10:15:34 pacho Exp $
+
+*vte-0.28.2-r204 (06 Oct 2012)
+
+  06 Oct 2012; Pacho Ramos <pacho@gentoo.org>
+  +files/vte-0.28.2-limit-arguments.patch, +vte-0.28.2-r204.ebuild:
+  Fix CVE-2012-2738 for vte:0 also (#427802#c7 by SN (Enlik)).
 
   06 Oct 2012; Markus Meier <maekke@gentoo.org> vte-0.32.2.ebuild:
   arm stable, bug #427544
