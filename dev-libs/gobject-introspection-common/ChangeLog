@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/gobject-introspection-common
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection-common/ChangeLog,v 1.10 2012/10/06 09:04:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection-common/ChangeLog,v 1.11 2012/10/06 21:27:09 blueness Exp $
+
+  06 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  gobject-introspection-common-1.32.1.ebuild:
+  stable ppc ppc64, bug #427544
 
   06 Oct 2012; Markus Meier <maekke@gentoo.org>
   gobject-introspection-common-1.32.1.ebuild:
@@ -48,4 +52,3 @@
   28 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   +gobject-introspection-common-1.32.0.ebuild, +metadata.xml:
   Autoconf and make macros split out of gobject-introspection for bug #367143.
-
