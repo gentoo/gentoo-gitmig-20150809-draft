@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/oasis/oasis-4.0-r2.ebuild,v 1.12 2012/10/06 16:53:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/oasis/oasis-4.0-r3.ebuild,v 1.1 2012/10/06 16:53:01 jlec Exp $
 
 EAPI=3
 
@@ -13,12 +13,11 @@ HOMEPAGE="http://cryst.iphy.ac.cn/Project/protein/protein-I.html"
 SRC_URI="http://dev.gentooexperimental.org/~jlec/distfiles/${MY_P}.zip"
 
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 LICENSE="ccp4 oasis"
 IUSE="examples +minimal"
 
 RDEPEND="
-	!dev-ml/oasis
 	sci-chemistry/ccp4-apps
 	sci-chemistry/pymol
 	sci-libs/mmdb
@@ -50,8 +49,6 @@ src_compile() {
 src_install() {
 	exeinto /usr/libexec/ccp4/bin/
 	doexe src/{${PN},fnp2fp} || die
-	dosym ../libexec/ccp4/bin/${PN} /usr/bin/${PN}
-	dosym ../libexec/ccp4/bin/fnp2fp /usr/bin/fnp2fp
 
 	exeinto /usr/$(get_libdir)/${PN}
 	doexe bin/*.*sh || die
