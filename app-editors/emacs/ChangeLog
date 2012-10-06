@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.535 2012/10/05 18:05:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.536 2012/10/06 08:43:26 maekke Exp $
+
+  06 Oct 2012; Markus Meier <maekke@gentoo.org> emacs-24.2.ebuild:
+  arm stable, bug #436520
 
   05 Oct 2012; Brent Baude <ranger@gentoo.org> emacs-24.2.ebuild:
   Marking emacs-24.2 ppc64 for bug 436520
