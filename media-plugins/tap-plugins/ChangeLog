@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/tap-plugins
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/tap-plugins/ChangeLog,v 1.24 2012/07/11 12:29:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/tap-plugins/ChangeLog,v 1.25 2012/10/06 14:35:25 ago Exp $
+
+  06 Oct 2012; Agostino Sarubbo <ago@gentoo.org> tap-plugins-0.7.2.ebuild:
+  eapi bump
 
 *tap-plugins-0.7.2 (11 Jul 2012)
 
@@ -111,4 +114,3 @@
 
   26 Jan 2004; <torbenh@gentoo.org> metadata.xml, tap-plugins-0.1.ebuild:
   Initial version by myself.
-
