@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7007 2012/10/06 07:05:08 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7008 2012/10/06 11:29:13 jlec Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Oct 2012; Justin Lecher <jlec@gentoo.org> +updates/4Q-2012:
+  Renaming sci-geosciences/gpxviewer to sci-geosciences/gpx-viewer to fit
+  upstream naming
 
   06 Oct 2012; <naota@gentoo.org> package.mask:
   Mask app-i18n/ibus-table-{array30,cangjie,cantonese,xingma,yinma} for
