@@ -1,6 +1,10 @@
 # ChangeLog for app-text/rhyme
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rhyme/ChangeLog,v 1.16 2011/12/26 12:40:47 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/rhyme/ChangeLog,v 1.17 2012/10/06 17:00:10 armin76 Exp $
+
+  06 Oct 2012; Raúl Porcel <armin76@gentoo.org> rhyme-0.9.ebuild,
+  rhyme-0.9-r1.ebuild:
+  Drop alpha keywords
 
   26 Dec 2011; Markus Meier <maekke@gentoo.org> rhyme-0.9-r1.ebuild:
   x86 stable, bug #394061
