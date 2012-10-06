@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/highlight-3.12.ebuild,v 1.1 2012/10/06 02:45:05 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/highlight-3.12.ebuild,v 1.2 2012/10/06 21:01:01 floppym Exp $
 
 EAPI=4
 
@@ -21,7 +21,8 @@ RDEPEND="dev-lang/lua
 		x11-libs/qt-core:4
 	)"
 DEPEND="${RDEPEND}
-	dev-libs/boost"
+	dev-libs/boost
+	virtual/pkgconfig"
 
 pkg_setup() {
 	myhlopts=(
