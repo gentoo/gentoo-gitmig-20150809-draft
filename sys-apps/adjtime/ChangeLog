@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/adjtime
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/adjtime/ChangeLog,v 1.5 2006/11/30 06:09:13 nerdboy Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/adjtime/ChangeLog,v 1.6 2012/10/07 09:13:13 pacho Exp $
+
+  07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, #24135.
 
   30 Nov 2006; Steve Arnold <nerdboy@gentoo.org> metadata.xml,
   adjtime-0.4-r2.ebuild:
@@ -30,4 +33,3 @@
   +files/adjtime.init, +files/adjtime.pl, +metadata.xml,
   +adjtime-0.4.ebuild:
   Adding new perl script for adjusting the clock tick on kurobox and LinkStation
-

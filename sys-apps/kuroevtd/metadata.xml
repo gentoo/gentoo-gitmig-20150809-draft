@@ -2,9 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>ppc</herd>
-<maintainer>
-    <email>nerdboy@gentoo.org</email>
-    <name>Steve Arnold</name>
-</maintainer>
 <longdescription>A set of scripts to monitor and respond to button presses on a Kurobox.</longdescription>
 </pkgmetadata>
