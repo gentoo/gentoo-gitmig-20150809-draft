@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.10.1.ebuild,v 1.17 2012/06/06 02:50:20 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.10.1.ebuild,v 1.18 2012/10/07 13:35:21 jlec Exp $
 
 EAPI=2
 
@@ -24,7 +24,6 @@ CDEPEND="
 	app-text/ghostscript-gpl
 	dev-libs/libpcre
 	virtual/blas
-	virtual/fortran
 	cairo? (
 		x11-libs/cairo[X]
 		>=x11-libs/pango-1.20[X] )

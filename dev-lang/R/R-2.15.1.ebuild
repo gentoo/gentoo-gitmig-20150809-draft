@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.15.1.ebuild,v 1.2 2012/07/04 19:27:38 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.15.1.ebuild,v 1.3 2012/10/07 13:35:21 jlec Exp $
 
 EAPI=4
 
@@ -22,7 +22,6 @@ CDEPEND="app-arch/bzip2
 	app-text/ghostscript-gpl
 	dev-libs/libpcre
 	virtual/blas
-	virtual/fortran
 	cairo? ( x11-libs/cairo[X] x11-libs/pango )
 	icu? ( dev-libs/icu )
 	jpeg? ( virtual/jpeg )
