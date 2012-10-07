@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/line6usb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/line6usb/ChangeLog,v 1.9 2012/02/25 06:34:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/line6usb/ChangeLog,v 1.10 2012/10/07 09:02:22 pacho Exp $
+
+  07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, #24135.
 
   25 Feb 2012; Robin H. Johnson <robbat2@gentoo.org> line6usb-0.8.1-r1.ebuild:
   Bug #405687: Depend on virtual/modutils instead of sys-apps/module-init-tools.
@@ -41,4 +44,3 @@
   +line6usb-0.7.3.ebuild:
   Initial ebuild for Line6 USB driver; somewhat experimental but has 
   history and should work on any arch's that support usb and alsa.
-
