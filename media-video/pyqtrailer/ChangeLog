@@ -1,6 +1,10 @@
 # ChangeLog for media-video/pyqtrailer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/pyqtrailer/ChangeLog,v 1.14 2012/09/05 07:53:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/pyqtrailer/ChangeLog,v 1.15 2012/10/07 14:31:34 sochotnicky Exp $
+
+  07 Oct 2012; Stanislav Ochotnicky <sochotnicky@gentoo.org>
+  pyqtrailer-0.6.1.ebuild, pyqtrailer-0.6.2.ebuild:
+  Fix missing inherit eutils after change to using domenu
 
   05 Sep 2012; Justin Lecher <jlec@gentoo.org> pyqtrailer-0.6.1.ebuild,
   pyqtrailer-0.6.2.ebuild:

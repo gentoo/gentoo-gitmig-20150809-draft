@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/pyqtrailer/pyqtrailer-0.6.1.ebuild,v 1.4 2012/09/05 07:53:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/pyqtrailer/pyqtrailer-0.6.1.ebuild,v 1.5 2012/10/07 14:31:34 sochotnicky Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
-inherit distutils
+inherit eutils distutils
 
 DESCRIPTION="Qt4 application for downloading trailers from apple.com"
 HOMEPAGE="http://github.com/sochotnicky/pyqtrailer http://pypi.python.org/pypi/pyqtrailer"
