@@ -1,6 +1,11 @@
 # ChangeLog for dev-tcltk/tkimg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/ChangeLog,v 1.50 2012/10/06 09:49:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/ChangeLog,v 1.51 2012/10/07 09:55:44 jlec Exp $
+
+  07 Oct 2012; Justin Lecher <jlec@gentoo.org>
+  files/tkimg-1.4-zlib127-gzgetc_fix.patch,
+  -files/tkimg-1.5_pre324-unbundle.patch:
+  Correct zlib-fedora patch; drop old patches
 
 *tkimg-1.4-r7 (06 Oct 2012)
 

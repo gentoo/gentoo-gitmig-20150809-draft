@@ -13,15 +13,6 @@ diff -up tkimg1.4/zlib/zlibtcl.decls.gzgetc_fix tkimg1.4/zlib/zlibtcl.decls
 diff -up tkimg1.4/zlib/zlibtclDecls.h.gzgetc_fix tkimg1.4/zlib/zlibtclDecls.h
 --- tkimg1.4/zlib/zlibtclDecls.h.gzgetc_fix	2012-07-31 14:55:12.754307116 -0400
 +++ tkimg1.4/zlib/zlibtclDecls.h	2012-07-31 14:55:17.520307957 -0400
-@@ -120,7 +120,7 @@ ZEXTERN char *		gzgets(gzFile file, char
- /* 38 */
- ZEXTERN int		gzputc(gzFile file, int c);
- /* 39 */
--ZEXTERN int		gzgetc(gzFile file);
-+ZEXTERN int		gzgetc_(gzFile file);
- /* 40 */
- ZEXTERN int		gzflush(gzFile file, int flush);
- /* 41 */
 @@ -179,7 +179,7 @@ typedef struct ZlibtclStubs {
      int (*gzputsPtr) (gzFile file, const char *s); /* 36 */
      char * (*gzgetsPtr) (gzFile file, char *buf, int len); /* 37 */
