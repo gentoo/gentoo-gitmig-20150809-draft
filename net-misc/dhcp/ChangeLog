@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.217 2012/09/20 13:29:07 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.218 2012/10/07 06:25:42 vapier Exp $
+
+*dhcp-4.2.4_p2 (07 Oct 2012)
+
+  07 Oct 2012; Mike Frysinger <vapier@gentoo.org> +dhcp-4.2.4_p2.ebuild,
+  +files/dhcp-4.2.1-dhclient-parse_option_param-Bad-format-a.patch:
+  Version bump. Add fix from OpenSUSE for parsing "a" options #432998 by Andreas
+  Steinmetz.
 
   20 Sep 2012; Kacper Kowalik <xarthisius@gentoo.org> dhcp-4.2.4_p1.ebuild:
   ppc64 stable wrt #428120
