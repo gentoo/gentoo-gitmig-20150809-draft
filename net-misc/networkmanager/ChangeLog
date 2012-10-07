@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.146 2012/09/14 05:07:09 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.147 2012/10/07 07:59:55 pacho Exp $
+
+  07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer as talked with him.
 
   14 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   networkmanager-0.9.6.0.ebuild:
@@ -916,4 +919,3 @@
   +NetworkManager-0.6.4_pre20061028.ebuild:
   Initial import. This ebuild was made by Luis Medinas <metalgod@gentoo.org>
   and Stephen Klimaszewski <steev@gentoo.org>.
-

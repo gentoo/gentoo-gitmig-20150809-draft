@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/networkmanager-openconnect
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openconnect/ChangeLog,v 1.8 2012/09/13 09:54:53 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openconnect/ChangeLog,v 1.9 2012/10/07 07:56:45 pacho Exp $
+
+  07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer as talked with him.
 
 *networkmanager-openconnect-0.9.6.2 (13 Sep 2012)
 
@@ -64,4 +67,3 @@
   +networkmanager-openconnect-0.8.4.ebuild,
   +networkmanager-openconnect-0.9_rc2.ebuild, +metadata.xml:
   Initial version of networkmanager-openconnect plugin for NM-0.8 and NM-0.9
-

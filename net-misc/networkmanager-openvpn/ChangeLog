@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/networkmanager-openvpn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openvpn/ChangeLog,v 1.33 2012/09/13 09:55:14 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openvpn/ChangeLog,v 1.34 2012/10/07 07:57:43 pacho Exp $
+
+  07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer as talked with him.
 
 *networkmanager-openvpn-0.9.6.0 (13 Sep 2012)
 
@@ -190,4 +193,3 @@
   +files/networkmanager-openvpn-0.3.2_p20070621-service-name.patch,
   +metadata.xml, +networkmanager-openvpn-0.3.2_p20070621.ebuild:
   Initial import to tree. Ebuild base by Stephen Klimaszewski
-

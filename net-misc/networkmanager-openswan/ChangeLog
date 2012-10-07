@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/networkmanager-openswan
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openswan/ChangeLog,v 1.11 2012/09/13 09:55:05 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openswan/ChangeLog,v 1.12 2012/10/07 07:57:13 pacho Exp $
+
+  07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer as talked with him.
 
 *networkmanager-openswan-0.9.6.0 (13 Sep 2012)
 
@@ -62,4 +65,3 @@
   15 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   +networkmanager-openswan-0.9_rc2.ebuild, +metadata.xml:
   Bump to 0.9_rc2, from gnome overlay for NM 0.9
-

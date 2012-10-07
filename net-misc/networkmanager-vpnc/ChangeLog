@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/networkmanager-vpnc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-vpnc/ChangeLog,v 1.24 2012/09/13 09:55:31 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-vpnc/ChangeLog,v 1.25 2012/10/07 07:58:53 pacho Exp $
+
+  07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer as talked with him.
 
 *networkmanager-vpnc-0.9.6.0 (13 Sep 2012)
 
@@ -133,4 +136,3 @@
   +files/nm-vpnc-dbus_conf.patch, +files/nm-vpnc-path.patch, +metadata.xml,
   +networkmanager-vpnc-0.6.4_p20070621.ebuild:
   Initial import to tree. Ebuild base by Stephen Klimaszewski
-

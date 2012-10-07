@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/networkmanager-pptp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-pptp/ChangeLog,v 1.26 2012/09/13 09:55:21 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-pptp/ChangeLog,v 1.27 2012/10/07 07:58:17 pacho Exp $
+
+  07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer as talked with him.
 
 *networkmanager-pptp-0.9.6.0 (13 Sep 2012)
 
@@ -143,4 +146,3 @@
   +files/networkmanager-pptp-0.1.0_p20070726-service-name.patch,
   +metadata.xml, +networkmanager-pptp-0.1.0_p20070726.ebuild:
   Initial import to tree. Ebuild base by Stephen Klimaszewski
-
