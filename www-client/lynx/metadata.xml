@@ -5,10 +5,6 @@
 		<email>radhermit@gentoo.org</email>
 		<name>Tim Harder</name>
 	</maintainer>
-	<maintainer>
-		<email>wormo@gentoo.org</email>
-		<description>CC her in bug reports and assign to herd</description>
-	</maintainer>
 	<use>
 		<flag name='ssl'>Enable HTTPS support.</flag>
 		<flag name='gnutls'>Use gnutls library for HTTPS support (openssl is the default library for HTTPS support).</flag>
