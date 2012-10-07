@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fortran-2.eclass,v 1.6 2012/09/27 16:35:41 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fortran-2.eclass,v 1.7 2012/10/07 12:06:54 jlec Exp $
 
 # @ECLASS: fortran-2.eclass
 # @MAINTAINER:
@@ -146,6 +146,9 @@ fortran-2_pkg_setup() {
 			die "Please install current gcc with USE=openmp or set the FC variable to a compiler that supports OpenMP"
 	fi
 	tc-export F77 FC
+	einfo "Using following Fortran compiler"
+	einfo "  F77: ${F77}"
+	einfo "  FC: ${FC}"
 }
 
 case ${EAPI:-0} in
