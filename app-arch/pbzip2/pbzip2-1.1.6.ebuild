@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/pbzip2-1.1.6.ebuild,v 1.3 2012/07/29 21:52:44 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/pbzip2-1.1.6.ebuild,v 1.4 2012/10/07 11:58:14 jlec Exp $
 
 EAPI=4
 
@@ -16,7 +16,9 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 IUSE="static symlink"
 
 LIB_DEPEND="app-arch/bzip2[static-libs(+)]"
-RDEPEND="!static? ( ${LIB_DEPEND//\[static-libs(+)]} )"
+RDEPEND="
+	!static? ( ${LIB_DEPEND//\[static-libs(+)]} )
+	symlink? ( !app-arch/lbzip2[symlink] )"
 DEPEND="${RDEPEND}
 	static? ( ${LIB_DEPEND} )"
 

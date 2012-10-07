@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/pbzip2-1.1.5.ebuild,v 1.8 2011/12/30 16:00:57 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/pbzip2-1.1.5.ebuild,v 1.9 2012/10/07 11:58:14 jlec Exp $
 
 EAPI=4
 
@@ -16,7 +16,8 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-
 IUSE="static symlink"
 
 DEPEND="app-arch/bzip2"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	symlink? ( !app-arch/lbzip2[symlink] )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.1.2-makefile.patch
