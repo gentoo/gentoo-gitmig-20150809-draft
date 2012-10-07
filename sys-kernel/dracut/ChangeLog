@@ -1,6 +1,17 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.87 2012/09/09 16:48:14 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.88 2012/10/07 15:57:17 aidecoe Exp $
+
+*dracut-023-r1 (07 Oct 2012)
+
+  07 Oct 2012; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +files/023-0001-dracut-functions.sh-find_binary-path-s.patch,
+  +files/023-0002-90crypt-call-systemd-commands-only-if-.patch,
+  +dracut-023-r1.ebuild:
+  Fixes for bug #436712, bug #437142 and bug #437270.
+
+  Thanks to Jonathan Callen <abcd@gentoo.org>, Nikoli <nikoli@lavabit.com> and
+  Alexander Tsoy <bugs+gentoo@puleglot.ru>.
 
   09 Sep 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-014-r3.ebuild,
   dracut-018-r2.ebuild, dracut-019-r5.ebuild, dracut-022-r5.ebuild,
