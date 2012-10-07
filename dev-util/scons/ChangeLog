@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/scons
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.125 2012/09/29 18:40:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.126 2012/10/07 14:40:20 grobian Exp $
+
+  07 Oct 2012; Fabian Groffen <grobian@gentoo.org> scons-2.2.0.ebuild:
+  Setup a valid path, EPREFIX does NOT end in /
 
   29 Sep 2012; Raúl Porcel <armin76@gentoo.org> scons-2.2.0.ebuild:
   alpha/ia64/sparc stable wrt #434294

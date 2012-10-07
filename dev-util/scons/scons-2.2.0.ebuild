@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/scons-2.2.0.ebuild,v 1.8 2012/09/29 18:40:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/scons-2.2.0.ebuild,v 1.9 2012/10/07 14:40:20 grobian Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.5"
@@ -30,7 +30,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.1.0-jython.patch"
 
 	# https://bugs.gentoo.org/show_bug.cgi?id=361061
-	sed -i -e "s|/usr/local/bin:/opt/bin:/bin:/usr/bin|${EPREFIX}usr/local/bin:${EPREFIX}opt/bin:${EPREFIX}bin:${EPREFIX}usr/bin:/usr/local/bin:/opt/bin:/bin:/usr/bin|g" engine/SCons/Platform/posix.py || die
+	sed -i -e "s|/usr/local/bin:/opt/bin:/bin:/usr/bin|${EPREFIX}/usr/local/bin:${EPREFIX}/opt/bin:${EPREFIX}/bin:${EPREFIX}/usr/bin:/usr/local/bin:/opt/bin:/bin:/usr/bin|g" engine/SCons/Platform/posix.py || die
 	# and make sure the build system doesn't "force" /usr/local/ :(
 	sed -i -e "s/'darwin'/'NOWAYdarwinWAYNO'/" setup.py || die
 }
