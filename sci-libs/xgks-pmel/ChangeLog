@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/xgks-pmel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/xgks-pmel/ChangeLog,v 1.8 2012/05/25 07:51:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/xgks-pmel/ChangeLog,v 1.9 2012/10/07 09:11:26 pacho Exp $
+
+  07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, #24135.
 
   25 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> xgks-pmel-2.5.5.ebuild:
   Update to eapi4 -> bit cleanup.
@@ -31,4 +34,3 @@
   +metadata.xml, +xgks-pmel-2.5.5.ebuild:
   New ebuild for PMEL's xgks library, another required dependency for Ferret.
   Still needs merging with the newer (but unloved) code on sourceforge.
-

@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libbufr
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libbufr/ChangeLog,v 1.8 2011/06/21 15:15:13 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libbufr/ChangeLog,v 1.9 2012/10/07 09:08:03 pacho Exp $
+
+  07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, #24135.
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> libbufr-000360.ebuild,
   libbufr-000387.ebuild:
@@ -39,4 +42,3 @@
   one supported Fortran compiler).  Tested on amd64 and x86 with one of the
   included test files, but I haven't tested with local tables yet.  Needs
   some arch luv...
-

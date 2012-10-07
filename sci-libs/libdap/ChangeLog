@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libdap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libdap/ChangeLog,v 1.15 2012/08/03 19:37:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libdap/ChangeLog,v 1.16 2012/10/07 09:08:35 pacho Exp $
+
+  07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, #24135.
 
   03 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> libdap-3.11.3.ebuild,
   metadata.xml:

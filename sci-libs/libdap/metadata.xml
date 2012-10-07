@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>sci-geosciences</herd>
-<maintainer>
-  <email>nerdboy@gentoo.org</email>
-</maintainer>
 <longdescription>
   libdap is a C++ implementation of OPeNDAP which allows access to
   data over the internet, from programs that weren't originally

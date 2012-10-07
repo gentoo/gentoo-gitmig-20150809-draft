@@ -2,11 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>sci-geosciences</herd>
-<maintainer>
-  <email>nerdboy@gentoo.org</email>
-  <name>Steve Arnold</name>
-  <description>Primary Maintainer</description>
-</maintainer>
 <longdescription>This is mainly just an open source BUFR library from ECMWF
  that comes with a few example toolss (some of which are built and installed).
 </longdescription>

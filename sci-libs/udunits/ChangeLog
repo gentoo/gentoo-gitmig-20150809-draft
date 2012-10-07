@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/udunits
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/udunits/ChangeLog,v 1.23 2012/08/03 19:57:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/udunits/ChangeLog,v 1.24 2012/10/07 09:10:51 pacho Exp $
+
+  07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, #24135.
 
   03 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> -udunits-2.1.21.ebuild,
   -udunits-2.1.23.ebuild, metadata.xml, udunits-2.1.24.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/gdal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.130 2012/08/10 06:12:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.131 2012/10/07 09:07:32 pacho Exp $
+
+  07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, #24135.
 
   10 Aug 2012; Justin Lecher <jlec@gentoo.org> gdal-1.9.1.ebuild,
   +files/gdal-1.9.1-poppler-0.20.1.patch:
@@ -608,4 +611,3 @@
   +gdal-1.2.5.ebuild:
   Adding new ebuild for geographic apps (still working on grass support).
   Tested heavily on x86 only so far...
-
