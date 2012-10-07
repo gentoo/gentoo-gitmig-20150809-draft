@@ -65,6 +65,10 @@
     <remote-id type="cpan-module">SQL::Translator::Producer::XML</remote-id>
     <remote-id type="cpan-module">SQL::Translator::Producer::XML::SQLFairy</remote-id>
     <remote-id type="cpan-module">SQL::Translator::Producer::YAML</remote-id>
+    <remote-id type="cpan-module">SQL::Translator::Role::BuildArgs</remote-id>
+    <remote-id type="cpan-module">SQL::Translator::Role::Debug</remote-id>
+    <remote-id type="cpan-module">SQL::Translator::Role::Error</remote-id>
+    <remote-id type="cpan-module">SQL::Translator::Role::ListAttr</remote-id>
     <remote-id type="cpan-module">SQL::Translator::Schema</remote-id>
     <remote-id type="cpan-module">SQL::Translator::Schema::Constants</remote-id>
     <remote-id type="cpan-module">SQL::Translator::Schema::Constraint</remote-id>
@@ -72,10 +76,14 @@
     <remote-id type="cpan-module">SQL::Translator::Schema::Index</remote-id>
     <remote-id type="cpan-module">SQL::Translator::Schema::Object</remote-id>
     <remote-id type="cpan-module">SQL::Translator::Schema::Procedure</remote-id>
+    <remote-id type="cpan-module">SQL::Translator::Schema::Role::Compare</remote-id>
+    <remote-id type="cpan-module">SQL::Translator::Schema::Role::Extra</remote-id>
     <remote-id type="cpan-module">SQL::Translator::Schema::Table</remote-id>
     <remote-id type="cpan-module">SQL::Translator::Schema::Trigger</remote-id>
     <remote-id type="cpan-module">SQL::Translator::Schema::View</remote-id>
+    <remote-id type="cpan-module">SQL::Translator::Types</remote-id>
     <remote-id type="cpan-module">SQL::Translator::Utils</remote-id>
+    <remote-id type="cpan-module">SQL::Translator::Utils::Error</remote-id>
     <remote-id type="cpan-module">Test::SQL::Translator</remote-id>
   </upstream>
 </pkgmetadata>
