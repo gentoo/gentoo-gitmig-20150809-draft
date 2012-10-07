@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gpsdrive
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.52 2012/05/26 08:37:45 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.53 2012/10/07 08:56:15 pacho Exp $
+
+  07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, #24135.
 
   26 May 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   +files/gpsdrive-2.11-mapnik-2.0api.patch, gpsdrive-2.11-r3.ebuild:

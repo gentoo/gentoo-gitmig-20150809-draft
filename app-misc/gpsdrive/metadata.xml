@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>mobile</herd>
-<maintainer>
-  <email>nerdboy@gentoo.org</email>
-  <name>Steve Arnold</name>
-</maintainer>
 <use>
   <flag name='gdal'>Include gdal and ogr support for format conversions.</flag>
   <flag name='kismet'>Include support for kismet wifi mapping.</flag>
