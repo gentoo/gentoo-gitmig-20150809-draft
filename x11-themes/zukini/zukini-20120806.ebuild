@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/zukini/zukini-20120806.ebuild,v 1.1 2012/08/06 06:16:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/zukini/zukini-20120806.ebuild,v 1.2 2012/10/07 10:19:30 ago Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.deviantart.com/download/272660042/${PN}_by_lassekongo83-d4ic
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 RESTRICT="binchecks strip"
