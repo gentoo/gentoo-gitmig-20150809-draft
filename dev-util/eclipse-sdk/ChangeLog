@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/eclipse-sdk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.163 2012/07/18 14:24:28 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.164 2012/10/07 11:00:25 xarthisius Exp $
+
+  07 Oct 2012; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
+  Drop dev-tools from metadata
 
   18 Jul 2012; Ralph Sennhauser <sera@gentoo.org> -files/eclipse-3.2,
   -files/3.4/eclipse_build-libs.diff, -files/eclipse-3.2-r1,
