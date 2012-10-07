@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GraphViz/GraphViz-2.40.0.ebuild,v 1.2 2011/09/03 21:05:02 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GraphViz/GraphViz-2.40.0.ebuild,v 1.3 2012/10/07 13:00:49 ago Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="GraphViz - Interface to the GraphViz graphing tool"
 
 SLOT="0"
-KEYWORDS="~amd64 ~sparc x86"
+KEYWORDS="amd64 ~sparc x86"
 IUSE="test"
 
 RDEPEND="media-gfx/graphviz
