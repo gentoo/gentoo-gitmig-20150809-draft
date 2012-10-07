@@ -1,1 +1,2 @@
 move sci-geosciences/gpxviewer sci-geosciences/gpx-viewer
+move app-text/yudit app-editors/yudit

@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7015 2012/10/07 12:01:30 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7016 2012/10/07 13:22:17 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Oct 2012; Ulrich Müller <ulm@gentoo.org> updates/4Q-2012:
+  Package move yudit from app-text to app-editors.
 
   07 Oct 2012; Eray Aslan <eras@gentoo.org> package.mask:
   Mask mail-client/pine for removal
