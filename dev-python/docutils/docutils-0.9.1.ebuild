@@ -1,9 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.9.1.ebuild,v 1.5 2012/08/25 01:06:12 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.9.1.ebuild,v 1.6 2012/10/07 00:44:32 floppym Exp $
 
 EAPI="4"
+PYTHON_DEPEND="*::3.2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.3"
 
 inherit distutils
 
