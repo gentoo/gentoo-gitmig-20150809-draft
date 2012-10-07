@@ -1,6 +1,9 @@
 # ChangeLog for app-text/zathura-meta
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-meta/ChangeLog,v 1.3 2012/07/11 05:51:03 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-meta/ChangeLog,v 1.4 2012/10/07 09:58:00 ulm Exp $
+
+  07 Oct 2012; Ulrich Müller <ulm@gentoo.org> zathura-meta-0.ebuild:
+  Update LICENSE to "metapackage" non-license.
 
   11 Jul 2012; Jeff Horelick <jdhore@gentoo.org> zathura-meta-0.ebuild:
   marked x86 per bug 425674
