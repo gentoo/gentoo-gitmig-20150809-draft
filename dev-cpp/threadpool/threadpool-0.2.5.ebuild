@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/threadpool/threadpool-0.2.5.ebuild,v 1.1 2012/09/29 23:14:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/threadpool/threadpool-0.2.5.ebuild,v 1.2 2012/10/07 04:13:03 mr_bones_ Exp $
 
 EAPI=4
 
@@ -30,11 +30,11 @@ src_prepare() {
 	base_src_prepare
 }
 
-src_compile() { 
+src_compile() {
 	# Do nothing
 	# The makefile just builds the documentation again
 	# Not even any install targets
-	: 
+	:
 }
 
 src_install() {
