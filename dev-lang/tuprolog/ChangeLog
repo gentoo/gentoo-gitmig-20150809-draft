@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/tuprolog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/ChangeLog,v 1.48 2012/10/04 21:41:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/ChangeLog,v 1.49 2012/10/07 08:12:18 keri Exp $
+
+  07 Oct 2012; <keri@gentoo.org> -tuprolog-2.1.1.ebuild,
+  -files/tuprolog-2.1.1-java1.4.patch, -files/tuprolog-2.1.1-javadocs.patch,
+  -tuprolog-2.3.0_alpha.ebuild, -files/tuprolog-2.3.0_alpha-generics.patch,
+  -files/tuprolog-2.3.0_alpha-javadocs.patch, -tuprolog-2.3.1_beta.ebuild:
+  Remove old versions
 
   04 Oct 2012; Brent Baude <ranger@gentoo.org> tuprolog-2.4.0_rc5.ebuild:
   Marking tuprolog-2.4.0_rc5 ppc for bug 429792
