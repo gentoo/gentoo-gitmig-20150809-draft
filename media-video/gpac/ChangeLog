@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gpac
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.100 2012/10/05 13:47:42 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.101 2012/10/07 13:59:26 armin76 Exp $
+
+  07 Oct 2012; Raúl Porcel <armin76@gentoo.org> gpac-0.4.5-r5.ebuild:
+  alpha/sparc stable wrt #437206
 
 *gpac-0.5.0 (05 Oct 2012)
 
