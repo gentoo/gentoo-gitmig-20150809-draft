@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fortran-2.eclass,v 1.7 2012/10/07 12:06:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fortran-2.eclass,v 1.8 2012/10/07 13:10:27 jlec Exp $
 
 # @ECLASS: fortran-2.eclass
 # @MAINTAINER:
@@ -11,8 +11,7 @@
 # Test functions provided by Sebastien Fabbro and Kacper Kowalik
 # @BLURB: Simplify fortran compiler management
 # @DESCRIPTION:
-# If you need a fortran compiler, then you should be inheriting this eclass and
-# adding virtual/fortran to your dependencies.
+# If you need a fortran compiler, then you should be inheriting this eclass
 # The eclass tests for working fortran compilers
 # and exports the variables FC and F77.
 # Optionally, it checks for extended capabilities based on
@@ -155,3 +154,6 @@ case ${EAPI:-0} in
 	0|1|2|3|4|5) EXPORT_FUNCTIONS pkg_setup ;;
 	*) die "EAPI=${EAPI} is not supported" ;;
 esac
+
+DEPEND="virtual/fortran"
+RDEPEND="${DEPEND}"

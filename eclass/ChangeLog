@@ -1,9 +1,15 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.429 2012/10/07 08:29:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.430 2012/10/07 13:10:27 jlec Exp $
 
   07 Oct 2012; Michał Górny <mgorny@gentoo.org> boost-utils.eclass:
   Fix stupid mistake in boost-utils_get_best_slot().
+
+  07 Oct 2012; Justin Lecher <jlec@gentoo.org> fortran-2.eclass:
+  Depend on virtual/fortran eclass wise, #435250
+
+  07 Oct 2012; Justin Lecher <jlec@gentoo.org> fortran-2.eclass:
+  Give some information on selected fortran compilers
 
   03 Oct 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   virtualx.eclass:
