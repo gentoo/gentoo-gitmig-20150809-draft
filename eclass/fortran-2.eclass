@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fortran-2.eclass,v 1.10 2012/10/07 13:30:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fortran-2.eclass,v 1.11 2012/10/07 14:53:43 jlec Exp $
 
 # @ECLASS: fortran-2.eclass
 # @MAINTAINER:
@@ -156,10 +156,10 @@ case ${EAPI:-0} in
 	*) die "EAPI=${EAPI} is not supported" ;;
 esac
 
-if in_iuse fortran; then
-	DEPEND="fortran? ( virtual/fortran )"
-else
-	DEPEND="virtual/fortran"
-fi
+#if in_iuse fortran; then
+#	DEPEND="fortran? ( virtual/fortran )"
+#else
+#	DEPEND="virtual/fortran"
+#fi
 
-RDEPEND="${DEPEND}"
+#RDEPEND="${DEPEND}"
