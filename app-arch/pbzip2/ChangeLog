@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/pbzip2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/ChangeLog,v 1.115 2012/09/29 16:09:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/ChangeLog,v 1.116 2012/10/07 10:20:11 pacho Exp $
+
+  07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, #274113
 
   29 Sep 2012; Raúl Porcel <armin76@gentoo.org> pbzip2-1.1.8.ebuild:
   ia64/m68k/s390/sh/sparc stable wrt #434164
