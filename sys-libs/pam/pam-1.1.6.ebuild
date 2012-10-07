@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.6.ebuild,v 1.2 2012/08/17 14:26:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.6.ebuild,v 1.3 2012/10/07 18:52:57 flameeyes Exp $
 
 EAPI=4
 
@@ -86,6 +86,7 @@ pkg_pretend() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${MY_P}-destdir.patch
+	epatch "${FILESDIR}"/${MY_P}+glibc-2.16.patch
 
 	eautoreconf
 	elibtoolize
