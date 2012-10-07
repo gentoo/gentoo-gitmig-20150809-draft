@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/droid
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/droid/ChangeLog,v 1.22 2012/08/20 09:24:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/droid/ChangeLog,v 1.23 2012/10/07 10:28:30 pacho Exp $
+
+  07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, #274113
 
   20 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> -droid-113-r1.ebuild,
   droid-113-r2.ebuild:

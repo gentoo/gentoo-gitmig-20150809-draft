@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/ubuntu-font-family
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ubuntu-font-family/ChangeLog,v 1.8 2012/06/30 11:07:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ubuntu-font-family/ChangeLog,v 1.9 2012/10/07 10:29:22 pacho Exp $
+
+  07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, #274113
 
   30 Jun 2012; Agostino Sarubbo <ago@gentoo.org>
   ubuntu-font-family-0.80.ebuild:
@@ -39,4 +42,3 @@
   17 Jan 2011; Dror Levin <spatz@gentoo.org> +ubuntu-font-family-0.70.1.ebuild,
   +metadata.xml:
   Initial commit, ebuild by Thomas Fischer, bug 340477.
-
