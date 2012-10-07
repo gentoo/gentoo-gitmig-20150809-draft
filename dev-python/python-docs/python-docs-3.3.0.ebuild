@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/python-docs-3.3.0.ebuild,v 1.2 2012/09/29 18:23:56 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/python-docs-3.3.0.ebuild,v 1.3 2012/10/07 04:03:49 floppym Exp $
 
 EAPI="3"
 
@@ -27,9 +27,7 @@ pkg_setup() {
 }
 
 src_install() {
-	docinto html
-	cp -R [a-z]* _static "${ED}usr/share/doc/${PF}/html"
-
+	dohtml -A xml -r ./
 	echo "PYTHONDOCS_${SLOT//./_}=\"${EPREFIX}/usr/share/doc/${PF}/html/library\"" > "60python-docs-${SLOT}"
 	doenvd "60python-docs-${SLOT}"
 }
