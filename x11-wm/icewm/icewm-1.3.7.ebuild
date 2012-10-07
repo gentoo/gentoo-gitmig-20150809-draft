@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.3.7.ebuild,v 1.4 2012/06/16 13:26:14 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.3.7.ebuild,v 1.5 2012/10/07 10:25:13 xarthisius Exp $
 
 EAPI="4"
 
@@ -46,7 +46,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-gcc44.patch
+	epatch "${FILESDIR}"/${P}-gcc44.patch \
+		"${FILESDIR}"/${P}-gcc47.patch
 	cd "${S}/src"
 	use uclibc && epatch "${FILESDIR}/${PN}-uclibc.patch"
 	# build fix for libX11-1.5.0, bug 420773
