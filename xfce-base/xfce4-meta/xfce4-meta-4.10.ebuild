@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-meta/xfce4-meta-4.10.ebuild,v 1.8 2012/09/09 14:48:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-meta/xfce4-meta-4.10.ebuild,v 1.9 2012/10/07 09:54:19 ulm Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ DESCRIPTION="The Xfce Desktop Environment (meta package)"
 HOMEPAGE="http://www.xfce.org/"
 SRC_URI=""
 
-LICENSE="as-is"
+LICENSE="metapackage"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux"
 IUSE="minimal +svg"
