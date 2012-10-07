@@ -3,11 +3,6 @@
 <pkgmetadata>
 	<herd>dev-tools</herd>
 	<maintainer>
-		<email>nerdboy@gentoo.org</email>
-		<name>Steve Arnold</name>
-		<description>Primary Maintainer</description>
-	</maintainer>
-	<maintainer>
 		<email>jlec@gentoo.org</email>
 		<name>Justin Lecher</name>
 	</maintainer>
