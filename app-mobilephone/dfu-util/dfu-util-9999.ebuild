@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/dfu-util/dfu-util-9999.ebuild,v 1.3 2011/09/21 07:52:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/dfu-util/dfu-util-9999.ebuild,v 1.4 2012/10/07 03:13:24 flameeyes Exp $
 
 EAPI="2"
 
@@ -22,8 +22,9 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 
-DEPEND="virtual/libusb:1"
-RDEPEND="${DEPEND}"
+RDEPEND="virtual/libusb:1"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
 src_prepare() {
 	if [[ ${PV} == "9999" ]] ; then
