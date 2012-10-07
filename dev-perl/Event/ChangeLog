@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Event
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event/ChangeLog,v 1.77 2012/06/24 13:00:35 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event/ChangeLog,v 1.78 2012/10/07 13:01:29 ago Exp $
+
+  07 Oct 2012; Agostino Sarubbo <ago@gentoo.org> Event-1.10.ebuild:
+  Stable for amd64, wrt bug #436854
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
