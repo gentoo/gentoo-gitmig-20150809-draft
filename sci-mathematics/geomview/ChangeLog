@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/geomview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/ChangeLog,v 1.15 2012/01/26 17:11:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/ChangeLog,v 1.16 2012/10/07 09:12:07 pacho Exp $
+
+  07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, #24135.
 
   26 Jan 2012; Justin Lecher <jlec@gentoo.org> -geomview-1.9.2.ebuild,
   geomview-1.9.4.ebuild, -files/geomview.png:
@@ -82,4 +85,3 @@
   new user-contributed ebuild (a group effort even) by David Hyunjin Lim,
   with contributions from Cliff Yapp (I added the keywords and cleaned up
   the syntax a bit)
-

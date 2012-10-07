@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/minisat
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/minisat/ChangeLog,v 1.6 2011/04/17 22:54:19 nerdboy Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/minisat/ChangeLog,v 1.7 2012/10/07 09:12:35 pacho Exp $
+
+  07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, #24135.
 
 *minisat-2.1.0 (17 Apr 2011)
 
@@ -41,4 +44,3 @@
   +metadata.xml:
   New ebuild for minisat, a small fast SAT solver (a tool for solving 
   the Boolean Satisfiability Problem used in model checking).
-
