@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyxdg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.97 2012/10/05 18:08:03 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.98 2012/10/07 09:35:39 nixnut Exp $
+
+  07 Oct 2012; nixnut <nixnut@gentoo.org> pyxdg-0.23.ebuild:
+  ppc stable #432384
 
   05 Oct 2012; Brent Baude <ranger@gentoo.org> pyxdg-0.23.ebuild:
   Marking pyxdg-0.23 ppc64 for bug 432384
