@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libcgroup
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcgroup/ChangeLog,v 1.3 2012/06/06 03:30:43 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcgroup/ChangeLog,v 1.4 2012/10/07 08:57:15 pacho Exp $
+
+  07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, #24135.
 
   06 Jun 2012; Zac Medico <zmedico@gentoo.org> libcgroup-0.37-r2.ebuild:
   inherit eutils for epatch
@@ -19,4 +22,3 @@
   +metadata.xml:
   New ebuild for managing kernel control groups. Based on several ebuilds 
   from the overlay, bugzilla, and hparker.  Works for me...
-
