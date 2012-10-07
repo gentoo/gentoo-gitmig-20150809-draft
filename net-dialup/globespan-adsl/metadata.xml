@@ -2,10 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>net-dialup</herd>
-<maintainer>
-  <email>nerdboy@gentoo.org</email>
-  <name>Steve Arnold</name>
-  <description>Primary Maintainer</description>
-</maintainer>
 <longdescription>ADSL modem driver for Globespan/ECI chipsets.</longdescription>
 </pkgmetadata>
