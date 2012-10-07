@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-cep/nwn-cep-2.0.ebuild,v 1.7 2010/07/12 17:07:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-cep/nwn-cep-2.0.ebuild,v 1.8 2012/10/07 11:26:09 pacho Exp $
 
 EAPI=2
-inherit eutils games
+inherit eutils games unpacker
 
 DESCRIPTION="High quality custom content addon for Neverwinter Nights"
 HOMEPAGE="http://nwvault.ign.com/cep/"
@@ -14,7 +14,7 @@ SLOT="2"
 KEYWORDS="-* amd64 x86"
 IUSE=""
 
-DEPEND="app-arch/unrar"
+DEPEND=""
 RDEPEND=">=games-rpg/nwn-1.68"
 
 S=${WORKDIR}

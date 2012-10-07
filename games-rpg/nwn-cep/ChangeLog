@@ -1,6 +1,13 @@
 # ChangeLog for games-rpg/nwn-cep
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-cep/ChangeLog,v 1.14 2010/07/12 17:07:46 mr_bones_ Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-cep/ChangeLog,v 1.15 2012/10/07 11:26:09 pacho Exp $
+
+  07 Oct 2012; Pacho Ramos <pacho@gentoo.org> nwn-cep-1.68-r1.ebuild,
+  nwn-cep-2.0.ebuild:
+  Rely on unpack.eclass to pull unrar deps, if other RAR alternatives are found
+  to really fully replace unrar, this needs to be discussed centrally with
+  eclass authors instead of in every ebuild using rar files (#244987 by
+  drantin).
 
   12 Jul 2010; Michael Sterrett <mr_bones_@gentoo.org>
   nwn-cep-1.68-r1.ebuild, nwn-cep-2.0.ebuild, metadata.xml:
