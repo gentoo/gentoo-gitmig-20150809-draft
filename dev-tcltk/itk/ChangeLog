@@ -1,6 +1,15 @@
 # ChangeLog for dev-tcltk/itk
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itk/ChangeLog,v 1.33 2011/08/28 18:22:38 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itk/ChangeLog,v 1.34 2012/10/07 17:49:27 jlec Exp $
+
+  07 Oct 2012; Justin Lecher <jlec@gentoo.org> -itk-3.3-r1.ebuild,
+  -itk-3.3.1_pre20090417-r1.ebuild, itk-3.4_pre20090417.ebuild,
+  itk-3.4_pre20090417-r1.ebuild:
+  Drop old; fix dep versions
+
+  07 Oct 2012; Justin Lecher <jlec@gentoo.org> itk-3.4_pre20090417.ebuild,
+  itk-3.4_pre20090417-r1.ebuild:
+  Drop old; fix dep versions
 
   28 Aug 2011; Justin Lecher <jlec@gentoo.org>
   files/itk-3.4_pre20090417-install.patch:
