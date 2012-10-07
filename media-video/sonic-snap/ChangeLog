@@ -1,6 +1,9 @@
 # ChangeLog for media-video/sonic-snap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/sonic-snap/ChangeLog,v 1.11 2012/06/09 23:37:11 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/sonic-snap/ChangeLog,v 1.12 2012/10/07 09:03:00 pacho Exp $
+
+  07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, #24135.
 
   09 Jun 2012; Zac Medico <zmedico@gentoo.org> sonic-snap-1.7.ebuild:
   inherit multilib for get_libdir
@@ -44,4 +47,3 @@
   New cam ebuild to work with sn9c102 driver. It can conceivably work
   with any arch with proper USB and and a newer 2.6 kernel, so feel
   free to try on other arches.
-
