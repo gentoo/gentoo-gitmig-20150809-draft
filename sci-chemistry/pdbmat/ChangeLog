@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/pdbmat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdbmat/ChangeLog,v 1.2 2012/03/21 13:55:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdbmat/ChangeLog,v 1.3 2012/10/07 12:07:47 jlec Exp $
+
+  07 Oct 2012; Justin Lecher <jlec@gentoo.org> pdbmat-3.89.ebuild:
+  Depend on virtual/fortran, #435948
 
   21 Mar 2012; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Fix metadata.xml
