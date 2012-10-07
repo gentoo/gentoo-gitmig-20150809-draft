@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.98 2012/09/15 13:04:55 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.99 2012/10/07 10:39:57 ssuominen Exp $
 
 # This file requires >=portage-2.1.1
 
@@ -27,7 +27,9 @@ app-crypt/johntheripper -cuda
 # Robert Piasek <dagger@gentoo.org> (26 Apr 2012)
 # Packages with optional systemd support. Masked in base and unmasked on arches
 # where sys-apps/systemd is available.
->sys-auth/polkit-0.104-r1 -systemd
+# Samuli Suominen <ssuominen@gentoo.org> (07 Sep 2012)
+# Masked again because this was never allowed before systemd is marked stable.
+#sys-auth/polkit -systemd
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (13 Apr 2012)
 # Packages with optional systemd support. Masked in base and unmasked on arches
