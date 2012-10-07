@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/slurm-2.3.4.ebuild,v 1.4 2012/08/23 09:36:49 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/slurm-2.3.4.ebuild,v 1.5 2012/10/07 10:09:34 xarthisius Exp $
 
 EAPI=4
 RESTRICT="primaryuri"
@@ -25,6 +25,7 @@ IUSE="maui +munge mysql pam perl postgres ssl static-libs torque ypbind"
 DEPEND="
 	!sys-cluster/torque
 	!net-analyzer/slurm
+	!net-analyzer/sinfo
 	mysql? ( dev-db/mysql )
 	munge? ( sys-auth/munge )
 	ypbind? ( net-nds/ypbind )
