@@ -2,9 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-  <email>nerdboy@gentoo.org</email>
-  <name>Steve Arnold</name>
-  <description>Primary Maintainer</description>
+	<email>maintainer-needed@gentoo.org</email>
 </maintainer>
 <longdescription>Command-line Postscript watermark tool; simple, but useful 
 for things like adding a watermark to outgoing or incoming faxes (eg, use 
