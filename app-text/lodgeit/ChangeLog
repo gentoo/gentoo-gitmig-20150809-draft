@@ -1,6 +1,9 @@
 # ChangeLog for app-text/lodgeit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lodgeit/ChangeLog,v 1.9 2012/07/01 10:43:35 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lodgeit/ChangeLog,v 1.10 2012/10/07 10:21:32 pacho Exp $
+
+  07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, #274113
 
 *lodgeit-0.3_p20120618-r1 (01 Jul 2012)
 
