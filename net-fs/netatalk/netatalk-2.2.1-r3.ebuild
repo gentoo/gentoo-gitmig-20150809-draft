@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-2.2.1-r3.ebuild,v 1.9 2012/09/10 14:28:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-2.2.1-r3.ebuild,v 1.10 2012/10/07 13:18:02 ulm Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ KEYWORDS="amd64 arm ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="acl appletalk avahi cracklib cups debug kerberos ldap pam quota slp ssl static-libs tcpd"
 
 RDEPEND="
-	!app-text/yudit
+	!app-editors/yudit
 	dev-libs/libgcrypt
 	sys-apps/coreutils
 	>=sys-libs/db-4.2.52
