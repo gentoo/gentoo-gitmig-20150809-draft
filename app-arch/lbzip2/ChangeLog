@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/lbzip2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/ChangeLog,v 1.39 2012/09/30 16:56:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/ChangeLog,v 1.40 2012/10/07 11:55:08 jlec Exp $
+
+  07 Oct 2012; Justin Lecher <jlec@gentoo.org> -lbzip2-0.23-r2.ebuild,
+  -lbzip2-2.1.ebuild, -lbzip2-2.1-r2.ebuild, lbzip2-2.2.ebuild:
+  Block other packages installing the /usr/bin/bzip2 symlink, #436354; drop old
 
   30 Sep 2012; Raúl Porcel <armin76@gentoo.org> lbzip2-2.2.ebuild:
   ia64/m68k/s390/sh/sparc stable wrt #435228

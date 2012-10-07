@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/lbzip2-2.2.ebuild,v 1.8 2012/09/30 16:56:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/lbzip2-2.2.ebuild,v 1.9 2012/10/07 11:55:08 jlec Exp $
 
 EAPI=4
 
@@ -16,6 +16,9 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-
 IUSE="debug symlink"
 
 PATCHES=( "${FILESDIR}"/${P}-s_isreg.patch )
+
+RDEPEND="symlink? ( !app-arch/pbzip2[symlink] )"
+DEPEND=""
 
 src_configure() {
 	local myeconfargs=(
