@@ -1,6 +1,10 @@
 # ChangeLog for media-video/gnome-video-effects
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-video-effects/ChangeLog,v 1.9 2012/10/04 14:57:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-video-effects/ChangeLog,v 1.10 2012/10/07 01:10:17 blueness Exp $
+
+  07 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  gnome-video-effects-0.4.0.ebuild:
+  stable ppc64, bug #427544
 
   04 Oct 2012; Agostino Sarubbo <ago@gentoo.org>
   gnome-video-effects-0.4.0.ebuild:
@@ -40,4 +44,3 @@
   14 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   +gnome-video-effects-0.3.0.ebuild, +metadata.xml:
   Move from gnome overlay for GNOME 3
-
