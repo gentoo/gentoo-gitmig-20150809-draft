@@ -1,6 +1,14 @@
 # ChangeLog for games-rpg/nwn-data
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/ChangeLog,v 1.44 2012/03/01 06:52:06 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/ChangeLog,v 1.45 2012/10/07 11:39:47 pacho Exp $
+
+*nwn-data-1.29-r5 (07 Oct 2012)
+
+  07 Oct 2012; Pacho Ramos <pacho@gentoo.org> +nwn-data-1.29-r5.ebuild,
+  metadata.xml:
+  Fix important bug #323395 (by Fab) and #394227 (by Agostino Sarubbo), also
+  change metadata a bit to get bugs assigned to most active maintainer and
+  prevent problems to be ignored for a long time.
 
   01 Mar 2012; Ulrich Müller <ulm@gentoo.org> nwn-data-1.29-r4.ebuild:
   Migrate to cdrom.eclass, bug 398809.
@@ -186,4 +194,3 @@
   Neverwinter Nights into 2 ebuilds. This ebuild also adds support for
   installing the Shadows of Undrentide and Hordes of the Underdark expansion
   packs from CD using USE=sou and USE=hou respectively.
-
