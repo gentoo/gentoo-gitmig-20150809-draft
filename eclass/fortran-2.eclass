@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fortran-2.eclass,v 1.9 2012/10/07 13:15:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fortran-2.eclass,v 1.10 2012/10/07 13:30:23 jlec Exp $
 
 # @ECLASS: fortran-2.eclass
 # @MAINTAINER:
@@ -33,7 +33,7 @@
 # Valid settings are any combination of: 77 90 95 2003
 : ${FORTRAN_STANDARD:=77}
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 # @FUNCTION: _write_testsuite
 # @INTERNAL
@@ -155,3 +155,11 @@ case ${EAPI:-0} in
 	0|1|2|3|4|5) EXPORT_FUNCTIONS pkg_setup ;;
 	*) die "EAPI=${EAPI} is not supported" ;;
 esac
+
+if in_iuse fortran; then
+	DEPEND="fortran? ( virtual/fortran )"
+else
+	DEPEND="virtual/fortran"
+fi
+
+RDEPEND="${DEPEND}"
