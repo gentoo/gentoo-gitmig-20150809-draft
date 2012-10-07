@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.2.0.ebuild,v 1.4 2012/09/11 17:47:10 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.2.0.ebuild,v 1.5 2012/10/07 14:59:52 grobian Exp $
 
 EAPI=4
 SCONS_MIN_VERSION="1.2.0"
@@ -53,11 +53,11 @@ src_prepare() {
 	# on amd64 machines [2].
 	# [1] https://jira.mongodb.org/browse/SERVER-5575
 	# [2] https://bugs.gentoo.org/show_bug.cgi?id=434664
-	if [ "$(get_libdir)" == "lib" ]; then
+	if use !prefix && [[ "$(get_libdir)" == "lib" ]]; then
 		epatch "${FILESDIR}/${PN}-2.2-fix-x86client.patch"
 	fi
 
-	sed -e 's@third_party/js-1.7/@/usr/include/js/@g' \
+	sed -e "s@third_party/js-1.7/@${EPREFIX}/usr/include/js/@g" \
 		-i src/mongo/scripting/engine_spidermonkey.h  \
 		-i src/mongo/scripting/engine_spidermonkey.cpp || die
 
@@ -71,11 +71,11 @@ src_compile() {
 }
 
 src_install() {
-	escons ${scons_opts} --full --nostrip install --prefix="${D}"/usr
+	escons ${scons_opts} --full --nostrip install --prefix="${ED}"/usr
 
-	use static-libs || rm "${D}/usr/$(get_libdir)/libmongoclient.a"
+	use static-libs || rm "${ED}/usr/$(get_libdir)/libmongoclient.a"
 
-	use v8 && pax-mark m "${D}"/usr/bin/{mongo,mongod}
+	use v8 && pax-mark m "${ED}"/usr/bin/{mongo,mongod}
 
 	for x in /var/{lib,log,run}/${PN}; do
 		keepdir "${x}"
