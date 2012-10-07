@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/markdown
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/markdown/ChangeLog,v 1.22 2012/10/06 23:50:48 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/markdown/ChangeLog,v 1.23 2012/10/07 09:37:17 nixnut Exp $
+
+  07 Oct 2012; nixnut <nixnut@gentoo.org> markdown-2.1.1.ebuild:
+  ppc stable #437288
 
   06 Oct 2012; Mike Gilbert <floppym@gentoo.org> markdown-2.1.0.ebuild,
   markdown-2.1.1.ebuild:
