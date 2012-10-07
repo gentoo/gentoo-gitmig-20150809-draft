@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/orpheus
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/orpheus/ChangeLog,v 1.27 2011/02/26 12:28:33 aballier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/orpheus/ChangeLog,v 1.28 2012/10/07 09:53:45 ago Exp $
+
+  07 Oct 2012; Agostino Sarubbo <ago@gentoo.org> orpheus-1.6-r2.ebuild:
+  Eapi4, respect AR
 
 *orpheus-1.6-r2 (26 Feb 2011)
 
@@ -113,4 +116,3 @@
   03 Aug 2003; Tal Peer <coredumb@gentoo.org> orpheus-1.2.ebuild:
   Initial import, contributed by Brian <brian@reichholf.at> and Clemens Oertel <gentoo-bugzilla@kriegate.net>
   Closes bug #23288.
-

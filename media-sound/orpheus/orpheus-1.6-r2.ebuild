@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/orpheus/orpheus-1.6-r2.ebuild,v 1.1 2011/02/26 12:28:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/orpheus/orpheus-1.6-r2.ebuild,v 1.2 2012/10/07 09:53:45 ago Exp $
 
-EAPI=2
+EAPI=4
 
-inherit eutils autotools
+inherit autotools eutils toolchain-funcs
 
 DESCRIPTION="Command line MP3 player."
 HOMEPAGE="http://konst.org.ua/en/orpheus"
@@ -20,6 +20,8 @@ RDEPEND="sys-libs/ncurses
 	media-sound/mpg123
 	media-sound/vorbis-tools[ogg123]"
 DEPEND="${RDEPEND}"
+
+DOCS=( AUTHORS ChangeLog NEWS README TODO )
 
 src_prepare() {
 	epatch "${FILESDIR}"/1.5-amd64.patch
@@ -43,7 +45,6 @@ src_prepare() {
 	eautoreconf
 }
 
-src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog NEWS README TODO
+src_compile() {
+	emake AR="$(tc-getAR)"
 }
