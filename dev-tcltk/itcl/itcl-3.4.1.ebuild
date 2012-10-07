@@ -1,26 +1,26 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/itcl-3.3.1_pre20090417-r1.ebuild,v 1.3 2012/06/07 20:40:52 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/itcl-3.4.1.ebuild,v 1.1 2012/10/07 18:04:26 jlec Exp $
 
-EAPI="3"
+EAPI=4
 
-inherit eutils multilib
+inherit eutils multilib versionator
 
-MY_PN="incrTcl"
-MY_P="${MY_PN}-${PV}"
+MY_P="${PN}${PV/_beta/b}"
+
 DESCRIPTION="Object Oriented Enhancements for Tcl/Tk"
 HOMEPAGE="http://incrtcl.sourceforge.net/"
-SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/incrtcl/%5BIncr%20Tcl_Tk%5D-source/$(get_version_component_range 1-2)/${MY_P}.tar.gz"
 
-IUSE=""
 SLOT="0"
 LICENSE="BSD"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-macos"
+IUSE=""
 
-DEPEND="dev-lang/tcl"
-RDEPEND="${DEPEND}"
+RDEPEND="dev-lang/tcl"
+DEPEND="${RDEPEND}"
 
-S="${WORKDIR}/${MY_PN}/${PN}"
+S="${WORKDIR}/${PN}${PV}"
 
 src_compile() {
 	# adjust install_name on darwin
@@ -30,14 +30,16 @@ src_compile() {
 			"${S}"/Makefile || die 'sed failed'
 	fi
 
-	emake CFLAGS_DEFAULT="${CFLAGS}" || die "emake failed"
+	sed 's:-pipe::g' -i Makefile || die
+
+	emake CFLAGS_DEFAULT="${CFLAGS}"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
-	dodoc ../{CHANGES,ChangeLog,INCOMPATIBLE,README,TODO}
+	default
+
 	cat >> "${T}"/34${PN} <<- EOF
-	LDPATH="${EPREFIX}/usr/$(get_libdir)/${PN}3.4/"
+	LDPATH="${EPREFIX}/usr/$(get_libdir)/${PN}$(get_version_component_range 1-2)/"
 	EOF
-	doenvd "${T}"/34${PN} || die
+	doenvd "${T}"/34${PN}
 }
