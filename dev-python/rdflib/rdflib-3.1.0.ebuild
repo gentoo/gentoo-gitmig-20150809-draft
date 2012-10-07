@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rdflib/rdflib-3.1.0.ebuild,v 1.3 2012/04/02 16:22:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rdflib/rdflib-3.1.0.ebuild,v 1.4 2012/10/07 00:46:43 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -10,7 +10,7 @@ RESTRICT_PYTHON_ABIS="3.* *-pypy-*"
 inherit distutils eutils
 
 DESCRIPTION="RDF library containing a triple store and parser/serializer"
-HOMEPAGE="http://www.rdflib.net/ http://pypi.python.org/pypi/rdflib"
+HOMEPAGE="https://github.com/RDFLib/rdflib http://pypi.python.org/pypi/rdflib"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
