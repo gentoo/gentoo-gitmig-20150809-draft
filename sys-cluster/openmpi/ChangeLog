@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/openmpi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.110 2012/09/24 22:11:12 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.111 2012/10/07 17:53:28 alexxy Exp $
+
+*openmpi-1.6.2 (07 Oct 2012)
+
+  07 Oct 2012; Alexey Shvetsov <alexxy@gentoo.org> +openmpi-1.6.2.ebuild:
+  [sys-cluster/openmpi] Version bump
 
   24 Sep 2012; Justin Bronder <jsbronder@gentoo.org> -openmpi-1.4.2.ebuild,
   -openmpi-1.5.4-r3.ebuild:
@@ -455,4 +460,3 @@
   binaries, not to also build static libraries. Changed SLOT to 0 from 6 in
   the overlay. Removed the hack for PGI compilers, that needs to happen in
   fortran.eclass. Use epause() from eutils.eclass rather than sleep.
-
