@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnetfilter_log
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_log/ChangeLog,v 1.15 2012/06/16 09:38:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_log/ChangeLog,v 1.16 2012/10/07 09:59:21 pacho Exp $
+
+  07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, #72682
 
   16 Jun 2012; Pacho Ramos <pacho@gentoo.org> -libnetfilter_log-0.0.13.ebuild,
   -libnetfilter_log-0.0.15.ebuild, -libnetfilter_log-0.0.16.ebuild,
@@ -75,4 +78,3 @@
   25 Nov 2006; Cedric Krier <cedk@gentoo.org> +metadata.xml,
   +libnetfilter_log-0.0.13.ebuild:
   New ebuild for bug #141998
-
