@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.141 2012/09/30 06:59:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.142 2012/10/07 02:31:08 blueness Exp $
 
 # Anthony G. Basile <blueness@gentoo.org> (29 Sep 2012)
 # dev-cpp/tbb does not build on ppc ppc64 so mask any
@@ -44,11 +44,6 @@ sci-chemistry/pymol apbs
 # Andreas K. Huettel <dilfridge@gentoo.org> (28 May 2012)
 # Mask new useflag of opencv, as dependency dev-cpp/tbb is not keyworded on ppc
 media-libs/opencv tbb
-
-# Alexandre Rostovtsev <tetromino@gentoo.org> (25 May 2012)
-# Remove mask entry when app-misc/geoclue and app-accessibility/at-spi2-core
-# are keyworded here, bug #411761
-net-libs/webkit-gtk geoloc webkit2
 
 # Brent Baude <ranger@gentoo.org> (06 Mar 2012)
 # masking kde on gajim
