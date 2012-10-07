@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/boost-utils.eclass,v 1.2 2012/09/27 16:35:41 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/boost-utils.eclass,v 1.3 2012/10/07 08:29:49 mgorny Exp $
 
 if [[ ! ${_BOOST_ECLASS} ]]; then
 
@@ -45,7 +45,7 @@ boost-utils_get_best_slot() {
 	[[ ${BOOST_MAX_SLOT} ]] && pkg="<=${pkg}-${BOOST_MAX_SLOT}.9999"
 
 	local cpv=$(best_version ${pkg})
-	get_version_component_range 1-2 ${cpv#${pkg}-}
+	get_version_component_range 1-2 ${cpv#dev-libs/boost-}
 }
 
 # @FUNCTION: boost-utils_get_includedir
