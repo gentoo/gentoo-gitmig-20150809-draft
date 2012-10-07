@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20120813.ebuild,v 1.1 2012/08/13 07:50:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20120813.ebuild,v 1.2 2012/10/07 11:49:11 jlec Exp $
 
 EAPI=4
 
-inherit linux-mod multilib toolchain-funcs eutils
+inherit eutils flag-o-matic linux-mod multilib toolchain-funcs
 
 AUFS_VERSION="${PV%%_p*}"
 # highest branch version
@@ -126,10 +126,10 @@ src_prepare() {
 src_compile() {
 	local ARCH=x86
 
-	emake CC=$(tc-getCC) CONFIG_AUFS_FS=m KDIR=${KV_DIR}
+	emake CC=$(tc-getCC) LDFLAGS="$(raw-ldflags)" CONFIG_AUFS_FS=m KDIR=${KV_OUT_DIR}
 
 	cd "${WORKDIR}"/${PN/3}-util
-	emake CC=$(tc-getCC) AR=$(tc-getAR) KDIR=${KV_DIR} C_INCLUDE_PATH="${S}"/include
+	emake CC=$(tc-getCC) AR=$(tc-getAR) KDIR=${KV_OUT_DIR} C_INCLUDE_PATH="${S}"/include
 }
 
 src_install() {
@@ -142,7 +142,7 @@ src_install() {
 	dodoc Documentation/filesystems/aufs/README
 
 	cd "${WORKDIR}"/${PN/3}-util
-	emake DESTDIR="${D}" KDIR=${KV_DIR} install
+	emake DESTDIR="${D}" KDIR=${KV_OUT_DIR} install
 
 	newdoc README README-utils
 }

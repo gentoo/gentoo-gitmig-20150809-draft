@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/aufs3
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.23 2012/10/07 11:37:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.24 2012/10/07 11:49:11 jlec Exp $
+
+  07 Oct 2012; Justin Lecher <jlec@gentoo.org> aufs3-3_p20120813.ebuild:
+  Pass raw ldflags if ld is called directly, #432398; use KV_OUT_DIR instead of
+  KV_DIR, #432346 thanks Dennis Schride for the patches
 
 *aufs3-3_p20120813-r1 (07 Oct 2012)
 
