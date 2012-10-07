@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>sci-geosciences</herd>
-<maintainer>
-  <email>nerdboy@gentoo.org</email>
-  <name>Steve Arnold</name>
-</maintainer>
 <longdescription>Mapnik is a toolkit for developing both web and desktop
     mapping applications.  The core libraries are written in C++, with
     optional Python bindings.

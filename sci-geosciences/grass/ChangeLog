@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.115 2012/05/28 07:40:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.116 2012/10/07 09:05:32 pacho Exp $
+
+  07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, #24135.
 
   28 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> grass-6.4.2.ebuild:
   Fix wxwidgets handling, thanks to papillon81
@@ -566,4 +569,3 @@
   11 Apr 2003; Graham Forest <vladimir@gentoo.org> grass-5.0.1.ebuild:
   Initial import, ebuild submitted by both Andy Romeril <aromeril@attbi.com>,
   and Doug Gorley <douggorley@shaw.ca>
-

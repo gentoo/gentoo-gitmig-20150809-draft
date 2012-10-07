@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/gpsd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.91 2012/08/12 08:19:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.92 2012/10/07 09:04:49 pacho Exp $
+
+  07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, #24135.
 
   12 Aug 2012; Samuli Suominen <ssuominen@gentoo.org> gpsd-2.95-r1.ebuild,
   gpsd-2.96-r1.ebuild:
