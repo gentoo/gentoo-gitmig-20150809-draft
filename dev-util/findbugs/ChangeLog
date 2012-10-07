@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/findbugs
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/findbugs/ChangeLog,v 1.1 2011/04/11 01:26:55 nerdboy Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/findbugs/ChangeLog,v 1.2 2012/10/07 08:59:31 pacho Exp $
+
+  07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, #24135.
 
 *findbugs-1.3.9 (11 Apr 2011)
 
@@ -9,4 +12,3 @@
   New ebuild for findbugs (which is not so new), a static analysis tool 
   for Java bytecode. This is the CLI version; there is also a plugin 
   for Eclipse (see the web site). 
-

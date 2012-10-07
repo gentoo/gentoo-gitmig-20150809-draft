@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/duma
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/duma/ChangeLog,v 1.15 2012/05/31 13:20:33 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/duma/ChangeLog,v 1.16 2012/10/07 08:58:56 pacho Exp $
+
+  07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, #24135.
 
   31 May 2012; Kacper Kowalik <xarthisius@gentoo.org> -duma-2.4.27.ebuild,
   -duma-2.5.14-r1.ebuild, -duma-2.5.8.ebuild, -files/duma-2.4.27-make.patch,
@@ -77,4 +80,3 @@
   Updated fork of electric fence (fixes bug 160695) as the latter is no longer
   maintained.  I jelled again and forgot the most important part; original
   ebuild courtesy of Josef Reidinger <queen.killer _at_ seznam.cz>.
-
