@@ -40,6 +40,7 @@
     <remote-id type="cpan-module">Net::LDAP::Extension::SetPassword</remote-id>
     <remote-id type="cpan-module">Net::LDAP::Extension::WhoAmI</remote-id>
     <remote-id type="cpan-module">Net::LDAP::Extra</remote-id>
+    <remote-id type="cpan-module">Net::LDAP::Extra::AD</remote-id>
     <remote-id type="cpan-module">Net::LDAP::Filter</remote-id>
     <remote-id type="cpan-module">Net::LDAP::FilterList</remote-id>
     <remote-id type="cpan-module">Net::LDAP::FilterMatch</remote-id>
