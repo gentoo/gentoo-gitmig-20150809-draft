@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>vim</herd>
-	<maintainer>
-		<email>spatz@gentoo.org</email>
-		<name>Dror Levin</name>
-	</maintainer>
 	<upstream>
 		<remote-id type="google-code">conque</remote-id>
 	</upstream>

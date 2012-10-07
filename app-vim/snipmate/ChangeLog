@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/snipmate
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/snipmate/ChangeLog,v 1.4 2010/02/01 16:40:30 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/snipmate/ChangeLog,v 1.5 2012/10/07 10:24:37 pacho Exp $
+
+  07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, #274113
 
   01 Feb 2010; Markos Chandras <hwoarang@gentoo.org> snipmate-0.83.ebuild:
   Stable on amd64 wrt bug #300112
@@ -16,4 +19,3 @@
   30 Oct 2009; Dror Levin <spatz@gentoo.org> +snipmate-0.83.ebuild,
   +metadata.xml:
   Initial import, bug 280307.
-

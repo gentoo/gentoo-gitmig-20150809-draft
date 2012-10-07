@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/zencoding-vim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/zencoding-vim/ChangeLog,v 1.17 2012/08/03 08:58:55 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/zencoding-vim/ChangeLog,v 1.18 2012/10/07 10:27:32 pacho Exp $
+
+  07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, #274113
 
 *zencoding-vim-0.74 (03 Aug 2012)
 
@@ -83,4 +86,3 @@
   02 May 2010; Dror Levin <spatz@gentoo.org> +zencoding-vim-0.36.ebuild,
   +metadata.xml:
   Initial import.
-
