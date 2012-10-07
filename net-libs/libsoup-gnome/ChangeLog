@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libsoup-gnome
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/ChangeLog,v 1.76 2012/10/06 09:44:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/ChangeLog,v 1.77 2012/10/07 00:42:23 blueness Exp $
+
+  07 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  libsoup-gnome-2.38.1.ebuild:
+  stable ppc64, bug #427544
 
   06 Oct 2012; Markus Meier <maekke@gentoo.org> libsoup-gnome-2.38.1.ebuild:
   arm stable, bug #427544
@@ -344,4 +348,3 @@
   +files/libsoup-gnome-2.26.3-system-lib.patch:
   New ebuild per bug #269747, libsoup-gnome is a plugin for libsoup, this is
   a solution to avoid circurlar deps by moving it into libsoup PDEPEND.
-

@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.288 2012/10/06 09:43:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.289 2012/10/07 00:41:43 blueness Exp $
+
+  07 Oct 2012; Anthony G. Basile <blueness@gentoo.org> libsoup-2.38.1.ebuild:
+  stable ppc64, bug #427544
 
   06 Oct 2012; Markus Meier <maekke@gentoo.org> libsoup-2.38.1.ebuild:
   arm stable, bug #427544
@@ -1118,4 +1121,3 @@
 
   14 Mar 2003; Alastair Tse <liquidx@gentoo.org> libsoup-1.99.12.ebuild:
   inital ebuild. new version of soup that uses glib2 rather than glib1.
-
