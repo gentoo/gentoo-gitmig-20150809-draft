@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Exception-Class
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Exception-Class/ChangeLog,v 1.66 2012/06/24 12:59:45 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Exception-Class/ChangeLog,v 1.67 2012/10/07 16:40:47 tove Exp $
+
+*Exception-Class-1.350.0 (07 Oct 2012)
+
+  07 Oct 2012; Torsten Veller <tove@gentoo.org>
+  +Exception-Class-1.350.0.ebuild:
+  Version bump
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
