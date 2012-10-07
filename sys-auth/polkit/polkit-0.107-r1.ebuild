@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.107-r1.ebuild,v 1.1 2012/09/20 13:01:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.107-r1.ebuild,v 1.2 2012/10/07 10:46:47 ago Exp $
 
 EAPI=4
 inherit eutils multilib pam pax-utils systemd user
@@ -11,7 +11,7 @@ SRC_URI="http://www.freedesktop.org/software/${PN}/releases/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="examples gtk +introspection kde nls pam selinux systemd"
 
 RESTRICT="multilib-strict" #424423
