@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.14-r4.ebuild,v 1.10 2012/09/03 13:27:47 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.14-r4.ebuild,v 1.11 2012/10/07 14:37:32 pacho Exp $
 
 EAPI=4
 
@@ -68,7 +68,6 @@ src_prepare() {
 		ewarn "Note: some patches depend on other. So if you disabled some patch"
 		ewarn "and other started to fail to apply, you'll have to disable patches"
 		ewarn "that fail too."
-		ebeep
 
 		EPATCH_EXCLUDE="${MY_EPATCH_EXCLUDE}
 			005-less-includes.diff
