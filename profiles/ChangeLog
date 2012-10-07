@@ -1,10 +1,27 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7012 2012/10/06 20:11:31 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7013 2012/10/07 11:42:36 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  hardened/linux/uclibc/amd64/make.defaults,
+  hardened/linux/uclibc/arm/armv4/make.defaults,
+  hardened/linux/uclibc/arm/armv4t/make.defaults,
+  hardened/linux/uclibc/arm/armv5te/make.defaults,
+  hardened/linux/uclibc/arm/armv6j/make.defaults,
+  hardened/linux/uclibc/arm/armv7a/make.defaults,
+  hardened/linux/uclibc/arm/make.defaults, hardened/linux/uclibc/make.defaults,
+  hardened/linux/uclibc/mips/make.defaults,
+  hardened/linux/uclibc/mips/mipsel/make.defaults,
+  hardened/linux/uclibc/mips/package.mask, hardened/linux/uclibc/package.mask,
+  hardened/linux/uclibc/package.use, hardened/linux/uclibc/packages,
+  hardened/linux/uclibc/ppc/make.defaults,
+  hardened/linux/uclibc/ppc/package.use.mask, hardened/linux/uclibc/use.force,
+  hardened/linux/uclibc/use.mask, hardened/linux/uclibc/x86/make.defaults:
+  Add copyright headers to profiles/hardened/linux/uclibc
 
   06 Oct 2012; Ulrich Müller <ulm@gentoo.org> license_groups:
   Add htmlc (the INRIA license) to MISC-FREE license group.

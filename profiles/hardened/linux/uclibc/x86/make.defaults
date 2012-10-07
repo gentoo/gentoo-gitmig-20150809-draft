@@ -1,3 +1,8 @@
+# Copyright 1999-2012 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/uclibc/amd64/make.defaults,v 1.17 2012/06/26 13:36:21 blueness Exp 
+$
+
 ARCH="x86"
 ACCEPT_KEYWORDS="x86"
 CHOST="i386-gentoo-linux-uclibc"
