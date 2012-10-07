@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tclperl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclperl/ChangeLog,v 1.10 2011/05/23 07:16:41 tomka Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclperl/ChangeLog,v 1.11 2012/10/07 12:31:09 ago Exp $
+
+  07 Oct 2012; Agostino Sarubbo <ago@gentoo.org> -tclperl-3.1.ebuild:
+  Remove old
 
   23 May 2011; Thomas Kahle <tomka@gentoo.org> tclperl-3.2.ebuild:
   x86 stable per bug 364825
@@ -36,4 +39,3 @@
 
   17 May 2004; <matsuu@gentoo.org> +tclperl-2.5.ebuild:
   Initial import.
-
