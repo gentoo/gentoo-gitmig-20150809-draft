@@ -2,11 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>sci</herd>
-<maintainer>
-  <email>nerdboy@gentoo.org</email>
-  <name>Steve Arnold</name>
-  <description>Primary Maintainer</description>
-</maintainer>
 <longdescription>
  A package designed to accomplish some usual tasks during the analysis of 
  climate variability using Python. It provides functions to perform some 
