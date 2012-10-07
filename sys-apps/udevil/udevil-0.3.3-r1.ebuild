@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/udevil/udevil-0.3.3.ebuild,v 1.1 2012/09/23 14:27:12 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/udevil/udevil-0.3.3-r1.ebuild,v 1.1 2012/10/07 12:26:22 hasufell Exp $
 
 EAPI=4
 
@@ -30,7 +30,7 @@ pkg_setup(){
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-0.2.8-flags.patch"
+	epatch "${FILESDIR}/${P}-flags.patch"
 	eautoreconf
 }
 
