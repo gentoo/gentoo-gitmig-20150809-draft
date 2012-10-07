@@ -1,6 +1,12 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.726 2012/10/04 19:08:36 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.727 2012/10/07 16:45:19 phajdan.jr Exp $
+
+  07 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-22.0.1229.79.ebuild, chromium-22.0.1229.91.ebuild,
+  chromium-23.0.1271.17.ebuild, chromium-24.0.1284.2.ebuild,
+  chromium-9999-r1.ebuild:
+  Add dependency on SELinux policy.
 
 *chromium-23.0.1271.17 (04 Oct 2012)
 
