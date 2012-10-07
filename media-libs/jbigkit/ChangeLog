@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jbigkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/ChangeLog,v 1.54 2012/04/26 20:30:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/ChangeLog,v 1.55 2012/10/07 09:00:54 pacho Exp $
+
+  07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, #24135.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> jbigkit-2.0-r1.ebuild:
   keyword ~amd64-fbsd
