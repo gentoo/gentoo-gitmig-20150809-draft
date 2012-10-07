@@ -3,9 +3,6 @@
 <pkgmetadata>
 <herd>mobile</herd>
 <maintainer>
-  <email>nerdboy@gentoo.org</email>
-</maintainer>
-<maintainer>
   <email>robbat2@gentoo.org</email>
 </maintainer>
 <longdescription>This package really just provides acpidump and associated tools

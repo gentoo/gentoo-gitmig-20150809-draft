@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/pmtools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pmtools/ChangeLog,v 1.19 2012/06/17 03:58:18 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pmtools/ChangeLog,v 1.20 2012/10/07 09:14:47 pacho Exp $
+
+  07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, #24135.
 
   16 Jun 2012; Doug Goldstein <cardoe@gentoo.org> -pmtools-20100123.ebuild:
   Missed dropping one ebuild from the previous commit.
@@ -119,4 +122,3 @@
   07 May 2006; Steve Arnold <nerdboy@gentoo.org> +metadata.xml,
   +pmtools-20051111.ebuild:
   new ebuild to provide the acpidump utility (used with iasl)
-
