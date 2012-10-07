@@ -1,7 +1,7 @@
 Index: src/svncpp/Makefile.am
 ===================================================================
---- libsvncpp/Makefile.am
-+++ libsvncpp/Makefile.am
+--- src/svncpp/Makefile.am	(revision 7100)
++++ src/svncpp/Makefile.am	(working copy)
 @@ -27,3 +27,7 @@
  	url.cpp \
  	wc.cpp

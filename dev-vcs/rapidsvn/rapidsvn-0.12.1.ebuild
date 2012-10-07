@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rapidsvn/rapidsvn-0.12.1_pre8247.ebuild,v 1.5 2012/08/10 07:04:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rapidsvn/rapidsvn-0.12.1.ebuild,v 1.1 2012/10/07 11:20:26 jlec Exp $
 
 EAPI=4
 
@@ -17,8 +17,9 @@ MY_REL="1"
 
 DESCRIPTION="Cross-platform GUI front-end for the Subversion revision system"
 HOMEPAGE="http://rapidsvn.tigris.org/"
-#SRC_URI="http://www.rapidsvn.org/download/release/${MY_PV}/${P}-${MY_REL}.tar.gz"
-SRC_URI="http://dev.gentoo.org/~jlec/distfiles/${P}.tar.xz"
+SRC_URI="
+	http://www.rapidsvn.org/download/release/${PV}/${P}.tar.gz
+	doc? ( http://dev.gentoo.org/~jlec/distfiles/svncpp.dox.xz )"
 
 LICENSE="GPL-2 LGPL-2.1 FDL-1.2"
 SLOT="0"
@@ -38,16 +39,29 @@ DEPEND="${COMMON_DEP}
 		app-text/docbook-xsl-stylesheets )"
 RDEPEND="${COMMON_DEP}"
 
-#S="${WORKDIR}/${P}-${MY_REL}"
+PATCHES=(
+	"${FILESDIR}/${P}-svncpp_link.patch"
+	"${FILESDIR}/${P}-locale.patch" )
 
-PATCHES=( "${FILESDIR}/${P}-svncpp_link.patch" )
 AUTOTOOLS_IN_SOURCE_BUILD=1
+
 DOCS=( HACKING.txt TRANSLATIONS )
 
 pkg_setup() {
 	wxwidgets_pkg_setup
 	python_set_active_version 2
 	python_pkg_setup
+}
+
+src_prepare() {
+	if use doc; then
+		mv "${WORKDIR}"/svncpp.dox doc/svncpp/ || die
+	fi
+	strip-linguas $(grep ^RAPIDSVN_LANGUAGES src/locale/Makefile.am | sed 's:RAPIDSVN_LANGUAGES=::g')
+	sed \
+		-e "/^RAPIDSVN_LANGUAGES/s:=.*:=${LINGUAS}:g" \
+		-i src/locale/Makefile.am || die
+	autotools-utils_src_prepare
 }
 
 src_configure() {
@@ -74,15 +88,21 @@ src_configure() {
 	autotools-utils_src_configure
 }
 
+src_compile() {
+	autotools-utils_src_compile
+	use doc && autotools-utils_src_compile -C doc/manpage manpage
+}
+
 src_install() {
 	autotools-utils_src_install
 
-	doicon rapidsvn/res/rapidsvn.ico librapidsvn/src/res/bitmaps/${PN}*.png
+	doicon src/res/rapidsvn.ico src/res/bitmaps/${PN}*.png
 	make_desktop_entry rapidsvn "RapidSVN ${PV}" \
 		"${EPREFIX}/usr/share/pixmaps/rapidsvn_32x32.png" \
 		"RevisionControl;Development"
 
 	if use doc ; then
+		doman doc/manpage/${PN}.1
 		dohtml "${S}"/doc/svncpp/html/*
 	fi
 }
