@@ -7,8 +7,6 @@
   </use>
   <upstream>
     <remote-id type="cpan">HTML-Mason</remote-id>
-    <remote-id type="cpan-module">Apache::Mason</remote-id>
-    <remote-id type="cpan-module">Bundle::HTML::Mason</remote-id>
     <remote-id type="cpan-module">HTML::Mason</remote-id>
     <remote-id type="cpan-module">HTML::Mason::Apache::Request</remote-id>
     <remote-id type="cpan-module">HTML::Mason::ApacheHandler</remote-id>
@@ -44,7 +42,6 @@
     <remote-id type="cpan-module">HTML::Mason::Resolver</remote-id>
     <remote-id type="cpan-module">HTML::Mason::Resolver::File</remote-id>
     <remote-id type="cpan-module">HTML::Mason::Resolver::Null</remote-id>
-    <remote-id type="cpan-module">HTML::Mason::Tests</remote-id>
     <remote-id type="cpan-module">HTML::Mason::Tools</remote-id>
     <remote-id type="cpan-module">HTML::Mason::Utils</remote-id>
     <remote-id type="cpan-module">Tie::Handle::Mason</remote-id>
