@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs-vcs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.116 2012/09/25 19:13:17 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.117 2012/10/07 10:27:18 ulm Exp $
+
+  02 Oct 2012; Ulrich Müller <ulm@gentoo.org> emacs-vcs-24.2.9999.ebuild:
+  Passing CC to emake seems no longer necessary. Use --program-transform-name
+  config option instead of moving the executable.
 
   25 Sep 2012; Ulrich Müller <ulm@gentoo.org> emacs-vcs-24.2.9999.ebuild:
   Specify LICENSE more precisely, "as-is" is really HPND.

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.2.9999.ebuild,v 1.7 2012/09/25 19:13:17 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.2.9999.ebuild,v 1.8 2012/10/07 10:27:18 ulm Exp $
 
 EAPI=4
 
@@ -205,6 +205,7 @@ src_configure() {
 
 	econf \
 		--program-suffix=-${EMACS_SUFFIX} \
+		--program-transform-name="s/emacs-[0-9].*/${EMACS_SUFFIX}/" \
 		--infodir="${EPREFIX}"/usr/share/info/${EMACS_SUFFIX} \
 		--enable-locallisppath="${EPREFIX}/etc/emacs:${EPREFIX}${SITELISP}" \
 		--with-crt-dir="${crtdir}" \
@@ -223,19 +224,11 @@ src_configure() {
 
 src_compile() {
 	export SANDBOX_ON=0			# for the unbelievers, see Bug #131505
-	#if [[ ${PV##*.} = 9999 ]]; then
-	#	emake CC="$(tc-getCC)" bootstrap
-	#	# cleanup, otherwise emacs will be dumped again in src_install
-	#	(cd src; emake versionclean)
-	#fi
-	emake CC="$(tc-getCC)"
+	emake
 }
 
 src_install () {
-	emake install DESTDIR="${D}" NO_BIN_LINK=t
-
-	mv "${ED}"/usr/bin/{emacs-${FULL_VERSION}-,}${EMACS_SUFFIX} \
-		|| die "Moving emacs executable failed"
+	emake DESTDIR="${D}" NO_BIN_LINK=t install
 
 	# move man pages to the correct place
 	local m
