@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.170 2012/08/22 10:17:17 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.171 2012/10/07 11:05:57 xarthisius Exp $
+
+  07 Oct 2012; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
+  Drop dev-tools from metadata.xml
 
   22 Aug 2012; Miroslav Šulc <fordfrog@gentoo.org> netbeans-7.2.ebuild:
   fixed emerge when bg locale is specified (bug #432172)
