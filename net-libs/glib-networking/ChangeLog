@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/glib-networking
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/ChangeLog,v 1.49 2012/10/06 09:41:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/ChangeLog,v 1.50 2012/10/07 02:03:12 blueness Exp $
+
+  07 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  glib-networking-2.32.3.ebuild:
+  stable ppc64, bug #427544
 
   06 Oct 2012; Markus Meier <maekke@gentoo.org> glib-networking-2.32.3.ebuild:
   arm stable, bug #427544
@@ -218,4 +222,3 @@
   24 Apr 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   +glib-networking-2.28.5.ebuild, +metadata.xml:
   Move glib-networking from the gnome overlay to tree
-
