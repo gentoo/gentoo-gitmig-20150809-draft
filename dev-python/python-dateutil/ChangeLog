@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-dateutil
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/ChangeLog,v 1.40 2012/07/14 17:33:24 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/ChangeLog,v 1.41 2012/10/07 09:31:55 nixnut Exp $
+
+  07 Oct 2012; nixnut <nixnut@gentoo.org> python-dateutil-2.1.ebuild:
+  ppc stable #426466
 
   14 Jul 2012; Johannes Huber <johu@gentoo.org> python-dateutil-2.1.ebuild:
   Stable for x86, wrt bug #426466
