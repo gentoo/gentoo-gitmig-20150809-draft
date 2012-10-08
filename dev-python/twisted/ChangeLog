@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.157 2012/10/05 14:44:44 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.158 2012/10/08 13:49:11 marienz Exp $
+
+  08 Oct 2012; Marien Zwart <marienz@gentoo.org> twisted-12.2.0.ebuild:
+  Tighten python version dependency (spotted by Arfrever).
 
   05 Oct 2012; Marien Zwart <marienz@gentoo.org> twisted-10.2.0.ebuild,
   twisted-11.0.0.ebuild:
