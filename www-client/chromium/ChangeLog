@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.727 2012/10/07 16:45:19 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.728 2012/10/08 19:06:43 phajdan.jr Exp $
+
+  08 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-22.0.1229.79.ebuild, chromium-22.0.1229.91.ebuild:
+  Skip SpdyFramer tests, bug #436370 by floppym.
 
   07 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   chromium-22.0.1229.79.ebuild, chromium-22.0.1229.91.ebuild,

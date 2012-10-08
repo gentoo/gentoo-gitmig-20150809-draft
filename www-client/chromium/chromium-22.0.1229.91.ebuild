@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-22.0.1229.91.ebuild,v 1.3 2012/10/07 16:45:19 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-22.0.1229.91.ebuild,v 1.4 2012/10/08 19:06:43 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -361,6 +361,7 @@ src_test() {
 		"DnsConfigServiceTest.GetSystemConfig" # bug #394883
 		"CertDatabaseNSSTest.ImportServerCert_SelfSigned" # bug #399269
 		"URLFetcher*" # bug #425764
+		"SpdyFramer*" # bug #436370
 	)
 	runtest out/Release/net_unittests "${excluded_net_unittests[@]}"
 
