@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/sinfo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sinfo/ChangeLog,v 1.12 2012/07/16 04:28:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sinfo/ChangeLog,v 1.13 2012/10/08 20:16:45 radhermit Exp $
+
+  08 Oct 2012; Tim Harder <radhermit@gentoo.org> -sinfo-0.0.46.ebuild:
+  Remove old.
 
   16 Jul 2012; Tim Harder <radhermit@gentoo.org> -sinfo-0.0.45.ebuild:
   Remove old.
