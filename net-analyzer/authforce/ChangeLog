@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/authforce
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/authforce/ChangeLog,v 1.20 2012/06/20 13:02:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/authforce/ChangeLog,v 1.21 2012/10/08 08:34:38 kensington Exp $
+
+  08 Oct 2012; Michael Palimaka <kensington@gentoo.org> -authforce-0.9.9.ebuild:
+  Remove old.
 
   20 Jun 2012; Justin Lecher <jlec@gentoo.org> authforce-0.9.9-r1.ebuild,
   +files/authforce-0.9.9-locale.patch, metadata.xml:
@@ -82,4 +85,3 @@
   23 Apr 2004; Stuart Herbert <stuart@gentoo.org> authforce-0.9.6.ebuild,
   metadata.xml:
   Initial import; from Daniel Fullmer <lsmod@hotmail.com>; bug #38217
-
