@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qwtplot3d
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/ChangeLog,v 1.26 2012/05/19 08:12:05 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/ChangeLog,v 1.27 2012/10/08 04:38:59 armin76 Exp $
+
+  08 Oct 2012; Raúl Porcel <armin76@gentoo.org> qwtplot3d-0.2.7-r2.ebuild:
+  Drop alpha keywords
 
   19 May 2012; Johannes Huber <johu@gentoo.org> -qwtplot3d-0.2.7-r1.ebuild:
   Remove old wrt bug #311481.
