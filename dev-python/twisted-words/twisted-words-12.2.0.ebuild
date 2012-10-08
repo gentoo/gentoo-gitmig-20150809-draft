@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/twisted-words-12.2.0.ebuild,v 1.1 2012/09/27 18:18:54 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/twisted-words-12.2.0.ebuild,v 1.2 2012/10/08 19:31:50 marienz Exp $
 
 EAPI="4"
-PYTHON_DEPEND="2"
+PYTHON_DEPEND="2:2.6"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-jython"
+RESTRICT_PYTHON_ABIS="3.* 2.5 *-jython"
 MY_PACKAGE="Words"
 
 inherit twisted versionator

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-pair
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-pair/ChangeLog,v 1.16 2012/09/27 18:17:58 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-pair/ChangeLog,v 1.17 2012/10/08 19:31:09 marienz Exp $
+
+  08 Oct 2012; Marien Zwart <marienz@gentoo.org> twisted-pair-12.2.0.ebuild:
+  Fix python dependency to match dev-python/twisted's, spotted by Arfrever.
 
 *twisted-pair-12.2.0 (27 Sep 2012)
 

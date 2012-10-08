@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-conch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/ChangeLog,v 1.82 2012/10/05 14:45:03 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/ChangeLog,v 1.83 2012/10/08 19:30:06 marienz Exp $
+
+  08 Oct 2012; Marien Zwart <marienz@gentoo.org> twisted-conch-12.2.0.ebuild:
+  Fix python dependency to match dev-python/twisted's, spotted by Arfrever.
 
   05 Oct 2012; Marien Zwart <marienz@gentoo.org> twisted-conch-10.2.0.ebuild,
   twisted-conch-11.0.0.ebuild:

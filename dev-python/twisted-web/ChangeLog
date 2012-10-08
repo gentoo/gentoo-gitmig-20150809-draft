@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-web
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/ChangeLog,v 1.80 2012/10/05 14:46:31 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/ChangeLog,v 1.81 2012/10/08 19:31:36 marienz Exp $
+
+  08 Oct 2012; Marien Zwart <marienz@gentoo.org> twisted-web-12.2.0.ebuild:
+  Fix python dependency to match dev-python/twisted's, spotted by Arfrever.
 
   05 Oct 2012; Marien Zwart <marienz@gentoo.org> twisted-web-10.2.0.ebuild,
   twisted-web-11.0.0.ebuild:
