@@ -4,16 +4,19 @@
  \input texinfo  @c -*-texinfo-*-
  @c %**start of header
 -@setfilename elisp
-+@setfilename elisp23.info
++@setfilename elisp24.info
  @settitle GNU Emacs Lisp Reference Manual
  @c %**end of header
  
-@@ -65,7 +65,7 @@
+@@ -66,9 +66,9 @@
  
- @dircategory GNU Emacs Lisp
+ @documentencoding ISO-8859-1
+ 
+-@dircategory GNU Emacs Lisp
++@dircategory Emacs
  @direntry
 -* Elisp: (elisp).       The Emacs Lisp Reference Manual.
-+* Elisp 23: (elisp23).  The Emacs Lisp Reference Manual for Emacs 23.
++* Elisp 24: (elisp24).  The Emacs Lisp Reference Manual for Emacs 24.
  @end direntry
  
  @titlepage
