@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.188 2012/10/07 13:49:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.189 2012/10/08 18:26:35 pacho Exp $
+
+  08 Oct 2012; Pacho Ramos <pacho@gentoo.org>
+  +files/fvwm-2.6.5-mouse-buttons.patch:
+  Commit forgotten patch, bug #437552 by avx.
 
 *fvwm-2.6.5 (07 Oct 2012)
 
