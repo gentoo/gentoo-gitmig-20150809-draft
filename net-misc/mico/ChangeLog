@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/mico
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/ChangeLog,v 1.37 2012/09/24 21:03:50 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/ChangeLog,v 1.38 2012/10/08 08:26:13 haubi Exp $
+
+  08 Oct 2012; Michael Haubenwallner <haubi@gentoo.org>
+  -files/find-bug343827.patch, mico-2.3.13-r5.ebuild, mico-2.3.13-r6.ebuild,
+  metadata.xml:
+  Drop helpers to find bug#343827, per bug#437346.
 
   24 Sep 2012; Michael Haubenwallner <haubi@gentoo.org> mico-9999.ebuild:
   Update patchset: Drop obsole patches. Avoid the need to resolve hostnames

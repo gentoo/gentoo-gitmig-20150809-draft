@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/mico-2.3.13-r5.ebuild,v 1.2 2011/06/29 11:44:04 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/mico-2.3.13-r5.ebuild,v 1.3 2012/10/08 08:26:13 haubi Exp $
 
 EAPI="3"
 
@@ -15,7 +15,7 @@ PATCH_VER=0.2
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~ppc-aix ~ia64-hpux ~amd64-linux ~x86-linux ~sparc-solaris ~x86-winnt"
-IUSE="gtk postgres qt4 ssl tcl threads X findbug"
+IUSE="gtk postgres qt4 ssl tcl threads X"
 RESTRICT="test" #298101
 
 [[ -z ${PATCH_VER} ]] || \
@@ -41,8 +41,6 @@ S=${WORKDIR}/${PN}
 
 src_prepare() {
 	EPATCH_SUFFIX=patch epatch "${WORKDIR}"/patches
-
-	use findbug && epatch "${FILESDIR}"/find-bug343827.patch
 
 	eautoreconf
 
@@ -111,11 +109,6 @@ src_configure() {
 	fi
 
 	econf ${myconf}
-}
-
-src_compile() {
-	use findbug && export EXTRA_EMAKE="${EXTRA_EMAKE} -j1"
-	default
 }
 
 src_install() {
