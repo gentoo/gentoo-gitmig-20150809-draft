@@ -14,6 +14,9 @@
   <use>
 	<flag name="kde">Enable plasma krunner global search</flag>
 	<flag name="lastfm">Enable Last.fm streaming services support through <pkg>media-libs/liblastfm</pkg></flag>
+	<flag name="googledrive">Enable Google Drive support</flag>
+	<flag name="lastfm">Use liblastfm for fetching song info, scrobbling and radio streams</flag>
+	<flag name="moodbar">Enable moodbar support</flag>
     <flag name='projectm'>Build with ProjectM visualization</flag>
     <flag name="wiimote">Enable support for Wii remote</flag>
   </use>
