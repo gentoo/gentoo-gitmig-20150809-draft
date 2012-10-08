@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/redis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.51 2012/09/30 13:18:59 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.52 2012/10/08 05:15:35 robbat2 Exp $
+
+  08 Oct 2012; Robin H. Johnson <robbat2@gentoo.org> redis-2.4.17.ebuild:
+  Fix verbosity issue per bus #428722 and EMAKE_EXTRA bug #437344.
 
   30 Sep 2012; Dirkjan Ochtman <djc@gentoo.org> -redis-2.4.4-r1.ebuild:
   Remove another old version.

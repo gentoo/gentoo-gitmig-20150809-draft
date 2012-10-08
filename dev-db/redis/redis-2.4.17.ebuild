@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/redis-2.4.17.ebuild,v 1.1 2012/09/30 12:16:12 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/redis-2.4.17.ebuild,v 1.2 2012/10/08 05:15:34 robbat2 Exp $
 
 EAPI="4"
 
@@ -34,13 +34,6 @@ REDIS_LOGFILE=${REDIS_LOGPATH}/redis.log
 pkg_setup() {
 	enewgroup redis 75
 	enewuser redis 75 -1 ${REDIS_DATAPATH} redis
-	if use tcmalloc ; then
-		export EXTRA_EMAKE="${EXTRA_EMAKE} USE_TCMALLOC=yes"
-	elif use jemalloc ; then
-		export EXTRA_EMAKE="${EXTRA_EMAKE} JEMALLOC_SHARED=yes"
-	else
-		export EXTRA_EMAKE="${EXTRA_EMAKE} FORCE_LIBC_MALLOC=yes"
-	fi
 }
 
 src_prepare() {
@@ -70,6 +63,20 @@ src_prepare() {
 	eautoconf
 }
 
+src_compile() {
+	local myconf=""
+
+	if use tcmalloc ; then
+		myconf="${myconf} USE_TCMALLOC=yes"
+	elif use jemalloc ; then
+		myconf="${myconf} JEMALLOC_SHARED=yes"
+	else
+		myconf="${myconf} FORCE_LIBC_MALLOC=yes"
+	fi
+
+	emake ${myconf}
+}
+
 src_install() {
 	# configuration file rewrites
 	insinto /etc/
@@ -81,7 +88,7 @@ src_install() {
 		-e '/^maxmemory\>/s,<bytes>,67108864,' \
 		-e "/^dbfilename\>/s,dump.rdb,${REDIS_DATAPATH}/dump.rdb," \
 		-e "/^dir\>/s, .*, ${REDIS_DATAPATH}/," \
-		-e '/^loglevel\>/s:debug:notice:' \
+		-e '/^loglevel\>/s:(verbose|debug):notice:' \
 		-e "/^logfile\>/s:stdout:${REDIS_LOGFILE}:" \
 		<redis.conf \
 		>redis.conf.gentoo
@@ -92,16 +99,16 @@ src_install() {
 	newconfd "${FILESDIR}/redis.confd" redis
 	newinitd "${FILESDIR}/redis.initd" redis
 
-	nonfatal dodoc 00-RELEASENOTES BUGS CONTRIBUTING README TODO
+	nonfatal dodoc 00-RELEASENOTES BUGS CONTRIBUTING README
 
 	dobin src/redis-cli
 	dosbin src/redis-benchmark src/redis-server src/redis-check-aof src/redis-check-dump
 	fperms 0750 /usr/sbin/redis-benchmark
 
 	if use prefix; then
-	        diropts -m0750
+		diropts -m0750
 	else
-	        diropts -m0750 -o redis -g redis
+		diropts -m0750 -o redis -g redis
 	fi
 	keepdir ${REDIS_DATAPATH} ${REDIS_LOGPATH}
 }
