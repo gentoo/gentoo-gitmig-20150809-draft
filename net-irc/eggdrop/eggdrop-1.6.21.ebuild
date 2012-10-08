@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.21.ebuild,v 1.3 2012/10/07 14:22:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.21.ebuild,v 1.4 2012/10/08 16:59:53 blueness Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.eggheads.org/"
 SRC_URI="ftp://ftp.eggheads.org/pub/eggdrop/source/1.6/${MY_P}.tar.bz2
 	http://dev.gentoo.org/~binki/distfiles/${CATEGORY}/${PN}/${P}-patches-${PATCHSET_V}.tar.bz2"
 
-KEYWORDS="alpha amd64 ia64 ~mips ~ppc sparc x86"
+KEYWORDS="alpha amd64 ia64 ~mips ppc sparc x86"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="debug mysql postgres ssl static vanilla"
