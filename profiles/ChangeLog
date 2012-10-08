@@ -1,10 +1,19 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7019 2012/10/08 16:09:16 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7020 2012/10/08 17:57:51 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  hardened/linux/uclibc/amd64/make.defaults,
+  hardened/linux/uclibc/make.defaults,
+  hardened/linux/uclibc/mips/make.defaults,
+  hardened/linux/uclibc/mips/mipsel/make.defaults,
+  hardened/linux/uclibc/ppc/make.defaults,
+  hardened/linux/uclibc/x86/make.defaults:
+  Restructure hardened/linux/uclibc profiles
 
   08 Oct 2012; Mike Gilbert <floppym@gentoo.org> desc/python_targets.desc:
   Add python3_3.
