@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.7.0_rc2.ebuild,v 1.1 2012/09/16 12:30:48 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.6.4_rc3.ebuild,v 1.1 2012/10/08 18:04:56 blueness Exp $
 
 EAPI="4"
 
@@ -10,14 +10,15 @@ inherit db-use eutils versionator toolchain-funcs
 
 DESCRIPTION="Original Bitcoin crypto-currency wallet for automated services"
 HOMEPAGE="http://bitcoin.org/"
-SRC_URI="https://nodeload.github.com/bitcoin/bitcoin/tarball/v${PV/_/} -> bitcoin-v${PV}.tgz
-	eligius? ( http://luke.dashjr.org/programs/bitcoin/files/bitcoind/eligius/sendfee/0.7.0-eligius_sendfee.patch.xz )
+SRC_URI="http://gitorious.org/bitcoin/bitcoind-stable/archive-tarball/392d30f0 -> bitcoin-v${PV}.tgz
+	eligius? ( http://luke.dashjr.org/programs/bitcoin/files/bitcoind/eligius/sendfee/0.6.1-eligius_sendfee.patch.xz )
+	logrotate? ( https://github.com/bitcoin/bitcoin/commit/9af080c351c40a4f56d37174253d33a9f4ffdb69.diff -> 0.6.3-reopen_log_file.patch )
 "
 
 LICENSE="MIT ISC GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="+eligius examples ipv6 logrotate upnp"
+IUSE="+eligius examples logrotate upnp"
 
 RDEPEND="
 	>=dev-libs/boost-1.41.0
@@ -34,7 +35,7 @@ DEPEND="${RDEPEND}
 	>=app-shells/bash-4.1
 "
 
-S="${WORKDIR}/bitcoin-bitcoin-605e387"
+S="${WORKDIR}/bitcoin-bitcoind-stable"
 
 pkg_setup() {
 	local UG='bitcoin'
@@ -44,7 +45,8 @@ pkg_setup() {
 
 src_prepare() {
 	cd src || die
-	use eligius && epatch "${WORKDIR}/0.7.0-eligius_sendfee.patch"
+	use eligius && epatch "${WORKDIR}/0.6.1-eligius_sendfee.patch"
+	use logrotate && epatch "${DISTDIR}/0.6.3-reopen_log_file.patch"
 }
 
 src_compile() {
@@ -70,7 +72,6 @@ src_compile() {
 	else
 		OPTS+=(USE_UPNP=)
 	fi
-	use ipv6 || OPTS+=("USE_IPV6=-")
 
 	cd src || die
 	emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" -f makefile.unix "${OPTS[@]}" ${PN}

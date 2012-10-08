@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.5.6.ebuild,v 1.1 2012/07/31 02:14:08 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.7.0.ebuild,v 1.1 2012/10/08 18:04:56 blueness Exp $
 
 EAPI="4"
 
@@ -10,17 +10,14 @@ inherit db-use eutils versionator toolchain-funcs
 
 DESCRIPTION="Original Bitcoin crypto-currency wallet for automated services"
 HOMEPAGE="http://bitcoin.org/"
-SRC_URI="http://gitorious.org/bitcoin/bitcoind-stable/archive-tarball/v${PV/_/} -> bitcoin-v${PV}.tgz
-	bip16? ( http://luke.dashjr.org/programs/bitcoin/files/bip16/0.5.6-Minimal-support-for-mining-BIP16-pay-to-script-hash-.patch.xz )
-	eligius? (
-		!bip16? ( http://luke.dashjr.org/programs/bitcoin/files/eligius_sendfee/0.5.0.6rc1-eligius_sendfee.patch.xz )
-	)
+SRC_URI="https://nodeload.github.com/bitcoin/bitcoin/tarball/v${PV/_/} -> bitcoin-v${PV}.tgz
+	eligius? ( http://luke.dashjr.org/programs/bitcoin/files/bitcoind/eligius/sendfee/0.7.0-eligius_sendfee.patch.xz )
 "
 
 LICENSE="MIT ISC GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="+bip16 +eligius examples logrotate ssl upnp"
+IUSE="+eligius examples ipv6 logrotate upnp"
 
 RDEPEND="
 	>=dev-libs/boost-1.41.0
@@ -37,7 +34,7 @@ DEPEND="${RDEPEND}
 	>=app-shells/bash-4.1
 "
 
-S="${WORKDIR}/bitcoin-bitcoind-stable"
+S="${WORKDIR}/bitcoin-bitcoin-a76c22e"
 
 pkg_setup() {
 	local UG='bitcoin'
@@ -47,13 +44,7 @@ pkg_setup() {
 
 src_prepare() {
 	cd src || die
-	if use bip16; then
-		epatch "${WORKDIR}/0.5.6-Minimal-support-for-mining-BIP16-pay-to-script-hash-.patch"
-		use eligius && epatch "${FILESDIR}/0.5.0.5+bip16-eligius_sendfee.patch"
-	else
-		use eligius && epatch "${WORKDIR}/0.5.0.6rc1-eligius_sendfee.patch"
-	fi
-	use logrotate && epatch "${FILESDIR}/0.4.7-reopen_log_file.patch"
+	use eligius && epatch "${WORKDIR}/0.7.0-eligius_sendfee.patch"
 }
 
 src_compile() {
@@ -74,12 +65,12 @@ src_compile() {
 	OPTS+=("BOOST_INCLUDE_PATH=${BOOST_INC}")
 	OPTS+=("BOOST_LIB_SUFFIX=-${BOOST_VER}")
 
-	use ssl  && OPTS+=(USE_SSL=1)
 	if use upnp; then
 		OPTS+=(USE_UPNP=1)
 	else
 		OPTS+=(USE_UPNP=)
 	fi
+	use ipv6 || OPTS+=("USE_IPV6=-")
 
 	cd src || die
 	emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" -f makefile.unix "${OPTS[@]}" ${PN}
