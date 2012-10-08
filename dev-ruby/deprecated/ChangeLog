@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/deprecated
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/deprecated/ChangeLog,v 1.27 2012/09/02 09:00:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/deprecated/ChangeLog,v 1.28 2012/10/08 06:12:52 graaff Exp $
+
+*deprecated-3.0.1 (06 Oct 2012)
+
+  06 Oct 2012; Hans de Graaff <graaff@gentoo.org> +deprecated-3.0.1.ebuild:
+  Version bump.
 
 *deprecated-2.0.1-r3 (02 Sep 2012)
 
