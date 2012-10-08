@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.116 2012/09/28 09:34:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.117 2012/10/08 11:38:20 scarabeus Exp $
 
 EAPI=4
 
@@ -370,7 +370,11 @@ src_configure() {
 
 	# libreoffice extensions handling
 	for lo_xt in ${LO_EXTS}; do
-		ext_opts+=" $(use_enable libreoffice_extensions_${lo_xt} ext-${lo_xt})"
+		if [[ "${lo_xt}" == "scripting-beanshell" || "${lo_xt}" == "scripting-javascript" ]]; then
+			ext_opts+=" $(use_enable libreoffice_extensions_${lo_xt} ${lo_xt})"
+		else
+			ext_opts+=" $(use_enable libreoffice_extensions_${lo_xt} ext-${lo_xt})"
+		fi
 	done
 
 	if use java; then
