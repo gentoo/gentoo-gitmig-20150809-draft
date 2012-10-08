@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/HTML-Mason-1.500.0.ebuild,v 1.1 2012/10/07 15:51:34 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/HTML-Mason-1.500.0.ebuild,v 1.2 2012/10/08 15:35:57 tove Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.masonhq.com/ ${HOMEPAGE}"
 
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="modperl doc test"
+IUSE="modperl test"
 
 RDEPEND="!modperl? ( virtual/perl-CGI )
 	modperl? (
@@ -58,6 +58,4 @@ src_prepare() {
 src_install () {
 	perl-module_src_install
 	mv "${ED}"/usr/bin/convert* "${ED}"/usr/share/doc/${PF} || die
-	# rendhalver - the html docs have subdirs so this gets all of them
-	use doc && dohtml -r htdocs/*
 }
