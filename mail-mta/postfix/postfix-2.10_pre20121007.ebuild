@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.10_pre20120924.ebuild,v 1.1 2012/10/01 06:58:04 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.10_pre20121007.ebuild,v 1.1 2012/10/08 07:05:33 eras Exp $
 
 EAPI=4
 inherit eutils multilib ssl-cert toolchain-funcs flag-o-matic pam user versionator
@@ -302,8 +302,8 @@ pkg_postinst() {
 		elog "http://www.postfix.org/MULTI_INSTANCE_README.html"
 		if ! use berkdb; then
 			ewarn "\nPostfix is installed without BerkeleyDB support."
-			ewarn "Please turn on berkdb USE flag for hash or btree table"
-			ewarn "lookup support.\n"
+			ewarn "Please turn on berkdb USE flag if you need hash or"
+			ewarn "btree table lookups.\n"
 		fi
 		ewarn "Postfix daemons now live under /usr/libexec/postfix"
 		ewarn "Please adjust your main.cf accordingly by running"
