@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/tap-plugins
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/tap-plugins/ChangeLog,v 1.27 2012/10/06 14:37:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/tap-plugins/ChangeLog,v 1.28 2012/10/08 11:46:28 nativemad Exp $
+
+  08 Oct 2012; Andreas Schuerch <nativemad@gentoo.org>
+  tap-plugins-0.7.2.ebuild:
+  x86 stable, see bug 391089
 
   06 Oct 2012; Agostino Sarubbo <ago@gentoo.org> tap-plugins-0.7.2.ebuild:
   Stable for amd64, wrt bug #391089
