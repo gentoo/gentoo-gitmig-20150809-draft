@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-2.2.4.ebuild,v 1.12 2012/05/14 07:26:40 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-2.2.4.ebuild,v 1.13 2012/10/08 00:45:28 naota Exp $
 
 EAPI=4
 inherit eutils
@@ -56,7 +56,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install-elf $(use static-libs && echo install-static)
+	emake DESTDIR="${D}" install $(use static-libs && echo install-static)
 
 	rm -rf "${ED}"/usr/share/doc/{slang,slsh}
 
