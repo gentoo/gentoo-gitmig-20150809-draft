@@ -1,6 +1,9 @@
 # ChangeLog for app-text/rhyme
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rhyme/ChangeLog,v 1.17 2012/10/06 17:00:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rhyme/ChangeLog,v 1.18 2012/10/08 05:57:12 kensington Exp $
+
+  08 Oct 2012; Michael Palimaka <kensington@gentoo.org> -rhyme-0.9.ebuild:
+  Remove old.
 
   06 Oct 2012; Raúl Porcel <armin76@gentoo.org> rhyme-0.9.ebuild,
   rhyme-0.9-r1.ebuild:
@@ -54,4 +57,3 @@
   04 Sep 2003; Tavis Ormandy <taviso@gentoo.org> rhyme-0.9.ebuild:
   Initial import, Thanks to Aric LeDell <aledell@rcn.com> for
   submitting the ebuild in #24735
-
