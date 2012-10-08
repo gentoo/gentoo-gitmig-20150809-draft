@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/lldpd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lldpd/ChangeLog,v 1.2 2012/02/26 20:32:19 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lldpd/ChangeLog,v 1.3 2012/10/08 00:59:54 flameeyes Exp $
+
+  08 Oct 2012; Diego E. Pettenò <flameeyes@gentoo.org> lldpd-0.5.6.ebuild:
+  Fix dependency on net-snmp as the new ebuilds don't have an extensible USE
+  flag any longer; also inherit user eclass for enewuser/enewgroup.
 
   26 Feb 2012; Ulrich Müller <ulm@gentoo.org> lldpd-0.5.6.ebuild:
   Fix LICENSE, lldpd is the same as ISC, bug 403973.
@@ -10,4 +14,3 @@
   09 Feb 2012; Patrick McLean <chutzpah@gentoo.org> +files/lldpd-confd-1,
   +files/lldpd-initd-1, +lldpd-0.5.6.ebuild, +metadata.xml:
   added new package net-misc/lldpd
-

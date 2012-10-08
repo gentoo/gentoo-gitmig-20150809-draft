@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lldpd/lldpd-0.5.6.ebuild,v 1.2 2012/02/26 20:32:19 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lldpd/lldpd-0.5.6.ebuild,v 1.3 2012/10/08 00:59:54 flameeyes Exp $
 
 EAPI=4
 
-inherit eutils
+inherit eutils user
 
 DESCRIPTION="Implementation of IEEE 802.1ab (LLDP)"
 HOMEPAGE="http://github.com/vincentbernat/lldpd/wiki"
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="snmp xml"
 
-DEPEND="snmp? ( net-analyzer/net-snmp[extensible] )
+DEPEND="snmp? ( net-analyzer/net-snmp[extensible(+)] )
 		xml? ( dev-libs/libxml2 )"
 RDEPEND="${DEPEND}"
 
