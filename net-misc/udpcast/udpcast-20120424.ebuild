@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/udpcast/udpcast-20100130.ebuild,v 1.1 2011/05/08 20:26:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/udpcast/udpcast-20120424.ebuild,v 1.1 2012/10/08 12:03:04 jer Exp $
 
-EAPI=2
+EAPI=4
 
 DESCRIPTION="Multicast file transfer tool"
 HOMEPAGE="http://udpcast.linux.lu/"
@@ -14,7 +14,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="dev-lang/perl"
-RDEPEND=""
 
 src_prepare() {
 	sed -i Makefile.in \
@@ -24,6 +23,6 @@ src_prepare() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	default
 	dodoc *.txt
 }
