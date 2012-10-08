@@ -1,6 +1,16 @@
 # ChangeLog for virtual/libffi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libffi/ChangeLog,v 1.28 2012/06/14 23:13:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libffi/ChangeLog,v 1.29 2012/10/08 06:47:07 ssuominen Exp $
+
+  08 Oct 2012; Samuli Suominen <ssuominen@gentoo.org> -libffi-0.ebuild:
+  old
+
+*libffi-3.0.11 (08 Oct 2012)
+*libffi-3.0.10 (08 Oct 2012)
+
+  08 Oct 2012; Samuli Suominen <ssuominen@gentoo.org> +libffi-3.0.10.ebuild,
+  +libffi-3.0.11.ebuild:
+  Use versioned virtual wrt #436764 by Christopher J. Madsen
 
   14 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> libffi-0.ebuild:
   Raise dev-libs/libffi dependency to >= 3.0.10.
