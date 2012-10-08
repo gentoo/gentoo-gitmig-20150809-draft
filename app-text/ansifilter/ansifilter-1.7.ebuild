@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ansifilter/ansifilter-1.7.ebuild,v 1.1 2012/01/06 05:44:32 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ansifilter/ansifilter-1.7.ebuild,v 1.2 2012/10/08 20:13:09 radhermit Exp $
 
 EAPI=4
 
@@ -33,6 +33,11 @@ pkg_setup() {
 		"PREFIX=${EPREFIX}/usr"
 		"doc_dir=${EPREFIX}/usr/share/doc/${PF}/"
 	)
+}
+
+src_prepare() {
+	# bug 431452
+	rm src/qt-gui/moc_mydialog.cpp || die
 }
 
 src_compile() {
