@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/bzr-2.5.1.ebuild,v 1.4 2012/08/01 19:39:53 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/bzr-2.5.1.ebuild,v 1.5 2012/10/08 20:06:25 fauli Exp $
 
-EAPI="3"
+EAPI="4"
 PYTHON_DEPEND="2:2.6"
 PYTHON_USE_WITH="threads ssl"
 SUPPORT_PYTHON_ABIS="1"
@@ -77,10 +77,10 @@ src_install() {
 
 	if use doc; then
 		docinto developers
-		dodoc doc/developers/* || die
+		dodoc -r doc/developers/* || die
 		for doc in mini-tutorial tutorials user-{guide,reference}; do
-			docinto $doc
-			dodoc doc/en/$doc/* || die
+			docinto ${doc}
+			dodoc -r doc/en/${doc}/* || die
 		done
 	fi
 
