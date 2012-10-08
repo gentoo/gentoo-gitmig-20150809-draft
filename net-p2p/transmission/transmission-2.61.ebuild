@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.61.ebuild,v 1.6 2012/10/06 21:51:42 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.61.ebuild,v 1.7 2012/10/08 07:18:12 nativemad Exp $
 
 EAPI=4
 inherit autotools eutils fdo-mime gnome2-utils qt4-r2 user
@@ -10,7 +10,7 @@ if [[ ${PV} == *9999* ]]; then
 	inherit subversion
 else
 	SRC_URI="http://download.transmissionbt.com/${PN}/files/${P}.tar.xz"
-	KEYWORDS="amd64 ~arm ppc ppc64 ~x86 ~x86-fbsd ~amd64-linux"
+	KEYWORDS="amd64 ~arm ppc ppc64 x86 ~x86-fbsd ~amd64-linux"
 fi
 
 DESCRIPTION="A Fast, Easy and Free BitTorrent client"
