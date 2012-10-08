@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-call-ui/ktp-call-ui-0.4.1.ebuild,v 1.1 2012/07/26 12:28:54 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-call-ui/ktp-call-ui-0.4.1.ebuild,v 1.2 2012/10/08 20:24:21 johu Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ DESCRIPTION="KDE Telepathy audio/video conferencing ui"
 HOMEPAGE="http://community.kde.org/Real-Time_Communication_and_Collaboration"
 if [[ ${PV} != *9999* ]]; then
 	SRC_URI="mirror://kde/unstable/kde-telepathy/${PV}/src/${P}.tar.bz2"
-	KEYWORDS=""
+	KEYWORDS="~amd64 ~x86"
 else
 	KEYWORDS=""
 fi
