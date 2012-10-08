@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/c-client
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.92 2012/10/08 18:45:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.93 2012/10/08 23:39:18 robbat2 Exp $
+
+  08 Oct 2012; Robin H. Johnson <robbat2@gentoo.org>
+  +files/c-client-2007f-ldflags.patch, c-client-2007f-r3.ebuild:
+  Ensure kerberos builds properly with as-needed
 
   08 Oct 2012; Robin H. Johnson <robbat2@gentoo.org> c-client-2007f-r3.ebuild:
   Whitespace.

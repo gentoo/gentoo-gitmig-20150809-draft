@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2007f-r3.ebuild,v 1.2 2012/10/08 18:45:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2007f-r3.ebuild,v 1.3 2012/10/08 23:39:18 robbat2 Exp $
 
 EAPI=4
 
@@ -61,7 +61,7 @@ src_prepare() {
 	sed -e '/read.*exit/d' -i Makefile || die
 
 	# Respect LDFLAGS
-	epatch "${FILESDIR}"/${PN}-2007e-ldflags.patch
+	epatch "${FILESDIR}"/${PN}-2007f-ldflags.patch
 	sed -e "s/CC=cc/CC=$(tc-getCC)/" \
 		-e "s/ARRC=ar/ARRC=$(tc-getAR)/" \
 		-e "s/RANLIB=ranlib/RANLIB=$(tc-getRANLIB)/" \
@@ -73,19 +73,23 @@ src_prepare() {
 src_compile() {
 	local mymake ipver ssltype target passwdtype
 	ipver='IP=4'
-	use ipv6 && ipver="IP=6"
+	use ipv6 && ipver="IP=6" && touch ip6
 	use ssl && ssltype="unix" || ssltype="none"
 	if use kernel_linux ; then
 		use pam && target=lnp passwdtype=pam || target=lnx passwdtype=std
 	elif use kernel_FreeBSD ; then
 		target=bsf passwdtype=pam
 	fi
-	use kerberos && mymake="EXTRAAUTHENTICATORS=gss"
-	touch ip6 # IPv6 by default now
+	use kerberos \
+		&& mymake="EXTRAAUTHENTICATORS=gss" \
+		&& EXTRALIBS="-lgssapi_krb5 -lkrb5 -lk5crypto -lcom_err" \
 	# no parallel builds supported!
 	emake -j1 SSLTYPE=${ssltype} $target \
-		IP=6 PASSWDTYPE=${passwdtype} ${mymake} \
-		EXTRACFLAGS="${CFLAGS}" EXTRALDFLAGS="${LDFLAGS}"
+		PASSWDTYPE=${passwdtype} ${ipver} ${mymake} \
+		EXTRACFLAGS="${CFLAGS}" \
+		EXTRALDFLAGS="${LDFLAGS}" \
+		EXTRALIBS="${EXTRALIBS}" \
+		GSSDIR=/usr
 }
 
 src_install() {
@@ -118,3 +122,4 @@ src_install() {
 		dodoc docs/draft/*
 	fi
 }
+
