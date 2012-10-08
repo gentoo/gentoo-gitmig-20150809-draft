@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.23.ebuild,v 1.1 2012/10/06 22:09:13 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.23.ebuild,v 1.2 2012/10/08 17:16:29 phosphan Exp $
 
 EAPI="4"
 
@@ -8,9 +8,6 @@ inherit eutils flag-o-matic multilib user
 
 # gphoto and v4l are handled by their usual USE flags.
 # The pint backend was disabled because I could not get it to compile.
-# The mustek_usb2 backend would force us to use --enable-pthreads which is off
-# by default for linux. Let's keep this one out until we find a way how to
-# handle this cleanly.
 IUSE_SANE_BACKENDS="
 	abaton
 	agfafocus
@@ -28,9 +25,9 @@ IUSE_SANE_BACKENDS="
 	coolscan
 	coolscan2
 	coolscan3
-	dc25
 	dc210
 	dc240
+	dc25
 	dell1600n_net
 	dmc
 	epjitsu
@@ -45,8 +42,8 @@ IUSE_SANE_BACKENDS="
 	hp4200
 	hp5400
 	hp5590
-	hpsj5s
 	hpljm1005
+	hpsj5s
 	hs2p
 	ibm
 	kodak
@@ -64,6 +61,7 @@ IUSE_SANE_BACKENDS="
 	mustek
 	mustek_pp
 	mustek_usb
+	mustek_usb2
 	nec
 	net
 	niash
@@ -92,11 +90,11 @@ IUSE_SANE_BACKENDS="
 	test
 	u12
 	umax
-	umax_pp
 	umax1220u
+	umax_pp
 	xerox_mfp"
 
-IUSE="avahi usb gphoto2 ipv6 v4l doc xinetd"
+IUSE="avahi doc gphoto2 ipv6 threads usb v4l xinetd"
 
 for backend in ${IUSE_SANE_BACKENDS}; do
 	if [ ${backend} = pnm ]; then
@@ -105,6 +103,11 @@ for backend in ${IUSE_SANE_BACKENDS}; do
 		IUSE="${IUSE} +sane_backends_${backend}"
 	fi
 done
+
+REQUIRED_USE="
+	sane_backends_mustek_usb2? ( threads )
+	sane_backends_kvs40xx? ( threads )
+"
 
 DESCRIPTION="Scanner Access Now Easy - Backends"
 HOMEPAGE="http://www.sane-project.org/"
@@ -211,8 +214,9 @@ src_configure() {
 	SANEI_JPEG="sanei_jpeg.o" SANEI_JPEG_LO="sanei_jpeg.lo" \
 	BACKENDS="${BACKENDS}" econf \
 		$(use_with gphoto2) \
-		$(use_enable ipv6) \
 		$(use_enable avahi) \
+		$(use_enable ipv6) \
+		$(use_enable threads pthread) \
 		${myconf}
 }
 
