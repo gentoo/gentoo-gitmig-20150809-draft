@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/keepass/keepass-2.19.ebuild,v 1.1 2012/08/04 14:21:04 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/keepass/keepass-2.20.1.ebuild,v 1.1 2012/10/08 08:09:23 kensington Exp $
 
 EAPI=4
 
@@ -16,8 +16,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="aot"
 
-RDEPEND=">=dev-lang/mono-2.10.5"
-DEPEND="${RDEPEND}
+COMMON_DEPEND=">=dev-lang/mono-2.10.5"
+RDEPEND="${COMMON_DEPEND}
+	dev-dotnet/libgdiplus[cairo]"
+DEPEND="${COMMON_DEPEND}
 	app-arch/unzip"
 
 S=${WORKDIR}
@@ -28,12 +30,9 @@ src_prepare() {
 	. PrepMonoDev.sh || die
 	popd || die
 
-	# sgen not available on mono
-	epatch "${FILESDIR}/${PN}-2.19-skip-sgen-if-unix.patch"
-
 	# KeePass looks for some XSL files in the same folder as the executable,
 	# we prefer to have it in /usr/share/KeePass
-	epatch "${FILESDIR}/${PN}-2.19-xsl-path-detection.patch"
+	epatch "${FILESDIR}/${PN}-2.20-xsl-path-detection.patch"
 }
 
 src_compile() {
@@ -42,6 +41,7 @@ src_compile() {
 
 	# Run Ahead Of Time compiler on the binary
 	if use aot; then
+		cp Ext/KeePass.exe.config Build/KeePass/Release/
 		mono --aot -O=all Build/KeePass/Release/KeePass.exe || die
 	fi
 }
