@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2007f-r3.ebuild,v 1.1 2012/10/08 18:43:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2007f-r3.ebuild,v 1.2 2012/10/08 18:45:08 robbat2 Exp $
 
 EAPI=4
 
@@ -85,7 +85,7 @@ src_compile() {
 	# no parallel builds supported!
 	emake -j1 SSLTYPE=${ssltype} $target \
 		IP=6 PASSWDTYPE=${passwdtype} ${mymake} \
-		EXTRACFLAGS="${CFLAGS}" EXTRALDFLAGS="${LDFLAGS}" 
+		EXTRACFLAGS="${CFLAGS}" EXTRALDFLAGS="${LDFLAGS}"
 }
 
 src_install() {

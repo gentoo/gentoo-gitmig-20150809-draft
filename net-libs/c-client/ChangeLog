@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/c-client
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.91 2012/10/08 18:43:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.92 2012/10/08 18:45:08 robbat2 Exp $
+
+  08 Oct 2012; Robin H. Johnson <robbat2@gentoo.org> c-client-2007f-r3.ebuild:
+  Whitespace.
 
 *c-client-2007f-r3 (08 Oct 2012)
 
