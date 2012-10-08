@@ -1,6 +1,12 @@
 # ChangeLog for dev-ml/fieldslib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/fieldslib/ChangeLog,v 1.9 2012/08/07 16:28:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/fieldslib/ChangeLog,v 1.10 2012/10/08 11:32:26 aballier Exp $
+
+*fieldslib-108.07.01 (08 Oct 2012)
+
+  08 Oct 2012; Alexis Ballier <aballier@gentoo.org>
+  +fieldslib-108.07.01.ebuild:
+  version bump
 
   07 Aug 2012; Alexis Ballier <aballier@gentoo.org> -fieldslib-0.1.2.ebuild:
   remove old
