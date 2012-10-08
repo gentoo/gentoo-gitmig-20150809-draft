@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/leechcraft-full
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/ChangeLog,v 1.27 2012/09/07 12:22:33 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/ChangeLog,v 1.28 2012/10/08 15:55:51 pinkbyte Exp $
+
+*leechcraft-full-0.5.85 (08 Oct 2012)
+
+  08 Oct 2012; Sergey Popov <pinkbyte@gentoo.org>
+  +leechcraft-full-0.5.85.ebuild:
+  Bump LeechCraft to 0.5.85, thanks to 0xd34df00d
 
   07 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> leechcraft-full-9999.ebuild:
   Add net-misc/leechcraft-launchy and media-sound/leechcraft-hotstreams to

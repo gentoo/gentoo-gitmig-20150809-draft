@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/leechcraft-knowhow
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-knowhow/ChangeLog,v 1.15 2012/08/13 14:06:47 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-knowhow/ChangeLog,v 1.16 2012/10/08 15:57:31 pinkbyte Exp $
+
+*leechcraft-knowhow-0.5.85 (08 Oct 2012)
+
+  08 Oct 2012; Sergey Popov <pinkbyte@gentoo.org>
+  +leechcraft-knowhow-0.5.85.ebuild:
+  Bump LeechCraft to 0.5.85, thanks to 0xd34df00d
 
 *leechcraft-knowhow-0.5.80 (13 Aug 2012)
 
