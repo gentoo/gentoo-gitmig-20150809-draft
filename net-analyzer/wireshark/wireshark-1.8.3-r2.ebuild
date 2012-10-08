@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.8.3-r1.ebuild,v 1.3 2012/10/08 05:20:22 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.8.3-r2.ebuild,v 1.1 2012/10/08 18:21:54 jer Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="
-	adns +caps doc doc-pdf geoip gtk ipsec ipv6 kerberos libadns lua +pcap
+	adns +caps doc doc-pdf geoip gtk crypt ipv6 kerberos libadns lua +pcap
 	portaudio profile python selinux smi ssl zlib
 "
 RDEPEND="
@@ -28,7 +28,7 @@ RDEPEND="
 		dev-libs/atk
 		x11-misc/xdg-utils )
 	ssl? ( net-libs/gnutls dev-libs/libgcrypt )
-	ipsec? ( dev-libs/libgcrypt )
+	crypt? ( dev-libs/libgcrypt )
 	pcap? ( net-libs/libpcap )
 	caps? ( sys-libs/libcap )
 	kerberos? ( virtual/krb5 )
@@ -171,7 +171,7 @@ src_configure() {
 		$(use_enable ipv6) \
 		$(use_enable profile profile-build) \
 		$(use_with caps libcap) \
-		$(use_with ipsec gcrypt) \
+		$(use_with crypt gcrypt) \
 		$(use_with geoip) \
 		$(use_with kerberos krb5) \
 		$(use_with lua) \
@@ -207,11 +207,11 @@ src_install() {
 	dodoc AUTHORS ChangeLog NEWS README{,.bsd,.linux,.macos,.vmware} \
 		doc/{randpkt.txt,README*}
 
-	#stolen from debian/rules to install headers needed to build plugins
-	dodir /usr/include/wireshark/
-	for F in `cat "${S}"/debian/wireshark-dev.header-files`
-	do
-		cp --parents "${F}" "${ED}"/usr/include/wireshark || die
+	# install headers
+	local wsheader
+	for wsheader in $( echo $(< debian/wireshark-dev.header-files ) ); do
+		insinto /usr/include/wireshark/$( dirname ${wsheader} )
+		doins ${wsheader}
 	done
 
 	#with the above this really shouldn't be needed, but things may be looking in wiretap/ instead of wireshark/wiretap/
