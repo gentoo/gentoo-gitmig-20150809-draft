@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/ibus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.111 2012/08/29 10:30:59 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.112 2012/10/08 00:01:54 naota Exp $
+
+  08 Oct 2012;  <naota@gentoo.org> ibus-1.4.2.ebuild:
+  Fix epatch target file name. #433393
 
 *ibus-1.4.2 (29 Aug 2012)
 

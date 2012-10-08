@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.4.2.ebuild,v 1.1 2012/08/29 10:30:59 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.4.2.ebuild,v 1.2 2012/10/08 00:01:54 naota Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2:2.5"
@@ -68,7 +68,7 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-gconf-2.m4.patch
 
-	use gconf || epatch "${FILESDIR}"/${P}-no-gconf.patch
+	use gconf || epatch "${FILESDIR}"/${PN}-1.4.1-no-gconf.patch
 
 	eautoreconf
 }
