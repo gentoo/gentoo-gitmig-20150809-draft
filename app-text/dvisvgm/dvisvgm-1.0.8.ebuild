@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvisvgm/dvisvgm-1.0.8.ebuild,v 1.12 2012/05/04 03:33:15 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvisvgm/dvisvgm-1.0.8.ebuild,v 1.13 2012/10/08 17:00:21 radhermit Exp $
 
 EAPI=3
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="Converts DVI files to SVG"
 HOMEPAGE="http://dvisvgm.sourceforge.net/"
@@ -30,6 +30,8 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-darwin.patch
+	epatch "${FILESDIR}"/${P}-as-needed.patch
+	eautoreconf
 }
 
 src_install() {
