@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20120813-r1.ebuild,v 1.1 2012/10/07 11:37:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20120813-r1.ebuild,v 1.2 2012/10/08 05:33:15 jlec Exp $
 
 EAPI=4
 
@@ -107,7 +107,7 @@ src_prepare() {
 	use hfs && set_config BR_HFSPLUS
 	use inotify && set_config HNOTIFY HFSNOTIFY
 	use nfs && set_config EXPORT
-	( use amd64 || use ppc64 ) && set_config INO_T_64
+	use nfs && ( use amd64 || use ppc64 ) && set_config INO_T_64
 	use ramfs && set_config BR_RAMFS
 
 	use pax_kernel && epatch "${FILESDIR}"/pax.patch
