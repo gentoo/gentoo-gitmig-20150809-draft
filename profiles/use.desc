@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.493 2012/09/08 18:35:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.494 2012/10/08 06:28:13 mr_bones_ Exp $
 
 # Keep them sorted
 
@@ -68,7 +68,6 @@ cxx - Builds support for C++ (bindings, extra libraries, code generation, ...)
 dbi - Enable dev-db/libdbi (database-independent abstraction layer) support
 dbm - Adds support for generic DBM databases
 dbus - Enable dbus support for anything that needs it (gpsd, gnomemeeting, etc)
-dbx - Adds database abstraction layer
 debug - Enable extra debug codepaths, like asserts and extra output. If you want to get meaningful backtraces see http://www.gentoo.org/proj/en/qa/backtraces.xml
 dedicated - Adds support for dedicated game servers (some packages do not provide clients and servers at the same time)
 dga - Adds DGA (Direct Graphic Access) support for X
