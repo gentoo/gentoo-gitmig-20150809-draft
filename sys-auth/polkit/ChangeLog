@@ -1,6 +1,12 @@
 # ChangeLog for sys-auth/polkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.104 2012/10/07 10:46:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.105 2012/10/08 06:24:32 ssuominen Exp $
+
+  08 Oct 2012; Samuli Suominen <ssuominen@gentoo.org> polkit-0.107-r1.ebuild:
+  Use pax-mark in src_compile() instead of src_install() for src_test() wrt
+  #423927 by "kensington" and "Nikoli". Punt bogus RESTRICT for multilib-strict
+  and emphatize it's an Portage issue instead of polkit issue in src_install()
+  message.
 
   07 Oct 2012; Agostino Sarubbo <ago@gentoo.org> polkit-0.107-r1.ebuild:
   Stable for amd64, wrt bug #436666

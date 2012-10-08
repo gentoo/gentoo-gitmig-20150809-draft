@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.107-r1.ebuild,v 1.2 2012/10/07 10:46:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.107-r1.ebuild,v 1.3 2012/10/08 06:24:32 ssuominen Exp $
 
 EAPI=4
 inherit eutils multilib pam pax-utils systemd user
@@ -14,9 +14,7 @@ SLOT="0"
 KEYWORDS="~alpha amd64 ~arm ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="examples gtk +introspection kde nls pam selinux systemd"
 
-RESTRICT="multilib-strict" #424423
-
-RDEPEND=">=dev-lang/spidermonkey-1.8.5
+RDEPEND=">=dev-lang/spidermonkey-1.8.5-r1
 	>=dev-libs/glib-2.32
 	>=dev-libs/expat-2
 	introspection? ( >=dev-libs/gobject-introspection-1 )
@@ -76,7 +74,27 @@ src_configure() {
 		--with-os-type=gentoo
 }
 
+src_compile() {
+	default
+
+	# Required for polkitd on hardened/PaX due to spidermonkey's JIT
+	local f='src/polkitbackend/.libs/polkitd test/polkitbackend/.libs/polkitbackendjsauthoritytest'
+	if has_version '>=dev-lang/spidermonkey-1.8.7[jit]'; then
+		pax-mark m ${f}
+	else
+		pax-mark mr ${f}
+	fi
+}
+
 src_install() {
+	if has multilib-strict ${FEATURES}; then
+		ewarn
+		ewarn "Possible broken flag multilib-strict in FEATURES detected."
+		ewarn "Your build will likely fail to install wrt bug #424423."
+		ewarn "This is a bug in the Package Manager instead of polkit."
+		ewarn
+	fi
+
 	emake DESTDIR="${D}" install
 
 	dodoc docs/TODO HACKING NEWS README
@@ -92,13 +110,6 @@ src_install() {
 	fi
 
 	prune_libtool_files
-
-	# Required for polkitd on hardened/PaX due to spidermonkey's JIT
-	if has_version '<dev-lang/spidermonkey-1.8.7'; then
-		pax-mark mr "${ED}"/usr/lib/polkit-1/polkitd
-	elif has_version '>=dev-lang/spidermonkey-1.8.7[jit]'; then
-		pax-mark m "${ED}"/usr/lib/polkit-1/polkitd
-	fi
 }
 
 pkg_postinst() {
