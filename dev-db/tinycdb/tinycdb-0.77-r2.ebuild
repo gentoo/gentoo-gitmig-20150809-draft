@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tinycdb/tinycdb-0.77-r2.ebuild,v 1.6 2012/06/16 02:39:03 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tinycdb/tinycdb-0.77-r2.ebuild,v 1.7 2012/10/08 12:51:28 hattya Exp $
 
 EAPI="4"
 
@@ -21,6 +21,7 @@ RDEPEND="!dev-db/cdb"
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.diff
 	epatch "${FILESDIR}"/${P}-umask.diff
+	epatch "${FILESDIR}"/${P}-uclibc.diff
 	# fix multilib support
 	sed -i "/^libdir/s:/lib:/$(get_libdir):" Makefile
 }
