@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libg15
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libg15/ChangeLog,v 1.27 2011/09/09 16:55:47 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libg15/ChangeLog,v 1.28 2012/10/08 01:53:12 robbat2 Exp $
+
+*libg15-9999 (08 Oct 2012)
+
+  08 Oct 2012; Robin H. Johnson <robbat2@gentoo.org> +libg15-9999.ebuild:
+  Make a live version, since there has not been a release in years, and G510
+  support is only in SVN.
 
 *libg15-1.2.7-r1 (09 Sep 2011)
 
@@ -119,4 +125,3 @@
   +libg15-1.0.ebuild:
   Needed dep for upcoming lcdproc-0.5.1, thanks to Alessio Cassibba ( related
   bug #148766 and bug #148769 )
-
