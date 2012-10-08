@@ -1,0 +1,11 @@
+# ChangeLog for x11-plugins/pidgin-gpg
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-gpg/ChangeLog,v 1.1 2012/10/08 18:25:44 pinkbyte Exp $
+
+*pidgin-gpg-0.9 (08 Oct 2012)
+
+  08 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> +pidgin-gpg-0.9.ebuild,
+  +metadata.xml:
+  Initial commit wrt bug #437544. Ebuild is from rion overlay and will be
+  maintained by Azamat H. Hackimov through proxy maintainers
+
