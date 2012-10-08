@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.8.3-r1.ebuild,v 1.1 2012/10/03 16:21:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.8.3-r1.ebuild,v 1.2 2012/10/08 05:18:28 zerochaos Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -207,6 +207,14 @@ src_install() {
 	dodoc AUTHORS ChangeLog NEWS README{,.bsd,.linux,.macos,.vmware} \
 		doc/{randpkt.txt,README*}
 
+	#stolen from debian/rules to install headers needed to build plugins
+        dodir /usr/include/wireshark/
+        for F in `cat "${S}"/debian/wireshark-dev.header-files`
+	do
+                cp --parents "${F}" "${ED}"/usr/include/wireshark || die
+        done
+
+	#with the above this really shouldn't be needed, but things may be looking in wiretap/ instead of wireshark/wiretap/
 	insinto /usr/include/wiretap
 	doins wiretap/wtap.h
 

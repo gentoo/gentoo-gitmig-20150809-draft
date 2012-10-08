@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.410 2012/10/07 19:23:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.411 2012/10/08 05:18:28 zerochaos Exp $
+
+  08 Oct 2012; Rick Farina <zerochaos@gentoo.org> wireshark-1.8.3-r1.ebuild:
+  add installation of header files, this is needed for building plugins
 
   07 Oct 2012; Jeroen Roovers <jer@gentoo.org> -wireshark-1.8.2-r2.ebuild,
   -wireshark-1.8.2-r3.ebuild, wireshark-1.8.3.ebuild:
