@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.5.2-r1.ebuild,v 1.1 2012/08/05 21:33:42 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.5.2-r1.ebuild,v 1.2 2012/10/09 20:45:44 cardoe Exp $
 
 EAPI="4"
 
@@ -36,7 +36,7 @@ IUSE="kvm xen lxc drbd +filestorage sharedstorage htools syslog ipv6"
 S="${WORKDIR}/${MY_P}"
 
 DEPEND="xen? ( >=app-emulation/xen-3.0 )
-	kvm? ( app-emulation/qemu-kvm )
+	kvm? ( app-emulation/qemu )
 	lxc? ( app-emulation/lxc )
 	drbd? ( >=sys-cluster/drbd-8.3 )
 	ipv6? ( net-misc/ndisc6 )

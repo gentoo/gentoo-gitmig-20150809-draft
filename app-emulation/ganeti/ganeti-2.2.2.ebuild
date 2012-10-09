@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.2.2.ebuild,v 1.4 2012/03/09 04:48:43 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.2.2.ebuild,v 1.5 2012/10/09 20:45:44 cardoe Exp $
 
 EAPI=2
 
@@ -21,7 +21,7 @@ IUSE="kvm xen drbd +filestorage syslog"
 S="${WORKDIR}/${MY_P}"
 
 DEPEND="xen? ( >=app-emulation/xen-3.0 )
-	kvm? ( app-emulation/qemu-kvm )
+	kvm? ( app-emulation/qemu )
 	drbd? ( >=sys-cluster/drbd-8.3 )
 	dev-libs/openssl
 	dev-python/paramiko
