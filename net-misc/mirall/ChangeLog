@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/mirall
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mirall/ChangeLog,v 1.4 2012/10/02 13:53:17 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mirall/ChangeLog,v 1.5 2012/10/09 14:14:43 scarabeus Exp $
+
+  09 Oct 2012; Tomáš Chvátal <scarabeus@gentoo.org> mirall-1.0.5.ebuild:
+  Depend also on qt-test. Failed on one of my boxes without.
 
   28 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> mirall-1.0.5.ebuild:
   Shutup repoman.
