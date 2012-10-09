@@ -1,6 +1,10 @@
 # ChangeLog for sys-firmware/seabios
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/ChangeLog,v 1.3 2012/08/04 10:27:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/ChangeLog,v 1.4 2012/10/09 20:25:02 cardoe Exp $
+
+  09 Oct 2012; Doug Goldstein <cardoe@gentoo.org> seabios-1.6.3.ebuild,
+  seabios-1.7.0.ebuild:
+  Drop blocker since we install to our own directory.
 
   04 Aug 2012; Agostino Sarubbo <ago@gentoo.org> seabios-1.7.0.ebuild:
   Stable for amd64, wrt bug #427590

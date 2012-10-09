@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/seabios-1.6.3.ebuild,v 1.1 2012/07/28 22:16:03 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/seabios-1.6.3.ebuild,v 1.2 2012/10/09 20:25:02 cardoe Exp $
 
 EAPI=4
 
@@ -31,9 +31,7 @@ SLOT="0"
 IUSE=""
 
 DEPEND=""
-RDEPEND="${DEPEND}
-	!app-emulation/qemu
-	!<=app-emulation/qemu-kvm-0.15.0"
+RDEPEND="${DEPEND}"
 
 pkg_setup() {
 	python_set_active_version 2
