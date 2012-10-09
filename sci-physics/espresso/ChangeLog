@@ -1,6 +1,11 @@
 # ChangeLog for sci-physics/espresso
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso/ChangeLog,v 1.10 2012/05/06 23:08:00 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso/ChangeLog,v 1.11 2012/10/09 08:52:29 ottxor Exp $
+
+*espresso-3.1.1 (09 Oct 2012)
+
+  09 Oct 2012; Christoph Junghans <ottxor@gentoo.org> +espresso-3.1.1.ebuild:
+  Version bump (thx to Olaf Lenz)
 
   06 May 2012; Christoph Junghans <ottxor@gentoo.org> espresso-3.1.0.ebuild:
   add Darwin fixes
@@ -44,4 +49,3 @@
   20 Apr 2011; Christoph Junghans <ottxor@gentoo.org> +espresso-3.0.0.ebuild,
   +metadata.xml:
   initial commit from science overlay (bug 266648)
-
