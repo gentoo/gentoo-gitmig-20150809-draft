@@ -1,6 +1,11 @@
 # ChangeLog for www-client/opera-next
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.133 2012/10/04 16:45:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.134 2012/10/09 17:56:57 jer Exp $
+
+*opera-next-12.10.1620 (09 Oct 2012)
+
+  09 Oct 2012; Jeroen Roovers <jer@gentoo.org> +opera-next-12.10.1620.ebuild:
+  http://my.opera.com/desktopteam/blog/2012/10/09/flexbox-and-supports
 
 *opera-next-12.10.1618 (04 Oct 2012)
 
