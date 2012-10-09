@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/slock
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slock/ChangeLog,v 1.35 2012/02/20 16:12:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slock/ChangeLog,v 1.36 2012/10/09 11:41:22 naota Exp $
+
+  09 Oct 2012;  <naota@gentoo.org> slock-1.0.ebuild:
+  Drop -HHAVE_SHADOW_H on FreeBSD and keyword. #233717
 
   20 Feb 2012; Jeroen Roovers <jer@gentoo.org> -slock-0.9.ebuild,
   -slock-0.9-r1.ebuild:
@@ -130,4 +133,3 @@
   10 Jan 2007; Cedric Krier <cedk@gentoo.org> +metadata.xml,
   +slock-0.3.ebuild:
   New ebuild for bug #151039
-
