@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-main/compiz-plugins-main-0.8.8.ebuild,v 1.3 2012/08/30 16:35:41 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-main/compiz-plugins-main-0.8.8.ebuild,v 1.4 2012/10/09 19:28:28 pinkbyte Exp $
 
 EAPI="4"
 
@@ -17,10 +17,11 @@ IUSE="gconf"
 
 RDEPEND="
 	>=gnome-base/librsvg-2.14.0:2
-	virtual/jpeg:0
 	x11-libs/cairo
 	>=x11-libs/compiz-bcop-${PV}
 	>=x11-wm/compiz-${PV}[gconf?]
+	virtual/jpeg:0
+	virtual/glu
 "
 
 DEPEND="${RDEPEND}

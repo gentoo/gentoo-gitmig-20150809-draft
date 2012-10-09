@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/compiz-plugins-main
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-main/ChangeLog,v 1.22 2012/09/25 14:35:30 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-main/ChangeLog,v 1.23 2012/10/09 19:28:28 pinkbyte Exp $
+
+  09 Oct 2012; Sergey Popov <pinkbyte@gentoo.org>
+  compiz-plugins-main-0.8.8.ebuild:
+  Add missing virtual/glu dependency wrt bug #437656. Thanks to Anatoly for
+  discovering this issue
 
   25 Sep 2012; Sergey Popov <pinkbyte@gentoo.org>
   -files/compiz-plugins-main-0.8.4-put-plugin.patch,
