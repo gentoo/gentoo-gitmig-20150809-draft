@@ -1,6 +1,10 @@
 # ChangeLog for virtual/emacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/emacs/ChangeLog,v 1.53 2012/09/02 18:08:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/emacs/ChangeLog,v 1.54 2012/10/09 07:29:37 ulm Exp $
+
+  09 Oct 2012; Ulrich Müller <ulm@gentoo.org> emacs-21.ebuild,
+  emacs-22.ebuild, emacs-23.ebuild, emacs-24.ebuild:
+  emacs-24 stable on ppc. Remove empty variable assignments.
 
   02 Sep 2012; Raúl Porcel <armin76@gentoo.org> emacs-24.ebuild:
   alpha/ia64/s390/sh/sparc stable
