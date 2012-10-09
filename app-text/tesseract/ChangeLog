@@ -1,6 +1,12 @@
 # ChangeLog for app-text/tesseract
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.30 2012/06/04 11:40:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.31 2012/10/09 04:13:10 tomka Exp $
+
+*tesseract-3.01 (09 Oct 2012)
+
+  09 Oct 2012; Thomas Kahle <tomka@gentoo.org> +tesseract-3.01.ebuild,
+  metadata.xml:
+  Bump to 3.01 per bug 343211. Thanks to all contributors.
 
   04 Jun 2012; Justin Lecher <jlec@gentoo.org> tesseract-2.04-r1.ebuild,
   +files/tesseract-2.04-gcc47.patch:
