@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/arpoison
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpoison/ChangeLog,v 1.9 2010/09/18 23:54:35 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpoison/ChangeLog,v 1.10 2012/10/09 07:52:21 pinkbyte Exp $
+
+  09 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> -arpoison-0.6.ebuild:
+  Drop old revision
 
 *arpoison-0.6-r1 (18 Sep 2010)
 
