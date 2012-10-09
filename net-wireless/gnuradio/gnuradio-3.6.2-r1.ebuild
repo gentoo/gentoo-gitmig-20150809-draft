@@ -1,20 +1,19 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-9999.ebuild,v 1.2 2012/10/09 21:29:53 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-3.6.2-r1.ebuild,v 1.1 2012/10/09 21:29:53 zerochaos Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
 
-inherit base cmake-utils fdo-mime python git-2
+inherit base cmake-utils fdo-mime python
 
 DESCRIPTION="Toolkit that provides signal processing blocks to implement software radios"
 HOMEPAGE="http://gnuradio.org/"
-#SRC_URI="http://gnuradio.org/releases/${PN}/${P}.tar.gz"
-EGIT_REPO_URI="http://gnuradio.org/git/gnuradio.git"
+SRC_URI="http://gnuradio.org/releases/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="alsa doc examples fcd filter grc jack oss portaudio qt4 sdl uhd utils wavelet wxwidgets"
 
 # bug #348206
