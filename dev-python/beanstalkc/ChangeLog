@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/beanstalkc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beanstalkc/ChangeLog,v 1.6 2010/05/21 18:57:28 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beanstalkc/ChangeLog,v 1.7 2012/10/09 08:57:28 patrick Exp $
+
+*beanstalkc-0.3.0 (09 Oct 2012)
+
+  09 Oct 2012; Patrick Lauer <patrick@gentoo.org> +beanstalkc-0.3.0.ebuild:
+  Bump
 
   21 May 2010; Pacho Ramos <pacho@gentoo.org> beanstalkc-0.2.0.ebuild:
   stable amd64, bug 302671
@@ -27,4 +32,3 @@
   23 Jun 2009; Patrick Lauer <patrick@gentoo.org> +beanstalkc-0.1.1.ebuild,
   +metadata.xml:
   Initial import. Ebuild by Johan Bergstroem. Fixes #274201
-
