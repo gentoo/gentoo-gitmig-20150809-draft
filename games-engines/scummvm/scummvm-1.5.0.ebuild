@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-1.5.0.ebuild,v 1.4 2012/09/08 16:03:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-1.5.0.ebuild,v 1.5 2012/10/09 23:55:28 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/scummvm/${P/_/}.tar.bz2"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
-IUSE="aac alsa debug flac fluidsynth truetype mp3 vorbis"
+IUSE="aac alsa debug flac fluidsynth mp3 opengl truetype vorbis"
 RESTRICT="test"  # it only looks like there's a test there #77507
 
 RDEPEND=">=media-libs/libsdl-1.2.2[audio,joystick,video]
@@ -22,6 +22,7 @@ RDEPEND=">=media-libs/libsdl-1.2.2[audio,joystick,video]
 	alsa? ( media-libs/alsa-lib )
 	mp3? ( media-libs/libmad )
 	flac? ( media-libs/flac )
+	opengl? ( virtual/opengl )
 	truetype? ( media-libs/freetype:2 )
 	fluidsynth? ( media-sound/fluidsynth )"
 DEPEND="${RDEPEND}
@@ -39,6 +40,7 @@ src_prepare() {
 		-e '/INSTALL.*\/pixmaps/d' \
 		-e 's/-s //' \
 		ports.mk || die
+	epatch "${FILESDIR}"/${P}-EE.patch
 }
 
 src_configure() {
@@ -64,6 +66,7 @@ src_configure() {
 		$(use_enable alsa) \
 		$(use_enable mp3 mad) \
 		$(use_enable flac) \
+		$(use_enable opengl) \
 		$(use_enable vorbis) \
 		$(use_enable truetype freetype2) \
 		$(use_enable x86 nasm) \
