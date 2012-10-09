@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/ninja-ide
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja-ide/ChangeLog,v 1.1 2012/10/09 21:28:27 hasufell Exp $
+
+*ninja-ide-2.1.1 (09 Oct 2012)
+
+  09 Oct 2012; Julian Ospald <hasufell@gentoo.org> +ninja-ide-2.1.1.ebuild,
+  +files/ninja-ide-2.1.1-lang.patch, +metadata.xml:
+  initial import with Aaron Burnett wrt #436834
+
