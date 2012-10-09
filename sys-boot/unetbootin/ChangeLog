@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/unetbootin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/ChangeLog,v 1.88 2012/09/05 08:07:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/ChangeLog,v 1.89 2012/10/09 19:52:50 jer Exp $
+
+  09 Oct 2012; Jeroen Roovers <jer@gentoo.org> unetbootin-578.ebuild,
+  unetbootin-581.ebuild:
+  Clean up.
 
   05 Sep 2012; Justin Lecher <jlec@gentoo.org> unetbootin-575.ebuild,
   unetbootin-577.ebuild, unetbootin-578.ebuild, unetbootin-581.ebuild:
