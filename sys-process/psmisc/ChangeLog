@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/psmisc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.139 2012/10/03 09:42:47 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.140 2012/10/09 04:30:31 vapier Exp $
+
+  09 Oct 2012; Mike Frysinger <vapier@gentoo.org>
+  +files/psmisc-22.20-selinux.patch, psmisc-22.20.ebuild:
+  Add fix from upstream for building on selinux systems #437332 by Amadeusz
+  Sławiński.
 
 *psmisc-22.20 (03 Oct 2012)
 

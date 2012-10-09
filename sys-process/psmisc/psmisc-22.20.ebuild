@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/psmisc-22.20.ebuild,v 1.1 2012/10/03 09:42:47 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/psmisc-22.20.ebuild,v 1.2 2012/10/09 04:30:31 vapier Exp $
 
-EAPI=4
+EAPI="4"
+
+inherit eutils
 
 DESCRIPTION="A set of tools that use the proc filesystem"
 HOMEPAGE="http://psmisc.sourceforge.net/"
@@ -21,6 +23,10 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 DOCS="AUTHORS ChangeLog NEWS README"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-selinux.patch #437332
+}
 
 src_configure() {
 	econf \
