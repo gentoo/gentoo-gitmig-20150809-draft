@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ftester/ftester-1.0.ebuild,v 1.6 2011/12/28 17:18:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ftester/ftester-1.0.ebuild,v 1.7 2012/10/09 10:54:58 pinkbyte Exp $
 
 DESCRIPTION="Ftester - Firewall and Intrusion Detection System testing tool"
 HOMEPAGE="http://dev.inversepath.com/trac/ftester"
@@ -11,7 +11,8 @@ SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
-DEPEND="dev-perl/Net-RawIP
+DEPEND=""
+RDEPEND="dev-perl/Net-RawIP
 	dev-perl/NetPacket
 	dev-perl/Net-Pcap
 	dev-perl/Net-PcapUtils
