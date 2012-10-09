@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ftester
-# Copyright 2002-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ftester/ChangeLog,v 1.16 2011/12/28 17:18:30 ago Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ftester/ChangeLog,v 1.17 2012/10/09 10:44:44 pinkbyte Exp $
+
+  09 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> -ftester-0.9.ebuild:
+  Drop old
 
   28 Dec 2011; Agostino Sarubbo <ago@gentoo.org> ftester-1.0.ebuild:
   Add ~amd64, wrt bug #308715
