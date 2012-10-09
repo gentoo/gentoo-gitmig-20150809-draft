@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3mmee/w3mmee-0.3.2_p24-r6.ebuild,v 1.11 2012/08/26 17:00:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3mmee/w3mmee-0.3.2_p24-r6.ebuild,v 1.12 2012/10/09 22:26:25 naota Exp $
 
-inherit alternatives eutils
+inherit alternatives eutils multilib
 
 IUSE="gpm imlib nls ssl xface"
 
