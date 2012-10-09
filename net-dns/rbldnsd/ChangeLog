@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/rbldnsd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/rbldnsd/ChangeLog,v 1.19 2012/06/14 02:21:49 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/rbldnsd/ChangeLog,v 1.20 2012/10/09 11:58:31 naota Exp $
+
+  09 Oct 2012;  <naota@gentoo.org> rbldnsd-0.996b.ebuild:
+  Add ~x86-fbsd. #237130
 
   14 Jun 2012; Zac Medico <zmedico@gentoo.org> rbldnsd-0.996b.ebuild:
   inherit user for enewgroup and enewuser
