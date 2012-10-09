@@ -1,13 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-logger/telepathy-logger-0.4.0.ebuild,v 1.5 2012/10/09 23:30:05 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-logger/telepathy-logger-0.4.0.ebuild,v 1.6 2012/10/09 23:45:42 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.5"
-GCONF_DEBUG="no"
-GNOME2_LA_PUNT="yes"
 
-inherit gnome2 python virtualx
+inherit gnome2-utils python virtualx
 
 DESCRIPTION="Telepathy Logger is a session daemon that should be activated whenever telepathy is being used."
 HOMEPAGE="http://telepathy.freedesktop.org/wiki/Logger"
@@ -32,25 +30,30 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 pkg_setup() {
-	DOCS="AUTHORS ChangeLog NEWS README"
-	G2CONF="${G2CONF}
-		$(use_enable introspection)
-		--enable-debug
-		--enable-public-extensions
-		--disable-coding-style-checks
-		--disable-Werror
-		--disable-static"
-
 	python_set_active_version 2
 	python_pkg_setup
 }
 
 src_prepare() {
 	python_convert_shebangs -r 2 .
-	gnome2_src_prepare
+}
+
+src_configure() {
+	econf \
+		$(use_enable introspection) \
+		--enable-debug \
+		--enable-public-extensions \
+		--disable-coding-style-checks \
+		--disable-Werror \
+		--disable-static
 }
 
 src_test() {
 	gnome2_environment_reset
 	Xemake check || die "make check failed"
+}
+
+src_install() {
+	default
+	find "${D}" -name "*.la" -delete || die "la files removal failed"
 }
