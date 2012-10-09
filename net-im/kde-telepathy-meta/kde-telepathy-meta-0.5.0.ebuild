@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kde-telepathy-meta/kde-telepathy-meta-0.5.0.ebuild,v 1.1 2012/08/28 12:06:02 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kde-telepathy-meta/kde-telepathy-meta-0.5.0.ebuild,v 1.2 2012/10/09 02:52:35 alexxy Exp $
 
 EAPI=4
 
@@ -23,6 +23,7 @@ RDEPEND="
 	>=net-im/ktp-accounts-kcm-${PV}
 	>=net-im/ktp-approver-${PV}
 	>=net-im/ktp-auth-handler-${PV}
+	>=net-im/ktp-call-ui-${PV}
 	>=net-im/ktp-common-internals-${PV}
 	>=net-im/ktp-contact-applet-${PV}
 	>=net-im/ktp-contact-list-${PV}
