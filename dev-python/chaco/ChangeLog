@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/chaco
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/chaco/ChangeLog,v 1.13 2012/02/27 02:55:06 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/chaco/ChangeLog,v 1.14 2012/10/09 09:15:21 patrick Exp $
+
+*chaco-4.2.0 (09 Oct 2012)
+
+  09 Oct 2012; Patrick Lauer <patrick@gentoo.org> +chaco-4.2.0.ebuild:
+  Bump
 
   27 Feb 2012; Patrick Lauer <patrick@gentoo.org> chaco-3.4.0.ebuild,
   chaco-4.0.0.ebuild, chaco-4.1.0.ebuild:
@@ -64,4 +69,3 @@
   15 Jan 2009; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
   +chaco-3.0.1.ebuild:
   Initial import
-
