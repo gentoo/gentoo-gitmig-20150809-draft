@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-guest-agent/qemu-guest-agent-1.1.1.ebuild,v 1.2 2012/07/28 22:00:59 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-guest-agent/qemu-guest-agent-1.1.1.ebuild,v 1.3 2012/10/09 20:47:53 cardoe Exp $
 
 EAPI=4
 
@@ -28,8 +28,7 @@ IUSE="systemd"
 
 DEPEND=">=dev-libs/glib-2.22"
 RDEPEND="${DEPEND}
-	!app-emulation/qemu
-	!<app-emulation/qemu-kvm-1.1.1-r1"
+	!<app-emulation/qemu-1.1.1-r1"
 
 S="${WORKDIR}/${MY_P}"
 
