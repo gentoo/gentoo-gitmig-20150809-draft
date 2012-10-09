@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/multiskkserv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/multiskkserv/ChangeLog,v 1.19 2012/10/09 12:45:15 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/multiskkserv/ChangeLog,v 1.20 2012/10/09 12:47:55 blueness Exp $
+
+  09 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  multiskkserv-20100128.ebuild:
+  stable ppc, bug #428872
 
   09 Oct 2012;  <naota@gentoo.org> multiskkserv-20100128.ebuild:
   Add app-i18n/nkf dependency for test. #428872
