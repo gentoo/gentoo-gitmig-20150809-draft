@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/package.use.mask,v 1.31 2012/10/03 09:57:19 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/package.use.mask,v 1.32 2012/10/09 10:52:05 naota Exp $
 
 # As per UberLord's requests
 sys-apps/openrc pam
@@ -89,3 +89,11 @@ www-client/firefox wifi crashreporter
 # Naohiro Aota <naota@gentoo.org> (03 Oct 2012)
 # Mask gbm, udev is not supported on FreeBSD.
 media-libs/mesa gbm
+
+# Naohiro Aota <naota@gentoo.org> (06 Oct 2012)
+# Mask rpm, app-arch/rpm needs elfutils
+net-analyzer/net-snmp rpm
+
+# Naohiro Aota <naota@gentoo.org> (09 Oct 2012)
+# Mask dmpai, sys-apps/dmapi cannot build on BSD
+net-fs/samba dmapi
