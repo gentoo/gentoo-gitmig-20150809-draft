@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet-ubertooth/kismet-ubertooth-9999.ebuild,v 1.7 2012/10/09 18:49:21 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet-ubertooth/kismet-ubertooth-9999.ebuild,v 1.8 2012/10/09 21:22:12 zerochaos Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ if [[ ${PV} == "9999" ]] ; then
 	KEYWORDS=""
 else
 	SRC_URI="mirror://sourceforge/ubertooth/ubertooth-${MY_PV}.tar.xz"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 ~arm ~x86"
 fi
 
 DESCRIPTION="Provides basic bluetooth support in kismet"

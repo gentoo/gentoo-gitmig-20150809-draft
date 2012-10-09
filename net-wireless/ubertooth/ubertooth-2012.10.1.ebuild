@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ubertooth-2012.10.1.ebuild,v 1.2 2012/10/08 21:05:43 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ubertooth-2012.10.1.ebuild,v 1.3 2012/10/09 21:20:32 zerochaos Exp $
 
 EAPI="4"
 
@@ -46,7 +46,7 @@ else
 	S=${WORKDIR}/${MY_P}
 	SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.xz"
 	#re-add arm keyword after making a lib-only target
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 ~arm ~x86"
 	DEPEND=">=net-libs/libbtbb-${PV}"
 	RDEPEND="${RDEPEND}
 		>=net-libs/libbtbb-${PV}"
