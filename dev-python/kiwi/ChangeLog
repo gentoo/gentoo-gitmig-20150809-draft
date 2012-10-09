@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/kiwi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/ChangeLog,v 1.17 2012/05/20 00:37:11 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/ChangeLog,v 1.18 2012/10/09 09:44:30 patrick Exp $
+
+*kiwi-1.9.35 (09 Oct 2012)
+
+  09 Oct 2012; Patrick Lauer <patrick@gentoo.org> +kiwi-1.9.35.ebuild:
+  Bump
 
   20 May 2012; Mike Gilbert <floppym@gentoo.org> metadata.xml:
   Add remote-id.
@@ -78,4 +83,3 @@
   19 Oct 2006; Rob Cakebread <pythonhead@gentoo.org> +metadata.xml,
   +kiwi-1.9.11.ebuild:
   Initial commit. Thank you Jason Pepas <j.pepas@mail.utexas.edu> bug# 137441
-
