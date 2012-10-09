@@ -38,6 +38,7 @@
     <remote-id type="cpan-module">Bio::Graphics::Glyph::ellipse</remote-id>
     <remote-id type="cpan-module">Bio::Graphics::Glyph::ex</remote-id>
     <remote-id type="cpan-module">Bio::Graphics::Glyph::extending_arrow</remote-id>
+    <remote-id type="cpan-module">Bio::Graphics::Glyph::fb_shmiggle</remote-id>
     <remote-id type="cpan-module">Bio::Graphics::Glyph::fixedwidth</remote-id>
     <remote-id type="cpan-module">Bio::Graphics::Glyph::flag</remote-id>
     <remote-id type="cpan-module">Bio::Graphics::Glyph::gene</remote-id>
