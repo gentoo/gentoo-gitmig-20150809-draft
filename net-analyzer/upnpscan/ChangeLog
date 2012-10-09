@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/upnpscan
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/upnpscan/ChangeLog,v 1.13 2012/10/09 10:05:00 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/upnpscan/ChangeLog,v 1.14 2012/10/09 10:07:01 pinkbyte Exp $
+
+  09 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> upnpscan-0.4-r3.ebuild:
+  Remove unneeded 'eutils' eclass from inherit
 
 *upnpscan-0.4-r3 (09 Oct 2012)
 
