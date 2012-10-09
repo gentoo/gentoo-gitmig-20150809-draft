@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/knocker
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/knocker/ChangeLog,v 1.17 2009/09/23 18:20:26 patrick Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/knocker/ChangeLog,v 1.18 2012/10/09 09:31:28 pinkbyte Exp $
+
+*knocker-0.7.1-r2 (09 Oct 2012)
+
+  09 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> -knocker-0.7.1.ebuild,
+  +knocker-0.7.1-r2.ebuild:
+  Revision bump: EAPI 4, base eclass for patching, default src_install,
+  respect compiler
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> knocker-0.7.1.ebuild:
   Remove virtual/libc
