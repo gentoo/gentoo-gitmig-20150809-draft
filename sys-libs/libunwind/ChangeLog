@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libunwind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libunwind/ChangeLog,v 1.25 2012/09/11 20:15:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libunwind/ChangeLog,v 1.26 2012/10/09 17:07:32 vapier Exp $
+
+*libunwind-1.1 (09 Oct 2012)
+
+  09 Oct 2012; Mike Frysinger <vapier@gentoo.org> +libunwind-1.1.ebuild:
+  Version bump.
 
   11 Sep 2012; Alexis Ballier <aballier@gentoo.org> libunwind-1.0.1-r1.ebuild:
   keyword ~amd64-fbsd
