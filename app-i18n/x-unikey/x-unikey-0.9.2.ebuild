@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/x-unikey/x-unikey-0.9.2.ebuild,v 1.10 2011/03/27 11:39:42 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/x-unikey/x-unikey-0.9.2.ebuild,v 1.11 2012/10/09 13:31:13 naota Exp $
 
 EAPI="1"
 
-inherit eutils
+inherit eutils gnome2-utils
 
 DESCRIPTION="Vietnamese X Input Method"
 HOMEPAGE="http://unikey.sourceforge.net/linux.php"
@@ -46,7 +46,7 @@ pkg_postinst() {
 	elog "to enable x-unikey"
 	elog ""
 	if use gtk; then
-		gtk-query-immodules-2.0 > "${ROOT}"/etc/gtk-2.0/gtk.immodules
+		gnome2_query_immodules_gtk2
 		elog "If you want to use x-unikey as the default gtk+ input method,"
 		elog "change GTK_IM_MODULE in /etc/env.d/01x-unikey to \"unikey\""
 		elog ""
@@ -54,7 +54,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	if use gtk; then
-		gtk-query-immodules-2.0 > "${ROOT}"/etc/gtk-2.0/gtk.immodules
-	fi
+	use gkt && gnome2_query_immodules_gtk2
 }
