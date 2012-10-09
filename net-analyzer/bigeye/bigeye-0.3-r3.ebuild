@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bigeye/bigeye-0.3-r3.ebuild,v 1.3 2012/10/09 08:22:52 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bigeye/bigeye-0.3-r3.ebuild,v 1.4 2012/10/09 08:23:55 pinkbyte Exp $
 
 EAPI="4"
 
@@ -17,6 +17,7 @@ KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND=""
+RDEPEND=""
 
 src_prepare() {
 	epatch \
