@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2007f-r3.ebuild,v 1.3 2012/10/08 23:39:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/c-client-2007f-r3.ebuild,v 1.4 2012/10/09 21:51:59 mr_bones_ Exp $
 
 EAPI=4
 
@@ -122,4 +122,3 @@ src_install() {
 		dodoc docs/draft/*
 	fi
 }
-
