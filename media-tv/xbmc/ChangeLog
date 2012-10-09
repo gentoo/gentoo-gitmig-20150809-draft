@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.148 2012/09/24 18:02:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.149 2012/10/09 04:36:11 vapier Exp $
+
+  09 Oct 2012; Mike Frysinger <vapier@gentoo.org> metadata.xml,
+  xbmc-9999.ebuild:
+  Add USE=sftp to control libssh dependency #437566 by candrews.
 
   24 Sep 2012; Mike Frysinger <vapier@gentoo.org> metadata.xml,
   xbmc-9999.ebuild:

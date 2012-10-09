@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.119 2012/09/24 18:02:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.120 2012/10/09 04:36:11 vapier Exp $
 
 EAPI="4"
 
@@ -26,7 +26,7 @@ HOMEPAGE="http://xbmc.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="airplay alsa altivec avahi bluetooth bluray cec css debug goom joystick midi mysql nfs profile +projectm pulseaudio pvr +rsxs rtmp +samba sse sse2 udev upnp vaapi vdpau webserver +xrandr"
+IUSE="airplay alsa altivec avahi bluetooth bluray cec css debug goom joystick midi mysql nfs profile +projectm pulseaudio pvr +rsxs rtmp +samba sse sse2 sftp udev upnp vaapi vdpau webserver +xrandr"
 REQUIRED_USE="pvr? ( mysql )"
 
 COMMON_DEPEND="virtual/opengl
@@ -80,6 +80,7 @@ COMMON_DEPEND="virtual/opengl
 	avahi? ( net-dns/avahi )
 	nfs? ( net-fs/libnfs )
 	webserver? ( net-libs/libmicrohttpd )
+	sftp? ( net-libs/libssh )
 	net-misc/curl
 	samba? ( >=net-fs/samba-3.4.6[smbclient] )
 	bluetooth? ( net-wireless/bluez )
@@ -206,6 +207,7 @@ src_configure() {
 		$(use_enable rsxs) \
 		$(use_enable rtmp) \
 		$(use_enable samba) \
+		$(use_enable sftp ssh) \
 		$(use_enable upnp) \
 		$(use_enable vaapi) \
 		$(use_enable vdpau) \
