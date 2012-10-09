@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.538 2012/10/08 15:05:56 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.539 2012/10/09 07:21:40 ulm Exp $
+
+  08 Oct 2012; Ulrich Müller <ulm@gentoo.org> -emacs-23.4-r3.ebuild:
+  Remove vulnerable revision wrt security bug 431178.
 
   08 Oct 2012; Anthony G. Basile <blueness@gentoo.org> emacs-23.4-r4.ebuild,
   emacs-24.1-r1.ebuild:
