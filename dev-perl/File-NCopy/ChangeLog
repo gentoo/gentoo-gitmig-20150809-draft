@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/File-NCopy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-NCopy/ChangeLog,v 1.27 2012/10/07 13:01:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-NCopy/ChangeLog,v 1.28 2012/10/09 01:26:32 blueness Exp $
+
+  09 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  File-NCopy-0.360.0.ebuild:
+  stable ppc ppc64, bug #436860
 
   07 Oct 2012; Agostino Sarubbo <ago@gentoo.org> File-NCopy-0.360.0.ebuild:
   Stable for amd64, wrt bug #436860
