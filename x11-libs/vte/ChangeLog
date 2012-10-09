@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/vte
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.337 2012/10/06 10:15:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.338 2012/10/09 21:26:01 jer Exp $
+
+  09 Oct 2012; Jeroen Roovers <jer@gentoo.org> vte-0.28.2-r204.ebuild:
+  Stable for HPPA (bug #427802).
 
 *vte-0.28.2-r204 (06 Oct 2012)
 
