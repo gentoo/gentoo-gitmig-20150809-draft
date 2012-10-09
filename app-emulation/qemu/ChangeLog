@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.117 2012/09/22 22:01:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.118 2012/10/09 20:18:30 cardoe Exp $
+
+*qemu-1.1.1-r1 (09 Oct 2012)
+
+  09 Oct 2012; Doug Goldstein <cardoe@gentoo.org> +files/65-kvm.rules,
+  -qemu-1.0-r2.ebuild, -qemu-1.0-r3.ebuild, -qemu-1.0.1.ebuild,
+  +qemu-1.1.1-r1.ebuild, qemu-1.1.2.ebuild, +files/qemu-kvm:
+  Bring over the qemu-kvm ebuilds since we're merging the two packages together
+  to better follow how other distros ship qemu/qemu-kvm. Eventually we'll just
+  use qemu instead of qemu-kvm but not yet.
 
 *qemu-1.2.0 (22 Sep 2012)
 *qemu-1.1.2 (22 Sep 2012)

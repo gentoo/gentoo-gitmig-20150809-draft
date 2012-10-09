@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.1.2.ebuild,v 1.2 2012/10/09 20:18:30 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.1.1-r1.ebuild,v 1.1 2012/10/09 20:18:30 cardoe Exp $
 
 EAPI="4"
 
@@ -9,7 +9,7 @@ MY_P=${MY_PN}-${PV}
 
 PYTHON_DEPEND="2"
 inherit eutils flag-o-matic linux-info toolchain-funcs multilib python user
-#BACKPORTS=2
+BACKPORTS=1
 
 if [[ ${PV} = *9999* ]]; then
 	EGIT_REPO_URI="git://git.kernel.org/pub/scm/virt/kvm/qemu-kvm.git"
@@ -29,31 +29,32 @@ HOMEPAGE="http://www.linux-kvm.org"
 LICENSE="GPL-2 LGPL-2 BSD-2"
 SLOT="0"
 IUSE="+aio alsa bluetooth brltty +caps +curl debug doc fdt kernel_linux \
-kernel_FreeBSD mixemu ncurses opengl pulseaudio python rbd sasl sdl \
-smartcard spice static systemtap tci tls usbredir vde +vhost-net \
-virtfs xattr xen xfs"
+kernel_FreeBSD ncurses opengl pulseaudio python rbd sasl sdl \
+smartcard spice static tci tls usbredir vde +vhost-net virtfs xattr xen xfs"
 
 COMMON_TARGETS="i386 x86_64 alpha arm cris m68k microblaze microblazeel mips mipsel ppc ppc64 sh4 sh4eb sparc sparc64 s390x"
-IUSE_SOFTMMU_TARGETS="${COMMON_TARGETS} lm32 mips64 mips64el ppcemb xtensa xtensaeb"
+IUSE_SOFTMMU_TARGETS="${COMMON_TARGETS} mips64 mips64el ppcemb xtensa xtensaeb"
 IUSE_USER_TARGETS="${COMMON_TARGETS} armeb ppc64abi32 sparc32plus unicore32"
 
 # Setup the default SoftMMU targets, while using the loops
-# below to setup the other targets.
-IUSE="${IUSE}"
-REQUIRED_USE="|| ("
+# below to setup the other targets. x86_64 should be the only
+# defaults on for qemu-kvm
+IUSE="${IUSE} +qemu_softmmu_targets_x86_64"
 
 for target in ${IUSE_SOFTMMU_TARGETS}; do
+	if [ "x${target}" = "xx86_64" ]; then
+		continue
+	fi
 	IUSE="${IUSE} qemu_softmmu_targets_${target}"
-	REQUIRED_USE="${REQUIRED_USE} qemu_softmmu_targets_${target}"
 done
-REQUIRED_USE="${REQUIRED_USE} )"
 
 for target in ${IUSE_USER_TARGETS}; do
 	IUSE="${IUSE} qemu_user_targets_${target}"
 done
 
-REQUIRED_USE="${REQUIRED_USE}
-	static? ( !alsa !pulseaudio )
+REQUIRED_USE="static? ( !alsa !pulseaudio )
+	amd64? ( qemu_softmmu_targets_x86_64 )
+	x86? ( qemu_softmmu_targets_x86_64 )
 	virtfs? ( xattr )"
 
 # Yep, you need both libcap and libcap-ng since virtfs only uses libcap.
@@ -65,7 +66,6 @@ RDEPEND="
 	media-libs/libpng
 	sys-apps/pciutils
 	>=sys-firmware/seabios-1.7.0
-	sys-firmware/sgabios
 	sys-firmware/vgabios
 	virtual/jpeg
 	aio? ( dev-libs/libaio )
@@ -91,7 +91,6 @@ RDEPEND="
 			static? ( >=app-emulation/spice-0.9.0[static-libs] )
 			!static? ( >=app-emulation/spice-0.9.0 )
 	)
-	systemtap? ( dev-util/systemtap )
 	tls? ( net-libs/gnutls )
 	usbredir? ( sys-apps/usbredir )
 	vde? ( net-misc/vde )
@@ -190,6 +189,9 @@ src_prepare() {
 	sed -i 's/^\(C\|OP_C\|HELPER_C\)FLAGS=/\1FLAGS+=/' \
 		Makefile Makefile.target || die
 
+	# remove part to make udev happy
+	#sed -e 's~NAME="%k", ~~' -i kvm/scripts/65-kvm.rules || die
+
 	python_convert_shebangs -r 2 "${S}/scripts/kvm/kvm_stat"
 
 	[[ -n ${BACKPORTS} ]] && \
@@ -212,7 +214,12 @@ src_configure() {
 		user_targets="${user_targets} ${target}-linux-user"
 	done
 
-	einfo "Building the following softmmu targets: ${softmmu_targets}"
+	if [[ -z ${softmmu_targets} ]]; then
+		eerror "All SoftMMU targets are disabled. This is invalid for qemu-kvm"
+		die "At least 1 SoftMMU target must be enabled"
+	else
+		einfo "Building the following softmmu targets: ${softmmu_targets}"
+	fi
 
 	if [[ -n ${user_targets} ]]; then
 		einfo "Building the following user targets: ${user_targets}"
@@ -221,11 +228,8 @@ src_configure() {
 		conf_opts="${conf_opts} --disable-linux-user"
 	fi
 
-	# Add support for SystemTAP
-	use systemtap && conf_opts="${conf_opts} --enable-trace-backend=dtrace"
-
 	# Fix QA issues. QEMU needs executable heaps and we need to mark it as such
-	#conf_opts="${conf_opts} --extra-ldflags=-Wl,-z,execheap"
+	conf_opts="${conf_opts} --extra-ldflags=-Wl,-z,execheap"
 
 	# Add support for static builds
 	use static && conf_opts="${conf_opts} --static --disable-pie"
@@ -239,10 +243,9 @@ src_configure() {
 
 	# audio options
 	audio_opts="oss"
-	use alsa && audio_opts="alsa,${audio_opts}"
-	use sdl && audio_opts="sdl,${audio_opts}"
-	use pulseaudio && audio_opts="pa,${audio_opts}"
-	use mixemu && conf_opts="${conf_opts} --enable-mixemu"
+	use alsa && audio_opts="alsa ${audio_opts}"
+	use pulseaudio && audio_opts="pa ${audio_opts}"
+	use sdl && audio_opts="sdl ${audio_opts}"
 
 	# conditionally making UUID work on Linux only is wrong
 	# but the Gentoo/FreeBSD guys need to figure out what
@@ -252,10 +255,10 @@ src_configure() {
 	./configure --prefix=/usr \
 		--sysconfdir=/etc \
 		--disable-bsd-user \
-		--disable-guest-agent \
 		--disable-libiscsi \
 		--disable-strip \
 		--disable-werror \
+		--enable-guest-agent \
 		--enable-vnc-jpeg \
 		--enable-vnc-png \
 		--enable-vnc-thread \
@@ -291,12 +294,18 @@ src_configure() {
 		$(use_enable xattr attr) \
 		$(use_enable xen) \
 		$(use_enable xfs xfsctl) \
-		--audio-drv-list=${audio_opts} \
+		--audio-drv-list="${audio_opts}" \
 		--target-list="${softmmu_targets} ${user_targets}" \
 		--cc="$(tc-getCC)" \
 		--host-cc="$(tc-getBUILD_CC)" \
 		${conf_opts} \
 		|| die "configure failed"
+
+		# this is for qemu upstream's threaded support which is
+		# in development and broken
+		# the kvm project has its own support for threaded IO
+		# which is always on and works
+		# --enable-io-thread \
 
 		# FreeBSD's kernel does not support QEMU assigning/grabbing
 		# host USB devices yet
@@ -320,7 +329,7 @@ src_install() {
 			ewarn "your libvirt configs or other wrappers for ${PN}"
 		else
 			elog "You disabled QEMU_SOFTMMU_TARGETS=x86_64, this disables install"
-			elog "of /usr/bin/qemu-kvm"
+			elog "of /usr/bin/qemu-kvm and /usr/bin/kvm"
 		fi
 	fi
 
@@ -348,10 +357,6 @@ src_install() {
 	dosym ../vgabios/vgabios-qxl.bin /usr/share/qemu/vgabios-qxl.bin
 	dosym ../vgabios/vgabios-stdvga.bin /usr/share/qemu/vgabios-stdvga.bin
 	dosym ../vgabios/vgabios-vmware.bin /usr/share/qemu/vgabios-vmware.bin
-
-	# Remove sgabios since we're using the sgabios packaged one
-	rm "${ED}/usr/share/qemu/sgabios.bin"
-	dosym ../sgabios/sgabios.bin /usr/share/qemu/sgabios.bin
 }
 
 pkg_postinst() {

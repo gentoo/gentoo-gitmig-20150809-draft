@@ -2,43 +2,38 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>qemu</herd>
-  <maintainer>
-    <email>lu_zero@gentoo.org</email>
-  </maintainer>
-  <maintainer>
-    <email>slyfox@gentoo.org</email>
-    <name>Sergei Trofimovich</name>
-  </maintainer>
   <use>
     <flag name='aio'>Enables support for Linux's Async IO</flag>
+    <flag name='alsa'>Enable alsa output for sound emulation</flag>
     <flag name='brltty'>Adds support for braille displays using brltty</flag>
-    <flag name='curl'>Adds support for read-only block device emulation based on files
-        located on http and ftp servers</flag>
+	<flag name='curl'>Support ISOs / -cdrom directives vis HTTP or HTTPS.</flag>
     <flag name='fdt'>Enables firmware device tree support</flag>
-    <flag name='gnutls'>Enable TLS support for the VNC console server</flag>
-    <flag name='kqemu'>Enables the kernel acceleration module on a x86/x86-64 cpu</flag>
-    <flag name='kvm'>Use the KVM (Kernel Virtual Machine) infrastructure on compatible hardware</flag>
+	<flag name='mixemu'>Enable audio mixer emulation. On Fedora, known to cause performance problems when using SDL output and ALSA. For OSS, locks the sound device from other applications.</flag>
     <flag name='ncurses'>Enable the ncurses-based console</flag>
-    <flag name='nss'>Build support for Smartcard devices emulation using <pkg>dev-libs/nss</pkg></flag>
-    <flag name='nss'>Enable opengl/x11 output for lm32 target.</flag>
     <flag name='pulseaudio'>Enable pulseaudio output for sound emulation</flag>
-    <flag name='qemu-ifup'>Provides the qemu-ifup script for use with
-        QEMU's built in bridging</flag>
+    <flag name='qemu-ifup'>Provides the qemu-ifup script for use with QEMU's
+		built in bridging</flag>
     <flag name='rbd'>Enable rados block device backend support, see http://ceph.newdream.net/wiki/QEMU-RBD</flag>
     <flag name='sdl'>Enable the SDL-based console</flag>
-    <flag name='static'>Enable static build, useful to chroot in user-mode
-        emulation</flag>
     <flag name='spice'>Enable Spice protocol support via <pkg>app-emulation/spice</pkg></flag>
-    <flag name='ssl'>Enable TLS support for the VNC console server</flag>
+	<flag name='systemtap'>Enable SystemTAP/DTrace tracing</flag>
+	<flag name='tci'>Enable the TCG Interpreter which can speed up or slowdown workloads depending on the host and guest CPUs being emulated. In the future it will be a runtime option but for now its compile time.</flag>
+    <flag name='tls'>Enable TLS support for the VNC console server</flag>
     <flag name="usbredir">Use <pkg>sys-apps/usbredir</pkg> to redirect USB
         devices to another machine over TCP</flag>
-    <flag name='vde'>Enable Virtual Distributed Ethernet (VDE) based networking</flag>
+    <flag name='vde'>Enable VDE-based networking</flag>
     <flag name='vhost-net'>Enable accelerated networking using vhost-net, see http://www.linux-kvm.org/page/VhostNet</flag>
+	<flag name='virtfs'>Enable VirtFS support. See http://wiki.qemu.org/Documentation/9psetup</flag>
     <flag name='xattr'>
       Add support for getting and setting POSIX extended attributes, through
       <pkg>sys-apps/attr</pkg>. Requisite for the virtfs backend.
     </flag>
-    <flag name='xfs'>Support specific optimizations when files are stored on XFS filesystem.</flag>
     <flag name='xen'>Enables support for Xen backends</flag>
+	<flag name='xfs'>Support xfsctl() notification and syncing for XFS backed
+		virtual disks.</flag>
+    <!-- flags going away -->
+	<flag name='kvm'>Enable Linux KVM support</flag>
+	<flag name='nss'>Enable smartcard support</flag>
+	<flag name='kqemu'>Enable old kqemu acceleration</flag>
   </use>
 </pkgmetadata>
