@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Event
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event/ChangeLog,v 1.78 2012/10/07 13:01:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event/ChangeLog,v 1.79 2012/10/09 01:22:30 blueness Exp $
+
+  09 Oct 2012; Anthony G. Basile <blueness@gentoo.org> Event-1.10.ebuild:
+  stable ppc ppc64, bug #436854
 
   07 Oct 2012; Agostino Sarubbo <ago@gentoo.org> Event-1.10.ebuild:
   Stable for amd64, wrt bug #436854
