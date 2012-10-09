@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.396 2012/10/08 20:18:30 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.397 2012/10/09 12:12:22 jlec Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -47,6 +47,7 @@ dev-lang/php kolab
 # Ralph Sennhauser <sera@gentoo.org> (18 Jul 2012)
 # Requires masked eclipse-sdk.
 dev-lang/icc eclipse
+dev-lang/idb eclipse
 
 # Michael Weber<xmw@gentoo.org>  (18 Jun 2012)
 # Not fit for production
