@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/chrootuid
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chrootuid/ChangeLog,v 1.17 2012/10/06 12:21:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chrootuid/ChangeLog,v 1.18 2012/10/09 01:54:45 blueness Exp $
+
+  09 Oct 2012; Anthony G. Basile <blueness@gentoo.org> chrootuid-1.3-r1.ebuild:
+  stable ppc, bug #436770
 
   06 Oct 2012; Agostino Sarubbo <ago@gentoo.org> chrootuid-1.3-r1.ebuild:
   Stable for amd64, wrt bug #436770
@@ -54,4 +57,3 @@
   metadata.xml:
   Initial revision. Ebuild submitted by Michael C. Ferguson <mcf@augustmail.com>
   in bug #40981.
-
