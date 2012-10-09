@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti-instance-image/ganeti-instance-image-0.5.ebuild,v 1.2 2011/05/26 16:44:28 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti-instance-image/ganeti-instance-image-0.5.ebuild,v 1.3 2012/10/09 21:15:25 cardoe Exp $
 
 EAPI=2
 
@@ -26,7 +26,7 @@ DEPEND=""
 RDEPEND="app-arch/dump
 	>=app-emulation/ganeti-2.0.3
 	|| ( >=sys-apps/coreutils-6.10-r1 sys-apps/mktemp )
-	|| ( app-emulation/qemu app-emulation/qemu-kvm )
+	app-emulation/qemu
 	sys-apps/util-linux
 	sys-fs/multipath-tools
 	sys-fs/e2fsprogs"

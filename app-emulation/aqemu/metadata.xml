@@ -9,7 +9,4 @@
 	<email>andreis.vinogradovs@gmail.com</email>
 	<description>Proxied maintainer (assign bugs)</description>
 </maintainer>
-<use>
-	<flag name="kvm">Add kernel virtual machine support</flag>
-</use>
 </pkgmetadata>

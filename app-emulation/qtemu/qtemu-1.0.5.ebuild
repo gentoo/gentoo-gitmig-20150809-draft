@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qtemu/qtemu-1.0.5.ebuild,v 1.3 2011/02/16 22:08:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qtemu/qtemu-1.0.5.ebuild,v 1.4 2012/10/09 21:18:56 cardoe Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ IUSE=""
 
 DEPEND="x11-libs/qt-gui:4"
 RDEPEND="${DEPEND}
-	|| ( app-emulation/qemu app-emulation/qemu-kvm )"
+	app-emulation/qemu"
 
 DOCS="ChangeLog README"
 PATCHES=(
