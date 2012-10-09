@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Devel-Symdump
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Symdump/ChangeLog,v 1.69 2012/10/07 10:20:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Symdump/ChangeLog,v 1.70 2012/10/09 01:20:37 blueness Exp $
+
+  09 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  Devel-Symdump-2.80.0.ebuild:
+  stable ppc ppc64, bug #436852
 
   07 Oct 2012; Agostino Sarubbo <ago@gentoo.org> Devel-Symdump-2.80.0.ebuild:
   Stable for amd64, wrt bug #436852
