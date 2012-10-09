@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.9.ebuild,v 1.5 2012/10/04 21:36:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.9.ebuild,v 1.6 2012/10/09 19:20:56 armin76 Exp $
 
 EAPI=4
 inherit eutils flag-o-matic pam user
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~sparc ~x86"
+KEYWORDS="amd64 ppc ~sparc x86"
 IUSE="nls nologin pam ssl static"
 
 LIBS_DEPEND="app-arch/bzip2
