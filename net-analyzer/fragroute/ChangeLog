@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/fragroute
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fragroute/ChangeLog,v 1.23 2011/10/23 20:22:56 radhermit Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fragroute/ChangeLog,v 1.24 2012/10/09 09:09:01 pinkbyte Exp $
+
+*fragroute-1.2-r4 (09 Oct 2012)
+
+  09 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> +fragroute-1.2-r4.ebuild:
+  Revision bump: bump to EAPI 4, use default src_install, utilize patches
+  through base eclass,
+  add missing awk dependency and remove automagic on libpcap
 
   23 Oct 2011; Tim Harder <radhermit@gentoo.org> -fragroute-1.2-r1.ebuild:
   Remove old.
