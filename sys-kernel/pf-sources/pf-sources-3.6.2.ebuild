@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/pf-sources-3.1.6-r2.ebuild,v 1.2 2012/10/09 19:45:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/pf-sources-3.6.2.ebuild,v 1.1 2012/10/09 19:45:12 hwoarang Exp $
 
 EAPI="2"
 
@@ -51,8 +51,20 @@ pkg_setup(){
 
 src_prepare(){
 	epatch "${DISTDIR}"/"${PF_FILE}"
-	epatch "${FILESDIR}"/2100_proc-mem-handling-fix.patch
 }
 
-K_EXTRAEINFO="For more info on pf-sources and details on how to report problems, see: \
-${HOMEPAGE}."
+pkg_postinst() {
+	kernel-2_pkg_postinst
+
+	elog
+	elog "${P} has the following optional runtime dependencies:"
+	elog "  sys-apps/tuxonice-userui"
+	elog "    provides minimal userspace progress information related to"
+	elog "    suspending and resuming process"
+	elog "  sys-power/hibernate-script or sys-power/pm-utils"
+	elog "    runtime utilites for hibernating and suspending your computer"
+	elog
+}
+
+K_EXTRAEINFO="For more info on pf-sources and details on how to report problems,
+see: ${HOMEPAGE}."
