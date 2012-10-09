@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.416 2012/09/18 09:42:42 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.417 2012/10/09 08:38:23 chainsaw Exp $
+
+*asterisk-10.9.0 (09 Oct 2012)
+*asterisk-1.8.17.0 (09 Oct 2012)
+
+  09 Oct 2012; Tony Vroon <chainsaw@gentoo.org> +asterisk-1.8.17.0.ebuild,
+  +asterisk-10.9.0.ebuild:
+  Bugfix release on the 1.8 & 10 branches, addresses among other things a
+  channel reference leak in ChanSpy, DTMF recognition issues in the absence of
+  any interdigit delay, last queue member not being deleted, CEL PostgreSQL
+  memory leak and a DUNDi message routing issue. Distro patchset unchanged.
 
 *asterisk-10.8.0 (18 Sep 2012)
 *asterisk-1.8.16.0 (18 Sep 2012)
