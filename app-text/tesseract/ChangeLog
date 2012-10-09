@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tesseract
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.31 2012/10/09 04:13:10 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.32 2012/10/09 18:06:10 tomka Exp $
+
+  09 Oct 2012; Thomas Kahle <tomka@gentoo.org> tesseract-3.01.ebuild:
+  Fix building with gcc-4.7 (Bug 437742)
 
 *tesseract-3.01 (09 Oct 2012)
 
@@ -140,4 +143,3 @@
   +tesseract-1.02.02022007.ebuild:
   Initial commit, ebuild based on ebuild contributed by Dan Davis
   <d-web-gentoo@dandavis.com>. Closes bug #146390.
-
