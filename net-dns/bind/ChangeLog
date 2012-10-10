@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.415 2012/09/16 14:23:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.416 2012/10/10 20:11:06 idl0r Exp $
+
+*bind-9.9.2 (10 Oct 2012)
+*bind-9.9.1_p4 (10 Oct 2012)
+
+  10 Oct 2012; Christian Ruppert <idl0r@gentoo.org> -bind-9.9.1_p2.ebuild,
+  +bind-9.9.1_p4.ebuild, +bind-9.9.2.ebuild, -files/named.init-r11:
+  Version bump, bug 437828 - CVE CVE-2012-5166
 
   16 Sep 2012; Jeroen Roovers <jer@gentoo.org> bind-9.9.1_p3.ebuild:
   Stable for HPPA (bug #434876).

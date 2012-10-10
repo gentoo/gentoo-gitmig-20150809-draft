@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.9.1_p2.ebuild,v 1.8 2012/08/19 14:10:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.9.1_p4.ebuild,v 1.1 2012/10/10 20:11:06 idl0r Exp $
 
 # Re dlz/mysql and threads, needs to be verified..
 # MySQL uses thread local storage in its C api. Thus MySQL
@@ -24,11 +24,17 @@ SDB_LDAP_VER="1.1.0-fc14"
 # bind-9.8.0-P1-geoip-1.3.patch
 GEOIP_PV=1.3
 #GEOIP_PV_AGAINST="${MY_PV}"
-GEOIP_PV_AGAINST="9.9.1-P1"
+GEOIP_PV_AGAINST="9.9.1-P4"
 GEOIP_P="bind-${GEOIP_PV_AGAINST}-geoip-${GEOIP_PV}"
 GEOIP_PATCH_A="${GEOIP_P}.patch"
 GEOIP_DOC_A="bind-geoip-1.3-readme.txt"
 GEOIP_SRC_URI_BASE="http://bind-geoip.googlecode.com/"
+
+RRL_PV="9.9.1-P2"
+
+# GeoIP: http://bind-geoip.googlecode.com/
+# DNS RRL: http://www.redbarn.org/dns/ratelimits/
+# SDB-LDAP: http://bind9-ldap.bayour.com/
 
 DESCRIPTION="BIND - Berkeley Internet Name Domain - Name Server"
 HOMEPAGE="http://www.isc.org/software/bind"
@@ -36,13 +42,14 @@ SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${MY_P}.tar.gz
 	doc? ( mirror://gentoo/dyndns-samples.tbz2 )
 	geoip? ( ${GEOIP_SRC_URI_BASE}/files/${GEOIP_DOC_A}
 			 ${GEOIP_SRC_URI_BASE}/files/${GEOIP_PATCH_A} )
-	sdb-ldap? ( http://ftp.disconnected-by-peer.at/pub/bind-sdb-ldap-${SDB_LDAP_VER}.patch.bz2 )"
+	sdb-ldap? ( http://ftp.disconnected-by-peer.at/pub/bind-sdb-ldap-${SDB_LDAP_VER}.patch.bz2 )
+	rrl? ( http://ss.vix.com/~vixie/rl-${RRL_PV}.patch )"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
-IUSE="berkdb caps dlz doc filter-aaaa geoip gost gssapi idn ipv6 ldap mysql odbc postgres rpz sdb-ldap
-selinux ssl static-libs threads urandom xml"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+IUSE="berkdb caps dlz doc filter-aaaa geoip gost gssapi idn ipv6 ldap mysql odbc
+postgres rpz rrl sdb-ldap selinux ssl static-libs threads urandom xml"
 # no PKCS11 currently as it requires OpenSSL to be patched, also see bug 409687
 
 REQUIRED_USE="postgres? ( dlz )
@@ -120,9 +127,17 @@ src_prepare() {
 #		sed -i -e 's:^ RELEASETYPE=: RELEASETYPE=-P:' \
 #			-e 's:RELEASEVER=:RELEASEVER=1:' \
 #			${GEOIP_PATCH_A} || die
-		sed -i -e 's:RELEASEVER=1:RELEASEVER=2:' ${GEOIP_PATCH_A} || die
+#		sed -i -e 's:RELEASEVER=2:RELEASEVER=3:' ${GEOIP_PATCH_A} || die
 		epatch ${GEOIP_PATCH_A}
 	fi
+
+	if use rrl; then
+		# Response Rate Limiting (DNS RRL) - bug 434650
+		epatch "${DISTDIR}/rl-${RRL_PV}.patch"
+	fi
+
+	# bug 425170
+	epatch "${FILESDIR}"/bind-libxml2-2.8.x.patch
 
 	# Disable tests for now, bug 406399
 	sed -i '/^SUBDIRS/s:tests::' bin/Makefile.in lib/Makefile.in || die
@@ -163,7 +178,7 @@ src_configure() {
 		$(use_with berkdb dlz-bdb) \
 		$(use_with ldap dlz-ldap) \
 		$(use_with odbc dlz-odbc) \
-		$(use_with ssl openssl) \
+		$(use_with ssl openssl "${EPREFIX}"/usr) \
 		$(use_with idn) \
 		$(use_enable ipv6) \
 		$(use_with xml libxml2) \
@@ -223,7 +238,7 @@ src_install() {
 	newins "${FILESDIR}"/127.zone-r1 127.zone
 	newins "${FILESDIR}"/localhost.zone-r3 localhost.zone
 
-	newinitd "${FILESDIR}"/named.init-r11 named
+	newinitd "${FILESDIR}"/named.init-r12 named
 	newconfd "${FILESDIR}"/named.confd-r6 named
 
 	if use gost; then
