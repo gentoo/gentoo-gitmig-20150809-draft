@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libdnet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/ChangeLog,v 1.57 2012/10/10 06:50:37 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/ChangeLog,v 1.58 2012/10/10 16:50:05 jer Exp $
+
+  10 Oct 2012; Jeroen Roovers <jer@gentoo.org> libdnet-1.12.ebuild:
+  Readd keywords (bug #437800).
 
 *libdnet-1.12 (10 Oct 2012)
 
