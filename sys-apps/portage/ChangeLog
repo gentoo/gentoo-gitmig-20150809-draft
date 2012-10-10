@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1117 2012/10/10 16:28:48 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1118 2012/10/10 22:13:35 zmedico Exp $
+
+*portage-2.1.11.26 (10 Oct 2012)
+
+  10 Oct 2012; Zac Medico <zmedico@gentoo.org> +portage-2.1.11.26.ebuild:
+  2.1.11.26 version bump. This fixes bug #437872 (support *_beta* wildcard
+  atoms) and also fixes a regression since 2.1.11.11 which triggers behavior
+  similar to bug #403895 (emerge --load-average sometimes fails to schedule new
+  builds when the load average drops). Bug #431026 tracks all bugs fixed since
+  portage-2.1.11.9.
 
   10 Oct 2012; Zac Medico <zmedico@gentoo.org> -portage-2.1.11.24.ebuild,
   -portage-2.2.0_alpha135.ebuild:
