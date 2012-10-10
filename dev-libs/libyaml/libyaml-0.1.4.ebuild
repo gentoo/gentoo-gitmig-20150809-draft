@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libyaml/libyaml-0.1.4.ebuild,v 1.11 2012/09/30 18:28:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libyaml/libyaml-0.1.4.ebuild,v 1.12 2012/10/10 15:37:05 jer Exp $
 
 EAPI=4
 
-inherit eutils autotools-utils
+inherit autotools-utils eutils
 
 MY_P="${P/lib}"
 
@@ -23,8 +23,8 @@ DOCS="README"
 
 src_prepare() {
 	# conditionally remove tests
-	if use test; then
-		sed -i -e 's: tests::g' Makefile*
+	if ! use test; then
+		sed -i -e 's: tests::g' Makefile* || die
 	fi
 }
 
