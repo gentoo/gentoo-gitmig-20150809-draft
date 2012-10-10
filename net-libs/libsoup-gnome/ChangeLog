@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/libsoup-gnome
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/ChangeLog,v 1.77 2012/10/07 00:42:23 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/ChangeLog,v 1.78 2012/10/10 03:18:31 tetromino Exp $
+
+  10 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -files/libsoup-gnome-2.31.92-system-lib.patch,
+  -files/libsoup-gnome-2.34.1-system-lib.patch, -libsoup-gnome-2.34.3.ebuild,
+  libsoup-gnome-2.36.1.ebuild, -libsoup-gnome-2.38.0.ebuild,
+  libsoup-gnome-2.38.1.ebuild:
+  Fix USE=introspection dependency (bug #437762, thanks to Vicente Olivert
+  Riera). Drop useless USE=doc flag. Update license. Drop old.
 
   07 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
   libsoup-gnome-2.38.1.ebuild:
