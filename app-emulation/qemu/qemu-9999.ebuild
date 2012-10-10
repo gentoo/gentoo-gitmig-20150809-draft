@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.22 2012/10/09 20:40:53 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.23 2012/10/10 19:20:53 vapier Exp $
 
 EAPI="4"
 
@@ -63,54 +63,52 @@ REQUIRED_USE="${REQUIRED_USE}
 	virtfs? ( xattr )"
 
 # Yep, you need both libcap and libcap-ng since virtfs only uses libcap.
-RDEPEND="
+LIB_DEPEND=">=dev-libs/glib-2.0[static-libs(+)]
+	media-libs/libpng[static-libs(+)]
+	sys-apps/pciutils[static-libs(+)]
+	sys-libs/zlib[static-libs(+)]
+	virtual/jpeg[static-libs(+)]
+	aio? ( dev-libs/libaio[static-libs(+)] )
+	caps? ( sys-libs/libcap-ng[static-libs(+)] )
+	curl? ( >=net-misc/curl-7.15.4[static-libs(+)] )
+	fdt? ( >=sys-apps/dtc-1.2.0[static-libs(+)] )
+	kernel_linux? ( >=sys-apps/util-linux-2.16.0[static-libs(+)] )
+	ncurses? ( sys-libs/ncurses[static-libs(+)] )
+	rbd? ( sys-cluster/ceph[static-libs(+)] )
+	sasl? ( dev-libs/cyrus-sasl[static-libs(+)] )
+	sdl? ( >=media-libs/libsdl-1.2.11[static-libs(+)] )
+	spice? ( >=app-emulation/spice-0.9.0[static-libs(+)] )
+	tls? ( net-libs/gnutls[static-libs(+)] )
+	vde? ( net-misc/vde[static-libs(+)] )
+	xattr? ( sys-apps/attr[static-libs(+)] )
+	xfs? ( sys-fs/xfsprogs[static-libs(+)] )"
+RDEPEND="!static? ( ${LIB_DEPEND//\[static-libs(+)]} )
 	!app-emulation/kqemu
 	!app-emulation/qemu
 	!<app-emulation/qemu-1.0
-	>=dev-libs/glib-2.0
-	media-libs/libpng
-	sys-apps/pciutils
 	sys-firmware/ipxe
 	>=sys-firmware/seabios-1.7.0
 	sys-firmware/sgabios
 	sys-firmware/vgabios
-	virtual/jpeg
-	aio? ( dev-libs/libaio )
 	alsa? ( >=media-libs/alsa-lib-1.0.13 )
 	bluetooth? ( net-wireless/bluez )
 	brltty? ( app-accessibility/brltty )
-	caps? ( sys-libs/libcap-ng )
-	curl? ( >=net-misc/curl-7.15.4 )
-	fdt? ( >=sys-apps/dtc-1.2.0 )
-	kernel_linux? ( >=sys-apps/util-linux-2.16.0 )
-	ncurses? ( sys-libs/ncurses )
 	opengl? ( virtual/opengl )
 	pulseaudio? ( media-sound/pulseaudio )
 	python? ( =dev-lang/python-2*[ncurses] )
-	rbd? ( sys-cluster/ceph )
-	sasl? ( dev-libs/cyrus-sasl )
-	sdl? ( static? ( >=media-libs/libsdl-1.2.11[static-libs,X] )
-		!static? ( >=media-libs/libsdl-1.2.11[X] ) )
-	static? ( sys-libs/zlib[static-libs(+)] )
-	!static? ( sys-libs/zlib )
+	sdl? ( media-libs/libsdl[X] )
 	smartcard? ( dev-libs/nss )
-	spice? ( >=app-emulation/spice-protocol-0.8.1
-			static? ( >=app-emulation/spice-0.9.0[static-libs] )
-			!static? ( >=app-emulation/spice-0.9.0 )
-	)
+	spice? ( >=app-emulation/spice-protocol-0.8.1 )
 	systemtap? ( dev-util/systemtap )
-	tls? ( net-libs/gnutls )
 	usbredir? ( sys-apps/usbredir )
-	vde? ( net-misc/vde )
 	virtfs? ( sys-libs/libcap )
-	xattr? ( sys-apps/attr )
-	xen? ( app-emulation/xen-tools )
-	xfs? ( sys-fs/xfsprogs )"
+	xen? ( app-emulation/xen-tools )"
 
 DEPEND="${RDEPEND}
 	app-text/texi2html
 	virtual/pkgconfig
-	kernel_linux? ( >=sys-kernel/linux-headers-2.6.35 )"
+	kernel_linux? ( >=sys-kernel/linux-headers-2.6.35 )
+	static? ( ${LIB_DEPEND} )"
 
 STRIP_MASK="/usr/share/qemu/palcode-clipper"
 
