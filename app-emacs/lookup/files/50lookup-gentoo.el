@@ -1,6 +1,3 @@
-
-;;; lookup site-lisp configuration
-
 (add-to-list 'load-path "@SITELISP@")
 (autoload 'lookup "lookup" nil t)
 (autoload 'lookup-region "lookup" nil t)

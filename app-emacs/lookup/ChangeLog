@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/lookup
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/lookup/ChangeLog,v 1.16 2007/12/25 16:41:51 phreak Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/lookup/ChangeLog,v 1.17 2012/10/10 20:54:18 ulm Exp $
+
+  10 Oct 2012; Ulrich Müller <ulm@gentoo.org> +files/50lookup-gentoo.el,
+  -files/51lookup-gentoo.el, lookup-1.4.1.ebuild,
+  +files/lookup-1.4.1-garbage-char.patch:
+  Fix compilation with Emacs 24, thanks to Naohiro Aota in bug 425270.
+  Update ebuild for EAPI 4.
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing usata from metadata.xml as per #22931.
