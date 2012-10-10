@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkate/libkate-0.4.1.ebuild,v 1.4 2012/10/10 03:11:40 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkate/libkate-0.4.1.ebuild,v 1.5 2012/10/10 04:01:30 zerochaos Exp $
 
 EAPI="4"
 PYTHON_DEPEND="wxwidgets? 2"
@@ -33,7 +33,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	python_clean_py-compile_files
+	use wxwidgets && python_clean_py-compile_files
 }
 
 src_configure() {
@@ -44,19 +44,13 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS ChangeLog README
-	if use wxwidgets; then
-		python_convert_shebangs -r 2 "${D}"
-	fi
+	use wxwidgets && python_convert_shebangs -r 2 "${D}"
 }
 
 pkg_postinst() {
-	if use wxwidgets; then
-		python_mod_optimize kdj
-	fi
+	use wxwidgets && python_mod_optimize kdj
 }
 
 pkg_postrm() {
-	if use wxwidgets; then
-		python_mod_cleanup kdj
-	fi
+	use wxwidgets && python_mod_cleanup kdj
 }
