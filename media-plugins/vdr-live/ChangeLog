@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/vdr-live
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/ChangeLog,v 1.36 2012/06/10 14:24:54 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/ChangeLog,v 1.37 2012/10/10 19:01:10 idl0r Exp $
+
+*vdr-live-0.2.0_p20120325-r1 (10 Oct 2012)
+
+  10 Oct 2012; Christian Ruppert <idl0r@gentoo.org>
+  -vdr-live-0.2.0_p20120325.ebuild, +vdr-live-0.2.0_p20120325-r1.ebuild,
+  files/confd-0.2:
+  Workaround for recent tntnet versions,
+  http://projects.vdr-developer.org/issues/1066
 
   10 Jun 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-live-0.2.0_p20120325.ebuild:

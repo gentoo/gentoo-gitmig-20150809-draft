@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/vdr-live-0.2.0_p20120325.ebuild,v 1.5 2012/06/10 14:24:54 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/vdr-live-0.2.0_p20120325-r1.ebuild,v 1.1 2012/10/10 19:01:10 idl0r Exp $
 
 EAPI="4"
 
@@ -23,8 +23,6 @@ RDEPEND="${DEPEND}"
 
 VDR_CONFD_FILE="${FILESDIR}/confd-0.2"
 VDR_RCADDON_FILE="${FILESDIR}/rc-addon-0.2.sh"
-
-S="${WORKDIR}/${P}"
 
 KEEP_I18NOBJECT="yes"
 
