@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.542 2012/10/06 21:17:44 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.543 2012/10/10 07:26:34 tetromino Exp $
+
+  10 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  glib-2.32.4-r1.ebuild, glib-2.34.0.ebuild:
+  Drop useless USE=doc, it only regenerated documentation.
 
   06 Oct 2012; Anthony G. Basile <blueness@gentoo.org> glib-2.32.4-r1.ebuild:
   stable ppc ppc64, bug #427544
