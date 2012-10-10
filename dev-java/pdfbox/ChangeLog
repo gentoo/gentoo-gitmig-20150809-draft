@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/pdfbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/ChangeLog,v 1.21 2012/05/12 03:43:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/ChangeLog,v 1.22 2012/10/10 08:49:42 jlec Exp $
+
+  10 Oct 2012; Justin Lecher <jlec@gentoo.org> pdfbox-0.7.3-r2.ebuild:
+  Fix SLOT for dev-java/fontbox
 
   12 May 2012; Alexis Ballier <aballier@gentoo.org> pdfbox-0.7.3-r2.ebuild:
   keyword ~amd64-fbsd
@@ -76,4 +79,3 @@
   25 Apr 2007; Vlastimil Babka <caster@gentoo.org> +metadata.xml,
   +pdfbox-0.7.3.ebuild:
   Initial ebuild, bug #161917.
-
