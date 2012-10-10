@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/xnee-3.12.ebuild,v 1.2 2012/05/05 04:53:50 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/xnee-3.14.ebuild,v 1.1 2012/10/10 15:20:36 jer Exp $
 
 EAPI=4
 
@@ -41,22 +41,16 @@ DEPEND="${RDEPEND}
 RESTRICT="test"
 
 src_configure() {
-	local myconf
-
-	if use xosd; then
-		myconf="--enable-xosd --enable-verbose --enable-buffer_verbose"
-	else
-		myconf="--disable-xosd --disable-verbose --disable-buffer_verbose"
-	fi
-
 	econf \
 		$(use_enable gnome gui) \
-		--disable-gnome-applet \
 		$(use_enable static-libs static) \
-		--enable-cli \
-		--enable-lib \
+		$(use_enable xosd buffer_verbose) \
+		$(use_enable xosd verbose) \
+		$(use_enable xosd) \
+		--disable-gnome-applet \
 		--disable-static-programs \
-		${myconf}
+		--enable-cli \
+		--enable-lib
 }
 
 src_test() {
