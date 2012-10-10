@@ -1,17 +1,17 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/cogl-1.10.4.ebuild,v 1.1 2012/07/17 23:32:02 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/cogl-1.10.4.ebuild,v 1.2 2012/10/10 11:52:07 tetromino Exp $
 
 EAPI="4"
 CLUTTER_LA_PUNT="yes"
 
 # Inherit gnome2 after clutter to download sources from gnome.org
-inherit clutter gnome2 multilib virtualx
+inherit eutils clutter gnome2 multilib virtualx
 
 DESCRIPTION="A library for using 3D graphics hardware to draw pretty pictures"
 HOMEPAGE="http://www.clutter-project.org/"
 
-LICENSE="LGPL-2.1"
+LICENSE="LGPL-2.1+ FDL-1.1+"
 SLOT="1.0"
 IUSE="doc examples +introspection +opengl gles2 +pango"
 KEYWORDS="~alpha ~amd64 ~mips ~ppc ~ppc64 ~x86"
@@ -61,6 +61,12 @@ pkg_setup() {
 		--enable-deprecated
 		$(use_enable introspection)
 		$(use_enable pango cogl-pango)"
+}
+
+src_prepare() {
+	# USE=doc build failure; in 1.12.x; bug #436308
+	epatch "${FILESDIR}/${PN}-1.10.4-cogl-clipping.xml.patch"
+	gnome2_src_prepare
 }
 
 src_test() {

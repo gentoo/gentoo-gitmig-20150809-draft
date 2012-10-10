@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/cogl-1.8.2.ebuild,v 1.8 2012/07/14 13:26:07 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/cogl-1.8.2.ebuild,v 1.9 2012/10/10 11:52:07 tetromino Exp $
 
 EAPI="4"
 CLUTTER_LA_PUNT="yes"
@@ -11,7 +11,7 @@ inherit clutter gnome2 virtualx
 DESCRIPTION="A library for using 3D graphics hardware to draw pretty pictures"
 HOMEPAGE="http://www.clutter-project.org/"
 
-LICENSE="LGPL-2.1"
+LICENSE="LGPL-2.1+ FDL-1.1+"
 SLOT="1.0"
 IUSE="doc examples +introspection +pango"
 KEYWORDS="~alpha amd64 ~mips ppc ppc64 x86"
