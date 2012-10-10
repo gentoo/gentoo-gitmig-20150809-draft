@@ -1,6 +1,9 @@
 # ChangeLog for www-client/w3mmee
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3mmee/ChangeLog,v 1.23 2012/10/09 22:48:37 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3mmee/ChangeLog,v 1.24 2012/10/10 13:08:13 naota Exp $
+
+  10 Oct 2012;  <naota@gentoo.org> -w3mmee-0.3.2_p24-r6.ebuild:
+  Drop old stable. build failure. #426682
 
   09 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
   w3mmee-0.3.2_p24-r7.ebuild:
