@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Apache-SizeLimit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-SizeLimit/ChangeLog,v 1.15 2012/09/18 14:39:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-SizeLimit/ChangeLog,v 1.16 2012/10/10 14:16:14 ranger Exp $
+
+  10 Oct 2012; Brent Baude <ranger@gentoo.org> Apache-SizeLimit-0.960.0.ebuild:
+  Marking Apache-SizeLimit-0.960.0 ppc for bug 432610
 
   18 Sep 2012; Jeroen Roovers <jer@gentoo.org> Apache-SizeLimit-0.960.0.ebuild:
   Stable for HPPA (bug #432610).
