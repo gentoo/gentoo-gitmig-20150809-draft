@@ -1,6 +1,14 @@
 # ChangeLog for net-dns/bind-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.225 2012/09/12 18:18:10 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.226 2012/10/10 20:18:25 idl0r Exp $
+
+*bind-tools-9.9.2 (10 Oct 2012)
+*bind-tools-9.9.1_p4 (10 Oct 2012)
+
+  10 Oct 2012; Christian Ruppert <idl0r@gentoo.org>
+  -bind-tools-9.9.1_p3.ebuild, +bind-tools-9.9.1_p4.ebuild,
+  +bind-tools-9.9.2.ebuild:
+  Version bumps.
 
 *bind-tools-9.9.1_p3 (12 Sep 2012)
 
