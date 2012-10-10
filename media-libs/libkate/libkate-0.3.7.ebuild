@@ -1,8 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkate/libkate-0.3.7.ebuild,v 1.16 2012/05/05 08:02:38 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkate/libkate-0.3.7.ebuild,v 1.17 2012/10/10 03:11:40 zerochaos Exp $
 
-inherit eutils
+EAPI="4"
+PYTHON_DEPEND="wxwidgets? 2"
+
+inherit eutils python
 
 DESCRIPTION="Codec for karaoke and text encapsulation for Ogg"
 HOMEPAGE="http://code.google.com/p/libkate/"
@@ -16,7 +19,6 @@ IUSE="doc wxwidgets"
 COMMON_DEPEND="media-libs/libogg
 	media-libs/libpng"
 DEPEND="${COMMON_DEPEND}
-	wxwidgets? ( dev-lang/python )
 	virtual/pkgconfig
 	sys-devel/flex
 	sys-devel/bison
@@ -24,19 +26,39 @@ DEPEND="${COMMON_DEPEND}
 RDEPEND="${COMMON_DEPEND}
 	wxwidgets? ( =dev-python/wxpython-2.8* media-libs/liboggz )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+pkg_setup() {
+	if use wxwidgets; then
+		python_set_active_version 2
+		python_pkg_setup
+	fi
+}
+
+src_prepare() {
+	python_clean_py-compile_files
 	epatch "${FILESDIR}"/${P}-libpng14.patch
 }
 
-src_compile() {
+src_configure() {
 	use wxwidgets || sed -i -e "s/HAVE_PYTHON=yes/HAVE_PYTHON=no/" configure
 	econf $(use_enable doc) --docdir=/usr/share/doc/${PF}
-	emake || die "emake failed"
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS ChangeLog README
+	if use wxwidgets; then
+		python_convert_shebangs -r 2 "${D}"
+	fi
+}
+
+pkg_postinst() {
+	if use wxwidgets; then
+		python_mod_optimize kdj
+	fi
+}
+
+pkg_postrm() {
+	if use wxwidgets; then
+		python_mod_cleanup kdj
+	fi
 }
