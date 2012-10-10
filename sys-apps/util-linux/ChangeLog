@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.404 2012/10/10 04:30:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.405 2012/10/10 17:32:45 vapier Exp $
 
 *util-linux-2.22-r1 (10 Oct 2012)
 
@@ -8,7 +8,7 @@
   +files/util-linux-2.22-md5-aliasing.patch,
   +files/util-linux-2.22-sfdisk-aliasing.patch,
   +files/util-linux-2.22-umount-user.patch, +util-linux-2.22-r1.ebuild:
-  Add fix from upstream for umount with user= options #437108 by Stefan Reimer.
+  Add fix from upstream for umount with user= options #435540 by Stefan Reimer.
 
   03 Oct 2012; Brent Baude <ranger@gentoo.org> util-linux-2.21.2.ebuild:
   Marking util-linux-2.21.2 ppc for bug 434334
