@@ -1,0 +1,38 @@
+From 24453f0bf4b96c19873f0aed91dbec04f349dd7c Mon Sep 17 00:00:00 2001
+From: Mike Frysinger <vapier@gentoo.org>
+Date: Wed, 10 Oct 2012 00:25:11 -0400
+Subject: [PATCH] sfdisk: fix aliasing warnings
+
+Should compile down to the same code.
+
+Signed-off-by: Mike Frysinger <vapier@gentoo.org>
+---
+ fdisks/sfdisk.c | 10 ++++++----
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+
+diff --git a/fdisks/sfdisk.c b/fdisks/sfdisk.c
+index 3450f52..e59d52a 100644
+--- a/fdisks/sfdisk.c
++++ b/fdisks/sfdisk.c
+@@ -1561,12 +1561,14 @@ msdos_partition(char *dev, int fd, unsigned long start, struct disk_desc *z) {
+ 	return 0;
+     }
+ 
+-    unsigned int sig = *(unsigned short *)(s->data + 2);
+-    if (sig <= 0x1ae
+-	&& *(unsigned short *)(s->data + sig) == 0x55aa
+-	&& (1 & *(unsigned char *)(s->data + sig + 2))) {
++    unsigned short sig, magic;
++    memcpy(&sig, s->data + 2, sizeof(sig));
++    if (sig <= 0x1ae) {
++	memcpy(&magic, s->data + sig, sizeof(magic));
++	if (magic == 0x55aa && (1 & *(unsigned char *)(s->data + sig + 2))) {
+ 	    warnx(_("DM6 signature found - giving up\n"));
+ 	    return 0;
++	}
+     }
+ 
+     for (pno = 0; pno < 4; pno++, cp += sizeof(struct partition)) {
+-- 
+1.7.12
+

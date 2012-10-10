@@ -1,0 +1,63 @@
+https://bugs.gentoo.org/435540
+
+From 4be900c51d371a7a41495e4eca2d29fc77c20c7c Mon Sep 17 00:00:00 2001
+From: Karel Zak <kzak@redhat.com>
+Date: Wed, 12 Sep 2012 14:27:12 +0200
+Subject: [PATCH] libmount: don't remove user= when executed by root
+
+The original mount(8) allows to store arbitrary user= option to mtab
+file if called by root user. For example:
+
+  # mount -f foo /bar -t xxx -o rw,user=kzak
+
+the new mount removes the 'user=' and 'users' options at all for root
+user. This is regression. The original functionality is necessary by
+'sshfs' where fuse writes to mtab file by mount(8).
+
+Reported-by: Juergen Daubert <jue@jue.li> (and 'horrorStruck' on IRC)
+Signed-off-by: Karel Zak <kzak@redhat.com>
+---
+ libmount/src/context_mount.c | 12 ++++--------
+ 1 file changed, 4 insertions(+), 8 deletions(-)
+
+diff --git a/libmount/src/context_mount.c b/libmount/src/context_mount.c
+index fdb459c..c665a05 100644
+--- a/libmount/src/context_mount.c
++++ b/libmount/src/context_mount.c
+@@ -58,12 +58,10 @@ static int fix_optstr(struct libmnt_context *cxt)
+ 	 * but exception is command line for /sbin/mount.<type> helpers. Let's
+ 	 * save the original user=<name> to call the helpers with unchanged
+ 	 * "user" setting.
+-	 *
+-	 * Don't check for MNT_MS_USER in cxt->user_mountflags, the flag maybe
+-	 * removed by evaluate_permissions().
+ 	 */
+-	if (!mnt_optstr_get_option(fs->user_optstr, "user", &val, &valsz)) {
+-		if (val) {
++	if (cxt->user_mountflags & MNT_MS_USER) {
++		if (!mnt_optstr_get_option(fs->user_optstr,
++					"user", &val, &valsz) && val) {
+ 			cxt->orig_user = strndup(val, valsz);
+ 			if (!cxt->orig_user) {
+ 				rc = -ENOMEM;
+@@ -157,7 +155,7 @@ static int fix_optstr(struct libmnt_context *cxt)
+ 			goto done;
+ 	}
+ 
+-	if (!rc && cxt->user_mountflags & MNT_MS_USER)
++	if (!rc && cxt->restricted && (cxt->user_mountflags & MNT_MS_USER))
+ 		rc = mnt_optstr_fix_user(&fs->user_optstr);
+ 
+ 	/* refresh merged optstr */
+@@ -256,8 +254,6 @@ static int evaluate_permissions(struct libmnt_context *cxt)
+ 		 */
+ 		cxt->user_mountflags &= ~MNT_MS_OWNER;
+ 		cxt->user_mountflags &= ~MNT_MS_GROUP;
+-		cxt->user_mountflags &= ~MNT_MS_USER;
+-		cxt->user_mountflags &= ~MNT_MS_USERS;
+ 	} else {
+ 		/*
+ 		 * user mount
+-- 
+1.7.12
+
