@@ -1,10 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/mpqc-2.3.1-r3.ebuild,v 1.2 2012/10/10 15:21:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/mpqc-2.3.1-r3.ebuild,v 1.3 2012/10/10 16:43:40 jlec Exp $
 
 EAPI=4
 
-inherit autotools eutils toolchain-funcs
+AUTOTOOLS_AUTORECONF=yes
+
+inherit autotools-utils toolchain-funcs
 
 DESCRIPTION="The Massively Parallel Quantum Chemistry Program"
 HOMEPAGE="http://www.mpqc.org/"
@@ -13,7 +15,7 @@ SRC_URI="mirror://sourceforge/mpqc/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ppc ~ppc64 ~x86"
-IUSE="doc mpi threads tk"
+IUSE="doc mpi threads static-libs tk"
 
 RDEPEND="
 	virtual/blas
@@ -28,12 +30,18 @@ DEPEND="${RDEPEND}
 		app-doc/doxygen
 		media-gfx/graphviz )"
 
-src_prepare() {
-	epatch \
-		"${FILESDIR}"/${P}-as-needed.patch \
-		"${FILESDIR}"/${P}-respect-ldflags.patch \
-		"${FILESDIR}"/${P}-test-failure-hack.patch \
+PATCHES=(
+		"${FILESDIR}"/${P}-as-needed.patch
+		"${FILESDIR}"/${P}-respect-ldflags.patch
+		"${FILESDIR}"/${P}-test-failure-hack.patch
 		"${FILESDIR}"/${P}-blas.patch
+	)
+
+AUTOTOOLS_IN_SOURCE_BUILD=1
+
+DOCS=(CHANGES CITATION README)
+
+src_prepare() {
 	# do not install tkmolrender if not requested
 	if ! use tk; then
 		sed \
@@ -43,7 +51,7 @@ src_prepare() {
 			-i "./src/bin/molrender/Makefile" \
 			|| die "failed to disable tkmolrender"
 	fi
-	eautoreconf
+	autotools-utils_src_prepare
 }
 
 src_configure() {
@@ -52,12 +60,11 @@ src_configure() {
 		export CC=mpicc
 		export CXX=mpicxx
 	fi
-	econf \
-		$(use_enable threads) \
-		$(use_enable mpi parallel) \
-		--enable-shared \
-		${myconf}
+	local myeconfargs=(
+		$(use_enable threads)
+		$(use_enable mpi parallel) )
 
+	autotools-utils_src_configure
 	sed \
 		-e "s:^CFLAGS =.*$:CFLAGS=${CFLAGS}:" \
 		-e "s:^FFLAGS =.*$:FFLAGS=${FFLAGS:- -O2}:" \
@@ -66,7 +73,7 @@ src_configure() {
 }
 
 src_test() {
-	cd "${S}"/src/bin/mpqc/validate
+	cd "${AUTOTOOLS_BUILD_DIR}"/src/bin/mpqc/validate
 
 	# we'll only run the small test set, since the
 	# medium and large ones take >10h and >24h on my
@@ -75,13 +82,11 @@ src_test() {
 }
 
 src_install() {
-	emake installroot="${D}" install install_devel install_inc
-
-	dodoc CHANGES CITATION README
+	autotools-utils_src_install installroot="${D}" install install_devel install_inc
 
 	# make extended docs
 	if use doc; then
-		cd "${S}"/doc
+		cd "${AUTOTOOLS_BUILD_DIR}"/doc
 		emake -j1 all
 		doman man/man1/* man/man3/*
 		dohtml -r html
