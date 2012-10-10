@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ifenslave/ifenslave-1.1.0-r6.ebuild,v 1.2 2012/09/03 21:32:03 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ifenslave/ifenslave-1.1.0-r6.ebuild,v 1.3 2012/10/10 15:43:44 ranger Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ SRC_URI="${DEBIANPKG_BASE}/${DEBIANPKG_TARBALL}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND=""
