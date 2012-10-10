@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tesseract
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.32 2012/10/09 18:06:10 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.33 2012/10/10 12:07:38 hasufell Exp $
+
+  10 Oct 2012; Julian Ospald <hasufell@gentoo.org> tesseract-3.01.ebuild:
+  fix language file installation wrt #437776
 
   09 Oct 2012; Thomas Kahle <tomka@gentoo.org> tesseract-3.01.ebuild:
   Fix building with gcc-4.7 (Bug 437742)

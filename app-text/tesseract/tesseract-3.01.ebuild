@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/tesseract-3.01.ebuild,v 1.2 2012/10/09 18:06:10 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/tesseract-3.01.ebuild,v 1.3 2012/10/10 12:07:38 hasufell Exp $
 
 EAPI=4
 
@@ -100,6 +100,6 @@ src_install() {
 
 	# install language files
 	insinto /usr/share/tessdata
-	doins "${WORKDIR}"/*.traineddata
+	find "${WORKDIR}" -maxdepth 1 -type f -name "*.traineddata" -exec doins '{}' +
 	doins "${WORKDIR}"/"${MY_PN}"/tessdata/*
 }
