@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/facile/facile-1.1.ebuild,v 1.18 2011/01/03 21:12:19 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/facile/facile-1.1.ebuild,v 1.19 2012/10/10 13:04:33 aballier Exp $
 
 EAPI="2"
 
@@ -23,6 +23,7 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	# Fix building on FreeBSD
 	epatch "${FILESDIR}/${P}"-make.patch
+	has_version '>=dev-lang/ocaml-4' && epatch "${FILESDIR}/${P}-ocaml4.patch"
 	# Disable building native code objects if we dont have/want ocamlopt
 	if ! use ocamlopt; then
 		sed -i -e 's/\.opt//' src/Makefile || die "failed to change native code compiler to bytecode ones"
