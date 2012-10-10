@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.12.9-r1.ebuild,v 1.3 2012/10/05 18:02:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.12.9-r1.ebuild,v 1.4 2012/10/10 15:24:33 ranger Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/hplip/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ppc ppc64 ~x86"
+KEYWORDS="amd64 ~arm ppc ppc64 ~x86"
 
 # zeroconf does not work properly with >=cups-1.4.
 # Thus support for it is also disabled in hplip.
