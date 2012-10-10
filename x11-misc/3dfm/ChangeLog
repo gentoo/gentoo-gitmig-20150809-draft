@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/3dfm
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/3dfm/ChangeLog,v 1.8 2010/09/16 17:36:37 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/3dfm/ChangeLog,v 1.9 2012/10/10 12:09:56 pinkbyte Exp $
+
+  10 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> 3dfm-1.0.ebuild:
+  QA: add missing RDEPEND and 'die' statements
 
   16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> 3dfm-1.0.ebuild:
   virtual/glut -> media-libs/glut
