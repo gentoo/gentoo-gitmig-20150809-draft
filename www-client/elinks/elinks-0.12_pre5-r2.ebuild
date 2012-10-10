@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.12_pre5-r2.ebuild,v 1.7 2012/10/06 03:25:54 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.12_pre5-r2.ebuild,v 1.8 2012/10/10 14:45:50 axs Exp $
 
 EAPI=4
 inherit eutils autotools flag-o-matic
@@ -54,18 +54,31 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.11.5-makefile.patch
 	epatch "${FILESDIR}"/${P}-compilation-fix.patch
 
-	if use javascript && has_version ">=dev-lang/spidermonkey-1.8"; then
-		if has_version ">=dev-lang/spidermonkey-1.8.5"; then
-			epatch "${WORKDIR}"/patches/${P}-js185-1-heartbeat.patch
-			epatch "${WORKDIR}"/patches/${P}-js185-2-up.patch
-			epatch "${WORKDIR}"/patches/${P}-js185-3-histback.patch
-			epatch "${FILESDIR}"/${P}-sm185-jsval-fixes.patch
-			# expand lib check to also match mozjs187
-			if has_version ">=dev-lang/spidermonkey-1.8.7"; then
-				sed -i 's:mozjs185:mozjs187 mozjs185:' configure.in
+	if use javascript ; then
+		if has_version ">=dev-lang/spidermonkey-1.8"; then
+			if has_version ">=dev-lang/spidermonkey-1.8.5"; then
+				epatch "${WORKDIR}"/patches/${P}-js185-1-heartbeat.patch
+				epatch "${WORKDIR}"/patches/${P}-js185-2-up.patch
+				epatch "${WORKDIR}"/patches/${P}-js185-3-histback.patch
+				epatch "${FILESDIR}"/${P}-sm185-jsval-fixes.patch
+				if has_version ">=dev-lang/spidermonkey-1.8.7"; then
+					# fix lib order in configure check and add mozjs187
+					# (these seds are necessary so that @preserved-libs copies are not used)
+					sed -i -e 's:for spidermonkeylib in js .*$:for spidermonkeylib in mozjs187 mozjs185 mozjs js smjs; do:' \
+						configure.in || die
+				else
+					# fix lib order in configure check
+					# (these seds are necessary so that @preserved-libs copies are not used)
+					sed -i -e 's:for spidermonkeylib in js .*$:for spidermonkeylib in mozjs185 mozjs js smjs; do:' \
+						configure.in || die
+				fi
+			else
+				# fix lib order in configure check
+				# (these seds are necessary so that @preserved-libs copies are not used)
+				epatch "${FILESDIR}"/${MY_P}-spidermonkey-callback.patch
+				sed -i -e 's:for spidermonkeylib in js .*$:for spidermonkeylib in mozjs js smjs; do:' \
+					configure.in || die
 			fi
-		else
-			epatch "${FILESDIR}"/${MY_P}-spidermonkey-callback.patch
 		fi
 	fi
 	epatch "${FILESDIR}"/${P}-ruby-1.9.patch
