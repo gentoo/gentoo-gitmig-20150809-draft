@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.4.2.ebuild,v 1.1 2012/07/21 17:56:09 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.4.2.ebuild,v 1.2 2012/10/10 00:23:54 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -71,7 +71,7 @@ COMMON_DEPEND=">=app-crypt/gcr-3.3.90[introspection]
 #    user switching with gdm-3.1.x)
 # 6. caribou needed for on-screen keyboard
 # 7. xdg-utils needed for xdg-open, used by extension tool
-# 8. gnome-icon-theme-symbolic neeed for various icons
+# 8. gnome-icon-theme-symbolic and dejavu font neeed for various icons & arrows
 # 9. mobile-broadband-provider-info, timezone-data for shell-mobile-providers.c
 RDEPEND="${COMMON_DEPEND}
 	>=sys-auth/polkit-0.101[introspection]
@@ -91,6 +91,7 @@ RDEPEND="${COMMON_DEPEND}
 
 	x11-misc/xdg-utils
 
+	media-fonts/dejavu
 	x11-themes/gnome-icon-theme-symbolic
 
 	networkmanager? (
