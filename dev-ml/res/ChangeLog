@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/res
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/res/ChangeLog,v 1.13 2009/09/20 13:33:00 aballier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/res/ChangeLog,v 1.14 2012/10/10 11:50:44 aballier Exp $
+
+*res-4.0.2 (10 Oct 2012)
+
+  10 Oct 2012; Alexis Ballier <aballier@gentoo.org> +res-4.0.2.ebuild:
+  version bump
 
   20 Sep 2009; Alexis Ballier <aballier@gentoo.org> -res-2.2.5.ebuild:
   remove old
