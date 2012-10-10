@@ -1,0 +1,9 @@
+# ChangeLog for dev-ruby/kissfft
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/kissfft/ChangeLog,v 1.1 2012/10/10 17:45:11 zerochaos Exp $
+
+*kissfft-0.0.1 (10 Oct 2012)
+
+  10 Oct 2012; Rick Farina <zerochaos@gentoo.org> +kissfft-0.0.1.ebuild,
+  +metadata.xml:
+  initial import of kissfft for ruby
