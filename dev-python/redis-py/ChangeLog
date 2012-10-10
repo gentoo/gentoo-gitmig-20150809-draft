@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/redis-py
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/redis-py/ChangeLog,v 1.25 2012/10/10 07:31:31 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/redis-py/ChangeLog,v 1.26 2012/10/10 07:33:06 djc Exp $
+
+  10 Oct 2012; Dirkjan Ochtman <djc@gentoo.org> -redis-py-2.4.10.ebuild,
+  -redis-py-2.4.11.ebuild:
+  Remove old versions.
 
 *redis-py-2.7.1 (10 Oct 2012)
 
