@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7022 2012/10/10 02:51:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7023 2012/10/10 11:26:45 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  arch/mips/package.use.mask, arch/powerpc/package.use.mask:
+  Mask USE=sbsms on media-sound/audacity for mips ppc ppc64, bug #436020
 
   10 Oct 2012; Patrick Lauer <patrick@gentoo.org> package.mask:
   Fixing mono mask
