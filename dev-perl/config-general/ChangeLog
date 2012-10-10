@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/config-general
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/config-general/ChangeLog,v 1.78 2012/07/24 18:42:23 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/config-general/ChangeLog,v 1.79 2012/10/10 15:42:56 ranger Exp $
+
+  10 Oct 2012; Brent Baude <ranger@gentoo.org> config-general-2.510.0.ebuild:
+  Marking config-general-2.510.0 ppc for bug 433255
 
 *config-general-2.510.0 (24 Jul 2012)
 
