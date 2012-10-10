@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7021 2012/10/08 19:26:23 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7022 2012/10/10 02:51:28 patrick Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Oct 2012; Patrick Lauer <patrick@gentoo.org> package.mask:
+  Fixing mono mask
 
   08 Oct 2012; Robin H. Johnson <robbat2@gentoo.org> package.mask:
   Mask db-5.3 until ready.
