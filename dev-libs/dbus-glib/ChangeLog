@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/dbus-glib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/ChangeLog,v 1.107 2012/07/25 21:09:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/ChangeLog,v 1.108 2012/10/10 10:22:23 tetromino Exp $
+
+*dbus-glib-0.100-r1 (10 Oct 2012)
+
+  10 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +dbus-glib-0.100-r1.ebuild, +files/dbus-glib-0.100-dbus-glib-sections.txt:
+  Fix broken API docs; prevents build failure with libxslt-1.1.27 (bug #436454,
+  thanks to Andrew Savchenko). Install API docs in /usr/share/gtk-doc to allow
+  links from other packages' documentation files, and for compatibility with
+  standard tools like dev-util/devhelp (bug #404965).
 
   25 Jul 2012; Markus Meier <maekke@gentoo.org> dbus-glib-0.100.ebuild:
   arm stable, bug #416725
