@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.15-r1.ebuild,v 1.1 2012/09/14 17:58:26 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.15-r1.ebuild,v 1.2 2012/10/10 12:18:24 dev-zero Exp $
 
 EAPI="4"
 
@@ -23,6 +23,7 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	virtual/os-headers
+	!>=sys-kernel/linux-headers-3.5
 "
 
 src_prepare() {
