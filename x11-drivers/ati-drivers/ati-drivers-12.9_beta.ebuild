@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-12.9_beta.ebuild,v 1.1 2012/09/30 12:15:05 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-12.9_beta.ebuild,v 1.2 2012/10/10 16:58:55 zerochaos Exp $
 
 EAPI=4
 
@@ -233,8 +233,9 @@ pkg_pretend() {
 	# workaround until bug 365543 is solved
 	if use modules; then
 		linux-info_pkg_setup
-		require_configured_kernel
-		_check_kernel_config
+		if linux_config_exists; then
+			_check_kernel_config
+		fi
 	fi
 }
 

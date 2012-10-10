@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.297 2012/09/30 12:15:05 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.298 2012/10/10 16:58:55 zerochaos Exp $
+
+  10 Oct 2012; Rick Farina <zerochaos@gentoo.org> ati-drivers-12.2.ebuild,
+  ati-drivers-12.4.ebuild, ati-drivers-12.6.ebuild,
+  ati-drivers-12.6_beta_pre897.ebuild, ati-drivers-12.8.ebuild,
+  ati-drivers-12.9_beta.ebuild:
+  remove require_configured_kernel from ebuild to allow build in catalyst during
+  livecd-stage1
 
 *ati-drivers-12.9_beta (30 Sep 2012)
 
