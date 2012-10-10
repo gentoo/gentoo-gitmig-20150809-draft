@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.1.2.ebuild,v 1.4 2012/10/10 19:24:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.1.2.ebuild,v 1.5 2012/10/10 19:29:27 vapier Exp $
 
 EAPI="4"
 
@@ -28,10 +28,10 @@ HOMEPAGE="http://www.linux-kvm.org"
 
 LICENSE="GPL-2 LGPL-2 BSD-2"
 SLOT="0"
-IUSE="+aio alsa bluetooth brltty +caps +curl debug doc fdt kernel_linux \
-kernel_FreeBSD mixemu ncurses opengl pulseaudio python rbd sasl sdl \
-smartcard spice static systemtap tci tls usbredir +uuid vde +vhost-net \
-virtfs xattr xen xfs"
+IUSE="+aio alsa bluetooth brltty +caps +curl debug doc fdt +jpeg kernel_linux \
+kernel_FreeBSD mixemu ncurses opengl +png pulseaudio python rbd sasl sdl \
+smartcard spice static systemtap tci +threads tls usbredir +uuid vde +vhost-net \
+virtfs +vnc xattr xen xfs"
 
 COMMON_TARGETS="i386 x86_64 alpha arm cris m68k microblaze microblazeel mips mipsel ppc ppc64 sh4 sh4eb sparc sparc64 s390x"
 IUSE_SOFTMMU_TARGETS="${COMMON_TARGETS} lm32 mips64 mips64el ppcemb xtensa xtensaeb"
@@ -58,15 +58,15 @@ REQUIRED_USE="${REQUIRED_USE}
 
 # Yep, you need both libcap and libcap-ng since virtfs only uses libcap.
 LIB_DEPEND=">=dev-libs/glib-2.0[static-libs(+)]
-	media-libs/libpng[static-libs(+)]
 	sys-apps/pciutils[static-libs(+)]
 	sys-libs/zlib[static-libs(+)]
-	virtual/jpeg[static-libs(+)]
 	aio? ( dev-libs/libaio[static-libs(+)] )
 	caps? ( sys-libs/libcap-ng[static-libs(+)] )
 	curl? ( >=net-misc/curl-7.15.4[static-libs(+)] )
 	fdt? ( >=sys-apps/dtc-1.2.0[static-libs(+)] )
+	jpeg? ( virtual/jpeg[static-libs(+)] )
 	ncurses? ( sys-libs/ncurses[static-libs(+)] )
+	png? ( media-libs/libpng[static-libs(+)] )
 	rbd? ( sys-cluster/ceph[static-libs(+)] )
 	sasl? ( dev-libs/cyrus-sasl[static-libs(+)] )
 	sdl? ( >=media-libs/libsdl-1.2.11[static-libs(+)] )
@@ -251,9 +251,6 @@ src_configure() {
 		--disable-libiscsi \
 		--disable-strip \
 		--disable-werror \
-		--enable-vnc-jpeg \
-		--enable-vnc-png \
-		--enable-vnc-thread \
 		--python=python2 \
 		$(use_enable aio linux-aio) \
 		$(use_enable bluetooth bluez) \
@@ -265,11 +262,13 @@ src_configure() {
 		$(use_enable debug debug-tcg) \
 		$(use_enable doc docs) \
 		$(use_enable fdt) \
+		$(use_enable jpeg vnc-jpeg) \
 		$(use_enable kernel_linux kvm) \
 		$(use_enable kernel_linux kvm-device-assignment) \
 		$(use_enable kernel_linux nptl) \
 		$(use_enable ncurses curses) \
 		$(use_enable opengl) \
+		$(use_enable png vnc-png) \
 		$(use_enable rbd) \
 		$(use_enable sasl vnc-sasl) \
 		$(use_enable sdl) \
@@ -277,12 +276,14 @@ src_configure() {
 		$(use_enable smartcard smartcard-nss) \
 		$(use_enable spice) \
 		$(use_enable tci tcg-interpreter) \
+		$(use_enable threads vnc-thread) \
 		$(use_enable tls vnc-tls) \
 		$(use_enable usbredir usb-redir) \
 		$(use_enable uuid) \
 		$(use_enable vde) \
 		$(use_enable vhost-net) \
 		$(use_enable virtfs) \
+		$(use_enable vnc) \
 		$(use_enable xattr attr) \
 		$(use_enable xen) \
 		$(use_enable xfs xfsctl) \
