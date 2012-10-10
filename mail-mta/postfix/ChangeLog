@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.385 2012/10/09 10:05:56 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.386 2012/10/10 15:36:34 ranger Exp $
+
+  10 Oct 2012; Brent Baude <ranger@gentoo.org> postfix-2.9.4.ebuild:
+  Marking postfix-2.9.4 ppc for bug 437602
 
 *postfix-2.10_pre20121007 (08 Oct 2012)
 
