@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/ettercap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.97 2012/10/06 08:49:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.98 2012/10/10 19:52:18 ago Exp $
+
+*ettercap-0.7.5 (10 Oct 2012)
+
+  10 Oct 2012; Agostino Sarubbo <ago@gentoo.org> +ettercap-0.7.5.ebuild:
+  version bump to 0.7.5
 
 *ettercap-0.7.5_pre20121006 (06 Oct 2012)
 
