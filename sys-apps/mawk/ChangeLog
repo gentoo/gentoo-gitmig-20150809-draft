@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/mawk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mawk/ChangeLog,v 1.25 2012/06/28 03:14:49 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mawk/ChangeLog,v 1.26 2012/10/10 21:59:04 ottxor Exp $
+
+  10 Oct 2012; Christoph Junghans <ottxor@gentoo.org>
+  mawk-1.3.4_p20120627.ebuild:
+  add support for virtual/awk (bug #426624)
 
 *mawk-1.3.4_p20120627 (28 Jun 2012)
 
@@ -99,4 +103,3 @@
 
   08 Jun 2003; Brandon Low <lostlogic@gentoo.org> mawk-1.3.3.ebuild:
   Initial import thanks to bug 20443
-

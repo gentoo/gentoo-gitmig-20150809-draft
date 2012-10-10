@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mawk/mawk-1.3.4_p20120627.ebuild,v 1.1 2012/06/28 03:14:49 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mawk/mawk-1.3.4_p20120627.ebuild,v 1.2 2012/10/10 21:59:04 ottxor Exp $
 
 EAPI="4"
 
@@ -15,6 +15,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x86-macos"
 IUSE=""
+
+RDEPEND="app-admin/eselect-awk"
+DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
@@ -31,4 +34,12 @@ src_install() {
 	exeinto /usr/share/doc/${PF}/examples
 	doexe examples/*
 	docompress -x /usr/share/doc/${PF}/examples
+}
+
+pkg_postinst() {
+	eselect awk update ifunset
+}
+
+pkg_postrm() {
+	eselect awk update ifunset
 }
