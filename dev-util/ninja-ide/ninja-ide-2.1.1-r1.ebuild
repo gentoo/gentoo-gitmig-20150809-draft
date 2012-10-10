@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja-ide/ninja-ide-2.1.1.ebuild,v 1.2 2012/10/09 21:50:55 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja-ide/ninja-ide-2.1.1-r1.ebuild,v 1.1 2012/10/10 14:37:28 hasufell Exp $
 
 # XXX: tests
 
