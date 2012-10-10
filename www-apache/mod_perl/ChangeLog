@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_perl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.101 2012/09/18 14:40:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.102 2012/10/10 14:15:02 ranger Exp $
+
+  10 Oct 2012; Brent Baude <ranger@gentoo.org> mod_perl-2.0.7.ebuild:
+  Marking mod_perl-2.0.7 ppc for bug 432610
 
   18 Sep 2012; Jeroen Roovers <jer@gentoo.org> mod_perl-2.0.7.ebuild:
   Stable for HPPA (bug #432610).
