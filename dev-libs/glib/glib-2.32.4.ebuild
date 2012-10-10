@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.32.4.ebuild,v 1.6 2012/09/27 03:16:29 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.32.4.ebuild,v 1.7 2012/10/10 07:35:08 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="utils? 2"
@@ -16,7 +16,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="LGPL-2+"
 SLOT="2"
-IUSE="debug doc fam kernel_linux selinux static-libs systemtap test utils xattr"
+IUSE="debug fam kernel_linux selinux static-libs systemtap test utils xattr"
 KEYWORDS="alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 
 RDEPEND="virtual/libiconv
@@ -31,11 +31,6 @@ RDEPEND="virtual/libiconv
 DEPEND="${RDEPEND}
 	>=sys-devel/gettext-0.11
 	>=dev-util/gtk-doc-am-1.15
-	doc? (
-		>=dev-libs/libxslt-1.0
-		>=dev-util/gdbus-codegen-${PV}
-		>=dev-util/gtk-doc-1.15
-		~app-text/docbook-xml-dtd-4.1.2 )
 	systemtap? ( >=dev-util/systemtap-1.3 )
 	test? (
 		sys-devel/gdb
@@ -67,8 +62,7 @@ src_prepare() {
 	# Fix gmodule issues on fbsd; bug #184301
 	epatch "${FILESDIR}"/${PN}-2.12.12-fbsd.patch
 
-	# need to build tests if USE=doc for bug #387385
-	if ! use test && ! use doc; then
+	if ! use test; then
 		# don't waste time building tests
 		sed 's/^\(.*\SUBDIRS .*\=.*\)tests\(.*\)$/\1\2/' -i $(find . -name Makefile.am -o -name Makefile.in) || die
 	else
@@ -148,8 +142,6 @@ src_configure() {
 	# Always use internal libpcre, bug #254659
 	econf ${myconf} \
 		$(use_enable xattr) \
-		$(use_enable doc man) \
-		$(use_enable doc gtk-doc) \
 		$(use_enable fam) \
 		$(use_enable selinux) \
 		$(use_enable static-libs static) \
