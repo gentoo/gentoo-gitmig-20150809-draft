@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.357 2012/10/01 05:57:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.358 2012/10/10 06:38:26 nativemad Exp $
+
+  10 Oct 2012; Andreas Schuerch <nativemad@gentoo.org>
+  linux-headers-3.4.ebuild:
+  x86 stable, see bug 423091
 
 *linux-headers-3.6 (01 Oct 2012)
 
