@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.1.2.ebuild,v 1.3 2012/10/10 19:20:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.1.2.ebuild,v 1.4 2012/10/10 19:24:31 vapier Exp $
 
 EAPI="4"
 
@@ -30,7 +30,7 @@ LICENSE="GPL-2 LGPL-2 BSD-2"
 SLOT="0"
 IUSE="+aio alsa bluetooth brltty +caps +curl debug doc fdt kernel_linux \
 kernel_FreeBSD mixemu ncurses opengl pulseaudio python rbd sasl sdl \
-smartcard spice static systemtap tci tls usbredir vde +vhost-net \
+smartcard spice static systemtap tci tls usbredir +uuid vde +vhost-net \
 virtfs xattr xen xfs"
 
 COMMON_TARGETS="i386 x86_64 alpha arm cris m68k microblaze microblazeel mips mipsel ppc ppc64 sh4 sh4eb sparc sparc64 s390x"
@@ -66,13 +66,13 @@ LIB_DEPEND=">=dev-libs/glib-2.0[static-libs(+)]
 	caps? ( sys-libs/libcap-ng[static-libs(+)] )
 	curl? ( >=net-misc/curl-7.15.4[static-libs(+)] )
 	fdt? ( >=sys-apps/dtc-1.2.0[static-libs(+)] )
-	kernel_linux? ( >=sys-apps/util-linux-2.16.0[static-libs(+)] )
 	ncurses? ( sys-libs/ncurses[static-libs(+)] )
 	rbd? ( sys-cluster/ceph[static-libs(+)] )
 	sasl? ( dev-libs/cyrus-sasl[static-libs(+)] )
 	sdl? ( >=media-libs/libsdl-1.2.11[static-libs(+)] )
 	spice? ( >=app-emulation/spice-0.9.0[static-libs(+)] )
 	tls? ( net-libs/gnutls[static-libs(+)] )
+	uuid? ( >=sys-apps/util-linux-2.16.0[static-libs(+)] )
 	vde? ( net-misc/vde[static-libs(+)] )
 	xattr? ( sys-apps/attr[static-libs(+)] )
 	xfs? ( sys-fs/xfsprogs[static-libs(+)] )"
@@ -242,9 +242,6 @@ src_configure() {
 	use pulseaudio && audio_opts="pa,${audio_opts}"
 	use mixemu && conf_opts="${conf_opts} --enable-mixemu"
 
-	# conditionally making UUID work on Linux only is wrong
-	# but the Gentoo/FreeBSD guys need to figure out what
-	# provides libuuid on their platform
 	# --enable-vnc-thread will go away in 1.2
 	# $(use_enable xen xen-pci-passthrough) for 1.2
 	./configure --prefix=/usr \
@@ -271,7 +268,6 @@ src_configure() {
 		$(use_enable kernel_linux kvm) \
 		$(use_enable kernel_linux kvm-device-assignment) \
 		$(use_enable kernel_linux nptl) \
-		$(use_enable kernel_linux uuid) \
 		$(use_enable ncurses curses) \
 		$(use_enable opengl) \
 		$(use_enable rbd) \
@@ -283,6 +279,7 @@ src_configure() {
 		$(use_enable tci tcg-interpreter) \
 		$(use_enable tls vnc-tls) \
 		$(use_enable usbredir usb-redir) \
+		$(use_enable uuid) \
 		$(use_enable vde) \
 		$(use_enable vhost-net) \
 		$(use_enable virtfs) \
