@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.614 2012/10/06 21:31:10 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.615 2012/10/10 07:44:20 tetromino Exp $
+
+  10 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gtk+-2.24.10-r1.ebuild, gtk+-2.24.12.ebuild, gtk+-2.24.13.ebuild,
+  gtk+-3.0.12-r1.ebuild, gtk+-3.2.4-r1.ebuild, gtk+-3.4.4.ebuild,
+  gtk+-3.6.0.ebuild:
+  Drop useless USE=doc, it only regenerated documentation. Fixes bug #436612.
 
   06 Oct 2012; Anthony G. Basile <blueness@gentoo.org> gtk+-3.4.4.ebuild:
   stable ppc ppc64, bug #427544

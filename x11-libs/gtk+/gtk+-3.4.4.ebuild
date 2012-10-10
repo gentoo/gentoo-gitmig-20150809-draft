@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.4.4.ebuild,v 1.8 2012/10/06 21:31:10 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.4.4.ebuild,v 1.9 2012/10/10 07:44:20 tetromino Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ SLOT="3"
 #  * http://mail.gnome.org/archives/gtk-devel-list/2010-November/msg00099.html
 # I tried this and got it all compiling, but the end result is unusable as it
 # horribly mixes up the backends -- grobian
-IUSE="aqua colord cups debug doc examples +introspection packagekit test vim-syntax wayland X xinerama"
+IUSE="aqua colord cups debug examples +introspection packagekit test vim-syntax wayland X xinerama"
 REQUIRED_USE="
 	|| ( aqua wayland X )
 	xinerama? ( X )"
@@ -66,9 +66,6 @@ DEPEND="${COMMON_DEPEND}
 		xinerama? ( x11-proto/xineramaproto )
 	)
 	>=dev-util/gtk-doc-am-1.11
-	doc? (
-		>=dev-util/gtk-doc-1.11
-		~app-text/docbook-xml-dtd-4.1.2 )
 	test? (
 		media-fonts/font-misc-misc
 		media-fonts/font-cursor-misc )"
@@ -136,7 +133,6 @@ src_configure() {
 	local myconf="$(use_enable aqua quartz-backend)
 		$(use_enable colord)
 		$(use_enable cups cups auto)
-		$(use_enable doc gtk-doc)
 		$(use_enable introspection)
 		$(use_enable packagekit)
 		$(use_enable wayland wayland-backend)
