@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/mpqc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/ChangeLog,v 1.24 2011/07/20 16:56:42 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/ChangeLog,v 1.25 2012/10/10 15:21:28 ranger Exp $
+
+  10 Oct 2012; Brent Baude <ranger@gentoo.org> mpqc-2.3.1-r3.ebuild:
+  Marking mpqc-2.3.1-r3 ppc for bug 436886
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #105599
