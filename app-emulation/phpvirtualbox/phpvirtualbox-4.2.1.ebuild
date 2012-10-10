@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/phpvirtualbox/phpvirtualbox-4.1.7.ebuild,v 1.1 2012/03/16 22:44:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/phpvirtualbox/phpvirtualbox-4.2.1.ebuild,v 1.1 2012/10/10 20:15:35 hwoarang Exp $
 
 EAPI="2"
 
@@ -39,6 +39,11 @@ src_install() {
 	webapp_serverowned "${MY_HTDOCSDIR}"/config.php-example
 
 	webapp_src_install
+	if has_version app-emulation/virtualbox[vboxwebsrv] || \
+		has_version app-emulation/virtualbox-bin[vboxwebsrv]
+	then
+		newinitd "${FILESDIR}"/vboxinit-initd vboxinit
+	fi
 }
 
 pkg_postinst() {
@@ -47,4 +52,16 @@ pkg_postinst() {
 	elog "'vboxwebsrv' useflag and the respective init script"
 	elog "must be running to use this interface"
 	elog " /etc/init.d/vboxwebsrv start"
+	elog
+	elog "To enable the automatic startup mode feature uncomment the"
+	elog "following line in the config.php file:"
+	elog " var \$startStopConfig = true;"
+	elog
+	elog "You should also add the /etc/init.d/vboxinit script to the"
+	elog "default runlevel on the virtualbox host:"
+	elog "\`rc-update add vboxinit default\`"
+	elog "If the server is on a remote host, than the script must be"
+	elog "copied manually from"
+	elog "${FILESDIR}/vboxinit-initd to /etc/init.d/vboxinit"
+	elog "on the remote host."
 }
