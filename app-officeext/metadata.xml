@@ -9,4 +9,8 @@
 		Die Kategorie app-officeext enthält Erweiterungspakete 
 		(extensions) für LibreOffice und OpenOffice.
 	</longdescription>
+	<longdescription lang="es">
+		La categoría app-officeext contiene paquetes con extensiones
+		para LibreOffice y OpenOffice.
+	</longdescription>
 </catmetadata>
