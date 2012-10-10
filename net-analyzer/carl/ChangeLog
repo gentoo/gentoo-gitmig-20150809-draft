@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/carl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/carl/ChangeLog,v 1.12 2011/03/25 13:32:23 klausman Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/carl/ChangeLog,v 1.13 2012/10/10 11:23:44 pinkbyte Exp $
+
+  10 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
+  Add netmon herd to maintainers
 
   25 Mar 2011; Tobias Klausmann <klausman@gentoo.org> carl-0.9.ebuild:
   Roll back accidental commit
