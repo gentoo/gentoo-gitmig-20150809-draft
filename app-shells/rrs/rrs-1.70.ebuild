@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/rrs/rrs-1.70.ebuild,v 1.10 2012/10/11 09:08:55 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/rrs/rrs-1.70.ebuild,v 1.11 2012/10/11 09:26:19 pinkbyte Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Reverse Remote Shell"
-HOMEPAGE="http://www.cycom.se/dl/rrs"
+HOMEPAGE="http://freecode.com/projects/rrs"
 SRC_URI="http://www.cycom.se/uploads/36/19/${P}.tar.gz"
 
 LICENSE="MIT"
