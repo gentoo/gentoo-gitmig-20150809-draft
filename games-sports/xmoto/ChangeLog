@@ -1,6 +1,9 @@
 # ChangeLog for games-sports/xmoto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/ChangeLog,v 1.67 2012/09/23 08:52:00 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/ChangeLog,v 1.68 2012/10/11 07:09:09 blueness Exp $
+
+  11 Oct 2012; Anthony G. Basile <blueness@gentoo.org> xmoto-0.5.10.ebuild:
+  stable ppc, bug #432078
 
   23 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> xmoto-0.5.10.ebuild:
   x86 stable wrt bug #432078
@@ -271,4 +274,3 @@
   13 Aug 2006; Stefan Schweizer <genstef@gentoo.org>
   +files/xmoto-as-needed.patch, +metadata.xml, +xmoto-0.2.0.ebuild:
   New ebuild thanks to many contributors in bug 107968
-
