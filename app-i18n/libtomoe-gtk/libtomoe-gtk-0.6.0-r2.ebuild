@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libtomoe-gtk/libtomoe-gtk-0.6.0-r2.ebuild,v 1.4 2012/05/21 18:36:58 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libtomoe-gtk/libtomoe-gtk-0.6.0-r2.ebuild,v 1.5 2012/10/11 16:41:08 ago Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/tomoe/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="doc +gucharmap python static-libs"
 
 RDEPEND=">=app-i18n/tomoe-0.6.0[python?]
