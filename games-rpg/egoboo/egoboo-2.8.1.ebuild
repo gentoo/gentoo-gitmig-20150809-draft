@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/egoboo/egoboo-2.8.1.ebuild,v 1.3 2012/10/11 07:54:20 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/egoboo/egoboo-2.8.1.ebuild,v 1.4 2012/10/11 22:55:09 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -16,7 +16,7 @@ IUSE=""
 
 DEPEND="virtual/opengl
 	virtual/glu
-	media-libs/libsdl[video]
+	media-libs/libsdl[joystick,video]
 	media-libs/sdl-image
 	media-libs/sdl-mixer[vorbis]
 	media-libs/sdl-ttf
