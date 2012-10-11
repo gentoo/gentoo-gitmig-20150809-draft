@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.32.1.ebuild,v 1.11 2012/05/05 07:00:23 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.32.1.ebuild,v 1.12 2012/10/11 14:08:29 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.gnome.org/projects/eog/"
 LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="dbus doc exif jpeg lcms python svg tiff xmp"
+IUSE="dbus exif jpeg lcms python svg tiff xmp"
 
 RDEPEND=">=x11-libs/gtk+-2.18:2
 	x11-libs/gdk-pixbuf:2[jpeg?,tiff?]
@@ -39,11 +39,11 @@ RDEPEND=">=x11-libs/gtk+-2.18:2
 	xmp? ( >=media-libs/exempi-2 )"
 
 DEPEND="${RDEPEND}
+	dev-util/gtk-doc-am
 	app-text/gnome-doc-utils
 	sys-devel/gettext
 	>=dev-util/intltool-0.40
-	virtual/pkgconfig
-	doc? ( >=dev-util/gtk-doc-1.10 )"
+	virtual/pkgconfig"
 
 pkg_setup() {
 	G2CONF="${G2CONF}
