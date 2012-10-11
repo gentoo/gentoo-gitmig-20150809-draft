@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/libva-9999.ebuild,v 1.7 2012/06/08 15:33:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/libva-9999.ebuild,v 1.8 2012/10/11 11:44:08 aballier Exp $
 
 EAPI="3"
 
@@ -37,7 +37,6 @@ for x in ${VIDEO_CARDS}; do
 done
 
 RDEPEND=">=x11-libs/libdrm-2.4
-	video_cards_dummy? ( sys-fs/udev )
 	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXfixes
@@ -59,7 +58,6 @@ src_configure() {
 	econf \
 		--with-drivers-path="${EPREFIX}/usr/$(get_libdir)/va/drivers" \
 		$(use_enable video_cards_dummy dummy-driver) \
-		$(use_enable video_cards_dummy dummy-backend) \
 		$(use_enable opengl glx) \
 		$(use_enable egl)
 }
