@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.436 2012/10/11 16:50:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.437 2012/10/11 16:52:05 mgorny Exp $
+
+  11 Oct 2012; Michał Górny <mgorny@gentoo.org> eutils.eclass:
+  prune_libtool_files(): add --modules option to remove modules (plugins) as
+  well.
 
   11 Oct 2012; Michał Górny <mgorny@gentoo.org> eutils.eclass:
   prune_libtool_files(): fix removing symlinked .la files.

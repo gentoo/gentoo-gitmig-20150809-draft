@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.407 2012/10/11 16:50:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.408 2012/10/11 16:52:05 mgorny Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -1380,7 +1380,7 @@ if has "${EAPI:-0}" 0 1 2 3 4; then
 fi
 
 # @FUNCTION: prune_libtool_files
-# @USAGE: [--all]
+# @USAGE: [--all|--modules]
 # @DESCRIPTION:
 # Locate unnecessary libtool files (.la) and libtool static archives
 # (.a) and remove them from installation image.
@@ -1389,9 +1389,13 @@ fi
 # either be performed using pkg-config or doesn't introduce additional
 # flags.
 #
-# If '--all' argument is passed, all .la files are removed. This is
-# usually useful when the package installs plugins and does not use .la
-# files for loading them.
+# If '--modules' argument is passed, .la files for modules (plugins) are
+# removed as well. This is usually useful when the package installs
+# plugins and the plugin loader does not use .la files.
+#
+# If '--all' argument is passed, all .la files are removed without
+# performing any heuristic on them. You shouldn't ever use that,
+# and instead report a bug in the algorithm instead.
 #
 # The .a files are only removed whenever corresponding .la files state
 # that they should not be linked to, i.e. whenever these files
@@ -1402,11 +1406,15 @@ fi
 prune_libtool_files() {
 	debug-print-function ${FUNCNAME} "$@"
 
-	local removing_all opt
+	local removing_all removing_modules opt
 	for opt; do
 		case "${opt}" in
 			--all)
 				removing_all=1
+				removing_modules=1
+				;;
+			--modules)
+				removing_modules=1
 				;;
 			*)
 				die "Invalid argument to ${FUNCNAME}(): ${opt}"
@@ -1420,6 +1428,8 @@ prune_libtool_files() {
 
 		[[ ${f} != ${archivefile} ]] || die 'regex sanity check failed'
 
+		local reason pkgconfig_scanned
+
 		# Remove static libs we're not supposed to link against.
 		if grep -q '^shouldnotlink=yes$' "${f}"; then
 			if [[ -f ${archivefile} ]]; then
@@ -1429,16 +1439,17 @@ prune_libtool_files() {
 
 			# The .la file may be used by a module loader, so avoid removing it
 			# unless explicitly requested.
-			[[ ${removing_all} ]] || continue
-		fi
+			if [[ ${removing_modules} ]]; then
+				reason='module'
+			fi
 
 		# Remove .la files when:
 		# - user explicitly wants us to remove all .la files,
 		# - respective static archive doesn't exist,
 		# - they are covered by a .pc file already,
 		# - they don't provide any new information (no libs & no flags).
-		local reason pkgconfig_scanned
-		if [[ ${removing_all} ]]; then
+
+		elif [[ ${removing_all} ]]; then
 			reason='requested'
 		elif [[ ! -f ${archivefile} ]]; then
 			reason='no static archive'
