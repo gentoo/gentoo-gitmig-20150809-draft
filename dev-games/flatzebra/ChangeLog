@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/flatzebra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/flatzebra/ChangeLog,v 1.28 2012/10/03 11:47:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/flatzebra/ChangeLog,v 1.29 2012/10/11 06:16:09 blueness Exp $
+
+  11 Oct 2012; Anthony G. Basile <blueness@gentoo.org> flatzebra-0.1.6.ebuild:
+  stable ppc, bug #436912
 
   03 Oct 2012; Agostino Sarubbo <ago@gentoo.org> flatzebra-0.1.6.ebuild:
   Stable for amd64, wrt bug #436912
@@ -105,4 +108,3 @@
   13 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
   +flatzebra-0.1.1.ebuild:
   initial commit - ebuild submitted by Aaron Walker via bug #47319
-
