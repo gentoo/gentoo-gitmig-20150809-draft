@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/terminal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/terminal/ChangeLog,v 1.30 2012/08/15 00:54:39 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/terminal/ChangeLog,v 1.31 2012/10/11 16:12:44 nativemad Exp $
+
+  11 Oct 2012; Andreas Schuerch <nativemad@gentoo.org> terminal-0.9.8.ebuild:
+  x86 stable, see bug 429080
 
   15 Aug 2012; Anthony G. Basile <blueness@gentoo.org> terminal-0.9.8.ebuild:
   Stable ppc, bug #429080
