@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.32.1.ebuild,v 1.12 2012/10/11 14:08:29 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.32.1.ebuild,v 1.13 2012/10/11 14:12:19 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -11,7 +11,7 @@ inherit gnome2 python
 DESCRIPTION="The Eye of GNOME image viewer"
 HOMEPAGE="http://www.gnome.org/projects/eog/"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="1"
 KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="dbus exif jpeg lcms python svg tiff xmp"
