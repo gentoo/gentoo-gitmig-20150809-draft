@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/redis-py/redis-py-2.7.1.ebuild,v 1.1 2012/10/10 07:31:31 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/redis-py/redis-py-2.7.1.ebuild,v 1.2 2012/10/11 15:41:09 mr_bones_ Exp $
 
 EAPI="4"
 
@@ -19,7 +19,7 @@ SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz -> ${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="test"
 
 DEPEND="dev-python/setuptools
 	test? ( dev-db/redis )"
