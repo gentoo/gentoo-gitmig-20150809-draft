@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/rpm2targz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/ChangeLog,v 1.94 2012/10/11 11:23:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/ChangeLog,v 1.95 2012/10/11 15:58:37 blueness Exp $
+
+  11 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  rpm2targz-9.0.0.5g.ebuild:
+  stable ppc64, bug #433183
 
   11 Oct 2012; Markus Meier <maekke@gentoo.org> rpm2targz-9.0.0.5g.ebuild:
   arm stable, bug #433183
