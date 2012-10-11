@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gnuconfig
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.66 2012/10/01 04:59:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.67 2012/10/11 16:08:45 vapier Exp $
+
+*gnuconfig-20121010 (11 Oct 2012)
+
+  11 Oct 2012; Mike Frysinger <vapier@gentoo.org> +gnuconfig-20121010.ebuild:
+  Version bump.
 
   01 Oct 2012; Mike Frysinger <vapier@gentoo.org> gnuconfig-20120818.ebuild:
   Stabilize for all #436694.
