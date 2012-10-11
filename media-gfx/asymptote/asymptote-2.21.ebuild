@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-2.17.ebuild,v 1.1 2012/09/20 12:16:44 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-2.21.ebuild,v 1.1 2012/10/11 14:25:36 grozin Exp $
 
 EAPI=4
 SUPPORT_PYTHON_ABIS=1
@@ -15,7 +15,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="+boehm-gc doc emacs examples fftw gsl +imagemagick latex offscreen +opengl python sigsegv svg vim-syntax X"
-REQUIRED_USE="offscreen? (  )"
+REQUIRED_USE="offscreen? ( opengl )"
 
 RDEPEND=">=sys-libs/readline-4.3-r5
 	>=sys-libs/ncurses-5.4-r5
