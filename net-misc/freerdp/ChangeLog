@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/freerdp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/ChangeLog,v 1.36 2012/10/11 15:59:24 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/ChangeLog,v 1.37 2012/10/11 19:00:46 floppym Exp $
+
+  11 Oct 2012; Mike Gilbert <floppym@gentoo.org>
+  +files/freerdp-1.1.0_pre20121004-debug.patch,
+  freerdp-1.1.0_pre20121004-r1.ebuild:
+  Fix build with USE=debug, bug 437864 by Ben Kohler.
 
 *freerdp-1.1.0_pre20121004-r1 (11 Oct 2012)
 

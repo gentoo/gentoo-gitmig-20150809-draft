@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-1.1.0_pre20121004-r1.ebuild,v 1.1 2012/10/11 15:59:24 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-1.1.0_pre20121004-r1.ebuild,v 1.2 2012/10/11 19:00:46 floppym Exp $
 
 EAPI="4"
 
@@ -66,7 +66,10 @@ DEPEND="${RDEPEND}
 "
 
 DOCS=( README )
-PATCHES=( "${FILESDIR}/${P}-argb.patch" )
+PATCHES=(
+	"${FILESDIR}/${P}-argb.patch"
+	"${FILESDIR}/${P}-debug.patch"
+)
 
 src_configure() {
 	local mycmakeargs=(
