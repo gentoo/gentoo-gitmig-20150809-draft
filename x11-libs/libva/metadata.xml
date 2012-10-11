@@ -7,5 +7,6 @@
   </maintainer>
 	<use>
 		<flag name='egl'>Enables EGL support.</flag>
-	</use>
+     	<flag name="wayland">Enable <pkg>dev-libs/wayland</pkg> backend.</flag>
+    </use>
 </pkgmetadata>
