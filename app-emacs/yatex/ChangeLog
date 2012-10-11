@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/yatex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yatex/ChangeLog,v 1.32 2012/10/11 07:21:21 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yatex/ChangeLog,v 1.33 2012/10/11 15:14:57 nimiux Exp $
+
+  11 Oct 2012; Chema Alonso <nimiux@gentoo.org> yatex-1.76.ebuild:
+  stable for amd64 wrt bug #433187
 
   11 Oct 2012; Anthony G. Basile <blueness@gentoo.org> yatex-1.76.ebuild:
   stable ppc, bug #433187

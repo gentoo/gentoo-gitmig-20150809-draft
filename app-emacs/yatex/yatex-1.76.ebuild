@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yatex/yatex-1.76.ebuild,v 1.5 2012/10/11 07:21:21 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yatex/yatex-1.76.ebuild,v 1.6 2012/10/11 15:14:57 nimiux Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ DESCRIPTION="Yet Another TeX mode for Emacs"
 HOMEPAGE="http://www.yatex.org/"
 SRC_URI="http://www.yatex.org/${P/-/}.tar.gz"
 
-KEYWORDS="~alpha ~amd64 ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
 LICENSE="YaTeX"
 IUSE="linguas_ja"
