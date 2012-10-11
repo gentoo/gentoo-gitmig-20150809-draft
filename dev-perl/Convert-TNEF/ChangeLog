@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Convert-TNEF
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-TNEF/ChangeLog,v 1.27 2012/10/11 14:25:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-TNEF/ChangeLog,v 1.28 2012/10/11 15:06:18 jer Exp $
+
+  11 Oct 2012; Jeroen Roovers <jer@gentoo.org> Convert-TNEF-0.180.0.ebuild:
+  Stable for HPPA (bug #433241).
 
   11 Oct 2012; Agostino Sarubbo <ago@gentoo.org> Convert-TNEF-0.180.0.ebuild:
   Stable for amd64, wrt bug #433241
