@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.435 2012/10/11 10:51:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.436 2012/10/11 16:50:53 mgorny Exp $
+
+  11 Oct 2012; Michał Górny <mgorny@gentoo.org> eutils.eclass:
+  prune_libtool_files(): fix removing symlinked .la files.
 
   08 Oct 2012; Michał Górny <mgorny@gentoo.org> +autotools-multilib.eclass:
   Introduce autotools-multilib, to simplify building multilib packages with

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.406 2012/10/07 06:22:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.407 2012/10/11 16:50:53 mgorny Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -1414,6 +1414,7 @@ prune_libtool_files() {
 	done
 
 	local f
+	local queue=()
 	while IFS= read -r -d '' f; do # for all .la files
 		local archivefile=${f/%.la/.a}
 
@@ -1423,7 +1424,7 @@ prune_libtool_files() {
 		if grep -q '^shouldnotlink=yes$' "${f}"; then
 			if [[ -f ${archivefile} ]]; then
 				einfo "Removing unnecessary ${archivefile#${D%/}} (static plugin)"
-				rm -f "${archivefile}"
+				queue+=( "${archivefile}" )
 			fi
 
 			# The .la file may be used by a module loader, so avoid removing it
@@ -1474,9 +1475,13 @@ prune_libtool_files() {
 
 		if [[ ${reason} ]]; then
 			einfo "Removing unnecessary ${f#${D%/}} (${reason})"
-			rm -f "${f}"
+			queue+=( "${f}" )
 		fi
-	done < <(find "${D}" -type f -name '*.la' -print0)
+	done < <(find "${D}" -xtype f -name '*.la' -print0)
+
+	if [[ ${queue[@]} ]]; then
+		rm -f "${queue[@]}"
+	fi
 }
 
 check_license() { die "you no longer need this as portage supports ACCEPT_LICENSE itself"; }
