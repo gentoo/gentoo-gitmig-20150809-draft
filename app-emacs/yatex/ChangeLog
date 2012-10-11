@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/yatex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yatex/ChangeLog,v 1.34 2012/10/11 15:39:20 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yatex/ChangeLog,v 1.35 2012/10/11 16:31:17 ulm Exp $
+
+  11 Oct 2012; Ulrich Müller <ulm@gentoo.org> yatex-1.76.ebuild:
+  Fix installation of GNU Info files, bug 437612.
 
   11 Oct 2012; Chema Alonso <nimiux@gentoo.org> yatex-1.76.ebuild:
   Missed the blocker bug (#437612) marking unstable for amd64
