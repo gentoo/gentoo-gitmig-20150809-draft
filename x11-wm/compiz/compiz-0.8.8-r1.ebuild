@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.8.8-r1.ebuild,v 1.2 2012/09/12 19:27:22 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.8.8-r1.ebuild,v 1.3 2012/10/11 07:45:27 pinkbyte Exp $
 
 EAPI=4
 inherit autotools eutils gnome2-utils toolchain-funcs
@@ -31,6 +31,7 @@ COMMONDEPEND="
 	x11-libs/libSM
 	>=x11-libs/libXrender-0.8.4
 	>=x11-libs/startup-notification-0.7
+	virtual/glu
 	cairo? (
 		x11-libs/cairo[X]
 	)

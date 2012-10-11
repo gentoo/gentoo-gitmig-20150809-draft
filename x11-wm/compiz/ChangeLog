@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/compiz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.76 2012/09/25 14:45:47 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.77 2012/10/11 07:45:27 pinkbyte Exp $
+
+  11 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> compiz-0.8.8-r1.ebuild:
+  Add missing virtual/glu dependency wrt bug #437922
 
   25 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> -compiz-0.8.6-r3.ebuild,
   -files/compiz-0.8.6-gdk-display-deprecated.patch,
