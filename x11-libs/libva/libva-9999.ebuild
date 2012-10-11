@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/libva-9999.ebuild,v 1.8 2012/10/11 11:44:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/libva-9999.ebuild,v 1.9 2012/10/11 11:54:42 aballier Exp $
 
-EAPI="3"
+EAPI=4
 
 SCM=""
 if [ "${PV%9999}" != "${PV}" ] ; then # Live ebuild
@@ -29,7 +29,7 @@ if [ "${PV%9999}" = "${PV}" ] ; then
 else
 	KEYWORDS=""
 fi
-IUSE="egl opengl"
+IUSE="egl opengl X"
 
 VIDEO_CARDS="dummy nvidia intel fglrx"
 for x in ${VIDEO_CARDS}; do
@@ -37,9 +37,11 @@ for x in ${VIDEO_CARDS}; do
 done
 
 RDEPEND=">=x11-libs/libdrm-2.4
-	x11-libs/libX11
-	x11-libs/libXext
-	x11-libs/libXfixes
+	X? (
+		x11-libs/libX11
+		x11-libs/libXext
+		x11-libs/libXfixes
+	)
 	egl? ( media-libs/mesa[egl] )
 	opengl? ( virtual/opengl )"
 
@@ -50,6 +52,8 @@ PDEPEND="video_cards_nvidia? ( x11-libs/vdpau-video )
 	video_cards_intel? ( >=x11-libs/libva-intel-driver-1.0.18 )
 	"
 
+REQUIRED_USE="opengl? ( X )"
+
 src_prepare() {
 	eautoreconf
 }
@@ -59,6 +63,7 @@ src_configure() {
 		--with-drivers-path="${EPREFIX}/usr/$(get_libdir)/va/drivers" \
 		$(use_enable video_cards_dummy dummy-driver) \
 		$(use_enable opengl glx) \
+		$(use_enable X x11) \
 		$(use_enable egl)
 }
 

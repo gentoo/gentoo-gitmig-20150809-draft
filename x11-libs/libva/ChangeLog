@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libva
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.39 2012/10/11 11:44:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.40 2012/10/11 11:54:42 aballier Exp $
+
+  11 Oct 2012; Alexis Ballier <aballier@gentoo.org> libva-9999.ebuild:
+  add X useflag
 
   11 Oct 2012; Alexis Ballier <aballier@gentoo.org> libva-9999.ebuild:
   dummy backend is no more
