@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gwhois
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwhois/ChangeLog,v 1.56 2012/10/09 21:22:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwhois/ChangeLog,v 1.57 2012/10/11 08:15:51 blueness Exp $
+
+  11 Oct 2012; Anthony G. Basile <blueness@gentoo.org> gwhois-20120626.ebuild:
+  stable ppc ppc64, bug #433335
 
   09 Oct 2012; Jeroen Roovers <jer@gentoo.org> gwhois-20120626.ebuild:
   Stable for HPPA (bug #433335).
@@ -241,4 +244,3 @@
   16 Jan 2005; Wolfram Schlich <wschlich@gentoo.org> +metadata.xml,
   +files/gwhois.xinetd, +gwhois-20050115.ebuild:
   initial import
-
