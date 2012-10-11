@@ -1,9 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.397 2012/10/09 12:12:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.398 2012/10/11 14:08:52 pinkbyte Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Sergey Popov <pinkbyte@gentoo.org> (11 Oct 2012)
+# rdeps on dev-libs/libdnet[ipv6] was not tested.
+# Possibly ipv6 patch brokes ABI.
+=dev-libs/libdnet-1.12*	ipv6
 
 # GNOME <gnome@gentoo.org> (02 Oct 2012)
 # Mask USE="udisks" and use USE="gdu" as the default for <gnome-base/gvfs-1.12.3-r1

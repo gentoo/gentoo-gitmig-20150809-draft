@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.445 2012/10/09 12:12:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.446 2012/10/11 14:08:52 pinkbyte Exp $
+
+  11 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> package.use.mask:
+  Mask ipv6 USE-flag on dev-libs/libdnet
 
   09 Oct 2012; Justin Lecher <jlec@gentoo.org> package.use.mask:
   Use mask dev-lang/idb[eclipse] because all versions of dev-util/eclipse-sdk
