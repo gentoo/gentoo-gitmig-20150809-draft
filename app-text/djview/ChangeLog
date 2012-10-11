@@ -1,6 +1,9 @@
 # ChangeLog for app-text/djview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djview/ChangeLog,v 1.16 2012/09/30 18:08:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djview/ChangeLog,v 1.17 2012/10/11 07:42:04 blueness Exp $
+
+  11 Oct 2012; Anthony G. Basile <blueness@gentoo.org> djview-4.8.ebuild:
+  stable ppc64, bug #414369
 
   30 Sep 2012; Raúl Porcel <armin76@gentoo.org> djview-4.7.ebuild:
   Move to ~alpha
@@ -60,4 +63,3 @@
   30 Apr 2011; Peter Volkov <pva@gentoo.org> +djview-4.7.ebuild, +metadata.xml:
   New name for djview4. Version bump. Fixes bug #357817 thank pavel sanda for
   report.
-
