@@ -1,0 +1,9 @@
+# ChangeLog for mail-filter/MailScanner
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/MailScanner/ChangeLog,v 1.15 2012/10/11 07:00:02 patrick Exp $
+
+*MailScanner-4.84.5.2 (11 Oct 2012)
+
+  11 Oct 2012; Patrick Lauer <patrick@gentoo.org> +MailScanner-4.84.5.2.ebuild,
+  +files/confd.mailscanner, +files/initd.mailscanner, +metadata.xml:
+  Re-import of MailScanner, see erroneous removal #251575
