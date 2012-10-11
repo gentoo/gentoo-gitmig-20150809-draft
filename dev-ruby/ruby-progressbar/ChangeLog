@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-progressbar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-progressbar/ChangeLog,v 1.46 2012/10/08 21:40:12 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-progressbar/ChangeLog,v 1.47 2012/10/11 07:49:27 blueness Exp $
+
+  11 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  ruby-progressbar-1.0.2.ebuild:
+  keyword ~ppc ~ppc64, bug #437582
 
   08 Oct 2012;  <naota@gentoo.org> ruby-progressbar-1.0.2.ebuild:
   Add ~x86-fbsd wrt bug #437582
