@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libnl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.105 2012/10/11 11:32:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.106 2012/10/11 14:49:44 jer Exp $
+
+  11 Oct 2012; Jeroen Roovers <jer@gentoo.org> libnl-3.2.13.ebuild:
+  Stable for HPPA (bug #437022).
 
   11 Oct 2012; Markus Meier <maekke@gentoo.org> libnl-3.2.13.ebuild:
   arm stable, bug #437022
