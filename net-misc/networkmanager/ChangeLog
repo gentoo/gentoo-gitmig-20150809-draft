@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.147 2012/10/07 07:59:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.148 2012/10/11 15:07:17 blueness Exp $
+
+  11 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  networkmanager-0.9.4.0-r6.ebuild:
+  stable ppc ppc64, bug #430370
 
   07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer as talked with him.
