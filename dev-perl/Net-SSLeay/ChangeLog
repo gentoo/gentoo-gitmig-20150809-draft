@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-SSLeay
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSLeay/ChangeLog,v 1.85 2012/10/10 15:41:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSLeay/ChangeLog,v 1.86 2012/10/11 11:27:47 maekke Exp $
+
+  11 Oct 2012; Markus Meier <maekke@gentoo.org> Net-SSLeay-1.480.0-r1.ebuild:
+  arm stable, bug #433249
 
   10 Oct 2012; Brent Baude <ranger@gentoo.org> Net-SSLeay-1.480.0-r1.ebuild:
   Marking Net-SSLeay-1.480.0-r1 ppc for bug 433249
