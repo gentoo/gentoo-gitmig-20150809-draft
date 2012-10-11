@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-5.0.7.ebuild,v 1.5 2012/10/11 07:27:44 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-5.0.7.ebuild,v 1.6 2012/10/11 15:51:56 mr_bones_ Exp $
 
 EAPI=4
 inherit cmake-utils
@@ -30,6 +30,7 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 	x11-libs/libX11
 	gtk? ( x11-libs/gtk+:2 )
 	virtual/opengl
+	virtual/glu
 	xinerama? ( x11-libs/libXinerama )"
 
 DEPEND="${RDEPEND}
