@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/JavaScript-SpiderMonkey/JavaScript-SpiderMonkey-0.200.0.ebuild,v 1.1 2011/08/30 11:35:23 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/JavaScript-SpiderMonkey/JavaScript-SpiderMonkey-0.200.0.ebuild,v 1.2 2012/10/11 19:09:51 axs Exp $
 
 EAPI=4
 
@@ -16,6 +16,12 @@ IUSE=""
 
 RDEPEND="dev-perl/Log-Log4perl
 	>=dev-lang/spidermonkey-1.5"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	dev-perl/extutils-pkgconfig"
+
+src_prepare() {
+	epatch "${FILESDIR}"/mozjs185.patch
+	perl-module_src_prepare
+}
 
 SRC_TEST=do
