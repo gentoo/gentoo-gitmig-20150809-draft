@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/nm-applet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.83 2012/10/07 07:53:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.84 2012/10/11 15:13:04 blueness Exp $
+
+  11 Oct 2012; Anthony G. Basile <blueness@gentoo.org> nm-applet-0.9.4.1.ebuild:
+  stable ppc, bug #430370
 
   07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer as talked with him.
