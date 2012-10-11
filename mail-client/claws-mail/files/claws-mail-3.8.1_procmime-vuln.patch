@@ -1,0 +1,35 @@
+A specific mail in the user mbox file cause claws-mail to crash reliabily. 
+
+claws-mail-3.8.1
+
+truncated backtrace:
+:Thread no. 1 (10 frames)
+: #0 strchr at ../sysdeps/x86_64/strchr.S:33
+: #1 parse_parameters at procmime.c:1756
+: #2 procmime_parse_content_disposition at procmime.c:1842
+: #3 procmime_parse_mimepart at procmime.c:1967
+: #4 procmime_parse_multipart at procmime.c:1566
+: #5 procmime_parse_mimepart at procmime.c:1994
+: #6 procmime_parse_message_rfc822 at procmime.c:1393
+: #7 procmime_scan_file_with_offset at procmime.c:2058
+: #8 procmime_scan_file_full at procmime.c:2071
+: #9 procmime_scan_file at procmime.c:2078
+
+CVE-2012-4507
+
+Gentoo bug: https://bugs.gentoo.org/show_bug.cgi?id=437814
+CVE request: http://permalink.gmane.org/gmane.comp.security.oss.general/8561
+redhat bug: https://bugzilla.redhat.com/show_bug.cgi?id=862578
+claws-mail bug: http://www.thewildbeast.co.uk/claws-mail/bugzilla/show_bug.cgi?id=2743
+
+--- claws-mail-3.8.1-orig/src/procmime.c	2012-06-27 11:05:22.000000000 +0200
++++ claws-mail-3.8.1/src/procmime.c	2012-10-03 18:00:09.438577924 +0200
+@@ -1753,6 +1753,8 @@
+ 			continue;
+ 
+ 		charset = value;
++        if (charset == NULL)
++            continue;
+ 		lang = strchr(charset, '\'');
+ 		if (lang == NULL)
+ 			continue;

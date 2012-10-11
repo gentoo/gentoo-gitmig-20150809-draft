@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/claws-mail
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.209 2012/09/05 07:48:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.210 2012/10/11 19:05:33 fauli Exp $
+
+*claws-mail-3.8.1-r2 (11 Oct 2012)
+
+  11 Oct 2012; Christian Faulhammer <fauli@gentoo.org>
+  +claws-mail-3.8.1-r2.ebuild, +files/claws-mail-3.8.1_procmime-vuln.patch:
+  version bump for security bug 437814 (CVE 2012-4507), null pointer exception
 
   05 Sep 2012; Justin Lecher <jlec@gentoo.org> claws-mail-3.8.0.ebuild,
   claws-mail-3.8.1-r1.ebuild, claws-mail-3.8.1.ebuild:
