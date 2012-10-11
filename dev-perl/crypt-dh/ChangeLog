@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/crypt-dh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-dh/ChangeLog,v 1.23 2012/07/07 19:02:18 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-dh/ChangeLog,v 1.24 2012/10/11 14:24:32 ago Exp $
+
+  11 Oct 2012; Agostino Sarubbo <ago@gentoo.org> crypt-dh-0.70.0.ebuild:
+  Stable for amd64, wrt bug #433257
 
 *crypt-dh-0.70.0 (07 Jul 2012)
 
