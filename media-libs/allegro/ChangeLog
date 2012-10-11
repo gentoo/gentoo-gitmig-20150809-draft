@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/allegro
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.133 2012/10/05 18:03:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.134 2012/10/11 07:27:44 blueness Exp $
+
+  11 Oct 2012; Anthony G. Basile <blueness@gentoo.org> allegro-5.0.7.ebuild:
+  stable ppc, bug #432082
 
   05 Oct 2012; Brent Baude <ranger@gentoo.org> allegro-5.0.7.ebuild:
   Marking allegro-5.0.7 ppc64 for bug 432082
