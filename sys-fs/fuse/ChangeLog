@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/fuse
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.163 2012/10/10 15:33:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.164 2012/10/11 08:19:00 blueness Exp $
+
+  11 Oct 2012; Anthony G. Basile <blueness@gentoo.org> fuse-2.9.1-r1.ebuild:
+  stable ppc64, bug #437568
 
   10 Oct 2012; Brent Baude <ranger@gentoo.org> fuse-2.9.1-r1.ebuild:
   Marking fuse-2.9.1-r1 ppc for bug 437568
@@ -643,4 +646,3 @@
   Initial import. Thanks to Birce Arnould <98111@free.fr>, Athul Acharya
   <aacharya@gmail.com> and Sébastien Estienne <sebastien.estienne@gmail.com>
   in bug 59733
-
