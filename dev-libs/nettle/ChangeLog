@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nettle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.64 2012/10/10 15:22:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.65 2012/10/11 06:41:45 blueness Exp $
+
+  11 Oct 2012; Anthony G. Basile <blueness@gentoo.org> nettle-2.5.ebuild:
+  stable ppc64, bug #433235
 
   10 Oct 2012; Brent Baude <ranger@gentoo.org> nettle-2.5.ebuild:
   Marking nettle-2.5 ppc for bug 433235
