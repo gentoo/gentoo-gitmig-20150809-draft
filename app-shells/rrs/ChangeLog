@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/rrs
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/rrs/ChangeLog,v 1.15 2011/07/20 13:51:05 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/rrs/ChangeLog,v 1.16 2012/10/11 09:08:55 pinkbyte Exp $
+
+  11 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> rrs-1.70.ebuild:
+  Define RDEPEND explicitly, add die statement to sed
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #34534
