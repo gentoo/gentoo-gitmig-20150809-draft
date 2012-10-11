@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/modemmanager
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/ChangeLog,v 1.37 2012/10/07 07:56:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/ChangeLog,v 1.38 2012/10/11 14:57:39 blueness Exp $
+
+  11 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  modemmanager-0.5.2.0-r3.ebuild:
+  stable ppc ppc64, bug #430370
 
   07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer as talked with him.
