@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-9999.ebuild,v 1.20 2012/05/11 14:15:00 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-9999.ebuild,v 1.21 2012/10/11 08:06:57 slyfox Exp $
 
 EAPI=4
 
@@ -22,12 +22,6 @@ RDEPEND="${DEPEND}"
 
 EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/kernel/git/mason/btrfs-progs.git
 	https://git.kernel.org/pub/scm/linux/kernel/git/mason/btrfs-progs.git"
-
-src_prepare() {
-	# Fix hardcoded "gcc" and "make"
-	sed -i -e 's:gcc $(CFLAGS):$(CC) $(CFLAGS):' Makefile || die
-	sed -i -e 's:make:$(MAKE):' Makefile || die
-}
 
 src_compile() {
 	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
