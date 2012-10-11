@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.225 2012/10/10 15:30:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.226 2012/10/11 06:57:09 grobian Exp $
+
+  11 Oct 2012; Fabian Groffen <grobian@gentoo.org> files/exim.logrotate:
+  Fix logrotate script not to fail when exim isn't running, by Anatoly, bug
+  #437896.
 
   10 Oct 2012; Brent Baude <ranger@gentoo.org> exim-4.80.ebuild:
   Marking exim-4.80 ppc for bug 437746
