@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00.ebuild,v 1.16 2012/07/22 18:29:50 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00.ebuild,v 1.17 2012/10/11 02:14:10 floppym Exp $
 
 EAPI=4
 
@@ -176,6 +176,7 @@ grub_src_configure() {
 
 	ECONF_SOURCE="${S}" \
 	econf \
+		--libdir=/usr/lib \
 		--htmldir="${EPREFIX}/usr/share/doc/${PF}/html" \
 		--disable-werror \
 		--program-prefix= \

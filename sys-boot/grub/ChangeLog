@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.237 2012/09/22 02:16:23 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.238 2012/10/11 02:14:10 floppym Exp $
+
+  11 Oct 2012; Mike Gilbert <floppym@gentoo.org> grub-2.00.ebuild,
+  grub-9999.ebuild:
+  Install modules in /usr/lib/grub.
 
   22 Sep 2012; Mike Gilbert <floppym@gentoo.org> metadata.xml:
   Clarify metadata.
