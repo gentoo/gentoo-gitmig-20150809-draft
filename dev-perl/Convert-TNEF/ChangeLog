@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Convert-TNEF
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-TNEF/ChangeLog,v 1.25 2012/10/10 15:38:11 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-TNEF/ChangeLog,v 1.26 2012/10/11 07:33:18 blueness Exp $
+
+  11 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  Convert-TNEF-0.180.0.ebuild:
+  stable ppc64, bug #433241
 
   10 Oct 2012; Brent Baude <ranger@gentoo.org> Convert-TNEF-0.180.0.ebuild:
   Marking Convert-TNEF-0.180.0 ppc for bug 433241
