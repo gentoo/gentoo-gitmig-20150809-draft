@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-2.0.1.ebuild,v 1.1 2012/06/30 04:07:44 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-2.0.1.ebuild,v 1.2 2012/10/11 14:38:22 blueness Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${MY_T}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~mips ~x86"
 IUSE="alsa ffmpeg flac id3tag jack ladspa libsamplerate midi mp3 sbsms soundtouch twolame vamp vorbis"
 RESTRICT="test"
 
