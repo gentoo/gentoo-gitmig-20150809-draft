@@ -1,6 +1,9 @@
 # ChangeLog for www-client/elinks
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.149 2012/10/10 14:45:50 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.150 2012/10/11 15:28:04 jer Exp $
+
+  11 Oct 2012; Jeroen Roovers <jer@gentoo.org> elinks-0.12_pre5-r2.ebuild:
+  Stable for HPPA (bug #437196).
 
   10 Oct 2012; Ian Stakenvicius <axs@gentoo.org> elinks-0.12_pre5-r2.ebuild:
   added hackery to ensure configure script does not find @preserved-libs
