@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/eigen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/ChangeLog,v 1.60 2012/10/10 14:34:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/ChangeLog,v 1.61 2012/10/11 13:30:31 blueness Exp $
+
+  11 Oct 2012; Anthony G. Basile <blueness@gentoo.org> eigen-2.0.17.ebuild:
+  stable ppc64, bug #436570
 
   10 Oct 2012; Brent Baude <ranger@gentoo.org> eigen-2.0.17.ebuild,
   eigen-3.0.6.ebuild:
