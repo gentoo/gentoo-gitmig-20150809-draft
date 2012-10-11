@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/fragroute
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fragroute/ChangeLog,v 1.24 2012/10/09 09:09:01 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fragroute/ChangeLog,v 1.25 2012/10/11 13:11:21 pinkbyte Exp $
+
+*fragroute-1.2.5 (11 Oct 2012)
+
+  11 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> +fragroute-1.2.5.ebuild,
+  +files/fragroute-1.2.5-autotools-fix.patch:
+  Version bump
 
 *fragroute-1.2-r4 (09 Oct 2012)
 
