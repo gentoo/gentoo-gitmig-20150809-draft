@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/nacl-toolchain-newlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nacl-toolchain-newlib/ChangeLog,v 1.20 2012/09/26 10:56:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nacl-toolchain-newlib/ChangeLog,v 1.21 2012/10/11 18:37:06 phajdan.jr Exp $
+
+  11 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/gcc-parallel-build-r0.patch, nacl-toolchain-newlib-0_p9093.ebuild:
+  Fix parallel build failure, bug #437048 by Kai Krakow.
 
   26 Sep 2012; Agostino Sarubbo <ago@gentoo.org>
   -nacl-toolchain-newlib-0_p7311.ebuild, -nacl-toolchain-newlib-0_p8034.ebuild,

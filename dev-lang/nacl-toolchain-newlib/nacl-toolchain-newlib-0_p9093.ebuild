@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nacl-toolchain-newlib/nacl-toolchain-newlib-0_p9093.ebuild,v 1.3 2012/09/26 10:51:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nacl-toolchain-newlib/nacl-toolchain-newlib-0_p9093.ebuild,v 1.4 2012/10/11 18:37:06 phajdan.jr Exp $
 
 EAPI="4"
 
@@ -81,6 +81,9 @@ src_prepare() {
 	mv gcc-${GCC_PV} SRC/gcc || die
 	cd SRC || die
 	EPATCH_SUFFIX="patch" EPATCH_FORCE="yes" epatch "${S}"
+
+	# Parallel build failure, bug #437048.
+	epatch "${FILESDIR}/gcc-parallel-build-r0.patch"
 }
 
 src_compile() {
