@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-2.8.0.ebuild,v 1.3 2012/09/22 21:26:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-2.8.0.ebuild,v 1.4 2012/10/11 18:18:36 reavertm Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://flightgear/Source/${P}.tar.bz2 mirror://flightgear/Shared/Flig
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ppc ~x86"
-IUSE="debug jpeg +jsbsim larcsim subversion test +udev uiuc +yasim"
+IUSE="debug jpeg +jsbsim oldfdm subversion test +udev +yasim"
 #fgpanel - disabled for now, doesn't link
 #fgpanel? (
 #		media-libs/freeglut
@@ -54,12 +54,12 @@ src_configure() {
 		-DWITH_FGPANEL=OFF
 		$(cmake-utils_use jpeg JPEG_FACTORY)
 		$(cmake-utils_use_enable jsbsim)
-		$(cmake-utils_use_enable larcsim)
+		$(cmake-utils_use_enable oldfdm LARCSIM)
+		$(cmake-utils_use_enable oldfdm UIUC_MODEL)
 		$(cmake-utils_use_enable subversion LIBSVN)
 		$(cmake-utils_use test LOGGING)
 		$(cmake-utils_use_enable test TESTS)
 		$(cmake-utils_use udev EVENT_INPUT)
-		$(cmake-utils_use_enable uiuc UIUC_MODEL)
 		$(cmake-utils_use_enable yasim)
 	)
 	#$(cmake-utils_use_with fgpanel)
