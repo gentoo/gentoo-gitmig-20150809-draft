@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/bzr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.59 2012/10/08 20:06:25 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.60 2012/10/11 11:31:19 maekke Exp $
+
+  11 Oct 2012; Markus Meier <maekke@gentoo.org> bzr-2.5.1.ebuild:
+  arm stable, bug #418969
 
   08 Oct 2012; Christian Faulhammer <fauli@gentoo.org> bzr-2.5.1.ebuild:
   switch to EAPI 4 and update dodoc calls for bug 408623
