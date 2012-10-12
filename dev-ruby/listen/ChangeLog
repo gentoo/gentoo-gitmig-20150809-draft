@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/listen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/listen/ChangeLog,v 1.8 2012/09/29 15:21:11 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/listen/ChangeLog,v 1.9 2012/10/12 05:50:10 graaff Exp $
+
+*listen-0.5.3 (12 Oct 2012)
+
+  12 Oct 2012; Hans de Graaff <graaff@gentoo.org> +listen-0.5.3.ebuild:
+  Version bump.
 
   29 Sep 2012; Fabian Groffen <grobian@gentoo.org> listen-0.5.2.ebuild:
   Marked ~x64-macos
