@@ -1,6 +1,9 @@
 # ChangeLog for net-im/emesene
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/emesene/ChangeLog,v 1.32 2012/09/09 13:50:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/emesene/ChangeLog,v 1.33 2012/10/12 21:13:07 hwoarang Exp $
+
+  12 Oct 2012; Markos Chandras <hwoarang@gentoo.org> emesene-2.12.9.ebuild:
+  Drop dev-python/papyon as it is now included in the package. Bug #434690
 
 *emesene-2.12.9 (09 Sep 2012)
 
