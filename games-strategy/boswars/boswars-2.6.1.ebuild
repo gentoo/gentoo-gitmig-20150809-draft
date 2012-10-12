@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/boswars/boswars-2.6.1.ebuild,v 1.5 2010/11/20 02:15:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/boswars/boswars-2.6.1.ebuild,v 1.6 2012/10/12 02:29:29 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils scons-utils games
@@ -17,7 +17,7 @@ IUSE=""
 
 DEPEND="dev-lang/lua
 	media-libs/libsdl[audio,video]
-	media-libs/libpng
+	media-libs/libpng:0
 	media-libs/libvorbis
 	media-libs/libtheora
 	media-libs/libogg
@@ -34,11 +34,11 @@ src_prepare() {
 	sed -i \
 		-e "s:@GENTOO_DATADIR@:${GAMES_DATADIR}/${PN}:" \
 		engine/include/stratagus.h \
-		|| die "sed stratagus.h failed"
+		|| die
 	sed -i \
 		-e "/-O2/s:-O2.*math:${CXXFLAGS} -Wall:" \
 		SConstruct \
-		|| die "sed SConstruct failed"
+		|| die
 }
 
 src_compile() {
@@ -46,10 +46,10 @@ src_compile() {
 }
 
 src_install() {
-	dogamesbin ${PN} || die "dogamesbin failed"
+	dogamesbin ${PN} || die
 	insinto "${GAMES_DATADIR}"/${PN}
 	doins -r campaigns graphics intro languages maps patches scripts sounds units \
-		|| die "doins failed"
+		|| die
 	newicon "${DISTDIR}"/bos.png ${PN}.png
 	make_desktop_entry ${PN} "Bos Wars"
 	dodoc CHANGELOG COPYRIGHT.txt README.txt
