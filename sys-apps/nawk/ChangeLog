@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/nawk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/nawk/ChangeLog,v 1.5 2012/07/13 02:51:27 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/nawk/ChangeLog,v 1.6 2012/10/12 22:04:36 naota Exp $
+
+  12 Oct 2012;  <naota@gentoo.org> nawk-20110810-r1.ebuild:
+  Add ~x86-fbsd. #419555
 
   13 Jul 2012; Christoph Junghans <ottxor@gentoo.org> nawk-20110810-r1.ebuild:
   fixed typos

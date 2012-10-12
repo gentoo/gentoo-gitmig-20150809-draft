@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/nawk/nawk-20110810-r1.ebuild,v 1.2 2012/07/13 02:51:27 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/nawk/nawk-20110810-r1.ebuild,v 1.3 2012/10/12 22:04:36 naota Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.cs.princeton.edu/~bwk/btl.mirror/awk.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-macos"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd ~amd64-linux ~x86-macos"
 IUSE=""
 
 RDEPEND="app-admin/eselect-awk"
