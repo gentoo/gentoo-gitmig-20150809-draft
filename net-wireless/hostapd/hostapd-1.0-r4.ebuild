@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-1.0-r4.ebuild,v 1.3 2012/10/11 14:23:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-1.0-r4.ebuild,v 1.4 2012/10/12 00:52:20 blueness Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://hostap.epitest.fi/releases/${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 BSD )"
 SLOT="0"
-KEYWORDS="amd64 ~mips ~ppc x86"
+KEYWORDS="amd64 ~mips ppc x86"
 IUSE="debug ipv6 logwatch madwifi +ssl +wps +crda"
 
 DEPEND="ssl? ( dev-libs/openssl )
