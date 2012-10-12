@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-1.01.ebuild,v 1.1 2012/10/11 15:39:24 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-1.01.ebuild,v 1.2 2012/10/12 12:30:54 hasufell Exp $
 
 EAPI=4
 inherit eutils check-reqs gnome2-utils games
@@ -107,14 +107,14 @@ src_compile() {
 
 	emake \
 		BASE_ARCH=${arch} \
-		BINDIR=bin \
+		BINDIR=lib \
 		BUILD_ANGELWRAP=$(yesno angelscript) \
 		DEBUG_BUILD=$(yesno debug) \
 		${myconf[@]}
 }
 
 src_install() {
-	cd bin
+	cd lib
 
 	if ! use dedicated ; then
 		newgamesbin ${PN}.* ${PN}
