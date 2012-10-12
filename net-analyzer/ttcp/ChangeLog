@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/ttcp
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ttcp/ChangeLog,v 1.21 2011/02/06 07:51:32 leio Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ttcp/ChangeLog,v 1.22 2012/10/12 10:14:02 pinkbyte Exp $
+
+*ttcp-1.12-r2 (12 Oct 2012)
+
+  12 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> +ttcp-1.12-r2.ebuild:
+  Revision bump: bump EAPI to 4, add fix for bug #336145, thanks to Seth
+  Robertson and Jeroen Roovers
 
   06 Feb 2011; Mart Raudsepp <leio@gentoo.org> ttcp-1.12.ebuild:
   Drop to ~mips
