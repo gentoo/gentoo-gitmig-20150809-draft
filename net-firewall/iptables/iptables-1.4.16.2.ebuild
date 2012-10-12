@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.16.2.ebuild,v 1.1 2012/10/08 22:47:06 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.16.2.ebuild,v 1.2 2012/10/12 18:53:04 vapier Exp $
 
 EAPI="4"
 
@@ -29,6 +29,8 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	# use the saner headers from the kernel
 	rm -f include/linux/{kernel,types}.h
+
+	epatch "${FILESDIR}"/${P}-static.patch #437712
 
 	# Only run autotools if user patched something
 	epatch_user && eautoreconf || elibtoolize
