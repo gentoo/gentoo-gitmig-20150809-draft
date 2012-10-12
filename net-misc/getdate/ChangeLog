@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/getdate
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/getdate/ChangeLog,v 1.14 2010/08/10 08:08:33 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/getdate/ChangeLog,v 1.15 2012/10/12 08:36:45 pinkbyte Exp $
+
+*getdate-1.2-r1 (12 Oct 2012)
+
+  12 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> +getdate-1.2-r1.ebuild:
+  Revision bump: EAPI 4 and some cosmetic changes
 
   10 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org> getdate-1.2.ebuild:
   Respect LDFLAGS wrt bug 331801. Thanks to Diego for report. Clean ebuild,
