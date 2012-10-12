@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ippl/ippl-1.4.14-r3.ebuild,v 1.1 2012/10/12 10:43:32 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ippl/ippl-1.4.14-r3.ebuild,v 1.2 2012/10/12 10:46:15 pinkbyte Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND="|| ( sys-devel/bison >=dev-util/yacc-1.9.1-r1 )
+DEPEND="virtual/yacc
 	>=sys-devel/flex-2.5.4a-r4"
 RDEPEND=""
 
