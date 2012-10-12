@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libg15render
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libg15render/ChangeLog,v 1.14 2011/09/09 16:51:21 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libg15render/ChangeLog,v 1.15 2012/10/12 20:16:28 robbat2 Exp $
+
+*libg15render-9999 (12 Oct 2012)
+
+  12 Oct 2012; Robin H. Johnson <robbat2@gentoo.org> +libg15render-9999.ebuild:
+  Bump to have a live version, needed for G510 keyboard support.
 
 *libg15render-1.2-r2 (09 Sep 2011)
 
@@ -64,4 +69,3 @@
   04 Oct 2006; Markus Ullmann <jokey@gentoo.org> +metadata.xml,
   +libg15render-1.1.ebuild, +libg15render-1.1.1.ebuild:
   Needed dep for upcoming lcdproc-0.5.1
-
