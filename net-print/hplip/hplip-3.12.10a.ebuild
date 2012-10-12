@@ -1,22 +1,23 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.11.10.ebuild,v 1.11 2012/09/18 18:10:42 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.12.10a.ebuild,v 1.1 2012/10/12 17:22:12 billie Exp $
 
-EAPI=3
+EAPI=4
 
 PYTHON_DEPEND="!minimal? 2"
 PYTHON_USE_WITH="threads xml"
 PYTHON_USE_WITH_OPT="!minimal"
 
-inherit fdo-mime linux-info python autotools multilib
+inherit fdo-mime linux-info python autotools toolchain-funcs
 
 DESCRIPTION="HP Linux Imaging and Printing. Includes printer, scanner, fax drivers and service tools."
 HOMEPAGE="http://hplipopensource.com/hplip-web/index.html"
-SRC_URI="mirror://sourceforge/hplip/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/hplip/${P}.tar.gz
+		http://dev.gentoo.org/~billie/distfiles/${PN}-3.12.10-patches-1.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ppc ppc64 x86"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 
 # zeroconf does not work properly with >=cups-1.4.
 # Thus support for it is also disabled in hplip.
@@ -25,15 +26,15 @@ IUSE="doc fax +hpcups hpijs kde libnotify minimal parport policykit qt4 scanner 
 COMMON_DEPEND="
 	virtual/jpeg
 	hpijs? ( >=net-print/foomatic-filters-3.0.20080507[cups] )
-	snmp? (
-		net-analyzer/net-snmp
-		dev-libs/openssl
-	)
 	!minimal? (
 		>=net-print/cups-1.4.0
-		virtual/libusb:0
+		virtual/libusb:1
 		scanner? ( >=media-gfx/sane-backends-1.0.19-r1 )
 		fax? ( sys-apps/dbus )
+		snmp? (
+			net-analyzer/net-snmp
+			dev-libs/openssl:0
+		)
 	)"
 
 DEPEND="${COMMON_DEPEND}
@@ -41,6 +42,10 @@ DEPEND="${COMMON_DEPEND}
 
 RDEPEND="${COMMON_DEPEND}
 	>=app-text/ghostscript-gpl-8.71-r3
+	dev-python/dbus-python
+	policykit? (
+		sys-auth/polkit
+	)
 	!minimal? (
 		dev-python/pygobject:2
 		kernel_linux? ( >=sys-fs/udev-114 )
@@ -60,9 +65,6 @@ RDEPEND="${COMMON_DEPEND}
 			dev-python/PyQt4[dbus,X]
 			libnotify? (
 				dev-python/notify-python
-			)
-			policykit? (
-				sys-auth/polkit
 			)
 		)
 	)"
@@ -84,55 +86,29 @@ pkg_setup() {
 		ewarn "Installing neither hpcups (USE=-hpcups) nor hpijs (USE=-hpijs) driver,"
 		ewarn "which is probably not what you want."
 		ewarn "You will almost certainly not be able to print."
-		ewarn "Recommended USE flags: USE=\"hpcups -hpijs\")."
 	fi
 
 	if use minimal ; then
 		ewarn "Installing driver portions only, make sure you know what you are doing."
-		ewarn "Depending on the USE flags set for hpcups and/or hpijs the appropiate"
-		ewarn "drivers are installed."
+		ewarn "Depending on the USE flags set for hpcups or hpijs the appropiate driver"
+		ewarn "is installed. If both USE flags are set hpijs overrides hpcups."
 	else
 		use parport && linux-info_pkg_setup
 	fi
 }
 
 src_prepare() {
-	python_convert_shebangs -q -r 2 .
+	use !minimal && python_convert_shebangs -q -r 2 .
+
+	EPATCH_SUFFIX="patch" \
+	EPATCH_FORCE="yes" \
+	epatch "${WORKDIR}"
 
 	# Fix for Gentoo bug #345725
-	sed -i -e "s|/etc/udev/rules.d|/$(get_libdir)/udev/rules.d|" \
-		$(find ./ -type f -exec grep -l '/etc/udev/rules.d' '{}' '+') \
-		|| die "sed udev rules"
-
-	# Do not install desktop files if there is no gui
-	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/452113
-	epatch "${FILESDIR}"/${PN}-3.11.1-desktop.patch
-
-	# Browser detection through xdg-open
-	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/482674
-	epatch "${FILESDIR}"/${PN}-3.9.10-browser.patch
-
-	# Use cups-config when checking for cupsddk
-	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/483136
-	epatch "${FILESDIR}"/${PN}-3.9.12-cupsddk.patch
-
-	# Htmldocs are not installed under docdir/html so enable htmldir configure
-	# switch
-	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/483217
-	epatch "${FILESDIR}"/${PN}-3.11.1-htmldir.patch
-
-	# Increase systray check timeout for slower machines
-	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/335662
-	epatch "${FILESDIR}"/${PN}-3.9.12-systray.patch
-
-	# SYSFS deprecated but kept upstream for compatibility reasons
-	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/346390
-	epatch "${FILESDIR}"/${PN}-3.11.10-udev-attrs.patch
-
-	# CVE-2010-4267 SNMP Response Processing Buffer Overflow Vulnerability
-	# http://secunia.com/advisories/42956/
-	# https://bugzilla.redhat.com/show_bug.cgi?id=662740
-	epatch "${FILESDIR}"/${PN}-3.10.9-cve-2010-4267.patch
+	local udevdir=/lib/udev
+	has_version sys-fs/udev && udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
+	sed -i -e "s|/etc/udev|${udevdir}|g" \
+		$(find . -type f -exec grep -l /etc/udev {} +) || die
 
 	# Force recognition of Gentoo distro by hp-check
 	sed -i \
@@ -153,18 +129,7 @@ src_prepare() {
 }
 
 src_configure() {
-	local gui_build myconf drv_build minimal_build
-
-	if use qt4 ; then
-		gui_build="--enable-gui-build --enable-qt4 --disable-qt3"
-		if use policykit ; then
-			myconf="--enable-policykit"
-		else
-			myconf="--disable-policykit"
-		fi
-	else
-		gui_build="--disable-gui-build --disable-qt3 --disable-qt4"
-	fi
+	local myconf drv_build minimal_build
 
 	if use fax || use qt4 ; then
 		myconf="${myconf} --enable-dbus-build"
@@ -182,7 +147,8 @@ src_configure() {
 			drv_build="${drv_build} --disable-cups-ppd-install"
 		fi
 	else
-		drv_build="--disable-hpcups-install --disable-cups-drv-install"
+		drv_build="--disable-hpcups-install"
+		drv_build="${drv_build} --disable-cups-drv-install"
 		drv_build="${drv_build} --disable-cups-ppd-install"
 	fi
 
@@ -215,17 +181,18 @@ src_configure() {
 	fi
 
 	econf \
-		--disable-dependency-tracking \
 		--disable-cups11-build \
 		--disable-lite-build \
 		--disable-foomatic-rip-hplip-install \
 		--disable-shadow-build \
+		--disable-qt3 \
+		--disable-libusb01_build \
+		--disable-udev_sysfs_rules \
 		--disable-udev-acl-rules \
 		--with-cupsbackenddir=$(cups-config --serverbin)/backend \
 		--with-cupsfilterdir=$(cups-config --serverbin)/filter \
 		--with-docdir=/usr/share/doc/${PF} \
 		--with-htmldir=/usr/share/doc/${PF}/html \
-		${gui_build} \
 		${myconf} \
 		${drv_build} \
 		${minimal_build} \
@@ -233,15 +200,26 @@ src_configure() {
 		$(use_enable fax fax-build) \
 		$(use_enable parport pp-build) \
 		$(use_enable scanner scan-build) \
-		$(use_enable snmp network-build)
+		$(use_enable snmp network-build) \
+		$(use_enable qt4 gui-build) \
+		$(use_enable qt4) \
+		$(use_enable policykit)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	default
 
 	# Installed by sane-backends
 	# Gentoo Bug: #201023
 	rm -f "${D}"/etc/sane.d/dll.conf || die
+
+	rm -f "${D}"/usr/share/doc/${PF}/{copyright,README_LIBJPG,COPYING} || die
+	rmdir --ignore-fail-on-non-empty "${D}"/usr/share/doc/${PF}/ || die
+
+	# Remove hal fdi files
+	rm -rf "${D}"/usr/share/hal || die
+
+	find "${D}" -name '*.la' -exec rm -rf {} + || die
 }
 
 pkg_postinst() {
@@ -252,7 +230,7 @@ pkg_postinst() {
 	elog "a look at the hplip section of the gentoo printing guide:"
 	elog "http://www.gentoo.org/doc/en/printing-howto.xml"
 	elog
-	elog "Any user who want to print must be in the lp group."
+	elog "Any user who wants to print must be in the lp group."
 }
 
 pkg_postrm() {
