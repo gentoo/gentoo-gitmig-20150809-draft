@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_evasive/mod_evasive-1.10.1.ebuild,v 1.2 2008/01/31 18:48:36 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_evasive/mod_evasive-1.10.1.ebuild,v 1.3 2012/10/12 08:01:03 patrick Exp $
 
 inherit apache-module eutils
 
@@ -20,7 +20,7 @@ RDEPEND=""
 APACHE2_MOD_CONF="10_${PN}"
 APACHE2_MOD_DEFINE="EVASIVE"
 
-need_apache2
+need_apache2_2
 
 S="${WORKDIR}"/${PN}
 

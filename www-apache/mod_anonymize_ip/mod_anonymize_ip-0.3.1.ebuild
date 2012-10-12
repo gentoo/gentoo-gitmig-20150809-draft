@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_anonymize_ip/mod_anonymize_ip-0.3.1.ebuild,v 1.2 2011/05/14 06:34:56 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_anonymize_ip/mod_anonymize_ip-0.3.1.ebuild,v 1.3 2012/10/12 07:54:55 patrick Exp $
 
 EAPI=4
 
@@ -25,6 +25,6 @@ RDEPEND=""
 APACHE2_MOD_CONF="20_${PN}"
 APACHE2_MOD_DEFINE="ANONYMIZE_IP"
 
-need_apache2
+need_apache2_2
 
 S="${WORKDIR}"/${GITHUB_AUTHOR}-${GITHUB_PROJECT}-${GITHUB_COMMIT}
