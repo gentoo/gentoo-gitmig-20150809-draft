@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/shc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/shc/ChangeLog,v 1.24 2012/09/05 18:12:44 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/shc/ChangeLog,v 1.25 2012/10/12 07:52:36 ago Exp $
+
+  12 Oct 2012; Agostino Sarubbo <ago@gentoo.org> shc-3.8.9.ebuild:
+  Stable for amd64, wrt bug #438080
 
   05 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
   Pick up maintainance of package and add changelog info to metadata
