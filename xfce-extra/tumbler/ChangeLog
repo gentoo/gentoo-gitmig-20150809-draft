@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/tumbler
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/tumbler/ChangeLog,v 1.43 2012/08/07 13:20:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/tumbler/ChangeLog,v 1.44 2012/10/12 01:59:33 naota Exp $
+
+  12 Oct 2012;  <naota@gentoo.org> tumbler-0.1.25.ebuild:
+  Add ~x86-fbsd wrt bug #236834
 
   07 Aug 2012; Samuli Suominen <ssuominen@gentoo.org> -tumbler-0.1.23.ebuild:
   old
@@ -187,4 +190,3 @@
 
   04 Jan 2010; Samuli Suominen <ssuominen@gentoo.org> +tumbler-0.1.0.ebuild:
   Initial commit wrt #297355, thanks to Andrew for this work.
-
