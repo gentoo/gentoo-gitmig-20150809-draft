@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/remmina
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.39 2012/10/07 00:32:31 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.40 2012/10/12 22:16:52 floppym Exp $
+
+  12 Oct 2012; Mike Gilbert <floppym@gentoo.org>
+  +files/remmina-1.0.0_p20121004-avahi.patch, remmina-1.0.0_p20121004.ebuild:
+  Fix avahi underlinking, bug 438060 by tetromino.
 
 *remmina-1.0.0_p20121004 (07 Oct 2012)
 

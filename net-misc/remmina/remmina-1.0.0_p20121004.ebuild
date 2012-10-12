@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/remmina-1.0.0_p20121004.ebuild,v 1.1 2012/10/07 00:32:31 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/remmina-1.0.0_p20121004.ebuild,v 1.2 2012/10/12 22:16:52 floppym Exp $
 
 EAPI="4"
 
@@ -49,6 +49,7 @@ RDEPEND+="
 "
 
 DOCS=( README )
+PATCHES=( "${FILESDIR}/${P}-avahi.patch" )
 
 src_configure() {
 	local mycmakeargs=(
