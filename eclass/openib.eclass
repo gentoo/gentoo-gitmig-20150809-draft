@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/openib.eclass,v 1.6 2012/10/12 11:44:23 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/openib.eclass,v 1.7 2012/10/12 13:20:56 alexxy Exp $
 
 # @ECLASS: openib.eclass
 # @AUTHOR:
@@ -56,13 +56,20 @@ block_other_ofed_versions() {
 	done
 }
 
-OFED_BASE_VER=$(get_version_component_range 1-3 ${OFED_VER})
+OFED_BASE_VER=$(get_version_component_range 1 '-' $(get_version_component_range 1-3 ${OFED_VER}))
 
 SRC_URI="http://www.openfabrics.org/downloads/OFED/ofed-${OFED_BASE_VER}/OFED-${OFED_VER}.tgz"
 
 case ${PN} in
 	ofed)
-		MY_PN="ofa_kernel"
+		case ${PV} in
+			1.5.*|1.5.*.*)
+				MY_PN="ofa_kernel"
+				;;
+			*)
+				MY_PN="compat-rdma"
+				;;
+		esac
 		;;
 	*)
 		MY_PN="${PN}"
