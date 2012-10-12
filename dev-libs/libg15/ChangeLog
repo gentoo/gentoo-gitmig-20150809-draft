@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libg15
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libg15/ChangeLog,v 1.28 2012/10/08 01:53:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libg15/ChangeLog,v 1.29 2012/10/12 20:01:55 robbat2 Exp $
+
+  12 Oct 2012; Robin H. Johnson <robbat2@gentoo.org> +files/g15tools.patch,
+  libg15-1.2.7-r1.ebuild, libg15-9999.ebuild:
+  Real working G510 support now, so my keyboard works. See also the libg15render
+  and g15daemon bumps.
 
 *libg15-9999 (08 Oct 2012)
 
