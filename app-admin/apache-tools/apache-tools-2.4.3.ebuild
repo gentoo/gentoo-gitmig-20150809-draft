@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/apache-tools-2.4.2.ebuild,v 1.1 2012/04/20 04:00:31 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/apache-tools-2.4.3.ebuild,v 1.1 2012/10/12 06:05:18 patrick Exp $
 
-EAPI="2"
+EAPI="3"
 inherit flag-o-matic eutils
 
 DESCRIPTION="Useful Apache tools - htdigest, htpasswd, ab, htdbm"
@@ -52,7 +52,7 @@ src_compile() {
 src_install () {
 	cd support || die
 
-	make DESTDIR="${D}" install
+	make DESTDIR="${ED}" install
 
 	# install manpages
 	doman "${S}"/docs/man/{dbmmanage,htdigest,htpasswd,htdbm,ab,logresolve}.1 \
@@ -60,11 +60,11 @@ src_install () {
 
 	# Providing compatiblity symlinks for #177697 (which we'll stop to install
 	# at some point).
-	pushd "${D}"/usr/sbin/ >/dev/null
+	pushd "${ED}"/usr/sbin/ >/dev/null
 	for i in *; do
 		dosym /usr/sbin/${i} /usr/sbin/${i}2
 	done
-	popd "${D}"/usr/sbin/ >/dev/null
+	popd "${ED}"/usr/sbin/ >/dev/null
 
 	# Provide a symlink for ab-ssl
 	if use ssl; then
