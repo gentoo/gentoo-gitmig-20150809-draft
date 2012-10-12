@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.9.2.ebuild,v 1.1 2012/10/10 20:11:06 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.9.2.ebuild,v 1.2 2012/10/12 18:32:35 idl0r Exp $
 
 # Re dlz/mysql and threads, needs to be verified..
 # MySQL uses thread local storage in its C api. Thus MySQL
@@ -269,8 +269,6 @@ src_install() {
 	fi
 
 	if use python; then
-		rm -f "${D}/usr/sbin/dnssec-checkds"
-
 		install_python_tools() {
 			python_convert_shebangs $PYTHON_ABI bin/python/dnssec-checkds
 			exeinto /usr/sbin
@@ -278,6 +276,7 @@ src_install() {
 		}
 		python_execute_function install_python_tools
 
+		rm -f "${D}/usr/sbin/dnssec-checkds"
 		python_generate_wrapper_scripts "${D}usr/sbin/dnssec-checkds"
 	fi
 
