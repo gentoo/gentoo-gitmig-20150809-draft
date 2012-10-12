@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pywavelets/pywavelets-0.2.2.ebuild,v 1.1 2012/10/09 11:34:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pywavelets/pywavelets-0.2.2.ebuild,v 1.2 2012/10/12 00:56:34 floppym Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
@@ -21,7 +21,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples test"
 
-DEPEND="dev-python/cython
+DEPEND="app-arch/unzip
+	dev-python/cython
 	test? ( dev-python/numpy )"
 RDEPEND="dev-python/numpy"
 
@@ -29,12 +30,6 @@ S="${WORKDIR}/${MY_P}"
 
 DOCS="CHANGES.txt THANKS.txt"
 PYTHON_MODNAME="pywt"
-
-src_prepare() {
-	distutils_src_prepare
-	# https://bitbucket.org/nigma/pywt/changeset/784802d4118c
-	sed -e "167s/__new__/__cinit__/" -i src/_pywt.pyx
-}
 
 src_test() {
 	testing() {
