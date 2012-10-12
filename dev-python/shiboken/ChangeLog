@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/shiboken
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/ChangeLog,v 1.32 2012/09/08 21:49:52 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/ChangeLog,v 1.33 2012/10/12 23:20:39 pesa Exp $
+
+  12 Oct 2012; Davide Pesavento <pesa@gentoo.org> shiboken-1.1.2.ebuild:
+  Fix paths for prefix, bug 435718 by jlec.
 
 *shiboken-1.1.2 (08 Sep 2012)
 
