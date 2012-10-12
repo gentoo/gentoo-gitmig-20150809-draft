@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/blokish/blokish-0.9.4-r1.ebuild,v 1.7 2011/06/21 07:00:38 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/blokish/blokish-0.9.4-r1.ebuild,v 1.8 2012/10/12 15:40:43 mr_bones_ Exp $
 
 EAPI=2
 WX_GTK_VER="2.8"
@@ -17,6 +17,7 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="x11-libs/wxGTK:2.8[X,opengl]
+	virtual/glu
 	virtual/opengl"
 
 S=${WORKDIR}/${PN}

@@ -1,6 +1,9 @@
 # ChangeLog for games-board/blokish
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/blokish/ChangeLog,v 1.10 2011/06/21 07:00:38 tupone Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/blokish/ChangeLog,v 1.11 2012/10/12 15:40:43 mr_bones_ Exp $
+
+  12 Oct 2012; Michael Sterrett <mr_bones_@gentoo.org> blokish-0.9.4-r1.ebuild:
+  add virtual/glu dep (bug #438126)
 
   21 Jun 2011; Tupone Alfredo <tupone@gentoo.org> blokish-0.9.4-r1.ebuild,
   +files/blokish-0.9.4-underlink.patch:
@@ -42,4 +45,3 @@
   03 Oct 2006; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
   +blokish-0.9.3.ebuild:
   initial commit - ebuild submitted by CJ Kucera via bug #144683
-
