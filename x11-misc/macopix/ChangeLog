@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/macopix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/macopix/ChangeLog,v 1.22 2012/05/05 04:53:48 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/macopix/ChangeLog,v 1.23 2012/10/12 12:53:00 pinkbyte Exp $
+
+  12 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> macopix-1.7.4.ebuild:
+  Fix QA issues: add missing die statements, escape variables
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> macopix-1.7.4.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
