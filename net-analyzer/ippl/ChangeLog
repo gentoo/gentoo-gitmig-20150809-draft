@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/ippl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ippl/ChangeLog,v 1.19 2012/06/12 02:26:26 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ippl/ChangeLog,v 1.20 2012/10/12 10:43:32 pinkbyte Exp $
+
+*ippl-1.4.14-r3 (12 Oct 2012)
+
+  12 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> +ippl-1.4.14-r3.ebuild:
+  Revision bump: bump to EAPI 4, fix bug #351287
 
   12 Jun 2012; Zac Medico <zmedico@gentoo.org> ippl-1.4.14-r1.ebuild,
   ippl-1.4.14-r2.ebuild:
