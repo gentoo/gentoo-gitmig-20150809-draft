@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/ssh-askpass-fullscreen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh-askpass-fullscreen/ChangeLog,v 1.23 2012/10/06 09:14:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh-askpass-fullscreen/ChangeLog,v 1.24 2012/10/12 21:41:03 tetromino Exp $
+
+*ssh-askpass-fullscreen-1.0-r1 (12 Oct 2012)
+
+  12 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  ssh-askpass-fullscreen-0.4-r4.ebuild, ssh-askpass-fullscreen-1.0.ebuild,
+  +ssh-askpass-fullscreen-1.0-r1.ebuild,
+  +files/ssh-askpass-fullscreen-1.0-libX11.patch:
+  Fix linking failure with gold (bug #370019, thanks to Diego Elio Pettenò).
+  Install /etc/env.d/99ssh_askpass like in version 0.4 to set SSH_ASKPASS env
+  variable (bug #437764, thanks to Derk W te Bokkel). Update license.
 
 *ssh-askpass-fullscreen-1.0 (06 Oct 2012)
 
