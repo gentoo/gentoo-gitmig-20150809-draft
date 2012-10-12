@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.431 2012/09/29 06:32:32 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.432 2012/10/12 21:17:20 tetromino Exp $
+
+*wine-1.5.15 (12 Oct 2012)
+
+  12 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org> +wine-1.5.15.ebuild,
+  wine-9999.ebuild, metadata.xml:
+  Bump, see http://www.winehq.org/announce/1.5.15 for the announcement.
+  Temporarily add a masked osmesa-multilib USE flag to allow overlay users to
+  enable osmesa support for win32 on amd64 until bug #430268 is resolved.
 
 *wine-1.5.14 (29 Sep 2012)
 
