@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_pgsql/mod_auth_pgsql-2.0.3-r1.ebuild,v 1.5 2010/06/17 18:35:20 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_pgsql/mod_auth_pgsql-2.0.3-r1.ebuild,v 1.6 2012/10/12 09:47:35 patrick Exp $
 
 inherit apache-module multilib
 
@@ -23,7 +23,7 @@ APACHE2_MOD_DEFINE="AUTH_PGSQL"
 
 DOCFILES="INSTALL README mod_auth_pgsql.html"
 
-need_apache2
+need_apache2_2
 
 src_install() {
 	apache-module_src_install

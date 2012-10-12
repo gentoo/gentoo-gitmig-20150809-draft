@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_auth_pgsql
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_pgsql/ChangeLog,v 1.7 2010/06/17 18:35:20 patrick Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_pgsql/ChangeLog,v 1.8 2012/10/12 09:47:35 patrick Exp $
+
+  12 Oct 2012; Patrick Lauer <patrick@gentoo.org>
+  mod_auth_pgsql-2.0.3-r1.ebuild:
+  Restricting to apache 2.2
 
   17 Jun 2010; Patrick Lauer <patrick@gentoo.org>
   mod_auth_pgsql-2.0.3-r1.ebuild:
@@ -167,4 +171,3 @@
   files/digest-mod_auth_pgsql-0.9.12 
 
   Initial import.
-
