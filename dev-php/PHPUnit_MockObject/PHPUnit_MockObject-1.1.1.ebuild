@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PHPUnit_MockObject/PHPUnit_MockObject-1.1.1.ebuild,v 1.2 2012/06/23 14:31:49 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PHPUnit_MockObject/PHPUnit_MockObject-1.1.1.ebuild,v 1.3 2012/10/12 07:45:09 ago Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ SRC_URI="http://pear.phpunit.de/get/PHPUnit_MockObject-1.1.1.tgz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 DEPEND=">=dev-php/pear-1.9.4
