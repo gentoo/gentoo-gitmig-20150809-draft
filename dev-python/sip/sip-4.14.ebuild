@@ -1,21 +1,22 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.14.ebuild,v 1.1 2012/10/05 20:24:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.14.ebuild,v 1.2 2012/10/12 01:00:35 floppym Exp $
 
-EAPI="4"
+EAPI="5"
 PYTHON_DEPEND="*"
-PYTHON_EXPORT_PHASE_FUNCTIONS="1"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="*-jython 2.7-pypy-*"
+PYTHON_EXPORT_PHASE_FUNCTIONS="1"
 
 inherit eutils python toolchain-funcs
 
 DESCRIPTION="Python extension module generator for C and C++ libraries"
 HOMEPAGE="http://www.riverbankcomputing.co.uk/software/sip/intro http://pypi.python.org/pypi/SIP"
-SRC_URI="mirror://sourceforge/pyqt/${PN}/${P}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/pyqt/${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 GPL-3 sip )"
-SLOT="0"
+# Subslot based on SIP_API_MAJOR_NR from siplib/sip.h.in
+SLOT="0/9"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="debug doc"
 
@@ -58,7 +59,7 @@ src_install() {
 	dodoc NEWS
 
 	if use doc; then
-		dohtml -r doc/html/*
+		dohtml -r doc/html/
 	fi
 }
 

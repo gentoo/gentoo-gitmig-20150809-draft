@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.225 2012/10/05 20:24:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.226 2012/10/12 01:00:35 floppym Exp $
+
+  12 Oct 2012; Mike Gilbert <floppym@gentoo.org> sip-4.14.ebuild:
+  Set subslot. Backported from Progress Overlay. Patch by Arfrever.
 
 *sip-4.14 (05 Oct 2012)
 
