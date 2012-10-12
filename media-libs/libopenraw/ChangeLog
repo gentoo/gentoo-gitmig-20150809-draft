@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libopenraw
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/ChangeLog,v 1.62 2012/08/22 03:03:53 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/ChangeLog,v 1.63 2012/10/12 02:07:42 naota Exp $
+
+  12 Oct 2012;  <naota@gentoo.org> libopenraw-0.0.9.ebuild:
+  Add ~x86-fbsd.
 
   22 Aug 2012; Christoph Junghans <ottxor@gentoo.org> libopenraw-0.0.9.ebuild:
   added prefix keywords
