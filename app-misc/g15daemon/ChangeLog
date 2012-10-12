@@ -1,6 +1,15 @@
 # ChangeLog for app-misc/g15daemon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/ChangeLog,v 1.41 2012/03/08 15:17:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/ChangeLog,v 1.42 2012/10/12 20:22:20 robbat2 Exp $
+
+*g15daemon-1.9.5.3-r6 (12 Oct 2012)
+*g15daemon-9999 (12 Oct 2012)
+
+  12 Oct 2012; Robin H. Johnson <robbat2@gentoo.org>
+  +files/g15daemon-1.9.5.3-g510-keys.patch, +g15daemon-1.9.5.3-r6.ebuild,
+  +g15daemon-9999.ebuild:
+  More g510 fun. 1.9.5.3-r6 will give you partial support, 9999 will give you
+  full support.
 
   08 Mar 2012; Brent Baude <ranger@gentoo.org> g15daemon-1.9.5.3-r5.ebuild:
   Marking g15daemon-1.9.5.3-r5 ppc64 for bug 399941
@@ -220,4 +229,3 @@
   +metadata.xml, +g15daemon-1.2.1.ebuild:
   Initial import, thanks to Alessio Cassibba in bug #148769 for providing an
   ebuild
-
