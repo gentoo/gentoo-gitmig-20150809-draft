@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_transform
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_transform/ChangeLog,v 1.6 2008/01/31 19:14:10 hollow Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_transform/ChangeLog,v 1.7 2012/10/12 08:59:28 patrick Exp $
+
+  12 Oct 2012; Patrick Lauer <patrick@gentoo.org> mod_transform-0.6.0.ebuild,
+  mod_transform-0.7.0_pre20070204.ebuild:
+  Restricting to apache 2.2
 
   31 Jan 2008; Benedikt Böhm <hollow@gentoo.org>
   files/0.7/10_mod_transform.conf, files/10_mod_transform.conf,
@@ -72,4 +76,3 @@
   27 Jun 2004; Chuck Short <zul@gentoo.org> metadata.xml,
   mod_transform-0.4.0.ebuild, files/mod_transform.conf:
   Initial ebuild, written by sweneger. Closes #54910.
-

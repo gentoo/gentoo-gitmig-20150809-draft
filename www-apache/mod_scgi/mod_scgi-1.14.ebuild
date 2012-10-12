@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_scgi/mod_scgi-1.14.ebuild,v 1.3 2011/09/01 16:30:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_scgi/mod_scgi-1.14.ebuild,v 1.4 2012/10/12 08:55:20 patrick Exp $
 
 EAPI="3"
 
@@ -27,4 +27,4 @@ APACHE2_MOD_DEFINE="SCGI"
 
 DOCFILES="PKG-INFO LICENSE.txt CHANGES.txt apache2/README.txt"
 
-need_apache
+need_apache2_2

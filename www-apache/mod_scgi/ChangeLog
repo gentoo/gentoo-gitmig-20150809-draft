@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_scgi
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_scgi/ChangeLog,v 1.11 2011/09/01 16:30:20 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_scgi/ChangeLog,v 1.12 2012/10/12 08:55:20 patrick Exp $
+
+  12 Oct 2012; Patrick Lauer <patrick@gentoo.org> mod_scgi-1.14.ebuild:
+  Restricting to apache 2.2
 
   01 Sep 2011; Jeroen Roovers <jer@gentoo.org> mod_scgi-1.14.ebuild:
   Stable for HPPA (bug #366915).
@@ -121,4 +124,3 @@
   12 Aug 2003; Grant Goodyear <g2boojum@gentoo.org>
   mod_scgi-1.2_alpha1.ebuild:
   New package
-

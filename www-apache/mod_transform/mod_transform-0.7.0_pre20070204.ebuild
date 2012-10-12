@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_transform/mod_transform-0.7.0_pre20070204.ebuild,v 1.4 2008/01/31 19:14:10 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_transform/mod_transform-0.7.0_pre20070204.ebuild,v 1.5 2012/10/12 08:59:28 patrick Exp $
 
 inherit apache-module
 
@@ -23,7 +23,7 @@ RDEPEND="${DEPEND}"
 APACHE2_MOD_CONF="0.7/10_${PN}"
 APACHE2_MOD_DEFINE="TRANSFORM"
 
-need_apache2
+need_apache2_2
 
 src_compile() {
 	econf --with-apxs=${APXS} || die "econf failed"
