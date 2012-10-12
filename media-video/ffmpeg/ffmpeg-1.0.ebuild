@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-1.0.ebuild,v 1.1 2012/09/29 02:16:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-1.0.ebuild,v 1.2 2012/10/12 11:24:14 aballier Exp $
 
 EAPI="4"
 
@@ -270,17 +270,17 @@ src_configure() {
 }
 
 src_compile() {
-	emake
+	emake V=1
 
 	for i in ${FFTOOLS} ; do
 		if use fftools_$i ; then
-			emake tools/$i
+			emake V=1 tools/$i
 		fi
 	done
 }
 
 src_install() {
-	emake DESTDIR="${D}" install install-man
+	emake V=1 DESTDIR="${D}" install install-man
 
 	dodoc Changelog README INSTALL
 	dodoc -r doc/*
@@ -294,5 +294,5 @@ src_install() {
 
 src_test() {
 	LD_LIBRARY_PATH="${S}/libpostproc:${S}/libswscale:${S}/libswresample:${S}/libavcodec:${S}/libavdevice:${S}/libavfilter:${S}/libavformat:${S}/libavutil" \
-		emake fate
+		emake V=1 fate
 }
