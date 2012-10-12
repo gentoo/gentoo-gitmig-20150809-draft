@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/sylpheed
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.316 2012/10/11 08:31:12 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.317 2012/10/12 07:45:33 ago Exp $
+
+  12 Oct 2012; Agostino Sarubbo <ago@gentoo.org> sylpheed-3.2.0.ebuild:
+  Stable for amd64, wrt bug #433297
 
   11 Oct 2012; Anthony G. Basile <blueness@gentoo.org> sylpheed-3.2.0.ebuild:
   stable ppc64, bug #433297
