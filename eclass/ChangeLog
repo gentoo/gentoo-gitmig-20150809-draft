@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.437 2012/10/11 16:52:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.438 2012/10/12 11:44:23 alexxy Exp $
+
+  12 Oct 2012; Alexey Shvetsov <alexxy@gentoo.org> openib.eclass:
+  [openib] Update ofed versions
 
   11 Oct 2012; Michał Górny <mgorny@gentoo.org> eutils.eclass:
   prune_libtool_files(): add --modules option to remove modules (plugins) as

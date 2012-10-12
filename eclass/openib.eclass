@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/openib.eclass,v 1.5 2012/04/18 18:16:12 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/openib.eclass,v 1.6 2012/10/12 11:44:23 alexxy Exp $
 
 # @ECLASS: openib.eclass
 # @AUTHOR:
@@ -40,7 +40,7 @@ OFED_VERSIONS=(
 	"1.5.3.2"
 	"1.5.4"
 	"1.5.4.1"
-	"3.2"
+	"3.5-rc2"
 	)
 
 # @FUNCTION: block_other_ofed_versions
