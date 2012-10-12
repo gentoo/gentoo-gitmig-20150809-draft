@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/iceicons
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/iceicons/ChangeLog,v 1.13 2012/10/10 13:47:37 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/iceicons/ChangeLog,v 1.14 2012/10/12 18:36:51 ago Exp $
+
+  12 Oct 2012; Agostino Sarubbo <ago@gentoo.org> iceicons-0.10.0.ebuild:
+  Stable for amd64, wrt bug #437842
 
   10 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> iceicons-0.10.0.ebuild:
   Fix unescaped usage of 'ICEICONSDIR' variable
