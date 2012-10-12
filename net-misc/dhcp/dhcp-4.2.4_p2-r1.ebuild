@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-4.2.4_p2-r1.ebuild,v 1.1 2012/10/10 04:16:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-4.2.4_p2-r1.ebuild,v 1.2 2012/10/12 19:13:06 vapier Exp $
 
 EAPI="4"
 
@@ -169,7 +169,7 @@ src_compile() {
 	# build local bind cruft first
 	emake -C bind/bind-*/lib/export install
 	# then build standard dhcp code
-	emake
+	emake AR="$(tc-getAR)"
 }
 
 src_install() {

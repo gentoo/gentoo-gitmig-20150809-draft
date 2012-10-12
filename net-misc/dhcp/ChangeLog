@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.224 2012/10/11 23:37:24 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.225 2012/10/12 19:13:06 vapier Exp $
+
+  12 Oct 2012; Mike Frysinger <vapier@gentoo.org> dhcp-4.2.4_p2-r1.ebuild:
+  Set AR ourselves since dhcp's build system doesn't do it for us #437980 by
+  Agostino Sarubbo.
 
   11 Oct 2012; Anthony G. Basile <blueness@gentoo.org> dhcp-4.2.4_p2.ebuild:
   stable ppc ppc64, bug #434880
