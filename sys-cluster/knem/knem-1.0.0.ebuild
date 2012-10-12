@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/knem/knem-0.9.8.ebuild,v 1.1 2012/04/29 13:00:11 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/knem/knem-1.0.0.ebuild,v 1.1 2012/10/12 10:44:12 alexxy Exp $
 
 EAPI=4
 
-inherit autotools linux-mod multilib
+inherit autotools linux-mod linux-info toolchain-funcs multilib
 
 DESCRIPTION="High-Performance Intra-Node MPI Communication"
 HOMEPAGE="http://runtime.bordeaux.inria.fr/knem/"
@@ -27,7 +27,10 @@ BUILD_TARGETS="all"
 BUILD_PARAMS="KDIR=${KERNEL_DIR}"
 
 pkg_setup() {
+	linux-info_pkg_setup
 	linux-mod_pkg_setup
+	ARCH="$(tc-arch-kernel)"
+	ABI="${KERNEL_ABI}"
 }
 
 src_prepare() {
@@ -62,8 +65,11 @@ src_install() {
 	rm "${ED}/usr/sbin/knem_local_install" || die
 	rmdir "${ED}/usr/sbin" || die
 	# install udev rules
-	dodir /etc/udev/rules.d
-	insinto /etc/udev/rules.d
+	local udevdir=/lib/udev
+	if has_version sys-fs/udev ; then
+		udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
+	fi
+	insinto "${udevdir}/rules.d"
 	doins "${FILESDIR}/45-knem.rules" || die
 	rm "${ED}/etc/10-knem.rules" || die
 }
