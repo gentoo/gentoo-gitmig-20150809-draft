@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_tcl/mod_tcl-1.0.1.ebuild,v 1.6 2007/11/25 13:33:16 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_tcl/mod_tcl-1.0.1.ebuild,v 1.7 2012/10/12 08:34:10 patrick Exp $
 
 inherit apache-module
 
@@ -23,7 +23,7 @@ APACHE2_MOD_DEFINE="TCL"
 
 DOCFILES="AUTHORS INSTALL NEWS README test_script.tm"
 
-need_apache2
+need_apache2_2
 
 src_compile() {
 	mv -f "tcl_core.c" "${PN}.c"

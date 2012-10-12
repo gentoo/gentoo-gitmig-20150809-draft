@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_slotlimit/mod_slotlimit-1.3.ebuild,v 1.1 2012/03/30 00:57:49 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_slotlimit/mod_slotlimit-1.3.ebuild,v 1.2 2012/10/12 08:32:00 patrick Exp $
 
 EAPI=3
 
@@ -22,4 +22,4 @@ SLOT="0"
 APACHE2_MOD_CONF="10_${PN}"
 APACHE2_MOD_DEFINE="SLOTLIMIT"
 
-need_apache2
+need_apache2_2
