@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9.4.ebuild,v 1.5 2012/10/12 19:04:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9.4.ebuild,v 1.6 2012/10/12 19:31:58 eras Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ SRC_URI="${MY_URI}/${MY_SRC}.tar.gz
 
 LICENSE="IBM"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="+berkdb cdb doc dovecot-sasl hardened ldap ldap-bind memcached mbox mysql nis pam postgres sasl selinux sqlite ssl vda"
 
 DEPEND=">=dev-libs/libpcre-3.4
@@ -176,6 +176,8 @@ src_configure() {
 	# Remove annoying C++ comment style warnings - bug #378099
 	append-flags -Wno-comment
 
+	sed -i -e "/^RANLIB/s/ranlib/$(tc-getRANLIB)/g" "${S}"/makedefs
+	sed -i -e "/^AR/s/ar/$(tc-getAR)/g" "${S}"/makedefs
 	emake DEBUG="" CC="$(tc-getCC)" OPT="${CFLAGS}" CCARGS="${mycc}" AUXLIBS="${mylibs}" makefiles
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.10_pre20121007.ebuild,v 1.1 2012/10/08 07:05:33 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.10_pre20121007.ebuild,v 1.2 2012/10/12 19:31:58 eras Exp $
 
 EAPI=4
 inherit eutils multilib ssl-cert toolchain-funcs flag-o-matic pam user versionator
@@ -175,6 +175,8 @@ src_configure() {
 	# Remove annoying C++ comment style warnings - bug #378099
 	append-flags -Wno-comment
 
+	sed -i -e "/^RANLIB/s/ranlib/$(tc-getRANLIB)/g" "${S}"/makedefs
+	sed -i -e "/^AR/s/ar/$(tc-getAR)/g" "${S}"/makedefs
 	emake DEBUG="" CC="$(tc-getCC)" OPT="${CFLAGS}" CCARGS="${mycc}" AUXLIBS="${mylibs}" makefiles
 }
 
