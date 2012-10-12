@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/remmina
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.40 2012/10/12 22:16:52 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.41 2012/10/12 22:17:57 floppym Exp $
+
+  12 Oct 2012; Mike Gilbert <floppym@gentoo.org>
+  -files/remmina-1.0.0-desktop-file.patch,
+  -files/remmina-1.0.0-fix-desktop-file.patch,
+  -files/remmina-1.0.0-optional-gnome-keyring.patch:
+  Remove old patches.
 
   12 Oct 2012; Mike Gilbert <floppym@gentoo.org>
   +files/remmina-1.0.0_p20121004-avahi.patch, remmina-1.0.0_p20121004.ebuild:
