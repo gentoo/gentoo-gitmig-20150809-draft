@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_proxy_fcgi/mod_proxy_fcgi-0_p816361.ebuild,v 1.1 2010/05/12 08:56:45 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_proxy_fcgi/mod_proxy_fcgi-0_p816361.ebuild,v 1.2 2012/10/12 08:23:31 patrick Exp $
 
 inherit apache-module
 
@@ -19,4 +19,4 @@ RDEPEND=""
 APACHE2_MOD_CONF="36_${PN}"
 APACHE2_MOD_DEFINE="PROXY_FCGI"
 
-need_apache2
+need_apache2_2

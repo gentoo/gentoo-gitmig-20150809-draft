@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_proxy_fcgi
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_proxy_fcgi/ChangeLog,v 1.2 2010/05/20 03:14:29 darkside Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_proxy_fcgi/ChangeLog,v 1.3 2012/10/12 08:23:31 patrick Exp $
+
+  12 Oct 2012; Patrick Lauer <patrick@gentoo.org>
+  mod_proxy_fcgi-0_p816361.ebuild:
+  Restricting to apache 2.2
 
   20 May 2010; Jeremy Olexa <darkside@gentoo.org> Manifest:
   QA: Fix distfile size
@@ -11,4 +15,3 @@
   +files/36_mod_proxy_fcgi.conf, +mod_proxy_fcgi-0_p816361.ebuild,
   +metadata.xml:
   initial ebuild
-
