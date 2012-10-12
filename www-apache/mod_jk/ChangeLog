@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/mod_jk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.72 2012/03/08 11:38:32 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.73 2012/10/12 06:35:22 patrick Exp $
+
+*mod_jk-1.2.37 (12 Oct 2012)
+
+  12 Oct 2012; Patrick Lauer <patrick@gentoo.org> +mod_jk-1.2.37.ebuild:
+  Bump
 
   08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> mod_jk-1.2.32.ebuild:
   x86 stable wrt bug #400519
@@ -323,4 +328,3 @@
   +files/88_mod_jk.conf, +files/jk-workers.properties, +mod_jk-1.2.10.ebuild:
   Inital import. Ebuild is based on the apache-module.eclass, fixes #19094.
   Special thanks to trapni and beu for offering that much help.
-
