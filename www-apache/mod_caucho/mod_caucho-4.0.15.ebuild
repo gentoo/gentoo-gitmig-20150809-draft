@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_caucho/mod_caucho-4.0.15.ebuild,v 1.1 2011/03/15 20:13:40 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_caucho/mod_caucho-4.0.15.ebuild,v 1.2 2012/10/12 09:25:37 patrick Exp $
 
 EAPI="2"
 
@@ -27,7 +27,7 @@ APACHE2_MOD_CONF="88_${PN}"
 APACHE2_MOD_DEFINE="CAUCHO"
 APACHE2_MOD_FILE="${S}/modules/c/src/apache2/.libs/${PN}.so"
 
-need_apache2
+need_apache2_2
 
 src_prepare() {
 	for i in "${WORKDIR}"/${PV}/mod_caucho-*; do

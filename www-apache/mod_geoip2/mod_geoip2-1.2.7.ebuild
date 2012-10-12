@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_geoip2/mod_geoip2-1.2.7.ebuild,v 1.1 2011/10/14 17:08:16 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_geoip2/mod_geoip2-1.2.7.ebuild,v 1.2 2012/10/12 09:27:15 patrick Exp $
 
 inherit apache-module
 
@@ -28,4 +28,4 @@ APACHE2_MOD_FILE="${S}/.libs/${MY_PN}.so"
 APXS2_ARGS="-l GeoIP -c ${MY_PN}.c"
 DOCFILES="INSTALL README README.php Changes"
 
-need_apache2
+need_apache2_2
