@@ -1,9 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.398 2012/10/11 14:08:52 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.399 2012/10/12 21:16:40 tetromino Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (12 Oct 2012)
+# Temporary flag to allow osmesa + win32 on amd64 for overlay users.
+# Remove this mask (and the flag itself) when bug #430268 is resolved.
+app-emulation/wine osmesa-multilib
 
 # Sergey Popov <pinkbyte@gentoo.org> (11 Oct 2012)
 # rdeps on dev-libs/libdnet[ipv6] was not tested.

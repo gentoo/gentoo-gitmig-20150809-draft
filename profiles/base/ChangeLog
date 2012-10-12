@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.446 2012/10/11 14:08:52 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.447 2012/10/12 21:16:40 tetromino Exp $
+
+  12 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
+  Temporarily add a masked osmesa-multilib USE flag for wine to allow overlay
+  users to enable osmesa support for win32 on amd64 until bug #430268 is
+  resolved.
 
   11 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> package.use.mask:
   Mask ipv6 USE-flag on dev-libs/libdnet
