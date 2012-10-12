@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/apache-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.118 2012/05/12 18:09:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.119 2012/10/12 05:35:02 patrick Exp $
+
+*apache-tools-2.2.23 (12 Oct 2012)
+
+  12 Oct 2012; Patrick Lauer <patrick@gentoo.org> +apache-tools-2.2.23.ebuild:
+  Bump for #432284
 
   12 May 2012; Alexis Ballier <aballier@gentoo.org> apache-tools-2.2.22.ebuild:
   keyword ~amd64-fbsd
@@ -461,4 +466,3 @@
   +apache-tools-2.2.4.ebuild:
   Importing the ebuild from our overlay for #150943 (needed for Auth/Digest w/
   lighttpd).
-
