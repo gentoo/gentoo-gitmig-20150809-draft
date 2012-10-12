@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/ifenslave
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ifenslave/ChangeLog,v 1.28 2012/10/12 07:46:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ifenslave/ChangeLog,v 1.29 2012/10/12 21:09:49 robbat2 Exp $
+
+  12 Oct 2012; Robin H. Johnson <robbat2@gentoo.org> ifenslave-1.1.0-r3.ebuild,
+  ifenslave-1.1.0-r4.ebuild, ifenslave-1.1.0-r5.ebuild,
+  ifenslave-1.1.0-r6.ebuild:
+  Bug #438048: Check for CONFIG_BONDING and warn otherwise.
 
   12 Oct 2012; Agostino Sarubbo <ago@gentoo.org> ifenslave-1.1.0-r6.ebuild:
   Stable for amd64, wrt bug #433337
@@ -122,4 +127,3 @@
   metadata.xml, files/modules.d-bond:
   Initial ebuild by myself, for bonding support. Vaguely related to bug #22303
   ;-).
-

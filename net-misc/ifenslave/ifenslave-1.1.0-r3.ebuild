@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ifenslave/ifenslave-1.1.0-r3.ebuild,v 1.8 2009/09/23 19:37:48 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ifenslave/ifenslave-1.1.0-r3.ebuild,v 1.9 2012/10/12 21:09:49 robbat2 Exp $
 
-inherit toolchain-funcs eutils
+inherit toolchain-funcs eutils linux-info
 
 DESCRIPTION="Attach and detach slave interfaces to a bonding device"
 HOMEPAGE="http://sf.net/projects/bonding/"
@@ -21,6 +21,9 @@ RDEPEND=""
 DEPEND="sys-devel/gcc
 		>=sys-kernel/linux-headers-2.4.22
 		${RDEPEND}"
+
+CONFIG_CHECK="~BONDING"
+WARNING_BONDING="CONFIG_BONDING is required to get bond devices in the kernel"
 
 src_unpack() {
 	unpack ${DEBIANPKG_TARBALL}
