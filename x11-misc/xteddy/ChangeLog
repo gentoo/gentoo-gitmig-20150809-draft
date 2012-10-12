@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xteddy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xteddy/ChangeLog,v 1.10 2012/10/12 17:35:46 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xteddy/ChangeLog,v 1.11 2012/10/12 18:15:42 pinkbyte Exp $
+
+  12 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> xteddy-2.2.ebuild:
+  Fix imlib2 dependency wrt bug #438102. Thanks to Vicente Olivert Riera for
+  discovering this issue
 
   12 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> xteddy-2.2.ebuild:
   Fix paths in xtoys script wrt bug #404899
