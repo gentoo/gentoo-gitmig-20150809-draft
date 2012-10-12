@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/mosml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mosml/ChangeLog,v 1.17 2012/10/10 15:33:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mosml/ChangeLog,v 1.18 2012/10/12 13:28:31 kensington Exp $
+
+  12 Oct 2012; Michael Palimaka <kensington@gentoo.org> -mosml-2.01.ebuild:
+  Remove old.
 
   10 Oct 2012; Brent Baude <ranger@gentoo.org> mosml-2.01-r1.ebuild:
   Marking mosml-2.01-r1 ppc for bug 393891
