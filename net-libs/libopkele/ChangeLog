@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libopkele
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libopkele/ChangeLog,v 1.6 2012/05/05 02:54:25 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libopkele/ChangeLog,v 1.7 2012/10/12 06:49:13 patrick Exp $
+
+*libopkele-2.0.4 (12 Oct 2012)
+
+  12 Oct 2012; Patrick Lauer <patrick@gentoo.org> +libopkele-2.0.4.ebuild:
+  Bump
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> libopkele-0.3.2.ebuild,
   libopkele-2.0.3.ebuild:
@@ -26,4 +31,3 @@
   22 Mar 2008; Benedikt Böhm <hollow@gentoo.org> +metadata.xml,
   +libopkele-0.3.2.ebuild:
   initial ebuild wrt #209573
-
