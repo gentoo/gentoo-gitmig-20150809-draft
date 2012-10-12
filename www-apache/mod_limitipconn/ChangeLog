@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/mod_limitipconn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_limitipconn/ChangeLog,v 1.7 2012/03/06 14:15:09 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_limitipconn/ChangeLog,v 1.8 2012/10/12 07:02:22 patrick Exp $
+
+*mod_limitipconn-0.24 (12 Oct 2012)
+
+  12 Oct 2012; Patrick Lauer <patrick@gentoo.org> +mod_limitipconn-0.24.ebuild:
+  Bump
 
   06 Mar 2012; Brent Baude <ranger@gentoo.org> mod_limitipconn-0.23.ebuild:
   Marking mod_limitipconn-0.23 ppc for bug 394083
@@ -97,4 +102,3 @@
 
   03 Apr 2004; Chuck Short <zul@gentoo.org> mod_limitipconn-0.22.ebuild:
   Initial verison, ebuild written by me. Closes #31306.
-
