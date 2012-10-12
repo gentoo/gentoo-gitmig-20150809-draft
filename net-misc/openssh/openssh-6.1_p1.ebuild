@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.1_p1.ebuild,v 1.2 2012/09/25 12:29:34 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.1_p1.ebuild,v 1.3 2012/10/12 19:09:11 vapier Exp $
 
 EAPI="2"
 inherit eutils user flag-o-matic multilib autotools pam systemd
@@ -159,6 +159,7 @@ src_configure() {
 	econf \
 		--with-ldflags="${LDFLAGS}" \
 		--disable-strip \
+		--with-pid-dir=/var/run \
 		--sysconfdir=/etc/ssh \
 		--libexecdir=/usr/$(get_libdir)/misc \
 		--datadir=/usr/share/openssh \
