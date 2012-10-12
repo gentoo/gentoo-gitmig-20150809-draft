@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/testtools-0.9.16.ebuild,v 1.1 2012/10/09 13:02:00 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/testtools-0.9.16.ebuild,v 1.2 2012/10/12 00:50:23 floppym Exp $
 
 EAPI="4"
+PYTHON_DEPEND="*:2.6"
+RESTRICT_PYTHON_ABIS="2.5"
 SUPPORT_PYTHON_ABIS="1"
 DISTUTILS_SRC_TEST="setup.py"
 inherit distutils versionator
