@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ssh-askpass-fullscreen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh-askpass-fullscreen/ChangeLog,v 1.24 2012/10/12 21:41:03 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh-askpass-fullscreen/ChangeLog,v 1.25 2012/10/12 21:46:40 tetromino Exp $
+
+  12 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  ssh-askpass-fullscreen-1.0-r1.ebuild:
+  Add comment explaining the env.d file's purpose.
 
 *ssh-askpass-fullscreen-1.0-r1 (12 Oct 2012)
 
