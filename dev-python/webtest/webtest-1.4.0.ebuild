@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/webtest-1.4.0.ebuild,v 1.1 2012/10/09 13:44:05 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/webtest-1.4.0.ebuild,v 1.2 2012/10/12 01:04:23 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6 3:3.2"
@@ -9,7 +9,7 @@ RESTRICT_PYTHON_ABIS="2.5 3.1"
 PYTHON_TESTS_RESTRICTED_ABIS="*-pypy-*"
 DISTUTILS_SRC_TEST="nosetests"
 
-inherit distutils eutils
+inherit distutils
 
 MY_PN="WebTest"
 MY_P="${MY_PN}-${PV}"
@@ -30,11 +30,6 @@ DEPEND="${RDEPEND}
 	test? ( dev-python/pyquery )"
 
 S="${WORKDIR}/${MY_P}"
-
-src_prepare() {
-	epatch "${FILESDIR}/${PN}-1.3.4-index_fixt.patch"
-	distutils_src_prepare
-}
 
 src_compile() {
 	distutils_src_compile
