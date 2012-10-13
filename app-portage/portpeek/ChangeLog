@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/portpeek
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.154 2012/10/12 11:49:00 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.155 2012/10/13 12:11:26 maekke Exp $
+
+  13 Oct 2012; Markus Meier <maekke@gentoo.org> portpeek-2.0.25.ebuild:
+  arm stable, bug #437832
 
   12 Oct 2012; Anthony G. Basile <blueness@gentoo.org> portpeek-2.0.25.ebuild:
   stable ppc, bug #437832
