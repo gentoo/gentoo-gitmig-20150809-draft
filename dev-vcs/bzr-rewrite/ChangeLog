@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/bzr-rewrite
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-rewrite/ChangeLog,v 1.16 2012/07/01 06:09:57 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-rewrite/ChangeLog,v 1.17 2012/10/13 11:45:21 hwoarang Exp $
+
+  13 Oct 2012; Markos Chandras <hwoarang@gentoo.org> bzr-rewrite-0.6.3.ebuild:
+  Stable on amd64 wrt bug #418969
 
   01 Jul 2012; Christian Faulhammer <fauli@gentoo.org>
   bzr-rewrite-0.6.3.ebuild:
@@ -72,4 +75,3 @@
   09 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
   +bzr-rewrite-0.5.5.ebuild, +metadata.xml:
   initial commit, ebuild taken from Bazaar overlay by Mark Lee and myself
-

@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/bzr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.60 2012/10/11 11:31:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.61 2012/10/13 11:44:46 hwoarang Exp $
+
+  13 Oct 2012; Markos Chandras <hwoarang@gentoo.org> bzr-2.5.1.ebuild:
+  Stable on amd64 wrt bug #418969
 
   11 Oct 2012; Markus Meier <maekke@gentoo.org> bzr-2.5.1.ebuild:
   arm stable, bug #418969
