@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/mplayerthumbs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/mplayerthumbs/ChangeLog,v 1.104 2012/10/02 18:11:36 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/mplayerthumbs/ChangeLog,v 1.105 2012/10/13 22:03:53 johu Exp $
+
+  13 Oct 2012; Johannes Huber <johu@gentoo.org> mplayerthumbs-4.8.5.ebuild,
+  mplayerthumbs-4.9.1.ebuild, mplayerthumbs-4.9.2.ebuild:
+  Drop HOMEPAGE + LICENSE, handled by eclass.
 
 *mplayerthumbs-4.9.2 (02 Oct 2012)
 
@@ -445,4 +449,3 @@
   04 Aug 2009; Alex Alexander <wired@gentoo.org>
   +mplayerthumbs-4.3.0.ebuild:
   Version bump
-
