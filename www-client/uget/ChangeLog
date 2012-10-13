@@ -1,6 +1,13 @@
 # ChangeLog for www-client/uget
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uget/ChangeLog,v 1.32 2012/09/06 05:42:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uget/ChangeLog,v 1.33 2012/10/13 18:15:22 wired Exp $
+
+*uget-1.10.2 (13 Oct 2012)
+
+  13 Oct 2012; Alex Alexander <wired@gentoo.org> +uget-1.10.2.ebuild,
+  uget-9999.ebuild:
+  version bump, sync with live ebuild. bugs fixed: #412843 #416175 #420565 and
+  #434084
 
   06 Sep 2012; Samuli Suominen <ssuominen@gentoo.org> -uget-1.7.0.ebuild,
   -files/uget-1.7.0-as-needed.patch, -uget-1.7.3.ebuild, -uget-1.7.4.ebuild,
