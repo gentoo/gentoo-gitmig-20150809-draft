@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/boehm-gc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/ChangeLog,v 1.82 2012/10/01 09:25:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/ChangeLog,v 1.83 2012/10/13 13:42:13 naota Exp $
+
+  13 Oct 2012;  <naota@gentoo.org> +files/boehm-gc-7.2d-configure.patch,
+  boehm-gc-7.2d.ebuild:
+  Add patch to fix bash-ism configure; Add ~x86-fbsd.
 
 *boehm-gc-7.2d (01 Oct 2012)
 
