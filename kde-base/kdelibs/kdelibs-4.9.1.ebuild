@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.9.1.ebuild,v 1.2 2012/09/19 15:20:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.9.1.ebuild,v 1.3 2012/10/13 21:53:40 johu Exp $
 
 EAPI=4
 
@@ -15,7 +15,6 @@ inherit kde4-base fdo-mime multilib toolchain-funcs flag-o-matic
 EGIT_BRANCH="KDE/4.9"
 
 DESCRIPTION="KDE libraries needed by all KDE programs."
-HOMEPAGE="http://www.kde.org/"
 SRC_URI+=" http://dev.gentoo.org/~johu/distfiles/${PN}-4.8.95-udisks2.patch.xz"
 
 KEYWORDS="~amd64 ~x86 ~amd64-fbsd ~amd64-linux ~x86-linux"
