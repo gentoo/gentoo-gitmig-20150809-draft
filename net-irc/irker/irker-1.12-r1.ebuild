@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irker/irker-1.12-r1.ebuild,v 1.3 2012/10/13 21:16:18 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irker/irker-1.12-r1.ebuild,v 1.4 2012/10/13 21:20:11 floppym Exp $
 
 EAPI=4
 
@@ -13,7 +13,8 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-DEPEND="app-text/xmlto
+DEPEND="app-text/docbook-xml-dtd:4.1.2
+	app-text/xmlto
 	dev-python/irc"
 RDEPEND="${DEPEND}
 	=dev-lang/python-2*"
