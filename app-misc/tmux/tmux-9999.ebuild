@@ -1,32 +1,32 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/tmux-9999.ebuild,v 1.5 2011/07/30 11:58:51 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/tmux-9999.ebuild,v 1.6 2012/10/13 17:34:20 radhermit Exp $
 
-EAPI=3
+EAPI=4
 
-ESVN_REPO_URI="http://tmux.svn.sf.net/svnroot/tmux/trunk"
-ESVN_PROJECT="tmux"
+inherit autotools git-2
 
-inherit autotools subversion
+EGIT_REPO_URI="git://tmux.git.sourceforge.net/gitroot/tmux/tmux"
 
 DESCRIPTION="Terminal multiplexer"
 HOMEPAGE="http://tmux.sourceforge.net"
-SRC_URI=""
 
 LICENSE="ISC"
 SLOT="0"
 KEYWORDS=""
 IUSE="debug vim-syntax"
 
-DEPEND="
-	|| ( >=dev-libs/libevent-2.0.10 <dev-libs/libevent-2 )
+COMMON_DEPEND="
+	>=dev-libs/libevent-2.0.10
 	sys-libs/ncurses"
-RDEPEND="${DEPEND}
+DEPEND="${COMMON_DEPEND}
+	virtual/pkgconfig"
+RDEPEND="${COMMON_DEPEND}
 	vim-syntax? ( || (
-			app-editors/vim
-			app-editors/gvim ) )"
+		app-editors/vim
+		app-editors/gvim ) )"
 
-S="${WORKDIR}"/${PN}
+DOCS=( CHANGES FAQ NOTES TODO )
 
 src_prepare() {
 	eautoreconf
@@ -42,17 +42,16 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	default
 
-	dodoc CHANGES FAQ NOTES TODO || die "dodoc failed"
 	docinto examples
-	dodoc examples/*.conf || die "dodoc examples failed"
+	dodoc examples/*.conf
 
 	if use vim-syntax; then
 		insinto /usr/share/vim/vimfiles/syntax
-		doins examples/tmux.vim || die "doins syntax failed"
+		doins examples/tmux.vim
 
 		insinto /usr/share/vim/vimfiles/ftdetect
-		doins "${FILESDIR}"/tmux.vim || die "doins ftdetect failed"
+		doins "${FILESDIR}"/tmux.vim
 	fi
 }
