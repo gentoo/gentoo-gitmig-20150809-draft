@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/checkpolicy-2.1.11.ebuild,v 1.1 2012/10/09 20:04:47 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/checkpolicy-2.1.11.ebuild,v 1.2 2012/10/13 16:47:08 swift Exp $
 
-inherit toolchain-funcs
+inherit toolchain-funcs eutils
 
 SEPOL_VER="2.1.8"
 SEMNG_VER="2.1.9"
@@ -25,6 +25,10 @@ RDEPEND=">=sys-libs/libsemanage-${SEMNG_VER}"
 
 src_compile() {
 	emake CC="$(tc-getCC)" YACC="bison -y" || die
+}
+
+src_prepare() {
+	epatch_user
 }
 
 src_install() {

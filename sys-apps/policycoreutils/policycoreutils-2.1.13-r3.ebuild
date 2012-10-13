@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-2.1.13-r3.ebuild,v 1.1 2012/10/09 20:03:12 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-2.1.13-r3.ebuild,v 1.2 2012/10/13 16:46:02 swift Exp $
 
 EAPI="4"
 PYTHON_DEPEND="*"
@@ -72,6 +72,8 @@ src_prepare() {
 	cp "${S}/po/sq.po" "${S}/po/gl.po" || die "failed to copy ${S}/po/sq.po to gl.po"
 	cp "${S}/po/sq.po" "${S}/po/id.po" || die "failed to copy ${S}/po/sq.po to id.po"
 	cp "${S}/po/sq.po" "${S}/po/et.po" || die "failed to copy ${S}/po/sq.po to et.po"
+
+	epatch_user
 }
 
 src_compile() {
