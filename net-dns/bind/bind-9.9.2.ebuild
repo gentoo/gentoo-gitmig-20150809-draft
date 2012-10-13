@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.9.2.ebuild,v 1.2 2012/10/12 18:32:35 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.9.2.ebuild,v 1.3 2012/10/13 22:10:43 idl0r Exp $
 
 # Re dlz/mysql and threads, needs to be verified..
 # MySQL uses thread local storage in its C api. Thus MySQL
@@ -78,7 +78,8 @@ DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
 	geoip? ( >=dev-libs/geoip-1.4.6 )
 	gssapi? ( virtual/krb5 )
 	sdb-ldap? ( net-nds/openldap )
-	gost? ( >=dev-libs/openssl-1.0.0[-bindist] )"
+	gost? ( >=dev-libs/openssl-1.0.0[-bindist] )
+	python? ( dev-python/argparse )"
 
 RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-bind )
