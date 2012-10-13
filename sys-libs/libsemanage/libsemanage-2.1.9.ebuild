@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-2.1.9.ebuild,v 1.1 2012/10/09 19:59:31 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-2.1.9.ebuild,v 1.2 2012/10/13 16:43:03 swift Exp $
 
 EAPI="3"
 # Support for 4 depends on python.eclass
@@ -65,6 +65,8 @@ src_prepare() {
 	echo "# Reduce memory usage for bzip2 compression and" >> "${S}/src/semanage.conf"
 	echo "# decompression of modules in the module store." >> "${S}/src/semanage.conf"
 	echo "bzip-small=true" >> "${S}/src/semanage.conf"
+
+	epatch_user
 }
 
 src_compile() {

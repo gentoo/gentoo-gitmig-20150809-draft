@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/libsepol-2.1.8.ebuild,v 1.1 2012/10/09 19:58:45 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/libsepol-2.1.8.ebuild,v 1.2 2012/10/13 16:44:24 swift Exp $
 
 EAPI="2"
 
@@ -29,6 +29,8 @@ src_prepare() {
 	sed -i -e "/^SHLIBDIR/s/lib/$(get_libdir)/" src/Makefile \
 		|| die "Fix for multilib SHLIBDIR failed."
 	epatch "${FILESDIR}/libsepol-2.1.4-fix_role_fix_callback.patch"
+
+	epatch_user
 }
 
 src_compile() {

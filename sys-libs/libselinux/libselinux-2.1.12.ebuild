@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-2.1.12.ebuild,v 1.1 2012/10/09 20:00:12 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-2.1.12.ebuild,v 1.2 2012/10/13 16:42:25 swift Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? *"
@@ -47,6 +47,8 @@ src_prepare() {
 		-e "/^SHLIBDIR/s/lib/$(get_libdir)/" \
 		src/Makefile utils/Makefile || die
 	epatch "${FILESDIR}/${P}-mountsys.patch"
+
+	epatch_user
 }
 
 src_compile() {
