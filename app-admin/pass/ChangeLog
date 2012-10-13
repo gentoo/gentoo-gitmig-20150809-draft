@@ -1,0 +1,11 @@
+# ChangeLog for app-admin/pass
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pass/ChangeLog,v 1.1 2012/10/13 20:19:15 zx2c4 Exp $
+
+*pass-9999 (13 Oct 2012)
+*pass-1.4.1 (13 Oct 2012)
+
+  13 Oct 2012; Jason A. Donenfeld <zx2c4@gentoo.org> +pass-1.4.1.ebuild,
+  +pass-9999.ebuild, +metadata.xml:
+  Initial version of pass.
+
