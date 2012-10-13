@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/leechcraft-full
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/ChangeLog,v 1.28 2012/10/08 15:55:51 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/ChangeLog,v 1.29 2012/10/13 14:06:43 pinkbyte Exp $
+
+  13 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> leechcraft-full-9999.ebuild:
+  Add www-misc/leechcraft-pogooglue
 
 *leechcraft-full-0.5.85 (08 Oct 2012)
 
