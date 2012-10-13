@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/kdepimlibs-4.9.2.ebuild,v 1.1 2012/10/02 18:11:40 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/kdepimlibs-4.9.2.ebuild,v 1.2 2012/10/13 22:07:59 johu Exp $
 
 EAPI=4
 
@@ -9,8 +9,6 @@ CPPUNIT_REQUIRED="optional"
 inherit kde4-base
 
 DESCRIPTION="Common library for KDE PIM apps."
-HOMEPAGE="http://www.kde.org/"
-
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 LICENSE="LGPL-2.1"
 IUSE="debug ldap prison semantic-desktop"
