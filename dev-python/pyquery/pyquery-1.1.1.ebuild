@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyquery/pyquery-1.1.1.ebuild,v 1.10 2012/08/05 06:56:20 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyquery/pyquery-1.1.1.ebuild,v 1.11 2012/10/13 18:45:57 armin76 Exp $
 
 EAPI=3
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~hppa ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm ~hppa ia64 ~ppc ~ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="test"
 
 RDEPEND=">=dev-python/lxml-2.1"
