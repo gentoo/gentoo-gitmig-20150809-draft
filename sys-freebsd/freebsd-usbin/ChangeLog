@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-usbin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.79 2012/09/11 17:10:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.80 2012/10/13 19:21:58 aballier Exp $
+
+  13 Oct 2012; Alexis Ballier <aballier@gentoo.org>
+  freebsd-usbin-9.1_rc1.ebuild:
+  Remove the pkg command: we do not need it. Bug #437388 by Yuta SATOH.
 
 *freebsd-usbin-9.1_rc1 (11 Sep 2012)
 
