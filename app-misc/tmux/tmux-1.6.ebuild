@@ -1,10 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/tmux-1.6.ebuild,v 1.8 2012/09/26 12:19:51 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/tmux-1.6.ebuild,v 1.9 2012/10/13 17:23:16 radhermit Exp $
 
 EAPI=4
-
-inherit eutils
 
 DESCRIPTION="Terminal multiplexer"
 HOMEPAGE="http://tmux.sourceforge.net"
@@ -12,7 +10,7 @@ SRC_URI="mirror://sourceforge/tmux/${P}.tar.gz"
 
 LICENSE="ISC"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~mips ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="amd64 ~arm ~mips ppc ~ppc64 x86 ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="vim-syntax"
 
 DEPEND="
