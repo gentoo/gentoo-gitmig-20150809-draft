@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.421 2012/10/12 18:32:35 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.422 2012/10/13 16:59:52 armin76 Exp $
+
+  13 Oct 2012; Raúl Porcel <armin76@gentoo.org> bind-9.9.1_p4.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #437828
 
   12 Oct 2012; Christian Ruppert <idl0r@gentoo.org> bind-9.9.2.ebuild:
   Fix python_convert_shebangs, bug 438018.
