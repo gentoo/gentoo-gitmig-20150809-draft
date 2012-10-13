@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-irclib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-irclib/ChangeLog,v 1.11 2012/10/13 05:25:20 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-irclib/ChangeLog,v 1.12 2012/10/13 20:56:19 floppym Exp $
+
+  13 Oct 2012; Mike Gilbert <floppym@gentoo.org> -python-irclib-3.2.2.ebuild,
+  python-irclib-0.4.8.ebuild:
+  Moved to dev-python/irc.
 
 *python-irclib-3.2.2 (13 Oct 2012)
 

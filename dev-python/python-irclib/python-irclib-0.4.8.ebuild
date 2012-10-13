@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-irclib/python-irclib-0.4.8.ebuild,v 1.2 2010/11/15 03:22:57 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-irclib/python-irclib-0.4.8.ebuild,v 1.3 2012/10/13 20:56:19 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -20,7 +20,6 @@ IUSE="doc"
 
 DEPEND=""
 RDEPEND=""
-RESTRICT="mirror"
 
 PYTHON_MODNAME="ircbot.py irclib.py"
 
