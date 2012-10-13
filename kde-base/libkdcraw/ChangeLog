@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkdcraw
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdcraw/ChangeLog,v 1.128 2012/10/02 18:12:16 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdcraw/ChangeLog,v 1.129 2012/10/13 22:29:29 johu Exp $
+
+  13 Oct 2012; Johannes Huber <johu@gentoo.org> libkdcraw-4.8.5.ebuild,
+  libkdcraw-4.9.1.ebuild, libkdcraw-4.9.2.ebuild:
+  Drop HOMEPAGE + LICENSE, handled by eclass, bug #438088.
 
 *libkdcraw-4.9.2 (02 Oct 2012)
 
@@ -520,4 +524,3 @@
   02 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   +metadata.xml, +libkdcraw-4.1.2.ebuild:
   Add kde-4.1.2 into the tree from the kde-testing overlay.
-
