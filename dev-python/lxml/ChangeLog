@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/lxml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.136 2012/10/02 01:34:54 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.137 2012/10/13 18:43:05 armin76 Exp $
+
+  13 Oct 2012; Raúl Porcel <armin76@gentoo.org> lxml-2.3.4.ebuild,
+  lxml-2.3.5.ebuild, lxml-2.3.6.ebuild:
+  Add ~s390/~sh
 
   02 Oct 2012; Mike Gilbert <floppym@gentoo.org> lxml-2.3.4.ebuild,
   lxml-2.3.5.ebuild, lxml-2.3.6.ebuild:
