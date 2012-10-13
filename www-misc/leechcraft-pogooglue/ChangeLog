@@ -1,0 +1,10 @@
+# ChangeLog for www-misc/leechcraft-pogooglue
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/leechcraft-pogooglue/ChangeLog,v 1.1 2012/10/13 14:02:07 pinkbyte Exp $
+
+*leechcraft-pogooglue-9999 (13 Oct 2012)
+
+  13 Oct 2012; Sergey Popov <pinkbyte@gentoo.org>
+  +leechcraft-pogooglue-9999.ebuild, +metadata.xml:
+  Initial commit, thanks to 0xd34df00d
+
