@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/irker
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irker/ChangeLog,v 1.1 2012/10/13 05:53:35 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irker/ChangeLog,v 1.2 2012/10/13 20:52:57 floppym Exp $
+
+*irker-1.12-r1 (13 Oct 2012)
+
+  13 Oct 2012; Mike Gilbert <floppym@gentoo.org> +irker-1.12-r1.ebuild,
+  -irker-1.12.ebuild:
+  Depend on dev-python/irc instead of dev-python/python-irclib.
 
 *irker-1.12 (13 Oct 2012)
 
