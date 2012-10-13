@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta-pkg.eclass,v 1.8 2012/05/08 22:00:49 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta-pkg.eclass,v 1.9 2012/10/13 22:54:37 johu Exp $
 
 # @ECLASS: kde4-meta-pkg.eclass
 # @MAINTAINER:
@@ -13,7 +13,7 @@ inherit kde4-functions
 
 HOMEPAGE="http://www.kde.org/"
 
-LICENSE="GPL-2"
+LICENSE="metapackage"
 IUSE="aqua"
 
 # Only add the kdeprefix USE flag for older versions, to help
