@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.225 2012/10/12 19:13:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.226 2012/10/13 17:00:44 armin76 Exp $
+
+  13 Oct 2012; Raúl Porcel <armin76@gentoo.org> dhcp-4.2.4_p2.ebuild:
+  alpha/s390/sh/sparc stable wrt #434880
 
   12 Oct 2012; Mike Frysinger <vapier@gentoo.org> dhcp-4.2.4_p2-r1.ebuild:
   Set AR ourselves since dhcp's build system doesn't do it for us #437980 by
