@@ -1,6 +1,11 @@
 # ChangeLog for app-mobilephone/anyremote
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/anyremote/ChangeLog,v 1.27 2012/09/10 11:54:11 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/anyremote/ChangeLog,v 1.28 2012/10/13 20:06:04 hwoarang Exp $
+
+*anyremote-6.1 (13 Oct 2012)
+
+  13 Oct 2012; Markos Chandras <hwoarang@gentoo.org> +anyremote-6.1.ebuild:
+  Version bump
 
   10 Sep 2012; Johannes Huber <johu@gentoo.org> anyremote-6.0.ebuild:
   Stable for x86, wrt bug #428888
@@ -144,4 +149,3 @@
   21 Apr 2009; Markos Chandras <hwoarang@gentoo.org> +metadata.xml,
   +anyremote-4.18.1.ebuild:
   Initial commit of anyremote program. Fixes bug #209686
-
