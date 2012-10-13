@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdrkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/ChangeLog,v 1.96 2012/08/02 13:05:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/ChangeLog,v 1.97 2012/10/13 06:32:48 blueness Exp $
+
+  13 Oct 2012; Anthony G. Basile <blueness@gentoo.org> cdrkit-1.1.11-r1.ebuild:
+  Keyword ~mips, needed for catalyst
 
 *cdrkit-1.1.11-r1 (02 Aug 2012)
 
@@ -334,4 +337,3 @@
   05 Sep 2006; Luis Medinas <metalgod@gentoo.org> +metadata.xml,
   +cdrkit-1.0_pre3.ebuild:
   Initial import of cdrkit the fork of the latest complete free cdrtools sources.
-
