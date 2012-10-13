@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kde-l10n
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/ChangeLog,v 1.149 2012/10/02 18:11:38 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/ChangeLog,v 1.150 2012/10/13 21:49:03 johu Exp $
+
+  13 Oct 2012; Johannes Huber <johu@gentoo.org> kde-l10n-4.8.5.ebuild,
+  kde-l10n-4.9.1.ebuild, kde-l10n-4.9.2.ebuild:
+  Drop HOMEPAGE + LICENSE, handled by eclass.
 
 *kde-l10n-4.9.2 (02 Oct 2012)
 
@@ -633,4 +637,3 @@
   17 Jan 2008; Wulf C. Krueger <philantrop@gentoo.org>
   +kde-l10n-4.0.0.ebuild:
   Added KDE 4.0.0's kde-l10n.
-
