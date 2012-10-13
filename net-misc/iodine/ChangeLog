@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/iodine
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iodine/ChangeLog,v 1.7 2012/07/11 18:03:38 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iodine/ChangeLog,v 1.8 2012/10/13 20:23:33 zx2c4 Exp $
+
+  13 Oct 2012; Jason A. Donenfeld <zx2c4@gentoo.org> metadata.xml:
+  Update iodine metadata to reflect new developer email address.
 
   11 Jul 2012; Víctor Ostorga <vostorga@gentoo.org>
   iodine-0.6.0_rc1-r1.ebuild:
@@ -39,4 +42,3 @@
   +files/iodine-0.5.2-Makefile.patch, +files/iodined.conf,
   +files/iodined.init, +metadata.xml:
   Initial commit, ebuild thanks to Erik Ekman bug 173038
-
