@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.1.1.ebuild,v 1.1 2012/09/02 22:10:09 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.1.3.ebuild,v 1.1 2012/10/13 19:07:34 flameeyes Exp $
 
 EAPI=4
 
@@ -19,11 +19,12 @@ fi
 LICENSE="GPL-3 LGPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
-IUSE="+cxx doc examples guile nls pkcs11 static-libs test zlib"
+IUSE="+cxx dane doc examples guile nls pkcs11 static-libs test zlib"
 
-RDEPEND=">=dev-libs/libtasn1-0.3.4
+RDEPEND=">=dev-libs/libtasn1-2.14
 	>=dev-libs/nettle-2.5[gmp]
 	sys-devel/autogen
+	dane? ( net-dns/unbound )
 	guile? ( >=dev-scheme/guile-1.8[networking] )
 	nls? ( virtual/libintl )
 	pkcs11? ( >=app-crypt/p11-kit-0.11 )
@@ -81,6 +82,7 @@ src_configure() {
 		--disable-silent-rules \
 		--disable-valgrind-tests \
 		$(use_enable cxx) \
+		$(use_enable dane libdane) \
 		$(use_enable doc gtk-doc) \
 		$(use_enable doc gtk-doc-pdf) \
 		$(use_enable guile) \
