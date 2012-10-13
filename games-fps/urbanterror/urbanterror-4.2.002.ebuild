@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/urbanterror-4.2.002.ebuild,v 1.1 2012/10/12 14:48:20 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/urbanterror-4.2.002.ebuild,v 1.2 2012/10/13 03:12:43 mr_bones_ Exp $
 
 EAPI=4
 
@@ -81,7 +81,6 @@ src_install() {
 	dodoc ChangeLog README md4-readme.txt "${S_DATA}"/q3ut4/readme42.txt
 	insinto "${GAMES_DATADIR}"/${PN}/q3ut4
 	doins -r "${S_DATA}"/q3ut4/*.pk3
-
 
 	if use !dedicated ; then
 		newgamesbin build/$(usex debug "debug" "release")-linux-${my_arch}/Quake3-UrT$(usex smp "-smp" "").${my_arch} ${PN}
