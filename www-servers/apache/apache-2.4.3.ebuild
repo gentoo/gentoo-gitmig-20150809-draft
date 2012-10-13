@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.4.3.ebuild,v 1.1 2012/10/12 06:06:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.4.3.ebuild,v 1.2 2012/10/13 03:13:09 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ IUSE_MPMS_FORK="itk peruser prefork"
 IUSE_MPMS_THREAD="event worker"
 
 # << obsolete modules:
-# authn_default authz_default mem_cache 
+# authn_default authz_default mem_cache
 # mem_cache is replaced by cache_disk
 # ?? buggy modules
 # proxy_scgi: startup error: undefined symbol "ap_proxy_release_connection", no fix found
