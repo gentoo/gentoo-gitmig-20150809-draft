@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/argyllcms/argyllcms-1.4.0.ebuild,v 1.3 2012/05/21 21:45:33 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/argyllcms/argyllcms-1.4.0.ebuild,v 1.4 2012/10/13 11:00:14 pinkbyte Exp $
 
 EAPI=4
 
-inherit base
+inherit base toolchain-funcs
 
 MY_P="Argyll_V${PV}"
 DESCRIPTION="Open source, ICC compatible color management system"
@@ -29,7 +29,8 @@ RDEPEND="media-libs/tiff
 	x11-libs/libXScrnSaver"
 DEPEND="${RDEPEND}
 	app-arch/unzip
-	dev-util/ftjam"
+	dev-util/ftjam
+	virtual/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -70,7 +71,9 @@ src_install() {
 	insinto /usr/share/${PN}/ref
 	doins   ref/*
 
-	insinto /etc/udev/rules.d
+	local udevdir=/lib/udev
+	has_version sys-fs/udev && udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
+	insinto "${udevdir}"/rules.d
 	doins libusb/55-Argyll.rules
 }
 
