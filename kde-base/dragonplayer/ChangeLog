@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/dragonplayer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dragonplayer/ChangeLog,v 1.124 2012/09/03 13:29:43 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dragonplayer/ChangeLog,v 1.125 2012/10/13 21:43:04 johu Exp $
+
+  13 Oct 2012; Johannes Huber <johu@gentoo.org> dragonplayer-4.8.5.ebuild:
+  Drop custom HOMEPAGE, which is without content. Drop LICENSE, handled by
+  eclass.
 
   03 Sep 2012; Johannes Huber <johu@gentoo.org> -dragonplayer-4.7.4.ebuild:
   Remove KDE SC 4.7.4
@@ -532,4 +536,3 @@
   +dragonplayer-2.0.ebuild:
   Initial import of dragonplayer. It will be part of kdemultimedia-4.1 but a
   2.0 version has been released for 4.0.x. Bug #209678.
-
