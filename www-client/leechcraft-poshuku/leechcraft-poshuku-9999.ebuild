@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/leechcraft-poshuku/leechcraft-poshuku-9999.ebuild,v 1.5 2012/09/23 10:10:07 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/leechcraft-poshuku/leechcraft-poshuku-9999.ebuild,v 1.6 2012/10/13 13:39:51 pinkbyte Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ DESCRIPTION="Poshuku, the full-featured web browser plugin for LeechCraft."
 SLOT="0"
 KEYWORDS=""
 IUSE="debug +cleanweb +fatape +filescheme +fua +idn +keywords +onlinebookmarks
-		+pcre postgres pogooglue +sqlite wyfv"
+		+pcre postgres +sqlite wyfv"
 
 DEPEND="~net-misc/leechcraft-core-${PV}[postgres?,sqlite?]
 		x11-libs/qt-webkit:4
@@ -38,7 +38,6 @@ src_configure() {
 		$(cmake-utils_use_enable keywords POSHUKU_KEYWORDS)
 		$(cmake-utils_use_enable onlinebookmarks POSHUKU_ONLINEBOOKMARKS)
 		$(cmake-utils_use_enable pcre POSHUKU_CLEANWEB_PCRE)
-		$(cmake-utils_use_enable pogooglue POSHUKU_POGOOGLUE)
 		$(cmake-utils_use_enable wyfv POSHUKU_WYFV)
 		"
 

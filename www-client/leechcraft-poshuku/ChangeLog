@@ -1,6 +1,10 @@
 # ChangeLog for www-client/leechcraft-poshuku
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/leechcraft-poshuku/ChangeLog,v 1.19 2012/10/08 16:07:22 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/leechcraft-poshuku/ChangeLog,v 1.20 2012/10/13 13:39:51 pinkbyte Exp $
+
+  13 Oct 2012; Sergey Popov <pinkbyte@gentoo.org>
+  leechcraft-poshuku-9999.ebuild:
+  Remove pogooglue USE flag by upstream's request
 
 *leechcraft-poshuku-0.5.85 (08 Oct 2012)
 
