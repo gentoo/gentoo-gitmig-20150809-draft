@@ -13,5 +13,6 @@ developers to develop input method easily.
   <flag name='gtk3'>Enable support for gtk+3</flag>
   <flag name='vala'>Enable support for <pkg>dev-lang/vala</pkg></flag>
   <flag name='introspection'>Use <pkg>dev-libs/gobject-introspection</pkg> for introspection</flag>
+  <flag name='deprecated'>install the deprecated ibus python library</flag>
 </use>
 </pkgmetadata>
