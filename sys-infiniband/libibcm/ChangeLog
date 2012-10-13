@@ -1,6 +1,9 @@
 # ChangeLog for sys-infiniband/libibcm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/libibcm/ChangeLog,v 1.4 2012/10/12 13:19:33 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/libibcm/ChangeLog,v 1.5 2012/10/13 06:48:21 alexxy Exp $
+
+  13 Oct 2012; Alexey Shvetsov <alexxy@gentoo.org> libibcm-1.0.5-r2.ebuild:
+  [sys-infiniband] Update OFED
 
 *libibcm-1.0.5-r2 (12 Oct 2012)
 

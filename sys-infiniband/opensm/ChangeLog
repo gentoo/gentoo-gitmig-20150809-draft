@@ -1,6 +1,9 @@
 # ChangeLog for sys-infiniband/opensm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/opensm/ChangeLog,v 1.4 2012/10/12 13:19:36 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/opensm/ChangeLog,v 1.5 2012/10/13 06:48:23 alexxy Exp $
+
+  13 Oct 2012; Alexey Shvetsov <alexxy@gentoo.org> opensm-3.3.15.ebuild:
+  [sys-infiniband] Update OFED
 
 *opensm-3.3.15 (12 Oct 2012)
 

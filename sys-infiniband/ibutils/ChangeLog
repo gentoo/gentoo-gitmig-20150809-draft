@@ -1,6 +1,9 @@
 # ChangeLog for sys-infiniband/ibutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/ibutils/ChangeLog,v 1.5 2012/10/12 13:19:31 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/ibutils/ChangeLog,v 1.6 2012/10/13 06:48:20 alexxy Exp $
+
+  13 Oct 2012; Alexey Shvetsov <alexxy@gentoo.org> ibutils-1.5.7-r2.ebuild:
+  [sys-infiniband] Update OFED
 
 *ibutils-1.5.7-r2 (12 Oct 2012)
 

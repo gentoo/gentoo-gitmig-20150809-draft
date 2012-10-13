@@ -1,6 +1,9 @@
 # ChangeLog for sys-infiniband/dapl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/dapl/ChangeLog,v 1.5 2012/10/12 13:19:36 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/dapl/ChangeLog,v 1.6 2012/10/13 06:48:23 alexxy Exp $
+
+  13 Oct 2012; Alexey Shvetsov <alexxy@gentoo.org> dapl-2.0.36.ebuild:
+  [sys-infiniband] Update OFED
 
 *dapl-2.0.36 (12 Oct 2012)
 
