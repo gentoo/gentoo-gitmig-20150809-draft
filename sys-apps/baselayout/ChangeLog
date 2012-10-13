@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.529 2012/08/23 21:47:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.530 2012/10/13 19:18:18 aballier Exp $
+
+  13 Oct 2012; Alexis Ballier <aballier@gentoo.org> baselayout-2.2.ebuild:
+  Do not die for "non-standard" mutlilib setups on FreeBSD since that is what
+  we want. bug #436560
 
   23 Aug 2012; Mike Frysinger <vapier@gentoo.org> baselayout-2.1-r1.ebuild,
   baselayout-2.2.ebuild:
