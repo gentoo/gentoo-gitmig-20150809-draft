@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyftpdlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyftpdlib/ChangeLog,v 1.15 2012/10/11 11:30:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyftpdlib/ChangeLog,v 1.16 2012/10/13 11:44:32 hwoarang Exp $
+
+  13 Oct 2012; Markos Chandras <hwoarang@gentoo.org> pyftpdlib-0.7.0.ebuild:
+  Stable on amd64 wrt bug #418969
 
   11 Oct 2012; Markus Meier <maekke@gentoo.org> pyftpdlib-0.7.0.ebuild:
   arm stable, bug #418969
@@ -52,4 +55,3 @@
   +metadata.xml:
   Initial import, bug #354177. Ebuild uses parts submitted by Axel ETCHEVERRY
   <axel@etcheverry.biz>.
-
