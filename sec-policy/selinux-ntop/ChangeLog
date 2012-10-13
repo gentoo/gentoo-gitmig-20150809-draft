@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-ntop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ntop/ChangeLog,v 1.34 2012/10/04 18:29:25 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ntop/ChangeLog,v 1.35 2012/10/13 16:30:42 swift Exp $
+
+*selinux-ntop-9999 (13 Oct 2012)
+
+  13 Oct 2012; <swift@gentoo.org> +selinux-ntop-9999.ebuild:
+  Adding live ebuild
 
   04 Oct 2012; <swift@gentoo.org> selinux-ntop-2.20120725-r5.ebuild:
   Stabilization

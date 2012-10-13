@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-bluetooth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-bluetooth/ChangeLog,v 1.14 2012/10/04 18:29:27 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-bluetooth/ChangeLog,v 1.15 2012/10/13 16:30:58 swift Exp $
+
+*selinux-bluetooth-9999 (13 Oct 2012)
+
+  13 Oct 2012; <swift@gentoo.org> +selinux-bluetooth-9999.ebuild:
+  Adding live ebuild
 
   04 Oct 2012; <swift@gentoo.org> selinux-bluetooth-2.20120725-r5.ebuild:
   Stabilization
