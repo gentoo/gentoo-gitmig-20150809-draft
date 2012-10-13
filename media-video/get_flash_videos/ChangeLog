@@ -1,6 +1,15 @@
 # ChangeLog for media-video/get_flash_videos
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/get_flash_videos/ChangeLog,v 1.13 2012/04/14 18:53:53 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/get_flash_videos/ChangeLog,v 1.14 2012/10/13 20:36:17 zx2c4 Exp $
+
+*get_flash_videos-9999 (13 Oct 2012)
+
+  13 Oct 2012; Jason A. Donenfeld <zx2c4@gentoo.org>
+  +get_flash_videos-9999.ebuild:
+  Since get_flash_videos is always adapting for site changes, and because no
+  packages have been released since 2010, it makes sense to have a live ebuild,
+  since this is what most users in the get_flash_videos community use, as well
+  as the devs.
 
   14 Apr 2012; Zac Medico <zmedico@gentoo.org> get_flash_videos-1.24-r1.ebuild:
   Add ~amd64-linux keyword.
@@ -64,4 +73,3 @@
   +get_flash_videos-1.21.ebuild, +metadata.xml:
   Initial commit of get_flash_videos application. Fixes bug #318929. Thanks
   to Maxime de Roucy <maxime.deroucy@gmail.com> for the ebuild
-
