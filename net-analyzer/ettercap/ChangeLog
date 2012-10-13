@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ettercap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.103 2012/10/12 17:13:01 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.104 2012/10/13 17:01:36 armin76 Exp $
+
+  13 Oct 2012; Raúl Porcel <armin76@gentoo.org> ettercap-0.7.5.ebuild:
+  alpha/arm/sparc stable wrt #340897
 
   12 Oct 2012; Jeroen Roovers <jer@gentoo.org> ettercap-0.7.5.ebuild:
   Stable for HPPA (bug #340897).
