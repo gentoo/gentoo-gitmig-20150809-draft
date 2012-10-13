@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/ktouchpadenabler/ktouchpadenabler-0.1.0.ebuild,v 1.1 2012/05/17 21:22:11 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/ktouchpadenabler/ktouchpadenabler-0.1.1.ebuild,v 1.1 2012/10/13 21:04:10 johu Exp $
 
 EAPI=4
 
-KDE_LINGUAS="ar ca cs da de el es et ga hu ja lt nb nds nl pl pt pt_BR sk sv uk
-zh_TW"
+KDE_LINGUAS="ar ca cs da de el es et fi fr ga hu ja kk km lt nb nds nl pl pt
+pt_BR sk sl sv uk zh_CN zh_TW"
 inherit kde4-base
 
 DESCRIPTION="KDED daemon listening to XF86XK_TouchpadToggle"
