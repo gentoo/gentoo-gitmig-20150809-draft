@@ -20,7 +20,7 @@ Apache 2 and mod_python users: you have to manually emerge
 www-apache/mod_python. See http://trac.edgewall.org/wiki/TracModPython
 
 You can also use Trac without having to install a web server. See
-http://projects.edgewall.com/trac/wiki/TracStandalone to know more.
+http://trac.edgewall.org/wiki/TracStandalone to know more.
 
 Trac relies on the web server for users authentication. Please refer to the
 Trac wiki and to your web server documentation to set up authentication.
@@ -35,7 +35,7 @@ command:
 
 Don't forget to review the configuration file! It is located at
 /var/lib/trac/<project-name>/conf/trac.ini. Consult its reference at
-http://projects.edgewall.com/trac/wiki/TracIni
+http://trac.edgewall.org/wiki/TracIni
 
 See http://trac.edgewall.org/wiki/TracEnvironment to know more about Trac
 environments and how to configure them.

@@ -10,7 +10,7 @@ possible caveats.
 If you are upgrading from a previous Trac version, please follow the
 instructions here:
 
-	http://projects.edgewall.com/trac/wiki/TracUpgrade
+	http://trac.edgewall.org/wiki/TracUpgrade
 
 You will need to run trac-admin commands (upgrade, wiki upgrade...) for each
 Trac environment you have.
