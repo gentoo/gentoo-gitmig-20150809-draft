@@ -1,8 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.6.2.ebuild,v 1.1 2012/10/07 17:53:28 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.6.2.ebuild,v 1.2 2012/10/14 20:53:31 jlec Exp $
 
 EAPI=4
+
+FORTRAN_NEEDED=fortran
+
 inherit eutils fortran-2 multilib flag-o-matic toolchain-funcs versionator
 
 MY_P=${P/-mpi}

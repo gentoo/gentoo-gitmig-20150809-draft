@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/openmpi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.112 2012/10/14 19:40:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.113 2012/10/14 20:53:31 jlec Exp $
+
+  14 Oct 2012; Justin Lecher <jlec@gentoo.org> openmpi-1.6.2.ebuild,
+  metadata.xml:
+  Missed one ebuild for fortran
 
   14 Oct 2012; Justin Lecher <jlec@gentoo.org> openmpi-1.4.3.ebuild,
   openmpi-1.4.4.ebuild, openmpi-1.5.5.ebuild, openmpi-1.6-r1.ebuild,
