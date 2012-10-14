@@ -3,6 +3,7 @@
 <pkgmetadata>
 	<herd>sound</herd>
 	<use>
+		<flag name="magic">Use libmagic to determine mimetypes</flag>
 		<flag name="sid">Build with SID (Commodore 64 Audio) support</flag>
 	</use>
 </pkgmetadata>
