@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cgdb/cgdb-0.6.6.ebuild,v 1.5 2012/06/14 16:28:12 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cgdb/cgdb-0.6.6.ebuild,v 1.6 2012/10/14 20:10:39 maekke Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/cgdb/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd ~amd64-linux"
+KEYWORDS="amd64 ~arm ppc ppc64 x86 ~x86-fbsd ~amd64-linux"
 IUSE=""
 
 DEPEND="sys-libs/ncurses
