@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/apache-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.122 2012/10/13 18:55:59 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.123 2012/10/14 17:45:23 jer Exp $
+
+  14 Oct 2012; Jeroen Roovers <jer@gentoo.org> apache-tools-2.2.23.ebuild:
+  Stable for HPPA (bug #432284).
 
   13 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
   apache-tools-2.2.23.ebuild:
