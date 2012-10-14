@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gdl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.78 2012/10/07 01:35:33 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.79 2012/10/14 23:51:34 mattst88 Exp $
+
+  14 Oct 2012; Matt Turner <mattst88@gentoo.org> gdl-3.4.2.ebuild:
+  Stable on alpha, bug 427544.
 
   07 Oct 2012; Anthony G. Basile <blueness@gentoo.org> gdl-3.4.2.ebuild:
   stable ppc64, bug #427544
