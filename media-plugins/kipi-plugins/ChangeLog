@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/kipi-plugins
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.129 2012/09/03 19:13:18 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.130 2012/10/14 16:46:03 dilfridge Exp $
+
+  14 Oct 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  -files/kipi-plugins-1.7.0-expoblending.patch,
+  -files/kipi-plugins-2.2.0-panorama.patch:
+  Clean up
 
 *kipi-plugins-2.9.0 (03 Sep 2012)
 
