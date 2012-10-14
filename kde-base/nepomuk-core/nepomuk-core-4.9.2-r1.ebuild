@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk-core/nepomuk-core-4.9.2-r1.ebuild,v 1.1 2012/10/04 07:25:15 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk-core/nepomuk-core-4.9.2-r1.ebuild,v 1.2 2012/10/14 00:02:13 johu Exp $
 
 EAPI=4
 
@@ -24,4 +24,5 @@ RESTRICT="test"
 PATCHES=(
 	"${FILESDIR}/${P}-kinotify-delete.patch"
 	"${FILESDIR}/${P}-dirwatch-null.patch"
+	"${FILESDIR}/${P}-build-fix-dirwatch-not-exists.patch"
 )
