@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gnome-pty-helper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gnome-pty-helper/ChangeLog,v 1.17 2012/10/06 09:55:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gnome-pty-helper/ChangeLog,v 1.18 2012/10/14 13:02:38 blueness Exp $
+
+  14 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  gnome-pty-helper-0.32.2.ebuild:
+  stable ppc64, bug #427544
 
   06 Oct 2012; Markus Meier <maekke@gentoo.org> gnome-pty-helper-0.32.2.ebuild:
   arm stable, bug #427544
@@ -70,4 +74,3 @@
   30 Apr 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   +gnome-pty-helper-0.28.0.ebuild, +metadata.xml:
   Add gnome-pty-helper, needed for vte-0.28
-

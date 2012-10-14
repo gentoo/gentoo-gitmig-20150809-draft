@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gksu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.68 2012/10/06 09:54:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.69 2012/10/14 13:00:43 blueness Exp $
+
+  14 Oct 2012; Anthony G. Basile <blueness@gentoo.org> gksu-2.0.2-r1.ebuild:
+  stable ppc64, bug #427544
 
   06 Oct 2012; Markus Meier <maekke@gentoo.org> gksu-2.0.2-r1.ebuild:
   arm stable, bug #427544
@@ -253,4 +256,3 @@
   26 Apr 2004; Daniel Black <dragonheart@gentoo.org> :
   Inital import to support gtk-cpuspeedy. Missing dependancy noticed by Priit
   Laes <amd@tt.ee> in bug #48978
-
