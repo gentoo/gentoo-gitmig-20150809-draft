@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/cvs2svn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs2svn/ChangeLog,v 1.5 2012/03/05 20:33:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs2svn/ChangeLog,v 1.6 2012/10/14 10:37:58 robbat2 Exp $
+
+*cvs2svn-2.4.0 (14 Oct 2012)
+
+  14 Oct 2012; Robin H. Johnson <robbat2@gentoo.org> +cvs2svn-2.4.0.ebuild:
+  Version bump.
 
   05 Mar 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Remove betelgeuse
@@ -145,4 +150,3 @@
   New ebuild for cvs2svn.  I'm not sure when this was separated from
   subversion proper, but it isn't present in 1.0.9 which is stable on
   all arches.
-
