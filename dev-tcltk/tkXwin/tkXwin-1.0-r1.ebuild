@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkXwin/tkXwin-1.0-r1.ebuild,v 1.14 2012/06/07 20:43:26 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkXwin/tkXwin-1.0-r1.ebuild,v 1.15 2012/10/14 11:28:52 jlec Exp $
 
 inherit eutils multilib
 
@@ -15,6 +15,7 @@ KEYWORDS="alpha amd64 ppc sparc x86"
 
 DEPEND="
 	dev-lang/tk
+	x11-libs/libXScrnSaver
 	x11-proto/scrnsaverproto
 	x11-proto/xextproto"
 RDEPEND="${DEPEND}"

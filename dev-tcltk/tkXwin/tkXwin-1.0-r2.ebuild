@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkXwin/tkXwin-1.0-r2.ebuild,v 1.6 2012/06/07 20:43:26 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkXwin/tkXwin-1.0-r2.ebuild,v 1.7 2012/10/14 11:28:52 jlec Exp $
 
 EAPI="3"
 
@@ -17,6 +17,7 @@ KEYWORDS="~alpha amd64 ~ppc ~sparc x86"
 
 DEPEND="
 	dev-lang/tk[threads?]
+x11-libs/libXScrnSaver
 	x11-libs/libX11
 	x11-libs/libXext
 	x11-proto/scrnsaverproto
