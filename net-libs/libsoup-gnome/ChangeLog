@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libsoup-gnome
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/ChangeLog,v 1.78 2012/10/10 03:18:31 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/ChangeLog,v 1.79 2012/10/14 07:29:59 mattst88 Exp $
+
+  14 Oct 2012; Matt Turner <mattst88@gentoo.org> libsoup-gnome-2.38.1.ebuild:
+  Stable on alpha, bug 427544.
 
   10 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   -files/libsoup-gnome-2.31.92-system-lib.patch,
