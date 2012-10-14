@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libzrtpcpp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libzrtpcpp/ChangeLog,v 1.15 2012/05/05 02:54:29 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libzrtpcpp/ChangeLog,v 1.16 2012/10/14 00:17:19 chithanh Exp $
+
+  14 Oct 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  libzrtpcpp-0.9.0.ebuild, libzrtpcpp-1.3.0.ebuild, libzrtpcpp-1.4.1.ebuild:
+  Depend on <net-libs/ccrtp-2, bug #438184.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> libzrtpcpp-0.9.0.ebuild,
   libzrtpcpp-1.3.0.ebuild, libzrtpcpp-1.4.1.ebuild:
@@ -64,4 +68,3 @@
   02 Oct 2006; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   +libzrtpcpp-0.9.0.ebuild:
   initial import - optional dependency of twinkle
-
