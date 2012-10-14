@@ -1,10 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/fastjet/fastjet-3.0.3-r1.ebuild,v 1.1 2012/07/24 17:47:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/fastjet/fastjet-3.0.3-r1.ebuild,v 1.2 2012/10/14 19:33:22 jlec Exp $
 
 EAPI=4
 
 AUTOTOOLS_AUTORECONF=yes
+
+FORTRAN_NEEDED=plugins
+
 inherit autotools-utils fortran-2 flag-o-matic
 
 DESCRIPTION="Fast implementation of several recombination jet algorithms"
