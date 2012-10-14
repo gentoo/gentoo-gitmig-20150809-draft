@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/sssd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/ChangeLog,v 1.25 2012/09/09 21:41:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/ChangeLog,v 1.26 2012/10/14 10:58:38 pinkbyte Exp $
+
+*sssd-1.8.5 (14 Oct 2012)
+
+  14 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> +sssd-1.8.5.ebuild:
+  Version bump
 
   09 Sep 2012; Agostino Sarubbo <ago@gentoo.org> sssd-1.8.4.ebuild:
   Stable for amd64, wrt bug #434352
