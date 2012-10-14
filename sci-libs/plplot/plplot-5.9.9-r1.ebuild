@@ -1,11 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.9-r1.ebuild,v 1.4 2012/07/06 15:55:15 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.9-r1.ebuild,v 1.5 2012/10/14 19:28:35 jlec Exp $
 
 EAPI=4
 
 WX_GTK_VER="2.8"
 PYTHON_DEPEND="python? 2"
+FORTRAN_NEEDED=fortran
 
 inherit eutils fortran-2 cmake-utils python toolchain-funcs virtualx \
 	wxwidgets java-pkg-opt-2 multilib
@@ -21,7 +22,8 @@ IUSE="ada cairo cxx doc dynamic examples fortran gd java jpeg latex lua
 	  ocaml octave pdf perl png python qhull qt4 svg tcl test threads tk
 	  truetype wxwidgets X"
 
-RDEPEND="fortran? ( virtual/fortran )
+RDEPEND="
+	fortran? ( virtual/fortran )
 	ada? ( virtual/gnat )
 	cairo? ( x11-libs/cairo[svg?,X?] )
 	java? ( >=virtual/jre-1.5 )

@@ -1,10 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/qd/qd-2.3.13.ebuild,v 1.3 2012/08/03 16:43:50 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/qd/qd-2.3.13.ebuild,v 1.4 2012/10/14 19:29:06 jlec Exp $
 
 EAPI=4
 
 AUTOTOOLS_AUTORECONF=yes
+
+FORTRAN_NEEDED=fortran
 
 inherit autotools-utils fortran-2
 
