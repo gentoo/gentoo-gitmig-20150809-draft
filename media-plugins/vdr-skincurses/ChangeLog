@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-skincurses
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skincurses/ChangeLog,v 1.16 2012/08/13 19:38:47 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skincurses/ChangeLog,v 1.17 2012/10/14 18:28:53 hd_brummy Exp $
+
+  14 Oct 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-skincurses-0.1.10.ebuild:
+  moved to overlay vdr-devel, need vdr-1.7.x?
 
   13 Aug 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-skincurses-0.1.10.ebuild:
