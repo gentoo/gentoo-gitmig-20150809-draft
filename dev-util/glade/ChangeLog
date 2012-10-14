@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/glade
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.172 2012/10/07 00:50:05 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.173 2012/10/14 23:12:54 mattst88 Exp $
+
+  14 Oct 2012; Matt Turner <mattst88@gentoo.org> glade-3.12.1.ebuild:
+  Stable on alpha, bug 427544.
 
   07 Oct 2012; Anthony G. Basile <blueness@gentoo.org> glade-3.12.1.ebuild:
   stable ppc64, bug #427544
