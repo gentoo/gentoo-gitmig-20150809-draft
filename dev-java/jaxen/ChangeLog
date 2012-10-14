@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jaxen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/ChangeLog,v 1.54 2012/04/15 18:41:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/ChangeLog,v 1.55 2012/10/14 14:28:48 sera Exp $
+
+*jaxen-1.1.4 (14 Oct 2012)
+
+  14 Oct 2012; Ralph Sennhauser <sera@gentoo.org> +jaxen-1.1.4.ebuild,
+  +files/jaxen-1.1.4_maven1-build.xml:
+  EAPI and version bump by Ivan Baidakou <the.dmol@gmail.com> with some changes
+  by me. #426384
 
   15 Apr 2012; Mike Frysinger <vapier@gentoo.org> jaxen-1.1.1.ebuild:
   Add back ia64 love #349020 by Dennis Schridde.
