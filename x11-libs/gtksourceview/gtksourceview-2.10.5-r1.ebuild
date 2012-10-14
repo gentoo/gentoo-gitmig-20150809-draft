@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-2.10.5-r1.ebuild,v 1.11 2012/05/05 03:52:26 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-2.10.5-r1.ebuild,v 1.12 2012/10/14 23:56:51 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -12,10 +12,10 @@ inherit gnome2 virtualx
 DESCRIPTION="A text widget implementing syntax highlighting and other features"
 HOMEPAGE="http://www.gnome.org/"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+ LGPL-2.1+"
 SLOT="2.0"
 KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-solaris"
-IUSE="doc glade"
+IUSE="glade"
 
 # FIXME: We could avoid the glade conditional and dep completely if upstream
 # would have a --with-glade-catalogdir that would allow to pass the system
@@ -26,10 +26,10 @@ RDEPEND=">=x11-libs/gtk+-2.12:2
 	glade? ( >=dev-util/glade-3.2:3 )
 	kernel_Darwin? ( x11-libs/ige-mac-integration )"
 DEPEND="${RDEPEND}
-	>=sys-devel/gettext-0.17
+	dev-util/gtk-doc-am
 	>=dev-util/intltool-0.40
-	virtual/pkgconfig
-	doc? ( >=dev-util/gtk-doc-1.11 )"
+	>=sys-devel/gettext-0.17
+	virtual/pkgconfig"
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README"
