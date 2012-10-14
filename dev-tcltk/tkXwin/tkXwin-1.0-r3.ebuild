@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkXwin/tkXwin-1.0-r3.ebuild,v 1.1 2012/10/14 11:28:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkXwin/tkXwin-1.0-r3.ebuild,v 1.2 2012/10/14 14:28:17 jlec Exp $
 
 EAPI=4
 
@@ -32,7 +32,7 @@ PATCHES=(
 AUTOTOOLS_IN_SOURCE_BUILD=1
 
 src_prepare() {
-	tc-export CC
+	tc-export CC AR RANLIB
 	autotools-utils_src_prepare
 }
 
