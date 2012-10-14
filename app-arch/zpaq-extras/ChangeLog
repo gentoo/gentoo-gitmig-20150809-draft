@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/zpaq-extras
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zpaq-extras/ChangeLog,v 1.4 2011/08/25 12:14:38 mgorny Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zpaq-extras/ChangeLog,v 1.5 2012/10/14 07:57:03 mgorny Exp $
+
+*zpaq-extras-2 (14 Oct 2012)
+
+  14 Oct 2012; Michał Górny <mgorny@gentoo.org> +zpaq-extras-2.ebuild:
+  Update.
 
 *zpaq-extras-1 (25 Aug 2011)
 
@@ -28,4 +33,3 @@
   +zpaq-extras-0_p20100426.ebuild, +metadata.xml:
   Importing zpaq archiver extra compression profiles from Sunrise as per bug
   #278021.
-
