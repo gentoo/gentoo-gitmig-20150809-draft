@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ifenslave
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ifenslave/ChangeLog,v 1.29 2012/10/12 21:09:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ifenslave/ChangeLog,v 1.30 2012/10/14 18:53:12 armin76 Exp $
+
+  14 Oct 2012; Raúl Porcel <armin76@gentoo.org> ifenslave-1.1.0-r6.ebuild:
+  sparc/x86 stable wrt #433337
 
   12 Oct 2012; Robin H. Johnson <robbat2@gentoo.org> ifenslave-1.1.0-r3.ebuild,
   ifenslave-1.1.0-r4.ebuild, ifenslave-1.1.0-r5.ebuild,
