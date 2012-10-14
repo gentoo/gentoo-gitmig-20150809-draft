@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwping/bwping-1.2.ebuild,v 1.3 2010/07/17 16:24:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwping/bwping-1.6.ebuild,v 1.1 2012/10/14 18:26:58 hwoarang Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit autotools
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 src_prepare() {
@@ -20,7 +20,7 @@ src_prepare() {
 }
 
 src_install () {
-	dosbin bwping || die "dosbin failed"
-	doman  bwping.8 || die "doman failed"
-	dodoc  ChangeLog README || die "dodoc failed"
+	dosbin ${PN}
+	doman  ${PN}.8
+	dodoc  ChangeLog README
 }

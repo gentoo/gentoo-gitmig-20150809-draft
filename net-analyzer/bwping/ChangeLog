@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/bwping
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwping/ChangeLog,v 1.7 2012/09/27 20:05:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwping/ChangeLog,v 1.8 2012/10/14 18:26:58 hwoarang Exp $
+
+*bwping-1.6 (14 Oct 2012)
+
+  14 Oct 2012; Markos Chandras <hwoarang@gentoo.org> +bwping-1.6.ebuild,
+  -bwping-1.2.ebuild:
+  Version bump
 
 *bwping-1.5 (27 Sep 2012)
 
