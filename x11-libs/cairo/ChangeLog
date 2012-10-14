@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.307 2012/09/12 05:37:43 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.308 2012/10/14 15:39:24 aballier Exp $
+
+  14 Oct 2012; Alexis Ballier <aballier@gentoo.org> cairo-1.12.2-r4.ebuild,
+  +files/cairo-1.12.2-fdr-nodl.patch, +files/cairo-1.12.2-sphinx-nodl.patch:
+  Add patches from upstream to fix building cairo-fdr and cairo-sphinx on
+  systems with dlopen functions in the libc, like FreeBSD.
 
   12 Sep 2012; Matt Turner <mattst88@gentoo.org> cairo-1.12.2-r2.ebuild,
   cairo-1.12.2-r3.ebuild, cairo-1.12.2-r4.ebuild, cairo-9999.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.12.2-r4.ebuild,v 1.2 2012/09/12 05:37:43 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.12.2-r4.ebuild,v 1.3 2012/10/14 15:39:24 aballier Exp $
 
 EAPI=4
 
@@ -75,6 +75,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.10.2-qt-surface.patch
 	epatch "${FILESDIR}"/${PN}-respect-fontconfig.patch
 	epatch "${FILESDIR}"/${PN}-1.12.2-surfaceless-extension.patch
+	epatch "${FILESDIR}"/${PN}-1.12.2-fdr-nodl.patch
+	epatch "${FILESDIR}"/${PN}-1.12.2-sphinx-nodl.patch
 	epatch_user
 
 	# Slightly messed build system YAY
