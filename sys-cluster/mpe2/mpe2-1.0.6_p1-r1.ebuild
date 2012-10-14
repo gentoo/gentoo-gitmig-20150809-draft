@@ -1,8 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpe2/mpe2-1.0.6_p1-r1.ebuild,v 1.5 2011/06/21 14:24:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpe2/mpe2-1.0.6_p1-r1.ebuild,v 1.6 2012/10/14 19:35:01 jlec Exp $
 
 EAPI=2
+
+FORTRAN_NEEDED=fortran
+
 inherit eutils fortran-2 java-utils-2 toolchain-funcs
 
 MY_P=${P/_/}

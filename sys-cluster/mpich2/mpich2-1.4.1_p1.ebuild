@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.4.1_p1.ebuild,v 1.4 2012/06/25 18:33:23 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.4.1_p1.ebuild,v 1.5 2012/10/14 19:35:58 jlec Exp $
 
 EAPI=4
+
+FORTRAN_NEEDED=fortran
 
 inherit autotools eutils fortran-2 toolchain-funcs
 

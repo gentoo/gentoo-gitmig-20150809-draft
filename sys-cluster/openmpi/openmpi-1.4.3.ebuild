@@ -1,12 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.4.3.ebuild,v 1.15 2012/06/25 18:28:11 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.4.3.ebuild,v 1.16 2012/10/14 19:40:20 jlec Exp $
 
 EAPI=3
+
+FORTRAN_NEEDED=fortran
+
 inherit eutils fortran-2 multilib flag-o-matic toolchain-funcs
 
 MY_P=${P/-mpi}
-S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="A high-performance message passing library (MPI)"
 HOMEPAGE="http://www.open-mpi.org"
@@ -27,6 +29,8 @@ RDEPEND="
 	!sys-cluster/mpich2
 	!sys-cluster/mpiexec"
 DEPEND="${RDEPEND}"
+
+S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
 	use fortran && fortran-2_pkg_setup

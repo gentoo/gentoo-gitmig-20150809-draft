@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/mpe2
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpe2/ChangeLog,v 1.8 2011/06/21 14:24:37 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpe2/ChangeLog,v 1.9 2012/10/14 19:35:01 jlec Exp $
+
+  14 Oct 2012; Justin Lecher <jlec@gentoo.org> mpe2-1.0.6_p1-r1.ebuild,
+  mpe2-1.0.6_p1.ebuild:
+  Prepare for fortran2.eclass update
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> mpe2-1.0.6_p1.ebuild,
   mpe2-1.0.6_p1-r1.ebuild:
@@ -37,4 +41,3 @@
   29 Sep 2009; Justin Bronder <jsbronder@gentoo.org> +mpe2-1.0.6_p1.ebuild,
   +metadata.xml:
   Adding sys-cluster/mpe2 with support for either openmpi or mpich2
-

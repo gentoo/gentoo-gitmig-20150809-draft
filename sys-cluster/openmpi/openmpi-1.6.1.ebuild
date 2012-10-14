@@ -1,12 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.6.1.ebuild,v 1.1 2012/09/24 22:06:01 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.6.1.ebuild,v 1.2 2012/10/14 19:40:20 jlec Exp $
 
 EAPI=4
+
+FORTRAN_NEEDED=fortran
+
 inherit eutils fortran-2 multilib flag-o-matic toolchain-funcs versionator
 
 MY_P=${P/-mpi}
-S=${WORKDIR}/${MY_P}
 
 IUSE_OPENMPI_FABRICS="
 	openmpi_fabrics_dapl
@@ -68,6 +70,8 @@ RDEPEND="
 	"
 DEPEND="${RDEPEND}"
 # TODO:  Newer releases of Vampir use otf2 which would resolve the above blockers.
+
+S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
 	use fortran && fortran-2_pkg_setup
