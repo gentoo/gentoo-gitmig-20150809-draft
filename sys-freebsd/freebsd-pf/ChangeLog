@@ -1,6 +1,11 @@
 # ChangeLog for sys-freebsd/freebsd-pf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/ChangeLog,v 1.36 2012/09/11 17:28:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/ChangeLog,v 1.37 2012/10/14 15:25:49 aballier Exp $
+
+*freebsd-pf-9.1_rc2 (14 Oct 2012)
+
+  14 Oct 2012; Alexis Ballier <aballier@gentoo.org> +freebsd-pf-9.1_rc2.ebuild:
+  bump to 9.1_rc2
 
   11 Sep 2012; Alexis Ballier <aballier@gentoo.org> freebsd-pf-7.2.ebuild,
   freebsd-pf-8.0.ebuild, freebsd-pf-8.2.ebuild, freebsd-pf-9.0.ebuild,
