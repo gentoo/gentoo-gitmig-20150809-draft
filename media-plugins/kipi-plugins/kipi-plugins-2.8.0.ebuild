@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-2.8.0.ebuild,v 1.3 2012/08/23 10:52:55 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-2.8.0.ebuild,v 1.4 2012/10/14 17:19:07 dilfridge Exp $
 
 EAPI=4
 
@@ -48,7 +48,7 @@ DEPEND="
 			  media-libs/libgpod
 			  x11-libs/gtk+:2
 			)
-	mediawiki?	( >=media-libs/libmediawiki-2.6.0 )
+	mediawiki?	( >=net-libs/libmediawiki-2.6.0 )
 	panorama?	( dev-libs/boost )
 	redeyes?	( media-libs/opencv )
 	scanner? 	(
