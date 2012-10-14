@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/slurm-2.4.3.ebuild,v 1.1 2012/10/07 17:14:05 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/slurm-2.4.3.ebuild,v 1.2 2012/10/14 18:27:42 alexxy Exp $
 
 EAPI=4
 RESTRICT="primaryuri"
@@ -34,6 +34,7 @@ DEPEND="
 	ssl? ( dev-libs/openssl )
 	>=sys-apps/hwloc-1.1.1-r1"
 RDEPEND="${DEPEND}
+	dev-libs/libcgroup
 	maui? ( sys-cluster/maui[slurm] )"
 
 REQUIRED_USE="torque? ( perl )"
