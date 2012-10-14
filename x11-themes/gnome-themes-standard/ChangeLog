@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-themes-standard
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/ChangeLog,v 1.27 2012/10/06 10:03:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/ChangeLog,v 1.28 2012/10/14 12:55:24 blueness Exp $
+
+  14 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  gnome-themes-standard-3.4.2.ebuild:
+  stable ppc64, bug #427544
 
   06 Oct 2012; Markus Meier <maekke@gentoo.org>
   gnome-themes-standard-3.4.2.ebuild:
@@ -133,4 +137,3 @@
   01 May 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   +gnome-themes-standard-3.0.1.ebuild, +metadata.xml:
   Move gnome-themes-standard from the overlay to the tree
-

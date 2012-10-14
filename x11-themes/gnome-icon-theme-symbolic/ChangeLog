@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-icon-theme-symbolic
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme-symbolic/ChangeLog,v 1.21 2012/10/06 10:01:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme-symbolic/ChangeLog,v 1.22 2012/10/14 12:56:38 blueness Exp $
+
+  14 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  gnome-icon-theme-symbolic-3.4.0.ebuild:
+  stable ppc64, bug #427544
 
   06 Oct 2012; Markus Meier <maekke@gentoo.org>
   gnome-icon-theme-symbolic-3.4.0.ebuild:
@@ -98,4 +102,3 @@
   02 Jun 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   +gnome-icon-theme-symbolic-3.0.0.ebuild, +metadata.xml:
   Move ebuild from GNOME overlay
-
