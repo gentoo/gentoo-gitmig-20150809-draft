@@ -2,3 +2,5 @@ move sci-geosciences/gpxviewer sci-geosciences/gpx-viewer
 move app-text/yudit app-editors/yudit
 move app-emulation/qemu-kvm app-emulation/qemu
 move media-libs/libmediawiki net-libs/libmediawiki
+move media-fonts/source-sans-pro media-fonts/source-pro
+move media-fonts/source-code-pro media-fonts/source-pro
