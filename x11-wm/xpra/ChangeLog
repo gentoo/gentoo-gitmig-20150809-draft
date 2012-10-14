@@ -1,6 +1,14 @@
 # ChangeLog for x11-wm/xpra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/ChangeLog,v 1.28 2012/10/06 09:24:29 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/ChangeLog,v 1.29 2012/10/14 21:40:38 xmw Exp $
+
+*xpra-0.7.0 (14 Oct 2012)
+
+  14 Oct 2012; Michael Weber <xmw@gentoo.org> -xpra-0.5.3.ebuild,
+  -xpra-0.6.0.ebuild, xpra-0.6.4.ebuild, +xpra-0.7.0.ebuild,
+  +files/xpra-0.7.0-ignore-gentoo-no-compile.patch, metadata.xml:
+  Version bump, add setxkbmap dep (thanks redneb, bug 437614), add keywords to
+  0.6 series, drop old.
 
 *xpra-0.6.4 (06 Oct 2012)
 *xpra-0.5.6 (06 Oct 2012)

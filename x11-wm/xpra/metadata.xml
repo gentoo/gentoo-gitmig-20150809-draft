@@ -11,5 +11,7 @@
 	<flag name='ssh'>Runtime support for secure shell communication</flag>
 	<flag name='clipboard'>Enable clipboard support</flag>
 	<flag name='rencode'>Enable rencode support</flag>
+	<flag name='vpx'>Enable vpx image format support</flag>
+	<flag name='webp'>Enable webp image format support</flag>
 </use>
 </pkgmetadata>

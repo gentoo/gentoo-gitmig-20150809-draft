@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.6.4.ebuild,v 1.1 2012/10/06 09:24:29 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.6.4.ebuild,v 1.2 2012/10/14 21:40:38 xmw Exp $
 
 EAPI=3
 
@@ -15,7 +15,7 @@ SRC_URI="http://xpra.org/src/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~amd64-linux ~x86 ~x86-linux"
 IUSE="+clipboard ffmpeg jpeg libnotify parti png +rencode server ssh x264"
 
 COMMON_DEPEND="dev-python/pygtk:2
@@ -30,6 +30,7 @@ COMMON_DEPEND="dev-python/pygtk:2
 	!x11-wm/parti"
 
 RDEPEND="${COMMON_DEPEND}
+	x11-apps/setxkbmap
 	x11-apps/xmodmap
 	parti? ( dev-python/ipython
 		 dev-python/dbus-python )
