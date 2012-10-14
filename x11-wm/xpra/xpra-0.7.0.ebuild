@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.7.0.ebuild,v 1.1 2012/10/14 21:40:38 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.7.0.ebuild,v 1.2 2012/10/14 23:48:34 xmw Exp $
 
 EAPI=3
 
@@ -13,7 +13,7 @@ DESCRIPTION="X Persistent Remote Apps (xpra) and Partitioning WM (parti) based o
 HOMEPAGE="http://xpra.org/"
 SRC_URI="http://xpra.org/src/${P}.tar.bz2"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2 BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="+clipboard +rencode vpx webp x264"
@@ -41,7 +41,7 @@ RDEPEND="${COMMON_DEPEND}
 	virtual/ssh
 	x11-apps/setxkbmap
 	x11-apps/xmodmap
-	x11-base/xorg-server[xvfb,-minimal]"
+	x11-base/xorg-server[-minimal]"
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 	>=dev-python/cython-0.16"
@@ -58,4 +58,18 @@ src_prepare() {
 	use x264      || epatch patches/disable-x264.patch
 
 	distutils_src_prepare
+}
+
+src_install() {
+	distutils_src_install
+	rm -v "${D}"usr/share/parti/{parti.,}README \
+		"${D}"usr/share/xpra/{webm/LICENSE,xpra.README} \
+		"${D}"usr/share/wimpiggy/wimpiggy.README || die
+	dodoc {parti.,wimpiggy.,xpra.,}README
+
+	einfo
+	elog "please make your Xorg binary readable for users of xpra"
+	elog "  chmod a+r /usr/bin/Xorg"
+	elog "and think about the security impact"
+	einfo
 }
