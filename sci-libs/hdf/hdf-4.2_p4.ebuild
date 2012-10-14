@@ -1,8 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/hdf-4.2_p4.ebuild,v 1.9 2011/06/21 15:17:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/hdf-4.2_p4.ebuild,v 1.10 2012/10/14 19:02:33 jlec Exp $
 
 EAPI=2
+
+FORTRAN_NEEDED=fortran
+
 inherit eutils fortran-2 toolchain-funcs autotools flag-o-matic
 
 MYP="HDF${PV/_p/r}"

@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/lis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lis/ChangeLog,v 1.3 2012/08/08 18:24:58 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lis/ChangeLog,v 1.4 2012/10/14 19:08:41 jlec Exp $
+
+  14 Oct 2012; Justin Lecher <jlec@gentoo.org> lis-1.2.62.ebuild,
+  lis-1.2.90.ebuild, lis-1.2.91.ebuild:
+  Prepare for fortran2.eclass update
 
 *lis-1.2.91 (08 Aug 2012)
 

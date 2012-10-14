@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.8-r1.ebuild,v 1.6 2012/06/17 18:55:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.8-r1.ebuild,v 1.7 2012/10/14 19:03:20 jlec Exp $
 
 EAPI=4
+
+FORTRAN_NEEDED=fortran
 
 inherit autotools eutils fortran-2 toolchain-funcs
 

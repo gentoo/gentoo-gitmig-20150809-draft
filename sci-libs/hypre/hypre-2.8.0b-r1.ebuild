@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hypre/hypre-2.8.0b-r1.ebuild,v 1.6 2012/10/10 15:07:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hypre/hypre-2.8.0b-r1.ebuild,v 1.7 2012/10/14 19:05:07 jlec Exp $
 
 EAPI=4
+
+FORTRAN_NEEDED=fortran
 
 inherit eutils fortran-2 toolchain-funcs
 

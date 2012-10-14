@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/getdata/getdata-0.8.0.ebuild,v 1.3 2012/09/22 20:51:08 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/getdata/getdata-0.8.0.ebuild,v 1.4 2012/10/14 19:01:19 jlec Exp $
 
 EAPI=3
 
@@ -9,6 +9,7 @@ SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython *-pypy-*"
 
 FORTRAN_STANDARD="95"
+FORTRAN_NEEDED=fortran
 
 inherit autotools fortran-2 python
 

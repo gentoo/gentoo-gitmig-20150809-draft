@@ -1,8 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gpp4/gpp4-1.3.1.ebuild,v 1.3 2011/06/21 15:18:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gpp4/gpp4-1.3.1.ebuild,v 1.4 2012/10/14 19:01:56 jlec Exp $
 
-EAPI="4"
+EAPI=4
+
+FORTRAN_NEEDED=fortran
 
 inherit fortran-2
 
