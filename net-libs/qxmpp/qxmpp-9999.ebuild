@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/qxmpp/qxmpp-9999.ebuild,v 1.8 2012/10/14 18:04:31 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/qxmpp/qxmpp-9999.ebuild,v 1.9 2012/10/14 18:09:24 pinkbyte Exp $
 
 EAPI=4
 
@@ -16,10 +16,11 @@ SLOT="0"
 KEYWORDS=""
 IUSE="debug doc"
 
-DEPEND="x11-libs/qt-core:4
+RDEPEND="x11-libs/qt-core:4
 	x11-libs/qt-gui:4
 	media-libs/speex"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	test? ( x11-libs/qt-test:4 )"
 
 src_prepare(){
 	if ! use doc; then
