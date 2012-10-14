@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.399 2012/10/12 21:16:40 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.400 2012/10/14 17:47:24 pinkbyte Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -9,11 +9,6 @@
 # Temporary flag to allow osmesa + win32 on amd64 for overlay users.
 # Remove this mask (and the flag itself) when bug #430268 is resolved.
 app-emulation/wine osmesa-multilib
-
-# Sergey Popov <pinkbyte@gentoo.org> (11 Oct 2012)
-# rdeps on dev-libs/libdnet[ipv6] was not tested.
-# Possibly ipv6 patch brokes ABI.
-=dev-libs/libdnet-1.12*	ipv6
 
 # GNOME <gnome@gentoo.org> (02 Oct 2012)
 # Mask USE="udisks" and use USE="gdu" as the default for <gnome-base/gvfs-1.12.3-r1
