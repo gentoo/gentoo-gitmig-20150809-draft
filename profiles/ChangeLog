@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7030 2012/10/14 10:57:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7031 2012/10/14 17:21:12 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Oct 2012; Andreas K. Huettel <dilfridge@gentoo.org> updates/4Q-2012:
+  Move media-libs/libmediawiki to net-libs
 
   14 Oct 2012; Michał Górny <mgorny@gentoo.org> base/package.use.force:
   Force-enable all Python implementations for python-exec.
