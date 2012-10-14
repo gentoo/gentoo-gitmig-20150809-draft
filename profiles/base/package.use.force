@@ -1,6 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.force,v 1.25 2012/09/20 11:42:57 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.force,v 1.26 2012/10/14 10:57:18 mgorny Exp $
+
+# Michał Górny <mgorny@gentoo.org> (14 Oct 2012)
+# Force-enable all PYTHON_TARGETS for python-exec to avoid using private
+# API. Please remember to keep it in sync with python_targets.desc.
+dev-python/python-exec python_targets_python2_5 python_targets_python2_6 python_targets_python2_7 python_targets_python3_1 python_targets_python3_2 python_targets_jython2_5 python_targets_pypy1_7 python_targets_pypy1_8 python_targets_pypy1_9
 
 # Davide Pesavento <pesa@gentoo.org> (12 Sep 2012)
 # qt-creator-2.6.x uses botan-1.10.2, which isn't packaged yet,
