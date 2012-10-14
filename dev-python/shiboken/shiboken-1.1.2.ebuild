@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/shiboken-1.1.2.ebuild,v 1.2 2012/10/12 23:20:39 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/shiboken-1.1.2.ebuild,v 1.3 2012/10/14 13:55:47 pesa Exp $
 
 EAPI=4
 
@@ -29,6 +29,7 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	test? (
+		dev-python/numpy
 		>=x11-libs/qt-gui-4.7.0:4
 		>=x11-libs/qt-test-4.7.0:4
 	)"
