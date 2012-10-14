@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.14.ebuild,v 1.2 2012/10/12 01:00:35 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.14.ebuild,v 1.3 2012/10/14 21:43:25 pesa Exp $
 
 EAPI="5"
 PYTHON_DEPEND="*"
@@ -12,18 +12,56 @@ inherit eutils python toolchain-funcs
 
 DESCRIPTION="Python extension module generator for C and C++ libraries"
 HOMEPAGE="http://www.riverbankcomputing.co.uk/software/sip/intro http://pypi.python.org/pypi/SIP"
-SRC_URI="mirror://sourceforge/pyqt/${P}.tar.gz"
-
 LICENSE="|| ( GPL-2 GPL-3 sip )"
-# Subslot based on SIP_API_MAJOR_NR from siplib/sip.h.in
+
+if [[ ${PV} == *9999* ]]; then
+	# live version from mercurial repo
+	EHG_REPO_URI="http://www.riverbankcomputing.com/hg/sip"
+	inherit mercurial
+elif [[ ${PV} == *_pre* ]]; then
+	# development snapshot
+	HG_REVISION=
+	MY_P=${PN}-${PV%_pre*}-snapshot-${HG_REVISION}
+	SRC_URI="http://dev.gentoo.org/~hwoarang/distfiles/${MY_P}.tar.gz"
+	S=${WORKDIR}/${MY_P}
+else
+	# official release
+	SRC_URI="mirror://sourceforge/pyqt/${P}.tar.gz"
+fi
+
+# Sub-slot based on SIP_API_MAJOR_NR from siplib/sip.h.in
 SLOT="0/9"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="debug doc"
 
 DEPEND=""
-RDEPEND=""
+RDEPEND="${DEPEND}"
+[[ ${PV} == *9999* ]] && DEPEND+="
+	sys-devel/bison
+	sys-devel/flex
+	doc? ( dev-python/sphinx )
+"
 
 src_prepare() {
+	if [[ ${PV} == *9999* ]]; then
+		$(PYTHON -2) build.py prepare || die
+		if use doc; then
+			$(PYTHON -2) build.py doc || die
+		fi
+	fi
+
+	# Sub-slot sanity check
+	local sub_slot=${SLOT#*/}
+	local sip_api_major_nr=$(sed -nre 's:^#define SIP_API_MAJOR_NR\s+([0-9]+):\1:p' siplib/sip.h.in)
+	if [[ ${sub_slot} != ${sip_api_major_nr} ]]; then
+		eerror
+		eerror "Ebuild sub-slot (${sub_slot}) does not match SIP_API_MAJOR_NR (${sip_api_major_nr})"
+		eerror "Please update SLOT variable as follows:"
+		eerror "    SLOT=\"${SLOT%%/*}/${sip_api_major_nr}\""
+		eerror
+		die "sub-slot sanity check failed"
+	fi
+
 	epatch "${FILESDIR}"/${PN}-4.9.3-darwin.patch
 	sed -i -e 's/-O2//g' specs/* || die
 
@@ -57,18 +95,11 @@ src_install() {
 	python_src_install
 
 	dodoc NEWS
-
-	if use doc; then
-		dohtml -r doc/html/
-	fi
+	use doc && dohtml -r doc/html/*
 }
 
 pkg_postinst() {
 	python_mod_optimize sipconfig.py sipdistutils.py
-
-	ewarn "When updating dev-python/sip, you usually need to rebuild packages that depend on it,"
-	ewarn "such as PyQt4, qscintilla-python and pykde4. If you have app-portage/gentoolkit"
-	ewarn "installed, you can find these packages with \`equery d dev-python/sip\`."
 }
 
 pkg_postrm() {
