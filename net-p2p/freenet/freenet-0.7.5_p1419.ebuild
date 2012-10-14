@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1417.ebuild,v 1.1 2012/09/28 18:11:35 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1419.ebuild,v 1.1 2012/10/14 10:27:36 tommy Exp $
 
 EAPI="2"
 DATE=20120730
@@ -85,12 +85,15 @@ java_prepare() {
 	echo "wrapper.java.classpath.1=/usr/share/freenet/lib/freenet.jar" >> freenet-wrapper.conf
 
 	local i=2 pkg jars jar
+	local ifs_original=${IFS}
+	IFS=","
 	for pkg in ${EANT_GENTOO_CLASSPATH} ; do
 		jars="$(java-pkg_getjars ${pkg})"
 		for jar in ${jars} ; do
 			echo "wrapper.java.classpath.$((i++))=${jar}" >> freenet-wrapper.conf
 		done
 	done
+	IFS=${ifs_original}
 	echo "wrapper.java.classpath.$((i++))=/usr/share/freenet/lib/ant.jar" >> freenet-wrapper.conf
 
 	if use freemail ; then
