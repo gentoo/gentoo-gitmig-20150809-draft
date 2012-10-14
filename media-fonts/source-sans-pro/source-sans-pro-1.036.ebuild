@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/source-sans-pro/source-sans-pro-1.033.ebuild,v 1.1 2012/08/12 14:31:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/source-sans-pro/source-sans-pro-1.036.ebuild,v 1.1 2012/10/14 13:49:03 zx2c4 Exp $
 
 EAPI=4
 inherit font
@@ -28,12 +28,6 @@ FONT_SUFFIX="otf ttf"
 FONT_S=${S}
 # From .spec of http://bugzilla.redhat.com/show_bug.cgi?id=845743
 FONT_CONF=( "${FILESDIR}"/63-${PN}.conf )
-
-src_prepare() {
-	# Put otf and ttf files in one directory so that font_src_install can
-	# actually find them
-	mv -vf {OTF,TTF}/* . || die
-}
 
 src_install() {
 	font_src_install
