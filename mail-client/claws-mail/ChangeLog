@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/claws-mail
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.210 2012/10/11 19:05:33 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.211 2012/10/14 18:11:25 jer Exp $
+
+  14 Oct 2012; Jeroen Roovers <jer@gentoo.org> claws-mail-3.8.1-r2.ebuild:
+  Stable for HPPA (bug #437814).
 
 *claws-mail-3.8.1-r2 (11 Oct 2012)
 

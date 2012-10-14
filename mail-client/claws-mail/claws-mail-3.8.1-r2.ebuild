@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.8.1-r2.ebuild,v 1.1 2012/10/11 19:05:33 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.8.1-r2.ebuild,v 1.2 2012/10/14 18:11:25 jer Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/sylpheed-claws/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-3"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="bogofilter crypt dbus dillo doc +imap ipv6 ldap nntp pda session smime spamassassin spell +ssl startup-notification xface"
 
 COMMONDEPEND=">=x11-libs/gtk+-2.20:2
