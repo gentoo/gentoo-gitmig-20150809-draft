@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/bzr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.61 2012/10/13 11:44:46 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.62 2012/10/14 04:02:17 blueness Exp $
+
+  14 Oct 2012; Anthony G. Basile <blueness@gentoo.org> bzr-2.5.1.ebuild:
+  stable ppc ppc64, bug #418969
 
   13 Oct 2012; Markos Chandras <hwoarang@gentoo.org> bzr-2.5.1.ebuild:
   Stable on amd64 wrt bug #418969
