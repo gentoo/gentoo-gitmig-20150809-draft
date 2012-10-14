@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/gentoopm-0.2.5-r2.ebuild,v 1.1 2012/10/14 22:21:57 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/gentoopm-0.2.5-r2.ebuild,v 1.2 2012/10/14 22:54:06 ferringb Exp $
 
 EAPI=4
 PYTHON_COMPAT='python2_6 python2_7 python3_1 python3_2'
@@ -17,9 +17,8 @@ KEYWORDS="amd64 ~mips x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="doc"
 
 RDEPEND="|| ( >=sys-apps/portage-2.1.10.3
-		<=sys-apps/pkgcore-0.8
-		>=sys-apps/paludis-0.64.2[python-bindings] )
-	!>=sys-apps/pkgcore-0.8.1"
+		>=sys-apps/pkgcore-0.8
+		>=sys-apps/paludis-0.64.2[python-bindings] )"
 DEPEND="doc? ( dev-python/epydoc )"
 PDEPEND="app-admin/eselect-package-manager"
 

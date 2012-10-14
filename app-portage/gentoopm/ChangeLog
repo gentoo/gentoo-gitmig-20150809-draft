@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoopm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.26 2012/10/14 22:21:57 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.27 2012/10/14 22:54:06 ferringb Exp $
+
+  14 Oct 2012; Brian Harring <ferringb@gentoo.org> gentoopm-0.2.5-r2.ebuild:
+  Fix deps since I missed it in the quick update; specifically limit pkgcore to
+  >=0.8
 
 *gentoopm-0.2.5-r2 (14 Oct 2012)
 
