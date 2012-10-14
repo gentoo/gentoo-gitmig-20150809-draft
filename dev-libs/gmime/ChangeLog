@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gmime
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.207 2012/10/07 02:05:47 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.208 2012/10/14 23:57:00 mattst88 Exp $
+
+  14 Oct 2012; Matt Turner <mattst88@gentoo.org> gmime-2.6.10.ebuild:
+  Stable on alpha, bug 427544.
 
   07 Oct 2012; Anthony G. Basile <blueness@gentoo.org> gmime-2.6.10.ebuild:
   stable ppc64, bug #427544
