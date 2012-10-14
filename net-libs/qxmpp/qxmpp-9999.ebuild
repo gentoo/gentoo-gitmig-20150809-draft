@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/qxmpp/qxmpp-9999.ebuild,v 1.7 2012/10/04 15:19:59 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/qxmpp/qxmpp-9999.ebuild,v 1.8 2012/10/14 18:04:31 pinkbyte Exp $
 
 EAPI=4
 
@@ -27,6 +27,10 @@ src_prepare(){
 			-e '/SUBDIRS/s/doc//' \
 			-e '/INSTALLS/d' \
 			qxmpp.pro || die "sed for removing docs failed"
+	fi
+	if ! use test; then
+		sed -i -e '/SUBDIRS/s/tests//' \
+			qxmpp.pro || die "sed for removing tests failed"
 	fi
 	qt4-r2_src_prepare
 }
