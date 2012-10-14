@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/signing-party
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/signing-party/ChangeLog,v 1.36 2012/09/08 02:00:10 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/signing-party/ChangeLog,v 1.37 2012/10/14 19:31:39 c1pher Exp $
+
+*signing-party-1.1.4 (14 Oct 2012)
+
+  14 Oct 2012; Dane Smith <c1pher@gentoo.org> +signing-party-1.1.4.ebuild:
+  Version bump wrt bug 436018. Switch to EAPI 4.
 
   08 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.
