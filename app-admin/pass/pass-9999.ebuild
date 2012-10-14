@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pass/pass-9999.ebuild,v 1.1 2012/10/13 20:19:15 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pass/pass-9999.ebuild,v 1.2 2012/10/14 19:18:45 zx2c4 Exp $
 
 EAPI=4
 
@@ -25,6 +25,10 @@ RDEPEND="
 "
 
 S="${WORKDIR}/password-store-${PV}"
+
+src_compile() {
+	:;
+}
 
 src_install() {
 	newbin src/password-store.sh pass
