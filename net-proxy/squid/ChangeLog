@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.354 2012/10/09 10:04:50 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.355 2012/10/14 20:08:17 maekke Exp $
+
+  14 Oct 2012; Markus Meier <maekke@gentoo.org> squid-3.2.2.ebuild:
+  add ~arm, bug #432974
 
 *squid-3.2.2 (08 Oct 2012)
 
