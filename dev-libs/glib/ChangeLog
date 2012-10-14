@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.544 2012/10/10 07:35:08 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.545 2012/10/14 05:36:25 mattst88 Exp $
+
+  14 Oct 2012; Matt Turner <mattst88@gentoo.org> glib-2.32.4-r1.ebuild:
+  Stable on alpha, bug 436028.
 
   10 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   glib-2.30.3.ebuild, glib-2.32.4.ebuild, glib-2.32.4-r1.ebuild,
