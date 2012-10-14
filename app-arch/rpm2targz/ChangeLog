@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/rpm2targz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/ChangeLog,v 1.95 2012/10/11 15:58:37 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/ChangeLog,v 1.96 2012/10/14 18:50:35 armin76 Exp $
+
+  14 Oct 2012; Raúl Porcel <armin76@gentoo.org> rpm2targz-9.0.0.5g.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc/x86 stable wrt #433183
 
   11 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
   rpm2targz-9.0.0.5g.ebuild:
