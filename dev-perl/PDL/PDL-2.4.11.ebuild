@@ -1,10 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.11.ebuild,v 1.3 2012/08/28 16:37:26 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.11.ebuild,v 1.4 2012/10/14 18:54:13 jlec Exp $
 
 EAPI=4
 
 MODULE_AUTHOR=CHM
+FORTRAN_NEEDED=fortran
 inherit perl-module eutils fortran-2
 
 HOMEPAGE="http://pdl.perl.org/"
