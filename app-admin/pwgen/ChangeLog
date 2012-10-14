@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/pwgen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.64 2012/08/19 18:44:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.65 2012/10/14 21:52:18 aballier Exp $
+
+  14 Oct 2012; Alexis Ballier <aballier@gentoo.org> pwgen-2.06-r1.ebuild:
+  keyword ~amd64-fbsd
 
   19 Aug 2012; Raúl Porcel <armin76@gentoo.org> pwgen-2.06-r1.ebuild:
   alpha/sparc stable wrt #421565
