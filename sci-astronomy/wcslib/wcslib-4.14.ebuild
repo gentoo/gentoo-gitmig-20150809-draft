@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/wcslib-4.14.ebuild,v 1.2 2012/08/05 20:50:19 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/wcslib-4.14.ebuild,v 1.3 2012/10/14 18:56:56 jlec Exp $
 
 EAPI=4
+
+FORTRAN_NEEDED=fortran
 
 inherit eutils fortran-2 multilib
 
