@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/grace
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.63 2012/09/30 17:17:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.64 2012/10/14 19:34:15 jlec Exp $
+
+  14 Oct 2012; Justin Lecher <jlec@gentoo.org> grace-5.1.22-r2.ebuild,
+  grace-5.1.22-r3.ebuild:
+  Prepare for fortran2.eclass update
 
   30 Sep 2012; Raúl Porcel <armin76@gentoo.org> grace-5.1.22-r2.ebuild,
   grace-5.1.22-r3.ebuild:
