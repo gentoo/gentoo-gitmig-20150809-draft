@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ufw/ufw-0.31.1.ebuild,v 1.3 2012/09/23 18:20:24 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ufw/ufw-0.33-r1.ebuild,v 1.1 2012/10/14 19:06:35 thev00d00 Exp $
 
 EAPI=4
-PYTHON_DEPEND="2:2.5"
+PYTHON_DEPEND="2:2.6 3:3.1"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-jython"
+RESTRICT_PYTHON_ABIS="2.5 *-jython"
 
 inherit versionator bash-completion-r1 eutils linux-info distutils
 
@@ -84,14 +84,16 @@ pkg_pretend() {
 }
 
 src_prepare() {
+	# Remove warning about 'state' being obsolete in iptables 1.4.16.2.
+	epatch "${FILESDIR}"/${P}-conntrack.patch
 	# Allow to remove unnecessary build time dependency
 	# on net-firewall/iptables.
-	epatch "${FILESDIR}"/${PN}-dont-check-iptables.patch
+	epatch "${FILESDIR}"/${P}-dont-check-iptables.patch
 	# Move files away from /lib/ufw.
-	epatch "${FILESDIR}"/${P}-move-path.patch
+	epatch "${FILESDIR}"/${PN}-0.31.1-move-path.patch
 	# Contains fixes related to SUPPORT_PYTHON_ABIS="1" (see comment in the
 	# file).
-	epatch "${FILESDIR}"/${P}-python-abis.patch
+	epatch "${FILESDIR}"/${PN}-0.31.1-python-abis.patch
 
 	# Set as enabled by default. User can enable or disable
 	# the service by adding or removing it to/from a runlevel.
@@ -143,12 +145,6 @@ src_install() {
 
 pkg_postinst() {
 	distutils_pkg_postinst
-	if path_exists -o "${EROOT}"lib/ufw/user{,6}.rules; then
-		ewarn "Attention!"
-		ewarn "User configuration from /lib/ufw is now placed in /etc/ufw/user."
-		ewarn "Please stop ufw, copy .rules files from ${EROOT}lib/ufw"
-		ewarn "to ${EROOT}etc/ufw/user/ and start ufw again."
-	fi
 	echo
 	elog "Remember to enable ufw add it to your boot sequence:"
 	elog "-- # ufw enable"
@@ -156,4 +152,7 @@ pkg_postinst() {
 	echo
 	elog "If you want to keep ufw logs in a separate file, take a look at"
 	elog "/usr/share/doc/${PF}/logging."
+	echo
+	ewarn "Note: once enabled, ufw blocks also incoming SSH connections by"
+	ewarn "default. See README, Remote Management section for more information."
 }

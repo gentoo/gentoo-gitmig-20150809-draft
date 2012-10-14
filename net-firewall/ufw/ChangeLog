@@ -1,6 +1,14 @@
 # ChangeLog for net-firewall/ufw
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ufw/ChangeLog,v 1.9 2012/09/24 12:18:04 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ufw/ChangeLog,v 1.10 2012/10/14 19:06:35 thev00d00 Exp $
+
+*ufw-0.33-r1 (14 Oct 2012)
+*ufw-0.31.1-r1 (14 Oct 2012)
+
+  14 Oct 2012; Ian Whyman <thev00d00@gentoo.org> -ufw-0.31.1.ebuild,
+  +ufw-0.31.1-r1.ebuild, +files/ufw-0.31.1-conntrack.patch, -ufw-0.33.ebuild,
+  +ufw-0.33-r1.ebuild, +files/ufw-0.33-conntrack.patch:
+  Add conntrack support, by Sławomir Nizio
 
 *ufw-0.33 (24 Sep 2012)
 
