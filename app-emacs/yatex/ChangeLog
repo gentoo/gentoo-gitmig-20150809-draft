@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/yatex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yatex/ChangeLog,v 1.36 2012/10/11 18:59:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yatex/ChangeLog,v 1.37 2012/10/14 18:50:40 armin76 Exp $
+
+  14 Oct 2012; Raúl Porcel <armin76@gentoo.org> yatex-1.74.ebuild,
+  yatex-1.76.ebuild:
+  Drop alpha/sparc keywords
 
   11 Oct 2012; Ulrich Müller <ulm@gentoo.org> yatex-1.76.ebuild,
   +files/yatex-1.76-direntry.patch:
