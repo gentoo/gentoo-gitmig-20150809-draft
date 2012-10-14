@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-9999.ebuild,v 1.23 2012/09/25 06:12:02 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-9999.ebuild,v 1.24 2012/10/14 05:51:29 mattst88 Exp $
 
 # catalyst-9999         -> latest Git
 # catalyst-2.9999       -> catalyst_2 branch from Git
@@ -37,7 +37,8 @@ RESTRICT=""
 IUSE="ccache kernel_linux"
 
 DEPEND="app-text/asciidoc"
-RDEPEND="app-crypt/shash
+RDEPEND="app-arch/lbzip2
+	app-crypt/shash
 	virtual/cdrtools
 	ccache? ( dev-util/ccache )
 	ia64? ( sys-fs/dosfstools )
