@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libcec
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcec/ChangeLog,v 1.16 2012/10/11 15:39:04 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcec/ChangeLog,v 1.17 2012/10/14 19:30:49 thev00d00 Exp $
+
+*libcec-2.0.1 (14 Oct 2012)
+
+  14 Oct 2012; Ian Whyman <thev00d00@gentoo.org> +libcec-2.0.1.ebuild:
+  Version bump to 2.0
 
   11 Oct 2012; Andreas Schuerch <nativemad@gentoo.org> libcec-1.8.1-r1.ebuild:
   x86 stable, see bug 428958
