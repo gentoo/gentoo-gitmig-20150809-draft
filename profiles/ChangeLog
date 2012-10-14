@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7028 2012/10/13 23:38:10 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7029 2012/10/14 10:01:05 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Oct 2012; Markos Chandras <hwoarang@gentoo.org>
+  -default/linux/amd64/10.0/server/profile.bashrc:
+  Get rid of the ewarn message for the amd64/10.0/server profile
 
   13 Oct 2012; <naota@gentoo.org> package.mask:
   Mask unstable ibus which depend on newer dconf.
