@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/qxmpp/qxmpp-9999.ebuild,v 1.9 2012/10/14 18:09:24 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/qxmpp/qxmpp-9999.ebuild,v 1.10 2012/10/14 18:10:36 pinkbyte Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://code.google.com/p/qxmpp/"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS=""
-IUSE="debug doc"
+IUSE="debug doc test"
 
 RDEPEND="x11-libs/qt-core:4
 	x11-libs/qt-gui:4
