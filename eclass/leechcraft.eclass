@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/leechcraft.eclass,v 1.6 2012/09/27 16:35:41 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/leechcraft.eclass,v 1.7 2012/10/14 12:19:32 pinkbyte Exp $
 #
 # @ECLASS: leechcraft.eclass
 # @MAINTAINER:
@@ -27,7 +27,7 @@ case ${EAPI:-0} in
 	*) die "Unknown EAPI, bug eclass maintainers" ;;
 esac
 
-inherit cmake-utils versionator
+inherit cmake-utils toolchain-funcs versionator
 
 if [[ ${PV} == 9999 ]]; then
 	EGIT_REPO_URI="git://github.com/0xd34df00d/leechcraft.git"
@@ -62,3 +62,23 @@ elif [[ ${PN} != leechcraft-core ]]; then
 else
 	CMAKE_USE_DIR="${S}"/src
 fi
+
+EXPORT_FUNCTIONS "pkg_pretend"
+
+# @FUNCTION: leechcraft_pkg_pretend
+# @DESCRIPTION:
+# Determine active compiler version and refuse to build
+# if it is not satisfied at least to minimal version,
+# supported by upstream developers
+leechcraft_pkg_pretend() {
+	debug-print-function ${FUNCNAME} "$@"
+
+	if version_is_at_least 0.5.85; then
+		# 0.5.85 and later requires at least gcc 4.6
+		if [[ ${MERGE_TYPE} != binary ]]; then
+			[[ $(gcc-major-version) -lt 4 ]] || \
+					( [[ $(gcc-major-version) -eq 4 && $(gcc-minor-version) -lt 6 ]] ) \
+				&& die "Sorry, but gcc 4.6 or higher is required."
+		fi
+	fi
+}

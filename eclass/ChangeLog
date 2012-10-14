@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.443 2012/10/14 10:58:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.444 2012/10/14 12:19:32 pinkbyte Exp $
+
+  14 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> leechcraft.eclass:
+  Add compiler version checking for LeechCraft
 
   14 Oct 2012; Michał Górny <mgorny@gentoo.org> +distutils-r1.eclass:
   Introduce distutils-r1, a new (and simpler) eclass for Python packages using
