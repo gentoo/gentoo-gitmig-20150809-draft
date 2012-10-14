@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/dbus-python
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.105 2012/07/25 21:13:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.106 2012/10/14 05:41:19 mattst88 Exp $
+
+  14 Oct 2012; Matt Turner <mattst88@gentoo.org> dbus-python-1.1.1.ebuild:
+  Stable on alpha, bug 416725.
 
   25 Jul 2012; Markus Meier <maekke@gentoo.org> dbus-python-1.1.1.ebuild:
   arm stable, bug #416725
@@ -366,4 +369,3 @@
   14 Mar 2007; Doug Goldstein <cardoe@gentoo.org>
   -dbus-python-0.80.1-r1.ebuild, +dbus-python-0.80.2.ebuild:
   rev bump. Fixes memory leaks
-
