@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gtkmm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.236 2012/10/07 02:00:52 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.237 2012/10/14 20:32:24 mattst88 Exp $
+
+  14 Oct 2012; Matt Turner <mattst88@gentoo.org> gtkmm-3.4.2.ebuild:
+  Stable on alpha, bug 427544.
 
   07 Oct 2012; Anthony G. Basile <blueness@gentoo.org> gtkmm-3.4.0.ebuild:
   stable ppc64, bug #427544
