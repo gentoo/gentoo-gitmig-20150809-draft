@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mssqlserver/jdbc-mssqlserver-4.0.2206.100.ebuild,v 1.1 2012/08/26 15:35:54 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mssqlserver/jdbc-mssqlserver-4.0.2206.100.ebuild,v 1.2 2012/10/14 18:48:21 thev00d00 Exp $
 
 EAPI="4"
 
@@ -21,7 +21,7 @@ SLOT="4.0"
 IUSE="doc"
 
 DEPEND=""
-RDEPEND=">=virtual/jre-1.5"
+RDEPEND=">=virtual/jre-1.6"
 
 RESTRICT="mirror"
 
