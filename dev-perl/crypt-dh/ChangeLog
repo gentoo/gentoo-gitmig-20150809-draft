@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/crypt-dh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-dh/ChangeLog,v 1.24 2012/10/11 14:24:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-dh/ChangeLog,v 1.25 2012/10/14 18:49:03 armin76 Exp $
+
+  14 Oct 2012; Raúl Porcel <armin76@gentoo.org> crypt-dh-0.60.0.ebuild,
+  crypt-dh-0.70.0.ebuild:
+  Drop alpha/sparc keywords, x86 stable wrt #433257
 
   11 Oct 2012; Agostino Sarubbo <ago@gentoo.org> crypt-dh-0.70.0.ebuild:
   Stable for amd64, wrt bug #433257

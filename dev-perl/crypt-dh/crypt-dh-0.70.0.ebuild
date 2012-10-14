@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-dh/crypt-dh-0.70.0.ebuild,v 1.2 2012/10/11 14:24:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-dh/crypt-dh-0.70.0.ebuild,v 1.3 2012/10/14 18:49:03 armin76 Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ inherit perl-module
 DESCRIPTION="Diffie-Hellman key exchange system"
 
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~mips ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~hppa ~mips ~ppc x86"
 IUSE=""
 
 RDEPEND="
