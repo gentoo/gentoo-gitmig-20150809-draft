@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.8.2-r1.ebuild,v 1.6 2012/07/19 19:48:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/qt-assistant-4.8.2-r1.ebuild,v 1.7 2012/10/14 17:16:25 armin76 Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ SLOT="4"
 if [[ ${QT4_BUILD_TYPE} == live ]]; then
 	KEYWORDS=""
 else
-	KEYWORDS="~alpha amd64 arm ~ia64 ppc ppc64 ~sparc x86 ~ppc-macos ~x64-macos"
+	KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sparc x86 ~ppc-macos ~x64-macos"
 fi
 IUSE="compat doc +glib qt3support trace webkit"
 

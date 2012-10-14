@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-opengl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/ChangeLog,v 1.127 2012/09/21 06:55:54 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/ChangeLog,v 1.128 2012/10/14 17:19:07 armin76 Exp $
+
+  14 Oct 2012; Raúl Porcel <armin76@gentoo.org> qt-opengl-4.8.2.ebuild:
+  alpha/ia64/sparc stable wrt #424625
 
   21 Sep 2012; Johannes Huber <johu@gentoo.org> qt-opengl-4.7.4.ebuild,
   qt-opengl-4.8.1.ebuild, qt-opengl-4.8.2.ebuild, qt-opengl-4.8.3.ebuild:
