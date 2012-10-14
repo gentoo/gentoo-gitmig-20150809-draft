@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/zpaq
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zpaq/ChangeLog,v 1.9 2012/05/24 04:35:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zpaq/ChangeLog,v 1.10 2012/10/14 07:43:22 mgorny Exp $
+
+*zpaq-6.10 (14 Oct 2012)
+
+  14 Oct 2012; Michał Górny <mgorny@gentoo.org> +zpaq-6.10.ebuild:
+  Version bump, now with journaling & deduplicating.
 
   24 May 2012; Mike Frysinger <vapier@gentoo.org> zpaq-2.05.ebuild,
   zpaq-3.01.ebuild, zpaq-4.04.ebuild:
@@ -52,4 +57,3 @@
   Importing zpaq archiver from Sunrise as per bug #278021. The ebuild was
   updated to install latest libzpaq & zpaq. It also patches in an
   autotools-based build system to avoid build difficulties.
-
