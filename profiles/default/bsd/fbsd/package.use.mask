@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/package.use.mask,v 1.32 2012/10/09 10:52:05 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/package.use.mask,v 1.33 2012/10/14 22:29:37 naota Exp $
 
 # As per UberLord's requests
 sys-apps/openrc pam
@@ -97,3 +97,7 @@ net-analyzer/net-snmp rpm
 # Naohiro Aota <naota@gentoo.org> (09 Oct 2012)
 # Mask dmpai, sys-apps/dmapi cannot build on BSD
 net-fs/samba dmapi
+
+# Naohiro Aota <naota@gentoo.org> (15 Oct 2012)
+# Mask numa on sys-apps/hwloc. numactl not available on FreeBSD
+sys-apps/hwloc numa
