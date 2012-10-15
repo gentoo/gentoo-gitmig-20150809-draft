@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.5.0.3-r1.ebuild,v 1.8 2012/10/06 12:02:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.5.0.3-r1.ebuild,v 1.9 2012/10/15 17:22:52 jlec Exp $
 
 EAPI=4
 
@@ -107,7 +107,7 @@ src_install() {
 	dodoc DEVELOPERS README
 
 	doicon "${WORKDIR}"/${PN}.{xpm,png}
-	make_desktop_entry pymol PyMol ${PN} "Graphics;Education;Science;Chemistry"
+	make_desktop_entry pymol PyMol ${PN} "Graphics;Education;Science;Chemistry" "MimeType=chemical/x-pdb;"
 }
 
 pkg_postinst() {
