@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libdbusmenu-qt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu-qt/ChangeLog,v 1.28 2012/10/15 10:05:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu-qt/ChangeLog,v 1.29 2012/10/15 10:13:07 ago Exp $
+
+  15 Oct 2012; Agostino Sarubbo <ago@gentoo.org> libdbusmenu-qt-0.9.2.ebuild:
+  Stable for X86, wrt bug #436706
 
   15 Oct 2012; Agostino Sarubbo <ago@gentoo.org> libdbusmenu-qt-0.9.2.ebuild:
   Stable for amd64, wrt bug #436706
@@ -126,4 +129,3 @@
   +libdbusmenu-qt-0.3.0.ebuild,
   +files/libdbusmenu-qt-0.3.0-set-link-directories.patch, +metadata.xml:
   Initial commit, moved from kde overlay, thanks to Dennis Schridde
-
