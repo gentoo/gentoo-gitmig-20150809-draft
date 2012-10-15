@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/simgear-2.8.0-r1.ebuild,v 1.2 2012/09/22 21:25:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/simgear-2.8.0-r1.ebuild,v 1.3 2012/10/15 11:23:36 nativemad Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.simgear.org/"
 SRC_URI="http://mirrors.ibiblio.org/pub/mirrors/simgear/ftp/Source/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 SLOT="0"
 IUSE="debug jpeg subversion test"
 
