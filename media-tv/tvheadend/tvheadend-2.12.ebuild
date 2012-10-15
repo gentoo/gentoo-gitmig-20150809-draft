@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvheadend/tvheadend-2.12.ebuild,v 1.1 2012/08/25 12:37:43 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvheadend/tvheadend-2.12.ebuild,v 1.2 2012/10/15 08:23:04 pinkbyte Exp $
 
 EAPI=4
 
-inherit eutils user
+inherit eutils toolchain-funcs user
 
 MY_PN="hts-${PN}"
 
@@ -40,6 +40,10 @@ src_prepare() {
 
 src_configure() {
 	econf $(use_enable avahi) --release
+}
+
+src_compile() {
+	emake CC="$(tc-getCC)"
 }
 
 src_install() {
