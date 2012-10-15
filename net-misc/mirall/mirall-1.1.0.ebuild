@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mirall/mirall-1.1.0.ebuild,v 1.1 2012/10/13 12:58:33 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mirall/mirall-1.1.0.ebuild,v 1.2 2012/10/15 08:19:54 scarabeus Exp $
 
 EAPI=4
 
@@ -22,3 +22,8 @@ RDEPEND="
 	x11-libs/qt-test:4
 "
 DEPEND="${RDEPEND}"
+
+src_prepare() {
+	# Yay for fcked detection.
+	export CSYNC_DIR="${EPREFIX}/usr/include/ocsync/"
+}

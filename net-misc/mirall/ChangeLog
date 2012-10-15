@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/mirall
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mirall/ChangeLog,v 1.6 2012/10/13 12:58:33 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mirall/ChangeLog,v 1.7 2012/10/15 08:19:54 scarabeus Exp $
+
+  15 Oct 2012; Tomáš Chvátal <scarabeus@gentoo.org> mirall-1.1.0.ebuild:
+  Fix finding csync when we are not using the internal one. Resolves bug#438290.
 
 *mirall-1.1.0 (13 Oct 2012)
 
