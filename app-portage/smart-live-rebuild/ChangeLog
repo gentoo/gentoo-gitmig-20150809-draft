@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/smart-live-rebuild
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/ChangeLog,v 1.39 2012/08/31 09:03:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/ChangeLog,v 1.40 2012/10/15 08:09:59 mgorny Exp $
+
+*smart-live-rebuild-1.2.3-r2 (15 Oct 2012)
+
+  15 Oct 2012; Michał Górny <mgorny@gentoo.org>
+  +smart-live-rebuild-1.2.3-r2.ebuild:
+  Revision bump to distutils-r1.
 
   31 Aug 2012; Michał Górny <mgorny@gentoo.org>
   -smart-live-rebuild-1.2.1.ebuild, -smart-live-rebuild-1.2.3.ebuild:
