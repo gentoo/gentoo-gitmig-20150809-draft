@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/libraw-0.15.0_beta1.ebuild,v 1.1 2012/10/15 07:01:44 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/libraw-0.15.0_beta1.ebuild,v 1.2 2012/10/15 07:09:27 radhermit Exp $
 
 EAPI="4"
 
@@ -21,9 +21,10 @@ SRC_URI="http://www.libraw.org/data/${MY_P}.tar.gz
 LICENSE="LGPL-2.1 CDDL GPL-2 GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="demosaic examples jpeg2k +lcms openmp static-libs"
+IUSE="demosaic examples jpeg jpeg2k +lcms openmp static-libs"
 
-RDEPEND="jpeg2k? ( media-libs/jasper )
+RDEPEND="jpeg? ( virtual/jpeg )
+	jpeg2k? ( media-libs/jasper )
 	lcms? ( media-libs/lcms:2 )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
@@ -46,13 +47,14 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		$(use_enable demosaic demosaic-pack-gpl2) \
-		$(use_enable demosaic demosaic-pack-gpl3) \
-		$(use_enable examples) \
+		$(use_enable static-libs static) \
+		$(use_enable openmp) \
+		$(use_enable jpeg) \
 		$(use_enable jpeg2k jasper) \
 		$(use_enable lcms) \
-		$(use_enable openmp) \
-		$(use_enable static-libs static)
+		$(use_enable examples) \
+		$(use_enable demosaic demosaic-pack-gpl2) \
+		$(use_enable demosaic demosaic-pack-gpl3)
 }
 
 src_install() {
