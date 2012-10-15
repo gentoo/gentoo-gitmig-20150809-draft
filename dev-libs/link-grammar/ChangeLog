@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/link-grammar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/link-grammar/ChangeLog,v 1.48 2012/10/07 00:43:43 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/link-grammar/ChangeLog,v 1.49 2012/10/15 01:04:25 mattst88 Exp $
+
+  15 Oct 2012; Matt Turner <mattst88@gentoo.org> link-grammar-4.7.6.ebuild:
+  Stable on alpha, bug 427544.
 
   07 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
   link-grammar-4.7.6.ebuild:
