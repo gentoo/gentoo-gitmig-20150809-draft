@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/lv2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lv2/ChangeLog,v 1.3 2012/05/22 15:37:39 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lv2/ChangeLog,v 1.4 2012/10/15 22:25:53 aballier Exp $
+
+*lv2-1.2.0 (15 Oct 2012)
+
+  15 Oct 2012; Alexis Ballier <aballier@gentoo.org> +lv2-1.2.0.ebuild:
+  version bump
 
   22 May 2012; Johannes Huber <johu@gentoo.org> lv2-1.0.0.ebuild:
   Add ~x86 wrt bug #413033
