@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/dconf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/ChangeLog,v 1.38 2012/10/07 00:58:45 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/ChangeLog,v 1.39 2012/10/15 04:49:44 mattst88 Exp $
+
+  15 Oct 2012; Matt Turner <mattst88@gentoo.org> dconf-0.12.1.ebuild:
+  Stable on alpha, bug 427544.
 
   07 Oct 2012; Anthony G. Basile <blueness@gentoo.org> dconf-0.12.1.ebuild:
   stable ppc64, bug #427544
