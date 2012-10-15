@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/mime-types
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mime-types/ChangeLog,v 1.77 2012/04/26 12:16:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mime-types/ChangeLog,v 1.78 2012/10/15 08:48:24 djc Exp $
+
+*mime-types-9 (15 Oct 2012)
+
+  15 Oct 2012; Dirkjan Ochtman <djc@gentoo.org> +mime-types-9.ebuild:
+  Version bump, see bug 342923.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> mime-types-8.ebuild:
   keyword ~amd64-fbsd
