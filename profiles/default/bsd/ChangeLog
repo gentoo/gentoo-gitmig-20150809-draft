@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.130 2012/10/15 14:32:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.131 2012/10/15 14:33:44 aballier Exp $
+
+  15 Oct 2012; Alexis Ballier <aballier@gentoo.org> fbsd/make.defaults:
+  add python2 to BOOTSTRAP_USE so that python2 gets set as default python
+  interpreter
 
   15 Oct 2012; Alexis Ballier <aballier@gentoo.org> fbsd/packages.build:
   remove python and perl from packages.build, add autotools, like on linux
