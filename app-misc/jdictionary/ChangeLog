@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/jdictionary
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jdictionary/ChangeLog,v 1.20 2007/12/25 02:06:26 betelgeuse Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jdictionary/ChangeLog,v 1.21 2012/10/15 07:54:54 sera Exp $
+
+*jdictionary-1.8-r3 (15 Oct 2012)
+
+  15 Oct 2012; Ralph Sennhauser <sera@gentoo.org> +jdictionary-1.8-r3.ebuild:
+  Set encoding. #432634
+  EAPI bump and cleanup.
 
   25 Dec 2007; Petteri Räty <betelgeuse@gentoo.org>
   -jdictionary-1.8-r1.ebuild:
