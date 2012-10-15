@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/ettercap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.105 2012/10/13 22:39:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.106 2012/10/15 08:21:13 ago Exp $
+
+  15 Oct 2012; Agostino Sarubbo <ago@gentoo.org> -ettercap-0.7.3-r4.ebuild,
+  -ettercap-0.7.4.1-r1.ebuild, -files/ettercap-0.7.3-64bit-casting.patch,
+  -files/ettercap-0.7.3-as-needed.patch, -files/ettercap-0.7.3-autotools.patch,
+  -files/ettercap-0.7.3-open_missing_mode.patch,
+  -files/ettercap-0.7.4-autotools.patch, -files/ettercap-0.7.4-flags.patch,
+  -files/ettercap-0.7.4-use-g-idle.patch:
+  Remove old
 
   13 Oct 2012; Agostino Sarubbo <ago@gentoo.org> ettercap-0.7.5.ebuild:
   +plugins
