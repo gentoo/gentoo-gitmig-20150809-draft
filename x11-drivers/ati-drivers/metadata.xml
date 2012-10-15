@@ -3,7 +3,8 @@
 <pkgmetadata>
 	<herd>x11</herd>
 	<maintainer>
-		<email>lu_zero@gentoo.org</email>
+		<email>jkarlson@cc.hut.fi</email>
+		<description>Proxy maintainer. Assign to herd and CC him on bugs</description>
 	</maintainer>
 	<use>
 		<flag name='qt4'>
