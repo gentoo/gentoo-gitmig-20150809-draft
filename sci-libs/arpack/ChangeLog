@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/arpack
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/ChangeLog,v 1.42 2012/09/05 19:54:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/ChangeLog,v 1.43 2012/10/15 12:06:50 naota Exp $
+
+  15 Oct 2012;  <naota@gentoo.org> arpack-3.1.2.ebuild, arpack-96-r3.ebuild:
+  Add ~x86-fbsd
 
 *arpack-3.1.2 (05 Sep 2012)
 
@@ -173,4 +176,3 @@
   +files/arpack-autotools.patch, +metadata.xml, +arpack-96.ebuild:
   Initial import, closing bug #69241. Thanks David Grant
   <david.grant@telus.net> for the initial ebuild.
-
