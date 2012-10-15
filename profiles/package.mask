@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14140 2012/10/15 10:18:13 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14141 2012/10/15 11:05:26 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -36,26 +36,6 @@
 # last upstream's activity was at 2002.
 # Masked for removal in 30 days, bug 438458.
 app-crypt/cryptoapi
-
-# Ben de Groot <yngwin@gentoo.org> (15 Oct 2012)
-# Temp mask for committing razorqt 0.5.0
-=razorqt-base/libqtxdg-0.5.0
-=razorqt-base/razorqt-libs-0.5.0
-=razorqt-base/razorqt-data-0.5.0
-=razorqt-base/razorqt-appswitcher-0.5.0
-=razorqt-base/razorqt-autosuspend-0.5.0
-=razorqt-base/razorqt-config-0.5.0
-=razorqt-base/razorqt-desktop-0.5.0
-=razorqt-base/razorqt-kbshortcuts-0.5.0
-=razorqt-base/razorqt-lightdm-greeter-0.5.0
-=razorqt-base/razorqt-notifications-0.5.0
-=razorqt-base/razorqt-openssh-askpass-0.5.0
-=razorqt-base/razorqt-panel-0.5.0
-=razorqt-base/razorqt-policykit-0.5.0
-=razorqt-base/razorqt-power-0.5.0
-=razorqt-base/razorqt-runner-0.5.0
-=razorqt-base/razorqt-session-0.5.0
-=razorqt-base/razorqt-meta-0.5.0
 
 # Tim Harder <radhermit@gentoo.org> (15 Oct 2012)
 # Mask development releases
