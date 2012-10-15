@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/sdl-terminal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-terminal/ChangeLog,v 1.7 2012/10/15 08:07:09 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-terminal/ChangeLog,v 1.8 2012/10/15 17:08:13 mr_bones_ Exp $
+
+  15 Oct 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  sdl-terminal-1.1.3-r1.ebuild:
+  tidy
 
 *sdl-terminal-1.1.3-r1 (15 Oct 2012)
 
@@ -35,4 +39,3 @@
   10 Jan 2006; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
   +sdl-terminal-1.1.0.ebuild:
   initial commit
-
