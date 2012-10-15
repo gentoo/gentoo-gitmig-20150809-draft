@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/mime-types
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mime-types/ChangeLog,v 1.78 2012/10/15 08:48:24 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mime-types/ChangeLog,v 1.79 2012/10/15 08:51:54 djc Exp $
+
+  15 Oct 2012; Dirkjan Ochtman <djc@gentoo.org> -mime-types-3.ebuild,
+  -mime-types-5.ebuild, -mime-types-7.ebuild:
+  Remove old versions.
 
 *mime-types-9 (15 Oct 2012)
 
