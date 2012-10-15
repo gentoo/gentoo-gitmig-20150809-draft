@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-mga
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-mga/ChangeLog,v 1.108 2012/09/28 11:02:35 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-mga/ChangeLog,v 1.109 2012/10/15 14:11:53 chithanh Exp $
+
+  15 Oct 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xf86-video-mga-1.6.2.ebuild:
+  Relax xorg-server dependency, bug #433663.
 
 *xf86-video-mga-1.6.2 (28 Sep 2012)
 
