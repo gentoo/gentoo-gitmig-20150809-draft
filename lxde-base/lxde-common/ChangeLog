@@ -1,6 +1,13 @@
 # ChangeLog for lxde-base/lxde-common
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-common/ChangeLog,v 1.37 2012/08/25 00:01:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-common/ChangeLog,v 1.38 2012/10/15 18:30:03 hwoarang Exp $
+
+*lxde-common-0.5.5-r3 (15 Oct 2012)
+
+  15 Oct 2012; Markos Chandras <hwoarang@gentoo.org>
+  +lxde-common-0.5.5-r3.ebuild:
+  Add the executable bit to the lxde session file. Bug #437010. Move it directly
+  to stable so everyone can benefit from it
 
   25 Aug 2012; Markos Chandras <hwoarang@gentoo.org> -lxde-common-0.4.2.ebuild,
   -lxde-common-0.5.0-r1.ebuild, -lxde-common-0.5.0-r2.ebuild,
