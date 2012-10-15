@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/alephone-20100424.ebuild,v 1.6 2012/06/23 04:25:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/alephone-20100424.ebuild,v 1.7 2012/10/15 08:50:20 tupone Exp $
 
-EAPI=2
+EAPI=4
 inherit autotools eutils games
 
 MY_P=AlephOne-${PV}
@@ -57,6 +57,7 @@ src_prepare() {
 
 	epatch \
 		"${FILESDIR}"/${P}-boost_145.patch \
+		"${FILESDIR}"/${P}-gcc47.patch \
 		"${FILESDIR}"/${P}-png15.patch
 
 	eautoreconf
@@ -64,7 +65,6 @@ src_prepare() {
 
 src_configure() {
 	egamesconf \
-		--disable-dependency-tracking \
 		--enable-lua \
 		$(use_enable alsa) \
 		$(use_enable mad) \
@@ -77,10 +77,9 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dogamesbin "${T}"/${PN}.sh || die "dogamesbin failed"
+	default
+	dogamesbin "${T}"/${PN}.sh
 	doman docs/${PN}.6
-	dodoc AUTHORS ChangeLog README
 	dohtml docs/*.html
 	prepgamesdirs
 }
