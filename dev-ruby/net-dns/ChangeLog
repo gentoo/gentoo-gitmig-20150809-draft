@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/net-dns
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-dns/ChangeLog,v 1.8 2012/08/14 18:42:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-dns/ChangeLog,v 1.9 2012/10/15 06:40:23 graaff Exp $
+
+*net-dns-0.7.1 (15 Oct 2012)
+
+  15 Oct 2012; Hans de Graaff <graaff@gentoo.org> +net-dns-0.7.1.ebuild:
+  Version bump. Avoid failing test on jruby due to a jruby bug, thanks to
+  Michel Boaventura for finding the root cause.
 
   14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Update metadata.xml so that it's the same as most other packages.
