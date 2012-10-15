@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/as11/as11-1.0.ebuild,v 1.9 2010/10/02 14:52:28 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/as11/as11-1.0.ebuild,v 1.10 2012/10/15 16:17:38 ago Exp $
 
-EAPI="2"
+EAPI=4
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Motorola's AS11 Assembler for the 68HC11"
 HOMEPAGE="http://www.ai.mit.edu/people/rsargent/as11.html"
@@ -21,14 +21,11 @@ DEPEND=""
 RDEPEND=""
 
 src_prepare() {
-	sed -i -e "s/ -o/\$(LDFLAGS) -o/g" Makefile || die
-}
-
-src_compile() {
-	emake CC="$(tc-getCC)" || die "Compile failed"
+	epatch "${FILESDIR}"/Makefile.patch
+	tc-export CC
 }
 
 src_install() {
-	dobin as11
-	dodoc as11.doc CHANGELOG README
+	dobin ${PN}
+	dodoc ${PN}.doc CHANGELOG README
 }
