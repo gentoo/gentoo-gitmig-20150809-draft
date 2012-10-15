@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.199 2012/10/14 17:46:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.200 2012/10/15 01:05:19 blueness Exp $
+
+  15 Oct 2012; Anthony G. Basile <blueness@gentoo.org> apache-2.2.23.ebuild:
+  stable arm, bug #432284
 
   14 Oct 2012; Jeroen Roovers <jer@gentoo.org> apache-2.2.23.ebuild:
   Stable for HPPA (bug #432284).
