@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.125 2012/08/05 21:50:09 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.126 2012/10/15 09:25:21 ago Exp $
+
+  15 Oct 2012; Agostino Sarubbo <ago@gentoo.org> -wicd-1.7.0-r1.ebuild,
+  -wicd-1.7.0.ebuild, -wicd-1.7.1-r1.ebuild, -wicd-1.7.1-r2.ebuild,
+  -wicd-1.7.1-r3.ebuild, -wicd-1.7.1.ebuild, -wicd-1.7.1_pre20111210-r1.ebuild,
+  -wicd-1.7.1_pre20120127-r1.ebuild:
+  Remove old
 
   05 Aug 2012; Anthony G. Basile <blueness@gentoo.org> wicd-1.7.2.4-r1.ebuild:
   Keyword ~arm
