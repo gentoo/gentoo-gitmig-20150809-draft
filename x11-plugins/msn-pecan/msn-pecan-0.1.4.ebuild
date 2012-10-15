@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/msn-pecan/msn-pecan-0.1.2.ebuild,v 1.2 2012/05/05 05:12:03 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/msn-pecan/msn-pecan-0.1.4.ebuild,v 1.1 2012/10/15 09:54:42 voyageur Exp $
 
-EAPI="2"
+EAPI=4
 
 inherit eutils toolchain-funcs multilib
 
@@ -25,16 +25,17 @@ S=${WORKDIR}/${P/_/-}
 
 src_prepare() {
 	sed -e "/^LDFLAGS/{s/$/ ${LDFLAGS}/;}" \
-		-e "/^CFLAGS/{s/$/ ${CFLAGS}/;}" -i Makefile || die
+		-e "/^CFLAGS/{s/$/ ${CFLAGS}/;}" -i Makefile \
+		|| die "Flags sed failed"
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" || die
+	emake CC="$(tc-getCC)"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc ChangeLog README TODO || die "dodoc failed"
+	emake DESTDIR="${D}" install
+	dodoc ChangeLog README TODO
 }
 
 pkg_postinst() {
