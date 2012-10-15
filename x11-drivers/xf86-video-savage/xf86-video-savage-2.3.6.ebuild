@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-savage/xf86-video-savage-2.3.6.ebuild,v 1.1 2012/07/21 20:34:11 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-savage/xf86-video-savage-2.3.6.ebuild,v 1.2 2012/10/15 14:18:35 chithanh Exp $
 
 EAPI=4
 XORG_DRI=dri
@@ -19,4 +19,12 @@ pkg_setup() {
 		$(use_enable dri)
 	)
 	xorg-2_pkg_setup
+}
+
+pkg_postinst() {
+	if has_version ">=x11-base/xorg-server-1.12.99"; then
+		elog "Your X server no longer supports XAA, so xf86-video-savage will fall back"
+		elog "to shadowFB. Enable EXA in your X.org configuration to still have some 2D"
+		elog "acceleration. See \"man 4 savage\" for details."
+	fi
 }
