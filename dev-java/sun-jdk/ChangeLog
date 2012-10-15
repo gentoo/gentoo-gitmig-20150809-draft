@@ -1,6 +1,16 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.337 2012/10/15 10:23:42 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.338 2012/10/15 15:51:00 sera Exp $
+
+*sun-jdk-1.6.0.35-r1 (15 Oct 2012)
+
+  15 Oct 2012; Ralph Sennhauser <sera@gentoo.org> +sun-jdk-1.6.0.35-r1.ebuild:
+  Demos now available for 6u35. #431492 #434990
+  Add back ia64 and examples for amd64.
+  Add BSD to licenses for examples.
+  Use QA_PREBUILT instead of individual variables.
+  Fix desktop files for newer standard.
+  Add elog about the name change to oracle-jdk-bin for JDK7.
 
   15 Oct 2012; Ralph Sennhauser <sera@gentoo.org> -sun-jdk-1.6.0.33.ebuild,
   -sun-jdk-1.6.0.33-r1.ebuild, -sun-jdk-1.6.0.33-r2.ebuild,
