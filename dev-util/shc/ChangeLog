@@ -1,9 +1,12 @@
 # ChangeLog for dev-util/shc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/shc/ChangeLog,v 1.27 2012/10/14 18:53:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/shc/ChangeLog,v 1.28 2012/10/15 05:05:21 armin76 Exp $
+
+  15 Oct 2012; Raúl Porcel <armin76@gentoo.org> shc-3.8.9.ebuild:
+  x86 stable wrt #438080
 
   14 Oct 2012; Raúl Porcel <armin76@gentoo.org> shc-3.8.7.ebuild:
-  Move to ~alpha, x86 stable wrt #438080
+  Move to ~alpha
 
   12 Oct 2012; Anthony G. Basile <blueness@gentoo.org> shc-3.8.9.ebuild:
   stable ppc, bug #438080

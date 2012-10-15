@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/shc/shc-3.8.9.ebuild,v 1.3 2012/10/12 11:03:07 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/shc/shc-3.8.9.ebuild,v 1.4 2012/10/15 05:05:21 armin76 Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.datsi.fi.upm.es/~frosal/sources/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ppc ~sparc x86"
 IUSE=""
 
 RESTRICT="test"
