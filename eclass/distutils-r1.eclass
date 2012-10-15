@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.2 2012/10/15 12:51:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.3 2012/10/15 15:01:18 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -40,7 +40,7 @@ case "${EAPI}" in
 	0|1|2|3)
 		die "Unsupported EAPI=${EAPI} (too old) for ${ECLASS}"
 		;;
-	4)
+	4|5)
 		;;
 	*)
 		die "Unsupported EAPI=${EAPI} (unknown) for ${ECLASS}"

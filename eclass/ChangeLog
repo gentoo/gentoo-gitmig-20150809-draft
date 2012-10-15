@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.446 2012/10/15 12:51:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.447 2012/10/15 15:01:18 mgorny Exp $
+
+  15 Oct 2012; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass,
+  python-r1.eclass:
+  Enable EAPI 5 support.
 
   15 Oct 2012; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
   Fix missing wrapper symlinks when first supported Python implementation is
