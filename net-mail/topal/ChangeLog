@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/topal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/topal/ChangeLog,v 1.10 2012/06/13 09:46:57 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/topal/ChangeLog,v 1.11 2012/10/15 12:43:13 eras Exp $
+
+*topal-75 (15 Oct 2012)
+
+  15 Oct 2012; Eray Aslan <eras@gentoo.org> +files/75-Makefile.patch,
+  +topal-75.ebuild:
+  Version bump
 
   13 Jun 2012; Michael Weber <xmw@gentoo.org> topal-72.ebuild:
   ppc stable (bug 317971)
@@ -39,4 +45,3 @@
   +metadata.xml, +topal-64.ebuild:
   Initial commit. Thanks to Sascha Lucas, Peter Gantner and Nils Schlupp
   (#215881)
-
