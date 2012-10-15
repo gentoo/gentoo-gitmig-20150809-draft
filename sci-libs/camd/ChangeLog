@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/camd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/camd/ChangeLog,v 1.22 2012/05/30 13:37:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/camd/ChangeLog,v 1.23 2012/10/15 21:30:14 naota Exp $
+
+  15 Oct 2012;  <naota@gentoo.org> camd-2.2.3.ebuild:
+  Add ~x86-fbsd.
 
   30 May 2012; Alexis Ballier <aballier@gentoo.org> camd-2.2.3.ebuild:
   keyword ~amd64-fbsd
@@ -78,4 +81,3 @@
   05 Feb 2008; Sébastien Fabbro <bicatali@gentoo.org>
   +files/camd-2.2.0-autotools.patch, +metadata.xml, +camd-2.2.0.ebuild:
   Initial import. Thanks to Justin Bronder for his work, see bug #173900
-
