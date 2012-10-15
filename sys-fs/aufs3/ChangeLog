@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/aufs3
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.25 2012/10/08 05:33:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.26 2012/10/15 05:22:58 jlec Exp $
+
+*aufs3-3_p20121015 (15 Oct 2012)
+
+  15 Oct 2012; Justin Lecher <jlec@gentoo.org> +aufs3-3_p20121015.ebuild,
+  files/aufs3-standalone-x-rcN.patch, +files/aufs3-base-6.patch,
+  +files/aufs3-standalone-6.patch, files/aufs3-base-x-rcN.patch:
+  Version Bump
 
   08 Oct 2012; Justin Lecher <jlec@gentoo.org> aufs3-3_p20120813-r1.ebuild:
   Fix compilation if USE=-nfs, #432392
