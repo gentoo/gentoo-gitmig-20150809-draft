@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.445 2012/10/14 18:18:20 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.446 2012/10/15 12:51:20 mgorny Exp $
+
+  15 Oct 2012; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
+  Fix missing wrapper symlinks when first supported Python implementation is
+  disabled.
 
   14 Oct 2012; Alexey Shvetsov <alexxy@gentoo.org> openib.eclass:
   Add compat-rdma

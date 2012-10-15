@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.1 2012/10/14 10:58:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.2 2012/10/15 12:51:20 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -221,8 +221,14 @@ distutils-r1_python_install_all() {
 
 	# note: keep in sync with ...rename_scripts()
 	# also, we assume that each script is installed for all impls
-	local EPYTHON PYTHON
-	_python_set_PYTHON "${PYTHON_COMPAT[0]}"
+	local impl EPYTHON PYTHON
+	for impl in "${PYTHON_COMPAT[@]}"; do
+		if use "python_targets_${impl}"; then
+			_python_set_PYTHON "${impl}"
+			break
+		fi
+	done
+
 	for f in "${D}"/{bin,sbin,usr/bin,usr/sbin}/*-"${EPYTHON}"; do
 		if [[ -x ${f} ]]; then
 			debug-print "${FUNCNAME}: found executable at ${f#${D}/}"
