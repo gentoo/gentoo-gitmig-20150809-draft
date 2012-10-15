@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.338 2012/10/14 16:31:31 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.339 2012/10/15 05:58:18 robbat2 Exp $
+
+*genkernel-3.4.44.1 (15 Oct 2012)
+
+  15 Oct 2012; Robin H. Johnson <robbat2@gentoo.org> +genkernel-3.4.44.1.ebuild,
+  -genkernel-3.4.44.ebuild:
+  Version bump, 3.4.44 had a nasty corner case of not building kernels due to a
+  bug I introduced.
 
 *genkernel-3.4.44 (14 Oct 2012)
 
