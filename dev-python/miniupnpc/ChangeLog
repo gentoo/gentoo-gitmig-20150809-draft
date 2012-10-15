@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/miniupnpc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/miniupnpc/ChangeLog,v 1.4 2012/07/11 08:11:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/miniupnpc/ChangeLog,v 1.5 2012/10/15 08:13:13 mgorny Exp $
+
+*miniupnpc-1.7-r1 (15 Oct 2012)
+
+  15 Oct 2012; Michał Górny <mgorny@gentoo.org> +miniupnpc-1.7-r1.ebuild:
+  Revision bump to distutils-r1.
 
 *miniupnpc-1.7 (11 Jul 2012)
 
