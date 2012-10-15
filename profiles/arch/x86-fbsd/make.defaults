@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/make.defaults,v 1.4 2012/06/16 11:44:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/make.defaults,v 1.5 2012/10/15 15:58:18 chithanh Exp $
 # System-wide defaults for the G/FBSD Portage system
 
 ARCH="x86-fbsd"
@@ -12,5 +12,5 @@ FCFLAGS="${CFLAGS}"
 ACCEPT_KEYWORDS="x86-fbsd ~x86-fbsd"
 
 VIDEO_CARDS="apm ark chips cirrus cyrix dummy i128 intel mach64 mga \
-	neomagic nv r128 radeon rendition s3 s3virge savage siliconmotion sis \
+	nv r128 radeon rendition s3 s3virge savage siliconmotion sis \
 	sisusb tga trident tseng via vmware"

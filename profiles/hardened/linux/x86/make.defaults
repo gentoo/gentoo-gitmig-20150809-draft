@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/x86/make.defaults,v 1.12 2012/06/16 11:44:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/x86/make.defaults,v 1.13 2012/10/15 15:58:18 chithanh Exp $
 
 ARCH="x86"
 ACCEPT_KEYWORDS="x86"
@@ -16,7 +16,7 @@ USE="nptl"
 # 2006/08/18 - Donnie Berkholz <dberkholz@gentoo.org>
 # Defaults for video drivers
 VIDEO_CARDS="apm ark chips cirrus cyrix dummy fbdev glint i128 i740 intel \
-	mach64 mga neomagic nsc nv r128 radeon rendition s3 s3virge savage \
+	mach64 mga nsc nv r128 radeon rendition s3 s3virge savage \
 	siliconmotion sis sisusb tdfx tga trident tseng v4l vesa via vmware \
 	voodoo"
 

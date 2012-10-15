@@ -1,10 +1,17 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7037 2012/10/15 11:05:26 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7038 2012/10/15 15:58:17 chithanh Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Oct 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  arch/amd64-fbsd/make.defaults, arch/amd64/make.defaults,
+  arch/x86-fbsd/make.defaults, arch/x86/make.defaults,
+  hardened/linux/x86/make.defaults:
+  Remove neomagic from default VIDEO_CARDS as it is no longer useful with
+  current xorg-server.
 
   15 Oct 2012; Ben de Groot <yngwin@gentoo.org> package.mask:
   Remove temp razorqt mask

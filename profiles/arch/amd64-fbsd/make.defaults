@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/make.defaults,v 1.10 2012/09/22 19:29:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/make.defaults,v 1.11 2012/10/15 15:58:18 chithanh Exp $
 # System-wide defaults for the G/FBSD Portage system
 
 ARCH="amd64-fbsd"
@@ -23,7 +23,7 @@ LDFLAGS_x86_fbsd="-m elf_i386_fbsd"
 USE="mmx sse sse2"
 
 VIDEO_CARDS="apm ark chips cirrus cyrix dummy i128 intel mach64 mga \
-	neomagic nv r128 radeon rendition s3 s3virge savage siliconmotion sis \
+	nv r128 radeon rendition s3 s3virge savage siliconmotion sis \
 	sisusb tga trident tseng via vmware"
 
 # Vanilla FreeBSD has: lib for native 64 bits libs, lib32 for 32-bits emulation.
