@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.167 2012/10/15 18:11:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.168 2012/10/15 18:19:11 jer Exp $
+
+  15 Oct 2012; Jeroen Roovers <jer@gentoo.org> use.mask:
+  Mask USE=policykit too (bug #438368).
 
   15 Oct 2012; Jeroen Roovers <jer@gentoo.org> use.mask:
   Mask USE=consolekit (bug #438368).
