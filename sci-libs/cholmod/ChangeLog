@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cholmod
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/ChangeLog,v 1.31 2012/05/30 13:42:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/ChangeLog,v 1.32 2012/10/15 22:45:52 naota Exp $
+
+  15 Oct 2012;  <naota@gentoo.org> cholmod-1.7.4.ebuild:
+  Add ~x86-fbsd.
 
   30 May 2012; Alexis Ballier <aballier@gentoo.org> cholmod-1.7.4.ebuild:
   keyword ~amd64-fbsd
@@ -126,4 +129,3 @@
   +files/cholmod-1.6.0-autotools.patch, +metadata.xml,
   +cholmod-1.6.0.ebuild:
   Initial import. Thanks to Justin Bronder for his work, see bug #173900
-
