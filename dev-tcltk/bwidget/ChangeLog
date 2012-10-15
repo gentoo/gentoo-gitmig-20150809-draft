@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/bwidget
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/bwidget/ChangeLog,v 1.18 2012/07/17 11:42:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/bwidget/ChangeLog,v 1.19 2012/10/15 10:06:54 ago Exp $
+
+  15 Oct 2012; Agostino Sarubbo <ago@gentoo.org> bwidget-1.9.0.ebuild:
+  Stable for amd64, wrt bug #433279
 
 *bwidget-1.9.0 (17 Jul 2012)
 
