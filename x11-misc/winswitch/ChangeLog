@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/winswitch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/winswitch/ChangeLog,v 1.3 2012/10/06 10:05:28 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/winswitch/ChangeLog,v 1.4 2012/10/15 06:50:32 xmw Exp $
+
+*winswitch-0.12.17 (15 Oct 2012)
+
+  15 Oct 2012; Michael Weber <xmw@gentoo.org> +winswitch-0.12.17.ebuild:
+  Version bump (euscan)
 
 *winswitch-0.12.16 (06 Oct 2012)
 
