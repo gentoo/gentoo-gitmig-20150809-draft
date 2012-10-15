@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.107-r1.ebuild,v 1.4 2012/10/09 22:14:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.107-r1.ebuild,v 1.5 2012/10/15 02:40:17 zmedico Exp $
 
 EAPI=4
 inherit eutils multilib pam pax-utils systemd user
@@ -41,6 +41,10 @@ PDEPEND="
 		!systemd? ( sys-auth/pambase[consolekit] )
 		)
 	!systemd? ( >=sys-auth/consolekit-0.4.5_p2012[policykit] )"
+
+QA_MULTILIB_PATHS="
+	usr/lib/polkit-1/polkit-agent-helper-1
+	usr/lib/polkit-1/polkitd"
 
 pkg_setup() {
 	local u=polkitd
