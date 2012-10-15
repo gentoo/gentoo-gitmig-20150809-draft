@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/ccsh
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ccsh/ChangeLog,v 1.12 2008/12/30 20:40:07 angelos Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ccsh/ChangeLog,v 1.13 2012/10/15 09:56:12 pinkbyte Exp $
+
+*ccsh-0.0.4-r3 (15 Oct 2012)
+
+  15 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> +ccsh-0.0.4-r3.ebuild:
+  Revision bump: EAPI 4, add ~amd64 keyword
 
   30 Dec 2008; Christoph Mende <angelos@gentoo.org> ccsh-0.0.4-r2.ebuild:
   QA: Respect CC (bug 243698)
