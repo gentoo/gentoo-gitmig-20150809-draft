@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/metis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/ChangeLog,v 1.28 2012/06/26 22:50:29 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/ChangeLog,v 1.29 2012/10/15 22:36:28 naota Exp $
+
+  15 Oct 2012;  <naota@gentoo.org> metis-4.0.3.ebuild:
+  Add ~x86-fbsd.
 
   26 Jun 2012; Sebastien Fabbro <fabbros@gentoo.org> metis-4.0.3.ebuild:
   keyword ~amd64-linux ~x86-linux
@@ -109,4 +112,3 @@
   +metadata.xml, +metis-4.0.1.ebuild, +metis-5.0_pre2.ebuild:
   Initial import. Closing bug #53394. Thanks Tiago Quintinho, Justin Bronder
   for their work.
-
