@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/szip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/szip/ChangeLog,v 1.23 2012/06/26 23:07:51 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/szip/ChangeLog,v 1.24 2012/10/15 10:14:07 naota Exp $
+
+  15 Oct 2012;  <naota@gentoo.org> szip-2.1-r1.ebuild:
+  Add ~x86-fbsd.
 
   26 Jun 2012; Sebastien Fabbro <fabbros@gentoo.org> szip-2.1-r1.ebuild:
   keyword amd64-linux and x86-linux
@@ -98,4 +101,3 @@
   16 Dec 2003; Patrick Kursawe <phosphan@gentoo.org> metadata.xml,
   szip-1.1.ebuild:
   Initial import, needed for dev-libs/hdf (Version 4)
-
