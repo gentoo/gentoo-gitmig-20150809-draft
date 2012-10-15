@@ -1,6 +1,9 @@
 # ChangeLog for virtual/mpi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/mpi/ChangeLog,v 1.18 2012/09/27 14:35:23 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/mpi/ChangeLog,v 1.19 2012/10/15 09:56:48 naota Exp $
+
+  15 Oct 2012;  <naota@gentoo.org> mpi-2.0-r1.ebuild:
+  Add ~x86-fbsd.
 
   27 Sep 2012; Kacper Kowalik <xarthisius@gentoo.org> mpi-2.0-r1.ebuild:
   Fix typo in RDEPEND wrt #436394 by Andrew Savchenko <bircoph@gmail.com>
