@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/jags
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/jags/ChangeLog,v 1.8 2012/05/04 07:46:51 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/jags/ChangeLog,v 1.9 2012/10/15 18:45:41 tomka Exp $
+
+*jags-3.3.0 (15 Oct 2012)
+
+  15 Oct 2012; Thomas Kahle <tomka@gentoo.org> +jags-3.3.0.ebuild:
+  Bump to 3.3.0 per bug 436942.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> jags-3.2.0.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -40,4 +45,3 @@
   +metadata.xml:
   Initial import. Modififed ebuild from originally submitted by Xavier
   Fernández i Marín, bug #317741
-
