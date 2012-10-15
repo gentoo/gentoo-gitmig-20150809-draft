@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.114 2012/10/04 19:30:26 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.115 2012/10/15 02:47:46 zmedico Exp $
 
 EAPI=4
 
@@ -68,6 +68,8 @@ RDEPEND="${COMMON_DEPEND}
 	!<sys-kernel/genkernel-3.4.25"
 
 S="${WORKDIR}/systemd-${PV}"
+
+QA_MULTILIB_PATHS="usr/lib/systemd/systemd-udevd"
 
 udev_check_KV()
 {

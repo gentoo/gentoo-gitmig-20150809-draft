@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.727 2012/10/04 19:30:26 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.728 2012/10/15 02:47:46 zmedico Exp $
+
+  15 Oct 2012; Zac Medico <zmedico@gentoo.org> udev-194.ebuild,
+  udev-9999.ebuild:
+  Set QA_MULTILIB_PATHS for bug #424423.
 
 *udev-194 (04 Oct 2012)
 
