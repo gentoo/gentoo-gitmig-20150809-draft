@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/pg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/ChangeLog,v 1.56 2012/09/17 15:54:37 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/ChangeLog,v 1.57 2012/10/15 07:38:32 graaff Exp $
+
+  15 Oct 2012; Hans de Graaff <graaff@gentoo.org> +pg-0.14.1.ebuild:
+  Version bump.
+
+*pg-0.14.1 (15 Oct 2012)
+
+  15 Oct 2012; Hans de Graaff <graaff@gentoo.org> +pg-0.14.1.ebuild:
+  Version bump.
 
   17 Sep 2012; Johannes Huber <johu@gentoo.org> pg-0.14.0.ebuild:
   Stable for x86, wrt bug #434490
