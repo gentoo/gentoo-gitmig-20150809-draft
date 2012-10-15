@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/c-client
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.93 2012/10/08 23:39:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.94 2012/10/15 12:35:16 eras Exp $
+
+*c-client-2007f-r4 (15 Oct 2012)
+
+  15 Oct 2012; Eray Aslan <eras@gentoo.org> +c-client-2007f-r4.ebuild,
+  +files/c-client-2007f-topal.patch, metadata.xml:
+  Add topal and chappa USE flags for use with mail-client/alpine - bug #391387.
+  Fix ssl linkage.
 
   08 Oct 2012; Robin H. Johnson <robbat2@gentoo.org>
   +files/c-client-2007f-ldflags.patch, c-client-2007f-r3.ebuild:
