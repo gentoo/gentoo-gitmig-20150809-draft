@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-tools/dnssec-tools-1.13.ebuild,v 1.1 2012/06/23 21:44:18 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-tools/dnssec-tools-1.14.ebuild,v 1.1 2012/10/15 05:33:06 xmw Exp $
 
 EAPI=4
 
-inherit qt4-r2
+inherit eutils qt4-r2
 
 DESCRIPTION="tools to ease the deployment of DNSSEC related technologies"
 HOMEPAGE="http://www.dnssec-tools.org/"
@@ -16,6 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="static-libs"
 
 RDEPEND="dev-lang/perl
+	dev-perl/Crypt-OpenSSL-Random
 	dev-perl/Getopt-GUI-Long
 	dev-perl/GraphViz
 	dev-perl/MailTools
@@ -26,6 +27,12 @@ DEPEND="${RDEPEND}"
 src_prepare() {
 	sed -e '/^maninstall:/,+3s:$(MKPATH) $(mandir)/$(man1dir):$(MKPATH) $(DESTDIR)/$(mandir)/$(man1dir):' \
 		-i Makefile.in || die
+	sed -e 's:/usr/local/etc:/etc:g' \
+		-e 's:/usr/local:/usr:g' \
+		-i tools/donuts/donuts \
+		-i tools/etc/dnssec-tools/dnssec-tools.conf \
+		-i tools/scripts/genkrf || die
+	epatch "${FILESDIR}"/${PN}-1.13-dtinitconf.patch
 }
 
 src_configure() {
@@ -38,6 +45,12 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install
+
+	newinitd "${FILESDIR}"/rollerd.initd rollerd
+	newconfd "${FILESDIR}"/rollerd.confd rollerd
+
+	newinitd "${FILESDIR}"/donutsd.initd donutsd
+	newconfd "${FILESDIR}"/donutsd.confd donutsd
 
 	prune_libtool_files
 }
