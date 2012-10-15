@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/csync/csync-0.60.0.ebuild,v 1.1 2012/10/13 12:56:28 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/csync/csync-0.60.0.ebuild,v 1.2 2012/10/15 08:14:09 scarabeus Exp $
 
 EAPI=4
 
@@ -43,6 +43,10 @@ src_prepare() {
 	sed -i \
 		-e 's:add_subdirectory(ownCloud)::' \
 		tests/CMakeLists.txt || die
+	# proper docdir
+	sed -i \
+		-e 's:/doc/ocsync:/doc/${PF}:' \
+		doc/CMakeLists.txt || die
 }
 
 src_configure() {

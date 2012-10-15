@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/csync
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/csync/ChangeLog,v 1.5 2012/10/13 12:56:28 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/csync/ChangeLog,v 1.6 2012/10/15 08:14:09 scarabeus Exp $
+
+  15 Oct 2012; Tomáš Chvátal <scarabeus@gentoo.org> csync-0.60.0.ebuild:
+  Respect docdir.
 
 *csync-0.60.0 (13 Oct 2012)
 
