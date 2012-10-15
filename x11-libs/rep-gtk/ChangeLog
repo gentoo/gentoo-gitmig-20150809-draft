@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/rep-gtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.82 2012/10/04 15:05:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.83 2012/10/15 03:12:52 mattst88 Exp $
+
+  15 Oct 2012; Matt Turner <mattst88@gentoo.org> rep-gtk-0.90.8.1.ebuild:
+  Stable on alpha, bug 427544.
 
   04 Oct 2012; Agostino Sarubbo <ago@gentoo.org> rep-gtk-0.90.8.1.ebuild:
   Stable for amd64, wrt bug #427544
