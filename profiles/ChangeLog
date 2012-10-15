@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7033 2012/10/15 06:59:25 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7034 2012/10/15 08:30:53 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Oct 2012; Ben de Groot <yngwin@gentoo.org> categories:
+  Add razorqt-base category
 
   15 Oct 2012; Tim Harder <radhermit@gentoo.org> package.mask:
   Mask =media-libs/libraw-0.15* development releases.
