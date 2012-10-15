@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/cinit
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cinit/ChangeLog,v 1.12 2009/01/10 17:41:42 angelos Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cinit/ChangeLog,v 1.13 2012/10/15 16:37:07 ago Exp $
+
+  15 Oct 2012; Agostino Sarubbo <ago@gentoo.org> cinit-0.2.1.ebuild:
+  EAPI4, respect CFLAGS, wrt to bug #431586
 
   10 Jan 2009; Christoph Mende <angelos@gentoo.org> cinit-0.2.1.ebuild:
   QA: Prevent stripping (bug 252056), respect CC

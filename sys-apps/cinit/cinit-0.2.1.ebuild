@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cinit/cinit-0.2.1.ebuild,v 1.3 2009/01/10 17:41:42 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cinit/cinit-0.2.1.ebuild,v 1.4 2012/10/15 16:37:07 ago Exp $
+
+EAPI=4
 
 inherit toolchain-funcs
 
@@ -13,29 +15,24 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 IUSE="doc"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	sed -i "/contrib+tools/d" Makefile
-	sed -i "/^STRIP/s/strip.*/true/" Makefile.include
+src_prepare() {
+	sed -i "/contrib+tools/d" Makefile || die
+	sed -i "/^STRIP/s/strip.*/true/" Makefile.include || die
 }
 
 src_compile() {
 	emake \
 		CC="$(tc-getCC)" \
 		LD="$(tc-getCC)" \
-		OPTIMIZE="${CFLAGS}" \
+		CFLAGS="${CFLAGS} -I." \
 		LDFLAGS="${LDFLAGS}" \
 		STRIP=/bin/true \
-		all || die "make failed"
+		all
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "install failed"
+	emake LD=$(tc-getCC) DESTDIR="${D}" install
 	rm -f "${D}"/sbin/{init,shutdown,reboot}
 	dodoc Changelog CHANGES CREDITS README TODO
-	if use doc ; then
-		dodoc -r doc
-	fi
+	use doc && dodoc -r doc
 }
