@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/eclean-kernel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eclean-kernel/ChangeLog,v 1.1 2012/05/11 17:35:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eclean-kernel/ChangeLog,v 1.2 2012/10/15 13:47:16 mgorny Exp $
+
+*eclean-kernel-0.3.1 (15 Oct 2012)
+
+  15 Oct 2012; Michał Górny <mgorny@gentoo.org> +eclean-kernel-0.3.1.ebuild:
+  Version bump. The new version introduces Xen-related fixes.
 
 *eclean-kernel-0.3 (11 May 2012)
 
@@ -71,4 +76,3 @@
   24 Oct 2011; Michał Górny <mgorny@gentoo.org> +eclean-kernel-0.1.ebuild,
   +metadata.xml:
   Introduce eclean-kernel, a little tool to remove outdated kernels.
-
