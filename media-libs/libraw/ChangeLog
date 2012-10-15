@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libraw
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/ChangeLog,v 1.32 2012/09/23 08:00:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/ChangeLog,v 1.33 2012/10/15 07:01:44 radhermit Exp $
+
+*libraw-0.15.0_beta1 (15 Oct 2012)
+
+  15 Oct 2012; Tim Harder <radhermit@gentoo.org> +libraw-0.15.0_beta1.ebuild:
+  Version bump.
 
   23 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> libraw-0.14.7.ebuild:
   x86 stable wrt bug #429124
