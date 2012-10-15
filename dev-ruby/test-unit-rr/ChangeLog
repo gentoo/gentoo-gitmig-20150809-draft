@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/test-unit-rr
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit-rr/ChangeLog,v 1.1 2012/10/15 13:37:06 graaff Exp $
+
+*test-unit-rr-1.0.1 (15 Oct 2012)
+
+  15 Oct 2012; Hans de Graaff <graaff@gentoo.org> +test-unit-rr-1.0.1.ebuild,
+  +metadata.xml:
+  Initial import. New dependency for dev-ruby/ruby-gettext.
+
