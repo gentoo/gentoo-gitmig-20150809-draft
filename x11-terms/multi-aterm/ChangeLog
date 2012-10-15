@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/multi-aterm
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-aterm/ChangeLog,v 1.32 2010/11/08 12:40:47 nelchael Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-aterm/ChangeLog,v 1.33 2012/10/15 15:53:44 ago Exp $
+
+  15 Oct 2012; Agostino Sarubbo <ago@gentoo.org> multi-aterm-0.2.1-r1.ebuild:
+  EAPI 4, respect CFLAGS, wrt to bug #432444
 
   08 Nov 2010; Krzysztof Pawlik <nelchael@gentoo.org>
   multi-aterm-0.2.1-r1.ebuild:
@@ -122,4 +125,3 @@
 
   18 Jun 2003; Masatomo Nakano <nakano@gentoo.org> multi-aterm-0.0.4.ebuild:
   Initial import. Thanks to Stefano Lucidi. #22156
-

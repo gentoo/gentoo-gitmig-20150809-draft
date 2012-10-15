@@ -1,8 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-aterm/multi-aterm-0.2.1-r1.ebuild,v 1.10 2010/11/08 12:40:47 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-aterm/multi-aterm-0.2.1-r1.ebuild,v 1.11 2012/10/15 15:53:44 ago Exp $
 
-EAPI=2
+EAPI=4
+
 inherit eutils
 
 DESCRIPTION="Terminal emulator with transparency support as well as rxvt backwards compatibility with tab support"
@@ -19,6 +20,8 @@ RDEPEND="x11-libs/libXpm
 	png? ( media-libs/libpng )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
+
+DOCS=( AUTHORS ChangeLog NEWS TODO )
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PV}-initialize-vars.patch \
@@ -46,8 +49,11 @@ src_configure() {
 		$(use_enable png)
 }
 
+src_compile() {
+	emake CFLAGS="${CFLAGS}"
+}
+
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog NEWS TODO
+	default
 	newdoc doc/TODO TODO.2
 }
