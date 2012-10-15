@@ -1,27 +1,31 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/argus-3.0.4.ebuild,v 1.5 2012/06/12 02:13:49 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/argus-3.0.7.1.ebuild,v 1.1 2012/10/15 13:08:03 jer Exp $
 
-EAPI="2"
-
+EAPI="4"
 inherit autotools eutils user
 
 DESCRIPTION="network Audit Record Generation and Utilization System"
 HOMEPAGE="http://www.qosient.com/argus/"
-SRC_URI="http://qosient.com/argus/src/${P}.tar.gz"
+SRC_URI="http://qosient.com/argus/dev/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
-IUSE="debug tcpd"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+IUSE="debug sasl tcpd"
 
-#	sasl? ( >=dev-libs/cyrus-sasl-2.1.22 )
-RDEPEND="net-libs/libpcap
-	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
+RDEPEND="
+	net-libs/libpcap
+	sys-libs/zlib
+	sasl? ( dev-libs/cyrus-sasl )
+	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
+"
 
-DEPEND="${RDEPEND}
+DEPEND="
+	${RDEPEND}
 	>=sys-devel/bison-1.28
-	>=sys-devel/flex-2.4.6"
+	>=sys-devel/flex-2.4.6
+"
 
 src_prepare() {
 	sed -e 's:/etc/argus.conf:/etc/argus/argus.conf:' \
@@ -34,26 +38,31 @@ src_prepare() {
 		-e 's:#\(ARGUS_SETGROUP_ID=\).*:\1argus:' \
 		-e 's:\(#ARGUS_CHROOT_DIR=\).*:\1/var/lib/argus:' \
 			-i support/Config/argus.conf || die
-	epatch "${FILESDIR}"/${P}-disable-tcp-wrappers-automagic.patch
+	epatch \
+		"${FILESDIR}"/${PN}-3.0.4-disable-tcp-wrappers-automagic.patch \
+		"${FILESDIR}"/${PN}-3.0.5-Makefile.patch
 	eautoreconf
 }
 
 src_configure() {
-	local myconf
 	use debug && touch .debug # enable debugging
-	econf $(use_with tcpd wrappers)
+	econf $(use_with tcpd wrappers) $(use_with sasl)
+}
+
+src_compile() {
+	emake CCOPT="${CFLAGS} ${LDFLAGS}"
 }
 
 src_install () {
 	doman man/man5/* man/man8/*
-	dosbin bin/argus{,bug} || die
+	dosbin bin/argus{,bug}
 
-	dodoc ChangeLog CREDITS README || die
+	dodoc ChangeLog CREDITS README
 
 	insinto /etc/argus
-	doins support/Config/argus.conf || die
+	doins support/Config/argus.conf
 
-	newinitd "${FILESDIR}/argus.initd" argus || die
+	newinitd "${FILESDIR}/argus.initd" argus
 	dodir /var/lib/argus
 }
 
