@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1023 2012/10/14 23:38:16 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1024 2012/10/15 16:03:29 mpagano Exp $
+
+  15 Oct 2012; Michael Pagano <mpagano@gentoo.org>
+  -gentoo-sources-3.0.39.ebuild, -gentoo-sources-3.0.43.ebuild,
+  -gentoo-sources-3.4.8.ebuild, -gentoo-sources-3.6.0.ebuild:
+  Remove old versions
 
   14 Oct 2012; Michael Pagano <mpagano@gentoo.org>
   -gentoo-sources-3.5.2.ebuild, -gentoo-sources-3.5.3.ebuild,
