@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/yatex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yatex/ChangeLog,v 1.37 2012/10/14 18:50:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yatex/ChangeLog,v 1.38 2012/10/15 21:46:04 ulm Exp $
+
+  15 Oct 2012; Ulrich Müller <ulm@gentoo.org> yatex-1.76.ebuild:
+  Fix character code issue with Texinfo files, bug 438456.
 
   14 Oct 2012; Raúl Porcel <armin76@gentoo.org> yatex-1.74.ebuild,
   yatex-1.76.ebuild:
