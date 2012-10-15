@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/spacefm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/ChangeLog,v 1.33 2012/09/15 12:12:47 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/ChangeLog,v 1.34 2012/10/15 10:23:27 ago Exp $
+
+  15 Oct 2012; Agostino Sarubbo <ago@gentoo.org> spacefm-0.8.0.ebuild:
+  Stable for amd64, wrt bug #438346
 
 *spacefm-0.8.0 (15 Sep 2012)
 
