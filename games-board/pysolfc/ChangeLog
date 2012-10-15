@@ -1,6 +1,9 @@
 # ChangeLog for games-board/pysolfc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pysolfc/ChangeLog,v 1.4 2011/04/06 20:01:31 arfrever Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/pysolfc/ChangeLog,v 1.5 2012/10/15 05:39:54 mr_bones_ Exp $
+
+  15 Oct 2012; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml:
+  metadata fix (bug #438318)
 
   06 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pysolfc-2.0.ebuild:
@@ -17,4 +20,3 @@
   07 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> +pysolfc-2.0.ebuild:
   Initial commit wrt #253200, thanks to Arthur Nascimento, Gary Hunt, Joshua
   Rich and others.
-
