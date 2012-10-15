@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/colamd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/colamd/ChangeLog,v 1.29 2012/05/30 13:34:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/colamd/ChangeLog,v 1.30 2012/10/15 22:24:55 naota Exp $
+
+  15 Oct 2012;  <naota@gentoo.org> colamd-2.7.4.ebuild:
+  Add ~x86-fbsd.
 
   30 May 2012; Alexis Ballier <aballier@gentoo.org> colamd-2.7.4.ebuild:
   keyword ~amd64-fbsd
@@ -99,4 +102,3 @@
   05 Feb 2008; Sébastien Fabbro <bicatali@gentoo.org>
   +files/colamd-2.7.1-autotools.patch, +metadata.xml, +colamd-2.7.1.ebuild:
   Initial import. Thanks to Justin Bronder for his work, see bug #173900
-
