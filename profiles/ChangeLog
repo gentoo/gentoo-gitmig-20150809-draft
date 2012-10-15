@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7032 2012/10/14 17:48:38 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7033 2012/10/15 06:59:25 radhermit Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Oct 2012; Tim Harder <radhermit@gentoo.org> package.mask:
+  Mask =media-libs/libraw-0.15* development releases.
 
   14 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> package.mask:
   Unmask net-analyzer/fragroute, cause all of it's dependencies are also
