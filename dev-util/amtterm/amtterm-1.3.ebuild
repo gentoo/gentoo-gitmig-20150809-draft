@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/amtterm/amtterm-1.3.ebuild,v 1.1 2011/12/19 05:47:17 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/amtterm/amtterm-1.3.ebuild,v 1.2 2012/10/16 20:21:25 ryao Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://dl.bytesex.org/releases/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86 ~amd64-linux"
 IUSE=""
 
 RDEPEND="dev-perl/SOAP-Lite"
@@ -26,5 +26,5 @@ src_compile() {
 }
 
 src_install() {
-	prefix="/usr" emake DESTDIR=${D} install || die
+	prefix="/usr" emake DESTDIR=${ED} install || die
 }
