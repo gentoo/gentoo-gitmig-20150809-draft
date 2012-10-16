@@ -1,6 +1,12 @@
 # ChangeLog for x11-base/nouveau-drm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/nouveau-drm/ChangeLog,v 1.24 2012/07/31 00:27:56 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/nouveau-drm/ChangeLog,v 1.25 2012/10/16 01:11:30 chithanh Exp $
+
+*nouveau-drm-20121015 (16 Oct 2012)
+
+  16 Oct 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/nouveau-drm-20121015-Makefile, +nouveau-drm-20121015.ebuild:
+  New snapshot
 
 *nouveau-drm-20120728 (31 Jul 2012)
 
