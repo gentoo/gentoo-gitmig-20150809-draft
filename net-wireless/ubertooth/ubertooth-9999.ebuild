@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ubertooth-9999.ebuild,v 1.14 2012/10/09 21:20:32 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ubertooth-9999.ebuild,v 1.15 2012/10/16 03:49:17 zerochaos Exp $
 
 EAPI="4"
 
@@ -112,7 +112,7 @@ src_install() {
 	dobin bluetooth_rxtx/ubertooth-dump bluetooth_rxtx/ubertooth-lap \
 		bluetooth_rxtx/ubertooth-btle bluetooth_rxtx/ubertooth-uap \
 		bluetooth_rxtx/ubertooth-hop bluetooth_rxtx/ubertooth-util
-	use clock_debug && dobin bluetooth_rxtx/ubertooth-follow
+	use clock_debug && dobin bluetooth_rxtx/ubertooth-follow bluetooth_rxtx/ubertooth-scan
 
 	use python && distutils_src_install
 	use specan && dobin specan_ui/ubertooth-specan-ui

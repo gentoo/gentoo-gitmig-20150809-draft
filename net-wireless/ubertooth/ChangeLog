@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/ubertooth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ChangeLog,v 1.14 2012/10/09 21:20:32 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ChangeLog,v 1.15 2012/10/16 03:49:17 zerochaos Exp $
+
+  16 Oct 2012; Rick Farina <zerochaos@gentoo.org> ubertooth-9999.ebuild:
+  add ubertooth-scan following development
 
   09 Oct 2012; Rick Farina <zerochaos@gentoo.org> ubertooth-2012.10.1.ebuild,
   ubertooth-9999.ebuild:
