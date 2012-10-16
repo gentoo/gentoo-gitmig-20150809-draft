@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/gawk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.157 2012/10/06 12:26:54 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.158 2012/10/16 15:03:26 ottxor Exp $
+
+  16 Oct 2012; Christoph Junghans <ottxor@gentoo.org> gawk-4.0.1-r1.ebuild:
+  re-added keywords (bug #426628)
 
 *gawk-4.0.1-r1 (06 Oct 2012)
 
