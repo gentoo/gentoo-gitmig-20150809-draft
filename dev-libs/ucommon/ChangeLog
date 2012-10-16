@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ucommon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucommon/ChangeLog,v 1.7 2012/09/29 17:36:47 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucommon/ChangeLog,v 1.8 2012/10/16 02:38:01 blueness Exp $
+
+  16 Oct 2012; Anthony G. Basile <blueness@gentoo.org> ucommon-5.2.2-r3.ebuild:
+  stable ppc ppc64, bug #438284
 
   29 Sep 2012; Anthony G. Basile <blueness@gentoo.org> ucommon-5.2.2-r3.ebuild:
   keyword ~ppc ~ppc64, bug #435992
