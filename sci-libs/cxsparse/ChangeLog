@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cxsparse
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cxsparse/ChangeLog,v 1.21 2012/01/20 05:49:19 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cxsparse/ChangeLog,v 1.22 2012/10/16 02:31:53 naota Exp $
+
+  16 Oct 2012;  <naota@gentoo.org> cxsparse-2.2.6.ebuild:
+  Add ~x86-fbsd.
 
 *cxsparse-2.2.6 (20 Jan 2012)
 
@@ -80,4 +83,3 @@
   +files/cxsparse-2.2.1-autotools.patch, +metadata.xml,
   +cxsparse-2.2.1.ebuild:
   Initial import. Thanks to Justin Bronder for his work, see bug #173900
-
