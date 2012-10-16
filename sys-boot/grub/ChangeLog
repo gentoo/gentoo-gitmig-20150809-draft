@@ -1,6 +1,13 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.238 2012/10/11 02:14:10 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.239 2012/10/16 20:42:15 floppym Exp $
+
+*grub-2.00-r1 (16 Oct 2012)
+
+  16 Oct 2012; Mike Gilbert <floppym@gentoo.org>
+  +files/grub-2.00-tftp-endian.patch, +grub-2.00-r1.ebuild, -grub-2.00.ebuild,
+  grub-9999.ebuild:
+  Apply upstream patch to fix TFTP issue, bug 438612 by Alexander Zubkov.
 
   11 Oct 2012; Mike Gilbert <floppym@gentoo.org> grub-2.00.ebuild,
   grub-9999.ebuild:
