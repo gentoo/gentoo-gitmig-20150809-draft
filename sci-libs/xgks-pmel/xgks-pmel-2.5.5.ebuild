@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/xgks-pmel/xgks-pmel-2.5.5.ebuild,v 1.8 2012/05/25 07:51:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/xgks-pmel/xgks-pmel-2.5.5.ebuild,v 1.9 2012/10/16 19:16:53 jlec Exp $
 
 EAPI=4
 
@@ -16,9 +16,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="doc"
 
 RDEPEND="
-	virtual/fortran
 	x11-libs/libX11"
-
 DEPEND="${RDEPEND}
 	sys-devel/flex
 	sys-apps/groff"
