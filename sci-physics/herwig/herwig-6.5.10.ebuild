@@ -1,9 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/herwig/herwig-6.5.10.ebuild,v 1.3 2009/11/25 22:11:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/herwig/herwig-6.5.10.ebuild,v 1.4 2012/10/16 18:58:13 jlec Exp $
 
 EAPI=2
-inherit versionator autotools
+
+inherit versionator autotools fortran-2
 
 PV1=$(get_version_component_range 1 ${PV})
 PV2=$(get_version_component_range 2 ${PV})
@@ -15,7 +16,8 @@ DESCRIPTION="High Energy Physics Event Generator"
 HOMEPAGE="http://hepwww.rl.ac.uk/theory/seymour/herwig/"
 
 COM_URI="http://hepwww.rl.ac.uk/theory/seymour/${PN}"
-SRC_URI="${COM_URI}/${MY_P}.f
+SRC_URI="
+	${COM_URI}/${MY_P}.f
 	${COM_URI}/${MY_P}.inc
 	${COM_URI}/${MY_PINC}"
 

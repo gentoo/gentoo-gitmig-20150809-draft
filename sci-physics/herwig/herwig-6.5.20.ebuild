@@ -1,8 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/herwig/herwig-6.5.20.ebuild,v 1.1 2012/01/22 21:24:44 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/herwig/herwig-6.5.20.ebuild,v 1.2 2012/10/16 18:58:13 jlec Exp $
 
 EAPI=4
+
 inherit versionator autotools fortran-2
 
 PV1=$(get_version_component_range 1 ${PV})
@@ -13,6 +14,7 @@ MY_PINC="$(echo ${PN}|tr '[:lower:]' '[:upper:]')${PV1}${PV2}.INC"
 
 DESCRIPTION="High Energy Physics Event Generator"
 HOMEPAGE="http://www.hep.phy.cam.ac.uk/theory/webber/Herwig/"
+
 COM_URI="http://www.hep.phy.cam.ac.uk/theory/webber/Herwig"
 SRC_URI="${COM_URI}/${MY_P}.f
 	${COM_URI}/${MY_P}.inc
@@ -25,8 +27,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc static-libs"
 
 RDEPEND="!sci-physics/cernlib-montecarlo[herwig]"
-DEPEND="${RDEPEND}
-	virtual/fortran"
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"
 
