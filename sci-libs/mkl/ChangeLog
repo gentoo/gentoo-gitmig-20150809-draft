@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/mkl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/ChangeLog,v 1.46 2011/10/23 21:21:28 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/ChangeLog,v 1.47 2012/10/16 20:36:47 jlec Exp $
+
+  16 Oct 2012; Justin Lecher <jlec@gentoo.org> mkl-10.0.5.025.ebuild:
+  Remove virtual/fortran and always call fortran-2_pkg_setup as intend by the
+  updated fortran-2.eclass
 
   23 Oct 2011; Justin Lecher <jlec@gentoo.org> -mkl-10.0.2.018-r2.ebuild,
   -mkl-9.1.023.ebuild, metadata.xml, mkl-10.0.5.025.ebuild:

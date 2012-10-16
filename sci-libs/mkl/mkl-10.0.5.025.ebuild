@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.5.025.ebuild,v 1.15 2011/10/23 21:21:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.5.025.ebuild,v 1.16 2012/10/16 20:36:47 jlec Exp $
 
-inherit eutils fortran-2 toolchain-funcs check-reqs
+inherit eutils fortran-2 multilib toolchain-funcs check-reqs
 
 PID=1232
 PB=${PN}
@@ -20,8 +20,7 @@ RESTRICT="strip mirror"
 DEPEND="
 	app-admin/eselect-blas
 	app-admin/eselect-cblas
-	app-admin/eselect-lapack
-	virtual/fortran"
+	app-admin/eselect-lapack"
 RDEPEND="${DEPEND}
 	doc? ( app-doc/blas-docs app-doc/lapack-docs )
 	mpi? ( virtual/mpi )"
