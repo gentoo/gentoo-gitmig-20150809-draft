@@ -1,13 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/xfoil/xfoil-6.97.ebuild,v 1.9 2012/08/08 05:36:07 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/xfoil/xfoil-6.97.ebuild,v 1.10 2012/10/16 18:50:32 jlec Exp $
 
 EAPI=4
+
 inherit eutils fortran-2
 
 DESCRIPTION="Design and analysis of subsonic isolated airfoils"
 HOMEPAGE="http://raphael.mit.edu/xfoil/"
-SRC_URI="http://web.mit.edu/drela/Public/web/${PN}/${PN}${PV}.tar.gz
+SRC_URI="
+	http://web.mit.edu/drela/Public/web/${PN}/${PN}${PV}.tar.gz
 	doc? ( http://web.mit.edu/drela/Public/web/${PN}/dataflow.pdf )"
 
 LICENSE="GPL-2"
@@ -15,34 +17,33 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples"
 
-RDEPEND="
-	virtual/fortran
-x11-libs/libX11"
+RDEPEND="x11-libs/libX11"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/Xfoil"
 
 src_prepare() {
-	sed -i \
+	sed \
 		-e '/^FC/d' \
 		-e '/^CC/d' \
 		-e '/^FFLAGS/d' \
 		-e '/^CFLAGS/d' \
 		-e 's/^\(FFLOPT .*\)/FFLOPT = $(FFLAGS)/g' \
-		{bin,plotlib,orrs/bin}/Makefile plotlib/config.make \
+		-i {bin,plotlib,orrs/bin}/Makefile plotlib/config.make \
 		|| die "sed for flags and compilers failed"
 
 	# fix bug #147033
 	[[ $(tc-getFC) == *gfortran ]] && \
 		epatch "${FILESDIR}"/${PN}-6.96-gfortran.patch
+
 	epatch "${FILESDIR}"/${P}-overflow.patch
-	sed -i \
+
+	sed \
 		-e "s:/var/local/codes/orrs/osmap.dat:${EPREFIX}/usr/share/xfoil/orrs/osmap.dat:" \
-		orrs/src/osmap.f || die "sed osmap.f failed"
+		-i orrs/src/osmap.f || die "sed osmap.f failed"
 }
 
 src_compile() {
-	export FC="$(tc-getFC)" F77="$(tc-getF77)"
 	cd "${S}"/orrs/bin
 	emake FLG="${FFLAGS}" FTNLIB="${LDFLAGS}" OS
 	cd "${S}"/orrs
