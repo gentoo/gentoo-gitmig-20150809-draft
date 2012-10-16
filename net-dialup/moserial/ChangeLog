@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/moserial
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/moserial/ChangeLog,v 1.22 2012/10/04 14:57:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/moserial/ChangeLog,v 1.23 2012/10/16 04:40:49 blueness Exp $
+
+  16 Oct 2012; Anthony G. Basile <blueness@gentoo.org> moserial-3.0.7.ebuild:
+  stable ppc, bug #427544
 
   04 Oct 2012; Agostino Sarubbo <ago@gentoo.org> moserial-3.0.7.ebuild:
   Stable for amd64, wrt bug #427544
@@ -99,4 +102,3 @@
   02 Apr 2009; Mart Raudsepp <leio@gentoo.org> +metadata.xml,
   +moserial-1.0.8.ebuild:
   Initial addition of moserial - a GTK+ based serial terminal
-
