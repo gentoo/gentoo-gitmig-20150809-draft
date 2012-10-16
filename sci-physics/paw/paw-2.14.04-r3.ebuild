@@ -1,8 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/paw/paw-2.14.04-r3.ebuild,v 1.1 2011/07/21 16:55:57 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/paw/paw-2.14.04-r3.ebuild,v 1.2 2012/10/16 18:54:24 jlec Exp $
 
 EAPI=4
+
 inherit eutils toolchain-funcs fortran-2
 
 DEB_PN=paw
@@ -12,20 +13,20 @@ DEB_P=${DEB_PN}_${DEB_PV}
 
 DESCRIPTION="CERN's Physics Analysis Workstation data analysis program"
 HOMEPAGE="http://wwwasd.web.cern.ch/wwwasd/paw/index.html"
-LICENSE="GPL-2 LGPL-2 BSD"
-SRC_URI="mirror://debian/pool/main/${DEB_PN:0:1}/${DEB_PN}/${DEB_P}.orig.tar.gz
+SRC_URI="
+	mirror://debian/pool/main/${DEB_PN:0:1}/${DEB_PN}/${DEB_P}.orig.tar.gz
 	mirror://debian/pool/main/${DEB_PN:0:1}/${DEB_PN}/${DEB_P}-${DEB_PR}.debian.tar.gz"
 
-KEYWORDS="~amd64 ~hppa ~sparc ~x86"
 SLOT="0"
+LICENSE="GPL-2 LGPL-2 BSD"
+KEYWORDS="~amd64 ~hppa ~sparc ~x86"
 IUSE=""
 
-RDEPEND="sci-physics/cernlib
-	virtual/fortran
+RDEPEND="
+	sci-physics/cernlib
 	x11-libs/libXaw
 	>=x11-libs/openmotif-2.3:0
 	x11-libs/xbae"
-
 DEPEND="${RDEPEND}
 	dev-lang/cfortran
 	virtual/latex-base
