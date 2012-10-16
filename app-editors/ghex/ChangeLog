@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/ghex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.74 2012/10/04 14:44:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.75 2012/10/16 04:02:20 blueness Exp $
+
+  16 Oct 2012; Anthony G. Basile <blueness@gentoo.org> ChangeLog:
+  stable ppc, bug #427544
 
   04 Oct 2012; Agostino Sarubbo <ago@gentoo.org> ghex-3.4.1.ebuild:
   Stable for amd64, wrt bug #427544
