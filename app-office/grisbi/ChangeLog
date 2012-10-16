@@ -1,6 +1,9 @@
 # ChangeLog for app-office/grisbi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.60 2012/10/04 14:45:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.61 2012/10/16 04:06:35 blueness Exp $
+
+  16 Oct 2012; Anthony G. Basile <blueness@gentoo.org> grisbi-0.8.9-r1.ebuild:
+  stable ppc, bug #427544
 
   04 Oct 2012; Agostino Sarubbo <ago@gentoo.org> grisbi-0.8.9-r1.ebuild:
   Stable for amd64, wrt bug #427544
