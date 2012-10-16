@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.6.4.ebuild,v 1.2 2012/10/14 21:40:38 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.6.4.ebuild,v 1.3 2012/10/16 12:51:17 xmw Exp $
 
 EAPI=3
 
@@ -16,55 +16,58 @@ SRC_URI="http://xpra.org/src/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~amd64-linux ~x86 ~x86-linux"
-IUSE="+clipboard ffmpeg jpeg libnotify parti png +rencode server ssh x264"
+IUSE="+clipboard +rencode server vpx x264"
 
-COMMON_DEPEND="dev-python/pygtk:2
+COMMON_DEPEND="dev-python/pygobject:2
+	dev-python/pygtk:2
 	x11-libs/libX11
 	x11-libs/libXcomposite
 	x11-libs/libXdamage
-	ffmpeg? (
-		virtual/ffmpeg
-		x264? ( media-libs/x264 )
-	)
-	server? ( x11-libs/libXtst )
-	!x11-wm/parti"
+	x11-libs/libXfixes
+	x11-libs/libXrandr
+	x11-libs/libXtst
+	vpx? ( media-libs/libvpx
+		virtual/ffmpeg )
+	x264? ( media-libs/x264
+		virtual/ffmpeg )"
 
 RDEPEND="${COMMON_DEPEND}
+	dev-python/dbus-python
+	dev-python/imaging
+	dev-python/ipython
+	virtual/ssh
 	x11-apps/setxkbmap
 	x11-apps/xmodmap
-	parti? ( dev-python/ipython
-		 dev-python/dbus-python )
-	libnotify? ( dev-python/dbus-python )
-	jpeg? ( dev-python/imaging )
-	png? ( dev-python/imaging )
-	ssh? ( virtual/ssh )
-	server? ( x11-base/xorg-server[xvfb,-minimal] )"
+	server? ( x11-base/xorg-server[-minimal] 
+		x11-drivers/xf86-input-void
+		x11-drivers/xf86-video-dummy
+	)"
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 	>=dev-python/cython-0.16"
 
 src_prepare() {
-	use server || epatch disable-posix-server.patch
-	if use ffmpeg ; then
-		use x264 || epatch disable-x264.patch
-	else
-		epatch disable-vpx.patch disable-x264.patch
-	fi
-	use clipboard || epatch disable-clipboard.patch
-	use rencode || epatch disable-rencode.patch
+	use clipboard || epatch patches/disable-clipboard.patch
+	use rencode   || epatch patches/disable-rencode.patch
+	use server    || epatch patches/disable-posix-server.patch
+	use vpx       || epatch patches/disable-vpx.patch
+	use x264      || epatch patches/disable-x264.patch
 
-	$(PYTHON -2) make_constants_pxi.py wimpiggy/lowlevel/constants.txt wimpiggy/lowlevel/constants.pxi || die
-
-	#python_copy_sources
-	#
-	#patching() {
-	#    [[ "${PYTHON_ABI}" == 2.* ]] && return
-	#	2to3 --no-diffs -x all -f except -w -n .
-	#}
-	#python_execute_function --action-message 'Applying patches with $(python_get_implementation) $(python_get_version)' -s patching
+	distutils_src_prepare
 }
 
 src_install() {
 	distutils_src_install
-	rm -vf "${ED}"usr/share/{parti,wimpiggy,xpra}/{README*,COPYING} || die
+	rm -v "${D}"usr/share/parti/{parti.,}README \
+		"${D}"usr/share/xpra/{webm/LICENSE,xpra.README} \
+		"${D}"usr/share/wimpiggy/wimpiggy.README
+	dodoc {parti.,wimpiggy.,xpra.,}README
+
+	if use server ; then
+		einfo
+		elog "please make your Xorg binary readable for users of xpra"
+		elog "  chmod a+r /usr/bin/Xorg"
+		elog "and think about the security impact"
+		einfo
+	fi
 }
