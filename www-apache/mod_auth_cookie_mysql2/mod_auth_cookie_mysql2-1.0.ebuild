@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_cookie_mysql2/mod_auth_cookie_mysql2-1.0.ebuild,v 1.1 2009/09/17 10:24:22 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_cookie_mysql2/mod_auth_cookie_mysql2-1.0.ebuild,v 1.2 2012/10/16 04:58:52 patrick Exp $
 
 inherit apache-module
 
@@ -26,4 +26,4 @@ APACHE2_MOD_DEFINE="AUTH_COOKIE_MYSQL2"
 
 DOCFILES="README"
 
-need_apache2
+need_apache2_2
