@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.3.2.ebuild,v 1.5 2012/10/14 19:00:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.3.2.ebuild,v 1.6 2012/10/16 18:08:04 jlec Exp $
 
 EAPI=4
 
 #AUTOTOOLS_AUTORECONF=1
 FORTRAN_NEEDED=fortran
 
-inherit autotools-utils eutils flag-o-matic fortran-2 toolchain-funcs
+inherit autotools-utils eutils flag-o-matic fortran-2 toolchain-funcs versionator
 
 DESCRIPTION="Fast C library for the Discrete Fourier Transform"
 HOMEPAGE="http://www.fftw.org/"
@@ -38,7 +38,7 @@ pkg_setup() {
 			ewarn "quad precision only available for gcc >= 4.6"
 			die "need quad precision capable gcc"
 		fi
-		FFTW_DIRS+= "quad"
+		FFTW_DIRS+=" quad"
 	fi
 }
 
@@ -50,6 +50,7 @@ src_prepare() {
 
 	# why?
 	#rm m4/lt* m4/libtool.m4
+	autotools-utils_src_prepare
 }
 
 src_configure() {
