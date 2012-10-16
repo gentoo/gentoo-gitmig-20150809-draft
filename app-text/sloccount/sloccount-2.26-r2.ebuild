@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sloccount/sloccount-2.26-r2.ebuild,v 1.1 2010/10/12 20:52:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sloccount/sloccount-2.26-r2.ebuild,v 1.2 2012/10/16 14:53:28 ottxor Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit eutils toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.dwheeler.com/sloccount/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris ~x86-solaris"
 IUSE=""
 RDEPEND="dev-lang/perl
 		>=sys-apps/sed-4
@@ -29,14 +29,16 @@ src_prepare() {
 		-e '/^DOC_DIR/ { s/-$(RPM_VERSION)//g }' \
 		-e '/^MYDOCS/ { s/[^    =]\+\.html//g }' \
 		makefile || die "sed makefile failed"
+
+	#fixed hard-codes libexec_dir in sloccount
+	sed -i "s|libexec_dir=|&\"${EPREFIX}\"|" sloccount || die
 }
 
 src_compile() {
-	emake CC=$(tc-getCC) || die "emake failed"
+	emake CC=$(tc-getCC)
 }
 
 src_install() {
-	einstall PREFIX="${D}/usr" DOC_DIR="${D}/usr/share/doc/${PF}/" || die
-	prepalldocs
+	emake PREFIX="${ED}/usr" DOC_DIR="${ED}/usr/share/doc/${PF}/" install
 	dohtml *html
 }

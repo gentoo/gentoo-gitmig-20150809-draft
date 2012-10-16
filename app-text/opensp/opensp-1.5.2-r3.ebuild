@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/opensp-1.5.2-r3.ebuild,v 1.12 2012/08/22 07:38:31 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/opensp-1.5.2-r3.ebuild,v 1.13 2012/10/16 14:56:31 ottxor Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils flag-o-matic
 
 MY_P=${P/opensp/OpenSP}
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/openjade/${MY_P}.tar.gz"
 
 LICENSE="JamesClark"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="doc nls static-libs test"
 
 DEPEND="nls? ( >=sys-devel/gettext-0.14.5 )
@@ -47,16 +47,16 @@ src_configure() {
 	econf \
 		--disable-dependency-tracking \
 		--enable-http \
-		--enable-default-catalog=/etc/sgml/catalog   \
-		--enable-default-search-path=/usr/share/sgml \
-		--datadir=/usr/share/sgml/${P}               \
+		--enable-default-catalog="${EPREFIX}"/etc/sgml/catalog   \
+		--enable-default-search-path="${EPREFIX}"/usr/share/sgml \
+		--datadir="${EPREFIX}"/usr/share/sgml/${P}               \
 		$(use_enable nls) \
 		$(use_enable doc doc-build) \
 		$(use_enable static-libs static)
 }
 
 src_compile() {
-	emake pkgdocdir=/usr/share/doc/${PF} || die "Compilation failed"
+	emake pkgdocdir="${EPREFIX}"/usr/share/doc/${PF}
 }
 
 src_test() {
@@ -68,7 +68,7 @@ src_test() {
 
 src_install() {
 	emake DESTDIR="${D}" \
-		pkgdocdir=/usr/share/doc/${PF} install || die "Installation failed"
+		pkgdocdir="${EPREFIX}"/usr/share/doc/${PF} install
 
 	dodoc AUTHORS BUGS ChangeLog NEWS README
 }
