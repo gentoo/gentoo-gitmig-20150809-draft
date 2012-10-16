@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/grace
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.64 2012/10/14 19:34:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.65 2012/10/16 18:47:48 jlec Exp $
+
+  16 Oct 2012; Justin Lecher <jlec@gentoo.org> grace-5.1.22-r2.ebuild,
+  grace-5.1.22-r3.ebuild:
+  Remove virtual/fortran and always call fortran-2_pkg_setup as intend by the
+  updated fortran-2.eclass
 
   14 Oct 2012; Justin Lecher <jlec@gentoo.org> grace-5.1.22-r2.ebuild,
   grace-5.1.22-r3.ebuild:
