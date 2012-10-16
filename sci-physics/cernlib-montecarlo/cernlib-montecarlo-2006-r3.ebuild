@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib-montecarlo/cernlib-montecarlo-2006-r3.ebuild,v 1.1 2011/07/21 16:49:43 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib-montecarlo/cernlib-montecarlo-2006-r3.ebuild,v 1.2 2012/10/16 19:03:23 jlec Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
@@ -12,17 +12,18 @@ DEB_P=${DEB_PN}_${DEB_PV}
 
 DESCRIPTION="Monte-carlo library and tools for the cernlib"
 HOMEPAGE="http://wwwasd.web.cern.ch/wwwasd/cernlib"
-LICENSE="GPL-2 LGPL-2 BSD"
-SRC_URI="mirror://debian/pool/main/${DEB_PN:0:1}/${DEB_PN}/${DEB_P}.orig.tar.gz
+SRC_URI="
+	mirror://debian/pool/main/${DEB_PN:0:1}/${DEB_PN}/${DEB_P}.orig.tar.gz
 	mirror://debian/pool/main/${DEB_PN:0:1}/${DEB_PN}/${DEB_P}-${DEB_PR}.debian.tar.gz"
 
-KEYWORDS="~amd64 ~x86"
 SLOT="0"
+LICENSE="GPL-2 LGPL-2 BSD"
 IUSE="+herwig"
+KEYWORDS="~amd64 ~x86"
 
-RDEPEND=">=x11-libs/openmotif-2.3:0
+RDEPEND="
+	x11-libs/openmotif:0
 	dev-lang/cfortran
-	virtual/fortran
 	sci-physics/cernlib
 	herwig? ( !sci-physics/herwig )"
 

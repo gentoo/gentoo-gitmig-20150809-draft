@@ -1,6 +1,12 @@
 # ChangeLog for sci-physics/cernlib-montecarlo
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib-montecarlo/ChangeLog,v 1.16 2011/07/21 16:49:43 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib-montecarlo/ChangeLog,v 1.17 2012/10/16 19:03:23 jlec Exp $
+
+  16 Oct 2012; Justin Lecher <jlec@gentoo.org>
+  cernlib-montecarlo-2006-r2.ebuild, cernlib-montecarlo-2006-r3.ebuild,
+  metadata.xml:
+  Remove virtual/fortran and always call fortran-2_pkg_setup as intend by the
+  updated fortran-2.eclass
 
 *cernlib-montecarlo-2006-r3 (21 Jul 2011)
 
