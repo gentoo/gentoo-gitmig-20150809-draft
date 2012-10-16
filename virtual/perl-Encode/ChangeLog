@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Encode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Encode/ChangeLog,v 1.42 2012/09/01 12:12:13 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Encode/ChangeLog,v 1.43 2012/10/16 21:50:09 maekke Exp $
+
+  16 Oct 2012; Markus Meier <maekke@gentoo.org> perl-Encode-2.470.0.ebuild:
+  add ~arm, bug #437532
 
   01 Sep 2012; Fabian Groffen <grobian@gentoo.org> perl-Encode-2.470.0.ebuild:
   Marked ~ppc-aix, bug #432288
