@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.447 2012/10/15 15:01:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.448 2012/10/16 14:26:58 yngwin Exp $
+
+  16 Oct 2012; Ben de Groot <yngwin@gentoo.org> -qt4.eclass:
+  Removing qt4.eclass as announced on Sep 13
 
   15 Oct 2012; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass,
   python-r1.eclass:
