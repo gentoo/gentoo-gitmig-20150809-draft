@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Test-Simple
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test-Simple/ChangeLog,v 1.83 2012/09/09 16:35:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test-Simple/ChangeLog,v 1.84 2012/10/16 14:34:44 blueness Exp $
+
+  16 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  perl-Test-Simple-0.980.0-r2.ebuild:
+  stable ppc64, bug #438294
 
   09 Sep 2012; Raúl Porcel <armin76@gentoo.org>
   perl-Test-Simple-0.980.0-r2.ebuild:
@@ -375,4 +379,3 @@
   +perl-Test-Simple-0.54.ebuild, +perl-Test-Simple-0.60.ebuild,
   +perl-Test-Simple-0.62.ebuild:
   New virtual for perl-core/Test-Simple
-
