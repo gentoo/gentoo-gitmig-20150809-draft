@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/metis-4.0.3.ebuild,v 1.5 2012/10/15 22:36:28 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/metis-4.0.3.ebuild,v 1.6 2012/10/16 20:39:01 jlec Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd
 LICENSE="free-noncomm"
 IUSE="doc static-libs"
 
-DEPEND="virtual/fortran"
+DEPEND=""
 RDEPEND="${DEPEND}
 	!sci-libs/parmetis"
 

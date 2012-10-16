@@ -9,7 +9,4 @@
   based on the multilevel recursive-bisection, multilevel k-way, and
   multi-constraint partitioning schemes.
 </longdescription>
-	<use>
-		<flag name="int64">Build the 64 bits integer library (metis &gt;=5 only)</flag>
-	</use>
 </pkgmetadata>
