@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fragroute/fragroute-1.2.5.ebuild,v 1.1 2012/10/11 13:11:21 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fragroute/fragroute-1.2.5.ebuild,v 1.2 2012/10/16 12:17:14 blueness Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ SRC_URI="http://fragroute-ipv6.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 RDEPEND="
