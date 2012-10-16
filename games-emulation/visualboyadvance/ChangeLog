@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/visualboyadvance
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/ChangeLog,v 1.46 2012/10/12 14:26:32 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/ChangeLog,v 1.47 2012/10/16 03:00:39 naota Exp $
+
+  16 Oct 2012;  <naota@gentoo.org>
+  +files/visualboyadvance-1.7.2-sys-types.patch,
+  visualboyadvance-1.7.2-r3.ebuild:
+  Add patch to workaround FreeBSD build failure. #232273 ; Add ~x86-fbsd.
 
   12 Oct 2012;  <naota@gentoo.org> visualboyadvance-1.7.2-r3.ebuild:
   Revert mis-added ~x86-fbsd.
