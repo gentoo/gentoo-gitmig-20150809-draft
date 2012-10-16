@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-2.9.0.ebuild,v 1.2 2012/09/04 14:56:27 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-2.9.0.ebuild,v 1.3 2012/10/16 11:04:21 ago Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2
 	handbook? ( FDL-1.2 )"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 SLOT="4"
 IUSE="addressbook debug doc gphoto2 mysql semantic-desktop themedesigner +thumbnails video"
 
