@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fastcgi/mod_fastcgi-2.4.6-r1.ebuild,v 1.4 2012/01/02 21:29:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fastcgi/mod_fastcgi-2.4.6-r1.ebuild,v 1.5 2012/10/16 02:52:38 patrick Exp $
 
 inherit apache-module eutils
 
@@ -19,7 +19,7 @@ APACHE2_MOD_DEFINE="FASTCGI"
 
 DOCFILES="CHANGES README docs/LICENSE.TERMS docs/mod_fastcgi.html"
 
-need_apache
+need_apache2_2
 
 src_unpack() {
 	unpack ${A}
