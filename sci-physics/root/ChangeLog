@@ -1,6 +1,11 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.108 2012/07/22 20:33:47 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.109 2012/10/16 18:50:45 jlec Exp $
+
+  16 Oct 2012; Justin Lecher <jlec@gentoo.org> root-5.32.03-r2.ebuild,
+  root-5.34.01.ebuild:
+  Remove virtual/fortran and always call fortran-2_pkg_setup as intend by the
+  updated fortran-2.eclass
 
   22 Jul 2012; Sébastien Fabbro <bicatali@gentoo.org> -root-5.34.00.ebuild,
   +root-5.34.01.ebuild, +files/root-5.34.01-glibc216.patch:

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.32.03-r2.ebuild,v 1.4 2012/07/14 18:46:46 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.32.03-r2.ebuild,v 1.5 2012/10/16 18:50:45 jlec Exp $
 
 EAPI=4
 
@@ -100,9 +100,7 @@ CDEPEND="
 DEPEND="${CDEPEND}
 	virtual/pkgconfig"
 
-RDEPEND="
-	virtual/fortran
-	${CDEPEND}
+RDEPEND="${CDEPEND}
 	reflex? ( dev-cpp/gccxml )
 	xinetd? ( sys-apps/xinetd )"
 
