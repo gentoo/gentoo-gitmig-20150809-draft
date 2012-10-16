@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.13.ebuild,v 1.2 2012/10/06 20:46:33 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.13.ebuild,v 1.3 2012/10/16 00:39:22 chithanh Exp $
 
 EAPI=4
 
@@ -51,6 +51,7 @@ IUSE_VIDEO_CARDS="
 	video_cards_newport
 	video_cards_nouveau
 	video_cards_nv
+	video_cards_omap
 	video_cards_omapfb
 	video_cards_qxl
 	video_cards_r128
@@ -122,6 +123,7 @@ PDEPEND="
 	video_cards_newport?       ( x11-drivers/xf86-video-newport )
 	video_cards_nouveau?       ( x11-drivers/xf86-video-nouveau )
 	video_cards_nv?            ( x11-drivers/xf86-video-nv )
+	video_cards_omap?          ( x11-drivers/xf86-video-omap )
 	video_cards_omapfb?        ( x11-drivers/xf86-video-omapfb )
 	video_cards_qxl?           ( x11-drivers/xf86-video-qxl )
 	video_cards_nvidia?        ( x11-drivers/nvidia-drivers )
