@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/scilab
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/ChangeLog,v 1.64 2012/03/13 10:15:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/ChangeLog,v 1.65 2012/10/16 19:06:56 jlec Exp $
+
+  16 Oct 2012; Justin Lecher <jlec@gentoo.org> scilab-4.1.2-r1.ebuild,
+  scilab-4.1.2-r2.ebuild, scilab-4.1.2-r3.ebuild:
+  Remove virtual/fortran and always call fortran-2_pkg_setup as intend by the
+  updated fortran-2.eclass
 
   13 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> scilab-4.1.2-r1.ebuild:
   Revert to ~ppc wrt #360601
