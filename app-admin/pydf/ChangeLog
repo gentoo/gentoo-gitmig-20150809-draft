@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/pydf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pydf/ChangeLog,v 1.41 2012/08/26 17:03:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pydf/ChangeLog,v 1.42 2012/10/16 21:59:28 maekke Exp $
+
+  16 Oct 2012; Markus Meier <maekke@gentoo.org> pydf-10.ebuild:
+  add ~arm, bug #433655
 
   26 Aug 2012; Raúl Porcel <armin76@gentoo.org> pydf-9.ebuild, pydf-10.ebuild:
   Drop sparc keywords
