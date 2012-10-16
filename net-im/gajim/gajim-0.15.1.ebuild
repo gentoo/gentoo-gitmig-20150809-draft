@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.15.1.ebuild,v 1.7 2012/10/16 06:43:07 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.15.1.ebuild,v 1.8 2012/10/16 10:12:43 jlec Exp $
 
 EAPI=4
 
@@ -68,6 +68,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	echo "src/command_system/mapping.py" >> po/POTFILES.in
 	epatch \
 		"${FILESDIR}"/0.14-python-version.patch \
 		"${FILESDIR}"/0.14.1-testing.patch
