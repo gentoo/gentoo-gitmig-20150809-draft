@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/fastjet/fastjet-3.0.3-r1.ebuild,v 1.2 2012/10/14 19:33:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/fastjet/fastjet-3.0.3-r1.ebuild,v 1.3 2012/10/16 19:00:28 jlec Exp $
 
 EAPI=4
 
@@ -22,13 +22,9 @@ IUSE="cgal doc examples +plugins static-libs"
 RDEPEND="cgal? ( sci-mathematics/cgal )"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen[dot] )
-	plugins? ( virtual/fortran sci-physics/siscone )"
+	plugins? ( sci-physics/siscone )"
 
 PATCHES=( "${FILESDIR}"/${P}-system-siscone.patch )
-
-pkg_setup() {
-	use plugins && fortran-2_pkg_setup
-}
 
 src_configure() {
 	use cgal && has_version sci-mathematics/cgal[gmp] && append-ldflags -lgmp
