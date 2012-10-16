@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_nss
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_nss/ChangeLog,v 1.5 2012/05/03 04:56:40 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_nss/ChangeLog,v 1.6 2012/10/16 03:31:29 patrick Exp $
+
+  16 Oct 2012; Patrick Lauer <patrick@gentoo.org> mod_nss-1.0.8-r1.ebuild:
+  Restricting to apache 2.2
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> mod_nss-1.0.8-r1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -21,4 +24,3 @@
   +mod_nss-1.0.8-r1.ebuild, +metadata.xml:
   new ebuild, coming from 389 Directory Server project
   (http://directory.fedoraproject.org)
-

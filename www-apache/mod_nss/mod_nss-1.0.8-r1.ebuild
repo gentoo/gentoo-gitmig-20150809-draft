@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_nss/mod_nss-1.0.8-r1.ebuild,v 1.4 2012/05/03 04:56:40 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_nss/mod_nss-1.0.8-r1.ebuild,v 1.5 2012/10/16 03:31:29 patrick Exp $
 
 EAPI="2"
 
@@ -29,7 +29,7 @@ APACHE2_MOD_DEFINE="NSS"
 
 DOCFILES="NOTICE README"
 
-need_apache2
+need_apache2_2
 
 src_prepare() {
 	# setup proper exec name

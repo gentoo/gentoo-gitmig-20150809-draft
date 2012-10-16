@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_python
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_python/ChangeLog,v 1.20 2010/03/26 18:45:13 arfrever Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_python/ChangeLog,v 1.21 2012/10/16 03:34:38 patrick Exp $
+
+  16 Oct 2012; Patrick Lauer <patrick@gentoo.org> mod_python-3.3.1-r1.ebuild:
+  Restricting to apache 2.2
 
   26 Mar 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   mod_python-3.3.1-r1.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_spin/mod_spin-1.1.9.ebuild,v 1.1 2009/09/18 15:33:57 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_spin/mod_spin-1.1.9.ebuild,v 1.2 2012/10/16 03:36:34 patrick Exp $
 
 inherit apache-module
 
@@ -23,7 +23,7 @@ DEPEND=">=sys-libs/db-4.2
 	www-apache/libapreq2"
 RDEPEND="${DEPEND}"
 
-need_apache2
+need_apache2_2
 
 src_compile() {
 	econf --with-apxs=${APXS} || die "econf failed"
