@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/workrave
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.84 2012/10/04 14:45:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.85 2012/10/16 04:04:17 blueness Exp $
+
+  16 Oct 2012; Anthony G. Basile <blueness@gentoo.org> workrave-1.9.4-r1.ebuild:
+  stable ppc, bug #427544
 
   04 Oct 2012; Agostino Sarubbo <ago@gentoo.org> workrave-1.9.4-r1.ebuild:
   Stable for amd64, wrt bug #427544
