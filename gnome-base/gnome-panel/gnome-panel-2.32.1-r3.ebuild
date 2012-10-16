@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.32.1-r3.ebuild,v 1.11 2012/05/05 05:38:11 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.32.1-r3.ebuild,v 1.12 2012/10/16 03:47:52 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -14,10 +14,10 @@ HOMEPAGE="http://www.gnome.org/"
 SRC_URI="${SRC_URI} mirror://gentoo/introspection-20110205.m4.tar.bz2
 	http://dev.gentoo.org/~pacho/gnome/${P}-patches.tar.bz2"
 
-LICENSE="GPL-2 FDL-1.1 LGPL-2"
+LICENSE="GPL-2+ FDL-1.1+ LGPL-2+"
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
-IUSE="+bonobo doc eds +introspection networkmanager"
+IUSE="+bonobo eds +introspection networkmanager"
 
 RDEPEND=">=gnome-base/gnome-desktop-2.26:2
 	>=x11-libs/pango-1.15.4[introspection?]
@@ -45,16 +45,14 @@ RDEPEND=">=gnome-base/gnome-desktop-2.26:2
 	networkmanager? ( >=net-misc/networkmanager-0.6.7 )"
 DEPEND="${RDEPEND}
 	>=dev-lang/perl-5
+	dev-util/gtk-doc-am
 	>=app-text/gnome-doc-utils-0.3.2
 	virtual/pkgconfig
 	>=dev-util/intltool-0.40
-	~app-text/docbook-xml-dtd-4.1.2
-	doc? ( >=dev-util/gtk-doc-1 )
-	gnome-base/gnome-common
-	dev-util/gtk-doc-am"
+	app-text/docbook-xml-dtd:4.1.2
+	gnome-base/gnome-common"
 # eautoreconf needs
 #	gnome-base/gnome-common
-#	dev-util/gtk-doc-am
 
 pkg_setup() {
 	G2CONF="${G2CONF}
@@ -94,7 +92,9 @@ src_prepare() {
 	# clock applet: Pass the correct month to Evolution command line
 	epatch "${FILESDIR}/${PN}-2.32.1-evo-month.patch"
 
-	intltoolize --force --copy --automake || die "intltoolize failed"
+	# Fix underlinking, bug #384533
+	epatch "${FILESDIR}/${P}-underlinking.patch"
+
 	AT_M4DIR=${WORKDIR} eautoreconf
 	gnome2_src_prepare
 }

@@ -1,6 +1,14 @@
 # ChangeLog for gnome-base/gnome-panel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.355 2012/08/09 09:15:00 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.356 2012/10/16 03:47:52 tetromino Exp $
+
+  16 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -gnome-panel-2.32.1-r1.ebuild, -gnome-panel-2.32.1-r2.ebuild,
+  gnome-panel-2.32.1-r3.ebuild, +files/gnome-panel-2.32.1-underlinking.patch,
+  gnome-panel-3.2.1.ebuild, -gnome-panel-3.4.1.ebuild,
+  gnome-panel-3.4.2.1.ebuild:
+  Fix linking failure with gold (bug #384533, thanks to Naohiro Aota). Drop
+  useless USE=doc, it only regenerated documentation. Update license. Drop old.
 
 *gnome-panel-3.4.2.1 (09 Aug 2012)
 
