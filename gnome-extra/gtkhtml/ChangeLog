@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gtkhtml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.264 2012/10/14 23:22:57 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.265 2012/10/16 04:33:09 blueness Exp $
+
+  16 Oct 2012; Anthony G. Basile <blueness@gentoo.org> gtkhtml-4.4.3.ebuild:
+  stable ppc, bug #427544
 
   14 Oct 2012; Matt Turner <mattst88@gentoo.org> gtkhtml-4.4.4.ebuild:
   Stable on alpha, bug 427544.

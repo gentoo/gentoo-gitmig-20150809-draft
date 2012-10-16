@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/libgda
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.210 2012/10/15 04:39:19 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.211 2012/10/16 04:34:59 blueness Exp $
+
+  16 Oct 2012; Anthony G. Basile <blueness@gentoo.org> libgda-4.2.13.ebuild:
+  stable ppc, bug #427544
 
   15 Oct 2012; Matt Turner <mattst88@gentoo.org> libgda-4.2.13.ebuild:
   Stable on alpha, bug 427544.
