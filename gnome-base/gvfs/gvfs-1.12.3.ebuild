@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.12.3.ebuild,v 1.9 2012/10/15 04:10:26 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.12.3.ebuild,v 1.10 2012/10/16 04:30:59 blueness Exp $
 
 EAPI=4
 GCONF_DEBUG=no
@@ -20,7 +20,7 @@ if [[ ${PV} = 9999 ]]; then
 	KEYWORDS=""
 	DOCS=""
 else
-	KEYWORDS="alpha amd64 arm ~ia64 ~mips ~ppc ppc64 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~sparc-solaris ~x86-solaris"
+	KEYWORDS="alpha amd64 arm ~ia64 ~mips ppc ppc64 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~sparc-solaris ~x86-solaris"
 	DOCS="AUTHORS ChangeLog NEWS MAINTAINERS README TODO" # ChangeLog.pre-1.2 README.commits
 fi
 

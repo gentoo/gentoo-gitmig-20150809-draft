@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gvfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.189 2012/10/15 04:10:26 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.190 2012/10/16 04:30:59 blueness Exp $
+
+  16 Oct 2012; Anthony G. Basile <blueness@gentoo.org> gvfs-1.12.3.ebuild:
+  stable ppc, bug #427544
 
   15 Oct 2012; Matt Turner <mattst88@gentoo.org> gvfs-1.12.3.ebuild:
   Stable on alpha, bug 427544.
