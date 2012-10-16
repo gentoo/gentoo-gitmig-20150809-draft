@@ -1,16 +1,18 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-3.6.1-r1.ebuild,v 1.13 2011/06/21 15:55:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-3.6.1-r1.ebuild,v 1.14 2012/10/16 20:48:56 jlec Exp $
 
-inherit eutils fortran-2 toolchain-funcs
+inherit eutils fortran-2 multilib toolchain-funcs
 
 MY_PV=${PV//\./\-}
 
 DESCRIPTION="AMD Core Math Library (ACML) for x86 and amd64 CPUs"
 HOMEPAGE="http://developer.amd.com/acml.jsp"
-SRC_URI="x86? ( acml-${MY_PV}-gfortran-32bit.tgz )
-	   amd64? ( acml-${MY_PV}-gfortran-64bit.tgz
-	   int64? ( acml-${MY_PV}-gfortran-64bit-int64.tgz ) )"
+SRC_URI="
+	x86? ( acml-${MY_PV}-gfortran-32bit.tgz )
+	amd64? (
+		acml-${MY_PV}-gfortran-64bit.tgz
+		int64? ( acml-${MY_PV}-gfortran-64bit-int64.tgz ) )"
 
 SLOT="0"
 LICENSE="ACML"
@@ -20,7 +22,6 @@ IUSE="openmp int64 doc examples"
 RESTRICT="strip fetch"
 
 DEPEND="
-	virtual/fortran
 	app-admin/eselect-blas
 	app-admin/eselect-lapack"
 RDEPEND="${DEPEND}

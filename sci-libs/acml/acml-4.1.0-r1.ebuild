@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-4.1.0-r1.ebuild,v 1.9 2011/06/21 20:06:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-4.1.0-r1.ebuild,v 1.10 2012/10/16 20:48:56 jlec Exp $
 
 EAPI=1
 
-inherit eutils fortran-2 toolchain-funcs versionator
+inherit eutils fortran-2 multilib toolchain-funcs versionator
 
 MY_P=${PN}-$(replace_all_version_separators -)
 
@@ -32,7 +32,6 @@ IUSE="doc examples gfortran ifc int64 openmp test"
 RESTRICT="strip fetch"
 
 CDEPEND="
-	virtual/fortran
 	ifc? ( dev-lang/ifc )
 	gfortran? ( sys-devel/gcc:4.2 )
 	!gfortran? ( !ifc? ( sys-devel/gcc:4.2 ) )"

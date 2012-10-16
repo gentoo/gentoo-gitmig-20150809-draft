@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/acml
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/ChangeLog,v 1.44 2011/06/21 15:55:47 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/ChangeLog,v 1.45 2012/10/16 20:48:56 jlec Exp $
+
+  16 Oct 2012; Justin Lecher <jlec@gentoo.org> -acml-3.6.0-r1.ebuild,
+  acml-3.6.1-r1.ebuild, acml-4.0.1.ebuild, acml-4.1.0-r1.ebuild, metadata.xml:
+  Remove virtual/fortran and always call fortran-2_pkg_setup as intend by the
+  updated fortran-2.eclass
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> acml-3.6.0-r1.ebuild,
   acml-3.6.1-r1.ebuild, acml-4.0.1.ebuild, acml-4.1.0-r1.ebuild:
