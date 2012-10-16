@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/miniupnpc/miniupnpc-1.7-r1.ebuild,v 1.1 2012/10/15 08:13:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/miniupnpc/miniupnpc-1.7-r1.ebuild,v 1.2 2012/10/16 04:15:11 mgorny Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://miniupnp.free.fr/files/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 RDEPEND=">=net-libs/miniupnpc-${PV}"
