@@ -1,6 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.89 2012/09/11 18:40:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.90 2012/10/16 08:02:53 tetromino Exp $
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (16 Oct 2012)
+# Missing keywords for spidermonkey
+net-libs/libproxy spidermonkey
 
 # Raúl Porcel <armin76@gentoo.org> (11 Sep 2012)
 # Upstream drops support on ia64 from 4.0 onwards, bug #430352
