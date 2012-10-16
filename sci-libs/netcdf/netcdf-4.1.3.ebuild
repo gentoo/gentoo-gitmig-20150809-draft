@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.1.3.ebuild,v 1.7 2012/10/14 19:25:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.1.3.ebuild,v 1.8 2012/10/16 20:31:51 jlec Exp $
 
 EAPI=4
 
@@ -19,7 +19,6 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos 
 IUSE="cxx dap doc fortran hdf5 static-libs"
 
 RDEPEND="
-	fortran? ( virtual/fortran )
 	dap? ( net-misc/curl )
 	hdf5? ( >=sci-libs/hdf5-1.8.6[zlib,szip,fortran?] )"
 
@@ -36,10 +35,8 @@ PATCHES=(
 )
 
 pkg_setup() {
-	if use fortran; then
-		FORTRAN_STANDARD="77 90"
-		fortran-2_pkg_setup
-	fi
+	FORTRAN_STANDARD="77 90"
+	fortran-2_pkg_setup
 	if use hdf5 && has_version sci-libs/hdf5[mpi]; then
 		export CC=mpicc
 		use cxx && export CXX=mpicxx

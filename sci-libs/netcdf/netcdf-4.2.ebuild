@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.2.ebuild,v 1.2 2012/04/23 16:11:43 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-4.2.ebuild,v 1.3 2012/10/16 20:31:51 jlec Exp $
 
 EAPI=4
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="+dap doc hdf +hdf5 mpi static-libs szip tools"
 
-RDEPEND="dap? ( net-misc/curl )
+RDEPEND="
+	dap? ( net-misc/curl )
 	hdf? ( sci-libs/hdf >=sci-libs/hdf5-1.8.8 )
 	hdf5? ( >=sci-libs/hdf5-1.8.8[mpi=,szip=,zlib] )"
 
