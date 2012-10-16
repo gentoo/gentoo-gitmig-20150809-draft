@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_ruby
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ruby/ChangeLog,v 1.18 2010/10/01 00:37:10 ranger Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ruby/ChangeLog,v 1.19 2012/10/16 15:15:51 graaff Exp $
+
+  16 Oct 2012; Hans de Graaff <graaff@gentoo.org> mod_ruby-1.3.0.ebuild:
+  Force ruby18 since ruby19 does not work, fixes bug 438554.
 
   01 Oct 2010; Brent Baude <ranger@gentoo.org> mod_ruby-1.3.0.ebuild:
   Marking mod_ruby-1.3.0 ppc64 for bug 310245
