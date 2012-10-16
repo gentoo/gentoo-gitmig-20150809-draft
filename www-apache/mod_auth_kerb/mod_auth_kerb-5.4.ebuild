@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_kerb/mod_auth_kerb-5.4.ebuild,v 1.1 2009/09/17 06:50:34 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_kerb/mod_auth_kerb-5.4.ebuild,v 1.2 2012/10/16 02:24:43 patrick Exp $
 
 inherit apache-module
 
@@ -21,7 +21,7 @@ APACHE2_MOD_DEFINE="AUTH_KERB"
 
 DOCFILES="INSTALL README"
 
-need_apache
+need_apache2_2
 
 src_compile() {
 	CFLAGS="" APXS="${APXS}" econf --with-krb5=/usr --without-krb4 || die "econf failed"
