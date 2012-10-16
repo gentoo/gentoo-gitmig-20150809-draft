@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/opera-next-12.10.1618.ebuild,v 1.1 2012/10/04 16:45:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/opera-next-12.10.1627.ebuild,v 1.1 2012/10/16 17:34:55 jer Exp $
 
 EAPI=4
 inherit eutils fdo-mime gnome2-utils multilib pax-utils versionator
@@ -16,7 +16,7 @@ IUSE="elibc_FreeBSD gtk kde +gstreamer multilib"
 O_V="$(get_version_component_range 1-2)" # Major version, i.e. 11.00
 O_B="$(get_version_component_range 3)"   # Build version, i.e. 1156
 
-O_D="19250_${O_V}-${O_B}"
+O_D="analog_${O_V}-${O_B}"
 O_P="${PN}-${O_V}-${O_B}"
 O_U="http://snapshot.opera.com/unix/"
 
