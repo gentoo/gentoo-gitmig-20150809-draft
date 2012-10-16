@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.10.1.ebuild,v 1.5 2012/10/02 01:36:36 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.10.1.ebuild,v 1.6 2012/10/16 19:47:58 jlec Exp $
 
 EAPI=4
 
@@ -12,7 +12,8 @@ inherit eutils fortran-2 distutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="Scientific algorithms library for Python"
 HOMEPAGE="http://www.scipy.org/ http://pypi.python.org/pypi/scipy"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
+SRC_URI="
+	mirror://sourceforge/${PN}/${P}.tar.gz
 	doc? (
 		http://docs.scipy.org/doc/${P}/${PN}-html.zip -> ${P}-html.zip
 		http://docs.scipy.org/doc/${P}/${PN}-ref.pdf -> ${P}-ref.pdf
@@ -23,20 +24,19 @@ SLOT="0"
 IUSE="doc test umfpack"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 
-CDEPEND="dev-python/numpy
+CDEPEND="
+	dev-python/numpy
 	sci-libs/arpack
 	virtual/cblas
 	virtual/lapack
 	umfpack? ( sci-libs/umfpack )"
-
 DEPEND="${CDEPEND}
 	virtual/pkgconfig
 	doc? ( app-arch/unzip )
 	test? ( dev-python/nose )
 	umfpack? ( dev-lang/swig )"
 
-RDEPEND="virtual/fortran
-	${CDEPEND}
+RDEPEND="${CDEPEND}
 	dev-python/imaging"
 
 DOCS="THANKS.txt LATEST.txt TOCHANGE.txt"

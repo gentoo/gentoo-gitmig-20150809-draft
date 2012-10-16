@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/scipy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.79 2012/10/02 01:36:36 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.80 2012/10/16 19:47:58 jlec Exp $
+
+  16 Oct 2012; Justin Lecher <jlec@gentoo.org> scipy-0.9.0-r1.ebuild,
+  scipy-0.10.1.ebuild:
+  Remove virtual/fortran and always call fortran-2_pkg_setup as intend by the
+  updated fortran-2.eclass
 
   02 Oct 2012; Mike Gilbert <floppym@gentoo.org> scipy-0.10.1.ebuild,
   scipy-0.9.0-r1.ebuild:
