@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_openid/mod_auth_openid-0.2-r1.ebuild,v 1.1 2008/05/08 19:13:27 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_openid/mod_auth_openid-0.2-r1.ebuild,v 1.2 2012/10/16 03:07:46 patrick Exp $
 
 inherit eutils apache-module autotools
 
@@ -21,7 +21,7 @@ RDEPEND="${DEPEND}"
 APACHE2_MOD_CONF="10_${PN}"
 APACHE2_MOD_DEFINE="AUTH_OPENID"
 
-need_apache2
+need_apache2_2
 
 src_unpack() {
 	unpack ${A}

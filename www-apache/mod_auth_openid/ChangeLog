@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_auth_openid
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_openid/ChangeLog,v 1.5 2012/05/03 04:56:40 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_openid/ChangeLog,v 1.6 2012/10/16 03:07:46 patrick Exp $
+
+  16 Oct 2012; Patrick Lauer <patrick@gentoo.org> mod_auth_openid-0.2-r1.ebuild,
+  mod_auth_openid-0.4.ebuild, mod_auth_openid-0.6.ebuild:
+  Restricting to apache 2.2
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> mod_auth_openid-0.6.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -28,4 +32,3 @@
   +files/10_mod_auth_openid.conf, +metadata.xml,
   +mod_auth_openid-0.2.ebuild:
   initial ebuild wrt #209573
-

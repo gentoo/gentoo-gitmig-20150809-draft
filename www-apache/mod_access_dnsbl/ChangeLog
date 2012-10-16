@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_access_dnsbl
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_access_dnsbl/ChangeLog,v 1.3 2008/01/27 18:42:21 hollow Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_access_dnsbl/ChangeLog,v 1.4 2012/10/16 03:04:23 patrick Exp $
+
+  16 Oct 2012; Patrick Lauer <patrick@gentoo.org> mod_access_dnsbl-0.01.ebuild:
+  Restricting to apache 2.2
 
   27 Jan 2008; Benedikt Böhm <hollow@gentoo.org> metadata.xml:
   update metadata
@@ -15,4 +18,3 @@
   +files/10_mod_access_dnsbl.conf, +metadata.xml,
   +mod_access_dnsbl-0.01.ebuild:
   initial version
-

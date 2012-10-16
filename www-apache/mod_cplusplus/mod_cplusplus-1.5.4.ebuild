@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_cplusplus/mod_cplusplus-1.5.4.ebuild,v 1.3 2008/01/31 18:42:23 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_cplusplus/mod_cplusplus-1.5.4.ebuild,v 1.4 2012/10/16 03:01:56 patrick Exp $
 
 inherit apache-module autotools
 
@@ -21,7 +21,7 @@ APACHE2_MOD_DEFINE="CPLUSPLUS"
 
 DOCFILES="README"
 
-need_apache2
+need_apache2_2
 
 S="${WORKDIR}/${PN}"
 

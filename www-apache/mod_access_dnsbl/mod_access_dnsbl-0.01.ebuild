@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_access_dnsbl/mod_access_dnsbl-0.01.ebuild,v 1.2 2008/01/27 16:03:54 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_access_dnsbl/mod_access_dnsbl-0.01.ebuild,v 1.3 2012/10/16 03:04:23 patrick Exp $
 
 inherit apache-module eutils
 
@@ -20,4 +20,4 @@ RDEPEND="${DEPEND}"
 APACHE2_MOD_CONF="10_${PN}"
 APACHE2_MOD_DEFINE="DNSBL"
 
-need_apache2
+need_apache2_2

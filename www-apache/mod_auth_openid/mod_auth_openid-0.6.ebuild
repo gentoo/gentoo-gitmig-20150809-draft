@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_openid/mod_auth_openid-0.6.ebuild,v 1.2 2012/05/03 04:56:40 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_openid/mod_auth_openid-0.6.ebuild,v 1.3 2012/10/16 03:07:46 patrick Exp $
 
 EAPI="4"
 
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 APACHE2_MOD_CONF="10_${PN}"
 APACHE2_MOD_DEFINE="AUTH_OPENID"
 
-need_apache2
+need_apache2_2
 
 src_configure() {
 	econf --with-apxs="${APXS}" \
