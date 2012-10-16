@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/gnome-icon-theme-3.2.1.2.ebuild,v 1.9 2012/05/14 04:47:46 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/gnome-icon-theme-3.2.1.2.ebuild,v 1.10 2012/10/16 21:45:05 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -50,6 +50,7 @@ src_prepare() {
 
 	# Revert upstream commit that is wrongly updating icon cache, upstream bug #642449
 	EPATCH_OPTS="-R" epatch "${FILESDIR}/${PN}-2.91.7-update-cache.patch"
-	intltoolize --force --copy --automake || die "intltoolize failed"
+
+	eaclocal --force # workaround for weird autotools.eclass bug #438296, #419933
 	eautoreconf
 }
