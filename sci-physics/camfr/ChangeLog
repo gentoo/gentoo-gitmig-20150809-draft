@@ -1,6 +1,11 @@
 # ChangeLog for sci-physics/camfr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/ChangeLog,v 1.24 2012/08/07 05:43:12 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/ChangeLog,v 1.25 2012/10/16 19:06:44 jlec Exp $
+
+  16 Oct 2012; Justin Lecher <jlec@gentoo.org> camfr-20070717-r3.ebuild,
+  metadata.xml:
+  Remove virtual/fortran and always call fortran-2_pkg_setup as intend by the
+  updated fortran-2.eclass
 
   07 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> -camfr-20070717-r2.ebuild,
   camfr-20070717-r3.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/camfr-20070717-r3.ebuild,v 1.3 2012/08/07 05:43:12 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/camfr-20070717-r3.ebuild,v 1.4 2012/10/16 19:06:44 jlec Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
-RDEPEND="virtual/fortran
+RDEPEND="
 	dev-libs/blitz
 	>=dev-libs/boost-1.48[python]
 	dev-python/imaging[tk]
@@ -37,8 +37,10 @@ RESTRICT_PYTHON_ABIS="3.*"
 S="${WORKDIR}/${P/-/_}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-gcc43.patch
-	epatch "${FILESDIR}"/${P}-python.patch
+	epatch \
+		"${FILESDIR}"/${P}-gcc43.patch \
+		"${FILESDIR}"/${P}-python.patch
+
 	cp "${FILESDIR}"/machine_cfg.py.gentoo machine_cfg.py || die
 	python_copy_sources
 
