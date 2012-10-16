@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/cone
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/ChangeLog,v 1.47 2012/09/23 08:10:28 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/ChangeLog,v 1.48 2012/10/16 10:59:22 eras Exp $
+
+*cone-0.90-r1 (16 Oct 2012)
+
+  16 Oct 2012; Eray Aslan <eras@gentoo.org> +cone-0.90-r1.ebuild,
+  +files/cone-0.90-gnutls3.patch:
+  Fix building with gnutls-3 - bug #421445
 
   23 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> cone-0.90.ebuild:
   x86 stable wrt bug #434296
@@ -213,4 +219,3 @@
   courier. This has been living in my overlay for awhile, and I've had a few
   other people test it. Let me know if you give this a try and it works or
   doesn't.
-
