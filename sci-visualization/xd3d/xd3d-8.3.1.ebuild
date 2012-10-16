@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xd3d/xd3d-8.3.1.ebuild,v 1.13 2012/08/07 03:56:17 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xd3d/xd3d-8.3.1.ebuild,v 1.14 2012/10/16 18:47:38 jlec Exp $
 
 EAPI=4
 
@@ -16,7 +16,6 @@ KEYWORDS="amd64 ppc ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="examples"
 
 RDEPEND="
-	virtual/fortran
 	x11-libs/libXpm"
 DEPEND="${RDEPEND}
 	app-shells/tcsh"
@@ -33,7 +32,7 @@ src_prepare() {
 }
 
 src_configure() {
-	tc-export FC CC
+	tc-export CC
 	sed \
 		-e "s:##D##:${ED}:" \
 		-e "s:##lib##:$(get_libdir):" \
