@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.6.2.ebuild,v 1.2 2012/10/14 20:53:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.6.2.ebuild,v 1.3 2012/10/16 18:43:05 jlec Exp $
 
 EAPI=4
 
@@ -63,7 +63,6 @@ RDEPEND="
 	openmpi_rm_pbs? ( sys-cluster/torque )
 	openmpi_rm_slurm? ( sys-cluster/slurm )
 	openmpi_ofed_features_rdmacm? ( sys-infiniband/librdmacm )
-	fortran? ( virtual/fortran )
 	vt? (
 		!dev-libs/libotf
 		!app-text/lcdf-typetools
@@ -73,7 +72,7 @@ DEPEND="${RDEPEND}"
 # TODO:  Newer releases of Vampir use otf2 which would resolve the above blockers.
 
 pkg_setup() {
-	use fortran && fortran-2_pkg_setup
+	fortran-2_pkg_setup
 	if use mpi-threads; then
 		echo
 		ewarn "WARNING: use of MPI_THREAD_MULTIPLE is still disabled by"

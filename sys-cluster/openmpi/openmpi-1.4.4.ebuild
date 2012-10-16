@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.4.4.ebuild,v 1.3 2012/10/14 19:40:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.4.4.ebuild,v 1.4 2012/10/16 18:43:05 jlec Exp $
 
 EAPI=3
 
@@ -21,7 +21,6 @@ RESTRICT="mpi-threads? ( test )"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="+cxx elibc_FreeBSD fortran heterogeneous ipv6 mpi-threads pbs romio threads vt"
 RDEPEND="
-	fortran? ( virtual/fortran )
 	pbs? ( sys-cluster/torque )
 	vt? (
 		!dev-libs/libotf
@@ -35,7 +34,7 @@ DEPEND="${RDEPEND}"
 S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
-	use fortran && fortran-2_pkg_setup
+	fortran-2_pkg_setup
 	if use mpi-threads; then
 		echo
 		ewarn "WARNING: use of MPI_THREAD_MULTIPLE is still disabled by"
