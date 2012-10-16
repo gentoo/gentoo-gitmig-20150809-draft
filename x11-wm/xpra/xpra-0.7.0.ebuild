@@ -1,11 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.7.0.ebuild,v 1.4 2012/10/16 12:51:17 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.7.0.ebuild,v 1.5 2012/10/16 13:39:03 xmw Exp $
 
 EAPI=3
 
 PYTHON_DEPEND="*"
+#dev-python/pygobject and dev-python/pygtk do not support python3
 RESTRICT_PYTHON_ABIS="2.4 2.5 3.*"
+DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES="1"
 SUPPORT_PYTHON_ABIS="1"
 inherit distutils eutils
 
@@ -39,7 +41,7 @@ RDEPEND="${COMMON_DEPEND}
 	virtual/ssh
 	x11-apps/setxkbmap
 	x11-apps/xmodmap
-	server? ( x11-base/xorg-server[-minimal] 
+	server? ( x11-base/xorg-server[-minimal]
 		x11-drivers/xf86-input-void
 		x11-drivers/xf86-video-dummy
 	)"
@@ -60,6 +62,14 @@ src_prepare() {
 	use x264      || epatch patches/disable-x264.patch
 
 	distutils_src_prepare
+
+	patching() {
+	    [[ "${PYTHON_ABI}" == 2.* ]] && return
+		2to3 --no-diffs -x all -f except -w -n .
+	}
+	python_execute_function --action-message \
+		'Applying patches with $(python_get_implementation) $(python_get_version)' \
+		-s patching
 }
 
 src_install() {

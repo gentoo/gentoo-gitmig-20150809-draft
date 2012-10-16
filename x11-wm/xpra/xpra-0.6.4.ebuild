@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.6.4.ebuild,v 1.3 2012/10/16 12:51:17 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.6.4.ebuild,v 1.4 2012/10/16 13:39:03 xmw Exp $
 
 EAPI=3
 
@@ -38,7 +38,7 @@ RDEPEND="${COMMON_DEPEND}
 	virtual/ssh
 	x11-apps/setxkbmap
 	x11-apps/xmodmap
-	server? ( x11-base/xorg-server[-minimal] 
+	server? ( x11-base/xorg-server[-minimal]
 		x11-drivers/xf86-input-void
 		x11-drivers/xf86-video-dummy
 	)"
