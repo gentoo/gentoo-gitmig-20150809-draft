@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/superlu/superlu-4.0-r2.ebuild,v 1.4 2012/05/04 08:22:50 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/superlu/superlu-4.0-r2.ebuild,v 1.5 2012/10/16 19:34:38 jlec Exp $
 
 EAPI="2"
 
@@ -18,7 +18,6 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples static-libs test"
 
 RDEPEND="
-	virtual/fortran
 	virtual/blas"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
@@ -27,9 +26,10 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_PN}_${PV}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-autotools.patch
-	epatch "${FILESDIR}"/${PN}-examples.patch
-	epatch "${FILESDIR}"/${PV}-test.patch
+	epatch \
+		"${FILESDIR}"/${P}-autotools.patch \
+		"${FILESDIR}"/${PN}-examples.patch \
+		"${FILESDIR}"/${PV}-test.patch
 	eautoreconf
 }
 
