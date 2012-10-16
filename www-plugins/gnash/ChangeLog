@@ -1,6 +1,14 @@
 # ChangeLog for www-plugins/gnash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.88 2012/09/18 21:26:35 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.89 2012/10/16 00:25:32 chithanh Exp $
+
+*gnash-0.8.10_p20120903 (16 Oct 2012)
+
+  16 Oct 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/gnash-0.8.10-boost-1.50.patch, +gnash-0.8.10_p20120903.ebuild,
+  metadata.xml:
+  New snapshot to address gcc-4.7 and boost-1.50 build failures, bug #425442,
+  bug #432874 and bug #432876.
 
   18 Sep 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   gnash-0.8.10-r2.ebuild:
