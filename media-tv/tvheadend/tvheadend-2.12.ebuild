@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvheadend/tvheadend-2.12.ebuild,v 1.2 2012/10/15 08:23:04 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvheadend/tvheadend-2.12.ebuild,v 1.3 2012/10/16 07:09:34 pinkbyte Exp $
 
 EAPI=4
 
@@ -36,6 +36,9 @@ src_prepare() {
 	# remove stripping
 	sed -e 's:install -s:install:' \
 		-i support/posix.mk || die "sed failed!"
+
+	# remove '-Werror' wrt bug #438424
+	sed -i 's:-Werror::' Makefile || die "sed on removing '-Werror' failed!"
 }
 
 src_configure() {
