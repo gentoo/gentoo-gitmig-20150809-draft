@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/temple
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/temple/ChangeLog,v 1.3 2012/09/23 09:35:39 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/temple/ChangeLog,v 1.4 2012/10/16 12:14:02 graaff Exp $
+
+*temple-0.5.4 (16 Oct 2012)
+
+  16 Oct 2012; Hans de Graaff <graaff@gentoo.org> +temple-0.5.4.ebuild:
+  Version bump.
 
 *temple-0.4.1 (23 Sep 2012)
 
