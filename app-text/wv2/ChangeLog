@@ -1,13 +1,13 @@
 # ChangeLog for app-text/wv2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.66 2012/10/16 14:37:47 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.67 2012/10/16 14:40:25 kensington Exp $
 
 *wv2-0.4.2-r1 (16 Oct 2012)
 
   16 Oct 2012; Michael Palimaka <kensington@gentoo.org> +wv2-0.4.2-r1.ebuild,
   metadata.xml:
   Add patch from upstream bugtracker to fix build with glib-2.32. Migrate to
-  EAPI 4. Add upstream metadata.
+  EAPI 4. Add upstream metadata. Fixes bug #438272.
 
   15 Jan 2010; Raúl Porcel <armin76@gentoo.org> wv2-0.4.2.ebuild:
   alpha/ia64/sparc stable wrt #299156
