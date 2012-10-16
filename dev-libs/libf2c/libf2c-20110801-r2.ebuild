@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/libf2c-20110801-r2.ebuild,v 1.4 2012/10/06 16:53:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/libf2c-20110801-r2.ebuild,v 1.5 2012/10/16 14:21:42 blueness Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="${HOMEPAGE}/${PN}.zip -> ${P}.zip"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="static-libs"
 
 RDEPEND=""

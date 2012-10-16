@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libf2c
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/ChangeLog,v 1.52 2012/10/06 16:53:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/ChangeLog,v 1.53 2012/10/16 14:21:42 blueness Exp $
+
+  16 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  libf2c-20110801-r2.ebuild:
+  stable ppc ppc64, bug #433493
 
   06 Oct 2012; Raúl Porcel <armin76@gentoo.org> libf2c-20090407-r1.ebuild,
   libf2c-20110801-r2.ebuild:
