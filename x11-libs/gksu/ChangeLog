@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gksu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.70 2012/10/15 03:34:41 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.71 2012/10/16 04:51:53 blueness Exp $
+
+  16 Oct 2012; Anthony G. Basile <blueness@gentoo.org> gksu-2.0.2-r1.ebuild:
+  stable ppc, bug #427544
 
   15 Oct 2012; Matt Turner <mattst88@gentoo.org> gksu-2.0.2-r1.ebuild:
   Stable on alpha, bug 427544.

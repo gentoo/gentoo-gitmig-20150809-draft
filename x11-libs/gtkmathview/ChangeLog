@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtkmathview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/ChangeLog,v 1.54 2012/10/15 03:12:11 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/ChangeLog,v 1.55 2012/10/16 04:54:11 blueness Exp $
+
+  16 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  gtkmathview-0.8.0-r2.ebuild:
+  stable ppc, bug #427544
 
   15 Oct 2012; Matt Turner <mattst88@gentoo.org> gtkmathview-0.8.0-r2.ebuild:
   Stable on alpha, bug 427544.
