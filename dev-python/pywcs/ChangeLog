@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pywcs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pywcs/ChangeLog,v 1.6 2012/08/02 17:41:02 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pywcs/ChangeLog,v 1.7 2012/10/16 09:03:59 patrick Exp $
+
+  16 Oct 2012; Patrick Lauer <patrick@gentoo.org> pywcs-1.11.ebuild:
+  Restricting python 3.3
 
   02 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org>
   -files/pywcs-1.9-wcslib.patch, -pywcs-1.9.ebuild, pywcs-1.11.ebuild:
