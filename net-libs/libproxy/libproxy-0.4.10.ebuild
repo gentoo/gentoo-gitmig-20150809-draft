@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/libproxy-0.4.6-r3.ebuild,v 1.12 2012/10/16 08:04:33 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/libproxy-0.4.10.ebuild,v 1.1 2012/10/16 08:04:33 tetromino Exp $
 
-EAPI=3
+EAPI=4
 PYTHON_DEPEND="python? 2:2.6"
 
-inherit cmake-utils mono python
+inherit cmake-utils eutils mono python
 
 DESCRIPTION="Library for automatic proxy configuration management"
 HOMEPAGE="http://code.google.com/p/libproxy/"
@@ -13,38 +13,40 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="LGPL-2.1+"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-linux"
-IUSE="gnome kde mono networkmanager perl python test"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-linux"
+IUSE="gnome kde mono networkmanager +pac perl python spidermonkey test +webkit"
+REQUIRED_USE="pac? ( || ( spidermonkey webkit ) )"
 
-# FIXME: Disable webkit support due problems like bug #366791
-# FIXME: Also disable xulrunner support due bug #360893, will be readded
-# in the future when only spidermonkey mozjs is provided.
-
-RDEPEND="gnome? ( gnome-base/gconf:2 )
+# NOTE: mozjs/spidermonkey might still cause problems like #373397 ?
+# NOTE: webkit-gtk:3, not :2, needed for libjavascriptcoregtk support
+RDEPEND="gnome? ( >=dev-libs/glib-2.26:2 )
 	kde? ( >=kde-base/kdelibs-4.4.5 )
 	mono? ( dev-lang/mono )
 	networkmanager? ( net-misc/networkmanager )
-	perl? (	dev-lang/perl )"
-#	xulrunner? ( >=net-libs/xulrunner-1.9.1:1.9 )
-#	webkit? ( net-libs/webkit-gtk:2 )
+	perl? (	dev-lang/perl )
+	pac? (
+		spidermonkey? ( >=dev-lang/spidermonkey-1.8.5 )
+		webkit? ( >=net-libs/webkit-gtk-1.6:3 )
+	)"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 pkg_setup() {
-	PATCHES=( "${FILESDIR}"/${P}-mozjs-link_directory.patch
-		"${FILESDIR}"/${P}-flags-mixing.patch
-		"${FILESDIR}"/${P}-backports.patch )
-
-	# http://code.google.com/p/libproxy/source/detail?r=791
-#	has_version ">=net-libs/xulrunner-2" && \
-#		PATCHES+=( "${FILESDIR}"/${P}-xulrunner-2.patch )
-
 	DOCS="AUTHORS ChangeLog NEWS README"
 
 	if use python; then
 		python_set_active_version 2
 		python_pkg_setup
 	fi
+}
+
+src_prepare() {
+	# Gentoo's spidermonkey doesn't set Version: in mozjs185.pc
+	epatch "${FILESDIR}/${PN}-0.4.10-mozjs185.pc.patch"
+
+	# get-pac-test freezes when run by the ebuild, succeeds when building
+	# manually; virtualx.eclass doesn't help :(
+	epatch "${FILESDIR}/${PN}-0.4.10-disable-pac-test.patch"
 }
 
 src_configure() {
@@ -54,19 +56,18 @@ src_configure() {
 			-DPERL_VENDORINSTALL=ON
 			-DCMAKE_C_FLAGS="${CFLAGS}"
 			-DCMAKE_CXX_FLAGS="${CXXFLAGS}"
-			$(cmake-utils_use_with gnome GNOME)
+			$(cmake-utils_use_with gnome GNOME3)
 			$(cmake-utils_use_with kde KDE4)
 			$(cmake-utils_use_with mono DOTNET)
 			$(cmake-utils_use_with networkmanager NM)
 			$(cmake-utils_use_with perl PERL)
 			$(cmake-utils_use_with python PYTHON)
+			$(cmake-utils_use_with spidermonkey MOZJS)
+			$(cmake-utils_use_with webkit WEBKIT)
+			$(cmake-utils_use_with webkit WEBKIT3)
 			-DWITH_VALA=ON
-			-DWITH_WEBKIT=OFF
-			-DWITH_MOZJS=OFF
 			$(cmake-utils_use test BUILD_TESTING)
 	)
-			#$(cmake-utils_use_with webkit WEBKIT)
-			#$(cmake-utils_use_with xulrunner MOZJS)
 	cmake-utils_src_configure
 }
 

@@ -1,6 +1,18 @@
 # ChangeLog for net-libs/libproxy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.79 2012/05/26 08:57:11 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.80 2012/10/16 08:04:33 tetromino Exp $
+
+*libproxy-0.4.10 (16 Oct 2012)
+
+  16 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  libproxy-0.4.6-r3.ebuild, libproxy-0.4.7.ebuild, +libproxy-0.4.10.ebuild,
+  +files/libproxy-0.4.10-disable-pac-test.patch,
+  +files/libproxy-0.4.10-mozjs185.pc.patch, metadata.xml:
+  Version bump; fixes buffer overflow (bug #438146, CVE-2012-4504, thanks to
+  Agostino Sarubbo). Re-add USE=webkit since it now works correctly (bug
+  #412573, thanks to Lucian Muresan) and it enable by default to provide PAC
+  and WPAD support. Alternatively, spidermonkey could be used for PAC instead
+  (but might lead to firefox crashes, see bug #373397). Update license.
 
   26 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   libproxy-0.4.7.ebuild, +files/libproxy-0.4.7-gcc-4.7.patch:
