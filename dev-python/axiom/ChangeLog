@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/axiom
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.38 2011/03/05 17:22:24 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.39 2012/10/16 08:58:18 patrick Exp $
+
+  16 Oct 2012; Patrick Lauer <patrick@gentoo.org> axiom-0.6.0.ebuild:
+  Restricting python 2.5
 
   05 Mar 2011; Raúl Porcel <armin76@gentoo.org> axiom-0.6.0.ebuild:
   Drop ia64 keywords
@@ -152,4 +155,3 @@
   05 Dec 2005; Marien Zwart <marienz@gentoo.org> +metadata.xml,
   +axiom-0.3.0.ebuild:
   New ebuild.
-

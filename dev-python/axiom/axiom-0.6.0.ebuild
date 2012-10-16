@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/axiom-0.6.0.ebuild,v 1.12 2011/03/05 17:22:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/axiom-0.6.0.ebuild,v 1.13 2012/10/16 08:58:18 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-jython"
+RESTRICT_PYTHON_ABIS="2.5 3.* *-jython"
 
 # setup.py uses epsilon.setuphelper.autosetup(), which tries to use
 # build-${PYTHON_ABI} directories as packages.
