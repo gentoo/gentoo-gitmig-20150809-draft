@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fortran-2.eclass,v 1.12 2012/10/16 18:31:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fortran-2.eclass,v 1.13 2012/10/16 20:18:42 jlec Exp $
 
 # @ECLASS: fortran-2.eclass
 # @MAINTAINER:
@@ -175,7 +175,12 @@ for _f_use in ${FORTRAN_NEEDED}; do
 			break
          ;;
       *)
-			use ${_f_use} && _fortran_test_function && break
+			if use ${_f_use}; then
+				_fortran_test_function && break
+			else
+				unset FC
+				unset F77
+			fi
          ;;
    esac
 done

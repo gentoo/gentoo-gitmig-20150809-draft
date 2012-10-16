@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.449 2012/10/16 18:31:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.450 2012/10/16 20:18:42 jlec Exp $
+
+  16 Oct 2012; Justin Lecher <jlec@gentoo.org> fortran-2.eclass:
+  Unset FC and F77 if no fortran support is wanted
 
   16 Oct 2012; Justin Lecher <jlec@gentoo.org> fortran-2.eclass:
   Add enhanced DEP support in fortran-2.eclass to easy the usage. Only inherit
