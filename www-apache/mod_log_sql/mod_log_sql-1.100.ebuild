@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_log_sql/mod_log_sql-1.100.ebuild,v 1.3 2008/01/31 19:09:26 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_log_sql/mod_log_sql-1.100.ebuild,v 1.4 2012/10/16 05:04:46 patrick Exp $
 
 inherit apache-module
 
@@ -26,7 +26,7 @@ APACHE2_EXECFILES=".libs/${PN}_mysql.so .libs/${PN}_dbi.so .libs/${PN}_ssl.so"
 DOCFILES="AUTHORS CHANGELOG docs/README docs/manual.html \
 contrib/create_tables.sql contrib/make_combined_log.pl contrib/mysql_import_combined_log.pl"
 
-need_apache
+need_apache2_2
 
 src_compile() {
 	local myconf="--with-apxs=${APXS}"

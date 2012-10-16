@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_log_sql
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_log_sql/ChangeLog,v 1.9 2009/10/17 07:49:41 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_log_sql/ChangeLog,v 1.10 2012/10/16 05:04:46 patrick Exp $
+
+  16 Oct 2012; Patrick Lauer <patrick@gentoo.org> mod_log_sql-1.100.ebuild,
+  mod_log_sql-1.101-r1.ebuild:
+  Restricting to apache 2.2
 
   17 Oct 2009; Markus Meier <maekke@gentoo.org> metadata.xml:
   remove dbi description as it is global now
@@ -170,4 +174,3 @@
   files/10_mod_log_sql.conf, files/10_mod_log_sql_apache2.conf:
   Initial version, ebuild written by Perolo Silantico < per.sil@gmx.it >.
   Closes #14891.
-
