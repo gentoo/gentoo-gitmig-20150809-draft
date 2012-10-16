@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/mod_mono-2.10.ebuild,v 1.4 2011/05/11 19:33:22 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/mod_mono-2.10.ebuild,v 1.5 2012/10/16 06:13:53 patrick Exp $
 
 EAPI=2
 
@@ -24,7 +24,7 @@ APACHE2_MOD_DEFINE="MONO"
 
 DOCFILES="AUTHORS ChangeLog COPYING INSTALL NEWS README"
 
-need_apache2
+need_apache2_2
 
 src_prepare() {
 	sed -e "s:@LIBDIR@:$(get_libdir):" "${FILESDIR}/${APACHE2_MOD_CONF}.conf" \

@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_mono
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.79 2011/07/08 10:06:17 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.80 2012/10/16 06:13:53 patrick Exp $
+
+  16 Oct 2012; Patrick Lauer <patrick@gentoo.org> mod_mono-2.10.ebuild:
+  Restricting to apache 2.2
 
   08 Jul 2011; Pacho Ramos <pacho@gentoo.org>
   -files/mono26_auto_application_aspnet2.patch, -mod_mono-2.6.3.ebuild,
@@ -433,4 +436,3 @@
   23 May 2004; Chuck Short <zul@gentoo.org> metadata.xml, mod_mono-0.8.ebuild,
   files/70_mod_mono.conf:
   Initial ebuild. Ebuild modified by alot of people. CLoes #41655.
-
