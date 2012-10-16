@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/netpanzer-0.8.2.ebuild,v 1.9 2012/09/12 08:33:00 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/netpanzer-0.8.2.ebuild,v 1.10 2012/10/16 12:21:34 tupone Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils games
 
 DATAVERSION="0.8"
@@ -24,7 +24,10 @@ RDEPEND="dedicated? ( app-misc/screen )
 DEPEND="${RDEPEND}
 	dev-util/ftjam"
 
-PATCHES=( "${FILESDIR}"/${P}-gcc43.patch )
+PATCHES=(
+	"${FILESDIR}"/${P}-gcc43.patch
+	"${FILESDIR}"/${P}-gcc47.patch
+)
 
 src_configure() {
 	egamesconf || die
@@ -48,7 +51,7 @@ src_install() {
 		|| die "jam install failed (data package)"
 
 	if use dedicated ; then
-		newinitd "${FILESDIR}"/${PN}.rc ${PN} || die "newinitd failed"
+		newinitd "${FILESDIR}"/${PN}.rc ${PN}
 		sed -i \
 			-e "s:GAMES_USER_DED:${GAMES_USER_DED}:" \
 			-e "s:GENTOO_DIR:${GAMES_BINDIR}:" \
@@ -56,8 +59,8 @@ src_install() {
 			|| die "sed failed"
 
 		insinto /etc
-		doins "${FILESDIR}"/${PN}-ded.ini || die "doins failed"
-		dogamesbin "${FILESDIR}"/${PN}-ded || die "dogamesbin failed"
+		doins "${FILESDIR}"/${PN}-ded.ini
+		dogamesbin "${FILESDIR}"/${PN}-ded
 		sed -i \
 			-e "s:GENTOO_DIR:${GAMES_BINDIR}:" \
 			"${D}/${GAMES_BINDIR}"/${PN}-ded \

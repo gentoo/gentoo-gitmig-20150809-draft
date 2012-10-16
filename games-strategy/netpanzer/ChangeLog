@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/netpanzer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/ChangeLog,v 1.33 2012/09/12 08:33:00 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/ChangeLog,v 1.34 2012/10/16 12:21:34 tupone Exp $
+
+  16 Oct 2012; Alfredo Tupone <tupone@gentoo.org> netpanzer-0.8.2.ebuild,
+  +files/netpanzer-0.8.2-gcc47.patch:
+  Fix build with gcc-4.7 Bug #422767 by Diego
+  Migration to EAPI 4
 
   12 Sep 2012; Tupone Alfredo <tupone@gentoo.org> netpanzer-0.8.2.ebuild:
   Handle AR properly. Fix Bug #429156 by Diego
