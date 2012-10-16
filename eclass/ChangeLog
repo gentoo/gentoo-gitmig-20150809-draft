@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.448 2012/10/16 14:26:58 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.449 2012/10/16 18:31:48 jlec Exp $
+
+  16 Oct 2012; Justin Lecher <jlec@gentoo.org> fortran-2.eclass:
+  Add enhanced DEP support in fortran-2.eclass to easy the usage. Only inherit
+  fortran-2 is need for general use. For a USE dependency on fortran the new
+  FORTRAN_NEEDED=USE variable was introduced
 
   16 Oct 2012; Ben de Groot <yngwin@gentoo.org> -qt4.eclass:
   Removing qt4.eclass as announced on Sep 13
