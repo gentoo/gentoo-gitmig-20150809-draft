@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qjson/qjson-0.7.1_p20121016.ebuild,v 1.1 2012/10/16 17:11:35 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qjson/qjson-0.7.1_p20121016.ebuild,v 1.2 2012/10/16 17:17:42 kensington Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit cmake-utils
 
 DESCRIPTION="A library for mapping JSON data to QVariant objects"
 HOMEPAGE="http://qjson.sourceforge.net"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+SRC_URI="http://dev.gentoo.org/~kensington/distfiles/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
