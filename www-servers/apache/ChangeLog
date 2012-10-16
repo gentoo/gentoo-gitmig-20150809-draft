@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.200 2012/10/15 01:05:19 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.201 2012/10/16 08:35:55 nativemad Exp $
+
+  16 Oct 2012; Andreas Schuerch <nativemad@gentoo.org> apache-2.2.23.ebuild:
+  x86 stable, see bug 432284
 
   15 Oct 2012; Anthony G. Basile <blueness@gentoo.org> apache-2.2.23.ebuild:
   stable arm, bug #432284
