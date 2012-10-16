@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/umfpack
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/ChangeLog,v 1.29 2012/05/30 13:43:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/ChangeLog,v 1.30 2012/10/16 02:51:34 naota Exp $
+
+  16 Oct 2012;  <naota@gentoo.org> umfpack-5.5.2.ebuild:
+  Add ~x86-fbsd.
 
   30 May 2012; Alexis Ballier <aballier@gentoo.org> umfpack-5.5.2.ebuild:
   keyword ~amd64-fbsd
@@ -125,4 +128,3 @@
   +umfpack-5.0.3.ebuild:
   Initial import. Closing bug #40255, with autotoolization added. 
   Thanks Nathaniel Domingo <nathaniel.domingo@up.edu.ph> for the initial ebuild.
-
