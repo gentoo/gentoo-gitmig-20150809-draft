@@ -1,34 +1,37 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mlton/mlton-20070826-r1.ebuild,v 1.2 2010/07/11 22:01:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mlton/mlton-20100608.ebuild,v 1.1 2012/10/16 09:07:05 hkbst Exp $
 
 inherit eutils
 
 DESCRIPTION="Standard ML optimizing compiler and libraries"
-BASE_URI="http://mlton.org/pages/Download/attachments/"
-SRC_URI="!binary? ( ${BASE_URI}/${P}-1.src.tgz )
-		  binary? ( amd64? ( ${BASE_URI}/${P}-1.amd64-linux.tgz )
-					x86?   ( ${BASE_URI}/${P}-1.x86-linux.tgz ) )"
+BASE_URI="mirror://sourceforge/${PN}"
+SRC_URI="!binary? ( ${BASE_URI}/${P}.src.tgz )
+		  binary? ( amd64? ( ${BASE_URI}/${P}-1.amd64-linux.static.tgz )
+					x86?   ( ${BASE_URI}/${P}-1.x86-linux.static.tgz ) )"
 
 HOMEPAGE="http://www.mlton.org"
 
 LICENSE="as-is"
 SLOT="0"
+# there is support for ppc64 and ia64, but no
+# binaries are provided and there is no native
+# code generation for these platforms
 KEYWORDS="-* ~amd64 ~x86"
 
 IUSE="binary doc"
 
-#block mlton-bin until it has been removed
 DEPEND="dev-libs/gmp
-		!dev-lang/mlton-bin
 		doc? ( virtual/latex-base )"
+RDEPEND="dev-libs/gmp"
 
-QA_PRESTRIPPED="
+QA_PRESTRIPPED="binary? (
 	usr/bin/mlnlffigen
- 	usr/bin/mllex
-  	usr/bin/mlprof
-   	usr/bin/mlyacc
-	usr/lib/mlton/mlton-compile"
+	usr/bin/mllex
+	usr/bin/mlprof
+	usr/bin/mlyacc
+	usr/lib/mlton/mlton-compile
+)"
 
 src_compile() {
 	if use !binary; then

@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/mlton
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mlton/ChangeLog,v 1.11 2010/07/11 22:01:52 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mlton/ChangeLog,v 1.12 2012/10/16 09:07:05 hkbst Exp $
+
+*mlton-20100608 (16 Oct 2012)
+
+  16 Oct 2012; Marijn Schouten <hkBst@gentoo.org>
+  -files/mlton-20040227-obsolete-flags.patch, -mlton-20070826-r1.ebuild,
+  +mlton-20100608.ebuild:
+  bump (fixes bug 378497)
 
   11 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
   mlton-20070826-r1.ebuild:
