@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pk-helper/cups-pk-helper-0.2.2.ebuild,v 1.10 2012/10/06 09:52:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pk-helper/cups-pk-helper-0.2.2.ebuild,v 1.11 2012/10/16 02:23:00 tetromino Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ DESCRIPTION="PolicyKit helper to configure cups with fine-grained privileges"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/cups-pk-helper"
 SRC_URI="http://www.freedesktop.org/software/${PN}/releases/${P}.tar.xz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="~alpha amd64 arm ~ppc ~ppc64 x86"
 IUSE=""
