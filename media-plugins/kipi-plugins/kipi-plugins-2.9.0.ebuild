@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-2.9.0.ebuild,v 1.2 2012/10/14 17:19:07 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-2.9.0.ebuild,v 1.3 2012/10/16 11:04:42 ago Exp $
 
 EAPI=4
 
@@ -26,7 +26,7 @@ SRC_URI="mirror://sourceforge/digikam/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2
 	handbook? ( FDL-1.2 )"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 SLOT="4"
 IUSE="cdr calendar crypt debug expoblending gpssync +imagemagick ipod mediawiki mjpeg panorama redeyes scanner vkontakte"
 
