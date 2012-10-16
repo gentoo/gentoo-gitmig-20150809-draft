@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/mc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mc/ChangeLog,v 1.6 2012/02/28 12:57:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mc/ChangeLog,v 1.7 2012/10/16 20:40:42 jlec Exp $
+
+  16 Oct 2012; Justin Lecher <jlec@gentoo.org> -mc-1.4.ebuild, mc-1.5.ebuild:
+  Remove virtual/fortran and always call fortran-2_pkg_setup as intend by the
+  updated fortran-2.eclass
 
   28 Feb 2012; Justin Lecher <jlec@gentoo.org> mc-1.5.ebuild,
   +files/mc-1.5-unbundle.patch, metadata.xml:
