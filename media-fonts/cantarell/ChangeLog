@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/cantarell
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/cantarell/ChangeLog,v 1.25 2012/10/16 02:38:47 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/cantarell/ChangeLog,v 1.26 2012/10/16 04:37:03 blueness Exp $
+
+  16 Oct 2012; Anthony G. Basile <blueness@gentoo.org> cantarell-0.0.9.ebuild:
+  stable ppc, bug #427544
 
   16 Oct 2012; Matt Turner <mattst88@gentoo.org> cantarell-0.0.9.ebuild:
   Stable on alpha, bug 427544.
