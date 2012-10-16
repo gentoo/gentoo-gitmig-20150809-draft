@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>qt</herd>
-	<longdescription lang="en">
-	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">qjson</remote-id>
+		<bugs-to>http://sourceforge.net/tracker/?group_id=244195</bugs-to>
+	</upstream>
 </pkgmetadata>
 
