@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpe2/mpe2-1.0.6_p1-r1.ebuild,v 1.6 2012/10/14 19:35:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpe2/mpe2-1.0.6_p1-r1.ebuild,v 1.7 2012/10/16 18:46:07 jlec Exp $
 
 EAPI=2
 
@@ -27,7 +27,6 @@ DEPEND="!minimal? ( >=virtual/jdk-1.4 )
 	${COMMON_DEPEND}"
 
 RDEPEND="
-	fortran? ( virtual/fortran )
 !minimal? ( >=virtual/jre-1.4 )
 	${COMMON_DEPEND}"
 
@@ -56,12 +55,12 @@ pkg_setup() {
 	export JFLAGS="${JFLAGS} $(java-pkg_javac-args)"
 
 	if [[ "${MPE_IMP}" == openmpi ]] && [ -z "${MPE2_FORCE_OPENMPI_TEST}" ]; then
-		elog ""
+		echo
 		elog "Currently src_test fails on collchk with openmpi, hence"
 		elog "testing is disabled by default.  If you would like to"
 		elog "force testing, please add MPE_FORCE_OPENMPI_TEST=1"
 		elog "to your environment."
-		elog ""
+		echo
 	fi
 
 	einfo "Building with support for: sys-cluster/${MPE_IMP}"
@@ -79,7 +78,6 @@ src_configure() {
 
 	if use fortran; then
 		c="${c} --with-mpif77=/usr/bin/mpif77"
-		export F77=$(tc-getFC)
 	else
 		c="${c} --disable-f77"
 	fi
@@ -103,8 +101,7 @@ src_configure() {
 		--enable-wrappers \
 		$(use_enable !minimal graphics) \
 		$(use_enable threads threadlogging) \
-		$(use_enable debug g) \
-		|| die
+		$(use_enable debug g)
 }
 
 src_test() {
