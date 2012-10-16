@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/taucs/taucs-2.2.ebuild,v 1.9 2012/08/03 20:13:39 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/taucs/taucs-2.2.ebuild,v 1.10 2012/10/16 19:31:53 jlec Exp $
 
 EAPI=4
 
@@ -17,7 +17,6 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 
 RDEPEND="
 	virtual/blas
-	virtual/fortran
 	virtual/lapack
 	|| ( sci-libs/metis sci-libs/parmetis )
 	cilk? ( dev-lang/cilk )"
