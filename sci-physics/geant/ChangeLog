@@ -1,6 +1,12 @@
 # ChangeLog for sci-physics/geant
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.65 2012/07/04 08:11:27 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.66 2012/10/16 19:00:19 jlec Exp $
+
+  16 Oct 2012; Justin Lecher <jlec@gentoo.org> geant-3.21.14-r2.ebuild,
+  geant-3.21.14-r3.ebuild, geant-4.9.2_p02.ebuild, geant-4.9.4_p03.ebuild,
+  geant-4.9.5-r1.ebuild, geant-4.9.5_p01.ebuild:
+  Remove virtual/fortran and always call fortran-2_pkg_setup as intend by the
+  updated fortran-2.eclass
 
   04 Jul 2012; Jeff Horelick <jdhore@gentoo.org> geant-4.9.4_p03.ebuild:
   marked x86 per bug 420295

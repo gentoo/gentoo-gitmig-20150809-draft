@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.5-r1.ebuild,v 1.7 2012/05/20 16:46:58 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.5-r1.ebuild,v 1.8 2012/10/16 19:00:19 jlec Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="+data dawn examples gdml geant3 granular motif opengl openinventor
 	raytracerx qt4 static-libs test vrml zlib"
 
-RDEPEND="virtual/fortran
+RDEPEND="
 	>=sci-physics/clhep-2.1.1
 	dawn? ( media-gfx/dawn )
 	gdml? ( dev-libs/xerces-c )
@@ -35,7 +35,8 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MYP}"
 
-PATCHES=( "${FILESDIR}"/${PN}-4.9.4-zlib.patch \
+PATCHES=(
+	"${FILESDIR}"/${PN}-4.9.4-zlib.patch
 	"${FILESDIR}"/${PN}-4.9.5-scripts-only-dataenv.patch )
 
 src_configure() {
