@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_caucho
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_caucho/ChangeLog,v 1.70 2012/10/12 09:25:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_caucho/ChangeLog,v 1.71 2012/10/16 08:13:28 patrick Exp $
+
+  16 Oct 2012; Patrick Lauer <patrick@gentoo.org> mod_caucho-4.0.26.ebuild:
+  Adding jre dep to make mod_caucho build
 
   12 Oct 2012; Patrick Lauer <patrick@gentoo.org> mod_caucho-4.0.13.ebuild,
   mod_caucho-4.0.14.ebuild, mod_caucho-4.0.15.ebuild, mod_caucho-4.0.22.ebuild,
