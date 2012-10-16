@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.7.0.ebuild,v 1.2 2012/10/14 23:48:34 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.7.0.ebuild,v 1.3 2012/10/16 12:14:14 xmw Exp $
 
 EAPI=3
 
@@ -64,7 +64,7 @@ src_install() {
 	distutils_src_install
 	rm -v "${D}"usr/share/parti/{parti.,}README \
 		"${D}"usr/share/xpra/{webm/LICENSE,xpra.README} \
-		"${D}"usr/share/wimpiggy/wimpiggy.README || die
+		"${D}"usr/share/wimpiggy/wimpiggy.README
 	dodoc {parti.,wimpiggy.,xpra.,}README
 
 	einfo
