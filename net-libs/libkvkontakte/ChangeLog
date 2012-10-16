@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libkvkontakte
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libkvkontakte/ChangeLog,v 1.20 2012/09/03 19:12:25 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkvkontakte/ChangeLog,v 1.21 2012/10/16 11:05:14 ago Exp $
+
+  16 Oct 2012; Agostino Sarubbo <ago@gentoo.org> libkvkontakte-2.9.0.ebuild:
+  Stable for amd64, wrt bug #438352
 
 *libkvkontakte-2.9.0 (03 Sep 2012)
 
