@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/umfpack-5.2.0.ebuild,v 1.16 2012/05/04 08:22:51 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/umfpack-5.2.0.ebuild,v 1.17 2012/10/16 19:17:03 jlec Exp $
 
 inherit autotools eutils fortran-2
 
@@ -16,7 +16,6 @@ KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
 IUSE="doc"
 
 RDEPEND="
-	virtual/fortran
 	virtual/blas
 	sci-libs/amd"
 DEPEND="${RDEPEND}
