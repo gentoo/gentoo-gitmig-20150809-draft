@@ -1,6 +1,9 @@
 # ChangeLog for app-text/iso-codes
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.129 2012/10/14 04:51:17 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.130 2012/10/16 04:07:18 blueness Exp $
+
+  16 Oct 2012; Anthony G. Basile <blueness@gentoo.org> iso-codes-3.37.ebuild:
+  stable ppc, bug #427544
 
   14 Oct 2012; Matt Turner <mattst88@gentoo.org> iso-codes-3.37.ebuild:
   Stable on alpha, bug 427544.
