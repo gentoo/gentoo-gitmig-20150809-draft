@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/pythia-8.1.65.ebuild,v 1.2 2012/08/08 04:17:29 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/pythia-8.1.65.ebuild,v 1.3 2012/10/16 18:54:19 jlec Exp $
 
 EAPI=4
 
-inherit eutils versionator
+inherit eutils fortran-2 versionator
 
 MV=$(get_major_version)
 MY_P=${PN}$(replace_all_version_separators "" ${PV})
@@ -19,8 +19,7 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples +hepmc static-libs"
 
 DEPEND="hepmc? ( sci-physics/hepmc )"
-RDEPEND="virtual/fortran
-	${DEPEND}"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 

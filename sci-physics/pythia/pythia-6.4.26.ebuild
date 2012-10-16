@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/pythia-6.4.26.ebuild,v 1.2 2012/08/08 04:17:29 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/pythia-6.4.26.ebuild,v 1.3 2012/10/16 18:54:19 jlec Exp $
 
 EAPI=4
 
@@ -18,7 +18,8 @@ HOMEPAGE="http://projects.hepforge.org/pythia6/"
 # To produce a split version, replace the 6.4.x by the current version:
 # svn export http://svn.hepforge.org/pythia6/tags/v_6_4_x/ pythia-6.4.x
 # tar cjf pythia-6.4.x.tar.bz2
-SRC_URI="http://dev.gentoo.org/~bicatali/${P}.tar.bz2
+SRC_URI="
+	http://dev.gentoo.org/~bicatali/${P}.tar.bz2
 	ftp://root.cern.ch/root/pythia6.tar.gz
 	doc? ( http://home.thep.lu.se/~torbjorn/pythia/lutp${DOC_PV}man2.pdf )
 	examples? ( mirror://gentoo/${PN}-${EX_PV}-examples.tar.bz2 )"
@@ -27,9 +28,6 @@ SLOT="6"
 LICENSE="public-domain"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples static-libs"
-
-DEPEND="virtual/fortran"
-RDEPEND="${DEPEND}"
 
 src_prepare() {
 	cp ../pythia6/tpythia6_called_from_cc.F .
