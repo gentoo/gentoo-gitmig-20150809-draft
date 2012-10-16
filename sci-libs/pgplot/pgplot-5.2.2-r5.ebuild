@@ -1,8 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/pgplot-5.2.2-r5.ebuild,v 1.1 2012/07/05 22:00:11 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/pgplot-5.2.2-r5.ebuild,v 1.2 2012/10/16 20:26:04 jlec Exp $
 
 EAPI=4
+
 inherit eutils fortran-2 toolchain-funcs multilib
 
 MY_P="${PN}${PV//.}"
@@ -10,12 +11,14 @@ MY_P="${PN}${PV//.}"
 DESCRIPTION="FORTRAN/C device-independent scientific graphic library"
 HOMEPAGE="http://www.astro.caltech.edu/~tjp/pgplot/"
 SRC_URI="ftp://ftp.astro.caltech.edu/pub/pgplot/${MY_P}.tar.gz"
-LICENSE="free-noncomm"
+
 SLOT="0"
+LICENSE="free-noncomm"
 KEYWORDS="~amd64 ~ia64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc motif static-libs tk"
-RDEPEND="media-libs/libpng
-	virtual/fortran
+
+RDEPEND="
+	media-libs/libpng
 	x11-libs/libX11
 	x11-libs/libXt
 	motif? ( >=x11-libs/openmotif-2.3:0 )
@@ -36,12 +39,12 @@ src_prepare() {
 	# gfortran < 4.3 does not compile gif, pp and wd drivers
 	if [[ $(tc-getFC) == *gfortran* ]] &&
 		[[ $(gcc-major-version)$(gcc-minor-version) -lt 43 ]] ; then
-		ewarn
+		echo
 		ewarn "Warning!"
 		ewarn "gfortran < 4.3 selected: does not compile all drivers"
 		ewarn "disabling gif, wd, and ppd drivers"
 		ewarn "if you want more drivers, use gfortran >= 4.3"
-		ewarn
+		echo
 		sed -i \
 			-e 's/GIDRIV/! GIDRIV/g' \
 			-e 's/PPDRIV/! GIDRIV/g' \
