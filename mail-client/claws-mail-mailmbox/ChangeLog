@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-mailmbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-mailmbox/ChangeLog,v 1.70 2012/06/30 15:55:37 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-mailmbox/ChangeLog,v 1.71 2012/10/16 03:07:52 blueness Exp $
+
+  16 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  claws-mail-mailmbox-1.14.7.ebuild:
+  stable ppc ppc64, bug #437814
 
 *claws-mail-mailmbox-1.14.7 (30 Jun 2012)
 
@@ -291,4 +295,3 @@
   19 Dec 2006; Andrej Kacian <ticho@gentoo.org> +metadata.xml,
   +claws-mail-mailmbox-1.12.3.ebuild:
   This is the new name of mail-client/sylpheed-claws-mailmbox.
-
