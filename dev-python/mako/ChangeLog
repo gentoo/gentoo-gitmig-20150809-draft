@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mako
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.57 2012/10/13 19:08:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.58 2012/10/17 04:20:16 mattst88 Exp $
+
+  17 Oct 2012; Matt Turner <mattst88@gentoo.org> mako-0.7.2.ebuild:
+  Added ~alpha, bug 411761.
 
   13 Oct 2012; Raúl Porcel <armin76@gentoo.org> mako-0.7.0.ebuild,
   mako-0.7.1.ebuild, mako-0.7.2.ebuild:
