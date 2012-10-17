@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/wesnoth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.213 2012/10/03 11:46:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.214 2012/10/17 03:08:58 phajdan.jr Exp $
+
+  17 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> wesnoth-1.10.4.ebuild:
+  x86 stable wrt bug #436816
 
   03 Oct 2012; Agostino Sarubbo <ago@gentoo.org> wesnoth-1.10.4.ebuild:
   Stable for amd64, wrt bug #436816
