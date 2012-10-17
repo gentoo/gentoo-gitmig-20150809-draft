@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/make
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.102 2012/10/05 05:28:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.103 2012/10/17 12:41:40 ottxor Exp $
+
+  17 Oct 2012; Christoph Junghans <ottxor@gentoo.org>
+  +files/make-3.82-darwin-library_search-dylib.patch, make-3.82-r4.ebuild:
+  added prefix support (bug #434514)
 
   05 Oct 2012; Mike Frysinger <vapier@gentoo.org>
   +files/make-3.82-construct-command-line.patch,
