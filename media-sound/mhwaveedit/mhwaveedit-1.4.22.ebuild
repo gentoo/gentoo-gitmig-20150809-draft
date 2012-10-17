@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mhwaveedit/mhwaveedit-1.4.22.ebuild,v 1.2 2012/10/12 07:44:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mhwaveedit/mhwaveedit-1.4.22.ebuild,v 1.3 2012/10/17 03:23:08 phajdan.jr Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.gna.org/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="alsa jack ladspa libsamplerate nls oss pulseaudio sdl sndfile sox"
 
 RDEPEND="x11-libs/gtk+:2
