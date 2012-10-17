@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-platform/netbeans-platform-7.2.ebuild,v 1.1 2012/07/25 16:10:06 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-platform/netbeans-platform-7.2.ebuild,v 1.2 2012/10/17 03:04:58 phajdan.jr Exp $
 
 EAPI="4"
 WANT_ANT_TASKS="ant-nodeps"
@@ -19,7 +19,7 @@ SRC_URI="${SOURCE_URL}
 	http://hg.netbeans.org/binaries/CFF0A34484AAF26F18BC15D0B2C226FD66769EAA-testng-6.5.1-dist.jar
 	http://hg.netbeans.org/binaries/D9B2EEC6413BDD174D047F9B7804C2EA440B79A5-testng-6.5.1-javadoc.zip"
 LICENSE="|| ( CDDL GPL-2-with-linking-exception )"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 S="${WORKDIR}"
 
