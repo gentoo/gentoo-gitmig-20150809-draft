@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/powernowd
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powernowd/ChangeLog,v 1.13 2011/08/13 08:19:27 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powernowd/ChangeLog,v 1.14 2012/10/17 23:54:20 jer Exp $
+
+*powernowd-1.00-r1 (17 Oct 2012)
+
+  17 Oct 2012; Jeroen Roovers <jer@gentoo.org> -powernowd-0.90.ebuild,
+  -powernowd-0.96.ebuild, -powernowd-0.97.ebuild, +powernowd-1.00-r1.ebuild,
+  -files/powernowd.rc, files/powernowd.initd:
+  Remove opts=reload (bug #427022). Respect CC.
 
   13 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> powernowd-1.00.ebuild:
   ppc stable wrt #348617

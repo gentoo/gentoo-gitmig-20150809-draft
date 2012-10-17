@@ -1,9 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powernowd/files/powernowd.initd,v 1.1 2009/10/16 21:00:55 bangert Exp $
-
-opts="reload"
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powernowd/files/powernowd.initd,v 1.2 2012/10/17 23:54:20 jer Exp $
 
 depend() {
 	need localmount
@@ -19,11 +17,5 @@ start() {
 stop() {
 	ebegin "Stopping powernowd"
 	start-stop-daemon --stop --exec /usr/sbin/powernowd
-	eend $?
-}
-
-reload() {
-	ebegin "Reloading powernowd"
-	start-stop-daemon --stop --oknodo --exec /usr/sbin/powernowd --signal HUP
 	eend $?
 }
