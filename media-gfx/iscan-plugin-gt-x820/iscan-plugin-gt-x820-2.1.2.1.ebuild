@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan-plugin-gt-x820/iscan-plugin-gt-x820-2.1.2.1.ebuild,v 1.1 2012/09/30 22:14:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan-plugin-gt-x820/iscan-plugin-gt-x820-2.1.2.1.ebuild,v 1.2 2012/10/17 23:44:36 flameeyes Exp $
 
 EAPI="4"
 
@@ -27,7 +27,7 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}"
 
-QA_PRESTRIPPED="
+QA_PREBUILT="
 	/opt/iscan/lib/libesintA1.so.2.0.1
 	/opt/iscan/lib/libesintA1.so.2
 	/opt/iscan/lib/libesintA1.so"
