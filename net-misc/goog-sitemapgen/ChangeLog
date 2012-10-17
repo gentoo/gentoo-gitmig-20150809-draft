@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/goog-sitemapgen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/goog-sitemapgen/ChangeLog,v 1.13 2012/09/27 06:39:07 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/goog-sitemapgen/ChangeLog,v 1.14 2012/10/17 03:14:01 phajdan.jr Exp $
+
+  17 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  goog-sitemapgen-1.5.ebuild:
+  x86 stable wrt bug #436320
 
   27 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> goog-sitemapgen-1.5.ebuild:
   Stable for amd64 wrt bug #436320

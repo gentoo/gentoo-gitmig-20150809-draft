@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/goog-sitemapgen/goog-sitemapgen-1.5.ebuild,v 1.3 2012/09/27 06:39:07 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/goog-sitemapgen/goog-sitemapgen-1.5.ebuild,v 1.4 2012/10/17 03:14:01 phajdan.jr Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
@@ -15,7 +15,7 @@ SRC_URI="http://sitemap-generators.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DOCS="AUTHORS ChangeLog example_* README"
