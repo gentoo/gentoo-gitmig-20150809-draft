@@ -1,6 +1,10 @@
 # ChangeLog for app-text/wv2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.67 2012/10/16 14:40:25 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.68 2012/10/17 04:31:27 kensington Exp $
+
+  17 Oct 2012; Michael Palimaka <kensington@gentoo.org>
+  +files/wv2-0.4.2-glib.patch:
+  Add missing patch, thanks to Jekyll Wu <adaptee@gmail.com> for noticing.
 
 *wv2-0.4.2-r1 (16 Oct 2012)
 
