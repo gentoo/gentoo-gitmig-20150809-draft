@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-24.0.1284.2_alpha159713.ebuild,v 1.1 2012/10/03 03:37:40 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-24.0.1297.0_alpha162078.ebuild,v 1.1 2012/10/17 03:04:17 floppym Exp $
 
 EAPI="4"
 
@@ -91,6 +91,7 @@ pkg_nofetch() {
 pkg_setup() {
 	CHROME_HOME="opt/google/chrome/"
 	chromium_suid_sandbox_check_kernel_config
+	declare -f src_install
 }
 
 src_install() {
