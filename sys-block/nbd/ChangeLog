@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/nbd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/ChangeLog,v 1.76 2012/10/05 17:58:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/ChangeLog,v 1.77 2012/10/17 03:33:03 phajdan.jr Exp $
+
+  17 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> nbd-3.2.ebuild:
+  x86 stable wrt bug #433357
 
   05 Oct 2012; Brent Baude <ranger@gentoo.org> nbd-3.2.ebuild:
   Marking nbd-3.2 ppc64 for bug 433357
