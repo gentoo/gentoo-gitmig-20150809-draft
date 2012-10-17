@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/audiocd-kio/audiocd-kio-4.9.2.ebuild,v 1.1 2012/10/02 18:12:03 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/audiocd-kio/audiocd-kio-4.9.2.ebuild,v 1.2 2012/10/17 19:50:22 maekke Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ KDE_HANDBOOK="optional"
 inherit kde4-base
 
 DESCRIPTION="KDE kioslaves from the kdemultimedia package"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug encode flac vorbis"
 
 # 4 of 9 tests fail. Last checked for 4.2.88

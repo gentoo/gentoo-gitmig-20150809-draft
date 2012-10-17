@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/plasma-workspace
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.176 2012/10/02 18:12:05 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.177 2012/10/17 19:41:14 maekke Exp $
+
+  17 Oct 2012; Markus Meier <maekke@gentoo.org> plasma-workspace-4.9.2.ebuild:
+  add ~arm, bug #430072
 
 *plasma-workspace-4.9.2 (02 Oct 2012)
 

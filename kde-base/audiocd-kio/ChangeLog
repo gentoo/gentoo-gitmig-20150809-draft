@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/audiocd-kio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/audiocd-kio/ChangeLog,v 1.4 2012/10/02 18:12:03 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/audiocd-kio/ChangeLog,v 1.5 2012/10/17 19:50:22 maekke Exp $
+
+  17 Oct 2012; Markus Meier <maekke@gentoo.org> audiocd-kio-4.9.2.ebuild:
+  add ~arm, bug #430072
 
 *audiocd-kio-4.9.2 (02 Oct 2012)
 

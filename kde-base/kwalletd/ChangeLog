@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwalletd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwalletd/ChangeLog,v 1.121 2012/10/02 18:11:51 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwalletd/ChangeLog,v 1.122 2012/10/17 19:52:08 maekke Exp $
+
+  17 Oct 2012; Markus Meier <maekke@gentoo.org> kwalletd-4.9.2.ebuild:
+  add ~arm, bug #430072
 
 *kwalletd-4.9.2 (02 Oct 2012)
 

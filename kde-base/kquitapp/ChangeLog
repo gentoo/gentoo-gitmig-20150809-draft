@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kquitapp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kquitapp/ChangeLog,v 1.134 2012/10/02 18:11:52 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kquitapp/ChangeLog,v 1.135 2012/10/17 19:47:12 maekke Exp $
+
+  17 Oct 2012; Markus Meier <maekke@gentoo.org> kquitapp-4.9.2.ebuild:
+  add ~arm, bug #430072
 
 *kquitapp-4.9.2 (02 Oct 2012)
 

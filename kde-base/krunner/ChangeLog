@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/krunner
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krunner/ChangeLog,v 1.143 2012/10/02 18:12:04 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krunner/ChangeLog,v 1.144 2012/10/17 19:55:35 maekke Exp $
+
+  17 Oct 2012; Markus Meier <maekke@gentoo.org> krunner-4.9.2.ebuild:
+  add ~arm, bug #430072
 
 *krunner-4.9.2 (02 Oct 2012)
 

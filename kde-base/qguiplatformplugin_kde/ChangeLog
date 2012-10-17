@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/qguiplatformplugin_kde
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qguiplatformplugin_kde/ChangeLog,v 1.82 2012/10/02 18:12:22 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qguiplatformplugin_kde/ChangeLog,v 1.83 2012/10/17 19:53:00 maekke Exp $
+
+  17 Oct 2012; Markus Meier <maekke@gentoo.org>
+  qguiplatformplugin_kde-4.9.2.ebuild:
+  add ~arm, bug #430072
 
 *qguiplatformplugin_kde-4.9.2 (02 Oct 2012)
 

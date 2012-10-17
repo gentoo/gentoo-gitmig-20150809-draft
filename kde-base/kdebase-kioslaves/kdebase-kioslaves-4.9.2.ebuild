@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-4.9.2.ebuild,v 1.1 2012/10/02 18:11:41 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-4.9.2.ebuild,v 1.2 2012/10/17 19:53:52 maekke Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ KMNAME="kde-runtime"
 KMMODULE="kioslave"
 inherit kde4-meta
 
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
 DESCRIPTION="kioslave: the kde VFS framework - kioslave plugins present a filesystem-like view of arbitrary data"
 IUSE="+bzip2 exif debug lzma openexr samba +sftp"
 

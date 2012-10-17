@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kpasswdserver
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpasswdserver/ChangeLog,v 1.135 2012/10/02 18:12:23 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpasswdserver/ChangeLog,v 1.136 2012/10/17 19:48:52 maekke Exp $
+
+  17 Oct 2012; Markus Meier <maekke@gentoo.org> kpasswdserver-4.9.2.ebuild:
+  add ~arm, bug #430072
 
 *kpasswdserver-4.9.2 (02 Oct 2012)
 

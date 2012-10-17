@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/pykde4
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.179 2012/10/05 20:26:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.180 2012/10/17 19:39:24 maekke Exp $
+
+  17 Oct 2012; Markus Meier <maekke@gentoo.org> pykde4-4.9.2-r1.ebuild:
+  add ~arm, bug #430072
 
 *pykde4-4.9.2-r1 (05 Oct 2012)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase-meta
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.240 2012/10/02 18:11:56 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.241 2012/10/17 20:08:27 maekke Exp $
+
+  17 Oct 2012; Markus Meier <maekke@gentoo.org> kdebase-meta-4.9.2.ebuild:
+  add ~arm, bug #430072
 
 *kdebase-meta-4.9.2 (02 Oct 2012)
 
