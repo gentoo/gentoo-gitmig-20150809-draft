@@ -1,6 +1,15 @@
 # ChangeLog for x11-libs/pango
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.356 2012/10/06 21:19:21 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.357 2012/10/17 11:18:22 tetromino Exp $
+
+  17 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -pango-1.28.3-r1.ebuild, -files/pango-1.28.3-heap-corruption.patch,
+  -files/pango-1.28.3-malloc-failure.patch, pango-1.28.4.ebuild,
+  pango-1.29.4.ebuild, -pango-1.30.0.ebuild, pango-1.30.1.ebuild:
+  Drop useless USE=doc, it only regenerated documentation; fixes bug #357205,
+  thanks to Theo Chatzimichos et al. Remove test USE flag since it only served
+  to pull in dependencies for testing regenerated docs. Make mktemp call more
+  portable, thanks to Mart Raudsepp. Update license. Drop old.
 
   06 Oct 2012; Anthony G. Basile <blueness@gentoo.org> pango-1.30.1.ebuild:
   stable ppc ppc64, bug #427544

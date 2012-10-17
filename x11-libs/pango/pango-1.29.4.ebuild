@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.29.4.ebuild,v 1.16 2012/05/20 19:31:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.29.4.ebuild,v 1.17 2012/10/17 11:18:22 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -15,10 +15,7 @@ LICENSE="LGPL-2 FTL"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 
-IUSE="X doc +introspection test"
-
-# Upstream bug #643802
-REQUIRED_USE="doc? ( X )"
+IUSE="X +introspection"
 
 # Use glib-2.29.5 for g_atomic_int_add
 RDEPEND=">=dev-libs/glib-2.29.5:2
@@ -32,15 +29,7 @@ RDEPEND=">=dev-libs/glib-2.29.5:2
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	>=dev-util/gtk-doc-am-1.13
-	doc? (
-		>=dev-util/gtk-doc-1.13
-		~app-text/docbook-xml-dtd-4.1.2
-		x11-libs/libXft )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )
-	test? (
-		>=dev-util/gtk-doc-1.13
-		~app-text/docbook-xml-dtd-4.1.2
-		x11-libs/libXft )
 	X? ( x11-proto/xproto )
 	!<=sys-devel/autoconf-2.63:2.5"
 
@@ -78,7 +67,7 @@ pkg_postinst() {
 
 	mkdir -p "${PANGO_CONFDIR}"
 	local pango_conf="${PANGO_CONFDIR}/pango.modules"
-	local tmp_file=$(mktemp -t tmp.XXXXXXXXXXgdk_pixbuf_ebuild)
+	local tmp_file=$(mktemp -t tmp_pango_ebuild.XXXXXXXXXX)
 
 	# be atomic!
 	if pango-querymodules \
