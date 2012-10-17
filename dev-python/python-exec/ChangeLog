@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-exec
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-exec/ChangeLog,v 1.4 2012/10/16 01:31:32 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-exec/ChangeLog,v 1.5 2012/10/17 11:46:42 naota Exp $
+
+  17 Oct 2012;  <naota@gentoo.org> python-exec-0.1.ebuild:
+  Add ~x86-fbsd. #438388
 
   16 Oct 2012; Anthony G. Basile <blueness@gentoo.org> python-exec-0.1.ebuild:
   keyword ~arm, bug #438388
