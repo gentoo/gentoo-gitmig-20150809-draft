@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/hteditor
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/ChangeLog,v 1.56 2012/10/17 03:35:50 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/ChangeLog,v 1.57 2012/10/17 05:07:53 kensington Exp $
+
+  17 Oct 2012; Michael Palimaka <kensington@gentoo.org> -hteditor-2.0.18.ebuild:
+  Remove old.
 
   17 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> hteditor-2.0.20.ebuild:
   x86 stable wrt bug #436968
