@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/egoboo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/egoboo/ChangeLog,v 1.29 2012/10/11 22:55:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/egoboo/ChangeLog,v 1.30 2012/10/17 03:06:16 phajdan.jr Exp $
+
+  17 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> egoboo-2.8.1.ebuild:
+  x86 stable wrt bug #437314
 
   11 Oct 2012; Michael Sterrett <mr_bones_@gentoo.org> egoboo-2.8.1.ebuild:
   add libsdl[joystick] dep (bug #438044)
