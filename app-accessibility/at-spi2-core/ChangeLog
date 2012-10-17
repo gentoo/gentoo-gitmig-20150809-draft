@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/at-spi2-core
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-core/ChangeLog,v 1.17 2012/10/14 20:20:15 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-core/ChangeLog,v 1.18 2012/10/17 04:30:54 mattst88 Exp $
+
+  17 Oct 2012; Matt Turner <mattst88@gentoo.org> at-spi2-core-2.6.0.ebuild:
+  Added ~alpha.
 
   14 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
   at-spi2-core-2.4.2.ebuild:

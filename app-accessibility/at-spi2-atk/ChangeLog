@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/at-spi2-atk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-atk/ChangeLog,v 1.9 2012/09/27 05:07:20 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-atk/ChangeLog,v 1.10 2012/10/17 04:32:13 mattst88 Exp $
+
+  17 Oct 2012; Matt Turner <mattst88@gentoo.org> at-spi2-atk-2.6.0.ebuild:
+  Added ~alpha.
 
   27 Sep 2012; Matt Turner <mattst88@gentoo.org> at-spi2-atk-2.4.0.ebuild,
   at-spi2-atk-2.6.0.ebuild:
@@ -52,4 +55,3 @@
   +at-spi2-atk-2.0.2.ebuild,
   +files/at-spi2-atk-2.0.2-disable-teamspaces-test.patch, +metadata.xml:
   Move from gnome overlay for GNOME 3
-
