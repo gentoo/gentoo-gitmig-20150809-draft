@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jing/jing-20091111-r1.ebuild,v 1.2 2012/10/10 18:45:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jing/jing-20091111-r1.ebuild,v 1.3 2012/10/17 03:03:05 phajdan.jr Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://jing-trang.googlecode.com/files/${P}.zip"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 COMMON_DEPEND="
