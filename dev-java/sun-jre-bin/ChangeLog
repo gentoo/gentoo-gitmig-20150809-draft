@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/sun-jre-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.224 2012/09/13 07:16:49 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.225 2012/10/17 14:22:00 sera Exp $
+
+*sun-jre-bin-1.6.0.37 (17 Oct 2012)
+
+  17 Oct 2012; Ralph Sennhauser <sera@gentoo.org> +sun-jre-bin-1.6.0.37.ebuild:
+  Security bump. #438706
+  ia64 is back.
+  Use QA_PREBUILT instead of individual variables.
+  Fix desktop files for newer standard.
+  Add elog about the name change to oracle-jre-bin for JRE 7.
 
   13 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   sun-jre-bin-1.6.0.35.ebuild:
