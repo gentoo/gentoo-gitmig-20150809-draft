@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-2.32.0-r3.ebuild,v 1.6 2012/07/15 16:17:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-2.32.0-r3.ebuild,v 1.7 2012/10/17 10:34:08 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -12,7 +12,7 @@ inherit autotools eutils gnome2
 DESCRIPTION="Tools aimed to make easy the administration of UNIX systems"
 HOMEPAGE="http://www.gnome.org/projects/gst/"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 IUSE="nfs policykit samba"
@@ -53,7 +53,8 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-libtool-intermediate-libs.patch \
 		"${FILESDIR}"/${P}-missing-atk.patch \
-		"${FILESDIR}"/${P}-missing-m.patch
+		"${FILESDIR}"/${P}-missing-m.patch \
+		"${FILESDIR}"/${P}-glib-2.32.patch
 	eautoreconf
 	gnome2_src_prepare
 }

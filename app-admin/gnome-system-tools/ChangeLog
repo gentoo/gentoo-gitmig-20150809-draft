@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/gnome-system-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/ChangeLog,v 1.118 2012/07/15 16:17:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/ChangeLog,v 1.119 2012/10/17 10:34:08 tetromino Exp $
+
+  17 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -gnome-system-tools-2.32.0.ebuild, -gnome-system-tools-2.32.0-r1.ebuild,
+  gnome-system-tools-2.32.0-r2.ebuild, gnome-system-tools-2.32.0-r3.ebuild,
+  +files/gnome-system-tools-2.32.0-glib-2.32.patch:
+  Fix build failure with glib-2.32 (bug #438474, thanks to Sergey Bobrov).
+  Update license. Drop old.
 
   15 Jul 2012; Raúl Porcel <armin76@gentoo.org>
   gnome-system-tools-2.32.0-r3.ebuild:
