@@ -1,13 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vboxgtk/vboxgtk-0.8.0.ebuild,v 1.3 2012/10/17 13:17:35 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vboxgtk/vboxgtk-0.8.0-r2.ebuild,v 1.1 2012/10/17 13:23:11 hasufell Exp $
 
 EAPI="4"
-PYTHON_DEPEND="2:2.6"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.[45] 3.* *-jython"
 
-inherit gnome2-utils distutils
+PYTHON_COMPAT="python2_6 python2_7"
+
+inherit gnome2-utils python-distutils-ng
 
 DESCRIPTION="GTK frontend for VirtualBox"
 HOMEPAGE="http://code.google.com/p/vboxgtk/"
@@ -24,13 +23,14 @@ RDEPEND="
 	dev-python/pygobject:3
 	x11-libs/gtk+:3"
 
+DOCS=( AUTHORS README )
+
 PKG_LINGUAS="cs gl"
 for PKG_LINGUA in ${PKG_LINGUAS}; do
 	IUSE="${IUSE} linguas_${PKG_LINGUA/-/_}"
 done
 
-src_prepare() {
-	distutils_src_prepare
+python_prepare_all() {
 	for LINGUA in ${PKG_LINGUAS}; do
 		if ! use linguas_${LINGUA/-/_}; then
 			rm -r po/"${LINGUA}".po || die "LINGUAS removal failed"
@@ -38,16 +38,18 @@ src_prepare() {
 	done
 }
 
+python_install_all() {
+	dodoc ${DOCS[@]}
+}
+
 pkg_preinst() {
 	gnome2_icon_savelist
 }
 
 pkg_postinst() {
-	distutils_pkg_postinst
 	gnome2_icon_cache_update
 }
 
 pkg_postrm() {
-	distutils_pkg_postrm
 	gnome2_icon_cache_update
 }

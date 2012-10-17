@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/vboxgtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vboxgtk/ChangeLog,v 1.9 2012/10/17 13:17:35 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vboxgtk/ChangeLog,v 1.10 2012/10/17 13:23:11 hasufell Exp $
+
+*vboxgtk-0.8.0-r2 (17 Oct 2012)
+
+  17 Oct 2012; Julian Ospald <hasufell@gentoo.org> -vboxgtk-0.8.0.ebuild,
+  -vboxgtk-0.8.0-r1.ebuild, +vboxgtk-0.8.0-r2.ebuild:
+  force revbump, so no user is left with broken runtime deps
 
   17 Oct 2012; Julian Ospald <hasufell@gentoo.org> vboxgtk-0.8.0.ebuild,
   vboxgtk-0.8.0-r1.ebuild:
