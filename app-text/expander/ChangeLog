@@ -1,6 +1,9 @@
 # ChangeLog for app-text/expander
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/expander/ChangeLog,v 1.11 2010/09/18 21:14:47 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/expander/ChangeLog,v 1.12 2012/10/17 17:02:58 ago Exp $
+
+  17 Oct 2012; Agostino Sarubbo <ago@gentoo.org> expander-2.0.5-r1.ebuild:
+  Add ~amd64, EAPI4
 
 *expander-2.0.5-r1 (18 Sep 2010)
 
@@ -38,4 +41,3 @@
   30 Oct 2003; Brandy Westcott brandy@gentoo.org expander-2.0.5.ebuild:
   Initial import. Expander is a utility that acts as a filter for text editors.
   Closes bug #30604.
-
