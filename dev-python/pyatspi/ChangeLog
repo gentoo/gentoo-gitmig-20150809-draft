@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyatspi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyatspi/ChangeLog,v 1.13 2012/10/17 03:40:08 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyatspi/ChangeLog,v 1.14 2012/10/17 04:29:54 tetromino Exp $
+
+  17 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  pyatspi-2.2.1.ebuild, pyatspi-2.4.0.ebuild, pyatspi-2.6.0.ebuild:
+  Disable tests: as pointed out by Matt Turner, src_test was not running the
+  test suite properly, and attempting to run it properly showed that it is
+  obsolete and unpassable.
 
   17 Oct 2012; Matt Turner <mattst88@gentoo.org> pyatspi-2.4.0.ebuild:
   Added ~alpha, bug 411761.
