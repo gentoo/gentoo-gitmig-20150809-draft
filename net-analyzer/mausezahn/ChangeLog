@@ -1,0 +1,10 @@
+# ChangeLog for net-analyzer/mausezahn
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mausezahn/ChangeLog,v 1.1 2012/10/17 16:57:26 pinkbyte Exp $
+
+*mausezahn-0.40 (17 Oct 2012)
+
+  17 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> +mausezahn-0.40.ebuild,
+  +metadata.xml:
+  Initial commit wrt bug #317197
+
