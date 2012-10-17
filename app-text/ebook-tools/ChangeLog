@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ebook-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ebook-tools/ChangeLog,v 1.23 2012/10/16 14:54:38 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ebook-tools/ChangeLog,v 1.24 2012/10/17 11:07:18 ago Exp $
+
+  17 Oct 2012; Agostino Sarubbo <ago@gentoo.org> ebook-tools-0.2.2.ebuild:
+  Stable for amd64, wrt bug #438562
 
   16 Oct 2012; Anthony G. Basile <blueness@gentoo.org> ebook-tools-0.2.2.ebuild:
   stable ppc pcc64, bug #438562
