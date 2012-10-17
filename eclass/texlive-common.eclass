@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-common.eclass,v 1.17 2012/03/30 13:50:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-common.eclass,v 1.18 2012/10/17 12:55:42 aballier Exp $
 
 # @ECLASS: texlive-common.eclass
 # @MAINTAINER:
@@ -132,11 +132,13 @@ dobin_texmf_scripts() {
 # function helps in factorizing some code.
 
 etexmf-update() {
-	if [ "$ROOT" = "/" ] && [ -x /usr/sbin/texmf-update ] ; then
-		/usr/sbin/texmf-update
-	else
-		ewarn "Cannot run texmf-update for some reason."
-		ewarn "Your texmf tree might be inconsistent with your configuration"
-		ewarn "Please try to figure what has happened"
+	if has_version 'app-text/texlive-core' ; then
+		if [ "$ROOT" = "/" ] && [ -x /usr/sbin/texmf-update ] ; then
+			/usr/sbin/texmf-update
+		else
+			ewarn "Cannot run texmf-update for some reason."
+			ewarn "Your texmf tree might be inconsistent with your configuration"
+			ewarn "Please try to figure what has happened"
+		fi
 	fi
 }
