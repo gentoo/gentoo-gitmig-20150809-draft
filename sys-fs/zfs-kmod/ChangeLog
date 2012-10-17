@@ -1,6 +1,23 @@
 # ChangeLog for sys-fs/zfs-kmod
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.7 2012/09/18 22:33:52 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.8 2012/10/17 04:57:56 ryao Exp $
+
+*zfs-kmod-0.6.0_rc11-r1 (17 Oct 2012)
+
+  17 Oct 2012; Richard Yao <ryao@gentoo.org>
+  +files/zfs-kmod-0.6.0_rc11-fix-32-bit-integer-size-mismatch.patch,
+  +files/zfs-kmod-0.6.0_rc11-fix-i386-infinite-loop.patch,
+  +files/zfs-kmod-0.6.0_rc11-fix-rename-failure.patch,
+  +files/zfs-kmod-0.6.0_rc11-fix-zvol_probe-null.patch,
+  +files/zfs-kmod-0.6.0_rc11-linux-3.6-compat-0-elevator-change.patch,
+  +files/zfs-kmod-0.6.0_rc11-linux-3.6-compat-1.patch,
+  +files/zfs-kmod-0.6.0_rc11-linux-3.6-compat-2.patch,
+  +files/zfs-kmod-0.6.0_rc11-linux-3.6-compat-3.patch,
+  +files/zfs-kmod-0.6.0_rc11-linux-3.6-compat-4.patch,
+  +files/zfs-kmod-0.6.0_rc11-linux-3.6-compat-5.patch,
+  +files/zfs-kmod-0.6.0_rc11-return-positive-error.patch,
+  +zfs-kmod-0.6.0_rc11-r1.ebuild:
+  Linux 3.6 support and stability fixes
 
 *zfs-kmod-0.6.0_rc11 (18 Sep 2012)
 
