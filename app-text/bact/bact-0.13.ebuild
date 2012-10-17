@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bact/bact-0.13.ebuild,v 1.2 2009/05/13 03:45:23 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bact/bact-0.13.ebuild,v 1.3 2012/10/17 16:54:45 ago Exp $
+
+EAPI=4
 
 inherit toolchain-funcs
 
@@ -10,23 +12,23 @@ SRC_URI="http://chasen.org/~taku/software/bact/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
 RDEPEND="${DEPEND}"
 
 src_compile() {
-	emake CXX="$(tc-getCXX)" CXXFLAGS="${CXXFLAGS}" LDFLAGS="${LDFLAGS}" || die "emake failed"
+	emake CXX="$(tc-getCXX)" CXXFLAGS="${CXXFLAGS}" LDFLAGS="${LDFLAGS}"
 }
 
 src_test() {
-	make test || die
+	emake test
 }
 
 src_install() {
-	dobin bact_learn bact_mkmodel bact_classify || die "dobin failed"
+	dobin bact_learn bact_mkmodel bact_classify
 
-	dohtml index.html bact.css || die "dohtml failed"
-	dodoc README AUTHORS || die "dodoc failed"
+	dohtml index.html bact.css
+	dodoc README AUTHORS
 }
