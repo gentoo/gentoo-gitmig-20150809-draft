@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.638 2012/09/20 17:32:03 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.639 2012/10/17 21:19:01 naota Exp $
+
+  17 Oct 2012;  <naota@gentoo.org> php-5.4.7.ebuild:
+  Add ~x86-fbsd.
 
   20 Sep 2012; Ole Markus With <olemarkus@gentoo.org>
   files/eblits/src_configure-v54.eblit:
