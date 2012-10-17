@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/retrobattle/retrobattle-1.0.0.ebuild,v 1.2 2012/09/28 12:37:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/retrobattle/retrobattle-1.0.0.ebuild,v 1.3 2012/10/17 03:27:39 phajdan.jr Exp $
 
 EAPI=3
 inherit eutils games
@@ -12,7 +12,7 @@ SRC_URI="http://remar.se/andreas/retrobattle/files/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 # test is incomplete
 RESTRICT="test"
