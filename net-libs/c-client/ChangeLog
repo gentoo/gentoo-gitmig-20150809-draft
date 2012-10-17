@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/c-client
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.94 2012/10/15 12:35:16 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.95 2012/10/17 21:48:40 naota Exp $
+
+  17 Oct 2012;  <naota@gentoo.org> c-client-2007f-r4.ebuild:
+  Add ~x86-fbsd. #267299
 
 *c-client-2007f-r4 (15 Oct 2012)
 
