@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/hteditor
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/ChangeLog,v 1.55 2012/10/04 08:11:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/ChangeLog,v 1.56 2012/10/17 03:35:50 phajdan.jr Exp $
+
+  17 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> hteditor-2.0.20.ebuild:
+  x86 stable wrt bug #436968
 
   04 Oct 2012; Agostino Sarubbo <ago@gentoo.org> hteditor-2.0.20.ebuild:
   add a missing line
