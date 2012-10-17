@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libcli
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcli/ChangeLog,v 1.4 2010/09/12 14:16:36 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcli/ChangeLog,v 1.5 2012/10/17 11:07:00 ago Exp $
+
+  17 Oct 2012; <ago@gentoo.org> libcli-1.9.4.ebuild:
+  Stable for amd64, wrt bug #438572
 
 *libcli-1.9.4 (12 Sep 2010)
 
