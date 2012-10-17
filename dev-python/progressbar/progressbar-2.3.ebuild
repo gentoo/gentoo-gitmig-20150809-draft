@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/progressbar/progressbar-2.3.ebuild,v 1.7 2012/06/14 15:32:01 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/progressbar/progressbar-2.3.ebuild,v 1.8 2012/10/17 06:27:19 patrick Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="*-jython"
+RESTRICT_PYTHON_ABIS="*-jython 3.3"
 
 inherit distutils
 
