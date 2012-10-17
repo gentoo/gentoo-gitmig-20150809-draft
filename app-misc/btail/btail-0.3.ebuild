@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/btail/btail-0.3.ebuild,v 1.1 2011/06/24 05:49:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/btail/btail-0.3.ebuild,v 1.2 2012/10/17 12:05:39 ago Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="${HOMEPAGE}/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="sys-libs/gdbm"
@@ -29,7 +29,8 @@ src_prepare() {
 }
 
 src_compile() {
-	emake CFLAGS="${CFLAGS}" \
+	emake \
+		CFLAGS="${CFLAGS}" \
 		CXXFLAGS="${CXXFLAGS}" \
 		CC="$(tc-getCC)" \
 		CXX="$(tc-getCXX)"
