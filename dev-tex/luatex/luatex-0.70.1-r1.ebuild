@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/luatex-0.70.1-r1.ebuild,v 1.2 2012/08/08 16:30:52 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/luatex-0.70.1-r1.ebuild,v 1.3 2012/10/17 13:20:58 aballier Exp $
 
 EAPI=4
 
-inherit libtool eutils
+inherit libtool eutils texlive-common
 
 DESCRIPTION="An extended version of pdfTeX using Lua as an embedded scripting language."
 HOMEPAGE="http://www.luatex.org/"
@@ -114,12 +114,5 @@ pkg_postinst() {
 		elog "Please consider installing a recent TeX distribution"
 		elog "like TeX Live 2008 to get the full power of ${PN}"
 	fi
-	if [ "$ROOT" = "/" ] && [ -x "${EPREFIX}"/usr/bin/fmtutil-sys ] ; then
-		einfo "Rebuilding formats"
-		"${EPREFIX}"/usr/bin/fmtutil-sys --all &> /dev/null
-	else
-		ewarn "Cannot run fmtutil-sys for some reason."
-		ewarn "Your formats might be inconsistent with your installed ${PN} version"
-		ewarn "Please try to figure what has happened"
-	fi
+	efmtutil-sys
 }
