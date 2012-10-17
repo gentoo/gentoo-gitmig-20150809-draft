@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kalarm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalarm/ChangeLog,v 1.228 2012/10/02 18:12:24 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalarm/ChangeLog,v 1.229 2012/10/17 19:00:14 maekke Exp $
+
+  17 Oct 2012; Markus Meier <maekke@gentoo.org> kalarm-4.9.2.ebuild:
+  add ~arm, bug #430072
 
 *kalarm-4.9.2 (02 Oct 2012)
 

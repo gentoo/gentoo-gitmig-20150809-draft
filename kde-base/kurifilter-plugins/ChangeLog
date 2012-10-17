@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kurifilter-plugins
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kurifilter-plugins/ChangeLog,v 1.130 2012/10/02 18:12:29 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kurifilter-plugins/ChangeLog,v 1.131 2012/10/17 19:22:45 maekke Exp $
+
+  17 Oct 2012; Markus Meier <maekke@gentoo.org>
+  kurifilter-plugins-4.9.2.ebuild:
+  add ~arm, bug #430072
 
 *kurifilter-plugins-4.9.2 (02 Oct 2012)
 

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim-common-libs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-common-libs/ChangeLog,v 1.54 2012/10/02 18:11:57 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-common-libs/ChangeLog,v 1.55 2012/10/17 18:59:19 maekke Exp $
+
+  17 Oct 2012; Markus Meier <maekke@gentoo.org>
+  kdepim-common-libs-4.9.2.ebuild:
+  add ~arm, bug #430072
 
 *kdepim-common-libs-4.9.2 (02 Oct 2012)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-l10n
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/ChangeLog,v 1.150 2012/10/13 21:49:03 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/ChangeLog,v 1.151 2012/10/17 19:29:24 maekke Exp $
+
+  17 Oct 2012; Markus Meier <maekke@gentoo.org> kde-l10n-4.9.2.ebuild:
+  add ~arm, bug #430072
 
   13 Oct 2012; Johannes Huber <johu@gentoo.org> kde-l10n-4.8.5.ebuild,
   kde-l10n-4.9.1.ebuild, kde-l10n-4.9.2.ebuild:
