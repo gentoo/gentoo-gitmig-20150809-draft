@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/thlnk
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/thlnk/ChangeLog,v 1.12 2007/02/22 00:09:43 peper Exp $
+# Copyright 2000-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/thlnk/ChangeLog,v 1.13 2012/10/17 17:46:26 ago Exp $
+
+  17 Oct 2012; Agostino Sarubbo <ago@gentoo.org> thlnk-1.2.1.ebuild:
+  Add ~amd64, bug #438726
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
@@ -34,4 +37,3 @@
   19 Nov 2003; Ciaran McCreesh <ciaranm@gentoo.org> metadata.xml,
   thlnk-1.2.1.ebuild:
   new ebuild
-
