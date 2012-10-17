@@ -1,6 +1,9 @@
 # ChangeLog for virtual/emacs-flim
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/emacs-flim/ChangeLog,v 1.1 2010/05/14 14:38:19 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/emacs-flim/ChangeLog,v 1.2 2012/10/17 07:00:13 ulm Exp $
+
+  17 Oct 2012; Ulrich Müller <ulm@gentoo.org> emacs-flim-0.ebuild:
+  Bump ebuild to EAPI 4. Don't assign empty values to variables.
 
 *emacs-flim-0 (14 May 2010)
 

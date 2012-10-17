@@ -1,15 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/emacs-cedet/emacs-cedet-0.ebuild,v 1.2 2010/12/27 10:24:43 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/emacs-cedet/emacs-cedet-0.ebuild,v 1.3 2012/10/17 06:58:09 ulm Exp $
+
+EAPI=4
 
 DESCRIPTION="Virtual for the Collection of Emacs Development Environment Tools"
-HOMEPAGE=""
-SRC_URI=""
-
-LICENSE=""
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
-IUSE=""
 
 # CEDET is included with GNU Emacs 23.2 or later.
 RDEPEND="|| ( app-emacs/cedet
