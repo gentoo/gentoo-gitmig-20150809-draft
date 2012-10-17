@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/pkgconf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.51 2012/10/17 15:51:49 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.52 2012/10/17 16:10:40 ryao Exp $
+
+  17 Oct 2012; Richard Yao <ryao@gentoo.org> -pkgconf-0.8.7.ebuild,
+  pkgconf-0.8.5.ebuild:
+  Removing 0.8.7 due to bug #431170
 
 *pkgconf-0.8.9 (17 Oct 2012)
 
