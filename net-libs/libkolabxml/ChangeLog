@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libkolabxml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libkolabxml/ChangeLog,v 1.4 2012/09/26 03:57:36 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkolabxml/ChangeLog,v 1.5 2012/10/17 18:56:51 maekke Exp $
+
+  17 Oct 2012; Markus Meier <maekke@gentoo.org> libkolabxml-0.8.1.ebuild:
+  add ~arm, bug #430072
 
 *libkolabxml-0.8.1 (26 Sep 2012)
 

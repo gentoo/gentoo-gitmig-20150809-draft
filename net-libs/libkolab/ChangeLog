@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libkolab
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libkolab/ChangeLog,v 1.3 2012/09/26 04:04:40 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkolab/ChangeLog,v 1.4 2012/10/17 18:57:30 maekke Exp $
+
+  17 Oct 2012; Markus Meier <maekke@gentoo.org> libkolab-0.3.2.ebuild:
+  add ~arm, bug #430072
 
 *libkolab-0.3.2 (26 Sep 2012)
 
