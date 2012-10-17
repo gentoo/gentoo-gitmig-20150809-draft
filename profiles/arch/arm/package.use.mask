@@ -1,6 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.87 2012/10/07 10:41:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.88 2012/10/17 19:07:16 maekke Exp $
+
+# Markus Meier <maekke@gentoo.org> (17 Oct 2012)
+# spidermonkey is broken on arm see bug #420471
+=net-libs/libproxy-0.4.10 spidermonkey
 
 # Steev Klimaszewski <steev@gentoo.org> (03 Aug 2012)
 # No java on ARM
