@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/sitebar/sitebar-3.3.9-r2.ebuild,v 1.3 2012/10/04 21:45:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/sitebar/sitebar-3.3.9-r2.ebuild,v 1.4 2012/10/17 03:00:18 phajdan.jr Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
 		mirror://sourceforge/${PN}/SiteBarPluginXBELSync_3.3.7_1.1.zip
 	)"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="plugins"
 
 DEPEND="virtual/httpd-php"

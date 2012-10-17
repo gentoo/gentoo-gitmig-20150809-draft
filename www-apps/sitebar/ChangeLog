@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/sitebar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/sitebar/ChangeLog,v 1.28 2012/10/04 21:45:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/sitebar/ChangeLog,v 1.29 2012/10/17 03:00:18 phajdan.jr Exp $
+
+  17 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> sitebar-3.3.9-r2.ebuild:
+  x86 stable wrt bug #429228
 
   04 Oct 2012; Brent Baude <ranger@gentoo.org> sitebar-3.3.9-r2.ebuild:
   Marking sitebar-3.3.9-r2 ppc for bug 429228
