@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/eigen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/ChangeLog,v 1.62 2012/10/13 08:33:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/ChangeLog,v 1.63 2012/10/17 14:16:25 jer Exp $
+
+  17 Oct 2012; Jeroen Roovers <jer@gentoo.org> eigen-2.0.16.ebuild:
+  Marked ~hppa (bug #436570).
 
   13 Oct 2012; Agostino Sarubbo <ago@gentoo.org> eigen-2.0.17.ebuild:
   Stable for amd64, wrt bug #436570
