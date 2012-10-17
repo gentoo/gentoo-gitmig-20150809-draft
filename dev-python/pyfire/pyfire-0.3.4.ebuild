@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfire/pyfire-0.3.4.ebuild,v 1.1 2012/09/21 08:20:23 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfire/pyfire-0.3.4.ebuild,v 1.2 2012/10/17 08:53:06 patrick Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ DISTUTILS_SRC_TEST="setup.py"
 
 SUPPORT_PYTHON_ABIS="1"
 PYTHON_DEPEND="2:2.7"
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="2.5 2.5-jython 3.*"
 
 inherit distutils
 
