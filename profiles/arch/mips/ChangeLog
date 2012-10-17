@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.103 2012/09/29 03:06:33 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.104 2012/10/17 03:09:26 mattst88 Exp $
+
+  17 Oct 2012; Matt Turner <mattst88@gentoo.org> make.defaults:
+  Add LIBDIR_* definitions to make.defaults for single-ABI profiles.
 
   29 Sep 2012; Matt Turner <mattst88@gentoo.org> mips64/multilib/make.defaults,
   mips64/n32/make.defaults, mips64/n64/make.defaults,
