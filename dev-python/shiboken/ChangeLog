@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/shiboken
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/ChangeLog,v 1.34 2012/10/14 13:55:47 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/ChangeLog,v 1.35 2012/10/17 06:39:07 kensington Exp $
+
+  17 Oct 2012; Michael Palimaka <kensington@gentoo.org> shiboken-1.1.1.ebuild,
+  shiboken-1.1.2.ebuild:
+  Restrict python-3.3, wrt bug #438552.
 
   14 Oct 2012; Davide Pesavento <pesa@gentoo.org> shiboken-1.1.2.ebuild:
   Tests require numpy.
