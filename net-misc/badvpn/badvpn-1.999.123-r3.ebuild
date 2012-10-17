@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/badvpn/badvpn-1.999.123-r3.ebuild,v 1.1 2012/09/22 18:08:04 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/badvpn/badvpn-1.999.123-r3.ebuild,v 1.2 2012/10/17 03:31:55 phajdan.jr Exp $
 
 EAPI=4
 inherit eutils cmake-utils user
@@ -11,7 +11,7 @@ HOMEPAGE="http://code.google.com/p/badvpn/"
 SRC_URI="http://badvpn.googlecode.com/files/${MY_P}.tar.bz2"
 
 LICENSE="BSD"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 SLOT="0"
 TARGETS="+client +ncd +server +tun2socks +udpgw"
 IUSE="${TARGETS} debug"
