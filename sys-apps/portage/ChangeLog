@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1122 2012/10/15 00:22:57 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1123 2012/10/17 00:00:15 zmedico Exp $
+
+*portage-2.1.11.28 (17 Oct 2012)
+
+  17 Oct 2012; Zac Medico <zmedico@gentoo.org> +portage-2.1.11.28.ebuild,
+  -portage-2.1.11.26.ebuild:
+  2.1.11.28 version bump. This fixes egencache --update-manifests to forcefully
+  replace existing signatures when appropriate (for bug #436918), and also adds
+  a repoman restriction for PORTAGE_GPG_KEY (key id must be exactly 8, 16, 24,
+  32 or 40 hexdigits long). Bug #431026 tracks all bugs fixed since
+  portage-2.1.11.9.
 
 *portage-2.2.0_alpha138 (15 Oct 2012)
 
