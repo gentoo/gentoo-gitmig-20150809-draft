@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.344 2012/09/27 10:42:49 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.345 2012/10/17 09:54:20 tetromino Exp $
+
+  17 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -evolution-data-server-2.32.3-r1.ebuild,
+  evolution-data-server-2.32.3-r2.ebuild,
+  evolution-data-server-3.2.3-r2.ebuild, -evolution-data-server-3.4.3.ebuild,
+  evolution-data-server-3.4.4.ebuild:
+  Drop useless USE=doc, it only regenerated documentation. Update license. Use
+  vala.eclass. Drop old.
 
   27 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
   evolution-data-server-3.4.4.ebuild:

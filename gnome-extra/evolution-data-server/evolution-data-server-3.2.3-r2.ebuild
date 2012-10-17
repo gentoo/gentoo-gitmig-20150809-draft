@@ -1,20 +1,23 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.2.3-r2.ebuild,v 1.3 2012/08/13 04:58:39 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.2.3-r2.ebuild,v 1.4 2012/10/17 09:54:20 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
+VALA_MIN_API_VERSION="0.14"
+VALA_USE_DEPEND="vapigen"
 
-inherit autotools db-use eutils flag-o-matic gnome2 versionator virtualx
+inherit autotools db-use eutils flag-o-matic gnome2 vala versionator virtualx
 
 DESCRIPTION="Evolution groupware backend"
-HOMEPAGE="http://www.gnome.org/projects/evolution/"
+HOMEPAGE="http://projects.gnome.org/evolution/"
 
-LICENSE="LGPL-2 BSD DB"
+# Note: explicitly "|| ( LGPL-2 LGPL-3 )", not "LGPL-2+".
+LICENSE="|| ( LGPL-2 LGPL-3 ) BSD DB"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-solaris"
-IUSE="doc +gnome-online-accounts +introspection ipv6 ldap kerberos vala +weather"
+IUSE="+gnome-online-accounts +introspection ipv6 ldap kerberos vala +weather"
 
 # GNOME3: How do we slot libedataserverui-3.0.so?
 # Also, libedata-cal-1.2.so and libecal-1.2.so use gtk-3, but aren't slotted
@@ -43,17 +46,15 @@ RDEPEND=">=dev-libs/glib-2.28:2
 DEPEND="${RDEPEND}
 	dev-util/fix-la-relink-command
 	dev-util/gperf
-	virtual/pkgconfig
 	>=dev-util/intltool-0.35.5
 	sys-devel/bison
 	>=gnome-base/gnome-common-2
 	>=dev-util/gtk-doc-am-1.9
 	>=sys-devel/gettext-0.17
-	doc? ( >=dev-util/gtk-doc-1.9 )
-	vala? ( >=dev-lang/vala-0.13.0:0.14[vapigen] )"
+	virtual/pkgconfig
+	vala? ( $(vala_depend) )"
 # eautoreconf needs:
 #	>=gnome-base/gnome-common-2
-#	>=dev-util/gtk-doc-am-1.9
 
 REQUIRED_USE="vala? ( introspection )"
 
@@ -65,8 +66,6 @@ pkg_setup() {
 	# Uh, what to do about dbus-call-timeout ?
 	# Fails to build with --disable-ssl; bug #392679, https://bugzilla.gnome.org/show_bug.cgi?id=642984
 	G2CONF="${G2CONF}
-		VALAC=$(type -P valac-0.14)
-		VAPIGEN=$(type -P vapigen-0.14)
 		$(use_enable gnome-online-accounts goa)
 		$(use_enable introspection)
 		$(use_enable ipv6)
@@ -101,6 +100,7 @@ src_prepare() {
 	eautoreconf
 
 	gnome2_src_prepare
+	use vala && vala_src_prepare
 
 	# GNOME bug 611353 (skips failing test atm)
 	# XXX: uncomment when there's a proper fix

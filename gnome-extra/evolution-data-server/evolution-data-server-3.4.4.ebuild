@@ -1,20 +1,23 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.4.4.ebuild,v 1.4 2012/09/27 10:42:49 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.4.4.ebuild,v 1.5 2012/10/17 09:54:20 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
+VALA_MIN_API_VERSION="0.14"
+VALA_USE_DEPEND="vapigen"
 
-inherit db-use eutils flag-o-matic gnome2 versionator virtualx
+inherit db-use eutils flag-o-matic gnome2 vala versionator virtualx
 
 DESCRIPTION="Evolution groupware backend"
-HOMEPAGE="http://www.gnome.org/projects/evolution/"
+HOMEPAGE="http://projects.gnome.org/evolution/"
 
-LICENSE="LGPL-2 BSD DB"
+# Note: explicitly "|| ( LGPL-2 LGPL-3 )", not "LGPL-2+".
+LICENSE="|| ( LGPL-2 LGPL-3 ) BSD DB"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-solaris"
-IUSE="doc +gnome-online-accounts +introspection ipv6 ldap kerberos vala +weather"
+IUSE="+gnome-online-accounts +introspection ipv6 ldap kerberos vala +weather"
 
 RDEPEND=">=dev-libs/glib-2.31:2
 	>=x11-libs/gtk+-3.2:3
@@ -50,11 +53,9 @@ DEPEND="${RDEPEND}
 	>=dev-util/gtk-doc-am-1.9
 	>=sys-devel/gettext-0.17
 	virtual/pkgconfig
-	doc? ( >=dev-util/gtk-doc-1.14 )
-	vala? ( >=dev-lang/vala-0.13.0:0.14[vapigen] )"
+	vala? ( $(vala_depend) )"
 # eautoreconf needs:
 #	>=gnome-base/gnome-common-2
-#	>=dev-util/gtk-doc-am-1.9
 
 REQUIRED_USE="vala? ( introspection )"
 
@@ -66,8 +67,6 @@ pkg_setup() {
 	# Uh, what to do about dbus-call-timeout ?
 	G2CONF="${G2CONF}
 		--disable-schemas-compile
-		VALAC=$(type -P valac-0.14)
-		VAPIGEN=$(type -P vapigen-0.14)
 		$(use_enable gnome-online-accounts goa)
 		$(use_enable introspection)
 		$(use_enable ipv6)
@@ -83,6 +82,7 @@ pkg_setup() {
 
 src_prepare() {
 	gnome2_src_prepare
+	use vala && vala_src_prepare
 
 	# GNOME bug 611353 (skips failing test atm)
 	# XXX: uncomment when there's a proper fix
