@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.7.0_rc3.ebuild,v 1.1 2012/09/11 22:19:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.7.0.ebuild,v 1.1 2012/10/17 01:21:00 flameeyes Exp $
 
 EAPI=4
 
@@ -49,8 +49,7 @@ src_configure() {
 		--enable-request-early \
 		$(use_enable curl mlogc) \
 		$(use_with lua) \
-		$(use_enable jit pcre jit) \
-		|| die "econf failed"
+		$(use_enable jit pcre-jit)
 }
 
 src_compile() {
@@ -59,11 +58,11 @@ src_compile() {
 			"${T}"/79_modsecurity.conf || die
 	fi
 
-	emake || die
+	emake
 }
 
 src_test() {
-	emake check || die
+	emake check
 }
 
 src_install() {
