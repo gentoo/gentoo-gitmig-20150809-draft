@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/picard
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/ChangeLog,v 1.40 2012/10/03 10:26:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/ChangeLog,v 1.41 2012/10/17 03:51:09 phajdan.jr Exp $
+
+  17 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> picard-1.0.ebuild:
+  x86 stable wrt bug #436194
 
   03 Oct 2012; Agostino Sarubbo <ago@gentoo.org> picard-1.0.ebuild:
   Stable for amd64, wrt bug #436194
