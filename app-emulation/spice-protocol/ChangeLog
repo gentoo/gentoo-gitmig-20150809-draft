@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/spice-protocol
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice-protocol/ChangeLog,v 1.22 2012/10/17 03:50:04 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice-protocol/ChangeLog,v 1.23 2012/10/17 11:59:36 ago Exp $
+
+  17 Oct 2012; Agostino Sarubbo <ago@gentoo.org> spice-protocol-0.10.3.ebuild:
+  Stable for amd64, wrt bug #437208
 
   17 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   spice-protocol-0.10.3.ebuild:
