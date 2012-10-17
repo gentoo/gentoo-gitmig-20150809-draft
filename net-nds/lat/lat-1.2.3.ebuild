@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/lat/lat-1.2.3.ebuild,v 1.7 2012/10/16 14:59:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/lat/lat-1.2.3.ebuild,v 1.8 2012/10/17 03:17:23 phajdan.jr Exp $
 
 EAPI=4
 GCONF_DEBUG=no
 
 inherit gnome2 mono versionator
 
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 DESCRIPTION="LDAP Administration Tool, allows you to browse LDAP-based directories and add/edit/delete entries."
 HOMEPAGE="http://sourceforge.net/projects/ldap-at/"
