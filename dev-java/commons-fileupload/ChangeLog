@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-fileupload
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-fileupload/ChangeLog,v 1.63 2012/10/11 16:41:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-fileupload/ChangeLog,v 1.64 2012/10/17 03:04:22 phajdan.jr Exp $
+
+  17 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  commons-fileupload-1.2.2.ebuild:
+  x86 stable wrt bug #433213
 
   11 Oct 2012; Agostino Sarubbo <ago@gentoo.org>
   commons-fileupload-1.2.2.ebuild:
