@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.9.1_p4.ebuild,v 1.6 2012/10/13 16:59:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.9.1_p4.ebuild,v 1.7 2012/10/17 18:00:15 idl0r Exp $
 
 # Re dlz/mysql and threads, needs to be verified..
 # MySQL uses thread local storage in its C api. Thus MySQL
@@ -221,8 +221,9 @@ src_install() {
 			contrib/nanny/nanny.pl
 
 		# some handy-dandy dynamic dns examples
-		cd "${D}"/usr/share/doc/${PF}
+		pushd "${D}"/usr/share/doc/${PF} 1>/dev/null
 		tar xf "${DISTDIR}"/dyndns-samples.tbz2 || die
+		popd 1>/dev/null
 	fi
 
 	use geoip && dodoc "${DISTDIR}"/${GEOIP_DOC_A}
