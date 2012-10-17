@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libassa
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libassa/ChangeLog,v 1.19 2012/09/14 14:19:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libassa/ChangeLog,v 1.20 2012/10/17 03:03:34 phajdan.jr Exp $
+
+  17 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> libassa-3.5.1-r1.ebuild:
+  x86 stable wrt bug #433203
 
   14 Sep 2012; Agostino Sarubbo <ago@gentoo.org> libassa-3.5.1-r1.ebuild:
   Stable for amd64, wrt bug #433203
