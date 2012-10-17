@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/simple-rss
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/simple-rss/ChangeLog,v 1.9 2012/06/06 06:04:42 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/simple-rss/ChangeLog,v 1.10 2012/10/17 11:59:51 ago Exp $
+
+  17 Oct 2012; Agostino Sarubbo <ago@gentoo.org> simple-rss-1.2.3-r1.ebuild:
+  Stable for amd64, wrt bug #435964
 
 *simple-rss-1.2.3-r1 (06 Jun 2012)
 
