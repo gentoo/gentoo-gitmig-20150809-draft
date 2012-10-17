@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libproxy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.80 2012/10/16 08:04:33 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.81 2012/10/17 02:06:27 blueness Exp $
+
+  17 Oct 2012; Anthony G. Basile <blueness@gentoo.org> libproxy-0.4.10.ebuild:
+  stable ppc ppc64, bug #438146
 
 *libproxy-0.4.10 (16 Oct 2012)
 
@@ -325,4 +328,3 @@
   +libproxy-0.2.3.ebuild:
   libproxy is a library for automatic proxy configuration management, initial
   ebuild by nirbheek, closes bug #244028.
-
