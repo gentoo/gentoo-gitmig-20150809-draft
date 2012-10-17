@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vboxgtk/vboxgtk-0.8.0.ebuild,v 1.2 2012/07/23 15:46:28 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vboxgtk/vboxgtk-0.8.0.ebuild,v 1.3 2012/10/17 13:17:35 hasufell Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -21,7 +21,8 @@ IUSE=""
 RDEPEND="
 	|| ( app-emulation/virtualbox[-headless,python,sdk]
 		>=app-emulation/virtualbox-bin-2.2.2[python] )
-	>=dev-python/pygobject-2.28.0:2"
+	dev-python/pygobject:3
+	x11-libs/gtk+:3"
 
 PKG_LINGUAS="cs gl"
 for PKG_LINGUA in ${PKG_LINGUAS}; do
