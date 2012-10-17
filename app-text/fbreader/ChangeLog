@@ -1,6 +1,9 @@
 # ChangeLog for app-text/fbreader
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/ChangeLog,v 1.26 2012/10/17 08:15:36 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/ChangeLog,v 1.27 2012/10/17 10:06:49 kensington Exp $
+
+  17 Oct 2012; Michael Palimaka <kensington@gentoo.org> fbreader-0.99.2.ebuild:
+  Add missing dependency on virtual/pkgconfig, thanks to Nikoli.
 
 *fbreader-0.99.2 (17 Oct 2012)
 

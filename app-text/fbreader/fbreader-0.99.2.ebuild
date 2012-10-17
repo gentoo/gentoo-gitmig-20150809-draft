@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/fbreader-0.99.2.ebuild,v 1.1 2012/10/17 08:15:36 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/fbreader-0.99.2.ebuild,v 1.2 2012/10/17 10:06:49 kensington Exp $
 
 EAPI=4
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug"
 
-DEPEND="app-arch/bzip2
+RDEPEND="
+	app-arch/bzip2
 	dev-libs/expat
 	dev-libs/liblinebreak
 	dev-libs/fribidi
@@ -25,7 +26,9 @@ DEPEND="app-arch/bzip2
 	x11-libs/qt-core:4
 	x11-libs/qt-gui:4
 "
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig
+"
 
 src_prepare() {
 	# Still use linebreak instead of new unibreak
