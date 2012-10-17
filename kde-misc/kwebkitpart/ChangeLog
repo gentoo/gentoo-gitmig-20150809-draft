@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kwebkitpart
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kwebkitpart/ChangeLog,v 1.15 2012/10/02 06:53:35 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kwebkitpart/ChangeLog,v 1.16 2012/10/17 12:36:03 kensington Exp $
+
+  17 Oct 2012; Michael Palimaka <kensington@gentoo.org>
+  kwebkitpart-1.3.0.ebuild:
+  Fix typo in HOMEPAGE.
 
 *kwebkitpart-1.3.0 (02 Oct 2012)
 
