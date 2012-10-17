@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/oracle-jre-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/ChangeLog,v 1.23 2012/09/13 07:17:42 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/ChangeLog,v 1.24 2012/10/17 14:33:20 sera Exp $
+
+*oracle-jre-bin-1.7.0.9 (17 Oct 2012)
+
+  17 Oct 2012; Ralph Sennhauser <sera@gentoo.org>
+  +oracle-jre-bin-1.7.0.9.ebuild:
+  Security bump. #438706
+  Use QA_PREBUILT instead of individual variables.
+  Fix desktop files for newer standard.
 
   13 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   oracle-jre-bin-1.7.0.7.ebuild:
