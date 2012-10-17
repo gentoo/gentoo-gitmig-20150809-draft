@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/glimmerhmm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/glimmerhmm/ChangeLog,v 1.6 2012/09/14 14:20:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/glimmerhmm/ChangeLog,v 1.7 2012/10/17 03:47:49 phajdan.jr Exp $
+
+  17 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  glimmerhmm-3.0.1-r1.ebuild:
+  x86 stable wrt bug #430524
 
   14 Sep 2012; Agostino Sarubbo <ago@gentoo.org> glimmerhmm-3.0.1-r1.ebuild:
   Stable for amd64, wrt bug #430524
