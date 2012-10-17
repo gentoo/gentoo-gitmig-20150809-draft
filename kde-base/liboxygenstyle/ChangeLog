@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/liboxygenstyle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/liboxygenstyle/ChangeLog,v 1.68 2012/10/02 18:11:59 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/liboxygenstyle/ChangeLog,v 1.69 2012/10/17 18:14:50 maekke Exp $
+
+  17 Oct 2012; Markus Meier <maekke@gentoo.org> liboxygenstyle-4.9.2.ebuild:
+  add ~arm, bug #430072
 
 *liboxygenstyle-4.9.2 (02 Oct 2012)
 

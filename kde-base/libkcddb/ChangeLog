@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkcddb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkcddb/ChangeLog,v 1.224 2012/10/02 18:11:37 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkcddb/ChangeLog,v 1.225 2012/10/17 18:32:18 maekke Exp $
+
+  17 Oct 2012; Markus Meier <maekke@gentoo.org> libkcddb-4.9.2.ebuild:
+  add ~arm, bug #430072
 
 *libkcddb-4.9.2 (02 Oct 2012)
 

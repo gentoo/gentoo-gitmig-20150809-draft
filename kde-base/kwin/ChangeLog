@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.294 2012/10/02 18:11:47 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.295 2012/10/17 18:15:47 maekke Exp $
+
+  17 Oct 2012; Markus Meier <maekke@gentoo.org> kwin-4.9.2.ebuild:
+  add ~arm, bug #430072
 
 *kwin-4.9.2 (02 Oct 2012)
 

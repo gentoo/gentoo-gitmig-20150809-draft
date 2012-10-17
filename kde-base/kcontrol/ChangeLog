@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcontrol
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.263 2012/10/02 18:12:17 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.264 2012/10/17 18:37:12 maekke Exp $
+
+  17 Oct 2012; Markus Meier <maekke@gentoo.org> kcontrol-4.9.2.ebuild:
+  add ~arm, bug #430072
 
 *kcontrol-4.9.2 (02 Oct 2012)
 

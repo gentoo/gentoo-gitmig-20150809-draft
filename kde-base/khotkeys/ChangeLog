@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/khotkeys
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/khotkeys/ChangeLog,v 1.233 2012/10/02 18:12:11 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/khotkeys/ChangeLog,v 1.234 2012/10/17 18:36:19 maekke Exp $
+
+  17 Oct 2012; Markus Meier <maekke@gentoo.org> khotkeys-4.9.2.ebuild:
+  add ~arm, bug #430072
 
 *khotkeys-4.9.2 (02 Oct 2012)
 

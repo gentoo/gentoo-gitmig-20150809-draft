@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/solid-runtime
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/solid-runtime/ChangeLog,v 1.86 2012/10/02 18:11:41 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/solid-runtime/ChangeLog,v 1.87 2012/10/17 18:17:27 maekke Exp $
+
+  17 Oct 2012; Markus Meier <maekke@gentoo.org> solid-runtime-4.9.2.ebuild:
+  add ~arm, bug #430072
 
 *solid-runtime-4.9.2 (02 Oct 2012)
 

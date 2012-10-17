@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/nepomuk-core
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk-core/ChangeLog,v 1.12 2012/10/14 00:02:13 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk-core/ChangeLog,v 1.13 2012/10/17 18:03:14 maekke Exp $
+
+  17 Oct 2012; Markus Meier <maekke@gentoo.org> nepomuk-core-4.9.2-r1.ebuild:
+  add ~arm, bug #430072
 
   14 Oct 2012; Johannes Huber <johu@gentoo.org>
   +files/nepomuk-core-4.9.2-build-fix-dirwatch-not-exists.patch,

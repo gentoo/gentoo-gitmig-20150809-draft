@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-desktoptheme
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-desktoptheme/ChangeLog,v 1.125 2012/10/02 18:11:50 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-desktoptheme/ChangeLog,v 1.126 2012/10/17 18:45:50 maekke Exp $
+
+  17 Oct 2012; Markus Meier <maekke@gentoo.org>
+  kdebase-desktoptheme-4.9.2.ebuild:
+  add ~arm, bug #430072
 
 *kdebase-desktoptheme-4.9.2 (02 Oct 2012)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/plasma-runtime
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-runtime/ChangeLog,v 1.112 2012/10/02 18:12:02 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-runtime/ChangeLog,v 1.113 2012/10/17 18:26:09 maekke Exp $
+
+  17 Oct 2012; Markus Meier <maekke@gentoo.org> plasma-runtime-4.9.2.ebuild:
+  add ~arm, bug #430072
 
 *plasma-runtime-4.9.2 (02 Oct 2012)
 

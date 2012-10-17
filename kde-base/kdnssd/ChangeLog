@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdnssd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdnssd/ChangeLog,v 1.232 2012/10/02 18:11:53 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdnssd/ChangeLog,v 1.233 2012/10/17 18:20:02 maekke Exp $
+
+  17 Oct 2012; Markus Meier <maekke@gentoo.org> kdnssd-4.9.2.ebuild:
+  add ~arm, bug #430072
 
 *kdnssd-4.9.2 (02 Oct 2012)
 
