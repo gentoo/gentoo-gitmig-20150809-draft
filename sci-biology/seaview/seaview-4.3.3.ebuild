@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/seaview-4.3.3.ebuild,v 1.4 2012/09/14 14:16:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/seaview-4.3.3.ebuild,v 1.5 2012/10/17 03:36:26 phajdan.jr Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://pbil.univ-lyon1.fr/pub/mol_phylogeny/seaview/archive/${PN}_${PV}.
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="+xft"
 
 DEPEND="
