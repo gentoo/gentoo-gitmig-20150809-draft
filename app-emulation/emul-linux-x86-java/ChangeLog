@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/emul-linux-x86-java
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.118 2012/09/28 15:33:43 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.119 2012/10/17 14:45:17 sera Exp $
+
+*emul-linux-x86-java-1.6.0.37 (17 Oct 2012)
+
+  17 Oct 2012; Ralph Sennhauser <sera@gentoo.org>
+  +emul-linux-x86-java-1.6.0.37.ebuild:
+  Security bump. #438706
+  Use QA_PREBUILT instead of individual variables.
+  Fix desktop files for newer standard.
 
   28 Sep 2012; Ralph Sennhauser <sera@gentoo.org>
   -emul-linux-x86-java-1.6.0.33.ebuild,
