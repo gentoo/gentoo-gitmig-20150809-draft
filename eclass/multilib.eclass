@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.100 2012/08/27 15:04:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.101 2012/10/17 19:13:18 vapier Exp $
 
 # @ECLASS: multilib.eclass
 # @MAINTAINER:
@@ -361,7 +361,7 @@ multilib_env() {
 			: ${MULTILIB_ABIS=s390x s390}
 			: ${DEFAULT_ABI=s390x}
 		;;
-		sparc*)
+		sparc64*)
 			export CFLAGS_sparc32=${CFLAGS_sparc32--m32}
 			export CHOST_sparc32=${CTARGET/sparc64/sparc}
 			export CTARGET_sparc32=${CHOST_sparc32}
