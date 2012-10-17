@@ -139,6 +139,7 @@ aacplus
 devil
 gts
 anthy
+ace
 
 # Unmask ARM-only video-cards
 -video_cards_exynos
