@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.450 2012/10/16 20:18:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.451 2012/10/17 14:09:10 kensington Exp $
+
+  17 Oct 2012; Michael Palimaka <kensington@gentoo.org> cmake-utils.eclass:
+  Respect AR and RANLIB, wrt bug #436070.
 
   16 Oct 2012; Justin Lecher <jlec@gentoo.org> fortran-2.eclass:
   Unset FC and F77 if no fortran support is wanted
