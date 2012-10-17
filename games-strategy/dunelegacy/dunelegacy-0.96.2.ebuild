@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/dunelegacy/dunelegacy-0.96.2.ebuild,v 1.4 2012/10/14 20:05:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dunelegacy/dunelegacy-0.96.2.ebuild,v 1.5 2012/10/17 03:24:49 phajdan.jr Exp $
 
 EAPI=4
 inherit autotools eutils gnome2-utils games
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~x86"
+KEYWORDS="amd64 ~arm x86"
 IUSE="+alsa pulseaudio"
 
 RDEPEND="media-libs/libsdl[X,alsa?,audio,pulseaudio?,video]
