@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-3.4.0.ebuild,v 1.4 2012/08/23 16:01:12 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-3.4.0.ebuild,v 1.5 2012/10/17 05:20:22 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -11,9 +11,9 @@ inherit autotools eutils gnome2
 DESCRIPTION="Simple document viewer for GNOME"
 HOMEPAGE="http://www.gnome.org/projects/evince/"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
-IUSE="dbus debug djvu doc dvi gnome-keyring +introspection nautilus +postscript t1lib tiff xps"
+IUSE="dbus debug djvu dvi gnome-keyring +introspection nautilus +postscript t1lib tiff xps"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x64-solaris"
 
 # Since 2.26.2, can handle poppler without cairo support. Make it optional ?
@@ -54,9 +54,9 @@ DEPEND="${RDEPEND}
 	>=app-text/gnome-doc-utils-0.3.2
 	app-text/docbook-xml-dtd:4.3
 	sys-devel/gettext
+	>=dev-util/gtk-doc-am-1.13
 	>=dev-util/intltool-0.35
-	virtual/pkgconfig
-	doc? ( >=dev-util/gtk-doc-1.13 )"
+	virtual/pkgconfig"
 
 ELTCONF="--portage"
 

@@ -1,6 +1,13 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.250 2012/08/23 16:01:12 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.251 2012/10/17 05:20:22 tetromino Exp $
+
+  17 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -evince-2.32.0-r3.ebuild, evince-2.32.0-r4.ebuild, -evince-3.2.1-r1.ebuild,
+  -files/evince-3.2.1-glib-gold.patch, -files/evince-3.2.1-libgxps-0.2.patch,
+  evince-3.4.0.ebuild:
+  Drop useless USE=doc, it only regenerated documentation; fixes bug #436778.
+  Update license. Drop old.
 
   23 Aug 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   evince-2.32.0-r3.ebuild, evince-2.32.0-r4.ebuild, evince-3.2.1-r1.ebuild,

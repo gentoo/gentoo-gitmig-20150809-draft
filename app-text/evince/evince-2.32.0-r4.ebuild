@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.32.0-r4.ebuild,v 1.13 2012/08/23 16:01:12 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.32.0-r4.ebuild,v 1.14 2012/10/17 05:20:22 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -12,7 +12,7 @@ inherit eutils gnome2 autotools
 DESCRIPTION="Simple document viewer for GNOME"
 HOMEPAGE="http://projects.gnome.org/evince/"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x64-solaris"
 
@@ -47,6 +47,7 @@ DEPEND="${RDEPEND}
 	~app-text/docbook-xml-dtd-4.1.2
 	virtual/pkgconfig
 	sys-devel/gettext
+	dev-util/gtk-doc-am
 	>=dev-util/intltool-0.35"
 
 ELTCONF="--portage"
