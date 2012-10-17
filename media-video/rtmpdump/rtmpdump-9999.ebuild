@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/rtmpdump/rtmpdump-9999.ebuild,v 1.2 2012/03/20 23:31:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/rtmpdump/rtmpdump-9999.ebuild,v 1.3 2012/10/17 12:56:58 ottxor Exp $
 
 EAPI="4"
 
@@ -58,8 +58,8 @@ src_compile() {
 }
 
 src_install() {
-	mkdir -p "${D}"/${DESTTREE}/$(get_libdir)
-	emake DESTDIR="${D}" prefix="${DESTTREE}" mandir="${DESTTREE}/share/man" \
+	mkdir -p "${ED}"/${DESTTREE}/$(get_libdir)
+	emake DESTDIR="${ED}" prefix="${DESTTREE}" mandir="${DESTTREE}/share/man" \
 	CRYPTO="${crypto}" install
 	dodoc README ChangeLog rtmpdump.1.html rtmpgw.8.html
 }
