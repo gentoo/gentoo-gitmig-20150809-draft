@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.109 2012/09/29 20:38:12 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.110 2012/10/17 16:57:56 williamh Exp $
 
 EAPI=4
 
@@ -432,6 +432,16 @@ pkg_postinst() {
 
 	# update the dependency tree after touching all files #224171
 	[[ "${EROOT}" = "/" ]] && "${EROOT}/${LIBDIR}"/rc/bin/rc-depend -u
+
+	if use newnet; then
+		local netscript=network
+	else
+		local netscript=net.lo
+	fi
+
+	ewarn "Please add the $netscript script to your boot runlevel"
+	ewarn "as soon as possible. Not doing so could leave you with a system"
+	ewarn "without networking."
 
 	elog "You should now update all files in /etc, using etc-update"
 	elog "or equivalent before restarting any services or this host."

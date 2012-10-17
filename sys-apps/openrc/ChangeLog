@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.231 2012/09/29 20:38:12 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.232 2012/10/17 16:57:56 williamh Exp $
+
+  17 Oct 2012; William Hubbs <williamh@gentoo.org> openrc-9999.ebuild:
+  Add a warning about adding the appropriate network script to the boot
+  runlevel.
 
   29 Sep 2012; William Hubbs <williamh@gentoo.org> openrc-9999.ebuild:
   The code in pkg_setup and make_args is only run once at the start of
