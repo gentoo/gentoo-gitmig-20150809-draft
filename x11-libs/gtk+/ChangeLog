@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.617 2012/10/16 04:53:19 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.618 2012/10/17 07:38:34 tetromino Exp $
+
+*gtk+-3.6.1 (17 Oct 2012)
+
+  17 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org> +gtk+-3.6.1.ebuild:
+  Version bump with lots of bugfixes, particularly in themeing.
 
   16 Oct 2012; Anthony G. Basile <blueness@gentoo.org> gtk+-2.24.12.ebuild:
   stable ppc, bug #427544
