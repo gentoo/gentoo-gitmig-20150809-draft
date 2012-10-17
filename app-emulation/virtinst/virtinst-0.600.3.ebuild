@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/virtinst-0.600.3.ebuild,v 1.2 2012/10/12 17:41:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/virtinst-0.600.3.ebuild,v 1.3 2012/10/17 03:49:36 phajdan.jr Exp $
 
 #BACKPORTS=2
 
@@ -24,7 +24,7 @@ else
 	SRC_URI="http://virt-manager.et.redhat.com/download/sources/${PN}/${P}.tar.gz
 		${BACKPORTS:+mirror://gentoo/${P}-bp-${BACKPORTS}.tar.bz2
 		http://dev.gentoo.org/~cardoe/distfiles/${P}-bp-${BACKPORTS}.tar.bz2}"
-	KEYWORDS="amd64 ~x86"
+	KEYWORDS="amd64 x86"
 fi
 
 DESCRIPTION="Python modules for starting virtualized guest installations"
