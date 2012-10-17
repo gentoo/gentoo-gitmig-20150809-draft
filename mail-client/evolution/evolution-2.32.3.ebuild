@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.32.3.ebuild,v 1.12 2012/05/21 19:05:25 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.32.3.ebuild,v 1.13 2012/10/17 09:55:53 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -12,14 +12,15 @@ inherit autotools eutils flag-o-matic gnome2 python versionator
 MY_MAJORV=$(get_version_component_range 1-2)
 
 DESCRIPTION="Integrated mail, addressbook and calendaring functionality"
-HOMEPAGE="http://www.gnome.org/projects/evolution/"
+HOMEPAGE="http://projects.gnome.org/evolution/"
 
 SRC_URI="${SRC_URI} http://dev.gentoo.org/~pacho/gnome/${P}-patches.tar.xz"
 
-LICENSE="GPL-2 LGPL-2 OPENLDAP"
+# Note: explicitly "|| ( LGPL-2 LGPL-3 )", not "LGPL-2+".
+LICENSE="|| ( LGPL-2 LGPL-3 ) GPL-2+ LGPL-2 FDL-1.2+ OPENLDAP"
 SLOT="2.0"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="clutter crypt doc gstreamer kerberos ldap networkmanager python ssl"
+IUSE="clutter crypt gstreamer kerberos ldap networkmanager python ssl"
 
 # We need a graphical pinentry frontend to be able to ask for the GPG
 # password from inside evolution, bug 160302
@@ -77,11 +78,9 @@ DEPEND="${RDEPEND}
 	>=app-text/gnome-doc-utils-0.9.1
 	app-text/docbook-xml-dtd:4.1.2
 	>=gnome-base/gnome-common-2.12
-	>=dev-util/gtk-doc-am-1.9
-	doc? ( >=dev-util/gtk-doc-1.9 )"
+	>=dev-util/gtk-doc-am-1.9"
 # eautoreconf needs:
 #	>=gnome-base/gnome-common-2.12
-#	>=dev-util/gtk-doc-am-1.9
 
 pkg_setup() {
 	ELTCONF="--reverse-deps"
