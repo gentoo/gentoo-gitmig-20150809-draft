@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-12.05.ebuild,v 1.5 2012/10/04 10:45:45 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-12.05.ebuild,v 1.6 2012/10/17 03:51:56 phajdan.jr Exp $
 
 EAPI=2
 PYTHON_DEPEND="2:2.6"
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/gcompris/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="gnet"
 
 RDEPEND="x11-libs/gtk+:2
