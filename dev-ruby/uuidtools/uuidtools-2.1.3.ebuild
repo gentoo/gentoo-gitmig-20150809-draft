@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uuidtools/uuidtools-2.1.3.ebuild,v 1.2 2012/10/12 19:04:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uuidtools/uuidtools-2.1.3.ebuild,v 1.3 2012/10/17 03:17:55 phajdan.jr Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ SRC_URI="mirror://rubyforge/${PN}/${P}.tgz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~x86 ~x86-macos"
+KEYWORDS="amd64 x86 ~x86-macos"
 IUSE=""
 
 RUBY_PATCHES=( ${PN}-2.1.2-macaddress.patch )
