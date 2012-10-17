@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libcult
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libcult/ChangeLog,v 1.4 2012/06/01 20:39:38 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libcult/ChangeLog,v 1.5 2012/10/17 18:23:49 maekke Exp $
+
+  17 Oct 2012; Markus Meier <maekke@gentoo.org> libcult-1.4.6-r1.ebuild:
+  add ~arm, bug #430072
 
 *libcult-1.4.6-r1 (01 Jun 2012)
 
