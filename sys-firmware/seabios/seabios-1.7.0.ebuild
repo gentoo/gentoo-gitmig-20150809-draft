@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/seabios-1.7.0.ebuild,v 1.4 2012/10/09 20:25:02 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/seabios-1.7.0.ebuild,v 1.5 2012/10/17 03:39:28 cardoe Exp $
 
 EAPI=4
 
@@ -52,7 +52,7 @@ src_configure() {
 
 src_compile() {
 	if use amd64 || use x86 ; then
-		emake out/bios.bin
+		LANG=C emake out/bios.bin
 	fi
 }
 
