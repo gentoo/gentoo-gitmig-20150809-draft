@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/phppgadmin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/ChangeLog,v 1.107 2012/07/08 21:00:35 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/ChangeLog,v 1.108 2012/10/17 22:32:59 naota Exp $
+
+  17 Oct 2012;  <naota@gentoo.org> phppgadmin-5.0.4.ebuild:
+  Add ~x86-fbsd. #198321
 
   08 Jul 2012; Michael Weber <xmw@gentoo.org> phppgadmin-5.0.4.ebuild:
   ppc stable (bug 410671)
