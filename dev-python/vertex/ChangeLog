@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/vertex
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/vertex/ChangeLog,v 1.14 2011/03/07 11:59:27 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/vertex/ChangeLog,v 1.15 2012/10/17 09:16:30 patrick Exp $
+
+  17 Oct 2012; Patrick Lauer <patrick@gentoo.org> vertex-0.3.0.ebuild:
+  Restricting py 2.5
 
   07 Mar 2011; Raúl Porcel <armin76@gentoo.org> vertex-0.3.0.ebuild:
   Drop ia64 keywords
@@ -61,4 +64,3 @@
   05 Dec 2005; Marien Zwart <marienz@gentoo.org> +metadata.xml,
   +vertex-0.1.ebuild:
   New ebuild.
-
