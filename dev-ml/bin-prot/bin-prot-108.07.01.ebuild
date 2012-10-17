@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/bin-prot/bin-prot-108.07.01.ebuild,v 1.1 2012/10/08 11:32:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/bin-prot/bin-prot-108.07.01.ebuild,v 1.2 2012/10/17 12:12:35 aballier Exp $
 
 EAPI=3
 
@@ -12,7 +12,8 @@ inherit oasis
 MY_P=${PN/-/_}-${PV}
 DESCRIPTION="A binary protocol generator"
 HOMEPAGE="http://ocaml.janestreet.com/?q=node/13"
-SRC_URI="http://ocaml.janestreet.com/ocaml-core/${PV}/individual/${MY_P}.tar.gz"
+SRC_URI="http://ocaml.janestreet.com/ocaml-core/${PV}/individual/${MY_P}.tar.gz
+	http://dev.gentoo.org/~aballier/distfiles/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1-with-linking-exception"
 SLOT="0"
