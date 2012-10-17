@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.172 2012/10/17 18:55:07 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.173 2012/10/17 18:57:01 maekke Exp $
+
+  17 Oct 2012; Markus Meier <maekke@gentoo.org> use.mask:
+  use.mask csharp
 
   17 Oct 2012; Markus Meier <maekke@gentoo.org> use.mask:
   use.mask ace

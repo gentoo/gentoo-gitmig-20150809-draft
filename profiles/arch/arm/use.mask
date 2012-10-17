@@ -140,6 +140,7 @@ devil
 gts
 anthy
 ace
+csharp
 
 # Unmask ARM-only video-cards
 -video_cards_exynos
