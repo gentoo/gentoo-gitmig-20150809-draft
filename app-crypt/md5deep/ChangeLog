@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/md5deep
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/md5deep/ChangeLog,v 1.70 2012/10/05 18:05:05 tristan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/md5deep/ChangeLog,v 1.71 2012/10/17 03:35:21 phajdan.jr Exp $
+
+  17 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> md5deep-4.0.1.ebuild:
+  x86 stable wrt bug #418523
 
   05 Oct 2012; Tristan Heaven <tristan@gentoo.org> md5deep-4.2.ebuild:
   RESTRICT=test as it only checks against an installed version's output
