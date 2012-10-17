@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/modsecurity-crs/modsecurity-crs-2.2.6.ebuild,v 1.2 2012/09/30 18:02:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/modsecurity-crs/modsecurity-crs-2.2.6-r1.ebuild,v 1.1 2012/10/17 19:24:56 flameeyes Exp $
 
 EAPI=4
 
@@ -78,7 +78,9 @@ src_prepare() {
 
 src_install() {
 	insinto "${RULESDIR}"
-	doins -r base_rules optional_rules experimental_rules slr_rules
+	# slr_rules as of 2.2.6 have broken IDs that don't work with
+	# ModSecurity 2.7, but the rules require 2.7 to begin with.
+	doins -r base_rules optional_rules experimental_rules #slr_rules
 
 	insinto "${LUADIR}"
 	doins lua/*.lua
@@ -97,7 +99,8 @@ EOF
 Include /etc/modsecurity/base_rules/*.conf
 
 # Include Trustwave SpiderLabs Research Team rules
-Include /etc/modsecurity/slr_rules/*.conf
+# Include /etc/modsecurity/slr_rules/*.conf
+# Not installed yet as of 2.2.6
 
 # Optionally use the other rules as well
 # Include /etc/modsecurity/optional_rules/*.conf
