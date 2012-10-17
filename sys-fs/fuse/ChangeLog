@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/fuse
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.165 2012/10/12 17:39:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.166 2012/10/17 03:41:17 phajdan.jr Exp $
+
+  17 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> fuse-2.9.1-r1.ebuild:
+  x86 stable wrt bug #437568
 
   12 Oct 2012; Agostino Sarubbo <ago@gentoo.org> fuse-2.9.1-r1.ebuild:
   Stable for amd64, wrt bug #437568
