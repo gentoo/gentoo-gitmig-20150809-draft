@@ -1,8 +1,0 @@
---- setup.py.ORIG	2007-06-23 15:27:54.707177953 +0900
-+++ setup.py	2007-06-23 15:32:38.107177954 +0900
-@@ -9,4 +9,5 @@
-       author='Google Inc.',
-       author_email='opensource@google.com',
-       url='http://sourceforge.net/projects/goog-sitemapgen/',
-+      scripts=['sitemap_gen'],
-      )
