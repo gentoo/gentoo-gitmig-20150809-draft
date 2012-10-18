@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/glfw
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glfw/ChangeLog,v 1.12 2010/09/13 12:09:46 tupone Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glfw/ChangeLog,v 1.13 2012/10/18 20:35:22 mr_bones_ Exp $
+
+  18 Oct 2012; Michael Sterrett <mr_bones_@gentoo.org> glfw-2.6.ebuild:
+  add virtual/glu dep (bug #438828)
 
   13 Sep 2010; Tupone Alfredo <tupone@gentoo.org> glfw-2.6.ebuild,
   +files/glfw-2.6-ldflags.patch:
@@ -51,4 +54,3 @@
   08 Mar 2005; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
   +glfw-2.4.2.ebuild:
   initial commit - ebuild submitted by Scott 'me22' McMurray via bug #66532
-

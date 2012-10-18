@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glfw/glfw-2.6.ebuild,v 1.6 2010/09/13 12:09:46 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glfw/glfw-2.6.ebuild,v 1.7 2012/10/18 20:35:22 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils multilib
@@ -15,6 +15,7 @@ KEYWORDS="amd64 x86"
 IUSE="examples"
 
 DEPEND="x11-libs/libXrandr
+	virtual/glu
 	virtual/opengl"
 
 S=${WORKDIR}/${PN}
