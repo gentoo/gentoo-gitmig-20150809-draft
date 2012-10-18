@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.239 2012/10/16 20:42:15 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.240 2012/10/18 12:41:14 ottxor Exp $
+
+  18 Oct 2012; Christoph Junghans <ottxor@gentoo.org>
+  +files/grub-2.00-hardcoded-awk.patch, grub-2.00-r1.ebuild, grub-9999.ebuild:
+  fixed hardcoded awk (bug #424137)
 
 *grub-2.00-r1 (16 Oct 2012)
 
