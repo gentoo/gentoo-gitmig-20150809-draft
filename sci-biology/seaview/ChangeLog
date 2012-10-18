@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/seaview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/ChangeLog,v 1.45 2012/10/17 03:36:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/ChangeLog,v 1.46 2012/10/18 17:46:32 jlec Exp $
+
+  18 Oct 2012; Justin Lecher <jlec@gentoo.org> -seaview-4.2.5.ebuild:
+  Drop old
 
   17 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> seaview-4.3.3.ebuild:
   x86 stable wrt bug #432366
