@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/flexlm/flexlm-9.5-r2.ebuild,v 1.4 2012/08/05 16:05:45 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/flexlm/flexlm-9.5-r2.ebuild,v 1.5 2012/10/18 17:00:39 kensington Exp $
 
 EAPI=4
 inherit user
 
 DESCRIPTION="Macrovision FLEXlm license manager and utils"
 HOMEPAGE="http://www.macrovision.com/services/support/flexlm/lmgrd.shtml"
-SRC_URI="http://www.macrovision.com/services/support/flexlm/enduser.pdf
+SRC_URI="doc? ( http://www.macrovision.com/services/support/flexlm/enduser.pdf )
 	x86? (
 		mirror://gentoo/lmgrd-x86.Z
 		mirror://gentoo/lmutil-x86.Z
@@ -20,7 +20,7 @@ SRC_URI="http://www.macrovision.com/services/support/flexlm/enduser.pdf
 LICENSE="as-is GPL-2"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
-IUSE=""
+IUSE="doc"
 
 QA_PREBUILT="
 	opt/flexlm/bin/lmgrd
@@ -48,7 +48,7 @@ src_install () {
 	dosym lmutil /opt/flexlm/bin/lmver
 
 	# documentation
-	dodoc "${DISTDIR}"/enduser.pdf
+	use doc && dodoc "${DISTDIR}"/enduser.pdf
 
 	# init files
 	newinitd "${FILESDIR}"/flexlm-init flexlm
