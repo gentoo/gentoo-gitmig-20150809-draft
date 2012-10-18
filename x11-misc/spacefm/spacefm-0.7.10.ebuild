@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/spacefm-0.7.10.ebuild,v 1.4 2012/08/22 07:16:51 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/spacefm-0.7.10.ebuild,v 1.5 2012/10/18 14:39:04 hasufell Exp $
 
 EAPI=4
 
@@ -25,6 +25,7 @@ RDEPEND="dev-libs/glib:2
 	x11-libs/gtk+:2
 	x11-libs/pango
 	x11-libs/startup-notification
+	x11-libs/libX11
 	x11-misc/shared-mime-info"
 DEPEND="${RDEPEND}
 	dev-util/intltool
