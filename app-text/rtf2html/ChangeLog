@@ -1,6 +1,9 @@
 # ChangeLog for app-text/rtf2html
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rtf2html/ChangeLog,v 1.4 2012/10/18 08:12:24 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rtf2html/ChangeLog,v 1.5 2012/10/18 08:17:00 pinkbyte Exp $
+
+  18 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> rtf2html-0.2.0-r1.ebuild:
+  Remove duplicate IUSE definition
 
 *rtf2html-0.2.0-r1 (18 Oct 2012)
 
