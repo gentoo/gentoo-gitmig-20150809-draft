@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gpp4/gpp4-1.3.1.ebuild,v 1.4 2012/10/14 19:01:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gpp4/gpp4-1.3.1.ebuild,v 1.5 2012/10/18 21:44:47 jlec Exp $
 
 EAPI=4
 
@@ -17,9 +17,7 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="fortran static-libs"
 
-RDEPEND="
-	fortran? ( virtual/fortran )
-	sci-libs/mmdb"
+RDEPEND="sci-libs/mmdb"
 DEPEND="${RDEPEND}"
 
 src_configure() {
