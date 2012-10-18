@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/pkgcore
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.160 2012/10/04 13:57:37 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.161 2012/10/18 12:53:24 ferringb Exp $
+
+*pkgcore-0.8.5 (18 Oct 2012)
+
+  18 Oct 2012; Brian Harring <ferringb@gentoo.org> +pkgcore-0.8.5.ebuild,
+  pkgcore-9999.ebuild:
+  Fix py3k doc building support, update package name rules to recently
+  changed PMS rules; bug #438370. Finally, fix a racey false positive 437216.
+  Finally, add python ABI awareness so pkgcore gets installed in all contexts.
 
 *pkgcore-0.8.4 (04 Oct 2012)
 
