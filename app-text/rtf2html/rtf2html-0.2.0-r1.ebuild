@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rtf2html/rtf2html-0.2.0-r1.ebuild,v 1.3 2012/10/18 09:36:24 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rtf2html/rtf2html-0.2.0-r1.ebuild,v 1.4 2012/10/18 10:04:18 pinkbyte Exp $
 
 EAPI="4"
 
-inherit base
+inherit base flag-o-matic
 
 DESCRIPTION="RTF to HTML converter."
 HOMEPAGE="http://rtf2html.sourceforge.net/"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/rtf2html/${P}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE=""
+IUSE="debug"
 
 DEPEND=""
 RDEPEND="${DEPEND}"
@@ -23,7 +23,13 @@ DOCS=( ChangeLog README )
 PATCHES=( "${FILESDIR}/${P}-gcc43.patch" )
 
 src_prepare() {
+	# CFLAGS are incorrectly parsed, so handle this here
 	sed -i -e '/CFLAGS=$(echo $CFLAGS/d' configure || die 'sed on configure failed'
+	use !debug && filter-flags "-g*"
 
 	base_src_prepare
+}
+
+src_configure() {
+	econf $(use_enable debug)
 }
