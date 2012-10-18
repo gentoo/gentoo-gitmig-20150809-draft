@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/gts-20100321-r3.ebuild,v 1.3 2012/05/04 08:22:53 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/gts-20100321-r3.ebuild,v 1.4 2012/10/18 21:46:06 jlec Exp $
 
 EAPI=2
 
@@ -16,8 +16,6 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc examples test"
 
 RDEPEND="
-	virtual/fortran
-
 	dev-libs/glib:2
 	!<=sci-chemistry/ccp4-apps-6.1.3-r2"
 DEPEND="${RDEPEND}

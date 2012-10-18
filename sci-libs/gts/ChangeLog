@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/gts
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/ChangeLog,v 1.28 2012/08/02 04:44:39 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/ChangeLog,v 1.29 2012/10/18 21:46:06 jlec Exp $
+
+  18 Oct 2012; Justin Lecher <jlec@gentoo.org> gts-20100321-r3.ebuild,
+  gts-20111025-r1.ebuild, gts-20120706.ebuild:
+  Remove virtual/fortran and always call fortran-2_pkg_setup as intend by the
+  updated fortran-2.eclass
 
 *gts-20120706 (02 Aug 2012)
 
