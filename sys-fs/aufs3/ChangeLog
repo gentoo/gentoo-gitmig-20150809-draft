@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/aufs3
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.27 2012/10/18 17:25:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.28 2012/10/18 20:31:21 jlec Exp $
+
+  18 Oct 2012; Justin Lecher <jlec@gentoo.org> aufs3-3_p20120813-r1.ebuild,
+  aufs3-3_p20121015.ebuild:
+  Change las KV_DIR to KV_OUT_DIR
 
   18 Oct 2012; Justin Lecher <jlec@gentoo.org> aufs3-3_p20120813-r1.ebuild,
   aufs3-3_p20121015.ebuild:

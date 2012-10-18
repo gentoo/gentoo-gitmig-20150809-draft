@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20121015.ebuild,v 1.2 2012/10/18 17:25:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20121015.ebuild,v 1.3 2012/10/18 20:31:21 jlec Exp $
 
 EAPI=4
 
@@ -126,7 +126,7 @@ src_prepare() {
 src_compile() {
 	local ARCH=x86
 
-	emake CC=$(tc-getCC) LD=$(tc-getLD) LDFLAGS="$(raw-ldflags)" ARCH=$(tc-arch-kernel) CONFIG_AUFS_FS=m KDIR=${KV_DIR}
+	emake CC=$(tc-getCC) LD=$(tc-getLD) LDFLAGS="$(raw-ldflags)" ARCH=$(tc-arch-kernel) CONFIG_AUFS_FS=m KDIR=${KV_OUT_DIR}
 
 	cd "${WORKDIR}"/${PN/3}-util
 	emake CC=$(tc-getCC) AR=$(tc-getAR) KDIR=${KV_OUT_DIR} C_INCLUDE_PATH="${S}"/include
