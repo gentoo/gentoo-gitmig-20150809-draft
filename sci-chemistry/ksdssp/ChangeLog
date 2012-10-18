@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/ksdssp
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ksdssp/ChangeLog,v 1.1 2010/03/07 11:00:06 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ksdssp/ChangeLog,v 1.2 2012/10/18 16:30:03 jlec Exp $
+
+*ksdssp-040728-r1 (18 Oct 2012)
+
+  18 Oct 2012; Justin Lecher <jlec@gentoo.org> ksdssp-040728.ebuild,
+  +ksdssp-040728-r1.ebuild, metadata.xml:
+  Some fix related completness of installation (man, etc)
 
 *ksdssp-040728 (07 Mar 2010)
 
