@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libbufr/libbufr-000360.ebuild,v 1.8 2011/06/21 15:15:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libbufr/libbufr-000360.ebuild,v 1.9 2012/10/18 20:41:24 jlec Exp $
 
 EAPI=2
 
@@ -19,10 +19,7 @@ KEYWORDS="~amd64 ~x86"
 
 IUSE="debug doc examples"
 
-RDEPEND="
-	virtual/fortran
-	"
-
+RDEPEND=""
 DEPEND="sys-apps/findutils"
 
 S=${WORKDIR}/${MY_P}
@@ -63,7 +60,7 @@ src_prepare() {
 
 	local config="config/config.$target$CNAME$R64$A64"
 
-	sed -i -e "s:DEBUG = -O2:DEBUG = -g:g" $config
+	sed -i -e "s:DEBUG = -O2:DEBUG = -g:g" $config || die
 
 	# add local CFLAGS to and build flags
 	use debug || sed -i -e "s|\$(DEBUG)|${CFLAGS}|" $config
@@ -72,7 +69,7 @@ src_prepare() {
 	sed -i \
 		-e "s|-o|${LDFLAGS} -o|" \
 		examples/Makefile \
-		bufrtables/Makefile
+		bufrtables/Makefile || die
 	# updated for newer gcc
 	epatch "${FILESDIR}"/${P}-gcc-includes.patch
 }
@@ -128,20 +125,20 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog
+	echo
 	elog "This is the only GPL'd BUFR decoder library written in C/Fortran"
 	elog "but the build system is an old kluge that pre-dates the discovery"
-	elog "of fire.  File bugs as usual if you have build/runtime problems."
-	elog ""
+	elog "of fire. File bugs as usual if you have build/runtime problems."
+	echo
 	elog "The default BUFR tables are stored in /usr/share/bufrtables, so"
 	elog "add your local tables there if needed.  Only a static lib is"
 	elog "installed currently, as shared lib support is incomplete (feel"
 	elog "free to submit a patch :)"
-	elog ""
+	echo
 	elog "The installed user-land bufr utilities are just the examples;"
 	elog "the main library is really all there is (and there are no man"
 	elog "pages either).  Install the examples and use the source, Luke..."
-	elog
+	echo
 }
 
 generate_files() {

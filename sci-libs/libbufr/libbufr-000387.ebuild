@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libbufr/libbufr-000387.ebuild,v 1.6 2011/06/21 15:15:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libbufr/libbufr-000387.ebuild,v 1.7 2012/10/18 20:41:24 jlec Exp $
 
 EAPI=3
 
@@ -15,14 +15,9 @@ SRC_URI="http://www.ecmwf.int/products/data/software/download/software_files/${M
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-# needs someone to test on these: ~alpha ~hppa ~ia64 ~sparc etc ...
-
 IUSE="debug doc examples"
 
-RDEPEND="
-	virtual/fortran
-	"
-
+RDEPEND=""
 DEPEND="sys-apps/findutils"
 
 S=${WORKDIR}/${MY_P}
@@ -45,7 +40,7 @@ pkg_setup() {
 	esac
 
 	elog "Note non-GNU compilers are not currently supported on non-x86"
-	elog "architectures.  If you need it, please subit a patch..."
+	elog "architectures. If you need it, please subit a patch..."
 
 	export target="linux"
 	export A64=""
