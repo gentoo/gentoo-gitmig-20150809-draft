@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/fop
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.68 2011/12/31 15:33:32 sera Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.69 2012/10/18 08:40:33 ottxor Exp $
+
+  18 Oct 2012; Christoph Junghans <ottxor@gentoo.org> fop-0.95.ebuild:
+  added prefix support (bug #435376)
 
   31 Dec 2011; Ralph Sennhauser <sera@gentoo.org> fop-0.95.ebuild:
   Drop ia64 support #345433
@@ -244,4 +247,3 @@
   25 Feb 2004; Dylan Carlson <absinthe@gentoo.org> fop-0.20.5.ebuild,
   metadata.xml:
   New package.  Closes #21475.
-

@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.95.ebuild,v 1.6 2011/12/31 15:33:32 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.95.ebuild,v 1.7 2012/10/18 08:40:33 ottxor Exp $
 
 # TODO: if 'doc' use flag is used then should build also extra docs ('docs' ant target), currently it cannot
 #       be built as it needs forrest which we do not have
 # TODO: package and use optional dependency jeuclid
 
-EAPI=2
+EAPI=4
 JAVA_PKG_IUSE="doc examples source"
 WANT_ANT_TASKS="ant-trax"
 
@@ -19,7 +19,7 @@ LICENSE="Apache-2.0"
 SLOT="0"
 # doesn't work with java.awt.headless
 RESTRICT="test"
-KEYWORDS="amd64 ppc ppc64 x86"
+KEYWORDS="amd64 ppc ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE="hyphenation jai jimi"
 
 COMMON_DEPEND="
@@ -75,7 +75,7 @@ EANT_BUILD_TARGET="package"
 src_compile() {
 	# because I killed the automagic tests; all our JDK's have JCE
 	local af="-Djdk14.present=true -Djce.present=true"
-	use hyphenation && af="${af} -Duser.hyph.dir=/usr/share/offo-hyphenation/hyph/"
+	use hyphenation && af="${af} -Duser.hyph.dir=${EPREFIX}/usr/share/offo-hyphenation/hyph/"
 	use jai && af="${af} -Djai.present=true"
 	use jimi && af="${af} -Djimi.present=true"
 
@@ -95,13 +95,13 @@ src_install() {
 	if use hyphenation; then
 		java-pkg_dojar build/fop-hyph.jar
 		insinto /usr/share/${PN}/
-		doins -r hyph || die
+		doins -r hyph
 	fi
 
 	# doesn't support everything upstream launcher does...
 	java-pkg_dolauncher ${PN} --main org.apache.fop.cli.Main
 
-	dodoc NOTICE README || die
+	dodoc NOTICE README
 
 	use doc && java-pkg_dojavadoc build/javadocs
 	use examples && java-pkg_doexamples examples/* conf
