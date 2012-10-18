@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.233 2012/10/18 15:03:19 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.234 2012/10/18 15:35:15 williamh Exp $
+
+*openrc-0.11 (18 Oct 2012)
+
+  18 Oct 2012; William Hubbs <williamh@gentoo.org> +openrc-0.11.ebuild:
+  version bump, bug #417391 tracks fixes.
 
   18 Oct 2012; William Hubbs <williamh@gentoo.org> openrc-9999.ebuild:
   Only show warning about adding the net script to the boot runlevel if
