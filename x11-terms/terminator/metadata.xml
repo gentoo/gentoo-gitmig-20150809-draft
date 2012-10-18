@@ -11,4 +11,7 @@
 	sysadmins and other users. If you have any suggestions, please file 
 	wishlist bugs! (see below for the address)
 </longdescription>
+	<use>
+		<flag name="libnotify">Enables desktop notifications via<pkg>dev-python/notify-python</pkg></flag>
+	</use>
 </pkgmetadata>
