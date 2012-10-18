@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libmcpp/libmcpp-2.7.2-r1.ebuild,v 1.6 2012/04/14 19:38:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libmcpp/libmcpp-2.7.2-r1.ebuild,v 1.7 2012/10/18 08:57:01 ottxor Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/mcpp/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ia64 x86 ~x64-macos"
+KEYWORDS="amd64 ~arm ~ia64 x86 ~x64-macos ~x86-linux"
 IUSE="static-libs"
 
 DEPEND=""
