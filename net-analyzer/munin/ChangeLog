@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.107 2012/10/04 17:18:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.108 2012/10/18 18:47:16 flameeyes Exp $
+
+*munin-2.0.7-r2 (18 Oct 2012)
+
+  18 Oct 2012; Diego E. Pettenò <flameeyes@gentoo.org> +munin-2.0.7-r2.ebuild,
+  -munin-2.0.7-r1.ebuild, files/munin-asyncd.init.2:
+  Fix init script for munin-asyncd to use the correct user; also install the
+  asyncd scripts when installing minimal.
 
 *munin-2.0.7-r1 (04 Oct 2012)
 

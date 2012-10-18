@@ -1,12 +1,12 @@
 #!/sbin/runscript
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/files/munin-asyncd.init.2,v 1.1 2012/08/23 19:20:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/files/munin-asyncd.init.2,v 1.2 2012/10/18 18:47:16 flameeyes Exp $
 
 command=/usr/libexec/munin/munin-asyncd
 command_args="--fork"
 pidfile="/var/run/munin/munin-asyncd.pid"
-start_stop_daemon_args="--background --make-pidfile --user munin-asyncd"
+start_stop_daemon_args="--background --make-pidfile --user munin-async"
 
 depend() {
 	need munin-node
