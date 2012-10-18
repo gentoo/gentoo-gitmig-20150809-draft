@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/libpdb
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libpdb/ChangeLog,v 1.1 2010/03/07 10:42:38 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libpdb/ChangeLog,v 1.2 2012/10/18 16:56:01 jlec Exp $
+
+*libpdb-991112-r1 (18 Oct 2012)
+
+  18 Oct 2012; Justin Lecher <jlec@gentoo.org> libpdb-991112.ebuild,
+  +libpdb-991112-r1.ebuild, +files/libpdb-991112-dynlib+flags.patch,
+  metadata.xml:
+  Straighten ebuild by cleaning the buildsystem
 
 *libpdb-991112 (07 Mar 2010)
 

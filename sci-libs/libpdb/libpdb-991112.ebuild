@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libpdb/libpdb-991112.ebuild,v 1.2 2010/03/07 11:29:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libpdb/libpdb-991112.ebuild,v 1.3 2012/10/18 16:56:01 jlec Exp $
 
 EAPI="3"
 
-inherit eutils toolchain-funcs
+inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="PDB Record I/O Libraries -- c version"
 HOMEPAGE="http://www.cgl.ucsf.edu/Overview/software.html"
