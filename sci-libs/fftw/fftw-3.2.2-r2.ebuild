@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.2.2-r2.ebuild,v 1.2 2012/10/14 19:00:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.2.2-r2.ebuild,v 1.3 2012/10/18 21:42:09 jlec Exp $
 
 EAPI=2
 
@@ -17,12 +17,9 @@ SLOT="3.0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="altivec doc fortran openmp paired-single sse sse2 threads zbus"
 
-DEPEND="fortran? ( virtual/fortran )"
-RDEPEND="${DEPEND}"
-
 pkg_setup() {
 	use openmp && FORTRAN_NEED_OPENMP="1"
-	use fortran && fortran-2_pkg_setup
+	fortran-2_pkg_setup
 	FFTW_THREADS="--disable-threads --disable-openmp"
 	if use openmp; then
 		FFTW_THREADS="--disable-threads --enable-openmp"

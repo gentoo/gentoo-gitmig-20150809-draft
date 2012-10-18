@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.3.2.ebuild,v 1.6 2012/10/16 18:08:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.3.2.ebuild,v 1.7 2012/10/18 21:42:09 jlec Exp $
 
 EAPI=4
 
@@ -18,9 +18,7 @@ SLOT="3.0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="altivec avx doc fortran mpi neon openmp quad sse sse2 static-libs threads zbus"
 
-DEPEND="
-	fortran? ( virtual/fortran[openmp?] )
-	mpi? ( virtual/mpi )"
+DEPEND="mpi? ( virtual/mpi )"
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
@@ -31,7 +29,7 @@ pkg_setup() {
 		fi
 		FORTRAN_NEED_OPENMP=1
 	fi
-	use fortran && fortran-2_pkg_setup
+	fortran-2_pkg_setup
 	FFTW_DIRS="single double longdouble"
 	if use quad; then
 		if [[ $(tc-getCC) == *gcc ]] && ! version_is_at_least 4.6 $(gcc-version); then
