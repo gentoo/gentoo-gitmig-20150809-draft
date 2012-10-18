@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/gnu-classpath
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.116 2011/03/29 09:13:40 caster Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.117 2012/10/18 08:44:11 ottxor Exp $
+
+  18 Oct 2012; Christoph Junghans <ottxor@gentoo.org>
+  gnu-classpath-0.98-r3.ebuild:
+  added prefix support (bug #435378)
 
   29 Mar 2011; Vlastimil Babka <caster@gentoo.org>
   -gnu-classpath-0.98-r2.ebuild, gnu-classpath-0.98-r3.ebuild:
@@ -500,4 +504,3 @@
   09 Mar 2004; Chris Aniszczyk <zx@gentoo.org> gnu-classpath-0.06.ebuild,
   metadata.xml:
   Initial Import. Closes #43926
-
