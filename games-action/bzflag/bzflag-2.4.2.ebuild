@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-2.4.2.ebuild,v 1.1 2012/09/14 07:48:38 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-2.4.2.ebuild,v 1.2 2012/10/18 17:41:23 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -62,5 +62,6 @@ src_install() {
 		make_desktop_entry ${PN} "BZFlag"
 	fi
 
+	prune_libtool_files --modules
 	prepgamesdirs
 }
