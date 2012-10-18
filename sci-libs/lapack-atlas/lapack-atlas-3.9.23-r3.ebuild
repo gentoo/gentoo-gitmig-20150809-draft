@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.9.23-r3.ebuild,v 1.7 2012/05/04 08:22:51 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.9.23-r3.ebuild,v 1.8 2012/10/18 21:02:51 jlec Exp $
 
 EAPI="3"
 
@@ -13,7 +13,6 @@ L_PV="3.1.1"
 BlasRelease=$(get_version_component_range 1-3)
 
 DESCRIPTION="F77 and C LAPACK implementations using available ATLAS routines"
-LICENSE="BSD"
 HOMEPAGE="http://math-atlas.sourceforge.net/"
 SRC_URI1="mirror://sourceforge/math-atlas/${MY_PN}${PV}.tar.bz2"
 SRC_URI2="http://www.netlib.org/${L_PN}/${L_PN}-lite-${L_PV}.tgz"
@@ -22,11 +21,11 @@ SRC_URI="${SRC_URI1} ${SRC_URI2}
 	mirror://gentoo/${L_PN}-reference-${L_PV}-autotools.patch.bz2"
 
 SLOT="0"
+LICENSE="BSD"
 IUSE="doc"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 
 CDEPEND="
-	virtual/fortran
 	virtual/blas
 	virtual/cblas
 	app-admin/eselect-lapack
@@ -44,9 +43,10 @@ RPATH="/usr/$(get_libdir)/${L_PN}/${MY_PN}"
 S_LAPACK="${WORKDIR}"/${L_PN}-lite-${L_PV}
 
 src_prepare() {
-	epatch "${DISTDIR}"/${MY_PN}-${PATCH_V}-shared-libs.2.patch.bz2
-	epatch "${FILESDIR}"/${MY_PN}-asm-gentoo.patch
-	epatch "${FILESDIR}"/${PN}-${PATCH_V}-lam.patch
+	epatch \
+		"${DISTDIR}"/${MY_PN}-${PATCH_V}-shared-libs.2.patch.bz2 \
+		"${FILESDIR}"/${MY_PN}-asm-gentoo.patch \
+		"${FILESDIR}"/${PN}-${PATCH_V}-lam.patch
 
 	# make sure the compile picks up the proper includes
 	sed -i \
