@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fortran-2.eclass,v 1.13 2012/10/16 20:18:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fortran-2.eclass,v 1.14 2012/10/18 21:08:57 jlec Exp $
 
 # @ECLASS: fortran-2.eclass
 # @MAINTAINER:
@@ -209,7 +209,7 @@ _fortran_test_function() {
 	tc-export F77 FC
 	einfo "Using following Fortran compiler:"
 	einfo "  F77: ${F77}"
-	einfo "  FC: ${FC}"
+	einfo "  FC:  ${FC}"
 
 	if [[ ${FORTRAN_NEED_OPENMP} == 1 ]]; then
 		if _fortran-has-openmp; then
