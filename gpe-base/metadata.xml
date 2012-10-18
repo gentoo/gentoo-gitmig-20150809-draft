@@ -6,4 +6,9 @@
                 handheld and other input constrained and resource
 		limited devices.
 	</longdescription>
+	<longdescription lang="es">
+		La categoría gpe-base contiene librerías y utilidades para
+		dispositivos portátiles, con entrada limitada o escasos de
+		recursos.
+	</longdescription>
 </catmetadata>
