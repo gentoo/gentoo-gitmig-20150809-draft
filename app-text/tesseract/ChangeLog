@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tesseract
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.33 2012/10/10 12:07:38 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.34 2012/10/18 18:57:57 maekke Exp $
+
+  18 Oct 2012; Markus Meier <maekke@gentoo.org> tesseract-3.01.ebuild:
+  add ~arm, bug #437670
 
   10 Oct 2012; Julian Ospald <hasufell@gentoo.org> tesseract-3.01.ebuild:
   fix language file installation wrt #437776
