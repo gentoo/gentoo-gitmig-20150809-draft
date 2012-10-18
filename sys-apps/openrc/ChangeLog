@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.232 2012/10/17 16:57:56 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.233 2012/10/18 15:03:19 williamh Exp $
+
+  18 Oct 2012; William Hubbs <williamh@gentoo.org> openrc-9999.ebuild:
+  Only show warning about adding the net script to the boot runlevel if
+  necessary.
 
   17 Oct 2012; William Hubbs <williamh@gentoo.org> openrc-9999.ebuild:
   Add a warning about adding the appropriate network script to the boot
