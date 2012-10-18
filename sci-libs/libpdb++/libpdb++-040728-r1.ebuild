@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libpdb++/libpdb++-040728-r1.ebuild,v 1.1 2012/10/18 16:46:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libpdb++/libpdb++-040728-r1.ebuild,v 1.2 2012/10/18 16:57:39 jlec Exp $
 
 EAPI=4
 
@@ -27,7 +27,7 @@ src_unpack() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-dynlib+flags.patch
-	tc-export CXX
+	tc-export CXX AR RANLIB
 }
 
 src_compile() {
