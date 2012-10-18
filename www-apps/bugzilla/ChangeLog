@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.211 2012/04/18 23:33:56 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.212 2012/10/18 09:29:42 blueness Exp $
+
+*bugzilla-4.2.3 (18 Oct 2012)
+
+  18 Oct 2012; Anthony G. Basile <blueness@gentoo.org> +bugzilla-4.2.3.ebuild:
+  Version bump, bug #437574
 
 *bugzilla-4.2.1 (18 Apr 2012)
 *bugzilla-4.0.6 (18 Apr 2012)
