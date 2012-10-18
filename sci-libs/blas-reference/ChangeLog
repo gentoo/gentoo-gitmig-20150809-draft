@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/blas-reference
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/ChangeLog,v 1.57 2012/05/12 19:48:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/ChangeLog,v 1.58 2012/10/18 21:19:19 jlec Exp $
+
+  18 Oct 2012; Justin Lecher <jlec@gentoo.org> blas-reference-20070226.ebuild,
+  -blas-reference-20070226-r1.ebuild, blas-reference-20070226-r2.ebuild,
+  metadata.xml:
+  Remove virtual/fortran and always call fortran-2_pkg_setup as intend by the
+  updated fortran-2.eclass
 
   12 May 2012; Alexis Ballier <aballier@gentoo.org>
   blas-reference-20070226-r2.ebuild:
