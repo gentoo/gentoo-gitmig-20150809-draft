@@ -1,6 +1,9 @@
 # ChangeLog for games-action/bzflag
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/ChangeLog,v 1.58 2012/10/18 17:41:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/ChangeLog,v 1.59 2012/10/18 19:51:23 blueness Exp $
+
+  18 Oct 2012; Anthony G. Basile <blueness@gentoo.org> bzflag-2.4.2.ebuild:
+  stable ppc, bug #438546
 
   18 Oct 2012; Michael Sterrett <mr_bones_@gentoo.org> bzflag-2.4.2.ebuild:
   prune_libtool_files for bug #438818
