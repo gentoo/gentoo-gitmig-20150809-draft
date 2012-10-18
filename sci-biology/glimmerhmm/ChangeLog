@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/glimmerhmm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/glimmerhmm/ChangeLog,v 1.7 2012/10/17 03:47:49 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/glimmerhmm/ChangeLog,v 1.8 2012/10/18 17:46:23 jlec Exp $
+
+  18 Oct 2012; Justin Lecher <jlec@gentoo.org> -glimmerhmm-3.0.1.ebuild:
+  Drop old
 
   17 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   glimmerhmm-3.0.1-r1.ebuild:
