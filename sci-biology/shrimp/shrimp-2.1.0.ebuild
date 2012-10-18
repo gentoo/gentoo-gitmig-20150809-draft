@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/shrimp/shrimp-2.1.0.ebuild,v 1.1 2011/02/03 00:13:49 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/shrimp/shrimp-2.1.0.ebuild,v 1.2 2012/10/18 18:00:44 jlec Exp $
 
-EAPI="2"
+EAPI=4
 
 inherit flag-o-matic toolchain-funcs
 
@@ -14,34 +14,35 @@ SRC_URI="http://compbio.cs.toronto.edu/shrimp/releases/SHRiMP_${MY_PV}.src.tar.g
 
 LICENSE="as-is"
 SLOT="0"
-IUSE=""
 KEYWORDS="~amd64 ~x86"
-
-DEPEND=">=sys-devel/gcc-4.3[openmp]"
-RDEPEND="${DEPEND}"  # -lgomp
+IUSE="custom-cflags"
 
 S=${WORKDIR}/SHRiMP_${MY_PV}
 
 pkg_setup() {
-	tc-has-openmp || die "At least gcc-4.3 is required for openmp support."
+	if [[ ${CC} == *gcc* ]] &&	! tc-has-openmp; then
+		elog "Please set CC to an OPENMP capable compiler (e.g. gcc[openmp] or icc"
+		die "C compiler lacks OPENMP support"
+	fi
 }
 
 src_prepare() {
-	sed -i -e '1 a #include <stdint.h>' common/dag_glue.cpp || die #294811
+	sed -e '1 a #include <stdint.h>' -i common/dag_glue.cpp || die
 	# respect LDFLAGS wrt 331823
 	sed -i -e "s/LDFLAGS/LIBS/" -e "s/\$(LD)/& \$(LDFLAGS)/" \
 		-e 's/-static//' Makefile || die
 }
 
 src_compile() {
-	append-flags -fopenmp -O3 # per instructions in BUILDING
+	append-flags -fopenmp
+	use custom-cflags || append-flags -O3 # per instructions in BUILDING
 	tc-export CXX
-	emake CXXFLAGS="${CXXFLAGS}" LDFLAGS="${LDFLAGS}" || die
+	emake CXXFLAGS="${CXXFLAGS}" LDFLAGS="${LDFLAGS}"
 }
 
 src_install() {
-	dobin bin/* || die
-	insinto /usr/share/${PN}
-	doins -r utils || die
-	dodoc HISTORY README TODO SPLITTING_AND_MERGING || die
+	dobin bin/*
+	insinto /usr/libexec/${PN}
+	doins -r utils/*
+	dodoc HISTORY README TODO SPLITTING_AND_MERGING
 }
