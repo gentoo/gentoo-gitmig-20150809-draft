@@ -1,16 +1,17 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.9.23-r4.ebuild,v 1.6 2011/06/21 15:42:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.9.23-r4.ebuild,v 1.7 2012/10/18 21:15:45 jlec Exp $
 
 EAPI="3"
 
 inherit eutils fortran-2 toolchain-funcs multilib
 
-DESCRIPTION="Automatically Tuned Linear Algebra Software BLAS implementation"
-HOMEPAGE="http://math-atlas.sourceforge.net/"
 MY_PN=${PN/blas-/}
 PATCH_V="3.9.21"
-SRC_URI="mirror://sourceforge/math-atlas/${MY_PN}${PV}.tar.bz2
+DESCRIPTION="Automatically Tuned Linear Algebra Software BLAS implementation"
+HOMEPAGE="http://math-atlas.sourceforge.net/"
+SRC_URI="
+	mirror://sourceforge/math-atlas/${MY_PN}${PV}.tar.bz2
 	mirror://gentoo/${MY_PN}-${PATCH_V}-shared-libs.2.patch.bz2"
 
 LICENSE="BSD"
@@ -19,7 +20,6 @@ KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-mac
 IUSE="doc"
 
 RDEPEND="
-	virtual/fortran
 	app-admin/eselect-blas
 	app-admin/eselect-cblas
 	doc? ( app-doc/blas-docs )"
