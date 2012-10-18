@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/builder
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.74 2012/10/04 05:57:45 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.75 2012/10/18 07:11:39 graaff Exp $
+
+*builder-3.0.4 (18 Oct 2012)
+
+  18 Oct 2012; Hans de Graaff <graaff@gentoo.org> +builder-3.0.4.ebuild:
+  Version bump.
 
 *builder-3.0.3 (04 Oct 2012)
 
