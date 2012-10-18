@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/leptonica
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/leptonica/ChangeLog,v 1.2 2012/06/24 12:14:05 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/leptonica/ChangeLog,v 1.3 2012/10/18 18:55:57 maekke Exp $
+
+  18 Oct 2012; Markus Meier <maekke@gentoo.org> leptonica-1.68.ebuild:
+  add ~arm, bug #437670
 
   24 Jun 2012; Stefan Briesenick <sbriesen@gentoo.org> leptonica-1.68.ebuild:
   fixing compile-error, solving bug #423065.
