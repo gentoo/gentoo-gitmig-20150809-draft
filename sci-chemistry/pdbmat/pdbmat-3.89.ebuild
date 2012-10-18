@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdbmat/pdbmat-3.89.ebuild,v 1.2 2012/10/07 12:07:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdbmat/pdbmat-3.89.ebuild,v 1.3 2012/10/18 17:40:00 jlec Exp $
 
 EAPI=4
 
@@ -14,9 +14,6 @@ SLOT="0"
 LICENSE="as-is"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="examples"
-
-RDEPEND="virtual/fortran"
-DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"/Source_ENM2011
 
