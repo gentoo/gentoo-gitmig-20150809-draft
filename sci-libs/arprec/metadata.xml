@@ -8,6 +8,6 @@
 	</maintainer>
 	<longdescription>Arbitrary precision float arithmetics and functions</longdescription>
 	<use>
-		<flag name='qd'>Use <pkg>sci-libs/qd</pkg></flag>
+		<flag name="qd">Use <pkg>sci-libs/qd</pkg></flag>
 	</use>
 </pkgmetadata>

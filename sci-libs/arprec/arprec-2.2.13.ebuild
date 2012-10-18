@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/arprec/arprec-2.2.13.ebuild,v 1.3 2012/10/14 18:58:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arprec/arprec-2.2.13.ebuild,v 1.4 2012/10/18 21:12:44 jlec Exp $
 
 EAPI=4
 
@@ -17,13 +17,8 @@ LICENSE="BSD"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc fortran qd static-libs"
 
-DEPEND="fortran? ( virtual/fortran )
-	qd? ( sci-libs/qd[fortran=] )"
+DEPEND="qd? ( sci-libs/qd[fortran=] )"
 RDEPEND="${DEPEND}"
-
-pkg_setup() {
-	use fortran && fortran-2_pkg_setup
-}
 
 src_configure() {
 	econf \
