@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/sl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sl/ChangeLog,v 1.24 2012/10/18 08:51:45 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sl/ChangeLog,v 1.25 2012/10/18 12:04:52 kensington Exp $
+
+*sl-3.03-r3 (18 Oct 2012)
+
+  18 Oct 2012; Michael Palimaka <kensington@gentoo.org> +files/Makefile,
+  +sl-3.03-r3.ebuild:
+  Add vanilla USE flag to toggle original behaviour, wrt bug #225159. Update
+  HOMEPAGE.
 
 *sl-3.03-r2 (18 Oct 2012)
 
