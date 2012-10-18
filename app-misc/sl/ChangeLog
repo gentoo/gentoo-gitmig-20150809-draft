@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/sl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sl/ChangeLog,v 1.23 2011/02/27 22:28:59 scarabeus Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sl/ChangeLog,v 1.24 2012/10/18 08:51:45 kensington Exp $
+
+*sl-3.03-r2 (18 Oct 2012)
+
+  18 Oct 2012; Michael Palimaka <kensington@gentoo.org> +sl-3.03-r2.ebuild:
+  Fix breakage with patch-2.7, wrt bug #435702. Migrate to EAPI 4.
 
   27 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org> -sl-3.03.ebuild:
   old
@@ -76,4 +81,3 @@
   Initial import.  Ebuild submitted by YAMAKURA Makoto <yakina@gentoo.org>
   at GentooJP BugTrack.  Special thanks to Tomoaki Okayama
   <okayama@sodan.ecc.u-tokyo.ac.jp> for the contribution of English manpage.
-
