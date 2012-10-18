@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.7-r2.ebuild,v 1.1 2012/10/18 18:47:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.7-r2.ebuild,v 1.2 2012/10/18 19:06:33 flameeyes Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://sourceforge/munin/${MY_P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~mips ~ppc ~x86"
-IUSE="asterisk irc java memcached minimal mysql postgres ssl test cgi ipv6 syslog ipmi http dhcpd"
+IUSE="asterisk irc java memcached minimal mysql postgres ssl test cgi ipv6 syslog ipmi http dhcpd doc"
 REQUIRED_USE="cgi? ( !minimal )"
 
 # Upstream's listing of required modules is NOT correct!
@@ -27,6 +27,7 @@ REQUIRED_USE="cgi? ( !minimal )"
 # We replace the original ipmi plugins with the freeipmi_ plugin which at least works.
 DEPEND_COM="dev-lang/perl
 			sys-process/procps
+			doc? ( dev-python/sphinx )
 			asterisk? ( dev-perl/Net-Telnet )
 			irc? ( dev-perl/Net-IRC )
 			mysql? ( virtual/mysql
@@ -127,6 +128,9 @@ EOF
 # gotten around to do so yet.
 src_compile() {
 	emake -j1
+	if use doc; then
+		emake -C doc html
+	fi
 }
 
 src_install() {
@@ -161,6 +165,11 @@ src_install() {
 	newinitd "${FILESDIR}"/munin-asyncd.init.2 munin-asyncd
 
 	dodoc README ChangeLog INSTALL
+	if use doc; then
+		cd "${S}"/doc/_build/html
+		dohtml -r *
+		cd "${S}"
+	fi
 
 	# bug 254968
 	insinto /etc/logrotate.d/

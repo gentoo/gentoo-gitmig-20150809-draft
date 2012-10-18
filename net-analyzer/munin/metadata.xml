@@ -76,5 +76,10 @@
       version 2.0.2, the master scripts only log to file, and not to
       syslog.
     </flag>
+    <flag name="doc">
+      Build and install a local copy of the HTML documentation for the
+      whole software. This requires <pkg>dev-python/sphinx</pkg> to
+      process the documentation sources.
+    </flag>
   </use>
 </pkgmetadata>

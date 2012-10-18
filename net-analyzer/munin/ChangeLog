@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.108 2012/10/18 18:47:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.109 2012/10/18 19:06:33 flameeyes Exp $
+
+  18 Oct 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml,
+  munin-2.0.7-r2.ebuild:
+  Introduce a doc USE flag to build and install the HTML documentation.
 
 *munin-2.0.7-r2 (18 Oct 2012)
 
