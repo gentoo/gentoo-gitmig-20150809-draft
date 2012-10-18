@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cosmolopy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cosmolopy/ChangeLog,v 1.6 2012/08/02 18:19:46 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cosmolopy/ChangeLog,v 1.7 2012/10/18 01:48:04 patrick Exp $
+
+  18 Oct 2012; Patrick Lauer <patrick@gentoo.org> cosmolopy-0.1.104.ebuild:
+  Restricting CPython-2.5
 
   02 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> -cosmolopy-0.1.102.ebuild,
   -cosmolopy-0.1.103.ebuild, cosmolopy-0.1.104.ebuild:
