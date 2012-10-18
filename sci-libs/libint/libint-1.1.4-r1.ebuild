@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libint/libint-1.1.4-r1.ebuild,v 1.8 2012/08/03 19:48:21 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libint/libint-1.1.4-r1.ebuild,v 1.9 2012/10/18 20:26:43 jlec Exp $
 
 EAPI=4
 
@@ -14,9 +14,6 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 IUSE="static-libs"
-
-DEPEND="virtual/fortran"
-RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/1.1.4-as-needed.patch

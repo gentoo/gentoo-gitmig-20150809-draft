@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libint/libint-1.1.2.ebuild,v 1.5 2011/06/26 10:38:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libint/libint-1.1.2.ebuild,v 1.6 2012/10/18 20:26:43 jlec Exp $
 
 inherit eutils fortran-2
 
@@ -13,9 +13,6 @@ LICENSE="GPL-2"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="virtual/fortran"
-RDEPEND="${DEPEND}"
-
 src_unpack() {
 	unpack ${A}
 	epatch "${FILESDIR}"/dont-append-mcpu.patch
@@ -25,7 +22,7 @@ src_compile() {
 	sed -i \
 		-e "s:^COPTIONS_OPT=.*:COPTIONS_OPT=\"${CFLAGS}\":g" \
 		-e "s:^CXXOPTIONS_OPT=.*:CXXOPTIONS_OPT=\"${CXXFLAGS}\":g" \
-		"${S}"/configure
+		"${S}"/configure || die
 
 	econf \
 		--enable-shared \
