@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cbflib/cbflib-0.9.0-r3.ebuild,v 1.7 2011/06/28 19:30:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cbflib/cbflib-0.9.0-r3.ebuild,v 1.8 2012/10/18 21:33:44 jlec Exp $
 
 EAPI=3
 
@@ -27,10 +27,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
 IUSE="doc python"
-
-DEPEND="virtual/fortran	"
-RDEPEND="${DEPEND}"
-#test? ( sys-process/time )"
 
 S="${WORKDIR}/${MY_P1}"
 
