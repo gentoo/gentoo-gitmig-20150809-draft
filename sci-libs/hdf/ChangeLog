@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/hdf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/ChangeLog,v 1.28 2012/10/14 19:02:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/ChangeLog,v 1.29 2012/10/18 21:24:27 jlec Exp $
+
+  18 Oct 2012; Justin Lecher <jlec@gentoo.org> hdf-4.2_p4.ebuild,
+  -hdf-4.2.6.ebuild, -hdf-4.2.7_p1.ebuild, hdf-4.2.8.ebuild, metadata.xml:
+  Remove virtual/fortran and always call fortran-2_pkg_setup as intend by the
+  updated fortran-2.eclass
 
   14 Oct 2012; Justin Lecher <jlec@gentoo.org> hdf-4.2_p4.ebuild:
   Prepare for fortran2.eclass update

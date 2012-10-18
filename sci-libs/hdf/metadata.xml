@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>sci</herd>
-<longdescription lang="en">
+	<herd>sci</herd>
+	<longdescription lang="en">
   The Hierarchical Data Format is a general purpose library and
   file format for storing scientific data.
   HDF can store two primary objects: datasets and groups. A dataset is
