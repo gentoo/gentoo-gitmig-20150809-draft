@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r11.ebuild,v 1.5 2012/05/29 17:43:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r11.ebuild,v 1.6 2012/10/18 21:37:53 jlec Exp $
 
 EAPI=3
 
@@ -46,7 +46,6 @@ RDEPEND="
 	sci-libs/mmdb
 	sci-libs/monomer-db
 	sci-libs/ssm
-	virtual/fortran
 	virtual/jpeg
 	virtual/lapack
 	virtual/blas"
