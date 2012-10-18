@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.825 2012/10/11 07:38:00 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.826 2012/10/18 12:55:33 lu_zero Exp $
+
+*vlc-2.0.4 (18 Oct 2012)
+
+  18 Oct 2012; Luca Barbato <lu_zero@gentoo.org> +vlc-2.0.4.ebuild:
+  Version Bump
 
   11 Oct 2012; Anthony G. Basile <blueness@gentoo.org> vlc-2.0.3.ebuild:
   stable ppc64, bug #424435
