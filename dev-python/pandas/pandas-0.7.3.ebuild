@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.7.3.ebuild,v 1.3 2012/06/21 18:33:23 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.7.3.ebuild,v 1.4 2012/10/18 04:43:34 patrick Exp $
 
 EAPI=4
 
 # python cruft
 SUPPORT_PYTHON_ABIS="1"
 DISTUTILS_SRC_TEST="nosetests"
-RESTRICT_PYTHON_ABIS="2.4  2.7-pypy-*"
+RESTRICT_PYTHON_ABIS="2.4  2.7-pypy-* 3.3"
 
 inherit distutils
 
