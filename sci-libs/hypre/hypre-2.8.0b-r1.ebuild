@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hypre/hypre-2.8.0b-r1.ebuild,v 1.7 2012/10/14 19:05:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hypre/hypre-2.8.0b-r1.ebuild,v 1.8 2012/10/18 21:06:49 jlec Exp $
 
 EAPI=4
 
@@ -23,8 +23,7 @@ RDEPEND="
 	lapack? ( virtual/lapack )
 	mpi? ( virtual/mpi )"
 DEPEND="${RDEPEND}
-	virtual/pkgconfig
-	fortran? ( virtual/fortran )"
+	virtual/pkgconfig"
 
 DOCS=( "${WORKDIR}"/${P}/{CHANGELOG,COPYRIGHT,README} )
 
