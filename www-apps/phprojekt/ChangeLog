@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/phprojekt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phprojekt/ChangeLog,v 1.32 2012/10/17 03:26:06 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phprojekt/ChangeLog,v 1.33 2012/10/18 17:59:50 blueness Exp $
+
+  18 Oct 2012; Anthony G. Basile <blueness@gentoo.org> phprojekt-6.1.2.ebuild:
+  stable ppc, bug #429226
 
   17 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> phprojekt-6.1.2.ebuild:
   x86 stable wrt bug #429226

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phprojekt/phprojekt-6.1.2.ebuild,v 1.3 2012/10/17 03:26:06 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phprojekt/phprojekt-6.1.2.ebuild,v 1.4 2012/10/18 17:59:50 blueness Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.phprojekt.com/"
 SRC_URI="https://github.com/Mayflower/${MY_PN}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE="postgres mysql"
 
 RDEPEND="virtual/httpd-php
