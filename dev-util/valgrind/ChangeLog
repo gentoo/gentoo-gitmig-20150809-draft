@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.159 2012/09/20 20:49:50 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.160 2012/10/18 20:01:37 blueness Exp $
+
+  18 Oct 2012; Anthony G. Basile <blueness@gentoo.org> valgrind-3.7.0-r4.ebuild:
+  drop ~arm, bug #434884
 
 *valgrind-3.8.1 (20 Sep 2012)
 
@@ -662,4 +665,3 @@
   17 Jun 2004; <solar@gentoo.org> valgrind-2.1.1-r1.ebuild,
   files/valgrind-2.1.1-pic.patch:
   added patch from bug 54068 to make valgrind pic aware
-
