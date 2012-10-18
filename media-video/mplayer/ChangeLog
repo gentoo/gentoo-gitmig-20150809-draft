@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.861 2012/10/18 09:40:11 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.862 2012/10/18 11:58:07 nativemad Exp $
+
+  18 Oct 2012; Andreas Schuerch <nativemad@gentoo.org> mplayer-1.1-r1.ebuild:
+  x86 stable, see bug 394809
 
   18 Oct 2012; Anthony G. Basile <blueness@gentoo.org> mplayer-1.1-r1.ebuild:
   Keyword ~ppc ~ppc64 in anticipation of stabilization, bug #394809
