@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/asm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.75 2012/04/15 18:11:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.76 2012/10/18 12:53:08 ottxor Exp $
+
+  18 Oct 2012; Christoph Junghans <ottxor@gentoo.org> asm-2.0-r1.ebuild:
+  added prefix support (bug #435436)
 
   15 Apr 2012; Mike Frysinger <vapier@gentoo.org> asm-2.0-r1.ebuild,
   asm-2.2.3-r1.ebuild, asm-3.0.ebuild, asm-3.1.ebuild, asm-3.2.ebuild,

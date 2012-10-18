@@ -1,7 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/asm-2.0-r1.ebuild,v 1.12 2012/04/15 18:11:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/asm-2.0-r1.ebuild,v 1.13 2012/10/18 12:53:08 ottxor Exp $
 
+EAPI=4
 inherit java-pkg-2 java-ant-2
 
 DESCRIPTION="Bytecode manipulation framework for Java"
@@ -18,10 +19,8 @@ DEPEND=">=virtual/jdk-1.3
 RDEPEND=">=virtual/jre-1.3"
 RESTRICT="test"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	echo "objectweb.ant.tasks.path /usr/share/ant-owanttask/lib/ow_util_ant_tasks.jar" \
+src_prepare() {
+	echo "objectweb.ant.tasks.path ${EPREFIX}/usr/share/ant-owanttask/lib/ow_util_ant_tasks.jar" \
 		>> build.properties
 }
 
