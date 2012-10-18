@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmacpiload-ac
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpiload-ac/ChangeLog,v 1.9 2008/06/28 06:38:33 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpiload-ac/ChangeLog,v 1.10 2012/10/18 14:15:51 s4t4n Exp $
+
+*wmacpiload-ac-0.2.0-r1 (18 Oct 2012)
+
+  18 Oct 2012; Michele Noberasco <s4t4n@gentoo.org> wmacpiload-ac-0.2.0-r1.ebuild:
+  Revision bump. Closes bug #372417.
 
   28 Jun 2008; Markus Meier <maekke@gentoo.org> wmacpiload-ac-0.2.0.ebuild:
   x86 stable, bug #229547
