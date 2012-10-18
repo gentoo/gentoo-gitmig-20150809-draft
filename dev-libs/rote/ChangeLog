@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/rote
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rote/ChangeLog,v 1.4 2009/09/23 17:26:01 patrick Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rote/ChangeLog,v 1.5 2012/10/18 19:10:13 xmw Exp $
+
+  18 Oct 2012; Michael Weber <xmw@gentoo.org> rote-0.2.8.ebuild, metadata.xml:
+  EAPI-4, taking maint.
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> rote-0.2.8.ebuild:
   Remove virtual/libc
