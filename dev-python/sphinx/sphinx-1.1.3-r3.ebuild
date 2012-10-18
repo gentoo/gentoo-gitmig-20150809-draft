@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/sphinx-1.1.3-r3.ebuild,v 1.2 2012/05/09 00:18:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/sphinx-1.1.3-r3.ebuild,v 1.3 2012/10/18 06:31:52 floppym Exp $
 
 EAPI="4"
-PYTHON_DEPEND="2"
+PYTHON_DEPEND="*"
 SUPPORT_PYTHON_ABIS="1"
 DISTUTILS_SRC_TEST="nosetests"
 PYTHON_TESTS_RESTRICTED_ABIS="2.5 *-pypy-*"
