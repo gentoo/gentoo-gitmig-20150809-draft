@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libproxy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.84 2012/10/17 19:07:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.85 2012/10/18 22:06:27 tetromino Exp $
+
+  18 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  libproxy-0.4.10.ebuild, metadata.xml:
+  Turns out we shouldn't enable webkit by default, it creates a dependency
+  loop: libproxy[webkit] -> webkit-gtk -> libsoup -> glib-networking[libproxy]
+  -> libproxy.
 
   17 Oct 2012; Markus Meier <maekke@gentoo.org> libproxy-0.4.10.ebuild:
   arm stable, bug #438146

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/libproxy-0.4.10.ebuild,v 1.5 2012/10/17 19:07:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/libproxy-0.4.10.ebuild,v 1.6 2012/10/18 22:06:27 tetromino Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2:2.6"
@@ -14,8 +14,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 LICENSE="LGPL-2.1+"
 SLOT="0"
 KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-linux"
-IUSE="gnome kde mono networkmanager +pac perl python spidermonkey test +webkit"
-REQUIRED_USE="pac? ( || ( spidermonkey webkit ) )"
+IUSE="gnome kde mono networkmanager perl python spidermonkey test webkit"
 
 # NOTE: mozjs/spidermonkey might still cause problems like #373397 ?
 # NOTE: webkit-gtk:3, not :2, needed for libjavascriptcoregtk support
@@ -24,10 +23,8 @@ RDEPEND="gnome? ( >=dev-libs/glib-2.26:2 )
 	mono? ( dev-lang/mono )
 	networkmanager? ( net-misc/networkmanager )
 	perl? (	dev-lang/perl )
-	pac? (
-		spidermonkey? ( >=dev-lang/spidermonkey-1.8.5 )
-		webkit? ( >=net-libs/webkit-gtk-1.6:3 )
-	)"
+	spidermonkey? ( >=dev-lang/spidermonkey-1.8.5 )
+	webkit? ( >=net-libs/webkit-gtk-1.6:3 )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 

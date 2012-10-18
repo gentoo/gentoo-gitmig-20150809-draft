@@ -9,8 +9,6 @@
 		<flag name="gnome">Enable support for reading proxy settings from
 		GNOME</flag>
 		<flag name="kde">Enable support for reading proxy settings from KDE</flag>
-		<flag name="pac">Enable support for PAC and WPAD (proxy auto-config and
-			autodiscovery)</flag>
 		<flag name="spidermonkey">Use libmozjs from
 			<pkg>dev-lang/spidermonkey</pkg> for PAC parsing</flag>
 		<flag name="webkit">Use libjavascriptcoregtk from
