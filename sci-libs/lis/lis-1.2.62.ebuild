@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lis/lis-1.2.62.ebuild,v 1.3 2012/10/14 20:50:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lis/lis-1.2.62.ebuild,v 1.4 2012/10/18 20:08:33 jlec Exp $
 
 EAPI=4
 
@@ -19,8 +19,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc fma fortran mpi openmp quad saamg sse2 static-libs"
 
 RDEPEND="mpi? ( virtual/mpi )"
-DEPEND="${RDEPEND}
-	fortran? ( virtual/fortran )"
+DEPEND="${RDEPEND}"
 
 PATCHES=( ${FILESDIR}/${P}-autotools.patch )
 
@@ -30,7 +29,7 @@ pkg_setup() {
 			die "You have openmp enabled but your current gcc does not support it"
 		export FORTRAN_NEED_OPENMP=1
 	fi
-	use fortran && fortran-2_pkg_setup
+	fortran-2_pkg_setup
 }
 
 src_configure() {

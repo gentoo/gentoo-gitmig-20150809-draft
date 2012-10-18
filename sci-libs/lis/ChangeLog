@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/lis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lis/ChangeLog,v 1.5 2012/10/14 20:50:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lis/ChangeLog,v 1.6 2012/10/18 20:08:33 jlec Exp $
+
+  18 Oct 2012; Justin Lecher <jlec@gentoo.org> lis-1.2.62.ebuild,
+  lis-1.2.90.ebuild, lis-1.2.91.ebuild:
+  Remove virtual/fortran and always call fortran-2_pkg_setup as intend by the
+  updated fortran-2.eclass
 
   14 Oct 2012; Justin Lecher <jlec@gentoo.org> lis-1.2.62.ebuild,
   lis-1.2.90.ebuild, lis-1.2.91.ebuild, metadata.xml:
