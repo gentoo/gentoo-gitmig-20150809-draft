@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/scala/scala-3.3.18-r2.ebuild,v 1.6 2012/06/03 19:31:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/scala/scala-3.3.18-r2.ebuild,v 1.7 2012/10/19 10:26:43 jlec Exp $
 
 EAPI="2"
 
@@ -10,19 +10,16 @@ DESCRIPTION="Scale together multiple observations of reflections"
 HOMEPAGE="http://www.ccp4.ac.uk/dist/html/scala.html"
 SRC_URI="ftp://ftp.mrc-lmb.cam.ac.uk/pub/pre/${P}.tar.gz"
 
-LICENSE="ccp4"
 SLOT="0"
+LICENSE="ccp4"
 KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="
-	virtual/fortran
-
 	sci-libs/ccp4-libs
 	virtual/lapack
 	!<sci-chemistry/ccp4-6.1.2"
-DEPEND="
-	${RDEPEND}
+DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
