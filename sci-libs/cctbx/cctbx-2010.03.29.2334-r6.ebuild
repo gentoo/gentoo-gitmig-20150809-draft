@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/cctbx-2010.03.29.2334-r6.ebuild,v 1.7 2012/10/18 21:38:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/cctbx-2010.03.29.2334-r6.ebuild,v 1.8 2012/10/19 10:36:38 jlec Exp $
 
 EAPI="3"
 
@@ -35,13 +35,15 @@ MY_B="${WORKDIR}"/cctbx_build
 
 pkg_setup() {
 	use openmp && FORTRAN_NEED_OPENMP="1"
-	fortran-2_pkg_setup
 	if use openmp && ! tc-has-openmp; then
 		ewarn "You are using gcc and OpenMP is only available with gcc >= 4.2 and icc"
 		ewarn "If you want to build ${PN} with OpenMP, abort now,"
 		ewarn "and switch CC to an OpenMP capable compiler"
+		FORTRAN_NEED_OPENMP=1
 	fi
+	fortran-2_pkg_setup
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
