@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20110811.1.ebuild,v 1.2 2012/05/04 07:02:32 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20110811.1.ebuild,v 1.3 2012/10/19 09:48:43 jlec Exp $
 
-EAPI="4"
+EAPI=4
 
 inherit eutils fortran-2 flag-o-matic pax-utils toolchain-funcs
 
@@ -23,7 +23,6 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="mpi neo pax_kernel qmmm-tinker"
 
 CDEPEND="
-	virtual/fortran
 	app-shells/tcsh
 	mpi? ( virtual/mpi )
 	virtual/blas"

@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/gamess
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.57 2012/05/04 07:02:32 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.58 2012/10/19 09:48:43 jlec Exp $
+
+  19 Oct 2012; Justin Lecher <jlec@gentoo.org> gamess-20110811.1.ebuild,
+  metadata.xml:
+  Remove virtual/fortran and always call fortran-2_pkg_setup as intend by the
+  updated fortran-2.eclass
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> gamess-20110811.1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
