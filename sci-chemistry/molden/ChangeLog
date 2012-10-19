@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/molden
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/ChangeLog,v 1.44 2012/07/15 18:39:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/ChangeLog,v 1.45 2012/10/19 09:55:01 jlec Exp $
+
+  19 Oct 2012; Justin Lecher <jlec@gentoo.org> molden-4.8-r2.ebuild,
+  molden-5.0.ebuild:
+  Remove virtual/fortran and always call fortran-2_pkg_setup as intend by the
+  updated fortran-2.eclass
 
   15 Jul 2012; Justin Lecher <jlec@gentoo.org> -molden-4.7.ebuild,
   -files/molden-4.7-glibc-2.11.patch, -files/molden-4.7-ldflags.patch:
