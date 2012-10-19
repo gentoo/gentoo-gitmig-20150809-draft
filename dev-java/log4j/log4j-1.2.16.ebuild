@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/log4j-1.2.16.ebuild,v 1.8 2012/04/15 18:40:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/log4j-1.2.16.ebuild,v 1.9 2012/10/19 08:32:19 ottxor Exp $
 
-EAPI=2
+EAPI=4
 JAVA_PKG_IUSE="doc javamail jms jmx source"
 
 inherit java-pkg-2 java-ant-2
@@ -63,7 +63,7 @@ src_install() {
 
 	if use doc ; then
 		java-pkg_dohtml -r site/*
-		rm -fr "${D}/usr/share/doc/${PF}/html/apidocs"
+		rm -fr "${ED}/usr/share/doc/${PF}/html/apidocs"
 		java-pkg_dojavadoc --symlink apidocs site/apidocs
 	fi
 	use source && java-pkg_dosrc src/main/java/*
