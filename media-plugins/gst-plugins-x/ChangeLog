@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gst-plugins-x
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-x/ChangeLog,v 1.125 2012/05/12 18:10:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-x/ChangeLog,v 1.126 2012/10/19 13:25:39 ford_prefect Exp $
+
+*gst-plugins-x-0.10.35-r1 (19 Oct 2012)
+
+  19 Oct 2012; Arun Raghavan <ford_prefect@gentoo.org>
+  +gst-plugins-x-0.10.35-r1.ebuild:
+  Prevent unnecessary linking with libICE, libSM. Fixes #368753.
 
   12 May 2012; Alexis Ballier <aballier@gentoo.org>
   gst-plugins-x-0.10.35.ebuild:
