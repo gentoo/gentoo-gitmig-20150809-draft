@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.130 2012/05/13 21:13:57 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.131 2012/10/19 08:47:01 ottxor Exp $
+
+  19 Oct 2012; Christoph Junghans <ottxor@gentoo.org> stunnel-4.44-r1.ebuild:
+  added prefix support (bug #435792)
 
   13 May 2012; Lance Albertson <ramereth@gentoo.org>
   -files/stunnel-4.21-libwrap.patch, -stunnel-4.25.ebuild,
