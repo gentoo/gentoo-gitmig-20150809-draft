@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/compizconfig-python
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/compizconfig-python/ChangeLog,v 1.26 2012/09/25 14:42:49 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/compizconfig-python/ChangeLog,v 1.27 2012/10/19 02:39:11 patrick Exp $
+
+  19 Oct 2012; Patrick Lauer <patrick@gentoo.org>
+  compizconfig-python-0.8.4-r4.ebuild:
+  Restricting pypy
 
   25 Sep 2012; Sergey Popov <pinkbyte@gentoo.org>
   -compizconfig-python-0.8.4-r3.ebuild:
@@ -124,4 +128,3 @@
   23 Oct 2007; Hanno Boeck <hanno@gentoo.org> +metadata.xml,
   +compizconfig-python-0.6.0.1.ebuild:
   Initial compiz-fusion commit, ebuild based on xeffects overlay.
-
