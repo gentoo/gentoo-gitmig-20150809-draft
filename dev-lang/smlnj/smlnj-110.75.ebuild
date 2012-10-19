@@ -1,20 +1,16 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/smlnj-110.69.ebuild,v 1.1 2009/03/09 23:36:41 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/smlnj-110.75.ebuild,v 1.1 2012/10/19 09:31:58 hkbst Exp $
 
-EAPI=2
+EAPI="4"
 
 inherit eutils
 
 DESCRIPTION="Standard ML of New Jersey compiler and libraries"
 HOMEPAGE="http://www.smlnj.org"
 
-BASE_URI="http://smlnj.cs.uchicago.edu/dist/working/${PV}/"
-#BASE_URI="mirror://gentoo/${P}-"
+BASE_URI="http://smlnj.cs.uchicago.edu/dist/working/${PV}"
 
-#Use the fetch_files.sh script in subdir files/ to fetch and
-#version these files if they aren't on Gentoo mirrors.
-#For example if you're doing a local bump.
 FILES="
 config.tgz
 
@@ -45,27 +41,31 @@ smlnj-c.tgz
 "
 
 #use amd64 in 32-bit mode
-SRC_URI="amd64? ( ${BASE_URI}boot.x86-unix.tgz -> ${P}-boot.x86-unix.tgz )
-		 ppc?   ( ${BASE_URI}boot.ppc-unix.tgz -> ${P}-boot.ppc-unix.tgz )
-		 sparc? ( ${BASE_URI}boot.sparc-unix.tgz -> ${P}-boot.sparc-unix.tgz )
-		 x86?   ( ${BASE_URI}boot.x86-unix.tgz -> ${P}-boot.x86-unix.tgz )"
+SRC_URI="amd64? ( ${BASE_URI}/boot.x86-unix.tgz -> ${P}-boot.x86-unix.tgz )
+		 ppc?   ( ${BASE_URI}/boot.ppc-unix.tgz -> ${P}-boot.ppc-unix.tgz )
+		 sparc? ( ${BASE_URI}/boot.sparc-unix.tgz -> ${P}-boot.sparc-unix.tgz )
+		 x86?   ( ${BASE_URI}/boot.x86-unix.tgz -> ${P}-boot.x86-unix.tgz )"
 
 for file in ${FILES}; do
-	SRC_URI+=" ${BASE_URI}${file} -> ${P}-${file} "
+	SRC_URI+=" ${BASE_URI}/${file} -> ${P}-${file} "
 done
 
 LICENSE="BSD"
 SLOT="0"
+
+#sparc support should be there but is untested
 KEYWORDS="-* ~amd64 ~ppc ~x86"
 IUSE=""
 
-S="${WORKDIR}"
+S=${WORKDIR}
 
 src_unpack() {
 	mkdir -p "${S}"
 	for file in ${A}; do
 		[[ ${file} != ${P}-config.tgz ]] && cp "${DISTDIR}/${file}" "${S}/${file#${P}-}"
 	done
+
+#	make sure we don't use the internet to download anything
 	unpack ${P}-config.tgz && rm config/*.bat
 	echo SRCARCHIVEURL=\"file:/${S}\" > "${S}"/config/srcarchiveurl
 }
@@ -76,10 +76,10 @@ src_compile() {
 
 src_install() {
 	mkdir -p "${D}"/usr
-	mv {bin,lib} "${D}"/usr
+	mv bin lib "${D}"/usr
 
 	for file in "${D}"/usr/bin/{*,.*}; do
 		[[ -f ${file} ]] && sed "2iSMLNJ_HOME=/usr" -i ${file}
-#		[[ -f ${file} ]] && sed "s:${WORKDIR}:/usr:" -i ${file}
+ #		[[ -f ${file} ]] && sed "s:${WORKDIR}:/usr:" -i ${file}
 	done
 }
