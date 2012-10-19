@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/qutim-0.3.1.ebuild,v 1.4 2012/05/04 06:22:14 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/qutim-0.3.1.ebuild,v 1.5 2012/10/19 16:10:42 kensington Exp $
 
 EAPI=4
 
@@ -46,7 +46,10 @@ CDEPEND="
 	kinetic? ( >=x11-libs/qt-declarative-${QT_PV} )
 	multimedia? ( >=x11-libs/qt-multimedia-${QT_PV} )
 	oscar? ( app-crypt/qca:2 )
-	otr? ( >=net-libs/libotr-3.2.0 )
+	otr? (
+		>=net-libs/libotr-3.2.0
+		<net-libs/libotr-4.0.0
+	)
 	phonon? (
 		kde? ( media-libs/phonon )
 		!kde? ( || ( >=x11-libs/qt-phonon-${QT_PV} media-libs/phonon ) )
