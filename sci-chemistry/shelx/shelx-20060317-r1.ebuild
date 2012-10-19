@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/shelx/shelx-20060317-r1.ebuild,v 1.10 2011/06/21 15:57:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/shelx/shelx-20060317-r1.ebuild,v 1.11 2012/10/19 10:29:30 jlec Exp $
 
 inherit autotools eutils fortran-2 flag-o-matic toolchain-funcs
 
@@ -10,15 +10,10 @@ SRC_URI="
 	${P}.tgz
 	openmp? ( ${P}-mp.tgz )"
 
-LICENSE="free-noncomm"
 SLOT="0"
+LICENSE="free-noncomm"
 KEYWORDS="amd64 ppc x86"
 IUSE="dosformat openmp"
-
-DEPEND="
-	virtual/fortran
-	"
-RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/unix"
 
@@ -34,8 +29,9 @@ pkg_nofetch() {
 
 src_unpack() {
 	unpack ${A}
-	epatch "${FILESDIR}"/${PV}-autotool.patch
-	epatch "${FILESDIR}"/${PV}-gfortran.patch
+	epatch \
+		"${FILESDIR}"/${PV}-autotool.patch \
+		"${FILESDIR}"/${PV}-gfortran.patch
 
 	if use openmp; then
 		for i in shelxh shelxlv; do
