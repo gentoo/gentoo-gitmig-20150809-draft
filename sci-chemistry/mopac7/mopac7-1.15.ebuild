@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/mopac7-1.15.ebuild,v 1.8 2011/08/02 14:32:12 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/mopac7-1.15.ebuild,v 1.9 2012/10/19 10:00:39 jlec Exp $
 
-EAPI="3"
+EAPI=4
 
 inherit autotools fortran-2 toolchain-funcs
 
@@ -13,14 +13,12 @@ SRC_URI="
 	http://wwwuser.gwdg.de/~ggroenh/qmmm/mopac/dcart.f
 	http://wwwuser.gwdg.de/~ggroenh/qmmm/mopac/gmxmop.f"
 
-LICENSE="mopac7"
 SLOT="0"
+LICENSE="mopac7"
 KEYWORDS="amd64 ppc x86 ~amd64-linux"
 IUSE="gmxmopac7 static-libs"
 
-DEPEND="
-	virtual/fortran
-	dev-libs/libf2c"
+DEPEND="dev-libs/libf2c"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
@@ -45,18 +43,17 @@ src_configure() {
 }
 
 src_compile() {
-	emake || die
+	emake
 	if use gmxmopac7; then
 		einfo "Making mopac7 lib for gromacs"
 		mkdir "${S}"/fortran/libgmxmopac7 && cd "${S}"/fortran/libgmxmopac7
 		cp -f ../SIZES ../*.f "${FILESDIR}"/Makefile . || die
-		emake clean || die
+		emake clean
 		cp -f "${DISTDIR}"/gmxmop.f "${DISTDIR}"/dcart.f . || die
 		sed "s:GENTOOVERSION:${PV}:g" -i Makefile
-		emake \
-			FC=$(tc-getFC) || die
+		emake FC=$(tc-getFC)
 		if use static-libs; then
-			emake static || die
+			emake static
 		fi
 	fi
 }
@@ -70,9 +67,9 @@ src_install() {
 	dodoc AUTHORS README ChangeLog
 	if use gmxmopac7; then
 		cd "${S}"/fortran/libgmxmopac7
-		dolib.so libgmxmopac7.so* || die
+		dolib.so libgmxmopac7.so*
 		if use static-libs; then
-			dolib.a libgmxmopac7.a || die
+			dolib.a libgmxmopac7.a
 		fi
 	fi
 }

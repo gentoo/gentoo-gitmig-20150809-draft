@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/mopac7-1.10-r1.ebuild,v 1.7 2011/06/21 16:02:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/mopac7-1.10-r1.ebuild,v 1.8 2012/10/19 10:00:39 jlec Exp $
 
 WANT_AUTOMAKE="1.8"
 
@@ -9,13 +9,13 @@ inherit autotools fortran-2
 DESCRIPTION="Autotooled, updated version of a powerful, fast semi-empirical package"
 HOMEPAGE="http://sourceforge.net/projects/mopac7/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
-LICENSE="mopac7"
+
 SLOT="0"
+LICENSE="mopac7"
 KEYWORDS="~amd64 ppc x86"
 IUSE=""
-RDEPEND="
-	virtual/fortran
-	dev-libs/libf2c"
+
+RDEPEND="dev-libs/libf2c"
 DEPEND="${RDEPEND}"
 
 src_unpack() {
@@ -50,5 +50,5 @@ src_install() {
 	sed -i "s:./src/mopac7:mopac7:g" run_mopac7
 
 	make DESTDIR="${D}" install || die
-	dodoc AUTHORS README ChangeLog
+	dodoc AUTHORS README ChangeLog || die
 }
