@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oosuite/oosuite-0.39.ebuild,v 1.2 2012/07/09 19:33:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oosuite/oosuite-0.39.ebuild,v 1.3 2012/10/19 04:46:28 patrick Exp $
 
 EAPI=4
 
 # python eclass cruft
 SUPPORT_PYTHON_ABIS="1"
 PYTHON_USE_WITH="tk?"
-RESTRICT_PYTHON_ABIS="2.4"
+RESTRICT_PYTHON_ABIS="2.4 2.7-pypy-* *-jython 3.3"
 
 inherit distutils eutils
 

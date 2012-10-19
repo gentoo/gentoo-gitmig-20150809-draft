@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/oosuite
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oosuite/ChangeLog,v 1.4 2012/07/09 19:33:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oosuite/ChangeLog,v 1.5 2012/10/19 04:46:28 patrick Exp $
+
+  19 Oct 2012; Patrick Lauer <patrick@gentoo.org> oosuite-0.38.ebuild,
+  oosuite-0.39.ebuild:
+  Restricting pythons
 
   09 Jul 2012; Sébastien Fabbro <bicatali@gentoo.org>
   -files/oosuite-0.37-no-init-msg.patch, oosuite-0.39.ebuild:
