@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-tools/pdb-tools-0.1.4-r3.ebuild,v 1.1 2011/08/29 14:05:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-tools/pdb-tools-0.1.4-r3.ebuild,v 1.2 2012/10/19 10:11:54 jlec Exp $
 
 EAPI=3
 
@@ -19,12 +19,15 @@ LICENSE="GPL-3"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
-RDEPEND="
-	sci-chemistry/dssp
-	virtual/fortran"
+RDEPEND="sci-chemistry/dssp"
 DEPEND=""
 
 S="${WORKDIR}"/${PN}_${PV}
+
+pkg_setup() {
+	fortran-2_pkg_setup
+	python_pkg_setup
+}
 
 src_prepare() {
 	sed "s:script_dir,\"pdb_data\":\"${EPREFIX}/usr/share/${PN}\",\"pdb_data\":g" -i pdb_sasa.py || die
