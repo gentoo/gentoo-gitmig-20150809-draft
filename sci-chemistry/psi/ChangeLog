@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/psi
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/psi/ChangeLog,v 1.20 2011/12/21 08:53:44 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/psi/ChangeLog,v 1.21 2012/10/19 10:21:22 jlec Exp $
+
+  19 Oct 2012; Justin Lecher <jlec@gentoo.org> psi-3.4.0-r2.ebuild,
+  metadata.xml:
+  Remove virtual/fortran and always call fortran-2_pkg_setup as intend by the
+  updated fortran-2.eclass
 
   21 Dec 2011; Justin Lecher <jlec@gentoo.org> -psi-3.2.3.ebuild,
   -psi-3.3.0.ebuild, -psi-3.4.0-r1.ebuild:

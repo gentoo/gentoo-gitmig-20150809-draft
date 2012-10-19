@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/psi/psi-3.4.0-r2.ebuild,v 1.6 2011/12/21 08:26:56 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/psi/psi-3.4.0-r2.ebuild,v 1.7 2012/10/19 10:21:22 jlec Exp $
 
 EAPI=4
 
@@ -16,8 +16,6 @@ KEYWORDS="amd64 x86"
 IUSE="static-libs test"
 
 RDEPEND="
-	virtual/fortran
-
 	!sci-visualization/extrema
 	virtual/blas
 	virtual/lapack
@@ -71,7 +69,7 @@ src_compile() {
 }
 
 src_test() {
-	emake EXECDIR="${S}"/bin TESTFLAGS="" -j1 tests || die
+	emake EXECDIR="${S}"/bin TESTFLAGS="" -j1 tests
 }
 
 src_install() {
