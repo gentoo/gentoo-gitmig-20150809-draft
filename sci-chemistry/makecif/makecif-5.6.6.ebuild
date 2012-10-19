@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/makecif/makecif-5.6.6.ebuild,v 1.10 2011/06/29 11:51:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/makecif/makecif-5.6.6.ebuild,v 1.11 2012/10/19 09:52:00 jlec Exp $
 
-EAPI=3
+EAPI=4
 
 inherit eutils fortran-2 toolchain-funcs
 
@@ -17,10 +17,9 @@ IUSE=""
 
 S="${WORKDIR}"/${PN}
 
-DEPEND="
+DEPEND=""
+RDEPEND="
 	!>=sci-chemistry/refmac-5.6
-	virtual/fortran"
-RDEPEND="${DEPEND}
 	sci-libs/monomer-db"
 
 src_prepare() {
@@ -31,11 +30,10 @@ src_compile() {
 	cd src && emake clean
 	emake \
 		BLANC_FORT="$(tc-getFC) ${FFLAGS}" \
-		LDFLAGS="${LDFLAGS}" \
-		|| die
+		LDFLAGS="${LDFLAGS}"
 }
 
 src_install() {
-	dobin bin/* || die
-	dodoc readme || die
+	dobin bin/*
+	dodoc readme
 }
