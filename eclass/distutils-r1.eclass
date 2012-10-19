@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.3 2012/10/15 15:01:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.4 2012/10/19 19:55:46 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -267,7 +267,7 @@ distutils-r1_src_prepare() {
 	if declare -f python_prepare >/dev/null; then
 		python_foreach_impl python_prepare
 	else
-		distutils-r1_python_prepare
+		python_foreach_impl distutils-r1_python_prepare
 	fi
 }
 
@@ -275,7 +275,7 @@ distutils-r1_src_configure() {
 	if declare -f python_configure >/dev/null; then
 		python_foreach_impl python_configure
 	else
-		distutils-r1_python_configure
+		python_foreach_impl distutils-r1_python_configure
 	fi
 
 	if declare -f python_configure_all >/dev/null; then
@@ -303,7 +303,7 @@ distutils-r1_src_test() {
 	if declare -f python_test >/dev/null; then
 		python_foreach_impl python_test
 	else
-		distutils-r1_python_test
+		python_foreach_impl distutils-r1_python_test
 	fi
 
 	if declare -f python_test_all >/dev/null; then
