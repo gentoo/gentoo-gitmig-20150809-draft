@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jaxp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxp/ChangeLog,v 1.18 2012/03/06 21:12:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxp/ChangeLog,v 1.19 2012/10/19 08:24:29 ottxor Exp $
+
+  19 Oct 2012; Christoph Junghans <ottxor@gentoo.org> jaxp-1.4-r1.ebuild:
+  added prefix support (bug #435572)
 
   06 Mar 2012; Brent Baude <ranger@gentoo.org> jaxp-1.4-r1.ebuild:
   Marking jaxp-1.4-r1 ppc for bug 396875
@@ -49,4 +52,3 @@
   01 May 2007; Krzysiek Pawlik <nelchael@gentoo.org> +files/build.xml-1.4,
   +metadata.xml, +jaxp-1.4.ebuild:
   Initial commit of jaxp.
-
