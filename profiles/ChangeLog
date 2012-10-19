@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7042 2012/10/18 22:58:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7043 2012/10/19 15:36:07 kensington Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Oct 2012; Michael Palimaka <kensington@gentoo.org> package.mask:
+  Mask =net-libs/libotr-4.0.0 due to breakage.
 
   18 Oct 2012; Alexis Ballier <aballier@gentoo.org> profiles.desc:
   Advertise (very) experimental FreeBSD 9.1 profile with clang as system
