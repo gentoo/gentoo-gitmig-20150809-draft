@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.7.0-r2.ebuild,v 1.1 2012/05/11 07:42:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.7.0-r2.ebuild,v 1.2 2012/10/19 10:10:18 jlec Exp $
 
 EAPI=4
 
@@ -24,7 +24,6 @@ IUSE="doc examples opal +pdb2pka"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 
 RDEPEND="
-	virtual/fortran
 	dev-python/numpy
 	sci-chemistry/openbabel
 	opal? ( dev-python/zsi )
@@ -41,6 +40,7 @@ pkg_setup() {
 		einfo "Allow usage of ${MAXATOMS} during calculations"
 	fi
 	python_pkg_setup
+	fortran-2_pkg_setup
 }
 
 src_prepare() {

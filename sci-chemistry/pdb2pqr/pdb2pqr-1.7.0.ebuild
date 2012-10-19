@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.7.0.ebuild,v 1.8 2011/06/21 16:02:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.7.0.ebuild,v 1.9 2012/10/19 10:10:18 jlec Exp $
 
 EAPI="3"
 
@@ -24,13 +24,17 @@ IUSE="doc examples opal"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 
 RDEPEND="
-	virtual/fortran
 	dev-python/numpy
 	sci-chemistry/openbabel
 	opal? ( dev-python/zsi )"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
+
+pkg_setup() {
+	fortran-2_pkg_setup
+	python_pkg_setup
+}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.4.0-ldflags.patch
