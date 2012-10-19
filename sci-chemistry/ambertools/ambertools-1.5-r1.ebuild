@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ambertools/ambertools-1.5-r1.ebuild,v 1.2 2011/08/02 14:42:37 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ambertools/ambertools-1.5-r1.ebuild,v 1.3 2012/10/19 07:15:43 jlec Exp $
 
 EAPI=4
 
-inherit eutils fortran-2 toolchain-funcs
+inherit eutils fortran-2 multilib toolchain-funcs
 
 DESCRIPTION="A suite for carrying out complete molecular mechanics investigations"
 HOMEPAGE="http://ambermd.org/#AmberTools"
@@ -15,7 +15,7 @@ SRC_URI="
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux"
-IUSE="mpi openmp X"
+IUSE="mpi openmp static-libs X"
 
 RESTRICT="fetch"
 
@@ -28,8 +28,7 @@ RDEPEND="
 	sci-chemistry/mopac7
 	sci-libs/netcdf
 	sci-libs/fftw:2.1
-	sci-chemistry/reduce
-	virtual/fortran"
+	sci-chemistry/reduce"
 DEPEND="${RDEPEND}
 	dev-util/byacc
 	dev-libs/libf2c
@@ -100,7 +99,7 @@ src_configure() {
 
 src_compile() {
 	cd AmberTools/src
-	emake || die
+	emake
 }
 
 src_install() {
@@ -116,23 +115,26 @@ src_install() {
 	# Make symlinks untill binpath for amber will be fixed
 	dodir /usr/share/${PN}/bin
 	cd "${ED}/usr/bin"
-	for x in *
-		do dosym /usr/bin/${x} /usr/share/${PN}/bin/${x}
+	for x in *; do
+		dosym /usr/bin/${x} /usr/share/${PN}/bin/${x}
 	done
 	cd "${S}"
 #	sed -e "s:\$AMBERHOME/dat:\$AMBERHOME/share/ambertools/dat:g" \
 #		-i "${ED}/usr/bin/xleap" \
 #		-i "${ED}/usr/bin/tleap" || die
 	dodoc doc/AmberTools.pdf doc/leap_pg.pdf
-	dolib.a lib/*
+
+	use static-libs && dolib.a lib/*
+
 	insinto /usr/include/${PN}
 	doins include/*
+
 	insinto /usr/share/${PN}
 	doins -r dat
+
 	cd AmberTools
-	doins -r benchmarks
-	doins -r examples
-	doins -r test
+	doins -r benchmarks examples test
+
 	cat >> "${T}"/99ambertools <<- EOF
 	AMBERHOME="${EPREFIX}/usr/share/ambertools"
 	EOF
