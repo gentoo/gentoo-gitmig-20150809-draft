@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/reiserfsprogs-3.6.21-r1.ebuild,v 1.13 2012/05/26 18:24:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/reiserfsprogs-3.6.21-r1.ebuild,v 1.14 2012/10/19 05:16:07 vapier Exp $
 
 EAPI="4"
 
@@ -8,7 +8,8 @@ inherit eutils
 
 DESCRIPTION="Reiserfs Utilities"
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/fs/reiserfs/"
-SRC_URI="mirror://kernel/linux/utils/fs/reiserfs/${P}.tar.gz"
+SRC_URI="mirror://kernel/linux/utils/fs/reiserfs/${P}.tar.gz
+	mirror://kernel/linux/kernel/people/jeffm/${PN}/v${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
