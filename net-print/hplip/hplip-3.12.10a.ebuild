@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.12.10a.ebuild,v 1.1 2012/10/12 17:22:12 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.12.10a.ebuild,v 1.2 2012/10/19 16:57:08 billie Exp $
 
 EAPI=4
 
@@ -21,14 +21,15 @@ KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 
 # zeroconf does not work properly with >=cups-1.4.
 # Thus support for it is also disabled in hplip.
-IUSE="doc fax +hpcups hpijs kde libnotify minimal parport policykit qt4 scanner snmp static-ppds X"
+IUSE="doc fax +hpcups hpijs kde libnotify -libusb0 minimal parport policykit qt4 scanner snmp static-ppds X"
 
 COMMON_DEPEND="
 	virtual/jpeg
 	hpijs? ( >=net-print/foomatic-filters-3.0.20080507[cups] )
 	!minimal? (
 		>=net-print/cups-1.4.0
-		virtual/libusb:1
+		!libusb0? ( virtual/libusb:1 )
+		libusb0? ( virtual/libusb:0 )
 		scanner? ( >=media-gfx/sane-backends-1.0.19-r1 )
 		fax? ( sys-apps/dbus )
 		snmp? (
@@ -137,6 +138,12 @@ src_configure() {
 		myconf="${myconf} --disable-dbus-build"
 	fi
 
+	if use libusb0 ; then
+		myconf="${myconf} --enable-libusb01_build"
+	else
+		myconf="${myconf} --disable-libusb01_build"
+	fi
+
 	if use hpcups ; then
 		drv_build="$(use_enable hpcups hpcups-install)"
 		if use static-ppds ; then
@@ -186,7 +193,6 @@ src_configure() {
 		--disable-foomatic-rip-hplip-install \
 		--disable-shadow-build \
 		--disable-qt3 \
-		--disable-libusb01_build \
 		--disable-udev_sysfs_rules \
 		--disable-udev-acl-rules \
 		--with-cupsbackenddir=$(cups-config --serverbin)/backend \
