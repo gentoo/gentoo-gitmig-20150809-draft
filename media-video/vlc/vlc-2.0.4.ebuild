@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.4.ebuild,v 1.1 2012/10/18 12:55:33 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.4.ebuild,v 1.2 2012/10/19 06:32:42 lu_zero Exp $
 
 EAPI="4"
 
@@ -279,6 +279,7 @@ src_configure() {
 		$(use_enable ogg) $(use_enable ogg mux_ogg) \
 		$(use_enable omxil) \
 		$(use_enable opengl glx) \
+		$(use_enable opus) \
 		$(use_enable optimisememory optimize-memory) \
 		$(use_enable oss) \
 		$(use_enable png) \

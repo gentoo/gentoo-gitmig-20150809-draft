@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.826 2012/10/18 12:55:33 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.827 2012/10/19 06:32:42 lu_zero Exp $
+
+  19 Oct 2012; Luca Barbato <lu_zero@gentoo.org> vlc-2.0.4.ebuild:
+  Properly support opus, thanks to Nikoli for pointing it
 
 *vlc-2.0.4 (18 Oct 2012)
 
