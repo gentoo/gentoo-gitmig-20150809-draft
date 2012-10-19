@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-officeext/texmaths/texmaths-0.36a.ebuild,v 1.1 2012/10/19 17:52:06 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-officeext/texmaths/texmaths-0.36a.ebuild,v 1.2 2012/10/19 17:54:37 dilfridge Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ inherit office-ext
 
 DESCRIPTION="LaTeX Equation Editor for LibreOffice"
 HOMEPAGE="http://roland65.free.fr/texmaths/"
-SRC_URI="https://data.nanotube-research.de/group/${MY_P}.oxt"
+SRC_URI="http://dev.gentoo.org/~dilfridge/distfiles/${MY_P}.oxt"
 
 LICENSE="GPL-2"
 SLOT="0"
