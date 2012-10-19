@@ -1,0 +1,12 @@
+# ChangeLog for www-plugins/chrome-binary-plugins
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/ChangeLog,v 1.1 2012/10/19 20:10:37 zx2c4 Exp $
+
+*chrome-binary-plugins-9999 (19 Oct 2012)
+
+  19 Oct 2012; Jason A. Donenfeld <zx2c4@gentoo.org>
+  +chrome-binary-plugins-9999.ebuild, +metadata.xml:
+  New ebuild that imports Chrome's binary plugins into Chromium. Initially a
+  live ebuild, with ugly live fetching semantics, but might in the future
+  transition to something that's released in tandem with Chromium, with proper
+  versioning.
