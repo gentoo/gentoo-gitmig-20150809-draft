@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.0_rc3.ebuild,v 1.1 2012/10/16 21:29:44 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.0_rc3.ebuild,v 1.2 2012/10/19 08:10:00 swift Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
@@ -26,7 +26,7 @@ LICENSE="GPL-3"
 SLOT="0"
 
 IUSE="acl addns ads aio avahi client cluster cups debug fulltest gnutls iprint
-ldap pam quota swat syslog winbind"
+ldap pam quota selinux swat syslog winbind"
 
 RDEPEND="dev-libs/iniparser
 	dev-libs/popt
@@ -45,7 +45,8 @@ RDEPEND="dev-libs/iniparser
 	client? ( net-fs/cifs-utils )
 	cluster? ( >=dev-db/ctdb-1.0.114_p1 )
 	ldap? ( net-nds/openldap )
-	gnutls? ( >=net-libs/gnutls-1.4.0 )"
+	gnutls? ( >=net-libs/gnutls-1.4.0 )
+	selinux? ( sec-policy/selinux-samba )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 

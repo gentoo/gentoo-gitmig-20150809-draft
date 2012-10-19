@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.5.18.ebuild,v 1.1 2012/10/17 22:05:43 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.5.18.ebuild,v 1.2 2012/10/19 08:10:00 swift Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="acl addns ads +aio avahi caps +client cluster cups debug doc examples fam
-	ldap ldb +netapi pam quota +readline +server +smbclient smbsharemodes smbtav2
+	ldap ldb +netapi pam quota +readline selinux +server +smbclient smbsharemodes smbtav2
 	swat syslog winbind"
 
 # upstream doesn't support cups 1.6 for samba 3.5
@@ -43,6 +43,7 @@ DEPEND="dev-libs/popt
 		winbind? ( dev-libs/iniparser )
 	)
 	readline? ( >=sys-libs/readline-5.2 )
+	selinux? ( sec-policy/selinux-samba )
 	syslog? ( virtual/logger )"
 
 RDEPEND="${DEPEND}"

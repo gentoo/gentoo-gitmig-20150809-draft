@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.6.6.ebuild,v 1.1 2012/07/03 05:29:05 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.6.6.ebuild,v 1.2 2012/10/19 08:10:00 swift Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="acl addns ads +aio avahi caps +client cluster cups debug doc examples fam
-	ldap ldb +netapi pam quota +readline +server +smbclient smbsharemodes
+	ldap ldb +netapi pam quota +readline selinux +server +smbclient smbsharemodes
 	swat syslog winbind"
 
 DEPEND="dev-libs/popt
@@ -41,6 +41,7 @@ DEPEND="dev-libs/popt
 		winbind? ( dev-libs/iniparser )
 	)
 	readline? ( >=sys-libs/readline-5.2 )
+	selinux? ( sec-policy/selinux-samba )
 	syslog? ( virtual/logger )"
 
 RDEPEND="${DEPEND}"

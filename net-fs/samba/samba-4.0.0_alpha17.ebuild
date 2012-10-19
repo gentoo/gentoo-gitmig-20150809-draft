@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.0_alpha17.ebuild,v 1.2 2012/05/03 04:06:33 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.0_alpha17.ebuild,v 1.3 2012/10/19 08:10:00 swift Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="acl addns ads aio avahi client cluster cups debug fulltest gnutls iprint
-krb5 ldap pam quota swat syslog winbind"
+krb5 ldap pam quota selinux swat syslog winbind"
 
 RDEPEND="dev-libs/popt
 	sys-libs/readline
@@ -39,7 +39,8 @@ RDEPEND="dev-libs/popt
 	client? ( net-fs/cifs-utils )
 	cluster? ( >=dev-db/ctdb-1.0.114_p1 )
 	ldap? ( net-nds/openldap )
-	gnutls? ( >=net-libs/gnutls-1.4.0 )"
+	gnutls? ( >=net-libs/gnutls-1.4.0 )
+	selinux? ( sec-policy/selinux-samba )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 

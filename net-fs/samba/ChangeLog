@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.529 2012/10/17 22:05:43 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.530 2012/10/19 08:10:00 swift Exp $
+
+  19 Oct 2012; Sven Vermeulen samba-3.5.15.ebuild, samba-3.5.17.ebuild,
+  samba-3.5.18.ebuild, samba-3.6.6.ebuild, samba-3.6.7.ebuild,
+  samba-3.6.8.ebuild, samba-4.0.0_alpha17.ebuild, samba-4.0.0_rc1.ebuild,
+  samba-4.0.0_rc2.ebuild, samba-4.0.0_rc3.ebuild:
+  Refix bug #62907 - Add in dependency on SELinux samba policy
 
 *samba-3.5.18 (17 Oct 2012)
 
