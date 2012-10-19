@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/link-grammar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/link-grammar/ChangeLog,v 1.50 2012/10/16 04:18:07 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/link-grammar/ChangeLog,v 1.51 2012/10/19 18:31:46 pacho Exp $
+
+*link-grammar-4.7.8 (19 Oct 2012)
+
+  19 Oct 2012; Pacho Ramos <pacho@gentoo.org> +link-grammar-4.7.8.ebuild:
+  Version bump, add missing depend on ant-core (#438266 by Ferenc Erki).
 
   16 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
   link-grammar-4.7.6.ebuild:
