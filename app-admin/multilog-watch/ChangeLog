@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/multilog-watch
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/multilog-watch/ChangeLog,v 1.4 2011/07/20 17:08:33 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/multilog-watch/ChangeLog,v 1.5 2012/10/19 19:29:06 ago Exp $
+
+  19 Oct 2012; Agostino Sarubbo <ago@gentoo.org> multilog-watch-1.12.ebuild:
+  Add ~amd64, wrt to bug #438924
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #118937
@@ -21,4 +24,3 @@
   +multilog-watch-1.12.ebuild:
   initial import - this is multilog watch
   it watches a multilog file for irregularities
-
