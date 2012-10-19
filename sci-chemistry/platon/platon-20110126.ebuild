@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/platon-20110126.ebuild,v 1.3 2011/06/21 16:00:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/platon-20110126.ebuild,v 1.4 2012/10/19 10:14:53 jlec Exp $
 
-EAPI="3"
+EAPI=4
 
 inherit eutils fortran-2 flag-o-matic multilib toolchain-funcs
 
@@ -17,9 +17,7 @@ IUSE="examples"
 
 # Can't do libf2c dependent on whether <gcc-4 is selected for the build,
 # so we must always require it
-RDEPEND="
-	virtual/fortran
-	x11-libs/libX11"
+RDEPEND="x11-libs/libX11"
 DEPEND="${RDEPEND}"
 
 RESTRICT="mirror"
@@ -58,22 +56,22 @@ src_compile() {
 }
 
 src_install() {
-	dobin platon || die
+	dobin platon
 
 	for bin in pluton s cifchk helena stidy; do
-		dosym platon /usr/bin/${bin} || die
+		dosym platon /usr/bin/${bin}
 	done
 
 	insinto /usr/$(get_libdir)/platon
-	doins check.def || die
+	doins check.def
 
 	echo "CHECKDEF=\"${EPREFIX}/usr/$(get_libdir)/platon/check.def\"" > "${T}"/env.d
-	newenvd "${T}"/env.d 50platon || die
+	newenvd "${T}"/env.d 50platon
 
-	dodoc README.* || die
+	dodoc README.*
 
 	if use examples; then
 		insinto /usr/share/${PN}
-		doins -r TEST || die
+		doins -r TEST
 	fi
 }
