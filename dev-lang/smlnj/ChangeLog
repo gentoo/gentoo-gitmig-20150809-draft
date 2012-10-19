@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/smlnj
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/ChangeLog,v 1.24 2012/10/19 09:31:58 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/ChangeLog,v 1.25 2012/10/19 10:36:04 hkbst Exp $
+
+  19 Oct 2012; Marijn Schouten <hkBst@gentoo.org> smlnj-110.75.ebuild:
+  fix bug 248162, thanks to Michael Weber (xmw@gentoo.org) for providing a
+  patch
 
 *smlnj-110.75 (19 Oct 2012)
 

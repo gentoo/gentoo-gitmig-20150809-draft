@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/smlnj-110.75.ebuild,v 1.1 2012/10/19 09:31:58 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/smlnj-110.75.ebuild,v 1.2 2012/10/19 10:36:04 hkbst Exp $
 
 EAPI="4"
 
@@ -70,16 +70,32 @@ src_unpack() {
 	echo SRCARCHIVEURL=\"file:/${S}\" > "${S}"/config/srcarchiveurl
 }
 
+DIR=/usr/libexec
+
+src_prepare() {
+	sed -e "/@BINDIR@/s:\$BINDIR:${DIR}/bin:" \
+		-e "/@LIBDIR@/s:\$LIBDIR:${DIR}/lib:" \
+		-i config/install.sh || die
+}
+
 src_compile() {
 	SMLNJ_HOME="${S}" ./config/install.sh || die "compilation failed"
 }
 
 src_install() {
-	mkdir -p "${D}"/usr
-	mv bin lib "${D}"/usr
+	mkdir -p "${D}"/${DIR} || die
+	mv bin lib "${D}"/${DIR} || die
 
-	for file in "${D}"/usr/bin/{*,.*}; do
-		[[ -f ${file} ]] && sed "2iSMLNJ_HOME=/usr" -i ${file}
- #		[[ -f ${file} ]] && sed "s:${WORKDIR}:/usr:" -i ${file}
+	for file in "${D}"/${DIR}/bin/*; do
+		dosym /${DIR}/bin/$(basename "${file}") /usr/bin/$(basename "${file}") || die
 	done
+
+#	for file in $(find "${D}"/usr/lib/${PN}/bin/ -maxdepth 1 -type f ! -name ".*"); do
+#		dosym /${DIR}/bin/$(basename "${file}") /usr/bin/$(basename "${file}") || die
+#	done
+
+# 	for file in "${D}"/usr/bin/{*,.*}; do
+# 		[[ -f ${file} ]] && sed "2iSMLNJ_HOME=/usr" -i ${file}
+# #		[[ -f ${file} ]] && sed "s:${WORKDIR}:/usr:" -i ${file}
+# 	done
 }
