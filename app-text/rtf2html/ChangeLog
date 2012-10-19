@@ -1,6 +1,9 @@
 # ChangeLog for app-text/rtf2html
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rtf2html/ChangeLog,v 1.7 2012/10/18 10:04:18 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rtf2html/ChangeLog,v 1.8 2012/10/19 19:11:51 ago Exp $
+
+  19 Oct 2012; Agostino Sarubbo <ago@gentoo.org> rtf2html-0.2.0-r1.ebuild:
+  Add ~amd64, wrt to bug #438774
 
   18 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> rtf2html-0.2.0-r1.ebuild:
   Add debug USE-flag, improve CFLAGS handling
