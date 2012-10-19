@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/casacore/casacore-1.5.0.ebuild,v 1.2 2012/08/05 14:42:12 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/casacore/casacore-1.5.0.ebuild,v 1.3 2012/10/19 10:44:23 jlec Exp $
 
 EAPI=4
 
@@ -19,7 +19,6 @@ RDEPEND="sci-libs/cfitsio
 	sci-astronomy/wcslib
 	sys-libs/readline
 	virtual/blas
-	virtual/fortran
 	virtual/lapack
 	data? ( sci-astronomy/casa-data )
 	fftw? ( >=sci-libs/fftw-3 )
