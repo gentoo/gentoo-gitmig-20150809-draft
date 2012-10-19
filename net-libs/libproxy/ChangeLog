@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libproxy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.85 2012/10/18 22:06:27 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.86 2012/10/19 06:35:28 nativemad Exp $
+
+  19 Oct 2012; Andreas Schuerch <nativemad@gentoo.org> libproxy-0.4.10.ebuild:
+  x86 stable, see bug 438146
 
   18 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   libproxy-0.4.10.ebuild, metadata.xml:
