@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libjwc_f/libjwc_f-1.1-r2.ebuild,v 1.4 2012/08/20 19:34:08 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libjwc_f/libjwc_f-1.1-r2.ebuild,v 1.5 2012/10/19 10:32:13 jlec Exp $
 
 EAPI=4
 
@@ -10,19 +10,18 @@ inherit autotools-utils fortran-2
 
 PATCH="612"
 
-DESCRIPTION="additional fortran library for ccp4"
+DESCRIPTION="Additional fortran library for ccp4"
 HOMEPAGE="http://www.ccp4.ac.uk/main.html"
 SRC_URI="ftp://ftp.ccp4.ac.uk/jwc/${P}.tar.gz"
 
-LICENSE="GPL-2"
 SLOT="0"
+LICENSE="GPL-2"
 KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux ~x64-macos"
 IUSE="static-libs"
 
 RDEPEND="
 	dev-libs/libjwc_c
-	sci-libs/ccp4-libs
-	virtual/fortran"
+	sci-libs/ccp4-libs"
 DEPEND="${RDEPEND}"
 
 PATCHES=( "${FILESDIR}"/${PATCH}-gentoo.patch )
