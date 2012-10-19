@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/arpack
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/ChangeLog,v 1.45 2012/10/19 07:09:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/ChangeLog,v 1.46 2012/10/19 10:39:22 jlec Exp $
+
+  19 Oct 2012; Justin Lecher <jlec@gentoo.org> arpack-0.96-r3.ebuild:
+  Remove virtual/fortran and always call fortran-2_pkg_setup as intend by the
+  updated fortran-2.eclass
 
   19 Oct 2012; Justin Lecher <jlec@gentoo.org> +arpack-0.96-r3.ebuild,
   -arpack-96-r3.ebuild:
