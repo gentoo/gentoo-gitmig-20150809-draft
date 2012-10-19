@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/gromacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.109 2012/10/14 18:57:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.110 2012/10/19 09:50:26 jlec Exp $
+
+  19 Oct 2012; Justin Lecher <jlec@gentoo.org> gromacs-4.5.5-r1.ebuild:
+  Remove virtual/fortran and always call fortran-2_pkg_setup as intend by the
+  updated fortran-2.eclass
 
   14 Oct 2012; Justin Lecher <jlec@gentoo.org> gromacs-4.5.5-r1.ebuild:
   Prepare for fortran2.eclass update

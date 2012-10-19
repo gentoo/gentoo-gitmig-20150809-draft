@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.5.5-r1.ebuild,v 1.9 2012/10/14 18:57:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.5.5-r1.ebuild,v 1.10 2012/10/19 09:50:26 jlec Exp $
 
 EAPI="4"
 
@@ -45,7 +45,6 @@ CDEPEND="
 		)
 	blas? ( virtual/blas )
 	fftw? ( sci-libs/fftw:3.0 )
-	fkernels? ( virtual/fortran )
 	gsl? ( sci-libs/gsl )
 	lapack? ( virtual/lapack )
 	mpi? ( virtual/mpi )
@@ -56,10 +55,6 @@ RDEPEND="${CDEPEND}
 	app-shells/tcsh"
 
 RESTRICT="test"
-
-pkg_setup() {
-	use fkernels && fortran-2_pkg_setup
-}
 
 src_prepare() {
 	#add user patches from /etc/portage/patches/sci-chemistry/gromacs
