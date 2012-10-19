@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.11.ebuild,v 1.7 2012/07/29 17:39:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.13.1.ebuild,v 1.1 2012/10/19 20:03:13 polynomial-c Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -27,9 +27,9 @@ fi
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-3 multilib pax-utils fdo-mime autotools mozextension python nsplugins mozlinguas
 
-PATCHFF="firefox-14.0-patches-0.3"
+PATCHFF="firefox-16.0-patches-0.3"
 PATCH="${PN}-2.7-patches-03"
-EMVER="1.4.3"
+EMVER="1.4.5"
 
 DESCRIPTION="Seamonkey Web Browser"
 HOMEPAGE="http://www.seamonkey-project.org"
@@ -41,12 +41,12 @@ if [[ ${PV} == *_pre* ]] ; then
 else
 	# This is where arch teams should change the KEYWORDS.
 
-	KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86"
+	KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 fi
 
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
-IUSE="+alsa +chatzilla +crypt +ipc +jit +roaming system-sqlite +webm"
+IUSE="+alsa +chatzilla +crypt gstreamer +ipc +jit +roaming system-sqlite +webm"
 
 SRC_URI+="${SRC_URI}
 	${MOZ_FTP_URI}/source/${MOZ_P}.source.tar.bz2 -> ${P}.source.tar.bz2
@@ -58,7 +58,7 @@ ASM_DEPEND=">=dev-lang/yasm-1.1"
 
 # Mesa 7.10 needed for WebGL + bugfixes
 RDEPEND=">=sys-devel/binutils-2.16.1
-	>=dev-libs/nss-3.13.5
+	>=dev-libs/nss-3.13.6
 	>=dev-libs/nspr-4.9.1
 	>=dev-libs/glib-2.26
 	>=media-libs/mesa-7.10
@@ -67,10 +67,16 @@ RDEPEND=">=sys-devel/binutils-2.16.1
 	>=x11-libs/pango-1.14.0
 	>=x11-libs/gtk+-2.14
 	virtual/libffi
+	gstreamer? (
+		>=media-libs/gstreamer-0.10.33:0.10
+		>=media-libs/gst-plugins-base-0.10.33:0.10
+	)
 	system-sqlite? ( >=dev-db/sqlite-3.7.10[fts3,secure-delete,threadsafe,unlock-notify,debug=] )
 	crypt? ( >=app-crypt/gnupg-1.4 )
-	webm? ( >=media-libs/libvpx-1.0.0
-		kernel_linux? ( media-libs/alsa-lib ) )"
+	webm? (
+		>=media-libs/libvpx-1.0.0
+		kernel_linux? ( media-libs/alsa-lib )
+	)"
 
 DEPEND="${RDEPEND}
 	!elibc_glibc? ( dev-libs/libexecinfo )
@@ -154,6 +160,9 @@ src_prepare() {
 	# system.
 	sed '/^MOZ_PKG_FATAL_WARNINGS/s@= 1@= 0@' \
 		-i "${S}"/suite/installer/Makefile.in || die
+	# Don't error out when there's no files to be removed:
+	sed 's@\(xargs rm\)$@\1 -f@' \
+		-i "${S}"/mozilla/toolkit/mozapps/installer/packager.mk || die
 
 	eautoreconf
 	cd "${S}"/mozilla
@@ -197,6 +206,7 @@ src_configure() {
 	mozconfig_annotate '' --target="${CTARGET:-${CHOST}}"
 	mozconfig_annotate '' --enable-safe-browsing
 
+	mozconfig_use_enable gstreamer
 	mozconfig_use_enable system-sqlite
 	# Both methodjit and tracejit conflict with PaX
 	mozconfig_use_enable jit methodjit
