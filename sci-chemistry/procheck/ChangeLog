@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/procheck
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/procheck/ChangeLog,v 1.8 2012/07/09 19:01:10 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/procheck/ChangeLog,v 1.9 2012/10/19 10:20:35 jlec Exp $
+
+  19 Oct 2012; Justin Lecher <jlec@gentoo.org> procheck-3.5.4-r1.ebuild,
+  metadata.xml:
+  Remove virtual/fortran and always call fortran-2_pkg_setup as intend by the
+  updated fortran-2.eclass
 
   09 Jul 2012; Johannes Huber <johu@gentoo.org> procheck-3.5.4-r1.ebuild:
   Stable for x86, wrt bug #419877
