@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/cns
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/ChangeLog,v 1.51 2012/07/10 07:12:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/ChangeLog,v 1.52 2012/10/19 09:43:33 jlec Exp $
+
+  19 Oct 2012; Justin Lecher <jlec@gentoo.org> cns-1.2.1-r7.ebuild,
+  cns-1.3_p7.ebuild:
+  Remove virtual/fortran and always call fortran-2_pkg_setup as intend by the
+  updated fortran-2.eclass
 
   10 Jul 2012; Justin Lecher <jlec@gentoo.org> -cns-1.1.ebuild,
   -cns-1.2.1-r6.ebuild, -files/1.2.1-aria.patch,

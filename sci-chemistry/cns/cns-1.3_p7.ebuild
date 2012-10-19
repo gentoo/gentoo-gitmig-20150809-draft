@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.3_p7.ebuild,v 1.1 2012/07/04 14:44:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.3_p7.ebuild,v 1.2 2012/10/19 09:43:33 jlec Exp $
 
 EAPI=3
 
@@ -21,9 +21,7 @@ LICENSE="cns"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="aria openmp"
 
-RDEPEND="
-	virtual/fortran
-	app-shells/tcsh"
+RDEPEND="app-shells/tcsh"
 DEPEND="${RDEPEND}"
 
 FORTRAN_NEED_OPENMP=1
