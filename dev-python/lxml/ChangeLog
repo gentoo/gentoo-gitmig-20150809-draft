@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/lxml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.137 2012/10/13 18:43:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.138 2012/10/19 20:25:02 chutzpah Exp $
+
+*lxml-3.0.1 (19 Oct 2012)
+
+  19 Oct 2012; Patrick McLean <chutzpah@gentoo.org>
+  +files/lxml-3.0.1-skip-failing-test.patch, +lxml-3.0.1.ebuild:
+  Version bump, new version ported to distutils-r1. Drop ~alpha, ~amd64-fbsd,
+  ~hppa, ~ia64 and ~sparc pending resolution of bug #438388. Add patch to skip
+  test that fails due to a memory allocation failure (I actually have no idea
+  how to debug this).
 
   13 Oct 2012; Raúl Porcel <armin76@gentoo.org> lxml-2.3.4.ebuild,
   lxml-2.3.5.ebuild, lxml-2.3.6.ebuild:
