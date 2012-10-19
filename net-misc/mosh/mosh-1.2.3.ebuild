@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/mosh-1.2.2.95_rc1.ebuild,v 1.1 2012/10/06 09:34:02 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/mosh-1.2.3.ebuild,v 1.1 2012/10/19 20:57:56 xmw Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit autotools vcs-snapshot
 
 DESCRIPTION="Mobile shell that supports roaming and intelligent local echo"
 HOMEPAGE="http://mosh.mit.edu"
-SRC_URI="https://github.com/downloads/keithw/${PN}/${P/_/}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/keithw/${PN}/tarball/${P} -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
