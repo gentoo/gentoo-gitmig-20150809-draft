@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside-tools/pyside-tools-0.2.14.ebuild,v 1.4 2012/07/03 14:04:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside-tools/pyside-tools-0.2.14.ebuild,v 1.5 2012/10/19 06:37:46 patrick Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ CMAKE_IN_SOURCE_BUILD="1"
 
 PYTHON_DEPEND="2:2.6 3:3.2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.4 2.5 3.1 *-jython 2.7-pypy-*"
+RESTRICT_PYTHON_ABIS="2.4 2.5 3.1 3.3 *-jython 2.7-pypy-*"
 PYTHON_TESTS_RESTRICTED_ABIS="3.*"
 
 VIRTUALX_COMMAND="cmake-utils_src_test"
