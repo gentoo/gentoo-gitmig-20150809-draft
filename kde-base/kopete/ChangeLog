@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.333 2012/10/02 18:12:21 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.334 2012/10/19 14:55:12 creffett Exp $
+
+  19 Oct 2012; Chris Reffett <creffett@gentoo.org> kopete-4.8.5.ebuild,
+  kopete-4.9.1.ebuild, kopete-4.9.2.ebuild:
+  Add dependencies on <libotr-4.0.0 per bug 438880
 
 *kopete-4.9.2 (02 Oct 2012)
 
