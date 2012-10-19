@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/openmsx
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/ChangeLog,v 1.43 2011/10/31 23:02:27 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/ChangeLog,v 1.44 2012/10/19 22:03:54 mr_bones_ Exp $
+
+*openmsx-0.9.1 (19 Oct 2012)
+
+  19 Oct 2012; Michael Sterrett <mr_bones_@gentoo.org> +openmsx-0.9.1.ebuild:
+  version bump
 
   31 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> -openmsx-0.7.2.ebuild,
   -openmsx-0.8.0.ebuild:
@@ -182,4 +187,3 @@
 
   04 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> openmsx-0.3.3.ebuild:
   initial commit; ebuild based on the one by Tony Vroon via bug 32397
-
