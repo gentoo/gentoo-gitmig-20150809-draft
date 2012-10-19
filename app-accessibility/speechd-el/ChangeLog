@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/speechd-el
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-el/ChangeLog,v 1.17 2012/05/23 23:02:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-el/ChangeLog,v 1.18 2012/10/19 19:54:09 ago Exp $
+
+  19 Oct 2012; Agostino Sarubbo <ago@gentoo.org> speechd-el-2.4.ebuild:
+  Add ~amd64, wrt bug #438866
 
   23 May 2012; Mike Frysinger <vapier@gentoo.org> speechd-el-2.4.ebuild:
   Inherit eutils eclass for epatch.
@@ -71,4 +74,3 @@
   03 May 2004; Jon Hood <squinky86@gentoo.org> +metadata.xml,
   +speechd-el-0.3.ebuild:
   Initial commit, closes #44994
-
