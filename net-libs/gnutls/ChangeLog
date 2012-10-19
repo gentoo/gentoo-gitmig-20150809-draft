@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.386 2012/10/13 19:07:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.387 2012/10/19 19:28:47 c1pher Exp $
+
+  19 Oct 2012; Dane Smith <c1pher@gentoo.org> -gnutls-2.12.18.ebuild,
+  gnutls-2.12.20.ebuild, +files/gnutls-2.12.20-guile-parallelmake.patch,
+  gnutls-3.1.3.ebuild, +files/gnutls-3.1.3-guile-parallelmake.patch:
+  Add patches to fix parallel make issues in bug 427844 and bug 437256.
+  Update ebuilds for 2.12.20 and 3.1.3 to make use of said patches.
+  Drop old.
 
 *gnutls-3.1.3 (13 Oct 2012)
 
