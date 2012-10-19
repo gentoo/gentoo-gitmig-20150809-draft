@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/smlnj-110.75.ebuild,v 1.2 2012/10/19 10:36:04 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/smlnj-110.75.ebuild,v 1.3 2012/10/19 11:04:26 hkbst Exp $
 
 EAPI="4"
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Standard ML of New Jersey compiler and libraries"
 HOMEPAGE="http://www.smlnj.org"
@@ -73,7 +73,19 @@ src_unpack() {
 DIR=/usr/libexec
 
 src_prepare() {
-	sed -e "/@BINDIR@/s:\$BINDIR:${DIR}/bin:" \
+	# respect CC et al. (bug 243886)
+	mkdir base || die # without this unpacking runtime will fail
+	./config/unpack "${S}" runtime || die
+	for file in mk.*; do
+		sed -e "/^AS/s:as:$(tc-getAS):" \
+			-e "/^CC/s:gcc:$(tc-getCC):" \
+			-e "/^CPP/s:gcc:$(tc-getCC):" \
+			-e "/^CFLAGS/{s:-O[0123s]:: ; s:=:= ${CFLAGS}:}" \
+			-i base/runtime/objs/${file}
+	done
+
+	# stash bin and lib somewhere (bug 248162)
+	sed -e "/@BINDIR@/s:\$BINDIR:${DIR}:" \
 		-e "/@LIBDIR@/s:\$LIBDIR:${DIR}/lib:" \
 		-i config/install.sh || die
 }
