@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winetricks/winetricks-913.ebuild,v 1.1 2012/09/14 20:24:24 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winetricks/winetricks-913.ebuild,v 1.2 2012/10/19 05:50:00 tetromino Exp $
 
 EAPI=4
 
@@ -16,12 +16,14 @@ fi
 DESCRIPTION="Easy way to install DLLs needed to work around problems in Wine"
 HOMEPAGE="http://code.google.com/p/winetricks/ http://wiki.winehq.org/winetricks"
 
-LICENSE="LGPL-2.1"
+LICENSE="LGPL-2.1+"
 SLOT="0"
 IUSE="gtk kde"
 
 DEPEND=""
-RDEPEND="app-emulation/wine
+RDEPEND="app-arch/cabextract
+	app-arch/unzip
+	app-emulation/wine
 	gtk? ( gnome-extra/zenity )
 	kde? ( kde-base/kdialog )"
 

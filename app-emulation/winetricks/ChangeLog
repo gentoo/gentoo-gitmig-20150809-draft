@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/winetricks
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winetricks/ChangeLog,v 1.8 2012/09/14 20:24:24 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winetricks/ChangeLog,v 1.9 2012/10/19 05:50:00 tetromino Exp $
+
+*winetricks-916 (19 Oct 2012)
+
+  19 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -winetricks-909.ebuild, winetricks-913.ebuild, +winetricks-916.ebuild,
+  winetricks-99999999.ebuild:
+  Version bump. Install .desktop file and icon (bug #438806, thanks to C.J.
+  Wijtmans). Update license. Add dependencies on cabextract and unzip. Drop
+  old.
 
 *winetricks-913 (14 Sep 2012)
 
