@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/configshell/configshell-9999.ebuild,v 1.1 2012/04/16 21:10:46 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/configshell/configshell-9999.ebuild,v 1.2 2012/10/19 04:56:43 patrick Exp $
 
 EAPI=4
 
 EGIT_REPO_URI="git://linux-iscsi.org/${PN}.git"
 PYTHON_DEPEND="2"
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="3.* 2.7-pypy-* 2.5-jython"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit eutils distutils git-2 python
