@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.36 2012/09/07 04:23:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.37 2012/10/19 16:04:34 vapier Exp $
 
 EAPI="3"
 
@@ -69,7 +69,7 @@ lfs_fallocate_test() {
 src_configure() {
 	lfs_fallocate_test
 	econf \
-		--enable-fs-paths-extra=/usr/sbin \
+		--enable-fs-paths-extra=/usr/sbin:/bin:/usr/bin \
 		$(use_enable nls) \
 		--enable-agetty \
 		$(use_enable perl chkdupexe) \
