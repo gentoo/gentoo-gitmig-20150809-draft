@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/freecad-0.12.5284-r2.ebuild,v 1.4 2012/09/16 10:48:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/freecad-0.12.5284-r2.ebuild,v 1.5 2012/10/19 10:43:17 jlec Exp $
 
 EAPI=4
 PYTHON_DEPEND=2
@@ -33,16 +33,13 @@ RDEPEND="
 	sci-libs/gts
 	sys-libs/zlib
 	virtual/glu
-	virtual/fortran
 	x11-libs/qt-gui:4
 	x11-libs/qt-opengl:4
 	x11-libs/qt-svg:4
 	x11-libs/qt-webkit:4
-	x11-libs/qt-xmlpatterns:4
-"
+	x11-libs/qt-xmlpatterns:4"
 DEPEND="${RDEPEND}
-	>=dev-lang/swig-2.0.4-r1
-"
+	>=dev-lang/swig-2.0.4-r1"
 
 RESTRICT="bindist mirror"
 # http://bugs.gentoo.org/show_bug.cgi?id=352435
