@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/chrome-binary-plugins-9999.ebuild,v 1.1 2012/10/19 20:10:37 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/chrome-binary-plugins-9999.ebuild,v 1.2 2012/10/19 20:18:58 zx2c4 Exp $
 
 EAPI=4
 
@@ -21,6 +21,8 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/opt/google/chrome"
 
+inherit unpacker
+
 src_unpack() {
 	# We have to do this inside of here, since it's a live ebuild. :-(
 
@@ -32,8 +34,7 @@ src_unpack() {
 		die "This only supports x86 and amd64."
 	fi
 	wget "${URI_BASE}${URI_BASE_NAME}${G_ARCH}.deb"
-	unpack "./${URI_BASE_NAME}${G_ARCH}.deb"
-	unpack ./data.tar.*
+	unpack_deb "./${URI_BASE_NAME}${G_ARCH}.deb"
 }
 
 src_install() {
