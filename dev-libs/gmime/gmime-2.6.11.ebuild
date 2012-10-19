@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.6.11.ebuild,v 1.1 2012/10/19 18:51:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.6.11.ebuild,v 1.2 2012/10/19 19:13:36 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -57,8 +57,7 @@ src_install() {
 		gnome2_src_install
 
 	if use doc ; then
-		# We don't use docinto/dodoc, because we don't want html doc gzipped
-		insinto /usr/share/doc/${PF}/tutorial
-		doins docs/tutorial/html/*
+		docinto tutorial/
+		dodoc docs/tutorial/html/*
 	fi
 }
