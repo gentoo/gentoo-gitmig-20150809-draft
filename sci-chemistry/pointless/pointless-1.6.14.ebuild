@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pointless/pointless-1.6.15.ebuild,v 1.1 2012/10/19 10:18:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pointless/pointless-1.6.14.ebuild,v 1.3 2012/10/19 15:19:34 jlec Exp $
 
-EAPI=4
+EAPI="3"
 
 PYTHON_DEPEND="2"
 
@@ -30,7 +30,6 @@ S="${WORKDIR}"
 
 pkg_setup() {
 	fortran-2_pkg_setup
-	python_pkg_setup
 	python_set_active_version 2
 }
 
@@ -52,9 +51,10 @@ src_compile() {
 		ITBX="-I${EPREFIX}/usr/include" \
 		ICLPR="-I${EPREFIX}/$(python_get_sitedir)/" \
 		LTBX="-L${EPREFIX}/usr/$(get_libdir)/cctbx/cctbx_build/lib -lcctbx" \
-		SLIB="-L${EPREFIX}/usr/$(get_libdir) -lgfortran"
+		SLIB="-L${EPREFIX}/usr/$(get_libdir) -lgfortran" \
+		|| die
 }
 
 src_install() {
-	dobin pointless othercell
+	dobin pointless othercell || die
 }
