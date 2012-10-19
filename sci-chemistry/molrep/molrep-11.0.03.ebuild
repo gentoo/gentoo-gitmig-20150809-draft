@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molrep/molrep-11.0.03.ebuild,v 1.1 2011/09/07 16:40:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molrep/molrep-11.0.03.ebuild,v 1.2 2012/10/19 09:56:23 jlec Exp $
 
 EAPI=4
 
@@ -16,8 +16,6 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="
-	virtual/fortran
-
 	>=sci-libs/ccp4-libs-6.1.3
 	sci-libs/mmdb
 	virtual/lapack"
