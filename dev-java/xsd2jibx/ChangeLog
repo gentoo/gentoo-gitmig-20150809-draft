@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xsd2jibx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xsd2jibx/ChangeLog,v 1.7 2012/08/06 16:58:28 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xsd2jibx/ChangeLog,v 1.8 2012/10/19 08:34:29 ottxor Exp $
+
+  19 Oct 2012; Christoph Junghans <ottxor@gentoo.org>
+  xsd2jibx-0.2a_beta-r2.ebuild:
+  added prefix support (bug #435580)
 
   06 Aug 2012; Ralph Sennhauser <sera@gentoo.org> xsd2jibx-0.2a_beta-r2.ebuild:
   Fix dohtml call. #430172
@@ -36,4 +40,3 @@
   +files/xsd2jibx-0.2a_beta-freemind.patch, +files/build.xml, +metadata.xml,
   +xsd2jibx-0.2a_beta.ebuild:
   Initial commit as dependency of app-misc/freemind.
-
