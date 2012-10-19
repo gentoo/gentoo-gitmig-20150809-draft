@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r11.ebuild,v 1.1 2012/08/31 07:41:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r11.ebuild,v 1.2 2012/10/19 09:41:15 jlec Exp $
 
 EAPI=3
 
@@ -77,7 +77,6 @@ RDEPEND="
 	dev-libs/libjwc_c
 	dev-libs/libjwc_f
 	dev-libs/boehm-gc
-	virtual/fortran
 	!app-office/sc
 	!<sci-chemistry/ccp4-6.1.3
 	X? ( ${X11DEPS} )"
