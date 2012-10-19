@@ -1,12 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.8.5.ebuild,v 1.1 2012/10/18 12:53:24 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.8.5-r1.ebuild,v 1.1 2012/10/19 18:50:32 ferringb Exp $
 
 EAPI="3"
 DISTUTILS_SRC_TEST="setup.py"
-SUPPORT_PYTHON_ABIS="1"
-
-PYTHON_ABI="2.5 2.6 2.7 3.1 3.2"
 inherit distutils eutils
 
 DESCRIPTION="pkgcore package manager"
