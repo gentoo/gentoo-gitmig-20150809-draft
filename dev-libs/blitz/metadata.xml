@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>cpp</herd>
-<maintainer>
-  <email>bicatali@gentoo.org</email>
-  <description>feel free to fix/update</description>
-</maintainer>
-<longdescription lang='en'>
+	<herd>cpp</herd>
+	<maintainer>
+		<email>bicatali@gentoo.org</email>
+		<description>feel free to fix/update</description>
+	</maintainer>
+	<longdescription lang="en">
   Blitz++ is a meta-template library for array
   manipulation in C++ with a speed comparable to Fortran
   implementations, while preserving an object-oriented
@@ -16,7 +16,7 @@
   optimizations such as loop fusion, unrolling, tiling, and algorithm
   specialization can be performed automatically at compile time.
 </longdescription>
-<use>
-<flag name='boost'>Enable usage of boost::serialization</flag>
-</use>
+	<use>
+		<flag name="boost">Enable usage of boost::serialization</flag>
+	</use>
 </pkgmetadata>

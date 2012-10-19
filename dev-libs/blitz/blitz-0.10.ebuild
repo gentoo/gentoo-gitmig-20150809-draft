@@ -1,20 +1,21 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.10.ebuild,v 1.2 2012/08/20 17:30:01 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.10.ebuild,v 1.3 2012/10/19 10:33:28 jlec Exp $
 
 EAPI=4
 
 AUTOTOOLS_AUTORECONF=1
+
 inherit autotools-utils multilib
 
 DESCRIPTION="High-performance C++ numeric library"
 HOMEPAGE="http://blitz.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
-IUSE="boost debug doc examples static-libs"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~ppc-macos ~x86-linux ~x86-macos"
 LICENSE="|| ( LGPL-3 Artistic-2 BSD )"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~ppc-macos ~x86-linux ~x86-macos"
+IUSE="boost debug doc examples static-libs"
 
 RDEPEND="boost? ( >=dev-libs/boost-1.40 )"
 DEPEND="${RDEPEND}

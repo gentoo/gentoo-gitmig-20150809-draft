@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.9.ebuild,v 1.14 2011/06/21 16:25:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.9.ebuild,v 1.15 2012/10/19 10:33:28 jlec Exp $
 
 inherit eutils fortran-2 toolchain-funcs
 
@@ -14,7 +14,6 @@ KEYWORDS="~amd64 ppc x86"
 IUSE="doc"
 
 DEPEND="
-	virtual/fortran
 	doc? ( app-doc/doxygen )"
 RDEPEND=""
 
