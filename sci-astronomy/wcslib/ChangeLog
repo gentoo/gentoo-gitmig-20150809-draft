@@ -1,6 +1,11 @@
 # ChangeLog for sci-astronomy/wcslib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/ChangeLog,v 1.32 2012/10/17 06:25:43 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/ChangeLog,v 1.33 2012/10/19 10:45:53 jlec Exp $
+
+  19 Oct 2012; Justin Lecher <jlec@gentoo.org> wcslib-4.14.ebuild,
+  wcslib-4.15.ebuild, metadata.xml:
+  Remove virtual/fortran and always call fortran-2_pkg_setup as intend by the
+  updated fortran-2.eclass
 
 *wcslib-4.15 (17 Oct 2012)
 
