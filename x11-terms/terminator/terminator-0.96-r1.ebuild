@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminator/terminator-0.96-r1.ebuild,v 1.7 2012/10/18 17:43:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminator/terminator-0.96-r1.ebuild,v 1.8 2012/10/19 07:13:01 jlec Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ SRC_URI="http://launchpad.net/${PN}/trunk/${PV}/+download/${PN}_${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="dbus gnome libnotify"
+IUSE="dbus gnome +libnotify"
 
 RDEPEND="
 	dev-libs/keybinder:0[python]

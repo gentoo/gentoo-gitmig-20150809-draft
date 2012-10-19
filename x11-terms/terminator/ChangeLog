@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/terminator
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminator/ChangeLog,v 1.25 2012/10/18 17:43:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminator/ChangeLog,v 1.26 2012/10/19 07:13:01 jlec Exp $
+
+  19 Oct 2012; Justin Lecher <jlec@gentoo.org> terminator-0.96-r1.ebuild:
+  Enable the notification support by default
 
   18 Oct 2012; Justin Lecher <jlec@gentoo.org> terminator-0.96-r1.ebuild,
   metadata.xml:
