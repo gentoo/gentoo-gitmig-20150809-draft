@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.6.9.ebuild,v 1.2 2012/05/04 18:35:46 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.6.11.ebuild,v 1.1 2012/10/19 18:51:02 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -8,8 +8,8 @@ GNOME2_LA_PUNT="yes"
 
 inherit gnome2 eutils mono
 
-DESCRIPTION="Utilities for creating and parsing messages using MIME"
-HOMEPAGE="http://spruce.sourceforge.net/gmime/"
+DESCRIPTION="Utilities for creating and parsing messages using MIME."
+HOMEPAGE="http://spruce.sourceforge.net/gmime/ http://developer.gnome.org/gmime/stable/"
 
 SLOT="2.6"
 LICENSE="LGPL-2.1"
@@ -34,11 +34,15 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS PORTING README TODO"
+}
+
+src_configure() {
 	G2CONF="${G2CONF}
 		--enable-cryptography
 		--disable-strict-parser
 		$(use_enable mono)
 		$(use_enable static-libs static)"
+	gnome2_src_configure
 }
 
 src_compile() {
@@ -53,7 +57,7 @@ src_install() {
 		gnome2_src_install
 
 	if use doc ; then
-		# we don't use docinto/dodoc, because we don't want html doc gzipped
+		# We don't use docinto/dodoc, because we don't want html doc gzipped
 		insinto /usr/share/doc/${PF}/tutorial
 		doins docs/tutorial/html/*
 	fi
