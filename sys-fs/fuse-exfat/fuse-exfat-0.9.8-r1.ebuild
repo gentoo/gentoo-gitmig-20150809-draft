@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse-exfat/fuse-exfat-0.9.8-r1.ebuild,v 1.1 2012/10/19 09:27:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse-exfat/fuse-exfat-0.9.8-r1.ebuild,v 1.2 2012/10/19 09:30:05 ssuominen Exp $
 
 EAPI=4
 inherit scons-utils toolchain-funcs
@@ -15,7 +15,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="sys-fs/fuse"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
 src_compile() {
 	tc-export CC
