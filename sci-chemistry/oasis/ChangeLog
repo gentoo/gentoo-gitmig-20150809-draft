@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/oasis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/oasis/ChangeLog,v 1.18 2012/10/06 16:53:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/oasis/ChangeLog,v 1.19 2012/10/19 10:04:45 jlec Exp $
+
+  19 Oct 2012; Justin Lecher <jlec@gentoo.org> oasis-4.0-r2.ebuild,
+  oasis-4.0-r3.ebuild:
+  Remove virtual/fortran and always call fortran-2_pkg_setup as intend by the
+  updated fortran-2.eclass
 
 *oasis-4.0-r3 (06 Oct 2012)
 
