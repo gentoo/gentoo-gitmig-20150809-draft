@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/xfsprogs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.152 2012/08/25 23:10:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.153 2012/10/19 04:19:18 vapier Exp $
+
+  19 Oct 2012; Mike Frysinger <vapier@gentoo.org>
+  files/xfsprogs-3.1.1-sharedlibs.patch:
+  Fix parallel install failures with libxlog #438764 by Jorge Manuel B. S.
+  Vicetto.
 
   25 Aug 2012; Mike Frysinger <vapier@gentoo.org>
   +files/xfsprogs-3.1.8-readline.patch, xfsprogs-3.1.8.ebuild:
