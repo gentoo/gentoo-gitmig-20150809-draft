@@ -1,11 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.11.ebuild,v 1.4 2012/10/14 18:54:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.11.ebuild,v 1.5 2012/10/19 10:42:30 jlec Exp $
 
 EAPI=4
 
 MODULE_AUTHOR=CHM
 FORTRAN_NEEDED=fortran
+
 inherit perl-module eutils fortran-2
 
 HOMEPAGE="http://pdl.perl.org/"
@@ -42,7 +43,7 @@ RDEPEND="sys-libs/ncurses
 	plplot? ( sci-libs/plplot )"
 
 DEPEND="${RDEPEND}
-	fortran? ( virtual/fortran >=dev-perl/ExtUtils-F77-1.13 )"
+	fortran? ( >=dev-perl/ExtUtils-F77-1.13 )"
 
 REQUIRED_USE="plplot? ( badval )"
 

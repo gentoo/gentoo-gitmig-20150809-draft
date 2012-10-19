@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.3-r1.ebuild,v 1.17 2012/09/29 16:02:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.3-r1.ebuild,v 1.18 2012/10/19 10:42:30 jlec Exp $
 
 inherit perl-module eutils multilib
 
@@ -66,8 +66,8 @@ src_install() {
 	PERLVERSION=${version}
 	eval `perl '-V:archname'`
 	ARCHVERSION=${archname}
-	mv ${D}/usr/$(get_libdir)/perl5/vendor_perl/${PERLVERSION}/${ARCHVERSION}/PDL/HtmlDocs/PDL \
-		${D}/usr/share/doc/${PF}/html
+	mv "${D}"/usr/$(get_libdir)/perl5/vendor_perl/${PERLVERSION}/${ARCHVERSION}/PDL/HtmlDocs/PDL \
+		"${D}"/usr/share/doc/${PF}/html
 
 	mydir=${D}/usr/share/doc/${PF}/html/PDL
 
@@ -75,8 +75,8 @@ src_install() {
 	do
 		dosed ${i/${D}}
 	done
-	cp ${S}/Doc/scantree.pl ${D}/usr/$(get_libdir)/perl5/vendor_perl/${PERLVERSION}/${ARCHVERSION}/PDL/Doc/
-	cp ${S}/Doc/mkhtmldoc.pl ${D}/usr/$(get_libdir)/perl5/vendor_perl/${PERLVERSION}/${ARCHVERSION}/PDL/Doc/
+	cp "${S}"/Doc/scantree.pl "${D}"/usr/$(get_libdir)/perl5/vendor_perl/${PERLVERSION}/${ARCHVERSION}/PDL/Doc/
+	cp "${S}"/Doc/mkhtmldoc.pl "${D}"/usr/$(get_libdir)/perl5/vendor_perl/${PERLVERSION}/${ARCHVERSION}/PDL/Doc/
 }
 
 pkg_postinst() {
