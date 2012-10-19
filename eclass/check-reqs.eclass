@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/check-reqs.eclass,v 1.11 2012/09/27 16:35:41 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/check-reqs.eclass,v 1.12 2012/10/19 02:44:21 patrick Exp $
 
 # @ECLASS: check-reqs.eclass
 # @MAINTAINER:
@@ -90,6 +90,8 @@ check_reqs() {
 # pkg_pretend and pkg_setup won't affect the build.
 check-reqs_pkg_setup() {
 	debug-print-function ${FUNCNAME} "$@"
+
+	[[ ${MERGE_TYPE} == binary ]] && return
 
 	check-reqs_prepare
 	check-reqs_run
