@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aqua/aqua-3.2-r2.ebuild,v 1.4 2011/06/21 16:05:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aqua/aqua-3.2-r2.ebuild,v 1.5 2012/10/19 09:38:53 jlec Exp $
 
-EAPI="3"
+EAPI=4
 
-inherit eutils fortran-2 prefix toolchain-funcs
+inherit eutils fortran-2 toolchain-funcs
 
 DESCRIPTION="Program suite in this distribution calculates restraint violations"
 HOMEPAGE="http://www.biochem.ucl.ac.uk/~roman/procheck/procheck.html"
@@ -13,13 +13,11 @@ SRC_URI="
 	doc? ( ${P}-nmr_manual.tar.gz )"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 LICENSE="procheck"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples"
 
-RDEPEND="
-	virtual/fortran
-	sci-chemistry/procheck"
+RDEPEND="sci-chemistry/procheck"
 DEPEND=""
 
 RESTRICT="fetch"
@@ -52,45 +50,44 @@ src_compile() {
 		CFLAGS="${CFLAGS} -I../sub/lib" \
 		FFLAGS="${FFLAGS}" \
 		LDFLAGS="${LDFLAGS}" \
-		exth || die
+		exth
 	emake \
 		MYROOT="${WORKDIR}" \
 		CC="$(tc-getCC)" \
 		FC="$(tc-getFC)" \
 		CFLAGS="${CFLAGS} -I../sub/lib" \
 		FFLAGS="${FFLAGS}" \
-		LDFLAGS="${LDFLAGS}" \
-		|| die
+		LDFLAGS="${LDFLAGS}"
 	popd
 }
 
 src_install() {
 	rm -f scripts/conv* || die
-	dobin bin/* scripts/* || die
-	dosym AquaWhat /usr/bin/qwhat || die
-	dosym AquaHow /usr/bin/qhow || die
-	dosym AquaPseudo /usr/bin/qpseudo || die
-	dosym AquaDist /usr/bin/qdist || die
-	dosym AquaCalc /usr/bin/qcalc || die
-	dosym AquaAssign /usr/bin/qassign || die
-	dosym AquaRedun /usr/bin/qredun || die
-	dosym AquaCompl /usr/bin/qcompl || die
+	dobin bin/* scripts/*
+	dosym AquaWhat /usr/bin/qwhat
+	dosym AquaHow /usr/bin/qhow
+	dosym AquaPseudo /usr/bin/qpseudo
+	dosym AquaDist /usr/bin/qdist
+	dosym AquaCalc /usr/bin/qcalc
+	dosym AquaAssign /usr/bin/qassign
+	dosym AquaRedun /usr/bin/qredun
+	dosym AquaCompl /usr/bin/qcompl
 
-	dodoc HISTORY HOW_TO_USE NEW README doc/* || die
-	dohtml html/* || die
+	dodoc HISTORY HOW_TO_USE NEW README doc/*
+	dohtml html/*
 
 	insinto /usr/share/${PN}
-	doins data/* || die
+	doins data/*
 	if use examples; then
-		doins -r exmpls || die
+		doins -r exmpls
 	fi
 
 	if use doc; then
-		dohtml -r manual || die
+		dohtml -r manual
 	fi
 
 	cat >> "${T}"/34aqua <<- EOF
 	AQUADATADIR="${EPREFIX}/usr/share/${PN}"
 	EOF
-	doenvd "${T}"/34aqua || die
+	doenvd "${T}"/34aqua
 }
