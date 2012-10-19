@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/couchdb-1.2.0.ebuild,v 1.5 2012/09/23 08:38:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/couchdb-1.2.0.ebuild,v 1.6 2012/10/19 09:15:55 ssuominen Exp $
 
 EAPI="2"
 
@@ -17,9 +17,9 @@ IUSE="test"
 
 RDEPEND=">=dev-libs/icu-4.3.1
 		dev-lang/erlang[ssl]
-		>=dev-libs/openssl-0.9.8j
+		>=dev-libs/openssl-0.9.8j:0
 		>=net-misc/curl-7.18.2
-		dev-lang/spidermonkey"
+		>=dev-lang/spidermonkey-1.8.5"
 
 DEPEND="${RDEPEND}"
 
