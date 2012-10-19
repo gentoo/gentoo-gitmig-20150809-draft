@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sfcheck/sfcheck-7.03.18-r1.ebuild,v 1.6 2011/06/21 15:57:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sfcheck/sfcheck-7.03.18-r1.ebuild,v 1.7 2012/10/19 10:28:14 jlec Exp $
 
-EAPI="2"
+EAPI=4
 
 inherit eutils fortran-2 toolchain-funcs
 
@@ -12,13 +12,11 @@ HOMEPAGE="http://www.ysbl.york.ac.uk/~alexei/sfcheck.html"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
 LICENSE="ccp4"
+KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
-RDEPEND="
-	virtual/fortran
-	sci-libs/ccp4-libs"
+RDEPEND="sci-libs/ccp4-libs"
 DEPEND="${RDEPEND}
 	!<sci-chmistry/ccp4-apps-6.1.3"
 
@@ -27,22 +25,18 @@ S="${WORKDIR}"/${PN}
 src_prepare() {
 	epatch "${FILESDIR}"/7.03.17-ldflags.patch
 
-	emake \
-		-C src \
-		clean || die
+	emake -C src clean
 }
 
 src_compile() {
 	MR_FORT="$(tc-getFC) ${FFLAGS}" \
 	MR_LIBRARY="-lccp4f" \
-	emake \
-		-C src \
-		all || die
+	emake -C src all
 }
 
 src_install() {
 	exeinto /usr/libexec/ccp4/bin/
-	doexe bin/${PN} || die
+	doexe bin/${PN}
 	dosym ../libexec/ccp4/bin/${PN} /usr/bin/${PN}
-	dodoc readme ${PN}.com.gz doc/${PN}* || die
+	dodoc readme ${PN}.com.gz doc/${PN}*
 }
