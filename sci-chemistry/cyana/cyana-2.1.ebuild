@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cyana/cyana-2.1.ebuild,v 1.9 2011/06/21 16:03:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cyana/cyana-2.1.ebuild,v 1.10 2012/10/19 09:45:27 jlec Exp $
 
-EAPI="3"
+EAPI=4
 
 inherit eutils fortran-2 toolchain-funcs
 
@@ -11,16 +11,14 @@ HOMEPAGE="http://www.las.jp/english/products/s08_cyana/index.html"
 SRC_URI="${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 LICENSE="as-is"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="examples"
 
 RESTRICT="fetch"
 
 # we need libg2c for gfortran # 136988
-DEPEND="
-	virtual/fortran
-	dev-lang/ifc"
+DEPEND="dev-lang/ifc"
 RDEPEND="${DEPEND}"
 
 pkg_nofetch() {
@@ -66,20 +64,19 @@ src_prepare() {
 
 src_compile() {
 	cd src
-	emake \
-		|| die
+	emake
 }
 
 src_install() {
-	dobin cyana{job,table,filter,clean} || die
-	newbin src/${PN}/${PN}exe.* ${PN} || die
+	dobin cyana{job,table,filter,clean}
+	newbin src/${PN}/${PN}exe.* ${PN}
 	insinto /usr/share/${PN}
-	doins -r lib macro help || die
+	doins -r lib macro help
 	use examples && doins -r demo
 
 	cat >> "${T}"/20cyana <<- EOF
 	CYANALIB="${EPREFIX}/usr/share/${PN}"
 	EOF
 
-	doenvd "${T}"/20cyana || die
+	doenvd "${T}"/20cyana
 }
