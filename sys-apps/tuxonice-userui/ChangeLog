@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/tuxonice-userui
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/ChangeLog,v 1.24 2011/10/16 17:01:25 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/ChangeLog,v 1.25 2012/10/20 08:17:47 pacho Exp $
+
+*tuxonice-userui-1.1 (20 Oct 2012)
+
+  20 Oct 2012; Pacho Ramos <pacho@gentoo.org> +tuxonice-userui-1.1.ebuild:
+  Version bump.
 
   16 Oct 2011; Pacho Ramos <pacho@gentoo.org> tuxonice-userui-1.0.ebuild:
   Fix dependency on bzip2 static for future versions as reported by Arfrever.
@@ -256,4 +261,3 @@
   +suspend2-userui-0.5.1.ebuild:
   Initial import in preparation for sys-kernel/suspend2-sources, fixes bug
   #85334.
-
