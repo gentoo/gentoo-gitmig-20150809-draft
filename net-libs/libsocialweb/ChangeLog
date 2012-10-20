@@ -1,6 +1,15 @@
 # ChangeLog for net-libs/libsocialweb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsocialweb/ChangeLog,v 1.12 2012/09/23 06:14:45 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsocialweb/ChangeLog,v 1.13 2012/10/20 03:01:33 tetromino Exp $
+
+*libsocialweb-0.25.21 (20 Oct 2012)
+
+  20 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  libsocialweb-0.25.20.ebuild, +libsocialweb-0.25.21.ebuild,
+  +files/libsocialweb-0.25.21-gmodule.patch:
+  Version bump, no longer connects to Flickr without permission (bug #438722,
+  CVE-2012-4511, thanks to Agostino Sarubbo). Drop useless USE=doc, it only
+  regenerated documentation. Use vala.eclass.
 
   23 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
   libsocialweb-0.25.20.ebuild:
