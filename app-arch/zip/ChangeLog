@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/zip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/ChangeLog,v 1.98 2012/10/17 03:34:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/ChangeLog,v 1.99 2012/10/20 16:43:15 armin76 Exp $
+
+  20 Oct 2012; Raúl Porcel <armin76@gentoo.org> zip-3.0-r1.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #436436
 
   17 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> zip-3.0-r1.ebuild:
   x86 stable wrt bug #436436
