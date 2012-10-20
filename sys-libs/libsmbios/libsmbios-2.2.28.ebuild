@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsmbios/libsmbios-2.2.28.ebuild,v 1.9 2012/07/10 20:02:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsmbios/libsmbios-2.2.28.ebuild,v 1.10 2012/10/20 18:54:56 armin76 Exp $
 
 EAPI=2
 PYTHON_DEPEND="python? *:2.5"
@@ -13,7 +13,7 @@ SRC_URI="http://linux.dell.com/libsmbios/download/libsmbios/${P}/${P}.tar.bz2"
 
 LICENSE="GPL-2 OSL-2.0"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 x86"
+KEYWORDS="amd64 ia64 x86"
 IUSE="doc graphviz nls python static-libs test"
 
 RDEPEND="dev-libs/libxml2
