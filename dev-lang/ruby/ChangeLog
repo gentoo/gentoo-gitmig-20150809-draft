@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.550 2012/10/15 12:18:47 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.551 2012/10/20 14:07:45 jer Exp $
+
+  20 Oct 2012; Jeroen Roovers <jer@gentoo.org> ruby-1.8.7_p370.ebuild:
+  Stable for HPPA (bug #434480).
 
 *ruby-1.9.3_p286 (15 Oct 2012)
 
