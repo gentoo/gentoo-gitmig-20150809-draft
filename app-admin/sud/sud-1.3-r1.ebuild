@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sud/sud-1.3-r1.ebuild,v 1.1 2011/12/31 18:19:38 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sud/sud-1.3-r1.ebuild,v 1.2 2012/10/20 09:13:33 ago Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://s0ftpj.org/projects/sud/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 src_prepare() {
