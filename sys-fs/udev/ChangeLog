@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.729 2012/10/20 00:17:31 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.730 2012/10/20 05:43:32 williamh Exp $
+
+*udev-171-r8 (20 Oct 2012)
+
+  20 Oct 2012; William Hubbs <williamh@gentoo.org> +udev-171-r8.ebuild:
+  Another part of the fix for #438932.
+  Now we require both udev-mount and udev to be added to the sysinit
+  runlevel.
 
 *udev-171-r7 (20 Oct 2012)
 
