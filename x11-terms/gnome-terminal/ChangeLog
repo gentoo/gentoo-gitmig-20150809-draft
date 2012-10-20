@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.246 2012/09/29 20:14:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.247 2012/10/20 04:48:30 tetromino Exp $
+
+  20 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-terminal-2.32.1.ebuild:
+  Revert previous commit: gtk+-2.24.10-r1, not 2.24.11, is the first version
+  with split gtk-builder-convert (bug #437200, thanks to josef.95).
 
   29 Sep 2012; Michael Sterrett <mr_bones_@gentoo.org>
   gnome-terminal-2.32.1.ebuild:
