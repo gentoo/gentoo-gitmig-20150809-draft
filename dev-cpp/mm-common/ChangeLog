@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/mm-common
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/mm-common/ChangeLog,v 1.14 2011/10/16 17:28:15 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/mm-common/ChangeLog,v 1.15 2012/10/20 07:01:09 pacho Exp $
+
+*mm-common-0.9.6 (20 Oct 2012)
+
+  20 Oct 2012; Pacho Ramos <pacho@gentoo.org> +mm-common-0.9.6.ebuild:
+  Version bump.
 
   16 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> mm-common-0.9.5.ebuild:
   ppc/ppc64 stable wrt #385699
@@ -59,4 +64,3 @@
   29 Oct 2009; Gilles Dartiguelongue <eva@gentoo.org> +mm-common-0.8.ebuild,
   +metadata.xml:
   Initial ebuild for GNOME 2.28.
-
