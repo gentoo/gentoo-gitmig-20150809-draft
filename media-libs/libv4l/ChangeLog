@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/libv4l
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/ChangeLog,v 1.72 2012/09/26 05:42:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/ChangeLog,v 1.73 2012/10/20 07:15:40 tetromino Exp $
+
+*libv4l-0.8.9 (20 Oct 2012)
+
+  20 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org> libv4l-0.8.5.ebuild,
+  libv4l-0.8.5-r1.ebuild, -libv4l-0.8.6.ebuild, libv4l-0.8.8.ebuild,
+  +libv4l-0.8.9.ebuild:
+  Version bump, improves pixart jpeg compression support and adds fixes for
+  more laptop models (bug #438244, thanks to Wojciech Myrda). Update license.
+  Drop old.
 
   26 Sep 2012; Mike Frysinger <vapier@gentoo.org>
   +files/libv4l-0.8.8-drop-Wp-flags.patch, libv4l-0.8.8.ebuild:
