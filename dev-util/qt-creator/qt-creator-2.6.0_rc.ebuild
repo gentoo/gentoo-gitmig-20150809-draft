@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.6.0_beta.ebuild,v 1.4 2012/09/13 00:14:44 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.6.0_rc.ebuild,v 1.1 2012/10/20 13:51:00 pesa Exp $
 
 EAPI=4
 
