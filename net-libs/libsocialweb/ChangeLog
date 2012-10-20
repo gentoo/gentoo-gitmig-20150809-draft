@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libsocialweb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsocialweb/ChangeLog,v 1.14 2012/10/20 17:22:59 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsocialweb/ChangeLog,v 1.15 2012/10/20 18:39:27 ago Exp $
+
+  20 Oct 2012; Agostino Sarubbo <ago@gentoo.org> libsocialweb-0.25.21.ebuild:
+  Stable for amd64, wrt bug #438722
 
   20 Oct 2012; Jeff Horelick <jdhore@gentoo.org> libsocialweb-0.25.21.ebuild:
   marked x86 per bug 438722
