@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.11.1.ebuild,v 1.2 2012/10/20 19:25:07 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.11.1.ebuild,v 1.3 2012/10/20 22:33:19 williamh Exp $
 
 EAPI=4
 
@@ -454,6 +454,12 @@ pkg_postinst() {
 	ewarn "need net be dropped from the dependencies."
 	ewarn "The bug you file should block the following tracker:"
 	ewarn "https://bugs.gentoo.org/show_bug.cgi?id=439092"
+
+	ewarn "This version of OpenRC doesn't enable nfs mounts automatically any"
+	ewarn "longer. In order to mount nfs file systems, you must use the"
+	ewarn "nfsmount service from the nfs-utils package."
+	ewarn "See bug https://bugs.gentoo.org/show_bug.cgi?id=427996 for"
+	ewarn "more information on this."
 
 	elog "You should now update all files in /etc, using etc-update"
 	elog "or equivalent before restarting any services or this host."
