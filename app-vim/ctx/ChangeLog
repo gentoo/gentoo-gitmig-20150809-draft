@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/ctx
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/ctx/ChangeLog,v 1.10 2007/02/21 23:56:32 peper Exp $
+# Copyright 2000-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/ctx/ChangeLog,v 1.11 2012/10/20 16:19:33 ago Exp $
+
+  20 Oct 2012; Agostino Sarubbo <ago@gentoo.org> ctx-1.17.ebuild:
+  Add ~amd64, wrt bug #439072
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
@@ -27,4 +30,3 @@
 
   05 Aug 2003; Aron Griffis <agriffis@gentoo.org> ctx-1.17.ebuild:
   Sixth plugin added to app-vim!
-
