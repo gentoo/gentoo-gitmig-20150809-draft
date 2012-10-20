@@ -4,3 +4,5 @@ move app-emulation/qemu-kvm app-emulation/qemu
 move media-libs/libmediawiki net-libs/libmediawiki
 move media-fonts/source-sans-pro media-fonts/source-pro
 move media-fonts/source-code-pro media-fonts/source-pro
+move x11-wm/razorqt razorqt-base/razorqt-meta
+move x11-misc/lightdm-razorqt-greeter razorqt-base/razorqt-lightdm-greeter
