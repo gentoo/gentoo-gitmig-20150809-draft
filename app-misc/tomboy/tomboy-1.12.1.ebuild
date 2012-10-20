@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-1.12.0.ebuild,v 1.1 2012/09/29 10:08:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-1.12.1.ebuild,v 1.1 2012/10/20 07:19:09 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
-inherit gnome2 mono
+inherit autotools eutils gnome2 mono
 
 DESCRIPTION="Desktop note-taking application"
 HOMEPAGE="http://projects.gnome.org/tomboy/"
@@ -34,7 +34,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	sys-devel/gettext"
 
-pkg_setup() {
+src_prepare() {
 	G2CONF="${G2CONF}
 		--disable-panel-applet
 		$(use_enable eds evolution)
@@ -42,6 +42,11 @@ pkg_setup() {
 		--disable-galago
 		--disable-update-mimedb"
 	DOCS="AUTHORS ChangeLog NEWS README"
+
+	# Force gmime-2.6 usage, upstream bug #686510
+	epatch "${FILESDIR}/${PN}-1.12.1-force-gmime26.patch"
+	eautoreconf
+	gnome2_src_prepare
 }
 
 src_compile() {
