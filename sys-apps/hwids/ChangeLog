@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hwids
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.30 2012/10/14 22:33:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.31 2012/10/20 05:05:01 flameeyes Exp $
+
+*hwids-20121020 (20 Oct 2012)
+
+  20 Oct 2012; Diego E. Pettenò <flameeyes@gentoo.org> +hwids-20121020.ebuild:
+  Version bump.
 
 *hwids-20121014 (14 Oct 2012)
 
