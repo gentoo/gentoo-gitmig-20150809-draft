@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yc/yc-4.0.13.ebuild,v 1.8 2010/09/09 08:46:05 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yc/yc-4.0.13.ebuild,v 1.9 2012/10/20 10:02:21 ago Exp $
 
 EAPI=3
 
-inherit elisp
+inherit elisp toolchain-funcs
 
 DESCRIPTION="Yet another Canna client on Emacsen"
 HOMEPAGE="http://www.ceres.dti.ne.jp/~knak/yc.html"
@@ -12,7 +12,7 @@ SRC_URI="http://www.ceres.dti.ne.jp/~knak/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ppc x86"
+KEYWORDS="alpha ~amd64 ppc x86"
 IUSE=""
 
 DEPEND=""
@@ -25,7 +25,7 @@ src_prepare() {
 }
 
 src_compile() {
-	emake || die
+	emake CC="$(tc-getCC)" || die
 }
 
 src_install() {
