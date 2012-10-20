@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libupnp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/ChangeLog,v 1.31 2012/09/19 13:51:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/ChangeLog,v 1.32 2012/10/20 14:02:22 pinkbyte Exp $
+
+  20 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> libupnp-1.6.17.ebuild:
+  Mark ~amd64-linux
 
   19 Sep 2012; Jeroen Roovers <jer@gentoo.org> libupnp-1.6.17.ebuild:
   Stable for HPPA (bug #433645).
