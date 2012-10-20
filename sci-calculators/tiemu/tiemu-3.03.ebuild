@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tiemu/tiemu-3.03.ebuild,v 1.8 2012/08/04 22:11:04 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tiemu/tiemu-3.03.ebuild,v 1.9 2012/10/20 06:17:21 xarthisius Exp $
 
 EAPI=4
 inherit eutils
@@ -54,7 +54,7 @@ src_configure() {
 }
 
 src_install() {
-	deault
+	default
 	rm -f "${ED}"usr/share/tiemu/{Manpage.txt,COPYING,RELEASE,AUTHORS,LICENSES}
 	make_desktop_entry tiemu "TiEmu Calculator" \
 		"${EPREFIX}"/usr/share/tiemu/pixmaps/icon.xpm

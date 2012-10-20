@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/tiemu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tiemu/ChangeLog,v 1.9 2012/08/04 22:11:04 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tiemu/ChangeLog,v 1.10 2012/10/20 06:17:21 xarthisius Exp $
+
+  20 Oct 2012; Kacper Kowalik <xarthisius@gentoo.org> tiemu-3.03.ebuild:
+  Fix typo in src_install wrt #438994 by darkbasic <darkbasic@linuxsystems.it>
 
   04 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> tiemu-3.03.ebuild:
   keyword amd64-linux, x86-linux
