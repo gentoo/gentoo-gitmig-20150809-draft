@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/sympy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/ChangeLog,v 1.19 2012/08/09 07:30:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/ChangeLog,v 1.20 2012/10/20 18:17:24 grozin Exp $
+
+*sympy-0.7.2 (20 Oct 2012)
+
+  20 Oct 2012; Andrey Grozin <grozin@gentoo.org> +sympy-0.7.2.ebuild,
+  +files/sympy-0.7.2-mpmath.patch:
+  Version bump
 
   09 Aug 2012; Patrick Lauer <patrick@gentoo.org> sympy-0.7.1.ebuild:
   Restrict pypy
