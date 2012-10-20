@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.728 2012/10/15 02:47:46 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.729 2012/10/20 00:17:31 williamh Exp $
+
+*udev-171-r7 (20 Oct 2012)
+
+  20 Oct 2012; William Hubbs <williamh@gentoo.org> +udev-171-r7.ebuild:
+  This is a hot fix for stable udev for bug #438932.
+  The only change is that udev-mount has "provide dev-mount" added to
+  the depend function. This is going directly to stable with the approval
+  of robbat2 and chainsaw.
 
   15 Oct 2012; Zac Medico <zmedico@gentoo.org> udev-194.ebuild,
   udev-9999.ebuild:
