@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libntlm/libntlm-1.3.ebuild,v 1.10 2012/03/08 14:58:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libntlm/libntlm-1.3.ebuild,v 1.11 2012/10/20 15:31:53 pinkbyte Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.nongnu.org/${PN}/releases/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~amd64-linux arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 src_configure() {
