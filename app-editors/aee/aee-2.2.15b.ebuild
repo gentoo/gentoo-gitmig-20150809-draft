@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/aee/aee-2.2.15b.ebuild,v 1.5 2012/09/17 11:39:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/aee/aee-2.2.15b.ebuild,v 1.6 2012/10/20 17:17:00 pinkbyte Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://mahon.cwx.net/sources/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 x86 ~amd64-linux"
 IUSE="X"
 
 RDEPEND="X? ( x11-libs/libX11 )"
