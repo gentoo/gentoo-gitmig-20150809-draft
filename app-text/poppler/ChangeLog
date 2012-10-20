@@ -1,6 +1,9 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.335 2012/10/18 22:22:53 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.336 2012/10/20 02:28:56 blueness Exp $
+
+  20 Oct 2012; Anthony G. Basile <blueness@gentoo.org> poppler-0.20.4.ebuild:
+  stable arm, bug #437610
 
   18 Oct 2012; Anthony G. Basile <blueness@gentoo.org> poppler-0.20.4.ebuild:
   stable ppc ppc64, bug #437610
