@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7043 2012/10/19 15:36:07 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7044 2012/10/20 02:49:09 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  +hardened/linux/uclibc/packages.build:
+  Add packages.build for hardened/linux/uclibc profiles
 
   19 Oct 2012; Michael Palimaka <kensington@gentoo.org> package.mask:
   Mask =net-libs/libotr-4.0.0 due to breakage.
