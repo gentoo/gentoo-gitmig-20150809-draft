@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.391 2012/10/17 03:42:30 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.392 2012/10/20 16:45:42 armin76 Exp $
+
+  20 Oct 2012; Raúl Porcel <armin76@gentoo.org> postfix-2.9.4.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #437602
 
   17 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> postfix-2.9.4.ebuild:
   x86 stable wrt bug #437602
