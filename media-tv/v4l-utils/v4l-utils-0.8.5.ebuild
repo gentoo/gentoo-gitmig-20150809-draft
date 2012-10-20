@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-utils/v4l-utils-0.8.5.ebuild,v 1.4 2011/12/30 13:16:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-utils/v4l-utils-0.8.5.ebuild,v 1.5 2012/10/20 07:16:00 tetromino Exp $
 
 EAPI=4
 inherit toolchain-funcs qt4-r2
@@ -9,7 +9,7 @@ DESCRIPTION="Separate utilities ebuild from upstream v4l-utils package"
 HOMEPAGE="http://git.linuxtv.org/v4l-utils.git"
 SRC_URI="http://linuxtv.org/downloads/v4l-utils/${P}.tar.bz2"
 
-LICENSE="GPL-2 LGPL-2.1"
+LICENSE="GPL-2+ LGPL-2.1+"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="qt4"
