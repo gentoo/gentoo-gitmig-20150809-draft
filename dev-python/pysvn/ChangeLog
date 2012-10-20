@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pysvn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/ChangeLog,v 1.28 2012/03/30 22:34:26 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/ChangeLog,v 1.29 2012/10/20 07:51:37 xarthisius Exp $
+
+  20 Oct 2012; Kacper Kowalik <xarthisius@gentoo.org> pysvn-1.7.6.ebuild:
+  Mark ~amd64-linux
 
   30 Mar 2012; Mike Gilbert <floppym@gentoo.org> pysvn-1.7.6.ebuild:
   python_execute does not exist ing gentoo-x86.
@@ -115,4 +118,3 @@
   +files/skip-root-test.patch, +metadata.xml, +pysvn-1.6.3-r1.ebuild:
   Initial import, ebuild from sunrise overlay. Thanks to idl0r and all the
   others who worked on this in the last 2 years.
-
