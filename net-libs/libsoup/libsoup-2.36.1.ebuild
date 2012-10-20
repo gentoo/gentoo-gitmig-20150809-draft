@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.36.1.ebuild,v 1.12 2012/10/20 06:10:33 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.36.1.ebuild,v 1.13 2012/10/20 06:16:02 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -44,13 +44,6 @@ pkg_setup() {
 		$(use_with samba ntlm-auth ${EPREFIX}/usr/bin/ntlm_auth)"
 }
 
-src_configure() {
-	# FIXME: we need addpredict to workaround bug #324779 until
-	# root cause (bug #249496) is solved
-	addpredict /usr/share/snmp/mibs/.index
-	gnome2_src_configure
-}
-
 src_prepare() {
 	if ! use test; then
 		# don't waste time building tests (bug #226271)
@@ -59,4 +52,11 @@ src_prepare() {
 	fi
 
 	gnome2_src_prepare
+}
+
+src_configure() {
+	# FIXME: we need addpredict to workaround bug #324779 until
+	# root cause (bug #249496) is solved
+	addpredict /usr/share/snmp/mibs/.index
+	gnome2_src_configure
 }
