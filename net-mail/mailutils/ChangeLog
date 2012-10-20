@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/mailutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.55 2012/10/20 08:43:46 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.56 2012/10/20 08:49:03 eras Exp $
+
+*mailutils-2.99.97 (20 Oct 2012)
+
+  20 Oct 2012; Eray Aslan <eras@gentoo.org> +files/comsatd.initd,
+  +files/imap4d.initd, +files/mail, +files/mailutils.rc, +files/pop3d.initd,
+  +mailutils-2.99.97.ebuild, metadata.xml:
+  Version bump
 
   20 Oct 2012; Eray Aslan <eras@gentoo.org>
   -files/mailutils-0.6-imap4d-format-string.patch,
