@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-3.0.1.ebuild,v 1.1 2012/10/19 20:25:02 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-3.0.1.ebuild,v 1.2 2012/10/20 16:22:03 jer Exp $
 
 EAPI=4
 PYTHON_COMPAT=(python2_6 python2_7 python3_1 python3_2 python3_3)
@@ -16,7 +16,7 @@ SRC_URI="http://codespeak.net/lxml/${MY_P}.tgz"
 
 LICENSE="BSD ElementTree GPL-2 PSF-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~s390 ~sh ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~s390 ~sh ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 
 # have to drop some keywords pending resolution of bug #438388
 #KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
