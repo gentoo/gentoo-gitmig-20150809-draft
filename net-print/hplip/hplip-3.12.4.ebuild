@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.12.4.ebuild,v 1.9 2012/09/18 18:10:42 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.12.4.ebuild,v 1.10 2012/10/20 11:54:01 billie Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ PYTHON_DEPEND="!minimal? 2"
 PYTHON_USE_WITH="threads xml"
 PYTHON_USE_WITH_OPT="!minimal"
 
-inherit fdo-mime linux-info python autotools
+inherit eutils fdo-mime linux-info python autotools
 
 DESCRIPTION="HP Linux Imaging and Printing. Includes printer, scanner, fax drivers and service tools."
 HOMEPAGE="http://hplipopensource.com/hplip-web/index.html"
@@ -117,10 +117,10 @@ src_prepare() {
 	# The hpcups driver does not use foomatic-rip
 	local i
 	for i in ppd/hpijs/*.ppd.gz ; do
-		rm -f ${i}.temp
+		rm -f ${i}.temp || die
 		gunzip -c ${i} | sed 's/foomatic-rip-hplip/foomatic-rip/g' | \
 			gzip > ${i}.temp || die
-		mv ${i}.temp ${i}
+		mv ${i}.temp ${i} || die
 	done
 
 	eautoreconf

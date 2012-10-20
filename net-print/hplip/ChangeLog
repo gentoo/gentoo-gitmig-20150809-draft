@@ -1,6 +1,10 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.246 2012/10/19 16:57:08 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.247 2012/10/20 11:54:01 billie Exp $
+
+  20 Oct 2012; Daniel Pielmeier <billie@gentoo.org> hplip-3.12.4.ebuild,
+  hplip-3.12.9-r1.ebuild, hplip-3.12.10.ebuild, hplip-3.12.10a.ebuild:
+  Inherit eutils directly. Die on rm and mv. Thanks to nimiux in bug #439032.
 
   19 Oct 2012; Daniel Pielmeier <billie@gentoo.org> hplip-3.12.10a.ebuild,
   metadata.xml:
