@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/virtualgl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/virtualgl/ChangeLog,v 1.7 2012/09/29 09:38:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/virtualgl/ChangeLog,v 1.8 2012/10/20 07:37:31 pacho Exp $
+
+*virtualgl-2.3.2 (20 Oct 2012)
+
+  20 Oct 2012; Pacho Ramos <pacho@gentoo.org> +virtualgl-2.3.2.ebuild:
+  Version bump and add missing glu dependency, bug #437998 by Diego Elio
+  Pettenò.
 
   29 Sep 2012; Pacho Ramos <pacho@gentoo.org> -files/vgl.confd,
   -files/vgl.initd:
