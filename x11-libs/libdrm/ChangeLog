@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libdrm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.202 2012/10/20 23:25:50 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.203 2012/10/20 23:36:11 ryao Exp $
+
+  20 Oct 2012; Richard Yao <ryao@gentoo.org> libdrm-2.4.37.ebuild,
+  libdrm-2.4.38.ebuild, libdrm-2.4.39.ebuild:
+  Reintroduce ~amd64-fbsd and ~x86-fbsd keywords in favor of profile-specific
+  mask, bug #433403
 
   20 Oct 2012; Richard Yao <ryao@gentoo.org> libdrm-2.4.37.ebuild,
   libdrm-2.4.38.ebuild, libdrm-2.4.39.ebuild:
