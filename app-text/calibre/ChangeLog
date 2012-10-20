@@ -1,6 +1,11 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.235 2012/10/19 05:30:45 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.236 2012/10/20 17:52:25 zmedico Exp $
+
+  20 Oct 2012; Zac Medico <zmedico@gentoo.org> calibre-0.9.1.ebuild,
+  calibre-0.9.2.ebuild, calibre-0.9.3.ebuild:
+  Add cssselect dependency for bug #439058 (use --force since we need to do a
+  stable request for cssselect-0.7.1).
 
 *calibre-0.9.3 (19 Oct 2012)
 
