@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-SSLeay
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSLeay/ChangeLog,v 1.89 2012/10/11 15:07:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSLeay/ChangeLog,v 1.90 2012/10/20 16:00:44 jdhore Exp $
+
+  20 Oct 2012; Jeff Horelick <jdhore@gentoo.org> Net-SSLeay-1.480.0-r1.ebuild:
+  marked x86 per bug 433249
 
   11 Oct 2012; Jeroen Roovers <jer@gentoo.org> Net-SSLeay-1.480.0-r1.ebuild:
   Stable for HPPA (bug #433249).
