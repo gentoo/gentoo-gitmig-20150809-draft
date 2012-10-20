@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tomatoes/tomatoes-1.55-r2.ebuild,v 1.8 2011/06/18 15:41:59 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tomatoes/tomatoes-1.55-r2.ebuild,v 1.9 2012/10/20 19:14:10 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -20,7 +20,7 @@ DEPEND="virtual/opengl
 	virtual/glu
 	media-libs/libsdl[audio,video]
 	media-libs/sdl-image[jpeg,png]
-	media-libs/sdl-mixer[mikmod]"
+	media-libs/sdl-mixer[mod]"
 
 src_prepare() {
 	mv ../tomatoes-1.5/* . || die "mv failed"
