@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/libsoup-gnome-2.38.1.ebuild,v 1.10 2012/10/16 05:05:52 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/libsoup-gnome-2.38.1.ebuild,v 1.11 2012/10/20 06:06:42 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -31,20 +31,15 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
+	# Disable apache tests until they are usable on Gentoo, bug #326957
 	G2CONF="${G2CONF}
 		--disable-static
 		--disable-tls-check
 		$(use_enable introspection)
 		--with-libsoup-system
-		--with-gnome"
+		--with-gnome
+		--without-apache-httpd"
 	DOCS="AUTHORS NEWS README"
-}
-
-src_configure() {
-	# FIXME: we need addpredict to workaround bug #324779 until
-	# root cause (bug #249496) is solved
-	addpredict /usr/share/snmp/mibs/.index
-	gnome2_src_configure
 }
 
 src_prepare() {
@@ -52,4 +47,11 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.38.0-system-lib.patch
 	eautoreconf
 	gnome2_src_prepare
+}
+
+src_configure() {
+	# FIXME: we need addpredict to workaround bug #324779 until
+	# root cause (bug #249496) is solved
+	addpredict /usr/share/snmp/mibs/.index
+	gnome2_src_configure
 }
