@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/oprofile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.81 2012/09/03 13:36:43 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.82 2012/10/20 22:49:11 slyfox Exp $
+
+  20 Oct 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/oprofile-0.9.7-bfd.h-1.patch, +files/oprofile-0.9.7-bfd.h-2.patch,
+  oprofile-0.9.7.ebuild:
+  Fix 'bfd.h' build failure against binutils-2.22.90 (bug #428506 by Juergen
+  Rose and others).
 
   03 Sep 2012; Michael Palimaka <kensington@gentoo.org> oprofile-0.9.7.ebuild:
   Add missing slot dependencies on Qt.
