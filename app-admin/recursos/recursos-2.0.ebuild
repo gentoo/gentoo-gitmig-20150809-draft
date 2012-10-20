@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/recursos/recursos-2.0.ebuild,v 1.7 2012/03/20 10:20:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/recursos/recursos-2.0.ebuild,v 1.8 2012/10/20 09:41:09 ago Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tbz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
