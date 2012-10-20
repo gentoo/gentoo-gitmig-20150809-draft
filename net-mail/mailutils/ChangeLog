@@ -1,6 +1,15 @@
 # ChangeLog for net-mail/mailutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.54 2012/08/11 16:01:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.55 2012/10/20 08:43:46 eras Exp $
+
+  20 Oct 2012; Eray Aslan <eras@gentoo.org>
+  -files/mailutils-0.6-imap4d-format-string.patch,
+  -files/mailutils-0.6-imap4d-gcc4.0-ftbfs.patch,
+  -files/mailutils-0.6-mh-Makefile.in.patch,
+  -files/mailutils-IDEF0954-IDEF0955.patch, -files/mailutils-IDEF0956.patch,
+  -files/mailutils-IDEF0957.patch, -files/mailutils-SQLinjection.patch,
+  -files/mailutils-getline.diff:
+  Remove unnecessary patch files
 
   11 Aug 2012; Jeroen Roovers <jer@gentoo.org> mailutils-2.2.ebuild,
   +files/mailutils-2.2-gets.patch:
