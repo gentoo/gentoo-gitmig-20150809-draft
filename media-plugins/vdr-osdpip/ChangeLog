@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/vdr-osdpip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdpip/ChangeLog,v 1.15 2012/07/01 14:07:12 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdpip/ChangeLog,v 1.16 2012/10/20 18:02:23 hd_brummy Exp $
+
+*vdr-osdpip-0.1.1-r1 (20 Oct 2012)
+
+  20 Oct 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-osdpip-0.0.10.ebuild, -files/vdr-osdpip-0.0.10-avutil50.patch,
+  -vdr-osdpip-0.1.0.ebuild, +vdr-osdpip-0.1.1-r1.ebuild:
+  vdr-plugin-2.eclass, fixed append string
 
   01 Jul 2012; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-osdpip-0.1.1.ebuild:
   stable amd64 x86, bug 419117
