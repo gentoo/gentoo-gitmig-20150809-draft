@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cfs/cfs-1.4.1.17-r3.ebuild,v 1.2 2012/07/12 15:27:29 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cfs/cfs-1.4.1.17-r3.ebuild,v 1.3 2012/10/20 16:47:43 ago Exp $
 
 inherit eutils versionator
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://debian/pool/main/c/cfs/cfs_${MY_PV}.orig.tar.gz
 	mirror://debian/pool/main/c/cfs/cfs_${MY_PV}-${DEB_PV}.diff.gz"
 LICENSE="as-is GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 DEPEND="net-fs/nfs-utils"
 
