@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/galculator/galculator-2.0.ebuild,v 1.1 2012/10/20 10:04:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/galculator/galculator-2.0.ebuild,v 1.2 2012/10/20 10:07:30 ssuominen Exp $
 
 EAPI=4
 inherit gnome2-utils
@@ -22,6 +22,15 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 DOCS="AUTHORS ChangeLog NEWS README THANKS TODO doc/shortcuts"
+
+src_prepare() {
+	cat <<-EOF >> po/POTFILES.skip
+	ui/about.ui
+	ui/dispctrl_right_vertical.ui
+	ui/main_frame_hildon.ui
+	ui/prefs-ume.ui
+	EOF
+}
 
 pkg_preinst() {	gnome2_icon_savelist; }
 pkg_postinst() { gnome2_icon_cache_update; }
