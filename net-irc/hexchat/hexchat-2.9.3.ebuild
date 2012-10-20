@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.9.3.ebuild,v 1.1 2012/10/15 14:15:14 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.9.3.ebuild,v 1.2 2012/10/20 15:33:39 pinkbyte Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.hexchat.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
 IUSE="dbus fastscroll +gtk ipv6 libnotify nls ntlm perl python spell ssl tcl"
 
 RDEPEND="dev-libs/glib:2
