@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/vdpau-video
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vdpau-video/ChangeLog,v 1.17 2012/10/11 12:51:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vdpau-video/ChangeLog,v 1.18 2012/10/20 22:07:45 aballier Exp $
+
+  20 Oct 2012; Alexis Ballier <aballier@gentoo.org> vdpau-video-0.7.4.ebuild,
+  +files/vdpau-video-0.7.4-glext-missing-definition.patch:
+  Fix build with mesa opengl, bug #438180, patch ported from gstreamer-vaapi by
+  Steven Newbury
 
 *vdpau-video-0.7.4 (11 Oct 2012)
 
