@@ -1,6 +1,16 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.131 2012/10/20 16:40:31 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.132 2012/10/20 21:35:22 cardoe Exp $
+
+  20 Oct 2012; Doug Goldstein <cardoe@gentoo.org>
+  -files/qemu-0.11.0-mips64-user-fix.patch,
+  -files/qemu-0.11.1-CVE-2012-0029-backport.patch,
+  -files/qemu-0.11.1-cfg-pulse.patch, -files/qemu-1.0.1-siginfo.patch,
+  -files/qemu-kvm-1.0-e1000-bounds-packet-size-against-buffer-size.patch,
+  -files/qemu-1.0-unmagic-debug.patch, -files/qemu-1.0-unmagic-xfsctl.patch,
+  -qemu-1.1.2.ebuild, -files/qemu-ifdown, -files/qemu-ifup:
+  Remove ebuild that doesn't have the Gentoo patchset. Remove old files that
+  are not used.
 
   20 Oct 2012; Doug Goldstein <cardoe@gentoo.org> -qemu-0.11.1.ebuild,
   -qemu-0.11.1-r1.ebuild:
