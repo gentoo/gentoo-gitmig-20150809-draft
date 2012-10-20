@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/latexila
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/latexila/ChangeLog,v 1.11 2012/10/04 14:44:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/latexila/ChangeLog,v 1.12 2012/10/20 06:29:32 pacho Exp $
+
+*latexila-2.6.1 (20 Oct 2012)
+
+  20 Oct 2012; Pacho Ramos <pacho@gentoo.org> +latexila-2.6.1.ebuild,
+  -latexila-2.4.0.ebuild:
+  Version bump, drop old.
 
   04 Oct 2012; Agostino Sarubbo <ago@gentoo.org> latexila-2.4.1.ebuild:
   Stable for amd64, wrt bug #427544
@@ -47,4 +53,3 @@
   17 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   +latexila-2.2.2.ebuild, +metadata.xml:
   New ebuild for a LaTeX IDE for bug #380779, thanks to Sébastien Wilmet.
-
