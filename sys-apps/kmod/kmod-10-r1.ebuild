@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.34 2012/10/20 07:12:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-10-r1.ebuild,v 1.1 2012/10/20 07:12:46 ssuominen Exp $
 
 EAPI=4
 
@@ -78,7 +78,7 @@ src_install()
 	fi
 
 	cat <<-EOF > "${T}"/usb-load-ehci-first.conf
-	install ohci_hcd /usr/bin/modprobe ehci_hcd ; /usr/bin/modprobe	--ignore-install ohci_hcd \$CMDLINE_OPTS
+	install ohci_hcd /usr/bin/modprobe ehci_hcd ; /usr/bin/modprobe --ignore-install ohci_hcd \$CMDLINE_OPTS
 	install uhci_hcd /usr/bin/modprobe ehci_hcd ; /usr/bin/modprobe --ignore-install uhci_hcd \$CMDLINE_OPTS
 	EOF
 
