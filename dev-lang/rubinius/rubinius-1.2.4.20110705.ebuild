@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rubinius/rubinius-1.2.4.20110705.ebuild,v 1.3 2011/10/23 13:38:11 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rubinius/rubinius-1.2.4.20110705.ebuild,v 1.4 2012/10/20 09:21:38 graaff Exp $
 
 EAPI=4
 inherit eutils flag-o-matic multilib versionator
@@ -13,12 +13,12 @@ SRC_URI="http://asset.rubini.us/${PN}-${MY_PV}.tar.gz"
 LICENSE="BSD"
 KEYWORDS="~amd64"
 SLOT="0"
-IUSE=""
+IUSE="+llvm"
 
 S=${WORKDIR}/${PN}-$(get_version_component_range 1-3)
 
 RDEPEND="sys-libs/readline
-	>=sys-devel/llvm-2.8
+	llvm? ( >=sys-devel/llvm-2.8 <=sys-devel/llvm-2.9 )
 	dev-libs/openssl
 	sys-libs/zlib"
 DEPEND="${RDEPEND}
@@ -35,6 +35,7 @@ src_configure() {
 	./configure --skip-prebuilt \
 		--prefix /usr/$(get_libdir) \
 		--mandir /usr/share/man \
+		$(use_enable llvm) \
 		|| die "Configure failed"
 }
 

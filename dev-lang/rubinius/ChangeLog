@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/rubinius
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rubinius/ChangeLog,v 1.8 2011/10/23 13:38:11 graaff Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rubinius/ChangeLog,v 1.9 2012/10/20 09:21:38 graaff Exp $
+
+  20 Oct 2012; Hans de Graaff <graaff@gentoo.org>
+  rubinius-1.2.4.20110705.ebuild, metadata.xml:
+  Add a llvm USE flag to make llvm optional since it needs an old version of
+  llvm.
 
   23 Oct 2011; Hans de Graaff <graaff@gentoo.org>
   rubinius-1.2.4.20110705.ebuild:

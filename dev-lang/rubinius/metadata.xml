@@ -2,4 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>ruby</herd>
+  <use>
+    <flag name="llvm">
+      Build with llvm. Currently the package only builds against old versions of llvm.
+    </flag>
+  </use>
 </pkgmetadata>
