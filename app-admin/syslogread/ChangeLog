@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/syslogread
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslogread/ChangeLog,v 1.12 2012/10/20 09:24:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslogread/ChangeLog,v 1.13 2012/10/20 09:26:00 ago Exp $
+
+  20 Oct 2012; Agostino Sarubbo <ago@gentoo.org> syslogread-0.92.ebuild:
+  Add ~amd64, wrt bug #439004
 
   20 Oct 2012; Agostino Sarubbo <ago@gentoo.org> syslogread-0.92.ebuild:
   Comment keepdir since syslog now is a file
