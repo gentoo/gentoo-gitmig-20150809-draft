@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/charybdis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/charybdis/ChangeLog,v 1.15 2012/04/05 20:36:52 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/charybdis/ChangeLog,v 1.16 2012/10/20 15:20:01 jdhore Exp $
+
+*charybdis-3.4.0 (20 Oct 2012)
+
+  20 Oct 2012; Jeff Horelick <jdhore@gentoo.org> +charybdis-3.4.0.ebuild,
+  +files/charybdis-3.4.0-testline-crash-fix.patch:
+  Version bump
 
   05 Apr 2012; Jeff Horelick <jdhore@gentoo.org> charybdis-3.3.0.ebuild:
   marked x86 per bug 410847
@@ -17,4 +23,3 @@
   +files/charybdis.confd, +files/charybdis.initd, +metadata.xml:
   Add net-irc/charybdis-3.3.0, a ratbox-based IRCd from atheme, for bug
   #340611.
-

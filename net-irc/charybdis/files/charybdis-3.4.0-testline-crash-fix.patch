@@ -1,0 +1,20 @@
+commit 047a9b1ab072b8103ec954adc2f75baf2e9be553
+Author: Jilles Tjoelker <jilles@stack.nl>
+Date:   Thu Oct 18 15:54:24 2012 +0200
+
+    Fix a crash with testline, introduced with the "underlying ipv4" feature.
+    (cherry picked from commit 6387b5ad4472d1a8f8fbd0b7f3f32dd9d8542072)
+
+diff --git a/src/hostmask.c b/src/hostmask.c
+index 99899af..fb28bbb 100644
+--- a/src/hostmask.c
++++ b/src/hostmask.c
+@@ -422,7 +422,7 @@ find_address_conf(const char *host, const char *sockhost, const char *user,
+ 	}
+ 
+ #ifdef RB_IPV6
+-	if(ip->sa_family == AF_INET6 &&
++	if(ip != NULL && ip->sa_family == AF_INET6 &&
+ 			ipv4_from_ipv6((const struct sockaddr_in6 *)(const void *)ip, &ip4))
+ 	{
+ 		kconf = find_conf_by_address(NULL, NULL, NULL, (struct sockaddr *)&ip4, CONF_KILL, AF_INET, vuser, NULL);
