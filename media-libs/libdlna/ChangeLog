@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdlna
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdlna/ChangeLog,v 1.7 2012/05/22 12:00:48 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdlna/ChangeLog,v 1.8 2012/10/20 14:05:22 pinkbyte Exp $
+
+  20 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> libdlna-0.2.4.ebuild:
+  Add prefix compatibility, keyword it on ~amd64-linux
 
   22 May 2012; Johannes Huber <johu@gentoo.org> libdlna-0.2.4.ebuild:
   Stable for x86, wrt bug #415723
