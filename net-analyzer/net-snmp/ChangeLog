@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.243 2012/10/05 17:04:55 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.244 2012/10/20 05:00:03 flameeyes Exp $
+
+*net-snmp-5.7.2 (20 Oct 2012)
+
+  20 Oct 2012; Diego E. Pettenò <flameeyes@gentoo.org> +net-snmp-5.7.2.ebuild,
+  -net-snmp-5.7.2_rc3.ebuild:
+  Version bump to final 5.7.2 release.
 
   05 Oct 2012; Brent Baude <ranger@gentoo.org> net-snmp-5.7.2_rc1.ebuild:
   Marking net-snmp-5.7.2_rc1 ppc for bug 431752

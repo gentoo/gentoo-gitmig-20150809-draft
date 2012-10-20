@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.7.2_rc3.ebuild,v 1.1 2012/10/04 15:30:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.7.2.ebuild,v 1.1 2012/10/20 05:00:03 flameeyes Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2"
