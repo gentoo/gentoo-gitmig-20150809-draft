@@ -10,7 +10,5 @@
 			plugins</flag>
 		<flag name="seed">Build support for loading JavaScript plugins using
 			<pkg>dev-libs/seed</pkg></flag>
-		<flag name="vala">Build support for loading <pkg>dev-lang/vala</pkg>
-			plugins</flag>
 	</use>
 </pkgmetadata>
