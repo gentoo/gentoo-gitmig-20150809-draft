@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/gspeakers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gspeakers/ChangeLog,v 1.18 2012/07/06 05:12:52 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gspeakers/ChangeLog,v 1.19 2012/10/21 10:28:01 pacho Exp $
+
+  21 Oct 2012; Pacho Ramos <pacho@gentoo.org>
+  +files/gspeakers-0.11-glib-single-include.patch, gspeakers-0.11-r1.ebuild:
+  Let it compile with glib-2.32, bug #437770 by Flameeyes.
 
   06 Jul 2012; Thomas Beierlein <tomjbe@gentoo.org> gspeakers-0.11-r1.ebuild:
   Filter -O0 from src/Makefile. Thanks ago
