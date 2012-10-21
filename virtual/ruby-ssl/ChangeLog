@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ruby-ssl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ssl/ChangeLog,v 1.16 2012/07/25 20:24:42 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ssl/ChangeLog,v 1.17 2012/10/21 18:34:51 armin76 Exp $
+
+  21 Oct 2012; Raúl Porcel <armin76@gentoo.org> ruby-ssl-1.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #411507
 
   25 Jul 2012; Anthony G. Basile <blueness@gentoo.org> ruby-ssl-1.ebuild:
   Stable ppc64, bug #411507
