@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/boost-build
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.103 2012/09/23 12:28:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.104 2012/10/21 09:07:19 maekke Exp $
+
+  21 Oct 2012; Markus Meier <maekke@gentoo.org> boost-build-1.49.0.ebuild:
+  x86 stable, bug #425354
 
   23 Sep 2012; Agostino Sarubbo <ago@gentoo.org> boost-build-1.49.0.ebuild:
   Stable for amd64, wrt bug #425354
