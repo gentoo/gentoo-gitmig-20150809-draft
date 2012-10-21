@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.220 2012/10/12 22:53:59 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.221 2012/10/21 23:51:06 cardoe Exp $
+
+*libvirt-0.10.2-r2 (21 Oct 2012)
+
+  21 Oct 2012; Doug Goldstein <cardoe@gentoo.org> +libvirt-0.10.2-r2.ebuild:
+  Backport a number of stability and API bug fixes.
 
   12 Oct 2012; Doug Goldstein <cardoe@gentoo.org> libvirt-0.10.2.ebuild,
   libvirt-0.10.2-r1.ebuild, libvirt-9999.ebuild:
