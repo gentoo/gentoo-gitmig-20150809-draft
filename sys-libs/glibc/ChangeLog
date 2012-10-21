@@ -1,5 +1,8 @@
 # ChangeLog for sys-libs/glibc
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.899 2012/10/20 21:50:26 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.900 2012/10/21 17:17:18 blueness Exp $
+
+  21 Oct 2012; Anthony G. Basile <blueness@gentoo.org> glibc-2.15-r3.ebuild:
+  stable arm, bug #404993
 
   20 Oct 2012; Anthony G. Basile <blueness@gentoo.org> glibc-2.15-r3.ebuild:
   stable ppc ppc64, bug #404993
