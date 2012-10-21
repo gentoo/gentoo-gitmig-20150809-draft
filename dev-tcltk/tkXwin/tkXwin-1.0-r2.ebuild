@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkXwin/tkXwin-1.0-r2.ebuild,v 1.7 2012/10/14 11:28:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkXwin/tkXwin-1.0-r2.ebuild,v 1.8 2012/10/21 17:06:50 armin76 Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ SRC_URI="http://beepcore-tcl.sourceforge.net/${P}.tgz"
 LICENSE="BSD"
 SLOT="0"
 IUSE="debug static-libs threads"
-KEYWORDS="~alpha amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ~ppc x86"
 
 DEPEND="
 	dev-lang/tk[threads?]
