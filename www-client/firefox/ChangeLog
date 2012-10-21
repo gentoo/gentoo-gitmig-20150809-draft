@@ -1,6 +1,13 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.178 2012/09/15 12:14:46 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.179 2012/10/21 16:14:38 anarchy Exp $
+
+*firefox-16.0.1 (21 Oct 2012)
+*firefox-10.0.9 (21 Oct 2012)
+
+  21 Oct 2012; <anarchy@gentoo.org> +firefox-10.0.9.ebuild,
+  -firefox-15.0.1.ebuild, +firefox-16.0.1.ebuild:
+  Security bump, bug #437780
 
   15 Sep 2012; Andreas Schuerch <nativemad@gentoo.org> firefox-10.0.7.ebuild:
   x86 stable, see bug 433383
