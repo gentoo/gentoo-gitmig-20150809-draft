@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libproxy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.88 2012/10/21 03:44:48 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.89 2012/10/21 03:57:33 tetromino Exp $
+
+  21 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  libproxy-0.4.10.ebuild, +libproxy-0.4.10-r1.ebuild:
+  Undo previous commit, re-add 0.4.10-r1: as pointed out by Chris Reffett,
+  adding the automoc dependency can change the set of installed files due to no
+  longer silently failing to build the kde plugin.
 
   21 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   libproxy-0.4.10.ebuild, -libproxy-0.4.10-r1.ebuild:
