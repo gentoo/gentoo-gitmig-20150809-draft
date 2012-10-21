@@ -10,7 +10,6 @@
 	<flag name="device-mapper">Add device-mapper support</flag>
 	<flag name="dmraid">Add dmraid support</flag>
 	<flag name="mdadm">Add mdadm support</flag>
-	<flag name="plymouth">Add plymouth support</flag>
 </use>
 </pkgmetadata>
 
