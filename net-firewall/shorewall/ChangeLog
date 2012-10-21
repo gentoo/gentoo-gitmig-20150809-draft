@@ -1,6 +1,12 @@
 # ChangeLog for net-firewall/shorewall
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.208 2012/10/12 18:14:12 constanze Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.209 2012/10/21 12:54:54 constanze Exp $
+
+*shorewall-4.5.8.2-r1 (21 Oct 2012)
+
+  21 Oct 2012; Constanze Hausner <constanze@gentoo.org>
+  +shorewall-4.5.8.2-r1.ebuild, files/shorewall.initd:
+  Added checkpath -d to init-script, see Bug #429750
 
 *shorewall-4.5.8.2 (12 Oct 2012)
 
