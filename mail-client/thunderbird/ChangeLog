@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.168 2012/09/15 12:18:54 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.169 2012/10/21 16:55:21 anarchy Exp $
+
+*thunderbird-16.0.1 (21 Oct 2012)
+*thunderbird-10.0.9 (21 Oct 2012)
+
+  21 Oct 2012; <anarchy@gentoo.org> +thunderbird-10.0.9.ebuild,
+  -thunderbird-15.0.1.ebuild, +thunderbird-16.0.1.ebuild:
+  Security bump, bug #437780
 
   15 Sep 2012; Andreas Schuerch <nativemad@gentoo.org>
   thunderbird-10.0.7.ebuild:
