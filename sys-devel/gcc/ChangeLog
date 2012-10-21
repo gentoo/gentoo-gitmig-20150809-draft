@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.909 2012/10/06 18:02:44 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.910 2012/10/21 17:58:23 vapier Exp $
+
+  21 Oct 2012; Mike Frysinger <vapier@gentoo.org> gcc-4.7.1.ebuild,
+  gcc-4.7.2.ebuild:
+  Make sure gfortran respects sysroot #433435 by Andrew Aladjev.
 
   06 Oct 2012; Magnus Granberg <zorry@gentoo.org> gcc-4.7.2.ebuild:
   Bump the piepatchset to 0.5.5
