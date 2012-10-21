@@ -1,0 +1,13 @@
+http://bugs.gentoo.org/433096
+https://projects.archlinux.org/svntogit/packages.git/plain/trunk/usbview-1.1-missing-usbfs.patch?h=packages/usbview
+
+--- usbtree.c
++++ usbtree.c
+@@ -397,7 +397,7 @@
+
+ void initialize_stuff (void)
+ {
+-	strcpy (devicesFile, "/proc/bus/usb/devices");
++	strcpy (devicesFile, "/sys/kernel/debug/usb/devices");
+	memset (&previousDevicesFile[0], 0x00, sizeof(previousDevicesFile));
+	previousChange = 0;

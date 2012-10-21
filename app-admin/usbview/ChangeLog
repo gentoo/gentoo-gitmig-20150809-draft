@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/usbview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usbview/ChangeLog,v 1.34 2012/05/03 18:02:23 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usbview/ChangeLog,v 1.35 2012/10/21 08:52:57 ssuominen Exp $
+
+*usbview-1.1-r1 (21 Oct 2012)
+
+  21 Oct 2012; Samuli Suominen <ssuominen@gentoo.org> +usbview-1.1-r1.ebuild,
+  +files/usbview-1.1-missing-usbfs.patch:
+  Use /sys instead of /proc to avoid missing usbfs wrt #433096 by
+  Gary E. Miller
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> usbview-1.1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
