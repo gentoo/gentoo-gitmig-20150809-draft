@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ttysnoop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ttysnoop/ChangeLog,v 1.3 2012/10/18 07:56:41 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ttysnoop/ChangeLog,v 1.4 2012/10/21 14:11:32 pinkbyte Exp $
+
+  21 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
+  Assign myself as a maintainer, remove previous maintainer by his request
 
   18 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> ttysnoop-0.12d.ebuild:
   Add MY_P variable and use it in SRC_URI and source directory for building
