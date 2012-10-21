@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-lame
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-lame/ChangeLog,v 1.111 2012/05/17 14:43:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-lame/ChangeLog,v 1.112 2012/10/21 08:58:32 maekke Exp $
+
+  21 Oct 2012; Markus Meier <maekke@gentoo.org>
+  gst-plugins-lame-0.10.18.ebuild:
+  add ~arm, bug #389433
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org>
   gst-plugins-lame-0.10.18.ebuild:
