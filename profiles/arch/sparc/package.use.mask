@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.115 2012/09/11 14:22:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.116 2012/10/21 17:28:22 armin76 Exp $
 
 # Raúl Porcel <armin76@gentoo.org> (08 Jul 2012)
 # x11-libs/qt-webkit doesn't seem to work
@@ -132,12 +132,6 @@ net-analyzer/wireshark doc-pdf
 # Justin Lecher <jlec@gentoo.org> (13 Aug 2010)
 # MKL not available on this arch
 media-gfx/povray mkl
-
-# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (29 Jul 2010)
-# Mask python3 for stable portage until python-3.x is marked stable.
-=sys-apps/portage-2.1.11* python3
-=sys-apps/portage-2.1.10* python3
-=sys-apps/portage-2.1.9* python3
 
 # Steve Arnold <nerdboy@gentoo.org> (12 Jun 2010)
 # masking for gdal (see bug 315659)

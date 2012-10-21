@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.90 2012/10/16 08:02:53 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.91 2012/10/21 17:28:21 armin76 Exp $
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (16 Oct 2012)
 # Missing keywords for spidermonkey
@@ -144,12 +144,6 @@ dev-java/icedtea systemtap
 # Raúl Porcel <armin76@gentoo.org> (19 Sep 2010)
 # dev-ruby/ffi fails to build
 dev-ruby/nokogiri ffi
-
-# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (29 Jul 2010)
-# Mask python3 for stable portage until python-3.x is marked stable.
-=sys-apps/portage-2.1.11* python3
-=sys-apps/portage-2.1.10* python3
-=sys-apps/portage-2.1.9* python3
 
 # Raúl Porcel <armin76@gentoo.org> (26 Jun 2010)
 # custom-optimization doesn't work on ia64

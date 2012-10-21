@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.174 2012/10/17 19:07:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.175 2012/10/21 17:28:21 armin76 Exp $
+
+  21 Oct 2012; Raúl Porcel <armin76@gentoo.org> package.use.mask:
+  Remove sys-apps/portage python3 p.use.mask now that python3 is stable
 
   17 Oct 2012; Markus Meier <maekke@gentoo.org> package.use.mask:
   package.use.mask net-libs/libproxy/libproxy-0.4.10[spidermonkey]

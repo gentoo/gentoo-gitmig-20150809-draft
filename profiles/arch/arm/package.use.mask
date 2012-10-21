@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.88 2012/10/17 19:07:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.89 2012/10/21 17:28:21 armin76 Exp $
 
 # Markus Meier <maekke@gentoo.org> (17 Oct 2012)
 # spidermonkey is broken on arm see bug #420471
@@ -122,11 +122,6 @@ net-libs/libproxy kde
 # Justin Lecher <jlec@gentoo.org> (14 Jen 2011)
 # x11-libs/fltk is not keyworded for arm
 app-misc/nut X
-
-# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (29 Jul 2010)
-# Mask python3 for stable portage until python-3.x is marked stable.
-=sys-apps/portage-2.1.10* python3
-=sys-apps/portage-2.1.9* python3
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (26 Jun 2010)
 # Inter-process communication doesn't work on anything except x86/amd64/arm

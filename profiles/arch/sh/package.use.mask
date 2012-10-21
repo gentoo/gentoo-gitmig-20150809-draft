@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sh/package.use.mask,v 1.25 2012/08/26 19:12:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sh/package.use.mask,v 1.26 2012/10/21 17:28:22 armin76 Exp $
 
 # Raúl Porcel <armin76@gentoo.org> (28 May 2012)
 # Needs x11-misc/lightdm(which also requires some other deps)
@@ -17,12 +17,6 @@ app-text/asciidoc test
 # Raúl Porcel <armin76@gentoo.org> (13 Feb 2011)
 # Fails to build, pending to send a report upstream
 media-libs/mesa gallium
-
-# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (29 Jul 2010)
-# Mask python3 for stable portage until python-3.x is marked stable.
-=sys-apps/portage-2.1.11* python3
-=sys-apps/portage-2.1.10* python3
-=sys-apps/portage-2.1.9* python3
 
 # Alon Bar-Lev <alonbl@gentoo.org> (24 Jan 2007)
 # pkcs11-helper is not keyworded
