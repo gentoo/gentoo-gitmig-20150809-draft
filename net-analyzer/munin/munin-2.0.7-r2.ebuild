@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.7-r2.ebuild,v 1.2 2012/10/18 19:06:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.7-r2.ebuild,v 1.3 2012/10/21 04:14:19 flameeyes Exp $
 
 EAPI=4
 
@@ -190,7 +190,7 @@ src_install() {
 
 	keepdir /var/lib/munin-async/.ssh /var/spool/munin-async
 	touch "${D}"/var/lib/munin-async/.ssh/authorized_keys
-	fowners munin-async /var/lib/munin-async/.ssh/{,authorized_keys}
+	fowners munin-async /var/lib/munin-async/.ssh/{,authorized_keys} /var/spool/munin-async
 	fperms 0700 /var/lib/munin-async/.ssh /var/spool/munin-async
 	fperms 0600 /var/lib/munin-async/.ssh/authorized_keys
 
