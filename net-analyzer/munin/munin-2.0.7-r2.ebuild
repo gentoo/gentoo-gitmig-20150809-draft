@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.7-r2.ebuild,v 1.3 2012/10/21 04:14:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.7-r2.ebuild,v 1.4 2012/10/21 04:29:51 flameeyes Exp $
 
 EAPI=4
 
@@ -163,6 +163,8 @@ src_install() {
 	newconfd "${FILESDIR}"/munin-node_conf.d_1.4.6-r2 munin-node
 
 	newinitd "${FILESDIR}"/munin-asyncd.init.2 munin-asyncd
+
+	newenvd "${FILESDIR}"/munin.env 50munin
 
 	dodoc README ChangeLog INSTALL
 	if use doc; then
