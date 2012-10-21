@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/pecl-memcached
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-memcached/ChangeLog,v 1.7 2012/09/05 11:27:22 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-memcached/ChangeLog,v 1.8 2012/10/21 09:13:49 maekke Exp $
+
+  21 Oct 2012; Markus Meier <maekke@gentoo.org> pecl-memcached-2.0.1.ebuild:
+  x86 stable, bug #427024
 
 *pecl-memcached-2.1.0-r1 (05 Sep 2012)
 

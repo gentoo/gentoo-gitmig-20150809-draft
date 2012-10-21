@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/igbinary
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/igbinary/ChangeLog,v 1.3 2012/01/15 17:16:02 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/igbinary/ChangeLog,v 1.4 2012/10/21 09:13:12 maekke Exp $
+
+  21 Oct 2012; Markus Meier <maekke@gentoo.org> igbinary-1.1.1-r1.ebuild:
+  x86 stable, bug #427024
 
   15 Jan 2012; Ole Markus With <olemarkus@gentoo.org> -igbinary-1.1.1.ebuild:
   Removing PHP 5.2 only ebuilds/packages

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/igbinary/igbinary-1.1.1-r1.ebuild,v 1.1 2011/11/11 19:59:16 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/igbinary/igbinary-1.1.1-r1.ebuild,v 1.2 2012/10/21 09:13:12 maekke Exp $
 
 EAPI="2"
 PHP_EXT_NAME="igbinary"
@@ -12,7 +12,7 @@ USE_PHP="php5-3 php5-4"
 
 inherit php-ext-source-r2
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 
 DESCRIPTION="A fast drop in replacement for the standard PHP serialize"
 HOMEPAGE="http://opensource.dynamoid.com/"
