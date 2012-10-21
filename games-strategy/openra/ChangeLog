@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/openra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/openra/ChangeLog,v 1.8 2012/07/29 11:57:32 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/openra/ChangeLog,v 1.9 2012/10/21 00:09:36 hasufell Exp $
+
+*openra-20121019 (21 Oct 2012)
+
+  21 Oct 2012; Julian Ospald <hasufell@gentoo.org> +openra-20121019.ebuild:
+  version bump
 
   29 Jul 2012; Julian Ospald <hasufell@gentoo.org> openra-20120630.ebuild:
   minor fix to elog
