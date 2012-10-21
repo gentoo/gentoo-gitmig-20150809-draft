@@ -1,6 +1,9 @@
 # ChangeLog for virtual/rubygems
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/ChangeLog,v 1.38 2012/07/25 20:19:12 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/ChangeLog,v 1.39 2012/10/21 18:23:48 armin76 Exp $
+
+  21 Oct 2012; Raúl Porcel <armin76@gentoo.org> rubygems-4.ebuild:
+  alpha/ia64/s390/sparc stable wrt #411507
 
   25 Jul 2012; Anthony G. Basile <blueness@gentoo.org> rubygems-4.ebuild:
   Stable ppc64, bug #411507
