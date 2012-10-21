@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-IniFiles/Config-IniFiles-2.710.0.ebuild,v 1.6 2012/05/21 17:29:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-IniFiles/Config-IniFiles-2.710.0.ebuild,v 1.7 2012/10/21 18:18:36 armin76 Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="A module for reading .ini-style configuration files"
 
 SLOT="0"
-KEYWORDS="alpha amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="test"
 
 RDEPEND="

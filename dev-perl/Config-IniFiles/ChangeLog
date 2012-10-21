@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Config-IniFiles
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-IniFiles/ChangeLog,v 1.70 2012/10/17 03:10:47 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-IniFiles/ChangeLog,v 1.71 2012/10/21 18:18:36 armin76 Exp $
+
+  21 Oct 2012; Raúl Porcel <armin76@gentoo.org>
+  Config-IniFiles-2.710.0.ebuild, Config-IniFiles-2.750.0.ebuild,
+  Config-IniFiles-2.760.0.ebuild:
+  Drop alpha keywords
 
   17 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   Config-IniFiles-2.760.0.ebuild:
