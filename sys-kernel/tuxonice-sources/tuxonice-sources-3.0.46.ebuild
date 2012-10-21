@@ -1,12 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/tuxonice-sources-3.0.39.ebuild,v 1.1 2012/09/15 10:13:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/tuxonice-sources-3.0.46.ebuild,v 1.1 2012/10/21 09:58:57 pacho Exp $
 
 EAPI="4"
-
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="28"
+K_GENPATCHES_VER="32"
 
 inherit kernel-2
 detect_version
