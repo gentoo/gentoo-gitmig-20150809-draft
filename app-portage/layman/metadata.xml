@@ -8,8 +8,10 @@
 	</maintainer>
 	<use>
 		<flag name="bazaar">Support <pkg>dev-vcs/bzr</pkg> based overlays</flag>
+		<flag name="cvs">Support <pkg>dev-vcs/cvs</pkg> based overlays</flag>
 		<flag name="darcs">Support <pkg>dev-vcs/darcs</pkg> based overlays</flag>
 		<flag name="git">Support <pkg>dev-vcs/git</pkg> based overlays</flag>
 		<flag name="mercurial">Support <pkg>dev-vcs/mercurial</pkg> based overlays</flag>
+		<flag name="subversion">Support <pkg>dev-vcs/subversion</pkg> based overlays</flag>
 	</use>
 </pkgmetadata>
