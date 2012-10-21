@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.639 2012/10/17 21:19:01 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.640 2012/10/21 09:02:13 maekke Exp $
+
+  21 Oct 2012; Markus Meier <maekke@gentoo.org> php-5.4.6.ebuild:
+  x86 stable, bug #427024
 
   17 Oct 2012;  <naota@gentoo.org> php-5.4.7.ebuild:
   Add ~x86-fbsd.
