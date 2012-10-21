@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-2.10.0.ebuild,v 1.3 2012/09/14 07:03:20 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-2.10.0.ebuild,v 1.4 2012/10/21 08:04:50 slyfox Exp $
 
 EAPI="4"
 
-CABAL_FEATURES="bin lib profile haddock hscolour"
+CABAL_FEATURES="bin lib profile haddock hscolour nocabaldep"
 inherit eutils haskell-cabal pax-utils
 
 DESCRIPTION="A documentation-generation tool for Haskell libraries"
@@ -47,7 +47,12 @@ src_configure() {
 	echo -e "#!/bin/sh\necho Haddock version ${PV}" > "${exe}"
 	chmod +x "${exe}"
 
-	haskell-cabal_src_configure --with-haddock="${exe}"
+	# we use 'nocabaldep' to use ghc's bundled Cabal
+	# as external one is likely to break our haddock
+	# (known to work on 1.16.0 and breaks on 1.16.0.1!)
+	haskell-cabal_src_configure \
+		--with-haddock="${exe}" \
+		--constraint="Cabal == $(cabal-version)"
 }
 
 src_compile() {

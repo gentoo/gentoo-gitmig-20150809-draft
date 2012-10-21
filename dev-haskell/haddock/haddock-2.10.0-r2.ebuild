@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-2.10.0-r1.ebuild,v 1.3 2012/09/14 07:03:20 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-2.10.0-r2.ebuild,v 1.1 2012/10/21 08:04:50 slyfox Exp $
 
 EAPI="4"
 
-CABAL_FEATURES="bin lib profile haddock hscolour"
+CABAL_FEATURES="bin lib profile haddock hscolour nocabaldep"
 inherit eutils haskell-cabal pax-utils
 
 DESCRIPTION="A documentation-generation tool for Haskell libraries"
@@ -33,6 +33,9 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-drop-tools.patch
 	# http://www.mail-archive.com/cvs-ghc@haskell.org/msg37186.html
 	epatch "${FILESDIR}"/${P}-dont-crash-on-unicode-strings-in-doc-comments.patch
+	# http://trac.haskell.org/haddock/ticket/202 fixed by upstream in ghc-7.4
+	# branch only (fix is not in master branch on 20120626)
+	epatch "${FILESDIR}/${P}-ticket-202.patch"
 
 	for f in Lex Parse; do
 		rm "src/Haddock/$f."*
@@ -49,7 +52,12 @@ src_configure() {
 	echo -e "#!/bin/sh\necho Haddock version ${PV}" > "${exe}"
 	chmod +x "${exe}"
 
-	haskell-cabal_src_configure --with-haddock="${exe}"
+	# we use 'nocabaldep' to use ghc's bundled Cabal
+	# as external one is likely to break our haddock
+	# (known to work on 1.16.0 and breaks on 1.16.0.1!)
+	haskell-cabal_src_configure \
+		--with-haddock="${exe}" \
+		--constraint="Cabal == $(cabal-version)"
 }
 
 src_compile() {
@@ -63,5 +71,5 @@ src_install() {
 	cabal_src_install
 	# haddock uses GHC-api to process TH source.
 	# TH requires GHCi which needs mmap('rwx') (bug #299709)
-	pax-mark -m "${ED}/usr/bin/${PN}"
+	pax-mark -m "${D}/usr/bin/${PN}"
 }

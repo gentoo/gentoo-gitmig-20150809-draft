@@ -1,6 +1,13 @@
 # ChangeLog for dev-haskell/haddock
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.93 2012/09/14 07:03:20 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.94 2012/10/21 08:04:50 slyfox Exp $
+
+*haddock-2.10.0-r2 (21 Oct 2012)
+
+  21 Oct 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/haddock-2.10.0-ticket-202.patch, +haddock-2.10.0-r2.ebuild,
+  -haddock-2.10.0-r1.ebuild, haddock-2.10.0.ebuild:
+  Fix build error against nonbundled cabal (bug #435726 by Alex and Kyle Blake).
 
   14 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> haddock-2.10.0-r1.ebuild,
   haddock-2.10.0.ebuild, haddock-2.4.2.ebuild, haddock-2.6.1.ebuild,
