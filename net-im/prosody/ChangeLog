@@ -1,6 +1,9 @@
 # ChangeLog for net-im/prosody
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/ChangeLog,v 1.19 2012/03/06 11:06:26 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/ChangeLog,v 1.20 2012/10/21 09:10:39 maekke Exp $
+
+  21 Oct 2012; Markus Meier <maekke@gentoo.org> prosody-0.8.2.ebuild:
+  x86 stable, bug #388797
 
   06 Mar 2012; Tobias Klausmann <klausman@gentoo.org> prosody-0.8.1.ebuild:
   Revert ill-advised, non-working blocker
