@@ -1,6 +1,13 @@
 # ChangeLog for app-cdr/xfburn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/ChangeLog,v 1.49 2012/07/03 16:38:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/ChangeLog,v 1.50 2012/10/21 09:26:14 ssuominen Exp $
+
+*xfburn-0.4.3_p20121021 (21 Oct 2012)
+
+  21 Oct 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +xfburn-0.4.3_p20121021.ebuild:
+  New snapshot which allows dropping the last patch and sed hackery from the
+  ebuild.
 
   03 Jul 2012; Brent Baude <ranger@gentoo.org> xfburn-0.4.3_p20120601.ebuild:
   Marking xfburn-0.4.3_p20120601 ppc for bug 424537
