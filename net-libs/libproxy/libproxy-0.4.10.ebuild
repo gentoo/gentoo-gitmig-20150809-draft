@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/libproxy-0.4.10.ebuild,v 1.7 2012/10/19 06:35:28 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/libproxy-0.4.10.ebuild,v 1.8 2012/10/21 03:44:48 tetromino Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2:2.6"
@@ -26,6 +26,7 @@ RDEPEND="gnome? ( >=dev-libs/glib-2.26:2 )
 	spidermonkey? ( >=dev-lang/spidermonkey-1.8.5 )
 	webkit? ( >=net-libs/webkit-gtk-1.6:3 )"
 DEPEND="${RDEPEND}
+	kde? ( dev-util/automoc )
 	virtual/pkgconfig"
 
 pkg_setup() {
