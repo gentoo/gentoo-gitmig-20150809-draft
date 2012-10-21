@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/knot/knot-1.1.0.ebuild,v 1.1 2012/09/04 09:28:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/knot/knot-1.1.0.ebuild,v 1.2 2012/10/21 15:42:31 scarabeus Exp $
 
 EAPI=4
 
@@ -54,9 +54,9 @@ src_install() {
 
 pkg_postinst() {
 	if [[ -n ${REPLACING_VERSIONS} ]] ; then
-		einfo "Remember to recompile all zones after update. Run:"
-		einfo "    # knotc stop"
-		einfo "    # knotc compile"
-		einfo "    # knotc start"
+		elog "Remember to recompile all zones after update. Run:"
+		elog "    # knotc stop"
+		elog "    # knotc compile"
+		elog "    # knotc start"
 	fi
 }
