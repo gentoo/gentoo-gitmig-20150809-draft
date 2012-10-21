@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/jemalloc-2.2.5-r1.ebuild,v 1.7 2012/08/07 19:36:27 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/jemalloc-2.2.5-r1.ebuild,v 1.8 2012/10/21 19:44:32 anarchy Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}/${PN}-strip-optimization.patch" \
 		"${FILESDIR}/${PN}-2.2.1-no-pprof.patch" \
-		"${FILESDIR}/${PN}-2.2.5_fix_html_install.patch" \
+		"${FILESDIR}/${PN}-2.2.5_fix_html_install.patch"
 
 	eautoreconf
 }

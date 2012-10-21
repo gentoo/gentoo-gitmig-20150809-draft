@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/jemalloc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/ChangeLog,v 1.21 2012/08/07 19:36:27 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/ChangeLog,v 1.22 2012/10/21 19:44:32 anarchy Exp $
+
+*jemalloc-3.1.0 (21 Oct 2012)
+
+  21 Oct 2012; <anarchy@gentoo.org> -jemalloc-2.2.5.ebuild,
+  +jemalloc-3.1.0.ebuild:
+  Version bump, multiple bug fixes
 
   07 Aug 2012; Anthony G. Basile <blueness@gentoo.org> jemalloc-2.2.5.ebuild,
   jemalloc-2.2.5-r1.ebuild, jemalloc-3.0.0.ebuild:
