@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.551 2012/10/20 14:07:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.552 2012/10/21 19:00:43 armin76 Exp $
+
+  21 Oct 2012; Raúl Porcel <armin76@gentoo.org> ruby-1.9.3_p194-r1.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #411507
 
   20 Oct 2012; Jeroen Roovers <jer@gentoo.org> ruby-1.8.7_p370.ebuild:
   Stable for HPPA (bug #434480).
