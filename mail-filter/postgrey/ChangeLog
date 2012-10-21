@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/postgrey
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.75 2012/09/06 17:38:25 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.76 2012/10/21 07:16:05 qnikst Exp $
+
+  21 Oct 2012; Alexander Vershilov <qnikst@gentoo.org> metadata.xml:
+  Fix maintainer manitest entry
 
 *postgrey-1.34-r1 (06 Sep 2012)
 

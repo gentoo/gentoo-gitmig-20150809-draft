@@ -7,7 +7,7 @@
 	 <name>Andreis Vinogradovs</name>
   </maintainer>
   <maintainer>
-	  <email>alexander.vershilov@gmail.com</email>
+	  <email>qnikst@gentoo.org</email>
 	  <name>Alexander Vershilov</name>
   </maintainer>
 <longdescription>Postgrey is a Postfix policy server implementing greylisting developed by David Schweikert at the ISG.EE.</longdescription>
