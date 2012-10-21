@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14146 2012/10/20 20:10:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14147 2012/10/21 07:47:40 tetromino Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,23 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (21 Oct 2012)
+# gstreamer-0.10.36 bump: temporary mask to allow gradual addition to tree;
+# will be unmasked once all compatible plugins are in place.
+~media-libs/gstreamer-0.10.36
+~media-libs/gst-plugins-base-0.10.36
+~media-plugins/gst-plugins-alsa-0.10.36
+~media-plugins/gst-plugins-cdparanoia-0.10.36
+~media-plugins/gst-plugins-gio-0.10.36
+~media-plugins/gst-plugins-gnomevfs-0.10.36
+~media-plugins/gst-plugins-libvisual-0.10.36
+~media-plugins/gst-plugins-ogg-0.10.36
+~media-plugins/gst-plugins-pango-0.10.36
+~media-plugins/gst-plugins-theora-0.10.36
+~media-plugins/gst-plugins-vorbis-0.10.36
+~media-plugins/gst-plugins-x-0.10.36
+~media-plugins/gst-plugins-xvideo-0.10.36
 
 # Michael Sterrett <mr_bones_@gentoo.org> (20 Oct 2012)
 # Last version from 2009 and superseded by snes9x[gtk]
