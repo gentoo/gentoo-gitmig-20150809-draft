@@ -1,9 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SDL/SDL-2.540.ebuild,v 1.1 2012/06/02 16:37:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SDL/SDL-2.540.ebuild,v 1.2 2012/10/21 03:10:08 mr_bones_ Exp $
 
 EAPI=4
-
 MODULE_AUTHOR=JTPALMER
 inherit perl-module
 
@@ -33,7 +32,7 @@ RDEPEND=">=dev-perl/Alien-SDL-1.434
 	virtual/jpeg
 	virtual/opengl
 	virtual/perl-ExtUtils-CBuilder
-	virtual/perl-Module-Build
+	>=virtual/perl-Module-Build-0.400.0
 	virtual/perl-Scalar-List-Utils
 	virtual/perl-Test-Simple"
 DEPEND=${RDEPEND}
