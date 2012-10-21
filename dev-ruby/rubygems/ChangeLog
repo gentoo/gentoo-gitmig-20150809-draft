@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubygems
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.199 2012/07/25 20:43:11 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.200 2012/10/21 18:55:38 armin76 Exp $
+
+  21 Oct 2012; Raúl Porcel <armin76@gentoo.org> rubygems-1.8.24.ebuild:
+  alpha/ia64/s390/sparc stable wrt #411507
 
   25 Jul 2012; Anthony G. Basile <blueness@gentoo.org> rubygems-1.8.24.ebuild:
   Stable ppc64, bug #411507
