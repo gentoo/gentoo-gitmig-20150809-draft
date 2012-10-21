@@ -10,4 +10,7 @@
 		<name>Elijah El Lazkani</name>
 		<description>Proxy maintainer. CC him on bugs</description>
 	</maintainer>
+	<use>
+		<flag name='systemd'>Support for <pkg>sys-apps/systemd</pkg></flag>
+	</use>
 </pkgmetadata>

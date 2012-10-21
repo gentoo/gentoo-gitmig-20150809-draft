@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/udevil
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/udevil/ChangeLog,v 1.13 2012/10/07 12:26:22 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/udevil/ChangeLog,v 1.14 2012/10/21 19:38:18 hasufell Exp $
+
+*udevil-0.3.4 (21 Oct 2012)
+
+  21 Oct 2012; Julian Ospald <hasufell@gentoo.org> +udevil-0.3.4.ebuild:
+  version bump
 
 *udevil-0.3.3-r1 (07 Oct 2012)
 
