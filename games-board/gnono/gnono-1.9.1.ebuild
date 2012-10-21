@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnono/gnono-1.9.1.ebuild,v 1.5 2009/11/23 14:32:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnono/gnono-1.9.1.ebuild,v 1.6 2012/10/21 10:33:28 pacho Exp $
 
-EAPI=2
+EAPI=4
 inherit autotools eutils gnome2-utils games
 
 DESCRIPTION="A rewrite for GNOME of the Windows card game WUNO"
@@ -21,12 +21,12 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch
+	epatch "${FILESDIR}"/${P}-glib-single-include.patch
 	eautoreconf
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog NEWS README TODO
+	default
 	prepgamesdirs
 }
 
