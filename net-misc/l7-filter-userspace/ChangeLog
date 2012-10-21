@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/l7-filter-userspace
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter-userspace/ChangeLog,v 1.15 2012/05/18 15:55:35 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter-userspace/ChangeLog,v 1.16 2012/10/21 08:54:04 maekke Exp $
+
+  21 Oct 2012; Markus Meier <maekke@gentoo.org>
+  l7-filter-userspace-0.12_beta1.ebuild:
+  add ~arm, bug #406791
 
   18 May 2012; Kacper Kowalik <xarthisius@gentoo.org>
   l7-filter-userspace-0.12_beta1.ebuild:

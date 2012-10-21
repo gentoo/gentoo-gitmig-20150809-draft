@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter-userspace/l7-filter-userspace-0.12_beta1.ebuild,v 1.2 2012/05/18 15:55:35 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter-userspace/l7-filter-userspace-0.12_beta1.ebuild,v 1.3 2012/10/21 08:54:04 maekke Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://l7-filter.clearfoundation.com/"
 SRC_URI="http://download.clearfoundation.com/l7-filter/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
 SLOT="0"
 
