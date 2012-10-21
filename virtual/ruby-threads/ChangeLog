@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ruby-threads
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-threads/ChangeLog,v 1.15 2012/09/29 15:20:14 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-threads/ChangeLog,v 1.16 2012/10/21 18:31:22 armin76 Exp $
+
+  21 Oct 2012; Raúl Porcel <armin76@gentoo.org> ruby-threads-1.ebuild:
+  sparc stable wrt #411507
 
   29 Sep 2012; Fabian Groffen <grobian@gentoo.org> ruby-threads-1.ebuild:
   Marked ~x64-macos
