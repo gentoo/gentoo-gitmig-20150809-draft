@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/postler
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/postler/ChangeLog,v 1.6 2012/02/14 19:36:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/postler/ChangeLog,v 1.7 2012/10/21 11:49:49 ssuominen Exp $
+
+  21 Oct 2012; Samuli Suominen <ssuominen@gentoo.org> postler-0.1.1.ebuild:
+  Keyword ~x86. Fix .desktop file validation. Missing sys-libs/db dependency
+  wrt #432324 by Anthony Parsons.
 
   14 Feb 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   ayatana is now global per http://archives.gentoo.org/gentoo-
