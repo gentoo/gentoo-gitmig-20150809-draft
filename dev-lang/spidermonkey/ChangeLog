@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/spidermonkey
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.83 2012/10/19 05:04:22 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.84 2012/10/21 19:31:15 anarchy Exp $
+
+  21 Oct 2012; <anarchy@gentoo.org> spidermonkey-1.8.5-r1.ebuild,
+  spidermonkey-1.8.7.ebuild, +files/spidermonkey-1.8.7-freebsd-pthreads.patch:
+  Add fix for freebsd, bug #438746
 
   19 Oct 2012; Andreas Schuerch <nativemad@gentoo.org>
   spidermonkey-1.8.5-r1.ebuild:
