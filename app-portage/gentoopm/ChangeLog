@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/gentoopm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.28 2012/10/15 07:14:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.29 2012/10/21 08:13:52 mgorny Exp $
+
+  21 Oct 2012; Michał Górny <mgorny@gentoo.org> gentoopm-0.2.6.ebuild:
+  Re-add ~x86-fbsd & ~amd64-fbsd after keywording python-exec.
 
 *gentoopm-0.2.6 (15 Oct 2012)
 
