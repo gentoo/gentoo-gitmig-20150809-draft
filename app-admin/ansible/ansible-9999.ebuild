@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-9999.ebuild,v 1.3 2012/09/10 16:28:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-9999.ebuild,v 1.4 2012/10/21 14:50:25 pinkbyte Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ EGIT_BRANCH="devel"
 inherit distutils git-2
 
 DESCRIPTION="Radically simple deployment, model-driven configuration management, and command execution framework"
-HOMEPAGE="http://ansible.github.com/"
+HOMEPAGE="http://ansible.cc/"
 SRC_URI=""
 
 KEYWORDS=""

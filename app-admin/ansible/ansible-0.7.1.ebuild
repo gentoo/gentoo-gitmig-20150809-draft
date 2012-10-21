@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-0.7.1.ebuild,v 1.1 2012/10/21 14:48:33 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-0.7.1.ebuild,v 1.2 2012/10/21 14:50:25 pinkbyte Exp $
 
 EAPI="4"
 
@@ -9,7 +9,7 @@ PYTHON_COMPAT="python2_6 python2_7"
 inherit distutils
 
 DESCRIPTION="Radically simple deployment, model-driven configuration management, and command execution framework"
-HOMEPAGE="http://ansible.github.com/"
+HOMEPAGE="http://ansible.cc/"
 SRC_URI="mirror://github/ansible/${PN}/${P}.tar.gz"
 
 KEYWORDS="~amd64 ~x86"
