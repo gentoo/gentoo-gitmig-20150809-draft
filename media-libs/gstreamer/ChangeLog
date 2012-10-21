@@ -1,6 +1,18 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.310 2012/05/12 16:24:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.311 2012/10/21 07:49:51 tetromino Exp $
+
+*gstreamer-0.10.36 (21 Oct 2012)
+
+  21 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gstreamer-0.10.32-r1.ebuild, gstreamer-0.10.35.ebuild,
+  +gstreamer-0.10.36.ebuild,
+  +files/gstreamer-0.10.36-disable-test_fail_abstract_new.patch:
+  Version bump (bug #418075); adds GstCollectPads2 API, miscellaneous
+  improvements and bugfixes. pax-mark gst-plugin-scanner, needed on hardened
+  systems with some plugins (bug #421579, thanks to Nikoli). Punt .la files
+  (it's 2012, packages depending on gstreamer should not need them by now).
+  Update license and homepage.
 
   12 May 2012; Alexis Ballier <aballier@gentoo.org> gstreamer-0.10.35.ebuild:
   keyword ~amd64-fbsd

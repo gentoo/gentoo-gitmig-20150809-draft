@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.10.32-r1.ebuild,v 1.11 2012/05/05 08:02:28 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.10.32-r1.ebuild,v 1.12 2012/10/21 07:49:51 tetromino Exp $
 
 EAPI=2
 
@@ -10,10 +10,10 @@ inherit eutils multilib versionator
 PV_MAJ_MIN=$(get_version_component_range '1-2')
 
 DESCRIPTION="Streaming media framework"
-HOMEPAGE="http://gstreamer.sourceforge.net"
+HOMEPAGE="http://gstreamer.freedesktop.org/"
 SRC_URI="http://${PN}.freedesktop.org/src/${PN}/${P}.tar.bz2"
 
-LICENSE="LGPL-2"
+LICENSE="LGPL-2+"
 SLOT=${PV_MAJ_MIN}
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="+introspection nls test"
