@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.244 2012/10/20 05:00:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.245 2012/10/22 02:57:05 flameeyes Exp $
+
+  22 Oct 2012; Diego E. Pettenò <flameeyes@gentoo.org> files/snmpd.init.2,
+  files/snmptrapd.init.2:
+  Remove need net line.
 
 *net-snmp-5.7.2 (20 Oct 2012)
 
