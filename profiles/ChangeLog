@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7048 2012/10/21 07:47:40 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7049 2012/10/22 06:51:16 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Oct 2012; Samuli Suominen <ssuominen@gentoo.org>
+  targets/desktop/package.use:
+  Change sys-fs/udev default USE flags in a way that USE="extras" is only
+  enabled for <sys-fs/udev-171.
 
   21 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.mask:
   Temporary mask to allow gradual addition of gstreamer-0.10.36 and its
