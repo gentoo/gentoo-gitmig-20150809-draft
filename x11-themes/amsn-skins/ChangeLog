@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/amsn-skins
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/amsn-skins/ChangeLog,v 1.20 2011/10/23 16:00:02 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/amsn-skins/ChangeLog,v 1.21 2012/10/22 10:06:05 radhermit Exp $
+
+  22 Oct 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove redundant maintainer from metadata.
 
   23 Oct 2011; Raúl Porcel <armin76@gentoo.org> amsn-skins-20040223.ebuild,
   amsn-skins-20061125.ebuild:
