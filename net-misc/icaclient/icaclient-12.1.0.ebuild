@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-12.1.0.ebuild,v 1.1 2012/08/01 22:08:29 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-12.1.0.ebuild,v 1.2 2012/10/22 21:44:38 fauli Exp $
 
 EAPI=4
 
@@ -142,6 +142,7 @@ src_install() {
 	insinto "${ICAROOT}"/keyboard
 	doins keyboard/*
 
+	rm -rf "${ICAROOT}"/keystore/cacerts
 	dosym /etc/ssl/certs "${ICAROOT}"/keystore/cacerts
 	#insinto "${ICAROOT}"/keystore/cacerts
 	#doins keystore/cacerts/*

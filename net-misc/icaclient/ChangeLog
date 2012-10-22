@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/icaclient
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.85 2012/08/01 22:08:29 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.86 2012/10/22 21:44:38 fauli Exp $
+
+  22 Oct 2012; Christian Faulhammer <fauli@gentoo.org> icaclient-12.1.0.ebuild:
+  still use system's cacert, bug 435246
 
 *icaclient-12.1.0 (01 Aug 2012)
 
