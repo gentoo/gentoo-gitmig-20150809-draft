@@ -2,10 +2,12 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>base-system</herd>
+<maintainer>
+	<email>base-system@gentoo.org</email>
+</maintainer>
 <maintainer restrict="&gt;=sys-boot/grub-2">
 	<email>floppym@gentoo.org</email>
 	<name>Mike Gilbert</name>
-	<description>Please CC on grub-2 bugs; assign to base-system</description>
 </maintainer>
 <use>
 	<flag name='device-mapper'>
