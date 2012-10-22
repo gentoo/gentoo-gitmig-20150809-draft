@@ -1,9 +1,17 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.400 2012/10/14 17:47:24 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.401 2012/10/22 07:09:47 ssuominen Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Samuli Suominen <ssuominen@gentoo.org> (22 Oct 2012)
+# This is temporary mask for >=sys-fs/udev-171 because we don't want
+# anyone to use USE=extras. It has the separate USE flags like
+# USE=gudev to handle separate features. This entry can be
+# removed once =sys-fs/udev-171* have been removed from tree.
+# Please do so without asking permission if you see them gone.
+>=sys-fs/udev-171 extras
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (12 Oct 2012)
 # Temporary flag to allow osmesa + win32 on amd64 for overlay users.

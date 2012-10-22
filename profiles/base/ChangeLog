@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.448 2012/10/14 17:47:24 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.449 2012/10/22 07:09:47 ssuominen Exp $
+
+  22 Oct 2012; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
+  Mask legacy USE flag "extras" for >=sys-fs/udev-171.
 
   14 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> package.use.mask:
   Unmask ipv6 USE-flag on dev-libs/libdnet - all rdeps was built successfully
