@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/gplcver
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gplcver/ChangeLog,v 1.9 2008/02/12 22:31:50 calchan Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gplcver/ChangeLog,v 1.10 2012/10/22 21:49:21 ago Exp $
+
+  22 Oct 2012; Agostino Sarubbo <ago@gentoo.org> gplcver-2.12a.ebuild:
+  Add ~amd64, wrt bug #439326
 
   12 Feb 2008; Denis Dupeyron <calchan@gentoo.org> gplcver-2.12a.ebuild:
   Fixed typos, thanks to Triffid Hunter (bug #209923).
@@ -40,4 +43,3 @@
 
   26 Jul 2004; Chris Bainbridge <chrb@gentoo.org> +gplcver-1.10j.ebuild:
   New package submitted by Brian Korsedal, bug #35370
-
