@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.92 2012/06/26 00:06:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.93 2012/10/22 19:00:52 mpagano Exp $
 
 # @ECLASS: linux-info.eclass
 # @MAINTAINER:
@@ -625,7 +625,14 @@ check_kernel_built() {
 	require_configured_kernel
 	get_version
 
-	if [ ! -f "${KV_OUT_DIR}/include/linux/version.h" ]
+	local versionh_path
+	if kernel_is -ge 3 7; then
+		versionh_path="include/generated/uapi/linux/version.h"
+	else
+		versionh_path="include/linux/version.h"
+	fi
+
+	if [ ! -f "${KV_OUT_DIR}/${versionh_path}" ]
 	then
 		eerror "These sources have not yet been prepared."
 		eerror "We cannot build against an unprepared tree."
