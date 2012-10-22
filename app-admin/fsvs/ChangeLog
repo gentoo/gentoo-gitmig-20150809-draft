@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/fsvs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fsvs/ChangeLog,v 1.6 2012/03/03 15:13:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fsvs/ChangeLog,v 1.7 2012/10/22 10:29:15 pinkbyte Exp $
+
+*fsvs-1.2.5 (22 Oct 2012)
+
+  22 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> +fsvs-1.2.5.ebuild:
+  Version bump
 
 *fsvs-1.2.4 (03 Mar 2012)
 
