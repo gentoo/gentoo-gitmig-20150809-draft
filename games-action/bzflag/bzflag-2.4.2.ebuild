@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-2.4.2.ebuild,v 1.3 2012/10/18 19:51:23 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-2.4.2.ebuild,v 1.4 2012/10/22 12:43:40 tupone Exp $
 
-EAPI=2
-inherit eutils flag-o-matic games
+EAPI=4
+inherit autotools eutils flag-o-matic games
 
 DESCRIPTION="3D tank combat simulator game"
 HOMEPAGE="http://www.bzflag.org/"
@@ -36,6 +36,11 @@ DEPEND=">=net-misc/curl-7.15.0
 	sdl? ( ${UIDEPEND} )
 	!sdl? ( !dedicated? ( ${UIDEPEND} ) )"
 
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-nocxxflags.patch
+	eautoreconf
+}
+
 src_configure() {
 	local myconf
 
@@ -47,15 +52,14 @@ src_configure() {
 	fi
 	egamesconf \
 		--disable-ccachetest \
-		--disable-dependency-tracking \
 		--without-regex \
 		$(use_enable upnp UPnP) \
 		${myconf}
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS TODO ChangeLog BUGS PORTING DEVINFO NEWS README*
+	default
+	dodoc PORTING DEVINFO
 
 	if use sdl || ! use dedicated ; then
 		newicon "data/bzflag-48x48.png" ${PN}.png
