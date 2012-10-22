@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.449 2012/10/22 07:09:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.450 2012/10/22 17:26:12 ssuominen Exp $
+
+  22 Oct 2012; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
+  Punt obsolete imagemagick mask.
 
   22 Oct 2012; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
   Mask legacy USE flag "extras" for >=sys-fs/udev-171.
