@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/linuxsms
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/linuxsms/ChangeLog,v 1.1 2005/05/15 18:49:12 mrness Exp $
+# Copyright 2002-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/linuxsms/ChangeLog,v 1.2 2012/10/22 13:49:54 ago Exp $
+
+  22 Oct 2012; Agostino Sarubbo <ago@gentoo.org> linuxsms-0.77.ebuild:
+  EAPI4
 
   15 May 2005; Alin Nastac <mrness@gentoo.org> metadata.xml:
   Moved from net-misc/linuxsms to app-mobilephone/linuxsms.
