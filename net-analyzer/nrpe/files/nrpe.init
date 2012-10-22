@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nrpe/files/nrpe.init,v 1.1 2012/08/23 23:07:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nrpe/files/nrpe.init,v 1.2 2012/10/22 02:35:52 flameeyes Exp $
 
 : ${CFGFILE:=/etc/nagios/nrpe.cfg}
 
@@ -20,7 +20,6 @@ pidfile=$(get_config pid_file)
 
 depend() {
     config ${CFGFILE}
-    need net
 }
 
 reload() {
