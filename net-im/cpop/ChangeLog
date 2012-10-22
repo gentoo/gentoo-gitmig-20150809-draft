@@ -1,6 +1,9 @@
 # ChangeLog for net-im/cpop
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/cpop/ChangeLog,v 1.6 2010/11/03 11:38:40 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/cpop/ChangeLog,v 1.7 2012/10/22 10:07:07 radhermit Exp $
+
+  22 Oct 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove redundant maintainer from metadata.
 
   03 Nov 2010; Samuli Suominen <ssuominen@gentoo.org> cpop-0.0.4.ebuild,
   +files/cpop-0.0.4-implicit-exit_memset_strlen.patch:
