@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.4.5_p20120320-r1.ebuild,v 1.5 2012/10/21 13:39:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.4.5_p20120320-r1.ebuild,v 1.6 2012/10/22 00:34:11 williamh Exp $
 
 EAPI=4
 inherit autotools eutils linux-info pam systemd
@@ -29,7 +29,7 @@ COMMON_DEPEND=">=dev-libs/dbus-glib-0.98
 	acl? (
 		sys-apps/acl
 		>=sys-fs/udev-146-r1
-		!<sys-fs/udev-171-r99[extras]
+		!<sys-fs/udev-171-r8[extras]
 		)
 	pam? ( virtual/pam )
 	policykit? ( >=sys-auth/polkit-0.104-r1 )"
