@@ -1,6 +1,16 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.114 2012/10/21 06:00:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.115 2012/10/22 01:57:41 flameeyes Exp $
+
+*munin-2.0.7-r5 (22 Oct 2012)
+
+  22 Oct 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/munin-node_init.d_2.0.7, +munin-2.0.7-r5.ebuild, -files/munin.env,
+  -munin-2.0.7-r4.ebuild, files/munin-asyncd.init.2:
+  Fix the owner of /var/spool/munin-async so that you can use the cmd protocol
+  for the master. Change the home for munin-async. Apply new patches to make
+  sure that the SSH sessions are non-interactive. Add support for using the -W
+  option to ssh. The new init script no longer 'need net'.
 
   21 Oct 2012; Diego E. Pettenò <flameeyes@gentoo.org>
   files/munin-asyncd.init.2:

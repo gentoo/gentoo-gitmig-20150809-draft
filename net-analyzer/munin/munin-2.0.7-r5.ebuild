@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.7-r4.ebuild,v 1.1 2012/10/21 05:39:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.7-r5.ebuild,v 1.1 2012/10/22 01:57:41 flameeyes Exp $
 
 EAPI=4
 
-PATCHSET=3
+PATCHSET=6
 
 inherit eutils user java-pkg-opt-2
 
@@ -94,7 +94,8 @@ S="${WORKDIR}/${MY_P}"
 pkg_setup() {
 	enewgroup munin
 	enewuser munin 177 -1 /var/lib/munin munin
-	enewuser munin-async -1 /usr/libexec/munin/munin-async /var/lib/munin-async
+	enewuser munin-async -1 /bin/sh /var/spool/munin-async
+	esethome munin-async /var/spool/munin-async
 	java-pkg-opt-2_pkg_setup
 }
 
@@ -139,19 +140,14 @@ src_install() {
 		/var/lib/munin/plugin-state
 		/etc/munin/plugin-conf.d
 		/etc/munin/plugins"
+	use minimal || dirs+=" /etc/munin/munin-conf.d/"
+
 	keepdir ${dirs}
 	fowners munin:munin ${dirs}
 
-	local install_targets="install-common-prime install-node-prime install-plugins-prime
-		install-async-prime"
-	use java && install_targets+=" install-plugins-java"
-
-	use minimal || install_targets=install
-	use minimal || dirs+=" /etc/munin/munin-conf.d/"
-
 	# parallel install doesn't work and it's also pointless to have this
 	# run in parallel for now (because it uses internal loops).
-	emake -j1 DESTDIR="${D}" ${install_targets}
+	emake -j1 DESTDIR="${D}" $(usex minimal install-minimal install)
 
 	# remove the plugins for non-Gentoo package managers
 	rm "${D}"/usr/libexec/munin/plugins/{apt{,_all},yum} || die
@@ -159,12 +155,15 @@ src_install() {
 	insinto /etc/munin/plugin-conf.d/
 	newins "${FILESDIR}"/${PN}-1.3.2-plugins.conf munin-node
 
-	newinitd "${FILESDIR}"/munin-node_init.d_2.0.5 munin-node
+	newinitd "${FILESDIR}"/munin-node_init.d_2.0.7 munin-node
 	newconfd "${FILESDIR}"/munin-node_conf.d_1.4.6-r2 munin-node
 
 	newinitd "${FILESDIR}"/munin-asyncd.init.2 munin-asyncd
 
-	newenvd "${FILESDIR}"/munin.env 50munin
+	cat - >> "${T}"/munin.env <<EOF
+CONFIG_PROTECT=/var/spool/munin-async/.ssh
+EOF
+	newenvd "${T}"/munin.env 50munin
 
 	dodoc README ChangeLog INSTALL
 	if use doc; then
@@ -190,11 +189,11 @@ src_install() {
 	sed -i -e 's:/var/run/munin/munin-node.pid:/var/run/munin-node.pid:' \
 		"${D}"/etc/munin/munin-node.conf || die
 
-	keepdir /var/lib/munin-async/.ssh /var/spool/munin-async
-	touch "${D}"/var/lib/munin-async/.ssh/authorized_keys
-	fowners munin-async /var/lib/munin-async/.ssh/{,authorized_keys} /var/spool/munin-async
-	fperms 0700 /var/lib/munin-async/.ssh /var/spool/munin-async
-	fperms 0600 /var/lib/munin-async/.ssh/authorized_keys
+	keepdir /var/spool/munin-async/.ssh
+	touch "${D}"/var/spool/munin-async/.ssh/authorized_keys
+	fowners munin-async:munin /var/spool/munin-async{,/.ssh/{,authorized_keys}}
+	fperms 0750 /var/spool/munin-async{,/.ssh}
+	fperms 0600 /var/spool/munin-async/.ssh/authorized_keys
 
 	if use minimal; then
 		# This requires the presence of munin-update, which is part of
@@ -217,7 +216,6 @@ src_install() {
 		cat - >> "${D}"/var/lib/munin/.ssh/config <<EOF
 IdentityFile /var/lib/munin/.ssh/id_ecdsa
 IdentityFile /var/lib/munin/.ssh/id_rsa
-StrictHostKeyChecking no
 EOF
 
 		fowners munin:munin /var/lib/munin/.ssh/{,config}
