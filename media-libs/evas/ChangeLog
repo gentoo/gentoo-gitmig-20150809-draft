@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/evas
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/evas/ChangeLog,v 1.14 2012/09/21 14:35:35 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/evas/ChangeLog,v 1.15 2012/10/22 13:33:11 tommy Exp $
+
+*evas-1.7.1 (22 Oct 2012)
+
+  22 Oct 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> -evas-1.2.1.ebuild,
+  +evas-1.7.1.ebuild:
+  Version bump, drop old
 
   21 Sep 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> evas-1.7.0.ebuild:
   Adjust dependency for gles USE flag, since mesa now has 2 flags for it, fixes
