@@ -1,9 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.3.4-r1.ebuild,v 1.12 2011/03/20 19:58:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.3.4-r1.ebuild,v 1.13 2012/10/22 22:01:21 fauli Exp $
 
 EAPI=2
-inherit elisp-common eutils flag-o-matic toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="A software package for computer-aided number theory"
 HOMEPAGE="http://pari.math.u-bordeaux.fr/"
@@ -18,18 +18,15 @@ SRC_URI="${SRC_COM}/unix/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ~mips ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="doc data emacs fltk gmp static-libs X"
+IUSE="doc data fltk gmp static-libs X"
 
 RDEPEND="sys-libs/readline
-	emacs? ( virtual/emacs )
 	fltk? ( x11-libs/fltk:1 )
 	gmp? ( dev-libs/gmp )
 	X? ( x11-libs/libX11 )
 	doc? ( X? ( x11-misc/xdg-utils ) )"
 DEPEND="${RDEPEND}
 	doc? ( virtual/latex-base )"
-
-SITEFILE=50${PN}-gentoo.el
 
 get_compile_dir() {
 	pushd "${S}/config" >& /dev/null
@@ -109,10 +106,6 @@ src_compile() {
 		VARTEXFONTS="${T}"/fonts emake docpdf \
 			|| die "Failed to generate docs"
 	fi
-	if use emacs; then
-		cd "${S}/emacs"
-		elisp-compile *.el || die "elisp-compile failed"
-	fi
 }
 
 src_test() {
@@ -121,12 +114,6 @@ src_test() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "Install failed"
-
-	if use emacs; then
-		elisp-install ${PN} emacs/*.el emacs/*.elc \
-			|| die "elisp-install failed"
-		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
-	fi
 
 	dodoc AUTHORS Announce.2.1 CHANGES README NEW MACHINES COMPAT
 	if use doc; then
@@ -148,12 +135,4 @@ src_install() {
 			DESTDIR="${D}" \
 			install-lib-sta || die "Install of static-libs library failed"
 	fi
-}
-
-pkg_postinst() {
-	use emacs && elisp-site-regen
-}
-
-pkg_postrm() {
-	use emacs && elisp-site-regen
 }
