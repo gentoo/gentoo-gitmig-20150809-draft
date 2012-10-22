@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/integrit
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/integrit/ChangeLog,v 1.23 2009/01/04 23:03:27 patrick Exp $
+# Copyright 2002-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/integrit/ChangeLog,v 1.24 2012/10/22 12:58:58 ago Exp $
+
+*integrit-4.1-r1 (22 Oct 2012)
+
+  22 Oct 2012; Agostino Sarubbo <ago@gentoo.org> +integrit-4.1-r1.ebuild:
+  New revision, EAPI4 + restrict test
 
 *integrit-4.1 (04 Jan 2009)
 
@@ -69,4 +74,3 @@
 
   23 Oct 2002; Zach Welch <zwelch@gentoo.org> : 
   Import from bug 9454, contributed by Danny Pansters <danny@ricin.com>
-
