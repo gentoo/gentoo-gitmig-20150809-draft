@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eet/eet-1.6.1.ebuild,v 1.1 2012/06/16 09:28:05 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eet/eet-1.7.1.ebuild,v 1.1 2012/10/22 13:18:32 tommy Exp $
 
 EAPI=2
 
@@ -10,10 +10,10 @@ DESCRIPTION="E file chunk reading/writing library"
 HOMEPAGE="http://trac.enlightenment.org/e/wiki/Eet"
 SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE="debug examples gnutls ssl static-libs test"
 
-RDEPEND=">=dev-libs/eina-1.2.0
+RDEPEND=">=dev-libs/eina-1.7.0
 	virtual/jpeg
 	sys-libs/zlib
 	gnutls? ( net-libs/gnutls )
@@ -50,11 +50,9 @@ src_configure() {
 	fi
 
 	export MY_ECONF="
-		$(use_enable !debug amalgamation)
 		$(use_enable debug assert)
 		$(use_enable doc)
 		$(use_enable test tests)
-		$(use_enable test coverage)
 		${SSL_FLAGS}
 		${MY_ECONF}"
 
