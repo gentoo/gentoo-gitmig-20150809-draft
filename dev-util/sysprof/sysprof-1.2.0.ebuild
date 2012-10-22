@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sysprof/sysprof-1.2.0.ebuild,v 1.1 2012/09/18 09:59:26 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sysprof/sysprof-1.2.0.ebuild,v 1.2 2012/10/22 03:52:58 tetromino Exp $
 
 EAPI="4"
 
@@ -15,10 +15,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=dev-libs/glib-2.6:2
+RDEPEND="dev-libs/atk
+	>=dev-libs/glib-2.6:2
+	>=gnome-base/libglade-2:2.0
+	x11-libs/gdk-pixbuf:2
 	>=x11-libs/gtk+-2.6:2
-	x11-libs/pango
-	>=gnome-base/libglade-2:2.0"
+	x11-libs/pango"
 DEPEND="${RDEPEND}
 	>=sys-kernel/linux-headers-2.6.32
 	virtual/pkgconfig"
