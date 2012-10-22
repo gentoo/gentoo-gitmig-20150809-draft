@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/naev/naev-0.5.3.ebuild,v 1.4 2012/06/08 11:42:13 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/naev/naev-0.5.3.ebuild,v 1.5 2012/10/22 02:57:37 mr_bones_ Exp $
 
 EAPI=2
 inherit gnome2-utils games
@@ -53,8 +53,7 @@ src_install() {
 
 	local res
 	for res in 16 32 64 128; do
-		insinto /usr/share/icons/hicolor/${res}x${res}/apps
-		newins extras/logos/logo${res}.png naev.png || die
+		newicon -s ${res} extras/logos/logo${res}.png naev.png || die
 	done
 
 	rm -f "${D}"/usr/share/doc/${PF}/LICENSE

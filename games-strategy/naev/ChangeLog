@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/naev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/naev/ChangeLog,v 1.16 2012/06/30 10:54:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/naev/ChangeLog,v 1.17 2012/10/22 02:57:37 mr_bones_ Exp $
+
+  22 Oct 2012; Michael Sterrett <mr_bones_@gentoo.org> naev-0.5.3.ebuild:
+  use newicon
 
   30 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> -naev-0.5.0.ebuild,
   -files/naev-0.5.0-libpng15.patch:
@@ -67,4 +70,3 @@
 
   18 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> +naev-0.4.2.ebuild:
   Initial commit.
-
