@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/opendylan/opendylan-2011.1-r1.ebuild,v 1.4 2012/08/22 16:00:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/opendylan/opendylan-2011.1-r1.ebuild,v 1.5 2012/10/22 05:18:32 patrick Exp $
 EAPI=4
 
 inherit autotools
@@ -28,7 +28,7 @@ DEPEND="app-arch/unzip
 	dev-lang/perl
 	dev-perl/XML-Parser
 	|| ( dev-lang/opendylan-bin dev-lang/opendylan )
-	x86? ( dev-libs/mps )"
+	x86? ( <dev-libs/mps-1.108 )"
 RDEPEND="${DEPEND}"
 
 # on x86 there's a dependency on mps, but the build system is a bit ... hmm ...
