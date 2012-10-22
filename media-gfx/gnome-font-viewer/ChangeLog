@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gnome-font-viewer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-font-viewer/ChangeLog,v 1.1 2012/05/05 07:56:21 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-font-viewer/ChangeLog,v 1.2 2012/10/22 18:03:27 tetromino Exp $
+
+  22 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-font-viewer-3.4.0.ebuild:
+  Block on gnome-control-center-2 due to file collision (bug #438014, thanks to
+  fryvil). Update license.
 
 *gnome-font-viewer-3.4.0 (05 May 2012)
 
