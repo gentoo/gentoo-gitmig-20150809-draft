@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ecore-1.2.1.ebuild,v 1.2 2012/08/18 03:11:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ecore-1.7.1.ebuild,v 1.1 2012/10/22 13:43:20 tommy Exp $
 
 EAPI=2
 
@@ -9,17 +9,17 @@ inherit virtualx enlightenment eutils
 DESCRIPTION="Enlightenment's core event abstraction layer and OS abstraction layer"
 SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE="ares curl directfb +evas fbcon glib gnutls +inotify ipv6 opengl sdl ssl static-libs +threads tslib +X xcb xinerama xprint xscreensaver"
 
-RDEPEND=">=dev-libs/eina-1.2.0
+RDEPEND=">=dev-libs/eina-1.7.0
 	ares? ( net-dns/c-ares )
 	glib? ( dev-libs/glib )
 	curl? ( net-misc/curl )
 	gnutls? ( net-libs/gnutls )
 	!gnutls? ( ssl? ( dev-libs/openssl ) )
 	evas? (
-		>=media-libs/evas-1.2.0a[directfb?,fbcon?,opengl?,sdl?,X?,xcb?]
+		>=media-libs/evas-1.7.0[directfb?,fbcon?,opengl?,X?,xcb?]
 		opengl? ( virtual/opengl )
 	)
 	directfb? ( >=dev-libs/DirectFB-0.9.16 )
@@ -44,10 +44,6 @@ DEPEND="${RDEPEND}"
 
 #tests depend on temp data from eina WORKDIR
 RESTRICT=test
-
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-glibc-2.16.patch #426812
-}
 
 src_configure() {
 	local SSL_FLAGS="" EVAS_FLAGS="" X_FLAGS=""
