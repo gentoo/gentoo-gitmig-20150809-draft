@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/files/radius.init-r3,v 1.1 2012/09/30 07:01:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/files/radius.init-r3,v 1.2 2012/10/22 02:58:59 flameeyes Exp $
 
 command=/usr/sbin/radiusd
 command_args="${RADIUSD_OPTS}"
@@ -9,7 +9,6 @@ pidfile="${pidfile:-/var/run/radiusd/radiusd.pid}"
 extra_started_commands="reload"
 
 depend() {
-    need net
     use dns
 }
 
