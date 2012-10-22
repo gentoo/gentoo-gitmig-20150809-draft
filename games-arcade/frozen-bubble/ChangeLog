@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/frozen-bubble
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/ChangeLog,v 1.50 2012/09/21 13:18:42 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/ChangeLog,v 1.51 2012/10/22 04:09:37 mr_bones_ Exp $
+
+  22 Oct 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  frozen-bubble-2.2.1_beta1.ebuild:
+  use newicon
 
   21 Sep 2012; Tupone Alfredo <tupone@gentoo.org>
   frozen-bubble-2.2.1_beta1.ebuild:
