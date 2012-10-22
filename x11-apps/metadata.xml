@@ -19,5 +19,9 @@
 		Kategoria x11-apps zawiera programy wchodzące w skład środowiska
 		graficznego X.Org X11.
 	</longdescription>
+	<longdescription lang="es">
+		La categoría x11-apps contiene aplicaciones que se distribuyen como
+		parte de X.Org X11.
+	</longdescription>
 </catmetadata>
 
