@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ucommon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucommon/ChangeLog,v 1.9 2012/10/21 13:23:53 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucommon/ChangeLog,v 1.10 2012/10/22 16:44:30 ago Exp $
+
+  22 Oct 2012; Agostino Sarubbo <ago@gentoo.org> ucommon-5.2.2-r3.ebuild:
+  Stable for AMD64, wrt bug #438284
 
   21 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> ucommon-5.2.2-r3.ebuild:
   Fix for bug #438354, thanks to Anthony Basile
