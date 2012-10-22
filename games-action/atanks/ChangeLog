@@ -1,6 +1,11 @@
 # ChangeLog for games-action/atanks
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/ChangeLog,v 1.78 2012/07/16 19:07:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/ChangeLog,v 1.79 2012/10/22 05:31:14 mr_bones_ Exp $
+
+*atanks-5.6 (22 Oct 2012)
+
+  22 Oct 2012; Michael Sterrett <mr_bones_@gentoo.org> +atanks-5.6.ebuild:
+  version bump
 
   16 Jul 2012; Michael Sterrett <mr_bones_@gentoo.org> -atanks-5.2.ebuild,
   -files/atanks-5.2-build.patch:
@@ -366,4 +371,3 @@
 
   31 Jul 2003; Michael Sterrett <msterret@gentoo.org> atanks-0.9.8b.ebuild:
   initial commit.  ebuild submitted by Rob Cakebread via bug 25606 (modified)
-
