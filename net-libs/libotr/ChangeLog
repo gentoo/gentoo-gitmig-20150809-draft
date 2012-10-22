@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libotr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libotr/ChangeLog,v 1.40 2012/10/18 16:14:14 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libotr/ChangeLog,v 1.41 2012/10/22 10:10:21 radhermit Exp $
+
+  22 Oct 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove redundant maintainer from metadata.
 
 *libotr-4.0.0 (18 Oct 2012)
 
