@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usbview/usbview-1.1-r1.ebuild,v 1.1 2012/10/21 08:52:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usbview/usbview-2.0.ebuild,v 1.1 2012/10/22 23:18:24 jer Exp $
 
 EAPI=4
 inherit eutils
@@ -19,10 +19,6 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
-
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-missing-usbfs.patch
-}
 
 src_install() {
 	default
