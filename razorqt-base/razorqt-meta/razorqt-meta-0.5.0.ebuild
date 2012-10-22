@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/razorqt-base/razorqt-meta/razorqt-meta-0.5.0.ebuild,v 1.1 2012/10/15 10:32:00 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/razorqt-base/razorqt-meta/razorqt-meta-0.5.0.ebuild,v 1.2 2012/10/22 09:53:51 yngwin Exp $
 
 EAPI=4
 
@@ -44,4 +44,7 @@ RDEPEND="~razorqt-base/libqtxdg-${PV}
 		x11-wm/sawfish
 		x11-wm/windowmaker
 	)
+	!<razorqt-base/razorqt-lightdm-greeter-0.5.0
+	!<razorqt-base/razorqt-meta-0.5.0
+	!x11-misc/lightdm-razorqt-greeter
 	!x11-wm/razorqt"
