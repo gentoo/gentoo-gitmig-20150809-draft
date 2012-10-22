@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/edje
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/edje/ChangeLog,v 1.17 2012/09/10 23:30:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/edje/ChangeLog,v 1.18 2012/10/22 14:15:01 tommy Exp $
+
+*edje-1.7.1 (22 Oct 2012)
+
+  22 Oct 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> -edje-1.2.1.ebuild,
+  +edje-1.7.1.ebuild:
+  Version bump, drop old
 
   10 Sep 2012; Mike Frysinger <vapier@gentoo.org> edje-1.7.0.ebuild:
   Add arm love.
