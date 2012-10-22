@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/spass
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/spass/ChangeLog,v 1.4 2012/08/10 05:58:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/spass/ChangeLog,v 1.5 2012/10/22 10:20:57 gienah Exp $
+
+  22 Oct 2012; Mark Wright <gienah@gentoo.org> spass-3.7.ebuild:
+  Thanks to Imre Vadasz for reporting bug #439178 and providing the fix, -z
+  should be -n.
 
   10 Aug 2012; Justin Lecher <jlec@gentoo.org> spass-3.7.ebuild:
   Clean residuals from another fix solution

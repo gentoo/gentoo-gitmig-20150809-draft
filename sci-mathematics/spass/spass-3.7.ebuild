@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/spass/spass-3.7.ebuild,v 1.3 2012/08/10 05:58:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/spass/spass-3.7.ebuild,v 1.4 2012/10/22 10:20:57 gienah Exp $
 
 EAPI=4
 
@@ -40,7 +40,7 @@ src_install() {
 
 	if use isabelle; then
 		ISABELLE_HOME="$(isabelle getenv ISABELLE_HOME | cut -d'=' -f 2)"
-		[[ -z "${ISABELLE_HOME}" ]] || die "ISABELLE_HOME empty"
+		[[ -n "${ISABELLE_HOME}" ]] || die "ISABELLE_HOME empty"
 
 		dodir "${ISABELLE_HOME}/contrib/${PN}-${PV}/etc"
 		cat <<- EOF >> "${S}/settings"
