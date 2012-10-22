@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gift-fasttrack
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-fasttrack/ChangeLog,v 1.41 2012/05/04 06:33:35 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-fasttrack/ChangeLog,v 1.42 2012/10/22 10:15:26 radhermit Exp $
+
+  22 Oct 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove redundant maintainer from metadata.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org>
   gift-fasttrack-0.8.9-r1.ebuild:
