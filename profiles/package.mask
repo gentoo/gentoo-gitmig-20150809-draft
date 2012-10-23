@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14148 2012/10/22 12:21:47 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14149 2012/10/23 04:41:49 tetromino Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -51,6 +51,64 @@ net-misc/libteam
 ~media-plugins/gst-plugins-vorbis-0.10.36
 ~media-plugins/gst-plugins-x-0.10.36
 ~media-plugins/gst-plugins-xvideo-0.10.36
+~media-libs/gst-plugins-good-0.10.31
+~media-plugins/gst-plugins-annodex-0.10.31
+~media-plugins/gst-plugins-dv-0.10.31
+~media-plugins/gst-plugins-flac-0.10.31
+~media-plugins/gst-plugins-gconf-0.10.31
+~media-plugins/gst-plugins-jack-0.10.31
+~media-plugins/gst-plugins-jpeg-0.10.31
+~media-plugins/gst-plugins-libpng-0.10.31
+~media-plugins/gst-plugins-oss-0.10.31
+~media-plugins/gst-plugins-pulse-0.10.31
+~media-plugins/gst-plugins-raw1394-0.10.31
+~media-plugins/gst-plugins-shout2-0.10.31
+~media-plugins/gst-plugins-soup-0.10.31
+~media-plugins/gst-plugins-speex-0.10.31
+~media-plugins/gst-plugins-taglib-0.10.31
+~media-plugins/gst-plugins-v4l2-0.10.31
+~media-plugins/gst-plugins-wavpack-0.10.31
+~media-plugins/gst-plugins-ximagesrc-0.10.31
+~media-libs/gst-plugins-bad-0.10.23
+~media-plugins/gst-plugins-assrender-0.10.23
+~media-plugins/gst-plugins-dts-0.10.23
+~media-plugins/gst-plugins-dvb-0.10.23
+~media-plugins/gst-plugins-faac-0.10.23
+~media-plugins/gst-plugins-faad-0.10.23
+~media-plugins/gst-plugins-freeverb-0.10.23
+~media-plugins/gst-plugins-gsm-0.10.23
+~media-plugins/gst-plugins-ladspa-0.10.23
+~media-plugins/gst-plugins-libmms-0.10.23
+~media-plugins/gst-plugins-mimic-0.10.23
+~media-plugins/gst-plugins-modplug-0.10.23
+~media-plugins/gst-plugins-mpeg2enc-0.10.23
+~media-plugins/gst-plugins-mplex-0.10.23
+~media-plugins/gst-plugins-musepack-0.10.23
+~media-plugins/gst-plugins-mythtv-0.10.23
+~media-plugins/gst-plugins-neon-0.10.23
+~media-plugins/gst-plugins-ofa-0.10.23
+~media-plugins/gst-plugins-openal-0.10.23
+~media-plugins/gst-plugins-opus-0.10.23
+~media-plugins/gst-plugins-resindvd-0.10.23
+~media-plugins/gst-plugins-rtmp-0.10.23
+~media-plugins/gst-plugins-schroedinger-0.10.23
+~media-plugins/gst-plugins-soundtouch-0.10.23
+~media-plugins/gst-plugins-spandsp-0.10.23
+~media-plugins/gst-plugins-teletextdec-0.10.23
+~media-plugins/gst-plugins-voaacenc-0.10.23
+~media-plugins/gst-plugins-voamrwbenc-0.10.23
+~media-plugins/gst-plugins-vp8-0.10.23
+~media-plugins/gst-plugins-xvid-0.10.23
+~media-libs/gst-plugins-ugly-0.10.19
+~media-plugins/gst-plugins-a52dec-0.10.19
+~media-plugins/gst-plugins-cdio-0.10.19
+~media-plugins/gst-plugins-dvdread-0.10.19
+~media-plugins/gst-plugins-lame-0.10.19
+~media-plugins/gst-plugins-mad-0.10.19
+~media-plugins/gst-plugins-mpeg2dec-0.10.19
+~media-plugins/gst-plugins-sidplay-0.10.19
+~media-plugins/gst-plugins-twolame-0.10.19
+~media-plugins/gst-plugins-x264-0.10.19
 
 # Michael Sterrett <mr_bones_@gentoo.org> (20 Oct 2012)
 # Last version from 2009 and superseded by snes9x[gtk]
