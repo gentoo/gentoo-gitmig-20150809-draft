@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/sleuthkit-3.2.3.ebuild,v 1.7 2012/07/03 20:15:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/sleuthkit-3.2.3.ebuild,v 1.8 2012/10/23 09:15:55 radhermit Exp $
 
 EAPI="4"
 
@@ -16,7 +16,10 @@ KEYWORDS="amd64 hppa ppc x86"
 IUSE="aff ewf static-libs"
 
 DEPEND="dev-db/sqlite:3
-	ewf? ( app-forensics/libewf[-ewf2] )
+	ewf? ( || (
+		<app-forensics/libewf-20120813[-ewf2]
+		>=app-forensics/libewf-20120813[ewf]
+	) )
 	aff? ( app-forensics/afflib )"
 RDEPEND="${DEPEND}
 	dev-perl/DateManip"
