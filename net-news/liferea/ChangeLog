@@ -1,6 +1,6 @@
 # ChangeLog for net-news/liferea
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.230 2012/10/21 18:27:56 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.231 2012/10/23 17:06:56 tove Exp $
 
 *liferea-1.9.6_p20121021 (21 Oct 2012)
 
@@ -10,18 +10,18 @@
 
 *liferea-1.8.8 (15 Sep 2012)
 
-  15 Sep 2012; VÃ­ctor Ostorga <vostorga@gentoo.org> -liferea-1.8.4.ebuild,
+  15 Sep 2012; Víctor Ostorga <vostorga@gentoo.org> -liferea-1.8.4.ebuild,
   -liferea-1.8.7.ebuild, +liferea-1.8.8.ebuild:
   Dropping old versions, version bump to upstream's stable liferea version
 
-  15 Sep 2012; VÃ­ctor Ostorga <vostorga@gentoo.org>
+  15 Sep 2012; Víctor Ostorga <vostorga@gentoo.org>
   liferea-1.9.4_p20120821.ebuild:
   Fixing missing gsettings-desktop-schemas dependency, bug #432510
 
 *liferea-1.9.4_p20120821 (21 Aug 2012)
 *liferea-1.8.7 (21 Aug 2012)
 
-  21 Aug 2012; VÃ­ctor Ostorga <vostorga@gentoo.org> -liferea-1.6.5.ebuild,
+  21 Aug 2012; Víctor Ostorga <vostorga@gentoo.org> -liferea-1.6.5.ebuild,
   -files/liferea-1.6.5-libnotify-0.7.patch, -liferea-1.6.6b.ebuild,
   -files/liferea-1.6.6b-libnotify-0.7.patch, +liferea-1.8.7.ebuild,
   +liferea-1.9.4_p20120821.ebuild:
@@ -47,18 +47,18 @@
 
 *liferea-1.8.5 (20 Apr 2012)
 
-  20 Apr 2012; VÃ­ctor Ostorga <vostorga@gentoo.org> -liferea-1.7.6-r1.ebuild,
+  20 Apr 2012; Víctor Ostorga <vostorga@gentoo.org> -liferea-1.7.6-r1.ebuild,
   -liferea-1.8_rc1.ebuild, -liferea-1.8.3.ebuild, +liferea-1.8.5.ebuild:
   Version bump to 1.8.5 . Cleaning up old ebuilds
 
 *liferea-1.8.4 (28 Mar 2012)
 
-  28 Mar 2012; VÃ­ctor Ostorga <vostorga@gentoo.org> +liferea-1.8.4.ebuild:
+  28 Mar 2012; Víctor Ostorga <vostorga@gentoo.org> +liferea-1.8.4.ebuild:
   Version bump to 1.8.4
 
 *liferea-1.8.3 (26 Mar 2012)
 
-  26 Mar 2012; VÃ­ctor Ostorga <vostorga@gentoo.org> +liferea-1.8.3.ebuild:
+  26 Mar 2012; Víctor Ostorga <vostorga@gentoo.org> +liferea-1.8.3.ebuild:
   Upstream stable 1.8.3 release, which fixes sqlite3 performance
 
   08 Mar 2012; Brent Baude <ranger@gentoo.org> liferea-1.8.0.ebuild:
@@ -67,7 +67,7 @@
   28 Feb 2012; Brent Baude <ranger@gentoo.org> liferea-1.8.0.ebuild:
   Marking liferea-1.8.0 ppc for bug 403901
 
-  15 Feb 2012; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org> liferea-1.8.0.ebuild:
+  15 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org> liferea-1.8.0.ebuild:
   Stable on amd64. Wrt bug#403901.
 
   14 Feb 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
@@ -76,7 +76,7 @@
 
 *liferea-1.8.0 (13 Dec 2011)
 
-  13 Dec 2011; VÃ­ctor Ostorga <vostorga@gentoo.org> +liferea-1.8.0.ebuild:
+  13 Dec 2011; Víctor Ostorga <vostorga@gentoo.org> +liferea-1.8.0.ebuild:
   Version bump to 1.8.0, bug #394451. This is now upstream's current stable
   branch
 
@@ -86,7 +86,7 @@
 
 *liferea-1.8_rc1 (26 Sep 2011)
 
-  26 Sep 2011; VÃ­ctor Ostorga <vostorga@gentoo.org> -liferea-1.7.4.ebuild,
+  26 Sep 2011; Víctor Ostorga <vostorga@gentoo.org> -liferea-1.7.4.ebuild,
   +liferea-1.8_rc1.ebuild:
   Version bump to 1.8_rc1, fixes #381117 and #384431
 
@@ -97,23 +97,23 @@
   Reverting upstream commit 640eff3e418b786468208643d2f93718f7fa9da0 to avoid
   always unread feeds, bug #381117
 
-  09 Sep 2011; VÃ­ctor Ostorga <vostorga@gentoo.org>
+  09 Sep 2011; Víctor Ostorga <vostorga@gentoo.org>
   files/liferea-1.6.6b-libnotify-0.7.patch:
   Dropping libnotify <= 0.7.3 check on configure.ac
 
-  28 Aug 2011; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org> liferea-1.7.6.ebuild:
+  28 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org> liferea-1.7.6.ebuild:
   Trailing whitespace fix.
 
 *liferea-1.7.6 (28 Aug 2011)
 
-  28 Aug 2011; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org> +liferea-1.7.6.ebuild,
+  28 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org> +liferea-1.7.6.ebuild,
   metadata.xml:
   Version bump to latest. Sort useflags to reflect configure options. Fixes bug
   #366333.
 
 *liferea-1.6.6b (08 Aug 2011)
 
-  08 Aug 2011; VÃ­ctor Ostorga <vostorga@gentoo.org> +liferea-1.6.6b.ebuild,
+  08 Aug 2011; Víctor Ostorga <vostorga@gentoo.org> +liferea-1.6.6b.ebuild,
   +files/liferea-1.6.6b-libnotify-0.7.patch:
   Version bump upstream stable liferea
 
@@ -131,7 +131,7 @@
   21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> liferea-1.6.5.ebuild:
   ppc/ppc64 stable wrt #355345
 
-  20 Mar 2011; RaÃºl Porcel <armin76@gentoo.org> liferea-1.6.4.ebuild,
+  20 Mar 2011; Raúl Porcel <armin76@gentoo.org> liferea-1.6.4.ebuild,
   liferea-1.6.5.ebuild, liferea-1.7.4.ebuild:
   Drop sparc keywords
 
@@ -148,7 +148,7 @@
   11 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> liferea-1.6.4.ebuild:
   ppc stable wrt #338934, keyword ~ppc64 wrt #279241
 
-  04 Jan 2011; VÃ­ctor Ostorga <vostorga@gentoo.org> liferea-1.7.4.ebuild:
+  04 Jan 2011; Víctor Ostorga <vostorga@gentoo.org> liferea-1.7.4.ebuild:
   Disabling MPROTECT PaX feature to avoid SIGSEGVs on startup, patch thanks
   to Sergei Trofimovich <slyfox@gentoo.org> bug #338213
 
@@ -159,7 +159,7 @@
   -liferea-1.7.2.ebuild, -liferea-1.7.3.ebuild:
   Cleaning up ebuilds. Version bump to 1.6.5 bug #345825
 
-  12 Oct 2010; RaÃºl Porcel <armin76@gentoo.org> liferea-1.6.4.ebuild:
+  12 Oct 2010; Raúl Porcel <armin76@gentoo.org> liferea-1.6.4.ebuild:
   sparc stable wrt #338934
 
   06 Oct 2010; Markus Meier <maekke@gentoo.org> liferea-1.6.4.ebuild:
@@ -179,7 +179,7 @@
   Remove 1.4.15 which uses vulnerable xulrunner:1.8 (bug 324953). BSD
   keywords were dropped to do this, bug 279241
 
-  26 Jun 2010; RaÃºl Porcel <armin76@gentoo.org> liferea-1.6.3.ebuild:
+  26 Jun 2010; Raúl Porcel <armin76@gentoo.org> liferea-1.6.3.ebuild:
   sparc stable wrt #321565
 
   01 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> liferea-1.6.3.ebuild:
@@ -191,7 +191,7 @@
 *liferea-1.7.4 (18 Apr 2010)
 *liferea-1.6.3 (18 Apr 2010)
 
-  18 Apr 2010; VÃ­ctor Ostorga <vostorga@gentoo.org> +liferea-1.6.3.ebuild,
+  18 Apr 2010; Víctor Ostorga <vostorga@gentoo.org> +liferea-1.6.3.ebuild,
   +liferea-1.7.4.ebuild, metadata.xml:
   Adding Iskren Slavov and myself as maintainers, version bump for
   upstream's stable and unstable versions, ebuilds thanks to Iskren Slavov 
@@ -200,19 +200,19 @@
   22 Mar 2010; Pacho Ramos <pacho@gentoo.org> liferea-1.4.28-r1.ebuild:
   Drop all 'seamonkey' references, see bug 300458
 
-  05 Mar 2010; VÃ­ctor Ostorga <vostorga@gentoo.org> liferea-1.4.15.ebuild:
+  05 Mar 2010; Víctor Ostorga <vostorga@gentoo.org> liferea-1.4.15.ebuild:
   Removing www-client/seamonkey dependency because of seamonkey-1* removal,
   bug 300458
 
 *liferea-1.7.3 (25 Jan 2010)
 
-  25 Jan 2010; VÃ­ctor Ostorga <vostorga@gentoo.org> +liferea-1.7.3.ebuild:
+  25 Jan 2010; Víctor Ostorga <vostorga@gentoo.org> +liferea-1.7.3.ebuild:
   Version bump upstream unstable version to 1.7.3 , bug #301994
 
 *liferea-1.7.2 (23 Jan 2010)
 *liferea-1.6.2 (23 Jan 2010)
 
-  23 Jan 2010; VÃ­ctor Ostorga <vostorga@gentoo.org>
+  23 Jan 2010; Víctor Ostorga <vostorga@gentoo.org>
   -files/liferea-1.1.0-libnotify.patch, -liferea-1.2.23-r1.ebuild,
   -files/liferea-1.2.23-backup-perms.patch, -liferea-1.4.23.ebuild,
   -files/liferea-1.4.23-gecko.patch, -liferea-1.4.24.ebuild,
@@ -221,7 +221,7 @@
   Cleaning out old ebuilds, Version bump of upstream stable 1.6.2 and
   unstable 1.7.2
 
-  25 Dec 2009; RaÃºl Porcel <armin76@gentoo.org> liferea-1.6.0.ebuild,
+  25 Dec 2009; Raúl Porcel <armin76@gentoo.org> liferea-1.6.0.ebuild,
   liferea-1.7.1.ebuild:
   Add ~sparc wrt #279241
 
@@ -255,7 +255,7 @@
 
 *liferea-1.6.0 (27 Jul 2009)
 
-  27 Jul 2009; Tiziano MÃ¼ller <dev-zero@gentoo.org> +liferea-1.6.0.ebuild:
+  27 Jul 2009; Tiziano Müller <dev-zero@gentoo.org> +liferea-1.6.0.ebuild:
   Version bump.
 
   21 Apr 2009; Daniel Gryniewicz <dang@gentoo.org> liferea-1.4.28-r1:
@@ -486,7 +486,7 @@
   09 Apr 2008; Markus Rothe <corsair@gentoo.org> liferea-1.4.13.ebuild:
   Stable on ppc64; bug #216743
 
-  08 Apr 2008; RaÃºl Porcel <armin76@gentoo.org> liferea-1.4.13.ebuild:
+  08 Apr 2008; Raúl Porcel <armin76@gentoo.org> liferea-1.4.13.ebuild:
   sparc stable wrt #216743
 
   07 Apr 2008; Daniel Gryniewicz <dang@gentoo.org> -liferea-1.4.9.ebuild,
@@ -515,7 +515,7 @@
 
   "new_subscription" (reported by Oliver Berger).
 
-  17 Mar 2008; RaÃºl Porcel <armin76@gentoo.org> liferea-1.0.24.ebuild,
+  17 Mar 2008; Raúl Porcel <armin76@gentoo.org> liferea-1.0.24.ebuild,
   liferea-1.2.23-r1.ebuild, liferea-1.4.9.ebuild, liferea-1.4.10.ebuild,
   liferea-1.4.11.ebuild, liferea-1.4.13.ebuild:
   Fix deps for net-libs/xulrunner and www-client/mozilla-firefox
@@ -648,10 +648,10 @@
   03 Nov 2007; Markus Rothe <corsair@gentoo.org> liferea-1.2.23-r1.ebuild:
   Stable on ppc64; bug #197701
 
-  02 Nov 2007; RaÃºl Porcel <armin76@gentoo.org> liferea-1.2.23-r1.ebuild:
+  02 Nov 2007; Raúl Porcel <armin76@gentoo.org> liferea-1.2.23-r1.ebuild:
   sparc stable wrt security #197701
 
-  02 Nov 2007; Dawid WÄgliÅski <cla@gentoo.org> liferea-1.2.23-r1.ebuild:
+  02 Nov 2007; Dawid Węgliński <cla@gentoo.org> liferea-1.2.23-r1.ebuild:
   Stable on x86 (bug #197701)
 
 *liferea-1.2.23-r1 (01 Nov 2007)
@@ -840,7 +840,7 @@
   	* Stefano)
   	* - Ctrl-N hotkey assigned twice
   	* - no labels in toolbar when text and icons configured (reported by
-  	* JÃ©rÃ´me Guelfucci)
+  	* Jérôme Guelfucci)
 
 *liferea-1.2.22 (20 Aug 2007)
 
@@ -912,7 +912,7 @@
   	* Ignores GNUTLS_E_UNEXPECTED_PACKET_LENGTH (-9)
   	  errors which seems to happen with GMail feeds.
   	* New Czech translation from Martin Picek
-  	* New Basque default feed list from IÃ±aki LarraÃ±aga Murgoitio
+  	* New Basque default feed list from Iñaki Larrañaga Murgoitio
 
 *liferea-1.2.16 (05 Jun 2007)
 
@@ -925,7 +925,7 @@
   	* Fixes "jumpy" behaviour of the HTML view item menu
   	  in three pane mode. Now the menu is visible 
   	  immediately on rendering.
-  	* New Basque translation from IÃ±aki LarraÃ±aga Murgoitio
+  	* New Basque translation from Iñaki Larrañaga Murgoitio
 
 *liferea-1.2.15b (20 May 2007)
 
