@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.552 2012/10/21 19:00:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.553 2012/10/23 20:57:31 jer Exp $
+
+  23 Oct 2012; Jeroen Roovers <jer@gentoo.org> ruby-1.9.3_p194-r1.ebuild,
+  ruby-1.9.3_p286.ebuild:
+  Remove HPPA target hack (bug #342819).
 
   21 Oct 2012; Raúl Porcel <armin76@gentoo.org> ruby-1.9.3_p194-r1.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #411507
