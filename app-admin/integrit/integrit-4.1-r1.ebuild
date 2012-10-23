@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/integrit/integrit-4.1-r1.ebuild,v 1.1 2012/10/22 12:58:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/integrit/integrit-4.1-r1.ebuild,v 1.2 2012/10/23 18:57:19 radhermit Exp $
 
 EAPI=4
 
@@ -13,8 +13,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
-
-RESTRICT="test" # 276190
 
 src_prepare() {
 	sed -i -e "/^CC/d" configure.in hashtbl/configure.in || die
@@ -29,6 +27,11 @@ src_compile() {
 
 	cd "${S}"/doc && emake
 	cd "${S}"/hashtbl && emake hashtest
+}
+
+src_test() {
+	chmod +x test/test || die
+	default
 }
 
 src_install() {
