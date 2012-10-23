@@ -1,6 +1,16 @@
 # ChangeLog for dev-lang/spidermonkey
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.87 2012/10/22 14:15:02 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.88 2012/10/23 19:07:07 axs Exp $
+
+*spidermonkey-1.8.7-r1 (23 Oct 2012)
+*spidermonkey-1.8.5-r2 (23 Oct 2012)
+*spidermonkey-1.8.2.15-r2 (23 Oct 2012)
+*spidermonkey-1.7.0-r3 (23 Oct 2012)
+
+  23 Oct 2012; Ian Stakenvicius <axs@gentoo.org> +spidermonkey-1.7.0-r3.ebuild,
+  +spidermonkey-1.8.2.15-r2.ebuild, +spidermonkey-1.8.5-r2.ebuild,
+  +spidermonkey-1.8.7-r1.ebuild:
+  bumped to EAPI5 , fixed bugs 437520 and 437190
 
   22 Oct 2012; <anarchy@gentoo.org> metadata.xml:
   Assign directly to mozilla herd
