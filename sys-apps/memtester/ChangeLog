@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/memtester
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtester/ChangeLog,v 1.50 2012/09/29 18:46:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtester/ChangeLog,v 1.51 2012/10/23 04:58:53 armin76 Exp $
+
+  23 Oct 2012; Raúl Porcel <armin76@gentoo.org> memtester-4.3.0.ebuild:
+  sparc stable because its used in the installcd
 
   29 Sep 2012; Raúl Porcel <armin76@gentoo.org> memtester-4.2.2.ebuild:
   Move to ~sparc
