@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja/ninja-120715.ebuild,v 1.2 2012/08/25 14:17:27 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja/ninja-1.0.0.ebuild,v 1.1 2012/10/23 15:50:41 ottxor Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ if [ "${PV}" = "999999" ]; then
 	KEYWORDS=""
 else
 	inherit vcs-snapshot
-	SRC_URI="https://github.com/martine/ninja/tarball/release-${PV} -> ${P}.tar.gz"
+	SRC_URI="https://github.com/martine/ninja/tarball/v${PV} -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86 ~ppc-macos"
 fi
 
@@ -26,15 +26,20 @@ SLOT="0"
 
 IUSE="doc emacs vim-syntax zsh-completion"
 
-DEPEND="doc? ( app-text/asciidoc app-doc/doxygen )"
-RDEPEND="zsh-completion? ( app-shells/zsh )
+DEPEND="
+	dev-util/re2c
+	doc? ( app-text/asciidoc app-doc/doxygen )
+	"
+RDEPEND="
 	emacs? ( virtual/emacs )
 	vim-syntax? (
 		|| (
 			app-editors/vim
 			app-editors/gvim
 		)
-	)"
+	)
+	zsh-completion? ( app-shells/zsh )
+	"
 
 pkg_setup() {
 	python_set_active_version 2
@@ -53,7 +58,7 @@ src_compile() {
 }
 
 src_install() {
-	dodoc README HACKING
+	dodoc README HACKING.md
 	use doc && dohtml -r doc/doxygen/html/*
 	dobin ninja
 
