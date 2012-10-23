@@ -7,6 +7,11 @@
 		<name>Mounir Lamouri</name>
 		<description>Assign to herd and CC me</description>
 	</maintainer>
+	<maintainer>
+		<email>neurogeek@gentoo.org</email>
+		<name>Jesus Rivero</name>
+		<description>Assign to herd and CC me</description>
+	</maintainer>
 	<use>
 		<flag name="asn">Enable ASN decoding/encoding support</flag>
 		<flag name="audio">Enable audio support</flag>
