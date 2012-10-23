@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.2 2012/10/15 15:01:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.3 2012/10/23 20:58:05 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -19,6 +19,10 @@
 # and PYTHON_USEDEP so you can create correct dependencies for your
 # package easily. It also provides methods to easily run a command for
 # each enabled Python implementation and duplicate the sources for them.
+#
+# Please note that this eclass is mostly intended to be extended
+# on-request. If you find something you used in other eclasses missing,
+# please don't hack it around and request an enhancement instead.
 
 case "${EAPI}" in
 	0|1|2|3)
@@ -46,8 +50,17 @@ _PYTHON_ALL_IMPLS=(
 # @ECLASS-VARIABLE: PYTHON_COMPAT
 # @DESCRIPTION:
 # This variable contains a list of Python implementations the package
-# supports. It must be set before the `inherit' call.  The default is to
-# enable all implementations. It has to be an array.
+# supports. It must be set before the `inherit' call. It has to be
+# an array.
+#
+# The default is to enable all supported implementations. However, it is
+# discouraged to use that default unless in very special cases and test
+# the package with each added implementation instead.
+#
+# Example:
+# @CODE
+# PYTHON_COMPAT=( python2_5 python2_6 python2_7 )
+# @CODE
 if ! declare -p PYTHON_COMPAT &>/dev/null; then
 	PYTHON_COMPAT=( "${_PYTHON_ALL_IMPLS[@]}" )
 fi
@@ -65,7 +78,7 @@ fi
 # PYTHON_REQ_USE="gdbm,ncurses(-)?"
 # @CODE
 #
-# Will cause the Python dependencies to look like:
+# It will cause the Python dependencies to look like:
 # @CODE
 # python_targets_pythonX_Y? (
 #   dev-lang/python:X_Y[gdbm,ncurses(-)?] )
@@ -74,23 +87,39 @@ fi
 # @ECLASS-VARIABLE: PYTHON_DEPS
 # @DESCRIPTION:
 # This is an eclass-generated Python dependency string for all
-# implementations listed in PYTHON_COMPAT. It should be used
-# in RDEPEND and/or DEPEND like:
+# implementations listed in PYTHON_COMPAT.
 #
+# Example use:
 # @CODE
 # RDEPEND="${PYTHON_DEPS}
 #   dev-foo/mydep"
 # DEPEND="${RDEPEND}"
+# @CODE
+#
+# Example value:
+# @CODE
+# python_targets2_6? ( dev-lang/python:2.6[gdbm] )
+# python_targets2_7? ( dev-lang/python:2.7[gdbm] )
 # @CODE
 
 # @ECLASS-VARIABLE: PYTHON_USEDEP
 # @DESCRIPTION:
 # This is an eclass-generated USE-dependency string which can be used to
 # depend on another Python package being built for the same Python
-# implementations. It should be used like:
+# implementations.
 #
+# The generate USE-flag list is compatible with packages using python-r1
+# and python-distutils-ng eclasses. It must not be used on packages
+# using python.eclass.
+#
+# Example use:
 # @CODE
 # RDEPEND="dev-python/foo[${PYTHON_USEDEP}]"
+# @CODE
+#
+# Example value:
+# @CODE
+# python_targets_python2_6?,python_targets_python2_7?
 # @CODE
 
 _python_set_globals() {
@@ -153,10 +182,52 @@ _python_set_PYTHON() {
 	debug-print "${FUNCNAME}: ${impl} -> ${PYTHON}"
 }
 
+# @ECLASS-VARIABLE: BUILD_DIR
+# @DESCRIPTION:
+# The current build directory. In global scope, it is supposed to
+# contain an initial build directory; if unset, it defaults to ${S}.
+#
+# In functions run by python_foreach_impl(), the BUILD_DIR is locally
+# set to an implementation-specific build directory. That path is
+# created through appending a hyphen and the implementation name
+# to the final component of the initial BUILD_DIR.
+#
+# Example value:
+# @CODE
+# ${WORKDIR}/foo-1.3-python2_6
+# @CODE
+
+# @ECLASS-VARIABLE: PYTHON
+# @DESCRIPTION:
+# The absolute path to the current Python interpreter.
+#
+# Set and exported only in commands run by python_foreach_impl().
+#
+# Example value:
+# @CODE
+# /usr/bin/python2.6
+# @CODE
+
+# @ECLASS-VARIABLE: EPYTHON
+# @DESCRIPTION:
+# The executable name of the current Python interpreter.
+#
+# This variable is used consistently with python.eclass.
+#
+# Set and exported only in commands run by python_foreach_impl().
+#
+# Example value:
+# @CODE
+# python2.6
+# @CODE
+
 # @FUNCTION: python_copy_sources
 # @DESCRIPTION:
 # Create a single copy of the package sources (${S}) for each enabled
 # Python implementation.
+#
+# The sources are always copied from S to implementation-specific build
+# directories respecting BUILD_DIR.
 python_copy_sources() {
 	debug-print-function ${FUNCNAME} "${@}"
 
@@ -186,10 +257,8 @@ python_copy_sources() {
 # to the command. If the command fails, python_foreach_impl dies.
 # If necessary, use ':' to force a successful return.
 #
-# Before the command is run, EPYTHON is set to the name of the current
-# Python implementation, PYTHON is set to the correct Python executable
-# name and exported, and BUILD_DIR is set to a 'default' build directory
-# for given implementation (e.g. ${BUILD_DIR:-${S}}-python2_7).
+# For each command being run, EPYTHON, PYTHON and BUILD_DIR are set
+# locally, and the former two are exported to the command environment.
 #
 # The command is run inside the build directory. If it doesn't exist
 # yet, it is created (as an empty directory!). If your build system does
@@ -208,7 +277,7 @@ python_foreach_impl() {
 			local EPYTHON PYTHON
 			_python_set_PYTHON "${impl}"
 			local BUILD_DIR=${bdir%%/}-${impl}
-			export PYTHON
+			export EPYTHON PYTHON
 
 			debug-print "${FUNCNAME}: [${impl}] build_dir = ${BUILD_DIR}"
 
