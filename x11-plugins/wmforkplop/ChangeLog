@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/wmforkplop
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmforkplop/ChangeLog,v 1.3 2011/08/05 13:12:35 voyageur Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmforkplop/ChangeLog,v 1.4 2012/10/23 13:59:57 voyageur Exp $
+
+*wmforkplop-0.9.3-r1 (23 Oct 2012)
+
+  23 Oct 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  +wmforkplop-0.9.3-r1.ebuild, +files/wmforkplop-0.9.3-cflags.patch:
+  Remove hardcoded CFLAGS in configure, bug #438634
 
   05 Aug 2011; Bernard Cafarelli <voyageur@gentoo.org> wmforkplop-0.9.3.ebuild:
   Depend on imlib2 with X, thanks Piotr Szymaniak in bug #373057
