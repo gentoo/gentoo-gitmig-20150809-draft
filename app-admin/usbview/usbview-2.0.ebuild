@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usbview/usbview-2.0.ebuild,v 1.2 2012/10/23 07:06:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usbview/usbview-2.0.ebuild,v 1.3 2012/10/23 15:56:20 ssuominen Exp $
 
 EAPI=4
-inherit eutils
+inherit eutils linux-info
 
 DESCRIPTION="Display the topology of devices on the USB bus"
 HOMEPAGE="http://www.kroah.com/linux-usb/"
@@ -19,6 +19,11 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
+
+pkg_setup() {
+	CONFIG_CHECK="~DEBUG_FS"
+	linux-info_pkg_setup
+}
 
 src_install() {
 	default
