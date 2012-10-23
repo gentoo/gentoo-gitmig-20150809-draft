@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtrace/libtrace-3.0.15.ebuild,v 1.2 2012/10/23 06:59:15 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtrace/libtrace-3.0.15.ebuild,v 1.3 2012/10/23 07:01:20 radhermit Exp $
 
 EAPI=5
 
@@ -25,6 +25,7 @@ DEPEND="${RDEPEND}
 	virtual/yacc"
 
 src_prepare() {
+	# skip rebuilding docs when doxygen is present
 	epatch "${FILESDIR}"/${P}-no-doxygen.patch
 
 	# don't build examples
