@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sl/sl-3.03-r3.ebuild,v 1.1 2012/10/18 12:04:52 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sl/sl-3.03-r3.ebuild,v 1.2 2012/10/23 17:18:03 mr_bones_ Exp $
 
 EAPI=4
 
@@ -11,9 +11,9 @@ SL_PATCH="sl5-1.patch"
 DESCRIPTION="sophisticated graphical program which corrects your miss typing"
 HOMEPAGE="http://www.tkl.iis.u-tokyo.ac.jp/~toyoda/index_e.html http://www.izumix.org.uk/sl/"
 SRC_URI="http://www.tkl.iis.u-tokyo.ac.jp/~toyoda/sl/${PN}.tar
-	!vanilla? ( 
+	!vanilla? (
 		http://www.linet.gr.jp/~izumi/sl/${SL_PATCH}
-		http://www.sodan.ecc.u-tokyo.ac.jp/~okayama/sl/${PN}.en.1.gz 
+		http://www.sodan.ecc.u-tokyo.ac.jp/~okayama/sl/${PN}.en.1.gz
 	)"
 
 LICENSE="freedist"
