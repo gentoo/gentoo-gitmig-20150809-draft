@@ -1,28 +1,27 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-3.6.8-r2.ebuild,v 1.10 2012/10/23 22:48:38 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-3.10.8.ebuild,v 1.1 2012/10/23 22:48:38 neurogeek Exp $
 
-EAPI="4"
+EAPI=4
 
 inherit eutils autotools toolchain-funcs java-pkg-opt-2 flag-o-matic
 
-HTMLV="3.6.7" # There is no 3.6.8 release of htmldoc
 DESCRIPTION="C++ class library normalising numerous telephony protocols"
 HOMEPAGE="http://www.opalvoip.org/"
 SRC_URI="mirror://sourceforge/opalvoip/${P}.tar.bz2
-	doc? ( mirror://sourceforge/opalvoip/${PN}-${HTMLV}-htmldoc.tar.bz2 )"
+	doc? ( mirror://sourceforge/opalvoip/${P}-htmldoc.tar.bz2 )"
 
 LICENSE="MPL-1.0"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
-IUSE="+audio capi celt debug doc dtmf examples fax ffmpeg h224 h281 h323 iax
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE="+audio capi celt debug doc examples fax ffmpeg h224 h281 h323 iax
 ilbc ipv6 ivr ixj java ldap lid +plugins sbc sip sipim srtp ssl static-libs
 stats swig theora +video vpb vxml wav x264 x264-static xml"
 
 REQUIRED_USE="x264-static? ( x264 )
 	h281? ( h224 )"
 
-RDEPEND="<net-libs/ptlib-2.10.8[stun,debug=,audio?,dtmf?,ipv6?,ldap?,ssl?,video?,vxml?,wav?,xml?]
+RDEPEND=">=net-libs/ptlib-2.10.0[stun,debug=,audio?,dtmf,ipv6?,ldap?,ssl?,video?,vxml?,wav?,xml?]
 	>=media-libs/speex-1.2_beta
 	fax? ( net-libs/ptlib[asn] )
 	h323? ( net-libs/ptlib[asn] )
@@ -47,9 +46,10 @@ DEPEND="${RDEPEND}
 	java? ( swig? ( dev-lang/swig )
 		>=virtual/jdk-1.4 )"
 
+REQUIRED_USE="sip? ( sipim )"
 # NOTES:
 # ffmpeg[encode] is for h263 and mpeg4
-# ssl, xml, vxml, ipv6, dtmf, ldap, audio, wav, and video are use flags
+# ssl, xml, vxml, ipv6, ldap, audio, wav, and video are use flags
 #   herited from ptlib: feature is enabled if ptlib has enabled it
 #   however, disabling it if ptlib has it looks hard (coz of buildopts.h)
 #   forcing ptlib to disable it for opal is not a solution too
@@ -59,11 +59,8 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	# workaround for bug 282838
-	append-flags "-fno-visibility-inlines-hidden"
-
-	# Upstream fixed this in trunk
-	# http://opalvoip.svn.sourceforge.net/viewvc/opalvoip?view=revision&revision=25165
-	append-flags -D__STDC_CONSTANT_MACROS #324323
+	append-cxxflags "-fno-visibility-inlines-hidden"
+	append-cxxflags "-fno-strict-aliasing"
 
 	# need >=gcc-3
 	if [[ $(gcc-major-version) -lt 3 ]]; then
@@ -84,15 +81,15 @@ src_prepare() {
 		rm -f samples/*/*.dsw
 	fi
 
-	# upstream patch 2808915
-	epatch "${FILESDIR}"/${PN}-3.6.4-jdkroot.patch
+	epatch "${FILESDIR}/${P}-svn_revision_override.patch"
+	epatch "${FILESDIR}/${P}-labs_is_in_stdlib.patch"
 
-	epatch "${FILESDIR}"/${P}-build-fix.patch #343041
-	epatch "${FILESDIR}"/${P}-ldflags.patch
-	epatch "${FILESDIR}"/${P}-lid-plugins-ldflags.patch #397681
+	if ! use h323; then
+		# Without this patch, ekiga wont compile, even with
+		# USE=-h323.
+		epatch "${FILESDIR}/${P}-disable-h323-workaround.patch"
+	fi
 
-	# h224 really needs h323 ?
-	# TODO: get a confirmation in ml
 	sed -i -e "s:\(.*HAS_H224.*\), \[OPAL_H323\]:\1:" configure.ac \
 		|| die "sed failed"
 
@@ -105,40 +102,11 @@ src_prepare() {
 	eautoconf
 	cd ..
 
-	# disable srtp if srtp is not enabled (prevent auto magic dep)
-	# upstream bug 2686485 (fixed in 3.7)
-	if ! use srtp; then
-		sed -i -e "s/OPAL_SRTP=yes/OPAL_SRTP=no/" configure \
-			|| die "patching configure failed"
-	fi
-
-	# disable theora if theora is not enabled (prevent auto magic dep)
-	# upstream bug 2686488 (fixed in 3.7)
-	if ! use theora; then
-		sed -i -e "s/HAVE_THEORA=yes/HAVE_THEORA=no/" plugins/configure \
-			|| die "patching plugins/configure failed"
-	fi
-
-	# disable mpeg4 and h263p if ffmpeg is not enabled (prevent auto magic dep)
-	# upstream bug 2686495 (fixed in 3.7)
-	if ! use ffmpeg; then
-		sed -i -e "s/HAVE_H263P=yes/HAVE_H263P=no/" plugins/configure \
-			|| die "patching plugins/configure failed"
-		sed -i -e "s/HAVE_MPEG4=yes/HAVE_MPEG4=no/" plugins/configure \
-			|| die "patching plugins/configure failed"
-	fi
-
 	# disable celt if celt is not enabled (prevent auto magic dep)
 	# already in repository
 	if ! use celt; then
 		sed -i -e "s/HAVE_CELT=yes/HAVE_CELT=no/" plugins/configure \
 			|| die "sed failed"
-	fi
-
-	# fix gsm wav49 support check, upstream bug 2686500 (fixed in 3.7)
-	if use plugins; then
-		sed -i -e "s:gsm\.h:gsm/gsm.h:" plugins/configure \
-			|| die "patching plugins/configure failed"
 	fi
 
 	# fix automatic swig detection, upstream bug 2712521 (upstream reject it)
