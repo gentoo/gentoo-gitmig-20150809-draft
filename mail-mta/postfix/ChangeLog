@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.392 2012/10/20 16:45:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.393 2012/10/23 05:25:54 eras Exp $
+
+  23 Oct 2012; Eray Aslan <eras@gentoo.org> postfix-2.9.4.ebuild:
+  Revert accidental unstable for amd64 ppc ppc64 - bug #437602
 
   20 Oct 2012; Raúl Porcel <armin76@gentoo.org> postfix-2.9.4.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #437602
