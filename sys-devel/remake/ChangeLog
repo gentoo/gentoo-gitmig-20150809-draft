@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/remake
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/remake/ChangeLog,v 1.11 2011/11/30 04:21:39 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/remake/ChangeLog,v 1.12 2012/10/23 21:39:08 vapier Exp $
+
+*remake-3.82.0.9 (23 Oct 2012)
+
+  23 Oct 2012; Mike Frysinger <vapier@gentoo.org> +remake-3.82.0.9.ebuild:
+  Version bump.
 
   30 Nov 2011; Mike Frysinger <vapier@gentoo.org> remake-3.82.0.4.ebuild:
   Add USE=readline control over readline dep.
