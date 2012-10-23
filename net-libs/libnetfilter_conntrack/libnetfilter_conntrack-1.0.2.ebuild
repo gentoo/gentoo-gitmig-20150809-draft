@@ -1,8 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_conntrack/libnetfilter_conntrack-0.0.101.ebuild,v 1.8 2012/05/05 02:54:26 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_conntrack/libnetfilter_conntrack-1.0.2.ebuild,v 1.1 2012/10/23 12:42:50 jer Exp $
 
-inherit linux-info
+EAPI="4"
+inherit autotools-utils linux-info
 
 DESCRIPTION="programming interface (API) to the in-kernel connection tracking state table"
 HOMEPAGE="http://www.netfilter.org/projects/libnetfilter_conntrack/"
@@ -10,12 +11,19 @@ SRC_URI="http://www.netfilter.org/projects/${PN}/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ~ia64 ~ppc sparc x86"
-IUSE=""
+KEYWORDS="~amd64 ~hppa ~ppc ~x86"
+IUSE="static-libs"
 
-RDEPEND=">=net-libs/libnfnetlink-1.0.0"
-DEPEND="${RDEPEND}
-	virtual/pkgconfig"
+RDEPEND="
+	>=net-libs/libmnl-1.0.3
+	>=net-libs/libnfnetlink-1.0.0
+"
+DEPEND="
+	${RDEPEND}
+	virtual/pkgconfig
+"
+
+DOCS=( README )
 
 pkg_setup() {
 	linux-info_pkg_setup
@@ -32,8 +40,4 @@ pkg_setup() {
 	fi
 
 	check_extra_config
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
 }
