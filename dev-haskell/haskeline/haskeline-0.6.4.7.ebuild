@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskeline/haskeline-0.6.4.7.ebuild,v 1.2 2012/09/12 15:45:34 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskeline/haskeline-0.6.4.7.ebuild,v 1.3 2012/10/23 10:51:57 slyfox Exp $
 
 EAPI=4
 
 CABAL_FEATURES="lib profile haddock hoogle hscolour"
-inherit haskell-cabal
+inherit base haskell-cabal
 
 DESCRIPTION="A command-line interface for user input, written in Haskell."
 HOMEPAGE="http://trac.haskell.org/haskeline"
@@ -25,3 +25,8 @@ RDEPEND=">=dev-haskell/mtl-1.1[profile?]
 		>=dev-lang/ghc-6.10.4"
 DEPEND="${RDEPEND}
 		>=dev-haskell/cabal-1.6"
+
+PATCHES=("${FILESDIR}/${PN}-0.6.4.7-ghc-7.5.patch"
+	"${FILESDIR}/${PN}-0.6.4.7-ghc-7.6.patch"
+	"${FILESDIR}/${PN}-0.6.4.7-ghc-6.12.patch"
+	)

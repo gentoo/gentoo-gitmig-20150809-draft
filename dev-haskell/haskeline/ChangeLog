@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/haskeline
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskeline/ChangeLog,v 1.21 2012/09/12 15:45:34 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskeline/ChangeLog,v 1.22 2012/10/23 10:51:57 slyfox Exp $
+
+  23 Oct 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/haskeline-0.6.4.7-ghc-6.12.patch,
+  +files/haskeline-0.6.4.7-ghc-7.5.patch,
+  +files/haskeline-0.6.4.7-ghc-7.6.patch, haskeline-0.6.4.7.ebuild:
+  Fix build failure against ghc-6.12 (bug #435128 by Vicente Olivert Riera).
 
   12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> haskeline-0.6.2.2.ebuild,
   haskeline-0.6.4.0.ebuild, haskeline-0.6.4.6-r1.ebuild,
