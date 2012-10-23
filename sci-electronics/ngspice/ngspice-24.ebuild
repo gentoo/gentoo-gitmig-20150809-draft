@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ngspice/ngspice-24.ebuild,v 1.3 2012/07/13 13:14:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ngspice/ngspice-24.ebuild,v 1.4 2012/10/23 17:05:45 flameeyes Exp $
 
 EAPI="3"
 
@@ -25,6 +25,7 @@ DEPEND="readline? ( >=sys-libs/readline-5.0 )
 RDEPEND="$DEPEND"
 
 src_prepare() {
+	sed -e '/CFLAGS=/s: -s::' -i configure.ac || die "sed failed"
 	sed -e 's/_CFLAGS -O2/_CFLAGS/' -i configure.ac || die "sed failed"
 	sed -e 's/LDFLAGS =/LDFLAGS +=/' -i src/xspice/icm/makedefs.in || die "sed failed"
 	sed -e '/AM_INIT_AUTOMAKE/s:-Werror::' -i configure.ac || die "sed failed"
