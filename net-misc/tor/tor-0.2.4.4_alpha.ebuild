@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.4.2_alpha.ebuild,v 1.1 2012/09/12 22:41:04 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.4.4_alpha.ebuild,v 1.1 2012/10/23 00:08:57 blueness Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ S="${WORKDIR}/${MY_PF}"
 LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="+bufferevents nat-pmp tor-hardening transparent-proxy threads upnp selinux web"
+IUSE="+bufferevents nat-pmp selinux stats tor-hardening transparent-proxy threads upnp web"
 
 DEPEND="dev-libs/openssl
 	sys-libs/zlib
@@ -41,8 +41,10 @@ src_configure() {
 	# We'll filter-flags them here as we encounter them.
 	filter-flags -fstrict-aliasing
 	econf \
+		--disable-buf-freelists \
 		--enable-asciidoc \
 		--docdir=/usr/share/doc/${PF} \
+		$(use_enable stats instrument-downloads) \
 		$(use_enable bufferevents) \
 		$(use_enable nat-pmp) \
 		$(use_enable tor-hardening gcc-hardening) \
