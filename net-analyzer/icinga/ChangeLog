@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/icinga
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/ChangeLog,v 1.28 2012/10/16 16:05:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/ChangeLog,v 1.29 2012/10/23 03:49:20 prometheanfire Exp $
+
+*icinga-1.8.0 (23 Oct 2012)
+
+  23 Oct 2012; Matthew Thode <prometheanfire@gentoo.org> +icinga-1.8.0.ebuild:
+  bump to 1.8.0 and added instructions for updating idoutils db stuff
 
   16 Oct 2012; Jeroen Roovers <jer@gentoo.org> icinga-1.7.2.ebuild:
   Marked ~hppa too.
