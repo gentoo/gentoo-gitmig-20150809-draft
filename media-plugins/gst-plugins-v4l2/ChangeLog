@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-v4l2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-v4l2/ChangeLog,v 1.91 2012/10/23 07:58:04 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-v4l2/ChangeLog,v 1.92 2012/10/23 17:11:47 tetromino Exp $
+
+  23 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gst-plugins-v4l2-0.10.30.ebuild:
+  Also fix build failure with linux-headers in the stable ebuild.
 
 *gst-plugins-v4l2-0.10.31 (23 Oct 2012)
 
