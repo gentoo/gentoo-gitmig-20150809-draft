@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.458 2012/10/23 07:54:38 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.459 2012/10/23 08:09:35 tetromino Exp $
+
+  23 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gst-plugins-base.eclass:
+  Punt plugin .la files for 0.10.36 and EAPI4
 
   23 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   gst-plugins-good.eclass:
