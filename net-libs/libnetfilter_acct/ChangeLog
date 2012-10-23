@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libnetfilter_acct
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_acct/ChangeLog,v 1.4 2012/09/02 10:36:00 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_acct/ChangeLog,v 1.5 2012/10/23 12:29:36 jer Exp $
+
+*libnetfilter_acct-1.0.1 (23 Oct 2012)
+
+  23 Oct 2012; Jeroen Roovers <jer@gentoo.org> +libnetfilter_acct-1.0.1.ebuild:
+  Version bump.
 
   02 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
   Add package description to metadata
