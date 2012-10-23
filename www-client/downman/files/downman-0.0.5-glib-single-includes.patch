@@ -1,0 +1,27 @@
+Index: downman-0.0.5/utillib/commands.c
+===================================================================
+--- downman-0.0.5.orig/utillib/commands.c
++++ downman-0.0.5/utillib/commands.c
+@@ -1,7 +1,7 @@
+ #include <stdlib.h>
+ #include <unistd.h>
+ 
+-#include <glib/gstring.h>
++#include <glib.h>
+ 
+ #include "commands.h"
+ 
+Index: downman-0.0.5/utillib/sockets.c
+===================================================================
+--- downman-0.0.5.orig/utillib/sockets.c
++++ downman-0.0.5/utillib/sockets.c
+@@ -6,8 +6,7 @@
+ #include <sys/socket.h>
+ #include <sys/un.h>
+ 
+-#include <glib/gstring.h>
+-#include <glib/gspawn.h>
++#include <glib.h>
+ 
+ #include "commands.h"
+ #include "sockets.h"

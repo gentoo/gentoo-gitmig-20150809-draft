@@ -1,0 +1,30 @@
+--- clients/gnome/gdownman/gdownman.desktop.in~	2003-06-25 23:28:38.000000000 +0200
++++ clients/gnome/gdownman/gdownman.desktop.in	2012-10-23 19:59:48.261671840 +0200
+@@ -2,10 +2,9 @@
+ _Name=Gnome Download Manager
+ _GenericName=Download Manager
+ _Comment=Handle downloads
+-Categories=GNOME;Application;Network;
+-Encoding=UTF-8
++Categories=Network;
+ Exec=gdownman
+-Icon=gdownman.png
++Icon=gdownman
+ StartupNotify=true
+ Terminal=false
+ Type=Application
+--- clients/gnome/gdownman/gdownman.desktop~	2003-06-25 23:49:58.000000000 +0200
++++ clients/gnome/gdownman/gdownman.desktop	2012-10-23 20:01:55.074878546 +0200
+@@ -2,10 +2,9 @@
+ Name=Gnome Download Manager
+ GenericName=Download Manager
+ Comment=Handle downloads
+-Categories=GNOME;Application;Network;
+-Encoding=UTF-8
++Categories=Network;
+ Exec=gdownman
+-Icon=gdownman.png
++Icon=gdownman
+ StartupNotify=true
+ Terminal=false
+ Type=Application
