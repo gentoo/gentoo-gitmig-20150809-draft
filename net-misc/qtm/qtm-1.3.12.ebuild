@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/qtm/qtm-1.3.11.ebuild,v 1.1 2012/10/13 20:02:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/qtm/qtm-1.3.12.ebuild,v 1.1 2012/10/23 19:21:54 hwoarang Exp $
 
 EAPI="4"
 
