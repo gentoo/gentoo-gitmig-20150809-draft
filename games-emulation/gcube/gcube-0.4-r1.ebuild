@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gcube/gcube-0.4-r1.ebuild,v 1.7 2011/06/10 12:27:14 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gcube/gcube-0.4-r1.ebuild,v 1.8 2012/10/23 12:22:50 tupone Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils games
 
 DESCRIPTION="Gamecube emulator"
@@ -19,6 +19,7 @@ DEPEND="virtual/opengl
 	virtual/jpeg
 	sys-libs/ncurses
 	sys-libs/zlib"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PV}
 
@@ -27,15 +28,16 @@ src_prepare() {
 		-e '/^CFLAGS=-g/d' Makefile.rules \
 		|| die "sed failed"
 	epatch "${FILESDIR}"/${P}-ldflags.patch \
-		"${FILESDIR}"/${P}-underlink.patch
+		"${FILESDIR}"/${P}-underlink.patch \
+		"${FILESDIR}"/${P}-gcc47.patch
 }
 
 src_install() {
 	local x
 
-	dogamesbin gcmap gcube || die "dogamesbin failed"
+	dogamesbin gcmap gcube
 	for x in bin2dol isopack thpview tplx ; do
-		newgamesbin ${x} ${PN}-${x} || die "newgamesbin ${x} failed"
+		newgamesbin ${x} ${PN}-${x}
 	done
 	dodoc ChangeLog README
 	prepgamesdirs
