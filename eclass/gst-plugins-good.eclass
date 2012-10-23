@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-good.eclass,v 1.27 2012/05/02 18:31:42 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-good.eclass,v 1.28 2012/10/23 07:54:38 tetromino Exp $
 
 # Author : foser <foser@gentoo.org>, zaheerm <zaheerm@gentoo.org>
 
@@ -16,6 +16,18 @@
 
 inherit eutils versionator gst-plugins10
 
+GST_EXPF="src_unpack src_compile src_install"
+GST_TARBALL_SUFFIX="bz2"
+GST_LA_PUNT="no"
+case ${EAPI:-0} in
+	4)	GST_EXPF="${GST_EXPF} src_configure"
+		GST_TARBALL_SUFFIX="xz"
+		GST_LA_PUNT="yes" ;;
+	2|3) GST_EXPF="${GST_EXPF} src_configure" ;;
+	1|0) ;;
+	*) die "Unknown EAPI" ;;
+esac
+EXPORT_FUNCTIONS ${GST_EXPF}
 
 ###
 # variable declarations
@@ -30,13 +42,18 @@ MY_P=${MY_PN}-${PV}
 # sys/ plugins; rest is split plugin options in order of ./configure --help output.
 # Good ways of validation are seeing diff of old and new configure.ac, and ./configure --help
 #
-# This list is current to gst-plugins-good-0.10.28:
+# This list is current to gst-plugins-good-0.10.31:
 my_gst_plugins_good="gconftool zlib bz2
 directsound oss oss4 sunaudio osx_audio osx_video gst_v4l2 x xshm xvideo
 aalib aalibtest annodex cairo esd esdtest flac gconf gdk_pixbuf hal jpeg
-libcaca libdv libpng pulse dv1394 shout2 shout2test soup speex taglib wavpack"
+libcaca libdv libpng pulse dv1394 shout2 soup speex taglib wavpack"
 
 # When adding conditionals like below, be careful about having leading spaces in concat
+
+# --enable-shout2test option was removed in 0.10.31
+if ! version_is_at_least "0.10.31"; then
+	my_gst_plugins_good+=" shout2test"
+fi
 
 # cairooverlay added to the cairo plugin under cairo_gobject
 if version_is_at_least "0.10.29"; then
@@ -49,7 +66,8 @@ if version_is_at_least "0.10.27"; then
 fi
 
 #SRC_URI="mirror://gnome/sources/gst-plugins/${PV_MAJ_MIN}/${MY_P}.tar.bz2"
-SRC_URI="http://gstreamer.freedesktop.org/src/gst-plugins-good/${MY_P}.tar.bz2"
+SRC_URI="http://gstreamer.freedesktop.org/src/gst-plugins-good/${MY_P}.tar.${GST_TARBALL_SUFFIX}"
+[[ ${GST_TARBALL_SUFFIX} = "xz" ]] && DEPEND="${DEPEND} app-arch/xz-utils"
 
 S=${WORKDIR}/${MY_P}
 # added to remove circular deps
@@ -57,6 +75,7 @@ S=${WORKDIR}/${MY_P}
 if [ "${PN}" != "${MY_PN}" ]; then
 RDEPEND="=media-libs/gst-plugins-base-0.10*"
 DEPEND="${RDEPEND}
+	${DEPEND}
 	>=sys-apps/sed-4
 	virtual/pkgconfig"
 
@@ -122,7 +141,7 @@ gst-plugins-good_src_unpack() {
 
 gst-plugins-good_src_compile() {
 
-	gst-plugins-good_src_configure ${@}
+	has src_configure ${GST_EXPF} || gst-plugins-good_src_configure ${@}
 
 	gst-plugins10_find_plugin_dir
 	emake || die "compile failure"
@@ -133,8 +152,7 @@ gst-plugins-good_src_install() {
 
 	gst-plugins10_find_plugin_dir
 	einstall || die
+	[[ ${GST_LA_PUNT} = "yes" ]] && prune_libtool_files --modules
 
 	[[ -e README ]] && dodoc README
 }
-
-EXPORT_FUNCTIONS src_unpack src_compile src_install

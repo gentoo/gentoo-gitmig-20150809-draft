@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.457 2012/10/22 19:00:52 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.458 2012/10/23 07:54:38 tetromino Exp $
+
+  23 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gst-plugins-good.eclass:
+  Update for gst-plugins-good-0.10.31: use .xz tarballs, punt .la files.
 
   22 Oct 2012; Michael Pagano <mpagano@gentoo.org> linux-info.eclass:
   Update for new location of version.h. Thanks to Magnus Helmersson. Bug
