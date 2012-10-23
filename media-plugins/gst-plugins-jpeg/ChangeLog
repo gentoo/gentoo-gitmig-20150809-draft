@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gst-plugins-jpeg
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-jpeg/ChangeLog,v 1.109 2011/10/15 18:35:19 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-jpeg/ChangeLog,v 1.110 2012/10/23 07:56:46 tetromino Exp $
+
+*gst-plugins-jpeg-0.10.31 (23 Oct 2012)
+
+  23 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gst-plugins-jpeg-0.10.31.ebuild:
+  Bump; no longer attempts to decode lossless jpeg; adds a setcaps function and
+  various bugfixes.
 
   15 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org>
   gst-plugins-jpeg-0.10.30.ebuild:
