@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/gst-plugins-base-0.10.36.ebuild,v 1.1 2012/10/21 07:51:23 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/gst-plugins-base-0.10.36.ebuild,v 1.2 2012/10/23 08:10:00 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 
 # order is important, gnome2 after gst-plugins
-inherit gst-plugins-base gst-plugins10 gnome2 eutils
+inherit gst-plugins-base gst-plugins10 gnome2 eutils multilib
 # libtool
 
 DESCRIPTION="Basepack of plugins for gstreamer"
@@ -55,4 +55,8 @@ src_configure() {
 
 src_install() {
 	gnome2_src_install
+	# Only remove .la files belonging to plugins; .la files for libraries are
+	# needed for building other plugins belonging to the gst-plugins-base
+	# tarball from media-plugins/gst-plugins-* ebuilds.
+	find "${ED}usr/$(get_libdir)/gstreamer-0.10/" -name '*.la' -exec rm -f {} + || die "la file removal failed"
 }

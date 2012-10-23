@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gst-plugins-base
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.186 2012/10/21 07:51:23 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.187 2012/10/23 08:10:00 tetromino Exp $
+
+  23 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gst-plugins-base-0.10.36.ebuild:
+  We can safely drop those .la files that belong to plugins.
 
 *gst-plugins-base-0.10.36 (21 Oct 2012)
 
