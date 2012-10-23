@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/less
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.153 2012/09/09 16:06:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.154 2012/10/23 08:15:26 radhermit Exp $
+
+*less-452 (23 Oct 2012)
+
+  23 Oct 2012; Tim Harder <radhermit@gentoo.org> +less-452.ebuild:
+  Version bump.
 
   09 Sep 2012; Raúl Porcel <armin76@gentoo.org> less-451.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #431956
