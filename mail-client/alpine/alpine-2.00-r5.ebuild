@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/alpine/alpine-2.00-r5.ebuild,v 1.1 2012/10/15 13:00:42 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/alpine/alpine-2.00-r5.ebuild,v 1.2 2012/10/23 05:50:55 eras Exp $
 
 EAPI=4
 
@@ -97,15 +97,10 @@ src_install() {
 		doman doc/rpdump.1 doc/rpload.1
 	fi
 
-	dodoc NOTICE README
+	dodoc NOTICE README*
 
 	if use doc ; then
 		dodoc doc/brochure.txt doc/tech-notes.txt
-		docinto imap
-		dodoc imap/docs/*.txt imap/docs/CONFIG imap/docs/RELNOTES
-
-		docinto imap/rfc
-		dodoc imap/docs/rfc/*.txt
 
 		docinto html/tech-notes
 		dohtml -r doc/tech-notes/

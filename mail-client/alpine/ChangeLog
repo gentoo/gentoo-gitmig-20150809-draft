@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/alpine
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/alpine/ChangeLog,v 1.15 2012/10/15 13:00:42 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/alpine/ChangeLog,v 1.16 2012/10/23 05:50:55 eras Exp $
+
+  23 Oct 2012; Eray Aslan <eras@gentoo.org> alpine-2.00-r5.ebuild:
+  Fix building with doc USE flag
 
 *alpine-2.00-r5 (15 Oct 2012)
 
