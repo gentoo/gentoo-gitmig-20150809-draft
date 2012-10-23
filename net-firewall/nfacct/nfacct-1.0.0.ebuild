@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/nfacct/nfacct-1.0.0.ebuild,v 1.1 2012/08/31 19:52:16 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/nfacct/nfacct-1.0.0.ebuild,v 1.2 2012/10/23 19:47:55 jer Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="net-libs/libmnl
-	~net-libs/libnetfilter_acct-${PV}"
+	>=net-libs/libnetfilter_acct-1.0.0"
 RDEPEND="${DEPEND}"
 
 CONFIG_CHECK="NETFILTER_NETLINK_ACCT"
