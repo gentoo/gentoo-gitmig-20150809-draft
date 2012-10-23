@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/gcj-jdk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gcj-jdk/ChangeLog,v 1.8 2012/09/28 18:37:53 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gcj-jdk/ChangeLog,v 1.9 2012/10/23 19:28:58 sera Exp $
+
+*gcj-jdk-4.6.3-r2 (23 Oct 2012)
+*gcj-jdk-4.5.4 (23 Oct 2012)
+
+  23 Oct 2012; Ralph Sennhauser <sera@gentoo.org> +gcj-jdk-4.5.4.ebuild,
+  +gcj-jdk-4.6.3-r2.ebuild:
+  Don't require corresponding gcc to be active. #439228
+  Backport various fixes to 4.5.4.
 
 *gcj-jdk-4.6.3-r1 (28 Sep 2012)
 
