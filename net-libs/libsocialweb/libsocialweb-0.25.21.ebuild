@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsocialweb/libsocialweb-0.25.21.ebuild,v 1.3 2012/10/20 18:39:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsocialweb/libsocialweb-0.25.21.ebuild,v 1.4 2012/10/23 17:19:41 mr_bones_ Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -68,7 +68,7 @@ pkg_setup() {
 src_prepare() {
 	# Sent upstream, gnome bug 677445
 	epatch "${FILESDIR}"/${PN}-0.25.20-gold.patch
-	# https://bugzilla.gnome.org/show_bug.cgi?id=686503 
+	# https://bugzilla.gnome.org/show_bug.cgi?id=686503
 	epatch "${FILESDIR}"/${PN}-0.25.21-gmodule.patch
 
 	# Fix namespacing of introspection annotations, bug #426984
