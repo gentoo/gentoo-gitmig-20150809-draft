@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/atanks-5.6.ebuild,v 1.1 2012/10/22 05:31:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/atanks-5.6.ebuild,v 1.2 2012/10/23 17:36:40 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils gnome2-utils games
@@ -51,4 +51,3 @@ pkg_postinst() {
 pkg_postrm() {
 	gnome2_icon_cache_update
 }
-
