@@ -1,9 +1,0 @@
---- libfaketime-0.9/Makefile.orig
-+++ libfaketime-0.9/Makefile
-@@ -1,6 +1,5 @@
- all:
- 	$(MAKE) -C src all
--	$(MAKE) -C test all
- 
- test:
- 	$(MAKE) -C test all
