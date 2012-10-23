@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.547 2012/10/17 07:37:32 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.548 2012/10/23 06:21:15 tetromino Exp $
+
+  23 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  glib-2.32.4-r1.ebuild:
+  Disable problematic thread4 test, like was already done in glib-2.34.x
+  ebuilds (bug #434248, thanks to Toralf Förster and Priit Laes).
 
 *glib-2.34.1 (17 Oct 2012)
 
