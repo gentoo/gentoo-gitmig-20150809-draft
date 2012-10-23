@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.2.3.ebuild,v 1.1 2012/10/23 06:55:06 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.2.3.ebuild,v 1.2 2012/10/23 07:01:47 eras Exp $
 
 EAPI=4
 inherit eutils pam toolchain-funcs autotools linux-info user versionator
@@ -213,11 +213,11 @@ src_install() {
 	newpamd "${FILESDIR}/squid.pam" squid
 	newconfd "${FILESDIR}/squid.confd" squid
 	if use logrotate; then
-		newinitd "${FILESDIR}/squid.initd-logrotate" squid
+		newinitd "${FILESDIR}/squid.initd-logrotate-r1" squid
 		insinto /etc/logrotate.d
 		newins "${FILESDIR}/squid.logrotate" squid
 	else
-		newinitd "${FILESDIR}/squid.initd" squid
+		newinitd "${FILESDIR}/squid.initd-r1" squid
 		exeinto /etc/cron.weekly
 		newexe "${FILESDIR}/squid.cron" squid.cron
 	fi
