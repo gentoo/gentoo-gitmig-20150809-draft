@@ -1,7 +1,7 @@
 #!/bin/bash
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.95 2012/07/07 03:34:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.96 2012/10/23 02:25:23 zmedico Exp $
 
 # people who were here:
 # (drobbins, 06 Jun 2003)
@@ -52,7 +52,7 @@ v_echo() {
 	env "$@"
 }
 
-cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.95 2012/07/07 03:34:53 vapier Exp $"
+cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.96 2012/10/23 02:25:23 zmedico Exp $"
 cvsver=${cvsver##*,v }
 cvsver=${cvsver%%Exp*}
 cvsyear=${cvsver#* }
@@ -253,9 +253,15 @@ done
 # parents.  So we now call portage to read the aggregate profile and store
 # that into a variable.
 
-eval $(pycmd 'import portage, sys; sys.stdout.write(str([str(x) for x in portage.settings.packages]));' |
-sed 's/[][,]//g; s/\*//g' | tr ' ' '\n' | while read p; do n=${p##*/}; n=${n%\'};
-n=${n%%-[0-9]*}; echo "my$(tr a-z- A-Z_ <<<$n)=$p; "; done)
+eval $(pycmd '
+import portage
+import sys
+for atom in portage.settings.packages:
+	if not isinstance(atom, portage.dep.Atom):
+		atom = portage.dep.Atom(atom.lstrip("*"))
+	varname = "my" + portage.catsplit(atom.cp)[1].upper().replace("-", "_")
+	sys.stdout.write("%s=\"%s\"; " % (varname, atom))
+')
 
 # This stuff should never fail but will if not enough is installed.
 [[ -z ${myBASELAYOUT} ]] && myBASELAYOUT=">=$(portageq best_version / sys-apps/baselayout)"
