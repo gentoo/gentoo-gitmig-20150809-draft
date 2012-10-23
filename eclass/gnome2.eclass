@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.107 2012/09/27 16:35:41 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.108 2012/10/23 20:32:51 eva Exp $
 
 # @ECLASS: gnome2.eclass
 # @MAINTAINER:
@@ -93,6 +93,9 @@ gnome2_src_prepare() {
 
 	# Prevent scrollkeeper access violations
 	gnome2_omf_fix
+
+	# Disable all deprecation warnings
+	gnome2_disable_deprecation_warning
 
 	# Run libtoolize
 	if has ${EAPI:-0} 0 1 2 3; then

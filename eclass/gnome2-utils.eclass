@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2-utils.eclass,v 1.29 2012/09/27 16:35:41 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2-utils.eclass,v 1.30 2012/10/23 20:32:51 eva Exp $
 
 # @ECLASS: gnome2-utils.eclass
 # @MAINTAINER:
@@ -423,4 +423,42 @@ gnome2_query_immodules_gtk2() {
 # Updates gtk3 immodules/gdk-pixbuf loaders listing.
 gnome2_query_immodules_gtk3() {
 	"${EPREFIX}/usr/bin/gtk-query-immodules-3.0" --update-cache
+}
+
+# @FUNCTION: gnome2_disable_deprecation_warning
+# @DESCRIPTION:
+# Disable deprecation warnings commonly found in glib based packages.
+# Should be called from src_prepare.
+gnome2_disable_deprecation_warning() {
+	local retval=0
+	local fails=( )
+	local makefile
+
+	ebegin "Disabling deprecation warnings"
+	# The sort is important to ensure .am is listed before the respective .in for
+	# maintainer mode regeneration not kicking in due to .am being newer than .in
+	while read makefile ; do
+		if ! grep -qE "(DISABLE_DEPRECATED|GSEAL_ENABLE)" "${makefile}"; then
+			continue
+		fi
+
+		LC_ALL=C sed -r -i \
+			-e 's:-D[A-Z_]+_DISABLE_DEPRECATED:$(NULL):g' \
+			-e 's:-DGSEAL_ENABLE:$(NULL):g' \
+			-i "${makefile}"
+
+		if [[ $? -ne 0 ]]; then
+			# Add to the list of failures
+			fails+=( "${makefile}" )
+			retval=2
+		fi
+	done < <(find "${S}" -name "Makefile.in" \
+		-o -name "Makefile.am" -o -name "Makefile.decl" \
+		-o -name "configure.ac" -o -name "configure.in" \
+		| sort; echo configure)
+	eend ${retval}
+
+	for makefile in "${fails[@]}" ; do
+		ewarn "Failed to disable deprecation warnings in ${makefile}"
+	done
 }
