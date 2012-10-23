@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtrace/libtrace-3.0.15.ebuild,v 1.1 2012/10/15 16:04:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtrace/libtrace-3.0.15.ebuild,v 1.2 2012/10/23 06:59:15 radhermit Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils autotools
 
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 	virtual/yacc"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-3.0.14-no-doxygen.patch
+	epatch "${FILESDIR}"/${P}-no-doxygen.patch
 
 	# don't build examples
 	sed -i "/^SUBDIRS/s/examples//" Makefile.am || die
@@ -46,5 +46,5 @@ src_configure() {
 src_install() {
 	default
 	use doc && dohtml docs/doxygen/html/*
-	use static-libs || find "${ED}" -name "*.la" -delete
+	prune_libtool_files --modules
 }
