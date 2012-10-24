@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/urwid
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/ChangeLog,v 1.56 2012/10/22 11:12:23 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/ChangeLog,v 1.57 2012/10/24 04:59:15 radhermit Exp $
+
+*urwid-1.1.0 (24 Oct 2012)
+
+  24 Oct 2012; Tim Harder <radhermit@gentoo.org> +urwid-1.1.0.ebuild,
+  +files/urwid-1.1.0-sphinx.patch:
+  Version bump. Add doc use flag to build sphinx docs.
 
   22 Oct 2012; Tim Harder <radhermit@gentoo.org> -urwid-1.0.0.ebuild,
   -urwid-1.0.1.ebuild:
