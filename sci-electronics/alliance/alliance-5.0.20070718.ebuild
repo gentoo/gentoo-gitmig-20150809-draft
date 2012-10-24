@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/alliance/alliance-5.0.20070718.ebuild,v 1.6 2011/07/19 12:17:34 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/alliance/alliance-5.0.20070718.ebuild,v 1.7 2012/10/24 19:35:25 ulm Exp $
 
 EAPI=1
 
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
-DEPEND=">=x11-libs/openmotif-2.3:0
+DEPEND=">=x11-libs/motif-2.3:0
 	x11-libs/libXpm"
 RDEPEND="${DEPEND}"
 
