@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/eric
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.184 2012/10/24 09:54:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.185 2012/10/24 09:56:32 ago Exp $
+
+  24 Oct 2012; <ago@gentoo.org> eric-5.2.5.ebuild:
+  Stable for amd64, wrt bug #439046
 
   24 Oct 2012; Agostino Sarubbo <ago@gentoo.org> eric-4.5.6.ebuild:
   Stable for amd64, wrt bug #439046
