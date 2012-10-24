@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/polyml/polyml-5.5.0.ebuild,v 1.1 2012/09/20 13:16:34 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/polyml/polyml-5.5.0.ebuild,v 1.2 2012/10/24 19:04:03 ulm Exp $
 
 EAPI="4"
 
@@ -20,7 +20,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="X elibc_glibc +gmp portable test +threads"
 
-RDEPEND="X? ( x11-libs/openmotif )
+RDEPEND="X? ( x11-libs/motif )
 		gmp? ( >=dev-libs/gmp-5 )
 		elibc_glibc? ( threads? ( >=sys-libs/glibc-2.13 ) )"
 DEPEND="${RDEPEND}"
