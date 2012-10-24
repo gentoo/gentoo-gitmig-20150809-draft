@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sg/sg-1.4.ebuild,v 1.5 2012/02/13 20:33:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sg/sg-1.4.ebuild,v 1.6 2012/10/24 19:14:28 ulm Exp $
 
 EAPI="3"
 
@@ -18,7 +18,7 @@ IUSE="doc opengl"
 RDEPEND="
 	dev-libs/maloc
 	x11-libs/libXaw
-	x11-libs/openmotif
+	x11-libs/motif
 	opengl? (
 		|| (
 			<media-libs/mesa-8[motif]

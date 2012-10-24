@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/openinventor-2.1.5.10-r3.ebuild,v 1.11 2012/06/09 00:17:35 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/openinventor-2.1.5.10-r3.ebuild,v 1.12 2012/10/24 19:13:38 ulm Exp $
 
 EAPI=2
 inherit eutils flag-o-matic multilib toolchain-funcs versionator
@@ -21,7 +21,7 @@ RDEPEND="
 	|| (
 		media-libs/mesa[motif]
 		( media-libs/mesa x11-libs/libGLw ) )
-	>=x11-libs/openmotif-2.3:0
+	>=x11-libs/motif-2.3:0
 	>=media-libs/freetype-2.0
 	media-fonts/corefonts
 	virtual/jpeg"

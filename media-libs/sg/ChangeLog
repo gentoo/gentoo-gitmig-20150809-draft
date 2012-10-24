@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/sg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sg/ChangeLog,v 1.8 2012/06/19 10:27:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sg/ChangeLog,v 1.9 2012/10/24 19:14:28 ulm Exp $
+
+  24 Oct 2012; Ulrich Müller <ulm@gentoo.org> sg-1.4.ebuild, sg-1.5.ebuild:
+  Update dependency after package move from x11-libs/openmotif to
+  x11-libs/motif.
 
   19 Jun 2012; Justin Lecher <jlec@gentoo.org> sg-1.5.ebuild:
   Always build complete X support, #421807

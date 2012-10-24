@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openinventor
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/ChangeLog,v 1.33 2012/06/09 00:17:35 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/ChangeLog,v 1.34 2012/10/24 19:13:38 ulm Exp $
+
+  24 Oct 2012; Ulrich Müller <ulm@gentoo.org> openinventor-2.1.5.10-r3.ebuild:
+  Update dependency after package move from x11-libs/openmotif to
+  x11-libs/motif.
 
   09 Jun 2012; Zac Medico <zmedico@gentoo.org> openinventor-2.1.5.10-r3.ebuild:
   inherit multilib for get_libdir
