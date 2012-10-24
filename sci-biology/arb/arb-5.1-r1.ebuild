@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/arb/arb-5.1-r1.ebuild,v 1.5 2012/03/04 09:55:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/arb/arb-5.1-r1.ebuild,v 1.6 2012/10/24 19:28:55 ulm Exp $
 
 EAPI=2
 
@@ -25,7 +25,7 @@ DEPEND="
 	www-client/lynx
 	x11-libs/libXaw
 	x11-libs/libXpm
-	x11-libs/openmotif:0
+	x11-libs/motif:0
 	opengl? (
 		media-libs/glew
 		media-libs/freeglut

@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/clustalx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalx/ChangeLog,v 1.26 2012/06/13 07:28:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalx/ChangeLog,v 1.27 2012/10/24 19:29:39 ulm Exp $
+
+  24 Oct 2012; Ulrich Müller <ulm@gentoo.org> clustalx-1.83-r2.ebuild:
+  Update dependency after package move from x11-libs/openmotif to
+  x11-libs/motif.
 
   13 Jun 2012; Justin Lecher <jlec@gentoo.org> clustalx-1.83-r2.ebuild:
   Cleaned old

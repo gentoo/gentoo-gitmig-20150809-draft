@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/arb/arb-5.3.ebuild,v 1.1 2012/08/14 16:47:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/arb/arb-5.3.ebuild,v 1.2 2012/10/24 19:28:55 ulm Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ CDEPEND="app-text/sablotron
 	www-client/lynx
 	x11-libs/libXaw
 	x11-libs/libXpm
-	x11-libs/openmotif:0
+	x11-libs/motif:0
 	opengl? (
 		media-libs/glew
 		media-libs/freeglut
