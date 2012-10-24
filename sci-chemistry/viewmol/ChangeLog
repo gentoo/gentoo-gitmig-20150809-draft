@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/viewmol
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/viewmol/ChangeLog,v 1.16 2012/10/06 16:25:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/viewmol/ChangeLog,v 1.17 2012/10/24 19:34:04 ulm Exp $
+
+  24 Oct 2012; Ulrich Müller <ulm@gentoo.org> viewmol-2.4.1-r2.ebuild:
+  Update dependency after package move from x11-libs/openmotif to
+  x11-libs/motif.
 
   06 Oct 2012; Justin Lecher <jlec@gentoo.org> viewmol-2.4.1-r2.ebuild:
   Add missing DEP on virtual/glu, #437076

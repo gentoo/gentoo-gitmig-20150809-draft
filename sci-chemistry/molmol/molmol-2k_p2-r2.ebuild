@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/molmol-2k_p2-r2.ebuild,v 1.12 2012/08/05 12:38:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/molmol-2k_p2-r2.ebuild,v 1.13 2012/10/24 19:32:20 ulm Exp $
 
 EAPI=4
 
@@ -30,7 +30,7 @@ DEPEND="
 	sys-libs/zlib
 	virtual/jpeg
 	x11-libs/libXpm
-	x11-libs/openmotif:0
+	x11-libs/motif:0
 	x11-apps/xdpyinfo"
 RDEPEND="${DEPEND}"
 
