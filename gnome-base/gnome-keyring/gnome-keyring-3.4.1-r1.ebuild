@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-3.4.1.ebuild,v 1.2 2012/10/24 07:11:50 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-3.4.1-r1.ebuild,v 1.1 2012/10/24 07:11:50 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -11,7 +11,7 @@ inherit gnome2 pam versionator virtualx
 DESCRIPTION="Password and keyring managing daemon"
 HOMEPAGE="http://www.gnome.org/"
 
-LICENSE="GPL-2 LGPL-2"
+LICENSE="GPL-2+ LGPL-2+"
 SLOT="0"
 IUSE="+caps debug pam selinux"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~sparc-solaris ~x86-solaris"
@@ -26,8 +26,8 @@ RDEPEND=">=app-crypt/gcr-3.3.4
 	pam? ( virtual/pam )
 "
 DEPEND="${RDEPEND}
-	sys-devel/gettext
 	>=dev-util/intltool-0.35
+	sys-devel/gettext
 	virtual/pkgconfig"
 PDEPEND=">=gnome-base/libgnome-keyring-3.1.92"
 # eautoreconf needs:
@@ -37,7 +37,7 @@ PDEPEND=">=gnome-base/libgnome-keyring-3.1.92"
 # FIXME: tests are very flaky and write to /tmp (instead of TMPDIR)
 RESTRICT="test"
 
-pkg_setup() {
+src_prepare() {
 	DOCS="AUTHORS ChangeLog NEWS README"
 	G2CONF="${G2CONF}
 		$(use_enable debug)
@@ -49,6 +49,9 @@ pkg_setup() {
 		--with-ca-certificates=${EPREFIX}/etc/ssl/certs/ca-certificates.crt
 		--enable-ssh-agent
 		--enable-gpg-agent"
+	# Bug #436392, CVE-2012-3466; fixed in 3.6
+	epatch "${FILESDIR}/${P}-gpg-cache-method-"{1,2}.patch
+	gnome2_src_prepare
 }
 
 src_test() {

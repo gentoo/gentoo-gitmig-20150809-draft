@@ -1,6 +1,20 @@
 # ChangeLog for gnome-base/gnome-keyring
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/ChangeLog,v 1.224 2012/05/21 18:53:30 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/ChangeLog,v 1.225 2012/10/24 07:11:50 tetromino Exp $
+
+*gnome-keyring-3.4.1-r1 (24 Oct 2012)
+
+  24 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-keyring-2.32.1.ebuild, gnome-keyring-2.32.1-r1.ebuild,
+  +files/gnome-keyring-2.32.1-glib-2.32.patch, gnome-keyring-3.2.2.ebuild,
+  gnome-keyring-3.4.1.ebuild, +gnome-keyring-3.4.1-r1.ebuild,
+  +files/gnome-keyring-3.4.1-gpg-cache-method-1.patch,
+  +files/gnome-keyring-3.4.1-gpg-cache-method-2.patch:
+  Fix gpg passwords being cached for longer than the user requested (bug
+  #430602, CVE-2012-3466, thanks to Jason A. Donenfeld and Pacho Ramos). Fix
+  2.32.1-r1's build failure with glib-2.32 and gold. Drop useless doc USE flag:
+  in 2.x and 3.2.x, it only controlled document regeneration; in 3.4.x, it had
+  no effect at all. Update license.
 
   21 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   gnome-keyring-2.32.1-r1.ebuild, gnome-keyring-3.2.2.ebuild:

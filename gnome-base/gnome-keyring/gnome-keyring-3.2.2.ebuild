@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-3.2.2.ebuild,v 1.9 2012/05/21 18:53:30 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-3.2.2.ebuild,v 1.10 2012/10/24 07:11:50 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -11,9 +11,9 @@ inherit autotools eutils gnome2 multilib pam versionator virtualx
 DESCRIPTION="Password and keyring managing daemon"
 HOMEPAGE="http://www.gnome.org/"
 
-LICENSE="GPL-2 LGPL-2"
+LICENSE="GPL-2+ LGPL-2+"
 SLOT="0"
-IUSE="+caps debug doc pam test"
+IUSE="+caps debug pam test"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~sparc-solaris ~x86-solaris"
 
 # USE=valgrind is probably not a good idea for the tree
@@ -29,14 +29,11 @@ RDEPEND=">=dev-libs/glib-2.25:2
 "
 #	valgrind? ( dev-util/valgrind )
 DEPEND="${RDEPEND}
-	sys-devel/gettext
 	>=dev-util/gtk-doc-am-1.9
 	>=dev-util/intltool-0.35
-	virtual/pkgconfig
-	doc? ( >=dev-util/gtk-doc-1.9 )"
+	sys-devel/gettext
+	virtual/pkgconfig"
 PDEPEND=">=gnome-base/libgnome-keyring-3.1.92"
-# eautoreconf needs:
-#	>=dev-util/gtk-doc-am-1.9
 
 # FIXME: tests are flaky and write to /tmp (instead of TMPDIR)
 RESTRICT="test"
