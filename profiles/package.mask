@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14151 2012/10/23 21:39:22 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14152 2012/10/24 11:16:53 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,26 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ben de Groot <yngwin@gentoo.org> (24 Oct 2012)
+# Temp mask of new release to be committed
+=razorqt-base/libqtxdg-0.5.1
+=razorqt-base/razorqt-appswitcher-0.5.1
+=razorqt-base/razorqt-autosuspend-0.5.1
+=razorqt-base/razorqt-config-0.5.1
+=razorqt-base/razorqt-data-0.5.1
+=razorqt-base/razorqt-desktop-0.5.1
+=razorqt-base/razorqt-kbshortcuts-0.5.1
+=razorqt-base/razorqt-libs-0.5.1
+=razorqt-base/razorqt-lightdm-greeter-0.5.1
+=razorqt-base/razorqt-meta-0.5.1
+=razorqt-base/razorqt-notifications-0.5.1
+=razorqt-base/razorqt-openssh-askpass-0.5.1
+=razorqt-base/razorqt-panel-0.5.1
+=razorqt-base/razorqt-policykit-0.5.1
+=razorqt-base/razorqt-power-0.5.1
+=razorqt-base/razorqt-runner-0.5.1
+=razorqt-base/razorqt-session-0.5.1
 
 # Doug Goldstein <cardoe@gentoo.org> (23 Oct 2012)
 # A cgroup CPU pinning patch caused problems for some people
@@ -134,7 +154,7 @@ games-emulation/snes9express
 net-libs/libwww
 
 # Patrick Lauer <patrick@gentoo.org> (16 Oct 2012)
-# upstream dead since 2008, doesn't build 
+# upstream dead since 2008, doesn't build
 www-apache/mod_cplusplus
 
 # Sergey Popov <pinkbyte@gentoo.org> (15 Oct 2012)
