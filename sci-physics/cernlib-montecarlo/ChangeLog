@@ -1,6 +1,11 @@
 # ChangeLog for sci-physics/cernlib-montecarlo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib-montecarlo/ChangeLog,v 1.17 2012/10/16 19:03:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib-montecarlo/ChangeLog,v 1.18 2012/10/24 21:13:48 ulm Exp $
+
+  24 Oct 2012; Ulrich Müller <ulm@gentoo.org>
+  cernlib-montecarlo-2006-r2.ebuild, cernlib-montecarlo-2006-r3.ebuild:
+  Update dependency after package move from x11-libs/openmotif to
+  x11-libs/motif.
 
   16 Oct 2012; Justin Lecher <jlec@gentoo.org>
   cernlib-montecarlo-2006-r2.ebuild, cernlib-montecarlo-2006-r3.ebuild,

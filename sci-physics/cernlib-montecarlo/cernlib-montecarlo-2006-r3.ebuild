@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib-montecarlo/cernlib-montecarlo-2006-r3.ebuild,v 1.2 2012/10/16 19:03:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib-montecarlo/cernlib-montecarlo-2006-r3.ebuild,v 1.3 2012/10/24 21:13:48 ulm Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
@@ -22,7 +22,7 @@ IUSE="+herwig"
 KEYWORDS="~amd64 ~x86"
 
 RDEPEND="
-	x11-libs/openmotif:0
+	x11-libs/motif:0
 	dev-lang/cfortran
 	sci-physics/cernlib
 	herwig? ( !sci-physics/herwig )"
