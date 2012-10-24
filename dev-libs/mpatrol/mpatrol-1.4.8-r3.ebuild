@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpatrol/mpatrol-1.4.8-r3.ebuild,v 1.5 2012/03/18 15:40:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpatrol/mpatrol-1.4.8-r3.ebuild,v 1.6 2012/10/24 19:05:39 ulm Exp $
 
 EAPI=1
 
@@ -18,7 +18,7 @@ IUSE="X"
 S="${WORKDIR}/${PN}"
 
 # To use X, mpatrol requires Motif
-DEPEND="X? ( >=x11-libs/openmotif-2.3:0 )"
+DEPEND="X? ( >=x11-libs/motif-2.3:0 )"
 RDEPEND="${DEPEND}
 	!dev-lang/mercury"
 
