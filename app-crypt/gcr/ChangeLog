@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gcr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/ChangeLog,v 1.4 2012/09/10 17:28:21 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/ChangeLog,v 1.5 2012/10/24 09:55:42 ago Exp $
+
+  24 Oct 2012; Agostino Sarubbo <ago@gentoo.org> gcr-3.4.1-r2.ebuild:
+  Stable for amd64, wrt bug #439152
 
 *gcr-3.4.1-r2 (10 Sep 2012)
 
