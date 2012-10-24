@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/gio-sharp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gio-sharp/ChangeLog,v 1.9 2012/05/04 03:56:57 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gio-sharp/ChangeLog,v 1.10 2012/10/24 05:25:06 ssuominen Exp $
+
+  24 Oct 2012; Samuli Suominen <ssuominen@gentoo.org>
+  -files/gio-sharp-0.2-debug-libs.patch:
+  old
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> gio-sharp-0.3.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
