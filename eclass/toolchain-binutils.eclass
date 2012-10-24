@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.119 2012/10/17 19:14:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.120 2012/10/24 03:24:45 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 #
@@ -357,7 +357,17 @@ toolchain-binutils_src_install() {
 		fi
 	fi
 	insinto ${INCPATH}
-	doins "${S}/include/libiberty.h"
+	local libiberty_headers=(
+		# Not all the libiberty headers.  See libiberty/Makefile.in:install_to_libdir.
+		demangle.h
+		dyn-string.h
+		fibheap.h
+		hashtab.h
+		libiberty.h
+		objalloc.h
+		splay-tree.h
+	)
+	doins "${libiberty_headers[@]/#/${S}/include/}" || die
 	if [[ -d ${D}/${LIBPATH}/lib ]] ; then
 		mv "${D}"/${LIBPATH}/lib/* "${D}"/${LIBPATH}/
 		rm -r "${D}"/${LIBPATH}/lib
