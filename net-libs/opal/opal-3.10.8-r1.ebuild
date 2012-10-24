@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-3.10.8.ebuild,v 1.1 2012/10/23 22:48:38 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-3.10.8-r1.ebuild,v 1.1 2012/10/24 21:28:10 neurogeek Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ stats swig theora +video vpb vxml wav x264 x264-static xml"
 REQUIRED_USE="x264-static? ( x264 )
 	h281? ( h224 )"
 
-RDEPEND=">=net-libs/ptlib-2.10.0[stun,debug=,audio?,dtmf,ipv6?,ldap?,ssl?,video?,vxml?,wav?,xml?]
+RDEPEND=">=net-libs/ptlib-2.10.8[stun,debug=,audio?,dtmf,http,ipv6?,ldap?,ssl?,video?,vxml?,wav?,xml?]
 	>=media-libs/speex-1.2_beta
 	fax? ( net-libs/ptlib[asn] )
 	h323? ( net-libs/ptlib[asn] )
@@ -83,6 +83,7 @@ src_prepare() {
 
 	epatch "${FILESDIR}/${P}-svn_revision_override.patch"
 	epatch "${FILESDIR}/${P}-labs_is_in_stdlib.patch"
+	epatch "${FILESDIR}/${P}-avoid_cflags_mixup.patch"
 
 	if ! use h323; then
 		# Without this patch, ekiga wont compile, even with
