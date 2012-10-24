@@ -1,8 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta15-r20.ebuild,v 1.1 2012/07/31 10:40:08 aidecoe Exp $
-
-EAPI=4
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta15-r5.ebuild,v 1.1 2012/10/24 18:45:04 aidecoe Exp $
 
 inherit eutils autotools
 
@@ -16,35 +14,38 @@ SRC_URI="http://download.savannah.gnu.org/releases/hddtemp/${MY_P}.tar.bz2 mirro
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~sparc ~x86"
-IUSE="network-cron nls"
+IUSE="nls"
 
 DEPEND=""
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
-DOCS=(README TODO ChangeLog)
-
-src_prepare() {
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
 	epatch "${FILESDIR}"/${P}-satacmds.patch
 	epatch "${FILESDIR}"/${P}-byteswap.patch
 	epatch "${FILESDIR}"/${P}-execinfo.patch
 	epatch "${FILESDIR}"/${P}-nls.patch
 	epatch "${FILESDIR}"/${P}-iconv.patch
+	epatch "${FILESDIR}"/${P}-dontwake.patch
 	AT_M4DIR="m4" eautoreconf
 }
 
-src_configure() {
+src_compile() {
 	local myconf
 
 	myconf="--with-db-path=/usr/share/hddtemp/hddtemp.db"
 	# disabling nls breaks compiling
 	use nls || myconf="--disable-nls ${myconf}"
-	econf ${myconf}
+	econf ${myconf} || die
+	emake || die
 }
 
 src_install() {
-	default
+	make DESTDIR="${D}" install || die
+	dodoc README TODO ChangeLog
 
 	insinto /usr/share/hddtemp
 	newins "${WORKDIR}/hddtemp-${DBV}.db" hddtemp.db
@@ -53,19 +54,11 @@ src_install() {
 	update_db "${D}/usr/share/hddtemp/hddgentoo.db" "${D}/usr/share/hddtemp/hddtemp.db"
 	newconfd "${FILESDIR}"/hddtemp-conf.d hddtemp
 	newinitd "${FILESDIR}"/hddtemp-init hddtemp
-
-	dosbin "${FILESDIR}"/update-hddtemp.db
-
-	if use network-cron ; then
-		exeinto /etc/cron.monthly
-		echo -e "#!/bin/sh\n/usr/sbin/update-hddtemp.db" > "${T}"/hddtemp.cron
-		newexe "${T}"/hddtemp.cron update-hddtemp.db
-	fi
 }
 
 pkg_postinst() {
 	elog "In order to update your hddtemp database, run:"
-	elog "  update-hddtemp.db"
+	elog "  emerge --config =${CATEGORY}/${PF}"
 	elog ""
 	elog "If your hard drive is not recognized by hddtemp, please consider"
 	elog "submitting your HDD info for inclusion into the Gentoo hddtemp"
@@ -92,4 +85,14 @@ update_db() {
 
 		grep "${id}" "${dst}" 2>&1 >/dev/null || echo "${line}" >> "${dst}"
 	done < "${src}"
+}
+
+pkg_config() {
+	cd "${ROOT}"/usr/share/hddtemp
+
+	einfo "Trying to download the latest hddtemp.db file"
+	wget http://www.guzu.net/linux/hddtemp.db -O hddtemp.db \
+		|| die "failed to download hddtemp.db"
+
+	update_db "hddgentoo.db" "hddtemp.db"
 }
