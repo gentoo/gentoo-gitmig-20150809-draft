@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/timidity++
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.154 2012/10/06 01:21:20 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.155 2012/10/24 19:17:46 ulm Exp $
+
+  24 Oct 2012; Ulrich Müller <ulm@gentoo.org> timidity++-2.13.2-r13.ebuild,
+  timidity++-2.13.2-r14.ebuild, timidity++-2.14.0.ebuild:
+  Update dependency after package move from x11-libs/openmotif to
+  x11-libs/motif.
 
   06 Oct 2012; Anthony G. Basile <blueness@gentoo.org> timidity++-2.14.0.ebuild:
   stable ppc64, bug #432608

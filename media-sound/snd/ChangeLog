@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/snd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.66 2012/09/07 22:22:35 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.67 2012/10/24 19:16:45 ulm Exp $
+
+  24 Oct 2012; Ulrich Müller <ulm@gentoo.org> snd-9.11.ebuild,
+  snd-12.7.ebuild, snd-12.8.ebuild:
+  Update dependency after package move from x11-libs/openmotif to
+  x11-libs/motif.
 
   07 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.

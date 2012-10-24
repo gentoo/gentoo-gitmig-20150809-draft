@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-12.7.ebuild,v 1.4 2012/06/09 23:18:48 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/snd-12.7.ebuild,v 1.5 2012/10/24 19:16:45 ulm Exp $
 
 EAPI="4"
 
@@ -29,7 +29,7 @@ RDEPEND="media-libs/audiofile
 		opengl? ( x11-libs/gtkglext ) )
 	jack? ( media-sound/jack-audio-connection-kit )
 	ladspa? ( media-libs/ladspa-sdk )
-	motif? ( >=x11-libs/openmotif-2.3:0 )
+	motif? ( >=x11-libs/motif-2.3:0 )
 	opengl? ( virtual/opengl )
 	portaudio? ( media-libs/portaudio )
 	pulseaudio? ( media-sound/pulseaudio )
