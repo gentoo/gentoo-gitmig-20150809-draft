@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/lirc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.232 2012/09/18 18:06:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.233 2012/10/24 18:39:12 axs Exp $
+
+  24 Oct 2012; Ian Stakenvicius <axs@gentoo.org> lirc-0.9.0-r2.ebuild,
+  +files/lirc-0.9.0-kernel-3.3.0-fixes.patch:
+  fixed asm/system.h migration issue caused by 3.3+ kernels, bug 439538
 
   18 Sep 2012; Pacho Ramos <pacho@gentoo.org> -files/lirc-0.8.6-send-evsyn.diff,
   -lirc-0.8.5.ebuild, -lirc-0.8.7_pre1.ebuild:
