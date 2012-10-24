@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/cmucl-19c.ebuild,v 1.10 2010/12/17 20:17:43 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/cmucl-19c.ebuild,v 1.11 2012/10/24 19:07:00 ulm Exp $
 
 EAPI=1
 
@@ -23,7 +23,7 @@ IUSE="doc nosource"
 
 DEPEND=">=dev-lisp/common-lisp-controller-4
 	doc? ( virtual/latex-base )
-	>=x11-libs/openmotif-2.3:0
+	>=x11-libs/motif-2.3:0
 	sys-devel/bc"
 
 S=${WORKDIR}/cmucl-${MY_PV}.orig

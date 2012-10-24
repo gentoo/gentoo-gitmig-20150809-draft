@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/cmucl-20a.ebuild,v 1.5 2012/06/07 17:33:19 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/cmucl-20a.ebuild,v 1.6 2012/10/24 19:07:00 ulm Exp $
 
 EAPI="3"
 
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="X source sse2"
 
-RDEPEND=">=x11-libs/openmotif-2.3:0"
+RDEPEND=">=x11-libs/motif-2.3:0"
 DEPEND="${RDEPEND}
 		sys-devel/bc"
 PDEPEND="dev-lisp/gentoo-init"
