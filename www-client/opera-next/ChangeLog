@@ -1,6 +1,11 @@
 # ChangeLog for www-client/opera-next
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.137 2012/10/23 11:00:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.138 2012/10/24 15:07:07 jer Exp $
+
+*opera-next-12.10.1639 (24 Oct 2012)
+
+  24 Oct 2012; Jeroen Roovers <jer@gentoo.org> +opera-next-12.10.1639.ebuild:
+  http://my.opera.com/desktopteam/blog/2012/10/24/hidpi-oex
 
 *opera-next-12.10.1633 (23 Oct 2012)
 
