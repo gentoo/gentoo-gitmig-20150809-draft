@@ -1,6 +1,11 @@
 # ChangeLog for media-radio/xastir
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xastir/ChangeLog,v 1.27 2012/09/23 08:35:07 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xastir/ChangeLog,v 1.28 2012/10/24 19:15:33 ulm Exp $
+
+  24 Oct 2012; Ulrich Müller <ulm@gentoo.org> xastir-2.0.0-r1.ebuild,
+  xastir-2.0.0-r2.ebuild:
+  Update dependency after package move from x11-libs/openmotif to
+  x11-libs/motif.
 
   23 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> xastir-2.0.0-r2.ebuild:
   x86 stable wrt bug #432988
