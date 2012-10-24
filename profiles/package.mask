@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14154 2012/10/24 12:31:12 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14155 2012/10/24 12:42:21 ryao Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -36,6 +36,8 @@
 =sys-kernel/gentoo-sources-3.5.7
 =sys-kernel/gentoo-sources-3.6.2
 =sys-kernel/hardened-sources-3.6.2
+=sys-kernel/mips-sources-3.5.7
+=sys-kernel/mips-sources-3.6.2
 =sys-kernel/vanilla-sources-3.4.14
 =sys-kernel/vanilla-sources-3.5.7
 =sys-kernel/vanilla-sources-3.6.2
