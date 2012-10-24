@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pdv/pdv-1.5.1-r2.ebuild,v 1.12 2012/10/20 09:09:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pdv/pdv-1.5.1-r2.ebuild,v 1.13 2012/10/24 18:47:57 ulm Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ppc x86 ~x86-linux ~ppc-macos"
 IUSE="X"
 
-DEPEND="X? ( >=x11-libs/openmotif-2.3:0
+DEPEND="X? ( >=x11-libs/motif-2.3:0
 	>=x11-libs/libX11-1.0.0
 	>=x11-libs/libXt-1.0.0
 	>=x11-libs/libXext-1.0.0
