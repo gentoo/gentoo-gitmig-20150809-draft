@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-3.21.14-r3.ebuild,v 1.2 2012/10/16 19:00:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-3.21.14-r3.ebuild,v 1.3 2012/10/24 19:42:46 ulm Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
-	x11-libs/openmotif:0
+	x11-libs/motif:0
 	dev-lang/cfortran
 	sci-physics/cernlib
 	sci-physics/paw"

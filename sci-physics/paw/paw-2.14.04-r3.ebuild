@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/paw/paw-2.14.04-r3.ebuild,v 1.2 2012/10/16 18:54:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/paw/paw-2.14.04-r3.ebuild,v 1.3 2012/10/24 19:43:50 ulm Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ IUSE=""
 RDEPEND="
 	sci-physics/cernlib
 	x11-libs/libXaw
-	>=x11-libs/openmotif-2.3:0
+	>=x11-libs/motif-2.3:0
 	x11-libs/xbae"
 DEPEND="${RDEPEND}
 	dev-lang/cfortran

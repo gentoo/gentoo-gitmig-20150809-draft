@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/cernlib-2006-r3.ebuild,v 1.13 2012/10/16 19:04:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/cernlib-2006-r3.ebuild,v 1.14 2012/10/24 19:42:22 ulm Exp $
 
 EAPI=3
 
@@ -23,7 +23,7 @@ KEYWORDS="amd64 hppa sparc x86"
 IUSE=""
 
 RDEPEND="
-	x11-libs/openmotif:0
+	x11-libs/motif:0
 	virtual/lapack
 	dev-lang/cfortran"
 DEPEND="${RDEPEND}

@@ -1,6 +1,11 @@
 # ChangeLog for sci-physics/paw
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/paw/ChangeLog,v 1.24 2012/10/16 18:54:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/paw/ChangeLog,v 1.25 2012/10/24 19:43:50 ulm Exp $
+
+  24 Oct 2012; Ulrich Müller <ulm@gentoo.org> paw-2.14.04-r2.ebuild,
+  paw-2.14.04-r3.ebuild:
+  Update dependency after package move from x11-libs/openmotif to
+  x11-libs/motif.
 
   16 Oct 2012; Justin Lecher <jlec@gentoo.org> paw-2.14.04-r2.ebuild,
   paw-2.14.04-r3.ebuild, metadata.xml:

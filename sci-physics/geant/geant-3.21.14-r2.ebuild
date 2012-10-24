@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-3.21.14-r2.ebuild,v 1.21 2012/10/16 19:00:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-3.21.14-r2.ebuild,v 1.22 2012/10/24 19:42:46 ulm Exp $
 
 EAPI=2
 
@@ -26,7 +26,7 @@ RDEPEND="
 	dev-lang/cfortran
 	sci-physics/cernlib
 	sci-physics/paw
-	x11-libs/openmotif:0"
+	x11-libs/motif:0"
 DEPEND="${RDEPEND}
 	virtual/latex-base
 	x11-misc/imake
