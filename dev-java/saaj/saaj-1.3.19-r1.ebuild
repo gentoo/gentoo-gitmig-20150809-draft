@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/saaj/saaj-1.3.19-r1.ebuild,v 1.3 2012/06/04 15:55:52 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/saaj/saaj-1.3.19-r1.ebuild,v 1.4 2012/10/24 10:10:15 naota Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ SRC_URI="https://dev.gentoo.org/~sera/distfiles/${P}.tar.bz2"
 
 LICENSE="CDDL"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 x86 ~x86-fbsd"
 IUSE=""
 
 # jaf and saaj-api only for java 5
