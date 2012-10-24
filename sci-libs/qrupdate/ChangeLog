@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/qrupdate
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/qrupdate/ChangeLog,v 1.26 2012/10/16 20:02:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/qrupdate/ChangeLog,v 1.27 2012/10/24 22:27:56 naota Exp $
+
+  24 Oct 2012;  <naota@gentoo.org> +files/qrupdate-1.1.2-install.patch,
+  qrupdate-1.1.2.ebuild:
+  Add patch to replace install usage. Add ~x86-fbsd. #303909
 
   16 Oct 2012; Justin Lecher <jlec@gentoo.org> qrupdate-1.1.0.ebuild,
   qrupdate-1.1.1.ebuild, qrupdate-1.1.2.ebuild:
@@ -107,4 +111,3 @@
   11 Sep 2009; Markus Dittrich <markusle@gentoo.org> +qrupdate-1.0.1.ebuild,
   +files/qrupdate-1.0.1-makefile.patch, +metadata.xml:
   Initial import into portage tree (fixes bug #282203).
-

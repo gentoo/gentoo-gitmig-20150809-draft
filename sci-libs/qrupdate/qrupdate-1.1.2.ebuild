@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/qrupdate/qrupdate-1.1.2.ebuild,v 1.3 2012/10/16 20:02:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/qrupdate/qrupdate-1.1.2.ebuild,v 1.4 2012/10/24 22:27:55 naota Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~ppc-macos ~amd64-linux"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~ppc-macos"
 IUSE="static-libs"
 
 RDEPEND="virtual/lapack"
@@ -20,7 +20,8 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.1.1-Makefiles.patch
+	epatch "${FILESDIR}"/${PN}-1.1.1-Makefiles.patch \
+		"${FILESDIR}"/${PN}-1.1.2-install.patch
 	sed -i Makeconf \
 		-e "s:gfortran:$(tc-getFC):g" \
 		-e "s:FFLAGS=.*:FFLAGS=${FFLAGS}:" \
