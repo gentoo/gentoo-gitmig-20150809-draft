@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/libzdb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libzdb/ChangeLog,v 1.3 2012/09/07 12:25:40 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libzdb/ChangeLog,v 1.4 2012/10/24 09:58:22 ago Exp $
+
+  24 Oct 2012; <ago@gentoo.org> libzdb-2.10.5.ebuild:
+  Stable for amd64, wrt bug #439056
 
 *libzdb-2.10.5 (07 Sep 2012)
 
