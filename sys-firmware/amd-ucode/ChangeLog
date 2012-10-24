@@ -1,6 +1,11 @@
 # ChangeLog for sys-firmware/amd-ucode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/amd-ucode/ChangeLog,v 1.1 2012/07/26 04:03:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/amd-ucode/ChangeLog,v 1.2 2012/10/24 18:28:15 zerochaos Exp $
+
+*amd-ucode-2012.09.10 (24 Oct 2012)
+
+  24 Oct 2012; Rick Farina <zerochaos@gentoo.org> +amd-ucode-2012.09.10.ebuild:
+  bump
 
 *amd-ucode-2012.01.17 (17 Jan 2012)
 
@@ -22,4 +27,3 @@
   +amd-ucode-2011.01.11.ebuild, +metadata.xml:
   Add an ebuild to install AMD's CPUs microcode which can be loaded directly by
   the kernel.
-
