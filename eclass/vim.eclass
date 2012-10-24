@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.204 2012/09/18 01:26:55 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.205 2012/10/24 18:55:30 ulm Exp $
 
 # Authors:
 # 	Jim Ramsay <lack@gentoo.org>
@@ -138,7 +138,7 @@ else
 				)
 				!gtk? (
 					motif? (
-						>=x11-libs/openmotif-2.3:0
+						>=x11-libs/motif-2.3:0
 					)
 					!motif? (
 						neXt? (

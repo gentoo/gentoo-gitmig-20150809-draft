@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.463 2012/10/24 14:44:40 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.464 2012/10/24 18:55:30 ulm Exp $
+
+  24 Oct 2012; Ulrich Müller <ulm@gentoo.org> vim.eclass:
+  Update dependency after package move from x11-libs/openmotif to
+  x11-libs/motif.
 
   24 Oct 2012; Tomáš Chvátal <scarabeus@gentoo.org> myspell-r2.eclass:
   Add some boring debug prints and error+die when hunspell folder is symlink.
