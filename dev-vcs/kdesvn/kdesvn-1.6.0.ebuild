@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/kdesvn/kdesvn-1.6.0.ebuild,v 1.1 2012/09/01 17:51:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/kdesvn/kdesvn-1.6.0.ebuild,v 1.2 2012/10/24 14:21:45 kensington Exp $
 
 EAPI=4
 
 KDE_HANDBOOK="optional"
-KDE_LINGUAS="cs de el es fr it ja lt pt_BR ro"
+KDE_LINGUAS="cs de el es fr it ja lt pt_BR ro ru"
 KDE_LINGUAS_LIVE_OVERRIDE="true"
 KDE_SCM="svn"
 inherit flag-o-matic kde4-base
@@ -27,7 +27,7 @@ IUSE="debug"
 DEPEND="
 	dev-libs/apr:1
 	dev-libs/apr-util:1
-	>=dev-vcs/subversion-1.4
+	>=dev-vcs/subversion-1.7
 	sys-devel/gettext
 	x11-libs/qt-sql:4[sqlite]
 "
