@@ -1,6 +1,9 @@
-# ChangeLog for sys-apps/vgabios
+# ChangeLog for sys-firmware/vgabios
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/vgabios/ChangeLog,v 1.1 2012/07/28 22:15:34 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/vgabios/ChangeLog,v 1.2 2012/10/24 09:58:36 ago Exp $
+
+  24 Oct 2012; <ago@gentoo.org> vgabios-0.7a.ebuild:
+  Stable for amd64, wrt bug #439418
 
   26 Jul 2012; Richard Yao <ryao@gentoo.org> vgabios-0.6c-r1.ebuild,
   vgabios-0.7a.ebuild:
