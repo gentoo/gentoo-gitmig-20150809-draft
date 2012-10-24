@@ -1,6 +1,11 @@
 # ChangeLog for app-text/xdvik
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.90 2012/09/15 09:36:49 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.91 2012/10/24 19:01:38 ulm Exp $
+
+  24 Oct 2012; Ulrich Müller <ulm@gentoo.org> xdvik-22.84.16.ebuild,
+  xdvik-22.85-r1.ebuild:
+  Update dependency after package move from x11-libs/openmotif to
+  x11-libs/motif.
 
   15 Sep 2012;  <naota@gentoo.org> xdvik-22.84.16.ebuild:
   Import xvdvik-22.85-r1's change into -22.84.16 to add RDEPEND properly.

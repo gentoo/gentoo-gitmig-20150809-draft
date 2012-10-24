@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.84.16.ebuild,v 1.17 2012/09/15 09:36:49 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.84.16.ebuild,v 1.18 2012/10/24 19:01:38 ulm Exp $
 
 EAPI=3
 inherit eutils flag-o-matic elisp-common toolchain-funcs
@@ -18,7 +18,7 @@ RDEPEND=">=media-libs/t1lib-5.0.2
 	x11-libs/libXmu
 	x11-libs/libXp
 	x11-libs/libXpm
-	motif? ( >=x11-libs/openmotif-2.3:0 )
+	motif? ( >=x11-libs/motif-2.3:0 )
 	!motif? (
 		neXt? ( x11-libs/neXtaw )
 		!neXt? (
