@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-5.6.2.ebuild,v 1.1 2012/09/26 15:05:35 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-5.6.2.ebuild,v 1.2 2012/10/24 19:40:39 aballier Exp $
 
 EAPI=4
 
@@ -33,6 +33,7 @@ src_prepare() {
 			echo "noipv4ll"
 		} >> dhcpcd.conf
 	fi
+	epatch "${FILESDIR}/${P}-if-bsd.patch" #438942
 }
 
 src_configure() {

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.334 2012/09/26 15:05:35 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.335 2012/10/24 19:40:39 aballier Exp $
+
+  24 Oct 2012; Alexis Ballier <aballier@gentoo.org> dhcpcd-5.6.2.ebuild,
+  +files/dhcpcd-5.6.2-if-bsd.patch:
+  add upstream fix to build on FreeBSD. Bug #438942 by Yuta SATOH
 
 *dhcpcd-5.6.2 (26 Sep 2012)
 
