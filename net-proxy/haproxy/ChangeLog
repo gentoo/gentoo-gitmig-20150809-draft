@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/haproxy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/ChangeLog,v 1.67 2012/09/30 22:07:40 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/ChangeLog,v 1.68 2012/10/24 23:27:51 blueness Exp $
+
+  24 Oct 2012; Anthony G. Basile <blueness@gentoo.org> haproxy-1.4.22.ebuild:
+  stable ppc, bug #439544
 
 *haproxy-1.4.22 (30 Sep 2012)
 
@@ -366,4 +369,3 @@
   11 Jun 2006; Alin Nastac <mrness@gentoo.org> +files/haproxy.initd,
   +metadata.xml, +haproxy-1.2.14.ebuild:
   Initial import from bug #136025, thanks to Greg McIntyre <greg@puyo.cjb.net>.
-
