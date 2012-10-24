@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/grace
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.65 2012/10/16 18:47:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.66 2012/10/24 19:45:13 ulm Exp $
+
+  24 Oct 2012; Ulrich Müller <ulm@gentoo.org> grace-5.1.22-r2.ebuild,
+  grace-5.1.22-r3.ebuild:
+  Update dependency after package move from x11-libs/openmotif to
+  x11-libs/motif.
 
   16 Oct 2012; Justin Lecher <jlec@gentoo.org> grace-5.1.22-r2.ebuild,
   grace-5.1.22-r3.ebuild:

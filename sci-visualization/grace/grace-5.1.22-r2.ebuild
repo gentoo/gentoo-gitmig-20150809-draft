@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.22-r2.ebuild,v 1.21 2012/10/16 18:47:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.22-r2.ebuild,v 1.22 2012/10/24 19:45:13 ulm Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ DEPEND="
 	media-libs/t1lib
 	media-libs/tiff
 	sys-libs/zlib
-	>=x11-libs/openmotif-2.3:0
+	>=x11-libs/motif-2.3:0
 	x11-libs/xbae
 	fftw? ( sci-libs/fftw:2.1 )
 	jpeg? ( virtual/jpeg )
