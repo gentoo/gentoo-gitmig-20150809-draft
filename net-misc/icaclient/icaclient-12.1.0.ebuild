@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-12.1.0.ebuild,v 1.2 2012/10/22 21:44:38 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-12.1.0.ebuild,v 1.3 2012/10/24 19:23:17 ulm Exp $
 
 EAPI=4
 
@@ -52,7 +52,7 @@ RDEPEND="x11-terms/xterm
 		x11-libs/libSM
 		x11-libs/libICE
 		x11-libs/libXinerama
-		>=x11-libs/openmotif-2.3.1:0
+		>=x11-libs/motif-2.3.1:0
 	)
 	amd64? (
 		|| (
