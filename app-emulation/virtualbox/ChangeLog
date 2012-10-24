@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.133 2012/10/01 09:25:39 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.134 2012/10/24 04:41:53 patrick Exp $
+
+*virtualbox-4.2.2 (24 Oct 2012)
+
+  24 Oct 2012; Patrick Lauer <patrick@gentoo.org> +files/VirtualBox_fa_IR.ts,
+  +files/qt_fa_IR.ts, +virtualbox-4.2.2.ebuild:
+  Bump #439366
 
   01 Oct 2012; Lars Wendler <polynomial-c@gentoo.org>
   -files/virtualbox-ose-3.2.8-mesa-check.patch,
