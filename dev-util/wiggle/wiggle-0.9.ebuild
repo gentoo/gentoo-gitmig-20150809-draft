@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/wiggle/wiggle-0.9.ebuild,v 1.3 2012/09/23 07:49:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/wiggle/wiggle-0.9.ebuild,v 1.4 2012/10/24 12:17:20 blueness Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://neil.brown.name/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
 IUSE="test"
 
 # The 'p' tool does support bitkeeper, but I'm against just dumping it in here
