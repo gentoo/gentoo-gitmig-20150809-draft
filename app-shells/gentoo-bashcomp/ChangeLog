@@ -1,6 +1,14 @@
 # ChangeLog for app-shells/gentoo-bashcomp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-bashcomp/ChangeLog,v 1.53 2012/10/11 14:48:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-bashcomp/ChangeLog,v 1.54 2012/10/24 04:34:01 dirtyepic Exp $
+
+*gentoo-bashcomp-20121024 (24 Oct 2012)
+
+  24 Oct 2012; Ryan Hill <dirtyepic@gentoo.org>
+  +gentoo-bashcomp-20121024.ebuild:
+  Version bump. Fixes bug #424777 (/etc/portage/make.conf support) and
+  bug #431576 (handle md5 metadata cache format). Also includes a
+  reimplementation of repoman completion.
 
   11 Oct 2012; Jeroen Roovers <jer@gentoo.org>
   gentoo-bashcomp-20101217-r1.ebuild:
