@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/dinero
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dinero/ChangeLog,v 1.11 2010/08/13 12:21:33 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dinero/ChangeLog,v 1.12 2012/10/24 10:50:25 ago Exp $
+
+*dinero-4.7-r1 (24 Oct 2012)
+
+  24 Oct 2012; Agostino Sarubbo <ago@gentoo.org> +dinero-4.7-r1.ebuild:
+  new revision, add ~amd64, eapi4
 
   13 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org> dinero-4.7.ebuild:
   Respect LDFLAGS wrt bug 331837. Thanks to Diego for report.
