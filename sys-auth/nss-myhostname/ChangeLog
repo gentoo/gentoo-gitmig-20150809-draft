@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/nss-myhostname
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-myhostname/ChangeLog,v 1.4 2012/10/20 17:49:20 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-myhostname/ChangeLog,v 1.5 2012/10/24 09:55:59 ago Exp $
+
+  24 Oct 2012; <ago@gentoo.org> nss-myhostname-0.3.ebuild:
+  Stable for amd64, wrt bug #439088
 
   20 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   nss-myhostname-0.3.ebuild:
