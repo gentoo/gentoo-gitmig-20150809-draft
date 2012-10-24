@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/freewrl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.48 2012/09/05 15:11:41 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.49 2012/10/24 19:12:13 ulm Exp $
+
+  24 Oct 2012; Ulrich Müller <ulm@gentoo.org> freewrl-1.22.13-r1.ebuild:
+  Update dependency after package move from x11-libs/openmotif to
+  x11-libs/motif.
 
 *freewrl-1.22.13-r1 (05 Sep 2012)
 
