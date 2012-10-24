@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/opendkim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/ChangeLog,v 1.44 2012/07/31 14:59:15 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/ChangeLog,v 1.45 2012/10/24 11:02:23 eras Exp $
+
+*opendkim-2.6.7-r2 (24 Oct 2012)
+
+  24 Oct 2012; Eray Aslan <eras@gentoo.org> +opendkim-2.6.7-r2.ebuild:
+  Add sys-process/psmisc to RDEPEND - bug #439428
 
 *opendkim-2.6.7-r1 (31 Jul 2012)
 
@@ -235,4 +240,3 @@
   +files/opendkim-1.1.0-vbr-booliscpp.patch, +files/opendkim.init,
   +metadata.xml:
   initial ebuild by me. Eray Aslan also requested this in bug #282488
-
