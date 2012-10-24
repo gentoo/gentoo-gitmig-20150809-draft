@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-24.2.ebuild,v 1.10 2012/10/07 14:18:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-24.2.ebuild,v 1.11 2012/10/24 18:52:43 ulm Exp $
 
 EAPI=4
 
@@ -59,7 +59,7 @@ RDEPEND="sys-libs/ncurses
 			Xaw3d? ( x11-libs/libXaw3d )
 			!Xaw3d? (
 				athena? ( x11-libs/libXaw )
-				!athena? ( motif? ( >=x11-libs/openmotif-2.3:0 ) )
+				!athena? ( motif? ( >=x11-libs/motif-2.3:0 ) )
 			)
 		)
 	)"

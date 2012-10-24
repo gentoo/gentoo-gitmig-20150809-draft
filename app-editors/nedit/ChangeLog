@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/nedit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.66 2012/05/10 14:54:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.67 2012/10/24 18:58:01 ulm Exp $
+
+  24 Oct 2012; Ulrich Müller <ulm@gentoo.org> nedit-5.5-r1.ebuild,
+  nedit-5.5_p20110116.ebuild:
+  Update dependency after package move from x11-libs/openmotif to
+  x11-libs/motif.
 
   10 May 2012; Agostino Sarubbo <ago@gentoo.org> -nedit-5.5_p20090914.ebuild:
   Remove old

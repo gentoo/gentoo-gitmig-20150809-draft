@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.5-r1.ebuild,v 1.11 2011/04/12 12:12:50 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.5-r1.ebuild,v 1.12 2012/10/24 18:58:01 ulm Exp $
 
 EAPI=1
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 ~mips ppc sparc x86 ~x86-fbsd"
 IUSE=""
 
-RDEPEND=">=x11-libs/openmotif-2.3:0
+RDEPEND=">=x11-libs/motif-2.3:0
 	x11-libs/libXp
 	x11-libs/libXpm"
 DEPEND="${RDEPEND}

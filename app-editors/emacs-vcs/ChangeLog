@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs-vcs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.117 2012/10/07 10:27:18 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.118 2012/10/24 18:52:56 ulm Exp $
+
+  24 Oct 2012; Ulrich Müller <ulm@gentoo.org> emacs-vcs-24.2.9999.ebuild:
+  Update dependency after package move from x11-libs/openmotif to
+  x11-libs/motif.
 
   02 Oct 2012; Ulrich Müller <ulm@gentoo.org> emacs-vcs-24.2.9999.ebuild:
   Passing CC to emake seems no longer necessary. Use --program-transform-name
