@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xlockmore
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.117 2012/07/29 21:55:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.118 2012/10/24 19:48:19 ulm Exp $
+
+  24 Oct 2012; Ulrich Müller <ulm@gentoo.org> xlockmore-5.38.ebuild,
+  xlockmore-5.39.ebuild, xlockmore-5.40.ebuild:
+  Update dependency after package move from x11-libs/openmotif to
+  x11-libs/motif.
 
   29 Jul 2012; Jeroen Roovers <jer@gentoo.org> -xlockmore-5.31.ebuild,
   -xlockmore-5.37.ebuild:
