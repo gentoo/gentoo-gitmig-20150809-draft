@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/myspell-r2.eclass,v 1.7 2012/07/23 14:11:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/myspell-r2.eclass,v 1.8 2012/10/24 14:44:40 scarabeus Exp $
 
 # @ECLASS: aspell-dict.eclass
 # @MAINTAINER:
@@ -44,6 +44,8 @@ S="${WORKDIR}"
 # Unpack all variants of weird stuff.
 # In our case .oxt packs.
 myspell-r2_src_unpack() {
+	debug-print-function ${FUNCNAME} "$@"
+
 	local f
 	for f in ${A}; do
 		case ${f} in
@@ -61,6 +63,8 @@ myspell-r2_src_unpack() {
 # @DESCRIPTION:
 # Install the dictionaries to the right places.
 myspell-r2_src_install() {
+	debug-print-function ${FUNCNAME} "$@"
+
 	local x target
 	
 	# Following the debian directory layout here.
@@ -71,6 +75,14 @@ myspell-r2_src_install() {
 
 	# TODO: backcompat dosym remove when all dictionaries and libreoffice
 	#       ebuilds in tree use only the new paths
+
+	# Very old installs have hunspell to be symlink to myspell.
+	# This results in fcked up install/symlink stuff.
+	if [[ -L "${EPREFIX}/usr/share/hunspell" ]] ; then
+		eerror "\"${EPREFIX}/usr/share/hunspell\" is a symlink."
+		eerror "Please remove it so it is created properly as folder"
+		die "\"${EPREFIX}/usr/share/hunspell\" is a symlink."
+	fi
 
 	insinto /usr/share/hunspell
 	for x in "${MYSPELL_DICT[@]}"; do
