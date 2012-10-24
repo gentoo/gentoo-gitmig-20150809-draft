@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-4.06_pre11.ebuild,v 1.1 2012/07/21 19:14:54 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-4.06.ebuild,v 1.1 2012/10/24 14:25:15 chithanh Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="SYSLINUX, PXELINUX, ISOLINUX, EXTLINUX and MEMDISK bootloaders"
 HOMEPAGE="http://syslinux.zytor.com/"
-SRC_URI="mirror://kernel/linux/utils/boot/syslinux/Testing/${PV%_pre*}/${P/_/-}.tar.bz2"
+SRC_URI="mirror://kernel/linux/utils/boot/syslinux/${PV:0:1}.xx/${P/_/-}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
