@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.18.ebuild,v 1.1 2012/10/23 19:43:44 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.18.ebuild,v 1.2 2012/10/24 16:08:03 mr_bones_ Exp $
 
 EAPI=4
 
@@ -447,7 +447,7 @@ src_configure() {
 	fi
 
 	# Interbase/firebird support
-	
+
 	if use firebird ; then
 	    my_conf+="
 		$(use_with firebird interbase /usr)"
@@ -709,7 +709,7 @@ src_install() {
 						;;
 				esac
 
-				if [[ "${source}" == *"$(get_libname)" ]]; then 
+				if [[ "${source}" == *"$(get_libname)" ]]; then
 					dolib.so "${source}" || die "Unable to install ${sapi} sapi"
 				else
 					dobin "${source}" || die "Unable to install ${sapi} sapi"
@@ -764,7 +764,7 @@ php_install_ini() {
 
 	# Set the include path to point to where we want to find PEAR packages
 	sed -e 's|^;include_path = ".:/php/includes".*|include_path = ".:'"${EPREFIX}"'/usr/share/php'${PHP_MV}':'"${EPREFIX}"'/usr/share/php"|' -i "${phpinisrc}"
-	
+
 	dodir "${PHP_INI_DIR#${EPREFIX}}"
 	insinto "${PHP_INI_DIR#${EPREFIX}}"
 	newins "${phpinisrc}" "${PHP_INI_FILE}"
@@ -792,7 +792,7 @@ php_install_ini() {
 		insinto "/etc/init.d"
 		newinitd "${FILESDIR}/php-fpm-r${PHP_FPM_INIT_VER}.init" "php-fpm"
 		# dosym "${PHP_DESTDIR#${EPREFIX}}/bin/php-fpm" "/usr/bin/php-fpm"
-		
+
 		# Remove bogus /etc/php-fpm.conf.default (bug 359906)
 		[[ -f "${ED}/etc/php-fpm.conf.default" ]] && rm "${ED}/etc/php-fpm.conf.default"
 	fi
@@ -828,8 +828,7 @@ src_test() {
 	if [[ -x "${WORKDIR}/sapis/cgi/php-cgi" ]] ; then
 		export TEST_PHP_CGI_EXECUTABLE="${WORKDIR}/sapis/cgi/php-cgi"
 	fi
-	
-	
+
 	REPORT_EXIT_STATUS=1 "${TEST_PHP_EXECUTABLE}" -n  -d "session.save_path=${T}" \
 		"${WORKDIR}/sapis-build/cli/run-tests.php" -n -q -d "session.save_path=${T}"
 
