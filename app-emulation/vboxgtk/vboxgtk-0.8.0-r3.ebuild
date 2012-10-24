@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vboxgtk/vboxgtk-0.8.0-r2.ebuild,v 1.1 2012/10/17 13:23:11 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vboxgtk/vboxgtk-0.8.0-r3.ebuild,v 1.1 2012/10/24 19:53:40 hasufell Exp $
 
 EAPI="4"
 
@@ -18,10 +18,10 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
-	|| ( app-emulation/virtualbox[-headless,python,sdk]
-		>=app-emulation/virtualbox-bin-2.2.2[python] )
+	|| ( <app-emulation/virtualbox-4.2.0[-headless,python,sdk]
+		<app-emulation/virtualbox-bin-4.2.0[python] )
 	dev-python/pygobject:3
-	x11-libs/gtk+:3"
+	x11-libs/gtk+:3[introspection]"
 
 DOCS=( AUTHORS README )
 
