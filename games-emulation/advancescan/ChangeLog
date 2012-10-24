@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/advancescan
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancescan/ChangeLog,v 1.5 2009/11/21 19:17:29 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancescan/ChangeLog,v 1.6 2012/10/24 10:57:46 ago Exp $
+
+  24 Oct 2012; Agostino Sarubbo <ago@gentoo.org> advancescan-1.14.ebuild:
+  Add ~amd64, wrt bug #439330
 
   21 Nov 2009; Markus Meier <maekke@gentoo.org> advancescan-1.14.ebuild:
   x86 stable, bug #288966
@@ -22,4 +25,3 @@
   25 Mar 2005; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
   +advancescan-1.13.ebuild:
   initial commit for bug #68430
-
