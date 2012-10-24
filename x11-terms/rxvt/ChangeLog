@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/rxvt
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.67 2010/10/10 20:02:29 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.68 2012/10/24 19:49:13 ulm Exp $
+
+  24 Oct 2012; Ulrich Müller <ulm@gentoo.org> rxvt-2.7.10-r4.ebuild:
+  Update dependency after package move from x11-libs/openmotif to
+  x11-libs/motif.
 
   10 Oct 2010; Ulrich Mueller <ulm@gentoo.org> rxvt-2.7.10-r4.ebuild:
   Fix openmotif dependency. Change EAPI to 1.
