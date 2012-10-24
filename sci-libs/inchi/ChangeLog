@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/inchi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/inchi/ChangeLog,v 1.2 2012/03/04 13:22:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/inchi/ChangeLog,v 1.3 2012/10/24 14:48:55 jlec Exp $
+
+  24 Oct 2012; Justin Lecher <jlec@gentoo.org> inchi-1.04.ebuild,
+  +files/inchi-1.04-static.patch:
+  Imported bug fix for #439440 (Add USE=static-libs), kindly prepared by Reinis
+  Danne
 
 *inchi-1.04 (04 Mar 2012)
 
