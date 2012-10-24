@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/mcelog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mcelog/ChangeLog,v 1.24 2012/08/19 12:40:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mcelog/ChangeLog,v 1.25 2012/10/24 16:17:09 hasufell Exp $
+
+*mcelog-1.0_pre3_p20120918 (24 Oct 2012)
+
+  24 Oct 2012; Julian Ospald <hasufell@gentoo.org>
+  +mcelog-1.0_pre3_p20120918.ebuild,
+  +files/mcelog-1.0_pre3_p20120918-build.patch, +files/mcelog.init,
+  metadata.xml:
+  version bump by Ben Kohler wrt #399241 new maintainer/proxymaintainer
 
   19 Aug 2012; Agostino Sarubbo <ago@gentoo.org> metadata.xml:
   Change maintainership to maintainer-needed
