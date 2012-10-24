@@ -1,6 +1,11 @@
 # ChangeLog for razorqt-base/razorqt-panel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/razorqt-base/razorqt-panel/ChangeLog,v 1.1 2012/10/15 10:11:06 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/razorqt-base/razorqt-panel/ChangeLog,v 1.2 2012/10/24 11:38:11 yngwin Exp $
+
+*razorqt-panel-0.5.1 (24 Oct 2012)
+
+  24 Oct 2012; Ben de Groot <yngwin@gentoo.org> +razorqt-panel-0.5.1.ebuild:
+  Version bump
 
 *razorqt-panel-0.5.0 (15 Oct 2012)
 
