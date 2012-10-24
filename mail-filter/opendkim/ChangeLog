@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/opendkim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/ChangeLog,v 1.45 2012/10/24 11:02:23 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/ChangeLog,v 1.46 2012/10/24 11:59:45 eras Exp $
+
+  24 Oct 2012; Eray Aslan <eras@gentoo.org> -opendkim-2.6.7-r2.ebuild,
+  opendkim-2.6.7-r1.ebuild:
+  Fix sys-process/psmisc dependency correctly
 
 *opendkim-2.6.7-r2 (24 Oct 2012)
 
