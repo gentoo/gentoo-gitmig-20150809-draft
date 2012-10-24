@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/pgplot-5.2.2-r5.ebuild,v 1.2 2012/10/16 20:26:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/pgplot-5.2.2-r5.ebuild,v 1.3 2012/10/24 19:38:54 ulm Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ RDEPEND="
 	media-libs/libpng
 	x11-libs/libX11
 	x11-libs/libXt
-	motif? ( >=x11-libs/openmotif-2.3:0 )
+	motif? ( >=x11-libs/motif-2.3:0 )
 	tk? ( dev-lang/tk )"
 DEPEND="${RDEPEND}
 	doc? ( virtual/latex-base )"
