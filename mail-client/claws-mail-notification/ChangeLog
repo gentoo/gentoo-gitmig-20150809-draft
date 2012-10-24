@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-notification
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-notification/ChangeLog,v 1.76 2012/10/16 03:10:00 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-notification/ChangeLog,v 1.77 2012/10/24 09:59:04 ago Exp $
+
+  24 Oct 2012; Agostino Sarubbo <ago@gentoo.org>
+  claws-mail-notification-0.30.ebuild:
+  Stable for amd64, wrt bug #437814
 
   16 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
   claws-mail-notification-0.30.ebuild:
