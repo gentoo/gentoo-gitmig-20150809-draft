@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.150 2012/10/09 21:44:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.151 2012/10/24 22:36:12 aballier Exp $
+
+  24 Oct 2012; Alexis Ballier <aballier@gentoo.org> xbmc-11.0.ebuild,
+  -files/xbmc-11.0-ffmpeg.patch, files/xbmc-11.0-libav.patch:
+  Backport a huge patchset from upstream master to be compatible with ffmpeg
+  0.10 up to current git master. Bug #438842. Rebase the libav patches on top
+  of these changes, it seems they were sent upstream but not applied. Drop a
+  now useless patch with this refactoring. Please CC me on bugs if these
+  patches cause problems.
 
   09 Oct 2012; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
   Skip running eautoreconf in libapetag & libid3tag #437368 by BT.
