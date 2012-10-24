@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/elliptics/elliptics-2.9.6.ebuild,v 1.2 2012/10/24 09:39:45 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/elliptics/elliptics-2.9.6.ebuild,v 1.3 2012/10/24 16:08:29 mr_bones_ Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
@@ -56,7 +56,7 @@ src_install(){
         newinitd "${FILESDIR}"/elliptics.initd elliptics || die
         newconfd "${FILESDIR}"/elliptics.confd elliptics || die
 
-        # tune default config 
+        # tune default config
         sed -i 's#log = /dev/stderr#log = syslog#' ${S}/example/ioserv.conf
         sed -i 's#root = /tmp/root#root = /var/spool/elliptics#' ${S}/example/ioserv.conf
         sed -i 's#daemon = 0#daemon = 1#' ${S}/example/ioserv.conf
