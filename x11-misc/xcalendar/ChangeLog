@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xcalendar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/ChangeLog,v 1.29 2012/02/19 13:27:18 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/ChangeLog,v 1.30 2012/10/24 21:12:16 ulm Exp $
+
+  24 Oct 2012; Ulrich Müller <ulm@gentoo.org> xcalendar-4.0.ebuild,
+  xcalendar-4.0-r1.ebuild:
+  Update dependency after package move from x11-libs/openmotif to
+  x11-libs/motif.
 
   19 Feb 2012; Tobias Klausmann <klausman@gentoo.org> xcalendar-4.0-r1.ebuild:
   Stable on alpha, bug #391577

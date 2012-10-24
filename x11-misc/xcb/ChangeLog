@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xcb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcb/ChangeLog,v 1.19 2012/05/15 15:32:37 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcb/ChangeLog,v 1.20 2012/10/24 21:10:33 ulm Exp $
+
+  24 Oct 2012; Ulrich Müller <ulm@gentoo.org> xcb-2.4.ebuild,
+  xcb-2.4-r1.ebuild:
+  Update dependency after package move from x11-libs/openmotif to
+  x11-libs/motif.
 
   15 May 2012; Julian Ospald <hasufell@gentoo.org> xcb-2.4.ebuild,
   xcb-2.4-r1.ebuild:
