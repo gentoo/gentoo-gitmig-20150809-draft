@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xbae/xbae-4.60.4.ebuild,v 1.17 2012/08/15 17:43:22 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xbae/xbae-4.60.4.ebuild,v 1.18 2012/10/24 19:47:25 ulm Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ SLOT="0"
 IUSE="doc examples static-libs"
 
 RDEPEND="
-	x11-libs/openmotif:0
+	x11-libs/motif:0
 	x11-libs/libXau
 	x11-libs/libXdmcp
 	x11-libs/libXext
