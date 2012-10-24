@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/lib_users
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lib_users/ChangeLog,v 1.25 2012/08/10 07:47:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lib_users/ChangeLog,v 1.26 2012/10/24 15:57:16 jer Exp $
+
+  24 Oct 2012; Jeroen Roovers <jer@gentoo.org> -lib_users-0.3.ebuild:
+  Old.
 
   10 Aug 2012; Justin Lecher <jlec@gentoo.org> lib_users-0.5.ebuild:
   Keyworded for ~-linux prefix
