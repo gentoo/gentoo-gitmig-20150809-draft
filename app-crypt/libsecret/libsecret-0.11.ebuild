@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/libsecret/libsecret-0.11.ebuild,v 1.2 2012/10/24 08:09:42 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/libsecret/libsecret-0.11.ebuild,v 1.3 2012/10/24 16:47:22 tetromino Exp $
 
 EAPI="4"
 VALA_MIN_API_VERSION=0.18
@@ -41,8 +41,8 @@ DEPEND="${COMMON_DEPEND}
 pkg_setup() {
 	# python is only needed for tests
 	if use test && use introspection; then
-		python_pkg_setup
 		python_set_active_version 2
+		python_pkg_setup
 	fi
 }
 
