@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/sxiv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sxiv/ChangeLog,v 1.9 2012/06/24 03:14:40 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sxiv/ChangeLog,v 1.10 2012/10/24 03:30:29 radhermit Exp $
+
+*sxiv-1.0-r1 (24 Oct 2012)
+
+  24 Oct 2012; Tim Harder <radhermit@gentoo.org> +sxiv-1.0-r1.ebuild,
+  +files/sxiv-1.0-makefile.patch:
+  Revbump to properly respect CFLAGS (bug #439456) and use verbose build
+  output.
 
   24 Jun 2012; Tim Harder <radhermit@gentoo.org> -sxiv-0.9-r1.ebuild:
   Remove old.
