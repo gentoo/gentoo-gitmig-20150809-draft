@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/geomview-1.9.4.ebuild,v 1.7 2012/01/26 17:10:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/geomview-1.9.4.ebuild,v 1.8 2012/10/24 19:40:34 ulm Exp $
 
 EAPI=1
 
@@ -18,7 +18,7 @@ SLOT="0"
 IUSE="avg bzip2 debug emacs netpbm pdf zlib"
 
 DEPEND="
-	>=x11-libs/openmotif-2.3:0
+	>=x11-libs/motif-2.3:0
 	virtual/opengl
 	emacs? ( virtual/emacs )
 	zlib? ( sys-libs/zlib )"
