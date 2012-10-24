@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/dlx
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dlx/ChangeLog,v 1.10 2008/12/30 19:00:34 angelos Exp $
+# Copyright 2000-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dlx/ChangeLog,v 1.11 2012/10/24 10:52:55 ago Exp $
+
+  24 Oct 2012; Agostino Sarubbo <ago@gentoo.org> dlx-1.0.0-r1.ebuild:
+  Add ~amd64, wrt bug #439318
 
   30 Dec 2008; Christoph Mende <angelos@gentoo.org> dlx-1.0.0-r1.ebuild:
   QA: Respect CC (bug 243578) and CFLAGS/LDFLAGS (bug 240003)
@@ -31,4 +34,3 @@
 
   21 Nov 2003; <rphillips@gentoo.org> dlx-1.0.0.ebuild:
   Initial Version
-

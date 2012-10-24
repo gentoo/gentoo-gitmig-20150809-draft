@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dlx/dlx-1.0.0-r1.ebuild,v 1.3 2008/12/30 19:00:34 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dlx/dlx-1.0.0-r1.ebuild,v 1.4 2012/10/24 10:52:55 ago Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.davidviner.com/${PN}/${PN}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 S="${WORKDIR}/${PN}"
