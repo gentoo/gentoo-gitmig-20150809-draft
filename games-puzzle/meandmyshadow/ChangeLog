@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/meandmyshadow
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/meandmyshadow/ChangeLog,v 1.8 2012/10/17 02:59:13 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/meandmyshadow/ChangeLog,v 1.9 2012/10/24 08:47:55 tupone Exp $
+
+  24 Oct 2012; Tupone Alfredo <tupone@gentoo.org> -meandmyshadow-0.3.ebuild,
+  -files/meandmyshadow-0.3-cmake.patch:
+  Removing old version
 
   17 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   meandmyshadow-0.4.ebuild:
