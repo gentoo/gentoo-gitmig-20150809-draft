@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/ibus-qt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-qt/ChangeLog,v 1.14 2012/05/03 19:24:31 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-qt/ChangeLog,v 1.15 2012/10/25 15:50:17 naota Exp $
+
+  25 Oct 2012;  <naota@gentoo.org> +files/ibus-qt-1.3.1-display-unset.patch,
+  ibus-qt-1.3.0.ebuild, ibus-qt-1.3.1.ebuild:
+  Add upstream patch to avoid crash when DISPLAY is unset. #439134
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> ibus-qt-1.2.0.20091216.ebuild,
   ibus-qt-1.2.0.20091217.ebuild, ibus-qt-1.3.0.ebuild, ibus-qt-1.3.1.ebuild:
@@ -67,4 +71,3 @@
   24 Aug 2009; MATSUU Takuto <matsuu@gentoo.org>
   +ibus-qt-1.2.0.20090822.ebuild, +metadata.xml:
   Initial import.
-
