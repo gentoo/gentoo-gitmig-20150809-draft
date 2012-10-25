@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/celery-3.0.11.ebuild,v 1.1 2012/09/28 10:37:24 iksaif Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/celery-3.0.11-r1.ebuild,v 1.1 2012/10/25 10:46:21 iksaif Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ RESTRICT_PYTHON_ABIS="2.[5-6]"
 SUPPORT_PYTHON_ABIS="1"
 DISTUTILS_SRC_TEST="nosetests"
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="Celery is an open source asynchronous task queue/job queue based on distributed message passing."
 HOMEPAGE="http://celeryproject.org/ http://pypi.python.org/pypi/celery"
@@ -55,6 +55,10 @@ DEPEND="${RDEPEND}
 		dev-python/sqlalchemy
 	)
 	dev-python/setuptools"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-require-python-dateutil-2.1.patch"
+}
 
 src_test() {
 	testing() {
