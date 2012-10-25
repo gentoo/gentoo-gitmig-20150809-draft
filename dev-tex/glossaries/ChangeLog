@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/glossaries
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/ChangeLog,v 1.51 2012/09/02 04:11:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/ChangeLog,v 1.52 2012/10/25 08:35:29 radhermit Exp $
+
+*glossaries-3.03 (25 Oct 2012)
+
+  25 Oct 2012; Tim Harder <radhermit@gentoo.org> +glossaries-3.03.ebuild:
+  Version bump (bug #438398).
 
 *glossaries-3.02 (02 Sep 2012)
 
