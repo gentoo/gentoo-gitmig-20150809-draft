@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.52 2012/09/28 04:27:43 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.53 2012/10/25 07:56:27 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -25,7 +25,7 @@ else
 	KEYWORDS="~amd64 ~x86"
 fi
 # USE="doc" is managed by eclass.
-IUSE="applet cue doc eds elibc_glibc exif firefox-bookmarks flac flickr gif gnome-keyring gsf gstreamer gtk iptc +iso +jpeg laptop mp3 networkmanager pdf playlist rss test thunderbird +tiff upnp +vorbis xine +xml xmp" # qt4 strigi
+IUSE="applet cue doc eds elibc_glibc exif firefox-bookmarks flac flickr gif gnome-keyring gsf gstreamer gtk iptc +iso +jpeg laptop +miner-fs mp3 networkmanager pdf playlist rss test thunderbird +tiff upnp +vorbis xine +xml xmp" # qt4 strigi
 [[ ${PV} = 9999 ]] || IUSE="${IUSE} nautilus"
 REQUIRED_USE="cue? ( gstreamer )"
 
@@ -37,7 +37,7 @@ RESTRICT="test"
 # glibc-2.12 needed for SCHED_IDLE (see bug #385003)
 RDEPEND="
 	>=app-i18n/enca-1.9
-	>=dev-db/sqlite-3.7[threadsafe]
+	>=dev-db/sqlite-3.7.14[threadsafe]
 	>=dev-libs/glib-2.28:2
 	>=dev-libs/gobject-introspection-0.9.5
 	>=dev-libs/icu-4
@@ -135,9 +135,21 @@ function inotify_enabled() {
 
 pkg_setup() {
 	linux-info_pkg_setup
-
 	inotify_enabled
 
+	python_set_active_version 2
+	python_pkg_setup
+}
+
+src_unpack() {
+	if [[ ${PV} = 9999 ]]; then
+		git_src_unpack
+	else
+		gnome2_src_unpack
+	fi
+}
+
+src_prepare() {
 	if use gstreamer ; then
 		G2CONF="${G2CONF} --enable-generic-media-extractor=gstreamer"
 		if use upnp; then
@@ -191,6 +203,7 @@ pkg_setup() {
 		$(use_enable iso libosinfo)
 		$(use_enable jpeg libjpeg)
 		$(use_enable laptop upower)
+		$(use_enable miner-fs)
 		$(use_enable mp3 taglib)
 		$(use_enable networkmanager network-manager)
 		$(use_enable pdf poppler)
@@ -209,19 +222,6 @@ pkg_setup() {
 
 	DOCS="AUTHORS ChangeLog NEWS README"
 
-	python_set_active_version 2
-	python_pkg_setup
-}
-
-src_unpack() {
-	if [[ ${PV} = 9999 ]]; then
-		git_src_unpack
-	else
-		gnome2_src_unpack
-	fi
-}
-
-src_prepare() {
 	# Fix functional tests scripts
 	find "${S}" -name "*.pyc" -delete
 	python_convert_shebangs -r 2 tests utils examples

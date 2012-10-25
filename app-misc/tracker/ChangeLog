@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.132 2012/09/28 04:27:43 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.133 2012/10/25 07:56:27 tetromino Exp $
+
+*tracker-0.14.3 (25 Oct 2012)
+
+  25 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -tracker-0.14.2.ebuild, +tracker-0.14.3.ebuild, tracker-9999.ebuild,
+  metadata.xml:
+  Version bump with various crash fixes and performance improvements. The
+  tracker-miner-fs filesystem indexer is now optional. Drop old.
 
   28 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   -tracker-0.10.27.ebuild, tracker-0.10.35.ebuild, tracker-0.12.10.ebuild,
