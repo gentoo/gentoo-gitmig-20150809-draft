@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/farsight2-0.0.31.ebuild,v 1.6 2012/10/16 06:50:46 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/farsight2-0.0.31.ebuild,v 1.7 2012/10/25 20:59:31 eva Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -21,8 +21,8 @@ SLOT="0"
 # Tests often fail due to races
 RESTRICT="test"
 
-COMMONDEPEND=">=media-libs/gstreamer-0.10.33
-	>=media-libs/gst-plugins-base-0.10.33
+COMMONDEPEND=">=media-libs/gstreamer-0.10.33:0.10
+	>=media-libs/gst-plugins-base-0.10.33:0.10
 	>=dev-libs/glib-2.26:2
 	>=net-libs/libnice-0.1.0[gstreamer]
 	python? (
@@ -31,9 +31,9 @@ COMMONDEPEND=">=media-libs/gstreamer-0.10.33
 	upnp? ( net-libs/gupnp-igd )"
 
 RDEPEND="${COMMONDEPEND}
-	>=media-libs/gst-plugins-good-0.10.17
-	>=media-libs/gst-plugins-bad-0.10.17
-	msn? ( >=media-plugins/gst-plugins-mimic-0.10.17 )"
+	>=media-libs/gst-plugins-good-0.10.17:0.10
+	>=media-libs/gst-plugins-bad-0.10.17:0.10
+	msn? ( >=media-plugins/gst-plugins-mimic-0.10.17:0.10 )"
 
 DEPEND="${COMMONDEPEND}
 	        virtual/pkgconfig"
