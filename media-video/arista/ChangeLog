@@ -1,6 +1,9 @@
 # ChangeLog for media-video/arista
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/arista/ChangeLog,v 1.12 2011/04/11 02:55:41 tomka Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/arista/ChangeLog,v 1.13 2012/10/25 20:41:13 eva Exp $
+
+  25 Oct 2012; Gilles Dartiguelongue <eva@gentoo.org> arista-0.9.5.ebuild:
+  Add missing gstreamer slot pin.
 
   11 Apr 2011; Thomas Kahle <tomka@gentoo.org> arista-0.9.5.ebuild:
   x86 stable per bug 358457
