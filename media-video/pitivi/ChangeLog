@@ -1,6 +1,11 @@
 # ChangeLog for media-video/pitivi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/ChangeLog,v 1.28 2012/09/25 02:45:47 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/ChangeLog,v 1.29 2012/10/25 20:53:48 eva Exp $
+
+  25 Oct 2012; Gilles Dartiguelongue <eva@gentoo.org> -pitivi-0.13.5.ebuild,
+  -pitivi-0.14.0.ebuild, pitivi-0.14.1.ebuild:
+  Pin gstreamer dependencies to slot 0.10. Replace py-compile hack by call to
+  python eclass. Drop old revisions.
 
   25 Sep 2012; Nirbheek Chauhan <nirbheek@gentoo.org> metadata.xml:
   Update metadata.xml; add myself to maintainer, add gnome team, remove hanno
