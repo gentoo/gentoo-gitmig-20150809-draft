@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.466 2012/10/25 16:44:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.467 2012/10/25 16:47:30 mgorny Exp $
+
+  25 Oct 2012; Michał Górny <mgorny@gentoo.org> python-r1.eclass:
+  Add a note about array brace expansion.
 
   25 Oct 2012; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass,
   python-r1.eclass:

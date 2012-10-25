@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.4 2012/10/25 16:44:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.5 2012/10/25 16:47:30 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -60,6 +60,11 @@ _PYTHON_ALL_IMPLS=(
 # Example:
 # @CODE
 # PYTHON_COMPAT=( python2_5 python2_6 python2_7 )
+# @CODE
+#
+# Please note that you can also use bash brace expansion if you like:
+# @CODE
+# PYTHON_COMPAT=( python{2_5,2_6,2_7} )
 # @CODE
 if ! declare -p PYTHON_COMPAT &>/dev/null; then
 	PYTHON_COMPAT=( "${_PYTHON_ALL_IMPLS[@]}" )
