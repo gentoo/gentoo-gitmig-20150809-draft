@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.84 2012/10/17 14:09:10 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.85 2012/10/25 12:48:58 scarabeus Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -266,7 +266,7 @@ _modify-cmakelists() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	# Only edit the files once
-	grep -qs "<<< Gentoo configuration >>>" CMakeLists.txt && return 0
+	grep -qs "<<< Gentoo configuration >>>" "${CMAKE_USE_DIR}"/CMakeLists.txt && return 0
 
 	# Comment out all set (<some_should_be_user_defined_variable> value)
 	# TODO Add QA checker - inform when variable being checked for below is set in CMakeLists.txt
