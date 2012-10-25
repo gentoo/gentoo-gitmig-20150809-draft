@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.117 2012/10/08 11:38:20 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.118 2012/10/25 10:17:42 scarabeus Exp $
 
 EAPI=4
 
@@ -530,13 +530,14 @@ src_compile() {
 	# it is broken because we send --without-help
 	# https://bugs.freedesktop.org/show_bug.cgi?id=46506
 	(
-		source "${S}/config_host.mk" 2&> /dev/null
+		grep "^export" "${S}/config_host.mk" > "${T}/config_host.mk"
+		source "${T}/config_host.mk" 2&> /dev/null
 
 		local path="${SOLARVER}/${INPATH}/res/img"
 		mkdir -p "${path}" || die
 
-		echo "perl \"${S}/helpcontent2/helpers/create_ilst.pl\" -dir=icon-themes/galaxy/res/helpimg > \"${path}/helpimg.ilst\""
-		perl "${S}/helpcontent2/helpers/create_ilst.pl" \
+		echo "perl \"${S}/helpers/create_ilst.pl\" -dir=icon-themes/galaxy/res/helpimg > \"${path}/helpimg.ilst\""
+		perl "${S}/helpers/create_ilst.pl" \
 			-dir=icon-themes/galaxy/res/helpimg \
 			> "${path}/helpimg.ilst"
 		[[ -s "${path}/helpimg.ilst" ]] || ewarn "The help images list is empty, something is fishy, report a bug."
