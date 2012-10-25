@@ -12,6 +12,5 @@
 </maintainer>
 <use>
 	<flag name='socks'>Build with socks proxy support</flag>
-	<flag name='ssl'>Build with openssl as crypt library</flag>
 </use>
 </pkgmetadata>

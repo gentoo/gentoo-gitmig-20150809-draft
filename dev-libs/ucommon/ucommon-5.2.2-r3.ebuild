@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucommon/ucommon-5.2.2-r3.ebuild,v 1.5 2012/10/22 16:44:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucommon/ucommon-5.2.2-r3.ebuild,v 1.6 2012/10/25 02:56:11 flameeyes Exp $
 
 EAPI="4"
 
-inherit autotools-utils
+inherit autotools-utils eutils
 
 DESCRIPTION="Portable C++ runtime for threads and sockets"
 HOMEPAGE="http://www.gnu.org/software/commoncpp"
@@ -15,8 +15,10 @@ SLOT="0"
 KEYWORDS="amd64 ppc ppc64 ~x86 ~amd64-linux"
 IUSE="doc static-libs socks +cxx debug ssl gnutls"
 
-RDEPEND="ssl? ( dev-libs/openssl )
-	gnutls? ( net-libs/gnutls )"
+RDEPEND="ssl? (
+		!gnutls? ( dev-libs/openssl )
+		gnutls? ( net-libs/gnutls )
+	)"
 
 DEPEND="virtual/pkgconfig
 	doc? ( app-doc/doxygen )
@@ -27,22 +29,12 @@ PATCHES=( "${FILESDIR}"/disable_rtf_gen_doxy.patch
 		  "${FILESDIR}/${P}-address.patch")
 AUTOTOOLS_IN_SOURCE_BUILD=1
 
-REQUIRED_USE="^^ ( ssl gnutls )"
-
 src_configure() {
 	local myconf=""
-	if ! use ssl && ! use gnutls; then
-		myconf=" --with-sslstack=nossl "
-	fi
-
 	if use ssl; then
-		myconf=" --with-sslstack=ssl "
-		ewarn "Using openssl for ssl stack"
-	fi
-
-	if use gnutls; then
-		myconf=" --with-sslstack=gnu "
-		ewarn "Using gnutls for ssl stack"
+		myconf+=" --with-sslstack=$(usex gnutls gnu ssl) "
+	else
+		myconf+=" --with-sslstack=nossl ";
 	fi
 
 	local myeconfargs=(
