@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/gnonlin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gnonlin/ChangeLog,v 1.18 2012/05/05 08:02:25 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gnonlin/ChangeLog,v 1.19 2012/10/25 20:29:37 eva Exp $
+
+  25 Oct 2012; Gilles Dartiguelongue <eva@gentoo.org> -gnonlin-0.10.13.ebuild,
+  -gnonlin-0.10.15.ebuild, -gnonlin-0.10.16.ebuild, gnonlin-0.10.17.ebuild:
+  Pin gstreamer dependencies to slot 0.10 and bump EAPI to 4. Drop old
+  revisions.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> gnonlin-0.10.9.ebuild,
   gnonlin-0.10.13.ebuild, gnonlin-0.10.15.ebuild, gnonlin-0.10.16.ebuild,
