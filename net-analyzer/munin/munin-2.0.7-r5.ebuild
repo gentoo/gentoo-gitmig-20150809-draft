@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.7-r5.ebuild,v 1.1 2012/10/22 01:57:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.7-r5.ebuild,v 1.2 2012/10/25 18:52:48 flameeyes Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ REQUIRED_USE="cgi? ( !minimal )"
 # Some of the postgres plugins use DBD::Pg, while others call psql directly.
 # Some of the mysql plugins use DBD::mysql, while others call mysqladmin directly.
 # We replace the original ipmi plugins with the freeipmi_ plugin which at least works.
-DEPEND_COM="dev-lang/perl
+DEPEND_COM="dev-lang/perl[berkdb]
 			sys-process/procps
 			doc? ( dev-python/sphinx )
 			asterisk? ( dev-perl/Net-Telnet )
@@ -63,6 +63,7 @@ DEPEND_COM="dev-lang/perl
 				dev-perl/IO-Socket-INET6
 				dev-perl/URI
 				>=net-analyzer/rrdtool-1.3[perl]
+				virtual/ssh
 			)"
 
 # Keep this seperate, as previous versions have had other deps here
