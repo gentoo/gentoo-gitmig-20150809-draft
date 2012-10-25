@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/apt-proxy
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-proxy/ChangeLog,v 1.6 2007/05/14 19:45:44 bangert Exp $
+# Copyright 2000-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-proxy/ChangeLog,v 1.7 2012/10/25 19:22:34 ago Exp $
+
+  25 Oct 2012; Agostino Sarubbo <ago@gentoo.org> apt-proxy-1.3.0.ebuild:
+  EAPI4, inherit user, use more , add ~amd64
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
@@ -19,4 +22,3 @@
   22 Apr 2004; Martin Holzer <mholzer@gentoo.org> apt-proxy-1.3.0.ebuild,
   files/apt-proxy, files/apt-proxy-1.3.0-sh.patch:
   initial ebuild. submitted by Radek Podgorny <radek@podgorny.cz> in 20235
-
