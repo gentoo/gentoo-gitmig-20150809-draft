@@ -5,12 +5,7 @@
 <maintainer>
 <email>corentin.labbe@geomatys.fr</email>
 <name>LABBE Corentin (Montjoie)</name>
-<description>Maintainer.</description>
-</maintainer>
-<maintainer>
-<email>hwoarang@gentoo.org</email>
-<name>Markos Chandras</name>
-<description>Proxy maintainer.</description>
+<description>Maintainer</description>
 </maintainer>
 <use>
 <flag name="nss">Prefer NSS over libgcrypt as the crypto engine</flag>

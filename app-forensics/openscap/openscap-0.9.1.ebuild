@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/openscap-0.8.2.ebuild,v 1.1 2012/05/22 20:51:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/openscap-0.9.1.ebuild,v 1.1 2012/10/25 17:16:04 hwoarang Exp $
 
 EAPI=3
 
@@ -31,6 +31,7 @@ DEPEND="${RDEPEND}
 	python? ( dev-lang/swig )
 	test? (
 		app-arch/unzip
+		dev-perl/XML-XPath
 		net-misc/ipcalc
 		sys-apps/grep )"
 
@@ -41,18 +42,25 @@ pkg_setup() {
 
 src_prepare() {
 	sed -i 's/uname -p/uname -m/' tests/probes/uname/test_probes_uname.xml.sh || die
-	sed -i 's,/etc/rc.d/init.d,/etc/init.d,' src/OVAL/probes/unix/runlevel.c || die
-	#problem sent upstream  https://fedorahosted.org/openscap/ticket/45
-	sed -i 's,unzip,\$1,' tests/test_common.sh || die
-	#problem sent upstream https://fedorahosted.org/openscap/ticket/46
-	epatch ${FILESDIR}/test_probes_interface.patch || die
-	# runlevel isnt supported on gentoo
+
+	#probe runlevel for non-centos/redhat/fedora is not implemted
+	sed -i 's,.*runlevel_test,#&,' tests/mitre/test_mitre.sh || die
 	sed -i 's,probecheck "runlevel,probecheck "runlevellllll,' tests/probes/runlevel/test_probes_runlevel.sh || die
+
 	#According to comment of theses tests, we must modify it. For the moment disable it
 	sed -i 's,.*linux-def_inetlisteningservers_test,#&,' tests/mitre/test_mitre.sh || die
 	sed -i 's,.*ind-def_environmentvariable_test,#&,' tests/mitre/test_mitre.sh || die
+
 	#This test fail when testing process with [] in names https://fedorahosted.org/openscap/ticket/47
-	epatch ${FILESDIR}/test_probes_process.patch || die
+	epatch "${FILESDIR}"/test_probes_process.patch || die
+
+	# theses tests are hardcoded for checking hald process...,
+	# but no good solution for the moment, disabling them with a fake echo
+	# because encased in a if then
+#	sed -i 's,ha.d,/sbin/udevd --daemon,g' tests/mitre/unix-def_process_test.xml || die
+#	sed -i 's,ha.d,/sbin/udevd --daemon,g' tests/mitre/unix-def_process58_test.xml || die
+	sed -i 's,.*process_test.*,echo "",' tests/mitre/test_mitre.sh || die
+	sed -i 's,.*process58_test.*,echo "",' tests/mitre/test_mitre.sh || die
 
 	if ! use rpm ; then
 		sed -i 's,probe_rpminfo_req_deps_ok=yes,probe_rpminfo_req_deps_ok=no,' configure || die
@@ -64,6 +72,8 @@ src_prepare() {
 	fi
 	if ! use selinux ; then
 		sed -i 's,.*selinux.*,#&,' tests/mitre/test_mitre.sh || die
+		#process58 need selinux
+		sed -i 's,.*process58,#&,' tests/mitre/test_mitre.sh || die
 	fi
 }
 
