@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/rhythmbox-equalizer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/rhythmbox-equalizer/ChangeLog,v 1.4 2012/09/07 22:46:02 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/rhythmbox-equalizer/ChangeLog,v 1.5 2012/10/25 20:33:24 eva Exp $
+
+  25 Oct 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  rhythmbox-equalizer-0.1.ebuild:
+  Pin gstreamer dependencies to slot 0.10.
 
   07 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.
