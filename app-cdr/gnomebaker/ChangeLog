@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/gnomebaker
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/ChangeLog,v 1.64 2012/05/03 07:51:48 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/ChangeLog,v 1.65 2012/10/25 18:28:40 eva Exp $
+
+  25 Oct 2012; Gilles Dartiguelongue <eva@gentoo.org> -gnomebaker-0.6.4.ebuild,
+  gnomebaker-0.6.4-r1.ebuild:
+  Re-add mistakenly dropped gstreamer slots. Move G2CONF to src_prepare, it
+  needs not to be defined for binpkg. Drop old revision.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> gnomebaker-0.6.4.ebuild,
   gnomebaker-0.6.4-r1.ebuild:
