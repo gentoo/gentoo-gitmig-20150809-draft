@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gettext
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.86 2012/09/16 07:17:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.87 2012/10/25 21:08:53 blueness Exp $
+
+  25 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  ruby-gettext-2.2.1.ebuild:
+  keyword ~ppc64, bug #431290
 
   16 Sep 2012; Hans de Graaff <graaff@gentoo.org>
   -ruby-gettext-2.1.0_p20100728-r1.ebuild,
