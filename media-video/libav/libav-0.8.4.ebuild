@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.8.4.ebuild,v 1.2 2012/10/23 17:36:10 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.8.4.ebuild,v 1.3 2012/10/25 13:30:48 ago Exp $
 
 EAPI=4
 
@@ -106,7 +106,7 @@ src_prepare() {
 	if [[ ${PV%_p*} != ${PV} ]]; then
 		sed -i -e "s/UNKNOWN/DATE-${PV#*_pre}/" "${S}/version.sh" || die
 	fi
-	epatch ${FILESDIR}/0001-svq3-replace-unsafe-pointer-casting-with-intreadwrit.patch
+	epatch "${FILESDIR}/0001-svq3-replace-unsafe-pointer-casting-with-intreadwrit.patch"
 }
 
 src_configure() {
@@ -269,22 +269,16 @@ src_configure() {
 src_compile() {
 	emake
 
-	if use qt-faststart; then
-		tc-export CC
-		emake tools/qt-faststart
-	fi
+	use qt-faststart && emake tools/qt-faststart
 }
 
 src_install() {
 	emake DESTDIR="${D}" install install-man
 
-	dodoc Changelog README INSTALL
-	dodoc doc/*.txt
+	dodoc Changelog README INSTALL doc/*.txt
 	use doc && dodoc doc/*.html
 
-	if use qt-faststart; then
-		dobin tools/qt-faststart
-	fi
+	use qt-faststart && dobin tools/qt-faststart
 
 	for i in $(usex sdl avplay "") $(usex network avserver "") avprobe; do
 		dosym  ${i} /usr/bin/${i/av/ff}
