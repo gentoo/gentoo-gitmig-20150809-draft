@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.18.ebuild,v 1.2 2012/10/24 16:08:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.18.ebuild,v 1.3 2012/10/25 08:00:44 olemarkus Exp $
 
 EAPI=4
 
 inherit eutils autotools flag-o-matic versionator depend.apache apache-module db-use libtool
 
-SUHOSIN_VERSION="5.3.9-0.9.10"
+SUHOSIN_VERSION=""
 FPM_VERSION="builtin"
 EXPECTED_TEST_FAILURES=""
 
