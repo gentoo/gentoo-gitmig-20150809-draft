@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-3.4.2.ebuild,v 1.1 2012/05/20 05:12:32 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-3.4.2.ebuild,v 1.2 2012/10/25 21:39:22 eva Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.gnome.org/projects/vinagre/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="avahi +ssh spice +telepathy test"
+IUSE="avahi rdp +ssh spice +telepathy test"
 
 # cairo used in vinagre-tab
 # gdk-pixbuf used all over the place
@@ -28,6 +28,7 @@ RDEPEND=">=dev-libs/glib-2.28.0:2
 	x11-themes/gnome-icon-theme
 
 	avahi? ( >=net-dns/avahi-0.6.26[dbus,gtk3] )
+	rdp? ( net-misc/rdesktop )
 	ssh? ( >=x11-libs/vte-0.20:2.90 )
 	spice? ( >=net-misc/spice-gtk-0.5[gtk3] )
 	telepathy? (
@@ -47,16 +48,17 @@ DEPEND="${RDEPEND}
 #	app-text/yelp-tools
 #	gnome-base/gnome-common
 
-pkg_setup() {
+src_configure() {
 	DOCS="AUTHORS ChangeLog ChangeLog.pre-git NEWS README"
 	G2CONF="${G2CONF}
 		VALAC=$(type -P valac-0.12)
 		--disable-schemas-compile
-		--enable-rdp
 		$(use_with avahi)
+		$(use_enable rdp)
 		$(use_enable ssh)
 		$(use_enable spice)
 		$(use_with telepathy)"
+	gnome2_src_configure
 }
 
 src_install() {
