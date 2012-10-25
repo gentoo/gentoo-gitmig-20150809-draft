@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/mod_security
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.84 2012/10/17 01:21:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.85 2012/10/25 17:45:59 flameeyes Exp $
+
+  25 Oct 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  -mod_security-2.6.8.ebuild, mod_security-2.7.0.ebuild:
+  Remove 2.6.8 as that version is never going stable. Require a newer version of
+  the CRS so that rules missing IDs are not going to be present.
 
 *mod_security-2.7.0 (17 Oct 2012)
 

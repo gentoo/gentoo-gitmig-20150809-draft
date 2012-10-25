@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.7.0.ebuild,v 1.1 2012/10/17 01:21:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.7.0.ebuild,v 1.2 2012/10/25 17:45:59 flameeyes Exp $
 
 EAPI=4
 
@@ -26,7 +26,7 @@ DEPEND=">=dev-libs/libxml2-2.7.8
 	www-servers/apache[apache2_modules_unique_id]"
 RDEPEND="${DEPEND}
 	geoip? ( dev-libs/geoip )"
-PDEPEND=">=www-apache/modsecurity-crs-2.2.5"
+PDEPEND=">=www-apache/modsecurity-crs-2.2.6-r1"
 
 S="${WORKDIR}/${MY_P}"
 
