@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/boost-build
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.104 2012/10/21 09:07:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.105 2012/10/25 21:55:36 floppym Exp $
+
+*boost-build-1.51.0 (25 Oct 2012)
+
+  25 Oct 2012; Mike Gilbert <floppym@gentoo.org> +boost-build-1.51.0.ebuild:
+  Version bump. Ebuild by Arfrever.
 
   21 Oct 2012; Markus Meier <maekke@gentoo.org> boost-build-1.49.0.ebuild:
   x86 stable, bug #425354
