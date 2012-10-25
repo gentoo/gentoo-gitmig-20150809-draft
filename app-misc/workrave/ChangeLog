@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/workrave
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.85 2012/10/16 04:04:17 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.86 2012/10/25 18:42:54 eva Exp $
+
+  25 Oct 2012; Gilles Dartiguelongue <eva@gentoo.org> -workrave-1.9.4.ebuild,
+  workrave-1.9.4-r1.ebuild:
+  Add missing gstreamer slots. Drop old revision.
 
   16 Oct 2012; Anthony G. Basile <blueness@gentoo.org> workrave-1.9.4-r1.ebuild:
   stable ppc, bug #427544
