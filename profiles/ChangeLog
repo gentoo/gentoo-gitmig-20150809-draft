@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7060 2012/10/24 22:25:29 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7061 2012/10/25 16:06:42 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  hardened/linux/uclibc/make.defaults, hardened/linux/uclibc/use.mask:
+  Remove redundant default USE flags for hardened/linux/uclibc profiles
 
   24 Oct 2012; Alex Alexander <wired@gentoo.org> package.mask:
   (re-)masked pf-sources-3.6.{3,4} due to ext4 data loss regression, bug
