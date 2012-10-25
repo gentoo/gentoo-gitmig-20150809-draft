@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raspberrypi-userland/raspberrypi-userland-0_pre20121024.ebuild,v 1.1 2012/10/25 01:04:25 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raspberrypi-userland/raspberrypi-userland-0_pre20121024.ebuild,v 1.2 2012/10/25 01:10:45 chithanh Exp $
 
 EAPI=5
 
 inherit cmake-utils
 
-DESCRIPTION="Raspberry Pi userspace tools and libraries"
+DESCRIPTION="Raspberry Pi userspace tools and libraries for the VideoCore IV GPU"
 HOMEPAGE="https://github.com/raspberrypi/userland"
 
 if [[ ${PV} == 9999* ]]; then
