@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mlt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.94 2012/09/22 04:12:32 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.95 2012/10/25 12:46:30 aballier Exp $
+
+  25 Oct 2012; Alexis Ballier <aballier@gentoo.org> mlt-0.8.2.ebuild,
+  +files/mlt-0.8.2-av_codec_is_encoder.patch:
+  fix build with recent ffmpeg versions
 
   22 Sep 2012; Ben de Groot <yngwin@gentoo.org> -mlt-0.8.0.ebuild:
   Remove mlt-0.8.0 as requested in bug #435748
