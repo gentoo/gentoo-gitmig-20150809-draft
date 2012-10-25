@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.5 2012/10/23 20:58:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.6 2012/10/25 16:44:54 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -256,7 +256,7 @@ distutils-r1_python_install_all() {
 	local impl EPYTHON PYTHON
 	for impl in "${PYTHON_COMPAT[@]}"; do
 		if use "python_targets_${impl}"; then
-			_python_set_PYTHON "${impl}"
+			python_export "${impl}" EPYTHON
 			break
 		fi
 	done

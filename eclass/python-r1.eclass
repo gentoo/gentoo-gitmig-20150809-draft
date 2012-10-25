@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.3 2012/10/23 20:58:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.4 2012/10/25 16:44:54 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -154,32 +154,98 @@ _python_set_globals() {
 }
 _python_set_globals
 
-# @FUNCTION: _python_set_PYTHON
-# @USAGE: <impl>
-# @INTERNAL
+# @ECLASS-VARIABLE: BUILD_DIR
 # @DESCRIPTION:
-# Get the Python executable name for the given implementation and set it
-# as ${PYTHON} & ${EPYTHON}. Please note that EPYTHON will contain
-# the 'basename' while PYTHON will contain the full path.
-_python_set_PYTHON() {
+# The current build directory. In global scope, it is supposed to
+# contain an initial build directory; if unset, it defaults to ${S}.
+#
+# In functions run by python_foreach_impl(), the BUILD_DIR is locally
+# set to an implementation-specific build directory. That path is
+# created through appending a hyphen and the implementation name
+# to the final component of the initial BUILD_DIR.
+#
+# Example value:
+# @CODE
+# ${WORKDIR}/foo-1.3-python2_6
+# @CODE
+
+# @ECLASS-VARIABLE: PYTHON
+# @DESCRIPTION:
+# The absolute path to the current Python interpreter.
+#
+# Set and exported only in commands run by python_foreach_impl().
+#
+# Example value:
+# @CODE
+# /usr/bin/python2.6
+# @CODE
+
+# @ECLASS-VARIABLE: EPYTHON
+# @DESCRIPTION:
+# The executable name of the current Python interpreter.
+#
+# This variable is used consistently with python.eclass.
+#
+# Set and exported only in commands run by python_foreach_impl().
+#
+# Example value:
+# @CODE
+# python2.6
+# @CODE
+
+# @FUNCTION: python_export
+# @USAGE: [<impl>] <variables>...
+# @DESCRIPTION:
+# Set and export the Python implementation-relevant variables passed
+# as parameters.
+#
+# The optional first parameter may specify the requested Python
+# implementation (either as PYTHON_TARGETS value, e.g. python2_7,
+# or an EPYTHON one, e.g. python2.7). If no implementation passed,
+# the current one will be obtained from ${EPYTHON}.
+#
+# The variables which can be exported are: PYTHON, EPYTHON. They are
+# described more completely in the eclass variable documentation.
+python_export() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	local impl=${1/_/.}
+	local impl var
 
-	case "${impl}" in
+	case "${1}" in
 		python*|jython*)
-			EPYTHON=${impl}
+			impl=${1/_/.}
+			shift
+			;;
+		pypy-c*)
+			impl=${1}
+			shift
 			;;
 		pypy*)
-			EPYTHON=pypy-c${impl#pypy}
+			local v=${1#pypy}
+			impl=pypy-c${v/_/.}
+			shift
 			;;
 		*)
-			die "Invalid argument to _python_set_PYTHON: ${1}"
+			impl=${EPYTHON}
+			[[ ${impl} ]] || die "python_export: no impl nor EPYTHON"
 			;;
 	esac
-	PYTHON=${EPREFIX}/usr/bin/${EPYTHON}
+	debug-print "${FUNCNAME}: implementation: ${impl}"
 
-	debug-print "${FUNCNAME}: ${impl} -> ${PYTHON}"
+	for var; do
+		case "${var}" in
+			EPYTHON)
+				export EPYTHON=${impl}
+				debug-print "${FUNCNAME}: EPYTHON = ${EPYTHON}"
+				;;
+			PYTHON)
+				export PYTHON=${EPREFIX}/usr/bin/${impl}
+				debug-print "${FUNCNAME}: PYTHON = ${PYTHON}"
+				;;
+			*)
+				die "python_export: unknown variable ${var}"
+		esac
+	done
 }
 
 # @ECLASS-VARIABLE: BUILD_DIR
@@ -275,7 +341,7 @@ python_foreach_impl() {
 		if has "${impl}" "${PYTHON_COMPAT[@]}" && use "python_targets_${impl}"
 		then
 			local EPYTHON PYTHON
-			_python_set_PYTHON "${impl}"
+			python_export "${impl}" EPYTHON PYTHON
 			local BUILD_DIR=${bdir%%/}-${impl}
 			export EPYTHON PYTHON
 
