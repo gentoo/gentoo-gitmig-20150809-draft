@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/clutter-gst-1.6.0.ebuild,v 1.3 2012/09/23 05:19:13 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/clutter-gst-1.6.0.ebuild,v 1.4 2012/10/25 20:26:29 eva Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -23,7 +23,7 @@ RDEPEND="
 	>=media-libs/clutter-1.6.0:1.0[introspection?]
 	>=media-libs/cogl-1.8:1.0[introspection?]
 	>=media-libs/gstreamer-0.10.26:0.10[introspection?]
-	>=media-libs/gst-plugins-bad-0.10.22
+	>=media-libs/gst-plugins-bad-0.10.22:0.10
 	media-libs/gst-plugins-base:0.10[introspection?]
 	introspection? ( >=dev-libs/gobject-introspection-0.6.8 )"
 DEPEND="${RDEPEND}
