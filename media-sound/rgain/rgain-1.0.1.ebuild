@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rgain/rgain-1.0.1.ebuild,v 1.3 2012/05/30 15:57:52 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rgain/rgain-1.0.1.ebuild,v 1.4 2012/10/25 20:37:48 eva Exp $
 
 EAPI=4
 
@@ -21,4 +21,4 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="media-libs/mutagen
-	dev-python/gst-python"
+	dev-python/gst-python:0.10"
