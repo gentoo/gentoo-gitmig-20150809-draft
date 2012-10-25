@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/rygel-0.14.3-r1.ebuild,v 1.1 2012/09/30 12:37:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/rygel-0.14.3-r1.ebuild,v 1.2 2012/10/25 20:57:50 eva Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -22,8 +22,8 @@ RDEPEND="
 	>=dev-libs/glib-2.26:2
 	>=dev-libs/libgee-0.5.2:0
 	>=media-libs/gupnp-dlna-0.5
-	>=media-libs/gstreamer-0.10.35
-	>=media-libs/gst-plugins-base-0.10.35
+	>=media-libs/gstreamer-0.10.35:0.10
+	>=media-libs/gst-plugins-base-0.10.35:0.10
 	>=net-libs/gssdp-0.11
 	>=net-libs/gupnp-0.17.1
 	>=net-libs/gupnp-av-0.9
@@ -36,9 +36,9 @@ RDEPEND="
 	)
 	tracker? ( >=app-misc/tracker-0.8.17 )
 	transcode? (
-		>=media-libs/gst-plugins-bad-0.10.14
-		>=media-plugins/gst-plugins-twolame-0.10.12
-		>=media-plugins/gst-plugins-ffmpeg-0.10.5
+		>=media-libs/gst-plugins-bad-0.10.14:0.10
+		>=media-plugins/gst-plugins-twolame-0.10.12:0.10
+		>=media-plugins/gst-plugins-ffmpeg-0.10.5:0.10
 	)
 	X? ( >=x11-libs/gtk+-2.90.3:3 )
 "
