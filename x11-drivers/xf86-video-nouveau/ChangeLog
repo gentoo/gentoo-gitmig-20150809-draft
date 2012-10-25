@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-video-nouveau
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nouveau/ChangeLog,v 1.52 2012/09/13 09:56:50 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nouveau/ChangeLog,v 1.53 2012/10/25 00:17:19 chithanh Exp $
+
+*xf86-video-nouveau-1.0.3 (25 Oct 2012)
+
+  25 Oct 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xf86-video-nouveau-1.0.3.ebuild:
+  Version bump. No longer needs special SRC_URI. Drop kernel check as kernel
+  configuration is documented properly.
 
 *xf86-video-nouveau-1.0.2 (13 Sep 2012)
 
