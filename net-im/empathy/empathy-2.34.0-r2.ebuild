@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.34.0-r2.ebuild,v 1.8 2012/05/04 06:22:12 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.34.0-r2.ebuild,v 1.9 2012/10/25 20:56:29 eva Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -36,8 +36,8 @@ RDEPEND=">=dev-libs/glib-2.27.2:2
 	net-libs/farsight2
 	>=media-libs/gstreamer-0.10.32:0.10
 	>=media-libs/gst-plugins-base-0.10.32:0.10
-	media-libs/gst-plugins-bad
-	media-plugins/gst-plugins-gconf
+	media-libs/gst-plugins-bad:0.10
+	media-plugins/gst-plugins-gconf:0.10
 	>=net-libs/telepathy-farsight-0.0.14
 	dev-libs/libxml2
 	x11-libs/libX11

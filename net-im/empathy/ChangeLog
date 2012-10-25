@@ -1,6 +1,11 @@
 # ChangeLog for net-im/empathy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.110 2012/09/10 16:31:50 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.111 2012/10/25 20:56:29 eva Exp $
+
+  25 Oct 2012; Gilles Dartiguelongue <eva@gentoo.org> -empathy-2.32.2.ebuild,
+  empathy-2.34.0-r2.ebuild, empathy-3.2.2-r1.ebuild, -empathy-3.4.2.1.ebuild,
+  empathy-3.4.2.3.ebuild:
+  Pin gstreamer dependencies to slot 0.10. Drop old revisions.
 
   10 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   empathy-3.4.2.1.ebuild, empathy-3.4.2.3.ebuild:

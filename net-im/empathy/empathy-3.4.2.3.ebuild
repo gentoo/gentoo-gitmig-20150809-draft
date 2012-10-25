@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.4.2.3.ebuild,v 1.2 2012/09/10 16:31:50 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.4.2.3.ebuild,v 1.3 2012/10/25 20:56:29 eva Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -73,7 +73,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.30:2
 # empathy-3.4 is incompatible with telepathy-rakia-0.6, bug #403861
 RDEPEND="${COMMON_DEPEND}
 	media-libs/gst-plugins-base:0.10
-	media-libs/gst-plugins-bad
+	media-libs/gst-plugins-bad:0.10
 	net-im/telepathy-connection-managers
 	!<net-voip/telepathy-rakia-0.7
 	x11-themes/gnome-icon-theme-symbolic
