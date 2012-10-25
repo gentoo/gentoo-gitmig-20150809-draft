@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/aravis/aravis-0.1.15.ebuild,v 1.1 2012/08/28 00:05:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/aravis/aravis-0.1.15.ebuild,v 1.2 2012/10/25 20:40:12 eva Exp $
 
 EAPI=4
 
@@ -23,16 +23,16 @@ SLOT="0"
 
 IUSE="X gstreamer"
 
-GST_DEPEND="media-libs/gstreamer
-	media-libs/gst-plugins-base"
+GST_DEPEND="media-libs/gstreamer:0.10
+	media-libs/gst-plugins-base:0.10"
 
 RDEPEND=">=dev-libs/glib-2.22
 	dev-libs/libxml2
 	X? (
 		>=x11-libs/gtk+-2.12:2
 		${GST_DEPEND}
-		media-libs/gst-plugins-base
-		media-plugins/gst-plugins-xvideo
+		media-libs/gst-plugins-base:0.10
+		media-plugins/gst-plugins-xvideo:0.10
 	)
 	gstreamer? ( ${GST_DEPEND} )"
 DEPEND="${RDEPEND}
