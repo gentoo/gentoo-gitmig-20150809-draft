@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.863 2012/10/21 19:53:57 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.864 2012/10/25 12:48:11 aballier Exp $
+
+  25 Oct 2012; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
+  internal mp3lib is gone, no need to disable it anymore
 
   21 Oct 2012; Anthony G. Basile <blueness@gentoo.org> mplayer-1.1-r1.ebuild:
   stable ppc ppc64, bug #394809

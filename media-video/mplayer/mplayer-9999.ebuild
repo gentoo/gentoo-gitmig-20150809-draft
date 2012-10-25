@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.133 2012/06/21 08:10:42 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.134 2012/10/25 12:48:11 aballier Exp $
 
 EAPI=4
 
@@ -369,12 +369,6 @@ src_configure() {
 	myconf+=" --disable-musepack" # Use internal musepack codecs for SV7 and SV8 support
 	myconf+=" --disable-libmpeg2-internal" # always use system media-libs/libmpeg2
 	use dts || myconf+=" --disable-libdca"
-	# Disable internal mp3lib, bug #384849
-	# Samuli Suominen: Looks like MPlayer in Portage is using internal mp3lib by
-	# default, where as mpg123 upstream has incorporated all the optimizations
-	# from mplayer's mp3lib	in libmpg123 and more.
-	# It makes very little sense to use the internal copy as default anymore.
-	myconf+=" --disable-mp3lib"
 	if ! use mp3; then
 		myconf+="
 			--disable-mp3lame
