@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/django-celery
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-celery/ChangeLog,v 1.6 2012/09/28 10:39:38 iksaif Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-celery/ChangeLog,v 1.7 2012/10/25 10:59:48 iksaif Exp $
+
+*django-celery-3.0.11 (25 Oct 2012)
+
+  25 Oct 2012; Corentin Chary <iksaif@gentoo.org> +django-celery-3.0.11.ebuild:
+  Bump to 3.0.11.
 
 *django-celery-3.0.10 (28 Sep 2012)
 
