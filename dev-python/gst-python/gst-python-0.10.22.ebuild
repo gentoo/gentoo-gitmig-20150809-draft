@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.22.ebuild,v 1.11 2012/09/20 04:57:08 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.22.ebuild,v 1.12 2012/10/25 18:46:23 eva Exp $
 
 EAPI=4
 
@@ -22,8 +22,8 @@ IUSE="examples test"
 
 RDEPEND="dev-libs/libxml2
 	>=dev-python/pygobject-2.28:2
-	>=media-libs/gstreamer-0.10.32
-	>=media-libs/gst-plugins-base-0.10.32"
+	>=media-libs/gstreamer-0.10.32:0.10
+	>=media-libs/gst-plugins-base-0.10.32:0.10"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	test? (

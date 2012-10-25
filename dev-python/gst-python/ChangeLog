@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/gst-python
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.115 2012/10/03 18:09:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.116 2012/10/25 18:46:23 eva Exp $
+
+  25 Oct 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  gst-python-0.10.22.ebuild:
+  Fix typo on media-libs/gstreamer slot.
+
+  25 Oct 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  gst-python-0.10.22.ebuild:
+  Add missing gstreamer slots.
 
   03 Oct 2012; Brent Baude <ranger@gentoo.org> gst-python-0.10.22.ebuild:
   Marking gst-python-0.10.22 ppc for bug 432946
