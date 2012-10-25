@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-3.0.0.ebuild,v 1.4 2012/08/21 04:34:30 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-3.0.0.ebuild,v 1.5 2012/10/25 20:24:33 eva Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -27,8 +27,8 @@ COMMON_DEPEND=">=dev-libs/glib-2.28.0:2
 	exif? ( >=media-gfx/exiv2-0.21 )
 	gnome-keyring? ( >=gnome-base/gnome-keyring-3.2.0 )
 	gstreamer? (
-		>=media-libs/gstreamer-0.10
-		>=media-libs/gst-plugins-base-0.10 )
+		media-libs/gstreamer:0.10
+		media-libs/gst-plugins-base:0.10 )
 	http? (
 		>=net-libs/libsoup-2.36:2.4
 		>=net-libs/libsoup-gnome-2.36:2.4 )
