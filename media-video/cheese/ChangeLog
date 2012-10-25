@@ -1,6 +1,10 @@
 # ChangeLog for media-video/cheese
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.61 2012/09/23 06:16:00 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.62 2012/10/25 20:48:15 eva Exp $
+
+  25 Oct 2012; Gilles Dartiguelongue <eva@gentoo.org> cheese-3.2.2.ebuild,
+  -cheese-3.4.1.ebuild, cheese-3.4.2.ebuild:
+  Pin gstreamer dependencies to slot 0.10. Drop old revision.
 
   23 Sep 2012; Anthony G. Basile <blueness@gentoo.org> cheese-3.4.2.ebuild:
   keyword ~ppc, bug #379651
