@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.3.4.ebuild,v 1.1 2012/10/24 18:45:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.3.4.ebuild,v 1.2 2012/10/25 15:33:51 ulm Exp $
 
 EAPI=4
 
 inherit autotools eutils flag-o-matic multilib
 
-DESCRIPTION="Motif"
+DESCRIPTION="The Motif user interface component toolkit"
 HOMEPAGE="http://sourceforge.net/project/motif/
 	http://motif.ics.com/"
 SRC_URI="mirror://sourceforge/project/motif/Motif%20${PV}%20Source%20Code/${P}-src.tgz"

@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/motif
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/ChangeLog,v 1.1 2012/10/24 18:45:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/ChangeLog,v 1.2 2012/10/25 15:33:51 ulm Exp $
+
+  25 Oct 2012; Ulrich Müller <ulm@gentoo.org> motif-2.3.4.ebuild:
+  More useful DESCRIPTION.
 
 *motif-2.3.4 (24 Oct 2012)
 *motif-2.3.3-r1 (24 Oct 2012)
