@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.7.1.ebuild,v 1.6 2012/07/20 16:19:07 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.7.7.ebuild,v 1.1 2012/10/25 17:07:41 tommy Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -8,16 +8,16 @@ RESTRICT_PYTHON_ABIS="3.* *-jython *-pypy-*"
 WANT_AUTOMAKE="none"
 MY_P="${P/_/-}"
 
-inherit autotools base bash-completion db-use depend.apache elisp-common flag-o-matic java-pkg-opt-2 libtool multilib perl-module python user
+inherit autotools bash-completion-r1 db-use depend.apache elisp-common flag-o-matic java-pkg-opt-2 libtool multilib perl-module python eutils
 
 DESCRIPTION="Advanced version control system"
 HOMEPAGE="http://subversion.apache.org/"
-SRC_URI="http://www.apache.org/dist/${PN}/${MY_P}.tar.bz2"
+SRC_URI="mirror://apache/${PN}/${MY_P}.tar.bz2"
 S="${WORKDIR}/${MY_P}"
 
-LICENSE="Subversion"
+LICENSE="Subversion GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~x86-fbsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="apache2 berkdb ctypes-python debug doc +dso extras gnome-keyring java kde nls perl python ruby sasl vim-syntax +webdav-neon webdav-serf"
 
 CDEPEND=">=dev-db/sqlite-3.4
@@ -31,7 +31,7 @@ CDEPEND=">=dev-db/sqlite-3.4
 	kde? ( sys-apps/dbus x11-libs/qt-core:4 x11-libs/qt-dbus:4 x11-libs/qt-gui:4 >=kde-base/kdelibs-4:4 )
 	perl? ( dev-lang/perl )
 	python? ( =dev-lang/python-2* )
-	ruby? ( >=dev-lang/ruby-1.8.2 )
+	ruby? ( >=dev-lang/ruby-1.8.2:1.8 )
 	sasl? ( dev-libs/cyrus-sasl )
 	webdav-neon? ( >=net-libs/neon-0.28 )
 	webdav-serf? ( >=net-libs/serf-0.3.0 )"
@@ -50,12 +50,6 @@ DEPEND="${CDEPEND}
 	kde? ( virtual/pkgconfig )
 	nls? ( sys-devel/gettext )
 	webdav-neon? ( virtual/pkgconfig )"
-
-PATCHES=(
-		"${FILESDIR}/${PN}-1.5.4-interix.patch"
-		"${FILESDIR}/${PN}-1.5.6-aix-dso.patch"
-		"${FILESDIR}/${PN}-1.6.3-hpux-dso.patch"
-)
 
 want_apache
 
@@ -111,7 +105,12 @@ pkg_setup() {
 }
 
 src_prepare() {
-	base_src_prepare
+	epatch "${FILESDIR}"/${PN}-1.5.4-interix.patch \
+		"${FILESDIR}"/${PN}-1.5.6-aix-dso.patch \
+		"${FILESDIR}"/${PN}-1.6.3-hpux-dso.patch \
+		"${FILESDIR}"/${PN}-fix-parallel-build-support-for-perl-bindings.patch \
+		"${FILESDIR}"/${PN}-1.7.6-kwallet.patch
+
 	fperms +x build/transform_libtool_scripts.sh
 
 	sed -i \
@@ -150,20 +149,30 @@ src_configure() {
 	fi
 
 	case ${CHOST} in
-		*-solaris*)
-			# -lintl isn't added for some reason (makes Neon check fail)
-			use nls && append-libs -lintl
-		;;
 		*-aix*)
 			# avoid recording immediate path to sharedlibs into executables
 			append-ldflags -Wl,-bnoipath
 		;;
 		*-interix*)
 			# loader crashes on the LD_PRELOADs...
-			myconf="${myconf} --disable-local-library-preloading"
+			myconf+=" --disable-local-library-preloading"
+		;;
+		*-solaris*)
+			# need -lintl to link
+			use nls && append-libs intl
 		;;
 	esac
 
+	#workaround for bug 387057
+	has_version =dev-vcs/subversion-1.6* && myconf+=" --disable-disallowing-of-undefined-references"
+
+	#version 1.7.7 again tries to link against the older installed version and fails, when trying to
+	#compile for x86 on amd64, so workaround this issue again
+	#check newer versions, if this is still/again needed
+	myconf+=" --disable-disallowing-of-undefined-references"
+
+	#force ruby-1.8 for bug 399105
+	ac_cv_path_RUBY="${EPREFIX}"/usr/bin/ruby18 ac_cv_path_RDOC="${EPREFIX}"/usr/bin/rdoc18 \
 	econf --libdir="${EPREFIX}/usr/$(get_libdir)" \
 		$(use_with apache2 apxs "${APXS}") \
 		$(use_with berkdb berkeley-db "db.h:${EPREFIX}/usr/include/db${SVN_BDB_VERSION}::db-${SVN_BDB_VERSION}") \
@@ -184,8 +193,7 @@ src_configure() {
 		--enable-local-library-preloading \
 		--disable-mod-activation \
 		--disable-neon-version-check \
-		--disable-static \
-		--with-sqlite="${EPREFIX}/usr"
+		--disable-static
 }
 
 src_compile() {
@@ -310,7 +318,7 @@ src_install() {
 	fi
 
 	# Install Bash Completion, bug 43179.
-	dobashcompletion tools/client-side/bash_completion subversion
+	newbashcomp tools/client-side/bash_completion subversion
 	rm -f tools/client-side/bash_completion
 
 	# Install hot backup script, bug 54304.
@@ -322,6 +330,14 @@ src_install() {
 	newconfd "${FILESDIR}"/svnserve.confd svnserve
 	insinto /etc/xinetd.d
 	newins "${FILESDIR}"/svnserve.xinetd svnserve
+
+	#adjust default user and group with disabled apache2 USE flag, bug 381385
+	use apache2 || sed -e "s\USER:-apache\USER:-svn\g" \
+			-e "s\GROUP:-apache\GROUP:-svnusers\g" \
+			-i "${ED}"etc/init.d/svnserve || die
+	use apache2 || sed -e "0,/apache/s//svn/" \
+			-e "s:apache:svnusers:" \
+			-i "${ED}"etc/xinetd.d/svnserve || die
 
 	# Install documentation.
 	dodoc CHANGES COMMITTERS README
@@ -344,20 +360,24 @@ EOF
 		rm -fr tools/{buildbot,dev,diff,po}
 
 		insinto /usr/share/${PN}
+		python_convert_shebangs -r 2 tools
 		doins -r tools
 	fi
 
 	if use doc; then
 		dohtml -r doc/doxygen/html/* || die "Installation of Subversion HTML documentation failed"
 
-		dodoc notes/*
-
 		if use java; then
 			java-pkg_dojavadoc doc/javadoc
 		fi
 	fi
 
-	find "${D}" '(' -name '*.la' ')' -print0 | xargs -0 rm -f
+	find "${ED}" '(' -name '*.la' ')' -print0 | xargs -0 rm -f
+
+	cd "${ED}"usr/share/locale
+	for i in * ; do
+		[[ $i == *$LINGUAS* ]] || { rm -r $i || die ; }
+	done
 }
 
 pkg_preinst() {
@@ -407,16 +427,16 @@ pkg_postrm() {
 pkg_config() {
 	# Remember: Don't use ${EROOT}${SVN_REPOS_LOC} since ${SVN_REPOS_LOC}
 	# already has EPREFIX in it
-	einfo "Initializing the database in ${ROOT}${SVN_REPOS_LOC}..."
-	if [[ -e "${ROOT}${SVN_REPOS_LOC}/repos" ]]; then
+	einfo "Initializing the database in ${SVN_REPOS_LOC}..."
+	if [[ -e "${SVN_REPOS_LOC}/repos" ]]; then
 		echo "A Subversion repository already exists and I will not overwrite it."
-		echo "Delete \"${ROOT}${SVN_REPOS_LOC}/repos\" first if you're sure you want to have a clean version."
+		echo "Delete \"${SVN_REPOS_LOC}/repos\" first if you're sure you want to have a clean version."
 	else
-		mkdir -p "${ROOT}${SVN_REPOS_LOC}/conf"
+		mkdir -p "${SVN_REPOS_LOC}/conf"
 
 		einfo "Populating repository directory..."
 		# Create initial repository.
-		"${EROOT}usr/bin/svnadmin" create "${ROOT}${SVN_REPOS_LOC}/repos"
+		"${EROOT}usr/bin/svnadmin" create "${SVN_REPOS_LOC}/repos"
 
 		einfo "Setting repository permissions..."
 		SVNSERVE_USER="$(. "${EROOT}etc/conf.d/svnserve"; echo "${SVNSERVE_USER}")"
@@ -427,11 +447,13 @@ pkg_config() {
 		else
 			[[ -z "${SVNSERVE_USER}" ]] && SVNSERVE_USER="svn"
 			[[ -z "${SVNSERVE_GROUP}" ]] && SVNSERVE_GROUP="svnusers"
-			enewgroup "${SVNSERVE_GROUP}"
-			enewuser "${SVNSERVE_USER}" -1 -1 "${SVN_REPOS_LOC}" "${SVNSERVE_GROUP}"
 		fi
-		chown -Rf "${SVNSERVE_USER}:${SVNSERVE_GROUP}" "${ROOT}${SVN_REPOS_LOC}/repos"
-		chmod -Rf go-rwx "${ROOT}${SVN_REPOS_LOC}/conf"
-		chmod -Rf o-rwx "${ROOT}${SVN_REPOS_LOC}/repos"
+		chmod -Rf go-rwx "${SVN_REPOS_LOC}/conf"
+		chmod -Rf o-rwx "${SVN_REPOS_LOC}/repos"
+		echo "Please create \"${SVNSERVE_GROUP}\" group if it does not exist yet."
+		echo "Afterwards please create \"${SVNSERVE_USER}\" user with homedir \"${SVN_REPOS_LOC}\""
+		echo "and as part of the \"${SVNSERVE_GROUP}\" group if it does not exist yet."
+		echo "Finally, execute \"chown -Rf ${SVNSERVE_USER}:${SVNSERVE_GROUP} ${SVN_REPOS_LOC}/repos\""
+		echo "to finish the configuration."
 	fi
 }
