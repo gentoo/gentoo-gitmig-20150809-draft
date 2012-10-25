@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.6 2012/10/25 16:44:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.7 2012/10/25 17:42:39 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -261,7 +261,7 @@ distutils-r1_python_install_all() {
 		fi
 	done
 
-	for f in "${D}"/{bin,sbin,usr/bin,usr/sbin}/*-"${EPYTHON}"; do
+	for f in "${D}"/{bin,sbin,usr/bin,usr/sbin,games/bin}/*-"${EPYTHON}"; do
 		if [[ -x ${f} ]]; then
 			debug-print "${FUNCNAME}: found executable at ${f#${D}/}"
 
