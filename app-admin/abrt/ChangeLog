@@ -1,6 +1,16 @@
 # ChangeLog for app-admin/abrt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/abrt/ChangeLog,v 1.14 2012/09/22 20:12:52 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/abrt/ChangeLog,v 1.15 2012/10/25 07:30:12 tetromino Exp $
+
+*abrt-2.0.12-r1 (25 Oct 2012)
+
+  25 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org> -abrt-2.0.12.ebuild,
+  +abrt-2.0.12-r1.ebuild, -files/abrt-2.0.12-init, +files/abrt-2.0.12-r1-conf,
+  +files/abrt-2.0.12-r1-init:
+  Update init script for changes in abrt-dump-oops, so that the abrt service
+  doesn't always get marked as "crashed" (bug #439494, thanks to Justin Lecher)
+  and to start the xorg crash reporter. Remove the 2.0.12 ebuild and its broken
+  init script.
 
 *abrt-2.0.12 (22 Sep 2012)
 

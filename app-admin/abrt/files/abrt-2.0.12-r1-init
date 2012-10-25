@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/abrt/files/abrt-2.0.12-init,v 1.1 2012/09/22 20:12:52 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/abrt/files/abrt-2.0.12-r1-init,v 1.1 2012/10/25 07:30:12 tetromino Exp $
 
 description="Automated crash detection service"
 
@@ -32,12 +32,32 @@ start() {
 		start-stop-daemon --start --quiet \
 			--pidfile /var/run/abrt/abrt-dump-oops.pid \
 			--make-pidfile --background \
-			--exec /usr/bin/abrt-dump-oops -- ${OOPS_OPTS}
+			--exec /usr/bin/abrt-watch-log -- \
+			-F "`/usr/bin/abrt-dump-oops -m`" ${OOPS_WATCH_LOG} -- \
+			/usr/bin/abrt-dump-oops ${OOPS_DUMP_OPTS}
+		eend $?
+	fi
+
+	if [[ "${START_XORG}" = "yes" ]]; then
+		ebegin "Starting abrt-dump-xorg"
+		start-stop-daemon --start --quiet \
+			--pidfile /var/run/abrt/abrt-dump-xorg.pid \
+			--make-pidfile --background \
+			--exec /usr/bin/abrt-watch-log -- \
+			-F "`/usr/bin/abrt-dump-xorg -m`" ${XORG_WATCH_LOG} -- \
+			/usr/bin/abrt-dump-xorg ${XORG_DUMP_OPTS}
 		eend $?
 	fi
 }
 
 stop() {
+	if [[ "${START_XORG}" = "yes" ]]; then
+		ebegin "Stopping abrt-dump-xorg"
+		start-stop-daemon --stop --quiet \
+			--pidfile /var/run/abrt/abrt-dump-xorg.pid
+		eend $?
+	fi
+
 	if [[ "${START_OOPS}" = "yes" ]]; then
 		ebegin "Stopping abrt-dump-oops"
 		start-stop-daemon --stop --quiet \

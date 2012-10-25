@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/abrt/abrt-2.0.12.ebuild,v 1.1 2012/09/22 20:12:52 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/abrt/abrt-2.0.12-r1.ebuild,v 1.1 2012/10/25 07:30:12 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -93,8 +93,8 @@ src_install() {
 
 	find "${D}" -name '*.la' -exec rm -f {} + || die
 
-	newinitd "${FILESDIR}/${PN}-2.0.12-init" abrt
-	newconfd "${FILESDIR}/${PN}-2.0.5-conf" abrt
+	newinitd "${FILESDIR}/${PN}-2.0.12-r1-init" abrt
+	newconfd "${FILESDIR}/${PN}-2.0.12-r1-conf" abrt
 }
 
 pkg_preinst() {
