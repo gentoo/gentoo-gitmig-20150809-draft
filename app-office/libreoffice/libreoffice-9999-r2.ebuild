@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.118 2012/10/25 10:17:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.119 2012/10/25 10:40:55 scarabeus Exp $
 
 EAPI=4
 
@@ -294,7 +294,9 @@ src_unpack() {
 			fi
 			unpack "${PN}-${mod}-${PV}.tar.xz"
 			if [[ ${mod} != core ]]; then
-				mv -n "${WORKDIR}/${PN}-${mod}-${PV}"/* "${S}"
+				[[ ${mod} == help ]] && mod="helpcontent2"
+				mkdir "${S}/${mod}/" || die
+				mv -n "${WORKDIR}/${PN}-${mod}-${PV}"/* "${S}" || die
 				rm -rf "${WORKDIR}/${PN}-${mod}-${PV}"
 			fi
 		done
@@ -311,7 +313,10 @@ src_unpack() {
 			EGIT_NOUNPACK="true"
 			git-2_src_unpack
 			if [[ ${mod} != core ]]; then
-				mv -n "${WORKDIR}/${PN}-${mod}-${PV}"/* "${S}"
+				# mapping does not match on help
+				[[ ${mod} == help ]] && mod="helpcontent2"
+				mkdir "${S}/${mod}/" || die
+				mv -n "${WORKDIR}/${PN}-${mod}-${PV}"/* "${S}/${mod}" || die
 				rm -rf "${WORKDIR}/${PN}-${mod}-${PV}"
 			fi
 		done
@@ -536,8 +541,8 @@ src_compile() {
 		local path="${SOLARVER}/${INPATH}/res/img"
 		mkdir -p "${path}" || die
 
-		echo "perl \"${S}/helpers/create_ilst.pl\" -dir=icon-themes/galaxy/res/helpimg > \"${path}/helpimg.ilst\""
-		perl "${S}/helpers/create_ilst.pl" \
+		echo "perl \"${S}/helpcontent2/helpers/create_ilst.pl\" -dir=icon-themes/galaxy/res/helpimg > \"${path}/helpimg.ilst\""
+		perl "${S}/helpcontent2/helpers/create_ilst.pl" \
 			-dir=icon-themes/galaxy/res/helpimg \
 			> "${path}/helpimg.ilst"
 		[[ -s "${path}/helpimg.ilst" ]] || ewarn "The help images list is empty, something is fishy, report a bug."
