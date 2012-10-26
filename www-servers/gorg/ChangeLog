@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/gorg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/ChangeLog,v 1.36 2012/10/26 10:54:09 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/ChangeLog,v 1.37 2012/10/26 11:51:59 graaff Exp $
+
+*gorg-0.6.5 (26 Oct 2012)
+
+  26 Oct 2012; Hans de Graaff <graaff@gentoo.org> +gorg-0.6.5.ebuild:
+  Version bump with ruby19 fixes, even though we cannot enable ruby19 due to
+  the dbi dependency yet.
 
   26 Oct 2012; Hans de Graaff <graaff@gentoo.org> metadata.xml:
   Add myself as primary maintainer based on discussions at the Gentoo Miniconf
