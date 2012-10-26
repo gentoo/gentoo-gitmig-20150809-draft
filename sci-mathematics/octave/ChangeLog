@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.129 2012/10/25 06:20:56 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.130 2012/10/26 18:27:13 bicatali Exp $
+
+*octave-3.6.3 (26 Oct 2012)
+
+  26 Oct 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  files/octave-3.4.3-pkgbuilddir.patch, +octave-3.6.3.ebuild,
+  +files/octave-3.6.3-rcond.patch:
+  Version bump
 
   25 Oct 2012;  <naota@gentoo.org> octave-3.6.2-r1.ebuild:
   Add ~x86-fbsd. #303915

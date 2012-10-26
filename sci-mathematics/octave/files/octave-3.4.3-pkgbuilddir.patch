@@ -1,3 +1,6 @@
+Description: Allow installation of already extracted packages with pkg.m
+Forwarded: not-needed
+Author: Thomas Weber <tweber@debian.org>
 --- scripts/pkg/pkg.m.orig	2011-02-08 03:00:51.000000000 -0700
 +++ scripts/pkg/pkg.m	2011-03-18 09:31:24.670165643 -0600
 @@ -644,7 +644,14 @@
