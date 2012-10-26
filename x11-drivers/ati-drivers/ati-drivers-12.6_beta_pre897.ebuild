@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-12.6_beta_pre897.ebuild,v 1.5 2012/10/10 16:58:55 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-12.6_beta_pre897.ebuild,v 1.6 2012/10/26 14:32:38 chithanh Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ fi
 IUSE="debug +modules multilib qt4 static-libs"
 
 LICENSE="AMD GPL-2 QPL-1.0 as-is"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 SLOT="1"
 
 RDEPEND="
@@ -580,6 +580,11 @@ src_install-libs() {
 }
 
 pkg_postinst() {
+	if has_version ">=x11-base/xorg-server-1.11.99"; then
+		ewarn "Problems have been reported with this driver and xorg-server-1.12."
+		ewarn "Stay with xorg-server-1.11 if you experience hangs (bug #436252)."
+	fi
+
 	elog "To switch to AMD OpenGL, run \"eselect opengl set ati\""
 	elog "To change your xorg.conf you can use the bundled \"aticonfig\""
 	elog
