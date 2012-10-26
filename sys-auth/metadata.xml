@@ -35,4 +35,10 @@
 		autoryzacją i uwierzytelnianiem. Znajdują się tu moduły PAM, NSS oraz
 		aplikacje służące do logowania.
 	</longdescription>
+	<longdescription lang="es">
+		La categoría sys-auth contiene aplicaciones y librerías para dar
+		soporte a los servicios de autenticación y autorización.
+		A esta categoría pertenecen los módulos PAM, NSS y las aplicaciones
+		para ingresar en el sistema.
+	</longdescription>
 </catmetadata>
