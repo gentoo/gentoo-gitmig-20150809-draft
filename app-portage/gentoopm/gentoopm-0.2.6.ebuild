@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/gentoopm-0.2.6.ebuild,v 1.2 2012/10/21 08:13:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/gentoopm-0.2.6.ebuild,v 1.3 2012/10/26 21:15:25 mgorny Exp $
 
 EAPI=4
 PYTHON_COMPAT=(python2_6 python2_7 python3_1 python3_2)
@@ -28,6 +28,10 @@ python_compile_all() {
 		# XXX: do we need any specific ${PYTHON} magic here?
 		python2 setup.py doc || die
 	fi
+}
+
+python_test() {
+	"${PYTHON}" setup.py test || die
 }
 
 python_install_all() {
