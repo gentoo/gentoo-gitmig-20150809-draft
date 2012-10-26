@@ -7,5 +7,8 @@
 	<longdescription lang="it">
 		Ebuild per il software di sistema base di Gentoo/FreeBSD.
 	</longdescription>
+	<longdescription lang="es">
+		Ebuilds para el software base del sistema Gentoo/FreeBSD.
+	</longdescription>
 </catmetadata>
 
