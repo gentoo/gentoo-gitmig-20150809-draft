@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.3.3-r1.ebuild,v 1.1 2012/10/24 18:45:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.3.3-r1.ebuild,v 1.2 2012/10/26 23:35:11 ulm Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.ics.com/openmotif/${PV%.*}/${PV}/openmotif-${PV}.tar.gz"
 LICENSE="MOTIF MIT"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
-IUSE="doc examples jpeg png static-libs unicode xft"
+IUSE="examples jpeg png static-libs unicode xft"
 # license allows distribution only for "open source operating systems"
 RESTRICT="!kernel_linux? (
 	!kernel_FreeBSD? (
@@ -31,8 +31,6 @@ DEPEND="${RDEPEND}
 	sys-devel/flex
 	|| ( dev-util/byacc sys-freebsd/freebsd-ubin )
 	x11-misc/xbitmaps"
-RDEPEND="${RDEPEND}
-	doc? ( app-doc/openmotif-manual )"
 
 S="${WORKDIR}/openmotif-${PV}"
 
@@ -121,20 +119,4 @@ src_install() {
 	rm -f "${ED}"/usr/$(get_libdir)/*.la
 
 	dodoc BUGREPORT ChangeLog README RELEASE RELNOTES TODO
-}
-
-pkg_postinst() {
-	local line
-	while read line; do elog "${line}"; done <<-EOF
-	From the Open Motif 2.3.0 (upstream) release notes:
-	"Open Motif 2.3 is an updated version of 2.2. Any applications
-	built against a previous 2.x release of Open Motif will be binary
-	compatible with this release."
-
-	If you have binary-only applications requiring libXm.so.3, you may
-	therefore create a symlink from libXm.so.3 to libXm.so.4.
-	Please note, however, that there will be no Gentoo support for this.
-	Alternatively, you may install slot 2.2 of x11-libs/openmotif for
-	the Open Motif 2.2 libraries.
-	EOF
 }

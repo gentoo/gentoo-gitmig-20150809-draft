@@ -1,20 +1,20 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.3.4.ebuild,v 1.2 2012/10/25 15:33:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.3.4.ebuild,v 1.3 2012/10/26 23:35:11 ulm Exp $
 
 EAPI=4
 
 inherit autotools eutils flag-o-matic multilib
 
 DESCRIPTION="The Motif user interface component toolkit"
-HOMEPAGE="http://sourceforge.net/project/motif/
+HOMEPAGE="http://sourceforge.net/projects/motif/
 	http://motif.ics.com/"
 SRC_URI="mirror://sourceforge/project/motif/Motif%20${PV}%20Source%20Code/${P}-src.tgz"
 
 LICENSE="LGPL-2+ MIT"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
-IUSE="doc examples jpeg png static-libs unicode xft"
+IUSE="examples jpeg png static-libs unicode xft"
 
 RDEPEND="x11-libs/libXmu
 	x11-libs/libXp
@@ -26,8 +26,6 @@ DEPEND="${RDEPEND}
 	sys-devel/flex
 	|| ( dev-util/byacc sys-freebsd/freebsd-ubin )
 	x11-misc/xbitmaps"
-RDEPEND="${RDEPEND}
-	doc? ( app-doc/openmotif-manual )"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-solaris.patch"
