@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/nm-applet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.84 2012/10/11 15:13:04 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.85 2012/10/26 22:58:18 tetromino Exp $
+
+*nm-applet-0.9.6.4 (26 Oct 2012)
+
+  26 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  nm-applet-0.8.4.ebuild, nm-applet-0.9.4.1.ebuild, nm-applet-0.9.6.2.ebuild,
+  +nm-applet-0.9.6.4.ebuild:
+  Version bump. Update license.
 
   11 Oct 2012; Anthony G. Basile <blueness@gentoo.org> nm-applet-0.9.4.1.ebuild:
   stable ppc, bug #430370
