@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.57 2012/10/26 21:27:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.58 2012/10/26 21:34:56 mgorny Exp $
+
+  26 Oct 2012; Michał Górny <mgorny@gentoo.org> systemd-195.ebuild:
+  Fix udev dep, once and for all.
 
 *systemd-195 (26 Oct 2012)
 

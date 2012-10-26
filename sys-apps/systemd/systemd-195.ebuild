@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-195.ebuild,v 1.1 2012/10/26 21:27:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-195.ebuild,v 1.2 2012/10/26 21:34:56 mgorny Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ MINKV="2.6.39"
 COMMON_DEPEND=">=sys-apps/dbus-1.4.10
 	>=sys-apps/kmod-5
 	>=sys-apps/util-linux-2.20
-	~sys-fs/udev-194
+	~sys-fs/udev-${PV}
 	sys-libs/libcap
 	acl? ( sys-apps/acl )
 	audit? ( >=sys-process/audit-2 )
