@@ -1,6 +1,26 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.109 2012/10/16 18:50:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.110 2012/10/26 15:40:47 bicatali Exp $
+
+*root-5.34.03 (25 Oct 2012)
+
+  25 Oct 2012; Andrew Savchenko <bircoph@gmail.com>
+  -files/root-5.34.01-glibc216.patch, -root-5.34.02.ebuild,
+  +root-5.34.03.ebuild:
+  Version bump with important fixes in RooFit.
+  Drop old.
+
+*root-5.34.02 (19 Oct 2012)
+*root-5.32.04 (19 Oct 2012)
+
+  19 Oct 2012; Andrew Savchenko <bircoph@gmail.com>
+  +files/root-5.28.00b-asneeded.patch,
+  +files/root-5.28.00b-nobyte-compile.patch,
+  +files/root-5.28.00h-explicit-functions.patch,
+  +files/root-5.32.00-dotfont.patch,
+  +files/root-5.32.00-explicit-functions.patch, +root-5.32.04.ebuild,
+  +files/root-5.34.01-glibc216.patch, +root-5.34.02.ebuild:
+  Version bump for 5.32.04 and 5.34.02 patch releases.
 
   16 Oct 2012; Justin Lecher <jlec@gentoo.org> root-5.32.03-r2.ebuild,
   root-5.34.01.ebuild:
