@@ -1,6 +1,13 @@
 # ChangeLog for kde-misc/krusader
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.107 2012/10/22 20:15:27 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.108 2012/10/26 19:53:28 creffett Exp $
+
+*krusader-2.4.0_beta3 (26 Oct 2012)
+
+  26 Oct 2012; Chris Reffett <creffett@gentoo.org> +krusader-2.4.0_beta3.ebuild,
+  -krusader-2.4.0_beta2.ebuild:
+  Version bump, remove 2.4.0_beta2 from tree since _beta3 just fixes a bug from
+  _beta2
 
 *krusader-2.4.0_beta2 (22 Oct 2012)
 

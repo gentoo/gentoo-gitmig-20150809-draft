@@ -1,12 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-2.4.0_beta2.ebuild,v 1.1 2012/10/22 20:15:27 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-2.4.0_beta3.ebuild,v 1.1 2012/10/26 19:53:28 creffett Exp $
 
 EAPI=4
 
 KDE_HANDBOOK="optional"
-KDE_LINGUAS="bg bs ca ca@valencia cs da de el en_GB eo es et fr ga gl hr hu it
-ja ko lt mai nb nds nl pl pt pt_BR ro ru sk sl sv tr ug uk zh_CN zh_TW"
+KDE_LINGUAS="bg bs ca ca@valencia cs da de el en_GB eo es et fi fr ga
+gl hr hu it ja ko lt mai nb nds nl pa pl pt pt_BR ro ru sk sl sr
+sr@ijekavian sr@ijekavianlatin sr@latin sv tr ug uk zh_CN zh_TW"
 inherit kde4-base
 
 MY_P="${P/_/-}"
