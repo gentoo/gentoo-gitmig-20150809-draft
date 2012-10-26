@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/getmail
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/ChangeLog,v 1.212 2012/10/26 12:28:11 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/ChangeLog,v 1.213 2012/10/26 12:29:13 radhermit Exp $
+
+  26 Oct 2012; Tim Harder <radhermit@gentoo.org> -getmail-4.17.0.ebuild,
+  -getmail-4.32.0.ebuild, -getmail-4.33.0.ebuild:
+  Remove old.
 
 *getmail-4.35.0 (26 Oct 2012)
 
