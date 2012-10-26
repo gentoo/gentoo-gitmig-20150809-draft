@@ -1,6 +1,16 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.207 2012/09/22 17:31:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.208 2012/10/26 22:38:24 hwoarang Exp $
+
+*ck-sources-3.5.7 (26 Oct 2012)
+
+  26 Oct 2012; Markos Chandras <hwoarang@gentoo.org>
+  +files/ck-sources-3.4-3.5-PostCK-Sched_Fix_Race_In_Task_Group-aCOSwt_P5.patch
+  ,
+  +files/ck-sources-3.4-3.5-PreCK-Sched_Fix_Race_In_Task_Group-aCOSwt_P4.patch,
+  +ck-sources-3.5.7.ebuild, metadata.xml:
+  Version bump. Thanks to Eric F. GARIOUD <eric-f.garioud@wanadoo.fr>.
+  Fixes bug #438910
 
 *ck-sources-3.4.9 (22 Sep 2012)
 
