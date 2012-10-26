@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.56 2012/10/04 20:16:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.57 2012/10/26 21:27:16 mgorny Exp $
+
+*systemd-195 (26 Oct 2012)
+
+  26 Oct 2012; Michał Górny <mgorny@gentoo.org> +systemd-195.ebuild,
+  metadata.xml:
+  Version bump. Re-enable coredumps since a tool to read them was introduced.
+  Add USE=vanilla to disable Gentoo-specific quirks as requested by Léo Gillot-
+  Lamure (via mail). Remove PAM .la file wrt bug #424900.
 
   04 Oct 2012; Michał Górny <mgorny@gentoo.org> systemd-194.ebuild:
   Preserve empty directories, per bug #437008.
