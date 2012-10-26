@@ -1,10 +1,12 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifmetric/ifmetric-0.3.ebuild,v 1.4 2005/09/11 22:57:23 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifmetric/ifmetric-0.3.ebuild,v 1.5 2012/10/26 10:53:28 pinkbyte Exp $
 
-DESCRIPTION="A Linux tool for setting the metrics of all IPv4 routes attached to a given network interface at once."
+EAPI=4
+
+DESCRIPTION="A Linux tool for setting the metrics of all IPv4 routes attached to a given network interface at once"
 HOMEPAGE="http://0pointer.de/lennart/projects/ifmetric/"
-SRC_URI="http://0pointer.de/lennart/projects/ifmetric/${P}.tar.gz"
+SRC_URI="http://0pointer.de/lennart/projects/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -15,14 +17,16 @@ IUSE=""
 DEPEND="sys-kernel/linux-headers"
 RDEPEND=""
 
-src_compile() {
+DOCS=( README )
+
+src_configure() {
 	# man page and HTML are already generated
-	econf --disable-xmltoman --disable-lynx || die "econf failed"
-	emake || die "emake failed"
+	econf \
+		--disable-xmltoman \
+		--disable-lynx
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
-	dodoc README
+	default
 	dohtml doc/README.html
 }

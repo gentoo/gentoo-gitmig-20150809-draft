@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ifmetric
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifmetric/ChangeLog,v 1.6 2007/03/19 02:15:16 kloeri Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifmetric/ChangeLog,v 1.7 2012/10/26 10:53:28 pinkbyte Exp $
+
+  26 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> ifmetric-0.3.ebuild:
+  Bump to EAPI 4 + small cosmetic changes
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove ka0ttic from metadata.xml due to retirement.
