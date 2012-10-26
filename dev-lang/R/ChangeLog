@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.206 2012/10/07 13:35:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.207 2012/10/26 21:44:05 calchan Exp $
+
+*R-2.15.2 (26 Oct 2012)
+
+  26 Oct 2012; Denis Dupeyron <calchan@gentoo.org> +R-2.15.2.ebuild:
+  Version bump.
 
   07 Oct 2012; Justin Lecher <jlec@gentoo.org> R-2.10.1.ebuild,
   R-2.14.2.ebuild, R-2.15.0.ebuild, R-2.15.1.ebuild, metadata.xml:
