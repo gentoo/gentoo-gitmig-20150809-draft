@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-augeas/ruby-augeas-0.4.1.ebuild,v 1.3 2012/10/26 08:40:09 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-augeas/ruby-augeas-0.4.1.ebuild,v 1.4 2012/10/26 08:59:47 graaff Exp $
 
 EAPI=3
 # jruby -> native extentions
@@ -20,8 +20,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE=""
 
-DEPEND="${DEPEND} >=app-admin/augeas-0.5.1 <app-admin/augeas-0.10"
+DEPEND="${DEPEND} >=app-admin/augeas-0.5.1 dev-libs/libxml2"
 RDEPEND="${RDEPEND} >=app-admin/augeas-0.5.1"
+
+RUBY_PATCHES=( ${P}-libxml2.patch )
 
 each_ruby_configure() {
 	${RUBY} -Cext/augeas extconf.rb || die
