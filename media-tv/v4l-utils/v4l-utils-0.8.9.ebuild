@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-utils/v4l-utils-0.8.9.ebuild,v 1.1 2012/10/20 07:16:00 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-utils/v4l-utils-0.8.9.ebuild,v 1.2 2012/10/26 17:45:48 tetromino Exp $
 
 EAPI=4
 inherit toolchain-funcs qt4-r2
@@ -32,7 +32,7 @@ src_prepare() {
 }
 
 src_configure() {
-	tc-export CC CXX
+	tc-export AR CC CXX
 	if use qt4; then
 		cd qv4l2
 		eqmake4 qv4l2.pro
