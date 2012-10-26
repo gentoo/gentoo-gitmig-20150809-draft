@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/stfl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/ChangeLog,v 1.39 2012/02/25 04:06:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/ChangeLog,v 1.40 2012/10/26 16:07:24 scarabeus Exp $
+
+*stfl-0.22-r1 (26 Oct 2012)
+
+  26 Oct 2012; Tomáš Chvátal <scarabeus@gentoo.org> +stfl-0.22-r1.ebuild,
+  -stfl-0.22.ebuild:
+  Revision bump as the package is fubared due to as-needed. Keep keywords as it
+  really could not work in current setup. Fixes bug#419659.
 
   25 Feb 2012; Patrick Lauer <patrick@gentoo.org> stfl-0.22.ebuild:
   Restricting jython
@@ -170,4 +177,3 @@
   +stfl-0.8.ebuild:
   Initial import. Ebuild submitted by Tim Weber <gentoo.bugs at scytale.de> in
   bug #174975, modified by me.
-

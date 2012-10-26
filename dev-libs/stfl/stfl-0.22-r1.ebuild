@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/stfl-0.22.ebuild,v 1.6 2012/02/25 04:06:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/stfl-0.22-r1.ebuild,v 1.1 2012/10/26 16:07:24 scarabeus Exp $
 
 EAPI="4"
 SUPPORT_PYTHON_ABIS="1"
@@ -39,6 +39,8 @@ src_prepare() {
 		-e 's/-Os -ggdb//' \
 		-e 's/^\(all:.*\) example/\1/' \
 		-e 's/$(CC) -shared/$(CC) $(LDFLAGS) -shared/' \
+		-e 's/ -o $@ $(LDLIBS) $^/ $^ $(LDLIBS) -o $@/' \
+		-e 's/-lncursesw/-lncursesw -pthread/' \
 		Makefile || die "sed failed"
 
 	if ! use static-libs ; then
