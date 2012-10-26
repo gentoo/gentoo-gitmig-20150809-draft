@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/desktop-file-utils-0.20-r1.ebuild,v 1.11 2012/10/26 17:11:43 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/desktop-file-utils-0.21.ebuild,v 1.1 2012/10/26 17:11:43 tetromino Exp $
 
 EAPI=4
 inherit elisp-common eutils
@@ -11,12 +11,13 @@ SRC_URI="http://www.freedesktop.org/software/${PN}/releases/${P}.tar.xz"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="emacs"
 
 RDEPEND=">=dev-libs/glib-2.12:2
 	emacs? ( virtual/emacs )"
 DEPEND="${RDEPEND}
+	app-arch/xz-utils
 	virtual/pkgconfig"
 
 SITEFILE=50${PN}-gentoo.el
@@ -24,8 +25,6 @@ SITEFILE=50${PN}-gentoo.el
 DOCS=( AUTHORS ChangeLog HACKING NEWS README )
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-validate_Categories_XFCE.patch
-
 	sed -i -e '/SUBDIRS =/s:misc::' Makefile.in || die
 }
 
