@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-12.4.ebuild,v 1.7 2012/10/10 16:58:55 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-12.4.ebuild,v 1.8 2012/10/26 14:24:29 chithanh Exp $
 
 EAPI=4
 
@@ -138,6 +138,12 @@ _check_kernel_config() {
 	if ! kernel_is ge 2 6; then
 		eerror "You need a 2.6 linux kernel to compile against!"
 		die "No 2.6 Kernel found"
+	fi
+
+	if kernel_is ge 3 5; then
+		eerror "${P} is not compatible with this kernel version!"
+		eerror "Use ati-drivers-12.6_beta_pre897 for legacy cards."
+		die "Kernel too new"
 	fi
 
 	if ! linux_chkconfig_present MTRR; then

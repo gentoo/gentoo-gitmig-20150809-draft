@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-12.9_beta.ebuild,v 1.2 2012/10/10 16:58:55 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-12.10.ebuild,v 1.1 2012/10/26 14:24:29 chithanh Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ DESCRIPTION="Ati precompiled drivers for Radeon Evergreen (HD5000 Series) and ne
 HOMEPAGE="http://www.amd.com"
 MY_V=( $(get_version_components) )
 #RUN="${WORKDIR}/amd-driver-installer-9.00-x86.x86_64.run"
-SRC_URI="http://www2.ati.com/drivers/beta/amd-driver-installer-12-9-beta-x86.x86_64.zip"
+SRC_URI="http://www2.ati.com/drivers/linux/amd-driver-installer-catalyst-12.10-x86.x86_64.zip"
 FOLDER_PREFIX="common/"
 IUSE="debug +modules multilib qt4 static-libs disable-watermark"
 
@@ -233,9 +233,8 @@ pkg_pretend() {
 	# workaround until bug 365543 is solved
 	if use modules; then
 		linux-info_pkg_setup
-		if linux_config_exists; then
-			_check_kernel_config
-		fi
+		require_configured_kernel
+		_check_kernel_config
 	fi
 }
 
@@ -280,14 +279,18 @@ pkg_setup() {
 }
 
 src_unpack() {
-	#please note, RUN may be insanely assigned at top near SRC_URI
-	if [[ ${A} =~ .*\.zip ]]; then
+	if [[ ${A} =~ .*\.tar\.gz ]]; then
 		unpack ${A}
-		[[ -z "$RUN" ]] && RUN="${S}/${A/%.zip/.run}"
 	else
-		RUN="${DISTDIR}/${A}"
+		#please note, RUN may be insanely assigned at top near SRC_URI
+		if [[ ${A} =~ .*\.zip ]]; then
+			unpack ${A}
+			[[ -z "$RUN" ]] && RUN="${S}/${A/%.zip/.run}"
+		else
+			RUN="${DISTDIR}/${A}"
+		fi
+		sh ${RUN} --extract "${S}" 2>&1 > /dev/null || die
 	fi
-	sh ${RUN} --extract "${S}" 2>&1 > /dev/null || die
 }
 
 src_prepare() {
@@ -330,6 +333,10 @@ src_prepare() {
 	#epatch "${FILESDIR}"/ati-drivers-old_rsp.patch
 	# first hunk applied upstream second (x32 related) was not
 	epatch "${FILESDIR}"/ati-drivers-x32_something_something.patch
+
+	# compile fix for linux-3.7
+	# https://bugs.gentoo.org/show_bug.cgi?id=438516
+	epatch "${FILESDIR}/ati-drivers-vm-reserverd.patch"
 
 	cd "${MODULE_DIR}"
 

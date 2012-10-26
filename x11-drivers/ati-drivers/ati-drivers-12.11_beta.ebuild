@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-12.9_beta9000.ebuild,v 1.1 2012/10/15 14:33:06 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-12.11_beta.ebuild,v 1.1 2012/10/26 14:24:29 chithanh Exp $
 
 EAPI=4
 
@@ -10,8 +10,8 @@ DESCRIPTION="Ati precompiled drivers for Radeon Evergreen (HD5000 Series) and ne
 HOMEPAGE="http://www.amd.com"
 MY_V=( $(get_version_components) )
 #RUN="${WORKDIR}/amd-driver-installer-9.00-x86.x86_64.run"
-SRC_URI="https://launchpad.net/ubuntu/quantal/+source/fglrx-installer/2:9.000-0ubuntu3/+files/fglrx-installer_9.000.orig.tar.gz"
-FOLDER_PREFIX=""
+SRC_URI="http://www2.ati.com/drivers/beta/amd-driver-installer-catalyst-12.11-beta-x86.x86_64.zip"
+FOLDER_PREFIX="common/"
 IUSE="debug +modules multilib qt4 static-libs disable-watermark"
 
 LICENSE="AMD GPL-2 QPL-1.0 as-is"
@@ -333,6 +333,10 @@ src_prepare() {
 	#epatch "${FILESDIR}"/ati-drivers-old_rsp.patch
 	# first hunk applied upstream second (x32 related) was not
 	epatch "${FILESDIR}"/ati-drivers-x32_something_something.patch
+
+	# compile fix for linux-3.7
+	# https://bugs.gentoo.org/show_bug.cgi?id=438516
+	epatch "${FILESDIR}/ati-drivers-vm-reserverd.patch"
 
 	cd "${MODULE_DIR}"
 

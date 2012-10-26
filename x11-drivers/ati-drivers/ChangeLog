@@ -1,6 +1,17 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.299 2012/10/15 14:33:06 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.300 2012/10/26 14:24:29 chithanh Exp $
+
+*ati-drivers-12.10 (26 Oct 2012)
+*ati-drivers-12.11_beta (26 Oct 2012)
+
+  26 Oct 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +ati-drivers-12.10.ebuild, +ati-drivers-12.11_beta.ebuild,
+  +files/ati-drivers-vm-reserverd.patch, -ati-drivers-12.2.ebuild,
+  -ati-drivers-12.9_beta.ebuild, -ati-drivers-12.9_beta9000.ebuild,
+  ati-drivers-12.4.ebuild:
+  New release and prerelease, import of Emil Karlson's ebuild from the x11
+  overlay. Drop some old ebuilds.
 
 *ati-drivers-12.9_beta9000 (15 Oct 2012)
 
