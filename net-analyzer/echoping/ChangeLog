@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/echoping
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/ChangeLog,v 1.24 2012/10/26 08:43:21 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/ChangeLog,v 1.25 2012/10/26 09:36:11 pinkbyte Exp $
+
+  26 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> echoping-6.0.2-r1.ebuild:
+  Fix description
 
   26 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> -echoping-6.0.2.ebuild:
   Drop old revision

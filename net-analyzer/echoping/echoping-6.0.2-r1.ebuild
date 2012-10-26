@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/echoping-6.0.2-r1.ebuild,v 1.6 2010/06/17 20:28:33 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/echoping-6.0.2-r1.ebuild,v 1.7 2012/10/26 09:36:11 pinkbyte Exp $
 
 EAPI="2"
 
 inherit eutils autotools
 
-DESCRIPTION="echoping is a small program to test performances of remote servers"
+DESCRIPTION="Small program to test performances of remote servers"
 HOMEPAGE="http://echoping.sourceforge.net/"
 SRC_URI="mirror://sourceforge/echoping/${P}.tar.gz"
 LICENSE="GPL-2"
