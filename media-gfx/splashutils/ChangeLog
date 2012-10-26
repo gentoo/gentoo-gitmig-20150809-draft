@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/splashutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.203 2012/10/21 08:58:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.204 2012/10/26 20:29:03 flameeyes Exp $
+
+*splashutils-1.5.4.4-r2 (26 Oct 2012)
+
+  26 Oct 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +splashutils-1.5.4.4-r2.ebuild:
+  Revision bump to -r2 with EAPI=4 to use USE deps defaults; add a use dep on
+  static-libs for sys-libs/gpm as well.
 
   21 Oct 2012; Markus Meier <maekke@gentoo.org> splashutils-1.5.4.4-r1.ebuild:
   x86 stable, bug #422921
@@ -1001,4 +1008,3 @@
   21 Aug 2004; Michal Januszewski <spock@gentoo.org> +metadata.xml,
   +splashutils-0.9_pre07.ebuild:
   Intial commit.
-
