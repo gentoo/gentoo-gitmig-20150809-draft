@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/keybinder
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/keybinder/ChangeLog,v 1.11 2012/10/21 09:59:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/keybinder/ChangeLog,v 1.12 2012/10/26 02:16:43 blueness Exp $
+
+  26 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  keybinder-0.3.0-r200.ebuild:
+  keyword ~mips
 
   21 Oct 2012; Samuli Suominen <ssuominen@gentoo.org> -keybinder-0.2.2.ebuild:
   old
@@ -43,4 +47,3 @@
   30 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
   +keybinder-0.2.2.ebuild:
   Initial commit.
-

@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libunique
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/ChangeLog,v 1.59 2012/05/21 18:46:59 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/ChangeLog,v 1.60 2012/10/26 02:14:55 blueness Exp $
+
+  26 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  libunique-1.1.6-r1.ebuild:
+  keyword ~mips
 
   21 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   libunique-1.1.6-r1.ebuild:
@@ -222,4 +226,3 @@
   +metadata.xml, +libunique-1.0.8.ebuild:
   Original ebuild is courtesy of Christoph Brill <egore@gmx.de>, closes bug
   #236899.
-

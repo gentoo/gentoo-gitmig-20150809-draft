@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/libunique-1.1.6-r1.ebuild,v 1.9 2012/05/21 18:46:59 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/libunique-1.1.6-r1.ebuild,v 1.10 2012/10/26 02:14:55 blueness Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -13,7 +13,7 @@ HOMEPAGE="http://live.gnome.org/LibUnique"
 
 LICENSE="LGPL-2.1"
 SLOT="1"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-solaris"
 IUSE="dbus doc +introspection"
 
 RDEPEND=">=dev-libs/glib-2.12:2

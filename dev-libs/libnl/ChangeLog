@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libnl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.109 2012/10/22 11:24:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.110 2012/10/26 02:18:02 blueness Exp $
+
+  26 Oct 2012; Anthony G. Basile <blueness@gentoo.org> libnl-3.2.14.ebuild:
+  keyword ~mips
 
 *libnl-3.2.14 (22 Oct 2012)
 
