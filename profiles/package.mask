@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14165 2012/10/25 22:36:25 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14166 2012/10/26 13:23:10 ryao Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -44,18 +44,6 @@
 # Eray Aslan <eras@gentoo.org> (24 Oct 2012)
 # Mask experimental software
 =mail-client/squirrelmail-1.4.23*
-
-# Richard Yao <ryao@gentoo.org> (24 Oct 2012)
-# Mask kernel versions affected by ext4 corruption regression bug #439502
-=sys-kernel/gentoo-sources-3.5.7
-=sys-kernel/gentoo-sources-3.6.2
-=sys-kernel/hardened-sources-3.6.2
-=sys-kernel/mips-sources-3.5.7
-=sys-kernel/mips-sources-3.6.2
-=sys-kernel/vanilla-sources-3.4.14
-=sys-kernel/vanilla-sources-3.5.7
-=sys-kernel/vanilla-sources-3.6.2
-=sys-kernel/vanilla-sources-3.6.3
 
 # Doug Goldstein <cardoe@gentoo.org> (23 Oct 2012)
 # A cgroup CPU pinning patch caused problems for some people
