@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.5.8.ebuild,v 1.4 2012/09/10 06:02:11 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.5.8.ebuild,v 1.5 2012/10/26 16:46:37 tetromino Exp $
 
 EAPI="4"
 
@@ -65,7 +65,7 @@ RDEPEND="truetype? ( >=media-libs/freetype-2.0.0 media-fonts/corefonts )
 		sys-fs/udisks:2
 	)
 	gnutls? ( net-libs/gnutls )
-	gstreamer? ( media-libs/gstreamer media-libs/gst-plugins-base )
+	gstreamer? ( media-libs/gstreamer:0.10 media-libs/gst-plugins-base:0.10 )
 	X? (
 		x11-libs/libXcursor
 		x11-libs/libXrandr
