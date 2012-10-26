@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libmnl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmnl/ChangeLog,v 1.12 2012/09/02 03:18:01 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmnl/ChangeLog,v 1.13 2012/10/26 01:31:07 blueness Exp $
+
+  26 Oct 2012; Anthony G. Basile <blueness@gentoo.org> libmnl-1.0.3.ebuild:
+  keyword ~ppc64, bug #432974
 
 *libmnl-1.0.3 (02 Sep 2012)
 
