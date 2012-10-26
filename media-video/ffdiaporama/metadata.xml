@@ -4,6 +4,12 @@
 	<maintainer>
 		<email>hasufell@gentoo.org</email>
 		<name>Julian Ospald</name>
+		<description>Maintainer, assign bugs to him</description>
+	</maintainer>
+	<maintainer>
+		<email>olivier.laurantin@gmail.com</email>
+		<name>Olivier Laurantin</name>
+		<description>Proxy maintainer. CC him on bugs</description>
 	</maintainer>
 	<upstream>
         <changelog>http://ffdiaporama.tuxfamily.org/?page_id=7266&amp;lang=en</changelog>
