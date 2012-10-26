@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-augeas/ruby-augeas-0.3.0-r1.ebuild,v 1.6 2011/06/30 15:04:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-augeas/ruby-augeas-0.3.0-r1.ebuild,v 1.7 2012/10/26 08:40:09 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="amd64 hppa ppc sparc x86"
 IUSE=""
 
-DEPEND="${DEPEND} >=app-admin/augeas-0.5.1"
+DEPEND="${DEPEND} >=app-admin/augeas-0.5.1 <app-admin/augeas-0.10"
 RDEPEND="${RDEPEND} >=app-admin/augeas-0.5.1"
 
 each_ruby_configure() {
