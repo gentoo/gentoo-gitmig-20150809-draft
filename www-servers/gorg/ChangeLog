@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/gorg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/ChangeLog,v 1.35 2012/09/02 09:03:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/ChangeLog,v 1.36 2012/10/26 10:54:09 graaff Exp $
+
+  26 Oct 2012; Hans de Graaff <graaff@gentoo.org> metadata.xml:
+  Add myself as primary maintainer based on discussions at the Gentoo Miniconf
+  in Prague.
 
   02 Sep 2012; Diego E. Pettenò <flameeyes@gentoo.org> gorg-0.6.4-r1.ebuild:
   Fix dependency for renamed package.
