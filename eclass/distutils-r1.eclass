@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.7 2012/10/25 17:42:39 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.8 2012/10/26 21:38:47 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -286,6 +286,19 @@ distutils-r1_python_install_all() {
 	done
 }
 
+# @FUNCTION: distutils-r1_run_phase
+# @USAGE: [<argv>...]
+# @INTERNAL
+# @DESCRIPTION:
+# Run the given command in BUILD_DIR.
+distutils-r1_run_phase() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	pushd "${BUILD_DIR}" &>/dev/null || die
+	"${@}" || die "${1} failed."
+	popd &>/dev/null || die
+}
+
 distutils-r1_src_prepare() {
 	debug-print-function ${FUNCNAME} "${@}"
 
@@ -297,17 +310,17 @@ distutils-r1_src_prepare() {
 	fi
 
 	if declare -f python_prepare >/dev/null; then
-		python_foreach_impl python_prepare
+		python_foreach_impl distutils-r1_run_phase python_prepare
 	else
-		python_foreach_impl distutils-r1_python_prepare
+		python_foreach_impl distutils-r1_run_phase distutils-r1_python_prepare
 	fi
 }
 
 distutils-r1_src_configure() {
 	if declare -f python_configure >/dev/null; then
-		python_foreach_impl python_configure
+		python_foreach_impl distutils-r1_run_phase python_configure
 	else
-		python_foreach_impl distutils-r1_python_configure
+		python_foreach_impl distutils-r1_run_phase distutils-r1_python_configure
 	fi
 
 	if declare -f python_configure_all >/dev/null; then
@@ -319,9 +332,9 @@ distutils-r1_src_compile() {
 	debug-print-function ${FUNCNAME} "${@}"
 
 	if declare -f python_compile >/dev/null; then
-		python_foreach_impl python_compile
+		python_foreach_impl distutils-r1_run_phase python_compile
 	else
-		python_foreach_impl distutils-r1_python_compile
+		python_foreach_impl distutils-r1_run_phase distutils-r1_python_compile
 	fi
 
 	if declare -f python_compile_all >/dev/null; then
@@ -333,9 +346,9 @@ distutils-r1_src_test() {
 	debug-print-function ${FUNCNAME} "${@}"
 
 	if declare -f python_test >/dev/null; then
-		python_foreach_impl python_test
+		python_foreach_impl distutils-r1_run_phase python_test
 	else
-		python_foreach_impl distutils-r1_python_test
+		python_foreach_impl distutils-r1_run_phase distutils-r1_python_test
 	fi
 
 	if declare -f python_test_all >/dev/null; then
@@ -347,9 +360,9 @@ distutils-r1_src_install() {
 	debug-print-function ${FUNCNAME} "${@}"
 
 	if declare -f python_install >/dev/null; then
-		python_foreach_impl python_install
+		python_foreach_impl distutils-r1_run_phase python_install
 	else
-		python_foreach_impl distutils-r1_python_install
+		python_foreach_impl distutils-r1_run_phase distutils-r1_python_install
 	fi
 
 	if declare -f python_install_all >/dev/null; then

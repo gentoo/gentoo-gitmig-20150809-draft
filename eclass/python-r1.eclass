@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.5 2012/10/25 16:47:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.6 2012/10/26 21:38:47 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -330,11 +330,6 @@ python_copy_sources() {
 #
 # For each command being run, EPYTHON, PYTHON and BUILD_DIR are set
 # locally, and the former two are exported to the command environment.
-#
-# The command is run inside the build directory. If it doesn't exist
-# yet, it is created (as an empty directory!). If your build system does
-# not support out-of-source builds, you will likely want to use
-# python_copy_sources first.
 python_foreach_impl() {
 	debug-print-function ${FUNCNAME} "${@}"
 
@@ -350,13 +345,8 @@ python_foreach_impl() {
 			local BUILD_DIR=${bdir%%/}-${impl}
 			export EPYTHON PYTHON
 
-			debug-print "${FUNCNAME}: [${impl}] build_dir = ${BUILD_DIR}"
-
-			mkdir -p "${BUILD_DIR}" || die
-			pushd "${BUILD_DIR}" &>/dev/null || die
 			einfo "${EPYTHON}: running ${@}"
 			"${@}" || die "${EPYTHON}: ${1} failed"
-			popd &>/dev/null || die
 		fi
 	done
 }

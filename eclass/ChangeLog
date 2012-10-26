@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.468 2012/10/25 17:42:39 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.469 2012/10/26 21:38:47 mgorny Exp $
+
+  26 Oct 2012; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass,
+  python-r1.eclass:
+  Do not enter BUILD_DIR in python_foreach_impl(), do that in distutils-r1
+  instead.
 
   25 Oct 2012; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
   Add games/bin to lookup paths for rename_scripts().
