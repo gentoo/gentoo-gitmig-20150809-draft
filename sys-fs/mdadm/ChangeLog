@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/mdadm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.157 2012/08/13 17:38:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.158 2012/10/26 08:17:33 radhermit Exp $
+
+*mdadm-3.2.6 (26 Oct 2012)
+
+  26 Oct 2012; Tim Harder <radhermit@gentoo.org> +mdadm-3.2.6.ebuild:
+  Version bump.
 
   13 Aug 2012; Samuli Suominen <ssuominen@gentoo.org>
   files/mdadm-3.2.x-udevdir.patch:
