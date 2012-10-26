@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.8.4.0-r2.ebuild,v 1.9 2012/05/24 03:04:31 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.8.4.0-r2.ebuild,v 1.10 2012/10/26 22:57:58 tetromino Exp $
 
 EAPI="3"
 GNOME_ORG_MODULE="NetworkManager"
@@ -10,7 +10,7 @@ inherit autotools eutils gnome.org linux-info systemd
 DESCRIPTION="Network configuration and management in an easy way. Desktop environment independent."
 HOMEPAGE="http://www.gnome.org/projects/NetworkManager/"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="amd64 ~arm ppc ppc64 x86"
 IUSE="avahi bluetooth doc nss gnutls dhclient dhcpcd kernel_linux +ppp resolvconf connection-sharing"
