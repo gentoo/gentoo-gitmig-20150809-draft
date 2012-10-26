@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.357 2012/10/23 07:01:47 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.358 2012/10/26 01:33:01 blueness Exp $
+
+  26 Oct 2012; Anthony G. Basile <blueness@gentoo.org> squid-3.2.3.ebuild:
+  keyword ~ppc64, bug #432974
 
   23 Oct 2012; Eray Aslan <eras@gentoo.org> +files/squid.initd-logrotate-r1,
   +files/squid.initd-r1, squid-3.2.3.ebuild:
