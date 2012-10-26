@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-2.96.ebuild,v 1.6 2012/10/26 07:17:45 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-2.98.ebuild,v 1.1 2012/10/26 07:17:45 eva Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -15,8 +15,7 @@ HOMEPAGE="http://www.rhythmbox.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="cdr clutter daap dbus doc gnome-keyring html ipod +lastfm libnotify lirc
-musicbrainz mtp nsplugin +python test +udev upnp webkit zeitgeist"
+IUSE="cdr clutter daap dbus gnome-keyring html ipod libnotify lirc mtp nsplugin +python test +udev upnp webkit zeitgeist"
 # vala
 KEYWORDS="~amd64 ~x86"
 
@@ -29,22 +28,24 @@ REQUIRED_USE="
 
 # FIXME: double check what to do with fm-radio plugin
 # NOTE: gst-python is still needed because gstreamer introspection is incomplete
-COMMON_DEPEND=">=dev-libs/glib-2.28.0:2
-	dev-libs/libxml2:2
-	>=x11-libs/gtk+-3.2:3[introspection]
+COMMON_DEPEND="
+	>=dev-libs/glib-2.32:2
+	>=dev-libs/libxml2-2.7.8:2
+	>=x11-libs/gtk+-3.4:3[introspection]
 	>=x11-libs/gdk-pixbuf-2.18.0:2
 	>=dev-libs/gobject-introspection-0.10.0
 	>=dev-libs/libpeas-0.7.3[gtk,python?]
-	>=dev-libs/totem-pl-parser-2.32.1
+	>=dev-libs/totem-pl-parser-3.2
 	>=net-libs/libsoup-2.26:2.4
 	>=net-libs/libsoup-gnome-2.26:2.4
 	>=media-libs/gst-plugins-base-0.10.32:0.10[introspection]
 	>=media-libs/gstreamer-0.10.32:0.10[introspection]
 	>=sys-libs/tdb-1.2.6
+	dev-libs/json-glib
 
 	clutter? (
-		>=media-libs/clutter-1.2:1.0
-		>=media-libs/clutter-gst-1.0:1.0
+		>=media-libs/clutter-1.8:1.0
+		>=media-libs/clutter-gst-1.4:1.0
 		>=media-libs/clutter-gtk-1.0:1.0
 		>=x11-libs/mx-1.0.1:1.0 )
 	cdr? ( >=app-cdr/brasero-2.91.90 )
@@ -53,13 +54,9 @@ COMMON_DEPEND=">=dev-libs/glib-2.28.0:2
 		>=net-dns/avahi-0.6 )
 	gnome-keyring? ( >=gnome-base/gnome-keyring-0.4.9 )
 	html? ( >=net-libs/webkit-gtk-1.3.9:3 )
-	lastfm? ( dev-libs/json-glib )
 	libnotify? ( >=x11-libs/libnotify-0.7.0 )
 	lirc? ( app-misc/lirc )
-	musicbrainz? (
-		media-libs/musicbrainz:3
-		gnome-base/gconf:2 )
-	python? ( dev-python/pygobject:3 )
+	python? ( >=dev-python/pygobject-3:3 )
 	udev? (
 		ipod? ( >=media-libs/libgpod-0.7.92[udev] )
 		mtp? ( >=media-libs/libmtp-0.3 )
@@ -67,17 +64,17 @@ COMMON_DEPEND=">=dev-libs/glib-2.28.0:2
 	zeitgeist? ( gnome-extra/zeitgeist )
 "
 RDEPEND="${COMMON_DEPEND}
-	>=media-plugins/gst-plugins-soup-0.10:0.10
-	>=media-plugins/gst-plugins-libmms-0.10:0.10
+	media-plugins/gst-plugins-soup:0.10
+	media-plugins/gst-plugins-libmms:0.10
 	|| (
-		>=media-plugins/gst-plugins-cdparanoia-0.10:0.10
-		>=media-plugins/gst-plugins-cdio-0.10:0.10 )
+		media-plugins/gst-plugins-cdparanoia:0.10
+		media-plugins/gst-plugins-cdio:0.10 )
 	>=media-plugins/gst-plugins-meta-0.10-r2:0.10
 	>=media-plugins/gst-plugins-taglib-0.10.6:0.10
 	x11-themes/gnome-icon-theme-symbolic
 	upnp? (
-		>=media-libs/grilo-0.1.17:0.1
-		>=media-plugins/grilo-plugins-0.1.17:0.1[upnp] )
+		>=media-libs/grilo-0.2:0.2
+		>=media-plugins/grilo-plugins-0.2:0.2[upnp] )
 	python? (
 		>=dev-python/gst-python-0.10.8:0.10
 
@@ -91,16 +88,15 @@ RDEPEND="${COMMON_DEPEND}
 			dev-python/mako
 			>=net-libs/webkit-gtk-1.3.9:3[introspection] ) )
 "
-# gtk-doc-am needed for eautoreconf
-#	dev-util/gtk-doc-am
 DEPEND="${COMMON_DEPEND}
-	virtual/pkgconfig
-	>=dev-util/intltool-0.35
 	app-text/scrollkeeper
 	>=app-text/gnome-doc-utils-0.9.1
-	doc? ( >=dev-util/gtk-doc-1.4 )
+	>=dev-util/gtk-doc-am-1.4
+	>=dev-util/intltool-0.35
+	virtual/pkgconfig
 	test? ( dev-libs/check )"
 #	vala? ( >=dev-lang/vala-0.9.4:0.12 )
+
 DOCS="AUTHORS ChangeLog DOCUMENTERS INTERNALS \
 	  MAINTAINERS MAINTAINERS.old NEWS README THANKS"
 
@@ -110,7 +106,14 @@ pkg_setup() {
 		python_pkg_setup
 		G2CONF="${G2CONF} PYTHON=$(PYTHON -2)"
 	fi
+}
 
+src_prepare() {
+	rm -v lib/rb-marshal.{c,h} || die
+	gnome2_src_prepare
+}
+
+src_configure() {
 	# --enable-vala just installs the sample vala plugin, and the configure
 	# checks are broken, so don't enable it
 	G2CONF="${G2CONF}
@@ -118,17 +121,14 @@ pkg_setup() {
 		VALAC=$(type -P valac-0.14)
 		--enable-mmkeys
 		--disable-more-warnings
-		--disable-scrollkeeper
 		--disable-schemas-compile
 		--disable-static
 		--disable-vala
 		--without-hal
 		$(use_enable clutter visualizer)
 		$(use_enable daap)
-		$(use_enable lastfm)
 		$(use_enable libnotify)
 		$(use_enable lirc)
-		$(use_enable musicbrainz)
 		$(use_enable nsplugin browser-plugin)
 		$(use_enable python)
 		$(use_enable upnp grilo)
@@ -141,11 +141,12 @@ pkg_setup() {
 		$(use_with udev gudev)"
 
 	export GST_INSPECT=/bin/true
+	gnome2_src_configure
 }
 
 src_prepare() {
 	gnome2_src_prepare
-	echo > py-compile
+	python_clean_py-compile_files
 }
 
 src_test() {

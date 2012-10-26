@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-2.97.ebuild,v 1.2 2012/09/16 02:56:06 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-2.97.ebuild,v 1.3 2012/10/26 07:17:45 eva Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -68,19 +68,19 @@ COMMON_DEPEND=">=dev-libs/glib-2.28.0:2
 	zeitgeist? ( gnome-extra/zeitgeist )
 "
 RDEPEND="${COMMON_DEPEND}
-	>=media-plugins/gst-plugins-soup-0.10
-	>=media-plugins/gst-plugins-libmms-0.10
+	>=media-plugins/gst-plugins-soup-0.10:0.10
+	>=media-plugins/gst-plugins-libmms-0.10:0.10
 	|| (
-		>=media-plugins/gst-plugins-cdparanoia-0.10
-		>=media-plugins/gst-plugins-cdio-0.10 )
+		>=media-plugins/gst-plugins-cdparanoia-0.10:0.10
+		>=media-plugins/gst-plugins-cdio-0.10:0.10 )
 	>=media-plugins/gst-plugins-meta-0.10-r2:0.10
-	>=media-plugins/gst-plugins-taglib-0.10.6
+	>=media-plugins/gst-plugins-taglib-0.10.6:0.10
 	x11-themes/gnome-icon-theme-symbolic
 	upnp? (
 		>=media-libs/grilo-0.1.17:0.1
 		>=media-plugins/grilo-plugins-0.1.17:0.1[upnp] )
 	python? (
-		>=dev-python/gst-python-0.10.8
+		>=dev-python/gst-python-0.10.8:0.10
 
 		x11-libs/gdk-pixbuf:2[introspection]
 		x11-libs/gtk+:3[introspection]

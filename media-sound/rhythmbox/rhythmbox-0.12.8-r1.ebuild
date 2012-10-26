@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.8-r1.ebuild,v 1.21 2012/05/05 08:50:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.8-r1.ebuild,v 1.22 2012/10/26 07:17:45 eva Exp $
 
 EAPI="4"
 GNOME_TARBALL_SUFFIX="bz2"
@@ -33,7 +33,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.18:2
 	>=media-libs/gst-plugins-base-0.10.20:0.10
 	|| (
 		>=media-libs/gst-plugins-base-0.10.24:0.10
-		>=media-libs/gst-plugins-bad-0.10.6 )
+		>=media-libs/gst-plugins-bad-0.10.6:0.10 )
 
 	cdr? ( >=app-cdr/brasero-0.9.1 )
 	daap? ( >=net-dns/avahi-0.6 )
@@ -55,7 +55,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.18:2
 		>=dev-python/gconf-python-2.22
 		>=dev-python/libgnome-python-2.22
 		>=dev-python/gnome-keyring-python-2.22
-		>=dev-python/gst-python-0.10.8
+		>=dev-python/gst-python-0.10.8:0.10
 		webkit? (
 			dev-python/mako
 			dev-python/pywebkitgtk )
