@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/archfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/archfs/ChangeLog,v 1.5 2012/03/20 10:08:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/archfs/ChangeLog,v 1.6 2012/10/26 12:15:36 ago Exp $
+
+  26 Oct 2012; Agostino Sarubbo <ago@gentoo.org> archfs-0.5.6b.ebuild:
+  EAPI4, respect AR, add ~amd64
 
   20 Mar 2012; Pacho Ramos <pacho@gentoo.org> archfs-0.5.6b.ebuild:
   Update homepage, bug #354089 by Jeroen Roovers.
@@ -22,4 +25,3 @@
   19 Aug 2007; Markus Ullmann <jokey@gentoo.org> +metadata.xml,
   +archfs-0.5.1.ebuild:
   Initial import
-
