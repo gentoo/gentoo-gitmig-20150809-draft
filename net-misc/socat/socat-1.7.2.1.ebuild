@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/socat-1.7.2.1.ebuild,v 1.9 2012/07/26 03:26:39 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/socat-1.7.2.1.ebuild,v 1.10 2012/10/26 02:41:32 vapier Exp $
 
 EAPI="4"
 
-inherit eutils flag-o-matic autotools
+inherit eutils flag-o-matic
 
 DESCRIPTION="Multipurpose relay (SOcket CAT)"
 HOMEPAGE="http://www.dest-unreach.org/socat/"
@@ -25,12 +25,12 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.7.2.0-cross-compile.patch
+	epatch "${FILESDIR}"/${PN}-1.7.2.1-long-long.patch #436164
 	eautoreconf
 }
 
 src_configure() {
-	filter-flags -Wno-error*
+	filter-flags '-Wno-error*' #293324
 	econf \
 		$(use_enable ssl openssl) \
 		$(use_enable readline) \
@@ -43,7 +43,7 @@ src_test() {
 }
 
 src_install() {
-	emake install DESTDIR="${D}"
+	default
 
 	dodoc BUGREPORTS CHANGES DEVELOPMENT \
 		FAQ FILES PORTING README SECURITY VERSION
