@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/squirrelmail
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.169 2012/10/24 13:10:53 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.170 2012/10/26 07:55:00 eras Exp $
+
+  26 Oct 2012; Eray Aslan <eras@gentoo.org> squirrelmail-1.4.22.ebuild:
+  Specify slot in php dependency
 
 *squirrelmail-1.4.23_pre20121024 (24 Oct 2012)
 
