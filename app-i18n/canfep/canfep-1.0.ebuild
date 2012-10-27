@@ -1,8 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canfep/canfep-1.0.ebuild,v 1.6 2009/12/31 21:11:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canfep/canfep-1.0.ebuild,v 1.7 2012/10/27 12:23:01 ago Exp $
 
-inherit eutils
+EAPI=4
+
+inherit eutils toolchain-funcs
 
 IUSE="unicode"
 
@@ -13,21 +15,23 @@ SRC_URI="http://www.geocities.co.jp/SiliconValley-Bay/7584/canfep/${P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 -alpha ~sparc ppc"
+KEYWORDS="-alpha ~amd64 ppc ~sparc x86"
 
 DEPEND="app-i18n/canna
 	sys-libs/ncurses"
 RDEPEND="app-i18n/canna"
 
-src_unpack() {
-	unpack ${P}.tar.gz
-	cd "${S}"
+src_prepare() {
 	use unicode && epatch "${DISTDIR}"/canfep_utf8.diff
+	sed -i "s:\$(CFLAGS):\$(CFLAGS) \$(LDFLAGS):" Makefile || die
 }
 
 src_compile() {
-	make CXX="${CXX}" LIBS="-lcanna -lncurses" CFLAGS="${CFLAGS}" \
-		|| die "make failed"
+	emake \
+		CC="$(tc-getCXX)" \
+		CFLAGS="${CFLAGS}" \
+		LDFLAGS="${LDFLAGS}" \
+		LIBS="-lcanna -lncurses"
 }
 
 src_install() {
