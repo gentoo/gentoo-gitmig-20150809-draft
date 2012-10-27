@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.364 2012/10/04 06:50:24 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.365 2012/10/27 12:52:11 grobian Exp $
+
+  27 Oct 2012; Fabian Groffen <grobian@gentoo.org> package.mask:
+  Mask sys-apps/coreutils-8.20 due to parallel make and libiconv issues
 
   04 Oct 2012; Fabian Groffen <grobian@gentoo.org> mint/make.defaults:
   Drop ${USE} from first assignment, bug #437086
