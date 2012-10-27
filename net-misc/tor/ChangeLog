@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.360 2012/10/27 01:14:58 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.361 2012/10/27 02:33:56 blueness Exp $
+
+  27 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  +files/tor-0.2.4.5-fix-udef-ref-math.patch, tor-0.2.4.5_alpha.ebuild:
+  Fix udefined ref to ceil/log in libm, bug #435040
 
 *tor-0.2.3.24_rc (27 Oct 2012)
 *tor-0.2.4.5_alpha (27 Oct 2012)

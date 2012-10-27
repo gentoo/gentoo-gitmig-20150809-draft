@@ -1,0 +1,11 @@
+diff -Naur tor-0.2.4.5-alpha.orig/src/tools/tor-fw-helper/include.am tor-0.2.4.5-alpha/src/tools/tor-fw-helper/include.am
+--- tor-0.2.4.5-alpha.orig/src/tools/tor-fw-helper/include.am	2012-10-26 22:25:53.000000000 -0400
++++ tor-0.2.4.5-alpha/src/tools/tor-fw-helper/include.am	2012-10-26 22:26:15.000000000 -0400
+@@ -31,6 +31,6 @@
+ miniupnpc_cppflags =
+ endif
+ 
+-src_tools_tor_fw_helper_tor_fw_helper_LDFLAGS = $(nat_pmp_ldflags) $(miniupnpc_ldflags)
++src_tools_tor_fw_helper_tor_fw_helper_LDFLAGS = $(nat_pmp_ldflags) $(miniupnpc_ldflags) -lm
+ src_tools_tor_fw_helper_tor_fw_helper_LDADD = src/common/libor.a $(nat_pmp_ldadd) $(miniupnpc_ldadd) @TOR_LIB_WS32@
+ src_tools_tor_fw_helper_tor_fw_helper_CPPFLAGS = $(nat_pmp_cppflags) $(miniupnpc_cppflags)
