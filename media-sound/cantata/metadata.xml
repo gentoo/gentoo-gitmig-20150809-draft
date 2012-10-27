@@ -8,5 +8,6 @@
 	</maintainer>
 	<use>
 		<flag name="mpg123">Enable support for mp3 decoding over media-sound/mpg123.</flag>
+		<flag name="replaygain">Enable ReplayGain support, for relative volume adjustments.</flag>
 	</use>
 </pkgmetadata>
