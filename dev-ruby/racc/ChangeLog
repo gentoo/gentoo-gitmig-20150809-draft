@@ -1,13 +1,10 @@
 # ChangeLog for dev-ruby/racc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.80 2012/10/27 18:27:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.81 2012/10/27 18:37:53 armin76 Exp $
 
-  27 Oct 2012; Raúl Porcel <armin76@gentoo.org> racc-1.4.6-r1.ebuild,
-  racc-1.4.8.ebuild:
-  s390/sh stable wrt #411507
-
-  27 Oct 2012; Raúl Porcel <armin76@gentoo.org> racc-1.4.6.ebuild:
-  s390/sh stable wrt #411507
+  27 Oct 2012; Raúl Porcel <armin76@gentoo.org> racc-1.4.6.ebuild,
+  racc-1.4.6-r1.ebuild, racc-1.4.8.ebuild:
+  s390/sh stable wrt #411507, add ~s390/~sh
 
   21 Oct 2012; Raúl Porcel <armin76@gentoo.org> racc-1.4.6-r1.ebuild:
   alpha/ia64/sparc stable wrt #411507
