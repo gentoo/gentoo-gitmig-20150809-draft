@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/pecl-crack
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-crack/ChangeLog,v 1.7 2012/10/21 09:16:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-crack/ChangeLog,v 1.8 2012/10/27 16:14:22 blueness Exp $
+
+  27 Oct 2012; Anthony G. Basile <blueness@gentoo.org> pecl-crack-0.4-r3.ebuild:
+  stable ppc, bug #438694
 
   21 Oct 2012; Markus Meier <maekke@gentoo.org> pecl-crack-0.4-r2.ebuild:
   x86 stable, bug #427024
