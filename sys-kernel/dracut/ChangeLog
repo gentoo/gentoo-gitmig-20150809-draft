@@ -1,6 +1,17 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.88 2012/10/07 15:57:17 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.89 2012/10/27 17:43:02 aidecoe Exp $
+
+*dracut-023-r2 (27 Oct 2012)
+*dracut-022-r6 (27 Oct 2012)
+*dracut-019-r6 (27 Oct 2012)
+*dracut-018-r3 (27 Oct 2012)
+
+  27 Oct 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-018-r2.ebuild,
+  +dracut-018-r3.ebuild, -dracut-019-r5.ebuild, +dracut-019-r6.ebuild,
+  -dracut-022-r5.ebuild, +dracut-022-r6.ebuild, -dracut-023.ebuild,
+  -dracut-023-r1.ebuild, +dracut-023-r2.ebuild:
+  Fixes bug #438064 and bug #438434.
 
 *dracut-023-r1 (07 Oct 2012)
 

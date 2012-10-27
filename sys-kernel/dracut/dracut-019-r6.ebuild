@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-018-r2.ebuild,v 1.4 2012/09/09 16:48:14 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-019-r6.ebuild,v 1.1 2012/10/27 17:43:02 aidecoe Exp $
 
 EAPI=4
 
@@ -66,16 +66,17 @@ RDEPEND="
 	>=sys-apps/baselayout-1.12.14-r1
 	|| ( >=sys-apps/module-init-tools-3.8 >sys-apps/kmod-5[tools] )
 	>=sys-apps/sysvinit-2.87-r3
-	>=sys-apps/util-linux-2.21
+	>=sys-apps/util-linux-2.20
 	>=sys-fs/udev-166
-	!>=sys-fs/udev-186
+	virtual/pkgconfig
 
 	debug? ( dev-util/strace )
 	device-mapper? ( || ( sys-fs/device-mapper >=sys-fs/lvm2-2.02.33 ) )
 	net? ( net-misc/curl >=net-misc/dhcp-4.2.1-r1[client] sys-apps/iproute2 )
 	selinux? ( sys-libs/libselinux sys-libs/libsepol )
 	dracut_modules_biosdevname? ( sys-apps/biosdevname )
-	dracut_modules_bootchart? ( app-benchmarks/bootchart2 )
+	dracut_modules_bootchart? ( app-benchmarks/bootchart2 sys-apps/usleep
+		sys-process/acct )
 	dracut_modules_btrfs? ( sys-fs/btrfs-progs )
 	dracut_modules_caps? ( sys-libs/libcap )
 	dracut_modules_crypt? ( sys-fs/cryptsetup )
@@ -145,8 +146,11 @@ base_sys_maj_ver() {
 #
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-multipath-udev-rules.patch"
-	epatch "${FILESDIR}/${P}-lsinitrd-support-symlinks.patch"
+	epatch "${FILESDIR}/${PV}-0001-90multipath-added-kpartx.rules-multipa.patch"
+	epatch "${FILESDIR}/${PV}-0002-Avoid-annonying-warnings-when-pkg-conf.patch"
+	epatch "${FILESDIR}/${PV}-0003-99shutdown-remove-no-wall-argument-for.patch"
+	epatch "${FILESDIR}/${PV}-0004-dracut.sh-do-not-copy-var-run-and-var-.patch"
+	epatch "${FILESDIR}/${PV}-0005-dracut.sh-create-relative-symlinks-for.patch"
 }
 
 src_compile() {
@@ -182,9 +186,6 @@ src_install() {
 	local module
 	modules_dir="${D}/usr/$(get_libdir)/dracut/modules.d"
 
-	echo "${PF}" > "${modules_dir}"/10rpmversion/dracut-version \
-		|| die 'dracut-version failed'
-
 	# Remove modules not enabled by USE flags
 	for module in ${IUSE_DRACUT_MODULES} ; do
 		! use ${module} && rm_module -f ${module#dracut_modules_}
@@ -209,7 +210,7 @@ src_install() {
 	rm_module 01fips 02fips-aesni
 
 	# Remove extra modules which go to future dracut-extras
-	rm_module 05busybox 97masterkey 98ecryptfs 98integrity
+	rm_module 05busybox 97masterkey 98ecryptfs 98integrity 98systemd
 }
 
 pkg_postinst() {
