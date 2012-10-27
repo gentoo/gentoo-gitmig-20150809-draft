@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/spidermonkey
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.88 2012/10/23 19:07:07 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.89 2012/10/27 14:22:40 klausman Exp $
+
+  27 Oct 2012; Tobias Klausmann <klausman@gentoo.org>
+  spidermonkey-1.8.5-r1.ebuild:
+  Stable on alpha, bug #438146
 
 *spidermonkey-1.8.7-r1 (23 Oct 2012)
 *spidermonkey-1.8.5-r2 (23 Oct 2012)
