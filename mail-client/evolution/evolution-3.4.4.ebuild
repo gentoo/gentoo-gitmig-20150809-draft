@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.4.4.ebuild,v 1.3 2012/10/17 09:55:53 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.4.4.ebuild,v 1.4 2012/10/27 07:24:21 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -27,7 +27,7 @@ PINENTRY_DEPEND="|| ( app-crypt/pinentry[gtk] app-crypt/pinentry-qt app-crypt/pi
 # pst is not mature enough and changes API/ABI frequently
 COMMON_DEPEND=">=dev-libs/glib-2.30:2
 	>=x11-libs/cairo-1.9.15[glib]
-	>=x11-libs/gtk+-3.2.0:3
+	>=x11-libs/gtk+-3.4:3
 	>=gnome-base/gnome-desktop-2.91.3:3
 	>=gnome-base/gsettings-desktop-schemas-2.91.92
 	>=dev-libs/libgweather-2.90.0:2
