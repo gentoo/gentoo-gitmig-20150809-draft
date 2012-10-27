@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/wbar-2.3.4.ebuild,v 1.1 2012/09/24 20:33:42 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/wbar-2.3.4-r1.ebuild,v 1.1 2012/10/27 17:05:38 hasufell Exp $
 
 EAPI=4
 
@@ -30,10 +30,22 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	use gtk || epatch "${FILESDIR}"/${PN}-2.3.3-cfg.patch
 	epatch "${FILESDIR}"/${PN}-2.3.3-{desktopfile,nowerror,test}.patch
+
+	sed -i \
+		-e '/bashcompletiondir/s#=.*$#= /usr/share/bash-completion#' \
+		etc/Makefile.am || die "sed etc/Makefile.am failed!"
+
 	eautoreconf
 }
 
 src_configure() {
 	econf \
 		$(use_enable gtk wbar-config)
+}
+
+pkg_postinst() {
+	einfo
+	elog "media-libs/imlib2 needs to be compiled with the appropriate useflags"
+	elog "depending on your choice of image files (such as png, jpeg...)"
+	einfo
 }
