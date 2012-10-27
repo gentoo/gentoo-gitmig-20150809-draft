@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/fhist
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fhist/ChangeLog,v 1.27 2011/10/07 15:03:15 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fhist/ChangeLog,v 1.28 2012/10/27 17:18:55 armin76 Exp $
+
+  27 Oct 2012; Raúl Porcel <armin76@gentoo.org> fhist-1.16.ebuild:
+  Drop sparc keywords
 
   07 Oct 2011; Justin Lecher <jlec@gentoo.org> fhist-1.16.ebuild,
   fhist-1.19.ebuild:
