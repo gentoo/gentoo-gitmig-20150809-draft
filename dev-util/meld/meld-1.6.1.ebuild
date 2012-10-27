@@ -1,39 +1,37 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.5.2.ebuild,v 1.6 2011/10/30 15:37:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.6.1.ebuild,v 1.1 2012/10/27 11:53:02 pacho Exp $
 
-EAPI="3"
-GNOME_TARBALL_SUFFIX="xz"
+EAPI="4"
 GCONF_DEBUG="no"
 PYTHON_DEPEND="2:2.5"
 
 inherit python gnome2 eutils multilib
 
 DESCRIPTION="A graphical diff and merge tool"
-HOMEPAGE="http://meld.sourceforge.net/"
+HOMEPAGE="http://meldmerge.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux"
-IUSE="doc gnome"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
+IUSE="gnome"
 
-RDEPEND="
-	>=dev-python/pygtk-2.14:2
+RDEPEND=">=dev-python/pygtk-2.14:2
 	>=dev-python/pygobject-2.8:2
-	gnome? ( >=dev-python/gconf-python-2.22:2 )
-"
+	gnome? ( >=dev-python/gconf-python-2.22:2 )"
 DEPEND="${RDEPEND}
+	dev-util/gtk-doc-am
 	dev-util/intltool
 	app-text/scrollkeeper"
 
 pkg_setup() {
-	DOCS="AUTHORS NEWS help/ChangeLog"
 	# Needed for optimizing python modules against proper interpreter
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
-	gnome2_src_prepare
+	DOCS="NEWS"
 
 	# fix the prefix so its not in */local/*
 	sed -e "s:/usr/local:${EPREFIX}/usr:" \
@@ -53,11 +51,6 @@ src_prepare() {
 	sed -e '/scrollkeeper-update/s/\t/&#/' \
 		-i help/*/Makefile || die "sed 4 failed"
 
-	# fix test suite, upstream bug #655251
-	sed -e 's,\(for file in \["\)\(meld"\]\),\1bin/\2,' \
-		-e 's,\(open("\)\(meldapp.py")\),\1meld/\2,' \
-		-i tools/check_release || die "sed 5 failed"
-
 	# replace all calls to python by specific major version
 	sed -e "s/\(PYTHON ?= \).*/\1$(PYTHON -2)/" \
 		-i INSTALL || die "sed 6 failed"
@@ -73,6 +66,11 @@ src_prepare() {
 		sed -e "s/PO:=.*/PO:=${mylinguas}/" \
 			-i po/Makefile || die "sed 5 failed"
 	fi
+
+	# Fix .desktop entry, upstream bug #686978
+	sed -i -e '/Encoding/d' data/meld.desktop.in || die
+
+	gnome2_src_prepare
 }
 
 src_configure() {
