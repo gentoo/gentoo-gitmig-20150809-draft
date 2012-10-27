@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/esms
 # Copyright 2002-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/esms/ChangeLog,v 1.2 2012/10/27 10:42:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/esms/ChangeLog,v 1.3 2012/10/27 10:43:47 ago Exp $
+
+  27 Oct 2012;  <ago@gentoo.org> esms-0.9.5.ebuild:
+  add missing rdep.
 
   27 Oct 2012;  <ago@gentoo.org> esms-0.9.5.ebuild:
   Eapi4, add ~amd64 keyword
