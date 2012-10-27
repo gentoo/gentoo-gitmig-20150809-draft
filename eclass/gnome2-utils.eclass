@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2-utils.eclass,v 1.30 2012/10/23 20:32:51 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2-utils.eclass,v 1.31 2012/10/27 22:24:10 tetromino Exp $
 
 # @ECLASS: gnome2-utils.eclass
 # @MAINTAINER:
@@ -454,8 +454,10 @@ gnome2_disable_deprecation_warning() {
 		fi
 	done < <(find "${S}" -name "Makefile.in" \
 		-o -name "Makefile.am" -o -name "Makefile.decl" \
-		-o -name "configure.ac" -o -name "configure.in" \
 		| sort; echo configure)
+# TODO: sedding configure.ac can trigger maintainer mode; bug #439602
+#		-o -name "configure.ac" -o -name "configure.in" \
+#		| sort; echo configure)
 	eend ${retval}
 
 	for makefile in "${fails[@]}" ; do

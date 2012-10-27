@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.470 2012/10/27 01:14:38 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.471 2012/10/27 22:24:10 tetromino Exp $
+
+  27 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org> gnome2-utils.eclass:
+  Avoid sedding configure.ac in gnome2_disable_deprecation_warning to prevent
+  accidental triggering of maintainer mode in some packages (bug #439602).
 
   27 Oct 2012; Mike Gilbert <floppym@gentoo.org> python-r1.eclass:
   Remove duplicate documentation for BUILD_DIR, PYTHON, and EPYTHON. This
