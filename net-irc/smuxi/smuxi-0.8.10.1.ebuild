@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/smuxi/smuxi-0.8.10.1.ebuild,v 1.2 2012/09/16 23:16:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/smuxi/smuxi-0.8.10.1.ebuild,v 1.3 2012/10/27 10:09:25 pacho Exp $
 
 EAPI=4
 inherit base mono eutils
@@ -23,7 +23,6 @@ RDEPEND=">=dev-lang/mono-2.0
 		dev-dotnet/ndesk-dbus
 		dev-dotnet/ndesk-dbus-glib )
 	gnome? ( >=dev-dotnet/gtk-sharp-2.12
-		 >=dev-dotnet/gconf-sharp-2.12
 		 >=dev-dotnet/glade-sharp-2.12
 		 >=dev-dotnet/glib-sharp-2.12 )
 	libnotify? ( dev-dotnet/notify-sharp )
