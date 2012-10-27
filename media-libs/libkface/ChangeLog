@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libkface
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkface/ChangeLog,v 1.24 2012/10/16 11:04:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkface/ChangeLog,v 1.25 2012/10/27 04:22:51 phajdan.jr Exp $
+
+  27 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> libkface-2.9.0.ebuild:
+  x86 stable wrt bug #438352
 
   16 Oct 2012; Agostino Sarubbo <ago@gentoo.org> libkface-2.9.0.ebuild:
   Stable for amd64, wrt bug #438352
