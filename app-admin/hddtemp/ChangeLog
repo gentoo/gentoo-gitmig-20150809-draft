@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.122 2012/10/24 18:45:04 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.123 2012/10/27 12:14:08 aidecoe Exp $
+
+  27 Oct 2012; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  hddtemp-0.3_beta15-r5.ebuild, hddtemp-0.3_beta15-r22.ebuild:
+  Removed message about network interface requirement.
 
 *hddtemp-0.3_beta15-r22 (24 Oct 2012)
 *hddtemp-0.3_beta15-r5 (24 Oct 2012)

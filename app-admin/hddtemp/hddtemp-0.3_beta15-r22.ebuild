@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta15-r22.ebuild,v 1.1 2012/10/24 18:45:04 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta15-r22.ebuild,v 1.2 2012/10/27 12:14:08 aidecoe Exp $
 
 EAPI=4
 
@@ -71,10 +71,6 @@ pkg_postinst() {
 	elog "If your hard drive is not recognized by hddtemp, please consider"
 	elog "submitting your HDD info for inclusion into the Gentoo hddtemp"
 	elog "database by filing a bug at https://bugs.gentoo.org/"
-	elog ""
-	elog "The hddtemp deamon requires a network interface to be up.  If you"
-	elog "don't have an Ethernet interface, make sure at least the loopback"
-	elog "interface is up by setting 'rc_depend_strict=\"NO\"' in /etc/rc.conf."
 	echo
 	ewarn "If hddtemp complains but finds your HDD temperature sensor, use the"
 	ewarn "--quiet option to suppress the warning."
