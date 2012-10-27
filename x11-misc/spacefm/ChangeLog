@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/spacefm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/ChangeLog,v 1.37 2012/10/27 17:39:11 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/ChangeLog,v 1.38 2012/10/27 17:41:47 hasufell Exp $
+
+*spacefm-0.8.2 (27 Oct 2012)
+
+  27 Oct 2012; Julian Ospald <hasufell@gentoo.org> -spacefm-0.7.10.ebuild,
+  -files/spacefm-0.7.10-desktopfiles.patch, -spacefm-0.7.11.ebuild,
+  -spacefm-0.8.1.ebuild, +spacefm-0.8.2.ebuild:
+  version bump, remove old
 
   27 Oct 2012; Julian Ospald <hasufell@gentoo.org> spacefm-0.8.0.ebuild:
   x86 stable wrt #438346
