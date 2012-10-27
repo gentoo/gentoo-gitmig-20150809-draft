@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autogen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.85 2012/04/26 16:40:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.86 2012/10/27 14:54:21 blueness Exp $
+
+  27 Oct 2012; Anthony G. Basile <blueness@gentoo.org> autogen-5.15.ebuild:
+  stable arm ppc ppc64, bug #439162
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> autogen-5.15.ebuild:
   keyword ~amd64-fbsd
@@ -279,4 +282,3 @@
   15 Aug 2006; Stephanie Lockwood-Childs <wormo@gentoo.org> metadata.xml,
   +autogen-5.8.3.ebuild:
   version bump -- thanks to François Périchon (Bug #127043)
-
