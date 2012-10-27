@@ -81,8 +81,7 @@ KEYWORDS="~x86"
 
 # Comprehensive list of any and all USE flags leveraged in the ebuild,
 # with the exception of any ARCH specific flags, i.e. "ppc", "sparc",
-# "x86" and "alpha".  This is a required variable.  If the ebuild doesn't
-# use any USE flags, set to "".
+# "x86" and "alpha".  Not needed if the ebuild doesn't use any USE flags.
 IUSE="gnome X"
 
 # A space delimited list of portage features to restrict. man 5 ebuild
