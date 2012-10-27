@@ -1,6 +1,9 @@
 # ChangeLog for media-video/parole
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/parole/ChangeLog,v 1.29 2012/10/21 11:52:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/parole/ChangeLog,v 1.30 2012/10/27 20:31:59 ago Exp $
+
+  27 Oct 2012; <ago@gentoo.org> parole-0.3.0.3.ebuild:
+  Stable for amd64, wrt bug #429484
 
   21 Oct 2012; Samuli Suominen <ssuominen@gentoo.org>
   -parole-0.2.90_pre20120720.ebuild, -parole-0.3.0.ebuild:
