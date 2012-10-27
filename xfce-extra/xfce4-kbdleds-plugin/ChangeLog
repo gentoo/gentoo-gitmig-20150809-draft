@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-kbdleds-plugin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-kbdleds-plugin/ChangeLog,v 1.2 2012/05/05 07:13:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-kbdleds-plugin/ChangeLog,v 1.3 2012/10/27 20:11:24 ago Exp $
+
+  27 Oct 2012; <ago@gentoo.org> xfce4-kbdleds-plugin-0.0.6.ebuild:
+  Stable for amd64, wrt bug #429484
 
   05 May 2012; Michał Górny <mgorny@gentoo.org>
   xfce4-kbdleds-plugin-0.0.6.ebuild:

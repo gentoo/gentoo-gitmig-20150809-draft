@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-messenger-plugin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-messenger-plugin/ChangeLog,v 1.5 2012/05/24 05:02:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-messenger-plugin/ChangeLog,v 1.6 2012/10/27 20:11:48 ago Exp $
+
+  27 Oct 2012; <ago@gentoo.org> xfce4-messenger-plugin-0.1.0.ebuild:
+  Stable for amd64, wrt bug #429484
 
   24 May 2012; Mike Frysinger <vapier@gentoo.org>
   xfce4-messenger-plugin-0.1.0.ebuild:
