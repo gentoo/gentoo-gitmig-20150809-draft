@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/esms
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/esms/ChangeLog,v 1.1 2005/05/15 19:06:59 mrness Exp $
+# Copyright 2002-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/esms/ChangeLog,v 1.2 2012/10/27 10:42:35 ago Exp $
+
+  27 Oct 2012;  <ago@gentoo.org> esms-0.9.5.ebuild:
+  Eapi4, add ~amd64 keyword
 
   15 May 2005; Alin Nastac <mrness@gentoo.org> metadata.xml:
   Moved from net-misc/esms to app-mobilephone/esms.
