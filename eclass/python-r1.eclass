@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.6 2012/10/26 21:38:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.7 2012/10/27 01:14:38 floppym Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -252,45 +252,6 @@ python_export() {
 		esac
 	done
 }
-
-# @ECLASS-VARIABLE: BUILD_DIR
-# @DESCRIPTION:
-# The current build directory. In global scope, it is supposed to
-# contain an initial build directory; if unset, it defaults to ${S}.
-#
-# In functions run by python_foreach_impl(), the BUILD_DIR is locally
-# set to an implementation-specific build directory. That path is
-# created through appending a hyphen and the implementation name
-# to the final component of the initial BUILD_DIR.
-#
-# Example value:
-# @CODE
-# ${WORKDIR}/foo-1.3-python2_6
-# @CODE
-
-# @ECLASS-VARIABLE: PYTHON
-# @DESCRIPTION:
-# The absolute path to the current Python interpreter.
-#
-# Set and exported only in commands run by python_foreach_impl().
-#
-# Example value:
-# @CODE
-# /usr/bin/python2.6
-# @CODE
-
-# @ECLASS-VARIABLE: EPYTHON
-# @DESCRIPTION:
-# The executable name of the current Python interpreter.
-#
-# This variable is used consistently with python.eclass.
-#
-# Set and exported only in commands run by python_foreach_impl().
-#
-# Example value:
-# @CODE
-# python2.6
-# @CODE
 
 # @FUNCTION: python_copy_sources
 # @DESCRIPTION:
