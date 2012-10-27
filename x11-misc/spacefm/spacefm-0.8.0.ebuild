@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/spacefm-0.8.0.ebuild,v 1.3 2012/10/18 14:39:04 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/spacefm-0.8.0.ebuild,v 1.4 2012/10/27 17:39:11 hasufell Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="http://dev.gentoo.org/~hasufell/distfiles/${P}.tar.xz
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="dev-libs/glib:2
