@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.4.11.ebuild,v 1.2 2012/09/19 18:21:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.4.11-r1.ebuild,v 1.1 2012/10/27 10:17:19 pacho Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -18,7 +18,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="chipcard cxx debug +doc hbci mysql ofx postgres python quotes sqlite webkit"
+IUSE="chipcard debug +doc hbci mysql ofx postgres python quotes sqlite webkit"
 
 # FIXME: rdepend on dev-libs/qof when upstream fix their mess (see configure.ac)
 RDEPEND=">=dev-libs/glib-2.13:2
@@ -36,7 +36,6 @@ RDEPEND=">=dev-libs/glib-2.13:2
 	>=x11-libs/gtk+-2.14:2
 	x11-libs/goffice:0.8[gnome]
 	x11-libs/pango
-	cxx? ( dev-cpp/gtkmm:2.4 )
 	ofx? ( >=dev-libs/libofx-0.9.1 )
 	hbci? ( >=net-libs/aqbanking-5[gtk,ofx?]
 		sys-libs/gwenhywfar[gtk]
@@ -62,30 +61,6 @@ DEPEND="${RDEPEND}
 PDEPEND="doc? ( >=app-doc/gnucash-docs-${DOC_VER} )"
 
 pkg_setup() {
-	DOCS="doc/README.OFX doc/README.HBCI"
-
-	if use webkit ; then
-		G2CONF+=" --with-html-engine=webkit"
-	else
-		G2CONF+=" --with-html-engine=gtkhtml"
-	fi
-
-	if use sqlite || use mysql || use postgres ; then
-		G2CONF+=" --enable-dbi"
-	else
-		G2CONF+=" --disable-dbi"
-	fi
-
-	G2CONF+="
-		$(use_enable cxx gtkmm)
-		$(use_enable debug)
-		$(use_enable ofx)
-		$(use_enable hbci aqbanking)
-		$(use_enable python python-bindings)
-		--disable-doxygen
-		--enable-locale-specific-tax
-		--disable-error-on-warning"
-
 	if use python ; then
 		python_set_active_version 2
 		python_pkg_setup
@@ -110,6 +85,32 @@ src_prepare() {
 }
 
 src_configure() {
+	DOCS="doc/README.OFX doc/README.HBCI"
+
+	if use webkit ; then
+		G2CONF+=" --with-html-engine=webkit"
+	else
+		G2CONF+=" --with-html-engine=gtkhtml"
+	fi
+
+	if use sqlite || use mysql || use postgres ; then
+		G2CONF+=" --enable-dbi"
+	else
+		G2CONF+=" --disable-dbi"
+	fi
+
+	G2CONF+="
+		$(use_enable debug)
+		$(use_enable ofx)
+		$(use_enable hbci aqbanking)
+		$(use_enable python python-bindings)
+		--disable-doxygen
+		--enable-locale-specific-tax
+		--disable-error-on-warning"
+
+	# gtkmm is experimental and shouldn't be enabled, upstream bug #684166
+	G2CONF+=" --disable-gtkmm"
+
 	# guile wrongly exports LDFLAGS as LIBS which breaks modules
 	# Filter until a better ebuild is available, bug #202205
 	local GUILE_LIBS=""
