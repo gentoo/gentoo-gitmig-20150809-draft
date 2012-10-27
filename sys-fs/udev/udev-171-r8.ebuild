@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-171-r8.ebuild,v 1.1 2012/10/20 05:43:32 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-171-r8.ebuild,v 1.2 2012/10/27 21:30:17 williamh Exp $
 
 EAPI=4
 
@@ -291,7 +291,7 @@ src_test() {
 	local emake_cmd="${MAKE:-make} ${MAKEOPTS} ${EXTRA_EMAKE}"
 
 	cd "${S}"
-	vecho ">>> Test phase [udev:check]: ${CATEGORY}/${PF}"
+	einfo ">>> Test phase [udev:check]: ${CATEGORY}/${PF}"
 	has userpriv $FEATURES && einfo "Disable FEATURES userpriv to run the udev tests"
 	if ! $emake_cmd -j1 check
 	then
