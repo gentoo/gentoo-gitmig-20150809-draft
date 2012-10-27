@@ -1,6 +1,17 @@
 # ChangeLog for net-libs/libpri
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/ChangeLog,v 1.97 2012/02/16 17:54:33 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/ChangeLog,v 1.98 2012/10/27 12:25:52 chainsaw Exp $
+
+*libpri-1.4.13 (27 Oct 2012)
+
+  27 Oct 2012; Tony Vroon <chainsaw@gentoo.org> +libpri-1.4.13.ebuild,
+  +files/libpri-1.4.13-multilib.patch,
+  +files/libpri-1.4.13-no-static-lib.patch,
+  +files/libpri-1.4.13-respect-user-flags.patch:
+  Version bump. All patches rediffed by Oliver Jaksch. Fixes, among other
+  things, outbound BRI call failure on HA8, HB8 & B410P adapters and
+  multi-channel RESTART requests. Removal of unused static library & test
+  utilities (and thus DAHDI dependency) by me. Closes bug #437798.
 
   16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> libpri-1.4.12-r2.ebuild:
   x86 stable wrt bug #400443
