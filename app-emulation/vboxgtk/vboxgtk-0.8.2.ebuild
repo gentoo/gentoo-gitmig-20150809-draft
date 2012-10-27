@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vboxgtk/vboxgtk-0.8.1.ebuild,v 1.1 2012/10/26 21:46:38 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vboxgtk/vboxgtk-0.8.2.ebuild,v 1.1 2012/10/27 10:27:56 hasufell Exp $
 
 EAPI="4"
 
@@ -38,8 +38,6 @@ python_prepare_all() {
 			rm -r po/"${LINGUA}".po || die "LINGUAS removal failed"
 		fi
 	done
-
-	cp "${FILESDIR}"/${PN}.desktop.in data/ || die
 }
 
 python_install_all() {

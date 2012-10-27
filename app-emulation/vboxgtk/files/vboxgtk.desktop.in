@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=VBoxGtk
-Comment=VirtualBox GTK+ interface
-Exec=vboxgtk
-Terminal=false
-StartupNotify=true
-Icon=vboxgtk
-Type=Application
-Categories=Emulator;System;
