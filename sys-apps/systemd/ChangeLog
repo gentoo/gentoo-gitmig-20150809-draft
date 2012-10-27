@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.58 2012/10/26 21:34:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.59 2012/10/27 21:52:57 mgorny Exp $
+
+  27 Oct 2012; Michał Górny <mgorny@gentoo.org> systemd-195.ebuild:
+  Disable storing coredumps again, since it is insecure (bug #433457, c9).
 
   26 Oct 2012; Michał Górny <mgorny@gentoo.org> systemd-195.ebuild:
   Fix udev dep, once and for all.

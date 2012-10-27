@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-195.ebuild,v 1.2 2012/10/26 21:34:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-195.ebuild,v 1.3 2012/10/27 21:52:57 mgorny Exp $
 
 EAPI=4
 
@@ -145,6 +145,10 @@ src_install() {
 		systemd_enable_service sysinit.target var-lock.mount
 		systemd_enable_service sysinit.target var-run.mount
 	fi
+
+	# Disable storing coredumps in journald, bug #433457
+	mv "${D}"/usr/lib/sysctl.d/coredump.conf \
+		"${D}"/etc/sysctl.d/coredump.conf.disabled || die
 
 	# Preserve empty dirs in /etc & /var, bug #437008
 	keepdir /etc/binfmt.d /etc/modules-load.d /etc/tmpfiles.d \
