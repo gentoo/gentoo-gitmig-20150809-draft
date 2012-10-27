@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.209 2012/10/25 18:53:59 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.210 2012/10/27 14:58:57 hwoarang Exp $
+
+*icu-50_rc-r1 (27 Oct 2012)
+
+  27 Oct 2012; Markos Chandras <hwoarang@gentoo.org> +icu-50_rc-r1.ebuild:
+  Store -std=gnu++11 flag in CXXFLAGS in icu-config and icu-*.pc files for API
+  consumers, if this flag is supported and required. Ebuild by Arfrever.
 
 *icu-50_rc (25 Oct 2012)
 
