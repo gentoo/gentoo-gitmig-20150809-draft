@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/im-canna
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-canna/ChangeLog,v 1.9 2012/05/03 19:24:25 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-canna/ChangeLog,v 1.10 2012/10/27 12:40:32 ago Exp $
+
+  27 Oct 2012; Agostino Sarubbo <ago@gentoo.org> im-canna-0.3.2.2.ebuild:
+  eapi4, add ~amd64
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> im-canna-0.3.2.2.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -33,4 +36,3 @@
   04 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
   +im-canna-0.3.2.1.ebuild:
   Initial import.
-
