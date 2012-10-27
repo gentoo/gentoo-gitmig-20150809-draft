@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gtk-engines-xfce
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/ChangeLog,v 1.157 2012/10/27 20:31:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/ChangeLog,v 1.158 2012/10/27 21:29:36 ago Exp $
+
+  27 Oct 2012;  <ago@gentoo.org> gtk-engines-xfce-3.0.1-r300.ebuild:
+  Stable for amd64, wrt bug #429484
 
   27 Oct 2012; <ago@gentoo.org> gtk-engines-xfce-3.0.1-r200.ebuild:
   Stable for amd64, wrt bug #429484
