@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/xfburn-0.4.3_p20121021.ebuild,v 1.1 2012/10/21 09:26:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/xfburn-0.4.3_p20121021.ebuild,v 1.2 2012/10/27 20:31:10 ago Exp $
 
 EAPI=4
 #EAUTORECONF=yes
@@ -12,7 +12,7 @@ SRC_URI="http://dev.gentoo.org/~ssuominen/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="debug gstreamer udev"
 
 RDEPEND=">=dev-libs/glib-2.30

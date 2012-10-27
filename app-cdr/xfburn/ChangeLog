@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/xfburn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/ChangeLog,v 1.51 2012/10/21 09:27:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/ChangeLog,v 1.52 2012/10/27 20:31:10 ago Exp $
+
+  27 Oct 2012; <ago@gentoo.org> xfburn-0.4.3_p20121021.ebuild:
+  Stable for amd64, wrt bug #429484
 
   21 Oct 2012; Samuli Suominen <ssuominen@gentoo.org> -xfburn-0.4.3-r3.ebuild,
   -files/xfburn-0.4.3-gobject_h.patch,
