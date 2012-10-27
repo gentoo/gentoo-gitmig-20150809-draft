@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/rifiuti
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/rifiuti/ChangeLog,v 1.7 2012/09/08 01:37:20 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rifiuti/ChangeLog,v 1.8 2012/10/27 12:02:05 ago Exp $
+
+  27 Oct 2012; Agostino Sarubbo <ago@gentoo.org> rifiuti-20040505_p1.ebuild:
+  Add ~amd64, wrt bug #439810
 
   08 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant metadata.
@@ -23,4 +26,3 @@
   13 Dec 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   +rifiuti-20040505_p1.ebuild:
   Initial commit as per bug #73300
-
