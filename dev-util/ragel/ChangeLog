@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ragel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ChangeLog,v 1.58 2012/09/09 14:59:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ChangeLog,v 1.59 2012/10/27 18:27:51 armin76 Exp $
+
+  27 Oct 2012; Raúl Porcel <armin76@gentoo.org> ragel-6.7-r1.ebuild:
+  s390/sh stable wrt #411507
 
   09 Sep 2012; Raúl Porcel <armin76@gentoo.org> ragel-6.7-r1.ebuild:
   alpha/ia64/sparc stable wrt #429066
