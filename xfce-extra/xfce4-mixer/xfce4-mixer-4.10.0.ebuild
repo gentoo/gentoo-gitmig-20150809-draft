@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/xfce4-mixer-4.10.0.ebuild,v 1.2 2012/10/16 21:56:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/xfce4-mixer-4.10.0.ebuild,v 1.3 2012/10/27 20:28:53 ago Exp $
 
 EAPI=4
 inherit xfconf
@@ -11,7 +11,7 @@ SRC_URI="mirror://xfce/src/apps/${PN}/${PV%.*}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~mips ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~mips ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
 IUSE="alsa debug oss"
 
 COMMON_DEPEND=">=dev-libs/glib-2.24
