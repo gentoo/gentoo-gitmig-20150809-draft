@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcroco/libcroco-0.6.6.ebuild,v 1.1 2012/09/21 05:21:31 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcroco/libcroco-0.6.8.ebuild,v 1.1 2012/10/27 11:43:17 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -14,25 +14,23 @@ HOMEPAGE="http://git.gnome.org/browse/libcroco/"
 LICENSE="LGPL-2"
 SLOT="0.6"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
-IUSE="doc test"
+IUSE="test"
 
 RDEPEND="dev-libs/glib:2
 	>=dev-libs/libxml2-2.4.23"
 DEPEND="${RDEPEND}
-	virtual/pkgconfig
-	doc? ( >=dev-util/gtk-doc-1 )"
-
-pkg_setup() {
-	G2CONF="${G2CONF} --disable-static"
-	DOCS="AUTHORS ChangeLog HACKING NEWS README TODO"
-}
+	dev-util/gtk-doc-am
+	virtual/pkgconfig"
 
 src_prepare() {
-	gnome2_src_prepare
+	DOCS="AUTHORS ChangeLog HACKING NEWS README TODO"
+	G2CONF+=" --disable-static"
 
 	if ! use test; then
 		# don't waste time building tests
 		sed 's/^\(SUBDIRS .*\=.*\)tests\(.*\)$/\1\2/' -i Makefile.am Makefile.in \
 			|| die "sed failed"
 	fi
+
+	gnome2_src_prepare
 }
