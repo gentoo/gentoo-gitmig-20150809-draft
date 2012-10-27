@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.32.1.ebuild,v 1.13 2012/10/11 14:12:19 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.32.1.ebuild,v 1.14 2012/10/27 08:33:28 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
 PYTHON_DEPEND="2:2.5"
 
-inherit gnome2 python
+inherit autotools eutils gnome2 python
 
 DESCRIPTION="The Eye of GNOME image viewer"
 HOMEPAGE="http://www.gnome.org/projects/eog/"
@@ -46,6 +46,11 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
+
+src_prepare() {
 	G2CONF="${G2CONF}
 		$(use_with jpeg libjpeg)
 		$(use_with exif libexif)
@@ -57,7 +62,11 @@ pkg_setup() {
 		--disable-scrollkeeper
 		--disable-schemas-install"
 	DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README THANKS TODO"
-	python_set_active_version 2
+
+	# Fix build failure with ld.gold and glib-2.32
+	epatch "${FILESDIR}/${P}-gmodule.patch"
+	eautoreconf
+	gnome2_src_prepare
 }
 
 src_install() {

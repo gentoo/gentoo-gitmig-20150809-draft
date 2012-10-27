@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/eog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.294 2012/10/11 14:12:19 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.295 2012/10/27 08:33:28 tetromino Exp $
+
+  27 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org> eog-2.32.1.ebuild,
+  +files/eog-2.32.1-gmodule.patch:
+  Fix linking failure with ld.gold and glib-2.32.
 
 *eog-3.4.3-r1 (11 Oct 2012)
 
