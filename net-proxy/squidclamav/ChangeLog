@@ -1,6 +1,12 @@
 # ChangeLog for net-proxy/squidclamav
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidclamav/ChangeLog,v 1.28 2012/10/21 08:55:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidclamav/ChangeLog,v 1.29 2012/10/28 21:51:00 flameeyes Exp $
+
+*squidclamav-6.10 (28 Oct 2012)
+
+  28 Oct 2012; Diego E. Pettenò <flameeyes@gentoo.org> +squidclamav-6.10.ebuild,
+  -squidclamav-6.9.ebuild:
+  Version bump.
 
   21 Oct 2012; Markus Meier <maekke@gentoo.org> squidclamav-6.9.ebuild:
   add ~arm, bug #389555
