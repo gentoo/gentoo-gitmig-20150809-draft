@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/grilo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/ChangeLog,v 1.10 2012/10/04 14:56:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/ChangeLog,v 1.11 2012/10/28 15:10:36 eva Exp $
+
+*grilo-0.2.2 (28 Oct 2012)
+
+  28 Oct 2012; Gilles Dartiguelongue <eva@gentoo.org> +grilo-0.2.2.ebuild:
+  Version bump. Add python handling for testsuite (still broken). Drop unneeded
+  blocker since the file is now slotted properly.
 
   04 Oct 2012; Agostino Sarubbo <ago@gentoo.org> grilo-0.1.18-r1.ebuild:
   Stable for amd64, wrt bug #427544
