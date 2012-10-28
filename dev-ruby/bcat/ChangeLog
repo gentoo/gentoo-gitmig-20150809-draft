@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bcat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bcat/ChangeLog,v 1.10 2012/08/19 10:56:10 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bcat/ChangeLog,v 1.11 2012/10/28 18:16:22 armin76 Exp $
+
+  28 Oct 2012; Raúl Porcel <armin76@gentoo.org> bcat-0.6.2.ebuild:
+  Add ~alpha/~ia64/~sparc wrt #417573
 
   19 Aug 2012; Anthony G. Basile <blueness@gentoo.org> bcat-0.6.2.ebuild:
   Keyword ~ppc ~ppc64, bug #417573
