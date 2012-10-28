@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gmime
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.211 2012/10/19 19:13:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.212 2012/10/28 15:40:48 armin76 Exp $
+
+  28 Oct 2012; Raúl Porcel <armin76@gentoo.org> gmime-2.6.10.ebuild:
+  ia64/sparc stable wrt #427544
 
   19 Oct 2012; Pacho Ramos <pacho@gentoo.org> gmime-2.6.11.ebuild:
   dodoc now skips html files by default with eapi4 and, then, doins workaround

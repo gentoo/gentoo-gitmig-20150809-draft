@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/librep
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/ChangeLog,v 1.77 2012/10/16 04:13:18 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/ChangeLog,v 1.78 2012/10/28 15:42:35 armin76 Exp $
+
+  28 Oct 2012; Raúl Porcel <armin76@gentoo.org> librep-0.92.2.1.ebuild:
+  ia64/sparc stable wrt #427544
 
   16 Oct 2012; Anthony G. Basile <blueness@gentoo.org> librep-0.92.2.1.ebuild:
   stable ppc, bug #427544
