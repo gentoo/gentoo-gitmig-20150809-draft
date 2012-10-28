@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.21.02.ebuild,v 1.10 2012/09/03 22:33:23 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.21.02.ebuild,v 1.11 2012/10/28 20:13:19 swegener Exp $
 
 # uses webapp.eclass to create directories with right permissions
 # probably slight overkill but works well
@@ -21,14 +21,15 @@ SRC_URI="ftp://ftp.mrunix.net/pub/webalizer/${MY_P}-src.tar.bz2
 
 LICENSE="GPL-2"
 KEYWORDS="alpha amd64 ~arm hppa ppc ppc64 sparc x86"
-IUSE="geoip nls"
+IUSE="bzip2 geoip nls"
 SLOT="0"
 
 DEPEND=">=sys-libs/db-4.2
 	>=sys-libs/zlib-1.1.4
 	>=media-libs/libpng-1.2
 	>=media-libs/gd-1.8.3
-	dev-libs/geoip"
+	dev-libs/geoip
+	bzip2? ( app-arch/bzip2 )"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}"/${MY_P}
@@ -66,6 +67,7 @@ src_configure() {
 		--with-dblib=$(db_libname) \
 		${myconf} \
 		$(use_enable geoip) \
+		$(use_enable bzip2 bz2) \
 		--with-geodb=/usr/share/webalizer/geodb \
 		|| die "econf failed"
 }
