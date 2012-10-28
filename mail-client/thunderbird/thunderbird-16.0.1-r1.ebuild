@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-16.0.1.ebuild,v 1.2 2012/10/21 19:35:30 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-16.0.1-r1.ebuild,v 1.1 2012/10/28 00:58:16 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -34,7 +34,7 @@ HOMEPAGE="http://www.mozilla.com/en-US/thunderbird/"
 KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
-IUSE="bindist gconf +crypt +ipc +jit +lightning +minimal mozdom +webm selinux"
+IUSE="bindist gconf +crypt +ipc +jit ldap +lightning +minimal mozdom +webm selinux"
 
 PATCH="thunderbird-13.0-patches-0.1"
 PATCHFF="firefox-16.0-patches-0.4"
@@ -53,7 +53,7 @@ RDEPEND=">=sys-devel/binutils-2.16.1
 	>=dev-libs/nspr-4.9.2
 	>=dev-libs/glib-2.26
 	gconf? ( >=gnome-base/gconf-1.2.1:2 )
-	>=media-libs/libpng-1.5.9[apng]
+	>=media-libs/libpng-1.5.11[apng]
 	>=x11-libs/cairo-1.10
 	>=x11-libs/pango-1.14.0
 	>=x11-libs/gtk+-2.14
@@ -61,7 +61,7 @@ RDEPEND=">=sys-devel/binutils-2.16.1
 		kernel_linux? ( media-libs/alsa-lib ) )
 	virtual/libffi
 	!x11-plugins/enigmail
-	system-sqlite? ( >=dev-db/sqlite-3.7.10[fts3,secure-delete,threadsafe,unlock-notify,debug=] )
+	system-sqlite? ( >=dev-db/sqlite-3.7.13[fts3,secure-delete,threadsafe,unlock-notify,debug=] )
 	selinux? ( sec-policy/selinux-thunderbird )
 	crypt?  ( || (
 		( >=app-crypt/gnupg-2.0
@@ -74,6 +74,7 @@ RDEPEND=">=sys-devel/binutils-2.16.1
 	) )"
 
 DEPEND="${RDEPEND}
+	dev-python/pysqlite
 	!elibc_glibc? ( dev-libs/libexecinfo )
 	virtual/pkgconfig
 	webm? ( x86? ( ${ASM_DEPEND} )
@@ -195,6 +196,7 @@ src_configure() {
 	# Use enable features
 	mozconfig_use_enable lightning calendar
 	mozconfig_use_enable gconf
+	mozconfig_use_enable ldap
 	# Both methodjit and tracejit conflict with PaX
 	mozconfig_use_enable jit methodjit
 	mozconfig_use_enable jit tracejit
