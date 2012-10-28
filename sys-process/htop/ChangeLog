@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/htop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.121 2012/10/24 23:32:35 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.122 2012/10/28 16:59:03 hwoarang Exp $
+
+  28 Oct 2012; Markos Chandras <hwoarang@gentoo.org> htop-1.0.1-r1.ebuild:
+  Stable on amd64 wrt bug #439548
 
   24 Oct 2012; Anthony G. Basile <blueness@gentoo.org> htop-1.0.1-r1.ebuild:
   stable arm ppc ppc64, bug #439548
