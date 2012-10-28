@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.134 2012/10/28 09:27:24 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.135 2012/10/28 18:59:12 dev-zero Exp $
+
+  28 Oct 2012; Tiziano Müller <dev-zero@gentoo.org> qemu-1.2.0.ebuild:
+  Fix some build issues (missing patch and wrong S), avoid collision with
+  libcacard (bug #439990).
 
   28 Oct 2012; Zac Medico <zmedico@gentoo.org> qemu-1.1.1-r1.ebuild,
   qemu-1.1.2-r1.ebuild, qemu-1.1.2-r2.ebuild, qemu-1.2.0.ebuild,
