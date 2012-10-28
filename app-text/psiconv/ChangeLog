@@ -1,6 +1,11 @@
 # ChangeLog for app-text/psiconv
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/psiconv/ChangeLog,v 1.9 2008/04/21 17:05:02 phreak Exp $
+# Copyright 2000-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/psiconv/ChangeLog,v 1.10 2012/10/28 19:20:07 ago Exp $
+
+*psiconv-0.8.3-r1 (28 Oct 2012)
+
+  28 Oct 2012; Agostino Sarubbo <ago@gentoo.org> +psiconv-0.8.3-r1.ebuild:
+  EAPI4, drop unused doc IUSE, add ~amd64, add static-libs IUSE, respect AR
 
   21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fix up metadata.xml. If there's no maintainer for the package, the metadata
@@ -24,4 +29,3 @@
   Psiconv is a standalone tool for the reading and conversion of Psion
   documents.  It also provides a lib used by AbiWord to read same with a
   plugin.  Ebuild submitted by: MG <markgilbert@hotpop.com> in bug #28717
-
