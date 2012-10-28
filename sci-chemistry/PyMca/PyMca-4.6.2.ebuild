@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/PyMca/PyMca-4.4.1_p1.ebuild,v 1.4 2012/10/28 21:37:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/PyMca/PyMca-4.6.2.ebuild,v 1.1 2012/10/28 21:37:00 jlec Exp $
 
-EAPI=3
+EAPI=5
 
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -34,12 +34,10 @@ DEPEND="
 	matplotlib? ( dev-python/matplotlib )"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/${PN}${MY_PV}"
+#S="${WORKDIR}/${PN}${MY_PV}"
 
 src_prepare() {
-	epatch \
-		"${FILESDIR}"/${PV}-gentoo.patch \
-		"${FILESDIR}"/${PV}-impl-dec.patch
+	epatch "${FILESDIR}"/${P}-gentoo.patch
 	export SPECFILE_USE_GNU_SOURCE=1
 	distutils_src_prepare
 }
