@@ -1,0 +1,10 @@
+# ChangeLog for virtual/python-argparse
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/python-argparse/ChangeLog,v 1.1 2012/10/28 22:08:20 mgorny Exp $
+
+*python-argparse-0 (28 Oct 2012)
+
+  28 Oct 2012; Michał Górny <mgorny@gentoo.org> +metadata.xml,
+  +python-argparse-0.ebuild:
+  Introduce a virtual for argparse Python module. Thanks to Mike Gilbert for
+  review.
