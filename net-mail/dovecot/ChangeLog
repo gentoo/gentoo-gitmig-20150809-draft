@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.383 2012/10/17 03:21:44 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.384 2012/10/28 14:25:14 swift Exp $
+
+  28 Oct 2012; <swift@gentoo.org> dovecot-1.2.17.ebuild, dovecot-2.0.17.ebuild,
+  dovecot-2.0.19.ebuild, dovecot-2.0.20.ebuild, dovecot-2.0.21.ebuild,
+  dovecot-2.1.8.ebuild, dovecot-2.1.9.ebuild, dovecot-2.1.10.ebuild:
+  Adding SELinux dependency towards selinux-dovecot
 
   17 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> dovecot-2.1.9.ebuild:
   x86 stable wrt bug #433814
