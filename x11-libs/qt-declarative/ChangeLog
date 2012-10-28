@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/qt-declarative
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-declarative/ChangeLog,v 1.55 2012/09/16 04:24:34 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-declarative/ChangeLog,v 1.56 2012/10/28 19:35:20 pesa Exp $
+
+*qt-declarative-4.8.3-r1 (28 Oct 2012)
+
+  28 Oct 2012; Davide Pesavento <pesa@gentoo.org>
+  +qt-declarative-4.8.3-r1.ebuild, -qt-declarative-4.8.3.ebuild:
+  Build and install qmltooling plugins. Thanks to Stefan Siegl in bug 439924.
 
   16 Sep 2012; Ben de Groot <yngwin@gentoo.org> qt-declarative-4.8.3.ebuild:
   Add overlay changes (c++0x useflag)
