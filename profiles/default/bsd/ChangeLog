@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.133 2012/10/15 14:37:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.134 2012/10/28 22:41:53 naota Exp $
+
+  28 Oct 2012; <naota@gentoo.org> fbsd/use.mask:
+  Mask polkit on FreeBSD. It doesn't work due to FreeBSD API bug.
 
   15 Oct 2012; Alexis Ballier <aballier@gentoo.org> fbsd/packages.build:
   remove portage and add virtual/package-manager
