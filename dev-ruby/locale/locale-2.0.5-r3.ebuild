@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/locale-2.0.5-r3.ebuild,v 1.7 2012/07/22 14:52:51 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/locale-2.0.5-r3.ebuild,v 1.8 2012/10/28 13:09:38 armin76 Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ DESCRIPTION="A pure ruby library which provides basic APIs for localization."
 HOMEPAGE="http://locale.rubyforge.org/"
 LICENSE="|| ( Ruby GPL-2 )"
 
-KEYWORDS="amd64 ppc ~ppc64 x86 ~x86-macos"
+KEYWORDS="~alpha amd64 ~ia64 ppc ~ppc64 ~sparc x86 ~x86-macos"
 SLOT="0"
 IUSE=""
 
