@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/udevil
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/udevil/ChangeLog,v 1.15 2012/10/22 08:55:04 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/udevil/ChangeLog,v 1.16 2012/10/28 17:03:08 hwoarang Exp $
+
+  28 Oct 2012; Markos Chandras <hwoarang@gentoo.org> udevil-0.3.3-r1.ebuild:
+  Stable on amd64 wrt bug #439416
 
   22 Oct 2012; Julian Ospald <hasufell@gentoo.org>
   +files/udevil-0.3.4-flags.patch:
@@ -67,4 +70,3 @@
   17 Jun 2012; Julian Ospald <hasufell@gentoo.org> +udevil-0.2.8.ebuild,
   +files/udevil-0.2.8-flags.patch, +metadata.xml:
   initial import with Elijah El Lazkani
-
