@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.5.1.ebuild,v 1.7 2012/10/16 04:44:34 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.5.1.ebuild,v 1.8 2012/10/28 16:23:43 armin76 Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -12,7 +12,7 @@ HOMEPAGE="https://live.gnome.org/gtk-vnc"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="examples gtk3 +introspection pulseaudio python sasl vala"
 
 # libview is used in examples/gvncviewer -- no need
