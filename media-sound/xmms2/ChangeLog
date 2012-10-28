@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/xmms2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/ChangeLog,v 1.27 2012/07/01 17:25:26 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/ChangeLog,v 1.28 2012/10/28 14:19:51 slyfox Exp $
+
+  28 Oct 2012; Sergei Trofimovich <slyfox@gentoo.org> xmms2-0.8-r1.ebuild:
+  Stable on alpha, bug #405717.
 
   01 Jul 2012; Sergei Trofimovich <slyfox@gentoo.org> xmms2-0.8-r1.ebuild:
   Workaround build failure when test failure occurs. Rerun tests in src_test().
@@ -123,4 +126,3 @@
   Initial commit. Thanks everyone, who conributed to resolve bug #93583.
   Special thanks to Mike Frysinger <vapier@gentoo.org> for help to cleanup
   an ebuild.
-
