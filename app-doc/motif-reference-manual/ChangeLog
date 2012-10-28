@@ -1,8 +1,13 @@
 # ChangeLog for app-doc/motif-reference-manual
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/motif-reference-manual/ChangeLog,v 1.1 2012/10/27 20:33:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/motif-reference-manual/ChangeLog,v 1.2 2012/10/28 09:00:08 ulm Exp $
 
-*motif-reference-manual-2.3.0 (27 Oct 2012)
+*motif-reference-manual-2.3.0-r1 (28 Oct 2012)
+
+  28 Oct 2012; Ulrich Müller <ulm@gentoo.org>
+  -motif-reference-manual-2.3.0.ebuild,
+  +motif-reference-manual-2.3.0-r1.ebuild:
+  Unchanged revbump: PF has changed and therefore install location of files.
 
   27 Oct 2012; Ulrich Müller <ulm@gentoo.org>
   +motif-reference-manual-2.3.0.ebuild, +metadata.xml:
