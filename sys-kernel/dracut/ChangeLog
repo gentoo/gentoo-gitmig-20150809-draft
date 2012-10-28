@@ -1,6 +1,26 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.89 2012/10/27 17:43:02 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.90 2012/10/28 11:24:44 aidecoe Exp $
+
+*dracut-024 (28 Oct 2012)
+
+  28 Oct 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-024.ebuild:
+  Version bump.
+
+  NEWS
+  ~~~~
+  - new dracut option "--device"
+  - new dracut kernel command line options "rd.auto"
+  - new dracut kernel command line options "rd.noverifyssl"
+  - new dracut option "--kernel-cmdline" and "kernel_cmdline" option for
+    default parameters
+  - fixes for systemd and crypto
+  - fix for kexec in shutdown, if not included in initramfs
+  - create the initramfs non-world readable
+  - prelink/preunlink in the initramfs
+  - strip binaries in the initramfs by default now
+  - various FIPS fixes
+  - various dracut-install fixes
 
 *dracut-023-r2 (27 Oct 2012)
 *dracut-022-r6 (27 Oct 2012)
