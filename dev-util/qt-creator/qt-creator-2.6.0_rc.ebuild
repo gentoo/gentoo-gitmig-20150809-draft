@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.6.0_rc.ebuild,v 1.2 2012/10/27 19:59:31 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.6.0_rc.ebuild,v 1.3 2012/10/28 19:19:24 pesa Exp $
 
 EAPI=4
 
@@ -126,5 +126,5 @@ src_install() {
 	fi
 
 	# Install desktop file
-	make_desktop_entry qtcreator 'Qt Creator' qtcreator 'Qt;Development;IDE'
+	make_desktop_entry qtcreator 'Qt Creator' QtProject-qtcreator 'Qt;Development;IDE'
 }
