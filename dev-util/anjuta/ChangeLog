@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.149 2012/10/16 04:24:30 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.150 2012/10/28 15:47:42 armin76 Exp $
+
+  28 Oct 2012; Raúl Porcel <armin76@gentoo.org> anjuta-3.4.3.ebuild:
+  sparc stable wrt #427544
 
   16 Oct 2012; Anthony G. Basile <blueness@gentoo.org> anjuta-3.4.3.ebuild:
   stable ppc, bug #427544
