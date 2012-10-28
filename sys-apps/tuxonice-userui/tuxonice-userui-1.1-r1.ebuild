@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/tuxonice-userui-1.1-r1.ebuild,v 1.1 2012/10/28 08:28:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/tuxonice-userui-1.1-r1.ebuild,v 1.2 2012/10/28 12:35:07 pacho Exp $
 
 EAPI=4
 inherit toolchain-funcs eutils
@@ -54,8 +54,8 @@ pkg_postinst() {
 		elog "  # ln -sfn /etc/splash/emergence /etc/splash/tuxonice"
 		if [[ ${REPLACING_VERSIONS} < 1.1 ]]; then
 			einfo
-			elog "You must replace '/sbin/tuxoniceui_fbsplash' with '/sbin/tuxoniceui -f'"
-			elog "in kernel config."
+			elog "You must refer to '/sbin/tuxoniceui -f' instead of /sbin/tuxoniceui_fbsplash'"
+			elog "in all places you set it."
 		fi
 	fi
 	einfo
