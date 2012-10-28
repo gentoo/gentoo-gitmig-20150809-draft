@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mustache
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mustache/ChangeLog,v 1.22 2012/08/28 05:26:15 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mustache/ChangeLog,v 1.23 2012/10/28 19:27:23 armin76 Exp $
+
+  28 Oct 2012; Raúl Porcel <armin76@gentoo.org> mustache-0.99.4-r1.ebuild:
+  Add ~alpha
 
   28 Aug 2012; Hans de Graaff <graaff@gentoo.org> -mustache-0.99.4.ebuild:
   Cleanup.
