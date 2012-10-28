@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/mongrel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel/ChangeLog,v 1.48 2012/07/08 16:22:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel/ChangeLog,v 1.49 2012/10/28 18:10:07 armin76 Exp $
+
+  28 Oct 2012; Raúl Porcel <armin76@gentoo.org> mongrel-1.1.5-r3.ebuild:
+  Add ~alpha/~ia64/~sparc wrt #405757
 
   08 Jul 2012; Jeroen Roovers <jer@gentoo.org> mongrel-1.1.5-r3.ebuild:
   Marked ~hppa (bug #417573).
