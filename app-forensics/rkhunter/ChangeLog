@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/rkhunter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/ChangeLog,v 1.91 2012/05/01 04:34:18 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/ChangeLog,v 1.92 2012/10/28 17:00:19 hwoarang Exp $
+
+  28 Oct 2012; Markos Chandras <hwoarang@gentoo.org> rkhunter-1.4.0.ebuild:
+  Stable on amd64 wrt bug #439208
 
 *rkhunter-1.4.0 (01 May 2012)
 
@@ -461,4 +464,3 @@
   30 May 2004; <solar@gentoo.org> :
   Rootkit Hunter scans for known and unknown rootkits, backdoors, and sniffers.
   Bugzilla Bug 47781 - Initial commit
-
