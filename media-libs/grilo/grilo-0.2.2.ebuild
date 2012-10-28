@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/grilo-0.2.2.ebuild,v 1.1 2012/10/28 15:10:36 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/grilo-0.2.2.ebuild,v 1.2 2012/10/28 15:13:51 eva Exp $
 
 EAPI="4"
 GCONF_DEBUG="no" # --enable-debug only changes CFLAGS
@@ -25,7 +25,7 @@ RDEPEND=">=dev-libs/glib-2.29.10:2
 	gtk? ( >=x11-libs/gtk+-3:3 )
 	introspection? ( >=dev-libs/gobject-introspection-0.9 )
 	network? ( >=net-libs/libsoup-2.33.4:2.4 )"
-DEPEND="${COMMON_DEPEND}
+DEPEND="${RDEPEND}
 	>=dev-util/gtk-doc-am-1.10
 	virtual/pkgconfig
 	vala? ( $(vala_depend) )
