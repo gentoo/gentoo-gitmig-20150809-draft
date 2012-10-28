@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.210 2012/10/27 14:58:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.211 2012/10/28 21:16:21 floppym Exp $
+
+  28 Oct 2012; Mike Gilbert <floppym@gentoo.org> icu-50_rc-r1.ebuild:
+  Improve support for clang. Patch by Arfrever.
 
 *icu-50_rc-r1 (27 Oct 2012)
 

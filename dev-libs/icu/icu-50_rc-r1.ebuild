@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-50_rc-r1.ebuild,v 1.1 2012/10/27 14:58:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-50_rc-r1.ebuild,v 1.2 2012/10/28 21:16:21 floppym Exp $
 
 EAPI="5"
 
@@ -56,9 +56,16 @@ src_prepare() {
 		sed -e "/^${variable} =.*/s: *@${variable}@\( *$\)\?::" -i config/icu.pc.in config/Makefile.inc.in || die "sed failed"
 	done
 
-	# Store -std=gnu++11 flag in CXXFLAGS in icu-config and icu-*.pc files for API consumers, if this flag is supported and required.
-	if $(tc-getCXX) -c -std=gnu++11 -x c++ - -o /dev/null <<< "char16_t string[] = u\"...\";" &> /dev/null && ! $(tc-getCXX) -c -x c++ - -o /dev/null <<< "char16_t string[] = u\"...\";" &> /dev/null; then
-		sed -e "/^CXXFLAGS =/s/ *$/ -std=gnu++11/" -i config/icu.pc.in config/Makefile.inc.in || die "sed failed"
+	if [[ "$(tc-getCXX)" == *clang* ]]; then
+		# Store -std=c++11 flag in CXXFLAGS in icu-config and icu-*.pc files for API consumers, if this flag is supported and required.
+		if $(tc-getCXX) -c -std=c++11 -x c++ - -o /dev/null <<< "char16_t string[] = u\"...\";" &> /dev/null && ! $(tc-getCXX) -c -x c++ - -o /dev/null <<< "char16_t string[] = u\"...\";" &> /dev/null; then
+			sed -e "/^CXXFLAGS =/s/ *$/ -std=c++11/" -i config/icu.pc.in config/Makefile.inc.in || die "sed failed"
+		fi
+	else
+		# Store -std=gnu++11 flag in CXXFLAGS in icu-config and icu-*.pc files for API consumers, if this flag is supported and required.
+		if $(tc-getCXX) -c -std=gnu++11 -x c++ - -o /dev/null <<< "char16_t string[] = u\"...\";" &> /dev/null && ! $(tc-getCXX) -c -x c++ - -o /dev/null <<< "char16_t string[] = u\"...\";" &> /dev/null; then
+			sed -e "/^CXXFLAGS =/s/ *$/ -std=gnu++11/" -i config/icu.pc.in config/Makefile.inc.in || die "sed failed"
+		fi
 	fi
 
 	sed -e "s/#define U_DISABLE_RENAMING 0/#define U_DISABLE_RENAMING 1/" -i common/unicode/uconfig.h
