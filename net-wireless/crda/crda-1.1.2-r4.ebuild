@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/crda-1.1.2-r4.ebuild,v 1.1 2012/08/10 08:55:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/crda-1.1.2-r4.ebuild,v 1.2 2012/10/28 09:14:25 gurligebis Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs python
@@ -39,7 +39,7 @@ src_compile() {
 		REG_BIN=/usr/$(get_libdir)/crda/regulatory.bin \
 		USE_OPENSSL=1 \
 		CC="$(tc-getCC)" \
-		all_noverify
+		all_noverify V=1
 }
 
 src_test() {
