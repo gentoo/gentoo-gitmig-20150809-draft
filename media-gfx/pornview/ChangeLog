@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/pornview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/ChangeLog,v 1.47 2012/05/05 07:00:24 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/ChangeLog,v 1.48 2012/10/28 22:06:24 hasufell Exp $
+
+  28 Oct 2012; Julian Ospald <hasufell@gentoo.org>
+  pornview-0.2.0_pre1-r2.ebuild, +files/pornview-0.2.0_pre1-autoconf.patch,
+  +files/pornview-0.2.0_pre1-underlinking.patch, metadata.xml:
+  adopt package, fix underlinking wrt #403031
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> pornview-0.2.0_pre1-r2.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
