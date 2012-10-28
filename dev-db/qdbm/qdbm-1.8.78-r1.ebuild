@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/qdbm-1.8.78-r1.ebuild,v 1.9 2012/05/28 13:58:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/qdbm-1.8.78-r1.ebuild,v 1.10 2012/10/28 07:53:43 hattya Exp $
 
 EAPI="4"
 
@@ -25,6 +25,7 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-runpath.diff
 	epatch "${FILESDIR}"/${PN}-perl-runpath-vendor.diff
+	epatch "${FILESDIR}"/${PN}-ruby19.diff
 	# apply flags
 	sed -i "/^CFLAGS/s|$| ${CFLAGS}|" Makefile.in
 	sed -i "/^OPTIMIZE/s|$| ${CFLAGS}|" perl/Makefile.in
