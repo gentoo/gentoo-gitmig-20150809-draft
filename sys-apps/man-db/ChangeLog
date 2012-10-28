@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/man-db
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/ChangeLog,v 1.32 2012/09/19 04:03:19 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/ChangeLog,v 1.33 2012/10/28 11:09:21 vapier Exp $
+
+*man-db-2.6.3-r1 (28 Oct 2012)
+
+  28 Oct 2012; Mike Frysinger <vapier@gentoo.org> +files/man-db.cron,
+  +man-db-2.6.3-r1.ebuild:
+  Install daily cronjob for building caches #289884 by C W Rose.
 
 *man-db-2.6.3 (19 Sep 2012)
 
