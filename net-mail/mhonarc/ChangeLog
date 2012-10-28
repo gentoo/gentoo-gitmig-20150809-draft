@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/mhonarc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mhonarc/ChangeLog,v 1.24 2012/03/18 18:15:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mhonarc/ChangeLog,v 1.25 2012/10/28 14:07:21 pacho Exp $
+
+  28 Oct 2012; Pacho Ramos <pacho@gentoo.org>
+  -files/mhonarc-2.6.16-list-output-order.patch, -mhonarc-2.6.10.ebuild,
+  -mhonarc-2.6.11.ebuild, -mhonarc-2.6.15.ebuild, -mhonarc-2.6.16-r1.ebuild,
+  -mhonarc-2.6.16-r2.ebuild, metadata.xml:
+  Drop maintainer as talked with him, remove old.
 
   18 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug 26748.
@@ -106,4 +112,3 @@
 
   18 Dec 2003; Joshua Kinard <kumba@gentoo.org> mhonarc-2.6.8.ebuild:
   Initial import of MHonArc, the popular perl html-to-mail converter
-
