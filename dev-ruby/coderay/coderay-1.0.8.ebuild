@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/coderay-1.0.8.ebuild,v 1.1 2012/10/18 07:16:33 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/coderay-1.0.8.ebuild,v 1.2 2012/10/28 17:38:33 armin76 Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ RUBY_S="rubychan-coderay-*"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE=""
 
 # Redcloth is optional but automagically tested, so we add this
