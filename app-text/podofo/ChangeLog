@@ -1,6 +1,9 @@
 # ChangeLog for app-text/podofo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/ChangeLog,v 1.31 2012/05/01 19:24:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/ChangeLog,v 1.32 2012/10/28 02:45:53 zmedico Exp $
+
+  28 Oct 2012; Zac Medico <zmedico@gentoo.org> podofo-0.9.1.ebuild:
+  Add missing unistd include in test/unit/TestUtils.cpp for bug #439784.
 
   01 May 2012; Jeroen Roovers <jer@gentoo.org> podofo-0.9.1.ebuild:
   Stable for HPPA too.
@@ -121,4 +124,3 @@
   03 Oct 2009; Zac Medico <zmedico@gentoo.org> +podofo-0.7.0.ebuild,
   +metadata.xml:
   Initial import, based off of ebuild from kde-testing overlay.
-

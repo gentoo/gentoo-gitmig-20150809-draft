@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/podofo-0.9.1.ebuild,v 1.9 2012/05/01 19:24:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/podofo-0.9.1.ebuild,v 1.10 2012/10/28 02:45:53 zmedico Exp $
 
 EAPI=2
 inherit cmake-utils flag-o-matic multilib
@@ -33,6 +33,10 @@ src_prepare() {
 	sed -i \
 		-e "s:LIBDIRNAME \"lib\":LIBDIRNAME \"$(get_libdir)\":" \
 		CMakeLists.txt || die
+
+	# Bug #439784: Add missing unistd include for close() and unlink().
+	sed -i 's:^#include <stdio.h>$:#include <unistd.h>\n\0:' -i \
+		test/unit/TestUtils.cpp || die
 
 	# TODO: fix these test cases
 	# ColorTest.cpp:62:Assertion
