@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-1.0-r1.ebuild,v 1.2 2012/10/05 21:16:20 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-1.0-r1.ebuild,v 1.3 2012/10/28 09:07:49 gurligebis Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ LICENSE="|| ( GPL-2 BSD )"
 
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~x86 ~x86-fbsd"
-IUSE="dbus debug gnutls eap-sim fasteap madwifi ps3 qt4 readline selinux ssl wimax wps kernel_linux kernel_FreeBSD"
+IUSE="dbus gnutls eap-sim fasteap madwifi ps3 qt4 readline selinux ssl wimax wps kernel_linux kernel_FreeBSD"
 REQUIRED_USE="fasteap? ( !gnutls !ssl )"
 
 RDEPEND="dbus? ( sys-apps/dbus )
@@ -130,9 +130,8 @@ src_configure() {
 		echo "CONFIG_CTRL_IFACE_DBUS_INTRO=y" >> .config
 	fi
 
-	if use debug ; then
-		echo "CONFIG_DEBUG_FILE=y" >> .config
-	fi
+	# Enable support for writing debug info to a log file.
+	echo "CONFIG_DEBUG_FILE=y" >> .config
 
 	if use eap-sim ; then
 		# Smart card authentication
@@ -216,7 +215,7 @@ src_configure() {
 
 src_compile() {
 	einfo "Building wpa_supplicant"
-	emake
+	emake V=1
 
 	if use wimax; then
 		emake -C ../src/eap_peer clean
