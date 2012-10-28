@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/hpricot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/ChangeLog,v 1.42 2012/09/27 10:25:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/ChangeLog,v 1.43 2012/10/28 18:14:58 armin76 Exp $
+
+  28 Oct 2012; Raúl Porcel <armin76@gentoo.org> hpricot-0.8.4.ebuild,
+  hpricot-0.8.6.ebuild, hpricot-0.8.6-r1.ebuild:
+  Add ~alpha/~ia64/~sparc wrt #405757
 
   27 Sep 2012; Samuli Suominen <ssuominen@gentoo.org> hpricot-0.8.6-r1.ebuild:
   Keyword ~ppc/~ppc64 wrt #405757
