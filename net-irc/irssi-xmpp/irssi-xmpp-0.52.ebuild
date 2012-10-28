@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-xmpp/irssi-xmpp-0.52.ebuild,v 1.1 2012/03/12 13:24:27 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-xmpp/irssi-xmpp-0.52.ebuild,v 1.2 2012/10/28 12:09:21 ago Exp $
 
 EAPI=4
 
@@ -15,8 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="net-irc/irssi
-	net-libs/loudmouth"
+DEPEND=">=net-irc/irssi-0.8.13
+	>=net-libs/loudmouth-1.4.0[debug]"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
