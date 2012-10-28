@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/libguestfs-1.17.43.ebuild,v 1.2 2012/10/09 21:17:16 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/libguestfs-1.18.9.ebuild,v 1.1 2012/10/28 18:16:49 maksbotan Exp $
 
 EAPI="4"
 
-APLANCE_PV="1.17.14"
+APLANCE_PV="1.18.5"
 APPL_P="appliance-${APLANCE_PV}"
 
 AUTOTOOLS_AUTORECONF=1
@@ -21,23 +21,26 @@ MY_PV_2="$(get_version_component_range 2)"
 DESCRIPTION="Tools for accessing, inspect  and modifying virtual machine (VM) disk images"
 HOMEPAGE="http://libguestfs.org/"
 SRC_URI="http://libguestfs.org/download/${MY_PV_1}-${SD}/${P}.tar.gz
-	http://rion-overlay.googlecode.com/files/${APPL_P}.tar.xz"
+	http://dev.gentoo.org/~maksbotan/${APPL_P}.tar.xz"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 # Upstream NOT supported 32-bit version, keyword in own risk
 KEYWORDS="~amd64"
-IUSE="bash-completion erlang +fuse debug ocaml doc +perl nls ruby static-libs selinux systemtap introspection"
+IUSE="bash-completion erlang +fuse debug ocaml doc +perl ruby static-libs
+selinux systemtap introspection inspect-icons"
 
 # Failires - doc
 
 COMMON_DEPEND="
+	sys-libs/ncurses
+	sys-devel/gettext
 	>=app-misc/hivex-1.3.1
 	dev-libs/libpcre
 	app-arch/cpio
 	dev-lang/perl
 	app-cdr/cdrkit
-	>=app-emulation/qemu-1.0[qemu_user_targets_x86_64,qemu_softmmu_targets_x86_64]
+	>=app-emulation/qemu-1.0[qemu_user_targets_x86_64,qemu_softmmu_targets_x86_64,tci,systemtap?]
 	sys-apps/fakeroot
 	sys-apps/file
 	app-emulation/libvirt
@@ -66,6 +69,8 @@ COMMON_DEPEND="
 	systemtap? ( dev-util/systemtap )
 	ocaml? ( dev-lang/ocaml[ocamlopt] dev-ml/findlib[ocamlopt] )
 	erlang? ( dev-lang/erlang )
+	inspect-icons? ( media-libs/netpbm
+			media-gfx/icoutils )
 	"
 
 DEPEND="${COMMON_DEPEND}
@@ -75,7 +80,7 @@ DEPEND="${COMMON_DEPEND}
 	"
 RDEPEND="${COMMON_DEPEND}"
 
-PATCHES=("${FILESDIR}"/1.17/0002-configure_ac_automagic.patch  )
+PATCHES=("${FILESDIR}"/1.18/0*.patch  )
 
 DOCS=(AUTHORS BUGS HACKING README RELEASE-NOTES ROADMAP TODO)
 
@@ -113,8 +118,7 @@ src_configure() {
 		--with-readline
 		--disable-php
 		--disable-python
-		--disable-java
-		$(use_enable nls)
+		--without-java
 		$(use_enable perl)
 		$(use_enable fuse)
 		$(use_enable ocaml)
@@ -123,6 +127,7 @@ src_configure() {
 		$(use_enable doc)
 		$(use_enable introspection gobject)
 		$(use_enable erlang)
+		$(use_enable systemtap probes)
 	)
 	autotools-utils_src_configure
 }

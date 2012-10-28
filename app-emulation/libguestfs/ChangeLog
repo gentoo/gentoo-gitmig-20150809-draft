@@ -1,6 +1,18 @@
 # ChangeLog for app-emulation/libguestfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/ChangeLog,v 1.22 2012/10/09 21:17:16 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/ChangeLog,v 1.23 2012/10/28 18:16:49 maksbotan Exp $
+
+*libguestfs-1.18.9 (28 Oct 2012)
+
+  28 Oct 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +files/1.18/0001_add_gentoo_names_to_configure.patch,
+  +files/1.18/0002_add_doc_more_option.patch,
+  +files/1.18/0002_add_gentooway_to_remove_la_files.patch,
+  +files/1.18/0003_add_icoutils_configure_drop_automagic.patch,
+  +files/1.18/0103_disable_php_bindings_makefile.patch,
+  +libguestfs-1.18.9.ebuild, -libguestfs-1.17.43.ebuild,
+  -libguestfs-1.18.2.ebuild, metadata.xml:
+  Bump to 1.18.9, fixes bug 427842. Thanks to slepnoga
 
   09 Oct 2012; Doug Goldstein <cardoe@gentoo.org> libguestfs-1.16.25.ebuild,
   libguestfs-1.17.43.ebuild, libguestfs-1.18.2.ebuild:
@@ -405,4 +417,3 @@
 
   12 Mar 2010; <slep@gentoo.org> libguestfs-1.0.80.ebuild, +metadata.xml:
   QA fix
-
