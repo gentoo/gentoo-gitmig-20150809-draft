@@ -1,6 +1,9 @@
 # ChangeLog for www-client/dwb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dwb/ChangeLog,v 1.8 2012/10/28 19:30:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dwb/ChangeLog,v 1.9 2012/10/28 19:35:14 radhermit Exp $
+
+  28 Oct 2012; Tim Harder <radhermit@gentoo.org> dwb-2012.10.28.ebuild:
+  LDFLAGS are now respected.
 
 *dwb-2012.10.28 (28 Oct 2012)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dwb/dwb-2012.10.28.ebuild,v 1.1 2012/10/28 19:30:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dwb/dwb-2012.10.28.ebuild,v 1.2 2012/10/28 19:35:14 radhermit Exp $
 
 EAPI=5
 
@@ -29,8 +29,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-verbose-build.patch
-	sed -i -e "/^CFLAGS += -\(pipe\|g\|O2\)/d" \
-		-e "/^LDFLAGS =/s:=:+=:" config.mk || die
+	sed -i "/^CFLAGS += -\(pipe\|g\|O2\)/d" config.mk || die
 }
 
 src_compile() {
