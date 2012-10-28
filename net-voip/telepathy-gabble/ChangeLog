@@ -1,6 +1,10 @@
 # ChangeLog for net-voip/telepathy-gabble
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/ChangeLog,v 1.104 2012/10/16 06:42:07 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/ChangeLog,v 1.105 2012/10/28 16:29:58 armin76 Exp $
+
+  28 Oct 2012; Raúl Porcel <armin76@gentoo.org>
+  telepathy-gabble-0.16.1.ebuild:
+  ia64/sparc stable wrt #427544
 
   16 Oct 2012; Matt Turner <mattst88@gentoo.org> telepathy-gabble-0.16.1.ebuild:
   Stable on alpha, bug 427544.
