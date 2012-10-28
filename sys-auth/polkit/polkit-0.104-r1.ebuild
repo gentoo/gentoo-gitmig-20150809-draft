@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.104-r1.ebuild,v 1.11 2012/10/15 18:48:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.104-r1.ebuild,v 1.12 2012/10/28 15:49:09 naota Exp $
 
 EAPI=4
 inherit pam
@@ -11,7 +11,7 @@ SRC_URI="http://hal.freedesktop.org/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 sh sparc x86"
 IUSE="debug doc examples gtk +introspection kde nls pam selinux systemd"
 
 RDEPEND=">=dev-libs/glib-2.30
