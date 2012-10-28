@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/tuxonice-userui-1.1.ebuild,v 1.1 2012/10/20 08:17:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/tuxonice-userui-1.1-r1.ebuild,v 1.1 2012/10/28 08:28:49 pacho Exp $
 
 EAPI=4
 inherit toolchain-funcs eutils
@@ -35,13 +35,8 @@ src_compile() {
 	# Package contain binaries
 	emake clean
 
-	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" \
-		tuxoniceui || die "emake tuxoniceui_text failed"
-
-	if use fbsplash; then
-		emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" \
-			fbsplash || die "emake tuxoniceui_fbsplash failed"
-	fi
+	emake CC="$(tc-getCC)" USE_FBSPLASH=$(use fbsplash && echo 1 || echo 0) \
+		tuxoniceui || die "emake tuxoniceui failed"
 }
 
 src_install() {
@@ -57,6 +52,11 @@ pkg_postinst() {
 		elog "to the theme you want tuxonice to use, e.g.:"
 		elog
 		elog "  # ln -sfn /etc/splash/emergence /etc/splash/tuxonice"
+		if [[ ${REPLACING_VERSIONS} < 1.1 ]]; then
+			einfo
+			elog "You must replace '/sbin/tuxoniceui_fbsplash' with '/sbin/tuxoniceui -f'"
+			elog "in kernel config."
+		fi
 	fi
 	einfo
 	einfo "Please see /usr/share/doc/${PF}/README.* for further"
