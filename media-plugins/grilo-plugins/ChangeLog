@@ -1,6 +1,15 @@
 # ChangeLog for media-plugins/grilo-plugins
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/ChangeLog,v 1.12 2012/10/04 14:57:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/ChangeLog,v 1.13 2012/10/28 14:40:29 eva Exp $
+
+*grilo-plugins-0.2.2 (28 Oct 2012)
+
+  28 Oct 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  +grilo-plugins-0.2.2.ebuild, metadata.xml:
+  Version bump. Enable bliptv plugin (we do have librest), enable json/rest
+  always as it is already needed for a couple of gnome client packages. Add
+  dmap plugin. Drop tests restrictions, the package does not provide any. Add
+  experimental EAPI 5 dependency on tracker.
 
   04 Oct 2012; Agostino Sarubbo <ago@gentoo.org> grilo-plugins-0.1.18.ebuild:
   Stable for amd64, wrt bug #427544
