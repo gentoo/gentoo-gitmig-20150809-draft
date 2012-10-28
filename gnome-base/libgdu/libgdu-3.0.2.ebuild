@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgdu/libgdu-3.0.2.ebuild,v 1.10 2012/10/16 04:31:57 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgdu/libgdu-3.0.2.ebuild,v 1.11 2012/10/28 15:52:33 armin76 Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -15,7 +15,7 @@ HOMEPAGE="http://git.gnome.org/browse/gnome-disk-utility"
 LICENSE="LGPL-2.1"
 SLOT="0"
 IUSE="avahi doc gnome-keyring"
-KEYWORDS="alpha amd64 arm ~ia64 ~mips ppc ppc64 ~sh ~sparc x86"
+KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 sh sparc x86"
 
 CDEPEND="
 	>=dev-libs/glib-2.22:2
