@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.97.2-r1.ebuild,v 1.10 2012/10/16 04:05:02 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.97.2-r1.ebuild,v 1.11 2012/10/28 15:22:42 armin76 Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://live.gnome.org/Dia"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos"
 # the doc USE flag doesn't seem to do anything without docbook2html
 IUSE="cairo doc gnome python"
 
