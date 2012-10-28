@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.2.0.ebuild,v 1.4 2012/10/28 18:59:12 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.2.0.ebuild,v 1.5 2012/10/28 20:15:51 cardoe Exp $
 
 EAPI="4"
 
@@ -181,6 +181,11 @@ pkg_pretend() {
 		ewarn "with USE=static-libs or USE=static due to continued dicsussion"
 		ewarn "on the mailing list about USE=static's place in Gentoo. As a"
 		ewarn "result what worked today may not work tomorrow."
+	fi
+
+	if [[ "${I_WAS_TOLD_NOT_TO_USE_THIS_BUT_DID_ANYWAY}" != "derp" ]]; then
+		eerror "This ebuild is masked and unkeyworded. WHY are you using it!?"
+		die "This ebuild is masked and unkeyworded. WHY are you using it!?"
 	fi
 }
 
