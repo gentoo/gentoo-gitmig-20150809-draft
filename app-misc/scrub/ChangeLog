@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/scrub
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/scrub/ChangeLog,v 1.9 2012/09/23 08:34:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/scrub/ChangeLog,v 1.10 2012/10/28 19:05:50 dev-zero Exp $
+
+*scrub-2.5.2 (28 Oct 2012)
+
+  28 Oct 2012; Tiziano Müller <dev-zero@gentoo.org> +scrub-2.5.2.ebuild:
+  Version bump, fixes bug #439966 as well (upstream bug:
+  http://code.google.com/p/diskscrub/issues/detail?id=19).
 
   23 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> scrub-2.5.1.ebuild:
   x86 stable wrt bug #428884
@@ -39,4 +45,3 @@
   10 Jun 2010; Tiziano Müller <dev-zero@gentoo.org> +scrub-2.2.ebuild,
   +metadata.xml:
   Imported from my overlay.
-
