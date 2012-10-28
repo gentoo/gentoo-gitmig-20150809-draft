@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.1.2-r1.ebuild,v 1.1 2012/10/20 16:23:41 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.1.2-r1.ebuild,v 1.2 2012/10/28 09:27:24 zmedico Exp $
 
 EAPI="4"
 
@@ -151,7 +151,7 @@ pkg_pretend() {
 			ERROR_TUN+=" virtual network device if using -net tap."
 			ERROR_BRIDGE="You will also need support for 802.1d"
 			ERROR_BRIDGE+=" Ethernet Bridging for some network configurations."
-			use vhost-net && CHECK_CHECK+=" ~VHOST_NET"
+			use vhost-net && CONFIG_CHECK+=" ~VHOST_NET"
 			ERROR_VHOST_NET="You must enable VHOST_NET to have vhost-net"
 			ERROR_VHOST_NET+=" support"
 
