@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/emul-linux-x86-xlibs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.114 2012/07/25 14:34:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.115 2012/10/28 11:28:33 pacho Exp $
+
+*emul-linux-x86-xlibs-20121028 (28 Oct 2012)
+
+  28 Oct 2012; Pacho Ramos <pacho@gentoo.org>
+  +emul-linux-x86-xlibs-20121028.ebuild, -emul-linux-x86-xlibs-20120127.ebuild:
+  Version bump, drop old.
 
   25 Jul 2012; Pacho Ramos <pacho@gentoo.org>
   emul-linux-x86-xlibs-20120520.ebuild:

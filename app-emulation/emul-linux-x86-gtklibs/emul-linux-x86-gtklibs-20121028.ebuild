@@ -1,19 +1,18 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-20120127.ebuild,v 1.9 2012/04/25 10:35:55 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-20121028.ebuild,v 1.1 2012/10/28 11:20:57 pacho Exp $
 
 EAPI="4"
-
 inherit emul-linux-x86
 
-LICENSE="GPL-3 GPL-2 LGPL-2 LGPL-2.1 FTL MIT || ( LGPL-2.1 MPL-1.1 )"
-KEYWORDS="-* amd64"
+LICENSE="GPL-2 LGPL-2 FTL LGPL-2.1 LGPL-3 MPL-1.1 MIT"
+KEYWORDS="-* ~amd64"
 
 DEPEND=""
 RDEPEND="~app-emulation/emul-linux-x86-baselibs-${PV}
 	~app-emulation/emul-linux-x86-xlibs-${PV}
 	~app-emulation/emul-linux-x86-opengl-${PV}"
-# RDEPEND on opengl stuff shouldn't be needed, but add it anyway until bug #410213 is properly solved
+# RDEPEND on opengl stuff needed due cairo, bug #410213
 
 my_gdk_pixbuf_query_loaders() {
 	# causes segfault if set
