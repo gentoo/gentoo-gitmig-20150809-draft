@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14168 2012/10/28 18:29:29 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14169 2012/10/28 19:46:16 cardoe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Doug Goldstein <cardoe@gentoo.org> (28 Oct 2012)
+# Do not use this ebuild. Stop trying to use it.
+=app-emulation/qemu-1.2.0
 
 # Sergei Trofimovich <slyfox@gentoo.org> (28 Oct 2012)
 # Ancient software. Does not understand alex-2.
