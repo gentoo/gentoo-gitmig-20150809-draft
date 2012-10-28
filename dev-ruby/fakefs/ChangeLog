@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/fakefs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakefs/ChangeLog,v 1.24 2012/08/14 03:35:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakefs/ChangeLog,v 1.25 2012/10/28 17:17:39 armin76 Exp $
+
+  28 Oct 2012; Raúl Porcel <armin76@gentoo.org> fakefs-0.2.1.ebuild,
+  fakefs-0.2.1-r1.ebuild, fakefs-0.4.0-r1.ebuild:
+  alpha stable, add ~alpha
 
   14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> fakefs-0.4.0-r1.ebuild:
   Bump to EAPI 4; use RUBY_PATCHES to add the patches; use the ruby-ng helpers

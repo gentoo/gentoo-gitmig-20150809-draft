@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/diff-lcs/diff-lcs-1.1.2-r2.ebuild,v 1.11 2011/09/14 16:09:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/diff-lcs/diff-lcs-1.1.2-r2.ebuild,v 1.12 2012/10/28 17:17:15 armin76 Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18 jruby"
@@ -16,7 +16,7 @@ SRC_URI="mirror://rubyforge/ruwiki/${P}.tar.gz"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 ruby_add_rdepend '>=dev-ruby/text-format-0.64'

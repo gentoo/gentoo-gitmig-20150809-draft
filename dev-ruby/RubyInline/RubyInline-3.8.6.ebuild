@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/RubyInline/RubyInline-3.8.6.ebuild,v 1.1 2012/08/16 03:44:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/RubyInline/RubyInline-3.8.6.ebuild,v 1.2 2012/10/28 17:21:32 armin76 Exp $
 
 EAPI=2
 
@@ -19,7 +19,7 @@ HOMEPAGE="http://www.zenspider.com/ZSS/Products/RubyInline/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE=""
 
 ruby_add_rdepend dev-ruby/zentest
