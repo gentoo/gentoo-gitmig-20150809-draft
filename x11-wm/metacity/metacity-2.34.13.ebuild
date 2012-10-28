@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.34.3.ebuild,v 1.1 2012/05/14 00:03:35 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.34.13.ebuild,v 1.1 2012/10/28 21:15:49 eva Exp $
 
-EAPI="4"
+EAPI="5"
 # debug only changes CFLAGS
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
@@ -39,7 +39,6 @@ RDEPEND=">=x11-libs/gtk+-2.24:2
 	xinerama? ( x11-libs/libXinerama )
 	!x11-misc/expocity"
 DEPEND="${RDEPEND}
-	>=app-text/gnome-doc-utils-0.8
 	sys-devel/gettext
 	>=dev-util/intltool-0.35
 	virtual/pkgconfig
@@ -48,9 +47,10 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	x11-proto/xproto"
 
-pkg_setup() {
+src_prepare() {
 	DOCS="AUTHORS ChangeLog HACKING NEWS README *.txt doc/*.txt"
 	G2CONF="${G2CONF}
+		ITSTOOL=$(type -P true)
 		--disable-static
 		--enable-canberra
 		--enable-compositor
@@ -59,10 +59,9 @@ pkg_setup() {
 		--enable-sm
 		--enable-startup-notification
 		--enable-xsync
+		--enable-themes-documentation
 		$(use_enable xinerama)"
-}
 
-src_prepare() {
 	gnome2_src_prepare
 
 	# WIFEXITED and friends are defined in sys/wait.h
