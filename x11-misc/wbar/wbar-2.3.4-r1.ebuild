@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/wbar-2.3.4-r1.ebuild,v 1.1 2012/10/27 17:05:38 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/wbar-2.3.4-r1.ebuild,v 1.2 2012/10/28 16:15:38 hwoarang Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tgz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="gtk"
 
 RDEPEND="media-libs/imlib2[X]
