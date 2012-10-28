@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/glastree
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/glastree/ChangeLog,v 1.15 2011/07/20 16:21:36 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/glastree/ChangeLog,v 1.16 2012/10/28 14:29:17 ago Exp $
+
+  28 Oct 2012; Agostino Sarubbo <ago@gentoo.org> glastree-1.04.ebuild:
+  eapi4 + ~amd64 keyword
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #81177
@@ -50,5 +53,3 @@
   03 Aug 2002; Bruce A. Locke <blocke@shivan.org> glastree-0.57.ebuild, files/digest/glastree-0.57:
 
   Initial ebuild (with modifications) contributed by T.Kvernes <terjekv@math.uio.no>
-
-
