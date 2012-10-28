@@ -1,6 +1,9 @@
 # ChangeLog for app-text/iso-codes
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.130 2012/10/16 04:07:18 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.131 2012/10/28 15:23:48 armin76 Exp $
+
+  28 Oct 2012; Raúl Porcel <armin76@gentoo.org> iso-codes-3.37.ebuild:
+  ia64/sh/sparc stable wrt #427544
 
   16 Oct 2012; Anthony G. Basile <blueness@gentoo.org> iso-codes-3.37.ebuild:
   stable ppc, bug #427544
