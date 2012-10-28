@@ -1,7 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scheme48/scheme48-1.8-r2.ebuild,v 1.1 2010/11/14 16:05:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scheme48/scheme48-1.8-r2.ebuild,v 1.2 2012/10/28 16:17:22 pacho Exp $
 
+EAPI=4
 inherit elisp-common multilib eutils flag-o-matic
 
 DESCRIPTION="Scheme48 is an implementation of the Scheme Programming Language."
@@ -17,16 +18,13 @@ DEPEND="emacs? ( virtual/emacs )"
 RDEPEND="${DEPEND}"
 SITEFILE=50scheme48-gentoo.el
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/${P}-as-needed+fix_destdir.patch"
 	sed -i -e "s/\$(LD) /&\$(LFLAGS) /" Makefile.in || die #332007
 }
 
 src_compile() {
-	econf
-	emake LFLAGS="$(raw-ldflags)" || die
+	emake LFLAGS="$(raw-ldflags)"
 	if use emacs; then
 		elisp-compile "${S}"/emacs/cmuscheme48.el
 	fi
@@ -34,23 +32,23 @@ src_compile() {
 
 src_install() {
 	# weird parallel failures!
-	emake -j1 DESTDIR="${D}" install || die
+	emake -j1 DESTDIR="${D}" install
 
 	if use emacs; then
 		elisp-install ${PN} emacs/cmuscheme48.el emacs/*.elc
 		elisp-site-file-install "${FILESDIR}"/${SITEFILE}
 	fi
 
-	dodoc README || die
+	dodoc README
 	if use doc; then
-		dodoc doc/manual.ps doc/manual.pdf doc/*.txt || die
-		dohtml -r doc/html/* || die
+		dodoc doc/manual.ps doc/manual.pdf doc/*.txt
+		dohtml -r doc/html/*
 		docinto src
-		dodoc doc/src/* || die
+		dodoc doc/src/*
 	fi
 
 	#this symlink clashes with gambit
-	rm "${ED}"/usr/bin/scheme-r5rs
+	rm "${ED}"/usr/bin/scheme-r5rs || die
 }
 
 pkg_postinst() {
