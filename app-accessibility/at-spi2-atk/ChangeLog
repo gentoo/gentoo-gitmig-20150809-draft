@@ -1,6 +1,12 @@
 # ChangeLog for app-accessibility/at-spi2-atk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-atk/ChangeLog,v 1.10 2012/10/17 04:32:13 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-atk/ChangeLog,v 1.11 2012/10/28 10:51:34 eva Exp $
+
+*at-spi2-atk-2.6.1 (28 Oct 2012)
+
+  28 Oct 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  -at-spi2-atk-2.2.2.ebuild, +at-spi2-atk-2.6.1.ebuild:
+  Version bump.
 
   17 Oct 2012; Matt Turner <mattst88@gentoo.org> at-spi2-atk-2.6.0.ebuild:
   Added ~alpha.
