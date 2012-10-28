@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/glib-networking
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/ChangeLog,v 1.52 2012/10/16 04:43:54 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/ChangeLog,v 1.53 2012/10/28 16:19:59 armin76 Exp $
+
+  28 Oct 2012; Raúl Porcel <armin76@gentoo.org> glib-networking-2.32.3.ebuild:
+  ia64/sh/sparc stable wrt #427544
 
   16 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
   glib-networking-2.32.3.ebuild:
