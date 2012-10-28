@@ -1,6 +1,9 @@
 # ChangeLog for www-client/pybugz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.106 2012/06/17 18:53:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.107 2012/10/28 00:10:29 ryao Exp $
+
+  28 Oct 2012; Richard Yao <ryao@gentoo.org> pybugz-0.10.1.ebuild:
+  Keyword ~sparc64-solaris; approved by WilliamH in IRC
 
   17 Jun 2012; Raúl Porcel <armin76@gentoo.org> pybugz-0.10.1.ebuild:
   alpha/ia64/sparc stable wrt #415277
@@ -420,4 +423,3 @@
 
   09 Aug 2006; Alastair Tse <liquidx@gentoo.org> +pybugz-0.6.ebuild:
   Initial release for the bugzilla command line client.
-
