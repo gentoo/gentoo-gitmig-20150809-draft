@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/vice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.82 2012/05/03 18:49:07 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.83 2012/10/28 16:57:30 hwoarang Exp $
+
+  28 Oct 2012; Markos Chandras <hwoarang@gentoo.org> vice-2.3.ebuild:
+  Stable on amd64 wrt bug #439934
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> vice-2.3.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
