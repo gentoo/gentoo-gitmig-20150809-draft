@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14167 2012/10/28 16:13:31 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14168 2012/10/28 18:29:29 tetromino Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -370,12 +370,6 @@ games-strategy/glest
 # Jeroen Roovers <jer@gentoo.org> (2 Aug 2012)
 # Development version
 >app-admin/sysstat-10.1
-
-# Pacho Ramos <pacho@gentoo.org> (21 Jul 2012)
-# Contains multiple API changes and needs apps to be ported
->=media-gfx/gphoto2-2.5
->=media-libs/libgphoto2-2.5
->=media-gfx/gtkam-0.2.0
 
 # Ralph Sennhauser <sera@gentoo.org> (18 Jul 2012)
 # Unmaintained, multiple vulnarabilities. #351626
