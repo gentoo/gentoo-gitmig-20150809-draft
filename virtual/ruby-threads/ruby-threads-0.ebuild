@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-threads/ruby-threads-0.ebuild,v 1.6 2012/05/06 15:08:29 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-threads/ruby-threads-0.ebuild,v 1.7 2012/10/28 19:30:44 armin76 Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -13,7 +13,7 @@ SRC_URI=""
 
 LICENSE=""
 SLOT="${USE_RUBY}"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE=""
 
 RDEPEND="dev-lang/ruby:1.8[threads]"
