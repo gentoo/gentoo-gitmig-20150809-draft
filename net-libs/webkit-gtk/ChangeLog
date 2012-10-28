@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.179 2012/10/16 06:53:13 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.180 2012/10/28 16:48:17 armin76 Exp $
+
+  28 Oct 2012; Raúl Porcel <armin76@gentoo.org> webkit-gtk-1.8.3-r200.ebuild,
+  webkit-gtk-1.8.3-r300.ebuild:
+  alpha/sparc stable wrt #427544
 
   16 Oct 2012; Matt Turner <mattst88@gentoo.org> webkit-gtk-1.8.3-r200.ebuild,
   webkit-gtk-1.8.3-r300.ebuild:
