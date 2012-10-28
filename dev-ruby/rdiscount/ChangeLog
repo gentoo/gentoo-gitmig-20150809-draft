@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rdiscount
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdiscount/ChangeLog,v 1.15 2012/09/15 10:14:51 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdiscount/ChangeLog,v 1.16 2012/10/28 18:15:16 armin76 Exp $
+
+  28 Oct 2012; Raúl Porcel <armin76@gentoo.org> rdiscount-1.6.8-r1.ebuild:
+  Add ~alpha
 
   15 Sep 2012; Hans de Graaff <graaff@gentoo.org> -rdiscount-1.6.8.ebuild:
   Cleanup.
