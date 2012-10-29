@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.7 2012/10/27 01:14:38 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.8 2012/10/29 09:22:13 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -35,6 +35,8 @@ case "${EAPI}" in
 		die "Unsupported EAPI=${EAPI} (unknown) for ${ECLASS}"
 		;;
 esac
+
+inherit multilib
 
 # @ECLASS-VARIABLE: _PYTHON_ALL_IMPLS
 # @INTERNAL
@@ -198,6 +200,16 @@ _python_set_globals
 # python2.6
 # @CODE
 
+# @ECLASS-VARIABLE: PYTHON_SITEDIR
+# @DESCRIPTION:
+# The path to Python site-packages directory.
+#
+# Set and exported on request using python_export().
+#
+# Example value:
+# @CODE
+# @CODE
+
 # @FUNCTION: python_export
 # @USAGE: [<impl>] <variables>...
 # @DESCRIPTION:
@@ -209,8 +221,9 @@ _python_set_globals
 # or an EPYTHON one, e.g. python2.7). If no implementation passed,
 # the current one will be obtained from ${EPYTHON}.
 #
-# The variables which can be exported are: PYTHON, EPYTHON. They are
-# described more completely in the eclass variable documentation.
+# The variables which can be exported are: PYTHON, EPYTHON,
+# PYTHON_SITEDIR. They are described more completely in the eclass
+# variable documentation.
 python_export() {
 	debug-print-function ${FUNCNAME} "${@}"
 
@@ -246,6 +259,23 @@ python_export() {
 			PYTHON)
 				export PYTHON=${EPREFIX}/usr/bin/${impl}
 				debug-print "${FUNCNAME}: PYTHON = ${PYTHON}"
+				;;
+			PYTHON_SITEDIR)
+				local dir
+				case "${impl}" in
+					python*)
+						dir=/usr/$(get_libdir)/${impl}
+						;;
+					jython*)
+						dir=/usr/share/${impl}/Lib
+						;;
+					pypy*)
+						dir=/usr/$(get_libdir)/${impl/-c/}
+						;;
+				esac
+
+				export PYTHON_SITEDIR=${EPREFIX}${dir}/site-packages
+				debug-print "${FUNCNAME}: PYTHON_SITEDIR = ${PYTHON_SITEDIR}"
 				;;
 			*)
 				die "python_export: unknown variable ${var}"
