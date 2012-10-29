@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ttysnoop/ttysnoop-0.12d.ebuild,v 1.3 2012/10/18 07:56:41 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ttysnoop/ttysnoop-0.12d.ebuild,v 1.4 2012/10/29 08:33:47 pinkbyte Exp $
 
 EAPI="4"
 
@@ -26,7 +26,7 @@ DOCS="README snooptab.dist"
 
 src_prepare(){
 	epatch "${FILESDIR}"/pinkbyte_masking.patch
-	epatch "${FILESDIR}"/ttysnoop-makefile.patch
+	epatch "${FILESDIR}"/"${PN}"-makefile.patch
 }
 
 src_compile(){

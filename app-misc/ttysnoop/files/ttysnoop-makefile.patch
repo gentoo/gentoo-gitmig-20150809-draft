@@ -14,11 +14,11 @@
  
  ttysnoops:	$(SERVEROBJS)
 -		$(CC) $(SERVEROBJS) -o ttysnoops $(LIBS)
-+		$(CC) $(SERVEROBJS) -o ttysnoops $(LIBS) $(LDFLAGS)
++		$(CC) $(SERVEROBJS) -o ttysnoops $(LDFLAGS) $(LIBS)
  
  ttysnoop:	$(CLIENTOBJS)
 -		$(CC) $(CLIENTOBJS) -o ttysnoop $(LIBS)
-+		$(CC) $(CLIENTOBJS) -o ttysnoop $(LIBS) $(LDFALGS)
++		$(CC) $(CLIENTOBJS) -o ttysnoop $(LDFLAGS) $(LIBS)
  
  ttysnoops.o:	$(SERVERSRCS) $(INCLUDES)
 -		$(CC) $(CCOPTS) -c -o ttysnoops.o $(SERVERSRCS)
