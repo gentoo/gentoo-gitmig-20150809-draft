@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnetfilter_queue
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_queue/ChangeLog,v 1.22 2012/10/23 12:47:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_queue/ChangeLog,v 1.23 2012/10/29 12:34:27 jer Exp $
+
+  29 Oct 2012; Jeroen Roovers <jer@gentoo.org> libnetfilter_queue-1.0.2.ebuild:
+  Marked ~hppa (bug #440108).
 
 *libnetfilter_queue-1.0.2 (23 Oct 2012)
 
