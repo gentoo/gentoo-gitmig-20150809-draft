@@ -1,14 +1,16 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/corosync/corosync-2.0.0.ebuild,v 1.1 2012/05/16 12:39:47 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/corosync/corosync-2.1.0.ebuild,v 1.1 2012/10/29 13:41:52 ultrabug Exp $
 
 EAPI=4
 
 inherit autotools base
 
+MY_TREE="1706129"
+
 DESCRIPTION="OSI Certified implementation of a complete cluster engine"
 HOMEPAGE="http://www.corosync.org/"
-SRC_URI="ftp://ftp:${PN}.org@${PN}.org/downloads/${P}/${P}.tar.gz"
+SRC_URI="https://github.com/corosync/corosync/tarball/v${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD-2 public-domain"
 SLOT="0"
@@ -32,12 +34,11 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	doc? ( sys-apps/groff )"
 
-PATCHES=(
-	"${FILESDIR}/${PN}-2.0.0-docs.patch"
-	"${FILESDIR}/${PN}-2.0.0-rpath.patch"
-)
+PATCHES=( "${FILESDIR}/${PN}-2.0.0-docs.patch" )
 
 DOCS=( README.recovery SECURITY TODO AUTHORS )
+
+S="${WORKDIR}/${PN}-${PN}-${MY_TREE}"
 
 src_prepare() {
 	base_src_prepare
@@ -54,14 +55,10 @@ src_configure() {
 		$(use_enable infiniband rdma)
 }
 
-src_compile() {
-	# Fix parallel compilation problem with libcmap
-	MAKEOPTS="-j1" base_src_compile
-}
-
 src_install() {
 	default
 	newinitd "${FILESDIR}"/${PN}.initd ${PN}
+	rm "${D}"/etc/init.d/corosync-notifyd || die
 
 	insinto /etc/logrotate.d
 	newins "${FILESDIR}"/${PN}.logrotate ${PN}
