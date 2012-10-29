@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/uwsgi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.29 2012/10/29 18:58:05 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.30 2012/10/29 21:59:47 ultrabug Exp $
+
+*uwsgi-1.3-r1 (29 Oct 2012)
+
+  29 Oct 2012; <alexys@gentoo.org> -uwsgi-1.3.ebuild, +uwsgi-1.3-r1.ebuild:
+  Add missing mongodblog plugin.
 
 *uwsgi-1.3 (29 Oct 2012)
 
