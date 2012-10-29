@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/clanlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.57 2012/09/25 11:44:48 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.58 2012/10/29 20:44:39 mr_bones_ Exp $
+
+  29 Oct 2012; Michael Sterrett <mr_bones_@gentoo.org> clanlib-2.3.6.ebuild:
+  tidy
 
 *clanlib-2.3.6 (25 Sep 2012)
 

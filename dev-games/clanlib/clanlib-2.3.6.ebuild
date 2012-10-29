@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-2.3.6.ebuild,v 1.1 2012/09/25 11:44:48 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-2.3.6.ebuild,v 1.2 2012/10/29 20:44:39 mr_bones_ Exp $
 
 EAPI=4
 inherit flag-o-matic eutils autotools-utils
@@ -42,7 +42,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	doc? ( app-doc/doxygen dev-lang/perl )"
 
-S="${WORKDIR}"/${MY_P}
+S=${WORKDIR}/${MY_P}
 
 PATCHES=( "${FILESDIR}"/${P}-autotools.patch )
 AUTOTOOLS_AUTORECONF=1
