@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.9 2012/10/29 09:23:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.10 2012/10/29 09:25:04 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -386,4 +386,29 @@ python_foreach_impl() {
 			"${@}" || die "${EPYTHON}: ${1} failed"
 		fi
 	done
+}
+
+# @FUNCTION: python_export_best
+# @USAGE: [<variable>...]
+# @DESCRIPTION:
+# Find the best (most preferred) Python implementation enabled
+# and export given variables for it. If no variables are provided,
+# EPYTHON & PYTHON will be exported.
+python_export_best() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	[[ ${#} -gt 0 ]] || set -- EPYTHON PYTHON
+
+	local impl best
+	for impl in "${_PYTHON_ALL_IMPLS[@]}"; do
+		if has "${impl}" "${PYTHON_COMPAT[@]}" && use "python_targets_${impl}"
+		then
+			best=${impl}
+		fi
+	done
+
+	[[ ${best+1} ]] || die "python_export_best(): no implementation found!"
+
+	debug-print "${FUNCNAME}: Best implementation is: ${impl}"
+	python_export "${impl}" "${@}"
 }
