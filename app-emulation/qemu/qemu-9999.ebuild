@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.26 2012/10/28 09:27:24 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.27 2012/10/29 11:15:29 dev-zero Exp $
 
 EAPI="4"
 
@@ -335,6 +335,9 @@ src_install() {
 	fi
 
 	use python & dobin scripts/kvm/kvm_stat
+
+	# avoid collision with libcacard
+	use smartcard && mv "${ED}/usr/bin/vscclient" "${ED}/usr/bin/qemu-vscclient"
 
 	# Remove SeaBIOS since we're using the SeaBIOS packaged one
 	rm "${ED}/usr/share/qemu/bios.bin"

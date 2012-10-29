@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.135 2012/10/28 18:59:12 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.136 2012/10/29 11:15:29 dev-zero Exp $
+
+  29 Oct 2012; Tiziano Müller <dev-zero@gentoo.org> qemu-9999.ebuild:
+  Fix collision with vscclient in the live ebuild like in the 1.2.0 ebuild.
 
   28 Oct 2012; Tiziano Müller <dev-zero@gentoo.org> qemu-1.2.0.ebuild:
   Fix some build issues (missing patch and wrong S), avoid collision with
