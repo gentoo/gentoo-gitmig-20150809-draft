@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/bfgminer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/ChangeLog,v 1.23 2012/09/16 17:34:53 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/ChangeLog,v 1.24 2012/10/29 02:32:54 blueness Exp $
+
+*bfgminer-2.8.3 (29 Oct 2012)
+*bfgminer-2.9.0 (29 Oct 2012)
+
+  29 Oct 2012; Anthony G. Basile <blueness@gentoo.org> +bfgminer-2.8.3.ebuild,
+  +bfgminer-2.9.0.ebuild, metadata.xml:
+  Version bumps
 
 *bfgminer-2.8.0 (16 Sep 2012)
 
@@ -116,4 +123,3 @@
   27 Apr 2012; Anthony G. Basile <blueness@gentoo.org> +bfgminer-2.3.4.ebuild,
   +files/Bugfix-Fix-building-without-OpenCL-support.patch, +metadata.xml:
   Initial commit from luke-jr's bitcoin overlay. Thanks!
-
