@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/pkgcore
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.163 2012/10/22 00:41:32 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.164 2012/10/29 09:08:15 ferringb Exp $
+
+*pkgcore-0.8.6 (29 Oct 2012)
+
+  29 Oct 2012; Brian Harring <ferringb@gentoo.org> +pkgcore-0.8.6.ebuild:
+  Better config error messages, and gentoo bug 439800.
 
   22 Oct 2012; Brian Harring <ferringb@gentoo.org>
   -files/pkgcore-0.7.7.8-ebuild-envs-assert.patch,
