@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/nfdump
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nfdump/ChangeLog,v 1.27 2012/06/04 12:10:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nfdump/ChangeLog,v 1.28 2012/10/29 04:12:42 jer Exp $
+
+  29 Oct 2012; Jeroen Roovers <jer@gentoo.org> +nfdump-1.6.8.ebuild,
+  metadata.xml:
+  Version bump. Add IUSE=nftrack by Vadim Kuznetsov (bug #406637).
+
+*nfdump-1.6.8 (29 Oct 2012)
+
+  29 Oct 2012; Jeroen Roovers <jer@gentoo.org> +nfdump-1.6.8.ebuild:
+  Version bump.
 
   04 Jun 2012; Jeroen Roovers <jer@gentoo.org> nfdump-1.6.6.ebuild:
   Add virtual/yacc dependency.
