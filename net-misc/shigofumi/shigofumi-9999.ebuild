@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/shigofumi/shigofumi-9999.ebuild,v 1.5 2012/05/05 03:20:42 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/shigofumi/shigofumi-9999.ebuild,v 1.6 2012/10/29 11:16:28 scarabeus Exp $
 
-EAPI=4
+EAPI=5
 
 [[ ${PV} = 9999* ]] && GIT="git-2 autotools"
 EGIT_REPO_URI='git://repo.or.cz/shigofumi.git'
@@ -21,17 +21,19 @@ fi
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="debug nls xattr"
+IUSE="debug doc nls xattr"
 
-RDEPEND=">=net-libs/libisds-0.3
+RDEPEND="dev-libs/confuse
+	dev-libs/libxml2
 	sys-libs/readline
-	dev-libs/confuse
-	dev-libs/libxml2"
+	>=net-libs/libisds-0.6"
 DEPEND="${RDEPEND}
-	nls? ( sys-devel/gettext )
-	dev-libs/libxslt
 	virtual/pkgconfig
-	app-text/docbook-xsl-stylesheets"
+	doc? (
+		app-text/docbook-xsl-stylesheets
+		dev-libs/libxslt
+	)
+	nls? ( sys-devel/gettext )"
 
 DOCS=( NEWS README AUTHORS ChangeLog )
 
@@ -43,6 +45,7 @@ src_configure() {
 	econf \
 		--disable-fatalwarnings \
 		$(use_enable debug) \
+		$(use_enable doc) \
 		$(use_enable nls) \
 		$(use_enable xattr)
 }
