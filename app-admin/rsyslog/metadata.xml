@@ -6,11 +6,6 @@
   <name>Alexys Jacob</name>
   <description>Primary Maintainer</description>
 </maintainer>
-<maintainer>
-  <email>dev-zero@gentoo.org</email>
-  <name>Tiziano Müller</name>
-  <description>co-maintainer</description>
-</maintainer>
 <use>
 	<flag name='extras'>Add support for the UDP spoofing module (omudpspoof) using <pkg>net-libs/libnet</pkg></flag>
 	<flag name='relp'>Add support for the Reliable Event Logging Protocol using <pkg>dev-libs/librelp</pkg></flag>
