@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pelican/pelican-3.0.ebuild,v 1.1 2012/08/24 07:13:44 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pelican/pelican-3.0.ebuild,v 1.2 2012/10/29 16:33:04 mgorny Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
@@ -26,7 +26,7 @@ DEPEND="dev-python/feedgenerator
 	dev-python/unidecode
 	dev-python/blinker
 	markdown? ( dev-python/markdown )
-	|| ( dev-lang/python:2.7 dev-python/argparse )"
+	virtual/python-argparse"
 RDEPEND=""
 
 DOCS="README.rst"
