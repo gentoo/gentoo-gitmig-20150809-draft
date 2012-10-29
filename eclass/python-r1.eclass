@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.8 2012/10/29 09:22:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.9 2012/10/29 09:23:58 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -281,6 +281,52 @@ python_export() {
 				die "python_export: unknown variable ${var}"
 		esac
 	done
+}
+
+# @FUNCTION: python_get_PYTHON
+# @USAGE: [<impl>]
+# @DESCRIPTION:
+# Obtain and print the path to the Python interpreter for the given
+# implementation. If no implementation is provided, ${EPYTHON} will
+# be used.
+#
+# If you just need to have PYTHON set (and exported), then it is better
+# to use python_export() directly instead.
+python_get_PYTHON() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	python_export "${@}" PYTHON
+	echo "${PYTHON}"
+}
+
+# @FUNCTION: python_get_EPYTHON
+# @USAGE: <impl>
+# @DESCRIPTION:
+# Obtain and print the EPYTHON value for the given implementation.
+#
+# If you just need to have EPYTHON set (and exported), then it is better
+# to use python_export() directly instead.
+python_get_EPYTHON() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	python_export "${@}" EPYTHON
+	echo "${EPYTHON}"
+}
+
+# @FUNCTION: python_get_sitedir
+# @USAGE: [<impl>]
+# @DESCRIPTION:
+# Obtain and print the 'site-packages' path for the given
+# implementation. If no implementation is provided, ${EPYTHON} will
+# be used.
+#
+# If you just need to have PYTHON_SITEDIR set (and exported), then it is
+# better to use python_export() directly instead.
+python_get_sitedir() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	python_export "${@}" PYTHON_SITEDIR
+	echo "${PYTHON_SITEDIR}"
 }
 
 # @FUNCTION: python_copy_sources
