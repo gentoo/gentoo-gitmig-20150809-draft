@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ttysnoop/ttysnoop-0.12d.ebuild,v 1.4 2012/10/29 08:33:47 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ttysnoop/ttysnoop-0.12d.ebuild,v 1.5 2012/10/29 09:01:44 pinkbyte Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ SRC_URI="http://sysd.org/stas/files/active/0/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=""
@@ -34,6 +34,8 @@ src_compile(){
 }
 
 src_install() {
+	dodir /var/spool/ttysnoop
+	fperms o= /var/spool/ttysnoop
 	dodoc ${DOCS}
 	dosbin ttysnoop
 	dosbin ttysnoops
