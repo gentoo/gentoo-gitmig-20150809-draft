@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/reflector/reflector-2011.05.13.1.ebuild,v 1.2 2011/05/20 12:59:17 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/reflector/reflector-2011.05.13.1.ebuild,v 1.3 2012/10/29 16:39:49 mgorny Exp $
 
 EAPI=3
 
@@ -20,7 +20,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-RDEPEND="dev-python/argparse"
+RDEPEND="virtual/python-argparse"
 
 S=${WORKDIR}/${PN}
 
