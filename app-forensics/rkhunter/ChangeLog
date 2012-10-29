@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/rkhunter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/ChangeLog,v 1.92 2012/10/28 17:00:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/ChangeLog,v 1.93 2012/10/29 01:01:20 blueness Exp $
+
+  29 Oct 2012; Anthony G. Basile <blueness@gentoo.org> rkhunter-1.4.0.ebuild:
+  stable ppc, bug #439208
 
   28 Oct 2012; Markos Chandras <hwoarang@gentoo.org> rkhunter-1.4.0.ebuild:
   Stable on amd64 wrt bug #439208
