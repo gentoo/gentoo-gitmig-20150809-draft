@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.10.2-r3.ebuild,v 1.1 2012/10/23 16:55:52 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.10.2-r3.ebuild,v 1.2 2012/10/29 07:16:29 cardoe Exp $
 
 EAPI=4
 
@@ -113,7 +113,6 @@ LXC_CONFIG_CHECK="
 	~CPUSETS
 	~CGROUP_CPUACCT
 	~RESOURCE_COUNTERS
-	~CGROUP_MEM_RES_CTLR
 	~CGROUP_SCHED
 	~BLK_CGROUP
 	~NAMESPACES
@@ -155,9 +154,13 @@ pkg_setup() {
 		gpasswd -a qemu kvm
 	fi
 
+	# Handle specific kernel versions for different features
+	kernel_is lt 3 5 && LXC_CONFIG_CHECK+=" ~USER_NS"
+	kernel_is lt 3 6 && LXC_CONFIG_CHECK+=" ~CGROUP_MEM_RES_CTLR" || \
+						LXC_CONFIG_CHECK+=" ~MEMCG"
+
 	CONFIG_CHECK=""
 	use lxc && CONFIG_CHECK+="${LXC_CONFIG_CHECK}"
-	kernel_is lt 3 5 && use lxc && CONFIG_CHECK+=" ~USER_NS"
 	use macvtap && CONFIG_CHECK+="${MACVTAP}"
 	use virt-network && CONFIG_CHECK+="${VIRTNET_CONFIG_CHECK}"
 	if [[ -n ${CONFIG_CHECK} ]]; then
