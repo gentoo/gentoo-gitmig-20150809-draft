@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/fcgi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fcgi/ChangeLog,v 1.55 2012/07/29 23:56:22 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fcgi/ChangeLog,v 1.56 2012/10/29 06:59:19 graaff Exp $
+
+  29 Oct 2012; Hans de Graaff <graaff@gentoo.org>
+  -fcgi-2.4.1_pre0311112127.ebuild:
+  Cleanup.
 
   29 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
   fcgi-2.4.1_pre0910052249.ebuild:
