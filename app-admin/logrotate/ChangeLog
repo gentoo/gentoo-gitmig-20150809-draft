@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/logrotate
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.125 2012/09/29 16:07:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.126 2012/10/29 23:56:50 naota Exp $
+
+  29 Oct 2012;  <naota@gentoo.org> +files/logrotate-3.8.2-fbsd.patch,
+  logrotate-3.8.2.ebuild:
+  Add patch to allow build on FreeBSD-9.x. #439200
 
   29 Sep 2012; Raúl Porcel <armin76@gentoo.org> logrotate-3.8.2.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #434348

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.8.2.ebuild,v 1.8 2012/09/29 16:07:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.8.2.ebuild,v 1.9 2012/10/29 23:56:50 naota Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="https://fedorahosted.org/releases/l/o/logrotate/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="acl selinux"
 
 RDEPEND="
@@ -30,7 +30,7 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-3.7.7-datehack.patch \
 		"${FILESDIR}"/${PN}-3.8.0-ignore-hidden.patch \
-		"${FILESDIR}"/${PN}-3.8.0-fbsd.patch \
+		"${FILESDIR}"/${PN}-3.8.2-fbsd.patch \
 		"${FILESDIR}"/${PN}-3.8.1-noasprintf.patch \
 		"${FILESDIR}"/${PN}-3.8.2-atomic-create.patch
 }
