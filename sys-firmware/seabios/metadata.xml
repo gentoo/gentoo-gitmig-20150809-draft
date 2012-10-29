@@ -6,5 +6,8 @@
 		<email>cardoe@gentoo.org</email>
 		<name>Doug Goldstein</name>
 	</maintainer>
+	<use>
+		<flag name='binary'>Use official upstream pre-built binaries</flag>
+	</use>
 </pkgmetadata>
 

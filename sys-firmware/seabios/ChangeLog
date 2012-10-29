@@ -1,6 +1,13 @@
 # ChangeLog for sys-firmware/seabios
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/ChangeLog,v 1.5 2012/10/17 03:39:28 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/ChangeLog,v 1.6 2012/10/29 20:06:10 cardoe Exp $
+
+*seabios-1.7.1 (29 Oct 2012)
+
+  29 Oct 2012; Doug Goldstein <cardoe@gentoo.org> +seabios-1.7.1.ebuild,
+  metadata.xml:
+  Version bump. Use upstream's prebuilt binary when requested or when we won't
+  be able to compile our own.
 
   17 Oct 2012; Doug Goldstein <cardoe@gentoo.org> seabios-1.7.0.ebuild:
   Fix compilation issue when built under different locales. Fix by Sergei
