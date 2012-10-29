@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-3.5.7.ebuild,v 1.1 2012/10/26 22:38:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-3.5.7-r1.ebuild,v 1.1 2012/10/29 20:48:04 hwoarang Exp $
 
 EAPI="3"
 ETYPE="sources"
@@ -14,6 +14,7 @@ KEYWORDS="~amd64 ~x86"
 K_WANT_GENPATCHES="base extras"
 K_GENPATCHES_VER="7"
 K_SECURITY_UNSUPPORTED="1"
+K_DEBLOB_AVAILABLE="1"
 
 inherit kernel-2 versionator
 detect_version
@@ -36,7 +37,7 @@ XPR_2_URI="${CK_BASE_URL}/${BASE_VERSION}/${BASE_VERSION}-ck${CK_VERSION}/patche
 
 UNIPATCH_STRICTORDER="yes"
 
-IUSE="bfsonly experimental urwlocks"
+IUSE="bfsonly deblob experimental urwlocks"
 
 SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
 	!bfsonly? ( ${CK_URI} )
@@ -59,7 +60,9 @@ if use experimental ; then
 fi
 src_unpack() {
 	kernel-2_src_unpack
+}
 
+src_prepare() {
 # Working around BUG 436424
 	if use experimental ; then
 		if use urwlocks ; then

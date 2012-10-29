@@ -1,6 +1,16 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.208 2012/10/26 22:38:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.209 2012/10/29 20:48:04 hwoarang Exp $
+
+*ck-sources-3.5.7-r1 (29 Oct 2012)
+*ck-sources-3.4.9-r1 (29 Oct 2012)
+
+  29 Oct 2012; Markos Chandras <hwoarang@gentoo.org>
+  +ck-sources-3.4.9-r1.ebuild, +ck-sources-3.5.7-r1.ebuild,
+  -ck-sources-2.6.39-r2.ebuild, -ck-sources-3.0.4.ebuild,
+  -ck-sources-3.1.4.ebuild, -ck-sources-3.2.6.ebuild, -ck-sources-3.4.9.ebuild,
+  -ck-sources-3.5.3.ebuild, -ck-sources-3.5.7.ebuild:
+  Ensure freedist compliance. Drop old ebuilds. Bug #440052
 
 *ck-sources-3.5.7 (26 Oct 2012)
 
