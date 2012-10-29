@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-1.2.3-r4.ebuild,v 1.2 2012/07/11 09:57:46 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-1.3.ebuild,v 1.1 2012/10/29 18:58:05 ultrabug Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? *"
@@ -25,7 +25,7 @@ SRC_URI="http://projects.unbit.it/downloads/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="apache2 +caps +carbon cgi debug erlang gevent graylog2 json ldap lua +nagios perl +pcre php +python rrdtool rsyslog ruby spooler sqlite syslog +xml yaml zeromq"
+IUSE="apache2 +caps +carbon cgi debug erlang gevent graylog2 json ldap lua +nagios pam perl +pcre php +python rrdtool rsyslog ruby spooler sqlite syslog +xml yaml zeromq"
 REQUIRED_USE="|| ( cgi erlang lua perl php python ruby )"
 
 # util-linux is required for libuuid when requesting zeromq support
@@ -79,7 +79,7 @@ pkg_setup() {
 src_prepare() {
 	epatch \
 		"${FILESDIR}/1.1.2-threaded-php.patch" \
-		"${FILESDIR}/${PV}-pyerl.patch"
+		"${FILESDIR}/1.2.3-pyerl.patch"
 
 	sed -i \
 		-e "s|'-O2', ||" \
@@ -101,9 +101,11 @@ src_configure() {
 	use carbon && plugins+=", carbon"
 	use graylog2 && plugins+=", graylog2"
 	use nagios && plugins+=", nagios"
+	use pam && plugins+=", pam"
 	use rrdtool && plugins+=", rrdtool"
 	use rsyslog && plugins+=", rsyslog"
 	use syslog && plugins+=", syslog"
+	#TODO: mongodblog
 
 	cat > "buildconf/gentoo.ini" << EOF
 [uwsgi]
@@ -117,6 +119,7 @@ snmp = true
 sctp = false
 spooler = true
 embedded = true
+ssl = auto
 udp = true
 multicast = true
 threading = true
@@ -126,6 +129,8 @@ async = true
 evdis = false
 ldap = $(use_true_false ldap)
 pcre = $(use_true_false pcre)
+routing = auto
+alarm = auto
 debug = $(use_true_false debug)
 unbit = false
 xml_implementation = libxml2
@@ -136,7 +141,7 @@ bin_name = uwsgi
 append_version =
 plugin_dir = /usr/$(get_libdir)/uwsgi
 plugin_build_dir = ${T}/plugins
-embedded_plugins =  ping, cache, rpc, fastrouter, http, ugreen, signal, logsocket, router_uwsgi, router_redirect, router_basicauth, zergpool, redislog ${plugins}
+embedded_plugins =  ping, cache, rpc, corerouter, fastrouter, http, ugreen, signal, logsocket, router_uwsgi, router_redirect, router_basicauth, zergpool, redislog, router_rewrite, router_http ${plugins}
 as_shared_library = false
 
 locking = auto
