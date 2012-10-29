@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1030 2012/10/29 18:32:21 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1031 2012/10/29 18:41:13 mpagano Exp $
+
+  29 Oct 2012; Michael Pagano <mpagano@gentoo.org> gentoo-sources-3.5.7.ebuild:
+  Put back stable keywords. Ext4 corruption not widespread.
 
 *gentoo-sources-3.0.49 (29 Oct 2012)
 
