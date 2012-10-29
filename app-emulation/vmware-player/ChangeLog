@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-player
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.106 2012/06/17 13:09:54 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.107 2012/10/29 14:50:28 flameeyes Exp $
+
+  29 Oct 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  vmware-player-3.1.6.744570.ebuild, vmware-player-4.0.4.744019-r1.ebuild:
+  QA: binchecks should not be restricted.
 
 *vmware-player-3.1.6.744570 (17 Jun 2012)
 *vmware-player-4.0.4.744019-r1 (17 Jun 2012)
@@ -752,4 +756,3 @@
   Initial import. Original ebuild by Eric Edgar <rocket@gentoo.org> and
   modified by Derick Swanepoel <derick@up.ac.za> and myself. Closing bug
   #110027.
-

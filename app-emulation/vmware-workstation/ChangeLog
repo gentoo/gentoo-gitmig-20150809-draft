@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.237 2012/06/17 13:11:13 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.238 2012/10/29 14:52:38 flameeyes Exp $
+
+  29 Oct 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  vmware-workstation-7.1.6.744570.ebuild,
+  vmware-workstation-8.0.4.744019-r1.ebuild:
+  QA: binchecks should not be restricted.
 
 *vmware-workstation-8.0.4.744019-r1 (17 Jun 2012)
 *vmware-workstation-7.1.6.744570 (17 Jun 2012)
@@ -965,4 +970,3 @@
   +vmware-workstation-5.5.1.19175-r1.ebuild:
   Added a new revision with vmware-any-any-update98 that should also resolve
   bug #117696.
-

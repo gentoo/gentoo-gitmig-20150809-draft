@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-8.0.4.744019-r1.ebuild,v 1.1 2012/06/17 13:11:13 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-8.0.4.744019-r1.ebuild,v 1.2 2012/10/29 14:52:38 flameeyes Exp $
 
 EAPI="4"
 
@@ -23,7 +23,7 @@ LICENSE="vmware"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE="cups doc ovftool server vix vmware-tools"
-RESTRICT="binchecks mirror strip"
+RESTRICT="mirror strip"
 
 # vmware-workstation should not use virtual/libc as this is a
 # precompiled binary package thats linked to glibc.
