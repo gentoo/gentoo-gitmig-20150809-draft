@@ -12,8 +12,8 @@
 	functionality</flag>
 	<flag name='echoping'>Install <pkg>net-analyzer/echoping</pkg> for echoping 
 	functionality</flag>
-	<flag name='fcgi'>Use <pkg>dev-perl/FCGI</pkg> for CGI</flag>
 	<flag name='telnet'>Install <pkg>dev-perl/Net-Telnet</pkg> for telnet 
 	functionality</flag>
+	<flag name='ssh'>Install ssh functionality</flag>
 </use>
 </pkgmetadata>

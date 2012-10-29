@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/smokeping
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/ChangeLog,v 1.42 2012/08/29 13:34:31 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/ChangeLog,v 1.43 2012/10/29 08:08:19 patrick Exp $
+
+  29 Oct 2012; Patrick Lauer <patrick@gentoo.org> metadata.xml,
+  smokeping-2.6.8.ebuild:
+  Bump for #404277 using ebuild from entoo/smokeping-overlay as a base
 
   29 Aug 2012; Tobias Klausmann <klausman@gentoo.org> +files/smokeping.init.3:
   Add missing init script. Also, CVS is dumb and should be hated.

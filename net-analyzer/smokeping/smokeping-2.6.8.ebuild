@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/smokeping-2.6.8.ebuild,v 1.1 2012/08/29 08:26:37 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/smokeping-2.6.8.ebuild,v 1.2 2012/10/29 08:08:19 patrick Exp $
 
 EAPI="4"
 
-inherit eutils
+inherit eutils user
 
 DESCRIPTION="A powerful latency measurement tool."
 HOMEPAGE="http://oss.oetiker.ch/smokeping/"
@@ -14,8 +14,10 @@ LICENSE="GPL-2"
 SLOT="0"
 # dropping hppa and sparc because of way too may dependencies not having
 # keywords in those architectures.
-KEYWORDS=""
-IUSE="apache2 curl dig echoping fcgi ipv6 ldap telnet"
+KEYWORDS="~amd64 ~x86"
+
+# removing fcgi useflag as the configure script can't avoid it without patching
+IUSE="apache2 curl dig echoping ipv6 ldap radius ssh telnet"
 
 DEPEND="!apache2? ( virtual/httpd-cgi )
 		>=dev-lang/perl-5.8.8-r8
@@ -28,7 +30,7 @@ DEPEND="!apache2? ( virtual/httpd-cgi )
 		dev-perl/CGI-Session
 		dev-perl/Config-Grammar
 		dev-perl/Digest-HMAC
-		fcgi? ( dev-perl/FCGI )
+		dev-perl/FCGI
 		dev-perl/IO-Socket-SSL
 		dev-perl/Net-DNS
 		dev-perl/libwww-perl
@@ -36,6 +38,8 @@ DEPEND="!apache2? ( virtual/httpd-cgi )
 		echoping? ( >=net-analyzer/echoping-6.0.2 )
 		ipv6? ( >=dev-perl/Socket6-0.20 )
 		ldap? ( dev-perl/perl-ldap )
+		radius? ( dev-perl/RadiusPerl )
+		ssh? ( dev-perl/Net-OpenSSH )
 		telnet? ( dev-perl/Net-Telnet )
 		virtual/perl-libnet"
 
@@ -48,7 +52,6 @@ pkg_setup() {
 
 src_prepare() {
 	rm -r lib/{BER.pm,SNMP_Session.pm,SNMP_util.pm} # dev-perl/SNMP_Session
-	epatch "${FILESDIR}/smokeping_fping-3.3.patch"
 
 }
 
@@ -141,7 +144,7 @@ pkg_postinst() {
 		elog "script at /var/www/localhost/perl/"
 	fi
 	elog "To make cropper working you just need to copy /var/www/localhost/smokeping/cropper"
-	elog "into you htdocs (or create symlink and allow webserver to follow symlinks)."
+	elog "into your htdocs (or create symlink and allow webserver to follow symlinks)."
 	elog
 	elog "We install all files required for smoketrace, but you have to"
 	elog "configure it manually. Just read 'man smoketrace'. Also you need to"
