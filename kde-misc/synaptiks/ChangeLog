@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/synaptiks
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/ChangeLog,v 1.34 2012/05/21 14:32:25 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/ChangeLog,v 1.35 2012/10/29 16:38:10 mgorny Exp $
+
+  29 Oct 2012; Michał Górny <mgorny@gentoo.org> synaptiks-0.8.1.ebuild:
+  Use virtual for argparse.
 
   21 May 2012; Johannes Huber <johu@gentoo.org> -synaptiks-0.8.0.ebuild:
   Remove old.
@@ -158,4 +161,3 @@
   28 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
   +synaptiks-0.1.0.ebuild:
   Initial commit (alternative ksynaptics replacement).
-
