@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/servefile/servefile-0.4.2.ebuild,v 1.2 2012/06/27 21:43:47 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/servefile/servefile-0.4.2.ebuild,v 1.3 2012/10/29 16:41:25 mgorny Exp $
 
 EAPI="4"
 
@@ -21,11 +21,10 @@ IUSE="ssl"
 
 DEPEND=""
 RDEPEND="( sys-apps/iproute2 sys-apps/net-tools )
-	|| ( ( >=dev-lang/python-2.6 dev-python/argparse )
-		>=dev-lang/python-2.7 )
 	ssl? ( dev-python/pyopenssl )
 	sys-apps/grep
-	sys-apps/sed"
+	sys-apps/sed
+	virtual/python-argparse"
 
 src_install() {
 	distutils_src_install
