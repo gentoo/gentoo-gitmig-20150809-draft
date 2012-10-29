@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libatomic_ops
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatomic_ops/ChangeLog,v 1.30 2012/10/01 09:21:10 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatomic_ops/ChangeLog,v 1.31 2012/10/29 16:54:01 grobian Exp $
+
+  29 Oct 2012; Fabian Groffen <grobian@gentoo.org> libatomic_ops-7.2d.ebuild:
+  Marked ~x64-macos
 
 *libatomic_ops-7.2d (01 Oct 2012)
 
@@ -128,4 +131,3 @@
   02 Sep 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
   +libatomic_ops-1.1.ebuild:
   Initial import, dependency of the current SVN PulseAudio.
-
