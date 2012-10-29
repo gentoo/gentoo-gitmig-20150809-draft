@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.7.1.ebuild,v 1.1 2012/10/22 23:15:48 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.7.1-r1.ebuild,v 1.1 2012/10/29 19:01:28 xmw Exp $
 
 EAPI=3
 
@@ -50,6 +50,8 @@ DEPEND="${COMMON_DEPEND}
 	>=dev-python/cython-0.16"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-ignore-gentoo-no-compile.patch
+
 	use clipboard || epatch patches/disable-clipboard.patch
 	use rencode   || epatch patches/disable-rencode.patch
 	use server    || epatch patches/disable-posix-server.patch
