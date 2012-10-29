@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.13.1.ebuild,v 1.1 2012/10/27 19:20:09 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.13.1.ebuild,v 1.2 2012/10/29 09:52:13 patrick Exp $
 
 EAPI=4
 
 # python eclass cruft
 PYTHON_DEPEND="*:2.6"
-PYTHON_USE_WITH="readline sqlite"
+PYTHON_USE_WITH="readline(+) sqlite(+)"
 PYTHON_MODNAME="IPython"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.5 *-jython *-pypy-*"
