@@ -1,10 +1,12 @@
 # ChangeLog for net-misc/httpie
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/httpie/ChangeLog,v 1.1 2012/10/05 13:48:54 vikraman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/httpie/ChangeLog,v 1.2 2012/10/29 16:39:51 mgorny Exp $
+
+  29 Oct 2012; Michał Górny <mgorny@gentoo.org> httpie-0.3.0.ebuild:
+  Use virtual for argparse.
 
 *httpie-0.3.0 (05 Oct 2012)
 
   05 Oct 2012; Vikraman <vikraman@gentoo.org> +httpie-0.3.0.ebuild,
   +metadata.xml:
   New ebuild for HTTPie, a CLI, cURL-like tool for humans. Fixes bug #437242
-

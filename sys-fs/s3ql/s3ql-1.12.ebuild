@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3ql/s3ql-1.12.ebuild,v 1.1 2012/09/04 07:57:34 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3ql/s3ql-1.12.ebuild,v 1.2 2012/10/29 16:39:50 mgorny Exp $
 
 EAPI="4"
 
@@ -25,8 +25,8 @@ RDEPEND="dev-python/setuptools
 	>=dev-python/llfuse-0.37
 	dev-python/pycryptopp
 	dev-python/pyliblzma
-	|| ( >=dev-lang/python-2.7 dev-python/argparse )
-	sys-fs/fuse"
+	sys-fs/fuse
+	virtual/python-argparse"
 DEPEND="${RDEPEND}
 	test? (
 		net-misc/rsync[xattr]

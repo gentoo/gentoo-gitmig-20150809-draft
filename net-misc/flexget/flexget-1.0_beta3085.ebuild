@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-1.0_beta3085.ebuild,v 1.1 2012/08/16 03:28:22 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-1.0_beta3085.ebuild,v 1.2 2012/10/29 16:38:09 mgorny Exp $
 
 EAPI=4
 
@@ -45,8 +45,8 @@ DEPEND="
 	dev-python/python-dateutil
 	>=dev-python/requests-0.10.0
 	!=dev-python/requests-0.10.1
-	|| ( dev-lang/python:2.7 dev-python/argparse )
 	dev-python/setuptools
+	virtual/python-argparse
 "
 RDEPEND="${DEPEND}"
 DEPEND+=" test? ( dev-python/nose )"

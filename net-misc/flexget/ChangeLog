@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/flexget
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/ChangeLog,v 1.25 2012/09/07 21:59:43 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/ChangeLog,v 1.26 2012/10/29 16:38:09 mgorny Exp $
+
+  29 Oct 2012; Michał Górny <mgorny@gentoo.org> flexget-1.0_beta3085.ebuild,
+  flexget-1.0_beta3139.ebuild, flexget-9999.ebuild:
+  Use virtual for argparse.
 
   07 Sep 2012; Mike Gilbert <floppym@gentoo.org> flexget-1.0_beta3139.ebuild,
   flexget-9999.ebuild:
