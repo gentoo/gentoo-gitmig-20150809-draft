@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/Net-OpenSSH
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-OpenSSH/ChangeLog,v 1.1 2012/10/29 08:03:28 patrick Exp $
+
+*Net-OpenSSH-0.52 (29 Oct 2012)
+
+  29 Oct 2012; Patrick Lauer <patrick@gentoo.org> +Net-OpenSSH-0.52.ebuild,
+  +metadata.xml:
+  Initial import, ebuilds borrowed from entoo / smokeping-overlay on github
