@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.8 2012/10/26 21:38:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.9 2012/10/29 09:47:41 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -253,35 +253,16 @@ distutils-r1_python_install_all() {
 
 	# note: keep in sync with ...rename_scripts()
 	# also, we assume that each script is installed for all impls
-	local impl EPYTHON PYTHON
-	for impl in "${PYTHON_COMPAT[@]}"; do
-		if use "python_targets_${impl}"; then
-			python_export "${impl}" EPYTHON
-			break
-		fi
-	done
+	local EPYTHON
+	python_export_best EPYTHON
 
 	for f in "${D}"/{bin,sbin,usr/bin,usr/sbin,games/bin}/*-"${EPYTHON}"; do
 		if [[ -x ${f} ]]; then
 			debug-print "${FUNCNAME}: found executable at ${f#${D}/}"
 
 			local wrapf=${f%-${EPYTHON}}
-			debug-print "${FUNCNAME}: will link wrapper to ${wrapf#${D}/}"
-			local wrapfrom
-			case "${f#${D}/}" in
-				usr/bin*)
-					wrapfrom=
-					;;
-				usr/sbin*)
-					wrapfrom=../bin/
-					;;
-				*)
-					wrapfrom=../usr/bin/
-					;;
-			esac
-			debug-print "${FUNCNAME}: (from ${wrapfrom}python-exec)"
 
-			ln -s ${wrapfrom}python-exec "${wrapf}" || die
+			_python_ln_rel "${ED}"/usr/bin/python-exec "${wrapf}" || die
 		fi
 	done
 }
