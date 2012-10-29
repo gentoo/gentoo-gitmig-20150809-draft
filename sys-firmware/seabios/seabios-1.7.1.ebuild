@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/seabios-1.7.1.ebuild,v 1.1 2012/10/29 20:06:10 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/seabios-1.7.1.ebuild,v 1.2 2012/10/29 22:35:37 cardoe Exp $
 
 EAPI=4
 
@@ -29,8 +29,8 @@ LICENSE="LGPL-3 GPL-3"
 SLOT="0"
 IUSE="+binary"
 
-REQUIRED_USE="ppc ( binary )
-	ppc64 ( binary )"
+REQUIRED_USE="ppc? ( binary )
+	ppc64? ( binary )"
 
 DEPEND="!binary? ( sys-power/iasl )"
 RDEPEND=""
