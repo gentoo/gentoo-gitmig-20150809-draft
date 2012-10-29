@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.27 2012/10/29 11:15:29 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.28 2012/10/29 23:50:54 cardoe Exp $
 
 EAPI="4"
 
@@ -9,7 +9,7 @@ MY_P=${MY_PN}-${PV}
 
 PYTHON_DEPEND="2"
 inherit eutils flag-o-matic linux-info toolchain-funcs multilib python user
-#BACKPORTS=1
+#BACKPORTS=6cee76f0
 
 if [[ ${PV} = *9999* ]]; then
 	EGIT_REPO_URI="git://git.kernel.org/pub/scm/virt/kvm/qemu-kvm.git"
@@ -19,7 +19,7 @@ if [[ ${PV} = *9999* ]]; then
 else
 	SRC_URI="mirror://sourceforge/kvm/${MY_PN}/${MY_P}.tar.gz
 	${BACKPORTS:+
-		http://dev.gentoo.org/~cardoe/distfiles/${MY_P}-bp-${BACKPORTS}.tar.xz}"
+		http://dev.gentoo.org/~cardoe/distfiles/${MY_P}-${BACKPORTS}.tar.xz}"
 	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 fi
 
@@ -29,24 +29,22 @@ HOMEPAGE="http://www.linux-kvm.org"
 LICENSE="GPL-2 LGPL-2 BSD-2"
 SLOT="0"
 IUSE="+aio alsa bluetooth brltty +caps +curl debug doc fdt +jpeg kernel_linux \
-kernel_FreeBSD mixemu ncurses opengl +png pulseaudio python rbd sasl sdl \
-smartcard spice static systemtap tci tls usbredir +uuid vde +vhost-net \
-virtfs +vnc xattr xen xfs"
+kernel_FreeBSD mixemu ncurses opengl +png pulseaudio python rbd sasl +seccomp \
+sdl smartcard spice static systemtap tci +threads tls usbredir +uuid vde \
++vhost-net virtfs +vnc xattr xen xfs"
 
-COMMON_TARGETS="i386 x86_64 alpha arm cris m68k microblaze microblazeel mips mipsel or32 ppc ppc64 sh4 sh4eb sparc sparc64 s390x unicore32"
-IUSE_SOFTMMU_TARGETS="${COMMON_TARGETS} mips64 mips64el ppcemb xtensa xtensaeb"
-IUSE_USER_TARGETS="${COMMON_TARGETS} armeb ppc64abi32 sparc32plus"
+# Block USE flag configurations known to not work
+REQUIRED_USE="static ( !bluetooth )"
+
+COMMON_TARGETS="i386 x86_64 alpha arm cris m68k microblaze microblazeel mips mipsel ppc ppc64 sh4 sh4eb sparc sparc64 s390x"
+IUSE_SOFTMMU_TARGETS="${COMMON_TARGETS} lm32 mips64 mips64el ppcemb xtensa xtensaeb"
+IUSE_USER_TARGETS="${COMMON_TARGETS} armeb ppc64abi32 sparc32plus unicore32"
 
 # Setup the default SoftMMU targets, while using the loops
-# below to setup the other targets. x86_64 should be the only
-# defaults on for qemu-kvm
-IUSE="${IUSE} +qemu_softmmu_targets_x86_64"
-REQUIRED_USE="|| ( qemu_softmmu_targets_x86_64"
+# below to setup the other targets.
+REQUIRED_USE="${REQUIRED_USE} || ("
 
 for target in ${IUSE_SOFTMMU_TARGETS}; do
-	if [ "x${target}" = "xx86_64" ]; then
-		continue
-	fi
 	IUSE="${IUSE} qemu_softmmu_targets_${target}"
 	REQUIRED_USE="${REQUIRED_USE} qemu_softmmu_targets_${target}"
 done
@@ -58,8 +56,6 @@ done
 
 REQUIRED_USE="${REQUIRED_USE}
 	static? ( !alsa !pulseaudio )
-	amd64? ( qemu_softmmu_targets_x86_64 )
-	x86? ( qemu_softmmu_targets_x86_64 )
 	virtfs? ( xattr )"
 
 # Yep, you need both libcap and libcap-ng since virtfs only uses libcap.
@@ -76,6 +72,7 @@ LIB_DEPEND=">=dev-libs/glib-2.0[static-libs(+)]
 	rbd? ( sys-cluster/ceph[static-libs(+)] )
 	sasl? ( dev-libs/cyrus-sasl[static-libs(+)] )
 	sdl? ( >=media-libs/libsdl-1.2.11[static-libs(+)] )
+	seccomp? ( >=sys-libs/libseccomp-1.0.0[static-libs(+)] )
 	spice? ( >=app-emulation/spice-0.9.0[static-libs(+)] )
 	tls? ( net-libs/gnutls[static-libs(+)] )
 	uuid? ( >=sys-apps/util-linux-2.16.0[static-libs(+)] )
@@ -84,8 +81,6 @@ LIB_DEPEND=">=dev-libs/glib-2.0[static-libs(+)]
 	xfs? ( sys-fs/xfsprogs[static-libs(+)] )"
 RDEPEND="!static? ( ${LIB_DEPEND//\[static-libs(+)]} )
 	!app-emulation/kqemu
-	!app-emulation/qemu
-	!<app-emulation/qemu-1.0
 	sys-firmware/ipxe
 	>=sys-firmware/seabios-1.7.0
 	sys-firmware/sgabios
@@ -105,10 +100,12 @@ RDEPEND="!static? ( ${LIB_DEPEND//\[static-libs(+)]} )
 	xen? ( app-emulation/xen-tools )"
 
 DEPEND="${RDEPEND}
-	app-text/texi2html
 	virtual/pkgconfig
+	doc? ( app-text/texi2html )
 	kernel_linux? ( >=sys-kernel/linux-headers-2.6.35 )
 	static? ( ${LIB_DEPEND} )"
+
+S="${WORKDIR}/${MY_P}"
 
 STRIP_MASK="/usr/share/qemu/palcode-clipper"
 
@@ -195,6 +192,7 @@ src_prepare() {
 
 	python_convert_shebangs -r 2 "${S}/scripts/kvm/kvm_stat"
 
+	epatch "${FILESDIR}"/${P}-cflags.patch
 	epatch "${FILESDIR}"/${P}-fix-mipsen.patch
 	[[ -n ${BACKPORTS} ]] && \
 		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" \
@@ -248,10 +246,6 @@ src_configure() {
 	use pulseaudio && audio_opts="pa,${audio_opts}"
 	use mixemu && conf_opts="${conf_opts} --enable-mixemu"
 
-	# $(use_enable xen xen-pci-passthrough) for 1.2
-	# $(use_enable debug debug-mon) goes away for 1.2
-	# --disable-seccomp as in-tree seccomp is API incompatible (in-tree
-	# version is ancient)
 	./configure --prefix=/usr \
 		--sysconfdir=/etc \
 		--disable-bsd-user \
@@ -260,7 +254,6 @@ src_configure() {
 		--disable-strip \
 		--disable-werror \
 		--python=python2 \
-		--disable-seccomp \
 		$(use_enable aio linux-aio) \
 		$(use_enable bluetooth bluez) \
 		$(use_enable brltty brlapi) \
@@ -279,6 +272,7 @@ src_configure() {
 		$(use_enable rbd) \
 		$(use_enable sasl vnc-sasl) \
 		$(use_enable sdl) \
+		$(use_enable seccomp) \
 		$(use_enable smartcard smartcard) \
 		$(use_enable smartcard smartcard-nss) \
 		$(use_enable spice) \
@@ -317,13 +311,13 @@ src_install() {
 		fi
 
 		if use qemu_softmmu_targets_x86_64 ; then
-			dobin "${FILESDIR}"/qemu-kvm
+			dosym /usr/bin/qemu-system-x86_64 /usr/bin/qemu-kvm
 			ewarn "The depreciated '/usr/bin/kvm' symlink is no longer installed"
 			ewarn "You should use '/usr/bin/qemu-kvm', you may need to edit"
 			ewarn "your libvirt configs or other wrappers for ${PN}"
 		else
 			elog "You disabled QEMU_SOFTMMU_TARGETS=x86_64, this disables install"
-			elog "of /usr/bin/qemu-kvm and /usr/bin/kvm"
+			elog "of the /usr/bin/qemu-kvm symlink."
 		fi
 	fi
 
@@ -336,7 +330,7 @@ src_install() {
 
 	use python & dobin scripts/kvm/kvm_stat
 
-	# avoid collision with libcacard
+	# Avoid collision with app-emulation/libcacard
 	use smartcard && mv "${ED}/usr/bin/vscclient" "${ED}/usr/bin/qemu-vscclient"
 
 	# Remove SeaBIOS since we're using the SeaBIOS packaged one

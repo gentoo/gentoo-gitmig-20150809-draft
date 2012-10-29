@@ -17,6 +17,7 @@
     <flag name='pulseaudio'>Enable pulseaudio output for sound emulation</flag>
     <flag name='rbd'>Enable rados block device backend support, see http://ceph.newdream.net/wiki/QEMU-RBD</flag>
     <flag name='sdl'>Enable the SDL-based console</flag>
+	<flag name='seccomp'>Utilize <pkg>sys-libs/libseccomp</pkg> to enable kernel filtering of system calls to prevent malicious guests from doing damage.</flag>
     <flag name='spice'>Enable Spice protocol support via <pkg>app-emulation/spice</pkg></flag>
 	<flag name='systemtap'>Enable SystemTAP/DTrace tracing</flag>
 	<flag name='tci'>Enable the TCG Interpreter which can speed up or slowdown workloads depending on the host and guest CPUs being emulated. In the future it will be a runtime option but for now its compile time.</flag>
