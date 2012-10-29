@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/libqb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/libqb/ChangeLog,v 1.1 2012/05/16 10:29:46 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/libqb/ChangeLog,v 1.2 2012/10/29 11:07:24 ultrabug Exp $
+
+*libqb-0.14.3 (29 Oct 2012)
+
+  29 Oct 2012; Ultrabug <ultrabug@gentoo.org> +libqb-0.14.3.ebuild:
+  Version bump
 
 *libqb-0.13.0 (16 May 2012)
 
