@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.9 2012/10/29 09:47:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.10 2012/10/29 09:49:54 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -256,15 +256,14 @@ distutils-r1_python_install_all() {
 	local EPYTHON
 	python_export_best EPYTHON
 
-	for f in "${D}"/{bin,sbin,usr/bin,usr/sbin,games/bin}/*-"${EPYTHON}"; do
-		if [[ -x ${f} ]]; then
-			debug-print "${FUNCNAME}: found executable at ${f#${D}/}"
+	local f
+	while IFS= read -r -d '' f; do
+		debug-print "${FUNCNAME}: found executable at ${f#${D}/}"
 
-			local wrapf=${f%-${EPYTHON}}
+		local wrapf=${f%-${EPYTHON}}
 
-			_python_ln_rel "${ED}"/usr/bin/python-exec "${wrapf}" || die
-		fi
-	done
+		_python_ln_rel "${ED}"/usr/bin/python-exec "${wrapf}" || die
+	done < <(find "${D}" -type f -executable -name "*-${EPYTHON}" -print0)
 }
 
 # @FUNCTION: distutils-r1_run_phase
