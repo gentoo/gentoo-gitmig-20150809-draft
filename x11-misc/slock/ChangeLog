@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/slock
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slock/ChangeLog,v 1.37 2012/10/29 04:32:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slock/ChangeLog,v 1.38 2012/10/29 04:38:42 jer Exp $
+
+  29 Oct 2012; Jeroen Roovers <jer@gentoo.org> slock-1.1.ebuild:
+  Add savedconfig support for config.mk to set your favourite colours.
 
 *slock-1.1 (29 Oct 2012)
 

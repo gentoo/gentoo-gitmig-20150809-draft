@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slock/slock-1.1.ebuild,v 1.1 2012/10/29 04:32:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slock/slock-1.1.ebuild,v 1.2 2012/10/29 04:38:42 jer Exp $
 
 EAPI=4
-inherit toolchain-funcs
+inherit savedconfig toolchain-funcs
 
 DESCRIPTION="simple X screen locker"
 HOMEPAGE="http://tools.suckless.org/slock"
@@ -31,6 +31,7 @@ src_prepare() {
 	if use elibc_FreeBSD; then
 		sed -i -e 's/-DHAVE_SHADOW_H//' config.mk || die
 	fi
+	restore_config config.mk
 	tc-export CC
 }
 
@@ -38,4 +39,5 @@ src_compile() { emake slock; }
 
 src_install() {
 	emake DESTDIR="${D}" PREFIX="/usr" install
+	save_config config.mk
 }
