@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/fnlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fnlib/ChangeLog,v 1.16 2012/10/14 18:41:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fnlib/ChangeLog,v 1.17 2012/10/29 03:43:04 jer Exp $
+
+  29 Oct 2012; Jeroen Roovers <jer@gentoo.org> fnlib-0.5-r1.ebuild,
+  fnlib-0.5-r2.ebuild:
+  Drop HPPA keywording (bug #393987).
 
   14 Oct 2012; Raúl Porcel <armin76@gentoo.org> fnlib-0.5-r2.ebuild:
   alpha/ia64/sparc stable wrt #393987

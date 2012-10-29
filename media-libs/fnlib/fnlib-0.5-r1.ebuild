@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fnlib/fnlib-0.5-r1.ebuild,v 1.28 2010/08/27 08:50:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fnlib/fnlib-0.5-r1.ebuild,v 1.29 2012/10/29 03:43:04 jer Exp $
 
 DESCRIPTION="Font Library for enlightenment"
 HOMEPAGE="http://www.enlightenment.org/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/enlightenment/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64"
+KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 IUSE=""
 
 DEPEND="media-libs/imlib"
