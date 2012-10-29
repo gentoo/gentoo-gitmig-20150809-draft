@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/liboil-0.3.17.ebuild,v 1.10 2012/10/29 00:56:43 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/liboil-0.3.17-r1.ebuild,v 1.1 2012/10/29 00:56:43 tetromino Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils flag-o-matic multilib
 
 DESCRIPTION="Library of simple functions that are optimized for various CPUs"
@@ -11,13 +11,13 @@ SRC_URI="http://liboil.freedesktop.org/download/${P}.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0.3"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
-IUSE="doc +examples test"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+IUSE="+examples static-libs test"
 
 RDEPEND="examples? ( dev-libs/glib:2 )"
 DEPEND="${RDEPEND}
-	virtual/pkgconfig
-	doc? ( >=dev-util/gtk-doc-1 )"
+	dev-util/gtk-doc-am
+	virtual/pkgconfig"
 
 src_prepare() {
 	if ! use examples; then
@@ -30,6 +30,7 @@ src_prepare() {
 			-i Makefile.am Makefile.in || die
 	fi
 
+	epatch "${FILESDIR}/${P}-amd64-cpuid.patch"
 	has x32 $(get_all_abis) && epatch "${FILESDIR}"/${PN}-0.3.17-x32.patch
 }
 
@@ -38,15 +39,13 @@ src_configure() {
 	filter-flags -O?
 	append-flags -O2
 
-	econf \
-		--disable-dependency-tracking \
-		$(use_enable doc gtk-doc) \
-		--with-html-dir=/usr/share/doc/${PF}/html
+	econf $(use_enable static-libs static)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS BUG-REPORTING HACKING NEWS README || die
+	DOCS="AUTHORS BUG-REPORTING HACKING NEWS README"
+	default
+	prune_libtool_files
 }
 
 pkg_postinst() {

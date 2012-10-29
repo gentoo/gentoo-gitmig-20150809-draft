@@ -1,6 +1,16 @@
 # ChangeLog for dev-libs/liboil
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/ChangeLog,v 1.91 2012/06/06 03:34:34 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/ChangeLog,v 1.92 2012/10/29 00:56:43 tetromino Exp $
+
+*liboil-0.3.17-r1 (29 Oct 2012)
+
+  29 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  liboil-0.3.17.ebuild, +liboil-0.3.17-r1.ebuild,
+  +files/liboil-0.3.17-amd64-cpuid.patch:
+  Add upstream patch to fix CPU detection on amd64. Add prefix keywords (bug
+  #440082, thanks to Christoph Junghans). Remove useless doc USE flag, and
+  install docs in the location where tools like devhelp expect them. Punt .la
+  files, and make static libs optional.
 
   06 Jun 2012; Zac Medico <zmedico@gentoo.org> liboil-0.3.17.ebuild:
   inherit eutils for epatch
