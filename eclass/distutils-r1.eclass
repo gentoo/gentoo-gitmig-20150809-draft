@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.10 2012/10/29 09:49:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.11 2012/10/29 09:51:27 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -56,8 +56,7 @@ inherit eutils python-r1
 
 EXPORT_FUNCTIONS src_prepare src_configure src_compile src_test src_install
 
-RDEPEND="${PYTHON_DEPS}
-	dev-python/python-exec"
+RDEPEND=${PYTHON_DEPS}
 DEPEND=${PYTHON_DEPS}
 
 # @ECLASS-VARIABLE: PATCHES

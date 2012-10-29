@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.11 2012/10/29 09:46:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.12 2012/10/29 09:51:27 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -137,7 +137,14 @@ _python_set_globals() {
 	REQUIRED_USE="|| ( ${flags[*]} )"
 	PYTHON_USEDEP=${optflags// /,}
 
-	PYTHON_DEPS=
+	local usestr
+	[[ ${PYTHON_REQ_USE} ]] && usestr="[${PYTHON_REQ_USE}]"
+
+	# 1) well, python-exec would suffice as an RDEP
+	# but no point in making this overcomplex, BDEP doesn't hurt anyone
+	# 2) python-exec should be built with all targets forced anyway
+	# but if new targets were added, we may need to force a rebuild
+	PYTHON_DEPS="dev-python/python-exec[${PYTHON_USEDEP}]"
 	local i
 	for i in "${PYTHON_COMPAT[@]}"; do
 		local d
@@ -153,10 +160,7 @@ _python_set_globals() {
 		esac
 
 		local v=${i##*[a-z]}
-		local usestr
-		[[ ${PYTHON_REQ_USE} ]] && usestr="[${PYTHON_REQ_USE}]"
-		PYTHON_DEPS+=" python_targets_${i}? (
-			${d}:${v/_/.}${usestr} )"
+		PYTHON_DEPS+=" python_targets_${i}? ( ${d}:${v/_/.}${usestr} )"
 	done
 }
 _python_set_globals

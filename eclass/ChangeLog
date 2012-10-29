@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.479 2012/10/29 09:49:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.480 2012/10/29 09:51:27 mgorny Exp $
+
+  29 Oct 2012; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass,
+  python-r1.eclass:
+  Move python-exec dependency to python-r1. That eclass now provides means to
+  create versioned scripts as well.
 
   29 Oct 2012; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
   Use find instead of hard-coded executable locations list when linking the
