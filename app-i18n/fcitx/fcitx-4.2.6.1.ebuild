@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-4.2.6.1.ebuild,v 1.1 2012/10/27 05:40:38 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-4.2.6.1.ebuild,v 1.2 2012/10/29 08:48:14 yngwin Exp $
 
 EAPI=4
 
@@ -81,8 +81,12 @@ src_prepare() {
 	cp "${DISTDIR}/en_dict-${_en_dict_version}.tar.gz" "${S}/data" \
 		|| die "en_dict-${_en_dict_version} data file is not found"
 	if use table ; then
-		cp "${DISTDIR}/table.tar.gz" "${S}/data/table" || die "table data file is not found"
+		cp "${DISTDIR}/table.tar.gz" "${S}/data/table" \
+			|| die "table data file is not found"
 	fi
+	epatch "${FILESDIR}/${P}-offline.patch"
+	sed -e "s/20120815/${_en_dict_version}/" -i data/CMakeLists.txt || die 'sed failed'
+	epatch_user
 }
 
 src_configure() {
