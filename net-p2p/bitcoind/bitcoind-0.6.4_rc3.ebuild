@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.6.4_rc3.ebuild,v 1.1 2012/10/08 18:04:56 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.6.4_rc3.ebuild,v 1.2 2012/10/29 01:46:15 blueness Exp $
 
 EAPI="4"
 
@@ -72,6 +72,9 @@ src_compile() {
 	else
 		OPTS+=(USE_UPNP=)
 	fi
+
+	# Workaround for bug #440034
+	share/genbuild.sh src/obj/build.h
 
 	cd src || die
 	emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" -f makefile.unix "${OPTS[@]}" ${PN}
