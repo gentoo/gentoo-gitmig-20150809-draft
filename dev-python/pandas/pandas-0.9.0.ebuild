@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.7.3.ebuild,v 1.4 2012/10/18 04:43:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.9.0.ebuild,v 1.1 2012/10/29 13:19:58 bicatali Exp $
 
 EAPI=4
 
 # python cruft
 SUPPORT_PYTHON_ABIS="1"
 DISTUTILS_SRC_TEST="nosetests"
-RESTRICT_PYTHON_ABIS="2.4  2.7-pypy-* 3.3"
+RESTRICT_PYTHON_ABIS="2.4 2.7-pypy-* *-jython 3.3"
 
 inherit distutils
 
@@ -16,12 +16,12 @@ HOMEPAGE="http://pandas.sourceforge.net/"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 SLOT="0"
 IUSE="doc examples excel R"
 
 CDEPEND="dev-python/numpy
-	dev-python/python-dateutil"
+	>=dev-python/python-dateutil-2.1"
 DEPEND="${CDEPEND}
 	doc? (
 		dev-python/ipython
@@ -47,6 +47,14 @@ src_compile() {
 		cd doc
 		"$(PYTHON -f)" make.py html || die
 	fi
+}
+
+src_test() {
+	testing() {
+		cd "${S}/build-${PYTHON_ABI}"/lib*
+		PYTHONPATH=. MPLCONFIGDIR=. HOME=. nosetests-"${PYTHON_ABI}" pandas
+	}
+	python_execute_function testing
 }
 
 src_install() {
