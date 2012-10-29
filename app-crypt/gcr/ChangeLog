@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gcr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/ChangeLog,v 1.5 2012/10/24 09:55:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/ChangeLog,v 1.6 2012/10/29 20:39:12 blueness Exp $
+
+  29 Oct 2012; Anthony G. Basile <blueness@gentoo.org> gcr-3.4.1-r2.ebuild:
+  stable ppc ppc64, bug #439152
 
   24 Oct 2012; Agostino Sarubbo <ago@gentoo.org> gcr-3.4.1-r2.ebuild:
   Stable for amd64, wrt bug #439152
@@ -27,4 +30,3 @@
   13 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org> +gcr-3.4.1.ebuild,
   +metadata.xml:
   New ebuild for Gcr and Gck libraries, formerly part of gnome-keyring.
-
