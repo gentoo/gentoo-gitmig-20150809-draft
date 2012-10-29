@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/megaglest
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/ChangeLog,v 1.6 2012/09/17 22:30:05 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/ChangeLog,v 1.7 2012/10/29 20:14:48 hasufell Exp $
+
+  29 Oct 2012; Julian Ospald <hasufell@gentoo.org> megaglest-3.6.0.3.ebuild,
+  +files/megaglest-3.6.0.3-gcc-4.7.patch:
+  fix compilation for gcc-4.7 wrt #440134
 
   17 Sep 2012; Julian Ospald <hasufell@gentoo.org> megaglest-3.6.0.3.ebuild,
   metadata.xml:
