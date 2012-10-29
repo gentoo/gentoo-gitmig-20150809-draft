@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libisds/libisds-0.6.ebuild,v 1.1 2012/10/29 10:54:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libisds/libisds-0.6-r1.ebuild,v 1.1 2012/10/29 13:35:36 scarabeus Exp $
 
 EAPI=5
 
@@ -47,6 +47,7 @@ src_configure() {
 	local myeconfargs=(
 		"--disable-fatalwarnings"
 		$(use_with curl libcurl)
+		$(use_enable curl curlreauthorizationbug)
 		$(use_enable debug)
 		$(use_enable nls)
 		$(use_enable static-libs static)
