@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.476 2012/10/29 09:25:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.477 2012/10/29 09:46:03 mgorny Exp $
+
+  29 Oct 2012; Michał Górny <mgorny@gentoo.org> python-r1.eclass:
+  Introduce python_replicate_script(), to create copies of a Python script for
+  all installed implementations.
 
   29 Oct 2012; Michał Górny <mgorny@gentoo.org> python-r1.eclass:
   Introduce python_export_best() to obtain variables for the most preferred

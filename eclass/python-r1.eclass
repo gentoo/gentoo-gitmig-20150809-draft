@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.10 2012/10/29 09:25:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.11 2012/10/29 09:46:03 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -411,4 +411,130 @@ python_export_best() {
 
 	debug-print "${FUNCNAME}: Best implementation is: ${impl}"
 	python_export "${impl}" "${@}"
+}
+
+# @FUNCTION: _python_rewrite_shebang
+# @INTERNAL
+# @USAGE: [<EPYTHON>] <path>...
+# @DESCRIPTION:
+# Replaces 'python' executable in the shebang with the executable name
+# of the specified interpreter. If no EPYTHON value (implementation) is
+# used, the current ${EPYTHON} will be used.
+#
+# All specified files must start with a 'python' shebang. A file not
+# having a matching shebang will be refused. The exact shebang style
+# will be preserved in order not to break anything.
+#
+# Example conversions:
+# @CODE
+# From: #!/usr/bin/python -R
+# To: #!/usr/bin/python2.7 -R
+#
+# From: #!/usr/bin/env FOO=bar python
+# To: #!/usr/bin/env FOO=bar python2.7
+# @CODE
+_python_rewrite_shebang() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	local impl
+	case "${1}" in
+		python*|jython*|pypy-c*)
+			impl=${1}
+			shift
+			;;
+		*)
+			impl=${EPYTHON}
+			[[ ${impl} ]] || die "${FUNCNAME}: no impl nor EPYTHON"
+			;;
+	esac
+	debug-print "${FUNCNAME}: implementation: ${impl}"
+
+	local f
+	for f; do
+		local shebang=$(head -n 1 "${f}")
+		debug-print "${FUNCNAME}: path = ${f}"
+		debug-print "${FUNCNAME}: shebang = ${shebang}"
+
+		if [[ "${shebang} " != *'python '* ]]; then
+			eerror "A file does not seem to have a supported shebang:"
+			eerror "  file: ${f}"
+			eerror "  shebang: ${shebang}"
+			die "${FUNCNAME}: ${f} does not seem to have a valid shebang"
+		fi
+
+		sed -i -e "s:python:${impl}:" "${f}" || die
+	done
+}
+
+# @FUNCTION: _python_ln_rel
+# @USAGE: <from> <to>
+# @DESCRIPTION:
+# Create a relative symlink.
+_python_ln_rel() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	local from=${1}
+	local to=${2}
+
+	local frpath=${from%/*}/
+	local topath=${to%/*}/
+	local rel_path=
+
+	# remove double slashes
+	frpath=${frpath/\/\///}
+	topath=${topath/\/\///}
+
+	while [[ ${topath} ]]; do
+		local frseg=${frpath%%/*}
+		local toseg=${topath%%/*}
+
+		if [[ ${frseg} != ${toseg} ]]; then
+			rel_path=../${rel_path}${frseg:+${frseg}/}
+		fi
+
+		frpath=${frpath#${frseg}/}
+		topath=${topath#${toseg}/}
+	done
+	rel_path+=${frpath}${1##*/}
+
+	debug-print "${FUNCNAME}: ${from} -> ${to}"
+	debug-print "${FUNCNAME}: rel_path = ${rel_path}"
+
+	ln -fs "${rel_path}" "${to}"
+}
+
+# @FUNCTION: python_replicate_script
+# @USAGE: <path>...
+# @DESCRIPTION:
+# Copy the given script to variants for all enabled Python
+# implementations, then replace it with a symlink to the wrapper.
+#
+# All specified files must start with a 'python' shebang. A file not
+# having a matching shebang will be refused.
+python_replicate_script() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	local suffixes=()
+
+	_add_suffix() {
+		suffixes+=( "${EPYTHON}" )
+	}
+	python_foreach_impl _add_suffix
+	debug-print "${FUNCNAME}: suffixes = ( ${suffixes[@]} )"
+
+	local f suffix
+	for suffix in "${suffixes[@]}"; do
+		for f; do
+			local newf=${f}-${suffix}
+
+			debug-print "${FUNCNAME}: ${f} -> ${newf}"
+			cp "${f}" "${newf}" || die
+		done
+
+		_python_rewrite_shebang "${suffix}" "${@/%/-${suffix}}"
+	done
+
+	for f; do
+		_python_ln_rel "${ED}"/usr/bin/python-exec "${f}" || die
+	done
 }
