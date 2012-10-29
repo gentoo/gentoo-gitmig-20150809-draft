@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/bfgminer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/ChangeLog,v 1.24 2012/10/29 02:32:54 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/ChangeLog,v 1.25 2012/10/29 02:38:07 blueness Exp $
+
+  29 Oct 2012; Anthony G. Basile <blueness@gentoo.org> bfgminer-2.8.0.ebuild:
+  Tighten up dependence >=dev-libs/jansson-2
 
 *bfgminer-2.8.3 (29 Oct 2012)
 *bfgminer-2.9.0 (29 Oct 2012)
