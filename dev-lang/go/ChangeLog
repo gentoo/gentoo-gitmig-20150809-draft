@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/go
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/ChangeLog,v 1.6 2012/09/14 18:29:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/ChangeLog,v 1.7 2012/10/29 15:57:40 williamh Exp $
+
+*go-1.0.3 (29 Oct 2012)
+
+  29 Oct 2012; William Hubbs <williamh@gentoo.org> +go-1.0.3.ebuild,
+  +files/go-1.0.3-hardened.patch, go-9999.ebuild:
+  version bump and sync live ebuild
 
   14 Sep 2012; Markus Meier <maekke@gentoo.org> go-1.0.2.ebuild:
   add ~arm, bug #416133
