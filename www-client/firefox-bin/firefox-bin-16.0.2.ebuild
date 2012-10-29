@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-16.0.1.ebuild,v 1.1 2012/10/20 15:02:04 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-16.0.2.ebuild,v 1.1 2012/10/29 16:02:54 jdhore Exp $
 
 EAPI="4"
 
