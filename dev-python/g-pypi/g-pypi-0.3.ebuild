@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/g-pypi/g-pypi-0.3.ebuild,v 1.2 2012/07/23 20:25:28 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/g-pypi/g-pypi-0.3.ebuild,v 1.3 2012/10/29 16:33:05 mgorny Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -34,7 +34,6 @@ RDEPEND="
 	app-portage/gentoolkit
 	app-portage/gentoolkit-dev
 	app-portage/metagen
-	dev-python/argparse
 	>=dev-python/jaxml-3.02
 	dev-python/setuptools
 	dev-python/jinja
@@ -42,6 +41,7 @@ RDEPEND="
 	dev-python/sphinxcontrib-googleanalytics
 	dev-python/unittest2
 	dev-python/yolk
+	virtual/python-argparse
 "
 
 PYTHON_MODNAME="gpypi"

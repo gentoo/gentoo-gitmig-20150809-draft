@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.13.1.ebuild,v 1.3 2012/10/29 10:21:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.13.1.ebuild,v 1.4 2012/10/29 16:35:02 mgorny Exp $
 
 EAPI=4
 
@@ -24,10 +24,10 @@ IUSE="doc emacs examples matplotlib mongodb notebook octave
 	qt4 +smp test wxwidgets"
 
 CDEPEND="dev-python/decorator
-	|| ( dev-python/argparse =dev-lang/python-2.7* >=dev-lang/python-3.2 )
 	dev-python/pexpect
 	dev-python/pyparsing
 	dev-python/simplegeneric
+	virtual/python-argparse
 	emacs? ( app-emacs/python-mode virtual/emacs )
 	matplotlib? ( dev-python/matplotlib )
 	mongodb? ( dev-python/pymongo )
