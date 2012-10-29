@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.483 2012/10/29 13:30:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.484 2012/10/29 13:34:02 mgorny Exp $
+
+  29 Oct 2012; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
+  Support and use out-of-source builds by default.
 
   29 Oct 2012; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
   Introduce an esetup.py wrapper function and mydistutilsargs=() for it.
