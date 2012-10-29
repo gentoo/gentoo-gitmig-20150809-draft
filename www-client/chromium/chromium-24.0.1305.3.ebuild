@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-24.0.1305.3.ebuild,v 1.1 2012/10/25 04:09:35 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-24.0.1305.3.ebuild,v 1.2 2012/10/29 17:52:37 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -118,6 +118,8 @@ src_prepare() {
 	# zlib-1.2.5.1-r1 renames the OF macro in zconf.h, bug 383371.
 	# sed -i '1i#define OF(x) x' \
 	#	third_party/zlib/contrib/minizip/{ioapi,{,un}zip}.h || die
+
+	epatch "${FILESDIR}/${PN}-arm-r0.patch"
 
 	# Fix build without NaCl glibc toolchain.
 	# epatch "${FILESDIR}/${PN}-ppapi-r0.patch"
@@ -304,6 +306,7 @@ src_configure() {
 	elif [[ $myarch = arm ]] ; then
 		# TODO: re-enable NaCl (NativeClient).
 		myconf+=" -Dtarget_arch=arm
+			-Darmv7=0
 			-Darm_neon=0
 			-Ddisable_nacl=1"
 	else
