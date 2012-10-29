@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libcroco
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcroco/ChangeLog,v 1.79 2012/10/27 11:43:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcroco/ChangeLog,v 1.80 2012/10/29 00:06:33 tetromino Exp $
+
+  29 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  libcroco-0.6.8.ebuild:
+  Add prefix support by Christoph Junghans.
 
 *libcroco-0.6.8 (27 Oct 2012)
 
