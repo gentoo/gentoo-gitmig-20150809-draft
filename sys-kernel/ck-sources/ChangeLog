@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.209 2012/10/29 20:48:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.210 2012/10/29 20:51:55 hwoarang Exp $
+
+*ck-sources-3.6.2 (29 Oct 2012)
+
+  29 Oct 2012; Markos Chandras <hwoarang@gentoo.org> +ck-sources-3.6.2.ebuild,
+  +files/ck-sources-3.6-Fix_Boot_Issue_On_Kvm-aCOSwt_P6.patch, metadata.xml:
+  Version bump. Bug #440116. Thanks to Eric F. GARIOUD
+  <eric-f.garioud@wanadoo.fr>
 
 *ck-sources-3.5.7-r1 (29 Oct 2012)
 *ck-sources-3.4.9-r1 (29 Oct 2012)
