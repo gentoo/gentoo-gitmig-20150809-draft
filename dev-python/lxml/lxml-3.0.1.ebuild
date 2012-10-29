@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-3.0.1.ebuild,v 1.2 2012/10/20 16:22:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-3.0.1.ebuild,v 1.3 2012/10/29 16:26:39 mgorny Exp $
 
 EAPI=4
 PYTHON_COMPAT=(python2_6 python2_7 python3_1 python3_2 python3_3)
@@ -16,7 +16,7 @@ SRC_URI="http://codespeak.net/lxml/${MY_P}.tgz"
 
 LICENSE="BSD ElementTree GPL-2 PSF-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~s390 ~sh ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 
 # have to drop some keywords pending resolution of bug #438388
 #KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
@@ -33,31 +33,29 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-skip-failing-test.patch"
+	PATCHES=( "${FILESDIR}/${P}-skip-failing-test.patch" )
 	distutils-r1_src_prepare
 }
 
-src_test() {
-	run_tests() {
-		# Tests broken with Python 3, generally due to Unicode.
-		[[ "${EPYTHON%.*}" == python3 ]] && return
+python_test() {
+	# Tests broken with Python 3, generally due to Unicode.
+	[[ ${EPYTHON} == python3.* ]] && return
 
-		local module
-		for module in $(ls build/lib.*/lxml/*.so); do
-			ln -s "../../${module}" "src/lxml/$(basename ${module})"
-		done
+	local module
+	for module in "${BUILD_DIR}"/lib.*/lxml/*.so; do
+		ln -fs "${module}" src/lxml/ || die
+	done
 
-		local exit_status="0" test
-		for test in test.py selftest.py selftest2.py; do
-			einfo "Running ${test}"
-			if ! "${PYTHON}" ${test}; then
-				eerror "${test} failed with ${EPYTHON}"
-				exit_status="1"
-			fi
-		done
-		return "${exit_status}"
-	}
-	python_foreach_impl run_tests
+	local exit_status="0" test
+	local PYTHONPATH=src/ # needed for selftest*
+	for test in test.py selftest.py selftest2.py; do
+		einfo "Running ${test}"
+		if ! "${PYTHON}" ${test}; then
+			eerror "${test} failed with ${EPYTHON}"
+			exit_status="1"
+		fi
+	done
+	return "${exit_status}"
 }
 
 src_install() {
