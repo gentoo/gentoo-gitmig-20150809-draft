@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/goobook/goobook-1.3.ebuild,v 1.1 2010/08/29 18:55:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/goobook/goobook-1.3.ebuild,v 1.2 2012/10/29 16:26:12 mgorny Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -17,9 +17,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-python/gdata
-	dev-python/argparse
 	=dev-python/hcs-utils-1.1.1
-	dev-python/simplejson"
+	dev-python/simplejson
+	virtual/python-argparse"
 
 RESTRICT_PYTHON_ABIS="3.*"
 
