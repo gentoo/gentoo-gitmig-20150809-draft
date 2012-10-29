@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14171 2012/10/29 15:07:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14172 2012/10/29 15:11:32 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -34,6 +34,7 @@
 # Michał Górny <mgorny@gentoo.org> (29 Oct 2012)
 # Unmask when packages are switched to virtual/python-argparse.
 =dev-python/argparse-1.2.1-r1
+=virtual/python-argparse-1
 
 # Ben de Groot <yngwin@gentoo.org> (29 Oct 2012)
 # Fails compilation on missing sqlite header - unbundle patch needs updating
