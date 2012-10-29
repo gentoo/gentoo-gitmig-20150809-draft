@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.119 2012/10/26 20:35:36 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.120 2012/10/29 23:36:46 tetromino Exp $
 
 EAPI="4"
 
@@ -33,7 +33,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-IUSE="alsa capi cups custom-cflags elibc_glibc fontconfig +gecko gnutls gphoto2 gsm gstreamer hardened jpeg lcms ldap +mono mp3 ncurses nls odbc openal opencl +opengl osmesa osmesa-multilib +oss +perl png pulseaudio samba scanner selinux ssl test +threads +truetype udisks v4l +win32 +win64 +X xcomposite xinerama xml"
+IUSE="alsa capi cups custom-cflags elibc_glibc fontconfig +gecko gnutls gphoto2 gsm gstreamer hardened jpeg lcms ldap +mono mp3 ncurses nls odbc openal opencl +opengl osmesa +oss +perl png pulseaudio samba scanner selinux ssl test +threads +truetype udisks v4l +win32 +win64 +X xcomposite xinerama xml"
 REQUIRED_USE="elibc_glibc? ( threads )
 	mono? ( || ( win32 !win64 ) )
 	osmesa? ( opengl )" #286560
@@ -49,6 +49,7 @@ MLIB_DEPS="amd64? (
 	odbc? ( app-emulation/emul-linux-x86-db )
 	openal? ( app-emulation/emul-linux-x86-sdl )
 	opengl? ( app-emulation/emul-linux-x86-opengl )
+	osmesa? ( >=app-emulation/emul-linux-x86-opengl-20121028 )
 	scanner? ( app-emulation/emul-linux-x86-medialibs )
 	v4l? ( app-emulation/emul-linux-x86-medialibs )
 	app-emulation/emul-linux-x86-baselibs
@@ -158,16 +159,6 @@ do_configure() {
 	mkdir -p "${builddir}"
 	pushd "${builddir}" >/dev/null
 
-	with_osmesa=$(use_with osmesa)
-	if use amd64 && [[ $1 = 32 ]]; then #430268
-		if use osmesa-multilib; then
-			with_osmesa=--with-osmesa
-		else
-			elog "win32 osmesa support is disabled for now, see bug #430268"
-			with_osmesa=--without-osmesa
-		fi
-	fi
-
 	ECONF_SOURCE=${S} \
 	econf \
 		--sysconfdir=/etc/wine \
@@ -191,7 +182,7 @@ do_configure() {
 		$(use_with opencl) \
 		$(use_with opengl) \
 		$(use_with ssl openssl) \
-		${with_osmesa} \
+		$(use_with osmesa) \
 		$(use_with oss) \
 		$(use_with png) \
 		$(use_with threads pthread) \

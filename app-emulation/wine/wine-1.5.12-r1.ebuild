@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.5.14.ebuild,v 1.2 2012/10/26 16:46:37 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.5.12-r1.ebuild,v 1.1 2012/10/29 23:36:46 tetromino Exp $
 
 EAPI="4"
 
@@ -49,6 +49,7 @@ MLIB_DEPS="amd64? (
 	odbc? ( app-emulation/emul-linux-x86-db )
 	openal? ( app-emulation/emul-linux-x86-sdl )
 	opengl? ( app-emulation/emul-linux-x86-opengl )
+	osmesa? ( >=app-emulation/emul-linux-x86-opengl-20121028 )
 	scanner? ( app-emulation/emul-linux-x86-medialibs )
 	v4l? ( app-emulation/emul-linux-x86-medialibs )
 	app-emulation/emul-linux-x86-baselibs
@@ -152,12 +153,6 @@ do_configure() {
 	mkdir -p "${builddir}"
 	pushd "${builddir}" >/dev/null
 
-	with_osmesa=$(use_with osmesa)
-	if use osmesa && use amd64 && [[ $1 = 32 ]]; then #430268
-		elog "win32 osmesa support is disabled for now, see bug #430268"
-		with_osmesa=--without-osmesa
-	fi
-
 	ECONF_SOURCE=${S} \
 	econf \
 		--sysconfdir=/etc/wine \
@@ -181,7 +176,7 @@ do_configure() {
 		$(use_with opencl) \
 		$(use_with opengl) \
 		$(use_with ssl openssl) \
-		${with_osmesa} \
+		$(use_with osmesa) \
 		$(use_with oss) \
 		$(use_with png) \
 		$(use_with threads pthread) \

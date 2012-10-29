@@ -1,6 +1,23 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.435 2012/10/26 20:35:36 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.436 2012/10/29 23:36:46 tetromino Exp $
+
+*wine-1.5.16-r1 (29 Oct 2012)
+*wine-1.5.15-r2 (29 Oct 2012)
+*wine-1.5.14-r1 (29 Oct 2012)
+*wine-1.5.13-r1 (29 Oct 2012)
+*wine-1.5.12-r1 (29 Oct 2012)
+*wine-1.5.11-r1 (29 Oct 2012)
+*wine-1.5.10-r1 (29 Oct 2012)
+
+  29 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org> -wine-1.5.10.ebuild,
+  +wine-1.5.10-r1.ebuild, -wine-1.5.11.ebuild, +wine-1.5.11-r1.ebuild,
+  -wine-1.5.12.ebuild, +wine-1.5.12-r1.ebuild, -wine-1.5.13.ebuild,
+  +wine-1.5.13-r1.ebuild, -wine-1.5.14.ebuild, +wine-1.5.14-r1.ebuild,
+  -wine-1.5.15.ebuild, -wine-1.5.15-r1.ebuild, +wine-1.5.15-r2.ebuild,
+  -wine-1.5.16.ebuild, +wine-1.5.16-r1.ebuild, wine-9999.ebuild, metadata.xml:
+  Enable osmesa for win32 on amd64 since emul-linux-x86-opengl-20121028 now
+  includes libOSMesa.so
 
 *wine-1.5.16 (26 Oct 2012)
 

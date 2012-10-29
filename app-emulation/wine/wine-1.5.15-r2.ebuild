@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.5.15.ebuild,v 1.2 2012/10/26 16:46:37 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.5.15-r2.ebuild,v 1.1 2012/10/29 23:36:46 tetromino Exp $
 
 EAPI="4"
 
@@ -20,7 +20,7 @@ fi
 
 GV="1.8"
 MV="0.0.4"
-PULSE_PATCH="winepulse-2012.06.15.patch"
+PULSE_PATCHES="winepulse-patches-1.5.15"
 DESCRIPTION="free implementation of Windows(tm) on Unix"
 HOMEPAGE="http://www.winehq.org/"
 SRC_URI="${SRC_URI}
@@ -29,11 +29,11 @@ SRC_URI="${SRC_URI}
 		win64? ( mirror://sourceforge/${PN}/Wine%20Gecko/${GV}/wine_gecko-${GV}-x86_64.msi )
 	)
 	mono? ( mirror://sourceforge/${PN}/Wine%20Mono/${MV}/wine-mono-${MV}.msi )
-	http://source.winehq.org/patches/data/87234 -> ${PULSE_PATCH}"
+	http://dev.gentoo.org/~tetromino/distfiles/${PN}/${PULSE_PATCHES}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-IUSE="alsa capi cups custom-cflags elibc_glibc fontconfig +gecko gnutls gphoto2 gsm gstreamer hardened jpeg lcms ldap +mono mp3 ncurses nls odbc openal opencl +opengl osmesa osmesa-multilib +oss +perl png pulseaudio samba scanner selinux ssl test +threads +truetype udisks v4l +win32 +win64 +X xcomposite xinerama xml"
+IUSE="alsa capi cups custom-cflags elibc_glibc fontconfig +gecko gnutls gphoto2 gsm gstreamer hardened jpeg lcms ldap +mono mp3 ncurses nls odbc openal opencl +opengl osmesa +oss +perl png pulseaudio samba scanner selinux ssl test +threads +truetype udisks v4l +win32 +win64 +X xcomposite xinerama xml"
 REQUIRED_USE="elibc_glibc? ( threads )
 	mono? ( || ( win32 !win64 ) )
 	osmesa? ( opengl )" #286560
@@ -49,6 +49,7 @@ MLIB_DEPS="amd64? (
 	odbc? ( app-emulation/emul-linux-x86-db )
 	openal? ( app-emulation/emul-linux-x86-sdl )
 	opengl? ( app-emulation/emul-linux-x86-opengl )
+	osmesa? ( >=app-emulation/emul-linux-x86-opengl-20121028 )
 	scanner? ( app-emulation/emul-linux-x86-medialibs )
 	v4l? ( app-emulation/emul-linux-x86-medialibs )
 	app-emulation/emul-linux-x86-baselibs
@@ -91,7 +92,10 @@ RDEPEND="truetype? ( >=media-libs/freetype-2.0.0 media-fonts/corefonts )
 	nls? ( sys-devel/gettext )
 	odbc? ( dev-db/unixODBC )
 	osmesa? ( media-libs/mesa[osmesa] )
-	pulseaudio? ( media-sound/pulseaudio )
+	pulseaudio? (
+		media-sound/pulseaudio
+		sys-auth/rtkit
+	)
 	samba? ( >=net-fs/samba-3.0.25 )
 	selinux? ( sec-policy/selinux-wine )
 	xml? ( dev-libs/libxml2 dev-libs/libxslt )
@@ -130,6 +134,8 @@ src_unpack() {
 	else
 		unpack ${MY_P}.tar.bz2
 	fi
+
+	unpack "${PULSE_PATCHES}.tar.bz2"
 }
 
 src_prepare() {
@@ -137,7 +143,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.1.15-winegcc.patch #260726
 	epatch "${FILESDIR}"/${PN}-1.4_rc2-multilib-portage.patch #395615
 	epatch "${FILESDIR}"/${PN}-1.5.11-osmesa-check.patch #429386
-	epatch "${DISTDIR}/${PULSE_PATCH}" #421365
+	epatch "../${PULSE_PATCHES}"/*.patch #421365
 	epatch_user #282735
 	if [[ "$(md5sum server/protocol.def)" != "${md5}" ]]; then
 		einfo "server/protocol.def was patched; running tools/make_requests"
@@ -152,16 +158,6 @@ do_configure() {
 	local builddir="${WORKDIR}/wine$1"
 	mkdir -p "${builddir}"
 	pushd "${builddir}" >/dev/null
-
-	with_osmesa=$(use_with osmesa)
-	if use amd64 && [[ $1 = 32 ]]; then #430268
-		if use osmesa-multilib; then
-			with_osmesa=--with-osmesa
-		else
-			elog "win32 osmesa support is disabled for now, see bug #430268"
-			with_osmesa=--without-osmesa
-		fi
-	fi
 
 	ECONF_SOURCE=${S} \
 	econf \
@@ -186,7 +182,7 @@ do_configure() {
 		$(use_with opencl) \
 		$(use_with opengl) \
 		$(use_with ssl openssl) \
-		${with_osmesa} \
+		$(use_with osmesa) \
 		$(use_with oss) \
 		$(use_with png) \
 		$(use_with threads pthread) \
