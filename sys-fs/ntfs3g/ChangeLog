@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ntfs3g
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.137 2012/09/30 00:24:25 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.138 2012/10/29 20:39:10 jdhore Exp $
+
+  29 Oct 2012; Jeff Horelick <jdhore@gentoo.org> ntfs3g-2012.1.15-r2.ebuild:
+  marked x86 per bug 439832
 
   30 Sep 2012; Zac Medico <zmedico@gentoo.org> ntfs3g-2012.1.15-r2.ebuild:
   Fix possible "double prefix" for udevdir.
