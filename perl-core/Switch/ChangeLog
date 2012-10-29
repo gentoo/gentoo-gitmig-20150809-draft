@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Switch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Switch/ChangeLog,v 1.4 2012/07/18 06:09:03 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Switch/ChangeLog,v 1.5 2012/10/29 02:48:09 blueness Exp $
+
+  29 Oct 2012; Anthony G. Basile <blueness@gentoo.org> Switch-2.160.0.ebuild:
+  keyword ~ppc, bug #439158
 
   18 Jul 2012; Michael Weber <xmw@gentoo.org> Switch-2.160.0.ebuild:
   Marking ~arm for www-client/netsurf
