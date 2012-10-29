@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.5.7.ebuild,v 1.2 2012/06/03 13:31:33 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.7.0.ebuild,v 1.1 2012/10/29 13:36:30 chithanh Exp $
 
 EAPI=4
-inherit cmake-utils nsplugins multilib versionator
+inherit cmake-utils nsplugins multilib
 
 DESCRIPTION="High performance flash player"
 HOMEPAGE="http://lightspark.sourceforge.net/"
@@ -12,47 +12,45 @@ SRC_URI="http://launchpad.net/${PN}/trunk/${P}/+download/${P}.tar.gz"
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="nsplugin profile pulseaudio rtmp sdl"
+IUSE="curl ffmpeg gles nsplugin profile pulseaudio rtmp sdl"
 
 RDEPEND=">=dev-cpp/libxmlpp-2.33.1:2.6
 	>=dev-libs/boost-1.42
 	dev-libs/libpcre[cxx]
 	media-fonts/liberation-fonts
-	virtual/ffmpeg
-	media-libs/fontconfig
-	media-libs/ftgl
-	>=media-libs/glew-1.5.3
+	media-libs/libpng
 	media-libs/libsdl
+	>=sys-devel/llvm-3
+	x11-libs/cairo
+	x11-libs/gtk+:2
+	x11-libs/libX11
+	x11-libs/pango
+	curl? (
+		net-misc/curl
+	)
+	ffmpeg? (
+		virtual/ffmpeg
+	)
+	!gles? (
+		>=media-libs/glew-1.5.3
+		virtual/opengl
+	)
+	gles? (
+		media-libs/mesa[gles2]
+	)
 	pulseaudio? (
 		media-sound/pulseaudio
 	)
 	rtmp? (
 		media-video/rtmpdump
 	)
-	net-misc/curl
-	>=sys-devel/gcc-4.4
-	|| (
-		>=sys-devel/llvm-3
-		=sys-devel/llvm-2.8*
-	)
-	virtual/opengl
-	nsplugin? (
-		dev-libs/nspr
-		x11-libs/gtk+:2
-		x11-libs/gtkglext
-	)
-	x11-libs/libX11"
+	virtual/jpeg"
 DEPEND="${RDEPEND}
-	dev-lang/nasm
+	amd64? ( dev-lang/nasm )
+	x86? ( dev-lang/nasm )
 	virtual/pkgconfig"
 
 S=${WORKDIR}/${P/_rc*/}
-
-PATCHES=(
-	"${FILESDIR}"/${P}-llvm-3.1_0000.patch
-	"${FILESDIR}"/${P}-llvm-3.1_0001.patch
-	"${FILESDIR}"/${P}-llvm-3.1_0002.patch
-)
 
 src_configure() {
 	local audiobackends
@@ -60,11 +58,15 @@ src_configure() {
 	use sdl && audiobackends+="sdl"
 
 	local mycmakeargs=(
+		$(cmake-utils_use curl ENABLE_CURL)
+		$(cmake-utils_use gles ENABLE_GLES2)
+		$(cmake-utils_use ffmpeg ENABLE_LIBAVCODEC)
 		$(cmake-utils_use nsplugin COMPILE_PLUGIN)
+		$(cmake-utils_use profile ENABLE_MEMORY_USAGE_PROFILING)
 		$(cmake-utils_use profile ENABLE_PROFILING)
 		$(cmake-utils_use rtmp ENABLE_RTMP)
 		-DAUDIO_BACKEND="${audiobackends}"
-		-DPLUGIN_DIRECTORY=/usr/$(get_libdir)/${PN}/plugins
+		-DPLUGIN_DIRECTORY="${EPREFIX}"/usr/$(get_libdir)/${PN}/plugins
 	)
 
 	cmake-utils_src_configure
