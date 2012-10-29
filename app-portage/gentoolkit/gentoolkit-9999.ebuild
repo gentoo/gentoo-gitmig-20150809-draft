@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-9999.ebuild,v 1.22 2012/08/22 19:15:40 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-9999.ebuild,v 1.23 2012/10/29 16:31:11 mgorny Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -33,10 +33,11 @@ RDEPEND="${DEPEND}
 	>=dev-lang/python-2.6[xml]
 	!>=dev-lang/python-2.6[-xml]
 	!<=app-portage/gentoolkit-dev-0.2.7
-	dev-python/argparse
 	|| ( >=sys-apps/coreutils-8.15 app-misc/realpath sys-freebsd/freebsd-bin )
 	sys-apps/gawk
 	sys-apps/grep
+	virtual/python-argparse
+
 	!minimal? (
 		app-admin/eclean-kernel
 		app-portage/diffmask

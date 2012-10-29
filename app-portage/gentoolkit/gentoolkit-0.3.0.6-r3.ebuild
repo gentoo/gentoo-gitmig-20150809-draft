@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.3.0.6-r3.ebuild,v 1.11 2012/08/26 19:01:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.3.0.6-r3.ebuild,v 1.12 2012/10/29 16:31:11 mgorny Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -29,10 +29,10 @@ RDEPEND="${DEPEND}
 	>=dev-lang/python-2.6[xml]
 	!>=dev-lang/python-2.6[-xml]
 	!<=app-portage/gentoolkit-dev-0.2.7
-	dev-python/argparse
 	|| ( >=sys-apps/coreutils-8.15 app-misc/realpath sys-freebsd/freebsd-bin )
 	sys-apps/gawk
-	sys-apps/grep"
+	sys-apps/grep
+	virtual/python-argparse"
 
 distutils_src_compile_pre_hook() {
 	echo VERSION="${PVR}" "$(PYTHON)" setup.py set_version
