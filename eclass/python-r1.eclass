@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.12 2012/10/29 09:51:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.13 2012/10/29 11:27:30 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -45,7 +45,7 @@ inherit multilib
 _PYTHON_ALL_IMPLS=(
 	jython2_5
 	pypy1_8 pypy1_9
-	python3_1 python3_2
+	python3_1 python3_2 python3_3
 	python2_5 python2_6 python2_7
 )
 
