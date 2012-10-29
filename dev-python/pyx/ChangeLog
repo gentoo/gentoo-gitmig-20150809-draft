@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyx
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/ChangeLog,v 1.28 2011/07/29 22:54:35 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/ChangeLog,v 1.29 2012/10/29 08:42:33 patrick Exp $
+
+*pyx-0.12 (29 Oct 2012)
+
+  29 Oct 2012; Patrick Lauer <patrick@gentoo.org> +pyx-0.12.ebuild:
+  Bump
 
 *pyx-0.11.1 (29 Jul 2011)
 
@@ -115,4 +120,3 @@
 
   10 May 2003; Alastair Tse <liquidx@gentoo.org> pyx-0.3.1.ebuild:
   Initial ebuild. Submitted by Dan Bullok <dan.gentoo@bullok.com>.
-
