@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.14.ebuild,v 1.3 2012/09/21 19:37:54 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.14.ebuild,v 1.4 2012/10/29 10:19:26 dev-zero Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -71,7 +71,9 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/0.12-parallel-install.patch"
+	epatch \
+		"${FILESDIR}/0.12-parallel-install.patch" \
+		"${FILESDIR}/${PV}-Deal-with-libusbredirparser.pc-rename-to-libusbredir.patch"
 	eautoreconf
 }
 
