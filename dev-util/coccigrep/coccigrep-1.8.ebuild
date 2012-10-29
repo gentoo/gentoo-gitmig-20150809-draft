@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/coccigrep/coccigrep-1.8.ebuild,v 1.2 2012/03/24 06:39:17 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/coccigrep/coccigrep-1.8.ebuild,v 1.3 2012/10/29 16:34:59 mgorny Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc emacs vim"
 
 RDEPEND="dev-util/coccinelle[python]
-	|| ( dev-lang/python:2.7 dev-python/argparse )
+	virtual/python-argparse
 	emacs? ( virtual/emacs )
 	vim? ( || ( app-editors/vim app-editors/gvim ) )"
 DEPEND="doc? ( dev-python/sphinx )

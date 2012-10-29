@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pida/pida-0.6.2.ebuild,v 1.6 2012/05/05 02:18:51 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pida/pida-0.6.2.ebuild,v 1.7 2012/10/29 16:36:36 mgorny Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -19,13 +19,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~x86-interix ~amd64-linux ~x86-linux"
 IUSE=""
 
-RDEPEND="|| ( dev-lang/python:2.7 dev-python/argparse )
-	>=app-editors/gvim-6.3[gtk]
+RDEPEND=">=app-editors/gvim-6.3[gtk]
 	>=dev-python/anyvc-0.3.2
 	>=dev-python/bpython-0.9.7[gtk]
 	>=dev-python/pygtk-2.8
 	>dev-python/pygtkhelpers-0.4.1
-	>=x11-libs/vte-0.11.11-r2:0[python]"
+	>=x11-libs/vte-0.11.11-r2:0[python]
+	virtual/python-argparse"
 DEPEND="${RDEPEND}
 	dev-python/setuptools
 	virtual/pkgconfig"
