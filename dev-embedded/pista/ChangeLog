@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/pista
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pista/ChangeLog,v 1.6 2011/07/20 13:55:03 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pista/ChangeLog,v 1.7 2012/10/29 08:53:08 ago Exp $
+
+  29 Oct 2012; Agostino Sarubbo <ago@gentoo.org> pista-0.70.ebuild:
+  Add ~amd64, wrt bug #440064
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #34534
@@ -24,4 +27,3 @@
   07 Sep 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   +pista-0.62b.ebuild:
   Initial import thanks to Laurence Withers <lwithers@users.sf.net> in bug #61422
-

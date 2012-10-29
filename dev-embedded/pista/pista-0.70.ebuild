@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pista/pista-0.70.ebuild,v 1.2 2007/07/15 03:57:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pista/pista-0.70.ebuild,v 1.3 2012/10/29 08:53:08 ago Exp $
 
 DESCRIPTION="Commandline-driven interface to PICSTART+ PIC programmer"
 HOMEPAGE="http://gatling.ikk.sztaki.hu/~kissg/pd/pista/pista.html"
@@ -9,7 +9,7 @@ SRC_URI="ftp://gatling.ikk.sztaki.hu/pub/pic/pista/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND="dev-lang/perl
