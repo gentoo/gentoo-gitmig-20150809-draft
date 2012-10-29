@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/sel
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sel/ChangeLog,v 1.14 2009/07/18 08:12:20 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sel/ChangeLog,v 1.15 2012/10/29 07:16:32 pinkbyte Exp $
+
+  29 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> sel-0.08.4.ebuild:
+  Add missing 'die' statement to sed, keyword ~amd64 wrt bug #439868, thanks to
+  Mikle Kolyada
 
   18 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org> sel-0.08.4.ebuild:
   Fix dodoc.

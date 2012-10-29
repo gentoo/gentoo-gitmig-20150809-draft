@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sel/sel-0.08.4.ebuild,v 1.10 2009/07/18 08:12:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sel/sel-0.08.4.ebuild,v 1.11 2012/10/29 07:16:32 pinkbyte Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.rninet.de/darkstar/sel.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="ppc s390 sparc x86"
+KEYWORDS="~amd64 ppc s390 sparc x86"
 IUSE=""
 
 RDEPEND=">=sys-libs/ncurses-5.1"
@@ -21,7 +21,7 @@ src_unpack () {
 	cd "${S}"
 
 	sed -i -e "s:/usr/local/share/sel/help\.txt:/usr/share/sel/help\.txt:" \
-		sel.c
+		sel.c || die 'sed failed'
 }
 
 doecho() {
