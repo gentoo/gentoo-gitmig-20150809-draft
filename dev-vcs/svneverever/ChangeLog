@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/svneverever
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svneverever/ChangeLog,v 1.7 2012/01/04 02:36:49 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svneverever/ChangeLog,v 1.8 2012/10/29 16:38:08 mgorny Exp $
+
+  29 Oct 2012; Michał Górny <mgorny@gentoo.org> svneverever-1.1.0.ebuild,
+  svneverever-1.2.0.ebuild, svneverever-1.2.1.ebuild:
+  Use virtual for argparse.
 
 *svneverever-1.2.1 (04 Jan 2012)
 
@@ -37,4 +41,3 @@
   27 Oct 2010; Sebastian Pipping <sping@gentoo.org>
   +svneverever-1.0.2.ebuild, +metadata.xml:
   New package
-

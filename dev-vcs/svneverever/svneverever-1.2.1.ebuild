@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svneverever/svneverever-1.2.1.ebuild,v 1.1 2012/01/04 02:36:49 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svneverever/svneverever-1.2.1.ebuild,v 1.2 2012/10/29 16:38:08 mgorny Exp $
 
 EAPI="2"
 
@@ -21,5 +21,4 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="dev-python/pysvn
-	|| ( >=dev-lang/python-2.7
-	( >=dev-lang/python-2.6 dev-python/argparse ) )"
+	virtual/python-argparse"
