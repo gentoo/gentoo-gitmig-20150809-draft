@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.11 2012/10/29 09:51:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.12 2012/10/29 09:54:50 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -153,7 +153,6 @@ distutils-r1_python_configure() {
 distutils-r1_python_compile() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	cd "${BUILD_DIR}" || die
 	set -- "${PYTHON}" setup.py build "${@}"
 	echo "${@}"
 	"${@}" || die
@@ -217,7 +216,6 @@ distutils-r1_python_install() {
 
 	unset PYTHONDONTWRITEBYTECODE
 
-	cd "${BUILD_DIR}" || die
 	set -- "${PYTHON}" setup.py install "${flags[@]}" --root="${D}" "${@}"
 	echo "${@}"
 	"${@}" || die
