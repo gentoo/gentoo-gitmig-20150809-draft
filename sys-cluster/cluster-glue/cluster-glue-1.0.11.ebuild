@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cluster-glue/cluster-glue-1.0.11.ebuild,v 1.1 2012/10/29 12:21:30 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cluster-glue/cluster-glue-1.0.11.ebuild,v 1.2 2012/10/29 16:07:08 ultrabug Exp $
 
 EAPI=4
 
@@ -81,7 +81,7 @@ src_install() {
 	sed -i \
 		-e "s:%libdir%:$(get_libdir):" \
 		"${T}/heartbeat-logd.init" || die
-	newinitd "${T}/heartbeat-logd.init" heartbeat-logd || die
+# 	newinitd "${T}/heartbeat-logd.init" heartbeat-logd || die
 	rm "${D}"/etc/init.d/logd
 
 	use static-libs || find "${D}" -type f -name "*.la" -delete
