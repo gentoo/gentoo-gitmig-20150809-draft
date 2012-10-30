@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.225 2012/10/29 07:16:29 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.226 2012/10/30 04:43:42 cardoe Exp $
+
+*libvirt-0.10.2.1 (30 Oct 2012)
+
+  30 Oct 2012; Doug Goldstein <cardoe@gentoo.org> +libvirt-0.10.2.1.ebuild,
+  +files/libvirtd.confd-r4, +files/libvirtd.init-r10:
+  Version bump. Tweak to the init script to better support need net in newer
+  OpenRC and to start up init scripts we are dependant on based on USE flags.
 
   29 Oct 2012; Doug Goldstein <cardoe@gentoo.org> libvirt-0.10.2-r3.ebuild:
   Handle kernel CONFIG option rename for 3.6 and newer. Clean up kernel CONFIG
