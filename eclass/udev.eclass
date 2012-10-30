@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/udev.eclass,v 1.1 2012/10/30 19:08:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/udev.eclass,v 1.2 2012/10/30 20:03:12 ssuominen Exp $
 
 # @ECLASS: udev.eclass
 # @MAINTAINER:
@@ -24,7 +24,7 @@
 inherit toolchain-funcs
 
 case ${EAPI:-0} in
-	0|1|2|3|4) ;;
+	0|1|2|3|4|5) ;;
 	*) die "${ECLASS}.eclass API in EAPI ${EAPI} not yet established."
 esac
 
