@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14176 2012/10/30 14:46:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14177 2012/10/30 21:57:11 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -91,6 +91,7 @@ net-misc/libteam
 # Alexandre Rostovtsev <tetromino@gentoo.org> (21 Oct 2012)
 # gstreamer-0.10.36 bump: temporary mask to allow gradual addition to tree;
 # will be unmasked once all compatible plugins are in place.
+>=dev-cpp/gstreamermm-0.10.11
 >=net-misc/rygel-0.16
 ~media-libs/gstreamer-0.10.36
 ~media-libs/gst-plugins-base-0.10.36
