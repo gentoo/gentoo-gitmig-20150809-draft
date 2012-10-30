@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/shigofumi/shigofumi-0.2.ebuild,v 1.2 2012/10/29 17:57:18 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/shigofumi/shigofumi-0.2.ebuild,v 1.3 2012/10/30 12:00:05 blueness Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ if [[ ${PV} = 9999* ]]; then
 	KEYWORDS=""
 else
 	SRC_URI="http://xpisar.wz.cz/${PN}/dist/${P}.tar.bz2"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 ~mips ~x86"
 fi
 
 LICENSE="GPL-3"
