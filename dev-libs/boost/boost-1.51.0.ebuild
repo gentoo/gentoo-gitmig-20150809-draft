@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.51.0.ebuild,v 1.1 2012/10/25 22:28:45 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.51.0.ebuild,v 1.2 2012/10/30 23:28:10 floppym Exp $
 
 EAPI="5"
 PYTHON_DEPEND="python? *"
@@ -591,31 +591,5 @@ pkg_postinst() {
 		rm  "${ROOT}/etc/eselect/boost/active" || die -q "Unable to remove \"${ROOT}/etc/eselect/boost/active\" symlink"
 	else
 		[[ -e "${ROOT}/etc/eselect/boost/active" ]] && die -q "\"${ROOT}/etc/eselect/boost/active\" exists and isn't a symlink"
-	fi
-
-	if use python; then
-		if use mpi; then
-			create_mpi.py() {
-				echo "from boost_${MAJOR_PV}.mpi import *" > "${EROOT}$(python_get_sitedir -b)/mpi.py"
-			}
-			python_execute_function -q create_mpi.py
-		fi
-
-		python_mod_optimize boost_${MAJOR_PV} $(use mpi && echo mpi.py)
-	fi
-}
-
-pkg_postrm() {
-	if use python; then
-		if use mpi; then
-			delete_mpi.py() {
-				if [[ "$(<"${EROOT}$(python_get_sitedir -b)/mpi.py")" == "from boost_${MAJOR_PV}.mpi import *" ]]; then
-					rm -f "${EROOT}$(python_get_sitedir -b)/mpi.py"
-				fi
-			}
-			python_execute_function -q delete_mpi.py
-		fi
-
-		python_mod_cleanup boost_${MAJOR_PV} $(use mpi && echo mpi.py)
 	fi
 }

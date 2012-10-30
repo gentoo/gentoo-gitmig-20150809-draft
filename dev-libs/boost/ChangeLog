@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.267 2012/10/30 23:11:53 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.268 2012/10/30 23:28:10 floppym Exp $
+
+  30 Oct 2012; Mike Gilbert <floppym@gentoo.org> boost-1.51.0.ebuild:
+  Remove python_mod_optimize call; boost_1_51 does not exist in site-packages.
 
   30 Oct 2012; Mike Gilbert <floppym@gentoo.org> boost-1.48.0-r2.ebuild,
   boost-1.49.0-r1.ebuild, boost-1.50.0-r2.ebuild:
