@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/oclhashcat-plus-bin/oclhashcat-plus-bin-0.09.ebuild,v 1.1 2012/09/10 01:07:49 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/oclhashcat-plus-bin/oclhashcat-plus-bin-0.09.ebuild,v 1.2 2012/10/30 16:30:44 zerochaos Exp $
 
 EAPI=4
 
@@ -35,17 +35,6 @@ QA_PREBUILT="*Hashcat-plus*.bin"
 src_install() {
 	dodoc docs/*
 	rm -r *.exe docs || die
-
-	if ! use amd64; then
-		rm oclHashcat-plus64.bin || die
-		rm cudaHashcat-plus64.bin || die
-		rm kernels/4098/*64* kernels/4318/*64* || die
-	fi
-	if ! use x86; then
-		rm oclHashcat-plus32.bin || die
-		rm cudaHashcat-plus32.bin || die
-		rm kernels/4098/*32* kernels/4318/*32* || die
-	fi
 
 	if ! use video_cards_fglrx; then
 		rm -r kernels/4098 || die
