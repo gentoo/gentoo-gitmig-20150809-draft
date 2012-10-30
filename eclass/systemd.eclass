@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/systemd.eclass,v 1.15 2012/09/27 16:35:42 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/systemd.eclass,v 1.16 2012/10/30 20:24:09 mgorny Exp $
 
 # @ECLASS: systemd.eclass
 # @MAINTAINER:
@@ -35,7 +35,7 @@ esac
 # @DESCRIPTION:
 # Get unprefixed unitdir.
 _systemd_get_unitdir() {
-	echo -n /usr/lib/systemd/system
+	echo /usr/lib/systemd/system
 }
 
 # @FUNCTION: systemd_get_unitdir
@@ -46,7 +46,7 @@ systemd_get_unitdir() {
 	has "${EAPI:-0}" 0 1 2 && ! use prefix && EPREFIX=
 	debug-print-function ${FUNCNAME} "${@}"
 
-	echo -n "${EPREFIX}$(_systemd_get_unitdir)"
+	echo "${EPREFIX}$(_systemd_get_unitdir)"
 }
 
 # @FUNCTION: systemd_dounit
@@ -149,7 +149,7 @@ systemd_with_unitdir() {
 	debug-print-function ${FUNCNAME} "${@}"
 	local optname=${1:-systemdsystemunitdir}
 
-	echo -n --with-${optname}="$(systemd_get_unitdir)"
+	echo --with-${optname}="$(systemd_get_unitdir)"
 }
 
 # @FUNCTION: systemd_to_myeconfargs
