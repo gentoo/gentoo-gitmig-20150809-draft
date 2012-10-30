@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/udev.eclass,v 1.2 2012/10/30 20:03:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/udev.eclass,v 1.3 2012/10/30 20:26:54 ssuominen Exp $
 
 # @ECLASS: udev.eclass
 # @MAINTAINER:
@@ -37,9 +37,9 @@ DEPEND="virtual/pkgconfig"
 # Get unprefixed udevdir.
 _udev_get_udevdir() {
 	if $($(tc-getPKG_CONFIG) --exists udev); then
-		echo -n "$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
+		echo "$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
 	else
-		echo -n /lib/udev
+		echo /lib/udev
 	fi
 }
 
@@ -52,5 +52,5 @@ udev_get_udevdir() {
 	has "${EAPI:-0}" 0 1 2 && ! use prefix && EPREFIX=
 	debug-print-function ${FUNCNAME} "${@}"
 
-	echo -n "${EPREFIX}$(_udev_get_udevdir)"
+	echo "${EPREFIX}$(_udev_get_udevdir)"
 }
