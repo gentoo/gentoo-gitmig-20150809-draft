@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/mosh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/ChangeLog,v 1.31 2012/10/19 20:57:56 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/ChangeLog,v 1.32 2012/10/30 00:28:06 xmw Exp $
+
+  30 Oct 2012; Michael Weber <xmw@gentoo.org> mosh-1.2.2.ebuild,
+  mosh-1.2.3.ebuild, mosh-9999.ebuild:
+  Fix bash-comp paths (bug 440124, thanks Marcin Mirosław)
 
   19 Oct 2012; Michael Weber <xmw@gentoo.org> -mosh-1.2.2.95_rc1.ebuild,
   +mosh-1.2.3.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/mosh-9999.ebuild,v 1.11 2012/05/28 16:43:19 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/mosh-9999.ebuild,v 1.12 2012/10/30 00:28:06 xmw Exp $
 
 EAPI=4
 EGIT_REPO_URI="https://github.com/keithw/mosh.git"
@@ -61,4 +61,10 @@ src_install() {
 		newbin ${myprog} ${PN}-$(basename ${myprog})
 		elog "${myprog} installed as ${PN}-$(basename ${myprog})"
 	done
+
+	if use bash-completion ; then
+		insinto /usr/share/bash-completion
+		doins "${D}"/etc/bash_completion.d/mosh
+		rm -rf "${D}"/etc/bash_completion.d
+	fi
 }
