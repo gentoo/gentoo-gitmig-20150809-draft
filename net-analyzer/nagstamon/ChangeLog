@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagstamon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/ChangeLog,v 1.33 2012/09/05 08:05:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/ChangeLog,v 1.34 2012/10/30 20:20:02 idl0r Exp $
+
+  30 Oct 2012; Christian Ruppert <idl0r@gentoo.org> -nagstamon-0.9.8.ebuild,
+  -files/nagstamon-0.9.5-resources.patch:
+  Cleanup
 
   05 Sep 2012; Justin Lecher <jlec@gentoo.org> nagstamon-0.9.8.ebuild,
   nagstamon-0.9.9.ebuild:
