@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.41 2012/10/12 22:53:59 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.42 2012/10/30 05:49:45 cardoe Exp $
 
 EAPI=4
 
-#BACKPORTS=1
-#AUTOTOOLIZE=yes
+#BACKPORTS=85e8c146
+AUTOTOOLIZE=yes
 
 MY_P="${P/_rc/-rc}"
 
@@ -22,10 +22,10 @@ if [[ ${PV} = *9999* ]]; then
 	SRC_URI=""
 	KEYWORDS=""
 else
-	SRC_URI="http://libvirt.org/sources/${MY_P}.tar.gz
-		ftp://libvirt.org/libvirt/${MY_P}.tar.gz
+	SRC_URI="http://libvirt.org/sources/stable_updates/${MY_P}.tar.gz
+		ftp://libvirt.org/libvirt/stable_updates/${MY_P}.tar.gz
 		${BACKPORTS:+
-			http://dev.gentoo.org/~cardoe/distfiles/${MY_P}-${BACKPORTS}.tar.bz2}"
+			http://dev.gentoo.org/~cardoe/distfiles/${MY_P}-${BACKPORTS}.tar.xz}"
 	KEYWORDS="~amd64 ~x86"
 fi
 S="${WORKDIR}/${P%_rc*}"
@@ -35,8 +35,8 @@ HOMEPAGE="http://www.libvirt.org/"
 LICENSE="LGPL-2.1"
 SLOT="0"
 IUSE="audit avahi +caps debug iscsi +libvirtd lvm +lxc +macvtap nfs \
-	nls numa openvz parted pcap phyp policykit python qemu sasl selinux +udev \
-	uml +vepa virtualbox virt-network xen elibc_glibc"
+	nls numa openvz parted pcap phyp policykit python qemu rbd sasl \
+	selinux +udev uml +vepa virtualbox virt-network xen elibc_glibc"
 REQUIRED_USE="libvirtd? ( || ( lxc openvz qemu uml virtualbox xen ) )
 	lxc? ( caps libvirtd )
 	openvz? ( libvirtd )
@@ -49,13 +49,14 @@ REQUIRED_USE="libvirtd? ( || ( lxc openvz qemu uml virtualbox xen ) )
 # gettext.sh command is used by the libvirt command wrappers, and it's
 # non-optional, so put it into RDEPEND.
 # We can use both libnl:1.1 and libnl:3, but if you have both installed, the
-# package will use 1.1 by default
+# package will use 3 by default. Since we don't have slot pinning in an API,
+# we must go with the most recent
 RDEPEND="sys-libs/readline
 	sys-libs/ncurses
 	>=net-misc/curl-7.18.0
 	dev-libs/libgcrypt
 	>=dev-libs/libxml2-2.7.6
-	dev-libs/libnl:1.1
+	dev-libs/libnl:3
 	>=net-libs/gnutls-1.0.25
 	net-libs/libssh2
 	sys-apps/dmidecode
@@ -82,10 +83,11 @@ RDEPEND="sys-libs/readline
 	pcap? ( >=net-libs/libpcap-1.0.0 )
 	policykit? ( >=sys-auth/polkit-0.9 )
 	qemu? (
-		|| ( app-emulation/qemu-kvm >=app-emulation/qemu-0.10.0 )
+		>=app-emulation/qemu-0.13.0
 		dev-libs/yajl
 		sys-power/pm-utils
 	)
+	rbd? ( sys-cluster/ceph )
 	sasl? ( dev-libs/cyrus-sasl )
 	selinux? ( >=sys-libs/libselinux-2.0.85 )
 	virtualbox? ( || ( app-emulation/virtualbox >=app-emulation/virtualbox-bin-2.2.0 ) )
@@ -101,6 +103,7 @@ RDEPEND="sys-libs/readline
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	app-text/xhtml1
+	dev-libs/libxslt
 	=dev-lang/python-2*"
 
 LXC_CONFIG_CHECK="
@@ -110,13 +113,11 @@ LXC_CONFIG_CHECK="
 	~CPUSETS
 	~CGROUP_CPUACCT
 	~RESOURCE_COUNTERS
-	~CGROUP_MEM_RES_CTLR
 	~CGROUP_SCHED
 	~BLK_CGROUP
 	~NAMESPACES
 	~UTS_NS
 	~IPC_NS
-	~USER_NS
 	~PID_NS
 	~NET_NS
 	~DEVPTS_MULTIPLE_INSTANCES
@@ -145,6 +146,19 @@ pkg_setup() {
 	enewgroup qemu 77
 	enewuser qemu 77 -1 -1 qemu kvm
 
+	# Some people used the masked ebuild which was not adding the qemu
+	# user to the kvm group originally. This results in VMs failing to
+	# start for some users. bug #430808
+	egetent group kvm | grep -q qemu
+	if [[ $? -ne 0 ]]; then
+		gpasswd -a qemu kvm
+	fi
+
+	# Handle specific kernel versions for different features
+	kernel_is lt 3 5 && LXC_CONFIG_CHECK+=" ~USER_NS"
+	kernel_is lt 3 6 && LXC_CONFIG_CHECK+=" ~CGROUP_MEM_RES_CTLR" || \
+						LXC_CONFIG_CHECK+=" ~MEMCG"
+
 	CONFIG_CHECK=""
 	use lxc && CONFIG_CHECK+="${LXC_CONFIG_CHECK}"
 	use macvtap && CONFIG_CHECK+="${MACVTAP}"
@@ -155,6 +169,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	touch "${S}/.mailmap"
 	[[ -n ${BACKPORTS} ]] && \
 		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" \
 			epatch
@@ -174,6 +189,19 @@ src_prepare() {
 	epatch_user
 
 	[[ -n ${AUTOTOOLIZE} ]] && eautoreconf
+
+	# Tweak the init script
+	local avahi_init=
+	local iscsi_init=
+	local rbd_init=
+	cp "${FILESDIR}/libvirtd.init-r10" "${S}/libvirtd.init"
+	use avahi && avahi_init='avahi-daemon'
+	use iscsi && iscsi_init='iscsid'
+	use rbd && rbd_init='ceph'
+
+	sed -e "s/USE_FLAG_AVAHI/${avahi_init}/" -i "${S}/libvirtd.init"
+	sed -e "s/USE_FLAG_ISCSI/${iscsi_init}/" -i "${S}/libvirtd.init"
+	sed -e "s/USE_FLAG_RBD/${rbd_init}/" -i "${S}/libvirtd.init"
 }
 
 src_configure() {
@@ -192,7 +220,6 @@ src_configure() {
 	 # leave it automagic as it depends on the version of xen used.
 	use xen || myconf+=" --without-libxl"
 	use xen || myconf+=" --without-xenapi"
-
 	myconf="${myconf} $(use_with openvz)"
 	myconf="${myconf} $(use_with lxc)"
 	if use virtualbox && has_version app-emulation/virtualbox-ose; then
@@ -205,6 +232,7 @@ src_configure() {
 	myconf="${myconf} $(use_with qemu yajl)" # Use QMP over HMP
 	myconf="${myconf} $(use_with phyp)"
 	myconf="${myconf} --with-esx"
+	myconf="${myconf} --with-vmware"
 
 	## additional host drivers
 	myconf="${myconf} $(use_with virt-network network)"
@@ -213,7 +241,7 @@ src_configure() {
 	myconf="${myconf} $(use_with iscsi storage-iscsi)"
 	myconf="${myconf} $(use_with parted storage-disk)"
 	myconf="${myconf} $(use_with lvm storage-mpath)"
-	#myconf="${myconf} --without-storage-rbd"
+	myconf="${myconf} $(use_with rbd storage-rbd)"
 	myconf="${myconf} $(use_with numa numactl)"
 	myconf="${myconf} $(use_with numa numad)"
 	myconf="${myconf} $(use_with selinux)"
@@ -257,6 +285,9 @@ src_configure() {
 
 	# locking support
 	myconf="${myconf} --without-sanlock"
+
+	# DBus access to iptables/ebtables and friends
+	myconf="${myconf} --without-firewalld"
 
 	# this is a nasty trick to work around the problem in bug
 	# #275073. The reason why we don't solve this properly is that
@@ -304,8 +335,8 @@ src_install() {
 	use libvirtd || return 0
 	# From here, only libvirtd-related instructions, be warned!
 
-	newinitd "${FILESDIR}/libvirtd.init-r9" libvirtd || die
-	newconfd "${FILESDIR}/libvirtd.confd-r3" libvirtd || die
+	newinitd "${S}/libvirtd.init" libvirtd || die
+	newconfd "${FILESDIR}/libvirtd.confd-r4" libvirtd || die
 
 	keepdir /var/lib/libvirt/images
 }
