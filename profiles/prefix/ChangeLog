@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.366 2012/10/30 17:50:49 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.367 2012/10/30 20:28:53 grobian Exp $
+
+  30 Oct 2012; Fabian Groffen <grobian@gentoo.org>
+  +darwin/macos/10.5/ppc/package.unmask:
+  Unmask soylatte-jdk-bin on ppc-macos/10.5 now we added 7
 
   30 Oct 2012; Fabian Groffen <grobian@gentoo.org>
   darwin/macos/10.5/make.defaults, darwin/macos/10.6/make.defaults,
