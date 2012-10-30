@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libdbusmenu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/ChangeLog,v 1.21 2012/08/05 10:40:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/ChangeLog,v 1.22 2012/10/30 07:22:29 ssuominen Exp $
+
+  30 Oct 2012; Samuli Suominen <ssuominen@gentoo.org> libdbusmenu-0.6.2.ebuild:
+  Stop using testsuite because upstream is now using valgrind which randomly
+  fails based on host system wrt #440192
 
   05 Aug 2012; Samuli Suominen <ssuominen@gentoo.org> libdbusmenu-0.6.2.ebuild:
   Pull in dev-libs/glib >= 2.32 for symbol g_variant_new_fixed_array wrt

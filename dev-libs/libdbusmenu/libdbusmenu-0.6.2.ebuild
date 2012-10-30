@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/libdbusmenu-0.6.2.ebuild,v 1.4 2012/08/05 10:40:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/libdbusmenu-0.6.2.ebuild,v 1.5 2012/10/30 07:22:29 ssuominen Exp $
 
 EAPI=4
 
 AYATANA_VALA_VERSION=0.16
 
-inherit eutils flag-o-matic virtualx
+inherit eutils flag-o-matic
 
 DESCRIPTION="Library to pass menu structure across DBus"
 HOMEPAGE="http://launchpad.net/dbusmenu"
@@ -15,7 +15,7 @@ SRC_URI="http://launchpad.net/${PN/lib}/${PV%.*}/${PV}/+download/${P}.tar.gz"
 LICENSE="LGPL-2.1 LGPL-3"
 SLOT="3"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug gtk +introspection test"
+IUSE="debug gtk +introspection"
 
 RDEPEND=">=dev-libs/glib-2.32
 	>=dev-libs/dbus-glib-0.100
@@ -27,24 +27,14 @@ DEPEND="${RDEPEND}
 	app-text/gnome-doc-utils
 	dev-util/intltool
 	virtual/pkgconfig
-	introspection? ( dev-lang/vala:${AYATANA_VALA_VERSION}[vapigen] )
-	test? (
-		>=dev-libs/json-glib-0.14[introspection?]
-		dev-util/dbus-test-runner
-		)"
-
-src_prepare() {
-	if use test; then
-		sed -i -e 's:-DG_DISABLE_DEPRECATED::' tests/Makefile.{am,in} || die #391103, #414323
-	fi
-}
+	introspection? ( dev-lang/vala:${AYATANA_VALA_VERSION}[vapigen] )"
 
 src_configure() {
 	append-flags -Wno-error #414323
 
 	use introspection && export VALA_API_GEN="$(type -P vapigen-${AYATANA_VALA_VERSION})"
 
-	# dumper extra tool is only for GTK+-2.x
+	# dumper extra tool is only for GTK+-2.x, tests use valgrind which is stupid
 	econf \
 		--docdir=/usr/share/doc/${PF} \
 		--disable-static \
@@ -52,7 +42,7 @@ src_configure() {
 		--disable-scrollkeeper \
 		$(use_enable gtk) \
 		--disable-dumper \
-		$(use_enable test tests) \
+		--disable-tests \
 		$(use_enable introspection) \
 		$(use_enable introspection vala) \
 		$(use_enable debug massivedebugging) \
@@ -60,9 +50,7 @@ src_configure() {
 		--with-gtk=3
 }
 
-src_test() {
-	Xemake check
-}
+src_test() { :; } #440192
 
 src_install() {
 	emake -j1 DESTDIR="${D}" install
