@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.18.ebuild,v 1.4 2012/10/30 19:04:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.18.ebuild,v 1.5 2012/10/30 19:53:17 ssuominen Exp $
 
 EAPI=4
 
 # PYTHON_DEPEND="test? 3"
 # inherit python
 
-inherit eutils systemd toolchain-funcs
+inherit eutils systemd udev
 
 DESCRIPTION="D-Bus abstraction for enumerating power devices and querying history and statistics"
 HOMEPAGE="http://upower.freedesktop.org/"
@@ -77,10 +77,7 @@ src_configure() {
 }
 
 src_install() {
-	local udevdir=/lib/udev
-	use kernel_linux && udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
-
-	emake DESTDIR="${D}" udevrulesdir="${udevdir}"/rules.d install
+	emake DESTDIR="${D}" udevrulesdir="$(udev_get_udevdir)"/rules.d install
 
 	dodoc AUTHORS HACKING NEWS README
 	keepdir /var/lib/upower #383091
