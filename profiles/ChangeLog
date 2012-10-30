@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7076 2012/10/29 15:11:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7077 2012/10/30 00:21:22 chainsaw Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Oct 2012; Tony Vroon <chainsaw@gentoo.org> package.mask:
+  Mask 11.0.0 release due to the amount of work needed to build. Release is
+  suspect and will need additional testing.
 
   29 Oct 2012; Michał Górny <mgorny@gentoo.org> package.mask:
   Mask the newer virtual for argparse as well.
