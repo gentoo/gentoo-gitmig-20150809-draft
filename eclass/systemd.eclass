@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/systemd.eclass,v 1.17 2012/10/30 21:29:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/systemd.eclass,v 1.18 2012/10/30 21:56:31 mgorny Exp $
 
 # @ECLASS: systemd.eclass
 # @MAINTAINER:
@@ -162,6 +162,17 @@ systemd_with_unitdir() {
 	local optname=${1:-systemdsystemunitdir}
 
 	echo --with-${optname}="$(systemd_get_unitdir)"
+}
+
+# @FUNCTION: systemd_with_utildir
+# @DESCRIPTION:
+# Output '--with-systemdsystemutildir' as used by some packages to install
+# systemd helpers. This function always succeeds. Its output may be quoted
+# in order to preserve whitespace in paths.
+systemd_with_utildir() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	echo --with-systemdutildir="$(systemd_get_utildir)"
 }
 
 # @FUNCTION: systemd_to_myeconfargs
