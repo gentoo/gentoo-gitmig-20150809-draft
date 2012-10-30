@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.10.2-r3.ebuild,v 1.3 2012/10/30 05:12:33 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.10.2-r3.ebuild,v 1.4 2012/10/30 12:01:54 ago Exp $
 
 EAPI=4
 
@@ -26,7 +26,7 @@ else
 		ftp://libvirt.org/libvirt/${MY_P}.tar.gz
 		${BACKPORTS:+
 			http://dev.gentoo.org/~cardoe/distfiles/${MY_P}-${BACKPORTS}.tar.xz}"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 ~x86"
 fi
 S="${WORKDIR}/${P%_rc*}"
 
