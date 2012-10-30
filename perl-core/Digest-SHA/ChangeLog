@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Digest-SHA
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Digest-SHA/ChangeLog,v 1.35 2012/06/24 15:39:03 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Digest-SHA/ChangeLog,v 1.36 2012/10/30 13:49:07 grobian Exp $
+
+  30 Oct 2012; Fabian Groffen <grobian@gentoo.org> Digest-SHA-5.710.0.ebuild:
+  Marked ~x64-freebsd
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
