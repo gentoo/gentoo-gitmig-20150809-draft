@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qemu-guest-agent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-guest-agent/ChangeLog,v 1.4 2012/10/29 07:00:46 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-guest-agent/ChangeLog,v 1.5 2012/10/30 21:12:20 cardoe Exp $
+
+  30 Oct 2012; Doug Goldstein <cardoe@gentoo.org> files/qemu-ga.init:
+  Remove empty depend to fix bug #436310
 
 *qemu-guest-agent-1.2.0 (29 Oct 2012)
 
