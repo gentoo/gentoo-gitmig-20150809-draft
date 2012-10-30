@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/starpu/starpu-1.0.2.ebuild,v 1.3 2012/10/30 15:00:48 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/starpu/starpu-1.0.4.ebuild,v 1.1 2012/10/30 15:00:48 bicatali Exp $
 
 EAPI=4
 
 AUTOTOOLS_AUTORECONF=1
 inherit autotools-utils toolchain-funcs
 
-PID=31334
+PID=31588
 
 DESCRIPTION="Unified runtime system for heterogeneous multicore architectures"
 HOMEPAGE="http://runtime.bordeaux.inria.fr/StarPU/"
@@ -35,13 +35,10 @@ DEPEND="${RDEPEND}
 	test? ( gcc-plugin? ( dev-scheme/guile ) )"
 
 PATCHES=(
-	"${FILESDIR}"/${PN}-1.0.1-detect-qt.patch
 	"${FILESDIR}"/${PN}-1.0.1-respect-cflags.patch
 	"${FILESDIR}"/${PN}-1.0.1-system-blas.patch
-	"${FILESDIR}"/${PN}-1.0.1-no-examples.patch
 	"${FILESDIR}"/${PN}-1.0.1-no-pc-ldflags.patch
 )
-
 
 src_configure() {
 	use blas && export BLAS_LIBS="$($(tc-getPKG_CONFIG) --libs blas)"
