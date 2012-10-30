@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/w3af
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/w3af/ChangeLog,v 1.14 2012/03/01 22:15:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/w3af/ChangeLog,v 1.15 2012/10/30 11:04:08 ago Exp $
+
+  30 Oct 2012; <ago@gentoo.org> w3af-1.1.ebuild:
+  Stable for amd64, wrt bug #435198
 
   01 Mar 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   add proxy-maintainers as herd
