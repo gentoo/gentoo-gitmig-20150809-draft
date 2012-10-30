@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7077 2012/10/30 00:21:22 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7078 2012/10/30 00:33:36 naota Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Oct 2012; <naota@gentoo.org> package.mask:
+  Mask =net-misc/dropbox-1.4.17 for testing.
 
   30 Oct 2012; Tony Vroon <chainsaw@gentoo.org> package.mask:
   Mask 11.0.0 release due to the amount of work needed to build. Release is
