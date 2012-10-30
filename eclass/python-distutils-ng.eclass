@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.28 2012/09/27 16:35:41 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-distutils-ng.eclass,v 1.29 2012/10/30 17:22:33 mgorny Exp $
 
 # @ECLASS: python-distutils-ng
 # @MAINTAINER:
@@ -98,9 +98,9 @@ _python-distutils-ng_get_binary_for_implementation() {
 	local impl="${1/_/.}"
 	case "${impl}" in
 		python?.?|jython?.?)
-			echo "/usr/bin/${impl}" ;;
+			echo "${EPREFIX}/usr/bin/${impl}" ;;
 		pypy?.?)
-			echo "/usr/bin/pypy-c${impl: -3}" ;;
+			echo "${EPREFIX}/usr/bin/pypy-c${impl: -3}" ;;
 		*)
 			die "Unsupported implementation: ${1}" ;;
 	esac
@@ -400,7 +400,7 @@ python-distutils-ng_src_install() {
 	fi
 
 	if [[ -z "${PYTHON_DISABLE_SCRIPT_REDOS}" ]]; then
-		for script_file in $(find "${D}"{,usr/}{,s}bin/ -type f -executable 2> /dev/null); do
+		for script_file in $(find "${ED}"{,usr/}{,s}bin/ -type f -executable 2> /dev/null); do
 			python-distutils-ng_redoscript "/${script_file#${D}}"
 		done
 	fi
