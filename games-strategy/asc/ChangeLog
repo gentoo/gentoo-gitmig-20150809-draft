@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/asc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/ChangeLog,v 1.42 2012/07/16 15:44:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/ChangeLog,v 1.43 2012/10/30 15:07:24 tupone Exp $
+
+  30 Oct 2012; Tupone Alfredo <tupone@gentoo.org> asc-2.5.0.0.ebuild,
+  +files/asc-2.5.0.0-gcc47.patch:
+  Fix build with gcc-4.7 Bug #423377 by Diego
+  Migration to EAPI 4
 
   16 Jul 2012; Michael Sterrett <mr_bones_@gentoo.org> -asc-2.4.0.0.ebuild:
   old

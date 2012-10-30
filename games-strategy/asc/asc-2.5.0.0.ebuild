@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/asc-2.5.0.0.ebuild,v 1.3 2012/06/22 07:45:30 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/asc-2.5.0.0.ebuild,v 1.4 2012/10/30 15:07:24 tupone Exp $
 
-EAPI=2
+EAPI=4
 WX_GTK_VER=2.8
-inherit toolchain-funcs flag-o-matic wxwidgets games
+inherit eutils toolchain-funcs flag-o-matic wxwidgets games
 
 DESCRIPTION="turn based strategy game designed in the tradition of the Battle Isle series"
 HOMEPAGE="http://www.asc-hq.org/"
@@ -19,7 +19,6 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="app-arch/bzip2
-	virtual/jpeg
 	media-libs/libsdl
 	media-libs/libpng
 	media-libs/sdl-image[gif,jpeg,png]
@@ -27,17 +26,19 @@ RDEPEND="app-arch/bzip2
 	media-libs/sdl-sound
 	dev-libs/boost
 	dev-games/physfs
-	media-libs/libvorbis
 	media-libs/xvid
 	dev-libs/expat
 	media-libs/freetype
 	dev-lang/lua
 	x11-libs/wxGTK:2.8[X]
 	dev-libs/libsigc++:1.2"
+
 DEPEND="${RDEPEND}
 	dev-lang/perl
 	virtual/pkgconfig
 	app-arch/zip"
+
+PATCHES=( "${FILESDIR}"/${P}-gcc47.patch )
 
 src_unpack() {
 	local f
@@ -61,15 +62,13 @@ src_configure() {
 		replace-flags -O3 -O2
 	fi
 	egamesconf \
-		--disable-dependency-tracking \
 		--disable-paraguitest \
 		--disable-paragui \
 		--datadir="${GAMES_DATADIR_BASE}"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog README TODO
+	default
 	dohtml -r doc/*
 	prepgamesdirs
 }
