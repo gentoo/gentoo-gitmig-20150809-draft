@@ -3,7 +3,7 @@
 <pkgmetadata>
 	<maintainer>
 		<email>idl0r@gentoo.org</email>
-		<name>Christian Ruppert (idl0r)</name>
+		<name>Christian Ruppert</name>
 	</maintainer>
 	<longdescription lang="en">
 		colorsvn is the Subversion output colorizer. Colorsvn was extracted from
