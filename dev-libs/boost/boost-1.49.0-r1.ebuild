@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.49.0-r1.ebuild,v 1.9 2012/10/25 22:04:33 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.49.0-r1.ebuild,v 1.10 2012/10/30 23:11:53 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? *"
@@ -609,15 +609,5 @@ pkg_postinst() {
 	if [[ ! -h "${ROOT}etc/eselect/boost/active" ]]; then
 		elog "No active boost version found. Calling eselect to select one..."
 		eselect boost update || ewarn "eselect boost update failed."
-	fi
-
-	if use python; then
-		python_mod_optimize boost_${MAJOR_PV}
-	fi
-}
-
-pkg_postrm() {
-	if use python; then
-		python_mod_cleanup boost_${MAJOR_PV}
 	fi
 }
