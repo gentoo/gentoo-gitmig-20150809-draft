@@ -16,5 +16,7 @@
     <flag name="ais">Support clustering using the Application Interface Specification framework</flag>
     <flag name="osplookup">Support secure peering using the Open Settlement Protocol</flag>
     <flag name="http">Enable embedded web server</flag>
+    <flag name="cluster">Enable high-availability support through the Corosync Cluster Engine</flag>
+    <flag name="ilbc">Enable the Internet Low Bitrate Codec (iLBC)</flag>
   </use>
 </pkgmetadata>

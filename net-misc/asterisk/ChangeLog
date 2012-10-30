@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.417 2012/10/09 08:38:23 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.418 2012/10/30 00:30:35 chainsaw Exp $
+
+*asterisk-11.0.0 (30 Oct 2012)
+
+  30 Oct 2012; Tony Vroon <chainsaw@gentoo.org> +asterisk-11.0.0.ebuild,
+  metadata.xml:
+  Initial release on 11 (LTS) branch. Distro patchset & ebuild menuselect logic
+  ported by Oliver Jaksch. Build system tamed and parallelised by Erik Wallin.
+  Closes bug #432894. Patch from Pacho Ramos inverts logic in gmime detection
+  and facilitates the pending removal of 2.4 from the portage tree, closes bug
+  #439846. This is currently masked and not recommended for deployment.
 
 *asterisk-10.9.0 (09 Oct 2012)
 *asterisk-1.8.17.0 (09 Oct 2012)
