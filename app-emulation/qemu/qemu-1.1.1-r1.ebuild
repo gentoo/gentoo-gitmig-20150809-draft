@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.1.1-r1.ebuild,v 1.3 2012/10/28 09:27:24 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.1.1-r1.ebuild,v 1.4 2012/10/30 20:53:33 cardoe Exp $
 
 EAPI="4"
 
@@ -60,8 +60,6 @@ REQUIRED_USE="static? ( !alsa !pulseaudio )
 # Yep, you need both libcap and libcap-ng since virtfs only uses libcap.
 RDEPEND="
 	!app-emulation/kqemu
-	!app-emulation/qemu
-	!<app-emulation/qemu-1.0
 	>=dev-libs/glib-2.0
 	media-libs/libpng
 	sys-apps/pciutils
