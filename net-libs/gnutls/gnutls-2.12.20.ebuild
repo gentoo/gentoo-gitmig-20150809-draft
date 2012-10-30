@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.12.20.ebuild,v 1.10 2012/10/19 19:28:47 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.12.20.ebuild,v 1.11 2012/10/30 18:07:48 zerochaos Exp $
 
 EAPI=4
 
@@ -30,6 +30,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd6
 IUSE="bindist +cxx doc examples guile lzo +nettle nls pkcs11 static-libs test zlib"
 
 RDEPEND=">=dev-libs/libtasn1-0.3.4
+	<dev-libs/libtasn1-3
 	guile? ( >=dev-scheme/guile-1.8[networking] )
 	nettle? ( >=dev-libs/nettle-2.1[gmp] )
 	!nettle? ( >=dev-libs/libgcrypt-1.4.0 )

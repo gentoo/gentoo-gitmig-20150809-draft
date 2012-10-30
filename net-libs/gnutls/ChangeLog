@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.387 2012/10/19 19:28:47 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.388 2012/10/30 18:07:48 zerochaos Exp $
+
+  30 Oct 2012; Rick Farina <zerochaos@gentoo.org> gnutls-2.12.20.ebuild:
+  gnutls-2 is not compatible with libtasn1-3 so adjust deps accordingly
 
   19 Oct 2012; Dane Smith <c1pher@gentoo.org> -gnutls-2.12.18.ebuild,
   gnutls-2.12.20.ebuild, +files/gnutls-2.12.20-guile-parallelmake.patch,
