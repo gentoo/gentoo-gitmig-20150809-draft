@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.178 2012/10/30 20:20:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.179 2012/10/30 20:51:44 vapier Exp $
 
 # @ECLASS: flag-o-matic.eclass
 # @MAINTAINER:
@@ -265,8 +265,9 @@ replace-cpu-flags() {
 }
 
 _is_flagq() {
-	local x
-	for x in ${!1} ; do
+	local x var
+	eval var=\""\${$1[*]}"\"
+	for x in ${var} ; do
 		[[ ${x} == $2 ]] && return 0
 	done
 	return 1
@@ -370,7 +371,7 @@ strip-flags() {
 		done
 
 		# In case we filtered out all optimization flags fallback to -O2
-		if _is_flagq ${var} "-O*" && ! (_is_flagq new "-O*" || _is_flagq new -O) ; then
+		if _is_flagq ${var} "-O*" && ! _is_flagq new "-O*" ; then
 			new+=( -O2 )
 		fi
 
