@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.10.2-r3.ebuild,v 1.2 2012/10/29 07:16:29 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.10.2-r3.ebuild,v 1.3 2012/10/30 05:12:33 cardoe Exp $
 
 EAPI=4
 
@@ -272,6 +272,9 @@ src_configure() {
 
 	# locking support
 	myconf="${myconf} --without-sanlock"
+
+	# DBus access to iptables/ebtables and friends
+	myconf="${myconf} --without-firewalld"
 
 	# this is a nasty trick to work around the problem in bug
 	# #275073. The reason why we don't solve this properly is that
