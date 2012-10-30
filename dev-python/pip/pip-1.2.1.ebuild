@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pip/pip-1.2.1.ebuild,v 1.2 2012/10/29 20:23:12 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pip/pip-1.2.1.ebuild,v 1.3 2012/10/30 17:03:46 ago Exp $
 
 EAPI="4"
 PYTHON_DEPEND="*"
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.pip-installer.org/ http://pypi.python.org/pypi/pip/"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
-KEYWORDS="~amd64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 SLOT="0"
 IUSE="zsh-completion"
 
