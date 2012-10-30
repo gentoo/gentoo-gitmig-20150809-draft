@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/maxima
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.100 2012/08/25 04:10:19 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.101 2012/10/30 16:38:03 grozin Exp $
+
+  30 Oct 2012; Andrey Grozin <grozin@gentoo.org> files/maxima-rmaxima.patch:
+  Fix maxima-rmaxima.patch for cases when maxima is compiled by several lisps,
+  some support readline, some not
 
   25 Aug 2012; Andrey Grozin <grozin@gentoo.org> maxima-5.28.0.ebuild,
   files/maxima-5.28.0-sbcl.patch, files/maxima-5.28.0.patch,
