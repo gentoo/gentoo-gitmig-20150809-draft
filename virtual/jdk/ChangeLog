@@ -1,6 +1,10 @@
 # ChangeLog for virtual/jdk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/ChangeLog,v 1.50 2012/09/16 13:17:36 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/ChangeLog,v 1.51 2012/10/30 20:31:10 grobian Exp $
+
+  30 Oct 2012; Fabian Groffen <grobian@gentoo.org> jdk-1.6.0-r1.ebuild,
+  jdk-1.7.0.ebuild:
+  Marked ~ppc-macos, provided by soylatte-jdk-bin-7
 
   16 Sep 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   jdk-1.5.0.ebuild:
