@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/openpam
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/ChangeLog,v 1.22 2012/05/24 05:04:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/ChangeLog,v 1.23 2012/10/30 12:03:57 aballier Exp $
+
+*openpam-20120526 (30 Oct 2012)
+
+  30 Oct 2012; Alexis Ballier <aballier@gentoo.org> +openpam-20120526.ebuild:
+  version bump
 
   24 May 2012; Mike Frysinger <vapier@gentoo.org> openpam-20071221.ebuild,
   openpam-20111218.ebuild:
