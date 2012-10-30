@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xautolock
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xautolock/ChangeLog,v 1.23 2011/08/11 19:36:23 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xautolock/ChangeLog,v 1.24 2012/10/30 15:20:23 jer Exp $
+
+  30 Oct 2012; Jeroen Roovers <jer@gentoo.org> xautolock-2.2.ebuild:
+  RDEPEND on x11-misc/slimlock too by Ihar Hrachyshka (bug #440276).
 
   11 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> xautolock-2.1-r1.ebuild,
   xautolock-2.2.ebuild:

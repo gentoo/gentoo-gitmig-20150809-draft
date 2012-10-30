@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xautolock/xautolock-2.2.ebuild,v 1.4 2011/08/11 19:36:23 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xautolock/xautolock-2.2.ebuild,v 1.5 2012/10/30 15:20:23 jer Exp $
 
 inherit toolchain-funcs
 
@@ -12,11 +12,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-RDEPEND="|| ( x11-misc/alock
-	x11-misc/i3lock
-	x11-misc/slock
-	x11-misc/xlockmore
-	x11-misc/xtrlock )
+RDEPEND="
+	|| (
+		x11-misc/alock
+		x11-misc/i3lock
+		x11-misc/slimlock
+		x11-misc/slock
+		x11-misc/xlockmore
+		x11-misc/xtrlock
+	)
 	x11-libs/libXScrnSaver"
 DEPEND="${RDEPEND}
 	x11-misc/imake
