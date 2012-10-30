@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.191 2012/10/29 20:12:30 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.192 2012/10/30 17:51:34 ssuominen Exp $
+
+  30 Oct 2012; Samuli Suominen <ssuominen@gentoo.org> ppc64/package.use.force,
+  ppc64/package.use.mask:
+  Instead of masking USE="new-login" completely, force USE="gdm" enabled since
+  it's the only DM with new-login functionality with stable ppc64 keywording.
 
   29 Oct 2012; Doug Goldstein <cardoe@gentoo.org> +ppc64/package.use.force:
   Add package.use.force for ppc64 as it requires binary only SeaBIOS (x86 BIOS)
