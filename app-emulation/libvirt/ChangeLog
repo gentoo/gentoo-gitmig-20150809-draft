@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.227 2012/10/30 05:12:33 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.228 2012/10/30 05:17:42 cardoe Exp $
+
+  30 Oct 2012; Doug Goldstein <cardoe@gentoo.org> libvirt-0.10.2.1.ebuild,
+  files/libvirtd.init-r10:
+  Add a temporary use on dbus until we can come up with a better no-op use to
+  depend on.
 
   30 Oct 2012; Doug Goldstein <cardoe@gentoo.org> libvirt-0.10.2-r3.ebuild,
   libvirt-0.10.2.1.ebuild:

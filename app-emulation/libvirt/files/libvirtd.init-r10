@@ -6,8 +6,7 @@ description_halt="Stops the libvirt daemon without stopping your VMs"
 description_reload="Restarts the libvirt daemon without stopping your VMs"
 
 depend() {
-    USE_FLAG_AVAHI
-    use USE_FLAG_ISCSI USE_FLAG_RBD
+    use USE_FLAG_AVAHI USE_FLAG_ISCSI USE_FLAG_RBD dbus
 	after ntp-client ntpd nfs nfsmount portmap rpc.statd iptables ip6tables ebtables corosync sanlock cgconfig
 }
 
