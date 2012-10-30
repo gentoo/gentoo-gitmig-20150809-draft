@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/vala-common
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vala-common/ChangeLog,v 1.9 2012/10/20 12:12:59 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vala-common/ChangeLog,v 1.10 2012/10/30 17:27:33 jer Exp $
+
+  30 Oct 2012; Jeroen Roovers <jer@gentoo.org> vala-common-0.18.0.ebuild:
+  Stable for HPPA (bug #438374).
 
   20 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
   vala-common-0.18.0.ebuild:
