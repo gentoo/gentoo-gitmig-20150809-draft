@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gweled/gweled-0.9.1.ebuild,v 1.1 2012/09/24 01:54:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gweled/gweled-0.9.1.ebuild,v 1.2 2012/10/30 17:08:39 mr_bones_ Exp $
 
 EAPI=2
 inherit flag-o-matic games
@@ -16,8 +16,7 @@ IUSE=""
 
 RDEPEND="x11-libs/gtk+:2
 	media-libs/libmikmod
-	gnome-base/librsvg:2
-	>=gnome-base/libgnomeui-2"
+	gnome-base/librsvg:2"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
