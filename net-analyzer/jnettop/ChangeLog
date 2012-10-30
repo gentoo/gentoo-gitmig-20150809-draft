@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/jnettop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jnettop/ChangeLog,v 1.26 2012/10/27 15:45:01 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jnettop/ChangeLog,v 1.27 2012/10/30 17:04:06 ago Exp $
+
+  30 Oct 2012; Agostino Sarubbo <ago@gentoo.org> jnettop-0.13.0-r1.ebuild:
+  Stable for amd64, wrt bug #439748
 
   27 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> jnettop-0.13.0-r1.ebuild:
   Add ~amd64-linux keyword
