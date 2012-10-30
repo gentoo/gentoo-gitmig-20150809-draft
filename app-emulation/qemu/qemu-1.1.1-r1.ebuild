@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.1.1-r1.ebuild,v 1.4 2012/10/30 20:53:33 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.1.1-r1.ebuild,v 1.5 2012/10/30 21:01:35 cardoe Exp $
 
 EAPI="4"
 
@@ -52,7 +52,7 @@ for target in ${IUSE_USER_TARGETS}; do
 	IUSE="${IUSE} qemu_user_targets_${target}"
 done
 
-REQUIRED_USE="static? ( !alsa !pulseaudio )
+REQUIRED_USE="static? ( !alsa !pulseaudio !bluetooth )
 	amd64? ( qemu_softmmu_targets_x86_64 )
 	x86? ( qemu_softmmu_targets_x86_64 )
 	virtfs? ( xattr )"

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.1.2-r1.ebuild,v 1.3 2012/10/30 20:53:33 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.1.2-r1.ebuild,v 1.4 2012/10/30 21:01:35 cardoe Exp $
 
 EAPI="4"
 
@@ -39,7 +39,6 @@ IUSE_USER_TARGETS="${COMMON_TARGETS} armeb ppc64abi32 sparc32plus unicore32"
 
 # Setup the default SoftMMU targets, while using the loops
 # below to setup the other targets.
-IUSE="${IUSE}"
 REQUIRED_USE="|| ("
 
 for target in ${IUSE_SOFTMMU_TARGETS}; do
@@ -53,7 +52,7 @@ for target in ${IUSE_USER_TARGETS}; do
 done
 
 REQUIRED_USE="${REQUIRED_USE}
-	static? ( !alsa !pulseaudio )
+	static? ( !alsa !pulseaudio !bluetooth )
 	virtfs? ( xattr )"
 
 # Yep, you need both libcap and libcap-ng since virtfs only uses libcap.
