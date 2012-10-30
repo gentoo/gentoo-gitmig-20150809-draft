@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-augeas
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-augeas/ChangeLog,v 1.23 2012/10/26 09:12:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-augeas/ChangeLog,v 1.24 2012/10/30 17:04:29 ago Exp $
+
+  30 Oct 2012; Agostino Sarubbo <ago@gentoo.org> ruby-augeas-0.4.1.ebuild:
+  Stable for amd64, wrt bug #439732
 
   26 Oct 2012; Hans de Graaff <graaff@gentoo.org> metadata.xml:
   Add to the ruby herd so that we get notified of issues.
