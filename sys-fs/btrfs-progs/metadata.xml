@@ -4,6 +4,10 @@
   <maintainer>
     <email>lavajoe@gentoo.org</email>
   </maintainer>
+  <maintainer>
+	  <email>floppym@gentoo.org</email>
+	  <name>Mike Gilbert</name>
+  </maintainer>
   <use>
     <flag name='debug-utils'>Build additional utils for debugging</flag>
   </use>
