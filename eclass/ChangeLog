@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.489 2012/10/31 01:51:52 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.490 2012/10/31 14:18:41 mgorny Exp $
+
+  31 Oct 2012; Michał Górny <mgorny@gentoo.org> python-r1.eclass:
+  Fix the shebang correcting function to patch shebang only. Thanks to Enlik
+  for the patch.
 
   31 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   gst-plugins10.eclass:
