@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/i7z
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/i7z/ChangeLog,v 1.14 2012/09/12 06:24:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/i7z/ChangeLog,v 1.15 2012/10/31 07:04:11 jlec Exp $
+
+  31 Oct 2012; Justin Lecher <jlec@gentoo.org> i7z-0.27.2.ebuild:
+  Don't install docs twice, #440326; thanks Chris Mayo for an initial patch
 
 *i7z-0.27.2 (12 Sep 2012)
 

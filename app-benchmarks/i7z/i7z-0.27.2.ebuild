@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/i7z/i7z-0.27.2.ebuild,v 1.1 2012/09/12 06:24:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/i7z/i7z-0.27.2.ebuild,v 1.2 2012/10/31 07:04:11 jlec Exp $
 
 EAPI=4
 
@@ -34,9 +34,6 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${ED}" install
-	if use X; then
-		dosbin GUI/i7z_GUI
-	fi
-	dodoc put_cores_o*line.sh MAKEDEV-cpuid-msr
+	emake DESTDIR="${ED}" docdir=/usr/share/doc/${PF} install
+	use X && dosbin GUI/i7z_GUI
 }
