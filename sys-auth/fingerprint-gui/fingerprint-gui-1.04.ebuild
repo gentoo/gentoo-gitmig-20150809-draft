@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/fingerprint-gui/fingerprint-gui-1.04.ebuild,v 1.4 2012/07/09 05:48:42 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/fingerprint-gui/fingerprint-gui-1.04.ebuild,v 1.5 2012/10/31 16:10:50 ssuominen Exp $
 
 EAPI=4
 
-inherit eutils multilib qt4-r2
+inherit eutils multilib qt4-r2 udev
 
 DESCRIPTION="Use Fingerprint Devices with Linux"
 HOMEPAGE="http://www.n-view.net/Appliance/fingerprint/"
@@ -47,8 +47,7 @@ src_install() {
 	if use upekbsapi ; then
 		use amd64 && dolib.so upek/lib64/libbsapi.so
 		use x86 && dolib.so upek/lib/libbsapi.so
-		insinto /$(get_libdir)/udev/rules.d
-		doins upek/91-fingerprint-gui-upek.rules
+		udev_dorules upek/91-fingerprint-gui-upek.rules
 		insinto /etc
 		doins upek/upek.cfg
 		#dodir /var/upek_data
