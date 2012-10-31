@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.49.0-r1.ebuild,v 1.12 2012/10/31 18:27:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.49.0-r2.ebuild,v 1.1 2012/10/31 21:36:31 flameeyes Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? *"
@@ -19,13 +19,12 @@ LICENSE="Boost-1.0"
 SLOT=0
 MAJOR_V="$(get_version_component_range 1-2)"
 KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd"
-IUSE="debug doc +eselect icu mpi python static-libs tools"
+IUSE="debug doc icu mpi python static-libs tools"
 
 RDEPEND="icu? ( >=dev-libs/icu-3.3 )
 	mpi? ( || ( sys-cluster/openmpi[cxx] sys-cluster/mpich2[cxx,threads] ) )
 	sys-libs/zlib
-	!!<=dev-libs/boost-1.35.0-r2
-	>=app-admin/eselect-boost-0.4"
+	!app-admin/eselect-boost"
 DEPEND="${RDEPEND}
 	=dev-util/boost-build-${MAJOR_V}*"
 
@@ -33,24 +32,6 @@ S=${WORKDIR}/${MY_P}
 
 MAJOR_PV=$(replace_all_version_separators _ ${MAJOR_V})
 BJAM="b2-${MAJOR_PV}"
-
-# Usage:
-# _add_line <line-to-add> <profile>
-# ... to add to specific profile
-# or
-# _add_line <line-to-add>
-# ... to add to all profiles for which the use flag set
-
-_add_line() {
-	if [[ -z "$2" ]]; then
-		echo "${1}" >> "${D}usr/share/boost-eselect/profiles/${SLOT}/default"
-		if use debug; then
-			echo "${1}" >> "${D}usr/share/boost-eselect/profiles/${SLOT}/debug"
-		fi
-	else
-		echo "${1}" >> "${D}usr/share/boost-eselect/profiles/${SLOT}/${2}"
-	fi
-}
 
 create_user-config.jam() {
 	local compiler compiler_version compiler_executable
@@ -91,15 +72,6 @@ __EOF__
 pkg_setup() {
 	if use python; then
 		python_pkg_setup
-	fi
-
-	if use debug; then
-		ewarn "The debug USE flag means that a second set of the boost libraries"
-		ewarn "will be built containing debug symbols. You'll be able to select them"
-		ewarn "using the boost-eselect module. But even though the optimization flags"
-		ewarn "you might have set are not stripped, there will be a performance"
-		ewarn "penalty and linking other packages against the debug version"
-		ewarn "of boost is _not_ recommended."
 	fi
 }
 
@@ -243,16 +215,6 @@ src_compile() {
 }
 
 src_install () {
-	dodir /usr/share/boost-eselect/profiles/${SLOT}
-	touch "${D}usr/share/boost-eselect/profiles/${SLOT}/default" || die
-	if use debug; then
-		 touch "${D}usr/share/boost-eselect/profiles/${SLOT}/debug" || die
-	fi
-
-	if use mpi && use python; then
-		_add_line "python_modules=\""
-	fi
-
 	installation() {
 		create_user-config.jam
 
@@ -317,7 +279,6 @@ else:
 	from . import mpi
 del sys
 EOF
-				_add_line "$(python_get_sitedir)/mpi.py:boost_${MAJOR_PV}.mpi"
 			fi
 		fi
 	}
@@ -325,10 +286,6 @@ EOF
 		python_execute_function installation
 	else
 		installation
-	fi
-
-	if use mpi && use python; then
-		_add_line "\""
 	fi
 
 	use python || rm -rf "${D}usr/include/boost-${MAJOR_PV}/boost"/python* || die
@@ -350,22 +307,12 @@ EOF
 		insinto /usr/share/doc/${PF}/html
 		doins LICENSE_1_0.txt
 
-		dosym /usr/include/boost-${MAJOR_PV}/boost /usr/share/doc/${PF}/html/boost
+		dosym /usr/include/boost /usr/share/doc/${PF}/html/boost
 	fi
 
-	pushd "${D}usr/$(get_libdir)" > /dev/null || die
+	dosym boost-${MAJOR_PV}/boost /usr/include/boost
 
-	# Remove (unversioned) symlinks
-	# And check for what we remove to catch bugs
-	# got a better idea how to do it? tell me!
-	local f
-	for f in $(ls -1 ${LIBRARY_TARGETS} | grep -v "${MAJOR_PV}"); do
-		if [[ ! -h "${f}" ]]; then
-			eerror "Tried to remove '${f}' which is a regular file instead of a symlink"
-			die "Slotting/naming of the libraries broken!"
-		fi
-		rm "${f}" || die
-	done
+	pushd "${D}usr/$(get_libdir)" > /dev/null || die
 
 	# The threading libs obviously always gets the "-mt" (multithreading) tag
 	# some packages seem to have a problem with it. Creating symlinks...
@@ -377,7 +324,7 @@ EOF
 	fi
 	local lib
 	for lib in ${THREAD_LIBS}; do
-		dosym ${lib} "/usr/$(get_libdir)/$(sed -e 's/-mt//' <<< ${lib})"
+		dosym ${lib} "/usr/$(get_libdir)/${lib/-mt/}"
 	done
 
 	# The same goes for the mpi libs
@@ -389,7 +336,7 @@ EOF
 		fi
 		local lib
 		for lib in ${MPI_LIBS}; do
-			dosym ${lib} "/usr/$(get_libdir)/$(sed -e 's/-mt//' <<< ${lib})"
+			dosym ${lib} "/usr/$(get_libdir)/${lib/-mt/}"
 		done
 	fi
 
@@ -402,7 +349,7 @@ EOF
 
 		local lib
 		for lib in ${THREAD_DEBUG_LIBS}; do
-			dosym ${lib} "/usr/$(get_libdir)/$(sed -e 's/-mt//' <<< ${lib})"
+			dosym ${lib} "/usr/$(get_libdir)/${lib/-mt/}"
 		done
 
 		if use mpi; then
@@ -414,51 +361,33 @@ EOF
 
 			local lib
 			for lib in ${MPI_DEBUG_LIBS}; do
-				dosym ${lib} "/usr/$(get_libdir)/$(sed -e 's/-mt//' <<< ${lib})"
+				dosym ${lib} "/usr/$(get_libdir)/${lib/-mt/}"
 			done
 		fi
 	fi
 
-	# Create a subdirectory with completely unversioned symlinks
-	# and store the names in the profiles-file for eselect
-	dodir /usr/$(get_libdir)/boost-${MAJOR_PV}
-
-	_add_line "libs=\"" default
 	local f
 	for f in $(ls -1 ${LIBRARY_TARGETS} | grep -v debug); do
-		dosym ../${f} /usr/$(get_libdir)/boost-${MAJOR_PV}/${f/-${MAJOR_PV}}
-		_add_line "/usr/$(get_libdir)/${f}" default
+		dosym ${f} /usr/$(get_libdir)/${f/-${MAJOR_PV}}
 	done
-	_add_line "\"" default
 
 	if use debug; then
-		_add_line "libs=\"" debug
-		dodir /usr/$(get_libdir)/boost-${MAJOR_PV}-debug
+		dodir /usr/$(get_libdir)/boost-debug
 		local f
 		for f in $(ls -1 ${LIBRARY_TARGETS} | grep debug); do
-			dosym ../${f} /usr/$(get_libdir)/boost-${MAJOR_PV}-debug/${f/-${MAJOR_PV}-debug}
-			_add_line "/usr/$(get_libdir)/${f}" debug
+			dosym ../${f} /usr/$(get_libdir)/boost-debug/${f/-${MAJOR_PV}-debug}
 		done
-		_add_line "\"" debug
-
-		_add_line "includes=\"/usr/include/boost-${MAJOR_PV}/boost\"" debug
-		_add_line "suffix=\"-debug\"" debug
 	fi
-
-	_add_line "includes=\"/usr/include/boost-${MAJOR_PV}/boost\"" default
 
 	popd > /dev/null || die
 
 	if use tools; then
 		pushd dist/bin > /dev/null || die
 		# Append version postfix to binaries for slotting
-		_add_line "bins=\""
 		local b
 		for b in *; do
 			newbin "${b}" "${b}-${MAJOR_PV}"
-			_add_line "/usr/bin/${b}-${MAJOR_PV}"
 		done
-		_add_line "\""
 		popd > /dev/null || die
 
 		pushd dist > /dev/null || die
@@ -466,7 +395,6 @@ EOF
 		doins -r share/boostbook
 		# Append version postfix for slotting
 		mv "${D}usr/share/boostbook" "${D}usr/share/boostbook-${MAJOR_PV}" || die
-		_add_line "dirs=\"/usr/share/boostbook-${MAJOR_PV}\""
 		popd > /dev/null || die
 	fi
 
@@ -517,14 +445,3 @@ EOF
 # (failing for no good reason) or completely useless (never failing)
 # there is no point in having them in the ebuild to begin with.
 src_test() { :; }
-
-pkg_postinst() {
-	if use eselect; then
-		eselect boost update || ewarn "eselect boost update failed."
-	fi
-
-	if [[ ! -h "${ROOT}etc/eselect/boost/active" ]]; then
-		elog "No active boost version found. Calling eselect to select one..."
-		eselect boost update || ewarn "eselect boost update failed."
-	fi
-}

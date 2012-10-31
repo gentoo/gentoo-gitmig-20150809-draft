@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.270 2012/10/31 18:27:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.271 2012/10/31 21:36:31 flameeyes Exp $
+
+*boost-1.49.0-r2 (31 Oct 2012)
+
+  31 Oct 2012; Diego E. Pettenò <flameeyes@gentoo.org> +boost-1.49.0-r2.ebuild,
+  -boost-1.49.0-r1.ebuild:
+  Force a rebuild for everybodu and get rid of eselect boost altogether. This is
+  unfortunate but eselect boost behaves differently depending on whether boost
+  was already installed or if it's a fresh install.
 
   31 Oct 2012; Diego E. Pettenò <flameeyes@gentoo.org> boost-1.49.0-r1.ebuild:
   Remove test support from 1.49 as well, since it's not supposed to work and the
