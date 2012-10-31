@@ -1,11 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/pcmciautils-017.ebuild,v 1.2 2012/02/25 06:43:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/pcmciautils-017.ebuild,v 1.3 2012/10/31 19:19:36 ssuominen Exp $
 
-inherit eutils flag-o-matic toolchain-funcs linux-info
+EAPI=4
+inherit flag-o-matic linux-info toolchain-funcs udev
 
 DESCRIPTION="PCMCIA userspace utilities for Linux kernel 2.6.13 and beyond"
-HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/pcmcia/pcmcia.html"
+HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/pcmcia/"
 SRC_URI="mirror://kernel/linux/utils/kernel/pcmcia/${P}.tar.bz2"
 
 LICENSE="GPL-2"
@@ -28,9 +29,7 @@ pkg_setup() {
 }
 
 use_tf() { use $1 && echo true || echo false ; }
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i \
 		-e '/^DEBUG\>/s:=.*:= false:' \
 		-e '/^UDEV\>/s:=.*:= true:' \
@@ -44,15 +43,18 @@ src_unpack() {
 src_compile() {
 	emake \
 		OPTIMIZATION="${CFLAGS} ${CPPFLAGS}" \
-		V="true" \
+		V=true \
 		CC="$(tc-getCC)" \
 		LD="$(tc-getCC)" \
-		STRIP="true" \
-		|| die "emake failed"
+		STRIP=true
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
+	emake \
+		DESTDIR="${D}" \
+		udevdir="$(udev_get_udevdir)" \
+		install
+
 	dodoc doc/*.txt
 }
 
