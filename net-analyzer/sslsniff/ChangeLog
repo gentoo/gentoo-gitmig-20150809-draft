@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/sslsniff
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sslsniff/ChangeLog,v 1.4 2012/08/28 21:50:45 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sslsniff/ChangeLog,v 1.5 2012/10/31 04:40:30 flameeyes Exp $
+
+  31 Oct 2012; Diego E. Pettenò <flameeyes@gentoo.org> -sslsniff-0.8.ebuild:
+  Remove version that requires a specific boost version.
 
 *sslsniff-0.8-r1 (28 Aug 2012)
 
