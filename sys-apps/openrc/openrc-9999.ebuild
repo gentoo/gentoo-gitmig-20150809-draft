@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.113 2012/10/31 22:47:31 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.114 2012/10/31 23:43:01 williamh Exp $
 
 EAPI=4
 
@@ -240,7 +240,6 @@ pkg_preinst() {
 
 	if ! has_version ">=sys-apps/openrc-0.11"; then
 		add_boot_init sysfs sysinit
-		add_boot_init tmpfiles.setup boot
 	fi
 
 	# set default interactive shell to sulogin if it exists
@@ -248,7 +247,10 @@ pkg_preinst() {
 
 	has_version sys-apps/openrc || migrate_from_baselayout_1
 	has_version ">=sys-apps/openrc-0.4.0" || migrate_udev_init_script
-	has_version ">=sys-apps/openrc-0.11.3" || migrate_udev_mount_script
+	if ! has_version ">=sys-apps/openrc-0.11.3" ; then
+		migrate_udev_mount_script
+		add_boot_init tmpfiles.setup boot
+	fi
 }
 
 # >=openrc-0.4.0 no longer loads the udev addon
