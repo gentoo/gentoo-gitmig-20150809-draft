@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/tremor
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tremor/ChangeLog,v 1.4 2012/10/31 11:40:29 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tremor/ChangeLog,v 1.5 2012/10/31 11:43:40 blueness Exp $
+
+  31 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  tremor-0_pre20120120.ebuild:
+  Keyword ~ppc64, bug #439722
 
   31 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
   tremor-0_pre20120120.ebuild:
