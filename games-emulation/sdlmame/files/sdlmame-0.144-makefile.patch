@@ -10,6 +10,14 @@
  # add -g if we need symbols, and ensure we have frame pointers
  ifdef SYMBOLS
  CCOMFLAGS += -g$(SYMLEVEL) -fno-omit-frame-pointer
+@@ -442,7 +442,6 @@
+ 
+ # add -v if we need verbose build information
+ ifdef VERBOSE
+-CCOMFLAGS += -v
+ endif
+ 
+ # add profiling information for the compiler
 @@ -453,23 +450,6 @@
  CCOMFLAGS += -pg
  endif

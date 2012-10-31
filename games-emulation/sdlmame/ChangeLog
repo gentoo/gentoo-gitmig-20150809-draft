@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/sdlmame
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/ChangeLog,v 1.57 2012/01/04 18:00:15 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/ChangeLog,v 1.58 2012/10/31 11:19:24 tupone Exp $
+
+  31 Oct 2012; Tupone Alfredo <tupone@gentoo.org>
+  files/sdlmame-0.144-makefile.patch:
+  drop -v option to gcc. Bug #422699 by Diego
 
   04 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> sdlmame-0.144.ebuild:
   x86 stable wrt bug #395457
