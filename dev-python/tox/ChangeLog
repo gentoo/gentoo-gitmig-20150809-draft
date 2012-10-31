@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/tox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tox/ChangeLog,v 1.4 2012/07/30 07:01:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tox/ChangeLog,v 1.5 2012/10/31 07:44:08 idella4 Exp $
+
+  31 Oct 2012;  <testuser@gentoo.org> +files/tox-1.4.2-rm_version_test.patch,
+  tox-1.4.2.ebuild:
+  Added patch to xfail flawed tests, added doc use flag
 
 *tox-1.4.2 (30 Jul 2012)
 
