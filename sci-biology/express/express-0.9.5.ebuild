@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/express/express-0.9.5.ebuild,v 1.1 2012/02/25 18:05:05 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/express/express-0.9.5.ebuild,v 1.2 2012/10/31 18:47:28 flameeyes Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ IUSE=""
 KEYWORDS="~amd64"
 
 DEPEND="sys-libs/zlib
-	dev-libs/boost:1.46
+	=dev-libs/boost-1.46*
 	sci-biology/bamtools"
 RDEPEND="${DEPEND}"
 
