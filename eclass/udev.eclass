@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/udev.eclass,v 1.4 2012/10/31 16:08:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/udev.eclass,v 1.5 2012/10/31 17:45:30 ssuominen Exp $
 
 # @ECLASS: udev.eclass
 # @MAINTAINER:
@@ -17,7 +17,13 @@
 # DEPEND="${RDEPEND}"
 #
 # src_configure() {
-#	econf --with-udevdir="$(udev_get_udevdir)"
+#	econf \
+#		--with-udevrulesdir="$(udev_get_udevdir)"/rules.d
+# }
+#
+# src_install() {
+#	# udev_dorules contrib/99foomatic
+#	udev_newrules contrib/98-foomatic 99foomatic
 # }
 # @CODE
 
