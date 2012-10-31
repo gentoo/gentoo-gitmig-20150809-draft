@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/rmblast/rmblast-1.2.ebuild,v 1.2 2011/05/02 09:39:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/rmblast/rmblast-1.2.ebuild,v 1.3 2012/10/31 20:41:32 flameeyes Exp $
 
 EAPI="3"
 
@@ -17,7 +17,7 @@ SLOT="0"
 IUSE=""
 KEYWORDS="~amd64 ~x86"
 
-DEPEND="~dev-libs/boost-1.35.0"
+DEPEND=">=dev-libs/boost-1.35.0"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${P}-ncbi-blast-${MY_NCBI_BLAST_V}-src/c++"
