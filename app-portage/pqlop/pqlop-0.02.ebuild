@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pqlop/pqlop-0.02.ebuild,v 1.1 2011/12/11 20:07:59 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pqlop/pqlop-0.02.ebuild,v 1.2 2012/10/31 08:54:55 mgorny Exp $
 
 EAPI=3
 
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="dev-python/argparse"
+RDEPEND="virtual/python-argparse"
 
 src_unpack() {
 	:
