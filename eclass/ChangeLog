@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.490 2012/10/31 14:18:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.491 2012/10/31 14:28:02 mgorny Exp $
+
+  31 Oct 2012; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
+  Enable byte-compilation of Python modules only locally for
+  distutils-r1_python_install(). Thanks to Enlik for reminding me of it.
 
   31 Oct 2012; Michał Górny <mgorny@gentoo.org> python-r1.eclass:
   Fix the shebang correcting function to patch shebang only. Thanks to Enlik
