@@ -1,6 +1,12 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.364 2012/08/27 09:05:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.365 2012/10/31 22:54:25 chithanh Exp $
+
+*xterm-285 (31 Oct 2012)
+
+  31 Oct 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xterm-285.ebuild:
+  Version bump.
 
   27 Aug 2012; Samuli Suominen <ssuominen@gentoo.org> -xterm-276.ebuild:
   old
@@ -1342,4 +1348,3 @@
   merged into xfree's source tree. This package follows xterm's development with
   the goal of removing xterm's compilation within the xfree ebuild.
   Ideally, this should work with utempter library in the near future.
-
