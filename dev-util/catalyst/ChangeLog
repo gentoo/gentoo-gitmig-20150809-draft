@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/catalyst
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.251 2012/10/14 05:51:29 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.252 2012/10/31 22:17:21 zerochaos Exp $
+
+*catalyst-2.0.12 (31 Oct 2012)
+
+  31 Oct 2012; Rick Farina <zerochaos@gentoo.org> +catalyst-2.0.12.ebuild:
+  version bump to 2.0.12. this version includes better lbzip2 support as well as
+  a fix for bug #439636 and several new features available in catalyst.conf
 
   14 Oct 2012; Matt Turner <mattst88@gentoo.org> catalyst-9999.ebuild:
   Add app-arch/lbzip2 to RDEPEND. See upstream commit 166a239.
