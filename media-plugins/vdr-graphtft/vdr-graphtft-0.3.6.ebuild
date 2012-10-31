@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.3.6.ebuild,v 1.1 2012/10/20 17:46:20 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.3.6.ebuild,v 1.2 2012/10/31 19:23:11 hd_brummy Exp $
 
 EAPI="4"
 
@@ -54,6 +54,11 @@ src_prepare() {
 
 	# UINT64_C is needed by ffmpeg headers
 	append-cxxflags -D__STDC_CONSTANT_MACROS
+
+	#backport <vdr-1.7.27, bug 440610
+	if has_version "<media-video/vdr-1.7.27"; then
+		sed -e "s:Start():start:" -i dspitems.c
+	fi
 }
 
 src_compile() {
