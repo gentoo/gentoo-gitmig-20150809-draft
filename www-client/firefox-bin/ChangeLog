@@ -1,6 +1,11 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.122 2012/10/29 16:02:54 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.123 2012/10/31 18:17:49 axs Exp $
+
+  31 Oct 2012; Ian Stakenvicius <axs@gentoo.org> firefox-bin-15.0.1.ebuild,
+  firefox-bin-16.0.2.ebuild:
+  Interim solution to block net-libs/libproxy[spidermonkey] due to mozjs symbol
+  collisions that cause crashes, bug 439148
 
 *firefox-bin-16.0.2 (29 Oct 2012)
 

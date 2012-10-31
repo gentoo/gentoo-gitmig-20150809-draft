@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-15.0.1.ebuild,v 1.1 2012/09/11 08:22:55 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-15.0.1.ebuild,v 1.2 2012/10/31 18:17:49 axs Exp $
 
 EAPI="4"
 
@@ -45,6 +45,8 @@ RDEPEND="dev-libs/dbus-glib
 
 	>=x11-libs/gtk+-2.2:2
 	>=media-libs/alsa-lib-1.0.16
+
+	!net-libs/libproxy[spidermonkey]
 "
 
 S="${WORKDIR}/${MOZ_PN}"
