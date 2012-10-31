@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/bfgminer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/ChangeLog,v 1.26 2012/10/31 11:05:22 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/ChangeLog,v 1.27 2012/10/31 11:07:59 blueness Exp $
+
+  31 Oct 2012; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
+  Correct x6500 description in metadata.xml
 
 *bfgminer-2.9.1 (31 Oct 2012)
 *bfgminer-2.8.4 (31 Oct 2012)
