@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/pcmciautils-017.ebuild,v 1.3 2012/10/31 19:19:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/pcmciautils-017.ebuild,v 1.4 2012/10/31 19:24:28 ssuominen Exp $
 
 EAPI=4
 inherit flag-o-matic linux-info toolchain-funcs udev
@@ -17,7 +17,7 @@ IUSE="debug static staticsocket"
 RDEPEND=">=sys-fs/sysfsutils-1.3.0
 	virtual/modutils"
 DEPEND="${RDEPEND}
-	dev-util/yacc
+	virtual/yacc
 	sys-devel/flex"
 
 CONFIG_CHECK="~PCMCIA"
