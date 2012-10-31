@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/moc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.102 2012/10/26 07:59:29 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.103 2012/10/31 11:42:22 blueness Exp $
+
+  31 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  moc-2.5.0_beta1-r1.ebuild:
+  Keyword ~ppc, bug #439722
 
 *moc-2.5.0_beta1-r1 (26 Oct 2012)
 
@@ -417,4 +421,3 @@
 
   26 Jun 2003; robh <robh@gentoo.org> moc-1.1.0.ebuild:
   Initial version. Thanks to Matthew Rickard, closes #12042
-
