@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/portpeek
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.156 2012/10/17 03:47:14 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.157 2012/10/31 18:22:40 mpagano Exp $
+
+*portpeek-2.1.0 (31 Oct 2012)
+
+  31 Oct 2012; Michael Pagano <mpagano@gentoo.org> +portpeek-2.1.0.ebuild:
+  Updated package.use and package.unmask handling.
 
   17 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> portpeek-2.0.25.ebuild:
   x86 stable wrt bug #437832
