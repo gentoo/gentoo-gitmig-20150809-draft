@@ -1,6 +1,11 @@
 # ChangeLog for app-text/docbook2X
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/ChangeLog,v 1.42 2012/05/25 03:26:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/ChangeLog,v 1.43 2012/10/31 17:23:46 floppym Exp $
+
+  31 Oct 2012; Mike Gilbert <floppym@gentoo.org> -docbook2X-0.6.1-r2.ebuild,
+  -docbook2X-0.8.7-r1.ebuild, -docbook2X-0.8.8-r1.ebuild,
+  -docbook2X-0.8.8.ebuild, docbook2X-0.8.8-r2.ebuild:
+  Drop elog messages, bug 440594 by poletti.marco. Remove old.
 
   25 May 2012; Mike Frysinger <vapier@gentoo.org> docbook2X-0.8.8-r2.ebuild:
   Update to EAPI=4, and make --program-transform-name work with newer versions

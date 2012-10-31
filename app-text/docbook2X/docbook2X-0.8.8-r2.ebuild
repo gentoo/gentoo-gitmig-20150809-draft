@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/docbook2X-0.8.8-r2.ebuild,v 1.19 2012/05/25 03:26:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/docbook2X-0.8.8-r2.ebuild,v 1.20 2012/10/31 17:23:46 floppym Exp $
 
 EAPI="4"
 
@@ -39,9 +39,4 @@ src_configure() {
 	econf \
 		--with-xslt-processor=libxslt \
 		--program-transform-name='/^docbook2/s,$,.pl,'
-}
-
-pkg_postinst() {
-	elog "To avoid conflict with docbook-sgml-utils, which is much more widely used,"
-	elog "all executables have been renamed to *.pl."
 }
