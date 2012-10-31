@@ -1,11 +1,11 @@
 # ChangeLog for dev-python/tox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tox/ChangeLog,v 1.6 2012/10/31 08:56:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tox/ChangeLog,v 1.7 2012/10/31 11:08:28 idella4 Exp $
 
   31 Oct 2012; Michał Górny <mgorny@gentoo.org> tox-1.4.2.ebuild:
   Use virtual for argparse.
 
-  31 Oct 2012;  <testuser@gentoo.org> +files/tox-1.4.2-rm_version_test.patch,
+  31 Oct 2012;  <idella4@gentoo.org> +files/tox-1.4.2-rm_version_test.patch,
   tox-1.4.2.ebuild:
   Added patch to xfail flawed tests, added doc use flag
 
