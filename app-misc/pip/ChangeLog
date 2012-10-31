@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/pip
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pip/ChangeLog,v 1.10 2011/01/05 16:26:31 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pip/ChangeLog,v 1.11 2012/10/31 11:55:08 pinkbyte Exp $
+
+*pip-1.2-r1 (31 Oct 2012)
+
+  31 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> +pip-1.2-r1.ebuild:
+  Revision bump: fix for bug #373783, bump to EAPI 4
 
   05 Jan 2011; Justin Lecher <jlec@gentoo.org> pip-1.2.ebuild:
   Some Clean up
