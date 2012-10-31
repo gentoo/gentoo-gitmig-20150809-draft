@@ -1,6 +1,9 @@
 # ChangeLog for app-text/sigil
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sigil/ChangeLog,v 1.6 2012/10/31 16:25:24 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sigil/ChangeLog,v 1.7 2012/10/31 20:42:20 flameeyes Exp $
+
+  31 Oct 2012; Diego E. Pettenò <flameeyes@gentoo.org> sigil-0.6.0.ebuild:
+  QA: drop maximum boost version dep; if it fails to build, it has to be fixed.
 
 *sigil-0.6.0 (31 Oct 2012)
 

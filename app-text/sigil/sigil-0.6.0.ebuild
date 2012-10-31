@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sigil/sigil-0.6.0.ebuild,v 1.1 2012/10/31 16:25:24 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sigil/sigil-0.6.0.ebuild,v 1.2 2012/10/31 20:42:20 flameeyes Exp $
 
 EAPI=4
 CMAKE_BUILD_TYPE="Release"
@@ -21,7 +21,7 @@ IUSE=""
 DEPEND="
 	>=sys-libs/zlib-1.2.7[minizip]
 	>=dev-libs/libpcre-8.31
-	>=dev-libs/boost-1.49:1.49
+	>=dev-libs/boost-1.49
 	>=app-text/hunspell-1.3.2
 	>=dev-libs/xerces-c-3.1.1
 	>=x11-libs/qt-webkit-4.8:4
