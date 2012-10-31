@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/py
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.122 2012/10/29 06:44:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.123 2012/10/31 07:49:52 patrick Exp $
+
+*py-1.4.11 (31 Oct 2012)
+
+  31 Oct 2012; Patrick Lauer <patrick@gentoo.org> +py-1.4.11.ebuild:
+  Bump
 
 *py-1.4.10 (29 Oct 2012)
 
