@@ -1,6 +1,10 @@
 # ChangeLog for www-client/seamonkey-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.153 2012/10/29 16:04:10 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.154 2012/10/31 19:52:11 axs Exp $
+
+  31 Oct 2012; Ian Stakenvicius <axs@gentoo.org> seamonkey-bin-2.13.2.ebuild:
+  Interim solution to block net-libs/libproxy[spidermonkey] due to mozjs symbol
+  collisions that cause crashes, bug 439148
 
 *seamonkey-bin-2.13.2 (29 Oct 2012)
 
