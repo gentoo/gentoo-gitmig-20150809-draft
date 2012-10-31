@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/gnash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.89 2012/10/16 00:25:32 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.90 2012/10/31 17:26:47 flameeyes Exp $
+
+  31 Oct 2012; Diego E. Pettenò <flameeyes@gentoo.org> gnash-0.8.10-r2.ebuild,
+  gnash-0.8.10_p20120903.ebuild:
+  Remove blocker on unslotted boost, now that it's unslotted.
 
 *gnash-0.8.10_p20120903 (16 Oct 2012)
 

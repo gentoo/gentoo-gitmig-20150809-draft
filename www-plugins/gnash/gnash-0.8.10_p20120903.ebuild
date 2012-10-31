@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.10_p20120903.ebuild,v 1.1 2012/10/16 00:25:32 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.10_p20120903.ebuild,v 1.2 2012/10/31 17:26:47 flameeyes Exp $
 
 EAPI=4
 CMAKE_REQUIRED="never"
@@ -38,9 +38,7 @@ REQUIRED_USE="dump? ( agg ffmpeg )
 	|| ( dump fbcon gtk kde sdl )
 	"
 
-# gnash fails if obsolete boost is installed, bug #334259
 RDEPEND=">=dev-libs/boost-1.41.0
-	!!dev-libs/boost:0
 	dev-libs/expat
 	dev-libs/libxml2
 	virtual/jpeg
