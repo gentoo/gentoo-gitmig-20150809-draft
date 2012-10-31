@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.111 2012/10/18 15:03:19 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.112 2012/10/31 17:39:52 williamh Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ if [[ ${PV} == "9999" ]]; then
 	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/${PN}.git"
 	inherit git-2
 else
-	SRC_URI="mirror://gentoo/${P}.tar.bz2"
+	SRC_URI="http://dev.gentoo.org/~williamh/dist/${P}.tar.bz2"
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 fi
 
@@ -444,6 +444,22 @@ pkg_postinst() {
 		ewarn "as soon as possible. Not doing so could leave you with a system"
 		ewarn "without networking."
 	fi
+
+	ewarn "In this version of OpenRC, the loopback interface no longer"
+	ewarn "satisfies the net virtual."
+	ewarn "If you have services now which do not start because of this,"
+	ewarn "They can be fixed by adding rc_need=\"!net\""
+	ewarn "to the ${EROOT}/etc/conf.d/<servicename> file."
+	ewarn "You should also file a bug against the service asking that"
+	ewarn "need net be dropped from the dependencies."
+	ewarn "The bug you file should block the following tracker:"
+	ewarn "https://bugs.gentoo.org/show_bug.cgi?id=439092"
+
+	ewarn "This version of OpenRC doesn't enable nfs mounts automatically any"
+	ewarn "longer. In order to mount nfs file systems, you must use the"
+	ewarn "nfsmount service from the nfs-utils package."
+	ewarn "See bug https://bugs.gentoo.org/show_bug.cgi?id=427996 for"
+	ewarn "more information on this."
 
 	elog "You should now update all files in /etc, using etc-update"
 	elog "or equivalent before restarting any services or this host."

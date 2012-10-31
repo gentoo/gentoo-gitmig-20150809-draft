@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.11.2.ebuild,v 1.1 2012/10/22 07:55:17 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.11.2.ebuild,v 1.2 2012/10/31 17:39:52 williamh Exp $
 
 EAPI=4
 
@@ -447,9 +447,9 @@ pkg_postinst() {
 
 	ewarn "In this version of OpenRC, the loopback interface no longer"
 	ewarn "satisfies the net virtual."
-	ewarn "If you were depending on services that needed this, the quick fix is"
-	ewarn "to put this line in ${EROOT}/etc/conf.d/net:"
-	ewarn "rc_lo_provide=\"net\""
+	ewarn "If you have services now which do not start because of this,"
+	ewarn "They can be fixed by adding rc_need=\"!net\""
+	ewarn "to the ${EROOT}/etc/conf.d/<servicename> file."
 	ewarn "You should also file a bug against the service asking that"
 	ewarn "need net be dropped from the dependencies."
 	ewarn "The bug you file should block the following tracker:"
