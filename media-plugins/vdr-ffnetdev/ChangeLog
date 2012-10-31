@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vdr-ffnetdev
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ffnetdev/ChangeLog,v 1.17 2011/10/07 18:33:14 hd_brummy Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ffnetdev/ChangeLog,v 1.18 2012/10/31 18:44:08 hd_brummy Exp $
+
+*vdr-ffnetdev-0.1.2 (31 Oct 2012)
+
+  31 Oct 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +vdr-ffnetdev-0.1.2.ebuild, +files/vdr-ffnetdev-0.1.2_gettext.diff:
+  bump, eapi=4; vdr-plugin-2.eclass, converted to gettext, bug 439970
 
   07 Oct 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-ffnetdev-0.1.0-r1.ebuild:
