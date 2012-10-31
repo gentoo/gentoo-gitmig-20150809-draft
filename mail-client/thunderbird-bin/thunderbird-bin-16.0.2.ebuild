@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-16.0.2.ebuild,v 1.1 2012/10/29 16:08:20 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-16.0.2.ebuild,v 1.2 2012/10/31 19:09:12 axs Exp $
 
 EAPI="4"
 
@@ -40,7 +40,10 @@ RDEPEND="virtual/freedesktop-icon-theme
 	x11-libs/libXmu
 	>=x11-libs/gtk+-2.2:2
 	>=media-libs/alsa-lib-1.0.16
-	crashreporter? ( net-misc/curl ) "
+	crashreporter? ( net-misc/curl )
+
+	!net-libs/libproxy[spidermonkey]
+"
 
 S="${WORKDIR}/${MOZ_PN}"
 
