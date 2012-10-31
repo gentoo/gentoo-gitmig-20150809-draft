@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-006.ebuild,v 1.6 2012/10/02 12:54:36 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-006.ebuild,v 1.7 2012/10/31 17:21:44 ssuominen Exp $
 
 EAPI="4"
 
@@ -59,6 +59,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "The 'network-cron' USE flag is gone; if you want a more up-to-date"
-	elog "usb.ids file, you should use sys-apps/hwids-99999999 (live ebuild)."
+	if [[ ${REPLACING_VERSIONS} ]] && [[ ${REPLACING_VERSIONS} < 006 ]]; then
+		elog "The 'network-cron' USE flag is gone; if you want a more up-to-date"
+		elog "usb.ids file, you should use sys-apps/hwids-99999999 (live ebuild)."
+	fi
 }

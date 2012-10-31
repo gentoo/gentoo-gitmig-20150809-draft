@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/usbutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.147 2012/10/02 12:54:36 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.148 2012/10/31 17:21:44 ssuominen Exp $
+
+  31 Oct 2012; Samuli Suominen <ssuominen@gentoo.org> usbutils-006.ebuild:
+  Use REPLACING_VERSIONS to silence pkg_postinst() message about removed
+  USE="network-cron" wrt #440536 by "poletti.marco"
 
   02 Oct 2012; Anthony G. Basile <blueness@gentoo.org> usbutils-006.ebuild:
   stable arm, bug #436186
