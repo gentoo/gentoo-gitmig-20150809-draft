@@ -2,8 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>openoffice</herd>
-	<use>
-		<flag name='glib'>Enable support for C library routines from <pkg>dev-libs/glib</pkg></flag>
-		<flag name='graphite'>Enable support for non-Roman fonts via <pkg>media-gfx/graphite2</pkg></flag>
-	</use>
 </pkgmetadata>

@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/harfbuzz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.9 2012/05/05 08:02:40 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.10 2012/10/31 06:54:28 scarabeus Exp $
+
+*harfbuzz-0.9.5 (31 Oct 2012)
+
+  31 Oct 2012; Tomáš Chvátal <scarabeus@gentoo.org> +harfbuzz-0.9.5.ebuild,
+  -files/harfbuzz-automagicness.patch, -harfbuzz-0.7.0_pre20110904.ebuild,
+  harfbuzz-9999.ebuild, metadata.xml:
+  Version bump to latest, keep with upstream and its automagicness as they do
+  not accept the patch.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org>
   harfbuzz-0.7.0_pre20110904.ebuild, harfbuzz-9999.ebuild:
@@ -41,4 +49,3 @@
   11 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org> +harfbuzz-0.6.0.ebuild,
   +metadata.xml:
   Intial commit. Library required by graphite2.
-

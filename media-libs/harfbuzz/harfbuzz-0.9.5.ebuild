@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-9999.ebuild,v 1.4 2012/10/31 06:54:28 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-0.9.5.ebuild,v 1.1 2012/10/31 06:54:28 scarabeus Exp $
 
 EAPI=5
 
@@ -26,7 +26,6 @@ RDEPEND="
 	x11-libs/cairo
 "
 DEPEND="${RDEPEND}
-	dev-util/gtk-doc-am
 	virtual/pkgconfig
 "
 
