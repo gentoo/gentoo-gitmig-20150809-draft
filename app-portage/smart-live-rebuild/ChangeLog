@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/smart-live-rebuild
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/ChangeLog,v 1.40 2012/10/15 08:09:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/ChangeLog,v 1.41 2012/10/31 18:02:01 mgorny Exp $
+
+*smart-live-rebuild-1.2.4 (31 Oct 2012)
+
+  31 Oct 2012; Michał Górny <mgorny@gentoo.org>
+  +smart-live-rebuild-1.2.4.ebuild:
+  Version bump. The new version adds a --quiet option, disables creating binary
+  packages with --pretend and fixes an attempt to kill dead child process.
 
 *smart-live-rebuild-1.2.3-r2 (15 Oct 2012)
 
