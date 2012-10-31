@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/libfprint/libfprint-0.4.0.ebuild,v 1.6 2012/05/22 16:18:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libfprint/libfprint-0.4.0.ebuild,v 1.7 2012/10/31 18:27:06 ssuominen Exp $
 
 EAPI=4
 
-inherit autotools
+inherit autotools eutils udev
 
 MY_PV="v_${PV//./_}"
 DESCRIPTION="library to add support for consumer fingerprint readers"
@@ -42,7 +42,11 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
-	use static-libs || find "${D}" -name "*.la" -delete
+	emake \
+		DESTDIR="${D}" \
+		udev_rulesdir="$(udev_get_udevdir)/rules.d" \
+		install
+
+	prune_libtool_files
 	dodoc AUTHORS HACKING NEWS README THANKS TODO
 }

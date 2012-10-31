@@ -1,6 +1,12 @@
 # ChangeLog for sys-auth/libfprint
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/libfprint/ChangeLog,v 1.10 2012/05/22 16:18:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libfprint/ChangeLog,v 1.11 2012/10/31 18:27:06 ssuominen Exp $
+
+  31 Oct 2012; Samuli Suominen <ssuominen@gentoo.org> libfprint-0.4.0.ebuild:
+  Use prune_libtool_files from eutils.eclass. Use udev_get_udevdir from
+  udev.eclass to move 60-fprint-autosuspend.rules from /etc/udev/rules.d to
+  correct directory based on udev.pc pkg-config file and the udevdir variable
+  value.
 
   22 May 2012; Samuli Suominen <ssuominen@gentoo.org> libfprint-0.4.0.ebuild:
   Use virtual/libusb instead of dev-libs/libusb.
