@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.158 2012/10/18 00:44:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.159 2012/10/31 19:36:42 vapier Exp $
+
+  31 Oct 2012; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  Add information on USE=curl.
 
 *git-1.7.12.4 (18 Oct 2012)
 
