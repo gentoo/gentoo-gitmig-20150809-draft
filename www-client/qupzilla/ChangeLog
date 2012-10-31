@@ -1,6 +1,9 @@
 # ChangeLog for www-client/qupzilla
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/ChangeLog,v 1.16 2012/10/03 07:21:20 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/ChangeLog,v 1.17 2012/10/31 15:48:18 ago Exp $
+
+  31 Oct 2012; Agostino Sarubbo <ago@gentoo.org> qupzilla-1.3.5.ebuild:
+  Stable for amd64, wrt bug #440378
 
   03 Oct 2012; Ben de Groot <yngwin@gentoo.org>
   +files/qupzilla-1.3.5-libX11-underlinking.patch, qupzilla-1.3.5.ebuild:
