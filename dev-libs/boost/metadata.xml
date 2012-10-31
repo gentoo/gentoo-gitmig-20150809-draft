@@ -2,29 +2,18 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>cpp</herd>
-  <maintainer>
-    <email>dev-zero@gentoo.org</email>
-    <name>Tiziano Müller</name>
-  </maintainer>
-  <maintainer>
-    <email>SebastianLuther@gmx.de</email>
-    <name>Sebastian Luther</name>
-  </maintainer>
-  <maintainer>
-    <email>arfrever.fta@gmail.com</email>
-    <name>Arfrever Frehtes Taifersar Arahesis</name>
-  </maintainer>
-  <maintainer>
-    <email>mgorny@gentoo.org</email>
-    <name>Michał Górny</name>
-  </maintainer>
-<longdescription>
-Boost is a free peer-reviewed portable C++ source libraries.
-</longdescription>
-<use>
-  <flag name='tools'>Build and install the boost tools (bcp, quickbook,
-    inspect, wave)</flag>
-  <flag name='eselect'>Run "eselect boost update" even if version is
-    already selected</flag>
-</use>
+  <use>
+    <flag name='tools'>
+      Build and install the boost tools (bcp, quickbook, inspect,
+      wave)
+    </flag>
+    <flag name='eselect' restrict='&lt;dev-libs/boost-1.50.0-r2'>
+      Run "eselect boost update" even if version is already selected
+    </flag>
+    <flag name='debug'>
+      Build and install debug versions of the Boost libraries. These
+      libraries are not used by default, and should not be used unless
+      you're developing against Boost.
+    </flag>
+  </use>
 </pkgmetadata>
