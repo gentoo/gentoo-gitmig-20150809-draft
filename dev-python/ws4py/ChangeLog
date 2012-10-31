@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/ws4py
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ws4py/ChangeLog,v 1.5 2012/07/17 02:11:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ws4py/ChangeLog,v 1.6 2012/10/31 06:51:09 patrick Exp $
+
+*ws4py-0.2.3 (31 Oct 2012)
+
+  31 Oct 2012; Patrick Lauer <patrick@gentoo.org> +ws4py-0.2.3.ebuild:
+  Bump
 
 *ws4py-0.2.2 (17 Jul 2012)
 
