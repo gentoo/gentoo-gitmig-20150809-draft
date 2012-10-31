@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-7.0.32.ebuild,v 1.1 2012/10/29 10:57:07 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-7.0.32.ebuild,v 1.2 2012/10/31 02:45:37 ottxor Exp $
 
 EAPI=4
 
 JAVA_PKG_IUSE="doc source test"
 
-inherit eutils java-pkg-2 java-ant-2 prefix
+inherit eutils java-pkg-2 java-ant-2 prefix user
 
 MY_P="apache-${P}-src"
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://apache/${PN}/tomcat-7/v${PV}/src/${MY_P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="7"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="extra-webapps"
 
 RESTRICT="test" # can we run them on a production system?
