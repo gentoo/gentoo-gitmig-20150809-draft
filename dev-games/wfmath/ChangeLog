@@ -1,6 +1,12 @@
 # ChangeLog for dev-games/wfmath
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/wfmath/ChangeLog,v 1.20 2012/07/10 16:50:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/wfmath/ChangeLog,v 1.21 2012/10/31 09:25:13 tupone Exp $
+
+  31 Oct 2012; Tupone Alfredo <tupone@gentoo.org> -wfmath-0.3.10.ebuild,
+  wfmath-0.3.11.ebuild, +files/wfmath-0.3.11-gcc47.patch, wfmath-1.0.0.ebuild:
+  Remove old affected by Bug #362731 from Diego
+  Migrating to EAPI 4 the 1.0.0 version
+  Fix build with gcc-4.7 Bug #425706 by Diego
 
 *wfmath-1.0.0 (10 Jul 2012)
 

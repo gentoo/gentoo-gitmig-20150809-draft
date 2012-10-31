@@ -1,0 +1,21 @@
+--- wfmath/vector.h.old	2012-10-31 08:39:38.033547273 +0100
++++ wfmath/vector.h	2012-10-31 08:40:12.200097132 +0100
+@@ -34,6 +34,7 @@
+ #include <wfmath/zero.h>
+ 
+ #include <iosfwd>
++#include <cmath>
+ 
+ namespace WFMath {
+ 
+--- wfmath/point.h.old	2012-10-31 08:41:00.226654036 +0100
++++ wfmath/point.h	2012-10-31 08:41:52.353918234 +0100
+@@ -32,6 +32,8 @@
+ #include <memory>
+ #include <iosfwd>
+ 
++#include <cmath>
++
+ namespace WFMath {
+ 
+ template<const int dim>
