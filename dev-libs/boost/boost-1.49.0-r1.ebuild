@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.49.0-r1.ebuild,v 1.11 2012/10/31 16:32:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.49.0-r1.ebuild,v 1.12 2012/10/31 18:27:00 flameeyes Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? *"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="*-jython *-pypy-*"
 
-inherit check-reqs flag-o-matic multilib python toolchain-funcs versionator
+inherit flag-o-matic multilib python toolchain-funcs versionator
 
 MY_P=${PN}_$(replace_all_version_separators _)
 
@@ -19,7 +19,7 @@ LICENSE="Boost-1.0"
 SLOT=0
 MAJOR_V="$(get_version_component_range 1-2)"
 KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd"
-IUSE="debug doc +eselect icu mpi python static-libs test tools"
+IUSE="debug doc +eselect icu mpi python static-libs tools"
 
 RDEPEND="icu? ( >=dev-libs/icu-3.3 )
 	mpi? ( || ( sys-cluster/openmpi[cxx] sys-cluster/mpich2[cxx,threads] ) )
@@ -86,20 +86,6 @@ using ${compiler} : ${compiler_version} : ${compiler_executable} : <cflags>"${CF
 ${mpi_configuration}
 ${python_configuration}
 __EOF__
-}
-
-pkg_pretend() {
-	if use test; then
-		CHECKREQS_DISK_BUILD="15G" check-reqs_pkg_pretend
-
-		ewarn "The tests may take several hours on a recent machine"
-		ewarn "but they will not fail (unless something weird happens ;-)"
-		ewarn "This is because the tests depend on the used compiler version"
-		ewarn "and the platform and upstream says that this is normal."
-		ewarn "If you are interested in the results, please take a look at the"
-		ewarn "generated results page:"
-		ewarn "  ${ROOT}usr/share/doc/${PF}/status/cs-$(uname).html"
-	fi
 }
 
 pkg_setup() {
@@ -525,82 +511,12 @@ EOF
 	fi
 }
 
-src_test() {
-	testing() {
-		if use python; then
-			local dir
-			for dir in ${PYTHON_DIRS}; do
-				cp -pr ${dir}-${PYTHON_ABI} ${dir} || die "Copying of '${dir}-${PYTHON_ABI}' to '${dir}' failed"
-			done
-
-			if use mpi; then
-				cp -p stage/lib/mpi.so-${PYTHON_ABI} "${MPI_PYTHON_MODULE}" || die "Copying of 'stage/lib/mpi.so-${PYTHON_ABI}' to '${MPI_PYTHON_MODULE}' failed"
-				cp -p stage/lib/mpi.so-${PYTHON_ABI} stage/lib/mpi.so || die "Copying of 'stage/lib/mpi.so-${PYTHON_ABI}' to 'stage/lib/mpi.so' failed"
-			fi
-		fi
-
-		pushd tools/regression/build > /dev/null || die
-		einfo "Using the following command to build test helpers:"
-		einfo "${BJAM} -q -d+2 gentoorelease --user-config=../../../user-config.jam ${OPTIONS} process_jam_log compiler_status"
-
-		${BJAM} -q -d+2 \
-			gentoorelease \
-			--user-config=../../../user-config.jam \
-			${OPTIONS} \
-			process_jam_log compiler_status \
-			|| die "Building of regression test helpers failed"
-
-		popd > /dev/null || die
-		pushd status > /dev/null || die
-
-		# Some of the test-checks seem to rely on regexps
-		export LC_ALL="C"
-
-		# The following is largely taken from tools/regression/run_tests.sh,
-		# but adapted to our needs.
-
-		# Run the tests & write them into a file for postprocessing
-		einfo "Using the following command to test:"
-		einfo "${BJAM} --user-config=../user-config.jam ${OPTIONS} --dump-tests"
-
-		${BJAM} \
-			--user-config=../user-config.jam \
-			${OPTIONS} \
-			--dump-tests 2>&1 | tee regress.log || die
-
-		# Postprocessing
-		cat regress.log | "$(find ../tools/regression/build/bin/gcc-$(gcc-version)/gentoorelease -name process_jam_log)" --v2
-		if test $? != 0; then
-			die "Postprocessing the build log failed"
-		fi
-
-		cat > comment.html <<- __EOF__
-		<p>Tests are run on a <a href="http://www.gentoo.org">Gentoo</a> system.</p>
-__EOF__
-
-		# Generate the build log html summary page
-		"$(find ../tools/regression/build/bin/gcc-$(gcc-version)/gentoorelease -name compiler_status)" --v2 \
-			--comment comment.html "${S}" \
-			cs-$(uname).html cs-$(uname)-links.html
-		if test $? != 0; then
-			die "Generating the build log html summary page failed"
-		fi
-
-		# And do some cosmetic fixes :)
-		sed -i -e 's|http://www.boost.org/boost.png|boost.png|' *.html || die
-
-		popd > /dev/null || die
-
-		if use python; then
-			rm -r ${PYTHON_DIRS} || die
-		fi
-	}
-	if use python; then
-		python_execute_function -f -q testing
-	else
-		testing
-	fi
-}
+# the tests will never fail because these are not intended as sanity
+# tests at all. They are more a way for upstream to check their own code
+# on new compilers. Since they would either be completely unreliable
+# (failing for no good reason) or completely useless (never failing)
+# there is no point in having them in the ebuild to begin with.
+src_test() { :; }
 
 pkg_postinst() {
 	if use eselect; then
