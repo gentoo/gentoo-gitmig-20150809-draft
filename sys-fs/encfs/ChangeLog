@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/encfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/ChangeLog,v 1.62 2012/05/04 19:09:17 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/ChangeLog,v 1.63 2012/10/31 23:14:20 flameeyes Exp $
+
+  31 Oct 2012; Diego E. Pettenò <flameeyes@gentoo.org> encfs-1.7.2.ebuild,
+  encfs-1.7.4.ebuild:
+  Let encfs get the correct boost installed.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> encfs-1.7.2.ebuild,
   encfs-1.7.4.ebuild:
@@ -262,4 +266,3 @@
   +encfs-1.1.10.ebuild:
   Adding encfs thanks to Vaclav Slavik <vaclav.slavik@matfyz.cz> and Daniel
   Webert <rockoo@rockoo.homelinux.org> in bug 45070
-
