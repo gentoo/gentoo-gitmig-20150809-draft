@@ -1,0 +1,11 @@
+# ChangeLog for dev-games/mygui
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/mygui/ChangeLog,v 1.1 2012/10/31 20:37:20 hasufell Exp $
+
+*mygui-3.2.0-r1 (31 Oct 2012)
+
+  31 Oct 2012; Julian Ospald <hasufell@gentoo.org> +mygui-3.2.0-r1.ebuild,
+  +files/mygui-3.2.0-FHS.patch, +files/mygui-3.2.0-build.patch,
+  +files/mygui-3.2.0-underlinking.patch, +metadata.xml:
+  initial import wrt #261895
+
