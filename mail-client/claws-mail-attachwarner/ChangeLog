@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-attachwarner
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-attachwarner/ChangeLog,v 1.69 2012/10/24 09:57:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-attachwarner/ChangeLog,v 1.70 2012/10/31 18:38:30 nativemad Exp $
+
+  31 Oct 2012; Andreas Schuerch <nativemad@gentoo.org>
+  claws-mail-attachwarner-0.2.24.ebuild:
+  x86 stable, see bug 437814
 
   24 Oct 2012; Agostino Sarubbo <ago@gentoo.org>
   claws-mail-attachwarner-0.2.24.ebuild:

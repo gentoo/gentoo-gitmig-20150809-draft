@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-address_keeper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-address_keeper/ChangeLog,v 1.22 2012/10/24 09:57:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-address_keeper/ChangeLog,v 1.23 2012/10/31 18:33:15 nativemad Exp $
+
+  31 Oct 2012; Andreas Schuerch <nativemad@gentoo.org>
+  claws-mail-address_keeper-1.0.6.ebuild:
+  x86 stable, see bug 437814
 
   24 Oct 2012; Agostino Sarubbo <ago@gentoo.org>
   claws-mail-address_keeper-1.0.6.ebuild:
