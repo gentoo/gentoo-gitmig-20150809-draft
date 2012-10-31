@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.8.19.ebuild,v 1.11 2012/10/22 01:02:27 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.8.19.ebuild,v 1.12 2012/10/31 20:49:42 zerochaos Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -49,7 +49,9 @@ pkg_setup() {
 		die "Please run: FEATURES=-unmerge-orphans emerge cracklib"
 	fi
 
-	use python && python_pkg_setup
+	if use !build; then
+		use python && python_pkg_setup
+	fi
 }
 
 src_prepare() {

@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/cracklib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.173 2012/10/22 01:02:27 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.174 2012/10/31 20:49:42 zerochaos Exp $
+
+  31 Oct 2012; Rick Farina <zerochaos@gentoo.org> cracklib-2.8.19.ebuild:
+  last fix for USE=build bootstrapping, missed a line on the previous commit
 
   22 Oct 2012; Rick Farina <zerochaos@gentoo.org> cracklib-2.8.19.ebuild:
   catalyst stage1 build with python enabled breaks so we add a build use flag to
