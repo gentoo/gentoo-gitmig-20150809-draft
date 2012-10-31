@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/purple-libnotify-plus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/purple-libnotify-plus/ChangeLog,v 1.1 2012/09/12 21:36:43 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/purple-libnotify-plus/ChangeLog,v 1.2 2012/10/31 17:30:14 ago Exp $
+
+  31 Oct 2012; Agostino Sarubbo <ago@gentoo.org>
+  purple-libnotify-plus-1.99.2.ebuild:
+  Stable for amd64, wrt bug #439774
 
 *purple-libnotify-plus-1.99.2 (12 Sep 2012)
 
