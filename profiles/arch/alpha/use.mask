@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.71 2012/08/26 18:12:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.72 2012/10/31 16:12:32 mgorny Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -alpha
@@ -210,3 +210,9 @@ entropy
 # Matt Turner <mattst88@gentoo.org (29 May 2012)
 # net-libs/libsocialweb is not keyworded
 socialweb
+
+# Michał Górny <mgorny@gentoo.org> (31 Oct 2012)
+# Mask PYTHON_TARGETS for implementations not keyworded on this arch.
+python_targets_pypy1_8
+python_targets_pypy1_9
+python_targets_jython2_5

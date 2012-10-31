@@ -202,3 +202,9 @@ systemd
 # Julian Ospald <hasufell@gentoo.org> (25 Apr 2012)
 # Masked because nvidia-texture-tools is not (tested) for PowerPC
 nvtt
+
+# Michał Górny <mgorny@gentoo.org> (31 Oct 2012)
+# Mask PYTHON_TARGETS for implementations not keyworded on this arch.
+python_targets_pypy1_8
+python_targets_pypy1_9
+python_targets_jython2_5

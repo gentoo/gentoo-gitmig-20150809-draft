@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.104 2012/10/17 03:09:26 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.105 2012/10/31 16:12:33 mgorny Exp $
+
+  31 Oct 2012; Michał Górny <mgorny@gentoo.org> use.mask:
+  Add a PYTHON_TARGETS mask based on keywords.
 
   17 Oct 2012; Matt Turner <mattst88@gentoo.org> make.defaults:
   Add LIBDIR_* definitions to make.defaults for single-ABI profiles.

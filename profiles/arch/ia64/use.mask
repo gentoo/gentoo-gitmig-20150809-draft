@@ -225,3 +225,9 @@ wayland
 # Michael Sterrett <mr_bones_@gentoo.org) (24 Aug 2012)
 # media-sound/fluidsynth isn't keyworded
 fluidsynth
+
+# Michał Górny <mgorny@gentoo.org> (31 Oct 2012)
+# Mask PYTHON_TARGETS for implementations not keyworded on this arch.
+python_targets_pypy1_8
+python_targets_pypy1_9
+python_targets_jython2_5

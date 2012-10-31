@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.57 2012/08/24 06:38:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.58 2012/10/31 16:12:33 mgorny Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -mips
@@ -372,3 +372,9 @@ fluidsynth
 -ip28
 -ip30
 -fixed-point
+
+# Michał Górny <mgorny@gentoo.org> (31 Oct 2012)
+# Mask PYTHON_TARGETS for implementations not keyworded on this arch.
+python_targets_pypy1_8
+python_targets_pypy1_9
+python_targets_jython2_5

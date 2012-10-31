@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/m68k/ChangeLog,v 1.20 2012/08/23 21:36:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/m68k/ChangeLog,v 1.21 2012/10/31 16:12:32 mgorny Exp $
+
+  31 Oct 2012; Michał Górny <mgorny@gentoo.org> use.mask:
+  Add a PYTHON_TARGETS mask based on keywords.
 
   23 Aug 2012; Mike Frysinger <vapier@gentoo.org> -package.mask:
   Drop old package.mask #423585 by Ryan Hill.
