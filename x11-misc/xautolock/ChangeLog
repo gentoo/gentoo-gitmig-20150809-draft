@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xautolock
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xautolock/ChangeLog,v 1.25 2012/10/31 03:16:55 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xautolock/ChangeLog,v 1.26 2012/10/31 16:49:58 ken69267 Exp $
+
+  31 Oct 2012; Kenneth Prugh <ken69267@gentoo.org> xautolock-2.2.ebuild:
+  amd64 stable, bug #440288
 
   31 Oct 2012; Anthony G. Basile <blueness@gentoo.org> xautolock-2.2.ebuild:
   stable ppc, bug #440288
