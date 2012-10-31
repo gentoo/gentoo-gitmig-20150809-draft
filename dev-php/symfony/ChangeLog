@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/symfony
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/symfony/ChangeLog,v 1.11 2012/09/28 12:50:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/symfony/ChangeLog,v 1.12 2012/10/31 07:07:29 olemarkus Exp $
+
+*symfony-1.4.19 (31 Oct 2012)
+
+  31 Oct 2012; Ole Markus With <olemarkus@gentoo.org> +symfony-1.4.19.ebuild:
+  Version bump committed on behalf of Jamie Learmonth
 
   28 Sep 2012; Agostino Sarubbo <ago@gentoo.org> -symfony-1.4.11.ebuild,
   -symfony-1.4.12.ebuild, -symfony-1.4.16.ebuild, -symfony-1.4.17.ebuild:
