@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/starpu/starpu-1.0.2.ebuild,v 1.3 2012/10/30 15:00:48 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/starpu/starpu-1.0.2.ebuild,v 1.4 2012/10/31 20:20:24 mr_bones_ Exp $
 
 EAPI=4
 
@@ -41,7 +41,6 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-1.0.1-no-examples.patch
 	"${FILESDIR}"/${PN}-1.0.1-no-pc-ldflags.patch
 )
-
 
 src_configure() {
 	use blas && export BLAS_LIBS="$($(tc-getPKG_CONFIG) --libs blas)"
