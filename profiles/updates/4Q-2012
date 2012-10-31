@@ -8,3 +8,35 @@ move x11-wm/razorqt razorqt-base/razorqt-meta
 move x11-misc/lightdm-razorqt-greeter razorqt-base/razorqt-lightdm-greeter
 move x11-libs/openmotif x11-libs/motif
 move app-doc/openmotif-manual app-doc/motif-reference-manual
+slotmove dev-libs/boost 1.36 0
+slotmove dev-libs/boost 1.37 0
+slotmove dev-libs/boost 1.38 0
+slotmove dev-libs/boost 1.39 0
+slotmove dev-libs/boost 1.40 0
+slotmove dev-libs/boost 1.41 0
+slotmove dev-libs/boost 1.42 0
+slotmove dev-libs/boost 1.43 0
+slotmove dev-libs/boost 1.44 0
+slotmove dev-libs/boost 1.45 0
+slotmove dev-libs/boost 1.46 0
+slotmove dev-libs/boost 1.47 0
+slotmove dev-libs/boost 1.48 0
+slotmove dev-libs/boost 1.49 0
+slotmove dev-libs/boost 1.50 0
+slotmove dev-libs/boost 1.51 0
+slotmove dev-util/boost-build 1.36 0
+slotmove dev-util/boost-build 1.37 0
+slotmove dev-util/boost-build 1.38 0
+slotmove dev-util/boost-build 1.39 0
+slotmove dev-util/boost-build 1.40 0
+slotmove dev-util/boost-build 1.41 0
+slotmove dev-util/boost-build 1.42 0
+slotmove dev-util/boost-build 1.43 0
+slotmove dev-util/boost-build 1.44 0
+slotmove dev-util/boost-build 1.45 0
+slotmove dev-util/boost-build 1.46 0
+slotmove dev-util/boost-build 1.47 0
+slotmove dev-util/boost-build 1.48 0
+slotmove dev-util/boost-build 1.49 0
+slotmove dev-util/boost-build 1.50 0
+slotmove dev-util/boost-build 1.51 0
