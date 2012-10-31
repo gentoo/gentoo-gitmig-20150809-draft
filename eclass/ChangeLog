@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.488 2012/10/30 21:56:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.489 2012/10/31 01:51:52 tetromino Exp $
+
+  31 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gst-plugins10.eclass:
+  Use versionator to slot gst-1.0 plugins.
 
   30 Oct 2012; Michał Górny <mgorny@gentoo.org> systemd.eclass:
   Add systemd_with_utildir() as well.

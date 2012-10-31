@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins10.eclass,v 1.6 2011/12/27 17:55:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins10.eclass,v 1.7 2012/10/31 01:51:52 tetromino Exp $
 
 # Author : foser <foser@gentoo.org>
 
@@ -14,7 +14,7 @@
 # Gentoo developers responsible for gstreamer <gstreamer@gentoo.org> or the application
 # developer.
 
-inherit eutils
+inherit eutils versionator
 
 
 ###
@@ -24,7 +24,7 @@ inherit eutils
 # Create a major/minor combo for our SLOT and executables suffix
 PVP=(${PV//[-\._]/ })
 #PV_MAJ_MIN=${PVP[0]}.${PVP[1]}
-PV_MAJ_MIN=0.10
+PV_MAJ_MIN=$(get_version_component_range '1-2')
 
 # Extract the plugin to build from the ebuild name
 # May be set by an ebuild and contain more than one indentifier, space seperated
