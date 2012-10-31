@@ -1,8 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusbx/libusbx-1.0.14.ebuild,v 1.1 2012/09/27 11:32:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusbx/libusbx-1.0.14.ebuild,v 1.2 2012/10/31 17:27:47 ssuominen Exp $
 
 EAPI=4
+inherit eutils
 
 DESCRIPTION="Userspace access to USB devices"
 HOMEPAGE="http://libusbx.sourceforge.net/"
@@ -40,5 +41,5 @@ src_install() {
 		dohtml doc/html/*
 	fi
 
-	rm -f "${ED}"/usr/lib*/lib*.la
+	prune_libtool_files
 }
