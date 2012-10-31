@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.136 2012/10/23 22:02:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.137 2012/10/31 17:26:17 flameeyes Exp $
+
+  31 Oct 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  rb_libtorrent-0.16.5.ebuild:
+  Simplify finding boost library so that it works with all versions, now that
+  it's unslotted.
 
 *rb_libtorrent-0.16.5 (23 Oct 2012)
 
