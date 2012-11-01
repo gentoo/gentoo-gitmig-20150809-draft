@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.16 2012/11/01 12:18:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.17 2012/11/01 12:19:22 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -332,12 +332,22 @@ distutils-r1_python_install_all() {
 # @USAGE: [<argv>...]
 # @INTERNAL
 # @DESCRIPTION:
-# Run the given command in BUILD_DIR.
+# Run the given command.
+#
+# If out-of-source builds are used, the phase function is run in source
+# directory, with BUILD_DIR pointing at the build directory
+# and PYTHONPATH having an entry for the module build directory.
+#
+# If in-source builds are used, the command is executed in the BUILD_DIR
+# (the directory holding per-implementation copy of sources).
 distutils-r1_run_phase() {
 	debug-print-function ${FUNCNAME} "${@}"
 
 	if [[ ${DISTUTILS_IN_SOURCE_BUILD} ]]; then
 		pushd "${BUILD_DIR}" &>/dev/null || die
+	else
+		local PYTHONPATH="${BUILD_DIR}/lib:${PYTHONPATH}"
+		export PYTHONPATH
 	fi
 
 	"${@}" || die "${1} failed."

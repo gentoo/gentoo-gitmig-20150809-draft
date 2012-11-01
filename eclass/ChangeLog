@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.493 2012/11/01 12:18:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.494 2012/11/01 12:19:22 mgorny Exp $
+
+  01 Nov 2012; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
+  Export PYTHONPATH for phases in out-of-source builds.
 
   01 Nov 2012; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
   Explicitly set library build dir in out-of-source builds.
