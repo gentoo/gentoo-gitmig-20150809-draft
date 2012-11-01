@@ -1,13 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2012.09.13.ebuild,v 1.1 2012/09/21 12:00:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2012.09.13.ebuild,v 1.2 2012/11/01 16:30:25 aballier Exp $
 
 EAPI=3
 inherit flag-o-matic eutils toolchain-funcs multilib
 
 DESCRIPTION="Source-code libraries for standards-based RTP/RTCP/RTSP multimedia streaming, suitable for embedded and/or low-cost streaming applications"
 HOMEPAGE="http://www.live555.com/"
-SRC_URI="http://www.live555.com/liveMedia/public/${P/-/.}.tar.gz"
+SRC_URI="http://www.live555.com/liveMedia/public/${P/-/.}.tar.gz
+	mirror://gentoo/${P/-/.}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
