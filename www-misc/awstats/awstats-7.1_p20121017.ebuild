@@ -1,27 +1,30 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/awstats/awstats-7.0_p20101205-r3.ebuild,v 1.6 2011/06/06 12:15:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/awstats/awstats-7.1_p20121017.ebuild,v 1.1 2012/11/01 16:23:28 flameeyes Exp $
 
-EAPI=2
+EAPI=4
 
 inherit eutils
 
 MY_P=${PN}-${PV%_p*}
 
 DESCRIPTION="AWStats is short for Advanced Web Statistics."
-HOMEPAGE="http://awstats.sourceforge.net/"
+HOMEPAGE="http://www.awstats.org/"
 
-SRC_URI="http://dev.gentoo.org/~flameeyes/awstats/${P}.tar.gz"
-
-# The following SRC_URI is useful only when fetching for the first time
-# after bump; upstream does not bump the version when they change it, so
-# we rename it to include the date and upload to our mirrors instead.
-#SRC_URI="http://awstats.sourceforge.net/files/${MY_P}.tar.gz -> ${P}.tar.gz"
+if [ ${MY_P} != ${P} ]; then
+	SRC_URI="http://dev.gentoo.org/~flameeyes/awstats/${P}.tar.gz"
+	# The following SRC_URI is useful only when fetching for the first time
+	# after bump; upstream does not bump the version when they change it, so
+	# we rename it to include the date and upload to our mirrors instead.
+	#SRC_URI="http://www.awstats.org/files/${MY_P}.tar.gz -> ${P}.tar.gz"
+else
+	SRC_URI="http://www.awstats.org/files/${P}.tar.gz"
+fi
 
 S=${WORKDIR}/${MY_P}
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 hppa ppc ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="geoip ipv6"
 
 SLOT="0"
@@ -34,12 +37,12 @@ RDEPEND=">=dev-lang/perl-5.6.1
 DEPEND=""
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-6.3-gentoo.diff
-	epatch "${FILESDIR}"/${P}-nofollow.patch
+	epatch "${FILESDIR}"/${PN}-7.1-gentoo.diff
 
 	# change default installation directory
 	find . -type f -exec sed \
 		-e "s#/usr/local/awstats/wwwroot#/usr/share/awstats/wwwroot#g" \
+		-e '/PossibleLibDir/s:(.*):("/usr/share/awstats/wwwroot/cgi-bin/lib"):' \
 		-i {} + || die "find/sed failed"
 
 	# set default values for directories; use apache log as an example
@@ -65,23 +68,22 @@ src_prepare() {
 }
 
 src_install() {
-	dohtml -r docs/* || die
-	dodoc README.TXT || die
+	dohtml -r docs/*
+	dodoc README.TXT
 	newdoc wwwroot/cgi-bin/plugins/example/example.pm example_plugin.pm
-	docinto xslt
-	dodoc tools/xslt/* || die
+	dodoc -r tools/xslt
 
 	keepdir /var/lib/awstats
 
 	insinto /etc/awstats
-	doins "${S}"/wwwroot/cgi-bin/awstats.model.conf || die
+	doins "${S}"/wwwroot/cgi-bin/awstats.model.conf
 
 	# remove extra content that we don't want to install
 	rm -r "${S}"/wwwroot/cgi-bin/awstats.model.conf \
 		"${S}"/wwwroot/classes/src || die
 
 	insinto /usr/share/awstats
-	doins -r wwwroot || die
+	doins -r wwwroot
 	chmod +x "${D}"/usr/share/awstats/wwwroot/cgi-bin/*.pl
 
 	cd "${S}"/tools
