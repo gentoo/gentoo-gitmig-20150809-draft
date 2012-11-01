@@ -5,11 +5,11 @@
 -
  bomber:	bomber.o x.o sound.o matcher
 -	$(CC) -o bomber bomber.o x.o sound.o -lX11 -L/usr/X11R6/lib/
-+	$(CC) $(LDFLAGS) -o bomber bomber.o x.o sound.o -lX11 -L/usr/X11R6/lib/
++	$(CC) $(CFLAGS) $(LDFLAGS) -o bomber bomber.o x.o sound.o -lX11 -L/usr/X11R6/lib/
  
  matcher: matcher.c
 -	$(CC) matcher.c -o matcher
-+	$(CC) $(LDFLAGS) matcher.c -o matcher
++	$(CC) $(CFLAGS) $(LDFLAGS) matcher.c -o matcher
  
  bomber.o: bomber.c bomber.h
  
