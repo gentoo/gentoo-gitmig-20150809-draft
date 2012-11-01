@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-9999.ebuild,v 1.27 2012/09/27 21:04:34 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-9999.ebuild,v 1.28 2012/11/01 21:23:46 hwoarang Exp $
 
 EAPI=4
 
@@ -71,6 +71,20 @@ src_configure() {
 src_install() {
 	default
 	find "${D}" -name '*.la' -exec rm -f '{}' +
+	# Remove symlink #439570
+	if [[ -h ${D}/usr/include/${PN} ]]; then
+		rm "${D}"/usr/include/${PN}
+	fi
+}
+
+pkg_preinst() {
+	# Resolve the symlink mess. Bug #439570
+	[[ -d "${ROOT}"/usr/include/${PN} ]] && \
+		rm -rf "${ROOT}"/usr/include/${PN}
+	if [[ -d "${D}"/usr/include/${PN}-1.0 ]]; then
+		cd ${D}/usr/include
+		ln -s ${PN}-1.0 ${PN}
+	fi
 }
 
 pkg_postinst() {

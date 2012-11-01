@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libfm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.76 2012/09/27 21:04:34 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.77 2012/11/01 21:23:46 hwoarang Exp $
+
+  01 Nov 2012; Markos Chandras <hwoarang@gentoo.org> libfm-9999.ebuild:
+  Fix the libfm symlink mess. Thanks to Zac Medico <zmedico@gentoo.org>. Bug
+  #439570
 
   27 Sep 2012; Markos Chandras <hwoarang@gentoo.org> libfm-9999.ebuild:
   Remove the autom4te.cache file after running eautoreconf. Bug #436058
