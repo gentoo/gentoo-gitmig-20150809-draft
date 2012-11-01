@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Alien-SDL
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-SDL/ChangeLog,v 1.15 2012/10/24 09:57:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-SDL/ChangeLog,v 1.16 2012/11/01 06:30:26 jer Exp $
+
+  01 Nov 2012; Jeroen Roovers <jer@gentoo.org> Alien-SDL-1.436.0.ebuild:
+  Stable for HPPA (bug #439118).
 
   24 Oct 2012; <ago@gentoo.org> Alien-SDL-1.436.0.ebuild:
   Stable for amd64, wrt bug #439118
