@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pkginfo/pkginfo-0.9.ebuild,v 1.1 2012/05/08 10:37:21 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pkginfo/pkginfo-0.9.ebuild,v 1.2 2012/11/01 18:05:53 idella4 Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
@@ -55,7 +55,8 @@ src_install() {
 	fi
 
 	if use examples; then
-		insinto usr/share/doc/${PF}/
-		doins -r docs/examples/
+		docompress -x usr/share/doc/${PF}/examples/
+		insinto usr/share/doc/${PF}/examples/
+		doins docs/examples/*
 	fi
 }
