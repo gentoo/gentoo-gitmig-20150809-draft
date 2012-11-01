@@ -1,6 +1,10 @@
 # ChangeLog for app-office/unoconv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/unoconv/ChangeLog,v 1.6 2012/10/31 08:55:29 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/unoconv/ChangeLog,v 1.7 2012/11/01 08:08:23 graaff Exp $
+
+  01 Nov 2012; Hans de Graaff <graaff@gentoo.org> -unoconv-20120327.ebuild,
+  -unoconv-20120522.ebuild:
+  Remove old versions and force downgrade to released version.
 
 *unoconv-0.6 (31 Oct 2012)
 
