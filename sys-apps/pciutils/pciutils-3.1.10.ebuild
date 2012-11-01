@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-3.1.10.ebuild,v 1.3 2012/10/02 12:55:22 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-3.1.10.ebuild,v 1.4 2012/11/01 09:57:33 ssuominen Exp $
 
 EAPI="4"
 
@@ -75,8 +75,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "The 'pcimodules' program has been replaced by 'lspci -k'"
-	elog ""
-	elog "The 'network-cron' USE flag is gone; if you want a more up-to-date"
-	elog "pci.ids file, you should use sys-apps/hwids-99999999 (live ebuild)."
+	if [[ ${REPLACING_VERSIONS} ]] && [[ ${REPLACING_VERSIONS} < 3.1.10 ]]; then
+		elog "The 'pcimodules' program has been replaced by 'lspci -k'"
+		elog ""
+		elog "The 'network-cron' USE flag is gone; if you want a more up-to-date"
+		elog "pci.ids file, you should use sys-apps/hwids-99999999 (live ebuild)."
+	fi
 }
