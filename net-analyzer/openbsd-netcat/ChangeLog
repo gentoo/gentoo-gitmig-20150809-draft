@@ -1,0 +1,9 @@
+# ChangeLog for net-analyzer/netcat-openbsd
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openbsd-netcat/ChangeLog,v 1.1 2012/11/01 07:35:04 heroxbd Exp $
+
+*netcat-openbsd (12 Sep 2008)
+
+  12 Sep 2008; Luca Pasquali <lpasquali@staff.dada.net> netcat-openbsd-1.84-r0.ebuild:
+  just started the ebuild.
+  package is initially put tidled in my two test environments: amd64 and x86.
