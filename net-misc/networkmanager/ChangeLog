@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.150 2012/10/28 21:27:32 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.151 2012/11/01 16:05:21 tetromino Exp $
+
+  01 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  networkmanager-0.9.6.0.ebuild, networkmanager-0.9.6.4.ebuild:
+  Depend on ppp[ipv6] because nm now assumes that pppd allows ipv6cp-related
+  arguments (bug #440696, thanks to Martux).
 
   28 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   networkmanager-0.8.4.0-r2.ebuild, networkmanager-0.9.4.0-r5.ebuild,
