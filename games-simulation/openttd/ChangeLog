@@ -1,6 +1,12 @@
 # ChangeLog for games-simulation/openttd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.130 2012/10/20 18:39:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.131 2012/11/01 19:37:47 mr_bones_ Exp $
+
+*openttd-1.2.3 (01 Nov 2012)
+
+  01 Nov 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/openttd-1.2.3-cflags.patch, +openttd-1.2.3.ebuild:
+  version bump
 
   20 Oct 2012; Agostino Sarubbo <ago@gentoo.org> openttd-1.2.2.ebuild:
   Stable for amd64, wrt bug #438540
