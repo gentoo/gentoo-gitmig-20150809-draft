@@ -1,6 +1,11 @@
 # ChangeLog for games-misc/opengfx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/opengfx/ChangeLog,v 1.23 2012/06/27 17:43:04 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/opengfx/ChangeLog,v 1.24 2012/11/01 20:02:28 mr_bones_ Exp $
+
+*opengfx-0.4.5 (01 Nov 2012)
+
+  01 Nov 2012; Michael Sterrett <mr_bones_@gentoo.org> +opengfx-0.4.5.ebuild:
+  version bump
 
   27 Jun 2012; Markus Meier <maekke@gentoo.org> opengfx-0.4.4.ebuild:
   add ~arm, bug #412329
@@ -92,4 +97,3 @@
   +opengfx-0.2.3.ebuild, +metadata.xml:
   initial commit - ebuild submitted by Locke 'Wizzleby' Shinseiko via bug
   #300328
-
