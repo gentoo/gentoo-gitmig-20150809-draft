@@ -1,6 +1,12 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.494 2012/11/01 12:19:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.495 2012/11/01 20:22:57 robbat2 Exp $
+  
+  01 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> mysql.eclass,
+  mysql-v2.eclass:
+  Bug #392361: Fix mysql_install_db cases to work between all versions &
+  variations of MySQL. Also add in checks for tmpdir/log-bin/relay-log
+  directories that must exist otherwise the install_db will fail.
 
   01 Nov 2012; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
   Export PYTHONPATH for phases in out-of-source builds.
@@ -279,6 +285,9 @@
   27 Sep 2012; Ian Stakenvicius <axs@gentoo.org> toolchain-funcs.eclass:
   Fixed tc-ninja_magic_to_arch() to also use KV_FULL and fail if no kernel
   version specified, bug 432390
+
+  08 Oct 2012; Robin H. Johnson <robbat2@gentoo.org> db.eclass:
+  Fix typo in src_test runner: makeopts_jobs not makeopts_job.
 
   27 Sep 2012; Ian Stakenvicius <axs@gentoo.org> eutils.eclass:
   Made 'usex' declaration conditional on lack of PM or EAPI5+ support
