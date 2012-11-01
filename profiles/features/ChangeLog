@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/ChangeLog,v 1.49 2012/09/29 16:56:23 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/ChangeLog,v 1.50 2012/11/01 11:44:31 swift Exp $
+
+  01 Nov 2012; <swift@gentoo.org> selinux/package.mask:
+  Adding unmask for selinux-dbadm package
 
   29 Sep 2012; <swift@gentoo.org> selinux/package.mask:
   Adding SELinux rtorrent policy package
