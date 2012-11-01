@@ -5,8 +5,4 @@
 		<email>floppym@gentoo.org</email>
 		<name>Mike Gilbert</name>
 	</maintainer>
-	<use>
-		<flag name="deluge">Enable deluge output plugin</flag>
-		<flag name="transmission">Enable transmission output plugin</flag>
-	</use>
 </pkgmetadata>
