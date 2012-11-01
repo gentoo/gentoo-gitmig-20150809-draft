@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libcxx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/ChangeLog,v 1.6 2012/11/01 17:37:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/ChangeLog,v 1.7 2012/11/01 17:38:32 aballier Exp $
+
+  01 Nov 2012; Alexis Ballier <aballier@gentoo.org>
+  -libcxx-0.0_p20120528.ebuild:
+  remove old
 
   01 Nov 2012; Alexis Ballier <aballier@gentoo.org>
   libcxx-0.0_p20120911.ebuild, libcxx-9999.ebuild:
