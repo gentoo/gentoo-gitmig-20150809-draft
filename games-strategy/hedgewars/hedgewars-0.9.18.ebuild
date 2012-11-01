@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/hedgewars-0.9.18.ebuild,v 1.2 2012/11/01 22:11:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/hedgewars-0.9.18.ebuild,v 1.3 2012/11/01 23:36:28 mr_bones_ Exp $
 
 EAPI=2
 CMAKE_BUILD_TYPE=Release
@@ -34,7 +34,9 @@ RDEPEND="${RDEPEND}
 S=${WORKDIR}/${PN}-src-${PV}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-cflags.patch
+	epatch \
+		"${FILESDIR}"/${P}-cflags.patch \
+		"${FILESDIR}"/${P}-cmake.patch
 }
 
 src_configure() {
@@ -48,7 +50,7 @@ src_configure() {
 }
 
 src_compile() {
-	cmake-utils_src_compile -j1
+	cmake-utils_src_compile
 }
 
 src_install() {
