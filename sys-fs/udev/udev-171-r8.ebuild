@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-171-r8.ebuild,v 1.2 2012/10/27 21:30:17 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-171-r8.ebuild,v 1.3 2012/11/01 02:24:34 ssuominen Exp $
 
 EAPI=4
 
@@ -23,19 +23,18 @@ inherit eutils flag-o-matic multilib toolchain-funcs linux-info systemd libtool
 if [[ ${PV} != "9999" ]]
 then
 	KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-linux"
-	# please update testsys-tarball whenever udev-xxx/test/sys/ is changed
-	SRC_URI="mirror://kernel/linux/utils/kernel/hotplug/${P}.tar.bz2
-			 test? ( mirror://gentoo/${PN}-171-testsys.tar.bz2 )
-			 http://dev.gentoo.org/~ssuominen/${PN}-gentoo-legacy-patchset-1.tar.bz2"
+	SRC_URI="mirror://gentoo/${P}.tar.bz2
+		test? ( mirror://gentoo/${PN}-171-testsys.tar.bz2 )
+		mirror://gentoo/${PN}-gentoo-legacy-patchset-1.tar.bz2"
 	if [[ -n "${PATCHSET}" ]]
 	then
 		SRC_URI="${SRC_URI} mirror://gentoo/${PATCHSET}.tar.bz2"
 	fi
 fi
-SRC_URI="${SRC_URI} http://dev.gentoo.org/~williamh/dist/${scriptname}.tar.bz2"
+SRC_URI="${SRC_URI} mirror://gentoo/${scriptname}.tar.bz2"
 
 DESCRIPTION="Linux dynamic and persistent device naming support (aka userspace devfs)"
-HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev/udev.html http://git.kernel.org/?p=linux/hotplug/udev.git;a=summary"
+HOMEPAGE="http://www.freedesktop.org/wiki/Software/systemd"
 
 LICENSE="GPL-2"
 SLOT="0"
