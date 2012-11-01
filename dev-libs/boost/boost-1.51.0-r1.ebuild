@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.51.0-r1.ebuild,v 1.1 2012/10/31 16:32:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.51.0-r1.ebuild,v 1.2 2012/11/01 15:21:39 flameeyes Exp $
 
 EAPI="5"
 PYTHON_DEPEND="python? *"
@@ -272,7 +272,7 @@ EOF
 		installation
 	fi
 
-	use python || rm -rf "${D}usr/include/boost"/python* || die
+	use python || rm -rf "${D}usr/include/boost-${MAJOR_PV}/boost"/python* || die
 
 	if use doc; then
 		find libs/*/* -iname "test" -or -iname "src" | xargs rm -rf
