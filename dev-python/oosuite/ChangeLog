@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/oosuite
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oosuite/ChangeLog,v 1.5 2012/10/19 04:46:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oosuite/ChangeLog,v 1.6 2012/11/01 19:30:56 bicatali Exp $
+
+*oosuite-0.42 (01 Nov 2012)
+
+  01 Nov 2012; Sébastien Fabbro <bicatali@gentoo.org> +oosuite-0.42.ebuild:
+  Version bump
 
   19 Oct 2012; Patrick Lauer <patrick@gentoo.org> oosuite-0.38.ebuild,
   oosuite-0.39.ebuild:
