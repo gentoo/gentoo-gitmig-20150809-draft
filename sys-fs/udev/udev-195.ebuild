@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-195.ebuild,v 1.1 2012/10/26 21:28:17 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-195.ebuild,v 1.2 2012/11/01 06:27:10 ssuominen Exp $
 
 EAPI=4
 
@@ -345,22 +345,42 @@ pkg_postinst()
 			einfo "Removed unneeded file 64-device-mapper.rules"
 	fi
 
-	ewarn
-	ewarn "If you build an initramfs including udev, please make sure the"
-	ewarn "/usr/bin/udevadm binary gets included, Also, change your scripts to"
-	ewarn "use it,as it replaces the old udevinfo and udevtrigger helpers."
+	# http://bugs.gentoo.org/440462
+	if [[ ${REPLACING_VERSIONS} ]] && [[ ${REPLACING_VERSIONS} < 195 ]]; then
+		ewarn
+		ewarn "If you build an initramfs including udev, please make sure the"
+		ewarn "/usr/bin/udevadm binary gets included, Also, change your scripts to"
+		ewarn "use it, as it replaces the old udevinfo and udevtrigger helpers."
 
-	ewarn
-	ewarn "mount options for /dev are no longer set in /etc/udev/udev.conf."
-	ewarn "Instead, /etc/fstab should be used. This matches other mount points."
+		ewarn
+		ewarn "mount options for /dev are no longer set in /etc/udev/udev.conf."
+		ewarn "Instead, /etc/fstab should be used. This matches other mount points."
 
-	ewarn
-	ewarn "Rules for /dev/hd* devices have been removed."
-	ewarn "Please migrate to libata."
+		ewarn
+		ewarn "Rules for /dev/hd* devices have been removed."
+		ewarn "Please migrate to libata."
 
-	ewarn
-	ewarn "action_modeswitch has been removed by upstream."
-	ewarn "Please use sys-apps/usb_modeswitch."
+		ewarn
+		ewarn "action_modeswitch has been removed by upstream."
+		ewarn "Please use sys-apps/usb_modeswitch."
+
+		if use acl; then
+			ewarn
+			ewarn "The udev-acl functionality has been moved."
+			ewarn "If you are not using systemd, this is handled by ConsoleKit."
+			ewarn "Otherwise, you need to make sure that systemd is emerged with"
+			ewarn "the acl use flag active."
+		fi
+
+		ewarn
+		ewarn "Upstream has removed the persistent-net and persistent-cd rules"
+		ewarn "generator. If you need persistent names for these devices,"
+		ewarn "place udev rules for them in ${ROOT}etc/udev/rules.d."
+		ewarn "Be aware that you cannot directly swap device names, so persistent"
+		ewarn "rules for network devices should be like the ones at the following"
+		ewarn "URL:"
+		ewarn "http://bugs.gentoo.org/show_bug.cgi?id=433746#c1"
+	fi
 
 	if ismounted /usr
 	then
@@ -378,14 +398,6 @@ pkg_postinst()
 		ewarn "http://www.gentoo.org/doc/en/initramfs-guide.xml"
 	fi
 
-	if use acl; then
-		ewarn
-		ewarn "The udev-acl functionality has been moved."
-		ewarn "If you are not using systemd, this is handled by consolekit."
-		ewarn "Otherwise, you need to make sure that systemd is emerged with"
-		ewarn "the acl use flag active."
-	fi
-
 	if [[ -d ${ROOT}lib/udev ]]
 	then
 		ewarn
@@ -400,15 +412,6 @@ pkg_postinst()
 	ewarn "You need to restart udev as soon as possible to make the upgrade go"
 	ewarn "into effect."
 	ewarn "The method you use to do this depends on your init system."
-
-	ewarn
-	ewarn "Upstream has removed the persistent-net and persistent-cd rules"
-	ewarn "generator. If you need persistent names for these devices,"
-	ewarn "place udev rules for them in ${ROOT}etc/udev/rules.d."
-	ewarn "Be aware that you cannot directly swap device names, so persistent"
-	ewarn "rules for network devices should be like the ones at the following"
-	ewarn "URL:"
-	ewarn "http://bugs.gentoo.org/show_bug.cgi?id=433746#C1"
 
 	preserve_old_lib_notify /$(get_libdir)/libudev.so.0
 
