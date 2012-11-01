@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/postgis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.70 2012/08/20 01:46:29 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.71 2012/11/01 06:39:12 patrick Exp $
+
+*postgis-1.5.5 (01 Nov 2012)
+
+  01 Nov 2012; Patrick Lauer <patrick@gentoo.org> +postgis-1.5.5.ebuild:
+  Bump
 
   20 Aug 2012; Christoph Junghans <ottxor@gentoo.org> postgis-2.0.1.ebuild:
   added prefix keywords
