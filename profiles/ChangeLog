@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7086 2012/11/01 07:05:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7087 2012/11/01 09:22:41 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Nov 2012; Ulrich Müller <ulm@gentoo.org> license_groups:
+  New DEPRECATED license group, bug 440638.
 
   01 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Unmask boost 1.50/1.51 to comply with glibc-2.16, as well as GnuTLS 3; keep
