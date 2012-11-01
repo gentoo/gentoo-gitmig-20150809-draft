@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.15 2012/11/01 21:43:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.16 2012/11/01 21:49:34 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -87,8 +87,7 @@ fi
 #
 # It will cause the Python dependencies to look like:
 # @CODE
-# python_targets_pythonX_Y? (
-#   dev-lang/python:X_Y[gdbm,ncurses(-)?] )
+# python_targets_pythonX_Y? ( dev-lang/python:X.Y[gdbm,ncurses(-)?] )
 # @CODE
 
 # @ECLASS-VARIABLE: PYTHON_DEPS
@@ -99,14 +98,15 @@ fi
 # Example use:
 # @CODE
 # RDEPEND="${PYTHON_DEPS}
-#   dev-foo/mydep"
+#	dev-foo/mydep"
 # DEPEND="${RDEPEND}"
 # @CODE
 #
 # Example value:
 # @CODE
-# python_targets2_6? ( dev-lang/python:2.6[gdbm] )
-# python_targets2_7? ( dev-lang/python:2.7[gdbm] )
+# dev-python/python-exec
+# python_targets_python2_6? ( dev-lang/python:2.6[gdbm] )
+# python_targets_python2_7? ( dev-lang/python:2.7[gdbm] )
 # @CODE
 
 # @ECLASS-VARIABLE: PYTHON_USEDEP
@@ -212,6 +212,7 @@ _python_set_globals
 #
 # Example value:
 # @CODE
+# /usr/lib64/python2.6/site-packages
 # @CODE
 
 # @FUNCTION: python_export
