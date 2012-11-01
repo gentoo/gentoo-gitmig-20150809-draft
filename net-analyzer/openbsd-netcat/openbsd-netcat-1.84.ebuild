@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openbsd-netcat/openbsd-netcat-1.84.ebuild,v 1.1 2012/11/01 07:35:04 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openbsd-netcat/openbsd-netcat-1.84.ebuild,v 1.2 2012/11/01 07:40:52 heroxbd Exp $
 
 EAPI=4
 
@@ -45,16 +45,16 @@ src_prepare() {
 }
 
 src_compile() {
-        use static && export STATIC="-static"
-        COMPILER=$(tc-getCC)
-        ${COMPILER} ${CFLAGS} $(pkg-config --cflags --libs glib-2.0) netcat.c \
-        atomicio.c socks.c -o nc.openbsd || die
+	use static && export STATIC="-static"
+	COMPILER=$(tc-getCC)
+	${COMPILER} ${CFLAGS} $(pkg-config --cflags --libs glib-2.0) netcat.c \
+	atomicio.c socks.c -o nc.openbsd || die
 }
 
 src_install() {
-        dobin nc.openbsd
-        dodoc README*
-        doman nc.openbsd.1
-        docinto scripts
-        dodoc scripts/*
+	dobin nc.openbsd
+	dodoc README*
+	doman nc.openbsd.1
+	docinto scripts
+	dodoc scripts/*
 }
