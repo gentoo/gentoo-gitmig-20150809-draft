@@ -1,6 +1,11 @@
 # ChangeLog for games-util/nml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/nml/ChangeLog,v 1.7 2012/06/27 17:41:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/nml/ChangeLog,v 1.8 2012/11/01 19:53:37 mr_bones_ Exp $
+
+*nml-0.2.4 (01 Nov 2012)
+
+  01 Nov 2012; Michael Sterrett <mr_bones_@gentoo.org> +nml-0.2.4.ebuild:
+  version bump
 
   27 Jun 2012; Markus Meier <maekke@gentoo.org> nml-0.2.3.ebuild:
   add ~arm, bug #412329
@@ -26,4 +31,3 @@
   17 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> +metadata.xml,
   +nml-0.2.3.ebuild:
   Initial commit for new tool used to build OpenGFX files used by OpenTTD.
-
