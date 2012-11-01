@@ -1,6 +1,11 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.408 2012/10/23 15:58:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.409 2012/11/01 13:43:33 anarchy Exp $
+
+*seamonkey-2.13.2 (01 Nov 2012)
+
+  01 Nov 2012; <anarchy@gentoo.org> +seamonkey-2.13.2.ebuild:
+  Security bump, bug #439960
 
   23 Oct 2012; <ago@gentoo.org> seamonkey-2.13.1.ebuild:
   Stable for amd64, wrt bug #437780
