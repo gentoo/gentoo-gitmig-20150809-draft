@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/bashforth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/bashforth/ChangeLog,v 1.6 2012/11/01 16:53:11 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/bashforth/ChangeLog,v 1.7 2012/11/01 17:15:06 blueness Exp $
+
+  01 Nov 2012; Anthony G. Basile <blueness@gentoo.org> bashforth-0.58a.ebuild:
+  keyword ~arm ~mips ~ppc ~ppc64, bug #440674
 
 *bashforth-0.58a (01 Nov 2012)
 
@@ -26,4 +29,3 @@
   17 Feb 2006; Matthew Kennedy <mkennedy@gentoo.org> +metadata.xml,
   +bashforth-0.54a.ebuild:
   Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>.
-
