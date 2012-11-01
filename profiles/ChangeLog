@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7087 2012/11/01 09:22:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7088 2012/11/01 15:53:08 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Nov 2012; Alexis Ballier <aballier@gentoo.org> package.mask:
+  mask dev-ml/ocamlduce
 
   01 Nov 2012; Ulrich Müller <ulm@gentoo.org> license_groups:
   New DEPRECATED license group, bug 440638.
