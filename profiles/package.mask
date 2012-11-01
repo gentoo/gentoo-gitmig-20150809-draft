@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14181 2012/11/01 15:53:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14182 2012/11/01 15:53:45 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -457,10 +457,6 @@ games-strategy/glest
 # Shows newest unstable to users easily
 >=sci-biology/ncbi-tools-20080302
 >=sci-chemistry/dssp-070831
-
-# Alexis Ballier <aballier@gentoo.org> (10 Jun 2012)
-# Beta release, mask until rev. deps are fixed
->=dev-lang/ocaml-4.00.0_alpha
 
 # Michael Weber <xmw@gentoo.org> (9 Jun 2012)
 # The mentioned versions fail to assemble raid 0/1/5 devices.
