@@ -1,6 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.89 2012/10/21 17:28:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.90 2012/11/01 23:51:34 robbat2 Exp $
+
+# Robin H Johnson <robbat2@gentoo.org> (01 Nov 2012)
+# MySQL 5.5 wants systemtap, tcmalloc & jemalloc
+>=dev-db/mysql-5.5 systemtap tcmalloc
+>=dev-db/mariadb-5.5 systemtap tcmalloc
 
 # Markus Meier <maekke@gentoo.org> (17 Oct 2012)
 # spidermonkey is broken on arm see bug #420471

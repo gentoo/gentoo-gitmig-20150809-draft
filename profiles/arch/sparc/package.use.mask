@@ -1,6 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.116 2012/10/21 17:28:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.117 2012/11/01 23:51:35 robbat2 Exp $
+
+# Robin H Johnson <robbat2@gentoo.org> (01 Nov 2012)
+# MySQL 5.5 wants systemtap, tcmalloc & jemalloc
+>=dev-db/mysql-5.5 systemtap tcmalloc jemalloc
+>=dev-db/mariadb-5.5 systemtap tcmalloc jemalloc
 
 # Raúl Porcel <armin76@gentoo.org> (08 Jul 2012)
 # x11-libs/qt-webkit doesn't seem to work

@@ -1,8 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.113 2012/10/02 15:22:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.114 2012/11/01 23:51:34 robbat2 Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
+
+# Robin H Johnson <robbat2@gentoo.org> (01 Nov 2012)
+# MySQL 5.5 wants systemtap, tcmalloc & jemalloc
+>=dev-db/mysql-5.5 systemtap tcmalloc
+>=dev-db/mariadb-5.5 systemtap tcmalloc
 
 # Jeroen Roovers <jer@gentoo.org> (10 Jul 2012)
 # USE=clang needs sys-devel/llvm which has not been ported

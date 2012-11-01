@@ -1,10 +1,17 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7090 2012/11/01 19:21:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7091 2012/11/01 23:51:34 robbat2 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Nov 2012; Robin H. Johnson <robbat2@gentoo.org>
+  arch/alpha/package.use.mask, arch/arm/package.use.mask,
+  arch/hppa/package.use.mask, arch/ia64/package.use.mask,
+  arch/powerpc/package.use.mask, arch/sparc/package.use.mask:
+  package.use.mask tcmalloc/jemalloc/systemtap for MySQL on arches that are
+  lagging keywording per bugs 351931, 429710, 429708.
 
   01 Nov 2012; Ulrich Müller <ulm@gentoo.org> license_groups:
   Add RSA-PKCS11 to MISC-FREE license group, bug 440752.
