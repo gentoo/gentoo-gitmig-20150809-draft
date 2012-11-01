@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-9999.ebuild,v 1.14 2012/05/28 19:38:23 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-9999.ebuild,v 1.15 2012/11/01 07:56:06 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -83,8 +83,7 @@ src_install() {
 	fi
 
 	insinto "${MY_HTDOCSDIR#${EPREFIX}}"
-	doins -r django/contrib/admin/media/* || die "doins failed"
-
+	doins -r django/contrib/admin/static/admin/* || die "doins failed"
 	webapp_src_install
 }
 
