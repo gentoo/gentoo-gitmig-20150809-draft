@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.271 2012/10/31 21:36:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.272 2012/11/01 15:17:23 flameeyes Exp $
+
+  01 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org> boost-1.46.1-r1.ebuild,
+  boost-1.49.0-r2.ebuild:
+  Make these depend on a glibc before 2.16 as their headers won't work
+  otherwise.
 
 *boost-1.49.0-r2 (31 Oct 2012)
 
