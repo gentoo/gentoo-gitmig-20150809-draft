@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pythonmagick
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.39 2012/09/29 22:42:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.40 2012/11/01 16:22:15 flameeyes Exp $
+
+  01 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  pythonmagick-0.9.8.ebuild:
+  Drop use of boost-utils so that it can build with unslotted boost. Thanks to
+  Helmut Jaraush for reporting in bug #440736.
 
 *pythonmagick-0.9.8 (29 Sep 2012)
 
@@ -179,4 +184,3 @@
   06 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> +metadata.xml,
   +pythonmagick-0.5-r1.ebuild:
   Initial commit, bug #35279. Ebuild by Chris Mayo <mayo@clara.co.uk>.
-
