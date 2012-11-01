@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.15 2012/10/31 14:28:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.16 2012/11/01 12:18:31 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -151,7 +151,12 @@ esetup.py() {
 			die 'Out-of-source build requested, yet BUILD_DIR unset.'
 		fi
 
-		args+=( build --build-base "${BUILD_DIR}" )
+		args+=(
+			build
+			--build-base "${BUILD_DIR}"
+			# using a single directory for them helps us export ${PYTHONPATH}
+			--build-lib "${BUILD_DIR}/lib"
+		)
 	fi
 
 	set -- "${PYTHON:-python}" setup.py \
