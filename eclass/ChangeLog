@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.497 2012/11/01 21:49:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.498 2012/11/01 23:57:50 robbat2 Exp $
+
+  01 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> mysql-autotools.eclass,
+  mysql-cmake.eclass, mysql-v2.eclass:
+  Bring in MySQL overlay eclass changes for tcmalloc, jemalloc, systemtap,
+  readline gplv3 and pbxt static build.
 
   01 Nov 2012; Michał Górny <mgorny@gentoo.org> python-r1.eclass:
   Minor documentation improvements.

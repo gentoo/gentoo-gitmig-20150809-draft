@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-v2.eclass,v 1.20 2012/11/01 20:22:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-v2.eclass,v 1.21 2012/11/01 23:57:50 robbat2 Exp $
 
 # @ECLASS: mysql-v2.eclass
 # @MAINTAINER:
@@ -176,6 +176,7 @@ IUSE="${IUSE} berkdb"
 IUSE="${IUSE} +community profiling"
 
 [[ ${PN} == "mariadb" ]] \
+&& mysql_check_version_range "5.1.38 to 5.3.99" \
 && IUSE="${IUSE} libevent"
 
 [[ ${PN} == "mariadb" ]] \
@@ -185,6 +186,11 @@ IUSE="${IUSE} +community profiling"
 [[ ${PN} == "mariadb" ]] \
 && mysql_version_is_at_least "5.2.5" \
 && IUSE="${IUSE} sphinx"
+
+if mysql_version_is_at_least "5.5"; then
+	REQUIRED_USE="tcmalloc? ( !jemalloc ) jemalloc? ( !tcmalloc )"
+	IUSE="${IUSE} jemalloc tcmalloc"
+fi
 
 mysql_version_is_at_least "5.5.7" \
 && IUSE="${IUSE} systemtap"
@@ -205,6 +211,7 @@ DEPEND="
 "
 
 [[ ${PN} == mariadb ]] \
+&& mysql_check_version_range "5.1.38 to 5.3.99" \
 && DEPEND="${DEPEND} libevent? ( >=dev-libs/libevent-1.4 )"
 
 # Having different flavours at the same time is not a good idea
@@ -241,7 +248,14 @@ mysql_version_is_at_least "5.5.8" \
 && DEPEND="${DEPEND} sphinx? ( app-misc/sphinx )"
 
 mysql_version_is_at_least "5.5.7" \
-&& DEPEND="${DEPEND} systemtap? ( >=dev-util/systemtap-1.3 )"
+&& DEPEND="${DEPEND} systemtap? ( >=dev-util/systemtap-1.3 )" \
+&& DEPEND="${DEPEND} kernel_linux? ( dev-libs/libaio )"
+
+mysql_version_is_at_least "5.5" \
+&& DEPEND="${DEPEND} jemalloc? ( dev-libs/jemalloc )"
+
+mysql_version_is_at_least "5.5" \
+&& DEPEND="${DEPEND} tcmalloc? ( dev-util/google-perftools )"
 
 # dev-perl/DBD-mysql is needed by some scripts installed by MySQL
 PDEPEND="perl? ( >=dev-perl/DBD-mysql-2.9004 )"
@@ -495,10 +509,10 @@ mysql-v2_pkg_postinst() {
 	fi
 
 	if pbxt_available && use pbxt ; then
-		# TODO: explain it better
-		elog "    mysql> INSTALL PLUGIN pbxt SONAME 'libpbxt.so';"
-		elog "    mysql> CREATE TABLE t1 (c1 int, c2 text) ENGINE=pbxt;"
-		elog "if, after that, you cannot start the MySQL server,"
+		elog "Note: PBXT is now statically built when enabled."
+		elog ""
+		elog "If, you previously installed as a plugin and "
+		elog "you cannot start the MySQL server,"
 		elog "remove the ${MY_DATADIR}/mysql/plugin.* files, then"
 		elog "use the MySQL upgrade script to restore the table"
 		elog "or execute the following SQL command:"
