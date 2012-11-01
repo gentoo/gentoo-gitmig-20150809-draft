@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jibx-tools/jibx-tools-1.1.5-r1.ebuild,v 1.3 2009/07/19 13:56:09 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jibx-tools/jibx-tools-1.1.5-r1.ebuild,v 1.4 2012/11/01 21:29:07 ago Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="source"
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/jibx/jibx_${MY_PV}.zip"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 COMMON_DEP="
