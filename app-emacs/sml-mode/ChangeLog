@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/sml-mode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/sml-mode/ChangeLog,v 1.25 2012/08/10 23:27:34 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/sml-mode/ChangeLog,v 1.26 2012/11/01 14:42:24 ulm Exp $
+
+*sml-mode-6.1 (01 Nov 2012)
+
+  01 Nov 2012; Ulrich Müller <ulm@gentoo.org> sml-mode-4.1.ebuild,
+  sml-mode-5.0.ebuild, +sml-mode-6.1.ebuild:
+  Version bump, bug 440348. According to upstream, the package now consists
+  only of a single elisp file. Specify LICENSE more precisely.
 
   10 Aug 2012; Christian Faulhammer <fauli@gentoo.org>
   -sml-mode-5.0_beta1.ebuild:
