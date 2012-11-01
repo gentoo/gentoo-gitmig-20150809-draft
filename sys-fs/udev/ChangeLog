@@ -1,9 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.734 2012/11/01 20:01:21 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.735 2012/11/01 20:40:19 williamh Exp $
 
   01 Nov 2012; William Hubbs <williamh@gentoo.org> udev-9999.ebuild:
-  sync live ebuild md5 rules with 195.
+  sync live ebuild md5 for default rules with 195.
 
   01 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> udev-195.ebuild,
   udev-9999.ebuild:

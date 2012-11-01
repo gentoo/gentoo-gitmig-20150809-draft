@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-195.ebuild,v 1.2 2012/11/01 06:27:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-195.ebuild,v 1.3 2012/11/01 20:40:19 williamh Exp $
 
 EAPI=4
 
@@ -346,7 +346,7 @@ pkg_postinst()
 	fi
 
 	# http://bugs.gentoo.org/440462
-	if [[ ${REPLACING_VERSIONS} ]] && [[ ${REPLACING_VERSIONS} < 195 ]]; then
+	if [[ ${REPLACING_VERSIONS} ]] && [[ ${REPLACING_VERSIONS} < 141 ]]; then
 		ewarn
 		ewarn "If you build an initramfs including udev, please make sure the"
 		ewarn "/usr/bin/udevadm binary gets included, Also, change your scripts to"
@@ -355,11 +355,15 @@ pkg_postinst()
 		ewarn
 		ewarn "mount options for /dev are no longer set in /etc/udev/udev.conf."
 		ewarn "Instead, /etc/fstab should be used. This matches other mount points."
+	fi
 
+	if [[ ${REPLACING_VERSIONS} ]] && [[ ${REPLACING_VERSIONS} < 151 ]]; then
 		ewarn
 		ewarn "Rules for /dev/hd* devices have been removed."
 		ewarn "Please migrate to libata."
+	fi
 
+	if [[ ${REPLACING_VERSIONS} ]] && [[ ${REPLACING_VERSIONS} < 189 ]]; then
 		ewarn
 		ewarn "action_modeswitch has been removed by upstream."
 		ewarn "Please use sys-apps/usb_modeswitch."
