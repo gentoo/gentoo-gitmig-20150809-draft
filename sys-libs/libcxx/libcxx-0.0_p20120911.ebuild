@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/libcxx-0.0_p20120911.ebuild,v 1.2 2012/09/22 19:15:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/libcxx-0.0_p20120911.ebuild,v 1.3 2012/11/01 17:37:04 aballier Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ ESVN_REPO_URI="http://llvm.org/svn/llvm-project/libcxx/trunk"
 
 inherit cmake-utils ${SCM} base flag-o-matic
 
-DESCRIPTION="New implementation of the C++ standard library, targeting C++0X"
+DESCRIPTION="New implementation of the C++ standard library, targeting C++11"
 HOMEPAGE="http://libcxx.llvm.org/"
 if [ "${PV%9999}" = "${PV}" ] ; then
 	SRC_URI="mirror://gentoo/${P}.tar.xz"
