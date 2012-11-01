@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/neon-0.29.6-r1.ebuild,v 1.14 2012/09/05 19:43:54 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/neon-0.29.6-r1.ebuild,v 1.15 2012/11/01 15:52:27 qnikst Exp $
 
 EAPI="4"
 
@@ -47,6 +47,8 @@ src_prepare() {
 	sed -i -e "s/ALL_LINGUAS=.*/ALL_LINGUAS=\"${linguas}\"/g" configure.in
 
 	epatch "${FILESDIR}"/${PN}-0.29.6-no-ssl-check.patch
+	epatch "${FILESDIR}"/${PN}-0.29.6-gnutls-3-functions.patch
+	epatch "${FILESDIR}"/${PN}-0.29.6-gnutls-3-types.patch
 	AT_M4DIR="macros" eautoreconf
 
 	elibtoolize
