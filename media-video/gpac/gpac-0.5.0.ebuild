@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header:
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.5.0.ebuild,v 1.2 2012/11/01 18:22:35 flameeyes Exp $
 
 EAPI=4
 
