@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.137 2012/10/04 03:52:35 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.138 2012/11/01 08:35:43 pesa Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -23,7 +23,7 @@ else
 	QT4_BUILD_TYPE="release"
 fi
 
-HOMEPAGE="http://qt-project.org/ http://qt.nokia.com/"
+HOMEPAGE="http://qt-project.org/ http://qt.digia.com/"
 LICENSE="|| ( LGPL-2.1 GPL-3 )"
 
 MY_PV=${PV/_/-}
