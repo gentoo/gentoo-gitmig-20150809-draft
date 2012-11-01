@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/apache-tools-2.4.3.ebuild,v 1.1 2012/10/12 06:05:18 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/apache-tools-2.4.3-r1.ebuild,v 1.1 2012/11/01 06:55:40 qnikst Exp $
 
 EAPI="3"
 inherit flag-o-matic eutils
@@ -68,13 +68,9 @@ src_install () {
 
 	# Provide a symlink for ab-ssl
 	if use ssl; then
-		dosym /usr/sbin/ab /usr/sbin/ab-ssl
-		dosym /usr/sbin/ab /usr/sbin/ab2-ssl
+		dosym /usr/bin/ab /usr/bin/ab-ssl
+		dosym /usr/bin/ab /usr/bin/ab2-ssl
 	fi
-
-	# make htpasswd accessible for non-root users
-	dosym /usr/sbin/htpasswd /usr/bin/htpasswd
-	dosym /usr/sbin/htdigest /usr/bin/htdigest
 
 	dodoc "${S}"/CHANGES
 }
