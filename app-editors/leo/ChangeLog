@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/leo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/leo/ChangeLog,v 1.25 2012/04/10 03:50:21 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/leo/ChangeLog,v 1.26 2012/11/01 10:12:09 ulm Exp $
+
+  01 Nov 2012; Ulrich Müller <ulm@gentoo.org> leo-4.8.ebuild, leo-4.10.ebuild:
+  Specify LICENSE more precisely, MIT according to LICENSE.TXT in zipball.
 
   10 Apr 2012; Mike Gilbert <floppym@gentoo.org>
   +files/leo-4.10-fix_syntax_errors.patch, leo-4.10.ebuild:
