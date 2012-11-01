@@ -75,9 +75,7 @@ Exporters
 </longdescription>
   <use>
     <flag name="boost">enable boost support</flag>
-    <flag name="cegui">build the CEGUI samples</flag>
     <flag name="cg">NVIDIA toolkit plugin</flag>
-    <flag name="devil">image loading support with DevIL</flag>
     <flag name="double-precision">more precise calculations at the expense of speed</flag>
 	<flag name="freeimage">support images via freeimage</flag>
 	<flag name="gles2">build OpenGL ES 2.x RenderSystem</flag>
