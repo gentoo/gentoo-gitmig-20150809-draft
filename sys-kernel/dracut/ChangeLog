@@ -1,6 +1,16 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.93 2012/11/01 10:51:53 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.94 2012/11/01 19:30:47 aidecoe Exp $
+
+*dracut-024-r2 (01 Nov 2012)
+*dracut-023-r4 (01 Nov 2012)
+
+  01 Nov 2012; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  files/024-0001-Fallback-to-external-blkid-and-path_id.patch,
+  files/023-0003-Fallback-to-external-blkid-and-path_id.patch,
+  -dracut-023-r3.ebuild, +dracut-023-r4.ebuild, -dracut-024-r1.ebuild,
+  +dracut-024-r2.ebuild:
+  Added missing epatch and improved patches a bit btw.
 
   01 Nov 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-014-r3.ebuild,
   dracut-018-r3.ebuild, dracut-019-r6.ebuild, dracut-022-r6.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-024-r1.ebuild,v 1.1 2012/11/01 09:54:08 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-024-r2.ebuild,v 1.1 2012/11/01 19:30:47 aidecoe Exp $
 
 EAPI=4
 
@@ -149,6 +149,9 @@ rm_module() {
 #
 
 src_prepare() {
+	epatch "${FILESDIR}/${PV}-0001-Fallback-to-external-blkid-and-path_id.patch"
+	chmod +x "${S}/modules.d/95udev-rules/udev-rules-prepare.sh"
+
 	local udevdir="$($(tc-getPKG_CONFIG) udev --variable=udevdir)"
 	[[ ${udevdir} ]] || die "Couldn't detect udevdir"
 	einfo "Setting udevdir to ${udevdir}..."
