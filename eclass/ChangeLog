@@ -1,7 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.495 2012/11/01 20:22:57 robbat2 Exp $
-  
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.496 2012/11/01 21:43:22 mgorny Exp $
+
+  01 Nov 2012; Michał Górny <mgorny@gentoo.org> python-r1.eclass:
+  Mark _python_ln_rel as @INTERNAL.
+
   01 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> mysql.eclass,
   mysql-v2.eclass:
   Bug #392361: Fix mysql_install_db cases to work between all versions &
