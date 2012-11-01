@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/apple-jdk-bin
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/apple-jdk-bin/ChangeLog,v 1.2 2010/10/22 10:57:15 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/apple-jdk-bin/ChangeLog,v 1.3 2012/11/01 16:24:38 grobian Exp $
+
+  01 Nov 2012; Fabian Groffen <grobian@gentoo.org> apple-jdk-bin-1.6.0.ebuild:
+  Marked ~x86-macos, it doesn't matter much that the JVM is 64-bits, although
+  being on a 32-bits profile, because Java is agnostic to that
 
   22 Oct 2010; Fabian Groffen <grobian@gentoo.org>
   apple-jdk-bin-1.4.2.ebuild, apple-jdk-bin-1.6.0.ebuild:
@@ -20,4 +24,3 @@
   19 Nov 2007; Fabian Groffen <grobian@gentoo.org> ChangeLog:
   First shot at some symlinks to Apple's installed Java, as enabler for the
   OSX platform
-
