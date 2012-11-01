@@ -1,9 +1,16 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.403 2012/10/30 18:49:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.404 2012/11/01 15:51:08 aballier Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Alexis Ballier <aballier@gentoo.org> (1 Nov 2012)
+# dev-ml/ocamlduce requires ocaml-3 and there has been no upstream release to
+# support ocaml-4. Mask useflags requiring it so that we can mask ocamlduce and
+# unmask ocaml-4.
+dev-ml/tyxml ocamlduce
+www-servers/ocsigen ocamlduce
 
 # Samuli Suominen <ssuominen@gentoo.org> (22 Oct 2012)
 # This is temporary mask for >=sys-fs/udev-171 because we don't want
