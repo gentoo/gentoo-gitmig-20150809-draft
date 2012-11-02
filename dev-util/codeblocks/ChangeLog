@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/codeblocks
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/ChangeLog,v 1.23 2012/04/30 20:27:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/ChangeLog,v 1.24 2012/11/02 06:03:31 dirtyepic Exp $
+
+*codeblocks-10.05-r1 (02 Nov 2012)
+
+  02 Nov 2012; Ryan Hill <dirtyepic@gentoo.org> +codeblocks-10.05-r1.ebuild,
+  +files/codeblocks-10.05-gcc47.patch,
+  +files/codeblocks-10.05-wxChartCtrl-crash.patch, codeblocks-9999.ebuild:
+  Fix crash when wxChartCtrl is added with wxSmith (bug #372837, patch by Gert
+  Wollny). Backport GCC 4.7 fixes from trunk (bug #423791). Add pkgconfig
+  dependency and prune .la files.
 
   30 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   -codeblocks-1.0_pre20071215.ebuild, -files/8.02-version.patch,
