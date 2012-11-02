@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.743 2012/10/31 21:34:31 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.744 2012/11/02 01:12:32 phajdan.jr Exp $
+
+*chromium-24.0.1312.1 (02 Nov 2012)
+
+  02 Nov 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-24.0.1284.2.ebuild, +chromium-24.0.1312.1.ebuild,
+  chromium-9999-r1.ebuild:
+  Dev channel bump. Fix bug #439884 by Magnus Helmersson. Remove old.
 
 *chromium-23.0.1271.60 (31 Oct 2012)
 
