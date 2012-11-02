@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/gentoopm-0.2.6.ebuild,v 1.3 2012/10/26 21:15:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/gentoopm-0.2.6.ebuild,v 1.4 2012/11/02 17:09:02 mgorny Exp $
 
 EAPI=4
 PYTHON_COMPAT=(python2_6 python2_7 python3_1 python3_2)
@@ -25,8 +25,8 @@ PDEPEND="app-admin/eselect-package-manager"
 
 python_compile_all() {
 	if use doc; then
-		# XXX: do we need any specific ${PYTHON} magic here?
-		python2 setup.py doc || die
+		python_export_best
+		"${PYTHON}" setup.py doc || die
 	fi
 }
 
