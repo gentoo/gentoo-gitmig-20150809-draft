@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.10_pre20121022.ebuild,v 1.1 2012/10/23 07:44:28 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.10_pre20121022.ebuild,v 1.2 2012/11/02 15:13:27 eras Exp $
 
 EAPI=4
 inherit eutils multilib ssl-cert toolchain-funcs flag-o-matic pam user versionator
@@ -262,6 +262,7 @@ src_install () {
 }
 
 pkg_preinst() {
+	# Postfix 2.9.
 	# default for inet_protocols changed from ipv4 to all in postfix-2.9.
 	# check inet_protocols setting in main.cf and modify if necessary to prevent
 	# performance loss with useless DNS lookups and useless connection attempts.
@@ -276,6 +277,22 @@ pkg_preinst() {
 			# delete inet_protocols setting. there is already one in /etc/postfix
 			sed -i -e /inet_protocols/d "${D}"/etc/postfix/main.cf || die
 		fi
+	fi
+	}
+
+	# Postfix 2.10.
+	# Safety net for incompatible changes due to the introduction
+	# of the smtpd_relay_restrictions feature to separate the
+	# mail relay policy from the spam blocking policy.
+	[[ -d ${ROOT}/etc/postfix ]] && {
+	if [[ ! -n "$(${D}/usr/sbin/postconf -c ${ROOT}/etc/postfix -n smtpd_relay_restrictions)" ]];
+	then
+		local myconf="smtpd_relay_restrictions=permit_mynetworks,permit_sasl_authenticated,defer_unauth_destination"
+		ewarn "\nCOMPATIBILITY: adding smtpd_relay_restrictions to main.cf"
+		ewarn "to prevent inbound mail from unexpectedly bouncing."
+		ewarn "Specify an empty smtpd_relay_restrictions value to keep using"
+		ewarn "smtpd_recipient_restrictions as before.\n"
+		"${D}"/usr/sbin/postconf -c "${D}"/etc/postfix -e ${myconf} || die
 	fi
 	}
 }

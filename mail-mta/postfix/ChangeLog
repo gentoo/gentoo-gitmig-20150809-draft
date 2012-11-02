@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.396 2012/10/30 19:38:28 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.397 2012/11/02 15:13:27 eras Exp $
+
+  02 Nov 2012; Eray Aslan <eras@gentoo.org> postfix-2.10_pre20121022.ebuild:
+  Add smtpd_relay_restrictions compatibility shim
 
   30 Oct 2012; Eray Aslan <eras@gentoo.org> -files/postfix-2.9.3-freebsd9.patch,
   -files/postfix.rc6.2.6, -postfix-2.8.10.ebuild, -postfix-2.8.11.ebuild,
