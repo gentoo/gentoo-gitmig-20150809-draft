@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/recutils/recutils-1.5.ebuild,v 1.2 2012/05/03 02:33:10 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/recutils/recutils-1.5.ebuild,v 1.3 2012/11/02 03:36:52 radhermit Exp $
 
 EAPI=4
 
@@ -38,6 +38,7 @@ SITEFILE="50${PN}-gentoo.el"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-automagic.patch
+	epatch "${FILESDIR}"/${P}-glibc-2.16.patch
 
 	# Don't unconditionally install emacs files
 	sed -i -e "/^dist_lisp_DATA/d" etc/Makefile.am || die
