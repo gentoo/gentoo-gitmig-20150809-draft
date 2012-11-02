@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.552 2012/10/01 05:03:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.553 2012/11/02 20:18:11 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -711,7 +711,7 @@ toolchain_src_unpack() {
 
 	# install the libstdc++ python into the right location
 	# http://gcc.gnu.org/PR51368
-	if tc_version_is_at_least 4.5 ; then
+	if tc_version_is_at_least 4.5 && ! tc_version_is_at_least 4.7 ; then
 		sed -i \
 			'/^pythondir =/s:=.*:= $(datadir)/python:' \
 			"${S}"/libstdc++-v3/python/Makefile.in || die
