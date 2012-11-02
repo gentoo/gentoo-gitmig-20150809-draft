@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/vdr-clock
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-clock/ChangeLog,v 1.10 2011/01/28 18:13:42 hd_brummy Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-clock/ChangeLog,v 1.11 2012/11/02 18:31:26 hd_brummy Exp $
+
+*vdr-clock-1.0.0-r1 (02 Nov 2012)
+
+  02 Nov 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +vdr-clock-1.0.0-r1.ebuild, +files/vdr-clock-1.0.0_gettext.diff:
+  eapi=4; vdr-plugin-2.eclass; description fixed; fixed xgettext handling,
+  thanks to E.Seifert on bug 424269
 
   28 Jan 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
   -vdr-clock-0.0.5b-r1.ebuild, -files/vdr-clock-0.0.5b-gcc4.diff,
