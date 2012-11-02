@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libunwind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libunwind/ChangeLog,v 1.26 2012/10/09 17:07:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libunwind/ChangeLog,v 1.27 2012/11/02 00:48:02 blueness Exp $
+
+  02 Nov 2012; Anthony G. Basile <blueness@gentoo.org> libunwind-1.1.ebuild:
+  keyword ~ppc64, bug #429710
 
 *libunwind-1.1 (09 Oct 2012)
 
