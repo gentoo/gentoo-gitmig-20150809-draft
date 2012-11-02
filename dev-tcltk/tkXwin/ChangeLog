@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/tkXwin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkXwin/ChangeLog,v 1.31 2012/10/21 17:06:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkXwin/ChangeLog,v 1.32 2012/11/02 17:00:02 jlec Exp $
+
+  02 Nov 2012; Justin Lecher <jlec@gentoo.org> -tkXwin-1.0-r1.ebuild,
+  -tkXwin-1.0-r2.ebuild:
+  Drop old
 
   21 Oct 2012; Raúl Porcel <armin76@gentoo.org> tkXwin-1.0-r1.ebuild,
   tkXwin-1.0-r2.ebuild, tkXwin-1.0-r3.ebuild:
