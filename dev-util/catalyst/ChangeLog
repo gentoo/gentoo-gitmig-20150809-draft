@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/catalyst
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.253 2012/11/02 00:32:29 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.254 2012/11/02 16:06:10 zerochaos Exp $
+
+  02 Nov 2012; Rick Farina <zerochaos@gentoo.org> catalyst-2.0.12.1.ebuild,
+  catalyst-2.0.12.ebuild, catalyst-2.9999.ebuild, catalyst-3.9999.ebuild:
+  adding rdep on lbzip2 per bug #440874
 
 *catalyst-2.0.12.1 (02 Nov 2012)
 
