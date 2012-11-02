@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ncbi-tools++-2010.06.15.ebuild,v 1.3 2011/05/04 19:06:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ncbi-tools++-0.2010.06.15-r1.ebuild,v 1.1 2012/11/02 19:00:59 jlec Exp $
 
 EAPI="3"
 
@@ -12,7 +12,9 @@ MY_P="ncbi_cxx--${MY_TAG}"
 
 DESCRIPTION="NCBI C++ Toolkit, including NCBI BLAST+"
 HOMEPAGE="http://www.ncbi.nlm.nih.gov/books/bv.fcgi?rid=toolkit"
-SRC_URI="ftp://ftp.ncbi.nih.gov/toolbox/ncbi_tools++/${MY_Y}/${MY_TAG}/${MY_P}.tar.gz"
+SRC_URI="
+	ftp://ftp.ncbi.nih.gov/toolbox/ncbi_tools++/${MY_Y}/${MY_TAG}/${MY_P}.tar.gz
+	http://dev.gentoo.org/~jlec/distfiles/${P}-asneeded.patch.xz"
 
 LICENSE="public-domain"
 SLOT="0"
@@ -27,16 +29,24 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-	filter-ldflags -Wl,--as-needed
+#	filter-ldflags -Wl,--as-needed
+#	append-ldflags -Wl,--no-undefined
 	sed -i -e 's/-print-file-name=libstdc++.a//' \
 		-e '/sed/ s/\([gO]\[0-9\]\)\*/\1\\+/' \
 		src/build-system/configure || die
-	epatch "${FILESDIR}"/${P}-gcc46.patch
+	epatch \
+		"${FILESDIR}"/${P}-gcc46.patch \
+		"${FILESDIR}"/${P}-gcc47.patch \
+		"${WORKDIR}"/${P}-asneeded.patch \
+		"${FILESDIR}"/${P}-libpng15.patch \
+		"${FILESDIR}"/${P}-glibc-214.patch
+
+	use prefix && append-ldflags -Wl,-rpath,"${EPREFIX}/usr/$(get_libdir)/${PN}"
 }
 
 src_configure() {
 	tc-export CXX CC
-
+# conf check for sqlite and mysql
 	"${S}"/configure --without-debug \
 		--with-bin-release \
 		--with-bincopy \
