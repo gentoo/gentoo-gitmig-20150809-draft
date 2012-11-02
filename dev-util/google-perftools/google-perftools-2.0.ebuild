@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/google-perftools/google-perftools-2.0.ebuild,v 1.2 2012/07/09 10:49:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/google-perftools/google-perftools-2.0.ebuild,v 1.3 2012/11/02 00:48:32 blueness Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://gperftools.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc64 ~x86 ~x86-fbsd"
 IUSE="largepages +debug minimal test"
 
 DEPEND="sys-libs/libunwind"
