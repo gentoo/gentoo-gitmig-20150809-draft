@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/mariadb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.18 2012/05/09 06:50:24 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.19 2012/11/02 00:19:23 robbat2 Exp $
+
+*mariadb-5.5.28 (02 Nov 2012)
+
+  02 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> +mariadb-5.5.28.ebuild,
+  metadata.xml:
+  Copy from overlay.
 
   09 May 2012; Zac Medico <zmedico@gentoo.org> mariadb-5.1.62.ebuild,
   mariadb-5.2.12.ebuild, mariadb-5.3.6.ebuild, mariadb-5.5.23.ebuild:
@@ -99,4 +105,3 @@
   +mariadb-5.1.42.ebuild, +metadata.xml:
   Add MariaDB. Bug #303130, based on the submission by Brian Evans
   <grknight@scent-team.com>.
-
