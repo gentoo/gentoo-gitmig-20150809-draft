@@ -1,6 +1,17 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.383 2012/10/30 21:00:29 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.384 2012/11/02 12:22:25 scarabeus Exp $
+
+*libreoffice-3.6.3.2 (02 Nov 2012)
+*libreoffice-3.5.7.2 (02 Nov 2012)
+
+  02 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/libreoffice-3.6.3.2-fix-poppler.patch, +libreoffice-3.5.7.2.ebuild,
+  +libreoffice-3.6.3.2.ebuild, -libreoffice-3.5.6.2.ebuild,
+  -libreoffice-3.6.2.2.ebuild:
+  Bump to latest to fix sec issue #440922, 3.5 straing to stable, not much stuff
+  else to break shit up. Also fix the poppler crash with pdf import filter
+  #430670.
 
   30 Oct 2012; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-9999-r2.ebuild:
   Use new switch for paralel jobs count. Solves quite few bugs we had on gentoo
