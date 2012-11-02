@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14186 2012/11/02 20:28:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14187 2012/11/02 21:32:37 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -70,11 +70,6 @@ x11-apps/grandr
 # Initial LTS release. Needed significant effort to even build.
 # Do not deploy in production. Do not rely on for serious work.
 =net-misc/asterisk-11.0.0
-
-# Michał Górny <mgorny@gentoo.org> (29 Oct 2012)
-# Unmask when packages are switched to virtual/python-argparse.
-=dev-python/argparse-1.2.1-r1
-=virtual/python-argparse-1
 
 # Ben de Groot <yngwin@gentoo.org> (29 Oct 2012)
 # Fails compilation on missing sqlite header - unbundle patch needs updating
