@@ -1,10 +1,18 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/argparse-1.2.1-r1.ebuild,v 1.1 2012/10/29 13:50:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/argparse-1.2.1-r1.ebuild,v 1.2 2012/11/02 21:31:36 mgorny Exp $
 
 EAPI=4
-# Newer versions provide built-in argparse.
-PYTHON_COMPAT=( python2_5 python2_6 python3_1 jython2_5 )
+PYTHON_COMPAT_REAL=(
+	# actual targets
+	python{2_5,2_6,3_1} jython2_5
+)
+PYTHON_COMPAT=(
+	${PYTHON_COMPAT_REAL[@]}
+	# these versions provide built-in argparse
+	# but we still list them to warn user to migrate
+	python{2_7,3_2,3_3} pypy{1_8,1_9}
+)
 
 inherit distutils-r1
 
@@ -18,6 +26,30 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE=""
 
 DEPEND="dev-python/setuptools"
+
+pkg_pretend() {
+	local x
+	for x in ${PYTHON_COMPAT_REAL[@]}; do
+		if use python_targets_${x}; then
+			return
+		fi
+	done
+
+	ewarn 'You have installed this version of argparse only for Python'
+	ewarn 'implementations which provide the argparse module already.'
+	ewarn 'Most likely, this means that something in your system depends on'
+	ewarn 'dev-python/argparse instead of virtual/python-argparse.'
+	ewarn
+	ewarn 'Please try running the following command or an equivalent one:'
+	ewarn
+	ewarn '	emerge --verbose --depclean dev-python/argparse'
+	ewarn
+	ewarn 'If your package manager refuses to uninstall the package due to'
+	ewarn 'unsatisfied dependencies, please first try re-installing the listed'
+	ewarn 'packages and running --depclean again. If that does not help, please'
+	ewarn 'report a bug against the package, requesting its maintainer to fix'
+	ewarn 'the dependency on argparse to use virtual/argparse.'
+}
 
 python_test() {
 	COLUMNS=80 PYTHONPATH="${BUILD_DIR}/lib" \
