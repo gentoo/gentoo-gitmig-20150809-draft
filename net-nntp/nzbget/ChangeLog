@@ -1,6 +1,15 @@
 # ChangeLog for net-nntp/nzbget
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/ChangeLog,v 1.45 2012/10/06 16:58:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/ChangeLog,v 1.46 2012/11/02 06:15:57 radhermit Exp $
+
+*nzbget-9.0_pre477 (02 Nov 2012)
+
+  02 Nov 2012; Tim Harder <radhermit@gentoo.org> +nzbget-9.0_pre477.ebuild,
+  +files/nzbget-9.0_pre477-buffer-overflows.patch,
+  +files/nzbget-9.0_pre477-header.patch, files/nzbget.initd:
+  Version bump to development release. Fix potential buffer overflows (bug
+  #434264), change from /var/run to /run, remove need net from init script, and
+  add zlib use flag.
 
   06 Oct 2012; Raúl Porcel <armin76@gentoo.org> nzbget-0.8.0.ebuild:
   x86 stable wrt #433882
