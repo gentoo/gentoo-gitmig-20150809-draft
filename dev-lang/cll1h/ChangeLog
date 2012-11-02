@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/cll1h
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cll1h/ChangeLog,v 1.7 2010/01/02 18:37:29 fauli Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cll1h/ChangeLog,v 1.8 2012/11/02 12:21:17 pinkbyte Exp $
+
+*cll1h-0.6-r1 (02 Nov 2012)
+
+  02 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> +cll1h-0.6-r1.ebuild:
+  Revision bump: EAPI 4, add ~amd64 and ~amd64-linux keywords wrt bug #440678
 
   02 Jan 2010; Christian Faulhammer <fauli@gentoo.org> cll1h-0.6.ebuild:
   Transfer Prefix keywords
