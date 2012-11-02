@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.8.5-r1.ebuild,v 1.1 2012/11/02 13:41:31 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.8.5-r2.ebuild,v 1.1 2012/11/02 17:08:29 kensington Exp $
 
 EAPI=4
 
@@ -96,6 +96,7 @@ src_configure() {
 		$(cmake-utils_use_with google-gadgets Googlegadgets)
 		$(cmake-utils_use_with gps libgps)
 		$(cmake-utils_use_with python SIP)
+		$(cmake-utils_use_build python)
 		$(cmake-utils_use_with python PyQt4)
 		$(cmake-utils_use_with python PyKDE4)
 		$(cmake-utils_use_with python PythonLibrary)
