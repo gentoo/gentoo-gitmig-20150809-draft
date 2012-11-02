@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-9999.ebuild,v 1.6 2012/10/03 18:51:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-9999.ebuild,v 1.7 2012/11/02 18:59:14 vapier Exp $
 
 EAPI="4"
 inherit eutils flag-o-matic savedconfig toolchain-funcs multilib
@@ -57,12 +57,13 @@ fi
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="ipv6 livecd make-symlinks math mdev -pam selinux sep-usr static systemd"
+IUSE="ipv6 livecd make-symlinks math mdev -pam selinux sep-usr +static systemd"
 RESTRICT="test"
 
-RDEPEND="selinux? ( sys-libs/libselinux )
+RDEPEND="!static? ( selinux? ( sys-libs/libselinux ) )
 	pam? ( sys-libs/pam )"
 DEPEND="${RDEPEND}
+	static? ( selinux? ( sys-libs/libselinux[static-libs(+)] ) )
 	>=sys-kernel/linux-headers-2.6.39"
 
 S=${WORKDIR}/${MY_P}
@@ -102,6 +103,7 @@ src_prepare() {
 		-e "/^AR\>/s:=.*:= $(tc-getAR):" \
 		-e "/^CC\>/s:=.*:= $(tc-getCC):" \
 		-e "/^HOSTCC/s:=.*:= $(tc-getBUILD_CC):" \
+		-e "/^PKG_CONFIG\>/s:=.*:= $(tc-getPKG_CONFIG):" \
 		Makefile || die
 	sed -i \
 		-e 's:-static-libgcc::' \
@@ -152,9 +154,7 @@ src_configure() {
 	if use static && use pam ; then
 		ewarn "You cannot have USE='static pam'.  Assuming static is more important."
 	fi
-	use static \
-		&& busybox_config_option n PAM \
-		|| busybox_config_option pam PAM
+	busybox_config_option $(usex static n pam) PAM
 	busybox_config_option static STATIC
 	busybox_config_option systemd FEATURE_SYSTEMD
 	busybox_config_option math FEATURE_AWK_LIBM
@@ -201,18 +201,6 @@ src_compile() {
 	export SKIP_STRIP=y
 
 	emake V=1 busybox
-	if ! use static ; then
-		cp .config{,.bak}
-		mv busybox_unstripped{,.bak}
-		use pam && busybox_config_option n PAM
-		emake CONFIG_STATIC=y busybox
-		mv busybox_unstripped bb
-		mv busybox_unstripped{.bak,}
-		mv .config{.bak,}
-	else
-		# keeps src_install simpler
-		ln busybox_unstripped bb
-	fi
 }
 
 src_install() {
@@ -224,20 +212,12 @@ src_install() {
 	if use sep-usr ; then
 		# install /ginit to take care of mounting stuff
 		exeinto /
-		newexe bb ginit
+		newexe busybox_unstripped ginit
 		dosym /ginit /bin/bb
-		if use static ; then
-			dosym bb /bin/busybox
-		else
-			newbin busybox_unstripped busybox
-		fi
+		dosym bb /bin/busybox
 	else
 		newbin busybox_unstripped busybox
-		if use static ; then
-			dosym busybox /bin/bb
-		else
-			dobin bb
-		fi
+		dosym busybox /bin/bb
 	fi
 	if use mdev ; then
 		dodir /$(get_libdir)/mdev/
