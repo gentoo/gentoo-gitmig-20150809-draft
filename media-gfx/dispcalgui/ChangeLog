@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/dispcalgui
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dispcalgui/ChangeLog,v 1.16 2012/09/23 09:55:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dispcalgui/ChangeLog,v 1.17 2012/11/02 22:15:41 hwoarang Exp $
+
+*dispcalgui-1.1.2.1 (02 Nov 2012)
+
+  02 Nov 2012; Markos Chandras <hwoarang@gentoo.org> +dispcalgui-1.1.2.1.ebuild,
+  -dispcalgui-1.0.7.7.ebuild, dispcalgui-0.9.9.1.ebuild,
+  dispcalgui-1.1.0.0.ebuild:
+  Version bump. Fix old ebuilds to not install udev rules in order to avoid
+  collisions with media-gfx/argyllcms. Thanks to Marios Andreopoulos
+  <opensource@andmarios.com>. Bug #440932. Remove old
 
 *dispcalgui-1.1.0.0 (23 Sep 2012)
 

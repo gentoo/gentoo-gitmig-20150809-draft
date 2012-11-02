@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dispcalgui/dispcalgui-1.1.0.0.ebuild,v 1.1 2012/09/23 09:55:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dispcalgui/dispcalgui-1.1.0.0.ebuild,v 1.2 2012/11/02 22:15:41 hwoarang Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -45,13 +45,6 @@ src_prepare() {
 	-e 's/if which(\"xdg-desktop-menu\"):/if which(\"xdg-desktop-menu-non-existant\"):/' \
 	-i postinstall.py || die "sed'ing out the xdg-* setup functions failed"
 
-#	Set udev rules to install at /lib/udev/rules.d
-	cd "${S}" || die "Cannot cd to work directory."
-	for offendingFile in $(grep -r -l "/etc/udev/rules.d" .); do
-		sed -e 's|/etc/udev/rules\.d|/lib/udev/rules\.d|g' -i "${offendingFile}" || \
-		die "setting udev rules' destination directory failed"
-	done
-
 #	Remove deprecated Encoding key from .desktop file
 	cd "${S}" || die "Cannot cd to work directory."
 	for offendingFile in $(grep -r -l "Encoding=UTF-8" .); do
@@ -60,6 +53,12 @@ src_prepare() {
 	done
 
 	distutils_src_prepare
+}
+
+src_install() {
+	distutils_src_install
+	#remove udev files
+	rm "${D}"/etc/udev/rules.d/55-Argyll.rules || die
 }
 
 pkg_postinst() {
