@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xlockmore
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.120 2012/11/02 16:33:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.121 2012/11/02 22:43:32 blueness Exp $
+
+  02 Nov 2012; Anthony G. Basile <blueness@gentoo.org> xlockmore-5.41.ebuild:
+  stable ppc ppc64, bug #440776
 
   02 Nov 2012; Jeroen Roovers <jer@gentoo.org> -xlockmore-5.39.ebuild,
   -xlockmore-5.40.ebuild:
@@ -521,4 +524,3 @@
   script braindamage and I can't figure out how to tell xlock where its
   sounds are stored...  Low priority issues in a package I've spent too
   much time on already :(  If you figure it out, please file a bug report.
-
