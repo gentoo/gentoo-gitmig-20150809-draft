@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mu/mu-0.9.8.5.ebuild,v 1.1 2012/07/29 13:39:25 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mu/mu-0.9.9.ebuild,v 1.1 2012/11/02 22:06:36 tomka Exp $
 
 EAPI=4
 
@@ -8,17 +8,18 @@ inherit base elisp-common
 
 DESCRIPTION="Set of tools to deal with Maildirs, in particular, searching and indexing"
 HOMEPAGE="http://www.djcbsoftware.nl/code/mu/"
-SRC_URI="http://mu0.googlecode.com/files/${P}.tar.gz"
+SRC_URI="http://mu0.googlecode.com/files/${P}.tar.gz
+		doc? ( http://mu0.googlecode.com/files/mu4e-manual-${PV}.pdf )"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="emacs gui"
+IUSE="doc emacs gui"
 
 # Without webkit-gtk there is no pdf-preview functionality, everthing
 # else works as of 0.9.8.5
 DEPEND="
-	>=dev-libs/gmime-2.4:2.4
+	dev-libs/gmime
 	dev-libs/xapian
 	dev-libs/glib:2
 	gui? (
@@ -28,6 +29,11 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 SITEFILE="70mu-gentoo.el"
+
+src_unpack() {
+	unpack ${P}.tar.gz
+	use doc && cp "${DISTDIR}"/mu4e-manual-${PV}.pdf "${S}" || die
+}
 
 src_configure() {
 	local guiconf
@@ -40,6 +46,7 @@ src_configure() {
 	# Make a guile USE-flag as soon as >=guile-2 is avaiable
 	econf --disable-guile \
 		$(use_enable gui webkit) \
+		$(use_enable emacs mu4e) \
 		${guiconf}
 }
 
@@ -50,11 +57,17 @@ src_install () {
 		dobin toys/mug/mug || die
 	fi
 	dodoc AUTHORS HACKING NEWS TODO README ChangeLog INSTALL
+	if use doc; then
+		dodoc mu4e-manual-${PV}.pdf
+	fi
 	if use emacs; then
-		elisp-install ${PN} emacs/*.el emacs/*.elc
+		elisp-install ${PN} mu4e/*.el mu4e/*.elc
 		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	fi
+}
 
+src_test () {
+	emake check
 }
 
 pkg_postinst() {
