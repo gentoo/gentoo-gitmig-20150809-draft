@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/hedgewars
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/ChangeLog,v 1.42 2012/11/01 23:36:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/ChangeLog,v 1.43 2012/11/02 14:41:09 hasufell Exp $
+
+  02 Nov 2012; Julian Ospald <hasufell@gentoo.org>
+  files/hedgewars-0.9.18-cmake.patch:
+  newline messup, fixes bug 440974
 
   01 Nov 2012; Michael Sterrett <mr_bones_@gentoo.org>
   +files/hedgewars-0.9.18-cmake.patch, hedgewars-0.9.18.ebuild:
