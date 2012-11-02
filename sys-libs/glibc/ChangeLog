@@ -1,5 +1,13 @@
 # ChangeLog for sys-libs/glibc
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.903 2012/11/01 17:25:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.904 2012/11/02 18:25:11 vapier Exp $
+
+  02 Nov 2012; Mike Frysinger <vapier@gentoo.org> glibc-2.10.1-r1.ebuild,
+  glibc-2.11.3.ebuild, glibc-2.12.1-r3.ebuild, glibc-2.12.2.ebuild,
+  glibc-2.13-r2.ebuild, glibc-2.13-r4.ebuild, glibc-2.14.1-r2.ebuild,
+  glibc-2.14.1-r3.ebuild, glibc-2.14.ebuild, glibc-2.15-r1.ebuild,
+  glibc-2.15-r2.ebuild, glibc-2.15-r3.ebuild, glibc-2.16.0.ebuild,
+  glibc-2.9_p20081201-r3.ebuild, glibc-9999.ebuild:
+  Drop libtool inherit since we do not use it.
 
   01 Nov 2012; Raúl Porcel <armin76@gentoo.org> glibc-2.15-r3.ebuild:
   sparc stable wrt #404993

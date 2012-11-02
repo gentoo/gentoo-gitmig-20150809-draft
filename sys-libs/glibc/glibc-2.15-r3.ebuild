@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.15-r3.ebuild,v 1.8 2012/11/01 17:25:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.15-r3.ebuild,v 1.9 2012/11/02 18:25:11 vapier Exp $
 
-inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib unpacker multiprocessing
+inherit eutils versionator toolchain-funcs flag-o-matic gnuconfig multilib unpacker multiprocessing
 
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
