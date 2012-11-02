@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.145 2012/10/21 17:28:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.146 2012/11/02 10:29:20 armin76 Exp $
+
+  02 Nov 2012; Raúl Porcel <armin76@gentoo.org> package.use.mask:
+  Unmask p.use.mask net-libs/webkig-gtk geoloc since its stable
 
   21 Oct 2012; Raúl Porcel <armin76@gentoo.org> package.use.mask:
   Remove sys-apps/portage python3 p.use.mask now that python3 is stable

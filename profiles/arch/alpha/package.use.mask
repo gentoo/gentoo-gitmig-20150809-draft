@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.104 2012/11/01 23:51:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.105 2012/11/02 10:29:20 armin76 Exp $
 
 # Robin H Johnson <robbat2@gentoo.org> (01 Nov 2012)
 # MySQL 5.5 wants systemtap, tcmalloc & jemalloc
@@ -20,9 +20,9 @@ x11-misc/google-gadgets qt4
 x11-misc/xscreensaver new-login
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (25 May 2012)
-# Remove mask entry when app-misc/geoclue and app-accessibility/at-spi2-core
-# are keyworded here, bug #411761
-net-libs/webkit-gtk geoloc webkit2
+# Remove mask entry when app-accessibility/at-spi2-core
+# is keyworded here, bug #411761
+net-libs/webkit-gtk webkit2
 
 # Samuli Suominen <ssuominen@gentoo.org> (20 May 2012)
 # This is masked because of this entry:
