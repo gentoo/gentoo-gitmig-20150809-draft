@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/vdr-vcd
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vcd/ChangeLog,v 1.11 2009/05/07 15:23:34 hd_brummy Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vcd/ChangeLog,v 1.12 2012/11/02 19:14:44 hd_brummy Exp $
+
+*vdr-vcd-0.9-r1 (02 Nov 2012)
+
+  02 Nov 2012; Joerg Bornkessel <hd_brummy@gentoo.org> -vdr-vcd-0.7.ebuild,
+  -vdr-vcd-0.8.ebuild, vdr-vcd-0.9.ebuild, +vdr-vcd-0.9-r1.ebuild,
+  +files/vdr-vcd-0.9_xgettext.diff:
+  clean up; eapi=4; vdr-plugin-2.eclass; missing xgettext handling added,
+  thanks to E.Seifert on bug 414247
 
   07 May 2009; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-vcd-0.9.ebuild,
   +files/vdr-vcd-0.9_vdr-1.7.2.diff:
