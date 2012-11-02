@@ -1,0 +1,11 @@
+# ChangeLog for app-editors/fb2edit
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fb2edit/ChangeLog,v 1.1 2012/11/02 16:58:01 pinkbyte Exp $
+
+*fb2edit-0.0.7 (02 Nov 2012)
+
+  02 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> +fb2edit-0.0.7.ebuild,
+  +metadata.xml:
+  Initial commit wrt bug #439294. Ebuild is written by Beelzebubbie and Mikle
+  Kolyada
+
