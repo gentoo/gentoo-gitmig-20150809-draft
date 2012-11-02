@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-5.6.2.ebuild,v 1.5 2012/10/29 20:55:54 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-5.6.2.ebuild,v 1.6 2012/11/02 13:58:00 williamh Exp $
 
 EAPI=4
 
@@ -53,6 +53,10 @@ src_install() {
 	systemd_dounit "${FILESDIR}"/${PN}.service
 }
 
+pkg_preinst() {
+	has_version 'net-misc/dhcpcd[zeroconf]' && prev_zero=true || prev_zero=false
+}
+
 pkg_postinst() {
 	# Upgrade the duid file to the new format if needed
 	local old_duid="${ROOT}"/var/lib/dhcpcd/dhcpcd.duid
@@ -66,7 +70,7 @@ pkg_postinst() {
 		cp -p "${old_duid}" "${new_duid}"
 	fi
 
-	if use zeroconf; then
+	if use zeroconf && ! $prev_zero; then
 		elog "You have installed dhcpcd with zeroconf support."
 		elog "This means that it will always obtain an IP address even if no"
 		elog "DHCP server can be contacted, which will break any existing"
