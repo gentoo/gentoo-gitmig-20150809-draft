@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.160 2012/11/02 15:59:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.161 2012/11/02 18:40:19 robbat2 Exp $
+
+*git-1.8.0-r1 (02 Nov 2012)
+
+  02 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> +git-1.8.0-r1.ebuild:
+  Update contrib extras, per bug #434098.
 
 *git-1.8.0 (02 Nov 2012)
 
