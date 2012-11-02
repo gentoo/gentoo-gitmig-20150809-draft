@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/flexget
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/ChangeLog,v 1.27 2012/11/01 04:48:06 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/ChangeLog,v 1.28 2012/11/02 21:45:55 floppym Exp $
+
+  02 Nov 2012; Mike Gilbert <floppym@gentoo.org> flexget-1.0_beta3181.ebuild,
+  flexget-9999.ebuild:
+  Call distutils-r1_python_prepare_all from python_prepare_all.
 
 *flexget-1.0_beta3181 (01 Nov 2012)
 

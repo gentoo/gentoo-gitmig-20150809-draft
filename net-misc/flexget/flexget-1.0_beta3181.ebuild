@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-1.0_beta3181.ebuild,v 1.1 2012/11/01 04:48:06 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-1.0_beta3181.ebuild,v 1.2 2012/11/02 21:45:55 floppym Exp $
 
 EAPI=4
 
@@ -61,12 +61,12 @@ python_prepare_all() {
 		-e '/beautifulsoup4/s/, <4.2//' \
 		-i pavement.py || die
 
-	epatch_user
-
 	if [[ ${PV} == 9999 ]]; then
 		# Generate setup.py
 		paver generate_setup || die
 	fi
+	
+	distutils-r1_python_prepare_all
 }
 
 python_test() {
