@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucommon/ucommon-5.2.2-r3.ebuild,v 1.6 2012/10/25 02:56:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucommon/ucommon-5.2.2-r3.ebuild,v 1.7 2012/11/02 17:04:04 pinkbyte Exp $
 
 EAPI="4"
 
@@ -17,7 +17,10 @@ IUSE="doc static-libs socks +cxx debug ssl gnutls"
 
 RDEPEND="ssl? (
 		!gnutls? ( dev-libs/openssl )
-		gnutls? ( net-libs/gnutls )
+		gnutls? (
+			net-libs/gnutls[-nettle]
+			dev-libs/libgcrypt
+		)
 	)"
 
 DEPEND="virtual/pkgconfig

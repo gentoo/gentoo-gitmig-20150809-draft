@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ucommon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucommon/ChangeLog,v 1.11 2012/10/25 02:56:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucommon/ChangeLog,v 1.12 2012/11/02 17:04:04 pinkbyte Exp $
+
+  02 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> ucommon-5.2.2-r3.ebuild:
+  Add workaround for USE="gnutls" dependencies by locking it on gnutls[-nettle]
 
   25 Oct 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml,
   ucommon-5.2.2-r3.ebuild:
