@@ -1,6 +1,12 @@
 # ChangeLog for app-pda/gtkpod
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.114 2012/09/23 12:06:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.115 2012/11/02 11:37:11 jlec Exp $
+
+*gtkpod-2.1.2-r1 (02 Nov 2012)
+
+  02 Nov 2012; Justin Lecher <jlec@gentoo.org> +gtkpod-2.1.2-r1.ebuild,
+  +files/gtkpod-2.1.2-bffr-overflow.patch, metadata.xml:
+  Fid for buffer overflow, #434220
 
   23 Sep 2012; Samuli Suominen <ssuominen@gentoo.org> -gtkpod-2.1.1-r3.ebuild,
   -files/gtkpod-2.1.1-segfault_with_directory_creation.patch:
