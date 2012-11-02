@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/blt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/ChangeLog,v 1.62 2012/06/07 20:37:57 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/ChangeLog,v 1.63 2012/11/02 16:54:03 jlec Exp $
+
+  02 Nov 2012; Justin Lecher <jlec@gentoo.org> blt-2.4z-r10.ebuild:
+  Respect AR, #440272
 
   07 Jun 2012; Zac Medico <zmedico@gentoo.org> blt-2.4z-r10.ebuild:
   inherit multilib for get_libdir

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r10.ebuild,v 1.13 2012/06/07 20:37:57 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r10.ebuild,v 1.14 2012/11/02 16:54:03 jlec Exp $
 
 EAPI="3"
 
@@ -48,6 +48,10 @@ src_prepare() {
 	sed \
 		-e "/^scriptdir =/s:lib:$(get_libdir):" \
 		-i Makefile.in demos/Makefile.in || die "sed Makefile.in failed"
+
+	sed \
+		-e "/AR/s:ar:$(tc-getAR):g" \
+		-i src/Makefile.in || die
 
 	epatch "${FILESDIR}"/${P}-linking.patch
 	epatch "${FILESDIR}"/${P}-darwin.patch
