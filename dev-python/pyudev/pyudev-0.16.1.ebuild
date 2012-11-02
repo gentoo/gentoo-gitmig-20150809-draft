@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyudev/pyudev-0.16.1.ebuild,v 1.1 2012/08/27 08:44:17 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyudev/pyudev-0.16.1.ebuild,v 1.2 2012/11/02 10:12:34 idella4 Exp $
 
 EAPI="4"
 PYTHON_DEPEND="*:2.6"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.[45] *-jython"
-#DISTUTILS_SRC_TEST="py.test"  # FIXME: some tests are known to fail
+RESTRICT_PYTHON_ABIS="2.[5] *-jython"
+DISTUTILS_SRC_TEST="py.test"
 
 inherit distutils
 
@@ -24,14 +24,15 @@ RDEPEND=">=sys-fs/udev-151
 	pyqt4? ( dev-python/PyQt4 )
 	pyside? ( dev-python/pyside )"
 DEPEND="${RDEPEND}
-	dev-python/setuptools"
-	# test? ( dev-python/mock )"
+	dev-python/setuptools
+	test? ( dev-python/mock )"
 
 DOCS="CHANGES.rst README.rst"
 
 src_prepare() {
 	distutils_src_prepare
 
+	# tests are known to pass then fail on alternate runs
 	# tests: fix run_path
 	sed -i -e "s|== \('/run/udev'\)|in (\1,'/dev/.udev')|g" tests/test_core.py
 
@@ -53,4 +54,6 @@ src_prepare() {
 	if ! use pyqt4 && ! use pyside && ! use pygobject; then
 		rm -f tests/test_observer.py
 	fi
+
+	ewarn "if your PORTAGE_TMPDIR is longer in length then "/var/tmp/", change it to /var/tmp to ensure tests will pass"
 }
