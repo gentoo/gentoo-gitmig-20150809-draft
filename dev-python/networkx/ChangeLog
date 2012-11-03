@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/networkx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/networkx/ChangeLog,v 1.14 2012/07/19 16:02:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/networkx/ChangeLog,v 1.15 2012/11/03 15:35:36 idella4 Exp $
+
+*networkx-1.7-r1 (04 Nov 2012)
+
+  04 Nov 2012; Ian Delaney <idella4@gentoo.org> +networkx-1.7-r1.ebuild:
+  Dependencies added for testsuite, rev bumped
 
 *networkx-1.7 (19 Jul 2012)
 
