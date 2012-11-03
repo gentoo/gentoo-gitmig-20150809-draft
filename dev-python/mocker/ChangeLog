@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/mocker
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mocker/ChangeLog,v 1.6 2011/09/16 08:01:07 djc Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mocker/ChangeLog,v 1.7 2012/11/03 18:24:32 idella4 Exp $
+
+*mocker-1.1.1 (04 Nov 2012)
+
+  04 Nov 2012; Ian Delaney <idella4@gentoo.org>
+  +files/mocker-1.1.1-pypy_test.patch, +mocker-1.1.1.ebuild, -mocker-1.0.ebuild:
+  bumped to mocker-1.1.1, new patch for pypy to pass tests, mocker-1.0 dropped,
+  closes Bug 425686
 
 *mocker-1.1 (16 Sep 2011)
 
@@ -29,4 +36,3 @@
   +mocker-0.10.1.ebuild:
   Initial commit, ebuild by Maciej Blizinski <maciej.blizinski@gmail.com> -
   thanks, Maciej. bug #214433
-
