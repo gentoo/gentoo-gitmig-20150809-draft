@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14187 2012/11/02 21:32:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14188 2012/11/03 18:39:30 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Markos Chandras <hwoarang@gentoo.org> (03 Nov 2012)
+# Masked for testing
+app-benchmarks/ltp
 
 # Ulrich Müller <ulm@gentoo.org> (02 Nov 2012)
 # Emacs live ebuilds. Use at your own risk.
@@ -1013,16 +1017,6 @@ games-roguelike/slashem
 games-roguelike/nethack
 games-util/hearse
 games-roguelike/noegnud-nethack
-
-# Robin H. Johnson <robbat2@gentoo.org> (11 Mar 2006)
-# Work-in-progress to clean this up
-# TODO
-# - properly fix lazy bindings
-# - fix read-only stuff
-# - seperate data files from binaries
-# - fix crappy state of runnable only in source tree.
-# - provide log output to /var/log somewhere intelligently
-app-benchmarks/ltp
 
 # Robin H. Johnson <robbat2@gentoo.org> (11 Feb 2006)
 # zlib interaction is badly broken. See bug #124733.
