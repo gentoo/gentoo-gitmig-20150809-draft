@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/pmacct
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/ChangeLog,v 1.82 2012/11/03 11:30:36 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/ChangeLog,v 1.83 2012/11/03 20:19:38 blueness Exp $
+
+  03 Nov 2012; Anthony G. Basile <blueness@gentoo.org> pmacct-0.14.1.ebuild:
+  stable ppc, bug #441430
 
   03 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> files/pmacctd-init.d:
   Improve initscript wrt bug #426956. Thanks to Jens Ott for patch
@@ -385,4 +388,3 @@
   +files/pmacctd-init.d:
   Initial ebuild. Thanks to Bjarke Freund-Hansen
   <gentoo-bugzilla@rocekiller.dk>. Closes #49912.
-
