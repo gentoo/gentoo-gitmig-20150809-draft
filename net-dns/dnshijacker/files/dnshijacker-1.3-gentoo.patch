@@ -13,8 +13,9 @@
 @@ -10 +10 @@
 -#include <libnet.h>
 +#include <libnet-1.0.h>
-@@ -70,0 +71 @@
-+int dn_expand(u_char * dns, u_char *packet, char *data, char *name, int length);
+@@ -12 +12 @@
+-
++#include <resolv.h>
 --- a/Makefile	2002-12-02 01:51:09.000000000 +0100
 +++ b/Makefile	2010-09-19 01:16:28.000000000 +0200
 @@ -4 +4 @@
