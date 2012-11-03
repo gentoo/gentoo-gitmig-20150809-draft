@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/emesene/emesene-9999.ebuild,v 1.7 2012/11/03 11:41:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/emesene/emesene-9999.ebuild,v 1.8 2012/11/03 11:42:08 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -16,7 +16,7 @@ DESCRIPTION="Platform independent MSN Messenger client written in Python+GTK"
 HOMEPAGE="http://www.emesene.org"
 
 LICENSE="|| ( GPL-2 GPL-3 LGPL-3 )"
-SLOT="2"
+SLOT="0"
 KEYWORDS=""
 IUSE="jabber"
 
