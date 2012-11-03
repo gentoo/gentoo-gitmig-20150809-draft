@@ -1,6 +1,13 @@
 # ChangeLog for app-benchmarks/ltp
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ChangeLog,v 1.19 2010/11/10 19:12:57 patrick Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ChangeLog,v 1.20 2012/11/03 18:58:32 hwoarang Exp $
+
+*ltp-20120903 (03 Nov 2012)
+
+  03 Nov 2012; Markos Chandras <hwoarang@gentoo.org> +ltp-20120903.ebuild,
+  -ltp-20090131.ebuild, -ltp-20100131.ebuild, files/runltp-path.patch,
+  metadata.xml:
+  Version bump. Clean up ebuild. Remove old. Take maintainership
 
   10 Nov 2010; Patrick Lauer <patrick@gentoo.org> ltp-20100131.ebuild:
   Make repoman happy
@@ -72,4 +79,3 @@
   +ltp-20041104.ebuild:
   Initial import as per bug #13662. Ebuild and patches by Marien Zwart
   <m_zwart@123mail.org>
-

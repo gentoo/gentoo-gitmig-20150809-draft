@@ -3,10 +3,16 @@
 <pkgmetadata>
 <herd>benchmarks</herd>
 <maintainer>
-  <email>patrick@gentoo.org</email>
-    <name>Patrick Lauer</name>
+  <email>hwoarang@gentoo.org</email>
+    <name>Markos Chandras</name>
     <description>Maintainer</description>
 </maintainer>
+<use>
+	<flag name="open-posix">Build and install the POSIX testsuite</flag>
+	<flag name="pm">Build and install the power management testsuite</flag>
+	<flag name="expect">Build against the expect library for interactive testing</flag>
+	<flag name="rt">Build and install the realtime testsuite</flag>
+</use>
 <longdescription>
 	The Linux Test Project is a joint project started by SGI and maintained by
 	IBM, that has a goal to deliver test suites to the open source community
