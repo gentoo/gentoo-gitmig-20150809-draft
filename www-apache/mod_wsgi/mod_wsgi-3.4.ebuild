@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_wsgi/mod_wsgi-3.4.ebuild,v 1.1 2012/09/30 11:28:26 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_wsgi/mod_wsgi-3.4.ebuild,v 1.2 2012/11/03 20:30:44 blueness Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*"
@@ -14,7 +14,7 @@ SRC_URI="http://modwsgi.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ppc ~x86"
 IUSE=""
 
 DEPEND=""
