@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.173 2012/10/30 18:49:19 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.174 2012/11/03 12:30:35 ago Exp $
+
+  03 Nov 2012; <ago@gentoo.org> thunderbird-10.0.10.ebuild:
+  Stable for amd64, wrt bug #439960
 
 *thunderbird-10.0.10 (30 Oct 2012)
 
