@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imdbpy/imdbpy-4.7-r1.ebuild,v 1.4 2012/07/13 17:41:06 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imdbpy/imdbpy-4.9.ebuild,v 1.1 2012/11/03 16:32:23 idella4 Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* 2.7-pypy-* *-jython"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit distutils eutils
 
@@ -27,7 +27,7 @@ RDEPEND=""
 S="${WORKDIR}/${MY_PN}-${PV}"
 
 DISTUTILS_GLOBAL_OPTIONS=("*-jython --without-cutils")
-DOCS="docs/AUTHOR.txt docs/FAQS.txt docs/imdbpy47.dtd docs/imdbpy.cfg docs/README*"
+DOCS="docs/FAQS.txt docs/imdbpy48.dtd docs/imdbpy.cfg docs/README*"
 PYTHON_MODNAME="imdb"
 
 src_prepare() {
