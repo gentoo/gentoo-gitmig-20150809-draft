@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.15.9.ebuild,v 1.6 2012/04/19 14:40:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.15.9.ebuild,v 1.7 2012/11/03 23:14:08 hwoarang Exp $
 
 EAPI="2"
 PYTHON_DEPEND="python? 2:2.6"
@@ -45,12 +45,6 @@ src_configure() {
 		--with-boost-filesystem=boost_filesystem-mt \
 		--with-boost-thread=boost_thread-mt \
 		--with-boost-python=boost_python-mt"
-	# detect boost version and location, bug 295474
-	BOOST_PKG="$(best_version ">=dev-libs/boost-1.34.1")"
-	BOOST_VER="$(get_version_component_range 1-2 "${BOOST_PKG/*boost-/}")"
-	BOOST_VER="$(replace_all_version_separators _ "${BOOST_VER}")"
-	BOOST_INC="/usr/include/boost-${BOOST_VER}"
-	BOOST_LIB="/usr/$(get_libdir)/boost-${BOOST_VER}"
 
 	local LOGGING
 	use debug && LOGGING="--enable-logging=verbose"
@@ -63,8 +57,6 @@ src_configure() {
 		$(use_enable static-libs static) \
 		--with-zlib=system \
 		${LOGGING} \
-		--with-boost=${BOOST_INC} \
-		--with-boost-libdir=${BOOST_LIB} \
 		${BOOST_LIBS}
 }
 
