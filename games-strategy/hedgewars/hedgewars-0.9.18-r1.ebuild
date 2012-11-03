@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/hedgewars-0.9.18.ebuild,v 1.3 2012/11/01 23:36:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/hedgewars-0.9.18-r1.ebuild,v 1.1 2012/11/03 06:07:36 mr_bones_ Exp $
 
 EAPI=2
 CMAKE_BUILD_TYPE=Release
 inherit cmake-utils eutils games
 
-MY_P=${PN}-src-${PV}-2
+MY_P=${PN}-src-${PV}-3
 DESCRIPTION="Free Worms-like turn based strategy game"
 HOMEPAGE="http://hedgewars.org/"
 SRC_URI="http://download.gna.org/hedgewars/${MY_P}.tar.bz2"
