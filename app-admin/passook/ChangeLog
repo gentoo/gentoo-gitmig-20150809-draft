@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/passook
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/passook/ChangeLog,v 1.16 2012/10/01 20:08:36 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/passook/ChangeLog,v 1.17 2012/11/03 17:20:51 blueness Exp $
+
+  03 Nov 2012; Anthony G. Basile <blueness@gentoo.org> passook-20121001.ebuild:
+  stable ppc ppc64, bug #441046
 
 *passook-20121001 (01 Oct 2012)
 
