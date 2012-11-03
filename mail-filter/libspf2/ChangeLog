@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/libspf2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libspf2/ChangeLog,v 1.45 2012/11/03 09:12:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libspf2/ChangeLog,v 1.46 2012/11/03 09:31:28 eras Exp $
+
+  03 Nov 2012; Eray Aslan <eras@gentoo.org> libspf2-1.2.9-r2.ebuild:
+  Add static USE flag to control building static binaries
 
   03 Nov 2012; <ago@gentoo.org> libspf2-1.2.9.ebuild:
   Stable for amd64, wrt bug #440058
