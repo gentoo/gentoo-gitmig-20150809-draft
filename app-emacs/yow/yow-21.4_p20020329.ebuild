@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yow/yow-21.4_p20020329.ebuild,v 1.9 2011/12/27 13:38:35 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yow/yow-21.4_p20020329.ebuild,v 1.10 2012/11/03 12:35:36 ulm Exp $
 
 EAPI=4
 
@@ -14,10 +14,9 @@ HOMEPAGE="http://www.gnu.org/software/emacs/"
 SRC_URI="http://ftp.xemacs.org/pub/xemacs/packages/cookie-${XE_PV}-pkg.tar.gz
 	mirror://gentoo/${PN}-${XE_PV}-${PV}.patch.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE=""
 
 S="${WORKDIR}"
 ELISP_PATCHES="${PN}-${XE_PV}-${PV}.patch"

@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/yow
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yow/ChangeLog,v 1.8 2011/12/27 13:38:35 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yow/ChangeLog,v 1.9 2012/11/03 12:35:36 ulm Exp $
+
+  03 Nov 2012; Ulrich Müller <ulm@gentoo.org> yow-21.4_p20020329.ebuild:
+  Specify LICENSE more precisely.
 
   27 Dec 2011; Ulrich Mueller <ulm@gentoo.org> yow-21.4_p20020329.ebuild,
   -files/yow-fix-misspellings.patch:
