@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/iptraf-ng
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf-ng/ChangeLog,v 1.45 2012/11/03 08:48:34 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf-ng/ChangeLog,v 1.46 2012/11/03 17:52:59 blueness Exp $
+
+  03 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
+  iptraf-ng-1.1.3.1-r1.ebuild:
+  stable ppc ppc64, bug #441426
 
   03 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> iptraf-ng-1.1.3.1-r1.ebuild:
   Stable on amd64 wrt bug #441426
@@ -170,4 +174,3 @@
   10 Mar 2010; Jeroen Roovers <jer@gentoo.org> +iptraf-ng-1.0.1.ebuild,
   +metadata.xml:
   Initial commit (bug #305781).
-
