@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pytz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.129 2012/10/22 10:51:29 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.130 2012/11/03 00:58:24 radhermit Exp $
+
+*pytz-2012h (03 Nov 2012)
+
+  03 Nov 2012; Tim Harder <radhermit@gentoo.org> +pytz-2012h.ebuild:
+  Version bump.
 
 *pytz-2012g (22 Oct 2012)
 
