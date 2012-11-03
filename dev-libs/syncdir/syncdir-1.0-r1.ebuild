@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/syncdir/syncdir-1.0-r1.ebuild,v 1.1 2010/09/18 20:42:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/syncdir/syncdir-1.0-r1.ebuild,v 1.2 2012/11/03 14:19:42 kensington Exp $
 
-EAPI="2"
+EAPI=4
 
-inherit toolchain-funcs
+inherit multilib toolchain-funcs
 
-DESCRIPTION="Provides an alternate implementation for open, link, rename, and unlink "
+DESCRIPTION="Provides an alternate implementation for open, link, rename, and unlink"
 HOMEPAGE="http://untroubled.org/syncdir"
 SRC_URI="http://untroubled.org/syncdir/${P}.tar.gz"
 
@@ -30,15 +30,11 @@ src_compile() {
 		CFLAGS="${CFLAGS}" \
 		LDFLAGS="${LDFLAGS}" \
 		libsyncdir.so \
-		$(use static-libs && echo libsyncdir.a) \
-		|| die "emake"
+		$(use static-libs && echo libsyncdir.a)
 }
 
-src_install () {
-	dodir /usr
-	dodir /usr/lib
-
-	make prefix="${D}"/usr install || die "install problem"
-
+src_install() {
+	dodir /usr/$(get_libdir)
+	emake libdir="${D}/usr/$(get_libdir)" install
 	dodoc testsync.c
 }
