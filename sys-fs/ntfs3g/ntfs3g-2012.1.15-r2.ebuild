@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2012.1.15-r2.ebuild,v 1.3 2012/10/29 20:39:10 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2012.1.15-r2.ebuild,v 1.4 2012/11/03 19:15:35 blueness Exp $
 
 EAPI=4
 inherit linux-info toolchain-funcs
@@ -14,7 +14,7 @@ SRC_URI="http://tuxera.com/opensource/${MY_P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ppc ppc64 ~sparc x86 ~amd64-linux ~x86-linux"
 IUSE="acl crypt debug +external-fuse extras +ntfsprogs static-libs suid xattr"
 
 RDEPEND="!<sys-apps/util-linux-2.19
