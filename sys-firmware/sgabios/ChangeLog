@@ -1,6 +1,9 @@
-# ChangeLog for sys-apps/sgabios
+# ChangeLog for sys-firmware/sgabios
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/sgabios/ChangeLog,v 1.1 2012/07/28 22:13:54 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/sgabios/ChangeLog,v 1.2 2012/11/03 09:11:47 ago Exp $
+
+  03 Nov 2012; <ago@gentoo.org> sgabios-0.1_pre8.ebuild:
+  Stable for amd64, wrt bug #440092
 
   23 Jul 2012; Doug Goldstein <cardoe@gentoo.org> sgabios-0.1_pre8.ebuild,
   +files/sgabios-0.1_pre8-makefile.patch:
