@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/emesene/emesene-9999.ebuild,v 1.6 2012/11/02 22:31:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/emesene/emesene-9999.ebuild,v 1.7 2012/11/03 11:41:27 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -29,7 +29,19 @@ RDEPEND="dev-python/pygtk:2
 src_prepare() {
 	# do not import dummy session
 	sed -i -e  "/import e3dummy/d" ${PN}/${PN}.py || die
+	# Use a better meny entry
+	sed -i -e "/^Name/s:${PN}:Emesene:" \
+		${PN}/data/share/applications/${PN}.desktop || die
+	python_convert_shebangs -r 2 .
 	distutils_src_prepare
+}
+
+src_install() {
+	mysymlink(){
+		dosym  $(python_get_sitedir)/${PN}/${PN} /usr/bin/${PN} || die
+	}
+	distutils_src_install
+	python_execute_function -q mysymlink
 }
 
 pkg_postinst() {
