@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/mpg123-el
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mpg123-el/ChangeLog,v 1.33 2012/09/25 21:18:36 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mpg123-el/ChangeLog,v 1.34 2012/11/03 20:21:33 blueness Exp $
+
+  03 Nov 2012; Anthony G. Basile <blueness@gentoo.org> mpg123-el-1.58.ebuild:
+  stable ppc, bug #441070
 
 *mpg123-el-1.58 (25 Sep 2012)
 
@@ -129,4 +132,3 @@
   files/50mpg123-el-gentoo.el:
   Initial import. Thanks to Louis C. Candell <gentoo@ossh.com> and
   Atzm Watanabe <sitosito@p.chan.ne.jp>, closing bug #37456
-
