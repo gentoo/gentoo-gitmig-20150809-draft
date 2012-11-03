@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ncbi-tools++-0.2010.06.15-r1.ebuild,v 1.1 2012/11/02 19:00:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ncbi-tools++-0.2010.06.15-r1.ebuild,v 1.2 2012/11/03 09:21:42 jlec Exp $
 
 EAPI="3"
 
@@ -14,7 +14,7 @@ DESCRIPTION="NCBI C++ Toolkit, including NCBI BLAST+"
 HOMEPAGE="http://www.ncbi.nlm.nih.gov/books/bv.fcgi?rid=toolkit"
 SRC_URI="
 	ftp://ftp.ncbi.nih.gov/toolbox/ncbi_tools++/${MY_Y}/${MY_TAG}/${MY_P}.tar.gz
-	http://dev.gentoo.org/~jlec/distfiles/${P}-asneeded.patch.xz"
+	http://dev.gentoo.org/~jlec/distfiles/${PN}-${PV%0.}-asneeded.patch.xz"
 
 LICENSE="public-domain"
 SLOT="0"
@@ -35,11 +35,11 @@ src_prepare() {
 		-e '/sed/ s/\([gO]\[0-9\]\)\*/\1\\+/' \
 		src/build-system/configure || die
 	epatch \
-		"${FILESDIR}"/${P}-gcc46.patch \
-		"${FILESDIR}"/${P}-gcc47.patch \
-		"${WORKDIR}"/${P}-asneeded.patch \
-		"${FILESDIR}"/${P}-libpng15.patch \
-		"${FILESDIR}"/${P}-glibc-214.patch
+		"${FILESDIR}"/${PN}-${PV%0.}-gcc46.patch \
+		"${FILESDIR}"/${PN}-${PV%0.}-gcc47.patch \
+		"${WORKDIR}"/${PN}-${PV%0.}-asneeded.patch \
+		"${FILESDIR}"/${PN}-${PV%0.}-libpng15.patch \
+		"${FILESDIR}"/${PN}-${PV%0.}-glibc-214.patch
 
 	use prefix && append-ldflags -Wl,-rpath,"${EPREFIX}/usr/$(get_libdir)/${PN}"
 }
