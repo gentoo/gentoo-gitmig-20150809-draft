@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libcmis/libcmis-0.3.0.ebuild,v 1.1 2012/09/13 15:53:20 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libcmis/libcmis-0.3.0.ebuild,v 1.2 2012/11/03 08:55:13 scarabeus Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ HOMEPAGE="https://sourceforge.net/projects/libcmis/"
 
 LICENSE="|| ( GPL-2 LGPL-2 MPL-1.1 )"
 SLOT="0.3"
-[[ ${PV} == 9999 ]] || KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+[[ ${PV} == 9999 ]] || KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
 IUSE="static-libs man test"
 
 RDEPEND="
