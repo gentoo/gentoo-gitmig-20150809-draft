@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/pat/pat-1.5.3.ebuild,v 1.1 2007/12/15 20:25:23 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/pat/pat-1.5.3.ebuild,v 1.2 2012/11/03 13:29:16 ago Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -19,7 +19,7 @@ SRC_URI="http://www.javaregex.com/binaries/${PN}srcfree${MY_PV}.jar
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 RDEPEND=">=virtual/jre-1.4"
 DEPEND=">=virtual/jdk-1.4
