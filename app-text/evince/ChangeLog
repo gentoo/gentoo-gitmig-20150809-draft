@@ -1,6 +1,12 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.251 2012/10/17 05:20:22 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.252 2012/11/03 06:48:20 tetromino Exp $
+
+  03 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  evince-2.32.0-r4.ebuild, files/evince-2.32.0-gold.patch:
+  Update the gold patch to fix glib-2.32 problems; -lm is always needed for
+  libdocument, not just for the thumbnailer executable. Add missing libICE
+  dependency.
 
   17 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   -evince-2.32.0-r3.ebuild, evince-2.32.0-r4.ebuild, -evince-3.2.1-r1.ebuild,

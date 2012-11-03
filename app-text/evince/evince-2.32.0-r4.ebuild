@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.32.0-r4.ebuild,v 1.14 2012/10/17 05:20:22 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.32.0-r4.ebuild,v 1.15 2012/11/03 06:48:20 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -25,6 +25,7 @@ RDEPEND="
 	>=dev-libs/libxml2-2.5:2
 	>=x11-libs/gtk+-2.21.5:2[introspection?]
 	>=x11-libs/libSM-1
+	x11-libs/libICE
 	|| (
 		>=x11-themes/gnome-icon-theme-2.17.1
 		>=x11-themes/hicolor-icon-theme-0.10 )
