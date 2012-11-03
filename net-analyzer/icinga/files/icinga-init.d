@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/files/icinga-init.d,v 1.4 2012/09/17 19:53:22 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/files/icinga-init.d,v 1.5 2012/11/03 22:15:06 robbat2 Exp $
 
 : ${ICINGACFG:=/etc/icinga/icinga.cfg}
 
@@ -22,7 +22,7 @@ start_stop_daemon_args="-e HOME=/var/lib/icinga"
 
 depend() {
 	need net
-	use dns logger firewall mysql postgresql ido2db
+	use dns logger firewall mysql postgresql
 }
 
 checkconfig() {

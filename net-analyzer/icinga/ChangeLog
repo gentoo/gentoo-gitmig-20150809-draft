@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/icinga
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/ChangeLog,v 1.30 2012/10/25 04:46:34 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/ChangeLog,v 1.31 2012/11/03 22:15:06 robbat2 Exp $
+
+  03 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> files/icinga-init.d,
+  files/ido2db-init.d:
+  ido2db/icinga init.d order is wrong. Correct start: icinga, ido2db;  Shutdown:
+  ido2db, icinga. Detected on infra deployment of icinga.
 
 *icinga-1.8.1 (25 Oct 2012)
 
@@ -154,4 +159,3 @@
   +files/ido2db-conf.d, +icinga-1.5.1.ebuild, +files/ido2db-init.d,
   +metadata.xml:
   New ebuild for icinga. Writen by Prometheanfire. Fixes bug #271339.
-
