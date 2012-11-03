@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pep/pep-2.8-r1.ebuild,v 1.2 2010/09/13 15:45:10 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pep/pep-2.8-r1.ebuild,v 1.3 2012/11/03 13:37:29 ago Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://hannemyr.com/enjoy/${PN}${PV//./}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~mips ~ppc ~sparc ~x86 ~x86-linux ~ppc-macos"
+KEYWORDS="~amd64 ~mips ~ppc ~sparc ~x86 ~x86-linux ~ppc-macos"
 IUSE=""
 
 DEPEND="app-arch/unzip"
