@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/eigen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/ChangeLog,v 1.65 2012/11/02 12:59:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/ChangeLog,v 1.66 2012/11/03 19:57:29 blueness Exp $
+
+  03 Nov 2012; Anthony G. Basile <blueness@gentoo.org> eigen-3.0.6.ebuild:
+  stable ppc64, bug #436570
 
   02 Nov 2012;  <ago@gentoo.org> eigen-3.0.6.ebuild:
   Stable for amd64, wrt bug #436570
