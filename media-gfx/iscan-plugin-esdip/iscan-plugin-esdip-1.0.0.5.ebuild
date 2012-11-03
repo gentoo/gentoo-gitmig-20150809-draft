@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan-plugin-esdip/iscan-plugin-esdip-1.0.0.5.ebuild,v 1.1 2012/06/04 23:12:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan-plugin-esdip/iscan-plugin-esdip-1.0.0.5.ebuild,v 1.2 2012/11/03 20:47:27 flameeyes Exp $
 
 EAPI=4
 
@@ -27,7 +27,7 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}"
 
-QA_PRESTRIPPED="/opt/iscan/esci/*"
+QA_PREBUILT="/opt/iscan/esci/*"
 
 src_configure() { :; }
 src_compile() { :; }
