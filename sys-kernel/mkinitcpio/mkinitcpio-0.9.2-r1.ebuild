@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mkinitcpio/mkinitcpio-0.9.2-r1.ebuild,v 1.4 2012/11/01 10:14:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mkinitcpio/mkinitcpio-0.9.2-r1.ebuild,v 1.5 2012/11/03 19:00:39 ssuominen Exp $
 
 EAPI=4
 
@@ -34,7 +34,7 @@ RDEPEND="app-arch/cpio
 	cryptsetup? ( sys-fs/cryptsetup[static] )
 	mdadm? ( sys-fs/mdadm[static] )
 	dmraid? ( sys-fs/dmraid[static] )
-	pcmcia? ( || ( >sys-apps/pcmciautils-018 <sys-apps/pcmciautils-018[static] ) )"
+	pcmcia? ( || ( >sys-apps/pcmciautils-018[staticsocket] <sys-apps/pcmciautils-018[static] ) )"
 
 pkg_setup() {
 	if kernel_is -lt 2 6 32 ; then
