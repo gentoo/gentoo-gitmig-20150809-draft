@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vtun
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/ChangeLog,v 1.54 2012/09/16 13:01:03 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/ChangeLog,v 1.55 2012/11/03 20:32:14 blueness Exp $
+
+  03 Nov 2012; Anthony G. Basile <blueness@gentoo.org> vtun-3.0.3.ebuild:
+  stable ppc, bug #441488
 
   16 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> -vtun-3.0.2-r1.ebuild:
   Drop old revision
@@ -201,4 +204,3 @@
   Initial revision.
   Includes a few patches for the excellent PLD folks, specifically
   to fix a bison issue, and to add DESTDIR to the 'make install' command.
-
