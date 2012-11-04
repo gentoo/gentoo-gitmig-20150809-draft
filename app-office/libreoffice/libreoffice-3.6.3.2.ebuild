@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.6.3.2.ebuild,v 1.1 2012/11/02 12:22:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.6.3.2.ebuild,v 1.2 2012/11/04 10:47:00 scarabeus Exp $
 
 EAPI=4
 
@@ -350,6 +350,12 @@ src_configure() {
 	local lo_ext
 	local ext_opts
 	local jbs=$(sed -ne 's/.*\(-j[[:space:]]*\|--jobs=\)\([[:digit:]]\+\).*/\2/;T;p' <<< "${MAKEOPTS}")
+
+	# Workaround the boost header include issue for older gccs
+	if [[ $(gcc-major-version) -eq 4 && $(gcc-minor-version) -lt 6 ]]; then
+		append-cppflags -DBOOST_NO_0X_HDR_TYPEINDEX
+		append-cppflags -DBOOST_NO_CXX11_HDR_TYPEINDEX
+	fi
 
 	# recheck that there is some value in jobs
 	[[ -z ${jbs} ]] && jbs="1"
