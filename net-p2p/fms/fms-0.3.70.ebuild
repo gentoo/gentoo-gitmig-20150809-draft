@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/fms/fms-0.3.66.ebuild,v 1.2 2012/11/04 16:48:42 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/fms/fms-0.3.70.ebuild,v 1.1 2012/11/04 16:48:42 tommy Exp $
 
 EAPI="2"
 
@@ -17,11 +17,8 @@ IUSE="frost"
 
 RDEPEND="virtual/libiconv
 	frost? ( net-libs/polarssl )
-	>=dev-libs/poco-1.2.9
-	>=dev-db/sqlite-3.6.15
-	<dev-libs/libpcre-8.13"
-#added dependency on <=dev-libs/libpcre-8.12 instead of blocking higher versions,
-#to prevent some issues with blocker resolution in portage
+	>=dev-libs/poco-1.4.3_p1
+	>=dev-db/sqlite-3.6.15"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 

@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/fms/fms-0.3.67.ebuild,v 1.1 2012/04/12 13:57:48 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/fms/fms-0.3.67.ebuild,v 1.2 2012/11/04 16:48:42 tommy Exp $
 
 EAPI="2"
 
-inherit eutils cmake-utils
+inherit eutils cmake-utils user
 
 DESCRIPTION="A spam-resistant message board application for Freenet"
 HOMEPAGE="http://freenetproject.org/tools.html"
