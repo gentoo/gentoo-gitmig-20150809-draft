@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Module-Signature
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Signature/ChangeLog,v 1.35 2012/06/24 12:59:05 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Signature/ChangeLog,v 1.36 2012/11/04 14:31:27 tove Exp $
+
+*Module-Signature-0.690.0 (04 Nov 2012)
+
+  04 Nov 2012; Torsten Veller <tove@gentoo.org>
+  +Module-Signature-0.690.0.ebuild:
+  Version bump
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
