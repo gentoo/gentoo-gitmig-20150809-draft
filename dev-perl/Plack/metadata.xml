@@ -71,9 +71,6 @@
     <remote-id type="cpan-module">Plack::Response</remote-id>
     <remote-id type="cpan-module">Plack::Runner</remote-id>
     <remote-id type="cpan-module">Plack::TempBuffer</remote-id>
-    <remote-id type="cpan-module">Plack::TempBuffer::Auto</remote-id>
-    <remote-id type="cpan-module">Plack::TempBuffer::File</remote-id>
-    <remote-id type="cpan-module">Plack::TempBuffer::PerlIO</remote-id>
     <remote-id type="cpan-module">Plack::Test</remote-id>
     <remote-id type="cpan-module">Plack::Test::MockHTTP</remote-id>
     <remote-id type="cpan-module">Plack::Test::Server</remote-id>
