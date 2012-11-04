@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ltxml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ltxml/ChangeLog,v 1.14 2012/06/06 03:39:11 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ltxml/ChangeLog,v 1.15 2012/11/04 11:59:06 ago Exp $
+
+  04 Nov 2012; Agostino Sarubbo <ago@gentoo.org> ltxml-1.2.9.ebuild:
+  Add ~amd64, wrt bug #441650
 
   06 Jun 2012; Zac Medico <zmedico@gentoo.org> ltxml-1.2.9.ebuild:
   inherit multilib for get_libdir
@@ -48,4 +51,3 @@
   29 Oct 2003; Rob Cakebread <pythonhead@gentoo.org> ltxml-1.2.5.ebuild,
   metadata.xml:
   Initial commit
-
