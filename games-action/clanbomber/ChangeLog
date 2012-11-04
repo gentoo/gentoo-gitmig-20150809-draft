@@ -1,6 +1,9 @@
 # ChangeLog for games-action/clanbomber
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/clanbomber/ChangeLog,v 1.17 2012/05/03 03:02:33 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/clanbomber/ChangeLog,v 1.18 2012/11/04 04:42:37 mr_bones_ Exp $
+
+  04 Nov 2012; Michael Sterrett <mr_bones_@gentoo.org> clanbomber-2.1.1.ebuild:
+  unclamp the boost dep (bug #441602)
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> clanbomber-2.1.1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
