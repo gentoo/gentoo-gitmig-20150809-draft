@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/c-icap/c-icap-0.2.2.ebuild,v 1.1 2012/09/24 15:39:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/c-icap/c-icap-0.2.2.ebuild,v 1.2 2012/11/04 05:55:35 flameeyes Exp $
 
 EAPI=4
 
@@ -89,6 +89,10 @@ src_install() {
 	insopts -m0644
 	insinto /etc/logrotate.d
 	newins "${FILESDIR}"/${PN}.logrotate ${PN}
+
+	# avoid triggering portage's symlink protection; this is handled by
+	# the init script anyway.
+	rm -rf "${D}"/var/run
 }
 
 pkg_postinst() {
