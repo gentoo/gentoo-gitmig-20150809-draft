@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/elektra/elektra-0.7.1-r1.ebuild,v 1.1 2012/11/04 09:35:03 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/elektra/elektra-0.7.1-r1.ebuild,v 1.2 2012/11/04 09:39:26 xmw Exp $
 
 EAPI=4
 
@@ -66,7 +66,7 @@ src_install() {
 	done
 
 	#avoid collision with allegro (bug 409305)
-	for my_f in $(find "{D}"/usr/share/man/man3 -name "key.3*") ; do
+	for my_f in $(find "${D}"/usr/share/man/man3 -name "key.3*") ; do
 		mv "${my_f}" "${my_f/key/elektra-key}" || die
 		elog "/usr/share/man/man3/$(basename "${my_f}") installed as $(basename "${my_f/key/elektra-key}")"
 	done
