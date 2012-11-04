@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/unicode-data
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/unicode-data/ChangeLog,v 1.28 2012/04/26 20:01:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/unicode-data/ChangeLog,v 1.29 2012/11/04 12:20:24 scarabeus Exp $
+
+*unicode-data-6.1.0 (04 Nov 2012)
+
+  04 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> +unicode-data-6.1.0.ebuild,
+  -unicode-data-5.1.0.ebuild:
+  Version bump to latest. Drop older.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> unicode-data-6.0.0.ebuild:
   keyword ~amd64-fbsd
@@ -100,4 +106,3 @@
   28 May 2008; Peter Alfredsen <loki_val@gentoo.org> +metadata.xml,
   +unicode-data-5.2.0.ebuild:
   Initial commit. Data to be used by other apps.
-
