@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/pdns
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.81 2012/07/07 11:43:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.82 2012/11/04 21:42:49 swegener Exp $
+
+*pdns-3.1 (04 Nov 2012)
+
+  04 Nov 2012; Sven Wegener <swegener@gentoo.org> +pdns-3.1.ebuild:
+  Version bump, bug #437178.
 
   07 Jul 2012; Sven Wegener <swegener@gentoo.org> pdns-3.0.ebuild,
   pdns-3.0.1.ebuild:
