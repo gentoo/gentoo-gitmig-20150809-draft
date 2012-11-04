@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.29 2012/10/30 21:01:35 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.30 2012/11/04 22:00:17 cardoe Exp $
 
 EAPI="4"
 
@@ -190,7 +190,7 @@ src_prepare() {
 
 	python_convert_shebangs -r 2 "${S}/scripts/kvm/kvm_stat"
 
-	epatch "${FILESDIR}"/${P}-cflags.patch
+	epatch "${FILESDIR}"/qemu-1.2.0-cflags.patch
 	epatch "${FILESDIR}"/${P}-fix-mipsen.patch
 	[[ -n ${BACKPORTS} ]] && \
 		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" \
