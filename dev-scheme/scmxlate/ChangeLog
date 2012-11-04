@@ -1,6 +1,11 @@
 # ChangeLog for dev-scheme/scmxlate
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scmxlate/ChangeLog,v 1.4 2010/07/01 16:39:31 chiiph Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scmxlate/ChangeLog,v 1.5 2012/11/04 17:04:11 ulm Exp $
+
+  04 Nov 2012; Ulrich Müller <ulm@gentoo.org> scmxlate-20060613.ebuild,
+  scmxlate-20090410.ebuild:
+  Change LICENSE to "freedist": The license of the package doesn't grant the
+  right for modifications.
 
   01 Jul 2010; Tomas Touceda <chiiph@gentoo.org> scmxlate-20090410.ebuild:
   Fix wrong intall dir

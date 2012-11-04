@@ -1,19 +1,17 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scmxlate/scmxlate-20090410.ebuild,v 1.2 2010/07/01 16:39:31 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scmxlate/scmxlate-20090410.ebuild,v 1.3 2012/11/04 17:04:11 ulm Exp $
 
 EAPI="3"
 
 DESCRIPTION="Scmxlate is a configuration tool for software packages written in Scheme"
 HOMEPAGE="http://www.ccs.neu.edu/home/dorai/scmxlate/scmxlate.html"
-
 SRC_URI="http://evalwhen.com/scmxlate/scmxlate.tar.bz2
 	-> ${P}.tar.bz2"
 
-LICENSE="as-is"
+LICENSE="freedist" # license doesn't grant the right for modifications
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-
 IUSE=""
 
 S="${WORKDIR}/${PN}"
