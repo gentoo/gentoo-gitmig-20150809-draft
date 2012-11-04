@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/hedgewars-0.9.18-r1.ebuild,v 1.1 2012/11/03 06:07:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/hedgewars-0.9.18-r1.ebuild,v 1.2 2012/11/04 05:03:47 mr_bones_ Exp $
 
 EAPI=2
 CMAKE_BUILD_TYPE=Release
@@ -45,6 +45,7 @@ src_configure() {
 		-DCMAKE_CXX_FLAGS_RELEASE='' \
 		-DCMAKE_INSTALL_PREFIX="${GAMES_PREFIX}"
 		-DDATA_INSTALL_DIR="${GAMES_DATADIR}"
+		-DNOSERVER=TRUE
 		-DCMAKE_VERBOSE_MAKEFILE=TRUE )
 	cmake-utils_src_configure
 }
