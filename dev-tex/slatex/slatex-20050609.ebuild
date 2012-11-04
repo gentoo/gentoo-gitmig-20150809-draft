@@ -1,23 +1,18 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/slatex/slatex-20050609.ebuild,v 1.3 2010/04/17 17:52:07 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/slatex/slatex-20050609.ebuild,v 1.4 2012/11/04 17:04:41 ulm Exp $
 
 # for updating the texmf database, id est latex-package_rehash
 inherit latex-package
 
 DESCRIPTION="SLaTeX  is a Scheme program that allows you to write Scheme code in your (La)TeX source."
-
 HOMEPAGE="http://www.ccs.neu.edu/home/dorai/slatex/slatxdoc.html"
-
 #http://www.ccs.neu.edu/home/dorai/slatex/slatex.tar.gz
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
-LICENSE="as-is"
-
+LICENSE="freedist" # license doesn't grant the right for modifications
 SLOT="0"
-
 KEYWORDS="~amd64 ~x86"
-
 IUSE=""
 
 CDEPEND="dev-scheme/guile"

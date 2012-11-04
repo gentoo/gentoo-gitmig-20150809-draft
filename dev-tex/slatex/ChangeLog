@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/slatex
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/slatex/ChangeLog,v 1.4 2010/07/01 16:44:41 chiiph Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/slatex/ChangeLog,v 1.5 2012/11/04 17:04:41 ulm Exp $
+
+  04 Nov 2012; Ulrich Müller <ulm@gentoo.org> slatex-20050609.ebuild,
+  slatex-20090928.ebuild:
+  Change LICENSE to "freedist": The license of the package doesn't grant the
+  right for modifications.
 
 *slatex-20090928 (01 Jul 2010)
 
