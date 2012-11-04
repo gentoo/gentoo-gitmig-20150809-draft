@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/pbzip2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/ChangeLog,v 1.117 2012/10/07 11:58:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/ChangeLog,v 1.118 2012/11/04 16:49:43 ulm Exp $
+
+  04 Nov 2012; Ulrich Müller <ulm@gentoo.org> pbzip2-1.1.5.ebuild,
+  pbzip2-1.1.6.ebuild, pbzip2-1.1.8.ebuild:
+  Update LICENSE, this can use the BZIP2 (BSD/ZLIB hybrid) license template.
 
   07 Oct 2012; Justin Lecher <jlec@gentoo.org> pbzip2-1.1.5.ebuild,
   pbzip2-1.1.6.ebuild, pbzip2-1.1.8.ebuild:

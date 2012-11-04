@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/pbzip2-1.1.6.ebuild,v 1.4 2012/10/07 11:58:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/pbzip2-1.1.6.ebuild,v 1.5 2012/11/04 16:49:43 ulm Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ DESCRIPTION="Parallel bzip2 (de)compressor using libbz2"
 HOMEPAGE="http://compression.ca/pbzip2/"
 SRC_URI="http://compression.ca/${PN}/${P}.tar.gz"
 
-LICENSE="PBZIP2"
+LICENSE="BZIP2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="static symlink"
