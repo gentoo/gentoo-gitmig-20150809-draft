@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libvdpau
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/ChangeLog,v 1.24 2012/09/05 10:41:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/ChangeLog,v 1.25 2012/11/04 14:09:23 ago Exp $
+
+  04 Nov 2012; <ago@gentoo.org> libvdpau-0.5.ebuild:
+  Stable for amd64, wrt bug #440174
 
 *libvdpau-0.5 (05 Sep 2012)
 
