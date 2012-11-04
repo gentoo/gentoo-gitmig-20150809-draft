@@ -11,10 +11,6 @@
 		<name>Alex Alexander</name>
 	</maintainer>
 	<maintainer>
-			<email>c1pher@gentoo.org</email>
-			<name>Dane Smith</name>
-	</maintainer>
-	<maintainer>
 		<email>bugs@bergstroem.nu</email>
 		<name>Johan Bergström</name>
 		<description>Proxy Maintainer. CC him on bugs</description>
