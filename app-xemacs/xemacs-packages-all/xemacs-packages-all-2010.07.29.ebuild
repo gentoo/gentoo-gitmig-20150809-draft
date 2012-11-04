@@ -1,15 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-packages-all/xemacs-packages-all-2010.07.29.ebuild,v 1.9 2011/07/22 11:25:05 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-packages-all/xemacs-packages-all-2010.07.29.ebuild,v 1.10 2012/11/04 08:34:17 ulm Exp $
 
 DESCRIPTION="Meta package for XEmacs elisp packages, similar to the sumo archives."
 HOMEPAGE="http://www.xemacs.org/"
 
-LICENSE="as-is"
+LICENSE="metapackage"
 SLOT="0"
-
 KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
-
 IUSE="mule"
 
 RDEPEND="
