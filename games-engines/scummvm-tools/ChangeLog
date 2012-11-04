@@ -1,6 +1,10 @@
 # ChangeLog for games-engines/scummvm-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm-tools/ChangeLog,v 1.56 2012/11/01 14:53:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm-tools/ChangeLog,v 1.57 2012/11/04 04:31:47 mr_bones_ Exp $
+
+  04 Nov 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/scummvm-tools-1.4.0-boost.patch, scummvm-tools-1.4.0.ebuild:
+  add upstream patch to support building against latest boost (bug #422769)
 
   01 Nov 2012; Michael Sterrett <mr_bones_@gentoo.org>
   -scummvm-tools-1.3.0.ebuild:

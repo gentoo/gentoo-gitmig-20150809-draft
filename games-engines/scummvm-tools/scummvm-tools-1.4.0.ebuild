@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm-tools/scummvm-tools-1.4.0.ebuild,v 1.7 2012/11/01 14:58:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm-tools/scummvm-tools-1.4.0.ebuild,v 1.8 2012/11/04 04:31:47 mr_bones_ Exp $
 
 EAPI=2
 WX_GTK_VER=2.8
-inherit wxwidgets flag-o-matic games
+inherit wxwidgets eutils flag-o-matic games
 
 DESCRIPTION="utilities for the SCUMM game engine"
 HOMEPAGE="http://scummvm.sourceforge.net/"
@@ -30,6 +30,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${P/_/}
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-boost.patch
 	rm -rf *.bat dists/win32
 	# use $T instead of /tmp - bug #402459
 	sed -i \
