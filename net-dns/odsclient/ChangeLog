@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/odsclient
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/odsclient/ChangeLog,v 1.10 2010/09/18 01:55:18 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/odsclient/ChangeLog,v 1.11 2012/11/04 11:53:54 ago Exp $
+
+  04 Nov 2012; Agostino Sarubbo <ago@gentoo.org> odsclient-1.03-r1.ebuild:
+  Add ~amd64, wrt bug #441440
 
 *odsclient-1.03-r1 (18 Sep 2010)
 
