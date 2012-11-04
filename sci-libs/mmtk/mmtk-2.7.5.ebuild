@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmtk/mmtk-2.7.3.ebuild,v 1.5 2012/11/04 10:00:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmtk/mmtk-2.7.5.ebuild,v 1.1 2012/11/04 10:00:55 jlec Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ inherit distutils
 
 # This number identifies each release on the CRU website.
 # Can't figure out how to avoid hardcoding it.
-NUMBER="3421"
+NUMBER="3794"
 
 MY_PN=${PN/mmtk/MMTK}
 MY_P=${MY_PN}-${PV}
