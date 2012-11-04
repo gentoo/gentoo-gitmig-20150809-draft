@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-2.4.ebuild,v 1.3 2012/06/08 11:48:07 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-2.4.ebuild,v 1.4 2012/11/04 06:02:12 mr_bones_ Exp $
 
 EAPI=3
 inherit eutils flag-o-matic games
@@ -47,8 +47,12 @@ DEPEND="!dedicated? (
 S=${WORKDIR}/${MY_P}-source
 
 src_prepare() {
-	has_version '>=sys-libs/zlib-1.2.5.1-r1' && sed -i \
-		-e '1i#define OF(x) x' src/common/ioapi.h
+	if has_version '>=sys-libs/zlib-1.2.5.1-r1' ; then
+		sed -i -e '1i#define OF(x) x' src/common/ioapi.h || die
+	fi
+
+	# don't try to use the system mini-xml
+	sed -i -e '/mxml/d' configure || die
 
 	epatch "${FILESDIR}"/${P}-locale.patch
 
