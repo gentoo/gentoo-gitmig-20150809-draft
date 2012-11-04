@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/crypt-cbc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-cbc/ChangeLog,v 1.75 2012/06/24 12:58:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-cbc/ChangeLog,v 1.76 2012/11/04 16:11:05 tove Exp $
+
+*crypt-cbc-2.310.0 (04 Nov 2012)
+
+  04 Nov 2012; Torsten Veller <tove@gentoo.org> +crypt-cbc-2.310.0.ebuild:
+  Version bump
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
