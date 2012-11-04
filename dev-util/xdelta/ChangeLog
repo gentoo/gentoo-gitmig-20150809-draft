@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/xdelta
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/ChangeLog,v 1.74 2012/09/05 18:13:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/ChangeLog,v 1.75 2012/11/04 19:53:15 ago Exp $
+
+  04 Nov 2012; Agostino Sarubbo <ago@gentoo.org> xdelta-3.0.4.ebuild:
+  Stable for amd64, wrt bug #441318
 
   05 Sep 2012; Samuli Suominen <ssuominen@gentoo.org> -xdelta-3.0.0.ebuild:
   old
