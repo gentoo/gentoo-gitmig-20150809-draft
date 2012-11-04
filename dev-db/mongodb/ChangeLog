@@ -1,8 +1,8 @@
 # ChangeLog for dev-db/mongodb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.49 2012/11/04 17:20:15 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.50 2012/11/04 17:22:00 ultrabug Exp $
 
-  04 Nov 2012; <alexys@gentoo.org> files/mongodb-2.2-r2-boost-1.50.patch:
+  04 Nov 2012; Ultrabug <ultrabug@gentoo.org> files/mongodb-2.2-r2-boost-1.50.patch:
   Correct 2.2.x boost-1.50 patch thanks to Hank Leininger for spotting.
 
 *mongodb-2.2.1 (04 Nov 2012)
@@ -10,7 +10,7 @@
 *mongodb-2.0.7-r2 (04 Nov 2012)
 *mongodb-2.0.7-r1 (04 Nov 2012)
 
-  04 Nov 2012; <alexys@gentoo.org> +files/mongodb-2.0-r1-boost-1.50.patch,
+  04 Nov 2012; Ultrabug <ultrabug@gentoo.org> +files/mongodb-2.0-r1-boost-1.50.patch,
   -mongodb-2.0.7.ebuild, +mongodb-2.0.7-r1.ebuild, +mongodb-2.0.7-r2.ebuild,
   -mongodb-2.2.0.ebuild, +mongodb-2.2.0-r2.ebuild,
   +files/mongodb-2.2-r2-boost-1.50.patch, +mongodb-2.2.1.ebuild:
