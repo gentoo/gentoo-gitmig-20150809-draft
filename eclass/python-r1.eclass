@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.16 2012/11/01 21:49:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.17 2012/11/04 15:16:34 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -50,14 +50,11 @@ _PYTHON_ALL_IMPLS=(
 )
 
 # @ECLASS-VARIABLE: PYTHON_COMPAT
+# @REQUIRED
 # @DESCRIPTION:
 # This variable contains a list of Python implementations the package
 # supports. It must be set before the `inherit' call. It has to be
 # an array.
-#
-# The default is to enable all supported implementations. However, it is
-# discouraged to use that default unless in very special cases and test
-# the package with each added implementation instead.
 #
 # Example:
 # @CODE
@@ -69,7 +66,11 @@ _PYTHON_ALL_IMPLS=(
 # PYTHON_COMPAT=( python{2_5,2_6,2_7} )
 # @CODE
 if ! declare -p PYTHON_COMPAT &>/dev/null; then
-	PYTHON_COMPAT=( "${_PYTHON_ALL_IMPLS[@]}" )
+	if [[ ${CATEGORY}/${PN} == dev-python/python-exec ]]; then
+		PYTHON_COMPAT=( "${_PYTHON_ALL_IMPLS[@]}" )
+	else
+		die 'PYTHON_COMPAT not declared.'
+	fi
 fi
 
 # @ECLASS-VARIABLE: PYTHON_REQ_USE

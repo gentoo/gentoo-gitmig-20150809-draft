@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.498 2012/11/01 23:57:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.499 2012/11/04 15:16:34 mgorny Exp $
+
+  04 Nov 2012; Michał Górny <mgorny@gentoo.org> python-r1.eclass:
+  Always require PYTHON_COMPAT. Add an exception for python-exec which is a
+  special case.
 
   01 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> mysql-autotools.eclass,
   mysql-cmake.eclass, mysql-v2.eclass:
