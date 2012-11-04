@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-9999.ebuild,v 1.23 2012/10/31 23:12:19 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-9999.ebuild,v 1.24 2012/11/04 09:54:57 ssuominen Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ DESCRIPTION="A vector graphics library with cross-device output support"
 HOMEPAGE="http://cairographics.org/"
 LICENSE="|| ( LGPL-2.1 MPL-1.1 )"
 SLOT="0"
-IUSE="X aqua debug directfb doc drm gallium +glib opengl openvg qt4 static-libs +svg xcb"
+IUSE="X aqua debug directfb doc drm gallium +glib legacy-drivers opengl openvg qt4 static-libs +svg xcb"
 
 # Test causes a circular depend on gtk+... since gtk+ needs cairo but test needs gtk+ so we need to block it
 RESTRICT="test"
@@ -72,7 +72,7 @@ REQUIRED_USE="
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.8.8-interix.patch
-	epatch "${FILESDIR}"/${PN}-1.10.0-buggy_gradients.patch
+	use legacy-drivers && epatch "${FILESDIR}"/${PN}-1.10.0-buggy_gradients.patch
 	epatch "${FILESDIR}"/${PN}-1.10.2-qt-surface.patch
 	epatch "${FILESDIR}"/${PN}-respect-fontconfig.patch
 	epatch_user

@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.309 2012/10/31 23:12:19 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.310 2012/11/04 09:54:57 ssuominen Exp $
+
+  04 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> cairo-1.12.6.ebuild,
+  cairo-9999.ebuild, metadata.xml:
+  Leave -buggy_gradients.patch behind USE="legacy-drivers" for users of, for
+  example, <x11-drivers/nvidia-drivers-304.30.
 
 *cairo-1.12.6 (31 Oct 2012)
 
