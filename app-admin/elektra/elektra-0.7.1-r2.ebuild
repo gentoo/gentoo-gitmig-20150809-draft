@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/elektra/elektra-0.7.1-r1.ebuild,v 1.2 2012/11/04 09:39:26 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/elektra/elektra-0.7.1-r2.ebuild,v 1.1 2012/11/04 11:23:30 xmw Exp $
 
 EAPI=4
 
@@ -64,6 +64,8 @@ src_install() {
 		mv "${D}"/usr/include/{,elektra-}"${my_f}" || die
 		elog "/usr/include/${my_f} installed as elektra-${my_f}"
 	done
+	sed -e '/^#include/s:kdbos.h:elektra-kdbos.h:' \
+		-i "${D}"/usr/include/elektra-kdb.h || die
 
 	#avoid collision with allegro (bug 409305)
 	for my_f in $(find "${D}"/usr/share/man/man3 -name "key.3*") ; do
