@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.427 2012/11/01 19:07:51 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.428 2012/11/04 20:20:20 ulm Exp $
+
+  04 Nov 2012; Ulrich Müller <ulm@gentoo.org> bind-9.9.1_p4.ebuild,
+  bind-9.9.2.ebuild:
+  Update LICENSE, RSA-PKCS11 is replaced by RSA, bug 440752.
 
   01 Nov 2012; Christian Ruppert <idl0r@gentoo.org> bind-9.9.2.ebuild:
   Fix LICENSE, bug 440752.
