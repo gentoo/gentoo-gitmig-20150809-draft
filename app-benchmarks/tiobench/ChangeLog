@@ -1,6 +1,10 @@
 # ChangeLog for app-benchmarks/tiobench
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/tiobench/ChangeLog,v 1.16 2009/09/13 22:22:21 patrick Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/tiobench/ChangeLog,v 1.17 2012/11/04 22:46:26 swegener Exp $
+
+  04 Nov 2012; Sven Wegener <swegener@gentoo.org> tiobench-0.3.3-r2.ebuild,
+  +files/0.3.3-glibc-2.16.patch:
+  Rename aligned_alloc to tio_aligned_alloc, bug #429912.
 
   13 Sep 2009; Patrick Lauer <patrick@gentoo.org> tiobench-0.3.3-r2.ebuild:
   Removing virtual/libc deps
