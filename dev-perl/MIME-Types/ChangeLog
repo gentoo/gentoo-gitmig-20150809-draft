@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/MIME-Types
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Types/ChangeLog,v 1.86 2012/10/02 00:29:03 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Types/ChangeLog,v 1.87 2012/11/04 14:37:16 tove Exp $
+
+*MIME-Types-1.360.0 (04 Nov 2012)
+
+  04 Nov 2012; Torsten Veller <tove@gentoo.org> +MIME-Types-1.360.0.ebuild:
+  Version bump
 
   02 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
   MIME-Types-1.350.0.ebuild:
