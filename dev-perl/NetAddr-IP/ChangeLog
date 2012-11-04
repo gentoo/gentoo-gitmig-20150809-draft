@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/NetAddr-IP
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetAddr-IP/ChangeLog,v 1.54 2012/10/07 14:31:10 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetAddr-IP/ChangeLog,v 1.55 2012/11/04 12:55:56 tove Exp $
+
+*NetAddr-IP-4.66.0 (04 Nov 2012)
+
+  04 Nov 2012; Torsten Veller <tove@gentoo.org> +NetAddr-IP-4.66.0.ebuild:
+  Version bump
 
 *NetAddr-IP-4.65.0 (07 Oct 2012)
 
