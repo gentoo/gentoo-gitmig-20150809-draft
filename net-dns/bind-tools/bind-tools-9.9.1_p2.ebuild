@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.9.1_p2.ebuild,v 1.7 2012/08/27 17:27:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.9.1_p2.ebuild,v 1.8 2012/11/04 20:45:11 ulm Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ DESCRIPTION="bind tools: dig, nslookup, host, nsupdate, dnssec-keygen"
 HOMEPAGE="http://www.isc.org/software/bind"
 SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${MY_P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="ISC BSD BSD-2 HPND JNIC RSA openssl"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="doc gssapi idn ipv6 readline ssl urandom xml"
