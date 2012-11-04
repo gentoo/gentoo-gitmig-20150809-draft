@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/dmraid
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/ChangeLog,v 1.27 2012/05/24 02:51:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/ChangeLog,v 1.28 2012/11/04 02:19:51 axs Exp $
+
+  04 Nov 2012; Ian Stakenvicius <axs@gentoo.org> -dmraid-1.0.0_rc16-r2.ebuild,
+  dmraid-1.0.0_rc16-r3.ebuild:
+  remove old; bump rc16 to EAPI=5, add epatch_user and make elog messages
+  contextual to reduce elog spam
 
   24 May 2012; Mike Frysinger <vapier@gentoo.org> dmraid-1.0.0_rc14.ebuild,
   dmraid-1.0.0_rc15.ebuild, dmraid-1.0.0_rc16-r2.ebuild,
