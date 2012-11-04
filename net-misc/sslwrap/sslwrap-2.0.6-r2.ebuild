@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sslwrap/sslwrap-2.0.6-r2.ebuild,v 1.1 2010/09/20 19:05:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sslwrap/sslwrap-2.0.6-r2.ebuild,v 1.2 2012/11/04 11:57:26 ago Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.rickk.com/${PN}/${PN}.tar.gz -> ${P}.tar.gz
 
 LICENSE="sslwrap"
 SLOT="0"
-KEYWORDS="~sparc ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=dev-libs/openssl-0.9.6"
