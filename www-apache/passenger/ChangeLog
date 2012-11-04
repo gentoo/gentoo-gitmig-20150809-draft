@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/passenger
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/ChangeLog,v 1.55 2012/11/04 12:13:34 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/ChangeLog,v 1.56 2012/11/04 13:45:25 ago Exp $
+
+  04 Nov 2012; <ago@gentoo.org> passenger-3.0.17.ebuild:
+  Stable for amd64, wrt bug #440098
 
   04 Nov 2012; Hans de Graaff <graaff@gentoo.org> passenger-3.0.17.ebuild:
   Add missing built-time dependency on rake, bug 441556.
