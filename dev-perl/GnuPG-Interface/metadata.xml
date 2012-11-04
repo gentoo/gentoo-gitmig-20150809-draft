@@ -7,6 +7,7 @@
     <remote-id type="cpan-module">GnuPG::Fingerprint</remote-id>
     <remote-id type="cpan-module">GnuPG::Handles</remote-id>
     <remote-id type="cpan-module">GnuPG::HashInit</remote-id>
+    <remote-id type="cpan-module">GnuPG::Interface</remote-id>
     <remote-id type="cpan-module">GnuPG::Key</remote-id>
     <remote-id type="cpan-module">GnuPG::Options</remote-id>
     <remote-id type="cpan-module">GnuPG::PrimaryKey</remote-id>
