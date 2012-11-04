@@ -21,6 +21,7 @@
     <remote-id type="cpan-module">Devel::REPL::Plugin::CompletionDriver::LexEnv</remote-id>
     <remote-id type="cpan-module">Devel::REPL::Plugin::CompletionDriver::Methods</remote-id>
     <remote-id type="cpan-module">Devel::REPL::Plugin::CompletionDriver::Turtles</remote-id>
+    <remote-id type="cpan-module">Devel::REPL::Plugin::DDC</remote-id>
     <remote-id type="cpan-module">Devel::REPL::Plugin::DDS</remote-id>
     <remote-id type="cpan-module">Devel::REPL::Plugin::DumpHistory</remote-id>
     <remote-id type="cpan-module">Devel::REPL::Plugin::FancyPrompt</remote-id>
@@ -43,7 +44,6 @@
     <remote-id type="cpan-module">Devel::REPL::Plugin::Turtles</remote-id>
     <remote-id type="cpan-module">Devel::REPL::Profile</remote-id>
     <remote-id type="cpan-module">Devel::REPL::Profile::Default</remote-id>
-    <remote-id type="cpan-module">Devel::REPL::Profile::Minimal</remote-id>
     <remote-id type="cpan-module">Devel::REPL::Script</remote-id>
   </upstream>
 </pkgmetadata>
