@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_bioapi
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_bioapi/ChangeLog,v 1.8 2009/03/08 20:01:48 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_bioapi/ChangeLog,v 1.9 2012/11/04 06:35:21 vapier Exp $
+
+  04 Nov 2012; Mike Frysinger <vapier@gentoo.org> pam_bioapi-0.4.0-r1.ebuild:
+  Stabilize #441520 by Paweł Hajdan, Jr.
 
 *pam_bioapi-0.4.0-r1 (08 Mar 2009)
 
@@ -40,4 +43,3 @@
   +files/pam_bioapi.c-0.2.1.patch, +metadata.xml, +pam_bioapi-0.2.1.ebuild:
   Initial import. Ebuild by Jochen Maes <jochen.maes@sejo.be> who will be
   maintaining this package. I will be his proxy maintainer.
-
