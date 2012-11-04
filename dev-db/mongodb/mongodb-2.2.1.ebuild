@@ -1,18 +1,18 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.0.7.ebuild,v 1.1 2012/08/20 08:46:47 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.2.1.ebuild,v 1.1 2012/11/04 14:23:25 ultrabug Exp $
 
 EAPI=4
 SCONS_MIN_VERSION="1.2.0"
 
-inherit eutils multilib pax-utils scons-utils user versionator
+inherit eutils boost-utils flag-o-matic multilib pax-utils scons-utils user versionator
 
 MY_P=${PN}-src-r${PV/_rc/-rc}
 
 DESCRIPTION="A high-performance, open source, schema-free document-oriented database"
 HOMEPAGE="http://www.mongodb.org"
 SRC_URI="http://downloads.mongodb.org/src/${MY_P}.tar.gz
-	mms-agent? ( http://dev.gentoo.org/~ultrabug/20120514-10gen-mms-agent.zip )"
+	mms-agent? ( http://dev.gentoo.org/~ultrabug/20120830-10gen-mms-agent.zip )"
 
 LICENSE="AGPL-3 Apache-2.0"
 SLOT="0"
@@ -20,10 +20,11 @@ KEYWORDS="~amd64 ~x86"
 IUSE="mms-agent static-libs v8"
 
 PDEPEND="mms-agent? ( dev-python/pymongo )"
-RDEPEND="!v8? ( <dev-lang/spidermonkey-1.8[unicode] )
+RDEPEND="
 	v8? ( dev-lang/v8 )
-	dev-libs/boost
+	>=dev-libs/boost-1.50
 	dev-libs/libpcre[cxx]
+	dev-util/google-perftools
 	net-libs/libpcap
 	app-arch/snappy"
 DEPEND="${RDEPEND}
@@ -36,24 +37,35 @@ pkg_setup() {
 	enewgroup mongodb
 	enewuser mongodb -1 -1 /var/lib/${PN} mongodb
 
-	scons_opts=" --cxx=$(tc-getCXX) --use-system-all --sharedclient"
+	scons_opts="  --cc=$(tc-getCC) --cxx=$(tc-getCXX)"
+	scons_opts+=" --use-system-tcmalloc"
+	scons_opts+=" --use-system-pcre"
+	scons_opts+=" --use-system-snappy"
+	scons_opts+=" --use-system-boost"
+
 	if use v8; then
 		scons_opts+=" --usev8"
 	else
 		scons_opts+=" --usesm"
 	fi
+
+	local boostver=$(boost-utils_get_best_slot)
+	scons_opts+=" --boost-version=${boostver/./_}"
+	append-cxxflags "-I$(boost-utils_get_includedir)"
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-2.0-fix-scons.patch"
+	epatch "${FILESDIR}/${PN}-2.2-r1-fix-scons.patch"
+	epatch "${FILESDIR}/${PN}-2.2-r1-fix-boost.patch"
+	epatch "${FILESDIR}/${PN}-2.2-r2-boost-1.50.patch"
 
-	# drop -Werror
-	sed -i -e '/Werror/d' SConstruct || die
-
-	sed -i -e "s@jsapi.h@js/jsapi.h@g" \
-		-e "s@jsobj.h@js/jsobj.h@g" \
-		-e "s@jsdate.h@js/jsdate.h@g" \
-		-e "s@jsregexp.h@js/jsregexp.h@g" scripting/engine_spidermonkey.h || die
+	# FIXME: apply only this fix [1] on x86 boxes as it breaks /usr/lib symlink
+	# on amd64 machines [2].
+	# [1] https://jira.mongodb.org/browse/SERVER-5575
+	# [2] https://bugs.gentoo.org/show_bug.cgi?id=434664
+	if use !prefix && [[ "$(get_libdir)" == "lib" ]]; then
+		epatch "${FILESDIR}/${PN}-2.2-fix-x86client.patch"
+	fi
 }
 
 src_compile() {
@@ -61,11 +73,11 @@ src_compile() {
 }
 
 src_install() {
-	escons ${scons_opts} --full --nostrip install --prefix="${D}"/usr
+	escons ${scons_opts} --full --nostrip install --prefix="${ED}"/usr
 
-	use static-libs || rm "${D}/usr/$(get_libdir)/libmongoclient.a"
+	use static-libs || rm "${ED}/usr/$(get_libdir)/libmongoclient.a"
 
-	use v8 && pax-mark m "${D}"/usr/bin/{mongo,mongod}
+	use v8 && pax-mark m "${ED}"/usr/bin/{mongo,mongod}
 
 	for x in /var/{lib,log,run}/${PN}; do
 		keepdir "${x}"

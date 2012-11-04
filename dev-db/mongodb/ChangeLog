@@ -1,6 +1,20 @@
 # ChangeLog for dev-db/mongodb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.47 2012/10/09 18:54:01 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.48 2012/11/04 14:23:25 ultrabug Exp $
+
+*mongodb-2.2.1 (04 Nov 2012)
+*mongodb-2.2.0-r2 (04 Nov 2012)
+*mongodb-2.0.7-r2 (04 Nov 2012)
+*mongodb-2.0.7-r1 (04 Nov 2012)
+
+  04 Nov 2012; <alexys@gentoo.org> +files/mongodb-2.0-r1-boost-1.50.patch,
+  -mongodb-2.0.7.ebuild, +mongodb-2.0.7-r1.ebuild, +mongodb-2.0.7-r2.ebuild,
+  -mongodb-2.2.0.ebuild, +mongodb-2.2.0-r2.ebuild,
+  +files/mongodb-2.2-r2-boost-1.50.patch, +mongodb-2.2.1.ebuild:
+  Fix boost-1.50 build for 2.x series, fix #425190, use -r1 versions for older
+  boost, use -r2 for >=1.50 boost. No longer depend on spidermonkey-1.7 for all
+  the 2.x series wrt #390631. Note that v1.8.5 will be dropped later wrt
+  #376983. Version bump fix #441586. Drop old stuff.
 
 *mongodb-2.2.0-r1 (09 Oct 2012)
 
