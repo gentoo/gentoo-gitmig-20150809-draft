@@ -173,7 +173,7 @@
  
          // skip hidden files and directories
 -        if (root.leaf()[0] == '.' && root.leaf() != ".")
-+        if (root.leaf().string()[0] == '.' && root.leaf() != ".")
++        if (root.leaf().string()[0] == '.' && root.leaf().string() != ".")
              return;
  
          if ( is_directory( root ) ) {
