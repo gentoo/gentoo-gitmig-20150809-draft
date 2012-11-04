@@ -1,9 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc32/package.use.mask,v 1.30 2012/07/12 14:46:11 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc32/package.use.mask,v 1.31 2012/11/04 06:25:14 tetromino Exp $
 
 # This file requires >=portage-2.1.1
 
+# Alexandre Rostovtsev <tetromino@gentoo.org> (04 Nov 2012)
+# webkit-gtk[webkit2] needs app-accessibility/at-spi2-core; please unmask when
+# at-spi2-core has been keyworded for ppc (bug #441692).
+net-libs/webkit-gtk webkit2
 
 # ranger <ranger@gentoo.org> (17 apr 2012)
 # Remasking llvm in mesa

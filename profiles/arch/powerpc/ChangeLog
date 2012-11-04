@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.193 2012/10/31 16:12:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.194 2012/11/04 06:25:13 tetromino Exp $
+
+  04 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  ppc32/package.use.mask:
+  Mask webkit-gtk[webkit2] on ppc due to missing ~ppc keyword on at-spi2-core
+  (bug #441692).
 
   31 Oct 2012; Michał Górny <mgorny@gentoo.org> use.mask:
   Add a PYTHON_TARGETS mask based on keywords.
