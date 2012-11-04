@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/wesnoth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.215 2012/10/18 21:06:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.216 2012/11/04 05:12:42 mr_bones_ Exp $
+
+  04 Nov 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/wesnoth-1.10.4-boost.patch, wesnoth-1.10.4.ebuild:
+  add upstream patch for building against newer boost (bug #440742)
 
   18 Oct 2012; Michael Sterrett <mr_bones_@gentoo.org> wesnoth-1.10.4.ebuild:
   added joystick use dep for libsdl (bug #438846)
