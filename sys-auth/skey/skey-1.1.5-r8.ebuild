@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/skey/skey-1.1.5-r8.ebuild,v 1.10 2012/03/25 20:44:17 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/skey/skey-1.1.5-r8.ebuild,v 1.11 2012/11/04 20:24:14 ulm Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.openbsd.org/faq/faq8.html#SKey"
 SRC_URI="mirror://gentoo/${P}.tar.bz2
 	mirror://gentoo/${P}-patches-2.tar.xz"
 
-LICENSE="BSD MIT RSA-MD4 RSA-MD5 BEER-WARE"
+LICENSE="BSD MIT RSA BEER-WARE"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="static-libs"
