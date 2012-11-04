@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/codetools/codetools-4.0.0.ebuild,v 1.4 2012/02/27 04:45:09 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/codetools/codetools-4.0.0.ebuild,v 1.5 2012/11/04 03:08:32 idella4 Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.5 3.* *-jython"
 DISTUTILS_SRC_TEST="nosetests"
 
-inherit distutils virtualx
+inherit distutils virtualx eutils
 
 DESCRIPTION="Enthought Tool Suite: Code analysis and execution tools"
 HOMEPAGE="http://code.enthought.com/projects/code_tools/ http://pypi.python.org/pypi/codetools"
@@ -31,6 +31,10 @@ DEPEND="${RDEPEND}
 		media-fonts/font-cursor-misc
 		media-fonts/font-misc-misc
 	)"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-test.patch
+}
 
 src_compile() {
 	distutils_src_compile
