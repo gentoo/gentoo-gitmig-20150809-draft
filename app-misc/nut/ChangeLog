@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/nut
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/ChangeLog,v 1.47 2012/09/29 20:59:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/ChangeLog,v 1.48 2012/11/04 12:57:29 blueness Exp $
+
+  04 Nov 2012; Anthony G. Basile <blueness@gentoo.org> nut-18.0.ebuild:
+  stable ppc, bug #441088
 
 *nut-18.0 (29 Sep 2012)
 
@@ -205,4 +208,3 @@
   29 Oct 2004; Aron Griffis <agriffis@gentoo.org> +nut-10.7.ebuild:
   Add ebuild for Jim Jozwiak's nutrition program. Thanks to Chris Houser
   (Chouser) for the ebuild
-
