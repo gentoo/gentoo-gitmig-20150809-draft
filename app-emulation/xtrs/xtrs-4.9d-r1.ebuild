@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/xtrs-4.9d-r1.ebuild,v 1.2 2012/11/03 20:27:37 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/xtrs-4.9d-r1.ebuild,v 1.3 2012/11/04 13:40:39 ago Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.tim-mann.org/trs80/${P}.tar.gz
 
 LICENSE="xtrs ldos? ( freedist )"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ~x86 ~x86-fbsd"
 IUSE="ldos"
 
 DEPEND="sys-libs/ncurses
