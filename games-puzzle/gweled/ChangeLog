@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/gweled
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gweled/ChangeLog,v 1.17 2012/10/30 17:08:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gweled/ChangeLog,v 1.18 2012/11/04 13:45:50 ago Exp $
+
+  04 Nov 2012; <ago@gentoo.org> gweled-0.9.1.ebuild:
+  Stable for amd64, wrt bug #440170
 
   30 Oct 2012; Michael Sterrett <mr_bones_@gentoo.org> gweled-0.9.1.ebuild:
   drop unneeded gnome-base/libgnomeui dep
