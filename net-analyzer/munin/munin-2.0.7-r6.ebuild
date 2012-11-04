@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.7-r5.ebuild,v 1.2 2012/10/25 18:52:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.7-r6.ebuild,v 1.1 2012/11/04 22:15:29 flameeyes Exp $
 
 EAPI=4
 
-PATCHSET=6
+PATCHSET=8
 
 inherit eutils user java-pkg-opt-2
 
@@ -18,8 +18,8 @@ SRC_URI="mirror://sourceforge/munin/${MY_P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~mips ~ppc ~x86"
-IUSE="asterisk irc java memcached minimal mysql postgres ssl test cgi ipv6 syslog ipmi http dhcpd doc"
-REQUIRED_USE="cgi? ( !minimal )"
+IUSE="asterisk irc java memcached minimal mysql postgres ssl test cgi ipv6 syslog ipmi http dhcpd doc apache"
+REQUIRED_USE="cgi? ( !minimal ) apache? ( cgi )"
 
 # Upstream's listing of required modules is NOT correct!
 # Some of the postgres plugins use DBD::Pg, while others call psql directly.
@@ -37,6 +37,7 @@ DEPEND_COM="dev-lang/perl[berkdb]
 			postgres? ( dev-perl/DBD-Pg dev-db/postgresql-base )
 			memcached? ( dev-perl/Cache-Memcached )
 			cgi? ( dev-perl/FCGI )
+			apache? ( www-servers/apache[apache2_modules_cgi,apache2_modules_cgid,apache2_modules_rewrite,apache2_modules_access_compat(+)] )
 			syslog? ( virtual/perl-Sys-Syslog )
 			http? ( dev-perl/libwww-perl )
 			dhcpd? (
@@ -107,8 +108,10 @@ src_prepare() {
 }
 
 src_configure() {
-	local cgidir='$(DESTDIR)/var/www/localhost/cgi-bin'
+	local cgidir='$(DESTDIR)/usr/libexec/munin/cgi'
 	use cgi || cgidir="${T}/useless/cgi-bin"
+
+	local cgiuser=$(usex apache apache munin)
 
 	cat - >> "${S}"/Makefile.config <<EOF
 PREFIX=\$(DESTDIR)/usr
@@ -118,7 +121,10 @@ MANDIR=\$(PREFIX)/share/man
 LIBDIR=\$(PREFIX)/libexec/munin
 HTMLDIR=\$(DESTDIR)/var/www/localhost/htdocs/munin
 CGIDIR=${cgidir}
+CGITMPDIR=\$(DESTDIR)/var/cache/munin-cgi
+CGIUSER=${cgiuser}
 DBDIR=\$(DESTDIR)/var/lib/munin
+DBDIRNODE=\$(DESTDIR)/var/lib/munin-node
 SPOOLDIR=\$(DESTDIR)/var/spool/munin-async
 LOGDIR=\$(DESTDIR)/var/log/munin
 PERLSITELIB=$(perl -V:vendorlib | cut -d"'" -f2)
@@ -133,6 +139,13 @@ src_compile() {
 	if use doc; then
 		emake -C doc html
 	fi
+}
+
+src_test() {
+	local testtargets="test-common test-node test-plugins"
+	use minimal || testtargets+=" test-master"
+
+	LC_ALL=C emake -j1 ${testtargets}
 }
 
 src_install() {
@@ -173,9 +186,9 @@ EOF
 		cd "${S}"
 	fi
 
-	# bug 254968
-	insinto /etc/logrotate.d/
-	newins "${FILESDIR}"/logrotate.d-munin munin
+	dodir /etc/logrotate.d/
+	sed -e "s:@CGIUSER@:$(usex apache apache munin):g" \
+		"${FILESDIR}"/logrotate.d-munin.2 > "${D}"/etc/logrotate.d/munin
 
 	dosym ipmi_ /usr/libexec/munin/plugins/ipmi_sensor_
 
@@ -209,6 +222,17 @@ EOF
 
 		if use cgi; then
 			sed -i -e '/#graph_strategy cgi/s:^#::' "${D}"/etc/munin/munin.conf || die
+
+			keepdir /var/cache/munin-cgi
+			touch "${D}"/var/log/munin/munin-cgi-graph.log
+			fowners $(usex apache apache munin) \
+				/var/cache/munin-cgi \
+				/var/log/munin/munin-cgi-graph.log
+
+			if use apache; then
+				insinto /etc/apache2/vhosts.d
+				newins "${FILESDIR}"/munin.apache.include munin.include
+			fi
 		else
 			sed -i -e '/#graph_strategy cgi/s:#graph_strategy cgi:graph_strategy cron:' "${D}"/etc/munin/munin.conf || die
 		fi
@@ -320,4 +344,20 @@ pkg_postinst() {
 	elog ""
 	elog "Further information about setting up Munin in Gentoo can be found"
 	elog "in the Gentoo Wiki: https://wiki.gentoo.org/wiki/Munin"
+
+	if use cgi; then
+		chown $(usex apache apache munin) \
+			"${ROOT}"/var/cache/munin-cgi \
+			"${ROOT}"/var/log/munin-cgi-graph.log
+
+		if use apache; then
+			elog "To use Munin with CGI you should include /etc/apache2/vhosts.d/munin.include"
+			elog "from the virtual host you want it to be served."
+			elog "If you want to enable CGI-based HTML as well, you have to add to"
+			elog "/etc/conf.d/apache2 the option -D MUNIN_HTML_CGI."
+		else
+			elog "Effective CGI support has just been added in 2.0.7-r6."
+			elog "Documentation on how to use it is still sparse."
+		fi
+	fi
 }
