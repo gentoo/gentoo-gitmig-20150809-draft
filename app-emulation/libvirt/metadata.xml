@@ -81,5 +81,7 @@
 		the underlying devices for you. In some cases this requires
 		enabling the 'netcf' USE flag (currently unavailable).
 	</flag>
+	<flag name='firewalld'>DBus interface to iptables/ebtables allowing
+		for better runtime management of your firewall.</flag>
   </use>
 </pkgmetadata>
