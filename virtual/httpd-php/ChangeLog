@@ -1,6 +1,13 @@
 # ChangeLog for virtual/httpd-php
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/httpd-php/ChangeLog,v 1.26 2012/10/21 09:18:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/httpd-php/ChangeLog,v 1.27 2012/11/04 08:08:30 olemarkus Exp $
+
+*httpd-php-5.3-r1 (04 Nov 2012)
+*httpd-php-5.4-r2 (04 Nov 2012)
+
+  04 Nov 2012; Ole Markus With <olemarkus@gentoo.org> +httpd-php-5.3-r1.ebuild,
+  +httpd-php-5.4-r2.ebuild:
+  Prefer php-fpm over apache2 as default
 
   21 Oct 2012; Markus Meier <maekke@gentoo.org> httpd-php-5.4-r1.ebuild:
   x86 stable, bug #432994
