@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.8.3-r200.ebuild,v 1.6 2012/10/28 16:48:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.8.3-r200.ebuild,v 1.7 2012/11/04 06:30:15 tetromino Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ DESCRIPTION="Open source web browser engine"
 HOMEPAGE="http://www.webkitgtk.org/"
 SRC_URI="http://www.webkitgtk.org/releases/${MY_P}.tar.xz"
 
-LICENSE="LGPL-2 LGPL-2.1 BSD"
+LICENSE="LGPL-2+ BSD"
 SLOT="2"
 KEYWORDS="alpha amd64 arm ia64 ~ppc ~ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-macos"
 IUSE="aqua coverage debug +geoloc +gstreamer +introspection +jit spell +webgl"
@@ -90,6 +90,9 @@ src_prepare() {
 
 	# bug #417523, https://bugs.webkit.org/show_bug.cgi?id=96602
 	epatch "${FILESDIR}/${PN}-1.8.3-libdl.patch"
+
+	# uclibc fix, bug #441674
+	epatch "${FILESDIR}/${PN}-1.8.3-disable-backtrace-uclibc.patch"
 
 	# intermediate MacPorts hack while upstream bug is not fixed properly
 	# https://bugs.webkit.org/show_bug.cgi?id=28727
