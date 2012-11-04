@@ -3,6 +3,7 @@
 <pkgmetadata>
   <herd>perl</herd>
   <upstream>
-    <remote-id type="cpan">Net-SFTP-Foreign</remote-id>
+    <remote-id type="cpan">RadiusPerl</remote-id>
+    <remote-id type="cpan-module">Authen::Radius</remote-id>
   </upstream>
 </pkgmetadata>
