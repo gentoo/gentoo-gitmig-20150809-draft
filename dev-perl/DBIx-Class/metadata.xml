@@ -53,6 +53,7 @@
     <remote-id type="cpan-module">DBIx::Class::Row</remote-id>
     <remote-id type="cpan-module">DBIx::Class::SQLMaker</remote-id>
     <remote-id type="cpan-module">DBIx::Class::SQLMaker::LimitDialects</remote-id>
+    <remote-id type="cpan-module">DBIx::Class::SQLMaker::OracleJoins</remote-id>
     <remote-id type="cpan-module">DBIx::Class::Schema</remote-id>
     <remote-id type="cpan-module">DBIx::Class::Schema::Versioned</remote-id>
     <remote-id type="cpan-module">DBIx::Class::Serialize::Storable</remote-id>
@@ -64,11 +65,13 @@
     <remote-id type="cpan-module">DBIx::Class::Storage::DBI::ADO::MS_Jet</remote-id>
     <remote-id type="cpan-module">DBIx::Class::Storage::DBI::ADO::MS_Jet::Cursor</remote-id>
     <remote-id type="cpan-module">DBIx::Class::Storage::DBI::ADO::Microsoft_SQL_Server</remote-id>
+    <remote-id type="cpan-module">DBIx::Class::Storage::DBI::ADO::Microsoft_SQL_Server::Cursor</remote-id>
     <remote-id type="cpan-module">DBIx::Class::Storage::DBI::AutoCast</remote-id>
     <remote-id type="cpan-module">DBIx::Class::Storage::DBI::Cursor</remote-id>
     <remote-id type="cpan-module">DBIx::Class::Storage::DBI::DB2</remote-id>
     <remote-id type="cpan-module">DBIx::Class::Storage::DBI::Firebird</remote-id>
     <remote-id type="cpan-module">DBIx::Class::Storage::DBI::Firebird::Common</remote-id>
+    <remote-id type="cpan-module">DBIx::Class::Storage::DBI::IdentityInsert</remote-id>
     <remote-id type="cpan-module">DBIx::Class::Storage::DBI::Informix</remote-id>
     <remote-id type="cpan-module">DBIx::Class::Storage::DBI::InterBase</remote-id>
     <remote-id type="cpan-module">DBIx::Class::Storage::DBI::MSSQL</remote-id>
