@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.5.11.ebuild,v 1.5 2012/04/26 19:49:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.5.11.ebuild,v 1.6 2012/11/04 18:35:32 blueness Exp $
 
 EAPI=4
 
@@ -42,6 +42,9 @@ src_prepare() {
 	# Bug 354067 : the same applies to tk, since the patch is about tcl.m4, just
 	# copy the tcl patch
 	epatch "${FILESDIR}"/tcl-8.5.9-gentoo-fbsd.patch
+
+	# Bug 441630
+	epatch "${FILESDIR}"/${PN}-8.5.11-fix-name-collision-uclibc.patch
 
 	sed -i 's/FT_New_Face/XftFontOpen/g' unix/configure.in || die
 

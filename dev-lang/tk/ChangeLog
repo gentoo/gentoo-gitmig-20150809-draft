@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/tk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.173 2012/08/07 02:34:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.174 2012/11/04 18:35:33 blueness Exp $
+
+  04 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
+  +files/tk-8.5.11-fix-name-collision-uclibc.patch, tk-8.5.11-r1.ebuild,
+  tk-8.5.11.ebuild:
+  Patch 8.5.11 to build on uclibc, bug #441630
 
   03 Aug 2012; Mike Frysinger <vapier@gentoo.org> tk-8.5.11-r1.ebuild:
   Make sure we link against fontconfig since we use it.
