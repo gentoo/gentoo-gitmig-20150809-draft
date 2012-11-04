@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/regina-rexx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/ChangeLog,v 1.26 2012/09/01 16:31:18 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/ChangeLog,v 1.27 2012/11/04 14:31:19 kensington Exp $
+
+*regina-rexx-3.6-r1 (04 Nov 2012)
+
+  04 Nov 2012; Michael Palimaka <kensington@gentoo.org> +files/rxstack-r1,
+  +regina-rexx-3.6-r1.ebuild, metadata.xml:
+  Migrate to EAPI 4. Respect *FLAGS. Avoid bashisms in init script. Add upstream
+  metadata.
 
 *regina-rexx-3.6 (01 Sep 2012)
 
@@ -101,4 +108,3 @@
   also a language ideally suited as a macro language for other applications.
 
   ebuild submitted by Maik Schreiber <bZ@iq-computing.de>
-
