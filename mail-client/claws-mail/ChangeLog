@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/claws-mail
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.215 2012/10/31 18:30:40 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.216 2012/11/04 16:40:39 fauli Exp $
+
+*claws-mail-3.8.1-r3 (04 Nov 2012)
+
+  04 Nov 2012; Christian Faulhammer <fauli@gentoo.org>
+  +claws-mail-3.8.1-r3.ebuild, +files/claws-mail-3.8.1_fix-gnutls-3.1.3.patch:
+  add patch for bug 440898 by John Brendler, valuable input from Duncan and
+  others
 
   31 Oct 2012; Andreas Schuerch <nativemad@gentoo.org>
   claws-mail-3.8.1-r2.ebuild:
