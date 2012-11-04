@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cpptest
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cpptest/ChangeLog,v 1.16 2012/10/04 15:52:19 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cpptest/ChangeLog,v 1.17 2012/11/04 01:29:20 sping Exp $
+
+  04 Nov 2012; Sebastian Pipping <sping@gentoo.org> cpptest-1.1.2.ebuild:
+  Apply EAPI 4 patch by Vicente Olivert Riera (bug #441310)
 
 *cpptest-1.1.2 (04 Oct 2012)
 
