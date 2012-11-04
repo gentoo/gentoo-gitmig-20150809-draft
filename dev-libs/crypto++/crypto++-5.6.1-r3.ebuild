@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/crypto++-5.6.1-r3.ebuild,v 1.2 2012/06/26 14:49:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/crypto++-5.6.1-r3.ebuild,v 1.3 2012/11/04 19:41:44 c1pher Exp $
 
 EAPI="3"
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
-DEPEND="app-arch/unzip"
+DEPEND="app-arch/unzip
+	sys-devel/libtool"
 RDEPEND=""
 
 S="${WORKDIR}"
