@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/air
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/air/ChangeLog,v 1.22 2012/11/04 20:22:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/air/ChangeLog,v 1.23 2012/11/04 21:40:24 pinkbyte Exp $
+
+  04 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> -air-2.0.0.ebuild:
+  Drop old revision
 
   04 Nov 2012; Agostino Sarubbo <ago@gentoo.org> air-2.0.0-r1.ebuild:
   Stable for amd64, wrt bug #327069
