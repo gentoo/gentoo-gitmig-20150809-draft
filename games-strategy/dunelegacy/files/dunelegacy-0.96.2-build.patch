@@ -3,9 +3,10 @@ Date:   Thu Aug 9 18:57:40 2012 +0200
 
     respect flags
     use pkg-config
+    use LDADD instead of LDFLAGS for libs
 
---- a/configure.ac
-+++ b/configure.ac
+--- configure.ac
++++ configure.ac
 @@ -16,38 +16,13 @@
  
  AC_SUBST(dunelegacydatadir)
@@ -46,3 +47,11 @@ Date:   Thu Aug 9 18:57:40 2012 +0200
  dnl enet defines
  AC_CHECK_FUNC(gethostbyaddr_r, [AC_DEFINE(HAS_GETHOSTBYADDR_R)])
  AC_CHECK_FUNC(gethostbyname_r, [AC_DEFINE(HAS_GETHOSTBYNAME_R)])
+--- tests/Makefile.am
++++ tests/Makefile.am
+@@ -55,4 +55,4 @@
+ 
+ 
+ runtests_CXXFLAGS = $(CPPUNIT_CFLAGS) -DTESTSRC=\"$(srcdir)\" -I$(top_srcdir)/include
+-runtests_LDFLAGS = $(CPPUNIT_LIBS) -lcppunit
++runtests_LDADD = $(CPPUNIT_LIBS) -lcppunit
