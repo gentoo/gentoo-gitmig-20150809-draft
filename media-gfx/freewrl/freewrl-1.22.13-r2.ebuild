@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.22.13-r1.ebuild,v 1.3 2012/11/04 01:21:28 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-1.22.13-r2.ebuild,v 1.1 2012/11/04 01:21:28 axs Exp $
 
-EAPI=4
+EAPI=5
 
 inherit autotools nsplugins eutils flag-o-matic java-pkg-opt-2 multilib
 
@@ -31,7 +31,7 @@ COMMONDEPEND="x11-libs/libXau
 	media-libs/fontconfig
 	curl? ( net-misc/curl )
 	osc? ( media-libs/liblo )
-	dev-lang/spidermonkey"
+	dev-lang/spidermonkey:="
 DEPEND="${COMMONDEPEND}
 	virtual/pkgconfig
 	java? ( >=virtual/jdk-1.4 )
