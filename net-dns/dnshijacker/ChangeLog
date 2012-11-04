@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/dnshijacker
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnshijacker/ChangeLog,v 1.14 2012/11/03 15:00:29 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnshijacker/ChangeLog,v 1.15 2012/11/04 11:52:45 ago Exp $
+
+  04 Nov 2012; Agostino Sarubbo <ago@gentoo.org> dnshijacker-1.3-r2.ebuild:
+  Add ~amd64, wrt bug #441438
 
   03 Nov 2012; Michael Palimaka <kensington@gentoo.org>
   dnshijacker-1.3-r2.ebuild, files/dnshijacker-1.3-gentoo.patch:
