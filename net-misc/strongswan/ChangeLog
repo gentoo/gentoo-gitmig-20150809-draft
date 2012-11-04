@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/strongswan
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.105 2012/10/17 03:46:39 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.106 2012/11/04 20:37:39 ulm Exp $
+
+  04 Nov 2012; Ulrich Müller <ulm@gentoo.org> strongswan-5.0.0.ebuild,
+  strongswan-5.0.1.ebuild:
+  Update LICENSE, RSA-MD5 and RSA-PKCS11 are replaced by RSA license template.
 
   17 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> strongswan-5.0.0.ebuild:
   x86 stable wrt bug #435614
