@@ -1,12 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.5.2.ebuild,v 1.5 2012/09/21 07:16:55 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.5.3.ebuild,v 1.1 2012/11/04 10:27:49 scarabeus Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
 # krita/CMakeLists.txt
 
 EAPI=4
+
+EGIT_BRANCH="calligra/2.5"
 
 KDE_SCM=git
 KDE_MINIMAL=4.6.4
@@ -39,7 +41,7 @@ esac
 LICENSE="GPL-2"
 SLOT="4"
 
-[[ ${PV} == *9999 ]] || KEYWORDS="~amd64 ~x86"
+[[ ${PV} == *9999 ]] || KEYWORDS="amd64 x86"
 
 IUSE="attica +crypt +eigen +exif fftw +fontconfig freetds +gif glew +glib +gsf
 gsl +jpeg jpeg2k +kdcraw kdepim +lcms marble mysql +okular opengtl openexr
@@ -138,8 +140,6 @@ PDEPEND=">=app-office/calligra-l10n-${LANGVERSION}"
 
 RESTRICT=test
 # bug 394273
-
-PATCHES=( "${FILESDIR}/${PN}-2.5.2-lcms24.patch" )
 
 src_configure() {
 	local cal_ft

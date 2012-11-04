@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra-l10n/calligra-l10n-2.5.2.ebuild,v 1.1 2012/09/13 12:04:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra-l10n/calligra-l10n-2.5.3.ebuild,v 1.1 2012/11/04 10:27:13 scarabeus Exp $
 
 EAPI=4
 
@@ -13,10 +13,10 @@ LICENSE="GPL-2"
 DEPEND="sys-devel/gettext"
 RDEPEND="!app-office/koffice-l10n"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="doc"
 
-MY_LANGS="ca ca@valencia da de el en_GB es et fi fr gl hu it ja kk nb nds nl pl pt pt_BR ru sk sv uk zh_CN zh_TW"
+MY_LANGS="ca da de el en_GB es et fi fr gl hu it ja kk nb nds nl pl pt pt_BR ru sk sv uk zh_CN zh_TW"
 URI_BASE="mirror://kde/stable/${PN/-l10n/}-${PV}/${PN}/"
 SRC_URI=""
 SLOT="4"
