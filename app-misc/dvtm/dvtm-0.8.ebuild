@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dvtm/dvtm-0.8.ebuild,v 1.3 2012/11/03 13:51:40 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dvtm/dvtm-0.8.ebuild,v 1.4 2012/11/04 13:42:17 ago Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.brain-dump.org/projects/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 arm ~x86"
+KEYWORDS="amd64 arm ~x86"
 IUSE="unicode"
 
 DEPEND="sys-libs/ncurses[unicode?]"

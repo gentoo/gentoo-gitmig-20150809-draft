@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/dvtm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dvtm/ChangeLog,v 1.14 2012/11/03 13:51:40 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dvtm/ChangeLog,v 1.15 2012/11/04 13:42:17 ago Exp $
+
+  04 Nov 2012; Agostino Sarubbo <ago@gentoo.org> dvtm-0.8.ebuild:
+  Stable for amd64, wrt bug #441084
 
   03 Nov 2012; Anthony G. Basile <blueness@gentoo.org> dvtm-0.8.ebuild:
   stable arm, bug #441084
