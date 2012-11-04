@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.4-r3.ebuild,v 1.1 2012/08/06 11:46:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.4-r3.ebuild,v 1.2 2012/11/04 13:53:22 ssuominen Exp $
 
 EAPI=4
-inherit eutils bash-completion-r1 linux-info toolchain-funcs
+inherit eutils bash-completion-r1 linux-info udev
 
 DESCRIPTION="Daemon providing interfaces to work with storage devices"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/udisks"
@@ -45,10 +45,11 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.0.2-ntfs-3g.patch
+	epatch \
+		"${FILESDIR}"/${PN}-1.0.2-ntfs-3g.patch \
+		"${FILESDIR}"/${P}-kernel-2.6.36-compat.patch
 
-	local udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
-	sed -i -e "s:/lib/udev:${udevdir}:" data/80-udisks.rules || die
+	sed -i -e "s:/lib/udev:$(udev_get_udevdir):" data/80-udisks.rules || die
 }
 
 src_configure() {
@@ -72,14 +73,12 @@ src_test() {
 }
 
 src_install() {
-	local udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
-
 	emake \
 		DESTDIR="${D}" \
 		slashsbindir=/usr/sbin \
 		slashlibdir=/usr/lib \
-		udevhelperdir="${udevdir}" \
-		udevrulesdir="${udevdir}"/rules.d \
+		udevhelperdir="$(udev_get_udevdir)" \
+		udevrulesdir="$(udev_get_udevdir)"/rules.d \
 		install #398081
 
 	dodoc AUTHORS HACKING NEWS README

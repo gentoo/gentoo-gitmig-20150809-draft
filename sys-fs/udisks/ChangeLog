@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udisks
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.105 2012/10/03 06:44:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.106 2012/11/04 13:53:22 ssuominen Exp $
+
+  04 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> udisks-1.0.4-r3.ebuild,
+  +files/udisks-1.0.4-kernel-2.6.36-compat.patch:
+  Migrate to udev.eclass. Backport Linux >= 2.6.36 compability patch, as in,
+  use power/control instead of power/level when available.
 
   03 Oct 2012; Samuli Suominen <ssuominen@gentoo.org> -udisks-1.99.0.ebuild,
   -udisks-1.99.0-r1.ebuild:
