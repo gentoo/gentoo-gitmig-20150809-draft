@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/HTTP-Message
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Message/ChangeLog,v 1.34 2012/10/17 13:49:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Message/ChangeLog,v 1.35 2012/11/04 15:00:36 tove Exp $
+
+*HTTP-Message-6.60.0 (04 Nov 2012)
+
+  04 Nov 2012; Torsten Veller <tove@gentoo.org> +HTTP-Message-6.60.0.ebuild:
+  Version bump
 
   17 Oct 2012; Jeroen Roovers <jer@gentoo.org> HTTP-Message-6.40.0.ebuild:
   Marked ~hppa (bug #437532).
