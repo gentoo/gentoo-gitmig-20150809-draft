@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.237 2012/10/30 21:00:04 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.238 2012/11/04 19:32:38 grobian Exp $
+
+  04 Nov 2012; Fabian Groffen <grobian@gentoo.org>
+  +files/exim-4.80-spool-mail-group.patch, exim-4.80.1.ebuild:
+  Deliver as group mail such that we can create new mail by default in
+  /var/spool/mail, bug #438606 by DominikBuerkle
 
   30 Oct 2012; <swift@gentoo.org> exim-4.76.ebuild, exim-4.76-r1.ebuild,
   exim-4.77.ebuild, exim-4.80.ebuild, exim-4.80.1.ebuild:

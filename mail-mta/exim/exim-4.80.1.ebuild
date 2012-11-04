@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.80.1.ebuild,v 1.7 2012/10/30 21:00:04 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.80.1.ebuild,v 1.8 2012/11/04 19:32:38 grobian Exp $
 
 EAPI="3"
 
@@ -83,7 +83,11 @@ src_prepare() {
 	epatch "${FILESDIR}"/exim-4.77-as-needed-ldflags.patch # 352265, 391279
 	epatch "${FILESDIR}"/exim-4.76-crosscompile.patch # 266591
 
-	use maildir && epatch "${FILESDIR}"/exim-4.20-maildir.patch
+	if use maildir ; then
+		epatch "${FILESDIR}"/exim-4.20-maildir.patch
+	else
+		epatch "${FILESDIR}"/exim-4.80-spool-mail-group.patch # 438606
+	fi
 
 	if use dsn ; then
 		cp "${DISTDIR}"/exim_${DSN_EXIM_V}_dsn_${DSN_V}.patch . || die
