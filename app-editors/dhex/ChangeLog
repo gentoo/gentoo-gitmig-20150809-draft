@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/dhex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/dhex/ChangeLog,v 1.13 2012/09/15 10:02:47 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/dhex/ChangeLog,v 1.14 2012/11/04 13:38:57 ago Exp $
+
+  04 Nov 2012; Agostino Sarubbo <ago@gentoo.org> dhex-0.68.ebuild:
+  Stable for amd64, wrt bug #441062
 
   15 Sep 2012; Tim Harder <radhermit@gentoo.org> -dhex-0.65.ebuild,
   -dhex-0.66.ebuild:
