@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.213 2012/11/04 12:25:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.214 2012/11/04 12:26:19 scarabeus Exp $
+
+  04 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> icu-50_rc-r2.ebuild:
+  Silence repoman.
 
 *icu-50_rc-r2 (04 Nov 2012)
 
