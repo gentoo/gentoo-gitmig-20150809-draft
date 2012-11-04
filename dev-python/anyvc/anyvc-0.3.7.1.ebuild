@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/anyvc/anyvc-0.3.7.1.ebuild,v 1.2 2012/08/07 09:31:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/anyvc/anyvc-0.3.7.1.ebuild,v 1.3 2012/11/04 04:13:17 idella4 Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -28,6 +28,16 @@ RDEPEND="dev-python/apipkg
 DEPEND="${RDEPEND}
 	dev-python/setuptools
 	doc? ( dev-python/sphinx )"
+#		dev-python/hgdistver )"
+
+src_prepare() {
+	distutils_src_prepare
+
+	# Do not use unsupported theme options.
+	sed -e "/'tagline':/d" \
+		-e "/'bitbucket_project':/d" \
+		-i docs/conf.py
+}
 
 src_compile() {
 	distutils_src_compile
