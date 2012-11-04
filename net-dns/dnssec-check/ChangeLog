@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/dnssec-check
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-check/ChangeLog,v 1.5 2012/10/15 06:10:46 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-check/ChangeLog,v 1.6 2012/11/04 18:02:12 xmw Exp $
+
+*dnssec-check-1.14.0.1 (04 Nov 2012)
+
+  04 Nov 2012; Michael Weber <xmw@gentoo.org> +dnssec-check-1.14.0.1.ebuild:
+  Version bump to include mainwindow patch
 
 *dnssec-check-1.14 (15 Oct 2012)
 
