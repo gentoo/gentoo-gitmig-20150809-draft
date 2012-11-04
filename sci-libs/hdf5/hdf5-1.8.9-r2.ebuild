@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.9-r2.ebuild,v 1.6 2012/11/01 16:59:45 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.9-r2.ebuild,v 1.7 2012/11/04 14:09:16 ago Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.hdfgroup.org/ftp/HDF5/releases/${P}/src/${P}.tar.bz2"
 
 LICENSE="NCSA-HDF"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ppc ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 ~ia64 ppc ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="cxx debug examples fortran fortran2003 mpi static-libs szip threads zlib"
 
 REQUIRED_USE="

@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/hdf5
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.96 2012/11/01 16:59:45 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.97 2012/11/04 14:09:16 ago Exp $
+
+  04 Nov 2012; Agostino Sarubbo <ago@gentoo.org> hdf5-1.8.9-r2.ebuild:
+  Stable for amd64, wrt bug #440682
 
   01 Nov 2012; Anthony G. Basile <blueness@gentoo.org> hdf5-1.8.9-r2.ebuild:
   stable ppc ppc64, bug #440682
