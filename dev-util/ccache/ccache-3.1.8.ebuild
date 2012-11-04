@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-3.1.8.ebuild,v 1.1 2012/08/11 16:04:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-3.1.8.ebuild,v 1.2 2012/11/04 08:27:13 vapier Exp $
 
 EAPI="4"
 
@@ -16,7 +16,8 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 IUSE=""
 
 RDEPEND="sys-libs/zlib"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	app-arch/xz-utils"
 
 src_prepare() {
 	# make sure we always use system zlib
