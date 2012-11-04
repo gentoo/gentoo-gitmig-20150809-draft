@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.212 2012/11/02 15:06:12 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.213 2012/11/04 12:25:46 scarabeus Exp $
+
+*icu-50_rc-r2 (04 Nov 2012)
+
+  04 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> +icu-50_rc-r2.ebuild,
+  -icu-50_rc-r1.ebuild, -icu-50_rc.ebuild:
+  Revision bump again. Drop the slotting idea. Try to solve cross-compilation
+  issues wrt bug#329729.
 
   02 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
   Take over as this needs to work for office all the time. Cpp/chromium teams,
