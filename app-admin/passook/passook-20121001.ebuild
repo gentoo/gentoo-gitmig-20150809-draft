@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/passook/passook-20121001.ebuild,v 1.2 2012/11/03 17:20:51 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/passook/passook-20121001.ebuild,v 1.3 2012/11/04 13:41:18 ago Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-3+"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ppc ppc64 ~sparc ~x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="amd64 ~hppa ppc ppc64 ~sparc ~x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos"
 
 RDEPEND="dev-lang/perl
 	sys-apps/miscfiles"
