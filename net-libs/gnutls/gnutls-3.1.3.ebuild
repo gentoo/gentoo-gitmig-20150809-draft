@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.1.3.ebuild,v 1.2 2012/10/19 19:28:47 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.1.3.ebuild,v 1.3 2012/11/04 05:22:29 radhermit Exp $
 
 EAPI=4
 
@@ -107,7 +107,7 @@ src_install() {
 	find "${ED}" -name '*.la' -exec rm -f {} +
 
 	if use doc; then
-		dodoc doc/gnutls.{pdf,ps}
+		dodoc doc/gnutls.pdf
 		dohtml doc/gnutls.html
 	fi
 

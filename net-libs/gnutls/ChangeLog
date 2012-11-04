@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.388 2012/10/30 18:07:48 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.389 2012/11/04 05:22:29 radhermit Exp $
+
+  04 Nov 2012; Tim Harder <radhermit@gentoo.org> gnutls-3.1.3.ebuild:
+  Don't try to install the postscript doc since it's not built by default
+  anymore (bug #440720).
 
   30 Oct 2012; Rick Farina <zerochaos@gentoo.org> gnutls-2.12.20.ebuild:
   gnutls-2 is not compatible with libtasn1-3 so adjust deps accordingly
