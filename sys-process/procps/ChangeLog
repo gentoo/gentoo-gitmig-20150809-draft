@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/procps
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.67 2012/10/29 20:33:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.68 2012/11/04 06:38:35 vapier Exp $
+
+  04 Nov 2012; Mike Frysinger <vapier@gentoo.org> procps-3.3.4.ebuild:
+  Switch to tarball on Debian mirrors since the git one does not include
+  generated files #440626 by Jeroen Roovers.
 
 *procps-3.3.4 (29 Oct 2012)
 

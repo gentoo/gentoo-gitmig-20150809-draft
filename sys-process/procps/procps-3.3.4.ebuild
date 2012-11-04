@@ -1,16 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.3.4.ebuild,v 1.1 2012/10/29 20:33:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.3.4.ebuild,v 1.2 2012/11/04 06:38:35 vapier Exp $
 
 EAPI="4"
 
-inherit toolchain-funcs autotools
+inherit toolchain-funcs
 
-DEB_VER=${PV#*_p}
-MY_PV=${PV%_p*}
 DESCRIPTION="standard informational utilities and process-handling tools"
 HOMEPAGE="http://procps.sourceforge.net/ http://gitorious.org/procps http://packages.debian.org/sid/procps"
-SRC_URI="http://gitorious.org/procps/procps/archive-tarball/v${PV} -> ${P}.tar.gz"
+SRC_URI="mirror://debian/pool/main/p/${PN}/${PN}_${PV}.orig.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -21,12 +19,7 @@ RDEPEND="ncurses? ( >=sys-libs/ncurses-5.2-r2[unicode?] )"
 DEPEND="${RDEPEND}
 	ncurses? ( virtual/pkgconfig )"
 
-S=${WORKDIR}/${PN}-${PN}
-
-src_prepare() {
-	po/update-potfiles || die
-	eautoreconf
-}
+S=${WORKDIR}/${PN}-ng-${PV}
 
 src_configure() {
 	econf \
@@ -39,7 +32,7 @@ src_configure() {
 
 src_install() {
 	default
-	dodoc sysctl.conf
+#	dodoc sysctl.conf
 
 	# The configure script is completely whacked in the head
 	mv "${ED}"/lib* "${ED}"/usr/ || die
