@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.11-r3.ebuild,v 1.4 2012/05/26 08:37:45 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.11-r3.ebuild,v 1.5 2012/11/04 17:30:58 ottxor Exp $
 
 EAPI=4
 
@@ -76,7 +76,8 @@ src_prepare() {
 		"${FILESDIR}"/${P}_DefineOptions_gpsd.patch \
 		"${FILESDIR}"/${P}-add-gdk-pixbuf2.patch \
 		"${FILESDIR}"/${P}-gpsd-2.96.patch \
-		"${FILESDIR}"/${P}-mapnik-2.0api.patch
+		"${FILESDIR}"/${P}-mapnik-2.0api.patch \
+		"${FILESDIR}"/${P}-as-needed.patch
 }
 
 src_configure() {
