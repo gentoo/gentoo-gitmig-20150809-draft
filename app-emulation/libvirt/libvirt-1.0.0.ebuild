@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.0.0.ebuild,v 1.1 2012/11/04 01:29:38 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.0.0.ebuild,v 1.2 2012/11/04 21:57:34 cardoe Exp $
 
 EAPI=4
 
@@ -198,12 +198,14 @@ src_prepare() {
 	local avahi_init=
 	local iscsi_init=
 	local rbd_init=
+	local firewalld_init=
 	cp "${FILESDIR}/libvirtd.init-r11" "${S}/libvirtd.init"
 	use avahi && avahi_init='avahi-daemon'
 	use iscsi && iscsi_init='iscsid'
 	use rbd && rbd_init='ceph'
+	use firewalld && firewalld_init='need firewalld'
 
-	sed -e "s/USE_FLAG_FIREWALLD/need firewalld/" -i "${S}/libvirtd.init"
+	sed -e "s/USE_FLAG_FIREWALLD/${firewalld_init}/" -i "${S}/libvirtd.init"
 	sed -e "s/USE_FLAG_AVAHI/${avahi_init}/" -i "${S}/libvirtd.init"
 	sed -e "s/USE_FLAG_ISCSI/${iscsi_init}/" -i "${S}/libvirtd.init"
 	sed -e "s/USE_FLAG_RBD/${rbd_init}/" -i "${S}/libvirtd.init"
