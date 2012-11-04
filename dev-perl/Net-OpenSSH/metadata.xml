@@ -4,8 +4,11 @@
   <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Net-OpenSSH</remote-id>
+    <remote-id type="cpan-module">Net::OpenSSH</remote-id>
+    <remote-id type="cpan-module">Net::OpenSSH::Constants</remote-id>
+    <remote-id type="cpan-module">mod_perl_openssh</remote-id>
   </upstream>
-    <use>
-		<flag name='sftp'>Enable SFTP protocol support.</flag>
-	</use>
+  <use>
+    <flag name="sftp">Enable SFTP protocol support.</flag>
+  </use>
 </pkgmetadata>
