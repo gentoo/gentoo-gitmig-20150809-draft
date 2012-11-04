@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/syncdir/syncdir-1.0-r1.ebuild,v 1.2 2012/11/03 14:19:42 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/syncdir/syncdir-1.0-r1.ebuild,v 1.3 2012/11/04 11:49:11 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://untroubled.org/syncdir/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~sparc ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="static-libs"
 
 src_prepare() {
