@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/liveice
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/liveice/ChangeLog,v 1.9 2010/09/18 05:03:11 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/liveice/ChangeLog,v 1.10 2012/11/04 11:56:00 ago Exp $
+
+  04 Nov 2012; Agostino Sarubbo <ago@gentoo.org> liveice-2000530-r1.ebuild:
+  Add ~amd64, wrt bug #441474
 
 *liveice-2000530-r1 (18 Sep 2010)
 
