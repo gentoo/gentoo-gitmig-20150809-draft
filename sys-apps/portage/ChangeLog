@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1134 2012/11/03 01:07:04 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1135 2012/11/04 19:52:52 ago Exp $
+
+  04 Nov 2012; Agostino Sarubbo <ago@gentoo.org> portage-2.1.11.31.ebuild:
+  Stable for amd64, wrt bug #440852
 
   03 Nov 2012; Anthony G. Basile <blueness@gentoo.org> portage-2.1.11.31.ebuild:
   stable arm, bug #440852
