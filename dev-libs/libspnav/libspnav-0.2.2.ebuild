@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libspnav/libspnav-0.2.2.ebuild,v 1.5 2012/09/30 19:26:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libspnav/libspnav-0.2.2.ebuild,v 1.6 2012/11/04 10:31:11 scarabeus Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://spacenav.sourceforge.net/"
 SRC_URI="mirror://sourceforge/project/${MY_PN}/${MY_PN}%20library%20%28SDK%29/${PN}%20${PV}/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ppc64 ~x86"
+KEYWORDS="amd64 ppc64 x86"
 IUSE="X"
 
 RDEPEND="app-misc/spacenavd[X?]"
