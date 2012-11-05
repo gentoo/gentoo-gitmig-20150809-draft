@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/md6sum/md6sum-1.0.ebuild,v 1.1 2011/03/28 11:02:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/md6sum/md6sum-1.0.ebuild,v 1.2 2012/11/05 23:38:30 c1pher Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-ldflags.patch" || die "patch failed"
+	epatch "${FILESDIR}/${P}-ldflags.patch"
 }
 
 src_install() {

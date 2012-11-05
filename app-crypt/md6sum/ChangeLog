@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/md6sum
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/md6sum/ChangeLog,v 1.1 2011/03/28 11:02:22 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/md6sum/ChangeLog,v 1.2 2012/11/05 23:38:30 c1pher Exp $
+
+  05 Nov 2012; Dane Smith <c1pher@gentoo.org> md6sum-1.0.ebuild, metadata.xml:
+  Drop hwoarang as maintainer and leave in crypto herd at his request.
+  Small ebuild cleanups.
 
 *md6sum-1.0 (28 Mar 2011)
 
