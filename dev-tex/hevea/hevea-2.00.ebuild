@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/hevea-2.00.ebuild,v 1.1 2012/09/09 16:01:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/hevea-2.00.ebuild,v 1.2 2012/11/05 23:08:33 blueness Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="http://hevea.inria.fr/distri/${P}.tar.gz"
 
 LICENSE="QPL"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ppc ~ppc64 ~sparc ~x86"
 
 DEPEND=">=dev-lang/ocaml-3.10.2[ocamlopt?]"
 RDEPEND="${DEPEND}"

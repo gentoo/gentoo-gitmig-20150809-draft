@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/hevea
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/ChangeLog,v 1.30 2012/09/09 16:01:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/ChangeLog,v 1.31 2012/11/05 23:08:33 blueness Exp $
+
+  05 Nov 2012; Anthony G. Basile <blueness@gentoo.org> hevea-2.00.ebuild:
+  stable ppc, bug #441304
 
 *hevea-2.00 (09 Sep 2012)
 
@@ -113,4 +116,3 @@
   files/99hevea:
   Initial import. Ebuild submitted by Matthieu Sozeau <mattam@altern.org>
   in Bug #30410.
-
