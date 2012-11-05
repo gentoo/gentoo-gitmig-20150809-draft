@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.194 2012/11/04 06:25:13 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.195 2012/11/05 15:51:49 slyfox Exp $
+
+  05 Nov 2012; Sergei Trofimovich <slyfox@gentoo.org> package.use,
+  ppc64/package.use:
+  Fixed typo qemu_softmmu_target{,s}_.
 
   04 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   ppc32/package.use.mask:
