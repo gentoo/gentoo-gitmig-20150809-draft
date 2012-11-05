@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7107 2012/11/05 04:41:43 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7108 2012/11/05 16:26:51 xarthisius Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Nov 2012; Kacper Kowalik <xarthisius@gentoo.org> package.mask:
+  Drop mask on dev-util/intel-ocl-sdk as we are now using bundled boost for
+  tools. Fixes bug #441824 by Neil Dökkalfar <neil@next-touch.com>
 
   05 Nov 2012; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   default/linux/packages.build:

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14192 2012/11/04 18:51:42 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14193 2012/11/05 16:26:51 xarthisius Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -46,7 +46,6 @@
 # Diego Elio Pettenò <flameeyes@gentoo.org> (03 Nov 2012)
 # Old boost (1.46) users, won't work as intended after unslot
 =dev-libs/boost-1.46*
-dev-util/intel-ocl-sdk
 sci-biology/cufflinks
 sci-biology/express
 
