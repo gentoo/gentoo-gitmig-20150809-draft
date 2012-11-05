@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7106 2012/11/04 20:49:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7107 2012/11/05 04:41:43 jmbsvicetto Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Nov 2012; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  default/linux/packages.build:
+  Add sys-apps/kmod to default/linux/packages.build to fix the block with
+  sys-apps/module-init-tools on the seed stage3.
 
   04 Nov 2012; Ulrich Müller <ulm@gentoo.org> license_groups:
   Remove unused RSA-MD4, RSA-MD5, and RSA-PKCS11 licenses; replaced by RSA.
