@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-5.0.3-r1.ebuild,v 1.8 2012/07/15 19:02:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-5.0.3-r1.ebuild,v 1.9 2012/11/05 08:27:47 tetromino Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -11,15 +11,15 @@ inherit autotools db-use eutils flag-o-matic gnome2 java-pkg-opt-2 python
 
 DESCRIPTION="Gnome Database Access Library"
 HOMEPAGE="http://www.gnome-db.org/"
-LICENSE="GPL-2 LGPL-2"
+LICENSE="GPL-2+ LGPL-2+"
 
-IUSE="berkdb bindist canvas doc firebird gnome-keyring gtk graphviz http +introspection json ldap mdb mysql oci8 postgres sourceview ssl" # vala
+IUSE="berkdb bindist canvas firebird gnome-keyring gtk graphviz http +introspection json ldap mdb mysql oci8 postgres sourceview ssl" # vala
 SLOT="5"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 
 RDEPEND="
 	app-text/iso-codes
-	>=dev-libs/glib-2.16:2
+	>=dev-libs/glib-2.28:2
 	>=dev-libs/libxml2-2
 	dev-libs/libxslt
 	sys-libs/readline
@@ -44,10 +44,10 @@ RDEPEND="
 	>=dev-db/sqlite-3.6.22:3"
 
 DEPEND="${RDEPEND}
-	virtual/pkgconfig
-	>=dev-util/intltool-0.35.5
 	>=app-text/gnome-doc-utils-0.9
-	doc? ( >=dev-util/gtk-doc-1 )
+	dev-util/gtk-doc-am
+	>=dev-util/intltool-0.35.5
+	virtual/pkgconfig
 	java? ( virtual/jdk:1.6 )"
 #	vala? ( >=dev-lang/vala-0.14:0.14[vapigen] )
 

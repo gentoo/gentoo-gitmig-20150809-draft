@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.2.13.ebuild,v 1.8 2012/10/28 15:55:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.2.13.ebuild,v 1.9 2012/11/05 08:27:47 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -10,9 +10,9 @@ inherit db-use flag-o-matic gnome2 java-pkg-opt-2
 
 DESCRIPTION="Gnome Database Access Library"
 HOMEPAGE="http://www.gnome-db.org/"
-LICENSE="GPL-2 LGPL-2"
+LICENSE="GPL-2+ LGPL-2+"
 
-IUSE="berkdb bindist canvas doc firebird gnome-keyring gtk graphviz http +introspection json ldap mdb mysql oci8 postgres sourceview ssl"
+IUSE="berkdb bindist canvas firebird gnome-keyring gtk graphviz http +introspection json ldap mdb mysql oci8 postgres sourceview ssl"
 
 SLOT="4"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
@@ -48,8 +48,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	>=dev-util/intltool-0.35.5
 	>=app-text/gnome-doc-utils-0.9
-	>=dev-util/gtk-doc-am-1
-	doc? ( >=dev-util/gtk-doc-1 )"
+	>=dev-util/gtk-doc-am-1"
 
 # Tests are not really good
 RESTRICT="test"
