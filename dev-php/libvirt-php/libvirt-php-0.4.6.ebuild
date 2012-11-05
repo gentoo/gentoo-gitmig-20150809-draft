@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/libvirt-php/libvirt-php-0.4.6.ebuild,v 1.1 2012/09/11 20:05:57 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/libvirt-php/libvirt-php-0.4.6.ebuild,v 1.2 2012/11/05 06:13:37 dev-zero Exp $
 
 EAPI=4
 
@@ -21,8 +21,9 @@ IUSE="doc"
 
 RDEPEND="app-emulation/libvirt
 	dev-libs/libxml2"
-DEPEND="${DEPEND}
-	doc? ( app-text/xhtml1 dev-libs/libxslt )"
+DEPEND="${RDEPEND}
+	dev-libs/libxslt
+	doc? ( app-text/xhtml1 )"
 
 RESTRICT="test"
 

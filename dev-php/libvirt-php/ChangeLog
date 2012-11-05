@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/libvirt-php
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/libvirt-php/ChangeLog,v 1.4 2012/09/11 20:05:57 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/libvirt-php/ChangeLog,v 1.5 2012/11/05 06:13:37 dev-zero Exp $
+
+  05 Nov 2012; Tiziano Müller <dev-zero@gentoo.org> libvirt-php-0.4.2.ebuild,
+  libvirt-php-0.4.6.ebuild, libvirt-php-9999.ebuild:
+  configure fails without xsltproc, add dev-libs/libxslt to DEPEND. Fix a small
+  bug in DEPEND assignment.
 
 *libvirt-php-0.4.6 (11 Sep 2012)
 
