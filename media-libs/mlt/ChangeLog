@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mlt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.95 2012/10/25 12:46:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.96 2012/11/05 11:05:47 ago Exp $
+
+  05 Nov 2012; <ago@gentoo.org> mlt-0.8.2.ebuild:
+  Stable for amd64, wrt bug #441382
 
   25 Oct 2012; Alexis Ballier <aballier@gentoo.org> mlt-0.8.2.ebuild,
   +files/mlt-0.8.2-av_codec_is_encoder.patch:
