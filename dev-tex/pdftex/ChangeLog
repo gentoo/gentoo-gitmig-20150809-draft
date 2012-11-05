@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/pdftex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/pdftex/ChangeLog,v 1.36 2012/08/08 16:29:46 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/pdftex/ChangeLog,v 1.37 2012/11/05 11:02:23 aballier Exp $
+
+  05 Nov 2012; Alexis Ballier <aballier@gentoo.org> pdftex-1.40.11.ebuild:
+  create S in src_unpack, bug #441002 by Janmejay Singh
 
   08 Aug 2012; Andreas K. Huettel <dilfridge@gentoo.org> pdftex-1.40.11.ebuild:
   Bump EAPI to 4; xpdf-headers useflag for poppler is going away
