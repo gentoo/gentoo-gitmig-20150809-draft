@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.15-r2.ebuild,v 1.6 2012/09/29 18:46:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.15.2.ebuild,v 1.1 2012/11/05 07:48:35 jlec Exp $
 
 EAPI=4
 
@@ -15,8 +15,8 @@ SRC_URI="http://www.gajim.org/downloads/$(get_version_component_range 1-2)/${P}.
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="avahi crypt dbus gmail gnome kde idle jingle libnotify networkmanager nls spell srv X xhtml"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+IUSE="avahi crypt dbus gnome kde idle jingle libnotify networkmanager nls spell +srv X xhtml"
 
 REQUIRED_USE="
 	libnotify? ( dbus )
@@ -42,14 +42,13 @@ RDEPEND="${COMMON_DEPEND}
 		libnotify? ( dev-python/notify-python )
 		avahi? ( net-dns/avahi[dbus,gtk,python] )
 		)
-	gmail? ( net-dns/bind-tools )
 	gnome? (
 		dev-python/libgnome-python
 		dev-python/gnome-keyring-python
 		dev-python/egg-python
 		)
 	idle? ( x11-libs/libXScrnSaver )
-	jingle? ( net-libs/farsight2[python] )
+	jingle? ( net-libs/farstream[python] )
 	kde? ( kde-base/kwallet )
 	networkmanager? (
 			dev-python/dbus-python
@@ -69,9 +68,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	echo "src/command_system/mapping.py" >> po/POTFILES.in
 	epatch \
-		"${FILESDIR}"/${P}-plugin.patch \
-		"${FILESDIR}"/${P}-SA48695-2.patch \
 		"${FILESDIR}"/0.14-python-version.patch \
 		"${FILESDIR}"/0.14.1-testing.patch
 	echo '#!/bin/sh' > config/py-compile
