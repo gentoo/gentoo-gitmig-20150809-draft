@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-1.1.20120706.ebuild,v 1.6 2012/11/05 19:39:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-1.1.20120706.ebuild,v 1.7 2012/11/05 20:03:55 vapier Exp $
 
 EAPI="4"
 
-inherit multilib
+inherit multilib eutils
 
 MY_PV="${PV/1.1./1.1-}"
 S=${WORKDIR}/${PN}-${MY_PV}
@@ -30,16 +30,16 @@ DEPEND="
 
 src_prepare() {
 	sed -i configure -e '/LIB_CREATE=/s:${CC}:& ${LDFLAGS}:g' || die
+	sed -i '/$(LIBTOOL_COMPILE)/s:$: $(LIBTOOL_OPTS):' makefile.in || die
 }
 
 src_configure() {
-	local ncursesw
-	use unicode && ncursesw="w"
 	econf \
 		--disable-rpath-hack \
 		$(use_enable nls) \
 		$(use_with !minimal libtool) \
-		--with-ncurses${ncursesw}
+		--with-libtool-opts=$(usex static-libs '' '-shared') \
+		--with-ncurses$(usex unicode w '')
 }
 
 src_install() {
@@ -61,8 +61,6 @@ src_install() {
 	fi
 
 	if ! use static-libs; then
-		rm -f \
-			"${D}"usr/$(get_libdir)/libdialog.a \
-			"${D}"usr/$(get_libdir)/libdialog.la
+		rm -f "${ED}"usr/$(get_libdir)/libdialog.{la,a}
 	fi
 }
