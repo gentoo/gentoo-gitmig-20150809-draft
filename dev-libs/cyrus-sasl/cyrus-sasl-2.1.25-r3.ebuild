@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.25-r3.ebuild,v 1.1 2012/07/11 18:17:25 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.25-r3.ebuild,v 1.2 2012/11/05 21:56:02 eras Exp $
 
 EAPI=4
 inherit eutils flag-o-matic multilib autotools pam java-pkg-opt-2 db-use
@@ -11,7 +11,7 @@ DESCRIPTION="The Cyrus SASL (Simple Authentication and Security Layer)."
 HOMEPAGE="http://cyrusimap.web.cmu.edu/"
 SRC_URI="ftp://ftp.cyrusimap.org/cyrus-sasl/${P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="BSD-4"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 IUSE="authdaemond berkdb gdbm kerberos ldapdb openldap mysql pam postgres sample sqlite
