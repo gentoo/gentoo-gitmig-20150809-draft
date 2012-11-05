@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core-libs/gnome-core-libs-3.4.1.ebuild,v 1.1 2012/09/10 04:15:53 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core-libs/gnome-core-libs-3.4.1.ebuild,v 1.2 2012/11/05 21:33:43 ulm Exp $
 
 EAPI="4"
 
 DESCRIPTION="Sub-meta package for the core libraries of GNOME 3"
 HOMEPAGE="http://www.gnome.org/"
-LICENSE="as-is"
+LICENSE="metapackage"
 SLOT="3.0"
 IUSE="cups python"
 

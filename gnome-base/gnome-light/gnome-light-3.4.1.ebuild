@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-3.4.1.ebuild,v 1.1 2012/09/10 04:19:52 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-3.4.1.ebuild,v 1.2 2012/11/05 21:38:52 ulm Exp $
 
 EAPI="4"
 
 DESCRIPTION="Meta package for GNOME-Light, merge this package to install"
 HOMEPAGE="http://www.gnome.org/"
-LICENSE="as-is"
+LICENSE="metapackage"
 SLOT="2.0"
 IUSE="cups +fallback +gnome-shell"
 
