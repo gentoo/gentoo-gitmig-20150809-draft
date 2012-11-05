@@ -1,6 +1,9 @@
 # ChangeLog for net-news/liferea
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.231 2012/10/23 17:06:56 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.232 2012/11/05 19:39:51 blueness Exp $
+
+  05 Nov 2012; Anthony G. Basile <blueness@gentoo.org> liferea-1.8.8.ebuild:
+  stable ppc ppc64, bug #441490
 
 *liferea-1.9.6_p20121021 (21 Oct 2012)
 
@@ -1634,4 +1637,3 @@
 
   10 Dec 2003; Alastair Tse <liquidx@gentoo.org> liferea-0.4.5.ebuild:
   initial commit. ebuild based on suka's submission <suka@t0.or.at> (#27551)
-

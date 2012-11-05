@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.8.8.ebuild,v 1.1 2012/09/15 15:17:22 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.8.8.ebuild,v 1.2 2012/11/05 19:39:51 blueness Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://liferea.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ppc ppc64 ~x86"
 IUSE="ayatana libnotify"
 
 RDEPEND=">=x11-libs/gtk+-2.18.0:2
