@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.6.ebuild,v 1.2 2012/08/23 04:06:33 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.6.ebuild,v 1.3 2012/11/05 08:04:53 vapier Exp $
 
 EAPI="3"
 inherit eutils autotools
@@ -54,6 +54,10 @@ src_unpack() {
 		cd "${S}"
 		use minimal || unpack Eterm-bg-${PV}.tar.gz
 	fi
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-asm-gnu-stack.patch #440618
 }
 
 src_configure() {

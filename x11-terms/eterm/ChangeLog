@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/eterm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/ChangeLog,v 1.75 2012/08/23 04:06:33 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/ChangeLog,v 1.76 2012/11/05 08:04:53 vapier Exp $
+
+  05 Nov 2012; Mike Frysinger <vapier@gentoo.org>
+  +files/eterm-0.9.6-asm-gnu-stack.patch, eterm-0.9.6.ebuild:
+  Fix executable stacks in mmx code #440618 by brian h.
 
   23 Aug 2012; Christoph Junghans <ottxor@gentoo.org> eterm-0.9.6.ebuild,
   eterm-9999.ebuild, metadata.xml:
