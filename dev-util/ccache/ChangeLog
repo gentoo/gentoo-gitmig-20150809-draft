@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ccache
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.101 2012/11/04 20:22:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.102 2012/11/05 20:32:49 blueness Exp $
+
+  05 Nov 2012; Anthony G. Basile <blueness@gentoo.org> ccache-3.1.8.ebuild:
+  stable ppc ppc64, bug #441308
 
   04 Nov 2012; Agostino Sarubbo <ago@gentoo.org> ccache-3.1.8.ebuild:
   Stable for amd64, wrt bug #441308
