@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/tar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.177 2012/09/07 18:07:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.178 2012/11/05 18:29:06 vapier Exp $
+
+  05 Nov 2012; Mike Frysinger <vapier@gentoo.org> metadata.xml,
+  tar-1.26-r1.ebuild:
+  Add USE=minimal to trim all the non-`tar` related crap that no one uses.
 
   07 Sep 2012; Mike Frysinger <vapier@gentoo.org> tar-1.26.ebuild:
   Add gets/glibc-2.16 fix to stable too.

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.26-r1.ebuild,v 1.5 2012/05/24 04:35:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.26-r1.ebuild,v 1.6 2012/11/05 18:29:06 vapier Exp $
 
 EAPI="3"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gnu/tar/${P}.tar.bz2
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-IUSE="nls static userland_GNU xattr"
+IUSE="minimal nls static userland_GNU xattr"
 
 RDEPEND="xattr? ( sys-apps/attr )"
 DEPEND="${RDEPEND}
@@ -67,4 +67,9 @@ src_install() {
 	newman "${FILESDIR}"/tar.1 ${p}tar.1
 	mv "${ED}"/usr/sbin/${p}backup{,-tar}
 	mv "${ED}"/usr/sbin/${p}restore{,-tar}
+
+	if use minimal ; then
+		find "${ED}"/etc "${ED}"/*bin/ "${ED}"/usr/*bin/ \
+			-type f -a '!' -name tar -delete
+	fi
 }
