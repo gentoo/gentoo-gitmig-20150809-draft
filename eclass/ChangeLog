@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.499 2012/11/04 15:16:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.500 2012/11/05 15:15:32 mgorny Exp $
+
+  05 Nov 2012; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
+  Fix enabling byte-compiling.
 
   04 Nov 2012; Michał Górny <mgorny@gentoo.org> python-r1.eclass:
   Always require PYTHON_COMPAT. Add an exception for python-exec which is a

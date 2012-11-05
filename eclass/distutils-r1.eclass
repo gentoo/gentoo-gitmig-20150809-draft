@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.17 2012/11/01 12:19:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.18 2012/11/05 15:15:32 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -281,7 +281,8 @@ distutils-r1_python_install() {
 	debug-print "${FUNCNAME}: [${EPYTHON}] flags: ${flags}"
 
 	# enable compilation for the install phase.
-	local PYTHONDONTWRITEBYTECODE=
+	local PYTHONDONTWRITEBYTECODE
+	export PYTHONDONTWRITEBYTECODE
 
 	esetup.py install "${flags[@]}" --root="${D}" "${@}"
 
