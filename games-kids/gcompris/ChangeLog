@@ -1,6 +1,11 @@
 # ChangeLog for games-kids/gcompris
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.84 2012/10/17 03:51:56 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.85 2012/11/05 22:26:58 mr_bones_ Exp $
+
+  05 Nov 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/gcompris-12.01-build.patch, -gcompris-12.01-r1.ebuild,
+  -gcompris-12.01.ebuild:
+  old
 
   17 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> gcompris-12.05.ebuild:
   x86 stable wrt bug #436902
