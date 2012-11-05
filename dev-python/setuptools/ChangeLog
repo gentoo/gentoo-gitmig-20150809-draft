@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/setuptools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.159 2012/10/22 10:56:16 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.160 2012/11/05 11:44:13 mgorny Exp $
+
+*setuptools-0.6.30-r1 (05 Nov 2012)
+
+  05 Nov 2012; Michał Górny <mgorny@gentoo.org> +setuptools-0.6.30-r1.ebuild:
+  Migrate to distutils-r1. Fixes bug #441788.
 
 *setuptools-0.6.30 (22 Oct 2012)
 
@@ -665,4 +670,3 @@
   +setuptools-0.6_alpha5.ebuild:
   Initial commit. Thank you Geoffrey Clements <geoff@electron.me.uk> and
   Thomas Fullhart <kayos@genetikayos.com> for the ebuild. bug #108227
-
