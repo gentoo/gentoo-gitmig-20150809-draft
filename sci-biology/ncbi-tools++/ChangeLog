@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/ncbi-tools++
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ChangeLog,v 1.25 2012/11/03 09:21:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ChangeLog,v 1.26 2012/11/05 11:22:49 jlec Exp $
+
+  05 Nov 2012; Justin Lecher <jlec@gentoo.org>
+  ncbi-tools++-0.2010.06.15-r1.ebuild:
+  Correct patch naming again
 
   03 Nov 2012; Justin Lecher <jlec@gentoo.org>
   ncbi-tools++-0.2010.06.15-r1.ebuild:
