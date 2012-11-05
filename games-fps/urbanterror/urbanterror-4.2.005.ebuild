@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/urbanterror-4.2.005.ebuild,v 1.1 2012/11/05 22:14:35 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/urbanterror-4.2.005.ebuild,v 1.2 2012/11/05 22:44:15 hasufell Exp $
 
 EAPI=4
 
@@ -69,6 +69,7 @@ src_compile() {
 		BUILD_SERVER=$(usex dedicated "1" "$(buildit server)") \
 		USE_SDL=$(buildit sdl) \
 		USE_OPENAL=$(buildit openal) \
+		USE_OPENAL_DLOPEN=0 \
 		USE_CURL=$(buildit curl) \
 		USE_CURL_DLOPEN=0 \
 		USE_CODEC_VORBIS=$(buildit vorbis) \
