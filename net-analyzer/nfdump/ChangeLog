@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nfdump
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nfdump/ChangeLog,v 1.30 2012/10/31 16:53:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nfdump/ChangeLog,v 1.31 2012/11/05 12:53:20 jer Exp $
+
+  05 Nov 2012; Jeroen Roovers <jer@gentoo.org> nfdump-1.6.8.ebuild:
+  USE=nftrack requires net-analyzer/rrdtool.
 
   31 Oct 2012; Agostino Sarubbo <ago@gentoo.org> nfdump-1.6.6.ebuild:
   Stable for amd64, wrt bug #440090
