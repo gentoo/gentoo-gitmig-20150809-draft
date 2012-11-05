@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenvwrapper/virtualenvwrapper-3.6.ebuild,v 1.1 2012/11/01 06:41:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenvwrapper/virtualenvwrapper-3.6.ebuild,v 1.2 2012/11/05 08:51:26 patrick Exp $
 
 EAPI=4
 
@@ -19,7 +19,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
-RDEPEND="dev-python/virtualenv"
+RDEPEND="dev-python/virtualenv
+	dev-python/stevedore
+	dev-python/virtualenv-clone"
 DEPEND="${DEPEND}
 	dev-python/setuptools
 	test? ( dev-python/tox )"
