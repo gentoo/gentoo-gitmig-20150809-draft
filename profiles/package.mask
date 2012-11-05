@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14194 2012/11/05 17:36:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14195 2012/11/05 23:31:09 hasufell Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -394,12 +394,6 @@ dev-libs/mpatrol
 # upstream is dead and people can use hfsutils and netatalk
 # as replacements. Removal in a month.
 app-arch/macutil
-
-# Julian Ospald <hasufell@gentoo.org> (12 Sep 2012)
-# outdated security package
-# removal at 05 Nov 2012
-www-client/torbrowser
-www-misc/torbrowser-profile
 
 # Rick Farina <zerochaos@gentoo.org> (10 Sep 2012)
 # Unclear licensing issues, upstream is distributing a file
