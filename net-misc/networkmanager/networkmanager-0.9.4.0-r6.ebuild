@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.4.0-r6.ebuild,v 1.8 2012/10/28 21:27:32 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.4.0-r6.ebuild,v 1.9 2012/11/05 03:59:34 tetromino Exp $
 
 EAPI="4"
 GNOME_ORG_MODULE="NetworkManager"
@@ -95,8 +95,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# Don't build tests
-	epatch "${FILESDIR}/${PN}-0.9_rc3-fix-tests.patch"
 	# Build against libnl:1.1 for net-wireless/wimax-1.5.2 compatibility
 	epatch "${FILESDIR}/${PN}-0.9.4.0-force-libnl1.1-r1.patch"
 	# Update init.d script to provide net and use inactive status if not connected
@@ -161,6 +159,11 @@ src_configure() {
 #		fi
 
 	econf ${ECONF}
+}
+
+src_test() {
+	cp libnm-util/tests/certs/test_ca_cert.pem src/settings/plugins/ifnet/tests/ || die
+	default
 }
 
 src_install() {
