@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ltxml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ltxml/ChangeLog,v 1.15 2012/11/04 11:59:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ltxml/ChangeLog,v 1.16 2012/11/05 13:01:17 kensington Exp $
+
+  05 Nov 2012; Michael Palimaka <kensington@gentoo.org> ltxml-1.2.9.ebuild:
+  Respect AR, wrt bug #441660.
 
   04 Nov 2012; Agostino Sarubbo <ago@gentoo.org> ltxml-1.2.9.ebuild:
   Add ~amd64, wrt bug #441650
