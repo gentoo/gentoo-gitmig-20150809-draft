@@ -1,6 +1,10 @@
 # ChangeLog for sci-calculators/units
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.36 2012/10/24 16:13:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.37 2012/11/05 19:33:02 jer Exp $
+
+  05 Nov 2012; Jeroen Roovers <jer@gentoo.org> units-2.00.ebuild,
+  units-2.01.ebuild:
+  Drop sys-libs/ncurses dependency by Jean-Pierre de la Croix (bug #439518).
 
 *units-2.01 (24 Oct 2012)
 
