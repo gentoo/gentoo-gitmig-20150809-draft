@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.31 2012/11/05 05:32:44 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.32 2012/11/05 06:42:53 slyfox Exp $
 
 EAPI="4"
 
@@ -33,9 +33,9 @@ kernel_FreeBSD mixemu ncurses opengl +png pulseaudio python rbd sasl +seccomp \
 sdl smartcard spice static systemtap tci +threads tls usbredir +uuid vde \
 +vhost-net virtfs +vnc xattr xen xfs"
 
-COMMON_TARGETS="i386 x86_64 alpha arm cris m68k microblaze microblazeel mips mipsel ppc ppc64 sh4 sh4eb sparc sparc64 s390x"
+COMMON_TARGETS="i386 x86_64 alpha arm cris m68k microblaze microblazeel mips mipsel or32 ppc ppc64 sh4 sh4eb sparc sparc64 s390x unicore32"
 IUSE_SOFTMMU_TARGETS="${COMMON_TARGETS} lm32 mips64 mips64el ppcemb xtensa xtensaeb"
-IUSE_USER_TARGETS="${COMMON_TARGETS} armeb ppc64abi32 sparc32plus unicore32"
+IUSE_USER_TARGETS="${COMMON_TARGETS} armeb ppc64abi32 sparc32plus"
 
 # Setup the default SoftMMU targets, while using the loops
 # below to setup the other targets.
@@ -121,8 +121,10 @@ QA_WX_LOAD="${QA_PRESTRIPPED}
 	usr/bin/qemu-cris
 	usr/bin/qemu-m68k
 	usr/bin/qemu-microblaze
+	usr/bin/qemu-microblazeel
 	usr/bin/qemu-mips
 	usr/bin/qemu-mipsel
+	usr/bin/qemu-or32
 	usr/bin/qemu-ppc
 	usr/bin/qemu-ppc64
 	usr/bin/qemu-ppc64abi32
@@ -131,7 +133,9 @@ QA_WX_LOAD="${QA_PRESTRIPPED}
 	usr/bin/qemu-sparc
 	usr/bin/qemu-sparc64
 	usr/bin/qemu-armeb
-	usr/bin/qemu-sparc32plus"
+	usr/bin/qemu-s390x
+	usr/bin/qemu-sparc32plus
+	usr/bin/qemu-unicore32"
 
 pkg_pretend() {
 	if use kernel_linux && kernel_is lt 2 6 25; then
