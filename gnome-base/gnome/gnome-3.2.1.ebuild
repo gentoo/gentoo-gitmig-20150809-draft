@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-3.2.1.ebuild,v 1.3 2012/09/10 06:23:33 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-3.2.1.ebuild,v 1.4 2012/11/05 21:30:07 ulm Exp $
 
 EAPI="4"
 
 DESCRIPTION="Meta package for GNOME 3, merge this package to install"
 HOMEPAGE="http://www.gnome.org/"
 
-LICENSE="as-is"
+LICENSE="metapackage"
 SLOT="2.0" # Cannot be installed at the same time as gnome-2
 
 # when unmasking for an arch
