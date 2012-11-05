@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm-bin/ikvm-bin-7.1.4532.2.ebuild,v 1.1 2012/07/21 09:23:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm-bin/ikvm-bin-7.1.4532.2.ebuild,v 1.2 2012/11/05 21:15:29 ulm Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ MY_PN=${PN/-bin/}
 DESCRIPTION="Java VM for .NET"
 HOMEPAGE="http://www.ikvm.net/ http://weblog.ikvm.net/"
 SRC_URI="http://www.frijters.net/${MY_PN}bin-${PV}.zip"
-LICENSE="as-is"
+LICENSE="ZLIB GPL-2-with-linking-exception"
 
 SLOT="0"
 S=${WORKDIR}/${MY_P}

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ikvm-0.46.0.1.ebuild,v 1.5 2012/05/04 03:56:56 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ikvm-0.46.0.1.ebuild,v 1.6 2012/11/05 21:15:03 ulm Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ DESCRIPTION="Java VM for .NET"
 HOMEPAGE="http://www.ikvm.net/ http://weblog.ikvm.net/"
 SRC_URI="http://www.frijters.net/openjdk6-b22-stripped.zip
 	http://www.frijters.net/${PN}src-${PV}.zip"
-LICENSE="as-is"
+LICENSE="ZLIB GPL-2-with-linking-exception"
 
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
