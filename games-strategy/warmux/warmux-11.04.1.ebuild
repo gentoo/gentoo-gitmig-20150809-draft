@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warmux/warmux-11.04.1.ebuild,v 1.6 2012/07/13 16:05:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warmux/warmux-11.04.1.ebuild,v 1.7 2012/11/05 16:58:48 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils games
 
 DESCRIPTION="A free Worms clone"
-HOMEPAGE="http://www.wormux.org/"
+HOMEPAGE="http://gna.org/projects/warmux/"
 SRC_URI="http://download.gna.org/warmux/${P}.tar.bz2"
 
 LICENSE="GPL-2"

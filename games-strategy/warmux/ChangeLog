@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/warmux
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warmux/ChangeLog,v 1.13 2012/10/22 05:43:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warmux/ChangeLog,v 1.14 2012/11/05 16:58:48 mr_bones_ Exp $
+
+  05 Nov 2012; Michael Sterrett <mr_bones_@gentoo.org> warmux-11.04.1.ebuild:
+  update HOMEPAGE
 
   22 Oct 2012; Michael Sterrett <mr_bones_@gentoo.org>
   -files/warmux-11.01-gentoo.patch, -warmux-11.01.ebuild:
