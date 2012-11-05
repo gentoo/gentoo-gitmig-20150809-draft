@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.4.4.ebuild,v 1.10 2012/10/28 16:49:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.4.4.ebuild,v 1.11 2012/11/05 01:10:44 tetromino Exp $
 
 EAPI="4"
 
@@ -100,6 +100,9 @@ src_prepare() {
 	# Apparently needed for new libxkbcommon headers; bug #408131
 	epatch "${FILESDIR}/${PN}-3.3.20-wayland-xkbcommon-headers.patch"
 
+	# Build fix for uclibc from gtk+-3.5.x; bug #441634
+	epatch "${FILESDIR}/${PN}-3.4.4-isnan.patch"
+
 	# Non-working test in gentoo's env
 	sed 's:\(g_test_add_func ("/ui-tests/keys-events.*\):/*\1*/:g' \
 		-i gtk/tests/testing.c || die "sed 1 failed"
@@ -159,7 +162,7 @@ src_test() {
 	# would result in circular dependencies.
 	# https://bugzilla.gnome.org/show_bug.cgi?id=669562
 	if ! has_version '>=x11-themes/gnome-themes-standard-3.3.91'; then
-		ewarn "Tests will be skipped because >=gnome-themes-standard-3.3.90"
+		ewarn "Tests will be skipped because >=gnome-themes-standard-3.3.91"
 		ewarn "is not installed. Please re-run tests after installing the"
 		ewarn "required version of gnome-themes-standard."
 		return 0

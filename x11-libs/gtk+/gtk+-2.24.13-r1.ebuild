@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.12.ebuild,v 1.12 2012/11/05 01:10:44 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.13-r1.ebuild,v 1.1 2012/11/05 01:10:44 tetromino Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="${SRC_URI} mirror://gentoo/introspection.m4.bz2"
 
 LICENSE="LGPL-2+"
 SLOT="2"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="aqua cups debug examples +introspection test vim-syntax xinerama"
 
 # NOTE: cairo[svg] dep is due to bug 291283 (not patched to avoid eautoreconf)
@@ -77,9 +77,8 @@ set_gtk2_confdir() {
 }
 
 src_prepare() {
-	# gold detected underlinking
-	# Add missing libs, patch sent upstream
-	epatch "${FILESDIR}/${PN}-2.24.10-gold.patch"
+	# https://bugzilla.gnome.org/show_bug.cgi?id=684787
+	epatch "${FILESDIR}/${PN}-2.24.13-gold.patch"
 
 	# use an arch-specific config directory so that 32bit and 64bit versions
 	# dont clash on multilib systems
@@ -90,6 +89,9 @@ src_prepare() {
 
 	# fix building with gir #372953, upstream bug #642085
 	epatch "${FILESDIR}"/${PN}-2.24.7-darwin-quartz-introspection.patch
+
+	# share bookmarks with gtk3 if they are found; in 2.24.14
+	epatch "${FILESDIR}/${P}-gtk3-bookmarks.patch"
 
 	# marshalers code was pre-generated with glib-2.31, upstream bug #671763
 	rm -v gdk/gdkmarshalers.c gtk/gtkmarshal.c gtk/gtkmarshalers.c \
@@ -192,10 +194,6 @@ src_install() {
 	echo 'gtk-fallback-icon-theme = "gnome"' > "${T}/gtkrc"
 	insinto /etc/gtk-2.0
 	doins "${T}"/gtkrc
-
-	# Enable xft in environment as suggested by <utx@gentoo.org>
-	echo "GDK_USE_XFT=1" > "${T}"/50gtk2
-	doenvd "${T}"/50gtk2
 
 	dodoc AUTHORS ChangeLog* HACKING NEWS* README*
 

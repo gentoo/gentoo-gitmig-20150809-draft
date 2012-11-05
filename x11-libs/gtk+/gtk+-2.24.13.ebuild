@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.13.ebuild,v 1.3 2012/10/10 07:44:20 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.13.ebuild,v 1.4 2012/11/05 01:10:44 tetromino Exp $
 
 EAPI="4"
 
@@ -77,7 +77,7 @@ set_gtk2_confdir() {
 }
 
 src_prepare() {
-	#
+	# https://bugzilla.gnome.org/show_bug.cgi?id=684787
 	epatch "${FILESDIR}/${PN}-2.24.13-gold.patch"
 
 	# use an arch-specific config directory so that 32bit and 64bit versions
@@ -131,6 +131,15 @@ src_prepare() {
 		# https://bugzilla.gnome.org/show_bug.cgi?id=617473
 		sed -i -e 's:pltcheck.sh:$(NULL):g' \
 			gtk/Makefile.am || die
+
+		# UI tests require immodules already installed; bug #413185
+		if ! has_version 'x11-libs/gtk+:2'; then
+			ewarn "Disabling UI tests because this is the first install of"
+			ewarn "gtk+:2 on this machine. Please re-run the tests after $P"
+			ewarn "has been installed."
+			sed '/g_test_add_func.*ui-tests/ d' \
+				-i gtk/tests/testing.c || die "sed 2 failed"
+		fi
 	fi
 
 	if ! use examples; then
