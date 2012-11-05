@@ -1,6 +1,10 @@
 # ChangeLog for games-action/chromium-bsu
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chromium-bsu/ChangeLog,v 1.1 2011/05/26 03:30:22 mr_bones_ Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/chromium-bsu/ChangeLog,v 1.2 2012/11/05 22:42:32 blueness Exp $
+
+  05 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
+  chromium-bsu-0.9.15.ebuild:
+  stable ppc, bug #375723
 
 *chromium-bsu-0.9.15 (26 May 2011)
 
