@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pugixml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pugixml/ChangeLog,v 1.7 2012/10/13 07:23:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pugixml/ChangeLog,v 1.8 2012/11/05 08:31:37 blueness Exp $
+
+  05 Nov 2012; Anthony G. Basile <blueness@gentoo.org> pugixml-1.2.ebuild:
+  keyword ~ppc, bug #418355
 
   13 Oct 2012; Agostino Sarubbo <ago@gentoo.org> pugixml-1.2.ebuild:
   Stable for amd64, wrt bug #436690
