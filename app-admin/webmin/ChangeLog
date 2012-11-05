@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/webmin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.199 2012/10/25 16:46:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.200 2012/11/05 21:40:01 hwoarang Exp $
+
+*webmin-1.600-r1 (05 Nov 2012)
+
+  05 Nov 2012; Markos Chandras <hwoarang@gentoo.org>
+  +files/webmin-1.600-SA51201.patch, +webmin-1.600-r1.ebuild,
+  -webmin-1.600.ebuild:
+  Revbump to fix security problem in #441840. Thanks to PhobosK
+  <phobosk@fastmail.fm>. Remove old ebuild
 
   25 Oct 2012; Markos Chandras <hwoarang@gentoo.org> -webmin-1.560-r1.ebuild,
   -webmin-1.570-r1.ebuild, -webmin-1.580.ebuild, -webmin-1.590.ebuild:

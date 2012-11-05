@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.600.ebuild,v 1.1 2012/10/14 09:52:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.600-r1.ebuild,v 1.1 2012/11/05 21:40:01 hwoarang Exp $
 
 EAPI="3"
 
@@ -46,6 +46,9 @@ DEPEND="virtual/perl-Sys-Syslog
 RDEPEND="${DEPEND}"
 
 src_prepare() {
+	# Fix security bug - https://bugs.gentoo.org/show_bug.cgi?id=441840
+	epatch "${FILESDIR}/${P}-SA51201.patch"
+
 	local perl="$( which perl )"
 
 	# Remove the unnecessary and incompatible files
