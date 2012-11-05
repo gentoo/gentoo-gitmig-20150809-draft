@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamass-milter/spamass-milter-0.3.2.ebuild,v 1.2 2012/06/05 00:06:47 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamass-milter/spamass-milter-0.3.2.ebuild,v 1.3 2012/11/05 21:04:52 eras Exp $
 
 EAPI=4
 
@@ -39,8 +39,4 @@ src_install() {
 	fowners milter:milter /var/lib/milter
 
 	dodoc AUTHORS NEWS README ChangeLog "${FILESDIR}/README.gentoo"
-}
-
-pkg_postinst() {
-	elog "Documentation is installed in /usr/share/doc/${P}"
 }
