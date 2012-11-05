@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/performous
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/performous/ChangeLog,v 1.9 2012/06/28 06:29:33 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/performous/ChangeLog,v 1.10 2012/11/05 11:44:38 tupone Exp $
+
+  05 Nov 2012; Tupone Alfredo <tupone@gentoo.org> performous-0.6.1.ebuild,
+  +files/performous-0.6.1-boost150.patch:
+  Build with boost-1.51 Bug #425574 by Diego
 
   28 Jun 2012; Tupone Alfredo <tupone@gentoo.org> performous-0.6.1.ebuild,
   +files/performous-0.6.1-glib232.patch, metadata.xml:
