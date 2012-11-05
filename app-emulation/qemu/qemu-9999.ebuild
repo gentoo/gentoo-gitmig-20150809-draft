@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.30 2012/11/04 22:00:17 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.31 2012/11/05 05:32:44 cardoe Exp $
 
 EAPI="4"
 
@@ -352,7 +352,7 @@ src_install() {
 	dosym ../sgabios/sgabios.bin /usr/share/qemu/sgabios.bin
 
 	# Remove iPXE since we're using the iPXE packaged one
-	rm "${ED}/usr/share/qemu/pxe-*.rom"
+	rm "${ED}"/usr/share/qemu/pxe-*.rom
 	dosym ../ipxe/808610de.rom /usr/share/qemu/pxe-e1000.rom
 	dosym ../ipxe/80861209.rom /usr/share/qemu/pxe-eepro100.rom
 	dosym ../ipxe/10500940.rom /usr/share/qemu/pxe-ne2k_pci.rom
