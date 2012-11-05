@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hlatex/hlatex-1.0.1.ebuild,v 1.7 2012/02/19 15:17:56 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hlatex/hlatex-1.0.1.ebuild,v 1.8 2012/11/05 00:36:43 naota Exp $
 
 EAPI=3
 
@@ -38,6 +38,18 @@ S="${WORKDIR}/HLaTeX"
 src_unpack() {
 	unpack ${MY_P}.tar.gz
 	unpack uhc-fonts-1.0.tar.gz
+	cd "${S}"/contrib
+	cat >Makefile <<-EOF
+CC=$(tc-getCC)
+all: hmakeindex hbibtex
+hmakeindex: hmakeindex.c
+hbibtex: hbibtex.c
+EOF
+}
+
+src_compile() {
+	cd "${S}"/contrib
+	emake || die
 }
 
 src_install() {
@@ -69,8 +81,6 @@ src_install() {
 		insinto ${TEXMF}/makeindex
 		doins hind.ist hglo.ist
 
-		$(tc-getCC) -o hmakeindex hmakeindex.c || die
-		$(tc-getCC) -o hbibtex hbibtex.c || die
 		dobin hmakeindex hbibtex
 
 	cd "${S}"
