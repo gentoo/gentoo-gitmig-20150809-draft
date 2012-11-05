@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.9999.ebuild,v 1.38 2012/05/04 08:58:56 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.9999.ebuild,v 1.39 2012/11/05 07:06:33 vapier Exp $
 
-EAPI="2"
+EAPI="4"
 if [[ ${PV} == *9999 ]] ; then
 	ESVN_REPO_URI="http://svn.enlightenment.org/svn/e/trunk/E16/e"
 	inherit subversion autotools
@@ -16,7 +16,7 @@ else
 fi
 inherit eutils
 
-DESCRIPTION="Enlightenment Window Manager"
+DESCRIPTION="Enlightenment Window Manager (e16)"
 HOMEPAGE="http://www.enlightenment.org/"
 
 LICENSE="BSD"
@@ -75,8 +75,8 @@ src_configure() {
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die
+	default
 	rmdir "${D}"/usr/share/doc/e16 || die #294456
-	dodoc AUTHORS ChangeLog COMPLIANCE TODO sample-scripts/*
+	dodoc COMPLIANCE sample-scripts/*
 	dohtml docs/e16.html
 }

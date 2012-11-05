@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/enlightenment
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.154 2012/05/04 08:58:56 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.155 2012/11/05 07:06:33 vapier Exp $
+
+  05 Nov 2012; Mike Frysinger <vapier@gentoo.org>
+  enlightenment-0.16.9999.ebuild, enlightenment-1.0.10.ebuild:
+  Update to EAPI=4.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org>
   enlightenment-0.16.9999.ebuild, enlightenment-1.0.2.ebuild,
