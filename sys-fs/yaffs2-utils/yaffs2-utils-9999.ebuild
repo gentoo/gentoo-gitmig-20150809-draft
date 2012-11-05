@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/yaffs2-utils/yaffs2-utils-9999.ebuild,v 1.4 2011/09/21 08:16:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/yaffs2-utils/yaffs2-utils-9999.ebuild,v 1.5 2012/11/05 07:15:02 vapier Exp $
 
-EAPI="2"
+EAPI="4"
 
 EGIT_REPO_URI="git://www.aleph1.co.uk/yaffs2"
 EGIT_SOURCEDIR=${WORKDIR}
@@ -25,6 +25,6 @@ src_prepare() {
 }
 
 src_install() {
-	dobin mkyaffsimage mkyaffs2image || die
+	dobin mkyaffsimage mkyaffs2image
 	dodoc ../README-linux
 }

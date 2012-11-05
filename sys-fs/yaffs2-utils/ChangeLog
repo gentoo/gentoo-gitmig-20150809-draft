@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/yaffs2-utils
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/yaffs2-utils/ChangeLog,v 1.3 2011/09/21 08:16:06 mgorny Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/yaffs2-utils/ChangeLog,v 1.4 2012/11/05 07:15:02 vapier Exp $
+
+  05 Nov 2012; Mike Frysinger <vapier@gentoo.org>
+  files/yaffs2-utils-9999-build.patch, yaffs2-utils-9999.ebuild:
+  Update to EAPI=4 and fix building with latest git #248421 by Diego Elio
+  Pettenò.
 
   21 Sep 2011; Michał Górny <mgorny@gentoo.org> yaffs2-utils-9999.ebuild:
   Migrate to git-2.
