@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/hedgewars-0.9.18-r1.ebuild,v 1.2 2012/11/04 05:03:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/hedgewars-0.9.18-r1.ebuild,v 1.3 2012/11/05 16:35:00 mr_bones_ Exp $
 
 EAPI=2
 CMAKE_BUILD_TYPE=Release
@@ -19,6 +19,7 @@ QA_FLAGS_IGNORED=${GAMES_BINDIR}/hwengine # pascal sucks
 QA_PRESTRIPPED=${GAMES_BINDIR}/hwengine # pascal sucks
 
 RDEPEND="x11-libs/qt-gui:4
+	media-libs/freeglut
 	virtual/ffmpeg
 	media-libs/libsdl[audio,opengl,video]
 	media-libs/sdl-ttf
