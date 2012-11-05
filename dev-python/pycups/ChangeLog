@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycups
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/ChangeLog,v 1.59 2012/08/05 22:07:31 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/ChangeLog,v 1.60 2012/11/05 22:21:57 blueness Exp $
+
+  05 Nov 2012; Anthony G. Basile <blueness@gentoo.org> pycups-1.9.62.ebuild:
+  stable ppc ppc64, bug #441294
 
 *pycups-1.9.62 (05 Aug 2012)
 
