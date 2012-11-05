@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.237 2012/10/30 16:40:53 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.238 2012/11/05 14:00:11 kensington Exp $
+
+*kdevelop-4.4.1 (05 Nov 2012)
+
+  05 Nov 2012; Michael Palimaka <kensington@gentoo.org> +kdevelop-4.4.1.ebuild:
+  Version bump.
 
 *kdevelop-4.4.0 (30 Oct 2012)
 
