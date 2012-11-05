@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/camldbm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camldbm/ChangeLog,v 1.2 2012/08/07 19:35:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camldbm/ChangeLog,v 1.3 2012/11/05 00:14:43 naota Exp $
+
+  05 Nov 2012;  <naota@gentoo.org> camldbm-1.0.ebuild:
+  Add ~x86-fbsd. #440760
 
   07 Aug 2012; Alexis Ballier <aballier@gentoo.org> camldbm-1.0.ebuild:
   require ocamlopt for ocaml
@@ -11,4 +14,3 @@
   +files/hasgotfix.patch, +files/include_fix.patch, +metadata.xml:
   Initial import, standalone version of the OCaml gdbm bindings split out of
   dev-lang/ocaml; ebuild by me.
-
