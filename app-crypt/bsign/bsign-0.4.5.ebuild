@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bsign/bsign-0.4.5.ebuild,v 1.12 2012/05/21 18:33:07 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bsign/bsign-0.4.5.ebuild,v 1.13 2012/11/05 23:17:12 blueness Exp $
 
 EAPI=2
 inherit autotools eutils toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="mirror://debian/pool/main/b/${PN}/${PN}_${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc-macos ~x86 ~x86-linux"
+KEYWORDS="~amd64 ppc ~ppc-macos ~x86 ~x86-linux"
 IUSE="static-libs"
 
 src_prepare() {
