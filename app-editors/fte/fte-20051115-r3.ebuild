@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20051115-r3.ebuild,v 1.1 2012/08/05 23:32:28 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20051115-r3.ebuild,v 1.2 2012/11/05 13:05:32 pinkbyte Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://fte.sourceforge.net"
 SRC_URI="mirror://sourceforge/fte/${P}-src.zip
 	mirror://sourceforge/fte/${P}-common.zip"
 
-LICENSE="GPL-2"
+LICENSE="|| ( GPL-2 Artistic )"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc -sparc ~x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="gpm slang X"
@@ -105,7 +105,7 @@ src_install() {
 
 	dobin "${FILESDIR}"/fte
 
-	dodoc Artistic CHANGES BUGS HISTORY README TODO
+	dodoc CHANGES BUGS HISTORY README TODO
 	dohtml doc/*
 
 	dodir usr/share/fte
