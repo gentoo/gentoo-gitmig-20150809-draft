@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mkvtoolnix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.178 2012/10/04 07:41:24 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.179 2012/11/05 08:33:10 blueness Exp $
+
+  05 Nov 2012; Anthony G. Basile <blueness@gentoo.org> mkvtoolnix-5.8.0.ebuild:
+  keyword ~ppc ~ppc64, bug #418355
 
   04 Oct 2012;  <naota@gentoo.org>
   +files/mkvtoolnix-5.8.0-boost-configure.patch, mkvtoolnix-5.8.0.ebuild:
