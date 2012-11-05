@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/suse-build
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/ChangeLog,v 1.6 2012/10/02 11:17:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/ChangeLog,v 1.7 2012/11/05 11:55:02 tampakrap Exp $
+
+  05 Nov 2012; Theo Chatzimichos <tampakrap@gentoo.org> metadata.xml:
+  Move to SUSE team
 
 *suse-build-2012.09.27 (02 Oct 2012)
 
