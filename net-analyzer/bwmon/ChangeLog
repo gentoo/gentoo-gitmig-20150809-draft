@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/bwmon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwmon/ChangeLog,v 1.21 2012/11/04 20:22:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwmon/ChangeLog,v 1.22 2012/11/05 02:58:44 flameeyes Exp $
+
+*bwmon-1.3-r2 (05 Nov 2012)
+
+  05 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org> +bwmon-1.3-r2.ebuild,
+  +files/bwmon-1.3-build.patch, +files/bwmon-1.3-overflow.patch:
+  Fix overflow identified by Vicente Olivert Riera in bug #441420; use a patch
+  instead of a chain of seds for the makefile changes, which also saves us from
+  using flag-o-matic.
 
   04 Nov 2012; Agostino Sarubbo <ago@gentoo.org> bwmon-1.3-r1.ebuild:
   Stable for amd64, wrt bug #441420
