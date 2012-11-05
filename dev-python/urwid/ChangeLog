@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/urwid
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/ChangeLog,v 1.57 2012/10/24 04:59:15 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/ChangeLog,v 1.58 2012/11/05 22:10:00 radhermit Exp $
+
+  05 Nov 2012; Tim Harder <radhermit@gentoo.org> urwid-0.9.9.1.ebuild,
+  urwid-1.0.2.ebuild, urwid-1.1.0.ebuild:
+  Add testing dep on twisted (bug #441942).
 
 *urwid-1.1.0 (24 Oct 2012)
 
