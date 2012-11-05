@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/spectrwm/spectrwm-1.2.0.ebuild,v 1.3 2012/09/25 04:13:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/spectrwm/spectrwm-2.1.0.ebuild,v 1.1 2012/11/05 18:08:56 xmw Exp $
 
 EAPI=4
 
@@ -18,6 +18,7 @@ IUSE=""
 RDEPEND="x11-misc/dmenu"
 DEPEND="${DEPEND}
 	x11-libs/libX11
+	x11-libs/libXcursor
 	x11-libs/libXrandr
 	x11-libs/libXtst
 	x11-libs/xcb-util

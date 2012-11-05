@@ -1,22 +1,13 @@
---- spectrwm-1.2.0/linux/Makefile
-+++ spectrwm-1.2.0/linux/Makefile
+--- spectrwm-2.1.0/linux/Makefile
++++ spectrwm-2.1.0/linux/Makefile
 @@ -1,5 +1,5 @@
--CFLAGS+= -Wall -Wextra -Wshadow -g -D_GNU_SOURCE -I. -I/usr/include/freetype2
+-CFLAGS+= -std=c99 -Wall -Wextra -Wmissing-prototypes -Wshadow -g -D_GNU_SOURCE -I. -I/usr/include/freetype2
 -CFLAGS+= -DSWM_LIB=\"$(LIBDIR)/libswmhack.so.$(LVERS)\"
-+CFLAGS+= -Wall -Wextra -Wshadow -D_GNU_SOURCE -I. -I/usr/include/freetype2
++CFLAGS+= -std=c99 -Wall -Wextra -Wmissing-prototypes -Wshadow -D_GNU_SOURCE -I. -I/usr/include/freetype2
 +CFLAGS+= -DSWM_LIB=\"libswmhack.so.$(LVERS)\"
- LDADD+= -lX11 -lX11-xcb -lxcb -lxcb-icccm -lxcb-randr -lxcb-keysyms -lxcb-util -lxcb-xtest -lXft
+ LDADD+= -lX11 -lX11-xcb -lxcb -lxcb-icccm -lxcb-randr -lxcb-keysyms -lxcb-util -lxcb-xtest -lXft -lXcursor
  
  PREFIX?= /usr/local
-@@ -7,7 +7,7 @@
- LIBDIR?= $(PREFIX)/lib
- MANDIR?= $(PREFIX)/share/man
- 
--CC= gcc
-+CC ?= gcc
- 
- LVERS= $(shell . ../lib/shlib_version; echo $$major.$$minor)
- 
 @@ -29,10 +29,10 @@
  	$(CC) $(LDFLAGS) -o $@ $+ $(LDADD)
  
