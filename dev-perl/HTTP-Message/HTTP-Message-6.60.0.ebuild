@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Message/HTTP-Message-6.60.0.ebuild,v 1.1 2012/11/04 15:00:37 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Message/HTTP-Message-6.60.0.ebuild,v 1.2 2012/11/06 13:35:15 aballier Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Base class for Request/Response"
 
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~arm ~hppa ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE=""
 
 RDEPEND="
