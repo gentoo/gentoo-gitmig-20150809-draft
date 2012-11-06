@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.14-r1.ebuild,v 1.1 2012/09/19 17:50:36 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.14-r1.ebuild,v 1.2 2012/11/06 17:09:39 ago Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ SRC_URI="${HOMEPAGE%/}/releases/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 REQUIRED_USE="test? ( crypt emacs python )"
 IUSE="bash-completion crypt debug doc emacs nmbug mutt python test vim
 	zsh-completion"
