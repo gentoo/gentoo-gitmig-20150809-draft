@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/pstoedit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.76 2012/11/06 13:54:54 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.77 2012/11/06 17:04:43 ago Exp $
+
+  06 Nov 2012; Agostino Sarubbo <ago@gentoo.org> pstoedit-3.61.ebuild:
+  Stable for amd64, wrt bug #441360
 
   06 Nov 2012; Anthony G. Basile <blueness@gentoo.org> pstoedit-3.61.ebuild:
   stable ppc ppc64, bug #441360
