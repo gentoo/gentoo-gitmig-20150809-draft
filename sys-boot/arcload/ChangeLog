@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/arcload
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcload/ChangeLog,v 1.14 2011/08/23 00:36:13 mattst88 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcload/ChangeLog,v 1.15 2012/11/06 12:03:19 blueness Exp $
+
+  06 Nov 2012; Anthony G. Basile <blueness@gentoo.org> arcload-0.50-r1.ebuild:
+  Change license to GPL-2+, bug #442018
 
   23 Aug 2011; Matt Turner <mattst88@gentoo.org> -arcload-0.43-r1.ebuild,
   -files/arcload-0.43-tweaks1.patch, arcload-0.50-r1.ebuild, metadata.xml:
@@ -73,4 +76,3 @@
   Initial import of what is quite possibly, the best bootloader for SGI Mips
   systems ever. Supports disk booting of IP22, IP27, IP28, IP30, and IP32
   systems.
-
