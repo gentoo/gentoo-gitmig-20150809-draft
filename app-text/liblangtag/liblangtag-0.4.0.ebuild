@@ -1,10 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/liblangtag/liblangtag-0.4.0.ebuild,v 1.1 2012/11/06 15:06:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/liblangtag/liblangtag-0.4.0.ebuild,v 1.2 2012/11/06 15:07:28 scarabeus Exp $
 
-EAPI=4
-
-inherit base autotools
+EAPI=5
 
 DESCRIPTION="An interface library to access tags for identifying languages"
 HOMEPAGE="https://github.com/tagoh/liblangtag/"
