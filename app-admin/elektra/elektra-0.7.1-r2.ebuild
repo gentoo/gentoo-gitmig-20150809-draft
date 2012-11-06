@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/elektra/elektra-0.7.1-r2.ebuild,v 1.2 2012/11/04 12:01:55 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/elektra/elektra-0.7.1-r2.ebuild,v 1.3 2012/11/06 19:26:18 mr_bones_ Exp $
 
 EAPI=4
 
@@ -60,7 +60,7 @@ src_install() {
 	local my_f=""
 	#avoid collision with kerberos (bug 403025)
 	for my_f in kdb kdbbackend.h kdbos.h kdbtools.h keyset kdb.h \
-		kdbloader.h kdbprivate.h key ; do 
+		kdbloader.h kdbprivate.h key ; do
 		mv "${D}"/usr/include/{,elektra-}"${my_f}" || die
 		elog "/usr/include/${my_f} installed as elektra-${my_f}"
 	done
