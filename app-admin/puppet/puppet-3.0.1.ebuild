@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-3.0.1.ebuild,v 1.2 2012/11/06 19:33:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-3.0.1.ebuild,v 1.3 2012/11/06 20:00:32 idl0r Exp $
 
 EAPI="4"
 
@@ -27,10 +27,12 @@ ruby_add_rdepend "
 	sqlite3? ( dev-ruby/sqlite3 )
 	virtual/ruby-ssl"
 
-DEPEND+="
+DEPEND="${DEPEND}
+	dev-lang/ruby[yaml]
 	emacs? ( virtual/emacs )
 	xemacs? ( app-editors/xemacs )"
-RDEPEND+="
+RDEPEND="${RDEPEND}
+	dev-lang/ruby[yaml]
 	rrdtool? ( >=net-analyzer/rrdtool-1.2.23[ruby] )
 	selinux? (
 		sys-libs/libselinux[ruby]

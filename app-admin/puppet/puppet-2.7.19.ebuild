@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-2.7.19.ebuild,v 1.1 2012/11/06 19:17:59 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-2.7.19.ebuild,v 1.2 2012/11/06 20:00:32 idl0r Exp $
 
 EAPI="4"
 USE_RUBY="ruby18 ruby19"
@@ -38,10 +38,12 @@ ruby_add_rdepend "
 #	stomp? ( dev-ruby/stomp )
 
 DEPEND="${DEPEND}
+	dev-lang/ruby[yaml]
 	emacs? ( virtual/emacs )
 	xemacs? ( app-editors/xemacs )
 	selinux? ( sec-policy/selinux-puppet )"
 RDEPEND="${RDEPEND}
+	dev-lang/ruby[yaml]
 	emacs? ( virtual/emacs )
 	xemacs? ( app-editors/xemacs )
 	rrdtool? ( >=net-analyzer/rrdtool-1.2.23[ruby] )

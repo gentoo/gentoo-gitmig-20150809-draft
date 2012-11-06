@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/puppet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.126 2012/11/06 19:33:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.127 2012/11/06 20:00:32 idl0r Exp $
+
+  06 Nov 2012; Christian Ruppert <idl0r@gentoo.org> puppet-2.7.19.ebuild,
+  puppet-3.0.1.ebuild:
+  We need ruby with yaml
 
   06 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org> puppet-3.0.1.ebuild:
   Fix dependencies.
