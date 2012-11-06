@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.340 2012/10/15 21:00:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.341 2012/11/06 06:34:31 robbat2 Exp $
+
+*genkernel-3.4.45 (06 Nov 2012)
+
+  06 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> +genkernel-3.4.45.ebuild:
+  Bump, this should be a stable candidate.
 
 *genkernel-3.4.44.2 (15 Oct 2012)
 
