@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pycairo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.110 2012/06/02 11:59:24 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.111 2012/11/06 06:10:40 idella4 Exp $
+
+  06 Nov 2012; Ian Delaney <idella4@gentoo.org> pycairo-1.10.0-r2.ebuild:
+  python 2.4, pypy removed from RESTRICT_PYTHON_ABIS, test phase updated
+  implementing pypy, fixes Bug #420497
 
   02 Jun 2012; Marien Zwart <marienz@gentoo.org>
   -files/pycairo-1.8.10-cairo.version_info.patch, -pycairo-1.10.0-r1.ebuild,
@@ -418,4 +422,3 @@
   04 Feb 2005; Fernando Serboncini <fserb@gentoo.org> +metadata.xml,
   +pycairo-0.1.4.ebuild:
   Initial ebuild
-
