@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.454 2012/11/06 01:21:30 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.455 2012/11/06 02:44:11 floppym Exp $
+
+  06 Nov 2012; Mike Gilbert <floppym@gentoo.org> openssh-5.5_p1-r2.ebuild,
+  openssh-5.6_p1-r2.ebuild, openssh-5.7_p1-r1.ebuild, openssh-5.8_p1-r1.ebuild,
+  openssh-5.8_p2-r1.ebuild, openssh-5.8_p2.ebuild, openssh-5.9_p1-r3.ebuild,
+  openssh-5.9_p1-r4.ebuild, openssh-6.0_p1-r1.ebuild, openssh-6.0_p1.ebuild,
+  openssh-6.1_p1.ebuild:
+  Use a slot dep for openssl; openssl:0.9.8 is not going to work here. Bug
+  437480.
 
   06 Nov 2012; Rick Farina <zerochaos@gentoo.org> openssh-5.5_p1-r2.ebuild,
   openssh-5.6_p1-r2.ebuild, openssh-5.7_p1-r1.ebuild, openssh-5.8_p1-r1.ebuild,

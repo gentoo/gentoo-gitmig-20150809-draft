@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.0_p1.ebuild,v 1.9 2012/11/06 01:21:30 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.0_p1.ebuild,v 1.10 2012/11/06 02:44:11 floppym Exp $
 
 EAPI="2"
 inherit eutils user flag-o-matic multilib autotools pam systemd
@@ -32,7 +32,7 @@ RDEPEND="pam? ( virtual/pam )
 	skey? ( >=sys-auth/skey-1.1.5-r1 )
 	ldap? ( net-nds/openldap )
 	libedit? ( dev-libs/libedit )
-	>=dev-libs/openssl-0.9.6d[bindist=]
+	>=dev-libs/openssl-0.9.6d:0[bindist=]
 	>=sys-libs/zlib-1.2.3
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
 	X? ( x11-apps/xauth )
