@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/firewalld
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firewalld/ChangeLog,v 1.2 2012/11/04 01:19:24 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firewalld/ChangeLog,v 1.3 2012/11/06 07:30:01 cardoe Exp $
+
+  06 Nov 2012; Doug Goldstein <cardoe@gentoo.org> firewalld-0.2.9.ebuild:
+  Fix GSettings schema not being installed.
 
   04 Nov 2012; Doug Goldstein <cardoe@gentoo.org> firewalld-0.2.9.ebuild:
   Keyword for ~x86
