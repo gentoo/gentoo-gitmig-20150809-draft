@@ -1,6 +1,11 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.755 2012/11/05 16:18:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.756 2012/11/06 14:36:15 jer Exp $
+
+  06 Nov 2012; Jeroen Roovers <jer@gentoo.org> -opera-12.02.1629.ebuild,
+  -opera-12.10.1615.ebuild, -opera-12.10.1647.ebuild, -opera-12.10.1649.ebuild,
+  -opera-12.10.1650.ebuild, opera-12.10.1652.ebuild:
+  Switch to mirror://opera/.
 
 *opera-12.10.1652 (05 Nov 2012)
 
