@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/haveged
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/haveged/ChangeLog,v 1.20 2012/08/19 18:43:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/haveged/ChangeLog,v 1.21 2012/11/06 17:06:22 ago Exp $
+
+  06 Nov 2012; <ago@gentoo.org> haveged-1.5.ebuild:
+  Stable for amd64, wrt bug #441506
 
   19 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Re-assign to sysadmin herd.
