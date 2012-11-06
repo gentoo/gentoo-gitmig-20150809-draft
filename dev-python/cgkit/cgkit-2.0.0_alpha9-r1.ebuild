@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/cgkit-2.0.0_alpha9-r1.ebuild,v 1.3 2012/06/14 18:49:09 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/cgkit-2.0.0_alpha9-r1.ebuild,v 1.4 2012/11/06 07:44:44 idella4 Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 
-inherit distutils
+inherit distutils eutils
 
 MY_P="${P/_/}"
 
@@ -48,6 +48,10 @@ src_prepare() {
 	sed -e "s:INC_DIRS = \[\]:INC_DIRS = \['/usr/include'\]:" -i setup.py
 
 	sed -e "160s/as/as_/;168s/as/as_/" -i cgkit/flockofbirds.py
+
+	# Remove invalid test
+	rm -f unittests/test_pointcloud.py || die
+        epatch "${FILESDIR}"/${PN}-2.0.0-test.patch
 }
 
 src_compile() {
