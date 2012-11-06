@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/metamail
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/metamail/ChangeLog,v 1.47 2012/08/07 12:13:30 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/metamail/ChangeLog,v 1.48 2012/11/06 17:09:05 ago Exp $
+
+  06 Nov 2012; <ago@gentoo.org> metamail-2.7.53.3-r1.ebuild:
+  Stable for amd64, wrt bug #441462
 
 *metamail-2.7.53.3-r1 (07 Aug 2012)
 
