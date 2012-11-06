@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/vtun-3.0.3.ebuild,v 1.2 2012/11/03 20:32:14 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/vtun-3.0.3.ebuild,v 1.3 2012/11/06 17:06:08 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://vtun.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ppc ~sparc ~x86"
 IUSE="lzo socks5 ssl zlib"
 
 RDEPEND="ssl? ( dev-libs/openssl )
