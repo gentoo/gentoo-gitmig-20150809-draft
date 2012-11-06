@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-3.0.1.ebuild,v 1.4 2012/11/06 22:00:44 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-3.0.1.ebuild,v 1.5 2012/11/06 22:45:32 tampakrap Exp $
 
 EAPI="4"
 
@@ -38,6 +38,7 @@ RDEPEND="${RDEPEND}
 		sys-libs/libselinux[ruby]
 		sec-policy/selinux-puppet
 	)
+	vim-syntax? ( >=app-vim/puppet-syntax-3.0.1 )
 	>=app-portage/eix-0.18.0"
 
 SITEFILE="50${PN}-mode-gentoo.el"
@@ -105,11 +106,6 @@ all_ruby_install() {
 
 	if use ldap ; then
 		insinto /etc/openldap/schema; doins ext/ldap/puppet.schema
-	fi
-
-	if use vim-syntax ; then
-		insinto /usr/share/vim/vimfiles/ftdetect; doins ext/vim/ftdetect/puppet.vim
-		insinto /usr/share/vim/vimfiles/syntax; doins ext/vim/syntax/puppet.vim
 	fi
 
 	# ext and examples files

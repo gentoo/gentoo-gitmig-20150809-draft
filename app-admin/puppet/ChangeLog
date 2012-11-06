@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/puppet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.128 2012/11/06 22:00:44 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.129 2012/11/06 22:45:32 tampakrap Exp $
+
+  06 Nov 2012; Theo Chatzimichos <tampakrap@gentoo.org> puppet-3.0.1.ebuild:
+  vim-syntax is split to puppet-syntax, bug 417085
 
   06 Nov 2012; Christian Ruppert <idl0r@gentoo.org> puppet-2.7.19.ebuild,
   puppet-3.0.1.ebuild:
