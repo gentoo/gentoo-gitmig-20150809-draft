@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/spectemu
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spectemu/ChangeLog,v 1.26 2009/03/03 20:37:38 flameeyes Exp $
+# Copyright 2002-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spectemu/ChangeLog,v 1.27 2012/11/06 15:07:48 kensington Exp $
+
+*spectemu-0.99.3-r1 (06 Nov 2012)
+
+  06 Nov 2012; Michael Palimaka <kensington@gentoo.org>
+  +files/spectemu-0.99.3-automagic.patch, +files/spectemu-0.99.3-build.patch,
+  +spectemu-0.99.3-r1.ebuild:
+  Fix parallel install wrt bug #255777. Fix automagic dependency on media-
+  libs/svgalib. Migrate to EAPI 4.
 
   03 Mar 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   spectemu-0.99.3.ebuild:
