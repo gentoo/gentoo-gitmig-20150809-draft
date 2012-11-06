@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/stock-quote
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/stock-quote/ChangeLog,v 1.6 2012/08/25 20:16:09 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/stock-quote/ChangeLog,v 1.7 2012/11/06 17:08:26 ago Exp $
+
+  06 Nov 2012; Agostino Sarubbo <ago@gentoo.org> stock-quote-2.1-r1.ebuild:
+  Stable for amd64, wrt bug #441342
 
   25 Aug 2012; Chris Reffett <creffett@gentoo.org> stock-quote-2.1-r1.ebuild:
   Actually bump to EAPI 4 this time.
