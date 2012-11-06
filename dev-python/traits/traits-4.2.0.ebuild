@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/traits/traits-4.2.0.ebuild,v 1.2 2012/11/06 04:21:05 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/traits/traits-4.2.0.ebuild,v 1.3 2012/11/06 04:24:34 idella4 Exp $
 
 EAPI=4
 
@@ -36,14 +36,14 @@ src_compile() {
 }
 
 src_test() {
-        testing() {
-                local exit_status=0
-                pushd $(find build-${PYTHON_ABI}/ -name "${PN}") > /dev/null
-                PYTHONPATH=. nosetests -v tests || exit_status=1
-                popd > /dev/null
-        return $exit_status
-        }
-         python_execute_function testing
+	testing() {
+	local exit_status=0
+		pushd $(find build-${PYTHON_ABI}/ -name "${PN}") > /dev/null
+		PYTHONPATH=. nosetests -v tests || exit_status=1
+		popd > /dev/null
+	return $exit_status
+	}
+	python_execute_function testing
 }
 
 src_install() {
