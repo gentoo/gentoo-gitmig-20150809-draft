@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gpa
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.82 2012/09/18 04:45:29 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.83 2012/11/06 01:50:03 blueness Exp $
+
+  06 Nov 2012; Anthony G. Basile <blueness@gentoo.org> gpa-0.9.3.ebuild:
+  stable ppc ppc64, bug #441890
 
   18 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.
