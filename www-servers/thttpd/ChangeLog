@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/thttpd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/ChangeLog,v 1.50 2012/11/03 18:22:48 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/ChangeLog,v 1.51 2012/11/06 17:07:25 ago Exp $
+
+  06 Nov 2012; <ago@gentoo.org> thttpd-2.26.4-r1.ebuild:
+  Stable for amd64, wrt bug #441548
 
   03 Nov 2012; Anthony G. Basile <blueness@gentoo.org> thttpd-2.26.4-r1.ebuild:
   stable arm, bug #441548
