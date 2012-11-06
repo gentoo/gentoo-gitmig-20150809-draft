@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocamlsdl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlsdl/ChangeLog,v 1.20 2012/08/21 19:17:00 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlsdl/ChangeLog,v 1.21 2012/11/06 12:06:08 blueness Exp $
+
+  06 Nov 2012; Anthony G. Basile <blueness@gentoo.org> ocamlsdl-0.9.1.ebuild:
+  stable ppc, bug #441204
 
   21 Aug 2012; Johannes Huber <johu@gentoo.org> ocamlsdl-0.9.0.ebuild:
   Stable for x86, wrt bug #428972
@@ -77,4 +80,3 @@
   12 Feb 2004; Matthieu Sozeau <mattam@gentoo.org> metadata.xml,
   ocamlsdl-0.6.3.ebuild:
   Initial import, ebuild by David Dynerman <dynerman@cs.wisc.edu> (bug #41045).
-

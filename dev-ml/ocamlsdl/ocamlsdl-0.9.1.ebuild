@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlsdl/ocamlsdl-0.9.1.ebuild,v 1.1 2012/08/02 12:56:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlsdl/ocamlsdl-0.9.1.ebuild,v 1.2 2012/11/06 12:06:08 blueness Exp $
 
 inherit findlib
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/ocamlsdl/${P}.tar.gz"
 LICENSE="LGPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ppc ~x86"
 IUSE="doc opengl truetype" #noimage nomixer
 
 DEPEND=">=dev-lang/ocaml-3.04
