@@ -1,6 +1,11 @@
 # ChangeLog for app-text/liblangtag
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/liblangtag/ChangeLog,v 1.3 2012/09/21 07:22:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/liblangtag/ChangeLog,v 1.4 2012/11/06 15:06:27 scarabeus Exp $
+
+*liblangtag-0.4.0 (06 Nov 2012)
+
+  06 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> +liblangtag-0.4.0.ebuild:
+  Version bump to latest.
 
   21 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> liblangtag-0.3-r1.ebuild:
   Fix the damn sed statement.
