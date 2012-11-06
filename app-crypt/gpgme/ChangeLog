@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gpgme
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.194 2012/07/10 23:58:20 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.195 2012/11/06 13:23:20 blueness Exp $
+
+  06 Nov 2012; Anthony G. Basile <blueness@gentoo.org> gpgme-1.3.2.ebuild:
+  stable ppc ppc64, bug #441956
 
 *gpgme-1.3.2 (10 Jul 2012)
 
