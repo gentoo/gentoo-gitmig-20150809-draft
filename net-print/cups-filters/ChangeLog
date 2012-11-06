@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups-filters
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.43 2012/10/04 08:08:12 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.44 2012/11/06 13:59:34 aballier Exp $
+
+  06 Nov 2012; Alexis Ballier <aballier@gentoo.org> cups-filters-1.0.24.ebuild,
+  cups-filters-9999.ebuild:
+  keyword ~amd64-fbsd, bug #428356
 
   04 Oct 2012;  <naota@gentoo.org> cups-filters-1.0.24.ebuild:
   Add ~x86-fbsd wrt bug #428356

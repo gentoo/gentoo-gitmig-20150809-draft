@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.513 2012/10/22 12:53:39 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.514 2012/11/06 13:59:52 aballier Exp $
+
+  06 Nov 2012; Alexis Ballier <aballier@gentoo.org> cups-1.6.1.ebuild,
+  cups-9999.ebuild:
+  keyword ~amd64-fbsd, bug #428356
 
 *cups-1.5.0 (22 Oct 2012)
 
