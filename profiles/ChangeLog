@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7112 2012/11/06 11:23:39 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7113 2012/11/06 22:30:01 tampakrap Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Nov 2012; Theo Chatzimichos <tampakrap@gentoo.org> package.mask:
+  Add puppet-syntax in p.mask as well
 
   06 Nov 2012; Eray Aslan <eras@gentoo.org> package.mask:
   mail-mta/nbsmtp is no longer in the tree - remove mask

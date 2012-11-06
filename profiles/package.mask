@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14197 2012/11/06 19:05:05 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14198 2012/11/06 22:30:01 tampakrap Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -34,6 +34,7 @@
 # Christian Ruppert <idl0r@gentoo.org> (06 Nov 2012)
 # Mask for testing
 =app-admin/puppet-3*
+=app-vim/puppet-syntax-3*
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (05 Nov 2012)
 # Masked for testing
