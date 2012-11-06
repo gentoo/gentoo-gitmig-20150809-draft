@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/arandr/arandr-0.1.6.ebuild,v 1.1 2012/06/19 19:12:34 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/arandr/arandr-0.1.6.ebuild,v 1.2 2012/11/06 19:51:59 ago Exp $
 
 EAPI=3
 
@@ -16,7 +16,7 @@ SRC_URI="http://christian.amsuess.com/tools/${PN}/files/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=dev-python/pygtk-2
