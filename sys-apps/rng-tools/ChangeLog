@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/rng-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.31 2012/07/19 10:44:13 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.32 2012/11/06 05:05:36 vapier Exp $
+
+*rng-tools-4 (06 Nov 2012)
+
+  06 Nov 2012; Mike Frysinger <vapier@gentoo.org> +rng-tools-4.ebuild:
+  Version bump #438648 by Manuel Rüger.
 
 *rng-tools-3-r1 (19 Jul 2012)
 
@@ -125,4 +130,3 @@
 
   20 Aug 2003; Hanno Boeck <hanno@gentoo.org> files/rngd:
   New package for using random number generators.
-
