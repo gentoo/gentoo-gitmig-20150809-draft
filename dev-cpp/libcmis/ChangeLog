@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libcmis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libcmis/ChangeLog,v 1.16 2012/11/03 08:55:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libcmis/ChangeLog,v 1.17 2012/11/06 13:16:39 scarabeus Exp $
+
+  06 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> libcmis-0.3.0.ebuild,
+  libcmis-9999.ebuild:
+  Fix dep over xslt.
 
   03 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> libcmis-0.3.0.ebuild:
   Stable on amd64 x86 and ppc wrt bug#441138.

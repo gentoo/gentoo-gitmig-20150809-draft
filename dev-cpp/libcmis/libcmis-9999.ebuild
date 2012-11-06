@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libcmis/libcmis-9999.ebuild,v 1.7 2012/09/13 15:53:20 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libcmis/libcmis-9999.ebuild,v 1.8 2012/11/06 13:16:39 scarabeus Exp $
 
 EAPI=4
 
@@ -26,7 +26,10 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
-	man? ( app-text/docbook2X )
+	man? (
+		app-text/docbook2X
+		dev-libs/libxslt
+	)
 	test? ( dev-util/cppunit )
 "
 
