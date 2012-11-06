@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/matplotlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.124 2012/08/01 19:17:40 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.125 2012/11/06 01:18:51 blueness Exp $
+
+  06 Nov 2012; Anthony G. Basile <blueness@gentoo.org> matplotlib-1.1.1.ebuild:
+  stable ppc, bug #441278
 
 *matplotlib-1.1.1 (01 Aug 2012)
 
