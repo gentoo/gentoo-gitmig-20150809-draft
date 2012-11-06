@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/x48
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/ChangeLog,v 1.29 2012/07/08 15:15:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/ChangeLog,v 1.30 2012/11/06 20:16:49 nimiux Exp $
+
+  06 Nov 2012; Chema Alonso <nimiux@gentoo.org> -x48-0.4.3-r1.ebuild:
+  Cleanup version 0.4.3
 
   08 Jul 2012; Raúl Porcel <armin76@gentoo.org> x48-0.6.4.ebuild:
   alpha/ia64/sparc stable wrt #415223
