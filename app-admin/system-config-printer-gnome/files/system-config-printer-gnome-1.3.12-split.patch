@@ -1,7 +1,7 @@
-diff -ruN system-config-printer-1.3.9/Makefile.am my2/Makefile.am
---- system-config-printer-1.3.9/Makefile.am	2011-10-26 14:14:19.000000000 +0200
-+++ my2/Makefile.am	2012-03-07 00:39:47.445321514 +0100
-@@ -1,89 +1,8 @@
+diff -ruN system-config-printer-1.3.12/Makefile.am my/Makefile.am
+--- system-config-printer-1.3.12/Makefile.am	2012-10-04 15:51:04.000000000 +0200
++++ my/Makefile.am	2012-11-06 04:05:52.745405001 +0100
+@@ -1,90 +1,8 @@
 -CFLAGS=-g -O2 -Wall
 +CFLAGS=-Wall
  
@@ -56,6 +56,7 @@ diff -ruN system-config-printer-1.3.9/Makefile.am my2/Makefile.am
 -	sed \
 -	  -e "s|\@prefix\@|$(prefix)|" \
 -	  -e "s|\@sysconfdir\@|$(sysconfdir)|" \
+-	  -e "s|\@cupsserverbindir\@|$(cupsserverbindir)|" \
 -	  $< > $@
 -
 -# Use distutils to build the module.
@@ -92,7 +93,7 @@ diff -ruN system-config-printer-1.3.9/Makefile.am my2/Makefile.am
  	pysmb.py				\
  	scp-dbus-service.py			\
  	system-config-printer.py		\
-@@ -95,33 +14,21 @@
+@@ -96,33 +14,21 @@
  	asyncipp.py					\
  	asyncpk1.py					\
  	authconn.py					\
@@ -126,7 +127,7 @@ diff -ruN system-config-printer-1.3.9/Makefile.am my2/Makefile.am
  	timedops.py					\
  	ToolbarSearchEntry.py				\
  	userdefault.py					\
-@@ -164,52 +71,17 @@
+@@ -165,52 +71,17 @@
  	troubleshoot/ServerFirewalled.py		\
  	troubleshoot/Shrug.py				\
  	troubleshoot/VerifyPackages.py			\
@@ -149,8 +150,8 @@ diff -ruN system-config-printer-1.3.9/Makefile.am my2/Makefile.am
 -udevrules_DATA=udev/70-printers.rules
 -udev_udev_configure_printer_SOURCES=\
 -	udev/udev-configure-printer.c
--udev_udev_configure_printer_LDADD=-lcups -ludev -lusb $(GLIB_LIBS)
--udev_udev_configure_printer_CFLAGS=$(AM_CFLAGS) $(GLIB_CFLAGS)
+-udev_udev_configure_printer_LDADD= -lcups -ludev $(libusb_LIBS) $(GLIB_LIBS)
+-udev_udev_configure_printer_CFLAGS= $(AM_CFLAGS) $(libusb_CFLAGS) $(GLIB_CFLAGS)
 -udevhelperdir=$(sysconfdir)/udev
 -udevhelper_PROGRAMS=\
 -	udev/udev-configure-printer
@@ -161,7 +162,7 @@ diff -ruN system-config-printer-1.3.9/Makefile.am my2/Makefile.am
 -%.service: %.service.in
 -	$(AM_V_GEN)sed -e 's,@udevhelperdir\@,$(udevhelperdir),g' $< > $@
 -systemdsystemunit_DATA = \
--	udev/udev-configure-printer.service
+-	udev/configure-printer@.service
 -CLEANFILES = \
 -	$(systemdsystemunit_DATA)
 -endif
