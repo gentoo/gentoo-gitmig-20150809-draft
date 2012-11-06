@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qpdf/qpdf-3.0.2.ebuild,v 1.3 2012/10/04 08:08:53 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdf/qpdf-3.0.2.ebuild,v 1.4 2012/11/06 13:57:40 aballier Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/qpdf/${P}.tar.gz"
 
 LICENSE="Artistic-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="doc examples static-libs test"
 
 RDEPEND="dev-libs/libpcre
