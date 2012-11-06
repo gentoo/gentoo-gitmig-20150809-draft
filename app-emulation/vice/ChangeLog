@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/vice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.84 2012/11/05 01:11:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.85 2012/11/06 21:55:05 mr_bones_ Exp $
+
+  06 Nov 2012; Michael Sterrett <mr_bones_@gentoo.org> vice-2.4.ebuild:
+  add x11-libs/vte:0 dep (bug #442082)
 
 *vice-2.4 (05 Nov 2012)
 

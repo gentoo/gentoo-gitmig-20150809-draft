@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-2.4.ebuild,v 1.1 2012/11/05 01:11:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-2.4.ebuild,v 1.2 2012/11/06 21:55:05 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils games toolchain-funcs
@@ -28,6 +28,7 @@ RDEPEND="
 	alsa? ( media-libs/alsa-lib )
 	gnome? (
 		x11-libs/gtk+:2
+		x11-libs/vte:0
 		dev-libs/atk
 		x11-libs/pango
 	)
