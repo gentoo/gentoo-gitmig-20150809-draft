@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/spectools/spectools-2011.08.1-r2.ebuild,v 1.1 2012/08/12 08:43:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/spectools/spectools-2011.08.1-r2.ebuild,v 1.2 2012/11/06 17:08:46 ago Exp $
 
 EAPI=4
 inherit toolchain-funcs
@@ -17,7 +17,7 @@ if [[ ${PV} == "9999" ]] ; then
 		KEYWORDS=""
 else
 		SRC_URI="http://www.kismetwireless.net/code/${MY_P}.tar.gz"
-		KEYWORDS="~amd64 ~arm ~ppc ~x86"
+		KEYWORDS="amd64 ~arm ~ppc ~x86"
 fi
 
 DESCRIPTION="Spectrum Analyzer for Meta-Geek Wi-Spy and GSG Ubertooth hardware"
