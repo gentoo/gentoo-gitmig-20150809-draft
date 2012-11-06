@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gquilt/gquilt-0.25.ebuild,v 1.2 2012/09/05 07:40:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gquilt/gquilt-0.25.ebuild,v 1.3 2012/11/06 20:31:24 xarthisius Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="dev-python/pygtk:2
-	dev-util/quilt"
+	|| ( dev-util/quilt dev-util/mercurial )"
 RDEPEND="${DEPEND}"
 
 PYTHON_MODNAME="gquilt_pkg"
@@ -35,7 +35,6 @@ src_prepare() {
 src_install() {
 	distutils_src_install
 
-	dobin ${PN} || die "dobin failed"
-
-	domenu gquilt.desktop || die "doins failed"
+	dobin ${PN} || die
+	domenu ${PN}.desktop || die
 }
