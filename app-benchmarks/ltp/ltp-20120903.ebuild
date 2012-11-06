@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ltp-20120903.ebuild,v 1.1 2012/11/03 18:58:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ltp-20120903.ebuild,v 1.2 2012/11/06 19:26:43 mr_bones_ Exp $
 
 EAPI="4"
 
@@ -52,7 +52,7 @@ src_configure() {
 
 	# Better put it into /usr/libexec as everything needs to
 	# be under the same directory..
-	
+
 	econf --prefix=/usr/libexec/${PN} ${myconf}
 }
 
