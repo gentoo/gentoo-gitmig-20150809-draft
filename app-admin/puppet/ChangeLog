@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/puppet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.122 2012/09/10 15:38:59 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.123 2012/11/06 10:04:44 graaff Exp $
+
+  06 Nov 2012; Hans de Graaff <graaff@gentoo.org> puppet-2.7.18-r1.ebuild:
+  Add back ruby19 target now that all dependencies are ready for ruby19. This
+  avoids nasty downgrades to 2.7.12 which already had the ruby19 target.
 
 *puppet-2.7.18-r1 (10 Sep 2012)
 
