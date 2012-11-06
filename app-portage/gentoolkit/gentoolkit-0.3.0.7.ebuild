@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.3.0.4-r5.ebuild,v 1.11 2012/10/29 16:31:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.3.0.7.ebuild,v 1.1 2012/11/05 23:59:49 fuzzyray Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -18,9 +18,8 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~ppc-aix ~x86-fbsd ~x64-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 
-# Note: argparse is provided in python 2.7 and 3.2 (Bug 346005)
 # Note: dev-lang/python dependencies are so emerge will print a blocker if any
 # installed slot of python is not built with +xml.  This is used since
 # PYTHON_USE_WITH just dies in the middle of the emerge. See bug 399331.
@@ -40,18 +39,16 @@ distutils_src_compile_pre_hook() {
 		|| die "setup.py set_version failed"
 }
 
-src_prepare() {
-	epatch "${FILESDIR}/${PV}-euse-376393.patch"
-	epatch "${FILESDIR}/${PV}-euse-379599.patch"
-	epatch "${FILESDIR}/${PV}-gentoolkit-375293.patch"
-	epatch "${FILESDIR}/${PV}-equery-380573.patch"
-	epatch "${FILESDIR}/${PV}-euse-382219.patch"
-	epatch "${FILESDIR}/${PV}-setup-394909.patch"
-}
-
 src_install() {
 	python_convert_shebangs -r "" build-*/scripts-*
 	distutils_src_install
+
+	# Rename the python versions of revdep-rebuild, since we are not ready
+	# to switch to the python version yet. Link /usr/bin/revdep-rebuild to
+	# revdep-rebuild.sh. Leaving the python version available for potential
+	# testing by a wider audience.
+	mv "${ED}"/usr/bin/revdep-rebuild "${ED}"/usr/bin/revdep-rebuild.py
+	dosym revdep-rebuild.sh /usr/bin/revdep-rebuild
 
 	# Create cache directory for revdep-rebuild
 	dodir /var/cache/revdep-rebuild
@@ -63,7 +60,7 @@ src_install() {
 	if use prefix; then
 		elog "The revdep-rebuild command is removed, the preserve-libs"
 		elog "feature of portage will handle issues."
-		rm "${ED}"/usr/bin/revdep-rebuild
+		rm "${ED}"/usr/bin/revdep-rebuild*
 		rm "${ED}"/usr/share/man/man1/revdep-rebuild.1
 		rm -rf "${ED}"/etc/revdep-rebuild
 		rm -rf "${ED}"/var
@@ -82,9 +79,13 @@ pkg_postinst() {
 	einfo "guide: http://www.gentoo.org/doc/en/gentoolkit.xml"
 	einfo
 	einfo "Another alternative to equery is app-portage/portage-utils"
-	ewarn
-	ewarn "glsa-check since gentoolkit 0.3 has modified some output,"
-	ewarn "options and default behavior. The list of injected GLSAs"
-	ewarn "has moved to /var/lib/portage/glsa_injected, please"
-	ewarn "run 'glsa-check -p affected' before copying the existing checkfile."
+	einfo
+	einfo "Additional tools that may be of interest:"
+	einfo
+	einfo "    app-admin/eclean-kernel"
+	einfo "    app-portage/diffmask"
+	einfo "    app-portage/flaggie"
+	einfo "    app-portage/install-mask"
+	einfo "    app-portage/portpeek"
+	einfo "    app-portage/smart-live-rebuild"
 }
