@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ldap/ruby-ldap-0.9.12.ebuild,v 1.5 2012/10/27 19:05:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ldap/ruby-ldap-0.9.12.ebuild,v 1.6 2012/11/06 17:25:24 jer Exp $
 
 EAPI="4"
 # jruby: mkmf
@@ -18,7 +18,7 @@ HOMEPAGE="http://ruby-ldap.sourceforge.net/"
 SRC_URI="mirror://rubygems/${P}.gem"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ia64 ppc ~ppc64 sparc x86 ~x86-macos"
+KEYWORDS="alpha amd64 hppa ia64 ppc ~ppc64 sparc x86 ~x86-macos"
 IUSE="ssl"
 DEPEND=">=net-nds/openldap-2
 	dev-libs/cyrus-sasl
