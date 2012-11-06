@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mu/ChangeLog,v 1.12 2012/11/02 22:54:57 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mu/ChangeLog,v 1.13 2012/11/06 20:00:16 tomka Exp $
+
+  06 Nov 2012; Thomas Kahle <tomka@gentoo.org> mu-0.9.9.ebuild:
+  Depend on gmime:2.6 per bug 439842
 
   02 Nov 2012; Thomas Kahle <tomka@gentoo.org> mu-0.9.9.ebuild:
   Fix subshell/die

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mu/mu-0.9.9.ebuild,v 1.2 2012/11/02 22:54:57 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mu/mu-0.9.9.ebuild,v 1.3 2012/11/06 20:00:16 tomka Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ IUSE="doc emacs gui"
 # Without webkit-gtk there is no pdf-preview functionality, everthing
 # else works as of 0.9.8.5
 DEPEND="
-	dev-libs/gmime
+	dev-libs/gmime:2.6
 	dev-libs/xapian
 	dev-libs/glib:2
 	gui? (
