@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/efax/efax-0.9a-r4.ebuild,v 1.2 2012/11/04 02:34:39 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/efax/efax-0.9a-r4.ebuild,v 1.3 2012/11/06 17:10:05 ago Exp $
 
 EAPI=4
 inherit eutils
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.cce.com/efax"
 SRC_URI="http://www.cce.com/efax/download/${P}-001114.tar.gz
 	mirror://debian/pool/main/e/efax/efax_0.9a-19.diff.gz"
 
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="amd64 ppc ~x86"
 IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
