@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.4.4.ebuild,v 1.11 2012/11/05 01:10:44 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.4.4.ebuild,v 1.12 2012/11/06 02:09:05 tetromino Exp $
 
 EAPI="4"
 
-inherit eutils flag-o-matic gnome.org gnome2-utils multilib virtualx
+inherit autotools eutils flag-o-matic gnome.org gnome2-utils multilib virtualx
 
 DESCRIPTION="Gimp ToolKit +"
 HOMEPAGE="http://www.gtk.org/"
@@ -65,6 +65,7 @@ DEPEND="${COMMON_DEPEND}
 		x11-proto/damageproto
 		xinerama? ( x11-proto/xineramaproto )
 	)
+	>=dev-libs/gobject-introspection-common-1.32
 	>=dev-util/gtk-doc-am-1.11
 	test? (
 		media-fonts/font-misc-misc
@@ -73,6 +74,7 @@ DEPEND="${COMMON_DEPEND}
 # gtk+-3.3.18 breaks scrolling in <=x11-libs/vte-0.31.0:2.90
 # >=xorg-server-1.11.4 needed for
 #  http://mail.gnome.org/archives/desktop-devel-list/2012-March/msg00024.html
+# eautoreconf requires dev-libs/gobject-introspection-common
 RDEPEND="${COMMON_DEPEND}
 	!<gnome-base/gail-1000
 	!<x11-libs/vte-0.31.0:2.90
@@ -100,7 +102,7 @@ src_prepare() {
 	# Apparently needed for new libxkbcommon headers; bug #408131
 	epatch "${FILESDIR}/${PN}-3.3.20-wayland-xkbcommon-headers.patch"
 
-	# Build fix for uclibc from gtk+-3.5.x; bug #441634
+	# Build fix for uclibc from gtk+-3.5.x; bug #441634; needs eautoreconf
 	epatch "${FILESDIR}/${PN}-3.4.4-isnan.patch"
 
 	# Non-working test in gentoo's env
@@ -129,7 +131,7 @@ src_prepare() {
 		[[ ${PV} != 9999 ]] && strip_builddir SRC_SUBDIRS demos Makefile.in
 	fi
 
-	[[ ${PV} = 9999 ]] && gnome2_src_prepare
+	eautoreconf # for 3.4.4-isnan.patch
 }
 
 src_configure() {
