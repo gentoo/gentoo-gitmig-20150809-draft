@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/paramiko-1.7.7.2.ebuild,v 1.1 2012/08/17 07:04:47 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/paramiko-1.7.7.2.ebuild,v 1.2 2012/11/06 21:34:01 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -21,6 +21,7 @@ IUSE="doc examples"
 
 RDEPEND=">=dev-python/pycrypto-2.1"
 DEPEND="${RDEPEND}
+	app-arch/unzip
 	dev-python/setuptools"
 
 src_test() {
