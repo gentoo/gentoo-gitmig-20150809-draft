@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libyaml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libyaml/ChangeLog,v 1.30 2012/10/10 15:37:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libyaml/ChangeLog,v 1.31 2012/11/06 16:39:36 jer Exp $
+
+  06 Nov 2012; Jeroen Roovers <jer@gentoo.org> libyaml-0.1.4.ebuild:
+  Stable for HPPA (bug #411507).
 
   10 Oct 2012; Jeroen Roovers <jer@gentoo.org> libyaml-0.1.4.ebuild:
   Invert USE=test logic. Sed must die() (bug #421611).
