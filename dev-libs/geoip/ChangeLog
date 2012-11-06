@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/geoip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.133 2012/08/30 09:14:37 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.134 2012/11/06 07:46:23 pinkbyte Exp $
+
+  06 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> geoip-1.4.8-r1.ebuild:
+  Stable on amd64 wrt bug #441184
 
   30 Aug 2012; Sergey Popov <pinkbyte@gentoo.org> geoip-1.4.8-r1.ebuild:
   Add GeoIPASNum database to SRC_URI as it is updated by geoipupdate.sh and
