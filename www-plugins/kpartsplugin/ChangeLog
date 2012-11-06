@@ -1,6 +1,9 @@
 # ChangeLog for www-plugins/kpartsplugin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/kpartsplugin/ChangeLog,v 1.13 2012/09/11 10:40:56 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/kpartsplugin/ChangeLog,v 1.14 2012/11/06 17:09:21 ago Exp $
+
+  06 Nov 2012; <ago@gentoo.org> kpartsplugin-20120723.ebuild:
+  Stable for amd64, wrt bug #441546
 
   11 Sep 2012; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
   Drop maintainership
