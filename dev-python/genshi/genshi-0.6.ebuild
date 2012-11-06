@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/genshi/genshi-0.6.ebuild,v 1.8 2012/11/05 11:47:54 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/genshi/genshi-0.6.ebuild,v 1.9 2012/11/06 19:27:08 mr_bones_ Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -34,9 +34,9 @@ src_prepare() {
 
 src_test() {
 	# The html_test.patch is needed only for python2.7 for now, breaks all other versions. The html.py needs
-	# adjusting only to pass the tests for 2.7. Other ABIs still need the original filters/tests/html.py, 
+	# adjusting only to pass the tests for 2.7. Other ABIs still need the original filters/tests/html.py,
 	# hence this long winded juggling appears the only method to set a viable genshi/filters/tests/html.py
-	# for each python version. The test needed patching, instead they changed the genshi/filters/tests/html.py 
+	# for each python version. The test needed patching, instead they changed the genshi/filters/tests/html.py
 	setHtmlpy() {
 		for f in build-${PYTHON_ABI}; do
 			if [[ ${PYTHON_ABI:2:3} < '7' || ${PYTHON_ABI:4:4} == "pypy" ]]; then
