@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/puppet-lint
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet-lint/ChangeLog,v 1.2 2012/11/06 05:49:37 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet-lint/ChangeLog,v 1.3 2012/11/06 16:25:09 tampakrap Exp $
+
+  06 Nov 2012; Theo Chatzimichos <tampakrap@gentoo.org> metadata.xml:
+  Add sysadmin herd as maintainer (antarus is already there
 
   06 Nov 2012; Alec Warner <antarus@gentoo.org> -Changelog:
   Remove duplicate Changelog :/
