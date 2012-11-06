@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libestr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libestr/ChangeLog,v 1.17 2012/11/06 07:11:53 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libestr/ChangeLog,v 1.18 2012/11/06 07:13:18 pinkbyte Exp $
+
+  06 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> libestr-0.1.4.ebuild:
+  Stable on amd64 wrt bug #441190
 
   06 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> libestr-0.1.4.ebuild:
   Fix minor QA issues - replace 'find/rm' with prune_libtool_files, replace
