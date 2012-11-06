@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/camldbm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camldbm/ChangeLog,v 1.3 2012/11/05 00:14:43 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camldbm/ChangeLog,v 1.4 2012/11/06 12:50:47 blueness Exp $
+
+  06 Nov 2012; Anthony G. Basile <blueness@gentoo.org> camldbm-1.0.ebuild:
+  keyword ~ppc, bug #440760
 
   05 Nov 2012;  <naota@gentoo.org> camldbm-1.0.ebuild:
   Add ~x86-fbsd. #440760
