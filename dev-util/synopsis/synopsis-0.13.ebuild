@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/synopsis/synopsis-0.13.ebuild,v 1.1 2012/11/05 17:53:44 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/synopsis/synopsis-0.13.ebuild,v 1.2 2012/11/06 19:27:33 mr_bones_ Exp $
 
 EAPI=4
 DISTUTILS_IN_SOURCE_BUILD=1
@@ -35,8 +35,8 @@ pkg_setup() {
 python_prepare() {
 	rm -r src/Synopsis/gc || die "failed to remove bundled lib"
 
-	# the distutils script passes its options to a number of 
-	# autoconf scripts, to not all of which these options are 
+	# the distutils script passes its options to a number of
+	# autoconf scripts, to not all of which these options are
 	# relevant. adding this option disables these useless warnings.
 	sed -e "/self.announce(command)/i\        command += ' --disable-option-checking'" \
 		-i Synopsis/dist/command/config.py || die
