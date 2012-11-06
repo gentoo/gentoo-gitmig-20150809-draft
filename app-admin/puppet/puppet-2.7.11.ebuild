@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-2.7.11.ebuild,v 1.9 2012/08/16 03:48:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-2.7.11.ebuild,v 1.10 2012/11/06 22:55:56 tampakrap Exp $
 
 EAPI="4"
 # ruby19: dev-ruby/ruby-ldap has no ruby19
@@ -15,7 +15,7 @@ inherit elisp-common xemacs-elisp-common eutils ruby-fakegem user
 DESCRIPTION="A system automation and configuration management software"
 HOMEPAGE="http://puppetlabs.com/"
 
-LICENSE="Apache-2.0"
+LICENSE="Apache-2.0 GPL-2"
 SLOT="0"
 IUSE="augeas diff doc emacs ldap minimal rrdtool selinux shadow sqlite3 vim-syntax xemacs"
 KEYWORDS="amd64 hppa ppc sparc x86"
