@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.26-r1.ebuild,v 1.6 2012/11/05 18:29:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.26-r1.ebuild,v 1.7 2012/11/06 03:19:17 vapier Exp $
 
 EAPI="3"
 
@@ -70,6 +70,7 @@ src_install() {
 
 	if use minimal ; then
 		find "${ED}"/etc "${ED}"/*bin/ "${ED}"/usr/*bin/ \
-			-type f -a '!' -name tar -delete
+			-type f -a '!' '(' -name tar -o -name ${p}tar ')' \
+			-delete
 	fi
 }
