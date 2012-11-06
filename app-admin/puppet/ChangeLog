@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/puppet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.124 2012/11/06 16:15:59 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.125 2012/11/06 19:17:59 idl0r Exp $
+
+*puppet-3.0.1 (06 Nov 2012)
+*puppet-2.7.19 (06 Nov 2012)
+
+  06 Nov 2012; Christian Ruppert <idl0r@gentoo.org> +puppet-2.7.19.ebuild,
+  +puppet-3.0.1.ebuild, +files/puppet.init-r1, files/puppetmaster.confd,
+  files/puppetmaster.init:
+  Version bump, bug 434814. puppet-3 ebuild by Alec Warner <antarus@gentoo.org>
+  and me. Also fixes bug 421207.
 
   06 Nov 2012; Theo Chatzimichos <tampakrap@gentoo.org> metadata.xml:
   Add sysadmin and ruby herds in metadata.xml
