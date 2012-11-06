@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/traits
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/traits/ChangeLog,v 1.31 2012/10/09 13:31:29 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/traits/ChangeLog,v 1.32 2012/11/06 04:16:00 idella4 Exp $
+
+  06 Nov 2012; Ian Delaney <idella4@gentoo.org> traits-4.1.0.ebuild:
+  PYTHONPATH set in test phase, fixes Bug #420055
 
 *traits-4.2.0 (09 Oct 2012)
 
