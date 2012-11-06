@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-1.4.2-r3.ebuild,v 1.8 2012/06/17 18:57:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-1.4.2-r3.ebuild,v 1.9 2012/11/06 07:17:09 dolsen Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2:2.5"
@@ -70,7 +70,6 @@ src_install() {
 
 pkg_postinst() {
 	distutils_pkg_postinst
-
 	einfo "You are now ready to add overlays into your system."
 	einfo
 	einfo "  layman -L"
@@ -83,7 +82,12 @@ pkg_postinst() {
 	elog
 	elog  "If this is the very first overlay you add with layman,"
 	elog  "you need to append the following statement to your"
-	elog  "/etc/make.conf file:"
+	# This relates to #441902 bug.
+	if [[ -e "${ROOT}"/etc/portage/make.conf ]] ; then
+		elog  "/etc/portage/make.conf file:"
+	else
+		elog "/etc/make.conf file:"
+	fi
 	elog
 	elog  "  source /var/lib/layman/make.conf"
 	elog
