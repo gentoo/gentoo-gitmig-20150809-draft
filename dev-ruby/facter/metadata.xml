@@ -4,4 +4,6 @@
 <maintainer>
   <email>matsuu@gentoo.org</email>
 </maintainer>
+<herd>sysadmin</herd>
+<herd>ruby</herd>
 </pkgmetadata>
