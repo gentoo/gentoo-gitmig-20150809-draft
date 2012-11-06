@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/smb4k
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/ChangeLog,v 1.111 2012/08/28 08:27:39 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/ChangeLog,v 1.112 2012/11/06 17:07:10 ago Exp $
+
+  06 Nov 2012; <ago@gentoo.org> smb4k-1.0.4.ebuild:
+  Stable for amd64, wrt bug #441482
 
 *smb4k-1.0.4 (28 Aug 2012)
 
