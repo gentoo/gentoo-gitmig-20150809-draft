@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rspec-expectations
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-expectations/ChangeLog,v 1.34 2012/10/28 17:20:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-expectations/ChangeLog,v 1.35 2012/11/06 17:16:28 jer Exp $
+
+  06 Nov 2012; Jeroen Roovers <jer@gentoo.org>
+  rspec-expectations-2.6.0-r1.ebuild:
+  Stable for HPPA (bug #426668).
 
   28 Oct 2012; Raúl Porcel <armin76@gentoo.org>
   rspec-expectations-2.6.0.ebuild, rspec-expectations-2.6.0-r1.ebuild,
