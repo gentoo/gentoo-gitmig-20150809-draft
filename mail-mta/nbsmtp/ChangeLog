@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/nbsmtp
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nbsmtp/ChangeLog,v 1.46 2011/03/28 09:10:33 eras Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nbsmtp/ChangeLog,v 1.47 2012/11/06 11:03:36 eras Exp $
+
+  06 Nov 2012; Eray Aslan <eras@gentoo.org> -nbsmtp-1.00-r2.ebuild,
+  -nbsmtp-1.00-r3.ebuild:
+  Remove from the tree - bug #389373
 
   28 Mar 2011; Eray Aslan <eras@gentoo.org> -nbsmtp-1.00.ebuild:
   remove old version
