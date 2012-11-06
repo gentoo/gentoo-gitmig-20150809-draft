@@ -1,6 +1,11 @@
 # ChangeLog for app-text/cb2bib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cb2bib/ChangeLog,v 1.15 2012/06/18 12:45:23 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cb2bib/ChangeLog,v 1.16 2012/11/06 10:16:16 pesa Exp $
+
+*cb2bib-1.4.9 (06 Nov 2012)
+
+  06 Nov 2012; Davide Pesavento <pesa@gentoo.org> +cb2bib-1.4.9.ebuild:
+  Version bump. Made qt-webkit optional.
 
   18 Jun 2012; Davide Pesavento <pesa@gentoo.org> -cb2bib-1.4.7.ebuild:
   old
@@ -66,4 +71,3 @@
   +metadata.xml:
   Initial commit of cb2bib. Thanks to Hugo Mildenberger and Andreas K.
   Huettel (dilfridge) - bug #123627
-
