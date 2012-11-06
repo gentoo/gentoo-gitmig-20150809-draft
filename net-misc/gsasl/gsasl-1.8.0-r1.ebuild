@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/gsasl-1.8.0-r1.ebuild,v 1.1 2012/08/22 13:38:45 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/gsasl-1.8.0-r1.ebuild,v 1.2 2012/11/06 19:52:17 ago Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnu.org/software/gsasl/"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="amd64 ~ppc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="doc gcrypt idn kerberos nls ntlm static-libs +threads"
 
 DEPEND="
