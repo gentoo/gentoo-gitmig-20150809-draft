@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/telepathy-qt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/ChangeLog,v 1.16 2012/09/11 23:02:04 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/ChangeLog,v 1.17 2012/11/06 17:07:53 ago Exp $
+
+  06 Nov 2012; <ago@gentoo.org> telepathy-qt-0.9.3.ebuild:
+  Stable for amd64, wrt bug #441456
 
   11 Sep 2012; Johannes Huber <johu@gentoo.org>
   +files/telepathy-qt-0.9.3-tp-glib-0.18-tests.patch, telepathy-qt-0.9.3.ebuild:
