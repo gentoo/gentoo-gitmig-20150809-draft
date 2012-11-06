@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/msmtp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.137 2012/10/22 09:46:04 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.138 2012/11/06 11:16:40 eras Exp $
+
+  06 Nov 2012; Eray Aslan <eras@gentoo.org> msmtp-1.4.28.ebuild,
+  msmtp-1.4.30.ebuild:
+  mail-mta/nbsmtp is no longer in the tree - remove from DEPEND
 
   22 Oct 2012; Tim Harder <radhermit@gentoo.org> -msmtp-1.4.29.ebuild:
   Remove old.
@@ -535,4 +539,3 @@
   31 May 2004; Grant Goodyear <g2boojum@gentoo.org> +msmtp-1.0.0.ebuild:
   New package.  Thanks to Martin Lambers (bug # 33423) and 
   Tom Martin (Bug # 49400)!
-

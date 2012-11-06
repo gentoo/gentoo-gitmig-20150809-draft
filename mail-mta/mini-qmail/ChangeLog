@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/mini-qmail
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/mini-qmail/ChangeLog,v 1.20 2012/06/04 21:05:00 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/mini-qmail/ChangeLog,v 1.21 2012/11/06 11:15:43 eras Exp $
+
+  06 Nov 2012; Eray Aslan <eras@gentoo.org> mini-qmail-1.05-r1.ebuild,
+  mini-qmail-1.05.ebuild, mini-qmail-1.06.ebuild:
+  mail-mta/nbsmtp is no longer in the tree - remove from DEPEND
 
   04 Jun 2012; Zac Medico <zmedico@gentoo.org> mini-qmail-1.05.ebuild:
   inherit user for enewgroup and enewuser

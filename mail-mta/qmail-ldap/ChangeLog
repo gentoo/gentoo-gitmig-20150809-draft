@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/qmail-ldap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/ChangeLog,v 1.33 2012/02/12 20:55:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/ChangeLog,v 1.34 2012/11/06 11:20:22 eras Exp $
+
+  06 Nov 2012; Eray Aslan <eras@gentoo.org> qmail-ldap-1.03-r8.ebuild:
+  mail-mta/nbsmtp is no longer in the tree - remove from DEPEND
 
   12 Feb 2012; Mike Frysinger <vapier@gentoo.org> qmail-ldap-1.03-r8.ebuild:
   Drop env-update call that the PM does for us #402339.

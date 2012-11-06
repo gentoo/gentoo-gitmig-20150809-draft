@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.80.1.ebuild,v 1.8 2012/11/04 19:32:38 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.80.1.ebuild,v 1.9 2012/11/06 11:14:52 eras Exp $
 
 EAPI="3"
 
@@ -58,7 +58,6 @@ RDEPEND="${COMMON_DEPEND}
 	!mail-mta/mini-qmail
 	!<mail-mta/msmtp-1.4.19-r1
 	!>=mail-mta/msmtp-1.4.19-r1[mta]
-	!mail-mta/nbsmtp
 	!mail-mta/netqmail
 	!mail-mta/nullmailer
 	!mail-mta/postfix

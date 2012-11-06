@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.06.ebuild,v 1.3 2012/06/04 21:06:18 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.06.ebuild,v 1.4 2012/11/06 11:18:38 eras Exp $
 
 inherit eutils flag-o-matic autotools user
 
@@ -30,7 +30,6 @@ RDEPEND="virtual/shadow
 	!mail-mta/exim
 	!mail-mta/mini-qmail
 	!mail-mta/msmtp
-	!mail-mta/nbsmtp
 	!mail-mta/netqmail
 	!mail-mta/postfix
 	!mail-mta/qmail-ldap

@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/netqmail
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.60 2012/06/04 21:02:40 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.61 2012/11/06 11:17:40 eras Exp $
+
+  06 Nov 2012; Eray Aslan <eras@gentoo.org> netqmail-1.05-r4.ebuild,
+  netqmail-1.05-r8.ebuild, netqmail-1.06.ebuild:
+  mail-mta/nbsmtp is no longer in the tree - remove from DEPEND
 
   04 Jun 2012; Zac Medico <zmedico@gentoo.org> netqmail-1.05-r4.ebuild,
   netqmail-1.05-r8.ebuild, netqmail-1.06.ebuild:

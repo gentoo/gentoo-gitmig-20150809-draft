@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.10_pre20121031.ebuild,v 1.1 2012/11/06 07:09:32 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.10_pre20121031.ebuild,v 1.2 2012/11/06 11:19:44 eras Exp $
 
 EAPI=4
 inherit eutils multilib ssl-cert toolchain-funcs flag-o-matic pam user versionator
@@ -45,7 +45,6 @@ RDEPEND="${DEPEND}
 	!mail-mta/exim
 	!mail-mta/mini-qmail
 	!mail-mta/msmtp[mta]
-	!mail-mta/nbsmtp
 	!mail-mta/netqmail
 	!mail-mta/nullmailer
 	!mail-mta/qmail-ldap

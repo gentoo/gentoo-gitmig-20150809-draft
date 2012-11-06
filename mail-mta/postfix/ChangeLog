@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.398 2012/11/06 07:09:32 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.399 2012/11/06 11:19:44 eras Exp $
+
+  06 Nov 2012; Eray Aslan <eras@gentoo.org> postfix-2.10_pre20121031.ebuild,
+  postfix-2.8.12.ebuild, postfix-2.8.9.ebuild, postfix-2.9.4.ebuild:
+  mail-mta/nbsmtp is no longer in the tree - remove from DEPEND
 
 *postfix-2.10_pre20121031 (06 Nov 2012)
 

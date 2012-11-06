@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/nullmailer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/ChangeLog,v 1.57 2012/09/18 10:15:28 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/ChangeLog,v 1.58 2012/11/06 11:18:38 eras Exp $
+
+  06 Nov 2012; Eray Aslan <eras@gentoo.org> nullmailer-1.05.ebuild,
+  nullmailer-1.06.ebuild, nullmailer-1.10-r1.ebuild, nullmailer-1.10.ebuild,
+  nullmailer-1.11.ebuild:
+  mail-mta/nbsmtp is no longer in the tree - remove from DEPEND
 
   18 Sep 2012; Anthony G. Basile <blueness@gentoo.org> nullmailer-1.11.ebuild:
   stable ppc, bug #433303
@@ -296,4 +301,3 @@
   01 Aug 2003; Robin H. Johnson <robbat2@gentoo.org>
   nullmailer-1.00_rc7.ebuild, files/remotes.sample:
   Initial Commit.
-

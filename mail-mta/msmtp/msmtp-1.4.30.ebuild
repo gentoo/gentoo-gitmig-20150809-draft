@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.4.30.ebuild,v 1.1 2012/10/22 09:35:22 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.4.30.ebuild,v 1.2 2012/11/06 11:16:40 eras Exp $
 
 EAPI=4
 inherit multilib python eutils
@@ -33,7 +33,6 @@ RDEPEND="${CDEPEND}
 			!mail-mta/esmtp
 			!mail-mta/exim
 			!mail-mta/mini-qmail
-			!mail-mta/nbsmtp
 			!mail-mta/netqmail
 			!mail-mta/nullmailer
 			!mail-mta/postfix
