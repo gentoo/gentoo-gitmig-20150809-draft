@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/pokerth-0.9.5.ebuild,v 1.8 2012/09/04 19:13:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/pokerth-0.9.5.ebuild,v 1.9 2012/11/06 13:12:46 tupone Exp $
 
-EAPI=2
-inherit flag-o-matic eutils qt4-r2 games
+EAPI=4
+inherit flag-o-matic eutils boost-utils qt4-r2 games
 
 MY_P="PokerTH-${PV}-src"
 DESCRIPTION="Texas Hold'em poker game"
@@ -16,8 +16,7 @@ KEYWORDS="amd64 x86"
 IUSE="dedicated"
 
 RDEPEND="dev-db/sqlite:3
-	>=dev-libs/boost-1.44
-	<dev-libs/boost-1.50
+	dev-libs/boost
 	dev-libs/libgcrypt
 	dev-libs/tinyxml[stl]
 	net-libs/libircclient
@@ -49,20 +48,11 @@ src_prepare() {
 
 	epatch "${FILESDIR}"/${P}-underlinking.patch
 
-	local boost_ver=$(best_version "<dev-libs/boost-1.50")
+	append-cppflags -I$(boost-utils_get_includedir)
+	append-ldflags -L$(boost-utils_get_libdir)
 
-	boost_ver=${boost_ver/*boost-/}
-	boost_ver=${boost_ver%.*}
-	boost_ver=${boost_ver/./_}
-
-	einfo "Using boost version ${boost_ver}"
-	append-cppflags \
-		-I/usr/include/boost-${boost_ver} -DBOOST_FILESYSTEM_VERSION=2
-	append-ldflags \
-		-L/usr/$(get_libdir)/boost-${boost_ver}
-
-	export BOOST_INCLUDEDIR="/usr/include/boost-${boost_ver}"
-	export BOOST_LIBRARYDIR="/usr/$(get_libdir)/boost-${boost_ver}"
+	export BOOST_INCLUDEDIR=$(boost-utils_get_includedir)
+	export BOOST_LIBRARYDIR=$(boost-utils_get_libdir)
 }
 
 src_configure() {
@@ -70,11 +60,11 @@ src_configure() {
 }
 
 src_install() {
-	dogamesbin bin/pokerth_server || die
+	dogamesbin bin/pokerth_server
 	if ! use dedicated ; then
-		dogamesbin ${PN} || die
+		dogamesbin ${PN}
 		insinto "${GAMES_DATADIR}/${PN}"
-		doins -r data || die
+		doins -r data
 		domenu ${PN}.desktop
 		doicon ${PN}.png
 	fi
