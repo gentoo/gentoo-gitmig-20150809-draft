@@ -1,6 +1,10 @@
 # ChangeLog for games-action/violetland
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/violetland/ChangeLog,v 1.24 2012/08/29 04:23:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/violetland/ChangeLog,v 1.25 2012/11/06 08:53:49 tupone Exp $
+
+  06 Nov 2012; Tupone Alfredo <tupone@gentoo.org> violetland-0.4.3.ebuild,
+  +files/violetland-0.4.3-boost150.patch:
+  Build with boost-1.50 Bug #425454 by Diego
 
   29 Aug 2012; Michael Sterrett <mr_bones_@gentoo.org> violetland-0.4.3.ebuild:
   limit boost to the versions that work
