@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mu/mu-0.9.9.ebuild,v 1.3 2012/11/06 20:00:16 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mu/mu-0.9.9.ebuild,v 1.4 2012/11/07 21:26:39 tomka Exp $
 
 EAPI=4
 
@@ -16,8 +16,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc emacs gui"
 
-# Without webkit-gtk there is no pdf-preview functionality, everthing
+# Without webkit-gtk there is no pdf-preview functionality, everything
 # else works as of 0.9.8.5
+# net-mail/mailutils also installes /usr/bin/mu.  Block it until somebody
+# really wants both installed at the same time.
 DEPEND="
 	dev-libs/gmime:2.6
 	dev-libs/xapian
@@ -25,7 +27,8 @@ DEPEND="
 	gui? (
 	  x11-libs/gtk+:3
 	  net-libs/webkit-gtk:3 )
-	emacs? ( >=virtual/emacs-23 )"
+	emacs? ( >=virtual/emacs-23 )
+	!net-mail/mailutils"
 RDEPEND="${DEPEND}"
 
 SITEFILE="70mu-gentoo.el"
