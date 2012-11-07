@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.32.1-r1.ebuild,v 1.10 2012/08/26 08:41:38 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.32.1-r1.ebuild,v 1.11 2012/11/07 21:44:04 tetromino Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -118,5 +118,5 @@ pkg_postinst() {
 
 	echo
 	elog "If ${PN} doesn't handle some music or video format, please check"
-	elog "your USE flags on media-plugins/gst-plugins-meta"
+	elog "your USE flags on media-plugins/gst-plugins-meta:0.10"
 }
