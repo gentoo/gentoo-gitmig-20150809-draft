@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.239 2012/11/05 21:48:12 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.240 2012/11/07 15:10:02 williamh Exp $
+
+  07 Nov 2012; William Hubbs <williamh@gentoo.org> ChangeLog:
+  Fix references to $EROOT and $ED. References to $EROOT should be quoted
+  and not followed with /. References to $ED should be quoted. This is for
+  bug #442020. This applies to my last commit for openrc-9999.
 
   05 Nov 2012; William Hubbs <williamh@gentoo.org> -openrc-0.10.4.ebuild,
   -openrc-0.11.2.ebuild, -openrc-0.11.3.ebuild:
