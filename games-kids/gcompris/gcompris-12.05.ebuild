@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-12.05.ebuild,v 1.6 2012/10/17 03:51:56 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-12.05.ebuild,v 1.7 2012/11/07 20:14:51 tetromino Exp $
 
 EAPI=2
 PYTHON_DEPEND="2:2.6"
@@ -20,10 +20,10 @@ IUSE="gnet"
 RDEPEND="x11-libs/gtk+:2
 	gnome-base/librsvg[gtk]
 	media-libs/gstreamer:0.10
-	media-libs/gst-plugins-good
-	media-plugins/gst-plugins-ogg
-	media-plugins/gst-plugins-alsa
-	media-plugins/gst-plugins-vorbis
+	media-libs/gst-plugins-good:0.10
+	media-plugins/gst-plugins-ogg:0.10
+	media-plugins/gst-plugins-alsa:0.10
+	media-plugins/gst-plugins-vorbis:0.10
 	media-libs/sdl-mixer
 	media-libs/libsdl
 	dev-libs/libxml2
