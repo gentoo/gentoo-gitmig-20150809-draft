@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.53 2012/10/25 07:56:27 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.54 2012/11/07 21:06:22 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -71,7 +71,7 @@ RDEPEND="
 	gstreamer? (
 		>=media-libs/gstreamer-0.10.31:0.10
 		upnp? ( >=media-libs/gupnp-dlna-0.5 )
-		!upnp? ( >=media-libs/gst-plugins-base-0.10.31 ) )
+		!upnp? ( >=media-libs/gst-plugins-base-0.10.31:0.10 ) )
 	!gstreamer? ( !xine? ( || ( media-video/totem media-video/mplayer ) ) )
 	gtk? (
 		>=dev-libs/libgee-0.3:0
