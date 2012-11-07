@@ -1,7 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rcsi/rcsi-0.5.ebuild,v 1.1 2011/02/10 21:36:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rcsi/rcsi-0.5.ebuild,v 1.2 2012/11/07 20:31:35 robbat2 Exp $
 
+EAPI=4
 inherit toolchain-funcs
 
 DESCRIPTION="A program to give information about RCS files"
@@ -18,18 +19,12 @@ RDEPEND=">=dev-vcs/rcs-5.7-r2"
 
 S=${WORKDIR}/${PN}
 
-src_unpack() {
-	unpack ${A}
-	CC="$(tc-getCC)"
-	sed -e "s^gcc -Wall -O2 -Xlinker -s^${CC} -Wall ${CFLAGS}^g" -i "${S}"/Makefile
-}
-
 src_compile() {
-	emake -j1 rcsi || die
+	$(tc-getCC) $CFLAGS $LDFLAGS rcsi.c -o rcsi || die "Compile failed"
 }
 
 src_install() {
-	dobin rcsi || die
+	dobin rcsi
 	doman rcsi.1
 	dodoc README
 	dohtml README.html example{1,2}.png

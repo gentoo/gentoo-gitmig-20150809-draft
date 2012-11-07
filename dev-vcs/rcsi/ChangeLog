@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/rcsi
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rcsi/ChangeLog,v 1.1 2011/02/10 21:36:09 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rcsi/ChangeLog,v 1.2 2012/11/07 20:31:35 robbat2 Exp $
+
+  07 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> rcsi-0.5.ebuild:
+  Cleanup from bug #442206, submitted by Vicente Olivert Riera
+  <peratu@carrosses.com>.
 
   10 Feb 2011; Ulrich Mueller <ulm@gentoo.org> +rcsi-0.5.ebuild, +metadata.xml:
   Move package from dev-util to dev-vcs, bug 56967.
@@ -21,4 +25,3 @@
 
   12 Feb 2005; Robin H. Johnson <robbat2@gentoo.org> +rcsi-0.5.ebuild:
   Initial submission by James Rowe <jnrowe@ukfsn.org>, cleaned up a bit.
-
