@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ace/ace-1.4.ebuild,v 1.2 2012/09/24 18:51:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ace/ace-1.4.ebuild,v 1.3 2012/11/07 16:51:53 mr_bones_ Exp $
 
 EAPI=2
-inherit eutils games
+inherit autotools base eutils games
 
 DESCRIPTION="DJ Delorie's Ace of Penguins solitaire games"
 HOMEPAGE="http://www.delorie.com/store/ace/"
@@ -19,7 +19,12 @@ RDEPEND="x11-libs/libX11
 DEPEND="${RDEPEND}
 	x11-proto/xproto"
 
-PATCHES=( "${FILESDIR}"/${P}-no-xpm.patch "${FILESDIR}"/${P}-libpng15.patch )
+PATCHES=( "${FILESDIR}"/${P}-no-xpm.patch "${FILESDIR}"/${P}-libpng15.patch "${FILESDIR}"/${P}-gold.patch )
+
+src_prepare() {
+	base_src_prepare
+	eautoreconf
+}
 
 src_configure() {
 	egamesconf \

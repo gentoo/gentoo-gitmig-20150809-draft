@@ -1,6 +1,10 @@
 # ChangeLog for games-board/ace
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ace/ChangeLog,v 1.25 2012/09/24 18:51:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ace/ChangeLog,v 1.26 2012/11/07 16:51:53 mr_bones_ Exp $
+
+  07 Nov 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/ace-1.4-gold.patch, ace-1.4.ebuild:
+  add patch from Julian Ospald to link with gold linker (bug #435826)
 
   24 Sep 2012; Michael Sterrett <mr_bones_@gentoo.org> ace-1.4.ebuild:
   add slot for libpng
