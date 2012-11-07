@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sprop/sprop-0.1.ebuild,v 1.1 2012/11/07 06:16:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sprop/sprop-0.1.ebuild,v 1.2 2012/11/07 06:19:19 jer Exp $
 
 EAPI=4
 inherit toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="http://dl.suckless.org/tools/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
