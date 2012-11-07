@@ -1,5 +1,5 @@
---- src/statistics.hpp.orig	2008-11-07 19:09:29.000000000 +0100
-+++ src/statistics.hpp	2008-11-07 19:09:45.000000000 +0100
+--- a/src/statistics.hpp
++++ b/src/statistics.hpp
 @@ -3,6 +3,7 @@
  
  #include <list>
