@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/hiera
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hiera/ChangeLog,v 1.1 2012/11/07 10:39:07 graaff Exp $
+
+*hiera-1.1.1 (07 Nov 2012)
+
+  07 Nov 2012; Hans de Graaff <graaff@gentoo.org> +hiera-1.1.1.ebuild,
+  +metadata.xml:
+  Initial import. New dependency for puppet 3.
+
