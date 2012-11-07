@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.600-r1.ebuild,v 1.1 2012/11/05 21:40:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.600-r1.ebuild,v 1.2 2012/11/07 18:51:57 hwoarang Exp $
 
 EAPI="3"
 
@@ -46,9 +46,6 @@ DEPEND="virtual/perl-Sys-Syslog
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	# Fix security bug - https://bugs.gentoo.org/show_bug.cgi?id=441840
-	epatch "${FILESDIR}/${P}-SA51201.patch"
-
 	local perl="$( which perl )"
 
 	# Remove the unnecessary and incompatible files
@@ -57,6 +54,9 @@ src_prepare() {
 		rm -rf {format,{bsd,hpux,sgi}exports,zones,rbac}
 		rm -f mount/{free,net,open}bsd-mounts*
 		rm -f mount/macos-mounts*
+
+		# Fix security bug - https://bugs.gentoo.org/show_bug.cgi?id=441840
+		epatch "${FILESDIR}/${P}-SA51201.patch"
 	fi
 
 	# For security reasons remove the SSL certificate that comes with Webmin

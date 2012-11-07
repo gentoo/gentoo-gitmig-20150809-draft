@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/webmin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.200 2012/11/05 21:40:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.201 2012/11/07 18:51:57 hwoarang Exp $
+
+  07 Nov 2012; Markos Chandras <hwoarang@gentoo.org> webmin-1.600-r1.ebuild:
+  The SA51201 patch does need to apply in the minimal version
 
 *webmin-1.600-r1 (05 Nov 2012)
 
