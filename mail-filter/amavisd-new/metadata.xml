@@ -9,5 +9,6 @@
 		<flag name='qmail'>Add qmail support</flag>
 		<flag name='razor'>Add support for mail-filter/razor</flag>
 		<flag name='spamassassin'>Add support for mail-filter/spamassassin</flag>
+		<flag name='zmq'>Add support for zeromq sockets</flag>
 	</use>
 </pkgmetadata>
