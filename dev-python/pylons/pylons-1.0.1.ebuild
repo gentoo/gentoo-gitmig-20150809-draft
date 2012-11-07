@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylons/pylons-1.0.1.ebuild,v 1.1 2012/08/29 06:09:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylons/pylons-1.0.1.ebuild,v 1.2 2012/11/07 10:28:17 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -30,6 +30,7 @@ RDEPEND=">=dev-python/beaker-1.3
 	>=dev-python/paste-1.7.2
 	>=dev-python/pastedeploy-1.3.3
 	>=dev-python/pastescript-1.7.3
+	>=dev-python/repoze-lru-0.3
 	>=dev-python/routes-1.12
 	>=dev-python/simplejson-2.0.8
 	>=dev-python/tempita-0.2
