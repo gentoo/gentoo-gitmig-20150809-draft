@@ -1,6 +1,11 @@
 # ChangeLog for media-video/smplayer2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer2/ChangeLog,v 1.6 2012/11/03 12:59:56 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer2/ChangeLog,v 1.7 2012/11/07 03:21:00 jer Exp $
+
+  07 Nov 2012; Jeroen Roovers <jer@gentoo.org>
+  smplayer2-0.7.0_pre20111120.ebuild, smplayer2-0.7.1_p20120301.ebuild,
+  smplayer2-0.7.3_p20120524.ebuild:
+  Remove HPPA keywording (bug #440834).
 
   03 Nov 2012; Sergey Popov <pinkbyte@gentoo.org>
   smplayer2-0.7.3_p20120524.ebuild:
