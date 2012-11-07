@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-3.0.1.ebuild,v 1.5 2012/11/06 22:45:32 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-3.0.1.ebuild,v 1.6 2012/11/07 21:33:31 idl0r Exp $
 
 EAPI="4"
 
@@ -18,7 +18,8 @@ KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE="augeas diff doc emacs ldap minimal rrdtool selinux shadow sqlite3 vim-syntax xemacs"
 
 ruby_add_rdepend "
-	>=dev-ruby/facter-1.5.6
+	dev-ruby/hiera
+	>=dev-ruby/facter-1.6.2
 	augeas? ( dev-ruby/ruby-augeas )
 	diff? ( dev-ruby/diff-lcs )
 	doc? ( dev-ruby/rdoc )
