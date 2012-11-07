@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/st/st-0.3.ebuild,v 1.2 2012/11/07 05:53:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/st/st-0.3.ebuild,v 1.3 2012/11/07 17:48:37 jer Exp $
 
 EAPI=4
 inherit savedconfig toolchain-funcs
@@ -46,8 +46,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "Please ensure a usable font is installed, like"
-	elog "    media-fonts/corefonts"
-	elog "    media-fonts/dejavu"
-	elog "    media-fonts/urw-fonts"
+	if ! [[ "${REPLACING_VERSIONS}" ]]; then
+		elog "Please ensure a usable font is installed, like"
+		elog "    media-fonts/corefonts"
+		elog "    media-fonts/dejavu"
+		elog "    media-fonts/urw-fonts"
+	fi
 }

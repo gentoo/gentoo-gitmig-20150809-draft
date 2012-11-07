@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/st
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/st/ChangeLog,v 1.7 2012/11/07 05:53:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/st/ChangeLog,v 1.8 2012/11/07 17:48:37 jer Exp $
+
+  07 Nov 2012; Jeroen Roovers <jer@gentoo.org> st-0.3.ebuild:
+  Show elog messages only on first install.
 
   07 Nov 2012; Jeroen Roovers <jer@gentoo.org> st-0.3.ebuild:
   Add more deps.
