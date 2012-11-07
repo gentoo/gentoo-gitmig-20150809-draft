@@ -1,9 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.12.3.ebuild,v 1.5 2012/11/01 10:32:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.12.3.ebuild,v 1.6 2012/11/07 19:08:38 pacho Exp $
 
 EAPI=4
-
 GCONF_DEBUG=no
 GNOME2_LA_PUNT=yes
 
@@ -15,7 +14,7 @@ HOMEPAGE="http://projects.gnome.org/libchamplain/"
 SLOT="0.12"
 LICENSE="LGPL-2"
 KEYWORDS="amd64 ~ppc x86"
-IUSE="debug doc +gtk +introspection vala"
+IUSE="debug +gtk +introspection vala"
 
 REQUIRED_USE="vala? ( introspection )"
 
@@ -31,8 +30,8 @@ RDEPEND="
 		media-libs/clutter-gtk:1.0 )
 	introspection? ( dev-libs/gobject-introspection )"
 DEPEND="${RDEPEND}
+	dev-util/gtk-doc-am
 	virtual/pkgconfig
-	doc? ( dev-util/gtk-doc )
 	vala? ( dev-lang/vala:0.14[vapigen] )"
 # segfaults with vala:0.12
 # vala-0.14.2-r1 required for bug #402013
