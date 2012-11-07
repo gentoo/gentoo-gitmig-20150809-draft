@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-root/dnssec-root-20110630.ebuild,v 1.4 2012/08/20 17:26:16 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-root/dnssec-root-20110630.ebuild,v 1.5 2012/11/07 02:27:35 jer Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ SRC_URI="http://data.iana.org/root-anchors/root-anchors.xml -> root-anchors-2010
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 ~hppa x86"
 IUSE="test"
 
 RESTRICT="mirror"
