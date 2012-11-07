@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.98-r3.ebuild,v 1.7 2012/10/18 08:44:11 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.98-r3.ebuild,v 1.8 2012/11/07 21:11:32 tetromino Exp $
 
 EAPI=4
 
@@ -24,8 +24,8 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 		gjdoc? ( >=dev-java/antlr-2.7.1:0 )
 		gmp? ( >=dev-libs/gmp-4.2.4 )
 		gstreamer? (
-			>=media-libs/gstreamer-0.10.10
-			>=media-libs/gst-plugins-base-0.10.10
+			>=media-libs/gstreamer-0.10.10:0.10
+			>=media-libs/gst-plugins-base-0.10.10:0.10
 			x11-libs/gtk+:2
 		)
 		gtk? (
