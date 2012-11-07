@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/netsniff-ng
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netsniff-ng/ChangeLog,v 1.4 2012/07/02 13:28:18 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netsniff-ng/ChangeLog,v 1.5 2012/11/07 01:21:11 xmw Exp $
+
+*netsniff-ng-0.5.7-r1 (07 Nov 2012)
+
+  07 Nov 2012; Michael Weber <xmw@gentoo.org> -netsniff-ng-0.5.6.ebuild,
+  -netsniff-ng-0.5.7.ebuild, +netsniff-ng-0.5.7-r1.ebuild:
+  Revbump to mark libnl dependency (thanks Khayyam, bug 439858), switch to
+  upstream release tarball (thanks ago), drop old.
 
 *netsniff-ng-0.5.7 (02 Jul 2012)
 
