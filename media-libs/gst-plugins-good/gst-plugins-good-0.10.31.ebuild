@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/gst-plugins-good-0.10.31.ebuild,v 1.1 2012/10/23 07:55:22 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/gst-plugins-good-0.10.31.ebuild,v 1.2 2012/11/07 22:04:43 tetromino Exp $
 
 EAPI=4
 
@@ -15,8 +15,8 @@ LICENSE="LGPL-2.1+"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="+orc"
 
-RDEPEND=">=media-libs/gst-plugins-base-0.10.36
-	>=media-libs/gstreamer-0.10.36
+RDEPEND=">=media-libs/gst-plugins-base-0.10.36:0.10
+	>=media-libs/gstreamer-0.10.36:0.10
 	orc? ( >=dev-lang/orc-0.4.11 )
 	>=dev-libs/glib-2.24:2
 	sys-libs/zlib
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 	app-arch/xz-utils
 	>=sys-devel/gettext-0.11.5
 	virtual/pkgconfig
-	!<media-libs/gst-plugins-bad-0.10.22" # audioparsers and qtmux moves
+	!<media-libs/gst-plugins-bad-0.10.22:0.10" # audioparsers and qtmux moves
 
 # Always enable optional bz2 support for matroska
 # Always enable optional zlib support for qtdemux and matroska
