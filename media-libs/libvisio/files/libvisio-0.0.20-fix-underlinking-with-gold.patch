@@ -1,0 +1,27 @@
+From d0d0f37ce6bac9320b6410970f48ad09d6425db6 Mon Sep 17 00:00:00 2001
+From: Tomas Chvatal <tchvatal@suse.cz>
+Date: Wed, 7 Nov 2012 07:30:40 +0100
+Subject: [PATCH] Fix underlinking with gold.
+
+---
+ configure.ac |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/configure.ac b/configure.ac
+index 4e4017e..bf5eb04 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -222,8 +222,8 @@ AS_IF([test "x$native_win32" = "xyes"], [
+ 		CXXFLAGS="$CXXFLAGS -Wall -Wextra -Wshadow -pedantic"
+ 	])
+ ])
+-LIBVISIO_CXXFLAGS="${WPD_CFLAGS} ${WPG_CFLAGS} ${LIBXML_CFLAGS}"
+-LIBVISIO_LIBS="${WPD_LIBS} ${WPG_LIBS} ${LIBXML_LIBS}"
++LIBVISIO_CXXFLAGS="${WPD_CFLAGS} ${WPG_CFLAGS} ${LIBXML_CFLAGS} ${ZLIB_CFLAGS}"
++LIBVISIO_LIBS="${WPD_LIBS} ${WPG_LIBS} ${LIBXML_LIBS} ${ZLIB_LIBS}"
+ AC_SUBST(LIBVISIO_CXXFLAGS)
+ AC_SUBST(LIBVISIO_LIBS)
+ 
+-- 
+1.7.8.6
+

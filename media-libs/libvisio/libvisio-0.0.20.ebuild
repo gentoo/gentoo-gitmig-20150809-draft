@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/libvisio-0.0.20.ebuild,v 1.1 2012/11/06 11:55:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/libvisio-0.0.20.ebuild,v 1.2 2012/11/07 06:36:04 scarabeus Exp $
 
 EAPI=4
 
 EGIT_REPO_URI="git://anongit.freedesktop.org/git/libreoffice/contrib/libvisio/"
-inherit base
+inherit base autotools
 [[ ${PV} == 9999 ]] && inherit autotools git-2
 
 DESCRIPTION="Library parsing the visio documents"
@@ -20,6 +20,8 @@ IUSE="doc static-libs"
 RDEPEND="
 	app-text/libwpd:0.9
 	app-text/libwpg:0.2
+	dev-libs/libxml2
+	sys-libs/zlib
 "
 DEPEND="${RDEPEND}
 	>=dev-libs/boost-1.46
@@ -28,10 +30,14 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 "
 
+PATCHES=(
+	"${FILESDIR}/${P}-fix-underlinking-with-gold.patch"
+)
+
 src_prepare() {
 	[[ -d m4 ]] || mkdir "m4"
 	base_src_prepare
-	[[ ${PV} == 9999 ]] && eautoreconf
+	eautoreconf
 }
 
 src_configure() {
