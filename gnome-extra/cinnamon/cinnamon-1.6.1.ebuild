@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-1.6.1.ebuild,v 1.2 2012/09/28 19:03:03 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-1.6.1.ebuild,v 1.3 2012/11/07 21:53:40 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -195,12 +195,12 @@ pkg_postinst() {
 	gnome2_pkg_postinst
 	python_mod_optimize "/usr/$(get_libdir)/"cinnamon-{menu-editor,settings}
 
-	if ! has_version '>=media-libs/gst-plugins-good-0.10.23' || \
-	   ! has_version 'media-plugins/gst-plugins-vp8'; then
+	if ! has_version '>=media-libs/gst-plugins-good-0.10.23:0.10' || \
+	   ! has_version 'media-plugins/gst-plugins-vp8:0.10'; then
 		ewarn "To make use of Cinnamon's built-in screen recording utility,"
-		ewarn "you need to either install >=media-libs/gst-plugins-good-0.10.23"
-		ewarn "and media-plugins/gst-plugins-vp8, or use dconf-editor to change"
-		ewarn "apps.gnome-shell.recorder/pipeline to what you want to use."
+		ewarn "you need to either install >=media-libs/gst-plugins-good-0.10.23:0.10"
+		ewarn "and media-plugins/gst-plugins-vp8:0.10, or use dconf-editor to change"
+		ewarn "org.cinnamon.recorder/pipeline to what you want to use."
 	fi
 
 	if ! has_version ">=x11-base/xorg-server-1.11"; then
