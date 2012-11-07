@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/xdelta-3.0.4.ebuild,v 1.4 2012/11/04 19:53:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/xdelta-3.0.4.ebuild,v 1.5 2012/11/07 03:09:17 jer Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="3"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="examples test"
 
 RDEPEND="app-arch/xz-utils"
