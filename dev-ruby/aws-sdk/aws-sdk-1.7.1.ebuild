@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/aws-sdk/aws-sdk-1.7.0.ebuild,v 1.1 2012/11/03 21:35:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/aws-sdk/aws-sdk-1.7.1.ebuild,v 1.1 2012/11/07 22:28:49 flameeyes Exp $
 
 EAPI=4
 
