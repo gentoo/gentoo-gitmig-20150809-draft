@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.7.2.ebuild,v 1.1 2012/11/02 12:22:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.5.7.2.ebuild,v 1.2 2012/11/07 21:10:10 tetromino Exp $
 
 EAPI=4
 
@@ -118,8 +118,8 @@ COMMON_DEPEND="
 	gtk? ( >=x11-libs/gtk+-2.24:2 )
 	graphite? ( media-gfx/graphite2 )
 	gstreamer? (
-		>=media-libs/gstreamer-0.10
-		>=media-libs/gst-plugins-base-0.10
+		>=media-libs/gstreamer-0.10:0.10
+		>=media-libs/gst-plugins-base-0.10:0.10
 	)
 	java? (
 		>=dev-java/bsh-2.0_beta4
