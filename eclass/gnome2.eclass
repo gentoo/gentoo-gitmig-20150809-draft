@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.109 2012/11/07 19:17:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.110 2012/11/07 19:25:35 pacho Exp $
 
 # @ECLASS: gnome2.eclass
 # @MAINTAINER:
@@ -133,12 +133,16 @@ gnome2_src_configure() {
 		G2CONF="${G2CONF} --disable-scrollkeeper"
 	fi
 
-
 	# Pass --disable-silent-rules when possible (not needed for eapi5), bug #429308
 	if has ${EAPI:-0} 0 1 2 3 4; then
 		if grep -q "disable-silent-rules" configure; then
 			G2CONF="${G2CONF} --disable-silent-rules"
 		fi
+	fi
+
+	# Pass --disable-schemas-install when possible
+	if grep -q "disable-schemas-install" configure; then
+		G2CONF="${G2CONF} --disable-schemas-install"
 	fi
 
 	# Avoid sandbox violations caused by gnome-vfs (bug #128289 and #345659)

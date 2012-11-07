@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.501 2012/11/07 19:17:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.502 2012/11/07 19:25:35 pacho Exp $
+
+  07 Nov 2012; Pacho Ramos <pacho@gentoo.org> gnome2.eclass:
+  Pass --disable-schemas-install when possible as discussed with the team via
+  mail.
 
   07 Nov 2012; Pacho Ramos <pacho@gentoo.org> gnome2.eclass:
   Pass --disable-silent-rules when possible (not needed for eapi5), bug #429308
