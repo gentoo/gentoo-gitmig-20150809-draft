@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/ldns
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ChangeLog,v 1.32 2012/07/16 01:13:05 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ChangeLog,v 1.33 2012/11/07 02:23:40 jer Exp $
+
+  07 Nov 2012; Jeroen Roovers <jer@gentoo.org> ldns-1.6.13-r1.ebuild:
+  Marked ~hppa (bug #441688).
 
   16 Jul 2012; Mike Gilbert <floppym@gentoo.org> ldns-1.6.11.ebuild,
   ldns-1.6.12-r1.ebuild, ldns-1.6.12-r2.ebuild, ldns-1.6.12.ebuild:
