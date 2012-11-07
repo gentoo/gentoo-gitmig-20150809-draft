@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/gst-plugins-base-0.10.35.ebuild,v 1.16 2012/10/21 07:51:23 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/gst-plugins-base-0.10.35.ebuild,v 1.17 2012/11/07 21:20:49 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -23,7 +23,7 @@ RDEPEND=">=dev-libs/glib-2.22:2
 	app-text/iso-codes
 	introspection? ( >=dev-libs/gobject-introspection-0.9.12 )
 	orc? ( >=dev-lang/orc-0.4.11 )
-	!<media-libs/gst-plugins-bad-0.10.10"
+	!<media-libs/gst-plugins-bad-0.10.10:0.10"
 DEPEND="${RDEPEND}
 	nls? ( >=sys-devel/gettext-0.11.5 )
 	virtual/pkgconfig"
