@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/bigloo-3.4a_p3.ebuild,v 1.1 2010/10/06 19:13:29 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/bigloo-3.4a_p3.ebuild,v 1.2 2012/11/07 20:13:01 tetromino Exp $
 
 EAPI="3"
 
@@ -27,7 +27,7 @@ IUSE="bglpkg calendar crypto debug doc emacs gmp gstreamer java mail multimedia 
 DEPEND=">=dev-libs/boehm-gc-7.1[threads?]
 	emacs? ( virtual/emacs )
 	gmp? ( dev-libs/gmp )
-	gstreamer? ( media-libs/gstreamer media-libs/gst-plugins-base )
+	gstreamer? ( media-libs/gstreamer:0.10 media-libs/gst-plugins-base:0.10 )
 	java? ( >=virtual/jdk-1.5 app-arch/zip )
 	sqlite? ( dev-db/sqlite:3 )
 	ssl? ( dev-libs/openssl )
