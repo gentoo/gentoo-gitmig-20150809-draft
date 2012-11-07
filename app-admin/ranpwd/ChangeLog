@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/ranpwd
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ranpwd/ChangeLog,v 1.12 2011/07/20 13:40:03 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ranpwd/ChangeLog,v 1.13 2012/11/07 13:36:29 blueness Exp $
+
+  07 Nov 2012; Anthony G. Basile <blueness@gentoo.org> ranpwd-1.2.ebuild:
+  stable ppc ppc64, bug #441882
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #34534
@@ -46,4 +49,3 @@
   +ranpwd-1.1.ebuild:
   Initial import as per bug #82113 thanks to Florian Fainelli
   <florian@alphacore.net>
-
