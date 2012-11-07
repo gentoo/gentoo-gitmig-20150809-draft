@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mira/mira-3.2.1.ebuild,v 1.6 2012/11/07 22:10:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mira/mira-3.2.1-r1.ebuild,v 1.1 2012/11/07 22:10:54 jlec Exp $
 
-EAPI="3"
+EAPI=4
 
 MIRA_3RDPARTY_PV="17-04-2010"
 
@@ -17,7 +17,7 @@ SRC_URI="
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
-KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~x86-macos"
 
 CDEPEND="
 	dev-libs/boost
@@ -31,7 +31,9 @@ DOCS=( AUTHORS GETTING_STARTED NEWS README HELP_WANTED
 
 src_prepare() {
 	find -name 'configure*' -or -name 'Makefile*' | xargs sed -i 's/flex++/flex -+/' || die
-	epatch "${FILESDIR}"/${PN}-3.0.0-asneeded.patch
+	epatch \
+		"${FILESDIR}"/${PN}-3.0.0-asneeded.patch \
+		"${FILESDIR}"/${P}-boost-1.50.patch
 	AT_M4DIR="config/m4" eautoreconf
 }
 
@@ -50,7 +52,7 @@ src_configure() {
 
 src_install() {
 	base_src_install
-	dobin "${WORKDIR}"/3rdparty/{sff_extract,qual2ball,*.pl} || die
+	dobin "${WORKDIR}"/3rdparty/{sff_extract,qual2ball,*.pl}
 }
 
 pkg_postinst() {
