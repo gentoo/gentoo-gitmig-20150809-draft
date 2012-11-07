@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/system-config-printer-gnome
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/ChangeLog,v 1.62 2012/11/06 03:14:05 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/ChangeLog,v 1.63 2012/11/07 20:10:25 pacho Exp $
+
+  07 Nov 2012; Pacho Ramos <pacho@gentoo.org>
+  system-config-printer-gnome-1.3.11.ebuild:
+  x86 stable keyword was dropped by error, bug #442240 by redneb.
 
 *system-config-printer-gnome-1.3.12 (06 Nov 2012)
 
