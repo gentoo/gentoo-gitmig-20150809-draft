@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.4.1.ebuild,v 1.4 2012/10/10 00:23:54 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.4.1.ebuild,v 1.5 2012/11/07 21:48:09 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -12,7 +12,7 @@ inherit autotools eutils gnome2 multilib pax-utils python
 DESCRIPTION="Provides core UI functions for the GNOME 3 desktop"
 HOMEPAGE="http://live.gnome.org/GnomeShell"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+ LGPL-2+"
 SLOT="0"
 IUSE="+bluetooth +networkmanager systemd"
 KEYWORDS="~amd64 ~x86"
@@ -156,11 +156,11 @@ src_install() {
 pkg_postinst() {
 	gnome2_pkg_postinst
 
-	if ! has_version '>=media-libs/gst-plugins-good-0.10.23' || \
-	   ! has_version 'media-plugins/gst-plugins-vp8'; then
+	if ! has_version '>=media-libs/gst-plugins-good-0.10.23:0.10' || \
+	   ! has_version 'media-plugins/gst-plugins-vp8:0.10'; then
 		ewarn "To make use of GNOME Shell's built-in screen recording utility,"
-		ewarn "you need to either install >=media-libs/gst-plugins-good-0.10.23"
-		ewarn "and media-plugins/gst-plugins-vp8, or use dconf-editor to change"
+		ewarn "you need to either install >=media-libs/gst-plugins-good-0.10.23:0.10"
+		ewarn "and media-plugins/gst-plugins-vp8:0.10, or use dconf-editor to change"
 		ewarn "apps.gnome-shell.recorder/pipeline to what you want to use."
 	fi
 
