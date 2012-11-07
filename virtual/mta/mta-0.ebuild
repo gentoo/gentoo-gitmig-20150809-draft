@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/mta/mta-0.ebuild,v 1.7 2012/04/26 14:23:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/mta/mta-0.ebuild,v 1.8 2012/11/07 11:42:04 eras Exp $
 
 EAPI=3
 
@@ -24,7 +24,6 @@ RDEPEND="|| (	>=mail-mta/ssmtp-2.64-r2[mta]
 				mail-mta/mini-qmail
 				>=mail-mta/msmtp-1.4.19-r1[mta]
 				<mail-mta/msmtp-1.4.19-r1
-				mail-mta/nbsmtp
 				mail-mta/netqmail
 				mail-mta/nullmailer
 				mail-mta/postfix
