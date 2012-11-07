@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-yadis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-yadis/ChangeLog,v 1.5 2012/08/02 22:09:39 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-yadis/ChangeLog,v 1.6 2012/11/07 20:50:02 idella4 Exp $
+
+  08 Nov 2012; Ian Delaney <idella4@gentoo.org>
+  files/python-yadis-1.1.0-gentoo-test.patch, python-yadis-1.1.0-r1.ebuild:
+  Upgraded test patch wrt Bug #430092
 
   02 Aug 2012; Jesus Rivero <neurogeek@gentoo.org>
   python-yadis-1.1.0-r1.ebuild:
@@ -26,4 +30,3 @@
   +files/python-yadis-1.1.0-gentoo-test.patch, +metadata.xml,
   +python-yadis-1.1.0.ebuild:
   Initial commit.
-
