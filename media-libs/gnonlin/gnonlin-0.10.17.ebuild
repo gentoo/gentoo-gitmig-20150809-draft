@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gnonlin/gnonlin-0.10.17.ebuild,v 1.3 2012/10/25 20:29:37 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gnonlin/gnonlin-0.10.17.ebuild,v 1.4 2012/11/07 20:41:28 tetromino Exp $
 
 EAPI="4"
 
@@ -21,7 +21,7 @@ DEPEND="${RDEPEND}
 		>=dev-util/gtk-doc-am-1.13
 		>=dev-util/gtk-doc-1.3 ) )
 	test? ( dev-libs/check
-		media-libs/gst-plugins-good )" # videomixer
+		media-libs/gst-plugins-good:0.10 )" # videomixer
 
 src_configure() {
 	econf \
