@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/firewalld
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firewalld/ChangeLog,v 1.3 2012/11/06 07:30:01 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firewalld/ChangeLog,v 1.4 2012/11/07 08:13:59 cardoe Exp $
+
+  07 Nov 2012; Doug Goldstein <cardoe@gentoo.org> firewalld-0.2.9.ebuild,
+  +files/firewalld.module, files/firewalld.init:
+  Simplify init script and depend on D-Bus being started. Add the network
+  module that newer OpenRC's will ship with for older OpenRC support.
 
   06 Nov 2012; Doug Goldstein <cardoe@gentoo.org> firewalld-0.2.9.ebuild:
   Fix GSettings schema not being installed.

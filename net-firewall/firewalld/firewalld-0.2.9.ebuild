@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firewalld/firewalld-0.2.9.ebuild,v 1.3 2012/11/06 07:30:01 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firewalld/firewalld-0.2.9.ebuild,v 1.4 2012/11/07 08:13:59 cardoe Exp $
 
 EAPI=4
 PYTHON_COMPAT=( python{2_6,2_7} )
 BACKPORTS=3ab6b297
 
-inherit autotools eutils gnome2-utils python-r1 systemd
+inherit autotools eutils gnome2-utils python-r1 systemd multilib
 
 DESCRIPTION="A firewall daemon with D-BUS interface providing a dynamic firewall"
 HOMEPAGE="http://fedorahosted.org/firewalld"
@@ -25,6 +25,7 @@ RDEPEND="${PYTHON_DEPS}
 	dev-python/pygobject:3
 	net-firewall/ebtables
 	net-firewall/iptables[ipv6]
+	|| ( sys-apps/openrc sys-apps/systemd )
 	gui? (
 		dev-python/pygtk:2
 		>=x11-libs/gtk+-2.6:2
@@ -71,6 +72,12 @@ src_install() {
 	fi
 
 	newinitd "${FILESDIR}"/firewalld.init firewalld
+
+	# Work around until OpenRC starts carrying our module
+	if has_version '<=sys-apps/openrc-0.11.4'; then
+		insinto $(get_libdir)/rc/net
+		newins "${FILESDIR}"/firewalld.module firewalld.sh
+	fi
 }
 
 pkg_preinst() {
