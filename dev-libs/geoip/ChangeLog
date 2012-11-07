@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/geoip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.135 2012/11/06 08:04:59 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.136 2012/11/07 02:25:34 blueness Exp $
+
+  07 Nov 2012; Anthony G. Basile <blueness@gentoo.org> geoip-1.4.8-r1.ebuild:
+  stable ppc ppc64, bug #441184
 
   06 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> geoip-1.4.8-r1.ebuild:
   Fix tests wrt bug #335368. Thanks to Jeroen Roovers for providing patch
@@ -492,4 +495,3 @@
 
   29 Jun 2003; <solar@gentoo.org> geoip-1.2.0.ebuild:
   Initial Import of GeoIP to portage
-
