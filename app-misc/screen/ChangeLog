@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/screen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.175 2012/11/06 19:15:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.176 2012/11/07 16:04:41 jlec Exp $
+
+*screen-4.0.3-r6 (07 Nov 2012)
+
+  07 Nov 2012; Justin Lecher <jlec@gentoo.org> -screen-4.0.3-r5.ebuild,
+  +screen-4.0.3-r6.ebuild:
+  Revbump to force everyone to rebuild. This should save those who emerged the
+  broken ebuild #442070
 
   06 Nov 2012; Justin Lecher <jlec@gentoo.org> screen-4.0.3-r5.ebuild:
   Revert last commit
