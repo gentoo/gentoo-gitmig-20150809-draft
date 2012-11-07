@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.3.0.7.ebuild,v 1.1 2012/11/05 23:59:49 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.3.0.7.ebuild,v 1.2 2012/11/07 15:30:41 fuzzyray Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -8,7 +8,7 @@ RESTRICT_PYTHON_ABIS="2.[45]"
 PYTHON_USE_WITH="xml"
 PYTHON_NONVERSIONED_EXECUTABLES=(".*")
 
-inherit distutils python eutils
+inherit distutils python
 
 DESCRIPTION="Collection of administration scripts for Gentoo"
 HOMEPAGE="http://www.gentoo.org/proj/en/portage/tools/index.xml"
