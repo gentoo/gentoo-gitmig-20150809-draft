@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/gwyddion-2.29.ebuild,v 1.1 2012/08/01 22:30:25 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/gwyddion-2.29.ebuild,v 1.2 2012/11/07 19:07:21 jlec Exp $
 
 EAPI=4
 
@@ -46,7 +46,7 @@ src_prepare() {
 }
 
 src_configure() {
-	local myeconfargs+=(
+	local myeconfargs=(
 		--disable-rpath
 		$(use_enable doc gtk-doc)
 		$(use_enable nls)
