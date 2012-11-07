@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/keynote
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/keynote/ChangeLog,v 1.18 2012/06/07 21:17:19 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/keynote/ChangeLog,v 1.19 2012/11/07 13:17:51 kensington Exp $
+
+*keynote-2.3-r3 (07 Nov 2012)
+
+  07 Nov 2012; Michael Palimaka <kensington@gentoo.org>
+  +files/keynote-2.3-qa.patch, +keynote-2.3-r3.ebuild:
+  Respect CFLAGS wrt bug #442146. Respect AR, migrate to EAPI 5.
 
   07 Jun 2012; Johannes Huber <johu@gentoo.org> -keynote-2.3.ebuild:
   Remove old.
@@ -58,4 +64,3 @@
   23 Dec 2003; <plasmaroo@gentoo.org> keynote-2.3.ebuild:
   Initial commit. This ebuild was kindly contributed by Sebastien 
   Estienne, bug #27279.
-
