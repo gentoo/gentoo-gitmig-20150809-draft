@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/glob2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/ChangeLog,v 1.54 2012/07/20 15:15:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/ChangeLog,v 1.55 2012/11/07 10:29:13 tupone Exp $
+
+  07 Nov 2012; Tupone Alfredo <tupone@gentoo.org> glob2-0.9.4.4.ebuild:
+  Migration to EAPI 4
+  scons configure done at configure phase. Bug #440032 by Diego
 
   20 Jul 2012; Jeroen Roovers <jer@gentoo.org> glob2-0.9.4.4.ebuild:
   Drop HPPA keywording.

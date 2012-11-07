@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.9.4.4.ebuild,v 1.6 2012/07/20 15:15:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.9.4.4.ebuild,v 1.7 2012/11/07 10:29:13 tupone Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils scons-utils games
 
 DESCRIPTION="Real Time Strategy (RTS) game involving a brave army of globs"
@@ -27,16 +27,22 @@ DEPEND="virtual/opengl
 
 PATCHES=( "${FILESDIR}"/${P}-gcc44.patch "${FILESDIR}"/${P}-scons-blows.patch )
 
-src_compile() {
-	escons \
-		INSTALLDIR="${GAMES_DATADIR}"/${PN} \
+src_configure() {
+	myesconsargs=(
+		INSTALLDIR="${GAMES_DATADIR}"/${PN}
 		DATADIR="${GAMES_DATADIR}"/${PN}
+	)
+	escons data
+}
+
+src_compile() {
+	escons
 }
 
 src_install() {
-	dogamesbin src/${PN} || die "dogamesbin failed"
+	dogamesbin src/${PN}
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins -r campaigns data maps scripts || die "doins failed"
+	doins -r campaigns data maps scripts
 	find "${D}/${GAMES_DATADIR}"/${PN} -name SConscript -exec rm -f {} +
 	newicon data/icons/glob2-icon-48x48.png ${PN}.png
 	make_desktop_entry glob2 "Globulation 2"
