@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/totem-pl-parser
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.119 2012/09/25 02:48:18 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.120 2012/11/07 21:43:33 tetromino Exp $
+
+  07 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +totem-pl-parser-2.32.6.ebuild:
+  Restore deleted 2.32.6 ebuild, needed for 'ppc ppc64' stable keywords for
+  brasero.
 
   25 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
   totem-pl-parser-3.4.3.ebuild:
