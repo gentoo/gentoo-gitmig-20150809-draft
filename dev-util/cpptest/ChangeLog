@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cpptest
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cpptest/ChangeLog,v 1.18 2012/11/06 17:10:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cpptest/ChangeLog,v 1.19 2012/11/07 12:05:19 blueness Exp $
+
+  07 Nov 2012; Anthony G. Basile <blueness@gentoo.org> cpptest-1.1.2.ebuild:
+  stable ppc ppc64, bug #441310
 
   06 Nov 2012; Agostino Sarubbo <ago@gentoo.org> cpptest-1.1.2.ebuild:
   Stable for amd64, wrt bug #441310
@@ -63,4 +66,3 @@
   15 Mar 2009; Robert Buchholz <rbu@gentoo.org>
   +files/cpptest-1.1.0-htmldir.patch, +metadata.xml, +cpptest-1.1.0.ebuild:
   Initial ebuild by Sebastian Pipping (bug #260687)
-
