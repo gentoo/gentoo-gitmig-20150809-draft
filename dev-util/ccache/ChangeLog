@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ccache
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.102 2012/11/05 20:32:49 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.103 2012/11/07 04:31:51 jer Exp $
+
+  07 Nov 2012; Jeroen Roovers <jer@gentoo.org> ccache-3.1.8.ebuild:
+  Stable for HPPA (bug #441308).
 
   05 Nov 2012; Anthony G. Basile <blueness@gentoo.org> ccache-3.1.8.ebuild:
   stable ppc ppc64, bug #441308
