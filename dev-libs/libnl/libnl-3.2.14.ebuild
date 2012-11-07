@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-3.2.14.ebuild,v 1.2 2012/10/26 02:18:02 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-3.2.14.ebuild,v 1.3 2012/11/07 07:31:39 vapier Exp $
 
 EAPI=4
-inherit eutils multilib
+inherit eutils libtool multilib
 
 DESCRIPTION="A library for applications dealing with netlink socket"
 HOMEPAGE="http://www.infradead.org/~tgr/libnl/"
@@ -22,8 +22,8 @@ DEPEND="
 "
 
 src_prepare() {
-	epatch \
-		"${FILESDIR}"/${PN}-1.1-vlan-header.patch
+	elibtoolize
+	epatch "${FILESDIR}"/${PN}-1.1-vlan-header.patch
 }
 
 src_configure() {
@@ -39,12 +39,9 @@ src_install() {
 		dohtml -r \
 			-a css,html,js,map,png \
 			"${WORKDIR}"/${PN}-doc-${PV}
-
 	fi
 
-	if ! use static-libs; then
-		rm -f "${D}"/usr/lib*/lib*.la
-	fi
+	use static-libs || rm -f "${ED}"/usr/$(get_libdir)/lib*.la
 
 	dodoc ChangeLog
 }

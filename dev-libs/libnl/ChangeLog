@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libnl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.110 2012/10/26 02:18:02 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.111 2012/11/07 07:31:39 vapier Exp $
+
+  07 Nov 2012; Mike Frysinger <vapier@gentoo.org> libnl-3.2.14.ebuild:
+  Run elibtoolize for cross-compile relinking, and use get_libdir when deleting
+  .la files.
 
   26 Oct 2012; Anthony G. Basile <blueness@gentoo.org> libnl-3.2.14.ebuild:
   keyword ~mips
