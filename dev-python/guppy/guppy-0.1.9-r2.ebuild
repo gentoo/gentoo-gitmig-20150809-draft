@@ -1,14 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/guppy/guppy-0.1.9-r2.ebuild,v 1.2 2012/02/20 15:18:59 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/guppy/guppy-0.1.9-r2.ebuild,v 1.3 2012/11/07 12:23:30 idella4 Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython 2.7-pypy-*"
+PYTHON_TESTS_RESTRICTED_ABIS="2.[56]"
 DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES="1"
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="Guppy-PE -- A Python Programming Environment"
 HOMEPAGE="http://guppy-pe.sourceforge.net/ http://pypi.python.org/pypi/guppy"
@@ -27,6 +28,7 @@ PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
 DOCS="ANNOUNCE ChangeLog"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-rm_BrokenTests.patch
 	distutils_src_prepare
 	preparation() {
 		if [[ ${PYTHON_ABI} == "2.7" ]]; then
