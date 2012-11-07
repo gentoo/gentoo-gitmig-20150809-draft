@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.91.0.04.ebuild,v 1.1 2012/10/01 16:31:11 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.91.0.04.ebuild,v 1.2 2012/11/07 17:52:23 billie Exp $
 
 EAPI=4
 
@@ -54,7 +54,7 @@ java_prepare() {
 	epatch "${FILESDIR}/${PN}-0.90.4.00_p33-idctfast.patch"
 
 	# apply XDG patch
-	cp -f "${WORKDIR}/${XDG_P}.java" "${S}/src/xdg.java"
+	cp -f "${WORKDIR}/${XDG_P}.java" "${S}/src/xdg.java" || die
 	epatch "${FILESDIR}/${PN}-0.90.4.00_p33-xdg.patch"
 
 	# copy build.xml
@@ -83,7 +83,7 @@ java_prepare() {
 	fi
 
 	# update library packages
-	cd lib
+	cd lib || die
 	rm -f {commons-net,jakarta-oro}*.jar || die
 	java-pkg_jar-from commons-net
 	use X && java-pkg_jar-from browserlauncher2-1.0
@@ -99,7 +99,7 @@ src_compile() {
 
 	eant build $(use_doc) -Dmanifest.mainclass=$(mainclass)
 
-	cd lib/PORTABLE
+	cd lib/PORTABLE || die
 	emake CC=$(tc-getCC) IDCT="${IDCT}" LDFLAGS="${LDFLAGS}" \
 		CPLAT="${CFLAGS} -O3 -ffast-math -fPIC"
 }
@@ -124,13 +124,4 @@ src_install() {
 	dodoc *.txt
 	use doc && java-pkg_dojavadoc apidocs
 	use source && java-pkg_dosrc src
-}
-
-pkg_postinst() {
-	elog "Default config file and location has changed!"
-	elog
-	elog "It is now located at \$XDG_CONFIG_HOME/Project-X.ini"
-	elog "You should move your old X.ini into the new location."
-	elog
-	elog "Hint: \$XDG_CONFIG_HOME defaults to ~/.config"
 }

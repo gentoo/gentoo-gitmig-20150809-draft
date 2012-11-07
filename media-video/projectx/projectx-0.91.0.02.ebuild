@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.91.0.02.ebuild,v 1.5 2012/03/08 23:03:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.91.0.02.ebuild,v 1.6 2012/11/07 17:52:23 billie Exp $
 
 EAPI=4
 
@@ -54,7 +54,7 @@ java_prepare() {
 	epatch "${FILESDIR}/${PN}-0.90.4.00_p33-idctfast.patch"
 
 	# apply XDG patch
-	cp -f "${WORKDIR}/${XDG_P}.java" "${S}/src/xdg.java"
+	cp -f "${WORKDIR}/${XDG_P}.java" "${S}/src/xdg.java" || die
 	epatch "${FILESDIR}/${PN}-0.90.4.00_p33-xdg.patch"
 
 	# copy build.xml
@@ -83,7 +83,7 @@ java_prepare() {
 	fi
 
 	# update library packages
-	cd lib
+	cd lib || die
 	rm -f {commons-net,jakarta-oro}*.jar || die
 	java-pkg_jar-from commons-net
 	use X && java-pkg_jar-from browserlauncher2-1.0
@@ -99,7 +99,7 @@ src_compile() {
 
 	eant build $(use_doc) -Dmanifest.mainclass=$(mainclass)
 
-	cd lib/PORTABLE
+	cd lib/PORTABLE || die
 	emake CC=$(tc-getCC) IDCT="${IDCT}" LDFLAGS="${LDFLAGS}" \
 		CPLAT="${CFLAGS} -O3 -ffast-math -fPIC"
 }
