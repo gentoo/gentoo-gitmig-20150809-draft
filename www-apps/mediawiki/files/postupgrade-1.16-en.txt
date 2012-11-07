@@ -8,7 +8,7 @@ http://www.mediawiki.org/wiki/Manual:Backing_up_a_wiki
 Run the update script
 =====================
 
-Note: Make sure $wgDBadminusr and $wgDBadminpassword is set in your
+Note: Make sure \$wgDBadminusr and \$wgDBadminpassword is set in your
 LocalSettings.php file in your wiki root. The user needs full permissions
 (shell access) on the database.
 
