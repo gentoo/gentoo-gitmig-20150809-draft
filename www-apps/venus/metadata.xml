@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
  <herd>web-apps</herd>
- <herd>sysadmin</herd>
+ <maintainer>
+   <email>tampakrap@gentoo.org</email>
+ </maintainer>
  <use>
    <flag name="django">Support for django template style to config files</flag>
    <flag name="genshi">Support for genshi style to config files</flag>
