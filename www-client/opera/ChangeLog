@@ -1,6 +1,11 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.757 2012/11/06 19:53:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.758 2012/11/07 16:08:06 jer Exp $
+
+*opera-12.11.1653 (07 Nov 2012)
+
+  07 Nov 2012; Jeroen Roovers <jer@gentoo.org> +opera-12.11.1653.ebuild:
+  http://my.opera.com/desktopteam/blog/2012/11/07/higher-is-better
 
   06 Nov 2012; Agostino Sarubbo <ago@gentoo.org> opera-12.10.1652.ebuild:
   Stable for amd64, wrt bug #442044
