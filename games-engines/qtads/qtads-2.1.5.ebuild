@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/qtads/qtads-2.1.5.ebuild,v 1.1 2012/10/05 05:44:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/qtads/qtads-2.1.5.ebuild,v 1.2 2012/11/07 08:20:52 mr_bones_ Exp $
 
-EAPI=2
-inherit eutils gnome2-utils fdo-mime flag-o-matic qt4-r2 toolchain-funcs games
+EAPI=4
+inherit eutils gnome2-utils fdo-mime qt4-r2 games
 
 DESCRIPTION="Multimedia interpreter for TADS text adventures"
 HOMEPAGE="http://qtads.sourceforge.net"
@@ -19,30 +19,22 @@ DEPEND="media-libs/libsdl[audio]
 	media-libs/sdl-sound[mp3]
 	x11-libs/qt-core:4
 	x11-libs/qt-gui:4"
+RDEPEND="${DEPEND}"
 
 src_configure() {
-	# strict-aliasing should not be used
-	# http://bugdb.tads.org/view.php?id=163
-	append-cxxflags -fno-strict-aliasing
-	append-cflags -fno-strict-aliasing
-	qt4-r2_src_configure
-}
-
-src_compile() {
-	# make build output verbose (yes, weird)
-	emake CC=$(tc-getCC) CXX=$(tc-getCXX) LINK=$(tc-getCXX)
+	eqmake4 qtads.pro -after CONFIG-=silent
 }
 
 src_install() {
-	dogamesbin qtads || die
+	dogamesbin qtads
 	doman qtads.6
 	dodoc AUTHORS BUGS HTML_TADS_LICENSE NEWS README
 	newicon -s 256 qtads_256x256.png ${PN}.png
 	insinto /usr/share/icons
-	doins -r "icons/hicolor" || die
+	doins -r icons/hicolor
 	insinto /usr/share/mime/packages
-	doins "icons/qtads.xml" || die
-	make_desktop_entry qtads QTads qtads Game "MimeType=application/x-tads;application/x-t3vm-image;"
+	doins icons/qtads.xml
+	make_desktop_entry qtads QTads qtads Game "GenericName=TADS Multimedia Interpreter\nMimeType=application/x-tads;application/x-t3vm-image;"
 	prepgamesdirs
 }
 
