@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/networkmanagement/networkmanagement-0.9.0.5.ebuild,v 1.1 2012/10/02 05:50:24 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/networkmanagement/networkmanagement-0.9.0.5.ebuild,v 1.2 2012/11/07 12:41:05 ago Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.kde.org/"
 [[ ${PV} = 9999* ]] || SRC_URI="mirror://kde/unstable/${PN}/${PV}/src/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 SLOT="4"
 IUSE="debug"
 
