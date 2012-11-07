@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-opengl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-opengl/ChangeLog,v 1.54 2012/10/05 17:46:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-opengl/ChangeLog,v 1.55 2012/11/07 05:05:08 jer Exp $
+
+  07 Nov 2012; Jeroen Roovers <jer@gentoo.org> ruby-opengl-0.60.1-r2.ebuild:
+  Stable for HPPA (bug #430206).
 
   05 Oct 2012; Brent Baude <ranger@gentoo.org> ruby-opengl-0.60.1-r2.ebuild:
   Marking ruby-opengl-0.60.1-r2 ppc64 for bug 430206
