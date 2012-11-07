@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-3.4.0.ebuild,v 1.1 2012/10/21 11:03:25 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-3.4.0.ebuild,v 1.2 2012/11/07 21:59:00 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -68,6 +68,6 @@ pkg_postinst() {
 	gnome2_pkg_postinst
 	ewarn
 	ewarn "If you cannot play some music format, please check your"
-	ewarn "USE flags on media-plugins/gst-plugins-meta"
+	ewarn "USE flags on media-plugins/gst-plugins-meta:0.10"
 	ewarn
 }
