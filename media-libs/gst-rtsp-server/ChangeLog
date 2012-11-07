@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/gst-rtsp-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-rtsp-server/ChangeLog,v 1.8 2012/05/05 08:02:44 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-rtsp-server/ChangeLog,v 1.9 2012/11/07 20:37:33 tetromino Exp $
+
+  07 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gst-rtsp-server-0.10.8.ebuild:
+  Slot gstreamer dependencies in preparation for gstreamer-1.0, and slot ebuild
+  to 0.10 since upstream is working on a gst-1.0-compatible version.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> gst-rtsp-server-0.10.8.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
