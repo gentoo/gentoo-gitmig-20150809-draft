@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-ExtUtils-Command
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Command/ChangeLog,v 1.26 2012/08/05 18:22:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Command/ChangeLog,v 1.27 2012/11/07 03:23:47 blueness Exp $
+
+  07 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
+  perl-ExtUtils-Command-1.16.ebuild:
+  keyword ~ppc64, bug #437532
 
   05 Aug 2012; Markus Meier <maekke@gentoo.org>
   perl-ExtUtils-Command-1.16.ebuild:
@@ -125,4 +129,3 @@
 
   15 Sep 2009; Torsten Veller <tove@gentoo.org> +metadata.xml:
   Initial commit
-
