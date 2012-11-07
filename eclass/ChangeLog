@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.500 2012/11/05 15:15:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.501 2012/11/07 19:17:40 pacho Exp $
+
+  07 Nov 2012; Pacho Ramos <pacho@gentoo.org> gnome2.eclass:
+  Pass --disable-silent-rules when possible (not needed for eapi5), bug #429308
 
   05 Nov 2012; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
   Fix enabling byte-compiling.
