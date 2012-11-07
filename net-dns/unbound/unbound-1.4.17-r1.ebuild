@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/unbound-1.4.17.ebuild,v 1.2 2012/11/07 02:28:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/unbound-1.4.17-r1.ebuild,v 1.1 2012/11/07 02:41:08 jer Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* 2.7-pypy-* *-jython"
 
-inherit eutils flag-o-matic python user
+inherit autotools eutils flag-o-matic python user
 
 DESCRIPTION="A validating, recursive and caching DNS resolver"
 HOMEPAGE="http://unbound.net/"
@@ -48,7 +48,10 @@ src_prepare() {
 	# 'auto-trust-anchor-file'.
 	# [23109:0] error: Could not open autotrust file for writing,
 	# /etc/dnssec/root-anchors.txt: Permission denied
-	epatch "${FILESDIR}/${PN}-1.4.12-gentoo.patch"
+	epatch \
+		"${FILESDIR}"/${PN}-1.4.12-gentoo.patch \
+		"${FILESDIR}"/${PN}-1.4.17-gentoo.patch
+	eautoreconf
 }
 
 src_configure() {
