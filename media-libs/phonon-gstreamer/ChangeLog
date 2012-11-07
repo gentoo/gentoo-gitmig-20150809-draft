@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/phonon-gstreamer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-gstreamer/ChangeLog,v 1.33 2012/10/04 21:41:03 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-gstreamer/ChangeLog,v 1.34 2012/11/07 20:56:28 tetromino Exp $
+
+  07 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  phonon-gstreamer-4.6.2-r1.ebuild, phonon-gstreamer-9999.ebuild:
+  Slot gstreamer dependencies in preparation for gstreamer-1.0.
 
   04 Oct 2012;  <naota@gentoo.org> phonon-gstreamer-4.6.2-r1.ebuild:
   Add ~x86-fbsd wrt bug #432420
