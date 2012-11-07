@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7115 2012/11/07 16:07:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7116 2012/11/07 20:37:11 tetromino Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org> updates/4Q-2012:
+  Slotmove gst-rtsp-server-0.10.x to 0.10, since a gst-1.0 version is in the
+  works.
 
   07 Nov 2012; Jeroen Roovers <jer@gentoo.org> package.mask:
   Mask www-client/opera-12.11.
