@@ -1,6 +1,10 @@
 # ChangeLog for games-mud/gnome-mud
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/ChangeLog,v 1.29 2012/05/03 03:32:33 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/ChangeLog,v 1.30 2012/11/07 20:16:08 tetromino Exp $
+
+  07 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-mud-0.11.2.ebuild:
+  Slot gstreamer dependencies in preparation for gstreamer-1.0.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> gnome-mud-0.11.2.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
