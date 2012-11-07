@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/mediatomb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.38 2012/10/04 03:52:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.39 2012/11/07 20:41:56 vapier Exp $
+
+*mediatomb-0.12.1-r4 (07 Nov 2012)
+
+  07 Nov 2012; Mike Frysinger <vapier@gentoo.org>
+  +files/mediatomb-0.12.1-inotify-hard-links.patch,
+  +files/mediatomb-0.12.1-thumb-cache.patch, +mediatomb-0.12.1-r4.ebuild:
+  Fix inotify and hard links.  Add support for caching thumbnails.
 
   04 Oct 2012; Mike Frysinger <vapier@gentoo.org> mediatomb-0.12.1-r3.ebuild:
   Require newer spidermonkey #437038 by BT.
