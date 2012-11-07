@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/python-wifi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/python-wifi/ChangeLog,v 1.10 2012/11/06 19:52:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/python-wifi/ChangeLog,v 1.11 2012/11/07 02:23:08 blueness Exp $
+
+  07 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
+  python-wifi-0.5.0-r1.ebuild:
+  stable ppc ppc64, bug #442038
 
   06 Nov 2012; Agostino Sarubbo <ago@gentoo.org> python-wifi-0.5.0-r1.ebuild:
   Stable for amd64, wrt bug #442038
@@ -44,4 +48,3 @@
   06 Mar 2011; Justin Lecher <jlec@gentoo.org> +python-wifi-0.3.1.ebuild,
   +python-wifi-0.5.0.ebuild, +metadata.xml:
   New addition, written by me, #282953
-
