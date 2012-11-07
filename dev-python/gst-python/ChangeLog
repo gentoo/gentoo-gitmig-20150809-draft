@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gst-python
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.116 2012/10/25 18:46:23 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.117 2012/11/07 20:10:53 tetromino Exp $
+
+  07 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gst-python-0.10.22.ebuild:
+  Slot gstreamer dependencies in preparation for gstreamer-1.0.
 
   25 Oct 2012; Gilles Dartiguelongue <eva@gentoo.org>
   gst-python-0.10.22.ebuild:

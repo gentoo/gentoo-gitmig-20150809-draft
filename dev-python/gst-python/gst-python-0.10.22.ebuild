@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.22.ebuild,v 1.12 2012/10/25 18:46:23 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.22.ebuild,v 1.13 2012/11/07 20:10:53 tetromino Exp $
 
 EAPI=4
 
@@ -27,8 +27,8 @@ RDEPEND="dev-libs/libxml2
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	test? (
-		media-plugins/gst-plugins-ogg
-		media-plugins/gst-plugins-vorbis
+		media-plugins/gst-plugins-ogg:0.10
+		media-plugins/gst-plugins-vorbis:0.10
 	)" # tests a "audiotestsrc ! vorbisenc ! oggmux ! fakesink" pipeline
 
 src_prepare() {
