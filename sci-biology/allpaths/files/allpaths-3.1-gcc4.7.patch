@@ -1,10 +1,13 @@
- MakeDepend.cc                | 1 +
- Vec.h                        | 4 ++--
- feudal/FeudalControlBlock.cc | 1 +
- feudal/FeudalFileReader.h    | 1 +
- feudal/MasterVec.h           | 6 +++---
- feudal/SerfVec.h             | 4 ++--
- 6 files changed, 10 insertions(+), 7 deletions(-)
+ MakeDepend.cc                |  1 +
+ Vec.h                        | 12 ++++++------
+ feudal/BinaryStream.h        |  4 ++++
+ feudal/FeudalControlBlock.cc |  1 +
+ feudal/FeudalFileReader.h    |  1 +
+ feudal/MasterVec.h           | 14 +++++++-------
+ feudal/SerfVec.h             |  4 ++--
+ reporting/ScaffoldLayout.cc  | 10 +++++-----
+ system/ProcBuf.cc            | 12 ++++++------
+ 9 files changed, 33 insertions(+), 26 deletions(-)
 
 diff --git a/MakeDepend.cc b/MakeDepend.cc
 index 93032e8..619e6f7 100644
@@ -19,10 +22,10 @@ index 93032e8..619e6f7 100644
  using namespace std;
  
 diff --git a/Vec.h b/Vec.h
-index f26f3f4..57eeff9 100644
+index f26f3f4..e2d26a4 100644
 --- a/Vec.h
 +++ b/Vec.h
-@@ -259,7 +259,7 @@ template <class T> class vec : public vector<T> {
+@@ -259,11 +259,11 @@ template <class T> class vec : public vector<T> {
  
    template <class U>
    void append( const vec<U>& y ) 
@@ -30,8 +33,29 @@ index f26f3f4..57eeff9 100644
 +  {    this->insert( this->end( ), y.begin( ), y.end( ) );    }
    
    void append( const vec<T>& y, size_type i, size_type j ) {
-     if ( j == y.size( ) ) insert( this->end( ), y.begin( ) + i, y.end( ) );
-@@ -402,7 +402,7 @@ template <class T> class vec : public vector<T> {
+-    if ( j == y.size( ) ) insert( this->end( ), y.begin( ) + i, y.end( ) );
+-    else insert( this->end( ), y.begin( ) + i, y.begin( ) + j );   
++    if ( j == y.size( ) ) this->insert( this->end( ), y.begin( ) + i, y.end( ) );
++    else this->insert( this->end( ), y.begin( ) + i, y.begin( ) + j );   
+   }
+ 
+   // appends values in y, but only those whose indices are in entries
+@@ -339,7 +339,7 @@ template <class T> class vec : public vector<T> {
+     
+   void SetToRangeOf( const vec<T>& v, size_type i, size_type j ) {
+     AssertLe( i, j );
+-    assign(v.begin() + i, v.begin() + j);
++    this->assign(v.begin() + i, v.begin() + j);
+   }
+ 
+   inline friend vec<T> RangeOf( const vec<T>& v, size_type i, size_type j ) {
+@@ -397,12 +397,12 @@ template <class T> class vec : public vector<T> {
+   /// Erase: erase range of elements, where range is given by half-open interval.
+ 
+   void Erase( size_type start, size_type stop ) {
+-    erase( this->begin( ) + start, this->begin( ) + stop );
++    this->erase( this->begin( ) + start, this->begin( ) + stop );
+   }
  
    /// EraseValue: erase all entries having the given value.
    void EraseValue( const T& x ) {
@@ -40,6 +64,21 @@ index f26f3f4..57eeff9 100644
    }
  
    /// print values to ostream, separated by sep.
+diff --git a/feudal/BinaryStream.h b/feudal/BinaryStream.h
+index f54d8a9..c61469b 100644
+--- a/feudal/BinaryStream.h
++++ b/feudal/BinaryStream.h
+@@ -144,6 +144,10 @@ private:
+     std::ostream& mOS;
+ };
+ 
++template <typename T1, typename T2>
++inline size_t serializedSizeof( std::pair<T1,T2>* );
++
++
+ /// Reader of binary streams.
+ class BinaryReader
+ {
 diff --git a/feudal/FeudalControlBlock.cc b/feudal/FeudalControlBlock.cc
 index bc64ecd..a709320 100644
 --- a/feudal/FeudalControlBlock.cc
@@ -65,10 +104,10 @@ index b71bf6d..073a1a1 100644
  
  /**
 diff --git a/feudal/MasterVec.h b/feudal/MasterVec.h
-index e6477d9..45a8640 100644
+index e6477d9..b88e9fe 100644
 --- a/feudal/MasterVec.h
 +++ b/feudal/MasterVec.h
-@@ -60,7 +60,7 @@ public:
+@@ -60,20 +60,20 @@ public:
      /// This function is deprecated: Use reserve() instead.
      /// The pool size argument is ignored, anyway.
      MasterVec& Reserve( unsigned long raw_mem_size_ignored, size_type capacity )
@@ -77,7 +116,13 @@ index e6477d9..45a8640 100644
  
      /// This function is deprecated:  Use clear().shrink_to_fit().
      MasterVec& destroy() { BaseT::clear(); BaseT::shrink_to_fit(); return *this; }
-@@ -73,7 +73,7 @@ public:
+ 
+     /// This function is deprecated:  Use push_back().
+     MasterVec& push_back_external( T const& val )
+-    { push_back(val); return *this; }
++    { this->push_back(val); return *this; }
+ 
+     /// This function is deprecated:  Use push_back().
      MasterVec& push_back_reserve( T const& val,
                                    size_type growthIncr = 0,
                                    float growthFact = 1.3f )
@@ -86,6 +131,15 @@ index e6477d9..45a8640 100644
  
      /// This function is deprecated:  Use append().
      MasterVec& Append( MasterVec const& that )
+@@ -81,7 +81,7 @@ public:
+ 
+     /// This function is deprecated:  Use append().
+     MasterVec& Append( MasterVec const& that, size_type from, size_type to )
+-    { append(that.begin(from),that.begin(to)); return *this; }
++    { this->append(that.begin(from),that.begin(to)); return *this; }
+ 
+     MasterVec const& WriteAll( String const& fileName ) const
+     { return WriteRange(fileName,0UL,BaseT::size()); return *this; }
 @@ -99,7 +99,7 @@ public:
      { if ( !append ) BaseT::clear();
        FeudalFileReader rdr(fileName.c_str(),T::fixedDataLen());
@@ -95,6 +149,24 @@ index e6477d9..45a8640 100644
        for ( size_type iii = 0; iii < siz; ++iii )
          appendFromReader(rdr,iii);
        return *this; }
+@@ -148,7 +148,7 @@ public:
+                            vec<int> const& entries,
+                            int /*extra*/ = 0, Bool /*pre_reserved*/ = False )
+     { VirtualMasterVec<T> vVec(fileName.c_str());
+-      if ( BaseT::size() < vVec.size() ) resize(vVec.size());
++      if ( BaseT::size() < vVec.size() ) this->resize(vVec.size());
+       vec<int>::const_iterator end(entries.end());
+       for ( vec<int>::const_iterator itr(entries.begin()); itr != end; ++itr )
+       { BaseT::operator[](*itr) = vVec[*itr]; }
+@@ -158,7 +158,7 @@ public:
+                                 size_t from, size_t to,
+                                 int /* extra */ = 0 )
+     { VirtualMasterVec<T> vVec(fileName.c_str());
+-      if ( BaseT::size() < vVec.size() ) resize(vVec.size());
++      if ( BaseT::size() < vVec.size() ) this->resize(vVec.size());
+       for ( ; from < to; ++from ) (*this)[from] = vVec[from];
+       return *this; }
+ 
 diff --git a/feudal/SerfVec.h b/feudal/SerfVec.h
 index e91847c..d5f053d 100644
 --- a/feudal/SerfVec.h
@@ -112,3 +184,81 @@ index e91847c..d5f053d 100644
          BaseT::resize(len); }
        return *this; }
  
+diff --git a/reporting/ScaffoldLayout.cc b/reporting/ScaffoldLayout.cc
+index 7c39718..646b106 100644
+--- a/reporting/ScaffoldLayout.cc
++++ b/reporting/ScaffoldLayout.cc
+@@ -66,13 +66,13 @@ int main(int argc, char **argv)
+        // This version finds the first and last non-ambiguous sequences of
+        // END_SIZE_MIN <= length <= end_size_max
+        // --bruce
+-       int j, k;
++       int l, k;
+        int end_size_max = min(END_SIZE_MAX, scaffold_size/2);
+-       for (j = k = 0; k < scaffold_size; k++) {
++       for (l = k = 0; k < scaffold_size; k++) {
+ 	 if (assembly_amb[i][k]) {
+-	   if (k-j >= END_SIZE_MIN) break;
+-	   else j = k+1;
+-	 } else if (k-j >= end_size_max) break;
++	   if (k-l >= END_SIZE_MIN) break;
++	   else l = k+1;
++	 } else if (k-l >= end_size_max) break;
+        }
+        e.SetToSubOf( assembly[i], j, k-j );
+        ENDS.push_back_reserve(e);
+diff --git a/system/ProcBuf.cc b/system/ProcBuf.cc
+index 748cc6b..5b91ed3 100644
+--- a/system/ProcBuf.cc
++++ b/system/ProcBuf.cc
+@@ -189,12 +189,12 @@ basic_procbuf<charT,traits>::overflow( int_type c )
+ 	    Assert(M_internal_put_buffer == NULL);
+ 	    M_internal_put_buffer = new char_type [DEFAULT_PUT_BUFFER_SIZE];
+ 	    M_internal_put_buffer_end = M_internal_put_buffer+DEFAULT_PUT_BUFFER_SIZE;
+-	    setp(M_internal_put_buffer,
++	    this->setp(M_internal_put_buffer,
+ 		 M_internal_put_buffer_end);
+ 	} else if (!flush())
+ 	    return traits_type::eof();
+ 	if (!traits_type::eq_int_type(c, traits_type::eof()))
+-	    return sputc(c);
++	    return this->sputc(c);
+ 	else
+ 	    return traits_type::not_eof(c);
+     }
+@@ -234,7 +234,7 @@ basic_procbuf<charT,traits>::pbackfail( int_type c )
+ 	// (which is start of buffer)
+ 	std::copy_backward(this->eback(), this->egptr(), this->egptr()+1);
+ 	*(this->gptr()) = traits_type::to_char_type(c);
+-	setg(this->eback(), this->gptr(), this->egptr()+1);
++	this->setg(this->eback(), this->gptr(), this->egptr()+1);
+         return traits_type::not_eof(c);
+     } else
+ 	return traits_type::eof();
+@@ -263,7 +263,7 @@ basic_procbuf<charT,traits>::flush( )
+ 	// doing wchars and we write an odd # of bytes?
+ 	return false;
+     } else {
+-	setp(this->pbase(), this->epptr());
++	this->setp(this->pbase(), this->epptr());
+ 	return true;
+     }
+ }
+@@ -277,7 +277,7 @@ basic_procbuf<charT,traits>::fill( )
+ 	Assert(M_internal_get_buffer == NULL);
+ 	M_internal_get_buffer = new char_type[DEFAULT_GET_BUFFER_SIZE];
+ 	M_internal_get_buffer_end = M_internal_get_buffer + DEFAULT_GET_BUFFER_SIZE;
+-	setg(M_internal_get_buffer, M_internal_get_buffer_end, M_internal_get_buffer_end);
++	this->setg(M_internal_get_buffer, M_internal_get_buffer_end, M_internal_get_buffer_end);
+     }
+     // The "get" pointer should be at the end of the buffer - that's
+     // why we need to fill it.
+@@ -312,7 +312,7 @@ basic_procbuf<charT,traits>::fill( )
+     //
+     // reset the get pointers
+     //
+-    setg(M_internal_get_buffer, 
++    this->setg(M_internal_get_buffer, 
+ 	 M_internal_get_buffer, 
+ 	 M_internal_get_buffer+numusable/sizeof(char_type));
+     return true;

@@ -1,6 +1,15 @@
 # ChangeLog for sci-biology/allpaths
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/allpaths/ChangeLog,v 1.8 2012/08/30 07:46:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/allpaths/ChangeLog,v 1.9 2012/11/08 20:54:22 jlec Exp $
+
+*allpaths-3.1-r1 (08 Nov 2012)
+
+  08 Nov 2012; Justin Lecher <jlec@gentoo.org> +allpaths-3.1-r1.ebuild,
+  +files/allpaths-3.1-boost-1.50-2.patch, +files/allpaths-3.1-boost-1.50.patch,
+  files/allpaths-3.1-gcc4.7.patch, +files/allpaths-3.1-linking.patch:
+  Fix for latest boost, #421727; fix for additional problem with gcc-4.7;
+  enable openmp support; Respect LDFALGS and CFLAGS everywhere; make it gold
+  resistant
 
   30 Aug 2012; Justin Lecher <jlec@gentoo.org> allpaths-3.1.ebuild:
   Respect CXXFLAGS
