@@ -15,5 +15,9 @@
       libraries are not used by default, and should not be used unless
       you're developing against Boost.
     </flag>
+    <flag name='threads'>
+      Build multi-thread-compatible libraries instead of
+      single-threaded only.
+    </flag>
   </use>
 </pkgmetadata>

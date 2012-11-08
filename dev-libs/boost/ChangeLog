@@ -1,6 +1,19 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.275 2012/11/05 18:23:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.276 2012/11/08 03:28:05 flameeyes Exp $
+
+*boost-1.52.0-r1 (08 Nov 2012)
+
+  08 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org> +boost-1.52.0-r1.ebuild,
+  -boost-1.52.0.ebuild, metadata.xml:
+  Simplify bjam handling; use the unversioned commands from boost-
+  build-1.52.0-r1; force-disabled C++11 support; add threads USE flag and only
+  build either single- or multi-threaded libraries so that there is no doubt on
+  what's being linked in (a deptree check shows that they can cross and
+  collide); use the system layout, designed for Unix installs (closes bug
+  #442116 together with part of Arfrever's patch); drop old code (bug #442114 by
+  Arfrever); use proper GNU stack markings (bug #440284); fix boost.mpi python
+  module (bug #441806) and optimize the module (sneaked in the same bug).
 
 *boost-1.52.0 (05 Nov 2012)
 
