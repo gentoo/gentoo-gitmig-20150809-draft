@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mhonarc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mhonarc/ChangeLog,v 1.25 2012/10/28 14:07:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mhonarc/ChangeLog,v 1.26 2012/11/08 19:30:29 pinkbyte Exp $
+
+  08 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> mhonarc-2.6.18-r1.ebuild:
+  QA: Change variables order according to skel.ebuild, add missing 'die'
+  statements
 
   28 Oct 2012; Pacho Ramos <pacho@gentoo.org>
   -files/mhonarc-2.6.16-list-output-order.patch, -mhonarc-2.6.10.ebuild,
