@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/stella
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/ChangeLog,v 1.71 2012/10/24 23:09:30 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/ChangeLog,v 1.72 2012/11/08 19:38:39 mr_bones_ Exp $
+
+  08 Nov 2012; Michael Sterrett <mr_bones_@gentoo.org> -stella-3.3.ebuild,
+  -stella-3.4.ebuild, -stella-3.5.ebuild:
+  old
 
   24 Oct 2012; Anthony G. Basile <blueness@gentoo.org> stella-3.7.2.ebuild:
   stable ppc, bug #436826
