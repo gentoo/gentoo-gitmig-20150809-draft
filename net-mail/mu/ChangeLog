@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mu/ChangeLog,v 1.14 2012/11/07 21:26:39 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mu/ChangeLog,v 1.15 2012/11/08 18:20:28 tomka Exp $
+
+  08 Nov 2012; Thomas Kahle <tomka@gentoo.org> mu-0.9.6.ebuild:
+  Fix dep also for 0.9.6
 
   07 Nov 2012; Thomas Kahle <tomka@gentoo.org> mu-0.9.9.ebuild:
   block net-mail/mailutils (bug 441818)
