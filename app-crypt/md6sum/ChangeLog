@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/md6sum
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/md6sum/ChangeLog,v 1.2 2012/11/05 23:38:30 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/md6sum/ChangeLog,v 1.3 2012/11/08 03:15:48 c1pher Exp $
+
+*md6sum-1.0-r1 (08 Nov 2012)
+
+  08 Nov 2012; Dane Smith <c1pher@gentoo.org> -md6sum-1.0.ebuild,
+  +md6sum-1.0-r1.ebuild, +files/md6sum-1.0-cflags.patch:
+  Revision bump. Add patch to fix CFLAGS respect wrt bug 442066. Drop old.
 
   05 Nov 2012; Dane Smith <c1pher@gentoo.org> md6sum-1.0.ebuild, metadata.xml:
   Drop hwoarang as maintainer and leave in crypto herd at his request.
