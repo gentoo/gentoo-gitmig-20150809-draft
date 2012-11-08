@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/envisageplugins/envisageplugins-3.2.0.ebuild,v 1.4 2012/06/12 11:57:53 iksaif Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/envisageplugins/envisageplugins-3.2.0.ebuild,v 1.5 2012/11/08 20:56:10 idella4 Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -21,6 +21,7 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="examples test"
+RESTRICT="test"
 
 RDEPEND=">=dev-python/envisagecore-3.2.0
 	dev-python/setuptools
