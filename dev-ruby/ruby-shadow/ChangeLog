@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-shadow
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-shadow/ChangeLog,v 1.25 2012/11/07 05:10:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-shadow/ChangeLog,v 1.26 2012/11/08 10:28:58 blueness Exp $
+
+  08 Nov 2012; Anthony G. Basile <blueness@gentoo.org> ruby-shadow-2.1.4.ebuild:
+  stable ppc, bug #435192
 
   07 Nov 2012; Jeroen Roovers <jer@gentoo.org> ruby-shadow-2.1.4.ebuild:
   Stable for HPPA (bug #435192).
@@ -98,4 +101,3 @@
   25 Nov 2008; Caleb Tennis <caleb@gentoo.org> +metadata.xml,
   +ruby-shadow-1.4.1.ebuild:
   Initial commit - ruby bindings for shadow
-
