@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/etsprojecttools/etsprojecttools-0.6.0.ebuild,v 1.4 2011/02/01 01:54:22 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/etsprojecttools/etsprojecttools-0.6.0.ebuild,v 1.5 2012/11/08 10:20:21 idella4 Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -25,6 +25,7 @@ IUSE="test"
 RDEPEND="dev-python/setuptools
 	dev-vcs/subversion"
 DEPEND="${RDEPEND}
+	!dev-python/ets
 	test? ( dev-python/nose )"
 
 S="${WORKDIR}/${MY_P}"
