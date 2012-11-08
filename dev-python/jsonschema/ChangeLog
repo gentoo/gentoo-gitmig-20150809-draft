@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/jsonschema
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonschema/ChangeLog,v 1.1 2012/11/08 18:28:27 chutzpah Exp $
+
+*jsonschema-0.7 (08 Nov 2012)
+
+  08 Nov 2012; Patrick McLean <chutzpah@gentoo.org> +jsonschema-0.7.ebuild,
+  +metadata.xml:
+  New package, a JSON schema validator for Python
+
