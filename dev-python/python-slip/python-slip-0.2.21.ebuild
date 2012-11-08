@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-slip/python-slip-0.2.20.ebuild,v 1.2 2012/11/08 04:28:44 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-slip/python-slip-0.2.21.ebuild,v 1.1 2012/11/08 04:28:44 tetromino Exp $
 
 EAPI=4
 
