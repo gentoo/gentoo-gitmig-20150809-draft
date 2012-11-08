@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/google-talkplugin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/ChangeLog,v 1.36 2012/11/03 17:20:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/ChangeLog,v 1.37 2012/11/08 05:04:12 ottxor Exp $
+
+  08 Nov 2012; Christoph Junghans <ottxor@gentoo.org>
+  google-talkplugin-3.7.1.0.ebuild, google-talkplugin-3.9.1.0.ebuild:
+  updated RESTRICT and nofetch message - forgotten at version bump
 
 *google-talkplugin-3.10.2.0 (03 Nov 2012)
 
