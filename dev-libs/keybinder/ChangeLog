@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/keybinder
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/keybinder/ChangeLog,v 1.12 2012/10/26 02:16:43 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/keybinder/ChangeLog,v 1.13 2012/11/08 19:25:04 blueness Exp $
+
+  08 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
+  keybinder-0.3.0-r200.ebuild:
+  keyword ~ppc ~ppc64, bug #437156
 
   26 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
   keybinder-0.3.0-r200.ebuild:
