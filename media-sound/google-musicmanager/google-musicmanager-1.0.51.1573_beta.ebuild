@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/google-musicmanager/google-musicmanager-1.0.37.252_beta.ebuild,v 1.4 2012/09/24 00:46:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/google-musicmanager/google-musicmanager-1.0.51.1573_beta.ebuild,v 1.1 2012/11/08 05:00:30 ottxor Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE="log"
 
-RESTRICT="fetch strip"
+RESTRICT="strip mirror"
 
 RDEPEND="
 	dev-libs/expat
@@ -54,12 +54,9 @@ QA_FLAGS_IGNORED="${INSTALL_BASE}/.*"
 S="${WORKDIR}/${INSTALL_BASE}"
 
 pkg_nofetch() {
-	elog "This version is no longer available from Google and the license prevents mirroring."
-	elog "This ebuild is intended for users who already downloaded it previously and have problems"
-	elog "with ${PV}+. If you can get the distfile from e.g. another computer of yours, or search"
-	use amd64 && MY_PKG="${MY_PKG/i386/amd64}"
-	elog "it with google: http://www.google.com/search?q=intitle:%22index+of%22+${MY_PKG}"
-	elog "and copy the file ${MY_PKG} to ${DISTDIR}."
+	einfo "This version is no longer available from Google."
+	einfo "Note that Gentoo cannot mirror the distfiles due to license reasons, so we have to follow the bump."
+	einfo "Please file a version bump bug on http://bugs.gentoo.org (search existing bugs for ${PN} first!)."
 }
 
 src_install() {
@@ -75,5 +72,5 @@ src_install() {
 	dosym /"${INSTALL_BASE}"/google-musicmanager /opt/bin/google-musicmanager
 
 	make_desktop_entry "${PN}" "Google Music Manager" \
-		"/${INSTALL_BASE}/product_logo_32.xpm" "AudioVideo;Audio;Player;Music"
+		"/${INSTALL_BASE}/product_logo_32.xpm" "AudioVideo;Audio;Player"
 }
