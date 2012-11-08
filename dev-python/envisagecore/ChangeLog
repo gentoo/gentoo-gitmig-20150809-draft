@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/envisagecore
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/envisagecore/ChangeLog,v 1.9 2012/06/12 11:54:48 iksaif Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/envisagecore/ChangeLog,v 1.10 2012/11/08 08:16:43 idella4 Exp $
+
+  09 Nov 2012; Ian Delaney <idella4@gentoo.org> envisagecore-3.2.0.ebuild:
+  Resticted tests wrt Bug #430396
 
   12 Jun 2012; Corentin Chary <iksaif@gentoo.org> envisagecore-3.2.0.ebuild:
   Remove dead HOMEPAGE
@@ -48,4 +51,3 @@
   15 Jan 2009; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
   +envisagecore-3.0.1.ebuild:
   Initial import
-
