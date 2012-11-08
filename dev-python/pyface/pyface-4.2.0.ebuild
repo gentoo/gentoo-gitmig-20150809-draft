@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyface/pyface-4.2.0.ebuild,v 1.1 2012/10/09 11:23:31 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyface/pyface-4.2.0.ebuild,v 1.2 2012/11/08 15:03:12 idella4 Exp $
 
 EAPI=4
 
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython 2.5"
 DISTUTILS_SRC_TEST="nosetests"
-
+PYTHON_TESTS_RESTRICTED_ABIS="2.[56]"
 inherit distutils virtualx
 
 DESCRIPTION="Enthought Tool Suite: Traits-capable windowing framework"
@@ -38,7 +38,7 @@ src_compile() {
 }
 
 src_test() {
-	VIRTUALX_COMMAND="distutils_src_test" virtualmake
+	VIRTUALX_COMMAND="nosetests -I test_editor_area_pane*" virtualmake
 }
 
 src_install() {

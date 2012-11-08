@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyface
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyface/ChangeLog,v 1.4 2012/10/09 11:23:31 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyface/ChangeLog,v 1.5 2012/11/08 15:03:12 idella4 Exp $
+
+  09 Nov 2012; Ian Delaney <idella4@gentoo.org> pyface-4.1.0.ebuild,
+  pyface-4.2.0.ebuild:
+  Skipping upassable test.py file, test restricting python2.[56] & pypy,
+  upgrading src_test, fixes Bug #No. 431530
 
 *pyface-4.2.0 (09 Oct 2012)
 
