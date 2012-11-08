@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/opera-next-12.10.1652.ebuild,v 1.2 2012/11/08 04:58:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/opera-next-12.10.1652.ebuild,v 1.3 2012/11/08 05:08:40 jer Exp $
 
 EAPI=4
 inherit eutils fdo-mime gnome2-utils multilib pax-utils versionator
@@ -85,7 +85,6 @@ src_unpack() {
 
 src_prepare() {
 	export OPREFIX="/usr/$(get_libdir)"
-	export QA_FLAGS_IGNORED="${OPREFIX}/${PN}/.*"
 	export QA_PREBUILT="${OPREFIX}/${PN}/.*"
 
 	local LNGDIR="share/${PN}/locale"

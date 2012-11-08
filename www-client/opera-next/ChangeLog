@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera-next
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.146 2012/11/08 04:58:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.147 2012/11/08 05:08:40 jer Exp $
+
+  08 Nov 2012; Jeroen Roovers <jer@gentoo.org> opera-next-12.10.1652.ebuild,
+  opera-next-12.50.1583.ebuild:
+  Remove QA_FLAGS_IGNORED.
 
   08 Nov 2012; Jeroen Roovers <jer@gentoo.org> opera-next-12.10.1652.ebuild,
   opera-next-12.50.1583.ebuild:
