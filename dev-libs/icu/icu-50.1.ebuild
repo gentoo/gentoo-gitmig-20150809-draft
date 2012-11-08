@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-50.1.ebuild,v 1.1 2012/11/08 13:54:54 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-50.1.ebuild,v 1.2 2012/11/08 15:49:43 scarabeus Exp $
 
 EAPI=5
 
@@ -114,7 +114,6 @@ src_install() {
 	default
 
 	dohtml ../readme.html
-	dodoc ../unicode-license.txt
 
 	use doc && dohtml -p api -r doc/html/
 }
