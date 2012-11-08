@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/epplets
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/epplets/ChangeLog,v 1.22 2012/05/05 05:12:03 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/epplets/ChangeLog,v 1.23 2012/11/08 03:18:53 vapier Exp $
+
+*epplets-0.14 (08 Nov 2012)
+
+  08 Nov 2012; Mike Frysinger <vapier@gentoo.org> +epplets-0.14.ebuild:
+  Version bump.  Add USE=static-libs support #394233 by Agostino Sarubbo.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> epplets-0.10.ebuild,
   epplets-0.11.ebuild, epplets-0.12.ebuild:
