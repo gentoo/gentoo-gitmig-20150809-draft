@@ -1,6 +1,11 @@
 # ChangeLog for app-mobilephone/gammu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.92 2012/05/22 16:06:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.93 2012/11/08 09:38:52 pinkbyte Exp $
+
+*gammu-1.32.0 (08 Nov 2012)
+
+  08 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> +gammu-1.32.0.ebuild:
+  Version bump wrt bug #395919
 
   22 May 2012; Samuli Suominen <ssuominen@gentoo.org> gammu-1.28.0.ebuild,
   gammu-1.29.0.ebuild, gammu-1.30.0.ebuild:
