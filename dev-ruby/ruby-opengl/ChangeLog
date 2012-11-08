@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-opengl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-opengl/ChangeLog,v 1.55 2012/11/07 05:05:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-opengl/ChangeLog,v 1.56 2012/11/08 11:43:04 blueness Exp $
+
+  08 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
+  ruby-opengl-0.60.1-r2.ebuild:
+  stable ppc, bug #430206
 
   07 Nov 2012; Jeroen Roovers <jer@gentoo.org> ruby-opengl-0.60.1-r2.ebuild:
   Stable for HPPA (bug #430206).
@@ -216,4 +220,3 @@
   files/ruby-opengl-0.32c-font-gentoo.diff:
   Initial import. Ebuild submitted by Mathias Gumz <gumz@cs.uni-magdeburg.de>,
   closing bug #23099
-
