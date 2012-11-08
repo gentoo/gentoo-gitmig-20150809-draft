@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.16.5.ebuild,v 1.2 2012/10/31 17:26:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.16.5.ebuild,v 1.3 2012/11/08 06:24:13 flameeyes Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2:2.6"
@@ -23,7 +23,7 @@ KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="debug doc examples python ssl static-libs"
 RESTRICT="test"
 
-DEPEND=">=dev-libs/boost-1.48[python?]
+DEPEND=">=dev-libs/boost-1.48[python?,threads(+)]
 	>=sys-devel/libtool-2.2
 	sys-libs/zlib
 	examples? ( !net-p2p/mldonkey )
@@ -42,9 +42,15 @@ src_prepare() {
 }
 
 src_configure() {
+	local myconf
+
 	# use multi-threading versions of boost libs
-	local myconf="--with-boost-system=boost_system-mt \
-		--with-boost-python=boost_python-${PYTHON_ABI}-mt"
+	if has_version '>=dev-libs/boost-1.52.0-r1'; then
+		myconf+=" --with-boost-python=boost_python-${PYTHON_ABI}"
+	else
+		myconf+=" --with-boost-system=boost_system-mt \
+			--with-boost-python=boost_python-${PYTHON_ABI}-mt"
+	fi
 
 	local LOGGING
 	use debug && myconf+=" --enable-logging=verbose"

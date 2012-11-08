@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.139 2012/11/03 23:14:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.140 2012/11/08 06:24:13 flameeyes Exp $
+
+  08 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  rb_libtorrent-0.15.10.ebuild, rb_libtorrent-0.15.5.ebuild,
+  rb_libtorrent-0.15.9.ebuild, rb_libtorrent-0.16.3.ebuild,
+  rb_libtorrent-0.16.5.ebuild:
+  Handle USE=threads for boost 1.52.0-r1 and later. Remove keywords from ebuilds
+  that depends on older boost versions.
 
   03 Nov 2012; Markos Chandras <hwoarang@gentoo.org>
   rb_libtorrent-0.15.10.ebuild, rb_libtorrent-0.15.5.ebuild,
