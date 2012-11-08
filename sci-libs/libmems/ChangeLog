@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/libmems
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libmems/ChangeLog,v 1.3 2012/10/31 20:40:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libmems/ChangeLog,v 1.4 2012/11/08 09:09:17 jlec Exp $
+
+*libmems-1.6_p1 (08 Nov 2012)
+
+  08 Nov 2012; Justin Lecher <jlec@gentoo.org> +libmems-1.6_p1.ebuild,
+  +files/libmems-1.6_p1-boost.patch, +files/libmems-1.6_p1-build.patch,
+  +files/libmems-1.6_p1-gcc-4.7.patch:
+  Version bump, which fixes gcc-4.7, respect for user env and boost-1.51
+  compatibility, #442300
 
   31 Oct 2012; Diego E. Pettenò <flameeyes@gentoo.org> libmems-1.6.ebuild:
   QA: drop maximum boost version dep; if it fails to build, it has to be fixed.
