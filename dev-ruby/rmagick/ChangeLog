@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rmagick
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.190 2012/11/07 05:11:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.191 2012/11/08 10:36:28 blueness Exp $
+
+  08 Nov 2012; Anthony G. Basile <blueness@gentoo.org> rmagick-2.13.1.ebuild:
+  stable ppc ppc64, bug #435116
 
   07 Nov 2012; Jeroen Roovers <jer@gentoo.org> rmagick-2.13.1.ebuild:
   Stable for HPPA (bug #435116).
