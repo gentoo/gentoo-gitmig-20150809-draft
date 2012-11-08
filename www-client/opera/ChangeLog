@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.758 2012/11/07 16:08:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.759 2012/11/08 04:57:34 jer Exp $
+
+  08 Nov 2012; Jeroen Roovers <jer@gentoo.org> opera-12.10.1652.ebuild,
+  opera-12.11.1653.ebuild:
+  Out with QA_PRESTRIPPED, in with QA_PREBUILT (bug #442090.
 
 *opera-12.11.1653 (07 Nov 2012)
 
