@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14203 2012/11/08 06:58:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14204 2012/11/08 16:12:51 chainsaw Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -99,11 +99,6 @@ x11-apps/grandr
 # Naohiro Aota <naota@gentoo.org> (30 Oct 2012)
 # Masked for test.
 =net-misc/dropbox-1.4.17
-
-# Tony Vroon <chainsaw@gentoo.org> (30 Oct 2012)
-# Initial LTS release. Needed significant effort to even build.
-# Do not deploy in production. Do not rely on for serious work.
-=net-misc/asterisk-11.0.0
 
 # Ben de Groot <yngwin@gentoo.org> (29 Oct 2012)
 # Fails compilation on missing sqlite header - unbundle patch needs updating

@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7121 2012/11/08 16:08:34 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7122 2012/11/08 16:12:51 chainsaw Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Nov 2012; Tony Vroon <chainsaw@gentoo.org> package.mask:
+  Remove Asterisk 11 branch mask; the second release is out and initial tests
+  have been very positive.
 
   08 Nov 2012; Víctor Ostorga <vostorga@gentoo.org> thirdpartymirrors:
   Updating samba mirrors list
