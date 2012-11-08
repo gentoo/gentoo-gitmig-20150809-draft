@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/diradm
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/ChangeLog,v 1.38 2009/10/11 22:39:52 halcy0n Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/ChangeLog,v 1.39 2012/11/08 20:48:36 robbat2 Exp $
+
+*diradm-2.9.7 (08 Nov 2012)
+
+  08 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> +diradm-2.9.7.ebuild:
+  Version bump, contains a single fix, for bug #254698, plus cleanups of the
+  leftover CVS->Git migration of 2008. Stable candidate.
 
   11 Oct 2009; Mark Loeser <halcy0n@gentoo.org> diradm-2.9.3.ebuild,
   diradm-2.9.5.ebuild, diradm-2.9.6.ebuild:
@@ -160,4 +166,3 @@
 
   05 Jul 2003; Robin H. Johnson <robbat2@gentoo.org> diradm-1.1.ebuild:
   Initial commit
-
