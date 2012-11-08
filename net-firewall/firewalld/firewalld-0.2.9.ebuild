@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firewalld/firewalld-0.2.9.ebuild,v 1.5 2012/11/07 22:17:21 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firewalld/firewalld-0.2.9.ebuild,v 1.6 2012/11/08 03:56:30 cardoe Exp $
 
 EAPI=4
 PYTHON_COMPAT=( python{2_6,2_7} )
-BACKPORTS=4d44d470e
+BACKPORTS=190680ba
 
 inherit autotools eutils gnome2-utils python-r1 systemd multilib
 
