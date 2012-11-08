@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.418 2012/10/30 00:30:35 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.419 2012/11/08 16:11:35 chainsaw Exp $
+
+*asterisk-11.0.1 (08 Nov 2012)
+
+  08 Nov 2012; Tony Vroon <chainsaw@gentoo.org> -asterisk-10.7.1.ebuild,
+  -asterisk-10.8.0.ebuild, +asterisk-11.0.1.ebuild:
+  Second release on the 11 branch. Among other things, this prevents the
+  registry getting cleared on a sip reload. Conference bridge recording AMI/CLI
+  commands now work. Remove older 10 branch ebuilds.
 
 *asterisk-11.0.0 (30 Oct 2012)
 
