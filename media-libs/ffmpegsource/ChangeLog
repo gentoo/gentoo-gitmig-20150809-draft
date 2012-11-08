@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/ffmpegsource
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ffmpegsource/ChangeLog,v 1.12 2012/05/21 22:40:12 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ffmpegsource/ChangeLog,v 1.13 2012/11/08 11:31:35 aballier Exp $
+
+  08 Nov 2012; Alexis Ballier <aballier@gentoo.org> ffmpegsource-2.17.ebuild,
+  +files/ffmpegsource-2.17-ffmpeg.patch:
+  backport upstream patch to build with latest ffmpeg releases, bug #417983
 
   21 May 2012; Jeff Horelick <jdhore@gentoo.org> ffmpegsource-2.17.ebuild:
   marked x86 per bug 416777
