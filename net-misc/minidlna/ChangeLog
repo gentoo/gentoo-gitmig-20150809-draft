@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/minidlna
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/ChangeLog,v 1.23 2012/09/18 05:42:51 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/ChangeLog,v 1.24 2012/11/08 11:43:45 aballier Exp $
+
+  08 Nov 2012; Alexis Ballier <aballier@gentoo.org> minidlna-1.0.25-r1.ebuild,
+  +files/minidlna-1.0.25-ffmpeg.patch:
+  fix build issues due to various header conflicts with recent ffmpeg: sanitize
+  includes. bug #419451
 
   18 Sep 2012; Michael Weber <xmw@gentoo.org> minidlna-1.0.25-r1.ebuild:
   Correct permissions hack in pkg_setup if user exists but /var/lib/minidlna

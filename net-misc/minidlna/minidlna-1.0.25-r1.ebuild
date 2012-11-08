@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/minidlna-1.0.25-r1.ebuild,v 1.4 2012/09/18 05:42:51 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/minidlna-1.0.25-r1.ebuild,v 1.5 2012/11/08 11:43:45 aballier Exp $
 
 EAPI=4
 
@@ -42,6 +42,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.0.18-Makefile.patch
+	epatch "${FILESDIR}"/${PN}-1.0.25-ffmpeg.patch
 
 	sed -e "/^DB_PATH=/s:\".*\":\"${EPREFIX}/var/lib/${PN}\":" \
 		-e "/^LOG_PATH=/s:\".*\":\"${EPREFIX}/var/log\":" \
