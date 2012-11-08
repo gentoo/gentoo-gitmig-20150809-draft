@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14201 2012/11/08 06:40:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14202 2012/11/08 06:56:20 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -266,6 +266,9 @@ app-emacs/tamago
 # Robin H. Johnson <robbat2@gentoo.org> (08 Oct 2012)
 # Masked for testing
 =sys-libs/db-5.3*
+=sys-libs/db-5.2*
+=sys-libs/db-5.1*
+=sys-libs/db-5.0*
 
 # Eray Aslan <eras@gentoo.org> (07 Oct 2012)
 # Dead upstream.  Use mail-client/alpine instead.  Bug #371593
@@ -577,10 +580,6 @@ kde-misc/kgtk
 =dev-embedded/arduino-0015-r1
 =dev-embedded/arduino-0017
 
-# Robin H. Johnson <robbat2@gentoo.org> (09 Feb 2012)
-# Masked for testing
-=sys-libs/db-5.3*
-
 # Michał Górny <mgorny@gentoo.org> (21 Jan 2012)
 # Blocks sysvinit yet doesn't provide all tools provided by it.
 # Masking until we get the necessary tools out of sysvinit.
@@ -688,10 +687,6 @@ dev-tex/pdftex
 =dev-libs/guiloader-c++-2.99.0
 =dev-util/crow-designer-2.99.0
 
-# Robin H. Johnson <robbat2@gentoo.org> (16 Jul 2011)
-# Masked for testing, no testsuite failures left!
-=sys-libs/db-5.2*
-
 # Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (15 July 2011)
 # Masking mariadb-5.1.55 until we have feedback about the unit tests
 # as they build for me but fail for Robin
@@ -798,10 +793,6 @@ net-analyzer/ncrack
 # that actually builds
 =net-im/kmess-9999
 
-# Robin H. Johnson <robbat2@gentoo.org> (08 Oct 2010)
-# Masked for testing, and some testsuite failures.
-=sys-libs/db-5.1*
-
 # Luca Barbato <lu_zero@gentoo.org> (21 Jul 2010)
 # Not ready for public consumption, clashes with current mesa-git
 media-libs/shivavg
@@ -832,11 +823,6 @@ app-crypt/hmaccalc
 # Upstreams testing version
 # Added on request
 >=sci-chemistry/refmac-5.6
-
-# Robin H. Johnson <robbat2@gentoo.org> (11 May 2010)
-# Masked for testing, and some testsuite failures.
-# Bug 313769
-=sys-libs/db-5.0*
 
 # Pacho Ramos <pacho@gentoo.org> (10 Apr 2010)
 # This version provides packages from testing to let people using

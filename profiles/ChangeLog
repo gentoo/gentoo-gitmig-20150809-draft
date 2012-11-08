@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7118 2012/11/08 06:40:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7119 2012/11/08 06:56:19 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Collapse all the berkdb masks together.
 
   08 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   More packages using obsolete boost.
