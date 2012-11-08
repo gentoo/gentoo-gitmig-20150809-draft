@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kde-wallpapers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-wallpapers/ChangeLog,v 1.76 2012/10/17 19:19:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-wallpapers/ChangeLog,v 1.77 2012/11/08 23:26:33 creffett Exp $
+
+*kde-wallpapers-4.9.3 (08 Nov 2012)
+
+  08 Nov 2012; <creffett@gentoo.org> +kde-wallpapers-4.9.3.ebuild:
+  Version bump KDE SC 4.9.3
 
   17 Oct 2012; Markus Meier <maekke@gentoo.org> kde-wallpapers-4.9.2.ebuild:
   add ~arm, bug #430072

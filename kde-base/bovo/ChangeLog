@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/bovo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/bovo/ChangeLog,v 1.129 2012/10/02 18:11:41 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/bovo/ChangeLog,v 1.130 2012/11/08 23:26:38 creffett Exp $
+
+*bovo-4.9.3 (08 Nov 2012)
+
+  08 Nov 2012; <creffett@gentoo.org> +bovo-4.9.3.ebuild:
+  Version bump KDE SC 4.9.3
 
 *bovo-4.9.2 (02 Oct 2012)
 

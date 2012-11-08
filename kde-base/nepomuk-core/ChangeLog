@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/nepomuk-core
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk-core/ChangeLog,v 1.13 2012/10/17 18:03:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk-core/ChangeLog,v 1.14 2012/11/08 23:27:09 creffett Exp $
+
+*nepomuk-core-4.9.3 (08 Nov 2012)
+
+  08 Nov 2012; <creffett@gentoo.org> +nepomuk-core-4.9.3.ebuild:
+  Version bump KDE SC 4.9.3
 
   17 Oct 2012; Markus Meier <maekke@gentoo.org> nepomuk-core-4.9.2-r1.ebuild:
   add ~arm, bug #430072

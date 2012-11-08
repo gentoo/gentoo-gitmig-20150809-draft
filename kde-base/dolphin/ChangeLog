@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/dolphin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.153 2012/10/17 18:30:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.154 2012/11/08 23:26:59 creffett Exp $
+
+*dolphin-4.9.3 (08 Nov 2012)
+
+  08 Nov 2012; <creffett@gentoo.org> +dolphin-4.9.3.ebuild:
+  Version bump KDE SC 4.9.3
 
   17 Oct 2012; Markus Meier <maekke@gentoo.org> dolphin-4.9.2.ebuild:
   add ~arm, bug #430072

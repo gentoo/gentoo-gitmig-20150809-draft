@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kcheckpass
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.237 2012/10/17 18:44:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.238 2012/11/08 23:26:24 creffett Exp $
+
+*kcheckpass-4.9.3 (08 Nov 2012)
+
+  08 Nov 2012; <creffett@gentoo.org> +kcheckpass-4.9.3.ebuild:
+  Version bump KDE SC 4.9.3
 
   17 Oct 2012; Markus Meier <maekke@gentoo.org> kcheckpass-4.9.2.ebuild:
   add ~arm, bug #430072

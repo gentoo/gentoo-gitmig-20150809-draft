@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdf/ChangeLog,v 1.217 2012/10/02 18:12:07 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdf/ChangeLog,v 1.218 2012/11/08 23:26:54 creffett Exp $
+
+*kdf-4.9.3 (08 Nov 2012)
+
+  08 Nov 2012; <creffett@gentoo.org> +kdf-4.9.3.ebuild:
+  Version bump KDE SC 4.9.3
 
 *kdf-4.9.2 (02 Oct 2012)
 

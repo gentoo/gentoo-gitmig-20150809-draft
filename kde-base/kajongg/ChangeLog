@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kajongg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kajongg/ChangeLog,v 1.67 2012/10/02 18:12:04 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kajongg/ChangeLog,v 1.68 2012/11/08 23:27:10 creffett Exp $
+
+*kajongg-4.9.3 (08 Nov 2012)
+
+  08 Nov 2012; <creffett@gentoo.org> +kajongg-4.9.3.ebuild:
+  Version bump KDE SC 4.9.3
 
 *kajongg-4.9.2 (02 Oct 2012)
 

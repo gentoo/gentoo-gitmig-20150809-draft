@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/plasma-workspace
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.180 2012/11/02 17:08:29 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.181 2012/11/08 23:26:46 creffett Exp $
+
+*plasma-workspace-4.9.3 (08 Nov 2012)
+
+  08 Nov 2012; <creffett@gentoo.org> +plasma-workspace-4.9.3.ebuild:
+  Version bump KDE SC 4.9.3
 
 *plasma-workspace-4.8.5-r2 (02 Nov 2012)
 

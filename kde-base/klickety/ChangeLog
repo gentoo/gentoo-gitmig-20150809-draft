@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/klickety
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klickety/ChangeLog,v 1.156 2012/10/02 18:11:58 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klickety/ChangeLog,v 1.157 2012/11/08 23:27:03 creffett Exp $
+
+*klickety-4.9.3 (08 Nov 2012)
+
+  08 Nov 2012; <creffett@gentoo.org> +klickety-4.9.3.ebuild:
+  Version bump KDE SC 4.9.3
 
 *klickety-4.9.2 (02 Oct 2012)
 

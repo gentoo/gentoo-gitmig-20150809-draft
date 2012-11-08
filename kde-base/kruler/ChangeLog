@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kruler
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kruler/ChangeLog,v 1.217 2012/10/02 18:12:12 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kruler/ChangeLog,v 1.218 2012/11/08 23:26:57 creffett Exp $
+
+*kruler-4.9.3 (08 Nov 2012)
+
+  08 Nov 2012; <creffett@gentoo.org> +kruler-4.9.3.ebuild:
+  Version bump KDE SC 4.9.3
 
 *kruler-4.9.2 (02 Oct 2012)
 

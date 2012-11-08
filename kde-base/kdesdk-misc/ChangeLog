@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdesdk-misc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/ChangeLog,v 1.201 2012/10/02 18:12:12 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/ChangeLog,v 1.202 2012/11/08 23:27:00 creffett Exp $
+
+*kdesdk-misc-4.9.3 (08 Nov 2012)
+
+  08 Nov 2012; <creffett@gentoo.org> +kdesdk-misc-4.9.3.ebuild:
+  Version bump KDE SC 4.9.3
 
 *kdesdk-misc-4.9.2 (02 Oct 2012)
 

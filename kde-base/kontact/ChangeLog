@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kontact
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact/ChangeLog,v 1.232 2012/10/02 18:12:00 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact/ChangeLog,v 1.233 2012/11/08 23:26:58 creffett Exp $
+
+*kontact-4.9.3 (08 Nov 2012)
+
+  08 Nov 2012; <creffett@gentoo.org> +kontact-4.9.3.ebuild:
+  Version bump KDE SC 4.9.3
 
 *kontact-4.9.2 (02 Oct 2012)
 

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/knotify
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knotify/ChangeLog,v 1.138 2012/10/17 19:58:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knotify/ChangeLog,v 1.139 2012/11/08 23:26:39 creffett Exp $
+
+*knotify-4.9.3 (08 Nov 2012)
+
+  08 Nov 2012; <creffett@gentoo.org> +knotify-4.9.3.ebuild:
+  Version bump KDE SC 4.9.3
 
   17 Oct 2012; Markus Meier <maekke@gentoo.org> knotify-4.9.2.ebuild:
   add ~arm, bug #430072

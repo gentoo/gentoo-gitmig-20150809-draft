@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/dolphin-plugins
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin-plugins/ChangeLog,v 1.65 2012/10/02 18:12:00 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin-plugins/ChangeLog,v 1.66 2012/11/08 23:26:51 creffett Exp $
+
+*dolphin-plugins-4.9.3 (08 Nov 2012)
+
+  08 Nov 2012; <creffett@gentoo.org> +dolphin-plugins-4.9.3.ebuild:
+  Version bump KDE SC 4.9.3
 
 *dolphin-plugins-4.9.2 (02 Oct 2012)
 

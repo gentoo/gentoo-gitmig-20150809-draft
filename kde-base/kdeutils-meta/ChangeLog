@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdeutils-meta
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils-meta/ChangeLog,v 1.227 2012/10/02 18:11:53 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils-meta/ChangeLog,v 1.228 2012/11/08 23:26:41 creffett Exp $
+
+*kdeutils-meta-4.9.3 (08 Nov 2012)
+
+  08 Nov 2012; <creffett@gentoo.org> +kdeutils-meta-4.9.3.ebuild:
+  Version bump KDE SC 4.9.3
 
 *kdeutils-meta-4.9.2 (02 Oct 2012)
 

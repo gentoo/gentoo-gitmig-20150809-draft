@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kwallet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwallet/ChangeLog,v 1.131 2012/10/17 19:48:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwallet/ChangeLog,v 1.132 2012/11/08 23:27:06 creffett Exp $
+
+*kwallet-4.9.3 (08 Nov 2012)
+
+  08 Nov 2012; <creffett@gentoo.org> +kwallet-4.9.3.ebuild:
+  Version bump KDE SC 4.9.3
 
   17 Oct 2012; Markus Meier <maekke@gentoo.org> kwallet-4.9.2.ebuild:
   add ~arm, bug #430072
