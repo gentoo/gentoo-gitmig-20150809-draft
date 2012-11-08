@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/chromaprint/chromaprint-0.7.ebuild,v 1.1 2012/09/21 04:51:13 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/chromaprint/chromaprint-0.7.ebuild,v 1.2 2012/11/08 11:11:52 aballier Exp $
 
 EAPI=4
 inherit cmake-utils
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="test tools"
 
 # note: use ffmpeg instead of fftw because it's recommended and required for tools
-RDEPEND=">=virtual/ffmpeg-0.6
+RDEPEND=">=virtual/ffmpeg-0.10
 	tools? ( >=media-libs/taglib-1.6 )"
 DEPEND="${RDEPEND}
 	test? (
@@ -26,7 +26,7 @@ DEPEND="${RDEPEND}
 
 DOCS="NEWS.txt README.txt"
 
-PATCHES=( "${FILESDIR}"/${P}-boost.patch )
+PATCHES=( "${FILESDIR}"/${P}-boost.patch "${FILESDIR}"/${P}-ffmpeg.patch )
 
 src_configure() {
 	local mycmakeargs=(
