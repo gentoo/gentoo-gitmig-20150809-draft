@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/imp3sh
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/imp3sh/ChangeLog,v 1.15 2009/12/15 16:42:08 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/imp3sh/ChangeLog,v 1.16 2012/11/08 03:15:42 vapier Exp $
+
+  08 Nov 2012; Mike Frysinger <vapier@gentoo.org> imp3sh-0.2.4.ebuild:
+  Drop gnuconfig_update #160173 by Diego Elio Pettenò.
 
   15 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> imp3sh-0.2.4.ebuild:
   Remove geocities from HOMEPAGE and SRC_URI wrt #297028.
