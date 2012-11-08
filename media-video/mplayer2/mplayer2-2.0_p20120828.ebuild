@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0_p20120828.ebuild,v 1.4 2012/09/30 15:26:22 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0_p20120828.ebuild,v 1.5 2012/11/08 11:49:17 aballier Exp $
 
 EAPI=4
 
@@ -173,6 +173,7 @@ DEPEND="${RDEPEND}
 
 PATCHES=(
 	"${FILESDIR}/${PN}-py2compat.patch"
+	"${FILESDIR}/${PN}-2.0_p20120828-ffmpeg.patch"
 )
 
 pkg_setup() {
