@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/enlightenment
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.156 2012/11/08 03:32:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.157 2012/11/08 07:56:38 vapier Exp $
+
+  08 Nov 2012; Mike Frysinger <vapier@gentoo.org>
+  enlightenment-0.16.9999.ebuild:
+  Drop doc rmdir that is no longer needed #440986 by Godfath3r.
 
 *enlightenment-1.0.11 (08 Nov 2012)
 

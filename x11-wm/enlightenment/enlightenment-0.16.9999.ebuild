@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.9999.ebuild,v 1.39 2012/11/05 07:06:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.9999.ebuild,v 1.40 2012/11/08 07:56:38 vapier Exp $
 
 EAPI="4"
 if [[ ${PV} == *9999 ]] ; then
@@ -76,7 +76,6 @@ src_configure() {
 
 src_install() {
 	default
-	rmdir "${D}"/usr/share/doc/e16 || die #294456
 	dodoc COMPLIANCE sample-scripts/*
 	dohtml docs/e16.html
 }
