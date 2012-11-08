@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-r2.eclass,v 1.23 2012/10/04 03:52:35 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-r2.eclass,v 1.24 2012/11/08 09:42:51 pesa Exp $
 
 # @ECLASS: qt4-r2.eclass
 # @MAINTAINER:
@@ -41,10 +41,8 @@ export XDG_CONFIG_HOME="${T}"
 # In case your Qt4 application provides various translations, use this variable
 # to specify them in order to populate "linguas_*" IUSE automatically. Make sure
 # that you set this variable before inheriting qt4-r2 eclass.
-# Example:
-# @CODE
-#   LANGS="en el de"
-# @CODE
+#
+# Example: LANGS="de el it ja"
 for x in ${LANGS}; do
 	IUSE+=" linguas_${x}"
 done
@@ -52,9 +50,11 @@ done
 # @ECLASS-VARIABLE: LANGSLONG
 # @DEFAULT_UNSET
 # @DESCRIPTION:
-# Same as above, but this variable is for LINGUAS that must be in long format.
+# Same as LANGS, but this variable is for LINGUAS that must be in long format.
 # Remember to set this variable before inheriting qt4-r2 eclass.
 # Look at ${PORTDIR}/profiles/desc/linguas.desc for details.
+#
+# Example: LANGSLONG="en_GB ru_RU"
 for x in ${LANGSLONG}; do
 	IUSE+=" linguas_${x%_*}"
 done
@@ -126,7 +126,7 @@ qt4-r2_src_compile() {
 
 # @FUNCTION: qt4-r2_src_install
 # @DESCRIPTION:
-# Default src_install function for qt4-based packages. Installs compiled code
+# Default src_install function for qt4-based packages. Installs compiled code,
 # documentation (via DOCS and HTML_DOCS variables).
 
 qt4-r2_src_install() {
@@ -141,36 +141,6 @@ qt4-r2_src_install() {
 	if [[ -n ${HTML_DOCS} ]] && [[ "$(declare -p HTML_DOCS 2>/dev/null 2>&1)" != "declare -a"* ]]; then
 		dohtml -r ${HTML_DOCS} || die "dohtml failed"
 	fi
-}
-
-# Internal function, used by eqmake4 and qt4-r2_src_configure
-# Look for project files:
-#   0 *.pro files found - output null string
-#   1 *.pro file found - output its name
-#   2 or more *.pro files found - if ${PN}.pro or $(basename ${S}).pro
-#     are there, output any of them
-# Outputs a project file argument used by eqmake4. Sets nullglob locally
-# to avoid expanding *.pro as "*.pro" when there are no matching files.
-_find_project_file() {
-	local dir_name=$(basename "${S}")
-
-	eshopts_push -s nullglob
-	local pro_files=(*.pro)
-	eshopts_pop
-
-	case ${#pro_files[@]} in
-	1)
-		echo "${pro_files[0]}"
-		;;
-	*)
-		for pro_file in "${pro_files[@]}"; do
-			if [[ ${pro_file} == "${dir_name}.pro" || ${pro_file} == "${PN}.pro" ]]; then
-				echo "${pro_file}"
-				break
-			fi
-		done
-		;;
-	esac
 }
 
 # @FUNCTION: eqmake4
@@ -261,9 +231,13 @@ eqmake4() {
 		-makefile \
 		QTDIR="${EPREFIX}"/usr/$(get_libdir) \
 		QMAKE="${EPREFIX}"/usr/bin/qmake \
+		QMAKE_AR="$(tc-getAR) cqs" \
 		QMAKE_CC="$(tc-getCC)" \
 		QMAKE_CXX="$(tc-getCXX)" \
 		QMAKE_LINK="$(tc-getCXX)" \
+		QMAKE_OBJCOPY="$(tc-getOBJCOPY)" \
+		QMAKE_RANLIB= \
+		QMAKE_STRIP= \
 		QMAKE_CFLAGS="${CFLAGS}" \
 		QMAKE_CFLAGS_RELEASE= \
 		QMAKE_CFLAGS_DEBUG= \
@@ -276,7 +250,6 @@ eqmake4() {
 		QMAKE_LIBDIR_QT="${EPREFIX}"/usr/$(get_libdir)/qt4 \
 		QMAKE_LIBDIR_X11="${EPREFIX}"/usr/$(get_libdir) \
 		QMAKE_LIBDIR_OPENGL="${EPREFIX}"/usr/$(get_libdir) \
-		QMAKE_STRIP= \
 		"${qmake_args[@]}"
 
 	# was qmake successful?
@@ -289,6 +262,35 @@ eqmake4() {
 	fi
 
 	return 0
+}
+
+# Internal function, used by eqmake4 and qt4-r2_src_configure.
+# Outputs a project file name that can be passed to eqmake4. Sets nullglob
+# locally to avoid expanding *.pro as "*.pro" when there are no matching files.
+#   0 *.pro files found --> outputs null string
+#   1 *.pro file found --> outputs its name
+#   2 or more *.pro files found --> if ${PN}.pro or $(basename ${S}).pro
+#       are there, outputs any of them
+_find_project_file() {
+	local dir_name=$(basename "${S}")
+
+	eshopts_push -s nullglob
+	local pro_files=(*.pro)
+	eshopts_pop
+
+	case ${#pro_files[@]} in
+	1)
+		echo "${pro_files[0]}"
+		;;
+	*)
+		for pro_file in "${pro_files[@]}"; do
+			if [[ ${pro_file} == "${dir_name}.pro" || ${pro_file} == "${PN}.pro" ]]; then
+				echo "${pro_file}"
+				break
+			fi
+		done
+		;;
+	esac
 }
 
 EXPORT_FUNCTIONS src_unpack src_prepare src_configure src_compile src_install
