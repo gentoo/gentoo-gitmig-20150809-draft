@@ -1,35 +1,30 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libmems/libmems-9999.ebuild,v 1.1 2009/04/03 16:36:24 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libmems/libmems-9999.ebuild,v 1.2 2012/11/08 09:11:51 jlec Exp $
 
-EAPI="2"
+EAPI=4
+
+AUTOTOOLS_AUTORECONF=yes
 
 ESVN_REPO_URI="https://mauve.svn.sourceforge.net/svnroot/mauve/libMems/trunk"
 
-inherit subversion autotools
+inherit autotools-utils subversion
 
 DESCRIPTION="Library for sci-biology/mauve"
 HOMEPAGE="http://gel.ahabs.wisc.edu/mauve/"
 SRC_URI=""
 
-LICENSE="GPL-2"
 SLOT="0"
+LICENSE="GPL-2"
 IUSE="doc"
 KEYWORDS=""
 
-CDEPEND=">=sci-libs/libgenome-1.3
-	>=sci-libs/libmuscle-3.7
-	dev-libs/boost"
+CDEPEND="
+	dev-libs/boost
+	sci-libs/libgenome
+	sci-libs/libmuscle"
 DEPEND="${CDEPEND}
 	doc? ( app-doc/doxygen )"
 RDEPEND="${CDEPEND}"
 
 S="${WORKDIR}"
-
-src_prepare() {
-	eautoreconf
-}
-
-src_install() {
-	emake install DESTDIR="${D}" || die
-}
