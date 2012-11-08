@@ -20,3 +20,12 @@
  
  ifneq ($(strip $(LIBSDLMAIN)),)
  ifneq ($(strip $(LIBSDLMAINSRC)),)
+@@ -1153,7 +1153,7 @@
+ 
+ $(B)/tremded.$(ARCH)$(BINEXT): $(Q3DOBJ)
+ 	@echo "LD $@"
+-	@$(CC) -o $@ $(Q3DOBJ) $(LDFLAGS)
++	@$(CC) -o $@ $(LDFLAGS) $(Q3DOBJ) $(LDLIBS)
+ 
+ 
+ 

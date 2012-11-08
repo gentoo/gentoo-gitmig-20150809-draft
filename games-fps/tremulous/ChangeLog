@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/tremulous
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tremulous/ChangeLog,v 1.23 2012/09/10 15:54:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tremulous/ChangeLog,v 1.24 2012/11/08 21:04:00 tupone Exp $
+
+  08 Nov 2012; Tupone Alfredo <tupone@gentoo.org> tremulous-1.1.0-r4.ebuild,
+  files/tremulous-1.1.0-ldflags.patch:
+  Build with USE=dedicated Bug #397923 by Bjoern Ottervik
 
   10 Sep 2012; Michael Sterrett <mr_bones_@gentoo.org>
   tremulous-1.1.0-r4.ebuild:
