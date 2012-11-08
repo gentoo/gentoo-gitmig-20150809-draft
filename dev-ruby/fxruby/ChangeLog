@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fxruby
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.105 2012/11/07 05:05:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.106 2012/11/08 11:45:14 blueness Exp $
+
+  08 Nov 2012; Anthony G. Basile <blueness@gentoo.org> fxruby-1.6.25.ebuild:
+  stable ppc ppc64, bug #430206
 
   07 Nov 2012; Jeroen Roovers <jer@gentoo.org> fxruby-1.6.25.ebuild:
   Stable for HPPA (bug #430206).
@@ -194,4 +197,3 @@
   18 Nov 2007; Matti Bickel <mabi@gentoo.org> +fxruby-1.4.7-r1.ebuild,
   +fxruby-1.6.13.ebuild:
   Fixed 1.4 to link against fox-1.4 fxscintilla, Version bump for 1.6
-
