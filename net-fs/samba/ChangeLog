@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.533 2012/11/08 14:41:39 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.534 2012/11/08 16:45:10 vostorga Exp $
+
+*samba-3.5.19 (08 Nov 2012)
+
+  08 Nov 2012; Víctor Ostorga <vostorga@gentoo.org> +samba-3.5.19.ebuild:
+  Version bump 3.5 branch
 
   08 Nov 2012; Víctor Ostorga <vostorga@gentoo.org> files/4.0/samba4.initd,
   -samba-3.5.17.ebuild, -samba-3.6.7.ebuild, -samba-3.6.8.ebuild,
