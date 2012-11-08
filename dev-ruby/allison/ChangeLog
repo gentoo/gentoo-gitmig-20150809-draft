@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/allison
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/allison/ChangeLog,v 1.17 2012/08/14 18:28:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/allison/ChangeLog,v 1.18 2012/11/08 17:55:01 jer Exp $
+
+  08 Nov 2012; Jeroen Roovers <jer@gentoo.org> allison-2.0.3-r1.ebuild:
+  Stable for HPPA (bug #421621).
 
   14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Update metadata.xml so that it's the same as most other packages.
