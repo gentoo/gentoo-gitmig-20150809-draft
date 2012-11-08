@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pythonmagick
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.40 2012/11/01 16:22:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.41 2012/11/08 06:34:25 flameeyes Exp $
+
+  08 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  -pythonmagick-0.9.7.ebuild:
+  Remove old version depending on older boost.
 
   01 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org>
   pythonmagick-0.9.8.ebuild:

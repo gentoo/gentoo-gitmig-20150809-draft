@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyopencl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopencl/ChangeLog,v 1.18 2012/06/28 07:20:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopencl/ChangeLog,v 1.19 2012/11/08 06:33:40 flameeyes Exp $
+
+  08 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org> -pyopencl-2011.2.ebuild:
+  Remove old version depending on older boost.
 
 *pyopencl-2012.1 (28 Jun 2012)
 
