@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/krystaldrop/krystaldrop-0.7.2.ebuild,v 1.12 2011/05/05 10:27:33 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/krystaldrop/krystaldrop-0.7.2.ebuild,v 1.13 2012/11/09 07:40:25 tupone Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils games
 
 DESCRIPTION="Free clone of an excellent NeoGeo puzzle game, Magical Drop"
@@ -21,6 +21,7 @@ DEPEND="virtual/opengl
 	media-libs/sdl-mixer
 	media-libs/sdl-ttf
 	dev-libs/libxml2"
+DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${PN}
 
@@ -33,7 +34,8 @@ src_prepare() {
 		"${FILESDIR}"/${P}-as-needed.patch \
 		"${FILESDIR}"/${P}-deps.patch \
 		"${FILESDIR}"/${P}-icu.patch \
-		"${FILESDIR}"/${P}-glibc2.10.patch
+		"${FILESDIR}"/${P}-glibc2.10.patch \
+		"${FILESDIR}"/${P}-cxxflags.patch
 
 	sed -i \
 		-e "/^EXEDIR:=/ s|$|/bin|" \
@@ -48,12 +50,11 @@ src_prepare() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	default
 	dodir "${GAMES_STATEDIR}/${PN}"
 	mv "${D}${GAMES_DATADIR}/${PN}/art/survival.sco" \
 		"${D}${GAMES_STATEDIR}/${PN}/" || die "mv failed"
 	fperms 664 "${GAMES_STATEDIR}/${PN}/survival.sco"
-	dodoc CHANGES README
 	doman doc/kdrop.6
 	newicon art/drop.png ${PN}.png
 	make_desktop_entry kdrop "KrystalDrop" ${PN}
