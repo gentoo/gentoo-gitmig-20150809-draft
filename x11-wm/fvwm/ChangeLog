@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.189 2012/10/08 18:26:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.190 2012/11/09 10:14:42 darkside Exp $
+
+  09 Nov 2012; Jeremy Olexa <darkside@gentoo.org> metadata.xml:
+  remove myself from metadata
 
   08 Oct 2012; Pacho Ramos <pacho@gentoo.org>
   +files/fvwm-2.6.5-mouse-buttons.patch:

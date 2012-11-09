@@ -7,8 +7,8 @@
 	  <description>Proxied committer, assign bugs</description>
   </maintainer>
   <maintainer>
-	  <email>darkside@gentoo.org</email>
-	  <description>Proxy committer, CC bugs</description>
+	  <email>maintainer-needed@gentoo.org</email>
+	  <description>Need proxy committer, CC bugs</description>
   </maintainer>
   <longdescription lang="en">
 		fvwm is an ICCCM-compliant X window manager providing a 3D look for
