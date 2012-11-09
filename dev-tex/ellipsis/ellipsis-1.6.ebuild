@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/ellipsis/ellipsis-1.6.ebuild,v 1.2 2006/03/09 12:34:33 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/ellipsis/ellipsis-1.6.ebuild,v 1.3 2012/11/09 19:01:10 ago Exp $
 
 inherit latex-package
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.ctan.org/tex-archive/macros/latex/contrib/ellipsis/"
 # ftp://tug.ctan.org/tex-archive/macros/latex/contrib/ellipsis.zip
 SRC_URI="mirror://gentoo/${P}.zip"
 IUSE=""
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 LICENSE="LPPL-1.2"
 SLOT="0"
 
