@@ -1,6 +1,13 @@
 # ChangeLog for media-video/kmplayer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.156 2012/10/23 13:47:41 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.157 2012/11/09 00:04:03 creffett Exp $
+
+*kmplayer-0.11.3d-r1 (09 Nov 2012)
+
+  09 Nov 2012; Chris Reffett <creffett@gentoo.org> +files/kmplayer-flash.patch,
+  +kmplayer-0.11.3d-r1.ebuild:
+  Revision bump, add fix for konqueror flash wrt bug 434724, credit to Marco
+  Clocchiatti <ziapannocchia@gmail.com>
 
   23 Oct 2012; Michael Palimaka <kensington@gentoo.org>
   -kmplayer-0.11.3c.ebuild:
