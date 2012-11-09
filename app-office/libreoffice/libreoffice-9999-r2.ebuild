@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.124 2012/11/09 09:45:16 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.125 2012/11/09 09:50:16 scarabeus Exp $
 
 EAPI=4
 
@@ -68,8 +68,7 @@ unset EXT_URI
 unset ADDONS_SRC
 
 IUSE="bluetooth +branding +cups dbus eds gnome gstreamer +gtk gtk3
-jemalloc kde mysql odk opengl postgres svg telepathy test +vba
-+webdav"
+jemalloc kde mysql odk opengl postgres telepathy test +vba +webdav"
 
 LO_EXTS="nlpsolver pdfimport presenter-console presenter-minimizer scripting-beanshell scripting-javascript wiki-publisher"
 # Unpackaged separate extensions:
@@ -103,7 +102,6 @@ COMMON_DEPEND="
 	dev-cpp/libcmis:0.3
 	dev-db/unixODBC
 	dev-libs/expat
-	>=dev-libs/glib-2.28
 	>=dev-libs/hyphen-2.7.1
 	>=dev-libs/icu-4.8.1.1
 	dev-libs/liborcus
@@ -159,7 +157,6 @@ COMMON_DEPEND="
 		virtual/opengl
 	)
 	postgres? ( >=dev-db/postgresql-base-9.0[kerberos] )
-	svg? ( gnome-base/librsvg )
 	telepathy? (
 		dev-libs/glib:2
 		>=net-libs/telepathy-glib-0.18.0
@@ -505,7 +502,6 @@ src_configure() {
 		$(use_enable odk) \
 		$(use_enable opengl) \
 		$(use_enable postgres postgresql-sdbc) \
-		$(use_enable svg librsvg system) \
 		$(use_enable telepathy) \
 		$(use_enable test linkoo) \
 		$(use_enable vba) \
