@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrited/kwrited-4.9.3.ebuild,v 1.1 2012/11/08 23:26:50 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrited/kwrited-4.9.3.ebuild,v 1.2 2012/11/09 20:31:51 ryao Exp $
 
 EAPI=4
 KMNAME="kde-workspace"
@@ -11,6 +11,6 @@ KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 DEPEND="
-	>=sys-libs/libutempter-1.1.5
+	|| ( >=sys-libs/libutempter-1.1.5 >=sys-freebsd/freebsd-lib-9.0 )
 "
 RDEPEND="${DEPEND}"
