@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/xmms2-0.8-r1.ebuild,v 1.8 2012/10/28 14:19:51 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/xmms2-0.8-r1.ebuild,v 1.9 2012/11/09 21:58:40 slyfox Exp $
 
 EAPI=3
 
@@ -234,7 +234,7 @@ src_configure() {
 src_compile() {
 	# waf is very keen to run tests in build phase (bug #424377) but
 	# it does not bother running tests twice, so the hack below works:
-	./waf build || ./waf build || die "waf build failed"
+	./waf --verbose build || ./waf --verbose build || die "waf build failed"
 }
 
 src_test() {
