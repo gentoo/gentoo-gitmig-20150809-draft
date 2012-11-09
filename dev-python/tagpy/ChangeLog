@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/tagpy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tagpy/ChangeLog,v 1.48 2012/10/17 09:02:11 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tagpy/ChangeLog,v 1.49 2012/11/09 21:03:35 blueness Exp $
+
+  09 Nov 2012; Anthony G. Basile <blueness@gentoo.org> tagpy-0.94.8-r1.ebuild:
+  stable ppc64, bug #442316
 
   17 Oct 2012; Patrick Lauer <patrick@gentoo.org> tagpy-0.94.8-r1.ebuild:
   Restricting py 2.5
