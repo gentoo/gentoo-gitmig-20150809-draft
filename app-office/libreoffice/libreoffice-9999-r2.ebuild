@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.123 2012/11/04 10:47:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.124 2012/11/09 09:45:16 scarabeus Exp $
 
 EAPI=4
 
@@ -38,16 +38,12 @@ SRC_URI="branding? ( http://dev.gentoo.org/~dilfridge/distfiles/${BRANDING} )"
 # Split modules following git/tarballs
 # Core MUST be first!
 # Help is used for the image generator
-MODULES="core binfilter help"
+MODULES="core help"
 # Only release has the tarballs
 if [[ ${PV} != *9999* ]]; then
 	for i in ${DEV_URI}; do
 		for mod in ${MODULES}; do
-			if [[ ${mod} == binfilter ]]; then
-				SRC_URI+=" binfilter? ( ${i}/${PN}-${mod}-${PV}.tar.xz )"
-			else
-				SRC_URI+=" ${i}/${PN}-${mod}-${PV}.tar.xz"
-			fi
+			SRC_URI+=" ${i}/${PN}-${mod}-${PV}.tar.xz"
 		done
 		unset mod
 	done
@@ -71,8 +67,9 @@ unset ADDONS_URI
 unset EXT_URI
 unset ADDONS_SRC
 
-IUSE="binfilter bluetooth +branding +cups dbus eds gnome gstreamer +gtk
-gtk3 jemalloc kde mysql odk opengl postgres svg telepathy test +vba +webdav"
+IUSE="bluetooth +branding +cups dbus eds gnome gstreamer +gtk gtk3
+jemalloc kde mysql odk opengl postgres svg telepathy test +vba
++webdav"
 
 LO_EXTS="nlpsolver pdfimport presenter-console presenter-minimizer scripting-beanshell scripting-javascript wiki-publisher"
 # Unpackaged separate extensions:
@@ -288,9 +285,6 @@ src_unpack() {
 
 	if [[ ${PV} != *9999* ]]; then
 		for mod in ${MODULES}; do
-			if [[ ${mod} == binfilter ]] && ! use binfilter; then
-				continue
-			fi
 			unpack "${PN}-${mod}-${PV}.tar.xz"
 			if [[ ${mod} != core ]]; then
 				mod2=${mod}
@@ -303,9 +297,6 @@ src_unpack() {
 		done
 	else
 		for mod in ${MODULES}; do
-			if [[ ${mod} == binfilter ]] && ! use binfilter; then
-				continue
-			fi
 			mypv=${PV/.9999}
 			[[ ${mypv} != ${PV} ]] && EGIT_BRANCH="${PN}-${mypv/./-}"
 			EGIT_PROJECT="${PN}/${mod}"
@@ -499,7 +490,6 @@ src_configure() {
 		--without-help \
 		--with-helppack-integration \
 		--without-sun-templates \
-		$(use_enable binfilter) \
 		$(use_enable bluetooth sdremote) \
 		$(use_enable cups) \
 		$(use_enable dbus) \
