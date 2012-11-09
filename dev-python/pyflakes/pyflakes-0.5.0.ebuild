@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyflakes/pyflakes-0.5.0.ebuild,v 1.6 2011/10/23 15:28:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyflakes/pyflakes-0.5.0.ebuild,v 1.7 2012/11/09 16:22:17 idella4 Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
-PYTHON_TESTS_RESTRICTED_ABIS="*-jython"
+PYTHON_TESTS_RESTRICTED_ABIS="*-jython 2.7-pypy-1.*"
 DISTUTILS_SRC_TEST="trial"
 
 inherit distutils
