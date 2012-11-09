@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.8.0-r1.ebuild,v 1.1 2012/11/02 18:40:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.8.0-r1.ebuild,v 1.2 2012/11/09 18:06:34 grobian Exp $
 
 EAPI=4
 
@@ -176,6 +176,9 @@ exportmakeopts() {
 	fi
 	if [[ ${CHOST} == *-*-aix* ]]; then
 		myopts="${myopts} NO_FNMATCH_CASEFOLD=YesPlease"
+	fi
+	if [[ ${CHOST} == *-solaris* ]]; then
+		myopts="${myopts} NEEDS_LIBICONV=YesPlease"
 	fi
 
 	has_version '>=app-text/asciidoc-8.0' \

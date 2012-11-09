@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.161 2012/11/02 18:40:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.162 2012/11/09 18:06:35 grobian Exp $
+
+  09 Nov 2012; Fabian Groffen <grobian@gentoo.org> git-1.8.0-r1.ebuild,
+  git-9999.ebuild:
+  Fix linking on Solaris, it needs libiconv
 
 *git-1.8.0-r1 (02 Nov 2012)
 
