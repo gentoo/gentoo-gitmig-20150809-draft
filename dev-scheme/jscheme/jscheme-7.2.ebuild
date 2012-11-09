@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/jscheme/jscheme-7.2.ebuild,v 1.1 2010/07/02 00:51:06 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/jscheme/jscheme-7.2.ebuild,v 1.2 2012/11/09 18:59:59 ago Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
 DEPEND=">=virtual/jdk-1.6"
