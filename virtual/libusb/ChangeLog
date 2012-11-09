@@ -1,6 +1,9 @@
 # ChangeLog for virtual/libusb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libusb/ChangeLog,v 1.25 2012/09/21 05:13:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libusb/ChangeLog,v 1.26 2012/11/09 21:00:01 ryao Exp $
+
+  09 Nov 2012; Richard Yao <ryao@gentoo.org> libusb-1.ebuild:
+  Add >=sys-freebsd/freebsd-lib-9.1_rc3-r1[usb] as virtual/libusb:1 provider
 
   21 Sep 2012; Samuli Suominen <ssuominen@gentoo.org> libusb-1.ebuild:
   Force latest dev-libs/libusbx because <1.0.13 had issues with namespace
@@ -96,4 +99,3 @@
   Bug #247687: virtual for libusb support. Based on final design choices in
   the bug, as agreed on by Tiziano Müller <dev-zero@gentoo.org> and Robert
   Buchholz <rbu@gentoo.org>.
-
