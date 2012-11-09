@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/cfe/cfe-0.12.ebuild,v 1.5 2010/09/18 05:49:29 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/cfe/cfe-0.12.ebuild,v 1.6 2012/11/09 22:14:57 ago Exp $
 
-EAPI="3"
+EAPI=4
 
 inherit eutils autotools
 
@@ -13,7 +13,7 @@ SRC_URI="http://download.uhulinux.hu/pub/pub/mirror/http:/lrn.ru/~osgene/files/$
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="sys-libs/ncurses"
@@ -23,12 +23,12 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-LDFLAGS.patch
 
 	# Remove unconditional assignment of CFLAGS
-	sed -i -e '/GCC = yes/d' configure.in
+	sed -i -e '/GCC = yes/d' configure.in || die
 	eautoreconf
 }
 
 src_install() {
-	dobin cfe || die "dobin cfe failed"
+	dobin cfe
 	doman cfe.1
 	dodoc ChangeLog INSTALL THANKS dummy.fnt
 }
