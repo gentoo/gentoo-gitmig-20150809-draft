@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libnetfilter_queue
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_queue/ChangeLog,v 1.23 2012/10/29 12:34:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_queue/ChangeLog,v 1.24 2012/11/09 01:00:43 blueness Exp $
+
+  09 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
+  libnetfilter_queue-1.0.2.ebuild:
+  keyword ~ppc64, bug #407795
 
   29 Oct 2012; Jeroen Roovers <jer@gentoo.org> libnetfilter_queue-1.0.2.ebuild:
   Marked ~hppa (bug #440108).
@@ -111,4 +115,3 @@
   13 Nov 2006; Cedric Krier <ced@ced.homedns.org>
   +libnetfilter_queue-0.0.12.ebuild:
   New ebuild
-

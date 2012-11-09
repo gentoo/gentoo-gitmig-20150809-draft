@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/daq
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/daq/ChangeLog,v 1.19 2012/07/18 19:45:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/daq/ChangeLog,v 1.20 2012/11/09 01:01:40 blueness Exp $
+
+  09 Nov 2012; Anthony G. Basile <blueness@gentoo.org> daq-0.6.2-r1.ebuild:
+  keyword ~ppc64, bug #407795
 
   18 Jul 2012; Jeroen Roovers <jer@gentoo.org> +daq-0.6.2.ebuild:
   Bring back stable ebuild.
@@ -77,4 +80,3 @@
   02 Nov 2010; Patrick Lauer <patrick@gentoo.org> +daq-0.2.ebuild,
   +metadata.xml:
   Initial commit. Ebuild provided by Jason Wallace #341009
-
