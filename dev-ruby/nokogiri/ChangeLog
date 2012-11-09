@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/nokogiri
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.82 2012/11/07 03:29:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.83 2012/11/09 00:07:40 blueness Exp $
+
+  09 Nov 2012; Anthony G. Basile <blueness@gentoo.org> nokogiri-1.5.5.ebuild:
+  stable ppc ppc64, bug #440094
 
   07 Nov 2012; Jeroen Roovers <jer@gentoo.org> nokogiri-1.5.5.ebuild:
   Stable for HPPA (bug #440094).
@@ -337,4 +340,3 @@
   +nokogiri-1.0.6.ebuild:
   Initial import from my personal overlay. This is now a dependency of
   dev-ruby/mechanize.
-
