@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.71 2012/11/08 11:49:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.72 2012/11/09 14:43:50 lu_zero Exp $
+
+  09 Nov 2012; Luca Barbato <lu_zero@gentoo.org> metadata.xml:
+  Add Nikoli as maintainer
 
   08 Nov 2012; Alexis Ballier <aballier@gentoo.org>
   mplayer2-2.0_p20120828.ebuild, +files/mplayer2-2.0_p20120828-ffmpeg.patch:

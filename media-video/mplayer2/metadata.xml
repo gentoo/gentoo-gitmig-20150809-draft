@@ -5,9 +5,13 @@
 <maintainer>
 	<email>media-video@gentoo.org</email>
 </maintainer>
+<maintainer>
+    <email>nikoli@lavabit.com</email>
+	<description>Maintainer. Assign bugs to him</description>
+</maintainer>
 <longdescription lang="en">
 	This fork has several usefull features:
-	1) Uses ffmpeg-mt out of box.
+	1) Uses multithreading out of box.
 	2) Ability to change many settings staying paused.
 	3) Matroska external chapters support.
 	4) Ability to cleanly build with shared libav libraries.
