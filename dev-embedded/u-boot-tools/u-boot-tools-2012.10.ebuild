@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/u-boot-tools/u-boot-tools-2012.10.ebuild,v 1.1 2012/11/09 21:53:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/u-boot-tools/u-boot-tools-2012.10.ebuild,v 1.2 2012/11/09 21:56:03 hwoarang Exp $
 
 EAPI="4"
 
@@ -29,7 +29,7 @@ src_prepare() {
 		ewarn "A image.h header is installed in /usr/include/"
 		ewarn "Fixing u-boot files to use the local image.h header"
 		# FIXME: HACK. media-libs/lensfun installs image.h
-		# Copy local image.h to tools/ and common.h directory
+		# Copy local image.h to tools/ and common/ directory
 		cp include/image.h common/image.h || die
 		cp include/image.h tools/image.h || die
 		sed -i -e "s:<image.h>:\"image.h\":" common/image.c || die

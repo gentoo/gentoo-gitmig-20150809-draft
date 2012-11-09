@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/u-boot-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/u-boot-tools/ChangeLog,v 1.27 2012/11/09 21:53:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/u-boot-tools/ChangeLog,v 1.28 2012/11/09 21:56:03 hwoarang Exp $
+
+  09 Nov 2012; Markos Chandras <hwoarang@gentoo.org>
+  u-boot-tools-2012.10.ebuild:
+  Fix typo in comment
 
 *u-boot-tools-2012.10 (09 Nov 2012)
 
