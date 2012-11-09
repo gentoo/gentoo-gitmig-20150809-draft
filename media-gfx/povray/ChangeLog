@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/povray
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.129 2012/06/17 20:53:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.130 2012/11/09 18:24:49 flameeyes Exp $
+
+*povray-3.7.0_rc5-r1 (09 Nov 2012)
+
+  09 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/povray-3.7.0_rc5+boost-1.50.patch,
+  +files/povray-3.7.0_rc5-automagic.patch, +povray-3.7.0_rc5-r1.ebuild:
+  Fix building with boost 1.50, thanks to Iván in bug #425450; use boost-m4 to
+  find boost as that solves the linking issue as well; fix an automagic
+  dependency on mkl.
 
   17 Jun 2012; Justin Lecher <jlec@gentoo.org> povray-3.7.0_rc5.ebuild:
   Use CCPFLAGS instead of CFLAGS
@@ -533,4 +542,3 @@
 *povray-3.1g-r1 (31 Mar 2002)
   31 Mar 2002; Spider <spider@gentoo.org>
   Initial ebuild + patch now adheres to USE flags for svgalib X and tty versions.
-
