@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/qrna/qrna-2.0.3c-r1.ebuild,v 1.1 2010/03/10 21:13:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/qrna/qrna-2.0.3c-r1.ebuild,v 1.2 2012/11/09 14:14:49 jlec Exp $
+
+EAPI=4
 
 inherit eutils toolchain-funcs
 
@@ -13,48 +15,43 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-RDEPEND="dev-lang/perl
+RDEPEND="
+	dev-lang/perl
 	sci-biology/hmmer"
 DEPEND="${RDEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-glibc-2.10.patch
-	epatch "${FILESDIR}"/${P}-ldflags.patch
-	sed -e "s/^CC.*/CC = $(tc-getCC)/" \
-		-e "s/CFLAGS = -O/CFLAGS = ${CFLAGS}/" \
-		-i src/Makefile squid/Makefile squid02/Makefile || die
+src_prepare() {
+	epatch \
+		"${FILESDIR}"/${P}-glibc-2.10.patch \
+		"${FILESDIR}"/${P}-ldflags.patch
+	sed \
+		-e "s:^CC.*:CC = $(tc-getCC):" \
+		-e "/^AR/s:ar:$(tc-getAR):g" \
+		-e "/^RANLIB/s:ranlib:$(tc-getRANLIB):g" \
+		-e "/CFLAGS/s:=.*$:= ${CFLAGS}:" \
+		-i {src,squid,squid02}/Makefile || die
 	rm -v squid*/*.a
 }
 
 src_compile() {
-	cd "${S}"/squid
-	emake || die
-
-	cd "${S}"/squid02
-	emake || die
-
-	cd "${S}"/src
-	emake || die
+	local dir
+	for dir in squid squid02 src; do
+		emake -C ${dir}
+	done
 }
 
 src_install () {
-	cd "${S}"/src
-	dobin cfgbuild eqrna eqrna_sample main rnamat_main || die
+	dobin src/{cfgbuild,eqrna,eqrna_sample,rnamat_main} scripts/*
 
-	cd "${S}"
-	dobin scripts/* || die
-
-	newdoc 00README README || die
+	newdoc 00README README
 	insinto /usr/share/doc/${PF}
-	doins documentation/* || die
+	doins documentation/*
 
 	insinto /usr/share/${PN}/data
-	doins lib/* || die
+	doins lib/*
 	insinto /usr/share/${PN}/demos
-	doins Demos/* || die
+	doins Demos/*
 
 	# Sets the path to the QRNA data files.
-	doenvd "${FILESDIR}"/26qrna || die
+	doenvd "${FILESDIR}"/26qrna
 }
