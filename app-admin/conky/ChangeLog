@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.188 2012/11/07 17:07:55 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.189 2012/11/09 02:04:17 blueness Exp $
+
+  09 Nov 2012; Anthony G. Basile <blueness@gentoo.org> conky-1.9.0-r1.ebuild:
+  stable ppc ppc64, bug #442216
 
   07 Nov 2012; Daniel Pielmeier <billie@gentoo.org> conky-1.9.0.ebuild,
   conky-1.9.0-r1.ebuild:
@@ -817,4 +820,3 @@
   +conky-1.0.ebuild:
   Initial ebuild thanks to Brenden Matthews based on torsmo with all current
   patches. bug #96750
-
