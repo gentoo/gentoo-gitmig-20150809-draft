@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/usbutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.148 2012/10/31 17:21:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.149 2012/11/09 20:17:52 ryao Exp $
+
+  09 Nov 2012; Richard Yao <ryao@gentoo.org> +files/usbutils-006-stdint.patch,
+  usbutils-006.ebuild:
+  Patch usbhid-dump to proper include stdint.h to fix build failure on FreeBSD
 
   31 Oct 2012; Samuli Suominen <ssuominen@gentoo.org> usbutils-006.ebuild:
   Use REPLACING_VERSIONS to silence pkg_postinst() message about removed

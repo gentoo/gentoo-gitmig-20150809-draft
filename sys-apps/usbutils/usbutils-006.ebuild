@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-006.ebuild,v 1.7 2012/10/31 17:21:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-006.ebuild,v 1.8 2012/11/09 20:17:52 ryao Exp $
 
 EAPI="4"
 
@@ -34,6 +34,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-libusbx-1.0.13.patch
+	epatch "${FILESDIR}"/${P}-stdint.patch
 
 	if use python; then
 		python_convert_shebangs 2 lsusb.py
