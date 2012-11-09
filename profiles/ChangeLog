@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7123 2012/11/09 02:13:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7124 2012/11/09 05:21:04 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Mask a revbump for libxsd-frontend to handle the new boost layout in
+  1.52.0-r1.
 
   09 Nov 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> package.mask:
   Roll chromium package masks (24 -> 25).

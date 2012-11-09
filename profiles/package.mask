@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14205 2012/11/09 02:13:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14206 2012/11/09 05:21:04 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -47,8 +47,11 @@
 =app-vim/puppet-syntax-3*
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (05 Nov 2012)
-# Masked for testing
+# Masked for testing -- Now dropping all versioning, and only building
+# multi-threaded (or single threaded) libraries. Keep also masked new
+# packages using the new layout.
 >=dev-libs/boost-1.52.0
+>=dev-cpp/libxsd-frontend-1.18.0-r1
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> ( 2012/11/04 )
 # masked for testing, bug #422605
