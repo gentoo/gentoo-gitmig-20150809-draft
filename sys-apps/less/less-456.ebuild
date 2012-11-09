@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/less-452.ebuild,v 1.1 2012/10/23 08:15:26 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/less-456.ebuild,v 1.1 2012/11/09 18:10:08 vapier Exp $
 
 EAPI="4"
 
