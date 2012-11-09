@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/diradm-2.9.7.ebuild,v 1.1 2012/11/08 20:48:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/diradm-2.9.7.ebuild,v 1.2 2012/11/09 01:07:36 robbat2 Exp $
 
 EAPI="2"
 
@@ -57,7 +57,7 @@ src_install() {
 		THANKS TODO KNOWN-BUGS || die
 	if use irixpasswd; then
 		insinto /etc/openldap/schema
-		doins irixpassword.schema
+		doins irixpassword.schema || die "Failed irixpassword.schema"
 	fi
 }
 
