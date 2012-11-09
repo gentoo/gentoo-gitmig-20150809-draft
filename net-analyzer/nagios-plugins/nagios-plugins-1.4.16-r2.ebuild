@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.16-r2.ebuild,v 1.4 2012/11/07 05:16:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.16-r2.ebuild,v 1.5 2012/11/09 19:20:31 flameeyes Exp $
 
 EAPI=4
 
@@ -122,6 +122,10 @@ EOF
 
 	dosym ../utils.sh ${nagiosplugindir}/contrib/utils.sh
 	dosym ../utils.pm ${nagiosplugindir}/contrib/utils.pm
+
+	# enforce permissions/owners (seem to trigger only in some case)
+	chown -R root:nagios "${D}${nagiosplugindir}" || die
+	chmod -R o-rwx "${D}${nagiosplugindir}" || die
 }
 
 pkg_postinst() {

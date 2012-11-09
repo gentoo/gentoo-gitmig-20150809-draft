@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-plugins
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.155 2012/11/07 05:16:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.156 2012/11/09 19:20:31 flameeyes Exp $
+
+  09 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  nagios-plugins-1.4.16-r2.ebuild:
+  Enforce ownership of the nagios plugin directory. Should solve bug #441980.
 
   07 Nov 2012; Jeroen Roovers <jer@gentoo.org> nagios-plugins-1.4.16-r2.ebuild:
   Stable for HPPA (bug #441654).
