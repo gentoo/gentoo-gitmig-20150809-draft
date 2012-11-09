@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/liborcus-0.1.0.ebuild,v 1.2 2012/09/27 16:44:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/liborcus-0.1.0.ebuild,v 1.3 2012/11/09 19:19:44 scarabeus Exp $
 
 EAPI=4
 
@@ -20,16 +20,25 @@ SLOT="0"
 IUSE="static-libs"
 
 RDEPEND="
+	>=dev-libs/boost-1.51.0
 	dev-libs/libzip
 "
 DEPEND="${RDEPEND}
-	>=dev-libs/boost-1.48.0
 	>=dev-util/mdds-0.6.0
 "
 
 S="${WORKDIR}/${P/-/_}"
 
 src_prepare() {
+	# this is fixed in git
+	sed -i \
+		-e 's:<ostream>:<ostream>\n#include <boost/utility.hpp>:' \
+		include/orcus/dom_tree.hpp || die
+
+	sed -i \
+		-e 's:$(LIBIXION_LIBS):$(LIBIXION_LIBS) -lboost_system:g' \
+		src/liborcus/Makefile.am || die
+
 	eautoreconf
 }
 

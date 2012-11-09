@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/liborcus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/ChangeLog,v 1.4 2012/09/27 16:44:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/ChangeLog,v 1.5 2012/11/09 19:19:44 scarabeus Exp $
+
+  09 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> liborcus-0.1.0.ebuild,
+  liborcus-9999.ebuild:
+  Fix building with latest boost. Wrt bug#442262.
 
   27 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> liborcus-0.1.0.ebuild:
   Disable spreadsheet model on 0.1 as it aint working there.
