@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/tidy-ext
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tidy-ext/ChangeLog,v 1.14 2012/10/28 17:23:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tidy-ext/ChangeLog,v 1.15 2012/11/09 07:44:32 graaff Exp $
+
+*tidy-ext-0.1.14 (09 Nov 2012)
+
+  09 Nov 2012; Hans de Graaff <graaff@gentoo.org> +tidy-ext-0.1.14.ebuild:
+  Version bump.
 
   28 Oct 2012; Raúl Porcel <armin76@gentoo.org> tidy-ext-0.1.12.ebuild:
   Add ~alpha/~ia64/~sparc
