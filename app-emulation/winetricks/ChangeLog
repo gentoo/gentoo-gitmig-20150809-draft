@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/winetricks
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winetricks/ChangeLog,v 1.10 2012/10/19 05:57:41 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winetricks/ChangeLog,v 1.11 2012/11/09 23:23:44 tetromino Exp $
+
+*winetricks-920 (09 Nov 2012)
+
+  09 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -winetricks-913.ebuild, +winetricks-920.ebuild:
+  Version bump; drop old.
 
   19 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   winetricks-916.ebuild, winetricks-99999999.ebuild:

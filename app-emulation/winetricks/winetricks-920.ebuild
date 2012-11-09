@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winetricks/winetricks-913.ebuild,v 1.2 2012/10/19 05:50:00 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winetricks/winetricks-920.ebuild,v 1.1 2012/11/09 23:23:44 tetromino Exp $
 
 EAPI=4
+
+inherit gnome2-utils eutils
 
 if [[ ${PV} == "99999999" ]] ; then
 	ESVN_REPO_URI="http://winetricks.googlecode.com/svn/trunk"
@@ -12,6 +14,10 @@ else
 		http://winetricks.googlecode.com/svn-history/r${PV}/trunk/src/winetricks.1 -> ${P}.1"
 	KEYWORDS="~amd64 ~x86"
 fi
+wtg=winetricks-gentoo-2012.10.19
+SRC_URI="${SRC_URI}
+	gtk? ( http://dev.gentoo.org/~tetromino/distfiles/wine/${wtg}.tar.bz2 )
+	kde? ( http://dev.gentoo.org/~tetromino/distfiles/wine/${wtg}.tar.bz2 )"
 
 DESCRIPTION="Easy way to install DLLs needed to work around problems in Wine"
 HOMEPAGE="http://code.google.com/p/winetricks/ http://wiki.winehq.org/winetricks"
@@ -37,10 +43,37 @@ src_unpack() {
 		cp "${DISTDIR}"/${P} src/${PN} || die
 		cp "${DISTDIR}"/${P}.1 src/${PN}.1 || die
 	fi
+	if use gtk || use kde; then
+		unpack ${wtg}.tar.bz2
+	fi
 }
 
 src_install() {
 	cd src
 	dobin ${PN}
 	doman ${PN}.1
+	if use gtk || use kde; then
+		cd ../${wtg} || die
+		domenu winetricks.desktop
+		insinto /usr/share/icons/hicolor/scalable/apps
+		doins wine-winetricks.svg
+	fi
+}
+
+pkg_preinst() {
+	if use gtk || use kde; then
+		gnome2_icon_savelist
+	fi
+}
+
+pkg_postinst() {
+	if use gtk || use kde; then
+		gnome2_icon_cache_update
+	fi
+}
+
+pkg_postrm() {
+	if use gtk || use kde; then
+		gnome2_icon_cache_update
+	fi
 }
