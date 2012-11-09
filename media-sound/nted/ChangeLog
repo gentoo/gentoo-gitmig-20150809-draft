@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/nted
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/nted/ChangeLog,v 1.28 2012/07/12 19:08:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/nted/ChangeLog,v 1.29 2012/11/09 20:05:16 hwoarang Exp $
+
+*nted-1.10.18-r1 (09 Nov 2012)
+
+  09 Nov 2012; Markos Chandras <hwoarang@gentoo.org>
+  +files/nted-1.10.18-lilypond.patch, +nted-1.10.18-r1.ebuild, metadata.xml:
+  Add patch for fixing invalid lilypond export markup. Thanks to Christopher
+  Harvey <chris@basementcode.com>. Bug #437540. Adding him as proxy maintainer
 
   12 Jul 2012; Markos Chandras <hwoarang@gentoo.org>
   +files/nted-1.10.18-gcc47.patch, nted-1.10.18.ebuild:
