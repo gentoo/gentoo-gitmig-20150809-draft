@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xdotool
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdotool/ChangeLog,v 1.25 2012/04/04 21:24:51 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdotool/ChangeLog,v 1.26 2012/11/09 02:47:46 blueness Exp $
+
+  09 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
+  xdotool-2.20110530.1.ebuild:
+  keyword ~ppc, bug #441784
 
   04 Apr 2012; Jeff Horelick <jdhore@gentoo.org> xdotool-2.20110530.1.ebuild:
   marked x86 per bug 397281
@@ -123,4 +127,3 @@
   +xdotool-20090609.ebuild:
   Initial import. Thanks to Maryasin Semen <marsoft@ya.ru> and Urban
   <urban82@gmail.com>
-
