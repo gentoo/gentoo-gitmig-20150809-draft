@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.7.7.ebuild,v 1.1 2012/10/25 17:07:41 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.7.7.ebuild,v 1.2 2012/11/09 16:58:00 grobian Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -160,6 +160,12 @@ src_configure() {
 		*-solaris*)
 			# need -lintl to link
 			use nls && append-libs intl
+			# this breaks installation, on x64 echo replacement is 32-bits
+			myconf+=" --disable-local-library-preloading"
+		;;
+		*)
+			# inject LD_PRELOAD entries for easy in-tree development
+			myconf+=" --enable-local-library-preloading"
 		;;
 	esac
 
@@ -190,7 +196,6 @@ src_configure() {
 		--with-apr-util="${EPREFIX}/usr/bin/apu-1-config" \
 		--disable-experimental-libtool \
 		--without-jikes \
-		--enable-local-library-preloading \
 		--disable-mod-activation \
 		--disable-neon-version-check \
 		--disable-static
