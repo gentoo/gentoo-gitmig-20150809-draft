@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.8_pre20120805.ebuild,v 1.1 2012/08/05 05:18:41 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.8_pre20120805.ebuild,v 1.2 2012/11/09 07:09:31 grozin Exp $
 
 EAPI=3
 
@@ -13,7 +13,7 @@ SRC_URI="http://dev.gentoo.org/~grozin/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="+ansi debug doc emacs +readline tk X"
 
 # See bug #205803
