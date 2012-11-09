@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/libarchive-3.0.4-r1.ebuild,v 1.2 2012/08/29 03:17:22 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/libarchive-3.0.4-r1.ebuild,v 1.3 2012/11/09 19:43:38 grobian Exp $
 
 EAPI=4
-inherit eutils multilib
+inherit eutils multilib libtool
 
 DESCRIPTION="BSD tar command"
 HOMEPAGE="http://libarchive.github.com/"
@@ -36,6 +36,7 @@ DOCS="NEWS README"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-handle-unsupported-acl-types.patch"
+	elibtoolize  # to allow building shared libs on Solaris/x64
 }
 
 src_configure() {
