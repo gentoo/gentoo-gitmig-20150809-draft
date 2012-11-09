@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7128 2012/11/09 20:54:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7129 2012/11/09 23:58:55 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Unmask boost-1.52 and related libraries, everything else in the tree seems to
+  be fine.
 
   09 Nov 2012; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Mask new u-boot-tools
