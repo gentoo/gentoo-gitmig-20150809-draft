@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.436 2012/10/29 23:36:46 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.437 2012/11/09 23:24:07 tetromino Exp $
+
+*wine-1.5.17 (09 Nov 2012)
+
+  09 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org> +wine-1.5.17.ebuild,
+  +files/wine-1.5.17-osmesa-check.patch, wine-9999.ebuild:
+  Bump, see http://www.winehq.org/announce/1.5.17 for the announcement.
 
 *wine-1.5.16-r1 (29 Oct 2012)
 *wine-1.5.15-r2 (29 Oct 2012)
