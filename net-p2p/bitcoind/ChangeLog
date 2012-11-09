@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/bitcoind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.49 2012/10/29 01:46:15 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.50 2012/11/09 18:30:39 flameeyes Exp $
+
+  09 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org> bitcoind-0.7.1.ebuild:
+  Drop version-specific boost access (leverages boost-1.52.0-r1 which uses
+  system layout); this should also make sure that the multithread libraries are
+  used, unlike before, with the new layout.
 
   29 Oct 2012; Anthony G. Basile <blueness@gentoo.org> bitcoind-0.6.3.ebuild,
   bitcoind-0.6.4_rc3.ebuild, bitcoind-0.7.0.ebuild:
