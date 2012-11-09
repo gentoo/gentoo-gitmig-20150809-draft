@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.mask,v 1.112 2012/10/27 12:52:11 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.mask,v 1.113 2012/11/09 14:42:48 grobian Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked.  This file is for
@@ -9,6 +9,11 @@
 # NOTE: Please add your entry at the top!
 #
 
+
+# Fabian Groffen <grobian@gentoo.org> (09 Nov 2012)
+# fails to properly run config.status (and thus create libtool) on
+# non-Linux platforms, fails with hard error when not using bash
+=dev-libs/libgpg-error-1.10-r1
 
 # Fabian Groffen <grobian@gentoo.org> (27 Oct 2012)
 # fails to compile with parallel make (help2man issues)
