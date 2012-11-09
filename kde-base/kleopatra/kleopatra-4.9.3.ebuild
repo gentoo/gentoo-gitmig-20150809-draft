@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kleopatra/kleopatra-4.9.3.ebuild,v 1.1 2012/11/08 23:27:05 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kleopatra/kleopatra-4.9.3.ebuild,v 1.2 2012/11/09 15:41:57 kensington Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 DEPEND="
-	app-crypt/gpgme
+	>=app-crypt/gpgme-1.3.2
 	dev-libs/boost
 	dev-libs/libassuan
 	dev-libs/libgpg-error
