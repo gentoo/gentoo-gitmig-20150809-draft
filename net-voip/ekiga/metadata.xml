@@ -7,6 +7,11 @@
 		<name>Mounir Lamouri</name>
 		<description>Assign to herd and CC me</description>
 	</maintainer>
+	<maintainer>
+		<email>neurogeek@gentoo.org</email>
+		<name>Jesus Rivero</name>
+		<description>Assign to herd and CC me</description>
+	</maintainer>
 	<use>
 		<flag name="gconf">Enable GConf support</flag>
 		<flag name="h323">Enable H.323 protocol</flag>
