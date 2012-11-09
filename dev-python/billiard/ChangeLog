@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/billiard
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/billiard/ChangeLog,v 1.3 2012/09/28 10:01:51 iksaif Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/billiard/ChangeLog,v 1.4 2012/11/09 13:26:26 idella4 Exp $
+
+  10 Nov 2012; Ian Delaney <idella4@gentoo.org> billiard-2.7.3.12.ebuild,
+  billiard-2.7.3.17.ebuild:
+  Test phase broken, test restricted in both current versions
 
 *billiard-2.7.3.17 (28 Sep 2012)
 
