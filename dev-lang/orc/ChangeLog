@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/orc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/ChangeLog,v 1.25 2012/05/21 18:48:45 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/ChangeLog,v 1.26 2012/11/09 17:38:42 tetromino Exp $
+
+*orc-0.4.16-r1 (09 Nov 2012)
+
+  09 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org> orc-0.4.9.ebuild,
+  orc-0.4.10.ebuild, orc-0.4.11.ebuild, orc-0.4.14.ebuild, orc-0.4.16.ebuild,
+  +orc-0.4.16-r1.ebuild:
+  Install gtk-doc API documentation in the location where standard tools like
+  devhelp expect it. Make DESCRIPTION a bit more descriptive.
 
   21 May 2012; Kacper Kowalik <xarthisius@gentoo.org> orc-0.4.9.ebuild:
   Add missing inheritance of eutils.eclass

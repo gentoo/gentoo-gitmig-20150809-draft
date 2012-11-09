@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/orc-0.4.9.ebuild,v 1.2 2012/05/21 18:48:45 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/orc-0.4.9.ebuild,v 1.3 2012/11/09 17:38:42 tetromino Exp $
 
 EAPI=3
 
 inherit autotools eutils
 
-DESCRIPTION="The Oil Runtime Compiler"
+DESCRIPTION="The Oil Runtime Compiler, a just-in-time compiler for array operations"
 HOMEPAGE="http://code.entropywave.com/projects/orc/"
 SRC_URI="http://code.entropywave.com/download/orc/${P}.tar.gz"
 
