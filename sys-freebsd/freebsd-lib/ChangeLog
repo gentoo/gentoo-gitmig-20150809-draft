@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.162 2012/11/06 12:54:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.163 2012/11/09 20:58:00 ryao Exp $
+
+*freebsd-lib-9.1_rc3-r1 (09 Nov 2012)
+
+  09 Nov 2012; Richard Yao <ryao@gentoo.org> +files/libusb-1.0.pc.in,
+  +freebsd-lib-9.1_rc3-r1.ebuild, freebsd-lib-9.0-r3.ebuild,
+  freebsd-lib-9.1_rc1.ebuild:
+  Install libusb-1.0.pc to make sys-apps/usbutils happy
 
 *freebsd-lib-9.1_rc3 (06 Nov 2012)
 
@@ -860,4 +867,3 @@
   19 Oct 2004; Otavio R. Piske <angusyoung@gentoo.org>
   freebsd-lib-5.2.1.ebuild:
   Initial release
-
