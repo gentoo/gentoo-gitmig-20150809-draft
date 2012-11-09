@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.2.1.ebuild,v 1.1 2012/11/04 14:23:25 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.2.1.ebuild,v 1.2 2012/11/09 16:08:37 flameeyes Exp $
 
 EAPI=4
 SCONS_MIN_VERSION="1.2.0"
 
-inherit eutils boost-utils flag-o-matic multilib pax-utils scons-utils user versionator
+inherit eutils flag-o-matic multilib pax-utils scons-utils user versionator
 
 MY_P=${PN}-src-r${PV/_rc/-rc}
 
@@ -22,7 +22,7 @@ IUSE="mms-agent static-libs v8"
 PDEPEND="mms-agent? ( dev-python/pymongo )"
 RDEPEND="
 	v8? ( dev-lang/v8 )
-	>=dev-libs/boost-1.50
+	>=dev-libs/boost-1.50[threads(+)]
 	dev-libs/libpcre[cxx]
 	dev-util/google-perftools
 	net-libs/libpcap
@@ -48,10 +48,6 @@ pkg_setup() {
 	else
 		scons_opts+=" --usesm"
 	fi
-
-	local boostver=$(boost-utils_get_best_slot)
-	scons_opts+=" --boost-version=${boostver/./_}"
-	append-cxxflags "-I$(boost-utils_get_includedir)"
 }
 
 src_prepare() {
