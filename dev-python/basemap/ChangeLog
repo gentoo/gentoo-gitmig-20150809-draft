@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/basemap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/ChangeLog,v 1.28 2012/08/24 07:44:59 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/ChangeLog,v 1.29 2012/11/09 12:41:25 jlec Exp $
+
+  09 Nov 2012; Justin Lecher <jlec@gentoo.org> basemap-1.0.3.ebuild,
+  basemap-1.0.4.ebuild, basemap-1.0.5.ebuild, metadata.xml:
+  Inherit missing virtualx, #440040
 
 *basemap-1.0.5 (24 Aug 2012)
 
