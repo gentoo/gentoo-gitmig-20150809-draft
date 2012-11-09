@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/cvsq
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsq/ChangeLog,v 1.1 2010/06/19 00:32:21 abcd Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsq/ChangeLog,v 1.2 2012/11/09 18:29:35 ago Exp $
+
+  09 Nov 2012; Agostino Sarubbo <ago@gentoo.org> cvsq-0.4.4.ebuild:
+  Add ~amd64, wrt bug #442202
 
   19 Jun 2010; Jonathan Callen <abcd@gentoo.org> +cvsq-0.4.3.ebuild,
   +cvsq-0.4.4.ebuild, +metadata.xml:
@@ -35,4 +38,3 @@
 
   22 Sep 2003; Chuck Short <zul@gentoo.org> cvsq-0.4.3.ebuild:
   Initial version, closes bug #29050.
-
