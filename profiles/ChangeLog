@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7126 2012/11/09 17:23:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7127 2012/11/09 20:29:42 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Nov 2012; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  update target for openocd
 
   09 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Mask source-highlight-3.1.7-r2 for the new boost layout.

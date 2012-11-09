@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14208 2012/11/09 17:23:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14209 2012/11/09 20:29:42 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -430,8 +430,8 @@ dev-util/pccts
 games-strategy/glest
 
 # Markos Chandras <hwoarang@gentoo.org> (17 August 2012)
-# Masked rc release. Required by dev-lang/jimctl-0.73
-=dev-embedded/openocd-0.6.0_rc*
+# Masked for testing. Required by dev-lang/jimctl-0.73
+=dev-embedded/openocd-0.6.1
 
 # Benedikt Böhm <hollow@gentoo.org> (11 Aug 2012)
 # Regression in iproute code, does not detect IP addresses correctly anymore.
