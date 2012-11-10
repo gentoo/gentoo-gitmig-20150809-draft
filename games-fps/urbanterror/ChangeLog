@@ -1,6 +1,15 @@
 # ChangeLog for games-fps/urbanterror
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/ChangeLog,v 1.12 2012/11/05 22:44:15 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/ChangeLog,v 1.13 2012/11/10 12:05:30 hasufell Exp $
+
+*urbanterror-4.2.006 (10 Nov 2012)
+
+  10 Nov 2012; Julian Ospald <hasufell@gentoo.org> -urbanterror-4.2.003.ebuild,
+  -files/urbanterror-4.2.003-build.patch, -urbanterror-4.2.004.ebuild,
+  -files/urbanterror-4.2.004-build.patch, -urbanterror-4.2.005.ebuild,
+  -files/urbanterror-4.2.005-build.patch, +urbanterror-4.2.006.ebuild,
+  +files/urbanterror-4.2.006-build.patch:
+  version bump, remove old
 
   05 Nov 2012; Julian Ospald <hasufell@gentoo.org> urbanterror-4.2.005.ebuild:
   don't use dlopen if we can switch it off

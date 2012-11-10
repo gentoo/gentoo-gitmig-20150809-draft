@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/urbanterror-4.2.005.ebuild,v 1.2 2012/11/05 22:44:15 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/urbanterror-4.2.006.ebuild,v 1.1 2012/11/10 12:05:30 hasufell Exp $
 
 EAPI=4
 
@@ -8,15 +8,15 @@ inherit check-reqs eutils gnome2-utils games
 
 DESCRIPTION="Hollywood tactical shooter based on the ioquake3 engine"
 HOMEPAGE="http://www.urbanterror.info/home/"
-SRC_URI="http://178.63.102.135/svens_stuff/UrbanTerror42.tar.xz -> ${PN}-4.2.003.tar.xz
+SRC_URI="http://www.ftwgl.com/files/mirror/UrbanTerror42_full_${PV:4:3}.zip
 	http://dev.gentoo.org/~hasufell/distfiles/ioq3-for-UrbanTerror-4.2.002.tar.xz
-	http://upload.wikimedia.org/wikipedia/en/5/56/Urbanterror.svg -> ${PN}.svg
-	mirror://gentoo/urbanterror-4.2.003-to-4.2.005-update.tar"
+	http://upload.wikimedia.org/wikipedia/en/5/56/Urbanterror.svg -> ${PN}.svg"
 
 LICENSE="GPL-2 Q3AEULA"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+curl debug dedicated openal +sdl server smp vorbis"
+RESTRICT="mirror"
 
 RDEPEND="
 	!dedicated? (
@@ -32,11 +32,11 @@ RDEPEND="
 			media-libs/libvorbis )
 	)"
 DEPEND="${RDEPEND}
+	app-arch/unzip
 	dedicated? ( curl? ( net-misc/curl ) )"
 
 S=${WORKDIR}/ioq3-for-UrbanTerror-4.2.002
 S_DATA=${WORKDIR}/UrbanTerror42
-S_UPDATE=${WORKDIR}/urbanterror-4.2.003-to-4.2.005-update
 
 CHECKREQS_DISK_BUILD="2700M"
 CHECKREQS_DISK_USR="1300M"
@@ -82,10 +82,9 @@ src_install() {
 	local my_arch=$(usex amd64 "x86_64" "i386")
 
 	doicon -s scalable "${DISTDIR}"/${PN}.svg
-	dodoc ChangeLog README md4-readme.txt "${S_DATA}"/q3ut4/readme42.txt
+	dodoc ChangeLog README md4-readme.txt "${S_DATA}"/readme42.txt
 	insinto "${GAMES_DATADIR}"/${PN}/q3ut4
 	doins "${S_DATA}"/q3ut4/*.pk3
-	doins "${S_UPDATE}"/*.pk3
 
 	if use !dedicated ; then
 		newgamesbin build/$(usex debug "debug" "release")-linux-${my_arch}/Quake3-UrT$(usex smp "-smp" "").${my_arch} ${PN}
