@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mausezahn/mausezahn-0.40.ebuild,v 1.1 2012/10/17 16:57:26 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mausezahn/mausezahn-0.40.ebuild,v 1.2 2012/11/10 09:10:22 pinkbyte Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.perihel.at/sec/mz/${MY_P}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~amd64-linux ~x86"
 IUSE=""
 
 DEPEND="dev-libs/libcli
