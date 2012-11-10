@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libdrm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.204 2012/11/06 04:24:38 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.205 2012/11/10 22:35:34 chithanh Exp $
+
+  10 Nov 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/libdrm-2.4.40-bsd-etime.patch, libdrm-2.4.40.ebuild:
+  Fix building on fbsd, bug #433403.
 
 *libdrm-2.4.40 (06 Nov 2012)
 
