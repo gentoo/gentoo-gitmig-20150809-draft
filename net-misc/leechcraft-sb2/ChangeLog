@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/leechcraft-sb2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-sb2/ChangeLog,v 1.1 2012/11/10 17:46:34 pinkbyte Exp $
+
+*leechcraft-sb2-9999 (10 Nov 2012)
+
+  10 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> +leechcraft-sb2-9999.ebuild,
+  +metadata.xml:
+  Initial commit, thanks to 0xd34df00d
+
