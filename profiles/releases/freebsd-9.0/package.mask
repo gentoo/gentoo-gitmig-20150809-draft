@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/releases/freebsd-9.0/package.mask,v 1.5 2012/10/20 23:44:27 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/releases/freebsd-9.0/package.mask,v 1.6 2012/11/10 22:39:06 ryao Exp $
 
 # Make sure we don't get wrong versions
 <sys-freebsd/freebsd-pam-modules-9.0_alpha
@@ -48,13 +48,3 @@ sys-process/fuser-bsd
 # via libulog.
 # this package does not build anymore as it requires utmp
 sys-libs/libutempter
-
-# Richard Yao <ryao@gentoo.org> (20 Oct 2012)
-# Newer versions of x11-libs/libdrm require KMS support that was introduced in
-# FreeBSD 9.1
->=x11-libs/libdrm-2.4.37
-
-# Richard Yao <ryao@gentoo.org> (20 Oct 2012)
-# Newer versions of media-libs/mesa depend on newer versions of x11-libs/libdrm
-=media-libs/mesa-9*
->=media-libs/mesa-9.0
