@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/weechat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.117 2012/10/05 19:41:29 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.118 2012/11/10 15:34:02 lejonet Exp $
+
+*weechat-0.3.9.1 (10 Nov 2012)
+
+  10 Nov 2012;  <lejonet@gentoo.org> +weechat-0.3.9.1.ebuild:
+  Bumped the version
 
   05 Oct 2012; Tomáš Chvátal <scarabeus@gentoo.org> weechat-0.3.9.ebuild,
   weechat-9999.ebuild:
