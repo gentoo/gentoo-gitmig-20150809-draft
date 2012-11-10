@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qfsm/qfsm-0.53.0.ebuild,v 1.1 2012/11/10 12:40:56 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qfsm/qfsm-0.53.0.ebuild,v 1.2 2012/11/10 13:02:42 pinkbyte Exp $
 
 EAPI=4
 
@@ -27,6 +27,7 @@ S="${WORKDIR}/${MY_P}"
 
 DOCS=( ChangeLog README TODO )
 
+# TODO: fix doc building, probably some dependencies are missing
 src_prepare()
 {
 	# remove broken pre-generated Makefile
@@ -35,4 +36,6 @@ src_prepare()
 	sed -i  -e '/Encoding/d' \
 		-e 's/\.png//' \
 		desktop/qfsm.desktop || die 'sed on qfsm.desktop failed'
+	# fix doc path installation, bug #130641
+	sed -i -e "s:share/doc/qfsm:share/doc/${P}/html:g" CMakeLists.txt || die 'sed on CMakeLists.txt failed'
 }
