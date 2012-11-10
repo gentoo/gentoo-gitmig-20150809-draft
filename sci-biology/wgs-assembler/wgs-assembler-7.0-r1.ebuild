@@ -1,10 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/wgs-assembler/wgs-assembler-7.0.ebuild,v 1.2 2012/11/10 12:01:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/wgs-assembler/wgs-assembler-7.0-r1.ebuild,v 1.1 2012/11/10 12:01:51 jlec Exp $
 
-EAPI="2"
+EAPI=4
 
-inherit eutils multilib toolchain-funcs
+PYTHON_DEPEND=2
+
+inherit eutils python toolchain-funcs
 
 DESCRIPTION="A de novo whole-genome shotgun DNA sequence assembler, also known as the Celera Assembler and CABOG"
 HOMEPAGE="http://sourceforge.net/projects/wgs-assembler/"
@@ -12,10 +14,11 @@ SRC_URI="mirror://sourceforge/${PN}/wgs-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE=""
 KEYWORDS="~amd64 ~x86"
+IUSE="static-libs"
 
-DEPEND="x11-libs/libXt
+DEPEND="
+	x11-libs/libXt
 	!x11-terms/terminator"
 RDEPEND="${DEPEND}
 	app-shells/tcsh
@@ -23,21 +26,26 @@ RDEPEND="${DEPEND}
 
 S="${WORKDIR}/wgs-${PV}"
 
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
+
+src_prepare() {
+	epatch \
+		"${FILESDIR}"/${P}-build.patch
+	tc-export CC CXX
+}
+
 src_configure() {
-	sed -i -e "s/CC *= *gcc/CC = $(tc-getCC)/" \
-		-e "s/CXX *= *g++/CXX = $(tc-getCXX)/" \
-		"${S}"/src/c_make.as || die
-	sed -i -e "s/CC *:=.*/CC := $(tc-getCC)/" \
-		-e "s/CXX *:=.*/CXX := $(tc-getCXX)/" \
-		"${S}"/kmer/configure.sh || die
 	cd "${S}/kmer"
 	./configure.sh || die
 }
 
 src_compile() {
 	# not really an install target
-	emake -C kmer -j1 install || die
-	emake -C src -j1 SITE_NAME=LOCAL || die
+	emake -C kmer -j1 install
+	emake -C src -j1 SITE_NAME=LOCAL
 }
 
 src_install() {
@@ -51,20 +59,17 @@ src_install() {
 	sed -i '/sub getBinDirectoryShellCode ()/ a return "bin=/usr/bin\n";' ${MY_S}/bin/runCA* || die
 	sed -i '1 a use lib "/usr/share/'${PN}'/lib";' $(find $MY_S -name '*.p*') || die
 
-	dobin kmer/${MY_S}/bin/* || die
+	dobin kmer/${MY_S}/bin/*
 	insinto /usr/$(get_libdir)/${PN}
-	doins kmer/${MY_S}/lib/* || die
-	# Collisions
-	# dolib.a kmer/${MY_S}/lib/* || die
+	use static-libs && doins kmer/${MY_S}/lib/*
+
 	insinto /usr/include/${PN}
 	doins kmer/${MY_S}/include/*
 
-	insinto /usr/share/${PN}
-	doins -r ${MY_S}/bin/spec
 	insinto /usr/share/${PN}/lib
-	doins -r ${MY_S}/bin/TIGR || die
-	rm -rf ${MY_S}/bin/{TIGR,spec}
-	dobin ${MY_S}/bin/* || die
-	dolib.a ${MY_S}/lib/* || die
+	doins -r ${MY_S}/bin/TIGR
+	rm -rf ${MY_S}/bin/TIGR || die
+	dobin ${MY_S}/bin/*
+	use static-libs && dolib.a ${MY_S}/lib/*
 	dodoc README
 }
