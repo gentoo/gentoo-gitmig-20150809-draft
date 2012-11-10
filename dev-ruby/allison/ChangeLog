@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/allison
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/allison/ChangeLog,v 1.18 2012/11/08 17:55:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/allison/ChangeLog,v 1.19 2012/11/10 12:17:26 ago Exp $
+
+  10 Nov 2012; <ago@gentoo.org> allison-2.0.3-r1.ebuild:
+  Stable for amd64, wrt bug #421621
 
   08 Nov 2012; Jeroen Roovers <jer@gentoo.org> allison-2.0.3-r1.ebuild:
   Stable for HPPA (bug #421621).
