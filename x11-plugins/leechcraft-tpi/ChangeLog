@@ -1,0 +1,10 @@
+# ChangeLog for x11-plugins/leechcraft-tpi
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/leechcraft-tpi/ChangeLog,v 1.1 2012/11/10 18:29:23 pinkbyte Exp $
+
+*leechcraft-tpi-9999 (10 Nov 2012)
+
+  10 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> +leechcraft-tpi-9999.ebuild,
+  +metadata.xml:
+  Initial commit, thanks to 0xd34df00d
+
