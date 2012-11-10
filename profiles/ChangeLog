@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7129 2012/11/09 23:58:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7130 2012/11/10 01:18:57 phajdan.jr Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Nov 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> package.mask:
+  Mask net-libs/libsrtp-1.4.4_p20121108 for testing, bug #438756.
 
   09 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Unmask boost-1.52 and related libraries, everything else in the tree seems to

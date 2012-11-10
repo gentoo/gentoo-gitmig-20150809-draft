@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14211 2012/11/09 23:58:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14212 2012/11/10 01:18:57 phajdan.jr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pawel Hajdan jr <phajdan.jr@gentoo.org> (09 Nov 2012)
+# Masked for testing, bug #438756.
+>=net-libs/libsrtp-1.4.4_p20121108
 
 # Markos Chandras <hwoarang@gentoo.org> (09 Nov 2012)
 # Masked for testing
