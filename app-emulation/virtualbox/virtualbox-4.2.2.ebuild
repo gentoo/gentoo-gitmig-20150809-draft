@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.2.2.ebuild,v 1.1 2012/10/24 04:41:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.2.2.ebuild,v 1.2 2012/11/10 21:10:14 polynomial-c Exp $
 
 EAPI=4
 
-inherit eutils fdo-mime flag-o-matic linux-info multilib pax-utils python qt4-r2 toolchain-funcs java-pkg-opt-2
+inherit eutils fdo-mime flag-o-matic linux-info multilib pax-utils python qt4-r2 toolchain-funcs java-pkg-opt-2 udev
 
 if [[ ${PV} == "9999" ]] ; then
 	# XXX: should finish merging the -9999 ebuild into this one ...
@@ -21,7 +21,7 @@ fi
 DESCRIPTION="Family of powerful x86 virtualization products for enterprise as well as home use"
 HOMEPAGE="http://www.virtualbox.org/"
 SRC_URI="${SRC_URI}
-	http://dev.gentoo.org/~polynomial-c/virtualbox/patchsets/virtualbox-4.2.0-patches-01.tar.xz
+	http://dev.gentoo.org/~polynomial-c/virtualbox/patchsets/virtualbox-4.2.2-patches-01.tar.xz
 	http://dev.gentoo.org/~patrick/qt_fa_IR.ts
 	http://dev.gentoo.org/~patrick/VirtualBox_fa_IR.ts"
 
@@ -38,6 +38,7 @@ RDEPEND="!app-emulation/virtualbox-bin
 	dev-libs/openssl
 	dev-libs/libxml2
 	sys-libs/zlib
+	>=sys-fs/udev-171-r6
 	!headless? (
 		qt4? (
 			x11-libs/qt-gui:4
@@ -323,11 +324,12 @@ src_install() {
 	popd &>/dev/null || die
 
 	# New way of handling USB device nodes for VBox (bug #356215)
-	insinto /lib/udev
+	local udevdir="$(udev_get_udevdir)"
+	insinto ${udevdir}
 	doins VBoxCreateUSBNode.sh
-	fowners root:vboxusers /lib/udev/VBoxCreateUSBNode.sh
-	fperms 0750 /lib/udev/VBoxCreateUSBNode.sh
-	insinto /lib/udev/rules.d
+	fowners root:vboxusers ${udevdir}/VBoxCreateUSBNode.sh
+	fperms 0750 ${udevdir}/VBoxCreateUSBNode.sh
+	insinto ${udevdir}/rules.d
 	doins "${FILESDIR}"/10-virtualbox.rules
 
 	insinto /usr/share/${PN}

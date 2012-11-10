@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.134 2012/10/24 04:41:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.135 2012/11/10 21:10:14 polynomial-c Exp $
+
+*virtualbox-4.2.4 (10 Nov 2012)
+
+  10 Nov 2012; Lars Wendler <polynomial-c@gentoo.org>
+  -virtualbox-4.2.0-r1.ebuild, virtualbox-4.2.2.ebuild,
+  +virtualbox-4.2.4.ebuild:
+  Version bump. Removed old. Fixed location of udev dir (bug #436206).
 
 *virtualbox-4.2.2 (24 Oct 2012)
 
