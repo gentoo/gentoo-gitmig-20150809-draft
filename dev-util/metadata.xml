@@ -32,5 +32,9 @@
 		Kategoria dev-util zawiera różne dodatkowe narzędzia związane z
 		rozwijaniem programów.
 	</longdescription>
+	<longdescription lang="ru">
+		Категория dev-util содержит различные утилиты для разработки,
+		не попадающие в другие категории.
+	</longdescription>
 </catmetadata>
 
