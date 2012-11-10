@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/elixir
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/elixir/ChangeLog,v 1.6 2009/12/21 06:37:53 arfrever Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/elixir/ChangeLog,v 1.7 2012/11/10 13:09:28 idella4 Exp $
+
+*elixir-0.7.1-r1 (11 Nov 2012)
+
+  11 Nov 2012; Ian Delaney <idella4@gentoo.org> +elixir-0.7.1-r1.ebuild,
+  +files/elixir-0.7.1-CVE-2012-2146-aes.patch:
+  revbumped with security patch CVE-2012-2146 added to files wrt Bug #434576
 
 *elixir-0.7.1 (21 Dec 2009)
 
@@ -30,4 +36,3 @@
   31 Jul 2007; Tiziano Müller <dev-zero@gentoo.org> +metadata.xml,
   +elixir-0.3.0.ebuild:
   Initial ebuild
-
