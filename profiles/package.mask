@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14215 2012/11/10 14:58:20 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14216 2012/11/10 15:00:32 pinkbyte Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,7 +31,7 @@
 
 #--- END OF EXAMPLES ---
 
-# Sergey Popov <pinkbyte@gentoo.org> (15 Oct 2012)
+# Sergey Popov <pinkbyte@gentoo.org> (10 Nov 2012)
 # Segfaults in read_with_timeout, bug #335705.
 # Last release was in 1997, upstream is dead.
 # Masked for removal in 30 days.
