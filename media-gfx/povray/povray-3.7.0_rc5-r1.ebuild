@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0_rc5-r1.ebuild,v 1.1 2012/11/09 18:24:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0_rc5-r1.ebuild,v 1.2 2012/11/10 21:42:00 flameeyes Exp $
 
 EAPI=4
 
-inherit autotools eutils flag-o-matic versionator
+inherit autotools eutils flag-o-matic versionator multilib
 
 POVRAY_MAJOR_VER=$(get_version_component_range 1-3)
 POVRAY_MINOR_VER=$(get_version_component_range 4)
@@ -91,11 +91,11 @@ src_configure() {
 		${non_redist_conf} \
 		COMPILED_BY="Portage (Gentoo `uname`) on `hostname -f`" \
 		$(use_enable debug) \
-		$(use_with openexr) \
-		$(use_with mkl libmkl) \
-		$(use_with tiff libtiff) \
-		$(use_with X libsdl) \
-		$(use_with X x) \
+		$(use_with openexr openexr /usr/$(get_libdir)) \
+		$(use_with mkl libmkl /usr/$(get_libdir)) \
+		$(use_with tiff libtiff /usr/$(get_libdir)) \
+		$(use_with X libsdl /usr/$(get_libdir)) \
+		$(use_with X x /usr/$(get_libdir)) \
 		--disable-strip \
 		--disable-optimiz \
 		--disable-optimiz-arch

@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/povray
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.130 2012/11/09 18:24:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.131 2012/11/10 21:42:00 flameeyes Exp $
+
+  10 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/povray-3.7.0_rc5-automagic.patch, povray-3.7.0_rc5-r1.ebuild:
+  Fix building with USE flags enabled as well. Closes bug #442554.
 
 *povray-3.7.0_rc5-r1 (09 Nov 2012)
 
