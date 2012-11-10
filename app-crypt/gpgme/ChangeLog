@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gpgme
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.198 2012/11/10 12:13:04 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.199 2012/11/10 15:39:51 ryao Exp $
+
+  10 Nov 2012; Richard Yao <ryao@gentoo.org> gpgme-1.3.2.ebuild:
+  Keyword ~sparc64-solaris
 
   10 Nov 2012; Richard Freeman <rich0@gentoo.org> gpgme-1.3.2.ebuild:
   amd64 stable - 441956
