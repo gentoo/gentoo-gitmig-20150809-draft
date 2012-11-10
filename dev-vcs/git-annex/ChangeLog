@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/git-annex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/ChangeLog,v 1.8 2012/09/12 16:08:45 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/ChangeLog,v 1.9 2012/11/10 20:58:18 slyfox Exp $
+
+  10 Nov 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  git-annex-3.20120522.ebuild, git-annex-3.20120605.ebuild:
+  Raise lower bound up to ghc 7.5 (bug #442598 by gentoo@fholler.de)
 
   12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org>
   git-annex-3.20111203-r1.ebuild, git-annex-3.20111203.ebuild,

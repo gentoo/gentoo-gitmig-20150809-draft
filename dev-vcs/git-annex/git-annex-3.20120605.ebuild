@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/git-annex-3.20120605.ebuild,v 1.2 2012/09/12 16:08:45 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/git-annex-3.20120605.ebuild,v 1.3 2012/11/10 20:58:18 slyfox Exp $
 
 EAPI=4
 
@@ -46,7 +46,7 @@ DEPEND="${RDEPEND}
 		dev-haskell/time
 		dev-haskell/transformers-base
 		dev-haskell/utf8-string
-		>=dev-lang/ghc-6.12.3
+		>=dev-lang/ghc-7.4
 		dev-lang/perl
 		doc? ( www-apps/ikiwiki net-misc/rsync )"
 # dev-lang/perl is to build the manpages
