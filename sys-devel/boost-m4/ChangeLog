@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/boost-m4
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/boost-m4/ChangeLog,v 1.2 2012/06/10 03:35:20 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/boost-m4/ChangeLog,v 1.3 2012/11/10 13:16:42 blueness Exp $
+
+  10 Nov 2012; Anthony G. Basile <blueness@gentoo.org> boost-m4-0.2.ebuild:
+  keyword ppc, bug #442470
 
   10 Jun 2012; Nathan Phillip Brink <binki@gentoo.org> boost-m4-0.2.ebuild:
   Use tarball instead of zipball, reducing DEPENDencies and (hopefully) making
@@ -12,4 +15,3 @@
   +metadata.xml:
   Add boost-m4-0.2 for bug #352618, an alternate set of boost-detecting m4
   macros.
-
