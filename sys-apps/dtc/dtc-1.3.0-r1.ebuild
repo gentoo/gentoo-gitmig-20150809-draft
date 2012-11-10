@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dtc/dtc-9999.ebuild,v 1.3 2012/11/10 01:52:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dtc/dtc-1.3.0-r1.ebuild,v 1.1 2012/11/10 01:52:23 vapier Exp $
 
 EAPI="4"
 MY_P="${PN}-v${PV}"
 
-inherit multilib toolchain-funcs
+inherit multilib toolchain-funcs eutils
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://git.jdl.com/software/dtc.git"
 	inherit git-2
@@ -28,6 +28,7 @@ DEPEND="sys-devel/flex
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-fdtdump.patch #372895
 	sed -i \
 		-e '/^CFLAGS =/s:=:+=:' \
 		-e '/^CPPFLAGS =/s:=:+=:' \

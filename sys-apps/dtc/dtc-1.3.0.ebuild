@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dtc/dtc-1.3.0.ebuild,v 1.4 2012/11/03 19:24:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dtc/dtc-1.3.0.ebuild,v 1.5 2012/11/10 01:52:23 vapier Exp $
 
 EAPI=4
 inherit toolchain-funcs
@@ -42,6 +42,5 @@ src_test() {
 src_install() {
 	emake DESTDIR="${D}" PREFIX="/usr" LIBDIR="/usr/$(get_libdir)" \
 		 install
-	[[ ${D}/usr/bin/ftdump ]] && mv "${D}"/usr/bin/ftdump{,.dtc} #372895
 	dodoc Documentation/manual.txt
 }
