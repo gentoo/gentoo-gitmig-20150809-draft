@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.3.1.ebuild,v 1.14 2012/09/30 01:05:56 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.3.1.ebuild,v 1.15 2012/11/10 02:59:55 flameeyes Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ PYTHON_USE_WITH="xml"
 
 GCONF_DEBUG=no
 
-inherit autotools eutils flag-o-matic gnome2 python boost-utils
+inherit autotools eutils flag-o-matic gnome2 python
 
 MY_P="${P/_/}"
 S="${WORKDIR}/${MY_P}"
@@ -96,9 +96,6 @@ src_configure() {
 		$(use_enable nls)
 		$(use_with spell aspell)
 		$(use_with spell gtkspell)"
-
-	# support building with >=boost-1.50
-	append-cppflags -I$(boost-utils_get_includedir)
 
 	# aliasing unsafe wrt #310393
 	append-flags -fno-strict-aliasing
