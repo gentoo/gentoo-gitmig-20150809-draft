@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/leechcraft-full-9999.ebuild,v 1.17 2012/11/10 17:39:36 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/leechcraft-full-9999.ebuild,v 1.18 2012/11/10 18:35:13 pinkbyte Exp $
 
 EAPI="4"
 
@@ -55,5 +55,6 @@ RDEPEND="
 		~www-client/leechcraft-vgrabber-${PV}
 		~www-misc/leechcraft-pogooglue-${PV}
 		~www-misc/leechcraft-seekthru-${PV}
+		~x11-plugins/leechcraft-tpi-${PV}
 		"
 DEPEND=""

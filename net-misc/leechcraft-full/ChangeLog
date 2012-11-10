@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/leechcraft-full
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/ChangeLog,v 1.30 2012/11/10 17:39:36 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/ChangeLog,v 1.31 2012/11/10 18:35:13 pinkbyte Exp $
+
+  10 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> leechcraft-full-9999.ebuild:
+  Add x11-plugins/leechcraft-tpi dependency
 
   10 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> leechcraft-full-9999.ebuild:
   Change dependency: net-misc/leechcraft-sidebar -> virtual/leechcraft-trayarea
