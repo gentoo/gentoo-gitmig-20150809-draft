@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gsnmp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gsnmp/ChangeLog,v 1.7 2012/09/24 11:57:05 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gsnmp/ChangeLog,v 1.8 2012/11/10 08:19:44 pinkbyte Exp $
+
+  10 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> gsnmp-0.3.0.ebuild:
+  Add ~amd64-linux keyword
 
   24 Sep 2012; Andreas Schuerch <nativemad@gentoo.org> gsnmp-0.3.0.ebuild:
   x86 stable, see bug 409541
