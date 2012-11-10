@@ -1,6 +1,15 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.684 2012/09/06 13:45:59 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.685 2012/11/10 23:23:30 chithanh Exp $
+
+*xorg-server-1.13.0-r1 (10 Nov 2012)
+
+  10 Nov 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/xorg-server-1.13.0-exa-track-source-pixmaps.patch,
+  +files/xorg-server-1.13.0-zaphod-screen-crossing.patch,
+  +xorg-server-1.13.0-r1.ebuild:
+  Add patches to address cairo corruption, bug #409593, and mouse pointer issues
+  in pre-xrandr-1.2 multi-monitor setups, bug #434572.
 
 *xorg-server-1.13.0 (06 Sep 2012)
 
