@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-mach64/xf86-video-mach64-6.9.2.ebuild,v 1.1 2012/07/05 15:58:26 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-mach64/xf86-video-mach64-6.9.2.ebuild,v 1.2 2012/11/10 23:50:52 chithanh Exp $
 
 EAPI=4
 
@@ -12,7 +12,8 @@ DESCRIPTION="ATI Mach64 video driver"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE=""
 
-RDEPEND=">=x11-base/xorg-server-1.10"
+RDEPEND=">=x11-base/xorg-server-1.10
+	>=x11-libs/libpciaccess-0.12.901"
 DEPEND="${RDEPEND}"
 
 pkg_setup() {
