@@ -1,6 +1,9 @@
 # ChangeLog for app-text/highlight
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/ChangeLog,v 1.56 2012/10/06 21:01:01 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/ChangeLog,v 1.57 2012/11/10 02:58:13 flameeyes Exp $
+
+  10 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org> highlight-3.12.ebuild:
+  Drop usage of boost-utils since it's now pointless.
 
   06 Oct 2012; Mike Gilbert <floppym@gentoo.org> highlight-3.12.ebuild:
   Depend on pkgconfig, bug 437428 by Nikoli.

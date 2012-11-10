@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/highlight-3.12.ebuild,v 1.2 2012/10/06 21:01:01 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/highlight-3.12.ebuild,v 1.3 2012/11/10 02:58:13 flameeyes Exp $
 
 EAPI=4
 
-inherit toolchain-funcs qt4-r2 flag-o-matic boost-utils
+inherit toolchain-funcs qt4-r2 flag-o-matic
 
 DESCRIPTION="converts source code to formatted text ((X)HTML, RTF, (La)TeX, XSL-FO, XML) with syntax highlight"
 HOMEPAGE="http://www.andre-simon.de/"
@@ -29,7 +29,7 @@ pkg_setup() {
 		"CXX=$(tc-getCXX)"
 		"AR=$(tc-getAR)"
 		"LDFLAGS=${LDFLAGS}"
-		"CFLAGS=${CXXFLAGS} -I$(boost-utils_get_includedir)"
+		"CFLAGS=${CXXFLAGS}"
 		"DESTDIR=${D}"
 		"PREFIX=${EPREFIX}/usr"
 		"LUA_CFLAGS="
@@ -43,8 +43,6 @@ pkg_setup() {
 src_prepare() {
 	sed -i -e "/LSB_DOC_DIR/s:doc/${PN}:doc/${PF}:" \
 		src/core/datadir.cpp || die
-
-	append-cxxflags -I$(boost-utils_get_includedir)
 }
 
 src_compile() {
