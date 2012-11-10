@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/dtach
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dtach/ChangeLog,v 1.19 2012/11/10 10:08:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dtach/ChangeLog,v 1.20 2012/11/10 13:37:20 chithanh Exp $
+
+  10 Nov 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  dtach-0.8-r1.ebuild:
+  Keyword ~arm
 
   10 Nov 2012; <ago@gentoo.org> dtach-0.8-r1.ebuild:
   Stable for amd64, wrt bug #426496
@@ -64,4 +68,3 @@
   23 Jun 2004; Sven Wegener <swegener@gentoo.org> +metadata.xml,
   +dtach-0.6.ebuild:
   Initial import, ebuild written by me.
-
