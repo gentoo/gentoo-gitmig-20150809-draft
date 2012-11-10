@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libcli
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcli/ChangeLog,v 1.6 2012/10/20 16:04:28 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcli/ChangeLog,v 1.7 2012/11/10 09:08:45 pinkbyte Exp $
+
+*libcli-1.9.4-r1 (10 Nov 2012)
+
+  10 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> +libcli-1.9.4-r1.ebuild:
+  New revision: EAPI 4, ~amd64-linux keyword
 
   20 Oct 2012; Jeff Horelick <jdhore@gentoo.org> libcli-1.9.4.ebuild:
   marked x86 per bug 438572
