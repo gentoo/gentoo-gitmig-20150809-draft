@@ -1,0 +1,10 @@
+# ChangeLog for www-apps/guacamole
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/guacamole/ChangeLog,v 1.1 2012/11/10 14:17:31 nativemad Exp $
+
+*guacamole-0.6.2 (10 Nov 2012)
+
+  10 Nov 2012; Andreas Schuerch <nativemad@gentoo.org> +guacamole-0.6.2.ebuild,
+  +metadata.xml:
+  New Ebuild for guacamole. Written by me.
+
