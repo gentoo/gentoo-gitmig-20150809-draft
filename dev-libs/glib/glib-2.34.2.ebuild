@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.34.0.ebuild,v 1.4 2012/10/17 07:37:32 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.34.2.ebuild,v 1.1 2012/11/10 05:00:59 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="utils? 2"
@@ -79,8 +79,8 @@ src_prepare() {
 		fi
 
 		# Disable tests requiring dbus-python and pygobject; bugs #349236, #377549, #384853
-		if ! has_version dev-python/dbus-python || ! has_version 'dev-python/pygobject:2' ; then
-			ewarn "Some tests will be skipped due to dev-python/dbus-python or dev-python/pygobject:2"
+		if ! has_version dev-python/dbus-python || ! has_version 'dev-python/pygobject:3' ; then
+			ewarn "Some tests will be skipped due to dev-python/dbus-python or dev-python/pygobject:3"
 			ewarn "not being present on your system, think on installing them to get these tests run."
 			sed -i -e "/connection\/filter/d" gio/tests/gdbus-connection.c || die
 			sed -i -e "/connection\/large_message/d" gio/tests/gdbus-connection-slow.c || die
