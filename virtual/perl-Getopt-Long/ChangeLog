@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Getopt-Long
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Getopt-Long/ChangeLog,v 1.48 2012/08/27 17:43:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Getopt-Long/ChangeLog,v 1.49 2012/11/10 13:55:15 grobian Exp $
+
+  10 Nov 2012; Fabian Groffen <grobian@gentoo.org>
+  perl-Getopt-Long-2.380.0-r2.ebuild:
+  Marked ~x64-solaris
 
   27 Aug 2012; Raúl Porcel <armin76@gentoo.org>
   perl-Getopt-Long-2.380.0-r2.ebuild:
@@ -203,4 +207,3 @@
 
   07 Feb 2006; Michael Cummings <mcummings@gentoo.org> ChangeLog:
   New virtual for perl-core/Getopt-Long
-
