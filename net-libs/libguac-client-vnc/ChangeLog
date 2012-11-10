@@ -1,0 +1,10 @@
+# ChangeLog for net-libs/libguac-client-vnc
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libguac-client-vnc/ChangeLog,v 1.1 2012/11/10 14:07:48 nativemad Exp $
+
+*libguac-client-vnc-0.6.1 (10 Nov 2012)
+
+  10 Nov 2012; Andreas Schuerch <nativemad@gentoo.org>
+  +libguac-client-vnc-0.6.1.ebuild, +metadata.xml:
+  New Ebuild for libguac-client-vnc. Written by me.
+
