@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.369 2012/11/09 14:42:48 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.370 2012/11/10 09:14:39 grobian Exp $
+
+  10 Nov 2012; Fabian Groffen <grobian@gentoo.org> package.mask:
+  Update mask message to point out the cause + bug ref
 
   09 Nov 2012; Fabian Groffen <grobian@gentoo.org> package.mask:
   Mask libgpg-error-1.10-r1 due to broken build-system
