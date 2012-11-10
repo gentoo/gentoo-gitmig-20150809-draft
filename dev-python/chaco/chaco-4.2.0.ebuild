@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/chaco/chaco-4.2.0.ebuild,v 1.1 2012/10/09 09:15:21 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/chaco/chaco-4.2.0.ebuild,v 1.2 2012/11/10 10:07:54 idella4 Exp $
 
 EAPI=4
 
@@ -29,6 +29,7 @@ DEPEND="dev-python/setuptools
 		media-fonts/font-misc-misc
 		!prefix? ( x11-base/xorg-server[xvfb] )
 		x11-apps/xhost
+		dev-python/sphinx
 	)
 	test? (
 		>=dev-python/enable-4
