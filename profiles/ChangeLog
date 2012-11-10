@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7131 2012/11/10 05:32:49 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7132 2012/11/10 07:12:52 vapier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Nov 2012; Mike Frysinger <vapier@gentoo.org> package.mask:
+  Drop u-boot-tools mask.
 
   10 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.mask:
   Add gdk-pixbuf-2.26.5 to gnome-3.6 mask.
