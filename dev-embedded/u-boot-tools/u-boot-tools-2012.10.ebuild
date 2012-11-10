@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/u-boot-tools/u-boot-tools-2012.10.ebuild,v 1.3 2012/11/09 21:57:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/u-boot-tools/u-boot-tools-2012.10.ebuild,v 1.4 2012/11/10 07:13:49 vapier Exp $
 
 EAPI="4"
 
@@ -20,36 +20,24 @@ S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	sed -i -e "s:-g ::" tools/Makefile || die
-	# We don't have a config.h as we are building
-	# for host and not for a board
-	sed -i -e "/config.h/d" tools/env/fw_env.c || die
-	# All this insanity is not required if there is no
-	# /usr/include/image.h installed
-	if [[ -e ${ROOT}/usr/include/image.h ]]; then
-		einfo "A image.h header is installed in /usr/include/"
-		einfo "Fixing u-boot files to use the local image.h header"
-		# FIXME: HACK. media-libs/lensfun installs image.h
-		# Copy local image.h to tools/ and common/ directory
-		cp include/image.h common/image.h || die
-		cp include/image.h tools/image.h || die
-		sed -i -e "s:<image.h>:\"image.h\":" common/image.c || die
-		# Fix headers so local copy is picked up first
-		grep -r "<image\.h>" tools/* | cut -d ":" -f 1 | \
-			xargs sed -i -e "s:<image.h>:\"image.h\":" || die
-	fi
+	# This has been fixed upstream after 2012.10
+	sed -i '/include.*config.h/d' tools/env/fw_env.[ch] || die
+	# Make sure we find local u-boot headers first #429302
+	ln -s ../include/image.h tools/ || die
 }
 
 src_compile() {
 	emake \
-		HOSTSTRIP=echo \
+		HOSTSTRIP=: \
 		HOSTCC="$(tc-getCC)" \
 		HOSTCFLAGS="${CFLAGS} ${CPPFLAGS}"' $(HOSTCPPFLAGS)' \
 		HOSTLDFLAGS="${LDFLAGS}" \
+		CONFIG_ENV_OVERWRITE=y \
 		tools-all
 }
 
 src_install() {
-	cd tools env
+	cd tools
 	dobin bmp_logo gen_eth_addr img2srec mkimage
 	dobin easylogo/easylogo
 	dobin env/fw_printenv
