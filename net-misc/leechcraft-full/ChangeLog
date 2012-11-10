@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/leechcraft-full
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/ChangeLog,v 1.29 2012/10/13 14:06:43 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/ChangeLog,v 1.30 2012/11/10 17:39:36 pinkbyte Exp $
+
+  10 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> leechcraft-full-9999.ebuild:
+  Change dependency: net-misc/leechcraft-sidebar -> virtual/leechcraft-trayarea
 
   13 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> leechcraft-full-9999.ebuild:
   Add www-misc/leechcraft-pogooglue

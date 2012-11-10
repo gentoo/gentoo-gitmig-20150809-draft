@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/leechcraft-full-9999.ebuild,v 1.16 2012/10/13 14:06:43 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/leechcraft-full-9999.ebuild,v 1.17 2012/11/10 17:39:36 pinkbyte Exp $
 
 EAPI="4"
 
@@ -40,7 +40,6 @@ RDEPEND="
 		~net-misc/leechcraft-qrosp-${PV}
 		~net-misc/leechcraft-pintab-${PV}
 		~net-misc/leechcraft-secman-${PV}
-		~net-misc/leechcraft-sidebar-${PV}
 		~net-misc/leechcraft-summary-${PV}
 		~net-misc/leechcraft-tabpp-${PV}
 		~net-misc/leechcraft-tabslist-${PV}
@@ -49,6 +48,7 @@ RDEPEND="
 		~net-p2p/leechcraft-bittorrent-${PV}
 		~net-proxy/leechcraft-xproxy-${PV}
 		~sys-fs/leechcraft-vrooby-${PV}
+		~virtual/leechcraft-trayarea-${PV}
 		~www-client/leechcraft-deadlyrics-${PV}
 		~www-client/leechcraft-dolozhee-${PV}
 		~www-client/leechcraft-poshuku-${PV}
