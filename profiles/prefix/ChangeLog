@@ -1,6 +1,14 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.370 2012/11/10 09:14:39 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.371 2012/11/10 09:46:11 grobian Exp $
+
+  10 Nov 2012; Fabian Groffen <grobian@gentoo.org>
+  +sunos/solaris/profile.bashrc, profile.bashrc:
+  Define PREFIX_DISABLE_GEN_USR_LDSCRIPT for hosts that accidentially got
+  bootstrapped in this mode
+
+  10 Nov 2012; Fabian Groffen <grobian@gentoo.org> profile.bashrc:
+  Drop commented out AT_SYS_M4DIR code
 
   10 Nov 2012; Fabian Groffen <grobian@gentoo.org> package.mask:
   Update mask message to point out the cause + bug ref
