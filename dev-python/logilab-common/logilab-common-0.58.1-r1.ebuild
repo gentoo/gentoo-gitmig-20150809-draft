@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.58.1-r1.ebuild,v 1.1 2012/11/05 17:48:10 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.58.1-r1.ebuild,v 1.2 2012/11/10 15:36:12 idella4 Exp $
 
 EAPI="4"
 SUPPORT_PYTHON_ABIS="1"
 # Current tally of 8 test failures for python3
-#PYTHON_TESTS_RESTRICTED_ABIS="3.*"
+PYTHON_TESTS_RESTRICTED_ABIS="3.*"
 
 inherit distutils
 

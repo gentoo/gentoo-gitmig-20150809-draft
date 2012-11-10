@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/logilab-common
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.105 2012/11/06 10:58:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.106 2012/11/10 15:36:12 idella4 Exp $
+
+  11 Nov 2012; Ian Delaney <idella4@gentoo.org> logilab-common-0.58.1-r1.ebuild:
+  Removed leftover '#' from PYTHON_TESTS_RESTRICTED_ABIS, fixes Bug #442572
 
   06 Nov 2012; Agostino Sarubbo <ago@gentoo.org> logilab-common-0.58.1.ebuild:
   Stable for amd64, wrt bug #441276
