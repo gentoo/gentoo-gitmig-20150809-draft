@@ -1,20 +1,22 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.2.10.ebuild,v 1.3 2012/08/06 20:37:06 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.2.10.ebuild,v 1.4 2012/11/10 09:49:50 jlec Exp $
 
 EAPI=4
+
 inherit elisp-common bash-completion-r1 autotools eutils
 
 DESCRIPTION="2- and 3-D plotter for creating images (to be used in LaTeX)"
 HOMEPAGE="http://mathcs.holycross.edu/~ahwang/current/ePiX.html"
 SRC_URI="http://mathcs.holycross.edu/~ahwang/epix/${P}_withpdf.tar.bz2"
-LICENSE="GPL-2"
 
 SLOT="0"
+LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc emacs examples"
 
-DEPEND="virtual/latex-base
+DEPEND="
+	virtual/latex-base
 	dev-texlive/texlive-pstricks
 	dev-texlive/texlive-pictures
 	dev-texlive/texlive-latexextra
@@ -30,7 +32,7 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
+		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		--disable-epix-el
 }
 

@@ -1,31 +1,35 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.2.6.ebuild,v 1.6 2012/05/21 19:24:17 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.2.6.ebuild,v 1.7 2012/11/10 09:49:50 jlec Exp $
 
 EAPI=2
-inherit elisp-common bash-completion autotools eutils
+
+inherit elisp-common bash-completion-r1 autotools eutils
 
 DESCRIPTION="2- and 3-D plotter for creating images (to be used in LaTeX)"
 HOMEPAGE="http://mathcs.holycross.edu/~ahwang/current/ePiX.html"
 SRC_URI="http://mathcs.holycross.edu/~ahwang/epix/${P}_withpdf.tar.bz2"
-LICENSE="GPL-2"
 
 SLOT="0"
+LICENSE="GPL-2"
 KEYWORDS="amd64 ppc x86"
 IUSE="doc emacs examples"
 
-DEPEND="virtual/latex-base
-		dev-texlive/texlive-pstricks
-		dev-texlive/texlive-pictures
-		dev-texlive/texlive-latexextra
-		dev-tex/xcolor
-		emacs? ( virtual/emacs )"
+DEPEND="
+	virtual/latex-base
+	dev-texlive/texlive-pstricks
+	dev-texlive/texlive-pictures
+	dev-texlive/texlive-latexextra
+	dev-tex/xcolor
+	emacs? ( virtual/emacs )"
 RDEPEND="${DEPEND}"
 SITEFILE=50${PN}-gentoo.el
 
 src_prepare() {
 	# disable automatic install of doc and examples
-	epatch "${FILESDIR}"/${P}-doc-gentoo.patch
+	epatch \
+		"${FILESDIR}"/${P}-doc-gentoo.patch \
+		"${FILESDIR}"/${P}-automake.patch
 	eautoreconf
 }
 
@@ -44,8 +48,7 @@ src_install() {
 		elisp-install ${PN} *.elc *.el || die "elisp-install failed!"
 		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	fi
-	dobashcompletion bash_completions \
-		|| die "install of bash completions failed"
+	dobashcomp bash_completions
 	if use doc; then
 		insinto /usr/share/doc/${PF}
 		doins doc/*gz || die
