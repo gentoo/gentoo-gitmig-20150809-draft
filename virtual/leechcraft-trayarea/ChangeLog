@@ -1,6 +1,10 @@
 # ChangeLog for virtual/leechcraft-trayarea
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/leechcraft-trayarea/ChangeLog,v 1.10 2012/10/08 16:06:21 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/leechcraft-trayarea/ChangeLog,v 1.11 2012/11/10 18:03:01 pinkbyte Exp $
+
+  10 Nov 2012; Sergey Popov <pinkbyte@gentoo.org>
+  leechcraft-trayarea-9999.ebuild:
+  Add new dependency, net-misc/leechcraft-sb2, which also provides trayarea
 
 *leechcraft-trayarea-0.5.85 (08 Oct 2012)
 
