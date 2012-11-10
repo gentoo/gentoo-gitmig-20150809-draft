@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/leechcraft-azoth/leechcraft-azoth-9999.ebuild,v 1.16 2012/09/06 09:36:01 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/leechcraft-azoth/leechcraft-azoth-9999.ebuild,v 1.17 2012/11/10 17:23:03 pinkbyte Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ KEYWORDS=""
 IUSE="debug astrality +acetamide +adiumstyles +autoidler +autopaste +birthdaynotifier
 		+chathistory +crypt	+depester +embedmedia +herbicide +hili +isterique
 		+juick +keeso +lastseen	+metacontacts media +modnok +nativeemoticons
-		+otroid +p100q +rosenthal +standardstyles +xoox +xtazy +zheet"
+		+otroid +p100q +rosenthal shx +standardstyles +xoox +xtazy +zheet"
 
 DEPEND="~net-misc/leechcraft-core-${PV}
 		x11-libs/qt-webkit:4
@@ -67,6 +67,7 @@ src_configure() {
 		$(cmake-utils_use_enable otroid AZOTH_OTROID)
 		$(cmake-utils_use_enable p100q AZOTH_P100Q)
 		$(cmake-utils_use_enable rosenthal AZOTH_ROSENTHAL)
+		$(cmake-utils_use_enable shx AZOTH_SHX)
 		$(cmake-utils_use_enable standardstyles AZOTH_STANDARDSTYLES)
 		$(cmake-utils_use_enable xoox AZOTH_XOOX)
 		$(cmake-utils_use_enable xtazy AZOTH_XTAZY)
