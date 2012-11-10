@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/yapsy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/yapsy/ChangeLog,v 1.6 2012/09/18 13:25:00 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/yapsy/ChangeLog,v 1.7 2012/11/10 10:10:06 pinkbyte Exp $
+
+  10 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
+  Add python herd
 
   18 Sep 2012; Johannes Huber <johu@gentoo.org> yapsy-1.9.2.ebuild:
   Stable for x86, wrt bug #435178
