@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/rar-4.2.0.ebuild,v 1.2 2012/09/24 00:40:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/rar-4.2.0.ebuild,v 1.3 2012/11/10 10:09:41 ago Exp $
 EAPI=4
 
 DESCRIPTION="RAR compressor/uncompressor"
@@ -18,7 +18,7 @@ SRC_URI="x86? ( ${URI_x86} )
 
 LICENSE="RAR"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 ~x86"
 IUSE="all_sfx static"
 
 DEPEND="all_sfx? ( app-arch/unrar )"
