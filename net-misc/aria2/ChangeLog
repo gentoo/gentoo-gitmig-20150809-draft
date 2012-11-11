@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/aria2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/ChangeLog,v 1.81 2012/09/16 21:29:11 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/ChangeLog,v 1.82 2012/11/11 16:56:18 jlec Exp $
+
+  11 Nov 2012; Justin Lecher <jlec@gentoo.org> aria2-1.12.1.ebuild,
+  aria2-1.14.1.ebuild, aria2-1.15.0.ebuild, metadata.xml:
+  Add missing USE=bash-completion
 
   16 Sep 2012; Christoph Junghans <ottxor@gentoo.org> aria2-1.15.0.ebuild:
   added prefix support (bug #428252)
