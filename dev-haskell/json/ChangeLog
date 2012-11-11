@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/json
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/json/ChangeLog,v 1.6 2012/09/12 14:57:34 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/json/ChangeLog,v 1.7 2012/11/11 17:56:10 slyfox Exp $
+
+  11 Nov 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/json-0.4.3-ghc-7.4.patch, json-0.4.3.ebuild, json-0.4.4.ebuild:
+  Fix build failure against ghc-7.4 (bug #442746 by Fabian Holler)
 
   12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> json-0.4.3.ebuild,
   json-0.4.4.ebuild, json-0.5.ebuild:
