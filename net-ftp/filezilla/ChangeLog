@@ -1,6 +1,14 @@
 # ChangeLog for net-ftp/filezilla
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.90 2012/07/29 16:10:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.91 2012/11/11 21:00:47 voyageur Exp $
+
+*filezilla-3.6.0 (11 Nov 2012)
+
+  11 Nov 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  -filezilla-3.3.4.1.ebuild, -filezilla-3.5.1.ebuild, -filezilla-3.5.2.ebuild,
+  +filezilla-3.6.0.ebuild:
+  Version bump, GUI new features, improved TLS performances with gnutls-3.1,
+  bugfixes (including some for IPv6). Drop old versions
 
   29 Jul 2012; Raúl Porcel <armin76@gentoo.org> filezilla-3.5.3.ebuild:
   sparc stable wrt #398285
