@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/units
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.38 2012/11/05 20:10:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.39 2012/11/11 02:15:59 blueness Exp $
+
+  11 Nov 2012; Anthony G. Basile <blueness@gentoo.org> units-2.00.ebuild:
+  stable ppc, bug #439518
 
   05 Nov 2012; Jeroen Roovers <jer@gentoo.org> units-2.01.ebuild,
   +files/units-2.01-install.patch:
