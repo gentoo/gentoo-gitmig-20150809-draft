@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/xsane
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.96 2012/08/22 02:24:10 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.97 2012/11/11 11:29:25 pinkbyte Exp $
+
+  11 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> xsane-0.998-r1.ebuild:
+  Fix direct AR call wrt bug #442606. Thanks to Vicente Olivert Riera for
+  reporting this issue
 
   22 Aug 2012; Christoph Junghans <ottxor@gentoo.org> xsane-0.998-r1.ebuild:
   added prefix keywords

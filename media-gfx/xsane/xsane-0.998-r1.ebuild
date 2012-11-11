@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.998-r1.ebuild,v 1.3 2012/08/22 02:24:10 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.998-r1.ebuild,v 1.4 2012/11/11 11:29:25 pinkbyte Exp $
 
 EAPI="4"
 
@@ -45,6 +45,10 @@ src_prepare() {
 
 	# Fix compability with libpng15 wrt #377363
 	sed -i -e 's:png_ptr->jmpbuf:png_jmpbuf(png_ptr):' src/xsane-save.c || die
+
+	# Fix AR calling directly (bug #442606)
+	sed -i -e 's:ar r:$(AR) r:' lib/Makefile.in || die
+	tc-export AR
 }
 
 src_configure() {
