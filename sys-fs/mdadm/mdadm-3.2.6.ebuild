@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-3.2.6.ebuild,v 1.1 2012/10/26 08:17:33 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-3.2.6.ebuild,v 1.2 2012/11/11 07:53:37 vapier Exp $
 
 EAPI="4"
 inherit multilib eutils flag-o-matic toolchain-funcs
@@ -60,15 +60,13 @@ src_install() {
 	newconfd "${FILESDIR}"/mdadm.confd mdadm
 	newinitd "${FILESDIR}"/mdraid.rc mdraid
 	newconfd "${FILESDIR}"/mdraid.confd mdraid
-
-	# do not rely on /lib -> /libXX link
-	sed -i \
-		-e "s:/lib/rcscripts/:/$(get_libdir)/rcscripts/:" \
-		"${D}"/etc/init.d/*
 }
 
-pkg_postinst() {
-	elog "If you're not relying on kernel auto-detect of your RAID devices,"
-	elog "you need to add 'mdraid' to your 'boot' runlevel:"
-	elog "rc-update add mdraid boot"
+pkg_preinst() {
+	if ! has_version ${CATEGORY}/${PN} ; then
+		# Only inform people the first time they install.
+		elog "If you're not relying on kernel auto-detect of your RAID"
+		elog "devices, you need to add 'mdraid' to your 'boot' runlevel:"
+		elog "	rc-update add mdraid boot"
+	fi
 }
