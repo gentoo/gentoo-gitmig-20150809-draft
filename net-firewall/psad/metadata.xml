@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>hardened</herd>
+	<maintainer>
+		<email>maintainer-needed@gentoo.org</email>
+		<description>This package lacks a primary herd or maintainer.</description>
+	</maintainer>
 	<longdescription>PSAD provides port scanning attack detection and protection.</longdescription>
 </pkgmetadata>
