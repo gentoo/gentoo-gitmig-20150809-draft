@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/guacamole/guacamole-0.6.2.ebuild,v 1.1 2012/11/10 14:17:31 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/guacamole/guacamole-0.6.2.ebuild,v 1.2 2012/11/11 01:08:21 mr_bones_ Exp $
 
 EAPI=4
 
@@ -16,16 +16,14 @@ KEYWORDS="~x86"
 
 IUSE="vnc rdesktop"
 
-
 DEPEND="dev-java/maven-bin"
 
-RDEPEND="${DEPEND} 
+RDEPEND="${DEPEND}
 	www-servers/tomcat
 	>virtual/jre-1.6
 	net-misc/guacd
 	vnc? ( net-libs/libguac-client-vnc )
 	rdesktop? ( net-libs/libguac-client-rdp )"
-
 
 src_compile() {
     	mkdir ${HOME}/.m2
@@ -47,5 +45,5 @@ src_install() {
 	elog "cd /var/lib/guacamole && jar -xvf guacamole.war && cd .. && cp -a guacamole /var/lib/tomcat-7/webapps/"
 	elog "ln -sf /etc/guacamole/guacamole.properties /usr/share/tomcat-7/lib/"
 	elog "You will also need to define users and connectrions in /etc/guacamole/user-mapping.xml!"
-	
+
 }
