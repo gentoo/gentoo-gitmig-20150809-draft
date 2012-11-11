@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/prey/prey-0.5.4-r1.ebuild,v 1.1 2012/11/10 19:34:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/prey/prey-0.5.4-r1.ebuild,v 1.2 2012/11/11 14:03:22 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://preyproject.com/releases/${PV}/${P}-linux.zip"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="gtk userpriv"
 
 LINGUAS="en it sv es"
