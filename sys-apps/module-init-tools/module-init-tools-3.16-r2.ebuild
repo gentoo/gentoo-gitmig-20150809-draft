@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.16-r2.ebuild,v 1.1 2012/10/20 09:32:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.16-r2.ebuild,v 1.2 2012/11/11 20:30:50 vapier Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="tools for managing linux kernel modules"
 HOMEPAGE="http://modules.wiki.kernel.org/"
@@ -25,6 +25,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	touch *.5 *.8 # dont regen manpages
+	sed -i -e "/^AR\>/s:=.*:=$(tc-getAR):" Makefile.in #440274
 }
 
 src_compile() {
