@@ -50,5 +50,9 @@
       Use the <pkg>dev-db/haildb</pkg> libraries to replace the innodb
       plugin storage engine with haildb (an innodb fork).
     </flag>
+
+    <flag name="v8">
+      Use <pkg>dev-lang/v8</pkg>.
+    </flag>
   </use>
 </pkgmetadata>
