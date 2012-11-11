@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/awstats/awstats-7.1_p20121017.ebuild,v 1.1 2012/11/01 16:23:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/awstats/awstats-7.1_p20121017.ebuild,v 1.2 2012/11/11 14:03:39 ago Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ fi
 S=${WORKDIR}/${MY_P}
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~hppa ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="geoip ipv6"
 
 SLOT="0"
