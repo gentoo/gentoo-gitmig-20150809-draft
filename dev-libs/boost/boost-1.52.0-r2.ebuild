@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.52.0-r2.ebuild,v 1.1 2012/11/11 05:27:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.52.0-r2.ebuild,v 1.2 2012/11/11 05:50:39 flameeyes Exp $
 
 EAPI="5"
 PYTHON_DEPEND="python? *"
@@ -298,6 +298,16 @@ EOF
 			fi
 		done
 	fi
+}
+
+pkg_preinst() {
+	# Yai for having symlinks that are nigh-impossible to remove without
+	# resorting to dirty hacks like these. Removes lingering symlinks
+	# from the slotted versions.
+	local symlink
+	for symlink in "${EROOT}usr/include/boost" "${EROOT}usr/share/boostbook"; do
+		[[ -L ${symlink} ]] && rm -f "${symlink}"
+	done
 }
 
 pkg_postinst() {
