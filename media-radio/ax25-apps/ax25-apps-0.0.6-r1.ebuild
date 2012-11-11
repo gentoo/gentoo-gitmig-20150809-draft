@@ -1,6 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-apps/ax25-apps-0.0.6-r1.ebuild,v 1.14 2012/06/04 01:06:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-apps/ax25-apps-0.0.6-r1.ebuild,v 1.15 2012/11/11 18:49:21 tomjbe Exp $
+
+EAPI=4
+inherit autotools eutils
 
 DESCRIPTION="Basic AX.25 (Amateur Radio) user tools, additional daemons"
 HOMEPAGE="http://ax25.sourceforge.net/"
@@ -15,8 +18,13 @@ RDEPEND=">=dev-libs/libax25-0.0.7"
 DEPEND="${RDEPEND}
 	!media-sound/listen"
 
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-cflags.patch
+	eautoreconf
+}
+
 src_install() {
-	emake DESTDIR="${D}" install installconf || die
+	emake DESTDIR="${D}" install installconf
 
 	newinitd "${FILESDIR}"/ax25ipd.rc ax25ipd
 	newinitd "${FILESDIR}"/ax25mond.rc ax25mond
