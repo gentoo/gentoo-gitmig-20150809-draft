@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/openafs-kernel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/ChangeLog,v 1.139 2012/09/25 00:19:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/ChangeLog,v 1.140 2012/11/11 20:04:46 vapier Exp $
+
+*openafs-kernel-1.6.1-r2 (11 Nov 2012)
+
+  11 Nov 2012; Mike Frysinger <vapier@gentoo.org>
+  +openafs-kernel-1.6.1-r2.ebuild:
+  Add patches from Andrej Filipcic to fix building with linux-3.6 #437278 by
+  Oliver Freyermuth.
 
   25 Sep 2012; Mike Frysinger <vapier@gentoo.org>
   -openafs-kernel-1.4.14.ebuild, -openafs-kernel-1.6.0.ebuild,
@@ -683,4 +690,3 @@
   This set of ebuilds exist to match openafs-1.2.13 and openafs-1.3.85
   respectively. All this hard work was done to ease the pain for openafs users
   on kernel upgrades, by Stefaan De Roeck <stefaan.deroeck@gmail.com>.
-
