@@ -1,6 +1,11 @@
 # ChangeLog for games-rpg/queen
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/queen/ChangeLog,v 1.10 2011/02/13 17:55:41 armin76 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/queen/ChangeLog,v 1.11 2012/11/11 04:57:37 mr_bones_ Exp $
+
+*queen-1 (11 Nov 2012)
+
+  11 Nov 2012; Michael Sterrett <mr_bones_@gentoo.org> +queen-1.ebuild:
+  update and add language support with ebuild from Calchan
 
   13 Feb 2011; Raúl Porcel <armin76@gentoo.org> queen-0-r1.ebuild:
   Drop sparc keywords, move to ~ppc as scummvm is not stable
@@ -33,4 +38,3 @@
   30 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml,
   queen-0.ebuild:
   initial commit; ebuild submitted by Stephan Schiffel via bug #44812
-
