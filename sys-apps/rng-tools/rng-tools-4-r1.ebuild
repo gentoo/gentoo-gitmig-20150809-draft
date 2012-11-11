@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/rng-tools-4.ebuild,v 1.1 2012/11/06 05:05:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/rng-tools-4-r1.ebuild,v 1.1 2012/11/11 06:24:22 vapier Exp $
 
 EAPI="4"
 
-inherit eutils autotools
+inherit eutils autotools toolchain-funcs
 
 DESCRIPTION="Daemon to use hardware random number generators"
 HOMEPAGE="http://gkernel.sourceforge.net/"
@@ -19,10 +19,13 @@ src_prepare() {
 	echo 'bin_PROGRAMS = randstat' >> contrib/Makefile.am
 	epatch "${FILESDIR}"/test-for-argp.patch
 	eautoreconf
+
+	sed -i '/^AR /d' Makefile.in
+	tc-export AR
 }
 
 src_install() {
 	default
-	newinitd "${FILESDIR}"/rngd-initd-3 rngd
-	newconfd "${FILESDIR}"/rngd-confd-3 rngd
+	newinitd "${FILESDIR}"/rngd-initd-4 rngd
+	newconfd "${FILESDIR}"/rngd-confd-4 rngd
 }
