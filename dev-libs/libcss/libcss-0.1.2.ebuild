@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcss/libcss-0.1.2.ebuild,v 1.5 2012/07/23 06:25:29 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcss/libcss-0.1.2.ebuild,v 1.6 2012/11/11 21:23:41 xmw Exp $
 
 EAPI=4
 
@@ -26,6 +26,8 @@ src_prepare() {
 		-i Makefile || die
 	sed -e "/^libdir/s:/lib:/$(get_libdir):g" \
 		-i ${PN}.pc.in || die
+	sed -e "s/\$\$(HOST_CC)/$(tc-getBUILD_CC)/g" \
+		-i src/parse/properties/Makefile || die
 	echo "Q := " >> Makefile.config.override
 	echo "CC := $(tc-getCC)" >> Makefile.config.override
 	echo "AR := $(tc-getAR)" >> Makefile.config.override
