@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.685 2012/11/10 23:23:30 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.686 2012/11/11 01:49:30 chithanh Exp $
+
+  11 Nov 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/xdm.initd-9, xorg-server-1.13.0-r1.ebuild:
+  Fix xdm init script for entrance, bug #439760.
 
 *xorg-server-1.13.0-r1 (10 Nov 2012)
 
