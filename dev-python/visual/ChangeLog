@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/visual
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/ChangeLog,v 1.62 2012/11/11 13:24:02 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/ChangeLog,v 1.63 2012/11/11 13:35:54 blueness Exp $
+
+  11 Nov 2012; Anthony G. Basile <blueness@gentoo.org> visual-5.72-r2.ebuild,
+  visual-5.74.ebuild:
+  Rapid stabilization to heal tree, bug #442318
 
   11 Nov 2012; Anthony G. Basile <blueness@gentoo.org> -visual-5.4.ebuild,
   visual-5.72-r2.ebuild, visual-5.74.ebuild:
