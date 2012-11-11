@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-3.43.ebuild,v 1.1 2012/10/21 18:00:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-3.43.ebuild,v 1.2 2012/11/11 08:33:16 vapier Exp $
 
 EAPI=3
 
@@ -48,10 +48,4 @@ src_install() {
 	cd "${WORKDIR}"/man-pages-gentoo
 	doman */* || die
 	dodoc README.Gentoo
-}
-
-pkg_postinst() {
-	elog "If you don't have a makewhatis cronjob, then you"
-	elog "should update the whatis database yourself:"
-	elog " # makewhatis -u"
 }
