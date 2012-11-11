@@ -1,6 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.105 2012/11/02 10:29:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.106 2012/11/11 20:11:58 lu_zero Exp $
+
+# Luca Barbato <lu_zero@gentoo.org> (11 Nov 2012)
+# Libav 9 can use fdk-aac
+
+>=media-video/libav-9_beta2 fdk
 
 # Robin H Johnson <robbat2@gentoo.org> (01 Nov 2012)
 # MySQL 5.5 wants systemtap, tcmalloc & jemalloc

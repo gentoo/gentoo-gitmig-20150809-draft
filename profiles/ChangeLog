@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7135 2012/11/11 07:44:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7136 2012/11/11 20:11:57 lu_zero Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Nov 2012; Luca Barbato <lu_zero@gentoo.org> arch/alpha/package.use.mask:
+  Mask fdk on alpha, pending testing
 
   11 Nov 2012; Mike Frysinger <vapier@gentoo.org> package.mask:
   Drop mdadm mask.
