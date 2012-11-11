@@ -10,7 +10,7 @@
     <flag name='eselect' restrict='&lt;dev-libs/boost-1.50.0-r2'>
       Run "eselect boost update" even if version is already selected
     </flag>
-    <flag name='debug' restrict='&lt;dev-libs/boost-1.50.0-43'>
+    <flag name='debug' restrict='&lt;dev-libs/boost-1.50.0-r3'>
       Build and install debug versions of the Boost libraries. These
       libraries are not used by default, and should not be used unless
       you're developing against Boost.
