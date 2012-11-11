@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-4.2.4_p2-r1.ebuild,v 1.3 2012/11/11 20:42:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-4.2.4_p2-r1.ebuild,v 1.4 2012/11/11 21:42:02 vapier Exp $
 
 EAPI="4"
 
@@ -199,6 +199,8 @@ src_install() {
 		newconfd "${FILESDIR}"/dhcrelay.conf dhcrelay
 		newinitd "${FILESDIR}"/dhcrelay.init3 dhcrelay6
 		newconfd "${FILESDIR}"/dhcrelay6.conf dhcrelay6
+
+		sed -i "s:#@slapd@:$(usex ldap slapd ''):" "${ED}"/etc/init.d/* || die #442560
 	fi
 
 	# the default config files aren't terribly useful #384087
