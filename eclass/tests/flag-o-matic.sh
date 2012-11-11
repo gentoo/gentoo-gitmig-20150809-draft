@@ -110,4 +110,10 @@ append-cflags '-DFOO="a b c"'
 [[ ${CFLAGS} == '-DFOO="a b c"' ]]
 ftend
 
+tbegin "raw-ldflags"
+LDFLAGS='-Wl,-O1 -Wl,--as-needed -Wl,-z,now -flto'
+LDFLAGS=$(raw-ldflags)
+[[ ${LDFLAGS} == '-O1 --as-needed -z now' ]]
+ftend
+
 texit

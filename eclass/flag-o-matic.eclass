@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.180 2012/11/11 07:00:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.181 2012/11/11 20:00:57 vapier Exp $
 
 # @ECLASS: flag-o-matic.eclass
 # @MAINTAINER:
@@ -600,7 +600,7 @@ raw-ldflags() {
 	set --
 	for x in ${input} ; do
 		case ${x} in
-		-Wl*,)
+		-Wl,*)
 			x=${x#-Wl,}
 			set -- "$@" ${x//,/ }
 			;;
