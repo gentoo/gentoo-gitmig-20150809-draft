@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer>
-    <email>flameeyes@gentoo.org</email>
+    <email>maintainer-needed@gentoo.org</email>
   </maintainer>
   <longdescription>
     Quagga is a modern fork of Zebra. Quagga is a routing software package that provides TCP/IP
