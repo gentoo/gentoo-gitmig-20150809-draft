@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cqrlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cqrlib/ChangeLog,v 1.18 2012/10/31 16:46:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cqrlib/ChangeLog,v 1.19 2012/11/11 15:18:19 blueness Exp $
+
+  11 Nov 2012; Anthony G. Basile <blueness@gentoo.org> cqrlib-1.1.2-r1.ebuild:
+  stable ppc, bug #440370
 
   31 Oct 2012; Agostino Sarubbo <ago@gentoo.org> cqrlib-1.1.2-r1.ebuild:
   Stable for amd64, wrt bug #440370
@@ -75,4 +78,3 @@
   +files/1.0.3-LDFLAGS.patch, +cqrlib-1.0.3.ebuild, +metadata.xml:
   An ANSI C implementation of a utility library for quaternion arithmetic
   and quaternion rotation math
-
