@@ -7,6 +7,7 @@
 		<name>Anthony G. Basile</name>
 	</maintainer>
 	<use>
-		<flag name='xtpax'>Enable XT_PAX and prefer it to PT_PAX.</flag>
+		<flag name='xtpax'>Enable XATTR_PAX_FLAGS support.</flag>
+		<flag name='ptpax'>Enable PT_PAX_FLAGS support.</flag>
 	</use>
 </pkgmetadata>
