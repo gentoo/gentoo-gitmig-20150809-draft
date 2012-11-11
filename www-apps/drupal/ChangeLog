@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/drupal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.88 2012/11/09 22:32:44 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.89 2012/11/11 16:56:11 blueness Exp $
+
+  11 Nov 2012; Anthony G. Basile <blueness@gentoo.org> -drupal-7.15.ebuild:
+  Drop 7.x before 7.16, bug #442756
 
 *drupal-7.17 (09 Nov 2012)
 
@@ -436,4 +439,3 @@
 
   27 Apr 2005; Jose Luis Rivero <yoswink@gentoo.org> drupal-4.5.2.ebuild:
   keyworded ~alpha
-
