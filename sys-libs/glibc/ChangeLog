@@ -1,5 +1,9 @@
 # ChangeLog for sys-libs/glibc
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.905 2012/11/11 07:24:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.906 2012/11/11 15:23:16 zorry Exp $
+
+  11 Nov 2012; Magnus Granberg <zorry@gentoo.org> glibc-2.16.0.ebuild,
+  +files/2.16/glibc-2.16-hardened-pie.patch:
+  Update the hardened pie patch for 2.16, bug #442712
 
   11 Nov 2012; Mike Frysinger <vapier@gentoo.org>
   files/eblits/src_install.eblit, files/eblits/src_unpack.eblit,
