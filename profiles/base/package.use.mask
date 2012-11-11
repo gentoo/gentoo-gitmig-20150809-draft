@@ -1,9 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.406 2012/11/06 21:25:13 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.407 2012/11/11 23:25:24 floppym Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Mike Gilbert <floppym@gentoo.org> (11 Nov 2012)
+# Unit tests tend to segfault/crash, upstream doesn't care at the moment.
+net-misc/freerdp test
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (3 Nov 2012)
 # Requires net-dns/unbound which is not keyworded by most arches
