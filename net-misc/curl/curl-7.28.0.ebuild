@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.28.0.ebuild,v 1.2 2012/10/18 17:20:39 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.28.0.ebuild,v 1.3 2012/11/11 00:27:44 blueness Exp $
 
 EAPI="4"
 
@@ -57,7 +57,6 @@ RDEPEND="ldap? ( net-nds/openldap )
 # krb4 http://web.mit.edu/kerberos/www/krb4-end-of-life.html
 
 DEPEND="${RDEPEND}
-	sys-apps/ed
 	virtual/pkgconfig
 	test? (
 		sys-apps/diffutils
