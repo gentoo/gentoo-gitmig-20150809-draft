@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/labrea/labrea-2.5-r2.ebuild,v 1.1 2012/11/11 17:22:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/labrea/labrea-2.5-r2.ebuild,v 1.2 2012/11/11 19:02:11 pinkbyte Exp $
 
 EAPI=4
 
@@ -9,7 +9,6 @@ inherit autotools eutils
 DESCRIPTION="'Sticky' Honeypot and IDS"
 HOMEPAGE="http://labrea.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}-stable-1.tar.gz"
-RESTRICT="mirror"
 
 LICENSE="GPL-2"
 SLOT="0"
