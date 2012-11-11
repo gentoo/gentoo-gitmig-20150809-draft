@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/etckeeper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/ChangeLog,v 1.7 2012/08/11 16:05:37 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/ChangeLog,v 1.8 2012/11/11 18:18:44 hasufell Exp $
+
+  11 Nov 2012; Julian Ospald <hasufell@gentoo.org> etckeeper-0.63.ebuild,
+  metadata.xml:
+  add cron useflag wrt #442716
 
   11 Aug 2012; Julian Ospald <hasufell@gentoo.org> +files/99etckeeper,
   etckeeper-0.63.ebuild:

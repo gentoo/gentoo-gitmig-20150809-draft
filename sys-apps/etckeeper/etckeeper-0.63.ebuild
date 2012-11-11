@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/etckeeper-0.63.ebuild,v 1.10 2012/08/11 16:05:37 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/etckeeper-0.63.ebuild,v 1.11 2012/11/11 18:18:44 hasufell Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://kitenet.net/~joey/code/etckeeper/"
 SRC_URI="http://git.kitenet.net/?p=${PN}.git;a=snapshot;h=refs/tags/${PV};sf=tgz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
-IUSE="bazaar"
+IUSE="bazaar cron"
 KEYWORDS="amd64 ~x86"
 SLOT="0"
 
@@ -26,6 +26,7 @@ VCS_DEPEND="
 DEPEND="bazaar? ( dev-vcs/bzr )"
 RDEPEND="${DEPEND}
 	app-portage/portage-utils
+	cron? ( virtual/cron )
 	!bazaar? ( || ( ${VCS_DEPEND} ) )"
 
 src_prepare(){
@@ -54,6 +55,11 @@ src_install(){
 	dodoc README TODO
 	docinto examples
 	dodoc "${FILESDIR}"/bashrc
+
+	if use cron ; then
+		exeinto /etc/cron.daily
+		newexe debian/cron.daily etckeeper
+	fi
 }
 
 pkg_postinst(){

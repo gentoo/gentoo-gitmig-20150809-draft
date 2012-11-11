@@ -13,6 +13,7 @@
 	</maintainer>
 	<use>
 		<flag name='bazaar'>Support <pkg>dev-vcs/bzr</pkg> based repository</flag>
+		<flag name='cron'>Install cron script</flag>
 	</use>
 </pkgmetadata>
 
