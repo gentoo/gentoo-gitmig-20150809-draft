@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/drizzle-7.2.4.ebuild,v 1.1 2012/11/11 01:59:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/drizzle-7.2.4.ebuild,v 1.2 2012/11/11 02:18:49 flameeyes Exp $
 
 EAPI=5
 
-inherit flag-o-matic libtool autotools eutils pam user versionator
+inherit python flag-o-matic libtool autotools eutils pam user versionator
 
 MY_P="${P}-alpha"
 S="${WORKDIR}/${MY_P}"
@@ -37,6 +37,7 @@ RDEPEND="tcmalloc? ( dev-util/google-perftools )
 		!dev-db/libdrizzle"
 
 DEPEND="${RDEPEND}
+		=dev-lang/python-2*
 		sys-devel/gettext
 		dev-util/intltool
 		dev-util/gperf
@@ -46,12 +47,17 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	enewuser drizzle -1 -1 /dev/null nogroup
+	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-7.2.3-libtool.patch
 	epatch "${FILESDIR}"/${PN}-7.2.3+automake-1.12.patch
 	epatch "${FILESDIR}"/${PN}-7.2.4+boost-1.50.patch
+
+	python_convert_shebangs -r 2 .
+
 	eautoreconf
 }
 
