@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.998-r1.ebuild,v 1.4 2012/11/11 11:29:25 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.998-r1.ebuild,v 1.5 2012/11/11 11:30:20 pinkbyte Exp $
 
 EAPI="4"
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="graphical scanning frontend"
 HOMEPAGE="http://www.xsane.org/"
