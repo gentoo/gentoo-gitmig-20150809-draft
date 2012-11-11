@@ -1,6 +1,11 @@
 # ChangeLog for app-text/jist
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jist/ChangeLog,v 1.5 2012/10/19 22:09:45 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jist/ChangeLog,v 1.6 2012/11/11 20:43:42 hasufell Exp $
+
+*jist-1.2.0 (11 Nov 2012)
+
+  11 Nov 2012; Julian Ospald <hasufell@gentoo.org> +jist-1.2.0.ebuild:
+  version bump
 
 *jist-1.1.0 (19 Oct 2012)
 
