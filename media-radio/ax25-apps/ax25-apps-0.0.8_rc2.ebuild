@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-apps/ax25-apps-0.0.8_rc2.ebuild,v 1.3 2011/09/22 12:30:19 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-apps/ax25-apps-0.0.8_rc2.ebuild,v 1.4 2012/11/11 18:25:41 tomjbe Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND="dev-libs/libax25
+DEPEND=">=dev-libs/libax25-0.0.12_rc2
 	!media-sound/listen"
 RDEPEND=${DEPEND}
 
