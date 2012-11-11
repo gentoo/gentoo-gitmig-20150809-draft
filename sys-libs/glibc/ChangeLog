@@ -1,5 +1,10 @@
 # ChangeLog for sys-libs/glibc
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.904 2012/11/02 18:25:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.905 2012/11/11 07:24:55 vapier Exp $
+
+  11 Nov 2012; Mike Frysinger <vapier@gentoo.org>
+  files/eblits/src_install.eblit, files/eblits/src_unpack.eblit,
+  glibc-2.16.0.ebuild:
+  Fix cross-compile bootstrapping of glibc headers with 2.16.0.
 
   02 Nov 2012; Mike Frysinger <vapier@gentoo.org> glibc-2.10.1-r1.ebuild,
   glibc-2.11.3.ebuild, glibc-2.12.1-r3.ebuild, glibc-2.12.2.ebuild,
