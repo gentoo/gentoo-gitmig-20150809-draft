@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/magick-rotation/magick-rotation-1.6.2.ebuild,v 1.1 2012/10/20 11:24:36 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/magick-rotation/magick-rotation-1.6.2.ebuild,v 1.2 2012/11/11 08:18:19 pinkbyte Exp $
 
 EAPI=4
 
@@ -38,12 +38,15 @@ src_prepare() {
 }
 
 src_compile() {
-	if use x86; then
-		$(tc-getCC) -lX11 -lXrandr check.c -o checkmagick32 || die 'compilation failed'
-	fi
+	local suffix=
 	if use amd64; then
-		$(tc-getCC) -lX11 -lXrandr check.c -o checkmagick64 || die 'compilation failed'
+		suffix=64
+	else
+		suffix=32
 	fi
+	tc-export_build_env
+	echo "$(tc-getCC) $CFLAGS $LDFLAGS check.c -lX11 -lXrandr -o checkmagick${suffix}"
+	$(tc-getCC) $CFLAGS $LDFLAGS check.c -lX11 -lXrandr -o "checkmagick${suffix}" || die 'compilation failed'
 }
 
 src_install() {
