@@ -1,0 +1,11 @@
+diff -Nur a/gtk/audio_alsa.cc b/gtk/audio_alsa.cc
+--- a/gtk/audio_alsa.cc	2012-10-27 21:14:48.000000000 +0200
++++ b/gtk/audio_alsa.cc	2012-11-11 20:26:28.779917284 +0100
+@@ -23,6 +23,7 @@
+ #include <sys/time.h>
+ #include <pthread.h>
+ #include <dlfcn.h>
++#include <math.h>
+ 
+ // We want to be able to run even if libasound is not present, so we have to
+ // link it manually using dlopen() and dlsym(). These are the functions we are
