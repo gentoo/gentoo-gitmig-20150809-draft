@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/postgresql-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.222 2012/11/11 11:35:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.223 2012/11/11 11:38:08 ago Exp $
+
+  11 Nov 2012; <ago@gentoo.org> postgresql-server-8.4.14.ebuild:
+  Stable for amd64, wrt bug #441144
 
   11 Nov 2012; <ago@gentoo.org> postgresql-server-8.3.21.ebuild:
   Stable for amd64, wrt bug #441144
