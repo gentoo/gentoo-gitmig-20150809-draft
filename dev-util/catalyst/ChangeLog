@@ -1,6 +1,16 @@
 # ChangeLog for dev-util/catalyst
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.255 2012/11/11 05:56:34 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.256 2012/11/11 06:12:57 mattst88 Exp $
+
+  11 Nov 2012; Matt Turner <mattst88@gentoo.org> -catalyst-2.0.10.1.ebuild,
+  -catalyst-2.0.7.1-r1.ebuild, -catalyst-2.0.7.1.ebuild,
+  -catalyst-2.0.8.1-r1.ebuild, -catalyst-2.0.8.1-r2.ebuild,
+  -files/0001-Add-new-T-purgetmponly-option.patch,
+  -files/0001-add-etc-make.profile-to-cleanables-too.patch,
+  -files/0001-s-etc-make.profile-etc-portage-make.profile-g-Use-ne.patch,
+  -files/0002-s-etc-make.conf-etc-portage-make.conf-g-Use-new-loca.patch,
+  -files/2.0.8.1-arm-softfp.patch:
+  Remove old.
 
   11 Nov 2012; Matt Turner <mattst88@gentoo.org> -catalyst-2.9999.ebuild:
   The master branch is catalyst-2, and the catalyst_2 branch is now history.
