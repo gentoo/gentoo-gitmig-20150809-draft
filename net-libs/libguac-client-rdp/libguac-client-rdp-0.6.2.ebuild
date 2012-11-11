@@ -1,12 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libguac-client-rdp/libguac-client-rdp-0.6.2.ebuild,v 1.1 2012/11/10 14:04:23 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libguac-client-rdp/libguac-client-rdp-0.6.2.ebuild,v 1.2 2012/11/11 01:07:03 mr_bones_ Exp $
 
 EAPI=4
 
 inherit eutils
 DESCRIPTION="This is the rdp-client-library used by www-apps/guacamole."
-
 
 HOMEPAGE="http://guacamole.sourceforge.net/"
 SRC_URI="mirror://sourceforge/guacamole/${P}.tar.gz"
@@ -14,7 +13,6 @@ SRC_URI="mirror://sourceforge/guacamole/${P}.tar.gz"
 LICENSE="AGPL-3"
 
 SLOT="0"
-
 
 KEYWORDS="~x86"
 
