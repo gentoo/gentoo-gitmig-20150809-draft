@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/emesene/emesene-2.12.9.ebuild,v 1.3 2012/11/03 11:42:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/emesene/emesene-2.12.9.ebuild,v 1.4 2012/11/11 20:38:57 hwoarang Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -22,6 +22,7 @@ IUSE="jabber"
 RDEPEND="dev-python/pygtk:2
 	dev-python/notify-python
 	dev-python/pywebkitgtk
+	dev-python/pyopenssl
 	jabber? ( dev-python/xmpppy )"
 
 GIT_SHA="b89aa5e"
