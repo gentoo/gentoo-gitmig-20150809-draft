@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.1_p1.ebuild,v 1.5 2012/11/06 02:44:11 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.1_p1.ebuild,v 1.6 2012/11/11 21:12:07 vapier Exp $
 
 EAPI="2"
 inherit eutils user flag-o-matic multilib autotools pam systemd
@@ -120,7 +120,8 @@ src_prepare() {
 			cipher.c || die
 	fi
 
-	sed -i "s:-lcrypto:$(pkg-config --libs openssl):" configure{,.ac} || die
+	tc-export PKG_CONFIG
+	sed -i "s:-lcrypto:$(${PKG_CONFIG} --libs openssl):" configure{,.ac} || die
 
 	# Disable PATH reset, trust what portage gives us. bug 254615
 	sed -i -e 's:^PATH=/:#PATH=/:' configure || die
