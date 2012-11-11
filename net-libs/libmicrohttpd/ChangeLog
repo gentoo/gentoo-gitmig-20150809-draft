@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libmicrohttpd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/ChangeLog,v 1.22 2012/11/10 09:17:45 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/ChangeLog,v 1.23 2012/11/11 02:42:04 blueness Exp $
+
+  11 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
+  libmicrohttpd-0.9.23.ebuild:
+  Enable auth by default
 
 *libmicrohttpd-0.9.23 (10 Nov 2012)
 
