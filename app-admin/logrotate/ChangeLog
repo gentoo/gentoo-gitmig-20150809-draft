@@ -1,6 +1,16 @@
 # ChangeLog for app-admin/logrotate
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.126 2012/10/29 23:56:50 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.127 2012/11/11 15:30:51 nimiux Exp $
+
+*logrotate-3.8.3 (11 Nov 2012)
+
+  11 Nov 2012; Chema Alonso <nimiux@gentoo.org> +logrotate-3.8.3.ebuild,
+  +files/logrotate-3.8.3-atomic-create.patch,
+  +files/logrotate-3.8.3-datehack.patch, +files/logrotate-3.8.3-fbsd.patch,
+  +files/logrotate-3.8.3-fix-acl-tests.patch,
+  +files/logrotate-3.8.3-ignore-hidden.patch,
+  +files/logrotate-3.8.3-noasprintf.patch:
+  Version bump to 3.8.3
 
   29 Oct 2012;  <naota@gentoo.org> +files/logrotate-3.8.2-fbsd.patch,
   logrotate-3.8.2.ebuild:

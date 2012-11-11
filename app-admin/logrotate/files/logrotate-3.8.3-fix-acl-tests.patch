@@ -1,0 +1,77 @@
+diff -Nur a/Makefile b/Makefile
+--- a/Makefile	2012-10-04 09:59:14.000000000 +0200
++++ b/Makefile	2012-11-11 16:17:11.340052857 +0100
+@@ -116,7 +116,7 @@
+ 
+ .PHONY : test
+ test: $(TARGET)
+-	(cd test; ./test)
++	(cd test; ./test $(WITH_ACL))
+ 
+ install:
+ 	[ -d $(PREFIX)$(BINDIR) ] || mkdir -p $(PREFIX)$(BINDIR)
+diff -Nur a/test/test b/test/test
+--- a/test/test	2012-10-04 09:59:14.000000000 +0200
++++ b/test/test	2012-11-11 16:03:55.410050512 +0100
+@@ -4,6 +4,7 @@
+ M="-m ./mailer"
+ S=-"s state"
+ RLR="$LOGROTATE $M $S"
++TEST_ACL="$1"
+ 
+ cleanup() {
+     rm -f test*.log* anothertest*.log* state test-config. scriptout mail-out compress-args
+@@ -686,6 +687,8 @@
+ test.log.1 0 zero
+ EOF
+ 
++if [[ "${TEST_ACL}" = "acl" ]] ; then
++
+ cleanup 32
+ 
+ # ------------------------------- Test 32 ------------------------------------
+@@ -713,6 +716,13 @@
+ test.log.1 0 zero
+ EOF
+ 
++else
++	echo "Skipping test 32"
++
++fi
++
++if [[ "${TEST_ACL}" = "acl" ]] ; then
++
+ cleanup 33
+ 
+ # ------------------------------- Test 33 ------------------------------------
+@@ -740,6 +750,11 @@
+ test.log.1 0 zero
+ EOF
+ 
++else
++	echo "Skipping test 33"
++
++fi
++
+ cleanup 34
+ 
+ # ------------------------------- Test 34 ------------------------------------
+@@ -759,6 +774,8 @@
+ test.log 0 zero
+ EOF
+ 
++if [[ "${TEST_ACL}" = "acl" ]] ; then
++
+ cleanup 35
+ 
+ # ------------------------------- Test 35 ------------------------------------
+@@ -786,4 +803,9 @@
+ test.log.1 0 zero
+ EOF
+ 
++else
++	echo "Skipping test 35"
++
++fi
++
+ cleanup
