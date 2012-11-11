@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.179 2012/10/30 20:51:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.180 2012/11/11 07:00:01 vapier Exp $
 
 # @ECLASS: flag-o-matic.eclass
 # @MAINTAINER:
@@ -599,8 +599,14 @@ raw-ldflags() {
 	[[ -z ${input} ]] && input=${LDFLAGS}
 	set --
 	for x in ${input} ; do
-		x=${x#-Wl,}
-		set -- "$@" ${x//,/ }
+		case ${x} in
+		-Wl*,)
+			x=${x#-Wl,}
+			set -- "$@" ${x//,/ }
+			;;
+		*)	# Assume it's a compiler driver flag, so throw it away #441808
+			;;
+		esac
 	done
 	echo "$@"
 }
