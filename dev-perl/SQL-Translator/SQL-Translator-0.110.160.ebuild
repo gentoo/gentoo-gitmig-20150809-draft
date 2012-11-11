@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Translator/SQL-Translator-0.110.160.ebuild,v 1.1 2012/11/03 18:34:49 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Translator/SQL-Translator-0.110.160.ebuild,v 1.2 2012/11/11 18:40:36 tove Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ RDEPEND="
 	dev-perl/List-MoreUtils
 	dev-perl/DBI
 	>=dev-perl/Try-Tiny-0.40.0
-	dev-perl/Moo
+	>=dev-perl/Moo-1.0.3
 	>=dev-perl/Package-Variant-1.1.1
 	>=dev-perl/XML-Writer-0.500.0
 "
