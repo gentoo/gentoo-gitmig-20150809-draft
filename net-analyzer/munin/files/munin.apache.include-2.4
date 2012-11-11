@@ -13,9 +13,7 @@ RewriteRule ^/munin/(.*) /munin-cgi/munin-cgi-html/$1 [PT,L]
 
 <Directory /usr/libexec/munin/cgi/>
 	Options +ExecCGI
-
-	Order allow,deny
-	Allow from all
+	Require all granted
 
 	<IfModule mod_fcgid.c>
 		SetHandler fcgid-script
@@ -26,6 +24,5 @@ RewriteRule ^/munin/(.*) /munin-cgi/munin-cgi-html/$1 [PT,L]
 </Directory>
 
 <Directory /etc/munin/static>
-	Order allow,deny
-	Allow from all
+	Require all granted
 </Directory>

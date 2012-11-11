@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.119 2012/11/09 17:35:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.120 2012/11/11 19:59:53 flameeyes Exp $
+
+*munin-2.0.8-r1 (11 Nov 2012)
+
+  11 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/munin.apache.include-2.4, +munin-2.0.8-r1.ebuild, -munin-2.0.8.ebuild,
+  files/logrotate.d-munin.2, files/munin.apache.include:
+  Install two different Apache configuration files for 2.2 and 2.4, as access
+  compat doesn't work nor does the IfModule trick. Fix the log permission for
+  cgi-html as well.
 
 *munin-2.0.8 (09 Nov 2012)
 

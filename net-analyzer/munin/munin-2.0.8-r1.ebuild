@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.8.ebuild,v 1.1 2012/11/09 17:35:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.8-r1.ebuild,v 1.1 2012/11/11 19:59:53 flameeyes Exp $
 
 EAPI=4
 
@@ -37,7 +37,7 @@ DEPEND_COM="dev-lang/perl[berkdb]
 			postgres? ( dev-perl/DBD-Pg dev-db/postgresql-base )
 			memcached? ( dev-perl/Cache-Memcached )
 			cgi? ( dev-perl/FCGI )
-			apache? ( www-servers/apache[apache2_modules_cgi,apache2_modules_cgid,apache2_modules_rewrite,apache2_modules_access_compat(+)] )
+			apache? ( www-servers/apache[apache2_modules_cgi,apache2_modules_cgid,apache2_modules_rewrite] )
 			syslog? ( virtual/perl-Sys-Syslog )
 			http? ( dev-perl/libwww-perl )
 			dhcpd? (
@@ -224,14 +224,15 @@ EOF
 			sed -i -e '/#graph_strategy cgi/s:^#::' "${D}"/etc/munin/munin.conf || die
 
 			keepdir /var/cache/munin-cgi
-			touch "${D}"/var/log/munin/munin-cgi-graph.log
+			touch "${D}"/var/log/munin/munin-cgi-{graph,html}.log
 			fowners $(usex apache apache munin) \
 				/var/cache/munin-cgi \
-				/var/log/munin/munin-cgi-graph.log
+				/var/log/munin/munin-cgi-{graph,html}.log
 
 			if use apache; then
 				insinto /etc/apache2/vhosts.d
 				newins "${FILESDIR}"/munin.apache.include munin.include
+				newins "${FILESDIR}"/munin.apache.include-2.4 munin-2.4.include
 			fi
 		else
 			sed -i -e '/#graph_strategy cgi/s:#graph_strategy cgi:graph_strategy cron:' "${D}"/etc/munin/munin.conf || die
@@ -348,11 +349,12 @@ pkg_postinst() {
 	if use cgi; then
 		chown $(usex apache apache munin) \
 			"${ROOT}"/var/cache/munin-cgi \
-			"${ROOT}"/var/log/munin-cgi-graph.log
+			"${ROOT}"/var/log/munin-cgi-{graph,html}.log
 
 		if use apache; then
 			elog "To use Munin with CGI you should include /etc/apache2/vhosts.d/munin.include"
-			elog "from the virtual host you want it to be served."
+			elog "or /etc/apache2/vhosts.d/munin-2.4.include (for Apache 2.4) from the virtual"
+			elog "host you want it to be served."
 			elog "If you want to enable CGI-based HTML as well, you have to add to"
 			elog "/etc/conf.d/apache2 the option -D MUNIN_HTML_CGI."
 		else
