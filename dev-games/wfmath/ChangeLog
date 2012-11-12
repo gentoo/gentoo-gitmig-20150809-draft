@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/wfmath
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/wfmath/ChangeLog,v 1.21 2012/10/31 09:25:13 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/wfmath/ChangeLog,v 1.22 2012/11/12 23:05:13 mr_bones_ Exp $
+
+*wfmath-1.0.1 (12 Nov 2012)
+
+  12 Nov 2012; Michael Sterrett <mr_bones_@gentoo.org> +wfmath-1.0.1.ebuild:
+  version bump
 
   31 Oct 2012; Tupone Alfredo <tupone@gentoo.org> -wfmath-0.3.10.ebuild,
   wfmath-0.3.11.ebuild, +files/wfmath-0.3.11-gcc47.patch, wfmath-1.0.0.ebuild:
@@ -86,4 +91,3 @@
 
   01 Feb 2007; <tupone@gentoo.org> +metadata.xml, +wfmath-0.3.5.ebuild:
   Initial ebuild, version 0.3.6 Bug #58213 by Boris Smus
-
