@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.621 2012/11/06 02:09:05 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.622 2012/11/12 00:32:35 tetromino Exp $
+
+*gtk+-3.6.2 (12 Nov 2012)
+
+  12 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org> -gtk+-3.6.0.ebuild,
+  gtk+-3.6.1.ebuild, +gtk+-3.6.2.ebuild:
+  Version bump, fixes rendering problems and various other bugs. Fix src_test
+  for gnome-themes-standard flag change. Drop old.
 
   06 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org> gtk+-3.4.4.ebuild:
   Forgot to add eautoreconf.

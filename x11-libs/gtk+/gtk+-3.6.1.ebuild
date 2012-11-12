@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.6.1.ebuild,v 1.1 2012/10/17 07:38:34 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.6.1.ebuild,v 1.2 2012/11/12 00:32:35 tetromino Exp $
 
 EAPI="4"
 
@@ -162,8 +162,8 @@ src_test() {
 	# Tests require a new gnome-themes-standard, but adding it to DEPEND
 	# would result in circular dependencies.
 	# https://bugzilla.gnome.org/show_bug.cgi?id=669562
-	if ! has_version '>=x11-themes/gnome-themes-standard-3.6[gtk3]'; then
-		ewarn "Tests will be skipped because >=gnome-themes-standard-3.6[gtk3]"
+	if ! has_version '>=x11-themes/gnome-themes-standard-3.6[gtk]'; then
+		ewarn "Tests will be skipped because >=gnome-themes-standard-3.6[gtk]"
 		ewarn "is not installed. Please re-run tests after installing the"
 		ewarn "required version of gnome-themes-standard."
 		return 0
