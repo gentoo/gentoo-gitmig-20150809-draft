@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/pcc-libs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pcc-libs/ChangeLog,v 1.8 2012/06/11 01:19:48 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pcc-libs/ChangeLog,v 1.9 2012/11/12 05:34:05 patrick Exp $
+
+*pcc-libs-1.0.1_pre20121112 (12 Nov 2012)
+
+  12 Nov 2012; Patrick Lauer <patrick@gentoo.org>
+  +pcc-libs-1.0.1_pre20121112.ebuild:
+  Bump, works a lot better now
 
   11 Jun 2012; Richard Yao <ryao@gentoo.org> pcc-libs-1.0.0.ebuild:
   Fix typo
@@ -41,4 +47,3 @@
   04 Jun 2010; Patrick Lauer <patrick@gentoo.org>
   +pcc-libs-1.0.0_pre100604.ebuild, +metadata.xml:
   Initial commit of pcc support libs, ebuild by me
-
