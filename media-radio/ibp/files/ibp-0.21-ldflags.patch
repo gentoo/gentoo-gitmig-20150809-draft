@@ -1,7 +1,0 @@
---- Imakefile.old	2010-10-19 08:44:15.000000000 +0200
-+++ Imakefile	2010-10-19 08:43:56.000000000 +0200
-@@ -1,3 +1,4 @@
-+LOCAL_LDFLAGS = $(LDFLAGS)
- SYS_LIBRARIES = -lX11 -lm -lcurses
- SRCS = ibp.c xdisp.c large.bits.h
- OBJS = ibp.o xdisp.o
