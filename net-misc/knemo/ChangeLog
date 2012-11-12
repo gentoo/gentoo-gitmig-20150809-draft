@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/knemo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knemo/ChangeLog,v 1.62 2012/07/15 16:54:24 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knemo/ChangeLog,v 1.63 2012/11/12 21:14:55 dastergon Exp $
+
+*knemo-0.7.5 (12 Nov 2012)
+
+  12 Nov 2012;  <dastergon@gentoo.org> +knemo-0.7.5.ebuild:
+  [net-misc/knemo] version bump, bug 440346
 
   15 Jul 2012; Michael Palimaka <kensington@gentoo.org> knemo-0.7.3.ebuild:
   Add missing slot dependencies on Qt.
