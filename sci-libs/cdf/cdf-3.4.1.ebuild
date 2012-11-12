@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cdf/cdf-3.4.1.ebuild,v 1.1 2012/08/03 17:15:34 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cdf/cdf-3.4.1.ebuild,v 1.2 2012/11/12 02:47:14 bicatali Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs multilib versionator java-pkg-opt-2
@@ -74,9 +74,9 @@ src_compile() {
 			|| die "compiling java lib failed"
 		$(tc-getCC) \
 			${LDFLAGS} \
-			-L${CDF_LIB} -lcdf -lm \
 			-shared cdfNativeLibrary.o \
 			-Wl,-soname=libcdfNativeLibrary.so.${PV_SO} \
+			-L${CDF_LIB} -lcdf -lm \
 			-o libcdfNativeLibrary.so.${PV_SO} \
 			|| die "linking java lib failed"
 	fi
@@ -95,7 +95,7 @@ src_install() {
 		SHAREDEXT=so.${PV_SO} \
 		install
 	dosym libcdf.so.${PV_SO} /usr/$(get_libdir)/libcdf.so
-	use static-libs && rm -f "${ED}"/usr/$(get_libdir)/libcdf.a
+	use static-libs || rm "${ED}"/usr/$(get_libdir)/libcdf.a
 	dodoc Release.notes CHANGES.txt Welcome.txt
 	doenvd "${FILESDIR}"/50cdf
 
