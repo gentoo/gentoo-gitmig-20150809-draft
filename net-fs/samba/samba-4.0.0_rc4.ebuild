@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.0_rc4.ebuild,v 1.1 2012/11/01 05:20:31 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.0_rc4.ebuild,v 1.2 2012/11/12 18:32:50 vostorga Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
@@ -35,7 +35,7 @@ RDEPEND="dev-libs/iniparser
 	>=dev-lang/python-2.4.2
 	dev-python/subunit
 	sys-libs/libcap
-	>=sys-libs/ldb-1.1.12
+	>=sys-libs/ldb-1.1.13
 	>=sys-libs/tdb-1.2.10[python]
 	>=sys-libs/talloc-2.0.7[python]
 	>=sys-libs/tevent-0.9.17
