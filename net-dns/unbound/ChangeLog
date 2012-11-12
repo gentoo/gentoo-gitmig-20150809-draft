@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/unbound
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.46 2012/11/07 03:02:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.47 2012/11/12 12:26:29 blueness Exp $
+
+  12 Nov 2012; Anthony G. Basile <blueness@gentoo.org> unbound-1.4.18.ebuild:
+  keyword ~ppc ~ppc64, bug #441688
 
   07 Nov 2012; Jeroen Roovers <jer@gentoo.org> unbound-1.4.16.ebuild,
   unbound-1.4.17-r1.ebuild, unbound-1.4.18.ebuild:
