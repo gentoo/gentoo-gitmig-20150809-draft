@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/puff/puff-20100127.ebuild,v 1.1 2011/01/02 15:36:10 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/puff/puff-20100127.ebuild,v 1.2 2012/11/12 16:37:26 tomjbe Exp $
 
 EAPI="2"
 
@@ -23,6 +23,7 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	# fix lib path for X11 and dont ignore LDFLAGS
 	sed -i -e "s#lib\\\/#$(get_libdir)\\\/#" \
+		-e 's/CFLAGS/#CFLAGS/' \
 		-e 's/link.res pu/link.res $(LDFLAGS) pu/' Makefile || die
 }
 
