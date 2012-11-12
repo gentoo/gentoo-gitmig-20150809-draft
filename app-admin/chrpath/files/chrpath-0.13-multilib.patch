@@ -37,7 +37,7 @@ Index: chrpath-0.13/configure.ac
  
  dnl Checks for libraries.
  
-@@ -26,11 +27,18 @@ AC_CHECK_HEADERS([getopt.h elf.h fcntl.h
+@@ -26,11 +27,19 @@ AC_CHECK_HEADERS([getopt.h elf.h fcntl.h
  dnl Checks for typedefs, structures, and compiler characteristics.
  AC_C_CONST
  AC_C_BIGENDIAN
@@ -50,7 +50,8 @@ Index: chrpath-0.13/configure.ac
 +LDLIBS=
 +save_LIBS="$LIBS"
 +LIBS=
-+AC_SEARCH_LIBS([dlopen], [dl], [LDLIBS="-ldl"])
++AC_SEARCH_LIBS([dlopen], [dl])
++LDLIBS=${LIBS}
 +LIBS="${save_LIBS}"
 +AC_SUBST([LDLIBS])
 +
