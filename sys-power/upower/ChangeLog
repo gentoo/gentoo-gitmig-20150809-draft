@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/upower
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/ChangeLog,v 1.86 2012/10/30 19:53:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/ChangeLog,v 1.87 2012/11/12 11:43:59 blueness Exp $
+
+  12 Nov 2012; Anthony G. Basile <blueness@gentoo.org> upower-0.9.18.ebuild:
+  stable ppc ppc64, bug #438704
 
   30 Oct 2012; Samuli Suominen <ssuominen@gentoo.org> upower-0.9.18.ebuild:
   Use new udev.eclass instead of duplicating the same code here.
