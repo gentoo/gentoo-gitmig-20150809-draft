@@ -55,5 +55,6 @@
 	<flag name="tga">Enables Targa video output</flag>
 	<flag name="vdpau">Enables experimental VDPAU support (requires nVidia video cards) to offload MPEG2/MPEG4/VC1/WMV CPU processing to video card</flag>
 	<flag name="xanim">Enables support for xanim based codecs</flag>
+	<flag name="yuv4mpeg">Enables yuv4mpeg video output</flag>
 </use>
 </pkgmetadata>
