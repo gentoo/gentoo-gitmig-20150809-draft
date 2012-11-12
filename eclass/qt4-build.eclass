@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.138 2012/11/01 08:35:43 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.139 2012/11/12 09:28:53 pesa Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -10,8 +10,8 @@
 # This eclass contains various functions that are used when building Qt4.
 
 case ${EAPI} in
-	2|3|4|5) : ;;
-	*)	 die "qt4-build.eclass: unsupported EAPI=${EAPI:-0}" ;;
+	3|4|5)	: ;;
+	*)	die "qt4-build.eclass: unsupported EAPI=${EAPI:-0}" ;;
 esac
 
 inherit eutils flag-o-matic multilib toolchain-funcs versionator
@@ -101,8 +101,6 @@ S=${WORKDIR}/${MY_P}
 # @DESCRIPTION:
 # Sets up PATH and LD_LIBRARY_PATH.
 qt4-build_pkg_setup() {
-	[[ ${EAPI} == 2 ]] && use !prefix && EPREFIX=
-
 	# Protect users by not allowing downgrades between releases.
 	# Downgrading revisions within the same release should be allowed.
 	if has_version ">${CATEGORY}/${P}-r9999:4"; then
@@ -190,7 +188,7 @@ qt4-build_src_unpack() {
 # PATCHES array variable containing all various patches to be applied.
 # This variable is expected to be defined in global scope of ebuild.
 # Make sure to specify the full path. This variable is utilised in
-# src_unpack/src_prepare phase, based on EAPI.
+# src_prepare() phase.
 #
 # @CODE
 #   PATCHES=( "${FILESDIR}/mypatch.patch"
@@ -208,11 +206,9 @@ qt4-build_src_prepare() {
 		QTDIR="." ./bin/syncqt || die "syncqt failed"
 	fi
 
-	if version_is_at_least 4.7; then
-		# avoid X11 dependency in non-gui packages
-		local nolibx11_pkgs="qt-core qt-dbus qt-script qt-sql qt-test qt-xmlpatterns"
-		has ${PN} ${nolibx11_pkgs} && qt_nolibx11
-	fi
+	# avoid X11 dependency in non-gui packages
+	local nolibx11_pkgs="qt-core qt-dbus qt-script qt-sql qt-test qt-xmlpatterns"
+	has ${PN} ${nolibx11_pkgs} && qt_nolibx11
 
 	if use aqua; then
 		# provide a proper macx-g++-64
@@ -376,7 +372,7 @@ qt4-build_src_configure() {
 		-docdir ${QTDOCDIR}
 		-headerdir ${QTHEADERDIR}
 		-plugindir ${QTPLUGINDIR}
-		$(version_is_at_least 4.7 && echo -importdir ${QTIMPORTDIR})
+		-importdir ${QTIMPORTDIR}
 		-datadir ${QTDATADIR}
 		-translationdir ${QTTRANSDIR}
 		-sysconfdir ${QTSYSCONFDIR}
@@ -550,7 +546,6 @@ fix_includes() {
 # @DESCRIPTION:
 # Perform the actual installation including some library fixes.
 qt4-build_src_install() {
-	[[ ${EAPI} == 2 ]] && use !prefix && ED=${D}
 	setqtenv
 
 	install_directories ${QT4_TARGET_DIRECTORIES}
@@ -558,8 +553,8 @@ qt4-build_src_install() {
 	fix_library_files
 	fix_includes
 
-	# remove .la files since we are building only shared Qt libraries
-	find "${D}"${QTLIBDIR} -type f -name '*.la' -print0 | xargs -0 rm -f
+	# remove .la files since we are building only shared libraries
+	prune_libtool_files
 }
 
 # @FUNCTION: setqtenv
@@ -567,20 +562,19 @@ qt4-build_src_install() {
 setqtenv() {
 	# Set up installation directories
 	QTPREFIXDIR=${EPREFIX}/usr
-	QTBINDIR=${EPREFIX}/usr/bin
-	QTLIBDIR=${EPREFIX}/usr/$(get_libdir)/qt4
-	QTPCDIR=${EPREFIX}/usr/$(get_libdir)/pkgconfig
-	QTDOCDIR=${EPREFIX}/usr/share/doc/qt-${PV}
-	QTHEADERDIR=${EPREFIX}/usr/include/qt4
+	QTBINDIR=${QTPREFIXDIR}/bin
+	QTLIBDIR=${QTPREFIXDIR}/$(get_libdir)/qt4
+	QTPCDIR=${QTPREFIXDIR}/$(get_libdir)/pkgconfig
+	QTDOCDIR=${QTPREFIXDIR}/share/doc/qt-${PV}
+	QTHEADERDIR=${QTPREFIXDIR}/include/qt4
 	QTPLUGINDIR=${QTLIBDIR}/plugins
 	QTIMPORTDIR=${QTLIBDIR}/imports
-	QTDATADIR=${EPREFIX}/usr/share/qt4
+	QTDATADIR=${QTPREFIXDIR}/share/qt4
 	QTTRANSDIR=${QTDATADIR}/translations
 	QTSYSCONFDIR=${EPREFIX}/etc/qt4
 	QTEXAMPLESDIR=${QTDATADIR}/examples
 	QTDEMOSDIR=${QTDATADIR}/demos
 	QMAKE_LIBDIR_QT=${QTLIBDIR}
-	QT_INSTALL_PREFIX=${EPREFIX}/usr/$(get_libdir)/qt4
 
 	PLATFORM=$(qt_mkspecs_dir)
 	unset QMAKESPEC
@@ -594,22 +588,25 @@ setqtenv() {
 # @DESCRIPTION:
 # Generates Makefiles for the given list of directories.
 prepare_directories() {
+	# avoid running over the maximum argument number, bug #299810
+	{
+		echo "${S}"/mkspecs/common/*.conf
+		find "${S}" -name '*.pr[io]'
+	} | xargs sed -i \
+		-e "s:\$\$\[QT_INSTALL_LIBS\]:${QTLIBDIR}:g" \
+		-e "s:\$\$\[QT_INSTALL_PLUGINS\]:${QTPLUGINDIR}:g" \
+		|| die
+
 	for x in "$@"; do
 		pushd "${S}"/${x} >/dev/null || die
 		einfo "Running qmake in: ${x}"
-		# avoid running over the maximum argument number, bug #299810
-		{
-			echo "${S}"/mkspecs/common/*.conf
-			find "${S}" -name '*.pr[io]'
-		} | xargs sed -i \
-			-e "s:\$\$\[QT_INSTALL_LIBS\]:${QTLIBDIR}:g" \
-			-e "s:\$\$\[QT_INSTALL_PLUGINS\]:${QTPLUGINDIR}:g" \
-			|| die
-		"${S}"/bin/qmake "LIBS+=-L${QTLIBDIR}" "CONFIG+=nostrip" || die "qmake failed"
+		"${S}"/bin/qmake \
+			"LIBS+=-L${QTLIBDIR}" \
+			"CONFIG+=nostrip" \
+			|| die "qmake failed"
 		popd >/dev/null || die
 	done
 }
-
 
 # @FUNCTION: build_directories
 # @USAGE: < directories >
@@ -619,9 +616,14 @@ prepare_directories() {
 build_directories() {
 	for x in "$@"; do
 		pushd "${S}"/${x} >/dev/null || die
-		emake CC="$(tc-getCC)" \
+		emake \
+			AR="$(tc-getAR) cqs" \
+			CC="$(tc-getCC)" \
 			CXX="$(tc-getCXX)" \
-			LINK="$(tc-getCXX)" || die "emake failed"
+			LINK="$(tc-getCXX)" \
+			RANLIB=":" \
+			STRIP=":" \
+			|| die "emake failed"
 		popd >/dev/null || die
 	done
 }
