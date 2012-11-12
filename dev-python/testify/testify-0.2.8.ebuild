@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testify/testify-0.2.8.ebuild,v 1.1 2012/10/09 12:56:06 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testify/testify-0.2.8.ebuild,v 1.2 2012/11/12 16:22:17 idella4 Exp $
 
 EAPI=4
 
 SUPPORT_PYTHON_ABIS=1
 # TODO: verify 2.5
-RESTRICT_PYTHON_ABIS="2.5 3.* 2.7-pypy-*"
-
+RESTRICT_PYTHON_ABIS="2.5 3.*"
+PYTHON_TESTS_RESTRICTED_ABIS="2.7-pypy-1.*"
 inherit eutils distutils vcs-snapshot
 
 DESCRIPTION="A more pythonic replacement for the unittest module and nose"

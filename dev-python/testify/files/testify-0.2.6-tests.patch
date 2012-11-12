@@ -27,10 +27,3 @@ https://github.com/Yelp/Testify/issues/65
  	def test_http_reporter_reports(self):
  		"""A simple test to make sure the HTTPReporter actually reports things."""
  
-@@ -74,4 +82,4 @@
- 		(first, second) = self.results_reported
- 
- 		assert_equal(first['runner_id'], 'tries_twice')
--		assert_equal(first, second)
-\ Brak znaku nowej linii na końcu pliku
-+		assert_equal(first, second)
