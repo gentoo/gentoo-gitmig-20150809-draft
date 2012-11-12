@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/activesupport
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.186 2012/10/05 18:10:40 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.187 2012/11/12 19:52:51 graaff Exp $
+
+*activesupport-3.2.9 (12 Nov 2012)
+
+  12 Nov 2012; Hans de Graaff <graaff@gentoo.org> +activesupport-3.2.9.ebuild:
+  Version bump.
 
   05 Oct 2012; Brent Baude <ranger@gentoo.org> activesupport-2.3.14-r1.ebuild:
   Marking activesupport-2.3.14-r1 ppc64 for bug 422745
