@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/cholmod-2.0.1.ebuild,v 1.1 2012/11/12 02:18:07 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/cholmod-2.0.1.ebuild,v 1.2 2012/11/12 23:45:59 bicatali Exp $
 
 EAPI=4
 
@@ -42,15 +42,21 @@ src_configure() {
 		blas_libs=$(pkg-config --libs blas)
 		lapack_libs=$(pkg-config --libs lapack)
 	fi
-	local myeconfargs+=(
+	local myeconfargs=(
 		--with-blas="${blas_libs}"
 		--with-lapack="${lapack_libs}"
-		$(use_with cuda)
 		$(use_with doc)
 		$(use_with !minimal modify)
 		$(use_with !minimal matrixops)
 		$(use_with metis partition)
 		$(use_with supernodal)
 	)
+	if use cuda; then
+		myeconfargs+=(
+			--with-cuda
+			--with-cublas-libs="-L${EPREFIX}/opt/cuda/$(get_libdir) -lcublas"
+			--with-cublas-cflags="-I${EPREFIX}/opt/cuda/include"
+		)
+	fi
 	autotools-utils_src_configure
 }
