@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.8-r1.ebuild,v 1.1 2012/11/11 19:59:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.8-r2.ebuild,v 1.1 2012/11/12 02:13:28 flameeyes Exp $
 
 EAPI=4
 
-PATCHSET=1
+PATCHSET=4
 
 inherit eutils user java-pkg-opt-2
 
@@ -142,6 +142,12 @@ src_compile() {
 }
 
 src_test() {
+	if [[ ${EUID} == 0 ]]; then
+		eerror "You cannot run tests as root."
+		eerror "Please enable FEATURES=userpriv before proceeding."
+		return 1
+	fi
+
 	local testtargets="test-common test-node test-plugins"
 	use minimal || testtargets+=" test-master"
 
