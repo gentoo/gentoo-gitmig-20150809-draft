@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/zeromq
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/ChangeLog,v 1.27 2012/08/11 14:43:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/ChangeLog,v 1.28 2012/11/12 22:10:24 blueness Exp $
+
+  12 Nov 2012; Anthony G. Basile <blueness@gentoo.org> zeromq-2.2.0.ebuild:
+  keyword ~ppc, bug #442188
 
   11 Aug 2012; Markus Meier <maekke@gentoo.org> zeromq-2.2.0.ebuild:
   x86 stable, bug #419281
@@ -109,4 +112,3 @@
   25 Sep 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   +zeromq-2.0.9.ebuild, +metadata.xml:
   New ebuild, proxy-maintained by Mauro Toffanin.
-
