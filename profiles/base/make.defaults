@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.87 2012/10/12 06:04:08 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.88 2012/11/12 15:36:55 floppym Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -121,5 +121,5 @@ PYTHONDONTWRITEBYTECODE="1"
 BOOTSTRAP_USE="cxx unicode"
 
 # Mike Gilbert <floppym@gentoo.org> (15 May 2012)
-# Default target(s) for python-distutils-ng.eclass
-PYTHON_TARGETS="python2_7"
+# Default target(s) for python-r1.eclass
+PYTHON_TARGETS="python2_7 python3_2"

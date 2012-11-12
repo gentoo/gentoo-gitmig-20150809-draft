@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc32/make.defaults,v 1.4 2012/06/16 11:44:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc32/make.defaults,v 1.5 2012/11/12 15:36:54 floppym Exp $
 
 # All extra USE/etc should be specified in sub-profiles.
 # DO NOT POLLUTE USE ON THIS PROFILE.
@@ -21,8 +21,3 @@ VIDEO_CARDS="fbdev glint mach64 mga nv r128 radeon savage tdfx trident voodoo"
 # 2006/12/06 - Diego Pettenò <flameeyes@gentoo.org>
 # Defaults for PowerPC sound driver
 ALSA_CARDS="aoa aoa-fabric-layout aoa-onyx aoa-soundbus aoa-soundbus-i2s aoa-tas aoa-toonie powermac usb-audio via82xx"
-
-# 2012/05/15 - Mike Gilbert <floppym@gentoo.org>
-# Default PYTHON_TARGETS should include python-3 for arches where it is stable.
-# See bug 415575.
-PYTHON_TARGETS="python3_2"
