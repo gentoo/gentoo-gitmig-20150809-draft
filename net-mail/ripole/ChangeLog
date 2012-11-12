@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/ripole
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ripole/ChangeLog,v 1.17 2012/02/24 15:00:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ripole/ChangeLog,v 1.18 2012/11/12 22:05:20 blueness Exp $
+
+  12 Nov 2012; Anthony G. Basile <blueness@gentoo.org> ripole-0.2.2.ebuild:
+  keyword ~ppc, bug #442188
 
   24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> ripole-0.2.2.ebuild:
   x86 stable wrt bug #404831
@@ -59,4 +62,3 @@
 
   26 Jan 2005; Fernando J. Pereda <ferdy@gentoo.org> :
   New package ripole, closes #79166. Submitted by: steveb <tp22a@softhome.net>
-
