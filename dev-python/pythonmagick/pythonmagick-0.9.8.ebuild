@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/pythonmagick-0.9.8.ebuild,v 1.2 2012/11/01 16:22:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/pythonmagick-0.9.8.ebuild,v 1.3 2012/11/12 19:06:58 idella4 Exp $
 
 EAPI="4"
 PYTHON_DEPEND="*:2.6"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.4 2.5 *-jython 2.7-pypy-*"
+RESTRICT_PYTHON_ABIS="2.5 *-jython 2.7-pypy-*"
 PYTHON_EXPORT_PHASE_FUNCTIONS="1"
 
 inherit autotools eutils python
@@ -25,7 +25,8 @@ IUSE=""
 RDEPEND=">=dev-libs/boost-1.48[python]
 	>=media-gfx/imagemagick-6.4"
 DEPEND="${RDEPEND}
-	virtual/pkgconfig"
+	virtual/pkgconfig
+	>=sys-devel/automake-1.12"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -40,9 +41,6 @@ src_prepare() {
 	eautoreconf
 
 	python_clean_py-compile_files
-
-	# Support Python 3.
-	sed -e "s/import _PythonMagick/from . import _PythonMagick/" -i PythonMagick/__init__.py || die "sed failed"
 
 	python_src_prepare
 }
