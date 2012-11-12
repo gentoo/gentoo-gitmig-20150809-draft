@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.62.2.ebuild,v 1.9 2010/06/17 20:51:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.62.2.ebuild,v 1.10 2012/11/12 13:36:43 jer Exp $
 
-inherit eutils flag-o-matic autotools libtool
+inherit eutils flag-o-matic autotools libtool user
 
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 

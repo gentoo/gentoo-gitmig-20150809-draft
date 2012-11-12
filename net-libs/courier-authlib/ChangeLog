@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/courier-authlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.125 2012/11/12 13:30:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.126 2012/11/12 13:36:43 jer Exp $
+
+  12 Nov 2012; Jeroen Roovers <jer@gentoo.org> courier-authlib-0.62.2.ebuild,
+  courier-authlib-0.62.4.ebuild, courier-authlib-0.63.0.ebuild,
+  courier-authlib-0.63.0-r1.ebuild, courier-authlib-0.64.0.ebuild,
+  courier-authlib-0.65.0.ebuild, courier-authlib-0.65.0-r1.ebuild,
+  courier-authlib-0.65.0-r2.ebuild:
+  Inherit user.eclass for enewuser. Inherit multilib.eclass for get_libdir.
 
   12 Nov 2012; Jeroen Roovers <jer@gentoo.org> courier-authlib-0.64.0.ebuild:
   Stable for HPPA (bug #439736).
