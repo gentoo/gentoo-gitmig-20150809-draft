@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-3.1.ebuild,v 1.3 2012/04/13 19:33:55 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-3.2.1.ebuild,v 1.1 2012/11/12 21:38:13 johu Exp $
 
 EAPI=4
-JAVA_PKG_IUSE="doc source test"
 
+JAVA_PKG_IUSE="doc source test"
 inherit eutils java-pkg-2 java-ant-2 flag-o-matic
 
 DESCRIPTION="Themeable and easy to use TV Guide - written in Java"
@@ -131,7 +131,7 @@ src_install() {
 	cd runtime/${PN}_linux || die
 
 	java-pkg_dojar ${PN}.jar
-	java-pkg_dojar "${S}"/lib/{guava-r09.jar,htmlparser-1.6.jar,jRegistryKey-1.4.5.jar,jgoodies-common-1.2.1.jar,opencsv-2.3.jar,substance-6.1.jar,texhyphj-1.1.jar,trident-1.3.jar}
+	java-pkg_dojar "${S}"/lib/{htmlparser-1.6.jar,jRegistryKey-1.4.5.jar,jgoodies-common-1.2.1.jar,opencsv-2.3.jar,substance-6.1.jar,texhyphj-1.1.jar,trident-1.3.jar}
 
 	local todir="${JAVA_PKG_SHAREPATH}"
 
@@ -200,4 +200,7 @@ src_install() {
 		--java_args " -Dpropertiesfile=${todir}/linux.properties"
 
 	make_desktop_entry ${PN} "TV-Browser" /usr/share/tvbrowser/imgs/tvbrowser128.png
+
+	sed -e "s/AudioVideo;TV/AudioVideo;TV;Video/" \
+		-i "${D}"/usr/share/applications/tvbrowser-tvbrowser.desktop || die "fixing .desktop file failed"
 }
