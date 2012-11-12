@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.4.0.ebuild,v 1.1 2012/09/25 11:53:14 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.4.2.ebuild,v 1.1 2012/11/12 17:23:16 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -21,7 +21,7 @@ IUSE="+cairo examples test +threads" # doc
 REQUIRED_USE="test? ( cairo )"
 
 COMMON_DEPEND=">=dev-libs/glib-2.31.0:2
-	>=dev-libs/gobject-introspection-1.33.14
+	>=dev-libs/gobject-introspection-1.34.1.1
 	virtual/libffi
 	cairo? ( >=dev-python/pycairo-1.10.0 )"
 DEPEND="${COMMON_DEPEND}
@@ -49,6 +49,10 @@ RDEPEND="${COMMON_DEPEND}
 	!<dev-python/pygobject-2.28.6-r50:2[introspection]"
 
 pkg_setup() {
+	python_pkg_setup
+}
+
+src_prepare() {
 	DOCS="AUTHORS ChangeLog* NEWS README"
 	# Hard-enable libffi support since both gobject-introspection and
 	# glib-2.29.x rdepend on it anyway
@@ -58,20 +62,12 @@ pkg_setup() {
 		$(use_enable cairo)
 		$(use_enable threads thread)"
 
-	python_pkg_setup
-}
-
-src_prepare() {
 	# Do not build tests if unneeded, bug #226345
-	epatch "${FILESDIR}/${PN}-3.4.0-make_check.patch"
-
-	# Disable tests that fail
-	#epatch "${FILESDIR}/${PN}-2.28.3-disable-failing-tests.patch"
-
-	python_clean_py-compile_files
+	epatch "${FILESDIR}/${PN}-3.4.1.1-make_check.patch"
 
 	eautoreconf
 	gnome2_src_prepare
+	python_clean_py-compile_files
 
 	python_copy_sources
 }
