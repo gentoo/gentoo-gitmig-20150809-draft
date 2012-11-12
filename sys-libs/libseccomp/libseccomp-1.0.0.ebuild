@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libseccomp/libseccomp-1.0.0.ebuild,v 1.1 2012/10/29 20:35:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libseccomp/libseccomp-1.0.0.ebuild,v 1.2 2012/11/12 21:21:36 vapier Exp $
 
 # Note: USE=static-libs isn't great -- only PIC objects are provided.
 
@@ -21,6 +21,8 @@ src_prepare() {
 	sed -i \
 		-e "/^SUBDIRS_BUILD/s:=.*:= src $(usex tools tools ''):" \
 		Makefile || die
+	tc-export AR CC
+	export GCC=${CC}
 }
 
 src_test() {
