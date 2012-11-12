@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/aria2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/ChangeLog,v 1.82 2012/11/11 16:56:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/ChangeLog,v 1.83 2012/11/12 17:45:32 mgorny Exp $
+
+*aria2-1.15.2 (12 Nov 2012)
+
+  12 Nov 2012; Michał Górny <mgorny@gentoo.org> +aria2-1.15.2.ebuild,
+  metadata.xml:
+  Version bump. Rework the USE flags, clean up the ebuild a bit.
 
   11 Nov 2012; Justin Lecher <jlec@gentoo.org> aria2-1.12.1.ebuild,
   aria2-1.14.1.ebuild, aria2-1.15.0.ebuild, metadata.xml:
