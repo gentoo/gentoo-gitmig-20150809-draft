@@ -1,6 +1,9 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.389 2012/11/09 19:29:14 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.390 2012/11/12 19:40:31 scarabeus Exp $
+
+  12 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-9999-r2.ebuild:
+  Add back the nsplugin.
 
   09 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   files/libreoffice-3.7-separate-checks.patch:
