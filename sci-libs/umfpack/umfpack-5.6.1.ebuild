@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/umfpack-5.6.1.ebuild,v 1.3 2012/11/12 13:18:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/umfpack-5.6.1.ebuild,v 1.4 2012/11/12 15:51:44 bicatali Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ IUSE="doc metis static-libs"
 
 RDEPEND="
 	>=sci-libs/amd-1.3
-	sci-libs/cholmod[metis]
+	>=sci-libs/cholmod-2[metis]
 	sci-libs/suitesparseconfig
 	virtual/blas
 	metis? ( >=sci-libs/cholmod-2[metis] )"
