@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/git-cola-1.8.0.ebuild,v 1.1 2012/08/26 08:48:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/git-cola-1.8.0.ebuild,v 1.2 2012/11/12 19:13:11 jlec Exp $
 
 EAPI=4
 
@@ -70,8 +70,8 @@ src_install() {
 	dodoc share/doc/git-cola/*.txt
 
 	if use doc ; then
-		dohtml -r _build/html/*
-		doman *.1
+		dohtml -r share/doc/git-cola/_build/html/*
+		doman share/doc/git-cola/*.1
 	else
 		dohtml "${FILESDIR}/index.html"
 	fi
