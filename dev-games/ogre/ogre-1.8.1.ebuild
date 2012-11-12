@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.8.1.ebuild,v 1.1 2012/11/01 17:34:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.8.1.ebuild,v 1.2 2012/11/12 23:26:40 hasufell Exp $
 
 EAPI=4
 inherit eutils cmake-utils
@@ -68,6 +68,7 @@ src_configure() {
 		-DOGRE_BUILD_RENDERSYSTEM_GLES=OFF
 		$(cmake-utils_use gles2 OGRE_BUILD_RENDERSYSTEM_GLES2)
 		$(cmake-utils_use profile OGRE_PROFILING)
+		$(cmake-utils_use examples OGRE_BUILD_SAMPLES)
 		-DOGRE_BUILD_TESTS=FALSE
 		$(usex threads "-DOGRE_CONFIG_THREADS=2" "-DOGRE_CONFIG_THREADS=0")
 		$(cmake-utils_use tools OGRE_BUILD_TOOLS)
@@ -84,4 +85,10 @@ src_configure() {
 	fi
 
 	cmake-utils_src_configure
+}
+
+src_install() {
+	cmake-utils_src_install
+	docinto examples
+	dodoc "${CMAKE_BUILD_DIR}"/bin/*.cfg
 }
