@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.10.ebuild,v 1.3 2012/10/19 10:33:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.10.ebuild,v 1.4 2012/11/13 06:27:36 bicatali Exp $
 
 EAPI=4
 
@@ -43,7 +43,8 @@ src_configure() {
 }
 
 src_compile() {
-	autotools-utils_src_compile lib $(use doc && echo info html pdf)
+	autotools-utils_src_compile lib
+	use doc && autotools-utils_src_compile info html pdf
 }
 
 src_test() {

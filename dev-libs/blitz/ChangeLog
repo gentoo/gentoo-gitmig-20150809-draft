@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/blitz
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/ChangeLog,v 1.45 2012/10/19 10:33:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/ChangeLog,v 1.46 2012/11/13 06:27:36 bicatali Exp $
+
+  13 Nov 2012; Sébastien Fabbro <bicatali@gentoo.org> blitz-0.10.ebuild:
+  Split doc building and compiling, resolving bug #442504
 
   19 Oct 2012; Justin Lecher <jlec@gentoo.org> blitz-0.9.ebuild,
   blitz-0.9-r3.ebuild, blitz-0.10.ebuild, metadata.xml:
