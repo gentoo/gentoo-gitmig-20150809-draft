@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/splint
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/splint/ChangeLog,v 1.26 2012/03/21 16:54:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/splint/ChangeLog,v 1.27 2012/11/13 02:18:10 blueness Exp $
+
+  13 Nov 2012; Anthony G. Basile <blueness@gentoo.org> splint-3.1.2.ebuild:
+  keyword ~arm, bug #441688
 
   21 Mar 2012; Jeroen Roovers <jer@gentoo.org> splint-3.1.2.ebuild:
   Add some DEPEND requirements.
@@ -86,4 +89,3 @@
   08 May 2003; <rac@gentoo.org> splint-3.0.1.6.ebuild:
   initial import. based on ebuild submitted by Matt Hartley
   <matthartley@yahoo.com> in bug 14410.
-
