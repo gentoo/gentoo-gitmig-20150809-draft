@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cilk/cilk-5.4.6-r1.ebuild,v 1.1 2012/06/28 06:21:58 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cilk/cilk-5.4.6-r1.ebuild,v 1.2 2012/11/13 05:33:12 bicatali Exp $
 
 EAPI=4
 inherit flag-o-matic autotools eutils
@@ -21,8 +21,7 @@ src_prepare() {
 
 src_configure() {
 	append-cppflags -D_XOPEN_SOURCE=500
-	# too many flags do not work, force -O1
-	econf --with-perfctr=no $(use_enable static-libs static) CFLAGS=-O1
+	econf --with-perfctr=no $(use_enable static-libs static)
 }
 
 src_install() {
