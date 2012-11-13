@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.404 2012/11/07 22:51:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.405 2012/11/13 15:53:10 cardoe Exp $
+
+  13 Nov 2012; Doug Goldstein <cardoe@gentoo.org> nvidia-drivers-304.60.ebuild:
+  Stabilize 304.60 for amd64. bug #438246
 
 *nvidia-drivers-304.64 (07 Nov 2012)
 
