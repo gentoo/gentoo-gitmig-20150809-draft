@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/ct-ng
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/ct-ng/ChangeLog,v 1.40 2012/08/07 16:46:25 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/ct-ng/ChangeLog,v 1.41 2012/11/13 12:52:25 blueness Exp $
+
+*ct-ng-1.17.0 (13 Nov 2012)
+
+  13 Nov 2012; Anthony G. Basile <blueness@gentoo.org> +ct-ng-1.17.0.ebuild:
+  Version bump
 
 *ct-ng-1.16.0 (07 Aug 2012)
 
@@ -190,4 +195,3 @@
   13 Jul 2010; Anthony G. Basile <blueness@gentoo.org> +ct-ng-1.7.1.ebuild,
   +files/fix-man-path.patch, +metadata.xml:
   Initial commit. Taking ownership. Bug #258396
-
