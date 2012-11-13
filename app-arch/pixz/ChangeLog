@@ -1,0 +1,9 @@
+# ChangeLog for app-arch/pixz
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pixz/ChangeLog,v 1.1 2012/11/13 23:37:20 zerochaos Exp $
+
+*pixz-9999 (13 Nov 2012)
+
+  13 Nov 2012; Rick Farina <zerochaos@gentoo.org> +metadata.xml,
+  +pixz-9999.ebuild:
+  pixz initial commit
