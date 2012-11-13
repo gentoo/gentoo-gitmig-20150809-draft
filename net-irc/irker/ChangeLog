@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/irker
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irker/ChangeLog,v 1.6 2012/10/13 21:22:45 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irker/ChangeLog,v 1.7 2012/11/13 06:39:43 patrick Exp $
+
+*irker-1.13 (13 Nov 2012)
+
+  13 Nov 2012; Patrick Lauer <patrick@gentoo.org> +irker-1.13.ebuild:
+  Bump
 
   13 Oct 2012; Mike Gilbert <floppym@gentoo.org> irker-1.12-r1.ebuild:
   Don't RDEPEND on xml documentation tools.
