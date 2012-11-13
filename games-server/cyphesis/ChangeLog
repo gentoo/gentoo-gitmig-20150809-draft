@@ -1,6 +1,12 @@
 # ChangeLog for games-server/cyphesis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/ChangeLog,v 1.26 2012/08/04 10:51:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/ChangeLog,v 1.27 2012/11/13 02:53:50 mr_bones_ Exp $
+
+*cyphesis-0.6.0 (13 Nov 2012)
+
+  13 Nov 2012; Michael Sterrett <mr_bones_@gentoo.org> +cyphesis-0.6.0.ebuild,
+  +files/cyphesis-0.6.0-gentoo.patch, +files/cyphesis-0.6.0-makefile.patch:
+  version bump
 
   04 Aug 2012; Agostino Sarubbo <ago@gentoo.org> cyphesis-0.5.26.ebuild:
   Stable for amd64, wrt bug #427868
@@ -126,4 +132,3 @@
   +metadata.xml, +cyphesis-0.5.11.ebuild:
   New ebuild.
   Fixes bug #90938 by kalium@gmx.de and partially bug #58213 Boris Smus
-
