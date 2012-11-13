@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdemultimedia-meta
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-meta/ChangeLog,v 1.228 2012/11/08 23:26:49 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-meta/ChangeLog,v 1.229 2012/11/13 20:04:32 johu Exp $
+
+  13 Nov 2012; Johannes Huber <johu@gentoo.org>
+  -kdemultimedia-meta-4.9.1.ebuild:
+  Remove KDE SC 4.9.1
 
 *kdemultimedia-meta-4.9.3 (08 Nov 2012)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kreversi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kreversi/ChangeLog,v 1.225 2012/11/13 18:19:44 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kreversi/ChangeLog,v 1.226 2012/11/13 20:04:18 johu Exp $
+
+  13 Nov 2012; Johannes Huber <johu@gentoo.org> -kreversi-4.9.1.ebuild:
+  Remove KDE SC 4.9.1
 
   13 Nov 2012; Michael Palimaka <kensington@gentoo.org> kreversi-4.9.3.ebuild:
   GGZ support has been removed upstream.

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kppp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kppp/ChangeLog,v 1.224 2012/11/08 23:26:58 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kppp/ChangeLog,v 1.225 2012/11/13 20:04:30 johu Exp $
+
+  13 Nov 2012; Johannes Huber <johu@gentoo.org> -kppp-4.9.1.ebuild:
+  Remove KDE SC 4.9.1
 
 *kppp-4.9.3 (08 Nov 2012)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-base-artwork
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-base-artwork/ChangeLog,v 1.6 2012/11/08 23:27:02 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-base-artwork/ChangeLog,v 1.7 2012/11/13 20:04:36 johu Exp $
+
+  13 Nov 2012; Johannes Huber <johu@gentoo.org> -kde-base-artwork-4.9.1.ebuild:
+  Remove KDE SC 4.9.1
 
 *kde-base-artwork-4.9.3 (08 Nov 2012)
 
