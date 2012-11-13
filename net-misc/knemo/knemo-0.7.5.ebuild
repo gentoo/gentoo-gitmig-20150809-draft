@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knemo/knemo-0.7.5.ebuild,v 1.1 2012/11/12 21:14:55 dastergon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knemo/knemo-0.7.5.ebuild,v 1.2 2012/11/13 08:07:11 polynomial-c Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ IUSE="debug wifi"
 
 DEPEND="
 	$(add_kdebase_dep systemsettings)
-	dev-libs/libnl:1.1
+	dev-libs/libnl:3
 	sys-apps/net-tools
 	x11-libs/qt-sql:4[sqlite]
 	wifi? ( net-wireless/wireless-tools )
