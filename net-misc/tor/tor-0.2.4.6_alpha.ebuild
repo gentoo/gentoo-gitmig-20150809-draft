@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.4.5_alpha.ebuild,v 1.2 2012/10/27 02:33:56 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.4.6_alpha.ebuild,v 1.1 2012/11/13 12:47:58 blueness Exp $
 
 EAPI="4"
 
-inherit autotools eutils flag-o-matic versionator
+inherit eutils flag-o-matic versionator
 
 MY_PV="$(replace_version_separator 4 -)"
 MY_PF="${PN}-${MY_PV}"
@@ -33,8 +33,6 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.2.3.14_alpha-torrc.sample.patch
-	epatch "${FILESDIR}"/${PN}-0.2.4.5-fix-udef-ref-math.patch
-	eautoreconf
 }
 
 src_configure() {
