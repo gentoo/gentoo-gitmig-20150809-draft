@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksquares
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksquares/ChangeLog,v 1.131 2012/11/08 23:26:31 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksquares/ChangeLog,v 1.132 2012/11/13 18:12:23 kensington Exp $
+
+  13 Nov 2012; Michael Palimaka <kensington@gentoo.org> ksquares-4.9.3.ebuild:
+  GGZ support has been removed upstream.
 
 *ksquares-4.9.3 (08 Nov 2012)
 
@@ -537,4 +540,3 @@
   18 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org> +metadata.xml,
   +ksquares-4.0.0.ebuild:
   Added KDE 4.0.0's ksquares.
-
