@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/fossil/fossil-20111021125253.ebuild,v 1.1 2011/11/01 01:38:13 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/fossil/fossil-20121022124804.ebuild,v 1.1 2012/11/13 01:41:23 titanofold Exp $
 
 EAPI="4"
 
@@ -13,11 +13,12 @@ SRC_URI="http://www.fossil-scm.org/download/${MY_P}.tar.gz"
 LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="sqlite +ssl"
+IUSE="sqlite +ssl tcl"
 
 DEPEND="sys-libs/zlib
 		ssl? ( dev-libs/openssl )
 		sqlite? ( dev-db/sqlite:3 )
+		tcl? ( dev-lang/tcl )
 "
 
 RDEPEND="${DEPEND}"
@@ -25,10 +26,12 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${MY_P}"
 
 src_configure() {
-	local myconf=' --with-openssl='
+	# --with-tcl: works
+	# --without-tcl: dies
+	local myconf='--with-openssl='
 	use ssl    && myconf+='auto' || myconf+='none'
 	use sqlite && myconf+=' --disable-internal-sqlite'
-
+	use tcl    && myconf+=' --with-tcl'
 	econf ${myconf}
 }
 
