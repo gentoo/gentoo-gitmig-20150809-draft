@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xsane
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.98 2012/11/11 11:42:05 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.99 2012/11/13 16:50:00 ranger Exp $
+
+  13 Nov 2012; Brent Baude <ranger@gentoo.org> xsane-0.998-r1.ebuild:
+  Marking xsane-0.998-r1 ppc64 for bug 442440
 
   11 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> xsane-0.998-r1.ebuild:
   Fix QA issue with dosym, omitting basename for symlink wrt bug #442440
