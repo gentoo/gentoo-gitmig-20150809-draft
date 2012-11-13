@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/clucene
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/ChangeLog,v 1.55 2012/11/13 16:47:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/ChangeLog,v 1.56 2012/11/13 19:47:28 jer Exp $
+
+  13 Nov 2012; Jeroen Roovers <jer@gentoo.org> clucene-2.3.3.4-r4.ebuild:
+  Stable for HPPA (bug #441938).
 
   13 Nov 2012; Brent Baude <ranger@gentoo.org> clucene-2.3.3.4-r4.ebuild:
   Marking clucene-2.3.3.4-r4 ppc64 for bug 441938
