@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kreversi/kreversi-4.9.3.ebuild,v 1.1 2012/11/08 23:26:56 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kreversi/kreversi-4.9.3.ebuild,v 1.2 2012/11/13 18:19:44 kensington Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ else
 fi
 KDE_HANDBOOK="optional"
 KDE_SELINUX_MODULE="games"
-inherit games-ggz ${eclass}
+inherit ${eclass}
 
 DESCRIPTION="KDE Board Game"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"

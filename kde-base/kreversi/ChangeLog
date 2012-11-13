@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kreversi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kreversi/ChangeLog,v 1.224 2012/11/08 23:26:56 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kreversi/ChangeLog,v 1.225 2012/11/13 18:19:44 kensington Exp $
+
+  13 Nov 2012; Michael Palimaka <kensington@gentoo.org> kreversi-4.9.3.ebuild:
+  GGZ support has been removed upstream.
 
 *kreversi-4.9.3 (08 Nov 2012)
 
@@ -876,4 +879,3 @@
   +kreversi-3.4.0_beta1.ebuild:
   Adding the split ebuilds to portage. For KDE 3.4, we've created separate
   ebuilds for all the KDE apps.
-
