@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cluster-glue/cluster-glue-1.0.11.ebuild,v 1.2 2012/10/29 16:07:08 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cluster-glue/cluster-glue-1.0.11.ebuild,v 1.3 2012/11/13 17:18:20 ultrabug Exp $
 
 EAPI=4
 
@@ -28,6 +28,7 @@ RDEPEND="app-arch/bzip2
 DEPEND="${RDEPEND}
 	doc? (
 		dev-libs/libxslt
+		app-text/docbook-xml-dtd:4.4
 		app-text/docbook-xsl-stylesheets
 		)"
 
