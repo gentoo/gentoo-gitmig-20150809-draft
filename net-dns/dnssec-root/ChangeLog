@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/dnssec-root
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-root/ChangeLog,v 1.9 2012/11/12 12:19:45 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-root/ChangeLog,v 1.10 2012/11/13 01:50:28 blueness Exp $
+
+  13 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
+  dnssec-root-20110630.ebuild:
+  keyword ~arm, bug #441688
 
   12 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
   dnssec-root-20110630.ebuild:
