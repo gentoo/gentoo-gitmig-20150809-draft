@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.282 2012/11/07 15:30:41 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.283 2012/11/13 21:59:47 fuzzyray Exp $
+
+  13 Nov 2012; Paul Varner <fuzzyray@gentoo.org> gentoolkit-9999.ebuild:
+  Add app-portage/portpeek to einfo message.
 
   07 Nov 2012; Paul Varner <fuzzyray@gentoo.org> gentoolkit-0.3.0.7.ebuild:
   Remove "inherit eutils", since the eclass is not used.

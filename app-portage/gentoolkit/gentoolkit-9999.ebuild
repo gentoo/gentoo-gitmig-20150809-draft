@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-9999.ebuild,v 1.24 2012/11/01 19:53:03 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-9999.ebuild,v 1.25 2012/11/13 21:59:47 fuzzyray Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -86,5 +86,6 @@ pkg_postinst() {
 	einfo "    app-portage/diffmask"
 	einfo "    app-portage/flaggie"
 	einfo "    app-portage/install-mask"
+	einfo "    app-portage/portpeek"
 	einfo "    app-portage/smart-live-rebuild"
 }
