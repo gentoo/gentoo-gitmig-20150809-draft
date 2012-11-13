@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/autopep8
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/autopep8/ChangeLog,v 1.20 2012/09/27 05:49:23 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/autopep8/ChangeLog,v 1.21 2012/11/13 07:37:58 patrick Exp $
+
+*autopep8-0.8.2 (13 Nov 2012)
+
+  13 Nov 2012; Patrick Lauer <patrick@gentoo.org> +autopep8-0.8.2.ebuild:
+  Bump
 
   27 Sep 2012; Kacper Kowalik <xarthisius@gentoo.org> autopep8-0.8.1.ebuild:
   Update dependency on dev-python/pep8. Thanks to Arfrever for reporting
