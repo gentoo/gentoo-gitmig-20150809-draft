@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/patch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/ChangeLog,v 1.60 2012/11/13 15:44:36 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/ChangeLog,v 1.61 2012/11/13 16:07:10 grobian Exp $
+
+  13 Nov 2012; Fabian Groffen <grobian@gentoo.org> patch-2.7.1-r1.ebuild:
+  Drop useless condition, Prefix always has USERLAND=GNU
 
 *patch-2.7.1-r1 (13 Nov 2012)
 
