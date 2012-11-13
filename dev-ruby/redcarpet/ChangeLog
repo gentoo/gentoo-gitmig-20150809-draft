@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/redcarpet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcarpet/ChangeLog,v 1.5 2012/09/15 10:17:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcarpet/ChangeLog,v 1.6 2012/11/13 19:16:49 graaff Exp $
+
+*redcarpet-2.2.2 (13 Nov 2012)
+
+  13 Nov 2012; Hans de Graaff <graaff@gentoo.org> +redcarpet-2.2.2.ebuild:
+  Version bump.
 
   15 Sep 2012; Hans de Graaff <graaff@gentoo.org> -redcarpet-1.17.2.ebuild,
   -redcarpet-2.0.1.ebuild, -redcarpet-2.1.0.ebuild:
