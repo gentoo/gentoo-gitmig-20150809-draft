@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Sys-CPU
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-CPU/ChangeLog,v 1.21 2012/06/24 12:59:00 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-CPU/ChangeLog,v 1.22 2012/11/13 19:30:44 tove Exp $
+
+*Sys-CPU-0.540.0 (13 Nov 2012)
+
+  13 Nov 2012; Torsten Veller <tove@gentoo.org> +Sys-CPU-0.540.0.ebuild:
+  Version bump
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
