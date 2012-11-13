@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libgsasl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/ChangeLog,v 1.81 2012/10/20 17:47:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/ChangeLog,v 1.82 2012/11/13 16:48:20 ranger Exp $
+
+  13 Nov 2012; Brent Baude <ranger@gentoo.org> libgsasl-1.8.0-r1.ebuild:
+  Marking libgsasl-1.8.0-r1 ppc64 for bug 441450
 
   20 Oct 2012; Jeroen Roovers <jer@gentoo.org> libgsasl-1.8.0-r1.ebuild:
   Marked ~hppa (bug #439040).
