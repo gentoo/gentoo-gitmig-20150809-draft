@@ -165,6 +165,8 @@ amd64		hardened/linux/amd64/no-multilib			stable
 amd64		hardened/linux/amd64/no-multilib/selinux		stable
 amd64		hardened/linux/uclibc/amd64				dev
 ia64		hardened/linux/ia64					dev
+mips		hardened/linux/uclibc/mips				exp
+mips		hardened/linux/uclibc/mips/mipsel			exp
 ppc		hardened/linux/powerpc/ppc32				dev
 ppc		hardened/linux/powerpc/ppc64/32bit-userland		dev
 ppc64		hardened/linux/powerpc/ppc64/64bit-userland		dev
