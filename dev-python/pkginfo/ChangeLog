@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pkginfo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pkginfo/ChangeLog,v 1.3 2012/11/01 18:05:53 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pkginfo/ChangeLog,v 1.4 2012/11/13 11:18:04 idella4 Exp $
+
+  14 Nov 2012; Ian Delaney <idella4@gentoo.org> metadata.xml:
+  Updating maintainer, metadata.xml
 
   02 Nov 2012; Ian Delaney <idella4@gentoo.org> pkginfo-0.9.ebuild:
   Fixed bug #438598, prevents double compression
