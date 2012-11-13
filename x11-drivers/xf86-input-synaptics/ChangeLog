@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-input-synaptics
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.80 2012/08/11 12:54:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.81 2012/11/13 15:57:05 chithanh Exp $
+
+*xf86-input-synaptics-1.6.2-r1 (13 Nov 2012)
+
+  13 Nov 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/xf86-input-synaptics-1.6.2-reset-num_active_touches.patch,
+  +xf86-input-synaptics-1.6.2-r1.ebuild:
+  Add patch to fix crash on xorg-server-1.12, bug #428084.
 
   11 Aug 2012; Markus Meier <maekke@gentoo.org>
   xf86-input-synaptics-1.6.2.ebuild:
@@ -431,4 +438,3 @@
   Initial commit, ebuild patching and suggestions by Nirbheek Chauhan
   <nirbheek.chauhan@gmail.com>, closes bug #234794 by Christian Loosli
   <fuchs@fuchsnet.ch>.
-
