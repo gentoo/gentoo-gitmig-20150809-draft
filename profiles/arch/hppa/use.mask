@@ -1,6 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.62 2012/10/16 15:58:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.63 2012/11/13 22:43:26 jer Exp $
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
+
+# Jeroen Roovers <jer@gentoo.org> (13 Nov 2012)
+# dev-python/pypy is untested, has build failures
+python_targets_pypy1_8
+python_targets_pypy1_9
 
 # Jeroen Roovers <jer@gentoo.org> (15 Oct 2012)
 # sys-auth/consolekit does not work without CONFIG_AUDITSYSCALL,
