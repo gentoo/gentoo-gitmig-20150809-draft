@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.13.1.ebuild,v 1.1 2012/10/28 19:30:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.13.1.ebuild,v 1.2 2012/11/13 19:06:04 hwoarang Exp $
 
 EAPI=4
 GCONF_DEBUG="no"
@@ -10,7 +10,7 @@ inherit gnome2 versionator eutils multilib toolchain-funcs vala
 
 MY_PV=$(get_version_component_range 1-2)
 DESCRIPTION="Open source photo manager for GNOME"
-HOMEPAGE="http://www.yorba.org/shotwell/"
+HOMEPAGE="http://yorba.org/shotwell/"
 SRC_URI="http://www.yorba.org/download/${PN}/stable/${P}.tar.xz"
 
 LICENSE="LGPL-2.1"

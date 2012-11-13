@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/shotwell
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.39 2012/10/28 19:30:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.40 2012/11/13 19:06:04 hwoarang Exp $
+
+  13 Nov 2012; Markos Chandras <hwoarang@gentoo.org> shotwell-0.12.3.ebuild,
+  shotwell-0.13.1.ebuild:
+  Fix HOMEPAGE
 
 *shotwell-0.13.1 (28 Oct 2012)
 
