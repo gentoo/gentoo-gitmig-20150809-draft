@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gevent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gevent/ChangeLog,v 1.7 2012/07/17 02:10:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gevent/ChangeLog,v 1.8 2012/11/13 10:50:41 idella4 Exp $
+
+  14 Nov 2012; Ian Delaney <idella4@gentoo.org> metadata.xml:
+  Updating maintainer, metadata.xml
 
   17 Jul 2012; Mike Frysinger <vapier@gentoo.org> gevent-0.13.7.ebuild,
   gevent-1.0_beta2.ebuild:
