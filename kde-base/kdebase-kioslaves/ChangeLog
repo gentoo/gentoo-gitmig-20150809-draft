@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdebase-kioslaves
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.276 2012/11/08 23:26:28 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.277 2012/11/13 17:24:05 kensington Exp $
+
+  13 Nov 2012; Michael Palimaka <kensington@gentoo.org>
+  kdebase-kioslaves-4.9.3.ebuild:
+  Fix samba dependency to support samba4, thanks to Lars Wendler
+  <polynomial-c@gentoo.org> in bug #442950.
 
 *kdebase-kioslaves-4.9.3 (08 Nov 2012)
 
@@ -1283,4 +1288,3 @@
   +kdebase-kioslaves-3.4.0_beta1.ebuild:
   Adding the split ebuilds to portage. For KDE 3.4, we've created separate
   ebuilds for all the KDE apps.
-

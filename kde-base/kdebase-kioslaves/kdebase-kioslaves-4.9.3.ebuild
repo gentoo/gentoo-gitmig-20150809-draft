@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-4.9.3.ebuild,v 1.1 2012/11/08 23:26:28 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-4.9.3.ebuild,v 1.2 2012/11/13 17:24:05 kensington Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ DEPEND="
 	bzip2? ( app-arch/bzip2 )
 	exif? ( media-gfx/exiv2 )
 	openexr? ( media-libs/openexr )
-	samba? ( net-fs/samba[smbclient] )
+	samba? ( || ( <net-fs/samba-4.0.0_alpha1[smbclient] >=net-fs/samba-4.0.0_alpha1[client] ) )
 	sftp? ( >=net-libs/libssh-0.4.0[sftp] )
 "
 RDEPEND="${DEPEND}
