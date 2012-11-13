@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/ldns
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ChangeLog,v 1.35 2012/11/13 01:48:47 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ChangeLog,v 1.36 2012/11/13 20:24:40 blueness Exp $
+
+  13 Nov 2012; Anthony G. Basile <blueness@gentoo.org> ldns-1.6.13-r1.ebuild:
+  keyword ~mips, bug #441688
 
   13 Nov 2012; Anthony G. Basile <blueness@gentoo.org> ldns-1.6.13-r1.ebuild:
   keyword ~arm, bug #441688
