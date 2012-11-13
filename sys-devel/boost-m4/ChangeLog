@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/boost-m4
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/boost-m4/ChangeLog,v 1.3 2012/11/10 13:16:42 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/boost-m4/ChangeLog,v 1.4 2012/11/13 17:02:29 jer Exp $
+
+  13 Nov 2012; Jeroen Roovers <jer@gentoo.org> boost-m4-0.2.ebuild:
+  Marked ~hppa (bug #442470).
 
   10 Nov 2012; Anthony G. Basile <blueness@gentoo.org> boost-m4-0.2.ebuild:
   keyword ppc, bug #442470
