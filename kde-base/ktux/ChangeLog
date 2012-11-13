@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ktux
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktux/ChangeLog,v 1.218 2012/11/13 20:03:58 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktux/ChangeLog,v 1.219 2012/11/13 20:20:51 johu Exp $
+
+  13 Nov 2012; Johannes Huber <johu@gentoo.org> -ktux-4.9.2.ebuild:
+  Remove KDE SC 4.9.2
 
   13 Nov 2012; Johannes Huber <johu@gentoo.org> -ktux-4.9.1.ebuild:
   Remove KDE SC 4.9.1

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksnakeduel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksnakeduel/ChangeLog,v 1.2 2012/11/08 23:26:47 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksnakeduel/ChangeLog,v 1.3 2012/11/13 20:20:46 johu Exp $
+
+  13 Nov 2012; Johannes Huber <johu@gentoo.org> -ksnakeduel-4.9.2.ebuild:
+  Remove KDE SC 4.9.2
 
 *ksnakeduel-4.9.3 (08 Nov 2012)
 
