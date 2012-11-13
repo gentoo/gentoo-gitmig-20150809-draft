@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/JavaScript-SpiderMonkey
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/JavaScript-SpiderMonkey/ChangeLog,v 1.7 2012/10/11 19:09:51 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/JavaScript-SpiderMonkey/ChangeLog,v 1.8 2012/11/13 00:17:00 robbat2 Exp $
+
+*JavaScript-SpiderMonkey-0.210.0 (13 Nov 2012)
+
+  13 Nov 2012; Robin H. Johnson <robbat2@gentoo.org>
+  +JavaScript-SpiderMonkey-0.210.0.ebuild,
+  JavaScript-SpiderMonkey-0.200.0.ebuild:
+  Bump.
 
   11 Oct 2012; Ian Stakenvicius <axs@gentoo.org> +files/mozjs185.patch,
   JavaScript-SpiderMonkey-0.200.0.ebuild:
