@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knavalbattle/knavalbattle-4.9.3.ebuild,v 1.1 2012/11/08 23:26:59 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knavalbattle/knavalbattle-4.9.3.ebuild,v 1.2 2012/11/13 18:05:39 kensington Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ else
 	KMNAME="kdegames"
 fi
 KDE_HANDBOOK="optional"
-inherit games-ggz ${eclass}
+inherit ${eclass}
 
 DESCRIPTION="The KDE Battleship clone"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
@@ -21,18 +21,3 @@ DEPEND="$(add_kdebase_dep libkdegames)"
 RDEPEND="${DEPEND}"
 
 add_blocker kbattleship
-
-src_prepare() {
-	# cmake is doing this really weird
-	if [[ ${PV} == *9999 ]]; then
-		sed -i \
-			-e "s:register_ggz_module:#register_ggz_module:g" \
-			src/CMakeLists.txt || die "ggz removal failed"
-	else
-		sed -i \
-			-e "s:register_ggz_module:#register_ggz_module:g" \
-			"${PN}"/src/CMakeLists.txt || die "ggz removal failed"
-	fi
-
-	${eclass}_src_prepare
-}
