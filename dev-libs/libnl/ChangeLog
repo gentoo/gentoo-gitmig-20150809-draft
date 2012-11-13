@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libnl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.111 2012/11/07 07:31:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.112 2012/11/13 16:14:55 jer Exp $
+
+  13 Nov 2012; Jeroen Roovers <jer@gentoo.org> libnl-3.2.13.ebuild,
+  libnl-3.2.14.ebuild:
+  Fix licenses for docs and utils.
 
   07 Nov 2012; Mike Frysinger <vapier@gentoo.org> libnl-3.2.14.ebuild:
   Run elibtoolize for cross-compile relinking, and use get_libdir when deleting
