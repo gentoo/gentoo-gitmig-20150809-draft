@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/systemtap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.101 2012/11/04 22:15:44 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.102 2012/11/13 14:04:51 blueness Exp $
+
+  13 Nov 2012; Anthony G. Basile <blueness@gentoo.org> systemtap-2.0.ebuild:
+  keyword ~arm, bug #351931
 
 *systemtap-2.0 (04 Nov 2012)
 
@@ -568,4 +571,3 @@
 
   26 Mar 2006; Chris Aniszczyk <zx@gentoo.org> ChangeLog:
   systemtap-20060325.ebuild Initial Import
-
