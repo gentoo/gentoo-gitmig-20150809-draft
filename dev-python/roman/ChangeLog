@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/roman
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/roman/ChangeLog,v 1.1 2012/05/18 12:01:47 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/roman/ChangeLog,v 1.2 2012/11/13 10:27:09 idella4 Exp $
+
+  14 Nov 2012; Ian Delaney <idella4@gentoo.org> metadata.xml:
+  Updating maintainer, metadata.xml
 
 *roman-1.4.0 (18 May 2012)
 
@@ -8,4 +11,3 @@
   +roman-1.4.0.ebuild:
   Initial import, fixes #416063, ebuild written by Ian Delaney
   <johneed@hotmail.com>
-
