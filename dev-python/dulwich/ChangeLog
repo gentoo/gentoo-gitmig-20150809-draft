@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/dulwich
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.54 2012/09/30 18:18:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.55 2012/11/13 08:27:52 patrick Exp $
+
+*dulwich-0.8.6 (13 Nov 2012)
+
+  13 Nov 2012; Patrick Lauer <patrick@gentoo.org> +dulwich-0.8.6.ebuild:
+  Bump
 
   30 Sep 2012; Raúl Porcel <armin76@gentoo.org> dulwich-0.8.1.ebuild,
   dulwich-0.8.3.ebuild, dulwich-0.8.5.ebuild:
@@ -206,4 +211,3 @@
 
   20 Oct 2009; <djc@gentoo.org> +dulwich-0.4.0.ebuild, +metadata.xml:
   Initial version for the portage tree.
-

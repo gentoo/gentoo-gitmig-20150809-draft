@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/celery
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/ChangeLog,v 1.10 2012/10/25 10:46:21 iksaif Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/ChangeLog,v 1.11 2012/11/13 08:24:32 patrick Exp $
+
+*celery-3.0.12 (13 Nov 2012)
+
+  13 Nov 2012; Patrick Lauer <patrick@gentoo.org> +celery-3.0.12.ebuild:
+  Bump
 
 *celery-3.0.11-r1 (25 Oct 2012)
 
