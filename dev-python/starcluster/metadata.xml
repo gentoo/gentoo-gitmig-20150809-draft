@@ -3,15 +3,7 @@
 <pkgmetadata>
    <herd>python</herd>
    <maintainer>
-	   <email>tampakrap@gentoo.org</email>
-   </maintainer>
-   <maintainer>
-	  <email>johneed@hotmail.com</email>
-	  <name>Ian 'idella4' Delaney</name>
-   </maintainer>
-   <maintainer>
-	  <email>jtriley@mit.edu</email>
-	  <name>Justin Riley</name>
+	   <email>idella4@gentoo.org</email>
    </maintainer>
    <use>
 	  <flag name="epydoc">Enable build of apidocs in html using epydoc</flag>
