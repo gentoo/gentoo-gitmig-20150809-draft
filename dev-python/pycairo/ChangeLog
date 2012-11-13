@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pycairo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.111 2012/11/06 06:10:40 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.112 2012/11/13 04:41:16 radhermit Exp $
+
+*pycairo-1.10.0-r3 (13 Nov 2012)
+
+  13 Nov 2012; Tim Harder <radhermit@gentoo.org> +pycairo-1.10.0-r3.ebuild,
+  +files/py2cairo-1.10.0-xpyb.patch, +files/pycairo-1.10.0-xpyb.patch:
+  Revision bump. Add xcb use flag which enables support for xpyb (bug #416565,
+  patch slightly modified from upstream to avoid automagic deps).
 
   06 Nov 2012; Ian Delaney <idella4@gentoo.org> pycairo-1.10.0-r2.ebuild:
   python 2.4, pypy removed from RESTRICT_PYTHON_ABIS, test phase updated
