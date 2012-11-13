@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.3.1.ebuild,v 1.1 2012/11/13 01:43:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.3.1.ebuild,v 1.2 2012/11/13 02:01:12 jer Exp $
 
 EAPI=3
 
@@ -146,11 +146,6 @@ src_install() {
 
 pkg_postinst() {
 	fdo-mime_desktop_database_update
-	echo
-	ewarn "PLEASE PLEASE take note of this"
-	ewarn "Please make *sure* to run revdep-rebuild now"
-	ewarn "You must recompile everything that depends on fltk!"
-	echo
 }
 
 pkg_postrm() {
