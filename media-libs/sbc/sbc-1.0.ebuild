@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sbc/sbc-1.0.ebuild,v 1.1 2012/08/05 09:26:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sbc/sbc-1.0.ebuild,v 1.2 2012/11/13 17:08:35 jer Exp $
 
 EAPI=4
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://kernel/linux/bluetooth/${P}.tar.xz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="static-libs"
 
 # --enable-tester is building src/sbctester but the tarball is missing required
