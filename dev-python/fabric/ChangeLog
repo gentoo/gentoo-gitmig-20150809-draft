@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/fabric
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/ChangeLog,v 1.28 2012/08/27 15:37:48 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/ChangeLog,v 1.29 2012/11/13 06:56:50 patrick Exp $
+
+*fabric-1.5.0 (13 Nov 2012)
+
+  13 Nov 2012; Patrick Lauer <patrick@gentoo.org> +fabric-1.5.0.ebuild:
+  Bump
 
   27 Aug 2012; Mike Gilbert <floppym@gentoo.org> fabric-1.4.3.ebuild:
   Drop eutils.
