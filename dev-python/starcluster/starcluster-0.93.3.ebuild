@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/starcluster/starcluster-0.93.3.ebuild,v 1.2 2012/05/29 10:11:24 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/starcluster/starcluster-0.93.3.ebuild,v 1.3 2012/11/13 07:15:21 idella4 Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 DISTUTILS_SRC_TEST="nosetests"
 
-inherit distutils bash-completion-r1
+inherit distutils bash-completion-r1 eutils
 MY_PN=StarCluster
 MY_P=${MY_PN}-${PV}
 
@@ -22,12 +22,12 @@ KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE="doc bash-completion epydoc"
 
-RDEPEND=">=dev-python/ssh-1.7.13
-	>=dev-python/boto-2.3.0
-	>=dev-python/jinja-2.6
+RDEPEND="=dev-python/ssh-1.7.13
+	=dev-python/boto-2.3.0
+	=dev-python/jinja-2.6
 	>=dev-python/decorator-3.1.1
-	>=dev-python/pyasn1-0.0.13_beta
-	>=dev-python/workerpool-0.9.2"
+	=dev-python/pyasn1-0.0.13_beta
+	=dev-python/workerpool-0.9.2"
 
 DEPEND="${RDEPEND}
 	doc? ( dev-python/sphinx
@@ -36,6 +36,10 @@ DEPEND="${RDEPEND}
 	dev-python/setuptools"
 
 S=${WORKDIR}/${MY_P}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-requires.patch
+}
 
 src_compile() {
 	distutils_src_compile
