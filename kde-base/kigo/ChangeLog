@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kigo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kigo/ChangeLog,v 1.82 2012/11/08 23:26:46 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kigo/ChangeLog,v 1.83 2012/11/13 18:34:51 kensington Exp $
+
+  13 Nov 2012; Michael Palimaka <kensington@gentoo.org> kigo-4.9.3.ebuild:
+  GGZ support has been removed upstream.
 
 *kigo-4.9.3 (08 Nov 2012)
 
@@ -318,4 +321,3 @@
 
   08 Feb 2010; Alexey Shvetsov <alexxy@gentoo.org> +kigo-4.4.0.ebuild:
   Version bump to KDE SC 4.4.0
-
