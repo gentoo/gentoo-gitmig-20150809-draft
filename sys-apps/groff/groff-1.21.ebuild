@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.21.ebuild,v 1.10 2012/06/08 05:17:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.21.ebuild,v 1.11 2012/11/13 19:52:24 vapier Exp $
 
 inherit autotools eutils toolchain-funcs
 
@@ -56,6 +56,8 @@ src_unpack() {
 		eautoconf
 		eautoheader
 	fi
+
+	epatch "${FILESDIR}"/${PN}-1.21-gnulib-cross.patch #363647
 }
 
 src_compile() {

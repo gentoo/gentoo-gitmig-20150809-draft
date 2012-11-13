@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.21-r1.ebuild,v 1.4 2012/06/08 05:17:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.21-r1.ebuild,v 1.5 2012/11/13 19:52:24 vapier Exp $
 
 EAPI="3"
 
@@ -61,6 +61,7 @@ src_prepare() {
 	# from upstream, #353287, #353377
 	epatch "${FILESDIR}"/groff-1.21-makefile.patch
 	epatch "${FILESDIR}"/groff-1.21-gnulib.patch
+	epatch "${FILESDIR}"/${PN}-1.21-gnulib-cross.patch #363647
 	# make sure we don't get a crappy `g' nameprefix on UNIX systems with real
 	# troff (GROFF_G macro runs some test to see, its own troff doesn't satisfy)
 	sed -i -e 's/^[ \t]\+g=g$/g=/' configure || die

@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/groff
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.124 2012/06/08 05:17:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.125 2012/11/13 19:52:24 vapier Exp $
+
+  13 Nov 2012; Mike Frysinger <vapier@gentoo.org>
+  +files/groff-1.21-gnulib-cross.patch, groff-1.21-r1.ebuild, groff-1.21.ebuild:
+  Add fix from upstream for cross-compiling gnulib #363647 by Dennis 'dlan' Lan.
 
   08 Jun 2012; Mike Frysinger <vapier@gentoo.org> groff-1.21-r1.ebuild,
   groff-1.21.ebuild:
