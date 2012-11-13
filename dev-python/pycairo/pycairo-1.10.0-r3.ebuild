@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-1.10.0-r3.ebuild,v 1.1 2012/11/13 04:41:16 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-1.10.0-r3.ebuild,v 1.2 2012/11/13 04:54:30 radhermit Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6 3:3.1"
@@ -24,7 +24,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc examples +svg test xcb"
 
-RDEPEND=">=x11-libs/cairo-1.10.0[svg?]
+RDEPEND=">=x11-libs/cairo-1.10.0[svg?,xcb?]
 	xcb? ( x11-libs/xpyb )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
