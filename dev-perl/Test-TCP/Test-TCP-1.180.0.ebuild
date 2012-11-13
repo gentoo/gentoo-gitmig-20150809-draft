@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-TCP/Test-TCP-1.180.0.ebuild,v 1.2 2012/11/12 22:17:10 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-TCP/Test-TCP-1.180.0.ebuild,v 1.3 2012/11/13 17:51:41 jer Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Testing TCP program"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 IUSE="test"
 
 RDEPEND="
