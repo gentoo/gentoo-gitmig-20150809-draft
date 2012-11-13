@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/grive/grive-0.2.0.ebuild,v 1.4 2012/11/01 03:05:41 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/grive/grive-0.2.0.ebuild,v 1.5 2012/11/13 02:36:08 ottxor Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ if [[ ${PV} = *9999 ]]; then
 	inherit git-2
 	EGIT_REPO_URI="git://github.com/Grive/${PN}.git"
 else
-	inherit vcs-snapshot
+	inherit eutils vcs-snapshot
 	SRC_URI="https://github.com/Grive/${PN}/tarball/v${PV} -> ${P}.tar.gz"
 fi
 
@@ -23,7 +23,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
-	>=dev-libs/boost-1.48
+	dev-libs/boost
 	dev-libs/expat
 	dev-libs/json-c
 	dev-libs/libgcrypt
@@ -39,5 +39,5 @@ DEPEND="${RDEPEND}"
 DOCS=( "README" )
 
 src_prepare() {
-	has_version ">=sys-devel/binutils-2.22.90" && export CXXFLAGS+=" -DPACKAGE" #428636
+	epatch "${FILESDIR}"/"${P}"-check-bfd.h.patch
 }
