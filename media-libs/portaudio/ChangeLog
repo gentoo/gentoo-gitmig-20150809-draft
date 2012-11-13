@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/portaudio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/ChangeLog,v 1.92 2012/10/04 21:34:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/ChangeLog,v 1.93 2012/11/13 16:49:09 ranger Exp $
+
+  13 Nov 2012; Brent Baude <ranger@gentoo.org> portaudio-19_pre20111121.ebuild:
+  Marking portaudio-19_pre20111121 ppc64 for bug 433982
 
   04 Oct 2012; Brent Baude <ranger@gentoo.org> portaudio-19_pre20111121.ebuild:
   Marking portaudio-19_pre20111121 ppc for bug 433982
