@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/free42
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/free42/ChangeLog,v 1.7 2012/11/11 19:32:07 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/free42/ChangeLog,v 1.8 2012/11/13 22:11:27 nimiux Exp $
+
+  13 Nov 2012; Chema Alonso <nimiux@gentoo.org> free42-1.4.75.ebuild,
+  files/free42-1.4.75-fix-alsa.patch:
+  Fix strict-alias warnings in alsa code. Fix array length.
 
 *free42-1.4.75 (11 Nov 2012)
 
