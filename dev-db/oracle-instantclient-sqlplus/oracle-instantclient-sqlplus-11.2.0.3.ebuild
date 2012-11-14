@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-sqlplus/oracle-instantclient-sqlplus-11.2.0.3.ebuild,v 1.2 2012/06/04 06:43:20 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-sqlplus/oracle-instantclient-sqlplus-11.2.0.3.ebuild,v 1.3 2012/11/14 17:18:52 ago Exp $
 
 EAPI="4"
 
@@ -21,7 +21,7 @@ SRC_URI="
 
 LICENSE="OTN"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="amd64 ~x86"
 RESTRICT="fetch"
 IUSE=""
 
