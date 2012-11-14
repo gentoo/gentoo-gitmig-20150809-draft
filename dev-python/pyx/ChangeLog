@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/ChangeLog,v 1.29 2012/10/29 08:42:33 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/ChangeLog,v 1.30 2012/11/14 07:24:36 patrick Exp $
+
+*pyx-0.12.1 (14 Nov 2012)
+
+  14 Nov 2012; Patrick Lauer <patrick@gentoo.org> +pyx-0.12.1.ebuild:
+  Bump
 
 *pyx-0.12 (29 Oct 2012)
 
