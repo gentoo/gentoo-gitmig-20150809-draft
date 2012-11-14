@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnfnetlink
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/ChangeLog,v 1.53 2012/11/13 17:00:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/ChangeLog,v 1.54 2012/11/14 16:33:21 ago Exp $
+
+  14 Nov 2012; <ago@gentoo.org> libnfnetlink-1.0.1.ebuild:
+  Stable for amd64, wrt bug #442872
 
   13 Nov 2012; Jeroen Roovers <jer@gentoo.org> libnfnetlink-1.0.1.ebuild:
   Stable for HPPA (bug #442872).
