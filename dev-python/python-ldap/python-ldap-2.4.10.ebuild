@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.4.10.ebuild,v 1.5 2012/11/07 04:22:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.4.10.ebuild,v 1.6 2012/11/14 08:17:33 xarthisius Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ RESTRICT_PYTHON_ABIS="3.* *-jython"
 inherit distutils multilib
 
 DESCRIPTION="Various LDAP-related Python modules"
-HOMEPAGE="http://python-ldap.sourceforge.net/ http://www.python-ldap.org/"
+HOMEPAGE="http://www.python-ldap.org http://pypi.python.org/pypi/python-ldap"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="PSF-2"
