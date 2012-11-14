@@ -1,13 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r9.ebuild,v 1.14 2012/09/09 22:21:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r9.ebuild,v 1.15 2012/11/14 02:52:00 mr_bones_ Exp $
 
 EAPI=4
-
 inherit eutils toolchain-funcs autotools
 
 DESCRIPTION="SDL MPEG Player Library"
-HOMEPAGE="http://www.lokigames.com/development/smpeg.php3"
+HOMEPAGE="http://icculus.org/smpeg/"
 SRC_URI="ftp://ftp.lokigames.com/pub/open-source/smpeg/${P}.tar.gz
 	mirror://gentoo/${P}-gtkm4.patch.bz2"
 
