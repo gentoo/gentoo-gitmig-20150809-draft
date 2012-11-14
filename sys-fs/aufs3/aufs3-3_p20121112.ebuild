@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20121112.ebuild,v 1.1 2012/11/12 08:25:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20121112.ebuild,v 1.2 2012/11/14 07:32:19 jlec Exp $
 
 EAPI=4
 
@@ -110,7 +110,7 @@ src_prepare() {
 	use nfs && ( use amd64 || use ppc64 ) && set_config INO_T_64
 	use ramfs && set_config BR_RAMFS
 
-	use pax_kernel && epatch "${FILESDIR}"/pax.patch "${FILESDIR}"/pax-2.patch
+	use pax_kernel && epatch "${FILESDIR}"/pax-2.patch
 
 	sed -i "s:aufs.ko usr/include/linux/aufs_type.h:aufs.ko:g" Makefile || die
 	sed -i "s:__user::g" include/linux/aufs_type.h || die
