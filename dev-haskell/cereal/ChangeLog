@@ -1,0 +1,10 @@
+# ChangeLog for dev-haskell/cereal
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cereal/ChangeLog,v 1.1 2012/11/14 22:02:35 slyfox Exp $
+
+*cereal-0.3.5.2 (14 Nov 2012)
+
+  14 Nov 2012; Sergei Trofimovich <slyfox@gentoo.org> +cereal-0.3.5.2.ebuild,
+  +metadata.xml:
+  New package: fast binary serialization library (a depend for dev-
+  util/bustle-0.4.2)
