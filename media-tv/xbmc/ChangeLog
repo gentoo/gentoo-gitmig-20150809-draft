@@ -1,6 +1,15 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.151 2012/10/24 22:36:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.152 2012/11/14 07:59:15 scarabeus Exp $
+
+*xbmc-11.0-r1 (14 Nov 2012)
+
+  14 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/xbmc-11.0-ffmpeg.patch, +files/xbmc-11.0-libav-r1.patch,
+  +xbmc-11.0-r1.ebuild, files/xbmc-11.0-libav.patch, xbmc-11.0.ebuild:
+  Revision bump the huge patchset chage to testing as it seems broken, wrt
+  bug#443006. Keep the stable unaltered as it was supposed to be done from
+  start.
 
   24 Oct 2012; Alexis Ballier <aballier@gentoo.org> xbmc-11.0.ebuild,
   -files/xbmc-11.0-ffmpeg.patch, files/xbmc-11.0-libav.patch:

@@ -1,6 +1,3 @@
-Patch rebased to current patches backported from upstream by Alexis Ballier.
-Based on the previous patch, submitted upstream but not merged it seems:
-
 https://bugs.gentoo.org/406215
 
 From c74abc298e2075f431d9fa700fcfc5e1bbbddf22 Mon Sep 17 00:00:00 2001
@@ -12,60 +9,64 @@ The libav use micro version as 0
 The ffmpeg use the micro version as 100+
 
 Simply check if the variable is defined then it is not libav.
-Index: xbmc-11.0/lib/DllAvFilter.h
-===================================================================
---- xbmc-11.0.orig/lib/DllAvFilter.h
-+++ xbmc-11.0/lib/DllAvFilter.h
-@@ -45,7 +45,11 @@ extern "C" {
-   #if (defined HAVE_LIBAVFILTER_AVFILTER_H)
-     #include <libavfilter/avfiltergraph.h>
-     #include <libavfilter/buffersink.h>
+---
+ lib/DllAvFilter.h                                  |   10 +++++++++-
+ .../DVDCodecs/Video/DVDVideoCodecFFmpeg.cpp        |    4 ++++
+ 2 files changed, 13 insertions(+), 1 deletions(-)
+
+diff --git a/lib/DllAvFilter.h b/lib/DllAvFilter.h
+index 302e35c..827746e 100644
+--- a/lib/DllAvFilter.h
++++ b/lib/DllAvFilter.h
+@@ -48,7 +48,7 @@ extern "C" {
+   #endif
+   /* for av_vsrc_buffer_add_frame */
+   #if LIBAVFILTER_VERSION_INT >= AV_VERSION_INT(2,8,0)
 -    #include <libavfilter/avcodec.h>
-+    #if LIBAVFILTER_VERSION_MICRO < 50 // Libav
-+      #include <libavfilter/vsrc_buffer.h>
-+    #else
-+      #include <libavfilter/avcodec.h>
-+    #endif
-   #elif (defined HAVE_FFMPEG_AVFILTER_H)
-     #include <ffmpeg/avfiltergraph.h>
-     #include <ffmpeg/buffersink.h>
-@@ -75,7 +79,11 @@ public:
-   virtual int avfilter_graph_parse(AVFilterGraph *graph, const char *filters, AVFilterInOut **inputs, AVFilterInOut **outputs, void *log_ctx)=0;
-   virtual int avfilter_graph_config(AVFilterGraph *graphctx, void *log_ctx)=0;
- #if LIBAVFILTER_VERSION_INT < AV_VERSION_INT(3,0,0)
-+#if LIBAVFILTER_VERSION_MICRO < 50 // Libav
-+  virtual int av_vsrc_buffer_add_frame(AVFilterContext *buffer_filter, AVFrame *frame, int64_t pts, AVRational pixel_aspect)=0;
-+#else
++    #include <libavfilter/vsrc_buffer.h>
+   #elif LIBAVFILTER_VERSION_INT >= AV_VERSION_INT(2,7,0)
+     int av_vsrc_buffer_add_frame(AVFilterContext *buffer_filter,
+                                  AVFrame *frame);
+@@ -83,7 +83,11 @@ public:
+   virtual int avfilter_poll_frame(AVFilterLink *link)=0;
+   virtual int avfilter_request_frame(AVFilterLink *link)=0;
+ #if LIBAVFILTER_VERSION_INT >= AV_VERSION_INT(2,13,0)
++#if LIBAVFILTER_VERSION_MICRO
    virtual int av_vsrc_buffer_add_frame(AVFilterContext *buffer_filter, AVFrame *frame, int flags)=0;
-+#endif
- #else
-   virtual int av_buffersrc_add_frame(AVFilterContext *buffer_filter, AVFrame *frame, int flags)=0;
- #endif
-@@ -135,7 +143,11 @@ public:
-     return ::avfilter_graph_config(graphctx, log_ctx);
-   }
- #if LIBAVFILTER_VERSION_INT < AV_VERSION_INT(3,0,0)
-+#if LIBAVFILTER_VERSION_MICRO < 50 // Libav
-+  virtual int av_vsrc_buffer_add_frame(AVFilterContext *buffer_filter, AVFrame *frame, int64_t pts, AVRational pixel_aspect) { return ::av_vsrc_buffer_add_frame(buffer_filter, frame, pts, pixel_aspect); }
 +#else
-   virtual int av_vsrc_buffer_add_frame(AVFilterContext *buffer_filter, AVFrame *frame, int flags) { return ::av_vsrc_buffer_add_frame(buffer_filter, frame, flags); }
++  virtual int av_vsrc_buffer_add_frame(AVFilterContext *buffer_filter, AVFrame *frame, int64_t pts, AVRational pixel_aspect)=0;
 +#endif
- #else
-   virtual int av_buffersrc_add_frame(AVFilterContext *buffer_filter, AVFrame* frame, int flags) { return ::av_buffersrc_add_frame(buffer_filter, frame, flags); }
- #endif
-Index: xbmc-11.0/xbmc/cores/dvdplayer/DVDCodecs/Video/DVDVideoCodecFFmpeg.cpp
-===================================================================
---- xbmc-11.0.orig/xbmc/cores/dvdplayer/DVDCodecs/Video/DVDVideoCodecFFmpeg.cpp
-+++ xbmc-11.0/xbmc/cores/dvdplayer/DVDCodecs/Video/DVDVideoCodecFFmpeg.cpp
-@@ -833,7 +833,11 @@ int CDVDVideoCodecFFmpeg::FilterProcess(
+ #elif LIBAVFILTER_VERSION_INT >= AV_VERSION_INT(2,7,0)
+   virtual int av_vsrc_buffer_add_frame(AVFilterContext *buffer_filter, AVFrame *frame)=0;
+ #elif LIBAVCODEC_VERSION_INT >= AV_VERSION_INT(53,3,0)
+@@ -172,7 +176,11 @@ public:
+   virtual int avfilter_poll_frame(AVFilterLink *link) { return ::avfilter_poll_frame(link); }
+   virtual int avfilter_request_frame(AVFilterLink *link) { return ::avfilter_request_frame(link); }
+ #if LIBAVFILTER_VERSION_INT >= AV_VERSION_INT(2,13,0)
++#if LIBAVFILTER_VERSION_MICRO
+   virtual int av_vsrc_buffer_add_frame(AVFilterContext *buffer_filter, AVFrame *frame, int flags) { return ::av_vsrc_buffer_add_frame(buffer_filter, frame, flags); }
++#else
++  virtual int av_vsrc_buffer_add_frame(AVFilterContext *buffer_filter, AVFrame *frame, int64_t pts, AVRational pixel_aspect) { return ::av_vsrc_buffer_add_frame(buffer_filter, frame, pts, pixel_aspect); }
++#endif
+ #elif LIBAVFILTER_VERSION_INT >= AV_VERSION_INT(2,7,0)
+   virtual int av_vsrc_buffer_add_frame(AVFilterContext *buffer_filter, AVFrame *frame) { return ::av_vsrc_buffer_add_frame(buffer_filter, frame); }
+ #elif LIBAVCODEC_VERSION_INT >= AV_VERSION_INT(53,3,0)
+diff --git a/xbmc/cores/dvdplayer/DVDCodecs/Video/DVDVideoCodecFFmpeg.cpp b/xbmc/cores/dvdplayer/DVDCodecs/Video/DVDVideoCodecFFmpeg.cpp
+index b4e1451..4e5eedf 100644
+--- a/xbmc/cores/dvdplayer/DVDCodecs/Video/DVDVideoCodecFFmpeg.cpp
++++ b/xbmc/cores/dvdplayer/DVDCodecs/Video/DVDVideoCodecFFmpeg.cpp
+@@ -814,7 +814,11 @@ int CDVDVideoCodecFFmpeg::FilterProcess(AVFrame* frame)
    if (frame)
    {
- #if LIBAVFILTER_VERSION_INT < AV_VERSION_INT(3,0,0)
-+#if LIBAVFILTER_VERSION_MICRO < 50 // Libav
-+    result = m_dllAvFilter.av_vsrc_buffer_add_frame(m_pFilterIn, frame, frame->pts, m_pCodecContext->sample_aspect_ratio);
-+#else
+ #if LIBAVFILTER_VERSION_INT >= AV_VERSION_INT(2,13,0)
++#if LIBAVFILTER_VERSION_MICRO
      result = m_dllAvFilter.av_vsrc_buffer_add_frame(m_pFilterIn, frame, 0);
++#else
++    result = m_dllAvFilter.av_vsrc_buffer_add_frame(m_pFilterIn, frame, frame->pts, m_pCodecContext->sample_aspect_ratio);
 +#endif
- #else
-     result = m_dllAvFilter.av_buffersrc_add_frame(m_pFilterIn, frame, 0);
- #endif
+ #elif LIBAVFILTER_VERSION_INT >= AV_VERSION_INT(2,7,0)
+     result = m_dllAvFilter.av_vsrc_buffer_add_frame(m_pFilterIn, frame);
+ #elif LIBAVCODEC_VERSION_INT >= AV_VERSION_INT(53,3,0)
+-- 
+1.7.3.4
+
