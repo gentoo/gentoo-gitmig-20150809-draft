@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.2.0.ebuild,v 1.3 2012/09/17 07:31:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.2.0.ebuild,v 1.4 2012/11/14 20:25:03 armin76 Exp $
 
 EAPI="4"
 
@@ -108,7 +108,7 @@ src_prepare() {
 	fi
 
 	EPATCH_SOURCE="${WORKDIR}/patches" EPATCH_SUFFIX="patch" \
-		EPATCH_FORCE="yes" epatch
+		EPATCH_EXCLUDE="015_java7.patch" EPATCH_FORCE="yes" epatch
 
 	if use server ; then
 		cd unix/xserver
