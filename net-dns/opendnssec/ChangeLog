@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/opendnssec
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/ChangeLog,v 1.19 2012/08/14 19:43:33 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/ChangeLog,v 1.20 2012/11/14 21:11:00 mschiff Exp $
+
+*opendnssec-1.3.11 (14 Nov 2012)
+
+  14 Nov 2012; Marc Schiffbauer <mschiff@gentoo.org> +opendnssec-1.3.11.ebuild:
+  Version bump. Fix EPPCLIENT_PIDFILE path.
 
 *opendnssec-1.3.10 (14 Aug 2012)
 
