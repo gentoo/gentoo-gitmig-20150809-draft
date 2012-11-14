@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/frobtads
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/frobtads/ChangeLog,v 1.9 2012/10/02 16:46:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/frobtads/ChangeLog,v 1.10 2012/11/14 19:07:28 ago Exp $
+
+  14 Nov 2012; Agostino Sarubbo <ago@gentoo.org> frobtads-1.2.2.ebuild:
+  Stable for amd64, wrt bug #442160
 
   02 Oct 2012; Michael Sterrett <mr_bones_@gentoo.org> frobtads-1.2.2.ebuild:
   drop autotools
