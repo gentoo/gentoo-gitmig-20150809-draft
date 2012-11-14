@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mhonarc/mhonarc-2.6.18-r1.ebuild,v 1.2 2012/11/08 19:30:29 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mhonarc/mhonarc-2.6.18-r1.ebuild,v 1.3 2012/11/14 20:26:36 ago Exp $
 
 inherit perl-app
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.mhonarc.org/release/MHonArc/tar/MHonArc-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~mips ~ppc ~sparc ~x86"
 IUSE=""
 
 RESTRICT="mirror"
