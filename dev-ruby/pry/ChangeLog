@@ -1,6 +1,17 @@
 # ChangeLog for dev-ruby/pry
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pry/ChangeLog,v 1.9 2012/11/14 04:06:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pry/ChangeLog,v 1.10 2012/11/14 07:16:28 graaff Exp $
+
+  14 Nov 2012; Hans de Graaff <graaff@gentoo.org> +pry-0.9.7.4-r1.ebuild:
+  Revision bump to depend on the right slot of slop, and to actually write the
+  right gemspec with fixed dependencies. Fixes bug 443054. Drop ppc64 due to
+  unkeyworded slop slot.
+
+*pry-0.9.7.4-r1 (14 Nov 2012)
+
+  14 Nov 2012; Hans de Graaff <graaff@gentoo.org> +pry-0.9.7.4-r1.ebuild:
+  Revision bump to depend on the right slot of slop, and to actually write the
+  right gemspec with fixed dependencies. Fixes bug 443054.
 
   14 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org> pry-0.9.7.4.ebuild:
   Bump dependency on ruby_parser as reported by antarus.
