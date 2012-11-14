@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.9.3.ebuild,v 1.3 2012/11/14 17:34:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.9.3.ebuild,v 1.4 2012/11/14 19:56:12 ago Exp $
 
 EAPI=4
 
@@ -40,8 +40,10 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-2.9.1-input-box.patch \
-		"${FILESDIR}"/${PN}-2.9.3-cflags.patch
+	epatch \
+		"${FILESDIR}"/${PN}-2.9.1-input-box.patch \
+		"${FILESDIR}"/${PN}-2.9.3-cflags.patch \
+		"${FILESDIR}"/${PN}-2.9.3-nogtk.patch
 
 	# use $libdir/hexchat/plugins as the plugin directory
 	if [[ $(get_libdir) != "lib" ]] ; then
@@ -52,7 +54,7 @@ src_prepare() {
 	# QA: remove deprecated line from desktop file
 	sed -e '/Encoding=UTF-8/d' -i ${PN}.desktop || die 'sed failed'
 
-	./autogen.sh
+	./autogen.sh || die
 }
 
 src_configure() {
