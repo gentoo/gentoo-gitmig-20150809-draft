@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/libqb/libqb-0.14.3.ebuild,v 1.1 2012/10/29 11:07:24 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/libqb/libqb-0.14.3.ebuild,v 1.2 2012/11/14 17:23:50 jer Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://fedorahosted.org/releases/q/u/quarterback/${P}.tar.xz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="debug doc examples static-libs test"
 
 RDEPEND="dev-libs/glib:2"

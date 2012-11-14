@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/crmsh/crmsh-1.2.1.ebuild,v 1.1 2012/11/09 08:19:38 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/crmsh/crmsh-1.2.1.ebuild,v 1.2 2012/11/14 17:22:45 jer Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://hg.savannah.gnu.org/hgweb/crmsh/archive/${MY_TREE}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE=""
 
 DEPEND="
