@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xdotool
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdotool/ChangeLog,v 1.27 2012/11/12 18:56:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdotool/ChangeLog,v 1.28 2012/11/14 19:51:08 vapier Exp $
+
+  14 Nov 2012; Mike Frysinger <vapier@gentoo.org>
+  xdotool-2.20101012.3049.ebuild, xdotool-2.20110530.1.ebuild:
+  Minor style tweaks.
 
   12 Nov 2012; Mike Frysinger <vapier@gentoo.org> xdotool-2.20110530.1.ebuild:
   Add arm love for ChromiumOS.

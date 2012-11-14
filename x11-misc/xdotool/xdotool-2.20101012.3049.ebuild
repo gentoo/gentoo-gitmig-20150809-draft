@@ -1,23 +1,22 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdotool/xdotool-2.20101012.3049.ebuild,v 1.3 2011/03/28 13:33:33 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdotool/xdotool-2.20101012.3049.ebuild,v 1.4 2012/11/14 19:51:08 vapier Exp $
 
 EAPI=2
 
 inherit eutils toolchain-funcs flag-o-matic multilib
 
-DESCRIPTION="Simulate keyboard input and mouse activity, move and resize windows."
+DESCRIPTION="Simulate keyboard input and mouse activity, move and resize windows"
 HOMEPAGE="http://www.semicomplete.com/projects/xdotool/"
 SRC_URI="http://semicomplete.googlecode.com/files/${P}.tar.gz"
-LICENSE="as-is"
 
+LICENSE="as-is"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="examples"
 
 DEPEND="x11-libs/libXtst
 	x11-libs/libX11"
-
 RDEPEND="${DEPEND}"
 
 # The test wants to manualy start Xvfb, wont use VirtualX and it tries
