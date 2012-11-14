@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pry/pry-0.9.7.4.ebuild,v 1.5 2012/08/09 06:07:59 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pry/pry-0.9.7.4.ebuild,v 1.6 2012/11/14 04:06:27 flameeyes Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ SLOT="0"
 LICENSE="MIT"
 KEYWORDS="~amd64 ~ppc64 ~x86"
 
-ruby_add_rdepend ">=dev-ruby/ruby_parser-2.0.5
+ruby_add_rdepend ">=dev-ruby/ruby_parser-2.3.1
 	>=dev-ruby/coderay-0.9.8
 	>=dev-ruby/slop-2.1.0
 	>=dev-ruby/method_source-0.6.7
