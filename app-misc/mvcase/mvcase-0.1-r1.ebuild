@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mvcase/mvcase-0.1-r1.ebuild,v 1.1 2010/10/20 00:54:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mvcase/mvcase-0.1-r1.ebuild,v 1.2 2012/11/14 23:29:23 hasufell Exp $
 
 EAPI="2"
 
@@ -19,11 +19,13 @@ DEPEND="dev-libs/shhopt"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-includes.patch
+	epatch "${FILESDIR}"/${P}-includes.patch \
+		"${FILESDIR}"/${P}-flags.patch
 }
 
 src_compile() {
-	emake COMPILE=$(tc-getCC) CFLAGS="${CFLAGS} ${LDFLAGS}" || die
+	tc-export CC
+	emake || die
 }
 
 src_install() {
