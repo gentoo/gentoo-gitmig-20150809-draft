@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/cholmod-2.0.1.ebuild,v 1.2 2012/11/12 23:45:59 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/cholmod-2.0.1.ebuild,v 1.3 2012/11/14 20:29:00 bicatali Exp $
 
 EAPI=4
 
-inherit autotools-utils
+inherit autotools-utils multilib
 
 DESCRIPTION="Sparse Cholesky factorization and update/downdate library"
 HOMEPAGE="http://www.cise.ufl.edu/research/sparse/cholmod/"
