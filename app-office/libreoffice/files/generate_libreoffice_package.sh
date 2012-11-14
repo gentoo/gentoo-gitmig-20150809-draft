@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # important: you need to use the most general CFLAGS to build the packages
-# recommendation: 
+# recommendation:
 #  * for x86  : CFLAGS="-march=i586 -mtune=generic -O2 -pipe -g"
 #  * for amd64: CFLAGS="-march=x86-64 -mtune=generic -O2 -pipe -g"
 
@@ -24,49 +24,58 @@ IUSES_NG="-gnome -eds"
 IUSES_K="kde"
 IUSES_NK="-kde"
 
+if [ -f /etc/portage/package.use ] ; then
+	echo "Please save your package.use and make it as a directory"
+	exit 1
+fi
+
 mkdir -p /etc/portage/package.use/
+
+OPTS="-v"
+
+MYPKGDIR="$( emerge --info | grep PKGDIR | sed "s:PKGDIR=::;s:\"::g" )"
 
 # compile the flavor
 echo "Base"
 echo "app-office/libreoffice ${IUSES_BASE} ${IUSES_NJ} ${IUSES_NG} ${IUSES_NK}" > /etc/portage/package.use/libreo
-emerge -v =libreoffice-${VERSION} || die "emerge failed"
+emerge ${OPTS} =libreoffice-${VERSION} || die "emerge failed"
 quickpkg libreoffice --include-config=y
-mv /tmp/portage/packages/app-office/libreoffice-${VERSION}.tbz2 ./libreoffice-base-${BINVERSION}.tbz2  || die "Moving package failed"
+mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ./libreoffice-base-${BINVERSION}.tbz2  || die "Moving package failed"
 
 echo "Base - java"
 echo "app-office/libreoffice ${IUSES_BASE} ${IUSES_J} ${IUSES_NG} ${IUSES_NK}" > /etc/portage/package.use/libreo
-emerge -v =libreoffice-${VERSION} || die "emerge failed"
+emerge ${OPTS} =libreoffice-${VERSION} || die "emerge failed"
 quickpkg libreoffice --include-config=y
-mv /tmp/portage/packages/app-office/libreoffice-${VERSION}.tbz2 ./libreoffice-base-java-${BINVERSION}.tbz2  || die "Moving package failed"
+mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ./libreoffice-base-java-${BINVERSION}.tbz2  || die "Moving package failed"
 
 # kde flavor
 echo "KDE"
 echo "app-office/libreoffice ${IUSES_BASE} ${IUSES_NJ} ${IUSES_NG} ${IUSES_K}" > /etc/portage/package.use/libreo
-emerge -v =libreoffice-${VERSION} || die "emerge failed"
+emerge ${OPTS} =libreoffice-${VERSION} || die "emerge failed"
 quickpkg libreoffice --include-config=y
-mv /tmp/portage/packages/app-office/libreoffice-${VERSION}.tbz2 ./libreoffice-kde-${BINVERSION}.tbz2  || die "Moving package failed"
+mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ./libreoffice-kde-${BINVERSION}.tbz2  || die "Moving package failed"
 
 echo "KDE - java"
 echo "app-office/libreoffice ${IUSES_BASE} ${IUSES_J} ${IUSES_NG} ${IUSES_K}" > /etc/portage/package.use/libreo
-emerge -v =libreoffice-${VERSION} || die "emerge failed"
+emerge ${OPTS} =libreoffice-${VERSION} || die "emerge failed"
 quickpkg libreoffice --include-config=y
-mv /tmp/portage/packages/app-office/libreoffice-${VERSION}.tbz2 ./libreoffice-kde-java-${BINVERSION}.tbz2  || die "Moving package failed"
+mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ./libreoffice-kde-java-${BINVERSION}.tbz2  || die "Moving package failed"
 
 # gnome flavor
 echo "Gnome"
 echo "app-office/libreoffice ${IUSES_BASE} ${IUSES_NJ} ${IUSES_G} ${IUSES_NK}" > /etc/portage/package.use/libreo
-emerge -v =libreoffice-${VERSION} || die "emerge failed"
+emerge ${OPTS} =libreoffice-${VERSION} || die "emerge failed"
 quickpkg libreoffice --include-config=y
-mv /tmp/portage/packages/app-office/libreoffice-${VERSION}.tbz2 ./libreoffice-gnome-${BINVERSION}.tbz2  || die "Moving package failed"
+mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ./libreoffice-gnome-${BINVERSION}.tbz2  || die "Moving package failed"
 
 echo "Gnome -java"
 echo "app-office/libreoffice ${IUSES_BASE} ${IUSES_J} ${IUSES_G} ${IUSES_NK}" > /etc/portage/package.use/libreo
-emerge -v =libreoffice-${VERSION} || die "emerge failed"
+emerge ${OPTS} =libreoffice-${VERSION} || die "emerge failed"
 quickpkg libreoffice --include-config=y
-mv /tmp/portage/packages/app-office/libreoffice-${VERSION}.tbz2 ./libreoffice-gnome-java-${BINVERSION}.tbz2  || die "Moving package failed"
+mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ./libreoffice-gnome-java-${BINVERSION}.tbz2  || die "Moving package failed"
 
 
-for name in ./libreoffice-*-${BINVERSION}.tbz2 ; do 
+for name in ./libreoffice-*-${BINVERSION}.tbz2 ; do
 
   BN=`basename $name .tbz2`
 

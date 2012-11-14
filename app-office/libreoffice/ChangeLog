@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.391 2012/11/14 10:13:06 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.392 2012/11/14 22:32:55 ago Exp $
+
+  14 Nov 2012; Agostino Sarubbo <ago@gentoo.org>
+  files/generate_libreoffice_package.sh:
+  Make the generator script more usable
 
   14 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-9999-r2.ebuild:
   Also symlink the nsplugin. Drop no longer needed disable.
