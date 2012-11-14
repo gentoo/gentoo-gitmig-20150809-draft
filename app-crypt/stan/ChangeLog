@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/stan
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/stan/ChangeLog,v 1.5 2011/04/01 12:54:58 c1pher Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/stan/ChangeLog,v 1.6 2012/11/14 16:33:55 ago Exp $
+
+  14 Nov 2012; Agostino Sarubbo <ago@gentoo.org> stan-0.4.1.ebuild:
+  Stable for amd64, wrt bug #441892
 
   01 Apr 2011; Dane Smith <c1pher@gentoo.org> stan-0.4.1.ebuild,
   metadata.xml:
