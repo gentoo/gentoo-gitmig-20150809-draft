@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pcsc-lite
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.143 2012/11/13 15:55:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.144 2012/11/14 10:20:44 blueness Exp $
+
+  14 Nov 2012; Anthony G. Basile <blueness@gentoo.org> pcsc-lite-1.8.6.ebuild:
+  stable ppc, bug #442432
 
   13 Nov 2012; Brent Baude <ranger@gentoo.org> pcsc-lite-1.8.6.ebuild:
   Marking pcsc-lite-1.8.6 ppc64 for bug 442432
