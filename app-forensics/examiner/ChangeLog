@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/examiner
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/examiner/ChangeLog,v 1.10 2012/10/06 10:00:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/examiner/ChangeLog,v 1.11 2012/11/14 16:33:05 ago Exp $
+
+  14 Nov 2012; <ago@gentoo.org> examiner-0.5-r2.ebuild:
+  Stable for amd64, wrt bug #442960
 
   06 Oct 2012; Agostino Sarubbo <ago@gentoo.org> examiner-0.5-r2.ebuild:
   Add ~amd64 and code improvements, wrt bug #437374
