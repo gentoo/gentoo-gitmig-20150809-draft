@@ -1,6 +1,9 @@
 # ChangeLog for media-video/2mandvd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/2mandvd/ChangeLog,v 1.26 2012/10/06 06:36:36 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/2mandvd/ChangeLog,v 1.27 2012/11/14 16:34:04 ago Exp $
+
+  14 Nov 2012; <ago@gentoo.org> 2mandvd-1.8.4.ebuild:
+  Stable for amd64, wrt bug #442166
 
 *2mandvd-1.8.4 (06 Oct 2012)
 
