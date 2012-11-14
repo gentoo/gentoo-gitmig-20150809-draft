@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-0.8.0.ebuild,v 1.1 2012/11/11 05:53:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-0.8.0-r1.ebuild,v 1.1 2012/11/14 02:15:10 flameeyes Exp $
 
 EAPI="4"
 
@@ -24,7 +24,7 @@ KEYWORDS="~amd64 ~ppc64 ~x86"
 
 LICENSE="LGPL-3"
 SLOT="0"
-IUSE="examples vanilla"
+IUSE="examples"
 
 RDEPEND="sys-libs/libcap"
 
@@ -32,19 +32,15 @@ DEPEND="${RDEPEND}
 	app-text/docbook-sgml-utils
 	>=sys-kernel/linux-headers-3.2"
 
-# For init script, so protect with vanilla, they are not strictly
-# needed.
 RDEPEND="${RDEPEND}
-	!vanilla? (
-		sys-apps/util-linux
-		app-misc/pax-utils
-		>=sys-apps/openrc-0.9.9.1
-		virtual/awk
-	)"
+	sys-apps/util-linux
+	app-misc/pax-utils
+	>=sys-apps/openrc-0.9.9.1
+	virtual/awk"
 
 CONFIG_CHECK="~CGROUPS ~CGROUP_DEVICE
 	~CPUSETS ~CGROUP_CPUACCT
-	~RESOURCE_COUNTERS ~CGROUP_MEM_RES_CTLR
+	~RESOURCE_COUNTERS
 	~CGROUP_SCHED
 
 	~NAMESPACES
@@ -118,23 +114,19 @@ src_install() {
 
 	find "${D}" -name '*.la' -delete
 
-	use vanilla && return 0
-
 	# Gentoo-specific additions!
 	newinitd "${FILESDIR}/${PN}.initd.2" ${PN}
 	keepdir /var/log/lxc
 }
 
 pkg_postinst() {
-	if ! use vanilla; then
-		elog "There is an init script provided with the package now; no documentation"
-		elog "is currently available though, so please check out /etc/init.d/lxc ."
-		elog "You _should_ only need to symlink it to /etc/init.d/lxc.configname"
-		elog "to start the container defined into /etc/lxc/configname.conf ."
-		elog "For further information about LXC development see"
-		elog "http://blog.flameeyes.eu/tag/lxc" # remove once proper doc is available
-		elog ""
-	fi
+	elog "There is an init script provided with the package now; no documentation"
+	elog "is currently available though, so please check out /etc/init.d/lxc ."
+	elog "You _should_ only need to symlink it to /etc/init.d/lxc.configname"
+	elog "to start the container defined into /etc/lxc/configname.conf ."
+	elog "For further information about LXC development see"
+	elog "http://blog.flameeyes.eu/tag/lxc" # remove once proper doc is available
+	elog ""
 	ewarn "With version 0.7.4, the mountpoint syntax came back to the one used by 0.7.2"
 	ewarn "and previous versions. This means you'll have to use syntax like the following"
 	ewarn ""
