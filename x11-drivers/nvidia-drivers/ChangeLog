@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.406 2012/11/14 19:06:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.407 2012/11/14 19:44:26 ago Exp $
+
+  14 Nov 2012; Agostino Sarubbo <ago@gentoo.org> nvidia-drivers-96.43.23.ebuild:
+  stable for amd64, wrt to bug #438246
 
   14 Nov 2012; Agostino Sarubbo <ago@gentoo.org>
   nvidia-drivers-173.14.36.ebuild:
