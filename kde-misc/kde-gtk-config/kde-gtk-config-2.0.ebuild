@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kde-gtk-config/kde-gtk-config-2.0.ebuild,v 1.4 2012/08/25 06:42:16 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kde-gtk-config/kde-gtk-config-2.0.ebuild,v 1.5 2012/11/14 14:43:19 kensington Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ ru sv uk zh_CN"
 inherit kde4-base
 
 DESCRIPTION="KDE systemsettings kcm to set GTK application look&feel"
-HOMEPAGE="http://projects.kde.org/projects/playground/base/kde-gtk-config"
+HOMEPAGE="http://projects.kde.org/projects/kdereview/kde-gtk-config"
 SRC_URI="mirror://kde/stable/${PN}/${PV}/src/${P}.tar.bz2"
 
 LICENSE="GPL-3"
