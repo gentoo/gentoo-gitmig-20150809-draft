@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oauthlib/oauthlib-0.3.3.ebuild,v 1.1 2012/11/13 10:08:56 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oauthlib/oauthlib-0.3.3.ebuild,v 1.2 2012/11/14 02:22:05 floppym Exp $
 
 EAPI="4"
 
@@ -8,8 +8,6 @@ PYTHON_DEPEND="2:2.6"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.5 3.*"
 DISTUTILS_SRC_TEST="nosetests"
-# Tests depend on dict order, see https://github.com/idangazit/oauthlib/issues/40
-PYTHON_TESTS_RESTRICTED_ABIS="*-pypy-*"
 
 inherit distutils
 
