@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/wcslib-4.14.ebuild,v 1.4 2012/10/19 10:45:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/wcslib-4.16.ebuild,v 1.1 2012/11/14 18:51:43 bicatali Exp $
 
 EAPI=4
 
