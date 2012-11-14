@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/remmina-1.0.0_p20121004.ebuild,v 1.2 2012/10/12 22:16:52 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/remmina-1.0.0_p20121004.ebuild,v 1.3 2012/11/14 19:05:35 ago Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ if [[ ${PV} != 9999 ]]; then
 	SRC_URI="mirror://github/FreeRDP/Remmina/${P}.tar.gz
 		mirror://gentoo/${P}.tar.gz
 		http://dev.gentoo.org/~floppym/distfiles/${P}.tar.gz"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 ~x86"
 else
 	inherit git-2
 	SRC_URI=""

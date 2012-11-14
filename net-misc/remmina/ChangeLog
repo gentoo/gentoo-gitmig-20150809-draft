@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/remmina
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.41 2012/10/12 22:17:57 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.42 2012/11/14 19:05:35 ago Exp $
+
+  14 Nov 2012; Agostino Sarubbo <ago@gentoo.org>
+  remmina-1.0.0_p20121004.ebuild:
+  Stable for amd64, wrt bug #442212
 
   12 Oct 2012; Mike Gilbert <floppym@gentoo.org>
   -files/remmina-1.0.0-desktop-file.patch,
