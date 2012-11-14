@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/knocker/knocker-0.7.1-r2.ebuild,v 1.2 2012/11/13 20:29:26 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/knocker/knocker-0.7.1-r2.ebuild,v 1.3 2012/11/14 06:21:05 pinkbyte Exp $
 
 EAPI="4"
 
@@ -22,6 +22,9 @@ DOCS="AUTHORS BUGS ChangeLog NEWS README TO-DO"
 
 PATCHES=( "${FILESDIR}"/${P}-free.patch )
 
-src_compile() {
-	emake CC="$(tc-getCC)"
+src_prepare() {
+	# fix configure checks for compiler, wrt bug #442962
+	tc-export CC
+
+	base_src_prepare
 }
