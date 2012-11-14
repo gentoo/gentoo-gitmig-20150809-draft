@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.9.5-r3.ebuild,v 1.3 2012/05/18 08:53:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.9.5-r3.ebuild,v 1.4 2012/11/14 14:24:42 jlec Exp $
 
 # this ebuild is only for the libtiff.so.3 (+ 4) and libtiffxx.so.3 (+ 4) SONAME for ABI compat
 
@@ -42,7 +42,7 @@ src_configure() {
 src_install() {
 	# Let `make install` and libtool handle insecure runpath(s)
 	dodir tmp
-	emake DESTDIR="${D}/tmp" install
+	emake DESTDIR="${ED}/tmp" install
 
 	# .so.3 (upstream) is used by sci-chemistry/icm
 	# .so.4 (Debian) is used by net-im/skype
