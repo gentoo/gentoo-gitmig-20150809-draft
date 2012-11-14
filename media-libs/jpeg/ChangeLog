@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jpeg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.134 2012/09/08 06:46:19 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.135 2012/11/14 14:46:32 jlec Exp $
+
+  14 Nov 2012; Justin Lecher <jlec@gentoo.org> jpeg-6b-r9.ebuild:
+  Prefix fix for temporary installation directory
 
   08 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.
