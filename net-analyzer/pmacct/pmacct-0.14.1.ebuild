@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/pmacct-0.14.1.ebuild,v 1.2 2012/11/03 20:19:38 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/pmacct-0.14.1.ebuild,v 1.3 2012/11/14 18:21:49 jer Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
@@ -26,10 +26,13 @@ DOCS=(
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.12.0-gentoo.patch
+	sed -i \
+		-e '/[[:space:]]ar /s|ar |$(AR) |g' \
+		$(find . -name Makefile.in) || die
 }
 
 src_configure() {
-	tc-export CC
+	tc-export CC AR RANLIB
 	econf \
 		$(use_enable 64bit) \
 		$(use_enable debug) \
