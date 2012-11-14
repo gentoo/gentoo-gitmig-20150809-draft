@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/findutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.209 2012/05/22 22:29:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.210 2012/11/14 05:50:51 ottxor Exp $
+
+  14 Nov 2012; Christoph Junghans <ottxor@gentoo.org>
+  findutils-4.5.10-r1.ebuild:
+  finally added prefix support (bug #388147)
 
   22 May 2012; Mike Frysinger <vapier@gentoo.org>
   +files/findutils-4.5.10-no-gets.patch, findutils-4.5.10-r1.ebuild:
