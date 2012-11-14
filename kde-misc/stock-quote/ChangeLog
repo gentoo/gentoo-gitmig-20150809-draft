@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/stock-quote
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/stock-quote/ChangeLog,v 1.8 2012/11/14 21:18:16 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/stock-quote/ChangeLog,v 1.9 2012/11/14 21:18:46 johu Exp $
+
+  14 Nov 2012; Johannes Huber <johu@gentoo.org> -stock-quote-2.1.ebuild:
+  Remove old.
 
   14 Nov 2012; Johannes Huber <johu@gentoo.org> stock-quote-2.1-r1.ebuild:
   Stable for x86, wrt bug #441342
