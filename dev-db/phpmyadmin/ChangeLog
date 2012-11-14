@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.476 2012/11/13 20:13:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.477 2012/11/14 13:33:24 ago Exp $
+
+  14 Nov 2012; <ago@gentoo.org> phpmyadmin-3.5.3.ebuild:
+  Stable for amd64, wrt bug #438804
 
   13 Nov 2012; Jeroen Roovers <jer@gentoo.org> phpmyadmin-3.5.3.ebuild:
   Stable for HPPA (bug #438804).
