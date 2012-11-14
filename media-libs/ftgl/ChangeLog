@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ftgl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ChangeLog,v 1.37 2012/05/10 18:29:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ChangeLog,v 1.38 2012/11/14 14:14:47 jlec Exp $
+
+  14 Nov 2012; Justin Lecher <jlec@gentoo.org> ftgl-2.1.3_rc5.ebuild:
+  Keyworded for ~linux, tested by me
 
   10 May 2012; Alexis Ballier <aballier@gentoo.org> ftgl-2.1.3_rc5.ebuild:
   keyword ~amd64-fbsd
@@ -129,4 +132,3 @@
   17 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org>
   +files/2.1.2-ftgl.pc.in.patch, +ftgl-2.1.2.ebuild:
   initial commit - ebuild provided by Jordi Vilalta via bug #47048
-
