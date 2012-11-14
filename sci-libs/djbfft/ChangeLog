@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/djbfft
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/djbfft/ChangeLog,v 1.13 2012/06/28 01:12:40 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/djbfft/ChangeLog,v 1.14 2012/11/14 20:27:40 ago Exp $
+
+  14 Nov 2012; Agostino Sarubbo <ago@gentoo.org> djbfft-0.76-r1.ebuild:
+  Stable for amd64, wrt bug #442748
 
   28 Jun 2012; Sébastien Fabbro <bicatali@gentoo.org> djbfft-0.76-r1.ebuild:
   Switched to EAPI4. keyword ~amd64-linux ~x86-linux. cleaning
