@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libotf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libotf/ChangeLog,v 1.50 2012/05/04 18:35:44 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libotf/ChangeLog,v 1.51 2012/11/14 14:13:40 jlec Exp $
+
+  14 Nov 2012; Justin Lecher <jlec@gentoo.org> libotf-0.9.9.ebuild:
+  Keyworded for ~linux, tested by me
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> libotf-0.9.8.ebuild,
   libotf-0.9.9.ebuild, libotf-0.9.12.ebuild:
@@ -178,4 +181,3 @@
 
   02 May 2004; Mamoru KOMACHI <usata@gentoo.org> libotf-0.9.ebuild:
   Initial import.
-
