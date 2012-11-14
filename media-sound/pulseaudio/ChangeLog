@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.280 2012/11/13 15:57:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.281 2012/11/14 13:46:16 ago Exp $
+
+  14 Nov 2012; <ago@gentoo.org> pulseaudio-2.1-r1.ebuild:
+  Stable for amd64, wrt bug #435074
 
   13 Nov 2012; Brent Baude <ranger@gentoo.org> pulseaudio-2.1-r1.ebuild:
   Marking pulseaudio-2.1-r1 ppc64 for bug 435074
