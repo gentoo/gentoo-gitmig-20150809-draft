@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/ccid
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ChangeLog,v 1.82 2012/11/13 15:55:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ChangeLog,v 1.83 2012/11/14 10:23:01 blueness Exp $
+
+  14 Nov 2012; Anthony G. Basile <blueness@gentoo.org> ccid-1.4.8.ebuild:
+  stable ppc, bug #442432
 
   13 Nov 2012; Brent Baude <ranger@gentoo.org> ccid-1.4.8.ebuild:
   Marking ccid-1.4.8 ppc64 for bug 442432
