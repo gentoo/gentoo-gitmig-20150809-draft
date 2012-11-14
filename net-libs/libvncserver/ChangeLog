@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libvncserver
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.69 2012/11/14 18:51:50 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.70 2012/11/14 21:08:49 floppym Exp $
+
+*libvncserver-0.9.9-r1 (14 Nov 2012)
+
+  14 Nov 2012; Mike Gilbert <floppym@gentoo.org> +libvncserver-0.9.9-r1.ebuild:
+  Make static-libs optional and call prune_libtool_files. Bug 443134 by ago.
 
   14 Nov 2012; Mike Gilbert <floppym@gentoo.org> libvncserver-0.9.7.ebuild,
   libvncserver-0.9.8.2-r2.ebuild, libvncserver-0.9.9.ebuild:
