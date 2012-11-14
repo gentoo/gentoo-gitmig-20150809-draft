@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-odbc/oracle-instantclient-odbc-11.2.0.3.ebuild,v 1.5 2012/11/14 17:19:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-odbc/oracle-instantclient-odbc-11.2.0.3.ebuild,v 1.6 2012/11/14 17:20:31 ago Exp $
 
 EAPI="4"
 
@@ -21,7 +21,7 @@ SRC_URI="
 
 LICENSE="OTN"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 RESTRICT="fetch"
 IUSE="multilib"
 
