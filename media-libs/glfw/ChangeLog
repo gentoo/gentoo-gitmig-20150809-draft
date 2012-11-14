@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/glfw
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glfw/ChangeLog,v 1.13 2012/10/18 20:35:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glfw/ChangeLog,v 1.14 2012/11/14 23:31:43 hasufell Exp $
+
+  14 Nov 2012; Julian Ospald <hasufell@gentoo.org> glfw-2.6.ebuild:
+  respect CFLAGS, CC, AR and whatnot wrt #442740
 
   18 Oct 2012; Michael Sterrett <mr_bones_@gentoo.org> glfw-2.6.ebuild:
   add virtual/glu dep (bug #438828)

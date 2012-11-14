@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glfw/glfw-2.6.ebuild,v 1.7 2012/10/18 20:35:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glfw/glfw-2.6.ebuild,v 1.8 2012/11/14 23:31:43 hasufell Exp $
 
 EAPI=2
-inherit eutils multilib
+inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="The Portable OpenGL FrameWork"
 HOMEPAGE="http://glfw.sourceforge.net/"
@@ -25,8 +25,21 @@ src_prepare() {
 		-e "s:\"docs/:\"/usr/share/doc/${PF}/pdf/:" \
 		readme.html \
 		|| die "sed failed"
+
+	# respect cflags
+	sed -i \
+		-e "/CFLAGS/s#-Os#${CFLAGS}#" \
+		compile.sh \
+		|| die "sed compile.sh failed"
+
 	epatch "${FILESDIR}/${P}"-dyn.patch \
 		"${FILESDIR}"/${P}-ldflags.patch
+
+	# respect cflags in linking command as well
+	sed -i \
+		-e "/^libglfw.so/{n;s/\$(CC)/\$(CC) ${CFLAGS}/;}" \
+		lib/x11/Makefile.x11.in \
+		|| die "sed Makefile.x11.in failed"
 }
 
 src_configure() {
@@ -34,7 +47,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake -C lib/x11 PREFIX=/usr -f Makefile.x11 default libglfw.pc || die "emake failed"
+	emake -C lib/x11 AR=$(tc-getAR) CC=$(tc-getCC) PREFIX=/usr -f Makefile.x11 default libglfw.pc || die "emake failed"
 }
 
 src_install() {
