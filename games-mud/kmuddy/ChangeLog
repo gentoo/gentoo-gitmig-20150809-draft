@@ -1,6 +1,10 @@
 # ChangeLog for games-mud/kmuddy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/kmuddy/ChangeLog,v 1.37 2012/11/14 10:47:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/kmuddy/ChangeLog,v 1.38 2012/11/14 12:33:33 scarabeus Exp $
+
+  14 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> -kmuddy-1.0.1-r1.ebuild,
+  kmuddy-1.0.1-r2.ebuild:
+  Stable on ppc wrt bug#442942.
 
   14 Nov 2012; Agostino Sarubbo <ago@gentoo.org> kmuddy-1.0.1-r2.ebuild:
   Stable for x86, wrt bug #442942
