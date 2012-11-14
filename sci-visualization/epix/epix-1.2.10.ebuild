@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.2.10.ebuild,v 1.5 2012/11/10 12:01:06 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.2.10.ebuild,v 1.6 2012/11/14 19:07:12 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://mathcs.holycross.edu/~ahwang/epix/${P}_withpdf.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc emacs examples"
 
 DEPEND="
