@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/preload
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/preload/ChangeLog,v 1.23 2012/09/14 19:15:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/preload/ChangeLog,v 1.24 2012/11/14 16:34:30 ago Exp $
+
+  14 Nov 2012; Agostino Sarubbo <ago@gentoo.org> preload-0.6.4-r3.ebuild:
+  Stable for amd64, wrt bug #441516
 
 *preload-0.6.4-r3 (14 Sep 2012)
 
