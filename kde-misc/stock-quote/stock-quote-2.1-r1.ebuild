@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/stock-quote/stock-quote-2.1-r1.ebuild,v 1.3 2012/11/06 17:08:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/stock-quote/stock-quote-2.1-r1.ebuild,v 1.4 2012/11/14 21:18:16 johu Exp $
 
 EAPI=4
 inherit kde4-base
@@ -13,7 +13,7 @@ SRC_URI="http://www.kde-look.org/CONTENT/content-files/90695-${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="
