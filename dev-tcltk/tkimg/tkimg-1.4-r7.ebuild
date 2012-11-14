@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.4-r7.ebuild,v 1.3 2012/11/13 14:23:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.4-r7.ebuild,v 1.4 2012/11/14 08:04:11 jlec Exp $
 
 EAPI=4
 
 VIRTUALX_USE=test
 
-inherit eutils multilib prefix virtualx
+inherit eutils multilib prefix toolchain-funcs virtualx
 
 MYP="${PN}${PV}"
 
@@ -27,6 +27,7 @@ RDEPEND="
 	media-libs/tiff:0
 	media-libs/libpng:0
 	>=sys-libs/zlib-1.2.7
+	x11-libs/libX11
 	virtual/jpeg"
 DEPEND="${RDEPEND}
 	test? (
@@ -56,6 +57,7 @@ src_prepare() {
 		-i */configure  || die
 
 	eprefixify */*.h
+	tc-export AR
 }
 
 src_test() {

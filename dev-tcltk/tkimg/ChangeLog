@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tkimg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/ChangeLog,v 1.53 2012/11/13 14:23:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/ChangeLog,v 1.54 2012/11/14 08:04:11 jlec Exp $
+
+  14 Nov 2012; Justin Lecher <jlec@gentoo.org> tkimg-1.4-r7.ebuild:
+  Respect AR and add missing DEP on x11-libs/libX11
 
   13 Nov 2012; Agostino Sarubbo <ago@gentoo.org> tkimg-1.4-r7.ebuild:
   Stable for amd64, wrt bug #433016
