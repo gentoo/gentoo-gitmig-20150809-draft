@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/icedtea-web-1.2.1-r8.ebuild,v 1.1 2012/08/03 20:15:13 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/icedtea-web-1.3.1-r7.ebuild,v 1.1 2012/11/14 21:59:24 caster Exp $
 # Build written by Andrew John Hughes (ahughes@redhat.com)
 
 EAPI="4"
@@ -15,32 +15,40 @@ LICENSE="GPL-2 GPL-2-with-linking-exception LGPL-2"
 SLOT="7"
 KEYWORDS="~amd64 ~ia64 ~x86"
 
-IUSE="build doc javascript +nsplugin test"
+IUSE="build doc gtk2 gtk3 javascript +nsplugin test"
 
-RDEPEND="dev-java/icedtea:${SLOT}"
+COMMON_DEP="
+	dev-java/icedtea:${SLOT}
+	nsplugin? (
+		>=dev-libs/glib-2.16
+		gtk2? (
+			!gtk3? ( >=x11-libs/gtk+-2.6:2 )
+			gtk3? ( x11-libs/gtk+:3 )
+		)
+		!gtk2? ( x11-libs/gtk+:3 )
+	)"
+RDEPEND="${COMMON_DEP}"
 # Need system junit 4.8+. Bug #389795
-DEPEND="${RDEPEND}
+DEPEND="${COMMON_DEP}
+	virtual/pkgconfig
 	javascript? ( dev-java/rhino:1.6 )
 	nsplugin? ( net-misc/npapi-sdk )
 	test? (	>=dev-java/junit-4.8:4 )"
 
 pkg_setup() {
-	JAVA_PKG_WANT_BUILD_VM="icedtea-7 icedtea7"
+	JAVA_PKG_WANT_BUILD_VM="icedtea-${SLOT} icedtea${SLOT}"
 	JAVA_PKG_WANT_SOURCE="1.6"
 	JAVA_PKG_WANT_TARGET="1.6"
 
 	java-vm-2_pkg_setup
 	java-pkg-2_pkg_setup
-}
 
-unset_vars() {
-	unset JAVA_HOME JDK_HOME CLASSPATH JAVAC JAVACFLAGS
+	VMHANDLE="icedtea-${SLOT}"
 }
 
 src_prepare() {
 	# bug #356645
 	epatch "${FILESDIR}"/0002-Respect-LDFLAGS.patch
-	epatch "${FILESDIR}"/${P}-memcpy.patch
 	eautoreconf
 }
 
@@ -54,32 +62,35 @@ src_configure() {
 	else
 		icedteadir="/usr/$(get_libdir)/icedtea${SLOT}"
 		installdir="/usr/$(get_libdir)/icedtea${SLOT}-web"
+		[[ "${vmhome}" == "${icedteadir}" ]] \
+			|| die "Unexpected install location of IcedTea ${SLOT} '${vmhome}'"
 	fi
 
-	unset_vars
+	einfo "Installing IcedTea-Web in '${installdir}'"
+	einfo "Installing IcedTea-Web for IcedTea${SLOT} in '${icedteadir}'"
 
-	if use build || [[ ${vmhome} == ${icedteadir} ]] ; then
-		VMHANDLE="icedtea-${SLOT}"
-	else
-		die "Unexpected install location of IcedTea${SLOT}"
-	fi
+	local gtk_ver=3
+	use gtk2 && gtk_ver=2
+	use gtk3 && gtk_ver=3
 
-	einfo "Installing IcedTea-Web in ${installdir}"
-	einfo "Installing IcedTea-Web for Icedtea${SLOT} in ${icedteadir}"
-	if [ ! -e ${vmhome} ] ; then
-		eerror "Could not find JDK install directory ${vmhome}."
-		die
-	fi
-
-	# we need to override all *dir variables that econf sets
-	# man page (javaws) is installed directly to icedteadir because it's easier than symlinking, as we don't know
-	# the suffix the man page will end up compressed with, anyway
-	econf \
-		--prefix=${installdir} --mandir=${icedteadir}/man --infodir=${installdir}/share/info --datadir=${installdir}/share \
-		--with-jdk-home=${icedteadir} \
-		$(use_enable doc docs) \
-		$(use_enable nsplugin plugin) \
+	local myconf=(
+		# we need to override all *dir variables that econf sets.
+		# man page (javaws) is installed directly to icedteadir because it's
+		# easier than symlinking, as we don't know the suffix the man page will
+		# end up compressed with, anyway
+		--prefix="${installdir}"
+		--mandir="${icedteadir}"/man
+		--infodir="${installdir}"/share/info
+		--datadir="${installdir}"/share
+		--with-jdk-home="${icedteadir}"
+		--with-gtk=${gtk_ver}
+		$(use_enable doc docs)
+		$(use_enable nsplugin plugin)
 		$(use_with javascript rhino)
+	)
+
+	unset JAVA_HOME JDK_HOME CLASSPATH JAVAC JAVACFLAGS
+	econf "${myconf[@]}"
 }
 
 src_compile() {
@@ -88,9 +99,8 @@ src_compile() {
 }
 
 src_install() {
-	# parallel make problem bug #372235
-	emake -j1 DESTDIR="${D}" install
-	dodoc AUTHORS README NEWS
+	# bug #440906
+	MAKEOPTS+=" -j1" default
 
 	if use nsplugin; then
 		install_mozilla_plugin "${installdir}/$(get_libdir)/IcedTeaPlugin.so";
@@ -112,6 +122,7 @@ pkg_postinst() {
 }
 
 pkg_prerm() {
-	# override the java-vm-2 eclass check for removing a system VM, as it doesn't make sense here
+	# override the java-vm-2 eclass check for removing a system VM, as it
+	# doesn't make sense here.
 	:;
 }
