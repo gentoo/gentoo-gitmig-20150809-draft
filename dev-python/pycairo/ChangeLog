@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycairo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.113 2012/11/13 04:54:30 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.114 2012/11/14 00:23:37 naota Exp $
+
+  14 Nov 2012;  <naota@gentoo.org> pycairo-1.10.0-r3.ebuild:
+  Add ~x86-fbsd wrt #442934
 
   13 Nov 2012; Tim Harder <radhermit@gentoo.org> pycairo-1.10.0-r3.ebuild:
   Add conditional dep on cairo with xcb enabled.
