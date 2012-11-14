@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/smc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/smc/ChangeLog,v 1.26 2012/05/04 04:22:29 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/smc/ChangeLog,v 1.27 2012/11/14 16:23:31 tupone Exp $
+
+  14 Nov 2012; Tupone Alfredo <tupone@gentoo.org> smc-1.9.ebuild,
+  +files/smc-1.9-boost150.patch:
+  Build with boost-1.51 Bug #442502 by Ben Longbons
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> smc-1.9.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

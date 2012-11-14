@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/smc/smc-1.9.ebuild,v 1.6 2012/05/04 04:22:29 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/smc/smc-1.9.ebuild,v 1.7 2012/11/14 16:23:31 tupone Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils flag-o-matic games
 
 MUSIC_P=SMC_Music_4.1_high
@@ -30,15 +30,16 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	music? ( app-arch/unzip )"
 
+PATCHES=( "${FILESDIR}"/${P}-boost150.patch )
+
 src_unpack() {
 	unpack ${P}.tar.bz2
 	cd "${S}"
 	use music && unpack ${MUSIC_P}.zip
-	append-flags -DBOOST_FILESYSTEM_VERSION=2
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	default
 	newicon data/icon/window_32.png smc.png
 	make_desktop_entry ${PN} "Secret Maryo Chronicles"
 	doman makefiles/unix/man/smc.6
