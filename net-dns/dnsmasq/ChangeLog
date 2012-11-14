@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/dnsmasq
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.230 2012/10/08 05:50:08 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.231 2012/11/14 18:31:00 chutzpah Exp $
+
+*dnsmasq-2.63-r1 (14 Nov 2012)
+
+  14 Nov 2012; Patrick McLean <chutzpah@gentoo.org> +dnsmasq-2.63-r1.ebuild,
+  metadata.xml:
+  Revision bump, add new "dhcp-tools" USE flag that installs extra tools for
+  manually managing dhcp leases.
 
   08 Oct 2012; Patrick McLean <chutzpah@gentoo.org> -dnsmasq-2.57.ebuild,
   -dnsmasq-2.61.ebuild, -files/dnsmasq.confd, -files/dnsmasq-init:
