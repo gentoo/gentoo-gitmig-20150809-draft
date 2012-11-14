@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/glu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glu/ChangeLog,v 1.2 2012/09/20 11:57:23 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glu/ChangeLog,v 1.3 2012/11/14 13:08:42 chithanh Exp $
+
+  14 Nov 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  glu-9.0.0.ebuild:
+  Add pkg_pretend() check against file collisions with symlinks which were
+  managed by eselect opengl, bug #435682.
 
   20 Sep 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   glu-9.0.0.ebuild:
