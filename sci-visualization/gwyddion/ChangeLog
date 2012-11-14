@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/gwyddion
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/ChangeLog,v 1.39 2012/11/07 19:07:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/ChangeLog,v 1.40 2012/11/14 13:34:26 ago Exp $
+
+  14 Nov 2012; Agostino Sarubbo <ago@gentoo.org> gwyddion-2.29.ebuild:
+  Stable for amd64, wrt bug #442060
 
   07 Nov 2012; Justin Lecher <jlec@gentoo.org> gwyddion-2.29.ebuild:
   Fix typo, #442234
