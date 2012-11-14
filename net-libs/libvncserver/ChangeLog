@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libvncserver
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.68 2012/09/17 20:16:35 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.69 2012/11/14 18:51:50 floppym Exp $
+
+  14 Nov 2012; Mike Gilbert <floppym@gentoo.org> libvncserver-0.9.7.ebuild,
+  libvncserver-0.9.8.2-r2.ebuild, libvncserver-0.9.9.ebuild:
+  Pass --disable-silent-rules to econf, bug 443128 by ago.
 
   17 Sep 2012; Andreas Schuerch <nativemad@gentoo.org>
   libvncserver-0.9.9.ebuild:
