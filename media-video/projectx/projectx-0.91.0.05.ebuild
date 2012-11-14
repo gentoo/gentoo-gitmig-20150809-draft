@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.91.0.05.ebuild,v 1.1 2012/11/09 15:46:59 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.91.0.05.ebuild,v 1.2 2012/11/14 16:49:30 billie Exp $
 
 EAPI=4
 
@@ -62,7 +62,9 @@ java_prepare() {
 
 	# patch executable and icon
 	sed -i -e "s:^\(Exec=\).*:\1${PN}_gui:g" \
-		-e "s:^\(Icon=\).*:\1${PN}:g" *.desktop || die
+		-e "s:^\(Icon=\).*:\1${PN}:g" \
+		-e 's:^\(Categories=.*\):\1;:g' \
+		-e '/^Encoding=.*/d' *.desktop || die
 
 	# convert CRLF to LF
 	edos2unix *.txt MANIFEST.MF
