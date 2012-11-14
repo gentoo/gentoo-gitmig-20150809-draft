@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dahdi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.44 2012/08/20 09:17:01 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.45 2012/11/14 21:03:26 ago Exp $
+
+  14 Nov 2012; Agostino Sarubbo <ago@gentoo.org> dahdi-2.6.1-r1.ebuild:
+  Stable for amd64, wrt bug #441468
 
 *dahdi-2.6.1-r1 (20 Aug 2012)
 
@@ -250,4 +253,3 @@
   but HPEC functionality removed as the decision logic is not portable to
   X86 architectures and looks fragile. Took 2.6.29 build fixes from upstream
   Digium bug #14285.
-
