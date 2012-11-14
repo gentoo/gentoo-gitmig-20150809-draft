@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/package.use.mask,v 1.38 2012/08/27 14:52:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/package.use.mask,v 1.39 2012/11/14 13:45:13 ford_prefect Exp $
 
 # Diego Elio Pettenò (27 Aug 2012)
 # The libpci access is only used for linux.
@@ -49,6 +49,7 @@ app-arch/libarchive -e2fsprogs
 # Older versions also had an OSS compatibility wrapper on that USE so
 # they are excluded.
 >=media-sound/pulseaudio-0.9.16_rc5 oss
+>=media-sound/pulseaudio-2.1 systemd
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (9 Mar 2011)
 #
