@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.0.0.ebuild,v 1.2 2012/11/04 21:57:34 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.0.0.ebuild,v 1.3 2012/11/14 08:34:33 cardoe Exp $
 
 EAPI=4
 
@@ -324,6 +324,7 @@ src_configure() {
 
 src_test() {
 	# Explicitly allow parallel build of tests
+	export VIR_TEST_DEBUG=1
 	HOME="${T}" emake check || die "tests failed"
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.234 2012/11/13 16:34:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.235 2012/11/14 08:34:33 cardoe Exp $
+
+  14 Nov 2012; Doug Goldstein <cardoe@gentoo.org> libvirt-1.0.0.ebuild,
+  libvirt-9999.ebuild:
+  Make the tests more verbose for failures.
 
   04 Nov 2012; Doug Goldstein <cardoe@gentoo.org> libvirt-1.0.0.ebuild:
   Fix need firewalld in init script when USE=-firewalld (bug #441690)
