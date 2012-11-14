@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-plugins
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.157 2012/11/12 10:36:11 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.158 2012/11/14 13:43:07 ago Exp $
+
+  14 Nov 2012; Agostino Sarubbo <ago@gentoo.org>
+  nagios-plugins-1.4.16-r2.ebuild:
+  Stable for amd64, wrt bug #441654
 
   12 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
   nagios-plugins-1.4.16-r2.ebuild:
