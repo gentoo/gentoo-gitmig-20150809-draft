@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.147 2012/10/08 16:13:50 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.148 2012/11/14 17:17:30 lu_zero Exp $
 
 # not ready for primetime
 packagekit
@@ -301,3 +301,7 @@ netlink
 # Mike Gilbert <floppym@gentoo.org> (08 Oct 2012)
 # Python 3.3 is masked for testing.
 python_targets_python3_3
+
+# Luca barbato <lu_zero@gentoo.org> (14 Oct 2012)
+# Pending keywording on arches
+fdk

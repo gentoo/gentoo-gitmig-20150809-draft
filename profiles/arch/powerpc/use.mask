@@ -1,6 +1,6 @@
 # PPC Specific use flags
-# 
-# Masking out llvm 
+#
+# Masking out llvm
 llvm
 
 # These flags should only be used for ppc
@@ -208,3 +208,6 @@ nvtt
 python_targets_pypy1_8
 python_targets_pypy1_9
 python_targets_jython2_5
+
+# fdk-aac is already keyworded here
+-fdk

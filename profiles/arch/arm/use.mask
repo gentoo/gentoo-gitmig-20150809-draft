@@ -196,7 +196,7 @@ video_cards_i965
 video_cards_vmware
 
 # 2006/03/07 - Donnie Berkholz <dberkholz@gentoo.org>
-# Modular X: mask for architectures lacking direct rendering      
+# Modular X: mask for architectures lacking direct rendering
 dri
 
 # Diego Pettenò <flameeyes@gentoo.org> (6 Dec 2006)
@@ -213,7 +213,7 @@ dri
 -alsa_cards_at91-soc-eti-b1-wm8731
 
 # USE=audit masked prior to testing on alpha, arm, hppa, ppc64, s390, sh.
-# Bug #184563, 18 Sep 2007 
+# Bug #184563, 18 Sep 2007
 # Robin H. Johnson <robbat2@gentoo.org>
 audit
 
@@ -230,3 +230,6 @@ wayland
 python_targets_pypy1_8
 python_targets_pypy1_9
 python_targets_jython2_5
+
+# fdk-aac is already keyworded here
+-fdk

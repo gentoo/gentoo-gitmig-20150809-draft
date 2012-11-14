@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7138 2012/11/14 13:45:12 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7139 2012/11/14 17:17:29 lu_zero Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Nov 2012; Luca Barbato <lu_zero@gentoo.org> arch/amd64/use.mask,
+  arch/arm/use.mask, arch/powerpc/use.mask, arch/x86/use.mask, base/use.mask:
+  Mask fdk pending keywording
 
   14 Nov 2012; Arun Raghavan <ford_prefect@gentoo.org>
   default/linux/package.use.mask:
