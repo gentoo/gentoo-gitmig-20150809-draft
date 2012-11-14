@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.126 2012/11/12 19:40:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.127 2012/11/14 10:13:06 scarabeus Exp $
 
 EAPI=4
 
@@ -425,8 +425,6 @@ src_configure() {
 	# --disable-kde: kde3 support
 	# --disable-mozilla: mozilla internal is for contact integration, never
 	#   worked on linux
-	# --disable-nsplugin: does not work at all, reall effort to fix this
-	#   required
 	# --disable-pch: precompiled headers cause build crashes
 	# --disable-rpath: relative runtime path is not desired
 	# --disable-systray: quickstarter does not actually work at all so do not
@@ -462,7 +460,6 @@ src_configure() {
 		--disable-kdeab \
 		--disable-kde \
 		--disable-mozilla \
-		--disable-nsplugin \
 		--disable-online-update \
 		--disable-pch \
 		--disable-rpath \
@@ -556,6 +553,9 @@ src_install() {
 		insinto /usr/$(get_libdir)/${PN}/program
 		newins "${WORKDIR}/branding-sofficerc" sofficerc
 	fi
+
+	# symlink the nsplugin to proper location
+	use nsplugin && inst_plugin /usr/$(get_libdir)/libreoffice/program/libnpsoplugin.so
 
 	# Hack for offlinehelp, this needs fixing upstream at some point.
 	# It is broken because we send --without-help
