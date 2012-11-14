@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/scummvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.119 2012/11/14 20:27:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.120 2012/11/14 23:12:11 hasufell Exp $
+
+  14 Nov 2012; Julian Ospald <hasufell@gentoo.org> scummvm-1.5.0.ebuild:
+  respect AR and RANLIB wrt #443152
 
   14 Nov 2012; Agostino Sarubbo <ago@gentoo.org> scummvm-1.5.0.ebuild:
   Stable for amd64, wrt bug #442938

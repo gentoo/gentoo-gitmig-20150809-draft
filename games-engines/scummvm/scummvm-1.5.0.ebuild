@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-1.5.0.ebuild,v 1.6 2012/11/14 20:27:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-1.5.0.ebuild,v 1.7 2012/11/14 23:12:11 hasufell Exp $
 
 EAPI=2
-inherit eutils flag-o-matic games
+inherit eutils flag-o-matic toolchain-funcs games
 
 DESCRIPTION="Reimplementation of the SCUMM game engine used in Lucasarts adventures"
 HOMEPAGE="http://scummvm.sourceforge.net/"
@@ -71,6 +71,10 @@ src_configure() {
 		$(use_enable truetype freetype2) \
 		$(use_enable x86 nasm) \
 		${myconf} || die
+}
+
+src_compile() {
+	emake AR="$(tc-getAR) cru" RANLIB=$(tc-getRANLIB)
 }
 
 src_install() {
