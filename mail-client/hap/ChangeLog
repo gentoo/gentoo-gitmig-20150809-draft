@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/hap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/hap/ChangeLog,v 1.13 2012/04/25 16:26:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/hap/ChangeLog,v 1.14 2012/11/15 15:16:48 ago Exp $
+
+  15 Nov 2012; Agostino Sarubbo <ago@gentoo.org> hap-3.7-r1.ebuild:
+  Add ~amd64, wrt bug #443416
 
   25 Apr 2012; Justin Lecher <jlec@gentoo.org> hap-3.7-r1.ebuild:
   Drop unnessecary die
@@ -47,4 +50,3 @@
   +hap-3.7.ebuild:
   Initial version. Closes #59158, ebuild submitted by Martin Bays
   <gentoo_bugz@zugzwang.port5.com>.
-
