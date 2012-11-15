@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libdlna
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdlna/ChangeLog,v 1.8 2012/10/20 14:05:22 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdlna/ChangeLog,v 1.9 2012/11/15 05:39:24 flameeyes Exp $
+
+  15 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Reassign to maintainer-needed as the email address is not registered in
+  bugzilla anymore.
 
   20 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> libdlna-0.2.4.ebuild:
   Add prefix compatibility, keyword it on ~amd64-linux
@@ -35,4 +39,3 @@
   +metadata.xml:
   Initial import. Many thanks to all the contributors on bug 204007. Moved
   from sunrise overlay
-
