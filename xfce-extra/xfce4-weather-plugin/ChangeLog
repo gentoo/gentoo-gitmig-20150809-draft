@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-weather-plugin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-weather-plugin/ChangeLog,v 1.26 2012/10/27 20:30:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-weather-plugin/ChangeLog,v 1.27 2012/11/15 19:37:45 nativemad Exp $
+
+  16 Nov 2012; Andreas Schuerch <nativemad@gentoo.org>
+  xfce4-weather-plugin-0.8.2.ebuild:
+  x86 stable, see bug 429484
 
   27 Oct 2012; <ago@gentoo.org> xfce4-weather-plugin-0.8.2.ebuild:
   Stable for amd64, wrt bug #429484

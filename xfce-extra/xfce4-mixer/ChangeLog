@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-mixer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/ChangeLog,v 1.146 2012/11/13 17:57:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/ChangeLog,v 1.147 2012/11/15 19:26:38 nativemad Exp $
+
+  16 Nov 2012; Andreas Schuerch <nativemad@gentoo.org>
+  xfce4-mixer-4.10.0.ebuild:
+  x86 stable, see bug 429484
 
   13 Nov 2012; Jeroen Roovers <jer@gentoo.org> xfce4-mixer-4.10.0.ebuild:
   Marked ~hppa (bug #437156).

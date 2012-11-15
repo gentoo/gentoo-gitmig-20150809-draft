@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-messenger-plugin/xfce4-messenger-plugin-0.1.0.ebuild,v 1.6 2012/10/27 20:11:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-messenger-plugin/xfce4-messenger-plugin-0.1.0.ebuild,v 1.7 2012/11/15 19:25:05 nativemad Exp $
 
 EAPI=4
 EAUTORECONF=yes
@@ -13,7 +13,7 @@ SRC_URI="mirror://debian/pool/main/x/${PN}/${PN}_${PV}.orig.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="dev-libs/dbus-glib
