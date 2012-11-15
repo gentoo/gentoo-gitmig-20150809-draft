@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kde-gtk-config
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kde-gtk-config/ChangeLog,v 1.13 2012/11/15 01:05:10 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kde-gtk-config/ChangeLog,v 1.14 2012/11/15 15:16:27 kensington Exp $
+
+  15 Nov 2012; Michael Palimaka <kensington@gentoo.org>
+  -kde-gtk-config-2.0.ebuild:
+  Remove old.
 
   15 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
   kde-gtk-config-2.1.ebuild:

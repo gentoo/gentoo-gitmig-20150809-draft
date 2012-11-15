@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kwebkitpart
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kwebkitpart/ChangeLog,v 1.19 2012/11/15 01:08:08 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kwebkitpart/ChangeLog,v 1.20 2012/11/15 15:20:01 kensington Exp $
+
+  15 Nov 2012; Michael Palimaka <kensington@gentoo.org>
+  -kwebkitpart-1.2.0.ebuild:
+  Remove old.
 
   15 Nov 2012; Anthony G. Basile <blueness@gentoo.org> kwebkitpart-1.3.0.ebuild:
   stable ppc, bug #441332
