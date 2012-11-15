@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/owncloud-4.0.8.ebuild,v 1.1 2012/10/10 13:26:07 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/owncloud-4.0.9.ebuild,v 1.1 2012/11/15 09:02:19 voyageur Exp $
 
 EAPI=4
 
@@ -38,9 +38,9 @@ src_install() {
 	doins -r .
 	dodir "${MY_HTDOCSDIR}"/data
 
-	webapp_serverowned "${MY_HTDOCSDIR}"/apps
-	webapp_serverowned "${MY_HTDOCSDIR}"/data
-	webapp_serverowned "${MY_HTDOCSDIR}"/config
+	webapp_serverowned -R "${MY_HTDOCSDIR}"/apps
+	webapp_serverowned -R "${MY_HTDOCSDIR}"/data
+	webapp_serverowned -R "${MY_HTDOCSDIR}"/config
 	webapp_configfile "${MY_HTDOCSDIR}"/.htaccess
 
 	webapp_src_install
