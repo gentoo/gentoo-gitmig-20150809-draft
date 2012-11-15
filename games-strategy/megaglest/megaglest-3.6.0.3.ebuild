@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/megaglest-3.6.0.3.ebuild,v 1.7 2012/10/29 20:14:48 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/megaglest-3.6.0.3.ebuild,v 1.8 2012/11/15 23:37:42 hasufell Exp $
 
 EAPI=4
 VIRTUALX_REQUIRED="manual"
@@ -17,7 +17,6 @@ IUSE="debug +editor sse sse2 sse3 static +streflop +tools +unicode wxuniversal +
 
 RDEPEND="
 	>=dev-lang/lua-5.1
-	dev-libs/icu
 	dev-libs/libxml2
 	media-libs/fontconfig
 	media-libs/freetype

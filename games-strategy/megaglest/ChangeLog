@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/megaglest
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/ChangeLog,v 1.8 2012/11/14 17:13:31 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/ChangeLog,v 1.9 2012/11/15 23:37:42 hasufell Exp $
+
+  15 Nov 2012; Julian Ospald <hasufell@gentoo.org> megaglest-3.6.0.3.ebuild,
+  megaglest-3.7.0.ebuild:
+  icu is not directly linked
 
 *megaglest-3.7.0 (14 Nov 2012)
 
