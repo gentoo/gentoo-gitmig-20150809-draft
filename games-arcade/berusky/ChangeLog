@@ -1,6 +1,13 @@
 # ChangeLog for games-arcade/berusky
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/berusky/ChangeLog,v 1.7 2012/08/04 09:50:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/berusky/ChangeLog,v 1.8 2012/11/15 22:46:06 mr_bones_ Exp $
+
+*berusky-1.5.2 (15 Nov 2012)
+
+  15 Nov 2012; Michael Sterrett <mr_bones_@gentoo.org> +berusky-1.5.2.ebuild,
+  +files/berusky-1.5.2-gentoo.patch, -berusky-1.1.ebuild,
+  -files/berusky-1.1-gentoo.patch, -files/berusky-1.1-ovflfix.patch:
+  version bump
 
   04 Aug 2012; Agostino Sarubbo <ago@gentoo.org> berusky-1.4.ebuild:
   Stable for amd64, wrt bug #426750
@@ -29,4 +36,3 @@
   28 Aug 2007; Tupone Alfredo <tupone@gentoo.org>
   +files/berusky-1.1-gentoo.patch, +metadata.xml, +berusky-1.1.ebuild:
   New package, requested via bug #180372 by Matija Suklje
-
