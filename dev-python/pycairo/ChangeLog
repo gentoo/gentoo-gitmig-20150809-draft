@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycairo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.114 2012/11/14 00:23:37 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.115 2012/11/15 15:05:09 jer Exp $
+
+  15 Nov 2012; Jeroen Roovers <jer@gentoo.org> pycairo-1.10.0-r3.ebuild:
+  Marked ~hppa (bug #442934).
 
   14 Nov 2012;  <naota@gentoo.org> pycairo-1.10.0-r3.ebuild:
   Add ~x86-fbsd wrt #442934

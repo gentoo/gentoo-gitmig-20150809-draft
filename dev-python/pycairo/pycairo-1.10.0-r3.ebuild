@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-1.10.0-r3.ebuild,v 1.3 2012/11/14 00:23:37 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-1.10.0-r3.ebuild,v 1.4 2012/11/15 15:05:09 jer Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6 3:3.1"
@@ -21,7 +21,7 @@ SRC_URI="http://cairographics.org/releases/py2cairo-${PYCAIRO_PYTHON2_VERSION}.t
 # || ( LGPL-2.1 MPL-1.1 ) for pycairo 1.8.10.
 LICENSE="LGPL-3 || ( LGPL-2.1 MPL-1.1 )"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~hppa ~x86 ~x86-fbsd"
 IUSE="doc examples +svg test xcb"
 
 RDEPEND=">=x11-libs/cairo-1.10.0[svg?,xcb?]
