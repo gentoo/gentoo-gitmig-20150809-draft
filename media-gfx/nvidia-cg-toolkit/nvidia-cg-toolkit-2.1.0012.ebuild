@@ -1,66 +1,64 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/nvidia-cg-toolkit-2.1.0012.ebuild,v 1.4 2010/09/16 17:09:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/nvidia-cg-toolkit-2.1.0012.ebuild,v 1.5 2012/11/15 22:07:12 jlec Exp $
 
 inherit versionator
 
 MY_PV="$(get_version_component_range 1-2)"
 MY_DATE="October2008"
+
 DESCRIPTION="nvidia's c graphics compiler toolkit"
 HOMEPAGE="http://developer.nvidia.com/object/cg_toolkit.html"
-SRC_URI="x86? (
-	http://developer.download.nvidia.com/cg/Cg_2.0/${PV}/Cg-${MY_PV}_${MY_DATE}_x86.tgz )
-	amd64? (
-	http://developer.download.nvidia.com/cg/Cg_2.0/${PV}/Cg-${MY_PV}_${MY_DATE}_x86_64.tgz )"
+SRC_URI="
+	x86? ( http://developer.download.nvidia.com/cg/Cg_2.0/${PV}/Cg-${MY_PV}_${MY_DATE}_x86.tgz )
+	amd64? ( http://developer.download.nvidia.com/cg/Cg_2.0/${PV}/Cg-${MY_PV}_${MY_DATE}_x86_64.tgz )"
 
-LICENSE="NVIDIA"
 SLOT="0"
+LICENSE="NVIDIA"
 KEYWORDS="amd64 x86"
 IUSE=""
+
 RESTRICT="strip"
 
-DEPEND="media-libs/freeglut"
+RDEPEND="media-libs/freeglut"
+DEPEND=""
 
 S="${WORKDIR}"
 
-src_compile() {
-	einfo "Nothing to compile."
-}
-
 src_install() {
-	dobin usr/bin/cgc
+	dobin usr/bin/cgc || die
 
 	if use x86; then
-		dolib usr/lib/*
+		dolib usr/lib/* || die
 	elif use amd64; then
-		dolib usr/lib64/*
+		dolib usr/lib64/* || die
 	fi
 
-	doenvd "${FILESDIR}"/80cgc
+	doenvd "${FILESDIR}"/80cgc || die
 
 	insinto /usr/include/Cg
-	doins usr/include/Cg/*
+	doins usr/include/Cg/* || die
 
-	doman 	usr/share/man/man3/*
+	doman usr/share/man/man3/* || die
 
 	dodoc usr/local/Cg/MANIFEST usr/local/Cg/README \
-	      usr/local/Cg/docs/*.pdf usr/local/Cg/docs/CgReferenceManual.chm
+	      usr/local/Cg/docs/*.pdf usr/local/Cg/docs/CgReferenceManual.chm || die
 
 	docinto html
-	dohtml	usr/local/Cg/docs/html/*
+	dohtml usr/local/Cg/docs/html/* || die
 
 	docinto examples
-	dodoc   usr/local/Cg/examples/README
+	dodoc usr/local/Cg/examples/README || die
 
 	docinto include/GL
-	dodoc   usr/local/Cg/include/GL/*
+	dodoc usr/local/Cg/include/GL/* || die
 
 	# Copy all the example code.
 	cd usr/local/Cg/examples
 	insinto /usr/share/doc/${PF}/examples
-	doins Makefile
+	doins Makefile || die
 	for dir in $(find * -type d) ; do
 		insinto usr/share/doc/${PF}/examples/"${dir}"
-		doins "${dir}"/*
+		doins "${dir}"/* || die
 	done
 }

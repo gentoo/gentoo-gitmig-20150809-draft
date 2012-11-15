@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/nvidia-cg-toolkit-2.1.0017-r1.ebuild,v 1.1 2012/11/15 21:12:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/nvidia-cg-toolkit-2.1.0017-r1.ebuild,v 1.2 2012/11/15 22:07:12 jlec Exp $
 
 EAPI=5
 
-inherit prefix versionator
+inherit multilib prefix versionator
 
 MY_PV="$(get_version_component_range 1-2)"
 MY_DATE="February2009"
@@ -32,6 +32,8 @@ DEST=/opt/${PN}
 QA_PREBUILT="${DEST}/*"
 
 src_install() {
+	local ldpath=${DEST}/lib
+
 	into ${DEST}
 	dobin usr/bin/cgc
 	dosym ${DEST}/bin/cgc /opt/bin/cgc
@@ -43,11 +45,14 @@ src_install() {
 		doexe usr/lib64/*
 	fi
 
-	newenvd "${FILESDIR}"/80cgc-opt-2 80cgc-opt
-	eprefixify "${ED}"/etc/env.d/80cgc-opt
+	sed \
+		-e "s|ELDPATH|${ldpath}|g" \
+		"${FILESDIR}"/80cgc-opt-2 > "${T}"/80cgc-opt || die
+	eprefixify "${T}"/80cgc-opt
+	doenvd "${T}"/80cgc-opt
 
-	insinto ${DEST}/include/Cg
-	doins usr/include/Cg/*
+	insinto ${DEST}/include
+	doins -r usr/include/Cg
 
 	doman usr/share/man/man3/*
 
@@ -65,7 +70,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Starting with ${CATEGORY}/${PN}-2.1.0016, ${PN} is installed in"
-	einfo "${DEST}. Packages might have to add something like:"
-	einfo "  append-cppflags -I${DEST}/include"
+	if [[ ${REPLACING_VERSIONS} < 2.1.0016 ]]; then
+		einfo "Starting with ${CATEGORY}/${PN}-2.1.0016, ${PN} is installed in"
+		einfo "${DEST}. Packages might have to add something like:"
+		einfo "  append-cppflags -I${DEST}/include"
+	fi
 }
