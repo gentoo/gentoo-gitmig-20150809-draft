@@ -1,6 +1,9 @@
 # ChangeLog for games-board/gnubg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.61 2012/11/14 19:08:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.62 2012/11/15 10:28:48 blueness Exp $
+
+  15 Nov 2012; Anthony G. Basile <blueness@gentoo.org> gnubg-20120806.ebuild:
+  stable ppc ppc64, bug #442940
 
   14 Nov 2012; Agostino Sarubbo <ago@gentoo.org> gnubg-20120806.ebuild:
   Stable for amd64, wrt bug #442940
