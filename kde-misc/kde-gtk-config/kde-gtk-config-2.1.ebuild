@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kde-gtk-config/kde-gtk-config-2.1.ebuild,v 1.4 2012/11/14 20:09:43 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kde-gtk-config/kde-gtk-config-2.1.ebuild,v 1.5 2012/11/15 01:05:10 blueness Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://projects.kde.org/projects/kdereview/kde-gtk-config"
 SRC_URI="mirror://kde/stable/${PN}/${PV}/src/${P}.tar.bz2"
 
 LICENSE="GPL-3"
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ~arm ppc ~ppc64 x86"
 SLOT="4"
 IUSE="debug"
 
