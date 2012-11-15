@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rspec-core
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-core/ChangeLog,v 1.38 2012/11/06 17:17:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-core/ChangeLog,v 1.39 2012/11/15 07:17:13 graaff Exp $
+
+*rspec-core-2.12.0 (15 Nov 2012)
+
+  15 Nov 2012; Hans de Graaff <graaff@gentoo.org> +rspec-core-2.12.0.ebuild:
+  Version bump.
 
   06 Nov 2012; Jeroen Roovers <jer@gentoo.org> rspec-core-2.6.4-r1.ebuild:
   Stable for HPPA (bug #426668).
