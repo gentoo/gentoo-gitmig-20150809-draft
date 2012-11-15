@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/dtach
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dtach/ChangeLog,v 1.22 2012/11/15 12:18:14 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dtach/ChangeLog,v 1.23 2012/11/15 12:55:36 jlec Exp $
+
+  15 Nov 2012; Justin Lecher <jlec@gentoo.org> -dtach-0.8.ebuild:
+  Drop vulnerable version, #426496
 
   15 Nov 2012; Anthony G. Basile <blueness@gentoo.org> dtach-0.8-r1.ebuild:
   stable ppc, bug #426496
