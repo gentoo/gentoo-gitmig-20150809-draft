@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/osc/osc-0.136.0.ebuild,v 1.1 2012/10/02 11:01:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/osc/osc-0.136.0.ebuild,v 1.2 2012/11/15 18:49:23 scarabeus Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ HOMEPAGE="http://en.opensuse.org/openSUSE:OSC"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
-[[ "${PV}" == "9999" ]] || KEYWORDS="~amd64 ~x86"
+[[ "${PV}" == "9999" ]] || KEYWORDS="amd64 x86"
 
 DEPEND="
 	dev-python/urlgrabber
