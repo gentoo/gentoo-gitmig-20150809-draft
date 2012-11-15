@@ -1,6 +1,14 @@
 # ChangeLog for app-portage/smart-live-rebuild
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/ChangeLog,v 1.42 2012/11/02 10:22:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/ChangeLog,v 1.43 2012/11/15 19:14:05 mgorny Exp $
+
+*smart-live-rebuild-1.3 (15 Nov 2012)
+
+  15 Nov 2012; Michał Górny <mgorny@gentoo.org> +smart-live-rebuild-1.3.ebuild,
+  -smart-live-rebuild-1.2.3-r1.ebuild, -smart-live-rebuild-1.2.3-r2.ebuild,
+  -smart-live-rebuild-1.2.4.ebuild:
+  Version bump. The new version preserves proxy settings for VCS-es and fixes a
+  dead-lock when re-checking package list.
 
 *smart-live-rebuild-1.2.5 (02 Nov 2012)
 
