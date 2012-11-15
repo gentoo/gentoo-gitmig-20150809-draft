@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/clanbomber/clanbomber-2.1.1.ebuild,v 1.5 2012/11/04 04:42:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/clanbomber/clanbomber-2.1.1.ebuild,v 1.6 2012/11/15 11:43:55 tupone Exp $
 
 EAPI=2
 inherit autotools base eutils flag-o-matic games
@@ -19,7 +19,7 @@ RDEPEND="media-libs/libsdl[audio,joystick,video]
 	media-libs/sdl-mixer
 	media-libs/sdl-ttf
 	media-libs/sdl-gfx
-	>dev-libs/boost-1.49.0
+	dev-libs/boost
 	media-fonts/dejavu"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
@@ -33,16 +33,12 @@ src_prepare() {
 	boost_ver=${boost_ver%.*}
 	boost_ver=${boost_ver/./_}
 
-	einfo "Using boost version ${boost_ver}"
-	append-cxxflags \
-		-I/usr/include/boost-${boost_ver}
-	append-ldflags \
-		-L/usr/$(get_libdir)/boost-${boost_ver}
-	append-flags -DBOOST_FILESYSTEM_VERSION=2
-
 	export BOOST_INCLUDEDIR="/usr/include/boost-${boost_ver}"
 	export BOOST_LIBRARYDIR="/usr/$(get_libdir)/boost-${boost_ver}"
 	sed -i -e 's/menuentry//' src/Makefile.am || die
+	epatch \
+		"${FILESDIR}"/${P}-automake112.patch \
+		"${FILESDIR}"/${P}-boost150.patch
 	eautoreconf
 }
 

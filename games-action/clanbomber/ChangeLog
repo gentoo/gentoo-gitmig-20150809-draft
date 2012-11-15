@@ -1,6 +1,12 @@
 # ChangeLog for games-action/clanbomber
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/clanbomber/ChangeLog,v 1.18 2012/11/04 04:42:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/clanbomber/ChangeLog,v 1.19 2012/11/15 11:43:55 tupone Exp $
+
+  15 Nov 2012; Tupone Alfredo <tupone@gentoo.org> clanbomber-2.1.1.ebuild,
+  +files/clanbomber-2.1.1-automake112.patch,
+  +files/clanbomber-2.1.1-boost150.patch:
+  Build with automake 1.12 Bug #442310 by Diego
+  Build with new boost
 
   04 Nov 2012; Michael Sterrett <mr_bones_@gentoo.org> clanbomber-2.1.1.ebuild:
   unclamp the boost dep (bug #441602)
