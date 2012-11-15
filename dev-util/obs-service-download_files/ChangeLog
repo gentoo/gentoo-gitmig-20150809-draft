@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/obs-service-download_files
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/obs-service-download_files/ChangeLog,v 1.6 2012/11/15 19:56:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/obs-service-download_files/ChangeLog,v 1.7 2012/11/15 19:57:27 scarabeus Exp $
+
+  15 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  obs-service-download_files-20120824.ebuild:
+  Stable on amd64 and x86.
 
 *obs-service-download_files-20120824 (15 Nov 2012)
 
