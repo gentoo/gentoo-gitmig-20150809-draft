@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ptbatterysystemtray/ptbatterysystemtray-1.0.0_rc2.ebuild,v 1.1 2012/05/11 09:09:00 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ptbatterysystemtray/ptbatterysystemtray-1.0.0_rc2.ebuild,v 1.2 2012/11/15 10:26:58 pesa Exp $
 
 EAPI=4
 
@@ -12,10 +12,14 @@ SRC_URI="https://gitorious.org/${PN}/${PN}/archive-tarball/${PV/_/-} -> ${P}.tar
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
-DEPEND="x11-libs/qt-gui:4"
+DEPEND="
+	x11-libs/qt-core:4
+	x11-libs/qt-dbus:4
+	x11-libs/qt-gui:4
+"
 RDEPEND="${DEPEND}"
 
 DOCS="AUTHORS ChangeLog README"
