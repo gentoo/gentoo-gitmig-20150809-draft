@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/gxemul/gxemul-0.6.0.ebuild,v 1.2 2011/04/22 12:32:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/gxemul/gxemul-0.6.0-r1.ebuild,v 1.1 2012/11/15 21:36:08 calchan Exp $
 
 EAPI="4"
 
@@ -21,6 +21,8 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PV}-gcc46.patch
+	epatch "${FILESDIR}"/${PV}-fix-mymkstemp.patch # Bug 441558
+	epatch "${FILESDIR}"/${PV}-fix-mkstemp-test.patch # Bug 441558
 	sed -i configure -e 's|-O3||g' || die "sed configure"
 	tc-export CC CXX
 }

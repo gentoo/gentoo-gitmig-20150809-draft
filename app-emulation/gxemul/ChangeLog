@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/gxemul
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/gxemul/ChangeLog,v 1.16 2011/04/22 12:32:02 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/gxemul/ChangeLog,v 1.17 2012/11/15 21:36:08 calchan Exp $
+
+*gxemul-0.6.0-r1 (15 Nov 2012)
+
+  15 Nov 2012; Denis Dupeyron <calchan@gentoo.org>
+  +files/0.6.0-fix-mkstemp-test.patch, +files/0.6.0-fix-mymkstemp.patch,
+  -gxemul-0.6.0.ebuild, +gxemul-0.6.0-r1.ebuild:
+  Fix bug #441558, thanks to David Turner.
 
   22 Apr 2011; Justin Lecher <jlec@gentoo.org> +files/0.6.0-gcc46.patch,
   -gxemul-0.4.6.2.ebuild, -gxemul-0.4.7.ebuild, gxemul-0.6.0.ebuild:
