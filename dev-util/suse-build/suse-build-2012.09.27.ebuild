@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/suse-build-2012.09.27.ebuild,v 1.1 2012/10/02 11:17:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/suse-build-2012.09.27.ebuild,v 1.2 2012/11/15 18:53:06 scarabeus Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ HOMEPAGE="https://build.opensuse.org/package/show?package=build&project=openSUSE
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
-[[ "${PV}" == "9999" ]] || KEYWORDS="~amd64 ~x86"
+[[ "${PV}" == "9999" ]] || KEYWORDS="amd64 x86"
 
 RDEPEND="
 	virtual/perl-Digest-MD5

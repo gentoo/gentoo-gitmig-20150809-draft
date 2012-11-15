@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/suse-build
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/ChangeLog,v 1.7 2012/11/05 11:55:02 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/ChangeLog,v 1.8 2012/11/15 18:53:06 scarabeus Exp $
+
+  15 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  suse-build-2012.09.27.ebuild:
+  Stable on amd64 and x86 as there are no probs.
 
   05 Nov 2012; Theo Chatzimichos <tampakrap@gentoo.org> metadata.xml:
   Move to SUSE team
