@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.407 2012/11/11 23:25:24 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.408 2012/11/15 18:30:34 chithanh Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -106,6 +106,7 @@ sys-boot/grub libzfs
 # mask wayland flag for stable mesa, #419473
 =media-libs/mesa-8.0.3 wayland
 =media-libs/mesa-8.0.4-r1 wayland
+=media-libs/mesa-9.0 wayland
 
 # Zac Medico <zmedico@gentoo.org> (13 Jun 2012)
 # Mask USE=pypy1_9 for sys-apps/portage, since pypy has limited KEYWORDS.
