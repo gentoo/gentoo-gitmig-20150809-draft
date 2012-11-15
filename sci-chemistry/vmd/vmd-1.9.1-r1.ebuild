@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.9.1-r1.ebuild,v 1.1 2012/11/14 15:18:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.9.1-r1.ebuild,v 1.2 2012/11/15 04:20:12 ottxor Exp $
 
 EAPI=5
 
@@ -185,7 +185,7 @@ src_compile() {
 	emake \
 		TCLINC="-I${EPREFIX}/usr/include" \
 		TCLLIB="-L${EPREFIX}/usr/$(get_libdir)" \
-		NETCDFLIB="$(pkg-config --libs-only-L netcdf) ${EPREFIX}/usr/lib64/libnetcdf.so" \
+		NETCDFLIB="$(pkg-config --libs-only-L netcdf) ${EPREFIX}/usr/$(get_libdir)/libnetcdf.so" \
 		NETCDFINC="$(pkg-config --cflags-only-I netcdf) ${EPREFIX}/usr/include" \
 		NETCDFLDFLAGS="$(pkg-config --libs netcdf)" \
 		LINUX
