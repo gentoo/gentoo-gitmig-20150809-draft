@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/ristretto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ristretto/ChangeLog,v 1.76 2012/10/27 20:31:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ristretto/ChangeLog,v 1.77 2012/11/15 19:44:29 nativemad Exp $
+
+  16 Nov 2012; Andreas Schuerch <nativemad@gentoo.org> ristretto-0.6.3.ebuild:
+  x86 stable, see bug 429484
 
   27 Oct 2012; <ago@gentoo.org> ristretto-0.6.3.ebuild:
   Stable for amd64, wrt bug #429484
