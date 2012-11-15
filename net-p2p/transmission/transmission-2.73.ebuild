@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.73.ebuild,v 1.3 2012/11/04 14:09:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.73.ebuild,v 1.4 2012/11/15 06:20:03 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 inherit autotools eutils fdo-mime gnome2-utils qt4-r2 user
 
 #if [[ ${PV} == *9999* ]]; then
