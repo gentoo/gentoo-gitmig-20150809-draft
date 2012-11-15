@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.218 2012/11/10 22:48:06 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.219 2012/11/15 04:56:10 phajdan.jr Exp $
+
+*icu-50.1-r2 (15 Nov 2012)
+
+  15 Nov 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> +icu-50.1-r2.ebuild,
+  +files/icu-50.1-char16_t.patch:
+  Use a different (upstream) patch to handle c++11 issues, as asked by upstream
+  developer Steven R. Loomis in bug #439892.
 
 *icu-50.1-r1 (10 Nov 2012)
 
