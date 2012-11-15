@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-1.3.ebuild,v 1.1 2012/07/31 12:18:01 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-1.8.ebuild,v 1.1 2012/11/15 23:59:46 chainsaw Exp $
 
 EAPI="4"
 
@@ -56,7 +56,7 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dobin client/cm || die "client installation failed"
+	dobin client/connmanctl || die "client installation failed"
 
 	keepdir /var/lib/${PN} || die
 	newinitd "${FILESDIR}"/${PN}.initd ${PN} || die
