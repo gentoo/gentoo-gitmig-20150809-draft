@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/tuxonice-userui
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/ChangeLog,v 1.28 2012/11/07 18:05:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/ChangeLog,v 1.29 2012/11/15 19:21:32 pacho Exp $
+
+  15 Nov 2012; Pacho Ramos <pacho@gentoo.org> -tuxonice-userui-1.1-r1.ebuild,
+  tuxonice-userui-1.1-r2.ebuild:
+  Add missing dep, bug #443280 by Joost Ruis; drop old.
 
 *tuxonice-userui-1.1-r2 (07 Nov 2012)
 
