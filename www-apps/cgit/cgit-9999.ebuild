@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/cgit-9999.ebuild,v 1.5 2012/06/01 04:30:38 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/cgit-9999.ebuild,v 1.6 2012/11/15 01:14:11 zx2c4 Exp $
 
 EAPI="4"
 
@@ -13,9 +13,9 @@ inherit webapp multilib user git-2
 GIT_V="1.7.4"
 
 DESCRIPTION="a fast web-interface for git repositories"
-HOMEPAGE="http://hjemli.net/git/cgit/about/"
+HOMEPAGE="http://git.zx2c4.com/cgit/about/"
 SRC_URI="mirror://kernel/software/scm/git/git-${GIT_V}.tar.bz2"
-EGIT_REPO_URI="git://hjemli.net/pub/git/${PN}"
+EGIT_REPO_URI="http://git.zx2c4.com/cgit"
 
 LICENSE="GPL-2"
 SLOT="0"

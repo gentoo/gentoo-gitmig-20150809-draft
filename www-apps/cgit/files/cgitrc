@@ -57,6 +57,10 @@
 ## List of common mimetypes
 ##
 
+# Instead of defining mime types ourselves, grab it from etc
+#mimetype-file=/etc/mime.types
+
+# Or do it manually here
 #mimetype.gif=image/gif
 #mimetype.html=text/html
 #mimetype.jpg=image/jpeg
