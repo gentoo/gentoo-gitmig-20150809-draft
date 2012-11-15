@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/obs-service-meta
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/obs-service-meta/ChangeLog,v 1.1 2012/11/15 21:03:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/obs-service-meta/ChangeLog,v 1.2 2012/11/15 21:16:53 scarabeus Exp $
+
+  15 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> obs-service-meta-1.ebuild:
+  inform about tar_scm (too much sh*tty deps, bump to eapi5.
 
 *obs-service-meta-1 (15 Nov 2012)
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/obs-service-meta/obs-service-meta-1.ebuild,v 1.1 2012/11/15 21:03:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/obs-service-meta/obs-service-meta-1.ebuild,v 1.2 2012/11/15 21:16:53 scarabeus Exp $
 
-EAPI=4
+EAPI=5
 
 DESCRIPTION="Metapackage to pull all open build service services"
 HOMEPAGE="http://openbuildservice.org/"
@@ -27,3 +27,11 @@ RDEPEND="${DEPEND}
 	dev-util/obs-service-source_validator
 	dev-util/obs-service-verify_file
 "
+
+pkg_postinst() {
+	if ! has_version dev-util/obs-service-tar_scm ; then
+		elog "You should consider installing also following package"
+		elog "if you plan to work with SCM packages:"
+		elog "    dev-util/obs-service-tar_scm"
+	fi
+}
