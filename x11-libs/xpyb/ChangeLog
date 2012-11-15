@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xpyb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpyb/ChangeLog,v 1.17 2012/11/14 00:20:16 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpyb/ChangeLog,v 1.18 2012/11/15 15:04:26 jer Exp $
+
+  15 Nov 2012; Jeroen Roovers <jer@gentoo.org> xpyb-1.3.1.ebuild:
+  Marked ~hppa (bug #442934).
 
   14 Nov 2012;  <naota@gentoo.org> xpyb-1.3.1.ebuild:
   Add ~x86-fbsd wrt #442934
