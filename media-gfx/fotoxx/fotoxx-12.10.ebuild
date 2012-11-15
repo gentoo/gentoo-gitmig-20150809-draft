@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/fotoxx-12.10.ebuild,v 1.1 2012/10/01 13:27:39 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/fotoxx-12.10.ebuild,v 1.2 2012/11/15 15:07:36 grozin Exp $
 EAPI=4
 inherit eutils toolchain-funcs
 
@@ -14,10 +14,11 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="x11-libs/gtk+:3
+	media-libs/libpng
 	media-libs/tiff"
 RDEPEND="${DEPEND}
 	media-libs/exiftool
-	media-gfx/ufraw
+	media-gfx/ufraw[gtk]
 	x11-misc/xdg-utils"
 
 src_prepare() {
@@ -34,5 +35,5 @@ src_install() {
 	# and README, CHANGES, TRANSLATIONS must not be compressed
 	emake DESTDIR="${D}" install
 	make_desktop_entry ${PN} "Fotoxx" /usr/share/${PN}/icons/${PN}.png \
-		"Application;Graphics;2DGraphics"
+		"Graphics;2DGraphics"
 }
