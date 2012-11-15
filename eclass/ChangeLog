@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.505 2012/11/15 19:49:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.506 2012/11/15 19:52:55 scarabeus Exp $
+
+  15 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> obs-service.eclass:
+  Darn copy pasto overlook.
 
   15 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> obs-service.eclass:
   Use src_uri arrows to allow versioning sanely.

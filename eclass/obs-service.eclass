@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/obs-service.eclass,v 1.6 2012/11/15 19:49:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/obs-service.eclass,v 1.7 2012/11/15 19:52:55 scarabeus Exp $
 
 # @ECLASS: obs-service.eclass
 # @MAINTAINER:
@@ -89,9 +89,9 @@ obs-service_src_install() {
 	debug-print-function ${FUNCNAME} "$@"
 	debug-print "Installing service \"${OBS_SERVICE_NAME}\""
 	exeinto /usr/lib/obs/service
-	newexe "${S}"/${OBS_SERVICE_NAME}-${PV} "${S}"/${OBS_SERVICE_NAME}
+	newexe "${S}"/${OBS_SERVICE_NAME}-${PV} ${OBS_SERVICE_NAME}
 	insinto /usr/lib/obs/service
-	newins "${S}"/${OBS_SERVICE_NAME}-${PV}.service "${S}"/${OBS_SERVICE_NAME}.service
+	newins "${S}"/${OBS_SERVICE_NAME}-${PV}.service ${OBS_SERVICE_NAME}.service
 	if [[ -n ${ADDITIONAL_FILES} ]]; then
 		debug-print "Installing following additional files:"
 		debug-print "	${ADDITIONAL_FILES}"
