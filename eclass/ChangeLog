@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.506 2012/11/15 19:52:55 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.507 2012/11/15 20:06:34 scarabeus Exp $
+
+  15 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> obs-service.eclass:
+  Depend on suse-build as most services require it.
 
   15 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> obs-service.eclass:
   Darn copy pasto overlook.

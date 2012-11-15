@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/obs-service.eclass,v 1.7 2012/11/15 19:52:55 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/obs-service.eclass,v 1.8 2012/11/15 20:06:34 scarabeus Exp $
 
 # @ECLASS: obs-service.eclass
 # @MAINTAINER:
@@ -44,7 +44,11 @@ HOMEPAGE="http://en.opensuse.org/openSUSE:OSC"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
-RDEPEND="dev-util/osc"
+
+RDEPEND="
+	dev-util/osc
+	dev-util/suse-build
+"
 
 [[ -n ${OBS_SERVICE_NAME} ]] || OBS_SERVICE_NAME=${PN/obs-service-/}
 OBS_PROJECT="openSUSE:Tools"
