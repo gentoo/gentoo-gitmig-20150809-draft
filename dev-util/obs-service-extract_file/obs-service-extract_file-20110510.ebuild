@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/obs-service-extract_file/obs-service-extract_file-20110510.ebuild,v 1.1 2012/11/15 20:10:39 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/obs-service-extract_file/obs-service-extract_file-20110510.ebuild,v 1.2 2012/11/15 21:03:21 scarabeus Exp $
 
 EAPI=5
 
 inherit obs-service
 
 IUSE=""
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 DEPEND=""
 RDEPEND="${DEPEND}
