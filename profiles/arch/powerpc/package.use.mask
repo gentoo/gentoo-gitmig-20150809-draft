@@ -1,6 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.144 2012/11/01 23:51:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.145 2012/11/15 10:42:16 blueness Exp $
+
+# Anthony G. Basile <blueness@gentoo.org> (15 Nove 2012)
+# Mask telepathy, no stable net-libs/telepathy-qt, bug #441456
+kde-base/krdc telepathy
+kde-base/krfb telepathy
 
 # Robin H Johnson <robbat2@gentoo.org> (01 Nov 2012)
 # MySQL 5.5 wants systemtap, tcmalloc & jemalloc

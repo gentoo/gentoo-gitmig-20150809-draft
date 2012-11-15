@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.197 2012/11/12 17:22:50 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.198 2012/11/15 10:42:16 blueness Exp $
+
+  15 Nov 2012; Anthony G. Basile <blueness@gentoo.org> package.use.mask:
+  Mask USE=telepathy, bug #441456
 
   12 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   ppc32/package.use.mask:
