@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/obs-service.eclass,v 1.5 2012/10/02 10:52:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/obs-service.eclass,v 1.6 2012/11/15 19:49:34 scarabeus Exp $
 
 # @ECLASS: obs-service.eclass
 # @MAINTAINER:
@@ -53,8 +53,9 @@ DESCRIPTION="Open Build Service client module - ${OBS_SERVICE_NAME} service"
 
 inherit obs-download
 
-SRC_URI="${OBS_URI}/${OBS_SERVICE_NAME}"
-SRC_URI+=" ${OBS_URI}/${OBS_SERVICE_NAME}.service"
+# As it aint versioned at all use arrows to deal with it
+SRC_URI="${OBS_URI}/${OBS_SERVICE_NAME} -> ${OBS_SERVICE_NAME}-${PV}"
+SRC_URI+=" ${OBS_URI}/${OBS_SERVICE_NAME}.service -> ${OBS_SERVICE_NAME}-${PV}.service"
 
 for i in ${ADDITIONAL_FILES}; do
 	SRC_URI+=" ${OBS_URI}/${i}"
@@ -88,9 +89,9 @@ obs-service_src_install() {
 	debug-print-function ${FUNCNAME} "$@"
 	debug-print "Installing service \"${OBS_SERVICE_NAME}\""
 	exeinto /usr/lib/obs/service
-	doexe "${S}"/${OBS_SERVICE_NAME}
+	newexe "${S}"/${OBS_SERVICE_NAME}-${PV} "${S}"/${OBS_SERVICE_NAME}
 	insinto /usr/lib/obs/service
-	doins "${S}"/${OBS_SERVICE_NAME}.service
+	newins "${S}"/${OBS_SERVICE_NAME}-${PV}.service "${S}"/${OBS_SERVICE_NAME}.service
 	if [[ -n ${ADDITIONAL_FILES} ]]; then
 		debug-print "Installing following additional files:"
 		debug-print "	${ADDITIONAL_FILES}"
