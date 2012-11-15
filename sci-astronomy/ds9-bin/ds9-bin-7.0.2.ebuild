@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9-bin/ds9-bin-7.0.2.ebuild,v 1.1 2012/07/04 20:26:20 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9-bin/ds9-bin-7.0.2.ebuild,v 1.2 2012/11/15 00:10:40 bicatali Exp $
 
 EAPI=4
 
@@ -32,6 +32,7 @@ DEPEND=""
 S="${WORKDIR}"
 
 QA_PRESTRIPPED="usr/bin/ds9"
+QA_PREBUILT="usr/bin/ds9"
 
 src_install () {
 	dobin ds9
