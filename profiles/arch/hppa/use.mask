@@ -1,6 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.63 2012/11/13 22:43:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.64 2012/11/15 15:26:23 jer Exp $
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
+
+# Jeroen Roovers <jer@gentoo.org> (13 Nov 2012)
+# media-libs/fdk-aac is not supported on HPPA (bug #442806)
+fdk
 
 # Jeroen Roovers <jer@gentoo.org> (13 Nov 2012)
 # dev-python/pypy is untested, has build failures
