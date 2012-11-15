@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/oracle-instantclient-sqlplus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-sqlplus/ChangeLog,v 1.34 2012/11/14 17:20:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-sqlplus/ChangeLog,v 1.35 2012/11/15 19:47:11 haubi Exp $
+
+  15 Nov 2012; Michael Haubenwallner <haubi@gentoo.org>
+  oracle-instantclient-sqlplus-11.2.0.3.ebuild:
+  Define QA_PREBUILT, bug#443120.
 
   14 Nov 2012; Agostino Sarubbo <ago@gentoo.org>
   oracle-instantclient-sqlplus-11.2.0.3.ebuild:

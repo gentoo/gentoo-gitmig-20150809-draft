@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-sqlplus/oracle-instantclient-sqlplus-11.2.0.3.ebuild,v 1.4 2012/11/14 17:20:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-sqlplus/oracle-instantclient-sqlplus-11.2.0.3.ebuild,v 1.5 2012/11/15 19:47:11 haubi Exp $
 
 EAPI="4"
 
@@ -29,6 +29,11 @@ DEPEND="app-arch/unzip"
 RDEPEND="~dev-db/oracle-instantclient-basic-${PV}"
 
 S="${WORKDIR}"/instantclient_11_2
+
+QA_PREBUILT="
+	usr/lib*/oracle/${PV}/client/lib*/lib*
+	usr/lib*/oracle/${PV}/client/bin/sqlplus
+"
 
 my_arch() {
 	# platform name
