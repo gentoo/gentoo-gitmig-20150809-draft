@@ -1,0 +1,11 @@
+# ChangeLog for dev-embedded/dfu-programmer
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/dfu-programmer/ChangeLog,v 1.1 2012/11/15 12:20:19 chainsaw Exp $
+
+*dfu-programmer-0.5.4 (15 Nov 2012)
+
+  15 Nov 2012; Tony Vroon <chainsaw@gentoo.org> +files/0.5.4-as-needed.patch,
+  +dfu-programmer-0.5.4.ebuild, +metadata.xml:
+  Initial commit. Ebuild & patches were developed by Håvard Wall, Michael
+  Mathurin & Mark James in bug #233806. Some minor tweaks by me.
+
