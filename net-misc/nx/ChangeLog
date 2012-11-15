@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/nx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/ChangeLog,v 1.71 2012/10/17 03:01:24 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/ChangeLog,v 1.72 2012/11/15 09:27:50 voyageur Exp $
+
+*nx-3.5.0.16 (15 Nov 2012)
+
+  15 Nov 2012; Bernard Cafarelli <voyageur@gentoo.org> -nx-3.5.0-r1.ebuild,
+  -nx-3.5.0-r3.ebuild, -files/nx-3.5.0-libpng15.patch, +nx-3.5.0.16.ebuild:
+  Version bump, remove last versions based on nomachine packaging
 
   17 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> nx-3.5.0.14-r1.ebuild:
   x86 stable wrt bug #436760
