@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/celery-3.0.12.ebuild,v 1.1 2012/11/13 08:24:32 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/celery-3.0.12.ebuild,v 1.2 2012/11/15 09:29:42 patrick Exp $
 
 EAPI="4"
 
@@ -57,7 +57,7 @@ DEPEND="${RDEPEND}
 	dev-python/setuptools"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-3.0.11-require-python-dateutil-2.1.patch"
+	epatch "${FILESDIR}/${P}-require-python-dateutil-2.1.patch"
 }
 
 src_test() {
