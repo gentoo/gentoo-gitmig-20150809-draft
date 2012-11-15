@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase-pam
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-pam/ChangeLog,v 1.47 2011/07/11 05:03:33 mattst88 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-pam/ChangeLog,v 1.48 2012/11/15 18:08:53 johu Exp $
+
+  15 Nov 2012; Johannes Huber <johu@gentoo.org> kdebase-pam-7.ebuild:
+  Update license to GPL-2 wrt bug #441702.
 
   11 Jul 2011; Matt Turner <mattst88@gentoo.org> kdebase-pam-7.ebuild:
   Drop ~mips
@@ -174,4 +177,3 @@
   +files/kde-np.pam, +files/kde.pam, +kdebase-pam-3.4.0_beta1.ebuild:
   Adding the split ebuilds to portage. For KDE 3.4, we've created separate
   ebuilds for all the KDE apps.
-

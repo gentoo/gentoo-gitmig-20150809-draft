@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/kde-env-4.9.3.ebuild,v 1.1 2012/11/08 23:26:58 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/kde-env-4.9.3.ebuild,v 1.2 2012/11/15 18:12:22 johu Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI=""
 ESVN_REPO_URI=""
 
 KEYWORDS="~amd64 ~arm ~x86 ~amd64-fbsd ~amd64-linux ~x86-linux"
-LICENSE="as-is"
+LICENSE="GPL-2"
 IUSE="aqua"
 
 add_blocker kdelibs 4.6.80
