@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/olsrd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/olsrd/ChangeLog,v 1.31 2012/08/21 15:40:09 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/olsrd/ChangeLog,v 1.32 2012/11/15 16:50:37 jer Exp $
+
+*olsrd-0.6.4 (15 Nov 2012)
+
+  15 Nov 2012; Jeroen Roovers <jer@gentoo.org> +olsrd-0.6.4.ebuild:
+  Version bump. Add LICENSE+=LGPL-2.1 for lib/pud/nmealib/. Build verbose.
+  Respect LDFLAGS and AR. Fix parallel make.
 
   21 Aug 2012; Johannes Huber <johu@gentoo.org> olsrd-0.6.3.ebuild:
   Stable for x86, wrt bug #429184
