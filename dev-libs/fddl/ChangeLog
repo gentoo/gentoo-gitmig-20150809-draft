@@ -1,0 +1,11 @@
+# ChangeLog for dev-libs/fddl
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fddl/ChangeLog,v 1.1 2012/11/15 18:02:52 pinkbyte Exp $
+
+*fddl-20111124 (15 Nov 2012)
+
+  15 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> +fddl-20111124.ebuild,
+  +metadata.xml:
+  Initial commit wrt bug #442978. Package will be maintained by Mikle Kolyada
+  through proxy maintainers
+
