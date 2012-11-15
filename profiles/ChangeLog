@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7139 2012/11/14 17:17:29 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7140 2012/11/15 05:12:19 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Mask libav-9 until its reverse dependencies build; see bug #443230 for
+  tracking the progress.
 
   14 Nov 2012; Luca Barbato <lu_zero@gentoo.org> arch/amd64/use.mask,
   arch/arm/use.mask, arch/powerpc/use.mask, arch/x86/use.mask, base/use.mask:

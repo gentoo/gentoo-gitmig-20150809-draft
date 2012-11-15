@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14219 2012/11/14 12:50:15 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14220 2012/11/15 05:12:19 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego Elio Pettenò <flameeyes@gentoo.org> (14 Nov 2012)
+# Masked for testing as too many packages fail.
+# See bug #443230 for tracking the progress
+=media-libs/libav-9
 
 # Sergey Popov <pinkbyte@gentoo.org> (10 Nov 2012)
 # Segfaults in read_with_timeout, bug #335705.
