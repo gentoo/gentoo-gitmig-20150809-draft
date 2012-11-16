@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-distutils-extra/python-distutils-extra-2.37.ebuild,v 1.1 2012/11/11 11:07:34 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-distutils-extra/python-distutils-extra-2.37.ebuild,v 1.2 2012/11/16 02:48:41 patrick Exp $
 
 EAPI="4"
-PYTHON_DEPEND="2:2.6"
+PYTHON_DEPEND="2:2.6 3:3.2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.5 3.*"
+RESTRICT_PYTHON_ABIS="2.5"
 
 inherit distutils
 
