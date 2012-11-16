@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.687 2012/11/14 17:51:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.688 2012/11/16 16:29:19 ago Exp $
+
+  16 Nov 2012; Agostino Sarubbo <ago@gentoo.org> xorg-server-1.13.0-r1.ebuild:
+  Stable for amd64, wrt bug #440872
 
   14 Nov 2012; Jeroen Roovers <jer@gentoo.org> xorg-server-1.13.0-r1.ebuild:
   Spelling.
