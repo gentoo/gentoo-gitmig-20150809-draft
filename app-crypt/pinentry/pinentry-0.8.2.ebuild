@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.8.2.ebuild,v 1.3 2012/11/16 14:41:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.8.2.ebuild,v 1.4 2012/11/16 16:01:14 scarabeus Exp $
 
 EAPI=5
 
@@ -46,7 +46,10 @@ src_prepare() {
 }
 
 src_configure() {
-	use static && append-ldflags -static
+	if use static; then
+		append-ldflags -static
+		append-libs -ldl
+	fi
 
 	# Issues finding qt on multilib systems
 	export QTLIB="${QTDIR}/$(get_libdir)"
