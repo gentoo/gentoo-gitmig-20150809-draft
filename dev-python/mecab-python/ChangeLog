@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/mecab-python
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mecab-python/ChangeLog,v 1.16 2012/04/17 21:41:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mecab-python/ChangeLog,v 1.17 2012/11/16 07:36:56 patrick Exp $
+
+*mecab-python-0.994 (16 Nov 2012)
+
+  16 Nov 2012; Patrick Lauer <patrick@gentoo.org> +mecab-python-0.994.ebuild:
+  Bump
 
   17 Apr 2012; Brent Baude <ranger@gentoo.org> mecab-python-0.98.ebuild:
   Marking mecab-python-0.98 ppc64 for bug 404713
@@ -65,4 +70,3 @@
   10 Jul 2006; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
   +mecab-python-0.92.ebuild:
   Initial import.
-
