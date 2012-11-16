@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7152 2012/11/16 15:17:06 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7153 2012/11/16 17:14:13 tommy Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Nov 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> updates/4Q-2012:
+  Move x11-libs/elementary to media-libs/elementary
 
   16 Nov 2012; Ulrich Müller <ulm@gentoo.org> license_groups:
   Add SNIA to MISC-FREE license group, bug 441924.
