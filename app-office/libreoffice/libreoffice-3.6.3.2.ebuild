@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.6.3.2.ebuild,v 1.3 2012/11/07 21:10:10 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.6.3.2.ebuild,v 1.4 2012/11/16 18:30:28 ago Exp $
 
 EAPI=4
 
@@ -579,7 +579,7 @@ pkg_postinst() {
 	pax-mark -m "${EPREFIX}"/usr/$(get_libdir)/libreoffice/program/unopkg.bin
 
 	use java || \
-		ewarn 'If you plan to use lbase aplication you should enable java or you will get various crashes.'
+		ewarn 'If you plan to use lbase application you should enable java or you will get various crashes.'
 }
 
 pkg_postrm() {
