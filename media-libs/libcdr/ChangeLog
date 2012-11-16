@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libcdr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdr/ChangeLog,v 1.18 2012/10/24 16:34:45 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdr/ChangeLog,v 1.19 2012/11/16 19:57:17 ago Exp $
+
+  16 Nov 2012; Agostino Sarubbo <ago@gentoo.org> libcdr-0.0.9.ebuild:
+  workaround for bug 399061
 
   24 Oct 2012; Tomáš Chvátal <scarabeus@gentoo.org> libcdr-0.0.9.ebuild:
   Stable\!

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vo-aacenc/vo-aacenc-0.1.1.ebuild,v 1.16 2012/08/04 17:26:53 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vo-aacenc/vo-aacenc-0.1.1.ebuild,v 1.17 2012/11/16 19:55:56 ago Exp $
 
 EAPI=4
 
@@ -26,7 +26,10 @@ fi
 LICENSE="Apache-2.0"
 SLOT="0"
 
-[[ ${PV} == *9999 ]] || KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~x86-linux ~x64-macos"
+# Don't move KEYWORDS on the previous line or ekeyword won't work # 399061
+[[ ${PV} == *9999 ]] || \
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~x86-linux ~x64-macos"
+
 IUSE="examples static-libs neon"
 
 src_prepare() {

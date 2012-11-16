@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libvisio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/ChangeLog,v 1.37 2012/11/07 06:36:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/ChangeLog,v 1.38 2012/11/16 19:53:54 ago Exp $
+
+  16 Nov 2012; Agostino Sarubbo <ago@gentoo.org> libvisio-0.0.19.ebuild,
+  libvisio-0.0.20.ebuild:
+  workaround for bug 399061
 
   07 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   +files/libvisio-0.0.20-fix-underlinking-with-gold.patch,

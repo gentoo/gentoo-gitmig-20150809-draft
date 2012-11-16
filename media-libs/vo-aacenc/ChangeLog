@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/vo-aacenc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vo-aacenc/ChangeLog,v 1.31 2012/08/04 17:26:53 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vo-aacenc/ChangeLog,v 1.32 2012/11/16 19:55:56 ago Exp $
+
+  16 Nov 2012; Agostino Sarubbo <ago@gentoo.org> vo-aacenc-0.1.0.ebuild,
+  vo-aacenc-0.1.1.ebuild, vo-aacenc-0.1.2.ebuild:
+  workaround for bug 399061
 
   04 Aug 2012; Julian Ospald <hasufell@gentoo.org> vo-aacenc-0.1.0.ebuild,
   vo-aacenc-0.1.1.ebuild, vo-aacenc-0.1.2.ebuild, vo-aacenc-9999.ebuild:
@@ -114,4 +118,3 @@
   29 Mar 2011; Luca Barbato <lu_zero@gentoo.org> +metadata.xml,
   +vo-aacenc-9999.ebuild:
   Initial ebuild
-

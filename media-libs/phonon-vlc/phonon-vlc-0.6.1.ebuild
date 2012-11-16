@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-vlc/phonon-vlc-0.6.1.ebuild,v 1.1 2012/11/13 21:40:03 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-vlc/phonon-vlc-0.6.1.ebuild,v 1.2 2012/11/16 19:59:34 ago Exp $
 
 EAPI=4
 
@@ -16,7 +16,11 @@ HOMEPAGE="https://projects.kde.org/projects/kdesupport/phonon/phonon-vlc"
 [[ ${PV} == 9999 ]] || SRC_URI="mirror://kde/stable/phonon/${MY_PN}/${PV}/src/${MY_P}.tar.xz"
 
 LICENSE="LGPL-2.1"
-[[ ${PV} == 9999 ]] || KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-fbsd"
+
+# Don't move KEYWORDS on the previous line or ekeyword won't work # 399061
+[[ ${PV} == 9999 ]] || \
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-fbsd"
+
 SLOT="0"
 IUSE="debug"
 
