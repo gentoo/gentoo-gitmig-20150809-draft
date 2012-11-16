@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.34 2012/09/27 16:35:41 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.35 2012/11/16 15:47:17 slyfox Exp $
 
 # @ECLASS: haskell-cabal.eclass
 # @MAINTAINER:
@@ -19,6 +19,7 @@
 # Currently supported features:
 #   haddock    --  for documentation generation
 #   hscolour   --  generation of colourised sources
+#   hoogle     --  generation of documentation search index
 #   alex       --  lexer/scanner generator
 #   happy      --  parser generator
 #   c2hs       --  C interface generator
@@ -187,9 +188,19 @@ cabal-bootstrap() {
 	if $(ghc-supports-shared-libraries); then
 		# # some custom build systems might use external libraries,
 		# # for which we don't have shared libs, so keep static fallback
-		# Disabled '-dynamic' as ghc does not embed RPATH to used extra-libraries:
 		# bug #411789, http://hackage.haskell.org/trac/ghc/ticket/5743#comment:3
-		# make_setup -dynamic "$@" ||
+		# http://hackage.haskell.org/trac/ghc/ticket/7062
+		# http://hackage.haskell.org/trac/ghc/ticket/3072
+		# ghc does not set RPATH for extralibs, thus we do it ourselves by hands
+		einfo "Prepending $(ghc-libdir) to LD_LIBRARY_PATH"
+		if [[ ${CHOST} != *-darwin* ]]; then
+			LD_LIBRARY_PATH="$(ghc-libdir)${LD_LIBRARY_PATH:+:}${LD_LIBRARY_PATH}"
+			export LD_LIBRARY_PATH
+		else
+			DYLD_LIBRARY_PATH="$(ghc-libdir)${DYLD_LIBRARY_PATH:+:}${DYLD_LIBRARY_PATH}"
+			export DYLD_LIBRARY_PATH
+		fi
+		{ make_setup -dynamic "$@" && ./setup --help >/dev/null; } ||
 		make_setup "$@" || die "compiling ${setupmodule} failed"
 	else
 		make_setup "$@" || die "compiling ${setupmodule} failed"
@@ -291,6 +302,13 @@ cabal-configure() {
 	[[ ${CATEGORY}/${PN} == "dev-haskell/cabal" ]] && \
 		$(ghc-supports-shared-libraries) && \
 			cabalconf="${cabalconf} --enable-shared"
+
+	if $(ghc-supports-shared-libraries); then
+		# maybe a bit lower
+		if version_is_at_least "7.7.20121114" "$(ghc-version)"; then
+			cabalconf="${cabalconf} --enable-shared"
+		fi
+	fi
 
 	set -- configure \
 		--ghc --prefix="${EPREFIX}"/usr \
