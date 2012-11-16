@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.752 2012/11/15 03:37:30 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.753 2012/11/16 05:23:10 phajdan.jr Exp $
+
+  16 Nov 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-system-ffmpeg-r0.patch, chromium-25.0.1323.1.ebuild,
+  chromium-9999-r1.ebuild:
+  Add experimental support to build wih system ffmpeg.
 
 *chromium-25.0.1323.1 (15 Nov 2012)
 
