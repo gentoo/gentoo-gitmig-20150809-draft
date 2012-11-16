@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/libsoundtouch-1.7.0.ebuild,v 1.3 2012/11/14 16:33:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/libsoundtouch-1.7.0.ebuild,v 1.4 2012/11/16 02:51:37 blueness Exp $
 
 EAPI=4
 inherit autotools eutils flag-o-matic
@@ -13,7 +13,7 @@ SRC_URI="http://www.surina.net/soundtouch/${P/lib}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~hppa ~mips ~ppc ppc64 ~x86"
+KEYWORDS="amd64 ~arm ~hppa ~mips ppc ppc64 ~x86"
 IUSE="sse2 static-libs"
 
 DEPEND="virtual/pkgconfig"
