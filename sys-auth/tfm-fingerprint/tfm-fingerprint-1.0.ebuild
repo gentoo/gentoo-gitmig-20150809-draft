@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/tfm-fingerprint/tfm-fingerprint-1.0.ebuild,v 1.7 2010/08/30 22:12:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/tfm-fingerprint/tfm-fingerprint-1.0.ebuild,v 1.8 2012/11/16 10:13:48 ulm Exp $
 
 inherit multilib
 
@@ -8,8 +8,7 @@ DESCRIPTION="TouchChip TFM/ESS FingerPrint BSP"
 HOMEPAGE="http://www.upek.com/support/dl_linux_bsp.asp"
 SRC_URI="http://www.upek.com/support/download/TFMESS_BSP_LIN_${PV}.zip"
 
-# This is the best license I could find.
-LICENSE="as-is"
+LICENSE="UPEK-SDK-EULA"
 SLOT="0"
 KEYWORDS="-* x86"
 IUSE=""
