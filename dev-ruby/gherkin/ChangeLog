@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/gherkin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/ChangeLog,v 1.44 2012/11/16 06:45:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/ChangeLog,v 1.45 2012/11/16 06:47:02 graaff Exp $
+
+  16 Nov 2012; Hans de Graaff <graaff@gentoo.org> -gherkin-2.9.3.ebuild,
+  -gherkin-2.10.0.ebuild:
+  Remove experimental slotted gherkin packages.
 
 *gherkin-2.11.5 (16 Nov 2012)
 
