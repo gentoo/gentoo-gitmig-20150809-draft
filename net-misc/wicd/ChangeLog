@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.128 2012/10/16 21:24:40 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.129 2012/11/16 18:03:11 tomka Exp $
+
+*wicd-1.7.2.4-r2 (16 Nov 2012)
+
+  16 Nov 2012; Thomas Kahle <tomka@gentoo.org>
+  +files/wicd-1.7.2.4-second-urwid.patch, +files/wicd-1.7.2.4-urwid.patch,
+  +wicd-1.7.2.4-r2.ebuild:
+  Fix urwid-1.1 compatibility (bug 441966)
 
   16 Oct 2012; Thomas Kahle <tomka@gentoo.org> wicd-1.7.2.4-r1.ebuild:
   marked x86 per bug 433976
