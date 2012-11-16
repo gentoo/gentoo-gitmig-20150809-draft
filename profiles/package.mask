@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14223 2012/11/15 18:17:31 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14224 2012/11/16 06:49:13 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -519,12 +519,6 @@ games-strategy/glest
 # Unstable dev channel release. Fixes build with gcc47
 # (bug #413941).
 >=media-sound/mp3diags-1.1
-
-# Hans de Graaff <graaff@gentoo.org> (29 Apr 2012)
-# Mask new cucumber components until the whole set is ready.
-# Fixes bug 413909
-dev-ruby/gherkin:2.9
-dev-ruby/gherkin:2.10
 
 # Robin H. Johnson <robbat2@gentoo.org> (09 Feb 2012)
 # Needs to be slotted better

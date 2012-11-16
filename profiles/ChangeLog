@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7147 2012/11/16 05:19:05 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7148 2012/11/16 06:49:13 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Nov 2012; Hans de Graaff <graaff@gentoo.org> package.mask:
+  Remove mask for experimental gherkin slots, now removed from the tree.
 
   16 Nov 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> base/package.use.mask:
   Mask www-client/chromium system-ffmpeg USE flag (experimental).
