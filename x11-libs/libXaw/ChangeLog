@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXaw
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw/ChangeLog,v 1.107 2012/08/26 17:37:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw/ChangeLog,v 1.108 2012/11/16 16:41:20 ago Exp $
+
+  16 Nov 2012; Agostino Sarubbo <ago@gentoo.org> libXaw-1.0.11-r1.ebuild:
+  Stable for amd64, wrt bug #440872
 
   26 Aug 2012; Raúl Porcel <armin76@gentoo.org> libXaw-1.0.11.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #419473
