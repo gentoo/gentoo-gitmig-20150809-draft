@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/Ice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/ChangeLog,v 1.15 2012/11/16 12:43:49 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/ChangeLog,v 1.16 2012/11/16 13:19:27 ssuominen Exp $
+
+  16 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> Ice-3.4.2.ebuild:
+  Pull in correct SLOT of dev-libs/openssl to ensure headers are installed.
 
   16 Nov 2012; Lars Wendler <polynomial-c@gentoo.org> -Ice-3.2.0.ebuild,
   -files/Ice-3.2.0-Makefile.patch, -Ice-3.2.1.ebuild,

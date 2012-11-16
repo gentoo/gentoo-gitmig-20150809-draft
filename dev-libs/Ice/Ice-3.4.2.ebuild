@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/Ice-3.4.2.ebuild,v 1.7 2012/07/05 12:32:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/Ice-3.4.2.ebuild,v 1.8 2012/11/16 13:19:27 ssuominen Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ IUSE="doc examples +ncurses mono python ruby test debug"
 
 RDEPEND=">=dev-libs/expat-2.0.1
 	>=app-arch/bzip2-1.0.5
-	>=dev-libs/openssl-0.9.8o
+	>=dev-libs/openssl-0.9.8o:0
 	>=sys-libs/db-4.8.30[cxx]
 	~dev-cpp/libmcpp-2.7.2
 	ruby? ( $(ruby_implementation_depend ruby18) )
