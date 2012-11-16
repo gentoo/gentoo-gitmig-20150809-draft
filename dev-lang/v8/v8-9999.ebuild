@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.32 2012/08/29 17:13:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.33 2012/11/16 19:25:59 grobian Exp $
 
 EAPI="4"
 
@@ -102,7 +102,7 @@ src_install() {
 			|| die
 		install_name_tool \
 			-change \
-			"${S}"/out/${mytarget}/libv8.so.${soname_version} \
+			/usr/local/lib/libv8.so.${soname_version} \
 			"${EPREFIX}"/usr/$(get_libdir)/libv8$(get_libname) \
 			out/${mytarget}/d8 || die
 	fi
