@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.17.0_alpha3.ebuild,v 1.1 2012/11/16 20:11:28 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.17.0_alpha3.ebuild,v 1.2 2012/11/16 20:48:21 tommy Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ __CONF_MODS="
 	+@applications +@dialogs +@display +@edgebindings
 	+@interaction +@intl +@keybindings +@menus
 	+@paths +@performance +@randr +@shelves +@theme
-	+@wallpaper2 +@window-manipulation +@window-remembers"
+	+@window-manipulation +@window-remembers"
 __NORM_MODS="
 	@access +@backlight +@battery +@clock +@comp +@connman +@cpufreq +@dropshadow
 	+@everything +@fileman +@fileman-opinfo +@gadman +@ibar +@ibox +@illume2

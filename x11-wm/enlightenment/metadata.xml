@@ -98,7 +98,6 @@ Enlightenment Features:
 	<flag name="enlightenment_modules_conf-randr">Used to configure your screen's resolution</flag>
 	<flag name="enlightenment_modules_conf-shelves">Shelf configuration dialog</flag>
 	<flag name="enlightenment_modules_conf-theme">Used to configure your theme preferences</flag>
-	<flag name="enlightenment_modules_conf-wallpaper2">Used to pick a wallpaper</flag>
 	<flag name="enlightenment_modules_conf-window-manipulation">Configures window raise, resistance, and maximize policies</flag>
 	<flag name="enlightenment_modules_conf-window-remembers">Delete existing window remembers</flag>
   </use>
