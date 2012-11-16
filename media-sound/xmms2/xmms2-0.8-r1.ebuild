@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/xmms2-0.8-r1.ebuild,v 1.9 2012/11/09 21:58:40 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/xmms2-0.8-r1.ebuild,v 1.10 2012/11/16 09:30:51 slyfox Exp $
 
 EAPI=3
 
@@ -251,7 +251,7 @@ src_install() {
 
 pkg_postinst() {
 	elog "This version is built on experimental development code"
-	elog "If you encounter any errors report them at http://bugs.xmms2.xmms.se"
+	elog "If you encounter any errors report them at http://bugs.xmms2.org"
 	elog "and visit #xmms2 at irc://irc.freenode.net"
 	if use phonehome ; then
 		einfo ""
