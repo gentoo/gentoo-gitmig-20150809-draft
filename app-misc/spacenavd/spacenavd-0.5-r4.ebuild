@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/spacenavd/spacenavd-0.5-r4.ebuild,v 1.1 2012/11/16 10:25:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/spacenavd/spacenavd-0.5-r4.ebuild,v 1.2 2012/11/16 10:29:22 ssuominen Exp $
 
 EAPI="4"
 
@@ -37,7 +37,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake CC=$(tc-getCC)
+	emake CC="$(tc-getCC)"
 }
 
 src_install() {
@@ -50,8 +50,11 @@ src_install() {
 
 	# Install udev rule but leave activiation to the user
 	# since Xorg may be configured to grab the device already
+	# ^ Above statement doesn't seem to be correct as rules from
+	# udevdir are loaded normally. /etc/udev/rules.d is when you
+	# do changes to the rules. - ssuominen
 	insinto "$(udev_get_udevdir)"
-	newins "${FILESDIR}"/99-space-navigator.rules 99-space-navigator.rules.ignored
+	doins "${FILESDIR}"/99-space-navigator.rules
 
 	# Daemon
 	dobin "${S}/spacenavd"
