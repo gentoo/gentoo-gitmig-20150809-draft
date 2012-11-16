@@ -1,6 +1,11 @@
 # ChangeLog for app-office/lyx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.274 2012/10/10 15:23:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.275 2012/11/16 09:10:51 patrick Exp $
+
+*lyx-2.0.5 (16 Nov 2012)
+
+  16 Nov 2012; Patrick Lauer <patrick@gentoo.org> +lyx-2.0.5.ebuild:
+  Bump
 
   10 Oct 2012; Brent Baude <ranger@gentoo.org> lyx-2.0.4.ebuild:
   Marking lyx-2.0.4 ppc for bug 431186
