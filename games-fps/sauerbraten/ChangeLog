@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/sauerbraten
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/sauerbraten/ChangeLog,v 1.13 2012/09/05 09:50:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/sauerbraten/ChangeLog,v 1.14 2012/11/16 21:04:44 mr_bones_ Exp $
+
+  16 Nov 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  -sauerbraten-2008.06.17.ebuild:
+  old
 
   05 Sep 2012; Justin Lecher <jlec@gentoo.org> sauerbraten-2010.07.28.ebuild:
   Use doicon instead insinto + doins to install icon files
