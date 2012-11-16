@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/nvidia-cg-toolkit-3.1.0013-r1.ebuild,v 1.1 2012/11/16 09:43:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/nvidia-cg-toolkit-3.1.0013-r1.ebuild,v 1.2 2012/11/16 09:57:25 jlec Exp $
 
 EAPI=5
 
@@ -68,6 +68,7 @@ install_pkgconfig() {
 		-e "s:DESCRIPTION:${DESCRIPTION}:g" \
 		-e "s:VERSION:${PV}:g" \
 		-e "s|HOMEPAGE|${HOMEPAGE}|g" \
+		-e "s:SUFFIX:${suffix}:g" \
 		"${FILESDIR}/${1}.in" > "${T}/${1/.pc/${suffix}.pc}" || die
 		eprefixify "${T}/${1/.pc/${suffix}.pc}"
 	doins "${T}/${1/.pc/${suffix}.pc}"
