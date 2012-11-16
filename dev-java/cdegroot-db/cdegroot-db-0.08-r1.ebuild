@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cdegroot-db/cdegroot-db-0.08-r1.ebuild,v 1.3 2007/05/09 21:31:30 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cdegroot-db/cdegroot-db-0.08-r1.ebuild,v 1.4 2012/11/16 09:30:56 ulm Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -10,7 +10,7 @@ DESCRIPTION="OO database written in Java"
 HOMEPAGE="http://www.cdegroot.com/software/db/"
 SRC_URI="http://www.cdegroot.com/software/db/download/com.${P/-/.}.tar.gz"
 
-LICENSE="cdegroot"
+LICENSE="MIT"
 SLOT="1"
 KEYWORDS="amd64 x86 ppc64 ppc"
 IUSE="doc source"
