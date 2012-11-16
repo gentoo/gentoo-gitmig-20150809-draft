@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-vala
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-vala/ChangeLog,v 1.7 2012/11/16 12:36:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-vala/ChangeLog,v 1.8 2012/11/16 12:37:26 ssuominen Exp $
+
+  16 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> -xfce4-vala-4.8.1.ebuild:
+  old
 
 *xfce4-vala-4.10.2 (16 Nov 2012)
 
