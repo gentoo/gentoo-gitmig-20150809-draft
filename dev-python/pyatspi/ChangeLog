@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyatspi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyatspi/ChangeLog,v 1.15 2012/10/17 04:34:27 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyatspi/ChangeLog,v 1.16 2012/11/16 13:25:42 blueness Exp $
+
+  16 Nov 2012; Anthony G. Basile <blueness@gentoo.org> pyatspi-2.6.0.ebuild:
+  keyword ~ppc ~ppc64, bug #411761
 
   17 Oct 2012; Matt Turner <mattst88@gentoo.org> pyatspi-2.6.0.ebuild:
   Added ~alpha.
