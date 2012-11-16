@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/shlilo-lantank/shlilo-lantank-20040408.ebuild,v 1.1 2009/10/18 22:16:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/shlilo-lantank/shlilo-lantank-20040408.ebuild,v 1.2 2012/11/16 08:30:22 ulm Exp $
 
 inherit mount-boot
 
@@ -9,7 +9,7 @@ DESCRIPTION="bootloader for the SuperH Lantank"
 HOMEPAGE="http://www.linux-sh.org/"
 SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="GPL-2+ BSD"
 SLOT="0"
 KEYWORDS="-* sh"
 IUSE=""
