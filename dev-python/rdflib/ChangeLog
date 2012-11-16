@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/rdflib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rdflib/ChangeLog,v 1.15 2012/10/07 00:46:43 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rdflib/ChangeLog,v 1.16 2012/11/16 17:36:08 idella4 Exp $
+
+*rdflib-3.2.3 (17 Nov 2012)
+
+  17 Nov 2012; Ian Delaney <idella4@gentoo.org> +rdflib-3.2.3.ebuild:
+  bump; 3.2.3; test suite 'fixed' to fix trawling of non tests files, fixes Bug
+  #406567
 
   07 Oct 2012; Mike Gilbert <floppym@gentoo.org> rdflib-3.1.0.ebuild,
   rdflib-3.2.1.ebuild, rdflib-3.2.2.ebuild:
