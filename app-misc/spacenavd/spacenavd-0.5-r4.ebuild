@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/spacenavd/spacenavd-0.5-r4.ebuild,v 1.2 2012/11/16 10:29:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/spacenavd/spacenavd-0.5-r4.ebuild,v 1.3 2012/11/16 10:33:05 ssuominen Exp $
 
 EAPI="4"
 
@@ -50,11 +50,8 @@ src_install() {
 
 	# Install udev rule but leave activiation to the user
 	# since Xorg may be configured to grab the device already
-	# ^ Above statement doesn't seem to be correct as rules from
-	# udevdir are loaded normally. /etc/udev/rules.d is when you
-	# do changes to the rules. - ssuominen
 	insinto "$(udev_get_udevdir)"
-	doins "${FILESDIR}"/99-space-navigator.rules
+	newins "${FILESDIR}"/99-space-navigator.rules 99-space-navigator.rules.ignored
 
 	# Daemon
 	dobin "${S}/spacenavd"
@@ -73,6 +70,10 @@ pkg_postinst() {
 		elog "\`spnavd_ctl x11 start\`"
 		elog
 	fi
+	elog
+	elog "If you want to auto-start the daemon when you plug in"
+	elog "a SpaceNavigator device, activate the related udev rule :"
+	elog "\`sudo ln -s $(udev_get_udevdir)/rules.d/99-space-navigator.rules.ignored /etc/udev/rules.d\`"
 	ewarn "You must restart spnavd \`/etc/init.d/spacenavd restart\` to run"
 	ewarn "the new version of the daemon."
 }
