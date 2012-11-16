@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/linuxdoc-tools/linuxdoc-tools-0.9.21_p11.ebuild,v 1.8 2010/08/01 20:02:03 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/linuxdoc-tools/linuxdoc-tools-0.9.21_p11.ebuild,v 1.9 2012/11/16 09:40:59 ulm Exp $
 
 inherit eutils sgml-catalog toolchain-funcs
 
@@ -11,7 +11,7 @@ DESCRIPTION="A toolset for processing LinuxDoc DTD SGML files"
 HOMEPAGE="http://packages.qa.debian.org/l/linuxdoc-tools.html"
 SRC_URI="mirror://debian/pool/main/l/${PN}/${PN}_${MY_PV}.tar.gz"
 
-LICENSE="KenMacLeod SGMLUG"
+LICENSE="MIT SGMLUG"
 SLOT="0"
 KEYWORDS="amd64 ~ia64 ppc x86 ~x86-fbsd"
 IUSE="latex"
