@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/josm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/josm/ChangeLog,v 1.44 2012/09/19 10:20:59 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/josm/ChangeLog,v 1.45 2012/11/16 20:12:26 ago Exp $
+
+  16 Nov 2012; Agostino Sarubbo <ago@gentoo.org> josm-4203.ebuild,
+  josm-4550.ebuild, josm-5315.ebuild, josm-5356.ebuild, josm-5485.ebuild:
+  workaround for bug 399061
 
 *josm-5485 (19 Sep 2012)
 
@@ -223,4 +227,3 @@
 
   06 Sep 2007; Hanno Boeck <hanno@gentoo.org> +files/josm, +josm-1.5.ebuild:
   Initial commit of the Java OpenStreetMap Editor.
-
