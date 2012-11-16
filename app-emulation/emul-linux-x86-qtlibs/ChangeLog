@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-qtlibs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/ChangeLog,v 1.78 2012/10/28 11:25:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/ChangeLog,v 1.79 2012/11/16 16:43:25 pacho Exp $
+
+  16 Nov 2012; Pacho Ramos <pacho@gentoo.org>
+  emul-linux-x86-qtlibs-20121028.ebuild, metadata.xml:
+  Handle gtkstyle as x11-libs/qt-gui does (#443474 by Alexander Mezin).
 
 *emul-linux-x86-qtlibs-20121028 (28 Oct 2012)
 
