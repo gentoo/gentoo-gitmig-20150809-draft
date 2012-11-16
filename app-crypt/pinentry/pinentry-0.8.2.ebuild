@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.8.2.ebuild,v 1.6 2012/11/16 18:13:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.8.2.ebuild,v 1.7 2012/11/16 20:45:51 scarabeus Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ RDEPEND="
 	gtk? ( x11-libs/gtk+:2 )
 	ncurses? ( sys-libs/ncurses )
 	qt4? ( >=x11-libs/qt-gui-4.4.1:4 )
-	static? ( >=sys-libs/ncurses-5.7-r5[static-libs] )
+	static? ( >=sys-libs/ncurses-5.7-r5[static-libs,-gpm] )
 "
 DEPEND="${RDEPEND}
 	gtk? ( virtual/pkgconfig )
@@ -46,10 +46,7 @@ src_prepare() {
 }
 
 src_configure() {
-	if use static; then
-		append-ldflags -static
-		append-libs -ldl
-	fi
+	use static && append-ldflags -static
 
 	# Issues finding qt on multilib systems
 	export QTLIB="${QTDIR}/$(get_libdir)"
