@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7151 2012/11/16 13:11:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7152 2012/11/16 15:17:06 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Nov 2012; Ulrich Müller <ulm@gentoo.org> license_groups:
+  Add SNIA to MISC-FREE license group, bug 441924.
 
   16 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Lastrite metacity-python wrt #438894
