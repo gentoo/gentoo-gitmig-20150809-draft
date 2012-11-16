@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/Ice-3.4.2.ebuild,v 1.8 2012/11/16 13:19:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/Ice-3.4.2.ebuild,v 1.9 2012/11/16 13:40:30 ssuominen Exp $
 
 EAPI="2"
 
@@ -15,7 +15,8 @@ inherit toolchain-funcs versionator python mono ruby-ng db-use
 DESCRIPTION="ICE middleware C++ library and generator tools"
 HOMEPAGE="http://www.zeroc.com/"
 SRC_URI="http://www.zeroc.com/download/Ice/$(get_version_component_range 1-2)/${P}.tar.gz
-	doc? ( http://www.zeroc.com/download/Ice/$(get_version_component_range 1-2)/${P}.pdf.gz )"
+	doc? ( http://www.zeroc.com/download/Ice/$(get_version_component_range 1-2)/${P}.pdf.gz )
+	http://dev.gentoo.org/~ssuominen/${P}-gcc47.patch.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~arm ~ia64 x86"
@@ -55,8 +56,10 @@ src_unpack() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-3.4.1-db5.patch
-	epatch "${FILESDIR}"/${PN}-3.4.2-gcc46.patch
+	epatch \
+		"${FILESDIR}"/${PN}-3.4.1-db5.patch \
+		"${FILESDIR}"/${PN}-3.4.2-gcc46.patch \
+		"${WORKDIR}"/${PN}-3.4.2-gcc47.patch
 
 	sed -i \
 		-e 's|\(install_docdir[[:space:]]*\):=|\1?=|' \
