@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kding/kding-0.6-r1.ebuild,v 1.1 2012/08/24 09:40:23 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kding/kding-0.6-r1.ebuild,v 1.2 2012/11/16 18:13:04 johu Exp $
 
 EAPI=4
 KDE_HANDBOOK="optional"
@@ -20,8 +20,6 @@ PATCHES=( "${FILESDIR}"/${P}-dtd.patch )
 
 src_prepare() {
 	sed -e "/Encoding=UTF-8/d" \
-		-i resources/kding.desktop || die "fixing .desktop file failed"
-	sed -e "s/Office/Office;TextTools;Utility/" \
 		-i resources/kding.desktop || die "fixing .desktop file failed"
 
 	kde4-base_src_prepare
