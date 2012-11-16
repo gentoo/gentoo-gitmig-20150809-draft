@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/unoconv/unoconv-0.6.ebuild,v 1.1 2012/10/31 08:55:29 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/unoconv/unoconv-0.6.ebuild,v 1.2 2012/11/16 20:08:44 ago Exp $
 
 EAPI=3
 
@@ -16,7 +16,11 @@ HOMEPAGE="http://dag.wieers.com/home-made/unoconv/"
 
 LICENSE="GPL-2"
 SLOT="0"
-[[ ${PV} == 9999* ]] || KEYWORDS="~amd64 ~x86"
+
+# Don't move KEYWORDS on the previous line or ekeyword won't work # 399061
+[[ ${PV} == 9999* ]] || \
+KEYWORDS="~amd64 ~x86"
+
 IUSE=""
 
 DEPEND=""

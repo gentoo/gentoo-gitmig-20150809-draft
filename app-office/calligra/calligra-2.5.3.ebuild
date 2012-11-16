@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.5.3.ebuild,v 1.1 2012/11/04 10:27:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.5.3.ebuild,v 1.2 2012/11/16 20:10:32 ago Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -41,7 +41,9 @@ esac
 LICENSE="GPL-2"
 SLOT="4"
 
-[[ ${PV} == *9999 ]] || KEYWORDS="amd64 x86"
+# Don't move KEYWORDS on the previous line or ekeyword won't work # 399061
+[[ ${PV} == *9999 ]] || \
+KEYWORDS="amd64 x86"
 
 IUSE="attica +crypt +eigen +exif fftw +fontconfig freetds +gif glew +glib +gsf
 gsl +jpeg jpeg2k +kdcraw kdepim +lcms marble mysql +okular opengtl openexr
