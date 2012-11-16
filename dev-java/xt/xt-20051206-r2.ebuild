@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xt/xt-20051206-r2.ebuild,v 1.3 2012/06/01 20:23:40 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xt/xt-20051206-r2.ebuild,v 1.4 2012/11/16 09:38:38 ulm Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ DESCRIPTION="Java Implementation of XSL-Transformations"
 SRC_URI="http://www.blnz.com/xt/${P}-src.zip"
 HOMEPAGE="http://www.blnz.com/xt/"
 
-LICENSE="JamesClark"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE=""
