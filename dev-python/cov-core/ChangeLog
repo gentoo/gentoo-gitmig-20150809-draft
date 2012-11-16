@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/cov-core
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cov-core/ChangeLog,v 1.1 2012/11/16 18:47:46 chutzpah Exp $
+
+*cov-core-1.7 (16 Nov 2012)
+
+  16 Nov 2012; Patrick McLean <chutzpah@gentoo.org> +cov-core-1.7.ebuild,
+  +metadata.xml:
+  New package, cov-core plugin core for use by pytest-cov, nose-cov and
+  nose2-cov
+
