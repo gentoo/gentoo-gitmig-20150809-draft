@@ -1,9 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.408 2012/11/15 18:30:34 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.409 2012/11/16 05:19:05 phajdan.jr Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+#
+# Pawel Hajdan jr <phajdan.jr@gentoo.org> (15 Nov 2012)
+# Experimental, requires masked ffmpeg, no libav support yet.
+www-client/chromium system-ffmpeg
 
 # Mike Gilbert <floppym@gentoo.org> (11 Nov 2012)
 # Unit tests tend to segfault/crash, upstream doesn't care at the moment.
