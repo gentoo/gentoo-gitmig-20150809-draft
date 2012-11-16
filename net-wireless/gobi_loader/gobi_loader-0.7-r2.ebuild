@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gobi_loader/gobi_loader-0.7-r1.ebuild,v 1.2 2010/08/11 14:01:18 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gobi_loader/gobi_loader-0.7-r2.ebuild,v 1.1 2012/11/16 13:21:12 polynomial-c Exp $
 
 EAPI="2"
-inherit eutils multilib
+inherit eutils multilib udev
 
 DESCRIPTION="gobi_loader is a firmware loader for Qualcomm Gobi USB chipsets"
 HOMEPAGE="http://www.codon.org.uk/~mjg59/gobi_loader/"
@@ -19,7 +19,7 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-makefile.patch
-	sed "s:%LIBDIR%:$(get_libdir):" -i Makefile || die
+	sed "s:%UDEVDIR%:$(udev_get_udevdir):" -i Makefile || die
 }
 
 src_install() {
