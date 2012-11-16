@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hbaapi/hbaapi-2.2.ebuild,v 1.4 2011/11/27 07:28:24 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hbaapi/hbaapi-2.2.ebuild,v 1.5 2012/11/16 15:19:46 ulm Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://hbaapi.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tgz
 	mirror://gentoo/${P}.Makefile.gz"
 
-LICENSE="as-is"
+LICENSE="SNIA"
 SLOT="0"
 KEYWORDS="~ppc ~x86 ~amd64"
 IUSE=""
