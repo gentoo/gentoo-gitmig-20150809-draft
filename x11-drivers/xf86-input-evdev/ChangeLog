@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-input-evdev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.188 2012/08/26 19:33:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.189 2012/11/16 16:30:14 ago Exp $
+
+  16 Nov 2012; Agostino Sarubbo <ago@gentoo.org> xf86-input-evdev-2.7.3.ebuild:
+  Stable for amd64, wrt bug #440872
 
   26 Aug 2012; Raúl Porcel <armin76@gentoo.org> xf86-input-evdev-2.7.0.ebuild:
   alpha/ia64/sh/sparc stable wrt #419473

@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-savage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-savage/ChangeLog,v 1.79 2012/10/15 14:18:35 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-savage/ChangeLog,v 1.80 2012/11/16 16:37:58 ago Exp $
+
+  16 Nov 2012; Agostino Sarubbo <ago@gentoo.org>
+  xf86-video-savage-2.3.6.ebuild:
+  Stable for amd64, wrt bug #440872
 
   15 Oct 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   xf86-video-savage-2.3.6.ebuild:
