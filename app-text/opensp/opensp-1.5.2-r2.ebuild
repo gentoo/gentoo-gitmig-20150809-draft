@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/opensp-1.5.2-r2.ebuild,v 1.9 2011/07/24 08:47:44 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/opensp-1.5.2-r2.ebuild,v 1.10 2012/11/16 09:34:52 ulm Exp $
 
 EAPI=2
 inherit eutils flag-o-matic
@@ -10,7 +10,7 @@ DESCRIPTION="A free, object-oriented toolkit for SGML parsing and entity managem
 HOMEPAGE="http://openjade.sourceforge.net/"
 SRC_URI="mirror://sourceforge/openjade/${MY_P}.tar.gz"
 
-LICENSE="JamesClark"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="doc nls static-libs test"
