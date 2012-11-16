@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pnmixer/pnmixer-0.6_pre20111213.ebuild,v 1.1 2012/11/16 00:20:24 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pnmixer/pnmixer-0.6_pre20111213.ebuild,v 1.2 2012/11/16 00:25:27 hasufell Exp $
 
 EAPI=5
 
 inherit autotools eutils gnome2-utils
 
-DESCRIPTION="Volume mixer for the system tray"
+DESCRIPTION="Alsa volume mixer for the system tray"
 HOMEPAGE="https://github.com/nicklan/pnmixer"
 SRC_URI="http://dev.gentoo.org/~hasufell/distfiles/${P}.tar.xz"
 
