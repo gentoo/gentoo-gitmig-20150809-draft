@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pnmixer/pnmixer-0.6_pre20111213.ebuild,v 1.2 2012/11/16 00:25:27 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pnmixer/pnmixer-0.6_pre20111213.ebuild,v 1.3 2012/11/16 00:28:02 hasufell Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="libnotify"
 
 RDEPEND="media-libs/alsa-lib
-	x11-libs/gtk+
+	x11-libs/gtk+:2
 	x11-libs/libX11
 	libnotify? ( x11-libs/libnotify )"
 DEPEND="sys-devel/gettext
@@ -24,7 +24,7 @@ DEPEND="sys-devel/gettext
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-{build,desktopfile}.patch
-	mv configure.in configure.ac
+	mv configure.in configure.ac || die
 	eautoreconf
 }
 
