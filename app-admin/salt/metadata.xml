@@ -21,6 +21,7 @@ Between the remote execution system, and state management Salt addresses the
 backbone of cloud and data center management.
 </longdescription>
 	<use>
+		<flag name="openssl">Add support for using TLS via OpenSSL.</flag>
 		<flag name="jinja">Add support to use dev-python/jinja to parse Salt
 		states.</flag>
 		<flag name="libvirt">Support managing virtual machines with
