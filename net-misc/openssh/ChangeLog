@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.456 2012/11/11 21:12:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.457 2012/11/16 17:45:59 ago Exp $
+
+  16 Nov 2012; Agostino Sarubbo <ago@gentoo.org> -openssh-5.5_p1-r2.ebuild,
+  -openssh-5.6_p1-r2.ebuild, -openssh-5.7_p1-r1.ebuild,
+  -openssh-5.8_p1-r1.ebuild, -openssh-5.8_p2-r1.ebuild, -openssh-5.8_p2.ebuild,
+  -openssh-5.9_p1-r3.ebuild:
+  Remove old
 
   11 Nov 2012; Mike Frysinger <vapier@gentoo.org> openssh-6.1_p1.ebuild:
   Do not hardcode `pkg-config`.
