@@ -1,6 +1,12 @@
 # ChangeLog for app-text/tesseract
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.35 2012/10/26 01:22:49 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.36 2012/11/16 18:09:29 tomka Exp $
+
+*tesseract-3.02 (16 Nov 2012)
+
+  16 Nov 2012; Thomas Kahle <tomka@gentoo.org> +tesseract-3.02.ebuild,
+  -files/includes.patch:
+  Bump to 3.02 (bug 443276), remove unneeded patch (bug 344611)
 
   26 Oct 2012; Anthony G. Basile <blueness@gentoo.org> tesseract-3.01.ebuild:
   keyword ~ppc ~ppc64, bug #437670
