@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/Ice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/ChangeLog,v 1.14 2012/07/05 12:32:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/ChangeLog,v 1.15 2012/11/16 12:43:49 polynomial-c Exp $
+
+  16 Nov 2012; Lars Wendler <polynomial-c@gentoo.org> -Ice-3.2.0.ebuild,
+  -files/Ice-3.2.0-Makefile.patch, -Ice-3.2.1.ebuild,
+  -files/Ice-3.2.1-Makefile.patch, -files/Ice-3.2.1-gcc43.patch,
+  -Ice-3.3.1.ebuild, -Ice-3.3.1-r1.ebuild, -files/Ice-3.3.1-Makefile.patch,
+  -files/Ice-3.3.1-openssl.patch, -Ice-3.4.1.ebuild:
+  non-maintainer commit: Removed old versions.
 
   05 Jul 2012; Agostino Sarubbo <ago@gentoo.org> Ice-3.4.2.ebuild:
   Stable for amd64, wrt bug #418415
