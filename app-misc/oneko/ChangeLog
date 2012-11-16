@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/oneko
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/oneko/ChangeLog,v 1.20 2011/12/04 14:49:23 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/oneko/ChangeLog,v 1.21 2012/11/16 14:41:39 ulm Exp $
+
+  16 Nov 2012; Ulrich Müller <ulm@gentoo.org> oneko-1.2.ebuild,
+  oneko-1.2-r1.ebuild, oneko-1.2-r2.ebuild:
+  Fix LICENSE, this is in the public domain, bug 440844.
 
   04 Dec 2011; Markos Chandras <hwoarang@gentoo.org> oneko-1.2-r2.ebuild:
   Stable on amd64 wrt bug #391475
