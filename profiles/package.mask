@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14224 2012/11/16 06:49:13 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14225 2012/11/16 13:11:39 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (16 Nov 2012)
+# Unused in gentoo-x86 and fails to compile wrt bug #438894
+# Removal in 30 days
+dev-python/metacity-python
 
 # Ole Markus With <olemarkus@gentoo.org> (15 Nov 2012)
 # Masked for testing
