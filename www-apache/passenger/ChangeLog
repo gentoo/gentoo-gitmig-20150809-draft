@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/passenger
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/ChangeLog,v 1.56 2012/11/04 13:45:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/ChangeLog,v 1.57 2012/11/16 07:08:37 patrick Exp $
+
+*passenger-3.0.18 (16 Nov 2012)
+
+  16 Nov 2012; Patrick Lauer <patrick@gentoo.org> +passenger-3.0.18.ebuild:
+  Bump
 
   04 Nov 2012; <ago@gentoo.org> passenger-3.0.17.ebuild:
   Stable for amd64, wrt bug #440098
@@ -269,4 +274,3 @@
   25 Apr 2008; Benedikt Böhm <hollow@gentoo.org> +files/1.0.1-gentoo.patch,
   +files/30_mod_passenger.conf, +metadata.xml, +passenger-1.0.1.ebuild:
   initial version wrt #218170
-
