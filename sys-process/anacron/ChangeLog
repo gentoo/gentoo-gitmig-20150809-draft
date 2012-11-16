@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/anacron
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/anacron/ChangeLog,v 1.10 2011/06/12 12:18:52 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/anacron/ChangeLog,v 1.11 2012/11/16 08:25:22 ulm Exp $
+
+  16 Nov 2012; Ulrich Müller <ulm@gentoo.org> anacron-2.3-r2.ebuild:
+  Update LICENSE, GPL-2+ according to notice in source files, bug 441830.
 
   12 Jun 2011; Markus Meier <maekke@gentoo.org> anacron-2.3-r2.ebuild:
   add ~arm, bug #370209
