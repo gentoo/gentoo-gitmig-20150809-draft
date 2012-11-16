@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool2/pgpool2-3.2.0-r1.ebuild,v 1.1 2012/08/14 19:50:17 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool2/pgpool2-3.2.0-r1.ebuild,v 1.2 2012/11/16 20:03:13 ago Exp $
 
 EAPI=4
 
@@ -17,7 +17,11 @@ HOMEPAGE="http://www.pgpool.net/"
 [[ ${PV} == 9999 ]] || SRC_URI="http://www.pgpool.net/download.php?f=${MY_P}.tar.gz -> ${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-[[ ${PV} == 9999 ]] || KEYWORDS="~amd64 ~x86"
+
+# Don't move KEYWORDS on the previous line or ekeyword won't work # 399061
+[[ ${PV} == 9999 ]] || \
+KEYWORDS="~amd64 ~x86"
+
 IUSE="memcached pam ssl static-libs"
 
 RDEPEND="
