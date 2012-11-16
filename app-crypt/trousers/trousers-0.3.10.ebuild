@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/trousers-0.3.10.ebuild,v 1.1 2012/11/16 07:18:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/trousers-0.3.10.ebuild,v 1.2 2012/11/16 14:43:39 ssuominen Exp $
 
-EAPI="3"
+EAPI=4
 
-inherit autotools eutils linux-info user toolchain-funcs
+inherit autotools eutils linux-info user toolchain-funcs udev
 
 #MY_P="${PN}-${PV%.*}-${PV##*.}"
 
@@ -21,11 +21,12 @@ IUSE="doc" # gtk
 
 RDEPEND=">=dev-libs/glib-2
 	>=dev-libs/openssl-0.9.7:0"
-
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 # S="${WORKDIR}/${P}git"
+
+DOCS="AUTHORS ChangeLog NICETOHAVES README TODO"
 
 pkg_setup() {
 	# Check for driver (not sure it can be an rdep, because ot depends on the
@@ -69,7 +70,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-0.3.5-nouseradd.patch"
+	epatch "${FILESDIR}"/${PN}-0.3.5-nouseradd.patch
 
 	sed -i -r \
 		-e '/CFLAGS/s/ -(Werror|m64)//' \
@@ -78,22 +79,20 @@ src_prepare() {
 }
 
 src_configure() {
-	#econf --with-gui=$(usev gtk || echo openssl) || die "econf failed"
-	econf --with-gui=openssl || die "econf failed"
+	# econf --with-gui=$(usex gtk gtk openssl)
+	econf --with-gui=openssl
 }
 
 src_install() {
 	keepdir /var/lib/tpm
-	make DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog NICETOHAVES README TODO
+	default
 	use doc && dodoc doc/*
-	newinitd "${FILESDIR}/tcsd.initd" tcsd
-	newconfd "${FILESDIR}/tcsd.confd" tcsd
-	local udevdir=/lib/udev
-	has_version sys-fs/udev && udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
-	insinto "${udevdir}"/rules.d
+	newinitd "${FILESDIR}"/tcsd.initd tcsd
+	newconfd "${FILESDIR}"/tcsd.confd tcsd
+	insinto "$(udev_get_udevdir)"/rules.d
 	doins "${FILESDIR}"/61-trousers.rules
 	fowners tss:tss /var/lib/tpm
+	rm -f "${ED}"/usr/lib*/libtspi.la
 }
 
 pkg_postinst() {
