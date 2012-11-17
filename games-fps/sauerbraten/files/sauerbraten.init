@@ -23,7 +23,7 @@ start_server() {
 	fi
 
 	start-stop-daemon \
-		--quiet --start --chuid ${USER}:${GROUP} --chdir ${SERVERCONFIG} \
+		--quiet --start --user ${USER}:${GROUP} --chdir ${SERVERCONFIG} \
 		--make-pidfile --pidfile %GAMES_STATEDIR%/run/sauerbraten/server.pid \
 		--background --exec %LIBEXECDIR%/sauer_server -- ${SERVERARGS}
 	eend $?
@@ -44,7 +44,7 @@ start_master() {
 	fi
 
 	start-stop-daemon \
-		--quiet --start --chuid ${USER}:${GROUP} \
+		--quiet --start --user ${USER}:${GROUP} \
 		--make-pidfile --pidfile %GAMES_STATEDIR%/run/sauerbraten/master.pid \
 		--background --exec %LIBEXECDIR%/sauer_master -- ${MASTERARGS}
 	eend $?
