@@ -1,0 +1,10 @@
+# ChangeLog for sys-process/procenv
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procenv/ChangeLog,v 1.1 2012/11/17 21:23:51 radhermit Exp $
+
+*procenv-0.8 (17 Nov 2012)
+
+  17 Nov 2012; Tim Harder <radhermit@gentoo.org> +procenv-0.8.ebuild,
+  +metadata.xml:
+  Initial import, ebuild by me.
+
