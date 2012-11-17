@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-script/flask-script-0.5.1.ebuild,v 1.1 2012/10/31 07:42:29 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-script/flask-script-0.5.1.ebuild,v 1.2 2012/11/17 21:46:16 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -30,7 +30,7 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
-PYTHON_MODNAME="flaskext/script.py"
+PYTHON_MODNAME="flask_script.py"
 
 src_compile() {
 	distutils_src_compile
