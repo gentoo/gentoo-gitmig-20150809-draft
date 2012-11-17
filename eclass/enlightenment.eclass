@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.95 2012/10/22 10:14:31 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.96 2012/11/17 10:58:35 tommy Exp $
 
 # @ECLASS: enlightenment.eclass
 # @MAINTAINER:
@@ -63,7 +63,7 @@ fi
 # Parse requested python state
 : ${E_PYTHON:=${E_CYTHON}}
 if [[ -n ${E_PYTHON} ]] ; then
-	PYTHON_DEPEND="2:2.4"
+	PYTHON_DEPEND="2:2.5"
 
 	inherit python
 fi

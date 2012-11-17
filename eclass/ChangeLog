@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.508 2012/11/16 15:47:17 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.509 2012/11/17 10:58:35 tommy Exp $
+
+  17 Nov 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  enlightenment.eclass:
+  Raise python dependency to at least 2.5, fixes the breakage caused by
+  silently dropped support for python-2.4 in python eclass
 
   16 Nov 2012; Sergei Trofimovich <slyfox@gentoo.org> ghc-package.eclass,
   haskell-cabal.eclass:
