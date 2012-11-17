@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-Thread-Queue
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Thread-Queue/ChangeLog,v 1.4 2012/05/21 11:50:35 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Thread-Queue/ChangeLog,v 1.5 2012/11/17 19:42:21 tove Exp $
+
+*perl-Thread-Queue-3.10.0 (17 Nov 2012)
+
+  17 Nov 2012; Torsten Veller <tove@gentoo.org>
+  +perl-Thread-Queue-3.10.0.ebuild:
+  Version bump
 
 *perl-Thread-Queue-2.120.0-r2 (21 May 2012)
 
