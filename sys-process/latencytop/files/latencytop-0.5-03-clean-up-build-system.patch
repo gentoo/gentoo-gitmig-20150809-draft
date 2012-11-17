@@ -43,7 +43,7 @@ index de24551..9a3cc05 100644
    OBJS += gtk_display.o 
  endif
  
-@@ -24,19 +32,15 @@ endif
+@@ -24,19 +32,17 @@ endif
  # libncursesw5-dev package. 
  #
  
@@ -65,7 +65,9 @@ index de24551..9a3cc05 100644
 -	install -m 0644 *.png $(DESTDIR)/usr/share/latencytop/
 +	mkdir -p $(DESTDIR)$(DATADIR) $(DESTDIR)$(SBINDIR) $(DESTDIR)$(MAN8DIR)
 +	install -m 0644 latencytop.trans $(DESTDIR)$(DATADIR)/latencytop.trans
++ifeq ($(HAS_GTK_GUI),1)
 +	install -m 0644 *.png $(DESTDIR)$(DATADIR)/
++endif
 +	install -m 0644 *.8 $(DESTDIR)$(MAN8DIR)/
  	install -m 0755 latencytop $(DESTDIR)$(SBINDIR)/
 -- 
