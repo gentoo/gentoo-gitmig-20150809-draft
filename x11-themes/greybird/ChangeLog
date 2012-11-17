@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/greybird
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/greybird/ChangeLog,v 1.26 2012/11/17 13:00:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/greybird/ChangeLog,v 1.27 2012/11/17 16:33:02 blueness Exp $
+
+  17 Nov 2012; Anthony G. Basile <blueness@gentoo.org> greybird-1.0.7.ebuild:
+  stable ppc ppc64, bug #443602
 
   17 Nov 2012; Agostino Sarubbo <ago@gentoo.org> greybird-1.0.7.ebuild:
   Stable for amd64, wrt bug #443602
@@ -102,4 +105,3 @@
 
   28 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> +greybird-0.3.ebuild:
   Initial commit.
-
