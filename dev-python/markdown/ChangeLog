@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/markdown
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/markdown/ChangeLog,v 1.26 2012/11/13 14:23:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/markdown/ChangeLog,v 1.27 2012/11/17 19:14:03 floppym Exp $
+
+  17 Nov 2012; Mike Gilbert <floppym@gentoo.org> markdown-2.2.0.ebuild:
+  Restrict python 2.5.
 
   13 Nov 2012; Agostino Sarubbo <ago@gentoo.org> markdown-2.1.1.ebuild:
   Stable for amd64, wrt bug #437288
