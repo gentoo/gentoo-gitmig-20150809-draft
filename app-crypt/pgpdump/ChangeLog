@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/pgpdump
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pgpdump/ChangeLog,v 1.20 2011/12/09 21:42:18 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pgpdump/ChangeLog,v 1.21 2012/11/17 10:27:32 ulm Exp $
+
+  17 Nov 2012; Ulrich Müller <ulm@gentoo.org> pgpdump-0.26.ebuild,
+  pgpdump-0.27.ebuild:
+  Fix LICENSE, see COPYRIGHT file in tarball, bug 441762.
 
   09 Dec 2011; Markos Chandras <hwoarang@gentoo.org> pgpdump-0.27.ebuild:
   Stable on amd64 wrt bug #391547
