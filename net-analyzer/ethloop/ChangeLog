@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ethloop
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethloop/ChangeLog,v 1.8 2010/12/31 19:13:58 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethloop/ChangeLog,v 1.9 2012/11/17 20:55:16 ago Exp $
+
+  17 Nov 2012; Agostino Sarubbo <ago@gentoo.org> ethloop-10-r3.ebuild:
+  Add ~amd64, wrt bug #443696
 
   31 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> ethloop-10-r3.ebuild:
   x86 stable wrt bug #336755
@@ -41,4 +44,3 @@
   11 Jul 2004; Eldad Zack <eldad@gentoo.org> +metadata.xml,
   +ethloop-10.ebuild:
   Initial ebuild. Submitted by Diego Garcia <diego@envigo.net>. Closes #42275
-
