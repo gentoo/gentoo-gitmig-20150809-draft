@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/checkpolicy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/ChangeLog,v 1.68 2012/10/13 16:47:08 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/ChangeLog,v 1.69 2012/11/17 16:57:55 swift Exp $
+
+  17 Nov 2012; Sven Vermeulen checkpolicy-2.1.11.ebuild:
+  Stabilize SELinux userspace utilities
 
   13 Oct 2012; <swift@gentoo.org> checkpolicy-2.1.11.ebuild:
   Supporting user-provided patches using epatch_user
@@ -294,4 +297,3 @@
   03 Aug 2003; Chris PeBenito <pebenito@gentoo.org> checkpolicy-1.0.ebuild,
   metadata.xml, files/checkpolicy-1.0-gentoo.diff:
   Initial commit
-
