@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/greybird/greybird-1.0.7.ebuild,v 1.2 2012/11/17 10:52:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/greybird/greybird-1.0.7.ebuild,v 1.3 2012/11/17 10:56:46 ssuominen Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="http://github.com/shimmerproject/${MY_PN}/tarball/v${PV} -> ${P}.tar.gz
 LICENSE="CCPL-Attribution-ShareAlike-NonCommercial-3.0 || ( GPL-2 GPL-3 )"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="ayatana"
+IUSE="ayatana gnome"
 
 RDEPEND=">=x11-themes/gtk-engines-murrine-0.90
 	>=x11-themes/gtk-engines-unico-1.0.1"
@@ -35,6 +35,7 @@ src_install() {
 	rm -rf xfwm4_compact
 
 	use ayatana || rm -rf unity
+	use gnome || rm -rf metacity-1
 
 	insinto /usr/share/themes/${MY_PN}
 	doins -r *
