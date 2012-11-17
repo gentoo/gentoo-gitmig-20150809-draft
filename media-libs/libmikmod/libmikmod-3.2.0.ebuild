@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.2.0.ebuild,v 1.1 2012/11/17 17:53:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.2.0.ebuild,v 1.2 2012/11/17 17:55:57 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils multilib
@@ -23,8 +23,6 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	EPATCH_SOURCE="${FILESDIR}"/${PVR} EPATCH_SUFFIX=patch epatch
-
-	touch macintosh/_libmikmodversion.r
 	eautoreconf
 }
 
@@ -43,12 +41,12 @@ src_install() {
 	prune_libtool_files
 	dosym ${PN}$(get_libname 3) /usr/$(get_libdir)/${PN}$(get_libname 2)
 
-	cat <<-EOF > "${T}"/libmikmod.pc
+	cat <<-EOF > "${T}"/${PN}.pc
 	prefix=/usr
 	exec_prefix=\${prefix}
 	libdir=/usr/$(get_libdir)
 	includedir=\${prefix}/include
-	Name: libmikmod
+	Name: ${PN}
 	Description: ${DESCRIPTION}
 	Version: ${PV}
 	Libs: -L\${libdir} -lmikmod
