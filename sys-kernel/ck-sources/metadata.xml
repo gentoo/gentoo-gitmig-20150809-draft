@@ -3,10 +3,6 @@
 <pkgmetadata>
 	<herd>proxy-maintainers</herd>
 	<maintainer>
-		<email>nelchael@gentoo.org</email>
-		<name>Krzysztof Pawlik</name>
-	</maintainer>
-	<maintainer>
 		<email>eric-f.garioud@wanadoo.fr</email>
 		<name>Eric F. GARIOUD</name>
 	</maintainer>
