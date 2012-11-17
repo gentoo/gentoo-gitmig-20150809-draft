@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.509 2012/11/17 10:58:35 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.510 2012/11/17 13:03:05 pacho Exp $
+
+  17 Nov 2012; Pacho Ramos <pacho@gentoo.org> gnome2.eclass:
+  Rely on prune_libtool_files for eapis >= 5 as discussed with the team via
+  mail.
 
   17 Nov 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
   enlightenment.eclass:
