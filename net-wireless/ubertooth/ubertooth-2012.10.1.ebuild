@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ubertooth-2012.10.1.ebuild,v 1.3 2012/10/09 21:20:32 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ubertooth-2012.10.1.ebuild,v 1.4 2012/11/17 04:32:24 zerochaos Exp $
 
 EAPI="4"
 
@@ -84,6 +84,10 @@ fi
 			PYTHON_MODNAME+=" specan"
 		fi
 	fi
+}
+
+src_prepare() {
+	use python && distutils_src_prepare
 }
 
 src_compile() {
