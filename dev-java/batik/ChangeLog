@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/batik
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.66 2011/12/31 16:38:20 sera Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.67 2012/11/17 03:30:04 ottxor Exp $
+
+*batik-1.7-r3 (17 Nov 2012)
+
+  17 Nov 2012; Christoph Junghans <ottxor@gentoo.org> +batik-1.7-r3.ebuild:
+  added prefix support (bug #438898)
 
   31 Dec 2011; Ralph Sennhauser <sera@gentoo.org> batik-1.7-r2.ebuild:
   Drop ia64 support #345433
@@ -252,4 +257,3 @@
 
   27 Apr 2003; Todd Berman <tberman@gentoo.org> batik-1.1.1.ebuild:
   Initial import.
-
