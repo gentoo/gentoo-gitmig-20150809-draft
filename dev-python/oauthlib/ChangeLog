@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/oauthlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oauthlib/ChangeLog,v 1.13 2012/11/14 02:22:05 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oauthlib/ChangeLog,v 1.14 2012/11/17 18:50:18 floppym Exp $
+
+*oauthlib-0.3.3-r1 (17 Nov 2012)
+
+  17 Nov 2012; Mike Gilbert <floppym@gentoo.org> +oauthlib-0.3.3-r1.ebuild,
+  -oauthlib-0.3.3.ebuild:
+  Don't install tests package. Bug 443658 by flameeyes.
 
   14 Nov 2012; Mike Gilbert <floppym@gentoo.org> oauthlib-0.3.3.ebuild:
   Unrestrict tests for pypy.
