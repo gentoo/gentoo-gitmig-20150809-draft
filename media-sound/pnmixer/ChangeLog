@@ -1,0 +1,24 @@
+# ChangeLog for media-sound/pnmixer
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pnmixer/ChangeLog,v 1.1 2012/11/17 18:05:11 hasufell Exp $
+
+  17 Nov 2012; Julian Ospald <hasufell@gentoo.org>
+  +pnmixer-0.6_pre20111213.ebuild, +files/pnmixer-0.6_pre20111213-build.patch,
+  +files/pnmixer-0.6_pre20111213-desktopfile.patch, +metadata.xml:
+  move from category x11-misc/ to media-sound/
+
+  16 Nov 2012; Julian Ospald <hasufell@gentoo.org>
+  pnmixer-0.6_pre20111213.ebuild:
+  dep-fix, add die
+
+  16 Nov 2012; Julian Ospald <hasufell@gentoo.org>
+  pnmixer-0.6_pre20111213.ebuild:
+  clarify description
+
+*pnmixer-0.6_pre20111213 (16 Nov 2012)
+
+  16 Nov 2012; Julian Ospald <hasufell@gentoo.org>
+  +pnmixer-0.6_pre20111213.ebuild, +files/pnmixer-0.6_pre20111213-build.patch,
+  +files/pnmixer-0.6_pre20111213-desktopfile.patch:
+  initial import wrt #432460
+
