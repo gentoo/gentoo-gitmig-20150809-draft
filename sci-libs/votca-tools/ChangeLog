@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/votca-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/votca-tools/ChangeLog,v 1.17 2012/08/17 03:13:10 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/votca-tools/ChangeLog,v 1.18 2012/11/17 02:29:04 ottxor Exp $
+
+  17 Nov 2012; Christoph Junghans <ottxor@gentoo.org> metadata.xml:
+  updated metadata.xml
 
 *votca-tools-1.2.3 (17 Aug 2012)
 
