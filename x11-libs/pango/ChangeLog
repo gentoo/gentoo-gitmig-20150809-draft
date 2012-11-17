@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/pango
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.358 2012/10/28 16:36:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.359 2012/11/17 13:31:12 pacho Exp $
+
+  17 Nov 2012; Pacho Ramos <pacho@gentoo.org> -pango-1.28.4.ebuild,
+  -pango-1.29.4.ebuild, pango-1.30.1.ebuild:
+  Show elog messages only when needed (#440554 by poletti.marco). Drop old.
 
   28 Oct 2012; Raúl Porcel <armin76@gentoo.org> pango-1.30.1.ebuild:
   ia64/s390/sh/sparc stable wrt #427544

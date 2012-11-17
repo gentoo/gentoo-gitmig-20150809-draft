@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.30.1.ebuild,v 1.11 2012/10/28 16:36:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.30.1.ebuild,v 1.12 2012/11/17 13:31:12 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -36,17 +36,15 @@ function multilib_enabled() {
 	has_multilib_profile || ( use x86 && [ "$(get_libdir)" = "lib32" ] )
 }
 
-pkg_setup() {
+src_prepare() {
 	tc-export CXX
 	G2CONF="${G2CONF}
 		$(use_enable introspection)
 		$(use_with X x)
-		$(use X && echo --x-includes=${EPREFIX}/usr/include)
-		$(use X && echo --x-libraries=${EPREFIX}/usr/$(get_libdir))"
+		$(use X && echo --x-includes="${EPREFIX}"/usr/include)
+		$(use X && echo --x-libraries="${EPREFIX}"/usr/$(get_libdir))"
 	DOCS="AUTHORS ChangeLog* NEWS README THANKS"
-}
 
-src_prepare() {
 	# In next release
 	epatch "${FILESDIR}/${P}-coretext-hash.patch"
 
@@ -86,7 +84,9 @@ pkg_postinst() {
 	fi
 	rm "${tmp_file}"
 
-	elog "In >=${PN}-1.30.1, default configuration file locations moved from"
-	elog "~/.pangorc and ~/.pangox_aliases to ~/.config/pango/pangorc and"
-	elog "~/.config/pango/pangox.aliases"
+	if [[ ${REPLACING_VERSIONS} < 1.30.1 ]]; then
+		elog "In >=${PN}-1.30.1, default configuration file locations moved from"
+		elog "~/.pangorc and ~/.pangox_aliases to ~/.config/pango/pangorc and"
+		elog "~/.config/pango/pangox.aliases"
+	fi
 }
