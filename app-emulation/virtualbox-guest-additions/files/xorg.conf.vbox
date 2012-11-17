@@ -7,13 +7,7 @@ Section "Screen"
 	Device      "Device-vboxvideo"
 EndSection
 
-Section "InputDevice"
-	Identifier  "InputDevice-vboxmouse"
-	Driver      "vboxmouse"
-EndSection
-
 Section "ServerLayout"
 	Identifier  "Default Layout"
 	Screen      "Screen-vboxvideo"
-	InputDevice "InputDevice-vboxmouse"
 EndSection

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.2.2.ebuild,v 1.1 2012/10/24 04:43:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.2.2.ebuild,v 1.2 2012/11/17 11:54:03 polynomial-c Exp $
 
 EAPI=2
 
@@ -170,7 +170,7 @@ pkg_postinst() {
 		linux-mod_pkg_postinst
 		if ! use X ; then
 			elog "use flag X is off, enable it to install the"
-			elog "X Window System input and video drivers"
+			elog "X Window System video driver."
 		fi
 		elog ""
 		elog "Please add users to the \"vboxguest\" group so they can"
@@ -180,9 +180,9 @@ pkg_postinst() {
 		elog "/etc/init.d/${PN}"
 		elog "to the default runlevel in order to start"
 		elog "needed services."
-		elog "To use the VirtualBox X drivers, use the following"
+		elog "To use the VirtualBox X driver, use the following"
 		elog "file as your /etc/X11/xorg.conf:"
-		elog "    /usr/share/doc/${PF}/xorg.conf.xorg"
+		elog "    /usr/share/doc/${PF}/xorg.conf.vbox"
 		elog ""
 		elog "Also make sure you use the Mesa library for OpenGL:"
 		elog "    eselect opengl set xorg-x11"

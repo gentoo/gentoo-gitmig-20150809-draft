@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/virtualbox-guest-additions
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.107 2012/11/10 21:11:38 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.108 2012/11/17 11:54:03 polynomial-c Exp $
+
+  17 Nov 2012; Lars Wendler <polynomial-c@gentoo.org>
+  virtualbox-guest-additions-4.1.22.ebuild,
+  virtualbox-guest-additions-4.2.2.ebuild,
+  virtualbox-guest-additions-4.2.4.ebuild, files/xorg.conf.vbox:
+  Fixed elog message to no longer mention the deprecated (and removed)
+  virtualbox mouse driver. Adjusted the sample xorg.conf file accordingly (bug
+  #443608).
 
 *virtualbox-guest-additions-4.2.4 (10 Nov 2012)
 
