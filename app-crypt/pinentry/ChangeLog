@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/pinentry
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.133 2012/11/16 20:45:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.134 2012/11/17 16:44:05 ago Exp $
+
+  17 Nov 2012; Agostino Sarubbo <ago@gentoo.org> pinentry-0.8.2.ebuild:
+  Stable for ppc, tested by Vicente Olivert Riera <peratu@carrosses.com>, wrt
+  bug #443522
 
   16 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> pinentry-0.8.2.ebuild:
   Better fix the static issue with ncurses, thanks to Diego.
