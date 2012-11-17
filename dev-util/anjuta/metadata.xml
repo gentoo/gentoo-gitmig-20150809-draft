@@ -8,7 +8,6 @@
     <flag name="introspection">Use <pkg>dev-libs/gobject-introspection</pkg>
     	for introspection</flag>
 	<flag name="packagekit">Use packagekit to search for missing tools</flag>
-    <flag name="sourceview">Build sourceview editing plugin for anjuta</flag>
     <flag name='vala'>Enable support for the Vala programming
     	language</flag>
   </use>

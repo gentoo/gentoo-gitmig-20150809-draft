@@ -1,13 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-3.4.4.ebuild,v 1.1 2012/08/09 08:54:19 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-3.4.4.ebuild,v 1.2 2012/11/17 12:31:47 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
 GNOME2_LA_PUNT="yes"
 PYTHON_DEPEND="2"
+VALA_MIN_API_VERSION="0.16"
+VALA_MAX_API_VERSION="0.16"
 
-inherit gnome2 flag-o-matic multilib python
+inherit gnome2 flag-o-matic multilib python vala
 
 DESCRIPTION="A versatile IDE for GNOME"
 HOMEPAGE="http://www.anjuta.org"
@@ -15,13 +17,7 @@ HOMEPAGE="http://www.anjuta.org"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
-IUSE="debug devhelp doc glade graphviz +introspection packagekit subversion test vala"
-
-# FIXME: tests are fragile and may require a specific set of USE flags
-#RESTRICT="test"
-
-# FIXME: documentation fails to build when USE=test. But why?
-REQUIRED_USE="test? ( !doc )"
+IUSE="debug devhelp glade graphviz +introspection packagekit subversion test vala"
 
 COMMON_DEPEND=">=dev-libs/glib-2.29.2:2
 	x11-libs/gdk-pixbuf:2
@@ -48,7 +44,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.29.2:2
 		>=net-libs/neon-0.28.2
 		>=dev-libs/apr-1
 		>=dev-libs/apr-util-1 )
-	vala? ( dev-lang/vala:0.16 )"
+	vala? ( $(vala_depend) )"
 RDEPEND="${COMMON_DEPEND}
 	packagekit? ( app-admin/packagekit-base )"
 DEPEND="${COMMON_DEPEND}
@@ -56,24 +52,30 @@ DEPEND="${COMMON_DEPEND}
 	>=app-text/scrollkeeper-0.3.14-r2
 	>=dev-lang/perl-5
 	>=dev-util/intltool-0.40.1
+	dev-util/gtk-doc-am
 	sys-devel/bison
 	sys-devel/flex
 	>=sys-devel/gettext-0.17
 	virtual/pkgconfig
 	!!dev-libs/gnome-build
-	doc? ( >=dev-util/gtk-doc-1.4 )
 	test? (
 		app-text/docbook-xml-dtd:4.1.2
 		app-text/docbook-xml-dtd:4.5 )"
 # eautoreconf requires: gtk-doc-am, gnome-common, gobject-introspection-common
 
 pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
+
+src_prepare() {
+	use vala && vala_src_prepare
+
 	# COPYING is used in Anjuta's help/about entry
 	DOCS="AUTHORS ChangeLog COPYING FUTURE MAINTAINERS NEWS README ROADMAP THANKS TODO"
 
 	G2CONF="${G2CONF}
 		--disable-static
-		--disable-schemas-compile
 		--docdir=/usr/share/doc/${PF}
 		$(use_enable debug)
 		$(use_enable devhelp plugin-devhelp)
@@ -84,20 +86,8 @@ pkg_setup() {
 		$(use_enable subversion plugin-subversion)
 		$(use_enable vala)"
 
-	if use vala; then
-		G2CONF="${G2CONF} VALAC=$(type -P valac-0.16)"
-	fi
-
 	# Conflicts with -pg in a plugin, bug #266777
 	filter-flags -fomit-frame-pointer
-
-	python_set_active_version 2
-	python_pkg_setup
-}
-
-src_prepare() {
-#	intltoolize --force --copy --automake || die "intltoolize failed"
-#	AT_M4DIR="." eautoreconf
 
 	# https://bugzilla.gnome.org/show_bug.cgi?id=675584
 	# avoid autoreconf
