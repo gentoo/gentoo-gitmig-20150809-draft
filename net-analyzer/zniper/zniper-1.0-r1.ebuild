@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zniper/zniper-1.0-r1.ebuild,v 1.1 2010/09/17 03:53:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zniper/zniper-1.0-r1.ebuild,v 1.2 2012/11/17 20:29:32 ago Exp $
 
-EAPI="2"
+EAPI=4
 
 inherit toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.signedness.org/tools/zniper.tgz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="net-libs/libpcap
@@ -32,8 +32,7 @@ src_compile() {
 	emake \
 		CC=$(tc-getCC) \
 		CFLAGS="${CFLAGS}" \
-		linux_x86 \
-		|| die "emake failed"
+		linux_x86
 }
 
 src_install() {
