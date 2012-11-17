@@ -1,25 +1,25 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/telepathy-gabble-0.14.1.ebuild,v 1.5 2012/03/25 17:29:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/telepathy-gabble-0.16.4.ebuild,v 1.1 2012/11/17 20:17:09 pacho Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.5"
 
-inherit python
+inherit python eutils
 
-DESCRIPTION="A Jabber/XMPP connection manager, this handles single and multi user chats and voice calls."
+DESCRIPTION="A Jabber/XMPP connection manager, with handling of single and multi user chats and voice calls"
 HOMEPAGE="http://telepathy.freedesktop.org"
 SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ppc ~ppc64 sparc x86 ~x86-linux"
-IUSE="debug +jingle test"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-linux"
+IUSE="+jingle test"
 
-RDEPEND=">=dev-libs/glib-2.24:2
+RDEPEND=">=dev-libs/glib-2.30:2
 	>=sys-apps/dbus-1.1.0
 	>=dev-libs/dbus-glib-0.82
-	>=net-libs/telepathy-glib-0.15.9
+	>=net-libs/telepathy-glib-0.18
 	>=net-libs/libnice-0.0.11
 	>=net-libs/gnutls-2.10.2
 
@@ -48,8 +48,9 @@ src_prepare() {
 src_configure() {
 	econf \
 		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
-		$(use_enable jingle google-relay) \
-		$(use_enable debug handle-leak-debug)
+		--disable-coding-style-checks \
+		--disable-Werror \
+		$(use_enable jingle file-transfer)
 }
 
 src_test() {
@@ -58,7 +59,6 @@ src_test() {
 }
 
 src_install() {
-	emake install DESTDIR="${D}"
-	dodoc AUTHORS NEWS ChangeLog README
-	find "${D}" -name '*.la' -exec rm -f {} +
+	default
+	prune_libtool_files
 }
