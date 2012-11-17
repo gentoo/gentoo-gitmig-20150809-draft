@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/stumpwm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/stumpwm/ChangeLog,v 1.6 2011/06/21 01:18:51 xmw Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/stumpwm/ChangeLog,v 1.7 2012/11/17 16:58:54 ago Exp $
+
+  17 Nov 2012; Agostino Sarubbo <ago@gentoo.org> stumpwm-0.9.7.ebuild:
+  fix doinfo, wrt bug #442922
 
   21 Jun 2011; Michael Weber <xmw@gentoo.org> -stumpwm-0.9.2.ebuild:
   Dropping old version
@@ -26,4 +29,3 @@
   +metadata.xml, +stumpwm-0.9.2.ebuild:
   This package was submitted by Nguyen Thai Ngoc Duy <pclouds@gentoo.org> in
   bug #219832
-
