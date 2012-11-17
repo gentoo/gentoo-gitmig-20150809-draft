@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vcdimager
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/ChangeLog,v 1.56 2012/05/29 15:06:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/ChangeLog,v 1.57 2012/11/17 06:31:57 ssuominen Exp $
+
+  17 Nov 2012; Samuli Suominen <ssuominen@gentoo.org>
+  vcdimager-0.7.23-r1.ebuild:
+  USE="static-libs" and remove unnecessary libtool file in favour of pkg-config
+  file.
 
   29 May 2012; Alexis Ballier <aballier@gentoo.org> vcdimager-0.7.23-r1.ebuild:
   keyword ~amd64-fbsd
