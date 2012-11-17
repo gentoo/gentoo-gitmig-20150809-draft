@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/vsftpd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.159 2012/11/14 16:33:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.160 2012/11/17 19:12:21 hwoarang Exp $
+
+  17 Nov 2012; Markos Chandras <hwoarang@gentoo.org>
+  +files/vsftpd-3.0.2-alpha.patch, vsftpd-3.0.2.ebuild:
+  Fix building on alpha due to missing __NR_getpid syscall. Bug #405829. Keyword
+  it on ~alpha
 
   14 Nov 2012; Agostino Sarubbo <ago@gentoo.org> vsftpd-3.0.2.ebuild:
   Stable for amd64, wrt bug #441728

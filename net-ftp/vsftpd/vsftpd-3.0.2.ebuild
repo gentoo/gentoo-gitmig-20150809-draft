@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-3.0.2.ebuild,v 1.3 2012/11/14 16:33:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-3.0.2.ebuild,v 1.4 2012/11/17 19:12:21 hwoarang Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://security.appspot.com/downloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm ~hppa ~ia64 ppc ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ppc ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="caps pam tcpd ssl selinux xinetd"
 
 DEPEND="caps? ( >=sys-libs/libcap-2 )
@@ -34,6 +34,9 @@ src_prepare() {
 
 	# Fix building without the libcap
 	epatch "${FILESDIR}/${PN}-2.1.0-caps.patch"
+
+	# Fix building on alpha. Bug #405829
+	epatch "${FILESDIR}/${PN}-3.0.2-alpha.patch"
 
 	# Configure vsftpd build defaults
 	use tcpd && echo "#define VSF_BUILD_TCPWRAPPERS" >> builddefs.h
