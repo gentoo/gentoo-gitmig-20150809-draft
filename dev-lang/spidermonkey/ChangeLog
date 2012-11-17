@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/spidermonkey
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.91 2012/11/09 21:10:58 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.92 2012/11/17 10:44:38 ssuominen Exp $
+
+  17 Nov 2012; Samuli Suominen <ssuominen@gentoo.org>
+  spidermonkey-1.8.5-r2.ebuild:
+  arm stable wrt #436670
 
   09 Nov 2012; Ian Stakenvicius <axs@gentoo.org> spidermonkey-1.8.5-r1.ebuild,
   spidermonkey-1.8.5-r2.ebuild,
