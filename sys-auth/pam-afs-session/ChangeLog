@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam-afs-session
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam-afs-session/ChangeLog,v 1.6 2011/09/13 17:58:04 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam-afs-session/ChangeLog,v 1.7 2012/11/17 10:20:05 ulm Exp $
+
+  17 Nov 2012; Ulrich Müller <ulm@gentoo.org> pam-afs-session-1.3.ebuild,
+  pam-afs-session-1.5.ebuild, pam-afs-session-1.6.ebuild:
+  Update LICENSE, see LICENSE file in tarball, bug 440910.
 
   13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #99651
