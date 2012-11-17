@@ -1,10 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.32.3-r1.ebuild,v 1.15 2012/10/17 09:55:53 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.32.3-r1.ebuild,v 1.16 2012/11/17 12:12:15 pacho Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
+GNOME_TARBALL_SUFFIX="bz2"
 PYTHON_DEPEND="python? 2:2.5"
 
 inherit autotools eutils flag-o-matic gnome2 python versionator
@@ -84,6 +85,11 @@ DEPEND="${RDEPEND}
 #	>=gnome-base/gnome-common-2.12
 
 pkg_setup() {
+	python_pkg_setup
+	python_set_active_version 2
+}
+
+src_prepare() {
 	ELTCONF="--reverse-deps"
 	DOCS="AUTHORS ChangeLog* HACKING MAINTAINERS NEWS* README"
 	G2CONF="${G2CONF}
@@ -130,10 +136,6 @@ pkg_setup() {
 		G2CONF="${G2CONF} --disable-connman"
 	fi
 
-	python_set_active_version 2
-}
-
-src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.32.1-libnotify-0.7.patch
 
 	# Fix invalid use of la file in contact-editor, upstream bug #635002
@@ -159,11 +161,9 @@ src_prepare() {
 			-i configure.ac configure || die "sed 2 failed"
 	fi
 
-	# Fix compilation flags crazyness
-	sed -e 's/-D.*_DISABLE_DEPRECATED//' \
-		-i configure.ac configure || die "sed 1 failed"
+	# Drop -Werror, bug #442242
+	sed -i -e 's/-Werror //' configure.ac || die
 
-	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
 	gnome2_src_prepare
 }
@@ -171,19 +171,21 @@ src_prepare() {
 pkg_postinst() {
 	gnome2_pkg_postinst
 
-	elog "To change the default browser if you are not using GNOME, edit"
-	elog "~/.local/share/applications/mimeapps.list so it includes the"
-	elog "following content:"
-	elog ""
-	elog "[Default Applications]"
-	elog "x-scheme-handler/http=firefox.desktop"
-	elog "x-scheme-handler/https=firefox.desktop"
-	elog ""
-	elog "(replace firefox.desktop with the name of the appropriate .desktop"
-	elog "file from /usr/share/applications if you use a different browser)."
-	elog ""
-	elog "Junk filters are now a run-time choice. You will get a choice of"
-	elog "bogofilter or spamassassin based on which you have installed"
-	elog ""
-	elog "You have to install one of these for the spam filtering to actually work"
+	if ! has_version gnome-base/gnome-control-center; then
+		elog "To change the default browser if you are not using GNOME, edit"
+		elog "~/.local/share/applications/mimeapps.list so it includes the"
+		elog "following content:"
+		elog ""
+		elog "[Default Applications]"
+		elog "x-scheme-handler/http=firefox.desktop"
+		elog "x-scheme-handler/https=firefox.desktop"
+		elog ""
+		elog "(replace firefox.desktop with the name of the appropriate .desktop"
+		elog "file from /usr/share/applications if you use a different browser)."
+		elog ""
+		elog "Junk filters are now a run-time choice. You will get a choice of"
+		elog "bogofilter or spamassassin based on which you have installed"
+		elog ""
+		elog "You have to install one of these for the spam filtering to actually work"
+	fi
 }
