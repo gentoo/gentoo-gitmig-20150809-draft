@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/cegui
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.51 2012/11/17 06:07:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.52 2012/11/17 06:12:40 mr_bones_ Exp $
+
+  17 Nov 2012; Michael Sterrett <mr_bones_@gentoo.org> -cegui-0.7.5-r1.ebuild,
+  -files/cegui-0.7.5-gcc46.patch, -files/cegui-0.7.5-tinyxml.patch:
+  old
 
   17 Nov 2012; Michael Sterrett <mr_bones_@gentoo.org> cegui-0.7.7.ebuild:
   default to libxml2 for xml support (bug #422811)
