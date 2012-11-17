@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.362 2012/10/14 14:38:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.363 2012/11/17 13:21:01 pacho Exp $
+
+  17 Nov 2012; Pacho Ramos <pacho@gentoo.org> dbus-1.6.8-r1.ebuild:
+  Show elog messages only when needed (#440526 by poletti.marco), disable silent
+  rules.
 
   14 Oct 2012; Raúl Porcel <armin76@gentoo.org> dbus-1.6.8.ebuild:
   ia64/s390/sh/sparc stable wrt #416725

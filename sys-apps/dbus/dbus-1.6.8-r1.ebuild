@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.6.8-r1.ebuild,v 1.1 2012/10/04 08:26:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.6.8-r1.ebuild,v 1.2 2012/11/17 13:21:01 pacho Exp $
 
 EAPI=4
 inherit autotools eutils linux-info flag-o-matic python systemd virtualx user
@@ -79,6 +79,7 @@ src_configure() {
 	# libaudit is *only* used in DBus wrt SELinux support, so disable it, if
 	# not on an SELinux profile.
 	myconf=(
+		--disable-silent-rules
 		--localstatedir="${EPREFIX}/var"
 		--docdir="${EPREFIX}/usr/share/doc/${PF}"
 		--htmldir="${EPREFIX}/usr/share/doc/${PF}/html"
@@ -169,16 +170,22 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "To start the D-Bus system-wide messagebus by default"
-	elog "you should add it to the default runlevel :"
-	elog "\`rc-update add dbus default\`"
-	elog
+	if [ "$(rc-config list default | grep dbus)" = "" ] ; then
+		elog "To start the D-Bus system-wide messagebus by default"
+		elog "you should add it to the default runlevel :"
+		elog "\`rc-update add dbus default\`"
+		elog
+	fi
+
 	elog "Some applications require a session bus in addition to the system"
 	elog "bus. Please see \`man dbus-launch\` for more information."
 	elog
-	ewarn "You must restart D-Bus \`/etc/init.d/dbus restart\` to run"
-	ewarn "the new version of the daemon."
-	ewarn "Don't do this while X is running because it will restart your X as well."
+
+	if [ "$(rc-status | grep dbus | grep started)" ] ; then
+		ewarn "You must restart D-Bus \`/etc/init.d/dbus restart\` to run"
+		ewarn "the new version of the daemon."
+		ewarn "Don't do this while X is running because it will restart your X as well."
+	fi
 
 	# Ensure unique id is generated and put it in /etc wrt #370451 but symlink
 	# for DBUS_MACHINE_UUID_FILE (see tools/dbus-launch.c) and reverse
