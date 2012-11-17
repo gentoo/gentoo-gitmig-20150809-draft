@@ -46,3 +46,4 @@ move app-office/texmakerx app-office/texstudio
 slotmove =media-libs/gst-rtsp-server-0.10* 0 0.10
 move games-board/jrisk games-board/domination
 move x11-libs/elementary media-libs/elementary
+move x11-misc/pnmixer media-sound/pnmixer
