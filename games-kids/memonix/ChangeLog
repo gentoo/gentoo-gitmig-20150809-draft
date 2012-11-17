@@ -1,0 +1,11 @@
+# ChangeLog for games-kids/memonix
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-kids/memonix/ChangeLog,v 1.1 2012/11/17 07:56:14 mr_bones_ Exp $
+
+*memonix-1.6 (17 Nov 2012)
+
+  17 Nov 2012; Michael Sterrett <mr_bones_@gentoo.org> +memonix-1.6.ebuild,
+  +metadata.xml:
+  initial commit with modified ebuild submitted by Vicente Olivert Riera (bug
+  #436552)
+
