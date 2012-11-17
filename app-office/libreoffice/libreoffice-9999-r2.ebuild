@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.128 2012/11/16 18:30:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.129 2012/11/17 11:03:36 scarabeus Exp $
 
 EAPI=4
 
@@ -486,7 +486,7 @@ src_configure() {
 		--without-help \
 		--with-helppack-integration \
 		--without-sun-templates \
-		$(use_enable bluetooth sdremote) \
+		$(use_enable bluetooth sdremote-bluetooth) \
 		$(use_enable cups) \
 		$(use_enable dbus) \
 		$(use_enable eds evolution2) \
