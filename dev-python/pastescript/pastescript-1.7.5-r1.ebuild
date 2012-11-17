@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pastescript/pastescript-1.7.5.ebuild,v 1.1 2012/02/20 07:51:35 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pastescript/pastescript-1.7.5-r1.ebuild,v 1.1 2012/11/17 19:19:20 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -8,7 +8,7 @@ SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 #DISTUTILS_SRC_TEST="nosetests"
 
-inherit distutils
+inherit distutils eutils
 
 MY_PN="PasteScript"
 MY_P="${MY_PN}-${PV}"
@@ -35,6 +35,11 @@ RESTRICT="test"
 S="${WORKDIR}/${MY_P}"
 
 PYTHON_MODNAME="paste/script"
+
+src_prepare() {
+	epatch "${FILESDIR}/${PN}-setup.py-exclude-tests.patch"
+	distutils_src_prepare
+}
 
 src_compile() {
 	distutils_src_compile
