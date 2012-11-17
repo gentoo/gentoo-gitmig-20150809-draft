@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/gegl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.75 2012/11/06 19:39:50 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.76 2012/11/17 15:48:02 sping Exp $
+
+*gegl-0.1.8-r1 (17 Nov 2012)
+*gegl-0.1.6-r1 (17 Nov 2012)
+
+  17 Nov 2012; Sebastian Pipping <sping@gentoo.org> +gegl-0.1.6-r1.ebuild,
+  +gegl-0.1.8-r1.ebuild, +files/gegl-0.1.8-cve-2012-4433-4757cdf7.patch:
+  Patch 0.1.6 and 0.1.8 for CVE-2012-4433, too (bug #442016)
 
 *gegl-0.2.0-r1 (06 Nov 2012)
 
