@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xmountains
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmountains/ChangeLog,v 1.21 2012/03/09 11:11:09 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmountains/ChangeLog,v 1.22 2012/11/17 10:23:59 ulm Exp $
+
+  17 Nov 2012; Ulrich Müller <ulm@gentoo.org> xmountains-2.7.ebuild,
+  xmountains-2.8.ebuild, xmountains-2.9.ebuild:
+  Specify LICENSE more precisely, see copyright.h in tarball, bug 441710.
 
   09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> xmountains-2.9.ebuild:
   x86 stable wrt bug #404895
