@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Devel-StackTrace
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-StackTrace/ChangeLog,v 1.82 2012/06/24 12:59:40 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-StackTrace/ChangeLog,v 1.83 2012/11/17 20:07:24 tove Exp $
+
+*Devel-StackTrace-1.290.0 (17 Nov 2012)
+
+  17 Nov 2012; Torsten Veller <tove@gentoo.org>
+  +Devel-StackTrace-1.290.0.ebuild:
+  Version bump
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
