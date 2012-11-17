@@ -1,12 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyftpdlib/pyftpdlib-0.7.0.ebuild,v 1.7 2012/10/20 16:29:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyftpdlib/pyftpdlib-0.7.0.ebuild,v 1.8 2012/11/17 12:08:34 idella4 Exp $
 
-EAPI=3
+EAPI="4"
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH="ssl"
 PYTHON_USE_WITH_OPT="ssl"
 SUPPORT_PYTHON_ABIS="1"
+# pypy has no spwd.so
+PYTHON_TESTS_RESTRICTED_ABIS="2.7-pypy-*"
 RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils
@@ -30,10 +32,9 @@ DOCS="CREDITS HISTORY"
 
 src_test() {
 	testing() {
-		PYTHONPATH="build-${PYTHON_ABI}/lib" "$(PYTHON)" test/test_ftpd.py \
-			|| return 1
-		PYTHONPATH="build-${PYTHON_ABI}/lib" "$(PYTHON)" test/test_contrib.py \
-			|| return 1
+		for test in test/{test_ftpd.py,test_contrib.py}; do
+			PYTHONPATH="build-${PYTHON_ABI}/lib" "$(PYTHON)" $test || die
+		done
 	}
 	python_execute_function testing
 }
