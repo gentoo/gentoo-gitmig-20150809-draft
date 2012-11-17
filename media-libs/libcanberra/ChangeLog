@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libcanberra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/ChangeLog,v 1.92 2012/10/28 16:03:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/ChangeLog,v 1.93 2012/11/17 12:18:56 pacho Exp $
+
+  17 Nov 2012; Pacho Ramos <pacho@gentoo.org> -libcanberra-0.28-r5.ebuild,
+  libcanberra-0.29.ebuild:
+  Disable silent rules, #443132 by ago.
 
   28 Oct 2012; Raúl Porcel <armin76@gentoo.org> libcanberra-0.29.ebuild:
   ia64/sh/sparc stable wrt #427544

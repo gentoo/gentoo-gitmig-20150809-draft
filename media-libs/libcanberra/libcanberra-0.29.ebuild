@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/libcanberra-0.29.ebuild,v 1.10 2012/10/28 16:03:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/libcanberra-0.29.ebuild,v 1.11 2012/11/17 12:18:56 pacho Exp $
 
 EAPI="4"
 
@@ -45,7 +45,7 @@ src_prepare() {
 src_configure() {
 	econf \
 		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
-		--disable-dependency-tracking \
+		--disable-silent-rules \
 		$(use_enable alsa) \
 		$(use_enable oss) \
 		$(use_enable pulseaudio pulse) \
