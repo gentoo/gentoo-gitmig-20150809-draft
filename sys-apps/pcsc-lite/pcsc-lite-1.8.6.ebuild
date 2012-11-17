@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.8.6.ebuild,v 1.6 2012/11/16 16:33:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.8.6.ebuild,v 1.7 2012/11/17 10:32:21 ulm Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ MY_P="${PN}-${PV/_/-}"
 SRC_URI="http://alioth.debian.org/download.php/${STUPID_NUM}/${MY_P}.tar.bz2"
 S="${WORKDIR}/${MY_P}"
 
-LICENSE="as-is"
+LICENSE="BSD ISC MIT GPL-3+"
 SLOT="0"
 KEYWORDS="amd64 arm hppa ~ia64 ~m68k ppc ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 
