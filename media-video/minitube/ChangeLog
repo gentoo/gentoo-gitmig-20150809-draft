@@ -1,6 +1,9 @@
 # ChangeLog for media-video/minitube
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.75 2012/09/27 20:03:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.76 2012/11/17 19:17:31 hwoarang Exp $
+
+  17 Nov 2012; Markos Chandras <hwoarang@gentoo.org> minitube-1.9.ebuild:
+  Drop nonexisting linguas. Bug #442698
 
 *minitube-1.9 (27 Sep 2012)
 
