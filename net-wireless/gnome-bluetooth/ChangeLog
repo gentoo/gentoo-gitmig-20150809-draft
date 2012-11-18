@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/gnome-bluetooth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.118 2012/11/18 11:15:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.119 2012/11/18 12:14:38 ssuominen Exp $
+
+  18 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
+  Remove pda@ because this isn't exactly related to PDAs.
 
   18 Nov 2012; Pacho Ramos <pacho@gentoo.org> -gnome-bluetooth-2.32.0.ebuild,
   -gnome-bluetooth-3.4.2.ebuild, metadata.xml:
