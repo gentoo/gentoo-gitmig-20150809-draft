@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/wayv
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wayv/ChangeLog,v 1.17 2011/12/01 19:45:31 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wayv/ChangeLog,v 1.18 2012/11/18 18:54:08 ago Exp $
+
+  18 Nov 2012; Agostino Sarubbo <ago@gentoo.org> wayv-0.3-r2.ebuild:
+  Add ~amd64
 
   01 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> wayv-0.3-r2.ebuild:
   x86 stable wrt bug #391629
