@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libbluray
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/ChangeLog,v 1.37 2012/08/27 06:19:51 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/ChangeLog,v 1.38 2012/11/18 17:43:49 hwoarang Exp $
+
+  18 Nov 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Remove beandog wrt #131511
 
   27 Aug 2012; Tim Harder <radhermit@gentoo.org> libbluray-9999.ebuild:
   Use prune_libtool_files to remove unnecessary libtool files.
@@ -162,4 +165,3 @@
   17 Jul 2010; Steve Dibb <beandog@gentoo.org> +libbluray-9999.ebuild,
   +metadata.xml:
   Initial commit; original ebuild from gentoo multimedia overlay
-

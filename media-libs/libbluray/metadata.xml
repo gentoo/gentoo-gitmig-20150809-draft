@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>video</herd>
-  <maintainer>
-    <email>beandog@gentoo.org</email>
-    <name>Steve Dibb</name>
-  </maintainer>
   <use>
     <flag name='aacs'>Add support for decryption of AACS</flag>
     <flag name='java'>Add support for BD-J</flag>
