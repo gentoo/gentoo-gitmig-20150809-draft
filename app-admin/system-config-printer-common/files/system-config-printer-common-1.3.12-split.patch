@@ -1,13 +1,13 @@
 diff -ruN system-config-printer-1.3.12/Makefile.am my/Makefile.am
 --- system-config-printer-1.3.12/Makefile.am	2012-10-04 15:51:04.000000000 +0200
-+++ my/Makefile.am	2012-11-06 03:48:12.392483514 +0100
-@@ -1,4 +1,4 @@
++++ my/Makefile.am	2012-11-19 00:45:25.702660438 +0100
+@@ -1,5 +1,3 @@
 -CFLAGS=-g -O2 -Wall
-+CFLAGS=-Wall
- 
+-
  SUBDIRS=po
  
-@@ -84,88 +84,21 @@
+ EXPORT_MODULES=					\
+@@ -84,88 +82,21 @@
  	rm -f .stamp-distutils-in-builddir
  
  nobase_pkgdata_SCRIPTS=				\
@@ -97,7 +97,7 @@ diff -ruN system-config-printer-1.3.12/Makefile.am my/Makefile.am
  	xml/preferreddrivers.rng			\
  	xml/validate.py
  
-@@ -173,18 +106,13 @@
+@@ -173,18 +104,13 @@
  cupshelpers_DATA=\
  	xml/preferreddrivers.xml
  
@@ -118,7 +118,7 @@ diff -ruN system-config-printer-1.3.12/Makefile.am my/Makefile.am
  udevhelperdir=$(sysconfdir)/udev
  udevhelper_PROGRAMS=\
  	udev/udev-configure-printer
-@@ -202,56 +130,17 @@
+@@ -202,56 +128,17 @@
  
  endif
  

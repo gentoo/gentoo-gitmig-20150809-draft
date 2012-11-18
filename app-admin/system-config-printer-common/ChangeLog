@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/system-config-printer-common
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/ChangeLog,v 1.83 2012/11/06 03:13:28 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/ChangeLog,v 1.84 2012/11/18 23:48:17 reavertm Exp $
+
+  18 Nov 2012; Maciej Mrozowski <reavertm@gentoo.org>
+  files/system-config-printer-common-1.3.12-split.patch:
+  Remove overriding CFLAGS completely, bug 442644.
 
 *system-config-printer-common-1.3.12 (06 Nov 2012)
 
