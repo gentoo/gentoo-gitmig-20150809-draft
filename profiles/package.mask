@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14231 2012/11/18 11:36:34 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14232 2012/11/18 11:40:42 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -347,11 +347,6 @@ media-plugins/gst-plugins-mythtv
 # issues. Removal in a month.
 net-libs/libmonetra
 dev-php/pecl-mcve
-
-# Pacho Ramos <pacho@gentoo.org> (16 Sep 2012)
-# Current version in tree has multiple bugs, perl team recommends
-# to use CPAN version instead, bug #420515. Removal in a month.
-dev-vcs/svk
 
 # Pacho Ramos <pacho@gentoo.org> (16 Sep 2012)
 # Upstream keeps inactive for ages and, then, it has broke again
