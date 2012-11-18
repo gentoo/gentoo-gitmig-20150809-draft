@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/temporary
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/temporary/ChangeLog,v 1.2 2012/09/12 14:37:03 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/temporary/ChangeLog,v 1.3 2012/11/18 10:38:02 gienah Exp $
+
+*temporary-1.1.2.4 (18 Nov 2012)
+
+  18 Nov 2012; Mark Wright <gienah@gentoo.org> +temporary-1.1.2.4.ebuild:
+  Bump temporary to 1.1.2.4
 
   12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> temporary-1.1.2.3.ebuild:
   move dev-haskell/temporary/temporary-1.1.2.3.ebuild ebuild to mirror://hackage
