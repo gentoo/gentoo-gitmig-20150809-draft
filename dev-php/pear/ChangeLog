@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/pear
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pear/ChangeLog,v 1.38 2012/09/09 16:04:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pear/ChangeLog,v 1.39 2012/11/18 17:41:46 hwoarang Exp $
+
+  18 Nov 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Remove beandog wrt #131511
 
   09 Sep 2012; Raúl Porcel <armin76@gentoo.org> pear-1.9.4.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #430152
@@ -129,4 +132,3 @@
   23 Sep 2009; Steve Dibb <beandog@gentoo.org> +pear-1.8.1.ebuild,
   +metadata.xml:
   Initial commit; new split ebuilds for PEAR base install
-
