@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-9999.ebuild,v 1.38 2012/11/09 18:06:34 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-9999.ebuild,v 1.39 2012/11/18 10:26:20 robbat2 Exp $
 
 EAPI=4
 
@@ -40,11 +40,11 @@ fi
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="+blksha1 +curl cgi doc emacs +gpg gtk highlight +iconv +nls +pcre +perl +python ppcsha1 tk +threads +webdav xinetd cvs subversion test"
+IUSE="+blksha1 +curl cgi doc emacs gnome-keyring +gpg gtk highlight +iconv +nls +pcre +perl +python ppcsha1 tk +threads +webdav xinetd cvs subversion test"
 
 # Common to both DEPEND and RDEPEND
 CDEPEND="
-	!blksha1? ( dev-libs/openssl )
+	dev-libs/openssl
 	sys-libs/zlib
 	pcre? ( dev-libs/libpcre )
 	perl? ( dev-lang/perl[-build] )
@@ -53,7 +53,8 @@ CDEPEND="
 		net-misc/curl
 		webdav? ( dev-libs/expat )
 	)
-	emacs?  ( virtual/emacs )"
+	emacs? ( virtual/emacs )
+	gnome-keyring? ( gnome-base/gnome-keyring )"
 
 RDEPEND="${CDEPEND}
 	gpg? ( app-crypt/gnupg )
@@ -211,8 +212,8 @@ src_unpack() {
 
 src_prepare() {
 	# bug #418431 - stated for upstream 1.7.13. Developed by Michael Schwern,
-	# funded as a bounty by the Gentoo Foundation.
-	epatch "${FILESDIR}"/git-1.7.12-git-svn-backport.patch
+	# funded as a bounty by the Gentoo Foundation. Merged upstream in 1.8.0.
+	#epatch "${FILESDIR}"/git-1.7.12-git-svn-backport.patch
 
 	# bug #350330 - automagic CVS when we don't want it is bad.
 	epatch "${FILESDIR}"/git-1.7.12-optional-cvs.patch
@@ -234,6 +235,12 @@ src_prepare() {
 	# Fix docbook2texi command
 	sed -i 's/DOCBOOK2X_TEXI=docbook2x-texi/DOCBOOK2X_TEXI=docbook2texi.pl/' \
 		Documentation/Makefile || die "sed failed"
+
+	# Fix git-subtree missing DESTDIR
+	sed -i \
+		-e '/$(INSTALL)/s/ $(libexecdir)/ $(DESTDIR)$(libexecdir)/g' \
+		-e '/$(INSTALL)/s/ $(man1dir)/ $(DESTDIR)$(man1dir)/g'  \
+		contrib/subtree/Makefile
 }
 
 git_emake() {
@@ -264,8 +271,10 @@ src_configure() {
 }
 
 src_compile() {
+	if use perl ; then
 	git_emake perl/PM.stamp || die "emake perl/PM.stamp failed"
 	git_emake perl/perl.mak || die "emake perl/perl.mak failed"
+	fi
 	git_emake || die "emake failed"
 
 	if use emacs ; then
@@ -277,6 +286,11 @@ src_compile() {
 		git_emake \
 			gitweb/gitweb.cgi \
 			|| die "emake gitweb/gitweb.cgi failed"
+	fi
+
+	if [[ ${CHOST} == *-darwin* ]]; then
+		cd "${S}"/contrib/credential/osxkeychain || die "cd credential/osxkeychain"
+		git_emake || die "emake credential-osxkeychain"
 	fi
 
 	cd "${S}"/Documentation
@@ -293,12 +307,34 @@ src_compile() {
 				|| die "emake info html failed"
 		fi
 	fi
+
+	if use subversion ; then
+		cd "${S}"/contrib/svn-fe
+		git_emake || die "emake svn-fe failed"
+		if use doc ; then
+			git_emake svn-fe.{1,html} || die "emake svn-fe.1 svn-fe.html failed"
+		fi
+		cd "${S}"
+	fi
+
+	if use gnome-keyring ; then
+		cd "${S}"/contrib/credential/gnome-keyring
+		git_emake || die "emake git-credential-gnome-keyring failed"
+	fi
+
+	cd "${S}"/contrib/subtree
+	git_emake
+	use doc && git_emake doc
 }
 
 src_install() {
 	git_emake \
 		install || \
 		die "make install failed"
+
+	if [[ ${CHOST} == *-darwin* ]]; then
+		dobin contrib/credential/osxkeychain/git-credential-osxkeychain
+	fi
 
 	# Depending on the tarball and manual rebuild of the documentation, the
 	# manpages may exist in either OR both of these directories.
@@ -317,6 +353,7 @@ src_install() {
 	use doc && doinfo Documentation/{git,gitman}.info
 
 	newbashcomp contrib/completion/git-completion.bash ${PN}
+	newbashcomp contrib/completion/git-prompt.sh ${PN}-prompt
 
 	if use emacs ; then
 		elisp-install ${PN} contrib/emacs/git.{el,elc} || die
@@ -339,20 +376,62 @@ src_install() {
 	newbin contrib/fast-import/import-tars.perl import-tars
 	newbin contrib/git-resurrect.sh git-resurrect
 
+	# git-subtree
+	cd "${S}"/contrib/subtree
+	git_emake install || die "Failed to emake install git-subtree"
+	if use doc ; then
+		git_emake install-man install-doc || die "Failed to emake install-doc install-mangit-subtree"
+	fi
+	newdoc README README.git-subtree
+	dodoc git-subtree.txt
+	cd "${S}"
+
+	# git-diffall
+	dobin contrib/diffall/git-diffall
+	newdoc contrib/diffall/README git-diffall.txt
+
+	# diff-highlight
+	dobin contrib/diff-highlight/diff-highlight
+	newdoc contrib/diff-highlight/README README.diff-highlight
+
+	# git-jump
+	dobin contrib/git-jump/git-jump
+	newdoc contrib/git-jump/README git-jump.txt
+
+	if use gnome-keyring ; then
+		cd "${S}"/contrib/credential/gnome-keyring
+		dobin git-credential-gnome-keyring
+	fi
+
+	if use subversion ; then
+		cd "${S}"/contrib/svn-fe
+		dobin svn-fe
+		dodoc svn-fe.txt
+		use doc && doman svn-fe.1 && dohtml svn-fe.html
+		cd "${S}"
+	fi
+
 	dodir /usr/share/${PN}/contrib
 	# The following are excluded:
 	# completion - installed above
+	# credential/gnome-keyring TODO
+	# diff-highlight - done above
+	# diffall - done above
 	# emacs - installed above
 	# examples - these are stuff that is not used in Git anymore actually
+	# git-jump - done above
 	# gitview - installed above
 	# p4import - excluded because fast-import has a better one
 	# patches - stuff the Git guys made to go upstream to other places
+	# persistent-https - TODO
+	# mw-to-git - TODO
+	# subtree - build  seperately
 	# svnimport - use git-svn
 	# thunderbird-patch-inline - fixes thunderbird
 	for i in \
 		blameview buildsystems ciabot continuous convert-objects fast-import \
-		hg-to-git hooks remotes2config.sh remotes2config.sh rerere-train.sh \
-		stats svn-fe vim workdir \
+		hg-to-git hooks remotes2config.sh rerere-train.sh \
+		stats vim workdir \
 		; do
 		cp -rf \
 			"${S}"/contrib/${i} \
@@ -499,7 +578,9 @@ showpkgdeps() {
 pkg_postinst() {
 	use emacs && elisp-site-regen
 	use python && python_mod_optimize git_remote_helpers
-		einfo "Please read /usr/share/bash-completion/git for Git bash completion"
+	einfo "Please read /usr/share/bash-completion/git for Git bash command completion"
+	einfo "Please read /usr/share/bash-completion/git-prompt for Git bash prompt"
+	einfo "Note that the prompt bash code is now in the seperate script"
 	elog "These additional scripts need some dependencies:"
 	echo
 	showpkgdeps git-quiltimport "dev-util/quilt"
