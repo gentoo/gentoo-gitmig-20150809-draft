@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/pkgconf-0.8.9.ebuild,v 1.2 2012/11/10 15:38:16 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/pkgconf-0.8.9.ebuild,v 1.3 2012/11/18 16:01:13 ago Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ else
 	inherit autotools vcs-snapshot
 	inherit eutils
 	SRC_URI="https://github.com/pkgconf/pkgconf/tarball/${P} -> ${P}.tar.gz"
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~ppc-macos ~x64-macos ~x86-macos ~sparc64-solaris"
+	KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~ppc-macos ~x64-macos ~x86-macos ~sparc64-solaris"
 fi
 
 DESCRIPTION="pkg-config compatible replacement with no dependencies other than ANSI C89"
