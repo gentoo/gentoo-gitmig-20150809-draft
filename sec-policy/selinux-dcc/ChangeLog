@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-dcc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-dcc/ChangeLog,v 1.15 2012/10/13 16:30:41 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-dcc/ChangeLog,v 1.16 2012/11/18 15:18:11 swift Exp $
+
+*selinux-dcc-2.20120725-r7 (18 Nov 2012)
+
+  18 Nov 2012; <swift@gentoo.org> +selinux-dcc-2.20120725-r7.ebuild:
+  Pushing out rev 7
 
 *selinux-dcc-9999 (13 Oct 2012)
 

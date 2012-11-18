@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-mutt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-mutt/ChangeLog,v 1.21 2012/10/13 16:30:35 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-mutt/ChangeLog,v 1.22 2012/11/18 15:18:00 swift Exp $
+
+*selinux-mutt-2.20120725-r7 (18 Nov 2012)
+
+  18 Nov 2012; <swift@gentoo.org> +selinux-mutt-2.20120725-r7.ebuild:
+  Pushing out rev 7
 
 *selinux-mutt-9999 (13 Oct 2012)
 
