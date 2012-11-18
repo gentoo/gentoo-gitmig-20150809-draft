@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oauthlib/oauthlib-0.3.3-r1.ebuild,v 1.1 2012/11/17 18:50:18 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oauthlib/oauthlib-0.3.3-r1.ebuild,v 1.2 2012/11/18 04:18:55 floppym Exp $
 
 EAPI="4"
 
@@ -9,7 +9,7 @@ SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.5 3.*"
 DISTUTILS_SRC_TEST="nosetests"
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="A generic, spec-compliant, thorough implementation of the OAuth request-signing logic"
 HOMEPAGE="https://github.com/idan/oauthlib
@@ -27,12 +27,6 @@ DEPEND="${RDEPEND}
 	test? ( dev-python/unittest2 )"
 
 src_prepare() {
-	rm tests/__init__.py || die
+	epatch "${FILESDIR}/${PN}-0.3.3-exclude-tests.patch"
 	distutils_src_prepare
-}
-
-src_test() {
-	touch tests/__init__.py || die
-	distutils_src_test
-	rm tests/__init__.py || die
 }
