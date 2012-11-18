@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/crypto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/crypto/ChangeLog,v 1.5 2012/09/12 15:42:29 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/crypto/ChangeLog,v 1.6 2012/11/18 11:45:02 gienah Exp $
+
+  18 Nov 2012; Mark Wright <gienah@gentoo.org>
+  +files/crypto-4.2.5-ghc-7.6.patch, crypto-4.2.5.ebuild:
+  Patch crypto 4.2.5 for ghc 7.6.1, EAPI=5
 
   12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> crypto-4.2.4.ebuild,
   crypto-4.2.5.ebuild:
