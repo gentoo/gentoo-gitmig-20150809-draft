@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.63a-r2.ebuild,v 1.8 2012/11/18 01:06:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.64a.ebuild,v 1.1 2012/11/18 01:06:23 flameeyes Exp $
 
 EAPI=4
 PYTHON_DEPEND="3:3.2"
 
-PATCHSET="4"
+PATCHSET="1"
 
 inherit multilib scons-utils eutils python versionator flag-o-matic toolchain-funcs pax-utils check-reqs
 
@@ -14,7 +14,7 @@ IUSE="cycles +game-engine player +elbeem +openexr ffmpeg jpeg2k openal
 	iconv collada 3dmouse debug nls"
 REQUIRED_USE="player? ( game-engine )"
 
-LANGS="en ar bg ca cs de el es es_ES fa fi fr hr id it ja ky ne pl pt ru sr sr@latin sv tr uk zh_CN zh_TW"
+LANGS="en ar bg ca cs de el es es_ES fa fi fr he hr hu id it ja ky ne nl pl pt pt_BR ru sr sr@latin sv tr uk zh_CN zh_TW"
 for X in ${LANGS} ; do
 	IUSE+=" linguas_${X}"
 	REQUIRED_USE+=" linguas_${X}? ( nls )"
@@ -52,10 +52,12 @@ RDEPEND="virtual/jpeg
 	>=sci-physics/bullet-2.78[-double-precision]
 	dev-cpp/eigen:3
 	sci-libs/colamd
+	sci-libs/ldl
+	dev-cpp/glog[gflags]
 	sys-libs/zlib
 	cycles? (
 		media-libs/openimageio
-		>=dev-libs/boost-1.44
+		>=dev-libs/boost-1.44[threads(+)]
 	)
 	iconv? ( dev-libs/libiconv )
 	sdl? ( media-libs/libsdl[audio,joystick] )
@@ -76,7 +78,6 @@ DEPEND="dev-util/scons
 		app-doc/doxygen[-nodot(-),dot(+)]
 	)
 	nls? ( sys-devel/gettext )
-	sci-libs/ufconfig
 	${RDEPEND}"
 
 pkg_pretend() {
@@ -96,8 +97,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	EPATCH_SUFFIX="patch" EPATCH_SOURCE="${WORKDIR}/patches" \
-		epatch
+	epatch "${WORKDIR}"/${PV}/*.patch
 
 	# remove some bundled deps
 	rm -r \
@@ -106,10 +106,12 @@ src_prepare() {
 		extern/Eigen3 \
 		extern/bullet2 \
 		extern/colamd \
-		extern/binreloc
+		extern/binreloc \
+		extern/libmv/third_party/{ldl,glog,gflags} \
+		|| die
 
 	ewarn "$(echo "Remaining bundled dependencies:";
-			find extern -mindepth 1 -maxdepth 1 -type d | sed 's|^|- |')"
+			( find extern -mindepth 1 -maxdepth 1 -type d; find extern/libmv/third_party -mindepth 1 -maxdepth 1 -type d; ) | sed 's|^|- |')"
 }
 
 src_configure() {
@@ -238,6 +240,8 @@ EOF
 	fi
 }
 
+src_test() { :; }
+
 src_install() {
 	# Pax mark blender for hardened support.
 	pax-mark m "${WORKDIR}/install/blender"
@@ -248,12 +252,10 @@ src_install() {
 	dobin "${WORKDIR}/install/blender"
 	use player && newbin "${WORKDIR}/install/blenderplayer" blenderplayer
 
-	# install plugin headers
-	insinto /usr/include/${PN}
-	doins "${WORKDIR}"/${P}/source/blender/blenpluginapi/*.h
-
-	# install desktop file
+	# install desktop file and icons
 	domenu release/freedesktop/blender.desktop
+	insinto /usr/share/icons/hicolor
+	doins -r release/freedesktop/icons/{*x*,scalable}
 
 	# install docs
 	doman "${WORKDIR}"/${P}/doc/manpage/blender.1
@@ -281,12 +283,6 @@ src_install() {
 	# installing blender
 	insinto /usr/share/${PN}
 	doins -r "${WORKDIR}"/install/${PV/a}/*
-
-	# FIX: making all python scripts readable only by group 'users',
-	#	  so nobody can modify scripts apart root user, but python
-	#	  cache (*.pyc) can be written and shared across the users.
-#	chown root:users -R "${D}/usr/share/${PN}/${SLOT}/scripts" || die
-#	chmod 755 -R "${D}/usr/share/${PN}/${SLOT}/scripts" || die
 }
 
 pkg_postinst() {

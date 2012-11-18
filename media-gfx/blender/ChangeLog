@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/blender
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.238 2012/09/21 19:14:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.239 2012/11/18 01:06:23 flameeyes Exp $
+
+*blender-2.64a (18 Nov 2012)
+
+  18 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org> +blender-2.64a.ebuild,
+  blender-2.63a-r2.ebuild:
+  Version bump, thanks to Dirk S. for the help with the patches in bug #437596;
+  remove bundled copies of ldl, glog and gflags; also fix building with libav-9
+  (bug #443180); and add a dependency for the old 2.63a (bug #443702).
 
   21 Sep 2012; Diego E. Pettenò <flameeyes@gentoo.org> blender-2.63a-r2.ebuild:
   Add missing dependency on virtual/glu (now visible as mesa no longer provides
