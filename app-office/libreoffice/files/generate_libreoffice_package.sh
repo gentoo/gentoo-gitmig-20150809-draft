@@ -44,7 +44,18 @@ do
 done
 
 # first the default subset of useflags
-IUSES_BASE="bash-completion -binfilter branding cups dbus graphite gstreamer gtk nsplugin python vba webdav xmlsec -aqua -jemalloc -mysql -nlpsolver -odk -opengl -pdfimport -postgres -svg"
+IUSES_BASE="bash-completion branding cups dbus gstreamer gtk python vba webdav -aqua -binfilter -jemalloc -mysql -odk -opengl -postgres -svg"
+
+ENABLE_EXTENSIONS="presenter-console presenter-minimizer"
+DISABLE_EXTENSIONS="nlpsolver pdfimport scripting-beanshell scripting-javascript wiki-publisher"
+
+for lo_xt in ${ENABLE_EXTENSIONS}; do
+        IUSES_BASE+=" libreoffice_extensions_${lo_xt}"
+done
+for lo_xt in ${DISABLE_EXTENSIONS}; do
+        IUSES_BASE+=" -libreoffice_extensions_${lo_xt}"
+done
+unset lo_xt
 
 # now for the options
 IUSES_J="java"

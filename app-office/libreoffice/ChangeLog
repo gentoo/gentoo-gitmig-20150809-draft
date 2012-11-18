@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.399 2012/11/18 12:02:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.400 2012/11/18 12:07:28 dilfridge Exp $
+
+  18 Nov 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  files/generate_libreoffice_package.sh:
+  Add extension handling
 
   18 Nov 2012; Agostino Sarubbo <ago@gentoo.org>
   files/generate_libreoffice_package.sh:
