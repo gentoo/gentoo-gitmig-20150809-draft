@@ -4,6 +4,6 @@
 	<herd>perl</herd>
 	<maintainer>
 		<email>robbat2@gentoo.org</email>
-		<description>Primary Maintainer</description>
+		<description>Upstream author</description>
 	</maintainer>
 </pkgmetadata>
