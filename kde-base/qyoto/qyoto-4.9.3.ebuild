@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qyoto/qyoto-4.9.3.ebuild,v 1.1 2012/11/08 23:26:36 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qyoto/qyoto-4.9.3.ebuild,v 1.2 2012/11/18 12:52:41 kensington Exp $
 
 EAPI=4
 
@@ -19,6 +19,8 @@ RDEPEND="${DEPEND}"
 
 # Split from kdebindings-csharp in 4.7
 add_blocker kdebindings-csharp
+
+PATCHES=( "${FILESDIR}/${P}-cmake-2.8.10.patch" )
 
 src_configure() {
 	local mycmakeargs=(
