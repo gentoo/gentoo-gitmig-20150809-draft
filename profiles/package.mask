@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14230 2012/11/18 11:32:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14231 2012/11/18 11:36:34 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -367,11 +367,6 @@ media-sound/xfi-drivers
 # Has overflows (#423619), upstream dead and only useful for MP3
 # players released in 1998. Removal in a month.
 app-misc/rio
-
-# Pacho Ramos <pacho@gentoo.org> (16 Sep 2012)
-# Upstream looks dead and is not fully compatible with current
-# audacious (#424103). Removal in a month.
-media-sound/audtty
 
 # Pacho Ramos <pacho@gentoo.org> (16 Sep 2012)
 # Diego Elio Pettenò <flameeyes@gentoo.org> (08 Jul 2012)
