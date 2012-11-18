@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/newrelic-sysmond
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/newrelic-sysmond/ChangeLog,v 1.4 2012/09/07 10:56:34 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/newrelic-sysmond/ChangeLog,v 1.5 2012/11/18 10:31:05 pacho Exp $
+
+  18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer as he is not taking care of this package.
 
   07 Sep 2012; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
   Drop empy herd tag
