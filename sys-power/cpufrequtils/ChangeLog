@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/cpufrequtils
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.69 2011/08/16 02:51:38 mattst88 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.70 2012/11/18 11:41:59 pacho Exp $
+
+  18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop mobile herd as talked in gentoo-dev ML
 
   16 Aug 2011; Matt Turner <mattst88@gentoo.org> cpufrequtils-008-r1.ebuild:
   Add dependency on libintl, bug 379313. Bump to EAPI=4.
@@ -329,4 +332,3 @@
   22 Jan 2005; Henrik Brix Andersen <brix@gentoo.org> +metadata.xml,
   +cpufrequtils-0.1.ebuild, +cpufrequtils-0.2_pre1.ebuild:
   Initial commit. Thank you to all who commented on bug #69320.
-

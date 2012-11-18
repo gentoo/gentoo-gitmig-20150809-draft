@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/ncpufreqd
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/ncpufreqd/ChangeLog,v 1.23 2009/04/05 13:06:48 nelchael Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/ncpufreqd/ChangeLog,v 1.24 2012/11/18 11:42:30 pacho Exp $
+
+  18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop mobile herd as talked in gentoo-dev ML
 
   05 Apr 2009; Krzysiek Pawlik <nelchael@gentoo.org> -ncpufreqd-2.3.ebuild:
   Remove old version.
@@ -96,4 +99,3 @@
   07 May 2005; Karol Wojtaszek <sekretarz@gentoo.org> +metadata.xml,
   +ncpufreqd-1.7.ebuild:
   Initial add, thanks to nelchael for app and ebuild, bug #68953
-

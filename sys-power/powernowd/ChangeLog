@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/powernowd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powernowd/ChangeLog,v 1.14 2012/10/17 23:54:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powernowd/ChangeLog,v 1.15 2012/11/18 11:43:56 pacho Exp $
+
+  18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop mobile herd as talked in gentoo-dev ML
 
 *powernowd-1.00-r1 (17 Oct 2012)
 

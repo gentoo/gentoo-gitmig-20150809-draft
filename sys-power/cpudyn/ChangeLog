@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/cpudyn
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpudyn/ChangeLog,v 1.13 2010/05/17 08:12:58 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpudyn/ChangeLog,v 1.14 2012/11/18 11:41:21 pacho Exp $
+
+  18 Nov 2012; Pacho Ramos <pacho@gentoo.org> -cpudyn-0.99.0.ebuild,
+  -cpudyn-1.0.ebuild, metadata.xml:
+  Drop mobile herd as talked in gentoo-dev ML
 
   17 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> cpudyn-1.0.1.ebuild:
   x86 stable wrt bug #318229
@@ -113,4 +117,3 @@
   09 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> cpudyn-0.4.6.ebuild,
   files/cpudyn.init:
   initial commit, thanks to degrenier@easyconnect.fr bug #30558
-

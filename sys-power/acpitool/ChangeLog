@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/acpitool
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpitool/ChangeLog,v 1.18 2012/08/13 10:08:57 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpitool/ChangeLog,v 1.19 2012/11/18 11:39:54 pacho Exp $
+
+  18 Nov 2012; Pacho Ramos <pacho@gentoo.org> -acpitool-0.5.1.ebuild,
+  metadata.xml:
+  Drop mobile herd as talked in gentoo-dev ML
 
   13 Aug 2012; Johannes Huber <johu@gentoo.org> acpitool-0.5.1-r1.ebuild:
   Stable for x86, wrt bug #422235
@@ -135,4 +139,3 @@
   27 Sep 2004; Karol Wojtaszek <sekretarz@gentoo.org> +metadata.xml,
   +acpitool-0.2.5.ebuild:
   Initial add
-

@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/hibernate-script
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/ChangeLog,v 1.90 2011/11/30 19:22:25 nelchael Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/ChangeLog,v 1.91 2012/11/18 11:42:00 pacho Exp $
+
+  18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop mobile herd as talked in gentoo-dev ML
 
 *hibernate-script-2.0-r4 (30 Nov 2011)
 
@@ -558,4 +561,3 @@
   12 Nov 2004; Henrik Brix Andersen <brix@gentoo.org> +metadata.xml,
   +hibernate-script-1.00.ebuild:
   Initial check-in. Thank you to all who commented on bug #52019.
-

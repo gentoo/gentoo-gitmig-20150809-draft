@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/powermgmt-base
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powermgmt-base/ChangeLog,v 1.25 2012/02/25 06:28:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powermgmt-base/ChangeLog,v 1.26 2012/11/18 11:43:19 pacho Exp $
+
+  18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop mobile herd as talked in gentoo-dev ML
 
   25 Feb 2012; Robin H. Johnson <robbat2@gentoo.org> powermgmt-base-1.31.ebuild:
   Bug #405687: Depend on virtual/modutils instead of sys-apps/module-init-tools.
@@ -97,4 +100,3 @@
   29 Jan 2005; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
   +powermgmt-base-1.21.ebuild:
   New ebuild thanks to Dennis Nienhüser <fragfred@gmx.de> in bug 76516
-
