@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexd/obexd-0.46.ebuild,v 1.5 2012/08/22 12:28:24 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexd/obexd-0.46.ebuild,v 1.6 2012/11/18 11:15:01 pacho Exp $
 
 EAPI="4"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.bluez.org/"
 SRC_URI="mirror://kernel/linux/bluetooth/${P}.tar.xz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm ppc x86"
+KEYWORDS="amd64 arm ppc ~ppc64 x86"
 IUSE="-eds nokia -server usb"
 
 DOCS="AUTHORS ChangeLog README doc/*.txt"
