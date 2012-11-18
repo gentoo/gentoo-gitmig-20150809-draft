@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/missingh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/missingh/ChangeLog,v 1.21 2012/09/13 01:08:58 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/missingh/ChangeLog,v 1.22 2012/11/18 11:48:41 gienah Exp $
+
+*missingh-1.2.0.0 (18 Nov 2012)
+
+  18 Nov 2012; Mark Wright <gienah@gentoo.org> +missingh-1.2.0.0.ebuild:
+  Bump missingh to 1.2.0.0
 
   13 Sep 2012; Mark Wright <gienah@gentoo.org>
   +files/missingh-1.1.1.0-ghc-7.6.patch, missingh-1.1.1.0.ebuild:
