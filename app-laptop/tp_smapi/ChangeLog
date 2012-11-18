@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/tp_smapi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/tp_smapi/ChangeLog,v 1.44 2012/04/12 12:23:54 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tp_smapi/ChangeLog,v 1.45 2012/11/18 10:53:08 pacho Exp $
+
+  18 Nov 2012; Pacho Ramos <pacho@gentoo.org> -tp_smapi-0.40-r3.ebuild,
+  metadata.xml:
+  Drop mobile herd as talked in gentoo-dev ML, remove old.
 
   12 Apr 2012; Fabio Erculiani <lxnay@gentoo.org> tp_smapi-0.40-r1.ebuild,
   tp_smapi-0.40-r3.ebuild, tp_smapi-0.41.ebuild:
@@ -186,4 +190,3 @@
   13 Dec 2005; Henrik Brix Andersen <brix@gentoo.org> +metadata.xml,
   +tp_smapi-0.09.ebuild:
   Initial import.
-
