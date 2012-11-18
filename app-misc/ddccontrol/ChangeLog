@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ddccontrol
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ChangeLog,v 1.28 2012/08/08 22:32:18 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ChangeLog,v 1.29 2012/11/18 11:51:06 robbat2 Exp $
+
+  18 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  Ensure upstream dev is in metadata.
 
   08 Aug 2012; Anthony G. Basile <blueness@gentoo.org>
   ddccontrol-0.4.2-r1.ebuild:
