@@ -1,6 +1,9 @@
 # ChangeLog for virtual/pcmcia
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/pcmcia/ChangeLog,v 1.5 2011/08/01 19:08:44 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/pcmcia/ChangeLog,v 1.6 2012/11/18 11:44:45 pacho Exp $
+
+  18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop mobile herd as talked in gentoo-dev ML
 
   01 Aug 2011; Markos Chandras <hwoarang@gentoo.org> -pcmcia-2.4.ebuild,
   -pcmcia-2.6.ebuild:
@@ -21,4 +24,3 @@
   +pcmcia-2.4.ebuild, +pcmcia-2.6.ebuild, +pcmcia-2.6.13.ebuild:
   New style virtual/pcmcia. The version number corresponds to the kernel
   version required.
-
