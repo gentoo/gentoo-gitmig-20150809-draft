@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/hugin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.124 2012/11/18 14:08:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.125 2012/11/18 16:19:09 maekke Exp $
+
+  18 Nov 2012; Markus Meier <maekke@gentoo.org> hugin-2012.0.0.ebuild:
+  add missing media-libs/lensfun dependency by Christian Schmitt and Nikoli,
+  bug #443770
 
   18 Nov 2012; Agostino Sarubbo <ago@gentoo.org> hugin-2011.4.0-r1.ebuild:
   Stable for amd64, wrt bug #443754
