@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.281 2012/11/13 19:36:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.282 2012/11/18 16:10:49 flameeyes Exp $
+
+*boost-1.52.0-r3 (18 Nov 2012)
+
+  18 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org> +boost-1.52.0-r3.ebuild,
+  -boost-1.52.0-r2.ebuild:
+  Disable the context library, which is currently not used by anything in tree
+  and only works on a subset of architectures (bug #443012) and has problem with
+  multilib builds (bug #441588). Make sure to remove the headers as well, for
+  both context and locale.
 
   13 Nov 2012; Jeroen Roovers <jer@gentoo.org> boost-1.52.0-r2.ebuild:
   Marked -hppa (bug #443012).
