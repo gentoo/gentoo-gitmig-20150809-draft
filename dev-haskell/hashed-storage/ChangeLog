@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/hashed-storage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashed-storage/ChangeLog,v 1.23 2012/09/12 16:05:24 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashed-storage/ChangeLog,v 1.24 2012/11/18 08:30:30 gienah Exp $
+
+*hashed-storage-0.5.10 (18 Nov 2012)
+
+  18 Nov 2012; Mark Wright <gienah@gentoo.org> +hashed-storage-0.5.10.ebuild:
+  Bump hashed-storage to 0.5.10
 
   12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org>
   hashed-storage-0.4.13.ebuild, hashed-storage-0.5.7.ebuild,
