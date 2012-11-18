@@ -1,6 +1,12 @@
 # ChangeLog for net-firewall/firewalld
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firewalld/ChangeLog,v 1.7 2012/11/10 19:49:37 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firewalld/ChangeLog,v 1.8 2012/11/18 05:30:51 cardoe Exp $
+
+*firewalld-0.2.9-r1 (18 Nov 2012)
+
+  18 Nov 2012; Doug Goldstein <cardoe@gentoo.org> firewalld-0.2.9.ebuild,
+  +firewalld-0.2.9-r1.ebuild:
+  OpenRC now carries support for FirewallD, handle it.
 
   10 Nov 2012; Doug Goldstein <cardoe@gentoo.org> files/firewalld.module:
   Fix the OpenRC module.

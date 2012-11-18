@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firewalld/firewalld-0.2.9.ebuild,v 1.7 2012/11/18 05:30:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firewalld/firewalld-0.2.9-r1.ebuild,v 1.1 2012/11/18 05:30:51 cardoe Exp $
 
 EAPI=4
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -25,7 +25,7 @@ RDEPEND="${PYTHON_DEPS}
 	dev-python/pygobject:3
 	net-firewall/ebtables
 	net-firewall/iptables[ipv6]
-	|| ( <sys-apps/openrc-0.11.5 sys-apps/systemd )
+	|| ( >=sys-apps/openrc-0.11.5 sys-apps/systemd )
 	gui? (
 		dev-python/pygtk:2
 		>=x11-libs/gtk+-2.6:2
@@ -72,10 +72,6 @@ src_install() {
 	fi
 
 	newinitd "${FILESDIR}"/firewalld.init firewalld
-
-	# Work around until OpenRC starts carrying our module
-	insinto $(get_libdir)/rc/net
-	newins "${FILESDIR}"/firewalld.module firewalld.sh
 }
 
 pkg_preinst() {
