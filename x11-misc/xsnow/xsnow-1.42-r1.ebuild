@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnow/xsnow-1.42-r1.ebuild,v 1.6 2011/03/16 17:40:07 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnow/xsnow-1.42-r1.ebuild,v 1.7 2012/11/18 14:16:53 xarthisius Exp $
 
 EAPI=2
 inherit toolchain-funcs
@@ -9,7 +9,7 @@ DESCRIPTION="snow, reindeer, and santa on the root window"
 HOMEPAGE="http://dropmix.xs4all.nl/rick/Xsnow/"
 SRC_URI="http://dropmix.xs4all.nl/rick/Xsnow/${P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="freedist"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""

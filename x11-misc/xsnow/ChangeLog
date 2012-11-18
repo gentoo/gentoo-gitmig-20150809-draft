@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xsnow
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnow/ChangeLog,v 1.27 2011/03/16 17:42:06 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnow/ChangeLog,v 1.28 2012/11/18 14:16:53 xarthisius Exp $
+
+  18 Nov 2012; Kacper Kowalik <xarthisius@gentoo.org> xsnow-1.42-r1.ebuild:
+  Change license from 'as-is' to 'freedist' wrt #441704 by Ulrich Müller
+  <ulm@gentoo.org>
 
   16 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> -xsnow-1.42.ebuild:
   Drop old
