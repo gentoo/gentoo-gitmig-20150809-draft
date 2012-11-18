@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/sauerbraten
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/sauerbraten/ChangeLog,v 1.15 2012/11/17 23:26:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/sauerbraten/ChangeLog,v 1.16 2012/11/18 00:03:51 mr_bones_ Exp $
+
+  18 Nov 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  sauerbraten-2010.07.28.ebuild:
+  add a default for the server config (bug #443650)
 
   17 Nov 2012; Michael Sterrett <mr_bones_@gentoo.org> files/sauerbraten.init:
   fix init script (bug #443646)
