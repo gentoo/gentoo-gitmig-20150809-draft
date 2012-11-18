@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.182 2012/11/18 08:27:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.183 2012/11/18 08:29:17 vapier Exp $
 
 # @ECLASS: flag-o-matic.eclass
 # @MAINTAINER:
@@ -422,21 +422,21 @@ test-flag-FC() { test-flag-PROG "FC" f95 "$1"; }
 
 test-flags-PROG() {
 	local comp=$1
-	local flags
+	local flags=()
 	local x
 
 	shift
 
 	[[ -z ${comp} ]] && return 1
 
-	for x in "$@" ; do
-		test-flag-${comp} "${x}" && flags="${flags}${flags:+ }${x}"
+	for x ; do
+		test-flag-${comp} "${x}" && flags+=( "${x}" )
 	done
 
-	echo "${flags}"
+	echo "${flags[*]}"
 
 	# Just bail if we dont have any flags
-	[[ -n ${flags} ]]
+	[[ ${#flags[@]} -gt 0 ]]
 }
 
 # @FUNCTION: test-flags-CC
