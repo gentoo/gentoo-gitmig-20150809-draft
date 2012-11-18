@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/huc/huc-0.1.ebuild,v 1.18 2010/01/15 21:45:56 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/huc/huc-0.1.ebuild,v 1.19 2012/11/18 18:30:13 ago Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.int21.de/huc/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="ppc sparc x86 ~x86-linux ~ppc-macos"
+KEYWORDS="~amd64 ppc sparc x86 ~x86-linux ~ppc-macos"
 IUSE=""
 
 DEPEND=""

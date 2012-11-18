@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/huc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/huc/ChangeLog,v 1.14 2010/01/15 21:45:56 fauli Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/huc/ChangeLog,v 1.15 2012/11/18 18:30:13 ago Exp $
+
+  18 Nov 2012; Agostino Sarubbo <ago@gentoo.org> huc-0.1.ebuild:
+  Add ~amd64
 
   15 Jan 2010; Christian Faulhammer <fauli@gentoo.org> huc-0.1.ebuild:
   Transfer Prefix keywords
