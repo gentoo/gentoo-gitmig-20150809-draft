@@ -1,5 +1,10 @@
 # ChangeLog for sys-libs/glibc
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.906 2012/11/11 15:23:16 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.907 2012/11/18 08:06:49 vapier Exp $
+
+  18 Nov 2012; Mike Frysinger <vapier@gentoo.org>
+  files/eblits/src_compile.eblit:
+  Disable fortify/ssp compiler checks when build glibc headers #443632 by Andrej
+  Gelenberg.
 
   11 Nov 2012; Magnus Granberg <zorry@gentoo.org> glibc-2.16.0.ebuild,
   +files/2.16/glibc-2.16-hardened-pie.patch:
