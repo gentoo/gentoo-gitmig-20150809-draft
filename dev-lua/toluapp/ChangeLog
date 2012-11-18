@@ -1,6 +1,10 @@
 # ChangeLog for dev-lua/toluapp
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/toluapp/ChangeLog,v 1.1 2010/11/06 01:38:02 rafaelmartins Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/toluapp/ChangeLog,v 1.2 2012/11/18 23:28:11 rafaelmartins Exp $
+
+  18 Nov 2012; Rafael G. Martins <rafaelmartins@gentoo.org>
+  toluapp-1.0.92.ebuild, toluapp-1.0.93.ebuild:
+  Fix license. bug #443806
 
   06 Nov 2010; Rafael G. Martins <rafaelmartins@gentoo.org>
   +toluapp-1.0.92.ebuild, +toluapp-1.0.93.ebuild, +metadata.xml:

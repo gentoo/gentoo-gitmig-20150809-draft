@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/toluapp/toluapp-1.0.93.ebuild,v 1.1 2010/11/06 01:38:02 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/toluapp/toluapp-1.0.93.ebuild,v 1.2 2012/11/18 23:28:11 rafaelmartins Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ DESCRIPTION="A tool to integrate C/C++ code with Lua."
 HOMEPAGE="http://www.codenix.com/~tolua/"
 SRC_URI="http://www.codenix.com/~tolua/${MY_P}.tar.bz2"
 
-LICENSE="as-is"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 IUSE=""
