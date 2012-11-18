@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/monadcatchio-mtl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/monadcatchio-mtl/ChangeLog,v 1.3 2012/11/18 13:53:48 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/monadcatchio-mtl/ChangeLog,v 1.4 2012/11/18 13:59:18 gienah Exp $
+
+  18 Nov 2012; Mark Wright <gienah@gentoo.org> monadcatchio-mtl-0.3.0.5.ebuild:
+  rdep cgi has ~ppc ~sparc ~x86 keywords
 
 *monadcatchio-mtl-0.3.0.5 (18 Nov 2012)
 
