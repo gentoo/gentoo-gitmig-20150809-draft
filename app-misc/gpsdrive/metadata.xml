@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>mobile</herd>
+<maintainer><email>maintainer-needed@gentoo.org</email></maintainer>
 <use>
   <flag name='gdal'>Include gdal and ogr support for format conversions.</flag>
   <flag name='kismet'>Include support for kismet wifi mapping.</flag>
