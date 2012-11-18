@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/time
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/time/ChangeLog,v 1.34 2012/09/13 02:52:21 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/time/ChangeLog,v 1.35 2012/11/18 14:25:20 slyfox Exp $
+
+  18 Nov 2012; Sergei Trofimovich <slyfox@gentoo.org> time-1.4.ebuild:
+  Added ghc-7.4.2 core libraries.
 
   13 Sep 2012; Mark Wright <gienah@gentoo.org> time-1.4.0.1.ebuild:
   time is a ghc 7.6.1 core lib
