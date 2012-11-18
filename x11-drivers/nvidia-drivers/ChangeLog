@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.409 2012/11/18 05:15:42 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.410 2012/11/18 11:18:17 ago Exp $
+
+  18 Nov 2012; Agostino Sarubbo <ago@gentoo.org>
+  nvidia-drivers-173.14.36.ebuild, nvidia-drivers-304.60.ebuild,
+  nvidia-drivers-304.64.ebuild, nvidia-drivers-96.43.23.ebuild:
+  stable on amd64 and x86
 
   18 Nov 2012; Doug Goldstein <cardoe@gentoo.org> nvidia-drivers-295.75.ebuild:
   Stabilize on x86 based on a user report in bug #435700 since x86 is falling
