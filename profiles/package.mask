@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14228 2012/11/18 11:28:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14229 2012/11/18 11:31:38 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -386,11 +386,6 @@ media-sound/audtty
 # know by filing a bug and blocking against bug #425362.
 # Removal in a month.
 net-ftp/netkit-tftp
-
-# Pacho Ramos <pacho@gentoo.org> (16 Sep 2012)
-# Fails to build with latest binutils (#430362), dead upstream and
-# nothing needs it in the tree. Removal in a month.
-dev-libs/mpatrol
 
 # Pacho Ramos <pacho@gentoo.org> (16 Sep 2012)
 # It ignores CFLAGS (#431298), nothing in the tree needs it,
