@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7153 2012/11/16 17:14:13 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7154 2012/11/18 10:31:01 robbat2 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> package.mask:
+  Obsolete dev-vcs/gitosis and dev-vcs/gitosis-gentoo.
 
   16 Nov 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> updates/4Q-2012:
   Move x11-libs/elementary to media-libs/elementary
