@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/sbc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sbc/ChangeLog,v 1.4 2012/11/18 10:57:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sbc/ChangeLog,v 1.5 2012/11/18 12:04:54 ssuominen Exp $
+
+  18 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
+  Maintained by Pacho Ramos because this is unbundled BlueZ library. Remove
+  pda@ and add sound@ as backup herd because this is also used by
+  media-sound/pulseaudio.
 
   18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop mobile herd as talked in gentoo-dev ML
