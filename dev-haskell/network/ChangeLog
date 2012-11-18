@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/network
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/network/ChangeLog,v 1.65 2012/09/30 11:08:06 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/network/ChangeLog,v 1.66 2012/11/18 11:50:08 gienah Exp $
+
+*network-2.4.0.1 (18 Nov 2012)
+
+  18 Nov 2012; Mark Wright <gienah@gentoo.org> +network-2.4.0.1.ebuild:
+  Bump network to 2.4.0.1
 
   30 Sep 2012; Anthony G. Basile <blueness@gentoo.org> network-2.3.0.14.ebuild:
   stable ppc, bug #428936
