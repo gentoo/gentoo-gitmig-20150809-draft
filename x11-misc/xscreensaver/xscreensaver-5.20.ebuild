@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.20.ebuild,v 1.7 2012/11/14 17:13:09 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.20.ebuild,v 1.8 2012/11/18 14:53:11 xarthisius Exp $
 
 EAPI=4
 inherit autotools eutils flag-o-matic multilib pam
@@ -58,8 +58,6 @@ DEPEND="${COMMON_DEPEND}
 
 REQUIRED_USE="gdm? ( new-login )"
 
-MAKEOPTS="${MAKEOPTS} -j1"
-
 src_prepare() {
 	if use new-login && ! use gdm; then #392967
 		sed -i \
@@ -74,7 +72,8 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-5.20-check-largefile-support.patch \
 		"${FILESDIR}"/${PN}-5.20-conf264.patch \
 		"${FILESDIR}"/${PN}-5.20-test-passwd-segv-tty.patch \
-		"${FILESDIR}"/${PN}-5.20-tests-miscfix.patch
+		"${FILESDIR}"/${PN}-5.20-tests-miscfix.patch \
+		"${FILESDIR}"/${PN}-5.20-parallel-build.patch
 
 	eautoconf
 	eautoheader
