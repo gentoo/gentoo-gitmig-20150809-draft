@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14234 2012/11/18 18:20:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14235 2012/11/18 23:14:50 robbat2 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -334,12 +334,6 @@ app-i18n/ibus-table-yinma
 # for recent MythTV versions. Removal in a month.
 media-libs/gmyth
 media-plugins/gst-plugins-mythtv
-
-# Pacho Ramos <pacho@gentoo.org> (16 Sep 2012)
-# Fails old-elibtoolize sanity check (#341721), has security
-# issues. Removal in a month.
-net-libs/libmonetra
-dev-php/pecl-mcve
 
 # Pacho Ramos <pacho@gentoo.org> (16 Sep 2012)
 # Upstream keeps inactive for ages and, then, it has broke again
