@@ -1,6 +1,11 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.251 2012/11/18 11:20:01 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.252 2012/11/18 12:13:48 billie Exp $
+
+*hplip-3.12.10a-r1 (18 Nov 2012)
+
+  18 Nov 2012; Daniel Pielmeier <billie@gentoo.org> +hplip-3.12.10a-r1.ebuild:
+  Fix bug #443680. Thanks to Petteri Räty for the report.
 
   18 Nov 2012; Daniel Pielmeier <billie@gentoo.org>
   -files/hplip-3.9.10-browser.patch, -files/hplip-3.9.12-cupsddk.patch,
