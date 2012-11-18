@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/rsync
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.235 2012/09/09 15:46:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.236 2012/11/18 13:57:10 ago Exp $
+
+  18 Nov 2012; Agostino Sarubbo <ago@gentoo.org> -rsync-3.0.7-r2.ebuild,
+  -rsync-3.0.7.ebuild:
+  Remove old
 
   09 Sep 2012; Raúl Porcel <armin76@gentoo.org> rsync-3.0.9-r2.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #431852
