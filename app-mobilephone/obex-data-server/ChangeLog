@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/obex-data-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obex-data-server/ChangeLog,v 1.34 2012/05/02 20:10:08 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obex-data-server/ChangeLog,v 1.35 2012/11/18 10:56:58 pacho Exp $
+
+  18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop mobile herd as talked in gentoo-dev ML
 
   02 May 2012; Jeff Horelick <jdhore@gentoo.org> obex-data-server-0.4.4.ebuild,
   obex-data-server-0.4.5.ebuild:
@@ -154,4 +157,3 @@
   +obex-data-server-0.1.ebuild:
   Initial addition. Ebuild written by me. Needed for
   >=net-wireless/bluez-gnome-0.16.
-
