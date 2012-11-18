@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/bluez-hcidump
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hcidump/ChangeLog,v 1.75 2012/08/24 12:06:45 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hcidump/ChangeLog,v 1.76 2012/11/18 11:09:12 pacho Exp $
+
+  18 Nov 2012; Pacho Ramos <pacho@gentoo.org> -bluez-hcidump-2.0.ebuild,
+  -bluez-hcidump-2.2.ebuild, -bluez-hcidump-2.3.ebuild,
+  -files/bluez-hcidump-2.0-bluez-4.9x.patch, metadata.xml:
+  Drop mobile herd as talked in gentoo-dev ML, remove old.
 
   24 Aug 2012; Michael Weber <xmw@gentoo.org> bluez-hcidump-2.4.ebuild:
   ppc stable (bug 422161).
