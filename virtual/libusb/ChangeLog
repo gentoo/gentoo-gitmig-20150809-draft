@@ -1,6 +1,9 @@
 # ChangeLog for virtual/libusb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libusb/ChangeLog,v 1.26 2012/11/09 21:00:01 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libusb/ChangeLog,v 1.27 2012/11/18 10:44:59 robbat2 Exp $
+
+  18 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  Drop duplication of myself as a maintainer where there is a herd.
 
   09 Nov 2012; Richard Yao <ryao@gentoo.org> libusb-1.ebuild:
   Add >=sys-freebsd/freebsd-lib-9.1_rc3-r1[usb] as virtual/libusb:1 provider
