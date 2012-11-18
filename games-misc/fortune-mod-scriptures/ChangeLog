@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/fortune-mod-scriptures
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-scriptures/ChangeLog,v 1.6 2010/12/12 09:49:42 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-scriptures/ChangeLog,v 1.7 2012/11/18 17:43:21 hwoarang Exp $
+
+  18 Nov 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Remove beandog wrt #131511
 
   12 Dec 2010; Fabian Groffen <grobian@gentoo.org>
   fortune-mod-scriptures-1.1.0.ebuild:
@@ -26,4 +29,3 @@
   20 Oct 2006; Steve Dibb <beandog@gentoo.org>
   +fortune-mod-scriptures-1.1.0.ebuild:
   Initial import
-
