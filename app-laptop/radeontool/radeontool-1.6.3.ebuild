@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/radeontool/radeontool-1.6.3.ebuild,v 1.2 2012/11/18 13:35:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/radeontool/radeontool-1.6.3.ebuild,v 1.3 2012/11/18 14:00:26 pacho Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -17,7 +17,8 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/libpciaccess-0.12.0"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
 src_install() {
 	emake install DESTDIR="${D}"
