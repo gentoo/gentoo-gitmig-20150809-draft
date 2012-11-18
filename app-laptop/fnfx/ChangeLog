@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/fnfx
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/fnfx/ChangeLog,v 1.6 2009/05/15 20:23:41 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/fnfx/ChangeLog,v 1.7 2012/11/18 10:48:21 pacho Exp $
+
+  18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop mobile herd as talked in gentoo-dev ML
 
   15 May 2009; Markus Meier <maekke@gentoo.org> fnfx-0.3.ebuild:
   add ~amd64, bug #267710
@@ -29,4 +32,3 @@
   <kalin@ThinRope.net>, Nik Raub <niknik79@bossmail.de>, azote
   <azote@slinux.net>, Claudio Corsi <corsic@cli.di.unipi.it> and Wolfgang
   Frisch <xororand@frexx.de> in bug 33335
-
