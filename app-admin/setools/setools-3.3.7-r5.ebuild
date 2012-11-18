@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-3.3.7-r5.ebuild,v 1.1 2012/09/08 18:33:38 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-3.3.7-r5.ebuild,v 1.2 2012/11/18 08:49:57 swift Exp $
 
 EAPI="2"
 PYTHON_DEPEND="python? *"
@@ -97,6 +97,8 @@ src_prepare() {
 
 	# Disable byte-compilation of Python modules.
 	echo '#!/bin/sh' > py-compile
+
+	epatch_user
 }
 
 src_configure() {
