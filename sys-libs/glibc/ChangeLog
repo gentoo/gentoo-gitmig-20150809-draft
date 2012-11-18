@@ -1,5 +1,8 @@
 # ChangeLog for sys-libs/glibc
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.907 2012/11/18 08:06:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.908 2012/11/18 09:32:24 vapier Exp $
+
+  18 Nov 2012; Mike Frysinger <vapier@gentoo.org> glibc-2.16.0.ebuild:
+  Fix arm cross-compile errors with _Unwind_Resume.
 
   18 Nov 2012; Mike Frysinger <vapier@gentoo.org>
   files/eblits/src_compile.eblit:
