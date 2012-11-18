@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/lm_sensors
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.128 2012/10/18 18:58:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.129 2012/11/18 11:34:49 pacho Exp $
+
+  18 Nov 2012; Pacho Ramos <pacho@gentoo.org>
+  -files/lm_sensors-3.1.2-sensors-detect-gentoo.patch, -lm_sensors-3.2.0.ebuild,
+  -lm_sensors-3.3.0.ebuild, metadata.xml:
+  Drop mobile herd as talked in gentoo-dev ML
 
   18 Oct 2012; Markus Meier <maekke@gentoo.org> lm_sensors-3.3.1.ebuild:
   add ~arm, bug #438642
@@ -394,4 +399,3 @@
   +lm_sensors-2.10.0.ebuild:
   Version bump. Includes fancontrol init script based on the work of Micha
   Pytasz, bug #98753.
-

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pcmciautils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/ChangeLog,v 1.46 2012/11/13 18:03:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/ChangeLog,v 1.47 2012/11/18 11:34:54 pacho Exp $
+
+  18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop mobile herd as talked in gentoo-dev ML
 
   13 Nov 2012; Agostino Sarubbo <ago@gentoo.org> pcmciautils-018_p8.ebuild:
   Stable for x86, wrt bug #434082

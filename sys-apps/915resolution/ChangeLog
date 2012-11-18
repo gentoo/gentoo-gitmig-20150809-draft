@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/915resolution
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/915resolution/ChangeLog,v 1.16 2010/01/15 13:48:22 bangert Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/915resolution/ChangeLog,v 1.17 2012/11/18 11:32:10 pacho Exp $
+
+  18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop mobile herd as talked in gentoo-dev ML
 
 *915resolution-0.5.3-r3 (15 Jan 2010)
 
@@ -77,4 +80,3 @@
 
   22 Jul 2006; Patrick McLean <chutzpah@gentoo.org> ChangeLog:
   Initial revision.
-
