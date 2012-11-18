@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xkeyboard-config
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/ChangeLog,v 1.170 2012/11/16 16:43:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/ChangeLog,v 1.171 2012/11/18 12:26:23 ago Exp $
+
+  18 Nov 2012; Agostino Sarubbo <ago@gentoo.org> xkeyboard-config-2.7.ebuild:
+  Stable for x86, wrt bug #440872
 
   16 Nov 2012; Agostino Sarubbo <ago@gentoo.org> xkeyboard-config-2.7.ebuild:
   Stable for amd64, wrt bug #440872
