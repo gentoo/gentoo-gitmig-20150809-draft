@@ -1,6 +1,14 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.250 2012/11/13 16:45:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.251 2012/11/18 11:20:01 billie Exp $
+
+  18 Nov 2012; Daniel Pielmeier <billie@gentoo.org>
+  -files/hplip-3.9.10-browser.patch, -files/hplip-3.9.12-cupsddk.patch,
+  -files/hplip-3.9.12-systray.patch, -files/hplip-3.10.9-cve-2010-4267.patch,
+  -files/hplip-3.11.1-desktop.patch, -files/hplip-3.11.1-htmldir.patch,
+  -files/hplip-3.11.10-udev-attrs.patch, -hplip-3.12.4.ebuild,
+  -hplip-3.12.10.ebuild:
+  Remove old.
 
   13 Nov 2012; Brent Baude <ranger@gentoo.org> hplip-3.12.10a.ebuild:
   Marking hplip-3.12.10a ppc64 for bug 439032
