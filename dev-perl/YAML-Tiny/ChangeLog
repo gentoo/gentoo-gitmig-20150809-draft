@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/YAML-Tiny
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/YAML-Tiny/ChangeLog,v 1.47 2012/09/09 16:38:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/YAML-Tiny/ChangeLog,v 1.48 2012/11/18 11:42:11 robbat2 Exp $
+
+  18 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  Drop duplication of myself as a maintainer where there is a herd.
 
   09 Sep 2012; Raúl Porcel <armin76@gentoo.org> YAML-Tiny-1.510.0.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #418873

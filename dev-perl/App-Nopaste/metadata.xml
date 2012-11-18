@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>perl</herd>
-  <maintainer>
-    <email>robbat2@gentoo.org</email>
-  </maintainer>
   <use>
     <flag name="pastebin">pastebin.com support</flag>
     <flag name="clipboard">copying of URLs with -x/--copy</flag>

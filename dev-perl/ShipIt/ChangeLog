@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/ShipIt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ShipIt/ChangeLog,v 1.14 2012/11/12 20:00:26 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ShipIt/ChangeLog,v 1.15 2012/11/18 11:35:07 robbat2 Exp $
+
+  18 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  Drop duplication of myself as a maintainer where there is a herd.
 
 *ShipIt-0.580.0 (12 Nov 2012)
 

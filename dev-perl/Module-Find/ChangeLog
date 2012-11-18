@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Module-Find
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Find/ChangeLog,v 1.17 2012/09/12 11:05:37 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Find/ChangeLog,v 1.18 2012/11/18 11:26:54 robbat2 Exp $
+
+  18 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  Drop duplication of myself as a maintainer where there is a herd.
 
   12 Sep 2012; Johannes Huber <johu@gentoo.org> Module-Find-0.110.0.ebuild:
   Stable for x86, wrt bug #428998

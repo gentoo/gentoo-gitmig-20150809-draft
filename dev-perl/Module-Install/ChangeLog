@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Module-Install
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Install/ChangeLog,v 1.25 2012/08/09 17:24:00 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Install/ChangeLog,v 1.26 2012/11/18 11:27:23 robbat2 Exp $
+
+  18 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  Drop duplication of myself as a maintainer where there is a herd.
 
   09 Aug 2012; Fabian Groffen <grobian@gentoo.org> Module-Install-1.60.0.ebuild:
   Marked ~ppc-macos

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DBIx-Class-InflateColumn-Boolean
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-Class-InflateColumn-Boolean/ChangeLog,v 1.5 2012/11/04 16:05:42 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-Class-InflateColumn-Boolean/ChangeLog,v 1.6 2012/11/18 11:15:14 robbat2 Exp $
+
+  18 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  Drop duplication of myself as a maintainer where there is a herd.
 
 *DBIx-Class-InflateColumn-Boolean-0.2.0 (04 Nov 2012)
 
