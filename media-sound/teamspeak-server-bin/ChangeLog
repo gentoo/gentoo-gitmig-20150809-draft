@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/teamspeak-server-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-server-bin/ChangeLog,v 1.27 2012/10/12 21:23:01 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-server-bin/ChangeLog,v 1.28 2012/11/18 10:13:29 pacho Exp $
+
+  18 Nov 2012; Pacho Ramos <pacho@gentoo.org>
+  -teamspeak-server-bin-3.0.0_beta30.ebuild,
+  -teamspeak-server-bin-3.0.0_rc1.ebuild, -teamspeak-server-bin-3.0.5-r1.ebuild,
+  -teamspeak-server-bin-3.0.5-r2.ebuild, -teamspeak-server-bin-3.0.5.ebuild,
+  metadata.xml:
+  Reassign to proxy-maint as talked with Markos as looks like somebody from that
+  team wants to take care of this. Remove old.
 
 *teamspeak-server-bin-3.0.6.1 (12 Oct 2012)
 
@@ -162,4 +170,3 @@
   23 Dec 2009; Christian Parpart <trapni@gentoo.org>
   +teamspeak-server-bin-3.0.0_beta5.ebuild, +metadata.xml:
   initial commit of TeamSpeak server, version 3 (beta)
-
