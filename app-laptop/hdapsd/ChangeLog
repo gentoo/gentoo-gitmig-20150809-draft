@@ -1,6 +1,13 @@
 # ChangeLog for app-laptop/hdapsd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/ChangeLog,v 1.20 2012/11/18 10:49:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/ChangeLog,v 1.21 2012/11/18 20:39:55 ottxor Exp $
+
+*hdapsd-20090401-r2 (18 Nov 2012)
+
+  18 Nov 2012; Christoph Junghans <ottxor@gentoo.org> +files/hdapsd.conf.3,
+  +files/hdapsd.init.3, +hdapsd-20090401-r2.ebuild, -files/hdapsd.conf.2,
+  -files/hdapsd.init.2, -hdapsd-20090401-r1.ebuild, metadata.xml:
+  add auto-detecting of disks (bug #334435#c13)
 
   18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop mobile herd as talked in gentoo-dev ML

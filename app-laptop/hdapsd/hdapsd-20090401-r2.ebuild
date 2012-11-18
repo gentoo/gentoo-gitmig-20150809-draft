@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/hdapsd-20090401-r1.ebuild,v 1.1 2011/12/21 04:51:22 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/hdapsd-20090401-r2.ebuild,v 1.1 2012/11/18 20:39:55 ottxor Exp $
 
 EAPI=4
 inherit linux-info
@@ -28,8 +28,8 @@ src_install() {
 	emake DESTDIR="${ED}" install
 	rm -rf "${ED}"/usr/share/doc/hdapsd
 	dodoc ChangeLog README AUTHORS
-	newconfd "${FILESDIR}"/hdapsd.conf.2 hdapsd
-	newinitd "${FILESDIR}"/hdapsd.init.2 hdapsd
+	newconfd "${FILESDIR}"/hdapsd.conf.3 hdapsd
+	newinitd "${FILESDIR}"/hdapsd.init.3 hdapsd
 }
 
 pkg_postinst(){

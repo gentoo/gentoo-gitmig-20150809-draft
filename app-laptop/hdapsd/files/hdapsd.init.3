@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
 
 depend() {
@@ -12,11 +12,12 @@ checkconfig() {
 	DISKLIST=${DISK}
     fi
 
-    if [[ -z ${DISKLIST} || -z ${THRESHOLD} ]] ; then
-	eerror "You should setup DISKLIST and THRESHOLD in /etc/conf.d/hdapsd."
+    if [[ -z ${THRESHOLD} ]] ; then
+	eerror "You should setup THRESHOLD in /etc/conf.d/hdapsd."
 	return 1
     fi
 
+    #empty DISKLIST is allowed as well
     for DISK in ${DISKLIST}; do
         if [ ! -b /dev/${DISK} ]; then
             eerror "Could not find disk /dev/${DISK}!"
@@ -59,7 +60,7 @@ start() {
 	${DISKOPTS} --sensitivity "${THRESHOLD}" ${OPTIONS}
     eend $?
 }
-	
+
 stop() {
     ebegin "Stopping Hard Drive Active Protection System daemon"
     start-stop-daemon --stop --exec /usr/sbin/hdapsd \
