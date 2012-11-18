@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.181 2012/11/11 20:00:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.182 2012/11/18 08:27:00 vapier Exp $
 
 # @ECLASS: flag-o-matic.eclass
 # @MAINTAINER:
@@ -385,13 +385,14 @@ strip-flags() {
 
 test-flag-PROG() {
 	local comp=$1
-	local flag=$2
+	local lang=$2
+	local flag=$3
 
 	[[ -z ${comp} || -z ${flag} ]] && return 1
 
 	# use -c so we can test the assembler as well
 	local PROG=$(tc-get${comp})
-	${PROG} "${flag}" -c -o /dev/null -xc /dev/null \
+	${PROG} "${flag}" -c -o /dev/null -x${lang} /dev/null \
 		> /dev/null 2>&1
 }
 
@@ -399,25 +400,25 @@ test-flag-PROG() {
 # @USAGE: <flag>
 # @DESCRIPTION:
 # Returns shell true if <flag> is supported by the C compiler, else returns shell false.
-test-flag-CC() { test-flag-PROG "CC" "$1"; }
+test-flag-CC() { test-flag-PROG "CC" c "$1"; }
 
 # @FUNCTION: test-flag-CXX
 # @USAGE: <flag>
 # @DESCRIPTION:
 # Returns shell true if <flag> is supported by the C++ compiler, else returns shell false.
-test-flag-CXX() { test-flag-PROG "CXX" "$1"; }
+test-flag-CXX() { test-flag-PROG "CXX" c++ "$1"; }
 
 # @FUNCTION: test-flag-F77
 # @USAGE: <flag>
 # @DESCRIPTION:
 # Returns shell true if <flag> is supported by the Fortran 77 compiler, else returns shell false.
-test-flag-F77() { test-flag-PROG "F77" "$1"; }
+test-flag-F77() { test-flag-PROG "F77" f77 "$1"; }
 
 # @FUNCTION: test-flag-FC
 # @USAGE: <flag>
 # @DESCRIPTION:
 # Returns shell true if <flag> is supported by the Fortran 90 compiler, else returns shell false.
-test-flag-FC() { test-flag-PROG "FC" "$1"; }
+test-flag-FC() { test-flag-PROG "FC" f95 "$1"; }
 
 test-flags-PROG() {
 	local comp=$1
