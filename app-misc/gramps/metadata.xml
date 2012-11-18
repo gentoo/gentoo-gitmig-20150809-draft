@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-  <email>beandog@gentoo.org</email>
-  <name>Steve Dibb</name>
-</maintainer>
-<maintainer>
   <email>fauli@gentoo.org</email>
   <name>Christian Faulhammer</name>
 </maintainer>
