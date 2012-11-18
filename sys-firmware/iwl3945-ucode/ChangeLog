@@ -1,6 +1,9 @@
 # ChangeLog for sys-firmware/iwl3945-ucode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/iwl3945-ucode/ChangeLog,v 1.2 2012/10/03 19:32:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/iwl3945-ucode/ChangeLog,v 1.3 2012/11/18 11:36:47 pacho Exp $
+
+  18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop mobile herd as talked in gentoo-dev ML
 
   03 Oct 2012; Mike Frysinger <vapier@gentoo.org>
   iwl3945-ucode-15.28.1.6.ebuild, iwl3945-ucode-15.28.1.8.ebuild,
