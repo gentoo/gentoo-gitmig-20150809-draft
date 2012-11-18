@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/blaze-html
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/blaze-html/ChangeLog,v 1.4 2012/09/12 15:44:14 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/blaze-html/ChangeLog,v 1.5 2012/11/18 01:16:31 gienah Exp $
+
+*blaze-html-0.5.1.0 (18 Nov 2012)
+
+  18 Nov 2012; Mark Wright <gienah@gentoo.org> +blaze-html-0.5.1.0.ebuild:
+  Bump blaze-html to 0.5.1.0
 
   12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org>
   blaze-html-0.4.3.1.ebuild, blaze-html-0.4.3.3.ebuild,
