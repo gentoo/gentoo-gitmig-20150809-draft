@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/parallel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/parallel/ChangeLog,v 1.12 2012/09/12 15:35:22 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/parallel/ChangeLog,v 1.13 2012/11/18 07:21:36 gienah Exp $
+
+*parallel-3.2.0.3 (18 Nov 2012)
+
+  18 Nov 2012; Mark Wright <gienah@gentoo.org> +parallel-3.2.0.3.ebuild:
+  Bump parallel to 3.2.0.3
 
   12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> parallel-1.0.0.0.ebuild,
   parallel-1.1.0.1.ebuild, parallel-3.2.0.2.ebuild:
