@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fake/fake-1.1.10.ebuild,v 1.6 2010/09/27 11:26:55 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fake/fake-1.1.10.ebuild,v 1.7 2012/11/18 18:49:18 ago Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ SRC_URI="http://www.vergenet.net/linux/${PN}/download/${PV}/${P}.tar.gz"
 HOMEPAGE="http://www.vergenet.net/linux/fake/"
 
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 LICENSE="GPL-2"
 IUSE=""
 
