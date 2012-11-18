@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/rtl8180
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl8180/ChangeLog,v 1.12 2007/07/07 10:55:27 genstef Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl8180/ChangeLog,v 1.13 2012/11/18 11:26:30 pacho Exp $
+
+  18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop mobile herd as talked in gentoo-dev ML
 
   07 Jul 2007; Stefan Schweizer <genstef@gentoo.org>
   rtl8180-0.22_pre20050528.ebuild:
@@ -63,4 +66,3 @@
   20 Feb 2005; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
   +rtl8180-0.19.ebuild:
   New ebuild by me .. thanks to cYmen in #gentoo-laptop for testing.
-

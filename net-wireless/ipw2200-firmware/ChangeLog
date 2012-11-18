@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/ipw2200-firmware
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200-firmware/ChangeLog,v 1.20 2010/05/22 16:10:58 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200-firmware/ChangeLog,v 1.21 2012/11/18 11:18:02 pacho Exp $
+
+  18 Nov 2012; Pacho Ramos <pacho@gentoo.org> -ipw2200-firmware-2.3.ebuild,
+  -ipw2200-firmware-3.0.ebuild, metadata.xml:
+  Drop mobile herd as talked in gentoo-dev ML
 
   22 May 2010; Pacho Ramos <pacho@gentoo.org> ipw2200-firmware-3.1.ebuild:
   stable amd64, bug 306167
@@ -88,4 +92,3 @@
   18 Jan 2005; Henrik Brix Andersen <brix@gentoo.org> +metadata.xml,
   +ipw2200-firmware-2.2.ebuild:
   New ebuild, split from net-wireless/ipw2200.
-

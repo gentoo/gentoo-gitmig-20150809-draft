@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/ipw3945
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ChangeLog,v 1.42 2012/06/08 12:59:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ChangeLog,v 1.43 2012/11/18 11:18:38 pacho Exp $
+
+  18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop mobile herd as talked in gentoo-dev ML
 
   08 Jun 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer from metadata as talked with him, bug #90641.
@@ -199,4 +202,3 @@
   +ipw3945-0.0.74.ebuild:
   Initial version. Thank you to Intel's Open Source Technology Center for
   sponsoring the hardware for testing this.
-

@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/linux-wlan-ng-modules
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng-modules/ChangeLog,v 1.17 2012/03/05 20:34:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng-modules/ChangeLog,v 1.18 2012/11/18 11:20:22 pacho Exp $
+
+  18 Nov 2012; Pacho Ramos <pacho@gentoo.org>
+  -linux-wlan-ng-modules-0.2.8.ebuild, metadata.xml:
+  Drop mobile herd as talked in gentoo-dev ML
 
   05 Mar 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Remove betelgeuse
@@ -111,4 +115,3 @@
   +files/linux-wlan-ng-0.2.2-module_param.patch, +metadata.xml,
   +linux-wlan-ng-modules-0.2.2.ebuild:
   Initial addition for the new split linux-wlan-ng ebuilds.
-

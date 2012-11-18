@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/madwifi-ng-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng-tools/ChangeLog,v 1.56 2012/09/29 04:07:44 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng-tools/ChangeLog,v 1.57 2012/11/18 11:21:47 pacho Exp $
+
+  18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop mobile herd as talked in gentoo-dev ML
 
   29 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
   madwifi-ng-tools-0.9.4.4180.20120502.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/madwifi-ng
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.83 2012/06/13 23:30:37 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.84 2012/11/18 11:22:08 pacho Exp $
+
+  18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop mobile herd as talked in gentoo-dev ML
 
 *madwifi-ng-0.9.4.4180.20120502 (13 Jun 2012)
 
@@ -677,4 +680,3 @@
   18 Jul 2003; Peter Johanson <latexer@gentoo.org>
   madwifi-driver-0.1_pre20030702.ebuild:
   Initial import. Drivers for the Atheros chipset (a/b/g)
-

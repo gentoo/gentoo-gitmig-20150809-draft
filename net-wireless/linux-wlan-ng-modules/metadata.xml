@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>mobile</herd>
+<maintainer><email>maintainer-needed@gentoo.org</email></maintainer>
 <longdescription>
 Kernel modules for Intersil Prism2/2.5/3 based IEEE 802.11b wireless LAN products.
 This package contains the kernel modules for the linux-wlan-ng project. The kernel

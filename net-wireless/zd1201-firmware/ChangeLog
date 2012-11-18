@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/zd1201-firmware
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/zd1201-firmware/ChangeLog,v 1.8 2012/09/28 08:12:02 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/zd1201-firmware/ChangeLog,v 1.9 2012/11/18 11:31:46 pacho Exp $
+
+  18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop mobile herd as talked in gentoo-dev ML
 
   28 Sep 2012; Tony Vroon <chainsaw@gentoo.org> zd1201-firmware-0.14.ebuild:
   Incorrect license value now adjusted as per Ulrich Müller in bug #436064;
@@ -31,4 +34,3 @@
   16 Apr 2005; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
   +zd1201-firmware-0.14.ebuild:
   New ebuild thanks to Ajay Gautam <ajaygautam@yahoo.com> in bug 89183
-

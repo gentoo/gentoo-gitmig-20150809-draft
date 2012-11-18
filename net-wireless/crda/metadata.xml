@@ -5,7 +5,6 @@
 		<email>gurligebis@gentoo.org</email>
 		<name>Bjarke Istrup Pedersen</name>
 	</maintainer>
-	<herd>mobile</herd>
 	<longdescription lang="en">
 		Central Regulatory Domain Agent
 	</longdescription>

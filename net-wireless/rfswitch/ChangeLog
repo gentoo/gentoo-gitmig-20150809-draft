@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/rfswitch
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rfswitch/ChangeLog,v 1.6 2008/03/12 16:08:46 phreak Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rfswitch/ChangeLog,v 1.7 2012/11/18 11:25:16 pacho Exp $
+
+  18 Nov 2012; Pacho Ramos <pacho@gentoo.org> -rfswitch-0.1-r1.ebuild,
+  metadata.xml:
+  Drop mobile herd as talked in gentoo-dev ML
 
   12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Peter Johanson (latexer, #206688) from metadata.xml.
@@ -27,4 +31,3 @@
   09 Jul 2004; Peter Johanson <latexer@gentoo.org> +metadata.xml,
   +rfswitch-0.1.ebuild:
   Initial commit. Ebuild by yours truly.
-

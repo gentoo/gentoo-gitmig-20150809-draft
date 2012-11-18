@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/b43-fwcutter
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/b43-fwcutter/ChangeLog,v 1.16 2011/12/20 14:40:47 josejx Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/b43-fwcutter/ChangeLog,v 1.17 2012/11/18 11:06:06 pacho Exp $
+
+  18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop mobile herd as talked in gentoo-dev ML
 
 *b43-fwcutter-015 (20 Dec 2011)
 
@@ -70,4 +73,3 @@
   24 Aug 2007; Joseph Jezak <josejx@gentoo.org> +metadata.xml,
   +b43-fwcutter-008.ebuild:
   Added new fwcutter tool for the b43 (mac80211) version of bcm43xx.
-

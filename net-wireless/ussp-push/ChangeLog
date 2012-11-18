@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/ussp-push
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ussp-push/ChangeLog,v 1.13 2011/12/18 20:01:31 phajdan.jr Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ussp-push/ChangeLog,v 1.14 2012/11/18 11:27:52 pacho Exp $
+
+  18 Nov 2012; Pacho Ramos <pacho@gentoo.org> -ussp-push-0.9-r1.ebuild,
+  metadata.xml:
+  Drop mobile herd as talked in gentoo-dev ML
 
   18 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> ussp-push-0.11.ebuild:
   x86 stable wrt bug #393787
@@ -68,4 +72,3 @@
   30 Jul 2005; Alin Nastac <mrness@gentoo.org> +metadata.xml,
   +ussp-push-0.4.ebuild:
   Initial import from bug #98119, thanks to Maxxer <lorenzo.milesi@gmail.com>.
-

@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/linux-wlan-ng-firmware
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng-firmware/ChangeLog,v 1.7 2012/03/05 20:34:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng-firmware/ChangeLog,v 1.8 2012/11/18 11:20:18 pacho Exp $
+
+  18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop mobile herd as talked in gentoo-dev ML
 
   05 Mar 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Remove betelgeuse
@@ -29,4 +32,3 @@
   +files/prism2_makefile-0.2.2.patch, +metadata.xml,
   +linux-wlan-ng-firmware-0.2.2.ebuild:
   Initial addition for the new split linux-wlan-ng ebuilds.
-

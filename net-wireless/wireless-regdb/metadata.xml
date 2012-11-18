@@ -5,7 +5,6 @@
 		<email>chainsaw@gentoo.org</email>
 		<name>Tony Vroon</name>
 	</maintainer>
-	<herd>mobile</herd>
 	<longdescription lang="en">
 		Regulatory rules database for wireless network cards
 	</longdescription>

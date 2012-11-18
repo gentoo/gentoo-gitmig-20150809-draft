@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/acx-firmware
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx-firmware/ChangeLog,v 1.6 2007/07/02 15:15:56 peper Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx-firmware/ChangeLog,v 1.7 2012/11/18 10:58:52 pacho Exp $
+
+  18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop mobile herd as talked in gentoo-dev ML
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   acx-firmware-20060207.ebuild:
@@ -27,4 +30,3 @@
   +acx-firmware-20060207.ebuild:
   Split out firmware thanks to Joerg Nientiedt for providing the mirror and
   Mki in irc for testing
-

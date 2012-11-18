@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/orinoco-usb
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco-usb/ChangeLog,v 1.3 2007/08/29 19:07:45 genstef Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/orinoco-usb/ChangeLog,v 1.4 2012/11/18 11:23:36 pacho Exp $
+
+  18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop mobile herd as talked in gentoo-dev ML
 
 *orinoco-usb-9999.ebuild (29 Aug 2007)
 
@@ -18,4 +21,3 @@
   +orinoco-usb-9999.ebuild:
   Add orinoco-usb svn ebuild thanks to Sourav Mandal <sourav@sourav.net> in
   bug 127300, als fixes bug 162040
-

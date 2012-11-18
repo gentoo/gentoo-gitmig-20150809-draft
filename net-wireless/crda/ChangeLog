@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/crda
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/ChangeLog,v 1.43 2012/10/28 09:14:25 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/ChangeLog,v 1.44 2012/11/18 11:10:51 pacho Exp $
+
+  18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop mobile herd as talked in gentoo-dev ML
 
   28 Oct 2012; <gurligebis@gentoo.org> crda-1.1.2-r4.ebuild:
   Making building verbose (bug #438258)
@@ -183,4 +186,3 @@
   27 Nov 2008; <chainsaw@gentoo.org> +files/0.9.4-as-needed.patch,
   +metadata.xml, +crda-0.9.4.ebuild:
   Initial commit, ebuild & patch by me. Will send upstream.
-

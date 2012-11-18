@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez-firmware
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-firmware/ChangeLog,v 1.14 2012/03/05 20:33:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-firmware/ChangeLog,v 1.15 2012/11/18 11:08:01 pacho Exp $
+
+  18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop mobile herd as talked in gentoo-dev ML
 
   05 Mar 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Remove betelgeuse
@@ -53,4 +56,3 @@
 
   26 Sep 2004; Alastair Tse <liquidx@gentoo.org> +bluez-firmware-1.0.ebuild:
   intiial commit
-

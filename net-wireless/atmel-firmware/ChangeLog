@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/atmel-firmware
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/atmel-firmware/ChangeLog,v 1.7 2007/02/12 20:16:24 genstef Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/atmel-firmware/ChangeLog,v 1.8 2012/11/18 11:03:51 pacho Exp $
+
+  18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop mobile herd as talked in gentoo-dev ML
 
   12 Feb 2007; <genstef@gentoo.org> atmel-firmware-1.3.ebuild:
   remove hotplug only dep, thanks jakub in bug 129882
@@ -32,4 +35,3 @@
   <baal.killer@gmail.com>, Peter Johanson <latexer@gentoo.org>, Henrik Brix
   Andersen <brix@gentoo.org and Klaus S. Madsen <gentoo@hjernemadsen.org> in
   bug 52893
-

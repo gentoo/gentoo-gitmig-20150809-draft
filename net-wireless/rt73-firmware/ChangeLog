@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/rt73-firmware
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt73-firmware/ChangeLog,v 1.5 2011/11/24 12:30:25 pacho Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt73-firmware/ChangeLog,v 1.6 2012/11/18 11:25:55 pacho Exp $
+
+  18 Nov 2012; Pacho Ramos <pacho@gentoo.org> -rt73-firmware-1.8.ebuild,
+  metadata.xml:
+  Drop mobile herd as talked in gentoo-dev ML
 
   24 Nov 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #158470
@@ -23,4 +27,3 @@
   11 Mar 2009; Robert Buchholz <rbu@gentoo.org> +metadata.xml,
   +rt73-firmware-1.8.ebuild:
   Ebuild for rt73usb firmware, by Davide Pesavento in bug 204314
-

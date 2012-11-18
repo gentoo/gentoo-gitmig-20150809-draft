@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/acx
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx/ChangeLog,v 1.17 2010/03/06 21:40:18 halcy0n Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx/ChangeLog,v 1.18 2012/11/18 10:59:26 pacho Exp $
+
+  18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop mobile herd as talked in gentoo-dev ML
 
   06 Mar 2010; Mark Loeser <halcy0n@gentoo.org>
   +files/2.6.31+-mepis/01_addRequestInfo.dpatch,
@@ -203,4 +206,3 @@
   New ebuild thanks to eGore <egore@gmx.de>, Simon Cooper
   <thecoop@runbox.com>, Christopher Ford <ctford0@engr.uky.edu> in bug 44103
   and chaosite in IRC.
-

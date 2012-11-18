@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/airsnort
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/airsnort/ChangeLog,v 1.29 2012/05/04 06:41:54 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/airsnort/ChangeLog,v 1.30 2012/11/18 11:00:49 pacho Exp $
+
+  18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop mobile herd as talked in gentoo-dev ML
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> airsnort-0.2.7e.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

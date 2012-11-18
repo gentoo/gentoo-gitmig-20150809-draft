@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/ndiswrapper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.124 2012/07/16 12:08:39 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.125 2012/11/18 11:22:42 pacho Exp $
+
+  18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop mobile herd as talked in gentoo-dev ML
 
   16 Jul 2012; Christoph Mende <angelos@gentoo.org> -ndiswrapper-1.56.ebuild:
   Remove old
