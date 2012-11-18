@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/motif
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/ChangeLog,v 1.5 2012/11/17 22:55:32 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/ChangeLog,v 1.6 2012/11/18 07:34:34 blueness Exp $
+
+  18 Nov 2012; Anthony G. Basile <blueness@gentoo.org> motif-2.3.4.ebuild:
+  stable arm, bug #443610
 
   17 Nov 2012; Anthony G. Basile <blueness@gentoo.org> motif-2.3.4.ebuild:
   stable ppc ppc64, bug #443610
