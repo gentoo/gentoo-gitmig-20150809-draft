@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14227 2012/11/18 11:18:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14228 2012/11/18 11:28:48 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -386,11 +386,6 @@ media-sound/audtty
 # know by filing a bug and blocking against bug #425362.
 # Removal in a month.
 net-ftp/netkit-tftp
-
-# Pacho Ramos <pacho@gentoo.org> (16 Sep 2012)
-# Fails to build with boost-1.50 (#425602), upstream dead for ages.
-# Removal in a month.
-gnome-extra/wp_tray
 
 # Pacho Ramos <pacho@gentoo.org> (16 Sep 2012)
 # Fails to build with latest binutils (#430362), dead upstream and
