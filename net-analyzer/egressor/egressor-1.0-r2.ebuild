@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/egressor/egressor-1.0-r2.ebuild,v 1.1 2010/09/15 01:49:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/egressor/egressor-1.0-r2.ebuild,v 1.2 2012/11/18 18:39:02 ago Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="${HOMEPAGE}${PN}_release${PV}.tar.gz"
 LICENSE="egressor"
 SLOT="0"
 IUSE=""
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND="<net-libs/libnet-1.1
 	>=net-libs/libnet-1.0.2a-r3"

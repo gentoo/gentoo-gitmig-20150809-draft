@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nb/nb-0.8.3.ebuild,v 1.7 2012/05/04 06:08:09 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nb/nb-0.8.3.ebuild,v 1.8 2012/11/18 18:41:25 ago Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/nodebrain/nodebrain-${PV}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="static-libs"
 
 DEPEND="
