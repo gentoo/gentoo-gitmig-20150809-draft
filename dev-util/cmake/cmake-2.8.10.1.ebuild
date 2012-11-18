@@ -1,17 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.9-r1.ebuild,v 1.1 2012/10/02 10:23:44 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.10.1.ebuild,v 1.1 2012/11/18 13:40:15 kensington Exp $
 
 EAPI=4
 
 CMAKE_REMOVE_MODULES="no"
 inherit elisp-common toolchain-funcs eutils versionator flag-o-matic base cmake-utils virtualx
 
-MY_P="${PN}-$(replace_version_separator 3 - ${MY_PV})"
-
 DESCRIPTION="Cross platform Make"
 HOMEPAGE="http://www.cmake.org/"
-SRC_URI="http://www.cmake.org/files/v$(get_version_component_range 1-2)/${MY_P}.tar.gz"
+SRC_URI="http://www.cmake.org/files/v$(get_version_component_range 1-2)/${P}.tar.gz"
 
 LICENSE="CMake"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
@@ -20,12 +18,15 @@ IUSE="emacs ncurses qt4 vim-syntax"
 
 DEPEND="
 	>=app-arch/libarchive-2.8.0
-	>=net-misc/curl-7.20.0-r1[ssl]
 	>=dev-libs/expat-2.0.1
-	virtual/pkgconfig
+	>=net-misc/curl-7.20.0-r1[ssl]
 	sys-libs/zlib
+	virtual/pkgconfig
 	ncurses? ( sys-libs/ncurses )
-	qt4? ( x11-libs/qt-gui:4 )
+	qt4? (
+		x11-libs/qt-core:4
+		x11-libs/qt-gui:4
+	)
 "
 RDEPEND="${DEPEND}
 	emacs? ( virtual/emacs )
@@ -40,23 +41,21 @@ RDEPEND="${DEPEND}
 SITEFILE="50${PN}-gentoo.el"
 VIMFILE="${PN}.vim"
 
-S="${WORKDIR}/${MY_P}"
-
 CMAKE_BINARY="${S}/Bootstrap.cmk/cmake"
 
 PATCHES=(
-	"${FILESDIR}"/${PN}-2.6.3-darwin-bundle.patch
 	"${FILESDIR}"/${PN}-2.6.3-fix_broken_lfs_on_aix.patch
 	"${FILESDIR}"/${PN}-2.6.3-no-duplicates-in-rpath.patch
 	"${FILESDIR}"/${PN}-2.8.0-darwin-default-install_name.patch
-	"${FILESDIR}"/${PN}-2.8.1-libform.patch
-	"${FILESDIR}"/${PN}-2.8.4-FindPythonLibs.patch
 	"${FILESDIR}"/${PN}-2.8.7-FindBLAS.patch
 	"${FILESDIR}"/${PN}-2.8.7-FindBoost-python.patch
 	"${FILESDIR}"/${PN}-2.8.7-FindLAPACK.patch
 	"${FILESDIR}"/${PN}-2.8.8-FindPkgConfig.patch
-	"${FILESDIR}"/${PN}-2.8.9-tests.patch
-	"${FILESDIR}"/${PN}-2.8.9-more-no_host_paths.patch
+	"${FILESDIR}"/${PN}-2.8.10-darwin-bundle.patch
+	"${FILESDIR}"/${PN}-2.8.10-desktop.patch
+	"${FILESDIR}"/${PN}-2.8.10-FindPythonLibs.patch
+	"${FILESDIR}"/${PN}-2.8.10-libform.patch
+	"${FILESDIR}"/${PN}-2.8.10-more-no_host_paths.patch
 )
 
 cmake_src_bootstrap() {
@@ -91,10 +90,11 @@ cmake_src_test() {
 
 	# Excluded tests:
 	#    BootstrapTest: we actualy bootstrap it every time so why test it.
-	#    SimpleCOnly_sdcc: sdcc choke on global cflags so just skip the test
-	#        as it was never intended to be used this way.
+	#    CTest.updatecvs, which fails to commit as root
+	#    Qt4Deploy, which tries to break sandbox and ignores prefix
+	#    TestUpload, which requires network access
 	"${CMAKE_BUILD_DIR}"/bin/ctest ${ctestargs} \
-		-E BootstrapTest SimpleCOnly_sdcc \
+		-E "(BootstrapTest|CTest.UpdateCVS|Qt4Deploy|TestUpload)" \
 		|| die "Tests failed"
 
 	popd > /dev/null
