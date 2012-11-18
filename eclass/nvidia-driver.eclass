@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/nvidia-driver.eclass,v 1.16 2012/11/18 05:47:02 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/nvidia-driver.eclass,v 1.17 2012/11/18 06:35:06 cardoe Exp $
 
 # @ECLASS: nvidia-driver.eclass
 # @MAINTAINER:
@@ -44,7 +44,7 @@ drv_304x="0040 0041 0042 0043 0044 0045 0046 0047 0048 004e 0090 0091 0092 \
 mask_96xx=">=x11-drivers/nvidia-drivers-97.0.0"
 mask_71xx=">=x11-drivers/nvidia-drivers-72.0.0"
 mask_173x=">=x11-drivers/nvidia-drivers-177.0.0"
-mask_173x=">=x11-drivers/nvidia-drivers-305.0.0"
+mask_304x=">=x11-drivers/nvidia-drivers-305.0.0"
 
 # @FUNCTION: nvidia-driver-get-card
 # @DESCRIPTION:
