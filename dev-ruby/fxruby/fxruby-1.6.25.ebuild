@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/fxruby-1.6.25.ebuild,v 1.7 2012/11/08 11:45:14 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/fxruby-1.6.25.ebuild,v 1.8 2012/11/18 11:49:04 graaff Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19"
@@ -38,7 +38,12 @@ all_ruby_prepare() {
 		ext/fox16/extconf.rb || die "Can't fix forced -O0"
 
 	# Avoid a dependency on rake-compiler.
-	sed -i -e '/extensiontask/ s:^:#:' -e '/Rake::ExtensionTask/,$ s:^:#:' Rakefile || die
+	sed -i -e '/extensiontask/ s:^:#:' \
+		-e '/Rake::ExtensionTask/,$ s:^:#:' Rakefile || die
+	sed -i -e '/extension/ s:^:#:' \
+		-e '/Rake::ExtensionTask/,$ s:^:#:' \
+		-e '/CLEAN.include/ s:^:#:' \
+		-e '/task :cross/,/^end/ s:^:#:' Rakefile.cross || die
 
 	# Use a more modern swig.
 	sed -i -e 's/swig-1.3.22/swig/g' Rakefile || die

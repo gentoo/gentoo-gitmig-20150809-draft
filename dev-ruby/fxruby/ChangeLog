@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fxruby
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.106 2012/11/08 11:45:14 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.107 2012/11/18 11:49:04 graaff Exp $
+
+  18 Nov 2012; Hans de Graaff <graaff@gentoo.org> fxruby-1.6.25.ebuild:
+  Really fix build without rake-compiler, bug 430206.
 
   08 Nov 2012; Anthony G. Basile <blueness@gentoo.org> fxruby-1.6.25.ebuild:
   stable ppc ppc64, bug #430206
