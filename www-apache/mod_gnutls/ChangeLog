@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_gnutls
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_gnutls/ChangeLog,v 1.29 2012/10/12 07:02:10 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_gnutls/ChangeLog,v 1.30 2012/11/18 10:23:47 pacho Exp $
+
+  18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer as he is not taking care of this package.
 
 *mod_gnutls-0.5.10 (12 Oct 2012)
 
