@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-video-nv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nv/ChangeLog,v 1.114 2012/11/16 16:36:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nv/ChangeLog,v 1.115 2012/11/18 12:18:10 ago Exp $
+
+  18 Nov 2012; Agostino Sarubbo <ago@gentoo.org> xf86-video-nv-2.1.20.ebuild:
+  Stable for x86, wrt bug #440872
 
   16 Nov 2012; Agostino Sarubbo <ago@gentoo.org> xf86-video-nv-2.1.20.ebuild:
   Stable for amd64, wrt bug #440872
