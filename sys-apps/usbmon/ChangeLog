@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/usbmon
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbmon/ChangeLog,v 1.5 2011/11/07 03:44:26 robbat2 Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbmon/ChangeLog,v 1.6 2012/11/18 14:03:40 ulm Exp $
+
+  18 Nov 2012; Ulrich Müller <ulm@gentoo.org> -usbmon-4.ebuild,
+  usbmon-5.ebuild, usbmon-6.ebuild:
+  Fix LICENSE, see README file in tarball. Remove old. Bug 441994.
 
 *usbmon-6 (07 Nov 2011)
 
