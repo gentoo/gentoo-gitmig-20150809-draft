@@ -1,6 +1,13 @@
 # ChangeLog for dev-haskell/haddock
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.94 2012/10/21 08:04:50 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.95 2012/11/18 13:42:07 gienah Exp $
+
+*haddock-2.13.1 (18 Nov 2012)
+
+  18 Nov 2012; Mark Wright <gienah@gentoo.org>
+  +files/haddock-2.13.1-drop-tools.patch, +haddock-2.13.1.ebuild:
+  Bump haddock to 2.13.1 with no keywords, as depends on ghc 7.6.1 which is not
+  yet in portage
 
 *haddock-2.10.0-r2 (21 Oct 2012)
 
