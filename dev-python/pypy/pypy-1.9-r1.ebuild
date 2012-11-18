@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-1.9-r1.ebuild,v 1.2 2012/06/17 23:01:13 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-1.9-r1.ebuild,v 1.3 2012/11/18 02:06:28 floppym Exp $
 
 EAPI="4"
 
@@ -27,8 +27,6 @@ RDEPEND=">=sys-libs/zlib-1.1.3
 		ssl? ( dev-libs/openssl )"
 DEPEND="${RDEPEND}"
 PDEPEND="app-admin/python-updater"
-
-DOC="README LICENSE"
 
 pkg_pretend() {
 	CHECKREQS_MEMORY="2G"
@@ -99,6 +97,7 @@ src_install() {
 	doins -r include lib_pypy lib-python pypy-c
 	fperms a+x ${INSPATH}/pypy-c
 	dosym ../$(get_libdir)/pypy${SLOT}/pypy-c /usr/bin/pypy-c${SLOT}
+	dodoc README
 
 	if ! use sqlite; then
 		rm -fr "${ED}${INSPATH}/lib-python/2.7/sqlite3"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pypy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.24 2012/10/05 08:27:00 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.25 2012/11/18 02:06:28 floppym Exp $
+
+  18 Nov 2012; Mike Gilbert <floppym@gentoo.org> pypy-1.8-r1.ebuild,
+  pypy-1.9-r1.ebuild, pypy-1.9.ebuild:
+  Install README file, bug 442966 by Phr33d0m.
 
   05 Oct 2012; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
   Remove local description of jit USE flag (bug 416605).
@@ -122,4 +126,3 @@
   06 Jun 2011; Dirkjan Ochtman <djc@gentoo.org> +files/1.5-patches.patch,
   +pypy-1.5.ebuild, +metadata.xml:
   Initial version of pypy (bug 300301).
-
