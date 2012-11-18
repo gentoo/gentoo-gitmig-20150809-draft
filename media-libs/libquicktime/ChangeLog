@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libquicktime
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.189 2012/06/17 18:37:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.190 2012/11/18 18:27:29 flameeyes Exp $
+
+  18 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/libquicktime-1.2.4+libav-9.patch, libquicktime-1.2.4.ebuild:
+  Add patch to avoid crash when building against libav-9.
 
   17 Jun 2012; Raúl Porcel <armin76@gentoo.org> libquicktime-1.2.4.ebuild:
   alpha/ia64/sparc stable wrt #416221
