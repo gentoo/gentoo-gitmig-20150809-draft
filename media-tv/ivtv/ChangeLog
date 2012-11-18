@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/ivtv
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.111 2009/03/03 17:25:32 beandog Exp $
+# Copyright 2000-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.112 2012/11/18 17:44:14 hwoarang Exp $
+
+  18 Nov 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Remove beandog wrt #131511
 
   03 Mar 2009; Steve Dibb <beandog@gentoo.org> ivtv-1.0.1.ebuild,
   ivtv-1.0.2.ebuild, ivtv-1.0.3-r2.ebuild, ivtv-1.2.0-r1.ebuild:
@@ -551,4 +554,3 @@
   07 Mar 2004; Brian Jackson <iggy@gentoo.org> ivtv-0.1.9-r1.ebuild:
   initial version, I've had this locally for a little while, maybe more people
   can use it now
-

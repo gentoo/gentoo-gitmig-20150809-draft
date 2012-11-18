@@ -3,10 +3,6 @@
 <pkgmetadata>
   <herd>media-tv</herd>
   <maintainer>
-    <email>beandog@gentoo.org</email>
-    <name>Steve Dibb</name>
-  </maintainer>
-  <maintainer>
     <email>cardoe@gentoo.org</email>
     <name>Doug Goldstein</name>
   </maintainer>
