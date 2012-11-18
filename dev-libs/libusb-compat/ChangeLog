@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libusb-compat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb-compat/ChangeLog,v 1.20 2012/09/25 10:44:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb-compat/ChangeLog,v 1.21 2012/11/18 10:47:58 robbat2 Exp $
+
+  18 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  Drop duplication of myself as a maintainer where there is a herd.
 
   25 Sep 2012; Samuli Suominen <ssuominen@gentoo.org>
   libusb-compat-0.1.4.ebuild, -files/libusb-0.1-libusbx.patch:
@@ -85,4 +88,3 @@
   +libusb-compat-0.1.0.ebuild, +metadata.xml:
   Bug #247687: libusb-compat support to enable old libusb-using apps with
   the new libusb-1 series. Ebuild by Tiziano Müller <dev-zero@gentoo.org>.
-
