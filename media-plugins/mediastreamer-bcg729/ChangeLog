@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/mediastreamer-bcg729
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mediastreamer-bcg729/ChangeLog,v 1.1 2012/11/19 21:29:17 mgorny Exp $
+
+*mediastreamer-bcg729-1.0.0 (19 Nov 2012)
+
+  19 Nov 2012; Michał Górny <mgorny@gentoo.org>
+  +mediastreamer-bcg729-1.0.0.ebuild, +metadata.xml:
+  Add G729 plugin wrt bug #416203. Thanks to Andrew Savchenko for his effort on
+  linphone ebuilds.
