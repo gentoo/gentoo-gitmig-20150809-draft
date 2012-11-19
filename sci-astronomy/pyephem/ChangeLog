@@ -1,6 +1,11 @@
 # ChangeLog for sci-astronomy/pyephem
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/pyephem/ChangeLog,v 1.18 2012/08/05 19:20:35 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/pyephem/ChangeLog,v 1.19 2012/11/19 07:38:41 xarthisius Exp $
+
+  19 Nov 2012; Kacper Kowalik <xarthisius@gentoo.org> pyephem-3.7.5.1.ebuild:
+  Drop inherit of eutils.eclass, introduce new dependencies for tests, simplify
+  doc_compile, run tests, fix doc install path wrt #443876 by Diego Elio Pettenò
+  <flameeyes@gentoo.org>, don't install tests
 
   05 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> -pyephem-3.7.4.1.ebuild,
   metadata.xml:
