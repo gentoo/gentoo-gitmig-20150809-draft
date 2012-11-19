@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-9999.ebuild,v 1.26 2012/11/19 00:13:18 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-9999.ebuild,v 1.27 2012/11/19 02:45:55 dolsen Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -36,7 +36,7 @@ RDEPEND="${COMMON_DEPS}
 			>=dev-vcs/subversion-1.5.4[webdav-serf]
 		)
 	)
-	gpg? ( =app-portage/pyGPG-9999 )
+	gpg? ( =dev-python/pyGPG-9999 )
 	"
 
 src_prepare() {
