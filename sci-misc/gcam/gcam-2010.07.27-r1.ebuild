@@ -1,26 +1,23 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/gcam/gcam-9999.ebuild,v 1.3 2012/11/19 15:51:40 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/gcam/gcam-2010.07.27-r1.ebuild,v 1.1 2012/11/19 15:51:40 kensington Exp $
 
 EAPI=5
-ESVN_REPO_URI="http://gcam.js.cx/svn/gcam/trunk"
-ESVN_USER=gcam
-ESVN_PASSWORD=gcam
 
-inherit autotools base subversion
+inherit autotools base
 
 DESCRIPTION="GNU Computer Aided Manufacturing"
 HOMEPAGE="http://gcam.js.cx"
+SRC_URI="http://gcam.js.cx/files/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
 	dev-libs/expat
 	dev-libs/glib:2
-	dev-libs/libxml2
 	>=media-libs/libpng-1.5
 	virtual/opengl
 	virtual/glu
@@ -32,8 +29,8 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 PATCHES=(
-	"${FILESDIR}/${PN}-2010.07.27-cflags.patch"
-	"${FILESDIR}/${PN}-2010.07.27-libpng15.patch"
+	"${FILESDIR}/${P}-cflags.patch"
+	"${FILESDIR}/${P}-libpng15.patch"
 )
 
 src_prepare() {
