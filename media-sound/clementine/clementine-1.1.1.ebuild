@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-1.1.1.ebuild,v 1.1 2012/11/18 17:30:00 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-1.1.1.ebuild,v 1.2 2012/11/19 10:29:23 ssuominen Exp $
 
 EAPI=4
 
@@ -38,6 +38,8 @@ COMMON_DEPEND="
 	>=media-libs/chromaprint-0.6
 	media-libs/gstreamer:0.10
 	media-libs/gst-plugins-base:0.10
+	virtual/glu
+	virtual/opengl
 	ayatana? ( dev-libs/libindicate-qt )
 	cdda? ( dev-libs/libcdio )
 	googledrive? ( >=media-libs/taglib-1.8[mp4] )
