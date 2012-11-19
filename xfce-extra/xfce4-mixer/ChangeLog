@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-mixer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/ChangeLog,v 1.147 2012/11/15 19:26:38 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/ChangeLog,v 1.148 2012/11/19 21:21:48 maekke Exp $
+
+  19 Nov 2012; Markus Meier <maekke@gentoo.org> xfce4-mixer-4.10.0.ebuild:
+  arm stable, bug #429484
 
   16 Nov 2012; Andreas Schuerch <nativemad@gentoo.org>
   xfce4-mixer-4.10.0.ebuild:
