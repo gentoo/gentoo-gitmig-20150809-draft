@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/obs-service-source_validator/obs-service-source_validator-0.2.ebuild,v 1.2 2012/11/15 20:34:03 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/obs-service-source_validator/obs-service-source_validator-0.2-r1.ebuild,v 1.1 2012/11/19 13:16:58 scarabeus Exp $
 
 EAPI=5
 
@@ -27,7 +27,8 @@ src_install() {
 	insinto /usr/lib/obs/service
 	doins ${OBS_SERVICE_NAME}.service
 
-	insinto /usr/lib/obs/service/${OBS_SERVICE_NAME}s
-	doins [0-9]*
-	doins -r helpers
+	exeinto /usr/lib/obs/service/${OBS_SERVICE_NAME}s
+	doexe [0-9]*
+	exeinto /usr/lib/obs/service/${OBS_SERVICE_NAME}s/helpers/
+	doexe helpers/*
 }
