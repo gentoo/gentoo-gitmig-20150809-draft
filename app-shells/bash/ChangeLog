@@ -1,13 +1,12 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.327 2012/11/16 18:11:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.328 2012/11/19 22:26:11 vapier Exp $
 
-  16 Nov 2012; Agostino Sarubbo <ago@gentoo.org> -bash-3.1_p17.ebuild,
-  -bash-3.2_p51.ebuild, -bash-4.0_p38.ebuild, -bash-4.1_p10.ebuild,
-  -bash-4.1_p11.ebuild, -bash-4.1_p7.ebuild, -bash-4.1_p9.ebuild,
-  -bash-4.2_p10.ebuild, -bash-4.2_p20.ebuild, -bash-4.2_p24-r1.ebuild,
-  -bash-4.2_p24.ebuild, -bash-4.2_p28.ebuild, -bash-4.2_p29.ebuild,
-  -bash-4.2_p36.ebuild, -bash-4.2_p8-r1.ebuild:
+  16 Nov 2012; Agostino Sarubbo <ago@gentoo.org> -bash-4.1_p10.ebuild,
+  -bash-4.1_p7.ebuild, -bash-4.1_p9.ebuild, -bash-4.2_p10.ebuild,
+  -bash-4.2_p20.ebuild, -bash-4.2_p24-r1.ebuild, -bash-4.2_p24.ebuild,
+  -bash-4.2_p28.ebuild, -bash-4.2_p29.ebuild, -bash-4.2_p36.ebuild,
+  -bash-4.2_p8-r1.ebuild:
   Remove old
 
 *bash-4.2_p39 (02 Nov 2012)
