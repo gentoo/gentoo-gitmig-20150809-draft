@@ -1,0 +1,30 @@
+--- configure.ac.orig	2012-02-22 20:29:04.000000000 +0400
++++ configure.ac	2012-05-15 16:13:02.979041146 +0400
+@@ -624,6 +624,16 @@
+ AC_DEFINE_UNQUOTED(PACKAGE_DATA_DIR,  "${package_prefix}/share" ,[path of data])
+ AC_SUBST(PACKAGE_DATA_DIR)
+ 
++AC_ARG_ENABLE(v4l,
++      [  --disable-v4l       Disable usage of v4l],
++      [case "${enableval}" in
++        yes) v4l=yes ;;
++        no)  v4l=no ;;
++        *) AC_MSG_ERROR(bad value ${enableval} for --disable-v4l) ;;
++      esac],[v4l=yes])
++
++if test "$v4l" = "yes" ; then
++
+ dnl check for video4linux headers
+ AC_CHECK_HEADERS(linux/videodev.h linux/videodev2.h)
+ if test "${ac_cv_header_linux_videodev_h}" = "yes" ; then
+@@ -690,6 +700,10 @@
+       esac],[tests=yes])
+ AM_CONDITIONAL(ENABLE_TESTS, test x$tests = xyes)
+ 
++fi
++
++AM_CONDITIONAL(BUILD_V4L, test x$found_v4l = xyes )
++
+ 
+ dnl ##################################################
+ dnl # Check for doxygen

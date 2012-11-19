@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/mediastreamer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.55 2012/11/07 11:40:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.56 2012/11/19 21:28:03 mgorny Exp $
+
+*mediastreamer-2.8.2 (19 Nov 2012)
+
+  19 Nov 2012; Michał Górny <mgorny@gentoo.org>
+  +files/mediastreamer-2.8.2-autopoint.patch,
+  +files/mediastreamer-2.8.2-v4l-automagic.patch, +mediastreamer-2.8.2.ebuild,
+  metadata.xml:
+  Version bump wrt bug #399737. Thanks to Andrew Savchenko for his effort on
+  linphone ebuilds.
 
   07 Nov 2012; Alexis Ballier <aballier@gentoo.org>
   mediastreamer-2.7.3-r3.ebuild, +files/mediastreamer-2.7.3-ffmpeg-0.11.patch,
@@ -233,4 +242,3 @@
   +mediastreamer-2.2.3.ebuild:
   Initial commit. Actually, new-born (and bump) for this package removed a few
   months ago.
-
