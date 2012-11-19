@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/libevent-2.0.21.ebuild,v 1.1 2012/11/19 20:28:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/libevent-2.0.21.ebuild,v 1.2 2012/11/19 21:12:52 jer Exp $
 
 EAPI="2"
 
@@ -9,8 +9,8 @@ inherit eutils libtool
 MY_P="${P}-stable"
 
 DESCRIPTION="A library to execute a function when a specific event occurs on a file descriptor"
-HOMEPAGE="http://monkey.org/~provos/libevent/"
-SRC_URI="mirror://sourceforge/levent/files/${MY_P}.tar.gz"
+HOMEPAGE="http://libevent.org/"
+SRC_URI="mirror://github/${PN}/${PN}/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
