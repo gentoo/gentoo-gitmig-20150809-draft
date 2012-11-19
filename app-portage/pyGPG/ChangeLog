@@ -1,0 +1,10 @@
+# ChangeLog for app-portage/pyGPG
+# Copyright 2012-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pyGPG/ChangeLog,v 1.1 2012/11/19 00:01:48 dolsen Exp $
+
+*pyGPG-9999 (18 Nov 2012)
+
+  18 Nov 2012; Brian Dolbec <dolsen@gentoo.org> +pyGPG-9999.ebuild,
+  +metadata.xml:
+  Initial ebuild for pyGPG, written by me.
+
