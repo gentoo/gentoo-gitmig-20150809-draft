@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/notification-daemon/notification-daemon-0.ebuild,v 1.7 2012/06/02 12:25:41 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/notification-daemon/notification-daemon-0.ebuild,v 1.8 2012/11/19 09:19:26 ssuominen Exp $
 
 EAPI=2
 
@@ -21,6 +21,7 @@ RDEPEND="
 		x11-misc/qtnotifydaemon
 		x11-misc/notify-osd
 		>=x11-wm/awesome-3.4.4
+		x11-wm/enlightenment[enlightenment_modules_notification]
 		x11-wm/enlightenment[e_modules_notification]
 		kde-base/knotify ) )"
 DEPEND=""
