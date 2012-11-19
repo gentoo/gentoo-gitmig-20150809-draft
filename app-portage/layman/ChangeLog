@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/layman
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.162 2012/11/06 07:17:09 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.163 2012/11/19 00:13:18 dolsen Exp $
+
+  19 Nov 2012; Brian Dolbec <dolsen@gentoo.org> layman-9999.ebuild,
+  metadata.xml:
+  add gpg use flag and pyGPG dependency for gpg-signed repositories.xml list
+  support
 
   06 Nov 2012; Brian Dolbec <dolsen@gentoo.org> -layman-1.4.1.ebuild,
   layman-1.4.2-r3.ebuild, -layman-2.0.0_rc3.ebuild:

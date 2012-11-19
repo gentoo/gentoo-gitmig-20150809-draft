@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-9999.ebuild,v 1.25 2012/10/21 03:00:31 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-9999.ebuild,v 1.26 2012/11/19 00:13:18 dolsen Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -18,7 +18,7 @@ EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/layman.git"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="bazaar cvs darcs +git mercurial subversion test"
+IUSE="bazaar cvs darcs +git gpg mercurial subversion test"
 
 COMMON_DEPS="dev-lang/python"
 DEPEND="${COMMON_DEPS}
@@ -35,7 +35,9 @@ RDEPEND="${COMMON_DEPS}
 			>=dev-vcs/subversion-1.5.4[webdav-neon]
 			>=dev-vcs/subversion-1.5.4[webdav-serf]
 		)
-	)"
+	)
+	gpg? ( =app-portage/pyGPG-9999 )
+	"
 
 src_prepare() {
 	eprefixify etc/layman.cfg layman/config.py
