@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.458 2012/11/19 20:41:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.459 2012/11/19 20:43:34 vapier Exp $
+
+  19 Nov 2012; Mike Frysinger <vapier@gentoo.org> openssh-6.1_p1.ebuild:
+  Only show ecdsa key message when upgrading from older versions, and drop
+  USE=pam warning wrt valid shells as people should know this #440568 by
+  poletti.marco.
 
   19 Nov 2012; Mike Frysinger <vapier@gentoo.org> openssh-6.1_p1.ebuild:
   Update to EAPI=4 to have USE=static depend on USE=static-libs of all the

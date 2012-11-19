@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.1_p1.ebuild,v 1.7 2012/11/19 20:41:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.1_p1.ebuild,v 1.8 2012/11/19 20:43:34 vapier Exp $
 
 EAPI="4"
 inherit eutils user flag-o-matic multilib autotools pam systemd
@@ -277,17 +277,13 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	elog "Starting with openssh-5.8p1, the server will default to a newer key"
-	elog "algorithm (ECDSA).  You are encouraged to manually update your stored"
-	elog "keys list as servers update theirs.  See ssh-keyscan(1) for more info."
-	echo
+	if has_version "<${CATEGORY}/${PN}-5.8_p1" ; then
+		elog "Starting with openssh-5.8p1, the server will default to a newer key"
+		elog "algorithm (ECDSA).  You are encouraged to manually update your stored"
+		elog "keys list as servers update theirs.  See ssh-keyscan(1) for more info."
+	fi
 	ewarn "Remember to merge your config files in /etc/ssh/ and then"
 	ewarn "reload sshd: '/etc/init.d/sshd reload'."
-	if use pam ; then
-		echo
-		ewarn "Please be aware users need a valid shell in /etc/passwd"
-		ewarn "in order to be allowed to login."
-	fi
 	# This instruction is from the HPN webpage,
 	# Used for the server logging functionality
 	if [[ -n ${HPN_PATCH} ]] && use hpn ; then
