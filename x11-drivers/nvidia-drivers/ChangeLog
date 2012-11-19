@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.410 2012/11/18 11:18:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.411 2012/11/19 01:12:45 cardoe Exp $
+
+*nvidia-drivers-310.19 (19 Nov 2012)
+
+  19 Nov 2012; Doug Goldstein <cardoe@gentoo.org>
+  +nvidia-drivers-310.19.ebuild:
+  Version bump. Supports OpenGL 4.3 as well as additional 32-bit libraries on
+  64-bit multilib installs.
 
   18 Nov 2012; Agostino Sarubbo <ago@gentoo.org>
   nvidia-drivers-173.14.36.ebuild, nvidia-drivers-304.60.ebuild,
