@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-cpugraph-plugin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cpugraph-plugin/ChangeLog,v 1.32 2012/11/15 19:15:57 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cpugraph-plugin/ChangeLog,v 1.33 2012/11/19 21:13:13 maekke Exp $
+
+  19 Nov 2012; Markus Meier <maekke@gentoo.org>
+  xfce4-cpugraph-plugin-1.0.5.ebuild:
+  arm stable, bug #429484
 
   16 Nov 2012; Andreas Schuerch <nativemad@gentoo.org>
   xfce4-cpugraph-plugin-1.0.5.ebuild:
