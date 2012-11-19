@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oauthlib/oauthlib-0.3.3-r1.ebuild,v 1.2 2012/11/18 04:18:55 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oauthlib/oauthlib-0.3.4.ebuild,v 1.1 2012/11/19 20:31:52 floppym Exp $
 
 EAPI="4"
 
-PYTHON_DEPEND="2:2.6"
+PYTHON_DEPEND="*:2.6"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.5 3.*"
+RESTRICT_PYTHON_ABIS="2.5"
 DISTUTILS_SRC_TEST="nosetests"
 
 inherit distutils eutils
@@ -21,12 +21,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
 IUSE="test"
 
-RDEPEND="dev-python/pycrypto"
+# >=pycrypto-2.6-r1 for python3 support
+# unittest2 for python2 compat
+RDEPEND=">=dev-python/pycrypto-2.6-r1"
 DEPEND="${RDEPEND}
 	dev-python/setuptools
-	test? ( dev-python/unittest2 )"
-
-src_prepare() {
-	epatch "${FILESDIR}/${PN}-0.3.3-exclude-tests.patch"
-	distutils_src_prepare
-}
+	test? (
+		dev-python/unittest2
+		dev-python/mock
+	)"
