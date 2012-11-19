@@ -1,6 +1,9 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.115 2012/11/16 20:02:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.116 2012/11/19 21:11:02 maekke Exp $
+
+  19 Nov 2012; Markus Meier <maekke@gentoo.org> libav-0.8.4.ebuild:
+  arm stable, bug #439052
 
   16 Nov 2012; Agostino Sarubbo <ago@gentoo.org> libav-9_beta2.ebuild:
   workaround for bug 399061
