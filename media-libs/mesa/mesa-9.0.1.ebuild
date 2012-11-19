@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-8.1_rc1_pre20120724.ebuild,v 1.7 2012/10/05 06:08:59 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-9.0.1.ebuild,v 1.1 2012/11/19 03:52:34 chithanh Exp $
 
 EAPI=4
 
@@ -28,7 +28,7 @@ HOMEPAGE="http://mesa3d.sourceforge.net/"
 if [[ $PV = 9999* ]]; then
 	SRC_URI="${SRC_PATCHES}"
 else
-	SRC_URI="mirror://gentoo/${P}.tar.xz
+	SRC_URI="ftp://ftp.freedesktop.org/pub/mesa/${FOLDER}/${MY_SRC_P}.tar.bz2
 		${SRC_PATCHES}"
 fi
 
@@ -74,29 +74,25 @@ REQUIRED_USE="
 	video_cards_vmware? ( gallium )
 "
 
-LIBDRM_DEPSTRING=">=x11-libs/libdrm-2.4.34"
-# not a runtime dependency of this package, but dependency of packages which
-# depend on this package, bug #342393
-EXTERNAL_DEPEND="
-	>=x11-proto/dri2proto-2.6
-	>=x11-proto/glproto-1.4.15-r1
-"
+LIBDRM_DEPSTRING=">=x11-libs/libdrm-2.4.39"
 # keep correct libdrm and dri2proto dep
 # keep blocks in rdepend for binpkg
 # gtest file collision bug #411825
-RDEPEND="${EXTERNAL_DEPEND}
-	!<x11-base/xorg-server-1.7
+RDEPEND="!<x11-base/xorg-server-1.7
 	!<=x11-proto/xf86driproto-2.0.3
 	classic? ( app-admin/eselect-mesa )
 	gallium? ( app-admin/eselect-mesa )
 	>=app-admin/eselect-opengl-1.2.6
 	dev-libs/expat
-	gbm? ( sys-fs/udev )
+	gbm? (
+		sys-fs/udev
+		x11-libs/libdrm[libkms]
+	)
 	>=x11-libs/libX11-1.3.99.901
 	x11-libs/libXdamage
 	x11-libs/libXext
 	x11-libs/libXxf86vm
-	>=x11-libs/libxcb-1.8
+	>=x11-libs/libxcb-1.8.1
 	vdpau? ( >=x11-libs/libvdpau-0.4.1 )
 	wayland? ( dev-libs/wayland )
 	xorg? (
@@ -130,6 +126,8 @@ DEPEND="${RDEPEND}
 	sys-devel/flex
 	virtual/pkgconfig
 	x11-misc/makedepend
+	>=x11-proto/dri2proto-2.6
+	>=x11-proto/glproto-1.4.15-r1
 	>=x11-proto/xextproto-7.0.99.1
 	x11-proto/xf86driproto
 	x11-proto/xf86vidmodeproto
@@ -154,7 +152,6 @@ src_unpack() {
 	if [[ ${PV} = 9999* ]]; then
 		git-2_src_unpack
 	fi
-	mv "${WORKDIR}"/${PN}-*/ "${WORKDIR}"/${MY_P} || die
 }
 
 src_prepare() {
@@ -179,9 +176,6 @@ src_prepare() {
 
 	# Tests fail against python-3, bug #407887
 	sed -i 's|/usr/bin/env python|/usr/bin/env python2|' src/glsl/tests/compare_ir || die
-
-	# Fix bash-ism test bug 435496
-	epatch "${FILESDIR}"/${PN}-8.0.4-configure-bsd.patch
 
 	base_src_prepare
 
