@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/knot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/knot/ChangeLog,v 1.13 2012/10/21 15:42:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/knot/ChangeLog,v 1.14 2012/11/19 13:11:19 scarabeus Exp $
+
+*knot-1.1.1 (19 Nov 2012)
+
+  19 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> +knot-1.1.1.ebuild:
+  Version bump to latest release, drop older.
 
   21 Oct 2012; Tomáš Chvátal <scarabeus@gentoo.org> knot-1.1.0.ebuild:
   Use elog instead of einfo.
