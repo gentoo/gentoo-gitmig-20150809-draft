@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gflags
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gflags/ChangeLog,v 1.17 2012/03/03 16:19:10 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gflags/ChangeLog,v 1.18 2012/11/19 18:09:19 bicatali Exp $
+
+  19 Nov 2012; Sébastien Fabbro <bicatali@gentoo.org> gflags-2.0.ebuild:
+  Keyworded ~amd64-linux and ~x86-linux
 
   03 Mar 2012; Krzysztof Pawlik <nelchael@gentoo.org> -gflags-1.5.ebuild,
   -gflags-1.6.ebuild:
@@ -80,4 +83,3 @@
   09 Mar 2008; Alec Warner <antarus@gentoo.org> +metadata.xml,
   +gflags-0.7.ebuild:
   -m Initial import of gflags
-
