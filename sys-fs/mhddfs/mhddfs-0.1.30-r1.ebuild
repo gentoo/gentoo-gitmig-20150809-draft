@@ -1,8 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mhddfs/mhddfs-0.1.30.ebuild,v 1.2 2010/04/25 03:19:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mhddfs/mhddfs-0.1.30-r1.ebuild,v 1.1 2012/11/19 11:36:31 pinkbyte Exp $
 
-inherit eutils
+EAPI=4
+
+inherit base eutils
 
 MY_P="${PN}_${PV}"
 
@@ -17,10 +19,17 @@ IUSE="suid"
 
 DEPEND=">=sys-fs/fuse-2.7.0"
 
-src_install(){
+DOCS="ChangeLog README README.ru.UTF-8"
+PATCHES=( "${FILESDIR}/${PN}-respect-compiler-vars.patch" )
+
+src_compile() {
+	emake CC="$(tc-getCC)"
+}
+
+src_install() {
 	dobin mhddfs
 	doman mhddfs.1
-	dodoc ChangeLog README README.ru.UTF-8
+	dodoc ${DOCS}
 	use suid && fperms u+s /usr/bin/${PN}
 }
 
