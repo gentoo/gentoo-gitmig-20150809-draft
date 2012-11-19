@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/cockatrice/cockatrice-20120702.ebuild,v 1.3 2012/10/17 03:27:05 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/cockatrice/cockatrice-20120702.ebuild,v 1.4 2012/11/19 19:14:12 hasufell Exp $
 
 EAPI=3
 inherit cmake-utils eutils gnome2-utils games
@@ -37,6 +37,7 @@ src_configure() {
 		$(usex dedicated "-DWITHOUT_CLIENT=1 -DWITH_SERVER=1" "$(usex server "-DWITH_SERVER=1" "")")
 		-DCMAKE_INSTALL_BINDIR="${GAMES_BINDIR}"
 		-DCMAKE_INSTALL_PREFIX="${GAMES_PREFIX}"
+		-DDATADIR="${GAMES_DATADIR}/${PN}"
 		-DICONDIR="/usr/share/icons"
 		-DDESKTOPDIR="/usr/share/applications"
 	)
@@ -60,6 +61,9 @@ pkg_preinst() {
 
 pkg_postinst() {
 	games_pkg_postinst
+	elog "zonebg pictures are in ${GAMES_DATADIR}/${PN}/zonebg"
+	elog "sounds are in ${GAMES_DATADIR}/${PN}/sounds"
+	elog "you can use those directories in cockatrice settings"
 	use dedicated || gnome2_icon_cache_update
 }
 
