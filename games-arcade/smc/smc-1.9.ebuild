@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/smc/smc-1.9.ebuild,v 1.8 2012/11/14 17:39:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/smc/smc-1.9.ebuild,v 1.9 2012/11/19 22:19:52 mr_bones_ Exp $
 
 EAPI=4
 inherit eutils flag-o-matic games
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="music"
 
-RDEPEND="dev-games/cegui[opengl,devil]
+RDEPEND="<dev-games/cegui-0.7[opengl,devil]
 	dev-libs/boost
 	virtual/opengl
 	virtual/glu
