@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmikmod
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.90 2012/11/17 17:53:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.91 2012/11/19 04:13:13 ssuominen Exp $
+
+  19 Nov 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +files/3.2.0/009_all_shell.patch:
+  This one was not forwarded from the _beta2 as it should have been.
 
 *libmikmod-3.2.0 (17 Nov 2012)
 
