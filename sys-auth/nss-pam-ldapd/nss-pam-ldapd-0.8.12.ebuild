@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-pam-ldapd/nss-pam-ldapd-0.8.10-r1.ebuild,v 1.1 2012/07/24 21:32:13 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-pam-ldapd/nss-pam-ldapd-0.8.12.ebuild,v 1.1 2012/11/19 01:01:44 prometheanfire Exp $
 
 EAPI=4
 
@@ -35,10 +35,12 @@ src_configure() {
 	--with-ldap-conf-file=/etc/nslcd.conf
 	--with-nslcd-pidfile=/var/run/nslcd/nslcd.pid
 	--with-nslcd-socket=/var/run/nslcd/socket
+	--with-pam-seclib-dir=/$(get_libdir)/security
 	--libdir=/$(get_libdir)
 	$(use_enable debug)
 	$(use_enable kerberos)
-	$(use_enable pam)"
+	$(use_enable pam)
+	$(use_enable sasl)"
 
 	if use x86-fbsd; then
 		myconf+=" --with-nss-flavour=freebsd"
