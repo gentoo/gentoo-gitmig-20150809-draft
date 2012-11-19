@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-9999.ebuild,v 1.22 2012/10/05 19:41:29 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-9999.ebuild,v 1.23 2012/11/19 17:37:10 scarabeus Exp $
 
 EAPI=4
 
@@ -33,6 +33,7 @@ RDEPEND="
 	sys-libs/ncurses
 	charset? ( virtual/libiconv )
 	guile? ( dev-scheme/guile )
+	irc? ( dev-libs/libgcrypt )
 	lua? ( dev-lang/lua[deprecated] )
 	perl? ( dev-lang/perl )
 	ruby? ( >=dev-lang/ruby-1.9 )
