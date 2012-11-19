@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/allpathslg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/allpathslg/ChangeLog,v 1.8 2012/07/09 17:55:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/allpathslg/ChangeLog,v 1.9 2012/11/19 10:26:16 jlec Exp $
+
+  19 Nov 2012; Justin Lecher <jlec@gentoo.org> allpathslg-37578.ebuild,
+  allpathslg-41839.ebuild, allpathslg-42337.ebuild:
+  Block sci-biology/allpaths due to file collision, #443740
 
 *allpathslg-42337 (09 Jul 2012)
 
