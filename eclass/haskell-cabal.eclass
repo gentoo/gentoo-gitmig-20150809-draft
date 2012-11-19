@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.36 2012/11/19 20:35:16 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.37 2012/11/19 21:27:56 slyfox Exp $
 
 # @ECLASS: haskell-cabal.eclass
 # @MAINTAINER:
@@ -580,10 +580,11 @@ cabal_chdeps() {
 	while :; do
 		from_pat=$1
 		to_str=$2
-		einfo "CHDEP: '${from_pat}' -> '${to_str}'"
 
 		[[ -n ${from_pat} ]] || break
 		[[ -n ${to_str} ]] || die "'${from_str}' does not have 'to' part"
+
+		einfo "CHDEP: '${from_pat}' -> '${to_str}'"
 
 		# escape pattern-like symbols
 		from_pat=${from_pat//\*/\\*}
@@ -597,7 +598,7 @@ cabal_chdeps() {
 			diff -u "${T}/${cf}".{pre,post}
 		fi
 
-		[[ "${orig_c}" == "${new_c}" ]] && die "no trigger for '${from_ss}'"
+		[[ "${orig_c}" == "${new_c}" ]] && die "no trigger for '${from_pat}'"
 		orig_c=${new_c}
 		shift
 		shift
