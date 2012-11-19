@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.512 2012/11/19 20:35:16 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.513 2012/11/19 21:38:33 mgorny Exp $
+
+  19 Nov 2012; Michał Górny <mgorny@gentoo.org> python-r1.eclass:
+  Introduce a check for USE_PYTHON & PYTHON_TARGETS compatibility.
 
   19 Nov 2012; Sergei Trofimovich <slyfox@gentoo.org> haskell-cabal.eclass:
   Added new helper function 'cabal_chdeps' and and debug variable
