@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/unfoo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/ChangeLog,v 1.30 2012/11/19 11:24:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/ChangeLog,v 1.31 2012/11/19 12:48:16 jlec Exp $
+
+  19 Nov 2012; Justin Lecher <jlec@gentoo.org> unfoo-1.0.7.ebuild:
+  Exchange dep on app-arch/lzma by app-arch/xz-utils
 
 *unfoo-1.0.7 (19 Nov 2012)
 

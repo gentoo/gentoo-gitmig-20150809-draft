@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/unfoo-1.0.7.ebuild,v 1.1 2012/11/19 11:24:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/unfoo-1.0.7.ebuild,v 1.2 2012/11/19 12:48:16 jlec Exp $
 
 EAPI=5
 
@@ -10,11 +10,10 @@ SRC_URI="https://github.com/vitaminmoo/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.g
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="+minimal test"
 
 COMMON_DEPS="
-	app-arch/unace
 	|| (
 		app-arch/bzip2
 		app-arch/lbzip2[symlink]
@@ -22,13 +21,14 @@ COMMON_DEPS="
 	|| (
 		app-arch/gzip
 		app-arch/pigz[symlink] )
+	app-arch/p7zip
 	|| (
 		app-arch/rar
 		app-arch/unrar-gpl
 		app-arch/unrar )
-	app-arch/p7zip
-	app-arch/lzma
-	app-arch/unzip"
+	app-arch/unace
+	app-arch/unzip
+	app-arch/xz-utils"
 RDEPEND="!minimal? ( ${COMMON_DEPS} )"
 DEPEND="test? ( ${COMMON_DEPS} )"
 
