@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/newrelic-sysmond
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/newrelic-sysmond/ChangeLog,v 1.6 2012/11/18 13:31:26 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/newrelic-sysmond/ChangeLog,v 1.7 2012/11/19 16:48:27 pinkbyte Exp $
+
+  19 Nov 2012; Sergey Popov <pinkbyte@gentoo.org>
+  newrelic-sysmond-1.1.2.124.ebuild:
+  Add GPL-2 to licenses to reflect initscript license, wrt bug #426150
 
   18 Nov 2012; Ulrich Müller <ulm@gentoo.org>
   newrelic-sysmond-1.1.2.124.ebuild:

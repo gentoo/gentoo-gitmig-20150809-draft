@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/newrelic-sysmond/newrelic-sysmond-1.1.2.124.ebuild,v 1.3 2012/11/18 13:31:26 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/newrelic-sysmond/newrelic-sysmond-1.1.2.124.ebuild,v 1.4 2012/11/19 16:48:27 pinkbyte Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ DESCRIPTION="NewRelic System Monitor"
 HOMEPAGE="http://www.newrelic.com/"
 SRC_URI="http://download.newrelic.com/server_monitor/release/${P}-linux.tar.gz"
 
-LICENSE="newrelic Apache-2.0 MIT ISC openssl"
+LICENSE="newrelic Apache-2.0 MIT ISC openssl GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
