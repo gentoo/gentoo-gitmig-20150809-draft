@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.411 2012/11/19 01:12:45 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.412 2012/11/19 15:11:44 jer Exp $
+
+  19 Nov 2012; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-96.43.23.ebuild:
+  Lower x11-base/xorg-server dependency (bug #443926).
 
 *nvidia-drivers-310.19 (19 Nov 2012)
 

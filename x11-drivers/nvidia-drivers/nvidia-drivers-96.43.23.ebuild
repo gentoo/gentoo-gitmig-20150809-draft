@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-96.43.23.ebuild,v 1.4 2012/11/18 11:18:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-96.43.23.ebuild,v 1.5 2012/11/19 15:11:44 jer Exp $
 
 EAPI="2"
 
@@ -24,7 +24,7 @@ IUSE="acpi custom-cflags gtk multilib kernel_linux"
 RESTRICT="strip"
 EMULTILIB_PKG="true"
 
-COMMON="<x11-base/xorg-server-1.13.99
+COMMON="<x11-base/xorg-server-1.12.99
 	gtk? (
 		!media-video/nvidia-settings
 		dev-libs/atk
