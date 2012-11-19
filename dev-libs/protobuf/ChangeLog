@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/protobuf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.37 2012/08/09 13:55:33 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.38 2012/11/19 18:29:50 bicatali Exp $
+
+  19 Nov 2012; Sébastien Fabbro <bicatali@gentoo.org> protobuf-2.4.1.ebuild:
+  Keyworded amd64-linux and x86-linux
 
   09 Aug 2012; Anthony G. Basile <blueness@gentoo.org> protobuf-2.4.1.ebuild:
   Keyword ~mips
@@ -161,4 +164,3 @@
   17 Jul 2008; Michał Januszewski <spock@gentoo.org> +metadata.xml,
   +protobuf-2.0.0_beta.ebuild:
   Initial commit (bug #231297).
-
