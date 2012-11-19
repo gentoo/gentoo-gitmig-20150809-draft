@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/dbmeasure
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/dbmeasure/ChangeLog,v 1.2 2012/05/05 08:15:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/dbmeasure/ChangeLog,v 1.3 2012/11/19 05:15:25 ford_prefect Exp $
+
+  19 Nov 2012; Arun Raghavan <ford_prefect@gentoo.org> metadata.xml:
+  Take over from robbat2.
 
   05 May 2012; Michał Górny <mgorny@gentoo.org>
   dbmeasure-0.0.20100217.ebuild:
