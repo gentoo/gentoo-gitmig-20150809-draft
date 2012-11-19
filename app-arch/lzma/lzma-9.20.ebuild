@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzma/lzma-9.20.ebuild,v 1.1 2011/01/06 02:57:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzma/lzma-9.20.ebuild,v 1.2 2012/11/19 12:50:45 jer Exp $
 
 inherit toolchain-funcs
 
@@ -9,7 +9,7 @@ DESCRIPTION="LZMA Stream Compressor from the SDK"
 HOMEPAGE="http://www.7-zip.org/sdk.html"
 SRC_URI="mirror://sourceforge/sevenzip/${MY_P}.tar.bz2"
 
-LICENSE="LGPL-2.1"
+LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ia64 ~mips ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="doc"

@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/lzma
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzma/ChangeLog,v 1.17 2011/08/19 17:21:05 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzma/ChangeLog,v 1.18 2012/11/19 12:50:45 jer Exp $
+
+  19 Nov 2012; Jeroen Roovers <jer@gentoo.org> lzma-4.63.ebuild,
+  lzma-4.65.ebuild, lzma-9.20.ebuild:
+  Fix LICENSE.
 
   19 Aug 2011; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   remove radek from metadata.xml
