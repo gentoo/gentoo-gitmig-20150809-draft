@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/cpufreqd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/ChangeLog,v 1.65 2012/11/18 11:41:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/ChangeLog,v 1.66 2012/11/19 10:57:20 pinkbyte Exp $
+
+*cpufreqd-2.4.2-r2 (19 Nov 2012)
+
+  19 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> +cpufreqd-2.4.2-r2.ebuild,
+  +files/cpufreqd-battery-attr-name.patch:
+  Revision bump: EAPI 4, QA cleanups, support for user patches, fix for bug
+  #389749
 
   18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop mobile herd as talked in gentoo-dev ML
