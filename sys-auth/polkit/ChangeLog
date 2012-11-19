@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/polkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.110 2012/11/18 07:11:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.111 2012/11/19 04:22:11 ssuominen Exp $
+
+  19 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> polkit-0.108.ebuild:
+  Link against -lgmodule-2.0 to prevent underlinking (backported from upstream,
+  but using sed to avoid eautoreconf) wrt #443798
 
 *polkit-0.108 (18 Nov 2012)
 
