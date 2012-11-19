@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.35 2012/11/16 15:47:17 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.36 2012/11/19 20:35:16 slyfox Exp $
 
 # @ECLASS: haskell-cabal.eclass
 # @MAINTAINER:
@@ -54,6 +54,12 @@ inherit ghc-package multilib
 # example: /etc/make.conf: GHC_BOOTSTRAP_FLAGS=-dynamic to make
 # linking 'setup' faster.
 : ${GHC_BOOTSTRAP_FLAGS:=}
+
+# @ECLASS-VARIABLE: CABAL_DEBUG_LOOSENING
+# @DESCRIPTION:
+# Show debug output for 'cabal_chdeps' function if set.
+# Needs working 'diff'.
+: ${CABAL_DEBUG_LOOSENING:=}
 
 HASKELL_CABAL_EXPF="pkg_setup src_compile src_test src_install"
 
@@ -534,4 +540,69 @@ cabal_flag() {
 	fi
 
 	return 0
+}
+
+# @FUNCTION: cabal_chdeps
+# @DESCRIPTION:
+# Allows easier patching of $CABAL_FILE (${S}/${PN}.cabal by default)
+# depends
+#
+# Accepts argument list as pairs of substitutions: <from-string> <to-string>...
+#
+# Dies on error.
+#
+# Usage examples:
+#
+# src_prepare() {
+#    cabal_chdeps \
+#        'base >= 4.2 && < 4.6' 'base >= 4.2 && < 4.7' \
+#        'containers ==0.4.*' 'containers >= 0.4 && < 0.6'
+#}
+# or
+# src_prepare() {
+#    CABAL_FILE=${S}/${MY_PN}.cabal cabal_chdeps \
+#        'base >= 4.2 && < 4.6' 'base >= 4.2 && < 4.7'
+#    CABAL_FILE=${S}/${MY_PN}-tools.cabal cabal_chdeps \
+#        'base == 3.*' 'base >= 4.2 && < 4.7'
+#}
+#
+cabal_chdeps() {
+	local cf=${CABAL_FILE:-${S}/${PN}.cabal}
+	local from_ss # ss - substring
+	local to_ss
+	local orig_c # c - contents
+	local new_c
+
+	[[ -f $cf ]] || die "cabal file '$cf' does not exist"
+
+	orig_c=$(< "$cf")
+
+	while :; do
+		from_pat=$1
+		to_str=$2
+		einfo "CHDEP: '${from_pat}' -> '${to_str}'"
+
+		[[ -n ${from_pat} ]] || break
+		[[ -n ${to_str} ]] || die "'${from_str}' does not have 'to' part"
+
+		# escape pattern-like symbols
+		from_pat=${from_pat//\*/\\*}
+		from_pat=${from_pat//\[/\\[}
+
+		new_c=${orig_c//${from_pat}/${to_str}}
+
+		if [[ -n $CABAL_DEBUG_LOOSENING ]]; then
+			echo "${orig_c}" >"${T}/${cf}".pre
+			echo "${new_c}" >"${T}/${cf}".post
+			diff -u "${T}/${cf}".{pre,post}
+		fi
+
+		[[ "${orig_c}" == "${new_c}" ]] && die "no trigger for '${from_ss}'"
+		orig_c=${new_c}
+		shift
+		shift
+	done
+
+	echo "${new_c}" > "$cf" ||
+		die "failed to update"
 }
