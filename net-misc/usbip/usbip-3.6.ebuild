@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/usbip/usbip-3.6.ebuild,v 1.1 2012/11/18 14:25:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/usbip/usbip-3.6.ebuild,v 1.2 2012/11/19 04:08:53 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -32,7 +32,7 @@ src_prepare() {
 src_configure() {
 	econf \
 		$(use_enable static-libs static) \
-		$(use_with tcpd tcp-wrappers) \
+		$(use tcpd || echo --without-tcp-wrappers) \
 		--with-usbids-dir=/usr/share/misc
 }
 
