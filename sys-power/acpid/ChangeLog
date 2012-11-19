@@ -1,6 +1,11 @@
 # ChangeLog for sys-power/acpid
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.95 2012/11/18 13:29:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.96 2012/11/19 09:31:34 pinkbyte Exp $
+
+  19 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> acpid-2.0.16-r1.ebuild,
+  acpid-2.0.17.ebuild:
+  Show message about power management guide only when installing package first
+  time wrt bug #440422
 
   18 Nov 2012; Agostino Sarubbo <ago@gentoo.org> acpid-2.0.17.ebuild:
   Stable for x86, wrt bug #434522
