@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/allpaths/allpaths-2.0.ebuild,v 1.5 2010/01/03 14:08:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/allpaths/allpaths-2.0.ebuild,v 1.6 2012/11/19 10:27:46 jlec Exp $
 
 EAPI="2"
 
@@ -16,9 +16,8 @@ SLOT="0"
 IUSE=""
 KEYWORDS="amd64 x86"
 
-# TODO: info message on failure instructing to run gcc-config
-DEPEND=">=sys-devel/gcc-4.3.2"
-RDEPEND=""
+DEPEND="!sci-biology/allpathslg"
+RDEPEND="${DEPEND}"
 
 PATCHES=(
 	"${FILESDIR}"/${P}-gcc-x86-no-autocast.patch

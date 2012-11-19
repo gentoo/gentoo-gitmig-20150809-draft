@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/allpaths/allpaths-3.1-r1.ebuild,v 1.1 2012/11/08 20:54:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/allpaths/allpaths-3.1-r1.ebuild,v 1.2 2012/11/19 10:27:46 jlec Exp $
 
 EAPI=4
 
@@ -16,6 +16,9 @@ LICENSE="Whitehead-MIT"
 SLOT="3"
 KEYWORDS="~amd64 ~x86"
 IUSE="openmp"
+
+DEPEND="!sci-biology/allpathslg"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/AllPaths"
 
