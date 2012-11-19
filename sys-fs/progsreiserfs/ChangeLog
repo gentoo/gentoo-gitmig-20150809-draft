@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/progsreiserfs
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/progsreiserfs/ChangeLog,v 1.17 2011/02/17 05:24:38 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/progsreiserfs/ChangeLog,v 1.18 2012/11/19 10:02:54 ssuominen Exp $
+
+  19 Nov 2012; Samuli Suominen <ssuominen@gentoo.org>
+  progsreiserfs-0.3.1_rc8.ebuild,
+  +files/progsreiserfs-0.3.1_rc8-autotools.patch:
+  USE="static-libs" and use prune_libtool_files from eutils.eclass. Fix
+  underquoting within progsreiserfs.m4 wrt #442226 by Raphaël Droz
 
   17 Feb 2011; Mike Frysinger <vapier@gentoo.org>
   progsreiserfs-0.3.1_rc8.ebuild:
