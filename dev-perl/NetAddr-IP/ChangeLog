@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/NetAddr-IP
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetAddr-IP/ChangeLog,v 1.56 2012/11/18 11:29:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetAddr-IP/ChangeLog,v 1.57 2012/11/19 08:52:25 robbat2 Exp $
+
+  19 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> NetAddr-IP-4.59.0.ebuild,
+  NetAddr-IP-4.62.0.ebuild, NetAddr-IP-4.64.0.ebuild, NetAddr-IP-4.65.0.ebuild,
+  NetAddr-IP-4.66.0.ebuild:
+  Bug #349901: Dual Artistic license, per Fedora upstream request to the author:
+  http://www.mail-archive.com/fedora-perl-devel-list@redhat.com/msg12589.html.
 
   18 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Drop duplication of myself as a maintainer where there is a herd.

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetAddr-IP/NetAddr-IP-4.65.0.ebuild,v 1.1 2012/10/07 14:31:10 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetAddr-IP/NetAddr-IP-4.65.0.ebuild,v 1.2 2012/11/19 08:52:25 robbat2 Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Manipulation and operations on IP addresses"
 
 SLOT="0"
-LICENSE="Artistic"
+LICENSE="|| ( Artistic Artistic-2 )"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="ipv6"
 
