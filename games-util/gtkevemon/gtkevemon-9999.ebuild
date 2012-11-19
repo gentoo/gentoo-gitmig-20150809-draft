@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/gtkevemon/gtkevemon-9999.ebuild,v 1.2 2012/05/03 03:41:15 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/gtkevemon/gtkevemon-9999.ebuild,v 1.3 2012/11/19 11:03:56 wired Exp $
 
 EAPI=4
 
@@ -8,10 +8,11 @@ inherit eutils
 
 IUSE=""
 if [[ ${PV} == *9999* ]]; then
-	inherit subversion
-	ESVN_REPO_URI="svn://svn.battleclinic.com/GTKEVEMon/trunk/${PN}"
+	inherit mercurial
+	EHG_REPO_URI="https://bitbucket.org/BattleClinic/${PN}"
 	KEYWORDS=""
 	SRC_URI=""
+	MY_S="${WORKDIR}/${P}/gtkevemon"
 else
 	KEYWORDS="~amd64 ~x86"
 	SRC_URI="http://gtkevemon.battleclinic.com/releases/${P}-source.tar.gz"
@@ -31,12 +32,24 @@ DEPEND="${DEPEND}
 	virtual/pkgconfig
 "
 
+src_unpack()
+{
+	if [[ ${PV} == *9999* ]]; then
+		mercurial_src_unpack
+		S=${MY_S}
+	else
+		default
+	fi
+}
+
 src_prepare() {
 	sed -e 's:Categories=Game;$:Categories=Game;RolePlaying;GTK;:' \
 		-i icon/${PN}.desktop || die "sed failed"
 }
 
 src_install() {
+	# fixed QA notice
+	sed -i "/^Encoding/d" icon/${PN}.desktop
 	dobin src/${PN}
 	doicon icon/${PN}.png
 	domenu icon/${PN}.desktop
