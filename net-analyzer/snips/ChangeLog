@@ -1,6 +1,16 @@
 # ChangeLog for net-analyzer/snips
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snips/ChangeLog,v 1.7 2012/06/12 03:16:00 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snips/ChangeLog,v 1.8 2012/11/19 10:28:36 chainsaw Exp $
+
+*snips-1.2-r3 (19 Nov 2012)
+
+  19 Nov 2012; Tony Vroon <chainsaw@gentoo.org> +snips-1.2-r3.ebuild,
+  +files/snips-1.2-etherload-makefile-ordering.patch,
+  +files/snips-1.2-ldflags-respect.patch, +files/snips-1.2-linux3.patch,
+  +files/snips-1.2-nsmon-libresolv.patch, +files/snips-1.2-parallel-make.patch,
+  +files/snips-1.2-trapmon-link-order.patch:
+  Build system fixes based on a tinderbox bug report by Diego Elio "Flameeyes"
+  Pettenò in bug #423475. Etherload linux 3 fix by him, few other fixes by me.
 
   12 Jun 2012; Zac Medico <zmedico@gentoo.org> snips-1.2-r2.ebuild:
   inherit user for enewgroup and enewuser
