@@ -1,15 +1,17 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-3.2.6.ebuild,v 1.2 2012/05/04 07:20:30 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-3.3.1.ebuild,v 1.1 2012/11/19 13:36:35 ultrabug Exp $
 
 EAPI=4
 
 PYTHON_DEPEND="2"
-inherit autotools elisp-common eutils multilib python versionator
+AUTOTOOLS_AUTORECONF=1
+
+inherit autotools-utils elisp-common eutils multilib python versionator
 
 DESCRIPTION="GlusterFS is a powerful network/cluster filesystem"
 HOMEPAGE="http://www.gluster.org/"
-SRC_URI="http://ftp.gluster.com/pub/gluster/${PN}/$(get_version_component_range '1-2')/${PV}/${P}.tar.gz"
+SRC_URI="http://download.gluster.com/pub/gluster/${PN}/$(get_version_component_range '1-2')/${PV}/${P}.tar.gz"
 
 LICENSE="AGPL-3"
 SLOT="0"
@@ -17,8 +19,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="emacs extras +fuse infiniband static-libs vim-syntax"
 
 RDEPEND="emacs? ( virtual/emacs )
-		fuse? ( >=sys-fs/fuse-2.7.0 )
-		infiniband? ( sys-infiniband/libibverbs )"
+	fuse? ( >=sys-fs/fuse-2.7.0 )
+	infiniband? ( sys-infiniband/libibverbs )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	sys-devel/bison
@@ -26,39 +28,50 @@ DEPEND="${RDEPEND}
 
 SITEFILE="50${PN}-mode-gentoo.el"
 
+PATCHES=(
+	"${FILESDIR}/${PN}-3.3.0-parallel-build.patch"
+	"${FILESDIR}/${PN}-3.3.0-docdir.patch"
+	"${FILESDIR}/${PN}-3.3.0-silent_rules.patch"
+	"${FILESDIR}/${PN}-3.3.0-avoid-version.patch"
+)
+
+DOCS=( AUTHORS ChangeLog NEWS README THANKS )
+
 pkg_setup() {
 	python_set_active_version 2
 	python_pkg_setup
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-3.1.0-parallel-build.patch" \
-		"${FILESDIR}/${PN}-docdir.patch" \
-		"${FILESDIR}/glusterd-3.2.0-workdir.patch"
-	sed -i -e "s/ -ggdb3//g" -e "s/ -m64//g" argp-standalone/configure.ac || die
-	eautoreconf
+	sed -e "s/ -ggdb3//g" \
+		-i argp-standalone/configure.ac || die
+	autotools-utils_src_prepare
+	cd argp-standalone && eautoreconf
 }
 
 src_configure() {
-	econf \
-		$(use_enable fuse fuse-client) \
-		$(use_enable infiniband ibverbs) \
-		$(use_enable static-libs static) \
-		--enable-georeplication \
-		--disable-bdb \
-		--docdir=/usr/share/doc/${PF} \
+	local myeconfargs=(
+		--disable-dependency-tracking
+		--disable-silent-rules
+		$(use_enable fuse fuse-client)
+		$(use_enable infiniband ibverbs)
+		$(use_enable static-libs static)
+		--enable-georeplication
+		--docdir=/usr/share/doc/${PF}
 		--localstatedir=/var
+	)
+	autotools-utils_src_configure
 }
 
 src_compile() {
-	emake
+	autotools-utils_src_compile
 	if use emacs ; then
 		elisp-compile extras/glusterfs-mode.el || die
 	fi
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	autotools-utils_src_install
 
 	if use emacs ; then
 		elisp-install ${PN} extras/glusterfs-mode.el* || die
@@ -66,20 +79,18 @@ src_install() {
 	fi
 
 	if use vim-syntax ; then
-		insinto /usr/share/vim/vimfiles/ftdetect; doins "${FILESDIR}/glusterfs.vim"
-		insinto /usr/share/vim/vimfiles/syntax; doins extras/glusterfs.vim
+		insinto /usr/share/vim/vimfiles/ftdetect; doins "${FILESDIR}"/${PN}.vim
+		insinto /usr/share/vim/vimfiles/syntax; doins extras/${PN}.vim
 	fi
 
 	if use extras ; then
-		newbin extras/backend-xattr-sanitize.sh glusterfs-backend-xattr-sanitize
-		newbin extras/backend-cleanup.sh glusterfs-backend-cleanup
-		newbin extras/migrate-unify-to-distribute.sh glusterfs-migrate-unify-to-distribute
-		newbin extras/disk_usage_sync.sh glusterfs-disk-usage-sync
+		newbin extras/backend-xattr-sanitize.sh ${PN}-backend-xattr-sanitize
+		newbin extras/backend-cleanup.sh ${PN}-backend-cleanup
+		newbin extras/migrate-unify-to-distribute.sh ${PN}-migrate-unify-to-distribute
+		newbin extras/disk_usage_sync.sh ${PN}-disk-usage-sync
 	fi
 
-	dodoc AUTHORS ChangeLog NEWS README THANKS
-
-	newinitd "${FILESDIR}/${PN}.initd" glusterfsd
+	newinitd "${FILESDIR}/${PN}-r1.initd" glusterfsd
 	newinitd "${FILESDIR}/glusterd.initd" glusterd
 	newconfd "${FILESDIR}/${PN}.confd" glusterfsd
 
@@ -105,14 +116,12 @@ pkg_postinst() {
 	elog "You can now treat glusterfsd2 like any other service"
 	elog
 	ewarn "You need to use a ntp client to keep the clocks synchronized across all"
-	ewarn "of your servers.  Setup a NTP synchronizing service before attempting to"
+	ewarn "of your servers. Setup a NTP synchronizing service before attempting to"
 	ewarn "run GlusterFS."
 
-	if [[ ${REPLACING_VERSIONS} < 3.1 ]]; then
-		elog
-		elog "You are upgrading from a previous version of ${PN}, please read:"
-		elog "http://www.gluster.com/community/documentation/index.php/Gluster_3.0_to_3.2_Upgrade_Guide"
-	fi
+	elog
+	elog "You are upgrading from a previous version of ${PN}, please read:"
+	elog "http://vbellur.wordpress.com/2012/05/31/upgrading-to-glusterfs-3-3/"
 
 	use emacs && elisp-site-regen
 }
