@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.121 2012/10/09 21:44:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.122 2012/11/19 19:58:41 vapier Exp $
 
 EAPI="4"
 
@@ -101,6 +101,7 @@ COMMON_DEPEND="virtual/opengl
 RDEPEND="${COMMON_DEPEND}
 	udev? (	sys-fs/udisks:0 sys-power/upower )"
 DEPEND="${COMMON_DEPEND}
+	dev-lang/swig
 	dev-util/gperf
 	x11-proto/xineramaproto
 	dev-util/cmake

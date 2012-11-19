@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.153 2012/11/15 18:06:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.154 2012/11/19 19:58:41 vapier Exp $
+
+  19 Nov 2012; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
+  Add swig to DEPEND since upstream requires it #434660 by BT.
 
   15 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> xbmc-11.0.ebuild:
   Ekeyword does not work here so put back accidentally dropped stable keywords.
