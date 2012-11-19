@@ -1,6 +1,13 @@
 # ChangeLog for net-voip/linphone
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/ChangeLog,v 1.67 2012/05/03 07:27:47 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/ChangeLog,v 1.68 2012/11/19 21:33:29 mgorny Exp $
+
+*linphone-3.5.2 (19 Nov 2012)
+
+  19 Nov 2012; Michał Górny <mgorny@gentoo.org> +files/linphone-3.5.2-nls.patch,
+  +linphone-3.5.2.ebuild, metadata.xml:
+  Version bump wrt bug #397645. Thanks to Andrew Savchenko for his effort on
+  linphone ebuilds.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> linphone-3.1.1.ebuild,
   linphone-3.2.1-r2.ebuild, linphone-3.3.2.ebuild, linphone-3.4.3.ebuild,
