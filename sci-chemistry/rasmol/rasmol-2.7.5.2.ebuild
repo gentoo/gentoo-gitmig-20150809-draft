@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/rasmol-2.7.5.2.ebuild,v 1.6 2012/11/11 15:23:57 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/rasmol-2.7.5.2.ebuild,v 1.7 2012/11/19 08:38:35 jlec Exp $
 
 EAPI=4
 
@@ -22,6 +22,7 @@ IUSE=""
 
 RDEPEND="
 	dev-libs/cvector
+	dev-util/gtk-builder-convert
 	>=sci-libs/cbflib-0.9.2
 	>=sci-libs/cqrlib-1.1.2
 	>=sci-libs/neartree-3.1.1
