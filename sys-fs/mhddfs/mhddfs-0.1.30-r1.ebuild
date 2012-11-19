@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mhddfs/mhddfs-0.1.30-r1.ebuild,v 1.1 2012/11/19 11:36:31 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mhddfs/mhddfs-0.1.30-r1.ebuild,v 1.2 2012/11/19 11:37:46 pinkbyte Exp $
 
 EAPI=4
 
-inherit base eutils
+inherit base eutils toolchain-funcs
 
 MY_P="${PN}_${PV}"
 

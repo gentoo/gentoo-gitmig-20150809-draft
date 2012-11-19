@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/mhddfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mhddfs/ChangeLog,v 1.4 2012/11/19 11:36:32 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mhddfs/ChangeLog,v 1.5 2012/11/19 11:37:46 pinkbyte Exp $
+
+  19 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> mhddfs-0.1.30-r1.ebuild:
+  Add missing inherit for toolchain-funcs eclass
 
 *mhddfs-0.1.30-r1 (19 Nov 2012)
 
