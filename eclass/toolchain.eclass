@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.554 2012/11/19 02:59:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.555 2012/11/19 06:55:44 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -180,7 +180,7 @@ if in_iuse gcj ; then
 	DEPEND+=" gcj? ( gtk? ( ${GCJ_GTK_DEPS} ) ${GCJ_DEPS} )"
 fi
 
-PDEPEND=">=sys-devel/gcc-config-1.5"
+PDEPEND=">=sys-devel/gcc-config-1.7"
 
 #----<< DEPEND >>----
 
@@ -463,48 +463,47 @@ create_gcc_env_entry() {
 	dodir /etc/env.d/gcc
 	local gcc_envd_base="/etc/env.d/gcc/${CTARGET}-${GCC_CONFIG_VER}"
 
+	local gcc_specs_file
+	local gcc_envd_file="${D}${gcc_envd_base}"
 	if [[ -z $1 ]] ; then
-		gcc_envd_file="${D}${gcc_envd_base}"
 		# I'm leaving the following commented out to remind me that it
 		# was an insanely -bad- idea. Stuff broke. GCC_SPECS isnt unset
 		# on chroot or in non-toolchain.eclass gcc ebuilds!
 		#gcc_specs_file="${LIBPATH}/specs"
 		gcc_specs_file=""
 	else
-		gcc_envd_file="${D}${gcc_envd_base}-$1"
+		gcc_envd_file+="-$1"
 		gcc_specs_file="${LIBPATH}/$1.specs"
 	fi
-
-	# phase PATH/ROOTPATH out ...
-	echo "PATH=\"${BINPATH}\"" > ${gcc_envd_file}
-	echo "ROOTPATH=\"${BINPATH}\"" >> ${gcc_envd_file}
-	echo "GCC_PATH=\"${BINPATH}\"" >> ${gcc_envd_file}
 
 	# We want to list the default ABI's LIBPATH first so libtool
 	# searches that directory first.  This is a temporary
 	# workaround for libtool being stupid and using .la's from
 	# conflicting ABIs by using the first one in the search path
-	local abi=${TARGET_DEFAULT_ABI}
-	local MULTIDIR=$($(XGCC) $(get_abi_CFLAGS ${abi}) --print-multi-directory)
-	local LDPATH=${LIBPATH}
-	[[ ${MULTIDIR} != "." ]] && LDPATH+=/${MULTIDIR}
+	local mdir mosdir mosdirs abi
+	local ldpath ldpaths
 	for abi in $(get_all_abis TARGET) ; do
-		[[ ${abi} == ${TARGET_DEFAULT_ABI} ]] && continue
+		mdir=$($(XGCC) $(get_abi_CFLAGS ${abi}) --print-multi-directory)
+		ldpath=${LIBPATH}
+		[[ ${mdir} != "." ]] && ldpath+="/${mdir}"
+		ldpaths="${ldpath}${ldpaths:+:${ldpaths}}"
 
-		MULTIDIR=$($(XGCC) $(get_abi_CFLAGS ${abi}) --print-multi-directory)
-		LDPATH+=:${LIBPATH}
-		[[ ${MULTIDIR} != "." ]] && LDPATH+=/${MULTIDIR}
+		mosdir=$($(XGCC) $(get_abi_CFLAGS ${abi}) -print-multi-os-directory)
+		mosdirs="${mosdir}${mosdirs:+:${mosdirs}}"
 	done
 
-	echo "LDPATH=\"${LDPATH}\"" >> ${gcc_envd_file}
-	echo "MANPATH=\"${DATAPATH}/man\"" >> ${gcc_envd_file}
-	echo "INFOPATH=\"${DATAPATH}/info\"" >> ${gcc_envd_file}
-	echo "STDCXX_INCDIR=\"${STDCXX_INCDIR##*/}\"" >> ${gcc_envd_file}
-
-	is_crosscompile && echo "CTARGET=${CTARGET}" >> ${gcc_envd_file}
-
-	# Set which specs file to use
-	[[ -n ${gcc_specs_file} ]] && echo "GCC_SPECS=\"${gcc_specs_file}\"" >> ${gcc_envd_file}
+	cat <<-EOF > ${gcc_envd_file}
+	PATH="${BINPATH}"
+	ROOTPATH="${BINPATH}"
+	GCC_PATH="${BINPATH}"
+	LDPATH="${ldpath}"
+	MANPATH="${DATAPATH}/man"
+	INFOPATH="${DATAPATH}/info"
+	STDCXX_INCDIR="${STDCXX_INCDIR##*/}"
+	CTARGET="${CTARGET}"
+	GCC_SPECS="${gcc_specs_file}"
+	MULTIOSDIRS="${mosdirs}"
+	EOF
 }
 setup_minispecs_gcc_build_specs() {
 	# Setup the "build.specs" file for gcc 4.3 to use when building.
@@ -717,6 +716,12 @@ toolchain_src_unpack() {
 			"${S}"/libstdc++-v3/python/Makefile.in || die
 	fi
 
+	# make sure the pkg config files install into multilib dirs.
+	# since we configure with just one --libdir, we can't use that
+	# (as gcc itself takes care of building multilibs).  #435728
+	find "${S}" -name Makefile.in \
+		-exec sed -i '/^pkgconfigdir/s:=.*:=$(toolexeclibdir)/pkgconfig:' {} +
+
 	# No idea when this first started being fixed, but let's go with 4.3.x for now
 	if ! tc_version_is_at_least 4.3 ; then
 		fix_files=""
@@ -793,8 +798,6 @@ toolchain_src_unpack() {
 				einfo "  ${f%%...}"
 			done
 	fi
-
-	disable_multilib_libjava || die "failed to disable multilib java"
 }
 
 gcc-abi-map() {
@@ -1622,13 +1625,6 @@ gcc_slot_java() {
 		[[ -f ${x} ]] && mv -f "${x}" "${D}"${LIBPATH}/
 	done
 
-	# SLOT up libgcj.pc if it's available (and let gcc-config worry about links)
-	for x in "${D}"${PREFIX}/lib*/pkgconfig/libgcj*.pc ; do
-		[[ -f ${x} ]] || continue
-		sed -i "/^libdir=/s:=.*:=${LIBPATH}:" "${x}"
-		mv "${x}" "${D}"/usr/lib/pkgconfig/libgcj-${GCC_PV}.pc || die
-	done
-
 	# Rename jar because it could clash with Kaffe's jar if this gcc is
 	# primary compiler (aka don't have the -<version> extension)
 	cd "${D}"${BINPATH}
@@ -1642,7 +1638,7 @@ gcc_movelibs() {
 	# older versions of gcc did not support --print-multi-os-directory
 	tc_version_is_at_least 3.0 || return 0
 
-	local multiarg removedirs=""
+	local x multiarg removedirs=""
 	for multiarg in $($(XGCC) -print-multi-lib) ; do
 		multiarg=${multiarg#*;}
 		multiarg=${multiarg//@/ -}
@@ -1670,6 +1666,14 @@ gcc_movelibs() {
 			fi
 		done
 		fix_libtool_libdir_paths "${LIBPATH}/${MULTIDIR}"
+
+		# SLOT up libgcj.pc if it's available (and let gcc-config worry about links)
+		FROMDIR="${PREFIX}/lib/${OS_MULTIDIR}"
+		for x in "${D}${FROMDIR}"/pkgconfig/libgcj*.pc ; do
+			[[ -f ${x} ]] || continue
+			sed -i "/^libdir=/s:=.*:=${LIBPATH}/${MULTIDIR}:" "${x}"
+			mv "${x}" "${D}${FROMDIR}"/pkgconfig/libgcj-${GCC_PV}.pc || die
+		done
 	done
 
 	# We remove directories separately to avoid this case:
@@ -1936,18 +1940,6 @@ setup_multilib_osdirnames() {
 		set -- -r -e 's:[$][(]if.*,(.*)[)]:\1:'
 	fi
 	sed -i "$@" "${S}"/gcc/config/${config} || die
-}
-
-disable_multilib_libjava() {
-	# We dont want a multilib libjava, so lets use this hack taken from fedora
-	sed -i -r \
-		-e 's/^((all:) all-redirect)/ifeq (\$(MULTISUBDIR),)\n\1\nelse\n\2\n\techo Multilib libjava disabled\nendif/' \
-		-e 's/^((install:) install-redirect)/ifeq (\$(MULTISUBDIR),)\n\1\nelse\n\2\n\techo Multilib libjava disabled\nendif/' \
-		-e 's/^((check:) check-redirect)/ifeq (\$(MULTISUBDIR),)\n\1\nelse\n\2\n\techo Multilib libjava disabled\nendif/' \
-		-e 's/^((all:) all-recursive)/ifeq (\$(MULTISUBDIR),)\n\1\nelse\n\2\n\techo Multilib libjava disabled\nendif/' \
-		-e 's/^((install:) install-recursive)/ifeq (\$(MULTISUBDIR),)\n\1\nelse\n\2\n\techo Multilib libjava disabled\nendif/' \
-		-e 's/^((check:) check-recursive)/ifeq (\$(MULTISUBDIR),)\n\1\nelse\n\2\n\techo Multilib libjava disabled\nendif/' \
-		"${S}"/libjava/Makefile.in || die
 }
 
 # make sure the libtool archives have libdir set to where they actually
