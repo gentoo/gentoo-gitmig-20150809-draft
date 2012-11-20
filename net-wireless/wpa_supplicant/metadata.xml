@@ -9,6 +9,10 @@
 		<email>alexxy@gentoo.org</email>
 		<name>Alexey Shvetsov</name>
 	</maintainer>
+	<maintainer>
+		<email>zerochaos@gentoo.org</email>
+		<name>Rick Farina</name>
+	</maintainer>
 	<use>
 		<flag name='ap'>Add support for access point mode</flag>
 		<flag name='eap-sim'>Add support for EAP-SIM authentication algorithm</flag>
