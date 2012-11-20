@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.287 2012/09/09 17:05:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.288 2012/11/20 19:07:35 wired Exp $
+
+  20 Nov 2012; Alex Alexander <wired@gentoo.org> lighttpd-1.4.30-r1.ebuild,
+  lighttpd-1.4.31.ebuild:
+  added initscript's GPL-2 to LICENSE, bug #426178
 
   09 Sep 2012; Raúl Porcel <armin76@gentoo.org> lighttpd-1.4.31.ebuild:
   alpha/ia64/sh/sparc stable wrt #430902

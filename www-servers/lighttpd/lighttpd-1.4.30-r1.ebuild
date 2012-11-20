@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.30-r1.ebuild,v 1.6 2012/06/23 09:00:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.30-r1.ebuild,v 1.7 2012/11/20 19:07:35 wired Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ DESCRIPTION="Lightweight high-performance web server"
 HOMEPAGE="http://www.lighttpd.net/"
 SRC_URI="http://download.lighttpd.net/lighttpd/releases-1.4.x/${P}.tar.bz2"
 
-LICENSE="BSD"
+LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="bzip2 doc fam gdbm ipv6 kerberos ldap libev lua minimal memcache mysql pcre php rrdtool selinux ssl test uploadprogress webdav xattr zlib"
