@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/libmtp-1.1.5.ebuild,v 1.5 2012/11/15 10:53:17 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/libmtp-1.1.5.ebuild,v 1.6 2012/11/20 20:06:28 ago Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ if [[ ${PV} == *9999* ]]; then
 	EGIT_REPO_URI="git://${PN}.git.sourceforge.net/gitroot/${PN}/${PN}"
 	inherit git-2
 else
-	KEYWORDS="amd64 hppa ppc ppc64 ~x86"
+	KEYWORDS="amd64 hppa ppc ppc64 x86"
 	SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 fi
 
