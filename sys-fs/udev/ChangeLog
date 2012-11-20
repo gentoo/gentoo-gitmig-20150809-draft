@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.739 2012/11/20 14:46:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.740 2012/11/20 18:06:10 blueness Exp $
+
+  20 Nov 2012; Anthony G. Basile <blueness@gentoo.org> udev-171-r9.ebuild:
+  stable arm ppc ppc64, bug #443592
 
   20 Nov 2012; Jeroen Roovers <jer@gentoo.org> udev-171-r9.ebuild:
   Stable for HPPA (bug #443592).
