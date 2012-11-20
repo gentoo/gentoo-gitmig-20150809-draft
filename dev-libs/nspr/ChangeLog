@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/nspr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.199 2012/11/20 01:46:46 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.200 2012/11/20 16:16:22 ago Exp $
+
+  20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> nspr-4.9.2.ebuild:
+  Stable for ppc, tested by Vicente Olivert Riera <peratu@carrosses.com>, wrt
+  bug #443450
 
 *nspr-4.9.2-r1 (20 Nov 2012)
 
