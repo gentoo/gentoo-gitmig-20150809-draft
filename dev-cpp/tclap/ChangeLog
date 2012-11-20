@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/tclap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tclap/ChangeLog,v 1.9 2012/11/18 14:08:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tclap/ChangeLog,v 1.10 2012/11/20 16:15:54 ago Exp $
+
+  20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> tclap-1.2.0.ebuild:
+  Stable for ppc, tested by Vicente Olivert Riera <peratu@carrosses.com>, wrt
+  bug #443976
 
   18 Nov 2012; Agostino Sarubbo <ago@gentoo.org> tclap-1.2.0.ebuild:
   Stable for amd64, wrt bug #443754
