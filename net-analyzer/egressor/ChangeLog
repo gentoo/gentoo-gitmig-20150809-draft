@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/egressor
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/egressor/ChangeLog,v 1.14 2012/11/18 18:39:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/egressor/ChangeLog,v 1.15 2012/11/20 20:09:34 ago Exp $
+
+  20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> egressor-1.0-r2.ebuild:
+  Stable for x86, wrt bug #441422
 
   18 Nov 2012; Agostino Sarubbo <ago@gentoo.org> egressor-1.0-r2.ebuild:
   Add ~amd64
