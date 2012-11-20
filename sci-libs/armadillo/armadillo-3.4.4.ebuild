@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/armadillo/armadillo-3.2.2.ebuild,v 1.1 2012/06/07 18:44:46 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/armadillo/armadillo-3.4.4.ebuild,v 1.1 2012/11/20 00:06:33 bicatali Exp $
 
 EAPI=4
 
@@ -14,10 +14,11 @@ SRC_URI="mirror://sourceforge/arma/${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="atlas blas doc lapack"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+IUSE="atlas blas doc examples lapack"
 
-RDEPEND=">=dev-libs/boost-1.34
+RDEPEND="
+	dev-libs/boost
 	atlas? ( sci-libs/lapack-atlas )
 	blas? ( virtual/blas )
 	lapack? ( virtual/lapack )"
@@ -46,6 +47,7 @@ src_configure() {
 	fi
 	if use atlas; then
 		mycmakeargs=(
+			-DARMA_USE_ATLAS=ON
 			-DCBLAS_FOUND=ON
 			-DCLAPACK_FOUND=ON
 			-DATLAS_INCLUDE_DIR="${EPREFIX}/usr/include/atlas/"
@@ -58,5 +60,10 @@ src_configure() {
 
 src_install() {
 	cmake-utils_src_install
-	use doc && dodoc docs/*pdf
+	dodoc README.txt
+	use doc && dodoc *pdf && dohtml *html
+	if use examples; then
+		insinto /usr/share/doc/${PF}
+		doins -r examples
+	fi
 }
