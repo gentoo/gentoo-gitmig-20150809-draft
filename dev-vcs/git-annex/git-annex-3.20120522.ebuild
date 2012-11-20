@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/git-annex-3.20120522.ebuild,v 1.4 2012/11/10 20:58:18 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/git-annex-3.20120522.ebuild,v 1.5 2012/11/20 06:41:33 slyfox Exp $
 
 EAPI=4
 
@@ -33,7 +33,7 @@ DEPEND="${RDEPEND}
 		dev-haskell/hslogger
 		dev-haskell/http
 		dev-haskell/ifelse
-		dev-haskell/json
+		dev-haskell/json[generic]
 		dev-haskell/lifted-base
 		dev-haskell/missingh
 		dev-haskell/monad-control
