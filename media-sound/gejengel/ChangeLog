@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gejengel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/ChangeLog,v 1.24 2012/11/06 17:09:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/ChangeLog,v 1.25 2012/11/20 20:07:44 ago Exp $
+
+  20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> gejengel-0.1.4-r1.ebuild:
+  Stable for x86, wrt bug #441396
 
   06 Nov 2012; Agostino Sarubbo <ago@gentoo.org> gejengel-0.1.4-r1.ebuild:
   Stable for amd64, wrt bug #441396
