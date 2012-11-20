@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-2.7.2.ebuild,v 1.1 2012/11/17 13:45:36 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-2.7.2.ebuild,v 1.2 2012/11/20 12:06:16 eras Exp $
 
 EAPI=4
 inherit eutils db-use autotools user
@@ -59,6 +59,7 @@ src_prepare() {
 	sed -i -e '/^sock/s/t-sign-ss-macro-value-file.sock/t-s-s-m-v-f.sock/' \
 		opendkim/tests/t-sign-ss-macro-value-file.lua || die
 
+	epatch "${FILESDIR}/${P}-strl.patch"
 	eautoreconf
 }
 
