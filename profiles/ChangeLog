@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7162 2012/11/18 18:20:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7163 2012/11/20 04:18:17 zorry Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Nov 2012; Magnus Granberg <zorry@gentoo.org>
+  hardened/linux/amd64/package.mask, hardened/linux/amd64/package.use.mask:
+  unmask >=nvidia-drivers-300.00 on amd64 but mask use X on it. Bug#433121
 
   18 Nov 2012; Jeroen Roovers <jer@gentoo.org> package.mask:
   Unmask www-client/opera-12.11.
