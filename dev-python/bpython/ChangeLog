@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/bpython
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/ChangeLog,v 1.34 2012/11/15 11:43:14 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/ChangeLog,v 1.35 2012/11/20 20:47:49 ago Exp $
+
+  20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> bpython-0.11.ebuild:
+  Stable for x86, wrt bug #433461
 
   15 Nov 2012; Andrey Grozin <grozin@gentoo.org> bpython-0.11.ebuild,
   +files/bpython-desktop.patch:
