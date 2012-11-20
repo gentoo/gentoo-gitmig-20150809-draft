@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/multimon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/multimon/ChangeLog,v 1.16 2012/11/03 13:10:00 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/multimon/ChangeLog,v 1.17 2012/11/20 20:45:01 ago Exp $
+
+  20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> multimon-1.0-r2.ebuild:
+  Stable for x86, wrt bug #441086
 
   03 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> multimon-1.0-r2.ebuild:
   Add ~amd64 keyword, wrt bug #441086
