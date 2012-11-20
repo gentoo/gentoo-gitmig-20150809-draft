@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libunwind/libunwind-1.1.ebuild,v 1.2 2012/11/02 00:48:02 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libunwind/libunwind-1.1.ebuild,v 1.3 2012/11/20 16:41:52 vapier Exp $
 
 EAPI="4"
 
@@ -11,7 +11,10 @@ SRC_URI="http://download.savannah.nongnu.org/releases/libunwind/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="7"
 KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd"
-IUSE="debug debug-frame static-libs"
+IUSE="debug debug-frame lzma static-libs"
+
+RDEPEND="lzma? ( app-arch/xz-utils )"
+DEPEND="${RDEPEND}"
 
 DOCS=( AUTHORS ChangeLog NEWS README TODO )
 
@@ -36,6 +39,7 @@ src_configure() {
 	econf \
 		--enable-cxx-exceptions \
 		$(use_enable debug-frame) \
+		$(use_enable lzma minidebuginfo) \
 		$(use_enable static-libs static) \
 		$(use_enable debug conservative_checks) \
 		$(use debug && echo --enable-debug)
