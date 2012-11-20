@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/buildbot-slave
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot-slave/ChangeLog,v 1.32 2012/11/13 22:10:47 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot-slave/ChangeLog,v 1.33 2012/11/20 20:57:13 ago Exp $
+
+  20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> buildbot-slave-0.8.7.ebuild:
+  Stable for x86, wrt bug #441306
 
   13 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
   buildbot-slave-0.8.7.ebuild:
