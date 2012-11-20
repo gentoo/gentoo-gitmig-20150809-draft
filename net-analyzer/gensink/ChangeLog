@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/gensink
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gensink/ChangeLog,v 1.9 2012/11/10 12:00:57 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gensink/ChangeLog,v 1.10 2012/11/20 20:09:54 ago Exp $
+
+  20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> gensink-4.1-r1.ebuild:
+  Stable for x86, wrt bug #441424
 
 *gensink-4.1-r2 (10 Nov 2012)
 
