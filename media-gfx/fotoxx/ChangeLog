@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/fotoxx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/ChangeLog,v 1.40 2012/11/15 15:07:36 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/ChangeLog,v 1.41 2012/11/20 19:53:46 ago Exp $
+
+  20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> fotoxx-12.11.ebuild:
+  Stable for x86, wrt bug #441352
 
   15 Nov 2012; Andrey Grozin <grozin@gentoo.org> fotoxx-12.10.ebuild,
   fotoxx-12.11.ebuild:
