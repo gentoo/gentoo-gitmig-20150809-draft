@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-pdf-viewer/claws-mail-pdf-viewer-0.9.3.ebuild,v 1.1 2012/11/20 21:07:16 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-pdf-viewer/claws-mail-pdf-viewer-0.9.3.ebuild,v 1.2 2012/11/20 21:19:10 fauli Exp $
 
 inherit eutils
 
 MY_P="${P#claws-mail-}"
 MY_P="${MY_P/-/_}"
 
-DESCRIPTION="This plugin lets you remove attachments from mails."
+DESCRIPTION="A plugin for Claws to display PDF files directly"
 HOMEPAGE="http://www.claws-mail.org/"
 SRC_URI="http://www.claws-mail.org/downloads/plugins/${MY_P}.tar.gz"
 LICENSE="GPL-3"

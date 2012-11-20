@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-pdf-viewer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-pdf-viewer/ChangeLog,v 1.35 2012/11/20 21:07:16 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-pdf-viewer/ChangeLog,v 1.36 2012/11/20 21:19:10 fauli Exp $
+
+  20 Nov 2012; Christian Faulhammer <fauli@gentoo.org>
+  claws-mail-pdf-viewer-0.9.3.ebuild:
+  fix DESCRIPTION
 
 *claws-mail-pdf-viewer-0.9.3 (20 Nov 2012)
 
