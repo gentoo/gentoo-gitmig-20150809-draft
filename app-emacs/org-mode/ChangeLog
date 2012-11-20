@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/org-mode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.149 2012/11/04 13:40:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.150 2012/11/20 20:43:44 ago Exp $
+
+  20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> org-mode-7.9.2.ebuild:
+  Stable for x86, wrt bug #441072
 
   04 Nov 2012; Agostino Sarubbo <ago@gentoo.org> org-mode-7.9.2.ebuild:
   Stable for amd64, wrt bug #441072

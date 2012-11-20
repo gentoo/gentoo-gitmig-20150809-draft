@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-7.9.2.ebuild,v 1.2 2012/11/04 13:40:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-7.9.2.ebuild,v 1.3 2012/11/20 20:43:44 ago Exp $
 
 EAPI=4
 NEED_EMACS=22
@@ -13,7 +13,7 @@ SRC_URI="http://orgmode.org/org-${PV}.tar.gz"
 
 LICENSE="GPL-3+ FDL-1.3+ contrib? ( GPL-2+ MIT ) odt-schema? ( OASIS-Open )"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86 ~x86-fbsd ~x86-macos"
+KEYWORDS="amd64 ~ppc x86 ~x86-fbsd ~x86-macos"
 IUSE="contrib doc odt-schema"
 
 DEPEND="doc? ( virtual/texi2dvi )"
