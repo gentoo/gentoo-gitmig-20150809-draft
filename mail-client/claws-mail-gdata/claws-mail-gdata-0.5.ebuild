@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-gdata/claws-mail-gdata-0.5.ebuild,v 1.1 2012/11/20 20:36:36 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-gdata/claws-mail-gdata-0.5.ebuild,v 1.2 2012/11/20 20:57:48 fauli Exp $
 
 EAPI=4
 
@@ -25,7 +25,4 @@ S="${WORKDIR}/${MY_P}"
 src_install() {
 	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog README
-
-	# going to conflict with libical
-	rm -f "${D}"/usr/include/ical.h
 }

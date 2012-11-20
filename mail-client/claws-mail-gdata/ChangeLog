@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-gdata
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-gdata/ChangeLog,v 1.16 2012/11/20 20:36:36 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-gdata/ChangeLog,v 1.17 2012/11/20 20:57:48 fauli Exp $
+
+  20 Nov 2012; Christian Faulhammer <fauli@gentoo.org>
+  claws-mail-gdata-0.5.ebuild:
+  remove unnecessary line
 
 *claws-mail-gdata-0.5 (20 Nov 2012)
 
