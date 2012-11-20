@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7165 2012/11/20 16:15:37 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7166 2012/11/20 16:24:58 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
+  +hardened/linux/uclibc/arm/use.mask, +hardened/linux/uclibc/mips/use.mask,
+  +hardened/linux/uclibc/x86/use.mask:
+  Unmask SIMD flags on hardened/linux/uclibc/x86 and unmask arch USE flags for
+  all arches
 
   20 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
   +hardened/linux/uclibc/amd64/use.mask:
