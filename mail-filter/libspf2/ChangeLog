@@ -1,6 +1,12 @@
 # ChangeLog for mail-filter/libspf2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libspf2/ChangeLog,v 1.46 2012/11/03 09:31:28 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libspf2/ChangeLog,v 1.47 2012/11/20 15:21:09 eras Exp $
+
+*libspf2-1.2.9-r3 (20 Nov 2012)
+
+  20 Nov 2012; Eray Aslan <eras@gentoo.org> +files/libspf2-1.2.9-ipv6.patch,
+  +libspf2-1.2.9-r3.ebuild:
+  Fix ipv6 failures - bug #443984.  Thanks to Peter Danzmayr
 
   03 Nov 2012; Eray Aslan <eras@gentoo.org> libspf2-1.2.9-r2.ebuild:
   Add static USE flag to control building static binaries
