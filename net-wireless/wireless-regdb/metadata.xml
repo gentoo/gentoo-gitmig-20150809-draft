@@ -5,6 +5,10 @@
 		<email>chainsaw@gentoo.org</email>
 		<name>Tony Vroon</name>
 	</maintainer>
+	<maintainer>
+		<email>zerochaos@gentoo.org</email>
+		<name>Rick Farina</name>
+	</maintainer>
 	<longdescription lang="en">
 		Regulatory rules database for wireless network cards
 	</longdescription>
