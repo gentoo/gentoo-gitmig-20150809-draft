@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-viewer/youtube-viewer-2.5.9.ebuild,v 1.3 2012/07/04 06:23:30 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-viewer/youtube-viewer-2.5.9.ebuild,v 1.4 2012/11/20 18:43:53 hasufell Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-RDEPEND="dev-lang/perl
+RDEPEND=">=dev-lang/perl-5.10.0
 	dev-perl/libwww-perl
 	dev-perl/XML-Fast
 	|| ( media-video/mplayer[X,network]
