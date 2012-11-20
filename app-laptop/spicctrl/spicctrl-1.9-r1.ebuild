@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/spicctrl/spicctrl-1.9-r1.ebuild,v 1.1 2012/11/20 08:45:41 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/spicctrl/spicctrl-1.9-r1.ebuild,v 1.2 2012/11/20 20:44:22 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.popies.net/sonypi/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 -ppc ~x86"
+KEYWORDS="~amd64 -ppc x86"
 IUSE=""
 
 DEPEND=""
