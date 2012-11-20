@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/nut
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/ChangeLog,v 1.50 2012/11/19 12:28:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/ChangeLog,v 1.51 2012/11/20 20:45:22 ago Exp $
+
+  20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> nut-18.0.ebuild:
+  Stable for x86, wrt bug #441088
 
 *nut-18.4 (19 Nov 2012)
 
