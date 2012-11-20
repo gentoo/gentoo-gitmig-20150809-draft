@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/j/j-701.ebuild,v 1.1 2012/11/19 02:32:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/j/j-701.ebuild,v 1.2 2012/11/20 17:18:54 mr_bones_ Exp $
 
 EAPI=4
 DESCRIPTION="Modern, high-level, general-purpose, high-performance programming language"
@@ -34,7 +34,7 @@ src_compile() {
 }
 
 src_install() {
-	# since this appears to use hardcoded relative paths 
+	# since this appears to use hardcoded relative paths
 	# there's no sane way to put it in the normal filesystem hierarchy
 	mkdir -p "${D}/opt/j"
 	cp -r j/* "${D}/opt/j" || die
