@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sagan
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sagan/ChangeLog,v 1.15 2012/11/06 19:52:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sagan/ChangeLog,v 1.16 2012/11/20 20:41:17 ago Exp $
+
+  20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> sagan-0.2.1-r2.ebuild:
+  Stable for x86, wrt bug #441048
 
   06 Nov 2012; Agostino Sarubbo <ago@gentoo.org> sagan-0.2.1-r2.ebuild:
   Stable for amd64, wrt bug #441048
