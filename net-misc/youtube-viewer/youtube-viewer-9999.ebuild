@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-viewer/youtube-viewer-9999.ebuild,v 1.7 2012/08/21 16:35:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-viewer/youtube-viewer-9999.ebuild,v 1.8 2012/11/20 18:40:59 hasufell Exp $
 
 EAPI=4
 
@@ -17,6 +17,7 @@ KEYWORDS=""
 IUSE=""
 
 RDEPEND="
+	>=dev-lang/perl-5.16.0
 	dev-perl/Data-Dump
 	dev-perl/libwww-perl
 	dev-perl/XML-Fast
