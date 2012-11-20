@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/hostap-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-utils/ChangeLog,v 1.36 2012/11/18 11:16:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-utils/ChangeLog,v 1.37 2012/11/20 08:24:10 pinkbyte Exp $
+
+*hostap-utils-0.4.7-r1 (20 Nov 2012)
+
+  20 Nov 2012; Sergey Popov <pinkbyte@gentoo.org>
+  +hostap-utils-0.4.7-r1.ebuild, +files/hostap-utils-0.4.7-makefile.patch:
+  Revision bump: EAPI 4, base eclass, respect LDFLAGS wrt bug #334949
 
   18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop mobile herd as talked in gentoo-dev ML
