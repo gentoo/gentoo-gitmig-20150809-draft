@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/notmuch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.64 2012/11/06 17:09:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.65 2012/11/20 20:36:15 ago Exp $
+
+  20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> notmuch-0.14-r1.ebuild:
+  Stable for x86, wrt bug #441466
 
   06 Nov 2012; <ago@gentoo.org> notmuch-0.14-r1.ebuild:
   Stable for amd64, wrt bug #441466
