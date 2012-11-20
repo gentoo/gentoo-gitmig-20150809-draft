@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pms/pms-9999.ebuild,v 1.4 2012/05/05 08:45:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pms/pms-9999.ebuild,v 1.5 2012/11/20 19:17:12 wired Exp $
 
 EAPI=2
 
@@ -28,6 +28,9 @@ DEPEND="
 "
 
 src_prepare() {
+	# bug #424717
+	sed -i "s:^CXXFLAGS +=:AM_CXXFLAGS =:g" Makefile.am || die "sed failed"
+
 	eautoreconf
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/pms
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pms/ChangeLog,v 1.7 2012/05/05 08:45:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pms/ChangeLog,v 1.8 2012/11/20 19:17:12 wired Exp $
+
+  20 Nov 2012; Alex Alexander <wired@gentoo.org> pms-0.42.ebuild,
+  pms-9999.ebuild:
+  fixed build w/ automake-1.12 - bug #424717
 
   05 May 2012; Michał Górny <mgorny@gentoo.org> pms-0.42.ebuild,
   pms-9999.ebuild:
