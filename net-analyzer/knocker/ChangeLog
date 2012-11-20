@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/knocker
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/knocker/ChangeLog,v 1.21 2012/11/14 13:00:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/knocker/ChangeLog,v 1.22 2012/11/20 20:10:12 ago Exp $
+
+  20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> knocker-0.7.1-r2.ebuild:
+  Stable for x86, wrt bug #442962
 
   14 Nov 2012; <ago@gentoo.org> knocker-0.7.1-r2.ebuild:
   Stable for amd64, wrt bug #442962
