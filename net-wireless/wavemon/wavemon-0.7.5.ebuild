@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/wavemon-0.7.5.ebuild,v 1.1 2012/11/20 09:17:30 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/wavemon-0.7.5.ebuild,v 1.2 2012/11/20 11:59:11 pinkbyte Exp $
 
 EAPI="4"
 
@@ -29,4 +29,11 @@ src_prepare() {
 	sed -i -e '/^install:/s/install-docs//' Makefile.in || die 'sed on Makefile.in failed'
 
 	autotools-utils_src_prepare
+}
+
+src_install() {
+	autotools-utils_src_install
+	# Install man files manually(bug #397807)
+	doman wavemon.1
+	doman wavemonrc.5
 }
