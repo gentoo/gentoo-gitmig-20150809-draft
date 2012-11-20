@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/gld-1.7-r2.ebuild,v 1.3 2012/11/14 13:00:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/gld-1.7-r2.ebuild,v 1.4 2012/11/20 19:53:05 ago Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.gasmi.net/down/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="postgres"
 # Not adding a mysql USE flag. The package defaults to it, so we will too.
 DEPEND="sys-libs/zlib
