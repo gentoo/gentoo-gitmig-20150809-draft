@@ -7,7 +7,7 @@
 # What you can set:
 VERSION="3.6.3.2"
 BINVERSION="3.6.3.2"
-OPTS="-q"
+OPTS="-v"
 USEFILE="/etc/portage/package.use/libreo"
 MYPKGDIR="$( portageq pkgdir )"
 ################################################
