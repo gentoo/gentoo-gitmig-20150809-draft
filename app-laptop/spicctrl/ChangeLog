@@ -1,6 +1,13 @@
 # ChangeLog for app-laptop/spicctrl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/spicctrl/ChangeLog,v 1.12 2012/11/18 10:52:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/spicctrl/ChangeLog,v 1.13 2012/11/20 08:45:41 pinkbyte Exp $
+
+*spicctrl-1.9-r1 (20 Nov 2012)
+
+  20 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> +spicctrl-1.9-r1.ebuild,
+  +files/spicctrl-1.9-makefile.patch:
+  Revision bump: EAPI 4, base eclass, respect LDFLAGS and compiler wrt bug
+  #337317, keyword ~amd64
 
   18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop mobile herd as talked in gentoo-dev ML
