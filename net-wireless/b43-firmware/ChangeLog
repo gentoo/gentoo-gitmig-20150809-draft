@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/b43-firmware
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/b43-firmware/ChangeLog,v 1.5 2012/11/18 11:04:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/b43-firmware/ChangeLog,v 1.6 2012/11/20 19:32:48 zerochaos Exp $
+
+  20 Nov 2012; Rick Farina <zerochaos@gentoo.org> metadata.xml:
+  Adding myself to help with bug reports
 
   18 Nov 2012; Pacho Ramos <pacho@gentoo.org> -b43-firmware-3.130.20.0.ebuild,
   -b43-firmware-4.150.10.5.ebuild, -b43-firmware-4.174.64.19.ebuild,
