@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.172 2012/11/15 15:26:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.173 2012/11/20 05:30:40 mgorny Exp $
+
+  20 Nov 2012; Michał Górny <mgorny@gentoo.org> use.mask:
+  Introduce a complete PYTHON_TARGETS mask wrt bug #440616.
 
   15 Nov 2012; Jeroen Roovers <jer@gentoo.org> use.mask:
   Mask USE=fdk (bug #442806).
