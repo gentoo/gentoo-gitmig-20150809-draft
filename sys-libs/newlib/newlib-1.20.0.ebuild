@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/newlib/newlib-1.20.0.ebuild,v 1.3 2012/04/27 01:09:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/newlib/newlib-1.20.0.ebuild,v 1.4 2012/11/20 14:21:39 lu_zero Exp $
 
 EAPI="4"
 
@@ -49,10 +49,6 @@ src_configure() {
 	CHOST=${CTARGET} strip-unsupported-flags
 
 	local myconf=""
-	# hardwired to avoid breakages
-	[[ $(tc-is-softfloat) != "no" ]] \
-		&& myconf="--disable-newlib-hw-fp" \
-		|| myconf="--enable-newlib-hw-fp"
 	[[ ${CTARGET} == "spu" ]] \
 		&& myconf="${myconf} --disable-newlib-multithread" \
 		|| myconf="${myconf} $(use_enable threads newlib-multithread)"
