@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/pstoedit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.78 2012/11/07 05:15:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.79 2012/11/20 19:54:12 ago Exp $
+
+  20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> pstoedit-3.61.ebuild:
+  Stable for x86, wrt bug #441360
 
   07 Nov 2012; Jeroen Roovers <jer@gentoo.org> pstoedit-3.61.ebuild:
   Stable for HPPA (bug #441360).
