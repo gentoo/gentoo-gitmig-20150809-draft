@@ -1,6 +1,15 @@
 # ChangeLog for app-portage/ufed
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ChangeLog,v 1.85 2012/11/02 21:06:34 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ChangeLog,v 1.86 2012/11/20 18:22:58 fuzzyray Exp $
+
+*ufed-9999 (20 Nov 2012)
+*ufed-0.40.2-r1 (20 Nov 2012)
+
+  20 Nov 2012; Paul Varner <fuzzyray@gentoo.org> +ufed-0.40.2-r1.ebuild,
+  +files/ufed-0.40.2-manpage-URL.patch, +files/ufed-0.40.2-prefix.patch,
+  +ufed-9999.ebuild:
+  Revision bump to add patches for prefix support.
+  Add live ebuild for testing.
 
 *ufed-0.40.2 (02 Nov 2012)
 
