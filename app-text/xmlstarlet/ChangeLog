@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xmlstarlet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/ChangeLog,v 1.42 2012/11/15 01:38:04 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/ChangeLog,v 1.43 2012/11/20 20:47:15 ago Exp $
+
+  20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> xmlstarlet-1.4.0.ebuild:
+  Stable for x86, wrt bug #441120
 
   15 Nov 2012; Anthony G. Basile <blueness@gentoo.org> xmlstarlet-1.4.0.ebuild:
   stable ppc, bug #441120
