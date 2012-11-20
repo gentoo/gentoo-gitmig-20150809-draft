@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-0.3.9.2.ebuild,v 1.2 2012/11/19 17:37:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-0.3.9.2.ebuild,v 1.3 2012/11/20 13:39:31 ago Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ SLOT="0"
 if [[ ${PV} == "9999" ]]; then
 	KEYWORDS=""
 else
-	KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd ~x86-linux ~amd64-linux"
+	KEYWORDS="amd64 ~ppc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 fi
 
 NETWORKS="+irc"
