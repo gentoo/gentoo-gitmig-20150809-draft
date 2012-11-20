@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/inspircd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.58 2012/10/15 09:47:59 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.59 2012/11/20 13:34:30 ago Exp $
+
+  20 Nov 2012;  <ago@gentoo.org> inspircd-2.0.9.ebuild:
+  Stable for amd64, wrt bug #443966
 
 *inspircd-2.0.9 (15 Oct 2012)
 
