@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/xdebug-client
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/xdebug-client/ChangeLog,v 1.49 2012/10/12 07:45:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/xdebug-client/ChangeLog,v 1.50 2012/11/20 20:35:02 ago Exp $
+
+  20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> xdebug-client-2.2.1.ebuild:
+  Stable for x86, wrt bug #433267
 
   12 Oct 2012; Agostino Sarubbo <ago@gentoo.org> xdebug-client-2.2.1.ebuild:
   Stable for amd64, wrt bug #433267
