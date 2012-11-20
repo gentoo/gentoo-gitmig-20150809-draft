@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7167 2012/11/20 19:19:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7168 2012/11/20 21:14:00 fauli Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Nov 2012; Christian Faulhammer <fauli@gentoo.org> updates/4Q-2012:
+  move mail-client/claws-mail-tnef_parse to mail-client/claws-mail-tnef-parse
 
   20 Nov 2012; Markos Chandras <hwoarang@gentoo.org> package.mask:
   net-im/jabberd is goine
