@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.180 2012/09/28 17:24:38 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.181 2012/11/20 18:14:13 billie Exp $
+
+  20 Nov 2012; Daniel Pielmeier <billie@gentoo.org> mjpegtools-2.0.0-r3.ebuild:
+  Mention extra dependencies needed by user contributed scripts in elog
+  message. Thanks to Vicente Olivert Riera in bug #443972.
 
 *mjpegtools-2.0.0-r3 (28 Sep 2012)
 

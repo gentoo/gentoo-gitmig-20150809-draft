@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-2.0.0-r3.ebuild,v 1.1 2012/09/28 17:24:38 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-2.0.0-r3.ebuild,v 1.2 2012/11/20 18:14:13 billie Exp $
 
 EAPI=4
 
@@ -81,4 +81,15 @@ src_install() {
 	dodoc mjpeg_howto.txt PLANS HINTS docs/FAQ.txt
 
 	find "${D}" -name '*.la' -exec rm -rf '{}' '+' || die "la removal failed"
+}
+
+pkg_postinst() {
+# uncomment this in the next version
+#	if [[ -z "${REPLACING_VERSIONS}" ]]; then
+		elog "mjpegtools installs user contributed scripts which require additional"
+		elog "dependencies not pulled in by the installation."
+		elog "These have to be installed manually."
+		elog "Currently known extra dpendencies are: ffmpeg, mencoder from mplayer,"
+		elog "parts of transcode, mpeg2dec from libmpeg2, sox, toolame, vcdimager, python."
+#	fi
 }
