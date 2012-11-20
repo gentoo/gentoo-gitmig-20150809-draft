@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libx86
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libx86/ChangeLog,v 1.14 2012/06/27 16:39:40 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libx86/ChangeLog,v 1.15 2012/11/20 21:07:25 ago Exp $
+
+*libx86-1.1-r2 (20 Nov 2012)
+
+  20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> +libx86-1.1-r2.ebuild:
+  eapi5, respect AR
 
   27 Jun 2012; Michael Palimaka <kensington@gentoo.org>
   -files/libx86-0.99-build.patch, -libx86-0.99.ebuild, -libx86-1.1.ebuild:
