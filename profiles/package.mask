@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14235 2012/11/18 23:14:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14236 2012/11/20 09:27:21 pinkbyte Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Sergey Popov <pinkbyte@gentoo.org> (20 Nov 2012)
+# Does not build with new wireshark, bug #394949
+# Last release was in 2007, upstream is dead.
+# Masked for removal in 30 days.
+net-wireless/wifiscanner
 
 # Robin H. Johnson <robbat2@gentoo.org> (18 Nov 2012)
 # Dead upstream, replaced by gitolite
