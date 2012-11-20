@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/wavemon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/ChangeLog,v 1.42 2012/11/20 08:53:47 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/ChangeLog,v 1.43 2012/11/20 09:17:30 pinkbyte Exp $
+
+*wavemon-0.7.5 (20 Nov 2012)
+
+  20 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> +wavemon-0.7.5.ebuild:
+  Version bump wrt bug #397807
 
   20 Nov 2012; Sergey Popov <pinkbyte@gentoo.org>
   +files/wavemon-0.6.7-dont-override-CFLAGS.patch:
