@@ -1,6 +1,9 @@
 # ChangeLog for net-news/liferea
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.233 2012/11/06 17:08:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.234 2012/11/20 20:39:49 ago Exp $
+
+  20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> liferea-1.8.8.ebuild:
+  Stable for x86, wrt bug #441490
 
   06 Nov 2012; <ago@gentoo.org> liferea-1.8.8.ebuild:
   Stable for amd64, wrt bug #441490
