@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/seven-kingdoms/seven-kingdoms-2.14.3.ebuild,v 1.1 2012/11/19 14:41:50 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/seven-kingdoms/seven-kingdoms-2.14.3.ebuild,v 1.2 2012/11/20 05:56:10 pinkbyte Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="media-libs/libsdl
+DEPEND="media-libs/libsdl[X,video]
 	media-libs/sdl-net
 	media-libs/openal"
 RDEPEND="${DEPEND}"
