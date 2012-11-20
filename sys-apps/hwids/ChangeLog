@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hwids
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.34 2012/11/19 17:59:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.35 2012/11/20 06:00:15 pinkbyte Exp $
+
+  20 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> hwids-20121119.ebuild:
+  amd64 stable, bug #443940
 
 *hwids-20121119 (19 Nov 2012)
 
