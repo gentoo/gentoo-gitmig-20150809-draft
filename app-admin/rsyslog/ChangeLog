@@ -1,6 +1,17 @@
 # ChangeLog for app-admin/rsyslog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.83 2012/10/29 16:12:57 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.84 2012/11/20 13:03:37 ultrabug Exp $
+
+*rsyslog-7.2.2 (20 Nov 2012)
+*rsyslog-6.6.0 (20 Nov 2012)
+*rsyslog-5.10.1 (20 Nov 2012)
+
+  20 Nov 2012; Ultrabug <ultrabug@gentoo.org>
+  +files/6-stable/rsyslog-6.6.0-fix-runtime.patch,
+  +files/7-stable/rsyslog.confd, +files/7-stable/rsyslog.initd,
+  +files/7-stable/rsyslog.logrotate, +files/7-stable/rsyslog-gentoo.conf,
+  +rsyslog-5.10.1.ebuild, +rsyslog-6.6.0.ebuild, +rsyslog-7.2.2.ebuild:
+  Version bump, new 7-stable branch, fix #433595
 
   29 Oct 2012; Tiziano Müller <dev-zero@gentoo.org> metadata.xml:
   Removed myself as co-maintainer.
