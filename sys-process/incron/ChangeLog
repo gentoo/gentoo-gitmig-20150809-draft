@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/incron
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/incron/ChangeLog,v 1.22 2012/10/30 20:22:04 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/incron/ChangeLog,v 1.23 2012/11/20 01:11:48 flameeyes Exp $
+
+  20 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/incron-0.5.10+gcc-4.7.patch, incron-0.5.10.ebuild:
+  QA: add patch to build with gcc 4.7 (bug #423935).
 
   30 Oct 2012; Christian Ruppert <idl0r@gentoo.org> -incron-0.5.8.ebuild,
   -incron-0.5.9-r1.ebuild, -files/incron-0.5.8-gcc44.patch,
@@ -93,4 +97,3 @@
   19 Dec 2007; Benedikt Böhm <hollow@gentoo.org>
   +files/incron-0.5.7-gentoo.patch, +metadata.xml, +incron-0.5.7.ebuild:
   initial incron ebuild
-
