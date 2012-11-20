@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14236 2012/11/20 09:27:21 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14237 2012/11/20 19:19:19 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -340,11 +340,6 @@ app-i18n/ibus-table-yinma
 # for recent MythTV versions. Removal in a month.
 media-libs/gmyth
 media-plugins/gst-plugins-mythtv
-
-# Pacho Ramos <pacho@gentoo.org> (16 Sep 2012)
-# Upstream keeps inactive for ages and, then, it has broke again
-# now with gnutls-3 (#421385). Removal in a month.
-net-im/jabberd
 
 # Pacho Ramos <pacho@gentoo.org> (16 Sep 2012)
 # Fails with kernel-3.4, its included alsa version should
