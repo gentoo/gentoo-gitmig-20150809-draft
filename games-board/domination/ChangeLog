@@ -1,6 +1,12 @@
 # ChangeLog for games-board/domination
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/domination/ChangeLog,v 1.8 2012/10/30 12:01:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/domination/ChangeLog,v 1.9 2012/11/20 17:19:39 mr_bones_ Exp $
+
+*domination-1.1.1.2 (20 Nov 2012)
+
+  20 Nov 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  +domination-1.1.1.2.ebuild:
+  version bump
 
   30 Oct 2012; <ago@gentoo.org> domination-1.1.1.1.ebuild:
   Stable for amd64, wrt bug #439212
