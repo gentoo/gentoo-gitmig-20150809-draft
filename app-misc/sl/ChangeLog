@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/sl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sl/ChangeLog,v 1.26 2012/11/18 15:57:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sl/ChangeLog,v 1.27 2012/11/20 16:15:07 jer Exp $
+
+  20 Nov 2012; Jeroen Roovers <jer@gentoo.org> sl-3.03-r3.ebuild:
+  Stable for HPPA (bug #443784).
 
   18 Nov 2012; Agostino Sarubbo <ago@gentoo.org> sl-3.03-r3.ebuild:
   Stable for amd64, wrt bug #443784
