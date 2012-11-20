@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.28.0.ebuild,v 1.3 2012/11/11 00:27:44 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.28.1.ebuild,v 1.1 2012/11/20 18:22:58 blueness Exp $
 
 EAPI="4"
 
@@ -64,11 +64,9 @@ DEPEND="${RDEPEND}
 	)"
 
 # c-ares must be disabled for threads
-# metalink cannot use nss for its backend #433822
 # only one ssl provider can be enabled
 REQUIRED_USE="
 	threads? ( !adns )
-	metalink? ( !curl_ssl_nss )
 	ssl? (
 		^^ (
 			curl_ssl_axtls
