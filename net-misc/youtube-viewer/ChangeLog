@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/youtube-viewer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-viewer/ChangeLog,v 1.15 2012/11/20 18:43:53 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-viewer/ChangeLog,v 1.16 2012/11/20 18:48:51 hasufell Exp $
+
+*youtube-viewer-3.0.4 (20 Nov 2012)
+
+  20 Nov 2012; Julian Ospald <hasufell@gentoo.org>
+  +youtube-viewer-3.0.4.ebuild:
+  version bump
 
   20 Nov 2012; Julian Ospald <hasufell@gentoo.org> youtube-viewer-2.5.9.ebuild,
   youtube-viewer-3.0.2.ebuild, youtube-viewer-3.0.3.ebuild:
