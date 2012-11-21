@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/vhba-20120422-r1.ebuild,v 1.2 2012/11/14 20:28:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/vhba-20120422-r1.ebuild,v 1.3 2012/11/21 10:12:55 ago Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/cdemu/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~x86"
+KEYWORDS="amd64 ~hppa x86"
 IUSE=""
 
 RDEPEND=">=sys-fs/udev-125"
