@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/libvisio-0.0.21.ebuild,v 1.3 2012/11/21 10:13:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/libvisio-0.0.21.ebuild,v 1.4 2012/11/21 13:26:59 scarabeus Exp $
 
 EAPI=5
 
@@ -26,6 +26,7 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	>=dev-libs/boost-1.46
+	dev-util/gperf
 	virtual/pkgconfig
 	sys-devel/libtool
 	doc? ( app-doc/doxygen )
