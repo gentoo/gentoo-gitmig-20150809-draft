@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/ardour
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.103 2012/11/20 20:30:19 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.104 2012/11/21 21:21:28 nativemad Exp $
+
+  22 Nov 2012; Andreas Schuerch <nativemad@gentoo.org> ardour-2.8.14.ebuild,
+  +files/ardour-2.8.14-boost-150.patch:
+  added a little patch for boost-1.50. See bug 425578, Thanks Diego.
 
 *ardour-2.8.14 (21 Nov 2012)
 
