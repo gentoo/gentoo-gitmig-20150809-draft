@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xautolock/xautolock-2.2.ebuild,v 1.7 2012/10/31 16:49:58 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xautolock/xautolock-2.2.ebuild,v 1.8 2012/11/21 11:14:45 ago Exp $
 
 inherit toolchain-funcs
 
@@ -9,7 +9,7 @@ SRC_URI="http://www.ibiblio.org/pub/Linux/X11/screensavers/${P}.tgz"
 HOMEPAGE="http://www.ibiblio.org/pub/Linux/X11/screensavers/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~sparc ~x86"
+KEYWORDS="amd64 ppc ~sparc x86"
 IUSE=""
 
 RDEPEND="
