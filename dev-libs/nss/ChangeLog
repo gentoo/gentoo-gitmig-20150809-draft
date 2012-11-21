@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nss
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.266 2012/11/21 10:15:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.267 2012/11/21 21:54:03 maekke Exp $
+
+  21 Nov 2012; Markus Meier <maekke@gentoo.org> nss-3.14.ebuild:
+  arm stable, bug #439586
 
   21 Nov 2012;  <ago@gentoo.org> nss-3.14.ebuild:
   Stable for x86, wrt bug #439586
