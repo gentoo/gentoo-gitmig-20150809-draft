@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/systemd.eclass,v 1.18 2012/10/30 21:56:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/systemd.eclass,v 1.19 2012/11/21 09:06:42 mgorny Exp $
 
 # @ECLASS: systemd.eclass
 # @MAINTAINER:
@@ -69,10 +69,9 @@ systemd_get_utildir() {
 systemd_dounit() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	(
-		insinto "$(_systemd_get_unitdir)"
-		doins "${@}"
-	)
+	local INSDESTTREE
+	insinto "$(_systemd_get_unitdir)"
+	doins "${@}"
 }
 
 # @FUNCTION: systemd_newunit
@@ -83,10 +82,9 @@ systemd_dounit() {
 systemd_newunit() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	(
-		insinto "$(_systemd_get_unitdir)"
-		newins "${@}"
-	)
+	local INSDESTTREE
+	insinto "$(_systemd_get_unitdir)"
+	newins "${@}"
 }
 
 # @FUNCTION: systemd_dotmpfilesd
@@ -102,10 +100,9 @@ systemd_dotmpfilesd() {
 			|| die 'tmpfiles.d files need to have .conf suffix.'
 	done
 
-	(
-		insinto /usr/lib/tmpfiles.d/
-		doins "${@}"
-	)
+	local INSDESTTREE
+	insinto /usr/lib/tmpfiles.d/
+	doins "${@}"
 }
 
 # @FUNCTION: systemd_newtmpfilesd
@@ -119,10 +116,9 @@ systemd_newtmpfilesd() {
 	[[ ${2} == *.conf ]] \
 		|| die 'tmpfiles.d files need to have .conf suffix.'
 
-	(
-		insinto /usr/lib/tmpfiles.d/
-		newins "${@}"
-	)
+	local INSDESTTREE
+	insinto /usr/lib/tmpfiles.d/
+	newins "${@}"
 }
 
 # @FUNCTION: systemd_enable_service
