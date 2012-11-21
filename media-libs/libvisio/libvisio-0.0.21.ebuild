@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/libvisio-0.0.21.ebuild,v 1.1 2012/11/21 10:06:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/libvisio-0.0.21.ebuild,v 1.2 2012/11/21 10:09:56 scarabeus Exp $
 
-EAPI=4
+EAPI=5
 
 EGIT_REPO_URI="git://anongit.freedesktop.org/git/libreoffice/contrib/libvisio/"
 inherit base autotools
@@ -17,7 +17,7 @@ SLOT="0"
 
 # Don't move KEYWORDS on the previous line or ekeyword won't work # 399061
 [[ ${PV} == 9999 ]] || \
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 
 IUSE="doc static-libs"
 
@@ -33,10 +33,6 @@ DEPEND="${RDEPEND}
 	sys-devel/libtool
 	doc? ( app-doc/doxygen )
 "
-
-PATCHES=(
-	"${FILESDIR}/${P}-fix-underlinking-with-gold.patch"
-)
 
 src_prepare() {
 	[[ -d m4 ]] || mkdir "m4"
