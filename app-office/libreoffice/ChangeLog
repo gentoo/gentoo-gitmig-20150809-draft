@@ -1,6 +1,9 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.401 2012/11/20 21:40:51 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.402 2012/11/21 15:45:10 scarabeus Exp $
+
+  21 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-9999-r2.ebuild:
+  Berkdb is gone from master.
 
   20 Nov 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   files/generate_libreoffice_package.sh:

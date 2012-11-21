@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.130 2012/11/18 11:39:51 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.131 2012/11/21 15:45:10 scarabeus Exp $
 
 EAPI=4
 
@@ -120,7 +120,6 @@ COMMON_DEPEND="
 	>=net-misc/curl-7.21.4
 	net-nds/openldap
 	sci-mathematics/lpsolve
-	>=sys-libs/db-4.8
 	virtual/jpeg
 	>=x11-libs/cairo-1.10.0[X]
 	x11-libs/libXinerama
