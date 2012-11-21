@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.423 2012/11/21 14:07:09 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.424 2012/11/21 16:08:54 chainsaw Exp $
+
+*asterisk-1.8.18.0-r1 (21 Nov 2012)
+
+  21 Nov 2012; Tony Vroon <chainsaw@gentoo.org> -asterisk-1.8.16.0.ebuild,
+  -asterisk-1.8.17.0.ebuild, -asterisk-1.8.18.0.ebuild,
+  +asterisk-1.8.18.0-r1.ebuild:
+  Fix by Jaco Kroon to avoid spurious errors in the AMI ShowDialPlan
+  application, closes bug #440278. Prevent pwlib configure hooks catching on
+  ptlib, closes bug #440278 by Diego Elio "Flameeyes" Pettenò. Remove older
+  ebuilds up to last stable. Contrary to earlier news, this -r1 ebuild is the
+  new stable candidate.
 
 *asterisk-10.10.0-r1 (21 Nov 2012)
 
