@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/gtkpod
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.116 2012/11/04 14:08:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.117 2012/11/21 11:01:52 ago Exp $
+
+  21 Nov 2012; Agostino Sarubbo <ago@gentoo.org> gtkpod-2.1.2-r1.ebuild:
+  Stable for x86, wrt bug #440928
 
   04 Nov 2012; <ago@gentoo.org> gtkpod-2.1.2-r1.ebuild:
   Stable for amd64, wrt bug #440928
