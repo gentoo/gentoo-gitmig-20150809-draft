@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/sancp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sancp/ChangeLog,v 1.15 2012/11/21 04:22:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sancp/ChangeLog,v 1.16 2012/11/21 04:30:56 jer Exp $
+
+  21 Nov 2012; Jeroen Roovers <jer@gentoo.org> files/sancp.confd:
+  Whitespace.
 
 *sancp-1.6.1-r4 (21 Nov 2012)
 
@@ -67,4 +70,3 @@
   08 Oct 2005; Benjamin Smee <strerror@gentoo.org> +files/sancp.confd,
   +files/sancp.rc1, +metadata.xml, +sancp-1.6.1.ebuild:
   Initial import. Thanks to soulse for base ebuild
-
