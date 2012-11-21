@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.73 2012/11/12 08:20:18 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.74 2012/11/21 10:22:13 scarabeus Exp $
+
+  21 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml,
+  mplayer2-2.0_p20121108.ebuild, mplayer2-9999.ebuild:
+  Drop the -j1 from docs wrt bug#361075#c8. Thanks to nikoli.
 
 *mplayer2-2.0_p20121108 (12 Nov 2012)
 

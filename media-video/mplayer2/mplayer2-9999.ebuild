@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.47 2012/11/12 08:20:18 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-9999.ebuild,v 1.48 2012/11/21 10:22:13 scarabeus Exp $
 
 EAPI=4
 
@@ -423,7 +423,7 @@ src_configure() {
 
 src_compile() {
 	base_src_compile
-	use doc && emake -j1 -C DOCS/xml html-chunked
+	use doc && emake -C DOCS/xml html-chunked
 }
 
 src_install() {
