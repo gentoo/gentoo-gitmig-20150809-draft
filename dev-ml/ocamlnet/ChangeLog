@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/ocamlnet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.64 2012/08/03 22:38:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.65 2012/11/21 00:10:32 aballier Exp $
+
+*ocamlnet-3.6.1 (21 Nov 2012)
+
+  21 Nov 2012; Alexis Ballier <aballier@gentoo.org> +ocamlnet-3.6.1.ebuild:
+  version bump
 
   03 Aug 2012; Alexis Ballier <aballier@gentoo.org> ocamlnet-3.6.ebuild:
   license is ZLIB
