@@ -5,4 +5,8 @@
   <email>josejx@gentoo.org</email>
   <name>Joseph Jezak</name>
 </maintainer>
+<maintainer>
+  <email>zerochaos@gentoo.org</email>
+  <name>Rick Farina</name>
+</maintainer>
 </pkgmetadata>

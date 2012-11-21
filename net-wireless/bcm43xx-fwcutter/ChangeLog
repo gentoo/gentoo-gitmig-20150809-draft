@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bcm43xx-fwcutter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bcm43xx-fwcutter/ChangeLog,v 1.12 2012/11/18 11:06:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bcm43xx-fwcutter/ChangeLog,v 1.13 2012/11/21 03:27:26 zerochaos Exp $
+
+  21 Nov 2012; Rick Farina <zerochaos@gentoo.org> metadata.xml:
+  adding myself as co-maintainer
 
   18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop mobile herd as talked in gentoo-dev ML
