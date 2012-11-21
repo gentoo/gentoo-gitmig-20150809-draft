@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/rednotebook
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rednotebook/ChangeLog,v 1.65 2012/11/17 19:38:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rednotebook/ChangeLog,v 1.66 2012/11/21 20:42:06 hwoarang Exp $
+
+*rednotebook-1.6.2 (21 Nov 2012)
+
+  21 Nov 2012; Markos Chandras <hwoarang@gentoo.org> +rednotebook-1.6.2.ebuild:
+  Version bump
 
 *rednotebook-1.6.1 (17 Nov 2012)
 
