@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/spice-gtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.28 2012/10/29 10:19:26 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.29 2012/11/21 22:07:05 cardoe Exp $
+
+  21 Nov 2012; Doug Goldstein <cardoe@gentoo.org> spice-gtk-0.11.ebuild,
+  spice-gtk-0.12.ebuild, spice-gtk-0.13.ebuild, spice-gtk-0.7.159.ebuild,
+  spice-gtk-0.8.ebuild:
+  usbredir 0.5 and newer break existing builds so we need to depend on versions
+  less than 0.5. bug #439972
 
   29 Oct 2012; Tiziano Müller <dev-zero@gentoo.org>
   +files/0.14-Deal-with-libusbredirparser.pc-rename-to-libusbredir.patch,
