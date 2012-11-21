@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/dstat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dstat/ChangeLog,v 1.42 2012/11/07 13:10:16 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dstat/ChangeLog,v 1.43 2012/11/21 21:14:54 ago Exp $
+
+  21 Nov 2012; Agostino Sarubbo <ago@gentoo.org> dstat-0.7.2-r1.ebuild:
+  Stable for x86, tested by Vincent Olivert Riera <peratu@carrosses.com>, wrt
+  bug #435650
 
   07 Nov 2012; Anthony G. Basile <blueness@gentoo.org> dstat-0.7.2-r1.ebuild:
   stable ppc ppc64, bug #435650
