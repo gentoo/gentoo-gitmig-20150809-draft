@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/d-feet/d-feet-0.1.15.ebuild,v 1.1 2012/10/21 11:32:51 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/d-feet/d-feet-0.1.15.ebuild,v 1.2 2012/11/21 14:18:17 idella4 Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
-PYTHON_COMPAT=( python2_5 python2_6 python2_7 )
+PYTHON_COMPAT=(python2_5 python2_6 python2_7 pypy1_9)
 
 inherit gnome2 distutils-r1
 
