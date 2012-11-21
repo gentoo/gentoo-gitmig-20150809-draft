@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/gobby
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/ChangeLog,v 1.50 2012/06/08 11:50:03 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/ChangeLog,v 1.51 2012/11/21 08:50:09 xarthisius Exp $
+
+  21 Nov 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  +files/gobby-0.4.94-gtkmm3.patch, +files/gobby-0.4.94-missing-icon.patch,
+  gobby-0.4.94.ebuild:
+  Add debian patches to fix building with recent gtkmm3 wrt #444024 by Denis M.
+  (Phr33d0m) <god@politeia.in>
 
   08 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> gobby-0.4.13.ebuild:
   x86 stable wrt bug #418563
@@ -234,4 +240,3 @@
   +files/gobby.desktop, +metadata.xml, +gobby-0.1.1.ebuild:
   Initial import, based on ebuild's by upstream devs with changes to handle
   locale bug.
-
