@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tkimg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/ChangeLog,v 1.55 2012/11/17 19:25:12 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/ChangeLog,v 1.56 2012/11/21 11:28:15 ago Exp $
+
+  21 Nov 2012; Agostino Sarubbo <ago@gentoo.org> tkimg-1.4-r7.ebuild:
+  Stable for x86, wrt bug #433016
 
   17 Nov 2012; Anthony G. Basile <blueness@gentoo.org> tkimg-1.4-r7.ebuild:
   stable ppc, bug #433016
