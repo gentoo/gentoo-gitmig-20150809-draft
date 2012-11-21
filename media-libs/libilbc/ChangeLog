@@ -1,0 +1,11 @@
+# ChangeLog for media-libs/libilbc
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libilbc/ChangeLog,v 1.1 2012/11/21 23:31:43 lu_zero Exp $
+
+*libilbc-9999 (21 Nov 2012)
+*libilbc-1.1.1 (21 Nov 2012)
+
+  21 Nov 2012; Luca Barbato <lu_zero@gentoo.org> +libilbc-1.1.1.ebuild,
+  +libilbc-9999.ebuild, +metadata.xml:
+  Initial revision
+
