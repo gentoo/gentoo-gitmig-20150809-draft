@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/wbar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/ChangeLog,v 1.28 2012/10/28 16:15:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/ChangeLog,v 1.29 2012/11/21 10:15:34 ago Exp $
+
+  21 Nov 2012; Agostino Sarubbo <ago@gentoo.org> wbar-2.3.4-r1.ebuild:
+  Stable for x86, wrt bug #439780
 
   28 Oct 2012; Markos Chandras <hwoarang@gentoo.org> wbar-2.3.4-r1.ebuild:
   Stable on amd64 wrt bug #439780
