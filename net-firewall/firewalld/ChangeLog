@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/firewalld
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firewalld/ChangeLog,v 1.8 2012/11/18 05:30:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firewalld/ChangeLog,v 1.9 2012/11/21 16:37:36 cardoe Exp $
+
+  21 Nov 2012; Doug Goldstein <cardoe@gentoo.org> -firewalld-0.2.9.ebuild,
+  -files/firewalld.module:
+  Remove older version now that we've got a newer OpenRC released.
 
 *firewalld-0.2.9-r1 (18 Nov 2012)
 
