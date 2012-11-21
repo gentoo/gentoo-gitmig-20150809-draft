@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vdpau-video/vdpau-video-0.7.4.ebuild,v 1.2 2012/10/20 22:07:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vdpau-video/vdpau-video-0.7.4.ebuild,v 1.3 2012/11/21 17:30:50 aballier Exp $
 
 EAPI="2"
 inherit autotools eutils
@@ -31,6 +31,7 @@ src_prepare() {
 
 src_configure() {
 	econf \
+		--disable-silent-rules \
 		$(use_enable debug) \
 		$(use_enable opengl glx)
 }

@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/vdpau-video
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vdpau-video/ChangeLog,v 1.18 2012/10/20 22:07:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vdpau-video/ChangeLog,v 1.19 2012/11/21 17:30:50 aballier Exp $
+
+  21 Nov 2012; Alexis Ballier <aballier@gentoo.org> vdpau-video-0.7.4.ebuild:
+  disable silent rules, bug #443330
 
   20 Oct 2012; Alexis Ballier <aballier@gentoo.org> vdpau-video-0.7.4.ebuild,
   +files/vdpau-video-0.7.4-glext-missing-definition.patch:
