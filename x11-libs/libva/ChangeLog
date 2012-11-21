@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libva
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.43 2012/11/21 17:41:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.44 2012/11/21 18:13:30 aballier Exp $
+
+  21 Nov 2012; Alexis Ballier <aballier@gentoo.org> libva-1.1.0.ebuild,
+  libva-9999.ebuild:
+  disable silent rules, bug #443324
 
   21 Nov 2012; Alexis Ballier <aballier@gentoo.org> libva-1.0.15.ebuild,
   libva-1.0.16.ebuild, libva-1.1.0.ebuild, libva-9999.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/libva-9999.ebuild,v 1.11 2012/11/21 17:41:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/libva-9999.ebuild,v 1.12 2012/11/21 18:13:30 aballier Exp $
 
 EAPI=4
 
@@ -61,6 +61,7 @@ src_prepare() {
 
 src_configure() {
 	econf \
+		--disable-silent-rules \
 		--with-drivers-path="${EPREFIX}/usr/$(get_libdir)/va/drivers" \
 		$(use_enable video_cards_dummy dummy-driver) \
 		$(use_enable opengl glx) \
