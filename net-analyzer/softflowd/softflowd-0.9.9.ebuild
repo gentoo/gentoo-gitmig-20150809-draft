@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/softflowd/softflowd-0.9.9.ebuild,v 1.1 2012/03/21 06:16:00 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/softflowd/softflowd-0.9.9.ebuild,v 1.2 2012/11/21 04:36:12 jer Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ DESCRIPTION="A flow-based network monitor."
 HOMEPAGE="http://www.mindrot.org/softflowd.html"
 SRC_URI="http://softflowd.googlecode.com/files/${P}.tar.gz"
 
-LICENSE="BSD"
+LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
