@@ -1,3 +1,5 @@
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
 # Config file for /etc/init.d/flowcap
 
 # This is the default and should be left unless you know what you are doing

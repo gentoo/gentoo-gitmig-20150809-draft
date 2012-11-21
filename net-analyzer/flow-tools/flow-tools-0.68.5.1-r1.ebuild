@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/flow-tools-0.68.5.1-r1.ebuild,v 1.5 2012/06/14 04:28:37 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/flow-tools-0.68.5.1-r1.ebuild,v 1.6 2012/11/21 04:08:34 jer Exp $
 
 EAPI=4
 inherit user
@@ -9,7 +9,7 @@ DESCRIPTION="library and programs to collect, send, process, and generate report
 HOMEPAGE="http://code.google.com/p/flow-tools/"
 SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.bz2"
 
-LICENSE="BSD"
+LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="debug mysql postgres ssl static-libs"
