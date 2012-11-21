@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/include
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/include/ChangeLog,v 1.13 2012/11/05 22:50:29 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/include/ChangeLog,v 1.14 2012/11/21 11:13:38 ago Exp $
+
+  21 Nov 2012; Agostino Sarubbo <ago@gentoo.org> include-0.4.2.ebuild:
+  Stable for x86, wrt bug #441148
 
   05 Nov 2012; Anthony G. Basile <blueness@gentoo.org> include-0.4.2.ebuild:
   stable ppc, bug #441148
