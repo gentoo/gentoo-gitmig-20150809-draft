@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-5.1.1.ebuild,v 1.1 2012/11/19 19:30:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-5.1.1.ebuild,v 1.2 2012/11/21 02:57:10 mr_bones_ Exp $
 
 EAPI="4"
 
