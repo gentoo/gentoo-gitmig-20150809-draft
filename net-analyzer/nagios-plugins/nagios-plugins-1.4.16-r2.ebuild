@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.16-r2.ebuild,v 1.8 2012/11/21 11:15:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.16-r2.ebuild,v 1.9 2012/11/21 18:31:35 flameeyes Exp $
 
 EAPI=4
 
@@ -93,7 +93,7 @@ src_install() {
 		cat - > "${T}"/50${PN} <<EOF
 # we add /bin/false so that we don't risk causing syntax errors if all USE flags
 # are off as we'd end up with an empty set
-Cmnd_Alias NAGIOS_PLUGINS_CMDS = /bin/false, $(usex smart /usr/sbin/smartctl)
+Cmnd_Alias NAGIOS_PLUGINS_CMDS = /bin/false $(use smart && echo ", /usr/sbin/smartctl")
 User_Alias NAGIOS_PLUGINS_USERS = nagios, icinga
 
 NAGIOS_PLUGINS_USERS ALL=(root) NOPASSWD: NAGIOS_PLUGINS_CMDS
