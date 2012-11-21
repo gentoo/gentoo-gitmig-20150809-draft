@@ -1,23 +1,19 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/ucpp/ucpp-9999.ebuild,v 1.2 2012/11/21 16:37:12 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/ucpp/ucpp-1.3.3.ebuild,v 1.1 2012/11/21 16:37:12 scarabeus Exp $
 
 EAPI=5
 
-EGIT_REPO_URI="git://github.com/scarabeusiv/ucpp.git"
-inherit eutils git-2 autotools
+inherit eutils
 
 DESCRIPTION="A quick and light preprocessor, but anyway fully compliant to C99"
 HOMEPAGE="http://code.google.com/p/ucpp/"
+SRC_URI="http://dev.gentooexperimental.org/~scarabeus/${P}.tar.xz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux"
 IUSE="static-libs"
-
-src_prepare() {
-	eautoreconf
-}
 
 src_configure() {
 	econf \
