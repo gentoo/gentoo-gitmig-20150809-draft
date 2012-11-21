@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/sguil-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-server/ChangeLog,v 1.13 2012/09/18 01:39:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-server/ChangeLog,v 1.14 2012/11/21 04:33:40 jer Exp $
+
+  21 Nov 2012; Jeroen Roovers <jer@gentoo.org> sguil-server-0.8.0.ebuild,
+  files/sguild.confd:
+  Add copyright info to conf.d script. Add GPL-2 to LICENSE (bug #425998).
 
   18 Sep 2012; Tim Harder <radhermit@gentoo.org> -sguil-server-0.6.1-r1.ebuild:
   Remove old.
