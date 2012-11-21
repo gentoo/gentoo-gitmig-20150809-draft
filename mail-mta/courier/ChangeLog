@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/courier
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.155 2012/11/14 13:33:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.156 2012/11/21 10:12:14 ago Exp $
+
+  21 Nov 2012; Agostino Sarubbo <ago@gentoo.org> courier-0.69.0.ebuild:
+  Stable for x86, wrt bug #439736
 
   14 Nov 2012; Agostino Sarubbo <ago@gentoo.org> courier-0.69.0.ebuild:
   Stable for amd64, wrt bug #439736
