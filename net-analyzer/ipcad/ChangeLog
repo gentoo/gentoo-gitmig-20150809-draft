@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ipcad
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipcad/ChangeLog,v 1.35 2012/01/06 16:54:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipcad/ChangeLog,v 1.36 2012/11/21 04:14:53 jer Exp $
+
+  21 Nov 2012; Jeroen Roovers <jer@gentoo.org> -ipcad-3.7.ebuild,
+  ipcad-3.7.3.ebuild:
+  Add GPL-2 to LICENSE (bug #425984).
 
   06 Jan 2012; Brent Baude <ranger@gentoo.org> ipcad-3.7.3.ebuild:
   Marking ipcad-3.7.3 ppc for bug 385355
