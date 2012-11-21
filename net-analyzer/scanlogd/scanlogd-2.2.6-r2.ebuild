@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanlogd/scanlogd-2.2.6-r2.ebuild,v 1.7 2012/06/12 03:00:03 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanlogd/scanlogd-2.2.6-r2.ebuild,v 1.8 2012/11/21 04:26:42 jer Exp $
 
 inherit eutils toolchain-funcs user
 
@@ -9,7 +9,7 @@ SRC_URI="http://www.openwall.com/scanlogd/${P}.tar.gz"
 HOMEPAGE="http://www.openwall.com/scanlogd/"
 
 SLOT="0"
-LICENSE="as-is"
+LICENSE="as-is GPL-2"
 KEYWORDS="~amd64 ppc x86"
 IUSE="nids pcap"
 
