@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-1.4.1.ebuild,v 1.1 2012/11/19 14:21:44 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-1.4.1-r1.ebuild,v 1.1 2012/11/21 10:27:20 dev-zero Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? *"
@@ -106,6 +106,10 @@ src_configure() {
 	use rsyslog && plugins+=", rsyslog"
 	use syslog && plugins+=", syslog"
 
+	# Notes:
+	# * the embedded_plugins mostly follows the list of embedded_plugins
+	#   in buildconf/base.ini, make sure you compare the list when bumping uWSGI
+	# * thus: keep the order in embedded_plugins the same as in the base.ini
 	cat > "buildconf/gentoo.ini" << EOF
 [uwsgi]
 xml = $(use_true_false xml)
@@ -140,7 +144,7 @@ bin_name = uwsgi
 append_version =
 plugin_dir = /usr/$(get_libdir)/uwsgi
 plugin_build_dir = ${T}/plugins
-embedded_plugins =  ping, cache, rpc, corerouter, fastrouter, http, ugreen, signal, logsocket, router_uwsgi, router_redirect, router_basicauth, zergpool, redislog, router_rewrite, router_http, mongodblog ${plugins}
+embedded_plugins =  ping, cache, rpc, corerouter, fastrouter, http, ugreen, signal, logsocket, router_uwsgi, router_redirect, router_basicauth, zergpool, redislog, mongodblog, router_rewrite, router_http, logfile, router_cache, rawrouter ${plugins}
 as_shared_library = false
 
 locking = auto
@@ -184,7 +188,9 @@ src_compile() {
 	fi
 
 	if use lua ; then
-		python uwsgiconfig.py --plugin plugins/lua gentoo || die "building plugin for lua failed"
+		# setting LUALIB explicitly since lua is not slotted on Gentoo
+		# and uwsgi otherwise looks for lua5.1
+		UWSGICONFIG_LUALIB="lua" python uwsgiconfig.py --plugin plugins/lua gentoo || die "building plugin for lua failed"
 	fi
 
 	if use perl ; then
