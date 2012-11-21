@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-2.2.ebuild,v 1.1 2012/11/21 06:42:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-2.2-r1.ebuild,v 1.1 2012/11/21 19:23:45 jer Exp $
 
 EAPI=4
 #PERL_EXPORT_PHASE_FUNCTIONS=no
@@ -72,7 +72,7 @@ src_install() {
 	newsbin fwcheck_psad.pl fwcheck_psad
 
 	insinto /etc/psad
-	doins *.conf auto_dl icmp_types ip_options psad_* pf.os posf signatures
+	doins *.conf auto_dl icmp{,6}_types ip_options psad_* pf.os posf signatures
 
 	newinitd init-scripts/psad-init.gentoo psad
 
