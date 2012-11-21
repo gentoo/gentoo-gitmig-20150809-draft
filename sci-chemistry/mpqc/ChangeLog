@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/mpqc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/ChangeLog,v 1.28 2012/10/12 01:13:28 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/ChangeLog,v 1.29 2012/11/21 10:59:07 ago Exp $
+
+  21 Nov 2012; Agostino Sarubbo <ago@gentoo.org> mpqc-2.3.1-r3.ebuild:
+  Stable for x86, wrt bug #436886
 
   12 Oct 2012; Anthony G. Basile <blueness@gentoo.org> mpqc-2.3.1-r3.ebuild:
   stable ppc64, bug #436886
