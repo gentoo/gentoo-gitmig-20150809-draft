@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/xpath
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xpath/ChangeLog,v 1.6 2012/11/21 07:09:01 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xpath/ChangeLog,v 1.7 2012/11/21 07:10:04 graaff Exp $
+
+  21 Nov 2012; Hans de Graaff <graaff@gentoo.org> xpath-1.0.0.ebuild:
+  Add back jruby.
 
 *xpath-1.0.0 (21 Nov 2012)
 
