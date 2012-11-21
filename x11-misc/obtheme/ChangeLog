@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/obtheme
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obtheme/ChangeLog,v 1.2 2012/11/02 12:34:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obtheme/ChangeLog,v 1.3 2012/11/21 10:15:49 ago Exp $
+
+  21 Nov 2012; Agostino Sarubbo <ago@gentoo.org> obtheme-0.7_p20110404.ebuild:
+  Stable for x86, wrt bug #439782
 
   02 Nov 2012; <ago@gentoo.org> obtheme-0.7_p20110404.ebuild:
   Stable for amd64, wrt bug #439782
