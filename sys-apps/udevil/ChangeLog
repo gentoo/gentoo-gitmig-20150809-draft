@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/udevil
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/udevil/ChangeLog,v 1.16 2012/10/28 17:03:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/udevil/ChangeLog,v 1.17 2012/11/21 10:14:49 ago Exp $
+
+  21 Nov 2012; Agostino Sarubbo <ago@gentoo.org> udevil-0.3.3-r1.ebuild:
+  Stable for x86, wrt bug #439416
 
   28 Oct 2012; Markos Chandras <hwoarang@gentoo.org> udevil-0.3.3-r1.ebuild:
   Stable on amd64 wrt bug #439416
