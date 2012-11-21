@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/efax
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/efax/ChangeLog,v 1.23 2012/11/20 20:36:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/efax/ChangeLog,v 1.24 2012/11/21 13:01:52 kensington Exp $
+
+  21 Nov 2012; Michael Palimaka <kensington@gentoo.org> -efax-0.9a-r3.ebuild,
+  -files/efax-0.9a-segfault.patch:
+  Remove old.
 
   20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> efax-0.9a-r4.ebuild:
   Stable for x86, wrt bug #441470
