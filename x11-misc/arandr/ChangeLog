@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/arandr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/arandr/ChangeLog,v 1.7 2012/11/06 19:51:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/arandr/ChangeLog,v 1.8 2012/11/21 12:36:00 ago Exp $
+
+  21 Nov 2012; Agostino Sarubbo <ago@gentoo.org> arandr-0.1.6.ebuild:
+  Stable for x86, tested by Vicente Olivert Riera <peratu@carrosses.com>, wrt
+  bug #441896
 
   06 Nov 2012; Agostino Sarubbo <ago@gentoo.org> arandr-0.1.6.ebuild:
   Stable for amd64, wrt bug #441896
