@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-sensor/sguil-sensor-0.8.0.ebuild,v 1.2 2012/06/12 03:07:34 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-sensor/sguil-sensor-0.8.0.ebuild,v 1.3 2012/11/21 04:31:46 jer Exp $
 
 EAPI=4
 inherit user
@@ -10,7 +10,7 @@ DESCRIPTION="Sensor part of sguil Network Security Monitoring"
 HOMEPAGE="http://sguil.sourceforge.net"
 SRC_URI="mirror://sourceforge/sguil/sguil-sensor-${MY_PV}.tar.gz"
 
-LICENSE="QPL"
+LICENSE="GPL-2 QPL"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
