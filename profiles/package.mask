@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14241 2012/11/21 21:49:49 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14242 2012/11/21 22:30:24 cardoe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Doug Goldstein <cardoe@gentoo.org> (21 Nov 2012)
+# Masked for removal. Lots of bugs opened. Upstream
+# says don't use it. No Gentoo maintainer
+# activity for some time. qemu no longer supports it.
+# Removal date: 21 Dec 2012
+app-emulation/kqemu
 
 # Doug Goldstein <cardoe@gentoo.org> (21 Nov 2012)
 # On vacation so I didn't really get to test it too well.
