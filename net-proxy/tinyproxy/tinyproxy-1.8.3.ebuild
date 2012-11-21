@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/tinyproxy-1.8.3.ebuild,v 1.6 2012/11/21 15:38:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/tinyproxy-1.8.3.ebuild,v 1.7 2012/11/21 15:52:31 jer Exp $
 
 EAPI=4
 inherit autotools eutils user
@@ -28,7 +28,10 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.8.1-ldflags.patch
 	use minimal && epatch "${FILESDIR}/${PN}-1.8.1-minimal.patch"
-	sed -i etc/${PN}.conf.in -e "s|nobody|${PN}|g" || die "sed failed"
+	sed -i \
+		-e "s|nobody|${PN}|g" \
+		-e 's|/run/tinyproxy/|/run/|g' \
+		etc/${PN}.conf.in || die "sed failed"
 	eautoreconf
 }
 
