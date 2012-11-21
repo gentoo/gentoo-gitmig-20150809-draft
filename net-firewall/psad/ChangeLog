@@ -1,6 +1,16 @@
 # ChangeLog for net-firewall/psad
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/ChangeLog,v 1.57 2012/11/11 15:00:31 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/ChangeLog,v 1.58 2012/11/21 06:42:19 jer Exp $
+
+*psad-2.2 (21 Nov 2012)
+
+  21 Nov 2012; Jeroen Roovers <jer@gentoo.org> +psad-2.2.ebuild,
+  +files/psad-2.2-var-run.patch, metadata.xml:
+  Make netmon maintainer. Version bump (bug #439562). Respect CC, CFLAGS,
+  LDFLAGS (bug #442486). Do not "fix" psad.conf (also fixes bug #349203). Do
+  not ewarn/einfo/e.. users about configuration issues (RTFM). Add some more
+  dependencies. Introduce some sanity in the build system (bug #340877 and a
+  lot more). Replace keepdir /var/run using checkpath.
 
   11 Nov 2012; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
   Dropping to maintainer-needed, not sure why it belonged to hardened
