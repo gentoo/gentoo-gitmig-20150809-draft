@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/spice-0.11.3.ebuild,v 1.4 2012/10/05 13:56:45 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/spice-0.11.3.ebuild,v 1.5 2012/11/21 21:54:23 ago Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://spice-space.org/download/releases/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="+client +gui sasl smartcard static-libs" # static
 
 RDEPEND=">=x11-libs/pixman-0.17.7
