@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/monkeyd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.49 2012/10/30 12:01:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.50 2012/11/21 11:02:51 ago Exp $
+
+  21 Nov 2012; Agostino Sarubbo <ago@gentoo.org> monkeyd-1.1.1.ebuild:
+  Stable for x86, wrt bug #439346
 
   30 Oct 2012; <ago@gentoo.org> monkeyd-1.1.1.ebuild:
   Stable for amd64, wrt bug #439346
