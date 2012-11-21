@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/pgocaml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pgocaml/ChangeLog,v 1.1 2012/10/06 21:05:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pgocaml/ChangeLog,v 1.2 2012/11/21 11:59:55 aballier Exp $
+
+  21 Nov 2012; Alexis Ballier <aballier@gentoo.org> pgocaml-1.6.ebuild,
+  +files/pgocaml-1.6-parallel-make.patch:
+  fix parallel build by Jeroen Roovers, bug #442798
 
 *pgocaml-1.6 (07 Oct 2012)
 
