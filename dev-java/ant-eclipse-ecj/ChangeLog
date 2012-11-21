@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/ant-eclipse-ecj
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-eclipse-ecj/ChangeLog,v 1.34 2012/10/17 09:08:04 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-eclipse-ecj/ChangeLog,v 1.35 2012/11/21 06:49:22 serkan Exp $
+
+*ant-eclipse-ecj-4.2.1 (21 Nov 2012)
+
+  21 Nov 2012; Serkan Kaba <serkan@gentoo.org> +ant-eclipse-ecj-4.2.1.ebuild:
+  Version bump
 
   17 Oct 2012; Christoph Junghans <ottxor@gentoo.org>
   ant-eclipse-ecj-3.7.2.ebuild, ant-eclipse-ecj-4.2.ebuild:
