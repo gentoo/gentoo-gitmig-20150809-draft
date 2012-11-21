@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-eoip/linux-eoip-0.5.ebuild,v 1.1 2012/09/04 18:48:43 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-eoip/linux-eoip-0.5.ebuild,v 1.2 2012/11/21 19:01:23 pinkbyte Exp $
 
 EAPI=4
 AUTOTOOLS_AUTORECONF=1
@@ -14,7 +14,7 @@ SRC_URI="http://linux-eoip.googlecode.com/files/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="
