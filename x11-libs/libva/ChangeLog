@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libva
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.42 2012/10/11 12:33:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.43 2012/11/21 17:41:19 aballier Exp $
+
+  21 Nov 2012; Alexis Ballier <aballier@gentoo.org> libva-1.0.15.ebuild,
+  libva-1.0.16.ebuild, libva-1.1.0.ebuild, libva-9999.ebuild:
+  Change x11-libs/vdpau-video to x11-libs/libva-vdpau-driver as it is the new
+  upstream name.
 
   11 Oct 2012; Alexis Ballier <aballier@gentoo.org> +libva-1.1.0.ebuild:
   version bump

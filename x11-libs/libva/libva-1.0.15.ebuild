@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/libva-1.0.15.ebuild,v 1.4 2012/05/05 03:52:22 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/libva-1.0.15.ebuild,v 1.5 2012/11/21 17:41:19 aballier Exp $
 
 EAPI="3"
 
@@ -45,7 +45,7 @@ RDEPEND=">=x11-libs/libdrm-2.4
 
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
-PDEPEND="video_cards_nvidia? ( x11-libs/vdpau-video )
+PDEPEND="video_cards_nvidia? ( x11-libs/libva-vdpau-driver )
 	video_cards_fglrx? ( x11-libs/xvba-video )
 	video_cards_intel? ( x11-libs/libva-intel-driver )
 	"
