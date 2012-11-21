@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/package.use.mask,v 1.39 2012/11/14 13:45:13 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/package.use.mask,v 1.40 2012/11/21 10:56:30 scarabeus Exp $
 
 # Diego Elio Pettenò (27 Aug 2012)
 # The libpci access is only used for linux.
@@ -34,11 +34,6 @@ sys-auth/consolekit -acl
 # Samuli Suominen <ssuominen@gentoo.org> (10 Jan 2012)
 # Masked in base/package.use.mask as Linux -only feature
 app-arch/libarchive -e2fsprogs
-
-# Markos Chandras <hwoarang@gentoo.org> (07 Aug 2011)
-# doc flag is not ready yet for media-video/mplayer2.
-# See bug #361075
-<media-video/mplayer2-9999 doc
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (20 Aug 2009)
 #
