@@ -1,6 +1,15 @@
 # ChangeLog for net-irc/znc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.59 2012/05/29 17:49:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.60 2012/11/21 18:11:31 wired Exp $
+
+*znc-1.0 (21 Nov 2012)
+
+  21 Nov 2012; Alex Alexander <wired@gentoo.org> +znc-1.0.ebuild,
+  +files/znc-1.0-systemwideconfig.patch, +files/znc.confd, +files/znc.initd,
+  metadata.xml:
+  version bump, bug #438430. added system-wide daemon use flag that installs
+  init.d/conf.d files, bug #415389. systemWideConfig patch. Many thanks to
+  Manuel Rüger and Uli Schlachter.
 
 *znc-0.206 (29 May 2012)
 
