@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pinta/pinta-1.4.ebuild,v 1.2 2012/10/28 12:45:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pinta/pinta-1.4.ebuild,v 1.3 2012/11/21 10:16:29 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://github/PintaProject/Pinta/${P}.tar.gz"
 
 LICENSE="MIT CCPL-Attribution-3.0"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 COMMON_DEPEND="dev-dotnet/atk-sharp:2
