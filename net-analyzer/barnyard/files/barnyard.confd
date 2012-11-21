@@ -1,4 +1,6 @@
 # Config file for /etc/init.d/barnyard
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
 
 PIDFILE="/var/run/barnyard.pid"
 LOG_FILE="snort_unified.log"

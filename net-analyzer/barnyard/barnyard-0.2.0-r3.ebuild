@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/barnyard-0.2.0-r3.ebuild,v 1.3 2010/12/03 00:38:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/barnyard-0.2.0-r3.ebuild,v 1.4 2012/11/21 04:12:11 jer Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/barnyard/barnyard-${PV/_/-}.tar.gz
 	mirror://gentoo/${P}-patches.tar.bz2"
 
 SLOT="0"
-LICENSE="QPL"
+LICENSE="QPL GPL-2"
 KEYWORDS="~amd64 -sparc ~x86"
 IUSE="mysql postgres sguil"
 
