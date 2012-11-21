@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.135 2012/11/07 21:06:22 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.136 2012/11/21 23:04:42 eva Exp $
+
+*tracker-0.14.4 (21 Nov 2012)
+
+  21 Nov 2012; Gilles Dartiguelongue <eva@gentoo.org> +tracker-0.14.4.ebuild,
+  metadata.xml:
+  Version bump. Add XPS support.
 
   07 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org> tracker-9999.ebuild:
   Slot gstreamer dependencies in preparation for gstreamer-1.0.
