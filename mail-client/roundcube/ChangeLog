@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/roundcube
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.90 2012/10/16 16:37:50 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.91 2012/11/21 22:32:38 radhermit Exp $
+
+*roundcube-0.8.4 (21 Nov 2012)
+
+  21 Nov 2012; Tim Harder <radhermit@gentoo.org> +roundcube-0.8.4.ebuild:
+  Version bump (bug #444169).
 
 *roundcube-0.8.2 (16 Oct 2012)
 
