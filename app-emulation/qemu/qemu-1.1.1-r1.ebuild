@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.1.1-r1.ebuild,v 1.5 2012/10/30 21:01:35 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.1.1-r1.ebuild,v 1.6 2012/11/21 22:22:35 cardoe Exp $
 
 EAPI="4"
 
@@ -90,7 +90,10 @@ RDEPEND="
 			!static? ( >=app-emulation/spice-0.9.0 )
 	)
 	tls? ( net-libs/gnutls )
-	usbredir? ( sys-apps/usbredir )
+	usbredir? (
+		>=sys-apps/usbredir-0.3.4
+		x86? ( <sys-apps/usbredir-0.5 )
+		)
 	vde? ( net-misc/vde )
 	virtfs? ( sys-libs/libcap )
 	xattr? ( sys-apps/attr )

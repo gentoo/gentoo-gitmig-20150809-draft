@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.148 2012/11/21 21:57:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.149 2012/11/21 22:22:35 cardoe Exp $
+
+  21 Nov 2012; Doug Goldstein <cardoe@gentoo.org> qemu-1.1.1-r1.ebuild,
+  qemu-1.1.2-r1.ebuild, qemu-1.1.2-r2.ebuild, qemu-1.1.2-r3.ebuild,
+  qemu-1.2.0.ebuild, qemu-1.2.1.ebuild, qemu-9999.ebuild:
+  Fix usbredir depends based on bug #439972
 
   21 Nov 2012; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   Delete no longer used flags.
