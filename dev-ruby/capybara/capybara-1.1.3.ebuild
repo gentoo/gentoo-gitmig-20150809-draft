@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capybara/capybara-1.1.3.ebuild,v 1.1 2012/10/31 06:51:34 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capybara/capybara-1.1.3.ebuild,v 1.2 2012/11/21 07:15:02 graaff Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19 ree18"
@@ -34,7 +34,7 @@ ruby_add_rdepend "
 	>=dev-ruby/rack-test-0.5.4
 
 	>=dev-ruby/selenium-webdriver-2.0
-	>=dev-ruby/xpath-0.1.4"
+	>=dev-ruby/xpath-0.1.4:0"
 
 all_ruby_prepare() {
 	sed -i -e '/bundler/d' spec/spec_helper.rb || die
