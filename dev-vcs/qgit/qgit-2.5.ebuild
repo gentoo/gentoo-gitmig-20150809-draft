@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qgit/qgit-2.5.ebuild,v 1.3 2012/11/04 13:44:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qgit/qgit-2.5.ebuild,v 1.4 2012/11/21 10:58:34 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://libre.tibirna.org/attachments/download/9/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="amd64 ppc ppc64 ~x86 ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="amd64 ppc ppc64 x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE=""
 
 DEPEND="x11-libs/qt-gui:4"
