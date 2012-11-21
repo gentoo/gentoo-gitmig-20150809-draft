@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.537 2012/11/16 18:46:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.538 2012/11/21 15:14:08 aballier Exp $
+
+  21 Nov 2012; Alexis Ballier <aballier@gentoo.org> samba-3.6.9.ebuild:
+  keyword ~amd64-fbsd, bug #430720
 
   16 Nov 2012; Agostino Sarubbo <ago@gentoo.org> metadata.xml:
   use krb5 is unused
