@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.16.5.ebuild,v 1.3 2012/11/08 06:24:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.16.5.ebuild,v 1.4 2012/11/21 20:47:36 hwoarang Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2:2.6"
@@ -44,6 +44,9 @@ src_prepare() {
 src_configure() {
 	local myconf
 
+	# bug 441842
+	myconf="--disable-silent-rules"
+
 	# use multi-threading versions of boost libs
 	if has_version '>=dev-libs/boost-1.52.0-r1'; then
 		myconf+=" --with-boost-python=boost_python-${PYTHON_ABI}"
@@ -63,6 +66,7 @@ src_configure() {
 		$(use_enable static-libs static) \
 		${myconf}
 }
+
 
 src_install() {
 	emake DESTDIR="${D}" install

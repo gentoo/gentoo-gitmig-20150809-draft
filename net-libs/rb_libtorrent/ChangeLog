@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.140 2012/11/08 06:24:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.141 2012/11/21 20:47:36 hwoarang Exp $
+
+  21 Nov 2012; Markos Chandras <hwoarang@gentoo.org>
+  rb_libtorrent-0.16.5.ebuild:
+  Enable verbose build. Bug #441842
 
   08 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org>
   rb_libtorrent-0.15.10.ebuild, rb_libtorrent-0.15.5.ebuild,
