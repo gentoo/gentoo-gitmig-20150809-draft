@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/libvisio-0.0.21.ebuild,v 1.2 2012/11/21 10:09:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/libvisio-0.0.21.ebuild,v 1.3 2012/11/21 10:13:43 scarabeus Exp $
 
 EAPI=5
 
 EGIT_REPO_URI="git://anongit.freedesktop.org/git/libreoffice/contrib/libvisio/"
-inherit base autotools
+inherit base
 [[ ${PV} == 9999 ]] && inherit autotools git-2
 
 DESCRIPTION="Library parsing the visio documents"
@@ -14,11 +14,8 @@ HOMEPAGE="http://www.freedesktop.org/wiki/Software/libvisio"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-
-# Don't move KEYWORDS on the previous line or ekeyword won't work # 399061
 [[ ${PV} == 9999 ]] || \
 KEYWORDS="amd64 ppc x86"
-
 IUSE="doc static-libs"
 
 RDEPEND="
@@ -37,7 +34,7 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	[[ -d m4 ]] || mkdir "m4"
 	base_src_prepare
-	eautoreconf
+	[[ ${PV} == 9999 ]] && eautoreconf
 }
 
 src_configure() {
