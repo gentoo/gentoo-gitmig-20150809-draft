@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircstats/ircstats-1.0.ebuild,v 1.2 2007/05/06 12:34:43 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircstats/ircstats-1.0.ebuild,v 1.3 2012/11/21 17:52:30 ago Exp $
 
 inherit toolchain-funcs
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://humdi.net/ircstats/"
 SRC_URI="http://humdi.net/ircstats/${MY_P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 IUSE=""
 

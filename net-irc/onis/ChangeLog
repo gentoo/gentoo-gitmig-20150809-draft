@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/onis
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/onis/ChangeLog,v 1.11 2009/06/06 21:38:09 cla Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/onis/ChangeLog,v 1.12 2012/11/21 17:49:48 ago Exp $
+
+  21 Nov 2012; Agostino Sarubbo <ago@gentoo.org> onis-0.8.2.ebuild:
+  Add ~amd64
 
   06 Jun 2009; Dawid Węgliński <cla@gentoo.org> onis-0.6.1.ebuild,
   onis-0.8.2.ebuild:
@@ -49,4 +52,3 @@
   29 Jun 2004; Sven Wegener <swegener@gentoo.org> +metadata.xml,
   +files/0.6.0-nochdir.patch, +onis-0.6.0.ebuild:
   Initial import, ebuild written by me.
-

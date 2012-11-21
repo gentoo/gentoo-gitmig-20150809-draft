@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/ircstats
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircstats/ChangeLog,v 1.3 2007/05/06 12:34:43 genone Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircstats/ChangeLog,v 1.4 2012/11/21 17:52:30 ago Exp $
+
+  21 Nov 2012; Agostino Sarubbo <ago@gentoo.org> ircstats-1.0.ebuild:
+  Add ~amd64
 
   06 May 2007; Marius Mauch <genone@gentoo.org> ircstats-1.0.ebuild:
   Replacing einfo with elog
@@ -14,4 +17,3 @@
   +ircstats-1.0.ebuild:
   Initial commit, ebuild modified from the one submitted by Maxwell
   Grender-Jones to bug #98339.
-
