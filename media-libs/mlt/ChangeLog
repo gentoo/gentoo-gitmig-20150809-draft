@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/mlt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.97 2012/11/20 20:07:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.98 2012/11/21 00:48:52 aballier Exp $
+
+*mlt-0.8.6 (21 Nov 2012)
+
+  21 Nov 2012; Alexis Ballier <aballier@gentoo.org> +mlt-0.8.6.ebuild,
+  +files/mlt-0.8.6-ruby-link.patch:
+  version bump
 
   20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> mlt-0.8.2.ebuild:
   Stable for x86, wrt bug #441382
