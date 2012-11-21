@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/miniupnpc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/miniupnpc/ChangeLog,v 1.6 2012/10/16 04:15:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/miniupnpc/ChangeLog,v 1.7 2012/11/21 14:09:38 idella4 Exp $
+
+  22 Nov 2012; Ian Delaney <idella4@gentoo.org> miniupnpc-1.7-r1.ebuild:
+  pypy compatibility added
 
   16 Oct 2012; Michał Górny <mgorny@gentoo.org> miniupnpc-1.7-r1.ebuild:
   Re-keyword ~ppc, ~ppc64 for python-exec being keyworded.

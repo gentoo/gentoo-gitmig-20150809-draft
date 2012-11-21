@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/miniupnpc/miniupnpc-1.7-r1.ebuild,v 1.2 2012/10/16 04:15:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/miniupnpc/miniupnpc-1.7-r1.ebuild,v 1.3 2012/11/21 14:09:38 idella4 Exp $
 
 EAPI=4
 
-PYTHON_COMPAT=(python2_6 python2_7)
+PYTHON_COMPAT=(python2_6 python2_7 pypy1_9)
 
 inherit distutils-r1
 
