@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7170 2012/11/21 10:56:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7171 2012/11/21 17:41:59 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Nov 2012; Alexis Ballier <aballier@gentoo.org> updates/4Q-2012:
+  move x11-libs/vdpau-video to x11-libs/libva-vdpau-driver
 
   21 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   default/linux/package.use.mask:
