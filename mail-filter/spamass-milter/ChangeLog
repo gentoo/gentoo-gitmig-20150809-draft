@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/spamass-milter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamass-milter/ChangeLog,v 1.33 2012/11/06 19:51:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamass-milter/ChangeLog,v 1.34 2012/11/21 11:00:56 ago Exp $
+
+  21 Nov 2012; Agostino Sarubbo <ago@gentoo.org> spamass-milter-0.3.2.ebuild:
+  Stable for x86, wrt bug #441638
 
   06 Nov 2012; Agostino Sarubbo <ago@gentoo.org> spamass-milter-0.3.2.ebuild:
   Stable for amd64, wrt bug #441638
