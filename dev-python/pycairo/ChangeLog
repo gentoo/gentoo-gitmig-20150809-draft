@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycairo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.116 2012/11/16 12:35:12 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.117 2012/11/21 15:18:39 aballier Exp $
+
+  21 Nov 2012; Alexis Ballier <aballier@gentoo.org> pycairo-1.10.0-r3.ebuild:
+  keyword ~amd64-fbsd, bug #442934
 
   16 Nov 2012; Anthony G. Basile <blueness@gentoo.org> pycairo-1.10.0-r3.ebuild:
   keyword ~ppc ~ppc64, bug #442934
