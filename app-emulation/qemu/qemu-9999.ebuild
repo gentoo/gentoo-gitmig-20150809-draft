@@ -1,25 +1,22 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.32 2012/11/05 06:42:53 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.33 2012/11/21 20:02:53 cardoe Exp $
 
 EAPI="4"
-
-MY_PN="qemu-kvm"
-MY_P=${MY_PN}-${PV}
 
 PYTHON_DEPEND="2"
 inherit eutils flag-o-matic linux-info toolchain-funcs multilib python user
 #BACKPORTS=6cee76f0
 
 if [[ ${PV} = *9999* ]]; then
-	EGIT_REPO_URI="git://git.kernel.org/pub/scm/virt/kvm/qemu-kvm.git"
+	EGIT_REPO_URI="git://git.qemu.org/qemu.git"
 	inherit git-2
 	SRC_URI=""
 	KEYWORDS=""
 else
-	SRC_URI="mirror://sourceforge/kvm/${MY_PN}/${MY_P}.tar.gz
+	SRC_URI="http://wiki.qemu-project.org/download/${P}.tar.bz2
 	${BACKPORTS:+
-		http://dev.gentoo.org/~cardoe/distfiles/${MY_P}-${BACKPORTS}.tar.xz}"
+		http://dev.gentoo.org/~cardoe/distfiles/${P}-${BACKPORTS}.tar.xz}"
 	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 fi
 
@@ -102,8 +99,6 @@ DEPEND="${RDEPEND}
 	doc? ( app-text/texi2html )
 	kernel_linux? ( >=sys-kernel/linux-headers-2.6.35 )
 	static? ( ${LIB_DEPEND} )"
-
-S="${WORKDIR}/${MY_P}"
 
 STRIP_MASK="/usr/share/qemu/palcode-clipper"
 
