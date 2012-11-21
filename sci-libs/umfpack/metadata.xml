@@ -9,6 +9,6 @@
   MATLAB routines are not included in the Gentoo package.
 </longdescription>
 <use>
-  <flag name="metis">Use METIS via CHOLMOD(<pkg>sci-libs/cholmod</pkg>) for partitioning</flag>
+  <flag name="cholmod">Use <pkg>sci-libs/cholmod</pkg> for matrrix ordering</flag>
 </use>
 </pkgmetadata>
