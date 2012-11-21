@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/cluster-glue
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cluster-glue/ChangeLog,v 1.31 2012/11/19 13:13:15 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cluster-glue/ChangeLog,v 1.32 2012/11/21 10:14:33 ago Exp $
+
+  21 Nov 2012; Agostino Sarubbo <ago@gentoo.org> cluster-glue-1.0.10.ebuild:
+  Stable for x86, wrt bug #433359
 
   19 Nov 2012; Ultrabug <ultrabug@gentoo.org> cluster-glue-1.0.11.ebuild:
   fix wrong RDEPEND
