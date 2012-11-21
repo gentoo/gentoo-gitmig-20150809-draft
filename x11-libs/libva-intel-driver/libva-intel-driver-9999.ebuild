@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-intel-driver/libva-intel-driver-9999.ebuild,v 1.5 2012/11/14 11:57:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-intel-driver/libva-intel-driver-9999.ebuild,v 1.6 2012/11/21 18:16:19 aballier Exp $
 
 EAPI="3"
 
@@ -45,6 +45,7 @@ src_prepare() {
 
 src_configure() {
 	econf \
+		--disable-silent-rules \
 		$(use_enable wayland) \
 		$(use_enable X x11)
 }
