@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/dhex
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/dhex/ChangeLog,v 1.15 2012/11/20 20:42:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/dhex/ChangeLog,v 1.16 2012/11/21 13:05:34 kensington Exp $
+
+  21 Nov 2012; Michael Palimaka <kensington@gentoo.org> -dhex-0.67.ebuild:
+  Remove old.
 
   20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> dhex-0.68.ebuild:
   Stable for x86, wrt bug #441062
@@ -59,4 +62,3 @@
   +files/dhex-0.63-Makefile.patch, +metadata.xml:
   New application, fixes bug 121086. Thanks to Adrian Frühwirth for the
   original ebuild.
-
