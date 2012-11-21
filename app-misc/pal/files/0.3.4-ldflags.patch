@@ -1,8 +1,0 @@
---- pal-0.3.4/src/Makefile.defs
-+++ pal-0.3.4/src/Makefile.defs
-@@ -25,4 +25,4 @@
- endif
- 
- CFLAGS  = ${OPT} ${INCLDIR} ${DEFS}
--LDFLAGS = ${LIBDIR} ${LIBS}
-+LDFLAGS = ${LIBDIR} ${LIBS} ${LDOPT}
