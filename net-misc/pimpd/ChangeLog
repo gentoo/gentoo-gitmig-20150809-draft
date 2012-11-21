@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/pimpd
 # Copyright 2002-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pimpd/ChangeLog,v 1.13 2012/02/14 09:03:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pimpd/ChangeLog,v 1.14 2012/11/21 17:58:54 ago Exp $
+
+  21 Nov 2012; Agostino Sarubbo <ago@gentoo.org> pimpd-0.8.ebuild:
+  Add ~amd64
 
   14 Feb 2012; Pacho Ramos <pacho@gentoo.org> pimpd-0.8.ebuild:
   Fallback to gentoo.org webpage as upstream is dead (bug #371695 by David) and

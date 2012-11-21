@@ -1,12 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jlj/jlj-2.12.ebuild,v 1.4 2008/01/24 19:13:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jlj/jlj-2.12.ebuild,v 1.5 2012/11/21 17:59:59 ago Exp $
 
 DESCRIPTION="A simple console LiveJournal entry system."
 HOMEPAGE="http://umlautllama.com/projects/perl/#jlj"
 SRC_URI="http://umlautllama.com/projects/perl/${PN}_${PV}.tar.gz"
 LICENSE="freedist"
-KEYWORDS="~alpha ~ppc ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc x86"
 SLOT="0"
 IUSE=""
 

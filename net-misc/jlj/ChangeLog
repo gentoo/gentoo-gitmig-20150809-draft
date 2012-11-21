@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/jlj
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jlj/ChangeLog,v 1.8 2009/08/23 01:46:20 darkside Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jlj/ChangeLog,v 1.9 2012/11/21 17:59:59 ago Exp $
+
+  21 Nov 2012; Agostino Sarubbo <ago@gentoo.org> jlj-2.12.ebuild:
+  Add ~amd64
 
   23 Aug 2009; Jeremy Olexa <darkside@gentoo.org> -files/jlj.1:
   remove unused patches
@@ -33,4 +36,3 @@
 
   01 Aug 2004; bass@gentoo.org +jlj-2.5.ebuild:
   First version, thanks to Luke Macken <lewk@csh.rit.edu>
-
