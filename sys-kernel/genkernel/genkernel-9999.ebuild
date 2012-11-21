@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-9999.ebuild,v 1.43 2012/09/10 01:33:51 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-9999.ebuild,v 1.44 2012/11/21 20:03:09 robbat2 Exp $
 
 # genkernel-9999        -> latest Git branch "master"
 # genkernel-VERSION     -> normal genkernel release
@@ -76,6 +76,12 @@ src_unpack() {
 }
 
 src_prepare() {
+	if [[ ${PV} == 9999* ]] ; then
+		einfo "Producing ChangeLog from Git history..."
+		pushd "${S}/.git" >/dev/null || die
+		git log > "${S}"/ChangeLog || die
+		popd >/dev/null || die
+	fi
 	use selinux && sed -i 's/###//g' "${S}"/gen_compile.sh
 
 	# Update software.sh
