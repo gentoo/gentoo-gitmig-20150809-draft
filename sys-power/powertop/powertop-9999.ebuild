@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-9999.ebuild,v 1.15 2012/09/20 03:26:51 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-9999.ebuild,v 1.16 2012/11/22 15:00:37 zerochaos Exp $
 
 EAPI="4"
 
@@ -57,7 +57,10 @@ pkg_setup() {
 			~EVENT_POWER_TRACING_DEPRECATED
 			~TRACING
 		"
-		linux_chkconfig_present SND_HDA_INTEL && CONFIG_CHECK+="~SND_HDA_POWER_SAVE"
+		if kernel_is -lt 3 7 0; then
+			linux_chkconfig_present SND_HDA_INTEL && CONFIG_CHECK+="~SND_HDA_POWER_SAVE"
+			linux_chkconfig_present SND_HDA_INTEL && ERROR_KERNEL_SND_HDA_POWER_SAVE="SND_HDA_POWER_SAVE should be enabled in the kernel for full powertop function"
+		fi
 		ERROR_KERNEL_X86_MSR="X86_MSR is not enabled in the kernel, you almost certainly need it"
 		ERROR_KERNEL_DEBUG_FS="DEBUG_FS is not enabled in the kernel, you almost certainly need it"
 		ERROR_KERNEL_PERF_EVENTS="PERF_EVENTS should be enabled in the kernel for full powertop function"
@@ -67,7 +70,6 @@ pkg_setup() {
 		ERROR_KERNEL_HPET_TIMER="HPET_TIMER should be enabled in the kernel for full powertop function"
 		ERROR_KERNEL_CPU_FREQ_STAT="CPU_FREQ_STAT should be enabled in the kernel for full powertop function"
 		ERROR_KERNEL_CPU_FREQ_GOV_ONDEMAND="CPU_FREQ_GOV_ONDEMAND should be enabled in the kernel for full powertop function"
-		linux_chkconfig_present SND_HDA_INTEL && ERROR_KERNEL_SND_HDA_POWER_SAVE="SND_HDA_POWER_SAVE should be enabled in the kernel for full powertop function"
 		ERROR_KERNEL_USB_SUSPEND="USB_SUSPEND should be enabled in the kernel for full powertop function"
 		ERROR_KERNEL_FTRACE="FTRACE needs to be turned on to enable BLK_DEV_IO_TRACE"
 		ERROR_KERNEL_BLK_DEV_IO_TRACE="BLK_DEV_IO_TRACE needs to be turned on to enable TIMER_STATS, TRACING and EVENT_POWER_TRACING_DEPRECATED"
