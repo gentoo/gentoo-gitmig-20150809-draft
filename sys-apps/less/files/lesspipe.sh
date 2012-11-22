@@ -13,7 +13,7 @@ guesscompress() {
 	case "$1" in
 		*.gz|*.z)   echo "gunzip -c" ;;
 		*.bz2|*.bz) echo "bunzip2 -c" ;;
-		*.lz)       echo "lzip -c" ;;
+		*.lz)       echo "lzip -dc" ;;
 		*.lzma)     echo "unlzma -c" ;;
 		*.xz)       echo "xzdec" ;;
 		*)          echo "cat" ;;
@@ -233,7 +233,7 @@ if [[ -z $1 ]] ; then
 elif [[ $1 == "-V" || $1 == "--version" ]] ; then
 	Id="cvsid"
 	cat <<-EOF
-		$Id: lesspipe.sh,v 1.48 2012/09/04 19:13:58 vapier Exp $
+		$Id: lesspipe.sh,v 1.49 2012/11/22 04:20:15 vapier Exp $
 		Copyright 2001-2010 Gentoo Foundation
 		Mike Frysinger <vapier@gentoo.org>
 		     (with plenty of ideas stolen from other projects/distros)
@@ -243,7 +243,7 @@ elif [[ $1 == "-V" || $1 == "--version" ]] ; then
 	less -V
 elif [[ $1 == "-h" || $1 == "--help" ]] ; then
 	cat <<-EOF
-		lesspipe: preproccess files before sending them to less
+		lesspipe: preprocess files before sending them to less
 
 		Usage: lesspipe <file>
 
