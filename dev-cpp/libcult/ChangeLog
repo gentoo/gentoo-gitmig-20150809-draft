@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libcult
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libcult/ChangeLog,v 1.5 2012/10/17 18:23:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libcult/ChangeLog,v 1.6 2012/11/22 12:24:56 dev-zero Exp $
+
+  22 Nov 2012; Tiziano Müller <dev-zero@gentoo.org> -libcult-1.4.6.ebuild:
+  Drop old.
 
   17 Oct 2012; Markus Meier <maekke@gentoo.org> libcult-1.4.6-r1.ebuild:
   add ~arm, bug #430072
@@ -23,4 +26,3 @@
   +metadata.xml:
   Initial commit (ebuild written by me), needed for xsd and the required
   libraries.
-
