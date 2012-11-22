@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libgphoto2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.221 2012/10/28 16:01:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.222 2012/11/22 08:39:16 eva Exp $
+
+  22 Nov 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  -libgphoto2-2.4.12.ebuild, libgphoto2-2.5.0.ebuild:
+  Add preserved_old_lib calls. Move some checks to pkg_pretend and make better
+  use of EAPI 4. Clean up ebuild and old revision.
 
   28 Oct 2012; Raúl Porcel <armin76@gentoo.org> libgphoto2-2.4.14.ebuild:
   ia64/sparc stable wrt #427544
