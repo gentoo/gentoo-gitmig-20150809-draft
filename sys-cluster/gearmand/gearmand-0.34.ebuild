@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gearmand/gearmand-0.34.ebuild,v 1.2 2012/10/31 18:43:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gearmand/gearmand-0.34.ebuild,v 1.3 2012/11/22 04:19:21 flameeyes Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug tcmalloc +memcache drizzle sqlite tokyocabinet postgres"
 
 RDEPEND="dev-libs/libevent
-	>=dev-libs/boost-1.39
+	>=dev-libs/boost-1.39[threads(+)]
 	|| ( >=sys-apps/util-linux-2.16 <sys-libs/e2fsprogs-libs-1.41.8 )
 	tcmalloc? ( dev-util/google-perftools )
 	memcache? ( >=dev-libs/libmemcached-0.47 )
