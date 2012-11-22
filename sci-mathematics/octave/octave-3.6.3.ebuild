@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.6.3.ebuild,v 1.1 2012/10/26 18:27:13 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.6.3.ebuild,v 1.2 2012/11/22 19:46:15 bicatali Exp $
 
 EAPI=4
 
@@ -19,8 +19,9 @@ IUSE="curl doc fftw +glpk gnuplot hdf5 +imagemagick opengl +qhull +qrupdate
 	readline +sparse static-libs X zlib"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-fbsd ~x86-linux"
 
-RDEPEND="dev-libs/libpcre
+RDEPEND="
 	app-text/ghostscript-gpl
+	dev-libs/libpcre
 	sys-libs/ncurses
 	virtual/lapack
 	curl? ( net-misc/curl )
@@ -57,7 +58,10 @@ DEPEND="${RDEPEND}
 	dev-util/gperf
 	virtual/pkgconfig"
 
-PATCHES=( "${FILESDIR}"/${PN}-3.4.3-{pkgbuilddir,help,texi}.patch )
+PATCHES=(
+	"${FILESDIR}"/${PN}-3.4.3-{pkgbuilddir,help,texi}.patch
+	"${FILESDIR}"/${PN}-3.6.3-{rcond,legendtext}.patch
+)
 
 src_prepare() {
 	# nasty prefix hack for fltk:1 linking

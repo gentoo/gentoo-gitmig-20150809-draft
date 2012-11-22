@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.130 2012/10/26 18:27:13 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.131 2012/11/22 19:46:15 bicatali Exp $
+
+  22 Nov 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/octave-3.6.3-legendtext.patch, -files/octave-3.4.3-gets.patch,
+  -octave-3.6.1.ebuild, -octave-3.6.2-r1.ebuild, -octave-3.6.2.ebuild,
+  metadata.xml, octave-3.6.3.ebuild:
+  Adding a patch to fix legend text with FLTK backend, thanks Thomas Ilnseher
+  (bug #437868). Removed old
 
 *octave-3.6.3 (26 Oct 2012)
 
