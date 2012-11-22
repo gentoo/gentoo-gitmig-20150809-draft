@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/freeze
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/freeze/ChangeLog,v 1.18 2009/07/05 23:39:49 yngwin Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/freeze/ChangeLog,v 1.19 2012/11/22 18:13:39 ulm Exp $
+
+  22 Nov 2012; Ulrich Müller <ulm@gentoo.org> freeze-2.5.0.ebuild:
+  Fix LICENSE, bug 444342.
 
   05 Jul 2009; Ben de Groot <yngwin@gentoo.org> freeze-2.5.0.ebuild:
   Block media-libs/mlt[melt] (bug 274671). Eapi-2-ify.
