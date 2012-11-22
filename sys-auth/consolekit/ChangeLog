@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/consolekit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.141 2012/11/21 22:25:39 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.142 2012/11/22 10:13:23 ago Exp $
+
+  22 Nov 2012; Agostino Sarubbo <ago@gentoo.org>
+  consolekit-0.4.5_p20120320-r1.ebuild:
+  Stable for x86, tested by Vincent Olivert Riera <peratu@carrosses.com>, wrt
+  bug #436666
 
   21 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
   consolekit-0.4.5_p20120320-r1.ebuild:
