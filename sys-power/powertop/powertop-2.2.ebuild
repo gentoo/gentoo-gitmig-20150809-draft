@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-2.2.ebuild,v 1.1 2012/11/22 19:35:42 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-2.2.ebuild,v 1.2 2012/11/22 21:22:36 zerochaos Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit eutils linux-info
 if [ ${PV} == "9999" ] ; then
