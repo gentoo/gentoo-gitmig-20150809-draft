@@ -1,6 +1,11 @@
 # ChangeLog for www-client/seamonkey-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.155 2012/11/03 12:31:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.156 2012/11/22 06:37:54 jdhore Exp $
+
+*seamonkey-bin-2.14 (22 Nov 2012)
+
+  22 Nov 2012; Jeff Horelick <jdhore@gentoo.org> +seamonkey-bin-2.14.ebuild:
+  Version bump
 
   03 Nov 2012; <ago@gentoo.org> seamonkey-bin-2.13.2.ebuild:
   Stable for amd64, wrt bug #439960
