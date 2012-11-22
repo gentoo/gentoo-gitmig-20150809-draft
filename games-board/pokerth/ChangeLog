@@ -1,6 +1,9 @@
 # ChangeLog for games-board/pokerth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/ChangeLog,v 1.45 2012/11/06 13:12:46 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/ChangeLog,v 1.46 2012/11/22 03:51:13 flameeyes Exp $
+
+  22 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org> pokerth-0.9.5.ebuild:
+  Get rid of boost-utils eclass usage. Depend on threaded boost when possible.
 
   06 Nov 2012; Tupone Alfredo <tupone@gentoo.org> pokerth-0.9.5.ebuild:
   Build with boost-1.50 Bug #441684 by diego

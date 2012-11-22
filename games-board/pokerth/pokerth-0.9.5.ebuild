@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/pokerth-0.9.5.ebuild,v 1.9 2012/11/06 13:12:46 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/pokerth-0.9.5.ebuild,v 1.10 2012/11/22 03:51:13 flameeyes Exp $
 
 EAPI=4
-inherit flag-o-matic eutils boost-utils qt4-r2 games
+inherit flag-o-matic eutils qt4-r2 games
 
 MY_P="PokerTH-${PV}-src"
 DESCRIPTION="Texas Hold'em poker game"
@@ -16,7 +16,7 @@ KEYWORDS="amd64 x86"
 IUSE="dedicated"
 
 RDEPEND="dev-db/sqlite:3
-	dev-libs/boost
+	dev-libs/boost[threads(+)]
 	dev-libs/libgcrypt
 	dev-libs/tinyxml[stl]
 	net-libs/libircclient
@@ -47,12 +47,6 @@ src_prepare() {
 		|| die 'sed failed'
 
 	epatch "${FILESDIR}"/${P}-underlinking.patch
-
-	append-cppflags -I$(boost-utils_get_includedir)
-	append-ldflags -L$(boost-utils_get_libdir)
-
-	export BOOST_INCLUDEDIR=$(boost-utils_get_includedir)
-	export BOOST_LIBRARYDIR=$(boost-utils_get_libdir)
 }
 
 src_configure() {
