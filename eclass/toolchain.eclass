@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.555 2012/11/19 06:55:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.556 2012/11/22 05:19:37 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -100,7 +100,7 @@ STDCXX_INCDIR=${TOOLCHAIN_STDCXX_INCDIR:-${LIBPATH}/include/g++-v${GCC_BRANCH_VE
 IUSE="build multislot nls nptl test vanilla"
 
 if [[ ${PN} != "kgcc64" && ${PN} != gcc-* ]] ; then
-	IUSE+=" altivec cxx fortran nocxx"
+	IUSE+=" altivec cxx fortran"
 	[[ -n ${PIE_VER} ]] && IUSE+=" nopie"
 	[[ -n ${HTB_VER} ]] && IUSE+=" boundschecking"
 	[[ -n ${D_VER}   ]] && IUSE+=" d"
@@ -1021,15 +1021,6 @@ gcc-compiler-configure() {
 
 gcc_do_configure() {
 	local confgcc
-
-	# Sanity check for USE=nocxx -> USE=cxx migration
-	if in_iuse cxx && in_iuse nocxx ; then
-		if (use cxx && use nocxx) || (use !cxx && use !nocxx) ; then
-			eerror "We are migrating USE=nocxx to USE=cxx, but your USE settings do not make"
-			eerror "sense.  Please make sure these two flags line up logically in your setup."
-			die "USE='cxx nocxx' and USE='-cxx -nocxx' make no sense"
-		fi
-	fi
 
 	# Set configuration based on path variables
 	confgcc+=" \
