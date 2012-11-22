@@ -1,6 +1,6 @@
 # ChangeLog for sys-process/fcron
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.97 2012/09/16 16:08:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.98 2012/11/22 13:20:55 jer Exp $
 
 *fcron-3.0.6-r5 (16 Sep 2012)
 
@@ -17,7 +17,7 @@
   30 Aug 2012; Justin Lecher <jlec@gentoo.org> fcron-3.0.6-r3.ebuild,
   +files/fcron-3.0.6-buffer-overflow.patch, metadata.xml:
   User src_prepare instead of src_unpack; indent input redirections; don't use
-  ewarn for blank lines; use defualt src_ompile(); fix potential buffer
+  ewarn for blank lines; use default src_compile(); fix potential buffer
   overflow
 
   29 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> fcron-3.0.6-r3.ebuild:
