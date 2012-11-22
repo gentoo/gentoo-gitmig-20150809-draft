@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/telepathy-logger-qt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-logger-qt/ChangeLog,v 1.7 2012/08/30 15:44:53 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-logger-qt/ChangeLog,v 1.8 2012/11/22 02:40:35 dastergon Exp $
+
+*telepathy-logger-qt-0.5.1 (22 Nov 2012)
+
+  22 Nov 2012; Pavlos Ratis <dastergon@gentoo.org>
+  +telepathy-logger-qt-0.5.1.ebuild:
+  Version bump KDE Telepathy 0.5.1
 
 *telepathy-logger-qt-0.5.0-r1 (30 Aug 2012)
 
