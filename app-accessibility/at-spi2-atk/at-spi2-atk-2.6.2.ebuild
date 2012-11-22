@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-atk/at-spi2-atk-2.6.0.ebuild,v 1.3 2012/11/12 12:42:01 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-atk/at-spi2-atk-2.6.2.ebuild,v 1.1 2012/11/22 22:46:07 eva Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -29,19 +29,13 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 "
 
-pkg_setup() {
+src_prepare() {
 	DOCS="AUTHORS NEWS README"
 	# xevie is deprecated/broken since xorg-1.6/1.7
 	G2CONF="${G2CONF} --enable-p2p"
-}
 
-src_prepare() {
 	# disable teamspaces test since that requires Novell.ICEDesktop.Daemon
 	epatch "${FILESDIR}/${PN}-2.0.2-disable-teamspaces-test.patch"
-
-	# FIXME: droute test fails
-#	sed -e 's:TESTS = droute-test\.*:TESTS = :' -i droute/Makefile.* ||
-#		die "sed droute/Makefile.* failed"
 
 	gnome2_src_prepare
 }
