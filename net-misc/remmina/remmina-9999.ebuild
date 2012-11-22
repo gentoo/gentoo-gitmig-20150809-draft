@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/remmina-9999.ebuild,v 1.25 2012/10/07 00:32:31 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/remmina-9999.ebuild,v 1.26 2012/11/22 03:45:43 floppym Exp $
 
 EAPI="4"
 
@@ -57,6 +57,7 @@ src_configure() {
 		$(cmake-utils_use_with crypt GCRYPT)
 		$(cmake-utils_use_with freerdp FREERDP)
 		$(cmake-utils_use_with gnome-keyring GNOMEKEYRING)
+		$(cmake-utils_use_with nls GETTEXT)
 		$(cmake-utils_use_with ssh LIBSSH)
 		$(cmake-utils_use_with telepathy TELEPATHY)
 		$(cmake-utils_use_with vte VTE)

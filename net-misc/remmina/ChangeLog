@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/remmina
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.42 2012/11/14 19:05:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.43 2012/11/22 03:45:43 floppym Exp $
+
+  22 Nov 2012; Mike Gilbert <floppym@gentoo.org> remmina-1.0.0_p20121004.ebuild,
+  remmina-9999.ebuild:
+  Pass WITH_GETTEXT=x to cmake.
 
   14 Nov 2012; Agostino Sarubbo <ago@gentoo.org>
   remmina-1.0.0_p20121004.ebuild:
