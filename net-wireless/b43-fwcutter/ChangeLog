@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/b43-fwcutter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/b43-fwcutter/ChangeLog,v 1.21 2012/11/22 20:23:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/b43-fwcutter/ChangeLog,v 1.22 2012/11/22 20:40:33 zerochaos Exp $
+
+  22 Nov 2012; Rick Farina <zerochaos@gentoo.org> b43-fwcutter-015.ebuild,
+  b43-fwcutter-016.ebuild:
+  verbose build, closing bug #444358
 
   22 Nov 2012; Agostino Sarubbo <ago@gentoo.org> b43-fwcutter-015.ebuild:
   Stable for x86, wrt bug #444326
