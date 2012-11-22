@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/gource-0.38.ebuild,v 1.4 2012/07/10 09:56:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/gource-0.38.ebuild,v 1.5 2012/11/22 04:13:39 flameeyes Exp $
 
-EAPI=2
+EAPI=5
 
 inherit eutils autotools flag-o-matic versionator
 
@@ -29,7 +29,7 @@ RDEPEND="
 	media-fonts/freefont-ttf
 	>=media-libs/glew-1.5
 	dev-libs/tinyxml
-	>=dev-libs/boost-1.46
+	>=dev-libs/boost-1.46[threads(+)]
 	"
 DEPEND="
 	${RDEPEND}
@@ -62,7 +62,4 @@ src_configure() {
 		--with-tinyxml
 }
 
-src_install() {
-	emake DESTDIR="${D}" install || die "Install failed"
-	dodoc README ChangeLog THANKS || die "dodoc failed"
-}
+DOCS=( README ChangeLog THANKS )
