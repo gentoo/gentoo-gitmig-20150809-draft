@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.238 2012/09/29 09:58:03 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.239 2012/11/22 16:58:04 vapier Exp $
+
+*hdparm-9.43 (22 Nov 2012)
+
+  22 Nov 2012; Mike Frysinger <vapier@gentoo.org> +hdparm-9.43.ebuild:
+  Version bump #444298 by Agostino Sarubbo.
 
   29 Sep 2012; Ulrich Müller <ulm@gentoo.org> hdparm-9.28.ebuild,
   hdparm-9.36.ebuild, hdparm-9.37.ebuild, hdparm-9.38.ebuild,
