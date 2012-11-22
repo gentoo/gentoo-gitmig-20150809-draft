@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/hashed-storage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashed-storage/ChangeLog,v 1.24 2012/11/18 08:30:30 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashed-storage/ChangeLog,v 1.25 2012/11/22 05:11:58 ottxor Exp $
+
+  22 Nov 2012; Christoph Junghans <ottxor@gentoo.org>
+  hashed-storage-0.5.10.ebuild:
+  fix a prefix typo
 
 *hashed-storage-0.5.10 (18 Nov 2012)
 

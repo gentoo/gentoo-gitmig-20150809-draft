@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashed-storage/hashed-storage-0.5.10.ebuild,v 1.1 2012/11/18 08:30:30 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashed-storage/hashed-storage-0.5.10.ebuild,v 1.2 2012/11/22 05:11:58 ottxor Exp $
 
 EAPI=5
 
@@ -42,5 +42,5 @@ src_configure() {
 src_install() {
 	haskell-cabal_src_install
 
-	use test && rm "${D}/usr/bin/hashed-storage-test"
+	use test && rm "${ED}/usr/bin/hashed-storage-test"
 }
