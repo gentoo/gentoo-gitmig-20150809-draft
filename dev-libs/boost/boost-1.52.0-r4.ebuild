@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.52.0-r3.ebuild,v 1.1 2012/11/18 16:10:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.52.0-r4.ebuild,v 1.1 2012/11/22 03:37:58 flameeyes Exp $
 
 EAPI="5"
 PYTHON_DEPEND="python? *"
@@ -75,7 +75,8 @@ src_prepare() {
 		"${FILESDIR}/${PN}-1.48.0-disable_libboost_python3.patch" \
 		"${FILESDIR}/${PN}-1.48.0-python_linking.patch" \
 		"${FILESDIR}/${PN}-1.48.0-disable_icu_rpath.patch" \
-		"${FILESDIR}/remove-toolset-1.48.0.patch"
+		"${FILESDIR}/remove-toolset-1.48.0.patch" \
+		"${FILESDIR}/${PN}-1.52.0-tuple.patch"
 
 	# Avoid a patch for now
 	for file in libs/context/src/asm/*.S; do
