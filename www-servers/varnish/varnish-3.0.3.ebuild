@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/varnish-3.0.3.ebuild,v 1.1 2012/08/23 20:59:46 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/varnish-3.0.3.ebuild,v 1.2 2012/11/22 20:54:53 blueness Exp $
 
 EAPI="4"
 
@@ -29,7 +29,10 @@ RESTRICT="test" #315725
 
 DOCS=( README doc/changes.rst )
 
-PATCHES=( "${FILESDIR}"/${PN}-3.0.3-automagic.patch )
+PATCHES=(
+	"${FILESDIR}"/${PN}-3.0.3-automagic.patch
+	"${FILESDIR}"/${PN}-3.0.3-pthread-uclibc.patch
+)
 
 src_prepare() {
 	autotools-utils_src_prepare
