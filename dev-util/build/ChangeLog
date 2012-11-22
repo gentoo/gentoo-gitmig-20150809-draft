@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/build
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/build/ChangeLog,v 1.3 2012/10/17 18:23:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/build/ChangeLog,v 1.4 2012/11/22 12:24:01 dev-zero Exp $
+
+  22 Nov 2012; Tiziano Müller <dev-zero@gentoo.org> -build-0.3.8.ebuild:
+  Drop old.
 
   17 Oct 2012; Markus Meier <maekke@gentoo.org> build-0.3.9.ebuild:
   add ~arm, bug #430072
@@ -16,4 +19,3 @@
   +metadata.xml:
   Initial commit (ebuild written by me), needed for xsd and the required
   libraries.
-
