@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/marrie
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/marrie/ChangeLog,v 1.1 2012/11/22 04:39:08 rafaelmartins Exp $
+
+*marrie-0.3 (22 Nov 2012)
+
+  22 Nov 2012; Rafael G. Martins <rafaelmartins@gentoo.org> +marrie-0.3.ebuild,
+  +metadata.xml:
+  Initial commit
+
