@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jthread/jthread-1.2.1.ebuild,v 1.1 2007/12/15 15:33:36 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jthread/jthread-1.2.1.ebuild,v 1.2 2012/11/22 12:02:36 pinkbyte Exp $
 
 DESCRIPTION="JThread provides some classes to make use of threads easy on different platforms."
-HOMEPAGE="http://research.edm.luc.ac.be/jori/jthread/jthread.html"
-SRC_URI="http://research.edm.luc.ac.be/jori/${PN}/${P}.tar.bz2"
+HOMEPAGE="http://research.edm.uhasselt.be/~jori/page/index.php?n=CS.Jthread"
+SRC_URI="http://research.edm.uhasselt.be/jori/${PN}/${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"

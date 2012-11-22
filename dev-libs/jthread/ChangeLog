@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/jthread
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jthread/ChangeLog,v 1.5 2007/12/15 15:33:36 drac Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jthread/ChangeLog,v 1.6 2012/11/22 12:02:36 pinkbyte Exp $
+
+  22 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> jthread-1.2.0.ebuild,
+  jthread-1.2.1.ebuild:
+  QA: fix HOMEPAGE and SRC_URI, old are dead
 
 *jthread-1.2.1 (15 Dec 2007)
 
