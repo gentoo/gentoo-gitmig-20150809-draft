@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qemu-user
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/ChangeLog,v 1.47 2012/11/22 18:47:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/ChangeLog,v 1.48 2012/11/22 19:27:02 ago Exp $
+
+  22 Nov 2012; Agostino Sarubbo <ago@gentoo.org> qemu-user-1.0.ebuild:
+  Stable for amd64, wrt bug #417905
 
   22 Nov 2012; Agostino Sarubbo <ago@gentoo.org> qemu-user-1.0.ebuild,
   qemu-user-1.1.0-r1.ebuild, qemu-user-9999.ebuild:
