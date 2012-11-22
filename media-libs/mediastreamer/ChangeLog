@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mediastreamer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.56 2012/11/19 21:28:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.57 2012/11/22 14:08:52 mgorny Exp $
+
+  22 Nov 2012; Michał Górny <mgorny@gentoo.org>
+  files/mediastreamer-2.8.2-v4l-automagic.patch:
+  Replace the V4L patch with a correct one.
 
 *mediastreamer-2.8.2 (19 Nov 2012)
 
