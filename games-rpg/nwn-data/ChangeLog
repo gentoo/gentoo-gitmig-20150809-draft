@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/nwn-data
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/ChangeLog,v 1.45 2012/10/07 11:39:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/ChangeLog,v 1.46 2012/11/22 10:33:46 ago Exp $
+
+  22 Nov 2012; Agostino Sarubbo <ago@gentoo.org> nwn-data-1.29-r5.ebuild:
+  Stable for amd64, wrt bug #443550
 
 *nwn-data-1.29-r5 (07 Oct 2012)
 
