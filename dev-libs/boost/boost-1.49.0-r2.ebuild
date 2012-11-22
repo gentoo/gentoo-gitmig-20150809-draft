@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.49.0-r2.ebuild,v 1.4 2012/11/22 19:42:17 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.49.0-r2.ebuild,v 1.5 2012/11/22 19:48:37 zerochaos Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? *"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="*-jython *-pypy-*"
 
-inherit flag-o-matic multilib multiprocessing python toolchain-funcs versionator
+inherit flag-o-matic multilib python toolchain-funcs versionator
 
 MY_P=${PN}_$(replace_all_version_separators _)
 
@@ -124,10 +124,17 @@ src_configure() {
 }
 
 src_compile() {
+	local jobs
+	jobs=$( echo " ${MAKEOPTS} " | \
+		sed -e 's/ --jobs[= ]/ -j /g' \
+			-e 's/ -j \([1-9][0-9]*\)/ -j\1/g' \
+			-e 's/ -j\>/ -j1/g' | \
+			( while read -d ' ' j; do if [[ "${j#-j}" = "$j" ]]; then continue; fi; jobs="${j#-j}"; done; echo ${jobs} ) )
+	if [[ "${jobs}" != "" ]]; then NUMJOBS="-j"${jobs}; fi
+
 	export BOOST_ROOT="${S}"
 	PYTHON_DIRS=""
 	MPI_PYTHON_MODULE=""
-	NUMJOBS="-j$(makeopts_jobs)"
 
 	building() {
 		create_user-config.jam

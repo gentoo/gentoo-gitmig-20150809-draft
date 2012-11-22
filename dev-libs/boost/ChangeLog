@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.284 2012/11/22 19:42:17 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.285 2012/11/22 19:48:37 zerochaos Exp $
+
+  22 Nov 2012; Rick Farina <zerochaos@gentoo.org> boost-1.49.0-r2.ebuild:
+  sorry about that, that commit was not meant for gentoo-x86, reverting.
 
   22 Nov 2012; Rick Farina <zerochaos@gentoo.org> boost-1.49.0-r2.ebuild:
   fix to parse MAKEOPTS jobs properly, same style as newer ebuilds
