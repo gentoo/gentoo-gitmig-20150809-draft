@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.556 2012/11/22 05:19:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.557 2012/11/22 06:16:11 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -496,7 +496,7 @@ create_gcc_env_entry() {
 	PATH="${BINPATH}"
 	ROOTPATH="${BINPATH}"
 	GCC_PATH="${BINPATH}"
-	LDPATH="${ldpath}"
+	LDPATH="${ldpaths}"
 	MANPATH="${DATAPATH}/man"
 	INFOPATH="${DATAPATH}/info"
 	STDCXX_INCDIR="${STDCXX_INCDIR##*/}"
