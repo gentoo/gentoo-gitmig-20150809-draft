@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.2.0-r1.ebuild,v 1.1 2012/10/09 18:54:01 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.2.0-r1.ebuild,v 1.2 2012/11/22 03:45:06 flameeyes Exp $
 
 EAPI=4
 SCONS_MIN_VERSION="1.2.0"
 BOOST_MAX_SLOT="1.49"
-inherit eutils boost-utils flag-o-matic multilib pax-utils scons-utils user versionator
+inherit eutils flag-o-matic multilib pax-utils scons-utils user versionator
 
 MY_P=${PN}-src-r${PV/_rc/-rc}
 
@@ -48,10 +48,6 @@ pkg_setup() {
 	else
 		scons_opts+=" --usesm"
 	fi
-
-	local boostver=$(boost-utils_get_best_slot)
-	scons_opts+=" --boost-version=${boostver/./_}"
-	append-cxxflags "-I$(boost-utils_get_includedir)"
 }
 
 src_prepare() {

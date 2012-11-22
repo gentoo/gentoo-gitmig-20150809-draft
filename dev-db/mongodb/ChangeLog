@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mongodb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.51 2012/11/09 16:08:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.52 2012/11/22 03:45:06 flameeyes Exp $
+
+  22 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org> mongodb-2.0.7-r1.ebuild,
+  mongodb-2.0.7-r2.ebuild, mongodb-2.2.0-r1.ebuild, mongodb-2.2.0-r2.ebuild:
+  Get rid of boost-utils eclass.
 
   09 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org> mongodb-2.2.1.ebuild:
   No need to specify a boost version anymore, as boost is unslotted; also add a
