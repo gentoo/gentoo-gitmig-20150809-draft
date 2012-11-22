@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/org-mode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.151 2012/11/21 20:46:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.152 2012/11/22 00:18:04 ulm Exp $
+
+  22 Nov 2012; Ulrich Müller <ulm@gentoo.org> -org-mode-7.9.1.ebuild,
+  org-mode-7.9.2.ebuild:
+  Add RESTRICT="test": The "testing" subdirectory needed for tests is only
+  present in the upstream git repository, but not distributed with the
+  package's tarball, bug 441072 comment #4. Remove old.
 
   21 Nov 2012; Agostino Sarubbo <ago@gentoo.org> org-mode-7.9.2.ebuild:
   Stable for ppc, tested by Vincent Olivert Riera <peratu@carrosses.com>, wrt
