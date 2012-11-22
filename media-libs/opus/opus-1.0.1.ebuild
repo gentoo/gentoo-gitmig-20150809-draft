@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opus/opus-1.0.1.ebuild,v 1.5 2012/11/11 14:17:41 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opus/opus-1.0.1.ebuild,v 1.6 2012/11/22 10:05:37 ago Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ fi
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="amd64 arm ppc ppc64 ~x86 ~amd64-fbsd"
+KEYWORDS="amd64 arm ppc ppc64 x86 ~amd64-fbsd"
 IUSE="doc static-libs"
 
 DEPEND="doc? ( app-doc/doxygen )"
