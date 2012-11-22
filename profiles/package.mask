@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14242 2012/11/21 22:30:24 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14243 2012/11/22 02:35:40 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -108,15 +108,6 @@ net-analyzer/nbaudit
 # Markos Chandras <hwoarang@gentoo.org> (04 Nov 2012)
 # Masked for testing
 =media-video/avidemux-2.6.0
-
-# Diego Elio Pettenò <flameeyes@gentoo.org> (03 Nov 2012)
-# Old boost (1.46) users, won't work as intended after unslot
-=dev-libs/boost-1.46*
-sci-biology/cufflinks
-sci-biology/express
-<net-libs/rb_libtorrent-0.15.10
-<dev-python/tagpy-0.94.8-r1
-<dev-python/visual-5.72-r1
 
 # Markos Chandras <hwoarang@gentoo.org> (03 Nov 2012)
 # Masked for testing
