@@ -1,6 +1,10 @@
 # ChangeLog for app-text/pep
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pep/ChangeLog,v 1.23 2012/11/03 20:18:01 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pep/ChangeLog,v 1.24 2012/11/22 10:13:45 ago Exp $
+
+  22 Nov 2012; Agostino Sarubbo <ago@gentoo.org> pep-2.8-r1.ebuild:
+  Stable for x86, tested by Vincent Olivert Riera <peratu@carrosses.com>, wrt
+  bug #441116
 
   03 Nov 2012; Anthony G. Basile <blueness@gentoo.org> pep-2.8-r1.ebuild:
   stable ppc, bug #441116

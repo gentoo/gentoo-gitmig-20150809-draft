@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pep/pep-2.8-r1.ebuild,v 1.4 2012/11/03 20:18:01 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pep/pep-2.8-r1.ebuild,v 1.5 2012/11/22 10:13:45 ago Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://hannemyr.com/enjoy/${PN}${PV//./}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ppc ~sparc ~x86 ~x86-linux ~ppc-macos"
+KEYWORDS="~amd64 ~mips ppc ~sparc x86 ~x86-linux ~ppc-macos"
 IUSE=""
 
 DEPEND="app-arch/unzip"
