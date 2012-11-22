@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/violetland/violetland-0.4.3.ebuild,v 1.5 2012/11/06 08:53:49 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/violetland/violetland-0.4.3.ebuild,v 1.6 2012/11/22 04:01:42 flameeyes Exp $
 
 EAPI=2
-inherit eutils multilib toolchain-funcs flag-o-matic boost-utils cmake-utils games
+inherit eutils multilib toolchain-funcs flag-o-matic cmake-utils games
 
 DESCRIPTION="Help a girl by name of Violet to struggle with hordes of monsters."
 HOMEPAGE="http://code.google.com/p/violetland/"
@@ -32,11 +32,6 @@ src_prepare() {
 		-e "/README_RU.TXT/d" \
 		CMakeLists.txt || die "sed failed"
 	epatch "${FILESDIR}"/${P}-boost150.patch
-
-	append-cxxflags -I$(boost-utils_get_includedir)
-	append-ldflags -L$(boost-utils_get_libdir)
-	export BOOST_INCLUDEDIR=$(boost-utils_get_includedir)
-	export BOOST_LIBRARYDIR=-L$(boost-utils_get_libdir)
 }
 
 src_configure() {
