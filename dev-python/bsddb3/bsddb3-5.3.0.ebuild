@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/bsddb3-5.3.0.ebuild,v 1.6 2012/07/29 17:15:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/bsddb3-5.3.0.ebuild,v 1.7 2012/11/22 15:55:20 idella4 Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2 3:3.1"
@@ -51,6 +51,7 @@ src_test() {
 		ln -s build-${PYTHON_ABI} build
 
 		echo TMPDIR="${T}/tests-${PYTHON_ABI}" "$(PYTHON)" test.py
+		einfo "all 500 tests are run silently and may take a number of minutes to complete"
 		TMPDIR="${T}/tests-${PYTHON_ABI}" "$(PYTHON)" test.py
 	}
 	python_execute_function tests
