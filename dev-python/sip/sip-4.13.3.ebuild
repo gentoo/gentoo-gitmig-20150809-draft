@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.13.3.ebuild,v 1.7 2012/09/09 15:52:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.13.3.ebuild,v 1.8 2012/11/22 21:31:43 maekke Exp $
 
 EAPI="4"
 PYTHON_DEPEND="*"
@@ -16,7 +16,7 @@ SRC_URI="http://www.riverbankcomputing.com/static/Downloads/${PN}${PV%%.*}/${P}.
 
 LICENSE="|| ( GPL-2 GPL-3 sip )"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="debug doc"
 
 DEPEND=""

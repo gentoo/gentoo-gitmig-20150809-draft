@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.14.ebuild,v 1.4 2012/11/22 21:02:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.14.ebuild,v 1.5 2012/11/22 21:31:43 maekke Exp $
 
 EAPI="5"
 PYTHON_DEPEND="*"
@@ -31,7 +31,7 @@ fi
 
 # Sub-slot based on SIP_API_MAJOR_NR from siplib/sip.h.in
 SLOT="0/9"
-KEYWORDS="~alpha ~amd64 arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="debug doc"
 
 DEPEND=""
