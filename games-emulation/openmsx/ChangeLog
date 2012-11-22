@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/openmsx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/ChangeLog,v 1.45 2012/11/19 23:22:14 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/ChangeLog,v 1.46 2012/11/22 10:33:28 ago Exp $
+
+  22 Nov 2012; Agostino Sarubbo <ago@gentoo.org> openmsx-0.9.1.ebuild:
+  Stable for amd64, wrt bug #443894
 
   19 Nov 2012; Anthony G. Basile <blueness@gentoo.org> openmsx-0.9.1.ebuild:
   stable ppc, bug #443894
