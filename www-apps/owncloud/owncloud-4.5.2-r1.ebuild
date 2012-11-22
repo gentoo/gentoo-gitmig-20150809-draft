@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/owncloud-4.5.2.ebuild,v 1.1 2012/11/15 09:02:19 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/owncloud-4.5.2-r1.ebuild,v 1.1 2012/11/22 16:03:52 voyageur Exp $
 
 EAPI=4
 
-inherit webapp depend.php
+inherit eutils webapp depend.php
 
 DESCRIPTION="Web-based storage application where all your data is under your own control"
 HOMEPAGE="http://owncloud.org"
@@ -25,6 +25,11 @@ S=${WORKDIR}/${PN}
 
 pkg_setup() {
 	webapp_pkg_setup
+}
+
+src_prepare() {
+	# Fix DoS with postgres backend
+	epatch "${FILESDIR}"/${P}-fix_sabre_connector.patch
 }
 
 src_install() {
