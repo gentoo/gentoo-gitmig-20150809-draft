@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/gnote
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/ChangeLog,v 1.24 2012/09/18 11:07:37 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/ChangeLog,v 1.25 2012/11/22 08:15:23 eva Exp $
+
+  22 Nov 2012; Gilles Dartiguelongue <eva@gentoo.org> -gnote-0.7.4.ebuild,
+  -gnote-0.8.3.ebuild:
+  Clean up old revisions.
 
 *gnote-0.8.4 (18 Sep 2012)
 
