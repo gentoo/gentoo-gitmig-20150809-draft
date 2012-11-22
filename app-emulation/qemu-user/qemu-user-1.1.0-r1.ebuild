@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/qemu-user-1.1.0-r1.ebuild,v 1.3 2012/09/12 19:14:11 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/qemu-user-1.1.0-r1.ebuild,v 1.4 2012/11/22 18:47:25 ago Exp $
 
 EAPI=4
 
@@ -79,12 +79,11 @@ pkg_setup() {
 }
 
 src_prepare() {
-	cd "${S}"
 	# prevent docs to get automatically installed
-	sed -i '/$(DESTDIR)$(docdir)/d' Makefile
+	sed -i '/$(DESTDIR)$(docdir)/d' Makefile || die
 	# Alter target makefiles to accept CFLAGS set via flag-o
 	sed -i 's/^\(C\|OP_C\|HELPER_C\)FLAGS=/\1FLAGS+=/' \
-		Makefile Makefile.target
+		Makefile Makefile.target || die
 
 	EPATCH_SOURCE="${WORKDIR}/patches" EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" epatch
@@ -117,12 +116,8 @@ src_configure() {
 	./configure ${conf_opts} --target-list="${user_targets}" || die "econf failed"
 }
 
-src_compile() {
-	emake || die "emake qemu failed"
-}
-
 src_install() {
-	emake DESTDIR="${ED}" install || die "make install failed"
+	emake DESTDIR="${ED}" install
 
 	# fixup to avoid collisions with qemu
 	base_dir="${ED}/usr/bin"
@@ -133,7 +128,6 @@ src_install() {
 
 	pax-mark r "${ED}"/usr/bin/qemu-static-*
 	rm -fr "${ED}/usr/share" "${ED}/usr/libexec" "${ED}/etc"
-	dohtml qemu-doc.html
-	dohtml qemu-tech.html
+	dohtml qemu-doc.html qemu-tech.html
 	newinitd "${FILESDIR}/qemu-binfmt.initd" qemu-binfmt
 }
