@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+	<herd>voip</herd>
 	<maintainer>
-		<email>voip@gentoo.org</email>
-		<description>dependency of Tapioca</description>
+		<email>pinkbyte@gentoo.org</email>
+		<description>Sergey Popov</description>
 	</maintainer>
 </pkgmetadata>
