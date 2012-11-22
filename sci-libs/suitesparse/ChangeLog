@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/suitesparse
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/suitesparse/ChangeLog,v 1.7 2012/11/12 02:26:47 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/suitesparse/ChangeLog,v 1.8 2012/11/22 15:18:00 bicatali Exp $
+
+  22 Nov 2012; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml,
+  suitesparse-4.0.2.ebuild:
+  Support cholmod USE flags. Change umfpack flag according to latest version
+  (bug #444278)
 
 *suitesparse-4.0.2 (12 Nov 2012)
 

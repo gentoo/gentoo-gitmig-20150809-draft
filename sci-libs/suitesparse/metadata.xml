@@ -17,7 +17,7 @@
     * LDL: a simple LDL^T factorization
     * SPQR: multifrontal sparse QT factorization
     * UMFPACK: sparse multifrontal LU factorization
-    * UFconfig: common configuration for all but CSparse
+    * SuiteSparse_config: common configuration for all but CSparse
   The Gentoo package does not include the suitesparse MATLAB tools from
   upstream, from the packages above and the following MATLAB-only packages:
     * RBio: MATLAB toolbox for reading/writing sparse matrices
@@ -26,9 +26,9 @@
     * SSMULT: sparse matrix times sparse matrix 
 </longdescription>
 <use>
-  <flag name='metis'>
-    Use METIS (<pkg>sci-libs/metis</pkg>
-    or <pkg>sci-libs/parmetis</pkg>) for partitioning
-  </flag>
+  <flag name="cuda">Enable nvidia cuda toolkit for speeding up computations</flag>
+  <flag name="metis">Enable the Partition module to cholmod using <pkg>sci-libs/metis</pkg></flag>
+  <flag name="supernodal">Enable the Supernodal module (needs <pkg>virtual/lapack</pkg>)</flag>
+  <flag name='tbb'>Enable multithreading with the Intel Threads Building Block <pkg>dev-cpp/tbb</pkg></flag>
 </use>
 </pkgmetadata>

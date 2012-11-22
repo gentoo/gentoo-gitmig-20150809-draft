@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/suitesparse/suitesparse-4.0.2.ebuild,v 1.1 2012/11/12 02:26:47 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/suitesparse/suitesparse-4.0.2.ebuild,v 1.2 2012/11/22 15:18:00 bicatali Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ LICENSE="LGPL-2.1 GPL-2"
 SLOT="0"
 
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="metis doc"
+IUSE="cuda doc metis tbb supernodal"
 DEPEND=""
 RDEPEND="
 	>=sci-libs/suitesparseconfig-${PV}
@@ -19,10 +19,10 @@ RDEPEND="
 	>=sci-libs/btf-1.2.0
 	>=sci-libs/camd-2.3.1[doc?]
 	>=sci-libs/ccolamd-2.8.0
-	>=sci-libs/cholmod-2.0.1[doc?,metis?]
+	>=sci-libs/cholmod-2.0.1[cuda?,doc?,metis?,supernodal?]
 	>=sci-libs/colamd-2.3.1
 	>=sci-libs/cxsparse-3.1.1
 	>=sci-libs/klu-1.2.0[doc?]
 	>=sci-libs/ldl-2.0.4[doc?]
-	>=sci-libs/spqr-1.3.1[doc?,metis?]
-	>=sci-libs/umfpack-5.6.1[doc?,metis?]"
+	>=sci-libs/spqr-1.3.1[doc?,metis?,tbb?]
+	>=sci-libs/umfpack-5.6.1[doc?,cholmod]"
