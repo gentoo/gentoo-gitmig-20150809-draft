@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/xtail
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/xtail/ChangeLog,v 1.21 2012/06/07 21:02:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/xtail/ChangeLog,v 1.22 2012/11/22 21:19:54 hwoarang Exp $
+
+  22 Nov 2012; Markos Chandras <hwoarang@gentoo.org> xtail-2.1-r1.ebuild,
+  xtail-2.1.ebuild:
+  Change license to BSD. Bug #444338. Thanks to Ulrich Müller <ulm@gentoo.org>
 
   07 Jun 2012; Brent Baude <ranger@gentoo.org> xtail-2.1-r1.ebuild:
   Marking xtail-2.1-r1 ppc for bug 418501
