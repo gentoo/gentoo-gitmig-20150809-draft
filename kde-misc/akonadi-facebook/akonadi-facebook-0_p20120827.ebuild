@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/akonadi-facebook/akonadi-facebook-0_p20120827.ebuild,v 1.1 2012/08/28 06:12:40 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/akonadi-facebook/akonadi-facebook-0_p20120827.ebuild,v 1.2 2012/11/23 04:32:50 creffett Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ IUSE="debug"
 RDEPEND="
 	$(add_kdebase_dep kdepimlibs semantic-desktop)
 	dev-libs/qjson
-	kde-misc/akonadi-social-utils
+	|| ( kde-misc/akonadi-social-utils $(add_kdebase_dep kdepimlibs '' 4.9.80) )
 "
 DEPEND="
 	${RDEPEND}
