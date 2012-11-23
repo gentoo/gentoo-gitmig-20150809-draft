@@ -1,6 +1,13 @@
 # ChangeLog for games-util/pyfa
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/ChangeLog,v 1.14 2012/08/11 19:36:52 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/ChangeLog,v 1.15 2012/11/23 10:45:16 tetromino Exp $
+
+*pyfa-1.1.10 (23 Nov 2012)
+
+  23 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org> -pyfa-1.1.8.ebuild,
+  pyfa-1.1.9-r1.ebuild, +pyfa-1.1.10.ebuild:
+  Bump, fixes Marauder bonuses and some rig stacking bugs. Update license,
+  homepage. Drop old.
 
 *pyfa-1.1.9-r1 (11 Aug 2012)
 

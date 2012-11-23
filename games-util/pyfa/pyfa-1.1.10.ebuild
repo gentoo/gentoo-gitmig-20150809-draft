@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/pyfa-1.1.8.ebuild,v 1.1 2012/07/16 10:04:47 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/pyfa-1.1.10.ebuild,v 1.1 2012/11/23 10:45:16 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -9,18 +9,18 @@ PYTHON_USE_WITH="sqlite threads"
 inherit eutils gnome2-utils python
 
 if [[ ${PV/_rc*/} == ${PV} ]] ; then
-	MY_PV=${PV}-inferno-src
-	FOLDER=stable/${PV}
+	MY_PV=${PV}-inferno-1.2-src
+	FOLDER=pyfa/stable/${PV}
 else
 	MY_PV=${PV/_rc/-stable-RC}-src
-	FOLDER=stable/${PV/*_rc/RC}
+	FOLDER=pyfa/stable/${PV/*_rc/RC}
 fi
 
 DESCRIPTION="Python Fitting Assistant - a ship fitting application for EVE Online"
-HOMEPAGE="http://www.evefit.org/Pyfa"
+HOMEPAGE="http://www.evefit.org/static/pyfa"
 SRC_URI="http://dl.evefit.org/${FOLDER}/${PN}-${MY_PV}.tar.bz2"
 
-LICENSE="GPL-3 LGPL-2.1 CCPL-Attribution-2.5 free-noncomm"
+LICENSE="GPL-3+ LGPL-2.1+ CCPL-Attribution-2.5 free-noncomm"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+graph"
@@ -28,7 +28,7 @@ IUSE="+graph"
 RDEPEND="dev-python/sqlalchemy
 	dev-python/wxpython:2.8
 	graph? ( dev-python/matplotlib[wxwidgets] dev-python/numpy )"
-DEPEND=""
+DEPEND="app-text/dos2unix"
 
 S=${WORKDIR}/${PN}
 
@@ -38,6 +38,9 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# get rid of CRLF line endings introduced in 1.1.10 so patches work
+	dos2unix config.py pyfa.py service/settings.py || die
+
 	# make staticPath settable from configforced again
 	epatch "${FILESDIR}/${PN}-1.1-staticPath.patch"
 

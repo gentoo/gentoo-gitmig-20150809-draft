@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/pyfa-1.1.9-r1.ebuild,v 1.1 2012/08/11 19:36:52 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/pyfa-1.1.9-r1.ebuild,v 1.2 2012/11/23 10:45:16 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -10,17 +10,17 @@ inherit eutils gnome2-utils python
 
 if [[ ${PV/_rc*/} == ${PV} ]] ; then
 	MY_PV=${PV}-inferno-1.2-src
-	FOLDER=stable/${PV}
+	FOLDER=pyfa/stable/${PV}
 else
 	MY_PV=${PV/_rc/-stable-RC}-src
-	FOLDER=stable/${PV/*_rc/RC}
+	FOLDER=pyfa/stable/${PV/*_rc/RC}
 fi
 
 DESCRIPTION="Python Fitting Assistant - a ship fitting application for EVE Online"
-HOMEPAGE="http://www.evefit.org/Pyfa"
+HOMEPAGE="http://www.evefit.org/static/pyfa"
 SRC_URI="http://dl.evefit.org/${FOLDER}/${PN}-${MY_PV}.tar.bz2 -> pyfa-1.1.9-inferno-1.2-src-r1.tar.bz2"
 
-LICENSE="GPL-3 LGPL-2.1 CCPL-Attribution-2.5 free-noncomm"
+LICENSE="GPL-3+ LGPL-2.1+ CCPL-Attribution-2.5 free-noncomm"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+graph"
