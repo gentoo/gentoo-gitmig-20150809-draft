@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.6.9999.ebuild,v 1.32 2012/11/16 18:30:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.6.9999.ebuild,v 1.33 2012/11/23 18:46:09 scarabeus Exp $
 
 EAPI=4
 
@@ -206,7 +206,6 @@ DEPEND="${COMMON_DEPEND}
 	java? (
 		>=virtual/jdk-1.6
 		>=dev-java/ant-core-1.7
-		test? ( dev-java/junit:4 )
 	)
 	odk? ( app-doc/doxygen )
 	test? ( dev-util/cppunit )
@@ -378,6 +377,7 @@ src_configure() {
 		# hsqldb: system one is too new
 		# saxon: system one does not work properly
 		java_opts="
+			--without-junit
 			--without-system-hsqldb
 			--without-system-saxon
 			--with-ant-home="${ANT_HOME}"
@@ -400,12 +400,6 @@ src_configure() {
 				--with-commons-logging-jar=$(java-pkg_getjar commons-logging commons-logging.jar)
 				--with-servlet-api-jar=$(java-pkg_getjar tomcat-servlet-api-3.0 servlet-api.jar)
 			"
-		fi
-
-		if use test; then
-			java_opts+=" --with-junit=$(java-pkg_getjar junit-4 junit.jar)"
-		else
-			java_opts+=" --without-junit"
 		fi
 	fi
 
