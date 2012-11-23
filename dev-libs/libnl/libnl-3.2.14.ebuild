@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-3.2.14.ebuild,v 1.6 2012/11/21 11:17:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-3.2.14.ebuild,v 1.7 2012/11/23 17:17:40 jer Exp $
 
 EAPI=4
 inherit eutils libtool multilib
@@ -38,7 +38,7 @@ src_install() {
 	if use doc; then
 		dohtml -r \
 			-a css,html,js,map,png \
-			"${WORKDIR}"/${PN}-doc-${PV}
+			"${WORKDIR}"/${PN}-doc-${PV}/*
 	fi
 
 	use static-libs || rm -f "${ED}"/usr/$(get_libdir)/lib*.la
