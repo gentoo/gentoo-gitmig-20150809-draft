@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.5.0_alpha1.ebuild,v 1.2 2012/11/23 14:45:43 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.9.ebuild,v 1.1 2012/11/23 14:45:43 olemarkus Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ function php_get_uri ()
 {
 	case "${1}" in
 		"php-pre")
-			echo "http://downloads.php.net/dsp/${2}"
+			echo "http://downloads.php.net/stas/${2}"
 		;;
 		"php")
 			echo "http://www.php.net/distributions/${2}"
@@ -45,7 +45,6 @@ PHP_PV="${PV/_rc/RC}"
 PHP_PV="${PHP_PV/_alpha/alpha}"
 PHP_PV="${PHP_PV/_beta/beta}"
 PHP_RELEASE="php"
-[[ ${PV} == ${PV/_alpha/} ]] || PHP_RELEASE="php-pre"
 [[ ${PV} == ${PV/_rc/} ]] || PHP_RELEASE="php-pre"
 PHP_P="${PN}-${PHP_PV}"
 
@@ -53,7 +52,7 @@ PHP_PATCHSET_LOC="olemarkus"
 
 PHP_SRC_URI="$(php_get_uri "${PHP_RELEASE}" "${PHP_P}.tar.bz2")"
 
-PHP_PATCHSET="0"
+PHP_PATCHSET="2"
 PHP_PATCHSET_URI="
 	$(php_get_uri "${PHP_PATCHSET_LOC}" "php-patchset-${SLOT}-r${PHP_PATCHSET}.tar.bz2")"
 
@@ -311,28 +310,17 @@ php_install_ini() {
 		[[ -f "${ED}/etc/php-fpm.conf.default" ]] && rm "${ED}/etc/php-fpm.conf.default"
 	fi
 
-  # Install PHP ini files into /usr/share/php
-	if [[ ${SLOT} == '5.2' ]]; then
-		newdoc php.ini-dist php.ini-development
-		newdoc php.ini-recommended php.ini-production
-	fi
+	# Install PHP ini files into /usr/share/php
 
-	if [[ ${SLOT} == '5.3' ]]; then
-		dodoc php.ini-development
-		dodoc php.ini-production
-	fi
-
-	if [[ ${SLOT} == '5.4' ]]; then
-		dodoc php.ini-development
-		dodoc php.ini-production
-	fi
+	dodoc php.ini-development
+	dodoc php.ini-production
 
 }
 
 php_set_ini_dir() {
-        PHP_INI_DIR="${EPREFIX}/etc/php/${1}-php${SLOT}"
-        PHP_EXT_INI_DIR="${PHP_INI_DIR}/ext"
-        PHP_EXT_INI_DIR_ACTIVE="${PHP_INI_DIR}/ext-active"
+	PHP_INI_DIR="${EPREFIX}/etc/php/${1}-php${SLOT}"
+	PHP_EXT_INI_DIR="${PHP_INI_DIR}/ext"
+	PHP_EXT_INI_DIR_ACTIVE="${PHP_INI_DIR}/ext-active"
 }
 
 src_prepare() {
@@ -349,12 +337,12 @@ src_prepare() {
 
 	# Change PHP branding
 	# Get the alpha/beta/rc version
-	local ver=$(get_version_component_range 3)
-	sed -re	"s|^(PHP_EXTRA_VERSION=\").*(\")|\1-pl${PR/r/}-gentoo\2|g" \
+	local ver=$(get_version_component_range 4)
+	sed -re	"s|^(PHP_EXTRA_VERSION=\").*(\")|\1${PHP_EXTRA_BRANDING}-${ver}-pl${PR/r/}-gentoo\2|g" \
 		-i configure.in || die "Unable to change PHP branding"
 
 	# Apply generic PHP patches
-		EPATCH_SOURCE="${WORKDIR}/patches/generic" EPATCH_SUFFIX="patch" \
+	EPATCH_SOURCE="${WORKDIR}/patches/generic" EPATCH_SUFFIX="patch" \
 		EPATCH_FORCE="yes" \
 		EPATCH_MULTI_MSG="Applying generic patches and fixes from upstream..." epatch
 
@@ -367,7 +355,8 @@ src_prepare() {
 	sed -i \
 		-e "s,-i -a -n php${PHP_MV},-i -n php${PHP_MV},g" \
 		-e "s,-i -A -n php${PHP_MV},-i -n php${PHP_MV},g" \
-	configure sapi/apache2filter/config.m4 sapi/apache2handler/config.m4
+		configure sapi/apache2filter/config.m4 sapi/apache2handler/config.m4
+
 
 	# Patch PHP to support heimdal instead of mit-krb5
 	if has_version "app-crypt/heimdal" ; then
