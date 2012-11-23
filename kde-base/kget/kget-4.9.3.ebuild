@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/kget-4.9.3.ebuild,v 1.1 2012/11/08 23:26:54 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/kget-4.9.3.ebuild,v 1.2 2012/11/23 17:24:03 ago Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ KDE_SCM="svn"
 inherit kde4-meta
 
 DESCRIPTION="An advanced download manager for KDE"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug bittorrent mms semantic-desktop sqlite webkit"
 
 RDEPEND="

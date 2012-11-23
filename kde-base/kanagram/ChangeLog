@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kanagram
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kanagram/ChangeLog,v 1.202 2012/11/13 20:20:53 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kanagram/ChangeLog,v 1.203 2012/11/23 17:01:16 ago Exp $
+
+  23 Nov 2012; Agostino Sarubbo <ago@gentoo.org> kanagram-4.9.3.ebuild:
+  Stable for amd64, wrt bug #442394
 
   13 Nov 2012; Johannes Huber <johu@gentoo.org> -kanagram-4.9.2.ebuild:
   Remove KDE SC 4.9.2
