@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-6.6.0.ebuild,v 1.1 2012/11/20 13:03:37 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-6.6.0.ebuild,v 1.2 2012/11/23 10:53:47 ultrabug Exp $
 
 EAPI=4
 AUTOTOOLS_AUTORECONF=yes
@@ -27,7 +27,7 @@ RDEPEND="
 	mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql-base )
 	oracle? ( dev-db/oracle-instantclient-basic )
-	relp? ( >=dev-libs/librelp-0.1.3 )
+	relp? ( >=dev-libs/librelp-1.0.1 )
 	snmp? ( net-analyzer/net-snmp )
 	ssl? ( net-libs/gnutls dev-libs/libgcrypt )
 	zeromq? ( net-libs/czmq )
