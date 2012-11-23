@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kglobalaccel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kglobalaccel/ChangeLog,v 1.115 2012/11/23 17:24:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kglobalaccel/ChangeLog,v 1.116 2012/11/23 18:58:02 ago Exp $
+
+  23 Nov 2012; Agostino Sarubbo <ago@gentoo.org> kglobalaccel-4.9.3.ebuild:
+  Stable for x86, wrt bug #442394
 
   23 Nov 2012; Agostino Sarubbo <ago@gentoo.org> kglobalaccel-4.9.3.ebuild:
   Stable for amd64, wrt bug #442394

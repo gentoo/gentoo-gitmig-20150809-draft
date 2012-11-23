@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcalc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcalc/ChangeLog,v 1.233 2012/11/23 17:04:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcalc/ChangeLog,v 1.234 2012/11/23 18:37:23 ago Exp $
+
+  23 Nov 2012; Agostino Sarubbo <ago@gentoo.org> kcalc-4.9.3.ebuild:
+  Stable for x86, wrt bug #442394
 
   23 Nov 2012; Agostino Sarubbo <ago@gentoo.org> kcalc-4.9.3.ebuild:
   Stable for amd64, wrt bug #442394

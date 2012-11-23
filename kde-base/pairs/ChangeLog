@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/pairs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pairs/ChangeLog,v 1.8 2012/11/23 17:57:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pairs/ChangeLog,v 1.9 2012/11/23 19:30:50 ago Exp $
+
+  23 Nov 2012; Agostino Sarubbo <ago@gentoo.org> pairs-4.9.3.ebuild:
+  Stable for x86, wrt bug #442394
 
   23 Nov 2012; Agostino Sarubbo <ago@gentoo.org> pairs-4.9.3.ebuild:
   Stable for amd64, wrt bug #442394
