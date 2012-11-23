@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/libxsd-frontend
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxsd-frontend/ChangeLog,v 1.7 2012/11/22 12:30:38 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxsd-frontend/ChangeLog,v 1.8 2012/11/23 10:48:32 dev-zero Exp $
+
+*libxsd-frontend-1.18.0 (23 Nov 2012)
+
+  23 Nov 2012; Tiziano Müller <dev-zero@gentoo.org>
+  +libxsd-frontend-1.18.0.ebuild:
+  Resurrected 1.18.0 with correct boost-1.49 dep for kde stabilization.
 
   22 Nov 2012; Tiziano Müller <dev-zero@gentoo.org>
   -libxsd-frontend-1.17.0.ebuild, -libxsd-frontend-1.18.0.ebuild:
