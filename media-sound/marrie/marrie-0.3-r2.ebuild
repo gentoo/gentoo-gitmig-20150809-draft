@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/marrie/marrie-0.3-r1.ebuild,v 1.1 2012/11/23 01:28:57 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/marrie/marrie-0.3-r2.ebuild,v 1.1 2012/11/23 03:38:20 rafaelmartins Exp $
 
 EAPI=4
 
@@ -35,6 +35,8 @@ RDEPEND="virtual/python-argparse
 	dev-python/feedparser"
 DEPEND="${RDEPEND}
 	doc? ( dev-python/docutils )"
+
+PYTHON_MODNAME="marrie.py"
 
 src_compile() {
 	distutils_src_compile
