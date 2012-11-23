@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libfrontend-elements
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libfrontend-elements/ChangeLog,v 1.3 2012/10/17 18:24:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libfrontend-elements/ChangeLog,v 1.4 2012/11/23 18:06:49 ago Exp $
+
+  23 Nov 2012; Agostino Sarubbo <ago@gentoo.org>
+  libfrontend-elements-1.1.4.ebuild:
+  Stable for amd64, wrt bug #442394
 
   17 Oct 2012; Markus Meier <maekke@gentoo.org>
   libfrontend-elements-1.1.4.ebuild:
