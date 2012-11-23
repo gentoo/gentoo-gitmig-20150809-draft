@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eeze/eeze-1.7.1.ebuild,v 1.1 2012/10/22 14:38:37 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eeze/eeze-1.7.1.ebuild,v 1.2 2012/11/23 22:12:13 tommy Exp $
 
 inherit enlightenment
 
@@ -11,7 +11,8 @@ SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
 KEYWORDS="~amd64 ~arm ~x86"
 IUSE="static-libs utilities"
 
-DEPEND=">=dev-libs/ecore-1.7.0"
+DEPEND=">=dev-libs/ecore-1.7.0
+	>=dev-libs/eina-1.7.0"
 RDEPEND=${DEPEND}
 
 src_configure() {
