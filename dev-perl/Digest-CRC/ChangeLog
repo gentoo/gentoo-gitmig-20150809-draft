@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Digest-CRC
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-CRC/ChangeLog,v 1.12 2012/11/23 18:16:26 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-CRC/ChangeLog,v 1.13 2012/11/23 20:37:21 blueness Exp $
+
+  23 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
+  Digest-CRC-0.180.0.ebuild:
+  keyword ~mips, needed for parted tests
 
   23 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
   Digest-CRC-0.180.0.ebuild:
