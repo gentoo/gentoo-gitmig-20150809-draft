@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7174 2012/11/22 13:43:47 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7175 2012/11/23 01:20:33 rich0 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Nov 2012; Richard Freeman <rich0@gentoo.org> package.mask:
+  Mask mythtv 0.26 for addition to tree.
 
   22 Nov 2012; Sergey Popov <pinkbyte@gentoo.org>
   arch/amd64/no-multilib/package.mask:
