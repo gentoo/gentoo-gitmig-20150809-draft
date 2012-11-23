@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/crystal/crystal-2.2.0.ebuild,v 1.1 2012/08/02 08:52:41 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/crystal/crystal-2.2.0.ebuild,v 1.2 2012/11/23 18:05:06 ago Exp $
 
 EAPI=4
 KDE_MINIMAL="4.9"
@@ -12,7 +12,7 @@ SRC_URI="http://www.saschahlusiak.de/linux/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 DEPEND="$(add_kdebase_dep kwin)"
