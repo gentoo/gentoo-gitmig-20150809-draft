@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/build
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/build/ChangeLog,v 1.4 2012/11/22 12:24:01 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/build/ChangeLog,v 1.5 2012/11/23 18:06:40 ago Exp $
+
+  23 Nov 2012; Agostino Sarubbo <ago@gentoo.org> build-0.3.9.ebuild:
+  Stable for amd64, wrt bug #442394
 
   22 Nov 2012; Tiziano Müller <dev-zero@gentoo.org> -build-0.3.8.ebuild:
   Drop old.
