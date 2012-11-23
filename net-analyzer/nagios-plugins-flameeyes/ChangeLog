@@ -1,0 +1,12 @@
+# ChangeLog for net-analyzer/nagios-plugins-flameeyes
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins-flameeyes/ChangeLog,v 1.1 2012/11/23 16:39:04 flameeyes Exp $
+
+*nagios-plugins-flameeyes-9999 (23 Nov 2012)
+
+  23 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +nagios-plugins-flameeyes-9999.ebuild:
+  Initial import of a live ebuild for my own set of nagios plugins. This makes
+  it much easier to deal with their dependencies, and two out of three at the
+  time of adding are Gentoo-specific. An actual release will follow when I'll be
+  done writing a few more.
