@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/marrie
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/marrie/ChangeLog,v 1.1 2012/11/22 04:39:08 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/marrie/ChangeLog,v 1.2 2012/11/23 01:28:57 rafaelmartins Exp $
+
+*marrie-9999 (23 Nov 2012)
+*marrie-0.3-r1 (23 Nov 2012)
+
+  23 Nov 2012; Rafael G. Martins <rafaelmartins@gentoo.org> -marrie-0.3.ebuild,
+  +marrie-0.3-r1.ebuild, +marrie-9999.ebuild:
+  Use distutils.eclass instead of distutils-r1.eclass. Add live ebuild.
 
 *marrie-0.3 (22 Nov 2012)
 
