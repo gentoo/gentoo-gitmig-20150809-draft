@@ -1,6 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/yasat/yasat-526.ebuild,v 1.1 2012/05/22 20:59:30 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/yasat/yasat-526.ebuild,v 1.2 2012/11/23 13:18:23 ago Exp $
+
+EAPI=5
 
 DESCRIPTION="Security and system auditing tool"
 HOMEPAGE="http://yasat.sourceforge.net"
@@ -13,8 +15,10 @@ IUSE=""
 
 S=${WORKDIR}/${PN}
 
+src_compile() { :; }
+
 src_install() {
-	emake install DESTDIR="${D}" PREFIX="/usr" SYSCONFDIR="/etc" || die
-	dodoc README CHANGELOG || die
-	doman man/yasat.8 || die
+	emake install DESTDIR="${D}" PREFIX="/usr" SYSCONFDIR="/etc"
+	dodoc README CHANGELOG
+	doman man/yasat.8
 }
