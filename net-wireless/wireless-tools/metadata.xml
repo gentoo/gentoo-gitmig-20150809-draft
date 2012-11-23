@@ -5,6 +5,10 @@
 		<email>anarchy@gentoo.org</email>
 		<name>Jory A. Pratt</name>
 	</maintainer>
+	<maintainer>
+		<email>zerochaos@gentoo.org</email>
+		<name>Rick Farina</name>
+	</maintainer>
 	<longdescription lang="en">
 		This package provides all the command line tools for configuring
 		wireless networking devices with drivers that implement the Linux
