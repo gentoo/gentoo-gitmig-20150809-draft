@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-1.8.5-r1.ebuild,v 1.8 2012/07/29 17:56:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-1.9.2.ebuild,v 1.1 2012/11/23 22:12:20 xmw Exp $
 
 EAPI=4
 
-inherit user
+inherit systemd user
 
 DESCRIPTION="Linux IPv6 Router Advertisement Daemon"
 HOMEPAGE="http://v6web.litech.org/radvd/"
@@ -12,13 +12,15 @@ SRC_URI="http://v6web.litech.org/radvd/dist/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 arm hppa ppc sparc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="kernel_FreeBSD selinux"
 
-DEPEND="sys-devel/bison
-	sys-devel/flex
+RDEPEND="dev-libs/libdaemon
 	selinux? ( sec-policy/selinux-radvd )"
-RDEPEND="selinux? ( sec-policy/selinux-radvd )"
+DEPEND="${RDEPEND}
+	sys-devel/bison
+	sys-devel/flex
+	virtual/pkgconfig"
 
 DOCS=( CHANGES README TODO radvd.conf.example )
 
@@ -39,8 +41,10 @@ src_install() {
 
 	dohtml INTRO.html
 
-	newinitd "${FILESDIR}"/${P}.init ${PN}
+	newinitd "${FILESDIR}"/${PN}-1.9.1.init ${PN}
 	newconfd "${FILESDIR}"/${PN}.conf ${PN}
+
+	systemd_dounit "${FILESDIR}"/${PN}.service
 
 	# location of radvd.pid needs to be writeable by the radvd user
 	keepdir /var/run/radvd
@@ -55,13 +59,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog
-	elog "To use ${PN} you must create the configuration file"
-	elog "${ROOT}etc/radvd.conf"
-	elog
-	elog "An example configuration file has been installed under"
-	elog "${ROOT}usr/share/doc/${PF}"
-	elog
+	einfo
+	elog "Please create a configuratoion ${ROOT}etc/radvd.conf."
+	elog "See ${ROOT}usr/share/doc/${PF} for an example."
+	einfo
 	elog "grsecurity users should allow a specific group to read /proc"
 	elog "and add the radvd user to that group, otherwise radvd may"
 	elog "segfault on startup."
