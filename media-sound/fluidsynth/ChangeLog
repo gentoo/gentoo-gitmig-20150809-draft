@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/fluidsynth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/ChangeLog,v 1.71 2012/08/16 16:56:42 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/ChangeLog,v 1.72 2012/11/23 03:56:20 ssuominen Exp $
+
+  23 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> fluidsynth-1.1.6.ebuild:
+  Use append-flags -pthread to avoid missing symbol pthread_create wrt #436762
+  by "ungift-ed"
 
   16 Aug 2012; Tim Harder <radhermit@gentoo.org> -fluidsynth-1.0.9.ebuild,
   -files/fluidsynth-1.0.9-pkg.patch, -fluidsynth-1.1.3.ebuild,
