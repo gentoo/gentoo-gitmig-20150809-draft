@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/ekeyd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ChangeLog,v 1.29 2012/07/12 15:31:17 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ChangeLog,v 1.30 2012/11/23 10:33:20 ulm Exp $
+
+  23 Nov 2012; Ulrich Müller <ulm@gentoo.org> ekeyd-1.1.4-r2.ebuild:
+  Fix LICENSE, MIT/Expat license according to COPYING in tarball. Whitespace.
 
   12 Jul 2012; Ian Stakenvicius <axs@gentoo.org> ekeyd-1.1.4-r2.ebuild:
   added GPL-2 to LICENSE per bug 425890

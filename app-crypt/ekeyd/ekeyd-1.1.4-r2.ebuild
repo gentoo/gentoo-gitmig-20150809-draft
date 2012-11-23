@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ekeyd-1.1.4-r2.ebuild,v 1.3 2012/07/12 15:31:17 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ekeyd-1.1.4-r2.ebuild,v 1.4 2012/11/23 10:33:20 ulm Exp $
 
 EAPI=4
 
@@ -10,13 +10,11 @@ DESCRIPTION="Entropy Key userspace daemon"
 HOMEPAGE="http://www.entropykey.co.uk/"
 SRC_URI="http://www.entropykey.co.uk/res/download/${P}.tar.gz"
 
-LICENSE="as-is GPL-2" # yes, truly, but GPL-2 added for init script
-
+LICENSE="MIT GPL-2" # GPL-2 (only) for init script
 SLOT="0"
-
 KEYWORDS="~amd64 ~x86"
-
 IUSE="usb kernel_linux munin minimal"
+REQUIRED_USE="minimal? ( !munin !usb )"
 
 EKEYD_RDEPEND="dev-lang/lua
 		usb? ( virtual/libusb:0 )"
@@ -33,8 +31,6 @@ RDEPEND="!minimal? ( ${EKEYD_RDEPEND} )
 DEPEND="!minimal? ( ${EKEYD_DEPEND} )"
 
 CONFIG_CHECK="~USB_ACM"
-
-REQUIRED_USE="minimal? ( !munin !usb )"
 
 pkg_setup() {
 	if ! use minimal && use kernel_linux && ! use usb && linux_config_exists; then
