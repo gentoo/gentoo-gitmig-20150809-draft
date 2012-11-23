@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/fluidsynth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/ChangeLog,v 1.73 2012/11/23 13:05:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/ChangeLog,v 1.74 2012/11/23 14:57:20 blueness Exp $
+
+  23 Nov 2012; Anthony G. Basile <blueness@gentoo.org> fluidsynth-1.1.6.ebuild:
+  stable ppc ppc64, bug #444388
 
   23 Nov 2012; <ago@gentoo.org> fluidsynth-1.1.6.ebuild:
   Stable for amd64, wrt bug #444388
@@ -291,4 +294,3 @@
   Initial revision.
   
   Submitted by: Jonathan Kraut <jkraut1@nyc.rr.com>
-
