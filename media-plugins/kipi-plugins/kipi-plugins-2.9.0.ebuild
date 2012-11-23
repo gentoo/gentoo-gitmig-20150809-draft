@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-2.9.0.ebuild,v 1.4 2012/10/27 04:22:33 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-2.9.0.ebuild,v 1.5 2012/11/23 06:25:05 dilfridge Exp $
 
 EAPI=4
 
@@ -31,8 +31,8 @@ SLOT="4"
 IUSE="cdr calendar crypt debug expoblending gpssync +imagemagick ipod mediawiki mjpeg panorama redeyes scanner vkontakte"
 
 DEPEND="
-	$(add_kdebase_dep libkipi)
-	$(add_kdebase_dep libkdcraw)
+	$(add_kdebase_dep libkipi)  <kde-base/libkipi-4.9.50
+	$(add_kdebase_dep libkdcraw)  <kde-base/libkdcraw-4.9.50
 	$(add_kdebase_dep libkexiv2)
 	dev-libs/expat
 	dev-libs/libxml2
