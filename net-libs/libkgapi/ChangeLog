@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libkgapi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libkgapi/ChangeLog,v 1.4 2012/10/22 18:31:56 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkgapi/ChangeLog,v 1.5 2012/11/23 16:51:40 ago Exp $
+
+  23 Nov 2012; Agostino Sarubbo <ago@gentoo.org> libkgapi-0.4.3.ebuild:
+  Stable for amd64, wrt bug #442394
 
 *libkgapi-0.4.3 (22 Oct 2012)
 
