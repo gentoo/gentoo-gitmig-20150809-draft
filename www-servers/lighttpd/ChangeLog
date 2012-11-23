@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.292 2012/11/22 17:30:12 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.293 2012/11/23 04:56:19 blueness Exp $
+
+  23 Nov 2012; Anthony G. Basile <blueness@gentoo.org> lighttpd-1.4.32.ebuild:
+  stable arm, bug #444179
 
   22 Nov 2012; Anthony G. Basile <blueness@gentoo.org> lighttpd-1.4.32.ebuild:
   stable ppc ppc64, bug #444179
