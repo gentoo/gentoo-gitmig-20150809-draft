@@ -1,6 +1,11 @@
 # ChangeLog for app-forensics/pasco
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/pasco/ChangeLog,v 1.8 2012/09/08 01:39:42 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/pasco/ChangeLog,v 1.9 2012/11/23 13:26:59 ago Exp $
+
+*pasco-20040505_p1-r1 (23 Nov 2012)
+
+  23 Nov 2012; Agostino Sarubbo <ago@gentoo.org> +pasco-20040505_p1-r1.ebuild:
+  eapi5
 
   08 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant metadata.
@@ -25,4 +30,3 @@
   13 Dec 2004; Daniel Black <dragonheart@gentoo.org>
   +pasco-20040505_p1.ebuild:
   initial import as per bug #73300
-
