@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/IPC-ShareLite
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-ShareLite/ChangeLog,v 1.38 2012/06/24 12:59:57 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-ShareLite/ChangeLog,v 1.39 2012/11/23 13:08:50 blueness Exp $
+
+  23 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
+  IPC-ShareLite-0.170.0.ebuild:
+  keyword ~arm, bug #442816
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
