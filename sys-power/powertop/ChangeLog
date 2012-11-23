@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/powertop
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.72 2012/11/22 21:22:36 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.73 2012/11/23 18:05:35 zerochaos Exp $
+
+*powertop-2.2-r1 (23 Nov 2012)
+
+  23 Nov 2012; Rick Farina <zerochaos@gentoo.org>
+  +files/powertop-2.2-use-package_version.patch, +powertop-2.2-r1.ebuild,
+  -powertop-2.2.ebuild:
+  fix powertop 2.2 to report proper version tag wrt bug #444466
 
   22 Nov 2012; Rick Farina <zerochaos@gentoo.org> powertop-2.2.ebuild:
   fix bug #444370 by switching to EAPI5, there goes my cherry
