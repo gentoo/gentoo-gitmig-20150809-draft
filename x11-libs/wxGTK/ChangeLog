@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.296 2012/09/25 03:49:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.297 2012/11/23 04:53:30 zerochaos Exp $
+
+  23 Nov 2012; Rick Farina <zerochaos@gentoo.org> wxGTK-2.8.12.1.ebuild,
+  wxGTK-2.9.3.1.ebuild, wxGTK-2.9.4.1.ebuild:
+  add virtual/glu build time dep per bug #443684 , does not appear to be an rdep
 
   25 Sep 2012; Mike Frysinger <vapier@gentoo.org> wxGTK-2.8.12.1.ebuild:
   Fix setup of wx_cv_std_libpath #421851 by Xavier Miller.

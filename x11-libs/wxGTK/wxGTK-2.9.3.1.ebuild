@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.9.3.1.ebuild,v 1.5 2012/09/16 17:07:18 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.9.3.1.ebuild,v 1.6 2012/11/23 04:53:30 zerochaos Exp $
 
 EAPI="3"
 
@@ -46,6 +46,7 @@ RDEPEND="
 
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
+	opengl? ( virtual/glu )
 	X?  (
 		x11-proto/xproto
 		x11-proto/xineramaproto
