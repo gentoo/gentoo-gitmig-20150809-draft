@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/marrie/marrie-9999.ebuild,v 1.2 2012/11/23 03:38:19 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/marrie/marrie-9999.ebuild,v 1.3 2012/11/23 06:28:52 rafaelmartins Exp $
 
 EAPI=4
 
@@ -50,4 +50,12 @@ src_install() {
 	if use doc; then
 		dohtml marrie.html
 	fi
+}
+
+pkg_postinst() {
+	distutils_pkg_postinst
+	elog
+	elog "You'll need a media player and a file downloader."
+	elog "Recommended packages: net-misc/wget and media-video/mplayer"
+	elog
 }
