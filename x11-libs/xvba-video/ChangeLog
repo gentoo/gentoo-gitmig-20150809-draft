@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/xvba-video
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xvba-video/ChangeLog,v 1.8 2011/12/27 21:11:10 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xvba-video/ChangeLog,v 1.9 2012/11/23 13:35:52 scarabeus Exp $
+
+*xvba-video-0.8.0-r1 (23 Nov 2012)
+*xvba-video-9999 (23 Nov 2012)
+
+  23 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> +xvba-video-0.8.0-r1.ebuild,
+  +xvba-video-9999.ebuild, -xvba-video-0.7.8.ebuild:
+  Add gpled source compiled version and its live ebuild (it uses different name
+  in git so lets wait for next release with renaming).
 
   27 Dec 2011; Markus Meier <maekke@gentoo.org> xvba-video-0.8.0.ebuild:
   x86 stable, bug #394393
@@ -31,4 +39,3 @@
   26 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   +xvba-video-0.7.8.ebuild, +metadata.xml:
   Initial commit for xvba-video fglrx driver for libva. Per bug #325033.
-
