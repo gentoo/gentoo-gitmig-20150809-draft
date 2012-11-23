@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/blohg-9999.ebuild,v 1.11 2012/08/06 02:26:20 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/blohg-9999.ebuild,v 1.12 2012/11/23 03:44:38 rafaelmartins Exp $
 
 EAPI="3"
 
@@ -67,6 +67,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	distutils_pkg_postinst
+
 	local ver="${PV}"
 	[[ ${PV} = *9999* ]] && ver="latest"
 
