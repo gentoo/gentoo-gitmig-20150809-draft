@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-vcalendar
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-vcalendar/ChangeLog,v 1.124 2012/11/22 13:56:05 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-vcalendar/ChangeLog,v 1.125 2012/11/23 15:11:35 blueness Exp $
+
+  23 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
+  claws-mail-vcalendar-2.0.13-r1.ebuild:
+  stable ppc ppc64, bug #443500
 
   22 Nov 2012; Sergey Popov <pinkbyte@gentoo.org>
   claws-mail-vcalendar-2.0.13-r1.ebuild:
