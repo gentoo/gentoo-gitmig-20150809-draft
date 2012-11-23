@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/parted
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/parted/ChangeLog,v 1.24 2012/11/14 17:19:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/parted/ChangeLog,v 1.25 2012/11/23 18:17:46 blueness Exp $
+
+  23 Nov 2012; Anthony G. Basile <blueness@gentoo.org> parted-3.1-r1.ebuild:
+  keyword ~arm ~ppc ~pp64, bug #443048
 
   14 Nov 2012; Jeroen Roovers <jer@gentoo.org> parted-3.1-r1.ebuild:
   Marked ~hppa (bug #443048).
