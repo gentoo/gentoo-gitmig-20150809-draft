@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/gpsbabel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsbabel/ChangeLog,v 1.28 2012/05/24 16:34:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsbabel/ChangeLog,v 1.29 2012/11/23 11:10:55 naota Exp $
+
+  23 Nov 2012;  <naota@gentoo.org> gpsbabel-1.4.3.ebuild:
+  Add ~x86-fbsd wrt bug #444060
 
   24 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> -gpsbabel-1.4.2.ebuild,
   gpsbabel-1.4.3.ebuild:
@@ -135,4 +138,3 @@
   08 Sep 2005; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
   +gpsbabel-1.2.7.ebuild:
   Initial import. Thanks to Gérald Fenoy <djayweb@djayux.net> for his work.
-
