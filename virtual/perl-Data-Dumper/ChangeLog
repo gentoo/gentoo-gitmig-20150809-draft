@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Data-Dumper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Data-Dumper/ChangeLog,v 1.7 2012/11/17 19:21:17 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Data-Dumper/ChangeLog,v 1.8 2012/11/23 13:16:20 blueness Exp $
+
+  23 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
+  perl-Data-Dumper-2.136.0.ebuild:
+  keyword ~arm, bug #442816
 
 *perl-Data-Dumper-2.136.0 (17 Nov 2012)
 
@@ -64,4 +68,3 @@
   +perl-Data-Dumper-2.124.0.ebuild, +perl-Data-Dumper-2.125.0.ebuild,
   +perl-Data-Dumper-2.128.0.ebuild, +metadata.xml:
   Added for Data::Dumper
-
