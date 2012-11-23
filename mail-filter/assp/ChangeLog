@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/assp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/ChangeLog,v 1.50 2012/10/30 05:55:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/ChangeLog,v 1.51 2012/11/23 07:25:07 patrick Exp $
+
+*assp-1.9.4.9 (23 Nov 2012)
+
+  23 Nov 2012; Patrick Lauer <patrick@gentoo.org> +assp-1.9.4.9.ebuild:
+  Bump
 
 *assp-1.9.4.8 (30 Oct 2012)
 
