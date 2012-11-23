@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/spim-8.0-r1.ebuild,v 1.5 2012/09/26 19:11:25 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/spim-8.0-r1.ebuild,v 1.6 2012/11/23 19:03:25 ulm Exp $
 
 EAPI=3
 
@@ -10,7 +10,7 @@ DESCRIPTION="MIPS Simulator"
 HOMEPAGE="http://spimsimulator.sourceforge.net/"
 SRC_URI="http://www.cs.wisc.edu/~larus/SPIM/${P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="amd64 ppc ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="doc X"
