@@ -1,6 +1,15 @@
 # ChangeLog for x11-wm/awesome
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.138 2012/09/30 14:23:20 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.139 2012/11/24 21:28:03 robbat2 Exp $
+
+*awesome-3.5_rc1 (24 Nov 2012)
+
+  24 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> +awesome-3.5_rc1.ebuild,
+  +files/awesome-3.5_rc1-convert-path.patch,
+  +files/awesome-3.5_rc1-luadoc-fix-patch:
+  Version bump for new upstream major version, acked by wired. You must update
+  your configurations per the wiki guide!
+  http://awesome.naquadah.org/wiki/Awesome_3.4_to_3.5.
 
   30 Sep 2012; MATSUU Takuto <matsuu@gentoo.org>
   -files/3.4-0001-Update-the-code-following-release-of-xcb-util-0.3.8.patch,
@@ -630,4 +639,3 @@
   27 Sep 2007; MATSUU Takuto <matsuu@gentoo.org> +files/awesome.desktop,
   +files/awesome-session, +metadata.xml, +awesome-1.2.ebuild:
   Initial import.
-
