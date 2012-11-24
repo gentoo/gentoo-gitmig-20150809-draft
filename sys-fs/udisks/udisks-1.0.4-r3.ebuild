@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.4-r3.ebuild,v 1.2 2012/11/04 13:53:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.4-r3.ebuild,v 1.3 2012/11/24 20:05:50 ssuominen Exp $
 
 EAPI=4
 inherit eutils bash-completion-r1 linux-info udev
@@ -14,15 +14,15 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE="debug nls remote-access"
 
-COMMON_DEPEND=">=dev-libs/dbus-glib-0.98
-	>=dev-libs/glib-2.28
-	>=dev-libs/libatasmart-0.18
+COMMON_DEPEND=">=dev-libs/dbus-glib-0.100
+	>=dev-libs/glib-2.30
+	>=dev-libs/libatasmart-0.19
 	>=sys-auth/polkit-0.104-r1
-	>=sys-apps/dbus-1.4.20
+	>=sys-apps/dbus-1.6
 	>=sys-apps/sg3_utils-1.27.20090411
 	>=sys-block/parted-3
-	|| ( >=sys-fs/udev-171-r5[gudev,hwdb] <sys-fs/udev-171[extras] )
-	>=sys-fs/lvm2-2.02.66"
+	>=sys-fs/lvm2-2.02.66
+	virtual/udev[gudev,hwdb]"
 # util-linux -> mount, umount, swapon, swapoff (see also #403073)
 RDEPEND="${COMMON_DEPEND}
 	>=sys-apps/util-linux-2.20.1-r2
