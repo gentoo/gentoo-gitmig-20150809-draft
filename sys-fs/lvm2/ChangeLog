@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.276 2012/08/12 21:11:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.277 2012/11/24 08:45:08 pacho Exp $
+
+*lvm2-2.02.97-r1 (24 Nov 2012)
+
+  24 Nov 2012; Pacho Ramos <pacho@gentoo.org> +lvm2-2.02.97-r1.ebuild:
+  Fix strict aliasing bug (#444328 by MJJoker, Alexander Tsoy and Vicente
+  Olivert Riera), fix AR being called directly (#444082 by Vicente Olivert
+  Riera).
 
 *lvm2-2.02.97 (12 Aug 2012)
 
