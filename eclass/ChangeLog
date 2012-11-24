@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.516 2012/11/21 09:06:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.517 2012/11/24 19:00:49 pacho Exp $
+
+  24 Nov 2012; Pacho Ramos <pacho@gentoo.org> gnome2.eclass:
+  Handle documentation as 'default' for eapi5 and newer (as discussed via
+  mail), bug #373131
 
   21 Nov 2012; Michał Górny <mgorny@gentoo.org> systemd.eclass:
   systemd_do*: use local variable scope instead of subshelling.

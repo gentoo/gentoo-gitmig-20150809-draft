@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.111 2012/11/17 13:03:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.112 2012/11/24 19:00:49 pacho Exp $
 
 # @ECLASS: gnome2.eclass
 # @MAINTAINER:
@@ -187,9 +187,25 @@ gnome2_src_install() {
 
 	unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
 
-	# Manual document installation
-	if [[ -n "${DOCS}" ]]; then
-		dodoc ${DOCS} || die "dodoc failed"
+	# Handle documentation as 'default' for eapi5 and newer, bug #373131
+	if has ${EAPI:-0} 0 1 2 3 4; then
+		# Manual document installation
+		if [[ -n "${DOCS}" ]]; then
+			dodoc ${DOCS} || die "dodoc failed"
+		fi
+	else
+		if ! declare -p DOCS >/dev/null 2>&1 ; then
+			local d
+			for d in README* ChangeLog AUTHORS NEWS TODO CHANGES THANKS BUGS \
+					FAQ CREDITS CHANGELOG ; do
+				[[ -s "${d}" ]] && dodoc "${d}"
+			done
+		# TODO: wrong "declare -a" command..., should be fixed in PMS at first
+		elif declare -p DOCS | grep -q `^declare -a` ; then
+			dodoc "${DOCS[@]}"
+		else
+			dodoc ${DOCS}
+		fi
 	fi
 
 	# Do not keep /var/lib/scrollkeeper because:
