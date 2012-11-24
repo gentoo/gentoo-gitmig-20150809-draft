@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pam-modules/freebsd-pam-modules-9.1_rc3.ebuild,v 1.1 2012/11/06 12:55:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pam-modules/freebsd-pam-modules-9.1_rc3.ebuild,v 1.2 2012/11/24 11:26:01 aballier Exp $
 
 inherit bsdmk freebsd multilib pam
 
@@ -21,6 +21,8 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/lib/libpam/modules
 
+PATCHES=( "${FILESDIR}"/${PN}-9.0-gentoo.patch )
+
 pkg_setup() {
 	# Avoid installing pam_ssh as that has its own ebuild.
 	mymakeopts="${mymakeopts} NO_OPENSSH= "
@@ -29,16 +31,11 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${A}
-
-	cd "${WORKDIR}"/lib
+	freebsd_src_unpack
 
 	for module in pam_deny pam_passwdqc pam_permit; do
 		sed -i -e "s:${module}::" "${S}"/modules.inc
 	done
-
-	# Avoid using static versions; use gentoo /lib/security dir
-	epatch "${FILESDIR}"/${PN}-9.0-gentoo.patch
 }
 
 src_install() {
