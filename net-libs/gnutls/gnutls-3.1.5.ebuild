@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.1.4.ebuild,v 1.1 2012/11/10 01:41:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.1.5.ebuild,v 1.1 2012/11/24 19:16:35 flameeyes Exp $
 
 EAPI=4
 
@@ -67,7 +67,6 @@ src_prepare() {
 	done
 
 	epatch "${FILESDIR}"/${PN}-3.1.3-guile-parallelmake.patch
-	epatch "${FILESDIR}"/${P}-nodane.patch
 
 	# support user patches
 	epatch_user
