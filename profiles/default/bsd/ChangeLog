@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.134 2012/10/28 22:41:53 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.135 2012/11/24 12:56:01 aballier Exp $
+
+  24 Nov 2012; Alexis Ballier <aballier@gentoo.org> fbsd/package.mask:
+  unmask libarchive 3.0.4-r1, works fine here and bug #421191 has no activity
+  since months.
 
   28 Oct 2012; <naota@gentoo.org> fbsd/use.mask:
   Mask polkit on FreeBSD. It doesn't work due to FreeBSD API bug.
