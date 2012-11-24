@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/dev-manager/dev-manager-0.ebuild,v 1.4 2012/07/14 19:42:27 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/dev-manager/dev-manager-0.ebuild,v 1.5 2012/11/24 17:55:28 ssuominen Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="|| (
-		sys-fs/udev
+		virtual/udev
 		sys-apps/busybox[mdev]
 		sys-fs/devfsd
 		sys-fs/static-dev
