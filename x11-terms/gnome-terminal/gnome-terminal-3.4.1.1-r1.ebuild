@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-3.4.0.1.ebuild,v 1.3 2012/05/03 07:11:33 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-3.4.1.1-r1.ebuild,v 1.1 2012/11/24 10:47:47 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux"
 IUSE=""
 
 # FIXME: automagic dependency on gtk+[X]
@@ -39,9 +39,10 @@ pkg_setup() {
 	G2CONF="${G2CONF} --with-gtk=3.0"
 }
 
-src_prepare() {
-	# Use login shell by default (#12900)
-	epatch "${FILESDIR}"/${PN}-2.22.0-default_shell.patch
-
-	gnome2_src_prepare
+pkg_postinst() {
+	if [[ ${REPLACING_VERSIONS} < 3.4.1.1-r1 && ${REPLACING_VERSIONS} != 2.32.1-r1 ]]; then
+		elog "Gnome Terminal no longer uses login shell by default, switching"
+		elog "to upstream default. Because of this, if you have some command you"
+		elog "want to be run, be sure to have it placed in your ~/.bashrc file."
+	fi
 }

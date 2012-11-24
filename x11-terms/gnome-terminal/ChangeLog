@@ -1,6 +1,15 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.247 2012/10/20 04:48:30 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.248 2012/11/24 10:47:47 pacho Exp $
+
+*gnome-terminal-2.32.1-r1 (24 Nov 2012)
+*gnome-terminal-3.4.1.1-r1 (24 Nov 2012)
+
+  24 Nov 2012; Pacho Ramos <pacho@gentoo.org> +gnome-terminal-2.32.1-r1.ebuild,
+  +gnome-terminal-3.4.1.1-r1.ebuild, -gnome-terminal-3.4.0.1.ebuild:
+  Stop defaulting to enable login shell as it causes problems (#442062 by
+  Juergen Rose), with this we revert to upstream (and most distributions)
+  default setting.
 
   20 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   gnome-terminal-2.32.1.ebuild:
