@@ -173,3 +173,6 @@ wayland
 python_targets_pypy1_8
 python_targets_pypy1_9
 python_targets_jython2_5
+python_single_target_pypy1_8
+python_single_target_pypy1_9
+python_single_target_jython2_5

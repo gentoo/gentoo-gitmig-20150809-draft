@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.115 2012/11/12 15:36:54 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.116 2012/11/24 21:38:14 floppym Exp $
+
+  24 Nov 2012; Mike Gilbert <floppym@gentoo.org> use.mask:
+  Unmask python_single_target_jython2_5
 
   12 Nov 2012; Mike Gilbert <floppym@gentoo.org> make.defaults:
   Move PYTHON_TARGETS=python3_2 from arch profiles to base.

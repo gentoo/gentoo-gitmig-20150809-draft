@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sparc-fbsd profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc-fbsd/ChangeLog,v 1.4 2012/10/31 16:16:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc-fbsd/ChangeLog,v 1.5 2012/11/24 21:38:13 floppym Exp $
+
+  24 Nov 2012; Mike Gilbert <floppym@gentoo.org> use.mask:
+  Mask python_single_target values not supported on this arch.
 
   31 Oct 2012; Michał Górny <mgorny@gentoo.org> use.mask:
   Add a PYTHON_TARGETS mask based on keywords.

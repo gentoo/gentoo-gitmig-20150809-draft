@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.177 2012/11/11 15:58:26 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.178 2012/11/24 21:38:12 floppym Exp $
+
+  24 Nov 2012; Mike Gilbert <floppym@gentoo.org> use.mask:
+  Mask python_single_target values not supported on this arch.
 
   11 Nov 2012; Anthony G. Basile <blueness@gentoo.org> +package.use.force:
   Force USE=gdm for xscreensave to avoid unstable lightdm and kdm

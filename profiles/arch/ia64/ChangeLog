@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.154 2012/11/02 12:30:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.155 2012/11/24 21:38:12 floppym Exp $
+
+  24 Nov 2012; Mike Gilbert <floppym@gentoo.org> use.mask:
+  Mask python_single_target values not supported on this arch.
 
   02 Nov 2012; Raúl Porcel <armin76@gentoo.org> package.use.mask:
   Unmask p.use.mask net-libs/webkig-gtk geoloc since its stable

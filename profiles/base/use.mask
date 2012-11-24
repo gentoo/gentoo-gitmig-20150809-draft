@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.148 2012/11/14 17:17:30 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.149 2012/11/24 21:38:14 floppym Exp $
 
 # not ready for primetime
 packagekit
@@ -285,6 +285,9 @@ dxr3
 python_targets_jython2_5
 python_targets_jython2_7
 python_targets_jython3_1
+python_single_target_jython2_5
+python_single_target_jython2_7
+python_single_target_jython3_1
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (18 Aug 2012)
 # Prelude is being masked for removal
@@ -301,6 +304,7 @@ netlink
 # Mike Gilbert <floppym@gentoo.org> (08 Oct 2012)
 # Python 3.3 is masked for testing.
 python_targets_python3_3
+python_single_target_python3_3
 
 # Luca barbato <lu_zero@gentoo.org> (14 Oct 2012)
 # Pending keywording on arches
