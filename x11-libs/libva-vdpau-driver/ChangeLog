@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libva-vdpau-driver
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-vdpau-driver/ChangeLog,v 1.2 2012/11/21 17:53:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-vdpau-driver/ChangeLog,v 1.3 2012/11/24 13:26:06 aballier Exp $
+
+  24 Nov 2012; Alexis Ballier <aballier@gentoo.org>
+  libva-vdpau-driver-0.7.3.ebuild:
+  Backport the patch to build against mesa opengl to the stable version now
+  that mesa 9 is going stable.
 
 *libva-vdpau-driver-9999 (21 Nov 2012)
 

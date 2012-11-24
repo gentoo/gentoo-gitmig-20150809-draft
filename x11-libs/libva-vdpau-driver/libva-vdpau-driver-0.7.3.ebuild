@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-vdpau-driver/libva-vdpau-driver-0.7.3.ebuild,v 1.1 2012/11/21 17:39:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-vdpau-driver/libva-vdpau-driver-0.7.3.ebuild,v 1.2 2012/11/24 13:26:06 aballier Exp $
 
 EAPI="2"
-inherit autotools
+inherit autotools eutils
 
 MY_P=vdpau-video-${PV}
 DESCRIPTION="VDPAU Backend for Video Acceleration (VA) API"
@@ -26,6 +26,7 @@ DEPEND="${DEPEND}
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
+	epatch "${FILESDIR}/${PN}-0.7.4-glext-missing-definition.patch"
 	eautoreconf
 }
 
