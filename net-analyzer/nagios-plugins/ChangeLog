@@ -1,6 +1,6 @@
 # ChangeLog for net-analyzer/nagios-plugins
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.161 2012/11/21 18:31:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.162 2012/11/24 06:35:32 tove Exp $
 
   21 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org>
   nagios-plugins-1.4.16-r2.ebuild, nagios-plugins-1.4.16-r3.ebuild:
@@ -25,14 +25,14 @@
   nagios-plugins-1.4.16-r2.ebuild:
   stable ppc ppc64, bug #441654
 
-  09 Nov 2012; Diego E. PettenÃ² <flameeyes@gentoo.org>
+  09 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org>
   nagios-plugins-1.4.16-r2.ebuild:
   Enforce ownership of the nagios plugin directory. Should solve bug #441980.
 
   07 Nov 2012; Jeroen Roovers <jer@gentoo.org> nagios-plugins-1.4.16-r2.ebuild:
   Stable for HPPA (bug #441654).
 
-  04 Nov 2012; Diego E. PettenÃ² <flameeyes@gentoo.org>
+  04 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org>
   -nagios-plugins-1.4.16-r1.ebuild:
   Remove old version.
 
@@ -40,29 +40,29 @@
   nagios-plugins-1.4.16-r2.ebuild:
   Keyword ~arm, bug #389115
 
-  25 Aug 2012; Diego E. PettenÃ² <flameeyes@gentoo.org>
+  25 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org>
   nagios-plugins-1.4.16-r2.ebuild:
   Fix build with sudo USE flag disabled.
 
 *nagios-plugins-1.4.16-r2 (23 Aug 2012)
 
-  23 Aug 2012; Diego E. PettenÃ² <flameeyes@gentoo.org>
+  23 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org>
   +nagios-plugins-1.4.16-r2.ebuild, metadata.xml:
   Revision bump: cleanup contrib plugins install; add a sudo and smartctl USE
   flag so that plugins using sudo have a way to be configured.
 
-  19 Aug 2012; Diego E. PettenÃ² <flameeyes@gentoo.org> metadata.xml,
+  19 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml,
   nagios-plugins-1.4.16-r1.ebuild:
   Drop dependency over net-analyzer/net-snmp: all the SNMP plugins use dev-
   perl/Net::SNMP instead. Since the dependency does not require any rebuild,
   make this behave like nagios-game and don't remove the plugins.
 
-  19 Aug 2012; Diego E. PettenÃ² <flameeyes@gentoo.org> metadata.xml:
+  19 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Re-assign to sysadmin herd.
 
 *nagios-plugins-1.4.16-r1 (18 Aug 2012)
 
-  18 Aug 2012; Diego E. PettenÃ² <flameeyes@gentoo.org>
+  18 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org>
   +nagios-plugins-1.4.16-r1.ebuild, -files/nagios-plugins-1.4.15-vserver.patch,
   -files/nagios-plugins-1.4.16-contrib.patch,
   -files/nagios-plugins-1.4.16-parallelmake.patch,
@@ -70,11 +70,11 @@
   -nagios-plugins-1.4.16.ebuild, metadata.xml:
   Cleanup old; revision bump and move patches to git backports instead.
 
-  15 Aug 2012; Diego E. PettenÃ² <flameeyes@gentoo.org>
+  15 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org>
   +files/nagios-plugins-1.4.16-parallelmake.patch, nagios-plugins-1.4.16.ebuild:
   Fix building in parallel (tested on 32-way system).
 
-  15 Aug 2012; Diego E. PettenÃ² <flameeyes@gentoo.org>
+  15 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org>
   nagios-plugins-1.4.16.ebuild:
   QA: stop parallel build as the build system is unsafe. I'll provide a fix
   asap.
@@ -94,7 +94,7 @@
 
   29 Apr 2011; Markos Chandras <hwoarang@gentoo.org>
   files/nagios-plugins-1.4.15-openldap.patch:
-  Fix openldap patch thanks to Frieder BÃ¼rzele <evermind@tuxfamily.org>. Bug
+  Fix openldap patch thanks to Frieder Bürzele <evermind@tuxfamily.org>. Bug
   #336973
 
   22 Feb 2011; Markos Chandras <hwoarang@gentoo.org>
@@ -114,7 +114,7 @@
   nagios-plugins-1.4.14-r2.ebuild:
   Stable for HPPA (bug #330519).
 
-  18 Sep 2010; RaÃºl Porcel <armin76@gentoo.org>
+  18 Sep 2010; Raúl Porcel <armin76@gentoo.org>
   nagios-plugins-1.4.14-r2.ebuild:
   alpha/sparc stable wrt #330519
 
@@ -156,7 +156,7 @@
   Add fix for indefinitely hang while checking ping on Linux VServer
   (#44382), patch by Norbert Klein and Ivan Chavero
 
-  31 Jan 2010; RaÃºl Porcel <armin76@gentoo.org>
+  31 Jan 2010; Raúl Porcel <armin76@gentoo.org>
   nagios-plugins-1.4.14.ebuild:
   sparc stable wrt #298088
 
@@ -264,7 +264,7 @@
   nagios-plugins-1.4.13.ebuild:
   x86 stable, bug #252669
 
-  02 Jan 2009; Dawid WÄgliÅski <cla@gentoo.org>
+  02 Jan 2009; Dawid Węgliński <cla@gentoo.org>
   nagios-plugins-1.4.12-r101.ebuild, nagios-plugins-1.4.13.ebuild:
   Stable on amd64 (bug #252669)
 
@@ -324,7 +324,7 @@
   +nagios-plugins-1.4.12-r100.ebuild:
   Version bump
 
-  21 May 2008; Tiziano MÃ¼ller <dev-zero@gentoo.org>
+  21 May 2008; Tiziano Müller <dev-zero@gentoo.org>
   nagios-plugins-1.4.11-r102.ebuild:
   Changed dependency for postgresql from dev-db/postgresql to
   virtual/postgresql-server
@@ -335,7 +335,7 @@
   USE=postgres should set --with-pgsql, reported by Krzysztof Tomczyk
   (#222317)
 
-  19 May 2008; Tiziano MÃ¼ller <dev-zero@gentoo.org>
+  19 May 2008; Tiziano Müller <dev-zero@gentoo.org>
   nagios-plugins-1.4.11.ebuild, nagios-plugins-1.4.11-r1.ebuild:
   Changed dependency for postgresql to virtual/postgresql-base
 
