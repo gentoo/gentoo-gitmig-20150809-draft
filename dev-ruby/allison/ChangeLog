@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/allison
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/allison/ChangeLog,v 1.20 2012/11/23 15:07:54 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/allison/ChangeLog,v 1.21 2012/11/24 02:30:50 blueness Exp $
+
+  24 Nov 2012; Anthony G. Basile <blueness@gentoo.org> allison-2.0.3-r1.ebuild:
+  stable arm, bug #421621
 
   23 Nov 2012; Anthony G. Basile <blueness@gentoo.org> allison-2.0.3-r1.ebuild:
   stable ppc ppc64, bug #421621
