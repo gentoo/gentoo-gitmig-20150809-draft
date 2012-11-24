@@ -1,5 +1,12 @@
 # ChangeLog for sys-apps/kmod
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.56 2012/11/10 22:45:45 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.57 2012/11/24 20:47:20 ssuominen Exp $
+
+*kmod-11-r2 (24 Nov 2012)
+
+  24 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> +kmod-11-r2.ebuild,
+  kmod-9999.ebuild:
+  Move kmod from /usr to / wrt #443710 by Francisco Blas Izquierdo Riera and
+  Lars Wendler
 
   10 Nov 2012; William Hubbs <williamh@gentoo.org> ChangeLog:
   add libxslt dependency for bug #442402 to kmod-11-r1 and kmod-9999.
