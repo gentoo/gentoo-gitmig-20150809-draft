@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.5.ebuild,v 1.6 2012/05/05 08:31:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.5.ebuild,v 1.7 2012/11/24 15:06:02 aballier Exp $
 
 EAPI=4
 inherit eutils multilib flag-o-matic toolchain-funcs
@@ -31,7 +31,8 @@ src_prepare() {
 	sed -i -e '/cppflags +=/d' Sconstruct || die
 	epatch \
 		patches/portaudio.patch \
-		"${FILESDIR}"/${P}-use_lrdf_pkgconfig.patch
+		"${FILESDIR}"/${P}-use_lrdf_pkgconfig.patch \
+		"${FILESDIR}"/${P}-gcc47.patch
 }
 
 src_compile() {

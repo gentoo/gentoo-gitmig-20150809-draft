@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/hydrogen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.101 2012/05/05 08:31:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.102 2012/11/24 15:06:02 aballier Exp $
+
+  24 Nov 2012; Alexis Ballier <aballier@gentoo.org> hydrogen-0.9.5.ebuild,
+  +files/hydrogen-0.9.5-gcc47.patch:
+  fix build with gcc 4.7, bug #421913
 
   05 May 2012; Michał Górny <mgorny@gentoo.org> hydrogen-0.9.5.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
