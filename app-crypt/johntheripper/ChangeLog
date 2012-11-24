@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/johntheripper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.146 2012/10/08 23:17:21 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.147 2012/11/24 23:17:46 robbat2 Exp $
+
+*johntheripper-1.7.9-r6 (24 Nov 2012)
+
+  24 Nov 2012; Robin H. Johnson <robbat2@gentoo.org>
+  +johntheripper-1.7.9-r6.ebuild:
+  Include all of the other john symlinks for the hash extraction modes.
 
   08 Oct 2012; Rick Farina <zerochaos@gentoo.org> johntheripper-1.7.9-r5.ebuild:
   restore test functionality when possible, stub out for later opencl fixes
