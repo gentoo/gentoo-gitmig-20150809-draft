@@ -1,6 +1,9 @@
 # ChangeLog for app-text/code2html
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/code2html/ChangeLog,v 1.25 2012/05/10 15:22:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/code2html/ChangeLog,v 1.26 2012/11/24 14:21:12 ulm Exp $
+
+  24 Nov 2012; Ulrich Müller <ulm@gentoo.org> code2html-0.9.1-r1.ebuild:
+  Fix LICENSE, MIT (Expat) license according to LICENSE in tarball.
 
   10 May 2012; Agostino Sarubbo <ago@gentoo.org> -code2html-0.9.1.ebuild:
   Remove old
