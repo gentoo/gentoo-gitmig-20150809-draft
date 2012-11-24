@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/scsh/scsh-0.6.7-r1.ebuild,v 1.1 2010/08/12 14:25:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/scsh/scsh-0.6.7-r1.ebuild,v 1.2 2012/11/24 14:16:37 ulm Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ DESCRIPTION="Unix shell embedded in Scheme"
 HOMEPAGE="http://www.scsh.net/"
 SRC_URI="ftp://ftp.scsh.net/pub/scsh/${MY_PV}/${P}.tar.gz"
 
-LICENSE="as-is BSD"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
