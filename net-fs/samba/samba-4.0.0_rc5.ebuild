@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.0_rc3.ebuild,v 1.2 2012/10/19 08:10:00 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.0_rc5.ebuild,v 1.1 2012/11/24 23:59:23 polynomial-c Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
@@ -35,7 +35,7 @@ RDEPEND="dev-libs/iniparser
 	>=dev-lang/python-2.4.2
 	dev-python/subunit
 	sys-libs/libcap
-	>=sys-libs/ldb-1.1.12
+	>=sys-libs/ldb-1.1.13
 	>=sys-libs/tdb-1.2.10[python]
 	>=sys-libs/talloc-2.0.7[python]
 	>=sys-libs/tevent-0.9.17
@@ -128,8 +128,9 @@ src_install() {
 	mkdir -p "${D}"/usr/$(get_libdir)/ldb/modules/ldb
 	mv "${D}"/usr/$(get_libdir)/ldb/*.so "${D}"/usr/$(get_libdir)/ldb/modules/ldb
 
-	# Install init script
-	newinitd "${CONFDIR}/samba4.initd" samba || die "newinitd failed"
+	# Install init script and conf.d file
+	newinitd "${CONFDIR}/samba4.initd-r1" samba || die "newinitd failed"
+	newconfd "${CONFDIR}/samba4.confd" samba || die "newconfd failed"
 }
 
 src_test() {

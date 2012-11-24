@@ -1,6 +1,14 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.538 2012/11/21 15:14:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.539 2012/11/24 23:59:23 polynomial-c Exp $
+
+*samba-4.0.0_rc5 (24 Nov 2012)
+
+  24 Nov 2012; Lars Wendler <polynomial-c@gentoo.org> +files/4.0/samba4.confd,
+  +files/4.0/samba4.initd-r1, -samba-4.0.0_rc3.ebuild, +samba-4.0.0_rc5.ebuild:
+  non-maintainer commit: Version bump. Removed old. Fixed samba4 init scripts
+  (bug #444016). Thanks to Aleksandr Yakimov who reported the bug and provided
+  the files.
 
   21 Nov 2012; Alexis Ballier <aballier@gentoo.org> samba-3.6.9.ebuild:
   keyword ~amd64-fbsd, bug #430720
