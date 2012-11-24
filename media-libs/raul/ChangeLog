@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/raul
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raul/ChangeLog,v 1.16 2012/06/01 20:54:57 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raul/ChangeLog,v 1.17 2012/11/24 14:36:49 aballier Exp $
+
+  24 Nov 2012; Alexis Ballier <aballier@gentoo.org> raul-0.8.0.ebuild,
+  +files/raul-0.8.0-gcc47.patch:
+  fix build with gcc 4.7, bug #425274
 
   01 Jun 2012; Ian Stakenvicius <axs@gentoo.org> -raul-0.5.1.ebuild,
   -files/raul-0.5.1-gcc44.patch, -raul-0.6.0.ebuild, -raul-0.7.0.ebuild,

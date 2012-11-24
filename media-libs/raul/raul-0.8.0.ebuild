@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raul/raul-0.8.0.ebuild,v 1.5 2012/06/01 20:25:07 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raul/raul-0.8.0.ebuild,v 1.6 2012/11/24 14:36:49 aballier Exp $
 
 EAPI=4
 
@@ -31,6 +31,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}/ldconfig2.patch"
+	epatch "${FILESDIR}/${P}-gcc47.patch"
 }
 
 src_configure() {
