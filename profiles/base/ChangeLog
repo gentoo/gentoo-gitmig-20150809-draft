@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.462 2012/11/18 08:14:43 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.463 2012/11/24 00:57:56 creffett Exp $
+
+  24 Nov 2012; <creffett@gentoo.org> package.use.mask:
+  Mask php USE flag for libkolab and libkolabxml
 
   18 Nov 2012; <swift@gentoo.org> package.mask:
   Preparing for selinux-makewhatis package

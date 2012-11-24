@@ -1,10 +1,16 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.409 2012/11/16 05:19:05 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.410 2012/11/24 00:57:56 creffett Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+# Chris Reffett <creffett@gentoo.org> (23 Nov 2012)
+# CMake's PHP module can't find our install location, so 
+# libkolab(xml) fails with the php flag enabled.
+net-libs/libkolab php
+net-libs/libkolabxml php
+
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (15 Nov 2012)
 # Experimental, requires masked ffmpeg, no libav support yet.
 www-client/chromium system-ffmpeg
