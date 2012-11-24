@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.23 2012/05/24 11:19:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.24 2012/11/24 11:22:44 aballier Exp $
 #
 # Diego Pettenò <flameeyes@gentoo.org>
 
@@ -68,6 +68,7 @@ freebsd_do_patches() {
 			epatch "${x}"
 		done
 	fi
+	epatch_user
 }
 
 freebsd_rename_libraries() {
