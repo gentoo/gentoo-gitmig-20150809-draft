@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/tortoisehg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/ChangeLog,v 1.25 2012/11/24 22:28:44 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/ChangeLog,v 1.26 2012/11/24 22:37:16 floppym Exp $
+
+  24 Nov 2012; Mike Gilbert <floppym@gentoo.org> tortoisehg-2.6.ebuild,
+  tortoisehg-9999.ebuild:
+  Raise minimum mercurial version to 2.3.
 
 *tortoisehg-2.6 (24 Nov 2012)
 

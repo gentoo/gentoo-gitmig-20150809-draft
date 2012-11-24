@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/tortoisehg-9999.ebuild,v 1.12 2012/09/10 20:14:10 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/tortoisehg-9999.ebuild,v 1.13 2012/11/24 22:37:16 floppym Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ inherit distutils eutils
 if [[ ${PV} != *9999* ]]; then
 	KEYWORDS="~amd64 ~x86"
 	SRC_URI="mirror://bitbucket/${PN}/targz/downloads/${P}.tar.gz"
-	HG_DEPEND=">=dev-vcs/mercurial-2.2 <dev-vcs/mercurial-2.4"
+	HG_DEPEND=">=dev-vcs/mercurial-2.3 <dev-vcs/mercurial-2.5"
 else
 	inherit mercurial
 	EHG_REPO_URI="https://bitbucket.org/tortoisehg/thg"
@@ -75,4 +75,10 @@ src_install() {
 
 	newicon -s scalable icons/scalable/apps/thg-logo.svg tortoisehg_logo.svg
 	domenu contrib/${PN}.desktop
+}
+
+pkg_postinst() {
+	elog "When startup of ${PN} fails with an API version mismatch error"
+	elog "between dev-python/sip and dev-python/PyQt4 please rebuild"
+	elog "dev-python/qscintilla-python."
 }
