@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.77 2012/11/06 12:57:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.78 2012/11/24 11:30:56 aballier Exp $
+
+  24 Nov 2012; Alexis Ballier <aballier@gentoo.org>
+  freebsd-sources-9.1_rc3.ebuild, files/freebsd-sources-9.1-gentoo.patch:
+  Simplify by using freebsd_src_unpack, by Yuta SATOH, bug #444506
 
 *freebsd-sources-9.1_rc3 (06 Nov 2012)
 

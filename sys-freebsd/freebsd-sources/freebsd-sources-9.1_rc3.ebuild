@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-9.1_rc3.ebuild,v 1.1 2012/11/06 12:57:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-9.1_rc3.ebuild,v 1.2 2012/11/24 11:30:56 aballier Exp $
 
 inherit bsdmk freebsd flag-o-matic
 
@@ -23,18 +23,24 @@ MY_PVR="${PVR}"
 
 [[ ${MY_PVR} == "${RV}" ]] && MY_PVR="${MY_PVR}-r0"
 
+PATCHES=( "${FILESDIR}/${PN}-9.0-disable-optimization.patch"
+	"${FILESDIR}/${PN}-9.1-gentoo.patch"
+	"${FILESDIR}/${PN}-6.0-flex-2.5.31.patch"
+	"${FILESDIR}/${PN}-6.1-ntfs.patch"
+	"${FILESDIR}/${PN}-7.1-types.h-fix.patch"
+	"${FILESDIR}/${PN}-8.0-subnet-route-pr40133.patch"
+	"${FILESDIR}/${PN}-7.1-includes.patch"
+	"${FILESDIR}/${PN}-9.0-sysctluint.patch"
+	"${FILESDIR}/${PN}-7.0-tmpfs_whiteout_stub.patch" )
+
 src_unpack() {
-	unpack ${A}
-	cd "${S}"
+	freebsd_src_unpack
 
 	# This replaces the gentoover patch, it doesn't need reapply every time.
 	sed -i -e 's:^REVISION=.*:REVISION="'${PVR}'":' \
 		-e 's:^BRANCH=.*:BRANCH="Gentoo":' \
 		-e 's:^VERSION=.*:VERSION="${TYPE} ${BRANCH} ${REVISION}":' \
 		"${S}/conf/newvers.sh"
-
-	# workaround a kernel panic for amd64-fbsd, bug #408019
-	epatch "${FILESDIR}/${PN}-9.0-disable-optimization.patch"
 
 	# __FreeBSD_cc_version comes from FreeBSD's gcc.
 	# on 9.0-RELEASE it's 900001.
@@ -46,20 +52,6 @@ src_unpack() {
 	sed -e "s:-Werror:-Wno-error:g" \
 		-i "${S}/conf/kern.pre.mk" \
 		-i "${S}/conf/kmod.mk" || die
-
-	epatch "${FILESDIR}/${PN}-9.1-gentoo.patch"
-	epatch "${FILESDIR}/${PN}-6.0-flex-2.5.31.patch"
-	sed -e 's/elf64-sparc/elf64-sparc-freebsd/g' -i	"${S}/conf/ldscript.sparc64" || die
-	epatch "${FILESDIR}/${PN}-6.1-ntfs.patch"
-	epatch "${FILESDIR}/${PN}-7.1-types.h-fix.patch"
-	epatch "${FILESDIR}/${PN}-8.0-subnet-route-pr40133.patch"
-	epatch "${FILESDIR}/${PN}-7.1-includes.patch"
-	epatch "${FILESDIR}/${PN}-9.0-sysctluint.patch"
-
-	# By adding -DGENTOO_LIVECD to CFLAGS activate this stub
-	# vop_whiteout to tmpfs, so it can be used as an overlay
-	# unionfs filesystem over the cd9660 readonly filesystem.
-	epatch "${FILESDIR}/${PN}-7.0-tmpfs_whiteout_stub.patch"
 }
 
 src_compile() {

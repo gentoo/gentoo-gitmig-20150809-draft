@@ -19,15 +19,3 @@ diff -Nur sys.orig/conf/kern.mk sys/conf/kern.mk
  .else
  CFLAGS+=	-mno-aes -mno-avx
  .endif
-diff -Nur sys.orig/dev/aic7xxx/aicasm/Makefile sys/dev/aic7xxx/aicasm/Makefile
---- sys.orig/dev/aic7xxx/aicasm/Makefile	2012-07-12 13:27:17.000000000 +0900
-+++ sys/dev/aic7xxx/aicasm/Makefile	2012-07-16 02:32:37.000000000 +0900
-@@ -14,7 +14,7 @@
- SRCS=	${GENHDRS} ${CSRCS} ${YSRCS} ${LSRCS}
- CLEANFILES+= ${GENHDRS} ${YSRCS:R:C/(.*)/\1.output/g}
- DPADD=	${LIBL}
--LDADD=	-ll
-+LDADD=	-lfl
- WARNS?=	5
- 
- # Correct path for kernel builds
