@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/qjackctl-0.3.9.ebuild,v 1.1 2012/05/21 15:24:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/qjackctl-0.3.9.ebuild,v 1.2 2012/11/24 15:18:07 aballier Exp $
 
 EAPI=4
 
@@ -26,6 +26,8 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 
 DOCS="AUTHORS ChangeLog README TODO TRANSLATORS"
+
+PATCHES=( "${FILESDIR}/${P}-gcc47.patch" )
 
 src_configure() {
 	econf \
