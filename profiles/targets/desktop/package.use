@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/package.use,v 1.24 2012/10/22 15:53:28 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/package.use,v 1.25 2012/11/24 19:14:51 ssuominen Exp $
 
 # Samuli Suominen <ssuominen@gentoo.org> (15 May 2012)
 # Replaced by USE="udisks" in make.defaults. Remove this line after
@@ -18,6 +18,7 @@ media-libs/libpng apng
 # Samuli Suominen <ssuominen@gentoo.org> (19 Dec 2010)
 # Required by udev helpers like udisks and upower
 sys-fs/udev gudev hwdb keymap
+virtual/udev gudev hwdb keymap
 <sys-fs/udev-171 extras
 sys-apps/pciutils -compress-db
 
