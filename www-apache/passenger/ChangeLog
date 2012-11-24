@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/passenger
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/ChangeLog,v 1.57 2012/11/16 07:08:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/ChangeLog,v 1.58 2012/11/24 14:06:22 graaff Exp $
+
+  24 Nov 2012; Hans de Graaff <graaff@gentoo.org>
+  files/30_mod_passenger-2.0.1.conf:
+  Specify /usr/bin/ruby as the interpreter since this will work in most cases
+  where people have a single RUBY_TARGET.
 
 *passenger-3.0.18 (16 Nov 2012)
 
