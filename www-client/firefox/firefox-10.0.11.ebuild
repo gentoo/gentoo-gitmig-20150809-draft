@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-10.0.5.ebuild,v 1.6 2012/07/18 00:49:25 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-10.0.11.ebuild,v 1.1 2012/11/24 19:18:13 polynomial-c Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -27,7 +27,7 @@ fi
 # Changeset for alpha snapshot
 CHANGESET="e56ecd8b3a68"
 # Patch version
-PATCH="${PN}-10.0-patches-0.8"
+PATCH="${PN}-10.0-patches-0.9"
 # Upstream ftp release URI that's used by mozlinguas.eclass
 # We don't use the http mirror because it deletes old tarballs.
 MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/${PN}/releases/"
@@ -37,10 +37,10 @@ inherit check-reqs flag-o-matic toolchain-funcs eutils gnome2-utils mozconfig-3 
 DESCRIPTION="Firefox Web Browser"
 HOMEPAGE="http://www.mozilla.com/firefox"
 
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 -sparc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 -sparc ~x86 ~amd64-linux ~x86-linux"
 SLOT="0"
 LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
-IUSE="bindist +crashreporter +ipc +minimal pgo selinux system-sqlite +webm"
+IUSE="bindist +ipc +minimal pgo selinux system-sqlite +webm"
 
 # More URIs appended below...
 SRC_URI="${SRC_URI}
@@ -51,8 +51,8 @@ ASM_DEPEND=">=dev-lang/yasm-1.1"
 # Mesa 7.10 needed for WebGL + bugfixes
 RDEPEND="
 	>=sys-devel/binutils-2.16.1
-	>=dev-libs/nss-3.13.5
-	>=dev-libs/nspr-4.9.1
+	>=dev-libs/nss-3.13.6
+	>=dev-libs/nspr-4.9.2
 	>=dev-libs/glib-2.26:2
 	>=media-libs/mesa-7.10
 	>=media-libs/libpng-1.5.9[apng]
@@ -60,7 +60,6 @@ RDEPEND="
 	system-sqlite? ( >=dev-db/sqlite-3.7.7.1[fts3,secure-delete,threadsafe,unlock-notify,debug=] )
 	webm? ( >=media-libs/libvpx-1.0.0
 		media-libs/alsa-lib )
-	crashreporter? ( net-misc/curl )
 	selinux? ( sec-policy/selinux-mozilla )"
 # We don't use PYTHON_DEPEND/PYTHON_USE_WITH for some silly reason
 DEPEND="${RDEPEND}
@@ -137,7 +136,9 @@ src_unpack() {
 
 src_prepare() {
 	# Apply our patches
-	EPATCH_EXCLUDE="6012_fix_shlibsign.patch 6013_fix_abort_declaration.patch" \
+	EPATCH_EXCLUDE="5005_use_resource_urls_appropriately.patch
+		6012_fix_shlibsign.patch
+		6013_fix_abort_declaration.patch" \
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}/firefox"
@@ -202,12 +203,11 @@ src_configure() {
 	mozconfig_annotate '' --enable-safe-browsing
 	mozconfig_annotate '' --with-system-png
 	mozconfig_annotate '' --enable-system-ffi
+	mozconfig_annotate 'regression' --disable-tracejit
 
 	# Other ff-specific settings
 	mozconfig_annotate '' --with-default-mozilla-five-home=${MOZILLA_FIVE_HOME}
 	mozconfig_annotate '' --target="${CTARGET:-${CHOST}}"
-
-	mozconfig_use_with webm system-libvpx "${EPREFIX}"/usr
 
 	# Allow for a proper pgo build
 	if use pgo; then
