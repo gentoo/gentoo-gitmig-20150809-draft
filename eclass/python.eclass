@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.160 2012/10/02 01:22:57 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.161 2012/11/24 21:07:14 mgorny Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -8,6 +8,10 @@
 # @BLURB: Eclass for Python packages
 # @DESCRIPTION:
 # The python eclass contains miscellaneous, useful functions for Python packages.
+
+if [[ ${_PYTHON_UTILS_R1} ]]; then
+	die 'python.eclass can not be used with python-r1 suite eclasses.'
+fi
 
 # Must call inherit before EXPORT_FUNCTIONS to avoid QA warning.
 if [[ -z "${_PYTHON_ECLASS_INHERITED}" ]]; then

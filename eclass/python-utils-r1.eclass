@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.1 2012/11/24 20:51:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.2 2012/11/24 21:07:14 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -20,9 +20,9 @@
 # For more information, please see the python-r1 Developer's Guide:
 # http://www.gentoo.org/proj/en/Python/python-r1/dev-guide.xml
 
-case "${EAPI}" in
+case "${EAPI:-0}" in
 	0|1|2|3)
-		die "Unsupported EAPI=${EAPI} (too old) for ${ECLASS}"
+		die "Unsupported EAPI=${EAPI:-0} (too old) for ${ECLASS}"
 		;;
 	4|5)
 		# EAPI=4 makes die behavior clear
@@ -31,6 +31,12 @@ case "${EAPI}" in
 		die "Unsupported EAPI=${EAPI} (unknown) for ${ECLASS}"
 		;;
 esac
+
+if [[ ${_PYTHON_ECLASS_INHERITED} ]]; then
+	die 'python-r1 suite eclasses can not be used with python.eclass.'
+fi
+
+if [[ ! ${_PYTHON_UTILS_R1} ]]; then
 
 inherit multilib
 
@@ -438,3 +444,6 @@ python_domodule() {
 			;;
 	esac
 }
+
+_PYTHON_UTILS_R1=1
+fi

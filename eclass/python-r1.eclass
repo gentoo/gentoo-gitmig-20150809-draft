@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.21 2012/11/24 20:51:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.22 2012/11/24 21:07:14 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -28,9 +28,9 @@
 # For more information, please see the python-r1 Developer's Guide:
 # http://www.gentoo.org/proj/en/Python/python-r1/dev-guide.xml
 
-case "${EAPI}" in
+case "${EAPI:-0}" in
 	0|1|2|3)
-		die "Unsupported EAPI=${EAPI} (too old) for ${ECLASS}"
+		die "Unsupported EAPI=${EAPI:-0} (too old) for ${ECLASS}"
 		;;
 	4|5)
 		# EAPI=4 needed for REQUIRED_USE
@@ -39,6 +39,8 @@ case "${EAPI}" in
 		die "Unsupported EAPI=${EAPI} (unknown) for ${ECLASS}"
 		;;
 esac
+
+if [[ ! ${_PYTHON_R1} ]]; then
 
 inherit python-utils-r1
 
@@ -194,6 +196,10 @@ _python_set_globals
 # directories respecting BUILD_DIR.
 python_copy_sources() {
 	debug-print-function ${FUNCNAME} "${@}"
+
+	if [[ ${_PYTHON_SINGLE_R1} ]]; then
+		die "${FUNCNAME} must not be used with python-single-r1 eclass."
+	fi
 
 	local impl
 	local bdir=${BUILD_DIR:-${S}}
@@ -422,6 +428,10 @@ _python_check_USE_PYTHON() {
 python_foreach_impl() {
 	debug-print-function ${FUNCNAME} "${@}"
 
+	if [[ ${_PYTHON_SINGLE_R1} ]]; then
+		die "${FUNCNAME} must not be used with python-single-r1 eclass."
+	fi
+
 	_python_check_USE_PYTHON
 
 	local impl
@@ -451,6 +461,10 @@ python_foreach_impl() {
 python_export_best() {
 	debug-print-function ${FUNCNAME} "${@}"
 
+	if [[ ${_PYTHON_SINGLE_R1} ]]; then
+		die "${FUNCNAME} must not be used with python-single-r1 eclass."
+	fi
+
 	[[ ${#} -gt 0 ]] || set -- EPYTHON PYTHON
 
 	local impl best
@@ -478,6 +492,10 @@ python_export_best() {
 python_replicate_script() {
 	debug-print-function ${FUNCNAME} "${@}"
 
+	if [[ ${_PYTHON_SINGLE_R1} ]]; then
+		die "${FUNCNAME} must not be used with python-single-r1 eclass."
+	fi
+
 	local suffixes=()
 
 	_add_suffix() {
@@ -502,3 +520,6 @@ python_replicate_script() {
 		_python_ln_rel "${ED}"/usr/bin/python-exec "${f}" || die
 	done
 }
+
+_PYTHON_R1=1
+fi

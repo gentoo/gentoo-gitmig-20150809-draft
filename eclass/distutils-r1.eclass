@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.18 2012/11/05 15:15:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.19 2012/11/24 21:07:14 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -40,10 +40,13 @@
 # Also, please note that distutils-r1 will always inherit python-r1
 # as well. Thus, all the variables defined and documented there are
 # relevant to the packages using distutils-r1.
+#
+# For more information, please see the python-r1 Developer's Guide:
+# http://www.gentoo.org/proj/en/Python/python-r1/dev-guide.xml
 
-case "${EAPI}" in
+case "${EAPI:-0}" in
 	0|1|2|3)
-		die "Unsupported EAPI=${EAPI} (too old) for ${ECLASS}"
+		die "Unsupported EAPI=${EAPI:-0} (too old) for ${ECLASS}"
 		;;
 	4|5)
 		;;
@@ -51,6 +54,8 @@ case "${EAPI}" in
 		die "Unsupported EAPI=${EAPI} (unknown) for ${ECLASS}"
 		;;
 esac
+
+if [[ ! ${_DISTUTILS_R1} ]]; then
 
 inherit eutils python-r1
 
@@ -430,3 +435,6 @@ distutils-r1_src_install() {
 		distutils-r1_python_install_all
 	fi
 }
+
+_DISTUTILS_R1=1
+fi

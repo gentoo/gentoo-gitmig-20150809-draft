@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-single-r1.eclass,v 1.1 2012/11/24 20:53:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-single-r1.eclass,v 1.2 2012/11/24 21:07:14 mgorny Exp $
 
 # @ECLASS: python-single-r1
 # @MAINTAINER:
@@ -30,9 +30,9 @@
 # For more information, please see the python-r1 Developer's Guide:
 # http://www.gentoo.org/proj/en/Python/python-r1/dev-guide.xml
 
-case "${EAPI}" in
+case "${EAPI:-0}" in
 	0|1|2|3)
-		die "Unsupported EAPI=${EAPI} (too old) for ${ECLASS}"
+		die "Unsupported EAPI=${EAPI:-0} (too old) for ${ECLASS}"
 		;;
 	4|5)
 		# EAPI=4 needed by python-r1
@@ -41,6 +41,8 @@ case "${EAPI}" in
 		die "Unsupported EAPI=${EAPI} (unknown) for ${ECLASS}"
 		;;
 esac
+
+if [[ ! ${_PYTHON_SINGLE_R1} ]]; then
 
 inherit python-r1
 
@@ -85,6 +87,7 @@ _python_single_set_globals
 python-single-r1_pkg_setup() {
 	debug-print-function ${FUNCNAME} "${@}"
 
+	local impl
 	for impl in "${_PYTHON_ALL_IMPLS[@]}"; do
 		if has "${impl}" "${PYTHON_COMPAT[@]}" \
 			&& use "python_single_target_${impl}"
@@ -94,3 +97,6 @@ python-single-r1_pkg_setup() {
 		fi
 	done
 }
+
+_PYTHON_SINGLE_R1=1
+fi
