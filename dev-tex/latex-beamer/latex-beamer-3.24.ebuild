@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/latex-beamer-3.24.ebuild,v 1.1 2012/11/24 00:32:17 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/latex-beamer-3.24.ebuild,v 1.2 2012/11/24 02:18:03 radhermit Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit latex-package
 
 DESCRIPTION="LaTeX class for creating presentations using a video projector"
 HOMEPAGE="http://bitbucket.org/rivanvx/beamer/wiki/Home"
-SRC_URI="http://mirror.ctan.org/macros/latex/contrib/beamer.zip -> ${P}.zip"
+SRC_URI="mirror://gentoo/${P}.zip"
 
 LICENSE="GPL-2 FDL-1.2 LPPL-1.3c"
 SLOT="0"

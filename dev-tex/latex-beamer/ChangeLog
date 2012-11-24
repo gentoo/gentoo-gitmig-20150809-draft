@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/latex-beamer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.112 2012/11/24 00:32:17 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.113 2012/11/24 02:18:03 radhermit Exp $
+
+  24 Nov 2012; Tim Harder <radhermit@gentoo.org> latex-beamer-3.24.ebuild:
+  Use gentoo mirror.
 
 *latex-beamer-3.24 (24 Nov 2012)
 
