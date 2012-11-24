@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/winetricks
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winetricks/ChangeLog,v 1.11 2012/11/09 23:23:44 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winetricks/ChangeLog,v 1.12 2012/11/24 23:08:31 tetromino Exp $
+
+*winetricks-922 (24 Nov 2012)
+
+  24 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -winetricks-916.ebuild, +winetricks-922.ebuild, winetricks-99999999.ebuild:
+  Version bump. Use 'Wine' as the category for the .desktop file since our
+  >=wine-1.5.18 now provides applications-merged/wine.menu (bug #438806).
 
 *winetricks-920 (09 Nov 2012)
 
