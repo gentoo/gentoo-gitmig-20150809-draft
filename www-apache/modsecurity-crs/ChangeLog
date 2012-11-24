@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/modsecurity-crs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/modsecurity-crs/ChangeLog,v 1.32 2012/11/15 14:47:30 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/modsecurity-crs/ChangeLog,v 1.33 2012/11/24 22:45:29 blueness Exp $
+
+  24 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
+  modsecurity-crs-2.2.6-r1.ebuild:
+  stable ppc, bug #438724
 
   15 Nov 2012; Andreas Schuerch <nativemad@gentoo.org>
   modsecurity-crs-2.2.6-r1.ebuild:
