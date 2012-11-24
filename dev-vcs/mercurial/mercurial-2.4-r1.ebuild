@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-2.4.ebuild,v 1.1 2012/11/11 18:04:43 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-2.4-r1.ebuild,v 1.1 2012/11/24 22:42:49 polynomial-c Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -41,6 +41,9 @@ src_prepare() {
 	# fix up logic that won't work in Gentoo Prefix (also won't outside in
 	# certain cases), bug #362891
 	sed -i -e 's:xcodebuild:nocodebuild:' setup.py || die
+
+	# Fix an endless grep search (needed by tortoisehg)
+	epatch "${FILESDIR}"/${P}-dont_grep_indefinitely.patch
 }
 
 src_compile() {
