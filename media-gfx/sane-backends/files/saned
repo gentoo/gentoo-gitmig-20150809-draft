@@ -1,4 +1,4 @@
-service saned
+service sane-port
 {
   socket_type = stream
   server = /usr/sbin/saned

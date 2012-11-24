@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.207 2012/10/08 17:16:29 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.208 2012/11/24 23:40:56 phosphan Exp $
+
+  24 Nov 2012; Patrick Kursawe <phosphan@gentoo.org> files/saned:
+  Fixing service name in xinetd config file, see bug #442620
 
   08 Oct 2012; Patrick Kursawe <phosphan@gentoo.org>
   sane-backends-1.0.23.ebuild:
