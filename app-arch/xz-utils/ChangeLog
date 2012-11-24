@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/xz-utils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/ChangeLog,v 1.52 2012/11/09 19:38:22 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/ChangeLog,v 1.53 2012/11/24 20:33:49 ssuominen Exp $
+
+*xz-utils-5.0.4-r1 (24 Nov 2012)
+
+  24 Nov 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +xz-utils-5.0.4-r1.ebuild, xz-utils-9999.ebuild:
+  Use gen_usr_ldscript -a lzma to move liblzma.so.$version from /usr to /
+  for sys-apps/kmod wrt #443710
 
   09 Nov 2012; Fabian Groffen <grobian@gentoo.org> xz-utils-5.0.4.ebuild:
   Run elibtoolize to allow Solaris/x64 to build shared libs

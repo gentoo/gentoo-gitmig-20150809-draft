@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/xz-utils-9999.ebuild,v 1.13 2012/11/24 20:33:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/xz-utils-5.0.4-r1.ebuild,v 1.1 2012/11/24 20:33:49 ssuominen Exp $
 
 # Remember: we cannot leverage autotools in this ebuild in order
 #           to avoid circular deps with autotools
@@ -13,6 +13,7 @@ if [[ ${PV} == "9999" ]] ; then
 	SRC_URI=""
 	EXTRA_DEPEND="sys-devel/gettext dev-vcs/cvs >=sys-devel/libtool-2" #272880 286068
 else
+	inherit libtool
 	MY_P="${PN/-utils}-${PV/_}"
 	SRC_URI="http://tukaani.org/xz/${MY_P}.tar.gz"
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~ppc-aix ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
@@ -20,7 +21,7 @@ else
 	EXTRA_DEPEND=
 fi
 
-inherit eutils toolchain-funcs
+inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="utils for managing LZMA compressed files"
 HOMEPAGE="http://tukaani.org/xz/"
@@ -40,6 +41,10 @@ src_prepare() {
 	eautopoint
 	eautoreconf
 }
+else
+src_prepare() {
+	elibtoolize  # to allow building shared libs on Solaris/x64
+}
 fi
 
 src_configure() {
@@ -55,4 +60,12 @@ src_install() {
 	prune_libtool_files --all
 	rm "${ED}"/usr/share/doc/xz/COPYING* || die
 	mv "${ED}"/usr/share/doc/{xz,${PF}} || die
+}
+
+pkg_preinst() {
+	preserve_old_lib /usr/$(get_libdir)/liblzma$(get_libname 0)
+}
+
+pkg_postinst() {
+	preserve_old_lib_notify /usr/$(get_libdir)/liblzma$(get_libname 0)
 }
