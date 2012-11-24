@@ -1,13 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7177 2012/11/24 16:15:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7178 2012/11/24 16:24:14 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
 
   24 Nov 2012; Jeroen Roovers <jer@gentoo.org> package.mask:
-  dev-libs/libnl-3.2.15 breaks ABI.
+  dev-libs/libnl-3.2.15 breaks ABI (bug #444542).
 
   23 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Mask gdbserver for removal.

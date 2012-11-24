@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14246 2012/11/24 16:15:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14247 2012/11/24 16:24:14 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -32,7 +32,7 @@
 #--- END OF EXAMPLES ---
 
 # Jeroen Roovers <jer@gentoo.org> (24 Nov 2012)
-# Breaks ABI in nl_cache_*()
+# Breaks ABI in nl_cache_*() (bug #444542)
 =dev-libs/libnl-3.2.15
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (23 Nov 2012)
