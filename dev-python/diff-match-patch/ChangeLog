@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/diff-match-patch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/diff-match-patch/ChangeLog,v 1.8 2012/03/24 16:55:53 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/diff-match-patch/ChangeLog,v 1.9 2012/11/24 19:56:04 aidecoe Exp $
+
+*diff-match-patch-20120106 (24 Nov 2012)
+
+  24 Nov 2012; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +diff-match-patch-20120106.ebuild:
+  Version bump.
 
   24 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   diff-match-patch-20110725.1.ebuild:
