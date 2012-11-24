@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r9.ebuild,v 1.8 2011/07/20 08:58:35 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r9.ebuild,v 1.9 2012/11/24 21:22:29 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs versionator fixheadtails gnuconfig
 
