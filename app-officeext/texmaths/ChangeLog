@@ -1,6 +1,9 @@
 # ChangeLog for app-officeext/texmaths
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-officeext/texmaths/ChangeLog,v 1.9 2012/11/24 21:47:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-officeext/texmaths/ChangeLog,v 1.10 2012/11/24 21:48:13 ago Exp $
+
+  24 Nov 2012; Agostino Sarubbo <ago@gentoo.org> texmaths-0.36a.ebuild:
+  Stable for x86, wrt bug #444618
 
   24 Nov 2012; Agostino Sarubbo <ago@gentoo.org> texmaths-0.36a.ebuild:
   Stable for amd64, wrt bug #444618
