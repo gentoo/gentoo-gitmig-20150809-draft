@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/gherkin-2.11.5.ebuild,v 1.1 2012/11/16 06:45:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/gherkin-2.11.5.ebuild,v 1.2 2012/11/24 13:22:09 graaff Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19 ree18"
@@ -14,7 +14,7 @@ RUBY_FAKEGEM_EXTRADOC="History.md README.md"
 inherit ruby-fakegem
 
 DESCRIPTION="Fast Gherkin lexer and parser based on Ragel."
-HOMEPAGE="http://wiki.github.com/aslakhellesoy/cucumber/gherkin"
+HOMEPAGE="https://github.com/cucumber/gherkin"
 LICENSE="MIT"
 SRC_URI="https://github.com/cucumber/gherkin/tarball/v${PV} -> ${P}.tgz"
 
@@ -60,13 +60,21 @@ all_ruby_prepare() {
 		rm tasks/cucumber.rake tasks/rspec.rake || die "Unable to remove rake tasks."
 	fi
 
+	# Avoid dependency on yard if USE=-doc
+	if ! use doc ; then
+		rm tasks/apidoc.rake || die
+	fi
+
 	# Avoid implicit dependency on git
 	sed -i -e 's/git ls-files/echo/' gherkin.gemspec || die
 }
 
 all_ruby_compile() {
 	all_fakegem_compile
-	yard || die
+
+	if use doc ; then
+		yard || die
+	fi
 }
 
 each_ruby_compile() {
