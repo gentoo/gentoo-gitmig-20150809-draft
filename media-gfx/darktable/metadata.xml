@@ -12,5 +12,9 @@
 		<flag name="rawspeed">Enable the rawspeed backend</flag>
 		<flag name="slideshow">Build the opengl slideshow viewer</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">darktable-org/darktable</remote-id>
+		<remote-id type="sourceforge">darktable</remote-id>
+	</upstream>
 </pkgmetadata>
 

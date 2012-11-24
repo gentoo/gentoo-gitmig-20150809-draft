@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/darktable
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/ChangeLog,v 1.22 2012/09/09 22:04:53 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/ChangeLog,v 1.23 2012/11/24 19:47:07 eva Exp $
+
+  24 Nov 2012; Gilles Dartiguelongue <eva@gentoo.org> metadata.xml:
+  Add upstream tags.
 
   09 Sep 2012; Tim Harder <radhermit@gentoo.org> -darktable-1.0.4.ebuild:
   Remove old.
