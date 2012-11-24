@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/gnome-menus-3.4.0.ebuild,v 1.1 2012/05/13 18:43:24 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/gnome-menus-3.4.2-r1.ebuild,v 1.1 2012/11/24 23:43:39 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -63,6 +63,9 @@ src_prepare() {
 
 	# Don't show KDE standalone settings desktop files in GNOME others menu
 	epatch "${FILESDIR}/${PN}-3.0.0-ignore_kde_standalone.patch"
+
+	# https://bugzilla.gnome.org/show_bug.cgi?id=688972
+	epatch "${FILESDIR}/${PN}-3.6.1-applications-merged.patch"
 
 	if use python; then
 		python_clean_py-compile_files
