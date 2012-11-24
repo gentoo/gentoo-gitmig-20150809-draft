@@ -1,12 +1,13 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.200 2012/11/24 21:38:13 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.201 2012/11/24 22:03:42 ssuominen Exp $
 
   24 Nov 2012; Mike Gilbert <floppym@gentoo.org> use.mask:
   Mask python_single_target values not supported on this arch.
 
   24 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> ppc64/use.mask:
-  Mask USE="opencv" for ppc64 because media-libs/opencv is not keyworded.
+  Mask USE="opencolorio" and USE="opencv" for 64bit because media-gfx/opencolorio
+  and media-libs/opencv have not been tested yet.
 
   15 Nov 2012; Anthony G. Basile <blueness@gentoo.org> package.use.mask:
   Mask USE=telepathy, bug #441456

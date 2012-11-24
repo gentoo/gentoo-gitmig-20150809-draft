@@ -1,7 +1,8 @@
 ### THIS FILE IS ONLY FOR PACKAGES MASKED ON BOTH 64-BIT AND 32-BIT USERLAND!!!
 
 # Samuli Suominen <ssuominen@gentoo.org> (24 Nov 2012)
-# media-libs/opencv would required stable ppc64 keyword
+# TODO: Keyword and stabilize media-gfx/opencolorio and media-libs/opencv
+opencolorio
 opencv
 
 # Brent Baude <ranger@gentoo.org> (3 Oct 2008)
