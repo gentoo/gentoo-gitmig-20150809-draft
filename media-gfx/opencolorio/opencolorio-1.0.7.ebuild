@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/opencolorio/opencolorio-1.0.7.ebuild,v 1.1 2012/09/03 08:32:34 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/opencolorio/opencolorio-1.0.7.ebuild,v 1.2 2012/11/24 21:40:40 ssuominen Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ IUSE="doc opengl python sse2 test"
 
 RDEPEND="opengl? (
 		media-libs/lcms:2
-		media-libs/openimageio
+		>=media-libs/openimageio-1.1.0
 		media-libs/glew
 		media-libs/freeglut
 		virtual/opengl
@@ -43,8 +43,10 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/"${PN}"-use-system-libs.patch
-	epatch "${FILESDIR}"/"${PN}"-documentation-gen.patch
+	epatch \
+		"${FILESDIR}"/${PN}-use-system-libs.patch \
+		"${FILESDIR}"/${PN}-documentation-gen.patch \
+		"${FILESDIR}"/${PN}-openimageio.patch
 }
 
 src_configure() {
