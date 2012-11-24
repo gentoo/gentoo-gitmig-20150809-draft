@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/stk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/stk/ChangeLog,v 1.13 2012/11/24 16:10:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/stk/ChangeLog,v 1.14 2012/11/24 16:13:41 aballier Exp $
+
+*stk-4.4.4-r1 (24 Nov 2012)
+
+  24 Nov 2012; Alexis Ballier <aballier@gentoo.org> +stk-4.4.4-r1.ebuild,
+  +files/stk-4.4.4/050_all_cxxflags.patch:
+  do not ignore cxxflags, bug #428384
 
   24 Nov 2012; Alexis Ballier <aballier@gentoo.org> -stk-4.4.2.ebuild,
   -files/stk-4.4.2/010_all_removeForcedFlags.patch,
