@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ps3mediaserver/ps3mediaserver-1.60.0.ebuild,v 1.1 2012/08/05 03:29:50 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ps3mediaserver/ps3mediaserver-1.72.0.ebuild,v 1.1 2012/11/24 23:01:44 floppym Exp $
 
 EAPI="4"
 
@@ -17,7 +17,6 @@ IUSE="multiuser +transcode tsmuxer"
 
 DEPEND="app-arch/unzip"
 RDEPEND=">=virtual/jre-1.6.0
-	|| ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] )
 	media-libs/libmediainfo
 	media-libs/libzen
 	tsmuxer? ( media-video/tsmuxer )
@@ -67,7 +66,7 @@ src_install() {
 	insinto ${PMS_HOME}
 	doins -r pms.jar *.conf documentation plugins renderers *.xml
 	use tsmuxer && dosym /opt/tsmuxer/bin/tsMuxeR ${PMS_HOME}/linux/tsMuxeR
-	dodoc CHANGELOG README.md
+	dodoc CHANGELOG.txt README.md
 
 	newicon -s 32 icon-32.png ${PN}.png
 	newicon -s 256 icon-256.png ${PN}.png
