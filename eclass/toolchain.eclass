@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.557 2012/11/22 06:16:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.558 2012/11/24 21:20:02 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -173,6 +173,10 @@ if in_iuse gcj ; then
 		x11-proto/xextproto
 		=x11-libs/gtk+-2*
 		virtual/pkgconfig
+		amd64? ( multilib? (
+			app-emulation/emul-linux-x86-gtklibs
+			app-emulation/emul-linux-x86-xlibs
+		) )
 	"
 	tc_version_is_at_least 3.4 && GCJ_GTK_DEPS+=" x11-libs/pango"
 	GCJ_DEPS=">=media-libs/libart_lgpl-2.1"
