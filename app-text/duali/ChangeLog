@@ -1,6 +1,9 @@
 # ChangeLog for app-text/duali
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/duali/ChangeLog,v 1.18 2010/05/24 16:03:16 nixnut Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/duali/ChangeLog,v 1.19 2012/11/24 14:30:43 ulm Exp $
+
+  24 Nov 2012; Ulrich Müller <ulm@gentoo.org> duali-0.2.0.ebuild:
+  Fix LICENSE, "BSD license" according to file headers.
 
   23 May 2010; <nixnut@gentoo.org> duali-0.2.0.ebuild:
   ppc stable #313927
