@@ -1,6 +1,9 @@
 # ChangeLog for virtual/linux-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/linux-sources/ChangeLog,v 1.14 2012/06/16 14:37:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/linux-sources/ChangeLog,v 1.15 2012/11/24 20:33:52 pacho Exp $
+
+  24 Nov 2012; Pacho Ramos <pacho@gentoo.org> linux-sources-0.ebuild:
+  cell-sources will be dropped (#366959)
 
   16 Jun 2012; Pacho Ramos <pacho@gentoo.org> linux-sources-0.ebuild:
   Drop cluster-sources due bug #411405#c6
@@ -58,4 +61,3 @@
   30 Apr 2011; Ulrich Mueller <ulm@gentoo.org> +linux-sources-2.4.ebuild,
   +linux-sources-2.6.ebuild, +metadata.xml:
   Initial import, bug 118442.
-
