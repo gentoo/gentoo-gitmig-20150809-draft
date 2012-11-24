@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/openimageio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openimageio/ChangeLog,v 1.10 2012/11/24 21:23:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openimageio/ChangeLog,v 1.11 2012/11/24 22:00:39 ssuominen Exp $
+
+  24 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> openimageio-1.1.1.ebuild,
+  metadata.xml:
+  Introduce USE="opencolorio" but leave it disabled by default because of the
+  circular depend opencolorio[opengl] vs. openimageio[opencolorio]
 
   24 Nov 2012; Samuli Suominen <ssuominen@gentoo.org>
   -openimageio-1.0.8.ebuild:
