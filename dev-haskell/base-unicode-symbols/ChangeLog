@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/base-unicode-symbols
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/base-unicode-symbols/ChangeLog,v 1.4 2012/09/12 15:42:10 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/base-unicode-symbols/ChangeLog,v 1.5 2012/11/24 11:02:11 gienah Exp $
+
+*base-unicode-symbols-0.2.2.4 (24 Nov 2012)
+
+  24 Nov 2012; Mark Wright <gienah@gentoo.org>
+  +base-unicode-symbols-0.2.2.4.ebuild:
+  Bump base-unicode-symbols to 0.2.2.4
 
   12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org>
   base-unicode-symbols-0.2.2.3.ebuild:
