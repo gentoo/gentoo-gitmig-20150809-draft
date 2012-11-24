@@ -1,10 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-2.9.1.201206091838-r1.ebuild,v 1.2 2012/07/12 08:27:17 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-2.9.1.201206091838-r1.ebuild,v 1.3 2012/11/24 19:34:54 ssuominen Exp $
 
-EAPI="4"
-
-inherit flag-o-matic toolchain-funcs versionator eutils
+EAPI=5
+inherit flag-o-matic toolchain-funcs versionator eutils udev
 
 MY_PV="$(replace_version_separator 3 -)"
 
@@ -17,7 +16,7 @@ SLOT="0"
 KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86"
 IUSE="pam"
 
-CDEPEND="sys-fs/udev"
+CDEPEND="virtual/dev-manager"
 RDEPEND="${CDEPEND}"
 DEPEND="
 	${CDEPEND}
@@ -26,10 +25,13 @@ DEPEND="
 	pam? ( virtual/pam )
 	sys-apps/paxctl"
 
-S="${WORKDIR}/${PN}2"
+S=${WORKDIR}/${PN}2
 
 src_prepare() {
-	epatch "${FILESDIR}/respect-gentoo-env.patch"
+	epatch "${FILESDIR}"/respect-gentoo-env.patch
+
+	# Without respect-gentoo-env.patch it's /etc/udev in Makefile:
+	sed -i -e "s:/lib/udev:$(udev_get_udevdir):" Makefile || die
 }
 
 src_compile() {
