@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14249 2012/11/24 18:20:39 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14250 2012/11/24 21:05:07 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,257 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Violates java packaging policy (#168867), no release since
+# 2006, it would require jdic in the tree but that needs huge
+# work to be done and someone wanting to do that.
+# Removal in a month.
+net-proxy/paros
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Fails to install (#195030), ELF installed into /usr/share (#297140)
+# upstream is dead for a long time, no other distribution is still
+# supplying it. Removal in a month.
+net-misc/ups-monitor
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Upstream is dead, doesn't build against latest kernels (#199294).
+# Removal in a month.
+app-emulation/mol
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Upstream is dead, doesn't build with recent kernels (#201922),
+# kernel-3.6 shouldn't need it. Removal in a month.
+net-wireless/fsam7400
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Upstream dead for ages, multiple opened bug, possible legal
+# problems (#211846). Removal in a month.
+net-wireless/acx
+net-wireless/acx-firmware
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Doesn't build against recent kernels (#247898), all its supported
+# devices are not supported by latest kernels. Removal in a month.
+net-wireless/linux-wlan-ng-modules
+net-wireless/linux-wlan-ng-utils
+net-wireless/linux-wlan-ng-firmware
+net-wireless/linux-wlan-ng
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Doesn't compile (#270269), it's also hardware specific and, then,
+# needs a dedicated maintainer. Removal in a month.
+net-wireless/rfswitch
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Runtime problems (#272751), no update since 2005 (bluez-3 times),
+# removal in a month.
+net-wireless/opd
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Fails to build for a long time (#277164), removal in a month.
+app-crypt/bestcrypt
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Overflow issues (#277459), upstream lost interest on it.
+# Removal in a month.
+net-irc/xchat-xsys
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# This project has been superseeded by G'MIC. Removal in a month.
+media-plugins/gimp-greycstoration
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Fails to launch (#294013), depends on nethack that has security
+# issues. Removal in a month
+games-roguelike/noegnud-nethack
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Fails to build with latest kernels (#294813), upstream dead since
+# 2007. Removal in a month.
+net-dialup/openadsl
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Fails to build for years (#294822), getting it updated needs
+# a total rework in ebuilds (and splitting) that nobody looks to
+# have time to do. Removal in a month.
+sci-electronics/chipmunksystem
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Fails to build (#318775). Removal in a month.
+media-tv/v4l-dvb-hg
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Dead for ages and collides with dev-libs/ppl (#320413).
+# Removal in a month.
+net-misc/partysip
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Not needed for a long time and now neither for BSDs (#321261#c9),
+# bugs not fixed due upstream dead (#321261). Removal in a month.
+sys-apps/915resolution
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Not compatible with recent telepathy versions as upstream no longer
+# develops it (#326117). Removal in a month.
+dev-util/telepathy-inspector
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Fails to build with automake-1.11 (#328201), nothing in the tree
+# needs it. Removal in a month.
+dev-libs/yaz++
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Fails to build (#332793), nothing in the tree needs it.
+# Removal in a month.
+dev-lang/sr
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Can be treecleaned as talked with upstream, use app-laptop/pommed
+# instead. Removal in a month.
+app-laptop/macbook-backlight
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Overflow issues (#338936) and cannot start. Removal in a month.
+x11-misc/bbacpi
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Lots of bug report, use version from science overlay as pointed
+# in bug #339364#c3 . Removal in a month
+sci-mathematics/scilab
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Upstream dead for more than 2 years and replaced by nmcli
+# (from NetworkManager) (#339664). Removal in a month.
+net-misc/cnetworkmanager
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Doesn't build with current kernels (#344889). People needs to
+# migrate to x11-drivers/xf86-video-fbdev and be sure they have
+# CONFIG_STUB_POULSBO enabled in their kernels.
+# Removal in a month.
+x11-drivers/psb-kmod
+x11-drivers/xf86-video-psb
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Doesn't build with current kernels (#351225), some work is done
+# by Ubuntu users but a lot of mantainance work is still needed
+# and nobody will take care of it now (#351225#c7).
+# Removal in a month.
+net-dialup/hsfmodem
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Upstream dead for ages and fails to build (#351449).
+# Removal in a month.
+x11-terms/hanterm-xf
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Doesn't support current kernels, upstream is dead (#366959).
+# Removal in a month
+sys-kernel/cell-sources
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Dead for years, time to treeclean by maintainer (#370601)
+# Removal in a month.
+net-p2p/dctc
+net-p2p/ldcc
+net-p2p/cccp
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Segfaults (#378917) and other issues. Removal in a month.
+app-text/utrac
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Doesn't work on Gentoo (#392597), removal in a month.
+app-misc/klive
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Fails to execute (#394869), removal in a month.
+games-rpg/nwn-penultima
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Fail to start due missing fonts (bugs 395353, 402713, 429234).
+# Removal in a month.
+x11-misc/bbdate
+x11-misc/bbweather
+x11-misc/bbsload
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Upstream dead and no longer runs (#402669).
+# Removal in a month
+app-cdr/dvd95
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Fails to build (#415727), upstream dead.
+# Removal in a month.
+sys-block/megactl
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Fails to build (#205047, #425680), segfaults (#415787).
+# Removal in a month.
+app-emulation/e-uae
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Fails to build (#423177), dead upstream.
+# Removal in a month.
+x11-misc/bbappconf
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# No version in the tree builds (#423253), removal in a month.
+net-analyzer/sussen
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Cannot bump it, started to require libselinux unconditionally
+# and nothing in the tree neither in gnome overlay needs it (#424217).
+# Removal in a month.
+app-emulation/libvirt-sandbox
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Fails to build with gcc-4.7 and maintainer is ok with dropping (#424723).
+# Removal in a month.
+app-shells/localshell
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Fails to build (#427396). Removal in a month.
+dev-java/sbaz
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Nothing in the tree needs it, upstream is dead and per fedora removal, 
+# looks like people can use hfsutils and netatalk as replacements:
+# http://www.redhat.com/archives/fedora-maintainers/2006-August/msg00026.html
+# Removal in a month (#431298)
+app-arch/macutil
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Fails to build with current clutter (#435166). Removal in a month.
+dev-python/pyclutter
+dev-python/pyclutter-gst
+dev-python/pyclutter-gtk
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Fails to build or causes hangs during it (#437736).
+# Removal in a month.
+dev-lang/tendra
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# People should use xbmc instead (#438736). Removal in a month.
+net-fs/ccxstream
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Xrandr supplies its functionality and it's dead (#439874).
+# Removal in a month.
+app-misc/i810switch
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Dead and doesn't build with glib-2.32 (#442648).
+# Removal in a month.
+www-client/downman
+
+# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
+# Moved to net-analyzer/nepenthes instead (#443698).
+# Removal in a month.
+net-analyzer/mwcollect
 
 # Richard Freeman <rich0@gentoo.org> (24 Nov 2012)
 # Live ebuild.
@@ -853,7 +1104,6 @@ sys-auth/pam_keystore
 # live ebuilds, nor the availability of the server hosting them. As
 # per QA team policy, all these need to be kept masked by default, if
 # available in the tree.
-media-tv/v4l-dvb-hg
 ~app-i18n/skk-jisyo-9999
 net-misc/netcomics-cvs
 app-portage/layman-dbtools
@@ -995,7 +1245,6 @@ games-roguelike/slashem
 # masked pending unresolved security issues #125902
 games-roguelike/nethack
 games-util/hearse
-games-roguelike/noegnud-nethack
 
 # Robin H. Johnson <robbat2@gentoo.org> (11 Feb 2006)
 # zlib interaction is badly broken. See bug #124733.
