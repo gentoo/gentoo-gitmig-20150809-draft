@@ -1,6 +1,9 @@
 # ChangeLog for games-board/knights
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/knights/ChangeLog,v 1.35 2012/11/23 19:38:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/knights/ChangeLog,v 1.36 2012/11/24 15:19:15 johu Exp $
+
+  24 Nov 2012; Johannes Huber <johu@gentoo.org> -knights-2.4.2.ebuild:
+  Remove old.
 
   23 Nov 2012; Agostino Sarubbo <ago@gentoo.org> knights-2.5.0.ebuild:
   Stable for x86, wrt bug #442394
