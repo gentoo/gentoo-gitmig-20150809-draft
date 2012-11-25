@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/revelation
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/ChangeLog,v 1.29 2012/07/04 21:59:07 tristan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/ChangeLog,v 1.30 2012/11/25 11:32:26 tristan Exp $
+
+  25 Nov 2012; Tristan Heaven <tristan@gentoo.org> revelation-0.4.14.ebuild:
+  Depend on dbus-python, bug #444592
 
   04 Jul 2012; Tristan Heaven <tristan@gentoo.org>
   -revelation-0.4.11-r2.ebuild, -files/revelation-0.4.11-build.patch,
