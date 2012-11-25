@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.244 2012/11/21 16:36:20 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.245 2012/11/25 06:01:12 williamh Exp $
+
+  25 Nov 2012; William Hubbs <williamh@gentoo.org> openrc-0.11.5.ebuild,
+  openrc-9999.ebuild:
+  add blocker for <udev-init-scripts-17 wrt bug #435756.
 
   21 Nov 2012; Anthony G. Basile <blueness@gentoo.org> openrc-0.11.5.ebuild:
   stable ppc, bug #435756, thanks peratu

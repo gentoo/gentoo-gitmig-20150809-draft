@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.115 2012/11/07 14:59:23 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.116 2012/11/25 06:01:12 williamh Exp $
 
 EAPI=4
 
@@ -31,6 +31,7 @@ RDEPEND="virtual/init
 	kernel_linux? (
 		sys-process/psmisc
 	)
+	!<sys-fs/udev-init-scripts-17
 	!<sys-fs/udev-133"
 DEPEND="${RDEPEND}
 	virtual/os-headers"
