@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rdflib/rdflib-3.2.3.ebuild,v 1.1 2012/11/16 17:36:08 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rdflib/rdflib-3.2.3.ebuild,v 1.2 2012/11/25 13:26:48 idella4 Exp $
 
 EAPI="4"
 SUPPORT_PYTHON_ABIS="1"
@@ -27,10 +27,6 @@ RDEPEND="dev-python/isodate
 DEPEND="${RDEPEND}
 	dev-python/setuptools"
 
-src_test() {
-	distutils_src_test --py3where='build/src'
-}
-
 src_install() {
 	distutils_src_install
 
@@ -46,4 +42,5 @@ src_test() {
 		nosetests --verbosity=1 --py3where=build/src test/test_*.py || die
 	}
 	python_execute_function testing
+
 }
