@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs-buildtools/gtk2hs-buildtools-0.12.3.1.ebuild,v 1.4 2012/09/23 08:43:07 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs-buildtools/gtk2hs-buildtools-0.12.3.1.ebuild,v 1.5 2012/11/25 05:42:32 gienah Exp $
 
 EAPI=4
 
@@ -21,6 +21,17 @@ DEPEND="${RDEPEND}
 		dev-haskell/alex
 		>=dev-haskell/cabal-1.8
 		dev-haskell/happy
+		dev-haskell/random
 		>=dev-lang/ghc-6.10.1"
 
-PATCHES=("${FILESDIR}"/${PN}-0.12.3-workaround-UName.patch)
+PATCHES=("${FILESDIR}"/${PN}-0.12.3-workaround-UName.patch
+	"${FILESDIR}"/${PN}-0.12.3.1-ghc-7.5.patch
+)
+
+src_prepare() {
+	base_src_prepare
+	# c2hs ignores #if __GLASGOW_HASKELL__ >= 704
+	if has_version ">=dev-lang/ghc-7.6.1"; then
+		epatch "${FILESDIR}"/${PN}-0.12.3.1-remove-conditional-compilation-as-it-is-ignored-ghc-7.6.patch
+	fi
+}
