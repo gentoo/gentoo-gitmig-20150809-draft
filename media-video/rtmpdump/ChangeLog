@@ -1,6 +1,11 @@
 # ChangeLog for media-video/rtmpdump
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/rtmpdump/ChangeLog,v 1.22 2012/10/17 12:56:58 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/rtmpdump/ChangeLog,v 1.23 2012/11/25 10:53:36 hwoarang Exp $
+
+  25 Nov 2012; Markos Chandras <hwoarang@gentoo.org> rtmpdump-2.3.ebuild,
+  rtmpdump-2.4.ebuild, rtmpdump-9999.ebuild:
+  Add missing quotes for tc-getXX functions to avoid problems with cross-
+  compilation. Bug #444590. Thanks to Alexander E. Patrakov <patrakov@gmail.com>
 
   17 Oct 2012; Christoph Junghans <ottxor@gentoo.org> rtmpdump-2.4.ebuild,
   rtmpdump-9999.ebuild:

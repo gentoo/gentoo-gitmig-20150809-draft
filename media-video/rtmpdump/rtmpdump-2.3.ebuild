@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/rtmpdump/rtmpdump-2.3.ebuild,v 1.13 2012/03/20 23:31:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/rtmpdump/rtmpdump-2.3.ebuild,v 1.14 2012/11/25 10:53:36 hwoarang Exp $
 
 EAPI="2"
 
@@ -53,7 +53,7 @@ src_compile() {
 	fi
 	#fix multilib-script support. Bug #327449
 	sed -i "/^libdir/s:lib$:$(get_libdir)$:" librtmp/Makefile
-	emake CC=$(tc-getCC) LD=$(tc-getLD) \
+	emake CC="$(tc-getCC)" LD="$(tc-getLD)" \
 		OPT="${CFLAGS}" XLDFLAGS="${LDFLAGS}" CRYPTO="${crypto}" SYS=posix || die "emake failed"
 }
 
