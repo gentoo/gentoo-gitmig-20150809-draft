@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mp3cat
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3cat/ChangeLog,v 1.6 2007/02/22 01:14:35 peper Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3cat/ChangeLog,v 1.7 2012/11/25 17:52:43 ago Exp $
+
+  25 Nov 2012; Agostino Sarubbo <ago@gentoo.org> mp3cat-0.4.ebuild:
+  Add ~amd64
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
@@ -22,4 +25,3 @@
   27 Jan 2005; Patrick Dawson <pkdawson@gentoo.org> +metadata.xml,
   +mp3cat-0.4.ebuild:
   Initial import. Thanks to Nikolaos Anastopoulos.
-
