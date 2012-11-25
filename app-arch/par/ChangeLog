@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/par
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/par/ChangeLog,v 1.19 2010/01/01 19:37:12 fauli Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/par/ChangeLog,v 1.20 2012/11/25 15:31:57 swegener Exp $
+
+  25 Nov 2012; Sven Wegener <swegener@gentoo.org> par-1.1.ebuild:
+  Support user LDFLAGS, bug #332479.
 
   01 Jan 2010; Christian Faulhammer <fauli@gentoo.org> par-1.1.ebuild:
   Transfer Prefix keywords
