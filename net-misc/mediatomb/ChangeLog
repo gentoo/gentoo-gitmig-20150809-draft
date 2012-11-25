@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/mediatomb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.39 2012/11/07 20:41:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.40 2012/11/25 15:16:05 lu_zero Exp $
+
+  25 Nov 2012; Luca Barbato <lu_zero@gentoo.org> mediatomb-0.12.1-r4.ebuild,
+  +files/mediatomb-0.12.1-libav9.patch,
+  +files/mediatomb-0.12.1-no-thumbnail.patch:
+  Update to libav-9 api and fix thumbnail support
 
 *mediatomb-0.12.1-r4 (07 Nov 2012)
 

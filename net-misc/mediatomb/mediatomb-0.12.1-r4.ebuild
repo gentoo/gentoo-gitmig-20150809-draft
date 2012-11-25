@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/mediatomb-0.12.1-r4.ebuild,v 1.1 2012/11/07 20:41:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/mediatomb-0.12.1-r4.ebuild,v 1.2 2012/11/25 15:16:05 lu_zero Exp $
 
 EAPI="4"
 inherit autotools eutils linux-info user
@@ -65,6 +65,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-libextractor.patch #435394
 	epatch "${FILESDIR}"/${P}-inotify-hard-links.patch
 	epatch "${FILESDIR}"/${P}-thumb-cache.patch
+	epatch "${FILESDIR}"/${P}-libav9.patch
+	epatch "${FILESDIR}"/${P}-no-thumbnail.patch
 	eautoreconf
 }
 
