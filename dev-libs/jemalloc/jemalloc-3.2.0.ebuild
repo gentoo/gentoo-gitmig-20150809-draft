@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/jemalloc-3.1.0.ebuild,v 1.1 2012/10/21 19:44:32 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/jemalloc-3.2.0.ebuild,v 1.1 2012/11/25 12:46:43 anarchy Exp $
 
 EAPI=4
 
@@ -30,7 +30,6 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--with-jemalloc-prefix=j \
 		$(use_enable debug) \
 		$(use_enable stats)
 }
