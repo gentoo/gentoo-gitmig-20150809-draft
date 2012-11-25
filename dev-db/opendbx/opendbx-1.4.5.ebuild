@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/opendbx-1.4.5.ebuild,v 1.5 2010/07/29 17:44:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/opendbx-1.4.5.ebuild,v 1.6 2012/11/25 14:27:49 swegener Exp $
 
 EAPI="2"
 
-inherit flag-o-matic
+inherit flag-o-matic multilib
 
 DESCRIPTION="OpenDBX - A database abstraction layer"
 HOMEPAGE="http://www.linuxnetworks.de/doc/index.php/OpenDBX"
@@ -61,4 +61,6 @@ src_compile() {
 src_install() {
 	emake -j1 install DESTDIR="${D}" || die "make install failed"
 	dodoc AUTHORS ChangeLog README
+
+	rm -f "${D}"/usr/$(get_libdir)/opendbx/*.{a,la}
 }
