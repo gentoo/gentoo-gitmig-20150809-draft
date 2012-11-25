@@ -1,6 +1,6 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7189 2012/11/25 19:12:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7190 2012/11/25 19:34:52 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
@@ -8,6 +8,7 @@
 
   25 Nov 2012; Ulrich Müller <ulm@gentoo.org> license_groups:
   Add Sleepycat to GPL-COMPATIBLE and OSI-APPROVED license groups, bug 300426.
+  This replaces DB and OracleDB, remove them from both license groups.
   Add IBPP-1.1 to MISC-FREE license group, bug 444626.
 
   25 Nov 2012; Julian Ospald <hasufell@gentoo.org> package.mask:
