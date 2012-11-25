@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/ccpn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ChangeLog,v 1.98 2012/11/19 09:47:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ChangeLog,v 1.99 2012/11/25 09:16:31 jlec Exp $
+
+*ccpn-2.2.2_p121125 (25 Nov 2012)
+
+  25 Nov 2012; Justin Lecher <jlec@gentoo.org> +ccpn-2.2.2_p121125.ebuild:
+  Todays python patches, drop USE=extendnmr
 
 *ccpn-2.2.2_p121119 (19 Nov 2012)
 
