@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/radiotray-9999.ebuild,v 1.5 2012/09/08 09:25:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/radiotray-9999.ebuild,v 1.6 2012/11/25 10:41:07 hwoarang Exp $
 
 EAPI=4
 PYTHON_COMPAT='python2_6 python2_7'
@@ -12,7 +12,7 @@ HOMEPAGE="http://radiotray.sourceforge.net/"
 SRC_URI=""
 EHG_REPO_URI="http://radiotray.hg.sourceforge.net:8000/hgroot/radiotray/radiotray"
 
-LICENSE="GPL-1"
+LICENSE="GPL-1+"
 SLOT="0"
 KEYWORDS=""
 IUSE=""

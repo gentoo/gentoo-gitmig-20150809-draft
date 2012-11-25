@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/radiotray-0.7.2.ebuild,v 1.4 2012/08/05 18:42:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/radiotray-0.7.2.ebuild,v 1.5 2012/11/25 10:41:07 hwoarang Exp $
 
 EAPI=3
 
@@ -13,7 +13,7 @@ DESCRIPTION="Online radio streaming player"
 HOMEPAGE="http://radiotray.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
-LICENSE="GPL-1"
+LICENSE="GPL-1+"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
