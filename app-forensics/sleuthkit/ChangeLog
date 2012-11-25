@@ -1,6 +1,11 @@
 # ChangeLog for app-forensics/sleuthkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/ChangeLog,v 1.65 2012/10/23 09:15:55 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/ChangeLog,v 1.66 2012/11/25 10:02:55 radhermit Exp $
+
+*sleuthkit-4.0.1 (25 Nov 2012)
+
+  25 Nov 2012; Tim Harder <radhermit@gentoo.org> +sleuthkit-4.0.1.ebuild:
+  Version bump.
 
   23 Oct 2012; Tim Harder <radhermit@gentoo.org> sleuthkit-3.2.3.ebuild:
   Update libewf dep since the API-related use flag was changed in the most
