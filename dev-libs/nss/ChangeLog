@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nss
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.267 2012/11/21 21:54:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.268 2012/11/25 19:09:39 armin76 Exp $
+
+  25 Nov 2012; Raúl Porcel <armin76@gentoo.org> nss-3.14.ebuild:
+  alpha/ia64/sparc stable wrt #439586
 
   21 Nov 2012; Markus Meier <maekke@gentoo.org> nss-3.14.ebuild:
   arm stable, bug #439586
