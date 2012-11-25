@@ -1,6 +1,14 @@
 # ChangeLog for sys-boot/gnu-efi
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/gnu-efi/ChangeLog,v 1.18 2010/08/28 22:43:29 vapier Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/gnu-efi/ChangeLog,v 1.19 2012/11/25 04:27:08 vapier Exp $
+
+*gnu-efi-3.0s (25 Nov 2012)
+
+  25 Nov 2012; Mike Frysinger <vapier@gentoo.org> +gnu-efi-3.0s.ebuild:
+  Version bump and update to EAPI=4 #412645 by Rod Smith.  Disable QA checks on
+  compiled objects as they do not make sense for bootloaders #329823 by Dane
+  Smith.  Disable ssp since that requires a C library (like glibc) to work, and
+  does not make sense for bootloaders #444246 by Maxim Kammerer.
 
   28 Aug 2010; Mike Frysinger <vapier@gentoo.org> gnu-efi-3.0i.ebuild:
   Clean up and document the ebuild a bit.
@@ -66,4 +74,3 @@
   files/gnu-efi-3.0a-lds.patch:
   New ebuild for gnu-efi with patches from Debian. Thanks to Matt Anderson in
   bug 38875
-
