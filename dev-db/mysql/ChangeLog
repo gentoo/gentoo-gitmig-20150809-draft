@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.625 2012/11/21 21:48:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.626 2012/11/25 19:03:10 armin76 Exp $
+
+  25 Nov 2012; Raúl Porcel <armin76@gentoo.org> mysql-5.1.66.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #417989
 
   21 Nov 2012; Markus Meier <maekke@gentoo.org> mysql-5.1.66.ebuild:
   arm stable, bug #417989
