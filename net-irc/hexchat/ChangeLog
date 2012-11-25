@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/hexchat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/ChangeLog,v 1.17 2012/11/23 19:56:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/ChangeLog,v 1.18 2012/11/25 12:29:03 pinkbyte Exp $
+
+  25 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> hexchat-2.9.3.ebuild:
+  Inherit multilib eclass explicitly
 
   23 Nov 2012; Agostino Sarubbo <ago@gentoo.org>
   -files/hexchat-2.8.8-cflags.patch, -hexchat-2.9.1.ebuild,
