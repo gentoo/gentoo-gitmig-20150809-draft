@@ -1,6 +1,11 @@
 # ChangeLog for app-mobilephone/wammu
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/ChangeLog,v 1.51 2011/08/13 07:15:07 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/ChangeLog,v 1.52 2012/11/25 15:36:23 sping Exp $
+
+*wammu-0.36 (25 Nov 2012)
+
+  25 Nov 2012; Sebastian Pipping <sping@gentoo.org> +wammu-0.36.ebuild:
+  Bump to 0.36, looks trivial (bug #388353)
 
   13 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> wammu-0.30.1.ebuild,
   wammu-0.34.ebuild, wammu-0.35.ebuild:
