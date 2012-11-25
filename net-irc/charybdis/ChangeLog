@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/charybdis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/charybdis/ChangeLog,v 1.16 2012/10/20 15:20:01 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/charybdis/ChangeLog,v 1.17 2012/11/25 14:33:23 jdhore Exp $
+
+*charybdis-3.4.1 (25 Nov 2012)
+
+  25 Nov 2012; Jeff Horelick <jdhore@gentoo.org> +charybdis-3.4.1.ebuild,
+  -charybdis-3.4.0.ebuild:
+  Version bump
 
 *charybdis-3.4.0 (20 Oct 2012)
 
