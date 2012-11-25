@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/gtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk/ChangeLog,v 1.6 2012/11/25 06:04:14 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk/ChangeLog,v 1.7 2012/11/25 06:43:47 gienah Exp $
+
+*gtk-0.12.4 (25 Nov 2012)
+
+  25 Nov 2012; Mark Wright <gienah@gentoo.org> +gtk-0.12.4.ebuild:
+  Bump gtk to 0.12.4
 
 *gtk-0.12.3.1 (25 Nov 2012)
 
