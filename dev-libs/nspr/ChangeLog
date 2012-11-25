@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/nspr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.201 2012/11/21 21:52:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.202 2012/11/25 12:53:56 anarchy Exp $
+
+*nspr-4.9.4 (25 Nov 2012)
+
+  25 Nov 2012; <anarchy@gentoo.org> +nspr-4.9.4.ebuild:
+  nspr version bump, fix bug #436200
 
   21 Nov 2012; Markus Meier <maekke@gentoo.org> nspr-4.9.2.ebuild:
   arm stable, bug #439586
