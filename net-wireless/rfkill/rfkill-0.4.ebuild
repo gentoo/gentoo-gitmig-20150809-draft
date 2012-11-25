@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rfkill/rfkill-0.4.ebuild,v 1.6 2012/09/28 08:06:31 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rfkill/rfkill-0.4.ebuild,v 1.7 2012/11/25 18:58:13 zerochaos Exp $
 
 inherit toolchain-funcs
 
@@ -20,9 +20,9 @@ CC=$(tc-getCC)
 LD=$(tc-getLD)
 
 src_compile() {
-	emake || die "Failed to compile"
+	emake V=1 || die "Failed to compile"
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die "Failed to install"
+	emake install V=1 DESTDIR="${D}" || die "Failed to install"
 }
