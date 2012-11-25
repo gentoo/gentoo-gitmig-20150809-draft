@@ -13,7 +13,6 @@
 		 installation with secure-delete enabled</flag>
 	<flag name="ipc">Use inter-process communication between tabs and plugins.
 		Allows for greater stability in case of plugin crashes</flag>
-	<flag name="crashreporter">Enable crash reporter for bugs</flag>
 	<flag name="gconf">Enable gnome2 gconf support</flag>
 	<flag name="webm">Use system <pkg>media-libs/libvpx</pkg> for HTML5 WebM
 		video support.</flag>
