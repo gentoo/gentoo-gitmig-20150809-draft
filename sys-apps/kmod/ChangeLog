@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.59 2012/11/25 08:29:47 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.60 2012/11/25 09:42:58 ssuominen Exp $
+
+*kmod-11-r3 (25 Nov 2012)
+
+  25 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> +kmod-11-r3.ebuild,
+  kmod-9999.ebuild:
+  Use --with-rootlibdir= instead of gen_usr_ldscript wrt #443710 by William
+  Hubbs
 
   24 Nov 2012; Samuli Suominen <ssuominen@gentoo.org>
   -files/kmod-8-gc-sections.patch, -kmod-10-r2.ebuild:
