@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-3.0.1.ebuild,v 1.10 2012/11/25 16:09:54 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-3.0.1.ebuild,v 1.11 2012/11/25 16:12:21 swegener Exp $
 
-EAPI=2
+EAPI=4
 
 inherit eutils multilib autotools user toolchain-funcs
 
