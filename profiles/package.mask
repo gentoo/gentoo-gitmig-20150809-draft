@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14250 2012/11/24 21:05:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14251 2012/11/25 09:56:09 xarthisius Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -198,13 +198,6 @@ app-misc/klive
 # Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
 # Fails to execute (#394869), removal in a month.
 games-rpg/nwn-penultima
-
-# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
-# Fail to start due missing fonts (bugs 395353, 402713, 429234).
-# Removal in a month.
-x11-misc/bbdate
-x11-misc/bbweather
-x11-misc/bbsload
 
 # Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
 # Upstream dead and no longer runs (#402669).
