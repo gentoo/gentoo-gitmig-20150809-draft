@@ -1,12 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.33 2012/11/16 19:25:59 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.34 2012/11/25 19:05:33 floppym Exp $
 
-EAPI="4"
+EAPI="5"
 
-PYTHON_DEPEND="2:2.6"
-
-inherit eutils multilib pax-utils python subversion toolchain-funcs
+inherit eutils multilib pax-utils python-utils-r1 subversion toolchain-funcs
 
 DESCRIPTION="Google's open source JavaScript engine"
 HOMEPAGE="http://code.google.com/p/v8"
@@ -17,10 +15,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
-}
+DEPEND="|| ( dev-lang/python:2.7 dev-lang/python:2.6 )"
 
 src_unpack() {
 	subversion_src_unpack
@@ -31,6 +26,7 @@ src_unpack() {
 src_compile() {
 	tc-export AR CC CXX RANLIB
 	export LINK=${CXX}
+	python_export python2 EPYTHON
 
 	local hardfp=off
 
@@ -113,30 +109,4 @@ src_install() {
 	dosym libv8$(get_libname ${soname_version}) /usr/$(get_libdir)/libv8$(get_libname) || die
 
 	dodoc AUTHORS ChangeLog || die
-}
-
-pkg_preinst() {
-	preserved_libs=()
-	local baselib candidate
-
-	eshopts_push -s nullglob
-
-	for candidate in "${EROOT}usr/$(get_libdir)"/libv8$(get_libname).*; do
-		baselib=${candidate##*/}
-		if [[ ! -e "${ED}usr/$(get_libdir)/${baselib}" ]]; then
-			preserved_libs+=( "${EPREFIX}/usr/$(get_libdir)/${baselib}" )
-		fi
-	done
-
-	eshopts_pop
-
-	if [[ ${#preserved_libs[@]} -gt 0 ]]; then
-		preserve_old_lib "${preserved_libs[@]}"
-	fi
-}
-
-pkg_postinst() {
-	if [[ ${#preserved_libs[@]} -gt 0 ]]; then
-		preserve_old_lib_notify "${preserved_libs[@]}"
-	fi
 }
