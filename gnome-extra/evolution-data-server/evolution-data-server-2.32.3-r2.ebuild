@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-2.32.3-r2.ebuild,v 1.12 2012/10/17 09:54:20 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-2.32.3-r2.ebuild,v 1.13 2012/11/25 19:33:56 ulm Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -16,7 +16,7 @@ HOMEPAGE="http://projects.gnome.org/evolution/"
 SRC_URI="${SRC_URI} http://dev.gentoo.org/~pacho/gnome/${P}-patches.tar.xz"
 
 # Note: explicitly "|| ( LGPL-2 LGPL-3 )", not "LGPL-2+".
-LICENSE="|| ( LGPL-2 LGPL-3 ) BSD DB"
+LICENSE="|| ( LGPL-2 LGPL-3 ) BSD Sleepycat"
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-solaris"
 
