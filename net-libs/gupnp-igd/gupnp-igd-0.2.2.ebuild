@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/gupnp-igd-0.2.2.ebuild,v 1.2 2012/11/25 17:18:30 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/gupnp-igd-0.2.2.ebuild,v 1.3 2012/11/25 17:22:08 eva Exp $
 
 EAPI="5"
 PYTHON_DEPEND="python? 2:2.5"
@@ -58,9 +58,7 @@ src_configure() {
 }
 
 src_compile() {
-	# introspection is built in the same directory and libtool does not handle
-	# well dependency like this
-	MAKEOPTS="${MAKEOPTS} -j1" default
+	default
 
 	if use python; then
 		python_copy_sources python
