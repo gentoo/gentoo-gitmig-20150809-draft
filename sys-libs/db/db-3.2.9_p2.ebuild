@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9_p2.ebuild,v 1.12 2012/05/24 05:34:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9_p2.ebuild,v 1.13 2012/11/25 19:23:39 ulm Exp $
 
 inherit eutils db multilib
 
@@ -23,7 +23,7 @@ for (( i=1 ; i<=${PATCHNO} ; i++ )) ; do
 	export SRC_URI="${SRC_URI} http://www.oracle.com/technology/products/berkeley-db/db/update/${MY_PV}/patch.${MY_PV}.${i}"
 done
 
-LICENSE="DB"
+LICENSE="Sleepycat"
 SLOT="3"
 # This ebuild is to be the compatibility ebuild for when db4 is put
 # in the tree.
