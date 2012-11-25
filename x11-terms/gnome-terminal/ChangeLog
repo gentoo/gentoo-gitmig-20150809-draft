@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.248 2012/11/24 10:47:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.249 2012/11/25 00:21:22 tetromino Exp $
+
+  25 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-terminal-2.32.1-r1.ebuild, gnome-terminal-3.4.1.1-r1.ebuild:
+  Don't forget gnome2_pkg_postinst()
 
 *gnome-terminal-2.32.1-r1 (24 Nov 2012)
 *gnome-terminal-3.4.1.1-r1 (24 Nov 2012)

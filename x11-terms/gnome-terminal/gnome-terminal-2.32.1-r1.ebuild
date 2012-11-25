@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.32.1-r1.ebuild,v 1.1 2012/11/24 10:47:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.32.1-r1.ebuild,v 1.2 2012/11/25 00:21:22 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 GNOME_TARBALL_SUFFIX="bz2"
 
-inherit eutils gnome2
+inherit gnome2
 
 DESCRIPTION="The Gnome Terminal"
 HOMEPAGE="http://www.gnome.org/"
@@ -34,6 +34,7 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog HACKING NEWS README"
 
 pkg_postinst() {
+	gnome2_pkg_postinst
 	if [[ ${REPLACING_VERSIONS} < 2.32.1-r1 ]]; then
 		elog "Gnome Terminal no longer uses login shell by default, switching"
 		elog "to upstream default. Because of this, if you have some command you"
