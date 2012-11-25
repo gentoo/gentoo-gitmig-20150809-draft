@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/terminfo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/terminfo/ChangeLog,v 1.24 2012/09/12 15:34:53 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/terminfo/ChangeLog,v 1.25 2012/11/25 06:08:50 gienah Exp $
+
+*terminfo-0.3.2.5 (25 Nov 2012)
+
+  25 Nov 2012; Mark Wright <gienah@gentoo.org> +terminfo-0.3.2.5.ebuild:
+  Bump terminfo to 0.3.2.5
 
   12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> terminfo-0.3.1.1.ebuild,
   terminfo-0.3.1.3.ebuild, terminfo-0.3.2.3.ebuild:
