@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbxml/dbxml-2.5.16-r2.ebuild,v 1.5 2012/06/01 20:25:56 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbxml/dbxml-2.5.16-r2.ebuild,v 1.6 2012/11/25 19:30:51 ulm Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -21,7 +21,8 @@ HOMEPAGE="http://www.oracle.com/technetwork/database/berkeleydb/index-083851.htm
 SRC_URI="http://download-east.oracle.com/berkeley-db/${MY_P}.tar.gz
 	http://download-west.oracle.com/berkeley-db/${MY_P}.tar.gz
 	http://download-uk.oracle.com/berkeley-db/${MY_P}.tar.gz"
-LICENSE="OracleDB Apache-1.1 BSD"
+
+LICENSE="Sleepycat Apache-1.1 BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc examples java perl python tcl"

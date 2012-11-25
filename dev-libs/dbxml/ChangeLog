@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/dbxml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbxml/ChangeLog,v 1.16 2012/06/01 20:25:56 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbxml/ChangeLog,v 1.17 2012/11/25 19:30:51 ulm Exp $
+
+  25 Nov 2012; Ulrich Müller <ulm@gentoo.org> dbxml-2.5.16-r2.ebuild:
+  Update LICENSE: DB and OracleDB are identical, except for the different
+  copyright holder. They have been unified in the "Sleepycat" license
+  template, which is the name used by both OSI and SPDX. Bug 300426.
 
   01 Jun 2012; Tiziano Müller <dev-zero@gentoo.org> -dbxml-2.5.16-r1.ebuild,
   dbxml-2.5.16-r2.ebuild:

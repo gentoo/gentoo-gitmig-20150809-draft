@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/cryptlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/ChangeLog,v 1.32 2012/09/18 04:49:01 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/ChangeLog,v 1.33 2012/11/25 19:28:39 ulm Exp $
+
+  25 Nov 2012; Ulrich Müller <ulm@gentoo.org> cryptlib-3.4.0.ebuild:
+  Update LICENSE: DB and OracleDB are identical, except for the different
+  copyright holder. They have been unified in the "Sleepycat" license
+  template, which is the name used by both OSI and SPDX. Bug 300426.
 
   18 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.
