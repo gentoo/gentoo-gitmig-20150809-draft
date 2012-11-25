@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/test-framework-quickcheck2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/test-framework-quickcheck2/ChangeLog,v 1.16 2012/11/18 03:45:03 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/test-framework-quickcheck2/ChangeLog,v 1.17 2012/11/25 02:58:47 gienah Exp $
+
+  25 Nov 2012; Mark Wright <gienah@gentoo.org>
+  test-framework-quickcheck2-0.2.12.3.ebuild:
+  require quickcheck in slot 2
 
 *test-framework-quickcheck2-0.2.12.3 (18 Nov 2012)
 
