@@ -1,6 +1,9 @@
 # ChangeLog for app-text/chm2pdf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/chm2pdf/ChangeLog,v 1.11 2012/03/06 04:43:45 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/chm2pdf/ChangeLog,v 1.12 2012/11/25 21:13:05 hasufell Exp $
+
+  25 Nov 2012; Julian Ospald <hasufell@gentoo.org> chm2pdf-0.9.1-r1.ebuild:
+  convert shebang wrt #444716
 
   06 Mar 2012; Ryan Hill <dirtyepic@gentoo.org> metadata.xml:
   Add myself to metadata.xml.
