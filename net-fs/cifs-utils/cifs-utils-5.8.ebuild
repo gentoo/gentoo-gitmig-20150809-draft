@@ -1,18 +1,18 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/cifs-utils-5.4.ebuild,v 1.10 2012/08/07 17:10:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/cifs-utils-5.8.ebuild,v 1.1 2012/11/25 12:24:43 polynomial-c Exp $
 
 EAPI=4
 
 inherit eutils confutils linux-info
 
 DESCRIPTION="Tools for Managing Linux CIFS Client Filesystems"
-HOMEPAGE="http://www.samba.org/linux-cifs/cifs-utils/"
+HOMEPAGE="http://wiki.samba.org/index.php/LinuxCIFS_utils"
 SRC_URI="ftp://ftp.samba.org/pub/linux-cifs/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="ads +caps caps-ng creds upcall"
 
 DEPEND="!net-fs/mount-cifs
@@ -25,6 +25,8 @@ DEPEND="!net-fs/mount-cifs
 RDEPEND="${DEPEND}"
 
 REQUIRED_USE="^^ ( caps caps-ng )"
+
+DOCS="doc/linux-cifs-client-guide.odt"
 
 pkg_setup() {
 	confutils_use_conflict caps caps-ng
@@ -40,32 +42,16 @@ pkg_setup() {
 	fi
 }
 
-src_prepare() {
-	#Getting rid of -Werror
-	sed -e "s/-Werror//" -i Makefile.in || die "sed failed"
-}
-
 src_configure() {
-	local myconf=''
-	if use "caps-ng"; then
-		myconf="${myconf} --with-libcap-ng=yes "
-	else
-		myconf="${myconf} --with-libcap-ng=no "
-	fi
-	myconf="${myconf} \
+	econf \
 		$(use_enable ads cifsupcall) \
 		$(use_with caps libcap) \
 		$(use_with caps-ng libcap-ng) \
 		$(use_enable creds cifscreds) \
 		$(use_enable upcall cifsupcall) \
+		--with-libcap-ng=$(use caps-ng && echo 'yes' || echo 'no') \
 		--disable-cifsidmap \
-		--disable-cifsacl"
-	econf ${myconf}
-}
-
-src_install() {
-	emake install DESTDIR="${D}" || die "emake install failed"
-	dodoc doc/linux-cifs-client-guide.odt
+		--disable-cifsacl
 }
 
 pkg_postinst() {
