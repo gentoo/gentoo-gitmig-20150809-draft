@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/abcde-2.5.4.ebuild,v 1.1 2012/11/21 02:19:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/abcde-2.5.4.ebuild,v 1.2 2012/11/25 09:32:49 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 
 DESCRIPTION="A command line CD encoder"
 HOMEPAGE="http://code.google.com/p/abcde/"
@@ -11,9 +11,10 @@ SRC_URI="http://abcde.googlecode.com/files/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="aac cdparanoia flac id3 lame musicbrainz normalize replaygain speex vorbis"
+# Enable MP3 related flags by default
+IUSE="aac cdparanoia cdr flac +id3tag +lame musicbrainz normalize replaygain speex vorbis"
 
-# See `grep :: abcde-musicbrainz-tool` output for USE musicbrainz dependencies.
+# See `grep :: abcde-musicbrainz-tool` output for USE musicbrainz dependencies
 RDEPEND="media-sound/cd-discid
 	net-misc/wget
 	virtual/eject
@@ -22,8 +23,10 @@ RDEPEND="media-sound/cd-discid
 		media-video/atomicparsley
 		)
 	cdparanoia? ( media-sound/cdparanoia )
+	cdr? ( virtual/cdrtools )
 	flac? ( media-libs/flac )
-	id3? (
+	id3tag? (
+		dev-python/eyeD3
 		>=media-sound/id3-0.12
 		media-sound/id3v2
 		)

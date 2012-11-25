@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/abcde
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/ChangeLog,v 1.64 2012/11/25 09:19:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/ChangeLog,v 1.65 2012/11/25 09:32:49 ssuominen Exp $
+
+  25 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> abcde-2.5.2.ebuild,
+  abcde-2.5.4.ebuild, metadata.xml:
+  - Rename USE="id3" to USE="id3tag" wrt #421873 by Nikolaj Sjujskij
+  - Missing dev-python/eyeD3 runtime dependency with USE="id3tag" wrt #444616
+    by Charles Nérot
+  - Missing virtual/cdrtools runtime dependency with USE="cdr" wrt
+    #427112 by Manuel Rüger
 
   25 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> -abcde-2.4.2-r1.ebuild,
   -abcde-2.5.3.ebuild:
