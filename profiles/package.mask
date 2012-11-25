@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14253 2012/11/25 13:53:02 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14254 2012/11/25 23:20:51 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -144,7 +144,7 @@ app-laptop/macbook-backlight
 # Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
 # Lots of bug report, use version from science overlay as pointed
 # in bug #339364#c3 . Removal in a month
-sci-mathematics/scilab
+<sci-mathematics/scilab-5
 
 # Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
 # Upstream dead for more than 2 years and replaced by nmcli
