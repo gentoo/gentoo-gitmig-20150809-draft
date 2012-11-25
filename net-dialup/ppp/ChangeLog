@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.282 2012/11/25 06:31:52 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.283 2012/11/25 13:23:10 blueness Exp $
+
+  25 Nov 2012; Anthony G. Basile <blueness@gentoo.org> ppp-2.4.5-r3.ebuild:
+  stable arm ppc ppc64, bug #444256
 
   25 Nov 2012; Mike Gilbert <floppym@gentoo.org> ppp-2.4.5-r3.ebuild:
   Fix 80_all_eaptls-mppe-0.991-gentoo.patch, a casualty of CVS keyword
