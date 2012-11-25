@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.281 2012/09/22 20:58:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.282 2012/11/25 06:31:52 floppym Exp $
+
+  25 Nov 2012; Mike Gilbert <floppym@gentoo.org> ppp-2.4.5-r3.ebuild:
+  Fix 80_all_eaptls-mppe-0.991-gentoo.patch, a casualty of CVS keyword
+  expansion.
 
   22 Sep 2012; Mike Frysinger <vapier@gentoo.org> ppp-2.4.5-r3.ebuild:
   Always unpack the dhcp code (since it is small) and update the patches to work
