@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/talloc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.35 2012/07/06 02:39:30 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.36 2012/11/25 18:04:14 blueness Exp $
+
+  25 Nov 2012; Anthony G. Basile <blueness@gentoo.org> talloc-2.0.7.ebuild:
+  stable ppc ppc64, bug #444686
 
   06 Jul 2012; Jeff Horelick <jdhore@gentoo.org> talloc-2.0.7.ebuild:
   marked x86 per bug 417113
@@ -140,4 +143,3 @@
   +talloc-1.3.1.ebuild, +talloc-2.0.0.ebuild, +metadata.xml:
   Initial commit. Ebuilds based on those provided by Marcel Greter in
   #231273
-
