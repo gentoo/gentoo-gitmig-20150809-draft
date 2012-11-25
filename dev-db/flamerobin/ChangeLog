@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/flamerobin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/flamerobin/ChangeLog,v 1.20 2012/03/03 12:01:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/flamerobin/ChangeLog,v 1.21 2012/11/25 10:07:04 pinkbyte Exp $
+
+  25 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> flamerobin-0.9.2.ebuild:
+  Set proper license information, wrt bug #444628. Thanks to Ulrich Müller for
+  discovering this issue
 
   03 Mar 2012; Pacho Ramos <pacho@gentoo.org> flamerobin-0.9.2.ebuild:
   RDEPEND on x11-libs/wxGTK:2.8[X], bug #405831 by Piotr Szymaniak.
