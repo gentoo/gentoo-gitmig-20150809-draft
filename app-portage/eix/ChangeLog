@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.433 2012/10/09 20:36:06 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.434 2012/11/25 03:09:22 axs Exp $
+
+*eix-0.27.4 (25 Nov 2012)
+
+  25 Nov 2012; Ian Stakenvicius <axs@gentoo.org> -eix-0.26.4.ebuild,
+  -eix-0.27.1.ebuild, -eix-0.27.2.ebuild, +eix-0.27.4.ebuild:
+  Upstream version bump, fixes to zsh completions and fix a reversion for
+  solaris; remove old
 
 *eix-0.27.2 (09 Oct 2012)
 

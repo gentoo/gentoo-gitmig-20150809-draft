@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.26.4.ebuild,v 1.1 2012/08/27 14:04:18 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.27.4.ebuild,v 1.1 2012/11/25 03:09:22 axs Exp $
 
-EAPI=4
+EAPI=5
 
 PLOCALES="de ru"
 inherit bash-completion-r1 eutils multilib l10n
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 pkg_setup() {
-	if has_version "<${CATEGORY}/${PN}-0.25.3"; then
+	if [[ ${REPLACING_VERSIONS//./} -lt 0253 ]]; then
 	    local eixcache="${EROOT}"/var/cache/${PN}
 	    [[ -f ${eixcache} ]] && rm -f "${eixcache}"
 	fi
@@ -33,6 +33,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch_user
+	# consider inheriting autotools.eclass and adding eautoreconf here
 }
 
 src_configure() {
