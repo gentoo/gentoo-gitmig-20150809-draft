@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/makemkv-1.7.7.ebuild,v 1.1 2012/10/02 04:15:53 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/makemkv-1.7.8.ebuild,v 1.1 2012/11/25 18:02:25 mattm Exp $
 
 EAPI=4
 inherit eutils gnome2-utils multilib
@@ -10,8 +10,8 @@ MY_PB=makemkv-bin-${PV}
 
 DESCRIPTION="Tool for ripping Blu-Ray, HD-DVD and DVD discs and copying content to a Matroska container"
 HOMEPAGE="http://www.makemkv.com/"
-SRC_URI="http://www.makemkv.com/download/${MY_P}.tar.gz
-	http://www.makemkv.com/download/${MY_PB}.tar.gz"
+SRC_URI="http://www.makemkv.com/download/old/${MY_P}.tar.gz
+	http://www.makemkv.com/download/old/${MY_PB}.tar.gz"
 
 LICENSE="LGPL-2.1 MPL-1.1 MakeMKV-EULA openssl"
 SLOT="0"
