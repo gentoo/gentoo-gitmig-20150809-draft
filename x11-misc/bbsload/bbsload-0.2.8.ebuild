@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbsload/bbsload-0.2.8.ebuild,v 1.17 2012/09/09 15:15:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbsload/bbsload-0.2.8.ebuild,v 1.18 2012/11/25 09:55:11 xarthisius Exp $
 
 EAPI=4
 
@@ -14,6 +14,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="ppc ~x86"
 IUSE=""
+
+DEPEND=""
+RDEPEND="media-fonts/font-adobe-100dpi"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc43.patch
