@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.518 2012/11/24 21:07:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.519 2012/11/25 07:19:51 pacho Exp $
+
+  25 Nov 2012; Pacho Ramos <pacho@gentoo.org> emul-linux-x86.eclass:
+  Really install only libs, not everything included in .so* (#442910 by SpanKY,
+  Samuli Suominen and Jim Faulkner).
 
   24 Nov 2012; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass,
   python.eclass, python-r1.eclass, python-single-r1.eclass,
