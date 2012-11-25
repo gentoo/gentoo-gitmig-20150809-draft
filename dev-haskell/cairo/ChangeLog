@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/cairo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cairo/ChangeLog,v 1.10 2012/09/23 08:41:06 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cairo/ChangeLog,v 1.11 2012/11/25 06:36:26 gienah Exp $
+
+*cairo-0.12.4 (25 Nov 2012)
+
+  25 Nov 2012; Mark Wright <gienah@gentoo.org> +cairo-0.12.4.ebuild:
+  Bump cairo to 0.12.4
 
   23 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> cairo-0.12.3.1.ebuild:
   x86 stable wrt bug #428928
