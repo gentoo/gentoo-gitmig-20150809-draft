@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libssh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.66 2012/11/25 10:54:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.67 2012/11/25 23:13:25 radhermit Exp $
+
+  25 Nov 2012; Tim Harder <radhermit@gentoo.org> libssh-0.5.3.ebuild:
+  Build static libs when tests are enabled and drop REQUIRED_USE.
 
   25 Nov 2012; <ago@gentoo.org> libssh-0.5.3.ebuild:
   Stable for amd64, wrt bug #444147

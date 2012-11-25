@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/libssh-0.5.3.ebuild,v 1.2 2012/11/25 10:54:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/libssh-0.5.3.ebuild,v 1.3 2012/11/25 23:13:25 radhermit Exp $
 
 EAPI=4
 
@@ -26,8 +26,6 @@ DEPEND="${RDEPEND}
 	test? ( dev-util/cmockery )
 "
 
-REQUIRED_USE="test? ( static-libs )"
-
 DOCS=( AUTHORS README ChangeLog )
 
 src_prepare() {
@@ -50,6 +48,7 @@ src_configure() {
 		$(cmake-utils_use_with sftp)
 		$(cmake-utils_use_with ssh1)
 		$(cmake-utils_use_with static-libs STATIC_LIB)
+		$(cmake-utils_use_with test STATIC_LIB)
 		$(cmake-utils_use_with test TESTING)
 		$(cmake-utils_use_with zlib LIBZ)
 	)
