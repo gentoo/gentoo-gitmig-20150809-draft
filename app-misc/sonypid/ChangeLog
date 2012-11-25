@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/sonypid
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sonypid/ChangeLog,v 1.23 2010/08/13 12:43:20 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sonypid/ChangeLog,v 1.24 2012/11/25 17:41:36 ago Exp $
+
+  25 Nov 2012; Agostino Sarubbo <ago@gentoo.org> sonypid-1.9.ebuild:
+  Add ~amd64
 
   13 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org> sonypid-1.9.ebuild:
   Respect LDFLAGS wrt bug 331841. Thanks to Diego for report. Correct
