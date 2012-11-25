@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-pinentry
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-pinentry/ChangeLog,v 1.12 2012/09/14 08:32:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-pinentry/ChangeLog,v 1.13 2012/11/25 14:46:40 swegener Exp $
+
+  25 Nov 2012; Sven Wegener <swegener@gentoo.org> metadata.xml:
+  Move to maintainer-needed.
 
   14 Sep 2012; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
   Copy metadata.xml from app-crypt/pinentry since you can't maintain one
