@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbweather/bbweather-0.6.3.ebuild,v 1.6 2012/03/24 17:13:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbweather/bbweather-0.6.3.ebuild,v 1.7 2012/11/25 09:43:31 xarthisius Exp $
 
 EAPI=2
 
@@ -18,6 +18,7 @@ IUSE=""
 DEPEND="dev-lang/perl
 	x11-libs/libX11"
 RDEPEND="${DEPEND}
+	media-fonts/font-adobe-100dpi
 	net-misc/wget
 	x11-apps/xmessage
 	!<=x11-plugins/gkrellweather-2.0.7-r1"

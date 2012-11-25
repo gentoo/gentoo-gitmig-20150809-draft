@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/bbweather
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbweather/ChangeLog,v 1.32 2012/03/24 17:13:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbweather/ChangeLog,v 1.33 2012/11/25 09:43:31 xarthisius Exp $
+
+  25 Nov 2012; Kacper Kowalik <xarthisius@gentoo.org> bbweather-0.6.2.ebuild,
+  bbweather-0.6.3.ebuild:
+  Add missing dependency on helvetica font wrt #402713 by Jeroen Roovers
+  <jer@gentoo.org>. Thanks to James Cloos <cloos@jhcloos.com> for providing
+  solution
 
   24 Mar 2012; Jeroen Roovers <jer@gentoo.org> bbweather-0.6.3.ebuild:
   Fix man page installation (bug #402709).
