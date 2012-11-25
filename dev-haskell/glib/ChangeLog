@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/glib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/glib/ChangeLog,v 1.8 2012/09/23 08:42:04 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/glib/ChangeLog,v 1.9 2012/11/25 05:43:19 gienah Exp $
+
+  25 Nov 2012; Mark Wright <gienah@gentoo.org>
+  +files/glib-0.12.3.1-ghc-7.6.patch, glib-0.12.3.1.ebuild:
+  Patch glib-0.12.3.1 for ghc 7.6.1
 
   23 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> glib-0.12.3.1.ebuild:
   x86 stable wrt bug #428930
