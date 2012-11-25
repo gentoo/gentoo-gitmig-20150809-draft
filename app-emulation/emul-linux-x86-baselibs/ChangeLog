@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.134 2012/11/25 07:21:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.135 2012/11/25 19:26:53 ulm Exp $
+
+  25 Nov 2012; Ulrich Müller <ulm@gentoo.org>
+  emul-linux-x86-baselibs-20120520.ebuild,
+  emul-linux-x86-baselibs-20121028.ebuild:
+  Update LICENSE: DB and OracleDB are identical, except for the different
+  copyright holder. They have been unified in the "Sleepycat" license
+  template, which is the name used by both OSI and SPDX. Bug 300426.
 
   25 Nov 2012; Pacho Ramos <pacho@gentoo.org>
   emul-linux-x86-baselibs-20121028.ebuild:
