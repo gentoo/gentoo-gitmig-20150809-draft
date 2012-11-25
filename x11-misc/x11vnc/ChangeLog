@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/x11vnc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.102 2012/11/15 21:06:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.103 2012/11/25 15:04:13 swegener Exp $
+
+  25 Nov 2012; Sven Wegener <swegener@gentoo.org> -x11vnc-0.9.9.ebuild,
+  -files/x11vnc-0.9.11-rename-pointer.patch, -x11vnc-0.9.12.ebuild,
+  -files/x11vnc-0.9.12-warnings.patch:
+  Cleanup.
 
 *x11vnc-0.9.13-r1 (15 Nov 2012)
 
