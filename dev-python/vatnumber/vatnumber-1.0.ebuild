@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/vatnumber/vatnumber-1.0.ebuild,v 1.2 2012/11/16 14:59:27 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/vatnumber/vatnumber-1.0.ebuild,v 1.3 2012/11/25 12:49:23 idella4 Exp $
 
 EAPI="3"
-PYTHON_DEPEND="2"
+PYTHON_DEPEND="2:2.6"
 DISTUTILS_SRC_TEST="setup.py"
 
 inherit distutils eutils
