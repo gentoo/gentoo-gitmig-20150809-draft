@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/gupnp-igd-0.2.2.ebuild,v 1.1 2012/11/25 17:09:26 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/gupnp-igd-0.2.2.ebuild,v 1.2 2012/11/25 17:18:30 eva Exp $
 
 EAPI="5"
 PYTHON_DEPEND="python? 2:2.5"
@@ -40,13 +40,13 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.1.11-disable_static_modules.patch
-
-	# Python bindings are built/installed manually.
-	sed -e "/PYTHON_SUBDIR =/s/ python//" -i Makefile.am
-
 	eautoreconf
 
-	python_clean_py-compile_files -q
+	# Python bindings are built/installed manually.
+	if use python; then
+		sed -e "/PYTHON_SUBDIR =/s/ python//" -i Makefile.am Makefile.in || die
+		python_clean_py-compile_files -q
+	fi
 }
 
 src_configure() {
