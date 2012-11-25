@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/FusionSound/FusionSound-1.1.1-r1.ebuild,v 1.13 2012/05/05 08:02:42 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/FusionSound/FusionSound-1.1.1-r1.ebuild,v 1.14 2012/11/25 13:51:03 lu_zero Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -35,7 +35,8 @@ src_prepare() {
 		"${FILESDIR}"/${P}-ffmpeg-0.6.90.patch \
 		"${FILESDIR}"/${P}-ffmpeg-0.10.patch \
 		"${FILESDIR}"/${P}-libavformat54.patch \
-		"${FILESDIR}"/${P}-libav-0.8.1.patch
+		"${FILESDIR}"/${P}-libav-0.8.1.patch \
+		"${FILESDIR}"/${P}-libav-9.patch
 
 	sed -i -e 's:-O3 -ffast-math -pipe::' configure.in || die
 
