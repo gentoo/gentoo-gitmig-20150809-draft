@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/skype4py
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/skype4py/ChangeLog,v 1.8 2012/03/17 05:36:29 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/skype4py/ChangeLog,v 1.9 2012/11/25 07:08:29 radhermit Exp $
+
+*skype4py-1.0.32.1 (25 Nov 2012)
+
+  25 Nov 2012; Tim Harder <radhermit@gentoo.org> +skype4py-1.0.32.1.ebuild,
+  +files/skype4py-1.0.32.1-python.patch, metadata.xml:
+  Version bump. Add myself as maintainer.
 
   17 Mar 2012; Tim Harder <radhermit@gentoo.org> skype4py-1.0.32.0.ebuild:
   Add ~x86 keyword.
