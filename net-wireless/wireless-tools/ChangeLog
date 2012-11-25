@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wireless-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.144 2012/11/23 05:04:18 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.145 2012/11/25 01:23:25 zerochaos Exp $
+
+  25 Nov 2012; Rick Farina <zerochaos@gentoo.org> metadata.xml:
+  remove anarchy as maintainer per his wishes
 
   23 Nov 2012; Rick Farina <zerochaos@gentoo.org> metadata.xml:
   adding myself as maintainer to help triage bugs
