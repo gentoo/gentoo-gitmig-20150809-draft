@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/net-http-digest_auth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-http-digest_auth/ChangeLog,v 1.4 2012/09/29 15:41:24 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-http-digest_auth/ChangeLog,v 1.5 2012/11/25 19:16:31 tomka Exp $
+
+  25 Nov 2012; Thomas Kahle <tomka@gentoo.org>
+  net-http-digest_auth-1.2.1.ebuild:
+  marked ~x86 per bug 432830
 
   29 Sep 2012; Fabian Groffen <grobian@gentoo.org>
   net-http-digest_auth-1.2.1.ebuild:

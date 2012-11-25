@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/webrobots
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webrobots/ChangeLog,v 1.8 2012/09/29 15:42:40 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webrobots/ChangeLog,v 1.9 2012/11/25 19:14:53 tomka Exp $
+
+  25 Nov 2012; Thomas Kahle <tomka@gentoo.org> webrobots-0.0.13.ebuild:
+  marked ~x86 per bug 432830
 
   29 Sep 2012; Fabian Groffen <grobian@gentoo.org> webrobots-0.0.13.ebuild:
   Added Prefix keywords, bug #432830
