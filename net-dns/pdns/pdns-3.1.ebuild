@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-3.1.ebuild,v 1.1 2012/11/04 21:42:49 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-3.1.ebuild,v 1.2 2012/11/25 16:09:54 swegener Exp $
 
 EAPI=2
 
@@ -87,6 +87,12 @@ src_install () {
 	doins pdns/*.hh
 	insinto /usr/include/pdns/backends/gsql
 	doins pdns/backends/gsql/*.hh
+
+	if use ldap
+	then
+		insinto /etc/openldap/schema
+		doins "${FILESDIR}"/dnsdomain2.schema
+	fi
 
 	rm -f "${D}"/usr/$(get_libdir)/powerdns/*.{a,la}
 }

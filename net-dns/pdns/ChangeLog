@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/pdns
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.83 2012/11/04 22:57:50 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.84 2012/11/25 16:09:54 swegener Exp $
+
+  25 Nov 2012; Sven Wegener <swegener@gentoo.org> +files/dnsdomain2.schema,
+  pdns-3.0.1.ebuild, pdns-3.1.ebuild:
+  Install dnsdomain2.schema, bug #330797.
 
   04 Nov 2012; Sven Wegener <swegener@gentoo.org>
   -files/2.9.18-default-mysql-options.patch, -pdns-2.9.22-r1.ebuild,
