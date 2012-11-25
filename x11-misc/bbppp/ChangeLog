@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/bbppp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbppp/ChangeLog,v 1.19 2012/06/04 19:01:14 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbppp/ChangeLog,v 1.20 2012/11/25 10:32:41 xarthisius Exp $
+
+*bbppp-0.2.5-r1 (25 Nov 2012)
+
+  25 Nov 2012; Kacper Kowalik <xarthisius@gentoo.org> +bbppp-0.2.5-r1.ebuild,
+  +files/bbppp-0.2.5-overflows.patch, -files/bbppp-gcc3-multiline.diff:
+  Fix buffer overflow wrt #439524 by Diego Elio Pettenò <flameeyes@gentoo.org>,
+  drop old, bump to EAPI4
 
   04 Jun 2012; Michael Weber <xmw@gentoo.org> bbppp-0.2.3.ebuild,
   bbppp-0.2.5.ebuild:
