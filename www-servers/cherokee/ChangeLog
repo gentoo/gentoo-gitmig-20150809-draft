@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/cherokee
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.95 2012/08/08 12:28:37 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.96 2012/11/25 17:24:03 lu_zero Exp $
+
+  25 Nov 2012; Luca Barbato <lu_zero@gentoo.org> cherokee-1.2.101-r2.ebuild,
+  +files/cherokee-1.2.101-libav-9.patch:
+  Add libav-9 support
 
 *cherokee-1.2.101-r2 (08 Aug 2012)
 

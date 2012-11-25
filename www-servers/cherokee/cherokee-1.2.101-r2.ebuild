@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.2.101-r2.ebuild,v 1.1 2012/08/08 12:28:37 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.2.101-r2.ebuild,v 1.2 2012/11/25 17:24:03 lu_zero Exp $
 
 EAPI=4
 PYTHON_DEPEND="admin? 2"
@@ -51,7 +51,8 @@ pkg_setup() {
 src_prepare() {
 	epatch \
 		"${FILESDIR}/${PN}-1.2.99-gentoo.patch" \
-		"${FILESDIR}/${PN}-1.2.98-linux3.patch"
+		"${FILESDIR}/${PN}-1.2.98-linux3.patch" \
+		"${FILESDIR}/${P}-libav-9.patch"
 
 	python_convert_shebangs -r 2 .
 }
