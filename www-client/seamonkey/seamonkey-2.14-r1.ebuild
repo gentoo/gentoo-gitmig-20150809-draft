@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.14.ebuild,v 1.1 2012/11/20 08:57:57 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.14-r1.ebuild,v 1.1 2012/11/25 13:06:02 polynomial-c Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -26,9 +26,9 @@ else
 	MOZ_LANGPACK_SUFFIX=".langpack.xpi"
 fi
 
-inherit flag-o-matic toolchain-funcs eutils mozconfig-3 multilib pax-utils fdo-mime autotools mozextension python nsplugins mozlinguas
+inherit check-reqs flag-o-matic toolchain-funcs eutils mozconfig-3 multilib pax-utils fdo-mime autotools mozextension python nsplugins mozlinguas
 
-PATCHFF="firefox-16.0-patches-0.3"
+PATCHFF="firefox-17.0-patches-0.1"
 PATCH="${PN}-2.14-patches-01"
 EMVER="1.4.6"
 
@@ -61,7 +61,7 @@ ASM_DEPEND=">=dev-lang/yasm-1.1"
 RDEPEND=">=sys-devel/binutils-2.16.1
 	>=dev-libs/nss-3.13.6
 	>=dev-libs/nspr-4.9.2
-	>=dev-libs/glib-2.26
+	>=dev-libs/glib-2.26:2
 	>=media-libs/mesa-7.10
 	>=media-libs/libpng-1.5.11[apng]
 	>=x11-libs/cairo-1.10
@@ -77,7 +77,8 @@ RDEPEND=">=sys-devel/binutils-2.16.1
 	webm? (
 		>=media-libs/libvpx-1.0.0
 		kernel_linux? ( media-libs/alsa-lib )
-	)"
+	)
+	selinux? ( sec-policy/selinux-mozilla )"
 
 DEPEND="${RDEPEND}
 	dev-python/pysqlite
@@ -108,6 +109,14 @@ pkg_setup() {
 	fi
 
 	moz_pkgsetup
+
+	# Ensure we have enough disk space to compile
+	if use debug || use test ; then
+		CHECKREQS_DISK_BUILD="8G"
+	else
+		CHECKREQS_DISK_BUILD="4G"
+	fi
+	check-reqs_pkg_setup
 }
 
 src_prepare() {
@@ -196,6 +205,9 @@ src_configure() {
 		MEXTENSIONS+=",-sroaming"
 	fi
 
+	# We must force enable jemalloc 3 threw .mozconfig
+	echo "export MOZ_JEMALLOC=1" >> ${S}/.mozconfig
+
 	mozconfig_annotate '' --prefix="${EPREFIX}"/usr
 	mozconfig_annotate '' --libdir="${EPREFIX}"/usr/$(get_libdir)
 	mozconfig_annotate '' --enable-extensions="${MEXTENSIONS}"
@@ -207,6 +219,7 @@ src_configure() {
 	mozconfig_annotate '' --with-system-png
 	mozconfig_annotate '' --target="${CTARGET:-${CHOST}}"
 	mozconfig_annotate '' --enable-safe-browsing
+	mozconfig_annotate '' --build="${CTARGET:-${CHOST}}"
 
 	mozconfig_use_enable gstreamer
 	mozconfig_use_enable system-sqlite
