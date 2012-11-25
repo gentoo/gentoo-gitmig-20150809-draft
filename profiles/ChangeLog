@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7187 2012/11/25 10:22:12 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7188 2012/11/25 13:53:02 hasufell Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Nov 2012; Julian Ospald <hasufell@gentoo.org> package.mask:
+  remove pmask on games-rpg/nwn-penultima since bug 394869 is actually related
+  to games-rpg/nwn
 
   25 Nov 2012; Kacper Kowalik <xarthisius@gentoo.org> package.mask:
   Drop masks on x11-misc/bbacpi and x11-misc/bbappconf as corresponding bugs

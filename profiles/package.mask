@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14252 2012/11/25 10:22:12 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14253 2012/11/25 13:53:02 hasufell Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -190,10 +190,6 @@ app-text/utrac
 # Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
 # Doesn't work on Gentoo (#392597), removal in a month.
 app-misc/klive
-
-# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
-# Fails to execute (#394869), removal in a month.
-games-rpg/nwn-penultima
 
 # Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
 # Upstream dead and no longer runs (#402669).
