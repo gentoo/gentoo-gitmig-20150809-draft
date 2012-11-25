@@ -1,39 +1,42 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.5.4.ebuild,v 1.7 2012/07/15 17:19:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.7.0.ebuild,v 1.1 2012/11/25 10:51:59 eva Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 PYTHON_DEPEND="2:2.5"
 
-inherit python gnome2 eutils multilib
+inherit eutils python gnome2 multilib
 
 DESCRIPTION="A graphical diff and merge tool"
 HOMEPAGE="http://meldmerge.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux"
-IUSE="doc gnome"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
+IUSE="+highlight gnome"
 
-RDEPEND="
-	>=dev-python/pygtk-2.14:2
+RDEPEND=">=dev-python/pygtk-2.14:2
 	>=dev-python/pygobject-2.8:2
+	dev-python/dbus-python
+	dev-python/pycairo
+	highlight? ( >=dev-python/pygtksourceview-2.10 )
 	gnome? ( >=dev-python/gconf-python-2.22:2 )
 "
 DEPEND="${RDEPEND}
+	dev-util/gtk-doc-am
 	dev-util/intltool
-	app-text/scrollkeeper"
+	app-text/scrollkeeper
+"
 
 pkg_setup() {
-	DOCS="NEWS"
 	# Needed for optimizing python modules against proper interpreter
 	python_set_active_version 2
 	python_pkg_setup
 }
 
 src_prepare() {
-	gnome2_src_prepare
+	DOCS="NEWS"
 
 	# fix the prefix so its not in */local/*
 	sed -e "s:/usr/local:${EPREFIX}/usr:" \
@@ -68,6 +71,11 @@ src_prepare() {
 		sed -e "s/PO:=.*/PO:=${mylinguas}/" \
 			-i po/Makefile || die "sed 5 failed"
 	fi
+
+	# Fix .desktop entry, upstream bug #686978
+	sed -i -e '/Encoding/d' data/meld.desktop.in || die
+
+	gnome2_src_prepare
 }
 
 src_configure() {
@@ -76,6 +84,7 @@ src_configure() {
 
 src_install() {
 	gnome2_src_install
+	doman meld.1
 	python_convert_shebangs 2 "${ED}"usr/bin/meld
 }
 
