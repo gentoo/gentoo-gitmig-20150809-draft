@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/ldb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ChangeLog,v 1.38 2012/10/24 14:10:21 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ChangeLog,v 1.39 2012/11/25 16:46:04 ago Exp $
+
+  25 Nov 2012; Agostino Sarubbo <ago@gentoo.org> ldb-1.1.12.ebuild:
+  Stable for amd64, wrt bug #444686
 
 *ldb-1.1.13 (24 Oct 2012)
 
