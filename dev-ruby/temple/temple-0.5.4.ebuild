@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/temple/temple-0.5.4.ebuild,v 1.1 2012/10/16 12:14:02 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/temple/temple-0.5.4.ebuild,v 1.2 2012/11/25 18:49:32 tomka Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19 ree18"
@@ -17,7 +17,7 @@ HOMEPAGE="http://github.com/judofyr/temple"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 ruby_add_bdepend "test? ( dev-ruby/bacon dev-ruby/tilt )"
