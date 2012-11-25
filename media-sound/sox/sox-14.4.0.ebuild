@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-14.4.0.ebuild,v 1.3 2012/07/13 10:58:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-14.4.0.ebuild,v 1.4 2012/11/25 21:12:32 lu_zero Exp $
 
 EAPI=4
 inherit eutils flag-o-matic autotools
@@ -43,7 +43,8 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-14.3.2-uclibc.patch \
 		"${FILESDIR}"/${P}-ffmpeg.patch \
-		"${FILESDIR}"/${P}-avcodec54.patch
+		"${FILESDIR}"/${P}-avcodec54.patch \
+		"${FILESDIR}"/${P}-libav-9.patch
 	eautoreconf
 }
 
