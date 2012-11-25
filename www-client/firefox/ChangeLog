@@ -1,6 +1,12 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.185 2012/11/24 19:18:13 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.186 2012/11/25 12:20:27 anarchy Exp $
+
+*firefox-17.0-r1 (25 Nov 2012)
+
+  25 Nov 2012; <anarchy@gentoo.org> -firefox-16.0.2.ebuild,
+  -firefox-17.0.ebuild, +firefox-17.0-r1.ebuild:
+  Fix about:memory use for jemalloc-3
 
 *firefox-17.0 (24 Nov 2012)
 *firefox-10.0.11 (24 Nov 2012)
