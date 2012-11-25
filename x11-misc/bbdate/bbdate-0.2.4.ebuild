@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbdate/bbdate-0.2.4.ebuild,v 1.11 2011/04/16 17:24:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbdate/bbdate-0.2.4.ebuild,v 1.12 2012/11/25 09:50:59 xarthisius Exp $
 
 DESCRIPTION="blackbox date display"
 HOMEPAGE="http://bbtools.windsofstorm.net/available.phtml"
@@ -10,6 +10,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="ppc sparc x86 ~x86-fbsd"
 IUSE=""
+
+DEPEND=""
+RDEPEND="media-fonts/font-adobe-100dpi"
 
 src_install () {
 	make DESTDIR="${D}" install || die "make install failed"
