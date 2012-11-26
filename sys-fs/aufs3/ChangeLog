@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/aufs3
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.32 2012/11/21 11:19:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.33 2012/11/26 20:36:26 jlec Exp $
+
+  26 Nov 2012; Justin Lecher <jlec@gentoo.org> -aufs3-3_p20120109.ebuild,
+  aufs3-3_p20120430.ebuild, -aufs3-3_p20120523.ebuild,
+  -aufs3-3_p20120531.ebuild, -aufs3-3_p20120619.ebuild,
+  -aufs3-3_p20120730.ebuild, -aufs3-3_p20120813.ebuild,
+  aufs3-3_p20120813-r1.ebuild, aufs3-3_p20121015.ebuild,
+  aufs3-3_p20121015-r1.ebuild, aufs3-3_p20121112.ebuild:
+  Dropped old; block AUFS_FS kernel option
 
   21 Nov 2012; Agostino Sarubbo <ago@gentoo.org> aufs3-3_p20120430.ebuild:
   Stable for x86, wrt bug #422879
