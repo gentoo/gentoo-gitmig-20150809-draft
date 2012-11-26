@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.8.0-r3.ebuild,v 1.1 2012/11/26 19:51:02 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.8.0-r3.ebuild,v 1.2 2012/11/26 19:56:27 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -77,7 +77,7 @@ src_prepare() {
 	# Namespace nodes require special treatment, bug #434344
 	epatch ../patch/*.patch
 
-	# Buffer underflow in xmlParseAttValueComplex-underflow, bug #444836; fixed in 2.9.1
+	# Buffer underflow in xmlParseAttValueComplex, bug #444836; fixed in 2.9.1
 	epatch "${FILESDIR}/${PN}-2.8.0-xmlParseAttValueComplex-underflow.patch"
 
 	# Please do not remove, as else we get references to PORTAGE_TMPDIR
