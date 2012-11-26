@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/audiofile-0.3.4.ebuild,v 1.8 2012/09/29 18:43:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/audiofile-0.3.4.ebuild,v 1.9 2012/11/26 06:34:04 radhermit Exp $
 
 EAPI="4"
 
@@ -36,5 +36,5 @@ src_test() {
 
 src_install() {
 	default
-	find "${ED}" -name '*.la' -delete
+	prune_libtool_files
 }

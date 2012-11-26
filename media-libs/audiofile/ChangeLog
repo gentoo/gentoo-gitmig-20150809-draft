@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/audiofile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.119 2012/11/26 05:49:37 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.120 2012/11/26 06:34:04 radhermit Exp $
+
+  26 Nov 2012; Tim Harder <radhermit@gentoo.org> audiofile-0.3.4.ebuild:
+  Use prune_libtool_files.
 
   26 Nov 2012; Tim Harder <radhermit@gentoo.org> -audiofile-0.3.3.ebuild:
   Remove old.
