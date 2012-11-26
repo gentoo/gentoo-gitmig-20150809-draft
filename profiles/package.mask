@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14256 2012/11/26 19:12:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14257 2012/11/26 23:41:43 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -90,11 +90,6 @@ net-irc/xchat-xsys
 # Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
 # This project has been superseeded by G'MIC. Removal in a month.
 media-plugins/gimp-greycstoration
-
-# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
-# Fails to launch (#294013), depends on nethack that has security
-# issues. Removal in a month
-games-roguelike/noegnud-nethack
 
 # Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
 # Fails to build with latest kernels (#294813), upstream dead since
