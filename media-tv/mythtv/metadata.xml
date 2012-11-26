@@ -54,8 +54,6 @@
 	<flag name="raop">Remote Audio Output Protocol (aka AirTunes/AirPlay)</flag>
 	<flag name="vaapi">Enables VAAPI (Video Acceleration API) for
 		hardware decoding</flag>
-	<flag name="vdpau">Enable support of NVIDIA's VDPAU for video
-		playback</flag>
 	<flag name="xmltv">Pulls in the <pkg>media-tv/xmltv</pkg> TV listing
 		grabbers for users not using Schedules Direct.</flag>
 </use>
