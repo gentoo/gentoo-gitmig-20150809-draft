@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-25.0.1323.1.ebuild,v 1.2 2012/11/16 05:23:10 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-25.0.1323.1.ebuild,v 1.3 2012/11/26 01:59:36 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -47,6 +47,7 @@ RDEPEND="app-arch/bzip2
 	system-ffmpeg? ( >=media-video/ffmpeg-1.0 )
 	>=net-libs/libsrtp-1.4.4_p20121108
 	sys-apps/dbus
+	sys-apps/pciutils
 	sys-libs/zlib[minizip]
 	sys-fs/udev
 	virtual/libusb:1
@@ -284,7 +285,8 @@ src_configure() {
 	# Use explicit library dependencies instead of dlopen.
 	# This makes breakages easier to detect by revdep-rebuild.
 	myconf+="
-		-Dlinux_link_gsettings=1"
+		-Dlinux_link_gsettings=1
+		-Dlinux_link_libpci=1"
 
 	if ! use selinux; then
 		# Enable SUID sandbox.
