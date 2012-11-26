@@ -9,7 +9,4 @@
 	<email>jkarlson@cc.hut.fi</email>
 	<name>Emil Karlson</name>
   </maintainer>
-	<use>
-     	<flag name="wayland">Enable <pkg>dev-libs/wayland</pkg> backend.</flag>
-    </use>
 </pkgmetadata>
