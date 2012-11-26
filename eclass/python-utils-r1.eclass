@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.2 2012/11/24 21:07:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.3 2012/11/26 10:16:43 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -285,6 +285,55 @@ _python_ln_rel() {
 	ln -fs "${rel_path}" "${to}"
 }
 
+# @FUNCTION: python_optimize
+# @USAGE: [<directory>...]
+# @DESCRIPTION:
+# Compile and optimize Python modules in specified directories (absolute
+# paths). If no directories are provided, the default system paths
+# are used (prepended with ${D}).
+python_optimize() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	[[ ${EPYTHON} ]] || die 'No Python implementation set (EPYTHON is null).'
+
+	local PYTHON=${PYTHON}
+	[[ ${PYTHON} ]] || python_export PYTHON
+
+	# Note: python2.6 can't handle passing files to compileall...
+
+	# default to sys.path
+	if [[ ${#} -eq 0 ]]; then
+		local f
+		while IFS= read -r -d '' f; do
+			# 1) accept only absolute paths
+			#    (i.e. skip '', '.' or anything like that)
+			# 2) skip paths which do not exist
+			#    (python2.6 complains about them verbosely)
+
+			if [[ ${f} == /* && -d ${D}${f} ]]; then
+				set -- "${D}${f}" "${@}"
+			fi
+		done < <("${PYTHON}" -c 'import sys; print("\0".join(sys.path))')
+	fi
+
+	local d
+	for d; do
+		# make sure to get a nice path without //
+		local instpath=${d#${D}}
+		instpath=/${instpath##/}
+
+		case "${EPYTHON}" in
+			python*)
+				"${PYTHON}" -m compileall -q -f -d "${instpath}" "${d}"
+				"${PYTHON}" -OO -m compileall -q -f -d "${instpath}" "${d}"
+				;;
+			*)
+				"${PYTHON}" -m compileall -q -f -d "${instpath}" "${@}"
+				;;
+		esac
+	done
+}
+
 # @ECLASS-VARIABLE: python_scriptroot
 # @DEFAULT_UNSET
 # @DESCRIPTION:
@@ -430,19 +479,7 @@ python_domodule() {
 	insinto "${d}"
 	doins -r "${@}"
 
-	local PYTHON=${PYTHON}
-	[[ ${PYTHON} ]] || python_export PYTHON
-
-	# erm, python2.6 can't handle passing files to compileall...
-	case "${EPYTHON}" in
-		python*)
-			"${PYTHON}" -m compileall -q "${D}/${d}"
-			"${PYTHON}" -OO -m compileall -q -f "${D}/${d}"
-			;;
-		*)
-			"${PYTHON}" -m compileall -q "${D}/${d}"
-			;;
-	esac
+	python_optimize "${D}/${d}"
 }
 
 _PYTHON_UTILS_R1=1

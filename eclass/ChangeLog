@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.521 2012/11/26 10:05:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.522 2012/11/26 10:16:43 mgorny Exp $
+
+  26 Nov 2012; Michał Górny <mgorny@gentoo.org> python-utils-r1.eclass:
+  Add python_optimize() to compile Python modules.
 
   26 Nov 2012; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass,
   python-single-r1.eclass:
