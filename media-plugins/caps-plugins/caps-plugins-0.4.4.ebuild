@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/caps-plugins/caps-plugins-0.4.4.ebuild,v 1.4 2011/03/03 11:20:58 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/caps-plugins/caps-plugins-0.4.4.ebuild,v 1.5 2012/11/26 23:58:09 aballier Exp $
 
 inherit eutils toolchain-funcs multilib
 
 IUSE=""
 MY_P=caps-${PV}
 
-DESCRIPTION="The CAPS Audio Plugin Suite - LADSPA plugin suite which includes DSP units emulating instrument amplifiers, stomp-box classics, versatile 'virtual analogue' oscillators, fractal oscillation, reverb, equalization and others"
+DESCRIPTION="The CAPS Audio Plugin Suite - LADSPA plugin suite"
 HOMEPAGE="http://quitte.de/dsp/caps.html"
 SRC_URI="http://quitte.de/dsp/caps_${PV}.tar.gz"
 LICENSE="GPL-2"

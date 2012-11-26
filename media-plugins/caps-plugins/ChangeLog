@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/caps-plugins
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/caps-plugins/ChangeLog,v 1.30 2012/11/26 23:55:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/caps-plugins/ChangeLog,v 1.31 2012/11/26 23:58:09 aballier Exp $
+
+  26 Nov 2012; Alexis Ballier <aballier@gentoo.org> caps-plugins-0.4.4.ebuild,
+  caps-plugins-0.4.5.ebuild, metadata.xml:
+  shorten description and use longdescription, by Dustin Polke, bug #356821
 
   26 Nov 2012; Alexis Ballier <aballier@gentoo.org> -caps-plugins-0.4.2.ebuild:
   remove old
