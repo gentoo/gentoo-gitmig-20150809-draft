@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.365 2012/11/26 20:34:48 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.366 2012/11/26 21:01:21 ago Exp $
+
+  26 Nov 2012; Agostino Sarubbo <ago@gentoo.org> tor-0.2.3.25.ebuild:
+  Stable for amd64, wrt bug #444804
 
   26 Nov 2012; Anthony G. Basile <blueness@gentoo.org> tor-0.2.3.25.ebuild:
   stable arm ppc pp64, bug #444804
