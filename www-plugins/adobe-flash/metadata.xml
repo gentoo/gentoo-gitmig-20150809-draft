@@ -12,9 +12,6 @@
 			plugin</flag>
 		<flag name='32bit'>For amd64-multilib, installs the 32-bit plugin</flag>
 
-		<flag name='vdpau'>Enables VDPAU support to offload video processing
-			(32-bit flash player only)</flag>
-
 		<!-- www-plugins/adobe-flash-10.3 and later has a KDE KCM thingy -->
 		<flag name='kde'>Enables a KCM plugin for configuring flash player
 			preferences</flag>
