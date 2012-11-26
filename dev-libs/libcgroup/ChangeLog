@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libcgroup
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcgroup/ChangeLog,v 1.4 2012/10/07 08:57:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcgroup/ChangeLog,v 1.5 2012/11/26 18:45:24 maksbotan Exp $
+
+*libcgroup-0.38 (26 Nov 2012)
+*libcgroup-0.39_rc1 (26 Nov 2012)
+
+  26 Nov 2012; Maxim Koltsov <maksbotan@gentoo.org> +libcgroup-0.38.ebuild,
+  +libcgroup-0.39_rc1.ebuild, metadata.xml:
+  Bump to 0.38 and 0.39-r1, bug #437856. Thanks to slepnoga
 
   07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, #24135.
