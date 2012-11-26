@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/comparator/comparator-2.8.ebuild,v 1.1 2012/01/03 04:03:10 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/comparator/comparator-2.8.ebuild,v 1.2 2012/11/26 03:25:42 blueness Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -15,7 +15,7 @@ SRC_URI="http://www.catb.org/~esr/comparator/${P}.tar.gz"
 
 LICENSE="as-is GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND=""
