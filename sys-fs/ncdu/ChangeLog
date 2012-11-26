@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ncdu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ncdu/ChangeLog,v 1.36 2012/10/14 20:11:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ncdu/ChangeLog,v 1.37 2012/11/26 13:11:45 ago Exp $
+
+  26 Nov 2012; Agostino Sarubbo <ago@gentoo.org> ncdu-1.9.ebuild:
+  Stable for amd64, wrt bug #441532
 
   14 Oct 2012; Markus Meier <maekke@gentoo.org> ncdu-1.9.ebuild:
   add ~arm, bug #433651
