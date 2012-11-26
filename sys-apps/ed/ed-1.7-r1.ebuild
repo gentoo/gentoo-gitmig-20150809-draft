@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ed-1.7.ebuild,v 1.1 2012/11/26 09:36:47 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ed-1.7-r1.ebuild,v 1.1 2012/11/26 17:34:42 vapier Exp $
 
 EAPI="4"
 
@@ -23,8 +23,5 @@ src_prepare() {
 
 src_configure() {
 	tc-export CC
-	# custom configure script ... econf wont work
-	./configure \
-		--prefix="${EPREFIX}"/ \
-		--datadir="${EPREFIX}"/usr/share
+	econf --bindir="${EPREFIX}/bin"
 }

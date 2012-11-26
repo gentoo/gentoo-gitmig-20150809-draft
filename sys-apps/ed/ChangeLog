@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/ed
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.97 2012/11/26 09:36:47 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.98 2012/11/26 17:34:42 vapier Exp $
+
+*ed-1.7-r1 (26 Nov 2012)
+
+  26 Nov 2012; Mike Frysinger <vapier@gentoo.org> +ed-1.7-r1.ebuild,
+  -ed-1.7.ebuild:
+  Fix install of man/info files #444790 by Alphat-PC.
 
 *ed-1.7 (26 Nov 2012)
 
