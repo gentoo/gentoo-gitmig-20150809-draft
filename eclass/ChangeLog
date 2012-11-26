@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.522 2012/11/26 10:16:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.523 2012/11/26 15:47:20 tetromino Exp $
+
+  26 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org> gnome2.eclass:
+  Typo, probably caused by strange font in pms.pdf (bug #444740, thanks to
+  Alphat-PC).
 
   26 Nov 2012; Michał Górny <mgorny@gentoo.org> python-utils-r1.eclass:
   Add python_optimize() to compile Python modules.

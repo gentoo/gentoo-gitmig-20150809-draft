@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.112 2012/11/24 19:00:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.113 2012/11/26 15:47:20 tetromino Exp $
 
 # @ECLASS: gnome2.eclass
 # @MAINTAINER:
@@ -200,8 +200,7 @@ gnome2_src_install() {
 					FAQ CREDITS CHANGELOG ; do
 				[[ -s "${d}" ]] && dodoc "${d}"
 			done
-		# TODO: wrong "declare -a" command..., should be fixed in PMS at first
-		elif declare -p DOCS | grep -q `^declare -a` ; then
+		elif declare -p DOCS | grep -q '^declare -a ' ; then
 			dodoc "${DOCS[@]}"
 		else
 			dodoc ${DOCS}
