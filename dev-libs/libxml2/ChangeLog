@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.361 2012/09/22 10:23:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.362 2012/11/26 19:51:02 tetromino Exp $
+
+*libxml2-2.8.0-r3 (26 Nov 2012)
+
+  26 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +libxml2-2.8.0-r3.ebuild,
+  +files/libxml2-2.8.0-xmlParseAttValueComplex-underflow.patch:
+  Fix buffer underflow (bug #444836, CVE-2012-5134, thanks to Mike Gilbert).
 
   22 Sep 2012; Pacho Ramos <pacho@gentoo.org>
   -files/libxml2-2.8.0_rc1-randomization-threads.patch,
