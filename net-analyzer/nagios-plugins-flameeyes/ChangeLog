@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-plugins-flameeyes
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins-flameeyes/ChangeLog,v 1.1 2012/11/23 16:39:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins-flameeyes/ChangeLog,v 1.2 2012/11/26 02:18:57 flameeyes Exp $
+
+  26 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  nagios-plugins-flameeyes-9999.ebuild:
+  Add an USE flag for samba to bring in the dep for check_smb_share.pl.
 
 *nagios-plugins-flameeyes-9999 (23 Nov 2012)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins-flameeyes/nagios-plugins-flameeyes-9999.ebuild,v 1.1 2012/11/23 16:39:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins-flameeyes/nagios-plugins-flameeyes-9999.ebuild,v 1.2 2012/11/26 02:18:57 flameeyes Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ HOMEPAGE="https://github.com/Flameeyes/nagios-plugins-flameeyes"
 
 LICENSE="MIT"
 SLOT="0"
-IUSE="smart"
+IUSE="smart samba"
 
 RDEPEND="
 	dev-perl/Nagios-Plugin
@@ -25,7 +25,8 @@ RDEPEND="
 	smart? (
 		sys-apps/smartmontools
 		app-admin/sudo
-	)"
+	)
+	samba? ( dev-perl/Filesys-SmbClient )"
 DEPEND=""
 
 src_compile() {
