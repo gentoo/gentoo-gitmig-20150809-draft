@@ -1,10 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.1.1.ebuild,v 1.4 2012/11/06 10:58:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.1.1.ebuild,v 1.5 2012/11/26 06:21:01 idella4 Exp $
 
 EAPI="3"
 
-# python eclass bloat
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH="tk"
 PYTHON_USE_WITH_OPT="tk"
@@ -84,7 +83,9 @@ use_setup() {
 }
 
 src_prepare() {
+	# from upstream commit ca678a49f37411b1b0e72d7d0dfa88c124b0e34b
 	epatch "${FILESDIR}"/${P}-ft-refcount.patch
+
 	# create setup.cfg (see setup.cfg.template for any changes)
 	cat > setup.cfg <<-EOF
 		[provide_packages]
@@ -117,13 +118,16 @@ src_prepare() {
 src_compile() {
 	unset DISPLAY # bug #278524
 	distutils_src_compile
-	if use doc; then
-		cd "${S}/doc"
-		VARTEXFONTS="${T}"/fonts \
+	makedocs() {
+		if use doc; then
+			cd "${S}/doc"
+			VARTEXFONTS="${T}"/fonts \
 			PYTHONPATH=$(ls -d "${S}"/build-$(PYTHON -f --ABI)/lib*) \
 			./make.py --small all
-		[[ -e build/latex/Matplotlib.pdf ]] || die "doc generation failed"
-	fi
+			[[ -e build/latex/Matplotlib.pdf ]] || die "doc generation failed"
+		fi
+	}
+	python_execute_function -f makedocs
 }
 
 src_test() {

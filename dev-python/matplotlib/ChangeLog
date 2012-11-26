@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/matplotlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.126 2012/11/06 10:58:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.127 2012/11/26 06:21:01 idella4 Exp $
+
+  26 Nov 2012; Ian Delaney <idella4@gentoo.org>
+  files/matplotlib-1.1.1-ft-refcount.patch, matplotlib-1.1.1.ebuild:
+  Appended missing hunk to -ft-refcount.patch, reported by, and thanks to, Carl
+  Michal in Bug #442298
 
   06 Nov 2012; Agostino Sarubbo <ago@gentoo.org> matplotlib-1.1.1.ebuild:
   Stable for amd64, wrt bug #441278

@@ -1,5 +1,10 @@
-Restoring a fix to an old reference counting bug which was re-included in a recent commit. It fails stix_fonts_demo.py
-https://github.com/matplotlib/matplotlib/commit/85af0c02bf9a8ecdd0fd18eab8c9662c6b9f4302#src/ft2font.cpp
+#Restoring a fix to an old reference counting bug which was re-included in a recent commit. It fails stix_fonts_demo.py
+# https://github.com/matplotlib/matplotlib/commit/85af0c02bf9a8ecdd0fd18eab8c9662c6b9f4302#src/ft2font.cpp  (Keep just in case)
+
+Reinstate the manual reference counting as discovered in #1054
+commit ca678a49f37411b1b0e72d7d0dfa88c124b0e34b
+wrt Bug #442298 by Carl Michal, "the patch in the tree is missing the fifth insertion', i.e. the 2nd. hunk
+appending the 2nd hunk to bicatelli's prepared patch
 
 bicatali@gentoo.org 08/2012
 --- src/ft2font.cpp.orig	2012-08-01 17:30:33.000000000 +0100
@@ -33,3 +38,11 @@ bicatali@gentoo.org 08/2012
          throw Py::RuntimeError(s.str());
      }
  
+@@ -904,6 +908,7 @@ inline double conv(int v)
+     {
+         std::ostringstream s;
+         s << "Could not set the fontsize for facefile  " << facefile << std::endl;
++        ob_refcnt--;
+         throw Py::RuntimeError(s.str());
+     }
+
