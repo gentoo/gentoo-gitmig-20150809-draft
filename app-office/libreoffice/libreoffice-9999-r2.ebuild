@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.133 2012/11/24 13:47:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.134 2012/11/26 12:55:56 scarabeus Exp $
 
 EAPI=4
 
@@ -68,9 +68,10 @@ unset EXT_URI
 unset ADDONS_SRC
 
 IUSE="bluetooth +branding +cups dbus eds gnome gstreamer +gtk gtk3
-jemalloc kde mysql nsplugin odk opengl postgres telepathy test +vba +webdav"
+jemalloc kde mysql nsplugin odk opengl pdfimport postgres telepathy
+test +vba +webdav"
 
-LO_EXTS="nlpsolver pdfimport presenter-console presenter-minimizer scripting-beanshell scripting-javascript wiki-publisher"
+LO_EXTS="nlpsolver presenter-console presenter-minimizer scripting-beanshell scripting-javascript wiki-publisher"
 # Unpackaged separate extensions:
 # diagram: lo has 0.9.5 upstream is weirdly patched 0.9.4 -> wtf?
 # hunart: only on ooo extensions -> fubared download path somewhere on sf
@@ -140,7 +141,6 @@ COMMON_DEPEND="
 		>=media-libs/gst-plugins-base-0.10:0.10
 	)
 	jemalloc? ( dev-libs/jemalloc )
-	libreoffice_extensions_pdfimport? ( >=app-text/poppler-0.16[xpdf-headers(+),cxx] )
 	libreoffice_extensions_scripting-beanshell? ( >=dev-java/bsh-2.0_beta4 )
 	libreoffice_extensions_scripting-javascript? ( dev-java/rhino:1.6 )
 	libreoffice_extensions_wiki-publisher? (
@@ -156,6 +156,7 @@ COMMON_DEPEND="
 		virtual/glu
 		virtual/opengl
 	)
+	pdfimport? ( >=app-text/poppler-0.16[xpdf-headers(+),cxx] )
 	postgres? ( >=dev-db/postgresql-base-9.0[kerberos] )
 	telepathy? (
 		dev-libs/glib:2
@@ -494,6 +495,7 @@ src_configure() {
 		$(use_enable nsplugin) \
 		$(use_enable odk) \
 		$(use_enable opengl) \
+		$(use_enable pdfimport) \
 		$(use_enable postgres postgresql-sdbc) \
 		$(use_enable telepathy) \
 		$(use_enable test linkoo) \

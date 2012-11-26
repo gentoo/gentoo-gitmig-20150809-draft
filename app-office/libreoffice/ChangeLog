@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.404 2012/11/24 13:47:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.405 2012/11/26 12:55:56 scarabeus Exp $
+
+  26 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-9999-r2.ebuild:
+  Reintroduce pdfimport as useflag, it got removed as extension, now is internal
+  option.
 
   24 Nov 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   libreoffice-3.6.3.2.ebuild, libreoffice-3.6.9999.ebuild,
