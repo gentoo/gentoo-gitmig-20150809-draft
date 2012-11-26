@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/package.mask,v 1.87 2012/09/27 08:12:36 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/package.mask,v 1.88 2012/11/26 09:31:25 pinkbyte Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -143,6 +143,7 @@ games-strategy/darwinia
 games-strategy/darwinia-demo
 games-strategy/defcon-demo
 games-strategy/dominions2
+games-strategy/dominions2-demo
 games-strategy/heroes3
 games-strategy/heroes3-demo
 games-strategy/majesty-demo
