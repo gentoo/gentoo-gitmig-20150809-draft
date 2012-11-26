@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/cosmosmash/cosmosmash-1.4.6.ebuild,v 1.2 2012/10/03 19:16:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/cosmosmash/cosmosmash-1.4.6.ebuild,v 1.3 2012/11/26 22:03:54 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools games
@@ -13,6 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~x86"
 IUSE=""
+RESTRICT="test" # uses the sound card which portage user might not be available.
 
 RDEPEND=">=dev-games/flatzebra-0.1.6"
 DEPEND="${RDEPEND}
