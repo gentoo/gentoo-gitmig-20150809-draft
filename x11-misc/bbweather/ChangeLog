@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/bbweather
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbweather/ChangeLog,v 1.33 2012/11/25 09:43:31 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbweather/ChangeLog,v 1.34 2012/11/26 12:29:55 jer Exp $
+
+*bbweather-0.6.3-r1 (26 Nov 2012)
+
+  26 Nov 2012; Jeroen Roovers <jer@gentoo.org> +bbweather-0.6.3-r1.ebuild:
+  Unset helvetica font in default configuration (bug #402713).
 
   25 Nov 2012; Kacper Kowalik <xarthisius@gentoo.org> bbweather-0.6.2.ebuild,
   bbweather-0.6.3.ebuild:
