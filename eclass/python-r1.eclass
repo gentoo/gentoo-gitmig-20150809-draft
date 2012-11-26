@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.22 2012/11/24 21:07:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.23 2012/11/26 08:31:26 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -196,10 +196,6 @@ _python_set_globals
 # directories respecting BUILD_DIR.
 python_copy_sources() {
 	debug-print-function ${FUNCNAME} "${@}"
-
-	if [[ ${_PYTHON_SINGLE_R1} ]]; then
-		die "${FUNCNAME} must not be used with python-single-r1 eclass."
-	fi
 
 	local impl
 	local bdir=${BUILD_DIR:-${S}}
@@ -428,10 +424,6 @@ _python_check_USE_PYTHON() {
 python_foreach_impl() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	if [[ ${_PYTHON_SINGLE_R1} ]]; then
-		die "${FUNCNAME} must not be used with python-single-r1 eclass."
-	fi
-
 	_python_check_USE_PYTHON
 
 	local impl
@@ -460,10 +452,6 @@ python_foreach_impl() {
 # EPYTHON & PYTHON will be exported.
 python_export_best() {
 	debug-print-function ${FUNCNAME} "${@}"
-
-	if [[ ${_PYTHON_SINGLE_R1} ]]; then
-		die "${FUNCNAME} must not be used with python-single-r1 eclass."
-	fi
 
 	[[ ${#} -gt 0 ]] || set -- EPYTHON PYTHON
 

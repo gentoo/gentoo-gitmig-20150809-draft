@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-single-r1.eclass,v 1.2 2012/11/24 21:07:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-single-r1.eclass,v 1.3 2012/11/26 08:31:26 mgorny Exp $
 
 # @ECLASS: python-single-r1
 # @MAINTAINER:
@@ -96,6 +96,20 @@ python-single-r1_pkg_setup() {
 			break
 		fi
 	done
+}
+
+# Incompatible python-r1 functions.
+
+python_copy_sources() {
+	die "${FUNCNAME} must not be used with python-single-r1 eclass."
+}
+
+python_foreach_impl() {
+	die "${FUNCNAME} must not be used with python-single-r1 eclass."
+}
+
+python_export_best() {
+	die "${FUNCNAME} must not be used with python-single-r1 eclass."
 }
 
 _PYTHON_SINGLE_R1=1
