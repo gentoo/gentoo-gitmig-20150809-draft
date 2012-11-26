@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/openresolv-3.4.1-r1.ebuild,v 1.1 2012/06/27 17:24:12 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/openresolv-3.4.1-r1.ebuild,v 1.2 2012/11/26 08:20:23 polynomial-c Exp $
 
 EAPI=2
 
@@ -23,7 +23,7 @@ src_configure() {
 	econf \
 		--prefix= \
 		--rundir=/var/run \
-		--libexecdir=/$(get_libdir)
+		--libexecdir=/$(get_libdir)/resolvconf
 }
 
 pkg_config() {
