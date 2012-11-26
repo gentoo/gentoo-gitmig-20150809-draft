@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/libproxy-0.4.10-r1.ebuild,v 1.10 2012/11/25 19:01:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/libproxy-0.4.10-r1.ebuild,v 1.11 2012/11/26 02:40:55 tetromino Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2:2.6"
@@ -45,6 +45,9 @@ src_prepare() {
 	# get-pac-test freezes when run by the ebuild, succeeds when building
 	# manually; virtualx.eclass doesn't help :(
 	epatch "${FILESDIR}/${PN}-0.4.10-disable-pac-test.patch"
+
+	# Fix building with cmake-2.8.10 and USE=mono; in next release; bug #444204
+	epatch "${FILESDIR}/${P}-cmake-2.8.10.patch"
 }
 
 src_configure() {

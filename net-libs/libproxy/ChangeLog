@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libproxy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.96 2012/11/25 19:01:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.97 2012/11/26 02:40:55 tetromino Exp $
+
+  26 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  libproxy-0.4.10-r1.ebuild, +files/libproxy-0.4.10-cmake-2.8.10.patch:
+  Fix build failure with USE=mono and >=cmake-2.8.10 (bug #444204, thanks to
+  onip and Chris Reffett).
 
   25 Nov 2012; Raúl Porcel <armin76@gentoo.org> libproxy-0.4.10-r1.ebuild:
   ia64/sh/sparc stable wrt #442152
