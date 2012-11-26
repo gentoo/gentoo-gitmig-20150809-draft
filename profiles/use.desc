@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.494 2012/10/08 06:28:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.495 2012/11/26 13:08:35 scarabeus Exp $
 
 # Keep them sorted
 
@@ -354,11 +354,13 @@ usb - Adds USB support to applications that have optional USB support (e.g. cups
 v4l - Enable support for video4linux (using linux-headers or userspace libv4l libraries)
 vanilla - Do not add extra patches which change default behaviour; DO NOT USE THIS ON A GLOBAL SCALE as the severity of the meaning changes drastically
 vcd - Video CD support
+vdpau - Enable the Video Decode and Presentation API for Unix acceleration interface
 vhosts - Adds support for installing web-based applications into a virtual-hosting environment
 videos - Install optional video files (used in some games)
 vim-syntax - Pulls in related vim syntax scripts
 vnc - Enable VNC (remote desktop viewer) support
 vorbis - Adds support for the OggVorbis audio codec
+wayland - Enable dev-libs/wayland backend
 wavpack - Add support for wavpack audio compression tools
 wddx - Adds support for Web Distributed Data eXchange
 webkit - Add support for the WebKit HTML rendering/layout engine
