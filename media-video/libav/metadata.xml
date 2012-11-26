@@ -34,7 +34,6 @@
 	<flag name="ssse3">faster floating point optimization for SSSE3 capable chips (Intel Core 2 and later chips).</flag>
 	<flag name="tools">Build and install small tools like aviocat, cws2fws, graph2dot, ismindex, qt-faststart.</flag>
 	<flag name="vaapi">Enable VAAPI (Video Acceleration API) for hardware decoding.</flag>
-	<flag name="vdpau">Enable VDPAU decoders (requires nVidia video cards to offload CPU processing to video card.</flag>
 	<flag name="vis"> Adds support for SIMD optimizations for UltraSPARC processors.</flag>
 	<flag name="vpx">Enable vp8 encoding support using libvpx.</flag>
 </use>
