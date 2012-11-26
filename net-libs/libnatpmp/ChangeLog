@@ -1,4 +1,7 @@
 
+  26 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
+  libnatpmp-20120821.ebuild:
+  keyword ~mips
 
 *libnatpmp-20120821 (27 Aug 2012)
 
@@ -66,4 +69,3 @@
   22 Jul 2011; Anthony G. Basile <blueness@gentoo.org>
   +libnatpmp-20110715.ebuild, +files/respect-FLAGS.patch, +metadata.xml:
   Initial commit to satisfy tor's net-pmp USE flag
-

@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/miniupnpc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/miniupnpc/ChangeLog,v 1.28 2012/07/11 08:04:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/miniupnpc/ChangeLog,v 1.29 2012/11/26 23:26:41 blueness Exp $
+
+  26 Nov 2012; Anthony G. Basile <blueness@gentoo.org> miniupnpc-1.7.ebuild:
+  keyword ~mips
 
   11 Jul 2012; Michał Górny <mgorny@gentoo.org> miniupnpc-1.7.ebuild:
   Fix shortcomings introduced by non-maintainer commits.
