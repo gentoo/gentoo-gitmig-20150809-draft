@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/rdflib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rdflib/ChangeLog,v 1.17 2012/11/25 13:26:48 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rdflib/ChangeLog,v 1.18 2012/11/26 12:27:32 idella4 Exp $
+
+  27 Nov 2012; Ian Delaney <idella4@gentoo.org> rdflib-3.2.3.ebuild:
+  Again revised consequent to re-prompt from Arfrever, rm of nuisance .pyc files
+  from source that broke distutils_src_test, initial test phase now viable,
+  tested, restored
 
   26 Nov 2012; Ian Delaney <idella4@gentoo.org> rdflib-3.2.3.ebuild:
   removed initial broken src_test subsequent to a prompt from Afrever wrt Bug
