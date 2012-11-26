@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libnl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.116 2012/11/23 17:17:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.117 2012/11/26 17:41:47 zerochaos Exp $
+
+*libnl-3.2.16 (26 Nov 2012)
+
+  26 Nov 2012; Rick Farina <zerochaos@gentoo.org> +libnl-3.2.16.ebuild:
+  version bump from upstream to address bug 444542
 
   23 Nov 2012; Jeroen Roovers <jer@gentoo.org> libnl-3.2.14.ebuild,
   libnl-3.2.15.ebuild:
