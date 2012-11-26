@@ -5,4 +5,7 @@
 		<email>radhermit@gentoo.org</email>
 		<name>Tim Harder</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="pypi">Skype4Py</remote-id>
+	</upstream>
 </pkgmetadata>
