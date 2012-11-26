@@ -7,6 +7,5 @@
 </maintainer>
 <use>
 	<flag name="vaapi">Enables VAAPI (Video Acceleration API) for hardware decoding</flag>
-	<flag name="vdpau">Enables VDPAU decoders (requires nVidia video cards to offload CPU processing to video card</flag>
 </use>
 </pkgmetadata>
