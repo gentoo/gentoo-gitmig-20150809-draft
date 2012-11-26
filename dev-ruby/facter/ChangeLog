@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/facter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.57 2012/11/06 16:28:54 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.58 2012/11/26 19:57:19 graaff Exp $
+
+  26 Nov 2012; Hans de Graaff <graaff@gentoo.org> -facter-1.6.3.ebuild,
+  -facter-1.6.4.ebuild, -facter-1.6.8.ebuild, -facter-1.6.10.ebuild:
+  Cleanup.
 
   06 Nov 2012; Theo Chatzimichos <tampakrap@gentoo.org> metadata.xml:
   add sysadmin and ruby herds in metadata.xml
