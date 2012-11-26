@@ -1,0 +1,15 @@
+# ChangeLog for sys-fs/aufs-util
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs-util/ChangeLog,v 1.1 2012/11/26 20:44:57 jlec Exp $
+
+  26 Nov 2012; Justin Lecher <jlec@gentoo.org> +aufs-util-3.6.ebuild,
+  +metadata.xml:
+  Move from betagarden to the tree
+
+*aufs-util-9999 (13 Nov 2012)
+*aufs-util-3.6 (13 Nov 2012)
+
+  13 Nov 2012; Justin Lecher <jlec@gentoo.org> +aufs-util-3.6.ebuild,
+  +aufs-util-9999.ebuild, +metadata.xml:
+  New addition
+
