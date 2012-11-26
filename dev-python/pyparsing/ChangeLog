@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pyparsing
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/ChangeLog,v 1.84 2012/07/08 15:12:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/ChangeLog,v 1.85 2012/11/26 08:01:29 idella4 Exp $
+
+*pyparsing-1.5.6-r1 (27 Nov 2012)
+
+  27 Nov 2012; Ian Delaney <idella4@gentoo.org> +pyparsing-1.5.6-r1.ebuild,
+  pyparsing-1.5.6.ebuild:
+  Fix to exception error in python3, ID 3381439, thanks to report from Rafal
+  Muzylo in Bug #443836
 
   08 Jul 2012; Raúl Porcel <armin76@gentoo.org> pyparsing-1.5.6.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #419859
@@ -318,4 +325,3 @@
   29 Mar 2004; Bryan Østergaard <kloeri@gentoo.org> metadata.xml,
   pyparsing-1.1.2.ebuild:
   Initial import, ebuild submitted by Bardur Arantsson <gentoo@scientician.org>
-
