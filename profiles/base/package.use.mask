@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.411 2012/11/26 07:40:35 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.412 2012/11/26 23:29:03 blueness Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -346,10 +346,6 @@ app-emulation/qemu-kvm rbd
 <www-client/epiphany-3 introspection
 <x11-libs/libwnck-2.30.6-r1 introspection
 <x11-libs/pango-1.28.4 introspection
-
-# Anthony G. Basile <blueness@gentoo.org> (22 Jul 2011)
-# nat-pmp and upnp are only stable on amd64/x86 for this package
->=net-misc/tor-0.2.3 nat-pmp upnp
 
 # Robin H. Johnson <robbat2@gentoo.org> (10 Jul 2011)
 # PPS should work on all arches, but only keyworded on amd64/x86

@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.465 2012/11/24 21:38:14 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.466 2012/11/26 23:29:03 blueness Exp $
+
+  26 Nov 2012; Anthony G. Basile <blueness@gentoo.org> package.use.mask:
+  Remove maskings on net-misc/tor[nat-pmp,upnp]
 
   24 Nov 2012; Mike Gilbert <floppym@gentoo.org> use.mask:
   Add masks for python_single_target values.
