@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.32.3-r1.ebuild,v 1.16 2012/11/17 12:12:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.32.3-r1.ebuild,v 1.17 2012/11/26 16:08:14 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -106,6 +106,7 @@ src_prepare() {
 		--disable-profiling
 		--disable-pst-import
 		$(use_enable python)
+		pythonpath=$(PYTHON -2 -a)
 		$(use_with clutter)
 		$(use_with ldap openldap)
 		$(use_with kerberos krb5 /usr)
