@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.284 2012/11/25 14:57:32 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.285 2012/11/26 18:16:07 ago Exp $
+
+  26 Nov 2012;  <ago@gentoo.org> ppp-2.4.5-r3.ebuild:
+  Stable for x86, wrt to bug #444256
 
   25 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> ppp-2.4.5-r3.ebuild:
   Stable on amd64, wrt bug #444256
