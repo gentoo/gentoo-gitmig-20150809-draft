@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.116 2012/11/24 21:38:14 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.117 2012/11/26 23:31:21 blueness Exp $
+
+  26 Nov 2012; Anthony G. Basile <blueness@gentoo.org> package.use.mask:
+  No need to unmask net-misc/tor[nat-pmp,upnp] on x86
 
   24 Nov 2012; Mike Gilbert <floppym@gentoo.org> use.mask:
   Unmask python_single_target_jython2_5

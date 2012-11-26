@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.100 2012/11/04 05:12:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.101 2012/11/26 23:31:21 blueness Exp $
 
 # This file requires >=portage-2.1.1
 
@@ -94,10 +94,6 @@ gnome-base/gvfs -bluray
 # Systemtap is masked in base/package.use.mask
 # Temporarily unmask in amd64/x86, bug 384647
 dev-libs/glib -systemtap
-
-# Anthony G. Basile <blueness@gentoo.org> (22 Jul 2011)
-# nat-pmp and upnp are only stable on amd64/x86 for this package
->=net-misc/tor-0.2.3 -nat-pmp -upnp
 
 # Robin H. Johnson <robbat2@gentoo.org> (10 Jul 2011)
 # PPS should work on all arches, but only keyworded on amd64/x86
