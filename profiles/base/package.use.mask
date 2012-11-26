@@ -1,10 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.410 2012/11/24 00:57:56 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.411 2012/11/26 07:40:35 pinkbyte Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+# Sergey Popov <pinkbyte@gentoo.org> (26 Nov 2012)
+# PDF docs building failed with sandbox violation
+media-gfx/opencolorio	pdf
+
 # Chris Reffett <creffett@gentoo.org> (23 Nov 2012)
 # CMake's PHP module can't find our install location, so 
 # libkolab(xml) fails with the php flag enabled.
