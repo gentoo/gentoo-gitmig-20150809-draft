@@ -12,8 +12,6 @@
 	<use>
 		<flag name="libextractor">Use <pkg>media-libs/libextract</pkg> to gather
 			files' metadata in media-player</flag>
-		<flag name="vdpau">Enables VDPAU support (requires nVidia video cards)
-			to offload MPEG2/MPEG4/VC1/WMV CPU processing to video card</flag>
 		<flag name="vdr">Compile the vdr output plugin to use local or remote xine as output</flag>
 		<flag name="xine">Compile the xine input plugin for displaying vdr video and OSD</flag>
 	</use>
