@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/x2goserver-3.1.1.3.ebuild,v 1.2 2012/07/11 08:33:22 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/x2goserver-3.1.1.9.ebuild,v 1.1 2012/11/26 10:09:09 voyageur Exp $
 
 EAPI=4
-inherit eutils multilib user
+inherit eutils multilib toolchain-funcs user
 
 DESCRIPTION="The X2Go server"
 HOMEPAGE="http://www.x2go.org"
@@ -16,8 +16,10 @@ IUSE="+fuse postgres +sqlite"
 
 REQUIRED_USE="|| ( postgres sqlite )"
 
-DEPEND=""
+DEPEND="sys-apps/man"
 RDEPEND="dev-perl/Config-Simple
+	media-fonts/font-cursor-misc
+	media-fonts/font-misc-misc
 	net-misc/nx
 	virtual/ssh
 	fuse? ( sys-fs/sshfs-fuse )
@@ -30,10 +32,17 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# Respect CC/CFLAGS
+	epatch "${FILESDIR}"/${PN}-3.1.1.4-cflags.patch
+
 	# Multilib clean
 	sed -e "/^LIBDIR=/s/lib/$(get_libdir)/" -i */Makefile || die "multilib sed failed"
 	# Use nxagent directly
 	sed -i -e "s/x2goagent/nxagent/" x2goserver/bin/x2gostartagent || die "sed failed"
+}
+
+src_compile() {
+	emake CC="$(tc-getCC)"
 }
 
 src_install() {
