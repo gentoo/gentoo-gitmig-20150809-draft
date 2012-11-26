@@ -43,7 +43,6 @@
 	<flag name="toolame">Enable toolame MPEG-2 encoding</flag>
 	<flag name="tremor">Enable internal support for Vorbis</flag>
 	<flag name="twolame">Enable twolame MPEG-2 encoding</flag>
-	<flag name="vdpau">Enables experimental VDPAU support (requires nVidia video cards) to offload MPEG2/MPEG4/VC1/WMV CPU processing to video card</flag>
 	<flag name="vpx">Enables vp8 codec support using libvpx: Decoding vp8 does not require this to be enabled but libvpx can also be used for decoding; encoding vp8 requires this useflag to be enabled though.</flag>
 	<flag name="vidix">Support for vidix video output</flag>
 	<flag name="xanim">Enables support for xanim based codecs</flag>

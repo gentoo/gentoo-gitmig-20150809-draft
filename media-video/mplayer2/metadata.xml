@@ -53,7 +53,6 @@
 	<flag name="ssse3">Faster floating point optimization for SSSE3 capable chips (Intel Core 2 and later chips)</flag>
 	<flag name="symlink">Copy all binaries and configuration into locations occupied by <pkg>media-video/mplayer</pkg> and thus act like drop-in replacement.</flag>
 	<flag name="tga">Enables Targa video output</flag>
-	<flag name="vdpau">Enables experimental VDPAU support (requires nVidia video cards) to offload MPEG2/MPEG4/VC1/WMV CPU processing to video card</flag>
 	<flag name="xanim">Enables support for xanim based codecs</flag>
 	<flag name="yuv4mpeg">Enables yuv4mpeg video output</flag>
 </use>
