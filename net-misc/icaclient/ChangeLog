@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/icaclient
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.87 2012/10/24 19:23:17 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.88 2012/11/26 23:11:25 fauli Exp $
+
+  26 Nov 2012; Christian Faulhammer <fauli@gentoo.org> icaclient-12.1.0.ebuild:
+  fix sandbox violation as reported in bug 435246 by Fabiano
 
   24 Oct 2012; Ulrich Müller <ulm@gentoo.org> icaclient-12.0.0.ebuild,
   icaclient-12.1.0.ebuild:

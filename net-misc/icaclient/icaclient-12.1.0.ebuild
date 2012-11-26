@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-12.1.0.ebuild,v 1.3 2012/10/24 19:23:17 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-12.1.0.ebuild,v 1.4 2012/11/26 23:11:25 fauli Exp $
 
 EAPI=4
 
@@ -67,7 +67,7 @@ RDEPEND="x11-terms/xterm
 		)
 	)"
 DEPEND=""
-S="${WORKDIR}/opt/Citrix/ICAClient"
+S="${WORKDIR}${ICAROOT}"
 
 pkg_nofetch() {
 	elog "Download the client RPM file ${SRC_URI} from
@@ -142,7 +142,7 @@ src_install() {
 	insinto "${ICAROOT}"/keyboard
 	doins keyboard/*
 
-	rm -rf "${ICAROOT}"/keystore/cacerts
+	rm -rf "${S}"/keystore/cacerts
 	dosym /etc/ssl/certs "${ICAROOT}"/keystore/cacerts
 	#insinto "${ICAROOT}"/keystore/cacerts
 	#doins keystore/cacerts/*
