@@ -1,0 +1,17 @@
+# ChangeLog for sys-kernel/aufs-sources
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/ChangeLog,v 1.1 2012/11/26 20:46:04 jlec Exp $
+
+  26 Nov 2012; Justin Lecher <jlec@gentoo.org> +aufs-sources-3.6.6.ebuild,
+  +metadata.xml:
+  Move from betagarden to the tree
+
+  19 Nov 2012; Justin Lecher <jlec@gentoo.org> aufs-sources-3.6.6.ebuild:
+  Add sys-fs/aufs-util as dependency
+
+*aufs-sources-3.6.6 (13 Nov 2012)
+
+  13 Nov 2012; Justin Lecher <jlec@gentoo.org> +aufs-sources-3.6.6.ebuild,
+  +metadata.xml:
+  New addition
+
