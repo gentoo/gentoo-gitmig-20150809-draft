@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/j/j-701.ebuild,v 1.2 2012/11/20 17:18:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/j/j-701-r1.ebuild,v 1.1 2012/11/26 03:56:52 patrick Exp $
 
 EAPI=4
 DESCRIPTION="Modern, high-level, general-purpose, high-performance programming language"
@@ -39,6 +39,6 @@ src_install() {
 	mkdir -p "${D}/opt/j"
 	cp -r j/* "${D}/opt/j" || die
 	mkdir -p "${D}/usr/bin"
-	echo -e "#!/bin/sh\n/opt/j/bin/jconsole" > "${D}/usr/bin/jconsole"  || die
-	chmod +x "${D}/usr/bin/jconsole"
+	echo -e "#!/bin/sh\n/opt/j/bin/jconsole" > "${D}/usr/bin/jc"  || die
+	chmod +x "${D}/usr/bin/jc"
 }
