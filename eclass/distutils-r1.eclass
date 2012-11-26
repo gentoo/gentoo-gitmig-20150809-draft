@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.19 2012/11/24 21:07:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.20 2012/11/26 10:05:11 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -59,7 +59,11 @@ if [[ ! ${_DISTUTILS_R1} ]]; then
 
 inherit eutils python-r1
 
+fi
+
 EXPORT_FUNCTIONS src_prepare src_configure src_compile src_test src_install
+
+if [[ ! ${_DISTUTILS_R1} ]]; then
 
 RDEPEND=${PYTHON_DEPS}
 DEPEND=${PYTHON_DEPS}

@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.520 2012/11/26 08:31:26 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.521 2012/11/26 10:05:11 mgorny Exp $
+
+  26 Nov 2012; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass,
+  python-single-r1.eclass:
+  Run EXPORT_FUNCTIONS even if re-inheriting, to preserve the expected phase
+  overrides.
 
   26 Nov 2012; Michał Górny <mgorny@gentoo.org> python-r1.eclass,
   python-single-r1.eclass:
