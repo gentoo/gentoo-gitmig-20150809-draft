@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/ctdb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ChangeLog,v 1.27 2012/05/21 23:37:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ChangeLog,v 1.28 2012/11/26 11:59:39 ago Exp $
+
+  26 Nov 2012; Agostino Sarubbo <ago@gentoo.org> ctdb-1.13.ebuild:
+  Stable for amd64, wrt bug #432754
 
   21 May 2012; Mike Frysinger <vapier@gentoo.org> ctdb-1.0.114_p1.ebuild,
   ctdb-1.0.88.ebuild:
