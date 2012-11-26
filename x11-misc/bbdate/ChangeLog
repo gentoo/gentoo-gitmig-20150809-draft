@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/bbdate
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbdate/ChangeLog,v 1.21 2012/11/25 09:51:00 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbdate/ChangeLog,v 1.22 2012/11/26 23:29:19 floppym Exp $
+
+  26 Nov 2012; Mike Gilbert <floppym@gentoo.org> bbdate-0.2.4-r1.ebuild:
+  Remove references to helvitica font. Thanks to jer for the idea. Bug 395353.
 
   25 Nov 2012; Kacper Kowalik <xarthisius@gentoo.org> bbdate-0.2.4-r1.ebuild,
   bbdate-0.2.4.ebuild:
