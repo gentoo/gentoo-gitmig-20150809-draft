@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/libutempter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libutempter/ChangeLog,v 1.38 2012/08/28 06:51:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libutempter/ChangeLog,v 1.39 2012/11/26 15:57:45 ottxor Exp $
+
+*libutempter-1.1.6-r1 (26 Nov 2012)
+
+  26 Nov 2012; Christoph Junghans <ottxor@gentoo.org>
+  +libutempter-1.1.6-r1.ebuild:
+  added prefix support (bug #444730)
 
 *libutempter-1.1.6 (28 Aug 2012)
 
@@ -154,4 +160,3 @@
   freebsd, and also mike harris of redhat/freedesktop is rumoured to be
   rejumping the development of this.  At any rate, at least Flameeyes will
   be happy.
-
