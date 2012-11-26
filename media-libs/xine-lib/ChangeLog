@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.687 2012/08/02 13:21:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.688 2012/11/26 14:31:26 scarabeus Exp $
+
+  26 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Update to global useflag.
 
   02 Aug 2012; Samuli Suominen <ssuominen@gentoo.org> xine-lib-1.2.2.ebuild,
   xine-lib-1.2.9999.ebuild:
@@ -2216,4 +2219,3 @@
   later versions. Not stable as I haven't been able to test it yet. Removed
   IUSE=pic for conditionally applying the pic fix as it should always be
   applied.
-

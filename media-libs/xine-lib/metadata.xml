@@ -58,10 +58,6 @@
 			Linux and FreeBSD. Enabling this USE flag might make the package
 			non-redistributable in binary form.
 		</flag>
-		<flag name="vdpau">
-			Enables VDPAU decoders (requires nVidia video cards
-			to offload CPU processing to video card
-		</flag>
 		<flag name="vdr">
 			Build the VDR plugin
 		</flag>
