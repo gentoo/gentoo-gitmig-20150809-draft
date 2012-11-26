@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/kombu-2.4.7.ebuild,v 1.1 2012/09/28 10:04:10 iksaif Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/kombu-2.4.9.ebuild,v 1.1 2012/11/26 22:47:19 iksaif Exp $
 
 EAPI="4"
 
@@ -10,10 +10,10 @@ RESTRICT_PYTHON_ABIS="2.[4-6]"
 SUPPORT_PYTHON_ABIS="1"
 DISTUTILS_SRC_TEST="nosetests"
 
-inherit distutils eutils
+inherit distutils
 
 DESCRIPTION="AMQP Messaging Framework for Python"
-HOMEPAGE="http://pypi.python.org/pypi/kombu https://github.com/ask/kombu"
+HOMEPAGE="http://pypi.python.org/pypi/kombu https://github.com/celery/kombu"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
@@ -36,12 +36,6 @@ DEPEND="${RDEPEND}
 	dev-python/beanstalkc
 	dev-python/couchdb-python )
 	dev-python/setuptools"
-
-src_prepare() {
-	if use test; then
-		epatch "${FILESDIR}/${PN}-2.1.1-add-assertIsInstance-with-unittest.patch"
-	fi
-}
 
 src_compile() {
 	distutils_src_compile
