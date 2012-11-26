@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.2.3-r1.ebuild,v 1.5 2012/11/26 16:08:14 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.2.3-r1.ebuild,v 1.6 2012/11/26 16:19:56 tetromino Exp $
 
 EAPI=4
 GCONF_DEBUG=no
@@ -90,6 +90,11 @@ REQUIRED_USE="map? ( clutter )
 	networkmanager? ( !connman )"
 
 pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
+
+src_prepare() {
 	ELTCONF="--reverse-deps"
 	DOCS="AUTHORS ChangeLog* HACKING MAINTAINERS NEWS* README"
 	# image-inline plugin needs a gtk+:3 gtkimageview, which does not exist yet
@@ -131,11 +136,6 @@ pkg_setup() {
 			--without-nss-includes"
 	fi
 
-	python_set_active_version 2
-	python_pkg_setup
-}
-
-src_prepare() {
 	# https://bugzilla.gnome.org/show_bug.cgi?id=663077, requires eautoreconf
 	epatch "${FILESDIR}"/${PN}-3.2.1-reorder-mx-clutter-gtk.patch
 	# Fix build failure with glib-2.32
