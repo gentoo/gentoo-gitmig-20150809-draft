@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ferite-1.0.2.ebuild,v 1.14 2012/06/20 13:17:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ferite-1.0.2.ebuild,v 1.15 2012/11/26 22:11:54 ulm Exp $
 
 EAPI=4
 
@@ -10,8 +10,8 @@ DESCRIPTION="A clean, lightweight, object oriented scripting language"
 HOMEPAGE="http://www.ferite.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
+LICENSE="BSD"
 SLOT="1"
-LICENSE="as-is"
 KEYWORDS="~alpha amd64 ppc sparc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
