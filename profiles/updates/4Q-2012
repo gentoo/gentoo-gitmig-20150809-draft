@@ -51,3 +51,4 @@ move app-portage/pyGPG dev-python/pyGPG
 move mail-client/claws-mail-tnef_parse mail-client/claws-mail-tnef-parse
 move mail-client/claws-mail-spam_report mail-client/claws-mail-spam-report
 move x11-libs/vdpau-video x11-libs/libva-vdpau-driver
+move app-editors/XML-XSH app-editors/XML-XSH2
