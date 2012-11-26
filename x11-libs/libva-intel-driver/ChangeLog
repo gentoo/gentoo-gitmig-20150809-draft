@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libva-intel-driver
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-intel-driver/ChangeLog,v 1.15 2012/11/26 13:32:38 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-intel-driver/ChangeLog,v 1.16 2012/11/26 23:54:10 aballier Exp $
+
+  26 Nov 2012; Alexis Ballier <aballier@gentoo.org>
+  -libva-intel-driver-1.0.15.ebuild, -libva-intel-driver-1.0.18-r1.ebuild:
+  remove old
 
   26 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
   Update to global useflag.
