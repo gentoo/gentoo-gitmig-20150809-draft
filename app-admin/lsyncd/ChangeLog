@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/lsyncd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lsyncd/ChangeLog,v 1.25 2012/11/26 03:05:02 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lsyncd/ChangeLog,v 1.26 2012/11/26 09:49:50 radhermit Exp $
+
+*lsyncd-2.1.4 (26 Nov 2012)
+
+  26 Nov 2012; Tim Harder <radhermit@gentoo.org> +lsyncd-2.1.4.ebuild:
+  Version bump.
 
   26 Nov 2012; Patrick Lauer <patrick@gentoo.org> lsyncd-2.1.3.ebuild:
   Adding missing asciidoc build dep
