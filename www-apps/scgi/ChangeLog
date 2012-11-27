@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/scgi
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/scgi/ChangeLog,v 1.16 2011/09/01 16:29:55 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/scgi/ChangeLog,v 1.17 2012/11/27 19:41:48 pacho Exp $
+
+  27 Nov 2012; Pacho Ramos <pacho@gentoo.org> -scgi-1.10.ebuild,
+  -scgi-1.12.ebuild, -scgi-1.13.ebuild, -scgi-1.2.ebuild, metadata.xml:
+  Drop apache herd as discussed in http://www.gossamer-
+  threads.com/lists/gentoo/dev/262834
 
   01 Sep 2011; Jeroen Roovers <jer@gentoo.org> scgi-1.14.ebuild:
   Stable for HPPA (bug #366915).
@@ -83,4 +88,3 @@
 
   12 Aug 2003; Grant Goodyear <g2boojum@gentoo.org> scgi-1.2_alpha1.ebuild:
   New package
-

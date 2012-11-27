@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/389-dsgw
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/389-dsgw/ChangeLog,v 1.3 2011/08/14 09:33:10 lxnay Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/389-dsgw/ChangeLog,v 1.4 2012/11/27 19:40:01 pacho Exp $
+
+  27 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop apache herd as discussed in http://www.gossamer-
+  threads.com/lists/gentoo/dev/262834
 
 *389-dsgw-1.1.7 (14 Aug 2011)
 
@@ -18,4 +22,3 @@
   +metadata.xml:
   new ebuild, part of 389 Directory Server (http://port389.org), closes bug
   #309581
-
