@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/zynaddsubfx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/ChangeLog,v 1.42 2012/07/25 09:08:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/ChangeLog,v 1.43 2012/11/27 11:49:11 aballier Exp $
+
+  27 Nov 2012; Alexis Ballier <aballier@gentoo.org> zynaddsubfx-2.4.3.ebuild,
+  +files/zynaddsubfx-2.4.3-nofltk.patch:
+  Fix build without fltk, bug #437018
 
 *zynaddsubfx-2.4.3 (25 Jul 2012)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/zynaddsubfx-2.4.3.ebuild,v 1.1 2012/07/25 09:08:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/zynaddsubfx-2.4.3.ebuild,v 1.2 2012/11/27 11:49:11 aballier Exp $
 
 EAPI=4
 inherit eutils cmake-utils
@@ -34,6 +34,7 @@ S=${WORKDIR}/${MY_P}
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-2.4.1-docs.patch
+	"${FILESDIR}"/${PN}-2.4.3-nofltk.patch
 )
 
 DOCS="ChangeLog FAQ.txt HISTORY.txt README.txt ZynAddSubFX.lsm bugs.txt"
