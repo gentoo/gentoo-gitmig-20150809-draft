@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/profiler
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/profiler/ChangeLog,v 1.16 2010/03/08 08:33:58 sping Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/profiler/ChangeLog,v 1.17 2012/11/27 22:59:18 sping Exp $
+
+  27 Nov 2012; Sebastian Pipping <sping@gentoo.org> profiler-1-r1.ebuild:
+  Add fetch restriction due to licensing issues (bug #444332)
 
   08 Mar 2010; Sebastian Pipping <sping@gentoo.org> profiler-1-r1.ebuild:
   Fix SRC_URI and HOMEPAGE (bug #288717)
