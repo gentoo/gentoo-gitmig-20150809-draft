@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/apple-jdk-bin/apple-jdk-bin-1.4.2.ebuild,v 1.3 2010/10/22 10:57:58 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/apple-jdk-bin/apple-jdk-bin-1.4.2.ebuild,v 1.4 2012/11/27 07:54:39 grobian Exp $
 
 JAVA_SUPPORTS_GENERATION_1="true"
 inherit java-vm-2 eutils
@@ -8,7 +8,7 @@ inherit java-vm-2 eutils
 DESCRIPTION="Links to Apple's version of Sun's J2SE Development Kit"
 HOMEPAGE="http://java.sun.com/j2se/1.4.2/"
 SLOT="1.4"
-LICENSE="as-is"
+LICENSE="public-domain"
 KEYWORDS="-* ~ppc-macos ~x86-macos"
 IUSE=""
 

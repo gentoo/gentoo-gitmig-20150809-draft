@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/apple-jdk-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/apple-jdk-bin/ChangeLog,v 1.3 2012/11/01 16:24:38 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/apple-jdk-bin/ChangeLog,v 1.4 2012/11/27 07:54:39 grobian Exp $
+
+  27 Nov 2012; Fabian Groffen <grobian@gentoo.org> apple-jdk-bin-1.4.2.ebuild,
+  apple-jdk-bin-1.5.0.ebuild, apple-jdk-bin-1.6.0.ebuild:
+  Change licence from as-is to public-domain, because we only install symlinks,
+  bug #444858
 
   01 Nov 2012; Fabian Groffen <grobian@gentoo.org> apple-jdk-bin-1.6.0.ebuild:
   Marked ~x86-macos, it doesn't matter much that the JVM is 64-bits, although
