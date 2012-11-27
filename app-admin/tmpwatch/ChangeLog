@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/tmpwatch
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/ChangeLog,v 1.102 2012/07/17 19:29:46 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/ChangeLog,v 1.103 2012/11/27 19:06:27 swift Exp $
+
+  23 Nov 2012; <swift@gentoo.org> tmpwatch-2.10.1.ebuild,
+  tmpwatch-2.10.3.ebuild, tmpwatch-2.11.ebuild:
+  Adding dependency towards selinux policy module tmpreaper
 
 *tmpwatch-2.11 (17 Jul 2012)
 
