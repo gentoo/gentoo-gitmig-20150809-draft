@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kubrick
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kubrick/ChangeLog,v 1.123 2012/11/23 19:22:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kubrick/ChangeLog,v 1.124 2012/11/27 15:20:25 kensington Exp $
+
+  27 Nov 2012; Michael Palimaka <kensington@gentoo.org> kubrick-4.8.5.ebuild,
+  kubrick-4.9.3.ebuild:
+  Update dependencies wrt bug #444312. Update DESCRIPTION.
 
   23 Nov 2012; Agostino Sarubbo <ago@gentoo.org> kubrick-4.9.3.ebuild:
   Stable for x86, wrt bug #442394
@@ -481,4 +485,3 @@
   02 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   +metadata.xml, +kubrick-4.1.2.ebuild:
   Add kde-4.1.2 into the tree from the kde-testing overlay.
-
