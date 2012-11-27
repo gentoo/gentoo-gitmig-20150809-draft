@@ -1,6 +1,12 @@
 # ChangeLog for sci-mathematics/msieve
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/msieve/ChangeLog,v 1.5 2012/11/25 06:22:38 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/msieve/ChangeLog,v 1.6 2012/11/27 13:35:18 patrick Exp $
+
+*msieve-1.50-r3 (27 Nov 2012)
+
+  27 Nov 2012; Patrick Lauer <patrick@gentoo.org> +files/reduce-printf.patch,
+  +msieve-1.50-r3.ebuild:
+  More improvements, quiet output for nfs
 
 *msieve-1.50-r2 (25 Nov 2012)
 
