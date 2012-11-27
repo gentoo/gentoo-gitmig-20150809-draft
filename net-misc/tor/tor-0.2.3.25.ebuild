@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.3.25.ebuild,v 1.4 2012/11/26 21:01:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.3.25.ebuild,v 1.5 2012/11/27 20:23:39 blueness Exp $
 
 EAPI="4"
 
@@ -20,7 +20,8 @@ IUSE="+bufferevents nat-pmp tor-hardening transparent-proxy threads upnp selinux
 
 DEPEND="dev-libs/openssl
 	sys-libs/zlib
-	>=dev-libs/libevent-2.0.14
+	dev-libs/libevent
+	bufferevents? ( dev-libs/libevent[ssl] )
 	nat-pmp? ( net-libs/libnatpmp )
 	upnp? ( net-libs/miniupnpc )
 	selinux? ( sec-policy/selinux-tor )"
