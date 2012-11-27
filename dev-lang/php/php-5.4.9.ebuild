@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.9.ebuild,v 1.2 2012/11/27 11:10:38 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.9.ebuild,v 1.3 2012/11/27 17:41:17 mr_bones_ Exp $
 
 EAPI=4
 
@@ -356,7 +356,6 @@ src_prepare() {
 		-e "s,-i -a -n php${PHP_MV},-i -n php${PHP_MV},g" \
 		-e "s,-i -A -n php${PHP_MV},-i -n php${PHP_MV},g" \
 		configure sapi/apache2filter/config.m4 sapi/apache2handler/config.m4
-
 
 	# Patch PHP to support heimdal instead of mit-krb5
 	if has_version "app-crypt/heimdal" ; then
