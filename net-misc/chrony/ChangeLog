@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/chrony
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.89 2012/04/11 21:57:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.90 2012/11/27 04:22:49 blueness Exp $
+
+  27 Nov 2012; Anthony G. Basile <blueness@gentoo.org> chrony-1.27_pre1.ebuild:
+  keyword ~arm, bug #444714
 
   11 Apr 2012; Jeroen Roovers <jer@gentoo.org> chrony-1.27_pre1.ebuild:
   Do not use dev-libs/nss either, even if it would work.
