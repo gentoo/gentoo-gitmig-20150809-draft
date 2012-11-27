@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/stressapptest/stressapptest-1.0.4.ebuild,v 1.1 2012/11/27 06:46:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/stressapptest/stressapptest-1.0.4.ebuild,v 1.2 2012/11/27 06:54:01 vapier Exp $
 
 EAPI="4"
 
@@ -13,6 +13,9 @@ LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug"
+
+RDEPEND="dev-libs/libaio"
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
