@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.524 2012/11/27 00:48:01 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.525 2012/11/27 12:50:40 ulm Exp $
+
+  27 Nov 2012; Ulrich Müller <ulm@gentoo.org> scsh.eclass:
+  Drop default LICENSE assignment.
 
   27 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org> gnome2.eclass:
   Handle DOCS when it is an exported array, i.e. "declare -ax" (bug #444740,
