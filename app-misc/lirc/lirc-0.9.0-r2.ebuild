@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.9.0-r2.ebuild,v 1.4 2012/10/24 18:39:12 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.9.0-r2.ebuild,v 1.5 2012/11/27 18:49:26 axs Exp $
 
 EAPI=4
 
@@ -298,6 +298,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-atiusb_kfifo.patch
 	# Apply fixes for kernel-3.3 and above (bug 439538)
 	epatch "${FILESDIR}"/${P}-kernel-3.3.0-fixes.patch
+	# Apply fix for missing err() in usb.h for kernel 3.5+ (bug 444736)
+	epatch "${FILESDIR}"/${P}-kernel-3.5-err-fix.patch
 
 	# Do not build drivers from the top-level Makefile
 	sed -i -e 's:\(SUBDIRS =\) drivers\(.*\):\1\2:' Makefile.am

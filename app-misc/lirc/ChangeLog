@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/lirc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.233 2012/10/24 18:39:12 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.234 2012/11/27 18:49:26 axs Exp $
+
+  27 Nov 2012; Ian Stakenvicius <axs@gentoo.org> lirc-0.9.0-r2.ebuild,
+  +files/lirc-0.9.0-kernel-3.5-err-fix.patch:
+  added err() to kcompat.h as has been removed from usb.h in kernels >=3.5,
+  fixing bug 444736
 
   24 Oct 2012; Ian Stakenvicius <axs@gentoo.org> lirc-0.9.0-r2.ebuild,
   +files/lirc-0.9.0-kernel-3.3.0-fixes.patch:
