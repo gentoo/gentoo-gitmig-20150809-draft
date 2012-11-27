@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xsdlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xsdlib/ChangeLog,v 1.37 2012/09/29 18:02:31 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xsdlib/ChangeLog,v 1.38 2012/11/27 19:28:19 sera Exp $
+
+  27 Nov 2012; <sera@gentoo.org> xsdlib-20050627-r1.ebuild,
+  xsdlib-20050627-r2.ebuild, xsdlib-20090415.ebuild:
+  Fix LICENSE - BSD Apache-1.1 - thanks to ulm in #444868
 
   29 Sep 2012; Fabian Groffen <grobian@gentoo.org> xsdlib-20090415.ebuild:
   Marked ~x64-macos

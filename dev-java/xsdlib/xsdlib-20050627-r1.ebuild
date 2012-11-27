@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xsdlib/xsdlib-20050627-r1.ebuild,v 1.12 2012/01/01 15:46:51 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xsdlib/xsdlib-20050627-r1.ebuild,v 1.13 2012/11/27 19:28:19 sera Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -11,7 +11,7 @@ DESCRIPTION="The Sun Multi-Schema XML Validator is a Java tool to validate XML d
 HOMEPAGE="https://msv.dev.java.net/"
 SRC_URI="mirror://gentoo/${MY_P}.zip"
 
-LICENSE="as-is Apache-1.1"
+LICENSE="BSD Apache-1.1"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
 
