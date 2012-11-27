@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-3.4.3-r1.ebuild,v 1.1 2012/11/26 18:31:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-3.4.3-r1.ebuild,v 1.2 2012/11/27 22:51:12 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -25,6 +25,7 @@ RDEPEND=">=dev-libs/glib-2.31:2
 	quvi? ( >=media-libs/libquvi-0.2.15 )"
 DEPEND="${RDEPEND}
 	!<media-video/totem-2.21
+	dev-libs/gobject-introspection-common
 	>=dev-util/intltool-0.35
 	>=sys-devel/gettext-0.17
 	dev-util/gtk-doc-am
@@ -32,6 +33,9 @@ DEPEND="${RDEPEND}
 	test? (
 		gnome-base/gvfs[http]
 		sys-apps/dbus )"
+# eautoreconf needs:
+#	>=dev-util/gtk-doc-am-1.11
+#	dev-libs/gobject-introspection-common
 
 src_prepare() {
 	G2CONF="${G2CONF}
