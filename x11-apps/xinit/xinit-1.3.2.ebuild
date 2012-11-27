@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/xinit-1.3.2.ebuild,v 1.9 2012/08/26 16:50:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/xinit-1.3.2.ebuild,v 1.10 2012/11/27 08:02:10 grobian Exp $
 
 EAPI=4
 
@@ -35,7 +35,7 @@ pkg_setup() {
 	xorg-2_pkg_setup
 
 	XORG_CONFIGURE_OPTIONS=(
-		--with-xinitdir=/etc/X11/xinit
+		--with-xinitdir="${EPREFIX}"/etc/X11/xinit
 	)
 }
 

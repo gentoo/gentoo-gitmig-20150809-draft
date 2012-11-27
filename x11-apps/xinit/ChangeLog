@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xinit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.235 2012/08/26 16:50:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.236 2012/11/27 08:02:10 grobian Exp $
+
+  27 Nov 2012; Fabian Groffen <grobian@gentoo.org> xinit-1.3.2.ebuild:
+  Fix for Prefix, thanks Myk Taylor, bug #444898
 
   26 Aug 2012; Raúl Porcel <armin76@gentoo.org> xinit-1.3.2.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #419473
@@ -990,4 +993,3 @@
 
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; +xinit-0.99.0.ebuild:
   Initial commit for modular X.
-
