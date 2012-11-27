@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/dovecot_deleted_to_trash
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dovecot_deleted_to_trash/ChangeLog,v 1.3 2012/11/10 13:51:57 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dovecot_deleted_to_trash/ChangeLog,v 1.4 2012/11/27 07:30:44 pinkbyte Exp $
+
+  27 Nov 2012; Sergey Popov <pinkbyte@gentoo.org>
+  dovecot_deleted_to_trash-0.3.ebuild, -files/fix_names_and_destdir.patch:
+  Set proper path for libs, reorganize patch into sed expressions, wrt bug
+  #444840. Thanks to Agostino Sarubbo and Andreis Vinogradovs
 
   10 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
   dovecot_deleted_to_trash-0.3.ebuild:
