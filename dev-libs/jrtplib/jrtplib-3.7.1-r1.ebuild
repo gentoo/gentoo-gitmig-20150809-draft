@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jrtplib/jrtplib-3.7.1-r1.ebuild,v 1.1 2009/07/23 15:01:32 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jrtplib/jrtplib-3.7.1-r1.ebuild,v 1.2 2012/11/27 13:22:45 pinkbyte Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="examples ipv6"
 
-RDEPEND="dev-libs/jthread"
+RDEPEND="<dev-libs/jthread-1.3.0"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
