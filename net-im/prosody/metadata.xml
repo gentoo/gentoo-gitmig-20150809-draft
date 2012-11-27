@@ -12,7 +12,6 @@
   </maintainer>
   <use>
     <flag name="libevent">Use libevent for event handling</flag>
-    <flag name="sql">Require dev-lua/luadbi for SQL storage plugins</flag>
     <flag name="zlib">Support for compressing XMPP streams with mod_compression</flag>
   </use>
 </pkgmetadata>
