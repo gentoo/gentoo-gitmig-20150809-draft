@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/ladspa-cmt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.41 2012/09/09 17:11:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.42 2012/11/27 11:53:25 aballier Exp $
+
+  27 Nov 2012; Alexis Ballier <aballier@gentoo.org> -ladspa-cmt-1.15.ebuild,
+  -files/ladspa-cmt-darwin.patch:
+  remove old
 
   09 Sep 2012; Raúl Porcel <armin76@gentoo.org> ladspa-cmt-1.16.ebuild:
   sparc stable wrt #419079
