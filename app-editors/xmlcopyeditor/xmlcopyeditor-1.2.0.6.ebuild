@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xmlcopyeditor/xmlcopyeditor-1.2.0.6.ebuild,v 1.5 2012/11/27 09:53:44 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xmlcopyeditor/xmlcopyeditor-1.2.0.6.ebuild,v 1.6 2012/11/27 10:13:16 pinkbyte Exp $
 
 EAPI="4"
 
@@ -29,7 +29,13 @@ RDEPEND=">=dev-libs/libxml2-2.7.3-r1
 DEPEND="${RDEPEND}
 	dev-libs/boost"
 
+DOCS=( AUTHORS ChangeLog README NEWS )
+
 src_prepare() {
+	# fix desktop file
+	sed -i  -e '/Categories/s/Application;//' \
+		-e '/Icon/s/.png//' \
+		"src/${PN}.desktop" || die "sed on src/${PN}.desktop failed"
 	# bug #440744
 	sed -i  -e 's/ -Wall -g -fexceptions//g' \
 		-e '/CXXFLAGS/s/CPPFLAGS/CXXFLAGS/' \
@@ -38,14 +44,11 @@ src_prepare() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
-
+	default
 	if use guidexml; then
 		insinto /usr/share/xmlcopyeditor/templates/
 		for TEMPLATE in "${WORKDIR}"/GuideXML-templates/*.xml; do
 			newins "${TEMPLATE}" "${TEMPLATE##*/}"
 		done
 	fi
-
-	dodoc AUTHORS ChangeLog README NEWS
 }
