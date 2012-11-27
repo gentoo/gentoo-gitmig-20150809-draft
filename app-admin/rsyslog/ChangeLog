@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/rsyslog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.86 2012/11/23 10:53:47 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.87 2012/11/27 11:45:32 ultrabug Exp $
+
+*rsyslog-7.2.2-r1 (27 Nov 2012)
+
+  27 Nov 2012; Ultrabug <ultrabug@gentoo.org> files/7-stable/rsyslog.logrotate,
+  -rsyslog-7.2.2.ebuild, +rsyslog-7.2.2-r1.ebuild:
+  Fix #444774 logrotate script thx to Robin Hill, fix #444754 curl dep thx to
+  Didier Cardoso
 
   23 Nov 2012; Ultrabug <ultrabug@gentoo.org> rsyslog-6.6.0.ebuild,
   rsyslog-7.2.2.ebuild:
