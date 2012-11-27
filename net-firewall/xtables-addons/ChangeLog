@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/xtables-addons
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/ChangeLog,v 1.28 2012/06/19 21:02:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/ChangeLog,v 1.29 2012/11/27 12:20:30 pinkbyte Exp $
+
+  27 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
+  Adding co-maintainer and proxy maintainers herd
 
   19 Jun 2012; Jeroen Roovers <jer@gentoo.org> xtables-addons-1.39.ebuild:
   Add missing RDEPEND on app-arch/unzip by Marcin Mirosław (bug #411855).
