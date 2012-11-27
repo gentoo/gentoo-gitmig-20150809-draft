@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/apr-util
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.174 2012/05/12 01:12:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.175 2012/11/27 18:42:12 pacho Exp $
+
+  27 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop apache herd as discussed in http://www.gossamer-
+  threads.com/lists/gentoo/dev/262834
 
   12 May 2012; Alexis Ballier <aballier@gentoo.org> apr-util-1.4.1.ebuild:
   keyword ~amd64-fbsd
@@ -634,4 +638,3 @@
   08 Jan 2005; Michael Stewart <vericgar@gentoo.org> +metadata.xml,
   +apr-util-0.9.5.ebuild:
   New package, required by apache
-
