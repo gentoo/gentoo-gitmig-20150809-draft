@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/msieve/msieve-1.50-r2.ebuild,v 1.1 2012/11/25 06:22:38 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/msieve/msieve-1.50-r2.ebuild,v 1.2 2012/11/27 17:42:19 mr_bones_ Exp $
 
 EAPI=4
 DESCRIPTION="A C library implementing a suite of algorithms to factor large integers"
@@ -20,7 +20,7 @@ DEPEND="ecm? ( sci-mathematics/gmp-ecm )
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	sed -i -e 's/-march=k8//' Makefile || die 
+	sed -i -e 's/-march=k8//' Makefile || die
 	sed -i -e 's/CC =/#CC =/' Makefile || die
 	sed -i -e 's/CFLAGS =/CFLAGS +=/' Makefile || die
 }
