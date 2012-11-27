@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/ladspa-cmt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.44 2012/11/27 11:58:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.45 2012/11/27 12:08:45 aballier Exp $
+
+*ladspa-cmt-1.16-r2 (27 Nov 2012)
+
+  27 Nov 2012; Alexis Ballier <aballier@gentoo.org> +ladspa-cmt-1.16-r2.ebuild,
+  +files/ladspa-cmt-1.16-sa.patch:
+  Fix strict aliasing warnings, bug #307563
 
 *ladspa-cmt-1.16-r1 (27 Nov 2012)
 
