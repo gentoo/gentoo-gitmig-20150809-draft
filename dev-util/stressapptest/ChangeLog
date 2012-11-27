@@ -1,0 +1,9 @@
+# ChangeLog for dev-util/stressapptest
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/stressapptest/ChangeLog,v 1.1 2012/11/27 06:46:52 vapier Exp $
+
+*stressapptest-1.0.4 (27 Nov 2012)
+
+  27 Nov 2012; Mike Frysinger <vapier@gentoo.org> +metadata.xml,
+  +stressapptest-1.0.4.ebuild:
+  Initial ebuild based on the one in sunrise #289320 by Martin Böcher.
