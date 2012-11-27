@@ -1,6 +1,12 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.757 2012/11/27 12:19:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.758 2012/11/27 21:32:06 floppym Exp $
+
+*chromium-24.0.1312.25 (27 Nov 2012)
+
+  27 Nov 2012; Mike Gilbert <floppym@gentoo.org> +chromium-24.0.1312.25.ebuild,
+  -chromium-24.0.1312.5.ebuild:
+  Beta channel bump. EAPI=5. Add slot-operator dep for v8.
 
   27 Nov 2012; Agostino Sarubbo <ago@gentoo.org> chromium-23.0.1271.91.ebuild:
   Stable for x86, wrt bug #444826

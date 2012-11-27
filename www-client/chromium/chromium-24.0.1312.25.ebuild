@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-24.0.1312.5.ebuild,v 1.1 2012/11/08 05:35:42 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-24.0.1312.25.ebuild,v 1.1 2012/11/27 21:32:06 floppym Exp $
 
-EAPI="4"
+EAPI="5"
 PYTHON_DEPEND="2:2.6"
 
 CHROMIUM_LANGS="am ar bg bn ca cs da de el en_GB es es_LA et fa fi fil fr gu he
@@ -26,7 +26,7 @@ RDEPEND="app-arch/bzip2
 		dev-libs/libgcrypt
 		>=net-print/cups-1.3.11
 	)
-	>=dev-lang/v8-3.14.5
+	>=dev-lang/v8-3.14.5:=
 	>=dev-libs/elfutils-0.149
 	dev-libs/expat
 	>=dev-libs/icu-49.1.1-r1
