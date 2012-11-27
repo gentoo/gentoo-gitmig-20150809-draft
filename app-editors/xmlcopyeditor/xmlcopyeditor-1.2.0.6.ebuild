@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xmlcopyeditor/xmlcopyeditor-1.2.0.6.ebuild,v 1.4 2012/08/05 22:44:03 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xmlcopyeditor/xmlcopyeditor-1.2.0.6.ebuild,v 1.5 2012/11/27 09:53:44 pinkbyte Exp $
 
 EAPI="4"
 
 WX_GTK_VER="2.8"
 MY_P=${P}-2
 
-inherit wxwidgets
+inherit autotools wxwidgets
 
 DESCRIPTION="XML Copy Editor is a fast, free, validating XML editor"
 HOMEPAGE="http://xml-copy-editor.sourceforge.net/"
@@ -28,6 +28,14 @@ RDEPEND=">=dev-libs/libxml2-2.7.3-r1
 	aqua? ( x11-libs/wxGTK:2.8[aqua] )"
 DEPEND="${RDEPEND}
 	dev-libs/boost"
+
+src_prepare() {
+	# bug #440744
+	sed -i  -e 's/ -Wall -g -fexceptions//g' \
+		-e '/CXXFLAGS/s/CPPFLAGS/CXXFLAGS/' \
+		configure.in || die 'sed on configure.in failed'
+	eautoreconf
+}
 
 src_install() {
 	emake DESTDIR="${D}" install

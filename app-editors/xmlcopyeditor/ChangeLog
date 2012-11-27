@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/xmlcopyeditor
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xmlcopyeditor/ChangeLog,v 1.22 2012/11/18 18:17:19 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xmlcopyeditor/ChangeLog,v 1.23 2012/11/27 09:53:44 pinkbyte Exp $
+
+  27 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> xmlcopyeditor-1.2.0.6.ebuild:
+  Respect CFLAGS/CXXFLAGS wrt bug #440744
 
   18 Nov 2012; Michael Palimaka <kensington@gentoo.org> metadata.xml:
   Update secondary maintainer wrt bug #440744.
