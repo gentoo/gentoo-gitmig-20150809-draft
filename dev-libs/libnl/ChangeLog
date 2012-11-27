@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libnl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.118 2012/11/26 19:10:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.119 2012/11/27 15:03:34 jer Exp $
+
+  27 Nov 2012; Jeroen Roovers <jer@gentoo.org> libnl-3.2.16.ebuild:
+  Fix building with USE=doc by Denys Duchier (bug #444878).
 
   26 Nov 2012; Jeroen Roovers <jer@gentoo.org> -libnl-3.2.15.ebuild:
   Old.
