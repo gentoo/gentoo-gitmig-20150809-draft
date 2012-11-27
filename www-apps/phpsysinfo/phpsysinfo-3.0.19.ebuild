@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpsysinfo/phpsysinfo-3.0.19.ebuild,v 1.6 2012/11/21 10:13:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpsysinfo/phpsysinfo-3.0.19.ebuild,v 1.7 2012/11/27 04:11:19 radhermit Exp $
 
 EAPI="4"
 
@@ -25,7 +25,7 @@ src_install() {
 	webapp_src_preinst
 
 	dodoc ChangeLog README*
-	rm -f ChangeLog COPYING README* || die
+	rm ChangeLog COPYING README* || die
 
 	insinto "${MY_HTDOCSDIR}"
 	doins -r .
