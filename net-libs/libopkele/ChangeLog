@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libopkele
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libopkele/ChangeLog,v 1.7 2012/10/12 06:49:13 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libopkele/ChangeLog,v 1.8 2012/11/27 19:00:53 pacho Exp $
+
+  27 Nov 2012; Pacho Ramos <pacho@gentoo.org> -libopkele-0.3.2.ebuild,
+  -libopkele-2.0.3.ebuild, metadata.xml:
+  Drop apache herd as discussed in http://www.gossamer-
+  threads.com/lists/gentoo/dev/262834 , drop old.
 
 *libopkele-2.0.4 (12 Oct 2012)
 
