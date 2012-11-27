@@ -1,8 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/amd64/use.mask,v 1.6 2012/03/15 12:44:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/amd64/use.mask,v 1.7 2012/11/27 02:03:24 zerochaos Exp $
 
-# Binary nvidia drivers are masked, USE flags must be too.
+# Rick Farina <zerochaos@gentoo.org> 26 Nov 2012
 video_cards_nvidia
-nvidia
-cuda
+# removing mask on nvidia use flag as it is used by monitoring tools
+# which may be desireable for cuda users
+#nvidia
+# adjusting use flag mask as nvidia-drivers are usable for cuda at least
+#cuda
