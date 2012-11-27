@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/relaxng-datatype
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/relaxng-datatype/ChangeLog,v 1.23 2012/09/29 18:01:37 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/relaxng-datatype/ChangeLog,v 1.24 2012/11/27 19:44:38 sera Exp $
+
+  27 Nov 2012; <sera@gentoo.org> relaxng-datatype-1.0-r1.ebuild:
+  Fix LICENSE - BSD - thanks to ulm in #444866
 
   29 Sep 2012; Fabian Groffen <grobian@gentoo.org>
   relaxng-datatype-1.0-r1.ebuild:
