@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_fastcgi_handler
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fastcgi_handler/ChangeLog,v 1.5 2012/11/27 19:17:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fastcgi_handler/ChangeLog,v 1.6 2012/11/27 20:22:31 neurogeek Exp $
+
+  27 Nov 2012; Jesus Rivero <neurogeek@gentoo.org> metadata.xml:
+  Added myself as maintainer
 
   27 Nov 2012; Pacho Ramos <pacho@gentoo.org> -mod_fastcgi_handler-0.2.ebuild,
   -mod_fastcgi_handler-0.4.ebuild, -mod_fastcgi_handler-0.5.ebuild,
