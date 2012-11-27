@@ -1,6 +1,20 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.363 2012/11/26 19:56:27 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.364 2012/11/27 05:43:54 tetromino Exp $
+
+*libxml2-2.9.0 (27 Nov 2012)
+
+  27 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +libxml2-2.9.0.ebuild, +files/libxml2-2.9.0-disable_static_modules.patch,
+  +files/libxml2-2.9.0-large-file-parse.patch,
+  +files/libxml2-2.9.0-nsclean.patch, +files/libxml2-2.9.0-rand_seed.patch,
+  +files/libxml2-2.9.0-streaming-validation.patch,
+  +files/libxml2-2.9.0-thread-alloc.patch,
+  +files/libxml2-2.9.0-thread-portability.patch:
+  Version bump featuring improved push parser and XPath evaluation (bug
+  #444290). Update to EAPI5, always install docs in a devhelp-compatible
+  location following current gnome team style guidelines, and run a more
+  complete test suite.
 
   26 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   libxml2-2.8.0-r3.ebuild:
