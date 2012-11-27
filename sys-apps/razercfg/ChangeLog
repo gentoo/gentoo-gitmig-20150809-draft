@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/razercfg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/razercfg/ChangeLog,v 1.11 2012/10/14 15:13:56 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/razercfg/ChangeLog,v 1.12 2012/11/27 13:57:14 joker Exp $
+
+*razercfg-0.19_p20121013 (27 Nov 2012)
+
+  27 Nov 2012; Christian Birchinger <joker@gentoo.org>
+  +razercfg-0.19_p20121013.ebuild:
+  Version bump with git snapshot that supports more mice such as the Imperator
 
   14 Oct 2012; Christian Birchinger <joker@gentoo.org> -razercfg-0.16.ebuild,
   -razercfg-0.16-r1.ebuild:
