@@ -1,6 +1,10 @@
 # ChangeLog for www-misc/mergelog
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/mergelog/ChangeLog,v 1.10 2009/09/23 21:09:16 patrick Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/mergelog/ChangeLog,v 1.11 2012/11/27 19:42:49 pacho Exp $
+
+  27 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop apache herd as discussed in http://www.gossamer-
+  threads.com/lists/gentoo/dev/262834
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> mergelog-4.5.ebuild:
   Remove virtual/libc
@@ -52,4 +56,3 @@
   23 Apr 2004; Chuck Short <zul@gentoo.org> mergelog-4.5.ebuild:
   New ebuild, initially written by Klas Klavsen <kl@vsen.dk> Modified by me.
   Closes #22747.
-

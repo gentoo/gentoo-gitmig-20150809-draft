@@ -1,6 +1,10 @@
 # ChangeLog for www-misc/log-toolkit
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/log-toolkit/ChangeLog,v 1.7 2008/02/02 13:19:15 hollow Exp $
+# Copyright 2000-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/log-toolkit/ChangeLog,v 1.8 2012/11/27 19:42:19 pacho Exp $
+
+  27 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop apache herd as discussed in http://www.gossamer-
+  threads.com/lists/gentoo/dev/262834
 
   02 Feb 2008; Benedikt Böhm <hollow@gentoo.org> metadata.xml,
   log-toolkit-0.9.6.ebuild:
@@ -42,4 +46,3 @@
   22 May 2004; Chuck Short <zul@gentoo.org> log-toolkit-0.9.6.ebuild:
   Initial version, ebuild initially written by Sven Wegener. <sven.wegener @
   stealer.net> Closes #51200.
-
