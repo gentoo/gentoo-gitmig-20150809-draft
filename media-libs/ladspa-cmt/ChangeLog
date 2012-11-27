@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ladspa-cmt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.42 2012/11/27 11:53:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.43 2012/11/27 11:55:17 aballier Exp $
+
+  27 Nov 2012; Alexis Ballier <aballier@gentoo.org> ladspa-cmt-1.16.ebuild:
+  none of the DEPEND are RDEPEND so set it empty
 
   27 Nov 2012; Alexis Ballier <aballier@gentoo.org> -ladspa-cmt-1.15.ebuild,
   -files/ladspa-cmt-darwin.patch:

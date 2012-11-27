@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ladspa-cmt-1.16.ebuild,v 1.13 2012/09/09 17:11:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ladspa-cmt-1.16.ebuild,v 1.14 2012/11/27 11:55:17 aballier Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -19,6 +19,7 @@ SLOT="0"
 
 DEPEND="media-libs/ladspa-sdk
 	>=sys-apps/sed-4"
+RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
