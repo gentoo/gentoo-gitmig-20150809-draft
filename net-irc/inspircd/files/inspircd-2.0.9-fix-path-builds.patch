@@ -64,7 +64,7 @@ diff -Nur a/make/template/main.mk b/make/template/main.mk
  BUILDPATH = @BUILD_DIR@
  SOCKETENGINE = @SOCKETENGINE@
 -CXXFLAGS = -pipe -fPIC -DPIC
-+MYCXXFLAGS = -pipe -fPIC -DPIC
++MYCXXFLAGS = -fPIC -DPIC
  LDLIBS = -pthread -lstdc++
  LDFLAGS = 
  CORELDFLAGS = -rdynamic -L. $(LDFLAGS)
@@ -76,7 +76,7 @@ diff -Nur a/make/template/main.mk b/make/template/main.mk
 +  MYCXXFLAGS += -Wshadow
  @ELSE
 -  CXXFLAGS += -pedantic -Woverloaded-virtual -Wshadow -Wformat=2 -Wmissing-format-attribute -Wall
-+  MYCXXFLAGS += -pedantic -Woverloaded-virtual -Wshadow -Wformat=2 -Wmissing-format-attribute -Wall
++  MYCXXFLAGS += -pedantic -Woverloaded-virtual -Wshadow -Wformat=2 -Wmissing-format-attribute
  @ENDIF
  
  
