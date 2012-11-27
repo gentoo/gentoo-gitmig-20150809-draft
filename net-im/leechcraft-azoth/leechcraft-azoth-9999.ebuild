@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/leechcraft-azoth/leechcraft-azoth-9999.ebuild,v 1.17 2012/11/10 17:23:03 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/leechcraft-azoth/leechcraft-azoth-9999.ebuild,v 1.18 2012/11/27 13:57:14 pinkbyte Exp $
 
 EAPI="4"
 
@@ -12,8 +12,8 @@ SLOT="0"
 KEYWORDS=""
 IUSE="debug astrality +acetamide +adiumstyles +autoidler +autopaste +birthdaynotifier
 		+chathistory +crypt	+depester +embedmedia +herbicide +hili +isterique
-		+juick +keeso +lastseen	+metacontacts media +modnok +nativeemoticons
-		+otroid +p100q +rosenthal shx +standardstyles +xoox +xtazy +zheet"
+		+juick +keeso +lastseen	+metacontacts media +latex +nativeemoticons
+		+otroid +p100q +spell shx +standardstyles +xmpp +xtazy +zheet"
 
 DEPEND="~net-misc/leechcraft-core-${PV}
 		x11-libs/qt-webkit:4
@@ -22,8 +22,8 @@ DEPEND="~net-misc/leechcraft-core-${PV}
 		astrality? ( net-libs/telepathy-qt )
 		otroid? ( net-libs/libotr )
 		media? ( x11-libs/qt-multimedia:4 )
-		rosenthal? ( app-text/hunspell )
-		xoox? ( =net-libs/qxmpp-9999 media-libs/speex )
+		spell? ( app-text/hunspell )
+		xmpp? ( =net-libs/qxmpp-9999 media-libs/speex )
 		xtazy? ( x11-libs/qt-dbus:4 )
 		crypt? ( app-crypt/qca app-crypt/qca-gnupg )
 		zheet? ( net-libs/libmsn )"
@@ -32,7 +32,7 @@ RDEPEND="${DEPEND}
 		net-im/telepathy-mission-control
 		net-voip/telepathy-haze
 	)
-	modnok? (
+	latex? (
 		|| (
 			media-gfx/imagemagick
 			media-gfx/graphicsmagick[imagemagick]
@@ -62,14 +62,14 @@ src_configure() {
 		$(cmake-utils_use_enable lastseen AZOTH_LASTSEEN)
 		$(cmake-utils_use_enable metacontacts AZOTH_LASTSEEN)
 		$(cmake-utils_use_enable media MEDIACALLS)
-		$(cmake-utils_use_enable modnok AZOTH_MODNOK)
+		$(cmake-utils_use_enable latex AZOTH_MODNOK)
 		$(cmake-utils_use_enable nativeemoticons AZOTH_NATIVEEMOTICONS)
 		$(cmake-utils_use_enable otroid AZOTH_OTROID)
 		$(cmake-utils_use_enable p100q AZOTH_P100Q)
-		$(cmake-utils_use_enable rosenthal AZOTH_ROSENTHAL)
+		$(cmake-utils_use_enable spell AZOTH_ROSENTHAL)
 		$(cmake-utils_use_enable shx AZOTH_SHX)
 		$(cmake-utils_use_enable standardstyles AZOTH_STANDARDSTYLES)
-		$(cmake-utils_use_enable xoox AZOTH_XOOX)
+		$(cmake-utils_use_enable xmpp AZOTH_XOOX)
 		$(cmake-utils_use_enable xtazy AZOTH_XTAZY)
 		$(cmake-utils_use_enable zheet AZOTH_ZHEET)
 	)
@@ -78,7 +78,7 @@ src_configure() {
 }
 
 pkg_postinst() {
-	if use rosenthal; then
+	if use spell; then
 		elog "You have enabled the Azoth Rosenthal plugin for"
 		elog "spellchecking. It uses Hunspell/Myspell dictionaries,"
 		elog "so install the ones for languages you use to enable"
