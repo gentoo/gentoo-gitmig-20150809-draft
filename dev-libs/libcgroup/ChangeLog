@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libcgroup
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcgroup/ChangeLog,v 1.5 2012/11/26 18:45:24 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcgroup/ChangeLog,v 1.6 2012/11/27 07:46:25 pinkbyte Exp $
+
+  27 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> -libcgroup-0.37-r2.ebuild,
+  -files/libcgroup-0.37-wildcard-substitutions.patch:
+  Drop vulnerable versions, wrt bug #372985
 
 *libcgroup-0.38 (26 Nov 2012)
 *libcgroup-0.39_rc1 (26 Nov 2012)
