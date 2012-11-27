@@ -1,6 +1,10 @@
 # ChangeLog for app-text/rnv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rnv/ChangeLog,v 1.18 2012/11/20 20:46:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rnv/ChangeLog,v 1.19 2012/11/27 11:08:45 pinkbyte Exp $
+
+  27 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> -rnv-1.7.8-r2.ebuild,
+  -rnv-1.7.10-r1.ebuild, rnv-1.7.11.ebuild:
+  Fix direct AR calls, wrt bug #444042, drop old versions
 
   20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> rnv-1.7.11.ebuild:
   Stable for x86, wrt bug #441118
