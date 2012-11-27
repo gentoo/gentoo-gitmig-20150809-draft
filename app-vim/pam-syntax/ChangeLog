@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/pam-syntax
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/pam-syntax/ChangeLog,v 1.23 2012/04/26 16:58:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/pam-syntax/ChangeLog,v 1.24 2012/11/27 22:36:47 ulm Exp $
+
+  27 Nov 2012; Ulrich Müller <ulm@gentoo.org> pam-syntax-20060424.ebuild:
+  Fix LICENSE, distributed under the same terms as Vim itself, bug 444968.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> pam-syntax-20060424.ebuild:
   keyword ~amd64-fbsd

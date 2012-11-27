@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/surround
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/surround/ChangeLog,v 1.8 2012/10/07 10:25:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/surround/ChangeLog,v 1.9 2012/11/27 22:38:56 ulm Exp $
+
+  27 Nov 2012; Ulrich Müller <ulm@gentoo.org> surround-1.90.ebuild:
+  Fix LICENSE, distributed under the same terms as Vim itself, bug 444968.
 
   07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, #274113
