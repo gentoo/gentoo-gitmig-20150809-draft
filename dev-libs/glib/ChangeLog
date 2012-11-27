@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.549 2012/11/10 05:00:59 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.550 2012/11/27 07:33:08 tetromino Exp $
+
+*glib-2.34.3 (27 Nov 2012)
+
+  27 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org> -glib-2.34.1.ebuild,
+  +glib-2.34.3.ebuild:
+  Version bump with some minor fixes. Drop old.
 
 *glib-2.34.2 (10 Nov 2012)
 
