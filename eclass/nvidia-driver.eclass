@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/nvidia-driver.eclass,v 1.17 2012/11/18 06:35:06 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/nvidia-driver.eclass,v 1.18 2012/11/27 17:39:48 jer Exp $
 
 # @ECLASS: nvidia-driver.eclass
 # @MAINTAINER:
@@ -125,7 +125,6 @@ nvidia-driver-check-warning() {
 			ewarn
 			ewarn "For more information please read:"
 			ewarn "http://www.nvidia.com/object/IO_32667.html"
-			ebeep 5
 		fi
 	fi
 }
