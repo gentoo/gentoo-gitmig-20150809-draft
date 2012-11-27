@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/caps-plugins
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/caps-plugins/ChangeLog,v 1.31 2012/11/26 23:58:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/caps-plugins/ChangeLog,v 1.32 2012/11/27 00:04:49 aballier Exp $
+
+*caps-plugins-0.4.5-r1 (27 Nov 2012)
+
+  27 Nov 2012; Alexis Ballier <aballier@gentoo.org>
+  +caps-plugins-0.4.5-r1.ebuild,
+  +files/caps-plugins-0.4.5-double-free-corruption.patch:
+  Fix double free by Vinycius Maia, bug #418241
 
   26 Nov 2012; Alexis Ballier <aballier@gentoo.org> caps-plugins-0.4.4.ebuild,
   caps-plugins-0.4.5.ebuild, metadata.xml:
