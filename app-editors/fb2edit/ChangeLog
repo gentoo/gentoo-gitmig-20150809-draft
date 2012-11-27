@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/fb2edit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fb2edit/ChangeLog,v 1.1 2012/11/02 16:58:01 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fb2edit/ChangeLog,v 1.2 2012/11/27 13:40:08 pinkbyte Exp $
+
+  27 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> fb2edit-0.0.7.ebuild:
+  QA: Add slots to all of Qt dependencies. Thanks to Nikoli for discovering
+  this issue
 
 *fb2edit-0.0.7 (02 Nov 2012)
 
