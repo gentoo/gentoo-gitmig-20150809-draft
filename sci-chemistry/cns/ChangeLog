@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/cns
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/ChangeLog,v 1.52 2012/10/19 09:43:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/ChangeLog,v 1.53 2012/11/27 13:17:37 jlec Exp $
+
+  27 Nov 2012; Justin Lecher <jlec@gentoo.org> cns-1.2.1-r7.ebuild,
+  cns-1.3_p7.ebuild:
+  Drop default value of FCFLAGS as it is in the profile these days
 
   19 Oct 2012; Justin Lecher <jlec@gentoo.org> cns-1.2.1-r7.ebuild,
   cns-1.3_p7.ebuild:

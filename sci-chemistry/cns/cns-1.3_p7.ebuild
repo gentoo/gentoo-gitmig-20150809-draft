@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.3_p7.ebuild,v 1.2 2012/10/19 09:43:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.3_p7.ebuild,v 1.3 2012/11/27 13:17:37 jlec Exp $
 
 EAPI=3
 
@@ -144,7 +144,7 @@ src_compile() {
 		CCFLAGS="${CFLAGS} -DCNS_ARCH_TYPE_\$(CNS_ARCH_TYPE) \$(EXT_CCFLAGS)" \
 		CXXFLAGS="${CXXFLAGS} -DCNS_ARCH_TYPE_\$(CNS_ARCH_TYPE) \$(EXT_CCFLAGS)" \
 		LDFLAGS="${LDFLAGS}" \
-		F77OPT="${FFLAGS:- -O2} ${MALIGN}" \
+		F77OPT="${FCFLAGS} ${MALIGN}" \
 		F77STD="${GLOBALS}" \
 		OMPLIB="${OMPLIB}" \
 		compiler="${COMP}" \
