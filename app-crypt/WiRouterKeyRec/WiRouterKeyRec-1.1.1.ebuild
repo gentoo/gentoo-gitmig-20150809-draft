@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/WiRouterKeyRec/WiRouterKeyRec-1.1.1.ebuild,v 1.2 2012/02/06 13:36:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/WiRouterKeyRec/WiRouterKeyRec-1.1.1.ebuild,v 1.3 2012/11/27 13:53:25 ago Exp $
 
-EAPI=4
+EAPI=5
 
 inherit toolchain-funcs
 
@@ -24,7 +24,7 @@ RDEPEND=""
 S=${WORKDIR}/${MY_P}
 
 src_prepare () {
-	sed -i "s:wirouterkeyrec:WiRouterKeyRec:" src/*.h || die
+	sed -i "s:wirouterkeyrec:${PN}:" src/*.h || die
 }
 
 src_compile () {
@@ -37,7 +37,5 @@ src_compile () {
 src_install () {
 	newbin build/wirouterkeyrec ${PN}
 	insinto /etc/${PN}
-	doins \
-		"config/agpf_config.lst" \
-		"config/teletu_config.lst"
+	doins config/agpf_config.lst config/teletu_config.lst
 }
