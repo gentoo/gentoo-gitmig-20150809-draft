@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7198 2012/11/27 05:41:27 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7199 2012/11/27 10:07:11 radhermit Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Nov 2012; Tim Harder <radhermit@gentoo.org> package.mask:
+  Mask =media-libs/libsfml-2* for testing.
 
   27 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.mask:
   Add libxml2-2.9.x to gnome-3.6 mask (bug #444290).
