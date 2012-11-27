@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libsfml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsfml/ChangeLog,v 1.8 2012/06/07 20:18:23 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsfml/ChangeLog,v 1.9 2012/11/27 10:08:59 radhermit Exp $
+
+*libsfml-2.0_pre20121126 (27 Nov 2012)
+
+  27 Nov 2012; Tim Harder <radhermit@gentoo.org>
+  +libsfml-2.0_pre20121126.ebuild,
+  +files/libsfml-2.0_pre20121126-no-docs.patch,
+  +files/libsfml-2.0_pre20121126-shared-glew.patch:
+  Version bump to snapshot (bug #442604 by pinkbyte).
 
   07 Jun 2012; Tim Harder <radhermit@gentoo.org> libsfml-1.6-r1.ebuild,
   +files/libsfml-1.6-gcc47.patch:
