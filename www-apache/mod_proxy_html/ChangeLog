@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/mod_proxy_html
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_proxy_html/ChangeLog,v 1.17 2012/05/21 09:29:31 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_proxy_html/ChangeLog,v 1.18 2012/11/27 19:28:08 pacho Exp $
+
+  27 Nov 2012; Pacho Ramos <pacho@gentoo.org> -mod_proxy_html-3.0.0.ebuild,
+  metadata.xml:
+  Drop apache herd as discussed in http://www.gossamer-
+  threads.com/lists/gentoo/dev/262834
 
   21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   mod_proxy_html-3.0.1.ebuild:
@@ -80,4 +85,3 @@
   10 Jan 2005; Benedikt Boehm <hollow@gentoo.org>
   +files/27_mod_proxy_html.conf, +mod_proxy_html-2.4.3.ebuild:
   Apache herd package refresh. Initial revision
-

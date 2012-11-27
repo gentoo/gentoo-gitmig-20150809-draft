@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/mod_ldap_userdir
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ldap_userdir/ChangeLog,v 1.14 2012/02/22 22:05:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ldap_userdir/ChangeLog,v 1.15 2012/11/27 19:21:21 pacho Exp $
+
+  27 Nov 2012; Pacho Ramos <pacho@gentoo.org> -mod_ldap_userdir-1.1.12.ebuild,
+  -mod_ldap_userdir-1.1.5.ebuild, metadata.xml:
+  Drop apache herd as discussed in http://www.gossamer-
+  threads.com/lists/gentoo/dev/262834
 
   22 Feb 2012; Brent Baude <ranger@gentoo.org> mod_ldap_userdir-1.1.16.ebuild:
   Marking mod_ldap_userdir-1.1.16 ppc for bug 397241
@@ -129,4 +134,3 @@
   files/47_mod_ldap_userdir.conf:
   Initial ebuild. Originally written by Patrick Goldmann < scappe @ web.de>.
   Cloes #32436.
-

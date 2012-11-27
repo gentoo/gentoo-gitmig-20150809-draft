@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_python
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_python/ChangeLog,v 1.21 2012/10/16 03:34:38 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_python/ChangeLog,v 1.22 2012/11/27 19:28:36 pacho Exp $
+
+  27 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop apache herd as discussed in http://www.gossamer-
+  threads.com/lists/gentoo/dev/262834
 
   16 Oct 2012; Patrick Lauer <patrick@gentoo.org> mod_python-3.3.1-r1.ebuild:
   Restricting to apache 2.2

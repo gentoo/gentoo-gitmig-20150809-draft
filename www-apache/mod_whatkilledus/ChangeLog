@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_whatkilledus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_whatkilledus/ChangeLog,v 1.5 2012/06/17 16:24:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_whatkilledus/ChangeLog,v 1.6 2012/11/27 19:37:08 pacho Exp $
+
+  27 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop apache herd as discussed in http://www.gossamer-
+  threads.com/lists/gentoo/dev/262834
 
 *mod_whatkilledus-0.0.1-r1 (17 Jun 2012)
 
@@ -26,4 +30,3 @@
   +files/10_mod_whatkilledus.conf, +files/gen_test_char.c, +metadata.xml,
   +mod_whatkilledus-0.0.1.ebuild:
   initial version
-

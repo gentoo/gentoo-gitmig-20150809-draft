@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_depends
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_depends/ChangeLog,v 1.5 2008/01/31 17:28:02 hollow Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_depends/ChangeLog,v 1.6 2012/11/27 19:13:26 pacho Exp $
+
+  27 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop apache herd as discussed in http://www.gossamer-
+  threads.com/lists/gentoo/dev/262834
 
   31 Jan 2008; Benedikt Böhm <hollow@gentoo.org>
   files/0.7/09_mod_depends.conf, metadata.xml,
@@ -20,4 +24,3 @@
 
   04 Feb 2007; Christian Parpart <trapni@gentoo.org> ChangeLog:
   install missing header files
-

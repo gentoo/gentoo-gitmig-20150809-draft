@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_ruby
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ruby/ChangeLog,v 1.19 2012/10/16 15:15:51 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ruby/ChangeLog,v 1.20 2012/11/27 19:30:18 pacho Exp $
+
+  27 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop apache herd as discussed in http://www.gossamer-
+  threads.com/lists/gentoo/dev/262834
 
   16 Oct 2012; Hans de Graaff <graaff@gentoo.org> mod_ruby-1.3.0.ebuild:
   Force ruby18 since ruby19 does not work, fixes bug 438554.

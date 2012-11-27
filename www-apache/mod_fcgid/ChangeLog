@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_fcgid
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/ChangeLog,v 1.53 2012/06/08 17:43:03 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/ChangeLog,v 1.54 2012/11/27 19:17:47 pacho Exp $
+
+  27 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop apache herd as discussed in http://www.gossamer-
+  threads.com/lists/gentoo/dev/262834
 
   08 Jun 2012; Brent Baude <ranger@gentoo.org> mod_fcgid-2.3.7.ebuild:
   Marking mod_fcgid-2.3.7 ppc for bug 409373
@@ -261,4 +265,3 @@
   14 Apr 2005; Lance Albertson <ramereth@gentoo.org>
   +files/20_mod_fcgid.conf, +metadata.xml, +mod_fcgid-1.05.ebuild:
   New ebuild from neysx, closes #79313
-

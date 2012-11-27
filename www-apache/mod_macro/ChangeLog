@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/mod_macro
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_macro/ChangeLog,v 1.20 2012/04/20 08:53:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_macro/ChangeLog,v 1.21 2012/11/27 19:24:48 pacho Exp $
+
+  27 Nov 2012; Pacho Ramos <pacho@gentoo.org> -mod_macro-1.1.11.ebuild,
+  metadata.xml:
+  Drop apache herd as discussed in http://www.gossamer-
+  threads.com/lists/gentoo/dev/262834
 
 *mod_macro-1.2.1 (20 Apr 2012)
 
@@ -74,4 +79,3 @@
   10 Jan 2005; Benedikt Boehm <hollow@gentoo.org> +files/27_mod_macro.conf,
   +mod_macro-1.1.6.ebuild:
   Apache herd package refresh (New ebuild)
-

@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/mod_auth_tkt
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_tkt/ChangeLog,v 1.5 2009/09/17 07:45:27 hollow Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_tkt/ChangeLog,v 1.6 2012/11/27 19:06:34 pacho Exp $
+
+  27 Nov 2012; Pacho Ramos <pacho@gentoo.org> -mod_auth_tkt-2.0.0_rc2.ebuild,
+  metadata.xml:
+  Drop apache herd as discussed in http://www.gossamer-
+  threads.com/lists/gentoo/dev/262834
 
 *mod_auth_tkt-2.1.0 (17 Sep 2009)
 
@@ -26,4 +31,3 @@
   +files/10_mod_auth_tkt.conf, +metadata.xml,
   +mod_auth_tkt-2.0.0_rc2.ebuild:
   initial version, #180822
-

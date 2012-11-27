@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_security
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.89 2012/11/24 22:46:11 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.90 2012/11/27 19:31:31 pacho Exp $
+
+  27 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop apache herd as discussed in http://www.gossamer-
+  threads.com/lists/gentoo/dev/262834
 
   24 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
   mod_security-2.7.0.ebuild:

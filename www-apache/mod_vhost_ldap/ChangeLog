@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_vhost_ldap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_vhost_ldap/ChangeLog,v 1.9 2012/03/18 18:48:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_vhost_ldap/ChangeLog,v 1.10 2012/11/27 19:35:25 pacho Exp $
+
+  27 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop apache herd as discussed in http://www.gossamer-
+  threads.com/lists/gentoo/dev/262834
 
   18 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #118003.
@@ -44,4 +48,3 @@
   09 Feb 2006; Markus Ullmann <jokey@gentoo.org>
   +files/99_mod_vhost_ldap.conf, +metadata.xml, +mod_vhost_ldap-1.0.ebuild:
   Initial commit
-

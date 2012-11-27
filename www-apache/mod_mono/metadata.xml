@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>apache</herd>
 	<herd>dotnet</herd>
 	<longdescription lang="en">
 		The module allows Apache (http://httpd.apache.org) to serve ASP.NET

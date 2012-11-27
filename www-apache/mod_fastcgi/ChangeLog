@@ -1,6 +1,12 @@
 # ChangeLog for www-apache/mod_fastcgi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fastcgi/ChangeLog,v 1.13 2012/10/16 02:52:38 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fastcgi/ChangeLog,v 1.14 2012/11/27 19:16:38 pacho Exp $
+
+  27 Nov 2012; Pacho Ramos <pacho@gentoo.org> -mod_fastcgi-2.4.6-r1.ebuild,
+  -mod_fastcgi-2.4.6.ebuild, -mod_fastcgi-2.4.7_pre0811090952.ebuild,
+  metadata.xml:
+  Drop apache herd as discussed in http://www.gossamer-
+  threads.com/lists/gentoo/dev/262834
 
   16 Oct 2012; Patrick Lauer <patrick@gentoo.org> mod_fastcgi-2.4.6-r1.ebuild,
   mod_fastcgi-2.4.6.ebuild, mod_fastcgi-2.4.7_pre0811090952.ebuild,

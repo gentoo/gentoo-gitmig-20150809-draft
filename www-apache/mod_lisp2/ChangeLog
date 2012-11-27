@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_lisp2
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_lisp2/ChangeLog,v 1.8 2009/09/18 13:42:51 hollow Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_lisp2/ChangeLog,v 1.9 2012/11/27 19:22:08 pacho Exp $
+
+  27 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop apache herd as discussed in http://www.gossamer-
+  threads.com/lists/gentoo/dev/262834
 
   18 Sep 2009; Benedikt Böhm <hollow@gentoo.org>
   -files/1.2-content-length.patch, -mod_lisp2-1.2.ebuild,
@@ -40,4 +44,3 @@
   +mod_lisp2-1.2.ebuild:
   Initial port. Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>;
   Partially resolves Bug #116672.
-
