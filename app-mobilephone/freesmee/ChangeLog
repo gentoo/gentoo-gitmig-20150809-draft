@@ -1,6 +1,12 @@
-# ChangeLog for app-mobilephone/jacksms-desktop
+# ChangeLog for app-mobilephone/freesmee
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/freesmee/ChangeLog,v 1.8 2012/08/09 17:30:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/freesmee/ChangeLog,v 1.9 2012/11/27 16:06:46 ago Exp $
+
+*freesmee-0.81 (27 Nov 2012)
+
+  27 Nov 2012; Agostino Sarubbo <ago@gentoo.org> +files/freesmee.desktop,
+  +freesmee-0.81.ebuild:
+  Version bump to 0.81, EAPI 5, fix .desktop validation (#444958)
 
 *freesmee-0.7-r3 (09 Aug 2012)
 
@@ -39,4 +45,3 @@
   +jacksms-desktop-2.0_beta4.ebuild, +metadata.xml:
   Moved from sunrise overlay. Thanks to Laurento Frittella (mrfree)
   <laurento.frittella@gmail.com>. He will proxy it. Bug #338543
-
