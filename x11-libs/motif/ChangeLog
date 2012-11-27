@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/motif
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/ChangeLog,v 1.7 2012/11/20 20:41:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/ChangeLog,v 1.8 2012/11/27 15:37:17 jer Exp $
+
+  27 Nov 2012; Jeroen Roovers <jer@gentoo.org> motif-2.3.4.ebuild:
+  Stable for HPPA (bug #443610).
 
   20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> motif-2.3.4.ebuild:
   Stable for x86, wrt bug #443610
