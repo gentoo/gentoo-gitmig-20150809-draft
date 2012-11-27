@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/bbweather
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbweather/ChangeLog,v 1.34 2012/11/26 12:29:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbweather/ChangeLog,v 1.35 2012/11/27 16:03:45 jer Exp $
+
+  27 Nov 2012; Jeroen Roovers <jer@gentoo.org> bbweather-0.6.3-r1.ebuild:
+  Stable for HPPA (bug #397261).
 
 *bbweather-0.6.3-r1 (26 Nov 2012)
 
