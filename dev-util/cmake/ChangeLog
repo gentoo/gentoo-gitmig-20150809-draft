@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.227 2012/11/18 13:40:15 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.228 2012/11/27 22:07:55 creffett Exp $
+
+*cmake-2.8.10.2 (27 Nov 2012)
+
+  27 Nov 2012; Chris Reffett <creffett@gentoo.org> +cmake-2.8.10.2.ebuild,
+  -cmake-2.8.10.1.ebuild:
+  Version bump to 2.8.10.2, fixes bug 444906. Remove old.
 
 *cmake-2.8.10.1 (18 Nov 2012)
 
