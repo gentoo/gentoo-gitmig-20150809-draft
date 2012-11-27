@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/snobol/snobol-1.1.ebuild,v 1.5 2012/10/04 15:32:51 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/snobol/snobol-1.1.ebuild,v 1.6 2012/11/27 19:41:40 ulm Exp $
 
 EAPI=4
 
@@ -10,13 +10,16 @@ MY_PN="snobol4"
 MY_P="${MY_PN}-${PV}"
 #SRC_URI="ftp://ftp.snobol4.org/snobol4/${MY_P}.tar.gz ftp://ftp.ultimate.com/snobol/${MY_P}.tar.gz"
 SRC_URI="mirror://snobol4/${MY_P}.tar.gz"
-LICENSE="as-is"
+
+LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
+
 DEPEND="sys-devel/gcc
 		sys-devel/m4"
 RDEPEND=""
+
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
