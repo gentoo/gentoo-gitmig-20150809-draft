@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/posh/posh-0.10.2.ebuild,v 1.1 2012/06/19 14:25:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/posh/posh-0.10.2.ebuild,v 1.2 2012/11/27 18:01:45 mgorny Exp $
 
 EAPI=3
 inherit autotools-utils
@@ -15,6 +15,10 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RESTRICT=test
+
+PATCHES=(
+	"${FILESDIR}"/${PN}-glibc-2.16.patch
+)
 
 src_configure() {
 	myeconfargs=(

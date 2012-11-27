@@ -1,6 +1,12 @@
 # ChangeLog for app-shells/posh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/posh/ChangeLog,v 1.20 2012/06/19 14:25:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/posh/ChangeLog,v 1.21 2012/11/27 18:01:45 mgorny Exp $
+
+*posh-0.11 (27 Nov 2012)
+
+  27 Nov 2012; Michał Górny <mgorny@gentoo.org> +files/posh-glibc-2.16.patch,
+  +posh-0.11.ebuild, -posh-0.10.1.ebuild, posh-0.10.2.ebuild:
+  Version bump. Backport a patch for glibc-2.16 compatibility (bug #432618).
 
 *posh-0.10.2 (19 Jun 2012)
 
