@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.18.ebuild,v 1.3 2012/10/25 08:00:44 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.18.ebuild,v 1.4 2012/11/27 11:10:38 olemarkus Exp $
 
 EAPI=4
 
@@ -816,7 +816,7 @@ php_install_ini() {
 }
 
 src_test() {
-	vecho ">>> Test phase [test]: ${CATEGORY}/${PF}"
+	echo ">>> Test phase [test]: ${CATEGORY}/${PF}"
 	PHP_BIN="${WORKDIR}/sapis-build/cli/sapi/cli/php"
 	if [[ ! -x "${PHP_BIN}" ]] ; then
 		ewarn "Test phase requires USE=cli, skipping"

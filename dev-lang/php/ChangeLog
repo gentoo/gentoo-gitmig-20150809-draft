@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.644 2012/11/23 16:44:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.645 2012/11/27 11:10:38 olemarkus Exp $
+
+  27 Nov 2012; Ole Markus With <olemarkus@gentoo.org>
+  files/eblits/src_test-v1.eblit, php-5.3.18.ebuild, php-5.3.19.ebuild,
+  php-5.4.8.ebuild, php-5.4.9.ebuild, php-5.5.0_alpha1.ebuild:
+  Fixed ancient typo in all ebuilds. Bug #444916
 
   15 Nov 2012; Ole Markus With <olemarkus@gentoo.org> -php-5.3.16-r1.ebuild,
   -php-5.3.16-r2.ebuild, -php-5.3.17.ebuild, -php-5.4.6-r2.ebuild,
