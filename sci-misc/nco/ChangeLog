@@ -1,6 +1,11 @@
 # ChangeLog for sci-misc/nco
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/nco/ChangeLog,v 1.19 2011/12/30 04:10:40 bicatali Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/nco/ChangeLog,v 1.20 2012/11/27 22:51:10 bicatali Exp $
+
+*nco-4.2.3 (27 Nov 2012)
+
+  27 Nov 2012; Sébastien Fabbro <bicatali@gentoo.org> +nco-4.2.3.ebuild:
+  Version bump
 
 *nco-4.0.8 (30 Dec 2011)
 
