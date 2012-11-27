@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/skunkweb
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/ChangeLog,v 1.22 2010/04/22 18:42:52 arfrever Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/ChangeLog,v 1.23 2012/11/27 19:43:20 pacho Exp $
+
+  27 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop apache herd as discussed in http://www.gossamer-
+  threads.com/lists/gentoo/dev/262834
 
   22 Apr 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   skunkweb-3.4.4.ebuild:
@@ -136,4 +140,3 @@
   24 Oct 2003; Rob Cakebread <pythonhead@gentoo.org> metadata.xml,
   skunkweb-3.4_beta5.ebuild:
   Initial commit. Thank you Jacob Smullyan <smulloni@smullyan.org> (Bug #26450)
-
