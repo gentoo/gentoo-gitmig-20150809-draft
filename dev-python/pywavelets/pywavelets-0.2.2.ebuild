@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pywavelets/pywavelets-0.2.2.ebuild,v 1.3 2012/10/17 12:17:50 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pywavelets/pywavelets-0.2.2.ebuild,v 1.4 2012/11/27 11:30:52 idella4 Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
@@ -23,7 +23,8 @@ IUSE="doc examples test"
 
 DEPEND="app-arch/unzip
 	dev-python/cython
-	test? ( dev-python/numpy )"
+	test? ( dev-python/numpy )
+	doc? ( dev-python/sphinx )"
 RDEPEND="dev-python/numpy"
 
 S="${WORKDIR}/${MY_P}"
@@ -37,6 +38,11 @@ src_test() {
 			"$(PYTHON)" tests/test_perfect_reconstruction.py
 	}
 	python_execute_function testing
+}
+
+src_compile() {
+	distutils_src_compile
+	use doc && emake -C doc html || die "emake html failed"
 }
 
 src_install () {
