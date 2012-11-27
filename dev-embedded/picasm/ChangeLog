@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/picasm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/picasm/ChangeLog,v 1.12 2012/02/17 07:46:52 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/picasm/ChangeLog,v 1.13 2012/11/27 04:20:06 radhermit Exp $
+
+  27 Nov 2012; Tim Harder <radhermit@gentoo.org> picasm-1.14.ebuild:
+  Fix LICENSE (bug #444854 by ulm).
 
   17 Feb 2012; Tim Harder <radhermit@gentoo.org> picasm-1.14.ebuild:
   Die on sed failure.
