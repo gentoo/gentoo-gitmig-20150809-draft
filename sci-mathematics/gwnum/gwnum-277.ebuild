@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gwnum/gwnum-277.ebuild,v 1.1 2012/11/28 08:09:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gwnum/gwnum-277.ebuild,v 1.2 2012/11/28 08:19:45 patrick Exp $
 
 EAPI=4
 DESCRIPTION="George Woltman's GWNUM library"
 HOMEPAGE="http://www.mersenne.org/freesoft/"
 # Sourcecode split out from prime95, we don't need the full lib
-SRC_URI="http://dev.gentooexperimental.org/~dreeevil/${P}.tar.bz2"
+SRC_URI="http://gentooexperimental.org/~patrick/${P}.tar.bz2"
 
 inherit eutils
 
