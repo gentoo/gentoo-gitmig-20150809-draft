@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fortran-2.eclass,v 1.15 2012/11/28 12:11:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fortran-2.eclass,v 1.16 2012/11/28 13:03:30 jlec Exp $
 
 # @ECLASS: fortran-2.eclass
 # @MAINTAINER:
@@ -72,11 +72,11 @@ for _f_use in ${FORTRAN_NEEDED}; do
 done
 RDEPEND="${DEPEND}"
 
-# @FUNCTION: _write_testsuite
+# @FUNCTION: _fortran_write_testsuite
 # @INTERNAL
 # @DESCRIPTION:
 # writes fortran test code
-_write_testsuite() {
+_fortran_write_testsuite() {
 	local filebase=${T}/test-fortran
 
 	# f77 code
@@ -96,23 +96,24 @@ _write_testsuite() {
 	EOF
 }
 
-# @FUNCTION: _compile_test
+# @FUNCTION: _fortran_compile_test
+# @USAGE: <compiler> [dialect]
 # @INTERNAL
 # @DESCRIPTION:
 # Takes fortran compiler as first argument and dialect as second.
 # Checks whether the passed fortran compiler speaks the fortran dialect
-_compile_test() {
+_fortran_compile_test() {
 	local filebase=${T}/test-fortran
 	local fcomp=${1}
 	local fdia=${2}
 	local fcode=${filebase}.f${fdia}
 	local ret
 
-	[[ $# -eq 0 ]] && die "_compile_test() needs at least one argument"
+	[[ $# -lt 1 ]] && die "_fortran_compile_test() needs at least one arguments"
 
-	[[ -f ${fcode} ]] || _write_testsuite
+	[[ -f ${fcode} ]] || _fortran_write_testsuite
 
-	${fcomp} "${fcode}" -o "${fcode}.x" >&/dev/null
+	${fcomp} "${fcode}" -o "${fcode}.x" &>> "${T}"/_fortran_compile_test.log
 	ret=$?
 
 	rm -f "${fcode}.x"
@@ -120,6 +121,7 @@ _compile_test() {
 }
 
 # @FUNCTION: _fortran-has-openmp
+# @RETURN: compilers return value
 # @INTERNAL
 # @DESCRIPTION:
 # See if the fortran supports OpenMP.
@@ -136,7 +138,7 @@ _fortran-has-openmp() {
 	EOF
 
 	for flag in -fopenmp -xopenmp -openmp -mp -omp -qsmp=omp; do
-		${_fc} ${flag} "${fcode}" -o "${fcode}.x" >&/dev/null
+		${_fc} ${flag} "${fcode}" -o "${fcode}.x" &>> "${T}"/_fortran_compile_test.log
 		ret=$?
 		(( ${ret} )) || break
 	done
@@ -145,11 +147,11 @@ _fortran-has-openmp() {
 	return ${ret}
 }
 
-# @FUNCTION: _die_msg
+# @FUNCTION: _fortran_die_msg
 # @INTERNAL
 # @DESCRIPTION:
 # Detailed description how to handle fortran support
-_die_msg() {
+_fortran_die_msg() {
 	echo
 	eerror "Please install currently selected gcc version with USE=fortran."
 	eerror "If you intend to use a different compiler then gfortran, please"
@@ -157,31 +159,6 @@ _die_msg() {
 	eerror "fortran dialects are support."
 	echo
 	die "Currently no working fortran compiler is available"
-}
-
-# @FUNCTION: fortran-2_pkg_setup
-# @DESCRIPTION:
-# Setup functionallity, checks for a valid fortran compiler and optionally for its openmp support.
-fortran-2_pkg_setup() {
-for _f_use in ${FORTRAN_NEEDED}; do
-   case ${_f_use} in
-      always)
-			_fortran_test_function && break
-         ;;
-      no)
-			einfo "Forcing fortran support off"
-			break
-         ;;
-      *)
-			if use ${_f_use}; then
-				_fortran_test_function && break
-			else
-				unset FC
-				unset F77
-			fi
-         ;;
-   esac
-done
 }
 
 # @FUNCTION: _fortran_test_function
@@ -196,9 +173,9 @@ _fortran_test_function() {
 	: ${FORTRAN_STANDARD:=77}
 	for dialect in ${FORTRAN_STANDARD}; do
 		case ${dialect} in
-			77) _compile_test $(tc-getF77) || _die_msg ;;
-			90|95) _compile_test $(tc-getFC) 90 || _die_msg ;;
-			2003) _compile_test $(tc-getFC) 03 || _die_msg ;;
+			77) _fortran_compile_test $(tc-getF77) || _fortran_die_msg ;;
+			90|95) _fortran_compile_test $(tc-getFC) 90 || _fortran_die_msg ;;
+			2003) _fortran_compile_test $(tc-getFC) 03 || _fortran_die_msg ;;
 			2008) die "Future" ;;
 			*) die "${dialect} is not a Fortran dialect." ;;
 		esac
@@ -216,6 +193,31 @@ _fortran_test_function() {
 			die "Please install current gcc with USE=openmp or set the FC variable to a compiler that supports OpenMP"
 		fi
 	fi
+}
+
+# @FUNCTION: fortran-2_pkg_setup
+# @DESCRIPTION:
+# Setup functionallity, checks for a valid fortran compiler and optionally for its openmp support.
+fortran-2_pkg_setup() {
+	for _f_use in ${FORTRAN_NEEDED}; do
+   	case ${_f_use} in
+      	always)
+				_fortran_test_function && break
+	         ;;
+   	   no)
+				einfo "Forcing fortran support off"
+				break
+	         ;;
+   	   *)
+				if use ${_f_use}; then
+					_fortran_test_function && break
+				else
+					unset FC
+					unset F77
+				fi
+   	      ;;
+	   esac
+	done
 }
 
 case ${EAPI:-0} in

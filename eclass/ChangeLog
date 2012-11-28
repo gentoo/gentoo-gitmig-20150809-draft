@@ -1,6 +1,13 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.527 2012/11/28 12:11:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.528 2012/11/28 13:03:30 jlec Exp $
+
+  28 Nov 2012; Justin Lecher <jlec@gentoo.org> fortran-2.eclass:
+  * Reduce potential clash of function names in global scope
+  * Use more manpage tags
+  * resort phase functions to the end
+  * require at least arguments for _fortran_compile_test()
+  * log compile tests
 
   28 Nov 2012; Justin Lecher <jlec@gentoo.org> fortran-2.eclass:
   Use man page tags
