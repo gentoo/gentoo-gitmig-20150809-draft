@@ -1,6 +1,11 @@
 # ChangeLog for app-text/llpp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/ChangeLog,v 1.31 2012/11/27 12:39:27 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/ChangeLog,v 1.32 2012/11/28 08:16:43 xmw Exp $
+
+*llpp-13_p20121123 (28 Nov 2012)
+
+  28 Nov 2012; Michael Weber <xmw@gentoo.org> +llpp-13_p20121123.ebuild:
+  Version bump to current snapshot
 
 *llpp-13 (27 Nov 2012)
 
