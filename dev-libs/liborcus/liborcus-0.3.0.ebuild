@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/liborcus-9999.ebuild,v 1.4 2012/11/28 13:42:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/liborcus-0.3.0.ebuild,v 1.1 2012/11/28 13:42:50 scarabeus Exp $
 
 EAPI=4
 
@@ -22,7 +22,6 @@ IUSE="static-libs"
 
 RDEPEND="
 	>=dev-libs/boost-1.51.0
-	>=dev-libs/libixion-0.6
 	dev-libs/libzip
 "
 DEPEND="${RDEPEND}
@@ -37,6 +36,7 @@ src_prepare() {
 
 src_configure() {
 	econf \
+		--disable-spreadsheet-model \
 		$(use_enable static-libs static)
 }
 
