@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.10.2-r2.ebuild,v 1.13 2012/07/24 14:01:45 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.10.2-r2.ebuild,v 1.14 2012/11/28 10:27:31 ssuominen Exp $
 
 EAPI=3
 
@@ -38,7 +38,7 @@ RDEPEND="media-libs/fontconfig
 		x11-libs/libX11
 		x11-libs/libXft
 		drm? (
-			>=sys-fs/udev-136
+			>=virtual/udev-136
 			gallium? ( media-libs/mesa[gallium] )
 		)
 	)
