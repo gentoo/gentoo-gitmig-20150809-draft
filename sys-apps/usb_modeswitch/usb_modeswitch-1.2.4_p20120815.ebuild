@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usb_modeswitch/usb_modeswitch-1.2.4_p20120815.ebuild,v 1.1 2012/08/25 14:16:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usb_modeswitch/usb_modeswitch-1.2.4_p20120815.ebuild,v 1.2 2012/11/28 22:53:09 ssuominen Exp $
 
-EAPI=4
-inherit linux-info toolchain-funcs
+EAPI=5
+inherit linux-info toolchain-funcs udev
 
 MY_PN=${PN/_/-}
 MY_P=${MY_PN}-${PV/_p*}
@@ -16,10 +16,10 @@ SRC_URI="http://www.draisberghof.de/${PN}/${MY_P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
-COMMON_DEPEND="sys-fs/udev
+COMMON_DEPEND="virtual/udev
 	virtual/libusb:0"
 RDEPEND="${COMMON_DEPEND}
 	dev-lang/tcl" # usb_modeswitch script is tcl
@@ -42,7 +42,7 @@ src_compile() {
 src_install() {
 	emake \
 		DESTDIR="${D}" \
-		UDEVDIR="${D}/$($(tc-getPKG_CONFIG) --variable=udevdir udev)" \
+		UDEVDIR="${D}/$(udev_get_udevdir)" \
 		install
 
 	dodoc ChangeLog README
@@ -50,7 +50,7 @@ src_install() {
 	pushd ../${MY_PN}-data-${DATA_VER} >/dev/null
 	emake \
 		DESTDIR="${D}" \
-		RULESDIR="${D}/$($(tc-getPKG_CONFIG) --variable=udevdir udev)/rules.d" \
+		RULESDIR="${D}/$(udev_get_udevdir)/rules.d" \
 		files-install db-install
 	docinto data
 	dodoc ChangeLog README
