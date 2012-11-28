@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/media-player-info
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/media-player-info/ChangeLog,v 1.21 2012/08/08 19:45:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/media-player-info/ChangeLog,v 1.22 2012/11/28 17:53:02 ssuominen Exp $
+
+  28 Nov 2012; Samuli Suominen <ssuominen@gentoo.org>
+  media-player-info-17.ebuild:
+  Use virtual/udev instead of sys-fs/udev wrt #444398
 
   08 Aug 2012; Brent Baude <ranger@gentoo.org> media-player-info-17.ebuild:
   Marking media-player-info-17 ppc for bug 428882
