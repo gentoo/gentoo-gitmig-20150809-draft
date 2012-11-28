@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-12.12_pre1662.ebuild,v 1.2 2012/11/28 18:26:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-12.12_pre1662.ebuild,v 1.3 2012/11/28 18:33:05 jer Exp $
 
 EAPI=4
 inherit eutils fdo-mime gnome2-utils multilib pax-utils versionator
@@ -30,7 +30,7 @@ O_LINGUAS="
 # == End of variables that often change ==
 
 if [[ "pre${O_B/pre/}" = "${O_B}" ]]; then	# snapshot: _pre
-	O_D="${O_K}_${O_V}-${O_B}"				# directory string
+	O_D="${O_K}_${O_V}-${O_B/pre}"			# directory string
 	O_P="${PN}-${O_V}-${O_B/pre}"			# package string
 	O_U="http://snapshot.opera.com/unix/"	# base URI
 

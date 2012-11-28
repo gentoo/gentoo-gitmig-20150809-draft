@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.777 2012/11/28 18:26:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.778 2012/11/28 18:33:05 jer Exp $
+
+  28 Nov 2012; Jeroen Roovers <jer@gentoo.org> opera-12.12_pre1662.ebuild:
+  Apply O_B mangling more.
 
   28 Nov 2012; Jeroen Roovers <jer@gentoo.org> opera-12.12_pre1662.ebuild:
   Merge O_B mangling into O_P concatenation.
