@@ -1,6 +1,14 @@
 # ChangeLog for dev-vcs/bzr-xmloutput
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-xmloutput/ChangeLog,v 1.14 2012/11/28 19:26:31 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-xmloutput/ChangeLog,v 1.15 2012/11/28 19:39:00 fauli Exp $
+
+*bzr-xmloutput-0.8.8-r1 (28 Nov 2012)
+
+  28 Nov 2012; Christian Faulhammer <fauli@gentoo.org>
+  +bzr-xmloutput-0.8.8-r1.ebuild,
+  +files/bzr-xmloutput-0.8.8_remove-relative-imports.patch:
+  revision bump for runtime regression with bzr help commands, as reported by
+  Dan Dexter in bug 418969
 
   28 Nov 2012; Christian Faulhammer <fauli@gentoo.org>
   -bzr-xmloutput-0.8.7.ebuild:
