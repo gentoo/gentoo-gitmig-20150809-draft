@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.8.2.ebuild,v 1.11 2012/11/17 10:32:21 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.8.2.ebuild,v 1.12 2012/11/28 22:50:01 ssuominen Exp $
 
 EAPI="4"
 
-inherit multilib eutils user
+inherit eutils multilib udev user
 
 DESCRIPTION="PC/SC Architecture smartcard middleware library"
 HOMEPAGE="http://pcsclite.alioth.debian.org/"
@@ -26,7 +26,7 @@ IUSE="libusb +udev"
 REQUIRED_USE="^^ ( udev libusb )"
 
 CDEPEND="libusb? ( virtual/libusb:1 )
-	udev? ( sys-fs/udev )"
+	udev? ( virtual/udev )"
 DEPEND="${CDEPEND}
 	virtual/pkgconfig"
 RDEPEND="${CDEPEND}
@@ -41,7 +41,6 @@ pkg_setup() {
 src_configure() {
 	econf \
 		--disable-maintainer-mode \
-		--disable-dependency-tracking \
 		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		--enable-usbdropdir="${EPREFIX}/usr/$(get_libdir)/readers/usb" \
 		--without-systemdsystemunitdir \
@@ -54,12 +53,12 @@ DOCS=( AUTHORS DRIVERS HELP README SECURITY ChangeLog )
 
 src_install() {
 	default
-	find "${D}" -name '*.la' -delete
+	prune_libtool_files
 
-	newinitd "${FILESDIR}/pcscd-init.5" pcscd
+	newinitd "${FILESDIR}"/pcscd-init.5 pcscd
 
 	if use udev; then
-		insinto /lib/udev/rules.d
+		insinto "$(udev_get_udevdir)"/rules.d
 		doins "${FILESDIR}"/99-pcscd-hotplug.rules
 	fi
 }

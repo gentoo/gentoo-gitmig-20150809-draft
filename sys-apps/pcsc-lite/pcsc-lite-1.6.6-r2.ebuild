@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.6.6-r2.ebuild,v 1.4 2012/11/17 10:32:21 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.6.6-r2.ebuild,v 1.5 2012/11/28 22:50:01 ssuominen Exp $
 
-EAPI="3"
+EAPI=4
 
-inherit multilib eutils user
+inherit multilib eutils user udev
 
 DESCRIPTION="PC/SC Architecture smartcard middleware library"
 HOMEPAGE="http://pcsclite.alioth.debian.org/"
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 RDEPEND="${RDEPEND}
 	!<app-crypt/ccid-1.4.1-r1
-	kernel_linux? ( sys-fs/udev )"
+	kernel_linux? ( virtual/udev )"
 
 pkg_setup() {
 	enewgroup pcscd
@@ -33,7 +33,6 @@ pkg_setup() {
 src_configure() {
 	econf \
 		--disable-maintainer-mode \
-		--disable-dependency-tracking \
 		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		--enable-usbdropdir="${EPREFIX}/usr/$(get_libdir)/readers/usb" \
 		$(use_enable usb libusb) \
@@ -41,14 +40,14 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS DRIVERS HELP README SECURITY ChangeLog || die
+	emake DESTDIR="${D}" install
+	dodoc AUTHORS DRIVERS HELP README SECURITY ChangeLog
 
-	newinitd "${FILESDIR}/pcscd-init.3" pcscd || die
+	newinitd "${FILESDIR}"/pcscd-init.3 pcscd
 
 	if use kernel_linux; then
-		insinto /lib/udev/rules.d
-		doins "${FILESDIR}"/99-pcscd-hotplug.rules || die
+		insinto "$(udev_get_udevdir)"/rules.d
+		doins "${FILESDIR}"/99-pcscd-hotplug.rules
 	fi
 }
 
