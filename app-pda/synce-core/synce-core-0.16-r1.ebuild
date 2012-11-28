@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-core/synce-core-0.16-r1.ebuild,v 1.1 2012/08/08 14:37:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-core/synce-core-0.16-r1.ebuild,v 1.2 2012/11/28 16:58:10 ssuominen Exp $
 
 EAPI=4
 
@@ -20,13 +20,13 @@ IUSE="python static-libs"
 # AC_PATH_PROG -> pppd -> net-dialup/ppp
 # AC_PATH_PROG -> ifconfig -> sys-apps/net-tools
 RDEPEND="!app-pda/synce-connector
-	>=dev-libs/dbus-glib-0.98
+	>=dev-libs/dbus-glib-0.100
 	>=dev-libs/glib-2.28
 	!dev-libs/librapi2
 	!dev-libs/libsynce
 	net-dialup/ppp
 	sys-apps/net-tools
-	|| ( >=sys-fs/udev-171-r6[gudev] <sys-fs/udev-171[extras] )
+	virtual/udev[gudev]
 	python? (
 		>=dev-python/pyrex-0.9.6
 		dev-python/python-gudev
