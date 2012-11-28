@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-11.2.0.3.ebuild,v 1.10 2012/11/15 19:36:02 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-11.2.0.3.ebuild,v 1.11 2012/11/28 15:54:24 haubi Exp $
 
 EAPI="4"
 
@@ -183,4 +183,6 @@ pkg_postinst() {
 	elog "TNS_ADMIN has been set to ${EROOT}etc/oracle by default,"
 	elog "put your tnsnames.ora there or configure TNS_ADMIN"
 	elog "to point to your user specific configuration."
+	ewarn "Please re-source your shell settings for ORACLE_HOME"
+	ewarn "  changes, such as: source /etc/profile"
 }

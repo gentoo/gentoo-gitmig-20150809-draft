@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/oracle-instantclient-basic
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/ChangeLog,v 1.54 2012/11/15 19:36:02 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/ChangeLog,v 1.55 2012/11/28 15:54:24 haubi Exp $
+
+  28 Nov 2012; Michael Haubenwallner <haubi@gentoo.org>
+  oracle-instantclient-basic-11.2.0.3.ebuild:
+  Tell user to re-source the shell for ORACLE_HOME changes, bug#443900.
 
   15 Nov 2012; Michael Haubenwallner <haubi@gentoo.org>
   oracle-instantclient-basic-11.2.0.3.ebuild:
