@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/openct
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.98 2012/06/19 13:56:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.99 2012/11/28 22:39:36 ssuominen Exp $
+
+*openct-0.6.20-r3 (28 Nov 2012)
+
+  28 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> openct-0.6.20.ebuild,
+  +openct-0.6.20-r3.ebuild:
+  Use virtual/udev. Use udev.eclass to install udev helpers and rules to
+  correct directories wrt #419423 by SpanKY
 
 *openct-0.6.20-r2 (19 Jun 2012)
 

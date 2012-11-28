@@ -1,29 +1,35 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.20.ebuild,v 1.9 2012/11/28 22:39:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.20-r3.ebuild,v 1.1 2012/11/28 22:39:36 ssuominen Exp $
 
-EAPI="2"
+EAPI=5
 
-inherit eutils multilib user
+inherit eutils flag-o-matic multilib udev user
 
 DESCRIPTION="library for accessing smart card terminals"
 HOMEPAGE="http://www.opensc-project.org/openct/"
 
 SRC_URI="http://www.opensc-project.org/files/${PN}/${P}.tar.gz"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-IUSE="doc pcsc-lite usb"
+IUSE="doc pcsc-lite usb debug +udev"
 
 # libtool is required at runtime for libltdl
-RDEPEND="pcsc-lite? ( sys-apps/pcsc-lite )
+RDEPEND="pcsc-lite? ( >=sys-apps/pcsc-lite-1.7.2-r1 )
 	usb? ( virtual/libusb:0 )
-	virtual/udev
 	sys-devel/libtool"
 
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
+
+# udev is not required at all at build-time as it's only a matter of
+# installing the rules; add openrc for the checkpath used in the new
+# init script
+RDEPEND="${RDEPEND}
+	udev? ( virtual/udev )
+	sys-apps/openrc"
 
 pkg_setup() {
 	enewgroup openct
@@ -31,30 +37,35 @@ pkg_setup() {
 }
 
 src_configure() {
+	use debug && append-cppflags -DDEBUG_IFDH
+
 	econf \
 		--docdir="/usr/share/doc/${PF}" \
 		--htmldir="/usr/share/doc/${PF}/html" \
 		--localstatedir=/var \
-		--with-udev="/$(get_libdir)/udev" \
+		--with-udev="$(udev_get_udevdir)" \
 		--enable-non-privileged \
 		--with-daemon-user=openctd \
 		--with-daemon-groups=usb \
+		--enable-shared --disable-static \
 		$(use_enable doc) \
 		$(use_enable doc api-doc) \
 		$(use_enable pcsc-lite pcsc) \
+		$(use_with pcsc-lite bundle /usr/$(get_libdir)/readers/usb) \
 		$(use_enable usb)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
+	prune_libtool_files --all
+	rm "${D}"/usr/$(get_libdir)/openct-ifd.*
 
-	insinto /etc/udev/rules.d/
-	newins etc/openct.udev 70-openct.rules || die "newins 70-openct.rules failed"
+	if use udev; then
+		insinto "$(udev_get_udevdir)"/rules.d
+		newins etc/openct.udev 70-openct.rules
+	fi
 
-	diropts -m0750 -gopenct -oopenctd
-	keepdir /var/run/openct
-
-	newinitd "${FILESDIR}"/openct.rc openct
+	newinitd "${FILESDIR}"/openct.rc.2 openct
 }
 
 pkg_postinst() {
