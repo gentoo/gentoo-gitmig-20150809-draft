@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/msieve/msieve-1.50-r3.ebuild,v 1.2 2012/11/27 17:42:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/msieve/msieve-1.50-r3.ebuild,v 1.3 2012/11/28 08:15:02 patrick Exp $
 
 EAPI=4
 DESCRIPTION="A C library implementing a suite of algorithms to factor large integers"
@@ -14,8 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="zlib +ecm mpi"
 
-DEPEND="sci-mathematics/ggnfs
-	ecm? ( sci-mathematics/gmp-ecm )
+DEPEND="ecm? ( sci-mathematics/gmp-ecm )
 	mpi? ( virtual/mpi )
 	zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}"
