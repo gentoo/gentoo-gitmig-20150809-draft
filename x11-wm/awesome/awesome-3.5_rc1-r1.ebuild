@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.5_rc1.ebuild,v 1.1 2012/11/24 21:28:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.5_rc1-r1.ebuild,v 1.1 2012/11/28 00:20:30 robbat2 Exp $
 
 EAPI="3"
 CMAKE_MIN_VERSION="2.8"
@@ -28,7 +28,8 @@ COMMON_DEPEND=">=dev-lang/lua-5.1
 	>=x11-libs/startup-notification-0.10_p20110426
 	>=x11-libs/xcb-util-0.3.8
 	dbus? ( >=sys-apps/dbus-1 )
-	elibc_FreeBSD? ( dev-libs/libexecinfo )"
+	elibc_FreeBSD? ( dev-libs/libexecinfo )
+	>=dev-lua/lgi-0.6.1"
 
 # graphicsmagick's 'convert -channel' has no Alpha support, bug #352282
 DEPEND="${COMMON_DEPEND}
@@ -81,14 +82,6 @@ src_prepare() {
 
 	# bug  #408025
 	epatch "${FILESDIR}/${PN}-3.5_rc1-convert-path.patch"
-
-	# Fix luadoc build
-	epatch "${FILESDIR}/${PN}-3.5_rc1-luadoc-fix-patch"
-
-	# Fix name of luadoc binary
-	sed -i \
-		-e '/^a_find_program/{ /LDOC_EXECUTABLE/{ s/ldoc.lua/luadoc/; } }' \
-		"${S}"/awesomeConfig.cmake || die
 }
 
 src_configure() {
@@ -96,8 +89,11 @@ src_configure() {
 		-DPREFIX="${EPREFIX}"/usr
 		-DSYSCONFDIR="${EPREFIX}"/etc
 		$(cmake-utils_use_with dbus DBUS)
-		$(cmake-utils_use doc GENERATE_LUADOC)
 		)
+	
+	# The lua docs now officially require ldoc.lua and NOT luadoc
+	# As the modules documentation has been updated to the Lua 5.2 style
+	has_version >=dev-lang/lua-5.2 && mycmakeargs+="$(cmake-utils_use doc GENERATE_LUADOC)"
 
 	cmake-utils_src_configure
 }
@@ -120,9 +116,8 @@ src_install() {
 			mv html doxygen
 			dohtml -r doxygen || die
 		)
-		mv "${ED}"/usr/share/doc/${PN}/doc/html "${ED}"/usr/share/doc/${PF}/html/luadoc || die
 	fi
-	rm -rf "${ED}"/usr/share/doc/${PN} || die
+	rm -rf "${ED}"/usr/share/doc/${PN} || die "Cleanup of dupe docs failed"
 
 	exeinto /etc/X11/Sessions
 	newexe "${FILESDIR}"/${PN}-session ${PN} || die

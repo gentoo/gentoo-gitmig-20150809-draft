@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/awesome
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.139 2012/11/24 21:28:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.140 2012/11/28 00:20:30 robbat2 Exp $
+
+*awesome-3.5_rc1-r1 (28 Nov 2012)
+
+  28 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> +awesome-3.5_rc1-r1.ebuild,
+  -awesome-3.5_rc1.ebuild:
+  Upstream added a new dep, lgi, that was underdocumented. Also block building
+  luadocs unless you have lua-5.2 per upstream emails on awesome ML.
 
 *awesome-3.5_rc1 (24 Nov 2012)
 
