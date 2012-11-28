@@ -2,12 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>polynomial-c@gentoo.org</email>
-		<name>Lars Wendler</name>
-		<description>
-			Interim maintainer to keep virtualbox in a working
-			state. Feel free to add yourself as lead maintainer.
-		</description>
+		<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
 	<longdescription>
 		Bruce's C compiler - Simple C compiler to generate 8086 code
