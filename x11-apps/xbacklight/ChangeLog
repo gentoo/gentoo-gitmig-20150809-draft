@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xbacklight
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xbacklight/ChangeLog,v 1.41 2012/11/20 21:14:13 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xbacklight/ChangeLog,v 1.42 2012/11/28 21:32:38 ranger Exp $
+
+  28 Nov 2012; Brent Baude <ranger@gentoo.org> xbacklight-1.2.0.ebuild:
+  Marking xbacklight-1.2.0 ppc stable for bug 440872
 
   20 Nov 2012; Matt Turner <mattst88@gentoo.org> xbacklight-1.2.0.ebuild:
   Update xcb-util dependency, bug 444094.
