@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgusb/libgusb-0.1.4.ebuild,v 1.1 2012/11/09 18:24:12 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgusb/libgusb-0.1.4.ebuild,v 1.2 2012/11/28 17:54:52 ssuominen Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ REQUIRED_USE="vala? ( introspection )"
 # causes build failures
 RDEPEND=">=dev-libs/glib-2.28:2
 	virtual/libusb:1
-	|| ( >=sys-fs/udev-171[gudev] <sys-fs/udev-171[extras] )
+	virtual/udev[gudev]
 	introspection? ( >=dev-libs/gobject-introspection-1.29 )"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
