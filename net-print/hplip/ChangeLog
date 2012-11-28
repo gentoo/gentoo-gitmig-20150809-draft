@@ -1,6 +1,9 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.253 2012/11/21 10:16:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.254 2012/11/28 20:20:27 ranger Exp $
+
+  28 Nov 2012; Brent Baude <ranger@gentoo.org> hplip-3.12.10a.ebuild:
+  Marking hplip-3.12.10a ppc for bug 439032
 
   21 Nov 2012; Agostino Sarubbo <ago@gentoo.org> hplip-3.12.10a.ebuild:
   Stable for x86, wrt bug #439032
