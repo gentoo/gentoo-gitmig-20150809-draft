@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/trojita-9999.ebuild,v 1.10 2012/03/30 10:34:00 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/trojita-9999.ebuild,v 1.11 2012/11/28 07:37:32 yngwin Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ fi
 
 LICENSE="|| ( GPL-2 GPL-3 )"
 SLOT="0"
-IUSE="debug test"
+IUSE="debug test +zlib"
 
 RDEPEND="
 	>=x11-libs/qt-gui-${QT_REQUIRED}:4
@@ -30,8 +30,16 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	test? ( >=x11-libs/qt-test-${QT_REQUIRED}:4 )
+	zlib? (
+		virtual/pkgconfig
+		sys-libs/zlib
+	)
 "
 
 src_configure() {
-	eqmake4 PREFIX=/usr
+	local myopts=""
+	use debug && myopts="$myopts CONFIG+=debug"
+	use test || myopts="$myopts CONFIG+=disable_tests"
+	use zlib || myopts="$myopts CONFIG+=disable_zlib"
+	eqmake4 PREFIX=/usr $myopts
 }

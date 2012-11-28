@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/trojita
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/ChangeLog,v 1.14 2012/03/30 10:34:00 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/ChangeLog,v 1.15 2012/11/28 07:37:32 yngwin Exp $
+
+  28 Nov 2012; Ben de Groot <yngwin@gentoo.org> trojita-0.3.ebuild,
+  trojita-9999.ebuild:
+  Apply changes from bug #444062
 
 *trojita-0.3 (30 Mar 2012)
 
@@ -68,4 +72,3 @@
   +metadata.xml:
   Initial commit. I am proxying it for jkt. All credit for ebuild goes for
   him. Per bug #283372.
-

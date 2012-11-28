@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/trojita-0.3.ebuild,v 1.1 2012/03/30 10:34:00 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/trojita-0.3.ebuild,v 1.2 2012/11/28 07:37:32 yngwin Exp $
 
 EAPI=4
 
@@ -23,14 +23,11 @@ LICENSE="|| ( GPL-2 GPL-3 )"
 SLOT="0"
 IUSE="debug test"
 
-RDEPEND="
-	>=x11-libs/qt-gui-${QT_REQUIRED}:4
+RDEPEND=">=x11-libs/qt-gui-${QT_REQUIRED}:4
 	>=x11-libs/qt-sql-${QT_REQUIRED}:4[sqlite]
 	>=x11-libs/qt-webkit-${QT_REQUIRED}:4
-"
-DEPEND="${RDEPEND}
-	test? ( >=x11-libs/qt-test-${QT_REQUIRED}:4 )
-"
+	>=x11-libs/qt-test-${QT_REQUIRED}:4"
+DEPEND=${RDEPEND}
 
 src_configure() {
 	eqmake4 PREFIX=/usr
