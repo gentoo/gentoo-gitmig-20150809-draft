@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/gtk-engines-xfce-3.0.1-r300.ebuild,v 1.5 2012/11/28 09:58:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/gtk-engines-xfce-3.0.1-r300.ebuild,v 1.6 2012/11/28 12:37:10 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 MY_PN=gtk-xfce-engine
 inherit xfconf
 
