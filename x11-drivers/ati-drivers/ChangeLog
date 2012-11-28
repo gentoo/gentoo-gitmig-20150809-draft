@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.307 2012/11/27 02:15:54 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.308 2012/11/28 00:39:21 chithanh Exp $
+
+*ati-drivers-12.11_beta8 (28 Nov 2012)
+
+  28 Nov 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +ati-drivers-12.11_beta8.ebuild, ati-drivers-12.6.ebuild:
+  New prerelease, import of Emil Karlson's ebuild from the x11 overlay. Address
+  repoman warning that was introduced by the fix for bug #443466.
 
   27 Nov 2012; Rick Farina <zerochaos@gentoo.org> ati-drivers-12.10.ebuild,
   ati-drivers-12.11_beta.ebuild, ati-drivers-12.4.ebuild,

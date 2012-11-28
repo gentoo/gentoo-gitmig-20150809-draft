@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-12.6.ebuild,v 1.7 2012/11/28 00:39:21 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-12.11_beta8.ebuild,v 1.1 2012/11/28 00:39:21 chithanh Exp $
 
 EAPI=4
 
@@ -9,25 +9,19 @@ inherit eutils multilib linux-info linux-mod toolchain-funcs versionator
 DESCRIPTION="Ati precompiled drivers for Radeon Evergreen (HD5000 Series) and newer chipsets"
 HOMEPAGE="http://www.amd.com"
 MY_V=( $(get_version_components) )
-if [[ ${MY_V[2]} != beta ]]; then
-	ATI_URL="http://www2.ati.com/drivers/linux/"
-	SRC_URI="${ATI_URL}/amd-driver-installer-${PV/./-}-x86.x86_64.run"
-	FOLDER_PREFIX="common/"
-else
-	#SRC_URI="https://launchpad.net/ubuntu/natty/+source/fglrx-installer/2:${PV}-0ubuntu1/+files/fglrx-installer_${PV}.orig.tar.gz"
-	SRC_URI="http://www2.ati.com/drivers/hotfix/catalyst_12.6_hotfixes/amd-driver-installer-8.98-x86.x86_64.zip"
-	FOLDER_PREFIX="common/"
-fi
-IUSE="debug +modules multilib qt4 static-libs"
+#RUN="${WORKDIR}/amd-driver-installer-9.00-x86.x86_64.run"
+SRC_URI="http://www2.ati.com/drivers/beta/amd-driver-installer-catalyst-12.11-beta8-x86.x86_64.zip"
+FOLDER_PREFIX="common/"
+IUSE="debug +modules multilib qt4 static-libs disable-watermark"
 
 LICENSE="AMD GPL-2 QPL-1.0 as-is"
-KEYWORDS="amd64 x86"
+KEYWORDS="-* ~amd64 ~x86"
 SLOT="1"
 
 RESTRICT="bindist"
 
 RDEPEND="
-	<=x11-base/xorg-server-1.12.49[-minimal]
+	<=x11-base/xorg-server-1.13.49[-minimal]
 	>=app-admin/eselect-opengl-1.0.7
 	app-admin/eselect-opencl
 	sys-power/acpid
@@ -105,7 +99,7 @@ QA_SONAME="
 	usr/lib\(32\|64\)\?/libamdocl\(32\|64\)\?.so
 "
 
-QA_FLAGS_IGNORED="
+QA_DT_HASH="
 	opt/bin/amdcccle
 	opt/bin/aticonfig
 	opt/bin/atiodcli
@@ -224,13 +218,13 @@ _check_kernel_config() {
 		failed=1
 	fi
 
-	if linux_chkconfig_present X86_X32; then
-		eerror "You've enabled x32 in the kernel."
-		eerror "Unfortunately, this option is not supported yet and prevents the fglrx"
-		eerror "kernel module from loading."
-		error+=" X86_32 enabled;"
-		failed=1
-	fi
+	#if linux_chkconfig_present X86_X32; then
+	#	eerror "You've enabled x32 in the kernel."
+	#	eerror "Unfortunately, this option is not supported yet and prevents the fglrx"
+	#	eerror "kernel module from loading."
+	#	error+=" X86_32 enabled;"
+	#	failed=1
+	#fi
 
 	[[ ${failed} -ne 0 ]] && die "${error}"
 }
@@ -239,9 +233,8 @@ pkg_pretend() {
 	# workaround until bug 365543 is solved
 	if use modules; then
 		linux-info_pkg_setup
-		if linux_config_exists; then
-			_check_kernel_config
-		fi
+		require_configured_kernel
+		_check_kernel_config
 	fi
 }
 
@@ -286,13 +279,18 @@ pkg_setup() {
 }
 
 src_unpack() {
-	if [[ ${MY_V[2]} == beta ]]; then
+	if [[ ${A} =~ .*\.tar\.gz ]]; then
 		unpack ${A}
-		RUN="${S}/${A/%.zip/.run}"
 	else
-		RUN="${DISTDIR}/${A}"
+		#please note, RUN may be insanely assigned at top near SRC_URI
+		if [[ ${A} =~ .*\.zip ]]; then
+			unpack ${A}
+			[[ -z "$RUN" ]] && RUN="${S}/${A/%.zip/.run}"
+		else
+			RUN="${DISTDIR}/${A}"
+		fi
+		sh ${RUN} --extract "${S}" 2>&1 > /dev/null || die
 	fi
-	sh ${RUN} --extract "${S}" # 2>&1 > /dev/null || die
 }
 
 src_prepare() {
@@ -329,13 +327,19 @@ src_prepare() {
 		|| die "Replacing 'finger' with 'who' failed."
 	# Adjust paths in the script from /usr/X11R6/bin/ to /opt/bin/ and
 	# add function to detect default state.
-	epatch "${FILESDIR}"/ati-powermode-opt-path-2.patch
-
-	#fixes bug #420751
-	epatch "${FILESDIR}"/ati-drivers-do_mmap.patch
+	epatch "${FILESDIR}"/ati-powermode-opt-path-3.patch
 
 	# see http://ati.cchtml.com/show_bug.cgi?id=495
-	epatch "${FILESDIR}"/ati-drivers-old_rsp.patch
+	#epatch "${FILESDIR}"/ati-drivers-old_rsp.patch
+	# first hunk applied upstream second (x32 related) was not
+	epatch "${FILESDIR}"/ati-drivers-x32_something_something.patch
+
+	# compile fix for linux-3.7
+	# https://bugs.gentoo.org/show_bug.cgi?id=438516
+	epatch "${FILESDIR}/ati-drivers-vm-reserverd.patch"
+
+	# compile fix for AGP-less kernel, bug #435322
+	epatch "${FILESDIR}"/ati-drivers-12.9-KCL_AGP_FindCapsRegisters-stub.patch
 
 	cd "${MODULE_DIR}"
 
@@ -360,12 +364,14 @@ src_prepare() {
 
 	# Get rid of watermark. Oldest known reference:
 	# http://phoronix.com/forums/showthread.php?19875-Unsupported-Hardware-watermark
-	ebegin "Disabling watermark"
-	driver="${MY_BASE_DIR}"/usr/X11R6/${PKG_LIBDIR}/modules/drivers/fglrx_drv.so
-	for x in $(objdump -d ${driver}|awk '/call/&&/EnableLogo/{print "\\x"$2"\\x"$3"\\x"$4"\\x"$5"\\x"$6}'); do
-		sed -i "s/${x}/\x90\x90\x90\x90\x90/g" ${driver} || break 1
-	done
-	eend $? || die "Disabling watermark failed"
+	if use disable-watermark; then
+		ebegin "Disabling watermark"
+		driver="${MY_BASE_DIR}"/usr/X11R6/${PKG_LIBDIR}/modules/drivers/fglrx_drv.so
+		for x in $(objdump -d ${driver}|awk '/call/&&/EnableLogo/{print "\\x"$2"\\x"$3"\\x"$4"\\x"$5"\\x"$6}'); do
+		sed -i "s/${x/x5b/\x5b}/\x90\x90\x90\x90\x90/g" ${driver} || break 1
+		done
+		eend $? || die "Disabling watermark failed"
+	fi
 }
 
 src_compile() {
@@ -614,6 +620,13 @@ pkg_postinst() {
 	use modules && linux-mod_pkg_postinst
 	"${ROOT}"/usr/bin/eselect opengl set --use-old ati
 	"${ROOT}"/usr/bin/eselect opencl set --use-old amd
+
+	if has_version ">=x11-drivers/xf86-video-intel-2.20.3"; then
+		ewarn "It is reported that xf86-video-intel-2.20.3 and later cause the X server"
+		ewarn "to crash on systems that use hybrid AMD/Intel graphics. If you experience"
+		ewarn "this crash, downgrade to xf86-video-intel-2.20.2 or earlier."
+		ewarn "For details, see https://bugs.gentoo.org/show_bug.cgi?id=430000"
+	fi
 }
 
 pkg_preinst() {
