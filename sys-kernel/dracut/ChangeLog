@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.96 2012/11/28 10:22:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.97 2012/11/28 17:55:55 jer Exp $
+
+  28 Nov 2012; Jeroen Roovers <jer@gentoo.org> dracut-022-r6.ebuild:
+  Fix Manifest. Inherit multilib in 022-r6 too.
 
   28 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> dracut-014-r3.ebuild,
   dracut-018-r3.ebuild, dracut-019-r6.ebuild:
