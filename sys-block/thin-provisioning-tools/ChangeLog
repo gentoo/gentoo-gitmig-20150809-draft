@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/thin-provisioning-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/thin-provisioning-tools/ChangeLog,v 1.6 2012/11/18 16:01:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/thin-provisioning-tools/ChangeLog,v 1.7 2012/11/28 20:25:33 ranger Exp $
+
+  28 Nov 2012; Brent Baude <ranger@gentoo.org>
+  thin-provisioning-tools-0.1.5-r1.ebuild:
+  Marking thin-provisioning-tools-0.1.5-r1 ppc for bug 443692
 
   18 Nov 2012; Agostino Sarubbo <ago@gentoo.org>
   thin-provisioning-tools-0.1.5-r1.ebuild:
