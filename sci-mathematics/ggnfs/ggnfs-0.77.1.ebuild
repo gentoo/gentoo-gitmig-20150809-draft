@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ggnfs/ggnfs-0.77.1.ebuild,v 1.1 2012/11/27 13:32:51 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ggnfs/ggnfs-0.77.1.ebuild,v 1.2 2012/11/28 09:41:34 patrick Exp $
 
 EAPI=4
 DESCRIPTION="A suite of algorithms to help factoring large integers"
@@ -39,7 +39,7 @@ src_compile() {
 	# setting MARCH like this is fugly, but it uses -march=$ARCH - better fix welcome
 	# it also assumes a recent-ish compiler
 	cd src
-	HOST="generic" MARCH="native" emake
+	HOST="generic" MARCH="native" emake -j1
 }
 
 src_install() {
