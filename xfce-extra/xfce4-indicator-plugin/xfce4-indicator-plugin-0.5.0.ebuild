@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-indicator-plugin/xfce4-indicator-plugin-0.5.0.ebuild,v 1.2 2012/05/05 07:13:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-indicator-plugin/xfce4-indicator-plugin-0.5.0.ebuild,v 1.3 2012/11/28 12:22:59 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 inherit multilib xfconf
 
 DESCRIPTION="A panel plugin that uses indicator-applet to show new messages"

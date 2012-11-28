@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-places-plugin/xfce4-places-plugin-1.5.0.ebuild,v 1.4 2012/11/19 21:23:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-places-plugin/xfce4-places-plugin-1.5.0.ebuild,v 1.5 2012/11/28 12:23:41 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 inherit xfconf
 
 DESCRIPTION="A panel plug-in to provide quick access to files, folders and removable media"

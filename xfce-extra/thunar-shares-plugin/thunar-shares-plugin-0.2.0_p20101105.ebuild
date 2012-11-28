@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-shares-plugin/thunar-shares-plugin-0.2.0_p20101105.ebuild,v 1.6 2012/05/04 07:40:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-shares-plugin/thunar-shares-plugin-0.2.0_p20101105.ebuild,v 1.7 2012/11/28 12:22:42 ssuominen Exp $
 
 # git clone -b thunarx-2 git://git.xfce.org/thunar-plugins/thunar-shares-plugin
 
-EAPI=4
+EAPI=5
 EAUTORECONF=yes
 inherit xfconf
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/xfce4-mixer-4.10.0.ebuild,v 1.8 2012/11/28 09:50:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/xfce4-mixer-4.10.0.ebuild,v 1.9 2012/11/28 12:20:23 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 inherit xfconf
 
 DESCRIPTION="A volume control application (and panel plug-in) for the Xfce desktop environment"

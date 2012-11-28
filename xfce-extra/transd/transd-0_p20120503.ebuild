@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/transd/transd-0_p20120503.ebuild,v 1.6 2012/05/22 10:49:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/transd/transd-0_p20120503.ebuild,v 1.7 2012/11/28 12:18:52 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 EAUTORECONF=yes
 inherit xfconf
 

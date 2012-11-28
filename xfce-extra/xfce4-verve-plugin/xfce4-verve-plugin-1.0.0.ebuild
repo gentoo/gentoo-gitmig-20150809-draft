@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-verve-plugin/xfce4-verve-plugin-1.0.0.ebuild,v 1.11 2012/05/05 07:47:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-verve-plugin/xfce4-verve-plugin-1.0.0.ebuild,v 1.12 2012/11/28 12:23:22 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 inherit multilib xfconf
 
 DESCRIPTION="A comfortable command line plugin for the Xfce panel"

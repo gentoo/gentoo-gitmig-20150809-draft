@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-cellmodem-plugin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cellmodem-plugin/ChangeLog,v 1.6 2012/10/31 20:12:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cellmodem-plugin/ChangeLog,v 1.7 2012/11/28 12:21:58 ssuominen Exp $
+
+  28 Nov 2012; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-cellmodem-plugin-0.0.5.ebuild:
+  EAPI5
 
   31 Oct 2012; Samuli Suominen <ssuominen@gentoo.org>
   xfce4-cellmodem-plugin-0.0.5.ebuild,

@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-datetime-plugin/xfce4-datetime-plugin-0.6.1.ebuild,v 1.8 2012/05/05 07:10:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-datetime-plugin/xfce4-datetime-plugin-0.6.1.ebuild,v 1.9 2012/11/28 12:24:32 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 inherit xfconf
 
 DESCRIPTION="A panel plug-in with date, time and embedded calender"

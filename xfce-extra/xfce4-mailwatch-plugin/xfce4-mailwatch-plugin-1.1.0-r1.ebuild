@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mailwatch-plugin/xfce4-mailwatch-plugin-1.1.0-r1.ebuild,v 1.4 2012/11/19 21:16:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mailwatch-plugin/xfce4-mailwatch-plugin-1.1.0-r1.ebuild,v 1.5 2012/11/28 12:20:19 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 EAUTORECONF=yes
 inherit multilib xfconf
 

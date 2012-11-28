@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-media-tags-plugin/thunar-media-tags-plugin-0.2.0.ebuild,v 1.2 2012/05/04 07:39:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-media-tags-plugin/thunar-media-tags-plugin-0.2.0.ebuild,v 1.3 2012/11/28 12:18:21 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 EAUTORECONF=yes
 inherit xfconf
 

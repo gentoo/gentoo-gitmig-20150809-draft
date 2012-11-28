@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-xkb-plugin/xfce4-xkb-plugin-0.5.4.3.ebuild,v 1.5 2012/05/05 07:47:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-xkb-plugin/xfce4-xkb-plugin-0.5.4.3.ebuild,v 1.6 2012/11/28 12:21:52 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 inherit multilib xfconf
 
 DESCRIPTION="XKB layout switching panel plug-in for the Xfce desktop environment"

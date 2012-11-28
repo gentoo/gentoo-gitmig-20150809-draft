@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-netload-plugin/xfce4-netload-plugin-1.2.0.ebuild,v 1.4 2012/11/19 21:22:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-netload-plugin/xfce4-netload-plugin-1.2.0.ebuild,v 1.5 2012/11/28 12:24:57 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 inherit multilib xfconf
 
 DESCRIPTION="A network load plug-in for the Xfce panel"

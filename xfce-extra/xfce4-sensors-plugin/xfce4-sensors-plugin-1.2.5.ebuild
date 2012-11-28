@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors-plugin/xfce4-sensors-plugin-1.2.5.ebuild,v 1.4 2012/05/22 05:34:58 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors-plugin/xfce4-sensors-plugin-1.2.5.ebuild,v 1.5 2012/11/28 12:24:14 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 EAUTORECONF=yes
 inherit multilib xfconf
 

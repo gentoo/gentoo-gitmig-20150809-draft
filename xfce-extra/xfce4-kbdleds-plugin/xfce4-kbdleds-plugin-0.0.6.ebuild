@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-kbdleds-plugin/xfce4-kbdleds-plugin-0.0.6.ebuild,v 1.5 2012/11/15 19:23:01 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-kbdleds-plugin/xfce4-kbdleds-plugin-0.0.6.ebuild,v 1.6 2012/11/28 12:22:14 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 inherit xfconf
 
 DESCRIPTION="A panel plug-in to show state of Caps, Num and Scroll Lock keys"

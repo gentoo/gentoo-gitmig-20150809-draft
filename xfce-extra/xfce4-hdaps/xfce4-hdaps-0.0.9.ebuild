@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-hdaps/xfce4-hdaps-0.0.9.ebuild,v 1.2 2012/11/15 19:21:56 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-hdaps/xfce4-hdaps-0.0.9.ebuild,v 1.3 2012/11/28 12:25:31 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 inherit linux-info xfconf
 
 DESCRIPTION="A plugin to indicate the status of the IBM Hard Drive Active Protection System"
