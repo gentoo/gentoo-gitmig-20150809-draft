@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/notify-sharp/notify-sharp-0.4.0_pre20090305.ebuild,v 1.6 2012/05/21 18:46:24 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/notify-sharp/notify-sharp-0.4.0_pre20090305.ebuild,v 1.7 2012/11/28 20:53:07 ulm Exp $
 
 EAPI=4
 inherit autotools eutils mono
@@ -10,9 +10,9 @@ MY_P=${PN}-${PV#*_pre}
 DESCRIPTION="a C# client implementation for Desktop Notifications"
 HOMEPAGE="http://www.ndesk.org/NotifySharp"
 SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
-LICENSE="as-is"
-SLOT="0"
 
+LICENSE="MIT"
+SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="doc"
 
