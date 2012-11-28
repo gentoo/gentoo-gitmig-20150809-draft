@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.459 2012/11/19 20:43:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.460 2012/11/28 00:32:24 robbat2 Exp $
+
+  28 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> +files/sshd.rc6.4:
+  Cleanup of sshd init.d in preparation for bug #410541. local keyword is not
+  POSIX sh.
 
   19 Nov 2012; Mike Frysinger <vapier@gentoo.org> openssh-6.1_p1.ebuild:
   Only show ecdsa key message when upgrading from older versions, and drop
