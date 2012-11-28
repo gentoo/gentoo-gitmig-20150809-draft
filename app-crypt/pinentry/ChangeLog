@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/pinentry
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.139 2012/11/25 14:45:28 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.140 2012/11/28 07:32:13 radhermit Exp $
+
+  28 Nov 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Add to crypto herd.
 
   25 Nov 2012; Sven Wegener <swegener@gentoo.org> metadata.xml:
   Move to maintainer-needed.
