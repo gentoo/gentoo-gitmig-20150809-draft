@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ristretto/ristretto-0.6.3.ebuild,v 1.3 2012/11/15 19:44:29 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ristretto/ristretto-0.6.3.ebuild,v 1.4 2012/11/28 12:32:06 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 inherit xfconf
 
 DESCRIPTION="A fast and lightweight picture viewer for the Xfce desktop environment"
