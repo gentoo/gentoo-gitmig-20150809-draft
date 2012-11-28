@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnfnetlink
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/ChangeLog,v 1.56 2012/11/24 13:19:05 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/ChangeLog,v 1.57 2012/11/28 20:21:56 ranger Exp $
+
+  28 Nov 2012; Brent Baude <ranger@gentoo.org> libnfnetlink-1.0.1.ebuild:
+  Marking libnfnetlink-1.0.1 ppc for bug 442872
 
   24 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
   libnfnetlink-1.0.1.ebuild:
