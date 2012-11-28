@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-11.0.ebuild,v 1.17 2012/11/15 18:06:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-11.0.ebuild,v 1.18 2012/11/28 13:35:19 ssuominen Exp $
 
 EAPI="4"
 
@@ -29,7 +29,8 @@ SLOT="0"
 IUSE="airplay alsa altivec avahi bluetooth bluray cec css debug goom joystick midi mysql profile +projectm pulseaudio pvr +rsxs rtmp +samba sse sse2 udev vaapi vdpau webserver +xrandr"
 REQUIRED_USE="pvr? ( mysql )"
 
-COMMON_DEPEND="virtual/opengl
+COMMON_DEPEND="virtual/glu
+	virtual/opengl
 	app-arch/bzip2
 	app-arch/unzip
 	app-arch/zip
