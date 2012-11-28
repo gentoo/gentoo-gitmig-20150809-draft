@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgusb/libgusb-0.1.3.ebuild,v 1.14 2012/11/09 18:24:12 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgusb/libgusb-0.1.3.ebuild,v 1.15 2012/11/28 17:56:18 ssuominen Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ IUSE="static-libs"
 # causes build failures
 RDEPEND=">=dev-libs/glib-2.28
 	virtual/libusb:1
-	|| ( sys-fs/udev[gudev] sys-fs/udev[extras] )"
+	virtual/udev[gudev]"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
 	dev-libs/libxslt
