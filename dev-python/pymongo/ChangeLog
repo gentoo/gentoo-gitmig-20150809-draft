@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pymongo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/ChangeLog,v 1.13 2012/11/12 14:59:02 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/ChangeLog,v 1.14 2012/11/28 10:00:48 ultrabug Exp $
+
+*pymongo-2.4 (28 Nov 2012)
+
+  28 Nov 2012; Ultrabug <ultrabug@gentoo.org> +pymongo-2.4.ebuild:
+  Version bump
 
   13 Nov 2012; Ian Delaney <idella4@gentoo.org> pymongo-2.3.ebuild:
   test phase for python3 proven unworkable, test restricted, fixes Bug #432552
