@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.460 2012/11/28 00:32:24 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.461 2012/11/28 01:07:04 robbat2 Exp $
+
+  28 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> files/sshd.rc6.4:
+  Bug #410541: prepare for detection of net variants to warn if the user needs a
+  rc_need for the actual interface to bind to. Not installed in the rebuild
+  pending ACK fro vapier.
 
   28 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> +files/sshd.rc6.4:
   Cleanup of sshd init.d in preparation for bug #410541. local keyword is not
