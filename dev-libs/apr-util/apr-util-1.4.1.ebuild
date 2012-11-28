@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-1.4.1.ebuild,v 1.2 2012/05/12 01:12:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-1.4.1.ebuild,v 1.3 2012/11/28 02:49:32 ottxor Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://apache/apr/${P}.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="1"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~ppc-aix ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="berkdb doc freetds gdbm ldap mysql nss odbc openssl postgres sqlite static-libs"
 RESTRICT="test"
 
@@ -47,20 +47,22 @@ src_prepare() {
 src_configure() {
 	local myconf
 
+	[[ ${CHOST} == *-mint* ]] && myconf="${myconf} --disable-util-dso"
+
 	if use berkdb; then
 		local db_version
 		db_version="$(db_findver sys-libs/db)" || die "Unable to find Berkeley DB version"
 		db_version="$(db_ver_to_slot "${db_version}")"
 		db_version="${db_version/\./}"
-		myconf+=" --with-dbm=db${db_version} --with-berkeley-db=$(db_includedir 2> /dev/null):/usr/$(get_libdir)"
+		myconf+=" --with-dbm=db${db_version} --with-berkeley-db=$(db_includedir 2> /dev/null):${EPREFIX}/usr/$(get_libdir)"
 	else
 		myconf+=" --without-berkeley-db"
 	fi
 
 	econf \
-		--datadir=/usr/share/apr-util-1 \
-		--with-apr=/usr \
-		--with-expat=/usr \
+		--datadir="${EPREFIX}"/usr/share/apr-util-1 \
+		--with-apr="${EPREFIX}"/usr \
+		--with-expat="${EPREFIX}"/usr \
 		--without-sqlite2 \
 		$(use_with freetds) \
 		$(use_with gdbm) \
