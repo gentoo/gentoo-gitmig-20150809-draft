@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-3.2.16.ebuild,v 1.4 2012/11/27 23:03:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-3.2.16.ebuild,v 1.5 2012/11/28 10:56:44 polynomial-c Exp $
 
 EAPI=4
 inherit eutils libtool multilib
@@ -24,7 +24,10 @@ DEPEND="
 src_prepare() {
 	elibtoolize
 	epatch "${FILESDIR}"/${PN}-1.1-vlan-header.patch
-	mv "${WORKDIR}"/${PN}-doc-3.2.15 "${WORKDIR}"/${PN}-doc-${PV} || die
+	if use doc ; then
+		mv "${WORKDIR}"/${PN}-doc-3.2.15 "${WORKDIR}"/${PN}-doc-${PV} \
+			|| die
+	fi
 }
 
 src_configure() {

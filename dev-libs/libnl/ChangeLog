@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libnl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.121 2012/11/27 23:03:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.122 2012/11/28 10:56:44 polynomial-c Exp $
+
+  28 Nov 2012; Lars Wendler <polynomial-c@gentoo.org> libnl-3.2.16.ebuild:
+  non-maintainer commit: Fixed build with doc USE flag being unset (bug
+  #445026).
 
   27 Nov 2012; Jeroen Roovers <jer@gentoo.org> libnl-3.2.16.ebuild:
   libnl -> ${PN} in SRC_URI.
