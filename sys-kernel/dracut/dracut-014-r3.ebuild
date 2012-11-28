@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-014-r3.ebuild,v 1.6 2012/11/28 10:21:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-014-r3.ebuild,v 1.7 2012/11/28 10:22:46 ssuominen Exp $
 
 EAPI=4
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="Generic initramfs generation tool"
 HOMEPAGE="http://dracut.wiki.kernel.org"

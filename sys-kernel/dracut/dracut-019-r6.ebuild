@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-019-r6.ebuild,v 1.3 2012/11/28 10:21:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-019-r6.ebuild,v 1.4 2012/11/28 10:22:46 ssuominen Exp $
 
 EAPI=4
 
-inherit eutils linux-info
+inherit eutils linux-info multilib
 
 add_req_use_for() {
 	local dep="$1"; shift
