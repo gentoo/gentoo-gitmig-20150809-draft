@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.44 2012/09/27 16:35:42 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.45 2012/11/28 12:41:23 ssuominen Exp $
 
 # @ECLASS: xfconf.eclass
 # @MAINTAINER:
@@ -40,7 +40,7 @@ unset _xfconf_deps
 unset _xfconf_m4
 
 case ${EAPI:-0} in
-	4|5) ;;
+	5) ;;
 	*) die "Unknown EAPI." ;;
 esac
 
