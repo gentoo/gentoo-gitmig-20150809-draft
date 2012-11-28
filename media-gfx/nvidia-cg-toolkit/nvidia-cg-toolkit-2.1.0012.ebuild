@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/nvidia-cg-toolkit-2.1.0012.ebuild,v 1.6 2012/11/22 21:55:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/nvidia-cg-toolkit-2.1.0012.ebuild,v 1.7 2012/11/28 18:44:03 jlec Exp $
 
 inherit versionator
 
@@ -55,5 +55,5 @@ src_install() {
 
 	# Copy all the example code.
 	dodir /usr/share/doc/${PF}/
-	mv usr/local/Cg/examples "${ED}"/usr/share/doc/${PF}/
+	mv usr/local/Cg/examples "${D}"/usr/share/doc/${PF}/
 }
