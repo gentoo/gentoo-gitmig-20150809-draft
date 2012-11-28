@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/rodent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rodent/ChangeLog,v 1.11 2012/11/15 19:41:28 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rodent/ChangeLog,v 1.12 2012/11/28 12:32:59 ssuominen Exp $
+
+  28 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> rodent-4.8.0.ebuild:
+  EAPI5
 
   16 Nov 2012; Andreas Schuerch <nativemad@gentoo.org> rodent-4.8.0.ebuild:
   x86 stable, see bug 429484
