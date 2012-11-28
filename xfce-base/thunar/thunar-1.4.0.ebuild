@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-1.4.0.ebuild,v 1.9 2012/09/09 14:42:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-1.4.0.ebuild,v 1.10 2012/11/28 12:31:22 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 inherit virtualx xfconf
 
 MY_P=${P/t/T}

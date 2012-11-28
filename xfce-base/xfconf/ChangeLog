@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfconf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfconf/ChangeLog,v 1.75 2012/11/28 09:37:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfconf/ChangeLog,v 1.76 2012/11/28 12:29:35 ssuominen Exp $
+
+  28 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> xfconf-4.10.0.ebuild:
+  EAPI5
 
   28 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> xfconf-4.10.0.ebuild:
   Insert missing files to po/POTFILES.skip for "make check" to pass wrt #444996
