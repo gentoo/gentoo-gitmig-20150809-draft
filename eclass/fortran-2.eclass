@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fortran-2.eclass,v 1.14 2012/10/18 21:08:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fortran-2.eclass,v 1.15 2012/11/28 12:11:51 jlec Exp $
 
 # @ECLASS: fortran-2.eclass
 # @MAINTAINER:
@@ -20,9 +20,7 @@
 # Optionally, it checks for extended capabilities based on
 # the variable options selected in the ebuild
 # The only phase function exported is fortran-2_pkg_setup.
-#
-# Example:
-#
+# @EXAMPLE:
 # FORTRAN_NEEDED="lapack fortran"
 #
 # inherit fortran-2
