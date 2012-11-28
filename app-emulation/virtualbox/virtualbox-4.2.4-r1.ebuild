@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.2.4-r1.ebuild,v 1.1 2012/11/12 18:19:52 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.2.4-r1.ebuild,v 1.2 2012/11/28 10:19:53 polynomial-c Exp $
 
 EAPI=4
 
@@ -58,7 +58,6 @@ DEPEND="${RDEPEND}
 	>=dev-util/kbuild-0.1.9998_pre20120806
 	>=dev-lang/yasm-0.6.2
 	sys-devel/bin86
-	sys-devel/dev86
 	sys-power/iasl
 	media-libs/libpng
 	pam? ( sys-libs/pam )

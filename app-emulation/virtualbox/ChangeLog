@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.136 2012/11/12 18:19:52 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.137 2012/11/28 10:19:53 polynomial-c Exp $
+
+  28 Nov 2012; Lars Wendler <polynomial-c@gentoo.org>
+  virtualbox-4.2.2-r1.ebuild, virtualbox-4.2.4-r1.ebuild:
+  Removed sys-devel/dev86 as build-dependency. Upstream replaced it with
+  openwatcom which we don't have in portage right now (see bug #233097).
 
 *virtualbox-4.2.4-r1 (12 Nov 2012)
 *virtualbox-4.2.2-r1 (12 Nov 2012)
