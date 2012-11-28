@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-gudev
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gudev/ChangeLog,v 1.7 2012/02/23 10:00:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gudev/ChangeLog,v 1.8 2012/11/28 18:03:17 ssuominen Exp $
+
+  28 Nov 2012; Samuli Suominen <ssuominen@gentoo.org>
+  python-gudev-147.2.ebuild:
+  Use virtual/udev instead of sys-fs/udev wrt #444398
 
   23 Feb 2012; Patrick Lauer <patrick@gentoo.org> python-gudev-147.2.ebuild:
   Restricting python
