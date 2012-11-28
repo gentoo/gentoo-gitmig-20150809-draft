@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/apr-util
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.176 2012/11/28 02:49:32 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.177 2012/11/28 07:45:27 polynomial-c Exp $
+
+*apr-util-1.5.1 (28 Nov 2012)
+
+  28 Nov 2012; Lars Wendler <polynomial-c@gentoo.org> +apr-util-1.5.1.ebuild:
+  Non-maintainer commit: Version bump.
 
   28 Nov 2012; Christoph Junghans <ottxor@gentoo.org> apr-util-1.4.1.ebuild:
   added prefix support
