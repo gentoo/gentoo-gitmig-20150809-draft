@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/parole/parole-0.3.0.3.ebuild,v 1.3 2012/11/15 19:45:12 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/parole/parole-0.3.0.3.ebuild,v 1.4 2012/11/28 12:09:00 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 inherit xfconf
 
 DESCRIPTION="a simple media player based on the GStreamer framework for the Xfce4 desktop"
@@ -15,10 +15,10 @@ KEYWORDS="amd64 ~mips x86"
 IUSE="debug libnotify taglib"
 
 COMMON_DEPEND=">=x11-libs/gtk+-2.20:2
-	>=dev-libs/glib-2.24:2
-	>=xfce-base/libxfce4util-4.8
-	>=xfce-base/libxfce4ui-4.8
-	>=dev-libs/dbus-glib-0.88
+	>=dev-libs/glib-2.24
+	>=xfce-base/libxfce4ui-4.10
+	>=xfce-base/libxfce4util-4.10
+	>=dev-libs/dbus-glib-0.100
 	>=media-libs/gstreamer-0.10.11:0.10
 	>=media-libs/gst-plugins-base-0.10.11:0.10
 	libnotify? ( >=x11-libs/libnotify-0.4.5 )
