@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/xarchiver
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xarchiver/ChangeLog,v 1.38 2012/05/03 01:58:53 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xarchiver/ChangeLog,v 1.39 2012/11/28 12:32:35 ssuominen Exp $
+
+  28 Nov 2012; Samuli Suominen <ssuominen@gentoo.org>
+  xarchiver-0.5.2-r3.ebuild:
+  EAPI5
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> xarchiver-0.5.2-r3.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
