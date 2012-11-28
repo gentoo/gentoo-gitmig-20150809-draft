@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/mendeleydesktop/mendeleydesktop-1.6.ebuild,v 1.2 2012/09/11 18:17:52 miknix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/mendeleydesktop/mendeleydesktop-1.7.1.ebuild,v 1.1 2012/11/28 22:50:12 miknix Exp $
 
 EAPI="4"
 
