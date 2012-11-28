@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/xfmpc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xfmpc/ChangeLog,v 1.23 2012/05/05 08:54:51 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xfmpc/ChangeLog,v 1.24 2012/11/28 12:35:53 ssuominen Exp $
+
+  28 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> xfmpc-0.2.2.ebuild:
+  EAPI5
 
   05 May 2012; Michał Górny <mgorny@gentoo.org> xfmpc-0.2.2.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
