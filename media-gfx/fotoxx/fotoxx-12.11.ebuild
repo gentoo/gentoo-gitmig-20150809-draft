@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/fotoxx-12.11.ebuild,v 1.4 2012/11/20 19:53:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/fotoxx-12.11.ebuild,v 1.5 2012/11/28 10:27:48 grozin Exp $
 EAPI=4
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs fdo-mime
 
 DESCRIPTION="Program for improving image files made with a digital camera."
 HOMEPAGE="http://www.kornelix.com/fotoxx.html"
@@ -19,6 +19,7 @@ DEPEND="x11-libs/gtk+:3
 RDEPEND="${DEPEND}
 	media-libs/exiftool
 	media-gfx/ufraw[gtk]
+	media-gfx/dcraw
 	x11-misc/xdg-utils"
 
 src_prepare() {
@@ -32,8 +33,20 @@ src_compile() {
 
 src_install() {
 	# For the Help menu items to work, *.html must be in /usr/share/doc/${PF},
-	# and README, CHANGES, TRANSLATIONS must not be compressed
+	# and README, changelog, translations, edit-menus, KB-shortcuts must not be compressed
 	emake DESTDIR="${D}" install
-	make_desktop_entry ${PN} "Fotoxx" /usr/share/${PN}/icons/${PN}.png \
-		"Graphics;2DGraphics"
+	insinto /usr/share/applications
+	newins desktop ${PN}.desktop
+	rm -f "${D}"/usr/share/doc/${PF}/*.man
+	docompress -x /usr/share/doc
+}
+
+pkg_postinst() {
+	fdo-mime_mime_database_update
+	fdo-mime_desktop_database_update
+}
+
+pkg_postrm() {
+	fdo-mime_desktop_database_update
+	fdo-mime_mime_database_update
 }
