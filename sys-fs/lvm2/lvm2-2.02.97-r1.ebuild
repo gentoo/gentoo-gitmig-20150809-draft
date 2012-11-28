@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.97-r1.ebuild,v 1.1 2012/11/24 08:45:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.97-r1.ebuild,v 1.2 2012/11/28 10:55:33 ssuominen Exp $
 
 EAPI=5
-inherit eutils multilib toolchain-funcs autotools linux-info
+inherit eutils multilib toolchain-funcs autotools linux-info udev
 
 DESCRIPTION="User-land utilities for LVM2 (device-mapper) software."
 HOMEPAGE="http://sources.redhat.com/lvm2/"
@@ -20,7 +20,7 @@ DEPEND_COMMON="!!sys-fs/device-mapper
 	readline? ( sys-libs/readline )
 	clvm? ( =sys-cluster/libdlm-3*
 			cman? ( =sys-cluster/cman-3* ) )
-	udev? ( >=sys-fs/udev-151-r4 )"
+	udev? ( virtual/udev )"
 
 # /run is now required for locking during early boot. /var cannot be assumed to
 # be available.
@@ -39,7 +39,7 @@ RDEPEND="${RDEPEND}
 DEPEND="${DEPEND_COMMON}
 		virtual/pkgconfig
 		>=sys-devel/binutils-2.20.1-r1
-		static? ( || ( >=sys-fs/udev-181[static-libs] <sys-fs/udev-181 ) )"
+		static? ( virtual/udev[static-libs] )"
 
 S="${WORKDIR}/${PN/lvm/LVM}.${PV}"
 
@@ -181,7 +181,7 @@ src_configure() {
 	fi
 
 	local udevdir="${EPREFIX}/lib/udev/rules.d"
-	use udev && udevdir="${EPREFIX}$($(tc-getPKG_CONFIG) --variable=udevdir udev)/rules.d"
+	use udev && udevdir="${EPREFIX}/$(udev_get_udevdir)/rules.d"
 
 	econf \
 		$(use_enable readline) \

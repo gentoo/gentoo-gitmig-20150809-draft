@@ -1,6 +1,21 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.278 2012/11/24 10:06:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.279 2012/11/28 10:55:33 ssuominen Exp $
+
+  28 Nov 2012; Samuli Suominen <ssuominen@gentoo.org>
+  lvm2-2.02.97-r1.ebuild:
+  Use udev.eclass to read correct udevdir value from udev.pc file.
+
+  28 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> lvm2-2.02.67.ebuild,
+  lvm2-2.02.67-r1.ebuild, lvm2-2.02.67-r2.ebuild, lvm2-2.02.70.ebuild,
+  lvm2-2.02.70-r1.ebuild, lvm2-2.02.72.ebuild, lvm2-2.02.73.ebuild,
+  lvm2-2.02.73-r1.ebuild, lvm2-2.02.74.ebuild, lvm2-2.02.83.ebuild,
+  lvm2-2.02.84.ebuild, lvm2-2.02.85.ebuild, lvm2-2.02.88.ebuild,
+  lvm2-2.02.92.ebuild, lvm2-2.02.93.ebuild, lvm2-2.02.93-r1.ebuild,
+  lvm2-2.02.95.ebuild, lvm2-2.02.95-r1.ebuild, lvm2-2.02.95-r2.ebuild,
+  lvm2-2.02.95-r3.ebuild, lvm2-2.02.95-r4.ebuild, lvm2-2.02.97.ebuild,
+  lvm2-2.02.97-r1.ebuild:
+  Use virtual/udev instead of sys-fs/udev wrt #444398
 
   24 Nov 2012; Pacho Ramos <pacho@gentoo.org>
   +files/lvm2-2.02.97-strict-aliasing.patch:
