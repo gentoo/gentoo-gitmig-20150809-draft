@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ndesk-dbus-glib/ndesk-dbus-glib-0.4.1.ebuild,v 1.3 2012/05/04 03:56:57 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ndesk-dbus-glib/ndesk-dbus-glib-0.4.1.ebuild,v 1.4 2012/11/28 20:52:38 ulm Exp $
 
 EAPI=3
 inherit mono multilib
@@ -9,7 +9,7 @@ DESCRIPTION="glib integration for DBus-Sharp"
 HOMEPAGE="http://www.ndesk.org/DBusSharp"
 SRC_URI="http://www.ndesk.org/archive/dbus-sharp/${P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="debug"
