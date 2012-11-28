@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-12.12_pre1662.ebuild,v 1.1 2012/11/28 17:26:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-12.12_pre1662.ebuild,v 1.2 2012/11/28 18:26:31 jer Exp $
 
 EAPI=4
 inherit eutils fdo-mime gnome2-utils multilib pax-utils versionator
@@ -30,9 +30,8 @@ O_LINGUAS="
 # == End of variables that often change ==
 
 if [[ "pre${O_B/pre/}" = "${O_B}" ]]; then	# snapshot: _pre
-	O_B="${O_B/pre}"						# remove _pre
 	O_D="${O_K}_${O_V}-${O_B}"				# directory string
-	O_P="${PN}-${O_V}-${O_B}"				# package string
+	O_P="${PN}-${O_V}-${O_B/pre}"			# package string
 	O_U="http://snapshot.opera.com/unix/"	# base URI
 
 	SRC_URI="
@@ -41,9 +40,8 @@ if [[ "pre${O_B/pre/}" = "${O_B}" ]]; then	# snapshot: _pre
 		x86-fbsd? ( ${O_U}${O_D}/${O_P}.i386.freebsd.tar.xz )
 	"
 else							# release: _p
-	O_B="${O_B/p}"				# remove _p
 	O_D="${O_V/./}"				# directory string
-	O_P="${PN}-${O_V}-${O_B}"	# package string
+	O_P="${PN}-${O_V}-${O_B/p}"	# package string
 	O_U="mirror://opera/"		# base URI
 
 	SRC_URI="
