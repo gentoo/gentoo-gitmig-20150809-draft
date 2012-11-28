@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/logilab-common
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.108 2012/11/20 20:53:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.109 2012/11/28 20:24:43 ranger Exp $
+
+  28 Nov 2012; Brent Baude <ranger@gentoo.org> logilab-common-0.58.1.ebuild:
+  Marking logilab-common-0.58.1 ppc for bug 441276
 
   20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> logilab-common-0.58.1.ebuild:
   Stable for x86, wrt bug #441276
