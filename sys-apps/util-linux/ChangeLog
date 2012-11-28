@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.407 2012/10/19 16:04:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.408 2012/11/28 23:03:40 ssuominen Exp $
+
+  28 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> util-linux-2.21.2.ebuild,
+  util-linux-2.22.ebuild, util-linux-2.22.1.ebuild, util-linux-9999.ebuild:
+  Use virtual/udev instead of sys-fs/udev wrt #444398
 
   19 Oct 2012; Mike Frysinger <vapier@gentoo.org> util-linux-2.22.1.ebuild,
   util-linux-9999.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.22.1.ebuild,v 1.2 2012/10/19 16:04:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.22.1.ebuild,v 1.3 2012/11/28 23:03:40 ssuominen Exp $
 
 EAPI="3"
 
@@ -40,7 +40,7 @@ RDEPEND="!sys-process/schedutils
 	perl? ( dev-lang/perl )
 	selinux? ( sys-libs/libselinux )
 	slang? ( sys-libs/slang )
-	udev? ( sys-fs/udev )"
+	udev? ( virtual/udev )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	virtual/os-headers"
