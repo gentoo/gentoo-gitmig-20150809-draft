@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/opera-next-12.11.1661.ebuild,v 1.1 2012/11/16 15:34:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/opera-next-12.11_pre1661.ebuild,v 1.1 2012/11/28 17:40:20 jer Exp $
 
 EAPI=4
 inherit eutils fdo-mime gnome2-utils multilib pax-utils versionator
@@ -16,21 +16,42 @@ IUSE="elibc_FreeBSD gtk kde +gstreamer multilib"
 O_V="$(get_version_component_range 1-2)" # Version, i.e. 11.00
 O_B="$(get_version_component_range 3)"   # Build number, i.e. 1156
 
-O_D="rev_${O_V}-${O_B}"
-O_P="${PN}-${O_V}-${O_B}"
-O_U="http://snapshot.opera.com/unix/"
+# == Variables that often change ==
+# All other variables should be accounted for by _pre/_p
 
-SRC_URI="
-	amd64? ( ${O_U}${O_D}/${O_P}.x86_64.linux.tar.xz )
-	x86? ( ${O_U}${O_D}/${O_P}.i386.linux.tar.xz )
-	x86-fbsd? ( ${O_U}${O_D}/${O_P}.i386.freebsd.tar.xz )
-"
+O_K="" # The key to the snapshot URL
 
 O_LINGUAS="
 	af ar az be bg bn cs da de el en-GB es-ES es-LA et fa fi fr fr-CA fy gd he
 	hi hr hu id it ja ka kk ko lt lv me mk ms nb nl nn pa pl pt pt-BR ro ru sk
 	sr sv sw ta te th tl tr uk ur uz vi zh-CN zh-TW zu
-"
+" # Supported linguas
+
+# == End of variables that often change ==
+
+if [[ "pre${O_B/pre/}" = "${O_B}" ]]; then	# snapshot: _pre
+	O_B="${O_B/pre}"						# remove _pre
+	O_D="${O_K}_${O_V}-${O_B}"				# directory string
+	O_P="${PN}-${O_V}-${O_B}"				# package string
+	O_U="http://snapshot.opera.com/unix/"	# base URI
+
+	SRC_URI="
+		amd64? ( ${O_U}${O_D}/${O_P}.x86_64.linux.tar.xz )
+		x86? ( ${O_U}${O_D}/${O_P}.i386.linux.tar.xz )
+		x86-fbsd? ( ${O_U}${O_D}/${O_P}.i386.freebsd.tar.xz )
+	"
+else							# release: _p
+	O_B="${O_B/p}"				# remove _p
+	O_D="${O_V/./}"				# directory string
+	O_P="${PN}-${O_V}-${O_B}"	# package string
+	O_U="mirror://opera/"		# base URI
+
+	SRC_URI="
+		amd64? ( ${O_U}linux/${O_D}/${O_P}.x86_64.linux.tar.xz )
+		x86? ( ${O_U}linux/${O_D}/${O_P}.i386.linux.tar.xz )
+		x86-fbsd? ( ${O_U}unix/${O_D}/${O_P}.i386.freebsd.tar.xz )
+	"
+fi
 
 for O_LINGUA in ${O_LINGUAS}; do
 	IUSE+=" linguas_${O_LINGUA/-/_}"
