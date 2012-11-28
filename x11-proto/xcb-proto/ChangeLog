@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/xcb-proto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.85 2012/11/18 12:27:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.86 2012/11/28 21:48:05 ranger Exp $
+
+  28 Nov 2012; Brent Baude <ranger@gentoo.org> xcb-proto-1.8.ebuild:
+  Marking xcb-proto-1.8 ppc stable for bug 440872
 
   18 Nov 2012; Agostino Sarubbo <ago@gentoo.org> xcb-proto-1.8.ebuild:
   Stable for x86, wrt bug #440872
