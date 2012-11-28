@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7201 2012/11/27 22:50:27 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7202 2012/11/28 03:03:57 robbat2 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> package.mask:
+  Remove localshell pmask.
 
   27 Nov 2012; Sebastian Pipping <sping@gentoo.org> package.mask:
   Mask app-admin/profiler for removal (bug #444332)
