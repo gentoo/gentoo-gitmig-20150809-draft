@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yafu/yafu-1.33-r1.ebuild,v 1.1 2012/11/25 07:42:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yafu/yafu-1.33-r1.ebuild,v 1.2 2012/11/28 08:12:53 patrick Exp $
 
 EAPI=4
 DESCRIPTION="Yet another factoring utility"
@@ -13,11 +13,12 @@ LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 # nfs is overloaded, so using less confusing sieve here
-IUSE="sieve"
+IUSE="+sieve"
 
 DEPEND="dev-libs/gmp
 	sci-mathematics/gmp-ecm
-	sieve? ( sci-mathematics/msieve )"
+	sieve? ( sci-mathematics/msieve
+		sci-mathematics/ggnfs )"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
