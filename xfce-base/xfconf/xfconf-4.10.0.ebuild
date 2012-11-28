@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfconf/xfconf-4.10.0.ebuild,v 1.10 2012/09/09 14:31:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfconf/xfconf-4.10.0.ebuild,v 1.11 2012/11/28 09:37:55 ssuominen Exp $
 
 EAPI=4
 inherit xfconf
@@ -39,6 +39,16 @@ pkg_setup() {
 	[[ ${CHOST} == *-darwin* ]] && XFCONF+=( --disable-visibility ) #366857
 
 	DOCS=( AUTHORS ChangeLog NEWS TODO )
+}
+
+src_prepare() {
+	# http://bugzilla.xfce.org/show_bug.cgi?id=9556
+	cat <<-EOF >> po/POTFILES.skip
+	xfconf-perl/xs/Xfconf.c
+	xfconf-perl/xs/XfconfBinding.c
+	xfconf-perl/xs/XfconfChannel.c
+	EOF
+	xfconf_src_prepare
 }
 
 src_compile() {
