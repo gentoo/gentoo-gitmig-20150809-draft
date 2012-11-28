@@ -1,6 +1,9 @@
 # ChangeLog for app-office/orage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/orage/ChangeLog,v 1.64 2012/06/06 21:12:31 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/orage/ChangeLog,v 1.65 2012/11/28 12:33:42 ssuominen Exp $
+
+  28 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> orage-4.8.3.ebuild:
+  EAPI5
 
   06 Jun 2012; Jeremy Olexa <darkside@gentoo.org> orage-4.8.3.ebuild:
   Fix installation offset for bug 419823 by Palmer Dabbelt
