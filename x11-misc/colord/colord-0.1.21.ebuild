@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-0.1.21.ebuild,v 1.8 2012/10/16 15:58:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-0.1.21.ebuild,v 1.9 2012/11/28 10:30:04 ssuominen Exp $
 
 EAPI="4"
 
@@ -26,7 +26,7 @@ COMMON_DEPEND="
 	gusb? ( >=dev-libs/libgusb-0.1.1 )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.8 )
 	scanner? ( media-gfx/sane-backends )
-	udev? ( || ( sys-fs/udev[gudev] sys-fs/udev[extras] ) )
+	udev? ( virtual/udev[gudev] )
 "
 RDEPEND="${COMMON_DEPEND}
 	media-gfx/shared-color-profiles"
