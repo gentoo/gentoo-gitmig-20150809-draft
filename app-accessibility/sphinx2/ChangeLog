@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/sphinx2
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinx2/ChangeLog,v 1.18 2009/09/22 15:46:02 williamh Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinx2/ChangeLog,v 1.19 2012/11/28 18:13:41 radhermit Exp $
+
+  28 Nov 2012; Tim Harder <radhermit@gentoo.org> sphinx2-0.6.ebuild:
+  Fix LICENSE (bug #445040 by ulm).
 
   22 Sep 2009; William Hubbs <williamh@gentoo.org> sphinx2-0.6.ebuild,
   +files/sphinx2-0.6-as-needed.patch:

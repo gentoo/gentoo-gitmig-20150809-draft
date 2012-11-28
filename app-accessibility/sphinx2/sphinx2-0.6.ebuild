@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinx2/sphinx2-0.6.ebuild,v 1.7 2009/09/22 15:46:02 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinx2/sphinx2-0.6.ebuild,v 1.8 2012/11/28 18:13:41 radhermit Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ DESCRIPTION="CMU Speech Recognition-engine"
 HOMEPAGE="http://fife.speech.cs.cmu.edu/sphinx/"
 SRC_URI="mirror://sourceforge/cmusphinx/${P}.tar.gz"
 
-LICENSE="BSD as-is"
+LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""

@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/sphinx3
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinx3/ChangeLog,v 1.8 2012/05/23 23:02:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinx3/ChangeLog,v 1.9 2012/11/28 18:15:13 radhermit Exp $
+
+  28 Nov 2012; Tim Harder <radhermit@gentoo.org> sphinx3-0.6.3.ebuild,
+  sphinx3-0.8.ebuild:
+  Fix LICENSE (bug #445040 by ulm).
 
   23 May 2012; Mike Frysinger <vapier@gentoo.org> sphinx3-0.8.ebuild:
   Inherit eutils eclass for epatch.

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinx3/sphinx3-0.8.ebuild,v 1.4 2012/05/23 23:02:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinx3/sphinx3-0.8.ebuild,v 1.5 2012/11/28 18:15:13 radhermit Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2:2.6"
@@ -13,7 +13,7 @@ DESCRIPTION="CMU Speech Recognition engine"
 HOMEPAGE="http://cmusphinx.sourceforge.net/"
 SRC_URI="mirror://sourceforge/cmusphinx/${P}.tar.gz"
 
-LICENSE="BSD as-is"
+LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc python static-libs"
