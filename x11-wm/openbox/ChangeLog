@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.255 2012/10/06 17:39:30 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.256 2012/11/29 16:33:14 jer Exp $
+
+  29 Nov 2012; Jeroen Roovers <jer@gentoo.org> openbox-3.5.0_p20121006.ebuild:
+  Stable for HPPA (bug #444882).
 
 *openbox-3.5.0_p20121006 (06 Oct 2012)
 
