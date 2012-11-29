@@ -1,10 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.5.11.ebuild,v 1.6 2012/11/04 18:35:32 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.5.13.ebuild,v 1.1 2012/11/29 15:23:01 jlec Exp $
 
 EAPI=4
 
 inherit autotools eutils multilib toolchain-funcs prefix
+inherit autotools eutils multilib prefix toolchain-funcs virtualx
 
 MY_P="${PN}${PV/_beta/b}"
 
@@ -19,10 +20,12 @@ IUSE="debug threads truetype aqua xscreensaver"
 
 RDEPEND="
 	!aqua? (
+		media-libs/fontconfig
 		x11-libs/libX11
 		x11-libs/libXt
 		truetype? ( x11-libs/libXft )
-		xscreensaver? ( x11-libs/libXScrnSaver ) )
+		xscreensaver? ( x11-libs/libXScrnSaver )
+	)
 	~dev-lang/tcl-${PV}"
 DEPEND="${RDEPEND}
 	!aqua? ( x11-proto/xproto )"
@@ -30,30 +33,35 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-fedora-xft.patch
-	epatch "${FILESDIR}"/${PN}-8.4.11-multilib.patch
+	tc-export CC
+
+	epatch \
+		"${FILESDIR}"/${PN}-8.5.11-fedora-xft.patch \
+		"${FILESDIR}"/${PN}-8.4.11-multilib.patch
 
 	epatch "${FILESDIR}"/${PN}-8.4.15-aqua.patch
 	eprefixify unix/Makefile.in
 
 	# Bug 125971
-	epatch "${FILESDIR}"/${PN}-8.5_alpha6-tclm4-soname.patch
+	epatch "${FILESDIR}"/${PN}-8.5.10-conf.patch
 
 	# Bug 354067 : the same applies to tk, since the patch is about tcl.m4, just
 	# copy the tcl patch
 	epatch "${FILESDIR}"/tcl-8.5.9-gentoo-fbsd.patch
 
-	# Bug 441630
-	epatch "${FILESDIR}"/${PN}-8.5.11-fix-name-collision-uclibc.patch
-
-	sed -i 's/FT_New_Face/XftFontOpen/g' unix/configure.in || die
+	# Make sure we use the right pkg-config, and link against fontconfig
+	# (since the code base uses Fc* functions).
+	sed \
+		-e 's/FT_New_Face/XftFontOpen/g' \
+		-e "s:\<pkg-config\>:$(tc-getPKG_CONFIG):" \
+		-e 's:xft freetype2:xft freetype2 fontconfig:' \
+		-i unix/configure.in || die
 
 	cd "${S}"/unix
 	eautoreconf
 }
 
 src_configure() {
-	tc-export CC
 	cd "${S}"/unix
 
 	local mylibdir=$(get_libdir)
@@ -71,6 +79,10 @@ src_compile() {
 	cd "${S}"/unix && emake
 }
 
+src_test() {
+	cd "${S}"/unix && Xemake test
+}
+
 src_install() {
 	#short version number
 	local v1
@@ -83,15 +95,17 @@ src_install() {
 	local nS="$(cd "${S}"; pwd)"
 
 	# fix the tkConfig.sh to eliminate refs to the build directory
-	local mylibdir=$(get_libdir)
+	local mylibdir=$(get_libdir); mylibdir=${mylibdir//\/}
 	sed -i \
-		-e "s,^\(TK_BUILD_LIB_SPEC='-L\)${nS}/unix,\1${EPREFIX}/usr/${mylibdir}," \
-		-e "s,^\(TK_SRC_DIR='\)${nS}',\1${EPREFIX}/usr/${mylibdir}/tk${v1}/include'," \
-		-e "s,^\(TK_BUILD_STUB_LIB_SPEC='-L\)${nS}/unix,\1${EPREFIX}/usr/${mylibdir}," \
-		-e "s,^\(TK_BUILD_STUB_LIB_PATH='\)${nS}/unix,\1${EPREFIX}/usr/${mylibdir}," \
+		-e "s,^TK_BUILD_LIB_SPEC='-L.*/unix ,TK_BUILD_LIB_SPEC='," \
+		-e "s,^TK_SRC_DIR='.*',TK_SRC_DIR='${EPREFIX}/usr/${mylibdir}/tk${v1}/include'," \
+		-e "s,^TK_BUILD_STUB_LIB_SPEC='-L.*/unix ,TK_BUILD_STUB_LIB_SPEC='," \
+		-e "s,^TK_BUILD_STUB_LIB_PATH='.*/unix,TK_BUILD_STUB_LIB_PATH='${EPREFIX}/usr/${mylibdir}," \
+		-e "s,^TK_LIB_FILE='libtk${v1}..TK_DBGX..so',TK_LIB_FILE=\"libtk${v1}\$\{TK_DBGX\}.so\"," \
+		-e "s,^TK_STUB_LIB_SPEC='-L${EPREFIX}/usr/${mylibdir} ,TK_STUB_LIB_SPEC='," \
+		-e "s,^TK_LIB_SPEC='-L${EPREFIX}/usr/${mylibdir} ,TK_LIB_SPEC='," \
 		"${ED}"/usr/${mylibdir}/tkConfig.sh || die
-
-	if [[ ${CHOST} != *-darwin* ]]; then
+	if [[ ${CHOST} != *-darwin* && ${CHOST} != *-mint* ]] ; then
 		sed -i \
 				-e "s,^\(TK_CC_SEARCH_FLAGS='.*\)',\1:${EPREFIX}/usr/${mylibdir}'," \
 				-e "s,^\(TK_LD_SEARCH_FLAGS='.*\)',\1:${EPREFIX}/usr/${mylibdir}'," \
