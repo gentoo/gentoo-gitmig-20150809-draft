@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libnl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.122 2012/11/28 10:56:44 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.123 2012/11/29 15:45:39 jer Exp $
+
+  29 Nov 2012; Jeroen Roovers <jer@gentoo.org> libnl-3.2.14.ebuild:
+  Stable for HPPA (bug #444112).
 
   28 Nov 2012; Lars Wendler <polynomial-c@gentoo.org> libnl-3.2.16.ebuild:
   non-maintainer commit: Fixed build with doc USE flag being unset (bug
