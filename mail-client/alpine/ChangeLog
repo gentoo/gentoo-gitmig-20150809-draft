@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/alpine
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/alpine/ChangeLog,v 1.17 2012/11/27 19:55:14 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/alpine/ChangeLog,v 1.18 2012/11/29 19:08:48 eras Exp $
+
+  29 Nov 2012; Eray Aslan <eras@gentoo.org> alpine-2.00-r5.ebuild:
+  Don't elog messages all the time - bug #440570
 
   27 Nov 2012; Eray Aslan <eras@gentoo.org> -alpine-2.00-r1.ebuild,
   -alpine-2.00-r2.ebuild, -alpine-2.00-r3.ebuild, -alpine-2.00.ebuild:
