@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/enable
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enable/ChangeLog,v 1.18 2012/10/09 09:22:56 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enable/ChangeLog,v 1.19 2012/11/29 10:53:21 idella4 Exp $
+
+  30 Nov 2012; Ian Delaney <idella4@gentoo.org>
+  +files/enable-4-rogue-tests.patch, enable-4.1.0.ebuild, enable-4.2.0.ebuild:
+  Fixes to test suites in 4.1,2.0, special patch saved to devspace to make
+  workable mix of correct and wrong import paths, skirt 1 invalid test, set 2
+  tests to xfail, fixes Bug #422945
 
 *enable-4.2.0 (09 Oct 2012)
 
