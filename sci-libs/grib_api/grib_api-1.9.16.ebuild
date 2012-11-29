@@ -1,16 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/grib_api/grib_api-1.9.16.ebuild,v 1.2 2012/08/03 19:09:41 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/grib_api/grib_api-1.9.16.ebuild,v 1.3 2012/11/29 18:05:47 bicatali Exp $
 
 EAPI=4
-inherit eutils autotools
 
-#MYP=${P}_libtool
-MYP=${P}
+PYTHON_DEPEND="python? 2"
+inherit eutils autotools python
 
 DESCRIPTION="Library for decoding WMO FM-92 GRIB messages"
 HOMEPAGE="http://www.ecmwf.int/products/data/software/grib_api.html"
-SRC_URI="http://www.ecmwf.int/products/data/software/download/software_files/${MYP}.tar.gz"
+SRC_URI="http://www.ecmwf.int/products/data/software/download/software_files/${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
@@ -27,7 +26,9 @@ DEPEND="
 	python? ( dev-python/numpy )"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/${MYP}"
+pkg_setup() {
+	use python && python_set_active_version 2
+}
 
 src_prepare() {
 	sed -i -e 's:/usr/bin/ksh:/bin/sh:' tools/grib1to2.txt || die

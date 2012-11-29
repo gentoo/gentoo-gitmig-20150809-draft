@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/grib_api
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/grib_api/ChangeLog,v 1.11 2012/08/03 19:09:42 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/grib_api/ChangeLog,v 1.12 2012/11/29 18:05:47 bicatali Exp $
+
+  29 Nov 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/grib_api-1.9.5-32bit.patch, -files/grib_api-1.9.5-autotools.patch,
+  -files/grib_api-1.9.9-autotools.patch, grib_api-1.9.16.ebuild:
+  Do not build for python-3 (bug #445047)
 
   03 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org>
   +files/grib_api-1.9.16-jpeg2k.patch, -grib_api-1.9.5-r1.ebuild,
