@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.248 2012/11/29 16:20:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.249 2012/11/29 20:44:46 ranger Exp $
+
+  29 Nov 2012; Brent Baude <ranger@gentoo.org> cyrus-sasl-2.1.25-r3.ebuild:
+  Marking cyrus-sasl-2.1.25-r3 ppc for bug 445208
 
   29 Nov 2012; Jeroen Roovers <jer@gentoo.org> cyrus-sasl-2.1.25-r3.ebuild:
   Stable for HPPA (bug #445208).
