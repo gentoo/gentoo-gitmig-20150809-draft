@@ -1,8 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/namd/namd-2.7_beta2-r1.ebuild,v 1.1 2010/06/24 20:37:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/namd/namd-2.7_beta2-r1.ebuild,v 1.2 2012/11/29 13:41:41 jlec Exp $
 
-inherit eutils toolchain-funcs flag-o-matic
+EAPI=4
+
+inherit eutils multilib toolchain-funcs flag-o-matic
 
 DESCRIPTION="A powerful and highly parallelized molecular dynamics code"
 LICENSE="namd"
@@ -22,7 +24,7 @@ RESTRICT="fetch"
 DEPEND="
 	app-shells/tcsh
 	sys-cluster/charm
-	=sci-libs/fftw-2*
+	sci-libs/fftw:2.1
 	dev-lang/tcl"
 
 RDEPEND=${DEPEND}
@@ -43,61 +45,54 @@ pkg_nofetch() {
 	echo
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	CHARM_VERSION=$(best_version sys-cluster/charm | cut -d- -f3)
 
 	# apply a few small fixes to make NAMD compile and
 	# link to the proper libraries
-	epatch "${FILESDIR}"/namd-2.7_beta2-gentoo.patch
-	epatch "${FILESDIR}"/namd-2.7-ldflags.patch
-	epatch "${FILESDIR}"/namd-2.7-iml-dec.patch
-	sed -e "s:charm-6.1.3:charm-${CHARM_VERSION}:" \
-		Make.charm || \
-		die
+	epatch \
+		"${FILESDIR}"/namd-2.7_beta2-gentoo.patch \
+		"${FILESDIR}"/namd-2.7-ldflags.patch \
+		"${FILESDIR}"/namd-2.7-iml-dec.patch
+	sed \
+		-e "s:charm-6.1.3:charm-${CHARM_VERSION}:" \
+		-i Make.charm || die
 
 	rm -f charm-6.1.3.tar || die
 
 	# proper compiler and cflags
-	sed -e "s/g++/$(tc-getCXX)/" \
+	sed \
+		-e "s/g++/$(tc-getCXX)/" \
 		-e "s/gcc/$(tc-getCC)/" \
 		-e "s/CXXOPTS = -O3 -m64 -fexpensive-optimizations -ffast-math/CXXOPTS = ${CXXFLAGS}/" \
 		-e "s/COPTS = -O3 -m64 -fexpensive-optimizations -ffast-math/COPTS = ${CFLAGS}/" \
-		-i arch/${NAMD_ARCH}.arch || \
-		die "Failed to setup ${NAMD_ARCH}.arch"
+		-i arch/${NAMD_ARCH}.arch || die
 
-	sed -e "s/gentoo-libdir/$(get_libdir)/g" \
+	sed \
+		-e "s/gentoo-libdir/$(get_libdir)/g" \
 		-e "s/gentoo-charm/charm-${CHARM_VERSION}/g" \
 		-i Makefile || die "Failed gentooizing Makefile."
-	sed -e "s/gentoo-libdir/$(get_libdir)/g" -i arch/Linux-x86_64.fftw || \
-		die "Failed gentooizing Linux-x86_64.fftw."
-	sed -e "s/gentoo-libdir/$(get_libdir)/g" -i arch/Linux-x86_64.tcl || \
-		die "Failed gentooizing Linux-x86_64.tcl."
+	sed -e "s/gentoo-libdir/$(get_libdir)/g" -i arch/Linux-x86_64.fftw || die
+	sed -e "s/gentoo-libdir/$(get_libdir)/g" -i arch/Linux-x86_64.tcl || die
+}
 
+src_configure() {
 	# configure
-	./config ${NAMD_ARCH}
+	./config ${NAMD_ARCH} || die
 }
 
 src_compile() {
 	# build namd
 	cd "${S}/${NAMD_ARCH}"
-	emake || die "Failed to build namd"
+	emake
 }
 
 src_install() {
+	dodoc announce.txt license.txt notes.txt
 	cd "${S}/${NAMD_ARCH}"
 
 	# the binaries
-	dobin ${PN}2 psfgen flipbinpdb flipdcd || \
-		die "Failed to install binaries"
-
-	cd "${S}"
-
-	# some docs
-	dodoc announce.txt license.txt notes.txt || \
-		die "Failed to install docs"
+	dobin ${PN}2 psfgen flipbinpdb flipdcd
 }
 
 pkg_postinst() {
