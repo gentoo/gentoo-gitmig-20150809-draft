@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/fish
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.54 2012/06/06 06:17:52 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.55 2012/11/29 04:05:09 jdhore Exp $
+
+  29 Nov 2012; Jeff Horelick <jdhore@gentoo.org> metadata.xml:
+  Adopt fish
 
   06 Jun 2012; Jeff Horelick <jdhore@gentoo.org> fish-1.23.1-r2.ebuild:
   marked x86 per bug 419725
@@ -253,4 +256,3 @@
   The Friendly Interactive SHell. Has command-line syntax highlighting, tab
   completion by default, 'open' to use .desktop files for opening any type of
   file, and other cool stuff.
-
