@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xboxdrv/xboxdrv-0.8.4.ebuild,v 1.4 2012/05/03 03:41:15 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/xboxdrv/xboxdrv-0.8.4.ebuild,v 1.5 2012/11/29 02:06:18 ssuominen Exp $
 
 EAPI=2
 inherit scons-utils toolchain-funcs linux-info
@@ -16,7 +16,7 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="dev-libs/boost
-	sys-fs/udev
+	virtual/udev
 	sys-apps/dbus
 	dev-libs/glib:2
 	virtual/libusb:1
