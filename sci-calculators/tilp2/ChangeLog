@@ -1,6 +1,12 @@
 # ChangeLog for sci-calculators/tilp2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tilp2/ChangeLog,v 1.9 2012/08/04 22:14:46 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tilp2/ChangeLog,v 1.10 2012/11/29 12:01:14 jlec Exp $
+
+*tilp2-1.16-r1 (29 Nov 2012)
+
+  29 Nov 2012; Justin Lecher <jlec@gentoo.org> -tilp2-1.16.ebuild,
+  +tilp2-1.16-r1.ebuild, metadata.xml:
+  Call default phase function for src_install, #445101
 
   04 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> -tilp2-1.14.ebuild,
   tilp2-1.16.ebuild:
