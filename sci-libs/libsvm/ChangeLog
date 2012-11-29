@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/libsvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsvm/ChangeLog,v 1.28 2012/06/26 23:49:24 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsvm/ChangeLog,v 1.29 2012/11/29 19:04:49 bicatali Exp $
+
+*libsvm-3.14 (29 Nov 2012)
+
+  29 Nov 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/3.14-makefile.patch, +libsvm-3.14.ebuild, metadata.xml:
+  Version bump, update patch
 
   26 Jun 2012; Sebastien Fabbro <fabbros@gentoo.org> -files/2.91-makefile.patch,
   -files/3.0-makefile.patch, -files/3.1-openmp.patch,
@@ -135,4 +141,3 @@
   02 Jan 2006; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
   +libsvm-2.81.ebuild:
   Initial import. This closes bug #111898.
-
