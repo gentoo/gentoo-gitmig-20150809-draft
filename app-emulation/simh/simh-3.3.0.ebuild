@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/simh/simh-3.3.0.ebuild,v 1.3 2007/07/12 06:39:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/simh/simh-3.3.0.ebuild,v 1.4 2012/11/29 11:31:35 pinkbyte Exp $
 
 inherit eutils versionator
 
@@ -9,7 +9,7 @@ DESCRIPTION="a simulator for historical computers such as Vax, PDP-11 etc.)"
 HOMEPAGE="http://simh.trailing-edge.com/"
 SRC_URI="http://simh.trailing-edge.com/sources/${MY_P}.zip"
 
-LICENSE="as-is"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="x86"
 

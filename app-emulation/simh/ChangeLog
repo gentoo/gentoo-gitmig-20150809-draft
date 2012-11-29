@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/simh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/simh/ChangeLog,v 1.17 2012/06/23 19:10:37 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/simh/ChangeLog,v 1.18 2012/11/29 11:31:35 pinkbyte Exp $
+
+  29 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> simh-3.3.0.ebuild,
+  simh-3.8.1.ebuild, simh-3.9.0-r1.ebuild:
+  Set proper license for package, wrt bug #444474. Thanks to Ulrich Müller for
+  discovering this issue
 
 *simh-3.9.0-r1 (23 Jun 2012)
 
