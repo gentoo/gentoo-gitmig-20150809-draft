@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.466 2012/11/26 23:29:03 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.467 2012/11/29 04:41:04 floppym Exp $
+
+  29 Nov 2012; Mike Gilbert <floppym@gentoo.org> package.use.mask:
+  Remove mask on test use flag for freerdp.
 
   26 Nov 2012; Anthony G. Basile <blueness@gentoo.org> package.use.mask:
   Remove maskings on net-misc/tor[nat-pmp,upnp]
