@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/pnp4nagios
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/ChangeLog,v 1.49 2012/09/26 15:28:40 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/ChangeLog,v 1.50 2012/11/29 17:01:03 ago Exp $
+
+  29 Nov 2012; <ago@gentoo.org> pnp4nagios-0.6.19-r1.ebuild:
+  Stable for ppc, wrt bug #430358
 
   26 Sep 2012; Kacper Kowalik <xarthisius@gentoo.org>
   pnp4nagios-0.6.19-r1.ebuild:
