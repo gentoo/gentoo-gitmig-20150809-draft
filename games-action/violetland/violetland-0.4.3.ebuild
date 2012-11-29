@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/violetland/violetland-0.4.3.ebuild,v 1.7 2012/11/26 22:50:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/violetland/violetland-0.4.3.ebuild,v 1.8 2012/11/29 07:50:32 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils multilib toolchain-funcs flag-o-matic cmake-utils games
 
 DESCRIPTION="Help a girl by name of Violet to struggle with hordes of monsters."
@@ -18,7 +18,7 @@ RDEPEND="media-libs/libsdl[audio,video]
 	media-libs/sdl-image[png]
 	media-libs/sdl-mixer[vorbis]
 	media-libs/sdl-ttf
-	dev-libs/boost
+	dev-libs/boost[threads(+)]
 	virtual/opengl
 	virtual/glu"
 DEPEND="${RDEPEND}
