@@ -1,6 +1,19 @@
 # ChangeLog for dev-libs/libxslt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.245 2012/11/29 13:20:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.246 2012/11/29 13:23:08 ssuominen Exp $
+
+  29 Nov 2012; Samuli Suominen <ssuominen@gentoo.org>
+  -files/libxslt-1.1.23-parallel-install.patch, -libxslt-1.1.26-r3.ebuild,
+  -libxslt-1.1.26-r4.ebuild, -files/libxslt-1.1.26-generate-id-crash.patch,
+  -files/libxslt-1.1.26-id-generation.patch,
+  -files/libxslt-1.1.26-node-type-1.patch,
+  -files/libxslt-1.1.26-node-type-2.patch,
+  -files/libxslt-1.1.26-node-type-3.patch,
+  -files/libxslt-1.1.26-pattern-compile-crash.patch,
+  -files/libxslt-1.1.26-pattern-out-of-bounds-read.patch,
+  -files/libxslt-1.1.26-posix-comparison.patch,
+  -files/libxslt-1.1.26-undefined.patch:
+  old
 
 *libxslt-1.1.28 (29 Nov 2012)
 
