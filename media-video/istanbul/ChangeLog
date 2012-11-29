@@ -1,6 +1,19 @@
 # ChangeLog for media-video/istanbul
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/istanbul/ChangeLog,v 1.20 2012/10/25 20:50:59 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/istanbul/ChangeLog,v 1.21 2012/11/29 09:38:47 tetromino Exp $
+
+*istanbul-0.2.2.1_pre20120909 (29 Nov 2012)
+
+  29 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  istanbul-0.2.2.ebuild, +istanbul-0.2.2.1_pre20120909.ebuild,
+  +files/istanbul-0.2.2-desktop-file.patch,
+  +files/istanbul-0.2.2-dir-overwrite.patch,
+  +files/istanbul-0.2.2-fix-grab-xid.patch,
+  +files/istanbul-0.2.2-fix-preview-window.patch,
+  +files/istanbul-0.2.2-noalsa.patch:
+  Fix build failure with recent automake (bug #407683, thanks to Helmut
+  Jarausch et al.) Add git snapshot containing numerous serious bug fixes, and
+  some further fixes from the Debian patchset.
 
   25 Oct 2012; Gilles Dartiguelongue <eva@gentoo.org> istanbul-0.2.2.ebuild:
   Pin gstreamer dependencies to slot 0.10.

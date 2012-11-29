@@ -1,16 +1,18 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/istanbul/istanbul-0.2.2.ebuild,v 1.11 2012/11/29 09:38:47 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/istanbul/istanbul-0.2.2.1_pre20120909.ebuild,v 1.1 2012/11/29 09:38:47 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
+GNOME2_LA_PUNT="yes"
 PYTHON_DEPEND="2"
 
 inherit eutils gnome2 python autotools
 
 HOMEPAGE="http://live.gnome.org/Istanbul"
 DESCRIPTION="Istanbul is a screencast application for the Unix desktop"
-SRC_URI="http://zaheer.merali.org/${P}.tar.bz2"
+#SRC_URI="http://zaheer.merali.org/${P}.tar.bz2"
+SRC_URI="http://dev.gentoo.org/~tetromino/distfiles/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2" # Note: not GPL-2+
 SLOT=0
@@ -34,6 +36,8 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35.0
 	virtual/pkgconfig"
 
+S="${WORKDIR}/${PN}-0.2.2.1"
+
 pkg_setup() {
 	python_set_active_version 2
 	python_pkg_setup
@@ -43,8 +47,14 @@ src_prepare() {
 	python_clean_py-compile_files
 	cp py-compile common/py-compile-destdir || die
 
-	# fix autoreconf failure, bug #230325
-	epatch "${FILESDIR}/${P}-macro-typo.patch"
+	# .desktop file validation failures
+	epatch "${FILESDIR}/${PN}-0.2.2-desktop-file.patch"
+
+	# important Debian patches
+	epatch "${FILESDIR}/${PN}-0.2.2-fix-grab-xid.patch"
+	epatch "${FILESDIR}/${PN}-0.2.2-fix-preview-window.patch"
+	epatch "${FILESDIR}/${PN}-0.2.2-dir-overwrite.patch"
+	epatch "${FILESDIR}/${PN}-0.2.2-noalsa.patch"
 
 	eautoreconf
 
