@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/lm_sensors
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.129 2012/11/18 11:34:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.130 2012/11/29 04:05:00 jdhore Exp $
+
+  29 Nov 2012; Jeff Horelick <jdhore@gentoo.org> metadata.xml:
+  Adopt lm_sensors
 
   18 Nov 2012; Pacho Ramos <pacho@gentoo.org>
   -files/lm_sensors-3.1.2-sensors-detect-gentoo.patch, -lm_sensors-3.2.0.ebuild,
