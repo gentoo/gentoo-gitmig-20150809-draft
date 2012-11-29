@@ -12,8 +12,9 @@
         <bugs-to>https://crawl.develz.org/mantis/main_page.php</bugs-to>
 	</upstream>
 	<use>
-		<flag name='tiles'>Enable for graphical (tiled) build. Uses ncurses
-			if disabled.
+		<flag name='tiles'>Enable for graphical (tiled) build.
+		</flag>
+		<flag name='ncurses'>Enable for console based build (uses ncurses).
 		</flag>
 	</use>
 	<longdescription lang="en">
