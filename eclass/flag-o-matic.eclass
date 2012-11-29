@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.183 2012/11/18 08:29:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.184 2012/11/29 23:27:32 vapier Exp $
 
 # @ECLASS: flag-o-matic.eclass
 # @MAINTAINER:
@@ -392,7 +392,7 @@ test-flag-PROG() {
 
 	# use -c so we can test the assembler as well
 	local PROG=$(tc-get${comp})
-	${PROG} "${flag}" -c -o /dev/null -x${lang} /dev/null \
+	${PROG} "${flag}" -c -o /dev/null -x${lang} - < /dev/null \
 		> /dev/null 2>&1
 }
 
