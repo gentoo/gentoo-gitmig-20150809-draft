@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.219 2012/11/29 18:13:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.220 2012/11/29 20:49:57 ranger Exp $
+
+  29 Nov 2012; Brent Baude <ranger@gentoo.org> gdb-7.5.ebuild:
+  Marking gdb-7.5 ppc for bug 444902
 
 *gdb-7.5.1 (29 Nov 2012)
 
