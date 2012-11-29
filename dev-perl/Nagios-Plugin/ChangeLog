@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Nagios-Plugin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Nagios-Plugin/ChangeLog,v 1.15 2012/11/25 13:09:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Nagios-Plugin/ChangeLog,v 1.16 2012/11/29 15:44:17 jer Exp $
+
+  29 Nov 2012; Jeroen Roovers <jer@gentoo.org> Nagios-Plugin-0.360.0.ebuild:
+  Stable for HPPA (bug #444462).
 
   25 Nov 2012; <ago@gentoo.org> Nagios-Plugin-0.360.0.ebuild:
   Stable for amd64, wrt bug #444462

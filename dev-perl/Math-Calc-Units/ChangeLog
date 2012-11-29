@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Math-Calc-Units
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-Calc-Units/ChangeLog,v 1.9 2012/11/25 13:09:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-Calc-Units/ChangeLog,v 1.10 2012/11/29 15:43:55 jer Exp $
+
+  29 Nov 2012; Jeroen Roovers <jer@gentoo.org> Math-Calc-Units-1.70.0.ebuild:
+  Stable for HPPA (bug #444462).
 
   25 Nov 2012; <ago@gentoo.org> Math-Calc-Units-1.70.0.ebuild:
   Stable for amd64, wrt bug #444462
