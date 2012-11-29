@@ -15,6 +15,7 @@
     <flag name="sieve">Add sieve support</flag>
     <flag name="vpopmail">Add vpopmail support</flag>
     <flag name="imapc">Add imap client storage support</flag>
+    <flag name="pop3c">Add pop3 client storage support</flag>
     <flag name="lucene">Add lucene full text search (FTS) support using <pkg>dev-cpp/clucene</pkg></flag>
   </use>
 </pkgmetadata>
