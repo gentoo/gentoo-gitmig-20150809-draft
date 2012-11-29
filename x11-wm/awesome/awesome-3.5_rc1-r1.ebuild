@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.5_rc1-r1.ebuild,v 1.1 2012/11/28 00:20:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.5_rc1-r1.ebuild,v 1.2 2012/11/29 16:30:37 mr_bones_ Exp $
 
 EAPI="3"
 CMAKE_MIN_VERSION="2.8"
@@ -90,7 +90,7 @@ src_configure() {
 		-DSYSCONFDIR="${EPREFIX}"/etc
 		$(cmake-utils_use_with dbus DBUS)
 		)
-	
+
 	# The lua docs now officially require ldoc.lua and NOT luadoc
 	# As the modules documentation has been updated to the Lua 5.2 style
 	has_version >=dev-lang/lua-5.2 && mycmakeargs+="$(cmake-utils_use doc GENERATE_LUADOC)"
