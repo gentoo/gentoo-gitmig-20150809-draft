@@ -1,0 +1,25 @@
+diff -ur matplotlib-1.2.0.orig/setup.py matplotlib-1.2.0/setup.py
+--- setup.py	2012-11-08 10:24:12.000000000 +0800
++++ setup.py	2012-11-25 06:55:27.531042898 +0800
+@@ -176,15 +176,12 @@
+         build_tkagg(ext_modules, packages)
+         rc['backend'] = 'TkAgg'
+ 
+-hasgtk = check_for_gtk()
+-if options['build_gtk']:
+-    if hasgtk or (options['build_gtk'] is True):
+-        build_gdk(ext_modules, packages)
+-if options['build_gtkagg']:
+-    if hasgtk or (options['build_gtkagg'] is True):
+-        options['build_agg'] = 1
+-        build_gtkagg(ext_modules, packages)
+-        rc['backend'] = 'GTKAgg'
++hasgtk = False if sys.version_info[0] >= 3 else True
++if hasgtk and (options['build_gtk'] is True):
++    build_gdk(ext_modules, packages)
++    options['build_agg'] = 1
++    build_gtkagg(ext_modules, packages)
++    rc['backend'] = 'GTKAgg'
+ 
+ if options['build_macosx']:
+     if check_for_macosx() or (options['build_macosx'] is True):
