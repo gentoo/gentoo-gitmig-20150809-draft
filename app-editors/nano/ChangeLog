@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nano
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.285 2012/09/30 17:24:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.286 2012/11/29 22:01:01 jlec Exp $
+
+  29 Nov 2012; Justin Lecher <jlec@gentoo.org> files/gentoo.nanorc:
+  Add EAPI=5 highlighting
 
   30 Sep 2012; Raúl Porcel <armin76@gentoo.org> nano-2.3.1-r2.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #436126
