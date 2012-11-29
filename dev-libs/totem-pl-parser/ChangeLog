@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/totem-pl-parser
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.122 2012/11/27 22:51:12 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.123 2012/11/29 03:26:01 tetromino Exp $
+
+  29 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  totem-pl-parser-2.32.6-r3.ebuild, totem-pl-parser-3.4.3-r1.ebuild:
+  Add missing gnome-common build dependency (bug #445000, thanks to Dennis
+  Lichtenthäler et al.)
 
   27 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   totem-pl-parser-2.32.6-r3.ebuild, totem-pl-parser-3.4.3-r1.ebuild:
