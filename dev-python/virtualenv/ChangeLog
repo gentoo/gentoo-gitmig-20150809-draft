@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/virtualenv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.79 2012/09/29 23:13:34 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.80 2012/11/29 06:27:48 patrick Exp $
+
+*virtualenv-1.8.4 (29 Nov 2012)
+
+  29 Nov 2012; Patrick Lauer <patrick@gentoo.org> +virtualenv-1.8.4.ebuild:
+  Bump
 
   29 Sep 2012; Tim Harder <radhermit@gentoo.org> virtualenv-1.7.1.2-r1.ebuild:
   Use correct variable name.
@@ -321,4 +326,3 @@
   03 Apr 2008; Rob Cakebread <pythonhead@gentoo.org> +metadata.xml,
   +virtualenv-1.0.ebuild:
   Initial commit. Closes #215959
-
