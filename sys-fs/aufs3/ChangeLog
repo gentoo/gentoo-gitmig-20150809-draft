@@ -1,6 +1,27 @@
 # ChangeLog for sys-fs/aufs3
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.33 2012/11/26 20:36:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.34 2012/11/29 21:24:36 jlec Exp $
+
+*aufs3-3_p20121129 (29 Nov 2012)
+
+  29 Nov 2012; Justin Lecher <jlec@gentoo.org>
+  +files/3_p20121129/aufs3-base-0.patch,
+  +files/3_p20121129/aufs3-standalone-0.patch,
+  +files/3_p20121129/aufs3-base-1.patch,
+  +files/3_p20121129/aufs3-standalone-1.patch,
+  +files/3_p20121129/aufs3-base-2.patch,
+  +files/3_p20121129/aufs3-standalone-2.patch, +aufs3-3_p20121129.ebuild,
+  +files/3_p20121129/aufs3-base-3.patch,
+  +files/3_p20121129/aufs3-standalone-3.patch,
+  +files/3_p20121129/aufs3-base-4.patch,
+  +files/3_p20121129/aufs3-standalone-4.patch,
+  +files/3_p20121129/aufs3-base-x-rcN.patch,
+  +files/3_p20121129/aufs3-base-5.patch,
+  +files/3_p20121129/aufs3-standalone-x-rcN.patch,
+  +files/3_p20121129/aufs3-standalone-5.patch,
+  +files/3_p20121129/aufs3-base-6.patch,
+  +files/3_p20121129/aufs3-standalone-6.patch:
+  Version BUmp
 
   26 Nov 2012; Justin Lecher <jlec@gentoo.org> -aufs3-3_p20120109.ebuild,
   aufs3-3_p20120430.ebuild, -aufs3-3_p20120523.ebuild,
