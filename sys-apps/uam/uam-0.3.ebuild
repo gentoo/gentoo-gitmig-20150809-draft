@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/uam/uam-0.3.ebuild,v 1.7 2012/09/07 10:50:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/uam/uam-0.3.ebuild,v 1.8 2012/11/29 02:23:08 ssuominen Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-RDEPEND="sys-fs/udev"
+RDEPEND="virtual/udev"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
