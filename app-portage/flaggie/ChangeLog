@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/flaggie
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/flaggie/ChangeLog,v 1.38 2012/11/29 11:50:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/flaggie/ChangeLog,v 1.39 2012/11/29 12:17:04 mgorny Exp $
+
+  29 Nov 2012; Michał Górny <mgorny@gentoo.org> flaggie-0.2-r2.ebuild:
+  Remove pypy from PYTHON_COMPAT to clear the path for STABLEREQ.
 
   29 Nov 2012; Michał Górny <mgorny@gentoo.org> -flaggie-0.2-r1.ebuild:
   Remove old.
