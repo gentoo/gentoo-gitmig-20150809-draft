@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/aufs-sources-3.6.8.ebuild,v 1.2 2012/11/29 22:04:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/aufs-sources-3.6.8.ebuild,v 1.3 2012/11/29 22:17:37 jlec Exp $
 
 EAPI=5
 ETYPE="sources"
@@ -44,7 +44,8 @@ src_prepare() {
 }
 
 src_install() {
-	doheader include/linux/aufs_type.h
+	insinto /usr/include/linux
+	doins include/linux/aufs_type.h
 	kernel-2_src_install
 }
 
