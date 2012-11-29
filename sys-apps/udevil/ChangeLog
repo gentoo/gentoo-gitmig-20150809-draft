@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/udevil
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/udevil/ChangeLog,v 1.18 2012/11/25 12:19:27 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/udevil/ChangeLog,v 1.19 2012/11/29 02:05:39 ssuominen Exp $
+
+  29 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> udevil-0.3.1.ebuild,
+  udevil-0.3.2.ebuild, udevil-0.3.3-r1.ebuild, udevil-0.3.4.ebuild,
+  udevil-0.3.5.ebuild:
+  Use virtual/udev instead of sys-fs/udev wrt #444398
 
 *udevil-0.3.5 (25 Nov 2012)
 

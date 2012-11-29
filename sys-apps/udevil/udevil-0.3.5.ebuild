@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/udevil/udevil-0.3.5.ebuild,v 1.1 2012/11/25 12:19:27 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/udevil/udevil-0.3.5.ebuild,v 1.2 2012/11/29 02:05:38 ssuominen Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ IUSE="systemd"
 RDEPEND=">=app-shells/bash-4.0
 	dev-libs/glib:2
 	sys-apps/util-linux
-	>=sys-fs/udev-143
+	>=virtual/udev-143
 	virtual/acl
 	systemd? ( sys-apps/systemd )"
 DEPEND="${RDEPEND}
@@ -64,7 +64,7 @@ pkg_postinst() {
 		elog "When using ${PN} without udisks, and without the udisks-daemon running,"
 		elog "you may need to enable kernel polling for device media changes to be detected."
 		elog "See http://ignorantguru.github.com/${PN}/#polling"
-		has_version '<sys-fs/udev-173' && ewarn "You need at least udev-173"
+		has_version '<virtual/udev-173' && ewarn "You need at least udev-173"
 		kernel_is lt 2 6 38 && ewarn "You need at least kernel 2.6.38"
 		einfo
 	fi
