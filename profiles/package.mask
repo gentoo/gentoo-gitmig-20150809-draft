@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14262 2012/11/28 03:03:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14263 2012/11/29 13:42:16 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -81,11 +81,6 @@ net-wireless/linux-wlan-ng-modules
 net-wireless/linux-wlan-ng-utils
 net-wireless/linux-wlan-ng-firmware
 net-wireless/linux-wlan-ng
-
-# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
-# Doesn't compile (#270269), it's also hardware specific and, then,
-# needs a dedicated maintainer. Removal in a month.
-net-wireless/rfswitch
 
 # Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
 # Runtime problems (#272751), no update since 2005 (bluez-3 times),
