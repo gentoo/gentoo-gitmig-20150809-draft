@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.559 2012/11/24 22:27:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.560 2012/11/29 01:16:41 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1203,6 +1203,12 @@ gcc_do_configure() {
 		--with-bugurl=http://bugs.gentoo.org/ \
 		--with-pkgversion="${BRANDING_GCC_PKGVERSION}"
 	set -- ${confgcc} "$@" ${EXTRA_ECONF}
+
+	# Do not let the X detection get in our way.  We know things can be found
+	# via system paths, so no need to hardcode things that'll break multilib.
+	# Older gcc versions will detect ac_x_libraries=/usr/lib64 which ends up
+	# killing the 32bit builds which want /usr/lib.
+	export ac_cv_have_x='have_x=yes ac_x_includes= ac_x_libraries='
 
 	# Nothing wrong with a good dose of verbosity
 	echo
