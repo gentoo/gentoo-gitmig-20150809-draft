@@ -1,6 +1,9 @@
 # ChangeLog for app-text/mupdf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.55 2012/11/28 08:14:04 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.56 2012/11/29 13:11:52 blueness Exp $
+
+  29 Nov 2012; Anthony G. Basile <blueness@gentoo.org> mupdf-1.1.ebuild:
+  stable ppc, bug #444914
 
 *mupdf-1.1_p20121127 (28 Nov 2012)
 
