@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libxslt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.244 2012/09/29 17:38:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.245 2012/11/29 13:20:30 ssuominen Exp $
+
+*libxslt-1.1.28 (29 Nov 2012)
+
+  29 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> +libxslt-1.1.28.ebuild:
+  Version bump wrt #445016 by Andrew Oakley
 
   29 Sep 2012; Jeroen Roovers <jer@gentoo.org> libxslt-1.1.27.ebuild:
   Stable for HPPA (bug #436284).
