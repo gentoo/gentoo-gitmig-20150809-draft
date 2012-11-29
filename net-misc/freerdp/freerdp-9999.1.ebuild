@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-9999.1.ebuild,v 1.12 2012/09/23 20:14:47 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-9999.1.ebuild,v 1.13 2012/11/29 04:39:19 floppym Exp $
 
 EAPI="4"
 
@@ -26,8 +26,6 @@ LICENSE="Apache-2.0"
 SLOT="0"
 IUSE="alsa +channels +client cups debug directfb doc ffmpeg gstreamer jpeg
 	pulseaudio smartcard sse2 test X xinerama xv"
-
-RESTRICT="test"
 
 RDEPEND="
 	dev-libs/openssl
@@ -62,7 +60,6 @@ DEPEND="${RDEPEND}
 		app-text/docbook-xml-dtd:4.1.2
 		app-text/xmlto
 	) ) )
-	test? ( dev-util/cunit )
 "
 
 DOCS=( README )
@@ -82,13 +79,13 @@ src_configure() {
 		$(cmake-utils_use_with pulseaudio PULSEAUDIO)
 		$(cmake-utils_use_with smartcard PCSC)
 		$(cmake-utils_use_with sse2 SSE2)
-		$(cmake-utils_use_with test CUNIT)
 		$(cmake-utils_use_with X X11)
 		$(cmake-utils_use_with X XCURSOR)
 		$(cmake-utils_use_with X XEXT)
 		$(cmake-utils_use_with X XKBFILE)
 		$(cmake-utils_use_with xinerama XINERAMA)
 		$(cmake-utils_use_with xv XV)
+		$(cmake-utils_use_build test TESTING)
 	)
 	cmake-utils_src_configure
 }
