@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/salt-0.10.0.ebuild,v 1.1 2012/07/06 23:16:24 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/salt-0.10.0.ebuild,v 1.2 2012/11/29 11:39:19 mgorny Exp $
 
 EAPI=4
 
@@ -30,6 +30,9 @@ RDEPEND="${DEPEND}
 		mongodb? ( dev-python/pymongo )
 		mysql? ( dev-python/mysql-python )
 		redis? ( dev-python/redis-py )"
+
+# Tests try to remove system files (bug #437268).
+RESTRICT=test
 
 src_prepare() {
 	sed -i '/install_requires=/ d' setup.py || die "sed failed"
