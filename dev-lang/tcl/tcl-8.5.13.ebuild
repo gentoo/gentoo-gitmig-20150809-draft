@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.5.11.ebuild,v 1.6 2012/04/26 16:15:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.5.13.ebuild,v 1.1 2012/11/29 14:01:36 jlec Exp $
 
 EAPI=4
 
@@ -35,10 +35,12 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-8.5_alpha6-multilib.patch
 
 	# Bug 125971
-	epatch "${FILESDIR}"/${PN}-8.5_alpha6-tclm4-soname.patch
+	epatch "${FILESDIR}"/${PN}-8.5.10-conf.patch
 
 	# Bug 354067
 	epatch "${FILESDIR}"/${PN}-8.5.9-gentoo-fbsd.patch
+
+	epatch "${FILESDIR}"/${P}-autopath.patch
 
 	cd "${S}"/unix
 	eautoreconf
@@ -71,13 +73,16 @@ src_install() {
 	S= emake DESTDIR="${D}" install
 
 	# fix the tclConfig.sh to eliminate refs to the build directory
-	local mylibdir=$(get_libdir)
+	# and drop unnecessary -L inclusion to default system libdir
+	local mylibdir=$(get_libdir) ; mylibdir=${mylibdir//\/}
 	sed -i \
-		-e "s,^TCL_BUILD_LIB_SPEC='-L.*/unix,TCL_BUILD_LIB_SPEC='-L${EPREFIX}/usr/${mylibdir}," \
+		-e "s,^TCL_BUILD_LIB_SPEC='-L.*/unix ,TCL_BUILD_LIB_SPEC='," \
 		-e "s,^TCL_SRC_DIR='.*',TCL_SRC_DIR='${EPREFIX}/usr/${mylibdir}/tcl${v1}/include'," \
-		-e "s,^TCL_BUILD_STUB_LIB_SPEC='-L.*/unix,TCL_BUILD_STUB_LIB_SPEC='-L${EPREFIX}/usr/${mylibdir}," \
+		-e "s,^TCL_BUILD_STUB_LIB_SPEC='-L.*/unix ,TCL_BUILD_STUB_LIB_SPEC='," \
 		-e "s,^TCL_BUILD_STUB_LIB_PATH='.*/unix,TCL_BUILD_STUB_LIB_PATH='${EPREFIX}/usr/${mylibdir}," \
 		-e "s,^TCL_LIB_FILE='libtcl${v1}..TCL_DBGX..so',TCL_LIB_FILE=\"libtcl${v1}\$\{TCL_DBGX\}.so\"," \
+		-e "s,^TCL_STUB_LIB_SPEC='-L${EPREFIX}/usr/${mylibdir} ,TCL_STUB_LIB_SPEC='," \
+		-e "s,^TCL_LIB_SPEC='-L${EPREFIX}/usr/${mylibdir} ,TCL_LIB_SPEC='," \
 		"${ED}"/usr/${mylibdir}/tclConfig.sh || die
 	if [[ ${CHOST} != *-darwin* && ${CHOST} != *-mint* ]] ; then
 		sed -i \

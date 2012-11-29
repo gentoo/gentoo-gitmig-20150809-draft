@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.158 2012/06/07 16:36:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.159 2012/11/29 14:01:36 jlec Exp $
+
+*tcl-8.5.13 (29 Nov 2012)
+
+  29 Nov 2012; Justin Lecher <jlec@gentoo.org>
+  -files/tcl-8.4.11-multilib.patch, -tcl-8.4.18.ebuild, -tcl-8.5.7.ebuild,
+  -tcl-8.5.8-r1.ebuild, -tcl-8.5.8-r2.ebuild, -files/tcl-8.5.8-fortify.patch,
+  -tcl-8.5.9.ebuild, +files/tcl-8.5.10-conf.patch, -tcl-8.5.11.ebuild,
+  +tcl-8.5.13.ebuild, +files/tcl-8.5.13-autopath.patch:
+  Version Bump, #444296; Cleaned old
 
 *tcl-8.5.11-r1 (07 Jun 2012)
 
