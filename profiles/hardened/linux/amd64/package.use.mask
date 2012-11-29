@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/amd64/package.use.mask,v 1.22 2012/11/20 18:45:08 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/amd64/package.use.mask,v 1.23 2012/11/29 21:20:47 zorry Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -25,3 +25,7 @@ dev-lang/path64 assembler
 # Bug 433121
 # also mask tools as it requires X -zerochaos
 x11-drivers/nvidia-drivers X tools
+
+# Magnus Granberg <zorry@gentoo.org> (29 Nov 2012)
+# Bug #444786 disable nvidia on app-admin/conky
+app-admin/conky nvidia

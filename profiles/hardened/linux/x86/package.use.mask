@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/x86/package.use.mask,v 1.17 2012/11/27 01:20:13 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/x86/package.use.mask,v 1.18 2012/11/29 21:20:47 zorry Exp $
 
 # cyrus-sasl doesn't work w/ USE=berkdb (#192753)
 dev-libs/cyrus-sasl berkdb
@@ -15,3 +15,6 @@ dev-libs/cyrus-sasl berkdb
 # Bug 433121
 x11-drivers/nvidia-drivers X tools
 
+# Magnus Granberg <zorry@gentoo.org> (29 Nov 2012)
+# Bug #444786 disable nvidia on app-admin/conky 
+app-admin/conky nvidia
