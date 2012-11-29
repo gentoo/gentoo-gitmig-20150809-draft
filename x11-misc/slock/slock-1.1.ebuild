@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slock/slock-1.1.ebuild,v 1.2 2012/10/29 04:38:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slock/slock-1.1.ebuild,v 1.3 2012/11/29 15:46:00 jer Exp $
 
 EAPI=4
 inherit savedconfig toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="http://dl.suckless.org/tools/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 hppa ~x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="x11-libs/libX11
