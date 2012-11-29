@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.2.0.ebuild,v 1.1 2012/11/29 10:03:01 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.2.0.ebuild,v 1.2 2012/11/29 15:32:08 idella4 Exp $
 
 EAPI="3"
 
@@ -115,11 +115,11 @@ src_prepare() {
 		|| die "sed pyparsing failed"
 
 	DocCheck() {
-	if [[ "$(python_get_version  --major)" == '3' ]]; then
+	if [[ "$(python_get_version  --major)" == '3' ]] && use doc; then
 		eerror ""
 		eerror "Building of docs with python3 currently **FAILS**"
 		eerror "Docs can be built effectively with python2."
-		eerror "Prepend USE_PYTHON=2.7 and recommence emerge "
+		eerror "eselect python2 and recommence emerge "
 		eerror ""
 		die
 	fi
@@ -170,3 +170,4 @@ src_install() {
 		doins -r examples || die
 	fi
 }
+
