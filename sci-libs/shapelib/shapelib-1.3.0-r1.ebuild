@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/shapelib/shapelib-1.3.0-r1.ebuild,v 1.6 2012/11/29 16:58:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/shapelib/shapelib-1.3.0-r1.ebuild,v 1.7 2012/11/29 21:00:14 jlec Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs multilib versionator
@@ -40,12 +40,9 @@ static_to_shared() {
 	fi
 }
 
-pkg_setup() {
-	tc-export CC
-}
-
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-respect-user.patch
+	tc-export CC AR
 }
 
 src_compile() {
