@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/ivtv
-# Copyright 2000-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.112 2012/11/18 17:44:14 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.113 2012/11/29 02:22:04 ssuominen Exp $
+
+  29 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> ivtv-1.0.1.ebuild,
+  ivtv-1.0.2.ebuild, ivtv-1.0.3-r2.ebuild, ivtv-1.1.0-r1.ebuild,
+  ivtv-1.2.0-r1.ebuild:
+  Use virtual/udev instead of sys-fs/udev wrt #444398
 
   18 Nov 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Remove beandog wrt #131511

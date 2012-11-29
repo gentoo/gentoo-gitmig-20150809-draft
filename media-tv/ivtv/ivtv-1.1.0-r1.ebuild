@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-1.1.0-r1.ebuild,v 1.3 2008/10/21 21:35:26 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-1.1.0-r1.ebuild,v 1.4 2012/11/29 02:22:04 ssuominen Exp $
 
 inherit eutils linux-mod
 
@@ -11,7 +11,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="perl"
-RDEPEND=">=sys-fs/udev-103"
+RDEPEND="virtual/udev"
 DEPEND="app-arch/unzip"
 PDEPEND=">=media-tv/ivtv-firmware-20070217
 	perl? (
