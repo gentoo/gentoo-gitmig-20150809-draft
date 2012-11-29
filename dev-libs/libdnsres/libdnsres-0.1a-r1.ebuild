@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnsres/libdnsres-0.1a-r1.ebuild,v 1.9 2010/12/02 17:27:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnsres/libdnsres-0.1a-r1.ebuild,v 1.10 2012/11/29 05:03:35 pinkbyte Exp $
 
 inherit eutils autotools
 
@@ -8,7 +8,7 @@ DESCRIPTION="A non-blocking DNS resolver library"
 HOMEPAGE="http://www.monkey.org/~provos/libdnsres/"
 SRC_URI="http://www.monkey.org/~provos/${P}.tar.gz"
 
-LICENSE="|| ( as-is BSD )"
+LICENSE="BSD-4"
 SLOT="0"
 KEYWORDS="amd64 ~ppc sparc x86"
 IUSE=""
