@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-0.6.0_rc12.ebuild,v 1.1 2012/11/14 21:57:19 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-0.6.0_rc11-r1.ebuild,v 1.1 2012/11/29 05:19:12 ryao Exp $
 
 EAPI="4"
 
