@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/cvc3
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cvc3/ChangeLog,v 1.3 2012/06/01 02:12:45 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cvc3/ChangeLog,v 1.4 2012/11/29 11:41:29 gienah Exp $
+
+  29 Nov 2012; Mark Wright <gienah@gentoo.org> cvc3-2.4.1.ebuild:
+  Try to fix: bug 442228 - sci-mathematics/cvc3-2.4.1 - QA Notice:
+  //usr/lib/pkgconfig/cvc3.pc installed in ${D}/${D}
 
   01 Jun 2012; Mark Wright <gienah@gentoo.org> cvc3-2.4.1.ebuild, metadata.xml:
   Fix bug #418455 - sci-mathematics/cvs3 license issues. Fix typos in sed.
@@ -13,4 +17,3 @@
   30 May 2012; Mark Wright <gienah@gentoo.org> +cvc3-2.4.1.ebuild,
   +files/50cvc3-gentoo.el, +metadata.xml:
   Add CVC3 automatic theorem prover, with optional Isabelle/HOL integration.
-

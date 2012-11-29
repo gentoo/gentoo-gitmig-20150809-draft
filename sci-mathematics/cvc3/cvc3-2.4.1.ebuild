@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cvc3/cvc3-2.4.1.ebuild,v 1.2 2012/06/01 02:12:45 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cvc3/cvc3-2.4.1.ebuild,v 1.3 2012/11/29 11:41:29 gienah Exp $
 
 EAPI="4"
 
@@ -33,9 +33,9 @@ DEPEND="${RDEPEND}
 SITEFILE=50${PN}-gentoo.el
 
 src_prepare() {
-	sed -e 's/prefix=@prefix@/prefix=${DESTDIR}@prefix@/' \
-		-e 's/libdir=@libdir@/libdir=${DESTDIR}@libdir@/' \
-		-e 's/mandir=@mandir@/mandir=${DESTDIR}@mandir@/' \
+	sed -e 's#prefix=@prefix@#prefix=$(patsubst %/,%,$(DESTDIR))@prefix@#' \
+		-e 's#libdir=@libdir@#libdir=$(patsubst %/,%,$(DESTDIR))@libdir@#' \
+		-e 's#mandir=@mandir@#mandir=$(patsubst %/,%,$(DESTDIR))@mandir@#' \
 		-i "${S}/Makefile.local.in" \
 		|| die "Could not set DESTDIR in Makefile.local.in"
 }
