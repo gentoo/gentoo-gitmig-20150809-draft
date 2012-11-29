@@ -1,11 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testify/testify-0.2.8.ebuild,v 1.2 2012/11/12 16:22:17 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testify/testify-0.2.8.ebuild,v 1.3 2012/11/29 15:53:05 idella4 Exp $
 
 EAPI=4
 
 SUPPORT_PYTHON_ABIS=1
-# TODO: verify 2.5
 RESTRICT_PYTHON_ABIS="2.5 3.*"
 PYTHON_TESTS_RESTRICTED_ABIS="2.7-pypy-1.*"
 inherit eutils distutils vcs-snapshot
@@ -30,12 +29,13 @@ DEPEND="dev-python/setuptools
 
 src_prepare() {
 	distutils_src_prepare
-	epatch "${FILESDIR}"/${PN}-0.2.6-tests.patch
+	# Rm rogue test, Bug #438032
+	rm -f test/plugins//http_reporter_test.py
 }
 
 src_test() {
 	testing() {
-		PYTHONPATH="build-${PYTHON_ABI}/lib/"  "$(PYTHON)" bin/${PN} test
+		PYTHONPATH="build-${PYTHON_ABI}/lib/" "$(PYTHON)" bin/${PN} test
 	}
 	python_execute_function testing
 }
