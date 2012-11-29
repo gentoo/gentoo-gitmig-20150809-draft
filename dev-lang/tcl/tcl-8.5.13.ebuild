@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.5.13.ebuild,v 1.1 2012/11/29 14:01:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.5.13.ebuild,v 1.2 2012/11/29 14:36:27 jlec Exp $
 
 EAPI=4
 
@@ -61,7 +61,11 @@ src_configure() {
 }
 
 src_compile() {
-	cd "${S}"/unix &&	emake
+	cd "${S}"/unix && emake
+}
+
+src_compile() {
+	cd "${S}"/unix && emake test
 }
 
 src_install() {
