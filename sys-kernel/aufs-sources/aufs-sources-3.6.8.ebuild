@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/aufs-sources-3.6.8.ebuild,v 1.1 2012/11/27 10:39:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/aufs-sources-3.6.8.ebuild,v 1.2 2012/11/29 22:04:44 jlec Exp $
 
 EAPI=5
 ETYPE="sources"
@@ -13,12 +13,12 @@ detect_arch
 
 AUFS_TARBALL="${P}.tar.xz"
 
-# git archive -v --remote=git://aufs.git.sourceforge.net/gitroot/aufs/aufs3-standalone.git aufs3.6 > ${AUFS_TARBALL}
+# git archive -v --remote=git://aufs.git.sourceforge.net/gitroot/aufs/aufs3-standalone.git aufs3.6 ${AUFS_TARBALL}
 AUFS_URI="http://dev.gentoo.org/~jlec/distfiles/${AUFS_TARBALL}"
 
 KEYWORDS="~amd64 ~x86"
 HOMEPAGE="http://dev.gentoo.org/~mpagano/genpatches http://aufs.sourceforge.net/"
-IUSE="deblob"
+IUSE="deblob module"
 
 DESCRIPTION="Full sources including the Gentoo patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree and aufs3 support"
 SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI} ${AUFS_URI}"
@@ -32,6 +32,7 @@ RDEPEND="sys-fs/aufs-util"
 DEPEND=""
 
 src_unpack() {
+	use module && UNIPATCH_LIST+=" "${WORKDIR}"/aufs3-standalone.patch"
 	unpack ${AUFS_TARBALL}
 	kernel-2_src_unpack
 }
@@ -43,8 +44,7 @@ src_prepare() {
 }
 
 src_install() {
-	insinto /usr/include/linux
-	doins include/linux/aufs_type.h
+	doheader include/linux/aufs_type.h
 	kernel-2_src_install
 }
 
