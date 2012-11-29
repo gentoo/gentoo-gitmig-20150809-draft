@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/webalizer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.89 2012/10/28 20:13:19 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.90 2012/11/29 11:19:22 blueness Exp $
+
+*webalizer-2.23.05 (29 Nov 2012)
+
+  29 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
+  +webalizer-2.23.05.ebuild:
+  Version bump, bug #385291
 
   28 Oct 2012; Sven Wegener <swegener@gentoo.org> webalizer-2.21.02.ebuild:
   Add support for on-the-fly bzip2 decompression.
