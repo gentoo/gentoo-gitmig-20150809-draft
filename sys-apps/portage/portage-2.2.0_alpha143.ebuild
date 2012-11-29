@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.0_alpha120.ebuild,v 1.4 2012/09/01 21:10:02 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.0_alpha143.ebuild,v 1.1 2012/11/29 23:41:13 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
 EAPI=3
-inherit eutils multilib python
+inherit eutils python
 
 DESCRIPTION="Portage is the package management and distribution system for Gentoo"
 HOMEPAGE="http://www.gentoo.org/proj/en/portage/index.xml"
@@ -72,7 +72,7 @@ prefix_src_archives() {
 
 PV_PL="2.1.2"
 PATCHVER_PL=""
-TARBALL_PV=2.2.0_alpha111
+TARBALL_PV=2.2.0_alpha142
 SRC_URI="mirror://gentoo/${PN}-${TARBALL_PV}.tar.bz2
 	$(prefix_src_archives ${PN}-${TARBALL_PV}.tar.bz2)
 	linguas_pl? ( mirror://gentoo/${PN}-man-pl-${PV_PL}.tar.bz2
@@ -98,10 +98,6 @@ current_python_has_xattr() {
 }
 
 pkg_setup() {
-	# Bug #359731 - Die early if get_libdir fails.
-	[[ -z $(get_libdir) ]] && \
-		die "get_libdir returned an empty string"
-
 	if use python2 && use python3 ; then
 		ewarn "Both python2 and python3 USE flags are enabled, but only one"
 		ewarn "can be in the shebangs. Using python3."
@@ -216,6 +212,9 @@ src_prepare() {
 			|| die "failed to append to make.globals"
 	fi
 
+	echo -e '\nFEATURES="${FEATURES} preserve-libs"' >> cnf/make.globals \
+		|| die "failed to append to make.globals"
+
 	cd "${S}/cnf" || die
 	if [ -f "make.conf.${ARCH}".diff ]; then
 		patch make.conf "make.conf.${ARCH}".diff || \
@@ -225,12 +224,6 @@ src_prepare() {
 		eerror "Portage does not have an arch-specific configuration for this arch."
 		eerror "Please notify the arch maintainer about this issue. Using generic."
 		eerror ""
-	fi
-
-	# BSD and OSX need a sed wrapper so that find/xargs work properly
-	if use userland_GNU; then
-		rm -f "${S}"/bin/ebuild-helpers/sed || \
-			die "Failed to remove sed wrapper"
 	fi
 }
 
@@ -255,7 +248,6 @@ src_install() {
 	emake DESTDIR="${D}" \
 		sysconfdir="${EPREFIX}/etc" \
 		prefix="${EPREFIX}/usr" \
-		libdir="${EPREFIX}/usr/$(get_libdir)" \
 		install || die
 
 	# Use dodoc for compression, since the Makefile doesn't do that.
@@ -265,6 +257,13 @@ src_install() {
 		doman -i18n=pl "${S_PL}"/man/pl/*.[0-9] || die
 		doman -i18n=pl_PL.UTF-8 "${S_PL}"/man/pl_PL.UTF-8/*.[0-9] || die
 	fi
+
+	# Set PYTHONPATH for portage API consumers. This way we don't have
+	# to rely on patched python having the correct path, since it has
+	# been known to incorrectly add /usr/libx32/portage/pym to sys.path.
+	echo "PYTHONPATH=\"${EPREFIX}/usr/lib/portage/pym\"" > \
+		"${T}/05portage" || die
+	doenvd "${T}/05portage" || die
 }
 
 pkg_preinst() {
@@ -291,10 +290,6 @@ pkg_preinst() {
 		ewarn "to enable RMD160 hash support."
 		ewarn "See bug #198398 for more information."
 	fi
-	if [[ ! -L "${EROOT}/etc/make.globals" &&
-		-f "${EROOT}/etc/make.globals" ]]; then
-		rm "${EROOT}/etc/make.globals"
-	fi
 
 	has_version "<=${CATEGORY}/${PN}-2.2_pre5" \
 		&& WORLD_MIGRATION_UPGRADE=true || WORLD_MIGRATION_UPGRADE=false
@@ -310,7 +305,7 @@ pkg_preinst() {
 pkg_postinst() {
 	# Compile all source files recursively. Any orphans
 	# will be identified and removed in postrm.
-	python_mod_optimize /usr/$(get_libdir)/portage/pym
+	python_mod_optimize /usr/lib/portage/pym
 
 	if $WORLD_MIGRATION_UPGRADE && \
 		grep -q "^@" "${EROOT}/var/lib/portage/world"; then
@@ -341,5 +336,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	python_mod_cleanup /usr/$(get_libdir)/portage/pym
+	python_mod_cleanup /usr/lib/portage/pym
 }
