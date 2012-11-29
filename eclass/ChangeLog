@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.528 2012/11/28 13:03:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.529 2012/11/29 17:56:39 hasufell Exp $
+
+  29 Nov 2012; Julian Ospald <hasufell@gentoo.org> waf-utils.eclass:
+  add verbosity to waf-utils.eclass wrt #444562
 
   28 Nov 2012; Justin Lecher <jlec@gentoo.org> fortran-2.eclass:
   * Reduce potential clash of function names in global scope

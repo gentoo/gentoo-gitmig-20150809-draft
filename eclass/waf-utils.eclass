@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/waf-utils.eclass,v 1.14 2012/09/27 16:35:42 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/waf-utils.eclass,v 1.15 2012/11/29 17:56:39 hasufell Exp $
 
 # @ECLASS: waf-utils.eclass
 # @MAINTAINER:
@@ -29,6 +29,12 @@ DEPEND="${DEPEND}
 	dev-lang/python
 	!dev-lang/python[-threads]"
 
+# @ECLASS-VARIABLE: WAF_VERBOSE
+# @DESCRIPTION:
+# Set to OFF to disable verbose messages during compilation
+# this is _not_ meant to be set in ebuilds
+: ${WAF_VERBOSE:=ON}
+
 # @FUNCTION: waf-utils_src_configure
 # @DESCRIPTION:
 # General function for configuring with waf.
@@ -55,10 +61,12 @@ waf-utils_src_configure() {
 # General function for compiling with waf.
 waf-utils_src_compile() {
 	debug-print-function ${FUNCNAME} "$@"
+	local _mywafconfig
+	[[ "${WAF_VERBOSE}" ]] && _mywafconfig="--verbose"
 
 	local jobs="--jobs=$(makeopts_jobs)"
-	echo "\"${WAF_BINARY}\" build ${jobs}"
-	"${WAF_BINARY}" ${jobs} || die "build failed"
+	echo "\"${WAF_BINARY}\" build ${_mywafconfig} ${jobs}"
+	"${WAF_BINARY}" ${_mywafconfig} ${jobs} || die "build failed"
 }
 
 # @FUNCTION: waf-utils_src_install
