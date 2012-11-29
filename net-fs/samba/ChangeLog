@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.540 2012/11/26 11:59:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.541 2012/11/29 15:39:57 jer Exp $
+
+  29 Nov 2012; Jeroen Roovers <jer@gentoo.org> samba-3.6.9.ebuild:
+  Stable for HPPA (bug #432754).
 
   26 Nov 2012; Agostino Sarubbo <ago@gentoo.org> samba-3.6.9.ebuild:
   Stable for amd64, wrt bug #432754
