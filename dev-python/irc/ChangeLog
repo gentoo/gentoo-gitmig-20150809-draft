@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/irc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/irc/ChangeLog,v 1.3 2012/10/30 06:34:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/irc/ChangeLog,v 1.4 2012/11/29 07:32:03 patrick Exp $
+
+*irc-5.0.1 (29 Nov 2012)
+
+  29 Nov 2012; Patrick Lauer <patrick@gentoo.org> +irc-5.0.1.ebuild:
+  Bump
 
 *irc-3.4.2 (30 Oct 2012)
 
