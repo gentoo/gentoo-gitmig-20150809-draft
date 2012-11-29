@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.21.02.ebuild,v 1.11 2012/10/28 20:13:19 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.21.02.ebuild,v 1.12 2012/11/29 12:25:08 blueness Exp $
 
 # uses webapp.eclass to create directories with right permissions
 # probably slight overkill but works well
@@ -15,7 +15,7 @@ MY_PV="$(get_version_component_range 1-2)-$(get_version_component_range 3)"
 MY_P="${PN}-${MY_PV}"
 
 DESCRIPTION="Webserver log file analyzer"
-HOMEPAGE="http://www.mrunix.net/webalizer/"
+HOMEPAGE="http://www.webalizer.org/"
 SRC_URI="ftp://ftp.mrunix.net/pub/webalizer/${MY_P}-src.tar.bz2
 	mirror://gentoo/${PN}.conf.gz"
 
