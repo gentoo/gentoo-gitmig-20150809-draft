@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-sh/eselect-sh-0.3.ebuild,v 1.10 2012/05/28 16:46:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-sh/eselect-sh-0.3.ebuild,v 1.11 2012/11/29 09:14:22 mgorny Exp $
 
 EAPI=4
 
 DESCRIPTION="Manages the /bin/sh (POSIX shell) symlink"
-HOMEPAGE="https://github.com/mgorny/eselect-sh/"
-SRC_URI="mirror://github/mgorny/${PN}/${P}.tar.gz"
+HOMEPAGE="https://bitbucket.org/mgorny/eselect-sh/"
+SRC_URI="mirror://bitbucket/mgorny/${PN}/downloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
