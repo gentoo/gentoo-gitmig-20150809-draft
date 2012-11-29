@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/c-client
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.95 2012/10/17 21:48:40 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.96 2012/11/29 15:42:21 jer Exp $
+
+  29 Nov 2012; Jeroen Roovers <jer@gentoo.org> c-client-2007f-r4.ebuild:
+  Stable for HPPA (bug #445063).
 
   17 Oct 2012;  <naota@gentoo.org> c-client-2007f-r4.ebuild:
   Add ~x86-fbsd. #267299
