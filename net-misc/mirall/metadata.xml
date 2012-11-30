@@ -2,4 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>kde</herd>
+	<use>
+		<flag name="sftp">Enable sftp transfer support via <pkg>net-libs/libssh</pkg></flag>
+		<flag name="webdav">Adds support for HTTP/dav content via <pkg>net-libs/neon</pkg></flag>
+	</use>
+
 </pkgmetadata>
