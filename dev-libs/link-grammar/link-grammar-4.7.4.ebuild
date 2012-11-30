@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/link-grammar/link-grammar-4.7.4.ebuild,v 1.6 2011/10/16 17:24:56 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/link-grammar/link-grammar-4.7.4.ebuild,v 1.7 2012/11/30 19:28:09 ulm Exp $
 
 EAPI="3"
 
@@ -11,7 +11,7 @@ link grammar."
 HOMEPAGE="http://www.abisource.com/projects/link-grammar/ http://www.link.cs.cmu.edu/link/"
 SRC_URI="http://www.abisource.com/downloads/${PN}/${PV}/${P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 
