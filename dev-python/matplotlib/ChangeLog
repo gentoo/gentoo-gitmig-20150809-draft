@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/matplotlib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.129 2012/11/29 15:32:08 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.130 2012/11/30 15:27:47 xarthisius Exp $
 
   30 Nov 2012; Ian Delaney <idella4@gentoo.org> matplotlib-1.2.0.ebuild:
   Correction to DocCheck to doc check
@@ -12,12 +12,13 @@
   +files/matplotlib-1.2.0-setup.patch, +matplotlib-1.2.0.ebuild:
   bump to 1.2.0, test phase upgraded, new ft-refcount.patch from upstream,
   python3 support but for USE doc requiring  special treatment, ack to users
-  Nicolas Bigaouette and Rafal Muzylo for patches in entered in Bug #443836
+  Nicolas Bigaouette <nbigaouette@gmail.com> and Rafał Mużyło <galtgendo@o2.pl>
+  for patches in entered in Bug #443836
 
   26 Nov 2012; Ian Delaney <idella4@gentoo.org>
   files/matplotlib-1.1.1-ft-refcount.patch, matplotlib-1.1.1.ebuild:
   Appended missing hunk to -ft-refcount.patch, reported by, and thanks to, Carl
-  Michal in Bug #442298
+  Michal <michal@physics.ubc.ca> in Bug #442298
 
   06 Nov 2012; Agostino Sarubbo <ago@gentoo.org> matplotlib-1.1.1.ebuild:
   Stable for amd64, wrt bug #441278
