@@ -1,6 +1,10 @@
 # ChangeLog for www-misc/mergelog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/mergelog/ChangeLog,v 1.13 2012/11/30 17:46:12 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/mergelog/ChangeLog,v 1.14 2012/11/30 17:50:40 pinkbyte Exp $
+
+  30 Nov 2012; Sergey Popov <pinkbyte@gentoo.org>
+  files/mergelog-4.5-asneeded.patch:
+  Revert as-needed patch back for properly building in new revision
 
 *mergelog-4.5-r2 (30 Nov 2012)
 
