@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.5.0_p20111019-r2.ebuild,v 1.2 2012/08/29 10:52:59 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.5.0_p20111019-r2.ebuild,v 1.3 2012/11/30 20:06:52 hwoarang Exp $
 
 EAPI="2"
 inherit multilib autotools eutils
@@ -50,6 +50,7 @@ src_prepare() {
 src_configure() {
 	econf \
 		--docdir=/usr/share/doc/${PF} \
+		--disable-silent-rules \
 		$(use_enable debug) \
 		$(use_enable imlib imlib2) \
 		$(use_enable nls) \
