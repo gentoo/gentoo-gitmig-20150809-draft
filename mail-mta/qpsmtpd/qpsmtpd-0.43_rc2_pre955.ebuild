@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qpsmtpd/qpsmtpd-0.43_rc2_pre955.ebuild,v 1.2 2012/06/01 02:32:55 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qpsmtpd/qpsmtpd-0.43_rc2_pre955.ebuild,v 1.3 2012/11/30 23:10:44 radhermit Exp $
 
 inherit eutils subversion user
 REVNO=${PV/0.43_rc2_pre}
@@ -9,7 +9,7 @@ HOMEPAGE="http://smtpd.develooper.com"
 ESVN_REPO_URI="http://svn.perl.org/qpsmtpd/trunk@${REVNO}"
 ESVN_PROJECT="qpsmtpd"
 
-LICENSE="as-is"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS=""
 IUSE="postfix async ipv6 syslog"
