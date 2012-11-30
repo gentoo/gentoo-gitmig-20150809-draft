@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/mediawiki
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.203 2012/11/18 10:21:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.204 2012/11/30 04:36:09 radhermit Exp $
+
+*mediawiki-1.20.1 (30 Nov 2012)
+*mediawiki-1.19.3 (30 Nov 2012)
+*mediawiki-1.18.6 (30 Nov 2012)
+
+  30 Nov 2012; Tim Harder <radhermit@gentoo.org> +mediawiki-1.18.6.ebuild,
+  +mediawiki-1.19.3.ebuild, +mediawiki-1.20.1.ebuild:
+  Security bumps (bug #445065).
 
   18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer as he is not taking care of this package. Remove old.
