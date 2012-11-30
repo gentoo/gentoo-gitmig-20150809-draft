@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.6.9999.ebuild,v 1.34 2012/11/24 13:47:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.6.9999.ebuild,v 1.35 2012/11/30 22:37:57 scarabeus Exp $
 
 EAPI=4
 
@@ -73,7 +73,7 @@ unset EXT_URI
 unset ADDONS_SRC
 
 IUSE="binfilter binfilterdebug +branding +cups dbus eds gnome gstreamer +gtk
-jemalloc kde mysql odk opengl postgres svg test +vba +webdav"
+jemalloc kde mysql odk opengl postgres test +vba +webdav"
 
 LO_EXTS="nlpsolver pdfimport presenter-console presenter-minimizer scripting-beanshell scripting-javascript wiki-publisher"
 # Unpackaged separate extensions:
@@ -113,6 +113,7 @@ COMMON_DEPEND="
 	>=dev-lang/perl-5.0
 	>=dev-libs/openssl-1.0.0d
 	>=dev-libs/redland-1.0.14[ssl]
+	gnome-base/librsvg
 	media-gfx/graphite2
 	>=media-libs/fontconfig-2.8.0
 	media-libs/freetype:2
@@ -157,7 +158,6 @@ COMMON_DEPEND="
 		virtual/opengl
 	)
 	postgres? ( >=dev-db/postgresql-base-9.0[kerberos] )
-	svg? ( gnome-base/librsvg )
 	webdav? ( net-libs/neon )
 "
 
@@ -441,6 +441,7 @@ src_configure() {
 		--enable-largefile \
 		--enable-mergelibs \
 		--enable-python=system \
+		--enable-librsvg=system \
 		--enable-randr \
 		--enable-randr-link \
 		--enable-release-build \
@@ -499,7 +500,6 @@ src_configure() {
 		$(use_enable odk) \
 		$(use_enable opengl) \
 		$(use_enable postgres postgresql-sdbc) \
-		$(use_enable svg librsvg system) \
 		$(use_enable test linkoo) \
 		$(use_enable vba) \
 		$(use_enable webdav neon) \
