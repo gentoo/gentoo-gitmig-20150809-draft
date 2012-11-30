@@ -1,0 +1,53 @@
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arprec/arprec-2.2.15.ebuild,v 1.1 2012/11/30 04:10:41 bicatali Exp $
+
+EAPI=4
+
+FORTRAN_NEEDED=fortran
+AUTOTOOLS_AUTORECONF=1
+
+inherit eutils fortran-2 autotools-utils
+
+DESCRIPTION="Arbitrary precision float arithmetics and functions"
+HOMEPAGE="http://crd.lbl.gov/~dhbailey/mpdist/"
+SRC_URI="http://crd.lbl.gov/~dhbailey/mpdist/${P}.tar.gz"
+
+SLOT="0"
+LICENSE="BSD"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+IUSE="doc fma fortran qd static-libs"
+
+DEPEND="qd? ( sci-libs/qd[fortran=] )"
+RDEPEND="${DEPEND}"
+
+PATCHES=( "${FILESDIR}"/${P}-fix-enabling.patch )
+
+src_configure() {
+	local myeconfargs=(
+		--docdir="${EPREFIX}/usr/share/doc/${PF}"
+		$(use_enable fma)
+		$(use_enable fortran)
+		$(use_enable qd)
+	)
+	autotools-utils_src_configure
+}
+
+src_compile() {
+	autotools-utils_src_compile
+	use fortran && autotools-utils_src_compile toolkit
+}
+
+src_install() {
+	autotools-utils_src_install
+	if use fortran; then
+		cd toolkit
+		./mathinit || die "mathinit failed"
+		exeinto /usr/libexec/${PN}
+		doexe mathtool
+		insinto /usr/libexec/${PN}
+		doins *.dat
+		newdoc README README.mathtool
+	fi
+	use doc || rm "${ED}"/usr/share/doc/${PF}/*.pdf
+}
