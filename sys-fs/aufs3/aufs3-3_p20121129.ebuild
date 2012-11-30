@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20121129.ebuild,v 1.1 2012/11/29 21:24:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20121129.ebuild,v 1.2 2012/11/30 15:29:14 jlec Exp $
 
 EAPI=4
 
@@ -115,7 +115,7 @@ src_prepare() {
 	sed -i "s:aufs.ko usr/include/linux/aufs_type.h:aufs.ko:g" Makefile || die
 	sed -i "s:__user::g" include/linux/aufs_type.h || die
 
-	cd "${WORKDIR}"/${PN/3}-util
+	cd "${WORKDIR}"/${P}/${PN/3}-util
 
 	einfo "Using for utils building branch ${util_branch}"
 	git checkout -b local-gentoo ${util_branch} || die
@@ -128,7 +128,7 @@ src_compile() {
 
 	emake CC=$(tc-getCC) LD=$(tc-getLD) LDFLAGS="$(raw-ldflags)" ARCH=$(tc-arch-kernel) CONFIG_AUFS_FS=m KDIR=${KV_OUT_DIR}
 
-	cd "${WORKDIR}"/${PN/3}-util
+	cd "${WORKDIR}"/${P}/${PN/3}-util
 	emake CC=$(tc-getCC) AR=$(tc-getAR) KDIR=${KV_OUT_DIR} C_INCLUDE_PATH="${S}"/include
 }
 
@@ -141,7 +141,7 @@ src_install() {
 
 	dodoc Documentation/filesystems/aufs/README
 
-	cd "${WORKDIR}"/${PN/3}-util
+	cd "${WORKDIR}"/${P}/${PN/3}-util
 	emake DESTDIR="${D}" KDIR=${KV_OUT_DIR} install
 
 	newdoc README README-utils

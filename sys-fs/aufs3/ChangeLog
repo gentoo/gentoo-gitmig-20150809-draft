@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/aufs3
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.34 2012/11/29 21:24:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.35 2012/11/30 15:29:14 jlec Exp $
+
+  30 Nov 2012; Justin Lecher <jlec@gentoo.org> aufs3-3_p20121129.ebuild:
+  Fix new offset, thanks Iván for the patch
 
 *aufs3-3_p20121129 (29 Nov 2012)
 
