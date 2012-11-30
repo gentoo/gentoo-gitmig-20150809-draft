@@ -1,4 +1,8 @@
 
+
+  30 Nov 2012; Jeroen Roovers <jer@gentoo.org> elfix-0.6.0.ebuild:
+  Stable for HPPA (bug #445334).
+
   30 Nov 2012; Anthony G. Basile <blueness@gentoo.org> elfix-0.6.0.ebuild:
   stable arm ppc ppc64, bug #445334
 
