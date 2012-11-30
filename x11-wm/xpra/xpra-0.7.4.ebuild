@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.7.4.ebuild,v 1.1 2012/11/18 18:24:47 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.7.4.ebuild,v 1.2 2012/11/30 16:10:50 xmw Exp $
 
 EAPI=3
 
@@ -51,6 +51,7 @@ DEPEND="${COMMON_DEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.7.1-ignore-gentoo-no-compile.patch
+	epatch "${FILESDIR}"/${PN}-0.7.4-prefix.patch
 
 	use clipboard || epatch patches/disable-clipboard.patch
 	use rencode   || epatch patches/disable-rencode.patch
@@ -72,9 +73,9 @@ src_prepare() {
 
 src_install() {
 	distutils_src_install
-	rm -v "${D}"usr/share/parti/{parti.,}README \
-		"${D}"usr/share/xpra/{webm/LICENSE,xpra.README} \
-		"${D}"usr/share/wimpiggy/wimpiggy.README
+	rm -v "${ED}"usr/share/parti/{parti.,}README \
+		"${ED}"usr/share/xpra/{webm/LICENSE,xpra.README} \
+		"${ED}"usr/share/wimpiggy/wimpiggy.README
 	dodoc {parti.,wimpiggy.,xpra.,}README
 
 	einfo

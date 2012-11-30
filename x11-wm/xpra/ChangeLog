@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/xpra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/ChangeLog,v 1.38 2012/11/18 18:24:47 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/ChangeLog,v 1.39 2012/11/30 16:10:50 xmw Exp $
+
+  30 Nov 2012; Michael Weber <xmw@gentoo.org> xpra-0.7.4.ebuild,
+  +files/xpra-0.7.4-prefix.patch:
+  Prefix support by Benda Xu (bug 445332).
 
 *xpra-0.7.4 (18 Nov 2012)
 
