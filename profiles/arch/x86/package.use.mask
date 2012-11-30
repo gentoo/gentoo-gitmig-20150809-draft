@@ -1,8 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.101 2012/11/26 23:31:21 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.102 2012/11/30 20:38:12 ottxor Exp $
 
 # This file requires >=portage-2.1.1
+
+# Christoph Jungans <ottxor@gentoo.org> (30 Nov 2012)
+# cuda works on x86/amd64
+sci-chemistry/gromacs -cuda
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (3 Nov 2012)
 # Unmask here, as it's masked in base.

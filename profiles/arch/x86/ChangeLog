@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.117 2012/11/26 23:31:21 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.118 2012/11/30 20:38:12 ottxor Exp $
+
+  30 Nov 2012; Christoph Junghans <ottxor@gentoo.org> package.use.mask:
+  unmasked cuda for sci-chemistry/gromacs
 
   26 Nov 2012; Anthony G. Basile <blueness@gentoo.org> package.use.mask:
   No need to unmask net-misc/tor[nat-pmp,upnp] on x86
