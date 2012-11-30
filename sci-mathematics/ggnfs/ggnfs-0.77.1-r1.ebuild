@@ -1,13 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ggnfs/ggnfs-0.77.1.ebuild,v 1.2 2012/11/28 09:41:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ggnfs/ggnfs-0.77.1-r1.ebuild,v 1.1 2012/11/30 06:36:46 patrick Exp $
 
 EAPI=4
 DESCRIPTION="A suite of algorithms to help factoring large integers"
 # inactive old homepage exists, this is a fork
 HOMEPAGE="https://github.com/radii/ggnfs"
 # snapshot because github makes people stupid
-SRC_URI="http://dev.gentooexperimental.org/~dreeevil/${P}.zip"
+SRC_URI="http://dev.gentooexperimental.org/~dreeevil/${P}.zip
+	http://stuff.mit.edu/afs/sipb/project/pari-gp/ggnfs/Linux/src/def-par.txt"
 
 inherit eutils
 
@@ -49,5 +50,8 @@ src_install() {
 		pol51opt polyselect procrels sieve sqrt; do
 		cp "${S}/bin/${i}" "${D}/usr/bin/" || die
 	done
+	mkdir -p "${D}/usr/share/doc/${PN}"
+	cp "${DISTDIR}/def-par.txt" "${D}/usr/share/doc/${PN}" || die "FAIL"
+	docompress -x "/usr/share/doc/${PN}/def-par.txt" || die
 	# TODO: docs? File collisions?
 }
