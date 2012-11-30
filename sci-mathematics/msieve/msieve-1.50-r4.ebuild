@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/msieve/msieve-1.50-r4.ebuild,v 1.1 2012/11/30 08:52:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/msieve/msieve-1.50-r4.ebuild,v 1.2 2012/11/30 09:23:26 patrick Exp $
 
 EAPI=4
 DESCRIPTION="A C library implementing a suite of algorithms to factor large integers"
@@ -22,6 +22,8 @@ RDEPEND="${DEPEND}"
 src_prepare() {
 	# TODO: Integrate ggnfs properly
 	epatch "${FILESDIR}/reduce-printf.patch" 	|| die
+	epatch "${FILESDIR}/reduce-printf2.patch"	|| die
+	epatch "${FILESDIR}/reduce-printf3.patch"	|| die
 	epatch "${FILESDIR}/fix-version.patch"		|| die
 	epatch "${FILESDIR}/fix-version2.patch"		|| die
 	sed -i -e 's/-march=k8//' Makefile 		|| die
