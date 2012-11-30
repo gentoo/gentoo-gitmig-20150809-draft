@@ -50,14 +50,3 @@
      print(date_time_string() + s, file = out_f)
  
  def output(s, console = True, log = True):
-@@ -357,8 +362,9 @@
-   msd = os.path.abspath(os.path.join(cwd, MSIEVE_PATH))
-   os.chdir(msd)
-   rel = os.path.relpath(cwd)
-+  LOGNAME_m=LOGNAME+"_m"
-   dp = os.path.join(rel, DATNAME)
--  lp = os.path.join(rel, LOGNAME)
-+  lp = os.path.join(rel, LOGNAME_m)
-   ip = os.path.join(rel, ININAME)
-   fp = os.path.join(rel, FBNAME)
-   args = ('-s {0:s} -l {1:s} -i {2:s} -nf {3:s} '
