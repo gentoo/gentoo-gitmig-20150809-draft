@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/hxtools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/hxtools/ChangeLog,v 1.3 2012/11/30 14:54:14 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/hxtools/ChangeLog,v 1.4 2012/11/30 18:22:35 scarabeus Exp $
+
+*hxtools-20121125-r1 (30 Nov 2012)
+
+  30 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> +hxtools-20121125-r1.ebuild,
+  -hxtools-20121125.ebuild:
+  Revision bump to remove also man2html manpage. Fixes bug#445358.
 
   30 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> hxtools-20121125.ebuild:
   Also depend on perl.
