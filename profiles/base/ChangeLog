@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.467 2012/11/29 04:41:04 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.468 2012/11/30 20:33:32 ottxor Exp $
+
+  30 Nov 2012; Christoph Junghans <ottxor@gentoo.org> package.use.mask:
+  masked cuda and openmm for sci-chemistry/gromacs
 
   29 Nov 2012; Mike Gilbert <floppym@gentoo.org> package.use.mask:
   Remove mask on test use flag for freerdp.
