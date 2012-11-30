@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/accountsservice/accountsservice-0.6.24.ebuild,v 1.3 2012/09/23 06:17:18 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/accountsservice/accountsservice-0.6.29.ebuild,v 1.1 2012/11/30 22:38:12 eva Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -24,11 +24,12 @@ REQUIRED_USE="vala? ( introspection )"
 RDEPEND=">=dev-libs/glib-2.30:2
 	sys-auth/polkit
 	introspection? ( >=dev-libs/gobject-introspection-0.9.12 )
-	systemd? ( >=sys-apps/systemd-43 )
+	systemd? ( >=sys-apps/systemd-186 )
 	!systemd? ( sys-auth/consolekit )"
 DEPEND="${RDEPEND}
 	dev-libs/libxslt
 	dev-util/gdbus-codegen
+	>=dev-util/gtk-doc-am-1.15
 	>=dev-util/intltool-0.40
 	sys-devel/gettext
 	virtual/pkgconfig
@@ -39,24 +40,23 @@ DEPEND="${RDEPEND}
 		>=dev-lang/vala-0.16.1-r1
 		$(vala_depend) )"
 
-pkg_setup() {
+src_prepare() {
+	epatch "${FILESDIR}/${PN}-0.6.21-gentoo-system-users.patch"
+	use vala && vala_src_prepare
+	gnome2_src_prepare
+}
+
+src_configure() {
+	DOCS="AUTHORS NEWS README TODO"
 	G2CONF="${G2CONF}
 		--disable-static
 		--disable-more-warnings
-		--localstatedir=${EPREFIX}/var
-		--docdir=${EPREFIX}/usr/share/doc/${PF}
+		--localstatedir="${EPREFIX}"/var
+		--docdir="${EPREFIX}"/usr/share/doc/${PF}
 		$(use_enable doc docbook-docs)
 		$(use_enable introspection)
 		$(use_enable vala)
 		$(use_enable systemd)
 		$(systemd_with_unitdir)"
-	DOCS="AUTHORS NEWS README TODO"
-}
-
-src_prepare() {
-	epatch "${FILESDIR}/${PN}-0.6.21-gentoo-system-users.patch"
-	# In next release
-	epatch "${FILESDIR}/${P}-dont-delete-root.patch"
-	use vala && vala_src_prepare
-	gnome2_src_prepare
+	gnome2_src_configure
 }
