@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hwids
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.40 2012/11/23 06:14:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.41 2012/11/30 02:21:31 flameeyes Exp $
+
+*hwids-20121130 (30 Nov 2012)
+
+  30 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org> +hwids-20121130.ebuild:
+  Version bump.
 
   23 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org> hwids-20121123.ebuild:
   Use the new SRC_URI that actually simplifies this quite a bit.
