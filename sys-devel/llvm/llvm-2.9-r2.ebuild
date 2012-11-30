@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-2.9-r2.ebuild,v 1.9 2012/07/03 14:32:17 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-2.9-r2.ebuild,v 1.10 2012/11/30 16:07:29 voyageur Exp $
 
 EAPI="3"
 inherit eutils flag-o-matic multilib toolchain-funcs pax-utils
@@ -86,6 +86,9 @@ src_prepare() {
 
 	# Upstream commit r131062
 	epatch "${FILESDIR}"/${P}-Operator.h-c++0x.patch
+
+	# Additional unistd.h include for GCC 4.7
+	epatch "${FILESDIR}"/${P}-gcc4.7.patch
 }
 
 src_configure() {

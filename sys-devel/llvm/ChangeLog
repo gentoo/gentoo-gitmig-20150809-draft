@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.94 2012/11/18 11:12:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.95 2012/11/30 16:07:29 voyageur Exp $
+
+  30 Nov 2012; Bernard Cafarelli <voyageur@gentoo.org> llvm-2.9-r2.ebuild,
+  +files/llvm-2.9-gcc4.7.patch:
+  Fix compilation with gcc 4.7, reported by José Romildo Malaquias in bug
+  #444550
 
   18 Nov 2012; Agostino Sarubbo <ago@gentoo.org> llvm-3.1-r2.ebuild:
   Stable for x86, wrt bug #443508
