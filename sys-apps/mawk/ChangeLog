@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/mawk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mawk/ChangeLog,v 1.26 2012/10/10 21:59:04 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mawk/ChangeLog,v 1.27 2012/11/30 03:38:42 radhermit Exp $
+
+*mawk-1.3.4_p20121129 (30 Nov 2012)
+
+  30 Nov 2012; Tim Harder <radhermit@gentoo.org> +mawk-1.3.4_p20121129.ebuild:
+  Version bump.
 
   10 Oct 2012; Christoph Junghans <ottxor@gentoo.org>
   mawk-1.3.4_p20120627.ebuild:
