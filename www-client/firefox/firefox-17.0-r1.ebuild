@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-17.0-r1.ebuild,v 1.1 2012/11/25 12:20:27 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-17.0-r1.ebuild,v 1.2 2012/11/30 14:51:10 axs Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -227,6 +227,11 @@ src_configure() {
 	# Both methodjit and tracejit conflict with PaX
 	mozconfig_use_enable jit methodjit
 	mozconfig_use_enable jit tracejit
+
+	# Disable webrtc for arches that it doesn't support, bug 444780
+	if use ppc || use ppc64 ; then
+		mozconfig_annotate '' --disable-webrtc
+	fi
 
 	# Allow for a proper pgo build
 	if use pgo; then

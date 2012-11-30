@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.188 2012/11/28 14:01:56 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.189 2012/11/30 14:51:10 axs Exp $
+
+  30 Nov 2012; Ian Stakenvicius <axs@gentoo.org> firefox-17.0-r1.ebuild:
+  disabled webrtc for ppc and ppc64, bug 444780
 
   28 Nov 2012; Lars Wendler <polynomial-c@gentoo.org> +firefox-10.0.7.ebuild:
   Restored accidently removed 10.0.7 ebuild. Thanks to Mark Davies for
