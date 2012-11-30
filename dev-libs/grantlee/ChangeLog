@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/grantlee
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/grantlee/ChangeLog,v 1.18 2012/11/23 18:24:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/grantlee/ChangeLog,v 1.19 2012/11/30 15:10:55 ago Exp $
+
+  30 Nov 2012; <ago@gentoo.org> grantlee-0.2.0.ebuild:
+  Stable for ppc, wrt bug #442394
 
   23 Nov 2012; Agostino Sarubbo <ago@gentoo.org> grantlee-0.2.0.ebuild:
   Stable for x86, wrt bug #442394
