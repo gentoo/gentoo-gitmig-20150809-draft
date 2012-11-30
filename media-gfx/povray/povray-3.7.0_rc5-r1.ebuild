@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0_rc5-r1.ebuild,v 1.5 2012/11/21 17:58:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0_rc5-r1.ebuild,v 1.6 2012/11/30 09:37:39 jlec Exp $
 
 EAPI=4
 
@@ -42,9 +42,10 @@ DEPEND="${DEPEND}
 S=${WORKDIR}/${PN}-${MY_PV}
 
 src_prepare() {
-	epatch "${FILESDIR}"/3.7.0_rc3-user-conf.patch
-	epatch "${FILESDIR}"/${P}+boost-1.50.patch
-	epatch "${FILESDIR}"/${P}-automagic.patch
+	epatch \
+		"${FILESDIR}"/3.7.0_rc3-user-conf.patch \
+		"${FILESDIR}"/${P}+boost-1.50.patch \
+		"${FILESDIR}"/${P}-automagic.patch
 
 	# Change some destination directories that cannot be adjusted via configure
 	sed \
@@ -91,11 +92,11 @@ src_configure() {
 		${non_redist_conf} \
 		COMPILED_BY="Portage (Gentoo `uname`) on `hostname -f`" \
 		$(use_enable debug) \
-		$(use_with openexr openexr /usr/$(get_libdir)) \
-		$(use_with mkl libmkl /usr/$(get_libdir)) \
-		$(use_with tiff libtiff /usr/$(get_libdir)) \
-		$(use_with X libsdl /usr/$(get_libdir)) \
-		$(use_with X x /usr/$(get_libdir)) \
+		$(use_with openexr openexr "${EPREFIX}/usr/$(get_libdir)") \
+		$(use_with mkl libmkl "${EPREFIX}/usr/$(get_libdir)") \
+		$(use_with tiff libtiff "${EPREFIX}/usr/$(get_libdir)") \
+		$(use_with X libsdl "${EPREFIX}/usr/$(get_libdir)") \
+		$(use_with X x "${EPREFIX}/usr/$(get_libdir)") \
 		--disable-strip \
 		--disable-optimiz \
 		--disable-optimiz-arch
