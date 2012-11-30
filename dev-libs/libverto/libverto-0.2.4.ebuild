@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libverto/libverto-0.2.4.ebuild,v 1.5 2012/06/05 19:00:52 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libverto/libverto-0.2.4.ebuild,v 1.6 2012/11/30 08:09:46 eras Exp $
 
 EAPI=4
 inherit autotools
@@ -9,7 +9,7 @@ DESCRIPTION="Main event loop abstraction library"
 HOMEPAGE="https://fedorahosted.org/libverto/"
 SRC_URI="https://fedorahosted.org/releases/l/i/libverto/${P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~x86 ~amd64-fbsd"
 IUSE="glib +libev libevent tevent +threads static-libs"
