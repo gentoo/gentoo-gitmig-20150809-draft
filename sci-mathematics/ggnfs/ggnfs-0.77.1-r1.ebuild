@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ggnfs/ggnfs-0.77.1-r1.ebuild,v 1.1 2012/11/30 06:36:46 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ggnfs/ggnfs-0.77.1-r1.ebuild,v 1.2 2012/11/30 06:54:59 patrick Exp $
 
 EAPI=4
 DESCRIPTION="A suite of algorithms to help factoring large integers"
@@ -8,7 +8,8 @@ DESCRIPTION="A suite of algorithms to help factoring large integers"
 HOMEPAGE="https://github.com/radii/ggnfs"
 # snapshot because github makes people stupid
 SRC_URI="http://dev.gentooexperimental.org/~dreeevil/${P}.zip
-	http://stuff.mit.edu/afs/sipb/project/pari-gp/ggnfs/Linux/src/def-par.txt"
+	http://stuff.mit.edu/afs/sipb/project/pari-gp/ggnfs/Linux/src/def-par.txt
+	http://stuff.mit.edu/afs/sipb/project/pari-gp/ggnfs/Linux/src/def-nm-params.txt"
 
 inherit eutils
 
@@ -51,7 +52,9 @@ src_install() {
 		cp "${S}/bin/${i}" "${D}/usr/bin/" || die
 	done
 	mkdir -p "${D}/usr/share/doc/${PN}"
-	cp "${DISTDIR}/def-par.txt" "${D}/usr/share/doc/${PN}" || die "FAIL"
-	docompress -x "/usr/share/doc/${PN}/def-par.txt" || die
+	cp "${DISTDIR}/def-par.txt" "${D}/usr/share/doc/${PN}" || die
+	cp "${DISTDIR}/def-nm-params.txt" "${D}/usr/share/doc/${PN}" || die
+	docompress -x "/usr/share/doc/${PN}/def-par.txt"
+	docompress -x "/usr/share/doc/${PN}/def-nm-params.txt"
 	# TODO: docs? File collisions?
 }
