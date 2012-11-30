@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/monto
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/monto/ChangeLog,v 1.3 2012/11/27 13:38:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/monto/ChangeLog,v 1.4 2012/11/30 14:49:50 voyageur Exp $
+
+*monto-0.1.1-r1 (30 Nov 2012)
+
+  30 Nov 2012; Bernard Cafarelli <voyageur@gentoo.org> +monto-0.1.1-r1.ebuild:
+  Clean ebuild, respect CC, reported by ago in bug #444942
 
   27 Nov 2012; Agostino Sarubbo <ago@gentoo.org> monto-0.1.1.ebuild:
   Add ~amd64
