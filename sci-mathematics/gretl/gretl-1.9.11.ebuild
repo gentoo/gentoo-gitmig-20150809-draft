@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.9.7.ebuild,v 1.4 2012/06/10 18:46:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.9.11.ebuild,v 1.1 2012/11/30 07:33:23 bicatali Exp $
 
 EAPI=4
 
 USE_EINSTALL=true
 
-inherit eutils gnome2 elisp-common toolchain-funcs
+inherit eutils elisp-common toolchain-funcs
 
 DESCRIPTION="Regression, econometrics and time-series library"
 HOMEPAGE="http://gretl.sourceforge.net/"
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="accessibility emacs gnome gtk nls odbc openmp readline sse2 R static-libs"
 
 RDEPEND="
@@ -26,21 +26,16 @@ RDEPEND="
 	sci-visualization/gnuplot
 	virtual/lapack
 	virtual/latex-base
-	readline? ( sys-libs/readline )
 	accessibility? ( app-accessibility/flite )
+	emacs? ( virtual/emacs )
 	gtk? (
 			media-libs/gd[png]
 			sci-visualization/gnuplot[gd]
-			x11-libs/gtk+:2
-			x11-libs/gtksourceview:2.0 )
-	gnome? (
-			sci-visualization/gnuplot[gd]
-			media-libs/gd[png]
-			gnome-base/libgnomeui
-			gnome-base/gconf:2 )
-	R? ( dev-lang/R )
+			x11-libs/gtk+:3
+			x11-libs/gtksourceview:3.0 )
 	odbc? ( dev-db/unixODBC )
-	emacs? ( virtual/emacs )"
+	R? ( dev-lang/R )
+	readline? ( sys-libs/readline )"
 
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
@@ -61,36 +56,32 @@ src_configure() {
 		--enable-shared \
 		--with-mpfr \
 		$(use_enable gtk gui) \
+		$(use_enable gtk gtk3) \
+		$(use_enable gtk xdg) \
+		$(use_enable gtk xdg-utils) \
 		$(use_enable nls) \
 		$(use_enable openmp) \
 		$(use_enable sse2) \
 		$(use_enable static-libs static) \
 		$(use_with accessibility audio) \
-		$(use_with gnome) \
 		$(use_with odbc) \
 		$(use_with readline) \
 		$(use_with R libR) \
 		${myconf} \
-		LAPACK_LIBS="$(pkg-config --libs lapack)"
+		LAPACK_LIBS="$($(tc-getPKG_CONFIG) --libs lapack)"
 }
 
 src_compile() {
 	emake
 	if use emacs; then
-		elisp-compile utils/emacs/gretl.el || die "elisp-compile failed"
+		cd utils/emacs && emake
+		elisp-compile gretl.el || die "elisp-compile failed"
 	fi
 }
 
 src_install() {
-	if use gnome; then
-		gnome2_src_install gnome_prefix="${ED}"/usr svprefix="${ED}usr"
-	else
-		einstall svprefix="${ED}usr"
-	fi
-	if use gtk && ! use gnome; then
-		doicon gnome/gretl.png
-		make_desktop_entry gretl_x11 gretl
-	fi
+	# to fix
+	emake -j1 DESTDIR="${D}" install
 	if use emacs; then
 		elisp-install ${PN} utils/emacs/gretl.{el,elc} \
 			|| die "elisp-install failed"
