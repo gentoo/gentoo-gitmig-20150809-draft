@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libkolab
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libkolab/ChangeLog,v 1.6 2012/11/23 18:24:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkolab/ChangeLog,v 1.7 2012/11/30 12:54:09 kensington Exp $
+
+  30 Nov 2012; Michael Palimaka <kensington@gentoo.org> libkolab-0.2.0.ebuild,
+  libkolab-0.3.2.ebuild:
+  Fix HOMEPAGE.
 
   23 Nov 2012; Agostino Sarubbo <ago@gentoo.org> libkolab-0.3.2.ebuild:
   Stable for x86, wrt bug #442394
