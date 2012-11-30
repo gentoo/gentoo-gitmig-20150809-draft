@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.246 2012/11/25 06:12:19 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.247 2012/11/30 19:17:52 williamh Exp $
+
+*openrc-0.11.6 (30 Nov 2012)
+
+  30 Nov 2012; William Hubbs <williamh@gentoo.org> +openrc-0.11.6.ebuild:
+  This fixes #443996 and #445116.
+  Also, we now unmount /usr if it was not pre-mounted by an initramfs on
+  Linux systems.
+  I am taking this to stable on all arches where 0.11.5 was stable because
+  these issues were not reported to me until we started stabilizing.
 
   25 Nov 2012; William Hubbs <williamh@gentoo.org> ChangeLog:
   sign manifest; the previous commit was mine as well. signing was not
