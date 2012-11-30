@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.96 2012/11/24 21:47:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.97 2012/11/30 19:03:28 scarabeus Exp $
+
+  30 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-bin-3.6.3.2.ebuild:
+  Do not display the cups msg unless needed.
 
   24 Nov 2012; Agostino Sarubbo <ago@gentoo.org>
   libreoffice-bin-3.6.3.2.ebuild:
