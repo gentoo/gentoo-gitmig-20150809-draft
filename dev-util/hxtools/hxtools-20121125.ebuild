@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/hxtools/hxtools-20121125.ebuild,v 1.2 2012/11/30 10:10:11 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/hxtools/hxtools-20121125.ebuild,v 1.3 2012/11/30 14:54:14 scarabeus Exp $
 
 EAPI=5
 
@@ -13,7 +13,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND=">=sys-libs/libhx-3.12.1"
+DEPEND="
+	dev-lang/perl
+	>=sys-libs/libhx-3.12.1
+"
 RDEPEND="${DEPEND}"
 
 src_install() {
