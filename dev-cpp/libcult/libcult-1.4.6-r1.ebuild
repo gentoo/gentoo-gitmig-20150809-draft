@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libcult/libcult-1.4.6-r1.ebuild,v 1.4 2012/11/23 18:25:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libcult/libcult-1.4.6-r1.ebuild,v 1.5 2012/11/30 15:12:32 ago Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://kolpackov.net/projects/libcult/"
 SRC_URI="ftp://kolpackov.net/pub/projects/${PN}/$(get_version_component_range 1-2)/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm x86"
+KEYWORDS="amd64 ~arm ppc x86"
 IUSE="examples"
 
 DEPEND="dev-util/build:0.3

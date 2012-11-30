@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/xsd/xsd-3.3.0.ebuild,v 1.7 2012/11/23 18:25:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/xsd/xsd-3.3.0.ebuild,v 1.8 2012/11/30 15:12:16 ago Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.codesynthesis.com/products/xsd/"
 SRC_URI="http://www.codesynthesis.com/download/${PN}/$(get_version_component_range 1-2)/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm x86"
+KEYWORDS="amd64 ~arm ppc x86"
 IUSE="ace doc examples zlib"
 
 RDEPEND=">=dev-libs/xerces-c-3
