@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/clhep/clhep-2.1.2.3.ebuild,v 1.1 2012/06/28 00:31:06 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/clhep/clhep-2.1.3.1.ebuild,v 1.1 2012/11/30 21:59:52 bicatali Exp $
 
 EAPI=4
 
@@ -21,9 +21,16 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${PV}/CLHEP"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-libdir.patch
 	# respect flags
 	sed -i -e 's:-O::g' cmake/Modules/ClhepVariables.cmake || die
+	# no batch mode to allow parallel building (bug #437482)
+	sed -i \
+		-e 's:-interaction=batchmode::g' \
+		cmake/Modules/ClhepBuildTex.cmake || die
+	# gentoo doc directory
+	sed -i \
+		-e "/DESTINATION/s:doc:share/doc/${PF}:" \
+		cmake/Modules/ClhepBuildTex.cmake */doc/CMakeLists.txt || die
 	# dont build test if not asked
 	if ! use test; then
 		sed -i \
@@ -38,6 +45,7 @@ src_configure() {
 		$(cmake-utils_use doc CLHEP_BUILD_DOCS)
 	)
 	DESTDIR="${ED}" cmake-utils_src_configure
+	use doc && MAKEOPTS+=" -j1"
 }
 
 src_install() {
