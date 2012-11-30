@@ -1,6 +1,11 @@
 # ChangeLog for sci-physics/pythia
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/ChangeLog,v 1.48 2012/11/15 04:06:12 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/ChangeLog,v 1.49 2012/11/30 22:08:58 bicatali Exp $
+
+  30 Nov 2012; Sébastien Fabbro <bicatali@gentoo.org> -pythia-8.1.65.ebuild,
+  pythia-6.4.24.ebuild, pythia-6.4.26.ebuild, pythia-8.1.45.ebuild,
+  pythia-8.1.70.ebuild:
+  Changed home page, thanks Andrew Savchenko bug #438762
 
 *pythia-8.1.70 (15 Nov 2012)
 

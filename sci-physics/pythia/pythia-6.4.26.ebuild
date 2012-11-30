@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/pythia-6.4.26.ebuild,v 1.3 2012/10/16 18:54:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/pythia-6.4.26.ebuild,v 1.4 2012/11/30 22:08:58 bicatali Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ DOC_PV=0613
 EX_PV=6.4.18
 
 DESCRIPTION="Lund Monte Carlo high-energy physics event generator"
-HOMEPAGE="http://projects.hepforge.org/pythia6/"
+HOMEPAGE="http://pythia6.hepforge.org/"
 
 # pythia6 from root is needed for some files to interface pythia6 with root.
 # To produce a split version, replace the 6.4.x by the current version:
