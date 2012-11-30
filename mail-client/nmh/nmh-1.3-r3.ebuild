@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nmh/nmh-1.3-r3.ebuild,v 1.3 2011/08/11 11:04:01 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nmh/nmh-1.3-r3.ebuild,v 1.4 2012/11/30 23:07:47 radhermit Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ DESCRIPTION="New MH mail reader"
 HOMEPAGE="http://www.nongnu.org/nmh/"
 SRC_URI="http://savannah.nongnu.org/download/nmh/${P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="gdbm"
