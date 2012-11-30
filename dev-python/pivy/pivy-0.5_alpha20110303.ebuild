@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pivy/pivy-0.5_alpha20110303.ebuild,v 1.5 2012/02/27 00:24:47 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pivy/pivy-0.5_alpha20110303.ebuild,v 1.6 2012/11/30 23:58:39 ulm Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ DESCRIPTION="Coin3d binding for Python"
 HOMEPAGE="http://pivy.coin3d.org/"
 SRC_URI="http://dev.gentoo.org/~dilfridge/distfiles/${P}.tar.xz"
 
-LICENSE="as-is"
+LICENSE="ISC"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""

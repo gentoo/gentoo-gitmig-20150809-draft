@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pivy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pivy/ChangeLog,v 1.6 2012/08/24 18:14:22 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pivy/ChangeLog,v 1.7 2012/11/30 23:58:39 ulm Exp $
+
+  30 Nov 2012; Ulrich Müller <ulm@gentoo.org> pivy-0.5_alpha20110303.ebuild:
+  Fix LICENSE, ISC according to LICENSE file in tarball.
 
   24 Aug 2012; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
   Drop maintainership
