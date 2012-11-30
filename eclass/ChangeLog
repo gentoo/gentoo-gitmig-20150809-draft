@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.529 2012/11/29 17:56:39 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.530 2012/11/30 11:40:15 mgorny Exp $
+
+  30 Nov 2012; Michał Górny <mgorny@gentoo.org> python-r1.eclass,
+  python-single-r1.eclass, python-utils-r1.eclass:
+  Make python-single-r1 stand-alone, and blocking python-r1.
 
   29 Nov 2012; Julian Ospald <hasufell@gentoo.org> waf-utils.eclass:
   add verbosity to waf-utils.eclass wrt #444562

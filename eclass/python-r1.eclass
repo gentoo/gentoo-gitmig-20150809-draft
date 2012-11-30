@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.23 2012/11/26 08:31:26 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.24 2012/11/30 11:40:15 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -42,18 +42,11 @@ esac
 
 if [[ ! ${_PYTHON_R1} ]]; then
 
-inherit python-utils-r1
+if [[ ${_PYTHON_SINGLE_R1} ]]; then
+	die 'python-r1.eclass can not be used with python-single-r1.eclass.'
+fi
 
-# @ECLASS-VARIABLE: _PYTHON_ALL_IMPLS
-# @INTERNAL
-# @DESCRIPTION:
-# All supported Python implementations, most preferred last.
-_PYTHON_ALL_IMPLS=(
-	jython2_5
-	pypy1_8 pypy1_9
-	python3_1 python3_2 python3_3
-	python2_5 python2_6 python2_7
-)
+inherit python-utils-r1
 
 # @ECLASS-VARIABLE: PYTHON_COMPAT
 # @REQUIRED
