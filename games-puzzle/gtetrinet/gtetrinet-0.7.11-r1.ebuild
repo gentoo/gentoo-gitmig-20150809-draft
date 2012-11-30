@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/gtetrinet-0.7.11-r1.ebuild,v 1.8 2012/05/21 20:39:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/gtetrinet-0.7.11-r1.ebuild,v 1.9 2012/11/30 20:05:06 hasufell Exp $
 
 EAPI=2
 # games after gnome2 so games' functions will override gnome2's
@@ -27,7 +27,7 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-noesd.patch
+	epatch "${FILESDIR}"/${P}-{noesd,desktopfile}.patch
 	sed -i \
 		-e "/^pkgdatadir =/s:=.*:= ${GAMES_DATADIR}/${PN}:" \
 		src/Makefile.in themes/*/Makefile.in || die
