@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gogoc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gogoc/ChangeLog,v 1.18 2012/07/12 08:45:16 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gogoc/ChangeLog,v 1.19 2012/11/30 21:53:51 ago Exp $
+
+  30 Nov 2012; <ago@gentoo.org> gogoc-1.2-r2.ebuild:
+  Stable for amd64, wrt bug #444324
 
   12 Jul 2012; Bernard Cafarelli <voyageur@gentoo.org> gogoc-1.2-r1.ebuild,
   gogoc-1.2-r2.ebuild:
