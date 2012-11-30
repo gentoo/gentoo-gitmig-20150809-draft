@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-Bezier/Math-Bezier-0.10.0.ebuild,v 1.1 2011/08/30 10:33:07 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-Bezier/Math-Bezier-0.10.0.ebuild,v 1.2 2012/11/30 06:12:34 bicatali Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Solution of Bezier Curves"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 SRC_TEST=do
