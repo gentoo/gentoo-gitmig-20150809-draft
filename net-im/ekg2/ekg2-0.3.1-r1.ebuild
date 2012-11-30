@@ -1,9 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-0.3.1-r1.ebuild,v 1.2 2011/08/30 10:13:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-0.3.1-r1.ebuild,v 1.3 2012/11/30 23:10:30 mgorny Exp $
 
-EAPI=3
-inherit autotools-utils versionator
+EAPI=4
+PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+inherit autotools-utils eutils python-single-r1 versionator
 
 DESCRIPTION="Text-based, multi-protocol instant messenger"
 HOMEPAGE="http://www.ekg2.org"
@@ -24,7 +25,7 @@ RDEPEND="
 	nls? ( virtual/libintl )
 	oracle? ( dev-db/oracle-instantclient-basic )
 	perl? ( dev-lang/perl )
-	python? ( dev-lang/python )
+	python? ( ${PYTHON_DEPS} )
 	readline? ( sys-libs/readline )
 	ssl? ( dev-libs/openssl )
 	xosd? ( x11-libs/xosd )
@@ -58,7 +59,7 @@ DOCS=(
 # Due to MakeMaker being used to build Perl modules.
 AUTOTOOLS_IN_SOURCE_BUILD=1
 
-pkg_setup() {
+pkg_pretend() {
 	if ! use gtk && ! use ncurses && ! use readline; then
 		ewarn 'ekg2 is being compiled without any frontend, you should consider'
 		ewarn 'enabling at least one of following USEflags:'
@@ -108,5 +109,5 @@ src_configure() {
 
 src_install() {
 	autotools-utils_src_install
-	remove_libtool_files all
+	prune_libtool_files --modules
 }
