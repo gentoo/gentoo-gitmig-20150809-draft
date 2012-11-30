@@ -1,6 +1,13 @@
 # ChangeLog for www-misc/mergelog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/mergelog/ChangeLog,v 1.12 2012/11/30 17:30:04 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/mergelog/ChangeLog,v 1.13 2012/11/30 17:46:12 pinkbyte Exp $
+
+*mergelog-4.5-r2 (30 Nov 2012)
+
+  30 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> -mergelog-4.5-r1.ebuild,
+  +mergelog-4.5-r2.ebuild:
+  Revision bump: EAPI 4, autotools-utils eclass, use default src_install, drop
+  old revision that does not build now
 
   30 Nov 2012; Sergey Popov <pinkbyte@gentoo.org>
   files/mergelog-4.5-asneeded.patch:
