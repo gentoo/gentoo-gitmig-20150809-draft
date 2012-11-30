@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-single-r1.eclass,v 1.5 2012/11/30 11:40:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-single-r1.eclass,v 1.6 2012/11/30 22:57:26 mgorny Exp $
 
 # @ECLASS: python-single-r1
 # @MAINTAINER:
@@ -151,6 +151,11 @@ _python_single_set_globals() {
 	PYTHON_DEPS="dev-python/python-exec[${PYTHON_USEDEP}]"
 	local i
 	for i in "${PYTHON_COMPAT[@]}"; do
+		# The chosen targets need to be in PYTHON_TARGETS as well.
+		# This is in order to enforce correct dependencies on packages
+		# supporting multiple implementations.
+		REQUIRED_USE+=" python_single_target_${i}? ( python_targets_${i} )"
+
 		local d
 		case ${i} in
 			python*)
