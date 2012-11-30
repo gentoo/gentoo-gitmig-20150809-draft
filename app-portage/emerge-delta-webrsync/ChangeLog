@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/emerge-delta-webrsync
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/emerge-delta-webrsync/ChangeLog,v 1.35 2012/09/14 07:54:53 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/emerge-delta-webrsync/ChangeLog,v 1.36 2012/11/30 00:11:33 zmedico Exp $
+
+*emerge-delta-webrsync-3.6.2 (30 Nov 2012)
+
+  30 Nov 2012; Zac Medico <zmedico@gentoo.org>
+  +emerge-delta-webrsync-3.6.2.ebuild, -emerge-delta-webrsync-3.6.1.ebuild:
+  3.6.2 version bump. This fixes bug #442190.
 
 *emerge-delta-webrsync-3.6.1 (14 Sep 2012)
 
