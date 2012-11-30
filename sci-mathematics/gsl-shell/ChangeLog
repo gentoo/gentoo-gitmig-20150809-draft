@@ -1,6 +1,12 @@
 # ChangeLog for sci-mathematics/gsl-shell
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gsl-shell/ChangeLog,v 1.5 2012/09/26 14:50:50 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gsl-shell/ChangeLog,v 1.6 2012/11/30 17:34:03 grozin Exp $
+
+*gsl-shell-2.2.0 (30 Nov 2012)
+
+  30 Nov 2012; Andrey Grozin <grozin@gentoo.org> -gsl-shell-2.2.0_beta1.ebuild,
+  +gsl-shell-2.2.0.ebuild, files/gsl-shell-font.patch:
+  Version bump
 
   26 Sep 2012; Andrey Grozin <grozin@gentoo.org> gsl-shell-2.2.0_beta1.ebuild:
   Fixing a stupid typo

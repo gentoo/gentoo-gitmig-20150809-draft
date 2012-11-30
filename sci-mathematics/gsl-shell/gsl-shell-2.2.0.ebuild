@@ -1,17 +1,16 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gsl-shell/gsl-shell-2.2.0_beta1.ebuild,v 1.5 2012/09/26 14:50:50 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gsl-shell/gsl-shell-2.2.0.ebuild,v 1.1 2012/11/30 17:34:03 grozin Exp $
 
 EAPI=4
-inherit eutils versionator
+inherit eutils
 
 DESCRIPTION="Lua interactive shell for sci-libs/gsl"
 HOMEPAGE="http://www.nongnu.org/gsl-shell/"
-MY_P=$(version_format_string '${PN}-$1.$2.$3-$4')
-SRC_URI="http://download.savannah.gnu.org/releases/${PN}/${MY_P}.tar.gz"
+SRC_URI="http://download.savannah.gnu.org/releases/${PN}/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc fox"
 
 DEPEND=">=sci-libs/gsl-1.14
@@ -24,7 +23,7 @@ DEPEND=">=sci-libs/gsl-1.14
 	fox? ( x11-libs/fox:1.6 )"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}"
+S="${WORKDIR}"/${PN}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-font.patch "${FILESDIR}"/${PN}-strip.patch "${FILESDIR}"/${PN}-usr.patch

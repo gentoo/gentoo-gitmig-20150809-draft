@@ -1,13 +1,10 @@
 diff -r -U1 gsl-shell.orig/agg-plot/support_x11.cpp gsl-shell/agg-plot/support_x11.cpp
---- gsl-shell.orig/agg-plot/support_x11.cpp	2012-09-12 01:13:31.000000000 +0700
-+++ gsl-shell/agg-plot/support_x11.cpp	2012-09-26 16:07:10.000000000 +0700
-@@ -4,3 +4,3 @@
- 
+--- gsl-shell.orig/agg-plot/support_x11.cpp	2012-11-27 04:55:38.000000000 +0700
++++ gsl-shell/agg-plot/support_x11.cpp	2012-11-30 23:02:31.000000000 +0700
+@@ -9,4 +9,4 @@
+ #else
 -const char *ttf_names[] = {"ubuntu-font-family/Ubuntu-R.ttf", "freefont/FreeSans.ttf", "ttf-dejavu/DejaVuSans.ttf", 0};
+-#define TTF_SYSTEM_DIR "/usr/share/fonts/truetype/"
 +const char *ttf_names[] = {"ubuntu-font-family/Ubuntu-R.ttf", "freefont-ttf/FreeSans.ttf", "dejavu/DejaVuSans.ttf", 0};
- 
-@@ -8,3 +8,3 @@
- {
--    const char* ttf_dir = "/usr/share/fonts/truetype/";
-+    const char* ttf_dir = "/usr/share/fonts/";
-     unsigned len = strlen(ttf_dir);
++#define TTF_SYSTEM_DIR "/usr/share/fonts/"
+ #define CONSOLE_FONT_NAME "monospace"
