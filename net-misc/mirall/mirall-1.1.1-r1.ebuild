@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mirall/mirall-1.1.1-r1.ebuild,v 1.1 2012/11/30 05:40:41 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mirall/mirall-1.1.1-r1.ebuild,v 1.2 2012/11/30 06:02:43 creffett Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="http://download.owncloud.com/download/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="samba sftp webdav"
+IUSE="samba +sftp +webdav"
 
 RDEPEND="
 	>=net-misc/csync-0.60.0[sftp=,samba=,webdav=]

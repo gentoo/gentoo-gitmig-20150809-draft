@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/mirall
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mirall/ChangeLog,v 1.9 2012/11/30 05:40:41 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mirall/ChangeLog,v 1.10 2012/11/30 06:02:43 creffett Exp $
+
+  30 Nov 2012; Chris Reffett <creffett@gentoo.org> mirall-1.1.1-r1.ebuild:
+  Make the USEs enabled by default in the csync ebuild enabled by default here
+  too.
 
 *mirall-1.1.1-r1 (30 Nov 2012)
 
