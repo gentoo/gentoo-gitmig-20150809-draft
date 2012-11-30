@@ -1,6 +1,12 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.758 2012/11/27 21:32:06 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.759 2012/11/30 00:33:03 floppym Exp $
+
+*chromium-23.0.1271.95 (30 Nov 2012)
+
+  30 Nov 2012; Mike Gilbert <floppym@gentoo.org> +chromium-23.0.1271.95.ebuild,
+  -chromium-23.0.1271.64.ebuild:
+  Stable channel bump.
 
 *chromium-24.0.1312.25 (27 Nov 2012)
 
