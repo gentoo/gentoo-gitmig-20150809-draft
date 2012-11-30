@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/epix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/ChangeLog,v 1.46 2012/11/14 19:07:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/ChangeLog,v 1.47 2012/11/30 05:17:41 bicatali Exp $
+
+  30 Nov 2012; Sébastien Fabbro <bicatali@gentoo.org> epix-1.2.10.ebuild,
+  files/epix-1.2.10-autotools.patch, metadata.xml:
+  Respect AR (bug #443136) and rename bash-completion file
 
   14 Nov 2012; Agostino Sarubbo <ago@gentoo.org> epix-1.2.10.ebuild:
   Stable for amd64, wrt bug #442570
