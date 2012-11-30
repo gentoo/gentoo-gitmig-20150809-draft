@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/yakuake
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/yakuake/ChangeLog,v 1.54 2012/11/24 15:24:48 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/yakuake/ChangeLog,v 1.55 2012/11/30 16:50:52 ago Exp $
+
+  30 Nov 2012; <ago@gentoo.org> yakuake-2.9.8-r1.ebuild:
+  Stable for ppc, wrt bug #442394
 
   24 Nov 2012; Johannes Huber <johu@gentoo.org> -yakuake-2.9.8.ebuild:
   Remove old.
