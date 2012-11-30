@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/pornview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/ChangeLog,v 1.49 2012/10/31 19:08:40 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/ChangeLog,v 1.50 2012/11/30 19:51:58 hasufell Exp $
+
+*pornview-0.2.2 (30 Nov 2012)
+
+  30 Nov 2012; Julian Ospald <hasufell@gentoo.org> -pornview-0.2.1.ebuild,
+  +pornview-0.2.2.ebuild:
+  version bump, remove old
 
 *pornview-0.2.1 (31 Oct 2012)
 
