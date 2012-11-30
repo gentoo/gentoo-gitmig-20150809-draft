@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/logitechmediaserver-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/logitechmediaserver-bin/ChangeLog,v 1.6 2012/07/02 15:30:52 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/logitechmediaserver-bin/ChangeLog,v 1.7 2012/11/30 07:03:11 lavajoe Exp $
+
+  30 Nov 2012; Joe Peterson <lavajoe@gentoo.org> metadata.xml:
+  Reassign to maintainer-needed - but note that we still have a proxy
+  maintainer
 
 *logitechmediaserver-bin-7.7.2-r2 (02 Jul 2012)
 
