@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kfile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfile/ChangeLog,v 1.141 2012/11/23 18:55:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfile/ChangeLog,v 1.142 2012/11/30 15:53:06 ago Exp $
+
+  30 Nov 2012; <ago@gentoo.org> kfile-4.9.3.ebuild:
+  Stable for ppc, wrt bug #442394
 
   23 Nov 2012; Agostino Sarubbo <ago@gentoo.org> kfile-4.9.3.ebuild:
   Stable for x86, wrt bug #442394

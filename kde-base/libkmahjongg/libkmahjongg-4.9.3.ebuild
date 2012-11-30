@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkmahjongg/libkmahjongg-4.9.3.ebuild,v 1.3 2012/11/23 19:26:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkmahjongg/libkmahjongg-4.9.3.ebuild,v 1.4 2012/11/30 16:34:54 ago Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ fi
 inherit ${eclass}
 
 DESCRIPTION="LibKMahjongg for KDE"
-KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 KMLOADLIBS="libkdegames"

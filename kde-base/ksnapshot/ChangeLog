@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksnapshot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksnapshot/ChangeLog,v 1.228 2012/11/23 19:16:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksnapshot/ChangeLog,v 1.229 2012/11/30 16:21:10 ago Exp $
+
+  30 Nov 2012; <ago@gentoo.org> ksnapshot-4.9.3.ebuild:
+  Stable for ppc, wrt bug #442394
 
   23 Nov 2012; Agostino Sarubbo <ago@gentoo.org> ksnapshot-4.9.3.ebuild:
   Stable for x86, wrt bug #442394

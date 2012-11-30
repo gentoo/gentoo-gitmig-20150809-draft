@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/konqueror
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.263 2012/11/23 19:09:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.264 2012/11/30 16:12:03 ago Exp $
+
+  30 Nov 2012; <ago@gentoo.org> konqueror-4.9.3-r1.ebuild:
+  Stable for ppc, wrt bug #442394
 
   23 Nov 2012; Agostino Sarubbo <ago@gentoo.org> konqueror-4.9.3-r1.ebuild:
   Stable for x86, wrt bug #442394

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdemultimedia-meta
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-meta/ChangeLog,v 1.232 2012/11/23 18:48:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-meta/ChangeLog,v 1.233 2012/11/30 15:42:40 ago Exp $
+
+  30 Nov 2012; <ago@gentoo.org> kdemultimedia-meta-4.9.3.ebuild:
+  Stable for ppc, wrt bug #442394
 
   23 Nov 2012; Agostino Sarubbo <ago@gentoo.org>
   kdemultimedia-meta-4.9.3.ebuild:

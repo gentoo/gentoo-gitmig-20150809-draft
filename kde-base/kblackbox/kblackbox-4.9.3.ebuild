@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kblackbox/kblackbox-4.9.3.ebuild,v 1.3 2012/11/23 18:35:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kblackbox/kblackbox-4.9.3.ebuild,v 1.4 2012/11/30 15:26:23 ago Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ KDE_SELINUX_MODULE="games"
 inherit ${eclass}
 
 DESCRIPTION="KDE Blackbox Game"
-KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 DEPEND="$(add_kdebase_dep libkdegames)"

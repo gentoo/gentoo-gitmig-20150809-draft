@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebugdialog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebugdialog/ChangeLog,v 1.214 2012/11/23 18:46:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebugdialog/ChangeLog,v 1.215 2012/11/30 15:40:14 ago Exp $
+
+  30 Nov 2012; <ago@gentoo.org> kdebugdialog-4.9.3.ebuild:
+  Stable for ppc, wrt bug #442394
 
   23 Nov 2012; Agostino Sarubbo <ago@gentoo.org> kdebugdialog-4.9.3.ebuild:
   Stable for x86, wrt bug #442394

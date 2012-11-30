@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krdc/krdc-4.9.3.ebuild,v 1.3 2012/11/23 19:12:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krdc/krdc-4.9.3.ebuild,v 1.4 2012/11/30 16:16:09 ago Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ KDE_SCM="svn"
 inherit kde4-meta
 
 DESCRIPTION="KDE remote desktop connection (RDP and VNC) client"
-KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
 IUSE="debug jpeg rdesktop vnc zeroconf telepathy"
 
 #nx? ( >=net-misc/nxcl-0.9-r1 ) disabled upstream, last checked 4.3.61

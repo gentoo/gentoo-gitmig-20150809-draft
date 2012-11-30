@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kimono
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kimono/ChangeLog,v 1.48 2012/11/23 19:00:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kimono/ChangeLog,v 1.49 2012/11/30 15:59:48 ago Exp $
+
+  30 Nov 2012; <ago@gentoo.org> kimono-4.9.3.ebuild:
+  Stable for ppc, wrt bug #442394
 
   23 Nov 2012; Agostino Sarubbo <ago@gentoo.org> kimono-4.9.3.ebuild:
   Stable for x86, wrt bug #442394

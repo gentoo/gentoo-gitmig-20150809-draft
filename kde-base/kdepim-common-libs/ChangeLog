@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdepim-common-libs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-common-libs/ChangeLog,v 1.60 2012/11/23 18:49:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-common-libs/ChangeLog,v 1.61 2012/11/30 15:43:59 ago Exp $
+
+  30 Nov 2012; <ago@gentoo.org> kdepim-common-libs-4.9.3.ebuild:
+  Stable for ppc, wrt bug #442394
 
   23 Nov 2012; Agostino Sarubbo <ago@gentoo.org>
   kdepim-common-libs-4.9.3.ebuild:
