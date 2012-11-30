@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.3.0-r1.ebuild,v 1.1 2012/11/30 13:25:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.3.0-r1.ebuild,v 1.2 2012/11/30 23:57:44 mgorny Exp $
 
 EAPI="3"
 WANT_AUTOMAKE="none"
@@ -253,6 +253,14 @@ src_install() {
 
 	# for python-exec
 	python_export python${SLOT} EPYTHON PYTHON PYTHON_SITEDIR
+
+	# if not using a cross-compiler, use the fresh binary
+	if ! tc-is-cross-compiler; then
+		local PYTHON=./python \
+			LD_LIBRARY_PATH=${LD_LIBRARY_PATH+${LD_LIBRARY_PATH}:}.
+		export LD_LIBRARY_PATH
+	fi
+
 	echo "EPYTHON='${EPYTHON}'" > epython.py
 	python_domodule epython.py
 }
