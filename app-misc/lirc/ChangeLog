@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lirc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.235 2012/11/30 13:20:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.236 2012/11/30 13:56:26 ago Exp $
+
+  30 Nov 2012;  <ago@gentoo.org> lirc-0.9.0-r2.ebuild:
+  Stable for x86, wrt bug #434322
 
   30 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> lirc-0.9.0-r2.ebuild:
   Stable for ppc wrt bug#434322.
