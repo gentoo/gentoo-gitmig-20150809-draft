@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/hxtools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/hxtools/ChangeLog,v 1.1 2012/11/30 10:08:55 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/hxtools/ChangeLog,v 1.2 2012/11/30 10:10:11 scarabeus Exp $
+
+  30 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> hxtools-20121125.ebuild:
+  Silence repoman.
 
 *hxtools-20121125 (30 Nov 2012)
 
