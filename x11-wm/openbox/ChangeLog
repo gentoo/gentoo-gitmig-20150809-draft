@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.257 2012/11/30 20:08:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.258 2012/11/30 20:18:03 hwoarang Exp $
+
+  30 Nov 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml,
+  openbox-3.5.0_p20121006.ebuild, openbox-9999.ebuild:
+  Convert python shebangs to python2. Describe the python useflag. Bug #442802
 
   30 Nov 2012; Markos Chandras <hwoarang@gentoo.org> ChangeLog:
   Add --disable-silent-rules for bug #445108
