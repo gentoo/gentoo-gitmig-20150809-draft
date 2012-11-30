@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/setuptools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.161 2012/11/20 05:40:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.162 2012/11/30 22:09:46 radhermit Exp $
+
+*setuptools-0.6.32 (30 Nov 2012)
+
+  30 Nov 2012; Tim Harder <radhermit@gentoo.org> +setuptools-0.6.32.ebuild:
+  Version bump.
 
   20 Nov 2012; Michał Górny <mgorny@gentoo.org> setuptools-0.6.30-r1.ebuild:
   Re-keyword ~hppa after adding necessary masks.
