@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/msieve/msieve-1.50.ebuild,v 1.3 2012/11/16 04:14:45 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/msieve/msieve-1.50-r4.ebuild,v 1.1 2012/11/30 08:52:07 patrick Exp $
 
 EAPI=4
 DESCRIPTION="A C library implementing a suite of algorithms to factor large integers"
@@ -18,6 +18,16 @@ DEPEND="ecm? ( sci-mathematics/gmp-ecm )
 	mpi? ( virtual/mpi )
 	zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	# TODO: Integrate ggnfs properly
+	epatch "${FILESDIR}/reduce-printf.patch" 	|| die
+	epatch "${FILESDIR}/fix-version.patch"		|| die
+	epatch "${FILESDIR}/fix-version2.patch"		|| die
+	sed -i -e 's/-march=k8//' Makefile 		|| die
+	sed -i -e 's/CC =/#CC =/' Makefile 		|| die
+	sed -i -e 's/CFLAGS =/CFLAGS +=/' Makefile 	|| die
+}
 
 src_compile() {
 	if use ecm; then
@@ -38,10 +48,10 @@ src_compile() {
 }
 
 src_install() {
-	mkdir -p "${D}/usr/include/"
+	mkdir -p "${D}/usr/include/msieve"
 	mkdir -p "${D}/usr/lib/"
 	mkdir -p "${D}/usr/share/doc/${P}/"
-	cp include/* "${D}/usr/include/" || die "Failed to install"
+	cp include/* "${D}/usr/include/msieve" || die "Failed to install"
 	cp libmsieve.a "${D}/usr/lib/" || die "Failed to install"
 	dobin msieve || die "Failed to install"
 	cp Readme* "${D}/usr/share/doc/${P}/" || die "Failed to install"
