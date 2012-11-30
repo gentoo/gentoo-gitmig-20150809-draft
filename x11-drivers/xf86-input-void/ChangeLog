@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-input-void
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-void/ChangeLog,v 1.72 2012/05/16 00:42:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-void/ChangeLog,v 1.73 2012/11/30 05:44:33 heroxbd Exp $
+
+  30 Nov 2012; Benda Xu <heroxbd@gentoo.org> xf86-input-void-1.4.0.ebuild:
+  keyword ~amd64-linux
 
   16 May 2012; Alexis Ballier <aballier@gentoo.org>
   xf86-input-void-1.4.0.ebuild:
