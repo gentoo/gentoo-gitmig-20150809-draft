@@ -1,6 +1,13 @@
 # ChangeLog for kde-misc/kdiff3
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/ChangeLog,v 1.62 2012/11/18 19:03:20 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/ChangeLog,v 1.63 2012/11/30 05:52:02 creffett Exp $
+
+*kdiff3-0.9.97-r1 (30 Nov 2012)
+
+  30 Nov 2012; Chris Reffett <creffett@gentoo.org>
+  +files/kdiff3-0.9.97-relativepath.patch, +kdiff3-0.9.97-r1.ebuild:
+  Revision bump. Do not append 'Categories' to .desktop file, bug 443562. Add
+  patch to fix using file paths with -o, bug 443938.
 
   18 Nov 2012; Maciej Mrozowski <reavertm@gentoo.org> kdiff3-0.9.97.ebuild:
   No need to append 'Categories' to .desktop file anymore, bug 443562.
