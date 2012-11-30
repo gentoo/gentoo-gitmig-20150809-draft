@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/djbfft/djbfft-0.76-r1.ebuild,v 1.6 2012/11/16 11:11:28 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/djbfft/djbfft-0.76-r1.ebuild,v 1.7 2012/11/30 04:45:44 bicatali Exp $
 
 EAPI=4
 inherit eutils flag-o-matic toolchain-funcs multilib
@@ -41,6 +41,10 @@ src_compile() {
 		LIBDJBFFT=${SONAME} \
 		LIBPERMS=0755 \
 		${SONAME}
+	echo "the compile function was:"
+	cat ./compile
+	echo "the conf-ld function was:"
+	cat ./conf-ld
 }
 
 src_test() {
