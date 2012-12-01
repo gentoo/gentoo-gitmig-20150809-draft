@@ -1,11 +1,14 @@
 #!/bin/sh
-HPACUCLI_BASEDIR="/opt/hp/hpacucli"
-HPACUCLI_LOCKDIR="/var/lock/hpacucli"
-HPACUCLI_LOCK="${HPACUCLI_LOCKDIR}/CPQACU_MUTEX"
-HPACUCLI_BIN="${HPACUCLI_BASEDIR}/hpacucli.bin"
 
-if pgrep -x "${HPACUCLI_BIN##*/}"; then
-        echo "Another instance of hpacucli is running! Stop it first."
+cmd="$(basename "$0")"
+
+HPACUCLI_BASEDIR="/opt/hp/hpacucli"
+HPACUCLI_LOCKDIR="/var/lock/$cmd"
+HPACUCLI_LOCK="${HPACUCLI_LOCKDIR}/CPQACU_MUTEX"
+HPACUCLI_BIN="${HPACUCLI_BASEDIR}/$cmd.bin"
+
+if pgrep -x "$cmd.bin"; then
+        echo "Another instance of $cmd is running! Stop it first."
         exit 1
 fi
 
@@ -16,4 +19,4 @@ fi
 
 export LD_LIBRARY_PATH="${HPACUCLI_BASEDIR}"
 export ACUXE_LOCK_FILES_DIR="${HPACUCLI_LOCKDIR}/"
-exec setarch x86_64 --uname-2.6 "${HPACUCLI_BIN}" "${@}"
+exec setarch `uname -m` --uname-2.6 "${HPACUCLI_BIN}" "${@}"
