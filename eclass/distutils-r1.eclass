@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.20 2012/11/26 10:05:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.21 2012/12/01 10:51:48 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -243,38 +243,42 @@ distutils-r1_python_test() {
 	:
 }
 
-# @FUNCTION: distutils-r1_rename_scripts
+# @FUNCTION: _distutils-r1_rename_scripts
+# @USAGE: <path>
+# @INTERNAL
 # @DESCRIPTION:
 # Renames installed Python scripts to be implementation-suffixed.
-# ${PYTHON} has to be set to the expected Python executable (which
-# hashbang will be grepped for), and ${EPYTHON} to the implementation
-# name (for new name).
-distutils-r1_rename_scripts() {
+# ${EPYTHON} needs to be set to the implementation name.
+#
+# All executable scripts having shebang referencing ${EPYTHON}
+# in given path will be renamed.
+_distutils-r1_rename_scripts() {
 	debug-print-function ${FUNCNAME} "${@}"
+
+	local path=${1}
+	[[ ${path} ]] || die "${FUNCNAME}: no path given"
 
 	local f
 	# XXX: change this if we ever allow directories in bin/sbin
-	for f in "${D}"/{bin,sbin,usr/bin,usr/sbin}/*; do
-		if [[ -x ${f} ]]; then
-			debug-print "${FUNCNAME}: found executable at ${f#${D}/}"
+	while IFS= read -r -d '' f; do
+		debug-print "${FUNCNAME}: found executable at ${f#${D}/}"
 
-			if [[ "$(head -n 1 "${f}")" == '#!'*${EPYTHON}* ]]
-			then
-				debug-print "${FUNCNAME}: matching shebang: $(head -n 1 "${f}")"
+		if [[ "$(head -n 1 "${f}")" == '#!'*${EPYTHON}* ]]
+		then
+			debug-print "${FUNCNAME}: matching shebang: $(head -n 1 "${f}")"
 
-				local newf=${f}-${EPYTHON}
-				debug-print "${FUNCNAME}: renamed to ${newf#${D}/}"
-				mv "${f}" "${newf}" || die
-			fi
+			local newf=${f}-${EPYTHON}
+			debug-print "${FUNCNAME}: renamed to ${newf#${D}/}"
+			mv "${f}" "${newf}" || die
 		fi
-	done
+	done < <(find "${path}" -type f -executable -print0)
 }
 
 # @FUNCTION: distutils-r1_python_install
 # @USAGE: [additional-args...]
 # @DESCRIPTION:
 # The default python_install(). Runs 'esetup.py install', appending
-# the optimization flags. Then calls distutils-r1_rename_scripts.
+# the optimization flags. Then renames the installed scripts.
 # Any parameters passed to this function will be passed to setup.py.
 distutils-r1_python_install() {
 	debug-print-function ${FUNCNAME} "${@}"
@@ -295,7 +299,7 @@ distutils-r1_python_install() {
 
 	esetup.py install "${flags[@]}" --root="${D}" "${@}"
 
-	distutils-r1_rename_scripts
+	_distutils-r1_rename_scripts "${D}"
 }
 
 # @FUNCTION: distutils-r1_python_install_all

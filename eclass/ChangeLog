@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.533 2012/12/01 09:29:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.534 2012/12/01 10:51:48 mgorny Exp $
+
+  01 Dec 2012; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
+  Make distutils-r1_rename_scripts private. Rename all matching executables
+  recursively in given path(s) rather than using hardcoded path list.
 
   01 Dec 2012; Michał Górny <mgorny@gentoo.org> +python-any-r1.eclass,
   python-r1.eclass, python-single-r1.eclass:
