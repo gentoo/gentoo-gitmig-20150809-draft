@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.21 2012/12/01 10:51:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.22 2012/12/01 10:52:40 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -297,9 +297,14 @@ distutils-r1_python_install() {
 	local PYTHONDONTWRITEBYTECODE
 	export PYTHONDONTWRITEBYTECODE
 
-	esetup.py install "${flags[@]}" --root="${D}" "${@}"
+	local root=${D}/_${EPYTHON}
 
-	_distutils-r1_rename_scripts "${D}"
+	esetup.py install "${flags[@]}" --root="${root}" "${@}"
+	_distutils-r1_rename_scripts "${root}"
+
+	# merge
+	cp -a -l -n "${root}"/* "${D}"/ || die "Merging ${EPYTHON} image failed."
+	rm -rf "${root}"
 }
 
 # @FUNCTION: distutils-r1_python_install_all
