@@ -1,6 +1,17 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.423 2012/10/22 08:25:27 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.424 2012/12/01 23:04:38 flameeyes Exp $
+
+*openldap-2.4.33-r1 (01 Dec 2012)
+
+  01 Dec 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +openldap-2.4.33-r1.ebuild:
+  Improve USE=minimal, dropping dependencies on tcpd and libtool in that
+  configuration (they are used by the server), and only installing
+  files/directories for the server if it's going to be built. Drop dependency
+  over ncurses (not used anywhere in the code) and stop using keepdir on
+  /var/run (the init script will do that properly and support tmpfs
+  configurations).
 
   22 Oct 2012; Robin H. Johnson <robbat2@gentoo.org> openldap-2.4.30.ebuild:
   Fix missing dep per bug #420887.
