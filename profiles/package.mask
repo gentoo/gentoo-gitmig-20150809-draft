@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14267 2012/11/30 20:41:44 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14268 2012/12/01 10:37:45 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -43,6 +43,8 @@ sci-libs/openmm
 =dev-lang/python-3.1.5-r1
 =dev-lang/python-3.2.3-r2
 =dev-lang/python-3.3.0-r1
+=dev-python/pypy-1.8-r2
+=dev-python/pypy-1.9-r2
 
 # Sebastian Pipping <sping@gentoo.org> (27 Nov 2012)
 # Masked for removal in 30 days.

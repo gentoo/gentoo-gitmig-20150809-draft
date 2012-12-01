@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7207 2012/11/30 20:41:44 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7208 2012/12/01 10:37:45 mgorny Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Dec 2012; Michał Górny <mgorny@gentoo.org> package.mask, repo_name:
+  Add new pypy ebuilds to the python-r1 package mask.
 
   30 Nov 2012; Christoph Junghans <ottxor@gentoo.org> package.mask:
   masked sci-libs/openmm
