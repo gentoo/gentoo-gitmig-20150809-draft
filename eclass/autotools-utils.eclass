@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.57 2012/09/27 16:35:41 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.58 2012/12/01 16:26:03 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -76,10 +76,10 @@
 # }
 #
 # src_install() {
-# 	use doc && HTML_DOCS=("${AUTOTOOLS_BUILD_DIR}/apidocs/html/")
+# 	use doc && HTML_DOCS=("${BUILD_DIR}/apidocs/html/")
 # 	autotools-utils_src_install
 # 	if use examples; then
-# 		dobin "${AUTOTOOLS_BUILD_DIR}"/foo_example{1,2,3} \\
+# 		dobin "${BUILD_DIR}"/foo_example{1,2,3} \\
 # 			|| die 'dobin examples failed'
 # 	fi
 # }
@@ -117,11 +117,14 @@ inherit autotools eutils libtool
 
 EXPORT_FUNCTIONS src_prepare src_configure src_compile src_install src_test
 
-# @ECLASS-VARIABLE: AUTOTOOLS_BUILD_DIR
+# @ECLASS-VARIABLE: BUILD_DIR
 # @DEFAULT_UNSET
 # @DESCRIPTION:
 # Build directory, location where all autotools generated files should be
 # placed. For out of source builds it defaults to ${WORKDIR}/${P}_build.
+#
+# This variable has been called AUTOTOOLS_BUILD_DIR formerly.
+# It is set under that name for compatibility.
 
 # @ECLASS-VARIABLE: AUTOTOOLS_IN_SOURCE_BUILD
 # @DEFAULT_UNSET
@@ -183,11 +186,14 @@ EXPORT_FUNCTIONS src_prepare src_configure src_compile src_install src_test
 _check_build_dir() {
 	: ${ECONF_SOURCE:=${S}}
 	if [[ -n ${AUTOTOOLS_IN_SOURCE_BUILD} ]]; then
-		AUTOTOOLS_BUILD_DIR="${ECONF_SOURCE}"
+		BUILD_DIR="${ECONF_SOURCE}"
 	else
-		: ${AUTOTOOLS_BUILD_DIR:=${WORKDIR}/${P}_build}
+		: ${BUILD_DIR:=${AUTOTOOLS_BUILD_DIR:-${WORKDIR}/${P}_build}}
 	fi
-	echo ">>> Working in BUILD_DIR: \"$AUTOTOOLS_BUILD_DIR\""
+
+	# Backwards compatibility.
+	AUTOTOOLS_BUILD_DIR=${BUILD_DIR}
+	echo ">>> Working in BUILD_DIR: \"${BUILD_DIR}\""
 }
 
 # @FUNCTION: remove_libtool_files
@@ -413,20 +419,20 @@ autotools-utils_src_configure() {
 	# Append user args
 	econfargs+=("${myeconfargs[@]}")
 
-	mkdir -p "${AUTOTOOLS_BUILD_DIR}" || die "mkdir '${AUTOTOOLS_BUILD_DIR}' failed"
-	pushd "${AUTOTOOLS_BUILD_DIR}" > /dev/null || die
+	mkdir -p "${BUILD_DIR}" || die
+	pushd "${BUILD_DIR}" > /dev/null || die
 	econf "${econfargs[@]}" "$@"
 	popd > /dev/null || die
 }
 
 # @FUNCTION: autotools-utils_src_compile
 # @DESCRIPTION:
-# The autotools src_compile function, invokes emake in specified AUTOTOOLS_BUILD_DIR.
+# The autotools src_compile function, invokes emake in specified BUILD_DIR.
 autotools-utils_src_compile() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	_check_build_dir
-	pushd "${AUTOTOOLS_BUILD_DIR}" > /dev/null || die
+	pushd "${BUILD_DIR}" > /dev/null || die
 	emake "$@" || die 'emake failed'
 	popd > /dev/null || die
 }
@@ -443,7 +449,7 @@ autotools-utils_src_install() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	_check_build_dir
-	pushd "${AUTOTOOLS_BUILD_DIR}" > /dev/null || die
+	pushd "${BUILD_DIR}" > /dev/null || die
 	emake DESTDIR="${D}" "$@" install || die "emake install failed"
 	popd > /dev/null || die
 
@@ -490,7 +496,7 @@ autotools-utils_src_test() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	_check_build_dir
-	pushd "${AUTOTOOLS_BUILD_DIR}" > /dev/null || die
+	pushd "${BUILD_DIR}" > /dev/null || die
 	# Run default src_test as defined in ebuild.sh
 	default_src_test
 	popd > /dev/null || die

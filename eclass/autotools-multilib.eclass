@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-multilib.eclass,v 1.1 2012/10/08 18:44:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-multilib.eclass,v 1.2 2012/12/01 16:26:03 mgorny Exp $
 
 # @ECLASS: autotools-multilib.eclass
 # @MAINTAINER:
@@ -38,17 +38,19 @@ IUSE=multilib
 # @USAGE: argv...
 # @DESCRIPTION:
 # If multilib support is enabled, sets the toolchain up for each
-# supported ABI along with the ABI variable and correct
-# AUTOTOOLS_BUILD_DIR, and runs the given commands with them.
+# supported ABI along with the ABI variable and correct BUILD_DIR,
+# and runs the given commands with them.
 #
 # If multilib support is disabled, it just runs the commands. No setup
 # is done.
 autotools-multilib_foreach_abi() {
+	local initial_dir=${BUILD_DIR:-${S}}
+
 	if use multilib; then
 		local ABI
 		for ABI in $(get_all_abis); do
 			multilib_toolchain_setup "${ABI}"
-			AUTOTOOLS_BUILD_DIR=${S%%/}-${ABI} "${@}"
+			BUILD_DIR=${initial_dir%%/}-${ABI} "${@}"
 		done
 	else
 		"${@}"
