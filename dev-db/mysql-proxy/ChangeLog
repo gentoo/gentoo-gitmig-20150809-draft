@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql-proxy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-proxy/ChangeLog,v 1.9 2012/05/03 02:33:10 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-proxy/ChangeLog,v 1.10 2012/12/01 15:50:04 neurogeek Exp $
+
+  01 Dec 2012; Jesus Rivero <neurogeek@gentoo.org> metadata.xml:
+  Added myself as maintainer
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> mysql-proxy-0.8.0.ebuild,
   mysql-proxy-0.8.0-r1.ebuild:
