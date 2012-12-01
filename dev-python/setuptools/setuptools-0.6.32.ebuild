@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/setuptools-0.6.32.ebuild,v 1.1 2012/11/30 22:09:46 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/setuptools-0.6.32.ebuild,v 1.2 2012/12/01 10:22:07 mgorny Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2,3_3} pypy{1_8,1_9} jython2_5 )
@@ -20,6 +20,9 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE=""
 
 S="${WORKDIR}/${MY_P}"
+
+# Force in-source build because build system modifies sources.
+DISTUTILS_IN_SOURCE_BUILD=1
 
 DOCS=(
 	README.txt docs/{easy_install.txt,pkg_resources.txt,setuptools.txt}
