@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/durep
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/durep/ChangeLog,v 1.15 2012/12/01 13:49:55 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/durep/ChangeLog,v 1.16 2012/12/01 14:16:29 hasufell Exp $
+
+  01 Dec 2012; Julian Ospald <hasufell@gentoo.org> durep-0.9-r3.ebuild:
+  unlock for ~arch users as well since virtual/perl-Switch is stable now
 
   01 Dec 2012; Julian Ospald <hasufell@gentoo.org> durep-0.9-r3.ebuild:
   fix dependencies wrt #436148
