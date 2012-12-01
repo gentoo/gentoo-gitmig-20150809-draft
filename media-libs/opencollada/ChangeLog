@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/opencollada
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencollada/ChangeLog,v 1.5 2012/09/29 14:11:09 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencollada/ChangeLog,v 1.6 2012/12/01 18:32:28 blueness Exp $
+
+  01 Dec 2012; Anthony G. Basile <blueness@gentoo.org>
+  opencollada-0_p864-r1.ebuild:
+  stable ppc64, bug #436574
 
   29 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
   opencollada-0_p864-r1.ebuild:
