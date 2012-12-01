@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/taglib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.133 2012/09/11 09:54:19 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.134 2012/12/01 14:33:31 kensington Exp $
+
+  01 Dec 2012; Michael Palimaka <kensington@gentoo.org>
+  +files/taglib-1.8-freebsd.patch, taglib-1.8.ebuild:
+  Fix build on FreeBSD wrt bug #445012. Thanks to Naohiro Aota
+  <naota@gentoo.org> for the patch.
 
 *taglib-1.8 (11 Sep 2012)
 
