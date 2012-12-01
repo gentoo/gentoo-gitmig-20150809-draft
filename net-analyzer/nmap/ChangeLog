@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.259 2012/12/01 17:15:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.260 2012/12/01 17:30:48 jer Exp $
+
+  01 Dec 2012; Jeroen Roovers <jer@gentoo.org> -nmap-5.21-r1.ebuild,
+  -nmap-5.35.ebuild, nmap-6.01.ebuild:
+  Remove binary from FILESDIR, step 1, by Matt Turner (bug #370907). Put -j1 on
+  the emake line.
 
   01 Dec 2012; Jeroen Roovers <jer@gentoo.org> nmap-6.01.ebuild:
   Break up long lines. Clean up.

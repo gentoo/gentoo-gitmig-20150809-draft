@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.01.ebuild,v 1.5 2012/12/01 17:15:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.01.ebuild,v 1.6 2012/12/01 17:30:48 jer Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -11,7 +11,10 @@ MY_P=${P/_beta/BETA}
 
 DESCRIPTION="A utility for network exploration or security auditing"
 HOMEPAGE="http://nmap.org/"
-SRC_URI="http://nmap.org/dist/${MY_P}.tar.bz2"
+SRC_URI="
+	http://nmap.org/dist/${MY_P}.tar.bz2
+	http://dev.gentoo.org/~jer/nmap-logo-64.png
+"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -48,6 +51,10 @@ pkg_setup() {
 	python_set_active_version 2
 }
 
+src_unpack() {
+	unpack ${MY_P}.tar.bz2
+}
+
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-4.75-include.patch
 	epatch "${FILESDIR}"/${PN}-4.75-nolua.patch
@@ -82,16 +89,14 @@ src_configure() {
 }
 
 src_install() {
-	LC_ALL=C emake \
-		-j1 \
+	LC_ALL=C emake -j1 \
 		DESTDIR="${D}" \
 		STRIP=: \
 		nmapdatadir="${EPREFIX}"/usr/share/nmap \
 		install
 	if use nmap-update;then
-		LC_ALL=C emake \
+		LC_ALL=C emake -j1 \
 			-C nmap-update \
-			-j1 \
 			DESTDIR="${D}" \
 			STRIP=: \
 			nmapdatadir="${EPREFIX}"/usr/share/nmap \
@@ -100,5 +105,5 @@ src_install() {
 
 	dodoc CHANGELOG HACKING docs/README docs/*.txt
 
-	use gtk && doicon "${FILESDIR}/nmap-logo-64.png"
+	use gtk && doicon "${DISTDIR}/nmap-logo-64.png"
 }
