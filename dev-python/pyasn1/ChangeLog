@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyasn1
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1/ChangeLog,v 1.42 2012/11/20 20:54:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1/ChangeLog,v 1.43 2012/12/01 19:53:51 armin76 Exp $
+
+  01 Dec 2012; Raúl Porcel <armin76@gentoo.org> pyasn1-0.1.4.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #441290
 
   20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> pyasn1-0.1.4.ebuild:
   Stable for x86, wrt bug #441290
