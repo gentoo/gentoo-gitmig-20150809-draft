@@ -1,12 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ramspeed/ramspeed-3.5.0-r1.ebuild,v 1.2 2012/12/01 17:57:38 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ramspeed/ramspeed-3.5.0-r1.ebuild,v 1.3 2012/12/01 18:20:27 blueness Exp $
 
-EAPI=2
+EAPI="4"
 inherit flag-o-matic toolchain-funcs
 
 MY_PN="ramsmp"
-MY_P=${MY_PN}-${PV}
+MY_P="${MY_PN}-${PV}"
+S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="Benchmarking for memory and cache"
 HOMEPAGE="http://www.alasir.com/software/ramspeed/"
@@ -17,19 +18,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="sse pic"
 
-src_prepare(){
-	tc-export CC AS
-
-	# Deal with changed package name and file name
-	mv ${MY_P} ${P}
-}
-
 src_configure(){
 	local obj
 	local arch_prefix=./
 
 	use x86 && arch_prefix=i386/
 	use amd64 && arch_prefix=amd64/
+
+	tc-export CC AS
 
 	#fix the stack
 	append-ldflags -Wl,-z,noexecstack
@@ -57,11 +53,11 @@ src_configure(){
 		obj=( "${obj[@]}" ${arch_prefix}{mmxmark,mmxmem,ssemark,ssemem}.o )
 	fi
 
-	echo "ramsmp: ${obj[@]}" > Makefile || die
+	echo "ramsmp: ${obj[@]}" > Makefile
 }
 
 src_install(){
-	dobin ramsmp || die
-	dosym /usr/bin/ramsmp /usr/bin/ramspeed || die
-	dodoc HISTORY README || die
+	dobin ramsmp
+	dosym /usr/bin/ramsmp /usr/bin/ramspeed
+	dodoc HISTORY README
 }
