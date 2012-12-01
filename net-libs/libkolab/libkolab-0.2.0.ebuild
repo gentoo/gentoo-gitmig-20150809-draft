@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libkolab/libkolab-0.2.0.ebuild,v 1.3 2012/11/30 12:54:09 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkolab/libkolab-0.2.0.ebuild,v 1.4 2012/12/01 14:41:53 kensington Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ IUSE="test"
 PATCHES=( "${FILESDIR}/libkolab-fix-include.patch" )
 
 DEPEND="
-	$(add_kdebase_dep kdepimlibs)
+	$(add_kdebase_dep kdepimlibs 'semantic-desktop')
 	>=net-libs/libkolabxml-0.4.0
 "
 RDEPEND="${DEPEND}"

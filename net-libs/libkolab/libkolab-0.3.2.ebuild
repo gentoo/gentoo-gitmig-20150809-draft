@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libkolab/libkolab-0.3.2.ebuild,v 1.6 2012/11/30 15:10:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkolab/libkolab-0.3.2.ebuild,v 1.7 2012/12/01 14:41:53 kensington Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ IUSE="php python test"
 RESTRICT="test"
 
 DEPEND="
-	$(add_kdebase_dep kdepimlibs)
+	$(add_kdebase_dep kdepimlibs 'semantic-desktop')
 	dev-lang/swig
 	>=net-libs/libkolabxml-0.7.0
 	php? ( dev-lang/php )
