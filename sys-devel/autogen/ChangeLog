@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autogen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.89 2012/11/02 17:33:19 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.90 2012/12/01 18:38:19 armin76 Exp $
+
+  01 Dec 2012; Raúl Porcel <armin76@gentoo.org> autogen-5.15.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc/x86 stable wrt #439162
 
   02 Nov 2012; Fabian Groffen <grobian@gentoo.org> autogen-5.15.ebuild:
   Marked ~x64-macos
