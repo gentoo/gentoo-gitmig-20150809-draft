@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-10.10.0-r1.ebuild,v 1.1 2012/11/21 14:07:09 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-11.0.1-r2.ebuild,v 1.1 2012/12/01 22:07:58 chainsaw Exp $
 
 EAPI=4
 inherit autotools base eutils linux-info multilib
@@ -10,7 +10,7 @@ MY_P="${PN}-${PV/_/-}"
 DESCRIPTION="Asterisk: A Modular Open Source PBX System"
 HOMEPAGE="http://www.asterisk.org/"
 SRC_URI="http://downloads.asterisk.org/pub/telephony/asterisk/releases/${MY_P}.tar.gz
-	 mirror://gentoo/gentoo-asterisk-patchset-2.8.tar.bz2"
+	 mirror://gentoo/gentoo-asterisk-patchset-3.1.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -20,7 +20,7 @@ IUSE_VOICEMAIL_STORAGE="
 	voicemail_storage_odbc
 	voicemail_storage_imap
 "
-IUSE="${IUSE_VOICEMAIL_STORAGE} ais alsa bluetooth calendar +caps curl dahdi debug doc freetds gtalk http iconv jabber jingle ldap lua mysql newt +samples odbc osplookup oss portaudio postgres radius selinux snmp span speex srtp static syslog vorbis"
+IUSE="${IUSE_VOICEMAIL_STORAGE} alsa bluetooth calendar +caps cluster curl dahdi debug doc freetds gtalk http iconv ilbc jabber ldap libedit lua mysql newt +samples odbc osplookup oss portaudio postgres radius selinux snmp span speex srtp static syslog vorbis"
 IUSE_EXPAND="VOICEMAIL_STORAGE"
 REQUIRED_USE="gtalk? ( jabber )
 	^^ ( ${IUSE_VOICEMAIL_STORAGE/+/} )
@@ -36,13 +36,13 @@ RDEPEND="dev-db/sqlite:3
 	dev-libs/openssl
 	sys-libs/ncurses
 	sys-libs/zlib
-	ais? ( sys-cluster/openais )
 	alsa? ( media-libs/alsa-lib )
 	bluetooth? ( net-wireless/bluez )
 	calendar? ( net-libs/neon
 		 dev-libs/libical
 		 dev-libs/iksemel )
 	caps? ( sys-libs/libcap )
+	cluster? ( sys-cluster/corosync )
 	curl? ( net-misc/curl )
 	dahdi? ( >=net-libs/libpri-1.4.12_beta2
 		net-misc/dahdi-tools )
@@ -50,9 +50,10 @@ RDEPEND="dev-db/sqlite:3
 	gtalk? ( dev-libs/iksemel )
 	http? ( dev-libs/gmime:2.4 )
 	iconv? ( virtual/libiconv )
+	ilbc? ( dev-libs/ilbc-rfc3951 )
 	jabber? ( dev-libs/iksemel )
-	jingle? ( dev-libs/iksemel )
 	ldap? ( net-nds/openldap )
+	libedit? ( dev-libs/libedit )
 	lua? ( dev-lang/lua )
 	mysql? ( virtual/mysql )
 	newt? ( dev-libs/newt )
@@ -159,23 +160,23 @@ src_configure() {
 		done
 	}
 
-	use_select ais			res_ais
 	use_select alsa			chan_alsa
-	use_select bluetooth	chan_mobile
+	use_select bluetooth		chan_mobile
 	use_select calendar		res_calendar res_calendar_{caldav,ews,exchange,icalendar}
+	use_select cluster		res_corosync
 	use_select curl			func_curl res_config_curl res_curl
 	use_select dahdi		app_dahdibarge app_dahdiras chan_dahdi codec_dahdi res_timing_dahdi
 	use_select freetds		{cdr,cel}_tds
-	use_select gtalk		chan_gtalk
+	use_select gtalk		chan_motif
 	use_select http			res_http_post
 	use_select iconv		func_iconv
-	use_select jabber		res_jabber
-	use_select jingle		chan_jingle
+	use_select jabber		res_xmpp
+	use_select ilbc                 codec_ilbc format_ilbc
 	use_select ldap			res_config_ldap
 	use_select lua			pbx_lua
 	use_select mysql		app_mysql cdr_mysql res_config_mysql
 	use_select odbc			cdr_adaptive_odbc res_config_odbc {cdr,cel,res,func}_odbc
-	use_select osplookup	app_osplookup
+	use_select osplookup		app_osplookup
 	use_select oss			chan_oss
 	use_select postgres		{cdr,cel}_pgsql res_config_pgsql
 	use_select radius		{cdr,cel}_radius
@@ -234,7 +235,7 @@ src_install() {
 	diropts -m 0750 -o asterisk -g asterisk
 	keepdir /var/log/asterisk/{cdr-csv,cdr-custom}
 
-	newinitd "${FILESDIR}"/1.8.0/asterisk.initd3 asterisk
+	newinitd "${FILESDIR}"/1.8.0/asterisk.initd4 asterisk
 	newconfd "${FILESDIR}"/1.8.0/asterisk.confd asterisk
 
 	# install the upgrade documentation
@@ -278,9 +279,8 @@ pkg_postinst() {
 	elog "#gentoo-voip @ irc.freenode.net"
 	echo
 	echo
-	elog "1.6 -> 1.8 changes that you may care about:"
-	elog "http://svn.asterisk.org/svn/${PN}/tags/${PV}/UPGRADE.txt"
-	elog "or: bzless ${ROOT}usr/share/doc/${PF}/UPGRADE.txt.bz2"
+	elog "Please read the Asterisk 11 upgrade document:"
+	elog "https://wiki.asterisk.org/wiki/display/AST/Upgrading+to+Asterisk+11"
 }
 
 pkg_config() {

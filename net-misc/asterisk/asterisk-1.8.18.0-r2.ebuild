@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.8.18.0-r1.ebuild,v 1.1 2012/11/21 16:08:54 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.8.18.0-r2.ebuild,v 1.1 2012/12/01 22:07:58 chainsaw Exp $
 
 EAPI=4
 inherit autotools base eutils linux-info multilib
@@ -235,7 +235,7 @@ src_install() {
 	diropts -m 0750 -o asterisk -g asterisk
 	keepdir /var/log/asterisk/{cdr-csv,cdr-custom}
 
-	newinitd "${FILESDIR}"/1.8.0/asterisk.initd3 asterisk
+	newinitd "${FILESDIR}"/1.8.0/asterisk.initd4 asterisk
 	newconfd "${FILESDIR}"/1.8.0/asterisk.confd asterisk
 
 	# install the upgrade documentation
