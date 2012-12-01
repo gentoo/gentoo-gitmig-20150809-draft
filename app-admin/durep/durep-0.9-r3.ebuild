@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/durep/durep-0.9-r3.ebuild,v 1.4 2012/06/08 11:42:36 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/durep/durep-0.9-r3.ebuild,v 1.5 2012/12/01 13:49:55 hasufell Exp $
 
 EAPI=4
 inherit eutils
@@ -14,13 +14,14 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND="dev-lang/perl
-	dev-perl/MLDBM"
+DEPEND="=dev-lang/perl-5.12*"
+RDEPEND="${DEPEND}
+	dev-perl/MLDBM
+	virtual/perl-Getopt-Long
+	virtual/perl-Term-ANSIColor"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-gigabyte.patch
-	epatch "${FILESDIR}"/${P}-color-output.patch
-	epatch "${FILESDIR}"/${P}-dirhandle.patch
+	epatch "${FILESDIR}"/${P}-{gigabyte,color-output,dirhandle}.patch
 }
 
 src_install() {
