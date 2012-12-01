@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.2.4.ebuild,v 1.2 2012/11/17 11:54:03 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.2.4.ebuild,v 1.3 2012/12/01 11:28:40 polynomial-c Exp $
 
 EAPI=2
 
@@ -34,7 +34,6 @@ DEPEND="${RDEPEND}
 		>=dev-util/kbuild-0.1.9998_pre20120806
 		>=dev-lang/yasm-0.6.2
 		sys-devel/bin86
-		sys-devel/dev86
 		sys-libs/pam
 		sys-power/iasl
 		X? ( x11-proto/renderproto )
