@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/denyhosts
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/ChangeLog,v 1.55 2012/11/20 20:40:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/ChangeLog,v 1.56 2012/12/01 19:41:24 armin76 Exp $
+
+  01 Dec 2012; Raúl Porcel <armin76@gentoo.org> denyhosts-2.6-r6.ebuild:
+  alpha/sparc stable wrt #441044
 
   20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> denyhosts-2.6-r6.ebuild:
   Stable for x86, wrt bug #441044

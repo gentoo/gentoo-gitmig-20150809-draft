@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/denyhosts-2.6-r6.ebuild,v 1.6 2012/11/20 20:40:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/denyhosts-2.6-r6.ebuild,v 1.7 2012/12/01 19:41:24 armin76 Exp $
 
 EAPI=4
 SUPPORT_PYTHON_ABIS="1"
@@ -18,7 +18,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ppc ~sparc x86"
+KEYWORDS="alpha amd64 arm hppa ppc sparc x86"
 IUSE=""
 
 DEPEND=""
