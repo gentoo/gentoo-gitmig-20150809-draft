@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.495 2012/11/26 13:08:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.496 2012/12/01 11:18:24 eva Exp $
 
 # Keep them sorted
 
@@ -145,6 +145,7 @@ imap - Adds support for IMAP (Internet Mail Application Protocol)
 imlib - Adds support for imlib, an image loading and rendering library
 infiniband - Enable Infiniband RDMA transport support
 inifile - Adds dbm support for .ini files
+introspection - Adds support for GObject based introspection
 iodbc - Adds support for iODBC library
 ios - Enable support for Apple's iDevice with iOS operating system (iPad, iPhone, iPod, etc)
 ipod - Enable support for iPod device access
