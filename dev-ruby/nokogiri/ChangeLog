@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/nokogiri
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.83 2012/11/09 00:07:40 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.84 2012/12/01 18:56:35 armin76 Exp $
+
+  01 Dec 2012; Raúl Porcel <armin76@gentoo.org> nokogiri-1.5.5.ebuild:
+  alpha/ia64/sparc/x86 stable wrt #440094
 
   09 Nov 2012; Anthony G. Basile <blueness@gentoo.org> nokogiri-1.5.5.ebuild:
   stable ppc ppc64, bug #440094
