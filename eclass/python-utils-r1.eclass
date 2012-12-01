@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.5 2012/11/30 11:43:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.6 2012/12/01 22:10:34 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -322,6 +322,8 @@ python_optimize() {
 				set -- "${D}${f}" "${@}"
 			fi
 		done < <("${PYTHON}" -c 'import sys; print("\0".join(sys.path))')
+
+		debug-print "${FUNCNAME}: using sys.path: ${*/%/;}"
 	fi
 
 	local d
