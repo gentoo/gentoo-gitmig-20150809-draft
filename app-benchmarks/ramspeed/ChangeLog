@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/ramspeed
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ramspeed/ChangeLog,v 1.6 2012/12/01 17:51:26 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ramspeed/ChangeLog,v 1.7 2012/12/01 17:57:38 blueness Exp $
+
+  01 Dec 2012; Anthony G. Basile <blueness@gentoo.org> ramspeed-3.5.0-r1.ebuild:
+  Fix issue with the working directory
 
 *ramspeed-3.5.0-r1 (01 Dec 2012)
 

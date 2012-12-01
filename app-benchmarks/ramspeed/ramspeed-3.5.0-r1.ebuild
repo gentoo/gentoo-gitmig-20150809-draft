@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ramspeed/ramspeed-3.5.0-r1.ebuild,v 1.1 2012/12/01 17:51:26 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ramspeed/ramspeed-3.5.0-r1.ebuild,v 1.2 2012/12/01 17:57:38 blueness Exp $
 
-EAPI="4"
+EAPI=2
 inherit flag-o-matic toolchain-funcs
 
 MY_PN="ramsmp"
@@ -57,11 +57,11 @@ src_configure(){
 		obj=( "${obj[@]}" ${arch_prefix}{mmxmark,mmxmem,ssemark,ssemem}.o )
 	fi
 
-	echo "ramsmp: ${obj[@]}" > Makefile
+	echo "ramsmp: ${obj[@]}" > Makefile || die
 }
 
 src_install(){
-	dobin ramsmp
-	dosym /usr/bin/ramsmp /usr/bin/ramspeed
-	dodoc HISTORY README
+	dobin ramsmp || die
+	dosym /usr/bin/ramsmp /usr/bin/ramspeed || die
+	dodoc HISTORY README || die
 }
