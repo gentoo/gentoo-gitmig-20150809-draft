@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libmnl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmnl/ChangeLog,v 1.14 2012/10/26 02:06:59 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmnl/ChangeLog,v 1.15 2012/12/01 17:57:11 armin76 Exp $
+
+  01 Dec 2012; Raúl Porcel <armin76@gentoo.org> libmnl-1.0.3.ebuild:
+  Add ~alpha/~ia64/~sparc wrt #439394, #432974
 
   26 Oct 2012; Anthony G. Basile <blueness@gentoo.org> libmnl-1.0.3.ebuild:
   keyword ~arm, bug #439394
