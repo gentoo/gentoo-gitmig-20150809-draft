@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/passook/passook-1.0.0.ebuild,v 1.25 2012/10/01 20:08:36 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/passook/passook-1.0.0.ebuild,v 1.26 2012/12/01 19:41:55 armin76 Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://mackers.com/misc/scripts/passook/"
 
 LICENSE="GPL-3+"
 SLOT="0"
-KEYWORDS="amd64 hppa ppc ppc64 sparc x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="amd64 hppa ppc ppc64 x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
 DEPEND="dev-lang/perl
