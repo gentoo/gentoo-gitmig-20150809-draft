@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.3.4.ebuild,v 1.1 2012/12/01 12:52:19 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.3.4.ebuild,v 1.2 2012/12/01 12:57:22 idella4 Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -60,7 +60,7 @@ src_compile() {
 	if use doc; then
 		einfo "Generation of documentation"
 		pushd docs > /dev/null
-		emake html || die "Generation of documentation failed"
+		emake html
 		popd > /dev/null
 	fi
 }
@@ -77,15 +77,15 @@ src_test() {
 src_install() {
 	distutils_src_install
 
-	newbashcomp extras/django_bash_completion ${PN} || die
+	newbashcomp extras/django_bash_completion ${PN}
 
 	if use doc; then
 		rm -fr docs/_build/html/_sources
-		dohtml -A txt -r docs/_build/html/* || die "dohtml failed"
+		dohtml -A txt -r docs/_build/html/*
 	fi
 
 	insinto "${MY_HTDOCSDIR#${EPREFIX}}"
-	doins -r django/contrib/admin/media/* || die "doins failed"
+	doins -r django/contrib/admin/media/*
 
 	webapp_src_install
 }
