@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wireless-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.145 2012/11/25 01:23:25 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.146 2012/12/01 21:36:18 ago Exp $
+
+  01 Dec 2012; <ago@gentoo.org> wireless-tools-30_pre9.ebuild:
+  Stable for amd64, wrt bug #445292
 
   25 Nov 2012; Rick Farina <zerochaos@gentoo.org> metadata.xml:
   remove anarchy as maintainer per his wishes
