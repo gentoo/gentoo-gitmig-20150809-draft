@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wiki/emacs-wiki-2.72-r1.ebuild,v 1.3 2008/08/28 08:12:34 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wiki/emacs-wiki-2.72-r1.ebuild,v 1.4 2012/12/01 19:46:12 armin76 Exp $
 
 NEED_EMACS=22
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.mwolson.org/static/dist/emacs-wiki/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="app-emacs/htmlize

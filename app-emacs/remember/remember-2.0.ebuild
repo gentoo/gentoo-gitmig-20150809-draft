@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/remember/remember-2.0.ebuild,v 1.2 2009/08/07 18:20:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/remember/remember-2.0.ebuild,v 1.3 2012/12/01 19:43:59 armin76 Exp $
 
 inherit elisp eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.gna.org/remember-el/${P}.tar.gz"
 
 LICENSE="GPL-3 FDL-1.2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="bbdb planner"
 # tests require bibl-mode, restrict for now
 RESTRICT="test"

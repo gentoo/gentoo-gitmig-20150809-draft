@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/emacs-wiki
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wiki/ChangeLog,v 1.20 2008/08/28 08:12:34 ulm Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wiki/ChangeLog,v 1.21 2012/12/01 19:46:12 armin76 Exp $
+
+  01 Dec 2012; Raúl Porcel <armin76@gentoo.org> emacs-wiki-2.72-r1.ebuild:
+  Drop sparc keywords
 
   28 Aug 2008; Ulrich Mueller <ulm@gentoo.org> emacs-wiki-2.72-r1.ebuild:
   Use elisp-compile instead of elisp-comp, bug 235442.
