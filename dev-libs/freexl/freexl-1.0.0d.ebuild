@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/freexl/freexl-1.0.0b.ebuild,v 1.3 2012/05/25 18:49:29 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/freexl/freexl-1.0.0d.ebuild,v 1.1 2012/12/01 22:36:07 scarabeus Exp $
 
-EAPI=4
+EAPI=5
+
+inherit eutils
 
 DESCRIPTION="Simple XLS data extraction library"
 HOMEPAGE="http://www.gaia-gis.it/gaia-sins/"
@@ -24,5 +26,5 @@ src_configure() {
 src_install() {
 	default
 
-	find "${ED}" -name '*.la' -exec rm -f {} +
+	prune_libtool_files --all
 }
