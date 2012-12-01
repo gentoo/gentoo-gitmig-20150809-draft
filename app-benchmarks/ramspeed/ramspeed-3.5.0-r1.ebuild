@@ -1,21 +1,27 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ramspeed/ramspeed-2.6.0.ebuild,v 1.4 2012/12/01 17:51:26 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ramspeed/ramspeed-3.5.0-r1.ebuild,v 1.1 2012/12/01 17:51:26 blueness Exp $
 
-EAPI=2
+EAPI="4"
 inherit flag-o-matic toolchain-funcs
+
+MY_PN="ramsmp"
+MY_P=${MY_PN}-${PV}
 
 DESCRIPTION="Benchmarking for memory and cache"
 HOMEPAGE="http://www.alasir.com/software/ramspeed/"
-SRC_URI="http://www.alasir.com/software/${PN}/${P}.tar.gz"
+SRC_URI="http://www.alasir.com/software/${PN}/${MY_P}.tar.gz"
 
 LICENSE="Alasir"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="sse pic"
 
 src_prepare(){
 	tc-export CC AS
+
+	# Deal with changed package name and file name
+	mv ${MY_P} ${P}
 }
 
 src_configure(){
@@ -27,11 +33,18 @@ src_configure(){
 
 	#fix the stack
 	append-ldflags -Wl,-z,noexecstack
-	obj=( ramspeed.o ${arch_prefix}{fltmark,fltmem,intmark,intmem}.o )
+	obj=( ramsmp.o ${arch_prefix}{fltmark,fltmem,intmark,intmem}.o )
 
-	#avoid pic unfriendly assembly, bug #442778
 	if use pic; then
 		append-ldflags -nopie
+	fi
+
+	if use amd64; then
+		sed -i \
+			-e 's/call.*free/call\tfree@PLT/' \
+			-e 's/call.*gettimeofday/call\tgettimeofday@PLT/' \
+			-e 's/call.*malloc/call\tmalloc@PLT/' \
+			${arch_prefix}/*.s
 	fi
 
 	if use x86; then
@@ -44,10 +57,11 @@ src_configure(){
 		obj=( "${obj[@]}" ${arch_prefix}{mmxmark,mmxmem,ssemark,ssemem}.o )
 	fi
 
-	echo "ramspeed: ${obj[@]}" > Makefile || die
+	echo "ramsmp: ${obj[@]}" > Makefile
 }
 
 src_install(){
-	dobin ${PN} || die
-	dodoc HISTORY README || die
+	dobin ramsmp
+	dosym /usr/bin/ramsmp /usr/bin/ramspeed
+	dodoc HISTORY README
 }

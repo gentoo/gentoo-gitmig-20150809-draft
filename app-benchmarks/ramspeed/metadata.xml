@@ -7,5 +7,7 @@
 		</maintainer>
 	<longdescription lang="en">
 	</longdescription>
+	<use>
+		<flag name='pic'>Force shared libraries to be built as PIC (this is slower)</flag>
+	</use>
 </pkgmetadata>
-

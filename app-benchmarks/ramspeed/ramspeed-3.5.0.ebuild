@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ramspeed/ramspeed-3.5.0.ebuild,v 1.1 2011/10/22 18:59:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ramspeed/ramspeed-3.5.0.ebuild,v 1.2 2012/12/01 17:51:26 blueness Exp $
 
 EAPI=2
 inherit flag-o-matic toolchain-funcs
@@ -15,7 +15,7 @@ SRC_URI="http://www.alasir.com/software/${PN}/${MY_P}.tar.gz"
 LICENSE="Alasir"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="sse"
+IUSE="sse pic"
 
 src_prepare(){
 	tc-export CC AS
@@ -34,6 +34,11 @@ src_configure(){
 	#fix the stack
 	append-ldflags -Wl,-z,noexecstack
 	obj=( ramsmp.o ${arch_prefix}{fltmark,fltmem,intmark,intmem}.o )
+
+	#avoid pic unfriendly assembly, bug #442778
+	if use pic; then
+		append-ldflags -nopie
+	fi
 
 	if use x86; then
 		obj=( "${obj[@]}" ${arch_prefix}{cpuinfo/cpuinfo_main,cpuinfo/cpuinfo_ext}.o )
