@@ -1,10 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5.4-r5.ebuild,v 1.2 2012/11/30 23:57:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5.4-r5.ebuild,v 1.3 2012/12/01 09:56:06 mgorny Exp $
 
 EAPI="1"
 
-inherit autotools eutils flag-o-matic multilib pax-utils python-utils-r1 toolchain-funcs
+# Bootstrapping Python 2 requires Python 2.
+PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+
+inherit autotools eutils flag-o-matic multilib pax-utils python-any-r1 toolchain-funcs
 
 MY_P="Python-${PV}"
 
@@ -45,6 +48,7 @@ RDEPEND=">=sys-libs/zlib-1.1.3
 	)
 	doc? ( dev-python/python-docs:${SLOT} )"
 DEPEND="${RDEPEND}
+	${PYTHON_DEPS}
 	virtual/pkgconfig"
 RDEPEND+=" !build? ( app-misc/mime-types )"
 PDEPEND="app-admin/eselect-python
@@ -59,6 +63,8 @@ pkg_setup() {
 		ewarn "removed in Python 3. A maintained alternative of 'bsddb3' module"
 		ewarn "is provided by dev-python/bsddb3."
 	fi
+
+	python-any-r1_pkg_setup
 }
 
 src_unpack() {
