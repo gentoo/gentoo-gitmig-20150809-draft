@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/boost-m4/boost-m4-0.3_pre121130.ebuild,v 1.1 2012/11/30 09:35:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/boost-m4/boost-m4-0.3_pre121130.ebuild,v 1.2 2012/12/01 19:04:00 armin76 Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="http://dev.gentoo.org/~jlec/distfiles/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 # boost.m4 has a buildsystem, but the distributer didn't use make dist

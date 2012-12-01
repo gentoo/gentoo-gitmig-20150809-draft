@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/boost-m4
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/boost-m4/ChangeLog,v 1.5 2012/11/30 09:35:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/boost-m4/ChangeLog,v 1.6 2012/12/01 19:04:00 armin76 Exp $
+
+  01 Dec 2012; Raúl Porcel <armin76@gentoo.org> boost-m4-0.2.ebuild,
+  boost-m4-0.3_pre121130.ebuild:
+  Add ~alpha/~ia64/~sparc wrt #442470
 
 *boost-m4-0.3_pre121130 (30 Nov 2012)
 
