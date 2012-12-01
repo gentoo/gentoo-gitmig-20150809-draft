@@ -52,6 +52,7 @@ quvi
 upnp
 systemd
 webm
+fdk
 
 # Stuff we don't want
 antlr
