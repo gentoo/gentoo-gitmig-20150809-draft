@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/quassel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.142 2012/09/02 18:16:13 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.143 2012/12/01 14:30:21 blueness Exp $
+
+  01 Dec 2012; Anthony G. Basile <blueness@gentoo.org> quassel-0.8.0.ebuild:
+  keyword ~ppc, thanks peratu, bug #445480
 
   02 Sep 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   quassel-0.8.0.ebuild:
