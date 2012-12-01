@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/ltrace
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.55 2012/11/30 22:58:33 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.56 2012/12/01 13:01:33 radhermit Exp $
+
+*ltrace-0.7.1-r1 (01 Dec 2012)
+
+  01 Dec 2012; Tim Harder <radhermit@gentoo.org> +ltrace-0.7.1-r1.ebuild,
+  +files/ltrace-0.7.1-libunwind-pkgconfig.patch, metadata.xml:
+  Revision bump. Add debug and unwind use flags. Use pkg-config to detect
+  unwind libraries (fixes bug #445438).
 
 *ltrace-0.7.1 (30 Nov 2012)
 
