@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/tesseract-3.01.ebuild,v 1.5 2012/10/26 01:22:49 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/tesseract-3.01.ebuild,v 1.6 2012/12/01 02:37:14 tomka Exp $
 
 EAPI=4
 
@@ -95,7 +95,7 @@ src_install() {
 	fi
 
 	if use doc; then
-		dohtml doc/html/*
+		dohtml -r doc/html/*
 	fi
 
 	# install language files
