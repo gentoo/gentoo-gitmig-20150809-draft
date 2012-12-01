@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/knocker/knocker-0.7.1-r2.ebuild,v 1.5 2012/11/20 20:10:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/knocker/knocker-0.7.1-r2.ebuild,v 1.6 2012/12/01 19:35:47 armin76 Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://knocker.sourceforge.net"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ppc ~sparc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND=""
