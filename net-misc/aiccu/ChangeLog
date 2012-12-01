@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/aiccu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/ChangeLog,v 1.34 2012/08/01 13:32:14 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/ChangeLog,v 1.35 2012/12/01 20:52:08 xmw Exp $
+
+  01 Dec 2012; Michael Weber <xmw@gentoo.org> metadata.xml:
+  Removing Maciej from metadata.xml
 
   01 Aug 2012; Michael Weber <xmw@gentoo.org>
   +files/aiccu-2007.01.15-uclibc.patch, aiccu-2007.01.15-r2.ebuild:
