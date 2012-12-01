@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeutils-meta
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils-meta/ChangeLog,v 1.233 2012/11/30 15:49:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils-meta/ChangeLog,v 1.234 2012/12/01 15:16:00 kensington Exp $
+
+  01 Dec 2012; Michael Palimaka <kensington@gentoo.org>
+  kdeutils-meta-4.8.5.ebuild, kdeutils-meta-4.9.3.ebuild:
+  Add lirc USE flag making kremotecontrol optional, wrt bug #445150.
 
   30 Nov 2012; <ago@gentoo.org> kdeutils-meta-4.9.3.ebuild:
   Stable for ppc, wrt bug #442394
@@ -991,4 +995,3 @@
   +kdeutils-meta-3.4.0_beta1.ebuild:
   Adding the split ebuilds to portage. For KDE 3.4, we've created separate
   ebuilds for all the KDE apps.
-
