@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/bicyclerepair
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bicyclerepair/ChangeLog,v 1.29 2012/02/24 19:35:42 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bicyclerepair/ChangeLog,v 1.30 2012/12/01 01:56:17 radhermit Exp $
+
+  01 Dec 2012; Tim Harder <radhermit@gentoo.org> bicyclerepair-0.9-r2.ebuild:
+  Fix LICENSE (bug #445410 by ulm).
 
   24 Feb 2012; Marien Zwart <marienz@gentoo.org> bicyclerepair-0.9-r2.ebuild:
   Unrestrict pypy, see bug #403837. Thanks to Arfrever on IRC for reporting.
