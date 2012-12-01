@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.1-r2.ebuild,v 1.5 2012/11/18 11:12:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.1-r2.ebuild,v 1.6 2012/12/01 22:12:50 blueness Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -12,7 +12,7 @@ SRC_URI="http://llvm.org/releases/${PV}/${P}.src.tar.gz"
 
 LICENSE="UoI-NCSA"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ppc x86 ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos"
+KEYWORDS="amd64 ~arm ppc x86 ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos"
 IUSE="debug gold +libffi multitarget ocaml test udis86 vim-syntax"
 
 DEPEND="dev-lang/perl
