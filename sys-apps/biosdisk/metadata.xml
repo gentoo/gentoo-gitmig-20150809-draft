@@ -2,6 +2,12 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-  <email>maintainer-needed@gentoo.org</email>
+	<email>mattsch@gmail.com</email>
+	<name>Matthew Schultz</name>
+	<description>Assign bugs to him</description>
+</maintainer>
+<maintainer>
+	<email>pacho@gentoo.org</email>
+	<description>Proxy maintainer, CC him in bugs</description>
 </maintainer>
 </pkgmetadata>
