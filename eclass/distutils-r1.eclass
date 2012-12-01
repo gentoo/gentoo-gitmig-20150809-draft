@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.22 2012/12/01 10:52:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.23 2012/12/01 10:53:40 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -268,8 +268,11 @@ _distutils-r1_rename_scripts() {
 			debug-print "${FUNCNAME}: matching shebang: $(head -n 1 "${f}")"
 
 			local newf=${f}-${EPYTHON}
-			debug-print "${FUNCNAME}: renamed to ${newf#${D}/}"
+			debug-print "${FUNCNAME}: renaming to ${newf#${D}/}"
 			mv "${f}" "${newf}" || die
+
+			debug-print "${FUNCNAME}: installing wrapper at ${f#${D}/}"
+			_python_ln_rel "${path}"/usr/bin/python-exec "${f}" || die
 		fi
 	done < <(find "${path}" -type f -executable -print0)
 }
@@ -309,9 +312,7 @@ distutils-r1_python_install() {
 
 # @FUNCTION: distutils-r1_python_install_all
 # @DESCRIPTION:
-# The default python_install_all(). It symlinks wrappers
-# for the implementation-suffixed executables and installs
-# documentation.
+# The default python_install_all(). It installs the documentation.
 distutils-r1_python_install_all() {
 	debug-print-function ${FUNCNAME} "${@}"
 
@@ -331,20 +332,6 @@ distutils-r1_python_install_all() {
 	if declare -p HTML_DOCS &>/dev/null; then
 		dohtml -r "${HTML_DOCS[@]}" || die "dohtml failed"
 	fi
-
-	# note: keep in sync with ...rename_scripts()
-	# also, we assume that each script is installed for all impls
-	local EPYTHON
-	python_export_best EPYTHON
-
-	local f
-	while IFS= read -r -d '' f; do
-		debug-print "${FUNCNAME}: found executable at ${f#${D}/}"
-
-		local wrapf=${f%-${EPYTHON}}
-
-		_python_ln_rel "${ED}"/usr/bin/python-exec "${wrapf}" || die
-	done < <(find "${D}" -type f -executable -name "*-${EPYTHON}" -print0)
 }
 
 # @FUNCTION: distutils-r1_run_phase
