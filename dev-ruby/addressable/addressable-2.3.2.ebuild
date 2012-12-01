@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/addressable/addressable-2.3.2.ebuild,v 1.1 2012/07/27 17:38:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/addressable/addressable-2.3.2.ebuild,v 1.2 2012/12/01 14:41:23 graaff Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19 jruby ree18"
@@ -18,7 +18,7 @@ inherit ruby-fakegem
 DESCRIPTION="A replacement for the URI implementation that is part of Ruby's standard library."
 HOMEPAGE="http://addressable.rubyforge.org/"
 
-LICENSE="as-is"
+LICENSE="Apache-2.0"
 
 SLOT="0"
 KEYWORDS="~amd64 ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
