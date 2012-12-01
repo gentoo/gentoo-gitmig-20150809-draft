@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/fuse
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.167 2012/11/07 04:20:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.168 2012/12/01 13:43:42 radhermit Exp $
+
+*fuse-2.9.2 (01 Dec 2012)
+
+  01 Dec 2012; Tim Harder <radhermit@gentoo.org> +fuse-2.9.2.ebuild:
+  Version bump (bug #439308).
 
   07 Nov 2012; Jeroen Roovers <jer@gentoo.org> fuse-2.9.1-r1.ebuild:
   Stable for HPPA (bug #437568).
