@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/apsw-3.7.13.1.ebuild,v 1.3 2012/09/07 22:04:11 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/apsw-3.7.13.1.ebuild,v 1.4 2012/12/01 01:53:52 radhermit Exp $
 
 EAPI="4"
 SUPPORT_PYTHON_ABIS="1"
@@ -14,7 +14,7 @@ DESCRIPTION="APSW - Another Python SQLite Wrapper"
 HOMEPAGE="http://code.google.com/p/apsw/"
 SRC_URI="http://apsw.googlecode.com/files/${PN}-${MY_PV}.zip"
 
-LICENSE="as-is"
+LICENSE="ZLIB"
 SLOT="0"
 KEYWORDS="amd64 ~ppc64 x86"
 IUSE="doc"
