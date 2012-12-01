@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.23 2012/12/01 10:53:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.24 2012/12/01 10:54:50 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -57,7 +57,7 @@ esac
 
 if [[ ! ${_DISTUTILS_R1} ]]; then
 
-inherit eutils python-r1
+inherit eutils multiprocessing python-r1
 
 fi
 
@@ -130,6 +130,29 @@ DEPEND=${PYTHON_DEPS}
 # 'build --build-base ${BUILD_DIR}' to enforce keeping & using built
 # files in the specific root.
 
+# @ECLASS-VARIABLE: DISTUTILS_NO_PARALLEL_BUILD
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# If set to a non-null value, the parallel build feature will
+# be disabled.
+#
+# When parallel builds are used, the implementation-specific sub-phases
+# for selected Python implementation will be run in parallel. This will
+# increase build efficiency with distutils which does not do parallel
+# builds.
+#
+# This variable can be used to disable the afore-mentioned feature
+# in case it causes issues with the package.
+
+#
+# If in-source builds are used, the eclass will create a copy of package
+# sources for each Python implementation in python_prepare_all(),
+# and work on that copy afterwards.
+#
+# If out-of-source builds are used, the eclass will instead work
+# on the sources directly, prepending setup.py arguments with
+# 'build --build-base ${BUILD_DIR}' to enforce keeping & using built
+# files in the specific root.
 # @ECLASS-VARIABLE: mydistutilsargs
 # @DEFAULT_UNSET
 # @DESCRIPTION:
@@ -356,7 +379,11 @@ distutils-r1_run_phase() {
 		export PYTHONPATH
 	fi
 
-	"${@}" || die "${1} failed."
+	if [[ ${DISTUTILS_NO_PARALLEL_BUILD} ]]; then
+		"${@}" || die "${1} failed."
+	else
+		multijob_child_init "${@}" || die "${1} failed."
+	fi
 
 	if [[ ${DISTUTILS_IN_SOURCE_BUILD} ]]; then
 		popd &>/dev/null || die
@@ -373,19 +400,23 @@ distutils-r1_src_prepare() {
 		distutils-r1_python_prepare_all
 	fi
 
+	multijob_init
 	if declare -f python_prepare >/dev/null; then
 		python_foreach_impl distutils-r1_run_phase python_prepare
 	else
 		python_foreach_impl distutils-r1_run_phase distutils-r1_python_prepare
 	fi
+	multijob_finish
 }
 
 distutils-r1_src_configure() {
+	multijob_init
 	if declare -f python_configure >/dev/null; then
 		python_foreach_impl distutils-r1_run_phase python_configure
 	else
 		python_foreach_impl distutils-r1_run_phase distutils-r1_python_configure
 	fi
+	multijob_finish
 
 	if declare -f python_configure_all >/dev/null; then
 		python_configure_all
@@ -395,11 +426,13 @@ distutils-r1_src_configure() {
 distutils-r1_src_compile() {
 	debug-print-function ${FUNCNAME} "${@}"
 
+	multijob_init
 	if declare -f python_compile >/dev/null; then
 		python_foreach_impl distutils-r1_run_phase python_compile
 	else
 		python_foreach_impl distutils-r1_run_phase distutils-r1_python_compile
 	fi
+	multijob_finish
 
 	if declare -f python_compile_all >/dev/null; then
 		python_compile_all
@@ -409,11 +442,13 @@ distutils-r1_src_compile() {
 distutils-r1_src_test() {
 	debug-print-function ${FUNCNAME} "${@}"
 
+	multijob_init
 	if declare -f python_test >/dev/null; then
 		python_foreach_impl distutils-r1_run_phase python_test
 	else
 		python_foreach_impl distutils-r1_run_phase distutils-r1_python_test
 	fi
+	multijob_finish
 
 	if declare -f python_test_all >/dev/null; then
 		python_test_all
@@ -423,11 +458,13 @@ distutils-r1_src_test() {
 distutils-r1_src_install() {
 	debug-print-function ${FUNCNAME} "${@}"
 
+	multijob_init
 	if declare -f python_install >/dev/null; then
 		python_foreach_impl distutils-r1_run_phase python_install
 	else
 		python_foreach_impl distutils-r1_run_phase distutils-r1_python_install
 	fi
+	multijob_finish
 
 	if declare -f python_install_all >/dev/null; then
 		python_install_all
