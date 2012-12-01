@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/minitest
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.84 2012/11/06 16:52:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.85 2012/12/01 07:22:53 graaff Exp $
+
+*minitest-4.3.2 (01 Dec 2012)
+
+  01 Dec 2012; Hans de Graaff <graaff@gentoo.org> +minitest-4.3.2.ebuild:
+  Version bump. Run tests directly to avoid dependencies on hoe and rdoc.
 
   06 Nov 2012; Jeroen Roovers <jer@gentoo.org> minitest-2.12.1.ebuild:
   Stable for HPPA (bug #411507).
