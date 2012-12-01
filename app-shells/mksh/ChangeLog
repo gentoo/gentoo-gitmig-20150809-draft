@@ -1,6 +1,12 @@
 # ChangeLog for app-shells/mksh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/mksh/ChangeLog,v 1.34 2012/09/22 20:04:21 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/mksh/ChangeLog,v 1.35 2012/12/01 03:12:33 patrick Exp $
+
+*mksh-41 (01 Dec 2012)
+
+  01 Dec 2012; Patrick Lauer <patrick@gentoo.org> +mksh-41.ebuild,
+  mksh-9999.ebuild:
+  Bump
 
   22 Sep 2012; Christoph Junghans <ottxor@gentoo.org>
   +files/mksh-40f-etc-configurable.patch, -files/mksh-39c-urandom-write.patch,

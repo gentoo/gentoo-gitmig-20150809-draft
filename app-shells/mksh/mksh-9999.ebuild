@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/mksh/mksh-9999.ebuild,v 1.3 2012/09/22 20:04:21 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/mksh/mksh-9999.ebuild,v 1.4 2012/12/01 03:12:33 patrick Exp $
 
 EAPI=4
 
@@ -32,7 +32,7 @@ S="${WORKDIR}/${PN}"
 src_compile() {
 	tc-export CC
 	export CPPFLAGS="${CPPFLAGS} -DMKSH_DEFAULT_PROFILEDIR=\\\"${EPREFIX}/etc\\\""
-	sh Build.sh -r || die
+	sh Build.sh -r -c lto || sh Rebuild.sh || die
 }
 
 src_install() {
