@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-4.2.4.ebuild,v 1.1 2012/11/10 21:10:47 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-4.2.4.ebuild,v 1.2 2012/12/01 11:50:07 polynomial-c Exp $
 
 EAPI=2
 
@@ -24,7 +24,6 @@ DEPEND="${RDEPEND}
 	>=dev-util/kbuild-0.1.9998_pre20120806
 	=dev-lang/python-2*
 	>=dev-lang/yasm-0.6.2
-	sys-devel/dev86
 	sys-power/iasl
 	x11-proto/fontsproto
 	x11-proto/randrproto

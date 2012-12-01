@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/xf86-video-virtualbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.103 2012/11/10 21:10:47 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.104 2012/12/01 11:50:07 polynomial-c Exp $
+
+  01 Dec 2012; Lars Wendler <polynomial-c@gentoo.org>
+  xf86-video-virtualbox-4.2.2.ebuild, xf86-video-virtualbox-4.2.4.ebuild:
+  Removed sys-devel/dev86 as build-dependency. Upstream replaced it with
+  openwatcom which we don't have in portage right now (see bug #233097).
 
 *xf86-video-virtualbox-4.2.4 (10 Nov 2012)
 
