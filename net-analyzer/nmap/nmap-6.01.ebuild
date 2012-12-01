@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.01.ebuild,v 1.4 2012/12/01 16:47:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.01.ebuild,v 1.5 2012/12/01 17:15:54 jer Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -60,31 +60,44 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-make.patch
 
 	# Fix desktop files wrt bug #432714
-	sed -i -e '/^Encoding/d' zenmap/install_scripts/unix/zenmap.desktop
-	sed -i -e '/^Encoding/d' zenmap/install_scripts/unix/zenmap-root.desktop
-	sed -i -e 's/Categories=Application;Network;Security/Categories=Network;System;Security/' zenmap/install_scripts/unix/zenmap.desktop
-	sed -i -e 's/Categories=Application;Network;Security/Categories=Network;System;Security/' zenmap/install_scripts/unix/zenmap-root.desktop
+	sed -i \
+		-e '/^Encoding/d' \
+		-e 's|^Categories=.*|Categories=Network;System;Security;|g' \
+		zenmap/install_scripts/unix/zenmap-root.desktop \
+		zenmap/install_scripts/unix/zenmap.desktop || die
 }
 
 src_configure() {
 	# The bundled libdnet is incompatible with the version available in the
 	# tree, so we cannot use the system library here.
-	econf --with-libdnet=included \
+	econf \
 		$(use_with gtk zenmap) \
 		$(use_with lua liblua) \
 		$(use_with ncat) \
 		$(use_with ndiff) \
 		$(use_with nmap-update) \
 		$(use_with nping) \
-		$(use_with ssl openssl)
+		$(use_with ssl openssl) \
+		--with-libdnet=included
 }
 
 src_install() {
-	LC_ALL=C emake DESTDIR="${D}" -j1 STRIP=: nmapdatadir="${EPREFIX}"/usr/share/nmap install
+	LC_ALL=C emake \
+		-j1 \
+		DESTDIR="${D}" \
+		STRIP=: \
+		nmapdatadir="${EPREFIX}"/usr/share/nmap \
+		install
 	if use nmap-update;then
-		LC_ALL=C emake DESTDIR="${D}" -j1 STRIP=: \
-			nmapdatadir="${EPREFIX}"/usr/share/nmap -C nmap-update install
+		LC_ALL=C emake \
+			-C nmap-update \
+			-j1 \
+			DESTDIR="${D}" \
+			STRIP=: \
+			nmapdatadir="${EPREFIX}"/usr/share/nmap \
+			install
 	fi
+
 	dodoc CHANGELOG HACKING docs/README docs/*.txt
 
 	use gtk && doicon "${FILESDIR}/nmap-logo-64.png"
