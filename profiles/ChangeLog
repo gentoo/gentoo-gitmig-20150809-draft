@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7209 2012/12/01 11:18:23 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7210 2012/12/01 21:03:09 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Dec 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  arch/amd64/no-multilib/package.mask, features/64bit-native/package.mask:
+  Unmask newer versions of hpacucli since it's now available as an amd64
+  package as well.
 
   01 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org> use.desc:
   Add introspection to global use flags.
