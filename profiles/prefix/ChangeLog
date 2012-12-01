@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.371 2012/11/10 09:46:11 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.372 2012/12/01 20:20:20 grobian Exp $
+
+  01 Dec 2012; Fabian Groffen <grobian@gentoo.org> make.defaults:
+  Override PYTHON_TARGETS with versions we have in Prefix
 
   10 Nov 2012; Fabian Groffen <grobian@gentoo.org>
   +sunos/solaris/profile.bashrc, profile.bashrc:
