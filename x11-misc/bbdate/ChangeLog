@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/bbdate
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbdate/ChangeLog,v 1.23 2012/11/28 16:17:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbdate/ChangeLog,v 1.24 2012/12/01 14:26:19 blueness Exp $
+
+  01 Dec 2012; Anthony G. Basile <blueness@gentoo.org> bbdate-0.2.4-r1.ebuild:
+  stable ppc, thanks peratu, bug #392841
 
   28 Nov 2012; Agostino Sarubbo <ago@gentoo.org> bbdate-0.2.4-r1.ebuild:
   Stable for amd64, wrt bug #392841
