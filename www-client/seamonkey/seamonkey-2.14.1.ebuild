@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.13.2.ebuild,v 1.2 2012/11/03 12:31:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.14.1.ebuild,v 1.1 2012/12/01 00:08:23 polynomial-c Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -13,7 +13,8 @@ MOZ_PV="${PV/_pre*}"
 MOZ_PV="${MOZ_PV/_alpha/a}"
 MOZ_PV="${MOZ_PV/_beta/b}"
 MOZ_PV="${MOZ_PV/_rc/rc}"
-MOZ_P="${PN}-${MOZ_PV}"
+MOZ_P="${PN}-${PV}"
+MY_MOZ_P="${PN}-${MOZ_PV}"
 
 if [[ ${PV} == *_pre* ]] ; then
 	MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/${PN}/candidates/${MOZ_PV}-candidates/build${PV##*_pre}"
@@ -21,15 +22,15 @@ if [[ ${PV} == *_pre* ]] ; then
 	# And the langpack stuff stays at eclass defaults
 else
 	MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/${PN}/releases/${MOZ_PV}"
-	MOZ_LANGPACK_PREFIX="langpack/${MOZ_P}."
+	MOZ_LANGPACK_PREFIX="langpack/${MY_MOZ_P}."
 	MOZ_LANGPACK_SUFFIX=".langpack.xpi"
 fi
 
-inherit flag-o-matic toolchain-funcs eutils mozconfig-3 multilib pax-utils fdo-mime autotools mozextension python nsplugins mozlinguas
+inherit check-reqs flag-o-matic toolchain-funcs eutils mozconfig-3 multilib pax-utils fdo-mime autotools mozextension python nsplugins mozlinguas
 
-PATCHFF="firefox-16.0-patches-0.3"
-PATCH="${PN}-2.7-patches-03"
-EMVER="1.4.5"
+PATCHFF="firefox-17.0-patches-0.1"
+PATCH="${PN}-2.14-patches-01"
+EMVER="1.4.6"
 
 DESCRIPTION="Seamonkey Web Browser"
 HOMEPAGE="http://www.seamonkey-project.org"
@@ -41,7 +42,7 @@ if [[ ${PV} == *_pre* ]] ; then
 else
 	# This is where arch teams should change the KEYWORDS.
 
-	KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86"
+	KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 fi
 
 SLOT="0"
@@ -49,7 +50,7 @@ LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
 IUSE="+alsa +chatzilla +crypt gstreamer +ipc +jit +roaming system-sqlite +webm"
 
 SRC_URI+="${SRC_URI}
-	${MOZ_FTP_URI}/source/${MOZ_P}.source.tar.bz2 -> ${P}.source.tar.bz2
+	${MOZ_FTP_URI}/source/${MY_MOZ_P}.source.tar.bz2 -> ${P}.source.tar.bz2
 	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCHFF}.tar.xz
 	http://dev.gentoo.org/~polynomial-c/mozilla/patchsets/${PATCH}.tar.xz
 	crypt? ( http://www.mozilla-enigmail.org/download/source/enigmail-${EMVER}.tar.gz )"
@@ -59,8 +60,8 @@ ASM_DEPEND=">=dev-lang/yasm-1.1"
 # Mesa 7.10 needed for WebGL + bugfixes
 RDEPEND=">=sys-devel/binutils-2.16.1
 	>=dev-libs/nss-3.13.6
-	>=dev-libs/nspr-4.9.1
-	>=dev-libs/glib-2.26
+	>=dev-libs/nspr-4.9.2
+	>=dev-libs/glib-2.26:2
 	>=media-libs/mesa-7.10
 	>=media-libs/libpng-1.5.11[apng]
 	>=x11-libs/cairo-1.10
@@ -76,7 +77,8 @@ RDEPEND=">=sys-devel/binutils-2.16.1
 	webm? (
 		>=media-libs/libvpx-1.0.0
 		kernel_linux? ( media-libs/alsa-lib )
-	)"
+	)
+	selinux? ( sec-policy/selinux-mozilla )"
 
 DEPEND="${RDEPEND}
 	dev-python/pysqlite
@@ -107,6 +109,14 @@ pkg_setup() {
 	fi
 
 	moz_pkgsetup
+
+	# Ensure we have enough disk space to compile
+	if use debug || use test ; then
+		CHECKREQS_DISK_BUILD="8G"
+	else
+		CHECKREQS_DISK_BUILD="4G"
+	fi
+	check-reqs_pkg_setup
 }
 
 src_prepare() {
@@ -195,6 +205,9 @@ src_configure() {
 		MEXTENSIONS+=",-sroaming"
 	fi
 
+	# We must force enable jemalloc 3 threw .mozconfig
+	echo "export MOZ_JEMALLOC=1" >> ${S}/.mozconfig
+
 	mozconfig_annotate '' --prefix="${EPREFIX}"/usr
 	mozconfig_annotate '' --libdir="${EPREFIX}"/usr/$(get_libdir)
 	mozconfig_annotate '' --enable-extensions="${MEXTENSIONS}"
@@ -206,6 +219,7 @@ src_configure() {
 	mozconfig_annotate '' --with-system-png
 	mozconfig_annotate '' --target="${CTARGET:-${CHOST}}"
 	mozconfig_annotate '' --enable-safe-browsing
+	mozconfig_annotate '' --build="${CTARGET:-${CHOST}}"
 
 	mozconfig_use_enable gstreamer
 	mozconfig_use_enable system-sqlite
