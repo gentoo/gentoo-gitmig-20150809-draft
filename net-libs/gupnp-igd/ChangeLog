@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gupnp-igd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/ChangeLog,v 1.42 2012/11/25 17:22:08 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/ChangeLog,v 1.43 2012/12/01 17:59:08 armin76 Exp $
+
+  01 Dec 2012; Raúl Porcel <armin76@gentoo.org> gupnp-igd-0.2.1.ebuild:
+  alpha/ia64/sparc stable wrt #434300
 
   25 Nov 2012; Gilles Dartiguelongue <eva@gentoo.org> gupnp-igd-0.2.1.ebuild,
   gupnp-igd-0.2.2.ebuild:

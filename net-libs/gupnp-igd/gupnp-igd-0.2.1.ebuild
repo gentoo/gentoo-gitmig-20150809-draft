@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/gupnp-igd-0.2.1.ebuild,v 1.8 2012/11/25 17:22:08 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/gupnp-igd-0.2.1.ebuild,v 1.9 2012/12/01 17:59:08 armin76 Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
@@ -15,7 +15,7 @@ SRC_URI="http://www.gupnp.org/sites/all/files/sources/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ppc ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86"
 IUSE="+introspection python"
 
 RDEPEND=">=net-libs/gupnp-0.18
