@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.24 2012/11/30 11:40:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.25 2012/12/01 09:29:24 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -44,6 +44,8 @@ if [[ ! ${_PYTHON_R1} ]]; then
 
 if [[ ${_PYTHON_SINGLE_R1} ]]; then
 	die 'python-r1.eclass can not be used with python-single-r1.eclass.'
+elif [[ ${_PYTHON_ANY_R1} ]]; then
+	die 'python-r1.eclass can not be used with python-any-r1.eclass.'
 fi
 
 inherit python-utils-r1
