@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/ganeti
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.64 2012/10/15 18:03:34 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.65 2012/12/01 21:26:09 ago Exp $
+
+  01 Dec 2012; <ago@gentoo.org> ganeti-2.4.5-r1.ebuild:
+  Stable for amd64, wrt bug #445316
 
 *ganeti-2.6.1 (15 Oct 2012)
 
