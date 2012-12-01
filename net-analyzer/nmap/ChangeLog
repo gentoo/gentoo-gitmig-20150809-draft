@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.261 2012/12/01 18:06:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.262 2012/12/01 21:30:34 ago Exp $
+
+  01 Dec 2012; <ago@gentoo.org> nmap-6.01.ebuild:
+  Stable for amd64, wrt bug #445500
 
 *nmap-6.25 (01 Dec 2012)
 
