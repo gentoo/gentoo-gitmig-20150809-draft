@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-mobility/qt-mobility-1.2.2_p20120403.ebuild,v 1.5 2012/09/09 07:42:29 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-mobility/qt-mobility-1.2.2_p20120403.ebuild,v 1.6 2012/12/02 22:16:43 ssuominen Exp $
 
 EAPI=4
 
@@ -67,7 +67,7 @@ RDEPEND="
 	)
 	systeminfo? (
 		sys-apps/util-linux
-		sys-fs/udev
+		virtual/udev
 		x11-libs/libX11
 		x11-libs/libXrandr
 		>=x11-libs/qt-dbus-4.7.0:4
