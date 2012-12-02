@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/clearsilver-0.10.5-r1.ebuild,v 1.6 2012/04/25 16:24:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/clearsilver-0.10.5-r1.ebuild,v 1.7 2012/12/02 08:23:13 ulm Exp $
 
 # Please note: apache, java, mono and ruby support disabled for now.
 # Fill a bug if you need it.
@@ -17,7 +17,7 @@ DESCRIPTION="Clearsilver is a fast, powerful, and language-neutral HTML template
 HOMEPAGE="http://www.clearsilver.net/"
 SRC_URI="http://www.clearsilver.net/downloads/${P}.tar.gz"
 
-LICENSE="CS-1.0"
+LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="perl python zlib"
