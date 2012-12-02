@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-1.3.4.ebuild,v 1.7 2012/05/15 03:47:52 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-1.3.4.ebuild,v 1.8 2012/12/02 17:06:48 eva Exp $
 
 EAPI="4"
 
@@ -50,7 +50,7 @@ RDEPEND="${CDEPEND}
 		app-cdr/dvd+rw-tools )
 	gpac? ( media-video/gpac )
 	lame? ( media-sound/lame )
-	gstreamer? ( media-libs/gst-plugins-base )
+	gstreamer? ( media-libs/gst-plugins-base:0.10 )
 	sox? ( media-sound/sox )
 	vorbis? ( media-sound/vorbis-tools )"
 
