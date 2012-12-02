@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-1.9-r2.ebuild,v 1.2 2012/12/01 23:28:31 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-1.9-r2.ebuild,v 1.3 2012/12/02 01:58:58 floppym Exp $
 
 EAPI=5
 
@@ -112,7 +112,7 @@ src_install() {
 	fi
 
 	# Generate Grammar and PatternGrammar pickles.
-	PYTHONPATH="${ED}${INSDESTTREE}/lib-python/2.7"
+	PYTHONPATH="${ED}${INSDESTTREE}/lib-python/2.7" \
 		"${PYTHON}" -c "import lib2to3.pygram, lib2to3.patcomp; lib2to3.patcomp.PatternCompiler()" \
 		|| die "Generation of Grammar and PatternGrammar pickles failed"
 

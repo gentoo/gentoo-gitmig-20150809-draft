@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pypy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.27 2012/12/01 23:28:31 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.28 2012/12/02 01:58:58 floppym Exp $
+
+  02 Dec 2012; Mike Gilbert <floppym@gentoo.org> pypy-1.8-r2.ebuild,
+  pypy-1.9-r2.ebuild:
+  Add missing back-slashes.
 
   01 Dec 2012; Mike Gilbert <floppym@gentoo.org> pypy-1.8-r2.ebuild,
   pypy-1.9-r2.ebuild:
