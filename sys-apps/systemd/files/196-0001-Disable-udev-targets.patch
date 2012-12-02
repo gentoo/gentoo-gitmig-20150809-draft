@@ -1,17 +1,17 @@
-From 700023b0263f1f014443144a10e4544f18113458 Mon Sep 17 00:00:00 2001
+From 3108c60ba5f4f46fa4b4ca0927d8b5df1b701a75 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Micha=C5=82=20G=C3=B3rny?= <mgorny@gentoo.org>
 Date: Wed, 15 Aug 2012 14:02:07 +0200
-Subject: [PATCH] Disable udev targets, for udev-189.
+Subject: [PATCH] Disable udev targets.
 
 ---
- Makefile.am | 189 +-----------------------------------------------------------
- 1 file changed, 1 insertion(+), 188 deletions(-)
+ Makefile.am | 203 +-----------------------------------------------------------
+ 1 file changed, 1 insertion(+), 202 deletions(-)
 
 diff --git a/Makefile.am b/Makefile.am
-index 8de4aa4..5fa3085 100644
+index 29d6323..2df0ec2 100644
 --- a/Makefile.am
 +++ b/Makefile.am
-@@ -307,8 +307,6 @@ dist_systemunit_DATA = \
+@@ -316,8 +316,6 @@ dist_systemunit_DATA = \
  	units/systemd-ask-password-wall.path \
  	units/systemd-ask-password-console.path \
  	units/syslog.target \
@@ -20,7 +20,7 @@ index 8de4aa4..5fa3085 100644
  	units/system-update.target
  
  nodist_systemunit_DATA = \
-@@ -338,9 +336,6 @@ nodist_systemunit_DATA = \
+@@ -347,9 +345,6 @@ nodist_systemunit_DATA = \
  	units/systemd-kexec.service \
  	units/systemd-fsck@.service \
  	units/systemd-fsck-root.service \
@@ -29,8 +29,8 @@ index 8de4aa4..5fa3085 100644
 -	units/systemd-udev-settle.service \
  	units/debug-shell.service
  
- dist_userunit_DATA = \
-@@ -1588,12 +1583,6 @@ SUBDIRS += \
+ if HAVE_KMOD
+@@ -1756,12 +1751,6 @@ SUBDIRS += \
  	docs/libudev
  endif
  
@@ -43,7 +43,7 @@ index 8de4aa4..5fa3085 100644
  libudev_la_SOURCES =\
  	src/libudev/libudev-private.h \
  	src/libudev/libudev.c \
-@@ -1616,9 +1605,6 @@ libudev_la_LDFLAGS = \
+@@ -1786,9 +1775,6 @@ libudev_la_LDFLAGS = \
  libudev_la_LIBADD = \
  	libsystemd-shared.la
  
@@ -53,7 +53,7 @@ index 8de4aa4..5fa3085 100644
  EXTRA_DIST += \
  	src/libudev/libudev.pc.in \
  	src/libudev/libudev.sym
-@@ -1639,12 +1625,7 @@ libudev-install-move-hook:
+@@ -1809,12 +1795,7 @@ libudev-install-move-hook:
  libudev-uninstall-move-hook:
  	rm -f $(DESTDIR)$(rootlibdir)/libudev.so*
  
@@ -66,7 +66,7 @@ index 8de4aa4..5fa3085 100644
  
  libudev_private_la_SOURCES =\
  	$(libudev_la_SOURCES) \
-@@ -1659,15 +1640,6 @@ libudev_private_la_LIBADD = \
+@@ -1829,15 +1810,6 @@ libudev_private_la_LIBADD = \
  	libsystemd-shared.la
  
  # ------------------------------------------------------------------------------
@@ -82,7 +82,7 @@ index 8de4aa4..5fa3085 100644
  
  man/systemd-udevd.8: man/systemd-udevd.service.8
  man/systemd-udevd-control.socket.8: man/systemd-udevd.service.8
-@@ -1679,27 +1651,7 @@ udev-confdirs:
+@@ -1850,40 +1822,7 @@ udev-confdirs:
  INSTALL_DATA_HOOKS += udev-confdirs
  
  dist_udevrules_DATA += \
@@ -94,11 +94,24 @@ index 8de4aa4..5fa3085 100644
 -	rules/60-persistent-input.rules \
 -	rules/60-persistent-alsa.rules \
 -	rules/60-persistent-storage.rules \
+-	rules/64-btrfs.rules \
 -	rules/75-net-description.rules \
 -	rules/75-tty-description.rules \
 -	rules/78-sound-card.rules \
--	rules/80-drivers.rules \
 -	rules/95-udev-late.rules
+-
+-if HAVE_KMOD
+-dist_udevrules_DATA += \
+-	rules/80-drivers.rules
+-endif
+-
+-dist_udevhwdb_DATA = \
+-	hwdb/20-pci-vendor-product.hwdb \
+-	hwdb/20-pci-classes.hwdb \
+-	hwdb/20-usb-vendor-product.hwdb \
+-	hwdb/20-usb-classes.hwdb \
+-	hwdb/20-acpi-vendor.hwdb \
+-	hwdb/20-OUI.hwdb
 -
 -udevconfdir = $(sysconfdir)/udev
 -dist_udevconf_DATA = \
@@ -111,7 +124,7 @@ index 8de4aa4..5fa3085 100644
  
  EXTRA_DIST += \
  	rules/99-systemd.rules.in \
-@@ -1727,17 +1679,6 @@ systemd-install-hook:
+@@ -1911,17 +1850,6 @@ systemd-install-hook:
  	ln -sf ../systemd-udevd.service $(DESTDIR)$(systemunitdir)/sysinit.target.wants/systemd-udevd.service
  	ln -sf ../systemd-udev-trigger.service $(DESTDIR)$(systemunitdir)/sysinit.target.wants/systemd-udev-trigger.service
  
@@ -129,8 +142,8 @@ index 8de4aa4..5fa3085 100644
  libudev_core_la_SOURCES = \
  	src/udev/udev.h \
  	src/udev/udev-event.c \
-@@ -1803,14 +1744,6 @@ udevadm_LDADD = \
- 	libsystemd-shared.la
+@@ -2008,14 +1936,6 @@ hwdb-remove-hook:
+ 	-test -n "$(DESTDIR)" || rm -f $(HWDB_BIN)
  
  # ------------------------------------------------------------------------------
 -TESTS += \
@@ -144,7 +157,7 @@ index 8de4aa4..5fa3085 100644
  test_libudev_SOURCES = \
  	src/test/test-libudev.c
  
-@@ -1860,8 +1793,6 @@ ata_id_LDADD = \
+@@ -2065,8 +1985,6 @@ ata_id_LDADD = \
  	libudev-private.la \
  	libsystemd-shared.la
  
@@ -153,7 +166,7 @@ index 8de4aa4..5fa3085 100644
  
  # ------------------------------------------------------------------------------
  cdrom_id_SOURCES = \
-@@ -1871,12 +1802,6 @@ cdrom_id_LDADD = \
+@@ -2076,12 +1994,6 @@ cdrom_id_LDADD = \
  	-ludev \
  	libsystemd-shared.la
  
@@ -166,7 +179,7 @@ index 8de4aa4..5fa3085 100644
  # ------------------------------------------------------------------------------
  collect_SOURCES = \
  	src/udev/collect/collect.c
-@@ -1884,9 +1809,6 @@ collect_SOURCES = \
+@@ -2089,9 +2001,6 @@ collect_SOURCES = \
  collect_LDADD = \
  	libudev-private.la
  
@@ -176,7 +189,7 @@ index 8de4aa4..5fa3085 100644
  # ------------------------------------------------------------------------------
  scsi_id_SOURCES =\
  	src/udev/scsi_id/scsi_id.c \
-@@ -1898,9 +1820,6 @@ scsi_id_LDADD = \
+@@ -2103,9 +2012,6 @@ scsi_id_LDADD = \
  	libudev-private.la \
  	libsystemd-shared.la
  
@@ -186,7 +199,7 @@ index 8de4aa4..5fa3085 100644
  EXTRA_DIST += \
  	src/udev/scsi_id/README
  
-@@ -1911,12 +1830,6 @@ v4l_id_SOURCES = \
+@@ -2116,12 +2022,6 @@ v4l_id_SOURCES = \
  v4l_id_LDADD = \
  	-ludev
  
@@ -199,7 +212,7 @@ index 8de4aa4..5fa3085 100644
  # ------------------------------------------------------------------------------
  accelerometer_SOURCES = \
  	src/udev/accelerometer/accelerometer.c
-@@ -1925,12 +1838,6 @@ accelerometer_LDADD = \
+@@ -2130,12 +2030,6 @@ accelerometer_LDADD = \
  	-ludev -lm \
  	libsystemd-shared.la
  
@@ -212,7 +225,7 @@ index 8de4aa4..5fa3085 100644
  # ------------------------------------------------------------------------------
  if ENABLE_GUDEV
  if ENABLE_GTK_DOC
-@@ -2111,99 +2018,11 @@ nodist_keymap_SOURCES = \
+@@ -2316,100 +2210,11 @@ nodist_keymap_SOURCES = \
  BUILT_SOURCES += \
  	$(nodist_keymap_SOURCES)
  
@@ -266,6 +279,7 @@ index 8de4aa4..5fa3085 100644
 -	keymaps/hewlett-packard-presario-2100 \
 -	keymaps/hewlett-packard-tablet \
 -	keymaps/hewlett-packard-tx2 \
+-	keymaps/hewlett-packard_elitebook-8440p \
 -	keymaps/ibm-thinkpad-usb-keyboard-trackpoint \
 -	keymaps/inventec-symphony_6.0_7.0 \
 -	keymaps/lenovo-3000 \
@@ -312,7 +326,7 @@ index 8de4aa4..5fa3085 100644
  src/udev/keymap/keys.txt: Makefile
  	$(AM_V_at)$(MKDIR_P) $(dir $@)
  	$(AM_V_GEN)$(CPP) $(CFLAGS) $(AM_CPPFLAGS) $(CPPFLAGS) -dM -include linux/input.h - < /dev/null | $(AWK) '/^#define[ \t]+KEY_[^ ]+[ \t]+[0-9]/ { if ($$2 != "KEY_MAX") { print $$2 } }' | sed 's/^KEY_COFFEE$$/KEY_SCREENLOCK/' > $@
-@@ -2231,12 +2050,6 @@ mtd_probe_SOURCES =  \
+@@ -2437,12 +2242,6 @@ mtd_probe_SOURCES =  \
  mtd_probe_CPPFLAGS = \
  	$(AM_CPPFLAGS)
  
@@ -326,5 +340,5 @@ index 8de4aa4..5fa3085 100644
  libsystemd_id128_la_SOURCES = \
  	src/libsystemd-id128/sd-id128.c
 -- 
-1.7.12
+1.8.0
 

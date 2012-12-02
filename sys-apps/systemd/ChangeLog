@@ -1,6 +1,21 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.60 2012/12/01 15:26:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.61 2012/12/02 10:58:37 mgorny Exp $
+
+*systemd-196 (02 Dec 2012)
+
+  02 Dec 2012; Michał Górny <mgorny@gentoo.org>
+  +files/196-0001-Disable-udev-targets.patch, +systemd-196.ebuild,
+  -files/0001-Disable-udev-targets-for-udev-189.patch,
+  -files/0002-journald-add-missing-includes.patch,
+  -files/0003-journal-add-HAVE_XZ-check-to-avoid-build-failure.patch,
+  -files/0004-journal-don-t-try-to-compress-without-XZ.patch,
+  -files/191-0002-journal-bring-mmap-cache-prototype-in-sync.patch,
+  -files/191-0003-log-fix-repeated-invocation-of-vsnprintf-vaprintf-in.patch,
+  -files/update-etc-systemd-symlinks.path,
+  -files/update-etc-systemd-symlinks.service,
+  -files/update-etc-systemd-symlinks.sh:
+  Version bump. Enable Python support. Drop old patches.
 
   01 Dec 2012; Michał Górny <mgorny@gentoo.org> -systemd-189-r3.ebuild,
   -systemd-191-r1.ebuild, -systemd-192.ebuild, -systemd-193.ebuild,
