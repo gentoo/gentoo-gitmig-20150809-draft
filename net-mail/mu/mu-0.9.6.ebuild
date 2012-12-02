@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mu/mu-0.9.6.ebuild,v 1.5 2012/11/08 18:20:28 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mu/mu-0.9.6.ebuild,v 1.6 2012/12/02 20:30:00 tomka Exp $
 
 EAPI=3
 
@@ -31,7 +31,7 @@ src_configure() {
 		guiconf="--with-gui=none"
 	fi
 
-	econf "${guiconf}"
+	econf --disable-silent-rules "${guiconf}"
 }
 
 src_install () {

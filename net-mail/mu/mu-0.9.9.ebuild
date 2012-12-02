@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mu/mu-0.9.9.ebuild,v 1.4 2012/11/07 21:26:39 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mu/mu-0.9.9.ebuild,v 1.5 2012/12/02 20:30:00 tomka Exp $
 
 EAPI=4
 
@@ -48,8 +48,10 @@ src_configure() {
 		guiconf="--with-gui=none"
 	fi
 
-	# Make a guile USE-flag as soon as >=guile-2 is avaiable
+	# Todo: Make a guile USE-flag as soon as >=guile-2 is avaiable
+	# Note: --disable-silent-rules is included in EAPI-5
 	econf --disable-guile \
+		--disable-silent-rules \
 		$(use_enable gui webkit) \
 		$(use_enable emacs mu4e) \
 		${guiconf}

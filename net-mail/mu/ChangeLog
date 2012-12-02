@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mu/ChangeLog,v 1.15 2012/11/08 18:20:28 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mu/ChangeLog,v 1.16 2012/12/02 20:30:00 tomka Exp $
+
+  02 Dec 2012; Thomas Kahle <tomka@gentoo.org> mu-0.9.6.ebuild, mu-0.9.9.ebuild:
+  Make build.log verbose (bug 445696)
 
   08 Nov 2012; Thomas Kahle <tomka@gentoo.org> mu-0.9.6.ebuild:
   Fix dep also for 0.9.6
