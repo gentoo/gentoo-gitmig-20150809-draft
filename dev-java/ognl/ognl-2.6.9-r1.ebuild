@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ognl/ognl-2.6.9-r1.ebuild,v 1.1 2007/03/19 02:33:54 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ognl/ognl-2.6.9-r1.ebuild,v 1.2 2012/12/02 08:33:38 ulm Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.ognl.org/"
 SRC_URI="http://www.ognl.org/${PV}/${P}-dist.zip
 	https://ognl.dev.java.net/source/browse/*checkout*/ognl/osbuild.xml"
 
-LICENSE="OpenSymphony-1.1"
+LICENSE="Apache-1.1"
 SLOT="2.6"
 KEYWORDS="~x86 ~amd64"
 

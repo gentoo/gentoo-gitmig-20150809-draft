@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ognl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ognl/ChangeLog,v 1.9 2012/09/27 18:57:27 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ognl/ChangeLog,v 1.10 2012/12/02 08:33:38 ulm Exp $
+
+  02 Dec 2012; Ulrich Müller <ulm@gentoo.org> ognl-2.6.9-r1.ebuild,
+  ognl-2.6.9-r2.ebuild:
+  Update LICENSE, this is identical with the Apache-1.1 license, bug 444848.
 
 *ognl-2.6.9-r2 (27 Sep 2012)
 

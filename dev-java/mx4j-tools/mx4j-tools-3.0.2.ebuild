@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j-tools/mx4j-tools-3.0.2.ebuild,v 1.3 2012/01/28 11:04:15 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j-tools/mx4j-tools-3.0.2.ebuild,v 1.4 2012/12/02 08:31:21 ulm Exp $
 
 EAPI=1
 
@@ -41,7 +41,7 @@ DEPEND="${RDEPEND}
 RDEPEND="${RDEPEND}
 	>=virtual/jre-1.5"
 
-LICENSE="mx4j"
+LICENSE="Apache-1.1"
 SLOT="3.0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc source"
