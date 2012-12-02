@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/cfv
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cfv/ChangeLog,v 1.37 2011/05/19 19:22:51 grobian Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cfv/ChangeLog,v 1.38 2012/12/02 22:17:28 swegener Exp $
+
+  02 Dec 2012; Sven Wegener <swegener@gentoo.org> cfv-1.18.1.ebuild,
+  cfv-1.18.2.ebuild, cfv-1.18.3.ebuild:
+  Include python support patch from bug #308291 by Ian Delaney.
 
   19 May 2011; Fabian Groffen <grobian@gentoo.org> cfv-1.18.3.ebuild:
   Marked ~x64-macos, bug #367895
