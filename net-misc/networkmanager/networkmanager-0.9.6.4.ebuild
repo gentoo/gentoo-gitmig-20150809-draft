@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.6.4.ebuild,v 1.4 2012/11/05 03:59:34 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.6.4.ebuild,v 1.5 2012/12/02 22:31:17 ssuominen Exp $
 
 EAPI="4"
 GNOME_ORG_MODULE="NetworkManager"
 VALA_MIN_API_VERSION="0.18"
 VALA_USE_DEPEND="vapigen"
 
-inherit autotools eutils gnome.org linux-info systemd user toolchain-funcs vala
+inherit autotools eutils gnome.org linux-info systemd user toolchain-funcs vala udev
 
 DESCRIPTION="Network configuration and management in an easy way. Desktop environment independent."
 HOMEPAGE="http://www.gnome.org/projects/NetworkManager/"
@@ -29,7 +29,7 @@ REQUIRED_USE="
 # TODO: Qt support?
 COMMON_DEPEND=">=sys-apps/dbus-1.2
 	>=dev-libs/dbus-glib-0.94
-	|| ( >=sys-fs/udev-171[gudev] >=sys-fs/udev-147[extras] )
+	virtual/udev[gudev]
 	>=dev-libs/glib-2.26
 	>=sys-auth/polkit-0.97
 	>=net-libs/libsoup-2.26:2.4
@@ -116,15 +116,12 @@ src_prepare() {
 }
 
 src_configure() {
-	local udevdir=/lib/udev
-	has_version sys-fs/udev && udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
-
 	ECONF="--disable-more-warnings
 		--disable-static
 		--localstatedir=/var
 		--with-distro=gentoo
 		--with-dbus-sys-dir=/etc/dbus-1/system.d
-		--with-udev-dir=${udevdir}
+		--with-udev-dir=$(udev_get_udevdir)
 		--with-iptables=/sbin/iptables
 		--enable-concheck
 		$(use_enable doc gtk-doc)
