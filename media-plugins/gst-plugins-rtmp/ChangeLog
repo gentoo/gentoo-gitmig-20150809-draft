@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-rtmp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-rtmp/ChangeLog,v 1.2 2012/02/15 13:08:36 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-rtmp/ChangeLog,v 1.3 2012/12/02 16:32:43 eva Exp $
+
+  02 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  gst-plugins-rtmp-0.10.22.ebuild:
+  EAPI bump, gstreamer slot pinning.
 
   15 Feb 2012; Arun Raghavan <ford_prefect@gentoo.org>
   gst-plugins-rtmp-0.10.22.ebuild, metadata.xml:
