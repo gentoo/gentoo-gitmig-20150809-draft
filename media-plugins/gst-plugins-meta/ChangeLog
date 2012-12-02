@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-meta
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-meta/ChangeLog,v 1.76 2012/10/01 17:42:08 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-meta/ChangeLog,v 1.77 2012/12/02 16:49:21 eva Exp $
+
+  02 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  gst-plugins-meta-0.10-r7.ebuild:
+  EAPI bump due pending 1.0 slot addition.
 
   01 Oct 2012; Fabian Groffen <grobian@gentoo.org>
   gst-plugins-meta-0.10-r7.ebuild:
