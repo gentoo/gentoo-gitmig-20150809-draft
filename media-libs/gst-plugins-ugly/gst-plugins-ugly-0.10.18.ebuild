@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-ugly/gst-plugins-ugly-0.10.18.ebuild,v 1.10 2012/12/02 17:36:09 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-ugly/gst-plugins-ugly-0.10.18.ebuild,v 1.11 2012/12/02 22:53:18 eva Exp $
 
 EAPI="3"
 
@@ -39,7 +39,7 @@ src_compile() {
 }
 
 src_install() {
-	DOCS="AUTHORS ChangeLog NEWS README RELEASE"
-	default
+	emake install DESTDIR="${D}" || die
+	dodoc AUTHORS ChangeLog NEWS README RELEASE || die
 	prune_libtool_files --modules
 }
