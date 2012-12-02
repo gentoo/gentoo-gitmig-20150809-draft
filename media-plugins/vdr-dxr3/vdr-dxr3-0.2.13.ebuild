@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dxr3/vdr-dxr3-0.2.13.ebuild,v 1.3 2012/05/05 08:27:18 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dxr3/vdr-dxr3-0.2.13.ebuild,v 1.4 2012/12/02 08:34:26 hd_brummy Exp $
 
 EAPI="4"
 
-inherit vdr-plugin versionator flag-o-matic
+inherit vdr-plugin-2 versionator flag-o-matic
 
 DESCRIPTION="VDR plugin: Use a dxr3 or hw+ card as output device"
 HOMEPAGE="http://sourceforge.net/projects/dxr3plugin/"
@@ -25,7 +25,7 @@ DEPEND="${DEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
-	vdr-plugin_src_prepare
+	vdr-plugin-2_src_prepare
 
 	cd "${S}"
 	sed -i Makefile -e 's:^FFMDIR =.*$:FFMDIR=/usr/include/ffmpeg:'
@@ -35,6 +35,6 @@ src_prepare() {
 }
 
 src_install() {
-	vdr-plugin_src_install
+	vdr-plugin-2_src_install
 	emake CONFDIR="${D}/etc/vdr" install-data
 }
