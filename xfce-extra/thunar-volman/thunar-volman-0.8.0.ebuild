@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/thunar-volman-0.8.0.ebuild,v 1.8 2012/11/28 12:18:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/thunar-volman-0.8.0.ebuild,v 1.9 2012/12/02 22:14:31 ssuominen Exp $
 
 EAPI=5
 inherit xfconf
@@ -15,7 +15,7 @@ KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sparc x86"
 IUSE="debug libnotify"
 
 COMMON_DEPEND=">=dev-libs/glib-2.20
-	|| ( >=sys-fs/udev-171-r5[gudev] <sys-fs/udev-171[extras] )
+	virtual/udev[gudev]
 	>=x11-libs/gtk+-2.24:2
 	>=xfce-base/exo-0.8
 	>=xfce-base/libxfce4ui-4.10
