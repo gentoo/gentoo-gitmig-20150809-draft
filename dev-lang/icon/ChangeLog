@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/icon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/ChangeLog,v 1.47 2012/10/04 15:21:19 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/ChangeLog,v 1.48 2012/12/02 06:17:26 radhermit Exp $
+
+  02 Dec 2012; Tim Harder <radhermit@gentoo.org> -icon-9.4.2.ebuild,
+  -icon-9.4.3.ebuild, -icon-9.4.3-r1.ebuild, -icon-9.4.3-r2.ebuild,
+  -icon-9.4.3-r3.ebuild:
+  Remove old.
 
   04 Oct 2012; Christoph Junghans <ottxor@gentoo.org> icon-9.5.0.ebuild:
   added prefix support (bug #433832)
