@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/gst-plugins-v4l2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-v4l2/ChangeLog,v 1.92 2012/10/23 17:11:47 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-v4l2/ChangeLog,v 1.93 2012/12/02 16:39:28 eva Exp $
+
+  02 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  -gst-plugins-v4l2-0.10.23.ebuild, -gst-plugins-v4l2-0.10.28-r1.ebuild,
+  gst-plugins-v4l2-0.10.30.ebuild:
+  Add missing gstreamer slot.
 
   23 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   gst-plugins-v4l2-0.10.30.ebuild:
