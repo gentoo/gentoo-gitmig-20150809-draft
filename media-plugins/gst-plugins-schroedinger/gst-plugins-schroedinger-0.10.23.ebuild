@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-schroedinger/gst-plugins-schroedinger-0.10.23.ebuild,v 1.1 2012/12/02 18:03:29 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-schroedinger/gst-plugins-schroedinger-0.10.23.ebuild,v 1.2 2012/12/02 19:57:33 eva Exp $
 
 EAPI="5"
 
@@ -16,6 +16,8 @@ GST_PLUGINS_BUILD="schro"
 GST_PLUGINS_BUILD_DIR="schroedinger"
 
 src_prepare() {
-	gst-plugins10_system_link \
-		gst-libs/gst/video:gstreamer-video
+	gst-plugins10_find_plugin_dir
+	# gstbasevideo has no .pc
+	sed -e "s:\$(top_builddir)/gst-libs/gst/video/.*\.la:-lgstbasevideo-${SLOT}:" \
+		-i Makefile.am Makefile.in || die
 }
