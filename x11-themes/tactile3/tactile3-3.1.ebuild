@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tactile3/tactile3-3.1.ebuild,v 1.1 2011/06/24 17:06:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tactile3/tactile3-3.1.ebuild,v 1.2 2012/12/02 11:33:39 hwoarang Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="http://gnome-look.org/CONTENT/content-files/111845-${MY_PN}.tar.gz"
 
 LICENSE="Artistic-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="x11-themes/hicolor-icon-theme"

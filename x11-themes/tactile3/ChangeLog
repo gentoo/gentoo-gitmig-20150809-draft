@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/tactile3
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tactile3/ChangeLog,v 1.3 2011/08/24 20:19:13 hwoarang Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tactile3/ChangeLog,v 1.4 2012/12/02 11:33:39 hwoarang Exp $
+
+  02 Dec 2012; Markos Chandras <hwoarang@gentoo.org> tactile3-3.1.ebuild:
+  Stable for amd64/x86
 
   24 Aug 2011; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add package to proxy-maintainers herd
@@ -13,4 +16,3 @@
   24 Jun 2011; Markos Chandras <hwoarang@gentoo.org> +tactile3-3.1.ebuild,
   +metadata.xml:
   Initial commit of tactile3 gtk2.x theme
-
