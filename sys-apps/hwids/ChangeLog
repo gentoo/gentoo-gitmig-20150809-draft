@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/hwids
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.43 2012/12/01 15:12:15 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.44 2012/12/02 03:01:38 flameeyes Exp $
+
+*hwids-20121202 (02 Dec 2012)
+
+  02 Dec 2012; Diego E. Pettenò <flameeyes@gentoo.org> +hwids-20121202.ebuild,
+  -hwids-20120922.ebuild, -hwids-20121123.ebuild, -hwids-20121130.ebuild:
+  Version bump; remove old.
 
   01 Dec 2012; Anthony G. Basile <blueness@gentoo.org> hwids-20121119.ebuild:
   stable ppc64, bug #443940
