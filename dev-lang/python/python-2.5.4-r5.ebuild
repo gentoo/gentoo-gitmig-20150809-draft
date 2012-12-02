@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5.4-r5.ebuild,v 1.3 2012/12/01 09:56:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5.4-r5.ebuild,v 1.4 2012/12/02 18:21:49 mgorny Exp $
 
 EAPI="1"
 
@@ -243,7 +243,8 @@ src_install() {
 
 	emake DESTDIR="${D}" altinstall maninstall || die "emake altinstall maninstall failed"
 
-	mv "${ED}usr/bin/python${SLOT}-config" "${ED}usr/bin/python-config-${SLOT}"
+	# Backwards compat with Gentoo divergence.
+	dosym python${SLOT}-config /usr/bin/python-config-${SLOT} || die
 
 	# Fix collisions between different slots of Python.
 	mv "${ED}usr/bin/pydoc" "${ED}usr/bin/pydoc${SLOT}"
