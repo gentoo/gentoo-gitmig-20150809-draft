@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/gst-plugins-base-0.10.36.ebuild,v 1.4 2012/12/02 17:23:40 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/gst-plugins-base-0.10.36.ebuild,v 1.5 2012/12/02 23:04:05 eva Exp $
 
 EAPI="5"
 
@@ -23,7 +23,6 @@ RDEPEND=">=dev-libs/glib-2.24:2
 "
 DEPEND="${RDEPEND}
 	>=dev-util/gtk-doc-am-1.3
-	nls? ( >=sys-devel/gettext-0.11.5 )
 "
 RDEPEND="${RDEPEND}
 	!<media-libs/gst-plugins-bad-0.10.10:0.10

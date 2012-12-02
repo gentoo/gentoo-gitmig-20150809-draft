@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/gst-plugins-base-0.10.35.ebuild,v 1.17 2012/11/07 21:20:49 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/gst-plugins-base-0.10.35.ebuild,v 1.18 2012/12/02 23:04:05 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -34,7 +34,7 @@ GST_PLUGINS_BUILD=""
 DOCS="AUTHORS NEWS README RELEASE"
 
 src_configure() {
-	gst-plugins-base_src_configure \
+	gst-plugins10_src_configure \
 		$(use_enable introspection) \
 		$(use_enable nls) \
 		$(use_enable orc) \
