@@ -1,6 +1,11 @@
 # ChangeLog for games-rpg/eternal-lands
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/ChangeLog,v 1.65 2012/06/24 16:17:30 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/ChangeLog,v 1.66 2012/12/02 23:23:43 rich0 Exp $
+
+  02 Dec 2012; Richard Freeman <rich0@gentoo.org>
+  eternal-lands-1.9.3-r2.ebuild, +files/eternal-lands-1.9.3-glbuild.patch,
+  +files/eternal-lands-1.9.3-minizip.patch:
+  Fixes for bugs 445658, 423327 - unbundle minizip and fix build issue.
 
   24 Jun 2012; Richard Freeman <rich0@gentoo.org>
   eternal-lands-1.9.3-r2.ebuild:
