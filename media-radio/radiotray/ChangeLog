@@ -1,6 +1,10 @@
 # ChangeLog for media-radio/radiotray
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/ChangeLog,v 1.27 2012/11/25 10:41:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/ChangeLog,v 1.28 2012/12/02 16:57:22 eva Exp $
+
+  02 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org> radiotray-0.7.2.ebuild,
+  radiotray-0.7.3-r1.ebuild, radiotray-9999.ebuild:
+  Pin gstreamer dependencies.
 
   25 Nov 2012; Markos Chandras <hwoarang@gentoo.org> radiotray-0.7.2.ebuild,
   radiotray-0.7.3-r1.ebuild, radiotray-9999.ebuild:
