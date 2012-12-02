@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/banshee
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.158 2012/10/05 17:52:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.159 2012/12/02 17:07:48 eva Exp $
+
+  02 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org> banshee-2.2.1.ebuild,
+  banshee-2.4.1.ebuild, banshee-2.6.0.ebuild:
+  Pin gstreamer dependencies.
 
   05 Oct 2012; Pacho Ramos <pacho@gentoo.org> banshee-2.6.0.ebuild:
   Drop gnome-icon-theme dependency, bug #437246 by timtasse. gnome-settings-

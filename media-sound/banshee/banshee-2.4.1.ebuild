@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-2.4.1.ebuild,v 1.2 2012/09/16 23:16:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-2.4.1.ebuild,v 1.3 2012/12/02 17:07:48 eva Exp $
 
 EAPI="4"
 
@@ -22,7 +22,7 @@ RDEPEND=">=dev-lang/mono-2.4.3
 	>=dev-dotnet/notify-sharp-0.4.0_pre20080912-r1
 	>=media-libs/gstreamer-0.10.21-r3:0.10
 	>=media-libs/gst-plugins-base-0.10.25.2:0.10
-	media-libs/gst-plugins-bad
+	media-libs/gst-plugins-bad:0.10
 	media-libs/gst-plugins-good:0.10
 	media-libs/gst-plugins-ugly:0.10
 	>=media-plugins/gst-plugins-meta-0.10-r2:0.10
