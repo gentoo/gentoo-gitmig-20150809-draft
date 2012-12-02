@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vcdimager
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/ChangeLog,v 1.62 2012/11/29 20:46:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/ChangeLog,v 1.63 2012/12/02 10:37:00 maekke Exp $
+
+  02 Dec 2012; Markus Meier <maekke@gentoo.org> vcdimager-0.7.23-r1.ebuild:
+  arm stable, bug #443582
 
   29 Nov 2012; Brent Baude <ranger@gentoo.org> vcdimager-0.7.23-r1.ebuild:
   Marking vcdimager-0.7.23-r1 ppc for bug 443582
