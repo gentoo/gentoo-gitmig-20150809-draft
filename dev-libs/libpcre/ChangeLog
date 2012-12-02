@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.207 2012/07/12 11:05:15 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.208 2012/12/02 02:43:36 flameeyes Exp $
+
+*libpcre-8.32 (02 Dec 2012)
+
+  02 Dec 2012; Diego E. Pettenò <flameeyes@gentoo.org> +libpcre-8.32.ebuild:
+  Version bump.
 
   12 Jul 2012; Fabian Groffen <grobian@gentoo.org>
   +files/libpcre-8.31-madvise.patch, libpcre-8.31.ebuild:
