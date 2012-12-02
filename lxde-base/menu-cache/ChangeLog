@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/menu-cache
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/menu-cache/ChangeLog,v 1.27 2012/12/02 11:42:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/menu-cache/ChangeLog,v 1.28 2012/12/02 15:21:01 hwoarang Exp $
+
+  02 Dec 2012; Markos Chandras <hwoarang@gentoo.org> menu-cache-0.4.1.ebuild:
+  Move it to EAPI5 so we can use sub-slot deps in reverse dependencies
 
 *menu-cache-0.4.1 (02 Dec 2012)
 
