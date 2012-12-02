@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd95/dvd95-1.6_p0.ebuild,v 1.2 2012/05/03 07:51:49 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd95/dvd95-1.6_p0.ebuild,v 1.3 2012/12/02 16:19:53 sping Exp $
 
 EAPI=2
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="DVD95 is a Gnome application to convert DVD9 to DVD5."
 HOMEPAGE="http://dvd95.sourceforge.net/"
@@ -29,8 +29,10 @@ S=${WORKDIR}/${P/_}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.3_p2-desktop-entry.patch
-	sed -i -e "s:-O3:${CFLAGS}:" configure || die "sed failed"
+	epatch "${FILESDIR}"/${P}-link-libxml2.patch
+	sed -i -e "s:-O3:${CFLAGS}:" configure.in || die "sed failed"
 	echo "dvd95.glade" >> po/POTFILES.in || die "translation fix failed"
+	eautoreconf
 }
 
 src_configure() {
