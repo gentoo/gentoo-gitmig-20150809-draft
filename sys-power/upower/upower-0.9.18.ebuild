@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.18.ebuild,v 1.8 2012/12/01 19:31:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.18.ebuild,v 1.9 2012/12/02 22:24:23 ssuominen Exp $
 
 EAPI=4
 
@@ -24,8 +24,8 @@ COMMON_DEPEND=">=dev-libs/dbus-glib-0.100
 	>=sys-auth/polkit-0.104-r1
 	introspection? ( dev-libs/gobject-introspection )
 	kernel_linux? (
-		|| ( >=sys-fs/udev-171-r6[gudev] <sys-fs/udev-171[extras] )
 		virtual/libusb:1
+		virtual/udev[gudev]
 		ios? (
 			>=app-pda/libimobiledevice-1
 			>=app-pda/libplist-1
