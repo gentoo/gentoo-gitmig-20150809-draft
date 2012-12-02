@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-gsm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gsm/ChangeLog,v 1.2 2011/11/13 16:15:40 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gsm/ChangeLog,v 1.3 2012/12/02 16:14:47 eva Exp $
+
+  02 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  gst-plugins-gsm-0.10.22.ebuild:
+  EAPI bump due to pending eclass changes and slot pinning.
 
   13 Nov 2011; Markus Meier <maekke@gentoo.org> gst-plugins-gsm-0.10.22.ebuild:
   add ~x86, bug #384787
