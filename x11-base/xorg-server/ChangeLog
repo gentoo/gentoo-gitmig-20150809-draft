@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.692 2012/11/28 21:33:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.693 2012/12/02 22:19:54 ssuominen Exp $
+
+  02 Dec 2012; Samuli Suominen <ssuominen@gentoo.org>
+  xorg-server-1.9.5-r1.ebuild, xorg-server-1.10.6-r1.ebuild,
+  xorg-server-1.11.4-r1.ebuild, xorg-server-1.12.2.ebuild,
+  xorg-server-1.12.3.ebuild, xorg-server-1.12.4.ebuild,
+  xorg-server-1.13.0.ebuild, xorg-server-1.13.0-r1.ebuild:
+  Use virtual/udev instead of sys-fs/udev wrt #444398
 
   28 Nov 2012; Brent Baude <ranger@gentoo.org> xorg-server-1.13.0-r1.ebuild:
   Marking xorg-server-1.13.0-r1 ppc stable for bug 440872

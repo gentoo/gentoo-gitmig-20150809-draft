@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.10.6-r1.ebuild,v 1.8 2012/06/21 16:04:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.10.6-r1.ebuild,v 1.9 2012/12/02 22:19:54 ssuominen Exp $
 
 EAPI=4
 
@@ -52,7 +52,7 @@ RDEPEND=">=app-admin/eselect-opengl-1.0.8
 		>=media-libs/mesa-7.8_rc[nptl=]
 	)
 	tslib? ( >=x11-libs/tslib-1.0 x11-proto/xcalibrateproto )
-	udev? ( >=sys-fs/udev-150 )
+	udev? ( >=virtual/udev-150 )
 	>=x11-apps/xinit-1.3"
 
 # dmx+doc DEPEND is a hack, a proper solution needs to be implemented in the
