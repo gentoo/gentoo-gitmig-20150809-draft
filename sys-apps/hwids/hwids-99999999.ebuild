@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/hwids-99999999.ebuild,v 1.8 2012/12/02 12:03:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/hwids-99999999.ebuild,v 1.9 2012/12/02 12:15:04 ssuominen Exp $
 
 EAPI=5
 inherit udev
@@ -48,7 +48,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if use udev && udevadm 2>&1 | grep -qs hwdb; then
+	if use udev && [[ $(udevadm --help 2>&1) == *hwdb* ]]; then
 		udevadm hwdb --update
 	fi
 }
