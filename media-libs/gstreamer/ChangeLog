@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.313 2012/12/02 17:17:39 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.314 2012/12/02 17:21:40 eva Exp $
+
+  02 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org> gstreamer-0.10.36.ebuild:
+  Import cleaned up ebuild from gnome overlay.
 
   02 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
   -gstreamer-0.10.32-r1.ebuild, -files/gstreamer-0.10.32-fix-valve-drops.patch:
