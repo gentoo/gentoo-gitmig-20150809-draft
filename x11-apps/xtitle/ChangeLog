@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xtitle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xtitle/ChangeLog,v 1.1 2012/11/01 14:41:06 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xtitle/ChangeLog,v 1.2 2012/12/02 15:05:58 ago Exp $
+
+  02 Dec 2012; Agostino Sarubbo <ago@gentoo.org> xtitle-1.0.2.ebuild:
+  Stable for amd64, wrt bug #445596
 
 *xtitle-1.0.2 (01 Nov 2012)
 
