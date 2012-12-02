@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/lshw
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.103 2012/05/04 09:17:30 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.104 2012/12/02 07:00:28 flameeyes Exp $
+
+*lshw-02.16b-r2 (02 Dec 2012)
+
+  02 Dec 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/lshw-02.16b-gentoo.patch, +lshw-02.16b-r2.ebuild,
+  -files/lshw-02.16b-build-v2.patch, -files/lshw-02.16b-build.patch,
+  -lshw-02.16b-r1.ebuild, -lshw-02.16b.ebuild:
+  Remove old, stop installing oui.txt/manuf.txt (unused), don't use a full
+  search path for pci and usb ids which are always at the same path for Gentoo.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> lshw-02.15b.ebuild,
   lshw-02.16b.ebuild, lshw-02.16b-r1.ebuild:
@@ -383,4 +392,3 @@
   15 Apr 2003; Martin Holzer <mholzer@gentoo.org> Manifest, lshw-01.00.ebuild:
   Adding initial ebuild submitted by Marc Hildebrand
   <marc.hildebrand@t-online.de> in #19200.
-

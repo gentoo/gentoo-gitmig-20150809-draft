@@ -75,16 +75,17 @@ Index: lshw-B.02.16/src/Makefile
  ifneq ($(shell $(LD) --help 2| grep -- --as-needed), )
  	LDFLAGS+= -Wl,--as-needed
  endif
-@@ -39,7 +39,7 @@ export CXXFLAGS
+@@ -39,27 +39,25 @@ export CXXFLAGS
  export LIBS
  export LDFLAGS
  
 -DATAFILES = pci.ids usb.ids oui.txt manuf.txt
-+DATAFILES = oui.txt manuf.txt
+-
+-all: $(PACKAGENAME) $(PACKAGENAME).1 $(DATAFILES)
++all: $(PACKAGENAME) $(PACKAGENAME).1
  
- all: $(PACKAGENAME) $(PACKAGENAME).1 $(DATAFILES)
- 
-@@ -48,18 +48,18 @@ all: $(PACKAGENAME) $(PACKAGENAME).1 $(D
+ .cc.o:
+ 	$(CXX) $(CXXFLAGS) -c $< -o $@
  
  .PHONY: core
  core:
@@ -106,7 +107,7 @@ Index: lshw-B.02.16/src/Makefile
  
  .PHONY: nologo
  nologo:
-@@ -70,7 +70,6 @@ static: $(PACKAGENAME)-static
+@@ -70,7 +68,6 @@ static: $(PACKAGENAME)-static
  
  $(PACKAGENAME)-static: core core/lib$(PACKAGENAME).a $(PACKAGENAME).o
  	$(CXX) $(LDSTATIC) $(LDFLAGS) -o $@ $(PACKAGENAME).o $(LIBS)
@@ -114,7 +115,7 @@ Index: lshw-B.02.16/src/Makefile
  
  .PHONY: compressed
  compressed: $(PACKAGENAME)-compressed
-@@ -93,14 +92,14 @@ oui.txt:
+@@ -93,14 +90,13 @@ oui.txt:
  manuf.txt:
  	wget -O $@ http://anonsvn.wireshark.org/wireshark/trunk/manuf
  
@@ -125,13 +126,13 @@ Index: lshw-B.02.16/src/Makefile
  	$(INSTALL) -d -m 0755 $(DESTDIR)/$(MANDIR)/man1
  	$(INSTALL) -m 0644 $(PACKAGENAME).1 $(DESTDIR)/$(MANDIR)/man1
  	$(INSTALL) -d -m 0755 $(DESTDIR)/$(DATADIR)/$(PACKAGENAME)
- 	$(INSTALL) -m 0644 $(DATAFILES) $(DESTDIR)/$(DATADIR)/$(PACKAGENAME)
+-	$(INSTALL) -m 0644 $(DATAFILES) $(DESTDIR)/$(DATADIR)/$(PACKAGENAME)
 -	make -C po install
 +	$(MAKE) -C po install
  
  install-gui: gui
  	$(INSTALL) -d -m 0755 $(DESTDIR)/$(SBINDIR)
-@@ -112,8 +111,8 @@ install-gui: gui
+@@ -112,8 +108,8 @@ install-gui: gui
  	
  clean:
  	rm -f $(PACKAGENAME).o $(PACKAGENAME) $(PACKAGENAME)-static $(PACKAGENAME)-compressed
@@ -142,3 +143,29 @@ Index: lshw-B.02.16/src/Makefile
  
  .timestamp:
  	date --utc +%Y%m%d%H%M%S > $@
+Index: lshw-B.02.16/src/core/pci.cc
+===================================================================
+--- lshw-B.02.16.orig/src/core/pci.cc
++++ lshw-B.02.16/src/core/pci.cc
+@@ -17,7 +17,7 @@ __ID("@(#) $Id: pci.cc 2433 2012-01-10 2
+ 
+ #define PROC_BUS_PCI "/proc/bus/pci"
+ #define SYS_BUS_PCI "/sys/bus/pci"
+-#define PCIID_PATH DATADIR"/pci.ids:/usr/share/lshw/pci.ids:/usr/local/share/pci.ids:/usr/share/pci.ids:/etc/pci.ids:/usr/share/hwdata/pci.ids:/usr/share/misc/pci.ids"
++#define PCIID_PATH "/usr/share/misc/pci.ids"
+ 
+ #define PCI_CLASS_REVISION      0x08              /* High 24 bits are class, low 8 revision */
+ #define PCI_VENDOR_ID           0x00    /* 16 bits */
+Index: lshw-B.02.16/src/core/usb.cc
+===================================================================
+--- lshw-B.02.16.orig/src/core/usb.cc
++++ lshw-B.02.16/src/core/usb.cc
+@@ -27,7 +27,7 @@
+ 
+ #define PROCBUSUSBDEVICES "/proc/bus/usb/devices"
+ #define SYSBUSUSBDEVICES "/sys/bus/usb/devices"
+-#define USBID_PATH DATADIR"/usb.ids:/usr/share/lshw/usb.ids:/usr/local/share/usb.ids:/usr/share/usb.ids:/etc/usb.ids:/usr/share/hwdata/usb.ids:/usr/share/misc/usb.ids"
++#define USBID_PATH "/usr/share/misc/usb.ids"
+ 
+ #define USB_CLASS_PER_INTERFACE         0         /* for DeviceClass */
+ #define USB_CLASS_AUDIO                 1
