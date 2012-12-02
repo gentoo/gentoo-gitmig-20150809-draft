@@ -1,6 +1,9 @@
-diff -ur sslwrap206.orig/apps.h sslwrap206/apps.h
---- sslwrap206.orig/apps.h	2000-11-12 00:01:25.000000000 +0200
-+++ sslwrap206/apps.h	2012-12-02 06:27:36.774823569 +0200
+http://bugs.gentoo.org/34151
+http://bugs.gentoo.org/146828
+http://bugs.gentoo.org/335001
+
+--- apps.h
++++ apps.h
 @@ -65,9 +65,9 @@
  #include "../e_os.h"
  #endif
@@ -14,9 +17,8 @@ diff -ur sslwrap206.orig/apps.h sslwrap206/apps.h
  /*#include "progs.h"*/
  
  #ifdef WIN16
-diff -ur sslwrap206.orig/Makefile sslwrap206/Makefile
---- sslwrap206.orig/Makefile	2000-11-12 00:01:25.000000000 +0200
-+++ sslwrap206/Makefile	2012-12-02 06:34:57.362496172 +0200
+--- Makefile
++++ Makefile
 @@ -1,28 +1,9 @@
 -
  SRC = s_server.c s_socket.c s_cb.c
@@ -49,9 +51,8 @@ diff -ur sslwrap206.orig/Makefile sslwrap206/Makefile
 -
 -
 -
-diff -ur sslwrap206.orig/s_cb.c sslwrap206/s_cb.c
---- sslwrap206.orig/s_cb.c	2000-11-12 00:01:25.000000000 +0200
-+++ sslwrap206/s_cb.c	2012-12-02 06:27:36.078783978 +0200
+--- s_cb.c
++++ s_cb.c
 @@ -63,9 +63,9 @@
  #include "apps.h"
  #undef NON_MAIN
@@ -65,22 +66,8 @@ diff -ur sslwrap206.orig/s_cb.c sslwrap206/s_cb.c
  #include "s_apps.h"
  
  int verify_depth=0;
-diff -ur sslwrap206.orig/s_server.c sslwrap206/s_server.c
---- sslwrap206.orig/s_server.c	2000-11-12 00:11:18.000000000 +0200
-+++ sslwrap206/s_server.c	2012-12-02 06:27:36.080784083 +0200
-@@ -27,11 +27,7 @@
-  * Version 2.0.5
-  * Compatibility with OpenSSL 0.9.4
-  *
-- * Version 2.0.6
-- * Changed Malloc to malloc and Free to free
-- * Changed #include "err.h" to #include OPENSSL"err.h"
-- *
-- * Copyright 1997-9, 2000 Rick R. Kaseguma
-+ * Copyright 1997-9 Rick R. Kaseguma
-  * All rights reserved
-  *
-  * Feel free to use this as you want for commercial or non-commercial use,
+--- s_server.c
++++ s_server.c
 @@ -121,14 +117,14 @@
  #ifdef WIN16
  #define APPS_WIN16
@@ -129,9 +116,8 @@ diff -ur sslwrap206.orig/s_server.c sslwrap206/s_server.c
  		}
  
  	return(ret);
-diff -ur sslwrap206.orig/s_socket.c sslwrap206/s_socket.c
---- sslwrap206.orig/s_socket.c	2000-11-12 00:03:47.000000000 +0200
-+++ sslwrap206/s_socket.c	2012-12-02 06:27:36.081784132 +0200
+--- s_socket.c
++++ s_socket.c
 @@ -67,7 +67,7 @@
  #undef USE_SOCKETS
  #undef NON_MAIN
