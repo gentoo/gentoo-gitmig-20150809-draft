@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-24.0.1312.25.ebuild,v 1.1 2012/11/27 21:32:06 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-24.0.1312.25.ebuild,v 1.2 2012/12/02 22:21:32 ssuominen Exp $
 
 EAPI="5"
 PYTHON_DEPEND="2:2.6"
@@ -47,7 +47,7 @@ RDEPEND="app-arch/bzip2
 	pulseaudio? ( media-sound/pulseaudio )
 	sys-apps/dbus
 	sys-libs/zlib[minizip]
-	sys-fs/udev
+	virtual/udev
 	virtual/libusb:1
 	x11-libs/gtk+:2
 	x11-libs/libXinerama
