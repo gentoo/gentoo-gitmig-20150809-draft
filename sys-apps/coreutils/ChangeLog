@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.355 2012/11/30 18:08:06 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.356 2012/12/02 10:38:59 maekke Exp $
+
+  02 Dec 2012; Markus Meier <maekke@gentoo.org> coreutils-8.20.ebuild:
+  arm stable, bug #443536
 
   30 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> coreutils-8.20.ebuild:
   Stable on amd64, wrt bug #443536
