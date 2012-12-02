@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.762 2012/11/30 23:47:33 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.763 2012/12/02 05:01:27 phajdan.jr Exp $
+
+  02 Dec 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  files/chromium-system-ffmpeg-r0.patch:
+  Fix build with USE="-system-ffmpeg", bug #444432 by victor2008.
 
 *chromium-24.0.1312.27 (30 Nov 2012)
 
