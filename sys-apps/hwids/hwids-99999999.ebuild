@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/hwids-99999999.ebuild,v 1.3 2012/12/02 06:42:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/hwids-99999999.ebuild,v 1.4 2012/12/02 06:47:35 ssuominen Exp $
 
 EAPI="4"
 
@@ -29,5 +29,5 @@ src_compile() {
 
 src_install() {
 	insinto /usr/share/misc
-	doins {usb,pci}.ids{,.gz} oid.txt
+	doins {usb,pci}.ids{,.gz} oui.txt
 }
