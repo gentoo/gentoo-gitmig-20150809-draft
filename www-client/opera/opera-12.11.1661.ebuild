@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-12.11.1661.ebuild,v 1.4 2012/11/21 10:17:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-12.11.1661.ebuild,v 1.5 2012/12/02 16:53:22 eva Exp $
 
 EAPI=4
 inherit eutils fdo-mime gnome2-utils multilib pax-utils versionator
@@ -57,9 +57,9 @@ KDERDEPEND="
 GSTRDEPEND="
 	dev-libs/glib:2
 	dev-libs/libxml2
-	media-libs/gst-plugins-base
-	media-libs/gstreamer
-	media-plugins/gst-plugins-meta
+	media-libs/gst-plugins-base:0.10
+	media-libs/gstreamer:0.10
+	media-plugins/gst-plugins-meta:0.10
 "
 RDEPEND="
 	media-libs/fontconfig
