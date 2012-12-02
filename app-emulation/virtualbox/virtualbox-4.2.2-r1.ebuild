@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.2.2-r1.ebuild,v 1.2 2012/11/28 10:19:53 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.2.2-r1.ebuild,v 1.3 2012/12/02 22:48:16 ssuominen Exp $
 
 EAPI=4
 
@@ -38,7 +38,7 @@ RDEPEND="!app-emulation/virtualbox-bin
 	dev-libs/openssl
 	dev-libs/libxml2
 	sys-libs/zlib
-	>=sys-fs/udev-171-r6
+	>=virtual/udev-171
 	!headless? (
 		qt4? (
 			x11-libs/qt-gui:4
