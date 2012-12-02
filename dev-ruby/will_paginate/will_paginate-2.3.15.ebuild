@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/will_paginate/will_paginate-2.3.15.ebuild,v 1.4 2011/09/26 11:31:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/will_paginate/will_paginate-2.3.15.ebuild,v 1.5 2012/12/02 14:05:20 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -13,7 +13,7 @@ inherit ruby-fakegem
 DESCRIPTION="Most awesome pagination solution for Ruby  "
 HOMEPAGE="http://github.com/mislav/will_paginate/"
 
-LICENSE="as-is"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~x86-macos"
 IUSE=""

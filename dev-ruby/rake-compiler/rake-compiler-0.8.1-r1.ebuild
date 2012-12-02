@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/rake-compiler-0.8.1-r1.ebuild,v 1.3 2012/10/28 17:19:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/rake-compiler-0.8.1-r1.ebuild,v 1.4 2012/12/02 13:59:57 graaff Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ree18 ruby19 jruby"
@@ -14,7 +14,7 @@ inherit ruby-fakegem eutils
 
 DESCRIPTION="Provide a standard and simplified way to build and package Ruby extensions"
 HOMEPAGE="http://github.com/luislavena/rake-compiler"
-LICENSE="as-is" # truly
+LICENSE="MIT"
 
 SRC_URI="http://github.com/luislavena/${PN}/tarball/v${PV} -> ${P}.tar.gz"
 RUBY_S="luislavena-${PN}-*"
