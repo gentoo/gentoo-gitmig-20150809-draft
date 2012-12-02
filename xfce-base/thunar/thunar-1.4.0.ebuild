@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-1.4.0.ebuild,v 1.10 2012/11/28 12:31:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-1.4.0.ebuild,v 1.11 2012/12/02 22:15:33 ssuominen Exp $
 
 EAPI=5
 inherit virtualx xfconf
@@ -28,7 +28,7 @@ COMMON_DEPEND=">=dev-lang/perl-5.6
 	libnotify? ( >=x11-libs/libnotify-0.7 )
 	pcre? ( >=dev-libs/libpcre-6 )
 	startup-notification? ( x11-libs/startup-notification )
-	udev? ( || ( >=sys-fs/udev-171-r5[gudev] <sys-fs/udev-171[extras] ) )
+	udev? ( virtual/udev[gudev] )
 	xfce_plugins_trash? ( >=xfce-base/xfce4-panel-4.10 )"
 RDEPEND="${COMMON_DEPEND}
 	>=dev-util/desktop-file-utils-0.20-r1
@@ -38,8 +38,8 @@ RDEPEND="${COMMON_DEPEND}
 	xfce_plugins_trash? ( ${GVFS_DEPEND} )"
 DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
-	virtual/pkgconfig
-	sys-devel/gettext"
+	sys-devel/gettext
+	virtual/pkgconfig"
 REQUIRED_USE="xfce_plugins_trash? ( dbus )"
 
 S=${WORKDIR}/${MY_P}
