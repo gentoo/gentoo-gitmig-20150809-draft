@@ -1,0 +1,161 @@
+diff -ur sslwrap206.orig/apps.h sslwrap206/apps.h
+--- sslwrap206.orig/apps.h	2000-11-12 00:01:25.000000000 +0200
++++ sslwrap206/apps.h	2012-12-02 06:27:36.774823569 +0200
+@@ -65,9 +65,9 @@
+ #include "../e_os.h"
+ #endif
+ 
+-#include OPENSSL"buffer.h"
+-#include OPENSSL"bio.h"
+-#include OPENSSL"crypto.h"
++#include "openssl/buffer.h"
++#include "openssl/bio.h"
++#include "openssl/crypto.h"
+ /*#include "progs.h"*/
+ 
+ #ifdef WIN16
+diff -ur sslwrap206.orig/Makefile sslwrap206/Makefile
+--- sslwrap206.orig/Makefile	2000-11-12 00:01:25.000000000 +0200
++++ sslwrap206/Makefile	2012-12-02 06:34:57.362496172 +0200
+@@ -1,28 +1,9 @@
+-
+ SRC = s_server.c s_socket.c s_cb.c
+-
+-# For Solaris2.6
+-#EXTLIBS = -lxnet
+-
+-# Debug/Optimizations
+-#OPT = -g
+-OPT = -O2
+-
+-# Define 
++LIBS = `pkg-config --libs openssl`
+ OPENSSL="\"openssl/\""
+-#OPENSSL=""
+ 
+-all :
+-	gcc -o sslwrap ${SRC} ${OPT} -DFLAT_INC -DOPENSSL=${OPENSSL} \
+-		-L/usr/local/ssl/lib -lssl -lcrypto \
+-		-I/usr/local/ssl/include \
+-		${EXTLIBS}
++all:
++	$(CC) $(LDFLAGS) $(CFLAGS) -o sslwrap ${SRC} -DFLAT_INC -DOPENSSL=${OPENSSL} ${LIBS}
+ 
+ clean:
+ 	rm -f sslwrap *.o *~
+-
+-
+-
+-
+-
+-
+diff -ur sslwrap206.orig/s_cb.c sslwrap206/s_cb.c
+--- sslwrap206.orig/s_cb.c	2000-11-12 00:01:25.000000000 +0200
++++ sslwrap206/s_cb.c	2012-12-02 06:27:36.078783978 +0200
+@@ -63,9 +63,9 @@
+ #include "apps.h"
+ #undef NON_MAIN
+ #undef USE_SOCKETS
+-#include OPENSSL"err.h"
+-#include OPENSSL"x509.h"
+-#include OPENSSL"ssl.h"
++#include "openssl/err.h"
++#include "openssl/x509.h"
++#include "openssl/ssl.h"
+ #include "s_apps.h"
+ 
+ int verify_depth=0;
+diff -ur sslwrap206.orig/s_server.c sslwrap206/s_server.c
+--- sslwrap206.orig/s_server.c	2000-11-12 00:11:18.000000000 +0200
++++ sslwrap206/s_server.c	2012-12-02 06:27:36.080784083 +0200
+@@ -27,11 +27,7 @@
+  * Version 2.0.5
+  * Compatibility with OpenSSL 0.9.4
+  *
+- * Version 2.0.6
+- * Changed Malloc to malloc and Free to free
+- * Changed #include "err.h" to #include OPENSSL"err.h"
+- *
+- * Copyright 1997-9, 2000 Rick R. Kaseguma
++ * Copyright 1997-9 Rick R. Kaseguma
+  * All rights reserved
+  *
+  * Feel free to use this as you want for commercial or non-commercial use,
+@@ -121,14 +117,14 @@
+ #ifdef WIN16
+ #define APPS_WIN16
+ #endif
+-#include OPENSSL"lhash.h"
+-#include OPENSSL"bn.h"
++#include "openssl/lhash.h"
++#include "openssl/bn.h"
+ #define USE_SOCKETS
+ #include "apps.h"
+-#include OPENSSL"err.h"
+-#include OPENSSL"pem.h"
+-#include OPENSSL"x509.h"
+-#include OPENSSL"ssl.h"
++#include "err.h"
++#include "openssl/pem.h"
++#include "openssl/x509.h"
++#include "openssl/ssl.h"
+ #include "s_apps.h"
+ 
+ #ifndef NOPROTO
+@@ -468,7 +464,7 @@
+ 
+ 	if (bugs) SSL_CTX_set_options(ctx,SSL_OP_ALL);
+ 	if (hack) SSL_CTX_set_options(ctx,SSL_OP_NETSCAPE_DEMO_CIPHER_CHANGE_BUG);
+-	if (hack) SSL_CTX_set_options(ctx,SSL_OP_NON_EXPORT_FIRST);
++	if (hack) SSL_CTX_set_options(ctx,SSL_OP_CIPHER_SERVER_PREFERENCE);
+ 
+ 	if (state) SSL_CTX_set_info_callback(ctx,apps_ssl_info_callback);
+ 
+@@ -622,7 +618,7 @@
+ #endif /*NO_EXEC*/
+ 	}
+ 
+-	if ((buf=malloc(BUFSIZZ)) == NULL)
++	if ((buf=CRYPTO_malloc(BUFSIZZ,__FILE__,__LINE__)) == NULL)
+ 		{
+ 		BIO_printf(bio_err,"out of memory\n");
+ 		goto err;
+@@ -729,7 +725,7 @@
+ 	if (buf != NULL)
+ 		{
+ 		memset(buf,0,BUFSIZZ);
+-		free(buf);
++		CRYPTO_free(buf);
+ 		}
+ 
+ 	return(ret);
+diff -ur sslwrap206.orig/s_socket.c sslwrap206/s_socket.c
+--- sslwrap206.orig/s_socket.c	2000-11-12 00:03:47.000000000 +0200
++++ sslwrap206/s_socket.c	2012-12-02 06:27:36.081784132 +0200
+@@ -67,7 +67,7 @@
+ #undef USE_SOCKETS
+ #undef NON_MAIN
+ #include "s_apps.h"
+-#include OPENSSL"ssl.h"
++#include "openssl/ssl.h"
+ 
+ #ifndef NOPROTO
+ static struct hostent *GetHostByName(char *name);
+@@ -305,7 +305,7 @@
+ 			return(0);
+ 			}
+ 		i=(*cb)(name,sock, sock);
+-		if (name != NULL) free(name);
++		if (name != NULL) CRYPTO_free(name);
+ 		SHUTDOWN(sock);
+ 		if (i < 0)
+ 			{
+@@ -410,7 +410,7 @@
+ 		}
+ 	else
+ 		{
+-		if ((*host=(char *)malloc(strlen(h1->h_name)+1)) == NULL)
++		if ((*host=(char *)CRYPTO_malloc(strlen(h1->h_name)+1,__FILE__,__LINE__)) == NULL)
+ 			{
+ 			perror("Malloc");
+ 			return(0);
