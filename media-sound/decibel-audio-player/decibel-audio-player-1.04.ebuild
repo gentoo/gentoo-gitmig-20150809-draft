@@ -1,6 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/decibel-audio-player/decibel-audio-player-1.04.ebuild,v 1.4 2011/11/20 10:18:45 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/decibel-audio-player/decibel-audio-player-1.04.ebuild,v 1.5 2012/12/02 17:00:20 eva Exp $
+
+EAPI="1"
 
 DESCRIPTION="A GTK+ audio player which aims at being very straightforward to use."
 HOMEPAGE="http://decibel.silent-blade.org"
@@ -13,18 +15,18 @@ IUSE="aac cdda gnome gnome-keyring libnotify musepack wavpack"
 
 RDEPEND="media-libs/mutagen
 	dev-python/dbus-python
-	dev-python/gst-python
+	dev-python/gst-python:0.10
 	dev-python/imaging
-	>=media-plugins/gst-plugins-meta-0.10-r2
-	aac? ( media-plugins/gst-plugins-faad )
-	cdda? ( || ( media-plugins/gst-plugins-cdio
-		media-plugins/gst-plugins-cdparanoia )
+	>=media-plugins/gst-plugins-meta-0.10-r2:0.10
+	aac? ( media-plugins/gst-plugins-faad:0.10 )
+	cdda? ( || ( media-plugins/gst-plugins-cdio:0.10
+		media-plugins/gst-plugins-cdparanoia:0.10 )
 		dev-python/cddb-py )
 	gnome? ( dev-python/gnome-python-base )
 	gnome-keyring? ( dev-python/gnome-keyring-python )
 	libnotify? ( dev-python/notify-python )
-	musepack? ( media-plugins/gst-plugins-musepack )
-	wavpack? ( media-plugins/gst-plugins-wavpack )"
+	musepack? ( media-plugins/gst-plugins-musepack:0.10 )
+	wavpack? ( media-plugins/gst-plugins-wavpack:0.10 )"
 DEPEND="sys-devel/gettext"
 
 src_install() {
