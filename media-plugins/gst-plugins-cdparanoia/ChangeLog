@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/gst-plugins-cdparanoia
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-cdparanoia/ChangeLog,v 1.182 2012/10/21 07:59:36 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-cdparanoia/ChangeLog,v 1.183 2012/12/02 16:05:31 eva Exp $
+
+  02 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  -gst-plugins-cdparanoia-0.10.32.ebuild,
+  gst-plugins-cdparanoia-0.10.35.ebuild:
+  Clean up old revision. EAPI bump stable due to pending eclass changes.
 
 *gst-plugins-cdparanoia-0.10.36 (21 Oct 2012)
 
