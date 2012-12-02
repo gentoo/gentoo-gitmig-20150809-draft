@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gst-plugins-base
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.188 2012/11/07 21:20:49 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.189 2012/12/02 17:23:40 eva Exp $
+
+  02 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  -gst-plugins-base-0.10.32.ebuild, gst-plugins-base-0.10.36.ebuild:
+  Clean up old revisions. Update ebuild to use new eclasses.
 
   07 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   gst-plugins-base-0.10.32.ebuild, gst-plugins-base-0.10.35.ebuild,
