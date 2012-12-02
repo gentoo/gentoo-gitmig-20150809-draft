@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-ogg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ogg/ChangeLog,v 1.199 2012/12/02 16:27:29 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ogg/ChangeLog,v 1.200 2012/12/02 17:46:51 eva Exp $
+
+  02 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  gst-plugins-ogg-0.10.36.ebuild:
+  Update with ebuild from gnome overlay.
 
   02 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
   -gst-plugins-ogg-0.10.32.ebuild, gst-plugins-ogg-0.10.35.ebuild:

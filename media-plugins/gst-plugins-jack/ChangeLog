@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-jack
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-jack/ChangeLog,v 1.13 2012/12/02 16:15:44 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-jack/ChangeLog,v 1.14 2012/12/02 17:42:03 eva Exp $
+
+  02 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  gst-plugins-jack-0.10.31.ebuild:
+  Update with ebuild from gnome overlay.
 
   02 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
   -gst-plugins-jack-0.10.28.ebuild, gst-plugins-jack-0.10.30.ebuild:
