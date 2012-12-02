@@ -1,6 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-x/gst-plugins-x-0.10.35.ebuild,v 1.9 2012/10/21 08:02:19 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-x/gst-plugins-x-0.10.35.ebuild,v 1.10 2012/12/02 16:41:59 eva Exp $
+
+EAPI="3"
 
 inherit gst-plugins-base
 

@@ -1,6 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-xvideo/gst-plugins-xvideo-0.10.35.ebuild,v 1.9 2012/10/21 08:02:38 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-xvideo/gst-plugins-xvideo-0.10.35.ebuild,v 1.10 2012/12/02 16:44:15 eva Exp $
+
+EAPI="3"
 
 inherit gst-plugins-base
 

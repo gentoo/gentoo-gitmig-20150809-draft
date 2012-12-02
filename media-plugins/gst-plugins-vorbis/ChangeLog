@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/gst-plugins-vorbis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vorbis/ChangeLog,v 1.211 2012/10/21 08:01:52 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vorbis/ChangeLog,v 1.212 2012/12/02 16:39:45 eva Exp $
+
+  02 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  -gst-plugins-vorbis-0.10.32.ebuild, gst-plugins-vorbis-0.10.35.ebuild:
+  Clean up old revisions. EAPI bump stable due to pending eclass changes and
+  slot pinning.
 
 *gst-plugins-vorbis-0.10.36 (21 Oct 2012)
 

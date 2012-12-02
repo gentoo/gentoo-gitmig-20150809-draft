@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/gst-plugins-x
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-x/ChangeLog,v 1.127 2012/10/21 08:02:19 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-x/ChangeLog,v 1.128 2012/12/02 16:41:59 eva Exp $
+
+  02 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  -gst-plugins-x-0.10.32.ebuild, gst-plugins-x-0.10.35.ebuild:
+  Clean up old revisions. EAPI bump stable due to pending eclass changes and
+  slot pinning.
 
 *gst-plugins-x-0.10.36 (21 Oct 2012)
 
