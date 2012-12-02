@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/3to2/3to2-1.0.ebuild,v 1.1 2012/11/09 00:15:59 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/3to2/3to2-1.0.ebuild,v 1.2 2012/12/02 19:23:54 mgorny Exp $
 
 EAPI=4
 
@@ -15,6 +15,3 @@ LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
-
-DEPEND="${PYTHON_DEPS}"
-RDEPEND="${DEPEND}"
