@@ -1,6 +1,11 @@
 # ChangeLog for games-roguelike/angband
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/ChangeLog,v 1.45 2012/05/02 21:06:17 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/ChangeLog,v 1.46 2012/12/02 20:23:16 tupone Exp $
+
+*angband-3.4.1 (02 Dec 2012)
+
+  02 Dec 2012; Tupone Alfredo <tupone@gentoo.org> +angband-3.4.1.ebuild:
+  Version bump to 3.4.1 Bug #442430 by Ivan S. Titov
 
   02 May 2012; Jeff Horelick <jdhore@gentoo.org> angband-3.2.0.ebuild,
   angband-3.3.2.ebuild:
