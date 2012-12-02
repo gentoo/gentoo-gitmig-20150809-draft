@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/packagekit-base
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/ChangeLog,v 1.28 2012/10/16 00:48:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/ChangeLog,v 1.29 2012/12/02 22:50:49 ssuominen Exp $
+
+  02 Dec 2012; Samuli Suominen <ssuominen@gentoo.org>
+  packagekit-base-0.6.22.ebuild, packagekit-base-0.7.4.ebuild:
+  Use virtual/udev instead of sys-fs/udev wrt #444398
 
   16 Oct 2012; Jeroen Roovers <jer@gentoo.org> packagekit-base-0.6.22.ebuild,
   packagekit-base-0.7.4.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/packagekit-base-0.7.4.ebuild,v 1.7 2012/10/16 00:48:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/packagekit-base-0.7.4.ebuild,v 1.8 2012/12/02 22:50:49 ssuominen Exp $
 
 EAPI="3"
 
@@ -31,7 +31,7 @@ CDEPEND="connman? ( net-misc/connman )
 		x11-libs/pango
 	)
 	policykit? ( >=sys-auth/polkit-0.98 )
-	udev? ( || ( >=sys-fs/udev-171[gudev] >=sys-fs/udev-145[extras] ) )
+	udev? ( virtual/udev[gudev] )
 	dev-db/sqlite:3
 	>=dev-libs/dbus-glib-0.74
 	>=dev-libs/glib-2.26.1:2
