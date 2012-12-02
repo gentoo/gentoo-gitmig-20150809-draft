@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.372 2012/12/01 20:20:20 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.373 2012/12/02 16:13:57 grobian Exp $
+
+  02 Dec 2012; Fabian Groffen <grobian@gentoo.org> darwin/package.mask:
+  Mask cmake-2.8.10.2 on Darwin for compilation failures
 
   01 Dec 2012; Fabian Groffen <grobian@gentoo.org> make.defaults:
   Override PYTHON_TARGETS with versions we have in Prefix
