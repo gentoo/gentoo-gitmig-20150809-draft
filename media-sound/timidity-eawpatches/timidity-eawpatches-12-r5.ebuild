@@ -1,8 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-eawpatches/timidity-eawpatches-12-r5.ebuild,v 1.13 2007/09/29 09:06:03 drac Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-eawpatches/timidity-eawpatches-12-r5.ebuild,v 1.14 2012/12/02 15:51:54 ulm Exp $
 
 S=${WORKDIR}/eawpats
 
@@ -10,9 +8,10 @@ DESCRIPTION="Eric Welsh's GUS patches for TiMidity"
 HOMEPAGE="http://www.stardate.bc.ca/eawpatches/html/default.htm"
 SRC_URI="http://5hdumat.samizdat.net/music/eawpats${PV}_full.tar.gz"
 
-LICENSE="as-is"
+LICENSE="free-noncomm"
 SLOT="0"
 KEYWORDS="amd64 arm hppa ppc ppc64 sparc x86 ~x86-fbsd"
+IUSE=""
 
 # These can be used for libmodplug too, so don't depend on timidity++
 DEPEND="app-admin/eselect-timidity"
