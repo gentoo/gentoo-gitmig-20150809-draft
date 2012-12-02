@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-9999.ebuild,v 1.21 2012/11/30 20:18:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-9999.ebuild,v 1.22 2012/12/02 11:14:49 hwoarang Exp $
 
 EAPI="2"
 inherit multilib autotools eutils python git-2
@@ -36,7 +36,7 @@ DEPEND="${RDEPEND}
 	x11-proto/xineramaproto"
 
 src_prepare() {
-	use python && python_convert_shebangs -r 2 . 
+	use python && python_convert_shebangs -r 2 .
 	epatch "${FILESDIR}"/${PN}-gnome-session-3.4.9.patch
 	# Lets try to replace docbook-to-man with docbook2man.pl since
 	# Gentoo does not provide (why?) a docbook-to-man package
