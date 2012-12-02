@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.542 2012/11/30 11:31:58 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.543 2012/12/02 20:38:24 maekke Exp $
+
+  02 Dec 2012; Markus Meier <maekke@gentoo.org> samba-3.6.9.ebuild:
+  add ~arm, bug #444688
 
   30 Nov 2012; Lars Wendler <polynomial-c@gentoo.org> files/4.0/samba4.confd:
   Fixed comments in conf.d file. Thanks to Torsten Kurbad for providing a patch
