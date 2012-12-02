@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-0.6.0.0.ebuild,v 1.1 2012/09/13 09:53:38 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-0.6.0.0.ebuild,v 1.2 2012/12/02 22:46:07 ssuominen Exp $
 
 EAPI="4"
 GNOME_ORG_MODULE="ModemManager"
 
-inherit gnome.org user multilib toolchain-funcs
+inherit gnome.org user multilib toolchain-funcs udev
 
 DESCRIPTION="Modem and mobile broadband management libraries"
 HOMEPAGE="http://cgit.freedesktop.org/ModemManager/ModemManager/"
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 IUSE="doc policykit test"
 
 RDEPEND=">=dev-libs/glib-2.18:2
-	|| ( >=sys-fs/udev-171[gudev] >=sys-fs/udev-145[extras] )
+	virtual/udev[gudev]
 	>=dev-libs/dbus-glib-0.86
 	net-dialup/ppp
 	policykit? ( >=sys-auth/polkit-0.99 )"
@@ -36,11 +36,9 @@ src_configure() {
 		pppd_plugin_dir="pppd/2.4.5"
 	fi
 
-	local udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
-
 	econf \
 		--disable-more-warnings \
-		--with-udev-base-dir="${udevdir}" \
+		--with-udev-base-dir="$(udev_get_udevdir)" \
 		--disable-static \
 		--with-dist-version=${PVR} \
 		--with-pppd-plugin-dir="/usr/$(get_libdir)/${pppd_plugin_dir}" \
