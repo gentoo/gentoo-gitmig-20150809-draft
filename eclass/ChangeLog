@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.538 2012/12/01 16:26:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.539 2012/12/02 11:07:09 pacho Exp $
+
+  02 Dec 2012; Pacho Ramos <pacho@gentoo.org> gnome2.eclass:
+  Always pass --disable-gtk-doc for eapi >= 5 as we don't want docs to get
+  rebuilt as discussed with gnome team. Thanks a lot to Gilles for working on
+  this.
 
   01 Dec 2012; Michał Górny <mgorny@gentoo.org> autotools-multilib.eclass,
   autotools-utils.eclass, cmake-utils.eclass:

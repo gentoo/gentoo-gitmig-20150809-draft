@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.114 2012/11/27 00:48:01 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.115 2012/12/02 11:07:09 pacho Exp $
 
 # @ECLASS: gnome2.eclass
 # @MAINTAINER:
@@ -122,9 +122,19 @@ gnome2_src_configure() {
 		fi
 	fi
 
-	# Prevent a QA warning
-	if has doc ${IUSE} ; then
-		grep -q "enable-gtk-doc" configure && G2CONF="${G2CONF} $(use_enable doc gtk-doc)"
+	# Starting with EAPI=5, we consider packages installing gtk-doc to be
+	# handled by adding DEPEND="dev-util/gtk-doc-am" which provides tools to
+	# relink URLs in documentation to already installed documentation.
+	# This decision also greatly helps with constantly broken doc generation.
+	# Remember to drop 'doc' USE flag from your package if it was only used to
+	# rebuild docs.
+	# Preserve old behavior for older EAPI.
+	if grep -q "enable-gtk-doc" configure ; then
+		if has ${EAPI-0} 0 1 2 3 4 && has doc ${IUSE} ; then
+			G2CONF="${G2CONF} $(use_enable doc gtk-doc)"
+		else
+			G2CONF="${G2CONF} --disable-gtk-doc"
+		fi
 	fi
 
 	# Pass --disable-maintainer-mode when needed
