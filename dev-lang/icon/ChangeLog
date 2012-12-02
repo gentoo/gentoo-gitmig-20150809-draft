@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/icon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/ChangeLog,v 1.48 2012/12/02 06:17:26 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/ChangeLog,v 1.49 2012/12/02 06:19:45 radhermit Exp $
+
+  02 Dec 2012; Tim Harder <radhermit@gentoo.org> icon-9.4.3-r5.ebuild,
+  icon-9.5.0.ebuild:
+  Fix LICENSE (bug #444980 by ulm).
 
   02 Dec 2012; Tim Harder <radhermit@gentoo.org> -icon-9.4.2.ebuild,
   -icon-9.4.3.ebuild, -icon-9.4.3-r1.ebuild, -icon-9.4.3-r2.ebuild,

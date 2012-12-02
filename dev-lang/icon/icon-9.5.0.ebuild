@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/icon-9.5.0.ebuild,v 1.3 2012/10/04 15:21:19 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icon/icon-9.5.0.ebuild,v 1.4 2012/12/02 06:19:45 radhermit Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.cs.arizona.edu/icon/ftp/packages/unix/icon-v${MY_PV}src.tgz"
 HOMEPAGE="http://www.cs.arizona.edu/icon/"
 DESCRIPTION="very high level language"
 
-LICENSE="as-is"
+LICENSE="public-domain HPND"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="X iplsrc"
