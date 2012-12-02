@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/kannel
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/ChangeLog,v 1.25 2012/06/02 04:58:53 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/ChangeLog,v 1.26 2012/12/02 08:24:43 ulm Exp $
+
+  02 Dec 2012; Ulrich Müller <ulm@gentoo.org> kannel-1.4.3-r1.ebuild:
+  Update LICENSE, this is identical with the Apache-1.1 license, bug 444848.
 
   02 Jun 2012; Zac Medico <zmedico@gentoo.org> kannel-1.4.3-r1.ebuild:
   inherit user for enewgroup and enewuser
