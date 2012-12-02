@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jay/jay-1.1.1-r2.ebuild,v 1.7 2012/08/19 21:18:42 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jay/jay-1.1.1-r2.ebuild,v 1.8 2012/12/02 22:44:22 ulm Exp $
 
 EAPI=4
 inherit mono java-pkg-opt-2 toolchain-funcs
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.cs.rit.edu/~ats/projects/lp/doc/jay/package-summary.html"
 SRC_URI="http://www.cs.rit.edu/~ats/projects/lp/doc/jay/doc-files/src.zip -> ${P}.zip
 	http://dev.gentoo.org/~ssuominen/${P}-mono.snk.bz2"
 
-LICENSE="as-is"
+LICENSE="public-domain BSD"
 SLOT="0"
 KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="java mono"
