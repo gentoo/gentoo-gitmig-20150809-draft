@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.14.0.ebuild,v 1.1 2012/11/04 10:19:11 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.14.0.ebuild,v 1.2 2012/12/02 22:24:40 ssuominen Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -40,7 +40,7 @@ RDEPEND="${COMMON_DEPEND}
 		sys-fs/mtools )
 	hfs? (
 		sys-fs/diskdev_cmds
-		sys-fs/udev
+		virtual/udev
 		sys-fs/hfsutils )
 	jfs? ( sys-fs/jfsutils )
 	mdadm? ( sys-fs/mdadm )
