@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/gst-plugins-good-0.10.31.ebuild,v 1.3 2012/12/02 17:25:10 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/gst-plugins-good-0.10.31.ebuild,v 1.4 2012/12/02 23:00:27 eva Exp $
 
 EAPI="5"
 
@@ -16,8 +16,8 @@ IUSE="+orc"
 
 RDEPEND="
 	>=dev-libs/glib-2.24:2
-	>=media-libs/gst-plugins-base-0.10.36:${SLOT}
 	>=media-libs/gstreamer-0.10.36:${SLOT}
+	>=media-libs/gst-plugins-base-0.10.36:${SLOT}
 	app-arch/bzip2
 	sys-libs/zlib
 	orc? ( >=dev-lang/orc-0.4.11 )
