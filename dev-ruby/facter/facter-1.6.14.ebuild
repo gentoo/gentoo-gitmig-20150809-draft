@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/facter-1.6.14.ebuild,v 1.1 2012/11/02 17:20:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/facter-1.6.14.ebuild,v 1.2 2012/12/02 18:58:29 graaff Exp $
 
 EAPI="4"
 
@@ -21,6 +21,7 @@ IUSE=""
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 CDEPEND="
+	<sys-apps/net-tools-1.60_p20120127084908
 	sys-apps/dmidecode
 	sys-apps/lsb-release
 	sys-apps/pciutils"
