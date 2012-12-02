@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/sslwrap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sslwrap/ChangeLog,v 1.26 2012/12/02 04:46:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sslwrap/ChangeLog,v 1.27 2012/12/02 05:02:36 ssuominen Exp $
+
+  02 Dec 2012; Samuli Suominen <ssuominen@gentoo.org> sslwrap-2.0.6-r2.ebuild:
+  Rename "sslwrap" to "SSLeay" as per original name of the license.
 
   02 Dec 2012; Samuli Suominen <ssuominen@gentoo.org>
   -files/2.0.6-openssl-0.9.7.patch, -sslwrap-2.0.6-r1.ebuild:
