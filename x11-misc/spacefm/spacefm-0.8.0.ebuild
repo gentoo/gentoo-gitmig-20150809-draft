@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/spacefm-0.8.0.ebuild,v 1.4 2012/10/27 17:39:11 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/spacefm-0.8.0.ebuild,v 1.5 2012/12/02 22:17:27 ssuominen Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ IUSE=""
 RDEPEND="dev-libs/glib:2
 	dev-util/desktop-file-utils
 	sys-apps/dbus
-	>=sys-fs/udev-143
+	>=virtual/udev-143
 	virtual/freedesktop-icon-theme
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf
@@ -70,7 +70,7 @@ pkg_postinst() {
 		elog "When using SpaceFM without udisks, and without the udisks-daemon running,"
 		elog "you may need to enable kernel polling for device media changes to be detected."
 		elog "See /usr/share/doc/${PF}/html/spacefm-manual-en.html#devices-kernpoll"
-		has_version '<sys-fs/udev-173' && ewarn "You need at least udev-173"
+		has_version '<virtual/udev-173' && ewarn "You need at least udev-173"
 		kernel_is lt 2 6 38 && ewarn "You need at least kernel 2.6.38"
 		einfo
 	fi
