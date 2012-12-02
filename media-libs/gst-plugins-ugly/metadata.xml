@@ -3,4 +3,8 @@
 <pkgmetadata>
 	<herd>gstreamer</herd>
 	<herd>gnome</herd>
+	<use>
+		<flag name="orc">Use <pkg>dev-lang/orc</pkg> for runtime
+			optimisations</flag>
+	</use>
 </pkgmetadata>
