@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mikutter/mikutter-0.2.0.1045.ebuild,v 1.1 2012/10/05 01:54:54 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mikutter/mikutter-0.2.0.1064.ebuild,v 1.1 2012/12/02 03:33:31 naota Exp $
 
 EAPI=3
 
