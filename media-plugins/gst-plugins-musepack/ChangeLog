@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/gst-plugins-musepack
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-musepack/ChangeLog,v 1.100 2012/05/17 14:55:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-musepack/ChangeLog,v 1.101 2012/12/02 16:25:30 eva Exp $
+
+  02 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  -gst-plugins-musepack-0.10.19.ebuild, -gst-plugins-musepack-0.10.21.ebuild,
+  gst-plugins-musepack-0.10.22.ebuild:
+  Clean up old revisions. Add missing gstreamer slot notation.
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org>
   gst-plugins-musepack-0.10.22.ebuild:
