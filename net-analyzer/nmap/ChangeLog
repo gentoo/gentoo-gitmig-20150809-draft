@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.262 2012/12/01 21:30:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.263 2012/12/02 15:57:07 jer Exp $
+
+  02 Dec 2012; Jeroen Roovers <jer@gentoo.org> nmap-6.25.ebuild,
+  +files/nmap-6.25-lua.patch:
+  Fix building with USE=-lua by Anton Bolshakov (bug #445552).
 
   01 Dec 2012; <ago@gentoo.org> nmap-6.01.ebuild:
   Stable for amd64, wrt bug #445500

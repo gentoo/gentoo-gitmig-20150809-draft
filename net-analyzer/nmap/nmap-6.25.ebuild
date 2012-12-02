@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.25.ebuild,v 1.1 2012/12/01 18:06:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.25.ebuild,v 1.2 2012/12/02 15:57:07 jer Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -56,11 +56,13 @@ src_unpack() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-4.75-include.patch
-	epatch "${FILESDIR}"/${PN}-4.75-nolua.patch
-	epatch "${FILESDIR}"/${PN}-5.10_beta1-string.patch
-	epatch "${FILESDIR}"/${PN}-5.21-python.patch
-	epatch "${FILESDIR}"/${PN}-6.01-make.patch
+	epatch \
+		"${FILESDIR}"/${PN}-4.75-include.patch \
+		"${FILESDIR}"/${PN}-4.75-nolua.patch \
+		"${FILESDIR}"/${PN}-5.10_beta1-string.patch \
+		"${FILESDIR}"/${PN}-5.21-python.patch \
+		"${FILESDIR}"/${PN}-6.01-make.patch \
+		"${FILESDIR}"/${PN}-6.25-lua.patch
 	sed -i \
 		-e 's/-m 755 -s ncat/-m 755 ncat/' \
 		ncat/Makefile.in || die
