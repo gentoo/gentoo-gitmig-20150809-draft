@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmusicbrowser/gmusicbrowser-1.1.8.ebuild,v 1.7 2012/09/10 07:39:55 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmusicbrowser/gmusicbrowser-1.1.8.ebuild,v 1.8 2012/12/02 16:58:38 eva Exp $
 
 # note: dev-perl/Gtk2-MozEmbed left out in purpose because gtkmozembed and xulrunner are obsolete
 
@@ -20,7 +20,7 @@ IUSE=""
 GSTREAMER_DEPEND="
 	dev-perl/GStreamer
 	dev-perl/GStreamer-Interfaces
-	media-plugins/gst-plugins-meta"
+	media-plugins/gst-plugins-meta:0.10"
 MPLAYER_DEPEND="
 	|| ( media-video/mplayer media-video/mplayer2 )"
 OTHER_DEPEND="

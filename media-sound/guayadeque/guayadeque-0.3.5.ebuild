@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/guayadeque/guayadeque-0.3.5.ebuild,v 1.5 2012/10/17 03:45:32 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/guayadeque/guayadeque-0.3.5.ebuild,v 1.6 2012/12/02 17:00:43 eva Exp $
 
 EAPI=4
 
@@ -24,9 +24,9 @@ RDEPEND="
 	dev-db/sqlite:3
 	dev-libs/glib:2
 	media-libs/flac
-	media-libs/gstreamer
+	media-libs/gstreamer:0.10
 	media-libs/taglib
-	media-plugins/gst-plugins-soup
+	media-plugins/gst-plugins-soup:0.10
 	net-misc/curl
 	sys-apps/dbus
 	x11-libs/wxGTK:2.8[X]
