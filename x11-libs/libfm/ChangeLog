@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libfm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.82 2012/11/15 19:39:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.83 2012/12/02 15:26:59 hwoarang Exp $
+
+  02 Dec 2012; Markos Chandras <hwoarang@gentoo.org> libfm-9999.ebuild:
+  Move it to EAPI5 in order to use sub-slot deps for lxde-base/menu-cache
 
   15 Nov 2012; Markos Chandras <hwoarang@gentoo.org> libfm-9999.ebuild:
   Fix building with IUSE=-doc. Bug #443318
