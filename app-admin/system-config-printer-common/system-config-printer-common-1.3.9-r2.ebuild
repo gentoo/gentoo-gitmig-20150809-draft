@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.3.9-r2.ebuild,v 1.4 2012/07/18 21:11:29 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.3.9-r2.ebuild,v 1.5 2012/12/02 22:56:02 ssuominen Exp $
 
 EAPI="3"
 
 PYTHON_DEPEND="2"
 WANT_AUTOMAKE="1.11"
-inherit eutils python autotools
+inherit eutils python autotools udev
 
 MY_P="${PN%-common}-${PV}"
 
@@ -31,7 +31,7 @@ COMMON_DEPEND="
 	dev-python/pycurl
 	>=dev-python/pygobject-2.21.5:2
 	<net-print/cups-1.6.0[dbus]
-	>=sys-fs/udev-164-r2
+	>=virtual/udev-171
 	virtual/libusb:0
 "
 DEPEND="${COMMON_DEPEND}
@@ -77,8 +77,8 @@ src_install() {
 	fi
 
 	emake DESTDIR="${ED}" install \
-		udevrulesdir=/lib/udev/rules.d \
-		udevhelperdir=/lib/udev \
+		udevrulesdir="$(udev_get_udevdir)/rules.d" \
+		udevhelperdir="$(udev_get_udevdir)" \
 		|| die "emake install failed"
 
 	python_convert_shebangs -q -r $(python_get_version) "${ED}"

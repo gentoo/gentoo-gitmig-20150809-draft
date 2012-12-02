@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.3.12.ebuild,v 1.1 2012/11/06 03:13:28 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.3.12.ebuild,v 1.2 2012/12/02 22:56:02 ssuominen Exp $
 
 EAPI=4
 
 PYTHON_DEPEND="2:2.6"
 WANT_AUTOMAKE="1.11"
 
-inherit autotools eutils python toolchain-funcs
+inherit autotools eutils python toolchain-funcs udev
 
 MY_P=${PN%-common}-${PV}
 
@@ -32,7 +32,7 @@ COMMON_DEPEND="
 	dev-python/pycurl
 	>=dev-python/pygobject-2.21.5:2
 	net-print/cups[dbus]
-	>=sys-fs/udev-172
+	>=virtual/udev-171
 	virtual/libusb:1
 "
 DEPEND="${COMMON_DEPEND}
@@ -72,8 +72,8 @@ src_compile() {
 src_install() {
 	emake \
 		DESTDIR="${D}" \
-		udevhelperdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)" \
-		udevrulesdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)/rules.d" \
+		udevhelperdir="$(udev_get_udevdir)" \
+		udevrulesdir="$(udev_get_udevdir)/rules.d" \
 		install
 
 	dodoc AUTHORS ChangeLog README

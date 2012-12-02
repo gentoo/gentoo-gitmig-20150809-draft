@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/smolt/smolt-1.4.3.ebuild,v 1.2 2011/04/16 19:31:27 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/smolt/smolt-1.4.3.ebuild,v 1.3 2012/12/02 22:51:09 ssuominen Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -27,7 +27,7 @@ RDEPEND="${COMMON_DEPS}
 	>=dev-python/simplejson-1.7.1
 	sys-apps/pciutils
 	sys-apps/usbutils
-	sys-fs/udev
+	virtual/udev
 	qt4? ( dev-python/PyQt4 )"
 
 S="${S}/client"
