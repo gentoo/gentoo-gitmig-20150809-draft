@@ -1,14 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-opengl/emul-linux-x86-opengl-20120520.ebuild,v 1.2 2012/07/25 14:31:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-opengl/emul-linux-x86-opengl-20121202.ebuild,v 1.1 2012/12/02 10:56:05 pacho Exp $
 
-EAPI="4"
-
+EAPI=5
 inherit emul-linux-x86
 
 LICENSE="BSD MIT LGPL-3 SGI-B-2.0"
 
-KEYWORDS="-* amd64 ~amd64-linux"
+KEYWORDS="-* ~amd64 ~amd64-linux"
 
 DEPEND="app-admin/eselect-opengl
 	>=app-admin/eselect-mesa-0.0.9"
