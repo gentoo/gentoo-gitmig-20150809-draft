@@ -1,6 +1,13 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.540 2012/12/02 11:26:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.541 2012/12/02 17:16:20 eva Exp $
+
+  02 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org> gst-plugins-bad.eclass,
+  gst-plugins-base.eclass, gst-plugins-good.eclass, gst-plugins-ugly.eclass,
+  gst-plugins10.eclass:
+  Commit new gstreamer eclasses as reviewed on gentoo-dev mailing list with a
+  few more fixes, most notably EAPI=1 support fixes. For a more detailed
+  changelog, please see gnome overlay git log.
 
   02 Dec 2012; Pacho Ramos <pacho@gentoo.org> vala.eclass:
   making vala_src_prepare() into a no-op in the
