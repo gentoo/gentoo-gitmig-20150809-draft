@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-1.1-r1.ebuild,v 1.14 2012/07/15 18:04:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-1.1-r1.ebuild,v 1.15 2012/12/02 02:11:15 ssuominen Exp $
 
 EAPI=4
 
@@ -44,7 +44,7 @@ RDEPEND="app-admin/eselect-esd
 		>=sys-apps/dbus-1.0.0
 	)
 	asyncns? ( net-libs/libasyncns )
-	udev? ( || ( >=sys-fs/udev-171[hwdb] >=sys-fs/udev-143[extras] ) )
+	udev? ( >=virtual/udev-143[hwdb] )
 	realtime? ( sys-auth/rtkit )
 	equalizer? ( sci-libs/fftw:3.0 )
 	orc? ( >=dev-lang/orc-0.4.9 )

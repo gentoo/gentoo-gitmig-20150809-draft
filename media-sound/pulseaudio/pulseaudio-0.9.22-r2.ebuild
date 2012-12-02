@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.22-r2.ebuild,v 1.12 2012/06/01 03:01:18 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.22-r2.ebuild,v 1.13 2012/12/02 02:11:15 ssuominen Exp $
 
 EAPI=3
 
@@ -40,7 +40,7 @@ RDEPEND="app-admin/eselect-esd
 		>=sys-apps/dbus-1.0.0
 	)
 	asyncns? ( net-libs/libasyncns )
-	udev? ( || ( >=sys-fs/udev-171[hwdb] >=sys-fs/udev-143[extras] ) )
+	udev? ( >=virtual/udev-143[hwdb] )
 	realtime? ( sys-auth/rtkit )
 	>=media-libs/speex-1.2_beta
 	>=media-libs/libsndfile-1.0.20
@@ -119,7 +119,7 @@ src_configure() {
 		--localstatedir="${EPREFIX}"/var \
 		--disable-per-user-esound-socket \
 		--with-database=gdbm \
-		--with-udev-rules-dir="${EPREFIX}/$(get_libdir)/udev/rules.d" \
+		--with-udev-rules-dir="${EPREFIX}/lib/udev/rules.d" \
 		|| die "econf failed"
 
 	if use doc; then
