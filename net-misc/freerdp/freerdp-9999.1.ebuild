@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-9999.1.ebuild,v 1.13 2012/11/29 04:39:19 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-9999.1.ebuild,v 1.14 2012/12/02 17:05:31 eva Exp $
 
 EAPI="4"
 
@@ -43,8 +43,8 @@ RDEPEND="
 	)
 	ffmpeg? ( virtual/ffmpeg )
 	gstreamer? (
-		media-libs/gstreamer
-		media-libs/gst-plugins-base
+		media-libs/gstreamer:0.10
+		media-libs/gst-plugins-base:0.10
 		x11-libs/libXrandr
 	)
 	jpeg? ( virtual/jpeg )
