@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/comparator
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/comparator/ChangeLog,v 1.22 2012/11/26 03:25:42 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/comparator/ChangeLog,v 1.23 2012/12/02 21:26:09 blueness Exp $
+
+  02 Dec 2012; Anthony G. Basile <blueness@gentoo.org> comparator-2.5.ebuild,
+  comparator-2.8.ebuild, comparator-2.9.ebuild:
+  Update licenses, bug #445642
 
   26 Nov 2012; Anthony G. Basile <blueness@gentoo.org> comparator-2.8.ebuild,
   comparator-2.9.ebuild:

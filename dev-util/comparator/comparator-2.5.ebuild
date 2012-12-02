@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/comparator/comparator-2.5.ebuild,v 1.7 2011/01/11 21:38:50 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/comparator/comparator-2.5.ebuild,v 1.8 2012/12/02 21:26:09 blueness Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -13,7 +13,7 @@ DESCRIPTION="ESR's utility for making fast comparisons among large source trees"
 HOMEPAGE="http://www.catb.org/~esr/comparator/"
 SRC_URI="http://www.catb.org/~esr/comparator/${P}.tar.gz"
 
-LICENSE="as-is GPL-2"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~mips ~ppc sparc x86"
 IUSE=""
