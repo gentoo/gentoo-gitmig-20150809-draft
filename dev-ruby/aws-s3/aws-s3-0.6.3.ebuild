@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/aws-s3/aws-s3-0.6.3.ebuild,v 1.1 2012/06/15 07:53:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/aws-s3/aws-s3-0.6.3.ebuild,v 1.2 2012/12/02 12:47:54 graaff Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ inherit ruby-fakegem
 DESCRIPTION="Client library for Amazon's Simple Storage Service's REST API"
 HOMEPAGE="http://amazon.rubyforge.org/"
 
-LICENSE="as-is"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
