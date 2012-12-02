@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-2.8.0.ebuild,v 1.5 2012/10/15 11:25:56 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-2.8.0.ebuild,v 1.6 2012/12/02 22:41:35 ssuominen Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ COMMON_DEPEND="
 	~dev-games/simgear-${PV}[jpeg?,subversion?]
 	sys-libs/zlib
 	virtual/opengl
-	udev? ( sys-fs/udev )
+	udev? ( virtual/udev )
 "
 # Most entries below are just buildsystem bugs (deps unconditionally
 # inherited from static version of simgear)

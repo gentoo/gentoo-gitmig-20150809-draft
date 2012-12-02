@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/flightgear
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.59 2012/10/15 11:25:56 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.60 2012/12/02 22:41:35 ssuominen Exp $
+
+  02 Dec 2012; Samuli Suominen <ssuominen@gentoo.org> flightgear-2.8.0.ebuild,
+  metadata.xml:
+  Use virtual/udev instead of sys-fs/udev wrt #444398
 
   15 Oct 2012; Andreas Schuerch <nativemad@gentoo.org> flightgear-2.8.0.ebuild:
   x86 stable, see bug 425838
