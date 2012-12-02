@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/cll1h
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cll1h/ChangeLog,v 1.10 2012/11/12 23:48:42 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cll1h/ChangeLog,v 1.11 2012/12/02 08:53:50 grobian Exp $
+
+  02 Dec 2012; Fabian Groffen <grobian@gentoo.org> cll1h-0.6-r1.ebuild:
+  Marked ~x{86,64}-macos, bug #440678
 
   12 Nov 2012; Anthony G. Basile <blueness@gentoo.org> cll1h-0.6-r1.ebuild:
   keyword ~arm, bug #440678
