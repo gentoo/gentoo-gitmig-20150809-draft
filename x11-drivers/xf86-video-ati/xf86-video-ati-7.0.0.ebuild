@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/xf86-video-ati-7.0.0.ebuild,v 1.5 2012/11/28 21:36:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/xf86-video-ati-7.0.0.ebuild,v 1.6 2012/12/02 22:12:14 ssuominen Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ IUSE="glamor udev"
 
 RDEPEND=">=x11-libs/libdrm-2.4.36[video_cards_radeon]
 	glamor? ( x11-libs/glamor )
-	udev? ( sys-fs/udev )"
+	udev? ( virtual/udev )"
 DEPEND="${RDEPEND}"
 
 src_configure() {
