@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/ntfs3g
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.139 2012/11/03 19:15:35 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.140 2012/12/03 08:45:52 ssuominen Exp $
+
+  03 Dec 2012; Samuli Suominen <ssuominen@gentoo.org>
+  ntfs3g-2012.1.15-r2.ebuild:
+  Remove USE="extras" to always build the `ntfsck` command with USE="ntfsprogs"
+  by Robin H. Johnson. Force at least sys-apps/util-linux >= 2.22.1 for working
+  mount wrappers wrt #437230 by "Pun".
 
   03 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
   ntfs3g-2012.1.15-r2.ebuild:

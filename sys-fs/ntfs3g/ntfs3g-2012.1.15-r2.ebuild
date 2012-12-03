@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2012.1.15-r2.ebuild,v 1.4 2012/11/03 19:15:35 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2012.1.15-r2.ebuild,v 1.5 2012/12/03 08:45:52 ssuominen Exp $
 
-EAPI=4
-inherit linux-info toolchain-funcs
+EAPI=5
+inherit eutils linux-info udev
 
 MY_PN=${PN/3g/-3g}
 MY_P=${MY_PN}_ntfsprogs-${PV}
@@ -15,9 +15,9 @@ SRC_URI="http://tuxera.com/opensource/${MY_P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ppc ppc64 ~sparc x86 ~amd64-linux ~x86-linux"
-IUSE="acl crypt debug +external-fuse extras +ntfsprogs static-libs suid xattr"
+IUSE="acl crypt debug +external-fuse +ntfsprogs static-libs suid xattr"
 
-RDEPEND="!<sys-apps/util-linux-2.19
+RDEPEND="!<sys-apps/util-linux-2.22.1
 	!sys-fs/ntfsprogs
 	crypt? (
 		>=dev-libs/libgcrypt-1.2.2
@@ -25,8 +25,8 @@ RDEPEND="!<sys-apps/util-linux-2.19
 		)
 	external-fuse? ( >=sys-fs/fuse-2.8.0 )"
 DEPEND="${RDEPEND}
-	virtual/pkgconfig
-	sys-apps/attr"
+	sys-apps/attr
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
 
@@ -45,8 +45,8 @@ pkg_setup() {
 
 src_configure() {
 	econf \
-		--exec-prefix="${EPREFIX}/usr" \
-		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
+		--exec-prefix="${EPREFIX}"/usr \
+		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
 		$(use_enable debug) \
 		--enable-ldscript \
 		--disable-ldconfig \
@@ -54,30 +54,22 @@ src_configure() {
 		$(use_enable xattr xattr-mappings) \
 		$(use_enable crypt crypto) \
 		$(use_enable ntfsprogs) \
-		$(use_enable extras) \
+		--enable-extras \
 		$(use_enable static-libs static) \
-		--with-fuse=$(use external-fuse && echo external || echo internal)
+		--with-fuse=$(usex external-fuse external internal)
 }
 
 src_install() {
 	default
 
 	use suid && fperms u+s /usr/bin/${MY_PN}
-
-	local udevdir=/lib/udev
-	if has_version sys-fs/udev; then
-		udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
-		udevdir=${udevdir#${EPREFIX}}
-	fi
-	insinto "${udevdir}"/rules.d
-	doins "${FILESDIR}"/99-ntfs3g.rules
-
+	udev_dorules "${FILESDIR}"/99-ntfs3g.rules
 	prune_libtool_files
 
 	# http://bugs.gentoo.org/398069
 	dodir /usr/sbin
-	mv -vf "${D}"/sbin/* "${ED}"/usr/sbin || die
-	rm -rf "${D}"/sbin
+	mv "${ED}"/sbin/* "${ED}"/usr/sbin || die
+	rm -r "${ED}"/sbin
 
 	dosym mount.ntfs-3g /usr/sbin/mount.ntfs #374197
 }
