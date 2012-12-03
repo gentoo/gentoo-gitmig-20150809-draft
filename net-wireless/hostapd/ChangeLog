@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/hostapd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.134 2012/11/18 11:16:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.135 2012/12/03 09:18:15 gurligebis Exp $
+
+*hostapd-1.1 (03 Dec 2012)
+
+  03 Dec 2012; <gurligebis@gentoo.org> +hostapd-1.1.ebuild,
+  +files/hostapd-1.1-libnl_path_fix.patch,
+  +files/hostapd-1.1-tls_length_fix.patch:
+  Bumping to 1.1
 
   18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop mobile herd as talked in gentoo-dev ML
