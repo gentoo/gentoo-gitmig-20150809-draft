@@ -3,9 +3,8 @@
 <pkgmetadata>
 	<herd>gstreamer</herd>
 	<use>
-		<flag name="introspection">Use <pkg>dev-libs/gobject-introspection</pkg>
-			for introspection</flag>
 		<flag name="orc">Use <pkg>dev-lang/orc</pkg> for runtime
 			optimisations</flag>
+		<flag name="pango">Enable pango GStreamer plugin</flag>
     </use>
 </pkgmetadata>
