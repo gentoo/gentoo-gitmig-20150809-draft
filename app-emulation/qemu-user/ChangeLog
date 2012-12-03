@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qemu-user
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/ChangeLog,v 1.49 2012/12/03 19:38:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/ChangeLog,v 1.50 2012/12/03 21:05:09 ago Exp $
+
+  03 Dec 2012;  <ago@gentoo.org> qemu-user-1.0.ebuild:
+  Stable for x86, wrt bug #417905
 
   03 Dec 2012; Agostino Sarubbo <ago@gentoo.org> qemu-user-1.0.ebuild:
   Stable for ppc, wrt bug #417905
