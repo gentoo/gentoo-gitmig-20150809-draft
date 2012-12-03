@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/pip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pip/ChangeLog,v 1.13 2012/12/03 19:39:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pip/ChangeLog,v 1.14 2012/12/03 21:04:20 ago Exp $
+
+  03 Dec 2012;  <ago@gentoo.org> pip-1.2-r1.ebuild:
+  Stable for x86, wrt bug #373783
 
   03 Dec 2012; Agostino Sarubbo <ago@gentoo.org> pip-1.2-r1.ebuild:
   Stable for ppc, wrt bug #373783
@@ -41,4 +44,3 @@
 
   28 Aug 2004; Tavis Ormandy <taviso@gentoo.org> :
   inital import
-

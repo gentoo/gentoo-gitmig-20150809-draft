@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pip/pip-1.2-r1.ebuild,v 1.3 2012/12/03 19:39:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pip/pip-1.2-r1.ebuild,v 1.4 2012/12/03 21:04:20 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://membled.com/work/apps/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 src_install() {
