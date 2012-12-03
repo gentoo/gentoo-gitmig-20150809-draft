@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.25.ebuild,v 1.4 2012/12/03 13:07:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.25.ebuild,v 1.5 2012/12/03 19:52:32 jer Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -21,7 +21,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 
 IUSE="gtk ipv6 +lua ncat ndiff nls nmap-update nping ssl"
-NMAP_LINGUAS="de fr hr it ja pt_BR ru"
+NMAP_LINGUAS="de es fr hr hu id it ja pl pt_BR pt_PT ro ru sk zh"
 for lingua in ${NMAP_LINGUAS}; do
 	IUSE+=" linguas_${lingua}"
 done
@@ -76,6 +76,7 @@ src_prepare() {
 		-e 's/-m 755 -s ncat/-m 755 ncat/' \
 		ncat/Makefile.in || die
 
+	mv docs/man-xlate/${PN}-j{p,a}.1 || die
 	if use nls; then
 		local lingua=''
 		for lingua in ${NMAP_LINGUAS}; do
@@ -91,6 +92,10 @@ src_prepare() {
 			rm -f zenmap/share/zenmap/locale/${lingua}.po
 		done
 	fi
+
+	sed -i \
+		-e '/^ALL_LINGUAS =/{s|$| id|g;s|jp|ja|g}' \
+		Makefile.in || die
 
 	# Fix desktop files wrt bug #432714
 	sed -i \
