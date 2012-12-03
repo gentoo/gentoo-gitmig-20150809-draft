@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.6.0-r1.ebuild,v 1.7 2012/06/09 19:08:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.6.0-r1.ebuild,v 1.8 2012/12/03 02:05:51 ssuominen Exp $
 
 EAPI=2
 inherit autotools bash-completion eutils fixheadtails multilib user
@@ -24,7 +24,7 @@ RDEPEND="cgi? ( >=media-libs/gd-2[png] )
 	ssl? ( >=dev-libs/openssl-1 )
 	tcpd? ( sys-apps/tcp-wrappers )
 	xml? ( >=net-libs/neon-0.25.0 )
-	>=sys-fs/udev-114"
+	virtual/udev"
 DEPEND="$RDEPEND
 	>=sys-apps/sed-4
 	virtual/pkgconfig"
@@ -159,7 +159,7 @@ src_install() {
 	fi
 
 	# this is installed for 2.4 and fbsd guys
-	if ! has_version sys-fs/udev; then
+	if ! has_version virtual/udev; then
 		einfo "Installing non-udev hotplug support"
 		insinto /etc/hotplug/usb
 		insopts -m 755
