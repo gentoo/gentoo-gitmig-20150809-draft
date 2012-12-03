@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/fundus/fundus-19970826.ebuild,v 1.7 2004/07/19 09:46:43 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/fundus/fundus-19970826.ebuild,v 1.8 2012/12/03 01:34:39 radhermit Exp $
 
 inherit latex-package
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 	mirror://gentoo/${PN}-fonts.tar.gz"
 IUSE=""
 SLOT="0"
-LICENSE="as-is"
+LICENSE="LPPL-1.3c"
 KEYWORDS="x86 ~amd64 ~sparc ~ppc"
 
 src_unpack() {

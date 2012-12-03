@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/fundus
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/fundus/ChangeLog,v 1.9 2007/03/13 00:20:40 nattfodd Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/fundus/ChangeLog,v 1.10 2012/12/03 01:34:39 radhermit Exp $
+
+  03 Dec 2012; Tim Harder <radhermit@gentoo.org> fundus-19970826.ebuild:
+  Fix LICENSE (bug #445608 by ulm).
 
   12 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
   Replaced text-markup by tex as maintaining herd (text-markup split).
