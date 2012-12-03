@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ofono/ofono-1.10.ebuild,v 1.1 2012/10/11 09:33:40 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ofono/ofono-1.10.ebuild,v 1.2 2012/12/03 02:28:30 ssuominen Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ RDEPEND=">=sys-apps/dbus-1.4
 	>=dev-libs/glib-2.28
 	net-misc/mobile-broadband-provider-info
 	bluetooth? ( >=net-wireless/bluez-4.99 )
-	udev? ( >=sys-fs/udev-143 )
+	udev? ( virtual/udev )
 	examples? ( dev-python/dbus-python )
 	tools? ( virtual/libusb:1 )"
 DEPEND="${RDEPEND}

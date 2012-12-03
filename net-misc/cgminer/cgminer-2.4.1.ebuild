@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/cgminer-2.4.1.ebuild,v 1.4 2012/06/16 08:54:41 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/cgminer-2.4.1.ebuild,v 1.5 2012/12/03 02:27:14 ssuominen Exp $
 
 EAPI="4"
 
@@ -38,7 +38,7 @@ DEPEND="
 		virtual/opencl
 	)
 	udev? (
-		sys-fs/udev
+		virtual/udev
 	)
 	ztex? (
 		virtual/libusb:1
