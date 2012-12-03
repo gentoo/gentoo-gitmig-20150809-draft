@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skypetab-ng/skypetab-ng-9999.ebuild,v 1.4 2012/07/26 17:01:38 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skypetab-ng/skypetab-ng-9999.ebuild,v 1.5 2012/12/03 20:18:49 slyfox Exp $
 
 EAPI=4
 
@@ -30,7 +30,7 @@ DEPEND="
 	amd64? ( app-emulation/emul-linux-x86-qtlibs )
 "
 RDEPEND="${DEPEND}
-	net-im/skype[-qt-static]
+	|| ( >=net-im/skype-4.1 <net-im/skype-4.1[-qt-static] )
 "
 
 pkg_setup() {
