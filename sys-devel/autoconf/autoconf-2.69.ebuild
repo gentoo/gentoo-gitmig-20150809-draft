@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.69.ebuild,v 1.2 2012/04/26 13:06:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.69.ebuild,v 1.3 2012/12/03 05:30:31 robbat2 Exp $
 
 EAPI="3"
 
@@ -25,7 +25,7 @@ SLOT="2.5"
 IUSE="emacs"
 
 DEPEND=">=sys-apps/texinfo-4.3
-	>=sys-devel/m4-1.4.6
+	>=sys-devel/m4-1.4.16
 	>=dev-lang/perl-5.6"
 RDEPEND="${DEPEND}
 	>=sys-devel/autoconf-wrapper-10"
