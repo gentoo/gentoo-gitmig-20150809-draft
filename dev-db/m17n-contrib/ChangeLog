@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/m17n-contrib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/m17n-contrib/ChangeLog,v 1.10 2012/12/03 07:32:46 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/m17n-contrib/ChangeLog,v 1.11 2012/12/03 10:48:23 naota Exp $
+
+*m17n-contrib-1.1.14 (03 Dec 2012)
+
+  03 Dec 2012;  <naota@gentoo.org> +m17n-contrib-1.1.14.ebuild:
+  Version bump wrt #439900
 
   03 Dec 2012;  <naota@gentoo.org> m17n-contrib-1.1.10.ebuild,
   m17n-contrib-1.1.12.ebuild, m17n-contrib-1.1.13.ebuild,
