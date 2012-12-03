@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-3.10.8-r1.ebuild,v 1.1 2012/10/24 21:28:10 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-3.10.9.ebuild,v 1.1 2012/12/03 23:25:27 neurogeek Exp $
 
 EAPI=4
 
@@ -14,14 +14,15 @@ SRC_URI="mirror://sourceforge/opalvoip/${P}.tar.bz2
 LICENSE="MPL-1.0"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="+audio capi celt debug doc examples fax ffmpeg h224 h281 h323 iax
+IUSE="+audio capi celt debug doc +dtmf examples fax ffmpeg h224 h281 h323 iax
 ilbc ipv6 ivr ixj java ldap lid +plugins sbc sip sipim srtp ssl static-libs
 stats swig theora +video vpb vxml wav x264 x264-static xml"
 
 REQUIRED_USE="x264-static? ( x264 )
-	h281? ( h224 )"
+	h281? ( h224 )
+	sip? ( sipim )"
 
-RDEPEND=">=net-libs/ptlib-2.10.8[stun,debug=,audio?,dtmf,http,ipv6?,ldap?,ssl?,video?,vxml?,wav?,xml?]
+RDEPEND=">=net-libs/ptlib-2.10.9[stun,debug=,audio?,dtmf,http,ipv6?,ldap?,ssl?,video?,vxml?,wav?,xml?]
 	>=media-libs/speex-1.2_beta
 	fax? ( net-libs/ptlib[asn] )
 	h323? ( net-libs/ptlib[asn] )
@@ -46,7 +47,6 @@ DEPEND="${RDEPEND}
 	java? ( swig? ( dev-lang/swig )
 		>=virtual/jdk-1.4 )"
 
-REQUIRED_USE="sip? ( sipim )"
 # NOTES:
 # ffmpeg[encode] is for h263 and mpeg4
 # ssl, xml, vxml, ipv6, ldap, audio, wav, and video are use flags
@@ -90,6 +90,8 @@ src_prepare() {
 		# USE=-h323.
 		epatch "${FILESDIR}/${P}-disable-h323-workaround.patch"
 	fi
+
+	epatch "${FILESDIR}/${P}-java-ruby-swig-fix.patch"
 
 	sed -i -e "s:\(.*HAS_H224.*\), \[OPAL_H323\]:\1:" configure.ac \
 		|| die "sed failed"
