@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.4.ebuild,v 1.2 2012/10/19 06:32:42 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.4.ebuild,v 1.3 2012/12/03 00:34:35 zmedico Exp $
 
 EAPI="4"
 
@@ -33,7 +33,8 @@ else
 fi
 
 SRC_URI="${SRC_URI}
-	mirror://gentoo/${PN}-patches-${PATCHLEVEL}.tar.bz2"
+	mirror://gentoo/${PN}-patches-${PATCHLEVEL}.tar.bz2
+	http://git.videolan.org/?p=vlc.git;a=blobdiff_plain;f=modules/codec/dmo/dmo.c;h=4f5f3fc67195126e37e1fc2785a5e8d274181b77;hp=23292b8519bd2996dcb4b58c8565096b6b21c155;hb=5444f9a081fa5cf74b49d4f40e13ea0675d115f5;hpb=6d65b58226d2506e0ee99dfcc3b0cc24db650d8c -> vlc-2.0.4-bug-438874-BI_RGB.patch"
 
 LICENSE="LGPL-2.1 GPL-2"
 SLOT="0"
@@ -196,6 +197,7 @@ src_prepare() {
 	rm -f m4/lt* m4/libtool.m4
 
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
+	epatch "${DISTDIR}/vlc-2.0.4-bug-438874-BI_RGB.patch"
 	eautoreconf
 }
 
