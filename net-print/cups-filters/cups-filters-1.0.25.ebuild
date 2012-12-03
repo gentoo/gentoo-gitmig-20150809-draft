@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.23-r1.ebuild,v 1.3 2012/09/01 17:41:16 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.25.ebuild,v 1.1 2012/12/03 06:33:14 scarabeus Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ if [[ "${PV}" == "9999" ]] ; then
 	KEYWORDS=""
 else
 	SRC_URI="http://www.openprinting.org/download/${PN}/${P}.tar.xz"
-	KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~x86"
+	KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~x86 ~amd64-fbsd"
 fi
 DESCRIPTION="Cups PDF filters"
 HOMEPAGE="http://www.linuxfoundation.org/collaborate/workgroups/openprinting/pdfasstandardprintjobformat"
@@ -26,7 +26,7 @@ IUSE="jpeg perl png static-libs tiff"
 RDEPEND="
 	app-text/ghostscript-gpl
 	app-text/poppler[cxx,jpeg?,lcms,tiff?,xpdf-headers(+)]
-	app-text/qpdf
+	>=app-text/qpdf-3.0.2
 	media-libs/fontconfig
 	media-libs/freetype:2
 	media-libs/lcms:2
@@ -50,6 +50,7 @@ src_prepare() {
 
 src_configure() {
 	econf \
+		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		$(use_enable static-libs static) \
 		--with-fontdir="fonts/conf.avail" \
 		--with-pdftops=pdftops \
@@ -57,8 +58,7 @@ src_configure() {
 		$(use_with jpeg) \
 		$(use_with png) \
 		$(use_with tiff) \
-		--without-php \
-		--docdir=/usr/share/doc/${PF}
+		--without-php
 }
 
 src_compile() {
