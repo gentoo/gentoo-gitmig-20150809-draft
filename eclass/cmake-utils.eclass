@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.88 2012/12/03 10:33:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.89 2012/12/03 12:05:51 mgorny Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -178,11 +178,12 @@ _check_build_dir() {
 			# and we'd have to know which one takes precedence.
 			_RESPECT_CMAKE_BUILD_DIR=1
 		fi
-		if [[ ${_RESPECT_CMAKE_BUILD_DIR} ]]; then
-			BUILD_DIR=${CMAKE_BUILD_DIR}
-		fi
 
-		: ${BUILD_DIR:=${WORKDIR}/${P}_build}
+		if [[ ${_RESPECT_CMAKE_BUILD_DIR} ]]; then
+			BUILD_DIR=${CMAKE_BUILD_DIR:-${WORKDIR}/${P}_build}
+		else
+			: ${BUILD_DIR:=${WORKDIR}/${P}_build}
+		fi
 	fi
 
 	# Backwards compatibility for getting the value.

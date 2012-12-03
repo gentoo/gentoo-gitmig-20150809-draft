@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.59 2012/12/03 09:29:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.60 2012/12/03 12:05:51 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -198,11 +198,12 @@ _check_build_dir() {
 			# and we'd have to know which one takes precedence.
 			_RESPECT_AUTOTOOLS_BUILD_DIR=1
 		fi
-		if [[ ${_RESPECT_AUTOTOOLS_BUILD_DIR} ]]; then
-			BUILD_DIR=${AUTOTOOLS_BUILD_DIR}
-		fi
 
-		: ${BUILD_DIR:=${WORKDIR}/${P}_build}
+		if [[ ${_RESPECT_AUTOTOOLS_BUILD_DIR} ]]; then
+			BUILD_DIR=${AUTOTOOLS_BUILD_DIR:-${WORKDIR}/${P}_build}
+		else
+			: ${BUILD_DIR:=${WORKDIR}/${P}_build}
+		fi
 	fi
 
 	# Backwards compatibility for getting the value.
