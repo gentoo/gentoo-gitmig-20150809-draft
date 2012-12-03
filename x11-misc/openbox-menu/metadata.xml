@@ -12,5 +12,8 @@
 		</maintainer>
 		<doc lang="en">http://mimasgpc.free.fr/openbox-menu_en.html</doc>
 	</upstream>
+	<use>
+		<flag name='icons'>Turn on to let icons appear in menus</flag>
+	</use>
 </pkgmetadata>
 
