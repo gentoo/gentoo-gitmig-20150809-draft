@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/pykde4
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.186 2012/11/30 16:44:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.187 2012/12/03 00:51:29 zmedico Exp $
+
+  03 Dec 2012; Zac Medico <zmedico@gentoo.org> pykde4-4.9.3.ebuild:
+  Apply fix for bug #445668 by Niko Böckerman <niko.bockerman@gmail.com>.
 
   30 Nov 2012; <ago@gentoo.org> pykde4-4.9.3.ebuild:
   Stable for ppc, wrt bug #442394

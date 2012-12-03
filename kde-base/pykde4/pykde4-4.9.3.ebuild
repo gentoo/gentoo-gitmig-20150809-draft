@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.9.3.ebuild,v 1.4 2012/11/30 16:44:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.9.3.ebuild,v 1.5 2012/12/03 00:51:29 zmedico Exp $
 
 EAPI=4
 
@@ -78,7 +78,7 @@ src_configure() {
 			$(cmake-utils_use_with semantic-desktop KdepimLibs)
 			-DPYTHON_EXECUTABLE=$(PYTHON -a)
 		)
-		local CMAKE_BUILD_DIR=${S}_build-${PYTHON_ABI}
+		local BUILD_DIR=${S}_build-${PYTHON_ABI}
 		kde4-base_src_configure
 	}
 
@@ -92,7 +92,7 @@ echo_and_run() {
 
 src_compile() {
 	compilation() {
-		local CMAKE_BUILD_DIR=${S}_build-${PYTHON_ABI}
+		local BUILD_DIR=${S}_build-${PYTHON_ABI}
 		kde4-base_src_compile
 	}
 	python_execute_function compilation
