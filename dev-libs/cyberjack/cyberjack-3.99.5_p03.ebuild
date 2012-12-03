@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/cyberjack-3.99.5_p03.ebuild,v 1.5 2012/05/04 18:35:53 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/cyberjack-3.99.5_p03.ebuild,v 1.6 2012/12/03 09:49:08 ssuominen Exp $
 
 EAPI=4
 inherit linux-info toolchain-funcs
@@ -21,7 +21,7 @@ COMMON_DEPEND="sys-apps/pcsc-lite
 	fox? ( >=x11-libs/fox-1.6 )
 	xml? ( dev-libs/libxml2 )"
 RDEPEND="${COMMON_DEPEND}
-	kernel_linux? ( sys-fs/udev )"
+	kernel_linux? ( virtual/udev )"
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcec/libcec-2.0.1.ebuild,v 1.1 2012/10/14 19:30:49 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcec/libcec-2.0.1.ebuild,v 1.2 2012/12/03 09:49:01 ssuominen Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug static-libs"
 
-RDEPEND=">=sys-fs/udev-151"
+RDEPEND="virtual/udev"
 DEPEND="${RDEPEND}
 	dev-libs/lockdev
 	virtual/pkgconfig"
