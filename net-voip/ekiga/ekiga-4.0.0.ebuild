@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-3.9.90.ebuild,v 1.1 2012/11/09 01:06:18 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-4.0.0.ebuild,v 1.1 2012/12/03 23:46:30 neurogeek Exp $
 
 EAPI="4"
 
@@ -18,13 +18,13 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="avahi dbus debug doc eds gconf gnome gstreamer h323 kde kontact ldap
-libnotify mmx nls +shm static v4l xcap xv"
+libnotify mmx nls pulseaudio +shm static v4l xcap xv"
 
 RDEPEND=">=dev-libs/glib-2.14.0:2
 	>=dev-libs/boost-1.49
 	dev-libs/libxml2:2
-	>=net-libs/opal-3.10.8[audio,sip,video,debug=,h323?]
-	>=net-libs/ptlib-2.10.8[ldap?,stun,v4l?,video,wav,debug=,dtmf]
+	>=net-libs/opal-3.10.9[audio,sip,video,debug=,h323?,xml]
+	>=net-libs/ptlib-2.10.9[ldap?,stun,v4l?,video,wav,debug=,dtmf,pulseaudio?,xml]
 	>=x11-libs/gtk+-2.12.0:2
 	avahi? ( >=net-dns/avahi-0.6[dbus] )
 	dbus? ( >=sys-apps/dbus-0.36
