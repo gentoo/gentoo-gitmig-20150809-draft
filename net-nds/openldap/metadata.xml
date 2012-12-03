@@ -11,5 +11,6 @@
 		<flag name='overlays'>Enable contributed OpenLDAP overlays</flag>
 		<flag name='smbkrb5passwd'>Enable overlay for syncing ldap, unix and
 			lanman passwords</flag>
+		<flag name='minimal'>Build libraries &amp; userspace tools only. Does not install any server code.</flag>
 	</use>
 </pkgmetadata>
