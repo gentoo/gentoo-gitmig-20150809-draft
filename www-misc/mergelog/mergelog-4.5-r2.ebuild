@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/mergelog/mergelog-4.5-r2.ebuild,v 1.3 2012/12/02 09:03:26 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/mergelog/mergelog-4.5-r2.ebuild,v 1.4 2012/12/03 21:05:46 ago Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://mergelog.sourceforge.net"
 IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 
 RDEPEND="sys-libs/zlib"
 DEPEND="${DEPEND}"
