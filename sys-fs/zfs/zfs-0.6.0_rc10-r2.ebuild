@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-0.6.0_rc10-r2.ebuild,v 1.1 2012/11/29 05:19:12 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-0.6.0_rc10-r2.ebuild,v 1.2 2012/12/03 02:03:03 ssuominen Exp $
 
 EAPI="4"
 
@@ -8,7 +8,7 @@ AT_M4DIR="config"
 AUTOTOOLS_AUTORECONF="1"
 AUTOTOOLS_IN_SOURCE_BUILD="1"
 
-inherit bash-completion-r1 flag-o-matic toolchain-funcs autotools-utils
+inherit bash-completion-r1 flag-o-matic toolchain-funcs autotools-utils udev
 
 if [ ${PV} == "9999" ] ; then
 	inherit git-2
@@ -41,7 +41,7 @@ RDEPEND="${COMMON_DEPEND}
 	!=sys-apps/grep-2.13*
 	!kernel-builtin? ( =sys-fs/zfs-kmod-${PV}* )
 	!sys-fs/zfs-fuse
-	!prefix? ( sys-fs/udev )
+	!prefix? ( virtual/udev )
 	test-suite? (
 		sys-apps/gawk
 		sys-apps/util-linux
@@ -75,7 +75,7 @@ src_configure() {
 		--with-config=user
 		--with-linux="${KV_DIR}"
 		--with-linux-obj="${KV_OUT_DIR}"
-		--with-udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
+		--with-udevdir="$(udev_get_udevdir)"
 	)
 	autotools-utils_src_configure
 }
