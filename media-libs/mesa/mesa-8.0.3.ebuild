@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-8.0.3.ebuild,v 1.11 2012/10/04 08:37:19 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-8.0.3.ebuild,v 1.12 2012/12/03 02:42:08 ssuominen Exp $
 
 EAPI=4
 
@@ -86,7 +86,7 @@ RDEPEND="${EXTERNAL_DEPEND}
 	gallium? ( app-admin/eselect-mesa )
 	>=app-admin/eselect-opengl-1.2.5
 	dev-libs/expat
-	gbm? ( sys-fs/udev )
+	gbm? ( virtual/udev )
 	>=x11-libs/libX11-1.3.99.901
 	x11-libs/libXdamage
 	x11-libs/libXext
