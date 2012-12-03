@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/zencoding-vim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/zencoding-vim/ChangeLog,v 1.19 2012/12/03 16:59:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/zencoding-vim/ChangeLog,v 1.20 2012/12/03 19:16:24 radhermit Exp $
+
+*zencoding-vim-0.80 (03 Dec 2012)
+
+  03 Dec 2012; Tim Harder <radhermit@gentoo.org> +zencoding-vim-0.80.ebuild:
+  Version bump.
 
   03 Dec 2012; <ago@gentoo.org> zencoding-vim-0.74.ebuild:
   Stable for amd64, wrt bug #441134
