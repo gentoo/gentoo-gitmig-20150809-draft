@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsfml/libsfml-2.0_pre20121126.ebuild,v 1.1 2012/11/27 10:08:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsfml/libsfml-2.0_pre20121126.ebuild,v 1.2 2012/12/03 21:35:25 radhermit Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ DESCRIPTION="Simple and Fast Multimedia Library (SFML)"
 HOMEPAGE="http://sfml.sourceforge.net/ https://github.com/LaurentGomila/SFML"
 SRC_URI="http://dev.gentoo.org/~radhermit/dist/${P}.tar.xz"
 
-LICENSE="as-is"
+LICENSE="ZLIB"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug doc examples"
