@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/m17n-lib
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/m17n-lib/ChangeLog,v 1.59 2012/12/03 07:13:23 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/m17n-lib/ChangeLog,v 1.60 2012/12/03 09:10:05 naota Exp $
+
+*m17n-lib-1.6.4 (03 Dec 2012)
+
+  03 Dec 2012;  <naota@gentoo.org> +m17n-lib-1.6.4.ebuild:
+  Version bump wrt #439900
 
   03 Dec 2012;  <naota@gentoo.org> m17n-lib-1.5.2.ebuild, m17n-lib-1.5.3.ebuild,
   m17n-lib-1.5.4.ebuild, m17n-lib-1.5.5.ebuild, m17n-lib-1.6.2.ebuild,
