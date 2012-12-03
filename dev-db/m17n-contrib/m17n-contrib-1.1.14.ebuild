@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/m17n-contrib/m17n-contrib-1.1.14.ebuild,v 1.1 2012/12/03 10:48:23 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/m17n-contrib/m17n-contrib-1.1.14.ebuild,v 1.2 2012/12/03 10:56:28 naota Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND=""
 # Strict version to avoid collision
-RDEPEND=">=dev-db/m17n-db-1.6.3"
+RDEPEND=">=dev-db/m17n-db-1.6.4"
 
 src_configure() {
 	# force the script not to test for m17n presence, trust Portage
