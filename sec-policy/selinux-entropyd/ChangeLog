@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-entropyd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-entropyd/ChangeLog,v 1.13 2012/11/18 15:18:08 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-entropyd/ChangeLog,v 1.14 2012/12/03 08:52:39 swift Exp $
+
+*selinux-entropyd-2.20120725-r8 (03 Dec 2012)
+
+  03 Dec 2012; Sven Vermeulen +selinux-entropyd-2.20120725-r8.ebuild:
+  Bumping to revision 8
 
 *selinux-entropyd-2.20120725-r7 (18 Nov 2012)
 
@@ -61,4 +66,3 @@
   28 Aug 2011; <swift@gentoo.org> +selinux-entropyd-2.20110726.ebuild,
   +metadata.xml:
   New policy based on refpolicy 20110726 sources
-

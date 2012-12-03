@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-sudo
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-sudo/ChangeLog,v 1.41 2012/11/18 15:18:29 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-sudo/ChangeLog,v 1.42 2012/12/03 08:52:32 swift Exp $
+
+*selinux-sudo-2.20120725-r8 (03 Dec 2012)
+
+  03 Dec 2012; Sven Vermeulen +selinux-sudo-2.20120725-r8.ebuild:
+  Bumping to revision 8
 
 *selinux-sudo-2.20120725-r7 (18 Nov 2012)
 
@@ -192,4 +197,3 @@
   23 Aug 2005; petre rodan <kaiowas@gentoo.org> +metadata.xml,
   +selinux-sudo-20050716.ebuild:
   initial commit
-

@@ -1,4 +1,8 @@
 
+*selinux-pan-2.20120725-r8 (03 Dec 2012)
+
+  03 Dec 2012; Sven Vermeulen +selinux-pan-2.20120725-r8.ebuild:
+  Bumping to revision 8
 
 *selinux-pan-2.20120725-r7 (18 Nov 2012)
 
@@ -77,4 +81,3 @@
   +files/fix-apps-pan-r1.patch, +selinux-pan-2.20101213-r1.ebuild,
   +metadata.xml:
   Initial commit policy for pan
-

@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-portmap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-portmap/ChangeLog,v 1.38 2012/11/18 15:18:20 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-portmap/ChangeLog,v 1.39 2012/12/03 08:52:34 swift Exp $
+
+*selinux-portmap-2.20120725-r8 (03 Dec 2012)
+
+  03 Dec 2012; Sven Vermeulen +selinux-portmap-2.20120725-r8.ebuild:
+  Bumping to revision 8
 
 *selinux-portmap-2.20120725-r7 (18 Nov 2012)
 
@@ -166,4 +171,3 @@
   11 Aug 2003; Chris PeBenito <pebenito@gentoo.org> metadata.xml,
   selinux-portmap-20030811.ebuild:
   Initial commit
-

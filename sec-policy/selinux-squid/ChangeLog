@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-squid
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-squid/ChangeLog,v 1.50 2012/11/18 15:17:55 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-squid/ChangeLog,v 1.51 2012/12/03 08:52:40 swift Exp $
+
+*selinux-squid-2.20120725-r8 (03 Dec 2012)
+
+  03 Dec 2012; Sven Vermeulen +selinux-squid-2.20120725-r8.ebuild:
+  Bumping to revision 8
 
 *selinux-squid-2.20120725-r7 (18 Nov 2012)
 
@@ -242,4 +247,3 @@
   06 Jan 2004; Chris PeBenito <pebenito@gentoo.org> metadata.xml,
   selinux-squid-20040106.ebuild:
   Initial commit.  Fixed up by Petre Rodan.
-

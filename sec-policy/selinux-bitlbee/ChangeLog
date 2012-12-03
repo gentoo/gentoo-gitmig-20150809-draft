@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-bitlbee
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-bitlbee/ChangeLog,v 1.15 2012/11/18 15:18:01 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-bitlbee/ChangeLog,v 1.16 2012/12/03 08:52:12 swift Exp $
+
+*selinux-bitlbee-2.20120725-r8 (03 Dec 2012)
+
+  03 Dec 2012; Sven Vermeulen +selinux-bitlbee-2.20120725-r8.ebuild:
+  Bumping to revision 8
 
 *selinux-bitlbee-2.20120725-r7 (18 Nov 2012)
 
@@ -63,4 +68,3 @@
 
   05 Feb 2011; Anthony G. Basile <blueness@gentoo.org> ChangeLog:
   Initial commit to portage.
-

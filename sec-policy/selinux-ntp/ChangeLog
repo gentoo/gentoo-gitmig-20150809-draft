@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-ntp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ntp/ChangeLog,v 1.50 2012/11/18 15:18:15 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ntp/ChangeLog,v 1.51 2012/12/03 08:52:15 swift Exp $
+
+*selinux-ntp-2.20120725-r8 (03 Dec 2012)
+
+  03 Dec 2012; Sven Vermeulen +selinux-ntp-2.20120725-r8.ebuild:
+  Bumping to revision 8
 
 *selinux-ntp-2.20120725-r7 (18 Nov 2012)
 
@@ -228,4 +233,3 @@
   11 Aug 2003; Chris PeBenito <pebenito@gentoo.org> metadata.xml,
   selinux-ntp-20030811.ebuild:
   Initial commit
-

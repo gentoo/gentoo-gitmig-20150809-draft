@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-dbus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-dbus/ChangeLog,v 1.33 2012/11/18 15:18:28 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-dbus/ChangeLog,v 1.34 2012/12/03 08:52:11 swift Exp $
+
+*selinux-dbus-2.20120725-r8 (03 Dec 2012)
+
+  03 Dec 2012; Sven Vermeulen +selinux-dbus-2.20120725-r8.ebuild:
+  Bumping to revision 8
 
 *selinux-dbus-2.20120725-r7 (18 Nov 2012)
 
@@ -154,4 +159,3 @@
   22 Nov 2006; Chris PeBenito <pebenito@gentoo.org> +metadata.xml,
   +selinux-dbus-20061114.ebuild:
   Initial commit.
-

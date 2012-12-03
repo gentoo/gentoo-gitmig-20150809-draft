@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-amavis
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-amavis/ChangeLog,v 1.19 2012/11/18 15:18:06 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-amavis/ChangeLog,v 1.20 2012/12/03 08:52:29 swift Exp $
+
+*selinux-amavis-2.20120725-r8 (03 Dec 2012)
+
+  03 Dec 2012; Sven Vermeulen +selinux-amavis-2.20120725-r8.ebuild:
+  Bumping to revision 8
 
 *selinux-amavis-2.20120725-r7 (18 Nov 2012)
 
@@ -90,4 +95,3 @@
   01 Jan 2011; Chris Richards <gizmo@www.giz-works.com>
   +selinux-amavis-2.20101213.ebuild, +metadata.xml:
   Initial commit
-

@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-ppp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ppp/ChangeLog,v 1.26 2012/11/18 15:18:14 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ppp/ChangeLog,v 1.27 2012/12/03 08:52:36 swift Exp $
+
+*selinux-ppp-2.20120725-r8 (03 Dec 2012)
+
+  03 Dec 2012; Sven Vermeulen +selinux-ppp-2.20120725-r8.ebuild:
+  Bumping to revision 8
 
 *selinux-ppp-2.20120725-r7 (18 Nov 2012)
 
@@ -121,4 +126,3 @@
   11 Jun 2007; Petre Rodan <kaiowas@gentoo.org> +metadata.xml,
   +selinux-ppp-20070329.ebuild:
   initial commit
-

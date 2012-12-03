@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-sasl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-sasl/ChangeLog,v 1.16 2012/11/18 15:17:56 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-sasl/ChangeLog,v 1.17 2012/12/03 08:52:27 swift Exp $
+
+*selinux-sasl-2.20120725-r8 (03 Dec 2012)
+
+  03 Dec 2012; Sven Vermeulen +selinux-sasl-2.20120725-r8.ebuild:
+  Bumping to revision 8
 
 *selinux-sasl-2.20120725-r7 (18 Nov 2012)
 
@@ -85,4 +90,3 @@
   03 Mar 2011; <swift@gentoo.org> +selinux-sasl-2.20101213.ebuild,
   +metadata.xml:
   New ebuild
-

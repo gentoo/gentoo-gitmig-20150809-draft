@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-munin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-munin/ChangeLog,v 1.27 2012/11/18 15:18:29 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-munin/ChangeLog,v 1.28 2012/12/03 08:52:42 swift Exp $
+
+*selinux-munin-2.20120725-r8 (03 Dec 2012)
+
+  03 Dec 2012; Sven Vermeulen +selinux-munin-2.20120725-r8.ebuild:
+  Bumping to revision 8
 
 *selinux-munin-2.20120725-r7 (18 Nov 2012)
 
@@ -126,4 +131,3 @@
   +files/selinux-munin-20070329.patch, +metadata.xml,
   +selinux-munin-20070329.ebuild:
   initial commit. patch from Krzysztof Kozłowski bug #183409
-

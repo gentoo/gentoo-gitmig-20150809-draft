@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-apache
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-apache/ChangeLog,v 1.45 2012/11/18 15:18:22 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-apache/ChangeLog,v 1.46 2012/12/03 08:52:31 swift Exp $
+
+*selinux-apache-2.20120725-r8 (03 Dec 2012)
+
+  03 Dec 2012; Sven Vermeulen +files/fix-make-gpg-optional-r8.patch,
+  +selinux-apache-2.20120725-r8.ebuild:
+  Bumping to revision 8
 
 *selinux-apache-2.20120725-r7 (18 Nov 2012)
 
@@ -206,4 +212,3 @@
 
   03 Jan 2004; Chris PeBenito <pebenito@gentoo.org> :
   Initial commit.
-

@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-ddclient
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ddclient/ChangeLog,v 1.16 2012/11/18 15:18:09 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ddclient/ChangeLog,v 1.17 2012/12/03 08:52:41 swift Exp $
+
+*selinux-ddclient-2.20120725-r8 (03 Dec 2012)
+
+  03 Dec 2012; Sven Vermeulen +selinux-ddclient-2.20120725-r8.ebuild:
+  Bumping to revision 8
 
 *selinux-ddclient-2.20120725-r7 (18 Nov 2012)
 
@@ -66,4 +71,3 @@
 
   05 Feb 2011; Anthony G. Basile <blueness@gentoo.org> ChangeLog:
   Initial commit to portage.
-

@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-spamassassin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-spamassassin/ChangeLog,v 1.44 2012/11/18 15:18:07 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-spamassassin/ChangeLog,v 1.45 2012/12/03 08:52:40 swift Exp $
+
+*selinux-spamassassin-2.20120725-r8 (03 Dec 2012)
+
+  03 Dec 2012; Sven Vermeulen +selinux-spamassassin-2.20120725-r8.ebuild:
+  Bumping to revision 8
 
 *selinux-spamassassin-2.20120725-r7 (18 Nov 2012)
 
@@ -229,4 +234,3 @@
   04 Jul 2004; Chris PeBenito <pebenito@gentoo.org> +metadata.xml,
   +selinux-spamassassin-20040704.ebuild:
   Initial commit
-

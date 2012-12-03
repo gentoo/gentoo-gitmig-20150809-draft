@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-skype
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-skype/ChangeLog,v 1.23 2012/11/18 15:17:58 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-skype/ChangeLog,v 1.24 2012/12/03 08:52:32 swift Exp $
+
+*selinux-skype-2.20120725-r8 (03 Dec 2012)
+
+  03 Dec 2012; Sven Vermeulen +selinux-skype-2.20120725-r8.ebuild:
+  Bumping to revision 8
 
 *selinux-skype-2.20120725-r7 (18 Nov 2012)
 
@@ -111,4 +116,3 @@
   22 Jan 2011; <swift@gentoo.org> +selinux-skype-2.20101213-r1.ebuild,
   +files/add-apps-skype.patch:
   Update skype module to 'comply' with suggested approach for domains
-

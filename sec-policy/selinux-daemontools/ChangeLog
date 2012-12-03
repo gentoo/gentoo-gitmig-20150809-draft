@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-daemontools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-daemontools/ChangeLog,v 1.50 2012/11/18 15:18:24 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-daemontools/ChangeLog,v 1.51 2012/12/03 08:52:30 swift Exp $
+
+*selinux-daemontools-2.20120725-r8 (03 Dec 2012)
+
+  03 Dec 2012; Sven Vermeulen +selinux-daemontools-2.20120725-r8.ebuild:
+  Bumping to revision 8
 
 *selinux-daemontools-2.20120725-r7 (18 Nov 2012)
 
@@ -242,4 +247,3 @@
 
   21 Dec 2003; Chris PeBenito <pebenito@gentoo.org> metadata.xml:
   Initial commit.  Policy submitted by Petre Rodan.
-

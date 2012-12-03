@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-inetd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-inetd/ChangeLog,v 1.30 2012/11/18 15:18:00 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-inetd/ChangeLog,v 1.31 2012/12/03 08:52:18 swift Exp $
+
+*selinux-inetd-2.20120725-r8 (03 Dec 2012)
+
+  03 Dec 2012; Sven Vermeulen +selinux-inetd-2.20120725-r8.ebuild:
+  Bumping to revision 8
 
 *selinux-inetd-2.20120725-r7 (18 Nov 2012)
 
@@ -138,4 +143,3 @@
   11 Jun 2007; Petre Rodan <kaiowas@gentoo.org> +metadata.xml,
   +selinux-inetd-20070329.ebuild:
   initial commit
-
