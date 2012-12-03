@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mkinitcpio/mkinitcpio-0.9.2-r1.ebuild,v 1.5 2012/11/03 19:00:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mkinitcpio/mkinitcpio-0.9.2-r1.ebuild,v 1.6 2012/12/03 02:13:49 ssuominen Exp $
 
 EAPI=4
 
@@ -29,7 +29,7 @@ RDEPEND="app-arch/cpio
 	sys-apps/grep
 	>=sys-apps/kmod-7
 	>=sys-apps/util-linux-2.21
-	udev? ( >sys-fs/udev-171-r8 )
+	udev? ( >virtual/udev-171 )
 	device-mapper? ( sys-fs/lvm2[static] )
 	cryptsetup? ( sys-fs/cryptsetup[static] )
 	mdadm? ( sys-fs/mdadm[static] )
@@ -98,8 +98,13 @@ src_install() {
 		"${FILESDIR}"/gentoo.preset \
 		> "${D}"/etc/mkinitcpio.d/${KV_FULL}.preset || die
 
-	insinto /usr/lib/modprobe.d
-	doins "${FILESDIR}/usb-load-ehci-first.conf"
+	# This file doesn't belong to this package because it's already
+	# being installed by the module loader packages kmod and m-i-t.
+	# If this needs to be copied into the initramfs itself, the version
+	# from kmod or m-i-t can be used'so this should never be useful here.
+	# Comment out for now wrt bug #442384, -ssuominen 2012/12
+	#insinto /usr/lib/modprobe.d
+	#doins "${FILESDIR}/usb-load-ehci-first.conf"
 }
 
 pkg_postinst() {
