@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.514 2012/11/06 13:59:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.515 2012/12/03 06:31:48 scarabeus Exp $
+
+  03 Dec 2012; Tomáš Chvátal <scarabeus@gentoo.org> cups-1.6.1.ebuild:
+  Add ~ppc64 also to release version.
 
   06 Nov 2012; Alexis Ballier <aballier@gentoo.org> cups-1.6.1.ebuild,
   cups-9999.ebuild:
