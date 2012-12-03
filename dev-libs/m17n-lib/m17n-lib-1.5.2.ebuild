@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/m17n-lib/m17n-lib-1.5.2.ebuild,v 1.10 2012/05/04 18:35:44 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/m17n-lib/m17n-lib-1.5.2.ebuild,v 1.11 2012/12/03 07:13:23 naota Exp $
 
 inherit flag-o-matic eutils
 
 DESCRIPTION="Multilingual Library for Unix/Linux"
-HOMEPAGE="http://www.m17n.org/m17n-lib/"
+HOMEPAGE="https://savannah.nongnu.org/projects/m17n"
 SRC_URI="http://www.m17n.org/m17n-lib-download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
