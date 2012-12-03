@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.12.3-r1.ebuild,v 1.1 2012/09/26 10:54:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.12.3-r1.ebuild,v 1.2 2012/12/03 10:02:21 ssuominen Exp $
 
 EAPI=4
 GCONF_DEBUG=no
@@ -54,7 +54,7 @@ RDEPEND=">=dev-libs/glib-2.31.0:2
 		>=app-pda/libplist-1 )
 	udev? (
 		cdda? ( >=dev-libs/libcdio-0.78.2[-minimal] )
-		|| ( >=sys-fs/udev-171[gudev] >=sys-fs/udev-164-r2[extras] ) )
+		virtual/udev[gudev] )
 	udisks? ( >=sys-fs/udisks-1.90:2 )
 	http? ( >=net-libs/libsoup-gnome-2.26.0 )
 	samba? ( >=net-fs/samba-3.4.6[smbclient] )"
