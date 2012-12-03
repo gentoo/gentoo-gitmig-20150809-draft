@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/moc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.105 2012/12/01 18:43:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.106 2012/12/03 10:21:27 radhermit Exp $
+
+  03 Dec 2012; Tim Harder <radhermit@gentoo.org> -moc-2.5.0_beta1.ebuild,
+  -moc-2.5.0_alpha4_p20120501.ebuild, -moc-2.5.0_alpha4_p20120501-r1.ebuild,
+  -files/moc-libresid-builder.so_not_la.patch:
+  Remove old.
 
   01 Dec 2012; Raúl Porcel <armin76@gentoo.org> moc-2.5.0_beta1-r1.ebuild:
   Re-add ~alpha/~sparc wrt #439722
