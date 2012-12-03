@@ -1,20 +1,20 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-octave/g-octave-0.4.1-r2.ebuild,v 1.2 2012/02/26 09:06:00 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-octave/g-octave-0.4.1-r3.ebuild,v 1.1 2012/12/03 01:12:33 rafaelmartins Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.5 *-jython"
 
-DB_COMMIT="f8de0c5a490a9572a7e6592f0082c3f7e039ef67"
+DB_COMMIT="bdf02cbf0a8d017c6c1bddeffd6f03d5d90695ed"
 DB_DIR="rafaelmartins-${PN}-db-${DB_COMMIT:0:7}"
 
 inherit distutils eutils
 
 DESCRIPTION="A tool that generates and installs ebuilds for Octave-Forge"
-HOMEPAGE="http://www.g-octave.org/"
+HOMEPAGE="http://g-octave.org/"
 
-SRC_URI="http://www.g-octave.org/releases/${P}.tar.gz
+SRC_URI="mirror://github/rafaelmartins/${PN}/${P}.tar.gz
 	http://github.com/rafaelmartins/${PN}-db/tarball/${DB_COMMIT} ->
 		${PN}-db-${DB_COMMIT:0:7}.tar.gz"
 
@@ -31,6 +31,7 @@ PYTHON_MODNAME="g_octave"
 src_prepare() {
 	distutils_src_prepare
 	epatch "${FILESDIR}/${P}-add_cave_support.patch"
+	epatch "${FILESDIR}/${P}-fix-sourceforge-svn-root.patch"
 	sed -i -e 's/^has_fetch.*$/has_fetch = False/' scripts/g-octave \
 		|| die 'failed to patch the g-octave main script'
 }
@@ -68,7 +69,7 @@ pkg_postinst() {
 	elog "    emerge --config =${PF}"
 	elog
 	elog "If you are upgrading from =${PN}-0.3, please read this:"
-	elog "http://doc.g-octave.org/${PV}/upgrading/#from-0-3-to-0-4"
+	elog "http://docs.g-octave.org/en/latest/upgrading/#from-0-3-to-0-4"
 	elog
 	elog 'Please install the package manager that you want to use before run g-octave'
 	elog

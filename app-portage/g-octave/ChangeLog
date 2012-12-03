@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/g-octave
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-octave/ChangeLog,v 1.7 2012/02/26 09:06:00 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-octave/ChangeLog,v 1.8 2012/12/03 01:12:33 rafaelmartins Exp $
+
+*g-octave-0.4.1-r3 (03 Dec 2012)
+
+  03 Dec 2012; Rafael G. Martins <rafaelmartins@gentoo.org>
+  -g-octave-0.4.1-r2.ebuild, +g-octave-0.4.1-r3.ebuild,
+  +files/g-octave-0.4.1-fix-sourceforge-svn-root.patch:
+  revbump. new package database. fixed urls. fixed sourceforge svn root.
 
   26 Feb 2012; Patrick Lauer <patrick@gentoo.org> g-octave-0.4.1-r2.ebuild:
   Restricting python bits
