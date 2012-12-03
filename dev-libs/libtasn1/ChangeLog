@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libtasn1
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.177 2012/10/30 07:47:47 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.178 2012/12/03 18:42:50 radhermit Exp $
+
+*libtasn1-3.2 (03 Dec 2012)
+
+  03 Dec 2012; Tim Harder <radhermit@gentoo.org> +libtasn1-3.2.ebuild:
+  Version bump.
 
 *libtasn1-3.0 (30 Oct 2012)
 
