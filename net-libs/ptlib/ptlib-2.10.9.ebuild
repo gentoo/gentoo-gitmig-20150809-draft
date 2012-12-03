@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ptlib-2.10.8.ebuild,v 1.1 2012/10/23 22:41:15 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ptlib-2.10.9.ebuild,v 1.1 2012/12/03 23:16:28 neurogeek Exp $
 
 EAPI="4"
 
@@ -15,15 +15,17 @@ LICENSE="MPL-1.0"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 # default enabled are features from 'minsize', the most used according to ptlib
-IUSE="alsa +asn +audio debug doc dtmf examples ffmpeg ftp http ipv6
-jabber ldap lua mail odbc oss pch qos remote sasl sdl serial shmvideo snmp soap
-socks ssl static-libs +stun telnet tts v4l +video vxml wav xml xmlrpc"
+IUSE="alsa +asn +audio debug doc +dtmf examples ffmpeg ftp +http ipv6
+jabber ldap lua mail odbc oss pch pulseaudio qos remote sasl sdl serial
+shmvideo snmp soap socks ssl static-libs +stun telnet tts v4l +video
+vxml wav xml xmlrpc"
 
 CDEPEND="
 	audio? ( alsa? ( media-libs/alsa-lib ) )
 	ldap? ( net-nds/openldap )
 	lua? ( dev-lang/lua )
 	odbc? ( dev-db/unixODBC )
+	pulseaudio? ( media-sound/pulseaudio )
 	sasl? ( dev-libs/cyrus-sasl:2 )
 	sdl? ( media-libs/libsdl )
 	ssl? ( dev-libs/openssl )
@@ -126,6 +128,7 @@ src_configure() {
 		$(use_enable ldap openldap) \
 		$(use_enable lua) \
 		$(use_enable mail pop3smtp) \
+		$(use_enable pulseaudio pulse) \
 		$(use_enable odbc) \
 		$(use_enable oss) \
 		$(use_enable pch) \
@@ -178,9 +181,6 @@ src_install() {
 	fi
 
 	dodoc History.txt ReadMe.txt ReadMe_QOS.txt || die "dodoc failed"
-
-	# ChangeLog is not standard
-	dodoc ChangeLog-${PN}-v${PV//./_}.txt || die "dodoc failed"
 
 	if use audio || use video; then
 		newdoc plugins/ReadMe.txt ReadMe-Plugins.txt || die "newdoc failed"
