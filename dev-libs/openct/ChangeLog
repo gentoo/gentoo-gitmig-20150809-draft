@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openct
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.102 2012/11/29 16:24:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.103 2012/12/03 03:50:09 blueness Exp $
+
+  03 Dec 2012; Anthony G. Basile <blueness@gentoo.org> openct-0.6.20-r3.ebuild:
+  stable ppc ppc64, bug #418765
 
   29 Nov 2012; Jeroen Roovers <jer@gentoo.org> openct-0.6.20-r3.ebuild:
   Stable for HPPA (bug #418765).
