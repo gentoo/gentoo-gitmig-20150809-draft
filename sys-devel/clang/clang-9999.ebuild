@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-9999.ebuild,v 1.31 2012/07/27 18:22:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-9999.ebuild,v 1.32 2012/12/03 21:31:35 voyageur Exp $
 
 EAPI=4
 
@@ -111,9 +111,6 @@ src_compile() {
 }
 
 src_test() {
-	cd "${S}"/test || die "cd failed"
-	emake site.exp
-
 	cd "${S}"/tools/clang || die "cd clang failed"
 
 	echo ">>> Test phase [test]: ${CATEGORY}/${PF}"

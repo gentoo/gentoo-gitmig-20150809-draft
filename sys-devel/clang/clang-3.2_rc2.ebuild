@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.1-r1.ebuild,v 1.1 2012/05/26 01:34:57 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.2_rc2.ebuild,v 1.1 2012/12/03 21:31:35 voyageur Exp $
 
-EAPI=4
+EAPI=5
 
 RESTRICT_PYTHON_ABIS="3.*"
 SUPPORT_PYTHON_ABIS="1"
@@ -12,21 +12,27 @@ inherit eutils multilib python
 DESCRIPTION="C language family frontend for LLVM"
 HOMEPAGE="http://clang.llvm.org/"
 # Fetching LLVM as well: see http://llvm.org/bugs/show_bug.cgi?id=4840
-SRC_URI="http://llvm.org/releases/${PV}/llvm-${PV}.src.tar.gz
-	http://llvm.org/releases/${PV}/${P}.src.tar.gz"
+SRC_URI="http://llvm.org/pre-releases/${PV/_rc*}/${PV/3.2_}/llvm-${PV/_}.src.tar.gz
+	http://llvm.org/pre-releases/${PV/_rc*}/${PV/3.2_}/compiler-rt-${PV/_}.src.tar.gz
+	http://llvm.org/pre-releases/${PV/_rc*}/${PV/3.2_}/${P/_}.src.tar.gz"
 
 LICENSE="UoI-NCSA"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="~amd64 ~arm ~x86 ~amd64-fbsd ~x64-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos"
 IUSE="debug kernel_FreeBSD multitarget +static-analyzer test"
 
 DEPEND="static-analyzer? ( dev-lang/perl )"
 RDEPEND="~sys-devel/llvm-${PV}[multitarget=]"
 
-S=${WORKDIR}/llvm-${PV}.src
+S=${WORKDIR}/llvm.src
 
 src_prepare() {
-	mv "${WORKDIR}"/clang-${PV}.src "${S}"/tools/clang || die "clang source directory move failed"
+	rm -f "${S}"/tools/clang "${S}"/projects/compiler-rt \
+		|| die "symlinks removal failed"
+	mv "${WORKDIR}"/cfe.src "${S}"/tools/clang \
+		|| die "clang source directory move failed"
+	mv "${WORKDIR}"/compiler-rt.src "${S}"/projects/compiler-rt \
+		|| die "compiler-rt source directory move failed"
 
 	# Same as llvm doc patches
 	epatch "${FILESDIR}"/${PN}-2.7-fixdoc.patch
@@ -52,6 +58,7 @@ src_prepare() {
 	# Specify python version
 	python_convert_shebangs 2 tools/clang/tools/scan-view/scan-view
 	python_convert_shebangs -r 2 test/Scripts
+	python_convert_shebangs 2 projects/compiler-rt/lib/asan/scripts/asan_symbolize.py
 
 	# From llvm src_prepare
 	einfo "Fixing install dirs"
@@ -69,17 +76,15 @@ src_prepare() {
 	sed -e "/^llc_props =/s/os.path.join(llvm_tools_dir, 'llc')/'llc'/" \
 		-i tools/clang/test/lit.cfg  || die "test path sed failed"
 
-	# Automatically select active system GCC's libraries, bug #406163
-	epatch "${FILESDIR}"/${P}-gentoo-runtime-gcc-detection.patch
+	# Automatically select active system GCC's libraries, bugs #406163 and #417913
+	epatch "${FILESDIR}"/${PN}-3.1-gentoo-runtime-gcc-detection-v3.patch
 
 	# Fix search paths on FreeBSD, bug #409269
-	epatch "${FILESDIR}"/${P}-gentoo-freebsd-fix-lib-path.patch
+	epatch "${FILESDIR}"/${PN}-3.1-gentoo-freebsd-fix-lib-path.patch
 
 	# Fix regression caused by removal of USE=system-cxx-headers, bug #417541
-	epatch "${FILESDIR}"/${P}-gentoo-freebsd-fix-cxx-paths.patch
-
-	# Fix regression that prevents Clang from building itself on Linux, bug #417537
-	epatch "${FILESDIR}"/${P}-gentoo-linux-fix-cxx-include.patch
+	# Needs to be updated for 3.2
+	#epatch "${FILESDIR}"/${PN}-3.1-gentoo-freebsd-fix-cxx-paths-v2.patch
 
 	# User patches
 	epatch_user
@@ -101,13 +106,15 @@ src_configure() {
 	if use multitarget; then
 		CONF_FLAGS="${CONF_FLAGS} --enable-targets=all"
 	else
-		CONF_FLAGS="${CONF_FLAGS} --enable-targets=host-only"
+		CONF_FLAGS="${CONF_FLAGS} --enable-targets=host,cpp"
 	fi
 
 	if use amd64; then
 		CONF_FLAGS="${CONF_FLAGS} --enable-pic"
 	fi
 
+	# clang prefers clang over gcc, so we may need to force that
+	tc-export CC CXX
 	econf ${CONF_FLAGS}
 }
 
@@ -116,9 +123,6 @@ src_compile() {
 }
 
 src_test() {
-	cd "${S}"/test || die "cd failed"
-	emake site.exp
-
 	cd "${S}"/tools/clang || die "cd clang failed"
 
 	echo ">>> Test phase [test]: ${CATEGORY}/${PF}"
@@ -155,6 +159,9 @@ src_install() {
 		python_execute_function install-scan-view
 	fi
 
+	# AddressSanitizer symbolizer (currently separate)
+	dobin "${S}"/projects/compiler-rt/lib/asan/scripts/asan_symbolize.py
+
 	# Fix install_names on Darwin.  The build system is too complicated
 	# to just fix this, so we correct it post-install
 	if [[ ${CHOST} == *-darwin* ]] ; then
@@ -179,7 +186,7 @@ src_install() {
 	fi
 
 	# Remove unnecessary headers on FreeBSD, bug #417171
-	use kernel_FreeBSD && rm "${ED}/usr/lib/clang/3.1/include/"{arm_neon,std,float,iso,limits,tgmath,varargs}*.h
+	use kernel_FreeBSD && rm "${ED}"usr/$(get_libdir)/clang/${PV}/include/{arm_neon,std,float,iso,limits,tgmath,varargs}*.h
 }
 
 pkg_postinst() {
