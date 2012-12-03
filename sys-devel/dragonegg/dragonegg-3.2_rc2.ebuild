@@ -1,32 +1,26 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/dragonegg/dragonegg-9999.ebuild,v 1.3 2012/12/03 20:38:33 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/dragonegg/dragonegg-3.2_rc2.ebuild,v 1.1 2012/12/03 20:38:33 voyageur Exp $
 
 EAPI=5
-inherit subversion multilib toolchain-funcs
+inherit multilib toolchain-funcs
 
 DESCRIPTION="GCC plugin that uses LLVM for optimization and code generation"
 HOMEPAGE="http://dragonegg.llvm.org/"
-SRC_URI=""
-ESVN_REPO_URI="http://llvm.org/svn/llvm-project/dragonegg/trunk"
+SRC_URI="http://llvm.org/pre-releases/${PV/_rc*}/${PV/3.2_}/${P/_}.src.tar.gz
+	test? ( http://llvm.org/pre-releases/${PV/_rc*}/${PV/3.2_}/llvm-${PV/_}.src.tar.gz )"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
-IUSE=""
+KEYWORDS="~amd64 ~x86 ~amd64-linux"
+IUSE="test"
 
 DEPEND="|| ( sys-devel/gcc:4.5[lto]
 		>=sys-devel/gcc-4.6 )
 	~sys-devel/llvm-${PV}"
 RDEPEND="${DEPEND}"
 
-src_unpack() {
-	if use test;
-	then
-		ESVN_PROJECT=llvm S="${WORKDIR}"/llvm subversion_fetch "http://llvm.org/svn/llvm-project/llvm/trunk"
-	fi
-	subversion_fetch
-}
+S=${WORKDIR}/${PN/_}.src
 
 src_compile() {
 	# GCC: compiler to use plugin with
@@ -34,7 +28,7 @@ src_compile() {
 }
 
 src_test() {
-	emake LIT_DIR="${WORKDIR}"/llvm/utils/lit check
+	emake LIT_DIR="${WORKDIR}"/llvm.src/utils/lit check
 }
 
 src_install() {
