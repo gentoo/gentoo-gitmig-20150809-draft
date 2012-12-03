@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.25.ebuild,v 1.3 2012/12/03 12:45:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.25.ebuild,v 1.4 2012/12/03 13:07:11 jer Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -20,7 +20,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 
-IUSE="gtk ipv6 lua ncat ndiff nls nmap-update nping ssl"
+IUSE="gtk ipv6 +lua ncat ndiff nls nmap-update nping ssl"
 NMAP_LINGUAS="de fr hr it ja pt_BR ru"
 for lingua in ${NMAP_LINGUAS}; do
 	IUSE+=" linguas_${lingua}"
@@ -76,13 +76,21 @@ src_prepare() {
 		-e 's/-m 755 -s ncat/-m 755 ncat/' \
 		ncat/Makefile.in || die
 
-	local lingua=''
-	for lingua in ${NMAP_LINGUAS}; do
-		rm -rf zenmap/share/zenmap/locale/${lingua}
-		if ! use linguas_${lingua}; then
+	if use nls; then
+		local lingua=''
+		for lingua in ${NMAP_LINGUAS}; do
+			if ! use linguas_${lingua}; then
+				rm -rf zenmap/share/zenmap/locale/${lingua}
+				rm -f zenmap/share/zenmap/locale/${lingua}.po
+			fi
+		done
+	else
+		# configure/make ignores --disable-nls
+		for lingua in ${NMAP_LINGUAS}; do
+			rm -rf zenmap/share/zenmap/locale/${lingua}
 			rm -f zenmap/share/zenmap/locale/${lingua}.po
-		fi
-	done
+		done
+	fi
 
 	# Fix desktop files wrt bug #432714
 	sed -i \
