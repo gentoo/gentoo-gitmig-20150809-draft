@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/zencoding-vim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/zencoding-vim/ChangeLog,v 1.18 2012/10/07 10:27:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/zencoding-vim/ChangeLog,v 1.19 2012/12/03 16:59:57 ago Exp $
+
+  03 Dec 2012; <ago@gentoo.org> zencoding-vim-0.74.ebuild:
+  Stable for amd64, wrt bug #441134
 
   07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, #274113
