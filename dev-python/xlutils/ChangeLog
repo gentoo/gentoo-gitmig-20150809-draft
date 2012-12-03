@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/xlutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xlutils/ChangeLog,v 1.5 2012/11/13 10:19:51 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xlutils/ChangeLog,v 1.6 2012/12/03 21:29:15 bicatali Exp $
+
+  03 Dec 2012; Sébastien Fabbro <bicatali@gentoo.org> xlutils-1.5.2.ebuild:
+  Keyword amd64-linux and x86-linux
 
   14 Nov 2012; Ian Delaney <idella4@gentoo.org> metadata.xml:
   Updating maintainer, metadata.xml
