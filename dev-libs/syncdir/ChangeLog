@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/syncdir
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/syncdir/ChangeLog,v 1.16 2012/12/01 19:50:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/syncdir/ChangeLog,v 1.17 2012/12/03 13:17:54 kensington Exp $
+
+  03 Dec 2012; Michael Palimaka <kensington@gentoo.org> -syncdir-1.0.ebuild:
+  Remove old.
 
   01 Dec 2012; Raúl Porcel <armin76@gentoo.org> syncdir-1.0.ebuild,
   syncdir-1.0-r1.ebuild:
