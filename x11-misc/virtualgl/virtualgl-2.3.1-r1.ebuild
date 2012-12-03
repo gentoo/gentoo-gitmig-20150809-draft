@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/virtualgl/virtualgl-2.3.1-r1.ebuild,v 1.1 2012/09/29 09:33:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/virtualgl/virtualgl-2.3.1-r1.ebuild,v 1.2 2012/12/03 11:58:07 mgorny Exp $
 
 EAPI="4"
 
@@ -48,7 +48,7 @@ src_configure() {
 		local CFLAGS="${CFLAGS--O2 -march=native -pipe} -m32"
 		local CXXFLAGS="${CFLAGS}"
 		local LDFLAGS="${LDFLAGS} -m32"
-		local CMAKE_BUILD_DIR="${build32_dir}"
+		local BUILD_DIR="${build32_dir}"
 
 		mycmakeargs=(
 			$(cmake-utils_use ssl VGL_USESSL)
@@ -81,7 +81,7 @@ src_compile() {
 	# Make 32bit version on multilib
 	use amd64 && use multilib && (
 		einfo "Building 32bit libs..."
-		local CMAKE_BUILD_DIR="${build32_dir}"
+		local BUILD_DIR="${build32_dir}"
 		cmake-utils_src_compile
 
 		einfo "Building 64bit libs..."
@@ -95,7 +95,7 @@ src_install() {
 	# Install 32bit version on multilib
 	use amd64 && use multilib && (
 		einfo "Installing 32bit libs..."
-		local CMAKE_BUILD_DIR="${build32_dir}"
+		local BUILD_DIR="${build32_dir}"
 		cmake-utils_src_install
 
 		einfo "Installing 64bit libs..."
