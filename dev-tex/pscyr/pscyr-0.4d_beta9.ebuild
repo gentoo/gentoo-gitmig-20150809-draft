@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/pscyr/pscyr-0.4d_beta9.ebuild,v 1.1 2012/05/23 12:46:21 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/pscyr/pscyr-0.4d_beta9.ebuild,v 1.2 2012/12/03 01:36:14 radhermit Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ DESCRIPTION="Type1 cyrillic fonts collection."
 HOMEPAGE="ftp://scon155.phys.msu.su/pub/russian/psfonts/"
 SRC_URI="ftp://scon155.phys.msu.su/pub/russian/psfonts/0.4d-beta/PSCyr-0.4-beta9-tex.tar.gz
 		ftp://scon155.phys.msu.su/pub/russian/psfonts/0.4d-beta/PSCyr-0.4-beta9-type1.tar.gz"
-LICENSE="as-is"
+LICENSE="LPPL-1.2"
 
 SLOT="0"
 IUSE=""
