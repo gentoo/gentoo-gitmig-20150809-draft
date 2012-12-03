@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/iprutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/iprutils/ChangeLog,v 1.35 2012/04/22 12:37:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/iprutils/ChangeLog,v 1.36 2012/12/03 10:03:00 ssuominen Exp $
+
+  03 Dec 2012; Samuli Suominen <ssuominen@gentoo.org> iprutils-2.2.18.ebuild,
+  iprutils-2.2.19.ebuild, iprutils-2.3.0.ebuild, iprutils-2.3.9.ebuild:
+  Use virtual/udev instead of sys-fs/udev wrt #444398
 
 *iprutils-2.3.9 (22 Apr 2012)
 
