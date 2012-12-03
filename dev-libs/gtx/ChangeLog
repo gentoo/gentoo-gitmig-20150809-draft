@@ -1,0 +1,11 @@
+# ChangeLog for dev-libs/gtx
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gtx/ChangeLog,v 1.1 2012/12/03 11:33:17 jlec Exp $
+
+*gtx-0.2.2 (03 Dec 2012)
+
+  03 Dec 2012; Justin Lecher <jlec@gentoo.org> +gtx-0.2.2.ebuild,
+  +files/gtx-0.2.2-debug.patch, +files/gtx-0.2.2-docdir.patch,
+  +files/gtx-0.2.2-glib.h.patch, +metadata.xml:
+  new addition
+
