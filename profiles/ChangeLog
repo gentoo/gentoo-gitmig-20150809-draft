@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7214 2012/12/02 18:34:16 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7215 2012/12/03 20:33:22 voyageur Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Dec 2012; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
+  Mask release candidates for sys-devel/llvm-3.2 and friends
 
   02 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
   Drop gstreamer:0.10 mask, everything is now in tree.
