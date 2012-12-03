@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.86 2012/12/01 16:26:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.87 2012/12/03 09:29:09 mgorny Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -168,8 +168,24 @@ _check_build_dir() {
 		# we build in source dir
 		BUILD_DIR="${CMAKE_USE_DIR}"
 	else
-		: ${BUILD_DIR:=${CMAKE_BUILD_DIR:-${WORKDIR}/${P}_build}}
+		# Respect both the old variable and the new one, depending
+		# on which one was set by the ebuild.
+		if [[ ! ${BUILD_DIR} && ${AUTOTOOLS_BUILD_DIR} ]]; then
+			eqawarn "The AUTOTOOLS_BUILD_DIR variable has been renamed to BUILD_DIR."
+			eqawarn "Please migrate the ebuild to use the new one."
+
+			# In the next call, both variables will be set already
+			# and we'd have to know which one takes precedence.
+			_RESPECT_AUTOTOOLS_BUILD_DIR=1
+		fi
+		if [[ ${_RESPECT_AUTOTOOLS_BUILD_DIR} ]]; then
+			BUILD_DIR=${AUTOTOOLS_BUILD_DIR}
+		fi
+
+		: ${BUILD_DIR:=${WORKDIR}/${P}_build}
 	fi
+
+	# Backwards compatibility for getting the value.
 	CMAKE_BUILD_DIR=${BUILD_DIR}
 
 	mkdir -p "${BUILD_DIR}"

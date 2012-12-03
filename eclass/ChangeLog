@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.541 2012/12/02 17:16:20 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.542 2012/12/03 09:29:09 mgorny Exp $
+
+  03 Dec 2012; Michał Górny <mgorny@gentoo.org> autotools-utils.eclass,
+  cmake-utils.eclass:
+  Fix respecting AUTOTOOLS_BUILD_DIR and CMAKE_BUILD_DIR. Acked by scarabeus.
 
   02 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org> gst-plugins-bad.eclass,
   gst-plugins-base.eclass, gst-plugins-good.eclass, gst-plugins-ugly.eclass,
