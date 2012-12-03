@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5.4-r5.ebuild,v 1.4 2012/12/02 18:21:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5.4-r5.ebuild,v 1.5 2012/12/03 04:14:58 floppym Exp $
 
 EAPI="1"
 
@@ -300,28 +300,24 @@ pkg_preinst() {
 }
 
 eselect_python_update() {
-	local eselect_python_options
-	[[ "$(eselect python show)" == "python2."* ]] && eselect_python_options="--python2"
+	[[ -z "${EROOT}" || (! -d "${EROOT}" && -d "${ROOT}") ]] && EROOT="${ROOT%/}${EPREFIX}/"
 
-	# Create python2 symlink.
-	eselect python update --python2 > /dev/null
+	if [[ -z "$(eselect python show)" || ! -f "${EROOT}usr/bin/$(eselect python show)" ]]; then
+		eselect python update
+	fi
 
-	eselect python update ${eselect_python_options}
+	if [[ -z "$(eselect python show --python${PV%%.*})" || ! -f "${EROOT}usr/bin/$(eselect python show --python${PV%%.*})" ]]; then
+		eselect python update --python${PV%%.*}
+	fi
 }
 
 pkg_postinst() {
 	eselect_python_update
 
 	if [[ "${python_updater_warning}" == "1" ]]; then
-		ewarn
-		ewarn "\e[1;31m************************************************************************\e[0m"
-		ewarn
 		ewarn "You have just upgraded from an older version of Python."
-		ewarn "You should run 'python-updater \${options}' to rebuild Python modules."
-		ewarn
-		ewarn "\e[1;31m************************************************************************\e[0m"
-		ewarn
-		ebeep 12
+		ewarn "You should switch active version of Python ${PV%%.*} and run"
+		ewarn "'python-updater [options]' to rebuild Python modules."
 	fi
 }
 

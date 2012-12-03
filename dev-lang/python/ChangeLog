@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.625 2012/12/02 18:21:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.626 2012/12/03 04:14:58 floppym Exp $
+
+  03 Dec 2012; Mike Gilbert <floppym@gentoo.org> python-2.5.4-r5.ebuild:
+  Copy eselect_python logic from more recent ebuilds.
 
   02 Dec 2012; Michał Górny <mgorny@gentoo.org> python-2.5.4-r5.ebuild,
   python-2.6.8-r1.ebuild, python-2.7.3-r3.ebuild, python-3.1.5-r1.ebuild,
