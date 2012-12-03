@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-2.96.ebuild,v 1.6 2012/10/26 07:17:45 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-2.96.ebuild,v 1.7 2012/12/03 02:33:36 ssuominen Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -61,9 +61,9 @@ COMMON_DEPEND=">=dev-libs/glib-2.28.0:2
 		gnome-base/gconf:2 )
 	python? ( dev-python/pygobject:3 )
 	udev? (
+		virtual/udev[gudev]
 		ipod? ( >=media-libs/libgpod-0.7.92[udev] )
-		mtp? ( >=media-libs/libmtp-0.3 )
-		|| ( >=sys-fs/udev-171[gudev] >=sys-fs/udev-145[extras] ) )
+		mtp? ( >=media-libs/libmtp-0.3 ) )
 	zeitgeist? ( gnome-extra/zeitgeist )
 "
 RDEPEND="${COMMON_DEPEND}

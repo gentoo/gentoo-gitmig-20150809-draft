@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.8-r1.ebuild,v 1.22 2012/10/26 07:17:45 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.8-r1.ebuild,v 1.23 2012/12/03 02:33:36 ssuominen Exp $
 
 EAPI="4"
 GNOME_TARBALL_SUFFIX="bz2"
@@ -39,9 +39,9 @@ COMMON_DEPEND=">=dev-libs/glib-2.18:2
 	daap? ( >=net-dns/avahi-0.6 )
 	gnome-keyring? ( >=gnome-base/gnome-keyring-0.4.9 )
 	udev? (
+		virtual/udev[gudev]
 		ipod? ( >=media-libs/libgpod-0.6 )
-		mtp? ( >=media-libs/libmtp-0.3 )
-		|| ( >=sys-fs/udev-171[gudev] >=sys-fs/udev-145[extras] ) )
+		mtp? ( >=media-libs/libmtp-0.3 ) )
 	libnotify? ( >=x11-libs/libnotify-0.4.1 )
 	lirc? ( app-misc/lirc )
 	musicbrainz? ( media-libs/musicbrainz:3

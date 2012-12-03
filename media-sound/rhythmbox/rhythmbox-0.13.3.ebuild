@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.13.3.ebuild,v 1.10 2012/10/26 07:17:45 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.13.3.ebuild,v 1.11 2012/12/03 02:33:36 ssuominen Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
@@ -41,9 +41,9 @@ COMMON_DEPEND=">=dev-libs/glib-2.26:2
 		>=net-dns/avahi-0.6 )
 	gnome-keyring? ( >=gnome-base/gnome-keyring-0.4.9 )
 	udev? (
+		virtual/udev[gudev]
 		ipod? ( >=media-libs/libgpod-0.7.92 )
-		mtp? ( >=media-libs/libmtp-0.3 )
-		|| ( >=sys-fs/udev-171[gudev] >=sys-fs/udev-145[extras] ) )
+		mtp? ( >=media-libs/libmtp-0.3 ) )
 	lastfm? ( dev-libs/json-glib )
 	libnotify? ( >=x11-libs/libnotify-0.4.1 )
 	lirc? ( app-misc/lirc )
