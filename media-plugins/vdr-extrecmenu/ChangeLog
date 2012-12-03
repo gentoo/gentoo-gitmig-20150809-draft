@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-extrecmenu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-extrecmenu/ChangeLog,v 1.38 2012/11/20 19:17:21 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-extrecmenu/ChangeLog,v 1.39 2012/12/03 22:42:27 idl0r Exp $
+
+  03 Dec 2012; Christian Ruppert <idl0r@gentoo.org>
+  vdr-extrecmenu-1.2.1.ebuild, vdr-extrecmenu-1.2.2.ebuild,
+  vdr-extrecmenu-1.2.2-r1.ebuild:
+  Depend on vdr < 1.7.32 as a function used by vdr-extrecmenu has been dropped.
 
 *vdr-extrecmenu-1.2.2-r1 (20 Nov 2012)
 
