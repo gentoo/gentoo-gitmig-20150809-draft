@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-9.0-r4.ebuild,v 1.1 2012/06/27 10:29:23 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-9.0-r5.ebuild,v 1.1 2012/12/03 11:31:31 naota Exp $
 
 inherit bsdmk freebsd flag-o-matic
 
@@ -63,6 +63,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${PN}-cve-2012-0217.patch"
 	epatch "${FILESDIR}/${PN}-9.0-ipv6refcount.patch"
+	epatch "${FILESDIR}/${PN}-cve-2012-4576.patch"
 }
 
 src_compile() {
