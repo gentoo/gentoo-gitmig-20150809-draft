@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dropbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/ChangeLog,v 1.27 2012/10/30 00:35:59 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/ChangeLog,v 1.28 2012/12/03 22:39:36 naota Exp $
+
+*dropbox-1.4.23 (03 Dec 2012)
+
+  03 Dec 2012;  <naota@gentoo.org> +dropbox-1.4.23.ebuild:
+  Version bump; Add wxGTK dependency #443686
 
 *dropbox-1.4.17 (30 Oct 2012)
 
