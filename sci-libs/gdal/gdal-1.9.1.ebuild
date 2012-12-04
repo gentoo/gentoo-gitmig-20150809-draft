@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.9.1.ebuild,v 1.5 2012/08/10 06:12:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.9.1.ebuild,v 1.6 2012/12/04 09:44:24 jlec Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ RDEPEND="
 	media-libs/tiff
 	sci-libs/libgeotiff
 	( || ( <sys-libs/zlib-1.2.5.1-r1 >=sys-libs/zlib-1.2.5.1-r2[minizip] ) )
-	armadillo? ( >=sci-libs/armadillo-3.0.2 )
+	armadillo? ( sci-libs/armadillo[lapack] )
 	curl? ( net-misc/curl )
 	ecwj2k? ( sci-libs/libecwj2 )
 	fits? ( sci-libs/cfitsio )
