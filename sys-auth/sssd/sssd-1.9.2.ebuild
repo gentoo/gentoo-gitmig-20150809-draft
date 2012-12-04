@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/sssd-1.9.2.ebuild,v 1.1 2012/10/17 17:18:51 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/sssd-1.9.2.ebuild,v 1.2 2012/12/04 15:42:22 maksbotan Exp $
 
 EAPI=4
 
@@ -119,7 +119,7 @@ src_install(){
 
 	if use python; then
 		python_clean_installation_image
-		python_convert_shebangs 2 -r "${ED}$(python_get_sitedir)"/*.py
+		python_convert_shebangs -r 2 "${ED}$(python_get_sitedir)"/*.py
 	fi
 	newconfd "${FILESDIR}"/sssd.conf sssd
 }
