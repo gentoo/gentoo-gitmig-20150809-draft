@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-2.4-r1.ebuild,v 1.1 2012/11/24 22:42:49 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-2.4-r1.ebuild,v 1.2 2012/12/04 07:54:28 grobian Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -59,6 +59,7 @@ src_compile() {
 
 src_install() {
 	distutils_src_install
+	python_convert_shebangs 2 contrib/hg-ssh
 
 	newbashcomp contrib/bash_completion ${PN} || die
 
