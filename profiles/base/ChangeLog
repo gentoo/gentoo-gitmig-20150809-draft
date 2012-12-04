@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.468 2012/11/30 20:33:32 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.469 2012/12/04 16:25:04 zmedico Exp $
+
+  04 Dec 2012; Zac Medico <zmedico@gentoo.org> package.use.force:
+  Force app-shells/bash[readline] in stage1 builds, so that compgen is
+  available for sys-apps/portage (see bug #445576).
 
   30 Nov 2012; Christoph Junghans <ottxor@gentoo.org> package.use.mask:
   masked cuda and openmm for sci-chemistry/gromacs

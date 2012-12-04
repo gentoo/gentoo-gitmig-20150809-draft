@@ -1,6 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.force,v 1.28 2012/10/29 11:26:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.force,v 1.29 2012/12/04 16:25:04 zmedico Exp $
+
+# Zac Medico <zmedico@gentoo.org> (4 Dec 2012)
+# Force app-shells/bash[readline] in stage1 builds, so that compgen is
+# available for sys-apps/portage (see bug #445576).
+app-shells/bash readline
 
 # Michał Górny <mgorny@gentoo.org> (14 Oct 2012)
 # Force-enable all PYTHON_TARGETS for python-exec to avoid using private
