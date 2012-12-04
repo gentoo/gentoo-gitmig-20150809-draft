@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.98 2012/12/04 12:35:44 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.99 2012/12/04 19:24:19 scarabeus Exp $
+
+  04 Dec 2012; Tomáš Chvátal <scarabeus@gentoo.org> xen-4.1.1-r2.ebuild:
+  This is supposed to be stable amd64 and x86. We do not remove stable keywords
+  just for fun.
 
 *xen-4.2.0 (05 Dec 2012)
 
