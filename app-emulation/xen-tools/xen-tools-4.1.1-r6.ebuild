@@ -1,8 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.1-r6.ebuild,v 1.5 2012/12/02 22:48:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.1-r6.ebuild,v 1.6 2012/12/04 12:00:12 idella4 Exp $
 
 EAPI="3"
+
+PATCH23104="http://dev.gentoo.org/~idella4/${P}-upstream-23104-1976adbf2b80.patch"
 
 if [[ $PV == *9999 ]]; then
 	KEYWORDS=""
@@ -14,7 +16,8 @@ else
 	KEYWORDS="amd64 ~x86"
 	XEN_EXTFILES_URL="http://xenbits.xensource.com/xen-extfiles"
 	SRC_URI="http://bits.xensource.com/oss-xen/release/${PV}/xen-${PV}.tar.gz \
-	$XEN_EXTFILES_URL/ipxe-git-v1.0.0.tar.gz"
+	$XEN_EXTFILES_URL/ipxe-git-v1.0.0.tar.gz
+	$PATCH23104"
 	S="${WORKDIR}/xen-${PV}"
 fi
 
@@ -66,7 +69,7 @@ RDEPEND="${CDEPEND}
 		app-misc/screen
 		app-admin/logrotate
 	)
-	|| ( virtual/udev sys-apps/hotplug )"
+	|| ( sys-fs/udev sys-apps/hotplug )"
 
 # hvmloader is used to bootstrap a fully virtualized kernel
 # Approved by QA team in bug #144032
@@ -185,7 +188,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-4.1.1-libxl-tap.patch"
 
 	# Patch from bug #382329 for hvmloader
-	epatch "${FILESDIR}/${PN}-4.1.1-upstream-23104-1976adbf2b80.patch"
+	epatch "${DISTDIR}/${PN}-4.1.1-upstream-23104-1976adbf2b80.patch"
 
 	# Prevent the downloading of ipxe
 	sed -e 's:^\tif ! wget -O _$T:#\tif ! wget -O _$T:' \
