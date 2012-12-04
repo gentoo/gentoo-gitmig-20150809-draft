@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/libzen-0.4.28.ebuild,v 1.1 2012/08/09 09:34:16 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/libzen-0.4.28.ebuild,v 1.2 2012/12/04 02:41:53 radhermit Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ DESCRIPTION="Shared library for libmediainfo and mediainfo"
 HOMEPAGE="http://sourceforge.net/projects/zenlib"
 SRC_URI="mirror://sourceforge/zenlib/${MY_PN}%20-%20Sources/${PV}/${PN}_${PV}.tar.bz2"
 
-LICENSE="as-is ZLIB"
+LICENSE="ZLIB"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc static-libs"
