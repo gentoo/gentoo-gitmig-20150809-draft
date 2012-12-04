@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.60 2012/10/10 22:16:47 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.61 2012/12/04 16:28:44 zmedico Exp $
 
 EAPI=3
 inherit git-2 eutils python
@@ -35,9 +35,10 @@ DEPEND="${python_dep}
 # to python-3.3 / pyxattr. Also, xattr support is only tested with Linux, so
 # for now, don't pull in xattr deps for other kernels.
 # For whirlpool hash, require python[ssl] or python-mhash (bug #425046).
+# For compgen, require bash[readline] (bug #445576).
 RDEPEND="${python_dep}
 	!build? ( >=sys-apps/sed-4.0.5
-		>=app-shells/bash-3.2_p17
+		>=app-shells/bash-3.2_p17[readline]
 		>=app-admin/eselect-1.2
 		|| ( ${python_dep_ssl} dev-python/python-mhash )
 	)
