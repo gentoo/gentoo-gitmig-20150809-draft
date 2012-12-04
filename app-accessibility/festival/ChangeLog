@@ -1,6 +1,14 @@
 # ChangeLog for app-accessibility/festival
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.107 2012/12/04 04:50:43 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.108 2012/12/04 05:00:55 neurogeek Exp $
+
+  03 Dec 2012; Jesus Rivero <neurogeek@gentoo.org> -festival-1.96_beta.ebuild,
+  -files/festival-1.96_beta-gcc43.patch,
+  -files/festival-1.96_beta-hts-voices.patch,
+  -files/festival-1.96_beta-init-scm.patch, -files/festival.rc,
+  -files/server.scm, metadata.xml:
+  Removed older version because of security issues. Closes bugs #386319 and
+  #425854
 
 *festival-2.1-r1 (03 Dec 2012)
 

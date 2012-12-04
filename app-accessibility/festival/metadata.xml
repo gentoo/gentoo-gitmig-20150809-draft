@@ -3,10 +3,8 @@
 <pkgmetadata>
 <maintainer>
 	<email>neurogeek@gentoo.org</email>
+	<name>Jesus Rivero</name>
 </maintainer>
 <herd>accessibility</herd>
 <herd>sound</herd>
-<use>
-	<flag name='mbrola'>Adds support for mbrola voices</flag>
-</use>
 </pkgmetadata>
