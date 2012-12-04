@@ -1,13 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/xen-pvgrub-4.1.2.ebuild,v 1.4 2012/12/04 16:31:20 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/xen-pvgrub-4.2.0.ebuild,v 1.1 2012/12/04 16:31:20 idella4 Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit flag-o-matic eutils multilib toolchain-funcs
 
 XEN_EXTFILES_URL="http://xenbits.xensource.com/xen-extfiles"
-OCAML_URL=http://caml.inria.fr/pub/distrib
 LIBPCI_URL=ftp://atrey.karlin.mff.cuni.cz/pub/linux/pci
 GRUB_URL=mirror://gnu-alpha/grub
 SRC_URI="
@@ -16,9 +15,7 @@ SRC_URI="
 		$XEN_EXTFILES_URL/zlib-1.2.3.tar.gz
 		$LIBPCI_URL/pciutils-2.2.9.tar.bz2
 		$XEN_EXTFILES_URL/lwip-1.3.0.tar.gz
-		$XEN_EXTFILES_URL/newlib/newlib-1.16.0.tar.gz
-		$OCAML_URL/ocaml-3.11
-		"
+		$XEN_EXTFILES_URL/newlib/newlib-1.16.0.tar.gz"
 
 S="${WORKDIR}/xen-${PV}"
 
@@ -32,11 +29,10 @@ IUSE="custom-cflags"
 DEPEND="sys-devel/gettext
 	sys-devel/gcc"
 
-RDEPEND=">=app-emulation/xen-${PV}"
+RDEPEND="=app-emulation/xen-${PV}"
 
 src_prepare() {
-	# Drop .config
-	sed -e '/-include $(XEN_ROOT)\/.config/d' -i Config.mk || die "Couldn't drop"
+
 	# if the user *really* wants to use their own custom-cflags, let them
 	if use custom-cflags; then
 		einfo "User wants their own CFLAGS - removing defaults"
@@ -50,36 +46,27 @@ src_prepare() {
 			-i {} \;
 	fi
 
-	sed -i \
-	-e 's/WGET=.*/WGET=cp -t . /' \
-	-e "s;\$(XEN_EXTFILES_URL);${DISTDIR};" \
-	-e 's/$(LD)/$(LD) LDFLAGS=/' \
-	-e 's;install-grub: pv-grub;install-grub:;' \
-	"${S}"/stubdom/Makefile || die
-	# Fix gcc-4.6
-	sed -i \
-		-e "s:-Werror::g" \
-		-i tools/libxc/Makefile \
-		-i extras/mini-os/minios.mk || die
-
-	#Prevent internal downloading
+	#Substitute for internal downloading
 	cp $DISTDIR/zlib-1.2.3.tar.gz \
 		$DISTDIR/pciutils-2.2.9.tar.bz2 \
 		$DISTDIR/lwip-1.3.0.tar.gz \
-		$DISTDIR/ocaml-3.11 \
 		$DISTDIR/newlib-1.16.0.tar.gz \
 		$DISTDIR/grub-0.97.tar.gz \
 		./stubdom/ || die "files not coped to stubdom"
-
+	# Note: tip to patch grub gentoo style, for review soon. This is around 1/3.
+#	cp "${WORKDIR}"/patch/{00[3-6]_all_grub*,010_all_grub*,01[3-9]_all_grub*,0[6-7]0_all_grub*} \
+#		"${WORKDIR}"/patch/{110_all_grub*,300_all_grub*} \
+#		 stubdom/grub.patches/ || die
 	einfo "files copied to stubdom"
 
-	sed -e 's:^\t$(WGET) $(LWIP_URL):#\t$(WGET) $(LWIP_URL):' \
-		-e 's:^\t$(WGET) $(NEWLIB_URL):#\t$(WGET) $(NEWLIB_URL):' \
-		-e 's:^\t$(WGET) $(ZLIB_URL):#\t$(WGET) $(ZLIB_URL):' \
-		-e 's:^\t$(WGET) $(LIBPCI_URL):#\t$(WGET) $(LIBPCI_URL):' \
-		-e 's:^\t$(WGET) $(OCAML_URL):#\t$(WGET) $(OCAML_URL):' \
-		-e 's:^\t$(WGET) $(GRUB_URL):#$(WGET) $(GRUB_URL):' \
-                -i stubdom/Makefile || die "stubdom/Makefile could not be adjusted"
+	# Patch the unmergeable newlib, fix most of the leftover gcc QA issues
+	cp "${FILESDIR}"/newlib-implicits.patch stubdom || die
+
+	# Patch stubdom/Makefile to patch insource newlib & prevent internal downloading
+	epatch "${FILESDIR}"/${P/-pvgrub/}-externals.patch
+
+	# Drop .config and Fix gcc-4.6
+	epatch 	"${FILESDIR}"/${PN/-pvgrub/}-4-fix_dotconfig-gcc.patch
 }
 
 src_compile() {
@@ -88,34 +75,30 @@ src_compile() {
 		append-flags -fno-strict-overflow
 	fi
 
-	emake CC="$(tc-getCC)" LD="$(tc-getLD)" -C tools/include || die "prepare libelf headers failed"
+	emake CC="$(tc-getCC)" LD="$(tc-getLD)" -C tools/include
 
+	# TODO; fix those -j1
 	if use x86; then
 		emake -j1 CC="$(tc-getCC)" LD="$(tc-getLD)" \
-		XEN_TARGET_ARCH="x86_32" -C stubdom pv-grub || \
-		die "compile pv-grub_x86_32 failed"
-	fi
-	if use amd64; then
+		XEN_TARGET_ARCH="x86_32" -C stubdom pv-grub
+	elif use amd64; then
 		emake -j1 CC="$(tc-getCC)" LD="$(tc-getLD)" \
-		XEN_TARGET_ARCH="x86_64" -C stubdom pv-grub || \
-		die "compile pv-grub_x86_64 failed"
+		XEN_TARGET_ARCH="x86_64" -C stubdom pv-grub
 		if use multilib; then
 			multilib_toolchain_setup x86
-			emake -j1 \
-			XEN_TARGET_ARCH="x86_32" -C stubdom pv-grub || \
-			die "compile pv-grub_x86_32 failed"
+			emake -j1 XEN_TARGET_ARCH="x86_32" -C stubdom pv-grub
 		fi
 	fi
 }
 
 src_install() {
 	if use x86; then
-		emake XEN_TARGET_ARCH="x86_32" DESTDIR="${D}" -C stubdom install-grub || die "install pv-grub_x86_32 failed"
+		emake XEN_TARGET_ARCH="x86_32" DESTDIR="${D}" -C stubdom install-grub
 	fi
 	if use amd64; then
-		emake XEN_TARGET_ARCH="x86_64" DESTDIR="${D}" -C stubdom install-grub || die "install pv-grub_x86_64 failed"
+		emake XEN_TARGET_ARCH="x86_64" DESTDIR="${D}" -C stubdom install-grub
 		if use multilib; then
-			emake XEN_TARGET_ARCH="x86_32" DESTDIR="${D}" -C stubdom install-grub || die "install pv-grub_x86_32 failed"
+			emake XEN_TARGET_ARCH="x86_32" DESTDIR="${D}" -C stubdom install-grub
 		fi
 	fi
 }

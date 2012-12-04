@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/xen-pvgrub-4.1.1-r1.ebuild,v 1.5 2012/04/24 09:49:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/xen-pvgrub-4.1.1-r1.ebuild,v 1.6 2012/12/04 16:31:20 idella4 Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ SRC_URI="
 		$LIBPCI_URL/pciutils-2.2.9.tar.bz2
 		$XEN_EXTFILES_URL/lwip-1.3.0.tar.gz
 		$XEN_EXTFILES_URL/newlib/newlib-1.16.0.tar.gz
-                $OCAML_URL/ocaml-3.11
+		$OCAML_URL/ocaml-3.11
 		"
 
 S="${WORKDIR}/xen-${PV}"
@@ -26,7 +26,7 @@ DESCRIPTION="allows to boot Xen domU kernels from a menu.lst laying inside guest
 HOMEPAGE="http://xen.org/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="custom-cflags"
 
 DEPEND="sys-devel/gettext
@@ -75,14 +75,14 @@ src_prepare() {
 	ls -ld stubdom/zlib-1.2.3.tar.gz
 	ls -ld stubdom/Makefile || die "stubdom/Makefile could not be adjusted"
 
-        sed -e 's:^\t$(WGET) $(LWIP_URL):#\t$(WGET) $(LWIP_URL):' \
+	sed -e 's:^\t$(WGET) $(LWIP_URL):#\t$(WGET) $(LWIP_URL):' \
 		-e 's:^\t$(WGET) $(NEWLIB_URL):#\t$(WGET) $(NEWLIB_URL):' \
 		-e 's:^\t$(WGET) $(ZLIB_URL):#\t$(WGET) $(ZLIB_URL):' \
 		-e 's:^\t$(WGET) $(LIBPCI_URL):#\t$(WGET) $(LIBPCI_URL):' \
 		-e 's:^\t$(WGET) $(OCAML_URL):#\t$(WGET) $(OCAML_URL):' \
 		-e 's:^\t$(WGET) $(GRUB_URL):#$(WGET) $(GRUB_URL):' \
                 -i stubdom/Makefile || die "stubdom/Makefile could not be adjusted"
-        einfo "1st Makefile adjusted"
+	einfo "1st Makefile adjusted"
 }
 
 src_compile() {
