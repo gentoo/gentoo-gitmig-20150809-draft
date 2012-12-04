@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/skipfish
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/skipfish/ChangeLog,v 1.11 2012/09/25 13:55:29 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/skipfish/ChangeLog,v 1.12 2012/12/04 19:45:05 pinkbyte Exp $
+
+  04 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> -skipfish-2.06_beta.ebuild,
+  -skipfish-2.07_beta.ebuild:
+  Remove old versions
 
 *skipfish-2.09_beta (25 Sep 2012)
 
