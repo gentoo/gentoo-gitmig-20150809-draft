@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/tbb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.27 2012/11/30 20:37:31 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.28 2012/12/04 18:42:27 bicatali Exp $
+
+  04 Dec 2012; Sébastien Fabbro <bicatali@gentoo.org> -tbb-4.1.20120718.ebuild:
+  Removed old w.r.t. bug #442006
 
 *tbb-4.1.20121003 (30 Nov 2012)
 
