@@ -1,6 +1,12 @@
 # ChangeLog for www-client/luakit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/ChangeLog,v 1.31 2012/11/20 18:42:03 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/ChangeLog,v 1.32 2012/12/04 11:33:43 wired Exp $
+
+  04 Dec 2012; Alex Alexander <wired@gentoo.org> luakit-2010.12.25_p2.ebuild,
+  luakit-2011.04.13.ebuild, luakit-2011.04.13_p1.ebuild,
+  luakit-2011.07.22.ebuild, luakit-2011.07.22_p1.ebuild,
+  luakit-2012.03.25.ebuild, luakit-2012.09.13_p1.ebuild, luakit-9999.ebuild:
+  updated HOMEPAGE, bug #445224
 
   20 Nov 2012; Alex Alexander <wired@gentoo.org> luakit-9999.ebuild:
   fixed bug #385471
