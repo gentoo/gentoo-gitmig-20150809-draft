@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/minibufexpl/minibufexpl-6.4.4.ebuild,v 1.3 2012/12/04 10:48:30 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/minibufexpl/minibufexpl-6.4.4.ebuild,v 1.4 2012/12/04 11:22:55 ago Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ DESCRIPTION="vim plugin: easily switch between buffers"
 HOMEPAGE="https://github.com/fholgado/minibufexpl.vim"
 SRC_URI="https://github.com/fholgado/${MY_PN}/tarball/${PV} -> ${P}.tar.gz"
 LICENSE="as-is"
-KEYWORDS="amd64 ~mips ppc ~x86"
+KEYWORDS="amd64 ~mips ppc x86"
 IUSE=""
 
 VIM_PLUGIN_HELPFILES="${PN}.txt"
