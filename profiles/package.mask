@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14273 2012/12/03 22:38:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14274 2012/12/04 10:12:21 tetromino Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -520,6 +520,7 @@ app-i18n/ibus-table-yinma
 =x11-libs/gtk+-3.6*:3
 =x11-themes/gnome-themes-standard-3.6*
 # Other stuff
+>=dev-cpp/gstreamermm-0.10.11
 =dev-libs/libxml2-2.9*
 >=dev-util/d-feet-0.3
 

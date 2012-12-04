@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7216 2012/12/03 21:02:10 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7217 2012/12/04 10:12:21 tetromino Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.mask:
+  Add gstreamermm-0.10.11 to gnome-3.6 mask (bug #445706).
 
   03 Dec 2012; Zac Medico <zmedico@gentoo.org> info_vars:
   Remove LINGUAS from info_vars for bug #445858 (it still shows via
