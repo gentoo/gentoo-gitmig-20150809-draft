@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/mbuffer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/mbuffer/ChangeLog,v 1.29 2012/12/04 19:47:42 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/mbuffer/ChangeLog,v 1.30 2012/12/04 22:12:37 wschlich Exp $
+
+  04 Dec 2012; Wolfram Schlich <wschlich@gentoo.org> mbuffer-20121111.ebuild,
+  +files/mbuffer-20121111-resolv-multi-order-issue.patch:
+  add patch for test phase
 
   04 Dec 2012; Wolfram Schlich <wschlich@gentoo.org> mbuffer-20121111.ebuild:
   version bump, minor cleanup
