@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/bogofilter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/ChangeLog,v 1.140 2012/06/04 23:40:01 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/ChangeLog,v 1.141 2012/12/04 10:25:44 eras Exp $
+
+*bogofilter-1.2.3 (04 Dec 2012)
+
+  04 Dec 2012; Eray Aslan <eras@gentoo.org> +bogofilter-1.2.3.ebuild:
+  Security bump - bug #445908
 
   04 Jun 2012; Zac Medico <zmedico@gentoo.org> bogofilter-1.2.2.ebuild:
   inherit eutils for epatch
