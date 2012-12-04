@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/aufs3
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.35 2012/11/30 15:29:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.36 2012/12/04 13:11:29 ago Exp $
+
+  04 Dec 2012;  <ago@gentoo.org> aufs3-3_p20120813-r1.ebuild:
+  Stable for amd64, wrt bug #444846
 
   30 Nov 2012; Justin Lecher <jlec@gentoo.org> aufs3-3_p20121129.ebuild:
   Fix new offset, thanks Iván for the patch
@@ -246,4 +249,3 @@
   +files/aufs3-standalone-0.patch, +files/aufs3-base-1.patch,
   +files/aufs3-standalone-1.patch, +aufs3-3_p20110815.ebuild, +metadata.xml:
   Initial commit
-
