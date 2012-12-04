@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/domination/domination-1.1.1.1.ebuild,v 1.2 2012/10/30 12:01:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/domination/domination-1.1.1.1.ebuild,v 1.3 2012/12/04 11:13:49 ago Exp $
 
 inherit eutils java-pkg-2 java-ant-2 games
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/domination/Domination_${PV}.zip"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=virtual/jre-1.4"
