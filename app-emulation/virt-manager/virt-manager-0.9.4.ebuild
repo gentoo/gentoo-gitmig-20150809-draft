@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.9.4.ebuild,v 1.2 2012/10/15 10:06:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.9.4.ebuild,v 1.3 2012/12/04 23:16:49 cardoe Exp $
 
 EAPI=4
 
@@ -34,20 +34,26 @@ DESCRIPTION="A graphical tool for administering virtual machines (KVM/Xen)"
 HOMEPAGE="http://virt-manager.org/"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="gnome-keyring policykit sasl spice"
+IUSE="gnome-keyring policykit sasl +spice +vnc"
 RDEPEND=">=dev-python/pygtk-1.99.12
 	>=app-emulation/libvirt-0.7.0[python,sasl?]
 	>=dev-libs/libxml2-2.6.23[python]
 	${VIRTINSTDEP}
 	>=gnome-base/librsvg-2
 	>=x11-libs/vte-0.12.2:0[python]
-	>=net-libs/gtk-vnc-0.3.8[python,sasl?]
 	>=dev-python/dbus-python-0.61
 	>=dev-python/gconf-python-1.99.11
 	dev-python/urlgrabber
 	gnome-keyring? ( dev-python/gnome-keyring-python )
 	policykit? ( sys-auth/polkit )
-	spice? ( >=net-misc/spice-gtk-0.6[python,sasl?,-gtk3] )"
+	spice? (
+		>=net-misc/spice-gtk-0.6[python,sasl?]
+		|| (
+			<=net-misc/spice-gtk-0.14[python,sasl?,-gtk3]
+			>=net-misc/spice-gtk-0.14-r1[python,sasl?]
+		)
+	)
+	vnc? ( >=net-libs/gtk-vnc-0.3.8[python,sasl?] )"
 #	tui? ( >=dev-python/new_syrup-0.1.2 )"
 DEPEND="${RDEPEND}
 	app-text/rarian
