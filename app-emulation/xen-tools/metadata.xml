@@ -3,9 +3,8 @@
 <pkgmetadata>
 	<herd>xen</herd>
 	<maintainer>
-		<email>johneed@hotmail.com</email>
+		<email>idella4@gentoo.org</email>
 		<name>Ian 'idella4' Delaney</name>
-		<description>Proxy maintainer</description>
 	</maintainer>
 	<use>
 		<flag name='api'>Build the C libxenapi bindings</flag>
