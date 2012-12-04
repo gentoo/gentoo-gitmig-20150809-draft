@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/webfs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/webfs/ChangeLog,v 1.29 2012/07/31 13:55:06 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/webfs/ChangeLog,v 1.30 2012/12/04 10:04:18 zmedico Exp $
+
+  04 Dec 2012; Zac Medico <zmedico@gentoo.org> webfs-1.21-r2.ebuild:
+  Fix for prefix and add ~x86-linux keyword.
 
   31 Jul 2012; Michael Palimaka <kensington@gentoo.org> -files/webfs.initd,
   -webfs-1.21-r1.ebuild:

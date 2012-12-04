@@ -1,7 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/webfs/webfs-1.21-r2.ebuild,v 1.5 2012/07/29 18:15:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/webfs/webfs-1.21-r2.ebuild,v 1.6 2012/12/04 10:04:18 zmedico Exp $
 
+EAPI=4
 inherit eutils
 
 DESCRIPTION="Lightweight HTTP server for static content"
@@ -10,7 +11,7 @@ HOMEPAGE="http://linux.bytesex.org/misc/webfs.html"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ppc x86 ~x86-linux"
 IUSE="ssl threads"
 
 DEPEND="ssl? ( dev-libs/openssl )"
@@ -18,9 +19,7 @@ DEPEND="ssl? ( dev-libs/openssl )"
 RDEPEND="${DEPEND}
 	app-misc/mime-types"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/webfs-1.21-Variables.mk-dont-strip-binaries-on-install.patch"
 }
 
@@ -29,15 +28,15 @@ src_compile() {
 	use ssl || myconf="${myconf} USE_SSL=no"
 	use threads && myconf="${myconf} USE_THREADS=yes"
 
-	emake prefix=/usr ${myconf} || die "emake failed"
+	emake prefix="${EPREFIX}/usr" ${myconf}
 }
 
 src_install() {
 	local myconf
 	use ssl || myconf="${myconf} USE_SSL=no"
 	use threads && myconf="${myconf} USE_THREADS=yes"
-	einstall ${myconf} mandir="${D}/usr/share/man" || die "make install failed"
-	newinitd "${FILESDIR}"/${PN}.initd-r1 ${PN} || die "newinitd failed"
-	newconfd "${FILESDIR}"/${PN}.confd ${PN} || die "newconfd failed"
+	einstall ${myconf} mandir="${ED}/usr/share/man"
+	newinitd "${FILESDIR}"/${PN}.initd-r1 ${PN}
+	newconfd "${FILESDIR}"/${PN}.confd ${PN}
 	dodoc README
 }
