@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/xli-1.17.0-r4.ebuild,v 1.14 2010/11/08 23:05:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/xli-1.17.0-r4.ebuild,v 1.15 2012/12/04 08:27:25 radhermit Exp $
 
 EAPI=1
 inherit eutils
@@ -10,7 +10,7 @@ DESCRIPTION="X Load Image: view images or load them to root window"
 HOMEPAGE="http://pantransit.reptiles.org/prog/"
 SRC_URI="http://pantransit.reptiles.org/prog/xli/xli-${SNAPSHOT}.tar.gz"
 
-LICENSE="MIT as-is"
+LICENSE="HPND"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE=""

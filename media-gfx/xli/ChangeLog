@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xli
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/ChangeLog,v 1.56 2010/11/08 23:05:18 maekke Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/ChangeLog,v 1.57 2012/12/04 08:27:25 radhermit Exp $
+
+  04 Dec 2012; Tim Harder <radhermit@gentoo.org> xli-1.17.0-r4.ebuild:
+  Fix LICENSE (bug #445860 by ulm).
 
   08 Nov 2010; Markus Meier <maekke@gentoo.org> xli-1.17.0-r4.ebuild:
   change jpeg dep to virtual/jpeg
