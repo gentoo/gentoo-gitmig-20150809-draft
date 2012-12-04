@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libsvm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsvm/ChangeLog,v 1.29 2012/11/29 19:04:49 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsvm/ChangeLog,v 1.30 2012/12/04 18:40:13 bicatali Exp $
+
+  04 Dec 2012; Sébastien Fabbro <bicatali@gentoo.org> files/3.14-makefile.patch:
+  Fixed parallel build, bug #445312
 
 *libsvm-3.14 (29 Nov 2012)
 
