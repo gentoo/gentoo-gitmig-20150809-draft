@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/pngcheck
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcheck/ChangeLog,v 1.4 2010/07/01 12:36:25 fauli Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcheck/ChangeLog,v 1.5 2012/12/04 08:30:54 radhermit Exp $
+
+  04 Dec 2012; Tim Harder <radhermit@gentoo.org> pngcheck-2.3.0.ebuild:
+  Add explicit RDEPEND and fix LICENSE (bug #445832 by ulm).
 
   01 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   pngcheck-2.3.0.ebuild:
