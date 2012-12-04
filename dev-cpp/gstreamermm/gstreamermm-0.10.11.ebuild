@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gstreamermm/gstreamermm-0.10.11.ebuild,v 1.1 2012/10/30 22:04:07 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gstreamermm/gstreamermm-0.10.11.ebuild,v 1.2 2012/12/04 10:12:45 tetromino Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"
@@ -18,7 +18,7 @@ IUSE="test"
 RDEPEND="
 	>=media-libs/gstreamer-0.10.36:0.10
 	>=media-libs/gst-plugins-base-0.10.36:0.10
-	>=dev-cpp/glibmm-2.28.0:2
+	>=dev-cpp/glibmm-2.33.4:2
 	>=dev-cpp/libxmlpp-2.14:2.6
 	>=dev-libs/libsigc++-2:2
 "
