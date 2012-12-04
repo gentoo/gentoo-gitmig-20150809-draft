@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/spice-gtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.34 2012/12/04 20:41:36 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.35 2012/12/04 21:22:33 cardoe Exp $
+
+  04 Dec 2012; Doug Goldstein <cardoe@gentoo.org> spice-gtk-0.14-r1.ebuild:
+  Use 'default' instead of specifying the commands
 
 *spice-gtk-0.14-r1 (04 Dec 2012)
 

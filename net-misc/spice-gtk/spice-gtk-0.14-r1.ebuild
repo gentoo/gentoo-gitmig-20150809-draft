@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.14-r1.ebuild,v 1.1 2012/12/04 20:41:36 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.14-r1.ebuild,v 1.2 2012/12/04 21:22:33 cardoe Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -131,36 +131,36 @@ src_configure() {
 src_compile() {
 	cd ${GTK2_BUILDDIR}
 	einfo "Running make in ${GTK2_BUILDDIR}"
-	emake
+	default
 
 	if use gtk3; then
 		cd ${GTK3_BUILDDIR}
 		einfo "Running make in ${GTK3_BUILDDIR}"
-		emake
+		default
 	fi
 }
 
 src_test() {
 	cd ${GTK2_BUILDDIR}
 	einfo "Running make check in ${GTK2_BUILDDIR}"
-	emake check
+	default
 
 	if use gtk3; then
 		cd ${GTK3_BUILDDIR}
 		einfo "Running make check in ${GTK3_BUILDDIR}"
-		emake check
+		default
 	fi
 }
 
 src_install() {
 	cd ${GTK2_BUILDDIR}
 	einfo "Running make check in ${GTK2_BUILDDIR}"
-	emake DESTDIR="${ED}" install
+	default
 
 	if use gtk3; then
 		cd ${GTK3_BUILDDIR}
 		einfo "Running make install in ${GTK3_BUILDDIR}"
-		emake DESTDIR="${ED}" install
+		default
 	fi
 
 	# Remove .la files if they're not needed
