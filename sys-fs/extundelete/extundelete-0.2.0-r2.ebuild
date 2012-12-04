@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/extundelete/extundelete-0.2.0-r2.ebuild,v 1.1 2012/12/04 21:59:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/extundelete/extundelete-0.2.0-r2.ebuild,v 1.2 2012/12/04 22:03:00 ssuominen Exp $
 
 EAPI=5
 inherit eutils
@@ -14,15 +14,15 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
 	mirror://debian/pool/main/${PN:0:1}/${PN}/${PN}_${PV}-${_UNDEL_DEB}.debian.tar.gz"
 
 LICENSE="GPL-2"
-SLOT="0"
+SLOT=0
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=sys-fs/e2fsprogs-${_UNDEL_E2FS}
 	>=sys-libs/e2fsprogs-libs-${_UNDEL_E2FS}"
-DEPEND="${RDEPEND}"
+DEPEND=${RDEPEND}
 
-DOCS="README"
+DOCS=README
 
 src_prepare() {
 	local d=${WORKDIR}/debian/patches
