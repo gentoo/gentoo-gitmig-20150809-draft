@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/align
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/align/ChangeLog,v 1.56 2012/12/03 16:57:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/align/ChangeLog,v 1.57 2012/12/04 10:47:19 blueness Exp $
+
+  04 Dec 2012; Anthony G. Basile <blueness@gentoo.org> align-42.ebuild:
+  stable ppc, bug #441122
 
   03 Dec 2012; <ago@gentoo.org> align-42.ebuild:
   Stable for amd64, wrt bug #441122
@@ -198,4 +201,3 @@
   Third vim plugin added to app-vim! Verified license by writing to the author,
   Chip Campbell. His response: "I probably should put notices in all my scripts
   so that they're all copyrighted&vim-charity-style-licensed."
-
