@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/cifs-utils-5.8.ebuild,v 1.1 2012/11/25 12:24:43 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/cifs-utils-5.8-r1.ebuild,v 1.1 2012/12/04 07:23:02 dev-zero Exp $
 
 EAPI=4
 
@@ -29,6 +29,8 @@ REQUIRED_USE="^^ ( caps caps-ng )"
 DOCS="doc/linux-cifs-client-guide.odt"
 
 pkg_setup() {
+	linux-info_pkg_setup
+
 	confutils_use_conflict caps caps-ng
 	if ! linux_config_exists || ! linux_chkconfig_present CIFS; then
 		ewarn "You must enable CIFS support in your kernel config, "
@@ -52,6 +54,13 @@ src_configure() {
 		--with-libcap-ng=$(use caps-ng && echo 'yes' || echo 'no') \
 		--disable-cifsidmap \
 		--disable-cifsacl
+}
+
+src_install() {
+	default
+
+	# remove empty directory
+	use upcall || rmdir "${D}/usr/sbin"
 }
 
 pkg_postinst() {
