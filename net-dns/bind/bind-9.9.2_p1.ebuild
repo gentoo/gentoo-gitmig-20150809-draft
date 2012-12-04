@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.9.2.ebuild,v 1.7 2012/11/04 20:20:20 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.9.2_p1.ebuild,v 1.1 2012/12/04 19:52:03 idl0r Exp $
 
 # Re dlz/mysql and threads, needs to be verified..
 # MySQL uses thread local storage in its C api. Thus MySQL
@@ -33,7 +33,7 @@ GEOIP_PATCH_A="${GEOIP_P}.patch"
 GEOIP_DOC_A="bind-geoip-1.3-readme.txt"
 GEOIP_SRC_URI_BASE="http://bind-geoip.googlecode.com/"
 
-RRL_PV="9.9.1-P2"
+RRL_PV="9.9.2"
 
 # GeoIP: http://bind-geoip.googlecode.com/
 # DNS RRL: http://www.redbarn.org/dns/ratelimits/
@@ -47,16 +47,15 @@ SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${MY_P}.tar.gz
 			 ${GEOIP_SRC_URI_BASE}/files/${GEOIP_PATCH_A} )
 	sdb-ldap? (
 		http://ftp.disconnected-by-peer.at/pub/bind-sdb-ldap-${SDB_LDAP_VER}.patch.bz2
-	)"
-#	rrl? ( http://ss.vix.com/~vixie/rl-${RRL_PV}.patch )"
+	)
+	rrl? ( http://ss.vix.com/~vixie/rl-${RRL_PV}.patch )"
 
 LICENSE="ISC BSD BSD-2 HPND JNIC RSA openssl"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="berkdb caps dlz doc filter-aaaa geoip gost gssapi idn ipv6 ldap mysql odbc
-postgres python rpz sdb-ldap selinux ssl static-libs threads urandom xml"
+postgres python rpz rrl sdb-ldap selinux ssl static-libs threads urandom xml"
 # no PKCS11 currently as it requires OpenSSL to be patched, also see bug 409687
-# The rrl Patch does not apply against 9.9.2 yet
 
 REQUIRED_USE="postgres? ( dlz )
 	berkdb? ( dlz )
@@ -135,17 +134,22 @@ src_prepare() {
 
 	if use geoip; then
 		cp "${DISTDIR}"/${GEOIP_PATCH_A} "${S}" || die
-#		sed -i -e 's:^ RELEASETYPE=: RELEASETYPE=-P:' \
-#			-e 's:RELEASEVER=:RELEASEVER=1:' \
-#			${GEOIP_PATCH_A} || die
+		sed -i -e 's:^ RELEASETYPE=: RELEASETYPE=-P:' \
+			-e 's:RELEASEVER=:RELEASEVER=1:' \
+			${GEOIP_PATCH_A} || die
 #		sed -i -e 's:RELEASEVER=2:RELEASEVER=3:' ${GEOIP_PATCH_A} || die
 		epatch ${GEOIP_PATCH_A}
 	fi
 
-#	if use rrl; then
-#		# Response Rate Limiting (DNS RRL) - bug 434650
-#		epatch "${DISTDIR}/rl-${RRL_PV}.patch"
-#	fi
+	if use rrl; then
+		cp "${DISTDIR}"/rl-${RRL_PV}.patch "${S}" || die
+		sed -i -e 's:^ RELEASETYPE=: RELEASETYPE=-P:' \
+			-e 's:^ RELEASEVER=: RELEASEVER=1:' \
+			rl-${RRL_PV}.patch || die
+
+		# Response Rate Limiting (DNS RRL) - bug 434650
+		epatch rl-${RRL_PV}.patch
+	fi
 
 	# Disable tests for now, bug 406399
 	sed -i '/^SUBDIRS/s:tests::' bin/Makefile.in lib/Makefile.in || die
