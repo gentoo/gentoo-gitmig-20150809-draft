@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opengl-apple/opengl-apple-4.ebuild,v 1.3 2011/09/23 19:04:35 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opengl-apple/opengl-apple-4.ebuild,v 1.4 2012/12/04 08:08:05 grobian Exp $
 
 EAPI="3"
 
@@ -8,7 +8,7 @@ inherit prefix
 
 DESCRIPTION="Links to Apple's OpenGL X11 implementation"
 HOMEPAGE="http://www.apple.com/"
-LICENSE="as-is"
+LICENSE="public-domain"
 KEYWORDS="-* ~ppc-macos ~x64-macos ~x86-macos"
 SLOT=0
 IUSE=""
