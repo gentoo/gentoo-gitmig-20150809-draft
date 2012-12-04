@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.2.2.ebuild,v 1.1 2012/10/24 04:41:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.2.2.ebuild,v 1.2 2012/12/04 09:40:13 polynomial-c Exp $
 
 EAPI=2
 
-inherit eutils unpacker fdo-mime gnome2 pax-utils
+inherit eutils unpacker fdo-mime gnome2 pax-utils udev
 
 MY_PV=${PV/beta/BETA}
 MY_PV=${MY_PV/rc/RC}
@@ -307,11 +307,14 @@ src_install() {
 	echo -n "VBOX_APP_HOME=/opt/VirtualBox" > "${T}/90virtualbox"
 	doenvd "${T}/90virtualbox"
 
-	insinto /lib/udev/rules.d
+	local udevdir="$(udev_get_udevdir)"
+	insinto ${udevdir}/rules.d
 	doins "${FILESDIR}"/10-virtualbox.rules
-	# move udev scripts into /lib/udev (bug #372491)
-	mv "${D}"/opt/VirtualBox/VBoxCreateUSBNode.sh "${D}"/lib/udev
-	fperms 0750 /lib/udev/VBoxCreateUSBNode.sh
+	sed "s@%UDEVDIR%@${udevdir}@" \
+		-i "${D}"${udevdir}/rules.d/10-virtualbox.rules || die
+	# move udev scripts into ${udevdir} (bug #372491)
+	mv "${D}"/opt/VirtualBox/VBoxCreateUSBNode.sh "${D}"${udevdir} || die
+	fperms 0750 ${udevdir}/VBoxCreateUSBNode.sh
 }
 
 pkg_postinst() {
