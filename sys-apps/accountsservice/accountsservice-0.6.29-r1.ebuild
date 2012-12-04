@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/accountsservice/accountsservice-0.6.29.ebuild,v 1.1 2012/11/30 22:38:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/accountsservice/accountsservice-0.6.29-r1.ebuild,v 1.1 2012/12/04 08:14:58 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -42,6 +42,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-0.6.21-gentoo-system-users.patch"
+	epatch "${FILESDIR}/${P}-32bit-crash.patch" # bug #445894, fixed in 0.6.30
 	use vala && vala_src_prepare
 	gnome2_src_prepare
 }

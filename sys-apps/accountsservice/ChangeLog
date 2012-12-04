@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/accountsservice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/accountsservice/ChangeLog,v 1.21 2012/11/30 22:38:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/accountsservice/ChangeLog,v 1.22 2012/12/04 08:14:58 tetromino Exp $
+
+*accountsservice-0.6.29-r1 (04 Dec 2012)
+
+  04 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -accountsservice-0.6.29.ebuild, +accountsservice-0.6.29-r1.ebuild,
+  +files/accountsservice-0.6.29-32bit-crash.patch:
+  Fix crash on 32-bit systems (bug #445894, thanks to Denny Reeh).
 
 *accountsservice-0.6.29 (30 Nov 2012)
 
