@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.149 2012/11/21 22:22:35 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.150 2012/12/04 10:20:45 slyfox Exp $
+
+  04 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org> qemu-9999.ebuild:
+  Follow upstream bump of minimal spice protocol versions.
 
   21 Nov 2012; Doug Goldstein <cardoe@gentoo.org> qemu-1.1.1-r1.ebuild,
   qemu-1.1.2-r1.ebuild, qemu-1.1.2-r2.ebuild, qemu-1.1.2-r3.ebuild,
