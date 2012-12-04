@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base/selinux-base-9999.ebuild,v 1.1 2012/10/13 16:30:53 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base/selinux-base-9999.ebuild,v 1.2 2012/12/04 20:21:53 swift Exp $
 EAPI="4"
 
 inherit eutils git-2
 
-IUSE="+peer_perms +open_perms +ubac doc"
+IUSE="+peer_perms +open_perms +ubac unconfined doc"
 
 DESCRIPTION="Gentoo base policy for SELinux"
 HOMEPAGE="http://www.gentoo.org/proj/en/hardened/selinux/"
@@ -63,13 +63,15 @@ src_configure() {
 
 	echo "DISTRO = gentoo" >> "${S}/refpolicy/build.conf"
 
+	# Prepare initial configuration
+	cd "${S}/refpolicy";
+	make conf || die "Make conf failed"
+
 	# Setup the policies based on the types delivered by the end user.
 	# These types can be "targeted", "strict", "mcs" and "mls".
 	for i in ${POLICY_TYPES}; do
 		cp -a "${S}/refpolicy" "${S}/${i}"
-
 		cd "${S}/${i}";
-		make conf || die "Make conf in ${i} failed"
 
 		#cp "${FILESDIR}/modules-2.20120215.conf" "${S}/${i}/policy/modules.conf"
 		sed -i -e "/= module/d" "${S}/${i}/policy/modules.conf"
@@ -88,6 +90,12 @@ src_configure() {
 			sed -i -e '/root/d' -e 's/user_u/unconfined_u/' \
 			"${S}/${i}/config/appconfig-standard/seusers" \
 			|| die "targeted seusers setup failed."
+		fi
+
+		if [ "${i}" != "targeted" ] && [ "${i}" != "strict" ] && use unconfined; then
+			sed -i -e '/root/d' -e 's/user_u/unconfined_u/' \
+			"${S}/${i}/config/appconfig-${i}/seusers" \
+			|| die "policy seusers setup failed."
 		fi
 	done
 }

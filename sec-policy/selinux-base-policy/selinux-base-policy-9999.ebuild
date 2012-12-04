@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-9999.ebuild,v 1.1 2012/10/13 16:30:52 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-9999.ebuild,v 1.2 2012/12/04 20:21:53 swift Exp $
 EAPI="4"
 
 inherit eutils git-2
@@ -8,16 +8,17 @@ inherit eutils git-2
 HOMEPAGE="http://www.gentoo.org/proj/en/hardened/selinux/"
 DESCRIPTION="SELinux policy for core modules"
 
-IUSE=""
+IUSE="unconfined"
 BASEPOL="9999"
 
-RDEPEND="=sec-policy/selinux-base-9999"
+RDEPEND="=sec-policy/selinux-base-9999
+		unconfined? ( sec-policy/selinux-unconfined )"
 DEPEND=""
 EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/hardened-refpolicy.git"
 EGIT_SOURCEDIR="${WORKDIR}/refpolicy"
 KEYWORDS=""
 
-MODS="application authlogin bootloader clock consoletype cron dmesg fstools getty hostname hotplug init iptables libraries locallogin logging lvm miscfiles modutils mount mta netutils nscd portage raid rsync selinuxutil ssh staff storage su sysadm sysnetwork udev userdomain usermanage unprivuser xdg unconfined"
+MODS="application authlogin bootloader clock consoletype cron dmesg fstools getty hostname hotplug init iptables libraries locallogin logging lvm miscfiles modutils mount mta netutils nscd portage raid rsync selinuxutil ssh staff storage su sysadm sysnetwork udev userdomain usermanage unprivuser xdg"
 LICENSE="GPL-2"
 SLOT="0"
 S="${WORKDIR}/"
@@ -92,19 +93,10 @@ pkg_postinst() {
 	done
 
 	for i in ${POLICY_TYPES}; do
-		local LOCCOMMAND
-		local LOCMODS
-		if [[ "${i}" != "targeted" ]]; then
-			LOCCOMMAND=$(echo "${COMMAND}" | sed -e 's:-i unconfined.pp::g');
-			LOCMODS=$(echo "${MODS}" | sed -e 's: unconfined::g');
-		else
-			LOCCOMMAND="${COMMAND}"
-			LOCMODS="${MODS}"
-		fi
-		einfo "Inserting the following modules, with base, into the $i module store: ${LOCMODS}"
+		einfo "Inserting the following modules, with base, into the $i module store: ${MODS}"
 
 		cd /usr/share/selinux/${i} || die "Could not enter /usr/share/selinux/${i}"
 
-		semodule -s ${i} -b base.pp ${LOCCOMMAND} || die "Failed to load in base and modules ${LOCMODS} in the $i policy store"
+		semodule -s ${i} -b base.pp ${COMMAND} || die "Failed to load in base and modules ${MODS} in the $i policy store"
 	done
 }
