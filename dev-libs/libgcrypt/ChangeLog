@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.163 2012/11/04 17:36:12 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.164 2012/12/04 04:16:42 radhermit Exp $
+
+*libgcrypt-1.5.0-r4 (04 Dec 2012)
+
+  04 Dec 2012; Tim Harder <radhermit@gentoo.org> +libgcrypt-1.5.0-r4.ebuild,
+  +files/libgcrypt-1.5.0-aesni.patch:
+  Revbump to fix segfault issue with aes-ni support and add epatch_user support
+  (bugs #442568 and #442630 by Toralf Förster).
 
 *libgcrypt-1.5.0-r3 (04 Nov 2012)
 
