@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.131 2012/11/22 19:46:15 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.132 2012/12/04 18:45:04 bicatali Exp $
+
+  04 Dec 2012; Sébastien Fabbro <bicatali@gentoo.org> octave-3.6.3.ebuild:
+  Added virtual/glu, thanks Niklas Johansson bug #445810
 
   22 Nov 2012; Sébastien Fabbro <bicatali@gentoo.org>
   +files/octave-3.6.3-legendtext.patch, -files/octave-3.4.3-gets.patch,

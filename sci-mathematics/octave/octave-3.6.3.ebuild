@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.6.3.ebuild,v 1.2 2012/11/22 19:46:15 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.6.3.ebuild,v 1.3 2012/12/04 18:45:04 bicatali Exp $
 
 EAPI=4
 
@@ -35,7 +35,8 @@ RDEPEND="
 	opengl? (
 		media-libs/freetype:2
 		media-libs/fontconfig
-		>=x11-libs/fltk-1.3:1[opengl] )
+		>=x11-libs/fltk-1.3:1[opengl]
+		virtual/glu )
 	qhull? ( media-libs/qhull )
 	qrupdate? ( sci-libs/qrupdate )
 	readline? ( sys-libs/readline )
