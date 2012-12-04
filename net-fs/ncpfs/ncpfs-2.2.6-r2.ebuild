@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/ncpfs/ncpfs-2.2.6-r2.ebuild,v 1.4 2012/06/11 09:20:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/ncpfs/ncpfs-2.2.6-r2.ebuild,v 1.5 2012/12/04 10:21:15 ago Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://platan.vc.cvut.cz/pub/linux/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 ~x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="nls pam php"
 
 DEPEND="nls? ( sys-devel/gettext )
