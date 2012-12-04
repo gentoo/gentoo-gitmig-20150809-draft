@@ -1,11 +1,11 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/hwids-20121202.3.ebuild,v 1.1 2012/12/02 17:50:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/hwids-20121203.ebuild,v 1.1 2012/12/04 03:15:37 flameeyes Exp $
 
 EAPI=5
 inherit udev
 
-DESCRIPTION="Hardware (PCI, USB, OUI) IDs databases"
+DESCRIPTION="Hardware (PCI, USB, OUI, IAB) IDs databases"
 HOMEPAGE="https://github.com/gentoo/hwids"
 HWDB_URI="http://cgit.freedesktop.org/systemd/systemd/plain/hwdb"
 SRC_URI="https://github.com/gentoo/hwids/archive/${P}.tar.gz"
@@ -35,7 +35,7 @@ src_compile() {
 
 src_install() {
 	insinto /usr/share/misc
-	doins {usb,pci}.ids{,.gz} oui.txt
+	doins {usb,pci}.ids{,.gz} oui.txt iab.txt
 
 	dodoc README.md
 
