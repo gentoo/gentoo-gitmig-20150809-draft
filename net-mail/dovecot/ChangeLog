@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.391 2012/12/04 13:29:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.392 2012/12/04 13:30:03 ago Exp $
+
+  04 Dec 2012; <ago@gentoo.org> dovecot-2.1.12-r1.ebuild:
+  Stable for ppc, wrt bug #445844
 
   04 Dec 2012; <ago@gentoo.org> dovecot-2.1.12-r1.ebuild:
   Stable for x86, wrt bug #445844
