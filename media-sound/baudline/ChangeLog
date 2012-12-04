@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/baudline
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/baudline/ChangeLog,v 1.5 2012/07/20 06:39:01 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/baudline/ChangeLog,v 1.6 2012/12/04 17:00:55 xmw Exp $
+
+  04 Dec 2012; Michael Weber <xmw@gentoo.org> baudline-1.08-r1.ebuild:
+  Add baudline license (thanks ulm, bug 445942)
 
   20 Jul 2012; Michael Weber <xmw@gentoo.org> -baudline-1.08.ebuild,
   baudline-1.08-r1.ebuild:

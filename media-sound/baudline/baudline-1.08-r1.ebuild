@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/baudline/baudline-1.08-r1.ebuild,v 1.2 2012/07/20 06:39:01 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/baudline/baudline-1.08-r1.ebuild,v 1.3 2012/12/04 17:00:55 xmw Exp $
 
 EAPI=3
 
@@ -13,7 +13,7 @@ SRC_URI="amd64? ( http://www.baudline.com/${PN}_${PV}_linux_x86_64.tar.gz )
 	s390? ( http://www.baudline.com/${PN}_${PV}_linux_s390.tar.gz )
 	x86? ( http://www.baudline.com/baudline_1.08_linux_i686.tar.gz )"
 
-LICENSE="as-is"
+LICENSE="${PN}"
 SLOT="0"
 KEYWORDS="amd64 ~x86"
 IUSE="jack"
