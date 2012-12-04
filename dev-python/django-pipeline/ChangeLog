@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/django-pipeline
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-pipeline/ChangeLog,v 1.7 2012/11/17 13:01:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-pipeline/ChangeLog,v 1.8 2012/12/04 15:39:33 ago Exp $
+
+  04 Dec 2012; <ago@gentoo.org> django-pipeline-1.2.9.ebuild:
+  Stable for x86, wrt bug #443422
 
   17 Nov 2012; Agostino Sarubbo <ago@gentoo.org> django-pipeline-1.2.9.ebuild:
   Stable for amd64, wrt bug #443422
