@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/catalyst
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.256 2012/11/11 06:12:57 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.257 2012/12/04 21:23:03 zerochaos Exp $
+
+*catalyst-2.0.12.2 (04 Dec 2012)
+
+  04 Dec 2012; Rick Farina <zerochaos@gentoo.org> +catalyst-2.0.12.2.ebuild:
+  catalyst 2.0.12.2 to fix missing bindist on stage2 and stage3
 
   11 Nov 2012; Matt Turner <mattst88@gentoo.org> -catalyst-2.0.10.1.ebuild,
   -catalyst-2.0.7.1-r1.ebuild, -catalyst-2.0.7.1.ebuild,
