@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/reptyr
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/reptyr/ChangeLog,v 1.7 2012/11/25 09:39:23 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/reptyr/ChangeLog,v 1.8 2012/12/04 11:30:29 ago Exp $
+
+  04 Dec 2012;  <ago@gentoo.org> reptyr-0.4.ebuild:
+  Stable for x86, wrt bug #440830
 
   25 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> reptyr-0.4.ebuild:
   Stable on amd64, wrt bug #440830
@@ -29,4 +32,3 @@
   +metadata.xml:
   Initial import from sunrise (bug #357981). Thanks to Michael Orlitzky for
   some of the initial ebuild work.
-
