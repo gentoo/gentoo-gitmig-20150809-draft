@@ -1,15 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/urbanterror-4.2.007.ebuild,v 1.1 2012/11/18 01:04:09 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/urbanterror-4.2.008.ebuild,v 1.1 2012/12/04 23:13:46 hasufell Exp $
 
-EAPI=4
+EAPI=5
 
 inherit check-reqs eutils gnome2-utils games
 
 DESCRIPTION="Hollywood tactical shooter based on the ioquake3 engine"
 HOMEPAGE="http://www.urbanterror.info/home/"
 SRC_URI="http://www.ftwgl.com/files/mirror/UrbanTerror42_full_${PV:4:3}.zip
-	https://github.com/Barbatos/ioq3-for-UrbanTerror-4/archive/release-4.2.006.tar.gz
+	https://github.com/Barbatos/ioq3-for-UrbanTerror-4/archive/release-4.2.007.tar.gz
 	http://upload.wikimedia.org/wikipedia/en/5/56/Urbanterror.svg -> ${PN}.svg"
 
 LICENSE="GPL-2 Q3AEULA"
@@ -35,7 +35,7 @@ DEPEND="${RDEPEND}
 	app-arch/unzip
 	dedicated? ( curl? ( net-misc/curl ) )"
 
-S=${WORKDIR}/ioq3-for-UrbanTerror-4-release-4.2.006
+S=${WORKDIR}/ioq3-for-UrbanTerror-4-release-4.2.007
 S_DATA=${WORKDIR}/UrbanTerror42
 
 CHECKREQS_DISK_BUILD="2700M"
@@ -51,14 +51,6 @@ pkg_pretend() {
 			ewarn
 		fi
 	fi
-}
-
-src_unpack() {
-	# messed up zipball, let's hope they get it right next time
-	unpack release-4.2.006.tar.gz
-	mkdir "${S_DATA}" || die
-	cd "${S_DATA}" || die
-	unpack UrbanTerror42_full_${PV:4:3}.zip
 }
 
 src_prepare() {
@@ -90,9 +82,10 @@ src_install() {
 	local my_arch=$(usex amd64 "x86_64" "i386")
 
 	doicon -s scalable "${DISTDIR}"/${PN}.svg
-	dodoc ChangeLog README md4-readme.txt "${S_DATA}"/readme42.txt
+	dodoc ChangeLog README md4-readme.txt
+	dodoc "${S_DATA}"/q3ut4/readme42.txt
 	insinto "${GAMES_DATADIR}"/${PN}/q3ut4
-	doins "${S_DATA}"/*.pk3
+	doins "${S_DATA}"/q3ut4/*.pk3
 
 	if use !dedicated ; then
 		newgamesbin build/$(usex debug "debug" "release")-linux-${my_arch}/Quake3-UrT$(usex smp "-smp" "").${my_arch} ${PN}
@@ -102,7 +95,7 @@ src_install() {
 	if use dedicated || use server ; then
 		newgamesbin build/$(usex debug "debug" "release")-linux-${my_arch}/Quake3-UrT-Ded.${my_arch} ${PN}-dedicated
 		docinto examples
-		dodoc "${S_DATA}"/{server.cfg,mapcycle.txt}
+		dodoc "${S_DATA}"/q3ut4/{server.cfg,mapcycle.txt}
 	fi
 
 	prepgamesdirs
