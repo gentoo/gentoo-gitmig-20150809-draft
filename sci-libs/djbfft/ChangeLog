@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/djbfft
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/djbfft/ChangeLog,v 1.17 2012/11/30 04:45:44 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/djbfft/ChangeLog,v 1.18 2012/12/04 15:40:43 ago Exp $
+
+  04 Dec 2012; <ago@gentoo.org> djbfft-0.76-r1.ebuild:
+  Stable for x86, wrt bug #442748
 
   30 Nov 2012; Sébastien Fabbro <bicatali@gentoo.org> djbfft-0.76-r1.ebuild:
   Slightly more verbose build, bug #443142
