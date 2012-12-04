@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.10.ebuild,v 1.1 2012/11/06 19:56:41 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.10.ebuild,v 1.2 2012/12/04 06:59:14 xarthisius Exp $
 
 EAPI=4
 
@@ -100,4 +100,16 @@ src_configure() {
 src_install() {
 	default
 	use static-libs || find "${ED}" -name '*.la' -exec rm -f {} +
+}
+
+pkg_postinst() {
+	if has_version "sci-libs/hdf5"; then
+		ewarn "You have upgraded hdf5 from previous version and the software"
+		ewarn "using it may start complaining about mismatch between headers"
+		ewarn "and library version. You have two options:"
+		ewarn "  1. export HDF5_DISABLE_VERSION_CHECK=2 to get rid of the"
+		ewarn "     warning/error message"
+		ewarn "  2. re-emerge all reverse dependencies (type"
+		ewarn "     'emerge --depclean -pv sci-libs/hdf5' to get the list)"
+	fi
 }
