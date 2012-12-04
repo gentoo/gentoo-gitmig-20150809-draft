@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/frobtads/frobtads-1.2.2.ebuild,v 1.3 2012/11/14 19:07:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/frobtads/frobtads-1.2.2.ebuild,v 1.4 2012/12/04 15:38:48 ago Exp $
 
 EAPI=4
 inherit eutils flag-o-matic games
@@ -11,7 +11,7 @@ SRC_URI="http://www.tads.org/frobtads/${P}.tar.gz"
 
 LICENSE="TADS2 TADS3"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug tads2compiler tads3compiler"
 
 RESTRICT="!tads3compiler? ( test )"
