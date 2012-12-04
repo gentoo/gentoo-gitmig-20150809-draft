@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/localepurge
 # Copyright 2002-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/localepurge/ChangeLog,v 1.39 2012/12/03 19:27:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/localepurge/ChangeLog,v 1.40 2012/12/04 22:36:49 hwoarang Exp $
+
+*localepurge-0.5.4-r1 (04 Dec 2012)
+
+  04 Dec 2012; Markos Chandras <hwoarang@gentoo.org>
+  +files/localepurge-0.5.4-directorysum.patch,
+  +files/localepurge-0.5.4-parentdir.patch, +localepurge-0.5.4-r1.ebuild,
+  -localepurge-0.5.4.ebuild:
+  Revbump. Fixes bug #164544 and #445910
 
 *localepurge-0.5.4 (03 Dec 2012)
 

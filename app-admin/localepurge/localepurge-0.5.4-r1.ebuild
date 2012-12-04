@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/localepurge/localepurge-0.5.4.ebuild,v 1.1 2012/12/03 19:27:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/localepurge/localepurge-0.5.4-r1.ebuild,v 1.1 2012/12/04 22:36:49 hwoarang Exp $
 
 EAPI=4
 
@@ -23,6 +23,10 @@ S=${WORKDIR}/${PN}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-prefix.patch
+	# 164544
+	epatch "${FILESDIR}"/${P}-directorysum.patch
+	# 445910
+	epatch "${FILESDIR}"/${P}-parentdir.patch
 	eprefixify ${PN}
 }
 
