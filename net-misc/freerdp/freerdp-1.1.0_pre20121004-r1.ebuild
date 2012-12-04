@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-1.1.0_pre20121004-r1.ebuild,v 1.5 2012/12/02 17:05:31 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-1.1.0_pre20121004-r1.ebuild,v 1.6 2012/12/04 15:36:53 ago Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ if [[ ${PV} != 9999* ]]; then
 	SRC_URI="mirror://github/FreeRDP/FreeRDP/${P}.tar.gz
 		mirror://gentoo/${P}.tar.gz
 		http://dev.gentoo.org/~floppym/distfiles/${P}.tar.gz"
-	KEYWORDS="amd64 ~x86"
+	KEYWORDS="amd64 x86"
 else
 	inherit git-2
 	SRC_URI=""
