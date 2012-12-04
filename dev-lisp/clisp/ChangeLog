@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/clisp
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.104 2011/03/29 12:17:01 angelos Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.105 2012/12/04 00:00:48 pchrist Exp $
+
+  03 Dec 2012; Panagiotis Christopoulos <pchrist@gentoo.org>
+  clisp-2.48-r2.ebuild, +files/clisp-2.48-bits_ipctypes_to_sys_ipc.patch:
+  minor patch to 2.48-r2, fixes bug #425748 , thanks to Alexey Kretov (domini
+  at onego.ru)
 
   29 Mar 2011; Christoph Mende <angelos@gentoo.org> clisp-2.47-r1.ebuild,
   clisp-2.48-r1.ebuild, clisp-2.48-r2.ebuild:
