@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.17.0_alpha8.ebuild,v 1.1 2012/12/04 20:32:06 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.17.0_alpha8.ebuild,v 1.2 2012/12/04 21:10:39 tommy Exp $
 
 EAPI="2"
 
@@ -42,6 +42,7 @@ RDEPEND="
 	>=dev-libs/e_dbus-1.7.1[libnotify,udev?]
 	ukit? ( >=dev-libs/e_dbus-1.7.1[udev] )
 	enlightenment_modules_connman? ( >=dev-libs/e_dbus-1.7.1[connman] )
+	enlightenment_modules_shot? ( >=dev-libs/ecore-1.7.1[curl] )
 	|| ( >=media-libs/evas-1.7.1[eet,X,jpeg,png] >=media-libs/evas-1.7.1[eet,xcb,jpeg,png] )
 	>=dev-libs/eeze-1.7.1
 	x11-libs/xcb-util-keysyms"
