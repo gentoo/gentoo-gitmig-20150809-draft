@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/irqbalance
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/irqbalance/ChangeLog,v 1.44 2012/09/05 05:15:32 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/irqbalance/ChangeLog,v 1.45 2012/12/04 15:45:35 cardoe Exp $
+
+*irqbalance-1.0.5 (04 Dec 2012)
+
+  04 Dec 2012; Doug Goldstein <cardoe@gentoo.org> +irqbalance-1.0.5.ebuild:
+  Version bump
 
 *irqbalance-1.0.4 (05 Sep 2012)
 
