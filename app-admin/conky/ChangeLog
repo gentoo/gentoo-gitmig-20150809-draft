@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.192 2012/11/30 15:28:51 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.193 2012/12/04 20:58:53 billie Exp $
+
+  04 Dec 2012; Daniel Pielmeier <billie@gentoo.org> conky-1.9.0.ebuild,
+  conky-1.9.0-r1.ebuild, metadata.xml:
+  Revert previous commit as per bug #445926.
 
   30 Nov 2012; Daniel Pielmeier <billie@gentoo.org> conky-1.9.0.ebuild,
   conky-1.9.0-r1.ebuild, metadata.xml:

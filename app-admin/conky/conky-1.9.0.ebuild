@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.9.0.ebuild,v 1.9 2012/11/30 15:28:51 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.9.0.ebuild,v 1.10 2012/12/04 20:58:53 billie Exp $
 
 EAPI=4
 
@@ -26,7 +26,7 @@ DEPEND_COMMON="
 			>=dev-lua/toluapp-1.0.93
 			>=dev-lang/lua-5.1.4-r8
 			media-libs/imlib2 )
-		nvidia? ( x11-drivers/nvidia-drivers[tools] )
+		nvidia? ( media-video/nvidia-settings )
 		truetype? ( x11-libs/libXft >=media-libs/freetype-2 )
 		x11-libs/libX11
 		x11-libs/libXdamage
