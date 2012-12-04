@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/supertab
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/supertab/ChangeLog,v 1.43 2012/12/04 10:49:47 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/supertab/ChangeLog,v 1.44 2012/12/04 11:23:20 ago Exp $
+
+  04 Dec 2012; <ago@gentoo.org> supertab-2.0.ebuild:
+  Stable for x86, wrt bug #441130
 
   04 Dec 2012; Anthony G. Basile <blueness@gentoo.org> supertab-2.0.ebuild:
   stable ppc, bug #441130
