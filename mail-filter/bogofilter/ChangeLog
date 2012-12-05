@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/bogofilter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/ChangeLog,v 1.146 2012/12/04 18:27:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/ChangeLog,v 1.147 2012/12/05 00:51:52 blueness Exp $
+
+  05 Dec 2012; Anthony G. Basile <blueness@gentoo.org> bogofilter-1.2.3.ebuild:
+  stable arm, bug #445908
 
   04 Dec 2012; Jeroen Roovers <jer@gentoo.org> bogofilter-1.2.3.ebuild:
   Stable for HPPA (bug #445908).
