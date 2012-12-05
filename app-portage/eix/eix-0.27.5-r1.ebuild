@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.27.5.ebuild,v 1.1 2012/12/04 21:46:28 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.27.5-r1.ebuild,v 1.1 2012/12/05 21:26:03 axs Exp $
 
 EAPI=5
 
@@ -32,8 +32,10 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# bug 446078
+	epatch "${FILESDIR}"/${P}-commentlines.patch
+
 	epatch_user
-	# consider inheriting autotools.eclass and adding eautoreconf here
 }
 
 src_configure() {
