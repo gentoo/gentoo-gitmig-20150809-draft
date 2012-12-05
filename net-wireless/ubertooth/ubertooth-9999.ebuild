@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ubertooth-9999.ebuild,v 1.16 2012/11/17 04:32:24 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ubertooth-9999.ebuild,v 1.17 2012/12/05 00:17:43 zerochaos Exp $
 
 EAPI="4"
 
@@ -31,7 +31,7 @@ RDEPEND="${DEPEND}
 		>=dev-python/pyusb-1.0.0_alpha1 )"
 
 if [[ ${PV} == "9999" ]] ; then
-	EGIT_REPO_URI="git://ubertooth.git.sourceforge.net/gitroot/ubertooth/ubertooth"
+	EGIT_REPO_URI="http://git.code.sf.net/p/ubertooth/code"
 	SRC_URI=""
 	inherit git-2
 	KEYWORDS=""

@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/ubertooth
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ChangeLog,v 1.16 2012/11/17 04:32:24 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ChangeLog,v 1.17 2012/12/05 00:17:43 zerochaos Exp $
+
+  05 Dec 2012; Rick Farina <zerochaos@gentoo.org> ubertooth-9999.ebuild:
+  upstream upgraded their sourceforge account to new style which changed repo
+  location
 
   17 Nov 2012; Rick Farina <zerochaos@gentoo.org> ubertooth-2012.10.1.ebuild,
   ubertooth-9999.ebuild:
