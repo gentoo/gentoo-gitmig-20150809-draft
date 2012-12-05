@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/cffi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cffi/ChangeLog,v 1.3 2012/10/10 09:16:12 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cffi/ChangeLog,v 1.4 2012/12/05 10:22:25 ssuominen Exp $
+
+  05 Dec 2012; Samuli Suominen <ssuominen@gentoo.org> cffi-0.2.1.ebuild,
+  cffi-0.3.ebuild:
+  Use virtual/libffi instead of dev-libs/libffi in case we have to move back to
+  using libffi from gcc's source tree later.
 
 *cffi-0.3 (10 Oct 2012)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cffi/cffi-0.2.1.ebuild,v 1.2 2012/08/09 04:30:38 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cffi/cffi-0.2.1.ebuild,v 1.3 2012/12/05 10:22:25 ssuominen Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -18,9 +18,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-libs/libffi
-		dev-python/pycparser
-		dev-python/pytest"
+DEPEND="virtual/libffi
+	dev-python/pycparser
+	dev-python/pytest"
 RDEPEND="${DEPEND}"
 
 src_test() {
