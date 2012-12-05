@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/ardour
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.107 2012/11/24 00:48:51 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.108 2012/12/05 09:57:19 radhermit Exp $
+
+*ardour-2.8.16 (05 Dec 2012)
+
+  05 Dec 2012; Tim Harder <radhermit@gentoo.org> +ardour-2.8.16.ebuild:
+  Version bump.
 
   24 Nov 2012; Tim Harder <radhermit@gentoo.org> ardour-2.8.14-r1.ebuild:
   Fix whitespace.
