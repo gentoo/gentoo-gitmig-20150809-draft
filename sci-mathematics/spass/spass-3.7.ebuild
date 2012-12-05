@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/spass/spass-3.7.ebuild,v 1.4 2012/10/22 10:20:57 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/spass/spass-3.7.ebuild,v 1.5 2012/12/05 10:35:35 gienah Exp $
 
-EAPI=4
+EAPI=5
 
 inherit versionator
 
@@ -14,13 +14,14 @@ HOMEPAGE="http://www.spass-prover.org/"
 SRC_URI="http://www.spass-prover.org/download/sources/${MY_P}.tgz"
 
 LICENSE="BSD-2"
-SLOT="0"
+SLOT="0/${PV}"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc examples isabelle"
 
-RDEPEND=""
-DEPEND="${RDEPEND}
-		isabelle? ( >=sci-mathematics/isabelle-2011.1-r1 )"
+RDEPEND="isabelle? (
+			>=sci-mathematics/isabelle-2011.1-r1:=
+		)"
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/SPASS-${PV}"
 
@@ -41,7 +42,6 @@ src_install() {
 	if use isabelle; then
 		ISABELLE_HOME="$(isabelle getenv ISABELLE_HOME | cut -d'=' -f 2)"
 		[[ -n "${ISABELLE_HOME}" ]] || die "ISABELLE_HOME empty"
-
 		dodir "${ISABELLE_HOME}/contrib/${PN}-${PV}/etc"
 		cat <<- EOF >> "${S}/settings"
 			SPASS_HOME="${ROOT}usr/bin"
@@ -72,7 +72,7 @@ pkg_postrm() {
 			if [ -f "${ROOT}etc/isabelle/components" ]; then
 				# Note: this sed should only match the version of this ebuild
 				# Which is what we want as we do not want to remove the line
-				# of a new E being installed during an upgrade.
+				# of a new spass being installed during an upgrade.
 				sed -e "/contrib\/${PN}-${PV}/d" \
 					-i "${ROOT}etc/isabelle/components"
 			fi
