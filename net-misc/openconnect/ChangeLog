@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/openconnect
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/ChangeLog,v 1.2 2012/11/18 09:41:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/ChangeLog,v 1.3 2012/12/05 18:53:47 hwoarang Exp $
+
+*openconnect-4.07 (05 Dec 2012)
+
+  05 Dec 2012; Markos Chandras <hwoarang@gentoo.org>
+  +files/openconnect.logrotate, +openconnect-4.07.ebuild,
+  files/openconnect.conf.in, files/openconnect.init.in, metadata.xml:
+  Version bump. Thanks to Matthew Schultz <mattsch@gmail.com> who will maintain
+  it. Bug #384099
 
   18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer as talked with him via mail.

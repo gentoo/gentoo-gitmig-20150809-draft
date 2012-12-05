@@ -1,24 +1,111 @@
 #!/sbin/runscript
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/files/openconnect.init.in,v 1.1 2011/08/16 09:15:47 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/files/openconnect.init.in,v 1.2 2012/12/05 18:53:47 hwoarang Exp $
+
+VPN="${RC_SVCNAME#*.}"
+VPNLOG="/var/log/openconnect/${VPN}"
+VPNLOGFILE="${VPNLOG}/openconnect.log"
+VPNERRFILE="${VPNLOG}/openconnect.err"
+VPNPID="/var/run/openconnect/${VPN}.pid"
+VPNDIR="/etc/openconnect/${VPN}"
+PREUPSCRIPT="${VPNDIR}/preup.sh"
+PREDOWNSCRIPT="${VPNDIR}/predown.sh"
+POSTUPSCRIPT="${VPNDIR}/postup.sh"
+POSTDOWNSCRIPT="${VPNDIR}/postdown.sh"
+SERVER="server_${VPN}"
+PASSWORD="password_${VPN}"
+VPNOPTS="vpnopts_${VPN}"
 
 depend() {
 	before netmount
 }
 
+checkconfig() {
+	if [ $VPN = "openconnect" ]; then
+		eerror "You cannot call openconnect directly. You must create a symbolic link to it instead with the vpn name:"
+		eerror "ln -s /etc/init.d/openconnect /etc/init.d/openconnect.vpn0"
+		return 1
+	fi
+}
+
+checktuntap() {
+	if [ $(uname -s) = "Linux" ] ; then
+		if [ ! -e /dev/net/tun ]; then
+			if ! modprobe tun ; then
+				eerror "TUN/TAP support is not available in this kernel"
+				return 1
+			fi
+		fi
+		if [ -h /dev/net/tun ] && [ -c /dev/misc/net/tun ]; then
+			ebegin "Detected broken /dev/net/tun symlink, fixing..."
+			rm -f /dev/net/tun
+			ln -s /dev/misc/net/tun /dev/net/tun
+			eend $?
+		fi
+	fi
+}
+
 start() {
-	ebegin "Starting OpenConnect"
-   
-	start-stop-daemon --start --quiet --make-pidfile --pidfile /var/run/openconnect.pid --exec /usr/bin/openconnect \
-		-- ${VPNOPTS} ${SERVER} <<< ${PASSWORD}
+	ebegin "Starting OpenConnect: ${VPN}"
+
+	checkconfig || return 1
+
+	checktuntap || return 1
+
+	if [ "${!SERVER}" == "vpn.server.tld" ]; then
+		eend 1 "${VPN} not configured"
+		return 1
+	fi
+
+	if [ ! -e "${VPNLOG}" ]; then
+		mkdir -p "${VPNLOG}"
+	fi
+
+	local args=""
+
+	if [ -x "${PREUPSCRIPT}" ] ; then 
+		"${PREUPSCRIPT}"
+	fi
+
+	start-stop-daemon --start --make-pidfile --pidfile "${VPNPID}" --stderr "${VPNERRFILE}" --stdout "${VPNLOGFILE}" --background \
+			--exec /usr/sbin/openconnect \
+			-- ${!VPNOPTS} ${!SERVER} <<< ${!PASSWORD}
+
+ 	local retval=$?
+
+ 	if [ ! ${retval} -eq 0 ]; then
+		eend ${retval}
+		return ${retval}
+ 	fi
+
+	if [ -x "${POSTUPSCRIPT}" ] ; then 
+		"${POSTUPSCRIPT}"
+	fi
+
 	eend $?
 }
 
 stop() {
-	ebegin "Stopping OpenConnect"
-	start-stop-daemon --quiet --pidfile /var/run/openconnect.pid --stop /usr/bin/openconnect
+	ebegin "Stopping OpenConnect: ${VPN}"
+
+	checkconfig || return 1
+
+	if [ -x "${PREDOWNSCRIPT}" ] ; then 
+		"${PREDOWNSCRIPT}"
+	fi
+
+	start-stop-daemon --pidfile "${VPNPID}" --stop /usr/sbin/openconnect
+ 	local retval=$?
+
+ 	if [ ! ${retval} -eq 0 ]; then
+		eend ${retval}
+ 		return ${retval}
+ 	fi
+
+
+	if [ -x "${POSTDOWNSCRIPT}" ] ; then 
+		"${POSTDOWNSCRIPT}"
+	fi
 	eend $?
 }
-
-# vim: set ft=gentoo-init-d ts=3 sw=3 et:
