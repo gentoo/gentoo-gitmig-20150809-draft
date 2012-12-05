@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/isabelle
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/isabelle/ChangeLog,v 1.6 2012/09/20 13:07:43 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/isabelle/ChangeLog,v 1.7 2012/12/05 10:09:32 gienah Exp $
+
+  05 Dec 2012; Mark Wright <gienah@gentoo.org> isabelle-2011.1-r1.ebuild,
+  isabelle-2012.ebuild:
+  EAPI=5 with subslot depends to automatically rebuild isabelle when polyml is
+  updated. It is necessary to remove any non-existing directories from
+  /etc/isabelle/components, as otherwise isabelle getenv ISABELLE_HOME fails,
+  which causes reverse dependent packages of sci-mathematics/isabelle to fail.
 
   20 Sep 2012; Mark Wright <gienah@gentoo.org> isabelle-2011.1-r1.ebuild,
   isabelle-2012.ebuild:

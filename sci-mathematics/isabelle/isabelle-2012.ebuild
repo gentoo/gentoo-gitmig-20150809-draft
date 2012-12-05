@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/isabelle/isabelle-2012.ebuild,v 1.3 2012/09/20 13:07:43 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/isabelle/isabelle-2012.ebuild,v 1.4 2012/12/05 10:09:32 gienah Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit eutils java-pkg-2 multilib versionator
 
@@ -21,7 +21,7 @@ SRC_URI="http://www.cl.cam.ac.uk/research/hvg/isabelle/dist/${MY_P}.tar.gz
 		pide? ( http://www4.in.tum.de/~wenzelm/test/${JEDIT_P}.tar.gz )"
 
 LICENSE="BSD"
-SLOT="0"
+SLOT="0/${PV}"
 KEYWORDS="~x86 ~amd64"
 ALL_LOGICS="Pure FOL +HOL ZF CCL CTT Cube FOLP LCF Sequents"
 IUSE="${ALL_LOGICS} doc graphbrowsing ledit readline pide +proofgeneral test"
@@ -30,7 +30,7 @@ IUSE="${ALL_LOGICS} doc graphbrowsing ledit readline pide +proofgeneral test"
 #bash 2.x/3.x, Poly/ML 5.x, Perl 5.x,
 #for document preparation: complete LaTeX
 DEPEND=">=app-shells/bash-3.0
-		>=dev-lang/polyml-5.4.1[-portable]
+		>=dev-lang/polyml-5.4.1:=[-portable]
 		>=dev-lang/perl-5.8.8-r2"
 
 RDEPEND="dev-perl/libwww-perl
@@ -283,13 +283,26 @@ src_install() {
 }
 
 pkg_postinst() {
+	# If any of the directories in /etc/isabelle/components do not exist, then
+	# even isabelle getenv ISABELLE_HOME fails.  Hence it is necessary to
+	# to delete any non-existing directories.  If an old Isabelle version was
+	# installed with component ebuilds like sci-mathematics/e, then the
+	# Isabelle version is upgraded, then the contrib directories will not
+	# exist initially, it is necessary to delete them from /etc/isabelle/components.
+	# Then these components are rebuilt (creating these directories) using the
+	# EAPI=5 subslot depends.
+	for i in $(egrep '^[^#].*$' "${ROOT}etc/isabelle/components")
+	do
+		if [ ! -d /usr/share/Isabelle2012/${i} ]; then
+			sed -e "\@${i}@d" -i "${ROOT}etc/isabelle/components"
+		fi
+	done
 	if use ledit && use readline; then
 		elog "Both readline and ledit use flags specified.  The default setting"
 		elog "if both are installed is to use readline (rlwrap), this can be"
 		elog "modfied by editing the ISABELLE_LINE_EDITOR setting in"
 		elog "${ROOT}/etc/isabelle/settings"
 	fi
-	elog "You will need to re-emerge Isabelle after emerging polyml."
 	elog "Please ensure you have a pdf viewer installed, for example:"
 	elog "As root: emerge app-text/zathura-pdf-poppler"
 	elog "Please configure your preferred pdf viewer, something like:"
@@ -299,4 +312,6 @@ pkg_postinst() {
 	elog "settings file \$HOME/.isabelle/${MY_P}/etc/settings"
 	elog "To improve sledgehammer performance, consider installing:"
 	elog "USE=isabelle emerge sci-mathematics/e sci-mathematics/spass"
+	elog "For nitpick it is necessary to install:"
+	elog "emerge sci-mathematics/kodkodi"
 }
