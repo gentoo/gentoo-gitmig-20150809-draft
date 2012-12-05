@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/polyml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/polyml/ChangeLog,v 1.9 2012/10/24 19:04:03 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/polyml/ChangeLog,v 1.10 2012/12/05 09:49:35 gienah Exp $
+
+  05 Dec 2012; Mark Wright <gienah@gentoo.org> polyml-5.4.1.ebuild,
+  polyml-5.5.0.ebuild:
+  Fix bug 443452 dev-lang/polyml-5.5.0 should depend on and use dev-libs/libffi.
+  EAPI=5 with subslot depends for polyml 5.4.1 and 5.5.0 to automatically
+  rebuild EAPI=5 dependent packages using subslot depends such as sci-
+  mathematics/isabelle
 
   24 Oct 2012; Ulrich Müller <ulm@gentoo.org> polyml-5.4.1.ebuild,
   polyml-5.5.0.ebuild:

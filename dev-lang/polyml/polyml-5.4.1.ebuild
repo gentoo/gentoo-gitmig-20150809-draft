@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/polyml/polyml-5.4.1.ebuild,v 1.5 2012/10/24 19:04:03 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/polyml/polyml-5.4.1.ebuild,v 1.6 2012/12/05 09:49:35 gienah Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit base autotools
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.polyml.org"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
-SLOT="0"
+SLOT="0/${PV}"
 KEYWORDS="~amd64 ~x86"
 IUSE="X elibc_glibc +gmp portable test +threads"
 
