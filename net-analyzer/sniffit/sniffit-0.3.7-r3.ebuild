@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/sniffit-0.3.7-r3.ebuild,v 1.1 2010/09/16 23:13:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/sniffit-0.3.7-r3.ebuild,v 1.2 2012/12/05 15:40:36 jer Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ DEPEND="net-libs/libpcap
 RDEPEND="${DEPEND}"
 
 SLOT="0"
-LICENSE="as-is"
+LICENSE="BSD"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 

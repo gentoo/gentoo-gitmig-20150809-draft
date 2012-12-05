@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/sniffit
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/ChangeLog,v 1.18 2010/09/16 23:13:07 jer Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/ChangeLog,v 1.19 2012/12/05 15:40:36 jer Exp $
+
+  05 Dec 2012; Jeroen Roovers <jer@gentoo.org> sniffit-0.3.7-r1.ebuild,
+  sniffit-0.3.7-r3.ebuild:
+  Set LICENSE=BSD by Ulrich Müller (bug #446064).
 
 *sniffit-0.3.7-r3 (16 Sep 2010)
 
