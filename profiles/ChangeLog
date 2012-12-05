@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7220 2012/12/05 08:03:22 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7221 2012/12/05 22:46:07 tetromino Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.mask:
+  Mask claws-mail-geolocation, libchamplain:0.8, clutter-gtk:0.10 for removal
+  (bug #435164).
 
   05 Dec 2012; Ulrich Müller <ulm@gentoo.org> license_groups:
   Add tcltk to MISC-FREE license group, bug 445468.
