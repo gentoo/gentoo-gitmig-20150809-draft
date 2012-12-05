@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-utils/v4l-utils-0.8.9.ebuild,v 1.2 2012/10/26 17:45:48 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-utils/v4l-utils-0.8.9.ebuild,v 1.3 2012/12/05 21:05:41 tetromino Exp $
 
 EAPI=4
 inherit toolchain-funcs qt4-r2
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${P}/utils
 
 src_prepare() {
-	use qt4 || sed -i -e 's:which $$QMAKE:which dISaBlEd:' Makefile
+	use qt4 || sed -i -e 's:which $$QMAKE:which dISaBlEd:' Makefile || die
 
 	local udevdir=/lib/udev
 	has_version sys-fs/udev && udevdir="$($(tc-getPKG_CONFIG) --variable=udevdir udev)"
