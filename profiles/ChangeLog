@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7219 2012/12/05 03:57:41 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7220 2012/12/05 08:03:22 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Dec 2012; Ulrich Müller <ulm@gentoo.org> license_groups:
+  Add tcltk to MISC-FREE license group, bug 445468.
 
   05 Dec 2012; Ben de Groot <yngwin@gentoo.org> package.mask:
   Remove temp Qt 4.8.4 mask
