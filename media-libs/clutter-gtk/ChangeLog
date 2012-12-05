@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/clutter-gtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gtk/ChangeLog,v 1.36 2012/10/17 23:11:58 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gtk/ChangeLog,v 1.37 2012/12/05 23:20:14 tetromino Exp $
+
+  05 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  clutter-gtk-1.0.4.ebuild, -clutter-gtk-1.2.0.ebuild,
+  clutter-gtk-1.4.0.ebuild:
+  Update to EAPI5. Drop old.
 
 *clutter-gtk-1.4.0 (17 Oct 2012)
 
