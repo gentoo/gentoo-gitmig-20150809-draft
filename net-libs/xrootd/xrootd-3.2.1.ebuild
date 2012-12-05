@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xrootd/xrootd-3.2.1.ebuild,v 1.4 2012/07/09 06:20:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xrootd/xrootd-3.2.1.ebuild,v 1.5 2012/12/05 18:19:15 bicatali Exp $
 
 EAPI=4
 
@@ -59,13 +59,9 @@ src_install() {
 	insinto /etc/xrootd
 	doins packaging/common/*.cfg
 
-	# create aux dirs and correct permissions so that xrootd
-	# will be happy as a non-priviledged user
-	fowners root:xrootd "${EPREFIX}"/etc/xrootd
-	keepdir "${EPREFIX}"/var/log/xrootd
-	keepdir "${EPREFIX}"/var/run/xrootd
-	keepdir "${EPREFIX}"/var/spool/xrootd
-	fowners xrootd:xrootd "${EPREFIX}"/var/{log,run,spool}/xrootd
+	fowners root:xrootd /etc/xrootd
+	keepdir /var/log/xrootd
+	fowners xrootd:xrootd /var/log/xrootd
 
 	local i
 	for i in cmsd frm_purged frm_xfrd xrootd; do
