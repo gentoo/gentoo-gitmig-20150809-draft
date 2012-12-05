@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.2.0.ebuild,v 1.2 2012/11/29 15:32:08 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.2.0.ebuild,v 1.3 2012/12/05 04:19:43 mr_bones_ Exp $
 
 EAPI="3"
 
@@ -170,4 +170,3 @@ src_install() {
 		doins -r examples || die
 	fi
 }
-
