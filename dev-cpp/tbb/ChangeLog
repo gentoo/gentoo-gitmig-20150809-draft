@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/tbb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.29 2012/12/05 19:20:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.30 2012/12/05 20:21:36 bicatali Exp $
+
+  05 Dec 2012; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
+  Switching maintainership to sci herd
 
   05 Dec 2012; Justin Lecher <jlec@gentoo.org>
   +files/tbb-4.1.20121003-ldflags.patch, metadata.xml:
