@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/cogl-1.8.2.ebuild,v 1.9 2012/10/10 11:52:07 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/cogl-1.8.2.ebuild,v 1.10 2012/12/05 23:12:24 tetromino Exp $
 
-EAPI="4"
+EAPI="5"
 CLUTTER_LA_PUNT="yes"
 
 # Inherit gnome2 after clutter to download sources from gnome.org
@@ -12,7 +12,7 @@ DESCRIPTION="A library for using 3D graphics hardware to draw pretty pictures"
 HOMEPAGE="http://www.clutter-project.org/"
 
 LICENSE="LGPL-2.1+ FDL-1.1+"
-SLOT="1.0"
+SLOT="1.0/5"
 IUSE="doc examples +introspection +pango"
 KEYWORDS="~alpha amd64 ~mips ppc ppc64 x86"
 
@@ -43,7 +43,7 @@ DEPEND="${COMMON_DEPEND}
 # matter whether "eselect opengl" is set to nvidia or xorg-x11.
 RESTRICT="test"
 
-pkg_setup() {
+src_prepare() {
 	DOCS="NEWS README"
 	EXAMPLES="examples/{*.c,*.jpg}"
 	# XXX: think about gles, quartz, wayland
@@ -55,7 +55,10 @@ pkg_setup() {
 		--enable-gl
 		--enable-glx
 		$(use_enable introspection)
-		$(use_enable pango cogl-pango)"
+		$(use_enable pango cogl-pango)
+		$(use_enable doc gtk-doc)"
+
+	gnome2_src_prepare
 }
 
 src_test() {
