@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt-openvg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-openvg/ChangeLog,v 1.15 2012/09/16 04:33:57 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-openvg/ChangeLog,v 1.16 2012/12/05 03:24:06 yngwin Exp $
+
+*qt-openvg-4.8.4 (05 Dec 2012)
+
+  05 Dec 2012; Ben de Groot <yngwin@gentoo.org> +qt-openvg-4.8.4.ebuild:
+  Qt 4.8.4 version bump
 
   16 Sep 2012; Ben de Groot <yngwin@gentoo.org> qt-openvg-4.8.3.ebuild:
   Add overlay changes (c++0x useflag)

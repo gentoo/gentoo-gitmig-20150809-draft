@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt-multimedia
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-multimedia/ChangeLog,v 1.67 2012/11/22 21:01:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-multimedia/ChangeLog,v 1.68 2012/12/05 03:21:46 yngwin Exp $
+
+*qt-multimedia-4.8.4 (05 Dec 2012)
+
+  05 Dec 2012; Ben de Groot <yngwin@gentoo.org> +qt-multimedia-4.8.4.ebuild:
+  Qt 4.8.4 version bump
 
   22 Nov 2012; Markus Meier <maekke@gentoo.org> qt-multimedia-4.8.2.ebuild:
   arm stable, bug #435074
