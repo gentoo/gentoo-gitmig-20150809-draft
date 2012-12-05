@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/aap
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aap/ChangeLog,v 1.29 2009/09/12 01:40:42 patrick Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aap/ChangeLog,v 1.30 2012/12/05 06:02:22 ottxor Exp $
+
+*aap-1.091-r1 (05 Dec 2012)
+
+  05 Dec 2012; Christoph Junghans <ottxor@gentoo.org> +aap-1.091-r1.ebuild:
+  added prefix support + clean up (bug #440356)
 
 *aap-1.091 (12 Sep 2009)
 
@@ -107,4 +112,3 @@
 
   23 Jul 2003; Aron Griffis <agriffis@gentoo.org> aap-1.000.ebuild:
   New ebuild for Bram Moolenaar's A-A-P
-
