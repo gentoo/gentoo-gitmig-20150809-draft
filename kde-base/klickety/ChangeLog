@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/klickety
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klickety/ChangeLog,v 1.162 2012/11/30 16:02:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klickety/ChangeLog,v 1.163 2012/12/05 16:58:17 alexxy Exp $
+
+*klickety-4.9.4 (05 Dec 2012)
+
+  05 Dec 2012; Alexey Shvetsov <alexxy@gentoo.org> +klickety-4.9.4.ebuild:
+  Version bump KDE SC 4.9.4
 
   30 Nov 2012; <ago@gentoo.org> klickety-4.9.3.ebuild:
   Stable for ppc, wrt bug #442394

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/pykde4
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.187 2012/12/03 00:51:29 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.188 2012/12/05 16:58:08 alexxy Exp $
+
+*pykde4-4.9.4 (05 Dec 2012)
+
+  05 Dec 2012; Alexey Shvetsov <alexxy@gentoo.org> +pykde4-4.9.4.ebuild:
+  Version bump KDE SC 4.9.4
 
   03 Dec 2012; Zac Medico <zmedico@gentoo.org> pykde4-4.9.3.ebuild:
   Apply fix for bug #445668 by Niko Böckerman <niko.bockerman@gmail.com>.

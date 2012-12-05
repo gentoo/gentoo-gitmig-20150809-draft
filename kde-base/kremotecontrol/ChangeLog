@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kremotecontrol
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kremotecontrol/ChangeLog,v 1.70 2012/11/27 12:55:10 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kremotecontrol/ChangeLog,v 1.71 2012/12/05 16:57:46 alexxy Exp $
+
+*kremotecontrol-4.9.4 (05 Dec 2012)
+
+  05 Dec 2012; Alexey Shvetsov <alexxy@gentoo.org>
+  +kremotecontrol-4.9.4.ebuild:
+  Version bump KDE SC 4.9.4
 
   27 Nov 2012; Michael Palimaka <kensington@gentoo.org>
   kremotecontrol-4.9.3.ebuild:

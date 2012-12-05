@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.879 2012/11/30 15:42:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.880 2012/12/05 16:58:05 alexxy Exp $
+
+*kdelibs-4.9.4 (05 Dec 2012)
+
+  05 Dec 2012; Alexey Shvetsov <alexxy@gentoo.org> +kdelibs-4.9.4.ebuild:
+  Version bump KDE SC 4.9.4
 
   30 Nov 2012; <ago@gentoo.org> kdelibs-4.9.3.ebuild:
   Stable for ppc, wrt bug #442394

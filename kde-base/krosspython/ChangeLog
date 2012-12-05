@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/krosspython
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krosspython/ChangeLog,v 1.122 2012/11/30 16:17:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krosspython/ChangeLog,v 1.123 2012/12/05 16:58:10 alexxy Exp $
+
+*krosspython-4.9.4 (05 Dec 2012)
+
+  05 Dec 2012; Alexey Shvetsov <alexxy@gentoo.org> +krosspython-4.9.4.ebuild:
+  Version bump KDE SC 4.9.4
 
   30 Nov 2012; <ago@gentoo.org> krosspython-4.9.3.ebuild:
   Stable for ppc, wrt bug #442394

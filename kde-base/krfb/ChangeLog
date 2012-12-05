@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/krfb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/ChangeLog,v 1.230 2012/11/30 16:17:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/ChangeLog,v 1.231 2012/12/05 16:58:24 alexxy Exp $
+
+*krfb-4.9.4 (05 Dec 2012)
+
+  05 Dec 2012; Alexey Shvetsov <alexxy@gentoo.org> +krfb-4.9.4.ebuild:
+  Version bump KDE SC 4.9.4
 
   30 Nov 2012; <ago@gentoo.org> krfb-4.9.3.ebuild:
   Stable for ppc, wrt bug #442394
