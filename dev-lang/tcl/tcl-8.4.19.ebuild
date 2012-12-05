@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.4.19.ebuild,v 1.5 2010/12/23 18:37:30 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.4.19.ebuild,v 1.6 2012/12/05 08:51:01 ulm Exp $
 
 inherit autotools eutils multilib toolchain-funcs
 
@@ -8,7 +8,7 @@ DESCRIPTION="Tool Command Language"
 HOMEPAGE="http://www.tcl.tk/"
 SRC_URI="mirror://sourceforge/tcl/${PN}${PV}-src.tar.gz"
 
-LICENSE="BSD"
+LICENSE="tcltk"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="debug threads"
