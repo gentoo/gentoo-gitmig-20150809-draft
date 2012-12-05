@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/pdmenu/pdmenu-1.3.2.ebuild,v 1.5 2012/08/22 09:17:13 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/pdmenu/pdmenu-1.3.2-r1.ebuild,v 1.1 2012/12/05 13:05:28 polynomial-c Exp $
 
 EAPI=4
 
@@ -42,7 +42,7 @@ src_install() {
 
 	dodoc doc/ANNOUNCE doc/BUGS doc/TODO
 
-	use examples && doins -r examples
+	use examples && dodoc -r examples
 
 	mv doc/pdmenu.man doc/pdmenu.1
 	mv doc/pdmenurc.man doc/pdmenurc.5
