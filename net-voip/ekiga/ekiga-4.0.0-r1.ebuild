@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-4.0.0.ebuild,v 1.1 2012/12/03 23:46:30 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-4.0.0-r1.ebuild,v 1.1 2012/12/05 01:25:08 neurogeek Exp $
 
 EAPI="4"
 
@@ -20,18 +20,19 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="avahi dbus debug doc eds gconf gnome gstreamer h323 kde kontact ldap
 libnotify mmx nls pulseaudio +shm static v4l xcap xv"
 
-RDEPEND=">=dev-libs/glib-2.14.0:2
+RDEPEND=">=dev-libs/glib-2.24.0:2
 	>=dev-libs/boost-1.49
 	dev-libs/libxml2:2
 	>=net-libs/opal-3.10.9[audio,sip,video,debug=,h323?,xml]
 	>=net-libs/ptlib-2.10.9[ldap?,stun,v4l?,video,wav,debug=,dtmf,pulseaudio?,xml]
-	>=x11-libs/gtk+-2.12.0:2
+	>=x11-libs/gtk+-2.20.0:2
+	>=x11-themes/gnome-icon-theme-3.0.0
 	avahi? ( >=net-dns/avahi-0.6[dbus] )
 	dbus? ( >=sys-apps/dbus-0.36
 		>=dev-libs/dbus-glib-0.36 )
 	eds? ( >=gnome-extra/evolution-data-server-1.2 )
 	gconf? ( >=gnome-base/gconf-2.6.0:2 )
-	gnome? ( || ( >=x11-libs/gtk+-2.14:2
+	gnome? ( || ( >=x11-libs/gtk+-2.20.0:2
 		( >=gnome-base/libgnome-2.14.0
 		>=gnome-base/libgnomeui-2.14.0 ) ) )
 	gstreamer? ( >=media-libs/gst-plugins-base-0.10.21.3:0.10 )
