@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.395 2012/12/05 02:21:19 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.396 2012/12/05 02:22:48 blueness Exp $
+
+  05 Dec 2012; Anthony G. Basile <blueness@gentoo.org> ChangeLog:
+  Fix failed gpg signing of manifest
 
   05 Dec 2012; Anthony G. Basile <blueness@gentoo.org> dovecot-2.1.12-r1.ebuild:
   stable arm, bug #445844
