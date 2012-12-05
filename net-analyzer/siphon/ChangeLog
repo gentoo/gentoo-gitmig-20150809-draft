@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/siphon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/siphon/ChangeLog,v 1.18 2012/02/05 18:29:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/siphon/ChangeLog,v 1.19 2012/12/05 16:28:50 jer Exp $
+
+  05 Dec 2012; Jeroen Roovers <jer@gentoo.org> -siphon-666.ebuild,
+  siphon-666-r1.ebuild:
+  Fix LICENSE by Ulrich Müller (bug #446060).
 
   05 Feb 2012; Raúl Porcel <armin76@gentoo.org> siphon-666.ebuild,
   siphon-666-r1.ebuild:
