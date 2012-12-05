@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/srm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/srm/ChangeLog,v 1.30 2012/03/09 15:06:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/srm/ChangeLog,v 1.31 2012/12/05 01:35:03 jer Exp $
+
+  05 Dec 2012; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Change maintainer tag (bug #390951).
 
   09 Mar 2012; Brent Baude <ranger@gentoo.org> srm-1.2.11-r2.ebuild:
   Marking srm-1.2.11-r2 ~ppc64 for bug 388957
