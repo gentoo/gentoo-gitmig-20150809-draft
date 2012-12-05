@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.34.0-r2.ebuild,v 1.9 2012/10/25 20:56:29 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.34.0-r2.ebuild,v 1.10 2012/12/05 22:37:16 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -13,11 +13,11 @@ inherit eutils gnome2 multilib python
 DESCRIPTION="Telepathy client and library using GTK+"
 HOMEPAGE="http://live.gnome.org/Empathy"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="alpha amd64 ~ia64 ppc ~sparc x86 ~x86-linux"
 # FIXME: Add location support once geoclue stops being idiotic with automagic deps
-IUSE="eds map nautilus networkmanager spell test webkit"
+IUSE="eds nautilus networkmanager spell test webkit"
 
 # FIXME: libnotify & libcanberra hard deps
 # gst-plugins-bad is required for the valve plugin. This should move to good
@@ -45,9 +45,6 @@ RDEPEND=">=dev-libs/glib-2.27.2:2
 	>=net-im/telepathy-logger-0.2.0
 
 	eds? ( >=gnome-extra/evolution-data-server-1.2 )
-	map? (
-		>=media-libs/libchamplain-0.7.1:0.8[gtk]
-		>=media-libs/clutter-gtk-0.10:0.10 )
 	nautilus? ( >=gnome-extra/nautilus-sendto-2.31.7 )
 	networkmanager? ( >=net-misc/networkmanager-0.7 )
 	spell? (
@@ -68,9 +65,16 @@ DEPEND="${RDEPEND}
 PDEPEND=">=net-im/telepathy-mission-control-5.7.6"
 
 pkg_setup() {
+	# Build time python tools needs python2
+	python_set_active_version 2
+	python_pkg_setup
+}
+
+src_prepare() {
 	DOCS="CONTRIBUTORS AUTHORS ChangeLog NEWS README"
 
 	# call support needs unreleased telepathy-farstream
+	# map disabled due to clutter-gtk-0.10 removal, bug #435164
 	G2CONF="${G2CONF}
 		--enable-silent-rules
 		--disable-coding-style-checks
@@ -82,19 +86,11 @@ pkg_setup() {
 		--disable-Werror
 		$(use_enable debug)
 		$(use_with eds)
-		$(use_enable map)
+		--disable-map
 		$(use_enable nautilus nautilus-sendto)
 		$(use_with networkmanager connectivity nm)
 		$(use_enable spell)
 		$(use_enable webkit)"
-
-	# Build time python tools needs python2
-	python_set_active_version 2
-	python_pkg_setup
-}
-
-src_prepare() {
-	gnome2_src_prepare
 
 	epatch "${FILESDIR}"/${P}-auth-dialog-crash-fix.patch
 
@@ -105,6 +101,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-missing-include.patch
 
 	python_convert_shebangs -r 2 .
+	gnome2_src_prepare
 }
 
 src_test() {

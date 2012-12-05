@@ -1,6 +1,11 @@
 # ChangeLog for net-im/empathy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.111 2012/10/25 20:56:29 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.112 2012/12/05 22:37:16 tetromino Exp $
+
+  05 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  empathy-2.34.0-r2.ebuild, empathy-3.4.2.3.ebuild:
+  Drop map USE flag for empathy-2 due to pending clutter-gtk-0.10 removal (bug
+  #435164). Update license. Update 3.4 to EAPI5.
 
   25 Oct 2012; Gilles Dartiguelongue <eva@gentoo.org> -empathy-2.32.2.ebuild,
   empathy-2.34.0-r2.ebuild, empathy-3.2.2-r1.ebuild, -empathy-3.4.2.1.ebuild,
