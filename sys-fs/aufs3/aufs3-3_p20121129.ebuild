@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20121129.ebuild,v 1.2 2012/11/30 15:29:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20121129.ebuild,v 1.3 2012/12/05 13:37:42 jlec Exp $
 
 EAPI=4
 
@@ -33,11 +33,12 @@ S="${WORKDIR}"/${P}/${PN}-standalone
 MODULE_NAMES="aufs(misc:${S})"
 
 pkg_setup() {
-	CONFIG_CHECK="${CONFIG_CHECK} ~EXPERIMENTAL !AUFS_FS"
-	use inotify && CONFIG_CHECK="${CONFIG_CHECK} ~FSNOTIFY"
-	use nfs && CONFIG_CHECK="${CONFIG_CHECK} EXPORTFS"
-	use fuse && CONFIG_CHECK="${CONFIG_CHECK} ~FUSE_FS"
-	use hfs && CONFIG_CHECK="${CONFIG_CHECK} ~HFSPLUS_FS"
+	CONFIG_CHECK+=" ~EXPERIMENTAL !AUFS_FS"
+	use inotify && CONFIG_CHECK+=" ~FSNOTIFY"
+	use nfs && CONFIG_CHECK+=" EXPORTFS"
+	use fuse && CONFIG_CHECK+=" ~FUSE_FS"
+	use hfs && CONFIG_CHECK+=" ~HFSPLUS_FS"
+	use pax_kernel && CONFIG_CHECK+=" PAX" && ERROR_PAX="Please use hardened sources"
 
 	# this is needed so merging a binpkg ${PN} is possible w/out a kernel unpacked on the system
 	[ -n "$PKG_SETUP_HAS_BEEN_RAN" ] && return
