@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/geda
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.76 2012/05/25 13:48:47 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.77 2012/12/05 14:21:47 tomjbe Exp $
+
+*geda-1.8.1 (05 Dec 2012)
+
+  05 Dec 2012; Thomas Beierlein <tomjbe@gentoo.org> +geda-1.8.1.ebuild:
+  Version bump
 
   25 May 2012; Michael Weber <xmw@gentoo.org> -geda-1.6.1.ebuild:
   Remove old version
