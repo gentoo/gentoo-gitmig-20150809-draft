@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.5.13.ebuild,v 1.1 2012/11/29 15:23:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.5.13.ebuild,v 1.2 2012/12/05 07:42:09 jlec Exp $
 
 EAPI=4
 
@@ -37,7 +37,7 @@ src_prepare() {
 
 	epatch \
 		"${FILESDIR}"/${PN}-8.5.11-fedora-xft.patch \
-		"${FILESDIR}"/${PN}-8.4.11-multilib.patch
+		"${FILESDIR}"/${P}-multilib.patch
 
 	epatch "${FILESDIR}"/${PN}-8.4.15-aqua.patch
 	eprefixify unix/Makefile.in
@@ -56,6 +56,7 @@ src_prepare() {
 		-e "s:\<pkg-config\>:$(tc-getPKG_CONFIG):" \
 		-e 's:xft freetype2:xft freetype2 fontconfig:' \
 		-i unix/configure.in || die
+	rm -f unix/configure || die
 
 	cd "${S}"/unix
 	eautoreconf
