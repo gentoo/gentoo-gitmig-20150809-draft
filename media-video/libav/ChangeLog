@@ -1,6 +1,9 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.118 2012/12/01 19:28:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.119 2012/12/05 13:31:30 scarabeus Exp $
+
+  05 Dec 2012; Tomáš Chvátal <scarabeus@gentoo.org> -libav-0.8.3.ebuild:
+  Remove overshadowed.
 
   01 Dec 2012; Raúl Porcel <armin76@gentoo.org> libav-0.8.4.ebuild:
   ia64/sparc stable wrt #439052
