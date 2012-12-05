@@ -3,8 +3,8 @@
 <pkgmetadata>
 	<herd>qt</herd>
 	<upstream>
-		<remote-id type="sourceforge">qjson</remote-id>
-		<bugs-to>http://sourceforge.net/tracker/?group_id=244195</bugs-to>
+		<remote-id type="github">flavio/qjson</remote-id>
+		<bugs-to>https://github.com/flavio/qjson/issues</bugs-to>
 	</upstream>
 </pkgmetadata>
 
