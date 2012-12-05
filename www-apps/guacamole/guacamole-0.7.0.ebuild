@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/guacamole/guacamole-0.7.0.ebuild,v 1.1 2012/12/05 20:48:01 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/guacamole/guacamole-0.7.0.ebuild,v 1.2 2012/12/05 21:13:04 nativemad Exp $
 
 EAPI=4
 
@@ -37,10 +37,11 @@ src_install() {
 	insinto /etc/"${PN}"
 	doins "${S}"/doc/example/guacamole.properties
 	doins "${S}"/doc/example/user-mapping.xml
-	rm -rf /var/lib/"{$PN}"
 	insinto /var/lib/"${PN}"
 	newins "${S}"/target/"${P}".war "${PN}".war
-	elog "Please unpack /var/lib/"${PN}"/"${PN}".war in to your servlet container!"
+	elog "Please unpack /var/lib/"${PN}"/"${PN}".war in to your servlet container! If it is an update,"
+	elog "delete the old content first!"
+	elog "Read: if you use the command below, delete everything expect the .war file within /var/lib/guacamole!"
 	elog "Please also link /etc/guacamole in to the lib directory of your servlet container."
 	elog "like this:"
 	elog "cd /var/lib/guacamole && jar -xvf guacamole.war && cd .. && cp -a guacamole /var/lib/tomcat-7/webapps/"
