@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/talloc
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.37 2012/11/29 15:01:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.38 2012/12/05 06:32:54 patrick Exp $
+
+*talloc-2.0.8 (05 Dec 2012)
+
+  05 Dec 2012; Patrick Lauer <patrick@gentoo.org> +talloc-2.0.8.ebuild:
+  Bump
 
   29 Nov 2012; Jeroen Roovers <jer@gentoo.org> talloc-2.0.7.ebuild:
   Stable for HPPA (bug #432754).
