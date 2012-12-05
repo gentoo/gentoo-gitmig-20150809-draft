@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/e/e-1.5.ebuild,v 1.1 2012/05/30 00:55:22 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/e/e-1.5.ebuild,v 1.2 2012/12/05 10:21:11 gienah Exp $
 
-EAPI="4"
+EAPI="5"
 
 MY_PN="E"
 MY_P="${MY_PN}-${PV}"
@@ -12,15 +12,14 @@ HOMEPAGE="http://www4.informatik.tu-muenchen.de/~schulz/E/E.html"
 SRC_URI="http://www4.in.tum.de/~schulz/WORK/E_DOWNLOAD/V_${PV}/${MY_PN}.tgz -> ${MY_P}.tgz"
 
 LICENSE="GPL-2"
-SLOT="0"
-KEYWORDS="~x86 ~amd64"
+SLOT="0/${PV}"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc examples isabelle"
 
-RDEPEND=""
-DEPEND="${RDEPEND}
-		isabelle? (
-			>=sci-mathematics/isabelle-2011.1-r1
+RDEPEND="isabelle? (
+			>=sci-mathematics/isabelle-2011.1-r1:=
 		)"
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"/${MY_PN}
 
@@ -89,9 +88,7 @@ src_install() {
 	if use isabelle; then
 		ISABELLE_HOME="$(isabelle getenv ISABELLE_HOME | cut -d'=' -f 2)" \
 			|| die "isabelle getenv ISABELLE_HOME failed"
-		if [[ -z "${ISABELLE_HOME}" ]]; then
-			die "ISABELLE_HOME empty"
-		fi
+		[[ -n "${ISABELLE_HOME}" ]] || die "ISABELLE_HOME empty"
 		dodir "${ISABELLE_HOME}/contrib/${PN}-${PV}/etc"
 		cat <<- EOF >> "${S}/settings"
 			E_HOME="${ROOT}usr/bin"
