@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.627 2012/12/01 00:52:42 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.628 2012/12/05 11:23:26 grobian Exp $
+
+  05 Dec 2012; Fabian Groffen <grobian@gentoo.org> mysql-5.5.28.ebuild:
+  Marked ~x86-linux, bug #444950
 
   01 Dec 2012; Anthony G. Basile <blueness@gentoo.org> mysql-5.1.66.ebuild:
   stable ppc64, bug #417989
