@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tkpng
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkpng/ChangeLog,v 1.2 2010/04/13 12:10:39 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkpng/ChangeLog,v 1.3 2012/12/05 08:08:19 ulm Exp $
+
+  05 Dec 2012; Ulrich Müller <ulm@gentoo.org> tkpng-0.9.ebuild:
+  Update LICENSE, tktreectrl was a duplicate of tcltk, bug 445468.
 
   13 Apr 2010; Justin Lecher <jlec@gentoo.org> tkpng-0.9.ebuild:
   Restrict test, as the test suite is not shipped, #314973
