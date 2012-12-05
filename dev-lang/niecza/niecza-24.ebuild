@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/niecza/niecza-22.ebuild,v 1.2 2012/12/05 07:08:09 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/niecza/niecza-24.ebuild,v 1.1 2012/12/05 07:08:09 patrick Exp $
 
 EAPI=4
 
 inherit eutils multilib
 
-GITHUB_CRAP="sorear-niecza-8d7386f"
+GITHUB_CRAP="sorear-niecza-287cfa1"
 
 DESCRIPTION="A Perl 6 compiler targetting the CLR with an experimental focus on optimizations."
 HOMEPAGE="https://github.com/sorear/niecza"
