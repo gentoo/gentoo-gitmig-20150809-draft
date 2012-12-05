@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.543 2012/12/03 12:05:51 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.544 2012/12/05 19:41:21 jlec Exp $
+
+  05 Dec 2012; Justin Lecher <jlec@gentoo.org> intel-sdp.eclass:
+  Add EAPI=5 support; add check for presents of license; handle docs, examples
+  and man page in a more sane way;sort functions and document eclass for
+  man-pages; Drop Sebastion as maintainer
 
   03 Dec 2012; Michał Górny <mgorny@gentoo.org> autotools-utils.eclass,
   cmake-utils.eclass:
