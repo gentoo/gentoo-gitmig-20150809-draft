@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/urbanterror-4.2.008.ebuild,v 1.1 2012/12/04 23:13:46 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/urbanterror-4.2.008.ebuild,v 1.2 2012/12/05 20:41:41 hasufell Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit check-reqs eutils gnome2-utils games
 
 DESCRIPTION="Hollywood tactical shooter based on the ioquake3 engine"
 HOMEPAGE="http://www.urbanterror.info/home/"
-SRC_URI="http://www.ftwgl.com/files/mirror/UrbanTerror42_full_${PV:4:3}.zip
+SRC_URI="http://download.urbanterror.info/urt/42/zips/UrbanTerror42_full_${PV:4:3}.zip
 	https://github.com/Barbatos/ioq3-for-UrbanTerror-4/archive/release-4.2.007.tar.gz
 	http://upload.wikimedia.org/wikipedia/en/5/56/Urbanterror.svg -> ${PN}.svg"
 
