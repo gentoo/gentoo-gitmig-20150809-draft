@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/epix
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/ChangeLog,v 1.48 2012/12/04 15:38:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/ChangeLog,v 1.49 2012/12/05 07:48:50 jlec Exp $
+
+  05 Dec 2012; Justin Lecher <jlec@gentoo.org> -epix-1.2.6.ebuild,
+  metadata.xml:
+  Drop old
 
   04 Dec 2012; <ago@gentoo.org> epix-1.2.10.ebuild:
   Stable for x86, wrt bug #442570
