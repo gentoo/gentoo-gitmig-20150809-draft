@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/pstreams
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pstreams/ChangeLog,v 1.3 2012/12/05 12:17:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pstreams/ChangeLog,v 1.4 2012/12/05 12:25:26 jlec Exp $
+
+  05 Dec 2012; Justin Lecher <jlec@gentoo.org> pstreams-0.7.0.ebuild:
+  Install all docs correctly, #442982; bump to EAPI=5 and use doheader
 
   05 Dec 2012; Justin Lecher <jlec@gentoo.org> -pstreams-0.48.ebuild:
   Drop old

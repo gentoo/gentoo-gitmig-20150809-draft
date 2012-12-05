@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pstreams/pstreams-0.7.0.ebuild,v 1.1 2010/05/18 20:31:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pstreams/pstreams-0.7.0.ebuild,v 1.2 2012/12/05 12:25:26 jlec Exp $
+
+EAPI=5
 
 inherit toolchain-funcs
 
@@ -11,16 +13,17 @@ SRC_URI="
 	doc? ( mirror://sourceforge/${PN}/${PN}-docs-${PV}.tar.gz )"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
 LICENSE="LGPL-3"
 IUSE="doc"
+KEYWORDS="~amd64 ~x86"
 
 RDEPEND=""
 DEPEND="doc? ( app-doc/doxygen )"
 
 src_compile() {
 	if use doc; then
-		emake || die
+		doxygen -u || die
+		emake
 	fi
 }
 
@@ -32,12 +35,9 @@ src_test() {
 }
 
 src_install() {
-	insinto /usr/include
-	doins pstream.h || die
+	doheader pstream.h
 
-	dodoc AUTHORS ChangeLog README || die
+	dodoc AUTHORS ChangeLog README
 
-	if use doc; then
-		dohtml -r "${WORKDIR}"/${PN}-docs-${PV}/* -R
-	fi
+	use doc && dohtml -r "${WORKDIR}"/${PN}-docs-${PV}/*
 }
