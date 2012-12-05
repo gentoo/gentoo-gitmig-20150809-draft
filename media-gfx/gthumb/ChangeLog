@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/gthumb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.157 2012/10/25 20:24:33 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.158 2012/12/05 22:18:46 tetromino Exp $
+
+  05 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -files/gthumb-no-brasero3.patch, gthumb-2.14.4.ebuild, -gthumb-3.0.0.ebuild,
+  gthumb-3.0.2.ebuild:
+  Drop slideshow USE flag for gthumb-2 due to pending clutter-gtk-0.10 removal
+  (bug #435164). Drop old. Update to EAPI5.
 
 *gthumb-3.0.2 (25 Oct 2012)
 
