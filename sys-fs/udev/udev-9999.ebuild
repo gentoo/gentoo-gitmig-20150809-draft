@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.122 2012/12/02 07:29:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.123 2012/12/05 20:34:52 williamh Exp $
 
 EAPI=4
 
@@ -28,15 +28,15 @@ HOMEPAGE="http://www.freedesktop.org/wiki/Software/systemd"
 
 LICENSE="LGPL-2.1 MIT GPL-2"
 SLOT="0"
-IUSE="acl doc gudev hwdb introspection keymap +openrc selinux static-libs"
+IUSE="acl doc gudev hwdb introspection keymap +kmod +openrc selinux static-libs"
 
 RESTRICT="test"
 
-COMMON_DEPEND=">=sys-apps/kmod-11-r3
-	>=sys-apps/util-linux-2.20
+COMMON_DEPEND=">=sys-apps/util-linux-2.20
 	acl? ( sys-apps/acl )
 	gudev? ( >=dev-libs/glib-2 )
 	introspection? ( >=dev-libs/gobject-introspection-1.31.1 )
+	kmod? ( >=sys-apps/kmod-12 )
 	selinux? ( sys-libs/libselinux )
 	!<sys-libs/glibc-2.11"
 
@@ -185,6 +185,7 @@ src_configure()
 		$(use_enable gudev)
 		$(use_enable introspection)
 		$(use_enable keymap)
+		$(use_enable kmod)
 		$(use_enable selinux)
 		$(use_enable static-libs static)
 	)

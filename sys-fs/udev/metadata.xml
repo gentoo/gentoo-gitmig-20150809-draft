@@ -15,6 +15,7 @@
   <flag name="introspection">Use <pkg>dev-libs/gobject-introspection</pkg>
   	for introspection</flag>
   <flag name="keymap">map custom hardware's multimedia keys</flag>
+  <flag name="kmod">enable udev to load kernel modules</flag>
   <flag name="old-hd-rules">Install rules for /dev/hd* devices, removed upstream at udev-148</flag>
   <flag name="rule_generator">enable persistent network and optical device rule generator</flag>
   <flag name="openrc">install the OpenRC init scripts</flag>
