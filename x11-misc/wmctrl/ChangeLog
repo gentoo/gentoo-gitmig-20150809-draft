@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/wmctrl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmctrl/ChangeLog,v 1.18 2012/06/23 23:28:43 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmctrl/ChangeLog,v 1.19 2012/12/05 11:20:44 grobian Exp $
+
+  05 Dec 2012; Fabian Groffen <grobian@gentoo.org> wmctrl-1.07-r1.ebuild:
+  Marked ~x86-linux, bug #444950
 
   23 Jun 2012; Michael Weber <xmw@gentoo.org> wmctrl-1.07-r1.ebuild,
   wmctrl-1.07.ebuild:
@@ -68,4 +71,3 @@
 
   05 Nov 2003; Brandon Hale <tseng@gentoo.org> metadata.xml:
   Initial checkin.
-
