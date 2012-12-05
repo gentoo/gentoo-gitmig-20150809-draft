@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libguac
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libguac/ChangeLog,v 1.3 2012/12/05 20:31:13 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libguac/ChangeLog,v 1.4 2012/12/05 20:50:16 nativemad Exp $
+
+  06 Dec 2012; Andreas Schuerch <nativemad@gentoo.org> libguac-0.7.0.ebuild:
+  removed an empty line
 
 *libguac-0.7.0 (06 Dec 2012)
 
