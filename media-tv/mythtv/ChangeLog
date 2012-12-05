@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.382 2012/11/26 14:28:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.383 2012/12/05 11:41:06 grobian Exp $
+
+  05 Dec 2012; Fabian Groffen <grobian@gentoo.org>
+  mythtv-0.25.2_p20120825.ebuild:
+  Marked ~x86-linux, bug #444950
 
   26 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
   Update to global useflag.

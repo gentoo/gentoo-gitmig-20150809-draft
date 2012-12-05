@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.2_p20120825.ebuild,v 1.1 2012/08/26 02:39:35 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.2_p20120825.ebuild,v 1.2 2012/12/05 11:41:06 grobian Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ SRC_URI="ftp://ftp.osuosl.org/pub/mythtv/${MY_P}.tar.bz2
 	${BACKPORTS:+http://dev.gentoo.org/~cardoe/distfiles/${MY_P}-${BACKPORTS}.tar.xz}"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-linux"
 
 IUSE_INPUT_DEVICES="input_devices_joystick"
 IUSE="alsa altivec libass autostart bluray cec crystalhd debug dvb dvd \
