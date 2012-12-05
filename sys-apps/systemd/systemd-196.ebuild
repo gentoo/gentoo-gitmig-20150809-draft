@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-196.ebuild,v 1.2 2012/12/04 16:55:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-196.ebuild,v 1.3 2012/12/05 21:30:27 mgorny Exp $
 
 EAPI=4
 
@@ -15,13 +15,12 @@ SRC_URI="http://www.freedesktop.org/software/systemd/${P}.tar.xz"
 LICENSE="GPL-2 LGPL-2.1 MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="acl audit cryptsetup gcrypt http lzma pam python qrcode selinux
-	tcpd vanilla xattr"
+IUSE="acl audit cryptsetup gcrypt http +kmod lzma pam python qrcode
+	selinux tcpd vanilla xattr"
 
 MINKV="2.6.39"
 
 COMMON_DEPEND=">=sys-apps/dbus-1.4.10
-	>=sys-apps/kmod-5
 	>=sys-apps/util-linux-2.20
 	~sys-fs/udev-${PV}
 	sys-libs/libcap
@@ -30,6 +29,7 @@ COMMON_DEPEND=">=sys-apps/dbus-1.4.10
 	cryptsetup? ( >=sys-fs/cryptsetup-1.4.2 )
 	gcrypt? ( >=dev-libs/libgcrypt-1.4.5 )
 	http? ( net-libs/libmicrohttpd )
+	kmod? ( >=sys-apps/kmod-12 )
 	lzma? ( app-arch/xz-utils )
 	pam? ( virtual/pam )
 	python? ( ${PYTHON_DEPS} )
@@ -104,6 +104,7 @@ src_configure() {
 		$(use_enable cryptsetup libcryptsetup)
 		$(use_enable gcrypt)
 		$(use_enable http microhttpd)
+		$(use_enable kmod)
 		$(use_enable lzma xz)
 		$(use_enable pam)
 		$(use_with python)
