@@ -1,6 +1,9 @@
 # ChangeLog for www-misc/mergelog
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/mergelog/ChangeLog,v 1.18 2012/12/05 11:34:51 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/mergelog/ChangeLog,v 1.19 2012/12/05 11:37:43 kensington Exp $
+
+  05 Dec 2012; Michael Palimaka <kensington@gentoo.org> -mergelog-4.5.ebuild:
+  Remove old.
 
   05 Dec 2012; Anthony G. Basile <blueness@gentoo.org> mergelog-4.5-r2.ebuild:
   stable ppc, bug #424119
