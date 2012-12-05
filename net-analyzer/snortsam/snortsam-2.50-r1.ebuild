@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsam/snortsam-2.50-r1.ebuild,v 1.11 2008/09/16 10:42:34 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsam/snortsam-2.50-r1.ebuild,v 1.12 2012/12/05 16:35:58 jer Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.snortsam.net/"
 SRC_URI="http://www.snortsam.net/files/snortsam/${MY_P}.tar.gz
 	mirror://gentoo/${PN}-2.50-ciscoacl.diff.bz2"
 
-LICENSE="as-is"
+LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="~alpha amd64 ppc ppc64 sparc x86"
 IUSE=""
