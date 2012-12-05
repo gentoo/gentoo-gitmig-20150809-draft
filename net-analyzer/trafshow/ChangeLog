@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/trafshow
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/ChangeLog,v 1.39 2009/07/25 20:55:47 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/ChangeLog,v 1.40 2012/12/05 16:47:32 jer Exp $
+
+  05 Dec 2012; Jeroen Roovers <jer@gentoo.org> trafshow-5.2.3.ebuild:
+  Fix LICENSE by Ulrich Müller (bug #446068).
 
   25 Jul 2009; Samuli Suominen <ssuominen@gentoo.org> trafshow-5.2.3.ebuild,
   +files/trafshow-5.2.3-gcc44.patch:
