@@ -1,6 +1,14 @@
 # ChangeLog for games-util/pyfa
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/ChangeLog,v 1.15 2012/11/23 10:45:16 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/ChangeLog,v 1.16 2012/12/05 05:53:15 tetromino Exp $
+
+*pyfa-1.1.11 (05 Dec 2012)
+
+  05 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -pyfa-1.1.9-r1.ebuild, +pyfa-1.1.11.ebuild,
+  +files/pyfa-1.1.11-import-pyfa.patch:
+  Bump, adds Retribution 1.0 updates (bug #446030, thanks to Matthew Marlowe).
+  Update to EAPI5 and python-r1.eclass. Drop old.
 
 *pyfa-1.1.10 (23 Nov 2012)
 
