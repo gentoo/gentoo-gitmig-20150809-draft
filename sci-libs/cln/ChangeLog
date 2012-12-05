@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cln
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/ChangeLog,v 1.53 2012/10/10 13:29:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/ChangeLog,v 1.54 2012/12/05 16:55:18 jer Exp $
+
+  05 Dec 2012; Jeroen Roovers <jer@gentoo.org> cln-1.3.2-r1.ebuild:
+  Stable for HPPA (bug #446100).
 
 *cln-1.3.2-r1 (10 Oct 2012)
 
