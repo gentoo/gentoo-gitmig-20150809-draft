@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.137 2012/11/30 20:53:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.138 2012/12/05 13:48:34 scarabeus Exp $
 
 EAPI=4
 
@@ -137,8 +137,8 @@ COMMON_DEPEND="
 	)
 	gtk3? ( >=x11-libs/gtk+-3.2:3 )
 	gstreamer? (
-		>=media-libs/gstreamer-0.10:0.10
-		>=media-libs/gst-plugins-base-0.10:0.10
+		media-libs/gstreamer:1.0
+		media-libs/gst-plugins-base:1.0
 	)
 	jemalloc? ( dev-libs/jemalloc )
 	libreoffice_extensions_scripting-beanshell? ( >=dev-java/bsh-2.0_beta4 )
@@ -414,7 +414,6 @@ src_configure() {
 	# --enable-release-build: build the libreoffice as release
 	# --disable-fetch-external: prevent dowloading during compile phase
 	# --disable-gnome-vfs: old gnome virtual fs support
-	# --disable-gstreamer: support for 1.0 api, we use gstreamer-0.10 for now
 	# --disable-kdeab: kde3 adressbook
 	# --disable-kde: kde3 support
 	# --disable-mozilla: mozilla internal is for contact integration, never
@@ -449,7 +448,7 @@ src_configure() {
 		--disable-epm \
 		--disable-fetch-external \
 		--disable-gnome-vfs \
-		--disable-gstreamer \
+		--disable-gstreamer-0-10 \
 		--disable-ext-report-builder \
 		--disable-kdeab \
 		--disable-kde \
@@ -488,7 +487,6 @@ src_configure() {
 		$(use_enable gnome gconf) \
 		$(use_enable gnome gio) \
 		$(use_enable gnome lockdown) \
-		$(use_enable gstreamer gstreamer-0-10) \
 		$(use_enable gtk) \
 		$(use_enable gtk3) \
 		$(use_enable kde kde4) \
