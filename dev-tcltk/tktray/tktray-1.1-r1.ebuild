@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tktray/tktray-1.1-r1.ebuild,v 1.2 2011/03/21 16:52:30 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tktray/tktray-1.1-r1.ebuild,v 1.3 2012/12/05 08:13:18 ulm Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ DESCRIPTION="System Tray Icon Support for Tk on X11"
 HOMEPAGE="http://sw4me.com/wiki/Tktray"
 SRC_URI="http://www.sw4me.com/${MY_P}.tar.gz"
 
-LICENSE="BWidget"
+LICENSE="tcltk"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE="threads debug"

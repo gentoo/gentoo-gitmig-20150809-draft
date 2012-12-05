@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/tktray
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tktray/ChangeLog,v 1.6 2011/03/21 16:52:30 signals Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tktray/ChangeLog,v 1.7 2012/12/05 08:13:18 ulm Exp $
+
+  05 Dec 2012; Ulrich Müller <ulm@gentoo.org> tktray-1.1.ebuild,
+  tktray-1.1-r1.ebuild:
+  Update LICENSE, BWidget was a duplicate of tcltk, bug 445468.
 
   21 Mar 2011; Kevin McCarthy <signals@gentoo.org> tktray-1.1.ebuild,
   tktray-1.1-r1.ebuild:
