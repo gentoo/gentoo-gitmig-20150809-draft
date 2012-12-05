@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/tdb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/ChangeLog,v 1.49 2012/11/29 15:03:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/ChangeLog,v 1.50 2012/12/05 06:45:55 patrick Exp $
+
+*tdb-1.2.11 (05 Dec 2012)
+
+  05 Dec 2012; Patrick Lauer <patrick@gentoo.org> +tdb-1.2.11.ebuild:
+  Bump
 
   29 Nov 2012; Jeroen Roovers <jer@gentoo.org> tdb-1.2.10.ebuild:
   Stable for HPPA (bug #444686).
