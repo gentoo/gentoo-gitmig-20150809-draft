@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.8.4.ebuild,v 1.8 2012/07/14 13:19:30 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.8.4.ebuild,v 1.9 2012/12/05 23:12:48 tetromino Exp $
 
-EAPI="4"
+EAPI="5"
 CLUTTER_LA_PUNT="yes"
 WANT_AUTOMAKE="1.11"
 
@@ -23,7 +23,7 @@ RDEPEND="
 	>=dev-libs/glib-2.28:2
 	>=dev-libs/atk-2.1.5[introspection?]
 	>=dev-libs/json-glib-0.12[introspection?]
-	>=media-libs/cogl-1.8.0:1.0[introspection?,pango]
+	>=media-libs/cogl-1.8.0:1.0=[introspection?,pango]
 	<=media-libs/cogl-1.9.2:1.0
 	media-libs/fontconfig
 	>=x11-libs/cairo-1.10[glib]
@@ -49,7 +49,7 @@ DEPEND="${RDEPEND}
 		>=app-text/docbook-sgml-utils-0.6.14[jadetex]
 		dev-libs/libxslt )"
 
-pkg_setup() {
+src_prepare() {
 	DOCS="README NEWS ChangeLog*"
 
 	# XXX: Conformance test suite (and clutter itself) does not work under Xvfb
@@ -67,9 +67,7 @@ pkg_setup() {
 		--with-flavour=glx
 		$(use_enable introspection)
 		$(use_enable doc docs)"
-}
 
-src_prepare() {
 	gnome2_src_prepare
 
 	# We only need conformance tests, the rest are useless for us

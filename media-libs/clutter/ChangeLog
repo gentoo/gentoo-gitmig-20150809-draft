@@ -1,6 +1,16 @@
 # ChangeLog for media-libs/clutter
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/ChangeLog,v 1.58 2012/07/14 13:19:30 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/ChangeLog,v 1.59 2012/12/05 23:12:48 tetromino Exp $
+
+  05 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -clutter-1.2.14.ebuild, -clutter-1.6.16.ebuild, -clutter-1.6.20.ebuild,
+  -clutter-1.8.2-r1.ebuild,
+  -files/clutter-1.8.2-cogl-fallback-to-non-transparent.patch,
+  -files/clutter-1.8.2-default-resolution.patch,
+  -files/clutter-1.8.2-em-computation.patch,
+  -files/clutter-1.8.2-offscreen-effect-actor-size.patch, clutter-1.8.4.ebuild,
+  -clutter-1.10.4.ebuild, clutter-1.10.8.ebuild:
+  Update to EAPI5. Drop old.
 
   14 Jul 2012; Anthony G. Basile <blueness@gentoo.org> clutter-1.8.4.ebuild,
   clutter-1.10.4.ebuild, clutter-1.10.8.ebuild:

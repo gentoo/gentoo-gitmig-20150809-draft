@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.10.8.ebuild,v 1.2 2012/07/14 13:19:30 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.10.8.ebuild,v 1.3 2012/12/05 23:12:48 tetromino Exp $
 
-EAPI="4"
+EAPI="5"
 CLUTTER_LA_PUNT="yes"
 WANT_AUTOMAKE="1.11"
 
@@ -23,7 +23,8 @@ RDEPEND="
 	>=dev-libs/glib-2.31.19:2
 	>=dev-libs/atk-2.1.5[introspection?]
 	>=dev-libs/json-glib-0.12[introspection?]
-	>=media-libs/cogl-1.9.6:1.0[introspection?,pango]
+	>=media-libs/cogl-1.9.6:1.0=[introspection?,pango]
+	<media-libs/cogl-1.11:1.0
 	media-libs/fontconfig
 	>=x11-libs/cairo-1.10[glib]
 	>=x11-libs/pango-1.20[introspection?]
@@ -54,7 +55,7 @@ DEPEND="${RDEPEND}
 # They pass under r600g, so the bug is in mesa
 RESTRICT="test"
 
-pkg_setup() {
+src_prepare() {
 	DOCS="README NEWS ChangeLog*"
 
 	# XXX: Conformance test suite (and clutter itself) does not work under Xvfb
@@ -81,9 +82,7 @@ pkg_setup() {
 		$(use_enable doc docs)
 		$(use_enable test conformance)
 		$(use_enable test gdk-pixbuf)"
-}
 
-src_prepare() {
 	gnome2_src_prepare
 
 	# We only need conformance tests, the rest are useless for us
