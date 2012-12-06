@@ -1,6 +1,14 @@
 # ChangeLog for net-p2p/bitcoind
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.50 2012/11/09 18:30:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.51 2012/12/06 13:21:24 blueness Exp $
+
+*bitcoind-0.6.4_rc4-r1 (06 Dec 2012)
+*bitcoind-0.7.2_rc2 (06 Dec 2012)
+
+  06 Dec 2012; Anthony G. Basile <blueness@gentoo.org>
+  +bitcoind-0.6.4_rc4-r1.ebuild, +bitcoind-0.7.2_rc2.ebuild,
+  -bitcoind-0.6.4_rc3.ebuild, -bitcoind-0.6.4_rc4.ebuild:
+  Version bumps
 
   09 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org> bitcoind-0.7.1.ebuild:
   Drop version-specific boost access (leverages boost-1.52.0-r1 which uses
