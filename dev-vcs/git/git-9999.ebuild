@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-9999.ebuild,v 1.39 2012/11/18 10:26:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-9999.ebuild,v 1.40 2012/12/06 18:59:29 robbat2 Exp $
 
 EAPI=4
 
@@ -81,6 +81,7 @@ DEPEND="${CDEPEND}
 		app-text/asciidoc
 		app-text/docbook2X
 		sys-apps/texinfo
+		app-text/xmlto
 	)
 	test? (
 		app-crypt/gnupg
@@ -89,8 +90,7 @@ DEPEND="${CDEPEND}
 # Live ebuild builds man pages and HTML docs, additionally
 if [[ ${PV} == *9999 ]]; then
 	DEPEND="${DEPEND}
-		app-text/asciidoc
-		app-text/xmlto"
+		app-text/asciidoc"
 fi
 
 SITEFILE=50${PN}-gentoo.el
