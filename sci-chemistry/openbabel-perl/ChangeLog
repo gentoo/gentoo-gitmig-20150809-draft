@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/openbabel-perl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel-perl/ChangeLog,v 1.5 2012/03/04 10:30:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel-perl/ChangeLog,v 1.6 2012/12/06 17:18:38 jlec Exp $
+
+*openbabel-perl-2.3.2 (06 Dec 2012)
+
+  06 Dec 2012; Justin Lecher <jlec@gentoo.org> +openbabel-perl-2.3.2.ebuild,
+  +files/openbabel-perl-2.3.2-bindings_only.patch,
+  +files/openbabel-perl-2.3.2-trunk_cmake.patch:
+  Version Bump prepared by Reinis Danne, #439434
 
 *openbabel-perl-2.3.1 (04 Mar 2012)
 
