@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-connection-managers/telepathy-connection-managers-1.ebuild,v 1.3 2012/07/18 00:44:05 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-connection-managers/telepathy-connection-managers-1.ebuild,v 1.4 2012/12/06 23:21:31 tetromino Exp $
 
 DESCRIPTION="Meta-package for Telepathy Connection Managers"
 
 HOMEPAGE="http://telepathy.freedesktop.org/"
 SRC_URI=""
-LICENSE="as-is"
+LICENSE="metapackage"
 SLOT="0"
 
 KEYWORDS="alpha amd64 ia64 ppc sparc x86 ~x86-linux"
