@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/libvisio-0.0.23.ebuild,v 1.1 2012/12/06 08:17:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/libvisio-0.0.23.ebuild,v 1.2 2012/12/06 08:19:25 scarabeus Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.freedesktop.org/wiki/Software/libvisio"
 LICENSE="LGPL-2.1"
 SLOT="0"
 [[ ${PV} == 9999 ]] || \
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="doc static-libs"
 
 RDEPEND="
