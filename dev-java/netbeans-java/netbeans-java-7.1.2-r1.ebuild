@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-java/netbeans-java-7.1.2-r1.ebuild,v 1.3 2012/05/30 06:02:24 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-java/netbeans-java-7.1.2-r1.ebuild,v 1.4 2012/12/06 13:02:31 fordfrog Exp $
 
 EAPI="4"
 WANT_ANT_TASKS="ant-nodeps"
@@ -80,7 +80,7 @@ JAVA_PKG_BSFIX="off"
 pkg_pretend() {
 	local die_now=""
 
-	if [ -n "$(find /usr/share/netbeans-java-${SLOT}/ant -type l)" ]; then
+	if [ -d /usr/share/netbeans-java-${SLOT}/ant -a -n "$(find /usr/share/netbeans-java-${SLOT}/ant -type l)" ]; then
 		eerror "Please remove following symlinks and run emerge again:"
 		find /usr/share/netbeans-java-${SLOT}/ant -type l
 		die_now="1"
