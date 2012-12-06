@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.306 2012/12/06 00:49:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.307 2012/12/06 00:50:16 ago Exp $
+
+  06 Dec 2012; <ago@gentoo.org> tomcat-7.0.32.ebuild:
+  Stable for ppc, wrt bug #446146
 
   06 Dec 2012; <ago@gentoo.org> tomcat-6.0.36.ebuild:
   Stable for ppc, wrt bug #446152
