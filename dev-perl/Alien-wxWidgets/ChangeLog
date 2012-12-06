@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Alien-wxWidgets
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-wxWidgets/ChangeLog,v 1.48 2012/12/06 18:14:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-wxWidgets/ChangeLog,v 1.49 2012/12/06 18:22:55 ago Exp $
+
+  06 Dec 2012; <ago@gentoo.org> Alien-wxWidgets-0.610.0.ebuild:
+  Stable for x86, wrt bug #441206
 
   06 Dec 2012; <ago@gentoo.org> Alien-wxWidgets-0.610.0.ebuild:
   Stable for amd64, wrt bug #441206
