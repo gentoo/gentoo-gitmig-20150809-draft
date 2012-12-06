@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.6.2.ebuild,v 1.1 2012/11/12 00:32:35 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.6.2.ebuild,v 1.2 2012/12/06 06:13:35 tetromino Exp $
 
 EAPI="4"
 
@@ -126,6 +126,8 @@ src_prepare() {
 		strip_builddir SRC_SUBDIRS demos Makefile.am
 		[[ ${PV} != 9999 ]] && strip_builddir SRC_SUBDIRS demos Makefile.in
 	fi
+
+	epatch_user
 
 	[[ ${PV} = 9999 ]] && gnome2_src_prepare
 }

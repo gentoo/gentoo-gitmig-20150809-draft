@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.13-r1.ebuild,v 1.1 2012/11/05 01:10:44 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.13-r1.ebuild,v 1.2 2012/12/06 06:13:35 tetromino Exp $
 
 EAPI="4"
 
@@ -149,6 +149,8 @@ src_prepare() {
 		# don't waste time building demos
 		strip_builddir SRC_SUBDIRS demos Makefile.am Makefile.in
 	fi
+
+	epatch_user
 
 	# http://bugs.gentoo.org/show_bug.cgi?id=371907
 	mkdir -p "${S}/m4" || die

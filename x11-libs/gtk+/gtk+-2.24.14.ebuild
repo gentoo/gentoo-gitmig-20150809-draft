@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.10-r1.ebuild,v 1.15 2012/10/10 07:44:20 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.14.ebuild,v 1.1 2012/12/06 06:13:35 tetromino Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="${SRC_URI} mirror://gentoo/introspection.m4.bz2"
 
 LICENSE="LGPL-2+"
 SLOT="2"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="aqua cups debug examples +introspection test vim-syntax xinerama"
 
 # NOTE: cairo[svg] dep is due to bug 291283 (not patched to avoid eautoreconf)
@@ -35,7 +35,7 @@ COMMON_DEPEND="!aqua? (
 		x11-libs/gdk-pixbuf:2[introspection?]
 	)
 	xinerama? ( x11-libs/libXinerama )
-	>=dev-libs/glib-2.27.3:2
+	>=dev-libs/glib-2.30:2
 	>=x11-libs/pango-1.20[introspection?]
 	>=dev-libs/atk-1.29.2[introspection?]
 	media-libs/fontconfig
@@ -77,9 +77,8 @@ set_gtk2_confdir() {
 }
 
 src_prepare() {
-	# gold detected underlinking
-	# Add missing libs, patch sent upstream
-	epatch "${FILESDIR}/${P}-gold.patch"
+	# https://bugzilla.gnome.org/show_bug.cgi?id=684787
+	epatch "${FILESDIR}/${PN}-2.24.13-gold.patch"
 
 	# use an arch-specific config directory so that 32bit and 64bit versions
 	# dont clash on multilib systems
@@ -132,12 +131,23 @@ src_prepare() {
 		# https://bugzilla.gnome.org/show_bug.cgi?id=617473
 		sed -i -e 's:pltcheck.sh:$(NULL):g' \
 			gtk/Makefile.am || die
+
+		# UI tests require immodules already installed; bug #413185
+		if ! has_version 'x11-libs/gtk+:2'; then
+			ewarn "Disabling UI tests because this is the first install of"
+			ewarn "gtk+:2 on this machine. Please re-run the tests after $P"
+			ewarn "has been installed."
+			sed '/g_test_add_func.*ui-tests/ d' \
+				-i gtk/tests/testing.c || die "sed 2 failed"
+		fi
 	fi
 
 	if ! use examples; then
 		# don't waste time building demos
 		strip_builddir SRC_SUBDIRS demos Makefile.am Makefile.in
 	fi
+
+	epatch_user
 
 	# http://bugs.gentoo.org/show_bug.cgi?id=371907
 	mkdir -p "${S}/m4" || die
@@ -173,7 +183,7 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	default
 
 	set_gtk2_confdir
 	dodir ${GTK2_CONFDIR}
@@ -183,10 +193,6 @@ src_install() {
 	echo 'gtk-fallback-icon-theme = "gnome"' > "${T}/gtkrc"
 	insinto /etc/gtk-2.0
 	doins "${T}"/gtkrc
-
-	# Enable xft in environment as suggested by <utx@gentoo.org>
-	echo "GDK_USE_XFT=1" > "${T}"/50gtk2
-	doenvd "${T}"/50gtk2
 
 	dodoc AUTHORS ChangeLog* HACKING NEWS* README*
 
@@ -239,4 +245,9 @@ pkg_postinst() {
 		elog "Alternatively, check \"gtk-print-preview-command\" documentation and"
 		elog "add it to your gtkrc."
 	fi
+
+	elog "To make the gtk2 file chooser use 'current directory' mode by default,"
+	elog "edit ~/.config/gtk-2.0/gtkfilechooser.ini to contain the following:"
+	elog "[Filechooser Settings]"
+	elog "StartupMode=cwd"
 }
