@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/boost-build-1.52.0-r1.ebuild,v 1.1 2012/11/08 03:19:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/boost-build-1.52.0-r1.ebuild,v 1.2 2012/12/06 22:32:59 bicatali Exp $
 
 EAPI="5"
 PYTHON_DEPEND="python? 2"
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/boost/boost_${MY_PV}.tar.bz2"
 
 LICENSE="Boost-1.0"
 SLOT=0
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~amd64-linux ~x86-fbsd ~x86-linux"
 IUSE="examples python test"
 
 REQUIRED_USE="test? ( python )"
@@ -86,7 +86,7 @@ src_compile() {
 		toolset=cc
 	fi
 
-	CC=$(tc-getCC) ./build.sh ${toolset} -d+2 $(use_with python python /usr) || die "building bjam failed"
+	CC=$(tc-getCC) ./build.sh ${toolset} -d+2 $(use_with python python "${EROOT}"/usr) || die "building bjam failed"
 }
 
 src_install() {
