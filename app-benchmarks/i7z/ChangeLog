@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/i7z
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/i7z/ChangeLog,v 1.17 2012/11/21 10:58:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/i7z/ChangeLog,v 1.18 2012/12/06 14:08:22 jlec Exp $
+
+  06 Dec 2012; Justin Lecher <jlec@gentoo.org> -i7z-0.27.1.ebuild:
+  Drop old
 
   21 Nov 2012; Agostino Sarubbo <ago@gentoo.org> i7z-0.27.2.ebuild:
   Stable for x86, wrt bug #440366
