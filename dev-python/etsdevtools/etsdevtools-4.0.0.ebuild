@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/etsdevtools/etsdevtools-4.0.0.ebuild,v 1.3 2012/02/23 04:53:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/etsdevtools/etsdevtools-4.0.0.ebuild,v 1.4 2012/12/06 17:33:24 bicatali Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.enthought.com/repo/ets/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples test"
 
 RDEPEND="dev-python/numpy

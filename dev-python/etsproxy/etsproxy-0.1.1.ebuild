@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/etsproxy/etsproxy-0.1.1.ebuild,v 1.1 2012/01/17 06:22:48 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/etsproxy/etsproxy-0.1.1.ebuild,v 1.2 2012/12/06 17:34:06 bicatali Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.enthought.com/repo/ets/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="!<dev-python/apptools-4
