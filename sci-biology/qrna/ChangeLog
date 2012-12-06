@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/qrna
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/qrna/ChangeLog,v 1.24 2012/12/06 04:15:42 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/qrna/ChangeLog,v 1.25 2012/12/06 10:14:12 jlec Exp $
+
+  06 Dec 2012; Justin Lecher <jlec@gentoo.org> -qrna-2.0.3c.ebuild:
+  Drop old
 
   06 Dec 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> qrna-2.0.3c-r1.ebuild:
   x86 stable wrt bug #441020
