@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/baobab
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baobab/ChangeLog,v 1.1 2012/05/05 08:22:24 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baobab/ChangeLog,v 1.2 2012/12/06 01:01:14 tetromino Exp $
+
+  06 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> baobab-3.4.1.ebuild:
+  Don't require itstool at build time (thanks to Michael Sterrett for
+  noticing). Update to EAPI5. Update license.
 
 *baobab-3.4.1 (05 May 2012)
 
