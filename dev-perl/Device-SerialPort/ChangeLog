@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Device-SerialPort
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Device-SerialPort/ChangeLog,v 1.28 2012/12/06 18:08:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Device-SerialPort/ChangeLog,v 1.29 2012/12/06 18:16:43 ago Exp $
+
+  06 Dec 2012; <ago@gentoo.org> Device-SerialPort-1.40.0.ebuild:
+  Stable for x86, wrt bug #441220
 
   06 Dec 2012; <ago@gentoo.org> Device-SerialPort-1.40.0.ebuild:
   Stable for amd64, wrt bug #441220
