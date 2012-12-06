@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/waf-utils.eclass,v 1.16 2012/12/06 08:19:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/waf-utils.eclass,v 1.17 2012/12/06 09:28:11 scarabeus Exp $
 
 # @ECLASS: waf-utils.eclass
 # @MAINTAINER:
@@ -41,19 +41,37 @@ DEPEND="${DEPEND}
 waf-utils_src_configure() {
 	debug-print-function ${FUNCNAME} "$@"
 
+	local libdir=""
+
 	# @ECLASS-VARIABLE: WAF_BINARY
 	# @DESCRIPTION:
 	# Eclass can use different waf executable. Usually it is located in "${S}/waf".
 	: ${WAF_BINARY:="${S}/waf"}
 
-	tc-export AR CC CPP CXX RANLIB
-	echo "CCFLAGS=\"${CFLAGS}\" LINKFLAGS=\"${LDFLAGS}\" \"${WAF_BINARY}\" --prefix=${EPREFIX}/usr --libdir=${EPREFIX}/usr/$(get_libdir) $@ configure"
+	# @ECLASS-VARIABLE: NO_WAF_LIBDIR
+	# @DEFAULT_UNSET
+	# @DESCRIPTION:
+	# Variable specifying that you don't want to set the libdir for waf script.
+	# Some scripts does not allow setting it at all and die if they find it.
+	[[ -z ${NO_WAF_LIBDIR} ]] && libdir="--libdir=${EPREFIX}/usr/$(get_libdir)"
 
-	CCFLAGS="${CFLAGS}" LINKFLAGS="${LDFLAGS}" "${WAF_BINARY}" \
-		"--prefix=${EPREFIX}/usr" \
-		"--libdir=${EPREFIX}/usr/$(get_libdir)" \
-		"$@" \
-		configure || die "configure failed"
+	tc-export AR CC CPP CXX RANLIB
+	echo "CCFLAGS=\"${CFLAGS}\" LINKFLAGS=\"${LDFLAGS}\" \"${WAF_BINARY}\" --prefix=${EPREFIX}/usr ${libdir} $@ configure"
+
+	# This condition is required because waf takes even whitespace as function
+	# calls, awesome isn't it?
+	if [[ -z ${NO_WAF_LIBDIR} ]]; then
+		CCFLAGS="${CFLAGS}" LINKFLAGS="${LDFLAGS}" "${WAF_BINARY}" \
+			"--prefix=${EPREFIX}/usr" \
+			"${libdir}" \
+			"$@" \
+			configure || die "configure failed"
+	else
+		CCFLAGS="${CFLAGS}" LINKFLAGS="${LDFLAGS}" "${WAF_BINARY}" \
+			"--prefix=${EPREFIX}/usr" \
+			"$@" \
+			configure || die "configure failed"
+	fi
 }
 
 # @FUNCTION: waf-utils_src_compile
