@@ -1,6 +1,19 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.309 2012/12/06 00:54:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.310 2012/12/06 11:07:55 fordfrog Exp $
+
+  06 Dec 2012; Miroslav Šulc <fordfrog@gentoo.org>
+  -files/tomcat-6.0.35-build.xml.patch, -files/6/catalina.policy,
+  -files/6/tomcat.init.2, -files/6/tomcat.init.4, -files/7/tomcat.conf,
+  -tomcat-6.0.35.ebuild, -tomcat-7.0.23-r3.ebuild, -tomcat-7.0.27.ebuild,
+  -files/tomcat-7.0.29-build.xml.patch, -files/6/tomcat.conf,
+  -files/6/tomcat.init.3, -files/7/7.0.23-build-xml.patch,
+  -files/7/7.0.26-build-xml.patch, -files/7/7.0.27-build-xml.patch,
+  -files/7/7.0.28-build-xml.patch, -files/7/7.0.29-build-xml.patch,
+  -files/7/tomcat.init, -tomcat-6.0.35-r1.ebuild, -tomcat-7.0.26.ebuild,
+  -tomcat-7.0.28.ebuild, -tomcat-7.0.29.ebuild, -tomcat-7.0.29-r1.ebuild,
+  -tomcat-7.0.30.ebuild:
+  removed obsolete ebuilds
 
   06 Dec 2012; <ago@gentoo.org> tomcat-7.0.32.ebuild:
   Stable for ppc64, wrt bug #446146
