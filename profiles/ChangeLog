@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7222 2012/12/05 23:50:47 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7223 2012/12/06 06:27:07 vapier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Dec 2012; Mike Frysinger <vapier@gentoo.org> profiles.desc:
+  Add x32 profile so eselect can find it.
 
   05 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   targets/desktop/gnome/package.use:
