@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.310 2012/12/06 11:07:55 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.311 2012/12/06 11:13:24 fordfrog Exp $
+
+  06 Dec 2012; Miroslav Šulc <fordfrog@gentoo.org>
+  -files/tomcat-7.0.30-build.xml.patch:
+  removed obsolete file
 
   06 Dec 2012; Miroslav Šulc <fordfrog@gentoo.org>
   -files/tomcat-6.0.35-build.xml.patch, -files/6/catalina.policy,
