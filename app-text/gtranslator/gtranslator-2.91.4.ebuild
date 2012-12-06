@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-2.91.4.ebuild,v 1.3 2012/09/15 03:38:18 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-2.91.4.ebuild,v 1.4 2012/12/06 06:50:31 tetromino Exp $
 
-EAPI="4"
+EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 PYTHON_DEPEND="gnome? 2"
@@ -21,11 +21,11 @@ COMMON_DEPEND="
 	>=dev-libs/glib-2.32:2
 	>=x11-libs/gtk+-3.4.2:3
 	>=x11-libs/gtksourceview-3.0.0:3.0
-	>=dev-libs/gdl-2.91.91:3
+	>=dev-libs/gdl-2.91.91:3=
 	>=dev-libs/libxml2-2.4.12:2
 	>=dev-libs/json-glib-0.12.0
 	>=dev-libs/libpeas-1.2[gtk]
-	gnome-extra/libgda:5
+	gnome-extra/libgda:5=
 	>=app-text/iso-codes-0.35
 
 	gnome-base/gsettings-desktop-schemas
@@ -33,7 +33,7 @@ COMMON_DEPEND="
 	gnome? (
 		|| ( app-dicts/gnome-dictionary	=gnome-extra/gnome-utils-3.2* )
 		x11-libs/gtk+:3[introspection] )
-	spell? ( app-text/gtkspell:3 )"
+	spell? ( app-text/gtkspell:3= )"
 RDEPEND="${COMMON_DEPEND}
 	x11-themes/gnome-icon-theme-symbolic
 	gnome? (
@@ -51,13 +51,6 @@ DEPEND="${COMMON_DEPEND}
 # eautoreconf requires gnome-base/gnome-common
 
 pkg_setup() {
-	DOCS="AUTHORS ChangeLog HACKING INSTALL NEWS README THANKS"
-	G2CONF="${G2CONF}
-		--disable-static
-		$(use_with gnome dictionary)
-		$(use_enable gnome introspection)
-		$(use_with spell gtkspell3)"
-
 	if use gnome; then
 		python_set_active_version 2
 		python_pkg_setup
@@ -65,6 +58,13 @@ pkg_setup() {
 }
 
 src_prepare() {
+	DOCS="AUTHORS ChangeLog HACKING INSTALL NEWS README THANKS"
+	G2CONF="${G2CONF}
+		--disable-static
+		$(use_with gnome dictionary)
+		$(use_enable gnome introspection)
+		$(use_with spell gtkspell3)"
+
 	gnome2_src_prepare
 
 	if use gnome; then
