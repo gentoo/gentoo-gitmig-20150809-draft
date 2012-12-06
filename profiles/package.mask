@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14278 2012/12/06 22:58:33 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14279 2012/12/06 23:04:52 slyfox Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Sergei Trofimovich <slyfox@gentoo.org> (06 Dec 2012)
+# dev-haskell/time is a core library for ghc-6.12 and upper.
+# Please, unmerge it from your system and fix the breakage
+# with haskell-updater.
+# Masked for removal.
+dev-haskell/time
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (05 Dec 2012)
 # Masked for removal in 30 days.
