@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.262 2012/12/03 00:28:53 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.263 2012/12/06 04:25:42 phajdan.jr Exp $
+
+  06 Dec 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  openbox-3.5.0_p20121006.ebuild:
+  x86 stable wrt bug #444882
 
   03 Dec 2012; Anthony G. Basile <blueness@gentoo.org>
   openbox-3.5.0_p20121006.ebuild:
