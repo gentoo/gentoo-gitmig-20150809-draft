@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmikmod
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.94 2012/12/06 04:20:03 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.95 2012/12/06 15:51:11 jer Exp $
+
+  06 Dec 2012; Jeroen Roovers <jer@gentoo.org> libmikmod-3.2.0.ebuild:
+  Stable for HPPA (bug #445556).
 
   06 Dec 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> libmikmod-3.2.0.ebuild:
   x86 stable wrt bug #445556
