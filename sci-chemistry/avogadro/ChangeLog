@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/avogadro
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/ChangeLog,v 1.40 2011/08/14 17:18:19 alexxy Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/ChangeLog,v 1.41 2012/12/06 18:08:58 jlec Exp $
+
+*avogadro-1.1.0 (06 Dec 2012)
+
+  06 Dec 2012; Justin Lecher <jlec@gentoo.org> +avogadro-1.1.0.ebuild,
+  +files/avogadro-1.1.0-textrel.patch, metadata.xml:
+  Version Bump prepared by Reinis Danne, #439436; fixes build with latest
+  boost, #406267
 
 *avogadro-1.0.3-r1 (14 Aug 2011)
 
