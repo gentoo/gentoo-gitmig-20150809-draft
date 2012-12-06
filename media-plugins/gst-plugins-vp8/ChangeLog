@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/gst-plugins-vp8
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vp8/ChangeLog,v 1.13 2012/12/02 19:58:28 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vp8/ChangeLog,v 1.14 2012/12/06 05:21:11 tetromino Exp $
+
+*gst-plugins-vp8-0.10.23-r1 (06 Dec 2012)
+
+  06 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gst-plugins-vp8-0.10.23-r1.ebuild,
+  +files/gst-plugins-vp8-0.10.23-libvpx-1.1.patch:
+  Fix zero-length .webm encodings with libvpx-1.1 (bug #435282, thanks to
+  Alexandre et al.)
 
   02 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
   gst-plugins-vp8-0.10.22.ebuild, gst-plugins-vp8-0.10.23.ebuild:
