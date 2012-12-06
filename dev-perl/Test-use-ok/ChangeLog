@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-use-ok
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-use-ok/ChangeLog,v 1.8 2012/09/13 18:46:02 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-use-ok/ChangeLog,v 1.9 2012/12/06 18:13:10 ago Exp $
+
+  06 Dec 2012; <ago@gentoo.org> Test-use-ok-0.110.0.ebuild:
+  Stable for amd64, wrt bug #441258
 
 *Test-use-ok-0.110.0 (13 Sep 2012)
 
