@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Parse-RecDescent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-RecDescent/ChangeLog,v 1.54 2012/12/06 18:11:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-RecDescent/ChangeLog,v 1.55 2012/12/06 18:20:18 ago Exp $
+
+  06 Dec 2012; <ago@gentoo.org> Parse-RecDescent-1.967.9.ebuild:
+  Stable for x86, wrt bug #441248
 
   06 Dec 2012; <ago@gentoo.org> Parse-RecDescent-1.967.9.ebuild:
   Stable for amd64, wrt bug #441248
