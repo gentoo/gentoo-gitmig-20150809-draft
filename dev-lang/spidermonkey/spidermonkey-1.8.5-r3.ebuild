@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.8.7-r1.ebuild,v 1.1 2012/10/23 19:07:07 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.8.5-r3.ebuild,v 1.1 2012/12/06 21:39:23 axs Exp $
 
 EAPI="5"
 WANT_AUTOCONF="2.1"
@@ -10,22 +10,19 @@ MY_PN="js"
 TARBALL_PV="$(replace_all_version_separators '' $(get_version_component_range 1-3))"
 MY_P="${MY_PN}-${PV}"
 TARBALL_P="${MY_PN}${TARBALL_PV}-1.0.0"
-SPIDERPV="${PV}-patches-0.1"
 DESCRIPTION="Stand-alone JavaScript C library"
 HOMEPAGE="http://www.mozilla.org/js/spidermonkey/"
-SRC_URI="http://people.mozilla.com/~dmandelin/${TARBALL_P}.tar.gz
-	http://dev.gentoo.org/~anarchy/mozilla/patchsets/spidermonkey-${SPIDERPV}.tar.xz"
+SRC_URI="https://ftp.mozilla.org/pub/mozilla.org/js/${TARBALL_P}.tar.gz"
 
 LICENSE="NPL-1.1"
-SLOT="0/mozjs187"
+SLOT="0/mozjs185"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="debug jit minimal static-libs test"
+IUSE="debug minimal static-libs test"
 
 S="${WORKDIR}/${MY_P}"
 BUILDDIR="${S}/js/src"
 
-RDEPEND=">=dev-libs/nspr-4.7.0
-	virtual/libffi"
+RDEPEND=">=dev-libs/nspr-4.7.0"
 DEPEND="${RDEPEND}
 	app-arch/zip
 	=dev-lang/python-2*[threads]
@@ -38,15 +35,19 @@ pkg_setup(){
 }
 
 src_prepare() {
-	# Apply patches that are required for misc archs
-	EPATCH_SUFFIX="patch" \
-	EPATCH_FORCE="yes" \
-	epatch "${WORKDIR}/spidermonkey"
-
-	epatch "${FILESDIR}"/${PN}-1.8.5-fix-install-symlinks.patch
-	epatch "${FILESDIR}"/${PN}-1.8.7-filter_desc.patch
+	# https://bugzilla.mozilla.org/show_bug.cgi?id=628723#c43
+	epatch "${FILESDIR}/${P}-fix-install-symlinks.patch"
+	# https://bugzilla.mozilla.org/show_bug.cgi?id=638056#c9
+	epatch "${FILESDIR}/${P}-fix-ppc64.patch"
+	# https://bugs.gentoo.org/show_bug.cgi?id=400727
+	# https://bugs.gentoo.org/show_bug.cgi?id=420471
+	epatch "${FILESDIR}/${P}-arm_respect_cflags-3.patch"
+	# https://bugs.gentoo.org/show_bug.cgi?id=438746
 	epatch "${FILESDIR}"/${PN}-1.8.7-freebsd-pthreads.patch
-	epatch "${FILESDIR}"/${PN}-1.8.7-x32.patch
+	# https://bugs.gentoo.org/show_bug.cgi?id=441928
+	epatch "${FILESDIR}"/${PN}-1.8.5-perf_event-check.patch
+	# https://bugs.gentoo.org/show_bug.cgi?id=439260
+	epatch "${FILESDIR}"/${P}-symbol-versions.patch
 
 	epatch_user
 
@@ -71,11 +72,7 @@ src_configure() {
 		--enable-readline \
 		--enable-threadsafe \
 		--with-system-nspr \
-		--enable-system-ffi \
-		--enable-jemalloc \
 		$(use_enable debug) \
-		$(use_enable jit tracejit) \
-		$(use_enable jit methodjit) \
 		$(use_enable static-libs static) \
 		$(use_enable test tests)
 }
@@ -116,19 +113,13 @@ src_test() {
 src_install() {
 	cd "${BUILDDIR}" || die
 	emake DESTDIR="${D}" install
-	if ! use minimal; then
+	# bug 437520 , exclude js shell for small systems
+	if ! use minimal ; then
 		dobin shell/js
-		if use jit; then
-			pax-mark m "${ED}/usr/bin/js"
-		fi
+		pax-mark m "${ED}/usr/bin/js"
 	fi
 	dodoc ../../README
 	dohtml README.html
-	# install header files needed but not part of build system
-	insinto /usr/include/js
-	doins ../public/*.h
-	insinto /usr/include/js/mozilla
-	doins "${S}"/mfbt/*.h
 
 	if ! use static-libs; then
 		# We can't actually disable building of static libraries
