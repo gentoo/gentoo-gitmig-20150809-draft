@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-odbc/hdbc-odbc-2.3.1.0.ebuild,v 1.2 2012/09/12 15:52:48 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-odbc/hdbc-odbc-2.3.1.0.ebuild,v 1.3 2012/12/06 22:54:58 slyfox Exp $
 
 EAPI=4
 
@@ -29,7 +29,6 @@ hdbc_PV=$(get_version_component_range 1-2)
 
 RDEPEND="=dev-haskell/hdbc-${hdbc_PV}*[profile?]
 		dev-haskell/mtl[profile?]
-		>=dev-haskell/time-1.2.0.3[profile?]
 		dev-haskell/utf8-string[profile?]
 		>=dev-lang/ghc-6.12.3
 		>=dev-db/unixODBC-2.2
@@ -40,7 +39,6 @@ DEPEND="${RDEPEND}
 			dev-haskell/hunit
 			dev-haskell/quickcheck
 			dev-haskell/testpack
-			dev-haskell/time
 		)
 	"
 

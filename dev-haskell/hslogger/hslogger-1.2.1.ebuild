@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hslogger/hslogger-1.2.1.ebuild,v 1.1 2012/11/18 11:27:23 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hslogger/hslogger-1.2.1.ebuild,v 1.2 2012/12/06 22:54:57 slyfox Exp $
 
 EAPI=5
 
@@ -20,7 +20,6 @@ IUSE=""
 
 RDEPEND="dev-haskell/mtl:=[profile?]
 		<dev-haskell/network-2.5:=[profile?]
-		dev-haskell/time:=[profile?]
 		>=dev-lang/ghc-6.10.4:="
 DEPEND="${RDEPEND}
 		>=dev-haskell/cabal-1.2"

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-platform/haskell-platform-2009.2.0.2-r1.ebuild,v 1.1 2011/12/11 20:20:31 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-platform/haskell-platform-2009.2.0.2-r1.ebuild,v 1.2 2012/12/06 22:54:59 slyfox Exp $
 
 # for slot dependencies
 EAPI=1
@@ -38,7 +38,6 @@ DEPEND="~dev-lang/ghc-6.10.4
 		>=dev-haskell/parsec-2.1.0.1:0
 		>=dev-haskell/quickcheck-1.2.0.0:1
 		>=dev-haskell/stm-2.1.1.2
-		>=dev-haskell/time-1.1.2.4
 		>=dev-haskell/xhtml-3000.2.0.1
 		>=dev-haskell/zlib-0.5.0.0
 

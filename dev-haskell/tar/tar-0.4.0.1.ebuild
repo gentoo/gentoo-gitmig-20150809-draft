@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tar/tar-0.4.0.1.ebuild,v 1.1 2012/11/25 06:07:29 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tar/tar-0.4.0.1.ebuild,v 1.2 2012/12/06 22:54:58 slyfox Exp $
 
 EAPI=5
 
@@ -18,7 +18,6 @@ SLOT="0/${PV}"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-macos"
 IUSE=""
 
-RDEPEND="dev-haskell/time:=[profile?]
-		>=dev-lang/ghc-6.10.4:="
+RDEPEND=">=dev-lang/ghc-6.10.4:="
 DEPEND="${RDEPEND}
 		>=dev-haskell/cabal-1.8"

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/citeproc-hs/citeproc-hs-0.3.6.ebuild,v 1.1 2012/11/25 06:03:14 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/citeproc-hs/citeproc-hs-0.3.6.ebuild,v 1.2 2012/12/06 22:54:59 slyfox Exp $
 
 EAPI=5
 
@@ -24,7 +24,6 @@ RDEPEND="dev-haskell/json:=[generic,profile?]
 		<dev-haskell/pandoc-types-1.11:=[profile?]
 		dev-haskell/parsec:=[profile?]
 		dev-haskell/syb:=[profile?]
-		dev-haskell/time:=[profile?]
 		dev-haskell/utf8-string:=[profile?]
 		!hexpat? ( dev-haskell/xml:=[profile?] )
 		hexpat? ( >=dev-haskell/hexpat-0.20.2:=[profile?] )

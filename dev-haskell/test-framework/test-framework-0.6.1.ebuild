@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/test-framework/test-framework-0.6.1.ebuild,v 1.1 2012/11/18 02:21:23 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/test-framework/test-framework-0.6.1.ebuild,v 1.2 2012/12/06 22:54:56 slyfox Exp $
 
 EAPI=5
 
@@ -24,7 +24,6 @@ RDEPEND=">=dev-haskell/ansi-terminal-0.4.0:=[profile?]
 		>=dev-haskell/hostname-1.0:=[profile?]
 		>=dev-haskell/random-1.0:=[profile?]
 		>=dev-haskell/regex-posix-0.72:=[profile?]
-		>=dev-haskell/time-1.1.2:=[profile?]
 		>=dev-haskell/xml-1.3.5:=[profile?]
 		>=dev-lang/ghc-6.10.4:="
 DEPEND="${RDEPEND}

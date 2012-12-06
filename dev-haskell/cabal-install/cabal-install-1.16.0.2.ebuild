@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal-install/cabal-install-1.16.0.2.ebuild,v 1.1 2012/11/18 13:44:35 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal-install/cabal-install-1.16.0.2.ebuild,v 1.2 2012/12/06 22:54:57 slyfox Exp $
 
 EAPI=5
 
@@ -30,8 +30,6 @@ DEPEND="${RDEPEND}
 		<dev-haskell/network-3
 		>=dev-haskell/random-1
 		<dev-haskell/random-1.1
-		>=dev-haskell/time-1.1
-		<dev-haskell/time-1.5
 		>=dev-haskell/zlib-0.4
 		<dev-haskell/zlib-0.6
 		>=dev-lang/ghc-6.10.4"

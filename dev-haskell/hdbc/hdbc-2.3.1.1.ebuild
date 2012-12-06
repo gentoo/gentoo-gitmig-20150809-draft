@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc/hdbc-2.3.1.1.ebuild,v 1.2 2012/09/12 14:54:31 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc/hdbc-2.3.1.1.ebuild,v 1.3 2012/12/06 22:54:56 slyfox Exp $
 
 EAPI=4
 
@@ -24,8 +24,6 @@ IUSE="mysql odbc postgres sqlite3 test"
 RDEPEND=">=dev-haskell/convertible-1.0.10.0[profile?]
 		dev-haskell/mtl[profile?]
 		dev-haskell/text[profile?]
-		>=dev-haskell/time-1.1.3[profile?]
-		<=dev-haskell/time-1.5[profile?]
 		dev-haskell/utf8-string[profile?]
 		>=dev-lang/ghc-6.8.2"
 DEPEND="${RDEPEND}
