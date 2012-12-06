@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-4.1.0.ebuild,v 1.4 2012/03/05 10:53:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-4.2.0.ebuild,v 1.1 2012/12/06 15:45:21 jlec Exp $
 
 EAPI=4
 
@@ -10,7 +10,9 @@ DISTUTILS_SRC_TEST="nosetests"
 inherit distutils eutils virtualx
 
 DESCRIPTION="Enthought Tool Suite: Scientific data 3-dimensional visualizer"
-HOMEPAGE="http://code.enthought.com/projects/mayavi/ http://pypi.python.org/pypi/mayavi"
+HOMEPAGE="
+	http://code.enthought.com/projects/mayavi/
+	http://pypi.python.org/pypi/mayavi/"
 SRC_URI="http://www.enthought.com/repo/ets/${P}.tar.gz"
 
 LICENSE="BSD"
@@ -31,8 +33,10 @@ CDEPEND="sci-libs/vtk[python]"
 DEPEND="
 	${CDEPEND}
 	dev-python/setuptools
+	doc? ( dev-python/sphinx )
 	test? (
 		${RDEPEND}
+		dev-python/nose
 		dev-python/wxpython[opengl]
 		media-fonts/font-cursor-misc
 		media-fonts/font-misc-misc
@@ -40,22 +44,31 @@ DEPEND="
 
 DOCS="docs/*.txt"
 
+# Its broken, run
+# mayavi2 --test
+# instead
+RESTRICT="test"
+
 pkg_setup() {
 	python_set_active_version 2
 	python_pkg_setup
 }
 
-src_compile() {
-	distutils_src_compile
-	use doc && virtualmake -C docs html
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-doc.patch
+	distutils_src_prepare
 }
 
-src_test() {
-	VIRTUALX_COMMAND="distutils_src_test" virtualmake
+src_compile() {
+	distutils_src_compile
+	if use doc; then
+		$(PYTHON) setup.py gen_docs || die
+		$(PYTHON) setup.py build_docs || die
+	fi
 }
 
 src_install() {
-	find -name "*LICENSE*.txt" -delete
+	find . -name "*LICENSE*.txt" -delete || die
 	distutils_src_install
 
 	use doc && dohtml -r docs/build/mayavi/html/*
@@ -66,5 +79,6 @@ src_install() {
 	fi
 
 	newicon mayavi/core/ui/images/m2.png mayavi2.png
-	make_desktop_entry mayavi2 "Mayavi2 2D/3D Scientific Visualization" mayavi2
+	make_desktop_entry ${PN}2 \
+		"Mayavi2 2D/3D Scientific Visualization" ${PN}2
 }

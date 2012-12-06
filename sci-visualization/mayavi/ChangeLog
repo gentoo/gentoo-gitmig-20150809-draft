@@ -1,6 +1,13 @@
 # ChangeLog for sci-visualization/mayavi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/ChangeLog,v 1.28 2012/03/05 10:53:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/ChangeLog,v 1.29 2012/12/06 15:45:21 jlec Exp $
+
+*mayavi-4.2.0 (06 Dec 2012)
+
+  06 Dec 2012; Justin Lecher <jlec@gentoo.org> -mayavi-4.1.0.ebuild,
+  mayavi-4.1.0-r1.ebuild, +mayavi-4.2.0.ebuild, +files/mayavi-4.2.0-doc.patch:
+  Drop old; restrict tests as they are broken, #422951; only build docs with
+  USE=doc and only once, #445782; Version Bump; Add missing Deps
 
   05 Mar 2012; Justin Lecher <jlec@gentoo.org> mayavi-4.1.0.ebuild,
   mayavi-4.1.0-r1.ebuild:

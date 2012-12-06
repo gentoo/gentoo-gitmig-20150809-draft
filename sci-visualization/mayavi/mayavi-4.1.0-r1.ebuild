@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-4.1.0-r1.ebuild,v 1.3 2012/03/05 10:53:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-4.1.0-r1.ebuild,v 1.4 2012/12/06 15:45:21 jlec Exp $
 
 EAPI=4
 
@@ -31,14 +31,21 @@ CDEPEND="sci-libs/vtk[python]"
 DEPEND="
 	${CDEPEND}
 	dev-python/setuptools
+	doc? ( dev-python/sphinx )
 	test? (
 		${RDEPEND}
+		dev-python/nose
 		dev-python/wxpython[opengl]
 		media-fonts/font-cursor-misc
 		media-fonts/font-misc-misc
 	)"
 
 DOCS="docs/*.txt"
+
+# Its broken, run
+# mayavi2 --test
+# instead
+RESTRICT="test"
 
 pkg_setup() {
 	python_set_active_version 2
@@ -56,10 +63,6 @@ src_compile() {
 	use doc && virtualmake -C docs html
 }
 
-src_test() {
-	VIRTUALX_COMMAND="distutils_src_test" virtualmake
-}
-
 src_install() {
 	find -name "*LICENSE*.txt" -delete
 	distutils_src_install
@@ -72,5 +75,6 @@ src_install() {
 	fi
 
 	newicon mayavi/core/ui/images/m2.png mayavi2.png
-	make_desktop_entry mayavi2 "Mayavi2 2D/3D Scientific Visualization" mayavi2
+	make_desktop_entry ${PN}2 \
+		"Mayavi2 2D/3D Scientific Visualization" ${PN}2
 }
