@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Email-Sender
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Sender/ChangeLog,v 1.37 2012/12/06 18:08:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Sender/ChangeLog,v 1.38 2012/12/06 18:17:15 ago Exp $
+
+  06 Dec 2012; <ago@gentoo.org> Email-Sender-0.120.2.ebuild:
+  Stable for x86, wrt bug #441224
 
   06 Dec 2012; <ago@gentoo.org> Email-Sender-0.120.2.ebuild:
   Stable for amd64, wrt bug #441224
