@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pandoc/pandoc-1.9.4.5.ebuild,v 1.1 2012/11/25 06:13:15 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pandoc/pandoc-1.9.4.5.ebuild,v 1.2 2012/12/06 22:53:18 slyfox Exp $
 
 EAPI=5
 
@@ -46,8 +46,6 @@ RDEPEND=">=dev-haskell/base64-bytestring-0.1:=[profile?]
 		=dev-haskell/temporary-1.1*:=[profile?]
 		>=dev-haskell/texmath-0.6.0.2:=[profile?]
 		<dev-haskell/texmath-0.7:=[profile?]
-		>=dev-haskell/time-1.2:=[profile?]
-		<dev-haskell/time-1.5:=[profile?]
 		=dev-haskell/utf8-string-0.3*:=[profile?]
 		>=dev-haskell/xml-1.3.12:=[profile?]
 		<dev-haskell/xml-1.4:=[profile?]
