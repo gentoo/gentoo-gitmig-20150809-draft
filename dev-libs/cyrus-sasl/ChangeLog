@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.252 2012/12/05 09:40:37 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.253 2012/12/06 04:06:40 phajdan.jr Exp $
+
+  06 Dec 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  cyrus-sasl-2.1.25-r3.ebuild:
+  x86 stable wrt bug #445208
 
 *cyrus-sasl-2.1.25-r4 (05 Dec 2012)
 
