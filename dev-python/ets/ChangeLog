@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/ets
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ets/ChangeLog,v 1.13 2012/11/13 09:39:19 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ets/ChangeLog,v 1.14 2012/12/06 21:44:55 bicatali Exp $
+
+*ets-4.2.0-r1 (06 Dec 2012)
+
+  06 Dec 2012; Sébastien Fabbro <bicatali@gentoo.org> +ets-4.2.0-r1.ebuild:
+  Added missing packages. Keyword amd64-linux and x86-linux
 
 *ets-4.2.0 (13 Nov 2012)
 
