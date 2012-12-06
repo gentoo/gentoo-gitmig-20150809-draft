@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mu/ChangeLog,v 1.17 2012/12/03 13:43:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mu/ChangeLog,v 1.18 2012/12/06 04:37:52 phajdan.jr Exp $
+
+  06 Dec 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> mu-0.9.9.ebuild:
+  x86 stable wrt bug #445692
 
   03 Dec 2012; <ago@gentoo.org> mu-0.9.9.ebuild:
   Stable for amd64, wrt bug #445692
