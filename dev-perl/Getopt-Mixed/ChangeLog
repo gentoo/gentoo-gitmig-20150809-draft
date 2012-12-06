@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Getopt-Mixed
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Getopt-Mixed/ChangeLog,v 1.27 2012/12/06 18:17:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Getopt-Mixed/ChangeLog,v 1.28 2012/12/06 18:41:22 ago Exp $
+
+  06 Dec 2012; Agostino Sarubbo <ago@gentoo.org> Getopt-Mixed-1.110.0.ebuild:
+  Stable for ppc, wrt bug #441228
 
   06 Dec 2012; <ago@gentoo.org> Getopt-Mixed-1.110.0.ebuild:
   Stable for x86, wrt bug #441228
