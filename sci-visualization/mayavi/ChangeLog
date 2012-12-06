@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/mayavi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/ChangeLog,v 1.29 2012/12/06 15:45:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/ChangeLog,v 1.30 2012/12/06 19:37:26 bicatali Exp $
+
+  06 Dec 2012; Sébastien Fabbro <bicatali@gentoo.org> mayavi-4.2.0.ebuild,
+  metadata.xml:
+  Keyword amd64-linux and x86-linux
 
 *mayavi-4.2.0 (06 Dec 2012)
 
@@ -142,4 +146,3 @@
   Initial import. Closing bug #50464. Thanks to Colin Macdonald <cbm@sfu.ca>,
   Simon-Nicolas Roth <simon.roth@videotron.ca> and others in the bug mentioned
   for their work.
-
