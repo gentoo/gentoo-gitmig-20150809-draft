@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/netbeans-cnd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-cnd/ChangeLog,v 1.15 2012/07/25 16:03:54 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-cnd/ChangeLog,v 1.16 2012/12/06 12:25:30 fordfrog Exp $
+
+  06 Dec 2012; Miroslav Šulc <fordfrog@gentoo.org> netbeans-cnd-7.0.1.ebuild,
+  netbeans-cnd-7.1.1.ebuild, netbeans-cnd-7.1.2.ebuild,
+  netbeans-cnd-7.2.ebuild:
+  added QA_PREBUILT for bundled binary files (bug #430036)
 
 *netbeans-cnd-7.2 (25 Jul 2012)
 

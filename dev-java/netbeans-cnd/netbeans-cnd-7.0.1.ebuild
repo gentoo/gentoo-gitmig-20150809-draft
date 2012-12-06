@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-cnd/netbeans-cnd-7.0.1.ebuild,v 1.3 2011/10/24 23:53:25 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-cnd/netbeans-cnd-7.0.1.ebuild,v 1.4 2012/12/06 12:25:30 fordfrog Exp $
 
 EAPI="4"
 WANT_ANT_TASKS="ant-nodeps"
@@ -19,6 +19,9 @@ LICENSE="|| ( CDDL GPL-2-with-linking-exception )"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 S="${WORKDIR}"
+
+# These files are for remote development and debugging
+QA_PREBUILT="usr/share/netbeans-cnd-${SLOT}/bin/*"
 
 CDEPEND="~dev-java/netbeans-dlight-${PV}
 	~dev-java/netbeans-harness-${PV}
