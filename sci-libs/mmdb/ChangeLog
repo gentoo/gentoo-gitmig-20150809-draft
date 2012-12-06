@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/mmdb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmdb/ChangeLog,v 1.27 2012/12/06 04:08:35 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmdb/ChangeLog,v 1.28 2012/12/06 07:38:45 jlec Exp $
+
+  06 Dec 2012; Justin Lecher <jlec@gentoo.org> -files/1.21-allignment.patch,
+  -files/1.23.2.2-pkg-config.patch, -files/1.23.2-allignment.patch,
+  -mmdb-1.21-r4.ebuild, -mmdb-1.23.2-r1.ebuild, -mmdb-1.23.2.2.ebuild:
+  Drop old
 
   06 Dec 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> mmdb-1.24.ebuild:
   x86 stable wrt bug #445102
