@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MailTools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MailTools/ChangeLog,v 1.90 2012/12/06 18:10:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MailTools/ChangeLog,v 1.91 2012/12/06 18:19:15 ago Exp $
+
+  06 Dec 2012; <ago@gentoo.org> MailTools-2.110.0.ebuild:
+  Stable for x86, wrt bug #441240
 
   06 Dec 2012; <ago@gentoo.org> MailTools-2.110.0.ebuild:
   Stable for amd64, wrt bug #441240
