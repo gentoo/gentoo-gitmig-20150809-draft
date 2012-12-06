@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/bfgminer-2.9.3.ebuild,v 1.1 2012/12/06 13:41:53 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/bfgminer-2.9.3.ebuild,v 1.2 2012/12/06 13:54:24 blueness Exp $
 
 EAPI="4"
 
@@ -32,7 +32,7 @@ DEPEND="
 	)
 	>=dev-libs/jansson-2
 	udev? (
-		sys-fs/udev
+		virtual/udev
 	)
 	x6500? (
 		virtual/libusb:1

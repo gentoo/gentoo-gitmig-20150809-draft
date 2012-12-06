@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/bfgminer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/ChangeLog,v 1.29 2012/12/06 13:41:53 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/ChangeLog,v 1.30 2012/12/06 13:54:24 blueness Exp $
+
+  06 Dec 2012; Anthony G. Basile <blueness@gentoo.org> bfgminer-2.8.6.ebuild,
+  bfgminer-2.8.7.ebuild, bfgminer-2.9.3.ebuild, bfgminer-2.9.4.ebuild:
+  Use virtual/udev instead of sys-fs/udev, bug #444398
 
 *bfgminer-2.9.3 (06 Dec 2012)
 *bfgminer-2.8.6 (06 Dec 2012)
