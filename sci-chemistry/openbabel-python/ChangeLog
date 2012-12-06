@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/openbabel-python
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel-python/ChangeLog,v 1.8 2012/03/04 10:29:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel-python/ChangeLog,v 1.9 2012/12/06 17:09:30 jlec Exp $
+
+*openbabel-python-2.3.2 (06 Dec 2012)
+
+  06 Dec 2012; Justin Lecher <jlec@gentoo.org> +openbabel-python-2.3.2.ebuild,
+  +files/openbabel-python-2.3.2-bindings_only.patch,
+  +files/openbabel-python-2.3.2-testpybel.patch:
+  Version Bump prepared by Reinis Danne, #439434
 
 *openbabel-python-2.3.1 (04 Mar 2012)
 
