@@ -1,6 +1,14 @@
 # ChangeLog for app-text/gtkspell
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.91 2012/05/04 03:33:17 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.92 2012/12/06 06:50:07 tetromino Exp $
+
+*gtkspell-3.0.0 (06 Dec 2012)
+
+  06 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gtkspell-2.0.16.ebuild, -gtkspell-3.0.0_pre20110814-r1.ebuild,
+  +gtkspell-3.0.0.ebuild:
+  Version bump to 3.0.0 official release; remove prerelease snapshot (bug
+  #444802, thanks to Jack). Remove useless doc USE flag.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> gtkspell-2.0.16.ebuild,
   gtkspell-3.0.0_pre20110814-r1.ebuild:
