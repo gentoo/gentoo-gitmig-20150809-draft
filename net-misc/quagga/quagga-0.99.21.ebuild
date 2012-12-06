@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.99.21.ebuild,v 1.3 2012/12/05 23:53:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.99.21.ebuild,v 1.4 2012/12/06 19:27:15 pinkbyte Exp $
 
 EAPI="4"
 
@@ -47,6 +47,9 @@ src_prepare() {
 		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" \
 			epatch
 
+	# bug #446289
+	epatch "${FILESDIR}/${P}-fix-no-ipv6.patch"
+
 	# Classless prefixes for BGP
 	# http://hasso.linux.ee/doku.php/english:network:quagga
 	use bgpclassless && epatch "${DISTDIR}/${CLASSLESS_BGP_PATCH}"
@@ -66,6 +69,7 @@ src_configure() {
 		--localstatedir=/var/run/quagga
 		--disable-static
 		--disable-pie
+		--disable-babeld # does not build properly with USE="-ipv6", bug #446289
 		$(use_enable caps capabilities)
 		$(use_enable snmp)
 		$(use_enable !elibc_glibc pcreposix)
