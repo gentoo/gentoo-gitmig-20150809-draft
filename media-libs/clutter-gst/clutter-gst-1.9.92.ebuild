@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/clutter-gst-1.6.0.ebuild,v 1.5 2012/12/06 00:08:01 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/clutter-gst-1.9.92.ebuild,v 1.1 2012/12/06 00:08:01 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -13,7 +13,7 @@ inherit python gnome2 clutter gnome.org
 
 DESCRIPTION="GStreamer Integration library for Clutter"
 
-SLOT="1.0"
+SLOT="2.0"
 KEYWORDS="~alpha ~amd64 ~ppc64 ~x86"
 IUSE="examples +introspection"
 
@@ -22,14 +22,16 @@ RDEPEND="
 	>=dev-libs/glib-2.20:2
 	>=media-libs/clutter-1.6.0:1.0=[introspection?]
 	>=media-libs/cogl-1.8:1.0=[introspection?]
-	>=media-libs/gstreamer-0.10.26:0.10[introspection?]
-	>=media-libs/gst-plugins-bad-0.10.22:0.10
-	media-libs/gst-plugins-base:0.10[introspection?]
-	introspection? ( >=dev-libs/gobject-introspection-0.6.8 )"
+	media-libs/gstreamer:1.0[introspection?]
+	media-libs/gst-plugins-bad:1.0
+	media-libs/gst-plugins-base:1.0[introspection?]
+	introspection? ( >=dev-libs/gobject-introspection-0.6.8 )
+"
 DEPEND="${RDEPEND}
+	>=dev-util/gtk-doc-am-1.8
 	=dev-lang/python-2*
-	dev-util/gtk-doc-am
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
 
 pkg_setup() {
 	python_set_active_version 2
@@ -43,14 +45,20 @@ src_prepare() {
 		--disable-maintainer-flags
 		$(use_enable introspection)"
 
-	# bug #401383, https://bugzilla.gnome.org/show_bug.cgi?id=669054
-	# FIXME: is this still needed? I don't think so, but not sure. ~nirbheek
-	#eautoreconf
+	# Make doc parallel installable
+	cd "${S}"/doc/reference
+	sed -e "s/\(DOC_MODULE.*=\).*/\1${PN}-${SLOT}/" \
+		-e "s/\(DOC_MAIN_SGML_FILE.*=\).*/\1${PN}-docs-${SLOT}.sgml/" \
+		-i Makefile.am Makefile.in || die
+	sed -e "s/\(<book.*name=\"\)clutter-gst/\1${PN}-${SLOT}/" \
+		-i html/clutter-gst.devhelp2 || die
+	mv clutter-gst-docs{,-${SLOT}}.sgml || die
+	mv clutter-gst-overrides{,-${SLOT}}.txt || die
+	mv clutter-gst-sections{,-${SLOT}}.txt || die
+	mv clutter-gst{,-${SLOT}}.types || die
+	mv html/clutter-gst{,-${SLOT}}.devhelp2
 
-	# In 1.6.1
-	epatch "${FILESDIR}/${P}-glint.patch"
-	epatch "${FILESDIR}/${P}-doc-fixes.patch"
-
+	cd "${S}"
 	gnome2_src_prepare
 }
 

@@ -1,6 +1,17 @@
 # ChangeLog for media-libs/clutter-gst
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/ChangeLog,v 1.32 2012/10/25 20:26:29 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/ChangeLog,v 1.33 2012/12/06 00:08:01 tetromino Exp $
+
+*clutter-gst-1.9.92 (06 Dec 2012)
+*clutter-gst-1.6.0-r1 (06 Dec 2012)
+
+  06 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  clutter-gst-1.4.6.ebuild, clutter-gst-1.6.0.ebuild,
+  +clutter-gst-1.6.0-r1.ebuild, +files/clutter-gst-1.6.0-GL_TEXTURE_2D.patch,
+  +files/clutter-gst-1.6.0-gluint.patch, +clutter-gst-1.9.92.ebuild:
+  Add version 1.9.92 for gstreamer-1.0 support. Fix build failure with
+  cogl-1.12 (bug #445982, thanks to Rick Harris). Drop useless doc USE flag.
+  Update to EAPI5.
 
   25 Oct 2012; Gilles Dartiguelongue <eva@gentoo.org>
   -clutter-gst-1.0.0.ebuild, -clutter-gst-1.4.4.ebuild,
