@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-DirWalk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-DirWalk/ChangeLog,v 1.21 2012/09/03 08:43:09 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-DirWalk/ChangeLog,v 1.22 2012/12/06 18:09:03 ago Exp $
+
+  06 Dec 2012; <ago@gentoo.org> File-DirWalk-0.400.0.ebuild:
+  Stable for amd64, wrt bug #441226
 
 *File-DirWalk-0.400.0 (03 Sep 2012)
 
