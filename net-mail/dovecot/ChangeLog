@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.396 2012/12/05 02:22:48 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.397 2012/12/06 11:32:49 eras Exp $
+
+  06 Dec 2012; Eray Aslan <eras@gentoo.org> -dovecot-1.2.17.ebuild,
+  -dovecot-2.0.17.ebuild, -dovecot-2.0.19.ebuild, -dovecot-2.0.20.ebuild,
+  -dovecot-2.0.21.ebuild, -dovecot-2.1.8.ebuild, -files/dovecot-1.2.init:
+  Remove old
 
   05 Dec 2012; Anthony G. Basile <blueness@gentoo.org> ChangeLog:
   Fix failed gpg signing of manifest
