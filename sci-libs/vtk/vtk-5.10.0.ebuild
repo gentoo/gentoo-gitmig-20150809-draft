@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.10.0.ebuild,v 1.1 2012/06/07 14:39:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.10.0.ebuild,v 1.2 2012/12/06 19:36:02 bicatali Exp $
 
 EAPI=3
 
@@ -20,7 +20,7 @@ SRC_URI="
 	examples? ( http://www.${PN}.org/files/release/${SPV}/${PN}data-${PV}.tar.gz )"
 
 LICENSE="BSD LGPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 SLOT="0"
 IUSE="boost chemistry cg doc examples ffmpeg java mpi mysql odbc patented postgres python qt4 R theora threads tk video_cards_nvidia X"
 
