@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/openresolv
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/ChangeLog,v 1.68 2012/11/26 11:12:27 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/ChangeLog,v 1.69 2012/12/06 13:11:52 polynomial-c Exp $
+
+*openresolv-3.5.3 (06 Dec 2012)
+
+  06 Dec 2012; Lars Wendler <polynomial-c@gentoo.org> +openresolv-3.5.3.ebuild:
+  non-maintainer commit: Version bump.
 
 *openresolv-3.5.2 (26 Nov 2012)
 
