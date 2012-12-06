@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tachyon/tachyon-0.98.9-r2.ebuild,v 1.3 2012/05/05 07:00:19 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tachyon/tachyon-0.98.9-r2.ebuild,v 1.4 2012/12/06 15:56:25 jlec Exp $
 
 EAPI="4"
 
@@ -10,14 +10,17 @@ DESCRIPTION="A portable, high performance parallel ray tracing system"
 HOMEPAGE="http://jedi.ks.uiuc.edu/~johns/raytracer/"
 SRC_URI="http://jedi.ks.uiuc.edu/~johns/raytracer/files/${PV}/${P}.tar.gz"
 
-LICENSE="BSD"
 SLOT="0"
+LICENSE="BSD"
 KEYWORDS="~amd64 ~ppc ~x86 ~x64-macos ~x86-macos"
-IUSE="doc examples jpeg mpi opengl png threads"
+IUSE="doc examples jpeg mpi +opengl png threads"
 
-CDEPEND="jpeg? ( virtual/jpeg )
+CDEPEND="
+	jpeg? ( virtual/jpeg )
 	mpi? ( virtual/mpi )
-	opengl? ( virtual/opengl )
+	opengl? (
+		virtual/glu
+		virtual/opengl )
 	png? ( media-libs/libpng )"
 DEPEND="${CDEPEND}
 	virtual/pkgconfig"
@@ -99,24 +102,22 @@ src_prepare() {
 }
 
 src_compile() {
-	emake ${TACHYON_MAKE_TARGET} || die "emake failed"
+	emake ${TACHYON_MAKE_TARGET}
 }
 
 src_install() {
 	cd ..
-	dodoc Changes README || die "dodoc failed"
+	dodoc Changes README
 
-	if use doc ; then
-		dohtml docs/tachyon/* || die "dohtml failed"
-	fi
+	use doc && dohtml docs/tachyon/*
 
 	cd compile/${TACHYON_MAKE_TARGET}
 
-	dobin tachyon || die "dobin failed"
+	dobin ${PN}
 
 	if use examples; then
 		cd "${S}/../scenes"
 		insinto "/usr/share/${PN}/examples"
-		doins * || die "doins failed"
+		doins *
 	fi
 }
