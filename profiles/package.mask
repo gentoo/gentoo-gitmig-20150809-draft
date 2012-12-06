@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14277 2012/12/05 22:46:07 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14278 2012/12/06 22:58:33 slyfox Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -419,14 +419,6 @@ x11-apps/grandr
 # Doug Goldstein <cardoe@gentoo.org> (28 Oct 2012)
 # Do not use this ebuild. Stop trying to use it.
 =app-emulation/qemu-1.2.0
-
-# Sergei Trofimovich <slyfox@gentoo.org> (28 Oct 2012)
-# Ancient software. Does not understand alex-2.
-# Dead upstream URL. Never heard of anyone used it.
-# Fails to build with ancient tools: bug #439230.
-# Superseded by dev-haskell/haddock.
-# Masked for removal scheduled at 2012-11-28.
-dev-haskell/hdoc
 
 # Gilles Dartiguelongue <eva@gentoo.org> (25 Oct 2012)
 # Too broken to be used but adding for testing purpose
