@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/nkf-2.1.2.ebuild,v 1.1 2011/11/20 15:15:35 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/nkf-2.1.2.ebuild,v 1.2 2012/12/07 19:18:19 ulm Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -11,7 +11,7 @@ HOMEPAGE="http://sourceforge.jp/projects/nkf/"
 SRC_URI="mirror://sourceforge.jp/nkf/53171/${P}.tar.gz
 	python? ( http://city.plala.jp/moin/NkfPython?action=AttachFile&do=get&target=NKF_python20090602.tgz -> NKF_python20090602.tgz )"
 
-LICENSE="as-is"
+LICENSE="ZLIB"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-macos"
 IUSE="perl python linguas_ja"
