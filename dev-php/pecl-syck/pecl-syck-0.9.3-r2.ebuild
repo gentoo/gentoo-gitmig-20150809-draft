@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-syck/pecl-syck-0.9.3-r2.ebuild,v 1.2 2012/12/07 17:24:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-syck/pecl-syck-0.9.3-r2.ebuild,v 1.3 2012/12/07 17:57:16 ago Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ DOCS="CHANGELOG TODO"
 USE_PHP="php5-4 php5-3"
 inherit php-ext-pecl-r2
 
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86"
 
 DESCRIPTION="PHP bindings for Syck - reads and writes YAML with it."
 LICENSE="PHP-3.01"
