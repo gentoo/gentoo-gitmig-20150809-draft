@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/darktable
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/ChangeLog,v 1.23 2012/11/24 19:47:07 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/ChangeLog,v 1.24 2012/12/07 11:21:07 radhermit Exp $
+
+*darktable-1.1 (07 Dec 2012)
+
+  07 Dec 2012; Tim Harder <radhermit@gentoo.org> +darktable-1.1.ebuild,
+  +files/darktable-1.1-automagic-colord.patch,
+  +files/darktable-1.1-cflags.patch, +files/darktable-1.1-opencl-kernels.patch,
+  +files/darktable-1.1-system-libraw.patch, metadata.xml:
+  Version bump (bug #444518).
 
   24 Nov 2012; Gilles Dartiguelongue <eva@gentoo.org> metadata.xml:
   Add upstream tags.
