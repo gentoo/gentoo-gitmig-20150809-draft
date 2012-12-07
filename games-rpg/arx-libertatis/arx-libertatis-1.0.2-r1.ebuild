@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/arx-libertatis/arx-libertatis-1.0.2-r1.ebuild,v 1.5 2012/08/11 10:19:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/arx-libertatis/arx-libertatis-1.0.2-r1.ebuild,v 1.6 2012/12/07 16:31:24 hasufell Exp $
 
 EAPI=4
 
@@ -37,7 +37,7 @@ PDEPEND="cdinstall? ( >=games-rpg/arx-fatalis-data-1.21 )
 DOCS=( README.md AUTHORS CHANGELOG )
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-gentoo.patch
+	epatch "${FILESDIR}"/${P}-{gentoo,cmake2.8}.patch
 }
 
 src_configure() {
