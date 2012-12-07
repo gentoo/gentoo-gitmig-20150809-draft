@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bustle/bustle-0.4.2.ebuild,v 1.1 2012/11/14 22:04:51 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bustle/bustle-0.4.2.ebuild,v 1.2 2012/12/07 10:38:13 slyfox Exp $
 
 EAPI=5
 
@@ -40,7 +40,6 @@ DEPEND="${RDEPEND}
 		dev-haskell/parsec
 		dev-haskell/pcap
 		dev-haskell/text
-		dev-haskell/time
 		>=dev-lang/ghc-6.10.4"
 
 src_compile() {
