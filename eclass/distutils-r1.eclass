@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.26 2012/12/07 17:56:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.27 2012/12/07 17:57:46 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -382,7 +382,7 @@ distutils-r1_run_phase() {
 	if [[ ${DISTUTILS_NO_PARALLEL_BUILD} ]]; then
 		"${@}"
 	else
-		multijob_child_init "${@}"
+		multijob_child_init --post "${@}"
 	fi
 
 	if [[ ${DISTUTILS_IN_SOURCE_BUILD} ]]; then
