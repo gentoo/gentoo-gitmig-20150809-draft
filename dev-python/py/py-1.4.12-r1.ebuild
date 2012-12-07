@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py/py-1.4.12-r1.ebuild,v 1.1 2012/12/02 21:40:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py/py-1.4.12-r1.ebuild,v 1.2 2012/12/07 23:23:49 mgorny Exp $
 
 EAPI="4"
 
@@ -18,7 +18,7 @@ IUSE="test"
 
 DEPEND="app-arch/unzip
 	dev-python/setuptools[${PYTHON_USEDEP}]
-	test? ( >=dev-python/pytest-2 )"
+	test? ( >=dev-python/pytest-2[${PYTHON_USEDEP}] )"
 RDEPEND=""
 
 DOCS=( CHANGELOG README.txt )
