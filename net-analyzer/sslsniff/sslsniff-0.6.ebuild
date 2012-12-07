@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sslsniff/sslsniff-0.6.ebuild,v 1.2 2009/12/21 13:20:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sslsniff/sslsniff-0.6.ebuild,v 1.3 2012/12/07 15:32:35 zerochaos Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -17,6 +17,7 @@ IUSE=""
 DEPEND="dev-libs/boost
 	dev-libs/log4cpp
 	dev-libs/openssl"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-asneeded.patch
