@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/libewf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/libewf/ChangeLog,v 1.26 2012/12/07 18:02:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/libewf/ChangeLog,v 1.27 2012/12/07 18:28:20 ago Exp $
+
+  07 Dec 2012; Agostino Sarubbo <ago@gentoo.org> libewf-20120813.ebuild:
+  Stable for ppc, wrt bug #441078
 
   07 Dec 2012; <ago@gentoo.org> libewf-20120813.ebuild:
   Stable for x86, wrt bug #441078
