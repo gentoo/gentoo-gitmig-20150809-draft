@@ -1,6 +1,9 @@
 # ChangeLog for games-action/supertuxkart
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/ChangeLog,v 1.27 2011/07/30 18:27:54 mr_bones_ Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/ChangeLog,v 1.28 2012/12/07 23:36:34 hasufell Exp $
+
+  07 Dec 2012; Julian Ospald <hasufell@gentoo.org> supertuxkart-0.7.ebuild:
+  prepare deps for irrlicht-1.8 import, fix as-is license to ZLIB
 
   30 Jul 2011; Michael Sterrett <mr_bones_@gentoo.org> supertuxkart-0.7.ebuild:
   add dev-libs/fribidi to RDEPEND (bug #375569)
