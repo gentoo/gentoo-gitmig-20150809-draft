@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/git-annex-3.20120522.ebuild,v 1.5 2012/11/20 06:41:33 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/git-annex-3.20120522.ebuild,v 1.6 2012/12/07 10:39:18 slyfox Exp $
 
 EAPI=4
 
@@ -43,7 +43,6 @@ DEPEND="${RDEPEND}
 		>=dev-haskell/quickcheck-2.1
 		dev-haskell/sha
 		dev-haskell/text
-		dev-haskell/time
 		dev-haskell/transformers-base
 		dev-haskell/utf8-string
 		>=dev-lang/ghc-7.4
