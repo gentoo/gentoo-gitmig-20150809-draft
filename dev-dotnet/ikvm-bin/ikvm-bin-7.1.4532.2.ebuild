@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm-bin/ikvm-bin-7.1.4532.2.ebuild,v 1.2 2012/11/05 21:15:29 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm-bin/ikvm-bin-7.1.4532.2.ebuild,v 1.3 2012/12/07 04:52:52 phajdan.jr Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ LICENSE="ZLIB GPL-2-with-linking-exception"
 SLOT="0"
 S=${WORKDIR}/${MY_P}
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND=">=dev-lang/mono-1.1
