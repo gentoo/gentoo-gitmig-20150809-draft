@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/ebnf-syntax
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/ebnf-syntax/ChangeLog,v 1.14 2010/10/07 03:09:18 leio Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/ebnf-syntax/ChangeLog,v 1.15 2012/12/07 18:30:58 ulm Exp $
+
+  07 Dec 2012; Ulrich Müller <ulm@gentoo.org> ebnf-syntax-1.1.ebuild,
+  ebnf-syntax-1.1-r1.ebuild:
+  Fix LICENSE, bug 445808.
 
   07 Oct 2010; Mart Raudsepp <leio@gentoo.org> ebnf-syntax-1.1.ebuild,
   ebnf-syntax-1.1-r1.ebuild:

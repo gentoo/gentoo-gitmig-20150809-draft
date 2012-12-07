@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/ntp-syntax
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/ntp-syntax/ChangeLog,v 1.15 2012/05/13 17:36:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/ntp-syntax/ChangeLog,v 1.16 2012/12/07 18:38:47 ulm Exp $
+
+  07 Dec 2012; Ulrich Müller <ulm@gentoo.org> ntp-syntax-20031001.ebuild:
+  Fix LICENSE, bug 445808.
 
   13 May 2012; Alexis Ballier <aballier@gentoo.org> ntp-syntax-20031001.ebuild:
   keyword ~amd64-fbsd
