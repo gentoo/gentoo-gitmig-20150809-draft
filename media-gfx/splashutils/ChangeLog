@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/splashutils
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.207 2012/11/30 01:44:14 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.208 2012/12/07 19:44:42 ago Exp $
+
+  07 Dec 2012; Agostino Sarubbo <ago@gentoo.org> splashutils-1.5.4.4-r1.ebuild:
+  Stable for ppc, wrt bug #422921
 
   30 Nov 2012; Michael Weber <xmw@gentoo.org> -splashutils-1.5.4.4-r3.ebuild:
   Remove broken version
