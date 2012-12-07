@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/radmind/radmind-1.13.0.ebuild,v 1.1 2010/06/03 08:23:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/radmind/radmind-1.13.0.ebuild,v 1.2 2012/12/07 19:06:46 ulm Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ DESCRIPTION="A suite of Unix command-line tools and a server designed to remotel
 HOMEPAGE="http://rsug.itd.umich.edu/software/radmind/"
 SRC_URI="mirror://sourceforge/radmind/${P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="HPND"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="ssl"
