@@ -1,14 +1,14 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/dragonegg/dragonegg-3.2_rc2.ebuild,v 1.1 2012/12/03 20:38:33 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/dragonegg/dragonegg-3.2_rc3.ebuild,v 1.1 2012/12/07 15:49:29 voyageur Exp $
 
 EAPI=5
 inherit multilib toolchain-funcs
 
 DESCRIPTION="GCC plugin that uses LLVM for optimization and code generation"
 HOMEPAGE="http://dragonegg.llvm.org/"
-SRC_URI="http://llvm.org/pre-releases/${PV/_rc*}/${PV/3.2_}/${P/_}.src.tar.gz
-	test? ( http://llvm.org/pre-releases/${PV/_rc*}/${PV/3.2_}/llvm-${PV/_}.src.tar.gz )"
+SRC_URI="http://llvm.org/pre-releases/${PV/_rc*}/${PV/3.2_}/${P/_}.src.tar.bz2
+	test? ( http://llvm.org/pre-releases/${PV/_rc*}/${PV/3.2_}/llvm-${PV/_}.src.tar.bz2 )"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -28,6 +28,9 @@ src_compile() {
 }
 
 src_test() {
+	# GCC languages are determined via locale-dependant gcc -v output
+	export LC_ALL=C
+
 	emake LIT_DIR="${WORKDIR}"/llvm.src/utils/lit check
 }
 
