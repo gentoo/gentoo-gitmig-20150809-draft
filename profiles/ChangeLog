@@ -1,6 +1,6 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7227 2012/12/07 18:06:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7228 2012/12/07 18:06:45 mgorny Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
@@ -69,7 +69,7 @@
   01 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org> use.desc:
   Add introspection to global use flags.
 
-  01 Dec 2012; Michał Górny <mgorny@gentoo.org> package.mask, repo_name:
+  01 Dec 2012; Michał Górny <mgorny@gentoo.org> package.mask:
   Add new pypy ebuilds to the python-r1 package mask.
 
   30 Nov 2012; Christoph Junghans <ottxor@gentoo.org> package.mask:
@@ -1160,7 +1160,7 @@
   11 Aug 2012; Michael Palimaka <kensington@gentoo.org> package.mask:
   Unmask dev-util/cccc wrt bug #430250.
 
-  11 Aug 2012; Michał Górny <mgorny@gentoo.org> package.mask, repo_name:
+  11 Aug 2012; Michał Górny <mgorny@gentoo.org> package.mask:
   Unmask systemd since it now uses external udev.
 
   10 Aug 2012; Tim Harder <radhermit@gentoo.org> package.mask:
@@ -1352,7 +1352,7 @@
   22 Jul 2012; Hans de Graaff <graaff@gentoo.org> base/package.use.force:
   Match ruby virtuals use.force to reality.
 
-  21 Jul 2012; Michał Górny <mgorny@gentoo.org> package.mask, repo_name:
+  21 Jul 2012; Michał Górny <mgorny@gentoo.org> package.mask:
   Mask OpenCL-patched llvm & clang due to segfaults. Bug #427206.
 
   21 Jul 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
@@ -3402,7 +3402,7 @@
   22 Feb 2012; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Mask new libreoffice binpackages for testing, new generation mechanism
 
-  21 Feb 2012; Michał Górny <mgorny@gentoo.org> package.mask, repo_name:
+  21 Feb 2012; Michał Górny <mgorny@gentoo.org> package.mask:
   Forward mask API-incompatible update of npapi-sdk.
 
   21 Feb 2012; Theo Chatzimichos <tampakrap@gentoo.org> package.mask:
