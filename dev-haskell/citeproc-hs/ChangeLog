@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/citeproc-hs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/citeproc-hs/ChangeLog,v 1.5 2012/12/06 22:54:59 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/citeproc-hs/ChangeLog,v 1.6 2012/12/07 10:35:20 slyfox Exp $
+
+  07 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org> citeproc-hs-0.3.2.ebuild,
+  citeproc-hs-0.3.4.ebuild:
+  Get rid of 'dev-haskell/time' depend as it's a ghc's core library.
 
   06 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org> citeproc-hs-0.3.6.ebuild:
   Get rid of 'dev-haskell/time' depend as it's a ghc's core library.

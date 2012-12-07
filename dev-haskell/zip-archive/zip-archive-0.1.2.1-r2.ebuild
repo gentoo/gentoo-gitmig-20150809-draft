@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/zip-archive/zip-archive-0.1.2.1-r2.ebuild,v 1.2 2012/11/25 05:33:00 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/zip-archive/zip-archive-0.1.2.1-r2.ebuild,v 1.3 2012/12/07 10:35:20 slyfox Exp $
 
 EAPI=5
 
@@ -27,7 +27,6 @@ RDEPEND=">=dev-haskell/binary-0.5:=[profile?]
 DEPEND="${RDEPEND}
 		test? ( app-arch/zip
 			dev-haskell/hunit
-			dev-haskell/time
 		)
 		>=dev-haskell/cabal-1.10"
 

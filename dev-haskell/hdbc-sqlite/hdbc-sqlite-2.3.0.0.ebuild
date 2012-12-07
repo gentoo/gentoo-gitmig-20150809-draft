@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-sqlite/hdbc-sqlite-2.3.0.0.ebuild,v 1.2 2012/09/12 15:39:34 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-sqlite/hdbc-sqlite-2.3.0.0.ebuild,v 1.3 2012/12/07 10:35:19 slyfox Exp $
 
 CABAL_FEATURES="bin lib profile haddock hscolour"
 inherit haskell-cabal
@@ -28,7 +28,6 @@ DEPEND="${RDEPEND}
 		test? ( dev-haskell/convertible
 			dev-haskell/hunit
 			dev-haskell/testpack
-			dev-haskell/time
 		)
 	"
 
