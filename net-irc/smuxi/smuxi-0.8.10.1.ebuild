@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/smuxi/smuxi-0.8.10.1.ebuild,v 1.3 2012/10/27 10:09:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/smuxi/smuxi-0.8.10.1.ebuild,v 1.4 2012/12/07 05:03:48 phajdan.jr Exp $
 
 EAPI=4
 inherit base mono eutils
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.smuxi.org/main/"
 SRC_URI="http://www.smuxi.org/jaws/data/files/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="dbus debug gnome libnotify spell"
 LICENSE="|| ( GPL-2 GPL-3 )"
 
