@@ -1,6 +1,9 @@
 # ChangeLog for virtual/jre
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jre/ChangeLog,v 1.40 2012/10/30 20:34:31 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jre/ChangeLog,v 1.41 2012/12/07 21:35:50 ago Exp $
+
+  07 Dec 2012; Agostino Sarubbo <ago@gentoo.org> jre-1.5.0-r1.ebuild:
+  Stable for ppc, wrt bug #425618
 
   30 Oct 2012; Fabian Groffen <grobian@gentoo.org> jre-1.7.0.ebuild:
   Marked ~ppc-macos
