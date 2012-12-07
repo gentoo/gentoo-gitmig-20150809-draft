@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-any-r1.eclass,v 1.1 2012/12/01 09:29:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-any-r1.eclass,v 1.2 2012/12/07 18:00:08 mgorny Exp $
 
 # @ECLASS: python-any-r1
 # @MAINTAINER:
@@ -135,6 +135,36 @@ _python_build_set_globals() {
 }
 _python_build_set_globals
 
+# @FUNCTION: _python_impl_supported
+# @USAGE: <epython>
+# @INTERNAL
+# @DESCRIPTION:
+# Check whether the specified implementation is supported by package
+# (specified in PYTHON_COMPAT).
+_python_impl_supported() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	local i=${1/./_}
+
+	case "${i}" in
+		python*|jython*)
+			;;
+		pypy-c*)
+			i=${i/-c/}
+			;;
+		*)
+			ewarn "Invalid EPYTHON: ${EPYTHON}"
+			;;
+	esac
+
+	if has "${i}" "${PYTHON_COMPAT[@]}"; then
+		return 0
+	elif ! has "${i}" "${_PYTHON_ALL_IMPLS[@]}"; then
+		ewarn "Invalid EPYTHON: ${EPYTHON}"
+	fi
+	return 1
+}
+
 # @FUNCTION: python-any-r1_pkg_setup
 # @DESCRIPTION:
 # Determine what the best installed (and supported) Python
@@ -142,7 +172,30 @@ _python_build_set_globals
 python-any-r1_pkg_setup() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	local i rev_impls=()
+	# first, try ${EPYTHON}... maybe it's good enough for us.
+	if [[ ${EPYTHON} ]]; then
+		if _python_impl_supported "${EPYTHON}"; then
+			python_export EPYTHON PYTHON
+			return
+		fi
+	fi
+
+	# then, try eselect-python
+	local variant i
+	for variant in '' '--python2' '--python3'; do
+		i=$(eselect python --show ${variant} 2>/dev/null)
+
+		if [[ ! ${i} ]]; then
+			# no eselect-python?
+			break
+		elif _python_impl_supported "${i}"; then
+			python_export "${i}" EPYTHON PYTHON
+			return
+		fi
+	done
+
+	# fallback to best installed impl.
+	local rev_impls=()
 	for i in "${_PYTHON_ALL_IMPLS[@]}"; do
 		if has "${i}" "${PYTHON_COMPAT[@]}"; then
 			rev_impls=( "${i}" "${rev_impls[@]}" )
