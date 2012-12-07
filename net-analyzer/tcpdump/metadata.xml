@@ -5,6 +5,6 @@
 	<longdescription>A pcap based tool for network protocol monitoring and data acquisition.</longdescription>
 	<use>
 		<flag name='smi'>Build with <pkg>net-libs/libsmi</pkg> to load MIBs on the fly to decode SNMP packets</flag>
-		<flag name='chroot'>Enable chrooting when dropping privileges</flag>
+		<flag name='chroot'>Chroot into /var/lib/tcpdump when dropping privileges</flag>
 	</use>
 </pkgmetadata>
