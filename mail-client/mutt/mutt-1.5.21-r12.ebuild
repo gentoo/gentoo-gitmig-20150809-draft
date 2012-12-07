@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.21-r9.ebuild,v 1.1 2012/04/28 15:05:01 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.21-r12.ebuild,v 1.1 2012/12/07 18:43:39 grobian Exp $
 
 EAPI="3"
 
 inherit eutils flag-o-matic autotools
 
-PATCHSET_REV="-r12"
+PATCHSET_REV="-r15"
 
 DESCRIPTION="A small but very powerful text-based mail client"
 HOMEPAGE="http://www.mutt.org/"
@@ -79,8 +79,6 @@ src_prepare() {
 	# ignores, disagrees or simply doesn't respond/apply
 	epatch "${PATCHDIR}"/bdb-prefix.patch # fix bdb detection
 	epatch "${PATCHDIR}"/interix-btowc.patch
-	epatch "${PATCHDIR}"/solaris-ncurses-chars.patch
-	epatch "${PATCHDIR}"/gpgme-1.2.0.patch
 	epatch "${PATCHDIR}"/emptycharset-segfault.patch
 	epatch "${PATCHDIR}"/gpgkeyverify-segfault.patch
 	# same category, but functional bits
@@ -100,12 +98,13 @@ src_prepare() {
 		epatch "${PATCHDIR}"/sidebar-dotpathsep.patch
 	fi
 
-	# patch version string for bug reports
-	sed -i -e 's/"Mutt %s (%s)"/"Mutt %s (%s, Gentoo '"${PVR}"')"/' \
-		muttlib.c || die "failed patching in Gentoo version"
-
+	local upatches=
 	# allow user patches
-	epatch_user
+	epatch_user && upatches=" with user patches"
+
+	# patch version string for bug reports
+	sed -i -e 's/"Mutt %s (%s)"/"Mutt %s (%s, Gentoo '"${PVR}${upatches}"')"/' \
+		muttlib.c || die "failed patching in Gentoo version"
 
 	# many patches touch the buildsystem, we always need this
 	AT_M4DIR="m4" eautoreconf
@@ -195,7 +194,7 @@ src_configure() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "install failed"
+	emake DESTDIR="${D}" install || die "install failed"
 	if use mbox; then
 		insinto /etc/mutt
 		newins "${FILESDIR}"/Muttrc.mbox Muttrc
@@ -210,7 +209,7 @@ src_install() {
 
 	# A man-page is always handy, so fake one
 	if use !doc; then
-		make -C doc DESTDIR="${D}" muttrc.man || die
+		emake -C doc DESTDIR="${D}" muttrc.man || die
 		# make the fake slightly better, bug #413405
 		sed -e 's#@docdir@/manual.txt#http://www.mutt.org/doc/devel/manual.html#' \
 			-e 's#in @docdir@,#at http://www.mutt.org/,#' \
