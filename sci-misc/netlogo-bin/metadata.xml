@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
+		<email>creffett@gentoo.org</email>
 	</maintainer>
 	<longdescription>
 NetLogo is a programmable modeling environment for simulating natural and 
