@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jempbox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jempbox/ChangeLog,v 1.8 2012/09/28 14:34:51 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jempbox/ChangeLog,v 1.9 2012/12/07 17:31:11 ago Exp $
+
+  07 Dec 2012; <ago@gentoo.org> jempbox-1.7.1.ebuild:
+  Stable for amd64, wrt bug #441168
 
 *jempbox-1.7.1 (28 Sep 2012)
 
