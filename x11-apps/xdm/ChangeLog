@@ -1,6 +1,11 @@
 # ChangeLog for x11-apps/xdm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.145 2012/08/20 21:28:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.146 2012/12/07 18:10:39 mgorny Exp $
+
+*xdm-1.1.11-r2 (07 Dec 2012)
+
+  07 Dec 2012; Michał Górny <mgorny@gentoo.org> +xdm-1.1.11-r2.ebuild:
+  Disable XDM-AUTHENTICATION-1 wrt bug #445662.
 
   20 Aug 2012; Michał Górny <mgorny@gentoo.org> xdm-1.1.11-r1.ebuild:
   systemd: update the unit to install as display-manager.service.
