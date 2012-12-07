@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/primitive
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/primitive/ChangeLog,v 1.6 2012/11/18 06:30:07 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/primitive/ChangeLog,v 1.7 2012/12/07 16:28:51 ago Exp $
+
+  07 Dec 2012; Agostino Sarubbo <ago@gentoo.org> primitive-0.4.1.ebuild:
+  Stable for ppc, wrt bug #421351
 
 *primitive-0.5.0.1 (18 Nov 2012)
 
