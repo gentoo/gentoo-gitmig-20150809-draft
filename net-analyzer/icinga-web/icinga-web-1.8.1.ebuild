@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga-web/icinga-web-1.7.1-r1.ebuild,v 1.2 2012/07/22 00:33:57 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga-web/icinga-web-1.8.1.ebuild,v 1.1 2012/12/07 20:50:02 prometheanfire Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="apache2 mysql pnp postgres"
 DEPEND="dev-php/phing
-		dev-lang/php[apache2?,cli,mysql?,pdo,postgres?,json]
+		dev-lang/php[apache2?,cli,json,mysql?,pdo,postgres?,sockets,xsl,xml]
 		pnp? ( net-analyzer/pnp4nagios )"
 RDEPEND="${DEPEND}"
 
@@ -30,7 +30,9 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-disable-compression.patch"
+	#removed checks for some php stuff since we have these things called use flags
+	sed -i 's/ACICINGA_CHECK_PHP_MODULE/\#ACICINGA_CHECK_PHP_MODULE/g' configure.ac
+	autoreconf
 }
 
 src_configure() {
@@ -97,8 +99,24 @@ src_install() {
 	fi
 	sed -i 's/%%PATH%%/\/usr\/share\/icinga\/icinga-web/g' etc/scheduler/icingaCron
 
-	insinto /etc/cron.d/
-	doins etc/scheduler/icingaCron || die
+	dodir /usr/share/icinga/icinga-web/cron/
+	cat - >> "${D}"/usr/share/icinga/icinga-web/cron/crontab <<EOF
+# Force the shell to bash
+SHELL=/bin/bash
+#mail to root
+MAILTO=root
+
+#runs every minute
+* * * * * /usr/bin/php /usr/share/icinga/icinga-web/lib/icingaScheduler/icingaCron.php --useAgavi --exec >> /var/log/icinga-web/cron_error.log
+EOF
+
+	cat - >> "${D}"/usr/share/icinga/icinga-web/cron/fcrontab <<EOF
+# Mail reports to root
+!mailto(root)
+
+#runs every minute
+@ 1		/usr/bin/php /usr/share/icinga/icinga-web/lib/icingaScheduler/icingaCron.php --useAgavi --exec >> /var/log/icinga-web/cron_error.log
+EOF
 
 	if use apache2 ; then
 		diropts -o apache -g apache
@@ -117,6 +135,19 @@ src_install() {
 		insinto /usr/share/icinga/icinga-web/app/modules/Cronks/data/xml/extensions/
 		doins contrib/PNP_Integration/templateExtensions/pnp-host-extension.xml
 		doins contrib/PNP_Integration/templateExtensions/pnp-service-extension.xml
+	fi
+}
+
+pkg_config() {
+	einfo "press enter to install the icinga-web crontab"
+	einfo "installation from /usr/share/icinga/icinga-web/cron/icingaCron"
+	einfo
+	read
+
+	if has_version sys-process/fcron; then
+		fcrontab - -u root < /usr/share/icinga/icinga-web/cron/fcrontab
+	else
+		crontab - -u root < /usr/share/icinga/icinga-web/cron/crontab
 	fi
 }
 
