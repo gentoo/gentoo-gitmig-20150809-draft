@@ -1,15 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-9999.ebuild,v 1.31 2012/12/07 20:13:21 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-2.99.3.ebuild,v 1.1 2012/12/07 20:13:21 ford_prefect Exp $
 
 EAPI=4
 
-inherit autotools eutils flag-o-matic user versionator git-2 udev
+inherit eutils flag-o-matic user versionator toolchain-funcs udev
 
 DESCRIPTION="A networked sound server with an advanced plugin system"
 HOMEPAGE="http://www.pulseaudio.org/"
 
-EGIT_REPO_URI="git://anongit.freedesktop.org/pulseaudio/pulseaudio.git"
+SRC_URI="http://freedesktop.org/software/pulseaudio/releases/${P}.tar.xz"
 
 # libpulse-simple and libpulse link to libpulse-core; this is daemon's
 # library and can link to gdbm and other GPL-only libraries. In this
@@ -17,7 +17,7 @@ EGIT_REPO_URI="git://anongit.freedesktop.org/pulseaudio/pulseaudio.git"
 # GPL-forcing USE flags for those who use them.
 LICENSE="!gdbm? ( LGPL-2.1 ) gdbm? ( GPL-2 )"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="+alsa avahi +caps equalizer jack lirc oss tcpd +X dbus libsamplerate gnome bluetooth +asyncns +glib gtk test doc +udev ipv6 system-wide realtime +orc ssl +gdbm +webrtc-aec xen systemd"
 
 RDEPEND=">=media-libs/libsndfile-1.0.20
@@ -99,8 +99,6 @@ pkg_setup() {
 		enewuser pulse -1 -1 /var/run/pulse pulse,audio
 	fi
 }
-
-EGIT_BOOTSTRAP="./bootstrap.sh"
 
 src_configure() {
 	if use gdbm; then
