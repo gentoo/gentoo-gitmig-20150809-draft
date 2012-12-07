@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apg/apg-2.3.0b-r4.ebuild,v 1.5 2011/04/25 14:21:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apg/apg-2.3.0b-r4.ebuild,v 1.6 2012/12/07 19:00:36 ulm Exp $
 
 inherit eutils toolchain-funcs
 
@@ -8,7 +8,7 @@ DESCRIPTION="Another Password Generator"
 HOMEPAGE="http://www.adel.nursat.kz/apg/"
 SRC_URI="http://www.adel.nursat.kz/apg/download/${P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="amd64 hppa ppc x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="cracklib"
