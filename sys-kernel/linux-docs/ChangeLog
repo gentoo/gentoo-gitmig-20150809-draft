@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/linux-docs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-docs/ChangeLog,v 1.36 2012/10/17 13:24:13 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-docs/ChangeLog,v 1.37 2012/12/07 21:30:06 ago Exp $
+
+  07 Dec 2012; Agostino Sarubbo <ago@gentoo.org> linux-docs-3.4.1.ebuild:
+  Stable for ppc, wrt bug #429218
 
 *linux-docs-3.6.2 (17 Oct 2012)
 

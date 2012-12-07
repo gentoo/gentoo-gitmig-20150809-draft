@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-docs/linux-docs-3.4.1.ebuild,v 1.5 2012/09/29 17:05:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-docs/linux-docs-3.4.1.ebuild,v 1.6 2012/12/07 21:30:06 ago Exp $
 
 EAPI=3
 inherit toolchain-funcs
@@ -14,7 +14,7 @@ SRC_URI="mirror://kernel/linux/kernel/v3.x/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~hppa ia64 m68k ~ppc ~ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm ~hppa ia64 m68k ppc ~ppc64 s390 sh sparc x86"
 
 IUSE="html"
 DEPEND="app-text/docbook-sgml-utils
