@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kde-gtk-config
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kde-gtk-config/ChangeLog,v 1.14 2012/11/15 15:16:27 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kde-gtk-config/ChangeLog,v 1.15 2012/12/07 23:20:29 creffett Exp $
+
+  07 Dec 2012; Chris Reffett <creffett@gentoo.org> kde-gtk-config-2.1.1.ebuild,
+  kde-gtk-config-2.1.ebuild:
+  Fix homepage wrt bug 446362
 
   15 Nov 2012; Michael Palimaka <kensington@gentoo.org>
   -kde-gtk-config-2.0.ebuild:
