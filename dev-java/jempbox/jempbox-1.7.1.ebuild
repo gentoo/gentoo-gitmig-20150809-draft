@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jempbox/jempbox-1.7.1.ebuild,v 1.2 2012/12/07 17:31:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jempbox/jempbox-1.7.1.ebuild,v 1.3 2012/12/07 18:00:45 ago Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://apache/${MY_PN}/${PV}/${MY_PN}-${PV}-src.zip"
 
 LICENSE="BSD"
 SLOT="1.7"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND="
