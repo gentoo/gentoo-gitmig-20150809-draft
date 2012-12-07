@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/fragroute
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fragroute/ChangeLog,v 1.26 2012/10/16 12:17:14 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fragroute/ChangeLog,v 1.27 2012/12/07 16:24:58 pinkbyte Exp $
+
+*fragroute-1.2.6 (07 Dec 2012)
+
+  07 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> +fragroute-1.2.6.ebuild:
+  Version bump
 
   16 Oct 2012; Anthony G. Basile <blueness@gentoo.org> fragroute-1.2.5.ebuild:
   Keyword ~ppc ~ppc64, request by Pinkbyte
