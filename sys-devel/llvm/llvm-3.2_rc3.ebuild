@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.2_rc2.ebuild,v 1.1 2012/12/03 20:36:17 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.2_rc3.ebuild,v 1.1 2012/12/07 15:47:52 voyageur Exp $
 
 EAPI=5
 PYTHON_DEPEND="2"
@@ -8,7 +8,7 @@ inherit eutils flag-o-matic multilib toolchain-funcs python pax-utils
 
 DESCRIPTION="Low Level Virtual Machine"
 HOMEPAGE="http://llvm.org/"
-SRC_URI="http://llvm.org/pre-releases/${PV/_rc*}/${PV/3.2_}/${P/_}.src.tar.gz"
+SRC_URI="http://llvm.org/pre-releases/${PV/_rc*}/${PV/3.2_}/${P/_}.src.tar.bz2"
 
 LICENSE="UoI-NCSA"
 SLOT="0"
@@ -91,6 +91,10 @@ src_prepare() {
 		sed -e 's,\$(SharedLibDir),'"${EPREFIX}"/usr/$(get_libdir)/${PN}, \
 			-i tools/gold/Makefile || die "gold rpath sed failed"
 	fi
+
+	# FileCheck is needed at least for dragonegg tests
+	sed -e "/NO_INSTALL = 1/s/^/#/" -i utils/FileCheck/Makefile \
+		|| die "FileCheck Makefile sed failed"
 
 	# Specify python version
 	python_convert_shebangs -r 2 test/Scripts
