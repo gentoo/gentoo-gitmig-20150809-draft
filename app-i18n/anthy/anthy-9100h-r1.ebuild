@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/anthy-9100h-r1.ebuild,v 1.3 2012/12/07 17:53:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/anthy-9100h-r1.ebuild,v 1.4 2012/12/07 18:02:58 ago Exp $
 
 EAPI=3
 inherit elisp-common eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge.jp/anthy/37536/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 #KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-KEYWORDS="~alpha amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="~alpha amd64 ~ppc ~ppc64 ~sparc x86 ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos"
 SLOT="0"
 IUSE="canna-2ch emacs static-libs"
 
