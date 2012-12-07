@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libkolabxml/libkolabxml-0.8.1.ebuild,v 1.5 2012/11/30 15:10:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkolabxml/libkolabxml-0.8.1.ebuild,v 1.6 2012/12/07 19:36:36 creffett Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ DESCRIPTION="Kolab XML format schema definitions library"
 HOMEPAGE="http://www.kolab.org"
 SRC_URI="http://mirror.kolabsys.com/pub/releases/${P}.tar.gz"
 
-LICENSE="Apache-2.0 as-is LGPL-3+ public-domain"
+LICENSE="Apache-2.0 ZLIB LGPL-3+ public-domain"
 SLOT="4"
 KEYWORDS="amd64 ~arm ppc x86"
 IUSE="csharp java python php test"
