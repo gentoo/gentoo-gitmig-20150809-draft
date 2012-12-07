@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fifo-cronolog/fifo-cronolog-1.1.1.ebuild,v 1.2 2010/10/11 21:33:03 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fifo-cronolog/fifo-cronolog-1.1.1.ebuild,v 1.3 2012/12/07 19:03:17 ulm Exp $
 
 EAPI=3
 
@@ -8,7 +8,7 @@ DESCRIPTION="cronolog wrapper for use with dumb daemons like squid, varnish and 
 HOMEPAGE="http://git.overlays.gentoo.org/gitweb/?p=proj/fifo-cronolog.git"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
-LICENSE="as-is"
+LICENSE="BSD-2 GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
