@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.7.7.ebuild,v 1.2 2012/11/17 06:07:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.7.7.ebuild,v 1.3 2012/12/07 23:38:23 hasufell Exp $
 
 EAPI=4
 inherit eutils
@@ -22,7 +22,7 @@ RDEPEND="bidi? ( dev-libs/fribidi )
 	devil? ( media-libs/devil )
 	expat? ( dev-libs/expat )
 	truetype? ( media-libs/freetype:2 )
-	irrlicht? ( dev-games/irrlicht )
+	irrlicht? ( <dev-games/irrlicht-1.8 )
 	lua? (
 		dev-lang/lua
 		dev-lua/toluapp
