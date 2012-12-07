@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/supervisor/supervisor-3.0_beta1.ebuild,v 1.1 2012/11/13 07:27:13 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/supervisor/supervisor-3.0_beta1.ebuild,v 1.2 2012/12/07 19:10:36 ulm Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.5"
@@ -18,7 +18,7 @@ DESCRIPTION="A system for controlling process state under UNIX"
 HOMEPAGE="http://supervisord.org/ http://pypi.python.org/pypi/supervisor"
 SRC_URI="mirror://pypi/${P:0:1}/${PN}/${PN}-${MY_PV}.tar.gz"
 
-LICENSE="repoze ZPL BSD as-is"
+LICENSE="repoze ZPL BSD HPND GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
