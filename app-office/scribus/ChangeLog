@@ -1,6 +1,9 @@
 # ChangeLog for app-office/scribus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.166 2012/12/07 17:55:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.167 2012/12/07 17:58:14 jer Exp $
+
+  07 Dec 2012; Jeroen Roovers <jer@gentoo.org> scribus-1.4.1-r1.ebuild:
+  Stable for HPPA (bug #441100).
 
   07 Dec 2012; <ago@gentoo.org> scribus-1.4.1-r1.ebuild:
   Stable for x86, wrt bug #441100
