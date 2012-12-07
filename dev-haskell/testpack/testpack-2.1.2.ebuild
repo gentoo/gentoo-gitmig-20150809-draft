@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/testpack/testpack-2.1.2.ebuild,v 1.3 2012/09/13 13:24:46 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/testpack/testpack-2.1.2.ebuild,v 1.4 2012/12/07 17:30:19 ago Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="amd64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND="dev-haskell/hunit[profile?]
