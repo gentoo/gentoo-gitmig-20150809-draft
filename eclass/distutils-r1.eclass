@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.28 2012/12/07 17:59:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.29 2012/12/07 21:09:22 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -412,6 +412,7 @@ _distutils-r1_run_common_phase() {
 
 	export EPYTHON PYTHON PYTHONPATH
 
+	einfo "common: running ${1}"
 	"${@}"
 }
 
