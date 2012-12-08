@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.431 2012/10/10 22:08:54 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.432 2012/12/08 15:52:39 ago Exp $
+
+  08 Dec 2012; Agostino Sarubbo <ago@gentoo.org> sqlite-3.7.13.ebuild:
+  Stable for ppc64, wrt bug #428080
 
   10 Oct 2012; Mike Gilbert <floppym@gentoo.org> sqlite-3.7.14.1.ebuild:
   Update dependencies. Patch by Arfrever.
