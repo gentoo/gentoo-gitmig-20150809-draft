@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/boost-build-1.52.0-r1.ebuild,v 1.2 2012/12/06 22:32:59 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/boost-build-1.52.0-r1.ebuild,v 1.3 2012/12/08 12:11:22 grobian Exp $
 
 EAPI="5"
 PYTHON_DEPEND="python? 2"
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/boost/boost_${MY_PV}.tar.bz2"
 
 LICENSE="Boost-1.0"
 SLOT=0
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~amd64-linux ~x86-fbsd ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~ppc-aix ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="examples python test"
 
 REQUIRED_USE="test? ( python )"
@@ -43,7 +43,9 @@ src_prepare() {
 		"${FILESDIR}/${PN}-1.48.0-support_dots_in_python-buildid.patch" \
 		"${FILESDIR}/${PN}-1.48.0-disable_python_rpath.patch" \
 		"${FILESDIR}/${PN}-1.50.0-respect-c_ld-flags.patch" \
-		"${FILESDIR}/${PN}-1.50.0-fix-test.patch"
+		"${FILESDIR}/${PN}-1.50.0-fix-test.patch" \
+		"${FILESDIR}/${PN}-1.49.0-darwin-gentoo-toolchain.patch" \
+		"${FILESDIR}/${PN}-1.52.0-darwin-no-python-framework.patch"
 
 	# Remove stripping option
 	cd "${S}/engine"
@@ -97,9 +99,9 @@ src_install() {
 		boost-build.jam bootstrap.jam build-system.jam user-config.jam *.py \
 		build kernel options tools util
 
-	rm "${D}/usr/share/boost-build/build/project.ann.py" || die "removing faulty python file failed"
+	rm "${ED}/usr/share/boost-build/build/project.ann.py" || die "removing faulty python file failed"
 	if ! use python; then
-		find "${D}/usr/share/boost-build" -iname "*.py" -delete || die "removing experimental python files failed"
+		find "${ED}/usr/share/boost-build" -iname "*.py" -delete || die "removing experimental python files failed"
 	fi
 
 	dodoc changes.txt hacking.txt release_procedure.txt \

@@ -1,5 +1,14 @@
 --- engine/build.jam.orig	2012-08-19 09:47:23.916383518 +0200
 +++ engine/build.jam	2012-08-19 09:53:38.011554690 +0200
+@@ -3,7 +3,7 @@
+ #~ (See accompanying file LICENSE_1_0.txt or http://www.boost.org/LICENSE_1_0.txt)
+ 
+ # Clean env vars of any "extra" empty values.
+-for local v in ARGV CC CFLAGS LIBS
++for local v in ARGV CC CFLAGS LDFLAGS LIBS
+ {
+ 	local values ;
+ 	for local x in $($(v))
 @@ -179,10 +179,10 @@
  if ! $(CC) { CC = cc ; }
  toolset cc $(CC) : "-o " : -D
