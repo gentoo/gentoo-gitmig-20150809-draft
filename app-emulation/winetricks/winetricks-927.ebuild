@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winetricks/winetricks-920.ebuild,v 1.1 2012/11/09 23:23:44 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winetricks/winetricks-927.ebuild,v 1.1 2012/12/08 05:11:12 tetromino Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ else
 		http://winetricks.googlecode.com/svn-history/r${PV}/trunk/src/winetricks.1 -> ${P}.1"
 	KEYWORDS="~amd64 ~x86"
 fi
-wtg=winetricks-gentoo-2012.10.19
+wtg=winetricks-gentoo-2012.11.24
 SRC_URI="${SRC_URI}
 	gtk? ( http://dev.gentoo.org/~tetromino/distfiles/wine/${wtg}.tar.bz2 )
 	kde? ( http://dev.gentoo.org/~tetromino/distfiles/wine/${wtg}.tar.bz2 )"
