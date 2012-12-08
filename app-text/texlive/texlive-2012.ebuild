@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/texlive-2012.ebuild,v 1.8 2012/10/07 10:07:23 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/texlive-2012.ebuild,v 1.9 2012/12/08 12:28:54 aballier Exp $
 
 EAPI="2"
 
@@ -80,8 +80,7 @@ RDEPEND="${DEPEND}
 	)
 	xetex? ( >=${TEXLIVE_CAT}/texlive-xetex-${PV} )
 	graphics? ( >=${TEXLIVE_CAT}/texlive-pictures-${PV}
-		dev-tex/dot2texi
-		>=dev-tex/pgf-2.00 )
+		dev-tex/dot2texi )
 	epspdf? ( app-text/epspdf )
 	science? ( >=${TEXLIVE_CAT}/texlive-science-${PV} )
 	publishers? ( >=${TEXLIVE_CAT}/texlive-publishers-${PV} )
