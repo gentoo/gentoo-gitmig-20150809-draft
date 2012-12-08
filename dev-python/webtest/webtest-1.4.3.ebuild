@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/webtest-1.4.3.ebuild,v 1.1 2012/11/29 06:20:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/webtest-1.4.3.ebuild,v 1.2 2012/12/08 08:30:31 idella4 Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6 3:3.2"
@@ -25,6 +25,7 @@ IUSE="doc"
 
 RDEPEND=">=dev-python/webob-0.9.2"
 DEPEND="${RDEPEND}
+	app-arch/unzip
 	dev-python/setuptools
 	doc? ( dev-python/sphinx )
 	test? ( dev-python/pyquery )"

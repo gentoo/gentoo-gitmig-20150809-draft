@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/webob-1.2.3.ebuild,v 1.1 2012/10/31 06:58:32 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/webob-1.2.3.ebuild,v 1.2 2012/12/08 08:25:37 idella4 Exp $
 
 EAPI=4
 
@@ -22,8 +22,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="doc"
 
-DEPEND="app-arch/unzip
-	dev-python/setuptools
+DEPEND="dev-python/setuptools
 	doc? ( dev-python/sphinx )"
 RDEPEND=""
 

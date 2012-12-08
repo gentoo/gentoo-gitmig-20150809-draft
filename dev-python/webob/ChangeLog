@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/webob
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/ChangeLog,v 1.59 2012/10/31 06:58:32 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/ChangeLog,v 1.60 2012/12/08 08:25:37 idella4 Exp $
+
+  09 Dec 2012; Ian Delaney <idella4@gentoo.org> webob-1.2.3.ebuild:
+  Fix dependencies. Suggested by Arfrever
 
 *webob-1.2.3 (31 Oct 2012)
 

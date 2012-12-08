@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/webtest
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/ChangeLog,v 1.42 2012/11/29 06:20:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/ChangeLog,v 1.43 2012/12/08 08:30:31 idella4 Exp $
+
+  09 Dec 2012; Ian Delaney <idella4@gentoo.org> webtest-1.4.3.ebuild:
+  Fix dependencies. Suggested by Arfrever
 
 *webtest-1.4.3 (29 Nov 2012)
 
