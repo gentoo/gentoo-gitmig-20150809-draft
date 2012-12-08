@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-1.9.ebuild,v 1.6 2012/12/02 17:01:44 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-1.9.ebuild,v 1.7 2012/12/08 16:38:27 hwoarang Exp $
 
 EAPI=4
 PLOCALES="ar ca ca_ES da de_DE el en es es_AR es_ES fi fi_FI fr gl he_IL hr hu
@@ -34,6 +34,8 @@ RDEPEND="${DEPEND}"
 S=${WORKDIR}/${PN}
 
 DOCS="AUTHORS CHANGES TODO"
+
+PATCHES=( "${FILESDIR}"/${P}-desktop.patch )
 
 src_prepare() {
 	qt4-r2_src_prepare
