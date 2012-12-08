@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/evas/evas-1.7.1.ebuild,v 1.1 2012/10/22 13:33:11 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/evas/evas-1.7.3.ebuild,v 1.1 2012/12/08 13:13:11 tommy Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://trac.enlightenment.org/e/wiki/Evas"
 SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
 
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="altivec bidi +bmp directfb +eet fbcon +fontconfig gles gif +ico +jpeg mmx opengl +png +ppm +psd sse sse3 svg static-libs tga +threads tiff X xcb xpm"
+IUSE="altivec bidi +bmp directfb +eet fbcon +fontconfig gles gif +ico +jpeg mmx opengl +png +ppm +psd sse sse3 static-libs tga +threads tiff X xcb xpm"
 
 RDEPEND=">=dev-libs/eina-1.7.0
 	>=media-libs/freetype-2.3.9
@@ -34,12 +34,7 @@ RDEPEND=">=dev-libs/eina-1.7.0
 		xcb? (
 			x11-libs/xcb-util
 		) )
-	eet? ( >=dev-libs/eet-1.7.0 )
-	svg? (
-		>=gnome-base/librsvg-2.14.0
-		x11-libs/cairo
-		x11-libs/libsvg-cairo
-	)"
+	eet? ( >=dev-libs/eet-1.7.0 )"
 DEPEND="${RDEPEND}"
 
 src_configure() {
@@ -88,7 +83,7 @@ src_configure() {
 		$(use_enable psd image-loader-psd)
 		$(use_enable sse cpu-sse)
 		$(use_enable sse3 cpu-sse3)
-		$(use_enable svg image-loader-svg)
+		--disable-image-loader-svg
 		$(use_enable tga image-loader-tga)
 		$(use_enable tiff image-loader-tiff)
 		$(use_enable threads pthreads)
@@ -131,4 +126,8 @@ src_configure() {
 		--disable-software-16-x11"
 
 	enlightenment_src_configure
+}
+
+pkg_postinst() {
+	elog "for svg support install media-plugins/evas_generic_loaders[svg]"
 }
