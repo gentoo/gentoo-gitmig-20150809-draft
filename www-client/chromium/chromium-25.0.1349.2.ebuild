@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.150 2012/12/08 04:39:15 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-25.0.1349.2.ebuild,v 1.1 2012/12/08 04:39:15 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_DEPEND="2:2.6"
@@ -10,15 +10,15 @@ CHROMIUM_LANGS="am ar bg bn ca cs da de el en_GB es es_LA et fa fi fil fr gu he
 	sv sw ta te th tr uk vi zh_CN zh_TW"
 
 inherit chromium eutils flag-o-matic multilib \
-	pax-utils portability python subversion toolchain-funcs versionator virtualx
+	pax-utils portability python toolchain-funcs versionator virtualx
 
 DESCRIPTION="Open-source version of Google Chrome web browser"
 HOMEPAGE="http://chromium.org/"
-ESVN_REPO_URI="http://src.chromium.org/svn/trunk/src"
+SRC_URI="http://commondatastorage.googleapis.com/chromium-browser-official/${P}.tar.bz2"
 
 LICENSE="BSD"
-SLOT="live"
-KEYWORDS=""
+SLOT="0"
+KEYWORDS="~amd64 ~x86"
 IUSE="bindist cups gnome gnome-keyring kerberos pulseaudio selinux system-ffmpeg tcmalloc"
 
 RDEPEND="app-arch/bzip2
@@ -77,64 +77,6 @@ RDEPEND+="
 	x11-misc/xdg-utils
 	virtual/ttf-fonts"
 
-gclient_config() {
-	einfo "gclient config -->"
-	# Allow the user to keep their config if they know what they are doing.
-	if ! grep -q KEEP .gclient; then
-		cp -f "${FILESDIR}/dot-gclient" .gclient || die
-	fi
-	cat .gclient || die
-}
-
-gclient_sync() {
-	einfo "gclient sync -->"
-	[[ -n "${ESVN_UMASK}" ]] && eumask_push "${ESVN_UMASK}"
-	# Only use a single job to prevent hangs.
-	"${WORKDIR}/depot_tools/gclient" sync --nohooks --jobs=1 \
-		--delete_unversioned_trees || die
-	[[ -n "${ESVN_UMASK}" ]] && eumask_pop
-}
-
-gclient_runhooks() {
-	# Run all hooks except gyp_chromium.
-	einfo "gclient runhooks -->"
-	cp src/DEPS src/DEPS.orig || die
-	sed -e 's:"python", "src/build/gyp_chromium":"true":' -i src/DEPS || die
-	"${WORKDIR}/depot_tools/gclient" runhooks
-	local ret=$?
-	mv src/DEPS.orig src/DEPS || die
-	[[ ${ret} -eq 0 ]] || die "gclient runhooks failed"
-}
-
-src_unpack() {
-	# First grab depot_tools.
-	ESVN_REVISION= subversion_fetch "http://src.chromium.org/svn/trunk/tools/depot_tools"
-	mv "${S}" "${WORKDIR}"/depot_tools || die
-
-	cd "${ESVN_STORE_DIR}/${PN}" || die
-
-	gclient_config
-	gclient_sync
-
-	# Disabled so that we do not download nacl toolchain.
-	#gclient_runhooks
-
-	# Remove any lingering nacl toolchain files.
-	rm -rf src/native_client/toolchain/linux_x86_newlib
-
-	subversion_wc_info
-
-	mkdir -p "${S}" || die
-	einfo "Copying source to ${S}"
-	rsync -rlpgo --exclude=".svn/" src/ "${S}" || die
-
-	# Display correct svn revision in about box, and log new version.
-	echo "LASTCHANGE=${ESVN_WC_REVISION}" > "${S}"/build/util/LASTCHANGE || die
-
-	. src/chrome/VERSION
-	elog "Installing/updating to version ${MAJOR}.${MINOR}.${BUILD}.${PATCH} (Developer Build ${ESVN_WC_REVISION})"
-}
-
 if ! has chromium_pkg_die ${EBUILD_DEATH_HOOKS}; then
 	EBUILD_DEATH_HOOKS+=" chromium_pkg_die";
 fi
@@ -181,6 +123,27 @@ src_prepare() {
 	# zlib-1.2.5.1-r1 renames the OF macro in zconf.h, bug 383371.
 	# sed -i '1i#define OF(x) x' \
 	#	third_party/zlib/contrib/minizip/{ioapi,{,un}zip}.h || die
+
+	# Fix build without NaCl glibc toolchain.
+	# epatch "${FILESDIR}/${PN}-ppapi-r0.patch"
+
+	# Missing gyp files in tarball.
+	# https://code.google.com/p/chromium/issues/detail?id=144823
+	# if [[ -e chrome/test/data/nacl/nacl_test_data.gyp ]]; then
+	#	die "tarball fixed, please remove workaround"
+	# fi
+
+	# mkdir -p chrome/test/data/nacl
+	# cat > chrome/test/data/nacl/nacl_test_data.gyp <<-EOF
+	# {
+	#   'targets': [
+	#     {
+	#       'target_name': 'nacl_tests',
+	#       'type': 'none',
+	#     },
+	#   ],
+	# }
+	# EOF
 
 	epatch "${FILESDIR}/${PN}-system-ffmpeg-r0.patch"
 
