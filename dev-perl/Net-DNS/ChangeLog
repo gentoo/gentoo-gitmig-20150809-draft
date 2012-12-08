@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Net-DNS
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.164 2012/09/01 11:42:18 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.165 2012/12/08 11:10:55 tove Exp $
+
+*Net-DNS-0.700.0 (08 Dec 2012)
+
+  08 Dec 2012; Torsten Veller <tove@gentoo.org> +Net-DNS-0.700.0.ebuild,
+  metadata.xml:
+  Version bump
 
   01 Sep 2012; Fabian Groffen <grobian@gentoo.org> Net-DNS-0.680.0.ebuild:
   Marked ~ppc-aix, bug #432288
