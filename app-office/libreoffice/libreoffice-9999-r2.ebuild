@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.138 2012/12/05 13:48:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.139 2012/12/08 19:47:23 scarabeus Exp $
 
 EAPI=4
 
@@ -86,7 +86,7 @@ unset lo_xt
 
 LICENSE="|| ( LGPL-3 MPL-1.1 )"
 SLOT="0"
-[[ ${PV} == *9999* ]] || KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+[[ ${PV} == *9999* ]] || KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux"
 
 COMMON_DEPEND="
 	app-arch/zip
@@ -416,8 +416,6 @@ src_configure() {
 	# --disable-gnome-vfs: old gnome virtual fs support
 	# --disable-kdeab: kde3 adressbook
 	# --disable-kde: kde3 support
-	# --disable-mozilla: mozilla internal is for contact integration, never
-	#   worked on linux
 	# --disable-pch: precompiled headers cause build crashes
 	# --disable-rpath: relative runtime path is not desired
 	# --disable-systray: quickstarter does not actually work at all so do not
@@ -452,7 +450,6 @@ src_configure() {
 		--disable-ext-report-builder \
 		--disable-kdeab \
 		--disable-kde \
-		--disable-mozilla \
 		--disable-online-update \
 		--disable-pch \
 		--disable-rpath \
@@ -475,7 +472,6 @@ src_configure() {
 		--without-fonts \
 		--without-myspell-dicts \
 		--without-stlport \
-		--without-system-mozilla \
 		--without-help \
 		--with-helppack-integration \
 		--without-sun-templates \
