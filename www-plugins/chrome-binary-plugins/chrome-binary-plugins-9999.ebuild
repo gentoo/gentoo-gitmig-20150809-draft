@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/chrome-binary-plugins-9999.ebuild,v 1.2 2012/10/19 20:18:58 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/chrome-binary-plugins-9999.ebuild,v 1.3 2012/12/08 05:30:04 floppym Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.google.com/chrome"
 URI_BASE="https://dl.google.com/linux/direct/"
 URI_BASE_NAME="google-chrome-unstable_current_"
 SRC_URI="" # URI is left blank on live ebuild
-RESTRICT="mirror strip"
+RESTRICT="bindist mirror strip"
 
 LICENSE="google-chrome"
 SLOT="0"
