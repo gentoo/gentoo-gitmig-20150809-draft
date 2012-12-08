@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libaacs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacs/ChangeLog,v 1.13 2012/08/24 12:04:21 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacs/ChangeLog,v 1.14 2012/12/08 22:09:16 ago Exp $
+
+  08 Dec 2012; <ago@gentoo.org> libaacs-0.5.0.ebuild:
+  Stable for amd64, wrt bug #441370
 
   24 Aug 2012; Michael Weber <xmw@gentoo.org> libaacs-0.4.0.ebuild:
   ppc stable (bug 422105).
