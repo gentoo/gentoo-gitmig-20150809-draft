@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/tokyocabinet
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tokyocabinet/ChangeLog,v 1.47 2012/12/08 15:54:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tokyocabinet/ChangeLog,v 1.48 2012/12/08 16:54:52 jer Exp $
+
+  08 Dec 2012; Jeroen Roovers <jer@gentoo.org> tokyocabinet-1.4.48.ebuild:
+  Stable for HPPA (bug #441146).
 
   08 Dec 2012; Agostino Sarubbo <ago@gentoo.org> tokyocabinet-1.4.48.ebuild:
   Stable for ppc64, wrt bug #441146
