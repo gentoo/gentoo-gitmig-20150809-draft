@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/apsw
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/ChangeLog,v 1.52 2012/12/01 01:53:52 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/ChangeLog,v 1.53 2012/12/08 21:02:06 floppym Exp $
+
+*apsw-3.7.14.1_p1 (08 Dec 2012)
+*apsw-3.7.14_p1 (08 Dec 2012)
+
+  08 Dec 2012; Mike Gilbert <floppym@gentoo.org> +apsw-3.7.14.1_p1.ebuild,
+  +apsw-3.7.14_p1.ebuild, -apsw-3.7.14.1.ebuild:
+  Version bump. Adjust version numbering to make tracking upstream versions
+  simpler. Thanks to Arfrever for pointing out the problem.
 
   01 Dec 2012; Tim Harder <radhermit@gentoo.org> apsw-3.7.13.1.ebuild,
   apsw-3.7.14.1.ebuild:
@@ -236,4 +244,3 @@
   02 Apr 2006; Alin Nastac <mrness@gentoo.org> +metadata.xml,
   +apsw-3.2.7.1.ebuild:
   Initial import from bug #100296, thanks to Lorenzo Luengo <loluengo@vtr.net>.
-
