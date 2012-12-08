@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gmic
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gmic/ChangeLog,v 1.28 2012/12/08 08:37:20 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gmic/ChangeLog,v 1.29 2012/12/08 21:22:57 radhermit Exp $
+
+  08 Dec 2012; Tim Harder <radhermit@gentoo.org>
+  files/gmic-1.5.2.2-makefile.patch:
+  Don't build example library (fixes bug #446460).
 
   08 Dec 2012; Tim Harder <radhermit@gentoo.org>
   -files/gmic-1.5.0.7-ffmpeg.patch, -files/gmic-1.5.1.7-makefile.patch,

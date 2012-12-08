@@ -83,7 +83,15 @@
  
  solaris:
  	$(MAKE) "CFLAGS=$(STD_UNIX_CFLAGS) $(OPT_CFLAGS)" "LDFLAGS=$(STD_UNIX_LDFLAGS) -R$(USR)/X11R6/lib -lrt -lnsl -lsocket" "STRIP_EXE=1" gmic_gmic
-@@ -346,7 +332,6 @@
+@@ -337,7 +323,6 @@
+ 	ar rcs libgmic.a gmic_lib.o
+ ifneq ($(OS),Darwin)
+ 	$(CC) -shared -Wl,-soname,libgmic.so.1 -o libgmic.so gmic_lib.o $(LDFLAGS)
+-	$(CC) -o gmic_use_lib gmic_use_lib.cpp -L. -lgmic $(FFTW_LDFLAGS)
+ else
+ 	$(CC) -shared -o libgmic.so gmic_lib.o $(LDFLAGS)
+ endif
+@@ -346,7 +331,6 @@
  	$(CC) -o gmic_gimp.o -c gmic.cpp $(CFLAGS) -Dgmic_gimp -Dgmic_float_only
  gmic_gimp : gmic_gimp.o gmic_gimp.cpp
  	$(CC) -o gmic_gimp gmic_gimp.cpp gmic_gimp.o `gimptool-2.0$(EXE) --cflags` $(CFLAGS) `gimptool-2.0$(EXE) --libs` $(LDFLAGS)
@@ -91,7 +99,7 @@
  
  gmic_minimal: gmic.cpp
  	$(CC) -o gmic gmic.cpp $(CFLAGS) -Dgmic_float_only -Dgmic_main $(LDFLAGS)
-@@ -371,7 +356,6 @@
+@@ -371,7 +355,6 @@
  	$(CC) -o gmic_double.o -c gmic.cpp $(CFLAGS) -Dgmic_split_compilation -Dgmic_double
  gmic_gmic: gmic_bool.o gmic_uchar.o gmic_char.o gmic_ushort.o gmic_short.o gmic_uint.o gmic_int.o gmic_float.o gmic_double.o gmic_def.h
  	$(CC) -o gmic gmic_bool.o gmic_uchar.o gmic_char.o gmic_ushort.o gmic_short.o gmic_uint.o gmic_int.o gmic_float.o gmic_double.o $(LDFLAGS)
