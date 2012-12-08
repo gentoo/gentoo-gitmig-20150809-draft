@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eina/eina-1.7.0.ebuild,v 1.2 2012/09/10 23:26:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eina/eina-1.7.3.ebuild,v 1.1 2012/12/08 14:01:55 tommy Exp $
 
 EAPI="2"
 
@@ -8,9 +8,7 @@ inherit enlightenment
 
 DESCRIPTION="Enlightenment's data types library (List, hash, etc) in C"
 
-#own tarball, since upstream version is dirty
-#SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
 LICENSE="LGPL-2.1"
 
 KEYWORDS="~amd64 ~arm ~x86"
@@ -60,6 +58,7 @@ src_configure() {
 	$(use_enable test e17)
 	$(use_enable test tests)
 	$(use_enable test benchmark)
+	$(use test && echo " --with-internal-maximum-log-level=6")
 	--enable-magic-debug
 	--enable-safety-checks
 	"
