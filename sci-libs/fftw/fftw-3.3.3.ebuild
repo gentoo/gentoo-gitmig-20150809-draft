@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.3.3.ebuild,v 1.1 2012/11/26 00:20:49 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.3.3.ebuild,v 1.2 2012/12/08 22:18:24 ottxor Exp $
 
 EAPI=4
 
@@ -92,7 +92,7 @@ src_configure() {
 		fi
 
 		einfo "Configuring for ${x} precision"
-		AUTOTOOLS_BUILD_DIR="${S}-${x}" \
+		BUILD_DIR="${S}-${x}" \
 			autotools-utils_src_configure
 	done
 }
@@ -100,7 +100,7 @@ src_configure() {
 src_compile() {
 	for x in ${FFTW_DIRS}; do
 		einfo "Compiling for ${x} precision"
-		AUTOTOOLS_BUILD_DIR="${S}-${x}" \
+		BUILD_DIR="${S}-${x}" \
 			autotools-utils_src_compile
 	done
 }
@@ -123,7 +123,7 @@ src_install () {
 	DOCS=( AUTHORS ChangeLog NEWS README TODO COPYRIGHT CONVENTIONS )
 	HTML_DOCS=( doc/html/ )
 	for x in ${FFTW_DIRS}; do
-		AUTOTOOLS_BUILD_DIR="${S}-${x}" \
+		BUILD_DIR="${S}-${x}" \
 			autotools-utils_src_install
 	done
 
