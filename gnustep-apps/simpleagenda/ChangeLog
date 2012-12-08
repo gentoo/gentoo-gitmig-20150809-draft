@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/simpleagenda
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/simpleagenda/ChangeLog,v 1.21 2012/10/02 12:33:40 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/simpleagenda/ChangeLog,v 1.22 2012/12/08 22:07:36 ago Exp $
+
+  08 Dec 2012; <ago@gentoo.org> simpleagenda-0.43.ebuild:
+  Stable for amd64, wrt bug #441326
 
 *simpleagenda-0.43 (02 Oct 2012)
 
