@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libxcb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.101 2012/11/28 21:46:09 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.102 2012/12/08 17:15:40 ago Exp $
+
+  08 Dec 2012; Agostino Sarubbo <ago@gentoo.org> libxcb-1.9.ebuild:
+  Stable for ppc64, wrt bug #440872
 
   28 Nov 2012; Brent Baude <ranger@gentoo.org> libxcb-1.9.ebuild:
   Marking libxcb-1.9 ppc stable for bug 440872
