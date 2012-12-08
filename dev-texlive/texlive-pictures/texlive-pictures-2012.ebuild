@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-pictures/texlive-pictures-2012.ebuild,v 1.5 2012/10/03 18:24:43 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-pictures/texlive-pictures-2012.ebuild,v 1.6 2012/12/08 12:25:17 aballier Exp $
 
 EAPI="4"
 
@@ -18,6 +18,7 @@ IUSE=""
 DEPEND=">=dev-texlive/texlive-basic-2012
 !<dev-texlive/texlive-latexextra-2009
 !<dev-texlive/texlive-texinfo-2009
+dev-tex/pgf
 "
 RDEPEND="${DEPEND}"
 TEXLIVE_MODULE_BINSCRIPTS="texmf-dist/scripts/cachepic/cachepic.tlu texmf-dist/scripts/fig4latex/fig4latex texmf-dist/scripts/mathspic/mathspic.pl"
