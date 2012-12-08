@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.145 2012/11/15 10:42:16 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.146 2012/12/08 17:52:54 scarabeus Exp $
 
 # Anthony G. Basile <blueness@gentoo.org> (15 Nove 2012)
 # Mask telepathy, no stable net-libs/telepathy-qt, bug #441456
@@ -11,10 +11,6 @@ kde-base/krfb telepathy
 # MySQL 5.5 wants systemtap, tcmalloc & jemalloc
 >=dev-db/mysql-5.5 tcmalloc
 >=dev-db/mariadb-5.5 tcmalloc
-
-# Anthony G. Basile <blueness@gentoo.org> (10 Oct 2012)
-# media-libs/libsbsms fails on ppc ppc64, bug #436020
-media-sound/audacity sbsms
 
 # Anthony G. Basile <blueness@gentoo.org> (29 Sep 2012)
 # dev-cpp/tbb does not build on ppc ppc64 so mask any

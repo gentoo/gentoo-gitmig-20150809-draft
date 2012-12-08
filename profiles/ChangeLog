@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7229 2012/12/08 01:24:20 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7230 2012/12/08 17:52:53 scarabeus Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Dec 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  arch/powerpc/package.use.mask:
+  Unmask libsbsms on ppc and ppc64 agan as it works now.
 
   08 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> updates/4Q-2012:
   Slotmove farstream-0.1.x from 0 to 0.1
