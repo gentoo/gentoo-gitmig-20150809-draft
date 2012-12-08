@@ -5,5 +5,7 @@
   <upstream>
     <remote-id type="cpan">B-Hooks-EndOfScope</remote-id>
     <remote-id type="cpan-module">B::Hooks::EndOfScope</remote-id>
+    <remote-id type="cpan-module">B::Hooks::EndOfScope::PP</remote-id>
+    <remote-id type="cpan-module">B::Hooks::EndOfScope::XS</remote-id>
   </upstream>
 </pkgmetadata>
