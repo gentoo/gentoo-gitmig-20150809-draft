@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/leechcraft-azoth/leechcraft-azoth-9999.ebuild,v 1.18 2012/11/27 13:57:14 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/leechcraft-azoth/leechcraft-azoth-9999.ebuild,v 1.19 2012/12/08 08:38:18 pinkbyte Exp $
 
 EAPI="4"
 
@@ -11,9 +11,9 @@ DESCRIPTION="Azoth, the modular IM client for LeechCraft."
 SLOT="0"
 KEYWORDS=""
 IUSE="debug astrality +acetamide +adiumstyles +autoidler +autopaste +birthdaynotifier
-		+chathistory +crypt	+depester +embedmedia +herbicide +hili +isterique
-		+juick +keeso +lastseen	+metacontacts media +latex +nativeemoticons
-		+otroid +p100q +spell shx +standardstyles +xmpp +xtazy +zheet"
+		+chathistory +crypt +depester +embedmedia +herbicide +hili +isterique
+		+juick +keeso +lastseen	+metacontacts media +msn +latex +nativeemoticons
+		+otroid +p100q +spell shx +standardstyles +xmpp +xtazy"
 
 DEPEND="~net-misc/leechcraft-core-${PV}
 		x11-libs/qt-webkit:4
@@ -22,11 +22,11 @@ DEPEND="~net-misc/leechcraft-core-${PV}
 		astrality? ( net-libs/telepathy-qt )
 		otroid? ( net-libs/libotr )
 		media? ( x11-libs/qt-multimedia:4 )
+		msn? ( net-libs/libmsn )
 		spell? ( app-text/hunspell )
 		xmpp? ( =net-libs/qxmpp-9999 media-libs/speex )
 		xtazy? ( x11-libs/qt-dbus:4 )
-		crypt? ( app-crypt/qca app-crypt/qca-gnupg )
-		zheet? ( net-libs/libmsn )"
+		crypt? ( app-crypt/qca app-crypt/qca-gnupg )"
 RDEPEND="${DEPEND}
 	astrality? (
 		net-im/telepathy-mission-control
@@ -63,6 +63,7 @@ src_configure() {
 		$(cmake-utils_use_enable metacontacts AZOTH_LASTSEEN)
 		$(cmake-utils_use_enable media MEDIACALLS)
 		$(cmake-utils_use_enable latex AZOTH_MODNOK)
+		$(cmake-utils_use_enable msn AZOTH_ZHEET)
 		$(cmake-utils_use_enable nativeemoticons AZOTH_NATIVEEMOTICONS)
 		$(cmake-utils_use_enable otroid AZOTH_OTROID)
 		$(cmake-utils_use_enable p100q AZOTH_P100Q)
@@ -71,7 +72,6 @@ src_configure() {
 		$(cmake-utils_use_enable standardstyles AZOTH_STANDARDSTYLES)
 		$(cmake-utils_use_enable xmpp AZOTH_XOOX)
 		$(cmake-utils_use_enable xtazy AZOTH_XTAZY)
-		$(cmake-utils_use_enable zheet AZOTH_ZHEET)
 	)
 
 	cmake-utils_src_configure
