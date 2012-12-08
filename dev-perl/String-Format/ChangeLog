@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/String-Format
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/String-Format/ChangeLog,v 1.21 2012/06/24 12:58:46 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/String-Format/ChangeLog,v 1.22 2012/12/08 10:51:06 tove Exp $
+
+*String-Format-1.170.0 (08 Dec 2012)
+
+  08 Dec 2012; Torsten Veller <tove@gentoo.org> +String-Format-1.170.0.ebuild:
+  Version bump
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
