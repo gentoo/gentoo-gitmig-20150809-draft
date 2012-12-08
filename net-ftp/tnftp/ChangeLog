@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/tnftp
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tnftp/ChangeLog,v 1.41 2012/11/25 14:06:23 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tnftp/ChangeLog,v 1.42 2012/12/08 16:01:36 swegener Exp $
+
+  08 Dec 2012; Sven Wegener <swegener@gentoo.org> tnftp-20100108.ebuild:
+  Update LICENSE to BSD-4 BSD ISC, bug #446302.
 
   25 Nov 2012; Sven Wegener <swegener@gentoo.org> -tnftp-20070806.ebuild,
   -files/tnftp-20070806-getline.patch,
