@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/apsw
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/ChangeLog,v 1.53 2012/12/08 21:02:06 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/ChangeLog,v 1.54 2012/12/08 21:39:55 floppym Exp $
+
+  08 Dec 2012; Mike Gilbert <floppym@gentoo.org> apsw-3.7.14.1_p1.ebuild,
+  apsw-3.7.14_p1.ebuild:
+  Drop versionator.
 
 *apsw-3.7.14.1_p1 (08 Dec 2012)
 *apsw-3.7.14_p1 (08 Dec 2012)
