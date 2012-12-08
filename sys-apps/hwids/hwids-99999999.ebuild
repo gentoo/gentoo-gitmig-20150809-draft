@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/hwids-99999999.ebuild,v 1.11 2012/12/08 11:30:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/hwids-99999999.ebuild,v 1.12 2012/12/08 11:54:20 flameeyes Exp $
 
 EAPI=5
 inherit udev git-2
@@ -23,26 +23,12 @@ src_prepare() {
 	emake fetch
 }
 
-src_compile() {
-	for file in {usb,pci}.ids; do
-		gzip -c ${file} > ${file}.gz || die
-	done
-
-	if use udev; then
-		emake udev-hwdb
-	fi
-}
-
-src_install() {
-	insinto /usr/share/misc
-	doins {usb,pci}.ids{,.gz} oui.txt iab.txt
-
-	dodoc README.md
-
-	if use udev; then
-		insinto "$(udev_get_udevdir)"/hwdb.d
-		doins udev/*.hwdb
-	fi
+src_configure() {
+	MAKEOPTS+=" UDEV=$(usex udev)"
+	MAKEOPTS+=" DOCDIR=/usr/share/doc/${PF}"
+	MAKEOPTS+=" MISCDIR=/usr/share/misc"
+	MAKEOPTS+=" HWDBDIR=$(udev_get_udevdir)/hwdb.d"
+	MAKEOPTS+=" DESTDIR=${D}"
 }
 
 pkg_postinst() {
