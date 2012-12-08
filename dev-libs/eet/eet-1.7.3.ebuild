@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eet/eet-1.7.1.ebuild,v 1.1 2012/10/22 13:18:32 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eet/eet-1.7.3.ebuild,v 1.1 2012/12/08 13:03:53 tommy Exp $
 
 EAPI=2
 
@@ -52,16 +52,11 @@ src_configure() {
 	export MY_ECONF="
 		$(use_enable debug assert)
 		$(use_enable doc)
+		$(use_enable examples build-examples)
+		$(use_enable examples install-examples)
 		$(use_enable test tests)
 		${SSL_FLAGS}
 		${MY_ECONF}"
 
 	enlightenment_src_configure
-}
-
-src_install() {
-	enlightenment_src_install
-	rm -r src/examples/Makefile* || die
-	docinto examples
-	dodoc src/examples/* || die
 }
