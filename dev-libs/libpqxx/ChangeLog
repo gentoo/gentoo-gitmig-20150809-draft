@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpqxx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/ChangeLog,v 1.87 2012/05/03 19:46:26 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/ChangeLog,v 1.88 2012/12/08 18:24:07 jer Exp $
+
+  08 Dec 2012; Jeroen Roovers <jer@gentoo.org> libpqxx-4.0-r1.ebuild:
+  Stable for HPPA (bug #396483).
 
   03 May 2012; Aaron W. Swenson <titanofold@gentoo.org> -libpqxx-2.6.9.ebuild,
   -files/libpqxx-2.6.9-gcc43.patch, -files/libpqxx-2.6.9-gcc44.patch,
