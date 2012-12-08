@@ -10,7 +10,6 @@
     <remote-id type="cpan-module">Locale::Maketext::Extract::Plugin::FormFu::Extractor</remote-id>
     <remote-id type="cpan-module">Locale::Maketext::Extract::Plugin::Generic</remote-id>
     <remote-id type="cpan-module">Locale::Maketext::Extract::Plugin::Mason</remote-id>
-    <remote-id type="cpan-module">Locale::Maketext::Extract::Plugin::PPI</remote-id>
     <remote-id type="cpan-module">Locale::Maketext::Extract::Plugin::Perl</remote-id>
     <remote-id type="cpan-module">Locale::Maketext::Extract::Plugin::TT2</remote-id>
     <remote-id type="cpan-module">Locale::Maketext::Extract::Plugin::TT2::Directive</remote-id>
