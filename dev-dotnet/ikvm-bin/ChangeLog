@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/ikvm-bin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm-bin/ChangeLog,v 1.26 2012/12/07 04:52:52 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm-bin/ChangeLog,v 1.27 2012/12/08 04:06:50 zerochaos Exp $
+
+  08 Dec 2012; Rick Farina <zerochaos@gentoo.org> ikvm-bin-7.1.4532.2.ebuild:
+  revert improper x86 stabilization wrt #435202 comment 2
 
   07 Dec 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   ikvm-bin-7.1.4532.2.ebuild:

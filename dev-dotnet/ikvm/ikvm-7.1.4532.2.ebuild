@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ikvm-7.1.4532.2.ebuild,v 1.4 2012/12/07 04:53:09 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ikvm-7.1.4532.2.ebuild,v 1.5 2012/12/08 04:08:14 zerochaos Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.frijters.net/openjdk-7u4-stripped.zip
 LICENSE="ZLIB GPL-2-with-linking-exception"
 
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/mono-2
