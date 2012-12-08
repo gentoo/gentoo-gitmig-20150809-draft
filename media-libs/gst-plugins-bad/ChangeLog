@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/gst-plugins-bad
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/ChangeLog,v 1.96 2012/12/03 23:33:57 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/ChangeLog,v 1.97 2012/12/08 08:57:59 tetromino Exp $
+
+*gst-plugins-bad-0.10.23-r1 (08 Dec 2012)
+
+  08 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gst-plugins-bad-0.10.23-r1.ebuild:
+  Add upstream patches fixing h264 baseline video decoding failure (bug
+  #446384, thanks to barrie backhurst).
 
 *gst-plugins-bad-1.0.3 (03 Dec 2012)
 
