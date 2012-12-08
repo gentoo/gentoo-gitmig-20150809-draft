@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libva-intel-driver
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-intel-driver/ChangeLog,v 1.16 2012/11/26 23:54:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-intel-driver/ChangeLog,v 1.17 2012/12/08 15:26:41 aballier Exp $
+
+  08 Dec 2012; Alexis Ballier <aballier@gentoo.org>
+  libva-intel-driver-1.0.19.ebuild, +files/libm.patch:
+  backport upstream patch to avoid underlinking, bug #443934
 
   26 Nov 2012; Alexis Ballier <aballier@gentoo.org>
   -libva-intel-driver-1.0.15.ebuild, -libva-intel-driver-1.0.18-r1.ebuild:
