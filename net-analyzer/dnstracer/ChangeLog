@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/dnstracer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dnstracer/ChangeLog,v 1.27 2012/12/08 11:55:45 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dnstracer/ChangeLog,v 1.28 2012/12/08 12:10:17 pinkbyte Exp $
+
+*dnstracer-1.9-r1 (08 Dec 2012)
+
+  08 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> +dnstracer-1.9-r1.ebuild:
+  Revision bump: EAPI 5, ~amd64-linux keyword
 
   08 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> dnstracer-1.8.ebuild,
   dnstracer-1.9.ebuild:
