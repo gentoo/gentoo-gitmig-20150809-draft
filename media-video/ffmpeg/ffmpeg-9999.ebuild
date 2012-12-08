@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.108 2012/10/12 11:24:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.109 2012/12/08 12:06:17 aballier Exp $
 
 EAPI="4"
 
@@ -171,8 +171,6 @@ src_configure() {
 	use libcaca && myconf="${myconf} --enable-libcaca"
 	use openal && myconf="${myconf} --enable-openal"
 	# Indevs
-	# v4l1 is gone since linux-headers-2.6.38
-	myconf="${myconf} --disable-indev=v4l"
 	use v4l || myconf="${myconf} --disable-indev=v4l2"
 	for i in alsa oss jack ; do
 		use ${i} || myconf="${myconf} --disable-indev=${i}"
