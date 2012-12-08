@@ -1,6 +1,10 @@
 # ChangeLog for net-im/empathy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.112 2012/12/05 22:37:16 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.113 2012/12/08 01:25:19 tetromino Exp $
+
+  08 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  empathy-3.4.2.3.ebuild:
+  Pin farstream slot.
 
   05 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   empathy-2.34.0-r2.ebuild, empathy-3.4.2.3.ebuild:

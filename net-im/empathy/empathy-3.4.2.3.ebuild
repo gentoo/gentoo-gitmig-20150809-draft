@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.4.2.3.ebuild,v 1.4 2012/12/05 22:37:16 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.4.2.3.ebuild,v 1.5 2012/12/08 01:25:19 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -41,7 +41,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.30:2
 
 	>=net-libs/telepathy-glib-0.18:=
 	>=net-im/telepathy-logger-0.2.13:=
-	net-libs/farstream:=
+	net-libs/farstream:0.1
 	>=net-libs/telepathy-farstream-0.2.1:=
 
 	dev-libs/libxml2:2
