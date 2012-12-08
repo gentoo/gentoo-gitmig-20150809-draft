@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-video-mga
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-mga/ChangeLog,v 1.112 2012/11/28 21:38:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-mga/ChangeLog,v 1.113 2012/12/08 17:10:38 ago Exp $
+
+  08 Dec 2012; Agostino Sarubbo <ago@gentoo.org> xf86-video-mga-1.6.2.ebuild:
+  Stable for ppc64, wrt bug #440872
 
   28 Nov 2012; Brent Baude <ranger@gentoo.org> xf86-video-mga-1.6.2.ebuild:
   Marking xf86-video-mga-1.6.2 ppc stable for bug 440872
