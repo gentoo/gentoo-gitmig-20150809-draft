@@ -1,17 +1,17 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/farsight2-0.0.31.ebuild,v 1.8 2012/10/28 16:18:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/farsight2-0.0.31.ebuild,v 1.9 2012/12/08 00:58:20 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
 
 inherit python
 
-DESCRIPTION="Farsight2 is an audio/video conferencing framework specifically designed for Instant Messengers."
-HOMEPAGE="http://farsight.freedesktop.org/"
-SRC_URI="http://farsight.freedesktop.org/releases/${PN}/${P}.tar.gz"
+DESCRIPTION="Audio/video conferencing framework specifically designed for instant messengers"
+HOMEPAGE="http://www.freedesktop.org/wiki/Software/Farstream"
+SRC_URI="http://freedesktop.org/software/farstream/releases/${PN}/${P}.tar.gz"
 
-LICENSE="LGPL-2.1"
+LICENSE="LGPL-2.1+"
 KEYWORDS="alpha amd64 ~arm ~hppa ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux"
 IUSE="python msn upnp"
 # IUSE="python test msn upnp"
@@ -24,7 +24,7 @@ RESTRICT="test"
 COMMONDEPEND=">=media-libs/gstreamer-0.10.33:0.10
 	>=media-libs/gst-plugins-base-0.10.33:0.10
 	>=dev-libs/glib-2.26:2
-	>=net-libs/libnice-0.1.0[gstreamer]
+	>=net-libs/libnice-0.1.0
 	python? (
 		>=dev-python/pygobject-2.16:2
 		>=dev-python/gst-python-0.10.10 )
@@ -33,6 +33,9 @@ COMMONDEPEND=">=media-libs/gstreamer-0.10.33:0.10
 RDEPEND="${COMMONDEPEND}
 	>=media-libs/gst-plugins-good-0.10.17:0.10
 	>=media-libs/gst-plugins-bad-0.10.17:0.10
+	|| (
+		>=media-plugins/gst-plugins-libnice-0.1.0:0.10
+		<=net-libs/libnice-0.1.3[gstreamer] )
 	msn? ( >=media-plugins/gst-plugins-mimic-0.10.17:0.10 )"
 
 DEPEND="${COMMONDEPEND}
@@ -41,7 +44,10 @@ DEPEND="${COMMONDEPEND}
 #		media-plugins/gst-plugins-speex )
 
 pkg_setup() {
-	python_set_active_version 2
+	if use python; then
+		python_set_active_version 2
+		python_pkg_setup
+	fi
 }
 
 src_configure() {
