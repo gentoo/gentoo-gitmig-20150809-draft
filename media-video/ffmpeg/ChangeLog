@@ -1,6 +1,11 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.588 2012/12/08 12:06:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.589 2012/12/08 12:38:44 aballier Exp $
+
+  08 Dec 2012; Alexis Ballier <aballier@gentoo.org> ffmpeg-0.10.6.ebuild,
+  +files/flashtest.patch:
+  backport upstream fix for the vsynth1-flashsv2 test with recent zlib
+  versions, bug #446390
 
   08 Dec 2012; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
   v4l1 indev is gone, no need to disable it explicitly
