@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/dolphin-4.9.4.ebuild,v 1.1 2012/12/05 16:58:07 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/dolphin-4.9.4-r1.ebuild,v 1.1 2012/12/08 00:31:34 creffett Exp $
 
 EAPI=4
 
@@ -31,6 +31,8 @@ PDEPEND="
 "
 
 KMLOADLIBS="libkonq"
+
+PATCHES=( "${FILESDIR}/${PN}-4.9.4-drag-and-drop-and-keyboard-focus.patch" )
 
 RESTRICT="test"
 # bug 393129
