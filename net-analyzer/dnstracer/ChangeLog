@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/dnstracer
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dnstracer/ChangeLog,v 1.26 2008/08/18 18:59:09 ranger Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dnstracer/ChangeLog,v 1.27 2012/12/08 11:55:45 pinkbyte Exp $
+
+  08 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> dnstracer-1.8.ebuild,
+  dnstracer-1.9.ebuild:
+  Set correct LICENSE wrt bug #446050, assign RDEPEND explicitly
 
   18 Aug 2008; Brent Baude <ranger@gentoo.org> dnstracer-1.9.ebuild:
   stable ppc64, bug 234734
