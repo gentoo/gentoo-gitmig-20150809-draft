@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/farstream/farstream-0.1.2-r1.ebuild,v 1.12 2012/12/08 00:58:43 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/farstream/farstream-0.1.2-r1.ebuild,v 1.13 2012/12/08 01:23:36 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -15,14 +15,14 @@ LICENSE="LGPL-2.1+"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux"
 IUSE="+introspection python msn test upnp"
 
-SLOT="0"
+SLOT="0.1"
 
 # Tests need shmsink from gst-plugins-bad, which isn't packaged
 RESTRICT="test"
 
 COMMONDEPEND=">=media-libs/gstreamer-0.10.33:0.10
 	>=media-libs/gst-plugins-base-0.10.33:0.10
-	>=dev-libs/glib-2.26:2
+	>=dev-libs/glib-2.30:2
 	>=net-libs/libnice-0.1.0
 	introspection? ( >=dev-libs/gobject-introspection-0.10.11 )
 	python? (
@@ -41,6 +41,7 @@ RDEPEND="${COMMONDEPEND}
 # This package is just a rename from farsight2
 
 DEPEND="${COMMONDEPEND}
+	dev-util/gtk-doc-am
 	virtual/pkgconfig
 	test? (
 		media-libs/gst-plugins-good:0.10
