@@ -5,6 +5,10 @@
 -iwmmxt
 
 # Markus Meier <maekke@gentoo.org> (22 Aug 2010)
+# unmask synaptics input driver
+-input_devices_synaptics
+
+# Markus Meier <maekke@gentoo.org> (22 Aug 2010)
 # net-wireless/wimax not tested
 wimax
 

@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.179 2012/12/08 12:36:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.180 2012/12/08 12:42:18 maekke Exp $
+
+  08 Dec 2012; Markus Meier <maekke@gentoo.org> use.mask:
+  unmask synaptics input driver
 
   08 Dec 2012; Markus Meier <maekke@gentoo.org> package.use.mask:
   mask app-office/libreoffice java extensions
