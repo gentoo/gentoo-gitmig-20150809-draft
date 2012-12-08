@@ -15,4 +15,7 @@ multiple combination of commands are necessary. The game is presented in a 2D si
 	<upstream>
 		<remote-id type="google-code">pingus</remote-id>
 	</upstream>
+	<use>
+		<flag name="music">Enable playing of background music</flag>
+	</use>
 </pkgmetadata>

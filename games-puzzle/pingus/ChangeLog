@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/pingus
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/ChangeLog,v 1.43 2012/07/09 02:30:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/ChangeLog,v 1.44 2012/12/08 07:32:00 mr_bones_ Exp $
+
+  08 Dec 2012; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml,
+  pingus-0.7.6.ebuild:
+  make the user insist on background music (bug #446434)
 
   09 Jul 2012; Michael Sterrett <mr_bones_@gentoo.org> pingus-0.7.6.ebuild,
   +files/pingus-0.7.6-gcc47.patch:
