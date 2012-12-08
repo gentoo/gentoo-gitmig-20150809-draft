@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkdegames
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdegames/ChangeLog,v 1.235 2012/12/05 16:58:01 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdegames/ChangeLog,v 1.236 2012/12/08 11:53:11 dilfridge Exp $
+
+  08 Dec 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  -libkdegames-4.8.5-r1.ebuild:
+  Drop KDE 4.8
 
 *libkdegames-4.9.4 (05 Dec 2012)
 

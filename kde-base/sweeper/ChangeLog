@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/sweeper
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/sweeper/ChangeLog,v 1.133 2012/12/05 16:57:58 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/sweeper/ChangeLog,v 1.134 2012/12/08 11:53:16 dilfridge Exp $
+
+  08 Dec 2012; Andreas K. Huettel <dilfridge@gentoo.org> -sweeper-4.8.5.ebuild:
+  Drop KDE 4.8
 
 *sweeper-4.9.4 (05 Dec 2012)
 

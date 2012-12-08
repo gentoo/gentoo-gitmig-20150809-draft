@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/rocs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/rocs/ChangeLog,v 1.94 2012/12/05 16:57:59 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/rocs/ChangeLog,v 1.95 2012/12/08 11:53:30 dilfridge Exp $
+
+  08 Dec 2012; Andreas K. Huettel <dilfridge@gentoo.org> -rocs-4.8.5.ebuild:
+  Drop KDE 4.8
 
 *rocs-4.9.4 (05 Dec 2012)
 

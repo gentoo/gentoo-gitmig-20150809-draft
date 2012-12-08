@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ktron
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktron/ChangeLog,v 1.195 2012/11/13 20:04:12 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktron/ChangeLog,v 1.196 2012/12/08 11:53:17 dilfridge Exp $
+
+  08 Dec 2012; Andreas K. Huettel <dilfridge@gentoo.org> -ktron-4.8.5.ebuild:
+  Drop KDE 4.8
 
   13 Nov 2012; Johannes Huber <johu@gentoo.org> -ktron-4.9.1.ebuild:
   Remove KDE SC 4.9.1

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkmahjongg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkmahjongg/ChangeLog,v 1.134 2012/12/05 16:57:38 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkmahjongg/ChangeLog,v 1.135 2012/12/08 11:53:30 dilfridge Exp $
+
+  08 Dec 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  -libkmahjongg-4.8.5.ebuild:
+  Drop KDE 4.8
 
 *libkmahjongg-4.9.4 (05 Dec 2012)
 

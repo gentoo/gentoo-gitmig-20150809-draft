@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kuiserver
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kuiserver/ChangeLog,v 1.142 2012/12/05 16:57:44 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kuiserver/ChangeLog,v 1.143 2012/12/08 11:53:10 dilfridge Exp $
+
+  08 Dec 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kuiserver-4.8.5.ebuild:
+  Drop KDE 4.8
 
 *kuiserver-4.9.4 (05 Dec 2012)
 

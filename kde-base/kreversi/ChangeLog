@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kreversi
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kreversi/ChangeLog,v 1.231 2012/12/05 16:58:01 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kreversi/ChangeLog,v 1.232 2012/12/08 11:53:22 dilfridge Exp $
+
+  08 Dec 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kreversi-4.8.5.ebuild:
+  Drop KDE 4.8
 
 *kreversi-4.9.4 (05 Dec 2012)
 

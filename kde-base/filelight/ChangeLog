@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/filelight
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/filelight/ChangeLog,v 1.68 2012/12/05 16:57:47 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/filelight/ChangeLog,v 1.69 2012/12/08 11:53:18 dilfridge Exp $
+
+  08 Dec 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  -filelight-4.8.5.ebuild:
+  Drop KDE 4.8
 
 *filelight-4.9.4 (05 Dec 2012)
 

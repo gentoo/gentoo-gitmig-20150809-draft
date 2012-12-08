@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/dolphin
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.161 2012/12/08 00:31:34 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.162 2012/12/08 11:53:17 dilfridge Exp $
+
+  08 Dec 2012; Andreas K. Huettel <dilfridge@gentoo.org> -dolphin-4.8.5.ebuild:
+  Drop KDE 4.8
 
 *dolphin-4.9.4-r1 (08 Dec 2012)
 
