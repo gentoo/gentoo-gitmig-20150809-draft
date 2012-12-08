@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/bitbake/bitbake-9999.ebuild,v 1.11 2012/12/08 09:31:21 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/bitbake/bitbake-1.17.0.ebuild,v 1.1 2012/12/08 09:31:21 radhermit Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_5 python2_6 python2_7 )
