@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libvisio
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/ChangeLog,v 1.44 2012/12/06 08:19:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/ChangeLog,v 1.45 2012/12/08 12:10:41 maekke Exp $
+
+  08 Dec 2012; Markus Meier <maekke@gentoo.org> libvisio-0.0.23.ebuild:
+  add ~arm, bug #440908
 
   06 Dec 2012; Tomáš Chvátal <scarabeus@gentoo.org> -libvisio-0.0.21.ebuild,
   libvisio-0.0.23.ebuild:
