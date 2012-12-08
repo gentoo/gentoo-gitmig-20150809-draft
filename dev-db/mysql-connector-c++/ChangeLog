@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql-connector-c++
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-connector-c++/ChangeLog,v 1.13 2012/11/21 20:07:08 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-connector-c++/ChangeLog,v 1.14 2012/12/08 12:55:55 maekke Exp $
+
+  08 Dec 2012; Markus Meier <maekke@gentoo.org>
+  mysql-connector-c++-1.1.1.ebuild:
+  add ~arm, bug #440908
 
 *mysql-connector-c++-1.1.1 (21 Nov 2012)
 
