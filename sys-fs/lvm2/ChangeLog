@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.280 2012/11/29 20:48:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.281 2012/12/08 12:09:01 maekke Exp $
+
+  08 Dec 2012; Markus Meier <maekke@gentoo.org> lvm2-2.02.97-r1.ebuild:
+  arm stable, bug #435076
 
   29 Nov 2012; Brent Baude <ranger@gentoo.org> lvm2-2.02.97-r1.ebuild:
   Marking lvm2-2.02.97-r1 ppc for bug 435076
