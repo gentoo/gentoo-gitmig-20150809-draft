@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.181 2012/11/04 06:30:15 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.182 2012/12/08 19:00:18 ago Exp $
+
+  08 Dec 2012; Agostino Sarubbo <ago@gentoo.org> webkit-gtk-1.8.3-r300.ebuild:
+  Stable for ppc64, wrt bug #427544
 
   04 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   webkit-gtk-1.6.1-r201.ebuild, webkit-gtk-1.6.1-r301.ebuild,
