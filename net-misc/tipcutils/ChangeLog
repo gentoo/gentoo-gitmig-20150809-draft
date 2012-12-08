@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tipcutils
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tipcutils/ChangeLog,v 1.5 2011/10/02 12:37:53 ssuominen Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tipcutils/ChangeLog,v 1.6 2012/12/08 22:21:54 ulm Exp $
+
+  08 Dec 2012; Ulrich Müller <ulm@gentoo.org> tipcutils-1.0.4.ebuild,
+  tipcutils-2.0.0.ebuild:
+  Fix LICENSE, 3-clause BSD license according to notice in tipc-config.c.
 
 *tipcutils-2.0.0 (02 Oct 2011)
 
