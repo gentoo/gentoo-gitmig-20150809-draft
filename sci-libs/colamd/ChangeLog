@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/colamd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/colamd/ChangeLog,v 1.31 2012/11/12 01:51:47 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/colamd/ChangeLog,v 1.32 2012/12/08 12:16:05 maekke Exp $
+
+  08 Dec 2012; Markus Meier <maekke@gentoo.org> colamd-2.8.0.ebuild:
+  add ~arm, bug #440908
 
 *colamd-2.8.0 (12 Nov 2012)
 
