@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/edje/edje-1.7.1.ebuild,v 1.1 2012/10/22 14:15:01 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/edje/edje-1.7.3.ebuild,v 1.1 2012/12/08 13:59:02 tommy Exp $
 
 EAPI=1
 
@@ -22,10 +22,11 @@ DEPEND="dev-lang/lua
 RDEPEND=${DEPEND}
 
 src_compile() {
-	export MY_ECONF="
+	MY_ECONF+="
 		$(use_enable cache edje-program-cache)
 		$(use_enable cache edje-calc-cache)
 		$(use_enable !debug amalgamation)
+		$(use_enable doc)
 		$(use_with vim-syntax vim /usr/share/vim)
 	"
 	enlightenment_src_compile
