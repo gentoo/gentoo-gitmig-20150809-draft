@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-11.0-r1.ebuild,v 1.2 2012/11/28 13:35:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-11.0-r1.ebuild,v 1.3 2012/12/08 18:21:49 vapier Exp $
 
 EAPI="4"
 
@@ -133,6 +133,7 @@ src_prepare() {
 		epatch "${WORKDIR}/${P}-ffmpeg-1.0-compat" #438842
 	epatch "${FILESDIR}"/${PN}-11.0-ffmpeg-0.10.2.patch #406215
 	epatch "${FILESDIR}"/${PN}-11.0-libav-r1.patch #406215
+	epatch "${FILESDIR}"/${P}-nfs-limits.patch #445174
 	# The mythtv patch touches configure.ac, so force a regen
 	rm -f configure
 
