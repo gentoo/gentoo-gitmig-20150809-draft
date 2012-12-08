@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/argparse
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/ChangeLog,v 1.34 2012/11/02 21:31:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/ChangeLog,v 1.35 2012/12/08 15:46:08 mgorny Exp $
+
+  08 Dec 2012; Michał Górny <mgorny@gentoo.org> argparse-1.2.1-r1.ebuild:
+  Add PYTHON_USEDEP on migrated packages.
 
   02 Nov 2012; Michał Górny <mgorny@gentoo.org> argparse-1.2.1-r1.ebuild:
   Re-enable all Python implementations but warn if the package is not useful,

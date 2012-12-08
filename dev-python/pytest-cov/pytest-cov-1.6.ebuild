@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest-cov/pytest-cov-1.6.ebuild,v 1.1 2012/11/16 18:50:48 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest-cov/pytest-cov-1.6.ebuild,v 1.2 2012/12/08 15:42:26 mgorny Exp $
 
 EAPI="4"
 
@@ -17,5 +17,5 @@ KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND=""
-RDEPEND="dev-python/pytest
-		dev-python/cov-core"
+RDEPEND="dev-python/pytest[${PYTHON_USEDEP}]
+		dev-python/cov-core[${PYTHON_USEDEP}]"
