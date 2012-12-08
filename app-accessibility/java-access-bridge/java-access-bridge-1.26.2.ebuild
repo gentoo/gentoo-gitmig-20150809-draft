@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/java-access-bridge-1.26.2.ebuild,v 1.4 2012/10/07 01:26:48 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/java-access-bridge-1.26.2.ebuild,v 1.5 2012/12/08 21:40:27 ago Exp $
 
 EAPI=4
 GNOME_TARBALL_SUFFIX="bz2"
@@ -13,7 +13,7 @@ HOMEPAGE="https://live.gnome.org/Java%20Access%20Bridge/"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ppc64 x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE=""
 
 COMMON_DEPEND=">=gnome-base/libbonobo-2
