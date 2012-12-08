@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-setup
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-setup/ChangeLog,v 1.28 2012/09/23 12:01:44 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-setup/ChangeLog,v 1.29 2012/12/08 22:06:55 ago Exp $
+
+  08 Dec 2012; <ago@gentoo.org> vdr-setup-0.3.1-r5.ebuild:
+  Stable for amd64, wrt bug #441388
 
 *vdr-setup-0.3.1-r5 (23 Sep 2012)
 
