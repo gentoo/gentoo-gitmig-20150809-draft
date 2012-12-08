@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/getdate
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/getdate/ChangeLog,v 1.15 2012/10/12 08:36:45 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/getdate/ChangeLog,v 1.16 2012/12/08 22:04:41 ulm Exp $
+
+  08 Dec 2012; Ulrich Müller <ulm@gentoo.org> getdate-1.2.ebuild,
+  getdate-1.2-r1.ebuild:
+  Fix LICENSE, GPL-1+ according to notice in getdate.c.
 
 *getdate-1.2-r1 (12 Oct 2012)
 
