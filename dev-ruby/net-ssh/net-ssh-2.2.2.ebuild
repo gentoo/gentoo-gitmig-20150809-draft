@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh/net-ssh-2.2.2.ebuild,v 1.7 2012/08/11 09:17:47 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh/net-ssh-2.2.2.ebuild,v 1.8 2012/12/08 12:31:56 ago Exp $
 
 EAPI="2"
 USE_RUBY="ruby18 ruby19 ree18"
@@ -18,7 +18,7 @@ HOMEPAGE="http://net-ssh.rubyforge.org/"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="amd64 ppc ~ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="amd64 ppc ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE="test"
 
 ruby_add_rdepend "virtual/ruby-ssl"
