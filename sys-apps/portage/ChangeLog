@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1143 2012/12/05 02:19:14 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1144 2012/12/08 17:58:38 zmedico Exp $
+
+*portage-2.1.11.34 (08 Dec 2012)
+
+  08 Dec 2012; Zac Medico <zmedico@gentoo.org> +portage-2.1.11.34.ebuild:
+  2.1.11.34 version bump. This fixes bug #445506 (make emerge --depclean remove
+  unavailable slots), bug #445628 (don't show 'None' for path of license files),
+  bug 446358 (fix regression in emerge --info which caused it to bail out for
+  existing packages), and bug #446324 (support emerge --verbose=n) Bug #445274
+  tracks all bugs fixed since portage-2.1.11.31.
 
   05 Dec 2012; Zac Medico <zmedico@gentoo.org> portage-2.1.11.31.ebuild,
   portage-2.1.11.33.ebuild, portage-2.1.11.9.ebuild,
