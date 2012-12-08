@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/tribler/tribler-5.9.30.ebuild,v 1.1 2012/09/13 00:05:20 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/tribler/tribler-6.0.3.ebuild,v 1.1 2012/12/08 21:01:16 blueness Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -8,14 +8,14 @@ PYTHON_USE_WITH="sqlite"
 
 inherit eutils python
 
-MY_PV="${PN}_${PV}-1ubuntu1_all"
+MY_PV="${PN}_${PV}_all"
 
 DESCRIPTION="Bittorrent client that does not require a website to discover content"
 HOMEPAGE="http://www.tribler.org/"
 SRC_URI="
 	http://dl.tribler.org/${MY_PV}.deb
-	x86?   ( http://dl.tribler.org/tribler-swift_5.9.23-27674_i386.deb )
-	amd64? ( http://dl.tribler.org/tribler-swift_5.9.23-27674_amd64.deb )"
+	x86?   ( http://dl.tribler.org/tribler-swift_6.0.0-28795_i386.deb )
+	amd64? ( http://dl.tribler.org/tribler-swift_6.0.0-28795_amd64.deb )"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
