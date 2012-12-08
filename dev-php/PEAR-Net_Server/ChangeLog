@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Net_Server
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Server/ChangeLog,v 1.39 2012/12/08 15:53:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Server/ChangeLog,v 1.40 2012/12/08 17:06:23 jer Exp $
+
+  08 Dec 2012; Jeroen Roovers <jer@gentoo.org> PEAR-Net_Server-1.0.3.ebuild:
+  Stable for HPPA (bug #441268).
 
   08 Dec 2012; Agostino Sarubbo <ago@gentoo.org> PEAR-Net_Server-1.0.3.ebuild:
   Stable for ppc64, wrt bug #441268
