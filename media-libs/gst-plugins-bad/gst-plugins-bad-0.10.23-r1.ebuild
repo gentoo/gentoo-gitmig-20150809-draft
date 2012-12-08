@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/gst-plugins-bad-0.10.23-r1.ebuild,v 1.1 2012/12/08 08:57:59 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/gst-plugins-bad-0.10.23-r1.ebuild,v 1.2 2012/12/08 11:31:30 tetromino Exp $
 
 EAPI="5"
 
@@ -25,6 +25,7 @@ RDEPEND="${RDEPEND}
 	!<media-plugins/gst-plugins-farsight-0.12.11:${SLOT}"
 
 src_prepare() {
+	# Patches from 0.10 branch fixing h264 baseline decoding; bug #446384
 	epatch "${WORKDIR}/${P}-h264-patches"/*.patch
 }
 
