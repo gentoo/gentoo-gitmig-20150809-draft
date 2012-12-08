@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/liveice
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/liveice/ChangeLog,v 1.12 2012/11/21 13:03:09 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/liveice/ChangeLog,v 1.13 2012/12/08 22:10:15 ulm Exp $
+
+  08 Dec 2012; Ulrich Müller <ulm@gentoo.org> liveice-2000530-r1.ebuild:
+  Fix LICENSE, GPL-2+ according to notices in source files.
 
   21 Nov 2012; Michael Palimaka <kensington@gentoo.org> -liveice-2000530.ebuild:
   Remove old.
