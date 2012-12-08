@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkdepim
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/ChangeLog,v 1.195 2012/12/07 21:39:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/ChangeLog,v 1.196 2012/12/08 12:04:12 dilfridge Exp $
+
+  08 Dec 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  libkdepim-4.4.11.1.ebuild, libkdepim-4.4.11.1-r1.ebuild:
+  Drop ppc64 as in rest of KDE
 
   07 Dec 2012; Agostino Sarubbo <ago@gentoo.org> libkdepim-4.4.11.1-r1.ebuild:
   Stable for ppc, wrt bug #433726

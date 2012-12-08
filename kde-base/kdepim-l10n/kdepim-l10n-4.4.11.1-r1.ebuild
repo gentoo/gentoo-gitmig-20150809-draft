@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-l10n/kdepim-l10n-4.4.11.1-r1.ebuild,v 1.6 2012/10/13 21:57:49 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-l10n/kdepim-l10n-4.4.11.1-r1.ebuild,v 1.7 2012/12/08 12:04:12 dilfridge Exp $
 
 EAPI=4
 KDE_MINIMAL="4.6"
@@ -15,7 +15,7 @@ DEPEND="
 RDEPEND=""
 add_blocker kde-l10n 4.5.50
 
-KEYWORDS="amd64 ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 MY_LANGS="ar bg ca ca@valencia cs csb da de el en_GB eo es et eu

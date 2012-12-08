@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kleopatra
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kleopatra/ChangeLog,v 1.135 2012/12/08 11:53:12 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kleopatra/ChangeLog,v 1.136 2012/12/08 12:04:15 dilfridge Exp $
+
+  08 Dec 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  kleopatra-4.4.11.1.ebuild:
+  Drop ppc64 as in rest of KDE
 
   08 Dec 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   -kleopatra-4.8.5.ebuild:

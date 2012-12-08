@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkpgp
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkpgp/ChangeLog,v 1.155 2011/06/02 22:05:15 dilfridge Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkpgp/ChangeLog,v 1.156 2012/12/08 12:04:16 dilfridge Exp $
+
+  08 Dec 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  libkpgp-4.4.11.1.ebuild:
+  Drop ppc64 as in rest of KDE
 
   02 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> -libkpgp-4.4.9.ebuild,
   -libkpgp-4.4.10.ebuild:
