@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/kombu-2.4.10.ebuild,v 1.1 2012/11/29 07:28:36 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/kombu-2.4.10.ebuild,v 1.2 2012/12/08 13:04:31 idella4 Exp $
 
 EAPI="4"
 
@@ -33,13 +33,34 @@ DEPEND="${RDEPEND}
 	dev-python/pymongo
 	dev-python/msgpack )
 	doc? ( dev-python/sphinx
+	dev-python/django
 	dev-python/beanstalkc
 	dev-python/couchdb-python )
 	dev-python/setuptools"
 
+src_prepare() {
+	CheckDoc() {
+	if [[ "$(python_get_version  --major)" == '3' ]] && use doc; then
+		eerror ""
+		eerror "Python3 ***CANNOT*** build the docs for this package"
+		error "due to a dependency on django, which does not support python3"
+		eerror "Docs can be built effectively with python2."
+		eerror "Prepend with USE_PYTHON=2.7 and recommence emerge"
+		eerror ""
+		die
+	fi
+	}
+	python_execute_function CheckDoc
+	distutils_src_prepare
+}
+
 src_compile() {
 	distutils_src_compile
-	use doc && emake -C docs html
+
+	makedocs() {
+		PYTHONPATH="${S}" emake -C docs html
+	}
+	use doc && python_execute_function makedocs
 }
 
 src_test() {
@@ -53,7 +74,7 @@ src_install() {
 	distutils_src_install
 	if use examples; then
 		docompress -x usr/share/doc/${P}/examples/
-		insinto usr/share/doc/${P}/
+		insinto usr/share/doc/${PF}/
 		doins -r examples/
 	fi
 	use doc && dohtml -r docs/.build/html/
