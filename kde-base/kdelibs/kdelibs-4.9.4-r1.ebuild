@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.9.4.ebuild,v 1.1 2012/12/05 16:58:05 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.9.4-r1.ebuild,v 1.1 2012/12/08 00:37:15 creffett Exp $
 
 EAPI=4
 
@@ -142,6 +142,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-4.6.3-no_suid_kdeinit.patch"
 	"${FILESDIR}/${PN}-4.8.1-norpath.patch"
 	"${FILESDIR}/${PN}-4.9.3-werror.patch"
+	"${FILESDIR}/${PN}-4.9.4-zipfiles.patch"
 )
 
 pkg_pretend() {
