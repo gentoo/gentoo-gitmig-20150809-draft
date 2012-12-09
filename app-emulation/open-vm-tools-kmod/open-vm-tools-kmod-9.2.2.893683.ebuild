@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools-kmod/open-vm-tools-kmod-2012.03.13.651368-r1.ebuild,v 1.1 2012/03/26 15:54:37 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools-kmod/open-vm-tools-kmod-9.2.2.893683.ebuild,v 1.1 2012/12/09 14:11:50 vadimk Exp $
 
 EAPI="4"
 
-inherit linux-info linux-mod versionator
+inherit eutils linux-info linux-mod versionator
 
 MY_PN="${PN/-kmod}"
 MY_PV="$(replace_version_separator 3 '-')"
@@ -24,7 +24,6 @@ RDEPEND=""
 DEPEND="${RDEPEND}
 	virtual/linux-sources
 	"
-
 CONFIG_CHECK="
 	~DRM_VMWGFX
 	~VMWARE_BALLOON
@@ -58,6 +57,8 @@ pkg_setup() {
 src_prepare() {
 	sed -i.bak -e '/\smake\s/s/make/$(MAKE)/g' modules/linux/{vmblock,vmci,vmhgfs,vmsync,vmxnet,vsock}/Makefile\
 		|| die "Sed failed."
+	#kernel_is ge 3 2 0 && epatch "${FILESDIR}/fragsize.patch"
+	epatch "${FILESDIR}/frozen.patch"
 }
 
 src_configure() {
