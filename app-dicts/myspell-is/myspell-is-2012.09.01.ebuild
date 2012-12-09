@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-is/myspell-is-2012.09.01.ebuild,v 1.5 2012/12/08 15:59:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-is/myspell-is-2012.09.01.ebuild,v 1.6 2012/12/09 16:45:56 maekke Exp $
 
 EAPI=4
 
@@ -23,5 +23,5 @@ SRC_URI="http://extensions.libreoffice.org/extension-center/hunspell-is-the-icel
 
 LICENSE="CCPL-Attribution-ShareAlike-3.0"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~mips ppc ppc64 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd"
 IUSE=""
