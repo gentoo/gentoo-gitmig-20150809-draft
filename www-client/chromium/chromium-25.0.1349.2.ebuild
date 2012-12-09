@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-25.0.1349.2.ebuild,v 1.1 2012/12/08 04:39:15 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-25.0.1349.2.ebuild,v 1.2 2012/12/09 23:10:34 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_DEPEND="2:2.6"
@@ -47,6 +47,7 @@ RDEPEND="app-arch/bzip2
 	pulseaudio? ( media-sound/pulseaudio )
 	system-ffmpeg? ( >=media-video/ffmpeg-1.0 )
 	>=net-libs/libsrtp-1.4.4_p20121108
+	net-libs/webkit-gtk
 	sys-apps/dbus
 	sys-apps/pciutils
 	sys-libs/zlib[minizip]
@@ -171,7 +172,6 @@ src_prepare() {
 		\! -path 'third_party/libjingle/*' \
 		\! -path 'third_party/libphonenumber/*' \
 		\! -path 'third_party/libusb/libusb.h' \
-		\! -path 'third_party/libva/*' \
 		\! -path 'third_party/libvpx/libvpx.h' \
 		\! -path 'third_party/libxml/chromium/*' \
 		\! -path 'third_party/libXNVCtrl/*' \
