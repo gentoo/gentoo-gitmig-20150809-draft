@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7232 2012/12/09 01:23:14 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7233 2012/12/09 09:30:50 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Dec 2012; Markos Chandras <hwoarang@gentoo.org> license_groups:
+  Add CeCILL-C to MISC-FREE
 
   09 Dec 2012; Anthony G. Basile <blueness@gentoo.org> profiles.desc:
   Add hardened/linux/uclibc/arm/armv7a to profiles.desc list
