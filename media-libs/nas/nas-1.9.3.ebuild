@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.9.3.ebuild,v 1.2 2012/12/03 23:14:19 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.9.3.ebuild,v 1.3 2012/12/09 16:16:36 hasufell Exp $
 
 inherit eutils toolchain-funcs
 
@@ -41,23 +41,31 @@ src_compile() {
 #	touch doc/man/lib/tmp.{_man,man}
 
 	# EXTRA_LDOPTIONS, SHLIBGLOBALSFLAGS #336564#c2
-	emake \
-		AR="$(tc-getAR) clq" \
-		AS="$(tc-getAS)" \
-		CC="$(tc-getCC)" \
-		CDEBUGFLAGS="${CFLAGS}" \
-		CXX="$(tc-getCXX)" \
-		CXXDEBUFLAGS="${CXXFLAGS}" \
-		EXTRA_LDOPTIONS="${LDFLAGS}" \
-		LD="$(tc-getLD)" \
-		MAKE="${MAKE:-gmake}" \
-		RANLIB="$(tc-getRANLIB)" \
-		SHLIBGLOBALSFLAGS="${LDFLAGS}" \
-		World || die
+	local emakeopts=(
+		AR="$(tc-getAR) clq"
+		AS="$(tc-getAS)"
+		CC="$(tc-getCC)"
+		CDEBUGFLAGS="${CFLAGS}"
+		CXX="$(tc-getCXX)"
+		CXXDEBUFLAGS="${CXXFLAGS}"
+		EXTRA_LDOPTIONS="${LDFLAGS}"
+		LD="$(tc-getLD)"
+		MAKE="${MAKE:-gmake}"
+		RANLIB="$(tc-getRANLIB)"
+		SHLIBGLOBALSFLAGS="${LDFLAGS}"
+		)
+
+	# dumb fix for parallel make issue wrt #446598, Imake sux
+	emake "${emakeopts[@]}" -C server/dia all || die
+	emake "${emakeopts[@]}" -C server/dda/voxware all || die
+	emake "${emakeopts[@]}" -C server/os all || die
+
+	emake "${emakeopts[@]}" World || die
 }
 
 src_install() {
-	emake DESTDIR="${D}" install install.man || die
+	# ranlib is used at install phase too wrt #446600
+	emake RANLIB="$(tc-getRANLIB)" DESTDIR="${D}" install install.man || die
 	dodoc BUILDNOTES FAQ HISTORY README RELEASE TODO
 
 	if use doc; then
