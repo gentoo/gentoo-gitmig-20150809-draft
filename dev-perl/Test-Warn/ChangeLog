@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Warn
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Warn/ChangeLog,v 1.50 2012/12/08 17:04:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Warn/ChangeLog,v 1.51 2012/12/09 17:06:05 maekke Exp $
+
+  09 Dec 2012; Markus Meier <maekke@gentoo.org> Test-Warn-0.240.0.ebuild:
+  arm stable, bug #441256
 
   08 Dec 2012; Jeroen Roovers <jer@gentoo.org> Test-Warn-0.240.0.ebuild:
   Stable for HPPA (bug #441256).
