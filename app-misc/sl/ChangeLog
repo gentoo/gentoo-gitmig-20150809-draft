@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/sl
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sl/ChangeLog,v 1.30 2012/11/29 20:48:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sl/ChangeLog,v 1.31 2012/12/09 17:27:21 ago Exp $
+
+  09 Dec 2012; Agostino Sarubbo <ago@gentoo.org> sl-3.03-r3.ebuild:
+  Stable for ppc64, wrt bug #443874
 
   29 Nov 2012; Brent Baude <ranger@gentoo.org> sl-3.03-r3.ebuild:
   Marking sl-3.03-r3 ppc for bug 443784
