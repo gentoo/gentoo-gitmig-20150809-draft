@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/c-client
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.99 2012/12/02 20:39:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.100 2012/12/09 18:26:27 ago Exp $
+
+  09 Dec 2012; Agostino Sarubbo <ago@gentoo.org> c-client-2007f-r4.ebuild:
+  Stable for ppc64, wrt bug #445063
 
   02 Dec 2012; Markus Meier <maekke@gentoo.org> c-client-2007f-r4.ebuild:
   arm stable, bug #445063
