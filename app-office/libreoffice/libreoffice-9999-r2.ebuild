@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.140 2012/12/09 09:38:03 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.141 2012/12/09 09:59:01 scarabeus Exp $
 
 EAPI=4
 
@@ -119,6 +119,7 @@ COMMON_DEPEND="
 	>=media-libs/libcdr-0.0.5
 	media-libs/libvisio
 	>=net-misc/curl-7.21.4
+	net-misc/npapi-sdk
 	net-nds/openldap
 	sci-mathematics/lpsolve
 	virtual/jpeg
@@ -151,7 +152,6 @@ COMMON_DEPEND="
 		dev-java/tomcat-servlet-api:3.0
 	)
 	mysql? ( >=dev-db/mysql-connector-c++-1.1.0 )
-	nsplugin? ( net-misc/npapi-sdk )
 	opengl? (
 		virtual/glu
 		virtual/opengl
