@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/freeze/freeze-2.5.0.ebuild,v 1.20 2012/11/22 18:13:39 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/freeze/freeze-2.5.0.ebuild,v 1.21 2012/12/09 18:57:25 jer Exp $
 
 EAPI="2"
 inherit toolchain-funcs
@@ -14,8 +14,11 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
 IUSE=""
 
-RDEPEND="!<=media-libs/mlt-0.4.2
-	!media-libs/mlt[melt]"
+RDEPEND="
+	!<=media-libs/mlt-0.4.2
+	!app-forensics/sleuthkit
+	!media-libs/mlt[melt]
+"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
