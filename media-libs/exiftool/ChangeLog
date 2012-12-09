@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/exiftool
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/exiftool/ChangeLog,v 1.119 2012/12/09 15:09:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/exiftool/ChangeLog,v 1.120 2012/12/09 18:30:29 ago Exp $
+
+  09 Dec 2012; Agostino Sarubbo <ago@gentoo.org> exiftool-9.10.0.ebuild:
+  Stable for ppc64, wrt bug #441364
 
   09 Dec 2012; Agostino Sarubbo <ago@gentoo.org> exiftool-9.10.0.ebuild:
   Stable for ppc, wrt bug #441364
