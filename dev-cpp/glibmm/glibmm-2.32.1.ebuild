@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/glibmm-2.32.1.ebuild,v 1.9 2012/10/28 15:24:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/glibmm-2.32.1.ebuild,v 1.10 2012/12/09 22:05:30 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -11,7 +11,7 @@ inherit gnome2
 DESCRIPTION="C++ interface for glib2"
 HOMEPAGE="http://www.gtkmm.org"
 
-LICENSE="|| ( LGPL-2.1 GPL-2 )"
+LICENSE="LGPL-2.1+ GPL-2+" # GPL-2+ applies only to the build system
 SLOT="2"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE="doc debug examples test"
