@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/enblend
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/ChangeLog,v 1.48 2012/05/05 07:00:26 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/ChangeLog,v 1.49 2012/12/09 16:26:16 maekke Exp $
+
+*enblend-4.1 (09 Dec 2012)
+
+  09 Dec 2012; Markus Meier <maekke@gentoo.org> +enblend-4.1.ebuild:
+  version bump
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> enblend-4.0.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
