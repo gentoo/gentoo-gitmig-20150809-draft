@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/gst-plugins-libav
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libav/ChangeLog,v 1.2 2012/12/05 23:07:29 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libav/ChangeLog,v 1.3 2012/12/09 08:54:49 tetromino Exp $
+
+  09 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gst-plugins-libav-1.0.3.ebuild:
+  Restore accidentally dropped keywords (should have been copied from
+  gst-plugins-ffmpeg).
 
   05 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
   gst-plugins-libav-1.0.3.ebuild:
