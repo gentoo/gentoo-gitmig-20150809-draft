@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/isabelle/isabelle-2011.1-r1.ebuild,v 1.3 2012/12/05 10:09:32 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/isabelle/isabelle-2011.1-r1.ebuild,v 1.4 2012/12/09 09:24:29 gienah Exp $
 
 EAPI="5"
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.cl.cam.ac.uk/research/hvg/isabelle/dist/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0/${PV}"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 ALL_LOGICS="Pure FOL +HOL ZF CCL CTT Cube FOLP LCF Sequents"
 IUSE="${ALL_LOGICS} doc graphbrowsing ledit readline +proofgeneral test"
 
@@ -28,6 +28,7 @@ DEPEND=">=app-shells/bash-3.0
 		>=dev-lang/perl-5.8.8-r2"
 
 RDEPEND="dev-perl/libwww-perl
+	sci-mathematics/sha1-polyml
 	doc? (
 		virtual/latex-base
 		dev-tex/rail
@@ -79,6 +80,7 @@ src_prepare() {
 		-i "${S}/etc/settings" \
 		|| die "Could not configure Isabelle lib directory in etc/settings"
 	epatch "${FILESDIR}/${PN}-2011.1-graphbrowser.patch"
+	epatch "${FILESDIR}/${PN}-2011.1-libsha1.patch"
 	cat <<- EOF >> "${S}/etc/settings"
 
 		ISABELLE_GHC="${ROOT}usr/bin/ghc"
@@ -86,6 +88,7 @@ src_prepare() {
 		ISABELLE_SWIPL="${ROOT}usr/bin/swipl"
 		ISABELLE_JDK_HOME="\$(java-config --jdk-home)"
 		SCALA_HOME="${ROOT}usr/share/scala"
+		SHA1_HOME="/usr/$(get_libdir)/sha1-polyml"
 	EOF
 	if use ledit && !use readline; then
 		epatch "${FILESDIR}/${PN}-2011.1-reverse-line-editor-order.patch"
