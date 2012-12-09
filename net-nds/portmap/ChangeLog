@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/portmap
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/ChangeLog,v 1.50 2012/06/01 04:05:38 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/ChangeLog,v 1.51 2012/12/09 12:34:07 ulm Exp $
+
+  09 Dec 2012; Ulrich Müller <ulm@gentoo.org> portmap-6.0.ebuild,
+  portmap-9999.ebuild:
+  Fix LICENSE, bugs 446590 and 426102.
 
   01 Jun 2012; Zac Medico <zmedico@gentoo.org> portmap-6.0.ebuild,
   portmap-9999.ebuild:
