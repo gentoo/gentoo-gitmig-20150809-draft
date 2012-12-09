@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/open-vm-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/ChangeLog,v 1.66 2012/06/02 15:03:01 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/ChangeLog,v 1.67 2012/12/09 14:12:28 vadimk Exp $
+
+*open-vm-tools-9.2.2.893683 (09 Dec 2012)
+*open-vm-tools-2012.10.14.874563 (09 Dec 2012)
+
+  09 Dec 2012; Vadim Kuznetsov vadimk@gentoo.org
+  +open-vm-tools-2012.10.14.874563.ebuild, +open-vm-tools-9.2.2.893683.ebuild,
+  -open-vm-tools-2012.03.13.651368.ebuild:
+  version bump
 
   02 Jun 2012; Vadim Kuznetsov vadimk@gentoo.org
   open-vm-tools-2012.05.21.724730.ebuild:
@@ -406,4 +414,3 @@
   +open-vm-tools-0.0.20071121.64693.ebuild:
   Initial commit. This should be usable for both ESX server, workstation,
   player and normal server.
-
