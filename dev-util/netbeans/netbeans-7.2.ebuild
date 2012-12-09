@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-7.2.ebuild,v 1.2 2012/08/22 10:17:17 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-7.2.ebuild,v 1.3 2012/12/09 19:28:58 ago Exp $
 
 EAPI="4"
 inherit eutils java-pkg-2 java-ant-2
@@ -46,7 +46,7 @@ SRC_URI="linguas_af? ( ${ALL_URLS} )
 	linguas_zh_TW? ( ${ALL_URLS} )
 "
 LICENSE="|| ( CDDL GPL-2-with-linking-exception )"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE_NETBEANS_MODULES="
 	+netbeans_modules_apisupport
 	netbeans_modules_cnd
