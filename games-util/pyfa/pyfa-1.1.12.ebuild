@@ -1,15 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/pyfa-1.1.10.ebuild,v 1.1 2012/11/23 10:45:16 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/pyfa-1.1.12.ebuild,v 1.1 2012/12/09 21:37:27 tetromino Exp $
 
-EAPI="4"
-PYTHON_DEPEND="2:2.6"
-PYTHON_USE_WITH="sqlite threads"
+EAPI="5"
+PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_REQ_USE="sqlite,threads"
 
-inherit eutils gnome2-utils python
+inherit eutils gnome2-utils python-r1
 
 if [[ ${PV/_rc*/} == ${PV} ]] ; then
-	MY_PV=${PV}-inferno-1.2-src
+	MY_PV=${PV}-retribution-1.0.2-src
 	FOLDER=pyfa/stable/${PV}
 else
 	MY_PV=${PV/_rc/-stable-RC}-src
@@ -27,15 +27,12 @@ IUSE="+graph"
 
 RDEPEND="dev-python/sqlalchemy
 	dev-python/wxpython:2.8
-	graph? ( dev-python/matplotlib[wxwidgets] dev-python/numpy )"
-DEPEND="app-text/dos2unix"
+	graph? ( dev-python/matplotlib[wxwidgets] dev-python/numpy )
+	${PYTHON_DEPS}"
+DEPEND="app-text/dos2unix
+	${PYTHON_DEPS}"
 
 S=${WORKDIR}/${PN}
-
-pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
-}
 
 src_prepare() {
 	# get rid of CRLF line endings introduced in 1.1.10 so patches work
@@ -50,20 +47,32 @@ src_prepare() {
 	# do not try to save exported html to python sitedir
 	epatch "${FILESDIR}/${PN}-1.1.8-html-export-path.patch"
 
-	chmod 755 pyfa.py || die "chmod failed"
-	python_convert_shebangs -r -x 2 .
-	sed -e "s:%%SITEDIR%%:$(python_get_sitedir):" \
-		-e "s:%%EPREFIX%%:${EPREFIX}:" \
-		"${FILESDIR}/configforced.py" > configforced.py
+	# fix import path in the main script for systemwide installation
+	epatch "${FILESDIR}/${PN}-1.1.11-import-pyfa.patch"
+	touch __init__.py
+
+	pyfa_make_configforced() {
+		mkdir -p "${BUILD_DIR}" || die
+		sed -e "s:%%SITEDIR%%:$(python_get_sitedir):" \
+			-e "s:%%EPREFIX%%:${EPREFIX}:" \
+			"${FILESDIR}/configforced.py" > "${BUILD_DIR}/configforced.py"
+		sed -e "s:%%SITEDIR%%:$(python_get_sitedir):" \
+			pyfa.py > "${BUILD_DIR}/pyfa"
+	}
+	python_foreach_impl pyfa_make_configforced
 }
 
 src_install() {
-	local packagedir=$(python_get_sitedir)/${PN}
-	insinto "${packagedir}"
-	doins -r eos gui icons service config*.py info.py gpl.txt
-	exeinto "${packagedir}"
-	doexe ${PN}.py
-	dosym "${packagedir}/${PN}.py" /usr/bin/${PN}
+	pyfa_py_install() {
+		local packagedir=$(python_get_sitedir)/${PN}
+		insinto "${packagedir}"
+		doins -r eos gui icons service config*.py info.py __init__.py gpl.txt
+		doins "${BUILD_DIR}/configforced.py"
+		python_doscript "${BUILD_DIR}/pyfa"
+		python_optimize
+	}
+	python_foreach_impl pyfa_py_install
+
 	insinto /usr/share/${PN}
 	doins -r staticdata
 	dodoc readme.txt
@@ -80,10 +89,8 @@ pkg_preinst() {
 
 pkg_postinst() {
 	gnome2_icon_cache_update
-	python_mod_optimize ${PN}
 }
 
 pkg_postrm() {
 	gnome2_icon_cache_update
-	python_mod_cleanup ${PN}
 }
