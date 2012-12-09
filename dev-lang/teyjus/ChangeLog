@@ -1,0 +1,9 @@
+# ChangeLog for dev-lang/teyjus
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/teyjus/ChangeLog,v 1.1 2012/12/09 21:57:06 gienah Exp $
+
+*teyjus-2.0.2 (09 Dec 2012)
+
+  09 Dec 2012; Mark Wright <gienah@gentoo.org> +files/50teyjus-gentoo.el,
+  +files/teyjus-2.0.2-flags.patch, +metadata.xml, +teyjus-2.0.2.ebuild:
+  Add teyjus, fixes Bug 39631 - teyjus-1.0_beta33
