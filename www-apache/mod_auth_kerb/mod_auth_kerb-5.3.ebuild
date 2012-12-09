@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_kerb/mod_auth_kerb-5.3.ebuild,v 1.5 2012/10/16 02:24:43 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_kerb/mod_auth_kerb-5.3.ebuild,v 1.6 2012/12/09 16:47:53 ulm Exp $
 
 inherit apache-module
 
@@ -8,7 +8,7 @@ DESCRIPTION="An Apache authentication module using Kerberos."
 HOMEPAGE="http://modauthkerb.sourceforge.net/"
 SRC_URI="mirror://sourceforge/modauthkerb/${P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="BSD openafs-krb5-a HPND"
 SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE=""

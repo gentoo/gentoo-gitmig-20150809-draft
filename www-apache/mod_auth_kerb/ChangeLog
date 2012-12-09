@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_auth_kerb
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_kerb/ChangeLog,v 1.10 2012/11/27 19:04:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_kerb/ChangeLog,v 1.11 2012/12/09 16:47:53 ulm Exp $
+
+  09 Dec 2012; Ulrich Müller <ulm@gentoo.org> mod_auth_kerb-5.3.ebuild,
+  mod_auth_kerb-5.4.ebuild:
+  Fix LICENSE, see LICENSE file.
 
   27 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop apache herd as discussed in http://www.gossamer-
