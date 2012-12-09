@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.238 2012/10/29 14:52:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.239 2012/12/09 14:30:38 vadimk Exp $
+
+*vmware-workstation-9.0.1.894247 (09 Dec 2012)
+
+  09 Dec 2012; Vadim Kuznetsov vadimk@gentoo.org +files/vmware-9.0.rc,
+  +files/vmware-server-9.0.rc, +vmware-workstation-9.0.1.894247.ebuild:
+  vmware desktop 9.0.1 version bump. bugs 432918, 443022
 
   29 Oct 2012; Diego E. Pettenò <flameeyes@gentoo.org>
   vmware-workstation-7.1.6.744570.ebuild,
