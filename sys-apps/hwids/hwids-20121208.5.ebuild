@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/hwids-20121208.5.ebuild,v 1.1 2012/12/08 11:54:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/hwids-20121208.5.ebuild,v 1.2 2012/12/09 16:02:37 grobian Exp $
 
 EAPI=5
 inherit udev
@@ -22,9 +22,9 @@ S=${WORKDIR}/hwids-${P}
 
 src_configure() {
 	MAKEOPTS+=" UDEV=$(usex udev)"
-	MAKEOPTS+=" DOCDIR=/usr/share/doc/${PF}"
-	MAKEOPTS+=" MISCDIR=/usr/share/misc"
-	MAKEOPTS+=" HWDBDIR=$(udev_get_udevdir)/hwdb.d"
+	MAKEOPTS+=" DOCDIR=${EPREFIX}/usr/share/doc/${PF}"
+	MAKEOPTS+=" MISCDIR=${EPREFIX}/usr/share/misc"
+	MAKEOPTS+=" HWDBDIR=${EPREFIX}$(udev_get_udevdir)/hwdb.d"
 	MAKEOPTS+=" DESTDIR=${D}"
 }
 
