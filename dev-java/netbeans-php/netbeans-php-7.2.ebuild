@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-php/netbeans-php-7.2.ebuild,v 1.2 2012/12/09 19:27:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-php/netbeans-php-7.2.ebuild,v 1.3 2012/12/09 19:35:44 ago Exp $
 
 EAPI="4"
 WANT_ANT_TASKS="ant-nodeps"
@@ -16,7 +16,7 @@ SRC_URI="${SOURCE_URL}
 	http://hg.netbeans.org/binaries/CFC66D677007430C0841704183EED3A5DD72E5D9-phpsigfiles.zip
 	http://hg.netbeans.org/binaries/3D6AF75EA20D715887DAF47A3F063864EF0814C1-predefined_vars.zip"
 LICENSE="|| ( CDDL GPL-2-with-linking-exception )"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 S="${WORKDIR}"
 
