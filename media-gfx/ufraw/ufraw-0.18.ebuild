@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ufraw-0.18.ebuild,v 1.12 2012/05/29 17:41:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ufraw-0.18.ebuild,v 1.13 2012/12/09 16:36:27 maekke Exp $
 
 EAPI=4
 inherit autotools eutils fdo-mime gnome2-utils
@@ -40,6 +40,7 @@ src_configure() {
 	use gimp && myconf="--with-gtk"
 
 	econf \
+		--disable-silent-rules \
 		--without-cinepaint \
 		$(use_enable contrast) \
 		$(use_with fits cfitsio) \
