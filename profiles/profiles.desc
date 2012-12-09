@@ -165,6 +165,7 @@ amd64		hardened/linux/amd64/selinux				stable
 amd64		hardened/linux/amd64/no-multilib			stable
 amd64		hardened/linux/amd64/no-multilib/selinux		stable
 amd64		hardened/linux/uclibc/amd64				dev
+arm		hardened/linux/uclibc/arm/armv7a			dev
 ia64		hardened/linux/ia64					dev
 mips		hardened/linux/uclibc/mips				exp
 mips		hardened/linux/uclibc/mips/mipsel			exp

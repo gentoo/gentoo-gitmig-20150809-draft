@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7231 2012/12/08 21:01:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7232 2012/12/09 01:23:14 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Dec 2012; Anthony G. Basile <blueness@gentoo.org> profiles.desc:
+  Add hardened/linux/uclibc/arm/armv7a to profiles.desc list
 
   08 Dec 2012; Michał Górny <mgorny@gentoo.org> package.mask:
   Unmask the new versions of npapi-sdk.
