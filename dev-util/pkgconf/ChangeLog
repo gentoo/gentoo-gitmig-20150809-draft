@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pkgconf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.58 2012/12/02 10:43:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.59 2012/12/09 18:27:22 ago Exp $
+
+  09 Dec 2012; Agostino Sarubbo <ago@gentoo.org> pkgconf-0.8.9.ebuild:
+  Stable for ppc64, wrt bug #443788
 
   02 Dec 2012; Markus Meier <maekke@gentoo.org> pkgconf-0.8.9.ebuild:
   arm stable, bug #443788
