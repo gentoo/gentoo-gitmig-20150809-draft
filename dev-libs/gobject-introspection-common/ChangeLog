@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/gobject-introspection-common
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection-common/ChangeLog,v 1.14 2012/11/21 22:40:17 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection-common/ChangeLog,v 1.15 2012/12/09 18:34:13 tetromino Exp $
+
+  09 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gobject-introspection-common-1.32.1.ebuild,
+  -gobject-introspection-common-1.34.0.ebuild,
+  -gobject-introspection-common-1.34.1.1.ebuild,
+  gobject-introspection-common-1.34.2.ebuild:
+  Change license to HPND as recommended at
+  http://article.gmane.org/gmane.linux.gentoo.devel/80427; drop old.
 
 *gobject-introspection-common-1.34.2 (21 Nov 2012)
 
