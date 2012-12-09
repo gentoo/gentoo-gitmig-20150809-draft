@@ -1,14 +1,7 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/linux/arm/make.defaults,v 1.5 2012/04/03 11:46:32 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/linux/arm/make.defaults,v 1.6 2012/12/09 15:39:57 grobian Exp $
 
 ARCH="arm"
 # This is a pretty specific profile to the armv7 arch, we can change that later
 CHOST="armv7a-softfloat-linux-gnueabi"
-
-# gentoo-x86 tree is provided in prefix as-is. We are going to merge the two 
-# trees finally. The keyword arm-linux will be treated as an alias to arm. 
-# Please use arm whenever you want arm-linux.
-
-# Set a BINHOST for consumers of this profile, if people want to use it.
-PORTAGE_BINHOST="http://tinderbox.jolexa.net/arm-linux_armv7"
