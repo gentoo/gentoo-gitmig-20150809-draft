@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1039 2012/11/29 20:15:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1040 2012/12/09 12:48:27 ago Exp $
+
+  09 Dec 2012; Agostino Sarubbo <ago@gentoo.org> gentoo-sources-3.5.7.ebuild:
+  Stable for ppc64, wrt bug #438798
 
   29 Nov 2012; Brent Baude <ranger@gentoo.org> gentoo-sources-3.5.7.ebuild:
   Marking gentoo-sources-3.5.7 ppc for bug 438798
