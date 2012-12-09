@@ -179,6 +179,7 @@
     <remote-id type="cpan-module">Wx::Perl::SplashFast</remote-id>
     <remote-id type="cpan-module">Wx::Perl::SplashFast::App</remote-id>
     <remote-id type="cpan-module">Wx::Perl::TextValidator</remote-id>
+    <remote-id type="cpan-module">Wx::PerlTest</remote-id>
     <remote-id type="cpan-module">Wx::PlArtProvider</remote-id>
     <remote-id type="cpan-module">Wx::PlCommand</remote-id>
     <remote-id type="cpan-module">Wx::PlDataObjectSimple</remote-id>
@@ -277,6 +278,10 @@
     <remote-id type="cpan-module">Wx::WindowsPrintPreview</remote-id>
     <remote-id type="cpan-module">Wx::WindowsPrinter</remote-id>
     <remote-id type="cpan-module">Wx::XRC</remote-id>
+    <remote-id type="cpan-module">Wx::XSP::Enum</remote-id>
+    <remote-id type="cpan-module">Wx::XSP::Event</remote-id>
+    <remote-id type="cpan-module">Wx::XSP::Overload</remote-id>
+    <remote-id type="cpan-module">Wx::XSP::Virtual</remote-id>
     <remote-id type="cpan-module">Wx::ZipFSHandler</remote-id>
     <remote-id type="cpan-module">Wx::build::MakeMaker</remote-id>
     <remote-id type="cpan-module">Wx::build::MakeMaker::Any_OS</remote-id>
