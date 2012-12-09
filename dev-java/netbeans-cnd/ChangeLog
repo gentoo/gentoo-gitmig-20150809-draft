@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/netbeans-cnd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-cnd/ChangeLog,v 1.16 2012/12/06 12:25:30 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-cnd/ChangeLog,v 1.17 2012/12/09 18:56:20 ago Exp $
+
+  09 Dec 2012;  <ago@gentoo.org> netbeans-cnd-7.1.2.ebuild:
+  stable for amd64/x86 wrt to bug #417799
 
   06 Dec 2012; Miroslav Šulc <fordfrog@gentoo.org> netbeans-cnd-7.0.1.ebuild,
   netbeans-cnd-7.1.1.ebuild, netbeans-cnd-7.1.2.ebuild,
@@ -72,4 +75,3 @@
   30 Mar 2011; Miroslav Šulc <fordfrog@gentoo.org>
   +netbeans-cnd-7.0_rc1.ebuild, +metadata.xml:
   Added new ebuild
-

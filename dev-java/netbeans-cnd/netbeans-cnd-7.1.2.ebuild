@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-cnd/netbeans-cnd-7.1.2.ebuild,v 1.4 2012/12/06 12:25:30 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-cnd/netbeans-cnd-7.1.2.ebuild,v 1.5 2012/12/09 18:56:20 ago Exp $
 
 EAPI="4"
 WANT_ANT_TASKS="ant-nodeps"
@@ -17,7 +17,7 @@ SRC_URI="${SOURCE_URL}
 	http://hg.netbeans.org/binaries/84F10BEAA967E2896F0B43B0BBD08D834841F554-cnd-rfs-1.0.zip
 	http://hg.netbeans.org/binaries/61CC1E7181A8B26E9B3E1357C06B63F8F0077FA5-open-fortran-parser-0.7.1.2.zip"
 LICENSE="|| ( CDDL GPL-2-with-linking-exception )"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 S="${WORKDIR}"
 
