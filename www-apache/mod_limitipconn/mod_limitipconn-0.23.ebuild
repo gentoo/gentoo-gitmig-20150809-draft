@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_limitipconn/mod_limitipconn-0.23.ebuild,v 1.4 2012/03/06 14:15:09 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_limitipconn/mod_limitipconn-0.23.ebuild,v 1.5 2012/12/09 16:57:18 ulm Exp $
 
 inherit apache-module
 
@@ -8,7 +8,7 @@ DESCRIPTION="Allows administrators to limit the number of simultaneous downloads
 HOMEPAGE="http://dominia.org/djao/limitipconn2.html"
 SRC_URI="http://dominia.org/djao/limit/${P}.tar.bz2"
 
-LICENSE="as-is"
+LICENSE="Apache-2.0"
 SLOT="2"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
