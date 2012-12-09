@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/nose
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/ChangeLog,v 1.85 2012/10/05 12:23:54 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/ChangeLog,v 1.86 2012/12/09 14:45:33 mgorny Exp $
+
+*nose-1.1.2-r1 (09 Dec 2012)
+
+  09 Dec 2012; Michał Górny <mgorny@gentoo.org> +nose-1.1.2-r1.ebuild:
+  Migrate to distutils-r1.
 
   05 Oct 2012; Dirkjan Ochtman <djc@gentoo.org>
   -files/nose-0.10.0-tests-nonetwork.patch, -nose-1.0.0.ebuild,
@@ -322,4 +327,3 @@
 
   03 Feb 2007; Tiziano Müller <dev-zero@gentoo.org> +metadata.xml:
   Initial ebuild for bug #141662 (thanks to Brad Walker)
-
