@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/crda-1.0.1-r1.ebuild,v 1.8 2011/10/27 16:07:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/crda-1.0.1-r1.ebuild,v 1.9 2012/12/09 00:21:10 zerochaos Exp $
 
 EAPI="1"
 
@@ -9,7 +9,7 @@ inherit toolchain-funcs multilib
 DESCRIPTION="Central Regulatory Domain Agent for wireless networks."
 HOMEPAGE="http://wireless.kernel.org/en/developers/Regulatory"
 SRC_URI="http://wireless.kernel.org/download/crda/${P}.tar.bz2"
-LICENSE="as-is"
+LICENSE="ISC"
 SLOT="0"
 
 KEYWORDS="amd64 ppc ppc64 x86"
