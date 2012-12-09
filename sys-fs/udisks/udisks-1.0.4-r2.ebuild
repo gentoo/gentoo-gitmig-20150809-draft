@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.4-r2.ebuild,v 1.14 2012/11/24 20:05:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.4-r2.ebuild,v 1.15 2012/12/09 10:42:16 swift Exp $
 
 EAPI=4
 inherit eutils bash-completion-r1 linux-info
@@ -12,7 +12,7 @@ SRC_URI="http://hal.freedesktop.org/releases/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 sh sparc x86"
-IUSE="debug nls remote-access"
+IUSE="debug nls remote-access selinux"
 
 COMMON_DEPEND=">=dev-libs/dbus-glib-0.98
 	>=dev-libs/glib-2.28
@@ -22,7 +22,8 @@ COMMON_DEPEND=">=dev-libs/dbus-glib-0.98
 	>=sys-apps/sg3_utils-1.27.20090411
 	>=sys-block/parted-3
 	virtual/udev[gudev,hwdb]
-	>=sys-fs/lvm2-2.02.66"
+	>=sys-fs/lvm2-2.02.66
+	selinux? ( sec-policy/selinux-devicekit )"
 # util-linux -> mount, umount, swapon, swapoff (see also #403073)
 RDEPEND="${COMMON_DEPEND}
 	>=sys-apps/util-linux-2.20.1-r2
