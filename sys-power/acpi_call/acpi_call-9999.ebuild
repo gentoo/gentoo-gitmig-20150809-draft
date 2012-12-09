@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpi_call/acpi_call-9999.ebuild,v 1.2 2011/06/25 11:04:41 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpi_call/acpi_call-9999.ebuild,v 1.3 2012/12/09 20:29:19 ottxor Exp $
 
 EAPI=3
 
@@ -19,7 +19,7 @@ IUSE=""
 
 CONFIG_CHECK="ACPI"
 MODULE_NAMES="acpi_call(misc:${S})"
-BUILD_TARGETS="clean default"
+BUILD_TARGETS="default"
 
 src_compile(){
 	BUILD_PARAMS="KDIR=${KV_OUT_DIR} M=${S}"
