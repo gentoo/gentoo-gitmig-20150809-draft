@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/realpath
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/realpath/ChangeLog,v 1.27 2012/09/26 01:45:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/realpath/ChangeLog,v 1.28 2012/12/09 16:49:24 maekke Exp $
+
+  09 Dec 2012; Markus Meier <maekke@gentoo.org> realpath-1.17.ebuild:
+  arm stable, bug #441092
 
 *realpath-1.17 (26 Sep 2012)
 
