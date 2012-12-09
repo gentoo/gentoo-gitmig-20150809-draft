@@ -1,6 +1,9 @@
 # ChangeLog for www-client/surf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/surf/ChangeLog,v 1.22 2012/10/24 15:54:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/surf/ChangeLog,v 1.23 2012/12/09 23:25:38 jer Exp $
+
+  09 Dec 2012; Jeroen Roovers <jer@gentoo.org> surf-0.5.ebuild:
+  LICENSE should be "MIT" by Ulrich Müller (bug #446650).
 
   24 Oct 2012; Jeroen Roovers <jer@gentoo.org> -surf-0.4.1-r1.ebuild,
   -files/CVE-2012-0842.patch:
