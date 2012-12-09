@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.11.8.ebuild,v 1.2 2012/12/08 15:51:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.11.8.ebuild,v 1.3 2012/12/09 18:23:36 maekke Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ if [[ ${PV} == "9999" ]]; then
 	inherit git-2
 else
 	SRC_URI="http://dev.gentoo.org/~williamh/dist/${P}.tar.bz2"
-	KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+	KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 fi
 
 LICENSE="BSD-2"
