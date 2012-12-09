@@ -1,0 +1,12 @@
+--- teyjus-orig/source/OMakefile	2008-11-17 07:52:31.000000000 +1100
++++ teyjus/source/OMakefile	2012-03-24 00:27:22.431627679 +1100
+@@ -19,7 +19,8 @@
+ #
+ 
+ OCAMLINCLUDES += $(CMP) $(DIS) $(SIM) $(LOD)
+-CFLAGS += -g
++CFLAGS += -g -fPIC
++OCAML_LINK_FLAGS += -shared
+ 
+ ############################################################
+ # Compilation files
