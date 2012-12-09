@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wireless-tools
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.148 2012/12/08 12:03:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.149 2012/12/09 18:25:54 ago Exp $
+
+  09 Dec 2012; Agostino Sarubbo <ago@gentoo.org> wireless-tools-30_pre9.ebuild:
+  Stable for ppc64, wrt bug #445292
 
   08 Dec 2012; Markus Meier <maekke@gentoo.org> wireless-tools-30_pre9.ebuild:
   arm stable, bug #445292
