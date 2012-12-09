@@ -1,16 +1,18 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ecore-1.7.0.ebuild,v 1.2 2012/09/10 23:28:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ecore-1.7.3.ebuild,v 1.1 2012/12/09 10:53:32 tommy Exp $
 
 EAPI=2
 
-inherit virtualx enlightenment eutils
+#virtualx is required for tests, which are currently broken
+#inherit virtualx
+inherit enlightenment eutils
 
 DESCRIPTION="Enlightenment's core event abstraction layer and OS abstraction layer"
 SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
 
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="ares curl directfb +evas fbcon glib gnutls +inotify ipv6 opengl sdl ssl static-libs +threads tslib +X xcb xinerama xprint xscreensaver"
+IUSE="ares curl directfb +evas examples fbcon glib gnutls +inotify ipv6 opengl sdl ssl static-libs +threads tslib +X xcb xinerama xprint xscreensaver"
 
 RDEPEND=">=dev-libs/eina-1.7.0
 	ares? ( net-dns/c-ares )
@@ -44,6 +46,12 @@ DEPEND="${RDEPEND}"
 
 #tests depend on temp data from eina WORKDIR
 RESTRICT=test
+
+src_prepare() {
+	epatch "${FILESDIR}"/ecore-1.7_80526.patch
+
+	enlightenment_src_prepare
+}
 
 src_configure() {
 	local SSL_FLAGS="" EVAS_FLAGS="" X_FLAGS=""
@@ -170,6 +178,8 @@ src_configure() {
 	$(use_enable curl)
 	$(use_enable directfb ecore-directfb)
 	$(use_enable doc)
+	$(use_enable examples build-examples)
+	$(use_enable examples install-examples)
 	$(use_enable evas ecore-evas)
 	$(use_enable evas ecore-input-evas)
 	$(use_enable evas ecore-imf-evas)
