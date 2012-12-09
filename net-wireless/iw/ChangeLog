@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/iw
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/ChangeLog,v 1.56 2012/10/17 03:30:18 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/ChangeLog,v 1.57 2012/12/09 00:18:24 zerochaos Exp $
+
+  09 Dec 2012; Rick Farina <zerochaos@gentoo.org> iw-0.9.17.ebuild,
+  iw-0.9.22.ebuild, iw-3.2.ebuild, iw-3.3.ebuild, iw-3.4.ebuild, iw-3.5.ebuild,
+  iw-3.6.ebuild, iw-3.7.ebuild:
+  fixing license per bug #446504
 
 *iw-3.7 (17 Oct 2012)
 
