@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/netbeans-webcommon
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-webcommon/ChangeLog,v 1.1 2012/07/25 16:11:03 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-webcommon/ChangeLog,v 1.2 2012/12/09 19:28:20 ago Exp $
+
+  09 Dec 2012; <ago@gentoo.org> netbeans-webcommon-7.2.ebuild:
+  Stable for amd64, wrt bug #441170
 
 *netbeans-webcommon-7.2 (25 Jul 2012)
 

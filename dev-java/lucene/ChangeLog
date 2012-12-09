@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/lucene
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.91 2012/10/06 12:22:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.92 2012/12/09 19:29:26 ago Exp $
+
+  09 Dec 2012; <ago@gentoo.org> lucene-3.5.0.ebuild:
+  Stable for amd64, wrt bug #441170
 
   06 Oct 2012; Agostino Sarubbo <ago@gentoo.org> lucene-3.0.3.ebuild:
   Stable for amd64, wrt bug #436842

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-javafx/netbeans-javafx-7.2.ebuild,v 1.1 2012/07/25 16:07:52 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-javafx/netbeans-javafx-7.2.ebuild,v 1.2 2012/12/09 19:26:38 ago Exp $
 
 EAPI="4"
 WANT_ANT_TASKS="ant-nodeps"
@@ -15,7 +15,7 @@ SRC_URI="${SOURCE_URL}
 	http://hg.netbeans.org/binaries/A806D99716C5E9441BFD8B401176FDDEFC673022-bindex-2.2.jar
 	http://hg.netbeans.org/binaries/418FC62C8A6EF5311987B01FE389B1F88EFDDCA2-jemmy-2.3.0.0.jar"
 LICENSE="|| ( CDDL GPL-2-with-linking-exception )"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 S="${WORKDIR}"
 

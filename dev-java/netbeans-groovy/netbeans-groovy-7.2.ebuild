@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-groovy/netbeans-groovy-7.2.ebuild,v 1.1 2012/07/25 16:05:41 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-groovy/netbeans-groovy-7.2.ebuild,v 1.2 2012/12/09 19:24:59 ago Exp $
 
 EAPI="4"
 WANT_ANT_TASKS="ant-nodeps"
@@ -14,7 +14,7 @@ SRC_URI="${SOURCE_URL}
 	http://dev.gentoo.org/~fordfrog/distfiles/netbeans-7.2-r1-build.xml.patch.bz2
 	http://hg.netbeans.org/binaries/96A26BFA6E5AEA2E3C46DF44A19DE93A2ACD2366-groovy-all-1.8.6.jar"
 LICENSE="|| ( CDDL GPL-2-with-linking-exception )"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 S="${WORKDIR}"
 

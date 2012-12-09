@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/netbeans-apisupport
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-apisupport/ChangeLog,v 1.15 2012/07/25 16:03:28 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-apisupport/ChangeLog,v 1.16 2012/12/09 19:23:36 ago Exp $
+
+  09 Dec 2012; <ago@gentoo.org> netbeans-apisupport-7.2.ebuild:
+  Stable for amd64, wrt bug #441170
 
 *netbeans-apisupport-7.2 (25 Jul 2012)
 

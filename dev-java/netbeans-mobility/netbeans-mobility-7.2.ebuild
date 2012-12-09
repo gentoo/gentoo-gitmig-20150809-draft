@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-mobility/netbeans-mobility-7.2.ebuild,v 1.1 2012/07/25 16:08:46 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-mobility/netbeans-mobility-7.2.ebuild,v 1.2 2012/12/09 19:27:23 ago Exp $
 
 EAPI="4"
 WANT_ANT_TASKS="ant-nodeps"
@@ -19,7 +19,7 @@ SRC_URI="${SOURCE_URL}
 	http://hg.netbeans.org/binaries/D76B8334DCBDBE93297AA5C02B17D9A856E72246-jmunit4cldc11-1.2.1.jar
 	http://hg.netbeans.org/binaries/D63B2CB355170F1BC8E126E43021047F94243B70-perseus-nb-1.0.1.jar"
 LICENSE="|| ( CDDL GPL-2-with-linking-exception )"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 S="${WORKDIR}"
 

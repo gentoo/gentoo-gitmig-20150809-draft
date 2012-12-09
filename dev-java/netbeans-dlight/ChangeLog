@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/netbeans-dlight
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-dlight/ChangeLog,v 1.15 2012/07/25 16:04:20 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-dlight/ChangeLog,v 1.16 2012/12/09 19:24:07 ago Exp $
+
+  09 Dec 2012; <ago@gentoo.org> netbeans-dlight-7.2.ebuild:
+  Stable for amd64, wrt bug #441170
 
 *netbeans-dlight-7.2 (25 Jul 2012)
 
