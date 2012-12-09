@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/make
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.104 2012/12/09 15:11:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.105 2012/12/09 16:55:57 maekke Exp $
+
+  09 Dec 2012; Markus Meier <maekke@gentoo.org> make-3.82-r4.ebuild:
+  arm stable, bug #441528
 
   09 Dec 2012; Agostino Sarubbo <ago@gentoo.org> make-3.82-r4.ebuild:
   Stable for ppc, wrt bug #441528
