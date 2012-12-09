@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-7.9.2.ebuild,v 1.5 2012/11/22 00:18:04 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-7.9.2.ebuild,v 1.6 2012/12/09 10:23:41 ulm Exp $
 
 EAPI=4
 NEED_EMACS=22
@@ -45,7 +45,7 @@ src_install() {
 		find "${ED}/usr/share/doc/${PF}/contrib" -type f -name '.*' \
 			-exec rm -f '{}' '+'
 		# add the contrib subdirectory to load-path
-		sed -ie 's:\(.*@SITELISP@\)\(.*\):&\n\1/contrib\2:' \
+		sed -i -e 's:\(.*@SITELISP@\)\(.*\):&\n\1/contrib\2:' \
 			"${T}/${SITEFILE}" || die
 	fi
 
