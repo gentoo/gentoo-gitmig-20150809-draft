@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.106 2012/11/24 21:38:12 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.107 2012/12/09 00:05:22 blueness Exp $
+
+  09 Dec 2012; Anthony G. Basile <blueness@gentoo.org> package.use.mask:
+  Unmask media-sound/audacity[sbsms] since libsbsms now works, bug #436020
 
   24 Nov 2012; Mike Gilbert <floppym@gentoo.org> use.mask:
   Mask python_single_target values not supported on this arch.

@@ -1,10 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.51 2012/10/10 11:26:46 blueness Exp $
-
-# Anthony G. Basile <blueness@gentoo.org> (10 Oct 2012)
-# media-libs/libsbsms fails on mips, bug #436020
-media-sound/audacity sbsms
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.52 2012/12/09 00:05:22 blueness Exp $
 
 # Anthony G. Basile <blueness@gentoo.org> (16 Jul 2012)
 # Only work on amd64/x86
