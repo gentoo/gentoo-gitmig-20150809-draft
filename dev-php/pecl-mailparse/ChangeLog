@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/pecl-mailparse
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-mailparse/ChangeLog,v 1.5 2012/10/21 09:15:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-mailparse/ChangeLog,v 1.6 2012/12/09 17:15:44 ago Exp $
+
+  09 Dec 2012; Agostino Sarubbo <ago@gentoo.org> pecl-mailparse-2.1.6.ebuild:
+  Stable for ppc64, wrt bug #427024
 
   21 Oct 2012; Markus Meier <maekke@gentoo.org> pecl-mailparse-2.1.6.ebuild:
   x86 stable, bug #427024

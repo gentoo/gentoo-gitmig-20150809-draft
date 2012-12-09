@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-crack/pecl-crack-0.4-r2.ebuild,v 1.4 2012/10/21 09:16:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-crack/pecl-crack-0.4-r2.ebuild,v 1.5 2012/12/09 17:16:04 ago Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ USE_PHP="php5-3 php5-4"
 
 inherit php-ext-pecl-r2
 
-KEYWORDS="amd64 ppc ~ppc64 x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 
 DESCRIPTION="PHP interface to the cracklib libraries."
 LICENSE="PHP-3 CRACKLIB"
