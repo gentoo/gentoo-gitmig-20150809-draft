@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.180 2012/12/05 20:55:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.181 2012/12/09 18:48:53 axs Exp $
+
+*thunderbird-17.0-r2 (09 Dec 2012)
+
+  09 Dec 2012; Ian Stakenvicius <axs@gentoo.org> -thunderbird-17.0-r1.ebuild,
+  +thunderbird-17.0-r2.ebuild:
+  revbump to fix various bugs in 17 series
 
   05 Dec 2012; Agostino Sarubbo <ago@gentoo.org> thunderbird-10.0.11.ebuild:
   Stable for ppc64, wrt bug #444318
