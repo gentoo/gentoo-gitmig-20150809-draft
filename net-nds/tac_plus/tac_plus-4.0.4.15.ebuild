@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/tac_plus/tac_plus-4.0.4.15.ebuild,v 1.3 2012/07/13 15:00:38 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/tac_plus/tac_plus-4.0.4.15.ebuild,v 1.4 2012/12/09 10:27:58 ulm Exp $
 
 MY_P="tacacs+-F${PV}"
 S="${WORKDIR}/${MY_P}"
@@ -9,7 +9,7 @@ DESCRIPTION="An updated version of Cisco's TACACS+ server"
 HOMEPAGE="http://www.shrubbery.net/tac_plus/"
 SRC_URI="ftp://ftp.shrubbery.net/pub/tac_plus/${MY_P}.tar.gz"
 
-LICENSE="as-is GPL-2"
+LICENSE="HPND RSA GPL-2" # GPL-2 only for init script
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="debug finger tcpd skey"
