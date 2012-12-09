@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/whoosh
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/whoosh/ChangeLog,v 1.6 2012/09/13 16:35:49 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/whoosh/ChangeLog,v 1.7 2012/12/09 14:26:17 ago Exp $
+
+  09 Dec 2012; <ago@gentoo.org> whoosh-2.4.1.ebuild:
+  Stable for amd64, wrt bug #446082
 
   13 Sep 2012; Anthony G. Basile <blueness@gentoo.org> whoosh-2.4.0.ebuild,
   whoosh-2.4.1.ebuild:
