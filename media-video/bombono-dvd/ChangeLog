@@ -1,6 +1,12 @@
 # ChangeLog for media-video/bombono-dvd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/ChangeLog,v 1.33 2012/09/11 10:55:31 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/ChangeLog,v 1.34 2012/12/09 19:13:23 pinkbyte Exp $
+
+*bombono-dvd-1.2.1-r1 (09 Dec 2012)
+
+  09 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> +bombono-dvd-1.2.1-r1.ebuild,
+  +files/bombono-dvd-boost-1.51.0-fix.patch:
+  Revision bump, fix build with newer boost, wrt bug #425600
 
   11 Sep 2012; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
   Drop maintainership
