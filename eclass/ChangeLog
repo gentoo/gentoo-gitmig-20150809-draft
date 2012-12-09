@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.554 2012/12/08 15:58:47 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.555 2012/12/09 15:37:12 axs Exp $
+
+  09 Dec 2012; Ian Stakenvicius <axs@gentoo.org> mozcoreconf-2.eclass,
+  mozconfig-3.eclass:
+  updated mozilla eclasses to match mozilla-overlay
 
   08 Dec 2012; Michael Palimaka <kensington@gentoo.org> cmake-utils.eclass:
   Respect ASMFLAGS, wrt bug #432480. Permit ebuilds to define 'myctestargs'.
