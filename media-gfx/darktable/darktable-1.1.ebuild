@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/darktable-1.1.ebuild,v 1.1 2012/12/07 11:21:07 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/darktable-1.1.ebuild,v 1.2 2012/12/09 00:04:51 radhermit Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -63,10 +63,18 @@ PATCHES=(
 	"${FILESDIR}"/${P}-automagic-colord.patch
 )
 
-pkg_setup() {
+openmp_check() {
 	if use openmp ; then
 		tc-has-openmp || die "Please switch to an openmp compatible compiler"
 	fi
+}
+
+pkg_pretend() {
+	openmp_check
+}
+
+pkg_setup() {
+	openmp_check
 }
 
 src_prepare() {
@@ -103,4 +111,7 @@ src_install() {
 	export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL="1"
 	cmake-utils_src_install
 	unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
+
+	# remove unnecessary file (bug #446516)
+	rm "${D}"/usr/share/darktable/js/.DS_Store || die
 }
