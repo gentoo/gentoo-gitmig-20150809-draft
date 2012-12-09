@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-2.2-r1.ebuild,v 1.1 2012/11/23 18:05:35 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-2.2-r1.ebuild,v 1.2 2012/12/09 20:48:24 zerochaos Exp $
 
 EAPI="5"
 
@@ -24,16 +24,17 @@ IUSE="unicode X"
 COMMON_DEPEND="
 	dev-libs/libnl:3
 	sys-apps/pciutils
-	sys-devel/gettext
 	sys-libs/ncurses[unicode?]
 "
 
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
+	sys-devel/gettext
 "
 RDEPEND="
 	${COMMON_DEPEND}
 	X? ( x11-apps/xset )
+	virtual/libintl
 "
 
 DOCS=( TODO README )
