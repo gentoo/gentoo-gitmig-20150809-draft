@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/use.mask,v 1.11 2012/11/24 21:38:11 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/use.mask,v 1.12 2012/12/09 08:02:53 tetromino Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -amd64-fbsd
@@ -31,6 +31,10 @@
 -java
 
 # Other
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (09 Dec 2012)
+# Orc optimisations work fine on amd64 and x86
+-orc
 
 # Alexandre Rostovtsev <tetromino@gmail.com> (16 Jul 2012)
 # Only python:2.7 and :3.2 are keyworded on this arch

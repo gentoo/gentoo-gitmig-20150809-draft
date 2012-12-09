@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.102 2012/11/30 20:38:12 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.103 2012/12/09 08:02:53 tetromino Exp $
 
 # This file requires >=portage-2.1.1
 
@@ -131,20 +131,6 @@ media-video/mplayer2 -bluray
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (28 Nov 2010)
 # sys-devel/llvm is keyworded on x86
 media-libs/mesa -llvm
-
-# Arun Raghavan <ford_prefect@gentoo.org> (19 Nov 2010)
-# Mart Raudsepp <leio@gentoo.org> (27 Dec 2010)
-# Arun Raghavan <ford_prefect@gentoo.org> (30 Jan 2011)
-# Mart Raudsepp <leio@gentoo.org> (20 Mar 2011)
-# Mart Raudsepp <leio@gentoo.org> (12 Apr 2011)
-# Arun Raghavan <ford_prefect@gentoo.org> (27 Sep 2011)
-# Orc optimisations in gst-plugins-{base,a52dec,ffmpeg,good,bad} work fine on x86
->=media-libs/gst-plugins-base-0.10.30 -orc
->=media-plugins/gst-plugins-a52dec-0.10.16 -orc
->=media-plugins/gst-plugins-ffmpeg-0.10.11 -orc
->=media-libs/gst-plugins-good-0.10.28 -orc
->=media-libs/gst-plugins-bad-0.10.21 -orc
->=media-sound/pulseaudio-1.0 -orc
 
 # Dane Smith <c1pher@gentoo.org> (10 Nov 2010)
 # Valgrind is only available on amd64/x86/ppc/ppc64.
