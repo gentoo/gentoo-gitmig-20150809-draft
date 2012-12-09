@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Spiffy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spiffy/ChangeLog,v 1.31 2012/12/08 17:03:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spiffy/ChangeLog,v 1.32 2012/12/09 17:04:34 maekke Exp $
+
+  09 Dec 2012; Markus Meier <maekke@gentoo.org> Spiffy-0.310.0.ebuild:
+  arm stable, bug #441252
 
   08 Dec 2012; Jeroen Roovers <jer@gentoo.org> Spiffy-0.310.0.ebuild:
   Stable for HPPA (bug #441252).
