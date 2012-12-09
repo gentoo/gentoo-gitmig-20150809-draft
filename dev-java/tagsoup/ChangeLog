@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/tagsoup
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tagsoup/ChangeLog,v 1.39 2012/10/10 21:34:04 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tagsoup/ChangeLog,v 1.40 2012/12/09 17:39:27 ago Exp $
+
+  09 Dec 2012; Agostino Sarubbo <ago@gentoo.org> tagsoup-1.2.1.ebuild:
+  Stable for ppc64, wrt bug #421733
 
   10 Oct 2012;  <naota@gentoo.org> tagsoup-1.2.1.ebuild:
   Add ~x86-fbsd wrt bug #421733
