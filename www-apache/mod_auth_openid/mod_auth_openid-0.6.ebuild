@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_openid/mod_auth_openid-0.6.ebuild,v 1.3 2012/10/16 03:07:46 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_openid/mod_auth_openid-0.6.ebuild,v 1.4 2012/12/09 16:49:44 ulm Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ DESCRIPTION="An OpenID authentication module for the apache webserver"
 HOMEPAGE="http://trac.butterfat.net/public/mod_auth_openid"
 SRC_URI="http://butterfat.net/releases/mod_auth_openid/${P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
