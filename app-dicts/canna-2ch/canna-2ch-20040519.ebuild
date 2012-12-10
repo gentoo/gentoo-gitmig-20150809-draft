@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-2ch/canna-2ch-20040519.ebuild,v 1.3 2012/12/07 18:03:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-2ch/canna-2ch-20040519.ebuild,v 1.4 2012/12/10 00:11:39 jer Exp $
 
 inherit cannadic eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://dev.gentoo.org/~naota/files/${P}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 hppa ~ppc ~ppc64 ~sparc x86"
 IUSE="canna"
 
 DEPEND="canna? ( app-i18n/canna )"
