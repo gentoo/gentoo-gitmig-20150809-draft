@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnap/xsnap-1.5.9.ebuild,v 1.2 2012/03/19 19:12:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnap/xsnap-1.5.9.ebuild,v 1.3 2012/12/10 21:03:47 hasufell Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
@@ -9,7 +9,7 @@ DESCRIPTION="Program to interactively take a 'snapshot' of a region of the scree
 HOMEPAGE="ftp://ftp.ac-grenoble.fr/ge/Xutils/"
 SRC_URI="ftp://ftp.ac-grenoble.fr/ge/Xutils/${P}.tar.bz2"
 
-LICENSE="as-is"
+LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
