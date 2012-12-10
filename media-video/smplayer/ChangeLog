@@ -1,6 +1,9 @@
 # ChangeLog for media-video/smplayer
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.123 2012/12/05 12:14:08 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.124 2012/12/10 13:16:04 ago Exp $
+
+  10 Dec 2012; Agostino Sarubbo <ago@gentoo.org> smplayer-0.8.2.1.ebuild:
+  Add ~ppc, wrt bug #383945
 
 *smplayer-0.8.2.1 (05 Dec 2012)
 
