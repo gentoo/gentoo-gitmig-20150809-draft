@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/darcs
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/ChangeLog,v 1.40 2012/12/10 07:55:45 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/ChangeLog,v 1.41 2012/12/10 21:53:53 slyfox Exp $
+
+  10 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org> darcs-2.8.0.ebuild:
+  stable on alpha/ia64/sparc (bug #421351)
 
   10 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org> darcs-2.8.3-r1.ebuild:
   Ameld lower bounds for test depends.
