@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.219 2012/11/15 04:56:10 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.220 2012/12/10 17:24:54 phajdan.jr Exp $
+
+  10 Dec 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> -icu-50.1.ebuild:
+  Remove version with known C++11 problems.
 
 *icu-50.1-r2 (15 Nov 2012)
 
