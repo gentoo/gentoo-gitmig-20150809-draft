@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-3.0.1.ebuild,v 1.5 2012/12/01 10:19:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-3.0.1.ebuild,v 1.6 2012/12/10 11:27:44 mgorny Exp $
 
 EAPI=4
-PYTHON_COMPAT=(python2_6 python2_7 python3_1 python3_2 python3_3)
+PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2,3_3} )
 
 inherit distutils-r1
 
@@ -21,7 +21,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 # have to drop some keywords pending resolution of bug #438388
 #KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 
-IUSE="doc examples +threads"
+IUSE="doc examples test +threads"
 
 RDEPEND=">=dev-libs/libxml2-2.7.2
 	>=dev-libs/libxslt-1.1.15
@@ -32,13 +32,13 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
-# Necessary due to hackery in src_test().
-# Drop when that hackery is replaced with one respecting BUILD_DIR.
-DISTUTILS_IN_SOURCE_BUILD=1
+python_prepare_all() {
+	# Necessary due to hackery in src_test().
+	# Drop when that hackery is replaced with one respecting BUILD_DIR.
+	use test && DISTUTILS_IN_SOURCE_BUILD=1
 
-src_prepare() {
-	PATCHES=( "${FILESDIR}/${P}-skip-failing-test.patch" )
-	distutils-r1_src_prepare
+	local PATCHES=( "${FILESDIR}/${P}-skip-failing-test.patch" )
+	distutils-r1_python_prepare_all
 }
 
 python_test() {
@@ -46,31 +46,25 @@ python_test() {
 	[[ ${EPYTHON} == python3.* ]] && return
 
 	local module
-	for module in "${BUILD_DIR}"/lib/lxml/*.so; do
-		ln -fs "${module}" src/lxml/ || die
+	for module in lxml/etree lxml/objectify; do
+		cp -l build/lib.*/${module}.so src/${module}.so || die
 	done
 
-	local exit_status="0" test
+	local test
 	local PYTHONPATH=src/ # needed for selftest*
 	for test in test.py selftest.py selftest2.py; do
 		einfo "Running ${test}"
-		if ! "${PYTHON}" ${test}; then
-			eerror "${test} failed with ${EPYTHON}"
-			exit_status="1"
-		fi
+		"${PYTHON}" ${test} || die "Test ${test} fails with ${EPYTHON}"
 	done
-	return "${exit_status}"
 }
 
-src_install() {
-	distutils-r1_src_install
-
+python_install_all() {
 	if use doc; then
-		dohtml -r doc/html/*
-		dodoc *.txt
-		docinto doc
-		dodoc doc/*.txt
+		local DOCS=( *.txt doc/*.txt )
+		local HTML_DOCS=( doc/html/. )
 	fi
+
+	distutils-r1_python_install_all
 
 	if use examples; then
 		docinto examples
