@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/sip
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.232 2012/11/22 21:31:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.233 2012/12/10 11:06:59 pesa Exp $
+
+*sip-4.14.2 (10 Dec 2012)
+
+  10 Dec 2012; Davide Pesavento <pesa@gentoo.org> +sip-4.14.2.ebuild,
+  -files/sip-4.12.3-python-3.2.patch,
+  -files/sip-4.12.3-sip_api_is_py_method.patch, -sip-4.14.ebuild:
+  Version bump, remove old.
 
   22 Nov 2012; Markus Meier <maekke@gentoo.org> sip-4.13.3.ebuild:
   arm stable, bug #435074

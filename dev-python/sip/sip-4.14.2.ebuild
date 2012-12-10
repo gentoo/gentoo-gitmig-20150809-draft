@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.14.ebuild,v 1.5 2012/11/22 21:31:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.14.2.ebuild,v 1.1 2012/12/10 11:06:59 pesa Exp $
 
 EAPI="5"
 PYTHON_DEPEND="*"
@@ -63,28 +63,33 @@ src_prepare() {
 	fi
 
 	epatch "${FILESDIR}"/${PN}-4.9.3-darwin.patch
-	sed -i -e 's/-O2//g' specs/* || die
 
 	python_src_prepare
 }
 
 src_configure() {
 	configuration() {
-		local myconf=("$(PYTHON)"
-			configure.py
+		local myconf=(
+			"$(PYTHON)" configure.py
 			--bindir="${EPREFIX}/usr/bin"
 			--destdir="${EPREFIX}$(python_get_sitedir)"
 			--incdir="${EPREFIX}$(python_get_includedir)"
 			--sipdir="${EPREFIX}/usr/share/sip"
 			$(use debug && echo --debug)
+			AR="$(tc-getAR) cqs"
 			CC="$(tc-getCC)"
+			CFLAGS="${CFLAGS}"
+			CFLAGS_RELEASE=
 			CXX="$(tc-getCXX)"
+			CXXFLAGS="${CXXFLAGS}"
+			CXXFLAGS_RELEASE=
 			LINK="$(tc-getCXX)"
 			LINK_SHLIB="$(tc-getCXX)"
-			CFLAGS="${CFLAGS}"
-			CXXFLAGS="${CXXFLAGS}"
 			LFLAGS="${LDFLAGS}"
-			STRIP=":")
+			LFLAGS_RELEASE=
+			RANLIB=
+			STRIP=
+		)
 		echo "${myconf[@]}"
 		"${myconf[@]}"
 	}
