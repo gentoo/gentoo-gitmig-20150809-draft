@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/shish
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/shish/ChangeLog,v 1.7 2012/12/10 07:40:59 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/shish/ChangeLog,v 1.8 2012/12/10 12:00:37 pinkbyte Exp $
+
+*shish-0.7_pre3-r1 (10 Dec 2012)
+
+  10 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> +shish-0.7_pre3-r1.ebuild:
+  Revision bump: EAPI 5, fix silent building and respect CFLAGS wrt bug #439974
 
   10 Dec 2012; Benedikt Böhm <hollow@gentoo.org> metadata.xml:
   remove myself from metadata
