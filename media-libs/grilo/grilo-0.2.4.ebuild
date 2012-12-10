@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/grilo-0.2.2.ebuild,v 1.2 2012/10/28 15:13:51 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/grilo-0.2.4.ebuild,v 1.1 2012/12/10 02:40:29 tetromino Exp $
 
-EAPI="4"
+EAPI="5"
 GCONF_DEBUG="no" # --enable-debug only changes CFLAGS
 GNOME2_LA_PUNT="yes"
 PYTHON_DEPEND="test? 2"
@@ -15,10 +15,11 @@ inherit gnome2 vala python
 DESCRIPTION="A framework for easy media discovery and browsing"
 HOMEPAGE="https://live.gnome.org/Grilo"
 
-LICENSE="LGPL-2.1"
-SLOT="0.2"
+LICENSE="LGPL-2.1+"
+SLOT="0.2/1" # subslot is libgrilo-0.2 soname suffix
 KEYWORDS="~amd64 ~x86"
 IUSE="gtk examples +introspection +network test vala"
+REQUIRED_USE="test? ( introspection )"
 
 RDEPEND=">=dev-libs/glib-2.29.10:2
 	dev-libs/libxml2:2
@@ -30,7 +31,8 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	vala? ( $(vala_depend) )
 	test? (
-		dev-python/pygobject:2[introspection?]
+		dev-python/pygobject:2
+		dev-python/pygobject:3
 		media-plugins/grilo-plugins:0.2 )"
 # eautoreconf requires gnome-common
 
@@ -48,7 +50,6 @@ src_prepare() {
 	DOCS="AUTHORS NEWS README TODO"
 	# --enable-debug only changes CFLAGS, useless for us
 	G2CONF="${G2CONF}
-		--disable-maintainer-mode
 		--disable-static
 		--disable-debug
 		$(use_enable gtk test-ui)
@@ -61,15 +62,16 @@ src_prepare() {
 	sed -e '/SUBDIRS/s/examples//' \
 		-i Makefile.am -i Makefile.in || die
 
+	# Add missing file from tarball
+	cp "${FILESDIR}"/${PN}-0.1.16-constants.py \
+		tests/python/constants.py || die
+
 	use vala && vala_src_prepare
 	gnome2_src_prepare
 }
 
 src_test() {
-	if use introspection; then
-		# Fails to import constants ???
-		emake -C tests/python check PYTHON=$(PYTHON -2)
-	fi
+	emake check PYTHON=$(PYTHON -2)
 }
 
 src_install() {

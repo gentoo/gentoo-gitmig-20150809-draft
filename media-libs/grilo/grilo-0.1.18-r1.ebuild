@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/grilo-0.1.18-r1.ebuild,v 1.3 2012/10/04 14:56:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/grilo-0.1.18-r1.ebuild,v 1.4 2012/12/10 02:40:29 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no" # --enable-debug only changes CFLAGS
@@ -11,7 +11,7 @@ inherit autotools eutils gnome2
 DESCRIPTION="A framework for easy media discovery and browsing"
 HOMEPAGE="https://live.gnome.org/Grilo"
 
-LICENSE="LGPL-2.1"
+LICENSE="LGPL-2.1+"
 SLOT="0.1"
 KEYWORDS="amd64 x86"
 IUSE="doc examples gtk +introspection +network test vala"
@@ -28,7 +28,8 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-1.10 )
 	vala? ( dev-lang/vala:0.12[vapigen] )
 	test? (
-		dev-python/pygobject:2[introspection?]
+		dev-python/pygobject:2
+		dev-python/pygobject:3
 		media-plugins/grilo-plugins:0.1 )"
 # eautoreconf requires gnome-common
 
