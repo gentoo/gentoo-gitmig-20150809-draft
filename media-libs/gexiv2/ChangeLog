@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gexiv2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gexiv2/ChangeLog,v 1.8 2012/10/17 03:30:20 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gexiv2/ChangeLog,v 1.9 2012/12/10 07:48:18 hollow Exp $
+
+  10 Dec 2012; Benedikt Böhm <hollow@gentoo.org> metadata.xml:
+  remove myself and nutz from metadata
 
   17 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> gexiv2-0.4.1.ebuild:
   x86 stable wrt bug #432828

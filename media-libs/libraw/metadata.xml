@@ -2,15 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>graphics</herd>
-	<maintainer>
-		<email>hollow@gentoo.org</email>
-		<name>Benedikt Böhm</name>
-	</maintainer>
-	<maintainer>
-		<email>nutz@noova.de</email>
-		<name>Andreas Nüßlein</name>
-		<description>Proxy maintainer. Please CC on bugs.</description>
-	</maintainer>
 	<use>
 		<flag name="demosaic">Enable support for external interpolation algorithms</flag> 
 	</use>
