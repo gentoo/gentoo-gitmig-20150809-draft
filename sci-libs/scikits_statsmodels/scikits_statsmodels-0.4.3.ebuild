@@ -1,13 +1,15 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_statsmodels/scikits_statsmodels-0.4.3.ebuild,v 1.1 2012/07/09 16:52:37 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_statsmodels/scikits_statsmodels-0.4.3.ebuild,v 1.2 2012/12/10 19:29:07 bicatali Exp $
 
 EAPI=4
 
 SUPPORT_PYTHON_ABIS="1"
 DISTUTILS_SRC_TEST="nosetests"
 VIRTUALX_REQUIRED=test
-RESTRICT_PYTHON_ABIS="2.4 2.7-pypy-*"
+RESTRICT_PYTHON_ABIS="2.4 3.3 2.7-pypy-*"
+PYTHON_MODNAME="statsmodels"
+
 inherit distutils virtualx
 
 MYPN="${PN/scikits_/}"
@@ -22,15 +24,19 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples test"
 
-RDEPEND="dev-python/pandas
+RDEPEND="
+	dev-python/pandas
 	sci-libs/scikits
 	sci-libs/scipy
 	examples? ( dev-python/matplotlib )"
-DEPEND=">=dev-python/cython-0.15.1
+DEPEND="
+	>=dev-python/cython-0.15.1
 	dev-python/pandas
-	sci-libs/scipy
 	dev-python/setuptools
-	doc? ( dev-python/sphinx >=dev-python/ipython-0.12 )
+	sci-libs/scipy
+	doc? ( dev-python/matplotlib
+		   dev-python/sphinx
+		   >=dev-python/ipython-0.12 )
 	test? ( dev-python/nose )"
 
 S="${WORKDIR}/${MYP}"
@@ -46,7 +52,7 @@ src_install() {
 	find "${S}" -name \*LICENSE.txt -delete
 	distutils_src_install
 	remove_scikits() {
-		rm -f "${ED}"$(python_get_sitedir)/scikits/__init__.py || die
+		rm "${ED}"$(python_get_sitedir)/scikits/__init__.py || die
 	}
 	python_execute_function -q remove_scikits
 	use doc && dohtml -r build/sphinx/html/*
