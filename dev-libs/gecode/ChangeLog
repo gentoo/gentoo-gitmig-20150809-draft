@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gecode
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gecode/ChangeLog,v 1.3 2012/09/03 13:41:23 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gecode/ChangeLog,v 1.4 2012/12/10 07:42:36 hollow Exp $
+
+  10 Dec 2012; Benedikt Böhm <hollow@gentoo.org> metadata.xml:
+  remove myself from metadata
 
   03 Sep 2012; Michael Palimaka <kensington@gentoo.org> gecode-3.6.0.ebuild,
   gecode-3.7.3.ebuild:
