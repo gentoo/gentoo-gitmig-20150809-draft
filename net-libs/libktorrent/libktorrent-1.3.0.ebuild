@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libktorrent/libktorrent-1.3.0.ebuild,v 1.4 2012/11/15 01:22:13 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libktorrent/libktorrent-1.3.0.ebuild,v 1.5 2012/12/10 16:05:08 kensington Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ if [[ ${PV} != 9999* ]]; then
 	SRC_URI="http://ktorrent.org/downloads/${KTORRENT_VERSION}/${MY_P}.tar.bz2"
 	S="${WORKDIR}"/"${MY_P}"
 
-	KEYWORDS="amd64 ppc ~ppc64 x86"
+	KEYWORDS="amd64 ppc x86"
 else
 	KEYWORDS=""
 fi

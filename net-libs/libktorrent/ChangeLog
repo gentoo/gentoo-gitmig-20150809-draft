@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libktorrent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libktorrent/ChangeLog,v 1.44 2012/11/15 17:36:47 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libktorrent/ChangeLog,v 1.45 2012/12/10 16:05:08 kensington Exp $
+
+  10 Dec 2012; Michael Palimaka <kensington@gentoo.org>
+  libktorrent-1.3.0.ebuild:
+  Drop ppc64 keyword due to unkeyworded required dependencies.
 
   15 Nov 2012; Johannes Huber <johu@gentoo.org> -libktorrent-1.2.1.ebuild:
   Remove old.
