@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/b43-firmware
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/b43-firmware/ChangeLog,v 1.6 2012/11/20 19:32:48 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/b43-firmware/ChangeLog,v 1.7 2012/12/10 00:41:00 zerochaos Exp $
+
+  10 Dec 2012; Rick Farina <zerochaos@gentoo.org> b43-firmware-5.100.138.ebuild:
+  fix license as-is->Broadcom
 
   20 Nov 2012; Rick Farina <zerochaos@gentoo.org> metadata.xml:
   Adding myself to help with bug reports
