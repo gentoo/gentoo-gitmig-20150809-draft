@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/grilo-plugins
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/ChangeLog,v 1.14 2012/11/25 14:45:13 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/ChangeLog,v 1.15 2012/12/10 02:40:47 tetromino Exp $
+
+*grilo-plugins-0.2.4 (10 Dec 2012)
+
+  10 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -grilo-plugins-0.2.0.ebuild, -grilo-plugins-0.2.2.ebuild,
+  +grilo-plugins-0.2.4.ebuild:
+  Version bump, adds documentation, fixes various bugs. Update license. Drop
+  old.
 
 *grilo-plugins-0.2.3 (25 Nov 2012)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/grilo-plugins-0.1.18.ebuild,v 1.6 2012/10/04 14:57:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/grilo-plugins-0.1.18.ebuild,v 1.7 2012/12/10 02:40:47 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no" # --enable-debug only changes CFLAGS
@@ -11,7 +11,7 @@ inherit autotools eutils gnome2
 DESCRIPTION="A framework for easy media discovery and browsing"
 HOMEPAGE="https://live.gnome.org/Grilo"
 
-LICENSE="LGPL-2.1"
+LICENSE="LGPL-2.1+"
 SLOT="0.1"
 KEYWORDS="amd64 x86"
 IUSE="upnp +vimeo +youtube"

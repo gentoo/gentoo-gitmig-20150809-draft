@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/grilo-plugins-0.2.2.ebuild,v 1.1 2012/10/28 14:40:29 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/grilo-plugins-0.2.4.ebuild,v 1.1 2012/12/10 02:40:47 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no" # --enable-debug only changes CFLAGS
@@ -11,20 +11,19 @@ inherit gnome2
 DESCRIPTION="A framework for easy media discovery and browsing"
 HOMEPAGE="https://live.gnome.org/Grilo"
 
-LICENSE="LGPL-2.1"
+LICENSE="LGPL-2.1+"
 SLOT="0.2"
 KEYWORDS="~amd64 ~x86"
 IUSE="daap +dvd tracker upnp +vimeo +youtube"
 
 RDEPEND="
 	>=dev-libs/glib-2.28:2
-	>=media-libs/grilo-0.2.2:${SLOT}[network]
+	>=media-libs/grilo-0.2.3:${SLOT}[network]
 
 	dev-libs/gmime:2.6
 	dev-libs/json-glib
 	dev-libs/libxml2:2
 	dev-db/sqlite:3
-	net-libs/rest:0.7
 
 	daap? ( >=net-libs/libdmapsharing-2.9.12:3.0 )
 	dvd? ( >=dev-libs/totem-pl-parser-3.4.1 )
@@ -33,13 +32,16 @@ RDEPEND="
 		>=dev-libs/libgdata-0.9.1
 		>=media-libs/libquvi-0.4.0 )
 	upnp? (
+		net-libs/gssdp
 		>=net-libs/gupnp-0.13
 		>=net-libs/gupnp-av-0.5 )
 	vimeo? (
-		net-libs/libsoup:2.4
-		dev-libs/libgcrypt )
+		dev-libs/libgcrypt
+		media-libs/libquvi )
 "
 DEPEND="${RDEPEND}
+	app-text/docbook-xml-dtd:4.5
+	app-text/gnome-doc-utils
 	virtual/pkgconfig
 "
 
@@ -47,6 +49,7 @@ src_prepare() {
 	DOCS="AUTHORS NEWS README"
 	# --enable-debug only changes CFLAGS, useless for us
 	G2CONF="${G2CONF}
+		--e
 		--disable-static
 		--disable-debug
 		--disable-uninstalled"
