@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/groovy
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/ChangeLog,v 1.50 2012/01/28 09:43:04 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/ChangeLog,v 1.51 2012/12/10 17:31:18 ago Exp $
+
+  10 Dec 2012; Agostino Sarubbo <ago@gentoo.org> groovy-1.8.5.ebuild:
+  Add ~ppc, wrt bug #401145
 
 *groovy-1.8.5 (28 Jan 2012)
 
