@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/fasta/fasta-35.4.10.ebuild,v 1.8 2011/11/21 15:30:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/fasta/fasta-35.4.10.ebuild,v 1.9 2012/12/10 19:48:44 jlec Exp $
 
 EAPI="2"
 
@@ -13,22 +13,10 @@ SRC_URI="http://faculty.virginia.edu/wrpearson/${PN}/${PN}3/${P}.tar.gz"
 LICENSE="fasta"
 SLOT="0"
 KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
-IUSE="debug icc sse2 test"
+IUSE="debug sse2 test"
 
-DEPEND="
-	icc? ( dev-lang/icc )
-	test? ( app-shells/tcsh )"
+DEPEND="test? ( app-shells/tcsh )"
 RDEPEND=""
-
-pkg_setup() {
-	if use icc; then
-		elog "Please make your CFLAGS are supported by icc"
-		elog "Either make sure they are set in /etc/make.conf"
-		elog "or run"
-		elog "env CFLAGS="..." emerge fasta"
-		epause 5
-	fi
-}
 
 src_prepare() {
 	CC_ALT=
@@ -37,7 +25,7 @@ src_prepare() {
 
 	use debug && append-flags -DDEBUG
 
-	if use icc ; then
+	if [[ $(tc-getCC) == *icc* ]]; then
 		CC_ALT=icc
 		ALT="${ALT}_icc"
 	else
@@ -49,7 +37,7 @@ src_prepare() {
 	if use sse2 ; then
 		ALT="${ALT}_sse2"
 		append-flags -msse2
-		use icc || append-flags -ffast-math
+		[[ $(tc-getCC) == *icc* ]] || append-flags -ffast-math
 	fi
 
 	export CC_ALT="${CC_ALT}"

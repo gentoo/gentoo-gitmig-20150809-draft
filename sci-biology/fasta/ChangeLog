@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/fasta
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/fasta/ChangeLog,v 1.7 2011/11/21 15:30:09 jlec Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/fasta/ChangeLog,v 1.8 2012/12/10 19:48:44 jlec Exp $
+
+  10 Dec 2012; Justin Lecher <jlec@gentoo.org> fasta-35.4.10.ebuild,
+  metadata.xml:
+  Drop hardwired icc support
 
   21 Nov 2011; Justin Lecher <jlec@gentoo.org> fasta-35.4.10.ebuild:
   keyworded for ~x86-macos ~x64-macos, tested by Johan Hattne #390123
