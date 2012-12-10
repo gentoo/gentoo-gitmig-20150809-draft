@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/libraw-0.14.7.ebuild,v 1.3 2012/09/23 08:00:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/libraw-0.14.7.ebuild,v 1.4 2012/12/10 18:44:05 bicatali Exp $
 
 EAPI="4"
 
@@ -18,7 +18,7 @@ SRC_URI="http://www.libraw.org/data/${MY_P}.tar.gz
 # http://www.libraw.org/data/LICENSE.LibRaw.pdf
 LICENSE="LGPL-2.1 CDDL GPL-2 GPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 IUSE="demosaic examples jpeg2k +lcms openmp static-libs"
 
 RDEPEND="jpeg2k? ( media-libs/jasper )
