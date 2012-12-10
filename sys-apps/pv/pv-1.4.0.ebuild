@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pv/pv-1.4.0.ebuild,v 1.1 2012/12/10 12:04:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pv/pv-1.4.0.ebuild,v 1.2 2012/12/10 21:40:36 jer Exp $
 
 EAPI="4"
 
@@ -30,6 +30,13 @@ src_configure() {
 		fi
 	done
 	econf $(use_enable nls)
+}
+
+src_test() {
+	if ! has_version sys-apps/usleep; then
+		sed -i -e 's:usleep 200000 || ::g' tests/019-remote-cksum || die
+	fi
+	default
 }
 
 src_compile() {
