@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.556 2012/12/09 20:56:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.557 2012/12/10 16:47:55 polynomial-c Exp $
+
+  10 Dec 2012; Lars Wendler <polynomial-c@gentoo.org> mozcoreconf-2.eclass:
+  Added changes to mozcoreconf-2.eclass on request by Anarchy.
 
   09 Dec 2012; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
   Fix python-exec symlink generation for Prefix. Thanks to Fabian Groffen for

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozcoreconf-2.eclass,v 1.24 2012/12/09 15:37:12 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozcoreconf-2.eclass,v 1.25 2012/12/10 16:47:55 polynomial-c Exp $
 #
 # mozcoreconf.eclass : core options for mozilla
 # inherit mozconfig-2 if you need USE flags
@@ -216,13 +216,14 @@ mozconfig_init() {
 		fi
 
 	mozconfig_annotate disable_update_strip \
-		--disable-installer \
 		--disable-pedantic \
 		--disable-updater \
 		--disable-strip \
 		--disable-install-strip
 		if ! $(mozversion_is_new_enough) ; then
-			mozconfig_annotate disable_update_strip --disable-strip-libs
+			mozconfig_annotate disable_update_strip \
+				--disable-installer \
+				--disable-strip-libs
 		fi
 
 	if [[ ${PN} != seamonkey ]]; then
