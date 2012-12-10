@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1145 2012/12/08 18:00:05 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1146 2012/12/10 01:32:01 zmedico Exp $
+
+*portage-2.1.11.35 (10 Dec 2012)
+
+  10 Dec 2012; Zac Medico <zmedico@gentoo.org> +portage-2.1.11.35.ebuild,
+  -portage-2.1.11.34.ebuild:
+  2.1.11.35 version bump. This fixes bug #442086 (don't suggest autounmask USE
+  changes for use-dep defaults) and bug #446666 (emerge ValueError regression
+  triggered by autoumask and use-dep defaults). Bug #445274 tracks all bugs
+  fixed since portage-2.1.11.31.
 
 *portage-2.2.0_alpha145 (08 Dec 2012)
 
