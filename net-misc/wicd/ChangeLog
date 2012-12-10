@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.131 2012/12/10 18:05:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.132 2012/12/10 18:06:41 ago Exp $
+
+  10 Dec 2012;  <ago@gentoo.org> -wicd-1.7.1_beta2-r4.ebuild,
+  -wicd-1.7.1_pre20120127.ebuild, -wicd-1.7.2.1.ebuild, -wicd-1.7.2.3.ebuild,
+  -wicd-1.7.2.4.ebuild:
+  Remove old
 
   10 Dec 2012; Agostino Sarubbo <ago@gentoo.org> wicd-1.7.2.4-r2.ebuild:
   Add ~ppc64, wrt bug #401833
