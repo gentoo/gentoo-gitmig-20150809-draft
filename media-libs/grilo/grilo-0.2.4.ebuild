@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/grilo-0.2.4.ebuild,v 1.1 2012/12/10 02:40:29 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/grilo-0.2.4.ebuild,v 1.2 2012/12/10 11:53:16 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no" # --enable-debug only changes CFLAGS
@@ -82,7 +82,7 @@ src_install() {
 	# Prevent file collision with other slot
 	if use vala; then
 		mv "${ED}usr/bin/grilo-simple-playlist" \
-			"${ED}usr/bin/grilo-simple-playlist-${SLOT}" || die
+			"${ED}usr/bin/grilo-simple-playlist-${SLOT%/*}" || die
 	fi
 
 	if use examples; then
