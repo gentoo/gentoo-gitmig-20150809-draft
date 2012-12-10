@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kdiff3
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/ChangeLog,v 1.63 2012/11/30 05:52:02 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/ChangeLog,v 1.64 2012/12/10 16:11:12 kensington Exp $
+
+  10 Dec 2012; Michael Palimaka <kensington@gentoo.org> kdiff3-0.9.97-r1.ebuild,
+  kdiff3-0.9.97.ebuild:
+  Drop ppc64 keyword due to unkeyworded required dependencies.
 
 *kdiff3-0.9.97-r1 (30 Nov 2012)
 
