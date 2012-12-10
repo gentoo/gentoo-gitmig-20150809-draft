@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.346 2012/12/08 05:14:00 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.347 2012/12/10 01:57:47 williamh Exp $
+
+  10 Dec 2012; William Hubbs <williamh@gentoo.org> dhcpcd-5.6.4.ebuild:
+  add a call to epatch_user for bug #446366, thanks to Toralf Forster.
 
   08 Dec 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> dhcpcd-5.6.4.ebuild:
   x86 stable wrt bug #446283

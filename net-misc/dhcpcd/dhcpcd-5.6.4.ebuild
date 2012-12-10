@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-5.6.4.ebuild,v 1.6 2012/12/08 05:14:00 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-5.6.4.ebuild,v 1.7 2012/12/10 01:57:47 williamh Exp $
 
 EAPI=4
 
@@ -25,6 +25,7 @@ DEPEND=""
 RDEPEND=""
 
 src_prepare() {
+	epatch_user
 	if ! use zeroconf; then
 		elog "Disabling zeroconf support"
 		{
