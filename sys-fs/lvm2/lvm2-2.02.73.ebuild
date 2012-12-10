@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.73.ebuild,v 1.8 2012/11/28 10:55:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.73.ebuild,v 1.9 2012/12/10 20:24:11 robbat2 Exp $
 
 EAPI=2
 inherit eutils multilib toolchain-funcs autotools linux-info
@@ -19,7 +19,7 @@ IUSE="readline +static clvm cman +lvm1 selinux"
 DEPEND_COMMON="!!sys-fs/device-mapper
 	clvm? ( =sys-cluster/dlm-2*
 			cman? ( =sys-cluster/cman-2* ) )
-	virtual/udev"
+	~virtual/udev-0"
 
 RDEPEND="${DEPEND_COMMON}
 	!<sys-apps/openrc-0.4
