@@ -10,8 +10,6 @@
 		OpenGL</flag>
 	<flag name="introspection">Use <pkg>dev-libs/gobject-introspection</pkg>
 		for introspection</flag>
-	<flag name="seed">Install swell-foop and lightsoff which are written in 
-		JavaScript using <pkg>dev-libs/seed</pkg></flag>
 	<flag name="sudoku">Install the game Sudoku which uses
 		<pkg>dev-python/pygobject</pkg> and introspection</flag>
 </use>
