@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/serf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.75 2012/12/10 12:23:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.76 2012/12/10 15:37:11 pinkbyte Exp $
+
+  10 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> serf-1.1.1.ebuild:
+  Add static-libs USE flag, wrt bug #446722
 
   10 Dec 2012; Agostino Sarubbo <ago@gentoo.org> serf-1.1.1.ebuild:
   Stable for ppc64, wrt bug #446524
