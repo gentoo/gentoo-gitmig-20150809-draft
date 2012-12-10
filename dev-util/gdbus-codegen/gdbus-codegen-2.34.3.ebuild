@@ -1,13 +1,13 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/gdbus-codegen-2.34.3.ebuild,v 1.1 2012/11/27 07:32:22 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/gdbus-codegen-2.34.3.ebuild,v 1.2 2012/12/10 10:21:20 tetromino Exp $
 
 EAPI="5"
 GNOME_ORG_MODULE="glib"
-PYTHON_COMPAT="python2_5 python2_6 python2_7 python3_1 python3_2"
-PYTHON_USE="xml"
+PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2,3_3} )
+PYTHON_REQ_USE="xml"
 
-inherit eutils gnome.org python-distutils-ng
+inherit eutils gnome.org distutils-r1
 
 DESCRIPTION="GDBus code and documentation generator"
 HOMEPAGE="http://www.gtk.org/"
@@ -17,8 +17,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE=""
 
-RDEPEND=""
-DEPEND=""
+RDEPEND="${PYTHON_DEPS}"
+DEPEND="${RDEPEND}"
 
 # To prevent circular dependencies with glib[test]
 PDEPEND=">=dev-libs/glib-${PV}:2"
@@ -30,7 +30,7 @@ python_prepare_all() {
 	sed -e "s:\"/usr/local\":\"${EPREFIX}/usr\":" \
 		-i config.py || die "sed config.py failed"
 
-	mv gdbus-codegen.in gdbus-codegen || die "mv failed"
+	sed -e 's:#!@PYTHON@:#!/usr/bin/env python:' gdbus-codegen.in > gdbus-codegen || die
 	cp "${FILESDIR}/setup.py-2.32.4" setup.py || die "cp failed"
 	sed -e "s/@PV@/${PV}/" -i setup.py || die "sed setup.py failed"
 }
