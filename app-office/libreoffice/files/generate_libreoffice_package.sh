@@ -5,8 +5,8 @@
 #  * for amd64: CFLAGS="-march=x86-64 -mtune=generic -O2 -pipe -g"
 
 # What you can set:
-VERSION="3.6.3.2"
-BINVERSION="3.6.3.2"
+VERSION="3.6.4.3"
+BINVERSION="3.6.4.3"
 OPTS="-v"
 USEFILE="/etc/portage/package.use/libreo"
 MYPKGDIR="$( portageq pkgdir )"
@@ -24,7 +24,7 @@ elif [ "$( uname -m )" = "i686" ] ; then
 	MYFLAGS="-march=i586 -mtune=generic -O2 -pipe -g"
 	ARCH="x86"
 else
-	die "Arch not supported"
+	die "Arch $( uname -m ) not supported"
 fi
 
 for i in \
@@ -39,12 +39,12 @@ for i in \
 	"/usr/bin/quickpkg"
 do
 	if [ ! -e "${i}" ] ; then
-		die "Missing something in your system"
+		die "Missing some basic utility in your system"
 	fi
 done
 
 # first the default subset of useflags
-IUSES_BASE="bash-completion branding cups dbus gstreamer gtk opengl svg vba webdav -aqua -binfilter -jemalloc -mysql -odk -postgres"
+IUSES_BASE="bash-completion branding cups dbus gstreamer gtk opengl vba webdav -aqua -binfilter -jemalloc -mysql -odk -postgres"
 
 ENABLE_EXTENSIONS="presenter-console presenter-minimizer"
 DISABLE_EXTENSIONS="nlpsolver pdfimport scripting-beanshell scripting-javascript wiki-publisher"
@@ -66,11 +66,12 @@ IUSES_K="kde"
 IUSES_NK="-kde"
 
 if [ -f /etc/portage/package.use ] ; then
-	die "Please save your package.use and make it as a directory"
+	die "Please save your package.use and re-create it as a directory"
 fi
 
-mkdir -p /etc/portage/package.use/
+mkdir -p /etc/portage/package.use/ || die
 
+mkdir -p "${MYPKGDIR}"
 if [ -z "${MYPKGDIR}" -o ! -d "${MYPKGDIR}" ] ; then
 	die "Anything goes wrong"
 fi
@@ -145,6 +146,6 @@ for name in ./libreoffice-*-${BINVERSION}.tbz2 ; do
 
 done
 
-rm -fr ${USEFILE}
+rm -f ${USEFILE} || die "Removing ${USEFILE} failed"
 
-rm -fr libreoffice*${VERSION}*.tbz2
+rm -f libreoffice*${VERSION}*.tbz2 || die "Removing un-split package files failed"
