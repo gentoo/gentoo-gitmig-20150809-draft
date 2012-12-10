@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-2.1.3.ebuild,v 1.3 2012/11/23 19:39:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-2.1.3.ebuild,v 1.4 2012/12/10 17:04:49 kensington Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ DESCRIPTION="A Latex Editor and TeX shell for KDE"
 HOMEPAGE="http://kile.sourceforge.net/"
 
 LICENSE="FDL-1.2 GPL-2"
-KEYWORDS="amd64 ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ~ppc x86"
 SLOT="4"
 IUSE="debug +pdf +png"
 
