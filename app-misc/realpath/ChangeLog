@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/realpath
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/realpath/ChangeLog,v 1.29 2012/12/10 00:33:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/realpath/ChangeLog,v 1.30 2012/12/10 08:56:34 pinkbyte Exp $
+
+  10 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> realpath-1.17.ebuild:
+  Stable on amd64, wrt bug #441092
 
   10 Dec 2012; Jeroen Roovers <jer@gentoo.org> realpath-1.17.ebuild:
   Stable for HPPA (bug #441092).
