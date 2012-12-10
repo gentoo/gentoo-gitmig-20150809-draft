@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/darcs-2.8.3-r1.ebuild,v 1.1 2012/11/25 06:24:06 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/darcs-2.8.3-r1.ebuild,v 1.2 2012/12/10 07:55:45 slyfox Exp $
 
 EAPI=5
 
@@ -50,11 +50,12 @@ DEPEND="${RDEPEND}
 		)
 		test? ( >=dev-haskell/cmdlib-0.2.1[profile?]
 				<dev-haskell/cmdlib-0.4[profile?]
+				>=dev-haskell/quickcheck-2.3
 				>=dev-haskell/shellish-0.1.3[profile?]
 				<dev-haskell/shellish-0.2[profile?]
-				dev-haskell/test-framework[profile?]
-				dev-haskell/test-framework-hunit[profile?]
-				dev-haskell/test-framework-quickcheck2[profile?]
+				>=dev-haskell/test-framework-0.4.0[profile?]
+				>=dev-haskell/test-framework-hunit-0.2.2[profile?]
+				>=dev-haskell/test-framework-quickcheck2-0.2.8[profile?]
 		)
 		"
 
