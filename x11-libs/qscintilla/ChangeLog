@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/qscintilla
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/ChangeLog,v 1.80 2012/09/09 15:54:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/ChangeLog,v 1.81 2012/12/10 12:27:22 pesa Exp $
+
+*qscintilla-2.7 (10 Dec 2012)
+
+  10 Dec 2012; Davide Pesavento <pesa@gentoo.org> +qscintilla-2.7.ebuild,
+  -files/qscintilla-2.4-designer.patch, -qscintilla-2.5.1.ebuild,
+  -qscintilla-2.6.1.ebuild:
+  Version bump, remove old.
 
   09 Sep 2012; Raúl Porcel <armin76@gentoo.org> qscintilla-2.6.2.ebuild:
   alpha/ia64/sparc stable wrt #429042
