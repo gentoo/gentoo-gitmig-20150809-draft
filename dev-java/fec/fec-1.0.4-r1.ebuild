@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fec/fec-1.0.4-r1.ebuild,v 1.3 2010/05/25 21:10:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fec/fec-1.0.4-r1.ebuild,v 1.4 2012/12/10 22:15:07 ulm Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -10,7 +10,7 @@ DESCRIPTION="Forword error correction libs"
 HOMEPAGE="http://www.onionnetworks.com/developers/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
-LICENSE="as-is"
+LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
