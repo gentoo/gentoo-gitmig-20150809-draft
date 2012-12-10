@@ -2,8 +2,19 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>vserver</herd>
+	<herd>proxy-maintainers</herd>
 	<maintainer>
 		<email>pva@gentoo.org</email>
 		<name>Peter Volkov</name>
+		<description>Primary maintainer</description>
 	</maintainer>
+	<maintainer>
+		<email>andreis.vinogradovs@gmail.com</email>
+		<name>Andreis Vinogradovs</name>
+		<description>Co-maintainer</description>
+	</maintainer>
+	<use>
+		<flag name='ploop'>Add support for ploop devices via <pkg>sys-cluster/ploop</pkg></flag>
+		<flag name='cgroup'>Add support to Linux kernel cgroup subsytem</flag>
+	</use>
 </pkgmetadata>
