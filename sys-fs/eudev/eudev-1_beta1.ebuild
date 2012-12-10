@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1_beta1.ebuild,v 1.1 2012/12/09 03:50:07 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1_beta1.ebuild,v 1.2 2012/12/10 21:05:59 axs Exp $
 
 EAPI=4
 
@@ -50,11 +50,15 @@ fi
 RDEPEND="${COMMON_DEPEND}
 	hwdb? ( sys-apps/hwids )
 	openrc? ( >=sys-fs/udev-init-scripts-18 )
+	!sys-fs/udev
+	!!<=sys-fs/udev-180
 	!sys-apps/coldplug
 	!sys-apps/systemd
 	!<sys-fs/lvm2-2.02.45
 	!sys-fs/device-mapper
 	!<sys-fs/udev-init-scripts-18"
+
+PDEPEND="=virtual/udev-196"
 
 udev_check_KV()
 {
@@ -68,10 +72,13 @@ udev_check_KV()
 pkg_pretend()
 {
 	if has_version "<sys-fs/udev-180"; then
-	ewarn "This package does not contain the libudev.so.0 library."
+	ewarn "This version of eudev does not contain the libudev.so.0 library."
 	ewarn "Although we try to ensure that library file is preseved, this will not work"
 	ewarn "if you manually --unmerge your current version of sys-fs/udev prior to "
 	ewarn "emerging this package, as may be necessary to resolve blockages."
+	ewarn ""
+	ewarn "When migrating from udev please emerge sys-fs/eudev-0 before upgrading to this"
+	ewarn "version"
 	ewarn ""
 	ewarn "Removal of libudev.so.0 will effectively break any active Xorg sessions, and "
 	ewarn "will probably have repercussions with other software as well.  A revdep-rebuild"
