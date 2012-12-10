@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/gentoopm
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.32 2012/12/02 14:38:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.33 2012/12/10 21:10:36 mgorny Exp $
+
+*gentoopm-0.2.7 (10 Dec 2012)
+
+  10 Dec 2012; Michał Górny <mgorny@gentoo.org> +gentoopm-0.2.7.ebuild:
+  Version bump. The new version fixes compatibility issues with PyPy and Python
+  3.3.
 
   02 Dec 2012; <ago@gentoo.org> gentoopm-0.2.6.ebuild:
   Stable for amd64, wrt bug #445178
