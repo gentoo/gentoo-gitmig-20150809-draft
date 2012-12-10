@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.283 2012/12/10 20:24:11 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.284 2012/12/10 20:41:45 axs Exp $
+
+  10 Dec 2012; Ian Stakenvicius <axs@gentoo.org> lvm2-2.02.67.ebuild,
+  lvm2-2.02.67-r1.ebuild, lvm2-2.02.67-r2.ebuild, lvm2-2.02.70.ebuild,
+  lvm2-2.02.70-r1.ebuild, lvm2-2.02.72.ebuild, lvm2-2.02.73.ebuild,
+  lvm2-2.02.73-r1.ebuild, lvm2-2.02.74.ebuild, lvm2-2.02.83.ebuild,
+  lvm2-2.02.84.ebuild, lvm2-2.02.85.ebuild, lvm2-2.02.88.ebuild:
+  fixed the virtual dependency as virtual/udev-0 wasn't inclusive enough
 
   10 Dec 2012; Robin H. Johnson <robbat2@gentoo.org> lvm2-2.02.67-r1.ebuild,
   lvm2-2.02.67-r2.ebuild, lvm2-2.02.67.ebuild, lvm2-2.02.70-r1.ebuild,
