@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/shish
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/shish/ChangeLog,v 1.6 2009/07/26 19:39:41 hollow Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/shish/ChangeLog,v 1.7 2012/12/10 07:40:59 hollow Exp $
+
+  10 Dec 2012; Benedikt Böhm <hollow@gentoo.org> metadata.xml:
+  remove myself from metadata
 
   26 Jul 2009; Benedikt Böhm <hollow@gentoo.org> metadata.xml:
   fix #279168
