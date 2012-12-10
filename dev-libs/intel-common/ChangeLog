@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/intel-common
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/intel-common/ChangeLog,v 1.5 2012/12/10 19:33:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/intel-common/ChangeLog,v 1.6 2012/12/10 21:15:31 jlec Exp $
+
+  10 Dec 2012; Justin Lecher <jlec@gentoo.org> intel-common-13.0.1.117.ebuild:
+  Manpagges are handled in the eclass
 
 *intel-common-13.0.1.117 (10 Dec 2012)
 

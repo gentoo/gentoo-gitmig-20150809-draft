@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/intel-common/intel-common-13.0.1.117.ebuild,v 1.1 2012/12/10 19:33:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/intel-common/intel-common-13.0.1.117.ebuild,v 1.2 2012/12/10 21:15:31 jlec Exp $
 
 EAPI=4
 
@@ -34,7 +34,6 @@ src_install() {
 	local path rootpath ldpath arch fenv=35intelsdp
 	cat > ${fenv} <<-EOF
 		NLSPATH=${INTEL_SDP_EDIR}/lib/locale/en_US/%N
-		MANPATH=${INTEL_SDP_EDIR}/man/en_US
 		INTEL_LICENSE_FILE="${INTEL_SDP_EDIR}"/licenses:"${EPREFIX}/opt/intel/license"
 	EOF
 	for arch in ${INTEL_ARCH}; do
