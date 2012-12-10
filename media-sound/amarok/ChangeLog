@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.438 2012/09/17 11:55:02 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.439 2012/12/10 16:16:17 kensington Exp $
+
+  10 Dec 2012; Michael Palimaka <kensington@gentoo.org> amarok-2.5.0-r4.ebuild,
+  amarok-2.6.0.ebuild:
+  Drop ppc64 keyword due to unkeyworded required dependencies.
 
   17 Sep 2012; Johannes Huber <johu@gentoo.org> amarok-2.6.0.ebuild:
   Raise deps on taglib wrt bug #435268.
