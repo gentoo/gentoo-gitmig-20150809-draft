@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-bearer/qt-bearer-4.8.4.ebuild,v 1.1 2012/12/05 03:16:22 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-bearer/qt-bearer-4.8.4.ebuild,v 1.2 2012/12/10 15:49:36 ago Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ SLOT="4"
 if [[ ${QT4_BUILD_TYPE} == live ]]; then
 	KEYWORDS=""
 else
-	KEYWORDS="~amd64 ~arm ~hppa ~x86 ~amd64-fbsd ~x86-fbsd"
+	KEYWORDS="~amd64 ~arm ~hppa ~ppc ~x86 ~amd64-fbsd ~x86-fbsd"
 fi
 IUSE="connman networkmanager"
 
