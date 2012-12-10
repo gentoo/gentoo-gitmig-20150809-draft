@@ -1,12 +1,12 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/kombu-2.4.10.ebuild,v 1.2 2012/12/08 13:04:31 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/kombu-2.4.10.ebuild,v 1.3 2012/12/10 12:20:04 idella4 Exp $
 
 EAPI="4"
 
 PYTHON_TESTS_RESTRICTED_ABIS="3.* 2.7-pypy-*"
 PYTHON_DEPEND="*:2.7"
-RESTRICT_PYTHON_ABIS="2.[4-6]"
+RESTRICT_PYTHON_ABIS="2.[56]"
 SUPPORT_PYTHON_ABIS="1"
 DISTUTILS_SRC_TEST="nosetests"
 
@@ -38,29 +38,19 @@ DEPEND="${RDEPEND}
 	dev-python/couchdb-python )
 	dev-python/setuptools"
 
-src_prepare() {
-	CheckDoc() {
-	if [[ "$(python_get_version  --major)" == '3' ]] && use doc; then
-		eerror ""
-		eerror "Python3 ***CANNOT*** build the docs for this package"
-		error "due to a dependency on django, which does not support python3"
-		eerror "Docs can be built effectively with python2."
-		eerror "Prepend with USE_PYTHON=2.7 and recommence emerge"
-		eerror ""
-		die
-	fi
-	}
-	python_execute_function CheckDoc
-	distutils_src_prepare
-}
-
 src_compile() {
 	distutils_src_compile
 
-	makedocs() {
-		PYTHONPATH="${S}" emake -C docs html
-	}
-	use doc && python_execute_function makedocs
+	local SPHINXBUILD
+	if use doc; then
+		if python2.7 -c "import django.conf" &> /dev/null; then
+			SPHINXBUILD="sphinx-build-2.7"
+		else
+			die "kombu docs failed installation"
+		fi
+		einfo "building docs for kombu with python2.7"
+		PYTHONPATH="${S}" emake -C docs html SPHINXBUILD="${SPHINXBUILD}"
+	fi
 }
 
 src_test() {
