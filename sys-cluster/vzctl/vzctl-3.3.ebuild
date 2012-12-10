@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.3.ebuild,v 1.1 2012/07/17 05:35:02 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.3.ebuild,v 1.2 2012/12/10 13:06:59 pinkbyte Exp $
 
 EAPI="4"
 
@@ -20,7 +20,7 @@ RDEPEND="
 	sys-apps/ed
 	sys-apps/iproute2
 	sys-fs/vzquota
-	sys-cluster/ploop"
+	<sys-cluster/ploop-1.5"
 
 DEPEND="${RDEPEND}"
 
