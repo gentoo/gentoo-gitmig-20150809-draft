@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/db-je/db-je-3.3.75.ebuild,v 1.2 2009/03/09 22:33:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/db-je/db-je-3.3.75.ebuild,v 1.3 2012/12/10 22:08:58 ulm Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -10,7 +10,7 @@ DESCRIPTION="Berkeley DB JE is a high performance, transactional storage engine 
 HOMEPAGE="http://www.oracle.com/database/berkeley-db/je/index.html"
 SRC_URI="http://download.oracle.com/berkeley-db/${P/db-/}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="Sleepycat BSD"
 SLOT="3.3"
 KEYWORDS="amd64 x86"
 IUSE=""
