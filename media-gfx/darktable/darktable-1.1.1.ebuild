@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/darktable-1.1.1.ebuild,v 1.1 2012/12/10 04:30:54 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/darktable-1.1.1.ebuild,v 1.2 2012/12/10 18:37:02 radhermit Exp $
 
 EAPI="5"
 
@@ -94,7 +94,7 @@ src_configure() {
 
 src_install() {
 	cmake-utils_src_install
-	use doc && dodoc "${WORKDIR}"/${PN}-usermanual-${PV}.pdf
+	use doc && dodoc "${DISTDIR}"/${PN}-usermanual-${PV}.pdf
 }
 
 pkg_preinst() {
