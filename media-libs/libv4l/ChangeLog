@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libv4l
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/ChangeLog,v 1.74 2012/12/05 06:08:55 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/ChangeLog,v 1.75 2012/12/10 12:04:33 ago Exp $
+
+  10 Dec 2012; Agostino Sarubbo <ago@gentoo.org> libv4l-0.8.9.ebuild:
+  Stable for ppc64, wrt bug #446036
 
   05 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   -libv4l-0.8.5.ebuild, -libv4l-0.8.5-r1.ebuild,
