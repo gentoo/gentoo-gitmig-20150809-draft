@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/less
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.156 2012/11/22 04:20:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.157 2012/12/10 03:31:50 vapier Exp $
+
+*less-457 (10 Dec 2012)
+
+  10 Dec 2012; Mike Frysinger <vapier@gentoo.org> +less-457.ebuild:
+  Version bump.
 
   22 Nov 2012; Mike Frysinger <vapier@gentoo.org> files/lesspipe.sh:
   Pass the -d flag to lzip for .lz files #444122 by Vincent Tai.
