@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.202 2012/11/22 21:03:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.203 2012/12/10 11:20:38 pesa Exp $
+
+*PyQt4-4.9.6 (10 Dec 2012)
+
+  10 Dec 2012; Davide Pesavento <pesa@gentoo.org> +PyQt4-4.9.6.ebuild:
+  Version bump, with some minor updates from qt overlay.
 
   22 Nov 2012; Markus Meier <maekke@gentoo.org> PyQt4-4.9.4-r1.ebuild:
   arm stable, bug #435074
