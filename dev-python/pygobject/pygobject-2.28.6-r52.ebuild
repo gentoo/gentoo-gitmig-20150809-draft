@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.28.6-r52.ebuild,v 1.13 2012/10/28 15:44:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.28.6-r52.ebuild,v 1.14 2012/12/10 04:04:38 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -21,7 +21,7 @@ HOMEPAGE="http://www.pygtk.org/"
 LICENSE="LGPL-2.1+"
 SLOT="2"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
-IUSE="doc examples +introspection libffi test"
+IUSE="examples libffi test"
 # FIXME: tests require introspection support, but we can't enable introspection,
 # or we get file collisions with slot 3 :/
 RESTRICT="test"
@@ -29,19 +29,13 @@ RESTRICT="test"
 COMMON_DEPEND=">=dev-libs/glib-2.24.0:2
 	libffi? ( virtual/libffi )"
 DEPEND="${COMMON_DEPEND}
-	doc? (
-		dev-libs/libxslt
-		>=app-text/docbook-xsl-stylesheets-1.70.1 )
+	dev-util/gtk-doc-am
 	test? (
 		media-fonts/font-cursor-misc
 		media-fonts/font-misc-misc )
 	virtual/pkgconfig"
 RDEPEND="${COMMON_DEPEND}
 	!<dev-python/pygtk-2.13"
-# Use slot 3 for introspection support per upstream recommendation
-# (see https://bugzilla.gnome.org/show_bug.cgi?id=642048#c9);
-# keep introspection USE flag in slot 2 for backward compatibility for now.
-PDEPEND="introspection? ( dev-python/pygobject:3 )"
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog* NEWS README"
@@ -51,7 +45,6 @@ pkg_setup() {
 		--disable-dependency-tracking
 		--disable-introspection
 		--disable-cairo
-		$(use_enable doc docs)
 		$(use_with libffi ffi)"
 	python_pkg_setup
 }
