@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7240 2012/12/10 18:48:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7241 2012/12/10 23:56:22 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Dec 2012; Ulrich Müller <ulm@gentoo.org> license_groups:
+  Add libtiff to MISC-FREE license group, bug 445934.
 
   10 Dec 2012; Hans de Graaff <graaff@gentoo.org> updates/4Q-2012:
   pkgmove dev-ruby/ruby-bsearch dev-ruby/bsearch
