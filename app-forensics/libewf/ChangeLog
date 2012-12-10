@@ -1,6 +1,11 @@
 # ChangeLog for app-forensics/libewf
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/libewf/ChangeLog,v 1.28 2012/12/08 17:08:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/libewf/ChangeLog,v 1.29 2012/12/10 05:17:10 patrick Exp $
+
+*libewf-20121209 (10 Dec 2012)
+
+  10 Dec 2012; Patrick Lauer <patrick@gentoo.org> +libewf-20121209.ebuild:
+  Bump
 
   08 Dec 2012; Jeroen Roovers <jer@gentoo.org> libewf-20120813.ebuild:
   Stable for HPPA (bug #441078).
