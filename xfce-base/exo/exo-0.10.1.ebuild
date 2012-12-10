@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/exo-0.10.1.ebuild,v 1.1 2012/12/10 07:39:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/exo-0.10.1.ebuild,v 1.2 2012/12/10 07:43:16 ssuominen Exp $
 
 EAPI=5
 inherit xfconf
@@ -22,8 +22,8 @@ RDEPEND=">=dev-lang/perl-5.6
 	>=xfce-base/libxfce4util-4.10"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	virtual/pkgconfig
-	sys-devel/gettext"
+	sys-devel/gettext
+	virtual/pkgconfig"
 
 pkg_setup() {
 	XFCONF=(
