@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/ktorrent
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.190 2012/11/15 17:35:53 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.191 2012/12/10 16:02:40 kensington Exp $
+
+  10 Dec 2012; Michael Palimaka <kensington@gentoo.org> ktorrent-4.3.0.ebuild:
+  Drop ppc64 keyword due to unkeyworded required dependencies.
 
   15 Nov 2012; Johannes Huber <johu@gentoo.org> -ktorrent-4.2.1.ebuild:
   Remove old.
