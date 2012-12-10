@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-3.4.1.ebuild,v 1.3 2012/05/24 15:05:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-3.4.1.ebuild,v 1.4 2012/12/10 01:58:41 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -44,7 +44,7 @@ RDEPEND=">=x11-libs/gtk+-3.0.0:3
 		>=gnome-extra/gucharmap-2.33.0:2.90
 		>=gnome-base/libgtop-2.11.92
 
-		>=dev-python/pygobject-2.26:2[introspection]
+		dev-python/pygobject:3
 		gnome-base/gconf[introspection]
 		gnome-base/gnome-panel[introspection]
 		x11-libs/gdk-pixbuf[introspection]
@@ -62,6 +62,11 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
+
+src_prepare() {
 	DOCS="AUTHORS ChangeLog NEWS README"
 	# We don't want HAL or battstat.
 	# mixer applet uses gstreamer, conflicts with the mixer provided by g-s-d
@@ -76,11 +81,9 @@ pkg_setup() {
 		$(use_enable networkmanager)
 		$(use_enable policykit polkit)"
 
-	python_set_active_version 2
-	python_pkg_setup
-}
-
-src_prepare() {
+	# Remove silly check for pygobject:2
+	# https://bugzilla.gnome.org/show_bug.cgi?id=660550
+	sed -e 's/pygobject-2.0/pygobject-3.0/' -i configure || die "sed failed"
 	gnome2_src_prepare
 
 	python_clean_py-compile_files
