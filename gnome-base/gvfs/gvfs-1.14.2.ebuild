@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.14.2.ebuild,v 1.2 2012/12/03 10:02:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.14.2.ebuild,v 1.3 2012/12/10 11:26:30 tetromino Exp $
 
-EAPI="4"
+EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
@@ -36,8 +36,8 @@ RDEPEND=">=dev-libs/glib-2.33.12:2
 	sys-apps/dbus
 	dev-libs/libxml2:2
 	net-misc/openssh
-	afp? ( >=dev-libs/libgcrypt-1.2.2 )
-	archive? ( app-arch/libarchive )
+	afp? ( >=dev-libs/libgcrypt-1.2.2:= )
+	archive? ( app-arch/libarchive:= )
 	avahi? ( >=net-dns/avahi-0.6 )
 	bluetooth? (
 		>=app-mobilephone/obex-data-server-0.4.5
@@ -51,7 +51,7 @@ RDEPEND=">=dev-libs/glib-2.33.12:2
 		=sys-apps/gnome-disk-utility-3.0.2-r300
 		=sys-apps/gnome-disk-utility-3.0.2-r200 ) )
 	gnome-keyring? ( app-crypt/libsecret )
-	gphoto2? ( >=media-libs/libgphoto2-2.4.7 )
+	gphoto2? ( >=media-libs/libgphoto2-2.4.7:= )
 	gtk? ( >=x11-libs/gtk+-3.0:3 )
 	http? ( >=net-libs/libsoup-gnome-2.26.0 )
 	ios? (
