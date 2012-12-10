@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.151 2012/12/09 23:10:34 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.152 2012/12/10 01:00:22 floppym Exp $
 
 EAPI="5"
 PYTHON_DEPEND="2:2.6"
@@ -47,7 +47,7 @@ RDEPEND="app-arch/bzip2
 	pulseaudio? ( media-sound/pulseaudio )
 	system-ffmpeg? ( >=media-video/ffmpeg-1.0 )
 	>=net-libs/libsrtp-1.4.4_p20121108
-	net-libs/webkit-gtk
+	net-libs/webkit-gtk:2
 	sys-apps/dbus
 	sys-apps/pciutils
 	sys-libs/zlib[minizip]
