@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/lxml
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.143 2012/12/10 11:27:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.144 2012/12/10 20:11:56 mgorny Exp $
+
+  10 Dec 2012; Michał Górny <mgorny@gentoo.org> lxml-3.0.1.ebuild:
+  Fix running tests in out-of-source build.
 
   10 Dec 2012; Michał Górny <mgorny@gentoo.org> lxml-3.0.1.ebuild:
   Clean up the ebuild a bit. Fix test phases. Enable all CPython versions.

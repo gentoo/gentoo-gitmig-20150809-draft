@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-3.0.1.ebuild,v 1.6 2012/12/10 11:27:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-3.0.1.ebuild,v 1.7 2012/12/10 20:11:56 mgorny Exp $
 
 EAPI=4
 PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2,3_3} )
@@ -21,7 +21,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 # have to drop some keywords pending resolution of bug #438388
 #KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 
-IUSE="doc examples test +threads"
+IUSE="doc examples +threads"
 
 RDEPEND=">=dev-libs/libxml2-2.7.2
 	>=dev-libs/libxslt-1.1.15
@@ -33,11 +33,11 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 python_prepare_all() {
-	# Necessary due to hackery in src_test().
-	# Drop when that hackery is replaced with one respecting BUILD_DIR.
-	use test && DISTUTILS_IN_SOURCE_BUILD=1
-
 	local PATCHES=( "${FILESDIR}/${P}-skip-failing-test.patch" )
+
+	# avoid replacing PYTHONPATH in tests.
+	sed -i -e '/sys\.path/d' test.py || die
+
 	distutils-r1_python_prepare_all
 }
 
@@ -45,13 +45,11 @@ python_test() {
 	# Tests broken with Python 3, generally due to Unicode.
 	[[ ${EPYTHON} == python3.* ]] && return
 
-	local module
-	for module in lxml/etree lxml/objectify; do
-		cp -l build/lib.*/${module}.so src/${module}.so || die
-	done
+	cp -r -l src/lxml/tests "${BUILD_DIR}"/lib/lxml/ || die
+	cp -r -l src/lxml/html/tests "${BUILD_DIR}"/lib/lxml/html/ || die
+	ln -s "${S}"/doc "${BUILD_DIR}"/ || die
 
 	local test
-	local PYTHONPATH=src/ # needed for selftest*
 	for test in test.py selftest.py selftest2.py; do
 		einfo "Running ${test}"
 		"${PYTHON}" ${test} || die "Test ${test} fails with ${EPYTHON}"
