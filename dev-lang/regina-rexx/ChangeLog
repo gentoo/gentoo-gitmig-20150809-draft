@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/regina-rexx
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/ChangeLog,v 1.30 2012/12/01 18:48:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/ChangeLog,v 1.31 2012/12/10 00:46:35 jer Exp $
+
+  10 Dec 2012; Jeroen Roovers <jer@gentoo.org> regina-rexx-3.3.ebuild,
+  regina-rexx-3.4.ebuild, regina-rexx-3.6.ebuild, regina-rexx-3.6-r1.ebuild:
+  Drop HPPA keywording (bug #441178).
 
   01 Dec 2012; Raúl Porcel <armin76@gentoo.org> regina-rexx-3.3.ebuild,
   regina-rexx-3.4.ebuild, regina-rexx-3.6.ebuild, regina-rexx-3.6-r1.ebuild:
