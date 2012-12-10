@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.14-r1.ebuild,v 1.3 2012/12/03 08:19:22 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.14-r1.ebuild,v 1.4 2012/12/10 16:58:54 polynomial-c Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -47,7 +47,7 @@ fi
 
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
-IUSE="+alsa +chatzilla +crypt gstreamer +ipc +jit +roaming system-sqlite +webm"
+IUSE="+alsa +chatzilla +crypt gstreamer +ipc +roaming system-sqlite +webm"
 
 SRC_URI+="${SRC_URI}
 	${MOZ_FTP_URI}/source/${MY_MOZ_P}.source.tar.bz2 -> ${P}.source.tar.bz2
@@ -223,9 +223,6 @@ src_configure() {
 
 	mozconfig_use_enable gstreamer
 	mozconfig_use_enable system-sqlite
-	# Both methodjit and tracejit conflict with PaX
-	mozconfig_use_enable jit methodjit
-	mozconfig_use_enable jit tracejit
 
 	# Use an objdir to keep things organized.
 	echo "mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/seamonk" \

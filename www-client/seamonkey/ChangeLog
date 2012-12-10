@@ -1,6 +1,10 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.416 2012/12/04 07:55:27 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.417 2012/12/10 16:58:54 polynomial-c Exp $
+
+  10 Dec 2012; Lars Wendler <polynomial-c@gentoo.org> seamonkey-2.14-r1.ebuild,
+  seamonkey-2.14.1.ebuild:
+  Removed jit USE flag.
 
   04 Dec 2012; Lars Wendler <polynomial-c@gentoo.org> seamonkey-2.14.1.ebuild:
   Use latest ff patchset.
