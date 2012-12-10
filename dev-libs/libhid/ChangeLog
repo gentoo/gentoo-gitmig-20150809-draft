@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libhid
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhid/ChangeLog,v 1.5 2010/07/28 13:15:22 flameeyes Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhid/ChangeLog,v 1.6 2012/12/10 16:46:07 ago Exp $
+
+  10 Dec 2012; Agostino Sarubbo <ago@gentoo.org> libhid-0.2.16-r3.ebuild:
+  Add ~ppc, wrt bug #414993
 
   28 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   libhid-0.2.16-r3.ebuild:
@@ -29,4 +32,3 @@
   01 Oct 2008; MATSUU Takuto <matsuu@gentoo.org> +metadata.xml,
   +libhid-0.2.16.ebuild:
   Initial import. Submitted by Mark Karpeles, bug #234264.
-
