@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.194 2012/12/10 16:51:05 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.195 2012/12/10 18:55:05 axs Exp $
+
+  10 Dec 2012; Ian Stakenvicius <axs@gentoo.org> firefox-17.0.1.ebuild:
+  fixed alsa and webm dependencies for bug 444874 and part of bug 444780
 
   10 Dec 2012; Lars Wendler <polynomial-c@gentoo.org> firefox-17.0.1.ebuild:
   Added changes on request by Anarchy.
