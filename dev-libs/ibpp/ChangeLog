@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ibpp
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ibpp/ChangeLog,v 1.22 2008/06/13 09:34:50 dev-zero Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ibpp/ChangeLog,v 1.23 2012/12/10 10:21:24 pinkbyte Exp $
+
+  10 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> ibpp-2.5.3.1.ebuild:
+  Change package license, wrt bug #444626
 
   13 Jun 2008; Tiziano Müller <dev-zero@gentoo.org>
   -files/ibpp-1.0.5.2.patch, -files/ibpp-2.3.4.0-amd64.patch,
