@@ -13,8 +13,6 @@
   site and follow the one received in the Intel compilers.
 </longdescription>
   <use>
-    <flag name="icc">Use <pkg>dev-lang/icc</pkg> to install idb (default)</flag>
-    <flag name="ifc">Use <pkg>dev-lang/ifc</pkg> to install idb</flag>
     <flag name="eclipse">Install the <pkg>dev-util/eclipse-sdk</pkg> plugins</flag>
   </use>
 </pkgmetadata>
