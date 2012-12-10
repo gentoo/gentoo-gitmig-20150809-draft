@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.2.5.ebuild,v 1.3 2012/11/26 13:05:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.2.5.ebuild,v 1.4 2012/12/10 08:57:32 hollow Exp $
 
 EAPI="4"
 
@@ -63,9 +63,9 @@ HTTP_SLOWFS_CACHE_MODULE_URI="http://labs.frickle.com/files/ngx_slowfs_cache-${H
 HTTP_SLOWFS_CACHE_MODULE_WD="${WORKDIR}/ngx_slowfs_cache-${HTTP_SLOWFS_CACHE_MODULE_PV}"
 
 # http_fancyindex (http://wiki.nginx.org/NgxFancyIndex, BSD license)
-HTTP_FANCYINDEX_MODULE_PV="0.3.1"
+HTTP_FANCYINDEX_MODULE_PV="0.3.1.1"
 HTTP_FANCYINDEX_MODULE_P="ngx_http_fancyindex-${HTTP_FANCYINDEX_MODULE_PV}"
-HTTP_FANCYINDEX_MODULE_URI="http://gitorious.org/ngx-fancyindex/ngx-fancyindex/archive-tarball/v${HTTP_FANCYINDEX_MODULE_PV}"
+HTTP_FANCYINDEX_MODULE_URI="http://gitorious.org/ngx-fancyindex/ngx-fancyindex/archive-tarball/2034d0ad"
 HTTP_FANCYINDEX_MODULE_WD="${WORKDIR}/ngx-fancyindex-ngx-fancyindex"
 
 # http_lua (https://github.com/chaoslawful/lua-nginx-module, BSD license)
@@ -90,7 +90,7 @@ SRC_URI="http://nginx.org/download/${P}.tar.gz
 	nginx_modules_http_fancyindex? ( ${HTTP_FANCYINDEX_MODULE_URI} -> ${HTTP_FANCYINDEX_MODULE_P}.tar.gz )
 	nginx_modules_http_lua? ( ${HTTP_LUA_MODULE_URI} -> ${HTTP_LUA_MODULE_P}.tar.gz )"
 
-LICENSE="as-is BSD BSD-2 GPL-2 MIT"
+LICENSE="BSD-2 BSD MIT GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ppc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 
