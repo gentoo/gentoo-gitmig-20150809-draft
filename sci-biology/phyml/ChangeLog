@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/phyml
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/phyml/ChangeLog,v 1.6 2010/10/22 15:44:40 xarthisius Exp $
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/phyml/ChangeLog,v 1.7 2012/12/10 16:30:55 ago Exp $
+
+  10 Dec 2012; Agostino Sarubbo <ago@gentoo.org> phyml-2.4.5-r2.ebuild:
+  Add ~ppc, wrt bug #432368
 
 *phyml-2.4.5-r2 (22 Oct 2010)
 
@@ -29,4 +32,3 @@
 
   18 Aug 2006; <gongloo@gentoo.org> +metadata.xml, +phyml-2.4.5.ebuild:
   Initial commit.
-

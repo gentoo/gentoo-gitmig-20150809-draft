@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/phyml/phyml-2.4.5-r2.ebuild,v 1.1 2010/10/22 15:44:40 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/phyml/phyml-2.4.5-r2.ebuild,v 1.2 2012/12/10 16:30:55 ago Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.lirmm.fr/~guindon/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 S=${WORKDIR}/${MY_P}

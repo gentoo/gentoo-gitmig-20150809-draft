@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/seaview
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/ChangeLog,v 1.46 2012/10/18 17:46:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/ChangeLog,v 1.47 2012/12/10 16:31:38 ago Exp $
+
+  10 Dec 2012; Agostino Sarubbo <ago@gentoo.org> seaview-4.3.5.ebuild:
+  Add ~ppc, wrt bug #432368
 
   18 Oct 2012; Justin Lecher <jlec@gentoo.org> -seaview-4.2.5.ebuild:
   Drop old
@@ -229,4 +232,3 @@
   seaview-1.ebuild, metadata.xml, files/29seaview :
   Initial import.  Ebuild submitted by Olivier Fisette <ribosome@gentoo.org>.
   Reference: Gentoo Bugzilla, bug #54055
-
