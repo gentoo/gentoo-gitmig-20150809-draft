@@ -1,8 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/glib-networking-2.34.2.ebuild,v 1.1 2012/11/22 22:35:38 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/glib-networking-2.34.2.ebuild,v 1.2 2012/12/10 11:58:10 tetromino Exp $
 
-EAPI="4"
+EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
@@ -18,13 +18,13 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd6
 
 RDEPEND=">=dev-libs/glib-2.34:2
 	gnome? ( gnome-base/gsettings-desktop-schemas )
-	libproxy? ( >=net-libs/libproxy-0.4.6-r3 )
+	libproxy? ( >=net-libs/libproxy-0.4.6-r3:= )
 	smartcard? (
 		>=app-crypt/p11-kit-0.8
-		>=net-libs/gnutls-2.12.8[pkcs11] )
+		>=net-libs/gnutls-2.12.8:=[pkcs11] )
 	ssl? (
 		app-misc/ca-certificates
-		>=net-libs/gnutls-2.11.0 )
+		>=net-libs/gnutls-2.11.0:= )
 "
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35.0
