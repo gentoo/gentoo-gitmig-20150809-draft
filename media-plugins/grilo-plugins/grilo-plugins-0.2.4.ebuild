@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/grilo-plugins-0.2.4.ebuild,v 1.1 2012/12/10 02:40:47 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/grilo-plugins-0.2.4.ebuild,v 1.2 2012/12/10 13:00:10 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no" # --enable-debug only changes CFLAGS
@@ -37,7 +37,7 @@ RDEPEND="
 		>=net-libs/gupnp-av-0.5 )
 	vimeo? (
 		dev-libs/libgcrypt
-		media-libs/libquvi )
+		>=media-libs/libquvi-0.4.0 )
 "
 DEPEND="${RDEPEND}
 	app-text/docbook-xml-dtd:4.5
@@ -49,7 +49,6 @@ src_prepare() {
 	DOCS="AUTHORS NEWS README"
 	# --enable-debug only changes CFLAGS, useless for us
 	G2CONF="${G2CONF}
-		--e
 		--disable-static
 		--disable-debug
 		--disable-uninstalled"
