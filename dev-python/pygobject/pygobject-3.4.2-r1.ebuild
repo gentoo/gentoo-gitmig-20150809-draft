@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.4.2-r1.ebuild,v 1.2 2012/12/10 04:31:07 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.4.2-r1.ebuild,v 1.3 2012/12/10 09:30:41 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -17,16 +17,14 @@ SLOT="3"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="+cairo examples test +threads"
 
-# FIXME: pycairo uses python.eclass, doesn't support multiple 2.x or 3.x pythons
-REQUIRED_USE="test? ( cairo )
-	?? ( python_targets_python2_6 python_targets_python2_7 )
-	?? ( python_targets_python3_1 python_targets_python3_2 python_targets_python3_3 )"
+REQUIRED_USE="test? ( cairo )"
 
 COMMON_DEPEND=">=dev-libs/glib-2.31.0:2
 	>=dev-libs/gobject-introspection-1.34.1.1
 	virtual/libffi
 	cairo? ( >=dev-python/pycairo-1.10.0 )
 	${PYTHON_DEPS}"
+# TODO: should be >=dev-python/pycairo-1.10.0[${PYTHON_USEDEP}]
 DEPEND="${COMMON_DEPEND}
 	x11-libs/cairo[glib]
 	virtual/pkgconfig
@@ -98,7 +96,7 @@ src_install() {
 }
 
 run_in_build_dir() {
-	pushd "${BUILD_DIR}" >/dev/null || die
-	$@
+	pushd "${BUILD_DIR}" > /dev/null || die
+	"$@"
 	popd > /dev/null
 }

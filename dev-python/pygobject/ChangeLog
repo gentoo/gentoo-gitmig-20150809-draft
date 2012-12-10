@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pygobject
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.184 2012/12/10 04:31:07 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.185 2012/12/10 09:30:41 tetromino Exp $
+
+  10 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  pygobject-3.4.2-r1.ebuild:
+  Remove restriction on multiple python3s, since pycairo does support multiple
+  python3s via USE_PYTHON.
 
   10 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   pygobject-3.4.2-r1.ebuild, metadata.xml:
